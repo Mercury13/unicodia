@@ -40,6 +40,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BUHID"sv,        Dicf::TRIG_SCRIPT },
     { "CHAKMA"sv,       Dicf::TRIG_SCRIPT },
     { "CANADIAN"sv,     Dicf::TRIG_SCRIPT },
+     { "WOODS-CREE"sv,  Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "CARIAN"sv,       Dicf::TRIG_SCRIPT },
     { "CHAM"sv,         Dicf::TRIG_SCRIPT },
     { "CHEROKEE"sv,     Dicf::TRIG_SCRIPT },
@@ -221,7 +222,6 @@ const std::map<std::string_view, DicEntry> dictionary {
       { "JUNGSEONG"sv,  Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
       { "JONGSEONG"sv,  Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGIT"sv,        Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
-    { "FINAL"sv,        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT },
     { "FRACTION"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "HIEROGLYPH"sv,   Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "IDEOGRAM"sv,     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -268,6 +268,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "COLON"sv,        Dicf::PART_NOUN },
      { "TRICOLON"sv,    Dicf::PART_NOUN },
      { "QUADCOLON"sv,    Dicf::PART_NOUN },
+    { "CIRCLE"sv,       Dicf::PART_NOUN },
     { "DANDA"sv,        Dicf::PART_NOUN },
     { "DOT"sv,          Dicf::PART_NOUN },
     { "DOTS"sv,         Dicf::PART_NOUN },
@@ -285,10 +286,15 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "STROKES"sv,      Dicf::PART_NOUN },
     { "SVARITA"sv,      Dicf::PART_NOUN },
     { "TACK"sv,         Dicf::PART_NOUN },
+    { "TREE"sv,         Dicf::PART_NOUN },
     { "TSHEG"sv,        Dicf::PART_NOUN },
     { "UNDERBAR"sv,     Dicf::PART_NOUN },
     //{ "YAT"sv,          Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
     { "YUS"sv,          Dicf::PART_NOUN },   // …but yus is big & little → do not cap
+
+    // Adverbs
+    { "ABOVE"sv,        Dicf::PART_NOUN },
+    { "BELOW"sv,        Dicf::PART_NOUN },
 
     // Numerals
     { "ONE"sv,          Dicf::PART_NUMERAL },
@@ -335,6 +341,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     // Musical nouns
     { "ACCENT"sv,       Dicf::PART_NOUN },
     { "ACCENT-STACCATO"sv, Dicf::PART_NOUN },
+    { "BARLINE"sv,      Dicf::PART_NOUN },
     { "BOW"sv,          Dicf::PART_NOUN },
     { "DOIT"sv,         Dicf::PART_NOUN },
     { "FLIP"sv,         Dicf::PART_NOUN },
@@ -342,7 +349,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LOURE"sv,        Dicf::PART_NOUN },
     { "MARCATO"sv,      Dicf::PART_NOUN },
     { "MARCATO-STACCATO"sv, Dicf::PART_NOUN },
+    { "NOTE"sv,         Dicf::PART_NOUN },
     { "PIZZICATO"sv,    Dicf::PART_NOUN },
+    { "REST"sv,         Dicf::PART_NOUN },
     { "RIP"sv,          Dicf::PART_NOUN },
     { "STACCATISSIMO"sv, Dicf::PART_NOUN },
     { "STACCATO"sv,     Dicf::PART_NOUN },
@@ -351,6 +360,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TURN"sv,         Dicf::PART_NOUN },
 
     // Adjectives
+    { "ACUTE"sv,        Dicf::PART_ADJECTIVE },
     { "ARCHAIC"sv,      Dicf::PART_ADJECTIVE },
     { "BARRED"sv,       Dicf::PART_ADJECTIVE },
     { "BIG"sv,          Dicf::PART_ADJECTIVE },
@@ -371,7 +381,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "FLATTENED"sv,    Dicf::PART_ADJECTIVE },
     { "FRANKS"sv,       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "GLOTTAL"sv,      Dicf::PART_ADJECTIVE },
+    { "GRAVE"sv,        Dicf::PART_ADJECTIVE },
     { "GREAT"sv,        Dicf::PART_ADJECTIVE },
+    { "HALF"sv,         Dicf::PART_ADJECTIVE },
     { "HARD"sv,         Dicf::PART_ADJECTIVE },
     { "HIGH"sv,         Dicf::PART_ADJECTIVE },
     { "HEAVY"sv,        Dicf::PART_ADJECTIVE },
@@ -383,6 +395,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "INSCRIPTIONAL"sv, Dicf::PART_ADJECTIVE },
     { "INVERTED"sv,     Dicf::PART_ADJECTIVE },
     { "LATINATE"sv,     Dicf::PART_ADJECTIVE },
+    { "LEFT"sv,         Dicf::PART_ADJECTIVE },
     { "LEFT-STEM"sv,    Dicf::PART_ADJECTIVE },
     { "RIGHT-STEM"sv,   Dicf::PART_ADJECTIVE },
     { "LONG"sv,         Dicf::PART_ADJECTIVE },
@@ -395,6 +408,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MARWARI"sv,      Dicf::PART_ADJECTIVE },
     { "MEDIAL"sv,       Dicf::PART_ADJECTIVE },
     { "MID"sv,          Dicf::PART_ADJECTIVE },
+    { "MIDDLE"sv,       Dicf::PART_ADJECTIVE },
     { "MONOGRAPH"sv,    Dicf::PART_ADJECTIVE },
     { "NEW"sv,          Dicf::PART_ADJECTIVE },
     { "NORTH"sv,        Dicf::PART_ADJECTIVE },
@@ -414,7 +428,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "QUARTER"sv,      Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
     { "REVERSE"sv,      Dicf::PART_ADJECTIVE },
     { "REVERSED"sv,     Dicf::PART_ADJECTIVE },
-    { "RETROFLEX"sv,     Dicf::PART_ADJECTIVE },
+    { "RETROFLEX"sv,    Dicf::PART_ADJECTIVE },
+    { "RIGHT"sv,        Dicf::PART_ADJECTIVE },
     { "SARA"sv,         Dicf::PART_ADJECTIVE },
     { "SEMISOFT"sv,     Dicf::PART_ADJECTIVE },
     { "SHARP"sv,        Dicf::PART_ADJECTIVE },
@@ -428,6 +443,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SYLLABIC"sv,     Dicf::PART_ADJECTIVE },
     { "TALL"sv,         Dicf::PART_ADJECTIVE },
     { "THREE-D"sv,      { Dicf::PART_ADJECTIVE, "three-D" } },
+    { "TRIANGULAR"sv,   Dicf::PART_ADJECTIVE },
     { "TRIPLE"sv,       Dicf::PART_ADJECTIVE },
     { "TROKUTASTI"sv,   Dicf::PART_ADJECTIVE },
     { "TRADITIONAL"sv,  Dicf::PART_ADJECTIVE },
@@ -469,6 +485,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "R"sv,            Dicf::CAP_TITLE },
     { "S"sv,            Dicf::CAP_TITLE },
     { "T"sv,            Dicf::CAP_TITLE },
+    { "TH"sv,           Dicf::CAP_TITLE },
     { "U"sv,            Dicf::CAP_TITLE },
     { "V"sv,            Dicf::CAP_TITLE },
     { "W"sv,            Dicf::CAP_TITLE },
@@ -508,6 +525,11 @@ const std::map<std::string_view, std::string_view> exceptions {
     EX("Squared SS")
     EX("Squared PPV")
     EX("Squared WC")
+    EX("Miao tone Above")                       // Adverb!
+    EX("Miao tone Below")                       // Adverb!
+    EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
+    EX("Musical symbol Right repeat sign")      // The same
+    EX("Musical symbol Half pedal mark")        // The same
 };
 
 const std::multiset<PrefixEntry> prefixes {
@@ -518,6 +540,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "MAHJONG"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "DOMINO"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "PLAYING"sv, "CARD"sv }, PrefixAction::REST_CAPSMALL },
+    { { "TIBETAN"sv, "DIGIT"sv, "HALF"sv }, PrefixAction::NEXT_SMALL },
 };
 
 
@@ -601,13 +624,71 @@ namespace {
         case PrefixAction::NEXT_CAP:
             words[prefixSize].isCapital = true;
             break;
+        case PrefixAction::NEXT_SMALL:
+            words[prefixSize].isCapital = false;
+            break;
+        }
+    }
+
+    class MultiPrinter
+    {
+    public:
+        void print(const char* x);
+        void printIf(bool cond, const char* x);
+    private:
+        bool wasPrinted = false;
+    };
+
+    void MultiPrinter::print(const char* x)
+    {
+        if (wasPrinted)
+            std::cout << " ";
+        std::cout << x;
+        wasPrinted = true;
+    }
+
+    void MultiPrinter::printIf(bool cond, const char* x)
+    {
+        if (cond)
+            print(x);
+    }
+
+    void dump(Flags<Dicf> x)
+    {
+        MultiPrinter mp;
+        std::cout << "[";
+        mp.printIf(x.have(Dicf::CAP_ALL), "ALL");
+        mp.printIf(x.have(Dicf::CAP_SMALL), "small");
+        mp.printIf(x.have(Dicf::CAP_TITLE), "Title");
+        mp.printIf(x.have(Dicf::IF_SCRIPT), "ifscr");
+        mp.printIf(x.have(Dicf::IF_NEXT_NOT_NOUN), "ifnnn");
+        mp.printIf(x.have(Dicf::PART_ADJECTIVE), "adj");
+        mp.printIf(x.have(Dicf::PART_MAYBE_LETTER), "let?");
+        mp.printIf(x.have(Dicf::PART_NOUN), "noun");
+        mp.printIf(x.have(Dicf::PART_NUMERAL), "num");
+        mp.printIf(x.have(Dicf::PART_MIXED), "mixed");
+        mp.printIf(x.have(Dicf::TRIG_CAP_NEXT), "capnext");
+        mp.printIf(x.have(Dicf::TRIG_DIGIT_PROPAGATES_RIGHT), "dig->");
+        mp.printIf(x.have(Dicf::TRIG_SCRIPT), "Script");
+        mp.printIf(x.have(Dicf::TRIG_SCRIPT_IF_FIRST), "Script1");
+        mp.printIf(x.have(Dicf::TRIG_THREE_WORD_SCRIPT), "3wScript");
+        mp.printIf(x.have(Dicf::TRIG_TWO_WORD_SCRIPT), "2wScript");
+        std::cout << "]";
+    }
+
+    [[maybe_unused]] void dump(const SafeVector<Word> words)
+    {
+        for (auto& v : words) {
+            std::cout << v.original << " ";
+            dump(v.dicFlags);
+            std::cout << std::endl;
         }
     }
 
 }   // anon namespace
 
 
-std::string decapitalize(std::string_view x)
+std::string decapitalize(std::string_view x, DecapDebug debug)
 {
     // Tetect exceptions
     std::string upper = toUpper(x);
@@ -707,6 +788,9 @@ std::string decapitalize(std::string_view x)
         }
         nextNextWord = nextWord;  nextWord = &word;
     }
+
+    if (debug != DecapDebug::NO)
+        dump(words);
 
     // Propagate right
     int propagationLevel = 0;

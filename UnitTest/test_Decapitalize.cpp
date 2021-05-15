@@ -647,7 +647,7 @@ TEST (Decap, ToneLong)
 TEST (Decap, ToneLongFinal)
 {
     auto r = decapitalize("PAU CIN HAU MID-LEVEL TONE LONG FINAL");
-    EXPECT_EQ("Pau Cin Hau mid-level tone Long Final", r);
+    EXPECT_EQ("Pau Cin Hau mid-level tone Long final", r);
 }
 
 
@@ -806,4 +806,18 @@ TEST (Decap, BugZanabazar)
 {
     auto r = decapitalize("ZANABAZAR SQUARE MARK DOUBLE SHAD");
     EXPECT_EQ("Zanabazar square mark Double shad", r);
+}
+
+
+TEST (Decap, ArabicAlef)
+{
+    auto r = decapitalize("ARABIC LIGATURE ALEF MAKSURA WITH SUPERSCRIPT ALEF FINAL FORM");
+    EXPECT_EQ("Arabic ligature Alef maksura with superscript alef final form", r);
+}
+
+
+TEST (Decap, Tibetan1)
+{
+    auto r = decapitalize("TIBETAN DIGIT HALF ONE");
+    EXPECT_EQ("Tibetan digit Half one", r);
 }

@@ -70,6 +70,7 @@ struct DicEntry
 enum class PrefixAction {
     REST_CAPSMALL,
     NEXT_CAP,
+    NEXT_SMALL,
     NOMATTER = 0
 };
 
@@ -101,4 +102,6 @@ extern const std::map<std::string_view, DicEntry> dictionary;
 extern const std::map<std::string_view, std::string_view> exceptions;
 extern const std::multiset<PrefixEntry> prefixes;
 
-std::string decapitalize(std::string_view x);
+enum class DecapDebug { NO, YES };
+
+std::string decapitalize(std::string_view x, DecapDebug debug = DecapDebug::NO);
