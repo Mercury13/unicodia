@@ -63,9 +63,15 @@ namespace uc {
 
     struct NumType
     {
-        std::string_view name;
+        std::string_view locName;
     };
     extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
+
+    struct BidiClass
+    {
+        std::string_view locName;
+    };
+    extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
 
     struct Cp   // code point
     {
@@ -76,19 +82,17 @@ namespace uc {
         } name;
         EcCategory ecCategory;
         EcVersion ecVersion;
+        EcBidiClass ecBidiClass;
         struct Numeric {
             EcNumType ecType = EcNumType::NONE;
             long long num = 0, denom = 0;
             const NumType& type() const { return numTypeInfo[static_cast<int>(ecType)]; }
             bool isPresent() const { return (ecType != EcNumType::NONE); }
         } numeric;
-        struct Bidi {
-            EcBidiClass ecClazz = EcBidiClass::LTR;
-            bool isMirrored = false;
-        } bidi = {};
         //const Range* range = nullptr;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
+        const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
     };
 
     extern unsigned nCps();

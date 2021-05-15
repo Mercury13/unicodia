@@ -86,33 +86,33 @@ StrMap smNumType[] {
     { "Nu"sv, "NUMBER" },
 };
 StrMap smCharCat[] {
-    { "Cc"sv, "CONTROL" },
-    { "Cf"sv, "FORMAT" },
-    { "Ll"sv, "LETTER_LOWERCASE" },
-    { "Lm"sv, "LETTER_MODIFIER" },
-    { "Lo"sv, "LETTER_OTHER" },
-    { "Lt"sv, "LETTER_TITLECASE" },
-    { "Lu"sv, "LETTER_UPPERCASE" },
-    { "Mc"sv, "MARK_SPACING" },
-    { "Me"sv, "MARK_ENCLOSING" },
-    { "Mn"sv, "MARK_NONSPACING" },
-    { "Nd"sv, "NUMBER_DECIMAL" },
-    { "Nl"sv, "NUMBER_LETTER" },
-    { "No"sv, "NUMBER_OTHER" },
-    { "Pc"sv, "PUNCTUATION_CONNECTOR" },
-    { "Pd"sv, "PUNCTUATION_DASH" },
-    { "Pe"sv, "PUNCTUATION_CLOSE" },
-    { "Pf"sv, "PUNCTUATION_FINAL" },
-    { "Pi"sv, "PUNCTUATION_INITIAL" },
-    { "Po"sv, "PUNCTUATION_OTHER" },
-    { "Ps"sv, "PUNCTUATION_OPEN" },
-    { "Sc"sv, "SYMBOL_CURRENCY" },
-    { "Sk"sv, "SYMBOL_MODIFIER" },
-    { "Sm"sv, "SYMBOL_MATH" },
-    { "So"sv, "SYMBOL_OTHER" },
-    { "Zl"sv, "SEPARATOR_LINE" },
-    { "Zp"sv, "SEPARATOR_PARAGRAPH" },
-    { "Zs"sv, "SEPARATOR_SPACE" },
+    { "Cc"sv, "CONTROL"sv },
+    { "Cf"sv, "FORMAT"sv },
+    { "Ll"sv, "LETTER_LOWERCASE"sv },
+    { "Lm"sv, "LETTER_MODIFIER"sv },
+    { "Lo"sv, "LETTER_OTHER"sv },
+    { "Lt"sv, "LETTER_TITLECASE"sv },
+    { "Lu"sv, "LETTER_UPPERCASE"sv },
+    { "Mc"sv, "MARK_SPACING"sv },
+    { "Me"sv, "MARK_ENCLOSING"sv },
+    { "Mn"sv, "MARK_NONSPACING"sv },
+    { "Nd"sv, "NUMBER_DECIMAL"sv },
+    { "Nl"sv, "NUMBER_LETTER"sv },
+    { "No"sv, "NUMBER_OTHER"sv },
+    { "Pc"sv, "PUNCTUATION_CONNECTOR"sv },
+    { "Pd"sv, "PUNCTUATION_DASH"sv },
+    { "Pe"sv, "PUNCTUATION_CLOSE"sv },
+    { "Pf"sv, "PUNCTUATION_FINAL"sv },
+    { "Pi"sv, "PUNCTUATION_INITIAL"sv },
+    { "Po"sv, "PUNCTUATION_OTHER"sv },
+    { "Ps"sv, "PUNCTUATION_OPEN"sv },
+    { "Sc"sv, "SYMBOL_CURRENCY"sv },
+    { "Sk"sv, "SYMBOL_MODIFIER"sv },
+    { "Sm"sv, "SYMBOL_MATH"sv },
+    { "So"sv, "SYMBOL_OTHER"sv },
+    { "Zl"sv, "SEPARATOR_LINE"sv },
+    { "Zp"sv, "SEPARATOR_PARAGRAPH"sv },
+    { "Zs"sv, "SEPARATOR_SPACE"sv },
 };
 
 int main()
@@ -185,6 +185,16 @@ int main()
         // Char’s version
         std::string_view sVersion = elChar.attribute("age").as_string();
         os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
+
+        // Char’s bidirectional data
+        std::string_view sBidiClass = elChar.attribute("bc").as_string();
+        bool isMirrored = elChar.attribute("Bidi_M").as_bool();
+        if (isMirrored) {
+            if (sBidiClass != "ON"sv)
+                throw std::logic_error("Got strange bidi class for mirrored char");
+            sBidiClass = "MIR";
+        }
+        os << "EcBidiClass::z_" << sBidiClass << ", ";
 
         // Char’s numeric values
         // nt = …

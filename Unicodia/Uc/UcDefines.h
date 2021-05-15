@@ -87,10 +87,35 @@ namespace uc {
         LTR,                        ///<  L      →
         NONSPACING_MARK,            ///<  NSM    Haček = caron + circle
         OTHER_NEUTRAL,              ///<  ON     ©
+        MIRRORED,                   ///<  ON + 'Y', [
         RTL,                        ///<  R      ←
         SEGMENT_SEPARATOR,          ///<  S      Tab sign
         WHITE_SPACE,                ///<  WS     Space sign
-        NN
+        NN,
+        z_FSI = BIDI_CONTROL,
+        z_LRE = BIDI_CONTROL,
+        z_LRI = BIDI_CONTROL,
+        z_LRO = BIDI_CONTROL,
+        z_PDF = BIDI_CONTROL,
+        z_PDI = BIDI_CONTROL,
+        z_RLE = BIDI_CONTROL,
+        z_RLI = BIDI_CONTROL,
+        z_RLO = BIDI_CONTROL,
+        z_AL = ARABIC_LETTER,
+        z_AN = ARABIC_NUMBER,
+        z_B = PARAGRAPH_SEPARATOR,
+        z_BN = BOUNDARY_NEUTRAL,
+        z_CS = COMMON_SEPARATOR,
+        z_EN = EUROPEAN_NUMBER,
+        z_ES = EUROPEAN_SEPARATOR,
+        z_ET = EUROPEAN_TERMINATOR,
+        z_L = LTR,
+        z_NSM = NONSPACING_MARK,
+        z_ON = OTHER_NEUTRAL,
+        z_R = RTL,
+        z_S = SEGMENT_SEPARATOR,
+        z_WS = WHITE_SPACE,
+        z_MIR = MIRRORED
     };
 
     enum class UpCategory

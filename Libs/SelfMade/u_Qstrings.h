@@ -2,6 +2,7 @@
 
 #include <QString>
 #include <string_view>
+#include <charconv>
 
 namespace str {
 
@@ -15,6 +16,28 @@ namespace str {
     }
 
     void append(QString& x, std::string_view s);
+    inline void append(QString& x, const char* s) { append(x, std::string_view(s)); }
+
+    template <size_t N>
+    inline void append(QString x, const char (&s)[N]) {
+        if constexpr (N > 1) {
+            append(x, std::string_view(s, N - 1));
+        }
+    }
+
+    template <size_t N>
+    inline void append(QString x, char (&s)[N])
+        { append(x, std::string_view(s, strnlen(s, N))); }
+
+    template <class T, std::enable_if_t<std::is_integral<T>::value, bool> = true>
+    void append(QString& x, T y)
+    {
+        char buf[30];
+        auto beg = std::begin(buf);
+        auto end = std::end(buf);
+        auto res = std::to_chars(beg, end, y);
+        x.append(QByteArray::fromRawData(beg, res.ptr - beg));
+    }
 
     class QSep
     {

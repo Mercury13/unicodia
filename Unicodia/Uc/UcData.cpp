@@ -68,7 +68,32 @@ const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
 
 const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
     { ""sv },
-    { "Цифра"sv },
-    { "Особая цифра"sv },
-    { "Число"sv },
+    { u8"Цифра"sv },
+    { u8"Особая цифра"sv },
+    { u8"Число"sv },
+};
+
+
+const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
+    { u8"Тэг направления"sv },
+    { u8"Арабская буква"sv },
+    { u8"Арабская цифра"sv },
+
+    { u8"Разделитель абзацев"sv },
+    { u8"Управляющие, соединители и тэги"sv },
+    { u8"Знак препинания"sv },
+
+    { u8"Европейская цифра"sv },
+    { u8"Европейский разделитель"sv },
+    { u8"Европейская единица измерения"sv },
+
+    { u8"Слева направо"sv },
+    { u8"Непротяжённая метка"sv },
+    { u8"Прочий нейтральный"sv },
+
+    { u8"Отзеркаливающийся"sv },
+    { u8"Справа налево"sv },
+    { u8"Разделитель участков"sv },
+    { u8"Пробел"sv },
+    //{ u8"Ошибка"sv },  check for equal number
 };

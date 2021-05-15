@@ -12,6 +12,9 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 
+using namespace std::string_view_literals;
+
+
 ///// RowCache /////////////////////////////////////////////////////////////////
 
 RowCache::RowCache(int anCols)
@@ -203,37 +206,41 @@ void FmMain::showCp(const uc::Cp& cp)
     // Text
     // Header
     QString text;
-    text.append("<h1>");
-    text.append(str::toQ(cp.name.tech));
-    text.append("</h1>");
+    str::append(text, "<h1>");
+    str::append(text, cp.name.tech);
+    str::append(text, "</h1>");
 
     {   // Info box
-        text.append("<p>");
+        str::append(text, "<p>");
         str::QSep sp(text, "<br>");
 
         // Unicode version
-        text.append(u8"Версия Юникода: ");
+        str::append(text, u8"Версия Юникода: ");
         str::append(text, cp.version().name);
-        text.append(" (");
-        text.append(QString::number(cp.version().year));
-        text.append(")");
+        str::append(text, " (");
+        str::append(text, cp.version().year);
+        str::append(text, ")");
 
         // Character type
         sp.sep();
-        text.append(u8"Тип: ");
+        str::append(text, u8"Тип: ");
         str::append(text, cp.category().locName);
 
         // Numeric value
         if (cp.numeric.isPresent()) {
             sp.sep();
-            str::append(text, cp.numeric.type().name);
-            text.append(": ");
-            text.append(QString::number(cp.numeric.num));
+            str::append(text, cp.numeric.type().locName);
+            str::append(text, ": ");
+            str::append(text, cp.numeric.num);
             if (cp.numeric.denom != 1) {
-                text.append("/");
-                text.append(QString::number(cp.numeric.denom));
+                str::append(text, "/");
+                str::append(text, cp.numeric.denom);
             }
         }
+
+        sp.sep();
+        str::append(text, u8"В двунаправленном письме: ");
+        str::append(text, cp.bidiClass().locName);
 
         text.append("</p>");
     }
