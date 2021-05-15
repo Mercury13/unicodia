@@ -7,6 +7,6 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 # How to compile?
 * Compile AutoBuilder.
-* Download big 220 M ucd.all.flat.zip.
+* Download and unzip big 220 M https://www.unicode.org/Public/13.0.0/ucdxml/ucd.all.flat.zip
 * Move UcAuto.cpp to Unicodia/Uc
 * Compile using Qt.
