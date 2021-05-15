@@ -541,6 +541,8 @@ const std::multiset<PrefixEntry> prefixes {
     { { "DOMINO"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "PLAYING"sv, "CARD"sv }, PrefixAction::REST_CAPSMALL },
     { { "TIBETAN"sv, "DIGIT"sv, "HALF"sv }, PrefixAction::NEXT_SMALL },
+    { { "SUPERSCRIPT"sv }, PrefixAction::NEXT_CAP },
+    { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
 };
 
 
