@@ -562,6 +562,7 @@ TEST (Decap, ToneLisyu)
 
 ///
 ///  Bug: Tone 17
+///  @todo [spelling, future] I don’t know how to make this right, Tone is a tricky word
 ///
 TEST (Decap, ToneModChinese)
 {
