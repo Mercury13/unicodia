@@ -268,6 +268,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "COLON"sv,        Dicf::PART_NOUN },
      { "TRICOLON"sv,    Dicf::PART_NOUN },
      { "QUADCOLON"sv,    Dicf::PART_NOUN },
+    { "COMMA"sv,        Dicf::PART_NOUN },
     { "CIRCLE"sv,       Dicf::PART_NOUN },
     { "DANDA"sv,        Dicf::PART_NOUN },
     { "DOT"sv,          Dicf::PART_NOUN },
