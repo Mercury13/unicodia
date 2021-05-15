@@ -12,7 +12,6 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 
-
 ///// RowCache /////////////////////////////////////////////////////////////////
 
 RowCache::RowCache(int anCols)
@@ -201,10 +200,24 @@ void FmMain::showCp(const uc::Cp& cp)
     ui->lbTypoEngine->setText(str::toQ(cp.proxy));
 
     // Text
+    // Header
     QString text;
     text.append("<h1>");
     text.append(str::toQ(cp.name.tech));
     text.append("</h1>");
+
+    // Numeric value
+    if (cp.numeric.isPresent()) {
+        text.append("<p>");
+        str::append(text, cp.numeric.type().name);
+        text.append(": ");
+        text.append(QString::number(cp.numeric.num));
+        if (cp.numeric.denom != 1) {
+            text.append("/");
+            text.append(QString::number(cp.numeric.denom));
+        }
+        text.append("</p>");
+    }
     ui->vwInfo->setText(text);
 }
 

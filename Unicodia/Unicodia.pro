@@ -24,6 +24,7 @@ debug {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
     Uc/UcAuto.cpp \
     Uc/UcData.cpp \
@@ -31,7 +32,7 @@ SOURCES += \
     FmMain.cpp
 
 HEADERS += \
-    Common/Cpp03.h \
+    ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_Strings.h \
     ../Libs/SelfMade/u_Vector.h \

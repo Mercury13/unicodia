@@ -1,6 +1,7 @@
 #pragma once
 
 #include <QString>
+#include <string_view>
 
 namespace str {
 
@@ -12,5 +13,7 @@ namespace str {
         uint32_t cp1 = x;
         return QString::fromUcs4(&cp1, 1);
     }
+
+    void append(QString& x, std::string_view s);
 
 }   // namespace str

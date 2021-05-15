@@ -50,7 +50,7 @@ namespace uc {
         //unsigned nNewChars = 0;
     };
 
-    extern Version versionInfo[static_cast<int>(EcVersion::NN)];
+    extern const Version versionInfo[static_cast<int>(EcVersion::NN)];
 
     struct Category
     {
@@ -59,7 +59,13 @@ namespace uc {
         // unsigned nChars = 0;
     };
 
-    extern Category categoryInfo[static_cast<int>(EcCategory::NN)];
+    extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];
+
+    struct NumType
+    {
+        std::string_view name;
+    };
+    extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
 
     struct Cp   // code point
     {
@@ -68,6 +74,12 @@ namespace uc {
             std::string_view tech;
             std::string_view loc;
         } name;
+        struct Numeric {
+            EcNumType ecType = EcNumType::NONE;
+            long long num = 0, denom = 0;
+            const NumType& type() const { return numTypeInfo[static_cast<int>(ecType)]; }
+            bool isPresent() const { return (ecType != EcNumType::NONE); }
+        } numeric;
         struct Bidi {
             EcBidiClass ecClazz = EcBidiClass::LTR;
             bool isMirrored = false;

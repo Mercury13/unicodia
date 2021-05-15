@@ -2,7 +2,7 @@
 
 using namespace std::string_view_literals;
 
-uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
+const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
     { ""sv,     0 },
     { "1.0"sv,  1991 },
     { "1.0.1"sv,1992 },
@@ -33,7 +33,7 @@ uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
 };
 
 
-uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
+const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      u8"Управляющий"sv },
     { UpCategory::FORMAT,       u8"Форматирующий"sv },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
@@ -64,4 +64,12 @@ uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::SEPARATOR,    u8"Разделитель/абзацев"sv },
     { UpCategory::SEPARATOR,    u8"Разделитель/пробел"sv },
     //{ u8"Ошибка"sv },     //check for equal number
+};
+
+
+const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
+    { ""sv },
+    { "Цифра"sv },
+    { "Особая цифра"sv },
+    { "Число"sv },
 };
