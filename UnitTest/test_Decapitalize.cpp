@@ -259,7 +259,7 @@ TEST (Decap, Siyaq)
 
 
 ///
-///  Arabic mathematical Sad: ???
+///  Arabic mathematical prefix
 ///
 TEST (Decap, ArabicMath)
 {

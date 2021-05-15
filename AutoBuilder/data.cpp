@@ -250,7 +250,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
     /// @todo [spelling] Check the entire Signwriting block
-    /// @todo [spelling] Check “Arabic mathematical” prefix
     /// @todo [spelling] Square hg and so on
     //{ 0x32CC, 0x32CC, { "Square hg"sv, ""sv } },
     //{ 0x32CD, 0x32CD, { "Square erg"sv, ""sv } },
@@ -412,8 +411,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PHASE-E"sv,      { Dicf::PART_ADJECTIVE, "phase-E" } },
     { "PHASE-F"sv,      { Dicf::PART_ADJECTIVE, "phase-F" } },
     { "PSALTER"sv,      Dicf::PART_ADJECTIVE },
-    /// @todo [spelling] Check quarter
-    { "QUARTER"sv,      Dicf::PART_ADJECTIVE },
+    { "QUARTER"sv,      Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
     { "REVERSE"sv,      Dicf::PART_ADJECTIVE },
     { "REVERSED"sv,     Dicf::PART_ADJECTIVE },
     { "RETROFLEX"sv,     Dicf::PART_ADJECTIVE },
