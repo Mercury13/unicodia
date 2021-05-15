@@ -74,6 +74,8 @@ namespace uc {
             std::string_view tech;
             std::string_view loc;
         } name;
+        EcCategory ecCategory;
+        EcVersion ecVersion;
         struct Numeric {
             EcNumType ecType = EcNumType::NONE;
             long long num = 0, denom = 0;
@@ -85,8 +87,6 @@ namespace uc {
             bool isMirrored = false;
         } bidi = {};
         //const Range* range = nullptr;
-        EcVersion ecVersion = EcVersion::UNKNOWN;
-        EcCategory ecCategory = EcCategory::CONTROL;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
     };

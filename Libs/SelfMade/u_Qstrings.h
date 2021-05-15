@@ -16,4 +16,14 @@ namespace str {
 
     void append(QString& x, std::string_view s);
 
+    class QSep
+    {
+    public:
+        QSep(QString& aS, const QString& aSep) : s(aS), len(aS.length()), fSep(aSep) {}
+        void sep();
+    private:
+        QString& s;
+        int len;
+        QString fSep;
+    };
 }   // namespace str

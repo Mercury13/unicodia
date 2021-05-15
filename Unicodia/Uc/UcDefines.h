@@ -44,9 +44,8 @@ namespace uc {
 
     enum class EcVersion
     {
-        UNKNOWN,
-        V_1_0,
-        V_1_0_1,
+        //V_1_0,        unused
+        //V_1_0_1,      unused
         V_1_1,
         V_2_0,
         V_2_1,

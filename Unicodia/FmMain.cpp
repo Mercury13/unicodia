@@ -189,6 +189,7 @@ FmMain::~FmMain()
     delete ui;
 }
 
+
 void FmMain::showCp(const uc::Cp& cp)
 {
     // Code
@@ -206,16 +207,34 @@ void FmMain::showCp(const uc::Cp& cp)
     text.append(str::toQ(cp.name.tech));
     text.append("</h1>");
 
-    // Numeric value
-    if (cp.numeric.isPresent()) {
+    {   // Info box
         text.append("<p>");
-        str::append(text, cp.numeric.type().name);
-        text.append(": ");
-        text.append(QString::number(cp.numeric.num));
-        if (cp.numeric.denom != 1) {
-            text.append("/");
-            text.append(QString::number(cp.numeric.denom));
+        str::QSep sp(text, "<br>");
+
+        // Unicode version
+        text.append(u8"Версия Юникода: ");
+        str::append(text, cp.version().name);
+        text.append(" (");
+        text.append(QString::number(cp.version().year));
+        text.append(")");
+
+        // Character type
+        sp.sep();
+        text.append(u8"Тип: ");
+        str::append(text, cp.category().locName);
+
+        // Numeric value
+        if (cp.numeric.isPresent()) {
+            sp.sep();
+            str::append(text, cp.numeric.type().name);
+            text.append(": ");
+            text.append(QString::number(cp.numeric.num));
+            if (cp.numeric.denom != 1) {
+                text.append("/");
+                text.append(QString::number(cp.numeric.denom));
+            }
         }
+
         text.append("</p>");
     }
     ui->vwInfo->setText(text);

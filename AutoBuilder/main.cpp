@@ -52,6 +52,17 @@ Fraction parseFraction(std::string_view numType, std::string_view x)
     }
 }
 
+std::string transformVersion(std::string s)
+{
+    for (auto& c : s) {
+        if (c == '.')
+            c = '_';
+    }
+    return s;
+}
+
+inline std::string transformVersion(std::string_view s) { return transformVersion(std::string{s}); }
+
 struct StrMap {
     std::string_view source, image;
 };
@@ -73,6 +84,35 @@ StrMap smNumType[] {
     { "De"sv, "DIGIT" },
     { "Di"sv, "SPECIAL_DIGIT" },
     { "Nu"sv, "NUMBER" },
+};
+StrMap smCharCat[] {
+    { "Cc"sv, "CONTROL" },
+    { "Cf"sv, "FORMAT" },
+    { "Ll"sv, "LETTER_LOWERCASE" },
+    { "Lm"sv, "LETTER_MODIFIER" },
+    { "Lo"sv, "LETTER_OTHER" },
+    { "Lt"sv, "LETTER_TITLECASE" },
+    { "Lu"sv, "LETTER_UPPERCASE" },
+    { "Mc"sv, "MARK_SPACING" },
+    { "Me"sv, "MARK_ENCLOSING" },
+    { "Mn"sv, "MARK_NONSPACING" },
+    { "Nd"sv, "NUMBER_DECIMAL" },
+    { "Nl"sv, "NUMBER_LETTER" },
+    { "No"sv, "NUMBER_OTHER" },
+    { "Pc"sv, "PUNCTUATION_CONNECTOR" },
+    { "Pd"sv, "PUNCTUATION_DASH" },
+    { "Pe"sv, "PUNCTUATION_CLOSE" },
+    { "Pf"sv, "PUNCTUATION_FINAL" },
+    { "Pi"sv, "PUNCTUATION_INITIAL" },
+    { "Po"sv, "PUNCTUATION_OTHER" },
+    { "Ps"sv, "PUNCTUATION_OPEN" },
+    { "Sc"sv, "SYMBOL_CURRENCY" },
+    { "Sk"sv, "SYMBOL_MODIFIER" },
+    { "Sm"sv, "SYMBOL_MATH" },
+    { "So"sv, "SYMBOL_OTHER" },
+    { "Zl"sv, "SEPARATOR_LINE" },
+    { "Zp"sv, "SEPARATOR_PARAGRAPH" },
+    { "Zs"sv, "SEPARATOR_SPACE" },
 };
 
 int main()
@@ -136,7 +176,15 @@ int main()
            << "{ "                      // name
                 << '\"' << sLowerName << R"("sv, )"  // name.tech,
                 << R"(""sv)"                    // name.loc
-           << " }, {";                  // /name
+           << " }, ";                  // /name
+
+        // Char’s type
+        std::string_view sCharCat = elChar.attribute("gc").as_string();
+        os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
+
+        // Char’s version
+        std::string_view sVersion = elChar.attribute("age").as_string();
+        os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
 
         // Char’s numeric values
         // nt = …
@@ -146,17 +194,16 @@ int main()
         //    • Nu — number
         // nv = Nan / whole number / vulgar fraction
         std::string_view sNumType = elChar.attribute("nt").as_string();
+        os << '{';
         if (sNumType != "None"sv) {
             std::string_view sNumValue = elChar.attribute("nv").as_string();
             auto frac = parseFraction(sNumType, sNumValue);
             os << " EcNumType::" << transform(sNumType, smNumType)
                << ", " << frac.num << ", " << frac.denom << ' ';
         }
-        os << "}";
+        os << "} ";
 
-        /// @todo [urgent] Char type
-
-        os << " }," << '\n';
+        os << "}," << '\n';
         ++nChars;
     }
 

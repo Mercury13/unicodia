@@ -3,9 +3,8 @@
 using namespace std::string_view_literals;
 
 const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
-    { ""sv,     0 },
-    { "1.0"sv,  1991 },
-    { "1.0.1"sv,1992 },
+    //{ "1.0"sv,  1991 },
+    //{ "1.0.1"sv,1992 },
     { "1.1"sv,  1993 },
     { "2.0"sv,  1996 },
     { "2.1"sv,  1998 },
@@ -41,7 +40,7 @@ const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::LETTER,       u8"Буква/строчная"sv },
     { UpCategory::LETTER,       u8"Буква/модифицирующая"sv },
     { UpCategory::LETTER,       u8"Буква/другая"sv },
-    { UpCategory::LETTER,       u8"Буква/заглавно-строчная лигатура"sv },
+    { UpCategory::LETTER,       u8"Буква/смешанный регистр"sv },
     { UpCategory::LETTER,       u8"Буква/заглавная"sv },
     { UpCategory::MARK,         u8"Метка/протяжённая"sv },
     { UpCategory::MARK,         u8"Метка/охватывающая"sv },
