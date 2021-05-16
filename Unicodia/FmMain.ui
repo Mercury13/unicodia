@@ -104,7 +104,7 @@
                  <string>%</string>
                 </property>
                 <property name="textFormat">
-                 <enum>Qt::RichText</enum>
+                 <enum>Qt::PlainText</enum>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
