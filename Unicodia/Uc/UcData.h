@@ -69,7 +69,10 @@ namespace uc {
 
     struct BidiClass
     {
+        std::string_view id;
+        EcBidiStrength strength;
         std::string_view locName;
+        std::string_view locDescription;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
 

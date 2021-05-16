@@ -72,6 +72,11 @@ namespace uc {
         NN
     };
 
+    enum class EcBidiStrength
+    {
+        NEUTRAL, WEAK, STRONG, EXPLICIT, NN
+    };
+
     enum class EcBidiClass
     {                               //   Abbr.   Icon
         BIDI_CONTROL,               ///<  FSI, LRE, LRI, LRO, PDF, PDI, RLE, RLI, RLO
