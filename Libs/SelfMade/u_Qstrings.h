@@ -19,14 +19,14 @@ namespace str {
     inline void append(QString& x, const char* s) { append(x, std::string_view(s)); }
 
     template <size_t N>
-    inline void append(QString x, const char (&s)[N]) {
+    inline void append(QString& x, const char (&s)[N]) {
         if constexpr (N > 1) {
             append(x, std::string_view(s, N - 1));
         }
     }
 
     template <size_t N>
-    inline void append(QString x, char (&s)[N])
+    inline void append(QString& x, char (&s)[N])
         { append(x, std::string_view(s, strnlen(s, N))); }
 
     template <class T, std::enable_if_t<std::is_integral<T>::value, bool> = true>

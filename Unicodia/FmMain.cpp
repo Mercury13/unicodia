@@ -238,9 +238,29 @@ void FmMain::showCp(const uc::Cp& cp)
             }
         }
 
+        // Bidi writing
         sp.sep();
         str::append(text, u8"В двунаправленном письме: ");
         str::append(text, cp.bidiClass().locName);
+
+        // UTF-8
+        sp.sep();
+        auto sChar = str::toQ(cp.subj);
+        str::append(text, u8"UTF-8:");
+        auto u8 = sChar.toUtf8();
+        char buf[10];
+        for (unsigned char v : u8) {
+            snprintf(buf, 10, " %02X", static_cast<int>(v));
+            str::append(text, buf);
+        }
+
+        // UTF-16
+        sp.sep();
+        str::append(text, u8"UTF-16:");
+        for (auto v : sChar) {
+            snprintf(buf, 10, " %04X", static_cast<int>(v.unicode()));
+            str::append(text, buf);
+        }
 
         text.append("</p>");
     }
