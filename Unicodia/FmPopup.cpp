@@ -53,10 +53,10 @@ FmPopup& FmPopup::setText(const QString& x)
 
 FmPopup& FmPopup::popup(const QRect& absRect)
 {
-    /// @todo [bug, UI] my computer is fast, but sometimes I see that window moves
-    show();
     adjustSize();
-    auto screenRect = QApplication::screenAt(absRect.topLeft())->availableGeometry();
+    /// @todo [bug, UI] Sometimes screen is wrong (null?)
+    auto screen = QApplication::screenAt(absRect.topLeft());
+    auto screenRect = screen->availableGeometry();
     auto myH = height();
     if (auto bottomRemainder = screenRect.bottom() - absRect.bottom();
             bottomRemainder >= myH) {
@@ -79,6 +79,7 @@ void FmPopup::popupAtY(const QRect& absRect, const QRect& screenRect, int y)
     auto x = std::min(absRect.left(), screenRect.right() - myW);
     x = std::max(x, 0);
     move(x, y);
+    show();
     lbText->setFocus();
 }
 
