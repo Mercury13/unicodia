@@ -8,6 +8,17 @@
 
 /// ALL NAMES HERE ARE IN UTF-8!
 
+template <class T, size_t N>
+const T* findInArray(std::string_view needle, const T (&haystack)[N])
+{
+    for (auto& v : haystack) {
+        if (v.id == needle) {
+            return &v;
+        }
+    }
+    return nullptr;
+}
+
 namespace uc {
 
     struct Font
@@ -75,6 +86,7 @@ namespace uc {
         std::string_view locDescription;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
+    inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
     struct Cp   // code point
     {

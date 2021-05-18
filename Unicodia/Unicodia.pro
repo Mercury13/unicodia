@@ -26,6 +26,7 @@ debug {
 SOURCES += \
     ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
+    FmPopup.cpp \
     Uc/UcAuto.cpp \
     Uc/UcData.cpp \
     main.cpp \
@@ -35,8 +36,10 @@ HEADERS += \
     ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_Strings.h \
+    ../Libs/SelfMade/u_TinyOpt.h \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h \
+    FmPopup.h \
     Uc/UcData.h \
     Uc/UcDefines.h
 

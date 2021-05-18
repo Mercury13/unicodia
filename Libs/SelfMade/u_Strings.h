@@ -1,15 +1,16 @@
 #pragma once
 
 #include <string>
-#include <vector>
 #include <utility>
+
+#include "u_Vector.h"
 
 namespace str {
 
     inline bool isBlank(char c) { return static_cast<unsigned char>(c) <= 32; }
     void trim(const char* &start, const char* &end);
     std::string_view trimSv(std::string_view s);
-    std::vector<std::string_view> splitSv(std::string_view s, char comma, bool skipEmpty = true);
+    SafeVector<std::string_view> splitSv(std::string_view s, char comma, bool skipEmpty = true);
 
 }   // namespace str
 

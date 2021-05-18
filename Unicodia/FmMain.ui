@@ -199,12 +199,9 @@
          </widget>
         </item>
         <item>
-         <widget class="QTextEdit" name="vwInfo">
+         <widget class="QTextBrowser" name="vwInfo">
           <property name="frameShape">
            <enum>QFrame::NoFrame</enum>
-          </property>
-          <property name="readOnly">
-           <bool>true</bool>
           </property>
          </widget>
         </item>
@@ -224,7 +221,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>

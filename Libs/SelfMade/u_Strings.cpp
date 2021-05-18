@@ -20,9 +20,9 @@ std::string_view str::trimSv(std::string_view s)
     return std::string_view(start, end - start);
 }
 
-std::vector<std::string_view> str::splitSv(std::string_view s, char comma, bool skipEmpty)
+SafeVector<std::string_view> str::splitSv(std::string_view s, char comma, bool skipEmpty)
 {
-    std::vector<std::string_view> r;
+    SafeVector<std::string_view> r;
 
     const char* start = s.data();
     const char* end = start + s.length();

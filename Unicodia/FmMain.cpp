@@ -4,6 +4,7 @@
 
 // Qt
 #include <QTableView>
+#include <QTextFrame>
 
 // Unicode data
 #include "UcDefines.h"
@@ -11,6 +12,9 @@
 // Misc
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+
+// Forms
+#include "FmPopup.h"
 
 using namespace std::string_view_literals;
 
@@ -240,8 +244,12 @@ void FmMain::showCp(const uc::Cp& cp)
 
         // Bidi writing
         sp.sep();
-        str::append(text, u8"В двунаправленном письме: ");
+        auto& bidiClass = cp.bidiClass();
+        str::append(text, u8"В двунаправленном письме: <a href='pop_bidi:");
+        str::append(text, bidiClass.id);
+        str::append(text, "'>");
         str::append(text, cp.bidiClass().locName);
+        str::append(text, "</a>");
 
         // UTF-8
         sp.sep();
@@ -272,4 +280,34 @@ void FmMain::charChanged(const QModelIndex& current)
 {
     if (auto cp = model.charAt(current))
         showCp(*cp);
+}
+
+
+void FmMain::linkClicked(std::string_view scheme, std::string_view target,
+                 QWidget* widget, TinyOpt<QRect> rect)
+{
+    if (scheme == "pop_bidi"sv) {
+        if (auto* bidi = uc::findBidiClass(target)) {
+            FmPopup::ensure(popup, this)
+                    .setText(str::toQ(bidi->locDescription))
+                    .popup(widget, rect);
+        }
+    }
+}
+
+
+void FmMain::on_vwInfo_anchorClicked(const QUrl &arg)
+{
+    auto str = arg.path().toStdString();
+    auto things = str::splitSv(str, ':');
+    if (things.size() < 2)
+        return;
+
+    // Get some parody for link rect
+    // Unglitch: we don’t know how to get EXACT coords of link,
+    // so improvise somehow
+    auto rect = ui->vwInfo->cursorRect();
+    rect.setLeft(rect.left() - 80);
+
+    linkClicked(things[0], things[1], ui->vwInfo, rect);
 }

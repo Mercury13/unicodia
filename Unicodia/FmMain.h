@@ -6,6 +6,7 @@
 
 // My libs
 #include "u_Vector.h"
+#include "u_TinyOpt.h"
 
 // Unicode data
 #include "UcData.h"
@@ -18,6 +19,7 @@ QT_END_NAMESPACE
 constexpr int NCOLS = 8;
 constexpr int FONT_SIZE = 14;
 
+class FmPopup;
 
 class RowCache
 {
@@ -87,10 +89,14 @@ public:
 private:
     Ui::FmMain *ui;
     CharsModel model;
+    std::unique_ptr<FmPopup> popup;
 
     void showCp(const uc::Cp& cp);
+    void linkClicked(std::string_view scheme, std::string_view target,
+                     QWidget* widget, TinyOpt<QRect> rect);
 private slots:
     void charChanged(const QModelIndex& current);
+    void on_vwInfo_anchorClicked(const QUrl &arg1);
 };
 
 #endif // FMMAIN_H
