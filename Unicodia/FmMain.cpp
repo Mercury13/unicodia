@@ -227,8 +227,12 @@ void FmMain::showCp(const uc::Cp& cp)
 
         // Character type
         sp.sep();
-        str::append(text, u8"Тип: ");
-        str::append(text, cp.category().locName);
+        auto& cat = cp.category();
+        str::append(text, u8"Тип: <a href='pop_cat:");
+        str::append(text, cat.id);
+        str::append(text, "' style='color:ForestGreen'>");
+        str::append(text, cat.locName);
+        str::append(text, "</a>");
 
         // Numeric value
         if (cp.numeric.isPresent()) {
@@ -247,7 +251,7 @@ void FmMain::showCp(const uc::Cp& cp)
         auto& bidiClass = cp.bidiClass();
         str::append(text, u8"В двунаправленном письме: <a href='pop_bidi:");
         str::append(text, bidiClass.id);
-        str::append(text, "'>");
+        str::append(text, "' style='color:ForestGreen'>");
         str::append(text, cp.bidiClass().locName);
         str::append(text, "</a>");
 
@@ -283,15 +287,33 @@ void FmMain::charChanged(const QModelIndex& current)
 }
 
 
+void FmMain::showPopup(
+        const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    FmPopup::ensure(popup, this)
+            .setText(str::toQ(x.locDescription))
+            .popup(widget, rect);
+}
+
+
+void FmMain::showPopup(
+        const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    FmPopup::ensure(popup, this)
+            .setText(str::toQ(x.locDescription))
+            .popup(widget, rect);
+}
+
+
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
     if (scheme == "pop_bidi"sv) {
-        if (auto* bidi = uc::findBidiClass(target)) {
-            FmPopup::ensure(popup, this)
-                    .setText(str::toQ(bidi->locDescription))
-                    .popup(widget, rect);
-        }
+        if (auto* bidi = uc::findBidiClass(target))
+            showPopup(*bidi, widget, rect);
+    } else if (scheme == "pop_cat"sv) {
+        if (auto* cat = uc::findCategory(target))
+            showPopup(*cat, widget, rect);
     }
 }
 

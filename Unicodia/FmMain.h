@@ -1,6 +1,9 @@
 #ifndef FMMAIN_H
 #define FMMAIN_H
 
+// C++
+
+// Qt
 #include <QMainWindow>
 #include <QAbstractTableModel>
 
@@ -94,6 +97,8 @@ private:
     void showCp(const uc::Cp& cp);
     void linkClicked(std::string_view scheme, std::string_view target,
                      QWidget* widget, TinyOpt<QRect> rect);
+    void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
+    void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
 private slots:
     void charChanged(const QModelIndex& current);
     void on_vwInfo_anchorClicked(const QUrl &arg1);

@@ -66,11 +66,14 @@ namespace uc {
     struct Category
     {
         UpCategory upCat;
+        std::string_view id;
         std::string_view locName;
+        std::string_view locDescription;
         // unsigned nChars = 0;
     };
 
     extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];
+    inline const Category* findCategory(std::string_view x) { return findInArray(x, categoryInfo); }
 
     struct NumType
     {
@@ -84,6 +87,7 @@ namespace uc {
         EcBidiStrength strength;
         std::string_view locName;
         std::string_view locDescription;
+        int nChars = 0;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
