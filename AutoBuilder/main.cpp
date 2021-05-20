@@ -38,6 +38,20 @@ long long fromChars(std::string_view x, std::string_view numType)
     return r;
 }
 
+unsigned fromHex(std::string_view x)
+{
+    long long r;
+    auto beg = x.data();
+    auto end = beg + x.length();
+    auto res = std::from_chars(beg, end, r, 16);
+    if (res.ec != std::errc() || res.ptr != end) {
+        std::string errm = "[fromChars] Cannot parse hex ";
+        errm.append(x);
+        throw std::invalid_argument(errm);
+    }
+    return r;
+}
+
 Fraction parseFraction(std::string_view numType, std::string_view x)
 {
     auto pSlash = x.find('/');
@@ -115,6 +129,16 @@ StrMap smCharCat[] {
     { "Zs"sv, "SEPARATOR_SPACE"sv },
 };
 
+unsigned proxyChar(unsigned cp)
+{
+    if (cp < ' ')       // Control 1..31
+        return 0x2400 + cp;
+    switch (cp) {
+    case 0x7F: return 0x2421;
+    default:   return cp;
+    }
+}
+
 int main()
 {
     std::ofstream os("UcAuto.cpp");
@@ -147,6 +171,9 @@ int main()
             ++nSpecialRanges;
             continue;
         }
+        // Get CP
+        auto cp = fromHex(sCp);
+
         // Aliases:
         // • Abbreviation: Implement later
         // • Alternate: Prefer na1
@@ -171,8 +198,8 @@ int main()
 
         std::string sLowerName = decapitalize(sName);
         os << "{ "
-           << "0x" << sCp << ", "       // subj
-           << "0x" << sCp << ", "       // proxy
+           << cp << ", "                // subj
+           << proxyChar(cp) << ", "       // proxy
            << "{ "                      // name
                 << '\"' << sLowerName << R"("sv, )"  // name.tech,
                 << R"(""sv)"                    // name.loc
