@@ -287,21 +287,35 @@ void FmMain::charChanged(const QModelIndex& current)
 }
 
 
+template <class T>
+void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    QString text;
+    str::append(text, "<p><nobr><b>"sv);
+    str::append(text, x.locName);
+    str::append(text, "</b> ("sv);
+    str::append(text, x.nChars);
+    str::append(text, " шт.)</nobr>"sv);
+    str::append(text, "</p><p>"sv);
+    str::append(text, x.locDescription);
+    str::append(text, "</p>"sv);
+    FmPopup::ensure(popup, this)
+            .setText(text)
+            .popup(widget, rect);
+}
+
+
 void FmMain::showPopup(
         const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect)
 {
-    FmPopup::ensure(popup, this)
-            .setText(str::toQ(x.locDescription))
-            .popup(widget, rect);
+    showPopupT(x, widget, rect);
 }
 
 
 void FmMain::showPopup(
         const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect)
 {
-    FmPopup::ensure(popup, this)
-            .setText(str::toQ(x.locDescription))
-            .popup(widget, rect);
+    showPopupT(x, widget, rect);
 }
 
 

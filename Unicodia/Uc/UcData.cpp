@@ -109,7 +109,7 @@ const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::SYMBOL,       "Sk"sv,     u8"Символ/модифицирующий"sv,
             u8"Символы вроде крышки ^, внешне совпадающие с комбинирующими метками, но лишённые особых свойств. "sv
             u8"А также некоторые другие символы." },
-    { UpCategory::SYMBOL,       "Sm"sv,     u8"Символ/математической"sv,
+    { UpCategory::SYMBOL,       "Sm"sv,     u8"Символ/математический"sv,
             u8"Изначально для математики использовались несколько разных систем, наиболее известные из них\u00A0— TᴇX (читается «тех») "sv
             u8"и MathType (он же Microsoft Equation). Юникод даёт надежду, что в компьютерной математике появится какая-то стандартизация\u00A0— "sv
             u8"а также ограниченная возможность писать формулы в системах общего назначения вроде интернет-форумов."sv },
@@ -175,3 +175,14 @@ const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
                u8"Нейтральны. Есть тонкие правила, касающиеся форматирования пробелами." },
     //{ u8"Ошибка"sv },  check for equal number
 };
+
+
+void uc::completeData()
+{
+    auto n = nCps();
+    for (unsigned i = 0; i < n; ++i) {
+        auto& cp = cpInfo[i];
+        ++cp.bidiClass().nChars;
+        ++cp.category().nChars;
+    }
+}

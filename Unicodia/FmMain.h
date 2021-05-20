@@ -97,6 +97,8 @@ private:
     void showCp(const uc::Cp& cp);
     void linkClicked(std::string_view scheme, std::string_view target,
                      QWidget* widget, TinyOpt<QRect> rect);
+    template <class T>
+    void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
 private slots:
