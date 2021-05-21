@@ -251,10 +251,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
     /// @todo [spelling] Check the entire Signwriting block
-    /// @todo [spelling] Square hg and so on
-    //{ 0x32CC, 0x32CC, { "Square hg"sv, ""sv } },
-    //{ 0x32CD, 0x32CD, { "Square erg"sv, ""sv } },
-    //{ 0x32CE, 0x32CE, { "Square ev"sv, ""sv } },
 
     // Nouns
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
