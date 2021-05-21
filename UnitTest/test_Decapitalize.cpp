@@ -831,3 +831,13 @@ TEST (Decap, TurnedInsular)
     auto r = decapitalize("LATIN SMALL LETTER TURNED INSULAR G");
     EXPECT_EQ("Latin small letter Turned insular G", r);
 }
+
+
+///
+///  Pada is noun
+///
+TEST (Decap, Pada)
+{
+    auto r = decapitalize("JAVANESE PADA TIRTA TUMETES");
+    EXPECT_EQ("Javanese pada Tirta tumetes", r);
+}
