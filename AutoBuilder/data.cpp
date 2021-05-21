@@ -250,8 +250,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     // Mixed
     { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
-    /// @todo [spelling] Check the entire Signwriting block
-
     // Nouns
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
     { "APOSTROPHE"sv,   Dicf::PART_NOUN },
@@ -659,6 +657,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
     { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
     { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, PrefixAction::NEXT_CAP },
+    { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
 };
 
 
@@ -735,8 +734,12 @@ namespace {
     void doPrefixAction(SafeVector<Word>& words, size_t prefixSize, PrefixAction action)
     {
         switch (action) {
-        case PrefixAction::REST_CAPSMALL:
+        case PrefixAction::REST_SMALL:
             for (size_t i = prefixSize; i < words.size(); ++i)
+                words[i].isCapital = false;
+            break;
+        case PrefixAction::REST_CAPSMALL:
+            for (size_t i = prefixSize + 1; i < words.size(); ++i)
                 words[i].isCapital = false;
             [[fallthrough]];
         case PrefixAction::NEXT_CAP:

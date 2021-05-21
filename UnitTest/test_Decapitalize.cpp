@@ -841,3 +841,13 @@ TEST (Decap, Pada)
     auto r = decapitalize("JAVANESE PADA TIRTA TUMETES");
     EXPECT_EQ("Javanese pada Tirta tumetes", r);
 }
+
+
+///
+///  RestSmall bhv: Cyrillic is small, G is always capital
+///
+TEST (Decap, RestSmall)
+{
+    auto r = decapitalize("SIGNWRITING CYRILLIC LETTER G");
+    EXPECT_EQ("Signwriting cyrillic letter G", r);
+}
