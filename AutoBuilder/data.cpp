@@ -400,6 +400,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "INHERENT"sv,     Dicf::PART_ADJECTIVE },
     { "INITIAL"sv,      Dicf::PART_ADJECTIVE },
     { "INSCRIPTIONAL"sv, Dicf::PART_ADJECTIVE },
+    { "INSULAR"sv,      Dicf::PART_ADJECTIVE },
     { "INVERTED"sv,     Dicf::PART_ADJECTIVE },
     { "LATINATE"sv,     Dicf::PART_ADJECTIVE },
     { "LEFT"sv,         Dicf::PART_ADJECTIVE },
@@ -660,6 +661,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SUPERSCRIPT"sv }, PrefixAction::NEXT_CAP },
     { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
     { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
+    { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, PrefixAction::NEXT_CAP },
 };
 
 

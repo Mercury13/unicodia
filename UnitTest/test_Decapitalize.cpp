@@ -821,3 +821,13 @@ TEST (Decap, Tibetan1)
     auto r = decapitalize("TIBETAN DIGIT HALF ONE");
     EXPECT_EQ("Tibetan digit Half one", r);
 }
+
+
+///
+///  Insular is adjective
+///
+TEST (Decap, TurnedInsular)
+{
+    auto r = decapitalize("LATIN SMALL LETTER TURNED INSULAR G");
+    EXPECT_EQ("Latin small letter Turned insular G", r);
+}
