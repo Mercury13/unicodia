@@ -273,6 +273,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "DANDA"sv,        Dicf::PART_NOUN },
     { "DOT"sv,          Dicf::PART_NOUN },
     { "DOTS"sv,         Dicf::PART_NOUN },
+    { "FORM"sv,         Dicf::PART_NOUN },
+    { "HASANTA"sv,      Dicf::PART_NOUN },
     { "HOOK"sv,         Dicf::PART_NOUN },
     { "LINE"sv,         Dicf::PART_NOUN },
     { "MCHU"sv,         Dicf::PART_NOUN },
@@ -282,6 +284,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SHAD"sv,         Dicf::PART_NOUN },
     { "SHELF"sv,        Dicf::PART_NOUN },
     { "SHOE"sv,         Dicf::PART_NOUN },  // For APL not really, but OK
+    { "SPIRANT"sv,      Dicf::PART_NOUN },  // One time, probably OK
     { "STOP"sv,         Dicf::PART_NOUN },
     { "STROKE"sv,       Dicf::PART_NOUN },
     { "STROKES"sv,      Dicf::PART_NOUN },
@@ -362,7 +365,9 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Adjectives
     { "ACUTE"sv,        Dicf::PART_ADJECTIVE },
+    { "ALTERNATE"sv,    Dicf::PART_ADJECTIVE },
     { "ARCHAIC"sv,      Dicf::PART_ADJECTIVE },
+    { "ASPIRATED"sv,    Dicf::PART_ADJECTIVE },
     { "BARRED"sv,       Dicf::PART_ADJECTIVE },
     { "BIG"sv,          Dicf::PART_ADJECTIVE },
     { "BOOK"sv,         Dicf::PART_ADJECTIVE },
@@ -381,6 +386,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "FLAT"sv,         Dicf::PART_ADJECTIVE },
     { "FLATTENED"sv,    Dicf::PART_ADJECTIVE },
     { "FRANKS"sv,       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "FRICATIVE"sv,    Dicf::PART_ADJECTIVE },
     { "GLOTTAL"sv,      Dicf::PART_ADJECTIVE },
     { "GRAVE"sv,        Dicf::PART_ADJECTIVE },
     { "GREAT"sv,        Dicf::PART_ADJECTIVE },
@@ -399,6 +405,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LEFT"sv,         Dicf::PART_ADJECTIVE },
     { "LEFT-STEM"sv,    Dicf::PART_ADJECTIVE },
     { "RIGHT-STEM"sv,   Dicf::PART_ADJECTIVE },
+    { "LARYNGEAL"sv,    Dicf::PART_ADJECTIVE },
     { "LONG"sv,         Dicf::PART_ADJECTIVE },
     { "LONG-LEGGED"sv,  Dicf::PART_ADJECTIVE },
     { "LOW"sv,          Dicf::PART_ADJECTIVE },
@@ -455,6 +462,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "VERTICAL"sv,     Dicf::PART_ADJECTIVE },
     { "VOCALIC"sv,      Dicf::PART_ADJECTIVE },
     { "VOLAPUK"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "VOICED"sv,       Dicf::PART_ADJECTIVE },
+    { "VOICELESS"sv,    Dicf::PART_ADJECTIVE },
     { "YENISEI"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
     // Some letters
@@ -650,6 +659,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "TIBETAN"sv, "DIGIT"sv, "HALF"sv }, PrefixAction::NEXT_SMALL },
     { { "SUPERSCRIPT"sv }, PrefixAction::NEXT_CAP },
     { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
+    { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
 };
 
 
