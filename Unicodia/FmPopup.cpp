@@ -51,11 +51,20 @@ FmPopup& FmPopup::setText(const QString& x)
 }
 
 
-FmPopup& FmPopup::popup(const QRect& absRect)
+void FmPopup::popupAtY(const QRect& absRect, const QRect& screenRect, int y)
+{
+    auto myW = width();
+    auto x = std::min(absRect.left(), screenRect.right() - myW);
+    x = std::max(x, 0);
+    move(x, y);
+    show();
+    lbText->setFocus();
+}
+
+
+FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
 {
     adjustSize();
-    /// @todo [bug, UI] Sometimes screen is wrong (null?)
-    auto screen = QApplication::screenAt(absRect.topLeft());
     auto screenRect = screen->availableGeometry();
     auto myH = height();
     if (auto bottomRemainder = screenRect.bottom() - absRect.bottom();
@@ -73,21 +82,22 @@ FmPopup& FmPopup::popup(const QRect& absRect)
     return *this;
 }
 
-void FmPopup::popupAtY(const QRect& absRect, const QRect& screenRect, int y)
+FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
 {
-    auto myW = width();
-    auto x = std::min(absRect.left(), screenRect.right() - myW);
-    x = std::max(x, 0);
-    move(x, y);
-    show();
-    lbText->setFocus();
+    if (!widget)
+        throw std::invalid_argument("[FmPopup.popupAtAbs] Widget should be non-null!");
+    auto screen = QApplication::screenAt(absRect.topLeft());
+    if (!screen)
+        screen = widget->screen();
+    popupAtScreen(screen, absRect);
+    return *this;
 }
 
 
 FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
 {
     if (rect) {
-        return popup(QRect(
+        return popupAtAbs(widget, QRect(
                     widget->mapToGlobal(rect->topLeft()), rect->size()));
     } else {
         return popup(widget);
@@ -97,7 +107,7 @@ FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
 
 FmPopup& FmPopup::popup(QWidget* widget)
 {
-    return popup(QRect(
+    return popupAtAbs(widget, QRect(
                 widget->mapToGlobal({ 0, 0 }), widget->size()));
 }
 

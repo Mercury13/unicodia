@@ -27,6 +27,9 @@ protected:
 };
 
 
+class QScreen;
+
+
 class FmPopup : public QWidget
 {
     Q_OBJECT
@@ -35,7 +38,8 @@ class FmPopup : public QWidget
 public:
     FmPopup(QWidget* owner);
     ~FmPopup() override = default;
-    FmPopup& popup(const QRect& absRect);
+    FmPopup& popupAtScreen(QScreen* screen, const QRect& absRect);
+    FmPopup& popupAtAbs(QWidget* widget, const QRect& absRect);
     FmPopup& popup(QWidget* widget, TinyOpt<QRect> rect);
     FmPopup& popup(QWidget* widget);
     FmPopup& setText(const QString& x);
