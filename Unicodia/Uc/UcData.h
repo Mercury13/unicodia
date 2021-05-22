@@ -34,13 +34,13 @@ namespace uc {
         Aghb,
         Ahom,
         Arab,
+        Armi,
         Cyrl,
         Latn,
         NN,
 
         //Afak  no chars
         //Aran  no chars
-        Armi = Zyyy,
         Armn = Zyyy,
         Avst = Zyyy,
         Bali = Zyyy,
