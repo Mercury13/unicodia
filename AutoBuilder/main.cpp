@@ -223,6 +223,14 @@ int main()
         }
         os << "EcBidiClass::z_" << sBidiClass << ", ";
 
+        // Char’s script
+        std::string_view sScript = elChar.attribute("sc").as_string();
+        //std::string_view sScriptX = elChar.attribute("scx").as_string();
+        //if (sScript != sScriptX) {
+        //    std::cout << sCp << " has sc=" << sScript << ", scx=" << sScriptX << std::endl;
+        //}
+        os << "EcScript::" << sScript << ", ";
+
         // Char’s numeric values
         // nt = …
         //    • None — no numeric value

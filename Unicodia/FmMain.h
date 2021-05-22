@@ -101,6 +101,8 @@ private:
     void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
+    void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
+    void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
 private slots:
     void charChanged(const QModelIndex& current);
     void on_vwInfo_anchorClicked(const QUrl &arg1);

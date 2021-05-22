@@ -28,15 +28,223 @@ namespace uc {
     };
 
 
+    enum class EcScript {
+        Zyyy,
+        Cyrl,
+        Latn,
+        NN,
+
+        Adlm = Zyyy,
+        //Afak  no chars
+        Aghb = Zyyy,
+        Ahom = Zyyy,
+        Arab = Zyyy,
+        //Aran  no chars
+        Armi = Zyyy,
+        Armn = Zyyy,
+        Avst = Zyyy,
+        Bali = Zyyy,
+        Bamu = Zyyy,
+        Bass = Zyyy,
+        Batk = Zyyy,
+        Beng = Zyyy,
+        Bhks = Zyyy,
+        //Blis  no chars
+        Bopo = Zyyy,
+        Brah = Zyyy,
+        Brai = Zyyy,
+        Bugi = Zyyy,
+        Buhd = Zyyy,
+        Cakm = Zyyy,
+        Cans = Zyyy,
+        Cari = Zyyy,
+        Cham = Zyyy,
+        Cher = Zyyy,
+        Chrs = Zyyy,
+        Cirt = Zyyy,
+        Copt = Zyyy,
+        //Cpmn  no chars
+        Cprt = Zyyy,
+        //Cyrs  no chars
+        Deva = Zyyy,
+        Diak = Zyyy,
+        Dogr = Zyyy,
+        Dsrt = Zyyy,
+        Dupl = Zyyy,
+        //Egyd  no chars
+        //Egyh  no chars
+        Egyp = Zyyy,
+        Elba = Zyyy,
+        Elym = Zyyy,
+        Ethi = Zyyy,
+        //Geok  no chars
+        Geor = Zyyy,
+        Glag = Zyyy,
+        Gong = Zyyy,
+        Gonm = Zyyy,
+        Goth = Zyyy,
+        Gran = Zyyy,
+        Grek = Zyyy,
+        Gujr = Zyyy,
+        Guru = Zyyy,
+        //Hanb  no chars
+        Hang = Zyyy,
+        Hani = Zyyy,
+        Hano = Zyyy,
+        //Hans  no chars
+        //Hant  no chars
+        Hatr = Zyyy,
+        Hebr = Zyyy,
+        Hira = Zyyy,
+        Hluw = Zyyy,
+        Hmng = Zyyy,
+        Hmnp = Zyyy,
+        //Hrkt  no chars
+        Hung = Zyyy,
+        Inds = Zyyy,
+        Ital = Zyyy,
+        //Jamo  no chars
+        Java = Zyyy,
+        //Jpan  no chars
+        //Jurc  no chars
+        Kali = Zyyy,
+        Kana = Zyyy,
+        Khar = Zyyy,
+        Khmr = Zyyy,
+        Khoj = Zyyy,
+        //Kitl  no chars
+        Kits = Zyyy,
+        Knda = Zyyy,
+        //Kore  no chars
+        //Kpel  no chars
+        Kthi = Zyyy,
+        Lana = Zyyy,
+        Laoo = Zyyy,
+        //Latf  no chars
+        //Latg  no chars
+        //Leke  no chars
+        Lepc = Zyyy,
+        Limb = Zyyy,
+        Lina = Zyyy,
+        Linb = Zyyy,
+        Lisu = Zyyy,
+        //Loma  no chars
+        Lyci = Zyyy,
+        Lydi = Zyyy,
+        Mahj = Zyyy,
+        Maka = Zyyy,
+        Mand = Zyyy,
+        Mani = Zyyy,
+        Marc = Zyyy,
+        //Maya  no chars
+        Medf = Zyyy,
+        Mend = Zyyy,
+        Merc = Zyyy,
+        Mero = Zyyy,
+        Mlym = Zyyy,
+        Modi = Zyyy,
+        Mong = Zyyy,
+        //Moon  no chars
+        Mroo = Zyyy,
+        Mtei = Zyyy,
+        Mult = Zyyy,
+        Mymr = Zyyy,
+        Nand = Zyyy,
+        Narb = Zyyy,
+        Nbat = Zyyy,
+        Newa = Zyyy,
+        //Nkdb  no chars
+        //Nkgb  no chars
+        Nkoo = Zyyy,
+        Nshu = Zyyy,
+        Ogam = Zyyy,
+        Olck = Zyyy,
+        Orkh = Zyyy,
+        Orya = Zyyy,
+        Osge = Zyyy,
+        Osma = Zyyy,
+        Palm = Zyyy,
+        Pauc = Zyyy,
+        Perm = Zyyy,
+        Phag = Zyyy,
+        Phli = Zyyy,
+        Phlp = Zyyy,
+        //Phlv  no chars
+        Phnx = Zyyy,
+        //Piqd  no chars — Klingon :)
+        Plrd = Zyyy,
+        Prti = Zyyy,
+        Rjng = Zyyy,
+        Rohg = Zyyy,
+        //Roro  no chars
+        Runr = Zyyy,
+        Samr = Zyyy,
+        //Sara  no chars
+        Sarb = Zyyy,
+        Saur = Zyyy,
+        Sgnw = Zyyy,
+        Shaw = Zyyy,
+        Shrd = Zyyy,
+        //Shui  no chars
+        Sidd = Zyyy,
+        Sind = Zyyy,
+        Sinh = Zyyy,
+        Sora = Zyyy,
+        Sogd = Zyyy,
+        Sogo = Zyyy,
+        Soyo = Zyyy,
+        Sund = Zyyy,
+        Sylo = Zyyy,
+        Syrc = Zyyy,
+        //Syre  no chars
+        //Syrj  no chars
+        //Syrn  no chars
+        Tagb = Zyyy,
+        Takr = Zyyy,
+        Tale = Zyyy,
+        Talu = Zyyy,
+        Taml = Zyyy,
+        Tang = Zyyy,
+        Tavt = Zyyy,
+        Telu = Zyyy,
+        //Teng  no chars
+        Tfng = Zyyy,
+        Tglg = Zyyy,
+        Thaa = Zyyy,
+        Thai = Zyyy,
+        Tibt = Zyyy,
+        Tirh = Zyyy,
+        Ugar = Zyyy,
+        Vaii = Zyyy,
+        //Visp  no chars
+        Wara = Zyyy,
+        Wcho = Zyyy,
+        //Wole  no chars
+        Xpeo = Zyyy,
+        Xsux = Zyyy,
+        Yezi = Zyyy,
+        Yiii = Zyyy,
+        Zanb = Zyyy,
+        Zinh = Zyyy,
+        //Zmth  no chars
+        //Zsye  no chars
+        //Zsym  no chars
+        //Zxxx  no chars
+        //Zzzz  no chars
+    };
+
+
     struct Script
     {
-        std::string_view locName;
-        std::string_view locGreatestLangs;
-        ScriptType type = ScriptType::UNKNOWN;
-        LangLife life = LangLife::NOMATTER;
-        int nEncodedChars = 0;
-        const Font* font;
+        std::string_view id;
+        EcScriptType ecType;
+        EcLangLife ecLife;
+        EcWritingDir ecDir;
+        std::string_view locName, locLangs, locDescription;
+        mutable unsigned nChars = 0;
     };
+    extern const Script scriptInfo[static_cast<int>(EcScript::NN)];
+    inline const Script* findScript(std::string_view x) { return findInArray(x, scriptInfo); }
 
 
 //    struct Category
@@ -102,6 +310,7 @@ namespace uc {
         EcCategory ecCategory;
         EcVersion ecVersion;
         EcBidiClass ecBidiClass;
+        EcScript ecScript;
         struct Numeric {
             EcNumType ecType = EcNumType::NONE;
             long long num = 0, denom = 0;
@@ -112,6 +321,7 @@ namespace uc {
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
+        const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
     };
 
     extern unsigned nCps();

@@ -6,7 +6,7 @@ namespace uc {
 
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
 
-    enum class LangLife
+    enum class EcLangLife
     {
         NOMATTER,       ///< Symbols (language’s life does not matter)
         ALIVE,          ///< UNESCO safe (Ukrainian)
@@ -21,7 +21,7 @@ namespace uc {
     };
 
 
-    enum class ScriptType
+    enum class EcScriptType
     {
         UNKNOWN,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
@@ -35,7 +35,7 @@ namespace uc {
         //SHORTHAND,      ///< Mostly alphabet, but with some simplifications
         //                ///<   (English stenography)
         CODE,           ///< System for encoding other scripts (Braille)
-        MISC,           ///< Miscellaneous symbols
+        SYMBOL,         ///< Miscellaneous symbols
         EMOJI,          ///< Emoji pictures
         NN,
         ABUGIDA = ALPHASYLLABLE
@@ -194,7 +194,7 @@ namespace uc {
 
     enum class EcWritingDir
     {
-        UNKNOWN,
+        NOMATTER,
         LTR,
         RTL,
         LTR_CJK,

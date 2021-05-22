@@ -196,6 +196,24 @@ FmMain::~FmMain()
     delete ui;
 }
 
+namespace {
+
+    template <class T, class Name1, class Name2>
+    inline void appendValuePopup(
+            QString& text, const T& value, Name1 name, Name2 scheme)
+    {
+        str::append(text, name);
+        str::append(text, ": <a href='");
+        str::append(text, scheme);
+        str::append(text, ':');
+        str::append(text, value.id);
+        str::append(text, "' style='color:ForestGreen'>");
+        str::append(text, value.locName);
+        str::append(text, "</a>");
+    }
+
+}
+
 
 void FmMain::showCp(const uc::Cp& cp)
 {
@@ -218,7 +236,12 @@ void FmMain::showCp(const uc::Cp& cp)
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
 
+        // Script
+        auto& scr = cp.script();
+        appendValuePopup(text, scr, u8"Письменность", "pop_scr");
+
         // Unicode version
+        sp.sep();
         str::append(text, u8"Версия Юникода: ");
         str::append(text, cp.version().name);
         str::append(text, " (");
@@ -227,12 +250,7 @@ void FmMain::showCp(const uc::Cp& cp)
 
         // Character type
         sp.sep();
-        auto& cat = cp.category();
-        str::append(text, u8"Тип: <a href='pop_cat:");
-        str::append(text, cat.id);
-        str::append(text, "' style='color:ForestGreen'>");
-        str::append(text, cat.locName);
-        str::append(text, "</a>");
+        appendValuePopup(text, cp.category(), u8"Тип", "pop_cat");
 
         // Numeric value
         if (cp.numeric.isPresent()) {
@@ -248,12 +266,7 @@ void FmMain::showCp(const uc::Cp& cp)
 
         // Bidi writing
         sp.sep();
-        auto& bidiClass = cp.bidiClass();
-        str::append(text, u8"В двунаправленном письме: <a href='pop_bidi:");
-        str::append(text, bidiClass.id);
-        str::append(text, "' style='color:ForestGreen'>");
-        str::append(text, cp.bidiClass().locName);
-        str::append(text, "</a>");
+        appendValuePopup(text, cp.bidiClass(), u8"В двунаправленном письме", "pop_bidi");
 
         // UTF-8
         sp.sep();
@@ -287,21 +300,37 @@ void FmMain::charChanged(const QModelIndex& current)
 }
 
 
+namespace {
+    template <class T>
+    inline void appendHeader(QString& text, const T& x)
+    {
+        str::append(text, "<p><nobr><b>");
+        str::append(text, x.locName);
+        str::append(text, "</b> ("sv);
+        str::append(text, x.nChars);
+        str::append(text, " шт.)</nobr>");
+        str::append(text, "</p>");
+    }
+}
+
+
+void FmMain::popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect)
+{
+    FmPopup::ensure(popup, this)
+            .setText(text)
+            .popup(widget, rect);
+}
+
+
 template <class T>
 void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
 {
     QString text;
-    str::append(text, "<p><nobr><b>"sv);
-    str::append(text, x.locName);
-    str::append(text, "</b> ("sv);
-    str::append(text, x.nChars);
-    str::append(text, " шт.)</nobr>"sv);
-    str::append(text, "</p><p>"sv);
+    appendHeader(text, x);
+    str::append(text, "<p>");
     str::append(text, x.locDescription);
-    str::append(text, "</p>"sv);
-    FmPopup::ensure(popup, this)
-            .setText(text)
-            .popup(widget, rect);
+    str::append(text, "</p>");
+    popupText(text, widget, rect);
 }
 
 
@@ -319,6 +348,26 @@ void FmMain::showPopup(
 }
 
 
+void FmMain::showPopup(
+        const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    QString text;
+    appendHeader(text, x);
+
+    if (!x.locLangs.empty()) {
+        str::append(text, u8"<p>• Языки: ");
+        str::append(text, x.locLangs);
+        str::append(text, "</p>");
+    }
+
+    str::append(text, "<p>");
+    str::append(text, x.locDescription);
+    str::append(text, "</p>");
+
+    popupText(text, widget, rect);
+}
+
+
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
@@ -328,6 +377,9 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
     } else if (scheme == "pop_cat"sv) {
         if (auto* cat = uc::findCategory(target))
             showPopup(*cat, widget, rect);
+    } else if (scheme == "pop_scr"sv) {
+        if (auto* script = uc::findScript(target))
+            showPopup(*script, widget, rect);
     }
 }
 
