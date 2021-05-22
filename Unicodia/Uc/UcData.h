@@ -30,15 +30,15 @@ namespace uc {
 
     enum class EcScript {
         Zyyy,
+        Adlm,
+        Aghb,
+        Ahom,
+        Arab,
         Cyrl,
         Latn,
         NN,
 
-        Adlm = Zyyy,
         //Afak  no chars
-        Aghb = Zyyy,
-        Ahom = Zyyy,
-        Arab = Zyyy,
         //Aran  no chars
         Armi = Zyyy,
         Armn = Zyyy,
@@ -234,14 +234,39 @@ namespace uc {
     };
 
 
+    struct LangLife
+    {
+        std::string_view locName;
+    };
+    extern const LangLife langLifeInfo[static_cast<int>(EcLangLife::NN)];
+
+
+    struct ScriptType
+    {
+        std::string_view locName;
+    };
+    extern const ScriptType scriptTypeInfo[static_cast<int>(EcScriptType::NN)];
+
+
+    struct WritingDir
+    {
+        std::string_view locName;
+    };
+    extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
+
+
     struct Script
     {
         std::string_view id;
         EcScriptType ecType;
         EcLangLife ecLife;
         EcWritingDir ecDir;
-        std::string_view locName, locLangs, locDescription;
+        std::string_view locName, locTime, locLangs, locDescription;
         mutable unsigned nChars = 0;
+
+        inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
+        inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
+        inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
     };
     extern const Script scriptInfo[static_cast<int>(EcScript::NN)];
     inline const Script* findScript(std::string_view x) { return findInArray(x, scriptInfo); }

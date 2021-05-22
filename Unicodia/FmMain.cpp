@@ -212,7 +212,7 @@ namespace {
         str::append(text, "</a>");
     }
 
-}
+}   // anon namespace
 
 
 void FmMain::showCp(const uc::Cp& cp)
@@ -354,9 +354,29 @@ void FmMain::showPopup(
     QString text;
     appendHeader(text, x);
 
-    if (!x.locLangs.empty()) {
-        str::append(text, u8"<p>• Языки: ");
+    if (x.ecType != uc::EcScriptType::NONE) {
+        str::append(text, "<p>");
+        str::QSep sp(text, "<br>");
+        str::append(text, u8"• Тип: ");
+        str::append(text, x.type().locName);
+        if (x.ecDir != uc::EcWritingDir::NOMATTER) {
+            sp.sep();
+            str::append(text, u8"• Направление: ");
+            str::append(text, x.dir().locName);
+        }
+        sp.sep();
+        str::append(text, u8"• Языки: ");
         str::append(text, x.locLangs);
+        if (!x.locTime.empty()) {
+            sp.sep();
+            str::append(text, u8"• Появилась: ");
+            str::append(text, x.locTime);
+        }
+        if (x.ecLife != uc::EcLangLife::NOMATTER) {
+            sp.sep();
+            str::append(text, u8"• Состояние: ");
+            str::append(text, x.life().locName);
+        }
         str::append(text, "</p>");
     }
 

@@ -16,19 +16,23 @@ namespace uc {
         DEAD,           ///< UNESCO elders only (Votic)
                         ///< UNESCO dead (Yugh)
         HISTORICAL,     ///< Dead long ago (Latin, Coptic)
+        NEW,            ///< Newly-created (Adlam)
+        REVIVED,        ///< Revived (Ahom)
         //ARTIFICIAL,     ///< Artificial languages (Esperanto); unencoded right now
         //FICTIONAL       ///< Fictional languages (Quenya, Klingon); unencoded right now
+        NN
     };
 
 
     enum class EcScriptType
     {
+        NONE,
         UNKNOWN,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
         CONSONANT,      ///< Consonant script (Hebrew)
         SYLLABLE,       ///< Syllable script (Hiragana)
         SEMISYLLABLE,   ///< Partly alphabet, partly syllable (Iberian)
-        ALPHASYLLABLE,  ///< Syllable script where similar syllables have
+        ABUGIDA,        ///< Syllable script where similar syllables have
                         ///<   similar symbols (Devanagari, Thai)
         HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
         SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
@@ -36,9 +40,9 @@ namespace uc {
         //                ///<   (English stenography)
         CODE,           ///< System for encoding other scripts (Braille)
         SYMBOL,         ///< Miscellaneous symbols
+        GAME,           ///< TableMiscellaneous symbols
         EMOJI,          ///< Emoji pictures
         NN,
-        ABUGIDA = ALPHASYLLABLE
     };
 
 
