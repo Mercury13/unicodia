@@ -36,6 +36,7 @@ namespace uc {
         Arab,
         Armi,
         Cyrl,
+        Hani,
         Latn,
         NN,
 
@@ -89,7 +90,6 @@ namespace uc {
         Guru = Zyyy,
         //Hanb  no chars
         Hang = Zyyy,
-        Hani = Zyyy,
         Hano = Zyyy,
         //Hans  no chars
         //Hant  no chars
