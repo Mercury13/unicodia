@@ -6,7 +6,7 @@ using namespace std::string_view_literals;
 const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
     { {} },
     { u8"живая <i>(основным языкам ничего не угрожает, как кириллица)</i>"sv },
-    { u8"в опасности <i>(задавлена соседними языками, как чероки и/или социальными потрясениями, как сирийский)</i>"sv },
+    { u8"в опасности <i>(задавлена соседними языками, как чероки, и/или социальными потрясениями, как сирийский)</i>"sv },
     { u8"мёртвая <i>(скоро потеряет/недавно потеряла носителей, как нюй-шу)</i>"sv },
     { u8"историческая <i>(давно мертва, как глаголица)</i>"sv },
     { u8"новая <i>(как нко)</i>"sv },
@@ -289,6 +289,11 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"языки манден <i>(Западная Африка)</i>"sv,
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             u8"«N’ko» означает «я говорю».</p>"sv },
+    { "Samr"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
+        u8"Самаритянский"sv, u8"около 600—200 до н.э.",
+        u8"иврит, самаритянский арамейский"sv,
+        u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "sv
+                u8"религию и культуру. Сейчас существует не более 700 самаритян.</p>"sv },
     { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
         u8"Сирийский"sv, u8"I в.",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
@@ -365,6 +370,8 @@ void uc::completeData()
         auto& cp = cpInfo[i];
         ++cp.bidiClass().nChars;
         ++cp.category().nChars;
-        ++cp.script().nChars;
+        auto& script = cp.script();
+        ++script.nChars;
+        script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
     }
 }

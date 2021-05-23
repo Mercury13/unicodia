@@ -74,7 +74,8 @@ namespace uc {
         V_12_0,
         V_12_1,
         V_13_0,
-        NN
+        NN,
+        UNKNOWN = NN,
     };
 
     enum class EcBidiStrength

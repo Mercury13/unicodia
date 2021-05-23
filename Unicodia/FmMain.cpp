@@ -221,6 +221,17 @@ namespace {
         str::append(text, "</a>");
     }
 
+    void appendVersion(
+            QString& text, std::string_view caption, const uc::Version& version)
+    {
+        str::append(text, caption);
+        str::append(text, u8"Версия Юникода: ");
+        str::append(text, version.name);
+        str::append(text, " (");
+        str::append(text, version.year);
+        str::append(text, ")");
+    }
+
 }   // anon namespace
 
 
@@ -251,11 +262,7 @@ void FmMain::showCp(const uc::Cp& cp)
 
         // Unicode version
         sp.sep();
-        str::append(text, u8"Версия Юникода: ");
-        str::append(text, cp.version().name);
-        str::append(text, " (");
-        str::append(text, cp.version().year);
-        str::append(text, ")");
+        appendVersion(text, {}, cp.version());
 
         // Character type
         sp.sep();
@@ -385,6 +392,10 @@ void FmMain::showPopup(
             sp.sep();
             str::append(text, u8"• Состояние: ");
             str::append(text, x.life().locName);
+        }
+        if (x.ecVersion != uc::EcVersion::UNKNOWN) {
+            sp.sep();
+            appendVersion(text, u8"• "sv, x.version());
         }
         str::append(text, "</p>");
     }

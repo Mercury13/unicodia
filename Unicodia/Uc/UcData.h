@@ -44,6 +44,7 @@ namespace uc {
         Hebr,
         Latn,
         Nkoo,
+        Samr,
         Syrc,
         Thaa,
         NN,
@@ -180,7 +181,6 @@ namespace uc {
         Rohg = Zyyy,
         //Roro  no chars
         Runr = Zyyy,
-        Samr = Zyyy,
         //Sara  no chars
         Sarb = Zyyy,
         Saur = Zyyy,
@@ -254,6 +254,14 @@ namespace uc {
     };
     extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
 
+    struct Version
+    {
+        std::string_view name;
+        unsigned year;
+
+        //unsigned nNewChars = 0;
+    };
+    extern const Version versionInfo[static_cast<int>(EcVersion::NN)];
 
     struct Script
     {
@@ -263,10 +271,12 @@ namespace uc {
         EcWritingDir ecDir;
         std::string_view locName, locTime, locLangs, locDescription;
         mutable unsigned nChars = 0;
+        mutable EcVersion ecVersion = EcVersion::UNKNOWN;
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
         inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
         inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
+        const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
     };
     extern const Script scriptInfo[static_cast<int>(EcScript::NN)];
     inline const Script* findScript(std::string_view x) { return findInArray(x, scriptInfo); }
@@ -285,16 +295,6 @@ namespace uc {
         Script* script;
     };
 
-
-    struct Version
-    {
-        std::string_view name;
-        unsigned year;
-
-        //unsigned nNewChars = 0;
-    };
-
-    extern const Version versionInfo[static_cast<int>(EcVersion::NN)];
 
     struct Category
     {
