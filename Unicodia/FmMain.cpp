@@ -168,10 +168,10 @@ FmMain::FmMain(QWidget *parent)
 {
     ui->setupUi(this);
 
-    // Table
-    ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->tableChars->setModel(&model);
+    // Top bar
+    QPalette pal = ui->wiCharBar->palette();
+    const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
+    ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
 
     // Fill chars
     auto n = uc::nCps();
@@ -185,6 +185,11 @@ FmMain::FmMain(QWidget *parent)
     QFont fontBasicBigger = model.fontBasic;
     fontBasicBigger.setPointSize(50);
     ui->lbTypoEngine->setFont(fontBasicBigger);
+
+    // Table
+    ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->tableChars->setModel(&model);
 
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
