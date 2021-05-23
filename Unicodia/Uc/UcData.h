@@ -36,6 +36,7 @@ namespace uc {
         Arab,
         Armi,
         Armn,
+        Beng,
         Cyrl,
         Deva,
         Grek,
@@ -43,6 +44,7 @@ namespace uc {
         Hani,
         Hebr,
         Latn,
+        Mand,
         Nkoo,
         Samr,
         Syrc,
@@ -56,7 +58,6 @@ namespace uc {
         Bamu = Zyyy,
         Bass = Zyyy,
         Batk = Zyyy,
-        Beng = Zyyy,
         Bhks = Zyyy,
         //Blis  no chars
         Bopo = Zyyy,
@@ -137,7 +138,6 @@ namespace uc {
         Lydi = Zyyy,
         Mahj = Zyyy,
         Maka = Zyyy,
-        Mand = Zyyy,
         Mani = Zyyy,
         Marc = Zyyy,
         //Maya  no chars
