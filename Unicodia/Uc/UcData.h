@@ -35,14 +35,20 @@ namespace uc {
         Ahom,
         Arab,
         Armi,
+        Armn,
         Cyrl,
+        Deva,
+        Grek,
+        Hang,
         Hani,
+        Hebr,
         Latn,
+        Nkoo,
+        Thaa,
         NN,
 
         //Afak  no chars
         //Aran  no chars
-        Armn = Zyyy,
         Avst = Zyyy,
         Bali = Zyyy,
         Bamu = Zyyy,
@@ -67,7 +73,6 @@ namespace uc {
         //Cpmn  no chars
         Cprt = Zyyy,
         //Cyrs  no chars
-        Deva = Zyyy,
         Diak = Zyyy,
         Dogr = Zyyy,
         Dsrt = Zyyy,
@@ -85,16 +90,13 @@ namespace uc {
         Gonm = Zyyy,
         Goth = Zyyy,
         Gran = Zyyy,
-        Grek = Zyyy,
         Gujr = Zyyy,
         Guru = Zyyy,
         //Hanb  no chars
-        Hang = Zyyy,
         Hano = Zyyy,
         //Hans  no chars
         //Hant  no chars
         Hatr = Zyyy,
-        Hebr = Zyyy,
         Hira = Zyyy,
         Hluw = Zyyy,
         Hmng = Zyyy,
@@ -155,7 +157,6 @@ namespace uc {
         Newa = Zyyy,
         //Nkdb  no chars
         //Nkgb  no chars
-        Nkoo = Zyyy,
         Nshu = Zyyy,
         Ogam = Zyyy,
         Olck = Zyyy,
@@ -210,7 +211,6 @@ namespace uc {
         //Teng  no chars
         Tfng = Zyyy,
         Tglg = Zyyy,
-        Thaa = Zyyy,
         Thai = Zyyy,
         Tibt = Zyyy,
         Tirh = Zyyy,
