@@ -44,6 +44,7 @@ namespace uc {
         Hebr,
         Latn,
         Nkoo,
+        Syrc,
         Thaa,
         NN,
 
@@ -196,7 +197,6 @@ namespace uc {
         Soyo = Zyyy,
         Sund = Zyyy,
         Sylo = Zyyy,
-        Syrc = Zyyy,
         //Syre  no chars
         //Syrj  no chars
         //Syrn  no chars
