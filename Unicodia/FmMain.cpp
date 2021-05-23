@@ -194,6 +194,10 @@ FmMain::FmMain(QWidget *parent)
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
+
+    // Select index
+    ui->tableChars->setFocus();
+    ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
 }
 
 FmMain::~FmMain()
