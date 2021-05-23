@@ -116,7 +116,7 @@
                 <number>0</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout" stretch="2,1">
+                <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1">
                  <property name="spacing">
                   <number>4</number>
                  </property>
