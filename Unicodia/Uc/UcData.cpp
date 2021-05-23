@@ -323,7 +323,7 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"и обе письменности используются параллельно.</p>" },
     { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER,
         u8"Разные"sv, {}, {},
-        u8"<p>Модифицирующий символ используется в нескольких разных письменностях.</p>" },
+        u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>" },
 };
 
 
