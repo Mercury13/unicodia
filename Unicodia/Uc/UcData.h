@@ -49,6 +49,7 @@ namespace uc {
         Samr,
         Syrc,
         Thaa,
+        Zinh,
         NN,
 
         //Afak  no chars
@@ -225,7 +226,6 @@ namespace uc {
         Yezi = Zyyy,
         Yiii = Zyyy,
         Zanb = Zyyy,
-        Zinh = Zyyy,
         //Zmth  no chars
         //Zsye  no chars
         //Zsym  no chars
