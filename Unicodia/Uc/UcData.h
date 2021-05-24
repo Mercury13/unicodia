@@ -45,12 +45,20 @@ namespace uc {
         Hang,
         Hani,
         Hebr,
+        Knda,
+        Laoo,
         Latn,
         Mand,
+        Mlym,
         Nkoo,
+        Orya,
         Samr,
+        Sinh,
         Syrc,
+        Taml,
+        Telu,
         Thaa,
+        Thai,
         Zinh,
         NN,
 
@@ -120,12 +128,10 @@ namespace uc {
         Khoj = Zyyy,
         //Kitl  no chars
         Kits = Zyyy,
-        Knda = Zyyy,
         //Kore  no chars
         //Kpel  no chars
         Kthi = Zyyy,
         Lana = Zyyy,
-        Laoo = Zyyy,
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars
@@ -146,7 +152,6 @@ namespace uc {
         Mend = Zyyy,
         Merc = Zyyy,
         Mero = Zyyy,
-        Mlym = Zyyy,
         Modi = Zyyy,
         Mong = Zyyy,
         //Moon  no chars
@@ -164,7 +169,6 @@ namespace uc {
         Ogam = Zyyy,
         Olck = Zyyy,
         Orkh = Zyyy,
-        Orya = Zyyy,
         Osge = Zyyy,
         Osma = Zyyy,
         Palm = Zyyy,
@@ -191,7 +195,6 @@ namespace uc {
         //Shui  no chars
         Sidd = Zyyy,
         Sind = Zyyy,
-        Sinh = Zyyy,
         Sora = Zyyy,
         Sogd = Zyyy,
         Sogo = Zyyy,
@@ -205,14 +208,11 @@ namespace uc {
         Takr = Zyyy,
         Tale = Zyyy,
         Talu = Zyyy,
-        Taml = Zyyy,
         Tang = Zyyy,
         Tavt = Zyyy,
-        Telu = Zyyy,
         //Teng  no chars
         Tfng = Zyyy,
         Tglg = Zyyy,
-        Thai = Zyyy,
         Tibt = Zyyy,
         Tirh = Zyyy,
         Ugar = Zyyy,
