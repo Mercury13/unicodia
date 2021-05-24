@@ -40,6 +40,8 @@ namespace uc {
         Cyrl,
         Deva,
         Grek,
+        Gujr,
+        Guru,
         Hang,
         Hani,
         Hebr,
@@ -94,8 +96,6 @@ namespace uc {
         Gonm = Zyyy,
         Goth = Zyyy,
         Gran = Zyyy,
-        Gujr = Zyyy,
-        Guru = Zyyy,
         //Hanb  no chars
         Hano = Zyyy,
         //Hans  no chars
