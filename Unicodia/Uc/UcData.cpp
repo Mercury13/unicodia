@@ -344,7 +344,7 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Sinh"sv, EcScriptType::ABUGIDA_COMBINING, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Сингальская"sv, u8"300"sv,
         u8"сингальский <i>(Шри-Ланка)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Имеют витиеватую форму, "sv
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "sv
                 "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv },
     { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
         u8"Сирийская"sv, u8"I в.",
