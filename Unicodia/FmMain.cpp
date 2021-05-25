@@ -25,14 +25,15 @@ RowCache::RowCache(int anCols)
     : fnCols(anCols), fColMask(anCols - 1), fRowMask(~fColMask) {}
 
 
-const uc::Cp* RowCache::charAt(size_t iRow, unsigned iCol) const
+MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
 {
     // Have row?
     if (iRow >= rows.size() || iCol >= NCOLS)
-        return nullptr;
+        return { 0, nullptr };
     auto& rw = rows[iRow];
+    auto start = rw.startingCp;
 
-    return rw.cps[iCol];
+    return { start + iCol, rw.cps[iCol] };
 }
 
 
@@ -235,84 +236,90 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::showCp(const uc::Cp& cp)
+void FmMain::showCp(MaybeChar ch)
 {
     // Code
     char buf[10];
-    snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(cp.subj));
+    snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
     ui->lbCharCode->setText(buf);
 
-    // OS char
-    ui->lbTypoEngine->setText(str::toQ(cp.proxy));
+    if (ch) {
+        // OS char
+        ui->lbTypoEngine->setText(str::toQ(ch->proxy));
 
-    // Text
-    // Header
-    QString text;
-    str::append(text, "<h1>");
-    str::append(text, cp.name.tech);
-    str::append(text, "</h1>");
+        // Text
+        // Header
+        QString text;
+        str::append(text, "<h1>");
+        str::append(text, ch->name.tech);
+        str::append(text, "</h1>");
 
-    {   // Info box
-        str::append(text, "<p>");
-        str::QSep sp(text, "<br>");
+        {   // Info box
+            str::append(text, "<p>");
+            str::QSep sp(text, "<br>");
 
-        // Script
-        auto& scr = cp.script();
-        appendValuePopup(text, scr, u8"Письменность", "pop_scr");
+            // Script
+            auto& scr = ch->script();
+            appendValuePopup(text, scr, u8"Письменность", "pop_scr");
 
-        // Unicode version
-        sp.sep();
-        appendVersion(text, {}, cp.version());
-
-        // Character type
-        sp.sep();
-        appendValuePopup(text, cp.category(), u8"Тип", "pop_cat");
-
-        // Numeric value
-        if (cp.numeric.isPresent()) {
+            // Unicode version
             sp.sep();
-            str::append(text, cp.numeric.type().locName);
-            str::append(text, ": ");
-            str::append(text, cp.numeric.num);
-            if (cp.numeric.denom != 1) {
-                str::append(text, "/");
-                str::append(text, cp.numeric.denom);
+            appendVersion(text, {}, ch->version());
+
+            // Character type
+            sp.sep();
+            appendValuePopup(text, ch->category(), u8"Тип", "pop_cat");
+
+            // Numeric value
+            if (ch->numeric.isPresent()) {
+                sp.sep();
+                str::append(text, ch->numeric.type().locName);
+                str::append(text, ": ");
+                str::append(text, ch->numeric.num);
+                if (ch->numeric.denom != 1) {
+                    str::append(text, "/");
+                    str::append(text, ch->numeric.denom);
+                }
             }
+
+            // Bidi writing
+            sp.sep();
+            appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pop_bidi");
+
+            // UTF-8
+            sp.sep();
+            auto sChar = str::toQ(ch.code);
+            str::append(text, u8"UTF-8:");
+            auto u8 = sChar.toUtf8();
+            char buf[10];
+            for (unsigned char v : u8) {
+                snprintf(buf, 10, " %02X", static_cast<int>(v));
+                str::append(text, buf);
+            }
+
+            // UTF-16: QString us UTF-16
+            sp.sep();
+            str::append(text, u8"UTF-16:");
+            for (auto v : sChar) {
+                snprintf(buf, 10, " %04X", static_cast<int>(v.unicode()));
+                str::append(text, buf);
+            }
+
+            text.append("</p>");
         }
-
-        // Bidi writing
-        sp.sep();
-        appendValuePopup(text, cp.bidiClass(), u8"В двунаправленном письме", "pop_bidi");
-
-        // UTF-8
-        sp.sep();
-        auto sChar = str::toQ(cp.subj);
-        str::append(text, u8"UTF-8:");
-        auto u8 = sChar.toUtf8();
-        char buf[10];
-        for (unsigned char v : u8) {
-            snprintf(buf, 10, " %02X", static_cast<int>(v));
-            str::append(text, buf);
-        }
-
-        // UTF-16
-        sp.sep();
-        str::append(text, u8"UTF-16:");
-        for (auto v : sChar) {
-            snprintf(buf, 10, " %04X", static_cast<int>(v.unicode()));
-            str::append(text, buf);
-        }
-
-        text.append("</p>");
+        ui->vwInfo->setText(text);
+    } else {
+        // No character
+        ui->lbTypoEngine->setText(" ");
+        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+        ui->vwInfo->setText("<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>");
     }
-    ui->vwInfo->setText(text);
 }
 
 
 void FmMain::charChanged(const QModelIndex& current)
 {
-    if (auto cp = model.charAt(current))
-        showCp(*cp);
+    showCp(model.charAt(current));
 }
 
 

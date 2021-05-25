@@ -24,6 +24,15 @@ constexpr int FONT_SIZE = 14;
 
 class FmPopup;
 
+struct MaybeChar {
+    char32_t code = 0;
+    const uc::Cp* cp = nullptr;
+    explicit operator bool() const { return cp; }
+    const uc::Cp& operator * () const { return *cp; }
+    const uc::Cp* operator ->() const { return  cp; }
+};
+
+
 class RowCache
 {
 public:
@@ -35,7 +44,7 @@ public:
     void addCp(const uc::Cp& aCp);
 
     /// @return  code point if it’s really present
-    const uc::Cp* charAt(size_t iRow, unsigned iCol) const;
+    MaybeChar charAt(size_t iRow, unsigned iCol) const;
 
     /// @return  starting code point of row; or NO_CHAR if bad row
     int startingCpAt(size_t iRow) const;
@@ -73,7 +82,7 @@ public:
                         int role = Qt::DisplayRole) const override;
     void initFonts();
     void addCp(const uc::Cp& aCp);
-    const uc::Cp* charAt(const QModelIndex& index) const
+    MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
 private:
     RowCache rows;
@@ -94,7 +103,7 @@ private:
     CharsModel model;
     std::unique_ptr<FmPopup> popup;
 
-    void showCp(const uc::Cp& cp);
+    void showCp(MaybeChar ch);
     void linkClicked(std::string_view scheme, std::string_view target,
                      QWidget* widget, TinyOpt<QRect> rect);
     template <class T>
