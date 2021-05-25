@@ -245,6 +245,11 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Каждый символ означает слог с гласной «а». Чтобы отобразить другие слоги, надо добавить огласовку: "sv
                 u8"<nobr>ка <font size='+2'>क</font> + и<font size='+2'> ि</font> = ки <font size='+2'>कि</font></nobr>. "sv
                 u8"Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к <font size='+2'>क्</font>.</p>"sv },
+    { "Ethi"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR,
+        u8"Эфиопская"sv, u8"I—VII век",
+        u8"амхарский, тигринья и другие эфиосемитские языки"sv,
+        u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII веке. Геэз всё ещё используется эфиопскими христианами "sv
+                u8"как литургический\u00A0— а письменность распространилась на другие языки Эфиопии.</p>"sv },
     { "Grek"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Греческая"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,

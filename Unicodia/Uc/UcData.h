@@ -39,6 +39,7 @@ namespace uc {
         Beng,
         Cyrl,
         Deva,
+        Ethi,
         Grek,
         Gujr,
         Guru,
@@ -96,7 +97,6 @@ namespace uc {
         Egyp = Zyyy,
         Elba = Zyyy,
         Elym = Zyyy,
-        Ethi = Zyyy,
         //Geok  no chars
         Geor = Zyyy,
         Glag = Zyyy,
