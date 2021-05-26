@@ -462,6 +462,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "VOICELESS"sv,    Dicf::PART_ADJECTIVE },
     { "YENISEI"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
+    // Names
+    { "FITZPATRICK"sv,  Dicf::CAP_TITLE },
+
     // Some letters
     { "A"sv,            Dicf::PART_MAYBE_LETTER },
     { "-A"sv,           Dicf::CAP_ALL },
