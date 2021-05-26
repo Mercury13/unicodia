@@ -49,6 +49,8 @@ namespace uc {
         Hang,
         Hani,
         Hebr,
+        Hira,
+        Kana,
         Knda,
         Laoo,
         Latn,
@@ -111,7 +113,6 @@ namespace uc {
         //Hans  no chars
         //Hant  no chars
         Hatr = Zyyy,
-        Hira = Zyyy,
         Hluw = Zyyy,
         Hmng = Zyyy,
         Hmnp = Zyyy,
@@ -124,7 +125,6 @@ namespace uc {
         //Jpan  no chars
         //Jurc  no chars
         Kali = Zyyy,
-        Kana = Zyyy,
         Khar = Zyyy,
         Khmr = Zyyy,
         Khoj = Zyyy,
