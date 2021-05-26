@@ -42,13 +42,17 @@ namespace uc {
         Beng,
         Bopo,
         Brai,
+        Bugi,
         Buhd,
         Cans,
+        Cham,
         Cher,
+        Copt,
         Cyrl,
         Deva,
         Ethi,
         Geor,
+        Glag,
         Grek,
         Gujr,
         Guru,
@@ -85,147 +89,143 @@ namespace uc {
 
         //Afak  no chars
         //Aran  no chars
-        Avst = Zyyy,
-        Bass = Zyyy,
-        Bhks = Zyyy,
+        Avst = Zyyy,        // beyond BMP
+        Bass = Zyyy,        // beyond BMP
+        Bhks = Zyyy,        // beyond BMP
         //Blis  no chars
-        Brah = Zyyy,
-        Bugi = Zyyy,
-        Cakm = Zyyy,
-        Cari = Zyyy,
-        Cham = Zyyy,
-        Chrs = Zyyy,
-        Cirt = Zyyy,
-        Copt = Zyyy,
+        Brah = Zyyy,        // historical, beyond BMP
+        Cakm = Zyyy,        // beyond BMP
+        Cari = Zyyy,        // beyond BMP
+        Chrs = Zyyy,        // Chorasmian, beyond BMP
+        //Cirt no chars
         //Cpmn  no chars
-        Cprt = Zyyy,
+        Cprt = Zyyy,        // beyond BMP
         //Cyrs  no chars
-        Diak = Zyyy,
-        Dogr = Zyyy,
-        Dsrt = Zyyy,
-        Dupl = Zyyy,
+        Diak = Zyyy,        // Dives Akuru, beyond BMP
+        Dogr = Zyyy,        // beyond BMP
+        Dsrt = Zyyy,        // beyond BMP
+        Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars
         //Egyh  no chars
-        Egyp = Zyyy,
-        Elba = Zyyy,
-        Elym = Zyyy,
+        Egyp = Zyyy,        // beyond BMP
+        Elba = Zyyy,        // beyond BMP
+        Elym = Zyyy,        // Elymaic, beyond BMP
         //Geok  no chars
-        Glag = Zyyy,
-        Gong = Zyyy,
-        Gonm = Zyyy,
-        Goth = Zyyy,
-        Gran = Zyyy,
+        Gong = Zyyy,        // beyond BMP
+        Gonm = Zyyy,        // beyond BMP
+        Goth = Zyyy,        // beyond BMP
+        Gran = Zyyy,        // beyond BMP
         //Hanb  no chars
         //Hans  no chars
         //Hant  no chars
-        Hatr = Zyyy,
-        Hluw = Zyyy,
-        Hmng = Zyyy,
-        Hmnp = Zyyy,
+        Hatr = Zyyy,        // beyond BMP
+        Hluw = Zyyy,        // beyond BMP
+        Hmng = Zyyy,        // beyond BMP
+        Hmnp = Zyyy,        // beyond BMP
         //Hrkt  no chars
-        Hung = Zyyy,
-        Inds = Zyyy,
-        Ital = Zyyy,
+        Hung = Zyyy,        // beyond BMP
+        //Inds  no chars
+        Ital = Zyyy,        // beyond BMP
         //Jamo  no chars
-        Java = Zyyy,
+        Java = Zyyy,        /// @todo [urgent] Javanese
         //Jpan  no chars
         //Jurc  no chars
-        Kali = Zyyy,
-        Khar = Zyyy,
-        Khoj = Zyyy,
+        Kali = Zyyy,        /// @todo [urgent] Kayah Li
+        Khar = Zyyy,        // beyond BMP
+        Khoj = Zyyy,        // beyond BMP
         //Kitl  no chars
-        Kits = Zyyy,
+        Kits = Zyyy,        // beyond BMP
         //Kore  no chars
         //Kpel  no chars
-        Kthi = Zyyy,
-        Lana = Zyyy,
+        Kthi = Zyyy,        // beyond BMP
+        Lana = Zyyy,        /// @todo [urgent] Tai Tham
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars
-        Lepc = Zyyy,
-        Limb = Zyyy,
-        Lina = Zyyy,
-        Linb = Zyyy,
-        Lisu = Zyyy,
+        Lepc = Zyyy,        /// @todo [urgent] Lepcha
+        Limb = Zyyy,        /// @todo [urgent] Limbu
+        Lina = Zyyy,        // beyond BMP
+        Linb = Zyyy,        // beyond BMP
+        Lisu = Zyyy,        /// @todo [urgent] Lisu
         //Loma  no chars
-        Lyci = Zyyy,
-        Lydi = Zyyy,
-        Mahj = Zyyy,
-        Maka = Zyyy,
-        Mani = Zyyy,
-        Marc = Zyyy,
+        Lyci = Zyyy,        // beyond BMP
+        Lydi = Zyyy,        // beyond BMP
+        Mahj = Zyyy,        // Mahajani, beyond BMP
+        Maka = Zyyy,        // beyond BMP
+        Mani = Zyyy,        // beyond BMP
+        Marc = Zyyy,        // beyond BMP
         //Maya  no chars
-        Medf = Zyyy,
-        Mend = Zyyy,
-        Merc = Zyyy,
-        Mero = Zyyy,
-        Modi = Zyyy,
+        Medf = Zyyy,        // beyond BMP
+        Mend = Zyyy,        // beyond BMP
+        Merc = Zyyy,        // beyond BMP
+        Mero = Zyyy,        // beyond BMP
+        Modi = Zyyy,        // beyond BMP
         //Moon  no chars
-        Mroo = Zyyy,
-        Mtei = Zyyy,
-        Mult = Zyyy,
-        Nand = Zyyy,
-        Narb = Zyyy,
-        Nbat = Zyyy,
-        Newa = Zyyy,
+        Mroo = Zyyy,        // beyond BMP
+        Mtei = Zyyy,        /// @todo [urgent] Meitei Mayek
+        Mult = Zyyy,        // beyond BMP
+        Nand = Zyyy,        // Nandinagari, beyond BMP
+        Narb = Zyyy,        // beyond BMP
+        Nbat = Zyyy,        // beyond BMP
+        Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars
         //Nkgb  no chars
-        Nshu = Zyyy,
-        Olck = Zyyy,
-        Orkh = Zyyy,
-        Osge = Zyyy,
-        Osma = Zyyy,
-        Palm = Zyyy,
-        Pauc = Zyyy,
-        Perm = Zyyy,
-        Phag = Zyyy,
-        Phli = Zyyy,
-        Phlp = Zyyy,
+        Nshu = Zyyy,        // beyond BMP
+        Olck = Zyyy,        /// @todo [urgent] Ol Chiki
+        Orkh = Zyyy,        // Turkic runes, beyond BMP
+        Osge = Zyyy,        // beyond BMP
+        Osma = Zyyy,        // beyond BMP
+        Palm = Zyyy,        // beyond BMP
+        Pauc = Zyyy,        // beyond BMP
+        Perm = Zyyy,        // beyond BMP
+        Phag = Zyyy,        /// @todo [urgent] Phags-pa
+        Phli = Zyyy,        // beyond BMP
+        Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars
-        Phnx = Zyyy,
+        Phnx = Zyyy,        // beyond BMP
         //Piqd  no chars — Klingon :)
-        Plrd = Zyyy,
-        Prti = Zyyy,
-        Rjng = Zyyy,
-        Rohg = Zyyy,
+        Plrd = Zyyy,        // beyond BMP
+        Prti = Zyyy,        // beyond BMP
+        Rjng = Zyyy,        /// @todo [urgent] Rejang
+        Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
         //Roro  no chars
         //Sara  no chars
-        Sarb = Zyyy,
-        Saur = Zyyy,
-        Sgnw = Zyyy,
-        Shaw = Zyyy,
-        Shrd = Zyyy,
+        Sarb = Zyyy,        // beyond BMP
+        Saur = Zyyy,        /// @todo [urgent] Saurashtra
+        Sgnw = Zyyy,        // SignWriting, beyond BMP
+        Shaw = Zyyy,        // beyond BMP
+        Shrd = Zyyy,        // beyond BMP
         //Shui  no chars
-        Sidd = Zyyy,
-        Sind = Zyyy,
-        Sora = Zyyy,
-        Sogd = Zyyy,
-        Sogo = Zyyy,
-        Soyo = Zyyy,
-        Sund = Zyyy,
-        Sylo = Zyyy,
+        Sidd = Zyyy,        // beyond BMP
+        Sind = Zyyy,        // beyond BMP
+        Sora = Zyyy,        // beyond BMP
+        Sogd = Zyyy,        // beyond BMP
+        Sogo = Zyyy,        // beyond BMP
+        Soyo = Zyyy,        // beyond BMP
+        Sund = Zyyy,        /// @todo [urgent] Sundanese
+        Sylo = Zyyy,        /// @todo [urgent] Syloti Nagri
         //Syre  no chars
         //Syrj  no chars
         //Syrn  no chars
-        Takr = Zyyy,
-        Tale = Zyyy,
-        Talu = Zyyy,
-        Tang = Zyyy,
-        Tavt = Zyyy,
+        Takr = Zyyy,        // beyond BMP
+        Tale = Zyyy,        /// @todo [urgent] Tai Le
+        Talu = Zyyy,        /// @todo [urgent] New Tai Lue
+        Tang = Zyyy,        // beyond BMP
+        Tavt = Zyyy,        /// @todo [urgent] Tai Viet
         //Teng  no chars
-        Tfng = Zyyy,
-        Tirh = Zyyy,
-        Ugar = Zyyy,
-        Vaii = Zyyy,
+        Tfng = Zyyy,        /// @todo [urgent] Tifinagh
+        Tirh = Zyyy,        // Tirhuta beyond BMP
+        Ugar = Zyyy,        // Ugaritic beyond BMP
+        Vaii = Zyyy,        /// @todo [urgent] Vai
         //Visp  no chars
-        Wara = Zyyy,
-        Wcho = Zyyy,
+        Wara = Zyyy,        // Warang Citi beyond BMP
+        Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
-        Xpeo = Zyyy,
-        Xsux = Zyyy,
-        Yezi = Zyyy,
-        Yiii = Zyyy,
-        Zanb = Zyyy,
+        Xpeo = Zyyy,        // Old Persian beyond BMP
+        Xsux = Zyyy,        // Cuneiform beyond BMP
+        Yezi = Zyyy,        // Yezidi beyond BMP
+        Yiii = Zyyy,        /// @todo [urgent] Yi
+        Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars
         //Zsye  no chars
         //Zsym  no chars
