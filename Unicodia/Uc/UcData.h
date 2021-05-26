@@ -36,7 +36,11 @@ namespace uc {
         Arab,
         Armi,
         Armn,
+        Bali,
+        Bamu,
+        Batk,
         Beng,
+        Bopo,
         Buhd,
         Cans,
         Cher,
@@ -81,13 +85,9 @@ namespace uc {
         //Afak  no chars
         //Aran  no chars
         Avst = Zyyy,
-        Bali = Zyyy,
-        Bamu = Zyyy,
         Bass = Zyyy,
-        Batk = Zyyy,
         Bhks = Zyyy,
         //Blis  no chars
-        Bopo = Zyyy,
         Brah = Zyyy,
         Brai = Zyyy,
         Bugi = Zyyy,
