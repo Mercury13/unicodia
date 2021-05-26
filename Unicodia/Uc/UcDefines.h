@@ -41,7 +41,7 @@ namespace uc {
         //                ///<   (English stenography)
         CODE,           ///< System for encoding other scripts (Braille)
         SYMBOL,         ///< Miscellaneous symbols
-        GAME,           ///< TableMiscellaneous symbols
+        GAME,           ///< Tabletop games
         EMOJI,          ///< Emoji pictures
         NN,
     };
