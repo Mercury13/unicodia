@@ -387,9 +387,11 @@ void FmMain::showPopup(
             str::append(text, u8"• Направление: ");
             str::append(text, x.dir().locName);
         }
-        sp.sep();
-        str::append(text, u8"• Языки: ");
-        str::append(text, x.locLangs);
+        if (!x.locLangs.empty()) {
+            sp.sep();
+            str::append(text, u8"• Языки: ");
+            str::append(text, x.locLangs);
+        }
         if (!x.locTime.empty()) {
             sp.sep();
             str::append(text, u8"• Появилась: ");

@@ -41,6 +41,7 @@ namespace uc {
         Batk,
         Beng,
         Bopo,
+        Brai,
         Buhd,
         Cans,
         Cher,
@@ -89,7 +90,6 @@ namespace uc {
         Bhks = Zyyy,
         //Blis  no chars
         Brah = Zyyy,
-        Brai = Zyyy,
         Bugi = Zyyy,
         Cakm = Zyyy,
         Cari = Zyyy,
