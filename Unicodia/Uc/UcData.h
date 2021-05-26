@@ -37,6 +37,7 @@ namespace uc {
         Armi,
         Armn,
         Beng,
+        Buhd,
         Cans,
         Cher,
         Cyrl,
@@ -48,14 +49,17 @@ namespace uc {
         Guru,
         Hang,
         Hani,
+        Hano,
         Hebr,
         Hira,
         Kana,
+        Khmr,
         Knda,
         Laoo,
         Latn,
         Mand,
         Mlym,
+        Mong,
         Mymr,
         Nkoo,
         Ogam,
@@ -64,6 +68,7 @@ namespace uc {
         Samr,
         Sinh,
         Syrc,
+        Tagb,
         Taml,
         Telu,
         Tglg,
@@ -86,7 +91,6 @@ namespace uc {
         Brah = Zyyy,
         Brai = Zyyy,
         Bugi = Zyyy,
-        Buhd = Zyyy,
         Cakm = Zyyy,
         Cari = Zyyy,
         Cham = Zyyy,
@@ -112,7 +116,6 @@ namespace uc {
         Goth = Zyyy,
         Gran = Zyyy,
         //Hanb  no chars
-        Hano = Zyyy,
         //Hans  no chars
         //Hant  no chars
         Hatr = Zyyy,
@@ -129,7 +132,6 @@ namespace uc {
         //Jurc  no chars
         Kali = Zyyy,
         Khar = Zyyy,
-        Khmr = Zyyy,
         Khoj = Zyyy,
         //Kitl  no chars
         Kits = Zyyy,
@@ -158,7 +160,6 @@ namespace uc {
         Merc = Zyyy,
         Mero = Zyyy,
         Modi = Zyyy,
-        Mong = Zyyy,
         //Moon  no chars
         Mroo = Zyyy,
         Mtei = Zyyy,
@@ -206,7 +207,6 @@ namespace uc {
         //Syre  no chars
         //Syrj  no chars
         //Syrn  no chars
-        Tagb = Zyyy,
         Takr = Zyyy,
         Tale = Zyyy,
         Talu = Zyyy,

@@ -205,6 +205,7 @@ namespace uc {
         RTL,
         LTR_CJK,
         LTR_BU,
+        LTR_COL,
         NN,
     };
 
