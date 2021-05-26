@@ -58,12 +58,15 @@ namespace uc {
         Mlym,
         Mymr,
         Nkoo,
+        Ogam,
         Orya,
+        Runr,
         Samr,
         Sinh,
         Syrc,
         Taml,
         Telu,
+        Tglg,
         Thaa,
         Thai,
         Tibt,
@@ -167,7 +170,6 @@ namespace uc {
         //Nkdb  no chars
         //Nkgb  no chars
         Nshu = Zyyy,
-        Ogam = Zyyy,
         Olck = Zyyy,
         Orkh = Zyyy,
         Osge = Zyyy,
@@ -186,7 +188,6 @@ namespace uc {
         Rjng = Zyyy,
         Rohg = Zyyy,
         //Roro  no chars
-        Runr = Zyyy,
         //Sara  no chars
         Sarb = Zyyy,
         Saur = Zyyy,
@@ -213,7 +214,6 @@ namespace uc {
         Tavt = Zyyy,
         //Teng  no chars
         Tfng = Zyyy,
-        Tglg = Zyyy,
         Tirh = Zyyy,
         Ugar = Zyyy,
         Vaii = Zyyy,
