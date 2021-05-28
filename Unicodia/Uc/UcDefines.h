@@ -35,6 +35,7 @@ namespace uc {
         ABUGIDA_MONOLITH, ///< Syllable script where similar syllables have
                         ///<   similar symbols (Devanagari, Thai)
         ABUGIDA_COMBINING,
+        ABUGIDA_BRAHMI,
         HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
         SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
         //SHORTHAND,      ///< Mostly alphabet, but with some simplifications
