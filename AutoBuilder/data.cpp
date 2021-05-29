@@ -508,7 +508,7 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Some prepositions
     { "WITH"sv,         Dicf::CAP_SMALL },
-    { "AND"sv,          Dicf::CAP_SMALL },      /// @todo [decap] Logical And here, chat to do
+    //{ "AND"sv,          Dicf::CAP_SMALL },    // Tricky word, all And’s are tested manually
     { "JOINER"sv,       Dicf::CAP_SMALL },
     //{ "ABOVE"sv,        Dicf::CAP_SMALL },    // Tricky word, all above’s are tested manually
     { "FOR"sv,          Dicf::CAP_SMALL },
@@ -686,6 +686,11 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Squared VOD")
     EX("Squared UHD")
     EX("Squared Lossless")
+    EX("Negative squared IC")
+    EX("Negative squared PA")
+    EX("Negative squared SA")
+    EX("Negative squared AB")
+    EX("Negative squared WC")
     EX("OK hand sign")                  // OK is both a syllable and an emoji
     EX("Turned OK hand sign")           // The same
     EX("Sloping large Or")              // Or is a tricky word
