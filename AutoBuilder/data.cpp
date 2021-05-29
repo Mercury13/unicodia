@@ -228,6 +228,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LETTER"sv,       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     /// @todo [spelling] Ligature Alpha Bravo — how to kick?
     { "LIGATURE"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "LOGICAL"sv,      Dicf::TRIG_CAP_NEXT },
     { "LOGOGRAM"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "MARK"sv,         Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "NUMBER"sv,       Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -464,6 +465,8 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Names
     { "FITZPATRICK"sv,  Dicf::CAP_TITLE },
+    { "JAPAN"sv,        Dicf::PART_NOUN | Dicf::CAP_TITLE },
+    { "FUJI"sv,         Dicf::PART_NOUN | Dicf::CAP_TITLE },
 
     // Some letters
     { "A"sv,            Dicf::PART_MAYBE_LETTER },
@@ -505,7 +508,7 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Some prepositions
     { "WITH"sv,         Dicf::CAP_SMALL },
-    { "AND"sv,          Dicf::CAP_SMALL },
+    { "AND"sv,          Dicf::CAP_SMALL },      /// @todo [decap] Logical And here, chat to do
     { "JOINER"sv,       Dicf::CAP_SMALL },
     //{ "ABOVE"sv,        Dicf::CAP_SMALL },    // Tricky word, all above’s are tested manually
     { "FOR"sv,          Dicf::CAP_SMALL },
@@ -645,6 +648,48 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Square Hg")
     EX("Square erg")
     EX("Square eV")
+    EX("Square DJ")
+    EX("Earth globe Europe-Africa")     // Rare names
+    EX("Earth globe Americas")
+    EX("Earth globe Asia-Australia")
+    EX("Milky Way")                     // Special proper name
+    EX("Tokyo Tower")                   // Special proper name
+    EX("Statue of Liberty")             // Special proper name
+    EX("Face with No good gesture")     // Complex rules, better manually
+    EX("Face with OK gesture")          // Complex rules, better manually
+    EX("Squared OK")                    // OK is both a syllable and an emoji
+    EX("Squared SOS")                   // The same
+    EX("Squared CL")                    // Squared is a tricky word
+    EX("Squared Cool")
+    EX("Squared New")
+    EX("Squared No good")
+    EX("Squared Up with exclamation mark")
+    EX("Squared Three D")
+    EX("Squared Second screen")
+    EX("Squared Two K")
+    EX("Squared Four K")
+    EX("Squared Eight K")
+    EX("Squared Five point one")
+    EX("Squared Seven point one")
+    EX("Squared Twenty-two point two")
+    EX("Squared Sixty P")
+    EX("Squared One hundred twenty P")
+    EX("Squared HC")
+    EX("Squared Vs")
+    EX("Squared New")
+    EX("Squared NG")
+    EX("Squared Free")
+    EX("Squared ID")
+    EX("Squared Hi-res")
+    EX("Squared HDR")
+    EX("Squared SHV")
+    EX("Squared VOD")
+    EX("Squared UHD")
+    EX("Squared Lossless")
+    EX("OK hand sign")                  // OK is both a syllable and an emoji
+    EX("Turned OK hand sign")           // The same
+    EX("Sloping large Or")              // Or is a tricky word
+    EX("Sloping large And")             // And is a tricky word
 };
 
 const std::multiset<PrefixEntry> prefixes {
