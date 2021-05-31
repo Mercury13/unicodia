@@ -442,6 +442,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SHORT-TWIG-AR"sv, Dicf::PART_ADJECTIVE },
     { "SMALL"sv,        Dicf::PART_ADJECTIVE },
     { "SNAP"sv,         Dicf::PART_ADJECTIVE },     // OK, music only
+    { "SPACING"sv,      Dicf::PART_ADJECTIVE },
     { "SOFT"sv,         Dicf::PART_ADJECTIVE },
     { "SOUTH"sv,        Dicf::PART_ADJECTIVE },
     { "STRAIGHT"sv,     Dicf::PART_ADJECTIVE },
