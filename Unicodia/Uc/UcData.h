@@ -27,7 +27,10 @@ namespace uc {
     enum class EcFont
     {
         NORMAL,
+        CHEROKEE,
         GLAGOLITIC,
+        HANUNOO,
+        TAGALOG,
         NN
     };
 

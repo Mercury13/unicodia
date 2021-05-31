@@ -8,8 +8,12 @@ uc::Cp* uc::cps[N_CHARS];
 
 
 const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
-    { "Cambria"sv, {} },
-    { "Noto Sans Glagolitic"sv, "NotoSansGlagolitic-Regular.otf"sv },
+    { "Cambria"sv,                  {} },
+    { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
+    { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
+    { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
+    /// @todo [font] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
+    { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
 };
 
 
@@ -304,7 +308,8 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             u8"<p>Первой ученицей была шестилетняя дочь Аёка. Изобретение азбуки приняли с недоверием (приняли за одержимого), "sv
                 u8"но Секвойя и Аёка с блеском прошли проверку, прочитывая записки друг друга. Письмо быстро распространилось "sv
                 u8"среди индейцев, к 1830 грамотны были 90% чероки.</p>"sv
-            u8"<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.</p>" },
+            u8"<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.</p>",
+            EcFont::CHEROKEE },
     { "Copt"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR,
         u8"Коптская"sv, u8"II век"sv,
         u8"коптский"sv,
@@ -395,7 +400,8 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Hano"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
         u8"Хануноо"sv, u8"≈1300"sv,
         u8"филиппинские горные народы"sv,
-        u8"<p>Алфавит восходит к брахми и похож на тагальский.</p>"sv },
+        u8"<p>Алфавит восходит к брахми и похож на тагальский.</p>"sv,
+            EcFont::HANUNOO },
     { "Hebr"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
         u8"иврит, ладино, идиш, караимский, крымчакский"sv,
@@ -541,7 +547,8 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Испанские миссионеры (XVI\u00A0век) увидели, что островитяне поголовно грамотны, и "
                 "сами стали учить их на байбайине, но в XVIII\u00A0веке обнаружили, что аборигены переняли латиницу. "
                 "К XIX\u00A0веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. "
-                "Есть современные попытки возродить байбайин.</p>"sv },
+                "Есть современные попытки возродить байбайин.</p>"sv,
+            EcFont::TAGALOG },
     { "Thaa"sv, EcScriptType::ABUGIDA_COMBINING, EcLangLife::ALIVE, EcWritingDir::RTL,
         u8"Тана"sv, u8"XVIII век"sv,
         u8"дивехи <i>(мальдивский)</i>"sv,
