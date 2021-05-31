@@ -5,3 +5,4 @@ https://unicode.org/reports/tr42/ — информация о базе симв�
 https://www.compart.com/en/unicode/scripts — интересный справочник по Юникоду
 https://commons.wikimedia.org/wiki/Emoji/Table — список эмодзи
 https://dev.w3.org/html5/html-author/charref — список именованных символов
+https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
