@@ -24,6 +24,7 @@ debug {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+../Libs/SelfMade/i_TempFont.cpp \
     ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
     FmPopup.cpp \
@@ -33,6 +34,7 @@ SOURCES += \
     FmMain.cpp
 
 HEADERS += \
+    ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_Strings.h \
@@ -52,6 +54,10 @@ INCLUDEPATH += \
 
 TRANSLATIONS += \
     Unicodia_en_001.ts
+
+win32-g++ {
+    LIBS += -lgdi32
+}
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

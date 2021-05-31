@@ -20,7 +20,8 @@ QT_END_NAMESPACE
 
 
 constexpr int NCOLS = 8;
-constexpr int FONT_SIZE = 14;
+constexpr int FSZ_TABLE = 14;
+constexpr int FSZ_BIG = 50;
 
 class FmPopup;
 
@@ -71,8 +72,6 @@ protected:
 class CharsModel : public QAbstractTableModel
 {
 public:
-    QFont fontBasic;
-
     CharsModel();
 
     int rowCount(const QModelIndex&) const override;
@@ -80,7 +79,6 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
-    void initFonts();
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }

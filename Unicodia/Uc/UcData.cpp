@@ -1,6 +1,16 @@
 #include "UcData.h"
 
+#include "i_TempFont.h"
+#include "u_Qstrings.h"
+
 using namespace std::string_view_literals;
+uc::Cp* uc::cps[N_CHARS];
+
+
+const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
+    { "Cambria"sv, {} },
+    { "Noto Sans Glagolitic"sv, "NotoSansGlagolitic-Regular.otf"sv },
+};
 
 
 const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
@@ -338,7 +348,8 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Глаголица, по наиболее распространённому мнению, была составлена около 863 Кириллом и Мефодием. Считается, что глаголица "
                 "старее кириллицы: дорогой пергамент старались повторно использовать, и сохранились палимпсесты (пергаменты, где стёрли "
                 "одно и написали другое), где глаголицу заменили кириллицей.</p>"
-            "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv },
+            "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv,
+            EcFont::GLAGOLITIC },
     { "Grek"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Греческая"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,
@@ -611,6 +622,7 @@ const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
 
 void uc::completeData()
 {
+    std::fill(std::begin(cps), std::end(cps), nullptr);
     auto n = nCps();
     for (unsigned i = 0; i < n; ++i) {
         auto& cp = cpInfo[i];
@@ -619,5 +631,28 @@ void uc::completeData()
         auto& script = cp.script();
         ++script.nChars;
         script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
+        cps[cp.subj] = &cp;
     }
+}
+
+
+void uc::Font::load() const
+{
+    if (q.isLoaded)
+        return;
+    if (!fileName.empty())
+        installTempFontRel(fileName);
+    q.isLoaded = true;
+}
+
+
+const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
+{
+    if (!font) {
+        load();
+        font.reset(new QFont(str::toQ(family), size));
+        font->setStyleStrategy(
+                    static_cast<QFont::StyleStrategy>(QFont::PreferAntialias | QFont::PreferQuality));
+    }
+    return *font;
 }

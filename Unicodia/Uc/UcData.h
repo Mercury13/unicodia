@@ -3,6 +3,9 @@
 // STL
 #include <string>
 
+// Qt
+#include <QFont>
+
 // Unicode data
 #include "UcDefines.h"
 
@@ -21,11 +24,25 @@ const T* findInArray(std::string_view needle, const T (&haystack)[N])
 
 namespace uc {
 
+    enum class EcFont
+    {
+        NORMAL,
+        GLAGOLITIC,
+        NN
+    };
+
     struct Font
     {
-        int index;
-        std::string name;
+        std::string_view family, fileName;
+        mutable struct Q {
+            std::unique_ptr<QFont> table {};
+            std::unique_ptr<QFont> big {};
+            bool isLoaded = false;
+        } q {};
+        void load() const;
+        const QFont& get(std::unique_ptr<QFont>& font, int size) const;
     };
+    extern const Font fontInfo[static_cast<int>(EcFont::NN)];
 
 
     enum class EcScript {
@@ -270,12 +287,14 @@ namespace uc {
         EcLangLife ecLife;
         EcWritingDir ecDir;
         std::string_view locName, locTime, locLangs, locDescription;
+        EcFont ecFont = EcFont::NORMAL;
         mutable unsigned nChars = 0;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
         inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
         inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
+        inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
     };
     extern const Script scriptInfo[static_cast<int>(EcScript::NN)];
@@ -351,6 +370,9 @@ namespace uc {
 
     extern unsigned nCps();
     extern Cp cpInfo[];
+
+    constexpr int N_CHARS = 65536 * 17;
+    extern Cp* cps[N_CHARS];
 
     void completeData();
 

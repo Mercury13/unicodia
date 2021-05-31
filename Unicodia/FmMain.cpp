@@ -94,8 +94,13 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             return str::toQ(cp->proxy);
         }
 
-    case Qt::FontRole:
-        return fontBasic;
+    case Qt::FontRole: {
+            auto cp = rows.charAt(index.row(), index.column());
+            if (!cp)
+                return {};
+            auto& font = cp->script().font();
+            return font.get(font.q.table, FSZ_TABLE);
+        }
 
     case Qt::TextAlignmentRole:
         return Qt::AlignCenter;
@@ -153,14 +158,6 @@ void CharsModel::addCp(const uc::Cp& aCp)
 }
 
 
-void CharsModel::initFonts()
-{
-    fontBasic = QFont("Cambria", FONT_SIZE);
-    fontBasic.setStyleStrategy(
-                static_cast<QFont::StyleStrategy>(QFont::PreferAntialias | QFont::PreferQuality));
-}
-
-
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 FmMain::FmMain(QWidget *parent)
@@ -180,12 +177,6 @@ FmMain::FmMain(QWidget *parent)
         const auto& cp = uc::cpInfo[i];
         model.addCp(cp);
     }
-
-    // Set fonts
-    model.initFonts();
-    QFont fontBasicBigger = model.fontBasic;
-    fontBasicBigger.setPointSize(50);
-    ui->lbTypoEngine->setFont(fontBasicBigger);
 
     // Table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
@@ -244,6 +235,10 @@ void FmMain::showCp(MaybeChar ch)
     ui->lbCharCode->setText(buf);
 
     if (ch) {
+        // Font
+        auto& font = ch->script().font();
+        ui->lbTypoEngine->setFont(font.get(font.q.big, FSZ_BIG));
+
         // OS char
         ui->lbTypoEngine->setText(str::toQ(ch->proxy));
 
