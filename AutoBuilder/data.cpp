@@ -695,6 +695,20 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Turned OK hand sign")           // The same
     EX("Sloping large Or")              // Or is a tricky word
     EX("Sloping large And")             // And is a tricky word
+    EX("Arabic small low Waw")          // IDK what to do
+    EX("Arabic small high Sad")
+    EX("Arabic small high Ain")
+    EX("Arabic small high Qaf")
+    EX("Arabic small high Noon with kasra")
+    EX("Arabic small low Noon with kasra")
+    EX("Arabic small high Waw")
+    EX("Arabic small high word Ar-rub") // “Word” is a tricky word
+    EX("Arabic small high word Ath-thalatha")
+    EX("Arabic small high word As-sajda")
+    EX("Arabic small high word An-nisf")
+    EX("Arabic small high word Sakta")
+    EX("Arabic small high word Qif")
+    EX("Arabic small high word Waqfa")
 };
 
 const std::multiset<PrefixEntry> prefixes {
