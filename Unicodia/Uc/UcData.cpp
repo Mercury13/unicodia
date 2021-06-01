@@ -12,6 +12,8 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
+    /// @todo [font] Mongolian font has no dotted circles, what to do?
+    { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
     /// @todo [font] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
@@ -470,7 +472,8 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Развилась из староуйгурского. Единственная действующая система с записью слева направо по столбцам, из-за чего компьютеры "
                 "очень неохотно её поддерживают. Первый известный документ датируется 1204. "
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
-                "расширить использование старой письменности.</p>" },
+                "расширить использование старой письменности.</p>"sv,
+            EcFont::MONGOLIAN },
     { "Mymr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Бирманская"sv, u8"XI век"sv,
         u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>"sv,
