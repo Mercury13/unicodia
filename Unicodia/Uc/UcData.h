@@ -147,16 +147,17 @@ namespace uc {
     {
         char32_t subj = 0, proxy = NO_CHAR;
         struct Name {
-            std::string_view tech;
-            std::string_view loc;
+            const char* tech;
+            const char* loc;
         } name;
         EcCategory ecCategory;
         EcVersion ecVersion;
         EcBidiClass ecBidiClass;
         EcScript ecScript;
         struct Numeric {
+            long long num = 0;
+            int denom = 0;
             EcNumType ecType = EcNumType::NONE;
-            long long num = 0, denom = 0;
             const NumType& type() const { return numTypeInfo[static_cast<int>(ecType)]; }
             bool isPresent() const { return (ecType != EcNumType::NONE); }
         } numeric;

@@ -201,8 +201,8 @@ int main()
            << cp << ", "                // subj
            << proxyChar(cp) << ", "       // proxy
            << "{ "                      // name
-                << '\"' << sLowerName << R"("sv, )"  // name.tech,
-                << R"(""sv)"                    // name.loc
+                << '\"' << sLowerName << R"(", )"  // name.tech,
+                << R"("")"                    // name.loc
            << " }, ";                  // /name
 
         // Char’s type
@@ -243,8 +243,8 @@ int main()
         if (sNumType != "None"sv) {
             std::string_view sNumValue = elChar.attribute("nv").as_string();
             auto frac = parseFraction(sNumType, sNumValue);
-            os << " EcNumType::" << transform(sNumType, smNumType)
-               << ", " << frac.num << ", " << frac.denom << ' ';
+            os << frac.num << ", " << frac.denom << ", "
+               << " EcNumType::" << transform(sNumType, smNumType) << ' ';
         }
         os << "} ";
 
