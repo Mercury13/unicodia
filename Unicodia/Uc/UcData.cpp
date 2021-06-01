@@ -22,7 +22,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
 };
 
 
-const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
+constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
     { {} },
     { u8"живая <i>(основным языкам ничего не угрожает, как кириллица)</i>"sv },
     { u8"в опасности <i>(задавлена соседними языками, как чероки, и/или социальными потрясениями, как сирийская)</i>"sv },
@@ -34,7 +34,7 @@ const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
 };
 
 
-const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir::NN)] {
+constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir::NN)] {
     { {} },
     { u8"→"sv },
     { u8"←"sv },
@@ -100,7 +100,7 @@ const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
 };
 
 
-const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
+constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      "Cc"sv,     u8"Управляющий"sv,
             u8"В первые годы, когда часто требовалось повторить сессию обмена вручную (перфоратором или консолью), "sv
             u8"управляющие символы играли роль форматов данных и сетевых протоколов. "sv
@@ -198,9 +198,9 @@ const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
 
 
 
-const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
+constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Zyyy"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER,
-            "Нет"sv, {}, {}, "Символы вне письменности."sv },
+            u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
     { "Adlm"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL,
         u8"Адлам"sv, u8"конец 1980-х"sv,
         u8"фулá <i>(семейство языков Западной Африки)</i>"sv,
@@ -586,15 +586,15 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
 
 
 
-const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
-    { ""sv },
+constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
+    { {} },
     { u8"Цифра"sv },
     { u8"Особая цифра"sv },
     { u8"Число"sv },
 };
 
 
-const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
+constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
     { "DIR"sv, EcBidiStrength::EXPLICIT,    u8"Тэг направления"sv,
                u8"Форматирующие символы, корректирующие работу двунаправленного алгоритма Юникода"sv },
     { "AL"sv,  EcBidiStrength::STRONG,      u8"Арабская буква"sv,

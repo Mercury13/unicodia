@@ -7,6 +7,13 @@ void str::append(QString& x, std::string_view s)
 }
 
 
+void str::append(QString& x, std::u8string_view s)
+{
+    x.append(QByteArray::fromRawData(
+                 reinterpret_cast<const char*>(s.data()), s.size()));
+}
+
+
 void str::QSep::sep()
 {
     if (s.length() != len)

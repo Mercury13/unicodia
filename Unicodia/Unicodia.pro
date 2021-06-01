@@ -1,5 +1,5 @@
 QT += core gui widgets
-CONFIG += c++17
+CONFIG += c++2a
 
 win32-g++ {
     # Some Qt versions have this thing

@@ -52,21 +52,21 @@ namespace uc {
 
     struct LangLife
     {
-        std::string_view locName;
+        std::u8string_view locName;
     };
     extern const LangLife langLifeInfo[static_cast<int>(EcLangLife::NN)];
 
 
     struct ScriptType
     {
-        std::string_view locName;
+        std::u8string_view locName;
     };
     extern const ScriptType scriptTypeInfo[static_cast<int>(EcScriptType::NN)];
 
 
     struct WritingDir
     {
-        std::string_view locName;
+        std::u8string_view locName;
     };
     extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
 
@@ -85,7 +85,7 @@ namespace uc {
         EcScriptType ecType;
         EcLangLife ecLife;
         EcWritingDir ecDir;
-        std::string_view locName, locTime, locLangs, locDescription;
+        std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
         mutable unsigned nChars = 0;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
@@ -118,8 +118,8 @@ namespace uc {
     {
         UpCategory upCat;
         std::string_view id;
-        std::string_view locName;
-        std::string_view locDescription;
+        std::u8string_view locName;
+        std::u8string_view locDescription;
         mutable unsigned nChars = 0;
     };
 
@@ -128,7 +128,7 @@ namespace uc {
 
     struct NumType
     {
-        std::string_view locName;
+        std::u8string_view locName;
     };
     extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
 
@@ -136,8 +136,8 @@ namespace uc {
     {
         std::string_view id;
         EcBidiStrength strength;
-        std::string_view locName;
-        std::string_view locDescription;
+        std::u8string_view locName;
+        std::u8string_view locDescription;
         mutable unsigned nChars = 0;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];

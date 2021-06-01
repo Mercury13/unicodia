@@ -214,7 +214,7 @@ namespace {
     }
 
     void appendVersion(
-            QString& text, std::string_view caption, const uc::Version& version)
+            QString& text, std::u8string_view caption, const uc::Version& version)
     {
         str::append(text, caption);
         str::append(text, u8"Версия Юникода: ");
