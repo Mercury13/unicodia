@@ -647,7 +647,7 @@ void uc::completeData()
         auto& script = cp.script();
         ++script.nChars;
         script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
-        cps[cp.subj] = &cp;
+        cps[cp.subj.val()] = &cp;
     }
 }
 

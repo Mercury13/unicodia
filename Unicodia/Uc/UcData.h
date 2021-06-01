@@ -143,11 +143,27 @@ namespace uc {
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
-    struct Fraction {
+    class Int3
+    {
+    public:
+        consteval Int3(int32_t x) : lo(x), med(x >> 8), hi(x >> 16) {}
+        constexpr int32_t val() const
+            { return (static_cast<int32_t>(hi) << 16) | (med << 8) | lo; }
+        constexpr operator int32_t() const { return val(); }
+
+        constexpr operator char32_t() const { return val(); }
+    private:
+        uint8_t lo = 0, med = 0;
+        int8_t hi;
+    };
+
+    struct Fraction
+    {
         long long num = 0, denom = 0;
     };
 
-    class CompressedFraction {
+    class CompressedFraction
+    {
     public:
         constexpr CompressedFraction() = default;
         consteval CompressedFraction(long long aNum, unsigned long long aDenom)
@@ -178,16 +194,16 @@ namespace uc {
 
     struct Cp   // code point
     {
-        char32_t subj = 0;              // 4
+        Int3 subj = 0;              // 3
         struct Name {
-            int32_t iTech, iLoc;            // +8 = 12
-            const char8_t* tech() const { return allStrings + iTech; }
+            Int3 iTech, iLoc;            // +6 = 9, align 10
+            const char8_t* tech() const { return allStrings + iTech.val(); }
         } name;
-        unsigned short rawProxy = 0;    // +2 = 14
-        EcCategory ecCategory;          // +1 = 15
-        EcVersion ecVersion;            // +1 = 16
-        EcBidiClass ecBidiClass;        // +1 = 17
-        EcScript ecScript;              // +1 = 18
+        unsigned short rawProxy = 0;    // +2 = 12
+        EcCategory ecCategory;          // +1 = 13
+        EcVersion ecVersion;            // +1 = 14
+        EcBidiClass ecBidiClass;        // +1 = 15
+        EcScript ecScript;              // +1 = 16
         struct Numeric {
             CompressedFraction val;
             EcNumType ecType = EcNumType::NONE;
@@ -196,13 +212,13 @@ namespace uc {
             consteval Numeric() = default;
             consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
                 : val(num, denom), ecType(aType) {}
-        } numeric;                      // +4 = 22, alignment = 24
+        } numeric;                      // +4 = 20
         //const Range* range = nullptr;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-        char32_t proxy() const { return (rawProxy != 0) ? rawProxy : subj; }
+        char32_t proxy() const { return (rawProxy != 0) ? rawProxy : subj.val(); }
     };
 
     extern unsigned nCps();
