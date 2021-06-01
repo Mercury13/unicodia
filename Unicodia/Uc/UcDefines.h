@@ -413,7 +413,7 @@ namespace uc {
         NN,
     };
 
-    enum class EcNumType {
+    enum class EcNumType : unsigned char {
         NONE,               ///< No numeric value
         DIGIT,              ///< Digit (Indian 1)
         SPECIAL_DIGIT,      ///< Special digit (superscript ³)

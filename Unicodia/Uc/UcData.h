@@ -178,16 +178,16 @@ namespace uc {
 
     struct Cp   // code point
     {
-        char32_t subj = 0;
+        char32_t subj = 0;              // 4
         struct Name {
-            int iTech, iLoc;
+            int32_t iTech, iLoc;            // +8 = 12
             const char8_t* tech() const { return allStrings + iTech; }
         } name;
-        unsigned short rawProxy = 0;
-        EcCategory ecCategory;
-        EcVersion ecVersion;
-        EcBidiClass ecBidiClass;
-        EcScript ecScript;
+        unsigned short rawProxy = 0;    // +2 = 14
+        EcCategory ecCategory;          // +1 = 15
+        EcVersion ecVersion;            // +1 = 16
+        EcBidiClass ecBidiClass;        // +1 = 17
+        EcScript ecScript;              // +1 = 18
         struct Numeric {
             CompressedFraction val;
             EcNumType ecType = EcNumType::NONE;
@@ -196,7 +196,7 @@ namespace uc {
             consteval Numeric() = default;
             consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
                 : val(num, denom), ecType(aType) {}
-        } numeric;
+        } numeric;                      // +4 = 22, alignment = 24
         //const Range* range = nullptr;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
