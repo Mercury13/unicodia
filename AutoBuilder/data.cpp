@@ -710,6 +710,25 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Arabic small high word Sakta")
     EX("Arabic small high word Qif")
     EX("Arabic small high word Waqfa")
+    EX("Runic letter Dotted-N")         // Tricky
+    EX("Runic letter Dotted-L")         // The same
+    EX("Runic letter Long-branch-Yr")   // Really tricky
+    EX("Runic letter Short-twig-Yr")    // The same
+    EX("Runic letter Icelandic-Yr")
+    EX("Runic letter Dotted-P")
+    EX("Runic letter Open-P")
+    EX("Runic letter Sigel Long-branch-Sol S")
+    EX("Runic letter Short-twig-Sol S")
+    EX("Runic letter Long-branch-Ar Ae")
+    EX("Runic letter Short-twig-Ar A")
+    EX("Runic letter Long-branch-Hagall H")
+    EX("Runic letter Short-twig-Hagall H")
+    EX("Runic letter Short-twig-Bjarkan B")
+    EX("Runic letter Long-branch-Oss O")
+    EX("Runic letter Short-twig-Oss O")
+    EX("Runic letter Short-twig-Naud N")
+    EX("Runic letter Long-branch-Madr M")
+    EX("Runic letter Short-twig-Madr M")
 };
 
 const std::multiset<PrefixEntry> prefixes {
@@ -726,6 +745,8 @@ const std::multiset<PrefixEntry> prefixes {
     { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
     { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, PrefixAction::NEXT_CAP },
     { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
+    { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
+    { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
 };
 
 
@@ -805,6 +826,10 @@ namespace {
         case PrefixAction::REST_SMALL:
             for (size_t i = prefixSize; i < words.size(); ++i)
                 words[i].isCapital = false;
+            break;
+        case PrefixAction::REST_CAP:
+            for (size_t i = prefixSize; i < words.size(); ++i)
+                words[i].isCapital = true;
             break;
         case PrefixAction::REST_CAPSMALL:
             for (size_t i = prefixSize + 1; i < words.size(); ++i)

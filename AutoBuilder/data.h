@@ -72,6 +72,7 @@ enum class PrefixAction {
     NEXT_CAP,
     NEXT_SMALL,
     REST_SMALL,
+    REST_CAP,
     NOMATTER = 0
 };
 
