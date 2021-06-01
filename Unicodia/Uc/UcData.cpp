@@ -12,6 +12,8 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
+    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
+    { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
     /// @todo [font] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
 };
@@ -509,12 +511,14 @@ const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ни для письма кистью или пером. Алфавиты древних тюрков, булгар, венгров сходной угловатой формы также "
                 "называют рунами.</p>"
             "<p>Фашистская Германия любила эзотерику, а вместе с ней и руны\u00A0— потому символы многих фашистских организаций "
-                "(тогдашних и современных) представляют собой руны.</p>"sv },
+                "(тогдашних и современных) представляют собой руны.</p>"sv,
+            EcFont::RUNIC },
     { "Samr"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
         u8"Самаритянская"sv, u8"около 600—200 до н.э."sv,
         u8"иврит, самаритянский арамейский"sv,
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "sv
-                u8"религию и культуру. Сейчас существует не более 700 самаритян.</p>"sv },
+                u8"религию и культуру. Сейчас существует не более 700 самаритян.</p>"sv,
+            EcFont::SAMARITAN },
     { "Sinh"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Сингальская"sv, u8"300"sv,
         u8"сингальский <i>(Шри-Ланка)</i>"sv,
