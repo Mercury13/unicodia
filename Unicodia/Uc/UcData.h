@@ -108,10 +108,10 @@ namespace uc {
 //    };
 
 
-    struct Range
+    struct Block
     {
-        std::string name;
-        int startingCp = 0, endingCp = 0;
+        std::string_view name;
+        char32_t startingCp = 0, endingCp = 0;
         Script* script;
     };
 
@@ -199,14 +199,13 @@ namespace uc {
     {
         Int3 subj = 0;              // 3
         struct Name {
-            Int3 iTech, iLoc;            // +6 = 9, align 10
+            Int3 iTech, iLoc;            // +6 = 9
             const char8_t* tech() const { return allStrings + iTech.val(); }
         } name;
-        unsigned short rawProxy = 0;    // +2 = 12
-        EcCategory ecCategory;          // +1 = 13
-        EcVersion ecVersion;            // +1 = 14
-        EcBidiClass ecBidiClass;        // +1 = 15
-        EcScript ecScript;              // +1 = 16
+        EcCategory ecCategory;          // +1 = 10
+        EcVersion ecVersion;            // +1 = 11
+        EcBidiClass ecBidiClass;        // +1 = 12
+        EcScript ecScript;              // +1 = 13
         struct Numeric {
             CompressedFraction val;
             EcNumType ecType = EcNumType::NONE;
@@ -215,8 +214,7 @@ namespace uc {
             consteval Numeric() = default;
             consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
                 : val(num, denom), ecType(aType) {}
-        } numeric;                      // +4 = 20
-        //const Range* range = nullptr;
+        } numeric;                      // +4 = 17
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
@@ -231,6 +229,9 @@ namespace uc {
 
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
+
+    extern unsigned nBlocks();
+    extern Block* blocks[];
 
     void completeData();
 

@@ -702,18 +702,28 @@ uc::Fraction uc::CompressedFraction::val() const
 }
 
 
+namespace {
+    unsigned short proxyChar(unsigned cp)
+    {
+        if (cp < ' ')       // Control 1..31
+            return 0x2400 + cp;
+        switch (cp) {
+        case 0x7F: return 0x2421;
+        default:   return cp;
+        }
+    }
+}
+
+
 QString uc::Cp::sampleProxy() const
 {
-    // Has proxy
-    if (rawProxy)
-        return QChar(rawProxy);
-
-    // Enclosing mark, Windows 10
-    if (ecCategory == EcCategory::MARK_ENCLOSING)
+    switch (ecCategory) {
+    case EcCategory::CONTROL:
+        return QChar(proxyChar(subj.ch32()));
+    case EcCategory::MARK_ENCLOSING:
         return QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32());
-
-    switch (category().upCat) {
-    case UpCategory::MARK:
+    case EcCategory::MARK_NONSPACING:
+    case EcCategory::MARK_SPACING:
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
     default:
         return str::toQ(subj.ch32());

@@ -129,17 +129,6 @@ StrMap smCharCat[] {
     { "Zs"sv, "SEPARATOR_SPACE"sv },
 };
 
-unsigned proxyChar(unsigned cp)
-{
-    if (cp < ' ')       // Control 1..31
-        return 0x2400 + cp;
-    switch (cp) {
-    case 0x7F: return 0x2421;
-    default:   return 0;
-    }
-}
-
-
 struct StringPayload
 {
     char32_t subj = 0;
@@ -237,8 +226,7 @@ int main()
            << "{ "                      // name
                 << std::dec << iTech << ", "  // name.tech,
                 << "-1 "                      // name.loc
-           << " }, "                    // /name
-           << proxyChar(cp) << ", ";    // proxy
+           << " }, ";                   // /name
 
         // Char’s type
         std::string_view sCharCat = elChar.attribute("gc").as_string();
