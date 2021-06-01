@@ -6,6 +6,7 @@
 using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
 
+constexpr uint16_t STUB_CIRCLE = 0x25CC;
 
 const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [font] 1DCB combining things: No script, block Diacritics Supplement
@@ -14,8 +15,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
-    { "Noto Serif Hebrew"sv,         "NotoSerifHebrew-Regular.ttf"sv },
-    /// @todo [font] Mongolian font has no dotted circles, what to do?
+    { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
@@ -696,4 +696,17 @@ uc::Fraction uc::CompressedFraction::val() const
         r.num *= decimals[order];
     }
     return r;
+}
+
+
+QString uc::Cp::proxy() const
+{
+    if (rawProxy)
+        return QChar(rawProxy);
+    switch (category().upCat) {
+    case UpCategory::MARK:
+        return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
+    default:
+        return str::toQ(subj.ch32());
+    }
 }

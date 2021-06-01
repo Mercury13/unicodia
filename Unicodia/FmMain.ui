@@ -157,6 +157,12 @@
                     </property>
                     <item>
                      <widget class="QLabel" name="lbTypoEngine">
+                      <property name="minimumSize">
+                       <size>
+                        <width>120</width>
+                        <height>100</height>
+                       </size>
+                      </property>
                       <property name="font">
                        <font>
                         <stylestrategy>PreferAntialias</stylestrategy>

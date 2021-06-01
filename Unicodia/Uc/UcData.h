@@ -153,6 +153,7 @@ namespace uc {
         constexpr operator int32_t() const { return val(); }
 
         constexpr operator char32_t() const { return val(); }
+        constexpr char32_t ch32() const { return val(); }
     private:
         uint8_t lo = 0, med = 0;
         int8_t hi;
@@ -219,7 +220,8 @@ namespace uc {
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-        char32_t proxy() const { return (rawProxy != 0) ? rawProxy : subj.val(); }
+        const Font& font() const { return script().font(); }
+        QString proxy() const;
     };
 
     extern unsigned nCps();

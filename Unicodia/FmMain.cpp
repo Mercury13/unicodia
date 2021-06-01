@@ -91,7 +91,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = rows.charAt(index.row(), index.column());
             if (!cp)
                 return {};
-            return str::toQ(cp->proxy());
+            return cp->proxy();
         }
 
     case Qt::FontRole: {
@@ -240,7 +240,7 @@ void FmMain::showCp(MaybeChar ch)
         ui->lbTypoEngine->setFont(font.get(font.q.big, FSZ_BIG));
 
         // OS char
-        ui->lbTypoEngine->setText(str::toQ(ch->proxy()));
+        ui->lbTypoEngine->setText(ch->proxy());
 
         // Text
         // Header
