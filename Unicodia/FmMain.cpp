@@ -91,14 +91,14 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = rows.charAt(index.row(), index.column());
             if (!cp)
                 return {};
-            return cp->proxy();
+            return cp->sampleProxy();
         }
 
     case Qt::FontRole: {
             auto cp = rows.charAt(index.row(), index.column());
             if (!cp)
                 return {};
-            auto& font = cp->script().font();
+            auto& font = cp->font();
             return font.get(font.q.table, FSZ_TABLE);
         }
 
@@ -190,6 +190,10 @@ FmMain::FmMain(QWidget *parent)
     // Select index
     ui->tableChars->setFocus();
     ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
+
+    // OS style
+    auto& font = uc::fontInfo[0];
+    ui->lbOs->setFont(font.get(font.q.big, FSZ_BIG));
 }
 
 FmMain::~FmMain()
@@ -237,10 +241,13 @@ void FmMain::showCp(MaybeChar ch)
     if (ch) {
         // Font
         auto& font = ch->script().font();
-        ui->lbTypoEngine->setFont(font.get(font.q.big, FSZ_BIG));
+        ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
+
+        // Sample char
+        ui->lbSample->setText(ch->sampleProxy());
 
         // OS char
-        ui->lbTypoEngine->setText(ch->proxy());
+        ui->lbOs->setText(ch->osProxy());
 
         // Text
         // Header
@@ -306,7 +313,8 @@ void FmMain::showCp(MaybeChar ch)
         ui->vwInfo->setText(text);
     } else {
         // No character
-        ui->lbTypoEngine->setText(" ");
+        ui->lbSample->setText(" ");
+        ui->lbOs->setText(" ");
         auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
         ui->vwInfo->setText("<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>");
     }

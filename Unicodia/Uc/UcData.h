@@ -221,7 +221,8 @@ namespace uc {
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
         const Font& font() const { return script().font(); }
-        QString proxy() const;
+        QString sampleProxy() const;
+        QString osProxy() const;
     };
 
     extern unsigned nCps();

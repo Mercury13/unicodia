@@ -699,10 +699,30 @@ uc::Fraction uc::CompressedFraction::val() const
 }
 
 
-QString uc::Cp::proxy() const
+QString uc::Cp::sampleProxy() const
 {
+    // Has proxy
     if (rawProxy)
         return QChar(rawProxy);
+
+    // Enclosing mark, Windows 10
+    if (ecCategory == EcCategory::MARK_ENCLOSING)
+        return QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32());
+
+    switch (category().upCat) {
+    case UpCategory::MARK:
+        return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
+    default:
+        return str::toQ(subj.ch32());
+    }
+}
+
+
+QString uc::Cp::osProxy() const
+{
+    if (ecCategory == EcCategory::CONTROL || ecCategory == EcCategory::FORMAT)
+        return {};
+
     switch (category().upCat) {
     case UpCategory::MARK:
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
