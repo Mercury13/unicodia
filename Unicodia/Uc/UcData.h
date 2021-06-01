@@ -30,6 +30,7 @@ namespace uc {
         CHEROKEE,
         GLAGOLITIC,
         HANUNOO,
+        HEBREW,
         MONGOLIAN,
         RUNIC,
         SAMARITAN,

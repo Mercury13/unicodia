@@ -14,6 +14,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
+    { "Noto Serif Hebrew"sv,         "NotoSerifHebrew-Regular.ttf"sv },
     /// @todo [font] Mongolian font has no dotted circles, what to do?
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
@@ -413,7 +414,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"иврит, ладино, идиш, караимский, крымчакский"sv,
         u8"<p>Развился из арамейской письменности, и ко II\u00A0в. до н.э. приобрёл почти современный вид.</p>"sv
             u8"<p>Записывает только согласные буквы, но четыре буквы <font size='+1'>אהוי</font> могут означать гласные. "sv
-            u8"С той же целью иногда используют огласовки\u00A0— точки над буквами.</p>"sv },
+            u8"С той же целью иногда используют огласовки\u00A0— точки над буквами.</p>"sv,
+            EcFont::HEBREW },
     { "Hira"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
         u8"японский"sv,
