@@ -12,6 +12,8 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [font] 1DCB combining things: No script, block Diacritics Supplement
     /// @todo [font] Syriac has tofu, check
     { "Cambria"sv,                  {} },
+    /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
+    { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
@@ -230,7 +232,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"Многие исламские народы (турки, казахи, башкиры) пользовались арабицей до начала XX века.</p>"
             u8"<p>Компьютерная арабица осложняется написанием арабских букв: у каждой есть обособленная, начальная, средняя и конечная форма. "sv
                 u8"В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "sv
-                u8"Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv },
+                u8"Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
+            EcFont::ARABIC },
     { "Armi"sv, EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL,
         u8"Имперская арамейская"sv, u8"VII в. до н.э."sv,
         u8"имперский арамейский <i>(также канцелярский арамейский\u00A0— язык Персии 500—329 до н.э.)</i>"sv,
