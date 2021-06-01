@@ -246,7 +246,7 @@ void FmMain::showCp(MaybeChar ch)
         // Header
         QString text;
         str::append(text, "<h1>");
-        str::append(text, ch->name.tech);
+        str::append(text, ch->name.tech());
         str::append(text, "</h1>");
 
         {   // Info box

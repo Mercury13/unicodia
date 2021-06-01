@@ -139,6 +139,39 @@ unsigned proxyChar(unsigned cp)
     }
 }
 
+
+struct StringPayload
+{
+    char32_t subj = 0;
+    int offset = -1;
+};
+
+class StringLib
+{
+public:
+    /// @return offset
+    int remember(const std::string& s, char32_t subj);
+    auto& inOrder() const { return fInOrder; }
+private:
+    using M = std::unordered_map<std::string, StringPayload>;
+    M fData;
+    std::vector<const M::value_type*> fInOrder;
+    size_t fLength = 0;
+};
+
+int StringLib::remember(const std::string& s, char32_t subj)
+{
+    auto [it, wasIns] = fData.try_emplace(s, StringPayload());
+    if (wasIns) {   // Was inserted
+        it->second.subj = subj;
+        it->second.offset = fLength;
+        fLength += (s.length() + 1);
+        fInOrder.push_back(&*it);
+    } else {}    // was found — do nothing
+    return it->second.offset;
+}
+
+
 int main()
 {
     std::ofstream os("UcAuto.cpp");
@@ -165,6 +198,7 @@ int main()
     os << '\n';
     os << R"(uc::Cp uc::cpInfo[] {)" << '\n';
 
+    StringLib strings;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
         std::string_view sCp = elChar.attribute("cp").as_string();
         if (sCp.empty()) {
@@ -197,11 +231,12 @@ int main()
         }
 
         std::string sLowerName = decapitalize(sName);
+        auto iTech = strings.remember(sLowerName, cp);
         os << "{ "
-           << cp << ", "                // subj
+           << "0x" << std::hex << cp << ", "  // subj
            << "{ "                      // name
-                << '\"' << sLowerName << R"(", )"  // name.tech,
-                << R"("")"                    // name.loc
+                << std::dec << iTech << ", "  // name.tech,
+                << "-1 "                      // name.loc
            << " }, "                    // /name
            << proxyChar(cp) << ", ";    // proxy
 
@@ -258,6 +293,12 @@ int main()
     std::cout << "Found " << nChars << " chars, " << nSpecialRanges << " special ranges " << std::endl;
 
     os << "unsigned uc::nCps() { return " << nChars << "; }" << '\n';
+
+    os << "const char8_t uc::allStrings[] = \n";
+    for (auto& v : strings.inOrder()) {
+        os << R"(u8")" << v->first << R"("   "\0"   // )" << std::hex << static_cast<int>(v->second.subj) << '\n';
+    }
+    os << ";";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;
 

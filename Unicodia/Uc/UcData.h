@@ -174,12 +174,14 @@ namespace uc {
         signed char order = 0;
     };
 
+    extern const char8_t allStrings[];
+
     struct Cp   // code point
     {
         char32_t subj = 0;
         struct Name {
-            const char* tech;
-            const char* loc;
+            int iTech, iLoc;
+            const char8_t* tech() const { return allStrings + iTech; }
         } name;
         unsigned short rawProxy = 0;
         EcCategory ecCategory;
