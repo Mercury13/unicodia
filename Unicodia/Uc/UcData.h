@@ -176,11 +176,12 @@ namespace uc {
 
     struct Cp   // code point
     {
-        char32_t subj = 0, proxy = NO_CHAR;
+        char32_t subj = 0;
         struct Name {
             const char* tech;
             const char* loc;
         } name;
+        unsigned short rawProxy = 0;
         EcCategory ecCategory;
         EcVersion ecVersion;
         EcBidiClass ecBidiClass;
@@ -199,6 +200,7 @@ namespace uc {
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
+        char32_t proxy() const { return (rawProxy != 0) ? rawProxy : subj; }
     };
 
     extern unsigned nCps();

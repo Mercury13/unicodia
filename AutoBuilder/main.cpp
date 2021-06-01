@@ -135,7 +135,7 @@ unsigned proxyChar(unsigned cp)
         return 0x2400 + cp;
     switch (cp) {
     case 0x7F: return 0x2421;
-    default:   return cp;
+    default:   return 0;
     }
 }
 
@@ -199,11 +199,11 @@ int main()
         std::string sLowerName = decapitalize(sName);
         os << "{ "
            << cp << ", "                // subj
-           << proxyChar(cp) << ", "       // proxy
            << "{ "                      // name
                 << '\"' << sLowerName << R"(", )"  // name.tech,
                 << R"("")"                    // name.loc
-           << " }, ";                  // /name
+           << " }, "                    // /name
+           << proxyChar(cp) << ", ";    // proxy
 
         // Char’s type
         std::string_view sCharCat = elChar.attribute("gc").as_string();
