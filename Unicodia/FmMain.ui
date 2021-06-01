@@ -248,8 +248,14 @@
                         <stylestrategy>PreferAntialias</stylestrategy>
                        </font>
                       </property>
+                      <property name="cursor">
+                       <cursorShape>IBeamCursor</cursorShape>
+                      </property>
                       <property name="text">
                        <string>[lbCharCode]</string>
+                      </property>
+                      <property name="textInteractionFlags">
+                       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
                       </property>
                      </widget>
                     </item>
