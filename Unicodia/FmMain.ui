@@ -37,7 +37,7 @@
       </property>
       <widget class="QWidget" name="tabRanges">
        <attribute name="title">
-        <string>Диапазоны</string>
+        <string>Блоки</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <property name="leftMargin">
