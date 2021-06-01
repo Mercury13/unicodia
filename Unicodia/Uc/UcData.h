@@ -143,6 +143,37 @@ namespace uc {
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
+    struct Fraction {
+        long long num = 0, denom = 0;
+    };
+
+    class CompressedFraction {
+    public:
+        constexpr CompressedFraction() = default;
+        consteval CompressedFraction(long long aNum, unsigned long long aDenom)
+                    : order(0) {
+            if (aNum > 100 || aNum < -100 || aDenom > 200) {
+                while (aNum % 10 == 0) {
+                    aNum /= 10;
+                    ++order;
+                }
+                while (aDenom % 10 == 0) {
+                    aDenom /= 10;
+                    --order;
+                }
+            }
+            num = aNum;
+            denom = aDenom;
+        }
+        Fraction val() const;
+        bool isFull() const { return (denom != 0); }
+        explicit operator bool () const { return isFull(); }
+    private:
+        signed char num = 0;
+        unsigned char denom = 0;
+        signed char order = 0;
+    };
+
     struct Cp   // code point
     {
         char32_t subj = 0, proxy = NO_CHAR;
@@ -155,11 +186,13 @@ namespace uc {
         EcBidiClass ecBidiClass;
         EcScript ecScript;
         struct Numeric {
-            long long num = 0;
-            int denom = 0;
+            CompressedFraction val;
             EcNumType ecType = EcNumType::NONE;
             const NumType& type() const { return numTypeInfo[static_cast<int>(ecType)]; }
             bool isPresent() const { return (ecType != EcNumType::NONE); }
+            consteval Numeric() = default;
+            consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
+                : val(num, denom), ecType(aType) {}
         } numeric;
         //const Range* range = nullptr;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }

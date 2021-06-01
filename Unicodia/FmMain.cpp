@@ -270,10 +270,11 @@ void FmMain::showCp(MaybeChar ch)
                 sp.sep();
                 str::append(text, ch->numeric.type().locName);
                 str::append(text, ": ");
-                str::append(text, ch->numeric.num);
-                if (ch->numeric.denom != 1) {
+                auto frac = ch->numeric.val.val();
+                str::append(text, frac.num);
+                if (frac.denom != 1) {
                     str::append(text, "/");
-                    str::append(text, ch->numeric.denom);
+                    str::append(text, frac.denom);
                 }
             }
 

@@ -46,7 +46,7 @@ namespace uc {
         NN,
     };
 
-    enum class EcScript {
+    enum class EcScript : unsigned char {
         Zyyy,
         Adlm,
         Aghb,
@@ -251,7 +251,7 @@ namespace uc {
         //Zzzz  no chars
     };
 
-    enum class EcVersion
+    enum class EcVersion : unsigned char
     {
         //V_1_0,        unused
         //V_1_0_1,      unused
@@ -287,7 +287,7 @@ namespace uc {
         NEUTRAL, WEAK, STRONG, EXPLICIT, NN
     };
 
-    enum class EcBidiClass
+    enum class EcBidiClass : unsigned char
     {                               //   Abbr.   Icon
         BIDI_CONTROL,               ///<  FSI, LRE, LRI, LRO, PDF, PDI, RLE, RLI, RLO
                                     ///<         →|←  (bar is dashed)
@@ -345,7 +345,7 @@ namespace uc {
         SEPARATOR
     };
 
-    enum class EcCategory
+    enum class EcCategory : unsigned char
     {                           //  Abbr.  Icon
         CONTROL,                ///< Cc   Tab sign
         FORMAT,                 ///< Cf   Caret sign
