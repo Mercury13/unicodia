@@ -8,6 +8,7 @@ uc::Cp* uc::cps[N_CHARS];
 
 
 const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
+    /// @todo [font] 1DCB combining things: No script, block Diacritics Supplement
     { "Cambria"sv,                  {} },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
