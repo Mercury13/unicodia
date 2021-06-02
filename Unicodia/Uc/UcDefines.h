@@ -32,9 +32,9 @@ namespace uc {
         SYLLABLE,       ///< Syllable script (Hiragana)
         SEMISYLLABLE,   ///< Partly alphabet, partly syllable (Iberian)
         ABUGIDA_MONOLITH, ///< Syllable script where similar syllables have
-                        ///<   similar symbols (Devanagari, Thai)
-        ABUGIDA_COMBINING,
-        ABUGIDA_BRAHMI,
+                        ///<   similar symbols (Canadian syllable)
+        ABUGIDA_COMBINING, ///< … + characters are combining (Thaana)
+        ABUGIDA_BRAHMI, ///< … + based on Brahmi: K=ka, K*=ki, K’=K (Kannada, Thai)
         HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
         SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
         //SHORTHAND,      ///< Mostly alphabet, but with some simplifications
