@@ -145,10 +145,10 @@ namespace uc {
         //Inds  no chars
         Ital = Zyyy,        // beyond BMP
         //Jamo  no chars
-        Java = Zyyy,        /// @todo [urgent] Javanese
+        Java = Zyyy,        /// @todo [bmp] Javanese
         //Jpan  no chars
         //Jurc  no chars
-        Kali = Zyyy,        /// @todo [urgent] Kayah Li
+        Kali = Zyyy,        /// @todo [bmp] Kayah Li
         Khar = Zyyy,        // beyond BMP
         Khoj = Zyyy,        // beyond BMP
         //Kitl  no chars
@@ -156,15 +156,15 @@ namespace uc {
         //Kore  no chars
         //Kpel  no chars
         Kthi = Zyyy,        // beyond BMP
-        Lana = Zyyy,        /// @todo [urgent] Tai Tham
+        Lana = Zyyy,        /// @todo [bmp] Tai Tham
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars
-        Lepc = Zyyy,        /// @todo [urgent] Lepcha
-        Limb = Zyyy,        /// @todo [urgent] Limbu
+        Lepc = Zyyy,        /// @todo [bmp] Lepcha
+        Limb = Zyyy,        /// @todo [bmp] Limbu
         Lina = Zyyy,        // beyond BMP
         Linb = Zyyy,        // beyond BMP
-        Lisu = Zyyy,        /// @todo [urgent] Lisu
+        Lisu = Zyyy,        /// @todo [bmp] Lisu
         //Loma  no chars
         Lyci = Zyyy,        // beyond BMP
         Lydi = Zyyy,        // beyond BMP
@@ -180,7 +180,7 @@ namespace uc {
         Modi = Zyyy,        // beyond BMP
         //Moon  no chars
         Mroo = Zyyy,        // beyond BMP
-        Mtei = Zyyy,        /// @todo [urgent] Meitei Mayek
+        Mtei = Zyyy,        /// @todo [bmp] Meitei Mayek
         Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
         Narb = Zyyy,        // beyond BMP
@@ -189,14 +189,14 @@ namespace uc {
         //Nkdb  no chars
         //Nkgb  no chars
         Nshu = Zyyy,        // beyond BMP
-        Olck = Zyyy,        /// @todo [urgent] Ol Chiki
+        Olck = Zyyy,        /// @todo [bmp] Ol Chiki
         Orkh = Zyyy,        // Turkic runes, beyond BMP
         Osge = Zyyy,        // beyond BMP
         Osma = Zyyy,        // beyond BMP
         Palm = Zyyy,        // beyond BMP
         Pauc = Zyyy,        // beyond BMP
         Perm = Zyyy,        // beyond BMP
-        Phag = Zyyy,        /// @todo [urgent] Phags-pa
+        Phag = Zyyy,        /// @todo [bmp] Phags-pa
         Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars
@@ -204,12 +204,12 @@ namespace uc {
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP
         Prti = Zyyy,        // beyond BMP
-        Rjng = Zyyy,        /// @todo [urgent] Rejang
+        Rjng = Zyyy,        /// @todo [bmp] Rejang
         Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
         //Roro  no chars
         //Sara  no chars
         Sarb = Zyyy,        // beyond BMP
-        Saur = Zyyy,        /// @todo [urgent] Saurashtra
+        Saur = Zyyy,        /// @todo [bmp] Saurashtra
         Sgnw = Zyyy,        // SignWriting, beyond BMP
         Shaw = Zyyy,        // beyond BMP
         Shrd = Zyyy,        // beyond BMP
@@ -220,21 +220,21 @@ namespace uc {
         Sogd = Zyyy,        // beyond BMP
         Sogo = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
-        Sund = Zyyy,        /// @todo [urgent] Sundanese
-        Sylo = Zyyy,        /// @todo [urgent] Syloti Nagri
+        Sund = Zyyy,        /// @todo [bmp] Sundanese
+        Sylo = Zyyy,        /// @todo [bmp] Syloti Nagri
         //Syre  no chars
         //Syrj  no chars
         //Syrn  no chars
         Takr = Zyyy,        // beyond BMP
-        Tale = Zyyy,        /// @todo [urgent] Tai Le
-        Talu = Zyyy,        /// @todo [urgent] New Tai Lue
+        Tale = Zyyy,        /// @todo [bmp] Tai Le
+        Talu = Zyyy,        /// @todo [bmp] New Tai Lue
         Tang = Zyyy,        // beyond BMP
-        Tavt = Zyyy,        /// @todo [urgent] Tai Viet
+        Tavt = Zyyy,        /// @todo [bmp] Tai Viet
         //Teng  no chars
-        Tfng = Zyyy,        /// @todo [urgent] Tifinagh
+        Tfng = Zyyy,        /// @todo [bmp] Tifinagh
         Tirh = Zyyy,        // Tirhuta beyond BMP
         Ugar = Zyyy,        // Ugaritic beyond BMP
-        Vaii = Zyyy,        /// @todo [urgent] Vai
+        Vaii = Zyyy,        /// @todo [bmp] Vai
         //Visp  no chars
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
@@ -242,7 +242,7 @@ namespace uc {
         Xpeo = Zyyy,        // Old Persian beyond BMP
         Xsux = Zyyy,        // Cuneiform beyond BMP
         Yezi = Zyyy,        // Yezidi beyond BMP
-        Yiii = Zyyy,        /// @todo [urgent] Yi
+        Yiii = Zyyy,        /// @todo [bmp] Yi
         Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars
         //Zsye  no chars
