@@ -9,8 +9,9 @@ uc::Cp* uc::cps[N_CHARS];
 constexpr uint16_t STUB_CIRCLE = 0x25CC;
 
 const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
-    /// @todo [font] 1DCB combining things: No script, block Diacritics Supplement
-    /// @todo [font] Syriac has tofu, check
+    /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
+    /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
+    /// @todo [tofu] Syriac has tofu, check
     { "Cambria"sv,                  {} },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
@@ -21,7 +22,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
-    /// @todo [font] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
+    /// @todo [tofu] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
 };
 
