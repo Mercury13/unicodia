@@ -18,6 +18,10 @@
 
 using namespace std::string_view_literals;
 
+namespace {
+    constexpr int ALPHA_SPACE = 40;
+}
+
 
 ///// RowCache /////////////////////////////////////////////////////////////////
 
@@ -71,7 +75,7 @@ void RowCache::addCp(const uc::Cp& aCp)
 ///// BlocksModel //////////////////////////////////////////////////////////////
 
 
-int BlocksModel::rowCount(const QModelIndex&) const { return uc::nBlocks(); }
+int BlocksModel::rowCount(const QModelIndex&) const { return uc::N_BLOCKS; }
 
 int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
@@ -80,7 +84,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
             size_t i = index.row();
-            if (i >= uc::nBlocks())
+            if (i >= uc::N_BLOCKS)
                 return {};
             auto& block = uc::blocks[i];
             return str::toQ(block.name);
@@ -100,7 +104,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
-CharsModel::CharsModel() : rows(NCOLS) {}
+CharsModel::CharsModel(QWidget* aOwner) : owner(aOwner), rows(NCOLS) {}
 
 
 int CharsModel::rowCount(const QModelIndex&) const
@@ -129,6 +133,18 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
                 return {};
             auto& font = cp->font();
             return font.get(font.q.table, FSZ_TABLE);
+        }
+
+    case Qt::ForegroundRole: {
+            auto cp = rows.charAt(index.row(), index.column());
+            if (!cp)
+                return {};
+            if (cp->isTrueSpace()) {
+                auto c = owner->palette().text().color();
+                c.setAlpha(ALPHA_SPACE);
+                return c;
+            }
+            return {};
         }
 
     case Qt::TextAlignmentRole:
@@ -191,7 +207,7 @@ void CharsModel::addCp(const uc::Cp& aCp)
 
 FmMain::FmMain(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::FmMain)
+    , ui(new Ui::FmMain), model(this)
 {
     ui->setupUi(this);
 
@@ -201,9 +217,7 @@ FmMain::FmMain(QWidget *parent)
     ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
 
     // Fill chars
-    auto n = uc::nCps();
-    for (unsigned i = 0; i < n; ++i) {
-        const auto& cp = uc::cpInfo[i];
+    for (auto& cp : uc::cpInfo) {
         model.addCp(cp);
     }
 
@@ -274,6 +288,16 @@ void FmMain::showCp(MaybeChar ch)
         // Font
         auto& font = ch->script().font();
         ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
+
+        if (ch->isTrueSpace()) {
+                auto palette = this->palette();
+                auto color = palette.windowText().color();
+                color.setAlpha(ALPHA_SPACE);
+                palette.setColor(QPalette::WindowText, color);
+                ui->lbSample->setPalette(palette);
+        } else {
+            ui->lbSample->setPalette(this->palette());
+        }
 
         // Sample char
         ui->lbSample->setText(ch->sampleProxy());

@@ -197,7 +197,9 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
             u8"В хорошо проработанной типографике "sv
             u8"пустого места столько, сколько нужно: 146%\u00A0— мало, 146\u00A0%\u00A0— много, "sv
             u8"146<span style='font-size:3pt'>\u00A0</span>%\u00A0— самое то. Потому и пробелы бывают разные. "sv
-            u8"Некоторые из них неразрывные: не расширяются при выключке, не переносятся на другую строку."sv },
+            u8"Некоторые из них неразрывные: не расширяются при выключке, не переносятся на другую строку."
+            "<p>В Юникодии пробелы зажаты псевдографическими символами без пустого места в кегельной площадке\u00A0— "
+            "так что узость обманчива. Часто для отступа хватает тончайшего пробела U+200A."sv },
     //{ u8"Ошибка"sv },     //check for equal number
 };
 
@@ -646,9 +648,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 void uc::completeData()
 {
     std::fill(std::begin(cps), std::end(cps), nullptr);
-    auto n = nCps();
-    for (unsigned i = 0; i < n; ++i) {
-        auto& cp = cpInfo[i];
+    for (auto& cp : cpInfo) {
         ++cp.bidiClass().nChars;
         ++cp.category().nChars;
         auto& script = cp.script();
@@ -727,6 +727,13 @@ QString uc::Cp::sampleProxy() const
     case EcCategory::MARK_NONSPACING:
     case EcCategory::MARK_SPACING:
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
+    case EcCategory::SEPARATOR_SPACE:
+        //return "][" + str::toQ(subj.ch32()) + "[";
+        //return "||" + str::toQ(subj.ch32()) + "||";
+        if (isTrueSpace()) {
+            return QChar(L'▐') + str::toQ(subj.ch32()) + QChar(L'▌');
+        }
+        [[fallthrough]];
     default:
         return str::toQ(subj.ch32());
     }

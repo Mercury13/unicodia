@@ -42,6 +42,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h \
     FmPopup.h \
+    Uc/UcAutoCount.h \
     Uc/UcData.h \
     Uc/UcDefines.h
 

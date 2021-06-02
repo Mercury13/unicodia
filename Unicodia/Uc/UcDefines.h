@@ -1,5 +1,7 @@
 #pragma once
 
+#include "UcAutoCount.h"
+
 #include <limits>
 
 namespace uc {

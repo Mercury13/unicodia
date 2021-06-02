@@ -72,7 +72,8 @@ protected:
 class CharsModel : public QAbstractTableModel
 {
 public:
-    CharsModel();
+    QWidget* const owner;
+    CharsModel(QWidget* aOwner);
 
     int rowCount(const QModelIndex&) const override;
     int columnCount(const QModelIndex&) const override;

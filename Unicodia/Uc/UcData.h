@@ -221,16 +221,19 @@ namespace uc {
         const Font& font() const { return script().font(); }
         QString sampleProxy() const;
         QString osProxy() const;
+
+        ///  @return [+] it is a true space, really white
+        bool isTrueSpace() const
+                { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
+                          ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
     };
 
-    extern unsigned nCps();
-    extern Cp cpInfo[];
+    extern Cp cpInfo[N_CPS];
 
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
 
-    extern unsigned nBlocks();
-    extern const Block blocks[];
+    extern const Block blocks[N_BLOCKS];
 
     void completeData();
 

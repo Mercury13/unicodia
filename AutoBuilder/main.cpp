@@ -192,7 +192,7 @@ int main()
     auto elRepertoire = need(elRoot.child("repertoire"), "Need <repertoire>");
     std::cout << "Found repertoire, generating character info..." << std::flush;
     os << '\n';
-    os << R"(uc::Cp uc::cpInfo[] {)" << '\n';
+    os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
 
     StringLib strings;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
@@ -287,8 +287,6 @@ int main()
     std::cout << "OK" << std::endl;
     std::cout << "Found " << nChars << " chars, " << nSpecialRanges << " special ranges " << std::endl;
 
-    os << "unsigned uc::nCps() { return " << nChars << "; }" << '\n';
-
     os << "const char8_t uc::allStrings[] = \n";
     for (auto& v : strings.inOrder()) {
         os << R"(u8")" << v->first << R"("   "\0"   // )" << std::hex << static_cast<int>(v->second.subj) << '\n';
@@ -297,7 +295,7 @@ int main()
 
     ///// Blocks ///////////////////////////////////////////////////////////////
 
-    os << R"(const uc::Block uc::blocks[] {)" << '\n';
+    os << R"(const uc::Block uc::blocks[N_BLOCKS] {)" << '\n';
     std::cout << "Found blocks, generating block info..." << std::flush;
 
     size_t nBlocks = 0;
@@ -320,7 +318,17 @@ int main()
     std::cout << "OK" << std::endl;
     std::cout << "Found " << nBlocks << " blocks" << std::endl;
 
-    os << "unsigned uc::nBlocks() { return " << std::dec << nBlocks << "; }\n";
+    os.close();
+
+    os.open("UcAutoCount.h");
+    os << "#pragma once\n";
+    os << '\n';
+    os << "// Automatically generated, do not edit!\n";
+    os << '\n';
+    os << "namespace uc {\n";
+    os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
+    os << "constexpr int N_BLOCKS = " << nBlocks << ";\n";
+    os << "}\n";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;
 
