@@ -112,7 +112,6 @@ namespace uc {
     {
         std::string_view name;
         char32_t startingCp = 0, endingCp = 0;
-        Script* script;
     };
 
 
@@ -231,7 +230,7 @@ namespace uc {
     extern Cp* cps[N_CHARS];
 
     extern unsigned nBlocks();
-    extern Block* blocks[];
+    extern const Block blocks[];
 
     void completeData();
 

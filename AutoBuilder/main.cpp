@@ -161,6 +161,13 @@ int StringLib::remember(const std::string& s, char32_t subj)
 }
 
 
+bool hasSubstr(std::string_view haystack, std::string_view needle)
+{
+    auto pos = haystack.find(needle);
+    return (pos != std::string_view::npos);
+}
+
+
 int main()
 {
     std::ofstream os("UcAuto.cpp");
@@ -286,7 +293,34 @@ int main()
     for (auto& v : strings.inOrder()) {
         os << R"(u8")" << v->first << R"("   "\0"   // )" << std::hex << static_cast<int>(v->second.subj) << '\n';
     }
-    os << ";";
+    os << ";\n";
+
+    ///// Blocks ///////////////////////////////////////////////////////////////
+
+    os << R"(const uc::Block uc::blocks[] {)" << '\n';
+    std::cout << "Found blocks, generating block info..." << std::flush;
+
+    size_t nBlocks = 0;
+    auto elBlocks = need(elRoot.child("blocks"), "Need <blocks>");
+
+    for (pugi::xml_node elBlock : elBlocks.children("block")) {
+        auto sFirst = elBlock.attribute("first-cp").as_string();
+        auto sLast = elBlock.attribute("last-cp").as_string();
+        std::string_view name = elBlock.attribute("name").as_string();
+
+        if (hasSubstr(name, "Private Use") || hasSubstr(name, "Surrogate"))
+            continue;
+
+        os << R"({ ")" << name << R"("sv, 0x)" << sFirst << ", 0x"
+           << sLast << " },\n";
+        ++nBlocks;
+    }
+    os << "};" << '\n';
+
+    std::cout << "OK" << std::endl;
+    std::cout << "Found " << nBlocks << " blocks" << std::endl;
+
+    os << "unsigned uc::nBlocks() { return " << std::dec << nBlocks << "; }\n";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;
 

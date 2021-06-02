@@ -121,7 +121,11 @@
                   <number>4</number>
                  </property>
                  <item>
-                  <widget class="QComboBox" name="comboBox"/>
+                  <widget class="QComboBox" name="comboBlock">
+                   <property name="maxVisibleItems">
+                    <number>40</number>
+                   </property>
+                  </widget>
                  </item>
                  <item>
                   <widget class="QLineEdit" name="lineEdit">

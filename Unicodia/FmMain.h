@@ -87,6 +87,15 @@ private:
 };
 
 
+class BlocksModel : public QAbstractTableModel
+{
+public:
+    int rowCount(const QModelIndex&) const override;
+    int columnCount(const QModelIndex&) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
+};
+
+
 class FmMain : public QMainWindow
 {
     Q_OBJECT
@@ -99,6 +108,7 @@ public:
 private:
     Ui::FmMain *ui;
     CharsModel model;
+    BlocksModel blocksModel;
     std::unique_ptr<FmPopup> popup;
 
     void showCp(MaybeChar ch);

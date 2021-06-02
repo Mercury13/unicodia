@@ -68,6 +68,28 @@ void RowCache::addCp(const uc::Cp& aCp)
 }
 
 
+///// BlocksModel //////////////////////////////////////////////////////////////
+
+
+int BlocksModel::rowCount(const QModelIndex&) const { return uc::nBlocks(); }
+
+int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
+
+QVariant BlocksModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole: {
+            size_t i = index.row();
+            if (i >= uc::nBlocks())
+                return {};
+            return str::toQ(uc::blocks[i].name);
+        }
+    default:
+        return {};
+    }
+}
+
+
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
@@ -177,6 +199,9 @@ FmMain::FmMain(QWidget *parent)
         const auto& cp = uc::cpInfo[i];
         model.addCp(cp);
     }
+
+    // Combobox
+    ui->comboBlock->setModel(&blocksModel);
 
     // Table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
