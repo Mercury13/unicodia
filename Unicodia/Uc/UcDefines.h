@@ -33,7 +33,7 @@ namespace uc {
         SEMISYLLABLE,   ///< Partly alphabet, partly syllable (Iberian)
         ABUGIDA_MONOLITH, ///< Syllable script where similar syllables have
                         ///<   similar symbols (Canadian syllable)
-        ABUGIDA_COMBINING, ///< … + characters are combining (Thaana)
+        ABUGIDA_COMBINING, ///< … + characters are combined from consonant and vowel (Thaana)
         ABUGIDA_BRAHMI, ///< … + based on Brahmi: K=ka, K*=ki, K’=K (Kannada, Thai)
         HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
         SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
