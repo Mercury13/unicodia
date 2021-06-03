@@ -192,3 +192,60 @@ TEST(HubLess, Many10Ok)
     using namespace detail;
     EXPECT_EQ(Place::BEFORE, upperBoundHint(beg, end, SafeInt{10}, thirty));
 }
+
+
+namespace manyItems {
+    SafeInt a[] { CANARY, 10, 20, 30, 40, 50, 60, CANARY };
+    constexpr auto beg = std::begin(a) + 1;
+    constexpr auto end = std::end(a) - 1;
+    constexpr auto forty = beg + 3;
+    constexpr auto ten = beg;
+    constexpr auto sixty = end - 1;
+}
+
+///
+///  Check for correctness of directions
+///
+TEST(HubLess, HintOk)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{30}, forty);
+    EXPECT_EQ(40, v->value());
+}
+
+TEST(HubLess, HintAfter)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{40}, ten);
+    EXPECT_EQ(50, v->value());
+}
+
+
+TEST(HubLess, HintBefore)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{20}, sixty);
+    EXPECT_EQ(30, v->value());
+}
+
+TEST(HubLess, HintMidOk)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{35}, forty);
+    EXPECT_EQ(40, v->value());
+}
+
+TEST(HubLess, HintMidAfter)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{45}, ten);
+    EXPECT_EQ(50, v->value());
+}
+
+
+TEST(HubLess, HintMidBefore)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, SafeInt{25}, sixty);
+    EXPECT_EQ(30, v->value());
+}
