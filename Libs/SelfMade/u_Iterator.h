@@ -47,15 +47,21 @@ namespace detail {
 template <class It, class T, class Compare>
 constexpr It hintedUpperBound(It first, It last, const T& value, Compare cmp, It hint)
 {
-    if (detail::upperBoundHint(first, last, value, cmp, hint))
+    auto q = static_cast<int>(detail::upperBoundHint(first, last, value, cmp, hint));
+    if (q == 0)
         return hint;
-    return std::upper_bound(first, last, value, cmp);
+    return (q < 0)
+            ? std::upper_bound(first, hint, value, cmp)
+            : std::upper_bound(hint, last, value, cmp);
 }
 
 template <class It, class T>
 constexpr It hintedUpperBound(It first, It last, const T& value, It hint)
 {
-    if (detail::upperBoundHint(first, last, value, hint))
+    auto q = static_cast<int>(detail::upperBoundHint(first, last, value, hint));
+    if (q == 0)
         return hint;
-    return std::upper_bound(first, last, value);
+    return (q < 0)
+            ? std::upper_bound(first, hint, value)
+            : std::upper_bound(hint, last, value);
 }
