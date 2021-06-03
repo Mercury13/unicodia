@@ -19,7 +19,7 @@
 using namespace std::string_view_literals;
 
 namespace {
-    constexpr int ALPHA_SPACE = 40;
+    constexpr int ALPHA_SPACE = 60;
 }
 
 

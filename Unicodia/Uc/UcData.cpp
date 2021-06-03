@@ -731,7 +731,7 @@ QString uc::Cp::sampleProxy() const
         //return "][" + str::toQ(subj.ch32()) + "[";
         //return "||" + str::toQ(subj.ch32()) + "||";
         if (isTrueSpace()) {
-            return QChar(L'▐') + str::toQ(subj.ch32()) + QChar(L'▌');
+            return QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏');
         }
         [[fallthrough]];
     default:
