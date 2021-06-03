@@ -249,3 +249,204 @@ TEST(HubLess, HintMidBefore)
     auto v = hintedUpperBound(beg, end, SafeInt{25}, sixty);
     EXPECT_EQ(30, v->value());
 }
+
+
+///// hintedUpperBound — comparator ////////////////////////////////////////////
+
+class AnotherInt
+{
+public:
+    constexpr AnotherInt(int aV) : v(aV) {}
+    constexpr int value() const { return v; }
+private:
+    int v;
+};
+
+
+constexpr bool isLess (AnotherInt x, SafeInt y)
+{
+    if (x.value() == CANARY || y.value() == CANARY)
+        throw std::logic_error("[op< (AI, SI)] Canary is dead!");
+    return x.value() < y.value();
+}
+
+
+bool operator < (AnotherInt, int) = delete;
+bool operator < (int, AnotherInt) = delete;
+
+
+TEST(HubCmp, EmptyArray)
+{
+    using namespace twoCanaries;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{42}, isLess, beg));
+}
+
+
+TEST(HubCmp, OneLessRight)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{8}, isLess, beg));
+}
+
+
+TEST(HubCmp, OneLessWrong)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::BEFORE, detail::upperBoundHint(beg, end, AnotherInt{8}, isLess, end));
+}
+
+
+TEST(HubCmp, OneEqRight)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{10}, isLess, end));
+}
+
+
+TEST(HubCmp, OneEqWrong)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::AFTER, upperBoundHint(beg, end, AnotherInt{10}, isLess, beg));
+}
+
+
+TEST(HubCmp, OneGreaterRight)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{12}, isLess, end));
+}
+
+
+TEST(HubCmp, OneGreaterWrong)
+{
+    using namespace oneItem;
+    using namespace detail;
+    EXPECT_EQ(Place::AFTER, upperBoundHint(beg, end, AnotherInt{12}, isLess, beg));
+}
+
+
+TEST(HubCmp, Many20Beg)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::AFTER, upperBoundHint(beg, end, AnotherInt{20}, isLess, beg));
+}
+
+TEST(HubCmp, Many20Less)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::AFTER, upperBoundHint(beg, end, AnotherInt{20}, isLess, twenty));
+}
+
+TEST(HubCmp, Many20Ok)
+{
+    using namespace someItems;
+    using namespace detail;
+
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{20}, isLess, thirty));
+}
+
+TEST(HubCmp, Many20End)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::BEFORE, upperBoundHint(beg, end, AnotherInt{20}, isLess, end));
+}
+
+
+TEST(HubCmp, Many15Beg)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::AFTER, upperBoundHint(beg, end, AnotherInt{15}, isLess, beg));
+}
+
+TEST(HubCmp, Many15Ok)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{15}, isLess, twenty));
+}
+
+TEST(HubCmp, Many15More)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::BEFORE, upperBoundHint(beg, end, AnotherInt{15}, isLess, thirty));
+}
+
+TEST(HubCmp, Many15End)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::BEFORE, detail::upperBoundHint(beg, end, AnotherInt{15}, isLess, end));
+}
+
+TEST(HubCmp, Many10Less)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::FOUND, upperBoundHint(beg, end, AnotherInt{10}, isLess, twenty));
+}
+
+TEST(HubCmp, Many10Ok)
+{
+    using namespace someItems;
+    using namespace detail;
+    EXPECT_EQ(Place::BEFORE, upperBoundHint(beg, end, AnotherInt{10}, isLess, thirty));
+}
+
+
+///
+///  Check for correctness of directions
+///
+TEST(HubCmp, HintOk)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{30}, isLess, forty);
+    EXPECT_EQ(40, v->value());
+}
+
+TEST(HubCmp, HintAfter)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{40}, isLess, ten);
+    EXPECT_EQ(50, v->value());
+}
+
+
+TEST(HubCmp, HintBefore)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{20}, isLess, sixty);
+    EXPECT_EQ(30, v->value());
+}
+
+TEST(HubCmp, HintMidOk)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{35}, isLess, forty);
+    EXPECT_EQ(40, v->value());
+}
+
+TEST(HubCmp, HintMidAfter)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{45}, isLess, ten);
+    EXPECT_EQ(50, v->value());
+}
+
+
+TEST(HubCmp, HintMidBefore)
+{
+    using namespace manyItems;
+    auto v = hintedUpperBound(beg, end, AnotherInt{25}, isLess, sixty);
+    EXPECT_EQ(30, v->value());
+}
