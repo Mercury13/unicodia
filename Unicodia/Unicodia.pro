@@ -35,6 +35,7 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/SelfMade/i_TempFont.h \
+    ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_Strings.h \

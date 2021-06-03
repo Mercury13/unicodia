@@ -14,10 +14,12 @@ SOURCES += \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
     ../Libs/SelfMade/u_Strings.cpp \
-    test_Decapitalize.cpp
+    test_Decapitalize.cpp \
+    test_Iterator.cpp
 
 HEADERS += \
     ../AutoBuilder/data.h \
+    ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Strings.h
 
 INCLUDEPATH += \
