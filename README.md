@@ -11,3 +11,5 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc
 * Compile using Qt.
+ * Tested OK: 5.14.2
+ * Tested bad: 5.15.2
