@@ -258,6 +258,13 @@ FmMain::FmMain(QWidget *parent)
     ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableChars->setModel(&model);
 
+    // Divider
+    auto w = width();
+    QList<int> sizes { w * 50 / 100, w * 50 / 100 };
+    ui->splitBlocks->setStretchFactor(0, 0);
+    ui->splitBlocks->setStretchFactor(1, 1);
+    ui->splitBlocks->setSizes(sizes);
+
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
