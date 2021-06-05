@@ -5,6 +5,7 @@
 // Qt
 #include <QTableView>
 #include <QTextFrame>
+#include <QClipboard>
 
 // Unicode data
 #include "UcDefines.h"
@@ -319,6 +320,9 @@ void FmMain::showCp(MaybeChar ch)
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
 
+    // Copy
+    ui->btCopy->setEnabled(ch.hasCp());
+
     if (ch) {
         // Font
         auto& font = ch->script().font();
@@ -562,4 +566,14 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
 void FmMain::selectChar(char32_t code)
 {
     ui->tableChars->setCurrentIndex(model.indexOf(code));
+}
+
+
+void FmMain::on_btCopy_clicked()
+{
+    auto ch = model.charAt(ui->tableChars->currentIndex());
+    if (ch) {
+        auto q = str::toQ(ch->subj);
+        QApplication::clipboard()->setText(q);
+    }
 }

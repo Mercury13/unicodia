@@ -31,6 +31,7 @@ struct MaybeChar {
     explicit operator bool() const { return cp; }
     const uc::Cp& operator * () const { return *cp; }
     const uc::Cp* operator ->() const { return  cp; }
+    bool hasCp() const { return cp; }
 };
 
 
@@ -136,6 +137,7 @@ private slots:
     void charChanged(const QModelIndex& current);
     void on_vwInfo_anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);
+    void on_btCopy_clicked();
 };
 
 #endif // FMMAIN_H
