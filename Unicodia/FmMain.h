@@ -34,6 +34,12 @@ struct MaybeChar {
 };
 
 
+struct CacheCoords {
+    size_t row = 0;
+    unsigned col = 0;
+};
+
+
 class RowCache
 {
 public:
@@ -49,6 +55,8 @@ public:
 
     /// @return  starting code point of row; or NO_CHAR if bad row
     int startingCpAt(size_t iRow) const;
+
+    CacheCoords findCode(char32_t code) const;
 protected:
     const int fnCols, fColMask, fRowMask;
 
@@ -66,6 +74,7 @@ protected:
 
     SafeVector<Row> rows;
     Row& ensureRow(unsigned aStartingCp);
+    static bool isLessRC(const Row& x, char32_t y);
 };
 
 
@@ -83,6 +92,7 @@ public:
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
+    QModelIndex indexOf(char32_t code);
 private:
     RowCache rows;
 };
@@ -121,9 +131,11 @@ private:
     void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
     void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
+    void selectChar(char32_t code);
 private slots:
     void charChanged(const QModelIndex& current);
     void on_vwInfo_anchorClicked(const QUrl &arg1);
+    void on_comboBlock_currentIndexChanged(int index);
 };
 
 #endif // FMMAIN_H

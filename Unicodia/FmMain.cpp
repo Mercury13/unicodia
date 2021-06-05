@@ -72,6 +72,27 @@ void RowCache::addCp(const uc::Cp& aCp)
 }
 
 
+bool RowCache::isLessRC(const Row& x, char32_t y)
+{
+    return x.startingCp < y;
+}
+
+
+CacheCoords RowCache::findCode(char32_t code) const
+{
+    auto it = std::lower_bound(rows.begin(), rows.end(), code, isLessRC);
+    if (it == rows.end() || it->startingCp > code)
+        --it;
+    size_t rw = it - rows.begin();
+    unsigned dif = code - it->startingCp;
+    if (dif < static_cast<unsigned>(fnCols)) {
+        return { rw, dif };
+    } else {
+        return { rw, 0 };
+    }
+}
+
+
 ///// BlocksModel //////////////////////////////////////////////////////////////
 
 
@@ -200,6 +221,13 @@ QVariant CharsModel::headerData(int section, Qt::Orientation orientation,
 void CharsModel::addCp(const uc::Cp& aCp)
 {
     rows.addCp(aCp);
+}
+
+
+QModelIndex CharsModel::indexOf(char32_t code)
+{
+    auto coords = rows.findCode(code);
+    return index(coords.row, coords.col);
 }
 
 
@@ -514,4 +542,23 @@ void FmMain::on_vwInfo_anchorClicked(const QUrl &arg)
     rect.setLeft(rect.left() - 80);
 
     linkClicked(things[0], things[1], ui->vwInfo, rect);
+}
+
+
+void FmMain::on_comboBlock_currentIndexChanged(int index)
+{
+    if (index < 0)
+        return;
+    auto oldChar = model.charAt(ui->tableChars->currentIndex());
+    auto oldBlock = uc::blockOf(oldChar.code, index);
+    if (oldBlock->index() != static_cast<size_t>(index)) {
+        auto& newBlock = uc::blocks[index];
+        selectChar(newBlock.firstAllocated->subj);
+    }
+}
+
+
+void FmMain::selectChar(char32_t code)
+{
+    ui->tableChars->setCurrentIndex(model.indexOf(code));
 }

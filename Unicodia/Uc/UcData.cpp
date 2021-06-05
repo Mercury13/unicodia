@@ -649,14 +649,30 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 
 void uc::completeData()
 {
+    const Block* hint = std::begin(blocks);
     std::fill(std::begin(cps), std::end(cps), nullptr);
     for (auto& cp : cpInfo) {
+        // Bidi class
         ++cp.bidiClass().nChars;
+        // Category
         ++cp.category().nChars;
+        // Script
         auto& script = cp.script();
         ++script.nChars;
         script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
+        // Block
+        auto block = blockOf(cp.subj.ch32(), hint);
+        if (!block->firstAllocated)
+            block->firstAllocated = &cp;
+        hint = block;
+        // Lookup table
         cps[cp.subj.val()] = &cp;
+    }
+
+    // Check blocks — they should have at least one char
+    for (auto& v : blocks) {
+        if (!v.firstAllocated)
+            throw std::logic_error("Block w/o chars leaked into data!");
     }
 }
 

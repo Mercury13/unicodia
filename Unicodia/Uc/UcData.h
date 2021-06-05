@@ -107,11 +107,14 @@ namespace uc {
 //        std::string name;
 //    };
 
+    struct Cp;
+
 
     struct Block
     {
         std::string_view name;
         char32_t startingCp = 0, endingCp = 0;
+        mutable const Cp* firstAllocated = nullptr;
 
         size_t index() const;
 
