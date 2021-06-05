@@ -22,7 +22,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
-    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
+    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.otf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
     /// @todo [tofu] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },

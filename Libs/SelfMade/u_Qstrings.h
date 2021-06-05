@@ -11,8 +11,7 @@ namespace str {
 
     inline QString toQ(char32_t x)
     {
-        uint32_t cp1 = x;
-        return QString::fromUcs4(&cp1, 1);
+        return QString::fromUcs4(&x, 1);
     }
 
     void append(QString& x, std::string_view s);

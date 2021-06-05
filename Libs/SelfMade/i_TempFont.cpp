@@ -11,6 +11,7 @@
 
     void installTempFontFull(QString fname)
     {
+        fname.replace('/', '\\');
         const QChar* data1 = fname.data();
         auto data2 = reinterpret_cast<const wchar_t*>(data1);
         AddFontResourceExW(data2, FR_PRIVATE, 0);

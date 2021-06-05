@@ -4,7 +4,6 @@
 // Qt
 #include <QLabel>
 #include <QApplication>
-#include <QDesktopWidget>
 #include <QScreen>
 #include <QLayout>
 
@@ -23,7 +22,7 @@ FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
 {
     auto vl = new QVBoxLayout(this);
     setLayout(vl);
-    vl->setMargin(1);
+    vl->setContentsMargins(1, 1, 1, 1);
 
     lbText = new ClickableLabel("[QLabel]", this);
     lbText->setWordWrap(true);
@@ -33,6 +32,7 @@ FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
     lbText->setStyleSheet("QLabel { background-color: LightYellow; padding: 10px; }");
     connect(lbText, &ClickableLabel::clicked, this, &This::hide);
 }
+
 
 FmPopup& FmPopup::ensure(
         std::unique_ptr<This>& x, QWidget* owner)
@@ -108,7 +108,7 @@ FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
 FmPopup& FmPopup::popup(QWidget* widget)
 {
     return popupAtAbs(widget, QRect(
-                widget->mapToGlobal({ 0, 0 }), widget->size()));
+                widget->mapToGlobal(QPoint(0, 0)), widget->size()));
 }
 
 
