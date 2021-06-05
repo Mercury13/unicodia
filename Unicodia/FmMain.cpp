@@ -6,6 +6,7 @@
 #include <QTableView>
 #include <QTextFrame>
 #include <QClipboard>
+#include <QPainter>
 
 // Unicode data
 #include "UcDefines.h"
@@ -169,11 +170,6 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             return {};
         }
 
-    case Qt::BackgroundRole: {
-            auto cp = rows.charAt(index.row(), index.column());
-            return cp ? QVariant() : owner->palette().button().color();
-        }
-
     case Qt::TextAlignmentRole:
         return Qt::AlignCenter;
     default:
@@ -237,11 +233,41 @@ QModelIndex CharsModel::indexOf(char32_t code)
 }
 
 
+///// CharsDelegate ////////////////////////////////////////////////////////////
+
+
+void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
+           const QModelIndex &index) const
+{
+    if (option.state.testFlag(QStyle::State_HasFocus)) {
+        // Focused?
+        //QStyleOptionFocusRect o;
+        //o.QStyleOption::operator=(option);
+        //o.state |= QStyle::State_KeyboardFocusChange;
+        //owner.style()->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter, option.widget);
+        Super::paint(painter, option, index);
+    } else if (option.state.testFlag(QStyle::State_Selected)) {
+        // Selected, not focused? Initial style is bad
+        auto opt2 = option;
+        opt2.state.setFlag(QStyle::State_Selected, false);
+        owner.style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
+        Super::paint(painter, opt2, index);
+    } else {
+        // Selected, use special way of BG color
+        auto cp = owner.model.charAt(index);
+        if (!cp) {
+            painter->fillRect(option.rect, owner.palette().button());
+        }
+        Super::paint(painter, option, index);
+    }
+}
+
+
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 FmMain::FmMain(QWidget *parent)
     : QMainWindow(parent)
-    , ui(new Ui::FmMain), model(this)
+    , ui(new Ui::FmMain), model(this), charsDelegate(*this)
 {
     ui->setupUi(this);
 
@@ -261,6 +287,7 @@ FmMain::FmMain(QWidget *parent)
     // Table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->tableChars->setItemDelegate(&charsDelegate);
     ui->tableChars->setModel(&model);
 
     // Divider

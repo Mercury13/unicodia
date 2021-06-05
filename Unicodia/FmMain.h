@@ -6,6 +6,7 @@
 // Qt
 #include <QMainWindow>
 #include <QAbstractTableModel>
+#include <QStyledItemDelegate>
 
 // My libs
 #include "u_Vector.h"
@@ -122,6 +123,18 @@ private:
     CharsModel model;
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup> popup;
+
+    class CharsDelegate : public QStyledItemDelegate
+    {
+    private:
+        using Super = QStyledItemDelegate;
+    public:
+        FmMain& owner;
+
+        CharsDelegate(FmMain& aOwner) : owner(aOwner) {}
+        void paint(QPainter *painter, const QStyleOptionViewItem &option,
+                   const QModelIndex &index) const override;
+    } charsDelegate;
 
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view scheme, std::string_view target,
