@@ -169,6 +169,11 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             return {};
         }
 
+    case Qt::BackgroundRole: {
+            auto cp = rows.charAt(index.row(), index.column());
+            return cp ? QVariant() : owner->palette().button().color();
+        }
+
     case Qt::TextAlignmentRole:
         return Qt::AlignCenter;
     default:
