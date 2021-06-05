@@ -284,6 +284,13 @@ void FmMain::showCp(MaybeChar ch)
     snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
     ui->lbCharCode->setText(buf);
 
+    // Block
+    int iBlock = ui->comboBlock->currentIndex();
+    auto block = uc::blockOf(ch.code, iBlock);
+    int newIBlock = block->index();
+    if (newIBlock != iBlock)
+        ui->comboBlock->setCurrentIndex(newIBlock);
+
     if (ch) {
         // Font
         auto& font = ch->script().font();

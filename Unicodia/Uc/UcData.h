@@ -112,6 +112,11 @@ namespace uc {
     {
         std::string_view name;
         char32_t startingCp = 0, endingCp = 0;
+
+        size_t index() const;
+
+        Block& operator = (const Block&) = delete;
+        Block& operator = (Block&&) = delete;
     };
 
 
@@ -236,5 +241,8 @@ namespace uc {
     extern const Block blocks[N_BLOCKS];
 
     void completeData();
+    const Block* blockOf(char32_t subj, const Block* hint);
+    inline const Block* blockOf(char32_t subj, int iHint)
+        { return blockOf(subj, std::begin(blocks) + std::max(iHint, 0)); }
 
 }   // namespace uc

@@ -1,7 +1,9 @@
 #include "UcData.h"
 
+// Misc. data
 #include "i_TempFont.h"
 #include "u_Qstrings.h"
+#include "u_Iterator.h"
 
 using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
@@ -751,4 +753,29 @@ QString uc::Cp::osProxy() const
     default:
         return str::toQ(subj.ch32());
     }
+}
+
+
+namespace {
+
+    bool isLessCB(char32_t x, const uc::Block& y)
+        { return (x < y.startingCp); }
+
+}   // anon namespace
+
+
+const uc::Block* uc::blockOf(char32_t subj, const Block* hint)
+{
+    auto it = hintedUpperBound(
+                std::begin(blocks), std::end(blocks), subj, isLessCB,
+                hint + 1);
+    if (it != std::begin(blocks))
+        --it;
+    return it;
+}
+
+
+size_t uc::Block::index() const
+{
+    return this - std::begin(blocks);
 }
