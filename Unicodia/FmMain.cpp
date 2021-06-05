@@ -554,6 +554,7 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
     if (oldBlock->index() != static_cast<size_t>(index)) {
         auto& newBlock = uc::blocks[index];
         selectChar(newBlock.firstAllocated->subj);
+        ui->tableChars->setFocus();
     }
 }
 
