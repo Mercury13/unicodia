@@ -28,7 +28,7 @@
 #endif
 
 
-void installTempFontRel(std::string_view fname)
+QString expandTempFontName(std::string_view fname)
 {
     QString subPath("Fonts/");
     str::append(subPath, fname);
@@ -36,5 +36,12 @@ void installTempFontRel(std::string_view fname)
     auto path = QApplication::applicationDirPath();
     QDir dir(path);
     QString absPath = dir.absoluteFilePath(subPath);
+    return absPath;
+}
+
+
+void installTempFontRel(std::string_view fname)
+{
+    QString absPath = expandTempFontName(fname);
     installTempFontFull(absPath);
 }
