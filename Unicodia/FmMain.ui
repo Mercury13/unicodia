@@ -163,27 +163,48 @@
                      <number>2</number>
                     </property>
                     <item>
-                     <widget class="QLabel" name="lbSample">
-                      <property name="minimumSize">
-                       <size>
-                        <width>120</width>
-                        <height>100</height>
-                       </size>
-                      </property>
-                      <property name="font">
-                       <font>
-                        <stylestrategy>PreferAntialias</stylestrategy>
-                       </font>
-                      </property>
-                      <property name="text">
-                       <string>%</string>
-                      </property>
-                      <property name="textFormat">
-                       <enum>Qt::PlainText</enum>
-                      </property>
-                      <property name="alignment">
-                       <set>Qt::AlignCenter</set>
-                      </property>
+                     <widget class="QStackedWidget" name="stackSample">
+                      <widget class="QWidget" name="pageSampleQt">
+                       <layout class="QVBoxLayout" name="verticalLayout_6">
+                        <property name="leftMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="topMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="rightMargin">
+                         <number>0</number>
+                        </property>
+                        <property name="bottomMargin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QLabel" name="lbSample">
+                          <property name="minimumSize">
+                           <size>
+                            <width>120</width>
+                            <height>100</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <stylestrategy>PreferAntialias</stylestrategy>
+                           </font>
+                          </property>
+                          <property name="text">
+                           <string>%</string>
+                          </property>
+                          <property name="textFormat">
+                           <enum>Qt::PlainText</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
+                      <widget class="QWidget" name="pageSampleCustom"/>
                      </widget>
                     </item>
                    </layout>
