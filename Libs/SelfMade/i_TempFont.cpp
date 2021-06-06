@@ -6,7 +6,9 @@
 
 #include "u_Qstrings.h"
 
-#ifdef _WIN32
+//#define USE_WIN32_FONTS
+
+#if defined(_WIN32) && defined(USE_WIN32_FONTS)
     #include <windows.h>
 
     void installTempFontFull(QString fname)
@@ -16,10 +18,15 @@
         auto data2 = reinterpret_cast<const wchar_t*>(data1);
         AddFontResourceExW(data2, FR_PRIVATE, 0);
     }
-
 #else
-    #error Not ready for this OS
+    #include <QFontDatabase>
+
+    void installTempFontFull(QString fname)
+    {
+        QFontDatabase::addApplicationFont(fname);
+    }
 #endif
+
 
 void installTempFontRel(std::string_view fname)
 {

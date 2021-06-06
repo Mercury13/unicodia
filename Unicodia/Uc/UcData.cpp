@@ -1,5 +1,8 @@
 #include "UcData.h"
 
+// Qt
+#include <QFontDatabase>
+
 // Misc. data
 #include "i_TempFont.h"
 #include "u_Qstrings.h"
@@ -22,7 +25,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
-    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.otf"sv },
+    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
     /// @todo [tofu] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
@@ -691,9 +694,13 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
 {
     if (!font) {
         load();
-        font.reset(new QFont(str::toQ(family), size));
+        auto qFamily = str::toQ(family);
+        font.reset(new QFont(qFamily, size, QFont::Normal));
+        int strategy = QFont::PreferAntialias | QFont::PreferMatch;
+        if (!fileName.empty())
+            strategy |= QFont::NoFontMerging;
         font->setStyleStrategy(
-                    static_cast<QFont::StyleStrategy>(QFont::PreferAntialias | QFont::PreferQuality));
+                    static_cast<QFont::StyleStrategy>(strategy));
     }
     return *font;
 }
