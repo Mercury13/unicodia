@@ -315,6 +315,19 @@ FmMain::~FmMain()
     delete ui;
 }
 
+
+void FmMain::drawSampleWithQt(const uc::Cp& ch)
+{
+    // Font
+    auto& font = ch.script().font();
+    ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
+
+    // Sample char
+    ui->stackSample->setCurrentWidget(ui->pageSampleQt);
+    ui->lbSample->setText(ch.sampleProxy());
+}
+
+
 namespace {
 
     template <class T, class Name1, class Name2>
@@ -363,10 +376,6 @@ void FmMain::showCp(MaybeChar ch)
     ui->btCopy->setEnabled(ch.hasCp());
 
     if (ch) {
-        // Font
-        auto& font = ch->script().font();
-        ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
-
         if (ch->isTrueSpace()) {
                 auto palette = this->palette();
                 auto color = palette.windowText().color();
@@ -378,7 +387,7 @@ void FmMain::showCp(MaybeChar ch)
         }
 
         // Sample char
-        ui->lbSample->setText(ch->sampleProxy());
+        drawSampleWithQt(*ch);
 
         // OS char
         ui->lbOs->setText(ch->osProxy());
@@ -447,6 +456,7 @@ void FmMain::showCp(MaybeChar ch)
         ui->vwInfo->setText(text);
     } else {
         // No character
+        ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText(" ");
         ui->lbOs->setText(" ");
         auto color = palette().color(QPalette::Disabled, QPalette::WindowText);

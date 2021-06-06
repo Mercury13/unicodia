@@ -146,6 +146,7 @@ private:
     void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
     void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);
+    void drawSampleWithQt(const uc::Cp& cp);
 private slots:
     void charChanged(const QModelIndex& current);
     void on_vwInfo_anchorClicked(const QUrl &arg1);

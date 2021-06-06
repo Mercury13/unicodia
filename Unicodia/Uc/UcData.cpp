@@ -697,8 +697,8 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         auto qFamily = str::toQ(family);
         font.reset(new QFont(qFamily, size, QFont::Normal));
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
-        if (!fileName.empty())
-            strategy |= QFont::NoFontMerging;
+        //if (!fileName.empty())
+        //    strategy |= QFont::NoFontMerging;
         font->setStyleStrategy(
                     static_cast<QFont::StyleStrategy>(strategy));
     }
