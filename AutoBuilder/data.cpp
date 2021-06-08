@@ -752,6 +752,202 @@ const std::multiset<PrefixEntry> prefixes {
 };
 
 
+/// @todo [langs] Stopped at Canadian syllabics
+const std::set<std::string_view> langNames {
+    "also Cornish",     // корнский (Великобритания)
+    "also used in Americanist linguistics",
+    "used in transcription of Mandarin Chinese",
+    "used by linguists working on Chinese and other Sino-Tibetan languages",
+    "used in some Polynesian orthographies for glottal stop",
+    "also used for Enets",      // энецкий (Россия)
+    "also used for Itelmen"     // ительменский (Россия)
+    "also used for Nenets"
+    "also used for Ossetian"    // осетинский (Россия)
+    "Middle Eastern Arabic for foreign words"
+    "North African Arabic for foreign words"
+        /// @todo [langs] Headers like “@→→Komi letters”, → = TAB
+
+    "and many other languages",
+    "...",
+    "not in current use",
+
+    "Abkhasian",
+    "Adamawa Fulfulde", // фулá (Камерун)
+    "Adighe",           // адыгейский (=западночеркесский)
+    "African",
+    "African languages",
+    "Afrikaans",
+    "Algonquin",
+    "Algonquian",       ///< =algonquin
+    "Altay",
+    "Amazigh",          ///< =berber
+    "Americanist phonetic usage",   // индейская фонетика
+    "Arwi",             // Арви (арабская запись тамильского)
+    "Asturian",
+    "Athapascan",       // атабаскские (Канада)
+    "Azerbaijani",
+    "Baluchi",          // белуджский (Пакистан)
+    "Bashkir",
+    "Basketo"           // баскето (Эфиопия)
+    "Berber",
+    "Belarusian"        ///< =Byelorussian
+    "Bihari languages"  // бихарские (Индия)
+    "Bosnian",
+    "Bulgarian",
+    "Burushaski",       // бурушаски (Кашмир)
+    "Byelorussian",
+    "Carrier"           ///< кэрриер (Канада), better stop?
+    "Crimean Tatar",
+    "Chechen",
+    "Chukchi",
+    "Chuvash",
+    "Croatian",
+    "Czech",
+    "Danish",
+    "Dargwa",           // даргинский (Дагестан)
+    "Dutch",
+    "early Jawi",
+    "early Persian",
+    "East Cree",
+    "Esperanto",
+    "Estonian",
+    "Ewe",          // эве (Того)
+    "Faroese",
+    "Finnish",
+    "Finnish Romany",   // финский кало (цыганский)
+    "French",
+    "former-Soviet minority language scripts",
+    "Galician",
+    "German",
+    "German dialectology",
+    "Germanic",
+    "Greenlandic (old orthography)",
+    "Gojri",                    // гуджарский (Пакистан)
+    "Gothic transliteration",   // готская транслитерация
+    "Hausa",
+    "Hittite transcription",    // транскрипция хеттского
+    "Hungarian",
+    "Huron",
+    "Icelandic",
+    "Igbo",         // игбо (Нигерия)
+    "Ingush",
+    "Indic transliteration",    // транслитерация санскрита
+    "Inuktitut"     ///< better stop?
+    "Irish Gaelic (old orthography)",
+    "Italian",
+    "IPA",
+    "IPA and many languages",
+    "Iroquoian",
+    "Jawi",         // джави (Бруней)
+    "Kalami",       // гаври (=калами, Пакистан)
+    "Kashmiri",
+    "Kazakh",
+    "Kharoshthi transliteration",   // транслитерация кхароштхи (Индия, Ср. Азия, −I…I тыс.)
+    "Khoisan tradition",    // койсанские (бушменские)
+    "Khwarazmian",  // хорезмийский
+    "Kikuyu",       // кикуйю (Кения)
+    "Kildin Sami",  // кильдинский саамский
+    "Kurdish",
+    "Kuvi"          // куви (Индия)
+    "Labrador Inuttut", // лабрадорский инуитский
+    "Lahnda",   // лахнда (западнопенджабские)
+    "Lak",      // лакский (Дагестан)
+    "Lakota",   // лакота (индейцы США)
+        /// @todo [langs] Remove text in parentheses, after:
+    "Latin",
+    "Latin abbreviation",
+    "Latvian",
+    "Lithuanian",
+    "Lithuanian phonetics and medievalist transcriptions",
+    "Livonian",     // ливский (Латвия)
+    "Maba",         // маба (Чад)
+    "Macedonian",
+    "Macedonian and Serbian transliteration",
+    "Maghrib Arabic",
+    "Madurese",     // мадурский (Индонезия)
+    "Malagasy",
+    "Malay",        // малайский
+    "Maltese",
+    "Mari",
+    "Marshallese",
+    "medieval Hungarian orthography",
+    "Mende",        // менде (Сьерра-Леоне)
+    "Middle English",   // среднеанглийский
+    "Middle High German",
+    "Moldavian",
+    "Moose Cree",   // мусский кри (Канада)
+    "Moroccan Arabic",
+    "Norwegian",
+    "older orthographies for Abkhasian",
+    "Old English",
+    "Old Hausa",
+    "Old Icelandic",
+    "Old Norse",        // древнескандинавский
+    "Old Saxon",
+    "Old Urdu",
+    "Ormuri",           // ормури (Пакистан)
+    "Pan-Nigerian alphabet",    // паннигерийский алфавит
+    "Pan-Turkic Latin alphabets",   // тюркские
+    "Pan-Turkic Latin orthography",
+    "Pegon",            // пегон (яванское арабское письмо)
+    "Pinyin",                   // пиньинь (транскрипция китайского)
+    "Pinyin first tone",
+    "Pinyin second tone",
+    "Pinyin third tone",
+    "Pinyin fourth tone",
+        "Mandarin Chinese first tone",
+        "Mandarin Chinese second tone",
+        "Mandarin Chinese third tone",
+        "Mandarin Chinese fourth tone",
+        "Mandarin Chinese fifth tone (light or neutral)",
+    "phonetics",
+    "phonetic use in Sinology",
+    "Pashto",       // пуштунский
+    "Persian",
+    "Philippine languages",
+    "Polish",
+    "Portuguese",
+    "Quranic Arabic",
+    "Romanian",
+    "Russian",
+    "Sami",         // also Saami
+    "Saraiki",      // сараики (Пакистан)
+    "Sayisi",       // сайиси (Канада)
+    "Scots",        // англо-шотландский
+    "Semitic transliteration",  // транслитерация семитских языков
+    "Serbian",
+    "Serbian and Croatian phonetics",
+    "Shina"         // шина (Кашмир)
+    "Sindhi",       // синдхи (Пакистан)
+    "Skolt Sami",   // колтта-саамский (Финляндия)
+    "Slovak",
+    "Slovenian",
+    "Spanish",
+    "Swedish",
+    "Swedish grave accent",
+    "Tajik",
+    "Tatar",
+    "Torwali",      // торвали (Пакистан)
+    "Tunisian Arabic",
+    "Turkish",
+    "Twi",          // чви (Гана)
+    "Uighur",
+    "Ukrainian",
+    "Uralicist usage",  // уральские языки
+    "Urdu",
+    "Uzbek",
+    "Vietnamese",
+    "Walloon",
+    "Welsh",
+    "West Cree",
+    "Yakut",
+    "Yoruba",
+    "Yupik",        // юпикские (Чукотка)
+    "Zhuang (old orthography)", // Чжуанский (старая орфография, Китай)
+    "Zulu",
+};
+
+
 namespace {
 
     enum class WordState { SMALL, TITLE, AS_IS_TITLE, AS_IS, ALL_CAP };

@@ -103,6 +103,7 @@ inline bool operator < (const PrefixEntry& x, const PrefixEntry& y) { return x.t
 extern const std::map<std::string_view, DicEntry> dictionary;
 extern const std::map<std::string_view, std::string_view> exceptions;
 extern const std::multiset<PrefixEntry> prefixes;
+extern const std::set<std::string_view> langNames;
 
 enum class DecapDebug { NO, YES };
 
