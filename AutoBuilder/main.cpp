@@ -209,7 +209,6 @@ int main()
         // • Alternate: Prefer na1
         // • Control: Prefer na1
         // • Figment: Implement
-        // • Correction: These are former names, implement together with abbreviations
 
         /// @todo [future] Sometimes we have fixups, what to take?
         /// @todo [future] Sometimes we have abbreviations, take them
@@ -223,6 +222,9 @@ int main()
             if (sType == "alternate"sv || sType == "control"sv || sType == "figment") {
                 if (sName.empty())
                     sName = elAlias.attribute("alias").as_string();
+            } else if (sType == "correction") {
+                // Checked known chars, and corrections ARE BETTER than originals
+                sName = elAlias.attribute("alias").as_string();
             }
         }
 

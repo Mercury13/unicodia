@@ -215,6 +215,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ZANZABAR"sv,     Dicf::TRIG_SCRIPT },
 
     { "OCR"sv,          Dicf::CAP_ALL },
+    { "MICR"sv,         Dicf::CAP_ALL },
 
     // Capitalize next
     { "CHARACTER"sv,    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -729,6 +730,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Runic letter Short-twig-Naud N")
     EX("Runic letter Long-branch-Madr M")
     EX("Runic letter Short-twig-Madr M")
+    EX("Yi syllable iteration mark")    // Maybe so
 };
 
 const std::multiset<PrefixEntry> prefixes {
