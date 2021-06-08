@@ -1,5 +1,6 @@
 ﻿https://github.com/googlefonts/noto-emoji — эмодзи от Гугла
 https://github.com/twitter/twemoji — эмодзи от Твиттера и как их качать [CC-BY-SA 4.0]
+https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
 https://commons.wikimedia.org/wiki/Category:Unicode_BMP
 https://unicode.org/reports/tr42/ — информация о базе символов Юникода
 https://www.unicode.org/Public/13.0.0/ — собственно база
