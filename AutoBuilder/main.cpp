@@ -311,8 +311,8 @@ int main()
         if (hasSubstr(name, "Private Use") || hasSubstr(name, "Surrogate"))
             continue;
 
-        os << R"({ ")" << name << R"("sv, 0x)" << sFirst << ", 0x"
-           << sLast << " },\n";
+        os << "{ 0x" << sFirst << ", 0x" << sLast << ", \""
+           << name << "\"sv },\n";
         ++nBlocks;
     }
     os << "};" << '\n';
