@@ -81,6 +81,8 @@ namespace uc {
         Hano,
         Hebr,
         Hira,
+        Java,
+        Kali,
         Kana,
         Khmr,
         Knda,
@@ -147,10 +149,8 @@ namespace uc {
         //Inds  no chars
         Ital = Zyyy,        // beyond BMP
         //Jamo  no chars
-        Java = Zyyy,        /// @todo [bmp] Javanese
         //Jpan  no chars
         //Jurc  no chars
-        Kali = Zyyy,        /// @todo [bmp] Kayah Li
         Khar = Zyyy,        // beyond BMP
         Khoj = Zyyy,        // beyond BMP
         //Kitl  no chars
