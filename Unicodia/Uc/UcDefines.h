@@ -86,6 +86,7 @@ namespace uc {
         Kana,
         Khmr,
         Knda,
+        Lana,
         Laoo,
         Latn,
         Mand,
@@ -158,7 +159,6 @@ namespace uc {
         //Kore  no chars
         //Kpel  no chars
         Kthi = Zyyy,        // beyond BMP
-        Lana = Zyyy,        /// @todo [bmp] Tai Tham
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars

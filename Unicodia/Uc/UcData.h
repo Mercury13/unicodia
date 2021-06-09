@@ -32,6 +32,7 @@ namespace uc {
         GLAGOLITIC,
         HANUNOO,
         HEBREW,
+        LANNA,
         MONGOLIAN,
         RUNIC,
         SAMARITAN,

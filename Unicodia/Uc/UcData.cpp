@@ -24,6 +24,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
+    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf"sv },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
@@ -35,7 +36,8 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
 constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
     { {} },
     { u8"живая <i>(основным языкам ничего не угрожает, как кириллица)</i>"sv },
-    { u8"в опасности <i>(задавлена соседними языками, как чероки, и/или социальными потрясениями, как сирийская)</i>"sv },
+    { u8"в опасности <i>(задавлена соседними языками, как чероки, или социальными потрясениями, как сирийская, "
+        "или соседними письменностями, как ланна)</i>"sv },
     { u8"мёртвая <i>(скоро потеряет/недавно потеряла носителей, как нюй-шу)</i>"sv },
     { u8"историческая <i>(давно мертва, как глаголица)</i>"sv },
     { u8"новая <i>(появилась в новейшее время, как нко)</i>"sv },
@@ -465,6 +467,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "sv
                 u8"Часто применяется в смайликах: <big>ಠ__ಠ</big>.</p>"sv },
+    { "Lana"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+        u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
+        u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все\u00A0— Таиланд"sv,
+        u8"<p>Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях "
+                "(прямая черта прорежет лист по жилкам). Гласная по умолчанию «а». "
+                "Между словами не ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. "
+                "Вирама называется «ra haam».</p>"
+            "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
+            "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
+            EcFont::LANNA },
     { "Laoo"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Лаосская"sv, u8"≈1350"sv,
         u8"лаосский"sv,
