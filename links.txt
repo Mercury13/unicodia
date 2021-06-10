@@ -8,3 +8,4 @@ https://www.compart.com/en/unicode/scripts — интересный справо
 https://commons.wikimedia.org/wiki/Emoji/Table — список эмодзи
 https://dev.w3.org/html5/html-author/charref — список именованных символов
 https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
+http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
