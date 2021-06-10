@@ -19,7 +19,7 @@ namespace str {
 
     void append(QString& x, std::string_view s);
     void append(QString& x, std::u8string_view s);
-    inline void append(QString& x, const char* s) { append(x, std::string_view(s)); }
+    //inline void append(QString& x, const char* s) { append(x, std::string_view(s)); }
     inline void append(QString& x, char c) { x.append(c); }
 
     template <size_t N>

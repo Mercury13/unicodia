@@ -554,6 +554,14 @@ void FmMain::showPopup(
             sp.sep();
             appendVersion(text, u8"• "sv, x.version());
         }
+        sp.sep();
+        str::append(text, u8"• Плоскость: ");
+        if (x.plane == uc::PLANE_BASE) {
+            str::append(text, u8"базовая");
+        } else {
+            str::append(text, std::to_string(x.plane));
+        }
+
         str::append(text, "</p>");
     }
 

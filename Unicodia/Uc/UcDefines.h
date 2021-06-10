@@ -91,9 +91,11 @@ namespace uc {
         Latn,
         Lepc,
         Limb,
+        Lisu,
         Mand,
         Mlym,
         Mong,
+        Mtei,
         Mymr,
         Nkoo,
         Ogam,
@@ -166,7 +168,6 @@ namespace uc {
         //Leke  no chars
         Lina = Zyyy,        // beyond BMP
         Linb = Zyyy,        // beyond BMP
-        Lisu = Zyyy,        /// @todo [bmp] Lisu
         //Loma  no chars
         Lyci = Zyyy,        // beyond BMP
         Lydi = Zyyy,        // beyond BMP
@@ -182,7 +183,6 @@ namespace uc {
         Modi = Zyyy,        // beyond BMP
         //Moon  no chars
         Mroo = Zyyy,        // beyond BMP
-        Mtei = Zyyy,        /// @todo [bmp] Meitei Mayek
         Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
         Narb = Zyyy,        // beyond BMP

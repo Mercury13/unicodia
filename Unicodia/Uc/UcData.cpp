@@ -13,25 +13,29 @@ uc::Cp* uc::cps[N_CHARS];
 
 constexpr uint16_t STUB_CIRCLE = 0x25CC;
 
-const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
+constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
     /// @todo [tofu] Syriac has tofu, check
     /// @todo [tofu] 1C80, Cyr extended C
+    /// @todo [tofu] 11FB0, One char of Lisu outside BMP
     { "Cambria"sv,                  {} },
+    { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
-    { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf"sv },
-    { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
-    { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
-    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf"sv },
-    { "Noto Sans Lepcha"sv,         "NotoSansLepcha-Regular.ttf"sv },
-    { "Noto Sans Limbu"sv,          "NotoSansLimbu-Regular.ttf"sv },
-    { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
-    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
-    { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
-    { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
+    { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
+    { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
+    { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
+    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },
+    { "Noto Sans Lepcha"sv,         "NotoSansLepcha-Regular.ttf" },
+    { "Noto Sans Limbu"sv,          "NotoSansLimbu-Regular.ttf" },
+    { "Noto Sans Lisu"sv,           "NotoSansLisu-Regular.ttf" },
+    { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
+    { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
+    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf" },
+    { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
+    { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
 };
 
 
@@ -240,8 +244,10 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Ahom"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR,
         u8"Ахом"sv, u8"XIII век"sv,
         u8"тайско-ахомский"sv,
-        u8"<p>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. "sv
-                u8"К XIX веку язык окончательно заместился ассамским. Возрождается с 1954 года.</p>"sv },
+        u8"<p>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. "
+                "К XIX веку язык окончательно заместился ассамским с бенгальским письмом. Возрождается с 1954 года, "
+                "в письменность добавлены десятичные цифры, не имеющие исторического обоснования.</p>"sv,
+                EcFont::AHOM },
     { "Arab"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL,
         u8"Арабская"sv, u8"IV—VI век"sv,
         u8"арабский, персидский, урду, уйгурский, пуштунский…"sv,
@@ -522,6 +528,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
+    { "Lisu"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+        u8"Лису (алфавит Фрейзера)"sv, u8"1915"sv,
+        u8"лису <i>(Китай)</i>"sv,
+        u8"<p>Придуман британским миссионером Джеймсом Фрейзером. Состоит из латинских букв, как обычных, так и повёрнутых. "
+                "Строчного регистра нет. Благодаря усилиями миссионеров 40<font size='-2'>\u00A0</font>% лису\u00A0— протестанты. "
+                "Китайцы признали письменность в 1992.</p>"
+            "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
+                "и письменность на тайский основе.</p>"sv,
+                EcFont::LISU },
     { "Mand"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
         u8"Мандейская"sv, u8"II—VII век"sv,
         u8"мандейский <i>(Иран и Ирак)</i>"sv,
@@ -541,6 +556,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
                 "расширить использование старой письменности.</p>"sv,
             EcFont::MONGOLIAN },
+    { "Mtei"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR,
+        u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
+        u8"манипури <i>(Индия)</i>"sv,
+        u8"<p>Какая бы версия о происхождении манипури ни была верной, с XVIII века пользовались бенгальским. Письменность возродили в 1930-х, "
+                "в 1976 подогнали под современную фонетику.</p>"
+            "<p>Буквы называются по частям тела: скажем, первая\u00A0— «kok» (голова). "
+                "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
+                "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
+                EcFont::MEETEI },
     { "Mymr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Бирманская"sv, u8"XI век"sv,
         u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>"sv,
@@ -961,7 +985,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0xA490, 0xA4CF,
             "Yi Radicals", u8"И\u00A0— черты" },
     { 0xA4D0, 0xA4FF,
-            "Lisu", u8"Лису" },
+            "Lisu", u8"Лису (алфавит Фрейзера)" },
     { 0xA500, 0xA63F,
             "Vai", u8"Ваи" },
     { 0xA640, 0xA69F,
@@ -1160,7 +1184,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0x11600, 0x1165F,
             "Modi", u8"Моди" },
     { 0x11660, 0x1167F,
-            "Mongolian Supplement", u8"Монгльский дополнительный" },
+            "Mongolian Supplement", u8"Монгольский дополнительный" },
     { 0x11680, 0x116CF,
             "Takri", u8"Такри" },
     { 0x11700, 0x1173F,
@@ -1363,6 +1387,8 @@ void uc::completeData()
         auto& script = cp.script();
         ++script.nChars;
         script.ecVersion = std::min(script.ecVersion, cp.ecVersion);
+        if (script.plane == PLANE_UNKNOWN)
+            script.plane = cp.plane();
         // Block
         auto block = blockOf(cp.subj.ch32(), hint);
         if (!block->firstAllocated)

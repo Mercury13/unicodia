@@ -27,6 +27,7 @@ namespace uc {
     enum class EcFont
     {
         NORMAL,
+        AHOM,
         ARABIC,
         CHEROKEE,
         GLAGOLITIC,
@@ -35,6 +36,8 @@ namespace uc {
         LANNA,
         LEPCHA,
         LIMBU,
+        LISU,
+        MEETEI,
         MONGOLIAN,
         RUNIC,
         SAMARITAN,
@@ -84,6 +87,9 @@ namespace uc {
     };
     extern const Version versionInfo[static_cast<int>(EcVersion::NN)];
 
+    constexpr int PLANE_BASE = 0;
+    constexpr int PLANE_UNKNOWN = -1;
+
     struct Script
     {
         std::string_view id;
@@ -93,6 +99,7 @@ namespace uc {
         std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
         mutable unsigned nChars = 0;
+        mutable int plane = -1;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
@@ -247,6 +254,7 @@ namespace uc {
         bool isTrueSpace() const
                 { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                           ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+        constexpr int plane() const { return subj.val() >> 16; }
     };
 
     extern Cp cpInfo[N_CPS];
