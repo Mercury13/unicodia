@@ -33,6 +33,8 @@ namespace uc {
         HANUNOO,
         HEBREW,
         LANNA,
+        LEPCHA,
+        LIMBU,
         MONGOLIAN,
         RUNIC,
         SAMARITAN,

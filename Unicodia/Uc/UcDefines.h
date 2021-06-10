@@ -89,6 +89,8 @@ namespace uc {
         Lana,
         Laoo,
         Latn,
+        Lepc,
+        Limb,
         Mand,
         Mlym,
         Mong,
@@ -162,8 +164,6 @@ namespace uc {
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars
-        Lepc = Zyyy,        /// @todo [bmp] Lepcha
-        Limb = Zyyy,        /// @todo [bmp] Limbu
         Lina = Zyyy,        // beyond BMP
         Linb = Zyyy,        // beyond BMP
         Lisu = Zyyy,        /// @todo [bmp] Lisu

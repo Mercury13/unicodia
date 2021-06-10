@@ -26,6 +26,8 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf"sv },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf"sv },
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf"sv },
+    { "Noto Sans Lepcha"sv,         "NotoSansLepcha-Regular.ttf"sv },
+    { "Noto Sans Limbu"sv,          "NotoSansLimbu-Regular.ttf"sv },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
@@ -504,6 +506,22 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "sv
                 u8"Латиница используется в математике, медицине, фонетике, программировании.</p>"sv
             u8"<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>" },
+    { "Lepc"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+        u8"Лепча (ронг)"sv, u8"≈1700"sv,
+        u8"лепча <i>(Индия, Бутан, Непал)</i>"sv,
+        u8"<p>Гласная по умолчанию «а». Произошла из тибетского, изначально писалась сверху вниз, но потом стали писать горизонтально, "
+                "потому буквы напоминают тибетские, повёрнутые на 90°.</p>"
+            "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. "
+                "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
+                "Между словами нет пробелов.</p>"sv,
+                EcFont::LEPCHA },
+    { "Limb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+        u8"Лимбу"sv, u8"≈1700"sv,
+        u8"лимбу <i>(Непал)</i>"sv,
+        u8"<p>Гласная по умолчанию «о».</p>"
+            "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на непальский флаг. "
+                "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
+                EcFont::LIMBU },
     { "Mand"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
         u8"Мандейская"sv, u8"II—VII век"sv,
         u8"мандейский <i>(Иран и Ирак)</i>"sv,
