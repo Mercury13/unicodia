@@ -17,6 +17,7 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
     /// @todo [tofu] Syriac has tofu, check
+    /// @todo [tofu] 1C80, Cyr extended C
     { "Cambria"sv,                  {} },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
