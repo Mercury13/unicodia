@@ -909,7 +909,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0x30A0, 0x30FF,
             "Katakana", u8"Катакана" },
     { 0x3100, 0x312F,
-            "Bopomofo", u8"Бопомофо (чжуинь))" },
+            "Bopomofo", u8"Бопомофо (чжуинь)" },
     { 0x3130, 0x318F,
             "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо"  },
     { 0x3190, 0x319F,
