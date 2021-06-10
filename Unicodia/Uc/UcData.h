@@ -115,6 +115,7 @@ namespace uc {
     {
         char32_t startingCp, endingCp;
         std::string_view name;
+        std::u8string_view locName;
 
         mutable const Cp* firstAllocated = nullptr;
 
@@ -243,6 +244,7 @@ namespace uc {
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
 
+    constexpr int N_BLOCKS = 302;
     extern const Block blocks[N_BLOCKS];
 
     void completeData();

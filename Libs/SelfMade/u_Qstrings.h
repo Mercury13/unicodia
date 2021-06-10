@@ -9,6 +9,9 @@ namespace str {
     inline QString toQ(std::string_view x)
         { return QString::fromUtf8(x.data(), x.size()); }
 
+    inline QString toQ(std::u8string_view x)
+        { return QString::fromUtf8(x.data(), x.size()); }
+
     inline QString toQ(char32_t x)
     {
         return QString::fromUcs4(&x, 1);

@@ -297,27 +297,20 @@ int main()
 
     ///// Blocks ///////////////////////////////////////////////////////////////
 
-    os << R"(const uc::Block uc::blocks[N_BLOCKS] {)" << '\n';
-    std::cout << "Found blocks, generating block info..." << std::flush;
-
     size_t nBlocks = 0;
     auto elBlocks = need(elRoot.child("blocks"), "Need <blocks>");
 
     for (pugi::xml_node elBlock : elBlocks.children("block")) {
-        auto sFirst = elBlock.attribute("first-cp").as_string();
-        auto sLast = elBlock.attribute("last-cp").as_string();
+        //auto sFirst = elBlock.attribute("first-cp").as_string();
+        //auto sLast = elBlock.attribute("last-cp").as_string();
         std::string_view name = elBlock.attribute("name").as_string();
 
         if (hasSubstr(name, "Private Use") || hasSubstr(name, "Surrogate"))
             continue;
 
-        os << "{ 0x" << sFirst << ", 0x" << sLast << ", \""
-           << name << "\"sv },\n";
         ++nBlocks;
     }
-    os << "};" << '\n';
-
-    std::cout << "OK" << std::endl;
+    os << "static_assert(uc::N_BLOCKS == " << std::dec << nBlocks << ", \"Block data changed, check it!\");\n";
     std::cout << "Found " << nBlocks << " blocks" << std::endl;
 
     os.close();
@@ -329,7 +322,6 @@ int main()
     os << '\n';
     os << "namespace uc {\n";
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
-    os << "constexpr int N_BLOCKS = " << nBlocks << ";\n";
     os << "}\n";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;

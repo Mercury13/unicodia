@@ -4,5 +4,4 @@
 
 namespace uc {
 constexpr int N_CPS = 143924;
-constexpr int N_BLOCKS = 302;
 }

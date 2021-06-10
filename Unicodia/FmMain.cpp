@@ -110,7 +110,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             if (i >= uc::N_BLOCKS)
                 return {};
             auto& block = uc::blocks[i];
-            return str::toQ(block.name);
+            return str::toQ(block.locName);
             /// @todo [ui] how to show character ranges? — now they are bad
             //char buf[200];
             //snprintf(buf, 200, reinterpret_cast<const char*>(u8"%*s (%04X—%04X)"),
