@@ -28,7 +28,6 @@ const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf"sv },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf"sv },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf"sv },
-    /// @todo [tofu] 1735 Philippine single punctuation: this char is Tagalog, Buhid etc, what font to take?
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf"sv },
 };
 
@@ -767,7 +766,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0x1700, 0x171F,
             "Tagalog", u8"Тагальский" },
     { 0x1720, 0x173F,
-            "Hanunoo", u8"Хануноо" },
+            "Hanunoo", u8"Хануноо", EcScript::Hano },
     { 0x1740, 0x175F,
             "Buhid", u8"Бухид" },
     { 0x1760, 0x177F,
@@ -1452,6 +1451,15 @@ QString uc::Cp::osProxy() const
     default:
         return str::toQ(subj.ch32());
     }
+}
+
+
+uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
+{
+    if (ecScript != EcScript::NONE)
+        return ecScript;
+    hint = blockOf(subj, hint);
+    return hint->ecScript;
 }
 
 

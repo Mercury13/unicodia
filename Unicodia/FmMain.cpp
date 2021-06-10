@@ -154,7 +154,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = rows.charAt(index.row(), index.column());
             if (!cp)
                 return {};
-            auto& font = cp->font();
+            auto& font = cp->font(hint);
             return font.get(font.q.table, FSZ_TABLE);
         }
 
@@ -319,7 +319,7 @@ FmMain::~FmMain()
 void FmMain::drawSampleWithQt(const uc::Cp& ch)
 {
     // Font
-    auto& font = ch.script().font();
+    auto& font = ch.font(hint);
     ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
 
     // Sample char

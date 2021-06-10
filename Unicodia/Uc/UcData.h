@@ -117,6 +117,8 @@ namespace uc {
         std::string_view name;
         std::u8string_view locName;
 
+        EcScript ecScript = EcScript::NONE;
+
         mutable const Cp* firstAllocated = nullptr;
 
         size_t index() const;
@@ -205,6 +207,10 @@ namespace uc {
 
     extern const char8_t allStrings[];
 
+    constexpr int N_BLOCKS = 302;
+    extern const Block blocks[N_BLOCKS];
+    constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -229,7 +235,9 @@ namespace uc {
         const Category& category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-        const Font& font() const { return script().font(); }
+        EcScript ecScriptEx(const Block*& hint) const;
+        const Font& font(const Block*& hint) const
+            { return scriptInfo[static_cast<int>(ecScriptEx(hint))].font(); }
         QString sampleProxy() const;
         QString osProxy() const;
 
@@ -243,9 +251,6 @@ namespace uc {
 
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
-
-    constexpr int N_BLOCKS = 302;
-    extern const Block blocks[N_BLOCKS];
 
     void completeData();
     const Block* blockOf(char32_t subj, const Block* hint);

@@ -97,6 +97,7 @@ public:
     QModelIndex indexOf(char32_t code);
 private:
     RowCache rows;
+    mutable const uc::Block* hint = &uc::blocks[0];
 };
 
 
@@ -123,6 +124,7 @@ private:
     CharsModel model;
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup> popup;
+    mutable const uc::Block* hint = &uc::blocks[0];
 
     class CharsDelegate : public QStyledItemDelegate
     {

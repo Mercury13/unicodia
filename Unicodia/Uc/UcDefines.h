@@ -251,6 +251,7 @@ namespace uc {
         //Zsym  no chars
         //Zxxx  no chars
         //Zzzz  no chars
+        NONE = Zyyy
     };
 
     enum class EcVersion : unsigned char
