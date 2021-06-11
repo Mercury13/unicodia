@@ -478,7 +478,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Khmr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Кхмерская"sv, u8"VI век"sv,
         u8"кхмерский <i>(Камбоджа)</i>"sv,
-        u8"<p>Как и другие языки юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
+        u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
                 "Стал основой для тайского и лаосского.</p>"sv },
     { "Knda"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
