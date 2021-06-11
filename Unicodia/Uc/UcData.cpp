@@ -18,6 +18,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
     /// @todo [tofu] Syriac has tofu, check
     /// @todo [tofu] 1C80, Cyr extended C
+    /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [tofu] 11FB0, One char of Lisu outside BMP
     { "Cambria"sv,                  {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
@@ -27,7 +28,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
-    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },
+    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },    // Lanna
+    { "M_Khunburom_Pali"sv,         "M_Khunburom_Pali.ttf", Ffg::NEED_STUB },   // Lao
     { "Noto Sans Lepcha"sv,         "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu"sv,          "NotoSansLimbu-Regular.ttf" },
     { "Noto Sans Lisu"sv,           "NotoSansLisu-Regular.ttf" },
@@ -63,7 +65,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
 };
 
 
-const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType::NN)] {
+constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType::NN)] {
     { {} },
     { u8"неизвестно"sv },
     { u8"алфавитная <i>(гласные и согласные звуки, как кириллица)</i>"sv },
@@ -482,8 +484,9 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Knda"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Каннада"sv, u8"XIV век"sv,
         u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "sv
-                u8"Часто применяется в смайликах: <big>ಠ__ಠ</big>.</p>"sv },
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
+                "Гласная по умолчанию «а». "
+                "Часто применяется в смайликах: <big>ಠ︵ಠ</big>.</p>"sv },
     { "Lana"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
         u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
         u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все\u00A0— Таиланд"sv,
@@ -494,12 +497,14 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Вирама называется «ra haam».</p>"
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
             "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
-            EcFont::LANNA },
+                EcFont::LANNA },
     { "Laoo"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Лаосская"sv, u8"≈1350"sv,
         u8"лаосский"sv,
-        u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из кхмерского. "sv
-                "Гласная по умолчанию «о». Между словами не ставятся пробелы.</p>"sv },
+        u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из кхмерского. "
+                "Гласная по умолчанию «о». Между словами не ставятся пробелы. "
+                "Как и в тайском, буквы называются подходящими словами: ບ называется «бо-бэ» или просто «бэ» (козёл).</p>"sv,
+                EcFont::LAO },
     { "Latn"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
         u8"большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; "sv
@@ -546,8 +551,9 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Mlym"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Малаялам"sv, u8"830"sv,
         u8"малая́лам <i>(Южная Индия)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. Отличается тем, что в начале слова "sv
-                u8"используются полные огласовки, в середине и в конце\u00A0— сокращённые.</p>"sv },
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. "
+                "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
+                "в середине и в конце\u00A0— сокращённые.</p>"sv },
     { "Mong"sv, EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL,
         u8"Монгольская (старая)"sv, u8"X век"sv,
         u8"монгольский"sv,
@@ -555,7 +561,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "очень неохотно её поддерживают. Первый известный документ датируется 1204. "
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
                 "расширить использование старой письменности.</p>"sv,
-            EcFont::MONGOLIAN },
+                EcFont::MONGOLIAN },
     { "Mtei"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR,
         u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
         u8"манипури <i>(Индия)</i>"sv,
@@ -660,9 +666,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"тайский"sv,
         u8"<p>Произошла из старокхмерского, который, в свою очередь, произошёл из брахми. "sv
                 u8"Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.</p>"sv
-            u8"<p>Как и во всех письменностях, основанных на брахми, согласный без огласовок означает слог на «о»: "sv
-                u8"<font size='+2'>ช</font>=чо. Но буквы называются по словам: так, эта буква называется «чо-чан» (слон). "sv
-                u8"Между словами не ставятся пробелы.</p>"sv },
+            u8"<p>Гласная по умолчанию «о»: <font size='+2'>ช</font>=чо. Но буквы называются по словам: "
+                "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv },
     { "Tibt"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
         u8"Тибетская"sv, u8"≈650"sv,
         u8"тибетские, дзонг-кэ <i>(Бутан)</i>, шерпский…"sv,
@@ -1477,6 +1482,10 @@ QString uc::Cp::sampleProxy() const
         return QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32());
     case EcCategory::MARK_NONSPACING:
     case EcCategory::MARK_SPACING:
+        // Brahmi scripts probably do fine
+        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
+                && !script().font().flags.have(Ffg::NEED_STUB))
+            break;
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
     case EcCategory::SEPARATOR_SPACE:
         //return "][" + str::toQ(subj.ch32()) + "[";
@@ -1484,10 +1493,10 @@ QString uc::Cp::sampleProxy() const
         if (isTrueSpace()) {
             return QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏');
         }
-        [[fallthrough]];
-    default:
-        return str::toQ(subj.ch32());
+        break;
+    default: ;
     }
+    return str::toQ(subj.ch32());
 }
 
 
@@ -1498,10 +1507,14 @@ QString uc::Cp::osProxy() const
 
     switch (category().upCat) {
     case UpCategory::MARK:
+        // Brahmi scripts probably do fine
+        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
+                && !script().font().flags.have(Ffg::NEED_STUB))
+            break;
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
-    default:
-        return str::toQ(subj.ch32());
+    default: ;
     }
+    return str::toQ(subj.ch32());
 }
 
 

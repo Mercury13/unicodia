@@ -6,6 +6,9 @@
 // Qt
 #include <QFont>
 
+// Misc
+#include "u_TypedFlags.h"
+
 // Unicode data
 #include "UcDefines.h"
 
@@ -34,6 +37,7 @@ namespace uc {
         HANUNOO,
         HEBREW,
         LANNA,
+        LAO,
         LEPCHA,
         LIMBU,
         LISU,
@@ -45,9 +49,15 @@ namespace uc {
         NN
     };
 
+    enum class Ffg {
+        NEED_STUB = 1
+    };
+
     struct Font
     {
         std::string_view family, fileName;
+        Flags<Ffg> flags {};
+
         mutable struct Q {
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};

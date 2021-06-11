@@ -40,6 +40,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_Strings.h \
     ../Libs/SelfMade/u_TinyOpt.h \
+    ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h \
     FmPopup.h \
