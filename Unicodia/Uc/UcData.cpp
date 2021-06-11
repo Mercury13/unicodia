@@ -30,10 +30,11 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },    // Lanna
     /// @todo [©] No one knows right for this font
-    { "M_Khunburom_Pali"sv,         "M_Khunburom_Pali.ttf", Ffg::NEED_STUB },   // Lao
-    { "Noto Sans Lepcha"sv,         "NotoSansLepcha-Regular.ttf" },
-    { "Noto Sans Limbu"sv,          "NotoSansLimbu-Regular.ttf" },
-    { "Noto Sans Lisu"sv,           "NotoSansLisu-Regular.ttf" },
+    //{ "M_Khunburom_Pali"sv,         "M_Khunburom_Pali.ttf", Ffg::NEED_STUB },   // Lao
+    { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB },   // Lao
+    { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
+    { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
+    { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf" },
