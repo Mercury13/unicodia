@@ -731,6 +731,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Runic letter Long-branch-Madr M")
     EX("Runic letter Short-twig-Madr M")
     EX("Yi syllable iteration mark")    // Maybe so
+    EX("Bowl of Hygieia")               // Special proper name
 };
 
 const std::multiset<PrefixEntry> prefixes {
