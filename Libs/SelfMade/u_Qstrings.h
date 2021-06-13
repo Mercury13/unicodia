@@ -28,6 +28,12 @@ namespace str {
             append(x, std::string_view(s, N - 1));
         }
     }
+//    void append(QString& x, int y);
+//    void append(QString& x, unsigned int y);
+//    void append(QString& x, long y);
+//    void append(QString& x, unsigned long y);
+//    void append(QString& x, long long y);
+//    void append(QString& x, unsigned long long y);
 
     template <size_t N>
     inline void append(QString& x, char (&s)[N])

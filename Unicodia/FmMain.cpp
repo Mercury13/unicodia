@@ -330,16 +330,17 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
 namespace {
 
-    template <class T, class Name1, class Name2>
+    template <class T, class Name1>
     inline void appendValuePopup(
-            QString& text, const T& value, Name1 name, Name2 scheme)
+            QString& text, const T& value, Name1 name, const char* scheme)
     {
         str::append(text, name);
-        str::append(text, ": <a href='");
-        str::append(text, scheme);
-        str::append(text, ':');
-        str::append(text, value.id);
-        str::append(text, "' style='color:ForestGreen'>");
+        char buf[100];
+        std::string_view vid = value.id;
+        snprintf(buf, std::size(buf),
+                 ": <a href='%s:%*s' style='color:ForestGreen'>",
+                scheme, int(vid.size()), vid.data());
+        str::append(text, buf);
         str::append(text, value.locName);
         str::append(text, "</a>");
     }
@@ -361,7 +362,7 @@ namespace {
 void FmMain::showCp(MaybeChar ch)
 {
     // Code
-    char buf[10];
+    char buf[30];
     snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
     ui->lbCharCode->setText(buf);
 
@@ -437,7 +438,6 @@ void FmMain::showCp(MaybeChar ch)
             auto sChar = str::toQ(ch.code);
             str::append(text, u8"UTF-8:");
             auto u8 = sChar.toUtf8();
-            char buf[10];
             for (unsigned char v : u8) {
                 snprintf(buf, 10, " %02X", static_cast<int>(v));
                 str::append(text, buf);
@@ -447,9 +447,15 @@ void FmMain::showCp(MaybeChar ch)
             sp.sep();
             str::append(text, u8"UTF-16:");
             for (auto v : sChar) {
-                snprintf(buf, 10, " %04X", static_cast<int>(v.unicode()));
+                snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
                 str::append(text, buf);
             }
+
+            // HTML
+            sp.sep();
+            str::append(text, u8"HTML: ");
+            snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(ch->subj));
+            str::append(text, buf);
 
             text.append("</p>");
         }
