@@ -937,7 +937,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0x25A0, 0x25FF,
             "Geometric Shapes", u8"Геометрические фигуры" },
     { 0x2600, 0x26FF,
-            "Miscellaneous Symbols", u8"разные символы" },
+            "Miscellaneous Symbols", u8"Разные символы" },
     { 0x2700, 0x27BF,
             "Dingbats", u8"Украшения" },
     { 0x27C0, 0x27EF,
