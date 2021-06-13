@@ -12,6 +12,45 @@ namespace str {
     std::string_view trimSv(std::string_view s);
     SafeVector<std::string_view> splitSv(std::string_view s, char comma, bool skipEmpty = true);
 
+    ///
+    /// @return   # of replacements
+    ///
+    template <class C, class T, class A>
+    size_t replace(
+            std::basic_string<C, T, A>& haystack,
+            std::basic_string_view<C> needle,
+            std::basic_string_view<C> byWhat)
+    {
+        using Str = std::basic_string<C, T, A>;
+        const size_t szNeedle = needle.length();
+        const size_t szByWhat = byWhat.length();
+        size_t p = 0, r = 0;
+        while ((p = haystack.find(needle.data(), p, needle.size())) != Str::npos) {
+            haystack.replace(p, szNeedle, byWhat);
+            p += szByWhat;
+            ++r;
+        }
+        return r;
+    }
+
+    ///
+    /// @return   haystack or cache
+    ///
+    template <class C, class T, class A>
+    std::basic_string_view<C> replaceSv(
+            std::basic_string_view<C> haystack,
+            std::basic_string_view<C> needle,
+            std::basic_string_view<C> byWhat,
+            std::basic_string<C, T, A>& cache)
+    {
+        using Sv = std::basic_string_view<C>;
+        if (haystack.find(needle) == Sv::npos)
+            return haystack;
+        cache = haystack;
+        str::replace(cache, needle, byWhat);
+        return cache;
+    }
+
 }   // namespace str
 
 namespace detail {
@@ -65,7 +104,7 @@ namespace detail {
         };
     };
 
-}
+}   // namespace detail
 
 // The way to call it in the code is too complex to be used directly in the code.
 // Calling it from a function is also not possible because then the string is a parameter and not a compile time string literal.

@@ -566,7 +566,16 @@ void FmMain::showPopup(
     }
 
     str::append(text, "<p>");
-    str::append(text, x.locDescription);
+    if (!x.hintFont.empty()) {
+        auto qdesc = str::toQ(x.locDescription);
+        auto ex = QString("font face='");
+            str::append(ex, x.hintFont);
+            str::append(ex, "'");
+        qdesc.replace(":FACE:", ex);
+        text += qdesc;
+    } else {
+        str::append(text, x.locDescription);
+    }
     str::append(text, "</p>");
 
     popupText(text, widget, rect);

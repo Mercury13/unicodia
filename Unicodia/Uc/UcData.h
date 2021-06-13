@@ -46,6 +46,7 @@ namespace uc {
         RUNIC,
         SAMARITAN,
         TAGALOG,
+        TAMIL,
         NN
     };
 
@@ -108,6 +109,8 @@ namespace uc {
         EcWritingDir ecDir;
         std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
+        std::string_view hintFont {};
+
         mutable unsigned nChars = 0;
         mutable int plane = -1;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
