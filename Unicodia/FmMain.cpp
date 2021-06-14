@@ -310,6 +310,7 @@ FmMain::FmMain(QWidget *parent)
     ui->lbOs->setFont(font.get(font.q.big, FSZ_BIG));
 }
 
+
 FmMain::~FmMain()
 {
     delete ui;
@@ -330,13 +331,24 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
 namespace {
 
+    template <class T>
+    std::string_view idOf(const T& value, std::string&) { return value.id; }
+
+    template <>
+    std::string_view idOf(const uc::Block& value, std::string& cache)
+    {
+        cache = std::to_string(value.index());
+        return cache;
+    }
+
     template <class T, class Name1>
     inline void appendValuePopup(
             QString& text, const T& value, Name1 name, const char* scheme)
     {
+        std::string cache;
         str::append(text, name);
         char buf[100];
-        std::string_view vid = value.id;
+        auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
                  ": <a href='%s:%*s' style='color:ForestGreen'>",
                 scheme, int(vid.size()), vid.data());
@@ -346,14 +358,21 @@ namespace {
     }
 
     void appendVersion(
-            QString& text, std::u8string_view caption, const uc::Version& version)
+            QString& text, const uc::Version& version)
     {
-        str::append(text, caption);
-        str::append(text, u8"Версия Юникода: ");
         str::append(text, version.name);
         str::append(text, " (");
         str::append(text, version.year);
         str::append(text, ")");
+    }
+
+
+    void appendVersion(
+            QString& text, std::u8string_view caption, const uc::Version& version)
+    {
+        str::append(text, caption);
+        str::append(text, u8"Версия Юникода: ");
+        appendVersion(text, version);
     }
 
 }   // anon namespace
@@ -433,6 +452,17 @@ void FmMain::showCp(MaybeChar ch)
             sp.sep();
             appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pop_bidi");
 
+            // Block
+            hint2 = uc::blockOf(ch->subj, hint2);
+            sp.sep();
+            appendValuePopup(text, *hint2, u8"Блок", "pop_blk");
+
+            // HTML
+            sp.sep();
+            str::append(text, u8"HTML: ");
+            snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(ch->subj));
+            str::append(text, buf);
+
             // UTF-8
             sp.sep();
             auto sChar = str::toQ(ch.code);
@@ -450,12 +480,6 @@ void FmMain::showCp(MaybeChar ch)
                 snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
                 str::append(text, buf);
             }
-
-            // HTML
-            sp.sep();
-            str::append(text, u8"HTML: ");
-            snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(ch->subj));
-            str::append(text, buf);
 
             text.append("</p>");
         }
@@ -588,6 +612,43 @@ void FmMain::showPopup(
 }
 
 
+namespace {
+    const char8_t* STR_RANGE = u8"%04X…%04X";
+}
+
+
+void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    QString text;
+    appendHeader(text, x);
+
+    str::append(text, "<p>");
+    str::QSep sp(text, "<br>");
+
+    sp.sep();
+    str::append(text, u8"• Английское: ");
+    str::append(text, x.name);
+
+    sp.sep();
+    str::append(text, u8"• Диапазон: ");
+    char buf[30];
+    snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RANGE),
+                int(x.startingCp), int(x.endingCp));
+    str::append(text, buf);
+
+    sp.sep();
+    str::append(text, u8"• Появился в версии: ");
+    appendVersion(text, x.version());
+
+    if (!x.locDescription.empty()) {
+        str::append(text, "<p>");
+        str::append(text, x.locDescription);
+        str::append(text, "</p>");
+    }
+    popupText(text, widget, rect);
+}
+
+
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
@@ -600,6 +661,10 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
     } else if (scheme == "pop_scr"sv) {
         if (auto* script = uc::findScript(target))
             showPopup(*script, widget, rect);
+    } else if (scheme == "pop_blk"sv) {
+        int iBlock = 0;
+        std::from_chars(target.data(), target.data() + target.length(), iBlock);
+        showPopup(uc::blocks[iBlock], widget, rect);
     }
 }
 

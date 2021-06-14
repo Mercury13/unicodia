@@ -125,6 +125,7 @@ private:
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup> popup;
     mutable const uc::Block* hint = &uc::blocks[0];
+    mutable const uc::Block* hint2 = &uc::blocks[0];
 
     class CharsDelegate : public QStyledItemDelegate
     {
@@ -146,6 +147,7 @@ private:
     void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
+    void showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect);
     void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);

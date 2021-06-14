@@ -139,11 +139,15 @@ namespace uc {
         std::string_view name;
         std::u8string_view locName;
 
+        std::u8string_view locDescription {};
         EcScript ecScript = EcScript::NONE;
 
         mutable const Cp* firstAllocated = nullptr;
+        mutable int nChars = 0;
+        mutable EcVersion ecVersion = EcVersion::NN;
 
         size_t index() const;
+        const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
 
         Block& operator = (const Block&) = delete;
         Block& operator = (Block&&) = delete;
