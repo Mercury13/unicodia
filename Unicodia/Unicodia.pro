@@ -2,8 +2,6 @@ QT += core gui widgets
 CONFIG += c++2a
 
 win32-g++ {
-    # Some Qt versions have this thing
-    QMAKE_CXXFLAGS += -Wno-deprecated-copy
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
 }
