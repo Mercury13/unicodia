@@ -389,7 +389,7 @@ namespace {
         char buf[100];
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
-                 ": <a href='%s:%*s' style='color:ForestGreen'>",
+                 ": <a href='%s:%.*s' style='color:ForestGreen'>",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
         str::append(text, value.locName);
