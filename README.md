@@ -10,6 +10,4 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Download and unzip big 220 M https://www.unicode.org/Public/13.0.0/ucdxml/ucd.all.flat.zip
 * Run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc
-* Compile using Qt.
-   * Tested OK: 5.14.2
-   * Tested bad: 5.15.2
+* Compile using Qt; tested under 6.1.1.
