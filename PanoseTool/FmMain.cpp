@@ -71,7 +71,8 @@ void FmMain::on_btErase_clicked()
         if (!f.open(QIODevice::ReadWrite))
             throw std::logic_error("Cannot open file for modifying");
         Ttf ttf(f);
-        PanoseData pd { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 };
+        PanoseData pd { { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },
+                        { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 } };
         ttf.writePanoseData(pd);
         ui->lbPanose->setText("Successfully erased PANOSE");
     } catch (const std::exception& e) {
