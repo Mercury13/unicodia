@@ -1,14 +1,33 @@
-﻿https://github.com/googlefonts/noto-emoji — эмодзи от Гугла
-https://github.com/twitter/twemoji — эмодзи от Твиттера и как их качать [CC-BY-SA 4.0]
-https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
-https://commons.wikimedia.org/wiki/Category:Unicode_BMP
+﻿СПЕЦИФИКАЦИИ ЮНИКОДА
+
 https://unicode.org/reports/tr42/ — информация о базе символов Юникода
 https://www.unicode.org/Public/13.0.0/ — собственно база
 https://www.compart.com/en/unicode/scripts — интересный справочник по Юникоду
 https://commons.wikimedia.org/wiki/Emoji/Table — список эмодзи
-https://dev.w3.org/html5/html-author/charref — список именованных символов
-https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
-http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
-https://omniglot.com/ — плохо действующий, но классный сайт
 https://unicode.org/glossary/ — словарь
+
+
+ШРИФТЫ
+
+https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
+https://laoscript.net/download/ — лаосские шрифты
+
+
+ИЗОБРАЖЕНИЯ СИМВОЛОВ
+
+https://github.com/googlefonts/noto-emoji — эмодзи от Гугла
+https://github.com/twitter/twemoji — эмодзи от Твиттера и как их качать [CC-BY-SA 4.0]
+https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
+https://commons.wikimedia.org/wiki/Category:Unicode_BMP
+
+
+ПИСЬМЕННОСТИ
+
+https://omniglot.com/ — плохо действующий, но классный сайт
+http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
+
+
+ПРОЧИЕ
+
 https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — базовое устройство TTF-файла
+https://dev.w3.org/html5/html-author/charref — список именованных символов
