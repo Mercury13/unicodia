@@ -2,9 +2,14 @@
 
 https://unicode.org/reports/tr42/ — информация о базе символов Юникода
 https://www.unicode.org/Public/13.0.0/ — собственно база
-https://www.compart.com/en/unicode/scripts — интересный справочник по Юникоду
 https://commons.wikimedia.org/wiki/Emoji/Table — список эмодзи
 https://unicode.org/glossary/ — словарь
+
+
+АЛЬТЕРНАТИВНЫЕ ЮНИКОДИИ
+
+https://www.compart.com/en/unicode/scripts
+https://unicode-table.com/ru/
 
 
 ШРИФТЫ
