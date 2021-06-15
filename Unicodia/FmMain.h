@@ -113,11 +113,15 @@ public:
 class FmMain : public QMainWindow
 {
     Q_OBJECT
+    using Super = QMainWindow;
     using This = FmMain;
 
 public:
     FmMain(QWidget *parent = nullptr);
     ~FmMain() override;
+
+protected:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     Ui::FmMain *ui;
@@ -153,9 +157,9 @@ private:
     void drawSampleWithQt(const uc::Cp& cp);
 private slots:
     void charChanged(const QModelIndex& current);
+    void copyCurrentChar();
     void on_vwInfo_anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);
-    void on_btCopy_clicked();
 };
 
 #endif // FMMAIN_H

@@ -7,6 +7,7 @@
 #include <QTextFrame>
 #include <QClipboard>
 #include <QPainter>
+#include <QShortcut>
 
 // Unicode data
 #include "UcDefines.h"
@@ -266,8 +267,8 @@ void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 FmMain::FmMain(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::FmMain), model(this), charsDelegate(*this)
+    : Super(parent),
+      ui(new Ui::FmMain), model(this), charsDelegate(*this)
 {
     ui->setupUi(this);
 
@@ -301,19 +302,58 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
+    // OS style
+    auto& font = uc::fontInfo[0];
+    ui->lbOs->setFont(font.get(font.q.big, FSZ_BIG));
+
+    // Copy
+        // Ctrl+C
+    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->tableChars,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentChar);
+        // Ctrl+Ins
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->tableChars,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentChar);
+        // Button
+    connect(ui->btCopy, &QPushButton::clicked, this, &This::copyCurrentChar);
+        // 2click
+    ui->tableChars->viewport()->installEventFilter(this);
+
     // Select index
     ui->tableChars->setFocus();
     ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
 
-    // OS style
-    auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(font.q.big, FSZ_BIG));
+}
+
+
+bool FmMain::eventFilter(QObject *obj, QEvent *event)
+{
+    switch (event->type()) {
+    case QEvent::MouseButtonDblClick:
+        if (obj == ui->tableChars->viewport()) {
+            copyCurrentChar();
+            return true;
+        }
+    default:;
+    }
+    return Super::eventFilter(obj, event);
 }
 
 
 FmMain::~FmMain()
 {
     delete ui;
+}
+
+
+void FmMain::copyCurrentChar()
+{
+    auto ch = model.charAt(ui->tableChars->currentIndex());
+    if (ch) {
+        auto q = str::toQ(ch->subj);
+        QApplication::clipboard()->setText(q);
+    }
 }
 
 
@@ -703,14 +743,4 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
 void FmMain::selectChar(char32_t code)
 {
     ui->tableChars->setCurrentIndex(model.indexOf(code));
-}
-
-
-void FmMain::on_btCopy_clicked()
-{
-    auto ch = model.charAt(ui->tableChars->currentIndex());
-    if (ch) {
-        auto q = str::toQ(ch->subj);
-        QApplication::clipboard()->setText(q);
-    }
 }
