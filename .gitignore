@@ -54,7 +54,6 @@ compile_commands.json
 # Directories we do not want to create
 ~Downloads
 Skia
-PanoseTool
 
 # Auto-created files.
 UcAuto.cpp
