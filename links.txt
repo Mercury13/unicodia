@@ -10,3 +10,4 @@ https://dev.w3.org/html5/html-author/charref — список именованн
 https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
 http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
 https://omniglot.com/ — плохо действующий, но классный сайт
+https://unicode.org/glossary/ — словарь

@@ -30,9 +30,10 @@ namespace uc {
         NONE,
         UNKNOWN,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
+        PSEUDOALPHABET, ///< Alphabet scripts that use syllables as units
         CONSONANT,      ///< Consonant script (Hebrew)
         SYLLABLE,       ///< Syllable script (Hiragana)
-        SEMISYLLABLE,   ///< Partly alphabet, partly syllable (Iberian)
+        ALPHASYLLABLE,  ///< Partly alphabet, partly syllable (Iberian)
         ABUGIDA_MONOLITH, ///< Syllable script where similar syllables have
                         ///<   similar symbols (Canadian syllable)
         ABUGIDA_COMBINING, ///< … + characters are combined from consonant and vowel (Thaana)
