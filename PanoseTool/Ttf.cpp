@@ -77,6 +77,12 @@ void Ttf::seek(const Block* block, uint32_t offset)
 {
     if (!block)
         throw std::logic_error("[Ttf.seek] Block is null");
+    if (offset > block->length) {
+        char buf[100];
+        snprintf(buf, sizeof(buf), "Block <%.4s> wanted %lu, found %lu",
+                 block->name.d.asChars, long(offset), long(block->length));
+        throw std::logic_error(buf);
+    }
     f.seek(block->posInFile + offset);
 }
 
@@ -94,4 +100,17 @@ void Ttf::writePanoseData(const PanoseData& x)
     auto block = rqBlock("OS/2", OS2::MIN_LEN_PANOSE);
     seek(block, OS2::OFS_PANOSE);
     f.writeStruc<26>(x);
+    recomputeChecksum(block);
+}
+
+void Ttf::recomputeChecksum(const Block* block)
+{
+    seek(block);
+    std::vector<uint32_t> data;
+    uint32_t sum = 0;
+    for (auto nLongs = (block->length + 3) / 4; nLongs > 0; --nLongs) {
+        sum += f.readMD();
+    }
+    f.seek(block->posInFile + 4);
+    f.writeMD(sum);
 }

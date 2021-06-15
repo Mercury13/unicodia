@@ -42,9 +42,10 @@ public:
     Ttf(QFile& aF);
     const Block* findBlock(Char4 name) const;
     const Block* rqBlock(Char4 name, uint32_t len = 0) const;
-    void seek(const Block* block, uint32_t offset);
+    void seek(const Block* block, uint32_t offset = 0);
     PanoseData readPanoseData();
     void writePanoseData(const PanoseData& x);
+    void recomputeChecksum(const Block* block);
 private:
     void readDir();
     Block readBlockEntry();
