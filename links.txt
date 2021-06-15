@@ -11,3 +11,4 @@ https://github.com/googlefonts/noto-fonts — семейство шрифтов 
 http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
 https://omniglot.com/ — плохо действующий, но классный сайт
 https://unicode.org/glossary/ — словарь
+https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — базовое устройство TTF-файла
