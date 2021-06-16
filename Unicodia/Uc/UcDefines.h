@@ -113,6 +113,7 @@ namespace uc {
         Thaa,
         Thai,
         Tibt,
+        Vaii,
         Zinh,
         NN,
 
@@ -237,7 +238,6 @@ namespace uc {
         Tfng = Zyyy,        /// @todo [bmp] Tifinagh
         Tirh = Zyyy,        // Tirhuta beyond BMP
         Ugar = Zyyy,        // Ugaritic beyond BMP
-        Vaii = Zyyy,        /// @todo [bmp] Vai
         //Visp  no chars
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP

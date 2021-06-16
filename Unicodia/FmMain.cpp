@@ -26,12 +26,7 @@ namespace {
 }
 
 
-class FmPopup2 : public FmPopup
-{
-    using Super = FmPopup;
-public:
-    FmPopup2(FmMain* owner);
-};
+///// FmPopup2 /////////////////////////////////////////////////////////////////
 
 
 FmPopup2::FmPopup2(FmMain* owner) : Super(owner)

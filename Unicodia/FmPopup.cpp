@@ -60,6 +60,22 @@ void ClickableLabel::onLinkActivated()
 }
 
 
+bool ClickableLabel::event(QEvent* ev)
+{
+    switch (ev->type()) {
+    case QEvent::Enter:
+        emit mouseEnter();
+        break;
+    case QEvent::Leave:
+        emit mouseLeave();
+        break;
+    default: ;
+    }
+    return Super::event(ev);
+}
+
+
+
 ///// FmPopup //////////////////////////////////////////////////////////////////
 
 
@@ -163,6 +179,3 @@ void FmPopup::mouseReleaseEvent(QMouseEvent* ev)
     Super::mouseReleaseEvent(ev);
     hide();
 }
-
-
-QLabel* FmPopup::viewport() const { return lbText; }

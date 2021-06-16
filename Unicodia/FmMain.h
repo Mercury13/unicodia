@@ -12,6 +12,9 @@
 #include "u_Vector.h"
 #include "u_TinyOpt.h"
 
+// Forms
+#include "FmPopup.h"
+
 // Unicode data
 #include "UcData.h"
 
@@ -24,7 +27,6 @@ constexpr int NCOLS = 8;
 constexpr int FSZ_TABLE = 14;
 constexpr int FSZ_BIG = 50;
 
-class FmPopup;
 class FmPopup2;
 
 struct MaybeChar {
@@ -164,6 +166,16 @@ private slots:
     void popupLinkActivated(const QString& link);
     void on_vwInfo_anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);
+};
+
+
+class FmPopup2 : public FmPopup
+{
+    using Super = FmPopup;
+    using This = FmPopup2;
+public:
+    FmPopup2(FmMain* owner);
+    ~FmPopup2() override = default;
 };
 
 #endif // FMMAIN_H

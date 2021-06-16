@@ -38,6 +38,11 @@ protected:
 
     void mousePressEvent(QMouseEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
+    bool event(QEvent*) override;
+
+signals:
+    void mouseEnter();
+    void mouseLeave();
 
 protected slots:
     void onLinkActivated();
@@ -72,7 +77,7 @@ public:
 
     const QRect& lastAbsRect() const { return fLastAbsRect; }
     QWidget* lastWidget() const { return fLastWidget; }
-    QLabel* viewport() const;
+    ClickableLabel* viewport() const { return lbText; }
 protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
