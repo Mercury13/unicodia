@@ -148,7 +148,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = rows.charAt(index.row(), index.column());
             if (!cp)
                 return {};
-            return cp->sampleProxy();
+            return cp->sampleProxy(hint).text;
         }
 
     case Qt::FontRole: {
@@ -364,7 +364,9 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    ui->lbSample->setText(ch.sampleProxy());
+    auto proxy = ch.sampleProxy(hint);
+    ui->lbSample->setStyleSheet(str::toQ(proxy.styleSheet));
+    ui->lbSample->setText(proxy.text);
 }
 
 

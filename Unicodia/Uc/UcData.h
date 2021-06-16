@@ -58,6 +58,7 @@ namespace uc {
     {
         std::string_view family, fileName;
         Flags<Ffg> flags {};
+        std::string_view styleSheet {};
 
         mutable struct Q {
             std::unique_ptr<QFont> table {};
@@ -237,6 +238,14 @@ namespace uc {
     extern const Block blocks[N_BLOCKS];
     constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
 
+    struct SampleProxy {
+        QString text;
+        std::string_view styleSheet;
+
+        SampleProxy() = default;
+        SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
+    };
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -264,7 +273,7 @@ namespace uc {
         EcScript ecScriptEx(const Block*& hint) const;
         const Font& font(const Block*& hint) const
             { return scriptInfo[static_cast<int>(ecScriptEx(hint))].font(); }
-        QString sampleProxy() const;
+        SampleProxy sampleProxy(const Block*& hint) const;
         QString osProxy() const;
 
         ///  @return [+] it is a true space, really white

@@ -31,7 +31,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },    // Lanna
-    { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB },   // Lao
+    { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
     { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
@@ -1550,30 +1550,31 @@ namespace {
 }
 
 
-QString uc::Cp::sampleProxy() const
+uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 {
+    auto style = font(hint).styleSheet;
     switch (ecCategory) {
     case EcCategory::CONTROL:
-        return QChar(proxyChar(subj.ch32()));
+        return { QChar(proxyChar(subj.ch32())), style };
     case EcCategory::MARK_ENCLOSING:
-        return QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32());
+        return { QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
     case EcCategory::MARK_SPACING:
         // Brahmi scripts probably do fine
         if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
                 && !script().font().flags.have(Ffg::NEED_STUB))
             break;
-        return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
+        return { QChar(STUB_CIRCLE) + str::toQ(subj.ch32()), style };
     case EcCategory::SEPARATOR_SPACE:
         //return "][" + str::toQ(subj.ch32()) + "[";
         //return "||" + str::toQ(subj.ch32()) + "||";
         if (isTrueSpace()) {
-            return QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏');
+            return { QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏'), style };
         }
         break;
     default: ;
     }
-    return str::toQ(subj.ch32());
+    return { str::toQ(subj.ch32()), style };
 }
 
 
