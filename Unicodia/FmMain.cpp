@@ -26,6 +26,22 @@ namespace {
 }
 
 
+class FmPopup2 : public FmPopup
+{
+    using Super = FmPopup;
+public:
+    FmPopup2(FmMain* owner);
+};
+
+
+FmPopup2::FmPopup2(FmMain* owner) : Super(owner)
+{
+    auto vw = viewport();
+    vw->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);
+    connect(vw, &QLabel::linkActivated, owner, &FmMain::popupLinkActivated);
+}
+
+
 ///// RowCache /////////////////////////////////////////////////////////////////
 
 RowCache::RowCache(int anCols)
@@ -558,9 +574,9 @@ namespace {
 
 void FmMain::popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect)
 {
-    FmPopup::ensure(popup, this)
-            .setText(text)
-            .popup(widget, rect);
+    ensure(popup, this)
+          .setText(text)
+          .popup(widget, rect);
 }
 
 
@@ -710,20 +726,33 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
 }
 
 
+void FmMain::linkClicked(
+        std::string_view link, QWidget* widget, TinyOpt<QRect> rect)
+{
+    auto things = str::splitSv(link, ':');
+    if (things.size() >= 2) {
+        linkClicked(things[0], things[1], widget, rect);
+    }
+}
+
+
 void FmMain::on_vwInfo_anchorClicked(const QUrl &arg)
 {
     auto str = arg.path().toStdString();
-    auto things = str::splitSv(str, ':');
-    if (things.size() < 2)
-        return;
-
+    auto rect = ui->vwInfo->cursorRect();
     // Get some parody for link rect
     // Unglitch: we don’t know how to get EXACT coords of link,
     // so improvise somehow
-    auto rect = ui->vwInfo->cursorRect();
     rect.setLeft(rect.left() - 80);
 
-    linkClicked(things[0], things[1], ui->vwInfo, rect);
+    linkClicked(str, ui->vwInfo, rect);
+}
+
+
+void FmMain::popupLinkActivated(const QString& link)
+{
+    // nullptr & {} = last position
+    linkClicked(link.toStdString(), nullptr, {});
 }
 
 

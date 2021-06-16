@@ -25,6 +25,7 @@ constexpr int FSZ_TABLE = 14;
 constexpr int FSZ_BIG = 50;
 
 class FmPopup;
+class FmPopup2;
 
 struct MaybeChar {
     char32_t code = 0;
@@ -115,6 +116,7 @@ class FmMain : public QMainWindow
     Q_OBJECT
     using Super = QMainWindow;
     using This = FmMain;
+    friend class FmPopup2;
 
 public:
     FmMain(QWidget *parent = nullptr);
@@ -127,7 +129,7 @@ private:
     Ui::FmMain *ui;
     CharsModel model;
     BlocksModel blocksModel;
-    std::unique_ptr<FmPopup> popup;
+    std::unique_ptr<FmPopup2> popup;
     mutable const uc::Block* hint = &uc::blocks[0];
     mutable const uc::Block* hint2 = &uc::blocks[0];
 
@@ -146,6 +148,7 @@ private:
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view scheme, std::string_view target,
                      QWidget* widget, TinyOpt<QRect> rect);
+    void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <class T>
     void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
@@ -158,6 +161,7 @@ private:
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();
+    void popupLinkActivated(const QString& link);
     void on_vwInfo_anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);
 };

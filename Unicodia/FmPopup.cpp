@@ -6,16 +6,61 @@
 #include <QApplication>
 #include <QScreen>
 #include <QLayout>
+#include <QMouseEvent>
 
 namespace {
     constexpr auto WF_POPUP = Qt::FramelessWindowHint | Qt::Popup | Qt::WindowStaysOnTopHint;
 }
 
+
+///// ClickableLabel ///////////////////////////////////////////////////////////
+
+
+ClickableLabel::ClickableLabel(const QString& text, QWidget* owner)
+    : Super(text, owner)
+{
+    connect(this, &QLabel::linkActivated, this, &This::onLinkActivated);
+}
+
+
+ClickableLabel::Selection ClickableLabel::selection()
+{
+    Selection sel { selectionStart(), selectedText().length() };
+    if (sel.length == 0)
+        sel.start = -1;
+    return sel;
+}
+
+
+void ClickableLabel::mousePressEvent(QMouseEvent* ev)
+{
+    allowClose = (ev->button() == Qt::LeftButton && selection().length == 0);
+    Super::mousePressEvent(ev);
+}
+
+
 void ClickableLabel::mouseReleaseEvent(QMouseEvent* ev)
 {
+    if (ev->button() == Qt::RightButton)
+        allowClose = false;
+
     Super::mouseReleaseEvent(ev);
-    emit clicked();
+
+    if (allowClose) {
+        auto sel = selection();
+        if (sel.length == 0)
+            emit clicked();
+    }
 }
+
+
+void ClickableLabel::onLinkActivated()
+{
+    allowClose = false;
+}
+
+
+///// FmPopup //////////////////////////////////////////////////////////////////
 
 
 FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
@@ -31,16 +76,6 @@ FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
     setStyleSheet("QWidget { background-color: black }");
     lbText->setStyleSheet("QLabel { background-color: LightYellow; padding: 10px; }");
     connect(lbText, &ClickableLabel::clicked, this, &This::hide);
-}
-
-
-FmPopup& FmPopup::ensure(
-        std::unique_ptr<This>& x, QWidget* owner)
-{
-    if (!x) {
-        x = std::make_unique<This>(owner);
-    }
-    return *x;
 }
 
 
@@ -86,6 +121,8 @@ FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
 {
     if (!widget)
         throw std::invalid_argument("[FmPopup.popupAtAbs] Widget should be non-null!");
+    fLastAbsRect = absRect;
+    fLastWidget = widget;
     auto screen = QApplication::screenAt(absRect.topLeft());
     if (!screen)
         screen = widget->screen();
@@ -99,6 +136,8 @@ FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
     if (rect) {
         return popupAtAbs(widget, QRect(
                     widget->mapToGlobal(rect->topLeft()), rect->size()));
+    } else if (!widget) {
+        return popupAtAbs(fLastWidget, fLastAbsRect);
     } else {
         return popup(widget);
     }
@@ -124,3 +163,6 @@ void FmPopup::mouseReleaseEvent(QMouseEvent* ev)
     Super::mouseReleaseEvent(ev);
     hide();
 }
+
+
+QLabel* FmPopup::viewport() const { return lbText; }
