@@ -100,6 +100,7 @@ namespace uc {
         Mymr,
         Nkoo,
         Ogam,
+        Olck,
         Orya,
         Runr,
         Samr,
@@ -192,7 +193,6 @@ namespace uc {
         //Nkdb  no chars
         //Nkgb  no chars
         Nshu = Zyyy,        // beyond BMP
-        Olck = Zyyy,        /// @todo [bmp] Ol Chiki
         Orkh = Zyyy,        // Turkic runes, beyond BMP
         Osge = Zyyy,        // beyond BMP
         Osma = Zyyy,        // beyond BMP

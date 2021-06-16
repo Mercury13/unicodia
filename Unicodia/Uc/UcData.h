@@ -27,6 +27,16 @@ const T* findInArray(std::string_view needle, const T (&haystack)[N])
 
 namespace uc {
 
+    enum class EcContinent {
+        NONE,
+        EUROPE,
+        ASIA_INDIAN,    ///< Asia + Indian Ocean
+        PACIFIC,        ///< All Pacific Ocean, incl. Japan
+        AFRICA,
+        AMERICA,
+        TECHNICAL
+    };
+
     enum class EcFont
     {
         NORMAL,
@@ -43,10 +53,11 @@ namespace uc {
         LISU,
         MEETEI,
         MONGOLIAN,
+        OLCHIKI,
         RUNIC,
         SAMARITAN,
         TAGALOG,
-        TAMIL,
+        //TAMIL,
         NN
     };
 
@@ -108,6 +119,7 @@ namespace uc {
         EcScriptType ecType;
         EcLangLife ecLife;
         EcWritingDir ecDir;
+        EcContinent ecContinent;
         std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
         std::string_view hintFont {};

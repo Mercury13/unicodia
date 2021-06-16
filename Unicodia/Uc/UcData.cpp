@@ -37,7 +37,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
-    { "Noto Sans Runic"sv,          "NotoSansRunic-Regular.ttf" },
+    { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
+    { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
 };
@@ -226,9 +227,9 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
 
 
 constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
-    { "Zyyy"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER,
+    { "Zyyy"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
-    { "Adlm"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL,
+    { "Adlm"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Адлам"sv, u8"конец 1980-х"sv,
         u8"фулá <i>(семейство языков Западной Африки)</i>"sv,
         u8"<p>Фулá\u00A0— кочевники, антропологически средние между европейцами и неграми, и самые ярые проповедники ислама "
@@ -241,21 +242,21 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "фула Дита (1936, вдохновлена доарабской культурой) и фула Ба (1963). "
                 "Иногда использовался волоф\u00A0— сильно видоизменённый арабский шрифт. "
                 "Основная же письменность\u00A0— латиница.</p>"sv },
-    { "Aghb"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR,
+    { "Aghb"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Агванская"sv, u8"II век до н.э."sv,
         u8"агванский <i>(язык Кавказской Албании)</i>"sv,
         u8"<p>Считается, что создана Месропом Маштоцем, создателем армянского алфавита\u00A0— впрочем, это не так: "sv
                 u8"Маштоц жил 362–440, и непонятно, какова была его роль. "sv
                 u8"Упоминалась с конца XIX века. Окончательно открыта в 1937 году советскими арменоведами. "sv
                 u8"Первая расшифровка вышла в 2009 году.</p>"sv },
-    { "Ahom"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR,
+    { "Ahom"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ахом"sv, u8"XIII век"sv,
         u8"тайско-ахомский"sv,
         u8"<p>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. "
                 "К XIX веку язык окончательно заместился ассамским с бенгальским письмом. Возрождается с 1954 года, "
                 "в письменность добавлены десятичные цифры, не имеющие исторического обоснования.</p>"sv,
                 EcFont::AHOM },
-    { "Arab"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL,
+    { "Arab"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Арабская"sv, u8"IV—VI век"sv,
         u8"арабский, персидский, урду, уйгурский, пуштунский…"sv,
         u8"<p>Письменность развилась из сирийской. Арабский язык тесно связан с исламом; на этом языке написан Коран (610—632). "sv
@@ -265,13 +266,13 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "sv
                 u8"Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
             EcFont::ARABIC },
-    { "Armi"sv, EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL,
+    { "Armi"sv, EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Имперская арамейская"sv, u8"VII в. до н.э."sv,
         u8"имперский арамейский <i>(также канцелярский арамейский\u00A0— язык Персии 500—329 до н.э.)</i>"sv,
         u8"<p>Использовался в Ахеменидской империи как книжный язык. Был кодифицирован настолько, что крайне сложно опознать "sv
                 u8"время и место конкретного документа. С завоеванием Персии Александром Македонским началась "sv
                 u8"фрагментация языка и дальнейшее формирование сирийских языков (предков арабского) и иудейских (предков иврита).</p>"sv },
-    { "Armn"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Armn"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Армянская"sv, u8"405"sv,
         u8"армянский"sv,
         u8"<p>Изобретён учёным и священником Месропом Маштоцем (362—440). Непонятно, брался ли какой-то алфавит за основу "sv
@@ -279,28 +280,28 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"В XII веке добавились буквы Օ и Ֆ.</p>"sv
             u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "sv
                 u8"манихейской вязи.</p>"sv },
-    { "Bali"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR,
+    { "Bali"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Балийская"sv, u8"≈1000"sv,
         u8"балийский, сасакский"sv,
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv },
-    { "Bamu"sv, EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR,
+    { "Bamu"sv, EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум"sv, u8"1895—1910"sv,
         u8"бамум <i>(Камерун)</i>"sv,
         u8"<p>Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). Было выпущено семь версий, начиная от иероглифов "
                 "и заканчивая слоговой. Правда, Нджойя не учёл, что бамум\u00A0— тональный язык, потому возникло много омографов. "
                 "Пришедшие в 1918 французы выгнали Нджойю и перевели язык на латиницу. В 2007 начат проект по возрождению, "
                 "прогресс незначителен. Более ранние художества Нджойи можно увидеть в дополнительных плоскостях Юникода.</p>"sv },
-    { "Batk"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR,
+    { "Batk"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Батакская"sv, u8"≈1300"sv,
         u8"батакские <i>(Суматра)</i>"sv,
         u8"<p>Происходит от брахми и мало чем отличается от других абугид Юго-Восточной Азии. Гласная по умолчанию «а». "
                 "Практически не используется, заменена латиницей.</p>"sv },
-    { "Beng"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Beng"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бенгальская"sv, u8"XV век"sv,
         u8"бенгальский, ассамский, санскрит"sv,
         u8"<p>Относится к северной ветви индийского письма. Гласная по умолчанию не «а», как в деванагари, а «о».</p>"sv },
-    { "Bopo"sv, EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Bopo"sv, EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бопомофо (чжуинь)"sv, u8"1918"sv,
         u8"китайский"sv,
         u8"<p>Бопомофо (по первым четырём буквам), или чжуинь фухао\u00A0— китайская фонетическая система, придуманная У Цзиньханом в 1913. "
@@ -309,7 +310,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ввода в мобильный телефон, поиска иероглифов в словарях по произношению.</p>"
             "<p>В 2007 на Тайване поступила в продажу модель смартфона BlackBerry, поддерживавшая ввод только через пиньинь, "
                 "она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</p>"sv },
-    { "Brai"sv, EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER,
+    { "Brai"sv, EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::TECHNICAL,
         u8"Шрифт Брайля"sv, u8"1824"sv, {},
         u8"<p>Шрифт Брайля\u00A0— точечный шрифт для слепых. В нём используются группы 2×3 точки с двоичным кодированием; иногда добавляется "
                 "и четвёртая строка. Кодирование различается даже для британского и американского Брайля.</p>"
@@ -319,29 +320,29 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ощупью, и совершенно непригодно для слепого, читающего много. Брайль сократил матрицу, воспользовавшись двоичным кодом.</p>"
             "<p>Шрифт Брайля поставил реабилитацию слепых на промышленные рельсы: легко сделать устройство для тиснения Брайлем, "
                 "он не бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.</p>"sv },
-    { "Bugi"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Bugi"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бугийская (лонтара)"sv, u8"XVII век"sv,
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а»."
             "Со времён голландской колонизации заменяется латиницей.</p>"sv },
-    { "Buhd"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Buhd"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
         u8"бухидский <i>(Филиппины)</i>"sv,
         u8"<p>Используется небольшой филиппинской народностью (8000 на 1991\u00A0год). Восходит к брахми и родственный с тагальским.</p>"sv },
-    { "Cans"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Cans"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
         u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "sv
             u8"ке=<font size='+2'>ᑫ</font>, ки=<font size='+2'>ᑭ</font>, ко=<font size='+2'>ᑯ</font>, ка=<font size='+2'>ᑲ</font>. "sv
             u8"Более сложные слоги (например, долгие гласные) задаются диакритикой: кии=<font size='+2'>ᑮ</font></p>"sv },
-    { "Cham"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Cham"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Чамская"sv, u8"IV век"sv,
         u8"чамский <i>(Вьетнам, Камбоджа)</i>"sv,
         u8"<p>Чамская письменность произошла из брахми, и слоги по умолчанию заканчиваются гласной «а». Чтобы добавить другую гласную, "
                 "дописывается огласовка. Но у чамов исчез знак «вирама» (убрать гласную), вместо этого используется особая форма согласной "
                 "с длинным хвостом.</p>"
             "<p>Большинство чамов исповедуют ислам и пишут арабицей, лишь некоторые чамы Вьетнама используют чамское письмо.</p>"sv },
-    { "Cher"sv, EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Cher"sv, EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Чероки"sv, u8"1821"sv,
         u8"чероки"sv,
         u8"<p>Будущий вождь Секвойя, изобретатель азбуки чероки, был неграмотен, но брал символы из имевшихся книг\u00A0— потому они значат "sv
@@ -351,12 +352,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"среди индейцев, к 1830 грамотны были 90% чероки.</p>"sv
             u8"<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.</p>",
             EcFont::CHEROKEE },
-    { "Copt"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR,
+    { "Copt"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Коптская"sv, u8"II век"sv,
         u8"коптский"sv,
         u8"<p>Происходит из греческого. Используется коптами (египетскими христианами) как богослужебный. "
                 "Общаются копты по-арабски, как разговорный коптский умер от XVII до XIX века.</p>"sv },
-    { "Cyrl"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Cyrl"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Кириллица"sv, u8"конец IX века"sv,
         u8"русский, украинский, белорусский, русинский, болгарский, македонский, сербохорватский (Сербия), "sv
             u8"казахский, киргизский, таджикский, языки народов России"sv,
@@ -370,7 +371,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"традиций и западниками.</p>"sv
             u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "sv
                 u8"Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
-    { "Deva"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Deva"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
         u8"хинди, санскрит и другие языки Индии"sv,
         u8"<p>Деванагари (буквально «язык божественного города») развился из письма брахми и стал алфавитом для многих языков Индии. "sv
@@ -378,18 +379,18 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Каждый символ означает слог с гласной «а». Чтобы отобразить другие слоги, надо добавить огласовку: "sv
                 u8"<nobr>ка <font size='+2'>क</font> + и<font size='+2'> ि</font> = ки <font size='+2'>कि</font></nobr>. "sv
                 u8"Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к <font size='+2'>क्</font>.</p>"sv },
-    { "Ethi"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Ethi"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские"sv,
         u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII веке. Геэз всё ещё используется эфиопскими христианами "sv
                 u8"как литургический\u00A0— а письменность распространилась на другие языки Эфиопии.</p>"sv },
-    { "Geor"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Geor"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Грузинская"sv, u8"≈V век"sv,
         u8"грузинский, мегрельский и другие картвельские"sv,
         u8"<p>Достоверно неизвестно, когда создана грузиница и что было прототипом. "sv
                 "Распространённая версия, что грузинский алфавит создан создателем <a href='pop_scr:Armn'>армянского</a> Месропом Маштоцем, "
                 "отметается учёными.</p>"sv },
-    { "Glag"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR,
+    { "Glag"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Глаголица"sv, u8"IX век"sv,
         u8"древнеславянский"sv,
         u8"<p>Глаголица, по наиболее распространённому мнению, была составлена около 863 Кириллом и Мефодием. Считается, что глаголица "
@@ -397,7 +398,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "одно и написали другое), где глаголицу заменили кириллицей.</p>"
             "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv,
             EcFont::GLAGOLITIC },
-    { "Grek"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Grek"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Греческая"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,
         u8"<p>Греческий сделан из финикийского без оглядки на раннегреческие системы\u00A0— линейное письмо Б и кипрское. "
@@ -408,12 +409,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Названия букв изменились мало, но перестали что-то значить: <i>алеф=бык</i>\u00A0→ <i>альфа</i>.</p>"sv
             u8"<p>Из греческого письма пошли <a href='pop_scr:Latn'>латиница</a>, <a href='pop_scr:Cyrl'>кириллица</a>, "
                 "<a href='pop_scr:Copt'>коптский</a> и, возможно, <a href='pop_scr:Armn'>армянский</a> и <a href='pop_scr:Runr'>руны</a>.</p>"sv },
-    { "Gujr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Gujr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гуджарати"sv, u8"X–XVI век"sv,
         u8"гуджаратский <i>(запад Индии)</i>"sv,
         u8"<p>Появился из <a href='pop_scr:Deva'>деванагари</a> и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "sv
                 u8"Гласная по умолчанию «ə».</p>"sv },
-    { "Guru"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Guru"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гурмукхи"sv, u8"XVI век"sv,
         u8"пенджабский"sv,
         u8"<p>С X века в Пенджабе использовалась письменность шарада, плохо отвечавшая местному языку. Новую письменность придумал "
@@ -425,7 +426,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "монолитными символами.</p>"
             "<p>Гурмукхи сильно связан с сикхизмом, название означает «из уст гуру». Пенджабские мусульмане используют "
                 "шахмукхи («из уст шаха»), разновидность арабского алфавита.</p>"sv },
-    { "Hang"sv, EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Hang"sv, EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Хангыль"sv, u8"1443"sv,
         u8"корейский"sv,
         u8"<p>Хангыль (мужской род!)\u00A0— корейское алфавитно-слоговое письмо. В нём 51 чамо (буква) объединяется в группы приблизительно по слогам.</p>"
@@ -433,7 +434,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "sv
                 u8"считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "sv
                 u8"официальным стал в 1945.</p>"sv },
-    { "Hani"sv, EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK,
+    { "Hani"sv, EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Китайские иероглифы"sv, u8"около 2000 до н.э."sv,
         u8"китайский, японский, ранее вьетнамский и корейский"sv,
         u8"<p>Первые пиктограммы относятся к VI\u00A0тысячелетию до н.э., впоследствии они видоизменились под письмо кистью и тушью. "
@@ -449,19 +450,19 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не кодирует: тонкости написания передаются шрифтами, "sv
                 "и даже если шрифт неверный, понятно, о чём речь.</p>"sv
             "<p>Вьетнам отказался от иероглифов в 1945. Северная Корея не использует иероглифы, Южная использует крайне редко.</p>"sv },
-    { "Hano"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Hano"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Хануноо"sv, u8"≈1300"sv,
         u8"филиппинские горные народы"sv,
         u8"<p>Алфавит восходит к брахми и похож на тагальский.</p>"sv,
             EcFont::HANUNOO },
-    { "Hebr"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL,
+    { "Hebr"sv, EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
         u8"иврит, ладино, идиш, караимский, крымчакский"sv,
         u8"<p>Развился из арамейской письменности, и ко II\u00A0в. до н.э. приобрёл почти современный вид.</p>"sv
             u8"<p>Записывает только согласные буквы, но четыре буквы <font size='+1'>אהוי</font> могут означать гласные. "sv
             u8"С той же целью иногда используют огласовки\u00A0— точки над буквами.</p>"sv,
             EcFont::HEBREW },
-    { "Hira"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK,
+    { "Hira"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
         u8"японский"sv,
         u8"<p>Около III\u00A0 века японцы стали писать китайскими иероглифами. Из них произошла вспомогательная азбука манъёгана\u00A0— "
@@ -469,37 +470,37 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Женщины, которым не было доступно образование, писали слоговой азбукой, и предпочитали не рубленую "
                 "катáкану, а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>"sv },
-    { "Java"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Java"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Яванская"sv, u8"XV век"sv,
         u8"яванский, мелкие языки Явы"sv,
         u8"<p>Происходит из брахми. Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
             "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
             "В настоящее время вытесняется латиницей.</p>"sv },
-    { "Kali"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR,
+    { "Kali"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кая-ли"sv, u8"1962"sv,
         u8"краснокаренский (Мьянма)"sv,
         u8"<p>Происходит из брахми, создан Хтаэ Бу Пхаэ в 1962 году\u00A0— но это полноценный алфавит с гласными и согласными, а не абугида "
                 "(слоговая азбука, где у сходных слогов сходное написание).</p>"sv },
-    { "Kana"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK,
+    { "Kana"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
         u8"Катакана"sv, u8"VIII—IX век"sv,
         u8"японский"sv,
         u8"<p>Около III\u00A0 века японцы стали писать китайскими иероглифами. Из них произошла вспомогательная азбука манъёгана\u00A0— "
                 "роль играло не изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.</p>"
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 года использовали для записи окончаний слов (сейчас это делают хираганой).</p>"sv },
-    { "Khmr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Khmr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кхмерская"sv, u8"VI век"sv,
         u8"кхмерский <i>(Камбоджа)</i>"sv,
         u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
                 "Стал основой для тайского и лаосского.</p>"sv },
-    { "Knda"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Knda"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Каннада"sv, u8"XIV век"sv,
         u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». "
                 "Часто применяется в смайликах: <big>ಠ︵ಠ</big>.</p>"sv },
-    { "Lana"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Lana"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
         u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все\u00A0— Таиланд"sv,
         u8"<p>Происходит из северотайского государства Ланна или Ланнатай (1296—1558).</p>"
@@ -510,7 +511,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
             "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
                 EcFont::LANNA },
-    { "Laoo"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Laoo"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лаосская"sv, u8"≈1350"sv,
         u8"лаосский"sv,
         u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из кхмерского. "
@@ -522,7 +523,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>В Юникоде для пустого места над меткой принят пунктирный кружок; лаосцы традиционно используют косой крест, "
                 "в Юникод не попавший. Иногда в Юникоде для этого используют латинскую «x».</p>"sv,
                 EcFont::LAO },
-    { "Latn"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Latn"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
         u8"большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; "sv
             u8"вьетнамский, карельский, курдский, эсперанто"sv,
@@ -534,7 +535,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "sv
                 u8"Латиница используется в математике, медицине, фонетике, программировании.</p>"sv
             u8"<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>" },
-    { "Lepc"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Lepc"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лепча (ронг)"sv, u8"≈1700"sv,
         u8"лепча <i>(Индия, Бутан, Непал)</i>"sv,
         u8"<p>Гласная по умолчанию «а». Произошла из тибетского, изначально писалась сверху вниз, но потом стали писать горизонтально, "
@@ -543,14 +544,14 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
                 "Между словами нет пробелов.</p>"sv,
                 EcFont::LEPCHA },
-    { "Limb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Limb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лимбу"sv, u8"≈1700"sv,
         u8"лимбу <i>(Непал)</i>"sv,
         u8"<p>Гласная по умолчанию «о».</p>"
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
-    { "Lisu"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Lisu"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лису (алфавит Фрейзера)"sv, u8"1915"sv,
         u8"лису <i>(Китай)</i>"sv,
         u8"<p>Придуман британским миссионером Джеймсом Фрейзером. Состоит из латинских букв, как обычных, так и повёрнутых. "
@@ -559,19 +560,19 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
                 "и письменность на тайский основе.</p>"sv,
                 EcFont::LISU },
-    { "Mand"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
+    { "Mand"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Мандейская"sv, u8"II—VII век"sv,
         u8"мандейский <i>(Иран и Ирак)</i>"sv,
         u8"<p>Произошла из арамейского или парфянского письма. Используется так называемыми «болотными арабами», живущими у слияния рек "sv
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv },
-    { "Mlym"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Mlym"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Малаялам"sv, u8"830"sv,
         u8"малая́лам <i>(Южная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. "
                 "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
                 "в середине и в конце\u00A0— сокращённые.</p>"sv },
-    { "Mong"sv, EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL,
+    { "Mong"sv, EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
         u8"Монгольская (старая)"sv, u8"X век"sv,
         u8"монгольский"sv,
         u8"<p>Развилась из староуйгурского. Единственная действующая система с записью слева направо по столбцам, из-за чего компьютеры "
@@ -579,7 +580,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
                 "расширить использование старой письменности.</p>"sv,
                 EcFont::MONGOLIAN },
-    { "Mtei"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR,
+    { "Mtei"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
         u8"манипури <i>(Индия)</i>"sv,
         u8"<p>Какая бы версия о происхождении манипури ни была верной, с XVIII века пользовались бенгальским. Письменность возродили в 1930-х, "
@@ -588,7 +589,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
                 "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
                 EcFont::MEETEI },
-    { "Mymr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Mymr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бирманская"sv, u8"XI век"sv,
         u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. Согласная буква означает слог с «ə». "sv
@@ -596,19 +597,28 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"«а-сат».</p>"sv
             u8"<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "sv
                 u8"прямая линия может разрезать лист по жилкам.</p>" },
-    { "Nkoo"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL,
+    { "Nkoo"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Нко"sv, u8"1949"sv,
         u8"языки манден <i>(Западная Африка)</i>"sv,
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             u8"«N’ko» означает «я говорю».</p>"sv },
-    { "Ogam"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU,
+    { "Ogam"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
         u8"Огамическая"sv, u8"IV век"sv,
         u8"древнеирландский, пиктский"sv,
         u8"<p>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X века. "
                 "Заодно в ходу была латиница, потому есть мнение, что это тайнопись. "
                 "Письменность приспособлена под зарубки на палках и досках. "
                 "Надпись начинается с <big>᚛</big> и заканчивается <big>᚜</big>.</p>" },
-    { "Orya"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Olck"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Ол-чики"sv, u8"1925"sv,
+        u8"сантальский <i>(Индия)</i>"sv,
+        u8"<p>Алфавит придумал в 1925 году Рагхунатх Мурму. До этого пользовались <a href='pop_scr:Beng'>бенгальской</a> письменностью, "
+                "<a href='pop_scr:Orya'>орией</a> или <a href='pop_scr:Latn'>латиницей</a>, хотя большинство населения было неграмотным. "
+                "Сантальский язык австроазиатский, а не индоевропейский, и алфавиты, основанные на брахми, подходили плохо.</p>"
+            "<p>Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: <big>ᱚ</big> огонь, <big>ᱛ</big> земля, "
+                "<big>ᱜ</big> отрыжка.</p>",
+                EcFont::OLCHIKI },
+    { "Orya"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
         u8"ория <i>(Восточная Индия)</i>"sv,
         u8"<p>Ори́я развилась из нагари (ранней формы деванагари без сплошной черты).</p>"sv
@@ -616,34 +626,35 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                     u8"по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "sv
                     u8"Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"sv
                 u8"<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv },
-    { "Runr"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR,
+    { "Runr"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Руны"sv, u8"I век"sv,
         u8"древние германские и скандинавские языки"sv,
         u8"<p>Руны имеют специфическую угловатую форму, приспособленную для вырезания: вдоль и поперёк волокон дерево сопротивляется по-разному, "
                 "потому сложно делать кривые линии. Позднейшие варианты рун видоизменились под скоропись пером. "
                 "С появлением христианства руны были вытеснены латиницей.</p>"
-            "<p>Найдено около 5000 памятников рунического письма, самые старые относятся к I веку. Рунический алфавит называют «футарк», "
-                "по первым шести буквам.</p>"
+            "<p>Найдено около 5000 памятников рунического письма, самые старые относятся к I веку. Скандинавский рунический алфавит"
+                "называют «футарк», по первым шести буквам.</p>"
             "<p>В массовой культуре рунами называют письмена произвольной формы, в том числе непригодные ни для вырезания, "
                 "ни для письма кистью или пером. Алфавиты древних тюрков, булгар, венгров сходной угловатой формы также "
                 "называют рунами.</p>"
             "<p>Фашистская Германия любила эзотерику, а вместе с ней и руны\u00A0— потому символы многих фашистских организаций "
                 "(тогдашних и современных) представляют собой руны.</p>"
-            "<p>Руны\u00A0— первое вымышленное письмо, покрытое Юникодом: в 2014 году в блок добавили три руны "
-                "из произведений Толкина.</p>"sv,
+            "<p>Блок кодирует алфавиты скандинавских и англосаксонских рун, частично пересекающиеся. "
+                "В 2014 году добавили три руны для записи современного английского, приписываемые Дж.\u00A0Толкину, "
+                "и пять рун с ларца Фрэнкса, реликвии VIII века.</p>"sv,
                 EcFont::RUNIC },
-    { "Samr"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
+    { "Samr"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Самаритянская"sv, u8"около 600—200 до н.э."sv,
         u8"иврит, самаритянский арамейский"sv,
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "sv
                 u8"религию и культуру. Сейчас существует не более 700 самаритян.</p>"sv,
                 EcFont::SAMARITAN },
-    { "Sinh"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Sinh"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Сингальская"sv, u8"300"sv,
         u8"сингальский <i>(Шри-Ланка)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "sv
                 "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv },
-    { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL,
+    { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
         u8"<p>Потомок арамейского алфавита, впоследствии развившийся в арабицу. Используется малыми семитскими народами.</p>"sv
@@ -651,11 +662,11 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"Раскол сирийской церкви на несториан и яковитов привёл к разделению языка и письменности на две формы: "sv
                 u8"восточносирийскую (несторианскую, халдейскую) и  западносирийскую (яковитскую, маронитскую). "sv
                 u8"В них используются разные почерки и огласовки.</p>"sv },
-    { "Tagb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR,
+    { "Tagb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагбанва"sv, u8"≈1300"sv,
         u8"языки о. Палаван <i>(Филиппины)</i>"sv,
         u8"<p>Восходит к брахми и родственная с тагальской. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv },
-    { "Taml"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Taml"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тамильская"sv, u8"VI—IX век"sv,
         u8"тамильский <i>(Индия, Шри-Ланка, Сингапур)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
@@ -669,11 +680,11 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие.</p>"
             "<p>До того, как правительство Индии утвердило знак рупии <big>₹</big>, у тамилов он существовал: <font :FACE: size='+2'>௹</font>.</p>"sv,
                 EcFont::NORMAL, TAMIL_FACE },
-    { "Telu"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Telu"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Телугу"sv, u8"XIV век"sv,
         u8"телугу <i>(Юго-Восточная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.</p>"sv },
-    { "Tglg"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR,
+    { "Tglg"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагальская (байбайин)"sv, u8"1300 (спорно) — 1500 (точно)"sv,
         u8"старотагальский и другие языки Явы и Филиппин"sv,
         u8"<p>Гласная по умолчанию «а».</p>"
@@ -682,7 +693,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "К XIX\u00A0веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. "
                 "Есть современные попытки возродить байбайин.</p>"sv,
             EcFont::TAGALOG },
-    { "Thaa"sv, EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::RTL,
+    { "Thaa"sv, EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Тана"sv, u8"XVIII век"sv,
         u8"дивехи <i>(мальдивский)</i>"sv,
         u8"<p>Письменная культура пришла на Мальдивские острова вместе с буддизмом, появилось письмо <i>эвела акуру</i> на основе сингальского. "
@@ -695,20 +706,20 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>В 1970-е годы тане грозило исчезновение: при президенте Ибрагиме Насире появилась телексная связь, и "
                 u8"правительство перешло на довольно некачественную латинскую транслитерацию. Новый президент Момун Абдул Гайюм восстановил тану, "
                 u8"и обе письменности используются параллельно.</p>"sv },
-    { "Thai"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Thai"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тайская"sv, u8"1283"sv,
         u8"тайский"sv,
         u8"<p>Произошла из старокхмерского, который, в свою очередь, произошёл из брахми. "sv
                 u8"Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.</p>"sv
             u8"<p>Гласная по умолчанию «а» в закрытых слогах и «о» в открытых: <font size='+2'>ช</font>=чо. Но буквы называются по словам: "
                 "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv },
-    { "Tibt"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR,
+    { "Tibt"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тибетская"sv, u8"≈650"sv,
         u8"тибетские, дзонг-кэ <i>(Бутан)</i>, шерпский…"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».</p>"sv
             u8"<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "sv
                 u8"За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>" },
-    { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER,
+    { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные"sv, {}, {},
         u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>" },
 };
@@ -827,121 +838,126 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
             u8"<p><a href='pop_scr:Grek'>Греческий</a>\u00A0— первый настоящий алфавит, предок всех европейских алфавитов.</p>"
                 "<p><a href='pop_scr:Copt'>Коптский</a>\u00A0— язык египетских христиан. Его алфавит основан на греческом.</p>" },
     { 0x0400, 0x04FF,
-            "Cyrillic", u8"Кириллица" },
+            "Cyrillic", u8"Кириллица", {}, EcScript::Cyrl },
     { 0x0500, 0x052F,
-            "Cyrillic Supplement", u8"Кириллица дополнительная" },
+            "Cyrillic Supplement", u8"Кириллица дополнительная", {}, EcScript::Cyrl },
     { 0x0530, 0x058F,
-            "Armenian", u8"Армянский" },
+            "Armenian", u8"Армянский", {}, EcScript::Armn },
     { 0x0590, 0x05FF,
-            "Hebrew", u8"Иврит" },
+            "Hebrew", u8"Иврит", {}, EcScript::Hebr },
     { 0x0600, 0x06FF,
-            "Arabic", u8"Арабский" },
+            "Arabic", u8"Арабский", {}, EcScript::Arab },
     { 0x0700, 0x074F,
-            "Syriac", u8"Сирийский" },
+            "Syriac", u8"Сирийский", {}, EcScript::Syrc },
     { 0x0750, 0x077F,
-            "Arabic Supplement", u8"Арабский дополнительный" },
+            "Arabic Supplement", u8"Арабский дополнительный", {}, EcScript::Arab },
     { 0x0780, 0x07BF,
-            "Thaana", u8"Тана" },
+            "Thaana", u8"Тана", {}, EcScript::Thaa },
     { 0x07C0, 0x07FF,
-            "NKo", u8"Нко" },
+            "NKo", u8"Нко", {}, EcScript::Nkoo },
     { 0x0800, 0x083F,
-            "Samaritan", u8"Самаритянский" },
+            "Samaritan", u8"Самаритянский", {}, EcScript::Samr },
     { 0x0840, 0x085F,
-            "Mandaic", u8"Мандейский" },
+            "Mandaic", u8"Мандейский", {}, EcScript::Mand },
     { 0x0860, 0x086F,
-            "Syriac Supplement", u8"Сирийский дополнительный" },
+            "Syriac Supplement", u8"Сирийский дополнительный", {}, EcScript::Syrc },
     { 0x08A0, 0x08FF,
-            "Arabic Extended-A", u8"Арабский расширенный A" },
+            "Arabic Extended-A", u8"Арабский расширенный A", {}, EcScript::Arab },
     { 0x0900, 0x097F,
-            "Devanagari", u8"Деванагари" },
+            "Devanagari", u8"Деванагари", {}, EcScript::Deva },
     { 0x0980, 0x09FF,
-            "Bengali", u8"Бенгальский" },
+            "Bengali", u8"Бенгальский", {}, EcScript::Beng },
     { 0x0A00, 0x0A7F,
-            "Gurmukhi", u8"Гурмукхи" },
+            "Gurmukhi", u8"Гурмукхи", {}, EcScript::Guru },
     { 0x0A80, 0x0AFF,
-            "Gujarati", u8"Гуджарати" },
+            "Gujarati", u8"Гуджарати", {}, EcScript::Gujr },
     { 0x0B00, 0x0B7F,
-            "Oriya", u8"Ория" },
+            "Oriya", u8"Ория", {}, EcScript::Orya },
     { 0x0B80, 0x0BFF,
-            "Tamil", u8"Тамильский" },
+            "Tamil", u8"Тамильский", {}, EcScript::Taml },
     { 0x0C00, 0x0C7F,
-            "Telugu", u8"Телугу" },
+            "Telugu", u8"Телугу", {}, EcScript::Telu },
     { 0x0C80, 0x0CFF,
-            "Kannada", u8"Каннада" },
+            "Kannada", u8"Каннада", {}, EcScript::Knda },
     { 0x0D00, 0x0D7F,
-            "Malayalam", u8"Малаялам" },
+            "Malayalam", u8"Малаялам", {}, EcScript::Mlym },
     { 0x0D80, 0x0DFF,
-            "Sinhala", u8"Сингальский" },
+            "Sinhala", u8"Сингальский", {}, EcScript::Sinh },
     { 0x0E00, 0x0E7F,
-            "Thai", u8"Тайский" },
+            "Thai", u8"Тайский", {}, EcScript::Thai },
     { 0x0E80, 0x0EFF,
-            "Lao", u8"Лаосский" },
+            "Lao", u8"Лаосский", {}, EcScript::Laoo },
     { 0x0F00, 0x0FFF,
-            "Tibetan", u8"Тибетский" },
+            "Tibetan", u8"Тибетский", {}, EcScript::Tibt },
     { 0x1000, 0x109F,
-            "Myanmar", u8"Бирманский" },
+            "Myanmar", u8"Бирманский", {}, EcScript::Mymr },
     { 0x10A0, 0x10FF,
-            "Georgian", u8"Грузинский" },
+            "Georgian", u8"Грузинский", {}, EcScript::Geor },
     { 0x1100, 0x11FF,
-            "Hangul Jamo", u8"Хангыль\u00A0— чамо"},
+            "Hangul Jamo", u8"Хангыль\u00A0— чамо", {}, EcScript::Hang },
     { 0x1200, 0x137F,
-            "Ethiopic", u8"Эфиопский" },
+            "Ethiopic", u8"Эфиопский", {}, EcScript::Ethi },
     { 0x1380, 0x139F,
-            "Ethiopic Supplement", u8"Эфиопский дополнительный" },
+            "Ethiopic Supplement", u8"Эфиопский дополнительный", {}, EcScript::Ethi },
     { 0x13A0, 0x13FF,
-            "Cherokee", u8"Чероки" },
+            "Cherokee", u8"Чероки", {}, EcScript::Cher },
     { 0x1400, 0x167F,
-            "Unified Canadian Aboriginal Syllabics", u8"Канадская слоговая"},
+            "Unified Canadian Aboriginal Syllabics", u8"Канадская слоговая",
+            {}, EcScript::Cans },
     { 0x1680, 0x169F,
-            "Ogham", u8"Огамическая" },
+            "Ogham", u8"Огамическая", {}, EcScript::Ogam },
     { 0x16A0, 0x16FF,
             "Runic", u8"Руны", {}, EcScript::Runr },
     { 0x1700, 0x171F,
-            "Tagalog", u8"Тагальский" },
+            "Tagalog", u8"Тагальский", {}, EcScript::Tglg },
     { 0x1720, 0x173F,
             "Hanunoo", u8"Хануноо", {}, EcScript::Hano },
     { 0x1740, 0x175F,
-            "Buhid", u8"Бухид" },
+            "Buhid", u8"Бухид", {}, EcScript::Buhd },
     { 0x1760, 0x177F,
-            "Tagbanwa", u8"Тагбанва" },
+            "Tagbanwa", u8"Тагбанва", {}, EcScript::Tang },
     { 0x1780, 0x17FF,
-            "Khmer", u8"Кхмерский" },
+            "Khmer", u8"Кхмерский", {}, EcScript::Khmr },
     { 0x1800, 0x18AF,
-            "Mongolian", u8"Монгольский" },
+            "Mongolian", u8"Монгольский", {}, EcScript::Mong },
     { 0x18B0, 0x18FF,
             "Unified Canadian Aboriginal Syllabics Extended",
-            u8"Канадская слоговая расширенная" },
+            u8"Канадская слоговая расширенная",
+            {}, EcScript::Cans },
     { 0x1900, 0x194F,
-            "Limbu", u8"Лимбу" },
+            "Limbu", u8"Лимбу", {}, EcScript::Limb },
     { 0x1950, 0x197F,
-            "Tai Le", u8"Лы (тайлэ)" },
+            "Tai Le", u8"Лы (тайлэ)", {}, EcScript::Tale },
     { 0x1980, 0x19DF,
-            "New Tai Lue", u8"Новое письмо лы" },
+            "New Tai Lue", u8"Новое письмо лы", {}, EcScript::Talu },
     { 0x19E0, 0x19FF,
-            "Khmer Symbols", u8"Кхмерские символы" },
+            "Khmer Symbols", u8"Кхмерские символы", {}, EcScript::Khmr },
     { 0x1A00, 0x1A1F,
-            "Buginese", u8"Лонтара (бугийский)" },
+            "Buginese", u8"Лонтара (бугийский)", {}, EcScript::Bugi },
     { 0x1A20, 0x1AAF,
-            "Tai Tham", u8"Ланна (тай-тхам)" },
+            "Tai Tham", u8"Ланна (тай-тхам)", {}, EcScript::Lana },
     { 0x1AB0, 0x1AFF,
             "Combining Diacritical Marks Extended",
             u8"Диакритические метки расширенные" },
     { 0x1B00, 0x1B7F,
-            "Balinese", u8"Балийский" },
+            "Balinese", u8"Балийский", {}, EcScript::Bali },
     { 0x1B80, 0x1BBF,
-            "Sundanese", u8"Сунданский" },
+            "Sundanese", u8"Сунданский", {}, EcScript::Sund },
     { 0x1BC0, 0x1BFF,
-            "Batak", u8"Батакская" },
+            "Batak", u8"Батакская", {}, EcScript::Batk },
     { 0x1C00, 0x1C4F,
-            "Lepcha", u8"Лепча" },
+            "Lepcha", u8"Лепча", {}, EcScript::Lepc },
     { 0x1C50, 0x1C7F,
-            "Ol Chiki", u8"Ол-чики" },
+            "Ol Chiki", u8"Ол-чики", {}, EcScript::Olck },
     { 0x1C80, 0x1C8F,
-            "Cyrillic Extended-C", u8"Кириллица расширенная C" },
+            "Cyrillic Extended-C", u8"Кириллица расширенная C",
+            {}, EcScript::Cyrl },
     { 0x1C90, 0x1CBF,
-            "Georgian Extended", u8"Грузинский расширенный" },
+            "Georgian Extended", u8"Грузинский расширенный",
+            {}, EcScript::Geor },
     { 0x1CC0, 0x1CCF,
-            "Sundanese Supplement", u8"Сунданский дополнительный" },
+            "Sundanese Supplement", u8"Сунданский дополнительный",
+            {}, EcScript::Sund },
     { 0x1CD0, 0x1CFF,
             "Vedic Extensions", u8"Ведические символы" },
     { 0x1D00, 0x1D7F,
@@ -999,7 +1015,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0x27F0, 0x27FF,
             "Supplemental Arrows-A", u8"Дополнительные стрелки A" },
     { 0x2800, 0x28FF,
-            "Braille Patterns", u8"Шрифт Брайля" },
+            "Braille Patterns", u8"Шрифт Брайля", {}, EcScript::Brai },
     { 0x2900, 0x297F,
             "Supplemental Arrows-B", u8"Дополнительные стрелки B" },
     { 0x2980, 0x29FF,
@@ -1012,23 +1028,23 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
             "Miscellaneous Symbols and Arrows",
             u8"Разные символы и стрелки" },
     { 0x2C00, 0x2C5F,
-            "Glagolitic", u8"Глаголица" },
+            "Glagolitic", u8"Глаголица", {}, EcScript::Glag },
     { 0x2C60, 0x2C7F,
             "Latin Extended-C", u8"Латиница расширенная C" },
     { 0x2C80, 0x2CFF,
-            "Coptic", u8"Коптский" },
+            "Coptic", u8"Коптский", {}, EcScript::Copt },
     { 0x2D00, 0x2D2F,
-            "Georgian Supplement", u8"Грузинский дополнительный" },
+            "Georgian Supplement", u8"Грузинский дополнительный", {}, EcScript::Geor },
     { 0x2D30, 0x2D7F,
-            "Tifinagh", u8"Тифинаг" },
+            "Tifinagh", u8"Тифинаг", {}, EcScript::Tfng },
     { 0x2D80, 0x2DDF,
-            "Ethiopic Extended", u8"Эфиопский расширенный" },
+            "Ethiopic Extended", u8"Эфиопский расширенный", {}, EcScript::Ethi },
     { 0x2DE0, 0x2DFF,
-            "Cyrillic Extended-A", u8"Кириллица расширенная A" },
+            "Cyrillic Extended-A", u8"Кириллица расширенная A", {}, EcScript::Cyrl },
     { 0x2E00, 0x2E7F,
-            "Supplemental Punctuation", u8"Дополнительные знаки препинания" },
+            "Supplemental Punctuation", u8"Дополнительные знаки препинания"sv },
     { 0x2E80, 0x2EFF,
-            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи" },
+            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи", {}, EcScript::Hani },
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи канси" },
     { 0x2FF0, 0x2FFF,
