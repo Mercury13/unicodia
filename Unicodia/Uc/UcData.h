@@ -42,6 +42,7 @@ namespace uc {
         NORMAL,
         AHOM,
         ARABIC,
+        BAMUM,
         CHEROKEE,
         GLAGOLITIC,
         HANUNOO,
