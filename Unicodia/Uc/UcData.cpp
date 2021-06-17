@@ -37,11 +37,14 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
     { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
+    { "Noto Sans Malayalam",        "NotoSansMalayalam-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
+    { "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
+    //{ "Serto Jerusalem",            "Serto Jerusalem-DXH2Ot_2020Version13_May29.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
 };
 
@@ -575,7 +578,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"малая́лам <i>(Южная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. "
                 "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
-                "в середине и в конце\u00A0— сокращённые.</p>"sv },
+                "в середине и в конце\u00A0— сокращённые.</p>"sv,
+                EcFont::MALAYALAM },
     { "Mong"sv, EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
         u8"Монгольская (старая)"sv, u8"X век"sv,
         u8"монгольский"sv,
@@ -661,11 +665,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
-        u8"<p>Потомок арамейского алфавита, впоследствии развившийся в арабицу. Используется малыми семитскими народами.</p>"sv
-            u8"<p>Тот вид письма, которым написанны раннехристианские рукописи, известен под названием эстрангело (греч. στρονγύλη\u00A0— круглое). "sv
-                u8"Раскол сирийской церкви на несториан и яковитов привёл к разделению языка и письменности на две формы: "sv
-                u8"восточносирийскую (несторианскую, халдейскую) и  западносирийскую (яковитскую, маронитскую). "sv
-                u8"В них используются разные почерки и огласовки.</p>"sv },
+        u8"<p>Потомок арамейского алфавита, впоследствии развившийся в арабицу. Используется малыми семитскими народами.</p>"
+            "<p>Тот вид письма, которым написанны раннехристианские рукописи, известен под названием эстрангело (греч. στρονγύλη\u00A0— круглое). "
+                "Раскол сирийской церкви на несториан и яковитов привёл к разделению языка и письменности на две формы: "
+                "восточносирийскую (несторианскую, халдейскую) и  западносирийскую (яковитскую, маронитскую). "
+                "В них используются разные почерки и огласовки.</p>"sv,
+                EcFont::SYRIAC },
     { "Tagb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагбанва"sv, u8"≈1300"sv,
         u8"языки о. Палаван <i>(Филиппины)</i>"sv,

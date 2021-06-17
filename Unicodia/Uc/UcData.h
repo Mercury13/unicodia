@@ -53,11 +53,13 @@ namespace uc {
         LEPCHA,
         LIMBU,
         LISU,
+        MALAYALAM,
         MEETEI,
         MONGOLIAN,
         OLCHIKI,
         RUNIC,
         SAMARITAN,
+        SYRIAC,
         TAGALOG,
         //TAMIL,
         NN
