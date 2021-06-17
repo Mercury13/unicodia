@@ -26,6 +26,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
+    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
@@ -285,7 +286,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Балийская"sv, u8"≈1000"sv,
         u8"балийский, сасакский"sv,
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
-                "но важна в индуизме.</p>"sv },
+                "но важна в индуизме.</p>"sv,
+                EcFont::BALINESE },
     { "Bamu"sv, EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум"sv, u8"1895—1910"sv,
         u8"бамум <i>(Камерун)</i>"sv,
