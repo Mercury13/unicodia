@@ -44,7 +44,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
-    //{ "Serto Jerusalem",            "Serto Jerusalem-DXH2Ot_2020Version13_May29.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
 };
 
