@@ -44,6 +44,7 @@ namespace uc {
         ARABIC,
         BALINESE,
         BAMUM,
+        CANADIAN_ABORIGINAL,
         CHEROKEE,
         GLAGOLITIC,
         HANUNOO,

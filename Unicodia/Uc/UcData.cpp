@@ -28,6 +28,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
+    { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
@@ -339,8 +340,9 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Канадская слоговая"sv, u8"1833"sv,
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
         u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "sv
-            u8"ке=<font size='+2'>ᑫ</font>, ки=<font size='+2'>ᑭ</font>, ко=<font size='+2'>ᑯ</font>, ка=<font size='+2'>ᑲ</font>. "sv
-            u8"Более сложные слоги (например, долгие гласные) задаются диакритикой: кии=<font size='+2'>ᑮ</font></p>"sv },
+                "ке=<font size='+2'>ᑫ</font>, ки=<font size='+2'>ᑭ</font>, ко=<font size='+2'>ᑯ</font>, ка=<font size='+2'>ᑲ</font>. "
+                "Более сложные слоги (например, долгие гласные) задаются диакритикой: кии=<font size='+2'>ᑮ</font></p>"sv,
+                EcFont::CANADIAN_ABORIGINAL },
     { "Cham"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Чамская"sv, u8"IV век"sv,
         u8"чамский <i>(Вьетнам, Камбоджа)</i>"sv,
