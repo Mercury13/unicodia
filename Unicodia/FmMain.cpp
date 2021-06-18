@@ -376,7 +376,15 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
     auto proxy = ch.sampleProxy(hint);
-    ui->lbSample->setStyleSheet(str::toQ(proxy.styleSheet));
+    // Color
+    if (ch.isTrueSpace()) {
+        auto c = palette().text().color();
+        c.setAlpha(ALPHA_SPACE);
+        QString css = "color: " + c.name(QColor::HexArgb) + ';';
+        ui->lbSample->setStyleSheet(css);
+    } else {
+        ui->lbSample->setStyleSheet(str::toQ(proxy.styleSheet));
+    }
     ui->lbSample->setText(proxy.text);
 }
 
