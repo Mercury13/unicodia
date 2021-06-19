@@ -401,6 +401,13 @@ namespace {
         return cache;
     }
 
+    template <class T>
+    std::u8string_view locNameOf(const T& value) { return value.locName; }
+
+    template<>
+    std::u8string_view locNameOf(const uc::BidiClass& value)
+        { return value.locShortName; }
+
     template <class T, class Name1>
     inline void appendValuePopup(
             QString& text, const T& value, Name1 name, const char* scheme)
@@ -413,7 +420,7 @@ namespace {
                  ": <a href='%s:%.*s' style='color:ForestGreen'>",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
-        str::append(text, value.locName);
+        str::append(text, locNameOf(value));
         str::append(text, "</a>");
     }
 
@@ -598,7 +605,22 @@ void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
 void FmMain::showPopup(
         const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect)
 {
-    showPopupT(x, widget, rect);
+    QString text;
+    appendHeader(text, x);
+
+    str::append(text, "<p>");
+    str::QSep sp(text, "<br>");
+
+    sp.sep();
+    str::append(text, u8"• В техдокументации: ");
+    str::append(text, x.locId);
+
+    str::append(text, "</p>");
+
+    str::append(text, "<p>");
+    str::append(text, x.locDescription);
+    str::append(text, "</p>");
+    popupText(text, widget, rect);
 }
 
 

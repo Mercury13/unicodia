@@ -195,6 +195,8 @@ namespace uc {
         std::string_view id;
         EcBidiStrength strength;
         std::u8string_view locName;
+        std::u8string_view locShortName;
+        std::u8string_view locId;
         std::u8string_view locDescription;
         mutable unsigned nChars = 0;
     };
