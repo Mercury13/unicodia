@@ -107,6 +107,8 @@ namespace uc {
         Sinh,
         Syrc,
         Tagb,
+        Tale,
+        Talu,
         Taml,
         Telu,
         Tglg,
@@ -230,8 +232,6 @@ namespace uc {
         //Syrj  no chars
         //Syrn  no chars
         Takr = Zyyy,        // beyond BMP
-        Tale = Zyyy,        /// @todo [bmp] Tai Le
-        Talu = Zyyy,        /// @todo [bmp] New Tai Lue
         Tang = Zyyy,        // beyond BMP
         Tavt = Zyyy,        /// @todo [bmp] Tai Viet
         //Teng  no chars

@@ -44,6 +44,7 @@ namespace uc {
         ARABIC,
         BALINESE,
         BAMUM,
+        BUHID,
         CANADIAN_ABORIGINAL,
         CHEROKEE,
         GLAGOLITIC,
@@ -62,6 +63,9 @@ namespace uc {
         SAMARITAN,
         SYRIAC,
         TAGALOG,
+        TAGBANWA,
+        TAILE,
+        TAILUE,
         //TAMIL,
         NN
     };

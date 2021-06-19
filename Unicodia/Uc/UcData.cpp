@@ -28,6 +28,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
+    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf" },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
@@ -46,6 +47,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
+    { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
+    { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
+    { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
 };
 
 
@@ -335,10 +339,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а»."
             "Со времён голландской колонизации заменяется латиницей.</p>"sv },
+        /// @todo [description] Very interesting script, describe it somehow
     { "Buhd"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
         u8"бухидский <i>(Филиппины)</i>"sv,
-        u8"<p>Используется небольшой филиппинской народностью (8000 на 1991\u00A0год). Восходит к брахми и родственный с тагальским.</p>"sv },
+        u8"<p>Используется небольшой филиппинской народностью (8000 на 1991\u00A0год). Восходит к брахми и родственный с тагальским.</p>"sv,
+                EcFont::BUHID },
     { "Cans"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
@@ -675,10 +681,37 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "восточносирийскую (несторианскую, халдейскую) и  западносирийскую (яковитскую, маронитскую). "
                 "В них используются разные почерки и огласовки.</p>"sv,
                 EcFont::SYRIAC },
+            /// @todo [describe] Another interesting script
     { "Tagb"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагбанва"sv, u8"≈1300"sv,
         u8"языки о. Палаван <i>(Филиппины)</i>"sv,
-        u8"<p>Восходит к брахми и родственная с тагальской. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv },
+        u8"<p>Восходит к брахми и родственная с тагальской. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv,
+                EcFont::TAGBANWA },
+    { "Tale"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Лы"sv, u8"≈1200"sv,
+        u8"дайские (=лы; <i>Китай, Вьетнам, Лаос, Мьянма, Таиланд</i>)"sv,
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Тона изначально не записывались. "
+                "После нескольких реформ XX\u00A0века (последняя\u00A0— 1988), в том числе неудачной попытки китайских властей "
+                "создать [[pop_scr:Talu|новое письмо лы]], письменность почти что превратилась в алфавитную, и абугидой её "
+                "оставляют «пустая» согласная <big>ᥟ</big> в начале слова, если оно начинается с гласной, и тоновые буквы "
+                "в конце слогов.</p>"
+            "<p>Пробелы пишутся между предложениями, но не между словами. </p>"
+            "<p>В лы третьей реформы (1963—1988) для записи тонов использовались обычные европейские умляуты: "
+                "à, á, ȧ, ä, ǎ.</p>"
+            "<p>Дайцев в Китае ≈500 тыс. (2001), но язык быстро заменяется китайским и потому отнесён к уязвимым. "
+                "Ещё не более 500 тыс. разбросано по другим странам.</p>"sv,
+                EcFont::TAILE },
+    { "Talu"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Новое письмо лы"sv, u8"1950-е"sv,
+        u8"дайские (=лы; <i>Китай; общины лы в других странах пользуются старым письмом</i>)"sv,
+                /// @todo [desc] Somehow Qt’s font engine cannot increase font, what to do?
+                /// @todo [urgent] Some wiki support
+        u8"<p>Созданный в 1950-е годы китайскими властями алфавит встретил сопротивление народа, и Китай пошёл по пути "
+                "постепенного упрощения [[pop_scr:Tale|старого письма лы]].</p>"
+            "<p>Гласная по умолчанию «а». Вирама имеет вид крючка с петлей и в Юникоде записывается как единое целое с согласной: <font size='+2'>ᧇ</font>. "
+                "Необычно устроена запись тонов: согласные бывают в двух регистрах, ещё два знака <big>ᧈᧉ</big> могут "
+                "приписываться к слогу в конце, итого 2·3=6 тонов.</p>",
+                EcFont::TAILUE },
     { "Taml"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тамильская"sv, u8"VI—IX век"sv,
         u8"тамильский <i>(Индия, Шри-Ланка, Сингапур)</i>"sv,
@@ -705,7 +738,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "сами стали учить их на байбайине, но в XVIII\u00A0веке обнаружили, что аборигены переняли латиницу. "
                 "К XIX\u00A0веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. "
                 "Есть современные попытки возродить байбайин.</p>"sv,
-            EcFont::TAGALOG },
+                EcFont::TAGALOG },
     { "Thaa"sv, EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Тана"sv, u8"XVIII век"sv,
         u8"дивехи <i>(мальдивский)</i>"sv,
