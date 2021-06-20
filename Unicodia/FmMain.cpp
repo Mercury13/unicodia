@@ -9,12 +9,13 @@
 #include <QPainter>
 #include <QShortcut>
 
-// Unicode data
-#include "UcDefines.h"
-
 // Misc
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+
+// Project-local
+#include "Skin.h"
+#include "Wiki.h"
 
 // Forms
 #include "FmPopup.h"
@@ -29,7 +30,7 @@ namespace {
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
 
 
-FmPopup2::FmPopup2(FmMain* owner) : Super(owner)
+FmPopup2::FmPopup2(FmMain* owner) : Super(owner, CNAME_BG_POPUP)
 {
     auto vw = viewport();
     vw->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);
@@ -389,7 +390,50 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 }
 
 
+template<>
+void wiki::append(QString& s, const char* start, const char* end)
+{
+    s.append(QByteArray::fromRawData(start, end - start));
+}
+
 namespace {
+
+    class Eng : public wiki::Engine
+    {
+    public:
+        QString& s;
+        Eng(QString& aS) : s(aS) {}
+        void appendPlain(std::string_view x) override;
+        virtual void appendLink(const SafeVector<std::string_view> x) override;
+        virtual void appendTemplate(const SafeVector<std::string_view> x) override;
+    };
+
+    void Eng::appendPlain(std::string_view x)
+    {
+        str::append(s, x);
+    }
+
+    void Eng::appendLink(const SafeVector<std::string_view> x)
+    {
+        auto dest = x[0];
+        auto text = x[1];
+        std::string_view style = "";
+        if (dest.starts_with("pop_") && dest.find(':') != std::string_view::npos)
+            style = " style='color:" CNAME_LINK_POPUP ";'";
+        s.append("<a");
+        str::append(s, style);
+        s.append(" href='");
+        str::append(s, dest);
+        s.append("'>");
+        wiki::run(*this, text);
+        s.append("</a>");
+    }
+
+    void Eng::appendTemplate(const SafeVector<std::string_view> x)
+    {
+        wiki::appendHtml(s, x[0]);
+    }
+
 
     template <class T>
     std::string_view idOf(const T& value, std::string&) { return value.id; }
@@ -417,7 +461,7 @@ namespace {
         char buf[100];
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
-                 ": <a href='%s:%.*s' style='color:ForestGreen'>",
+                 ": <a href='%s:%.*s' style='color:" CNAME_LINK_POPUP "'>",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
         str::append(text, locNameOf(value));
@@ -569,6 +613,12 @@ void FmMain::charChanged(const QModelIndex& current)
 
 
 namespace {
+    void appendWiki(QString& text, std::u8string_view x)
+    {
+        Eng eng(text);
+        wiki::run(eng, x);
+    }
+
     template <class T>
     inline void appendHeader(QString& text, const T& x)
     {
@@ -596,7 +646,7 @@ void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
     QString text;
     appendHeader(text, x);
     str::append(text, "<p>");
-    str::append(text, x.locDescription);
+    appendWiki(text, x.locDescription);
     str::append(text, "</p>");
     popupText(text, widget, rect);
 }
@@ -618,7 +668,7 @@ void FmMain::showPopup(
     str::append(text, "</p>");
 
     str::append(text, "<p>");
-    str::append(text, x.locDescription);
+    appendWiki(text, x.locDescription);
     str::append(text, "</p>");
     popupText(text, widget, rect);
 }
@@ -678,16 +728,17 @@ void FmMain::showPopup(
     }
 
     str::append(text, "<p>");
-    if (!x.hintFont.empty()) {
-        auto qdesc = str::toQ(x.locDescription);
-        auto ex = QString("font face='");
-            str::append(ex, x.hintFont);
-            str::append(ex, "'");
-        qdesc.replace(":FACE:", ex);
-        text += qdesc;
-    } else {
-        str::append(text, x.locDescription);
-    }
+    appendWiki(text, x.locDescription);
+//    if (!x.hintFont.empty()) {
+//        auto qdesc = str::toQ(x.locDescription);
+//        auto ex = QString("font face='");
+//            str::append(ex, x.hintFont);
+//            str::append(ex, "'");
+//        qdesc.replace(":FACE:", ex);
+//        text += qdesc;
+//    } else {
+//        str::append(text, x.locDescription);
+//    }
     str::append(text, "</p>");
 
     popupText(text, widget, rect);
@@ -724,7 +775,7 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 
     if (!x.locDescription.empty()) {
         str::append(text, "<p>");
-        str::append(text, x.locDescription);
+        appendWiki(text, x.locDescription);
         str::append(text, "</p>");
     }
     popupText(text, widget, rect);

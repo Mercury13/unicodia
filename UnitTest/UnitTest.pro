@@ -1,5 +1,5 @@
 TEMPLATE = app
-CONFIG += console c++17
+CONFIG += console c++2a
 CONFIG -= app_bundle
 CONFIG -= qt
 
@@ -14,16 +14,20 @@ SOURCES += \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
     ../Libs/SelfMade/u_Strings.cpp \
+    ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
-    test_Iterator.cpp
+    test_Iterator.cpp \
+    test_Wiki.cpp
 
 HEADERS += \
     ../AutoBuilder/data.h \
     ../Libs/SelfMade/u_Iterator.h \
-    ../Libs/SelfMade/u_Strings.h
+    ../Libs/SelfMade/u_Strings.h \
+    ../Unicodia/Wiki.h
 
 INCLUDEPATH += \
     ../AutoBuilder \
     ../Libs/GoogleTest \
     ../Libs/GoogleTest/include \
-    ../Libs/SelfMade
+    ../Libs/SelfMade \
+    ../Unicodia

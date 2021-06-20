@@ -68,7 +68,7 @@ class FmPopup : public QWidget
     using Super = QWidget;
     using This = FmPopup;
 public:
-    FmPopup(QWidget* owner);
+    FmPopup(QWidget* owner, const char* color);
     ~FmPopup() override = default;
     FmPopup& popupAtAbs(QWidget* widget, const QRect& absRect);
     FmPopup& popup(QWidget* widget, TinyOpt<QRect> rect);

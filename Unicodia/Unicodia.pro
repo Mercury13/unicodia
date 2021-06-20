@@ -28,6 +28,7 @@ SOURCES += \
     FmPopup.cpp \
     Uc/UcAuto.cpp \
     Uc/UcData.cpp \
+    Wiki.cpp \
     main.cpp \
     FmMain.cpp
 
@@ -42,9 +43,11 @@ HEADERS += \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h \
     FmPopup.h \
+    Skin.h \
     Uc/UcAutoCount.h \
     Uc/UcData.h \
-    Uc/UcDefines.h
+    Uc/UcDefines.h \
+    Wiki.h
 
 FORMS += \
     FmMain.ui

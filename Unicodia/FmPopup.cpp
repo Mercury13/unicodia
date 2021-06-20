@@ -79,7 +79,7 @@ bool ClickableLabel::event(QEvent* ev)
 ///// FmPopup //////////////////////////////////////////////////////////////////
 
 
-FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
+FmPopup::FmPopup(QWidget* owner, const char* color) : Super(owner, WF_POPUP)
 {
     auto vl = new QVBoxLayout(this);
     setLayout(vl);
@@ -90,7 +90,11 @@ FmPopup::FmPopup(QWidget* owner) : Super(owner, WF_POPUP)
     vl->addWidget(lbText);
 
     setStyleSheet("QWidget { background-color: black }");
-    lbText->setStyleSheet("QLabel { background-color: LightYellow; padding: 10px; }");
+    char buf[100];
+    snprintf(buf, std::size(buf),
+             "QLabel { background-color: %s; padding: 10px; }",
+             color);
+    lbText->setStyleSheet(buf);
     connect(lbText, &ClickableLabel::clicked, this, &This::hide);
 }
 
