@@ -651,7 +651,58 @@ namespace {
         str::append(text, " шт.)</nobr>");
         str::append(text, "</p>");
     }
-}
+
+    void appendScript(QString& text, const uc::Script& x, bool isScript)
+    {
+        if (x.ecType != uc::EcScriptType::NONE) {
+            str::append(text, "<p>");
+            str::QSep sp(text, "<br>");
+            str::append(text, u8"• Тип: ");
+            str::append(text, x.type().locName);
+            if (x.ecDir != uc::EcWritingDir::NOMATTER) {
+                sp.sep();
+                str::append(text, u8"• Направление: ");
+                str::append(text, x.dir().locName);
+            }
+            if (!x.locLangs.empty()) {
+                sp.sep();
+                str::append(text, u8"• Языки: ");
+                str::append(text, x.locLangs);
+            }
+            if (!x.locTime.empty()) {
+                sp.sep();
+                str::append(text, u8"• Появилась: ");
+                str::append(text, x.locTime);
+            }
+            if (x.ecLife != uc::EcLangLife::NOMATTER) {
+                sp.sep();
+                str::append(text, u8"• Состояние: ");
+                str::append(text, x.life().locName);
+            }
+            if (isScript) {
+                if (x.ecVersion != uc::EcVersion::UNKNOWN) {
+                    sp.sep();
+                    appendVersion(text, u8"• "sv, x.version());
+                }
+
+                sp.sep();
+                str::append(text, u8"• Плоскость: ");
+                if (x.plane == uc::PLANE_BASE) {
+                    str::append(text, u8"базовая");
+                } else {
+                    str::append(text, std::to_string(x.plane));
+                }
+            }
+
+            str::append(text, "</p>");
+        }
+
+        str::append(text, "<p>");
+        appendWiki(text, x, x.locDescription);
+        str::append(text, "</p>");
+    }
+
+}   // anon namespace
 
 
 void FmMain::popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect)
@@ -708,50 +759,7 @@ void FmMain::showPopup(
 {
     QString text;
     appendHeader(text, x);
-
-    if (x.ecType != uc::EcScriptType::NONE) {
-        str::append(text, "<p>");
-        str::QSep sp(text, "<br>");
-        str::append(text, u8"• Тип: ");
-        str::append(text, x.type().locName);
-        if (x.ecDir != uc::EcWritingDir::NOMATTER) {
-            sp.sep();
-            str::append(text, u8"• Направление: ");
-            str::append(text, x.dir().locName);
-        }
-        if (!x.locLangs.empty()) {
-            sp.sep();
-            str::append(text, u8"• Языки: ");
-            str::append(text, x.locLangs);
-        }
-        if (!x.locTime.empty()) {
-            sp.sep();
-            str::append(text, u8"• Появилась: ");
-            str::append(text, x.locTime);
-        }
-        if (x.ecLife != uc::EcLangLife::NOMATTER) {
-            sp.sep();
-            str::append(text, u8"• Состояние: ");
-            str::append(text, x.life().locName);
-        }
-        if (x.ecVersion != uc::EcVersion::UNKNOWN) {
-            sp.sep();
-            appendVersion(text, u8"• "sv, x.version());
-        }
-        sp.sep();
-        str::append(text, u8"• Плоскость: ");
-        if (x.plane == uc::PLANE_BASE) {
-            str::append(text, u8"базовая");
-        } else {
-            str::append(text, std::to_string(x.plane));
-        }
-
-        str::append(text, "</p>");
-    }
-
-    str::append(text, "<p>");
-    appendWiki(text, x, x.locDescription);
-    str::append(text, "</p>");
+    appendScript(text, x, true);
 
     popupText(text, widget, rect);
 }
@@ -789,6 +797,9 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
         str::append(text, "<p>");
         appendWiki(text, x, x.locDescription);
         str::append(text, "</p>");
+    } else if (x.ecScript != uc::EcScript::NONE) {
+        str::append(text, "<p><b>О письменности</b></p>"sv);
+        appendScript(text, x.script(), false);
     }
     popupText(text, widget, rect);
 }

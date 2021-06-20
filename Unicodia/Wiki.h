@@ -5,6 +5,16 @@
 
 // Libs
 #include "u_Vector.h"
+#include "u_TypedFlags.h"
+
+
+//
+//  Right now we do not have <b> and <i>. But if had:
+//  ' = apostrophe
+//  '' = i
+//  All odd = b
+//  All even except 2 = do nothing: i-i or b-b. E.g. 8 = i-i i-i
+//
 
 
 namespace wiki {
@@ -36,8 +46,16 @@ namespace wiki {
     inline Thing findThing(std::string_view x)
         { return findThing(x.data(), x.data() + x.size()); }
 
+    enum class Weight {
+        BOLD = 1, ITALIC = 2
+    };
+    DEFINE_ENUM_OPS(wiki::Weight)
+
     class Engine {  // interface
     public:
+        /// @warning  The engine itself keeps track of weights, as it can run
+        ///           recursively.
+        virtual void applyWeight([[maybe_unused]] Flags<Weight> changed) {}
         virtual void appendPlain(std::string_view x) = 0;
         virtual void appendLink(const SafeVector<std::string_view> x) = 0;
         virtual void appendTemplate(const SafeVector<std::string_view> x) = 0;
