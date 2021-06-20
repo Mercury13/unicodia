@@ -516,7 +516,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». "
-                "Часто применяется в смайликах: <big>ಠ︵ಠ</big>.</p>"sv },
+                "Часто применяется в смайликах: <big>ಠ␣ಠ</big>.</p>"sv },
     { "Lana"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
         u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все\u00A0— Таиланд"sv,
