@@ -402,7 +402,8 @@ namespace {
     {
     public:
         QString& s;
-        Eng(QString& aS) : s(aS) {}
+        const uc::Font& font;
+        Eng(QString& aS, const uc::Font& aFont) : s(aS), font(aFont) {}
         void appendPlain(std::string_view x) override;
         virtual void appendLink(const SafeVector<std::string_view> x) override;
         virtual void appendTemplate(const SafeVector<std::string_view> x) override;
@@ -431,7 +432,21 @@ namespace {
 
     void Eng::appendTemplate(const SafeVector<std::string_view> x)
     {
-        wiki::appendHtml(s, x[0]);
+        auto name = x[0];
+        if (name == "sm"sv) {
+            if (font.fileName.empty()) {
+                str::append(s, "<font size='+2'>"sv);
+            } else {
+                font.load();
+                str::append(s, "<font size='+2' face='"sv);
+                str::append(s, font.family);
+                str::append(s, "'>"sv);
+            }
+            str::append(s, x.safeGetV(1, {}));
+            str::append(s, "</font>");
+        } else {
+            wiki::appendHtml(s, x[0]);
+        }
     }
 
 
@@ -613,9 +628,16 @@ void FmMain::charChanged(const QModelIndex& current)
 
 
 namespace {
-    void appendWiki(QString& text, std::u8string_view x)
+    template <class X>
+    void appendWiki(QString& text, const X& obj, std::u8string_view x)
     {
-        Eng eng(text);
+        Eng eng(text, obj.font());
+        wiki::run(eng, x);
+    }
+
+    void appendWikiNoFont(QString& text, std::u8string_view x)
+    {
+        Eng eng(text, uc::fontInfo[0]);
         wiki::run(eng, x);
     }
 
@@ -646,7 +668,7 @@ void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
     QString text;
     appendHeader(text, x);
     str::append(text, "<p>");
-    appendWiki(text, x.locDescription);
+    appendWikiNoFont(text, x.locDescription);
     str::append(text, "</p>");
     popupText(text, widget, rect);
 }
@@ -668,7 +690,7 @@ void FmMain::showPopup(
     str::append(text, "</p>");
 
     str::append(text, "<p>");
-    appendWiki(text, x.locDescription);
+    appendWikiNoFont(text, x.locDescription);
     str::append(text, "</p>");
     popupText(text, widget, rect);
 }
@@ -728,17 +750,7 @@ void FmMain::showPopup(
     }
 
     str::append(text, "<p>");
-    appendWiki(text, x.locDescription);
-//    if (!x.hintFont.empty()) {
-//        auto qdesc = str::toQ(x.locDescription);
-//        auto ex = QString("font face='");
-//            str::append(ex, x.hintFont);
-//            str::append(ex, "'");
-//        qdesc.replace(":FACE:", ex);
-//        text += qdesc;
-//    } else {
-//        str::append(text, x.locDescription);
-//    }
+    appendWiki(text, x, x.locDescription);
     str::append(text, "</p>");
 
     popupText(text, widget, rect);
@@ -775,7 +787,7 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 
     if (!x.locDescription.empty()) {
         str::append(text, "<p>");
-        appendWiki(text, x.locDescription);
+        appendWiki(text, x, x.locDescription);
         str::append(text, "</p>");
     }
     popupText(text, widget, rect);

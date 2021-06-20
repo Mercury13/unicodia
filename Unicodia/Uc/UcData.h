@@ -66,7 +66,7 @@ namespace uc {
         TAGBANWA,
         TAILE,
         TAILUE,
-        //TAMIL,
+        TAMIL,
         NN
     };
 
@@ -131,7 +131,6 @@ namespace uc {
         EcContinent ecContinent;
         std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
-        std::string_view hintFont {};
 
         mutable unsigned nChars = 0;
         mutable int plane = -1;
@@ -170,6 +169,8 @@ namespace uc {
 
         size_t index() const;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
+        const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
+        const Font& font() const { return script().font(); }
 
         Block& operator = (const Block&) = delete;
         Block& operator = (Block&&) = delete;
