@@ -140,7 +140,7 @@ TEST (FindThing, SimpleLink)
     EXPECT_EQ(wiki::Type::LINK, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 17, x.posNext);
-    EXPECT_EQ(2, x.params.size());
+    EXPECT_EQ(2u, x.params.size());
     EXPECT_EQ("bravo", x.params[0]);
     EXPECT_EQ(" bravo  ", x.params[1]);
 }
@@ -153,7 +153,7 @@ TEST (FindThing, SimpleTemplate)
     EXPECT_EQ(wiki::Type::TEMPLATE, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 17, x.posNext);
-    EXPECT_EQ(1, x.params.size());
+    EXPECT_EQ(1u, x.params.size());
     EXPECT_EQ("bravo", x.params[0]);
 }
 
@@ -165,10 +165,32 @@ TEST (FindThing, ComplexLink)
     EXPECT_EQ(wiki::Type::LINK, x.type);
     EXPECT_EQ(s.data() + 5, x.posStart);
     EXPECT_EQ(s.data() + 37, x.posNext);
-    EXPECT_EQ(3, x.params.size());
+    EXPECT_EQ(3u, x.params.size());
     EXPECT_EQ("bravo", x.params[0]);
     EXPECT_EQ(" charlie  ", x.params[1]);
     EXPECT_EQ(" delta  ", x.params[2]);
+}
+
+
+TEST (FindThing, Quote)
+{
+    std::string_view s = "alpha'bravo";
+    auto x = wiki::findThing(s);
+    EXPECT_EQ(wiki::Type::STRING_END, x.type);
+    EXPECT_EQ(s.data() + 11, x.posStart);
+    EXPECT_EQ(s.data() + 11, x.posNext);
+    EXPECT_TRUE(x.params.empty());
+}
+
+
+TEST (FindThing, Italic)
+{
+    std::string_view s = "alpha''bravo";
+    auto x = wiki::findThing(s);
+    EXPECT_EQ(wiki::Type::ITALIC, x.type);
+    EXPECT_EQ(s.data() + 5, x.posStart);
+    EXPECT_EQ(s.data() + 7, x.posNext);
+    EXPECT_TRUE(x.params.empty());
 }
 
 
@@ -192,19 +214,35 @@ namespace {
     {
     public:
         std::string s;
+        Flags<wiki::Weight> weight;
         void appendPlain(std::string_view x) override;
-        void appendLink(const SafeVector<std::string_view> x) override;
-        void appendTemplate(const SafeVector<std::string_view> x) override;
+        void appendLink(const SafeVector<std::string_view> x, bool) override;
+        void appendTemplate(const SafeVector<std::string_view> x, bool) override;
+        void toggleWeight(Flags<wiki::Weight> changed) override;
     };
+
+    void Eng::toggleWeight(Flags<wiki::Weight> changed)
+    {
+        weight ^= changed;
+    }
 
     void Eng::appendPlain(std::string_view x)
     {
-        s.append("Plain:");
+        s.append("Plain");
+        if (weight) {
+            s.push_back('[');
+            if (weight.have(wiki::Weight::BOLD))
+                s.push_back('b');
+            if (weight.have(wiki::Weight::ITALIC))
+                s.push_back('i');
+            s.push_back(']');
+        }
+        s.push_back(':');
         s.append(x);
-        s.append("\n");
+        s.push_back('\n');
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view> x)
+    void Eng::appendLink(const SafeVector<std::string_view> x, bool)
     {
         s.append("Link:");
         for (size_t i = 0; i < x.size(); ++i) {
@@ -215,7 +253,7 @@ namespace {
         s.append("\n");
     }
 
-    void Eng::appendTemplate(const SafeVector<std::string_view> x)
+    void Eng::appendTemplate(const SafeVector<std::string_view> x, bool)
     {
         s.append("Template:");
         for (size_t i = 0; i < x.size(); ++i) {
@@ -244,14 +282,18 @@ TEST (Run, Plain)
 ///
 TEST (Run, Simple)
 {
-    std::string_view s = "The [[wiki]]s are much {{big|simpler}} than '''HTML'''.";
+    std::string_view s = "The [[wiki]]s are ''much'' {{big|simpler}} than '''HTML'''.";
     Eng eng;
     wiki::run(eng, s);
     std::string_view expected =
             "Plain:The \n"
             "Link:wiki,wiki\n"
-            "Plain:s are much \n"
+            "Plain:s are \n"
+            "Plain[i]:much\n"
+            "Plain: \n"
             "Template:big,simpler\n"
-            "Plain: than '''HTML'''.\n";
+            "Plain: than \n"
+            "Plain[b]:HTML\n"
+            "Plain:.\n";
     EXPECT_EQ(expected, eng.s);
 }

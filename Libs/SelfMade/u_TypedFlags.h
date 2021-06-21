@@ -95,10 +95,10 @@ public:
         return *this;
     }
 
-    inline void remove(En x) { fValue &= ~toStorage(x); }
-    inline void remove(Flags<En> x) { fValue &= ~x.fValue; }
-    [[nodiscard]] inline Flags minus(Flags<En> x) const { return Flags(fValue & ~x.fValue); }
-    void clear() { fValue = 0; }
+    constexpr void remove(En x) { fValue &= ~toStorage(x); }
+    constexpr void remove(Flags<En> x) { fValue &= ~x.fValue; }
+    [[nodiscard]] constexpr Flags minus(Flags<En> x) const { return Flags(fValue & ~x.fValue); }
+    constexpr void clear() { fValue = 0; }
 
     /// @return  0 or one flag — the smallest of them
     /// @warning If you suspect extraneous flags, use switch - default,

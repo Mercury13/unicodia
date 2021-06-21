@@ -403,34 +403,104 @@ namespace {
     public:
         QString& s;
         const uc::Font& font;
+
         Eng(QString& aS, const uc::Font& aFont) : s(aS), font(aFont) {}
         void appendPlain(std::string_view x) override;
-        virtual void appendLink(const SafeVector<std::string_view> x) override;
-        virtual void appendTemplate(const SafeVector<std::string_view> x) override;
+        void appendLink(
+                const SafeVector<std::string_view> x,
+                bool hasRemainder) override;
+        void appendTemplate(
+                const SafeVector<std::string_view> x,
+                bool hasRemainder) override;
+        void toggleWeight(Flags<wiki::Weight> changed) override;
+        void finish() override;
+    protected:
+        wiki::HtWeight weight;
+        bool isSuppressed = false;
+
+        [[nodiscard]] bool prepareRecursion(std::string_view text);
+        void runRecursive(std::string_view text);
+        void finishRecursion(bool hasRemainder, bool prepareResult);
     };
+
+    void Eng::toggleWeight(Flags<wiki::Weight> changed)
+    {
+        auto tag = weight.toggle(changed);
+        str::append(s, tag);
+    }
+
+    void Eng::finish()
+    {
+        if (!isSuppressed) {
+            auto tag = weight.finish();
+            str::append(s, tag);
+        }
+    }
 
     void Eng::appendPlain(std::string_view x)
     {
         str::append(s, x);
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view> x)
+    bool Eng::prepareRecursion(std::string_view text)
+    {
+        if (isSuppressed)
+            return true;
+        if (weight.flags() & wiki::probeWeights(text)) {
+            auto tag = weight.finish();
+            str::append(s, tag);
+        } else {
+            isSuppressed = true;
+        }
+        return false;
+    }
+
+    void Eng::runRecursive(std::string_view text)
+    {
+        if (!isSuppressed) {
+            auto tag = weight.restart();
+            str::append(s, tag);
+        }
+        wiki::run(*this, text);
+    }
+
+    void Eng::finishRecursion(bool hasRemainder, bool prepareResult)
+    {
+        if (!isSuppressed) {
+            if (hasRemainder) {
+                auto tag = weight.restart();
+                str::append(s, tag);
+            } else {
+                weight.clear();
+            }
+        }
+        isSuppressed = prepareResult;
+    }
+
+    void Eng::appendLink(const SafeVector<std::string_view> x, bool hasRemainder)
     {
         auto dest = x[0];
         auto text = x[1];
         std::string_view style = "";
         if (dest.starts_with("pop_") && dest.find(':') != std::string_view::npos)
             style = " style='color:" CNAME_LINK_POPUP ";'";
+
+        auto q = prepareRecursion(text);
+
         s.append("<a");
         str::append(s, style);
         s.append(" href='");
         str::append(s, dest);
         s.append("'>");
-        wiki::run(*this, text);
+
+        runRecursive(text);
+
         s.append("</a>");
+
+        finishRecursion(hasRemainder, q);
     }
 
-    void Eng::appendTemplate(const SafeVector<std::string_view> x)
+    void Eng::appendTemplate(const SafeVector<std::string_view> x, bool)
     {
         auto name = x[0];
         if (name == "sm"sv) {

@@ -58,7 +58,7 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                     auto p = pos + 2;   // after double bracket
                     while (true) {
                         auto param = skipParam(p, end, otherBracket);
-                        switch (param.type) {
+                        switch (param.type) {                        
                         case ParamType::STRING_END:
                             // Found nothing
                             goto brk;
@@ -97,9 +97,47 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                     brk:;
                 }   // if ()
             } break;
-        }
+        case '\'':
+            if (pos != minus1 && *(pos + 1) == '\'') {
+                auto q = pos + 2;
+                while (q != end && *q == '\'')
+                    ++q;
+                auto nQuotes = q - pos;
+                auto type = (nQuotes % 2 == 0)
+                        ? ((nQuotes == 2) ? Type::ITALIC : Type::EMPTY)
+                        : ((nQuotes == 5) ? Type::BOLD_ITALIC : Type::BOLD);
+                return { type, pos, q, {} };
+            }
+        default: ;
+        }   // switch (c)
     }
     return { Type::STRING_END, end, end, {} };
+}
+
+
+[[nodiscard]] wiki::detail::ProbedWeight wiki::detail::probeWeight(
+        const char* pos, const char* end)
+{
+    auto minus1 = end - 1;
+
+    for (; pos != end; ++pos) {
+        auto c = *pos;
+        switch (c) {
+        case '\'':
+            if (pos != minus1 && *(pos + 1) == '\'') {
+                auto q = pos + 2;
+                while (q != end && *q == '\'')
+                    ++q;
+                auto nQuotes = q - pos;
+                auto weight = (nQuotes % 2 == 0)
+                        ? ((nQuotes == 2) ? Weight::ITALIC : Flags<Weight>() )
+                        : ((nQuotes == 5) ? Weight::BOLD | Weight::ITALIC : Weight::BOLD);
+                return { weight, q };
+            }
+        default: ;
+        }   // switch (c)
+    }
+    return { {}, nullptr };
 }
 
 
@@ -110,23 +148,118 @@ void wiki::run(Engine& engine, const char* start, const char* end)
         if (x.posStart != start)
             engine.appendPlain({ start, x.posStart });
         switch (x.type) {
+        case Type::EMPTY:
+            break;
+        case Type::BOLD:
+            engine.toggleWeight(Weight::BOLD);
+            break;
+        case Type::ITALIC:
+            engine.toggleWeight(Weight::ITALIC);
+            break;
+        case Type::BOLD_ITALIC:
+            engine.toggleWeight(Weight::BOLD | Weight::ITALIC);
+            break;
         case Type::STRING_END:
             goto brk;
         case Type::LINK:
-            engine.appendLink(x.params);
+            engine.appendLink(x.params, (x.posNext != end));
             break;
         case Type::TEMPLATE:
-            engine.appendTemplate(x.params);
+            engine.appendTemplate(x.params, (x.posNext != end));
             break;
         }
         start = x.posNext;
     }
-    brk: ;
+brk:
+    engine.finish();
 }
 
 
-void wiki::run(Engine& engine, std::u8string_view x)
+Flags<wiki::Weight> wiki::probeWeights(const char* start, const char* end)
 {
-    auto data = reinterpret_cast<const char*>(x.data());
-    run(engine, data, data + x.size() );
+    static constexpr auto ALL_FLAGS = Weight::BOLD | Weight::ITALIC;
+    Flags<Weight> r = {};
+    while (true) {
+        auto x = detail::probeWeight(start, end);
+        if (!x.posNext)
+            break;
+        r |= x.flags;
+        if (r == ALL_FLAGS)
+            return r;
+        start = x.posNext;
+    }
+    return r;
+}
+
+
+///// HtWeight /////////////////////////////////////////////////////////////////
+
+
+constinit const wiki::HtWeight::ToggleResult wiki::HtWeight::machine[5][4] {
+        // NO TAGS
+    {   { {},       State::z },     // ⌀ ^ ⌀ = ⌀
+        { "<i>",    State::I },     // ⌀ ^ i = i
+        { "<b>",    State::B },     // ⌀ ^ b = b
+        { "<b><i>", State::BI } },  // ⌀ ^ bi = bi
+        // ITALIC
+    {   { {},       State::I },     // i ^ ⌀ = i
+        { "</i>",   State::z },     // i ^ i = ⌀
+        { "<b>",    State::IB },    // i ^ b = ib
+        { "</i><b>", State::B } },  // i ^ bi = b: close i, open b
+        // BOLD
+    {   { {},       State::B },     // b ^ ⌀ = b
+        { "<i>",    State::BI },    // b ^ i = bi
+        { "</b>",   State::z },     // b ^ b = ⌀
+        { "</b><i>", State::I } },  // b ^ bi = i: close b, open i
+        // BOLD-ITALIC
+    {   { {},       State::BI},     // bi ^ ⌀ = bi
+        { "</i>",   State::B },     // bi ^ i = b; just close i
+        { "</i></b><i>", State::I }, // bi ^ b = i; you cannot close b, need 3 tags
+        { "</i></b>", State::z } }, // bi ^ bi = ⌀, close in reverse order
+        // ITALIC-BOLD
+    {   { {},       State::BI},     // ib ^ ⌀ = ib
+        { "</b></i><b>", State::B }, // ib ^ i = b; you cannot close i, need 3 tags
+        { "</b>",   State::I },     // ib ^ b = i; just close b
+        { "</b></i>", State::z } }  // ib ^ bi = ⌀, close in reverse order
+};
+
+
+constinit const std::string_view wiki::HtWeight::finishResult[5] {
+    // Bold-italic close as </i></b>, etc
+    {}, "</i>", "</b>", "</i></b>", "</b></i>" };
+
+constinit const std::string_view wiki::HtWeight::restartResult[5] {
+    {}, "<i>", "<b>", "<b><i>", "<i><b>" };
+
+constinit const Flags<wiki::Weight> wiki::HtWeight::flagsResult[5] {
+    {},
+    Weight::ITALIC,
+    Weight::BOLD,
+    Weight::BOLD | Weight::ITALIC,
+    Weight::BOLD | Weight::ITALIC,
+};
+
+
+std::string_view wiki::HtWeight::toggle(Flags<Weight> changed)
+{
+    auto& m = machine[static_cast<int>(fState)][changed.numeric()];
+    fState = m.state;
+    return m.result;
+}
+
+
+std::string_view wiki::HtWeight::finish() const
+{
+    return finishResult[static_cast<int>(fState)];
+}
+
+
+std::string_view wiki::HtWeight::restart() const
+{
+    return restartResult[static_cast<int>(fState)];
+}
+
+Flags<wiki::Weight> wiki::HtWeight::flags() const
+{
+    return flagsResult[static_cast<int>(fState)];
 }

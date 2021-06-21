@@ -396,7 +396,7 @@ TEST (Decap, PhaseF)
 TEST (Decap, ToneNkoApostrophe)
 {
     auto r = decapitalize("NKO HIGH TONE APOSTROPHE");
-    EXPECT_EQ("Nko high tone apostrophe", r);
+    EXPECT_EQ("NKo high tone apostrophe", r);
 }
 
 
@@ -436,7 +436,7 @@ TEST (Decap, ToneGrave)
 TEST (Decap, ToneNkoGrave)
 {
     auto r = decapitalize("NKO COMBINING SHORT HIGH TONE");
-    EXPECT_EQ("Nko combining short high tone", r);
+    EXPECT_EQ("NKo combining short high tone", r);
 }
 
 
