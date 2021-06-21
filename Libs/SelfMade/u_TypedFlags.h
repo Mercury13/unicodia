@@ -69,6 +69,11 @@ public:
     // and
     constexpr inline Flags& operator &= (En x) { fValue &= toStorage(x); return *this; }
     constexpr inline Flags& operator &= (Flags<En> x) { fValue &= x.fValue; return *this; }
+
+    // xor
+    constexpr inline Flags& operator ^= (En x) { fValue ^= toStorage(x); return *this; }
+    constexpr inline Flags& operator ^= (Flags<En> x) { fValue ^= x.fValue; return *this; }
+
     constexpr inline bool have(En x) const { return fValue & toStorage(x); }
     constexpr inline bool haveAny(Flags<En> x) const { return fValue & x.fValue; }
     constexpr inline bool haveAll(Flags<En> x) const { return (fValue & x.fValue) == x.fValue; }
@@ -101,6 +106,8 @@ public:
     constexpr inline En smallest() const { return static_cast<En>(fValue & (-fValue)); }
     constexpr inline En smallestOf(Flags<En> x) const { return (*this & x).smallest(); }
     constexpr inline Flags& setIf(bool cond, En x) { if (cond) this->operator|=(x); return *this; }
+    constexpr bool holdsValue() const noexcept { return operator bool(); }
+    constexpr bool empty() const noexcept { return !holdsValue(); }
 
 private:
     Storage fValue = 0;
@@ -129,6 +136,15 @@ template <class En>
 constexpr inline Flags<En> operator & (En x, Flags<En> y) { return Flags<En>::toStorage(x) & Flags<En>(y.numeric()); }
 
 template <class En>
+constexpr inline Flags<En> operator ^ (Flags<En> x, Flags<En> y) { return Flags<En>(x.numeric() ^ y.numeric()); }
+
+template <class En>
+constexpr inline Flags<En> operator ^ (Flags<En> x, En y) { return Flags<En>(x.numeric() ^ Flags<En>::toStorage(y)); }
+
+template <class En>
+constexpr inline Flags<En> operator ^ (En x, Flags<En> y) { return Flags<En>::toStorage(x) ^ Flags<En>(y.numeric()); }
+
+template <class En>
 constexpr inline bool operator == (Flags<En> x, En y) { return (x.numeric() == Flags<En>::toStorage(y)); }
 
 template <class En>
@@ -144,7 +160,7 @@ template <class En>
 constexpr inline bool operator != (En x, Flags<En> y) { return (Flags<En>::toStorage(x) != y.numeric()); }
 
 template <class En>
-constexpr inline bool operator != (Flags<En> x, Flags<En> y) { return (x.numeric() == y.numeric()); }
+constexpr inline bool operator != (Flags<En> x, Flags<En> y) { return (x.numeric() != y.numeric()); }
 
 template <class En>
 constexpr inline Flags<En> flagIf(bool x, En y)
@@ -154,6 +170,7 @@ constexpr inline Flags<En> flagIf(bool x, En y)
                 // A small hack: 0/1 → 0/FFFF
                       ); }
 
+// AND and XOR are unneded for obvious reasons
 #define DEFINE_ENUM_OPS(En)  \
     [[maybe_unused]] constexpr inline Flags<En> operator | (En x, En y) { return Flags<En>(x) | y; }  \
     [[maybe_unused]] constexpr inline Flags<En> operator ~ (En x) { return Flags<En>(~Flags<En>::toStorage(x)); }
