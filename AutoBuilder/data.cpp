@@ -149,7 +149,7 @@ const std::map<std::string_view, DicEntry> dictionary {
      { "KHAMTI"sv,      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "NABATAEAN"sv,    Dicf::TRIG_SCRIPT },
     { "NEWA"sv,         Dicf::TRIG_SCRIPT },
-    { "NKO"sv,          Dicf::TRIG_SCRIPT },
+    { "NKO"sv,          { Dicf::TRIG_SCRIPT, "NKo" } },
     { "NUSHU"sv,        Dicf::TRIG_SCRIPT },
     { "OGHAM"sv,        Dicf::TRIG_SCRIPT },
     { "OL"sv,           { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv } },
