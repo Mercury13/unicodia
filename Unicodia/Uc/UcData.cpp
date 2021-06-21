@@ -32,7 +32,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
-    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf" },    // Lanna
+    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::NEED_STUB },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
@@ -49,6 +49,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
     { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
+    { "Noto Sans Yi"sv,             "NotoSansYi-Regular.ttf" },
 };
 
 
@@ -527,7 +528,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях "
                 "(прямая черта прорежет лист по жилкам). Гласная по умолчанию «а». "
                 "Между словами не ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. "
-                "Вирама называется «ra haam».</p>"
+                "Вирама называется «ra haam» и используется нечасто.</p>"
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
             "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
                 EcFont::LANNA },
@@ -702,7 +703,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>В лы третьей реформы (1963—1988) для записи тонов использовались обычные европейские умляуты: "
                 "<big>à, á, ȧ, ä, ǎ</big>.</p>"
             "<p>Дайцев в Китае ≈500 тыс. (2001), но язык быстро заменяется китайским и потому отнесён к уязвимым. "
-                "Ещё не более 500 тыс. разбросано по другим странам.</p>"sv,
+                "Ещё не более 500 тыс. разбросано по другим странам, они пользуются в основном [[pop_scr:Lana|ланной]].</p>"sv,
                 EcFont::TAILE },
     { "Talu"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Новое письмо лы"sv, u8"1950-е"sv,
@@ -776,6 +777,14 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Одна из причин выживания ваи\u00A0— удачные знаки, применявшиеся и до этого в негритянской культуре. "
                 "Другая\u00A0— он использовался для торговли с голландцами и португальцами. "
                 "В 1962 году Университет Либерии добавил знаки для недостающих слогов.</p>"sv },
+    { "Yiii"sv, EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"И (носу)"sv, u8"1974 (слоговая)"sv,
+        u8"и <i>(Китай)</i>"sv,
+        u8"<p>Первый известный экземпляр старого (иероглифического) письма '''и''' датируется ≈1500, но письмо наверняка намного старше. "
+                "Предания говорят, что оно существовало ещё в династию Тан (618—907). Письмо состоит из 8000…10000 иероглифов.</p>"
+            "<p>Современный слоговой '''и''' придуман правительством Китая в 1974 году. В языке 43 согласных, 8 гласных и 4 тона, "
+                "но не все комбинации возможны, и письмом '''и''' можно записать 1165 слогов.</p>",
+                EcFont::YI },
     { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные"sv, {}, {},
         u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>" },
@@ -1157,7 +1166,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
     { 0xA000, 0xA48F,
             "Yi Syllables", u8"И\u00A0— слоги" },
     { 0xA490, 0xA4CF,
-            "Yi Radicals", u8"И\u00A0— черты" },
+            "Yi Radicals", u8"И\u00A0— компоненты" },
     { 0xA4D0, 0xA4FF,
             "Lisu", u8"Лису (алфавит Фрейзера)" },
     { 0xA500, 0xA63F,

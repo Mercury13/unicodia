@@ -67,6 +67,7 @@ namespace uc {
         TAILE,
         TAILUE,
         TAMIL,
+        YI,
         NN
     };
 

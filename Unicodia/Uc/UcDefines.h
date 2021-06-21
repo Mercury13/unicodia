@@ -116,6 +116,7 @@ namespace uc {
         Thai,
         Tibt,
         Vaii,
+        Yiii,
         Zinh,
         NN,
 
@@ -245,7 +246,6 @@ namespace uc {
         Xpeo = Zyyy,        // Old Persian beyond BMP
         Xsux = Zyyy,        // Cuneiform beyond BMP
         Yezi = Zyyy,        // Yezidi beyond BMP
-        Yiii = Zyyy,        /// @todo [bmp] Yi
         Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars
         //Zsye  no chars
