@@ -297,3 +297,60 @@ TEST (Run, Simple)
             "Plain:.\n";
     EXPECT_EQ(expected, eng.s);
 }
+
+
+///// probeWeights /////////////////////////////////////////////////////////////
+
+TEST (ProbeWeights, None)
+{
+    std::string_view s = "alpha";
+    auto x = wiki::probeWeights(s);
+    EXPECT_FALSE(x);
+}
+
+
+TEST (ProbeWeights, Italic)
+{
+    std::string_view s = "alpha''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_EQ(wiki::Weight::ITALIC, x);
+}
+
+
+TEST (ProbeWeights, Bold)
+{
+    std::string_view s = "alpha'''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_EQ(wiki::Weight::BOLD, x);
+}
+
+
+TEST (ProbeWeights, Bi1)
+{
+    std::string_view s = "alpha'''''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_EQ(wiki::Weight::BOLD | wiki::Weight::ITALIC, x);
+}
+
+TEST (ProbeWeights, Bi2)
+{
+    std::string_view s = "alpha'''bravo''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_EQ(wiki::Weight::BOLD | wiki::Weight::ITALIC, x);
+}
+
+
+TEST (ProbeWeights, Odd)
+{
+    std::string_view s = "alpha'''''''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_EQ(wiki::Weight::BOLD, x);
+}
+
+
+TEST (ProbeWeights, Even)
+{
+    std::string_view s = "alpha''''''''";
+    auto x = wiki::probeWeights(s);
+    EXPECT_FALSE(x);
+}
