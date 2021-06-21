@@ -26,7 +26,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
-    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf" },
+    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
@@ -161,7 +161,7 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
             u8"Так, модифицирующей буквой является штрих мягкости xʹ, в отличие от похожего математического штриха x′."sv },
     { UpCategory::LETTER,       "Lo"sv,     u8"Буква/другая"sv,
             u8"Символы различных письменностей, где нет деления на заглавные и строчные буквы. "sv
-            u8"Например, иврит, арабская вязь и китайские иероглифы. Также особые символы вроде "sv
+            u8"Например, [[pop_scr:Hebr|иврит]], [[pop_scr:Arab|арабская вязь]] и [[pop_scr:Hani|китайские иероглифы]]. Также особые символы вроде "sv
             u8"мужского/женского порядкового знака романских языков (1º\u00A0— первый, 1ª\u00A0— первая)."sv },
     { UpCategory::LETTER,       "Lt"sv,     u8"Буква/смешанный регистр"sv,
             u8"Символы-диграфы, состоящие из заглавной и строчной букв. "sv
@@ -338,11 +338,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а»."
             "Со времён голландской колонизации заменяется латиницей.</p>"sv },
-        /// @todo [description] Very interesting script, describe it somehow
+        /// @todo [wiki] Implement ''/'''
     { "Buhd"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
         u8"бухидский <i>(Филиппины)</i>"sv,
-        u8"<p>Используется небольшой филиппинской народностью (8000 на 1991\u00A0год). Восходит к брахми и родственный с тагальским.</p>"sv,
+        u8"<p>Используется мангиан\u00A0— небольшой филиппинской народностью (8000 на 1991\u00A0год). "
+                "Восходит к брахми и родственный с тагальским.</p>"
+            "<p>В языке всего 15 согласных и три гласных: «а» по умолчанию, «и» и «у» задаются огласовками. Начальные гласные\u00A0— "
+                "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
+                "{{sm|ᝐᝒᝑᝋᝓ}} означает <i>sihamu</i>, но читается <i>singhanmu</i></p>",
                 EcFont::BUHID },
     { "Cans"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
@@ -564,7 +568,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Лимбу"sv, u8"≈1700"sv,
         u8"лимбу <i>(Непал)</i>"sv,
         u8"<p>Гласная по умолчанию «о».</p>"
-            "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на непальский флаг. "
+            "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
     { "Lisu"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,

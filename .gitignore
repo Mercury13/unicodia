@@ -53,7 +53,6 @@ compile_commands.json
 
 # Directories we do not want to create
 ~Downloads
-Skia
 
 # Auto-created files.
 UcAuto.cpp
