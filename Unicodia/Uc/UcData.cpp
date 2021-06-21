@@ -347,7 +347,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Восходит к брахми и родственный с тагальским.</p>"
             "<p>В языке всего 15 согласных и три гласных: «а» по умолчанию, «и» и «у» задаются огласовками. Начальные гласные\u00A0— "
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
-                "{{sm|ᝐᝒᝑᝋᝓ}} означает <i>sihamu</i>, но читается <i>singhanmu</i></p>",
+                "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''</p>",
                 EcFont::BUHID },
     { "Cans"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
