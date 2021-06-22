@@ -7,7 +7,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 # How to compile?
 * Download MSYS, slight C++20 here.
-* Make custom kit of some MinGW Qt and MSYS compiler; tested 6.1.1.
+* Make custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.1.
 * Compile AutoBuilder.
 * Download and unzip big 220 M https://www.unicode.org/Public/13.0.0/ucdxml/ucd.all.flat.zip
 * Run AutoBuilder.
