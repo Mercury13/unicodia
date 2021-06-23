@@ -50,7 +50,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
     { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
-    //{ "Faagathi Dheli",             "FaagathiDheli-Regular.ttf", {}, {}, 150 },      // Thaana
     { "MV Typewriter",              "mvtyper.ttf", {}, {}, 110 },      // Thaana
     { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
 };
