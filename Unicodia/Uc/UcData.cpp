@@ -30,6 +30,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
+    { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
+    { "Noto Sans Devanagari",       "NotoSansDevanagari-Regular.ttf" },    // Devanagari sans
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
@@ -399,11 +401,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Deva"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
         u8"хинди, санскрит и другие языки Индии"sv,
-        u8"<p>Деванагари (буквально «язык божественного города») развился из письма брахми и стал алфавитом для многих языков Индии. "sv
-                u8"Особенность деванагари\u00A0— все буквы свисают с горизонтальной черты.</p>"sv
-        u8"<p>Каждый символ означает слог с гласной «а». Чтобы отобразить другие слоги, надо добавить огласовку: "sv
-                u8"<nobr>ка {{sm|क}} + и {{sm| ि}} = ки {{sm|कि}}</nobr>. "sv
-                u8"Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv },
+        u8"<p>Деванагари (буквально «язык божественного города») развился из письма брахми и стал алфавитом для многих языков Индии. "
+                "Особенность деванагари\u00A0— все буквы свисают с горизонтальной черты.</p>"
+        "<p>Каждый символ означает слог с гласной «а». Чтобы отобразить другие слоги, надо добавить огласовку: "
+                "<nobr>ка {{sm|क}} + и {{sm| ि}} = ки {{sm|कि}}</nobr>. "
+                "Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv,
+                EcFont::DEVANAGARI },
     { "Ethi"sv, EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские"sv,
@@ -803,7 +806,11 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::YI },
     { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные"sv, {}, {},
-        u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>" },
+        u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>"sv },
+//    { "ZDeva"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+//        u8"Devanagari technical"sv, {}, {},
+//        u8"Devanagari technical"sv,
+//                EcFont::DEVANAGARI_SANS },
 };
 
 
@@ -1058,7 +1065,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
             "Sundanese Supplement", u8"Сунданский дополнительный",
             {}, EcScript::Sund },
     { 0x1CD0, 0x1CFF,
-            "Vedic Extensions", u8"Ведические символы" },
+            "Vedic Extensions", u8"Ведические символы", {}, EcScript::Deva },
     { 0x1D00, 0x1D7F,
             "Phonetic Extensions", u8"Фонетические расширения" },
     { 0x1D80, 0x1DBF,

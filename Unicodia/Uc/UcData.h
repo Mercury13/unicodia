@@ -48,6 +48,8 @@ namespace uc {
         BUHID,
         CANADIAN_ABORIGINAL,
         CHEROKEE,
+        DEVANAGARI,
+        DEVANAGARI_SANS,
         GLAGOLITIC,
         HANUNOO,
         HEBREW,
