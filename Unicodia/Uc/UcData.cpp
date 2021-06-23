@@ -24,7 +24,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
-    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
+    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90 },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
