@@ -68,6 +68,7 @@ namespace uc {
         TAILE,
         TAILUE,
         TAMIL,
+        THAANA,
         YI,
         NN
     };
@@ -81,6 +82,7 @@ namespace uc {
         std::string_view family, fileName;
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
+        int sizeAdjust = 100;
 
         mutable struct Q {
             std::unique_ptr<QFont> table {};

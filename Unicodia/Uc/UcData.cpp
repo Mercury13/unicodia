@@ -50,7 +50,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
     { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
-    { "Noto Sans Yi"sv,             "NotoSansYi-Regular.ttf" },
+    //{ "Faagathi Dheli",             "FaagathiDheli-Regular.ttf", {}, {}, 150 },      // Thaana
+    { "MV Typewriter",              "mvtyper.ttf", {}, {}, 110 },      // Thaana
+    { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
 };
 
 
@@ -756,7 +758,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "с нарезанной лапшой.</p>"
             "<p>В 1970-е годы тане грозило исчезновение: при президенте Ибрагиме Насире появилась телексная связь, и "
                 u8"правительство перешло на довольно некачественную латинскую транслитерацию. Новый президент Момун Абдул Гайюм восстановил тану, "
-                u8"и обе письменности используются параллельно.</p>"sv },
+                u8"и обе письменности используются параллельно.</p>"sv,
+                EcFont::THAANA },
     { "Thai"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тайская"sv, u8"1283"sv,
         u8"тайский"sv,
@@ -1613,7 +1616,7 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
     if (!font) {
         load();
         auto qFamily = str::toQ(family);
-        font.reset(new QFont(qFamily, size, QFont::Normal));
+        font.reset(new QFont(qFamily, size * sizeAdjust / 100, QFont::Normal));
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;
