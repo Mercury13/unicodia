@@ -5,6 +5,7 @@
 #include <QDir>
 
 #include "u_Qstrings.h"
+#include <iostream>
 
 //#define USE_WIN32_FONTS
 
@@ -23,7 +24,14 @@
 
     void installTempFontFull(QString fname)
     {
-        QFontDatabase::addApplicationFont(fname);
+        auto id = QFontDatabase::addApplicationFont(fname);
+        if (id < 0) {
+            std::cout << "Cannot install " << fname.toStdString() << std::endl;
+        }
+//        auto families = QFontDatabase::applicationFontFamilies(id);
+//        for (auto& v : families) {
+//            std::cout << "Installed " << v.toStdString() << std::endl;
+//        }
     }
 #endif
 
