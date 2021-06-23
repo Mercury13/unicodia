@@ -56,6 +56,7 @@ namespace uc {
         LIMBU,
         LISU,
         MALAYALAM,
+        MANDAIC,
         MEETEI,
         MONGOLIAN,
         OLCHIKI,
