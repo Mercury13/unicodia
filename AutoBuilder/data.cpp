@@ -508,6 +508,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "Z"sv,            Dicf::CAP_TITLE },
     { "J-SIMPLIFIED"sv, Dicf::CAP_TITLE },
 
+    // Planets
+    { "URANUS"sv,       Dicf::PART_NOUN | Dicf::CAP_TITLE },
+
     // Some prepositions
     { "WITH"sv,         Dicf::CAP_SMALL },
     //{ "AND"sv,          Dicf::CAP_SMALL },    // Tricky word, all And’s are tested manually
