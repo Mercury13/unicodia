@@ -105,6 +105,7 @@ namespace uc {
         Runr,
         Samr,
         Sinh,
+        Sund,
         Syrc,
         Tagb,
         Tale,
@@ -227,7 +228,6 @@ namespace uc {
         Sogd = Zyyy,        // beyond BMP
         Sogo = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
-        Sund = Zyyy,        /// @todo [bmp] Sundanese
         Sylo = Zyyy,        /// @todo [bmp] Syloti Nagri
         //Syre  no chars
         //Syrj  no chars

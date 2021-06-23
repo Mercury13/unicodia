@@ -514,6 +514,10 @@ namespace {
             }
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
+        } else if (name == "_"sv) {
+            s.append(QChar(0x00A0));
+        } else if (name == "-"sv) {
+            str::append(s, "<span style='font-size:4pt'>\u00A0</span>—<span style='font-size:4pt'> </span>"sv);
         } else {
             wiki::appendHtml(s, x[0]);
         }

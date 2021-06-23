@@ -63,6 +63,7 @@ namespace uc {
         OLCHIKI,
         RUNIC,
         SAMARITAN,
+        SUNDANESE,
         SYRIAC,
         TAGALOG,
         TAGBANWA,

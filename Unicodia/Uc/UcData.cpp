@@ -45,6 +45,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
+    { "Noto Sans Sundanese"sv,      "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
@@ -670,16 +671,26 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "и пять рун с ларца Фрэнкса, реликвии VIII века.</p>"sv,
                 EcFont::RUNIC },
     { "Samr"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Самаритянская"sv, u8"около 600—200 до н.э."sv,
+        u8"Самаритянская"sv, u8"около 600—200 до н.э.",
         u8"иврит, самаритянский арамейский"sv,
-        u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "sv
-                u8"религию и культуру. Сейчас существует не более 700 самаритян.</p>"sv,
+        u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
+                "религию и культуру. На 2021 существует не более 700 самаритян.</p>"sv,
                 EcFont::SAMARITAN },
     { "Sinh"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Сингальская"sv, u8"300"sv,
-        u8"сингальский <i>(Шри-Ланка)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "sv
+        u8"Сингальская"sv, u8"300",
+        u8"сингальский <i>(Шри-Ланка)</i>",
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "
                 "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv },
+    { "Sund"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
+        u8"Сунданская"sv, u8"XIV век",
+        u8"сунданский <i>(Ява)</i>"sv,
+        u8"<p>Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. Обычная брахмийская абугида с гласной по умолчанию «а». "
+                "Для других гласных используются огласовки, для голой согласной{{-}}знак «вирама» ''(pamaaeh)'': "
+                "{{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Начальные гласные{{-}}отдельные буквы.</p>"
+            "<p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[pop_scr:Java|яванскую]] и "
+                "пегон (местный вариант [[pop_scr:Arab|арабского]]); с XX века{{-}}[[pop_scr:Latn|латиницу]]. "
+                "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
+                EcFont::SUNDANESE },
     { "Syrc"sv, EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
