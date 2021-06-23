@@ -26,6 +26,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;"  },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
+    { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
@@ -340,8 +341,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Бугийская (лонтара)"sv, u8"XVII век"sv,
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а»."
-            "Со времён голландской колонизации заменяется латиницей.</p>"sv },
-        /// @todo [wiki] Implement ''/'''
+            "Со времён голландской колонизации заменяется латиницей.</p>"sv,
+                EcFont::BUGINESE },
     { "Buhd"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
         u8"бухидский <i>(Филиппины)</i>"sv,
