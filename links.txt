@@ -10,6 +10,7 @@ https://unicode.org/glossary/ — словарь
 
 https://www.compart.com/en/unicode/scripts
 https://unicode-table.com/ru/
+http://www.alanwood.net/unicode/fontsbyrange.html
 
 
 ШРИФТЫ
