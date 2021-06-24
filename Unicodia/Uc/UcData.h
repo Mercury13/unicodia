@@ -5,6 +5,7 @@
 
 // Qt
 #include <QFont>
+#include <QRawFont>
 
 // Misc
 #include "u_TypedFlags.h"
@@ -13,6 +14,10 @@
 #include "UcDefines.h"
 
 /// ALL NAMES HERE ARE IN UTF-8!
+
+constexpr auto FONT_NOT_INSTALLED = -1000;
+constexpr auto FONT_CHECKED = -999;
+
 
 template <class T, size_t N>
 const T* findInArray(std::string_view needle, const T (&haystack)[N])
@@ -91,10 +96,12 @@ namespace uc {
         mutable struct Q {
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
-            bool isLoaded = false;
+            intptr_t installID = FONT_NOT_INSTALLED;
+            std::unique_ptr<QRawFont> raw;
         } q {};
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
+        bool doesSupportChar(char32_t x) const;
     };
     extern const Font fontInfo[static_cast<int>(EcFont::NN)];
 

@@ -12,7 +12,7 @@
 #if defined(_WIN32) && defined(USE_WIN32_FONTS)
     #include <windows.h>
 
-    void installTempFontFull(QString fname)
+    intptr_t installTempFontFull(QString fname)
     {
         fname.replace('/', '\\');
         const QChar* data1 = fname.data();
@@ -22,7 +22,7 @@
 #else
     #include <QFontDatabase>
 
-    void installTempFontFull(QString fname)
+    intptr_t installTempFontFull(QString fname)
     {
         auto id = QFontDatabase::addApplicationFont(fname);
         if (id < 0) {
@@ -32,6 +32,7 @@
 //        for (auto& v : families) {
 //            std::cout << "Installed " << v.toStdString() << std::endl;
 //        }
+        return id;
     }
 #endif
 
@@ -48,8 +49,8 @@ QString expandTempFontName(std::string_view fname)
 }
 
 
-void installTempFontRel(std::string_view fname)
+intptr_t installTempFontRel(std::string_view fname)
 {
     QString absPath = expandTempFontName(fname);
-    installTempFontFull(absPath);
+    return installTempFontFull(absPath);
 }

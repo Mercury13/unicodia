@@ -1622,11 +1622,23 @@ void uc::completeData()
 
 void uc::Font::load() const
 {
-    if (q.isLoaded)
+    if (q.installID != FONT_NOT_INSTALLED)
         return;
-    if (!fileName.empty())
-        installTempFontRel(fileName);
-    q.isLoaded = true;
+    if (!fileName.empty()) {
+        q.installID = installTempFontRel(fileName);
+        q.raw = std::make_unique<QRawFont>(expandTempFontName(fileName), 10);
+    } else {
+        q.installID = FONT_CHECKED;
+    }
+}
+
+
+bool uc::Font::doesSupportChar(char32_t x) const
+{
+    load();
+    if (!q.raw)
+        return true;
+    return q.raw->supportsCharacter(static_cast<uint>(x));
 }
 
 

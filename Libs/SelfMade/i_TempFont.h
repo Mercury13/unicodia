@@ -2,6 +2,6 @@
 
 #include <QString>
 
-void installTempFontFull(QString fname);
+intptr_t installTempFontFull(QString fname);
 QString expandTempFontName(std::string_view fname);
-void installTempFontRel(std::string_view fname);
+intptr_t installTempFontRel(std::string_view fname);
