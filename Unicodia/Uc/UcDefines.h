@@ -119,6 +119,7 @@ namespace uc {
         Vaii,
         Yiii,
         Zinh,
+        ZDeva,
         NN,
 
         //Afak  no chars

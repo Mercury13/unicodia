@@ -49,7 +49,7 @@ namespace uc {
         CANADIAN_ABORIGINAL,
         CHEROKEE,
         DEVANAGARI,
-        DEVANAGARI_SANS,
+        DEVANAGARI_SYSTEM,
         GLAGOLITIC,
         HANUNOO,
         HEBREW,

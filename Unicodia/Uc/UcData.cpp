@@ -12,6 +12,7 @@ using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
 
 constexpr uint16_t STUB_CIRCLE = 0x25CC;
+[[maybe_unused]] constexpr uint16_t STUB_DEVANAGARI= L'ठ';
 
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
@@ -31,7 +32,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Noto Sans Devanagari",       "NotoSansDevanagari-Regular.ttf" },    // Devanagari sans
+    { "Nirmala UI",                 {}, Ffg::NEED_STUB },    // Devanagari vedic
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
@@ -807,10 +808,10 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Zinh"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные"sv, {}, {},
         u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>"sv },
-//    { "ZDeva"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-//        u8"Devanagari technical"sv, {}, {},
-//        u8"Devanagari technical"sv,
-//                EcFont::DEVANAGARI_SANS },
+    { "ZDeva"sv, EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+        u8"Devanagari technical"sv, {}, {},
+        u8"Devanagari technical"sv,
+                EcFont::DEVANAGARI_SYSTEM },
 };
 
 
@@ -1065,7 +1066,7 @@ constinit const uc::Block uc::blocks[N_BLOCKS] {
             "Sundanese Supplement", u8"Сунданский дополнительный",
             {}, EcScript::Sund },
     { 0x1CD0, 0x1CFF,
-            "Vedic Extensions", u8"Ведические символы", {}, EcScript::Deva },
+            "Vedic Extensions", u8"Ведические символы", {}, EcScript::ZDeva },
     { 0x1D00, 0x1D7F,
             "Phonetic Extensions", u8"Фонетические расширения" },
     { 0x1D80, 0x1DBF,
@@ -1697,8 +1698,6 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
             break;
         return { QChar(STUB_CIRCLE) + str::toQ(subj.ch32()), style };
     case EcCategory::SEPARATOR_SPACE:
-        //return "][" + str::toQ(subj.ch32()) + "[";
-        //return "||" + str::toQ(subj.ch32()) + "||";
         if (isTrueSpace()) {
             return { QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏'), style };
         }
@@ -1729,7 +1728,7 @@ QString uc::Cp::osProxy() const
 
 uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
 {
-    if (ecScript != EcScript::NONE)
+    if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
         return ecScript;
     hint = blockOf(subj, hint);
     return hint->ecScript;
