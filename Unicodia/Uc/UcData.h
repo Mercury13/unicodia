@@ -67,6 +67,7 @@ namespace uc {
         MANDAIC,
         MEETEI,
         MONGOLIAN,
+        MYANMAR,
         OLCHIKI,
         RUNIC,
         SAMARITAN,

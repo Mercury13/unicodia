@@ -45,6 +45,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
+    { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
@@ -623,11 +624,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Mymr"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бирманская"sv, u8"XI век"sv,
         u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. Согласная буква означает слог с «ə». "sv
-                u8"Чтобы поставить другую гласную, используются огласовки, чтобы убрать\u00A0— знак «вирама», которая по-бирмански называется "sv
-                u8"«а-сат».</p>"sv
-            u8"<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "sv
-                u8"прямая линия может разрезать лист по жилкам.</p>" },
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. Согласная буква означает слог с «ə». "
+                "Чтобы поставить другую гласную, используются огласовки, чтобы убрать\u00A0— знак «вирама», которая по-бирмански называется "
+                "«а-сат».</p>"
+            "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "
+                "прямая линия может разрезать лист по жилкам.</p>"sv,
+            EcFont::MYANMAR },
     { "Nkoo"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Нко"sv, u8"1949"sv,
         u8"языки манден <i>(Западная Африка)</i>"sv,
