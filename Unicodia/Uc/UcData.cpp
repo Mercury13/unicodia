@@ -46,6 +46,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
+    { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
@@ -634,12 +635,13 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Нко"sv, u8"1949"sv,
         u8"языки манден <i>(Западная Африка)</i>"sv,
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
-            u8"«N’ko» означает «я говорю».</p>"sv },
+            "«N’ko» означает «я говорю».</p>"sv,
+            EcFont::NKO },
     { "Ogam"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
         u8"Огамическая"sv, u8"IV век"sv,
         u8"древнеирландский, пиктский"sv,
         u8"<p>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X века. "
-                "Заодно в ходу была латиница, потому есть мнение, что это тайнопись. "
+                "Заодно в ходу была [[pop_scr:Latn|латиница]], потому есть мнение, что это тайнопись. "
                 "Письменность приспособлена под зарубки на палках и досках. "
                 "Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</p>" },
     { "Olck"sv, EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
