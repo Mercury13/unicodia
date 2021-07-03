@@ -27,6 +27,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90 },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
+    { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
@@ -319,7 +320,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Батакская"sv, u8"≈1300"sv,
         u8"батакские <i>(Суматра)</i>"sv,
         u8"<p>Происходит от брахми и мало чем отличается от других абугид Юго-Восточной Азии. Гласная по умолчанию «а». "
-                "Практически не используется, заменена латиницей.</p>"sv },
+                "Практически не используется, заменена латиницей.</p>"sv,
+                EcFont::BATAK },
     { "Beng"sv, EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бенгальская"sv, u8"XV век"sv,
         u8"бенгальский, ассамский, санскрит"sv,
