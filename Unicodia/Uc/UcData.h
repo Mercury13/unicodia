@@ -56,6 +56,7 @@ namespace uc {
         CHEROKEE,
         DEVANAGARI,
         DEVANAGARI_SYSTEM,
+        GEORGIAN,
         GLAGOLITIC,
         HANUNOO,
         HEBREW,

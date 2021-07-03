@@ -34,6 +34,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
     { "Nirmala UI",                 {}, Ffg::NEED_STUB },    // Devanagari vedic
+    { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
@@ -420,9 +421,10 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Geor"sv, EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Грузинская"sv, u8"≈V век"sv,
         u8"грузинский, мегрельский и другие картвельские"sv,
-        u8"<p>Достоверно неизвестно, когда создана грузиница и что было прототипом. "sv
+        u8"<p>Достоверно неизвестно, когда создана грузиница и что было прототипом. "
                 "Распространённая версия, что грузинский алфавит создан создателем [[pop_scr:Armn|армянского]] Месропом Маштоцем, "
-                "отметается учёными.</p>"sv },
+                "отметается учёными.</p>"sv,
+                EcFont::GEORGIAN },
     { "Glag"sv, EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Глаголица"sv, u8"IX век"sv,
         u8"древнеславянский"sv,
