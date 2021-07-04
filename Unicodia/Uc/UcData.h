@@ -5,7 +5,7 @@
 
 // Qt
 #include <QFont>
-#include <QRawFont>
+#include <QFontDatabase>
 
 // Misc
 #include "u_TypedFlags.h"
@@ -101,7 +101,6 @@ namespace uc {
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
             intptr_t installID = FONT_NOT_INSTALLED;
-            std::unique_ptr<QRawFont> raw;
         } q {};
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
@@ -144,6 +143,7 @@ namespace uc {
     struct Script
     {
         std::string_view id;
+        QFontDatabase::WritingSystem qtCounterpart;
         EcScriptType ecType;
         EcLangLife ecLife;
         EcWritingDir ecDir;
