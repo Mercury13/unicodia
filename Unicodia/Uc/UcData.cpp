@@ -1819,7 +1819,13 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 
 bool uc::Cp::isGraphical() const
 {
-    /// @todo [tofu] Check for LTR tags
+    // These tags are also non-graphical
+    switch (subj.ch32()) {
+    case 0x200E:    // LTR mark
+    case 0x200F:    // RTL mark
+        return true;
+    default:;
+    }
     return bidiClass().isGraphical;
 }
 
