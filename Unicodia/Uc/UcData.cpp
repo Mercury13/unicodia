@@ -23,6 +23,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [tofu] 11FB0, One char of Lisu outside BMP
+    /// @todo [tofu] Kannada in Win7, need another font
     { FAMILY_DEFAULT,               {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
@@ -255,6 +256,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Zyyy"sv, QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
+    /// @todo [tofu, P1] W7 no font at all
     { "Adlm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Адлам"sv, u8"конец 1980-х"sv,
@@ -262,21 +264,23 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Фулá\u00A0— кочевники, антропологически средние между европейцами и неграми, и самые ярые проповедники ислама "
                 "в западной Африке.</p>"
             "<p>Алфавит придуман братьями Ибрагима и Абдулайе Барри, чтобы лучше передавать языки фулá, чем латиница или арабский. "
-                "Новая письменность прижилась, и её учат в школах Гвинеи, Либерии и других стран, локализован Android.</p>"sv
-            "<p>Алфавит назван по первым четырём буквам: A, D, L, M. "sv
+                "Новая письменность прижилась, и её учат в школах Гвинеи, Либерии и других стран, локализован Android.</p>"
+            "<p>Алфавит назван по первым четырём буквам: A, D, L, M. "
                 "Эти буквы означают «Alkule Dandayɗe Leñol Mulugol»\u00A0— «алфавит, защищающий народы от исчезновения».</p>"
             "<p>До этого были ещё две неудачных попытки придумать письменность фулá, не описанных в Юникоде: "
                 "фула Дита (1936, вдохновлена доарабской культурой) и фула Ба (1963). "
                 "Иногда использовался волоф\u00A0— сильно видоизменённый арабский шрифт. "
                 "Основная же письменность\u00A0— латиница.</p>"sv },
+    /// @todo [tofu, P1] W7/10 no font at all
     { "Aghb"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Агванская"sv, u8"II век до н.э."sv,
         u8"агванский <i>(язык Кавказской Албании)</i>"sv,
-        u8"<p>Считается, что создана Месропом Маштоцем, создателем армянского алфавита\u00A0— впрочем, это не так: "sv
-                u8"Маштоц жил 362–440, и непонятно, какова была его роль. "sv
-                u8"Упоминалась с конца XIX века. Окончательно открыта в 1937 году советскими арменоведами. "sv
-                u8"Первая расшифровка вышла в 2009 году.</p>"sv },
+        u8"<p>Считается, что создана Месропом Маштоцем, создателем армянского алфавита\u00A0— впрочем, это не так: "
+                "Маштоц жил 362–440, и непонятно, какова была его роль. "
+                "Упоминалась с конца XIX века. Окончательно открыта в 1937 году советскими арменоведами. "
+                "Первая расшифровка вышла в 2009 году.</p>"sv },
+    // Ahom OK, installed Google Noto font
     { "Ahom"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ахом"sv, u8"XIII век"sv,
@@ -285,6 +289,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "К XIX веку язык окончательно заместился ассамским с бенгальским письмом. Возрождается с 1954 года, "
                 "в письменность добавлены десятичные цифры, не имеющие исторического обоснования.</p>"sv,
                 EcFont::AHOM },
+    /// @todo [tofu, BMP] Real troubles, even W10 + Noto cannot display those chars
     { "Arab"sv, QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Арабская"sv, u8"IV—VI век"sv,
@@ -296,22 +301,25 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "sv
                 u8"Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
             EcFont::ARABIC },
+    /// @todo [tofu, P1] No font at all
     { "Armi"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Имперская арамейская"sv, u8"VII в. до н.э."sv,
         u8"имперский арамейский <i>(также канцелярский арамейский\u00A0— язык Персии 500—329 до н.э.)</i>"sv,
-        u8"<p>Использовался в Ахеменидской империи как книжный язык. Был кодифицирован настолько, что крайне сложно опознать "sv
-                u8"время и место конкретного документа. С завоеванием Персии Александром Македонским началась "sv
+        u8"<p>Использовался в Ахеменидской империи как книжный язык. Был кодифицирован настолько, что крайне сложно опознать "
+                u8"время и место конкретного документа. С завоеванием Персии Александром Македонским началась "
                 u8"фрагментация языка и дальнейшее формирование сирийских языков (предков арабского) и иудейских (предков иврита).</p>"sv },
+    /// @todo [tofu, BMP] Someone installed Noto Armenian, and it’s not enough, and it’s ugly!
     { "Armn"sv, QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Армянская"sv, u8"405"sv,
         u8"армянский"sv,
-        u8"<p>Изобретён учёным и священником Месропом Маштоцем (362—440). Непонятно, брался ли какой-то алфавит за основу "sv
-                u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Аримении. "sv
-                u8"В XII веке добавились буквы Օ и Ֆ.</p>"sv
-            u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "sv
+        u8"<p>Изобретён учёным и священником Месропом Маштоцем (362—440). Непонятно, брался ли какой-то алфавит за основу "
+                u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Аримении. "
+                u8"В XII веке добавились буквы {{sm|Օ}} и {{sm|Ֆ}}.</p>"
+            u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "
                 u8"манихейской вязи.</p>"sv },
+    // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Балийская"sv, u8"≈1000"sv,
@@ -319,6 +327,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv,
                 EcFont::BALINESE },
+    /// @todo [tofu, BMP] Google Noto Font OK, but check A6F0 and F1, possible troubles with marks
     { "Bamu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум"sv, u8"1895—1910"sv,
@@ -328,6 +337,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Пришедшие в 1918 французы выгнали Нджойю и перевели язык на латиницу. В 2007 начат проект по возрождению, "
                 "прогресс незначителен. Более ранние художества Нджойи можно увидеть в дополнительных плоскостях Юникода.</p>"sv,
                 EcFont::BAMUM },
+    // Batak OK, installed Google Noto font
     { "Batk"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Батакская"sv, u8"≈1300"sv,
@@ -335,11 +345,13 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Происходит от брахми и мало чем отличается от других абугид Юго-Восточной Азии. Гласная по умолчанию «а». "
                 "Практически не используется, заменена латиницей.</p>"sv,
                 EcFont::BATAK },
+    /// @todo [tofu, BMP] Several tofu of 2009+
     { "Beng"sv, QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бенгальская"sv, u8"XV век"sv,
         u8"бенгальский, ассамский, санскрит"sv,
         u8"<p>Относится к северной ветви индийского письма. Гласная по умолчанию не «а», как в деванагари, а «о».</p>"sv },
+    /// @todo [tofu, BMP] Bopomofo, even main block
     { "Bopo"sv, QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бопомофо (чжуинь)"sv, u8"1918"sv,
@@ -350,6 +362,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ввода в мобильный телефон, поиска иероглифов в словарях по произношению.</p>"
             "<p>В 2007 на Тайване поступила в продажу модель смартфона BlackBerry, поддерживавшая ввод только через пиньинь, "
                 "она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</p>"sv },
+    /// @todo [semi-tofu, BMP] Braille probably OK, Windows has a good font, but which one?
     { "Brai"sv, QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::TECHNICAL,
         u8"Шрифт Брайля"sv, u8"1824"sv, {},
@@ -361,6 +374,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ощупью, и совершенно непригодно для слепого, читающего много. Брайль сократил матрицу, воспользовавшись двоичным кодом.</p>"
             "<p>Шрифт Брайля поставил реабилитацию слепых на промышленные рельсы: легко сделать устройство для тиснения Брайлем, "
                 "он не бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.</p>"sv },
+    // Buginese OK, installed Google Noto font
     { "Bugi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бугийская (лонтара)"sv, u8"XVII век"sv,
@@ -368,6 +382,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а»."
             "Со времён голландской колонизации заменяется латиницей.</p>"sv,
                 EcFont::BUGINESE },
+    // Buhid OK, installed Google Noto font
     { "Buhd"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
@@ -378,14 +393,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
                 "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''</p>",
                 EcFont::BUHID },
+    // Canadian syllabics OK, installed Google Noto font
     { "Cans"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
-        u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "sv
+        u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "
                 "ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. "
                 "Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}.</p>"sv,
                 EcFont::CANADIAN_ABORIGINAL },
+    /// @todo [tofu, BMP] Cham — no font at all
     { "Cham"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Чамская"sv, u8"IV век"sv,
@@ -394,6 +411,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "дописывается огласовка. Но у чамов исчез знак «вирама» (убрать гласную), вместо этого используется особая форма согласной "
                 "с длинным хвостом.</p>"
             "<p>Большинство чамов исповедуют ислам и пишут арабицей, лишь некоторые чамы Вьетнама используют чамское письмо.</p>"sv },
+    // Cherokee OK, installed Google Noto font. Need it, W7 has no 2014 extensions.
     { "Cher"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Чероки"sv, u8"1821"sv,
@@ -405,27 +423,30 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"среди индейцев, к 1830 грамотны были 90% чероки.</p>"sv
             u8"<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.</p>",
             EcFont::CHEROKEE },
+    /// @todo [tofu] 2C80 block is not covered at all under W7
     { "Copt"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Коптская"sv, u8"II век"sv,
         u8"коптский"sv,
         u8"<p>Происходит из греческого. Используется коптами (египетскими христианами) как богослужебный. "
                 "Общаются копты по-арабски, как разговорный коптский умер от XVII до XIX века.</p>"sv },
+    /// @todo [tofu] Troubles with some rare letters, what to do?
     { "Cyrl"sv, QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Кириллица"sv, u8"конец IX века"sv,
         u8"русский, украинский, белорусский, русинский, болгарский, македонский, сербохорватский (Сербия), "sv
             u8"казахский, киргизский, таджикский, языки народов России"sv,
-        u8"<p>До 900 года византийские монахи Кирилл и Мефодий придумали славянскую письменность; неизвестно, была ли это кириллица. "sv
+        u8"<p>До 900 года византийские монахи Кирилл и Мефодий придумали славянскую письменность; неизвестно, была ли это кириллица. "
                 u8"Прообразом кириллицы стало византийское письмо унциал для греческого языка, с добавлением звуков, отсутствующих в греческом. "
-                u8"Старшинство кириллицы и глаголицы (появившейся тогда же) спорно, большинство учёных считают, что "sv
-                u8"глаголицу создал Кирилл, а кириллицу\u00A0— его ученик Климент Охридский, работавший в Болгарии.</p>"sv
-            u8"<p>Кириллица распространилась среди южных славян и проникла на Русь с крещением. "sv
-                u8"В странах, попавших под влияние Рима, кириллицу прямо запрещали.</p>"sv
-            u8"<p>Современная кириллица восходит к гражданскому шрифту, введённому Петром\u00A0I. Шрифт стал компромиссом между сторонниками "sv
-                u8"традиций и западниками.</p>"sv
-            u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "sv
+                u8"Старшинство кириллицы и глаголицы (появившейся тогда же) спорно, большинство учёных считают, что "
+                u8"глаголицу создал Кирилл, а кириллицу\u00A0— его ученик Климент Охридский, работавший в Болгарии.</p>"
+            u8"<p>Кириллица распространилась среди южных славян и проникла на Русь с крещением. "
+                u8"В странах, попавших под влияние Рима, кириллицу прямо запрещали.</p>"
+            u8"<p>Современная кириллица восходит к гражданскому шрифту, введённому Петром\u00A0I. Шрифт стал компромиссом между сторонниками "
+                u8"традиций и западниками.</p>"
+            u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "
                 u8"Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
+    /// @todo [tofu] Main block OK, but Vedic is a read PitA.
     { "Deva"sv, QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
