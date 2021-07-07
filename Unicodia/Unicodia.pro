@@ -26,6 +26,7 @@ SOURCES += \
     ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
     FmPopup.cpp \
+    Uc/FontMatch.cpp \
     Uc/UcAuto.cpp \
     Uc/UcData.cpp \
     Wiki.cpp \
@@ -44,6 +45,7 @@ HEADERS += \
     FmMain.h \
     FmPopup.h \
     Skin.h \
+    Uc/FontMatch.h \
     Uc/UcAutoCount.h \
     Uc/UcData.h \
     Uc/UcDefines.h \

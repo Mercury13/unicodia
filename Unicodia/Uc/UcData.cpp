@@ -3,15 +3,17 @@
 // Qt
 #include <QFontDatabase>
 
-// Misc. data
+// Libs
 #include "i_TempFont.h"
 #include "u_Qstrings.h"
 #include "u_Iterator.h"
+#include "Skin.h"
 
 using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
 
 constexpr uint16_t STUB_CIRCLE = 0x25CC;
+// Just for checking what to do with font, as we’ve got problems with Vedic extensions.
 [[maybe_unused]] constexpr uint16_t STUB_DEVANAGARI= L'ठ';
 
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
@@ -21,7 +23,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [tofu] 11FB0, One char of Lisu outside BMP
-    { "Cambria"sv,                  {} },
+    { FAMILY_DEFAULT,               {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
@@ -497,7 +499,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "sv
                 u8"считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "sv
                 u8"официальным стал в 1945.</p>"sv },
-    { "Hani"sv, QFontDatabase::SimplifiedChinese,       // Special rules for hieroglyphs, SimChi triggers them
+    { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Китайские иероглифы"sv, u8"около 2000 до н.э."sv,
         u8"китайский, японский, ранее вьетнамский и корейский"sv,
@@ -891,7 +893,6 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Devanagari technical"sv,
                 EcFont::DEVANAGARI_SYSTEM },
 };
-
 
 
 constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {

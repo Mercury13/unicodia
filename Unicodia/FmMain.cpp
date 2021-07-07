@@ -140,7 +140,10 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
-CharsModel::CharsModel(QWidget* aOwner) : owner(aOwner), rows(NCOLS) {}
+CharsModel::CharsModel(QWidget* aOwner) :
+    owner(aOwner),
+    match(str::toQ(FAMILY_DEFAULT)),
+    rows(NCOLS) {}
 
 
 int CharsModel::rowCount(const QModelIndex&) const
@@ -280,7 +283,9 @@ void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
 
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
-      ui(new Ui::FmMain), model(this), charsDelegate(*this)
+      ui(new Ui::FmMain), model(this),
+      fontBig(str::toQ(FAMILY_DEFAULT), FSZ_BIG),
+      charsDelegate(*this)
 {
     ui->setupUi(this);
 
@@ -610,7 +615,15 @@ void FmMain::showCp(MaybeChar ch)
         drawSampleWithQt(*ch);
 
         // OS char
-        ui->lbOs->setText(ch->osProxy());
+        auto font = model.match.sysFontFor(
+                    ch.code, ch->scriptEx(hint).qtCounterpart, FSZ_BIG);
+        if (font) {
+            ui->lbOs->setFont(*font);
+            ui->lbOs->setText(ch->osProxy());
+        } else {
+            ui->lbOs->setFont(fontBig);
+            ui->lbOs->setText("?");
+        }
 
         // Text
         // Header

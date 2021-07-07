@@ -12,6 +12,9 @@
 #include "u_Vector.h"
 #include "u_TinyOpt.h"
 
+// Project-local
+#include "FontMatch.h"
+
 // Forms
 #include "FmPopup.h"
 
@@ -87,6 +90,8 @@ class CharsModel : public QAbstractTableModel
 {
 public:
     QWidget* const owner;
+    FontMatch match;
+
     CharsModel(QWidget* aOwner);
 
     int rowCount(const QModelIndex&) const override;
@@ -132,6 +137,7 @@ private:
     CharsModel model;
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup2> popup;
+    QFont fontBig;
     mutable const uc::Block* hint = &uc::blocks[0];
     mutable const uc::Block* hint2 = &uc::blocks[0];
 

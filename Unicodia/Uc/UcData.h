@@ -314,6 +314,8 @@ namespace uc {
         const BidiClass& bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
         EcScript ecScriptEx(const Block*& hint) const;
+        const Script& scriptEx(const Block*& hint) const
+            { return scriptInfo[static_cast<int>(ecScriptEx(hint))]; }
         const Font& font(const Block*& hint) const
             { return scriptInfo[static_cast<int>(ecScriptEx(hint))].font(); }
         SampleProxy sampleProxy(const Block*& hint) const;
@@ -330,6 +332,9 @@ namespace uc {
 
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
+
+    // We’ll use this WS for Hani, we could take Japanese as well
+    static constexpr auto WS_HANI = QFontDatabase::SimplifiedChinese;
 
     void completeData();
     const Block* blockOf(char32_t subj, const Block* hint);
