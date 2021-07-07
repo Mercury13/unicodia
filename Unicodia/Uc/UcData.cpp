@@ -446,7 +446,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"традиций и западниками.</p>"
             u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "
                 u8"Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
-    /// @todo [tofu] Main block OK, but Vedic is a read PitA.
+    /// @todo [tofu, BMP] Main block OK, but Vedic is a read PitA.
     { "Deva"sv, QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
@@ -457,12 +457,14 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "<nobr>ка {{sm|क}} + и {{sm| ि}} = ки {{sm|कि}}</nobr>. "
                 "Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv,
                 EcFont::DEVANAGARI },
+    /// @todo [tofu, BMP] 135D, 5E tofu; 5F strange thing; do we have anything besides Nyala?
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские"sv,
-        u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII веке. Геэз всё ещё используется эфиопскими христианами "sv
-                u8"как литургический\u00A0— а письменность распространилась на другие языки Эфиопии.</p>"sv },
+        u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII веке. Геэз всё ещё используется эфиопскими христианами "
+                "как литургический\u00A0— а письменность распространилась на другие языки Эфиопии.</p>"sv },
+    // Georgian OK, installed Google Noto font
     { "Geor"sv, QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Грузинская"sv, u8"≈V век"sv,
@@ -471,6 +473,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Распространённая версия, что грузинский алфавит создан создателем [[pop_scr:Armn|армянского]] Месропом Маштоцем, "
                 "отметается учёными.</p>"sv,
                 EcFont::GEORGIAN },
+    // Glagolitic OK, installed Google Noto font
     { "Glag"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Глаголица"sv, u8"IX век"sv,
@@ -480,6 +483,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "одно и написали другое), где глаголицу заменили кириллицей.</p>"
             "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv,
             EcFont::GLAGOLITIC },
+    /// @todo [tofu, BMP] Even first chars of Greek are bad, maybe we have smth
     { "Grek"sv, QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Греческая"sv, u8"IX век до н.э."sv,
@@ -492,12 +496,14 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Названия букв изменились мало, но перестали что-то значить: <i>алеф=бык</i>\u00A0→ <i>альфа</i>.</p>"sv
             u8"<p>Из греческого письма пошли [[pop_scr:Latn|латиница]], [[pop_scr:Cyrl|кириллица]], "
                 "[[pop_scr:Copt|коптский]] и, возможно, [[pop_scr:Armn|армянский]] и [[pop_scr:Runr|руны]].</p>"sv },
+    /// @todo [tofu] Sorry have tofu in W7, install a font
     { "Gujr"sv, QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гуджарати"sv, u8"X–XVI век"sv,
         u8"гуджаратский <i>(запад Индии)</i>"sv,
-        u8"<p>Появился из [[pop_scr:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "sv
-                u8"Гласная по умолчанию «ə».</p>"sv },
+        u8"<p>Появился из [[pop_scr:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "
+                "Гласная по умолчанию «ə».</p>"sv },
+    /// @todo [tofu, BMP] AFAIK no tofu even in W7, find some font
     { "Guru"sv, QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гурмукхи"sv, u8"XVI век"sv,
@@ -511,15 +517,19 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "монолитными символами.</p>"
             "<p>Гурмукхи сильно связан с сикхизмом, название означает «из уст гуру». Пенджабские мусульмане используют "
                 "шахмукхи («из уст шаха»), разновидность арабского алфавита.</p>"sv },
+    /// @todo [tofu, BMP] Jamo & compatible jamo OK (Batang), install some font
+    /// @todo [tofu, BMP] Jamo extended-A/B BAD, really need a font
+    /// @todo [tofu, BMP] Basic syllables OK (Batang)
     { "Hang"sv, QFontDatabase::Korean,
         EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Хангыль"sv, u8"1443"sv,
         u8"корейский"sv,
         u8"<p>Хангыль (мужской род!)\u00A0— корейское алфавитно-слоговое письмо. В нём 51 чамо (буква) объединяется в группы приблизительно по слогам.</p>"
         u8"<p>Придуман группой учёных под руководством царя Седжона Великого, считавшего, что [[pop_scr:Hani|китайские иероглифы]] "
-                "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "sv
-                u8"считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "sv
-                u8"официальным стал в 1945.</p>"sv },
+                "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "
+                "считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "
+                "официальным стал в 1945.</p>"sv },
+    /// @todo [tofu, BMP] Even radicals in W7 are bad, install a font
     { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Китайские иероглифы"sv, u8"около 2000 до н.э."sv,
@@ -531,18 +541,20 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "друг друга хоть на письме;<br>"
             "• культ традиции\u00A0— даже сейчас китайцы довольно консервативны;<br>"
             "• неплохо действовавшая меритократия\u00A0— тысячи знаков и умение их красиво писать выявляли обучаемых людей.<p>"
-            "<p>В III\u00A0веке иероглифы проникли в Японию. У многих иероглифов есть как китайское, так и японское прочтение: "sv
+            "<p>В III\u00A0веке иероглифы проникли в Японию. У многих иероглифов есть как китайское, так и японское прочтение: "
                 "например, {{sm|月}} (луна) имеет китайские прочтения «гэцу» и «гацу», и японское «цуки». "
-                "Как читать\u00A0— определяется контекстом: {{sm|月曜日}}=гэцуо:би (понедельник), {{sm|月見}}=цукими (любование луной).</p>"sv
-            "<p>В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не кодирует: тонкости написания передаются шрифтами, "sv
-                "и даже если шрифт неверный, понятно, о чём речь.</p>"sv
+                "Как читать\u00A0— определяется контекстом: {{sm|月曜日}}=гэцуо:би (понедельник), {{sm|月見}}=цукими (любование луной).</p>"
+            "<p>В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не кодирует: тонкости написания передаются шрифтами, "
+                "и даже если шрифт неверный, понятно, о чём речь.</p>"
             "<p>Вьетнам отказался от иероглифов в 1945. Северная Корея не использует иероглифы, Южная использует крайне редко.</p>"sv },
+    // Hanunoo OK, installed Google Noto font
     { "Hano"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Хануноо"sv, u8"≈1300"sv,
         u8"филиппинские горные народы"sv,
         u8"<p>Алфавит восходит к брахми и похож на тагальский.</p>"sv,
             EcFont::HANUNOO },
+    /// @todo [tofu, BMP] 05EF in W7, maybe Hebrew umlauts
     { "Hebr"sv, QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
