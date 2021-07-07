@@ -222,6 +222,7 @@ namespace uc {
         std::u8string_view locShortName;
         std::u8string_view locId;
         std::u8string_view locDescription;
+        bool isGraphical;
         mutable unsigned nChars = 0;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
@@ -325,6 +326,8 @@ namespace uc {
         bool isTrueSpace() const
                 { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                           ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+        ///  @return [+] is graphical, even space [-] is control/formatting
+        bool isGraphical() const;
         constexpr int plane() const { return subj.val() >> 16; }
     };
 

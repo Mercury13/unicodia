@@ -528,37 +528,56 @@ namespace {
         }
     }
 
+    using StrCache = char[100];
 
     template <class T>
-    std::string_view idOf(const T& value, std::string&) { return value.id; }
+    std::string_view idOf(const T& value, StrCache&) { return value.id; }
 
     template <>
-    std::string_view idOf(const uc::Block& value, std::string& cache)
+    std::string_view idOf(const uc::Block& value, StrCache& cache)
     {
-        cache = std::to_string(value.index());
+        auto beg = std::begin(cache);
+        auto r = std::to_chars(beg, std::end(cache), value.index());
+        return { beg, r.ptr };
+    }
+
+    struct FontLink {
+        QString family;
+        char32_t cp;
+        QFontDatabase::WritingSystem ws;
+    };
+
+    template <>
+    std::string_view idOf(const FontLink& value, StrCache& cache)
+    {
+        snprintf(cache, std::size(cache), "%d/%d", (int)value.cp, (int)value.ws);
         return cache;
     }
 
     template <class T>
-    std::u8string_view locNameOf(const T& value) { return value.locName; }
+    inline void appendVal(QString& text, const T& value)
+        { str::append(text, value.locName); }
 
     template<>
-    std::u8string_view locNameOf(const uc::BidiClass& value)
-        { return value.locShortName; }
+    inline void appendVal(QString& text, const uc::BidiClass& value)
+        { str::append(text, value.locShortName); }
+
+    template<>
+    inline void appendVal(QString& text, const FontLink& value)
+        { text += value.family.toHtmlEscaped(); }
 
     template <class T, class Name1>
     inline void appendValuePopup(
             QString& text, const T& value, Name1 name, const char* scheme)
     {
-        std::string cache;
+        StrCache cache, buf;
         str::append(text, name);
-        char buf[100];
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
                  ": <a href='%s:%.*s' style='color:" CNAME_LINK_POPUP "'>",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
-        str::append(text, locNameOf(value));
+        appendVal(text, value);
         str::append(text, "</a>");
     }
 
@@ -615,14 +634,22 @@ void FmMain::showCp(MaybeChar ch)
         drawSampleWithQt(*ch);
 
         // OS char
-        auto font = model.match.sysFontFor(
-                    ch.code, ch->scriptEx(hint).qtCounterpart, FSZ_BIG);
-        if (font) {
-            ui->lbOs->setFont(*font);
-            ui->lbOs->setText(ch->osProxy());
-        } else {
+        std::optional<QFont> font = std::nullopt;
+        QString osProxy = ch->osProxy();
+        QFontDatabase::WritingSystem ws = QFontDatabase::Any;
+        if (osProxy.isEmpty()) {
             ui->lbOs->setFont(fontBig);
-            ui->lbOs->setText("?");
+            ui->lbOs->setText({});
+        } else {
+            ws = ch->scriptEx(hint).qtCounterpart;
+            font = model.match.sysFontFor(ch.code, ws, FSZ_BIG);
+            if (font) {
+                ui->lbOs->setFont(*font);
+                ui->lbOs->setText(osProxy);
+            } else {
+                ui->lbOs->setFont(fontBig);
+                ui->lbOs->setText("?");
+            }
         }
 
         // Text
@@ -669,6 +696,13 @@ void FmMain::showCp(MaybeChar ch)
             hint2 = uc::blockOf(ch->subj, hint2);
             sp.sep();
             appendValuePopup(text, *hint2, u8"Блок", "pop_blk");
+
+            // Font
+            if (font) {
+                sp.sep();
+                FontLink lnk { font->family(), ch.code, ws };
+                appendValuePopup(text, lnk, u8"Системный шрифт", "pop_font");
+            }
 
             // HTML
             sp.sep();
