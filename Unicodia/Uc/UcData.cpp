@@ -718,6 +718,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "
                 "прямая линия может разрезать лист по жилкам.</p>"sv,
             EcFont::MYANMAR },
+    // NKo ok, installed Google noto font
     { "Nkoo"sv, QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Нко"sv, u8"1949"sv,
@@ -725,6 +726,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             "«N’ko» означает «я говорю».</p>"sv,
             EcFont::NKO },
+    /// @todo [semi-tofu, BMP] Windows has good Ogham font, find it
     { "Ogam"sv, QFontDatabase::Ogham,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
         u8"Огамическая"sv, u8"IV век"sv,
@@ -747,11 +749,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
         u8"ория <i>(Восточная Индия)</i>"sv,
-        u8"<p>Ори́я развилась из нагари (ранней формы деванагари без сплошной черты).</p>"sv
-                u8"<p>Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях\u00A0— чтобы не разрезать лист "sv
-                    u8"по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "sv
-                    u8"Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"sv
-                u8"<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv },
+        u8"<p>Ори́я развилась из нагари (ранней формы деванагари без сплошной черты).</p>"
+                "<p>Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях\u00A0— чтобы не разрезать лист "
+                    "по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "
+                    "Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"
+                "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv },
+    // Runes OK, installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Руны"sv, u8"I век"sv,
@@ -770,6 +773,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В 2014 году добавили три руны для записи современного английского, приписываемые Дж.\u00A0Толкину, "
                 "и пять рун с ларца Фрэнкса, реликвии VIII века.</p>"sv,
                 EcFont::RUNIC },
+    // Samaritan OK, installed Google Noto font
     { "Samr"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Самаритянская"sv, u8"около 600—200 до н.э.",
@@ -794,6 +798,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "пегон (местный вариант [[pop_scr:Arab|арабского]]); с XX века{{-}}[[pop_scr:Latn|латиницу]]. "
                 "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
                 EcFont::SUNDANESE },
+    /// @todo [tofu] Main Syriac OK with Google Noto, but rare Malayalam Syriac is a PitA.
     { "Syrc"sv, QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
