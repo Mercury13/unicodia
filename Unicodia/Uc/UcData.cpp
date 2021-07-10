@@ -56,7 +56,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Sundanese"sv,      "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB },
-    { "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
+    //{ "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
+    { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
@@ -804,10 +805,13 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Сирийская"sv, u8"I век",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
         u8"<p>Потомок арамейского алфавита, впоследствии развившийся в арабицу. Используется малыми семитскими народами.</p>"
-            "<p>Тот вид письма, которым написанны раннехристианские рукописи, известен под названием эстрангело (греч. στρονγύλη\u00A0— круглое). "
+            "<p>Тот вид письма, которым написанны раннехристианские рукописи (50–400), известен под названием эстрангело (греч. στρονγύλη\u00A0— круглое). "
                 "Раскол сирийской церкви на несториан и яковитов привёл к разделению языка и письменности на две формы: "
                 "восточносирийскую (несторианскую, халдейскую) и  западносирийскую (яковитскую, маронитскую). "
-                "В них используются разные почерки и огласовки.</p>"sv,
+                "В них используются разные почерки и огласовки.</p>"
+            "<p>В системе, скорее всего, найдётся эстрангело{{-}}он принят основным в западной историографии. "
+                "А вот с «Юникодией» для разнообразия поставляется западный вариант{{-}}его отлил дипломат и печатник Савари́ де Брев "
+                "(1560–1627), а довёл до компьютерного шрифта институт ''Beth Mardutho'' для издания Антиохийской Библии.</p>"sv,
                 EcFont::SYRIAC },
             /// @todo [describe] Another interesting script
     { "Tagb"sv, QFontDatabase::Any,
