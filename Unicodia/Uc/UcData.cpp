@@ -19,7 +19,6 @@ constexpr uint16_t STUB_CIRCLE = 0x25CC;
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
-    /// @todo [tofu] Syriac has tofu, check
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [tofu] 11FB0, One char of Lisu outside BMP
@@ -799,7 +798,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "пегон (местный вариант [[pop_scr:Arab|арабского]]); с XX века{{-}}[[pop_scr:Latn|латиницу]]. "
                 "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
                 EcFont::SUNDANESE },
-    /// @todo [tofu] Main Syriac OK with Google Noto, but rare Malayalam Syriac is a PitA.
+    // Syriac OK, Beth Mardutho made a nice font.
     { "Syrc"sv, QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
