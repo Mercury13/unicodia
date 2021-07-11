@@ -735,7 +735,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "
                 "прямая линия может разрезать лист по жилкам.</p>"sv,
                 EcFont::MYANMAR },
-    // NKo ok, installed Google noto font
+    // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo"sv, QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Нко"sv, u8"1949"sv,
