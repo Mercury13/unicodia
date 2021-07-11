@@ -497,7 +497,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "костяк согласных, а гласные играют роль окончаний: так, в арабском (тоже семитский) <i>джихадом</i> занимается <i>моджахед</i> "
                 "(или, точнее, <i>муджахид</i>).</p>"
             "<p>Греки добавили гласные звуки, и греческий\u00A0— первый известный истинный алфавит, кодирующий как согласные, так и гласные. "
-                "Названия букв изменились мало, но перестали что-то значить: <i>алеф=бык</i>\u00A0→ <i>альфа</i>.</p>"sv
+                "Названия букв изменились мало, но перестали что-то значить: <i>алеф=бык</i>\u00A0→ <i>альфа</i>.</p>"
             u8"<p>Из греческого письма пошли [[pop_scr:Latn|латиница]], [[pop_scr:Cyrl|кириллица]], "
                 "[[pop_scr:Copt|коптский]] и, возможно, [[pop_scr:Armn|армянский]] и [[pop_scr:Runr|руны]].</p>"sv },
     /// @todo [tofu] Sorry have tofu in W7, install a font
@@ -869,6 +869,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Необычно устроена запись тонов: согласные бывают в двух регистрах, ещё два знака {{sm|ᧈᧉ}} могут "
                 "приписываться к слогу в конце, итого 2·3=6 тонов.</p>",
                 EcFont::TAILUE },
+    /// @todo [tofu, P1] Aux. Tamil characters are still tofu
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тамильская"sv, u8"VI—IX век"sv,
