@@ -60,8 +60,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
-    { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
-    { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
+    { "Microsoft Tai Le",           {} },
+    { "Microsoft New Tai Lue",      {} },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
     { "MV Boli",                    {}, {}, {}, 110_pc },      // Thaana
     { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
@@ -814,13 +814,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "А вот с «Юникодией» для разнообразия поставляется западный вариант{{-}}его отлил дипломат и печатник Савари́ де Брев "
                 "(1560–1627), а довёл до компьютерного шрифта институт ''Beth Mardutho'' для издания Антиохийской Библии.</p>"sv,
                 EcFont::SYRIAC },
-            /// @todo [describe] Another interesting script
+    // Tagbanwa OK, installed Google Noto font
+            /// @todo [describe] Another interesting script            
     { "Tagb"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагбанва"sv, u8"≈1300"sv,
         u8"языки о. Палаван <i>(Филиппины)</i>"sv,
         u8"<p>Восходит к брахми и родственная с тагальской. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv,
                 EcFont::TAGBANWA },
+    // Old Tai Le OK, M$ has a good font
     { "Tale"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лы"sv, u8"≈1200"sv,
@@ -836,6 +838,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Дайцев в Китае ≈500 тыс. (2001), но язык быстро заменяется китайским и потому отнесён к уязвимым. "
                 "Ещё не более 500 тыс. разбросано по другим странам, они пользуются в основном [[pop_scr:Lana|ланной]].</p>"sv,
                 EcFont::TAILE },
+    // New Tai Lue OK, M$ has a good font
     { "Talu"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Новое письмо лы"sv, u8"1950-е"sv,
