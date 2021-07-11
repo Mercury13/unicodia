@@ -34,7 +34,7 @@ FontMatch::Fn::Fn(QString aFamily, int aPriority)
 
     // Modify font, create metrics
     testFont.setStyleStrategy(static_cast<QFont::StyleStrategy>(
-                QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality));
+                QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality | QFont::PreferAntialias));
 
     // Set supported writing systems
     auto wsList = QFontDatabase::writingSystems(family);
