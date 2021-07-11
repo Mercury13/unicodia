@@ -875,6 +875,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "К XIX\u00A0веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. "
                 "Есть современные попытки возродить байбайин.</p>"sv,
                 EcFont::TAGALOG },
+    // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa"sv, QFontDatabase::Thaana,
         EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Тана"sv, u8"XVIII век"sv,
