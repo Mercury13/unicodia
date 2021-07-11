@@ -65,6 +65,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
+    { "Ebrima",                     {} },                                       // Vai
     { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
 };
 
@@ -920,6 +921,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».</p>"sv
             u8"<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "sv
                 u8"За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>" },
+    // Vai OK, have good M$ font Ebrima
     { "Vaii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Ваи"sv, u8"≈1832"sv,
@@ -927,9 +929,10 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Письмо появилось около 1832 года. Разработал его Момолу Дувалу Букеле, полагают, что под влиянием "
                 "[[pop_scr:Cher|письма чероки]] (вместе с неграми в Либерию эмигрировали и индейцы, "
                 "один стал даже вождём ваи).</p>"
-            "<p>Одна из причин выживания ваи\u00A0— удачные знаки, применявшиеся и до этого в негритянской культуре. "
-                "Другая\u00A0— он использовался для торговли с голландцами и португальцами. "
-                "В 1962 году Университет Либерии добавил знаки для недостающих слогов.</p>"sv },
+            "<p>Одна из причин выживания ваи{{-}}удачные знаки, применявшиеся и до этого в негритянской культуре. "
+                "Другая{{-}}он использовался для торговли с голландцами и португальцами. "
+                "В 1962 году Университет Либерии добавил знаки для недостающих слогов.</p>"sv,
+                EcFont::VAI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,

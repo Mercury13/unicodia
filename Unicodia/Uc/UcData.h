@@ -97,6 +97,7 @@ namespace uc {
         TAMIL,
         THAANA,
         THAI,
+        VAI,
         YI,
         NN
     };
