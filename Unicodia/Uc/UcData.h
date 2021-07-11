@@ -102,7 +102,8 @@ namespace uc {
     };
 
     enum class Ffg {
-        NEED_STUB = 1
+        NEED_STUB = 1,
+        BOLD = 2
     };
 
     struct Font

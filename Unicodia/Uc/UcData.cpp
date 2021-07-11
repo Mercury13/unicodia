@@ -65,7 +65,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
-    { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
+    //{ "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
+    { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },
 };
 
 
@@ -1817,6 +1818,8 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         load();
         font.reset(new QFont(QString(), sizeAdjust.apply(size), QFont::Normal));
         font->setFamilies(toQList(family));
+        if (flags.have(Ffg::BOLD))
+            font->setBold(true);
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;
