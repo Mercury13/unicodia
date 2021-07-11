@@ -30,6 +30,19 @@ const T* findInArray(std::string_view needle, const T (&haystack)[N])
     return nullptr;
 }
 
+class Percent
+{
+public:
+    constexpr explicit Percent() = default;
+    constexpr explicit Percent(int x) : fValue(x) {}
+    constexpr int value() const { return fValue; }
+    constexpr int apply(int x) const { return x * fValue / 100; }
+private:
+    int fValue = 100;
+};
+
+constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
+
 namespace uc {
 
     enum class EcContinent {
@@ -95,7 +108,7 @@ namespace uc {
         std::string_view family, fileName;
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
-        int sizeAdjust = 100;
+        Percent sizeAdjust {};
 
         mutable struct Q {
             std::unique_ptr<QFont> table {};

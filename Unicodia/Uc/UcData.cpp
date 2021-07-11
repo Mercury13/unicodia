@@ -27,7 +27,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
-    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90 },
+    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
@@ -62,7 +62,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tai Le"sv,         "NotoSansTaiLe-Regular.ttf" },
     { "Noto Sans NewTaiLue"sv,      "NotoSansNewTaiLue-Regular.ttf" },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
-    { "MV Boli",                    {}, {}, {}, 110 },      // Thaana
+    { "MV Boli",                    {}, {}, {}, 110_pc },      // Thaana
     { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
 };
 
@@ -1786,7 +1786,7 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
     if (!font) {
         load();
         auto qFamily = str::toQ(family);
-        font.reset(new QFont(qFamily, size * sizeAdjust / 100, QFont::Normal));
+        font.reset(new QFont(qFamily, sizeAdjust.apply(size), QFont::Normal));
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;
