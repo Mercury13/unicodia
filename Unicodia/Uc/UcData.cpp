@@ -22,7 +22,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
-    /// @todo [tofu] 11FB0, One char of Lisu outside BMP
     /// @todo [tofu] Kannada in Win7, need another font
     { FAMILY_DEFAULT,               {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
@@ -679,6 +678,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
+    /// @todo [tofu, P1] 11FB0, what to do?
+    // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лису (алфавит Фрейзера)"sv, u8"1915"sv,
@@ -724,7 +725,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
                 "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
                 EcFont::MEETEI },
-    // Myanmar OK, W10 has Myanmar Text, W7 does not, installed Google Noto font
+    // Myanmar OK, W10 “Myanmar Text”, W7 does not, installed Google Noto font
     { "Mymr"sv, QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бирманская"sv, u8"XI век"sv,
