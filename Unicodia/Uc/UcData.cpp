@@ -50,6 +50,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
+    { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
@@ -717,7 +718,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "«а-сат».</p>"
             "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII века, когда распространилось письмо на пальмовых листьях: "
                 "прямая линия может разрезать лист по жилкам.</p>"sv,
-            EcFont::MYANMAR },
+                EcFont::MYANMAR },
     // NKo ok, installed Google noto font
     { "Nkoo"sv, QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -725,8 +726,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"языки манден <i>(Западная Африка)</i>"sv,
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             "«N’ko» означает «я говорю».</p>"sv,
-            EcFont::NKO },
-    /// @todo [semi-tofu, BMP] Windows has good Ogham font, find it
+                EcFont::NKO },
+    // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam"sv, QFontDatabase::Ogham,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
         u8"Огамическая"sv, u8"IV век"sv,
@@ -734,7 +735,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X века. "
                 "Заодно в ходу была [[pop_scr:Latn|латиница]], потому есть мнение, что это тайнопись. "
                 "Письменность приспособлена под зарубки на палках и досках. "
-                "Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</p>" },
+                "Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</p>"sv,
+                EcFont::OGHAM },
     { "Olck"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ол-чики"sv, u8"1925"sv,

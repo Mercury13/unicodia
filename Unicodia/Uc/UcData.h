@@ -83,6 +83,7 @@ namespace uc {
         MEETEI,
         MONGOLIAN,
         MYANMAR,
+        OGHAM,
         NKO,
         OLCHIKI,
         RUNIC,
