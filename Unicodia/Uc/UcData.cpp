@@ -65,8 +65,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
-    //{ "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
-    { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },
+    { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
 };
 
 
@@ -931,6 +930,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Одна из причин выживания ваи\u00A0— удачные знаки, применявшиеся и до этого в негритянской культуре. "
                 "Другая\u00A0— он использовался для торговли с голландцами и португальцами. "
                 "В 1962 году Университет Либерии добавил знаки для недостающих слогов.</p>"sv },
+    // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"И (носу)"sv, u8"1974 (слоговая)"sv,
