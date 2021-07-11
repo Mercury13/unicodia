@@ -5,6 +5,7 @@
 
 // Libs
 #include "i_TempFont.h"
+#include "u_Strings.h"
 #include "u_Qstrings.h"
 #include "u_Iterator.h"
 #include "Skin.h"
@@ -35,7 +36,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Nirmala UI",                 {}, Ffg::NEED_STUB },    // Devanagari vedic
+    { "Nirmala UI",                 {}, Ffg::NEED_STUB },                       // Devanagari vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
@@ -56,14 +57,14 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Sundanese"sv,      "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB },
-    //{ "Noto Sans Syriac Estrangela", "NotoSansSyriacEstrangela-Regular.ttf" },
-    { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },
+    { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },      // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },
     { "Microsoft New Tai Lue",      {} },
     { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
-    { "MV Boli",                    {}, {}, {}, 110_pc },      // Thaana
+    { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
+    { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
     { "Noto Sans Yi",               "NotoSansYi-Regular.ttf" },
 };
 
@@ -601,6 +602,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
                 "Стал основой для тайского и лаосского.</p>"sv },
+    /// @todo [tofu, BMP] Kannada, W7
     { "Knda"sv, QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Каннада"sv, u8"XIV век"sv,
@@ -608,6 +610,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». "
                 "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.</p>"sv },
+    // Lanna OK, W10 none, installed Google Noto font
     { "Lana"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
@@ -620,6 +623,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
             "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
                 EcFont::LANNA },
+    // Lao OK, W10 partial, installed SengBuhan font
     { "Laoo"sv, QFontDatabase::Lao,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лаосская"sv, u8"≈1350"sv,
@@ -633,6 +637,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>В Юникоде для пустого места над меткой принят пунктирный кружок; лаосцы традиционно используют косой крест, "
                 "в Юникод не попавший. Иногда в Юникоде для этого используют латинскую «x».</p>"sv,
                 EcFont::LAO },
+    /// @todo [tofu] Latin is very extensive, check it thoroughly
     { "Latn"sv, QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
@@ -646,6 +651,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "sv
                 u8"Латиница используется в математике, медицине, фонетике, программировании.</p>"sv
             u8"<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>" },
+    // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лепча (ронг)"sv, u8"≈1700"sv,
@@ -656,6 +662,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
                 "Между словами нет пробелов.</p>"sv,
                 EcFont::LEPCHA },
+    // Limbu OK, W10 none, installed Google Noto font
     { "Limb"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лимбу"sv, u8"≈1700"sv,
@@ -896,14 +903,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"правительство перешло на довольно некачественную латинскую транслитерацию. Новый президент Момун Абдул Гайюм восстановил тану, "
                 u8"и обе письменности используются параллельно.</p>"sv,
                 EcFont::THAANA },
+    // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai"sv, QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тайская"sv, u8"1283"sv,
         u8"тайский"sv,
-        u8"<p>Произошла из старокхмерского, который, в свою очередь, произошёл из брахми. "sv
-                u8"Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.</p>"sv
-            u8"<p>Гласная по умолчанию «а» в закрытых слогах и «о» в открытых: <font size='+2'>ช</font>=чо. Но буквы называются по словам: "
-                "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv },
+        u8"<p>Произошла из старокхмерского, который, в свою очередь, произошёл из брахми. "
+                "Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.</p>"
+            "<p>Гласная по умолчанию «а» в закрытых слогах и «о» в открытых: {{sm|ช}}=чо. Но буквы называются по словам: "
+                "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv,
+                EcFont::THAI },
     { "Tibt"sv, QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тибетская"sv, u8"≈650"sv,
@@ -1786,12 +1795,28 @@ bool uc::Font::doesSupportChar(char32_t) const
 }
 
 
+namespace {
+
+    QList<QString> toQList(std::string_view s)
+    {
+        auto strs = str::splitSv(s, ',');
+        QList<QString> r;
+        r.reserve(strs.size());
+        for (auto& v : strs) {
+            r.emplaceBack(str::toQ(v));
+        }
+        return r;
+    }
+
+}   // anon namespace
+
+
 const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
 {
     if (!font) {
         load();
-        auto qFamily = str::toQ(family);
-        font.reset(new QFont(qFamily, sizeAdjust.apply(size), QFont::Normal));
+        font.reset(new QFont(QString(), sizeAdjust.apply(size), QFont::Normal));
+        font->setFamilies(toQList(family));
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;

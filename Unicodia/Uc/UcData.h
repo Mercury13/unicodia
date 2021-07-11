@@ -96,6 +96,7 @@ namespace uc {
         TAILUE,
         TAMIL,
         THAANA,
+        THAI,
         YI,
         NN
     };
