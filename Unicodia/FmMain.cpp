@@ -762,6 +762,20 @@ namespace {
         wiki::run(eng, x);
     }
 
+    inline void appendHeader(QString& text, std::string_view x)
+    {
+        str::append(text, "<p><nobr><b>");
+        str::append(text, x);
+        str::append(text, "</b></nobr></p>");
+    }
+
+    template <int N>
+    inline void appendHeader(QString& text, char (&x)[N])
+    {
+        size_t len = strnlen(x, N);
+        appendHeader(text, std::string_view{ x, len });
+    }
+
     template <class T>
     inline void appendHeader(QString& text, const T& x)
     {
@@ -769,8 +783,7 @@ namespace {
         str::append(text, x.locName);
         str::append(text, "</b> ("sv);
         str::append(text, x.nChars);
-        str::append(text, " шт.)</nobr>");
-        str::append(text, "</p>");
+        str::append(text, " шт.)</nobr></p>");
     }
 
     void appendScript(QString& text, const uc::Script& x, bool isScript)
@@ -888,6 +901,10 @@ void FmMain::showPopup(
 
 namespace {
     const char8_t* STR_RANGE = u8"%04X…%04X";
+
+    template <class T>
+    inline auto fromChars(std::string_view s, T& v)
+        { return std::from_chars(s.data(), s.data() + s.size(), v); }
 }
 
 
@@ -926,6 +943,35 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 }
 
 
+void FmMain::showFonts(
+        char32_t cp, QFontDatabase::WritingSystem ws,
+        QWidget* widget, TinyOpt<QRect> rect)
+{
+    if (cp >= uc::N_CHARS || ws >= QFontDatabase::WritingSystemsCount)
+        return;
+    QString text;
+    char buf[50];
+    auto format = u8"Шрифты для U+%04X";
+    snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
+    appendHeader(text, buf);
+
+    auto fonts = model.match.allSysFonts(cp, ws, 15);
+    str::append(text, "<p>");
+    str::QSep sp(text, "<br>");
+    for (auto& v : fonts.lines) {
+        sp.sep();
+        str::append(text, u8"•\u00A0");
+        text += v.name;
+    }
+    if (fonts.hasMore) {
+        sp.sep();
+        str::append(text, u8"•\u00A0…");
+    }
+
+    popupText(text, widget, rect);
+}
+
+
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
@@ -940,8 +986,16 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
             showPopup(*script, widget, rect);
     } else if (scheme == "pop_blk"sv) {
         int iBlock = 0;
-        std::from_chars(target.data(), target.data() + target.length(), iBlock);
+        fromChars(target, iBlock);
         showPopup(uc::blocks[iBlock], widget, rect);
+    } else if (scheme == "pop_font"sv) {
+        auto sv = str::splitSv(target, '/');
+        if (sv.size() >= 2) {
+            unsigned int cp = 0, ws = 0;
+            fromChars(sv[0], cp);
+            fromChars(sv[1], ws);
+            showFonts(cp, static_cast<QFontDatabase::WritingSystem>(ws), widget, rect);
+        }
     }
 }
 

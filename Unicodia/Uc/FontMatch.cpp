@@ -148,3 +148,25 @@ std::optional<QFont> FontMatch::sysFontFor(
     }
     return std::nullopt;
 }
+
+
+FontList FontMatch::allSysFonts(
+        char32_t cp, QFontDatabase::WritingSystem writingSystem,
+        size_t maxCount)
+{
+    FontList r;
+    auto& ws = loadWs(writingSystem);
+    if (!ws.isSupported)
+        return r;
+
+    for (auto& fn : ws.fonts) {
+        if (fn->doesSupport(cp)) {
+            if (r.lines.size() >= maxCount) {
+                r.hasMore = true;
+                break;
+            }
+            r.lines.emplace_back(fn->family, fn->verbal.prio);
+        }
+    }
+    return r;
+}
