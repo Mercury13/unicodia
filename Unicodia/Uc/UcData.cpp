@@ -753,6 +753,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Письменность приспособлена под зарубки на палках и досках. "
                 "Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</p>"sv,
                 EcFont::OGHAM },
+    // Ol Chiki OK, W10 implemented in Nirmala UI, W7 none → installed Google Noto
     { "Olck"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ол-чики"sv, u8"1925"sv,
