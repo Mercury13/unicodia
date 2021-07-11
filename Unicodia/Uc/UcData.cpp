@@ -41,6 +41,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
+    { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah li
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::NEED_STUB },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
@@ -582,12 +583,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Происходит из брахми. Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
             "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
             "В настоящее время вытесняется латиницей.</p>"sv },
+    // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali"sv, QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::PSEUDOALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кая-ли"sv, u8"1962"sv,
-        u8"краснокаренский (Мьянма)"sv,
-        u8"<p>Происходит из брахми, создан Хтаэ Бу Пхаэ в 1962 году\u00A0— но это полноценный алфавит с гласными и согласными, а не абугида "
-                "(слоговая азбука, где у сходных слогов сходное написание).</p>"sv },
+        u8"краснокаренский <i>(Мьянма)</i>"sv,
+        u8"<p>Кая-ли происходит из брахми, создана Хтаэ Бу Пхаэ в 1962 году{{-}}но буквы не имеют гласной по умолчанию, и потому это "
+                "не абугида (слоговая азбука, где у сходных слогов сходное написание). Четыре гласных пишутся отдельными буквами, "
+                "остальные огласовками.</p>"sv,
+                EcFont::KAYAH_LI },
     { "Kana"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
         u8"Катакана"sv, u8"VIII—IX век"sv,

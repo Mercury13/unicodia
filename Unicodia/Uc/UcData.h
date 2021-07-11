@@ -73,6 +73,7 @@ namespace uc {
         GLAGOLITIC,
         HANUNOO,
         HEBREW,
+        KAYAH_LI,
         LANNA,
         LAO,
         LEPCHA,
