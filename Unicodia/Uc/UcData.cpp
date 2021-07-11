@@ -36,12 +36,13 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Nirmala UI",                 {}, Ffg::NEED_STUB },                       // Devanagari vedic
+    { "Nirmala UI",                 {}, Ffg::NEED_STUB },                       // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
     { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
-    { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah li
+    { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
+    { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::NEED_STUB },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
@@ -576,13 +577,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Женщины, которым не было доступно образование, писали слоговой азбукой, и предпочитали не рубленую "
                 "катáкану, а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>"sv },
+    // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Яванская"sv, u8"XV век"sv,
         u8"яванский, мелкие языки Явы"sv,
         u8"<p>Происходит из брахми. Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
-            "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
-            "В настоящее время вытесняется латиницей.</p>"sv },
+                "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
+                "В настоящее время вытесняется латиницей.</p>"sv,
+                EcFont::JAVANESE },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali"sv, QFontDatabase::Any,
         EcScriptType::PSEUDOALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -721,6 +724,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
                 "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
                 EcFont::MEETEI },
+    // Myanmar OK, W10 has Myanmar Text, W7 does not, installed Google Noto font
     { "Mymr"sv, QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бирманская"sv, u8"XI век"sv,
