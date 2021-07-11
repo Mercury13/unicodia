@@ -41,7 +41,7 @@ FontMatch::Fn::Fn(QString aFamily, int aPriority)
     for (auto v : wsList) {
         wsMask |= mask::of(v);
     }
-    priority += PRIO_WS * wsList.size();   // Universal fonts will be rated higher
+    priority += PRIO_WS * wsList.size();   // Universal fonts will be rated lower
 
     // Check CJK support
     checkSupport(QFontDatabase::SimplifiedChinese,  Cjkp::SIMP_CHINESE);

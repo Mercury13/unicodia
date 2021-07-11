@@ -55,8 +55,8 @@ public:
 private:
     static constexpr auto TEST_POINT_SIZE = 50;     // point size for testing font
     static constexpr auto PRIO_MINE = 1'000'000'000;
-    static constexpr auto PRIO_WS = 1'000'000;      // priority for writing system support:
-                                                    // the wider support, the better font
+    static constexpr auto PRIO_WS = -1'000'000;     // priority for writing system support:
+                                                    // the wider support, the worse font
     static constexpr auto PRIO_BLACKLIST = -2'000'000'000;
 
     ///  Priority for Hani (Chinese hieroglyphs)
