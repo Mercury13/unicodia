@@ -24,8 +24,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [tofu] Kannada in Win7, need another font
     { FAMILY_DEFAULT,               {} },
-    { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
-    { "Segoe UI Symbol",            {} },
+    { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Normal
+    { "Segoe UI Symbol",            {} },                                       // Symbol
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
