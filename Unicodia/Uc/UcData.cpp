@@ -357,6 +357,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"бенгальский, ассамский, санскрит"sv,
         u8"<p>Относится к северной ветви индийского письма. Гласная по умолчанию не «а», как в деванагари, а «о».</p>"sv },
     /// @todo [tofu, BMP] Bopomofo, even main block
+    /// @todo [desc!!!!!!!!!!!] Bopomofo: 1913 or 18?
     { "Bopo"sv, QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бопомофо (чжуинь)"sv, u8"1918"sv,
