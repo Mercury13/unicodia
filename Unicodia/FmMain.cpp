@@ -2,6 +2,9 @@
 #include "FmMain.h"
 #include "ui_FmMain.h"
 
+// C++
+#include <iostream>
+
 // Qt
 #include <QTableView>
 #include <QTextFrame>
@@ -509,14 +512,10 @@ namespace {
     {
         auto name = x[0];
         if (name == "sm"sv) {
-            if (font.fileName.empty()) {
-                str::append(s, "<font size='+2'>"sv);
-            } else {
-                font.load();
-                str::append(s, "<font size='+2' face='"sv);
-                str::append(s, font.family);
-                str::append(s, "'>"sv);
-            }
+            font.load();
+            str::append(s, "<font size='+2' face='"sv);
+            str::append(s, font.family);
+            str::append(s, "'>"sv);
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else if (name == "_"sv) {
@@ -829,6 +828,7 @@ namespace {
             }
 
             str::append(text, "</p>");
+            std::cout << text.toStdString() << std::endl;
         }
 
         str::append(text, "<p>");
