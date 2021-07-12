@@ -58,6 +58,7 @@ namespace uc {
     enum class EcFont
     {
         NORMAL,
+        SYMBOL,
         AHOM,
         ARABIC,
         BALINESE,

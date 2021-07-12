@@ -25,6 +25,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] Kannada in Win7, need another font
     { FAMILY_DEFAULT,               {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },
+    { "Segoe UI Symbol",            {} },
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
@@ -366,7 +367,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ввода в мобильный телефон, поиска иероглифов в словарях по произношению.</p>"
             "<p>В 2007 на Тайване поступила в продажу модель смартфона BlackBerry, поддерживавшая ввод только через пиньинь, "
                 "она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</p>"sv },
-    /// @todo [semi-tofu, BMP] Braille probably OK, Windows has a good font, but which one?
+    // Braille OK, “Segoe UI Symbol”
     { "Brai"sv, QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::TECHNICAL,
         u8"Шрифт Брайля"sv, u8"1824"sv, {},
@@ -377,7 +378,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Шарля Барбье. В этой азбуке матрица имела размер 6×6 ячеек, что подходит для зрячего военного, изредка читающего "
                 "ощупью, и совершенно непригодно для слепого, читающего много. Брайль сократил матрицу, воспользовавшись двоичным кодом.</p>"
             "<p>Шрифт Брайля поставил реабилитацию слепых на промышленные рельсы: легко сделать устройство для тиснения Брайлем, "
-                "он не бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.</p>"sv },
+                "он не бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.</p>"sv,
+                EcFont::SYMBOL },
     // Buginese OK, W10 only → installed Google Noto
     { "Bugi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
