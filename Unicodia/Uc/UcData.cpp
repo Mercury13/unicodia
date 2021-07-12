@@ -397,7 +397,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
                 "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''</p>",
                 EcFont::BUHID },
-    // Canadian syllabics OK, installed Google Noto font
+    // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
