@@ -934,6 +934,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».</p>"sv
             u8"<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "sv
                 u8"За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>" },
+    /// @todo [tofu] Tifinagh: W7 “Ebrima” if course has no 2012 chars
+
     // Vai OK, have good M$ font Ebrima
     { "Vaii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
