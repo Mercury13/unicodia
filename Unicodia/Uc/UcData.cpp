@@ -55,9 +55,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
-    { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },
-    { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },
-    { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
+    { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
+    { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
+    { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
@@ -782,6 +782,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: {{sm|ᱚ}}\u00A0огонь, {{sm|ᱛ}}\u00A0земля, "
                 "{{sm|ᱜ}}\u00A0отрыжка.</p>",
                 EcFont::OLCHIKI },
+    /// @todo [tofu] Even Noto has no U+0B55 (2020)
+    /// @todo [desc] Oriya
     { "Orya"sv, QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
@@ -790,7 +792,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "<p>Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях\u00A0— чтобы не разрезать лист "
                     "по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "
                     "Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"
-                "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv },
+                "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv,
+                EcFont::GURMUKHI },
     // Runes OK, installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
