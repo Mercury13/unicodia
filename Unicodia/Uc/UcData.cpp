@@ -38,7 +38,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
     { "Nirmala UI",                 {}, Ffg::NEED_STUB },                       // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
-    { "Noto Sans Glagolitic"sv,     "NotoSansGlagolitic-Regular.ttf" },
+    { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
+    { "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
@@ -510,7 +511,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"гуджаратский <i>(запад Индии)</i>"sv,
         u8"<p>Появился из [[pop_scr:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "
                 "Гласная по умолчанию «ə».</p>"sv },
-    /// @todo [tofu, BMP] AFAIK no tofu even in W7, find some font
+    // Gurmukhi OK, W7 “Raavi”, W10 “Nirmala UI”
     { "Guru"sv, QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гурмукхи"sv, u8"XVI век"sv,
@@ -523,7 +524,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "огласовки приделывают к нулевой согласной (для разных гласных разной), подобные начальные гласные закодированы "
                 "монолитными символами.</p>"
             "<p>Гурмукхи сильно связан с сикхизмом, название означает «из уст гуру». Пенджабские мусульмане используют "
-                "шахмукхи («из уст шаха»), разновидность арабского алфавита.</p>"sv },
+                "шахмукхи («из уст шаха»), разновидность арабского алфавита.</p>"sv,
+                EcFont::GURMUKHI },
     /// @todo [tofu, BMP] Jamo & compatible jamo OK (Batang), install some font
     /// @todo [tofu, BMP] Jamo extended-A/B BAD, really need a font
     /// @todo [tofu, BMP] Basic syllables OK (Batang)

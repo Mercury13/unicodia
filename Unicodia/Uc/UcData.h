@@ -72,6 +72,7 @@ namespace uc {
         DEVANAGARI_SYSTEM,
         GEORGIAN,
         GLAGOLITIC,
+        GURMUKHI,
         HANUNOO,
         HEBREW,
         JAVANESE,
