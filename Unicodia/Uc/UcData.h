@@ -115,6 +115,8 @@ namespace uc {
         LIGHT = 4,
     };
 
+    DEFINE_ENUM_OPS(Ffg)
+
     struct Font
     {
         std::string_view family, fileName;
