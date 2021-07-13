@@ -39,3 +39,4 @@ https://www.endangeredalphabets.net/alphabets/vai/ — информация по
 
 https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — базовое устройство TTF-файла
 https://dev.w3.org/html5/html-author/charref — список именованных символов
+https://docs.microsoft.com/en-us/typography/fonts/windows_7_font_list — список шрифтов W7/10
