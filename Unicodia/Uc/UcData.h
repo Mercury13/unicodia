@@ -113,18 +113,23 @@ namespace uc {
         NEED_STUB = 1,
         BOLD = 2,
         LIGHT = 4,
+        NO_STUB = 8,
+        VICEVERSA_STUB = 16,
     };
 
     DEFINE_ENUM_OPS(Ffg)
 
     struct Font
     {
+        static const QString qempty;
+
         std::string_view family, fileName;
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
 
         mutable struct Q {
+            QList<QString> families {};
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
             intptr_t installID = FONT_NOT_INSTALLED;
@@ -132,6 +137,8 @@ namespace uc {
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
         bool doesSupportChar(char32_t x) const;
+        const QString& onlyFamily() const
+            { return (q.families.size() == 1) ? q.families[0] : qempty; }
     };
     extern const Font fontInfo[static_cast<int>(EcFont::NN)];
 

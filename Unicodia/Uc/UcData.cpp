@@ -12,8 +12,10 @@
 
 using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
+const QString uc::Font::qempty;
 
-constexpr uint16_t STUB_CIRCLE = 0x25CC;
+constexpr QChar STUB_CIRCLE(0x25CC);
+constexpr QChar ZWSP(0x200B);
 // Just for checking what to do with font, as we’ve got problems with Vedic extensions.
 [[maybe_unused]] constexpr uint16_t STUB_DEVANAGARI= L'ठ';
 
@@ -29,7 +31,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
-    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf" },
+    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::VICEVERSA_STUB },
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
@@ -336,7 +338,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv,
                 EcFont::BALINESE },
-    /// @todo [tofu, BMP] Google Noto Font OK, but check A6F0 and F1, possible troubles with marks
+    // Bamum OK, none even in W10, installed Google Noto + VICEVERSA_STUB.
     { "Bamu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум"sv, u8"1895—1910"sv,
@@ -1820,30 +1822,6 @@ void uc::completeData()
 }
 
 
-void uc::Font::load() const
-{
-    if (q.installID != FONT_NOT_INSTALLED)
-        return;
-    if (!fileName.empty()) {
-        q.installID = installTempFontRel(fileName);
-        //q.raw = std::make_unique<QRawFont>(expandTempFontName(fileName), 10);
-    } else {
-        q.installID = FONT_CHECKED;
-    }
-}
-
-
-bool uc::Font::doesSupportChar(char32_t) const
-{
-    /// @todo [urgent] supportsChar
-    load();
-//    if (!q.raw)
-//        return true;
-//    return q.raw->supportsCharacter(static_cast<uint>(x));
-    return false;
-}
-
-
 namespace {
 
     QList<QString> toQList(std::string_view s)
@@ -1860,12 +1838,39 @@ namespace {
 }   // anon namespace
 
 
+void uc::Font::load() const
+{
+    if (q.installID != FONT_NOT_INSTALLED)
+        return;
+    if (!fileName.empty()) {
+        q.installID = installTempFontRel(fileName);
+        //q.raw = std::make_unique<QRawFont>(expandTempFontName(fileName), 10);
+    } else {
+        q.installID = FONT_CHECKED;
+    }
+    q.families = toQList(family);
+}
+
+
+bool uc::Font::doesSupportChar(char32_t) const
+{
+    /// @todo [urgent] supportsChar
+    load();
+//    if (!q.raw)
+//        return true;
+//    return q.raw->supportsCharacter(static_cast<uint>(x));
+    return false;
+}
+
+
 const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
 {
     if (!font) {
         load();
-        font.reset(new QFont(QString(), sizeAdjust.apply(size), QFont::Normal));
-        font->setFamilies(toQList(family));
+        auto& family1 = onlyFamily();
+        font.reset(new QFont(family1, sizeAdjust.apply(size), QFont::Normal));
+        if (family1.isEmpty())
+            font->setFamilies(q.families);
         // Weight
         if (flags.have(Ffg::BOLD)) {
             font->setBold(true);
@@ -1920,19 +1925,28 @@ namespace {
 
 uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 {
-    auto style = font(hint).styleSheet;
+    auto& fn = font(hint);
+    auto style = fn.styleSheet;
     switch (ecCategory) {
     case EcCategory::CONTROL:
         return { QChar(proxyChar(subj.ch32())), style };
     case EcCategory::MARK_ENCLOSING:
-        return { QChar(STUB_CIRCLE) + QString(" ") + str::toQ(subj.ch32()), style };
+        return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
-    case EcCategory::MARK_SPACING:
+    case EcCategory::MARK_SPACING: {
         // Brahmi scripts probably do fine
-        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
-                && !script().font().flags.have(Ffg::NEED_STUB))
-            break;
-        return { QChar(STUB_CIRCLE) + str::toQ(subj.ch32()), style };
+            if (fn.flags.have(Ffg::VICEVERSA_STUB)) {
+                return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
+            }
+            if (script().ecType == EcScriptType::ABUGIDA_BRAHMI) {
+                if (!fn.flags.have(Ffg::NEED_STUB))
+                    break;
+            } else {
+                if (fn.flags.have(Ffg::NO_STUB))
+                    break;
+            }
+            return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
+        }
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {
             return { QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏'), style };
