@@ -67,7 +67,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },
     { "Microsoft New Tai Lue",      {} },
-    { "Noto Sans Tamil"sv,          "NotoSansTamil-Light.ttf", Ffg::LIGHT },    // Tamil
+    { "Nirmala UI,Latha",           {} },                                       // Tamil
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
@@ -893,6 +893,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Необычно устроена запись тонов: согласные бывают в двух регистрах, ещё два знака {{sm|ᧈᧉ}} могут "
                 "приписываться к слогу в конце, итого 2·3=6 тонов.</p>",
                 EcFont::TAILUE },
+    // Tamil BMP OK, different fonts in W10 and W7
     /// @todo [tofu, P1] Aux. Tamil characters are still tofu
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
