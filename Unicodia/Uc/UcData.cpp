@@ -707,6 +707,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv,
                 EcFont::MANDAIC },
+    // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym"sv, QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Малаялам"sv, u8"830"sv,
@@ -715,6 +716,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
                 "в середине и в конце\u00A0— сокращённые.</p>"sv,
                 EcFont::MALAYALAM },
+    // Mongol OK, dislike standard font of W10 → installed Google Noto
     { "Mong"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
         u8"Монгольская (старая)"sv, u8"X век"sv,
@@ -724,7 +726,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
                 "расширить использование старой письменности.</p>"sv,
                 EcFont::MONGOLIAN },
-    // Meetei Mayek OK, W10 does not have extensions, installed Google Noto
+    // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
@@ -735,7 +737,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
                 "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
                 EcFont::MEETEI },
-    // Myanmar OK, W10 “Myanmar Text”, W7 does not, installed Google Noto font
+    // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr"sv, QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бирманская"sv, u8"XI век"sv,
