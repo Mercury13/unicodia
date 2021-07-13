@@ -43,13 +43,14 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
     { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
+    { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::NEED_STUB },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
     { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
-    { "Noto Sans Malayalam",        "NotoSansMalayalam-Regular.ttf" },
+    { "Noto Sans Malayalam",        "NotoSansMalayalam-Light.ttf", Ffg::LIGHT }, // Malayalam
     { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
@@ -58,14 +59,16 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
-    { "Noto Sans Samaritan"sv,      "NotoSansSamaritan-Regular.ttf" },
-    { "Noto Sans Sundanese"sv,      "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB },
+    { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },
+    { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
+    { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB }, // Sundanese
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },      // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },
     { "Microsoft New Tai Lue",      {} },
-    { "Noto Sans Tamil"sv,          "NotoSansTamil-Regular.ttf" },
+    { "Noto Sans Tamil"sv,          "NotoSansTamil-Light.ttf", Ffg::LIGHT },    // Tamil
+    { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
     { "Ebrima",                     {} },                                       // Vai
@@ -614,14 +617,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
                 "Стал основой для тайского и лаосского.</p>"sv },
-    /// @todo [tofu, BMP] Kannada, W7
+    // Kannada OK, W7 has no recent extensions → installed Google Noto
+    /// @todo [desc, BMP] Interesting script, describe
     { "Knda"sv, QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Каннада"sv, u8"XIV век"sv,
         u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». "
-                "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.</p>"sv },
+                "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.</p>"sv,
+                EcFont::KANNADA },
     // Lanna OK, W10 none, installed Google Noto font
     { "Lana"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -813,12 +818,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
                 "религию и культуру. На 2021 существует не более 700 самаритян.</p>"sv,
                 EcFont::SAMARITAN },
+    // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
+    /// @todo [desc, BMP] interesting script, describe
     { "Sinh"sv, QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Сингальская"sv, u8"300",
         u8"сингальский <i>(Шри-Ланка)</i>",
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "
-                "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv },
+                "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv,
+                EcFont::SINHALA },
+    // Sundanese OK, even W10 off → installed Google Noto
     { "Sund"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Сунданская"sv, u8"XIV век",
@@ -830,7 +839,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "пегон (местный вариант [[pop_scr:Arab|арабского]]); с XX века{{-}}[[pop_scr:Latn|латиницу]]. "
                 "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
                 EcFont::SUNDANESE },
-    // Syriac OK, Beth Mardutho made a nice font.
+    // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc"sv, QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Сирийская"sv, u8"I век",
@@ -844,7 +853,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "А вот с «Юникодией» для разнообразия поставляется западный вариант{{-}}его отлил дипломат и печатник Савари́ де Брев "
                 "(1560–1627), а довёл до компьютерного шрифта институт ''Beth Mardutho'' для издания Антиохийской Библии.</p>"sv,
                 EcFont::SYRIAC },
-    // Tagbanwa OK, installed Google Noto font
+    // Tagbanwa OK, W10 off → installed Google Noto
             /// @todo [describe] Another interesting script            
     { "Tagb"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -896,11 +905,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие.</p>"
             "<p>До того, как правительство Индии утвердило знак рупии {{sm|₹}}, у тамилов он существовал: {{sm|௹}}.</p>"sv,
                 EcFont::TAMIL },
+    // Telugu OK, W7 lacks recent extensions → installed Google Noto
+    /// @todo [desc, BMP] Telugu
     { "Telu"sv, QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Телугу"sv, u8"XIV век"sv,
         u8"телугу <i>(Юго-Восточная Индия)</i>"sv,
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.</p>"sv },
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.</p>"sv,
+                EcFont::TELUGU },
+    // Tagalog OK, W10 off → installed Google Noto
     { "Tglg"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагальская (байбайин)"sv, u8"1300 (спорно) — 1500 (точно)"sv,
@@ -1846,8 +1859,12 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         load();
         font.reset(new QFont(QString(), sizeAdjust.apply(size), QFont::Normal));
         font->setFamilies(toQList(family));
-        if (flags.have(Ffg::BOLD))
+        // Weight
+        if (flags.have(Ffg::BOLD)) {
             font->setBold(true);
+        } else if (flags.have(Ffg::LIGHT)) {
+            font->setWeight(QFont::Light);
+        }
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;

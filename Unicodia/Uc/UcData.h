@@ -76,6 +76,7 @@ namespace uc {
         HANUNOO,
         HEBREW,
         JAVANESE,
+        KANNADA,
         KAYAH_LI,
         LANNA,
         LAO,
@@ -92,6 +93,7 @@ namespace uc {
         OLCHIKI,
         RUNIC,
         SAMARITAN,
+        SINHALA,
         SUNDANESE,
         SYRIAC,
         TAGALOG,
@@ -99,6 +101,7 @@ namespace uc {
         TAILE,
         TAILUE,
         TAMIL,
+        TELUGU,
         THAANA,
         THAI,
         VAI,
@@ -108,7 +111,8 @@ namespace uc {
 
     enum class Ffg {
         NEED_STUB = 1,
-        BOLD = 2
+        BOLD = 2,
+        LIGHT = 4,
     };
 
     struct Font
