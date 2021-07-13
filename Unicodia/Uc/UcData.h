@@ -109,6 +109,10 @@ namespace uc {
         NN
     };
 
+    ///
+    ///  @warning  Use several fonts → be sure to have STUB_xxx working for ALL
+    ///            Better use STUB_VICEVERSA with temporary font
+    ///
     enum class Ffg {
         BOLD = 1,               ///< Bolder
         LIGHT = 2,              ///< Lighter
