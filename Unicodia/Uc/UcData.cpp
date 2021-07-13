@@ -1933,20 +1933,20 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     case EcCategory::MARK_ENCLOSING:
         return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
-    case EcCategory::MARK_SPACING: {
-        // Brahmi scripts probably do fine
-            if (fn.flags.have(Ffg::VICEVERSA_STUB)) {
-                return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
-            }
-            if (script().ecType == EcScriptType::ABUGIDA_BRAHMI) {
-                if (!fn.flags.have(Ffg::NEED_STUB))
-                    break;
-            } else {
-                if (fn.flags.have(Ffg::NO_STUB))
-                    break;
-            }
-            return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
+        if (fn.flags.have(Ffg::VICEVERSA_STUB)) {
+            return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
         }
+        [[fallthrough]];
+    case EcCategory::MARK_SPACING:
+        // Brahmi scripts probably do fine
+        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI) {
+            if (!fn.flags.have(Ffg::NEED_STUB))
+                break;
+        } else {
+            if (fn.flags.have(Ffg::NO_STUB))
+                break;
+        }
+        return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {
             return { QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏'), style };
