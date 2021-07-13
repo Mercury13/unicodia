@@ -594,12 +594,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::JAVANESE },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali"sv, QFontDatabase::Any,
-        EcScriptType::PSEUDOALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кая-ли"sv, u8"1962"sv,
         u8"краснокаренский <i>(Мьянма)</i>"sv,
-        u8"<p>Кая-ли происходит из брахми, создана Хтаэ Бу Пхаэ в 1962 году{{-}}но буквы не имеют гласной по умолчанию, и потому это "
-                "не абугида (слоговая азбука, где у сходных слогов сходное написание). Четыре гласных пишутся отдельными буквами, "
-                "остальные огласовками.</p>"sv,
+        u8"<p>Кая-ли происходит из брахми, создана Хтаэ Бу Пхаэ в 1962 году в ответ на распространение [[pop_scr:Latn|латиницы]]{{-}}"
+                "но буквы не имеют гласной по умолчанию, и потому это не абугида (слоговая азбука, где у сходных слогов сходное написание). "
+                "Четыре гласных пишутся отдельными буквами, остальные диакритикой над {{sm|ꤢ}}.</p>"
+            "<p>Кая-ли{{-}}во многом алфавит беженцев: {{%|90}} живущих в тайских лагерях беженцев{{-}} карены, сбежавшеи от зверств бирманских "
+                "военных, и в околотюремных условиях важно всё, что сплачивает. "
+                "Карены{{-}}разнородная группа народов, среди них есть красные, чёрные, белые и другие, по цвету национального костюма. "
+                "Помимо кая-ли, пишут [[pop_scr:Thai|тайским]], латиницей и [[pop_scr:Mymr|бирманским]].</p>"sv,
                 EcFont::KAYAH_LI },
     { "Kana"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
