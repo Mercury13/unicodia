@@ -110,11 +110,11 @@ namespace uc {
     };
 
     enum class Ffg {
-        NEED_STUB = 1,
-        BOLD = 2,
-        LIGHT = 4,
-        NO_STUB = 8,
-        VICEVERSA_STUB = 16,
+        BOLD = 1,               ///< Bolder
+        LIGHT = 2,              ///< Lighter
+        STUB_OFF = 4,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
+        STUB_ON = 8,            ///< Circle stub explicitly on
+        STUB_VICEVERSA = 16,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
     };
 
     DEFINE_ENUM_OPS(Ffg)

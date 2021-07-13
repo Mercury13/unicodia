@@ -31,14 +31,14 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
-    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::VICEVERSA_STUB },
+    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA },
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
-    { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::NEED_STUB },
-    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::NEED_STUB },
+    { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },
+    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Nirmala UI",                 {}, Ffg::NEED_STUB },                       // Devanagari Vedic
+    { "Nirmala UI",                 {}, Ffg::STUB_ON },                       // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
     { "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
@@ -47,8 +47,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
-    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::NEED_STUB },    // Lanna
-    { "SengBuhan",                  "sengbuhan.ttf", Ffg::NEED_STUB, "padding-top: 12%;" },   // Lao
+    { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
+    { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
     { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
     { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
@@ -63,7 +63,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
-    { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::NEED_STUB }, // Sundanese
+    { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },      // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
@@ -72,7 +72,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Nirmala UI,Latha",           {} },                                       // Tamil
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
-    { "Leelawadee,Leelawadee UI",   {}, Ffg::NEED_STUB, "padding-bottom:10%;", 110_pc },  // Thai
+    { "Leelawadee,Leelawadee UI",   {}, Ffg::STUB_ON, "padding-bottom:10%;", 110_pc },  // Thai
     { "Ebrima",                     {} },                                       // Vai
     { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
 };
@@ -338,7 +338,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv,
                 EcFont::BALINESE },
-    // Bamum OK, none even in W10, installed Google Noto + VICEVERSA_STUB.
+    // Bamum OK, none even in W10, installed Google Noto + STUB_VICEVERSA.
     { "Bamu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум"sv, u8"1895—1910"sv,
@@ -1933,17 +1933,17 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     case EcCategory::MARK_ENCLOSING:
         return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
-        if (fn.flags.have(Ffg::VICEVERSA_STUB)) {
+        if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
             return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
         }
         [[fallthrough]];
     case EcCategory::MARK_SPACING:
         // Brahmi scripts probably do fine
         if (script().ecType == EcScriptType::ABUGIDA_BRAHMI) {
-            if (!fn.flags.have(Ffg::NEED_STUB))
+            if (!fn.flags.have(Ffg::STUB_ON))
                 break;
         } else {
-            if (fn.flags.have(Ffg::NO_STUB))
+            if (fn.flags.have(Ffg::STUB_OFF))
                 break;
         }
         return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
@@ -1980,7 +1980,7 @@ QString uc::Cp::osProxy() const
     case UpCategory::MARK:
         // Brahmi scripts probably do fine
         if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
-                && !script().font().flags.have(Ffg::NEED_STUB))
+                && !script().font().flags.have(Ffg::STUB_ON))
             break;
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
     default: ;
