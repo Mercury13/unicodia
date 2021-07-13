@@ -19,5 +19,5 @@ Right now W7 and W10, x64 only.
 * WXP, WVista and W8 are completely abandoned by all imaginable software.
 * No obstacles for x86, just untested because no one compiled Qt for x86.
 * W11 will probably work, but there will be problems for two reasons.
- * Qt is a large wad of software, and something may go wrong (like Embarcadero VCL + Aero Flip)
- * No one checked fonts. Even in W7 and W10 they are different.
+  * Qt is a large wad of software, and something may go wrong (like Embarcadero VCL + Aero Flip)
+  * No one checked fonts. Even in W7 and W10 they are different.
