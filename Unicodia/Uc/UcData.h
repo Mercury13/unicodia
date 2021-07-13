@@ -111,7 +111,7 @@ namespace uc {
 
     ///
     ///  @warning  Use several fonts → be sure to have STUB_xxx working for ALL
-    ///            Better use STUB_VICEVERSA with temporary font
+    ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
         BOLD = 1,               ///< Bolder
