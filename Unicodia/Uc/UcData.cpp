@@ -640,11 +640,11 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лаосская"sv, u8"≈1350"sv,
         u8"лаосский"sv,
-        u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из кхмерского. "
+        u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из [[pop_scr:Khmr|кхмерского]]. "
                 "После реформы, сделанной коммунистами в 1960-е, исчезли гласная по умолчанию и знак вирамы, и у лаосского остался последний "
                 "признак абугиды{{-}}сложные правила записи гласных: {{sm|ເກົ້າ}} ''kao'' «девять». Лаосский язык тоновый, и в этом слове "
                 "мы видим над согласной {{sm|ກ}} как огласовку из трёх (!) символов , так и тон.</p>"
-            "<p>Между словами не ставятся пробелы. Как и в тайском, буквы называются подходящими словами: "
+            "<p>Между словами не ставятся пробелы. Как и в [[pop_scr:Thai|тайском]], буквы называются подходящими словами: "
                 "{{sm|ບ}} называется «бо-бэ» или просто «бэ» (козёл). Буква {{sm|ຣ}} (r) стала немой или преобразовалась в «л», и потому "
                 "исчезла из орфографии, оставшись только для записи иностранных имён.</p>"
             "<p>В буддизме используется язык пали как священный, для записи этого языка используются несколько дополнительных букв "
@@ -698,6 +698,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
                 "и письменность на тайский основе.</p>"sv,
                 EcFont::LISU },
+    // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Мандейская"sv, u8"II—VII век"sv,
@@ -723,6 +724,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "После войны монголы разработали новую письменность на кириллице, но с развалом СССР есть планы "
                 "расширить использование старой письменности.</p>"sv,
                 EcFont::MONGOLIAN },
+    // Meetei Mayek OK, W10 does not have extensions, installed Google Noto
     { "Mtei"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
