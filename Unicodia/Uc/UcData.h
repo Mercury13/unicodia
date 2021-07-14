@@ -382,4 +382,17 @@ namespace uc {
     inline const Block* blockOf(char32_t subj, int iHint)
         { return blockOf(subj, std::begin(blocks) + std::max(iHint, 0)); }
 
+    enum class TermCat {
+        ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS
+    };
+
+    struct Term
+    {
+        std::string_view key;
+        TermCat cat;
+        std::u8string_view locName;
+        std::u8string_view engName;
+        std::u8string_view desc;
+    };
+
 }   // namespace uc
