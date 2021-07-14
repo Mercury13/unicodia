@@ -831,7 +831,6 @@ namespace {
             }
 
             str::append(text, "</p>");
-            std::cout << text.toStdString() << std::endl;
         }
 
         str::append(text, "<p>");
