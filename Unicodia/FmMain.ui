@@ -164,6 +164,9 @@
                     </property>
                     <item>
                      <widget class="QStackedWidget" name="stackSample">
+                      <property name="currentIndex">
+                       <number>1</number>
+                      </property>
                       <widget class="QWidget" name="pageSampleQt">
                        <layout class="QVBoxLayout" name="verticalLayout_6">
                         <property name="leftMargin">
@@ -204,7 +207,14 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="pageSampleCustom"/>
+                      <widget class="QWidget" name="pageSampleCustom">
+                       <property name="minimumSize">
+                        <size>
+                         <width>120</width>
+                         <height>100</height>
+                        </size>
+                       </property>
+                      </widget>
                      </widget>
                     </item>
                    </layout>

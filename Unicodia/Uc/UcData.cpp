@@ -1917,7 +1917,7 @@ namespace {
             return 0x2400 + cp;
         switch (cp) {
         case 0x7F: return 0x2421;
-        default:   return cp;
+        default:   return 0;
         }
     }
 }
@@ -1928,8 +1928,12 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     auto& fn = font(hint);
     auto style = fn.styleSheet;
     switch (ecCategory) {
-    case EcCategory::CONTROL:
-        return { QChar(proxyChar(subj.ch32())), style };
+    case EcCategory::CONTROL: {
+            auto prox = proxyChar(subj.ch32());
+            if (!prox)
+                return {};
+            return { QChar(prox), style };
+        }
     case EcCategory::MARK_ENCLOSING:
         return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:

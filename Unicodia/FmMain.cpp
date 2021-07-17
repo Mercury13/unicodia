@@ -4,6 +4,7 @@
 
 // C++
 #include <iostream>
+#include <cmath>
 
 // Qt
 #include <QTableView>
@@ -11,6 +12,7 @@
 #include <QClipboard>
 #include <QPainter>
 #include <QShortcut>
+#include <QPaintEngine>
 
 // Misc
 #include "u_Strings.h"
@@ -163,14 +165,14 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::DisplayRole: {
-            auto cp = rows.charAt(index.row(), index.column());
+            auto cp = charAt(index);
             if (!cp)
                 return {};
             return cp->sampleProxy(hint).text;
         }
 
     case Qt::FontRole: {
-            auto cp = rows.charAt(index.row(), index.column());
+            auto cp = charAt(index);
             if (!cp)
                 return {};
             auto& font = cp->font(hint);
@@ -178,13 +180,21 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
         }
 
     case Qt::ForegroundRole: {
-            auto cp = rows.charAt(index.row(), index.column());
+            auto cp = charAt(index);
             if (!cp)
                 return {};
             if (cp->isTrueSpace()) {
                 auto c = owner->palette().text().color();
                 c.setAlpha(ALPHA_SPACE);
                 return c;
+            }
+            return {};
+        }
+
+    case Qt::BackgroundRole: {
+            auto cp = charAt(index);
+            if (!cp) {
+                return owner->palette().button().color();
             }
             return {};
         }
@@ -255,30 +265,99 @@ QModelIndex CharsModel::indexOf(char32_t code)
 ///// CharsDelegate ////////////////////////////////////////////////////////////
 
 
+namespace {
+
+    /// @todo [urgent] draw abbreviation
+    void drawAbbreviation(
+            QPainter* painter, const QRect& rect, std::string_view abbreviation,
+            const QColor& color)
+    {
+        const auto availW = rect.width() * 5 / 6;
+        const auto availH = rect.height() * 7 / 10;
+        const auto availSize = std::min(availW, availH);
+        // Now we draw availSize×availSize, shrink rect
+        auto ofsX = (rect.width() - availSize) / 2;
+        auto ofsY = (rect.height() - availSize) / 2;
+        auto rcFrame = QRectF(QPoint(rect.left() + ofsX, rect.top() + ofsY),
+                              QSize(availSize, availSize));
+        // Draw frame
+        auto thickness = availSize / 60.0;
+//        if (thickness < 1) {
+//            QColor clAlpha = color;
+//            clAlpha.setAlphaF(thickness);
+//            painter->setPen(QPen(color, 1, Qt::DashLine));
+//        } else {
+        painter->setPen(QPen(color, thickness, Qt::DashLine));
+        painter->setBrush(Qt::NoBrush);
+        painter->drawRect(rcFrame);
+        // Draw text
+        auto sz = availSize / 2.8;
+        QFont font { str::toQ(FAMILY_CONDENSED) };
+            font.setStyleStrategy(QFont::PreferAntialias);
+            font.setPointSizeF(sz);
+        painter->setFont(font);
+        painter->setBrush(QBrush(color, Qt::SolidPattern));
+        rcFrame.moveLeft(rcFrame.left() + std::max(thickness, 1.0));
+        painter->drawText(rcFrame,
+                          Qt::AlignCenter,
+                          str::toQ(abbreviation));
+    }
+
+}   // anon namespace
+
+
+void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
+            const QModelIndex& index, const QColor& color) const
+{
+    auto ch = owner.model.charAt(index);
+    if (ch && ch.code >= 0x80 && ch.code <= 0x9F) {
+        /// @todo [urgent] which abbreviations, when to draw?
+        drawAbbreviation(painter, rect, "TST", color);
+    }
+}
+
+
 void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
            const QModelIndex &index) const
 {
     if (option.state.testFlag(QStyle::State_HasFocus)) {
-        // Focused?
-        //QStyleOptionFocusRect o;
-        //o.QStyleOption::operator=(option);
-        //o.state |= QStyle::State_KeyboardFocusChange;
-        //owner.style()->drawPrimitive(QStyle::PE_FrameFocusRect, &o, painter, option.widget);
+        // It’d be nice to draw some nice focus using Windows skin, but cannot
         Super::paint(painter, option, index);
+        tryDrawCustom(painter, option.rect, index, owner.palette().highlightedText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
         owner.style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
         Super::paint(painter, opt2, index);
+        tryDrawCustom(painter, option.rect, index, owner.palette().windowText().color());
     } else {
-        // Selected, use special way of BG color
-        auto cp = owner.model.charAt(index);
-        if (!cp) {
-            painter->fillRect(option.rect, owner.palette().button());
-        }
         Super::paint(painter, option, index);
+        tryDrawCustom(painter, option.rect, index, owner.palette().windowText().color());
     }
+}
+
+
+///// WiCustomDraw /////////////////////////////////////////////////////////////
+
+
+void WiCustomDraw::paintEvent(QPaintEvent *event)
+{
+    Super::paintEvent(event);
+    switch (mode) {
+    case Mode::NONE: break;
+    case Mode::ABBREVIATION:
+        drawAbbreviation(paintEngine()->painter(), geometry(), abbreviation,
+                         palette().windowText().color());
+    }
+}
+
+
+void WiCustomDraw::setAbbreviation(std::string_view x)
+{
+    mode = Mode::ABBREVIATION;
+    abbreviation = x;
+    update();
 }
 
 

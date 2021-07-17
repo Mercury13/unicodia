@@ -118,6 +118,21 @@ public:
 };
 
 
+class WiCustomDraw : public QWidget
+{
+    using Super = QWidget;
+public:
+    using Super::Super;
+    void setAbbreviation(std::string_view x);
+protected:
+    void paintEvent(QPaintEvent *event);
+private:
+    enum class Mode { NONE, ABBREVIATION };
+    Mode mode = Mode::NONE;
+    std::string_view abbreviation;
+};
+
+
 class FmMain : public QMainWindow
 {
     Q_OBJECT
@@ -151,6 +166,9 @@ private:
         CharsDelegate(FmMain& aOwner) : owner(aOwner) {}
         void paint(QPainter *painter, const QStyleOptionViewItem &option,
                    const QModelIndex &index) const override;
+    protected:
+        void tryDrawCustom(QPainter* painter, const QRect& rect,
+                    const QModelIndex& index, const QColor& color) const;
     } charsDelegate;
 
     void showCp(MaybeChar ch);
