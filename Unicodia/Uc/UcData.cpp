@@ -819,7 +819,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В 2014 году добавили три руны для записи современного английского, приписываемые Дж.\u00A0Толкину, "
                 "и пять рун с ларца Фрэнкса, реликвии VIII века.</p>"sv,
                 EcFont::RUNIC },
-    // Samaritan OK, installed Google Noto font
+    // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Самаритянская"sv, u8"около 600—200 до н.э.",
