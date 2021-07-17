@@ -61,7 +61,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
-    /// @todo [semi-tofu] Diacritics work badly, and cannot even sythesize sample!
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
