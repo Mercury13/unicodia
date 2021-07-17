@@ -173,7 +173,7 @@ int main()
     std::ofstream os("UcAuto.cpp");
     os << "// Automatically generated, do not edit!" << '\n';
     os << '\n';
-    os << R"(#include "UcData.h")" << '\n';
+    os << R"(#include "UcAutoDefines.h")" << '\n';
     os << '\n';
     os << R"(using namespace std::string_view_literals;)" << '\n';
     os << '\n';
@@ -310,7 +310,6 @@ int main()
 
         ++nBlocks;
     }
-    os << "static_assert(uc::N_BLOCKS == " << std::dec << nBlocks << ", \"Block data changed, check it!\");\n";
     std::cout << "Found " << nBlocks << " blocks" << std::endl;
 
     os.close();
@@ -322,6 +321,7 @@ int main()
     os << '\n';
     os << "namespace uc {\n";
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
+    os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "}\n";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;

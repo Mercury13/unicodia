@@ -267,11 +267,8 @@ namespace uc {
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
-    constexpr int N_BLOCKS = 302;
     extern const Block blocks[N_BLOCKS];
     constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
-
-    extern Cp cpInfo[N_CPS];
 
     constexpr int N_CHARS = 65536 * 17;
     extern Cp* cps[N_CHARS];
@@ -298,7 +295,6 @@ namespace uc {
     };
 
     // Implementations of Cp inlines
-    extern const char8_t allStrings[];
     inline const char8_t* Cp::Name::tech() const { return allStrings + iTech.val(); }
     inline const NumType& Cp::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
     inline const Version& Cp::version() const { return versionInfo[static_cast<int>(ecVersion)]; }

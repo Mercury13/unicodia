@@ -7,6 +7,8 @@
 // Qt
 #include <QString>
 
+// Project-local
+#include "UcAutoCount.h"
 
 namespace uc {
 
@@ -441,5 +443,8 @@ namespace uc {
         bool isGraphical() const;
         constexpr int plane() const { return subj.val() >> 16; }
     };
+
+    extern Cp cpInfo[N_CPS];
+    extern const char8_t allStrings[];
 
 }   // namespace uc

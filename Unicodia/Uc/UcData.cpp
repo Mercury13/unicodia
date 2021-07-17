@@ -1084,7 +1084,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 };
 
 
-constinit const uc::Block uc::blocks[N_BLOCKS] {
+constinit const uc::Block uc::blocks[302] {
     { 0x0000, 0x007F,
             "Basic Latin",
             u8"Базовая латиница"sv,
