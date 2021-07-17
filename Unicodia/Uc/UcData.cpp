@@ -60,11 +60,12 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
-    { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },
-    { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },
+    { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
+    /// @todo [semi-tofu] Diacritics work badly, and cannot even sythesize sample!
+    { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
-    { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf" },      // Syriac
+    { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },
