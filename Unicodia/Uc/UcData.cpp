@@ -16,8 +16,6 @@ const QString uc::Font::qempty;
 
 constexpr QChar STUB_CIRCLE(0x25CC);
 constexpr QChar ZWSP(0x200B);
-// Just for checking what to do with font, as we’ve got problems with Vedic extensions.
-[[maybe_unused]] constexpr uint16_t STUB_DEVANAGARI= L'ठ';
 
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement

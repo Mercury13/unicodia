@@ -361,8 +361,19 @@ void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
 {
     if (option.state.testFlag(QStyle::State_HasFocus)) {
         // It’d be nice to draw some nice focus using Windows skin, but cannot
-        Super::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner.palette().highlightedText().color());
+        //Super::paint(painter, option, index);
+        // Draw it as a button
+        QStyleOptionButton sob;
+            sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
+                        | QStyle::State_Active | QStyle::State_Enabled;
+            sob.rect = option.rect;
+        owner.style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
+        // Draw the rest as usual
+        auto opt2 = option;
+        opt2.state.setFlag(QStyle::State_Selected, false);
+        opt2.state.setFlag(QStyle::State_HasFocus, false);
+        Super::paint(painter, opt2, index);
+        tryDrawCustom(painter, option.rect, index, owner.palette().buttonText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
