@@ -24,7 +24,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
-    /// @todo [tofu] Kannada in Win7, need another font
+    /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
     { FAMILY_DEFAULT,               {} },
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
@@ -1910,30 +1910,26 @@ uc::Fraction uc::CompressedFraction::val() const
 }
 
 
-namespace {
-    unsigned short proxyChar(unsigned cp)
-    {
-        if (cp < ' ')       // Control 1..31
-            return 0x2400 + cp;
-        switch (cp) {
-        case 0x7F: return 0x2421;
-        default:   return 0;
-        }
-    }
+std::u8string_view uc::Cp::Name::abbrev() const
+{
+    if (!isAbbreviated())
+        return {};
+    const char8_t* x = tech();
+    // +1
+    std::u8string_view sv = x;
+    x += (sv.length());  ++ x;
+    return x;
 }
 
 
 uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 {
+    if (name.isAbbreviated())
+        return {};
+
     auto& fn = font(hint);
     auto style = fn.styleSheet;
     switch (ecCategory) {
-    case EcCategory::CONTROL: {
-            auto prox = proxyChar(subj.ch32());
-            if (!prox)
-                return {};
-            return { QChar(prox), style };
-        }
     case EcCategory::MARK_ENCLOSING:
         return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:

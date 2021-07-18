@@ -267,9 +267,19 @@ QModelIndex CharsModel::indexOf(char32_t code)
 
 namespace {
 
+    struct RcPair {
+        QRectF rc1, rc2;
+
+        RcPair(const QRectF& rcFrame) : rc1(rcFrame), rc2(rcFrame) {
+            auto dh = rcFrame.height() / 2.5;
+            rc1.setBottom(rc1.bottom() - dh);
+            rc2.setTop(rc2.top() + dh);
+        }
+    };
+
     /// @todo [urgent] draw abbreviation
     void drawAbbreviation(
-            QPainter* painter, const QRect& rect, std::string_view abbreviation,
+            QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
             const QColor& color)
     {
         const auto availW = rect.width() * 5 / 6;
@@ -291,16 +301,43 @@ namespace {
         painter->setBrush(Qt::NoBrush);
         painter->drawRect(rcFrame);
         // Draw text
-        auto sz = availSize / 2.8;
+        auto sz = availSize / 3.3;
         QFont font { str::toQ(FAMILY_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
             font.setPointSizeF(sz);
         painter->setFont(font);
         painter->setBrush(QBrush(color, Qt::SolidPattern));
-        rcFrame.moveLeft(rcFrame.left() + std::max(thickness, 1.0));
-        painter->drawText(rcFrame,
-                          Qt::AlignCenter,
-                          str::toQ(abbreviation));
+        rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
+        switch (abbreviation.size()) {
+        case 4:
+        case 6: {
+                RcPair p(rcFrame);
+                auto split = abbreviation.size() / 2;
+                painter->drawText(p.rc1,
+                                  Qt::AlignCenter,
+                                  str::toQ(abbreviation.substr(0, split)));
+                painter->drawText(p.rc2,
+                                  Qt::AlignCenter,
+                                  str::toQ(abbreviation.substr(split)));
+            } break;
+        case 5: {
+            RcPair p(rcFrame);
+                auto split = 3;
+                if (isdigit(abbreviation[2]) && isdigit(abbreviation[3]))
+                    split = 2;
+                painter->drawText(p.rc1,
+                                  Qt::AlignCenter,
+                                  str::toQ(abbreviation.substr(0, split)));
+                painter->drawText(p.rc2,
+                                  Qt::AlignCenter,
+                                  str::toQ(abbreviation.substr(split)));
+            } break;
+        default:
+            painter->drawText(rcFrame,
+                              Qt::AlignCenter,
+                              str::toQ(abbreviation));
+            break;
+        }
     }
 
 }   // anon namespace
@@ -310,9 +347,11 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
             const QModelIndex& index, const QColor& color) const
 {
     auto ch = owner.model.charAt(index);
-    if (ch && ch.code >= 0x80 && ch.code <= 0x9F) {
-        /// @todo [urgent] which abbreviations, when to draw?
-        drawAbbreviation(painter, rect, "TST", color);
+    if (ch) {
+        auto abbr = ch->name.abbrev();
+        if (!abbr.empty()) {
+            drawAbbreviation(painter, rect, abbr, color);
+        }
     }
 }
 
@@ -353,7 +392,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
 }
 
 
-void WiCustomDraw::setAbbreviation(std::string_view x)
+void WiCustomDraw::setAbbreviation(std::u8string_view x)
 {
     mode = Mode::ABBREVIATION;
     abbreviation = x;

@@ -421,8 +421,10 @@ namespace uc {
         Int3 subj = 0;              // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
-            int8_t alt;                // +1 = 7
+            uint8_t alts;               // +1 = 7
             const char8_t* tech() const;
+            bool isAbbreviated() const { return alts & alt::HAS_ABBREVIATION; }
+            std::u8string_view abbrev() const;
         } name;
         EcCategory ecCategory;          // +1 = 8
         EcVersion ecVersion;            // +1 = 9

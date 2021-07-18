@@ -129,17 +129,48 @@ StrMap smCharCat[] {
     { "Zs"sv, "SEPARATOR_SPACE"sv },
 };
 
+enum class AbbrevState { NORMAL, ALIAS, DISABLE };
+
+std::map<char32_t, std::string_view> abbrevs {
+    { 9, "TAB" },       // TAB or HT
+    { 10, "LF" },       // NL or LF
+    { ' ', {} },        // SPACE has abbrev SP
+    { 0x00A0, "!" },    // NBSP bas abbreviations, turn them to aliases
+    { 0x2028, "LSEP" }, // Line separator, somehow has no abbrev
+    { 0x2029, "PSEP" }, // Paragraph separator, same
+    { 0x202F, "!" },    // Narrow NBSP has abbrevs, turn them to aliases
+    { 0x205F, "!" },    // Medium math space same
+    { 0x2061, "f()" },  // Function application
+    { 0x2062, "×" },    // Invisible times
+    { 0x2063, "," },    // Invisible separator
+    { 0x2064, "+" },    // Invisible plus
+    { 0x206A, "ISS" },  // Inhibit symmetric swapping
+    { 0x206B, "ASS" },  // Activate symmetric swapping
+    { 0x206C, "IAFS" }, // Inhibit Arabic form shaping
+    { 0x206D, "AAFS" }, // Activate Arabic form shaping
+    { 0x206E, "NADS" }, // National digit shapes
+    { 0x206F, "NODS" }, // Nominal digit shapes
+    { 0xFEFF, "BOM" },  // BOM or ZWNBSP
+    // Then VSs
+};
+
 struct StringPayload
 {
     char32_t subj = 0;
     int offset = -1;
 };
 
+struct RememberResult
+{
+    int offset;
+    bool wasIns;
+};
+
 class StringLib
 {
 public:
     /// @return offset
-    int remember(const std::string& s, char32_t subj);
+    RememberResult remember(const std::string& s, char32_t subj);
     auto& inOrder() const { return fInOrder; }
 private:
     using M = std::unordered_map<std::string, StringPayload>;
@@ -148,7 +179,7 @@ private:
     size_t fLength = 0;
 };
 
-int StringLib::remember(const std::string& s, char32_t subj)
+RememberResult StringLib::remember(const std::string& s, char32_t subj)
 {
     auto [it, wasIns] = fData.try_emplace(s, StringPayload());
     if (wasIns) {   // Was inserted
@@ -157,7 +188,7 @@ int StringLib::remember(const std::string& s, char32_t subj)
         fLength += (s.length() + 1);
         fInOrder.push_back(&*it);
     } else {}    // was found — do nothing
-    return it->second.offset;
+    return { it->second.offset, wasIns };
 }
 
 
@@ -165,6 +196,24 @@ bool hasSubstr(std::string_view haystack, std::string_view needle)
 {
     auto pos = haystack.find(needle);
     return (pos != std::string_view::npos);
+}
+
+
+class NewLine
+{
+public:
+    void trigger();
+private:
+    bool isCocked = true;
+};
+
+
+void NewLine::trigger()
+{
+    if (isCocked) {
+        std::cout << std::endl;
+        isCocked = false;
+    }
 }
 
 
@@ -191,6 +240,7 @@ int main()
     auto elRoot = need(doc.root().child("ucd"), "Need <ucd>");
     auto elRepertoire = need(elRoot.child("repertoire"), "Need <repertoire>");
     std::cout << "Found repertoire, generating character info..." << std::flush;
+    NewLine nl;
     os << '\n';
     os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
 
@@ -216,6 +266,24 @@ int main()
         if (sName.empty())
             sName = elChar.attribute("na1").as_string();
 
+        std::string_view defaultAbbrev {};      // empty
+        std::vector<std::string_view> allAbbrevs;
+        std::vector<std::string> restAliases;
+
+        AbbrevState abbrevState = AbbrevState::NORMAL;
+        if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
+            if (it->second.empty()) {
+                abbrevState = AbbrevState::DISABLE;
+            } else {
+                if (it->second == "!"sv) {
+                    abbrevState = AbbrevState::ALIAS;
+                } else {
+                    defaultAbbrev = it->second;
+                    allAbbrevs.push_back(defaultAbbrev);
+                }
+            }
+        }
+
         // Aliases?
         for (auto elAlias : elChar.children("name-alias")) {
             std::string_view sType = elAlias.attribute("type").as_string();
@@ -225,17 +293,52 @@ int main()
             } else if (sType == "correction") {
                 // Checked known chars, and corrections ARE BETTER than originals
                 sName = elAlias.attribute("alias").as_string();
+            } else if (sType == "abbreviation") {
+                // Abbreviations
+                switch (abbrevState) {
+                case AbbrevState::DISABLE: break;
+                case AbbrevState::NORMAL: {
+                        auto abbr = elAlias.attribute("alias").as_string();
+                        if (abbr != defaultAbbrev)      // do not dupe defaultAbbrev
+                            allAbbrevs.push_back(abbr);
+                    }
+                    break;
+                case AbbrevState::ALIAS:
+                    restAliases.emplace_back(elAlias.attribute("alias").as_string());
+                    break;
+                }
             }
         }
 
+        if (allAbbrevs.size() > 1 && defaultAbbrev.empty()) {
+            nl.trigger();
+            std::cout << "WARNING: char " << std::hex << cp << " has no default abbreviation." << std::endl;
+        }
         std::string sLowerName = decapitalize(sName);
-        auto iTech = strings.remember(sLowerName, cp);
+        auto [iTech, wasIns] = strings.remember(sLowerName, cp);
+        if (!allAbbrevs.empty() && !wasIns) {
+            nl.trigger();
+            std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
+        }
+
+        for (auto& v : allAbbrevs) {
+            auto [i, wasIns2] = strings.remember(std::string{v}, cp);
+            if (!wasIns2) {
+                nl.trigger();
+                std::cout << "WARNING: char " << std::hex << cp << " has a repeating abbreviation." << std::endl;
+            }
+        }
+
+        auto nAliases = allAbbrevs.size();
+        if (!allAbbrevs.empty())
+            nAliases += 128;
+
         os << "{ "
-           << "0x" << std::hex << cp << ", "  // subj
-           << "{ "                      // name
-                << std::dec << iTech << ", "  // name.tech,
-                << "-1 "                      // name.loc
-           << " }, ";                   // /name
+           << "0x" << std::hex << cp << ", "    // subj
+           << "{ "                              // name
+                << std::dec << iTech << ", "      // name.tech,
+                << nAliases << " "                // name.alt
+           << " }, ";                           // /name
 
         // Char’s type
         std::string_view sCharCat = elChar.attribute("gc").as_string();
