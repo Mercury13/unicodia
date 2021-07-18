@@ -3,19 +3,74 @@
 
 // STL
 #include <set>
+#include <atomic>
 
 // Project-local
 #include "UcData.h"
 
 
 // Blacklist unused
-//namespace {
+namespace {
 
-//    const std::set<std::string_view> blacklistedFonts {
-//        "KacstBook"
-//    };
+    enum class NameOp { EXACT, START };
 
-//}   // anon namespace
+    struct ListLine {
+        std::string_view text;
+        NameOp op;
+        FontPrio prio;
+    };
+
+    /// @todo [portability] These are for Windows
+    ListLine fontList[] {
+        // WARNING: ASCII list here
+        { "DejaVu ",         NameOp::START, FontPrio::BAD  },
+        { "Noto ",           NameOp::START, FontPrio::BAD  },
+        { "Segoe UI Emoji",  NameOp::EXACT, FontPrio::GOOD },
+        { "Segoe UI Symbol", NameOp::EXACT, FontPrio::GOOD },
+    };
+
+    //bool isLess(const ListLine& x, std::string_view y)
+    //    { return (x.text < y); }
+
+    bool isLess(std::string_view x, const ListLine& y)
+        { return (x < y.text); }
+
+    std::atomic<bool> wantCheckFonts = true;
+
+    void checkFontList()
+    {
+        if (!wantCheckFonts)
+            return;
+        wantCheckFonts = false;
+        std::string_view prev;
+        for (auto& v : fontList) {
+            if (v.text <= prev)
+                throw std::logic_error("Font list is not sorted");
+            prev = v.text;
+        }
+    }
+
+    FontPrio matchPrio(const std::string_view name)
+    {
+        checkFontList();
+        auto it = std::upper_bound(std::begin(fontList), std::end(fontList), name, isLess);
+        if (it == std::begin(fontList))
+            return FontPrio::NORMAL;    // not found
+        --it;       // now we may dereference it
+        switch (it->op) {
+        case NameOp::START:
+            if (name.starts_with(it->text))
+                return it->prio;
+            break;
+        case NameOp::EXACT:
+            if (name == it->text)
+                return it->prio;
+            break;
+        }
+        return FontPrio::NORMAL;
+    }
+
+}   // anon namespace
 
 
 ///// Fn ///////////////////////////////////////////////////////////////////////
@@ -27,10 +82,9 @@ FontMatch::Fn::Fn(QString aFamily, int aPriority)
       metrics(testFont),
       priority(aPriority)
 {
-    // Blacklist is unused right now, as our “square wheel” somehow works
-    //if (blacklistedFonts.contains(family.toStdString())) {
-    //    priority = PRIO_BLACKLIST;
-    //}
+    auto verbalPrio = matchPrio(family.toStdString());
+    verbal.prio = verbalPrio;
+    priority += PRIO_VERBAL * static_cast<int>(verbalPrio);
 
     // Modify font, create metrics
     testFont.setStyleStrategy(static_cast<QFont::StyleStrategy>(
@@ -82,8 +136,9 @@ void FontMatch::retrieveFonts(const QString& myName)
         for (auto& v : families) {
             if (QFontDatabase::isSmoothlyScalable(v)) {
                 int prio = 0;
-                if (v == myName)
+                if (v == myName) {
                     prio = PRIO_MINE;
+                }
                 allFonts.emplace_back(new Fn(std::move(v), prio));
             }
         }

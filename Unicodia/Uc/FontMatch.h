@@ -54,10 +54,10 @@ public:
             size_t maxCount = std::numeric_limits<size_t>::max());
 private:
     static constexpr auto TEST_POINT_SIZE = 50;     // point size for testing font
-    static constexpr auto PRIO_MINE = 1'000'000'000;
-    static constexpr auto PRIO_WS = -1'000'000;     // priority for writing system support:
+    static constexpr auto PRIO_MINE = 1'000'000;
+    static constexpr auto PRIO_VERBAL = 1'000;      // priority for verbal priority
+    static constexpr auto PRIO_WS = -1;             // priority for writing system support:
                                                     // the wider support, the worse font
-    static constexpr auto PRIO_BLACKLIST = -2'000'000'000;
 
     ///  Priority for Hani (Chinese hieroglyphs)
     ///  We care which writing system the font declares, Chinese or Japanese
