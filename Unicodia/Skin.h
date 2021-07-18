@@ -11,7 +11,7 @@
 
 #ifdef _WIN32
     constexpr auto FAMILY_DEFAULT = std::string_view("Cambria");
-    constexpr auto FAMILY_CONDENSED = std::string_view("Arial Narrow");
+    constexpr auto FAMILY_CONDENSED = std::string_view("Arial");
 #else
     #error Unknown OS
 #endif
