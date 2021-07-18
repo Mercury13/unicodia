@@ -27,6 +27,9 @@ namespace {
         { "Noto ",           NameOp::START, FontPrio::BAD  },
         { "Segoe UI Emoji",  NameOp::EXACT, FontPrio::GOOD },
         { "Segoe UI Symbol", NameOp::EXACT, FontPrio::GOOD },
+        { "Webdings",        NameOp::EXACT, FontPrio::BAD  },
+        { "Wingdings",       NameOp::EXACT, FontPrio::BAD  },
+        { "Wingdings ",      NameOp::START, FontPrio::BAD  },
     };
 
     //bool isLess(const ListLine& x, std::string_view y)
