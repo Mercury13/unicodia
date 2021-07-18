@@ -753,30 +753,37 @@ void FmMain::showCp(MaybeChar ch)
         }
 
         // Sample char
+        bool wantSysFont = true;
         if (ch->name.isAbbreviated()) {
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setAbbreviation(ch->name.abbrev());
+            wantSysFont = false;
         } else {
             drawSampleWithQt(*ch);
         }
 
         // OS char
         std::optional<QFont> font = std::nullopt;
-        QString osProxy = ch->osProxy();
         QFontDatabase::WritingSystem ws = QFontDatabase::Any;
-        if (osProxy.isEmpty()) {
+        if (wantSysFont) {
+            QString osProxy = ch->osProxy();
+            if (osProxy.isEmpty()) {
+                ui->lbOs->setFont(fontBig);
+                ui->lbOs->setText({});
+            } else {
+                ws = ch->scriptEx(hint).qtCounterpart;
+                font = model.match.sysFontFor(ch.code, ws, FSZ_BIG);
+                if (font) {
+                    ui->lbOs->setFont(*font);
+                    ui->lbOs->setText(osProxy);
+                } else {
+                    ui->lbOs->setFont(fontBig);
+                    ui->lbOs->setText("?");
+                }
+            }
+        } else {
             ui->lbOs->setFont(fontBig);
             ui->lbOs->setText({});
-        } else {
-            ws = ch->scriptEx(hint).qtCounterpart;
-            font = model.match.sysFontFor(ch.code, ws, FSZ_BIG);
-            if (font) {
-                ui->lbOs->setFont(*font);
-                ui->lbOs->setText(osProxy);
-            } else {
-                ui->lbOs->setFont(fontBig);
-                ui->lbOs->setText("?");
-            }
         }
 
         // Text
