@@ -66,6 +66,7 @@ namespace uc {
         Olck,   // Ol Chiki
         Orya,   // Oriya
         Phag,   // Phags-Pa
+        Rjng,   // Rejang
         Runr,   // European runes
         Samr,   // Samaritan
         Sinh,   // Sinhala
@@ -176,7 +177,6 @@ namespace uc {
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP
         Prti = Zyyy,        // beyond BMP
-        Rjng = Zyyy,        /// @todo [bmp] Rejang
         Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
         //Roro  no chars
         //Sara  no chars

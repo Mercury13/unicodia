@@ -181,6 +181,7 @@ namespace uc {
         OGHAM,
         OLCHIKI,
         PHAGS_PA,
+        REJANG,
         RUNIC,
         SAMARITAN,
         SINHALA,

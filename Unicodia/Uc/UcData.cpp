@@ -61,6 +61,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
+    { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf" },             // Rejang
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
@@ -812,6 +813,17 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Если отбросить необычное направление письма, письмо Пагба-ламы{{-}}обычная брахмийская абугида с гласной "
                 "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>"sv,
                 EcFont::PHAGS_PA },
+    // Rejang OK, installed Google Noto font
+    { "Rjng"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
+        u8"Реджанг", u8"≈1750 (первый известный документ)",
+        u8"реджанг <i>(Суматра)</i>",
+        u8"<p>На языке реджанг говорят 200{{_}}тыс. человек (2000), большинство из них неграмотно. "
+                "Письмо постепенно заменяется латиницей.</p>"
+            "<p>Перед нами обычная брахмийская абугида с гласной по умолчанию «а» и вирамой: "
+                "{{sm|ꤰ}}=ка, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. "
+                "Письменность деградировала по той же причине, что и [[pop_scr:Runr|руны]]: проще выцарапывать на дереве.</p>"sv,
+                EcFont::REJANG },
     // Runes OK, installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
