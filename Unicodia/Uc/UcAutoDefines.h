@@ -407,17 +407,27 @@ namespace uc {
         SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
     };
 
+    namespace alt {
+        enum {
+            NUM_MASK = 31,
+            BIT_5 = 32,
+            BIT_6 = 64,
+            HAS_ABBREVIATION = 128,
+        };
+    }
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
         struct Name {
-            Int3 iTech, iLoc;            // +6 = 9
+            Int3 iTech;                 // +3 = 6
+            int8_t alt;                // +1 = 7
             const char8_t* tech() const;
         } name;
-        EcCategory ecCategory;          // +1 = 10
-        EcVersion ecVersion;            // +1 = 11
-        EcBidiClass ecBidiClass;        // +1 = 12
-        EcScript ecScript;              // +1 = 13
+        EcCategory ecCategory;          // +1 = 8
+        EcVersion ecVersion;            // +1 = 9
+        EcBidiClass ecBidiClass;        // +1 = 10
+        EcScript ecScript;              // +1 = 11
         struct Numeric {
             CompressedFraction val;
             EcNumType ecType = EcNumType::NONE;
@@ -426,7 +436,7 @@ namespace uc {
             consteval Numeric() = default;
             consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
                 : val(num, denom), ecType(aType) {}
-        } numeric;                      // +4 = 17
+        } numeric;                      // +4 = 15
         const Version& version() const;
         const Category& category() const;
         const BidiClass& bidiClass() const;
