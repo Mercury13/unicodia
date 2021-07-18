@@ -207,7 +207,7 @@
                         </item>
                        </layout>
                       </widget>
-                      <widget class="QWidget" name="pageSampleCustom">
+                      <widget class="WiCustomDraw" name="pageSampleCustom">
                        <property name="minimumSize">
                         <size>
                          <width>120</width>
@@ -373,6 +373,14 @@
    </property>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WiCustomDraw</class>
+   <extends>QWidget</extends>
+   <header>FmMain.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

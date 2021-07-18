@@ -385,9 +385,11 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     Super::paintEvent(event);
     switch (mode) {
     case Mode::NONE: break;
-    case Mode::ABBREVIATION:
-        drawAbbreviation(paintEngine()->painter(), geometry(), abbreviation,
-                         palette().windowText().color());
+    case Mode::ABBREVIATION: {
+            QPainter painter(this);
+            drawAbbreviation(&painter, geometry(), abbreviation,
+                             palette().windowText().color());
+        }
     }
 }
 
@@ -751,7 +753,12 @@ void FmMain::showCp(MaybeChar ch)
         }
 
         // Sample char
-        drawSampleWithQt(*ch);
+        if (ch->name.isAbbreviated()) {
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setAbbreviation(ch->name.abbrev());
+        } else {
+            drawSampleWithQt(*ch);
+        }
 
         // OS char
         std::optional<QFont> font = std::nullopt;
@@ -854,8 +861,8 @@ void FmMain::showCp(MaybeChar ch)
     } else {
         // No character
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-        ui->lbSample->setText(" ");
-        ui->lbOs->setText(" ");
+        ui->lbSample->setText({});
+        ui->lbOs->setText({});
         auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
         ui->vwInfo->setText("<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>");
     }
