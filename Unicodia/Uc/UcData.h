@@ -180,6 +180,7 @@ namespace uc {
         NKO,
         OGHAM,
         OLCHIKI,
+        PHAGS_PA,
         RUNIC,
         SAMARITAN,
         SINHALA,

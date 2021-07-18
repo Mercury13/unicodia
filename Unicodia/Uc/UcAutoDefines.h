@@ -65,6 +65,7 @@ namespace uc {
         Ogam,   // Ogham
         Olck,   // Ol Chiki
         Orya,   // Oriya
+        Phag,   // Phags-Pa
         Runr,   // European runes
         Samr,   // Samaritan
         Sinh,   // Sinhala
@@ -168,7 +169,6 @@ namespace uc {
         Palm = Zyyy,        // beyond BMP
         Pauc = Zyyy,        // beyond BMP
         Perm = Zyyy,        // beyond BMP
-        Phag = Zyyy,        /// @todo [bmp] Phags-pa
         Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars

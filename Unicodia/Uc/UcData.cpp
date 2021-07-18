@@ -60,6 +60,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
+    { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
@@ -794,11 +795,23 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
         u8"ория <i>(Восточная Индия)</i>"sv,
         u8"<p>Ори́я развилась из нагари (ранней формы деванагари без сплошной черты).</p>"
-                "<p>Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях\u00A0— чтобы не разрезать лист "
-                    "по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "
-                    "Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"
-                "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv,
+            "<p>Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях\u00A0— чтобы не разрезать лист "
+                "по жилкам, верхняя линия стала дугой. Самый ранний известный лист датируется XV веком. "
+                "Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"
+            "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv,
                 EcFont::GURMUKHI },
+    // Phags-Pa
+    { "Phag"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
+        u8"Монгольское квадратное (Пагба-ламы)", u8"1269",
+        u8"китайский, монгольский, тибетский, санскрит, уйгурский",
+        u8"<p>Монгольское письмо использовало уйгурский алфавит с минимальными изменениями. "
+                "С захватом монголами Китая у императора Хубилая возникли проблемы с коммуникацией между двором и многонациональным народом, "
+                "и эту задачу выполнил Пагба-лама, наставник Хубилая.</p>"
+            "<p>В 1368 году китайцы выбили монголов, письмо быстро забыли.</p>"
+            "<p>Если отбросить необычное направление письма, письмо Пагба-ламы{{-}}обычная брахмийская абугида с гласной "
+                "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>"sv,
+                EcFont::PHAGS_PA },
     // Runes OK, installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
