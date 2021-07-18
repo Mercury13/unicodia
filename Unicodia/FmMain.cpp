@@ -356,6 +356,24 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
 }
 
 
+void FmMain::CharsDelegate::initStyleOption(QStyleOptionViewItem *option,
+                     const QModelIndex &index) const
+{
+    Super::initStyleOption(option, index);
+    if (option->state & (QStyle::State_HasFocus | QStyle::State_Selected)) {
+        option->state.setFlag(QStyle::State_Selected, false);
+        option->state.setFlag(QStyle::State_HasFocus, false);
+        if (option->backgroundBrush.style() != Qt::NoBrush) {
+            auto clBg = option->backgroundBrush.color();
+            if (clBg.isValid()) {
+                clBg.setAlpha(clBg.alpha() / 2);
+                option->backgroundBrush.setColor(clBg);
+            }
+        }
+    }
+}
+
+
 void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
            const QModelIndex &index) const
 {
@@ -368,18 +386,14 @@ void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
                         | QStyle::State_Active | QStyle::State_Enabled;
             sob.rect = option.rect;
         owner.style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
-        // Draw the rest as usual
-        auto opt2 = option;
-        opt2.state.setFlag(QStyle::State_Selected, false);
-        opt2.state.setFlag(QStyle::State_HasFocus, false);
-        Super::paint(painter, opt2, index);
+        Super::paint(painter, option, index);
         tryDrawCustom(painter, option.rect, index, owner.palette().buttonText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
         owner.style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-        Super::paint(painter, opt2, index);
+        Super::paint(painter, option, index);
         tryDrawCustom(painter, option.rect, index, owner.palette().windowText().color());
     } else {
         Super::paint(painter, option, index);

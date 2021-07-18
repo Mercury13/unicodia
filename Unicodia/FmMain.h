@@ -169,6 +169,8 @@ private:
     protected:
         void tryDrawCustom(QPainter* painter, const QRect& rect,
                     const QModelIndex& index, const QColor& color) const;
+        void initStyleOption(QStyleOptionViewItem *option,
+                             const QModelIndex &index) const override;
     } charsDelegate;
 
     void showCp(MaybeChar ch);
