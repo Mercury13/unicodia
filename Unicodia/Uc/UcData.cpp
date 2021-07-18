@@ -800,7 +800,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Храмовая надпись XIII века всё ещё обладала разорванной линией, как в нагари.</p>"
             "<p>В остальном ория напоминает деванагари, гласная по умолчанию «а».</p>"sv,
                 EcFont::GURMUKHI },
-    // Phags-Pa
+    // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
         u8"Монгольское квадратное (Пагба-ламы)", u8"1269",
