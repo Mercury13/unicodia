@@ -856,11 +856,13 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Саураштра"sv, u8"XIX век",
+        u8"Саураштра"sv, u8"XIX век (возможно, раньше)",
         u8"саураштра <i>(Южная Индия)</i>"sv,
-        u8"<p>Происхождение неясно, все саураштра двуязычны (второй{{-}}[[pop_scr:Taml|тамильский]]).</p>"
+        u8"<p>Происхождение неясно, все [[pop_scr:Taml|тамильские]] саураштра двуязычны, а жители самóй Саураштры используют "
+                "[[pop_scr:Gujr|гуджарати]]."
             "<p>Перед нами обычная брахмийская абугида с гласной по умолчанию «а» и вирамой: "
-                "{{sm|ꢒ}}=ка, {{sm|ꢒꢶ}}=ки, {{sm|ꢒ꣄}}=к. Вирама употребляется часто.</p>"sv,
+                "{{sm|ꢒ}}=ка, {{sm|ꢒꢶ}}=ки, {{sm|ꢒ꣄}}=к. Вирама употребляется часто. "
+                "Начальная гласная{{-}}отдельный символ: {{sm|ꢄ}}=и."sv,
                 EcFont::SAURASHTRA },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     /// @todo [desc, BMP] interesting script, describe
