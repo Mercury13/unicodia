@@ -62,6 +62,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf" },             // Rejang
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
+    { "Noto Sans Saurashtra",       "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON }, // Saurashtra
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
@@ -852,6 +853,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
                 "религию и культуру. На 2021 существует не более 700 самаритян.</p>"sv,
                 EcFont::SAMARITAN },
+    // Saurashtra OK, W10 none, installed Google Noto
+    { "Saur"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Саураштра"sv, u8"XIX век",
+        u8"саураштра <i>(Южная Индия)</i>"sv,
+        u8"<p>Происхождение неясно, все саураштра двуязычны (второй{{-}}[[pop_scr:Taml|тамильский]]).</p>"
+            "<p>Перед нами обычная брахмийская абугида с гласной по умолчанию «а» и вирамой: "
+                "{{sm|ꢒ}}=ка, {{sm|ꢒꢶ}}=ки, {{sm|ꢒ꣄}}=к. Вирама употребляется часто.</p>"sv,
+                EcFont::SAURASHTRA },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     /// @todo [desc, BMP] interesting script, describe
     { "Sinh"sv, QFontDatabase::Sinhala,
@@ -929,6 +939,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::TAILUE },
     // Tamil BMP OK, different fonts in W10 and W7
     /// @todo [tofu, P1] Aux. Tamil characters are still tofu
+    /// @todo [urgent] W7 has no ₹, where to find?
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тамильская"sv, u8"VI—IX век"sv,
@@ -936,12 +947,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». Вирама употребляется очень часто и превратилась в точку. "
                 "Методы прикрепления огласовок к согласным довольно причудливы: ка={{sm|க}}, ки={{sm|கி}}, тта={{sm|ட}}, тти={{sm|டி}}. "
-                "Начальная гласная записывается отдельным знаком: и={{sm|இ}}.</p>"
-            "<p>В отличие от других индийских систем счёта, есть специальные символы для 10, 100 и 1000.</p>"
-            "<p>Дравидийский Юг никогда не покорялся мусульманам и даже создал шиваизм, особо ортодоксальную ветвь индуизма.</p>"
+                "Начальная гласная записывается отдельным знаком: и={{sm|இ}}."
+            "<p>В отличие от других индийских систем счёта, есть специальные символы для 10, 100 и 1000."
+            "<p>Дравидийский Юг никогда не покорялся мусульманам и даже создал шиваизм, особо ортодоксальную ветвь индуизма."
             "<p>В русском заимствований из тамильского мало, наиболее известное\u00A0— <i>катамаран</i>. "
-                "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие.</p>"
-            "<p>До того, как правительство Индии утвердило знак рупии {{sm|₹}}, у тамилов он существовал: {{sm|௹}}.</p>"sv,
+                "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие."
+            "<p>До того, как правительство Индии утвердило знак рупии ₹, у тамилов он существовал: {{sm|௹}}."sv,
                 EcFont::TAMIL },
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     /// @todo [desc, BMP] Telugu
@@ -1413,10 +1424,11 @@ constinit const uc::Block uc::blocks[302] {
     { 0x3200, 0x32FF,
             "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ" },
     { 0x3300, 0x33FF,
-            "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости" },
+            "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости"sv,
+            {}, EcScript::Hani },
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
-            u8"ККЯ иероглифы расширение A"},
+            u8"ККЯ иероглифы расширение A"sv, {}, EcScript::Hani },
     { 0x4DC0, 0x4DFF,
             "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)" },
     { 0x4E00, 0x9FFF,

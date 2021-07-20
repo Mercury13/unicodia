@@ -184,6 +184,7 @@ namespace uc {
         REJANG,
         RUNIC,
         SAMARITAN,
+        SAURASHTRA,
         SINHALA,
         SUNDANESE,
         SYRIAC,

@@ -69,6 +69,7 @@ namespace uc {
         Rjng,   // Rejang
         Runr,   // European runes
         Samr,   // Samaritan
+        Saur,   // Saurashtra
         Sinh,   // Sinhala
         Sund,   // Sundanese
         Syrc,   // Syriac
@@ -181,7 +182,6 @@ namespace uc {
         //Roro  no chars
         //Sara  no chars
         Sarb = Zyyy,        // beyond BMP
-        Saur = Zyyy,        /// @todo [bmp] Saurashtra
         Sgnw = Zyyy,        // SignWriting, beyond BMP
         Shaw = Zyyy,        // beyond BMP
         Shrd = Zyyy,        // beyond BMP
