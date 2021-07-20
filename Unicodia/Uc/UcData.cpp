@@ -65,6 +65,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Saurashtra",       "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON }, // Saurashtra
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
+    { "Noto Sans Syloti Nagri",     "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON }, // Syloti Nagri
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
@@ -801,7 +802,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Гласная по умолчанию «а», убирается знаком вирамы: {{sm|କ}}=ка, {{sm|କି}}=ки, {{sm|କ୍}}=к. "
                 "Но вирама в ории употребляется нечасто из-за большого количества лигатур: {{sm|ମ+ଭ=ମ୍ଭ}}{{_}}мбха. "
                 "В одной редакции 1-й статьи Декларации прав человека (стандартного текста для показа чужого языка) "
-                "нет вирам вообще, в другой{{-}}одна вирама.</p>"sv,
+                "нет вирам вообще, в другой{{-}}одна вирама. "
+                "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
                 EcFont::GURMUKHI },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag"sv, QFontDatabase::Any,
@@ -885,6 +887,21 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "пегон (местный вариант [[pop_scr:Arab|арабского]]); с XX века{{-}}[[pop_scr:Latn|латиницу]]. "
                 "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
                 EcFont::SUNDANESE },
+    // Syloti Nagri OK, W10 none → installed Google Noto
+    { "Sylo"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Силхети-нагари"sv, u8"XV век",
+        u8"силхетский <i>(Индия)</i>"sv,
+        u8"<p>По одной из теорий, письменность произошла из кайтхи и изобретена мусульманами. За простоту письменность была любима поэтами "
+                "XIX{{_}}века, но в начале XX{{_}}века уступила [[pop_scr:Beng|бенгальскому]]. В 2000-е годы в Бангладеше "
+                "начали снова изучать силхети."
+            "<p>Обычная брахмийская абугида с гласной по умолчанию «о» и вирамой ''(хасанта)'': {{sm|ꠇ}}=ко, {{sm|ꠇꠣ}}=ка, {{sm|ꠇ꠆}}=к. "
+                "Существует и другая запись вирамы, {{sm|ꠇ꠬}}=к, на манер других брахмийских письменностей. "
+                "Начальные гласные пишутся отдельными буквами. Двойные согласные и некоторые стыки образуют лигатуры: {{sm|ꠇ\uA806ꠇ}}=кко, "
+                "{{sm|ꠇ\uA806ꠔ}}=кто. Набор таких лигатур стандартный: первая буква, вирама, вторая буква. "
+                "Текст свисает с общей черты{{-}}но, в отличие от [[pop_scr:Deva|деванагари]], крепко за неё «держится»."
+            "<p>Запись слева направо, но силхетские книги, как дань исламу, сшиты справа налево."sv,
+                EcFont::SYLOTI_NAGRI },
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc"sv, QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,

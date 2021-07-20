@@ -72,6 +72,7 @@ namespace uc {
         Saur,   // Saurashtra
         Sinh,   // Sinhala
         Sund,   // Sundanese
+        Sylo,   // Syloti Nagri
         Syrc,   // Syriac
         Tagb,   // Tagbanwa
         Tale,   // Tai Le (old)
@@ -192,7 +193,6 @@ namespace uc {
         Sogd = Zyyy,        // beyond BMP
         Sogo = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
-        Sylo = Zyyy,        /// @todo [bmp] Syloti Nagri
         //Syre  no chars
         //Syrj  no chars
         //Syrn  no chars

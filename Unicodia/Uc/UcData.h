@@ -187,6 +187,7 @@ namespace uc {
         SAURASHTRA,
         SINHALA,
         SUNDANESE,
+        SYLOTI_NAGRI,
         SYRIAC,
         TAGALOG,
         TAGBANWA,
