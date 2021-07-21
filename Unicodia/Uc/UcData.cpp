@@ -979,7 +979,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Tavt"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тай-вьет"sv, u8"XVI век"sv,
-        u8"тайские языки Вьетнама"sv,
+        u8"языки чёрных тай <i>(Вьетнам)</i>"sv,
         u8"<p>Происходит из [[pop_scr:Thai|старотайского]] (царство Сукхотаи). "
                 "Впервые стандартизирована в 1961, позднее под эгидой ЮНЕСКО в 2006."
             "<p>Гласной по умолчанию нет, однако письменность остаётся абугидой из-за причудливых огласовок слева, сверху и справа:"
