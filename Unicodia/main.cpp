@@ -15,6 +15,8 @@ int main(int argc, char *argv[])
 
     // Preinstall backup font!
     installTempFontRel("NotoSerif-Regular.ttf");
+    installTempFontRel("NotoSansSymbols-Regular.ttf");
+    installTempFontRel("NotoSansSymbols2-Regular.ttf");
 
     uc::completeData();
     w.show();

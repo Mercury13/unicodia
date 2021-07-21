@@ -25,9 +25,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
-    { FAMILY_DEFAULT "," FAMILY_BACKUP, {} },                                   // Normal
+    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },                // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
-    { "Segoe UI Historic",          {} },                                       // Symbol
+    { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
