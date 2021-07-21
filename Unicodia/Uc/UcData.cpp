@@ -977,14 +977,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие."
             "<p>До того, как правительство Индии утвердило знак рупии ₹, у тамилов он существовал: {{sm|௹}}."sv,
                 EcFont::TAMIL },
-    // Tai Viet
+    // Tai Viet OK, installed Google Noto font
     { "Tavt"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тай-вьет"sv, u8"XVI век"sv,
         u8"тайские языки Вьетнама"sv,
         u8"<p>Происходит из [[pop_scr:Thai|старотайского]] (царство Сукхотаи). "
                 "Впервые стандартизирована в 1961, позднее под эгидой ЮНЕСКО в 2006."
-            "<p>Гласной по умолчанию нет, однако письменность остаётся абугидой из-за причудливых огласовок слева, сверху и справа. "
+            "<p>Гласной по умолчанию нет, однако письменность остаётся абугидой из-за причудливых огласовок слева, сверху и справа:"
+                "{{sm|ꪶꪀ}}=ко, {{sm|ꪀꪱ}}=ка, {{sm|ꪀꪲ}}=ки. "
                 "Традиционно читатель должен был угадывать тон, уже в первой стандартизации добавили тоновые знаки."sv,
                 EcFont::TAI_VIET },
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
