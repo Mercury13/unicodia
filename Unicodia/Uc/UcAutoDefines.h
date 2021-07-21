@@ -78,6 +78,7 @@ namespace uc {
         Tale,   // Tai Le (old)
         Talu,   // New Tai Lue
         Taml,   // Tamil
+        Tavt,   // Tai Viet
         Telu,   // Telugu
         Tglg,   // Tagalog
         Thaa,   // Thaana
@@ -198,7 +199,6 @@ namespace uc {
         //Syrn  no chars
         Takr = Zyyy,        // beyond BMP
         Tang = Zyyy,        // beyond BMP
-        Tavt = Zyyy,        /// @todo [bmp] Tai Viet
         //Teng  no chars
         Tfng = Zyyy,        /// @todo [bmp] Tifinagh
         Tirh = Zyyy,        // Tirhuta beyond BMP

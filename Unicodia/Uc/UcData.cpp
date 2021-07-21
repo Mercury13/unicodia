@@ -69,8 +69,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
     { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
-    { "Microsoft Tai Le",           {} },
-    { "Microsoft New Tai Lue",      {} },
+    { "Microsoft Tai Le",           {} },                                       // Tai Le
+    { "Microsoft New Tai Lue",      {} },                                       // Tai Lue (new)
+    { "Noto Sans Tai Viet",         "NotoSansTaiViet-Regular.ttf" },            // Tai Viet
     { "Nirmala UI,Latha",           {} },                                       // Tamil
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
@@ -976,6 +977,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие."
             "<p>До того, как правительство Индии утвердило знак рупии ₹, у тамилов он существовал: {{sm|௹}}."sv,
                 EcFont::TAMIL },
+    // Tai Viet
+    { "Tavt"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Тай-вьет"sv, u8"XVI век"sv,
+        u8"тайские языки Вьетнама"sv,
+        u8"<p>Происходит из [[pop_scr:Thai|старотайского]] (царство Сукхотаи). "
+                "Впервые стандартизирована в 1961, позднее под эгидой ЮНЕСКО в 2006."
+            "<p>Гласной по умолчанию нет, однако письменность остаётся абугидой из-за причудливых огласовок слева, сверху и справа. "
+                "Традиционно читатель должен был угадывать тон, уже в первой стандартизации добавили тоновые знаки."sv,
+                EcFont::TAI_VIET },
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     /// @todo [desc, BMP] Telugu
     { "Telu"sv, QFontDatabase::Telugu,

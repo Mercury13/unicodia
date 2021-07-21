@@ -193,6 +193,7 @@ namespace uc {
         TAGBANWA,
         TAILE,
         TAILUE,
+        TAI_VIET,
         TAMIL,
         TELUGU,
         THAANA,
