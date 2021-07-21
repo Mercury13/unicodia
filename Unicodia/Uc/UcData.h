@@ -148,6 +148,7 @@ namespace uc {
     {
         NORMAL,
         SYMBOL,
+        ADLAM,
         AHOM,
         ARABIC,
         BALINESE,

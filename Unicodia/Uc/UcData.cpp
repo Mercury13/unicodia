@@ -23,9 +23,10 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
-    { FAMILY_DEFAULT,               {} },
-    { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Normal
+    { FAMILY_DEFAULT,               {} },                                       // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
+    { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
+    { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
@@ -36,7 +37,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
-    { "Noto Serif CJK SC",          "NotoSerifCJKsc-SemiBold.otf", Ffg::SEMIBOLD },             // CJK
+    { "Noto Serif CJK SC",          "NotoSerifCJKsc-Regular.otf" },             // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
     { "Nirmala UI",                 {}, Ffg::STUB_ON },                         // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
@@ -273,21 +274,22 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Zyyy"sv, QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
-    /// @todo [tofu, P1] W7 no font at all
+    // Adlam OK, beyond BMP, we could work somehow with umlauts, but font is REALLY small.
     { "Adlm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Адлам"sv, u8"конец 1980-х"sv,
         u8"фулá <i>(семейство языков Западной Африки)</i>"sv,
-        u8"<p>Фулá\u00A0— кочевники, антропологически средние между европейцами и неграми, и самые ярые проповедники ислама "
+        u8"<p>Фулá{{-}}кочевники, антропологически средние между европейцами и неграми, и самые ярые проповедники ислама "
                 "в западной Африке.</p>"
             "<p>Алфавит придуман братьями Ибрагима и Абдулайе Барри, чтобы лучше передавать языки фулá, чем латиница или арабский. "
                 "Новая письменность прижилась, и её учат в школах Гвинеи, Либерии и других стран, локализован Android.</p>"
             "<p>Алфавит назван по первым четырём буквам: A, D, L, M. "
-                "Эти буквы означают «Alkule Dandayɗe Leñol Mulugol»\u00A0— «алфавит, защищающий народы от исчезновения».</p>"
+                "Эти буквы означают «Alkule Dandayɗe Leñol Mulugol»{{-}}«алфавит, защищающий народы от исчезновения».</p>"
             "<p>До этого были ещё две неудачных попытки придумать письменность фулá, не описанных в Юникоде: "
                 "фула Дита (1936, вдохновлена доарабской культурой) и фула Ба (1963). "
-                "Иногда использовался волоф\u00A0— сильно видоизменённый арабский шрифт. "
-                "Основная же письменность\u00A0— латиница.</p>"sv },
+                "Иногда использовался волоф{{-}}сильно видоизменённый [[pop_scr:Arab|арабский]] шрифт. "
+                "Основная же письменность{{-}}[[pop_scr:Latn|латиница]].</p>"sv,
+                EcFont::ADLAM },
     /// @todo [tofu, P1] W7/10 no font at all
     { "Aghb"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -317,7 +319,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Компьютерная арабица осложняется написанием арабских букв: у каждой есть обособленная, начальная, средняя и конечная форма. "
                 "В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "
                 "Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
-            EcFont::ARABIC },
+                EcFont::ARABIC },
     /// @todo [tofu, P1] No font at all
     { "Armi"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
@@ -551,7 +553,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "
                 "считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "
                 "официальным стал в 1945.</p>"sv },
-    /// @todo [tofu, BMP] Even radicals in W7 are bad, install a font
+    /// @todo [tofu, BMP] Current Noto font is limited with 2017
     { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Китайские иероглифы"sv, u8"около 2000 до н.э."sv,
@@ -582,19 +584,21 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
         u8"иврит, ладино, идиш, караимский, крымчакский"sv,
-        u8"<p>Развился из арамейской письменности, и ко II\u00A0в. до н.э. приобрёл почти современный вид.</p>"sv
+        u8"<p>Развился из [[pop_scr:Armi|арамейской]] письменности, и ко II{{_}}в. до{{_}}н.э. приобрёл почти современный вид.</p>"sv
             u8"<p>Записывает только согласные буквы, но четыре буквы {{sm|אהוי}} могут означать гласные. "sv
-            u8"С той же целью иногда используют огласовки\u00A0— точки над буквами.</p>"sv,
-            EcFont::HEBREW },
+                u8"С той же целью иногда используют огласовки\u00A0— точки над буквами.</p>"sv,
+                EcFont::HEBREW },
     { "Hira"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
         u8"японский"sv,
-        u8"<p>Около III\u00A0 века японцы стали писать китайскими иероглифами. Из них произошла вспомогательная азбука манъёгана\u00A0— "
-                "роль играло не изображение на иероглифе, а его прочтение. Хирáгана\u00A0— не что иное, как очень небрежно записанная манъёгана.</p>"
+        u8"<p>Около III{{_}}века японцы стали писать [[pop_scr:Hani|китайскими иероглифами]]. "
+                "Из них произошла вспомогательная азбука манъёгана{{-}}роль играло не изображение на иероглифе, а прочтение. "
+                "Хирáгана{{-}}не что иное, как очень небрежно записанная манъёгана."
             "<p>Женщины, которым не было доступно образование, писали слоговой азбукой, и предпочитали не рубленую "
-                "катáкану, а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
-                "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>"sv },
+                "[[pop_scr:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
+                "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
+                EcFont::CJK },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -617,6 +621,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Карены{{-}}разнородная группа народов, среди них есть красные, чёрные, белые и другие, по цвету национального костюма. "
                 "Помимо кая-ли, пишут [[pop_scr:Thai|тайским]], латиницей и [[pop_scr:Mymr|бирманским]].</p>"sv,
                 EcFont::KAYAH_LI },
+    /// @todo [img] what images to choose for Katakana/Hiragana?
     { "Kana"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
         u8"Катакана"sv, u8"VIII—IX век"sv,
@@ -624,7 +629,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Около III\u00A0 века японцы стали писать китайскими иероглифами. Из них произошла вспомогательная азбука манъёгана\u00A0— "
                 "роль играло не изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.</p>"
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
-                "До 1946 года использовали для записи окончаний слов (сейчас это делают хираганой).</p>"sv },
+                "До 1946 года использовали для записи окончаний слов (сейчас это делают хираганой).</p>"sv,
+                EcFont::CJK },
     { "Khmr"sv, QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кхмерская"sv, u8"VI век"sv,
