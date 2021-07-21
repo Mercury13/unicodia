@@ -952,8 +952,6 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Новое письмо лы"sv, u8"1950-е"sv,
         u8"дайские (=лы; <i>Китай; общины лы в других странах пользуются старым письмом</i>)"sv,
-                /// @todo [desc] Somehow Qt’s font engine cannot increase font, what to do?
-                /// @todo [urgent] Some wiki support
         u8"<p>Созданный в 1950-е годы китайскими властями алфавит встретил сопротивление народа, и Китай пошёл по пути "
                 "постепенного упрощения [[pop_scr:Tale|старого письма лы]].</p>"
             "<p>Гласная по умолчанию «а». Вирама имеет вид крючка с петлей и в Юникоде записывается как единое целое с согласной: {{sm|ᧇ}}. "
