@@ -147,7 +147,8 @@ namespace uc {
     enum class EcFont
     {
         NORMAL,
-        SYMBOL,
+         SYMBOL,
+         HISTORIC,
         ADLAM,
         AHOM,
         ARABIC,
