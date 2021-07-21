@@ -80,6 +80,7 @@ namespace uc {
         Taml,   // Tamil
         Tavt,   // Tai Viet
         Telu,   // Telugu
+        Tfng,   // Tifinagh
         Tglg,   // Tagalog
         Thaa,   // Thaana
         Thai,   // Thai
@@ -200,7 +201,6 @@ namespace uc {
         Takr = Zyyy,        // beyond BMP
         Tang = Zyyy,        // beyond BMP
         //Teng  no chars
-        Tfng = Zyyy,        /// @todo [bmp] Tifinagh
         Tirh = Zyyy,        // Tirhuta beyond BMP
         Ugar = Zyyy,        // Ugaritic beyond BMP
         //Visp  no chars

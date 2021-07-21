@@ -77,6 +77,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::STUB_ON, "padding-bottom:10%;", 110_pc },  // Thai
+    { "Noto Sans Tifinagh",         "NotoSansTifinagh-Regular.ttf" },           // Tifinagh
     { "Ebrima",                     {} },                                       // Vai
     { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
 };
@@ -996,6 +997,17 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"телугу <i>(Юго-Восточная Индия)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.</p>"sv,
                 EcFont::TELUGU },
+    // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
+    { "Tfng"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"Тифинаг (берберский)", u8"не позднее III в. (древняя консонантная), XX в. (современная)",
+        u8"туарегские и другие берберские <i>(Марокко)</i>",
+        u8"<p>Происхождение староливийского письма неизвестно. Самый старый памятник{{-}}погребение царицы Тин-Хинан (IV{{_}}в.). "
+                "Письмо было консонантное, писали чаще всего снизу вверх или справа налево."
+            "<p>В XX веке из староливийского создали новую письменность, с написанием слева направо. Исламские государства "
+                "(в частности, Ливия Каддафи и Марокко 80-х) запрещали письменность, но в 2003 король Марокко разрешил тифинаг. "
+                "Переходный совет Ливии также разрешил берберские языки и тифинаг."sv,
+                EcFont::TIFINAGH },
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -1041,8 +1053,6 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».</p>"
             "<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "
                 "За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>"sv },
-    /// @todo [tofu] Tifinagh: W7 “Ebrima” if course has no 2012 chars
-
     // Vai OK, have good M$ font Ebrima
     { "Vaii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -1421,7 +1431,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2D00, 0x2D2F,
             "Georgian Supplement", u8"Грузинский дополнительный", {}, EcScript::Geor },
     { 0x2D30, 0x2D7F,
-            "Tifinagh", u8"Тифинаг", {}, EcScript::Tfng },
+            "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
     { 0x2D80, 0x2DDF,
             "Ethiopic Extended", u8"Эфиопский расширенный", {}, EcScript::Ethi },
     { 0x2DE0, 0x2DFF,
