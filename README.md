@@ -15,7 +15,8 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Compile Unicodia.
 
 # Compatibility
-Right now W7 and W10, x64 only.
+x64 only. My tofu policy is: **W10 should support everything possible, W7 base plane only**.
+
 * WXP, WVista and W8 are completely abandoned by all imaginable software.
 * No obstacles for x86, just untested because no one compiled Qt for x86.
 * W11 will probably work, but there will be problems for two reasons.
