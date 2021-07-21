@@ -892,7 +892,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
     { "Sylo"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Силхети-нагари"sv, u8"XV век",
-        u8"силхетский <i>(Индия, Бангладеш)</i>"sv,
+        u8"силхетский <i>(Бангладеш, Индия)</i>"sv,
         u8"<p>По одной из теорий, письменность произошла из кайтхи и изобретена мусульманами. За простоту письменность была любима поэтами "
                 "XIX{{_}}века, но в начале XX{{_}}века уступила [[pop_scr:Beng|бенгальской]]. В 2000-е годы в Бангладеше "
                 "начали снова изучать силхети. На 2007 было 11{{_}}млн силхетов."
