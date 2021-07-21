@@ -335,7 +335,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. "
                 u8"В XII веке добавились буквы {{sm|Օ}} и {{sm|Ֆ}}.</p>"
             u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "
-                u8"манихейской вязи.</p>"sv },
+                u8"[[pop_scr:Syrc|манихейской]] вязи.</p>"sv },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
