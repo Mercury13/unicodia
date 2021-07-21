@@ -13,7 +13,8 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     FmMain w;
 
-    //installTempFontRel("unifont-13.0.06.ttf");
+    // Preinstall backup font!
+    installTempFontRel("NotoSerif-Regular.ttf");
 
     uc::completeData();
     w.show();

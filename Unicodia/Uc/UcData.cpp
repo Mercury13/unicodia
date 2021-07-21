@@ -23,7 +23,9 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
-    { FAMILY_DEFAULT,               {} },                                       // Normal
+    /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
+    ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
+    { FAMILY_DEFAULT "," FAMILY_BACKUP, {} },                                   // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Symbol
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -1513,7 +1515,10 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] It is not just Devanagari, need description
     { 0xA830, 0xA83F,
             "Common Indic Number Forms", u8"Общеиндийские числовые символы",
-            {}, EcScript::Deva },
+            u8"Такие знаки присутствуют в источниках XVI века, и применяются по сей день "
+                "в Северной Индии, Пакистане и Непале для записи дробей: например, "
+                "размера, веса или цены.",
+            EcScript::Deva },
     { 0xA840, 0xA87F,
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
     { 0xA880, 0xA8DF,
@@ -2037,7 +2042,7 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     auto style = fn.styleSheet;
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
-        return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
+        //return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
         if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
             return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
