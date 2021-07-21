@@ -1509,8 +1509,10 @@ constinit const uc::Block uc::blocks[302] {
             "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
     { 0xA800, 0xA82F,
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
+    /// @todo [desc] It is not just Devanagari, need description
     { 0xA830, 0xA83F,
-            "Common Indic Number Forms", u8"Общеиндийские числовые символы" },
+            "Common Indic Number Forms", u8"Общеиндийские числовые символы",
+            {}, EcScript::Deva },
     { 0xA840, 0xA87F,
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
     { 0xA880, 0xA8DF,
