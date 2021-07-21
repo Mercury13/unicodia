@@ -277,7 +277,6 @@ namespace {
         }
     };
 
-    /// @todo [urgent] draw abbreviation
     void drawAbbreviation(
             QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
             const QColor& color)
@@ -292,11 +291,6 @@ namespace {
                               QSize(availSize, availSize));
         // Draw frame
         auto thickness = availSize / 60.0;
-//        if (thickness < 1) {
-//            QColor clAlpha = color;
-//            clAlpha.setAlphaF(thickness);
-//            painter->setPen(QPen(color, 1, Qt::DashLine));
-//        } else {
         painter->setPen(QPen(color, thickness, Qt::DashLine));
         painter->setBrush(Qt::NoBrush);
         painter->drawRect(rcFrame);

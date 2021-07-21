@@ -34,9 +34,10 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
+    { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Nirmala UI",                 {}, Ffg::STUB_ON },                       // Devanagari Vedic
+    { "Nirmala UI",                 {}, Ffg::STUB_ON },                         // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
     { "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
@@ -417,15 +418,16 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. "
                 "Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}.</p>"sv,
                 EcFont::CANADIAN_ABORIGINAL },
-    /// @todo [tofu, BMP] Cham — no font at all
     { "Cham"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Чамская"sv, u8"IV век"sv,
         u8"чамский <i>(Вьетнам, Камбоджа)</i>"sv,
         u8"<p>Чамская письменность произошла из брахми, и слоги по умолчанию заканчиваются гласной «а». Чтобы добавить другую гласную, "
-                "дописывается огласовка. Но у чамов исчез знак «вирама» (убрать гласную), вместо этого используется особая форма согласной "
-                "с длинным хвостом.</p>"
-            "<p>Большинство чамов исповедуют ислам и пишут арабицей, лишь некоторые чамы Вьетнама используют чамское письмо.</p>"sv },
+                "дописывается огласовка. Но у чамов исчез знак «вирама» (убрать гласную), вместо этого к слогу добавляется знак "
+                "конечной согласной: {{sm|ꨆ}}=ка, {{sm|ꨆꨯ}}=ко, {{sm|ꨆꨯꩃ}}=конг.</p>"
+            "<p>Большинство чамов исповедуют ислам и пишут [[pop_scr:Arab|арабицей]], лишь некоторые чамы Вьетнама "
+                "используют чамское письмо.</p>"sv,
+                EcFont::CHAM },
     // Cherokee OK, installed Google Noto font. Need it, W7 has no 2014 extensions.
     { "Cher"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,

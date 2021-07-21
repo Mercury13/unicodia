@@ -156,6 +156,7 @@ namespace uc {
         BUGINESE,
         BUHID,
         CANADIAN_ABORIGINAL,
+        CHAM,
         CHEROKEE,
         DEVANAGARI,
         DEVANAGARI_SYSTEM,
