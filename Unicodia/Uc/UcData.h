@@ -158,6 +158,7 @@ namespace uc {
         CANADIAN_ABORIGINAL,
         CHAM,
         CHEROKEE,
+        CJK,
         DEVANAGARI,
         DEVANAGARI_SYSTEM,
         GEORGIAN,
@@ -210,11 +211,12 @@ namespace uc {
     ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
-        BOLD = 1,               ///< Bolder
-        LIGHT = 2,              ///< Lighter
-        STUB_OFF = 4,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
-        STUB_ON = 8,            ///< Circle stub explicitly on
-        STUB_VICEVERSA = 16,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
+        BOLD = 1,               ///< Readdy bold
+        SEMIBOLD = 2,           ///< Bolder
+        LIGHT = 4,              ///< Lighter
+        STUB_OFF = 8,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
+        STUB_ON = 16,           ///< Circle stub explicitly on
+        STUB_VICEVERSA = 32,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
     };
 
     DEFINE_ENUM_OPS(Ffg)

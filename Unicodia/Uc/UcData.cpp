@@ -35,7 +35,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
-    { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },
+    { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
+    { "Noto Serif CJK SC",          "NotoSerifCJKsc-SemiBold.otf", Ffg::SEMIBOLD },             // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
     { "Nirmala UI",                 {}, Ffg::STUB_ON },                         // Devanagari Vedic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
@@ -368,7 +369,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Бенгальская"sv, u8"XV век"sv,
         u8"бенгальский, ассамский, санскрит"sv,
         u8"<p>Относится к северной ветви индийского письма. Гласная по умолчанию не «а», как в деванагари, а «о».</p>"sv },
-    /// @todo [tofu, BMP] Bopomofo, even main block
+    /// @todo [tofu, BMP] Managed to dispose of tofu in main block, but extended is here, 31BB+, 2020!
     { "Bopo"sv, QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бопомофо (чжуинь)"sv, u8"1913"sv,
@@ -378,7 +379,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "привычному пиньиню (латинской записи китайских слогов) и применяется в первую очередь для начального обучения детей, "
                 "ввода в мобильный телефон, поиска иероглифов в словарях по произношению.</p>"
             "<p>В 2007 на Тайване поступила в продажу модель смартфона BlackBerry, поддерживавшая ввод только через пиньинь, "
-                "она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</p>"sv },
+                "она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</p>"sv,
+                EcFont::CJK },
     // Braille OK, “Segoe UI Symbol”
     { "Brai"sv, QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::TECHNICAL,
@@ -566,7 +568,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Как читать\u00A0— определяется контекстом: {{sm|月曜日}}=гэцуо:би (понедельник), {{sm|月見}}=цукими (любование луной).</p>"
             "<p>В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не кодирует: тонкости написания передаются шрифтами, "
                 "и даже если шрифт неверный, понятно, о чём речь.</p>"
-            "<p>Вьетнам отказался от иероглифов в 1945. Северная Корея не использует иероглифы, Южная использует крайне редко.</p>"sv },
+            "<p>Вьетнам отказался от иероглифов в 1945. Северная Корея не использует иероглифы, Южная использует крайне редко.</p>"sv,
+                EcFont::CJK },
     // Hanunoo OK, installed Google Noto font
     { "Hano"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -1442,13 +1445,14 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2E80, 0x2EFF,
             "CJK Radicals Supplement", u8"ККЯ дополнительные ключи", {}, EcScript::Hani },
     { 0x2F00, 0x2FDF,
-        "Kangxi Radicals", u8"Ключи канси" },
+            "Kangxi Radicals", u8"Ключи канси", {}, EcScript::Hani },
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
             u8"Символы структуры иероглифов" },
+    /// @todo [tofu] 302E/F, these are Hangul
     { 0x3000, 0x303F,
             "CJK Symbols and Punctuation",
-            u8"ККЯ символы и знаки препинания" },
+            u8"ККЯ символы и знаки препинания"sv, {}, EcScript::Hani },
     { 0x3040, 0x309F,
             "Hiragana", u8"Хирагана", {}, EcScript::Hira },
     { 0x30A0, 0x30FF,
@@ -1463,11 +1467,12 @@ constinit const uc::Block uc::blocks[302] {
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный" },
     { 0x31C0, 0x31EF,
-            "CJK Strokes", u8"Черты ККЯ" },
+        "CJK Strokes", u8"Черты ККЯ"sv, {}, EcScript::Hani },
     { 0x31F0, 0x31FF,
             "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения" },
     { 0x3200, 0x32FF,
-            "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ" },
+            "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ",
+            {}, EcScript::Hani },
     { 0x3300, 0x33FF,
             "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости"sv,
             {}, EcScript::Hani },
@@ -1962,6 +1967,8 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         // Weight
         if (flags.have(Ffg::BOLD)) {
             font->setBold(true);
+        } else if (flags.have(Ffg::SEMIBOLD)) {
+            font->setWeight(QFont::DemiBold);
         } else if (flags.have(Ffg::LIGHT)) {
             font->setWeight(QFont::Light);
         }
