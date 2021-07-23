@@ -41,7 +41,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
     { "Noto Serif CJK SC",          "NotoSerifCJKsc-Regular.otf" },             // CJK
-    { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
+    { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
+    { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
     { "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
@@ -485,14 +486,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "<nobr>ка {{sm|क}} + и {{sm| ि}} = ки {{sm|कि}}</nobr>. "
                 "Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv,
                 EcFont::DEVANAGARI },
-    /// @todo [tofu, BMP] 135D, 5E tofu; 5F strange thing; do we have anything besides Nyala?
-    /// @todo [tofu, BMP] AB01+ LOTS of tofu W7, drop Nyala!
+    // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские"sv,
-        u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII веке. Геэз всё ещё используется эфиопскими христианами "
-                "как литургический\u00A0— а письменность распространилась на другие языки Эфиопии.</p>"sv },
+        u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "
+                "Геэз всё ещё используется эфиопскими христианами как литургический{{-}}"
+                "а письменность распространилась на другие языки Эфиопии.</p>"sv,
+                EcFont::ETHIOPIC },
     // Georgian OK, installed Google Noto font
     { "Geor"sv, QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,

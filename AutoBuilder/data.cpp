@@ -267,6 +267,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "AIVILIK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ATHAPASCAN"sv,   Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
+    // Other nations
+    { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+
     // Nouns
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
     { "APOSTROPHE"sv,   Dicf::PART_NOUN },
@@ -293,6 +296,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MCHU"sv,         Dicf::PART_NOUN },
     { "PLUS"sv,         Dicf::PART_NOUN },
     { "REDUPLICATION"sv, Dicf::PART_NOUN },
+    { "RIKRIK",         Dicf::PART_NOUN },
     { "RING"sv,         Dicf::PART_NOUN },
     { "SHAD"sv,         Dicf::PART_NOUN },
     { "SHELF"sv,        Dicf::PART_NOUN },
