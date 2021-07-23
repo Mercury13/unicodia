@@ -40,7 +40,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
-    { "Noto Serif CJK SC",          "NotoSerifCJKsc-Regular.otf" },             // CJK
+        // CJK chars are square, and there’s always not ehough detail → 130%
+    { "Noto Serif CJK SC",          "NotoSerifCJKsc-Regular.otf", {}, {}, 130_pc }, // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
@@ -82,6 +83,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::STUB_ON, "padding-bottom:10%;", 110_pc },  // Thai
+        // Tibetan chars are VERY high → 90%
     { "Noto Serif Tibetan",         "NotoSerifTibetan-Regular.ttf", {}, {}, 90_pc }, // Tibetan
     { "Noto Sans Tifinagh",         "NotoSansTifinagh-Regular.ttf" },           // Tifinagh
     { "Ebrima",                     {} },                                       // Vai
@@ -549,9 +551,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Гурмукхи сильно связан с сикхизмом, название означает «из уст гуру». Пенджабские мусульмане используют "
                 "шахмукхи («из уст шаха»), разновидность арабского алфавита.</p>"sv,
                 EcFont::GURMUKHI },
-    /// @todo [tofu, BMP] Jamo & compatible jamo OK (Batang), install some font
-    /// @todo [tofu, BMP] Jamo extended-A/B BAD, really need a font
-    /// @todo [tofu, BMP] Basic syllables OK (Batang)
+    // Hangul OK, installed Noto CJK font
     { "Hang"sv, QFontDatabase::Korean,
         EcScriptType::PSEUDOALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Хангыль"sv, u8"1443"sv,
@@ -560,7 +560,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Придуман группой учёных под руководством царя Седжона Великого, считавшего, что [[pop_scr:Hani|китайские иероглифы]] "
                 "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "
                 "считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX веке, "
-                "официальным стал в 1945.</p>"sv },
+                "официальным стал в 1945.</p>"sv,
+                EcFont::CJK },
     /// @todo [tofu, BMP] Current Noto font is limited with 2017
     { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
