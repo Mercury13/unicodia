@@ -810,6 +810,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "{{sm|ᱜ}}{{_}}отрыжка.</p>",
                 EcFont::OLCHIKI },
     /// @todo [tofu] Even Noto has no U+0B55 (2020)
+    /// @todo [tofu] Noto has badly placed circle, W7 lacks 2010 fractions
+    /// @todo [font] Build a genuine Oriya pair, W7’s Oriya font is Kalinga
     { "Orya"sv, QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
