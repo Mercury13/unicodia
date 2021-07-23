@@ -474,6 +474,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "
                 u8"Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
     /// @todo [tofu, BMP] Main block OK, but Vedic is a read PitA.
+    /// @todo [tofu, BMP] Another PitA in W7, A8FC+
     { "Deva"sv, QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
@@ -485,6 +486,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv,
                 EcFont::DEVANAGARI },
     /// @todo [tofu, BMP] 135D, 5E tofu; 5F strange thing; do we have anything besides Nyala?
+    /// @todo [tofu, BMP] AB01+ LOTS of tofu W7, drop Nyala!
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
