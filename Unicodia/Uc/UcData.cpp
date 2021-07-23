@@ -1061,7 +1061,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Гласная по умолчанию «а» в закрытых слогах и «о» в открытых: {{sm|ช}}=чо. Но буквы называются по словам: "
                 "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv,
                 EcFont::THAI },
-    // Tibetan OK, W10 did not have swastika
+    // Tibetan OK, W10 did not have swastika, installed Google Noto
     { "Tibt"sv, QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тибетская"sv, u8"≈650"sv,
