@@ -82,6 +82,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::STUB_ON, "padding-bottom:10%;", 110_pc },  // Thai
+    { "Noto Serif Tibetan",         "NotoSerifTibetan-Regular.ttf", {}, {}, 90_pc }, // Tibetan
     { "Noto Sans Tifinagh",         "NotoSansTifinagh-Regular.ttf" },           // Tifinagh
     { "Ebrima",                     {} },                                       // Vai
     { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
@@ -1060,13 +1061,15 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Гласная по умолчанию «а» в закрытых слогах и «о» в открытых: {{sm|ช}}=чо. Но буквы называются по словам: "
                 "так, эта буква называется «чо-чан» (слон). Между словами не ставятся пробелы.</p>"sv,
                 EcFont::THAI },
+    // Tibetan OK, W10 did not have swastika
     { "Tibt"sv, QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тибетская"sv, u8"≈650"sv,
         u8"тибетские, дзонг-кэ <i>(Бутан)</i>, шерпский…"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».</p>"
             "<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "
-                "За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>"sv },
+                "За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</p>"sv,
+                EcFont::TIBETAN },
     // Vai OK, have good M$ font Ebrima
     { "Vaii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,

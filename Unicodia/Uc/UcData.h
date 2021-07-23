@@ -202,6 +202,7 @@ namespace uc {
         TELUGU,
         THAANA,
         THAI,
+        TIBETAN,
         TIFINAGH,
         VAI,
         YI,
