@@ -243,14 +243,29 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SYMBOL"sv,       Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "SYLLABICS"sv,    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "SYLLABLE"sv,     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "TH-CREE"sv,      Dicf::TRIG_CAP_NEXT | Dicf::TRIG_SCRIPT },
-     { "BLACKFOOT"sv,   Dicf::TRIG_CAP_NEXT | Dicf::TRIG_SCRIPT },
-     { "SAYISI"sv,      Dicf::TRIG_CAP_NEXT | Dicf::TRIG_SCRIPT },
-     { "CARRIER"sv,     Dicf::TRIG_CAP_NEXT | Dicf::TRIG_SCRIPT },
     { "VOWEL"sv,        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
 
     // Mixed
     { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+
+    // American tribes
+    { "TH-CREE"sv,      { Dicf::PART_ADJECTIVE, "Th-Cree" } },
+    { "WEST-CREE"sv,    { Dicf::PART_ADJECTIVE, "West-Cree" } },
+    { "BIBLE-CREE",     { Dicf::PART_ADJECTIVE, "Bible-Cree" } },
+    { "R-CREE"sv,       { Dicf::PART_ADJECTIVE, "R-Cree" } },
+    { "N-CREE"sv,       { Dicf::PART_ADJECTIVE, "N-Cree" } },
+    { "WOODS-CREE",     { Dicf::PART_ADJECTIVE, "Woods-Cree" } },
+    { "MOOSE-CREE",     { Dicf::PART_ADJECTIVE, "Moose-Cree" } },
+    { "Y-CREE",         { Dicf::PART_ADJECTIVE, "Y-Cree" } },
+    { "SOUTH-SLAVEY",   { Dicf::PART_ADJECTIVE, "South-Slavey" } },
+    { "BLACKFOOT"sv,    Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SAYISI"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    // Who knows what to do with Carrier (Canadian tribe)
+    { "CARRIER"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT },
+    { "NASKAPI"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "NUNAVIK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "AIVILIK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "ATHAPASCAN"sv,   Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
@@ -369,6 +384,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BARRED"sv,       Dicf::PART_ADJECTIVE },
     { "BIG"sv,          Dicf::PART_ADJECTIVE },
     { "BOOK"sv,         Dicf::PART_ADJECTIVE },
+    { "BOTTOM"sv,       Dicf::PART_ADJECTIVE },
     { "CAPITAL"sv,      Dicf::PART_ADJECTIVE },
     { "CASKET"sv,       Dicf::PART_ADJECTIVE },
     { "CLOSED"sv,       Dicf::PART_ADJECTIVE },
@@ -377,6 +393,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "DOTTED"sv,       Dicf::PART_ADJECTIVE },
     { "DOTLESS"sv,      Dicf::PART_ADJECTIVE },
     { "DOWN"sv,         Dicf::PART_ADJECTIVE },
+    { "DIAERESIZED",    Dicf::PART_ADJECTIVE },
     { "DIAGONAL"sv,     Dicf::PART_ADJECTIVE },
     { "EXCLAMATION"sv,  Dicf::PART_ADJECTIVE },
     { "FIXED-FORM"sv,   Dicf::PART_ADJECTIVE },
@@ -442,6 +459,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SHARP"sv,        Dicf::PART_ADJECTIVE },
     { "SHORT"sv,        Dicf::PART_ADJECTIVE },
     { "SHORT-TWIG-AR"sv, Dicf::PART_ADJECTIVE },
+    /// @todo [decap] Arabic mark Sideways Noon gnunna — is it right?
+    { "SIDEWAYS",       Dicf::PART_ADJECTIVE },
     { "SMALL"sv,        Dicf::PART_ADJECTIVE },
     { "SNAP"sv,         Dicf::PART_ADJECTIVE },     // OK, music only
     { "SPACING"sv,      Dicf::PART_ADJECTIVE },
@@ -451,6 +470,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SYLLABIC"sv,     Dicf::PART_ADJECTIVE },
     { "TALL"sv,         Dicf::PART_ADJECTIVE },
     { "THREE-D"sv,      { Dicf::PART_ADJECTIVE, "three-D" } },
+    { "TOP"sv,          Dicf::PART_ADJECTIVE },
     { "TRIANGULAR"sv,   Dicf::PART_ADJECTIVE },
     { "TRIPLE"sv,       Dicf::PART_ADJECTIVE },
     { "TROKUTASTI"sv,   Dicf::PART_ADJECTIVE },
