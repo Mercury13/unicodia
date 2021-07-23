@@ -162,7 +162,6 @@ namespace uc {
         CHEROKEE,
         CJK,
         DEVANAGARI,
-        DEVANAGARI_SYSTEM,
         GEORGIAN,
         GLAGOLITIC,
         GURMUKHI,

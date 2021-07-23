@@ -88,7 +88,6 @@ namespace uc {
         Vaii,   // Vai
         Yiii,   // Yi
         Zinh,   // Unicode technical
-        ZDeva,  // “Unicodia” technical
         NN,
 
         //Afak  no chars

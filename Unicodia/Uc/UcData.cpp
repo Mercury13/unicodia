@@ -42,8 +42,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
     { "Noto Serif CJK SC",          "NotoSerifCJKsc-Regular.otf" },             // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },
-    { "Nirmala UI",                 {}, Ffg::STUB_ON },                         // Devanagari Vedic
-    { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },
+    { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
     { "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
     { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
@@ -1096,11 +1095,6 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные"sv, {}, {},
         u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>"sv },
-    { "ZDeva"sv, QFontDatabase::Devanagari,
-        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-        u8"Devanagari technical"sv, {}, {},
-        u8"Devanagari technical"sv,
-                EcFont::DEVANAGARI_SYSTEM },
 };
 
 
