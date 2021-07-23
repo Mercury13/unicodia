@@ -266,6 +266,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "NUNAVIK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "AIVILIK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ATHAPASCAN"sv,   Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "OJIBWAY",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Other nations
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
