@@ -31,7 +31,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
-    { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },
+    { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },            // Arabic
+    { FAMILY_DEFAULT ",Sylfaen",    {} },                                       // Armenian
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA },
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
@@ -336,7 +337,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "фрагментация языка и дальнейшее формирование [[pop_scr:Syrc|сирийских]] языков (предков [[pop_scr:Arab|арабского]]) "
                 "и иудейских (предков [[pop_scr:Hebr|иврита]]).</p>"sv,
                 EcFont::HISTORIC },
-    /// @todo [tofu, BMP] Someone installed Noto Armenian, and it’s not enough, and it’s ugly!
+    /// @todo [tofu, BMP] Noto is ugly and has tofu 0560 and 0588, W7 has tofu 058D+.
     { "Armn"sv, QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Армянская"sv, u8"405"sv,
@@ -345,7 +346,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. "
                 u8"В XII веке добавились буквы {{sm|Օ}} и {{sm|Ֆ}}.</p>"
             u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "
-                u8"[[pop_scr:Syrc|манихейской]] вязи.</p>"sv },
+                u8"[[pop_scr:Syrc|манихейской]] вязи.</p>"sv,
+                EcFont::ARMENIAN },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,

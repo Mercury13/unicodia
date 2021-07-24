@@ -152,6 +152,7 @@ namespace uc {
         ADLAM,
         AHOM,
         ARABIC,
+        ARMENIAN,
         BALINESE,
         BAMUM,
         BATAK,
@@ -311,6 +312,10 @@ namespace uc {
 
     struct Cp;
 
+    enum class Bfg {
+        COLLAPSIBLE = 1
+    };
+
 
     struct Block
     {
@@ -320,6 +325,8 @@ namespace uc {
 
         std::u8string_view locDescription {};
         EcScript ecScript = EcScript::NONE;
+        EcFont ecFont = EcFont::NORMAL;
+        Flags<Bfg> flags {};
 
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
@@ -328,7 +335,9 @@ namespace uc {
         size_t index() const;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-        const Font& font() const { return script().font(); }
+        const Font& font() const { return (ecFont != EcFont::NORMAL)
+                                            ? fontInfo[static_cast<int>(ecFont)]
+                                            : script().font(); }
 
         Block& operator = (const Block&) = delete;
         Block& operator = (Block&&) = delete;
