@@ -984,7 +984,6 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::TAILUE },
     // Tamil BMP OK, different fonts in W10 and W7
     /// @todo [tofu, P1] Aux. Tamil characters are still tofu
-    /// @todo [urgent] W7 has no ₹, where to find?
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Тамильская"sv, u8"VI—IX век"sv,
