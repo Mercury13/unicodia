@@ -67,6 +67,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
+    { "Noto Sans Symbols2",         {}, {}, {}, 150_pc },                       // Phaistos disc
     { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf" },             // Rejang
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
@@ -1582,9 +1583,16 @@ constinit const uc::Block uc::blocks[302] {
             "Small Form Variants", u8"Малые формы знаков препинания" },
     { 0xFE70, 0xFEFF,
             "Arabic Presentation Forms-B", u8"Арабские формы начертания B", {}, EcScript::Arab },
+    /// @todo [font, BMP] CJK probably has no such chars, find smth siutable for W7 and 10
     { 0xFF00, 0xFFEF,
             "Halfwidth and Fullwidth Forms",
-            u8"Полуширинные и полноширинные формы" },
+            u8"Полуширинные и полноширинные формы",
+            u8"<p>В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}"
+                    "половину клетки. Отсюда необычное начертание текста на китайских товарах "
+                    "с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм». "
+                "<p>В этом блоке собраны «неправильные» символы, занимающие "
+                    "половину клетки вместо целой и наоборот.",
+            EcScript::NONE, EcFont::CJK },
     { 0xFFF0, 0xFFFF,
             "Specials", u8"Спецсимволы" },
     { 0x10000, 0x1007F,
@@ -1598,7 +1606,19 @@ constinit const uc::Block uc::blocks[302] {
     { 0x10190, 0x101CF,
             "Ancient Symbols", u8"Древние символы" },
     { 0x101D0, 0x101FF,
-            "Phaistos Disc", u8"Фестский диск" },
+        "Phaistos Disc", u8"Фестский диск"sv,
+        u8"<p>Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины "
+                "без гончарного круга, найден в 1908 на Крите, имеет диаметр 160{{_}}мм и толщину 20{{_}}мм. "
+                "Датируется 2100–1100{{_}}до н.э., и содержит две надписи, сделанных по спирали "
+                "неизвестной письменностью с помощью штампов."
+            "<p>Общепринята гипотеза, что текст читается от края к центру. "
+                "Никто не знает, критская это письменность или нет и к какому типу относится. "
+                "В числе необычных гипотез{{-}}список владений критского царя и игра-ходилка."
+            "<p>В 2006 Фестский диск предложен в Реестр искусственных письменностей на место "
+                "E6D0­–E6FF; порядок символов тот же (по книге Эванса, в порядке убывания частоты). "
+                "С появлением Фестского диска в настоящем Юникоде диапазон расформирован. "
+                "Два символа из Реестра в Юникод не вошли и берутся из латиницы: | и ¦."sv,
+            EcScript::NONE, EcFont::PHAISTOS_DISC },
     { 0x10280, 0x1029F,
             "Lycian", u8"Ликийский", {}, EcScript::Lyci },
     { 0x102A0, 0x102DF,
@@ -2125,6 +2145,16 @@ uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
     hint = blockOf(subj, hint);
     return hint->ecScript;
 }
+
+
+const uc::Font& uc::Cp::font(const Block*& hint) const
+{
+    if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
+        return scriptInfo[static_cast<int>(ecScript)].font();
+    hint = blockOf(subj, hint);
+    return hint->font();
+}
+
 
 
 namespace {

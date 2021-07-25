@@ -186,6 +186,7 @@ namespace uc {
         OGHAM,
         OLCHIKI,
         PHAGS_PA,
+        PHAISTOS_DISC,
         REJANG,
         RUNIC,
         SAMARITAN,
@@ -412,8 +413,6 @@ namespace uc {
     inline const Script& Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
     inline const Script& Cp::scriptEx(const Block*& hint) const
         { return scriptInfo[static_cast<int>(ecScriptEx(hint))]; }
-    inline const Font& Cp::font(const Block*& hint) const
-        { return scriptInfo[static_cast<int>(ecScriptEx(hint))].font(); }
     inline bool Cp::isTrueSpace() const
             { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                       ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
