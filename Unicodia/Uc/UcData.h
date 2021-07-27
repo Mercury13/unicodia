@@ -156,6 +156,7 @@ namespace uc {
         BALINESE,
         BAMUM,
         BATAK,
+        BENGALI,
         BUGINESE,
         BUHID,
         CANADIAN_ABORIGINAL,

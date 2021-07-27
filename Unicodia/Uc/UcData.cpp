@@ -25,7 +25,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
-    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },                // Normal
+    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -33,12 +33,13 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },            // Arabic
     { FAMILY_DEFAULT ",Sylfaen",    {} },                                       // Armenian
-    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },
-    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA },
-    { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },
-    { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },
-    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },
-    { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" },
+    { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc }, // Balinese
+    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA }, // Bamum
+    { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },              // Batak
+    { "Noto Serif Bengali",         "NotoSerifBengali-Regular.ttf", {}, {}, 120_pc }, // Bengali
+    { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON }, // Buginese
+    { "Noto Sans Buhid",            "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON }, // Buhid
+    { "Noto Sans Canadian Aboriginal", "NotoSansCanadianAboriginal-Regular.ttf" }, // Canadian aboriginal
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -387,12 +388,19 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Происходит от брахми и мало чем отличается от других абугид Юго-Восточной Азии. Гласная по умолчанию «а». "
                 "Практически не используется, заменена латиницей.</p>"sv,
                 EcFont::BATAK },
-    /// @todo [tofu, BMP] Several tofu of 2009+
+    // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng"sv, QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Бенгальская"sv, u8"XV век"sv,
-        u8"бенгальский, ассамский, санскрит"sv,
-        u8"<p>Относится к северной ветви индийского письма. Гласная по умолчанию не «а», как в деванагари, а «о».</p>"sv },
+        u8"бенгальский, ассамский, санскрит <i>(Бангладеш)</i>"sv,
+        u8"<p>Относится к восточной ветви индийского письма. Гласная по умолчанию{{-}}среднее между «а» и «о», "
+                "в Юникоде условно обозначается «а», в других источниках «ɔ» или «ô»: "
+                "{{sm|ক}}=кô, {{sm|কি}}=ки."
+            "<p>Вирама (''бирам'', убрать гласную по умолчанию) используется крайне редко{{-}}{{sm|নাক্ }}= нôк{{-}}"
+                "потому что в бенгальском есть множество лигатур: {{sm|ক্ত}}=ктô. "
+                "Из-за этого бенгальский считается одной из самых красивых письменностей мира. "
+                "Набор лигатур стандартный: первая буква, вирама, вторая буква."sv,
+                EcFont::BENGALI },
     /// @todo [tofu, BMP] Managed to dispose of tofu in main block, but extended is here, 31BB+, 2020!
     { "Bopo"sv, QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
