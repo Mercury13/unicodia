@@ -778,6 +778,69 @@ namespace {
         appendUtf(text, sp, code);
     }
 
+    template <class X>
+    void appendWiki(QString& text, const X& obj, std::u8string_view x)
+    {
+        Eng eng(text, obj.font());
+        wiki::run(eng, x);
+    }
+
+    void appendWikiNoFont(QString& text, std::u8string_view x)
+    {
+        Eng eng(text, uc::fontInfo[0]);
+        wiki::run(eng, x);
+    }
+
+    void appendScript(QString& text, const uc::Script& x, bool isScript)
+    {
+        if (x.ecType != uc::EcScriptType::NONE) {
+            str::append(text, "<p>");
+            str::QSep sp(text, "<br>");
+            str::append(text, u8"• Тип: ");
+            str::append(text, x.type().locName);
+            if (x.ecDir != uc::EcWritingDir::NOMATTER) {
+                sp.sep();
+                str::append(text, u8"• Направление: ");
+                str::append(text, x.dir().locName);
+            }
+            if (!x.locLangs.empty()) {
+                sp.sep();
+                str::append(text, u8"• Языки: ");
+                str::append(text, x.locLangs);
+            }
+            if (!x.locTime.empty()) {
+                sp.sep();
+                str::append(text, u8"• Появилась: ");
+                str::append(text, x.locTime);
+            }
+            if (x.ecLife != uc::EcLangLife::NOMATTER) {
+                sp.sep();
+                str::append(text, u8"• Состояние: ");
+                str::append(text, x.life().locName);
+            }
+            if (isScript) {
+                if (x.ecVersion != uc::EcVersion::UNKNOWN) {
+                    sp.sep();
+                    appendVersion(text, u8"• "sv, x.version());
+                }
+
+                sp.sep();
+                str::append(text, u8"• Плоскость: ");
+                if (x.plane == uc::PLANE_BASE) {
+                    str::append(text, u8"базовая");
+                } else {
+                    str::append(text, std::to_string(x.plane));
+                }
+            }
+
+            str::append(text, "</p>");
+        }
+
+        str::append(text, "<p>");
+        appendWiki(text, x, x.locDescription);
+        str::append(text, "</p>");
+    }
+
 }   // anon namespace
 
 
@@ -904,6 +967,16 @@ void FmMain::showCp(MaybeChar ch)
             appendUtf(text, sp, ch.code);
 
             text.append("</p>");
+
+            if (!hint2->locDescription.empty()) {
+                // Block description
+                str::append(text, u8"<h2>О блоке</h2>");
+                appendWiki(text, *hint2, hint2->locDescription);
+            } else if (auto sc = ch->scriptEx(hint2); &sc != uc::scriptInfo){
+                // Script description
+                str::append(text, u8"<h2>О письменности</h2>");
+                appendScript(text, sc, false);
+            }
         }
         ui->vwInfo->setText(text);
     } else {
@@ -935,19 +1008,6 @@ void FmMain::charChanged(const QModelIndex& current)
 
 
 namespace {
-    template <class X>
-    void appendWiki(QString& text, const X& obj, std::u8string_view x)
-    {
-        Eng eng(text, obj.font());
-        wiki::run(eng, x);
-    }
-
-    void appendWikiNoFont(QString& text, std::u8string_view x)
-    {
-        Eng eng(text, uc::fontInfo[0]);
-        wiki::run(eng, x);
-    }
-
     inline void appendHeader(QString& text, std::string_view x)
     {
         str::append(text, "<p><nobr><b>");
@@ -970,56 +1030,6 @@ namespace {
         str::append(text, "</b> ("sv);
         str::append(text, x.nChars);
         str::append(text, " шт.)</nobr></p>");
-    }
-
-    void appendScript(QString& text, const uc::Script& x, bool isScript)
-    {
-        if (x.ecType != uc::EcScriptType::NONE) {
-            str::append(text, "<p>");
-            str::QSep sp(text, "<br>");
-            str::append(text, u8"• Тип: ");
-            str::append(text, x.type().locName);
-            if (x.ecDir != uc::EcWritingDir::NOMATTER) {
-                sp.sep();
-                str::append(text, u8"• Направление: ");
-                str::append(text, x.dir().locName);
-            }
-            if (!x.locLangs.empty()) {
-                sp.sep();
-                str::append(text, u8"• Языки: ");
-                str::append(text, x.locLangs);
-            }
-            if (!x.locTime.empty()) {
-                sp.sep();
-                str::append(text, u8"• Появилась: ");
-                str::append(text, x.locTime);
-            }
-            if (x.ecLife != uc::EcLangLife::NOMATTER) {
-                sp.sep();
-                str::append(text, u8"• Состояние: ");
-                str::append(text, x.life().locName);
-            }
-            if (isScript) {
-                if (x.ecVersion != uc::EcVersion::UNKNOWN) {
-                    sp.sep();
-                    appendVersion(text, u8"• "sv, x.version());
-                }
-
-                sp.sep();
-                str::append(text, u8"• Плоскость: ");
-                if (x.plane == uc::PLANE_BASE) {
-                    str::append(text, u8"базовая");
-                } else {
-                    str::append(text, std::to_string(x.plane));
-                }
-            }
-
-            str::append(text, "</p>");
-        }
-
-        str::append(text, "<p>");
-        appendWiki(text, x, x.locDescription);
-        str::append(text, "</p>");
     }
 
 }   // anon namespace
