@@ -26,6 +26,7 @@ https://github.com/googlefonts/noto-emoji — эмодзи от Гугла
 https://github.com/twitter/twemoji — эмодзи от Твиттера и как их качать [CC-BY-SA 4.0]
 https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
 https://commons.wikimedia.org/wiki/Category:Unicode_BMP
+https://www.unicode.org/charts/lastresort.html — интересные изображения письменностей
 
 
 ПИСЬМЕННОСТИ
