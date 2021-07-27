@@ -537,7 +537,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "одно и написали другое), где глаголицу заменили кириллицей.</p>"
             "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv,
             EcFont::GLAGOLITIC },
-    /// @todo [tofu, BMP] Even first chars of Greek are bad, maybe we have smth
+    /// @todo [semi-tofu, BMP] Check 1F28+ for exact images
     { "Grek"sv, QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Греческая"sv, u8"IX век до н.э."sv,
@@ -742,17 +742,17 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
-    /// @todo [tofu, P1] 11FB0, what to do?
+    /// @todo [tofu, P1] 11FB0 (a single Lisu letter), what to do?
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лису (алфавит Фрейзера)"sv, u8"1915"sv,
         u8"лису <i>(Китай)</i>"sv,
         u8"<p>Придуман британским миссионером Джеймсом Фрейзером. Состоит из латинских букв, как обычных, так и повёрнутых. "
-                "Строчного регистра нет. Благодаря усилиями миссионеров 40<font size='-2'>\u00A0</font>% лису\u00A0— протестанты. "
+                "Строчного регистра нет. Благодаря усилиями миссионеров {{%|40}} лису{{-}}протестанты. "
                 "Китайцы признали письменность в 1992.</p>"
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
-                "и письменность на тайский основе.</p>"sv,
+                "и письменность на [[pop_scr:Thai|тайской]] основе.</p>"sv,
                 EcFont::LISU },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
