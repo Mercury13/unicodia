@@ -460,7 +460,7 @@ FmMain::FmMain(QWidget *parent)
 
     // Divider
     auto w = width();
-    QList<int> sizes { w * 50 / 100, w * 50 / 100 };
+    QList<int> sizes { w * 45 / 100, w * 55 / 100 };
     ui->splitBlocks->setStretchFactor(0, 0);
     ui->splitBlocks->setStretchFactor(1, 1);
     ui->splitBlocks->setSizes(sizes);
