@@ -161,6 +161,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PAU"sv,          { Dicf::TRIG_THREE_WORD_SCRIPT, {}, "CIN"sv, "HAU"sv } },
     { "PERMIC"sv,       Dicf::TRIG_SCRIPT },
     { "PERSIAN"sv,      Dicf::TRIG_SCRIPT },
+    { "PHAISTOS",       { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "DISC" } },
     { "PHAGS-PA"sv,     Dicf::TRIG_SCRIPT },
     { "PAHLAVI"sv,      Dicf::TRIG_SCRIPT },
     { "PHOENICIAN"sv,   Dicf::TRIG_SCRIPT },
@@ -274,6 +275,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     // Nouns
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
     { "APOSTROPHE"sv,   Dicf::PART_NOUN },
+    { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
     { "ARROW"sv,        Dicf::PART_NOUN },
     { "ARROWHEAD"sv,    Dicf::PART_NOUN },
     { "BAR"sv,          Dicf::PART_NOUN },
