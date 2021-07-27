@@ -404,6 +404,14 @@ namespace uc {
         std::u8string_view desc;
     };
 
+    constexpr bool isNonChar(char32_t cp)
+    {
+        // There’re also 32 positions in Arabics; they are unseen right now.
+        return ((cp & 0xFFFF) >= 0xFFFE);
+    }
+
+    extern const std::u8string_view TX_NOCHAR;
+
     // Implementations of Cp inlines
     inline const char8_t* Cp::Name::tech() const { return allStrings + iTech.val(); }
     inline const NumType& Cp::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }

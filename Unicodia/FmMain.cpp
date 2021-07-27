@@ -194,6 +194,9 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (!cp) {
+                if (uc::isNonChar(cp.code)) {
+                    return QBrush(owner->palette().windowText().color(), Qt::DiagCrossPattern);
+                }
                 return owner->palette().button().color();
             }
             return {};
@@ -745,6 +748,36 @@ namespace {
         appendVersion(text, version);
     }
 
+    void appendUtf(QString& text, str::QSep& sp, char32_t code)
+    {
+        char buf[30];
+
+        // UTF-8
+        sp.sep();
+        auto sChar = str::toQ(code);
+        str::append(text, u8"UTF-8:");
+        auto u8 = sChar.toUtf8();
+        for (unsigned char v : u8) {
+            snprintf(buf, 10, " %02X", static_cast<int>(v));
+            str::append(text, buf);
+        }
+
+        // UTF-16: QString us UTF-16
+        sp.sep();
+        str::append(text, u8"UTF-16:");
+        for (auto v : sChar) {
+            snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
+            str::append(text, buf);
+        }
+    }
+
+    void appendMissingCharInfo(QString& text, char32_t code)
+    {
+        str::append(text, "<p>");
+        str::QSep sp(text, "<br>");
+        appendUtf(text, sp, code);
+    }
+
 }   // anon namespace
 
 
@@ -868,23 +901,7 @@ void FmMain::showCp(MaybeChar ch)
             snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(ch->subj));
             str::append(text, buf);
 
-            // UTF-8
-            sp.sep();
-            auto sChar = str::toQ(ch.code);
-            str::append(text, u8"UTF-8:");
-            auto u8 = sChar.toUtf8();
-            for (unsigned char v : u8) {
-                snprintf(buf, 10, " %02X", static_cast<int>(v));
-                str::append(text, buf);
-            }
-
-            // UTF-16: QString us UTF-16
-            sp.sep();
-            str::append(text, u8"UTF-16:");
-            for (auto v : sChar) {
-                snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
-                str::append(text, buf);
-            }
+            appendUtf(text, sp, ch.code);
 
             text.append("</p>");
         }
@@ -894,8 +911,19 @@ void FmMain::showCp(MaybeChar ch)
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText({});
         ui->lbOs->setText({});
-        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-        ui->vwInfo->setText("<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>");
+        if (uc::isNonChar(ch.code)) {
+            QString text;
+            str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
+            appendMissingCharInfo(text, ch.code);
+            str::append(text, uc::TX_NOCHAR);
+            ui->vwInfo->setText(text);
+        } else {
+            auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+            QString text;
+            text = "<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>";
+            appendMissingCharInfo(text, ch.code);
+            ui->vwInfo->setText(text);
+        }
     }
 }
 
