@@ -267,6 +267,33 @@ QModelIndex CharsModel::indexOf(char32_t code)
 
 namespace {
 
+    struct StrPair {
+        std::u8string_view line1, line2;
+
+        bool wasSplit() const { return !line2.empty(); }
+    };
+
+    StrPair splitAbbr(std::u8string_view abbr)
+    {
+        if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos)
+            return { abbr.substr(0, pSpace), abbr.substr(pSpace + 1) };
+        switch (abbr.size()) {
+        case 4:
+        case 6: {
+                auto split = abbr.size() / 2;
+                return { abbr.substr(0, split), abbr.substr(split) };
+            }
+        case 5: {
+                auto split = 3;
+                if (isdigit(abbr[2]) && isdigit(abbr[3]))
+                    split = 2;
+                return { abbr.substr(0, split), abbr.substr(split) };
+            }
+        default:
+            return { abbr, {} };
+        }
+    }
+
     struct RcPair {
         QRectF rc1, rc2;
 
@@ -302,35 +329,13 @@ namespace {
         painter->setFont(font);
         painter->setBrush(QBrush(color, Qt::SolidPattern));
         rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
-        switch (abbreviation.size()) {
-        case 4:
-        case 6: {
-                RcPair p(rcFrame);
-                auto split = abbreviation.size() / 2;
-                painter->drawText(p.rc1,
-                                  Qt::AlignCenter,
-                                  str::toQ(abbreviation.substr(0, split)));
-                painter->drawText(p.rc2,
-                                  Qt::AlignCenter,
-                                  str::toQ(abbreviation.substr(split)));
-            } break;
-        case 5: {
+        auto sp = splitAbbr(abbreviation);
+        if (sp.wasSplit()) {
             RcPair p(rcFrame);
-                auto split = 3;
-                if (isdigit(abbreviation[2]) && isdigit(abbreviation[3]))
-                    split = 2;
-                painter->drawText(p.rc1,
-                                  Qt::AlignCenter,
-                                  str::toQ(abbreviation.substr(0, split)));
-                painter->drawText(p.rc2,
-                                  Qt::AlignCenter,
-                                  str::toQ(abbreviation.substr(split)));
-            } break;
-        default:
-            painter->drawText(rcFrame,
-                              Qt::AlignCenter,
-                              str::toQ(abbreviation));
-            break;
+            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+        } else {
+            painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
         }
     }
 

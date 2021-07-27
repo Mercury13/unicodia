@@ -783,6 +783,34 @@ const std::multiset<PrefixEntry> prefixes {
 };
 
 
+const std::map<char32_t, std::string_view> abbrevs {
+    { 9, "TAB" },       // TAB or HT
+    { 10, "LF" },       // NL or LF
+    { ' ', {} },        // SPACE has abbrev SP
+    { 0x00A0, "!" },    // NBSP bas abbreviations, turn them to aliases
+    { 0x2028, "LSEP" }, // Line separator, somehow has no abbrev
+    { 0x2029, "PSEP" }, // Paragraph separator, same
+    { 0x202F, "!" },    // Narrow NBSP has abbrevs, turn them to aliases
+    { 0x205F, "!" },    // Medium math space same
+    { 0x2061, "f()" },  // Function application
+    { 0x2062, "×" },    // Invisible times
+    { 0x2063, "," },    // Invisible separator
+    { 0x2064, "+" },    // Invisible plus
+    { 0x206A, "ISS" },  // Inhibit symmetric swapping
+    { 0x206B, "ASS" },  // Activate symmetric swapping
+    { 0x206C, "IAFS" }, // Inhibit Arabic form shaping
+    { 0x206D, "AAFS" }, // Activate Arabic form shaping
+    { 0x206E, "NADS" }, // National digit shapes
+    { 0x206F, "NODS" }, // Nominal digit shapes
+    { 0xFEFF, "BOM" },  // BOM or ZWNBSP
+    { 0xFFF9, "IA A" }, // Interlinear annotation anchor
+    { 0xFFFA, "IA S" }, // Interlinear annotation separator
+    { 0xFFFB, "IA T" }, // Interlinear annotation terminator
+    { 0xFFFC, "OBJ" },  // Object replacement character
+    // Then Variation Selectors
+};
+
+
 /// @todo [langs] Stopped at Canadian syllabics
 const std::set<std::string_view> langNames {
     "also Cornish",     // корнский (Великобритания)
