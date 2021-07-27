@@ -18,13 +18,11 @@ constexpr QChar STUB_CIRCLE(0x25CC);
 constexpr QChar ZWSP(0x200B);
 
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
-    /// @todo [tofu] 1DCB combining things: No script, block Diacritics Supplement
-    /// @todo [tofu] 2E48 tofu, both Kavyka and other strange chars
-    /// @todo [tofu] 1C80, Cyr extended C
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
+    ///       e.g. 1DE0
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
