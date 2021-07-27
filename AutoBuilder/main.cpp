@@ -151,6 +151,7 @@ std::map<char32_t, std::string_view> abbrevs {
     { 0x206E, "NADS" }, // National digit shapes
     { 0x206F, "NODS" }, // Nominal digit shapes
     { 0xFEFF, "BOM" },  // BOM or ZWNBSP
+    { 0xFFFC, "OBJ" },  // Object replacement character
     // Then VSs
 };
 
