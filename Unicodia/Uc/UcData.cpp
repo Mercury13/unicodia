@@ -891,7 +891,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "(тогдашних и современных) представляют собой руны.</p>"
             "<p>Блок кодирует алфавиты скандинавских и англосаксонских рун, частично пересекающиеся. "
                 "В 2014 добавили три руны для записи современного английского, приписываемые Дж.{{_}}Толкину, "
-                "и пять рун с ларца Фрэнкса, реликвии VIII века.</p>"sv,
+                "и пять рун с ларца Фрэнкса, реликвии VIII{{_}}века.</p>"sv,
                 EcFont::RUNIC },
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr"sv, QFontDatabase::Any,
