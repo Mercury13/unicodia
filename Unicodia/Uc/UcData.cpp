@@ -25,6 +25,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     ///       e.g. 1DE0
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
+    { "Noto Serif",                 {}, Ffg::HINT_OFF },                        // Noto unglitched
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -1402,13 +1403,14 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1CD0, 0x1CFF,
             "Vedic Extensions", u8"Ведические символы", {}, EcScript::Deva },
     { 0x1D00, 0x1D7F,
-            "Phonetic Extensions", u8"Фонетические расширения" },
+            "Phonetic Extensions", u8"Фонетические расширения"sv },
     { 0x1D80, 0x1DBF,
             "Phonetic Extensions Supplement",
-            u8"Фонетические расширения дополнительные" },
+            u8"Фонетические расширения дополнительные"sv },
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
-            u8"Диакритические метки дополнительные" },
+            u8"Диакритические метки дополнительные"sv,
+            {}, EcScript::NONE, EcFont::NOTO_UNGLITCHED },
     { 0x1E00, 0x1EFF,
             "Latin Extended Additional",
             u8"Латиница расширенная дополнительная" },
@@ -1544,10 +1546,9 @@ constinit const uc::Block uc::blocks[302] {
             "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
     { 0xA800, 0xA82F,
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
-    /// @todo [desc] It is not just Devanagari, need description
     { 0xA830, 0xA83F,
             "Common Indic Number Forms", u8"Общеиндийские числовые символы",
-            u8"Такие знаки присутствуют в источниках XVI века, и применяются по сей день "
+            u8"Такие знаки присутствуют в источниках XVI{{_}}века, и применяются по сей день "
                 "в Северной Индии, Пакистане и Непале для записи дробей: например, "
                 "размера, веса или цены.",
             EcScript::Deva },
@@ -2057,6 +2058,8 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
             font->setWeight(QFont::Light);
         }
         int strategy = QFont::PreferAntialias | QFont::PreferMatch;
+        if (flags.have(Ffg::HINT_OFF))
+            strategy |= QFont::PreferNoHinting;
         //if (!fileName.empty())
         //    strategy |= QFont::NoFontMerging;
         font->setStyleStrategy(
