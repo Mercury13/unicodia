@@ -612,7 +612,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"филиппинские горные народы"sv,
         u8"<p>Алфавит восходит к брахми и похож на тагальский.</p>"sv,
             EcFont::HANUNOO },
-    /// @todo [tofu, BMP] 05EF in W7, maybe Hebrew umlauts
+    /// @todo [tofu, BMP] 05EF in W7, Yod triangle (rare historical char)
     { "Hebr"sv, QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
