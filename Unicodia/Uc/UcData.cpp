@@ -24,6 +24,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
     ///       e.g. 1DE0
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
+    { "Noto Serif",                 {} },                                       // Noto
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -539,17 +540,17 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "одно и написали другое), где глаголицу заменили кириллицей.</p>"
             "<p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>"sv,
             EcFont::GLAGOLITIC },
-    /// @todo [semi-tofu, BMP] Check 1F28+ for exact images
+    // Greek OK, W7 Cambria is horrible → installed Google Noto and checked umlauts
     { "Grek"sv, QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Греческая"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,
-        u8"<p>Греческий сделан из финикийского без оглядки на раннегреческие системы\u00A0— линейное письмо Б и кипрское. "
+        u8"<p>Греческий сделан из финикийского без оглядки на раннегреческие системы{{-}}линейное письмо Б и кипрское. "
                 "Финикийский алфавит был консонантным (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}"
-                "костяк согласных, а гласные играют роль окончаний: так, в арабском (тоже семитский) <i>джихадом</i> занимается <i>моджахед</i> "
-                "(или, точнее, <i>муджахид</i>).</p>"
+                "костяк согласных, а гласные играют роль окончаний: так, в [[pop_scr:Arab|арабском]] (тоже семитский) ''джихадом'' занимается <i>моджахед</i> "
+                "(или, точнее, ''муджахид'').</p>"
             "<p>Греки добавили гласные звуки, и греческий{{-}}первый известный истинный алфавит, кодирующий как согласные, так и гласные. "
-                "Названия букв изменились мало, но перестали что-то значить: <i>алеф=бык</i>\u00A0→ <i>альфа</i>.</p>"
+                "Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''\u00A0→ ''альфа''.</p>"
             u8"<p>Из греческого письма пошли [[pop_scr:Latn|латиница]], [[pop_scr:Cyrl|кириллица]], "
                 "[[pop_scr:Copt|коптский]] и, возможно, [[pop_scr:Armn|армянский]] и [[pop_scr:Runr|руны]].</p>"sv },
     /// @todo [tofu] Sorry have tofu in W7, install a font
@@ -1408,7 +1409,8 @@ constinit const uc::Block uc::blocks[302] {
             "Latin Extended Additional",
             u8"Латиница расширенная дополнительная" },
     { 0x1F00, 0x1FFF,
-            "Greek Extended", u8"Греческий расширенный" },
+            "Greek Extended", u8"Греческий расширенный", {},
+            EcScript::Grek, EcFont::NOTO },
     { 0x2000, 0x206F,
             "General Punctuation", u8"Знаки препинания" },
     { 0x2070, 0x209F,
@@ -2173,8 +2175,12 @@ uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
 
 const uc::Font& uc::Cp::font(const Block*& hint) const
 {
-    if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
-        return scriptInfo[static_cast<int>(ecScript)].font();
+    // Priority: Script unless font is normal → block → block’s script
+    if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh) {
+        auto& si = scriptInfo[static_cast<int>(ecScript)];
+        if (si.ecFont != EcFont::NORMAL)
+            return si.font();
+    }
     hint = blockOf(subj, hint);
     return hint->font();
 }
