@@ -153,6 +153,7 @@ private:
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup2> popup;
     QFont fontBig;
+    char32_t shownCp = uc::NO_CHAR;
     mutable const uc::Block* hint = &uc::blocks[0];
     mutable const uc::Block* hint2 = &uc::blocks[0];
 

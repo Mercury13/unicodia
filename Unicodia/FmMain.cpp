@@ -847,6 +847,10 @@ namespace {
 
 void FmMain::showCp(MaybeChar ch)
 {
+    if (ch.code == shownCp)
+        return;
+    shownCp = ch.code;
+
     // Code
     char buf[30];
     snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
