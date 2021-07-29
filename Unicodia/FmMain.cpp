@@ -639,7 +639,10 @@ namespace {
         auto text = x[1];
         std::string_view style = "";
         if (dest.starts_with("pop_") && dest.find(':') != std::string_view::npos)
-            style = " style='color:" CNAME_LINK_POPUP ";'";
+            style = " style='color:" CNAME_LINK_POPUP "; "
+                     "text-decoration:none; "
+                     "background:qlineargradient(x1:0, y1:1, x2:0, y2:0, "
+                            "stop:0 " CNAME_LINK_POPUP ", stop:0.06 #00000000, stop:1 #00000000);'";
 
         auto q = prepareRecursion(text);
 
