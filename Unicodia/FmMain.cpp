@@ -735,7 +735,6 @@ namespace {
         str::append(text, buf);
         appendVal(text, value);
         str::append(text, "</a>");
-        std::cout << text.toStdString() << std::endl;
     }
 
     void appendVersion(
