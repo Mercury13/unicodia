@@ -318,9 +318,11 @@ namespace uc {
     struct Cp;
 
     enum class Bfg {
-        COLLAPSIBLE = 1
+        COLLAPSIBLE = 1,
+        FIXUP_FONT_WIN = 2
     };
 
+    DEFINE_ENUM_OPS(Bfg)
 
     struct Block
     {
