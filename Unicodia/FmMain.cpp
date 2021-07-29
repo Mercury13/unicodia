@@ -663,10 +663,16 @@ namespace {
     {
         auto name = x[0];
         if (name == "sm"sv) {
-            font.load();
-            str::append(s, "<font size='+2' face='"sv);
-            str::append(s, font.family);
-            str::append(s, "'>"sv);
+            bool useCustom = !font.flags.have(uc::Ffg::STD_IN_SAMPLES);
+            if (useCustom)
+                font.load();
+            str::append(s, "<font size='+2'"sv);
+            if (useCustom) {
+                str::append(s, " face='"sv);
+                str::append(s, font.family);
+                str::append(s, '\'');
+            }
+            str::append(s, '>');
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else if (name == "_"sv) {

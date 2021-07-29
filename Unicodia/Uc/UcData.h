@@ -225,7 +225,8 @@ namespace uc {
         STUB_OFF = 8,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
         STUB_ON = 16,           ///< Circle stub explicitly on
         STUB_VICEVERSA = 32,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
-        HINT_OFF = 64,          ///< Hinting
+        STD_IN_SAMPLES = 64,    ///< Use standard font in samples, not this
+        HINT_OFF = 128,         ///< Hinting
     };
 
     DEFINE_ENUM_OPS(Ffg)
