@@ -161,35 +161,74 @@ int CharsModel::columnCount(const QModelIndex&) const
     { return NCOLS; }
 
 
+const QFont* CharsModel::fontAt(const QModelIndex& index) const
+{
+    auto cp = charAt(index);
+    if (!cp)
+        return nullptr;
+    return fontAt(*cp);
+}
+
+
+const QFont* CharsModel::fontAt(const uc::Cp& cp) const
+{
+    auto& font = cp.font(hint.cell);
+    return &font.get(font.q.table, FSZ_TABLE);
+}
+
+
+QColor CharsModel::fgAt(const QModelIndex& index) const
+{
+    auto cp = charAt(index);
+    if (!cp)
+        return {};
+    return fgAt(*cp);
+}
+
+
+QColor CharsModel::fgAt(const uc::Cp& cp) const
+{
+    if (cp.isTrueSpace()) {
+        auto c = owner->palette().text().color();
+        c.setAlpha(ALPHA_SPACE);
+        return c;
+    }
+    return {};
+}
+
+
+QString CharsModel::textAt(const QModelIndex& index) const
+{
+    auto cp = charAt(index);
+    if (!cp)
+        return {};
+    return textAt(*cp);
+}
+
+
+QString CharsModel::textAt(const uc::Cp& cp) const
+{
+    return cp.sampleProxy(hint.cell).text;
+}
+
+
 QVariant CharsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
-    case Qt::DisplayRole: {
-            auto cp = charAt(index);
-            if (!cp)
-                return {};
-            return cp->sampleProxy(hint.cell).text;
-        }
+    case Qt::DisplayRole:
+        if (auto q = textAt(index); !q.isEmpty())
+            return q;
+        return {};
 
-    case Qt::FontRole: {
-            auto cp = charAt(index);
-            if (!cp)
-                return {};
-            auto& font = cp->font(hint.cell);
-            return font.get(font.q.table, FSZ_TABLE);
-        }
+    case Qt::FontRole:
+        if (auto q = fontAt(index))
+            return *q;
+        return {};
 
-    case Qt::ForegroundRole: {
-            auto cp = charAt(index);
-            if (!cp)
-                return {};
-            if (cp->isTrueSpace()) {
-                auto c = owner->palette().text().color();
-                c.setAlpha(ALPHA_SPACE);
-                return c;
-            }
-            return {};
-        }
+    case Qt::ForegroundRole:
+        if (auto c = fgAt(index); c.isValid())
+            return c;
+        return {};
 
     case Qt::BackgroundRole: {
             auto cp = charAt(index);

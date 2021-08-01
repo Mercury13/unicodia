@@ -99,6 +99,12 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
+    const QFont* fontAt(const QModelIndex& index) const;
+    const QFont* fontAt(const uc::Cp& cp) const;
+    QColor fgAt(const QModelIndex& index) const;
+    QColor fgAt(const uc::Cp& cp) const;
+    QString textAt(const QModelIndex& index) const;
+    QString textAt(const uc::Cp& cp) const;
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
