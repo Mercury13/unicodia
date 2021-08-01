@@ -1162,7 +1162,7 @@ void FmMain::showFonts(
     snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
     appendHeader(text, buf);
 
-    auto fonts = model.match.allSysFonts(cp, ws, 15);
+    auto fonts = model.match.allSysFonts(cp, ws, 20);
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
     for (auto& v : fonts.lines) {
