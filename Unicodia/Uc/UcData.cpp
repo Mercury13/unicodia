@@ -25,7 +25,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     ///       e.g. 1DE0
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
-    { "Noto Serif",                 {}, Ffg::HINT_OFF },                        // Noto unglitched
     { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
@@ -1417,7 +1416,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные"sv,
-            {}, EcScript::NONE, EcFont::NOTO_UNGLITCHED, Bfg::FIXUP_FONT_WIN },
+            {}, EcScript::NONE, EcFont::NOTO },
     { 0x1E00, 0x1EFF,
             "Latin Extended Additional",
             u8"Латиница расширенная дополнительная" },
@@ -2065,11 +2064,7 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         } else if (flags.have(Ffg::LIGHT)) {
             font->setWeight(QFont::Light);
         }
-        int strategy = QFont::PreferAntialias | QFont::PreferMatch;
-        if (flags.have(Ffg::HINT_OFF))
-            strategy |= QFont::PreferNoHinting;
-        //if (!fileName.empty())
-        //    strategy |= QFont::NoFontMerging;
+        int strategy = QFont::PreferAntialias | QFont::PreferMatch | QFont::PreferFullHinting;
         font->setStyleStrategy(
                     static_cast<QFont::StyleStrategy>(strategy));
     }
