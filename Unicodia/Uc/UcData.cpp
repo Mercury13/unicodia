@@ -1524,7 +1524,7 @@ constinit const uc::Block uc::blocks[302] {
             "Kangxi Radicals", u8"Ключи канси", {}, EcScript::Hani },
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
-            u8"Символы структуры иероглифов" },
+            u8"Символы структуры иероглифов"sv },
     /// @todo [tofu] 302E/F, these are Hangul
     { 0x3000, 0x303F,
             "CJK Symbols and Punctuation",
