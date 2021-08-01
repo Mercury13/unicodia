@@ -140,11 +140,7 @@ constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType:
     { u8"консонантная <i>(согласные звуки, как иврит)</i>"sv },
     { u8"слоговая <i>(как японские катакана/хирагана)</i>"sv },
     { u8"алфавитно-слоговая <i>(как иберийский)</i>"sv },
-    { u8"абугида <i>(слоговая, у сходных слогов похожие символы)</i>, "sv
-        "кодируется монолитными символами\u00A0— как эфиопский"sv },
-    { u8"абугида <i>(слоговая, у сходных слогов похожие символы)</i>, "sv
-        u8"кодируется по-алфавитному, из согласного и метки-огласовки\u00A0— "
-        "как квадратное письмо Дзанабадзара"sv },
+    { u8"абугида <i>(слоговая, у сходных слогов похожие символы)</i>\u00A0— как эфиопский"sv },
     { u8"абугида <i>(слоговая, у сходных слогов похожие символы)</i>, "sv
         "основанная на брахми <i>(согласная буква означает слог с некоей гласной, обычно «а»; "
         "чтобы заменить, добавляется огласовка; чтобы получить простую согласную, "
@@ -450,7 +446,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::BUHID },
     // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
+        EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Канадская слоговая"sv, u8"1833"sv,
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
         u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "
@@ -517,7 +513,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 EcFont::DEVANAGARI },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_MONOLITH, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
+        EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Эфиопская"sv, u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские"sv,
         u8"<p>Использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "

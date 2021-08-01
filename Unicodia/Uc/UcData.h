@@ -73,9 +73,8 @@ namespace uc {
         CONSONANT,      ///< Consonant script (Hebrew)
         SYLLABLE,       ///< Syllable script (Hiragana)
         ALPHASYLLABLE,  ///< Partly alphabet, partly syllable (Iberian)
-        ABUGIDA_MONOLITH, ///< Syllable script where similar syllables have
-                        ///<   similar symbols (Canadian syllable)
-        ABUGIDA_COMBINING, ///< … + characters are combined from consonant and vowel (Thaana)
+        ABUGIDA,        ///< Syllable script where similar syllables have
+                            ///<   similar symbols (Canadian syllable)
         ABUGIDA_BRAHMI, ///< … + based on Brahmi: K=ka, K*=ki, K’=K (Kannada, Thai)
         HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
         SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
