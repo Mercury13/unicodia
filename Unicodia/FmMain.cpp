@@ -940,6 +940,7 @@ void FmMain::showCp(MaybeChar ch)
     // Copy
     ui->btCopy->setEnabled(ch.hasCp());
 
+    hint.sample = uc::blockOf(ch.code, hint.sample);
     if (ch) {
         if (ch->isTrueSpace()) {
                 auto palette = this->palette();
@@ -1026,7 +1027,6 @@ void FmMain::showCp(MaybeChar ch)
             appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pop_bidi");
 
             // Block
-            hint.sample = uc::blockOf(ch->subj, hint.sample);
             sp.sep();
             appendValuePopup(text, *hint.sample, u8"Блок", "pop_blk");
 
@@ -1067,7 +1067,7 @@ void FmMain::showCp(MaybeChar ch)
             QString text;
             str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
             appendMissingCharInfo(text, ch.code);
-            str::append(text, uc::TX_NOCHAR);
+            appendWiki(text, *hint.sample, uc::TX_NOCHAR);
             ui->vwInfo->setText(text);
         } else {
             auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
