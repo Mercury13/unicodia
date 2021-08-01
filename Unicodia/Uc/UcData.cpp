@@ -2074,11 +2074,11 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
 }
 
 
-std::u8string_view uc::Cp::Name::abbrev() const
+std::u8string_view uc::Cp::abbrev() const
 {
     if (!isAbbreviated())
         return {};
-    const char8_t* x = tech();
+    const char8_t* x = name.tech();
     // +1
     std::u8string_view sv = x;
     x += (sv.length());  ++ x;
@@ -2088,7 +2088,7 @@ std::u8string_view uc::Cp::Name::abbrev() const
 
 uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 {
-    if (name.isAbbreviated())
+    if (isAbbreviated())
         return {};
 
     auto& fn = font(hint);

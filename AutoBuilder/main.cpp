@@ -343,8 +343,9 @@ int main()
         }
 
         auto nAliases = allAbbrevs.size();
+        int flags = 0;
         if (!allAbbrevs.empty())
-            nAliases += 128;
+            flags |= 1;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
@@ -390,6 +391,12 @@ int main()
         std::string_view sNumValue = elChar.attribute("nv").as_string();
         auto& numPlace = nums.parse(sNumType, sNumValue);
         os << numPlace.index << ", ";
+
+        if (flags) {
+            os << "Cfgs{" << flags << "}";
+        } else {
+            os << "{}";
+        }
 
         os << "}," << '\n';
         ++nChars;

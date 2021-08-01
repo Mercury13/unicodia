@@ -196,7 +196,7 @@ std::optional<QFont> FontMatch::sysFontFor(
         const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size)
 {
     // Check tofu cache
-    if (cp.name.alts & uc::alt::SYSTEM_TOFU)
+    if (cp.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         return std::nullopt;
 
     auto& ws = loadWs(writingSystem);
@@ -209,7 +209,7 @@ std::optional<QFont> FontMatch::sysFontFor(
         }
     }
     // Cache: got tofu
-    cp.name.alts |= uc::alt::SYSTEM_TOFU;
+    cp.flags |= uc::Cfg::DYN_SYSTEM_TOFU;
     return std::nullopt;
 }
 

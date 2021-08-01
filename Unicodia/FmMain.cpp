@@ -390,7 +390,7 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
     auto& model = owner.model;
     auto ch = model.charAt(index);
     if (ch) {
-        auto abbr = ch->name.abbrev();
+        auto abbr = ch->abbrev();
         if (!abbr.empty()) {
             // Abbreviation
             drawAbbreviation(painter, rect, abbr, color);
@@ -953,9 +953,9 @@ void FmMain::showCp(MaybeChar ch)
 
         // Sample char
         bool wantSysFont = true;
-        if (ch->name.isAbbreviated()) {
+        if (ch->isAbbreviated()) {
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setAbbreviation(ch->name.abbrev());
+            ui->pageSampleCustom->setAbbreviation(ch->abbrev());
             wantSysFont = false;
         } else {
             drawSampleWithQt(*ch);

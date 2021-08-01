@@ -7,6 +7,9 @@
 // Qt
 #include <QString>
 
+// Libs
+#include "u_TypedFlags.h"
+
 // Project-local
 #include "UcAutoCount.h"
 
@@ -387,35 +390,27 @@ namespace uc {
     enum class Cfg : unsigned char {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
         IS_DEPRECATED = 2,      ///< [+] char is deprecated
-        USE_ALT_FONT = 4,       ///< [+] use alternate font
+        ALT_FONT = 4,           ///< [+] use alternate font
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };
 
-    namespace alt {
-        enum {
-            NUM_MASK = 31,
-            IS_DEPRECATED = 32,     ///< [+] char is deprecated
-            SYSTEM_TOFU = 64,
-            HAS_ABBREVIATION = 128, ///< [+] 1st synonym is abbreviation
-        };
-    }
+    using Cfgs = Flags<Cfg>;
 
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
-            mutable uint8_t alts;       // +1 = 7
+            uint8_t alts;               // +1 = 7
             const char8_t* tech() const;
-            bool isAbbreviated() const { return alts & alt::HAS_ABBREVIATION; }
-            std::u8string_view abbrev() const;
         } name;
         EcCategory ecCategory;          // +1 = 8
         EcVersion ecVersion;            // +1 = 9
         EcBidiClass ecBidiClass;        // +1 = 10
         EcScript ecScript;              // +1 = 11
         uint8_t iNumeric;               // +1 = 12
+        mutable Cfgs flags;             // +1 = 13
 
         const Version& version() const;
         const Category& category() const;
@@ -433,6 +428,9 @@ namespace uc {
         ///  @return [+] is graphical, even space [-] is control/formatting
         bool isGraphical() const;
         constexpr int plane() const { return subj.val() >> 16; }
+
+        constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
+        std::u8string_view abbrev() const;
     };
 
     extern Cp cpInfo[N_CPS];
