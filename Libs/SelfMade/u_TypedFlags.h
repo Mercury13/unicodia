@@ -8,9 +8,11 @@
 ///    C++17 here! Most of common units use C++03, so cannot include
 ///    С++17 to C++03.
 
-template <class>
+template <class T>
 struct FlagStorage {
-    using Type = uint32_t;
+    using Type = typename std::make_unsigned<
+                typename std::underlying_type<T>::type
+                                            >::type;
 };
 
 template <class En>
