@@ -52,7 +52,7 @@ constexpr It hintedUpperBound(It first, It last, const T& value, Compare cmp, It
         return hint;
     return (q < 0)
             ? std::upper_bound(first, hint, value, cmp)
-            : std::upper_bound(hint, last, value, cmp);
+            : std::upper_bound(hint + 1, last, value, cmp);
 }
 
 template <class It, class T>
@@ -63,5 +63,5 @@ constexpr It hintedUpperBound(It first, It last, const T& value, It hint)
         return hint;
     return (q < 0)
             ? std::upper_bound(first, hint, value)
-            : std::upper_bound(hint, last, value);
+            : std::upper_bound(hint + 1, last, value);
 }
