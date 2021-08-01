@@ -28,10 +28,10 @@
         if (id < 0) {
             std::cout << "Cannot install " << fname.toStdString() << std::endl;
         }
-//        auto families = QFontDatabase::applicationFontFamilies(id);
-//        for (auto& v : families) {
-//            std::cout << "Installed " << v.toStdString() << std::endl;
-//        }
+        //auto families = QFontDatabase::applicationFontFamilies(id);
+        //for (auto& v : families) {
+        //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
+        //}
         return id;
     }
 #endif
