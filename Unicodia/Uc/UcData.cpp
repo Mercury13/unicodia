@@ -2076,29 +2076,6 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
 }
 
 
-namespace {
-
-    unsigned long long decimals[] = {
-        1, 10, 100, 1'000, 10'000, 100'000, 1'000'000,
-        10'000'000, 100'000'000, 1'000'000'000, 10'000'000'000,
-        100'000'000'000, 1'000'000'000'000
-    };
-
-};
-
-
-uc::Fraction uc::CompressedFraction::val() const
-{
-    uc::Fraction r { num, denom };
-    if (order < 0) {
-        r.denom *= decimals[-order];
-    } else {
-        r.num *= decimals[order];
-    }
-    return r;
-}
-
-
 std::u8string_view uc::Cp::Name::abbrev() const
 {
     if (!isAbbreviated())

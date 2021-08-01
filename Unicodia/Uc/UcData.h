@@ -419,9 +419,12 @@ namespace uc {
 
     extern const std::u8string_view TX_NOCHAR;
 
+    // Implementation of Numeric inlines
+    inline const NumType& Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
+
     // Implementations of Cp inlines
     inline const char8_t* Cp::Name::tech() const { return allStrings + iTech.val(); }
-    inline const NumType& Cp::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
+    inline const Numeric& Cp::numeric() const { return allNumerics[iNumeric]; }
     inline const Version& Cp::version() const { return versionInfo[static_cast<int>(ecVersion)]; }
     inline const Category& Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
     inline const BidiClass& Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }

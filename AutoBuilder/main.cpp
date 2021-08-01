@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <charconv>
+#include <deque>
 
 // PugiXML
 #include "pugixml.hpp"
@@ -18,8 +19,10 @@ inline auto need(T&& val, const char* errmsg)
     return std::forward<T>(val);
 }
 
-struct Fraction {
+struct Numeric {
     long long num, denom;
+    std::string_view type, textValue;
+    size_t index;
 };
 
 long long fromChars(std::string_view x, std::string_view numType)
@@ -52,21 +55,51 @@ unsigned fromHex(std::string_view x)
     return r;
 }
 
-Fraction parseFraction(std::string_view numType, std::string_view x)
+Numeric parseNumeric(std::string_view numType, std::string_view x, size_t index)
 {
+    if (x == "NaN"sv) {
+        return { 0, 0, numType, x, index };
+    }
     auto pSlash = x.find('/');
     if (pSlash == std::string_view::npos) {
         // Integer
-        return { fromChars(x, numType), 1 };
+        return { fromChars(x, numType), 1, numType, x, index };
     } else {
         // Fraction
         auto num = x.substr(0, pSlash);
         auto den = x.substr(pSlash + 1);
-        return { fromChars(num, numType), fromChars(den, numType) };
+        return { fromChars(num, numType), fromChars(den, numType), numType, x, index };
     }
 }
 
-std::string transformVersion(std::string s)
+struct NumCache
+{
+    std::deque<Numeric> ord;
+    std::map<std::string, const Numeric*> ndx;
+
+    const Numeric& parse(std::string_view numType, std::string_view x);
+    size_t size() const { return ord.size(); }
+};
+
+const Numeric& NumCache::parse(std::string_view numType, std::string_view x)
+{
+    // Get key
+    std::string key;
+    key.reserve(numType.length() + x.length());
+    key.append(numType);
+    key.append(x);
+    // Check index
+    auto it = ndx.find(key);
+    if (it != ndx.end())
+        return *it->second;
+    // Insert
+    Numeric newNum = parseNumeric(numType, x, ord.size());
+    auto& newPlace = ord.emplace_back(newNum);
+    ndx[key] = &newPlace;
+    return newPlace;
+}
+
+    std::string transformVersion(std::string s)
 {
     for (auto& c : s) {
         if (c == '.')
@@ -97,6 +130,7 @@ std::string_view transform(std::string_view x, StrMap (&map)[N])
 StrMap smNumType[] {
     { "De"sv, "DIGIT" },
     { "Di"sv, "SPECIAL_DIGIT" },
+    { "None"sv, "NONE" },
     { "Nu"sv, "NUMBER" },
 };
 StrMap smCharCat[] {
@@ -223,6 +257,7 @@ int main()
     os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
 
     StringLib strings;
+    NumCache nums;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
         std::string_view sCp = elChar.attribute("cp").as_string();
         if (sCp.empty()) {
@@ -352,14 +387,9 @@ int main()
         //    • Nu — number
         // nv = Nan / whole number / vulgar fraction
         std::string_view sNumType = elChar.attribute("nt").as_string();
-        os << '{';
-        if (sNumType != "None"sv) {
-            std::string_view sNumValue = elChar.attribute("nv").as_string();
-            auto frac = parseFraction(sNumType, sNumValue);
-            os << frac.num << ", " << frac.denom << ", "
-               << " EcNumType::" << transform(sNumType, smNumType) << ' ';
-        }
-        os << "} ";
+        std::string_view sNumValue = elChar.attribute("nv").as_string();
+        auto& numPlace = nums.parse(sNumType, sNumValue);
+        os << numPlace.index << ", ";
 
         os << "}," << '\n';
         ++nChars;
@@ -393,6 +423,17 @@ int main()
     }
     std::cout << "Found " << nBlocks << " blocks" << std::endl;
 
+    ///// Numerics /////////////////////////////////////////////////////////////
+
+    std::cout << "Stockpiled " << nums.size() << " numerics" << std::endl;
+    os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
+    for (const auto& v : nums.ord) {
+        os << "{ " << std::dec << v.num << ", " << v.denom
+           << ", EcNumType::" << transform(v.type, smNumType)
+           << " },  // " << v.index << " is " << v.textValue << '\n';
+    }
+    os << "};\n";
+
     os.close();
 
     os.open("UcAutoCount.h");
@@ -403,6 +444,7 @@ int main()
     os << "namespace uc {\n";
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
+    os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "}\n";
 
     std::cout << "Successfully finished!" << std::endl << std::endl;

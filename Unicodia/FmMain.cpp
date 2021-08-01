@@ -941,15 +941,15 @@ void FmMain::showCp(MaybeChar ch)
             appendValuePopup(text, ch->category(), u8"Тип", "pop_cat");
 
             // Numeric value
-            if (ch->numeric.isPresent()) {
+            auto& numc = ch->numeric();
+            if (numc.isPresent()) {
                 sp.sep();
-                str::append(text, ch->numeric.type().locName);
+                str::append(text, numc.type().locName);
                 str::append(text, ": ");
-                auto frac = ch->numeric.val.val();
-                str::append(text, frac.num);
-                if (frac.denom != 1) {
+                str::append(text, numc.num);
+                if (numc.denom != 1) {
                     str::append(text, "/");
-                    str::append(text, frac.denom);
+                    str::append(text, numc.denom);
                 }
             }
 

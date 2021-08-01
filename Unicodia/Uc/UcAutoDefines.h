@@ -315,45 +315,23 @@ namespace uc {
         int8_t hi;
     };
 
-    struct Fraction
-    {
-        long long num = 0, denom = 0;
-    };
-
-    class CompressedFraction
-    {
-    public:
-        constexpr CompressedFraction() = default;
-        consteval CompressedFraction(long long aNum, unsigned long long aDenom)
-                    : order(0) {
-            if (aNum > 100 || aNum < -100 || aDenom > 200) {
-                while (aNum % 10 == 0) {
-                    aNum /= 10;
-                    ++order;
-                }
-                while (aDenom % 10 == 0) {
-                    aDenom /= 10;
-                    --order;
-                }
-            }
-            num = aNum;
-            denom = aDenom;
-        }
-        Fraction val() const;
-        bool isFull() const { return (denom != 0); }
-        explicit operator bool () const { return isFull(); }
-    private:
-        signed char num = 0;
-        unsigned char denom = 0;
-        signed char order = 0;
-    };
-
     enum class EcNumType : unsigned char {
         NONE,               ///< No numeric value
         DIGIT,              ///< Digit (Indian 1)
         SPECIAL_DIGIT,      ///< Special digit (superscript ³)
         NUMBER,             ///< Number (Roman II)
         NN
+    };
+
+    struct NumType;
+
+    struct Numeric
+    {
+        long long num = 0, denom = 0;
+        EcNumType ecType = EcNumType::NONE;
+
+        bool isPresent() const { return (ecType != EcNumType::NONE); }
+        const NumType& type() const;
     };
 
     enum class EcCategory : unsigned char
@@ -429,20 +407,13 @@ namespace uc {
         EcVersion ecVersion;            // +1 = 9
         EcBidiClass ecBidiClass;        // +1 = 10
         EcScript ecScript;              // +1 = 11
-        struct Numeric {
-            CompressedFraction val;
-            EcNumType ecType = EcNumType::NONE;
-            const NumType& type() const;
-            bool isPresent() const { return (ecType != EcNumType::NONE); }
-            consteval Numeric() = default;
-            consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
-                : val(num, denom), ecType(aType) {}
-        } numeric;                      // +4 = 15
+        uint8_t iNumeric;               // +1 = 12
 
         const Version& version() const;
         const Category& category() const;
         const BidiClass& bidiClass() const;
         const Script& script() const;
+        const Numeric& numeric() const;
         EcScript ecScriptEx(const Block*& hint) const;
         const Script& scriptEx(const Block*& hint) const;
         const Font& font(const Block*& hint) const;
@@ -458,5 +429,6 @@ namespace uc {
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
+    extern const Numeric allNumerics[N_NUMERICS];
 
 }   // namespace uc
