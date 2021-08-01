@@ -384,6 +384,13 @@ namespace uc {
         SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
     };
 
+    enum class Cfg : unsigned char {
+        HAS_ABBREVIATION = 1,
+        IS_DEPRECATED = 2,
+
+        DYN_SYSTEM_TOFU = 128,
+    };
+
     namespace alt {
         enum {
             NUM_MASK = 31,
