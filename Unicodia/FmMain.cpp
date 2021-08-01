@@ -387,12 +387,23 @@ namespace {
 void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
             const QModelIndex& index, const QColor& color) const
 {
-    auto ch = owner.model.charAt(index);
+    auto& model = owner.model;
+    auto ch = model.charAt(index);
     if (ch) {
         auto abbr = ch->name.abbrev();
         if (!abbr.empty()) {
+            // Abbreviation
             drawAbbreviation(painter, rect, abbr, color);
         }
+//        else {    // No need custom drawing — solves nothing
+//            // Char
+//            painter->setFont(*model.fontAt(*ch));
+//            auto specialColor = model.fgAt(*ch);
+//            painter->setBrush(specialColor.isValid() ? specialColor : color);
+//            painter->drawText(rect,
+//                              Qt::AlignCenter | Qt::TextSingleLine,
+//                              model.textAt(*ch));
+//        }
     }
 }
 
@@ -527,6 +538,14 @@ FmMain::FmMain(QWidget *parent)
         // 2click
     ui->tableChars->viewport()->installEventFilter(this);
 
+    // Copy sample
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), ui->tableChars,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
+
     // Select index
     ui->tableChars->setFocus();
     ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
@@ -558,6 +577,16 @@ void FmMain::copyCurrentChar()
     auto ch = model.charAt(ui->tableChars->currentIndex());
     if (ch) {
         auto q = str::toQ(ch->subj);
+        QApplication::clipboard()->setText(q);
+    }
+}
+
+
+void FmMain::copyCurrentSample()
+{
+    auto ch = model.charAt(ui->tableChars->currentIndex());
+    if (ch) {
+        auto q = model.textAt(*ch);
         QApplication::clipboard()->setText(q);
     }
 }

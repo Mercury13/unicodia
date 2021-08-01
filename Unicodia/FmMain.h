@@ -201,6 +201,7 @@ private:
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();
+    void copyCurrentSample();
     void popupLinkActivated(const QString& link);
     void on_vwInfo_anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);

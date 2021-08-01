@@ -26,6 +26,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
     { "Noto Serif",                 {}, Ffg::HINT_OFF },                        // Noto unglitched
+    { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -1438,7 +1439,8 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2200, 0x22FF,
             "Mathematical Operators", u8"Математические знаки" },
     { 0x2300, 0x23FF,
-            "Miscellaneous Technical", u8"Разные технические" },
+            "Miscellaneous Technical", u8"Разные технические"sv,
+            {}, EcScript::NONE, EcFont::NOTO_SYMBOL },
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих" },
     { 0x2440, 0x245F,
