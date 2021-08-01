@@ -2,9 +2,6 @@
 
 // Colors, sizes etc that are NOT derived from system
 
-// STL
-#include "string_view"
-
 // Color names
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP "ForestGreen"
@@ -16,7 +13,7 @@
                     "stop:0 " color ", stop:" place " #00000000, stop:1 #00000000);'"
 
 #define SUBTAG_POPUP \
-    LINK_SUBTAG(CNAME_LINK_POPUP, "0.06")
+    LINK_SUBTAG(CNAME_LINK_POPUP, "0.05")
 
 #ifdef _WIN32
     #define FAMILY_DEFAULT "Cambria"
