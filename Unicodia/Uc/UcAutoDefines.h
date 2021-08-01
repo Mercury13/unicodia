@@ -385,17 +385,18 @@ namespace uc {
     };
 
     enum class Cfg : unsigned char {
-        HAS_ABBREVIATION = 1,
-        IS_DEPRECATED = 2,
+        HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
+        IS_DEPRECATED = 2,      ///< [+] char is deprecated
+        USE_ALT_FONT = 4,       ///< [+] use alternate font
 
-        DYN_SYSTEM_TOFU = 128,
+        DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };
 
     namespace alt {
         enum {
             NUM_MASK = 31,
             IS_DEPRECATED = 32,     ///< [+] char is deprecated
-            SYSTEM_TOFU = 64,       ///< filled in runtime; [+] no char in system fonts
+            SYSTEM_TOFU = 64,
             HAS_ABBREVIATION = 128, ///< [+] 1st synonym is abbreviation
         };
     }
