@@ -1417,7 +1417,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные"sv,
-            {}, EcScript::NONE, EcFont::NOTO_UNGLITCHED },
+            {}, EcScript::NONE, EcFont::NOTO_UNGLITCHED, Bfg::FIXUP_FONT_WIN },
     { 0x1E00, 0x1EFF,
             "Latin Extended Additional",
             u8"Латиница расширенная дополнительная" },

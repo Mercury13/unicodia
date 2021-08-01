@@ -105,7 +105,9 @@ public:
     QModelIndex indexOf(char32_t code);
 private:
     RowCache rows;
-    mutable const uc::Block* hint = &uc::blocks[0];
+    mutable struct Hint {
+        const uc::Block* cell = &uc::blocks[0];
+    } hint;
 };
 
 
@@ -154,8 +156,9 @@ private:
     std::unique_ptr<FmPopup2> popup;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
-    mutable const uc::Block* hint = &uc::blocks[0];
-    mutable const uc::Block* hint2 = &uc::blocks[0];
+    mutable struct Hint {
+        const uc::Block* sample = &uc::blocks[0];
+    } hint;
 
     class CharsDelegate : public QStyledItemDelegate
     {

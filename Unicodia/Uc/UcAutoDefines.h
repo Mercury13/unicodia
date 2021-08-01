@@ -410,7 +410,7 @@ namespace uc {
         enum {
             NUM_MASK = 31,
             BIT_5 = 32,
-            BIT_6 = 64,
+            SYSTEM_TOFU = 64,       ///< filled in runtime; [+] no char in system fonts
             HAS_ABBREVIATION = 128,
         };
     }
@@ -420,7 +420,7 @@ namespace uc {
         Int3 subj = 0;              // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
-            uint8_t alts;               // +1 = 7
+            mutable uint8_t alts;       // +1 = 7
             const char8_t* tech() const;
             bool isAbbreviated() const { return alts & alt::HAS_ABBREVIATION; }
             std::u8string_view abbrev() const;
@@ -438,6 +438,7 @@ namespace uc {
             consteval Numeric(long long num, unsigned long long denom, EcNumType aType)
                 : val(num, denom), ecType(aType) {}
         } numeric;                      // +4 = 15
+
         const Version& version() const;
         const Category& category() const;
         const BidiClass& bidiClass() const;

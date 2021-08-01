@@ -12,6 +12,9 @@
 // My libs
 #include "u_Vector.h"
 
+// Unicode
+#include "UcAutoDefines.h"
+
 namespace mask {
     using T = uint64_t;
     using Short = uint32_t;
@@ -48,7 +51,7 @@ public:
 
     /// @return [+] have font [-] draw tofu instead
     std::optional<QFont> sysFontFor(
-            char32_t cp, QFontDatabase::WritingSystem writingSystem, int size);
+            const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size);
     [[nodiscard]] FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem writingSystem,
             size_t maxCount = std::numeric_limits<size_t>::max());

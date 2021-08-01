@@ -168,14 +168,14 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = charAt(index);
             if (!cp)
                 return {};
-            return cp->sampleProxy(hint).text;
+            return cp->sampleProxy(hint.cell).text;
         }
 
     case Qt::FontRole: {
             auto cp = charAt(index);
             if (!cp)
                 return {};
-            auto& font = cp->font(hint);
+            auto& font = cp->font(hint.cell);
             return font.get(font.q.table, FSZ_TABLE);
         }
 
@@ -527,12 +527,12 @@ void FmMain::copyCurrentChar()
 void FmMain::drawSampleWithQt(const uc::Cp& ch)
 {
     // Font
-    auto& font = ch.font(hint);
+    auto& font = ch.font(hint.sample);
     ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(hint);
+    auto proxy = ch.sampleProxy(hint.sample);
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -902,8 +902,8 @@ void FmMain::showCp(MaybeChar ch)
                 ui->lbOs->setFont(fontBig);
                 ui->lbOs->setText({});
             } else {
-                ws = ch->scriptEx(hint).qtCounterpart;
-                font = model.match.sysFontFor(ch.code, ws, FSZ_BIG);
+                ws = ch->scriptEx(hint.sample).qtCounterpart;
+                font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
                 if (font) {
                     ui->lbOs->setFont(*font);
                     ui->lbOs->setText(osProxy);
@@ -958,9 +958,9 @@ void FmMain::showCp(MaybeChar ch)
             appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pop_bidi");
 
             // Block
-            hint2 = uc::blockOf(ch->subj, hint2);
+            hint.sample = uc::blockOf(ch->subj, hint.sample);
             sp.sep();
-            appendValuePopup(text, *hint2, u8"Блок", "pop_blk");
+            appendValuePopup(text, *hint.sample, u8"Блок", "pop_blk");
 
             // Font
             if (font) {
@@ -979,11 +979,11 @@ void FmMain::showCp(MaybeChar ch)
 
             text.append("</p>");
 
-            if (!hint2->locDescription.empty()) {
+            if (!hint.sample->locDescription.empty()) {
                 // Block description
                 str::append(text, u8"<h2>О блоке</h2>");
-                appendWiki(text, *hint2, hint2->locDescription);
-            } else if (auto sc = ch->scriptEx(hint2); &sc != uc::scriptInfo){
+                appendWiki(text, *hint.sample, hint.sample->locDescription);
+            } else if (auto sc = ch->scriptEx(hint.sample); &sc != uc::scriptInfo){
                 // Script description
                 str::append(text, u8"<h2>О письменности</h2>");
                 appendScript(text, sc, false);

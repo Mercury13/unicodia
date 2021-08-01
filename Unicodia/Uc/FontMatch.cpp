@@ -193,17 +193,23 @@ FontMatch::Ws& FontMatch::loadWs(QFontDatabase::WritingSystem x)
 
 
 std::optional<QFont> FontMatch::sysFontFor(
-        char32_t cp, QFontDatabase::WritingSystem writingSystem, int size)
+        const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size)
 {
+    // Check tofu cache
+    if (cp.name.alts & uc::alt::SYSTEM_TOFU)
+        return std::nullopt;
+
     auto& ws = loadWs(writingSystem);
     if (!ws.isSupported)
         return std::nullopt;
 
     for (auto& fn : ws.fonts) {
-        if (fn->doesSupport(cp)) {
+        if (fn->doesSupport(cp.subj.ch32())) {
             return getFont(fn->family, size);
         }
     }
+    // Cache: got tofu
+    cp.name.alts |= uc::alt::SYSTEM_TOFU;
     return std::nullopt;
 }
 
