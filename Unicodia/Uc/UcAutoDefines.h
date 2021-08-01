@@ -387,9 +387,9 @@ namespace uc {
     namespace alt {
         enum {
             NUM_MASK = 31,
-            BIT_5 = 32,
+            IS_DEPRECATED = 32,     ///< [+] char is deprecated
             SYSTEM_TOFU = 64,       ///< filled in runtime; [+] no char in system fonts
-            HAS_ABBREVIATION = 128,
+            HAS_ABBREVIATION = 128, ///< [+] 1st synonym is abbreviation
         };
     }
 
