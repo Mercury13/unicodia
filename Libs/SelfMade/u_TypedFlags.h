@@ -90,6 +90,8 @@ public:
     template<En... Args>
     constexpr inline bool haveAll() const { return haveAll(valueOf<Args...>()); }
 
+    /// @return  if we have any of FROM flags → remove them all, add TO flags
+    ///          otherwise no change
     [[nodiscard]] constexpr inline Flags transformAny(Flags<En> from, Flags<En> to) const
     {
         if (haveAny(from))
@@ -99,14 +101,20 @@ public:
 
     constexpr void remove(En x) { fValue &= ~toStorage(x); }
     constexpr void remove(Flags<En> x) { fValue &= ~x.fValue; }
+
+    /// @return  value w/o x
     [[nodiscard]] constexpr Flags minus(Flags<En> x) const { return Flags(fValue & ~x.fValue); }
+
     constexpr void clear() { fValue = 0; }
 
     /// @return  0 or one flag — the smallest of them
     /// @warning If you suspect extraneous flags, use switch - default,
     ///          not switch — case NO_FLAG
     constexpr inline En smallest() const { return static_cast<En>(fValue & (-fValue)); }
+
+    /// @return  0 or one flag — the smallest of X that’s set in this
     constexpr inline En smallestOf(Flags<En> x) const { return (*this & x).smallest(); }
+
     constexpr inline Flags& setIf(bool cond, En x) { if (cond) this->operator|=(x); return *this; }
     constexpr bool holdsValue() const noexcept { return operator bool(); }
     constexpr bool empty() const noexcept { return !holdsValue(); }
