@@ -1632,9 +1632,11 @@ constinit const uc::Block uc::blocks[302] {
             "Arabic Presentation Forms-A", u8"Арабские формы начертания А",
             {}, EcScript::Arab },
     { 0xFE00, 0xFE0F,
-            "Variation Selectors", u8"Селекторы начертания" },
+            "Variation Selectors", u8"Селекторы начертания"sv },
     { 0xFE10, 0xFE1F,
-            "Vertical Forms", u8"Вертикальные формы" },
+            "Vertical Forms", u8"Вертикальные формы"sv,
+            u8"<p>Блок кодирует символы из китайской кодировки GB{{_}}18030 (2005), предназначенные для вертикального письма."sv,
+            EcScript::Hani },
     { 0xFE20, 0xFE2F,
             "Combining Half Marks", u8"Комбинирующие полузнаки"sv,
             u8"<p>Части диакритических знаков, охватывающих несколько символов. "
