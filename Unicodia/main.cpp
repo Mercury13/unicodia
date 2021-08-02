@@ -11,12 +11,13 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    FmMain w;
 
     // Preinstall backup font!
     installTempFontRel("NotoSerif-Regular.ttf");
     installTempFontRel("NotoSansSymbols-Regular.ttf");
     installTempFontRel("NotoSansSymbols2-Regular.ttf");
+
+    FmMain w;
 
     uc::completeData();
     w.show();
