@@ -9,13 +9,13 @@
 
 // Misc
 #include "u_TypedFlags.h"
+#include "i_TempFont.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
 
 /// ALL NAMES HERE ARE IN UTF-8!
 
-constexpr auto FONT_NOT_INSTALLED = -1000;
 constexpr auto FONT_CHECKED = -999;
 
 
@@ -242,7 +242,7 @@ namespace uc {
             QList<QString> families {};
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
-            intptr_t installID = FONT_NOT_INSTALLED;
+            TempFont tempFont;
         } q {};
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;

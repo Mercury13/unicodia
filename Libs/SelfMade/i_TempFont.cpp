@@ -22,17 +22,17 @@
 #else
     #include <QFontDatabase>
 
-    intptr_t installTempFontFull(QString fname)
+    TempFont installTempFontFull(QString fname)
     {
         auto id = QFontDatabase::addApplicationFont(fname);
         if (id < 0) {
             std::cout << "Cannot install " << fname.toStdString() << std::endl;
         }
-        //auto families = QFontDatabase::applicationFontFamilies(id);
+        auto families = QFontDatabase::applicationFontFamilies(id);
         //for (auto& v : families) {
         //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
         //}
-        return id;
+        return { id, families.join(',') };
     }
 #endif
 
@@ -49,7 +49,7 @@ QString expandTempFontName(std::string_view fname)
 }
 
 
-intptr_t installTempFontRel(std::string_view fname)
+TempFont installTempFontRel(std::string_view fname)
 {
     QString absPath = expandTempFontName(fname);
     return installTempFontFull(absPath);

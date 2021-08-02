@@ -2061,13 +2061,13 @@ namespace {
 
 void uc::Font::load() const
 {
-    if (q.installID != FONT_NOT_INSTALLED)
+    if (q.tempFont.id != FONT_NOT_INSTALLED)
         return;
     if (!fileName.empty()) {
-        q.installID = installTempFontRel(fileName);
+        q.tempFont = installTempFontRel(fileName);
         //q.raw = std::make_unique<QRawFont>(expandTempFontName(fileName), 10);
     } else {
-        q.installID = FONT_CHECKED;
+        q.tempFont.id = FONT_CHECKED;
     }
     q.families = toQList(family);
 }
