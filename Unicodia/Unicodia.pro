@@ -49,7 +49,6 @@ HEADERS += \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
     Uc/UcData.h \
-    Uc/UcDefines.h \
     Wiki.h
 
 FORMS += \
