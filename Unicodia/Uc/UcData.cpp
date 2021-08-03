@@ -23,7 +23,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
     ///       e.g. 1DE0
-    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {} },  // Normal
+    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,"
+            "Noto Sans Symbols2,Segoe UI Historic", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
     { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
     { "Segoe UI Symbol",            {} },                                       // Symbol
@@ -1295,7 +1296,7 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>Содержит смешную букву {{sm|Ԥ}}. Её «изобрёл» писатель Леонид Каганов{{-}}как оказалось, "
                     "не{{_}}первым: ещё за три года до его заметки (2008) майки с этой буквой продавались в России. "
                     "И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, "
-                    "что и дало букве место в Юникоде."sv,
+                    "что и дало букве {{sm|Ԥ}} место в Юникоде."sv,
             EcScript::Cyrl },
     { 0x0530, 0x058F,
             "Armenian", u8"Армянский", {}, EcScript::Armn },
