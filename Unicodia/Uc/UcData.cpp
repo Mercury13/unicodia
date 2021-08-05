@@ -19,7 +19,6 @@ constexpr QChar ZWSP(0x200B);
 
 constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     /// @todo [tofu] 10E60, that’s Arabic too
-    /// @todo [semi-tofu] 23DD, 23DF, very low — what to do?
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
     ///       e.g. 1DE0
@@ -452,7 +451,8 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"языки канадских аборигенов: кри, оджибве <i>(алгонкинский)</i>, наскапи, инуктитут <i>(эскимосский)</i>…"sv,
         u8"<p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "
                 "ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. "
-                "Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}.</p>"sv,
+                "Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}. "
+                "Простая согласная{{-}}уменьшенная буква: к={{sm|ᒃ}}.</p>"sv,
                 EcFont::CANADIAN_ABORIGINAL },
     { "Cham"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
