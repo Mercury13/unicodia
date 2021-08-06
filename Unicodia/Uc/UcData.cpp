@@ -67,6 +67,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
+    { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
@@ -826,6 +827,22 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             "«N’ko» означает «я говорю».</p>"sv,
                 EcFont::NKO },
+    // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
+    { "Nshu"sv, QFontDatabase::Any,
+        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
+        u8"Нюй-шу"sv, u8"900 (предположительно) … 1300 (точно); возможно, даже раньше"sv,
+        u8"один из диалектов сянского <i>(Хунань, Китай)</i>"sv,
+        u8"<p>Нюй-шу существовало веками и использовалось как женское письмо: [[pop_scr:Hani|грамоте]] учили мужчин, а женщины "
+                "использовали более простое слоговое письмо. Многие из памятников нюй-шу{{-}}''послания третьего дня'': "
+                "девушка уходила замуж в другую деревню, а подруги и сёстры вышивали ей пожелания."
+            "<p>Нюй-шу, несмотря на распространённое мнение, не было тайнописью; мужчины вполне могли его понимать."
+            "<p>К закату нюй-шу привели ликбез и распространение швейных машин в XX{{_}}веке. "
+                "К тому же японские оккупанты запрещали нюй-шу, видя в нём шифровку, "
+                "а хунвэйбины в Культурную революцию уничтожали памятники старины, в том числе вышивки."
+            "<p>Повторно открыли нюй-шу в 1980-е. Последняя носительница нюй-шу, Ян Хуаньи, умерла в 2004 в возрасте 98{{_}}лет{{-}}"
+                "после неё письменностью владели только исследователи. "
+                "Вышивки с нюй-шу стало популярным туристским сувениром; опасаются, что туризм исказит древнее письмо."sv,
+                EcFont::NUSHU },
     // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam"sv, QFontDatabase::Ogham,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,

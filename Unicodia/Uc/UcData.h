@@ -186,6 +186,7 @@ namespace uc {
         MONGOLIAN,
         MYANMAR,
         NKO,
+        NUSHU,
         OGHAM,
         OLCHIKI,
         PHAGS_PA,

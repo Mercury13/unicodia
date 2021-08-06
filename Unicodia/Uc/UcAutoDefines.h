@@ -65,6 +65,7 @@ namespace uc {
         Mtei,   // Meitei Mayek
         Mymr,   // Myanmar
         Nkoo,   // NKo
+        Nshu,   // Nushu
         Ogam,   // Ogham
         Olck,   // Ol Chiki
         Orya,   // Oriya
@@ -169,7 +170,6 @@ namespace uc {
         Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars
         //Nkgb  no chars
-        Nshu = Zyyy,        // beyond BMP
         Orkh = Zyyy,        // Turkic runes, beyond BMP
         Osge = Zyyy,        // beyond BMP
         Osma = Zyyy,        // beyond BMP
