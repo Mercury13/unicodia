@@ -829,7 +829,7 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"<p>Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
             "«N’ko» означает «я говорю».</p>"sv,
                 EcFont::NKO },
-    // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
+    // Nushu OK, W10 off, installed Google Noto
     { "Nshu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Нюй-шу"sv, u8"900 (предположительно) … 1300 (точно)"sv,
