@@ -435,4 +435,25 @@ namespace uc {
             { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                       ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
 
+    /// @todo [legacy] Show which computers are the characters on
+    enum class OldComp {
+        AMSTRAD     = 1 << 0,
+        APPLE       = 1 << 1,
+        AQUARIUS    = 1 << 2,
+        ATARI_ST    = 1 << 3,
+        ATARI_8BIT  = 1 << 4,
+        TANDY_COCO  = 1 << 5,
+        MINITEL     = 1 << 6,
+        MSX         = 1 << 7,
+        ORIC        = 1 << 8,
+        COMMODORE   = 1 << 9,
+        RISC_OS     = 1 << 10,
+        SINCLAIR    = 1 << 11,
+        TELETEXT    = 1 << 12,
+        TI99        = 1 << 13,
+        TRS80       = 1 << 14,
+        KORVET = ORIC   // such a coincidence
+    };
+    DEFINE_ENUM_OPS(OldComp)
+
 }   // namespace uc
