@@ -452,7 +452,7 @@ namespace uc {
         TELETEXT    = 1 << 12,
         TI99        = 1 << 13,
         TRS80       = 1 << 14,
-        KORVET = ORIC   // such a coincidence
+        KORVET      = 1 << 15,
     };
     DEFINE_ENUM_OPS(OldComp)
 
