@@ -26,6 +26,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
             "Noto Sans Symbols2,Segoe UI Historic", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
     { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
+    { "Noto Sans Symbols2",         {} },                                       // Noto symbol2
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -91,7 +92,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Serif Tibetan",         "NotoSerifTibetan-Regular.ttf", {}, {}, 90_pc }, // Tibetan
     { "Noto Sans Tifinagh",         "NotoSansTifinagh-Regular.ttf" },           // Tifinagh
     { "Ebrima",                     {} },                                       // Vai
-    { "Microsoft Yi Baiti",         {}, {}, {}, 110_pc },                       // Yi
+    { "Microsoft Yi Baiti",         {}, {}, {}, 120_pc },                       // Yi
 };
 
 
@@ -1698,7 +1699,14 @@ constinit const uc::Block uc::blocks[302] {
     { 0x102A0, 0x102DF,
             "Carian", u8"Карийский", {}, EcScript::Cari },
     { 0x102E0, 0x102FF,
-            "Coptic Epact Numbers", u8"Цифры коптской пасхалии" },
+        "Coptic Epact Numbers", u8"Коптские курсивные цифры"sv,
+        u8"<p>Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не «епакта» (формулы для перевода из солнечного "
+                "календаря в лунный) или «пасхалия» (формулы для расчёта пасхи). "
+                "И действительно, эти цифры, будучи потомками обычной [[pop_scr:Copt|коптской]] записи "
+                "(которая, в свою очередь, позаимствована из [[pop_scr:Grek|греческого]]), широко использовались в копто-арабском мире "
+                "с X по XIX век; в частности, в астрономических таблицах ≈1800. Запись слева направо."
+            "<p>Из-за такого необычного использования эти цифры закодированы отдельным блоком, а не как вариант коптского."sv,
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     { 0x10300, 0x1032F,
             "Old Italic", u8"Этрусский", {}, EcScript::Ital },
     { 0x10330, 0x1034F,

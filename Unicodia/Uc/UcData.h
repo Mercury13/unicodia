@@ -148,6 +148,7 @@ namespace uc {
         NORMAL,
          NOTO,
          NOTO_SYMBOL,
+         NOTO_SYMBOL2,
          SYMBOL,
          HISTORIC,
         ADLAM,
