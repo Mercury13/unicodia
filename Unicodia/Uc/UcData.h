@@ -442,18 +442,22 @@ namespace uc {
         AQUARIUS    = 1 << 2,
         ATARI_ST    = 1 << 3,
         ATARI_8BIT  = 1 << 4,
-        TANDY_COCO  = 1 << 5,
-        MINITEL     = 1 << 6,
-        MSX         = 1 << 7,
-        ORIC        = 1 << 8,
-        COMMODORE   = 1 << 9,
-        RISC_OS     = 1 << 10,
-        SINCLAIR    = 1 << 11,
-        TELETEXT    = 1 << 12,
-        TI99        = 1 << 13,
-        TRS80       = 1 << 14,
-        KORVET      = 1 << 15,
+        MINITEL     = 1 << 5,
+        MSX         = 1 << 6,
+        ORIC        = 1 << 7,
+        COMMODORE   = 1 << 8,
+        RISC_OS     = 1 << 9,
+        SINCLAIR    = 1 << 10,
+        TELETEXT    = 1 << 11,
+        TANDY_TRS80 = 1 << 12,
+        TANDY_COCO  = 1 << 13,
+        KORVET      = 1 << 14,
+        LAST = KORVET
     };
     DEFINE_ENUM_OPS(OldComp)
+
+    extern std::u8string_view oldCompNames[];
+
+    Flags<OldComp> cpOldComps(char32_t cp);
 
 }   // namespace uc

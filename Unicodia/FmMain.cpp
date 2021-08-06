@@ -5,6 +5,7 @@
 // C++
 #include <iostream>
 #include <cmath>
+#include <bit>
 
 // Qt
 #include <QTableView>
@@ -1029,6 +1030,23 @@ void FmMain::showCp(MaybeChar ch)
             // Block
             sp.sep();
             appendValuePopup(text, *hint.sample, u8"Блок", "pop_blk");
+
+            auto comps = uc::cpOldComps(ch.code);
+            if (comps) {
+                sp.sep();
+                str::append(text, u8"Компьютеры: ");
+                str::QSep spC(text, ", ");
+                while (comps) {
+                    // Extract and remove bit
+                    auto bit = comps.smallest();
+                    comps.remove(bit);
+                    // Turn bit to index
+                    auto iBit = std::countr_zero(static_cast<unsigned>(bit));
+                    // Write what we got
+                    spC.sep();
+                    str::append(text, uc::oldCompNames[iBit]);
+                }
+            }
 
             // Font
             if (font) {

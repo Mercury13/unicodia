@@ -10,6 +10,8 @@
 #include "u_Iterator.h"
 #include "Skin.h"
 
+#define NBSP "\u00A0"
+
 using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
 const QString uc::Font::qempty;
@@ -2045,7 +2047,7 @@ constinit const uc::Block uc::blocks[302] {
             u8"Символы со старых компьютеров"sv,
             u8"<p>Символы с разных компьютеров и систем 1970-х и 80-х: Amstrad{{_}}CPC, Mattel{{_}}Aquarius, Atari (ST, 400 и 800), "
                     "Tandy/RadioShack{{_}}TRS-80 (Mark 1 и Color), Oric ''(малоизвестного британского компьютера)'', "
-                    "MouseText ''(Apple IIc и более поздних)'', TI-99/4A, TRS-80, Commodore ''(PET и 64)'', Sinclair ''(ZX80 и 81)'', "
+                    "MouseText ''(Apple IIc и более поздних)'', TRS-80, Commodore ''(PET и 64)'', Sinclair ''(ZX80 и 81)'', "
                     "RISC{{_}}OS ''(Acorn{{_}}Archimedes)'', телетекста и Minitel ''(французской терминальной службы)''. "
                     "А также, по случайному совпадению, советского «Корвета»."
                 "<p>Из-за политики Консорциума не включать товарные знаки в блоке отсутствуют два яблока Apple. "
@@ -2079,6 +2081,112 @@ constinit const uc::Block uc::blocks[302] {
     //{ 0xE0100, 0xE01EF, "Check for error"sv },
 };
 
+std::u8string_view uc::oldCompNames[16] {
+    u8"Amstrad" NBSP "CPC",
+    u8"Apple" NBSP "IIc+",
+    u8"Mattel" NBSP "Aquaruis",
+    u8"Atari" NBSP "ST",
+    u8"Atari" NBSP "400/800",
+    u8"Minitel",
+    u8"MSX",
+    u8"Oric",
+    u8"Commodore" NBSP "PET/64",
+    u8"RISC OS",
+    u8"Sinclair" NBSP "ZX80/81",
+    u8"телетекст",
+    u8"Tandy" NBSP "TRS80" NBSP "Mark" NBSP "1",
+    u8"Tandy" NBSP "TRS80" NBSP "Color",
+    u8"Корвет",
+};
+
+#define REP_2(x) x,x
+#define REP_3(x) x,x,x
+#define REP_4(x) x,x,x,x
+#define REP_5(x) x,x,x,x,x
+#define REP_6(x) x,x,x,x,x,x
+#define REP_8(x) REP_4(x),REP_4(x)
+#define REP_10(x) REP_4(x),REP_4(x),x,x
+#define REP_11(x) REP_4(x),REP_4(x),REP_3(x)
+#define REP_12(x) REP_4(x),REP_4(x),REP_4(x)
+#define REP_16(x) REP_4(x),REP_4(x),REP_4(x),REP_4(x)
+#define REP_32(x) REP_16(x),REP_16(x)
+#define REP_48(x) REP_16(x),REP_16(x),REP_16(x)
+#define REP_60(x) REP_48(x),REP_12(x)
+
+namespace {
+
+    using OC = uc::OldComp;
+
+    constinit Flags<uc::OldComp> oldCompData[] {
+        REP_60 (OC::AQUARIUS | OC::TANDY_COCO | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET ), // 00..3B 6block
+        REP_48 (OC::TELETEXT ),                                                 // 3C..6B diagonals and braided flags
+        REP_4  (OC::MSX | OC::TELETEXT ),                                       // 6C..6F triangles
+                OC::COMMODORE | OC::TELETEXT,                                   // 70 col2
+        REP_4  (OC::COMMODORE),                                                 // 71..74 col3..6
+                OC::COMMODORE | OC::TELETEXT,                                   // 75 col7
+        REP_6  (OC::COMMODORE),                                                 // 76..7B line2..6
+                OC::APPLE | OC::COMMODORE,                                      // 7C LB corner
+        REP_3  (OC::COMMODORE),                                                 // 7D..7F rest 3 corners
+                OC::APPLE,                                                      // 80 lines18
+                OC::APPLE,                                                      // 81 lines1358
+                OC::MSX | OC::COMMODORE,                                        // 82 lines12
+        REP_2  (OC::COMMODORE),                                                 // 83,84 lines123,1-5
+                OC::MSX | OC::COMMODORE,                                        // 85 lines1-6
+                OC::COMMODORE,                                                  // 86 lines1-7
+                OC::MSX | OC::COMMODORE,                                        // 87 cols78
+        REP_2  (OC::COMMODORE),                                                 // 88,89 cols678,4-8
+                OC::MSX | OC::COMMODORE | OC::TANDY_TRS80,                      // 8A cols3-8
+                OC::COMMODORE,                                                  // 8B cols2-8
+                                        // 16 chars skipped by Consortium
+                OC::AMSTRAD | OC::AQUARIUS | OC::COMMODORE,                     // 8C left50%
+                OC::AMSTRAD | OC::AQUARIUS,                                     // 8D right50%
+                OC::AMSTRAD | OC::AQUARIUS | OC::SINCLAIR,                      // 8E top50%
+                OC::AMSTRAD | OC::AQUARIUS | OC::COMMODORE | OC::SINCLAIR,      // 8F bot50%
+                OC::APPLE | OC::COMMODORE | OC::SINCLAIR,                       // 90 all50%
+                OC::COMMODORE | OC::SINCLAIR,                                   // 91 top100%+bot50%
+                OC::SINCLAIR,                                                   // 92 top50%+bot100%
+                {},                                                             // 93 hole
+                OC::COMMODORE,                                                  // 94 left50%+right100%
+                OC::MSX | OC::COMMODORE,                                        // 95 checker1
+                OC::AMSTRAD | OC::COMMODORE,                                    // 96 checker2
+                OC::TANDY_TRS80,                                                // 97 heavy=
+        REP_2  (OC::MSX | OC::COMMODORE),                                       // 98,99 fill\ and /
+        REP_2  (OC::MSX),                                                       // 9A,9B butterflies
+        REP_4  (OC::AMSTRAD),                                                   // 9C..9F diag50%
+        REP_8  (OC::AMSTRAD | OC::MINITEL | OC::TELETEXT),                      // A0..A3 quarter / or \…
+                                                                                // A4..A7 two such slashes nearby
+        REP_2  (OC::AMSTRAD | OC::MINITEL),                                     // A8,A9 two such slashes opposite
+        REP_4  (OC::MINITEL),                                                   // AA..AD three such slashes
+                OC::AMSTRAD | OC::MINITEL,                                      // AE four such slashes
+                OC::MSX,                                                        // AF full -, incomplete |
+                OC::APPLE,                                                      // B0 mouse cursor
+                OC::APPLE | OC::COMMODORE,                                      // B1 inverse check
+        REP_11 (OC::APPLE),                                                     // B2..BC misc Apple chars
+        REP_3  (OC::ATARI_ST),                                                  // BD..BF inverse saltires
+                OC::RISC_OS | OC::TANDY_TRS80,                                  // C0 white saltire
+        REP_4  (OC::TANDY_TRS80),                                               // C1..C3 pointing finger
+                                                                                // C4 inverse ?
+                OC::AMSTRAD | OC::TANDY_TRS80,                                  // C5 man
+        REP_3  (OC::AMSTRAD),                                                   // C6..C8 three men
+        REP_2  (OC::TANDY_TRS80),                                               // C9 woman
+                                                                                // CA chevron
+        REP_5  ({}),                                                            // CB..CF unused
+        REP_32 ({}),                                                            // D0..EF unused
+        REP_10 (OC::ATARI_ST)                                                   // F0..F9 7seg digits
+    };
+
+    static_assert(std::size(oldCompData) == 0xFA);                              // FA first free
+
+}   // anon namespace
+
+
+Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
+{
+    cp -= 0x1FB00;
+    if (cp >= std::size(oldCompData))
+        return {};
+    return oldCompData[cp];
+}
 
 void uc::completeData()
 {
