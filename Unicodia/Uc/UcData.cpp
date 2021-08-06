@@ -44,7 +44,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc", Ffg::STD_IN_SAMPLES, {}, 125_pc }, // CJK
+    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc", Ffg::STD_IN_SAMPLES, {}, 120_pc }, // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
