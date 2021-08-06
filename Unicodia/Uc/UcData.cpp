@@ -2047,7 +2047,7 @@ constinit const uc::Block uc::blocks[302] {
             u8"Символы со старых компьютеров"sv,
             u8"<p>Символы с разных компьютеров и систем 1970-х и 80-х: Amstrad{{_}}CPC, Mattel{{_}}Aquarius, Atari (ST, 400 и 800), "
                     "Tandy/RadioShack{{_}}TRS-80 (Mark 1 и Color), Oric ''(малоизвестного британского компьютера)'', "
-                    "MouseText ''(Apple IIc и более поздних)'', TRS-80, Commodore ''(PET и 64)'', Sinclair ''(ZX80 и 81)'', "
+                    "MouseText ''(Apple IIc и более поздних)'', Commodore ''(PET и 64)'', Sinclair ''(ZX80 и 81)'', "
                     "RISC{{_}}OS ''(Acorn{{_}}Archimedes)'', телетекста и Minitel ''(французской терминальной службы)''. "
                     "А также, по случайному совпадению, советского «Корвета»."
                 "<p>Из-за политики Консорциума не включать товарные знаки в блоке отсутствуют два яблока Apple. "
