@@ -35,7 +35,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },            // Arabic
     { FAMILY_DEFAULT ",Sylfaen",    {} },                                       // Armenian
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc }, // Balinese
-    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA }, // Bamum
+    { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, {}, 110_pc }, // Bamum
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },              // Batak
     { "Noto Serif Bengali",         "NotoSerifBengali-Regular.ttf", {}, {}, 120_pc }, // Bengali
     { "Noto Sans Buginese",         "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON }, // Buginese
