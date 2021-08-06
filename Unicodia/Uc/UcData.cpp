@@ -1158,7 +1158,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
                false },
     { "AL"sv,  EcBidiStrength::STRONG,      u8"Арабская буква"sv,
                u8"Арабская буква"sv, u8"AL",
-               u8"Пишутся справа налево, переворачивают европейские цифры."sv,
+               u8"Пишутся справа налево. Есть тонкие правила, связанные с европейскими цифрами."sv,
                true },
     { "AN"sv,  EcBidiStrength::WEAK,        u8"Арабская цифра"sv,
                u8"Арабская цифра"sv, u8"AN",
@@ -1180,7 +1180,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 
     { "EN"sv,  EcBidiStrength::WEAK,        u8"Европейская цифра"sv,
                u8"Европейская цифра"sv, u8"EN",
-               u8"Европейские цифры в арабском тексте пишутся справа налево."sv,
+               u8"Пишутся слева направо. Есть тонкие правила, связанные с арабскими буквами."sv,
                true },
     { "ES"sv,  EcBidiStrength::WEAK,        u8"Европейский ±"sv,
                u8"Европейский ±"sv, u8"ES",
