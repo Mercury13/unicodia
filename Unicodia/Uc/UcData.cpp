@@ -53,8 +53,10 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
     //{ "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
     { "Noto Sans Gurmukhi",         "NotoSansGurmukhi-Regular.ttf" },           // Gurmukhi
-    { "Noto Sans Hanunoo"sv,        "NotoSansHanunoo-Regular.ttf" },
-    { "Noto Serif Hebrew"sv,        "NotoSerifHebrew-Regular.ttf" },
+    { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
+    { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
+    /// @todo [tofu] Hentaigana is an interesting script, and cannot simulate!
+    { "",                           "" },                                       // Hentaigana
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
@@ -1922,9 +1924,11 @@ constinit const uc::Block uc::blocks[302] {
     { 0x18D00, 0x18D8F,
             "Tangut Supplement", u8"Тангутский дополнительный", {}, EcScript::Tang },
     { 0x1B000, 0x1B0FF,
-            "Kana Supplement", u8"Кана дополнительная" },   /// @todo [script] what are these three?
+            "Kana Supplement", u8"Кана дополнительная", {},
+            EcScript::NONE, EcFont::HENTAIGANA },
     { 0x1B100, 0x1B12F,
-            "Kana Extended-A", u8"Кана расширенная A" },
+            "Kana Extended-A", u8"Кана расширенная A", {},
+            EcScript::NONE, EcFont::HENTAIGANA },
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны" },
     { 0x1B170, 0x1B2FF,

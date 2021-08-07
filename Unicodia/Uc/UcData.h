@@ -172,6 +172,7 @@ namespace uc {
         GURMUKHI,
         HANUNOO,
         HEBREW,
+        HENTAIGANA,
         JAVANESE,
         KANNADA,
         KAYAH_LI,
@@ -435,7 +436,6 @@ namespace uc {
             { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                       ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
 
-    /// @todo [legacy] Show which computers are the characters on
     enum class OldComp {
         AMSTRAD     = 1 << 0,
         APPLE       = 1 << 1,
