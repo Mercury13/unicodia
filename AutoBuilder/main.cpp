@@ -374,6 +374,9 @@ int main()
 
         // Char’s script
         std::string_view sScript = elChar.attribute("sc").as_string();
+            // Hiragana → Hentaigata
+        if (sScript == "Hira"sv && sName.starts_with("HENTAIGANA"))
+            sScript = "Hent"sv;
         //std::string_view sScriptX = elChar.attribute("scx").as_string();
         //if (sScript != sScriptX) {
         //    std::cout << sCp << " has sc=" << sScript << ", scx=" << sScriptX << std::endl;

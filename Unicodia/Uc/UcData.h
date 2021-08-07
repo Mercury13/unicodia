@@ -308,8 +308,8 @@ namespace uc {
         inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
     };
-    extern const Script scriptInfo[static_cast<int>(EcScript::NN)];
-    inline const Script* findScript(std::string_view x) { return findInArray(x, scriptInfo); }
+    extern const Script scriptInfo[];
+    const Script* findScript(std::string_view x);
 
 
 //    struct Category

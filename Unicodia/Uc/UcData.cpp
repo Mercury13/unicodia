@@ -55,8 +55,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Gurmukhi",         "NotoSansGurmukhi-Regular.ttf" },           // Gurmukhi
     { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
     { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
-    /// @todo [tofu] Hentaigana is an interesting script, and cannot simulate!
-    { "",                           "" },                                       // Hentaigana
+    /// @todo [semi-tofu] Sort out hiragana and hentaigana!
+    { "HanaMinA",                   "HanaMinA.ttf", Ffg::STD_IN_SAMPLES },      // Hentaigana
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
@@ -293,7 +293,7 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
 };
 
 
-constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
+constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy"sv, QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
@@ -635,6 +635,20 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
                 "писали и на разговорных еврейских языках: идише, ладино и других. С появлением государства Израиль "
                 "иврит снова сделали языком повседневного общения."sv,
                 EcFont::HEBREW },
+    { "Hent"sv, QFontDatabase::Japanese,
+        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
+        u8"Хэнтайгана"sv, u8"≈X век"sv,
+        u8"японский"sv,
+        u8"<p>Хэнтáйгана{{-}}общее название устаревших знаков [[pop_scr:Hira|хирáганы]], записанных крайне небрежно."
+            "<p>Из [[pop_scr:Hani|иероглифов]] произошла вспомогательная азбука манъёгана{{-}}роль играло не изображение на иероглифе, "
+                "а прочтение. К X{{_}}веку манъёгана уступила хирагане и [[pop_scr:Kana|катакане]]. "
+                "Какой-то системы не было, потому существовали разные знаки для одного слога. "
+            "<p>В 1900{{_}}хирагану стандартизировали, за каждым слогом оставили один символ. А хэнтайгана стала чем-то вроде "
+                "западного готического шрифта или кириллического устава{{-}}применяется в открытках, религиозных документах, "
+                "дипломах школ боевых искусств и… на вывесках ресторанов."
+            "<p>«Китайские порномультики» хентай{{-}}омофон: они происходят от {{sm|変態}} «хэнтай»{{-}}извращённый, "
+                "а хэнтайгана от {{sm|変体}} «хэнтай»{{-}}необычный."sv,
+                EcFont::HENTAIGANA },
     { "Hira"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
@@ -1162,6 +1176,12 @@ constinit const uc::Script uc::scriptInfo[static_cast<int>(uc::EcScript::NN)] {
         u8"Разные"sv, {}, {},
         u8"<p>Комбинирующая метка используется в нескольких разных письменностях.</p>"sv },
 };
+
+
+static_assert(std::size(uc::scriptInfo) == static_cast<size_t>(uc::EcScript::NN));
+
+
+const uc::Script* uc::findScript(std::string_view x) { return findInArray(x, scriptInfo); }
 
 
 constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
@@ -1925,7 +1945,7 @@ constinit const uc::Block uc::blocks[302] {
             "Tangut Supplement", u8"Тангутский дополнительный", {}, EcScript::Tang },
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная", {},
-            EcScript::NONE, EcFont::HENTAIGANA },
+            EcScript::NONE, EcFont::CJK },
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A", {},
             EcScript::NONE, EcFont::HENTAIGANA },
@@ -2049,11 +2069,21 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1FB00, 0x1FBFF,
             "Symbols for Legacy Computing",
             u8"Символы со старых компьютеров"sv,
-            u8"<p>Символы с разных компьютеров и систем 1970-х и 80-х: Amstrad{{_}}CPC, Mattel{{_}}Aquarius, Atari (ST, 400 и 800), "
-                    "Tandy/RadioShack{{_}}TRS-80 (Mark 1 и Color), Oric ''(малоизвестного британского компьютера)'', "
-                    "MouseText ''(Apple IIc и более поздних)'', Commodore ''(PET и 64)'', Sinclair ''(ZX80 и 81)'', "
-                    "RISC{{_}}OS ''(Acorn{{_}}Archimedes)'', телетекста и Minitel ''(французской терминальной службы)''. "
-                    "А также, по случайному совпадению, советского «Корвета»."
+            u8"<p>Символы с разных компьютеров и систем 1970-х и 80-х:<br>"
+                    "• Amstrad CPC{{-}}успешный британский ПК;<br>"
+                    "• Mattel Aquarius{{-}}гонконго-американский ПК, устаревший ещё при появлении;<br />"
+                    "• Atari 400, 800 и ST{{-}}серия успешных американских ПК;<br />"
+                    "• Tandy/RadioShack TRS-80 (Mark 1 и Color){{-}}успешные американские ПК;<br>"
+                    "• Oric{{-}}британский компьютер, получивший определённую популярность во Франции и известный по болгарскому "
+                        "клону «Правец-8D»;<br>"
+                    "• Apple IIc и более поздние (кодировка MouseText){{-}}сверхуспешные американские ПК;<br>"
+                    "• Commodore PET и 64{{-}}сверхуспешные американские ПК;<br>"
+                    "• Sinclair ZX80 и ZX81{{-}}успешные британские ПК;<br>"
+                    "• MSX, он же КУВТ Ямаха{{-}}японский открытый стандарт ПК;<br>"
+                    "• Acorn Archimedes ''(RISC OS)''{{-}}прогрессивный, но неудачный британский ПК, нашедший нишу как учебный;<br>"
+                    "• телетекст{{-}}система передачи текста в полях гашения телевизионного сигнала;<br>"
+                    "• Minitel{{-}}французская терминальная служба;<br>"
+                    "• и, по случайному совпадению, «Корвет»{{-}}советский технологический/учебный компьютер."
                 "<p>Из-за политики Консорциума не включать товарные знаки в блоке отсутствуют два яблока Apple. "
                     "Часть знаков с этих компьютеров уже есть в других блоках Юникода{{-}}в некоторых шрифтах оказывается, "
                     "что символы псевдографики не стыкуются с символами из данного блока."sv },

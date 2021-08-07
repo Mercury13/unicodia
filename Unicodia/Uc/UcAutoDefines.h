@@ -47,6 +47,7 @@ namespace uc {
         Hani,   // Chinese hieroglyphs
         Hano,   // Hanunoo
         Hebr,   // Hebrew
+        Hent,   // Hentaigana
         Hira,   // Hiragana
         Java,   // Javanese
         Kali,   // Kayah Li
