@@ -699,6 +699,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[pop_scr:Hira|хирáганой]]).</p>"sv,
                 EcFont::CJK },
     /// @todo [semi-tofu] How to display Khmer characters?
+    /// @todo [desc] Describe Khmer, interesting script
     { "Khmr"sv, QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кхмерская"sv, u8"VI век"sv,
