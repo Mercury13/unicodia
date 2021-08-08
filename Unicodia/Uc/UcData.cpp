@@ -53,8 +53,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
-    //{ "Raavi,Nirmala UI",           {} },                                       // Gurmukhi
-    { "Noto Sans Gurmukhi",         "NotoSansGurmukhi-Regular.ttf" },           // Gurmukhi
+    { "Noto Sans Gurmukhi UI",      "NotoSansGurmukhiUI-Regular.ttf", {}, {}, 110_pc },  // Gurmukhi
     { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
     { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
@@ -572,7 +571,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"гуджаратский <i>(запад Индии)</i>"sv,
         u8"<p>Появился из [[pop_scr:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "
                 "Гласная по умолчанию «ə».</p>"sv },
-    // Gurmukhi OK, installed Google Noto because of W7 troubles
+    // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru"sv, QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гурмукхи"sv, u8"XVI век"sv,
