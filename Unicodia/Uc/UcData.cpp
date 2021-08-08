@@ -38,6 +38,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },            // Arabic
     { FAMILY_DEFAULT ",Sylfaen",    {} },                                       // Armenian
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc }, // Balinese
+    /// @todo [future] Stub is vice-versa because of missing circle
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, {}, 110_pc }, // Bamum
     { "Noto Sans Batak",            "NotoSansBatak-Regular.ttf" },              // Batak
     { "Noto Serif Bengali",         "NotoSerifBengali-Regular.ttf", {}, {}, 120_pc }, // Bengali
