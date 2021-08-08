@@ -729,10 +729,13 @@ namespace {
     {
         auto name = x[0];
         if (name == "sm"sv) {
-            bool useCustom = !font.flags.have(uc::Ffg::STD_IN_SAMPLES);
+            bool useCustom = !font.flags.have(uc::Ffg::DESC_STD);
             if (useCustom)
                 font.load();
-            str::append(s, "<font size='+2'"sv);
+            auto fontSize = font.flags.have(uc::Ffg::DESC_BIGGER) ? '3' : '2';
+            str::append(s, "<font size='+"sv);
+            str::append(s, fontSize);
+            str::append(s, '\'');
             if (useCustom) {
                 str::append(s, " face='"sv);
                 str::append(s, font.family);

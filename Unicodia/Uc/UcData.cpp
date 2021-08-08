@@ -46,7 +46,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc", Ffg::STD_IN_SAMPLES, {}, 120_pc }, // CJK
+    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD, {}, 120_pc }, // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
@@ -56,7 +56,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
     { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
-    { "HanaMinA",                   "HanaMinA.ttf", Ffg::STD_IN_SAMPLES },      // Hentaigana
+    { "HanaMinA",                   "HanaMinA.ttf", Ffg::DESC_STD },      // Hentaigana
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
@@ -69,7 +69,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
     { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
-    { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },
+    { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },            // Myanmar
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
@@ -84,7 +84,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
     { "Noto Sans Syloti Nagri",     "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON }, // Syloti Nagri
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
-    { "Noto Sans Tagalog"sv,        "NotoSansTagalog-Regular.ttf" },
+    { "Noto Sans Tagalog",          "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER }, // Tagalog
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },                                       // Tai Le
     { "Microsoft New Tai Lue",      {} },                                       // Tai Lue (new)
@@ -1114,7 +1114,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Испанские миссионеры (XVI{{_}}век) увидели, что островитяне поголовно грамотны, и сами стали учить их на байбайине. "
                 "При этом не сразу поняли, в каком направлении пишут: текст вырезали на бамбуковых дощечках, направляя нож от себя, "
                 "потому могли писать в одном направлении и читать в другом."
-            "<p>Причин упадка байбаина много: испанцы завезли бумагу, перо и печать, под их влиянием аборигены стали различать звуки "
+            "<p>Причин упадка байбайина много: испанцы завезли бумагу, перо и печать, под их влиянием аборигены стали различать звуки "
                 "r/d, u/o, i/e. А главное: [[pop_scr:Latn|латиница]] помогает в жизни, позволяя получить престижную конторскую работу. "
                 "Так что в XVIII{{_}}веке обнаружили, что аборигены переняли латиницу. "
                 "К XIX{{_}}веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. "

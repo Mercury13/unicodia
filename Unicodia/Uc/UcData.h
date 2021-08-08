@@ -227,7 +227,8 @@ namespace uc {
         STUB_OFF = 8,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
         STUB_ON = 16,           ///< Circle stub explicitly on
         STUB_VICEVERSA = 32,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
-        STD_IN_SAMPLES = 64,    ///< Use standard font in samples, not this
+        DESC_STD = 64,          ///< Use standard font in descriptions, not this
+        DESC_BIGGER = 128,      ///< Use bigger font in descriptions
     };
 
     DEFINE_ENUM_OPS(Ffg)
