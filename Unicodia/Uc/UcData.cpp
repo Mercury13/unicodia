@@ -76,7 +76,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, {}, 150_pc },                       // Phaistos disc
-    { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf" },             // Rejang
+    { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER }, // Rejang
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Saurashtra",       "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON }, // Saurashtra
@@ -924,10 +924,10 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Реджанг", u8"≈1750 (первый известный документ)",
         u8"реджанг <i>(Суматра)</i>",
         u8"<p>На языке реджанг говорят 200{{_}}тыс. человек (2000), большинство из них неграмотно. "
-                "Письмо постепенно заменяется латиницей.</p>"
+                "Письмо постепенно заменяется [[pop_scr:Latn|латиницей]]."
             "<p>Перед нами обычная брахмийская абугида с гласной по умолчанию «а» и вирамой: "
                 "{{sm|ꤰ}}=ка, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. "
-                "Письменность деградировала по той же причине, что и [[pop_scr:Runr|руны]]: проще выцарапывать на дереве.</p>"sv,
+                "Письменность деградировала по той же причине, что и [[pop_scr:Runr|руны]]: проще выцарапывать на дереве."sv,
                 EcFont::REJANG },
     // Runes OK, installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
