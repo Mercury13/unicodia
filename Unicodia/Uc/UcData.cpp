@@ -30,7 +30,6 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
     { "Noto Sans Symbols2",         {} },                                       // Noto symbol2
     { "Noto Sans Symbols2",         {}, Ffg::DESC_BIGGER },                     // Noto symbol2 bigger
-    { "Noto Sans Symbols2",         {}, Ffg::DESC_SMALLER },                    // Noto symbol2 smaller
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
@@ -1991,9 +1990,9 @@ constinit const uc::Block uc::blocks[302] {
                     "Символы счётных палочек часто писали и на бумаге."
                 "<p>Если нужно что-то сосчитать и запомнить количество, используют счётные символы. "
                     "Европейские пятёрки {{sm|𝍸}} чаще всего ассоциируются с тюрьмой. "
-                    "Китайцы пишут иероглиф {{sm|正}}. Лесники считают десятками, этот метод описан у Я.И.{{_}}Перельмана, "
+                    "Китайцы пишут иероглиф <font size='+1'>正</font>. Лесники считают десятками, этот метод описан у Я.И.{{_}}Перельмана, "
                     "но отсутствует в Юникоде."sv,
-            EcScript::NONE, EcFont::NOTO_SYMBOL2_SMALLER },
+            EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     { 0x1D400, 0x1D7FF,
             "Mathematical Alphanumeric Symbols",
             u8"Математические буквы и цифры"sv,
