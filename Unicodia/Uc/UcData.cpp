@@ -87,7 +87,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
     { "Noto Sans Syloti Nagri",     "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON }, // Syloti Nagri
     { "Serto Antioch Bible",        "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc }, // Syriac
-    { "Noto Sans Tagalog",          "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER }, // Tagalog
+    { "Noto Sans Tagalog",          "NotoSansTagalog-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER }, // Tagalog
     { "Noto Sans Tagbanwa"sv,       "NotoSansTagbanwa-Regular.ttf" },
     { "Microsoft Tai Le",           {} },                                       // Tai Le
     { "Microsoft New Tai Lue",      {} },                                       // Tai Lue (new)
