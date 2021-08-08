@@ -149,6 +149,7 @@ namespace uc {
          NOTO,
          NOTO_SYMBOL,
          NOTO_SYMBOL2,
+         NOTO_SYMBOL2_BIGGER,
          SYMBOL,
          HISTORIC,
         ADLAM,
