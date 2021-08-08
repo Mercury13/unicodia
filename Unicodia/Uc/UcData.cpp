@@ -19,7 +19,7 @@ const QString uc::Font::qempty;
 constexpr QChar STUB_CIRCLE(0x25CC);
 constexpr QChar ZWSP(0x200B);
 
-constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
+constinit const uc::Font uc::fontInfo[] {
     /// @todo [tofu] 10E60, that’s Arabic too
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
@@ -61,6 +61,7 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
+    { "Noto Serif Khmer"sv,         "NotoSerifKhmer-Regular.ttf" },             // Khmer
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
@@ -100,6 +101,8 @@ constinit const uc::Font uc::fontInfo[static_cast<int>(EcFont::NN)] {
     { "Ebrima",                     {} },                                       // Vai
     { "Microsoft Yi Baiti",         {}, {}, {}, 120_pc },                       // Yi
 };
+
+static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));
 
 
 constinit const std::u8string_view uc::TX_NOCHAR =
@@ -695,13 +698,15 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[pop_scr:Hira|хирáганой]]).</p>"sv,
                 EcFont::CJK },
+    /// @todo [semi-tofu] How to display Khmer characters?
     { "Khmr"sv, QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Кхмерская"sv, u8"VI век"sv,
         u8"кхмерский <i>(Камбоджа)</i>"sv,
         u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
-                "Стал основой для тайского и лаосского.</p>"sv },
+                "Стал основой для [[pop_scr:Thai|тайского]] и [[pop_scr:Laoo|лаосского]]."sv,
+                EcFont::KHMER },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     /// @todo [desc, BMP] Interesting script, describe
     { "Knda"sv, QFontDatabase::Kannada,

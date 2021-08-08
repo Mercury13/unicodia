@@ -177,6 +177,7 @@ namespace uc {
         JAVANESE,
         KANNADA,
         KAYAH_LI,
+        KHMER,
         LANNA,
         LAO,
         LEPCHA,
@@ -256,7 +257,7 @@ namespace uc {
         const QString& onlyFamily() const
             { return (q.families.size() == 1) ? q.families[0] : qempty; }
     };
-    extern const Font fontInfo[static_cast<int>(EcFont::NN)];
+    extern const Font fontInfo[];
 
     struct LangLife
     {
