@@ -71,7 +71,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Malayalam",        "NotoSansMalayalam-Light.ttf", Ffg::LIGHT }, // Malayalam
     { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },
     { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
-    { "Noto Sans Mongolian"sv,      "NotoSansMongolian-Regular.ttf" },
+    { "Noto Sans Mongolian",        "NotoSansMongolian-Regular.ttf" },          // Mongol
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },            // Myanmar
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
@@ -814,6 +814,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "в середине и в конце\u00A0— сокращённые.</p>"sv,
                 EcFont::MALAYALAM },
     // Mongol OK, dislike standard font of W10 → installed Google Noto
+    /// @todo [semi-tofu] 18A9 bad rendering
     { "Mong"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,
         u8"Монгольская (старая)"sv, u8"X век"sv,
