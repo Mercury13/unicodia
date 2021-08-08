@@ -75,7 +75,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },            // Myanmar
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
-    { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf" },              // Ogham
+    { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf", {}, {}, 110_pc }, // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, {}, 150_pc },                       // Phaistos disc
