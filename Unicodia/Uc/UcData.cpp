@@ -61,7 +61,8 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
-    { "Noto Serif Khmer"sv,         "NotoSerifKhmer-Regular.ttf" },             // Khmer
+        // Initial Noto Sans Khmer loses umlauts
+    { "Noto Sans Khmer UI"sv,       "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc }, // Khmer
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
@@ -698,7 +699,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[pop_scr:Hira|хирáганой]]).</p>"sv,
                 EcFont::CJK },
-    /// @todo [semi-tofu] How to display Khmer characters 19E0+?
+    // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     /// @todo [desc] Describe Khmer, interesting script
     { "Khmr"sv, QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,

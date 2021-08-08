@@ -29,8 +29,14 @@
 using namespace std::string_view_literals;
 
 namespace {
+    /// Alpha for space characters
     constexpr int ALPHA_SPACE = 60;
+
+    enum class TableDraw { INTERNAL, CUSTOM };
+    // No need custom drawing — solves nothing
+    constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 }
+
 
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
@@ -217,18 +223,24 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::DisplayRole:
-        if (auto q = textAt(index); !q.isEmpty())
-            return q;
+        if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
+            if (auto q = textAt(index); !q.isEmpty())
+                return q;
+        }
         return {};
 
     case Qt::FontRole:
-        if (auto q = fontAt(index))
-            return *q;
+        if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
+            if (auto q = fontAt(index))
+                return *q;
+        }
         return {};
 
     case Qt::ForegroundRole:
-        if (auto c = fgAt(index); c.isValid())
-            return c;
+        if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
+            if (auto c = fgAt(index); c.isValid())
+                return c;
+        }
         return {};
 
     case Qt::BackgroundRole: {
@@ -396,15 +408,15 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
             // Abbreviation
             drawAbbreviation(painter, rect, abbr, color);
         }
-//        else {    // No need custom drawing — solves nothing
-//            // Char
-//            painter->setFont(*model.fontAt(*ch));
-//            auto specialColor = model.fgAt(*ch);
-//            painter->setBrush(specialColor.isValid() ? specialColor : color);
-//            painter->drawText(rect,
-//                              Qt::AlignCenter | Qt::TextSingleLine,
-//                              model.textAt(*ch));
-//        }
+        else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
+            // Char
+            painter->setFont(*model.fontAt(*ch));
+            auto specialColor = model.fgAt(*ch);
+            painter->setBrush(specialColor.isValid() ? specialColor : color);
+            painter->drawText(rect,
+                              Qt::AlignCenter | Qt::TextSingleLine,
+                              model.textAt(*ch));
+        }
     }
 }
 
