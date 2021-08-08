@@ -150,6 +150,7 @@ namespace uc {
          NOTO_SYMBOL,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
+         NOTO_SYMBOL2_SMALLER,
          SYMBOL,
          HISTORIC,
         ADLAM,
@@ -222,14 +223,15 @@ namespace uc {
     ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
-        BOLD = 1,               ///< Readdy bold
-        SEMIBOLD = 2,           ///< Bolder
-        LIGHT = 4,              ///< Lighter
-        STUB_OFF = 8,           ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
-        STUB_ON = 16,           ///< Circle stub explicitly on
-        STUB_VICEVERSA = 32,    ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
-        DESC_STD = 64,          ///< Use standard font in descriptions, not this
-        DESC_BIGGER = 128,      ///< Use bigger font in descriptions
+        BOLD          = 1<<0,   ///< Really bold
+        SEMIBOLD      = 1<<1,   ///< Bolder
+        LIGHT         = 1<<2,   ///< Lighter
+        STUB_OFF      = 1<<3,   ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
+        STUB_ON       = 1<<4,   ///< Circle stub explicitly on
+        STUB_VICEVERSA= 1<<5,   ///< Circle stub before char (stuck to ZWSP, i.e. ZWSP + char + circle)
+        DESC_STD      = 1<<6,   ///< Use standard font in descriptions, not this
+        DESC_BIGGER   = 1<<7,   ///< Use bigger font in descriptions
+        DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
     };
 
     DEFINE_ENUM_OPS(Ffg)
