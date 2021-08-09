@@ -38,6 +38,7 @@ namespace uc {
         Cyrl,   // Cyrillic
         Deva,   // Devanagari
         Dogr,   // Dogra
+        Dsrt,   // Deseret (Mormon)
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
@@ -111,7 +112,6 @@ namespace uc {
         Cprt = Zyyy,        // beyond BMP
         //Cyrs  no chars
         Diak = Zyyy,        // Dives Akuru, beyond BMP
-        Dsrt = Zyyy,        // beyond BMP
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars
         //Egyh  no chars
