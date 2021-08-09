@@ -1635,20 +1635,26 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [semi-tofu] Bad chars, but OK
     /// @todo [desc] Greek ex
     { 0x1F00, 0x1FFF,
-            "Greek Extended", u8"Греческий расширенный", {},
+            "Greek Extended", u8"Греческий расширенный"sv, {},
             EcScript::Grek, EcFont::NOTO },
-    // Punct OK
-    /// @todo [desc] Punctuation
+    /// @todo [semi-tofu] What is two-point leader and what font to use?
+    /// @todo [future] Link to ASCII
     { 0x2000, 0x206F,
-            "General Punctuation", u8"Знаки препинания" },
+            "General Punctuation", u8"Знаки препинания"sv,
+            u8"<p>Пунктуация (лат. ''punctum'' «точка»){{—}}система знаков, подчёркивающих синтаксис и интонацию речи, "
+                    "а также правила постановки их в тексте."
+                "<p>Очевидно, основные знаки препинания (точка, запятая, двоеточие…) закодированы в ASCII и латинице-1. "
+                    "А в блоке знаков препинания находятся так называемые '''типографские знаки''', "
+                    "чтобы красиво оформить текст."sv },
     // Sup/sub OK
+    /// @todo [semi-tofu] Some are absent in W7, and Noto does fun
     /// @todo [future] Links to other blocks when they are ready
     { 0x2070, 0x209F,
             "Superscripts and Subscripts",
             u8"Верхние и нижние индексы"sv,
             u8"<p>Блок содержит надстрочные и подстрочные буквы, знаки и цифры, применяемые "
                     "в математике и фонетике." },
-    /// @todo [tofu?] Check curr symbols
+    // Curr symbols OK
     /// @todo [desc] Curr symbols
     { 0x20A0, 0x20CF,
             "Currency Symbols", u8"Символы валют" },
@@ -1683,7 +1689,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих"sv,
             u8"<p>Сами по себе управляющие символы не имеют никакого графического представления. "
-                    "В этом блоке собраны условные знаки, изображающие эти символы. "
+                    "В этом блоке собраны условные знаки, которыми изображают управляющие символы. "
                     "В первую очередь нам важен символ {{sm|␣}}, изображающий пробел."
                 "<p>Несколько изображений управляющих символов есть в и других блоках: {{sm|↵←⌫}}."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
