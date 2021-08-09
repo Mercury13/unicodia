@@ -153,6 +153,7 @@ namespace uc {
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
          HISTORIC,
+         BLOCK,
         ADLAM,
         AHOM,
         ARABIC,

@@ -32,6 +32,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Symbols2",         {}, Ffg::DESC_BIGGER },                     // Noto symbol2 bigger
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
+    { "Lucida Sans Unicode",        {} },                                       // Block
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
@@ -1701,13 +1702,25 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2460, 0x24FF,
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры"sv },
     // Box drawing OK
-    /// @todo [desc] Box draw
     { 0x2500, 0x257F,
-            "Box Drawing", u8"Рисование рамок" },
-    /// @todo [semi-tofu] Find font for block elem, need A SINGLE FONT
-    /// @todo [desc] Block elem
+            "Box Drawing", u8"Рисование рамок"sv,
+            u8"<p>Элементы псевдографики, используемые для рисования рамок. "
+                    "Как и любая псевдографика, чаще всего используются в моноширинных шрифтах."
+                "<p>В IBM-совместимых ПК были две разнивидности линий{{-}}одиночная и двойная. "
+                    "Юникод добавляет к ним тонкую, пунктирную и тонкую пунктирную."sv },
+    // Block elements OK
     { 0x2580, 0x259F,
-            "Block Elements", u8"Блочные элементы"sv },
+            "Block Elements", u8"Блочные элементы"sv,
+            u8"<p>Элементы псевдографики, используемые для сплошной заливки. "
+                    "Как и любая псевдографика, чаще всего используются в моноширинных шрифтах. "
+                    "В пропорциональных шрифтах символы родом с IBM{{-}}половинная заливка {{sm|▀}}, "
+                        "растровая заливка {{sm|░}}{{-}}обычно вытянуты по вертикали, а четвертная заливка с "
+                        "ZX{{_}}Spectrum {{sm|▚}}{{-}}квадратная."
+                "<p>У псевдографики, как правило, отсутствует межсимвольный интервал, "
+                    "потому «Юникодия» использует псевдографические символы для показа ширины пробелов."
+                "<p>Часть псевдографических символов со старых компьютеров{{-}}например, 2×3 блока{{-}}"
+                    "здесь отсутствуют и добавлены только в 2020."sv,
+            EcScript::NONE, EcFont::BLOCK },
     // Geometric OK
     /// @todo [desc] Geometric
     { 0x25A0, 0x25FF,
