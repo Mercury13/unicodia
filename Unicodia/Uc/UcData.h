@@ -168,6 +168,7 @@ namespace uc {
         CHAM,
         CHEROKEE,
         CJK,
+        COPTIC,
         DEVANAGARI,
         DOGRA,
         ETHIOPIC,

@@ -49,14 +49,15 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc",
-                Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc }, // CJK
+    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc",                 // CJK
+                Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc },
+    { "Noto Sans Coptic",           "NotoSansCoptic-Regular.ttf" },             // Coptic
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc }, // Devanagari
     { "Noto Serif Dogra",           "NotoSerifDogra-Regular.ttf",               // Dogra
                 Ffg::STUB_ON | Ffg::DESC_BIGGER },
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
-    { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
+    { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },         // Glagolitic
     { "Noto Sans Gurmukhi UI",      "NotoSansGurmukhiUI-Regular.ttf", {}, {}, 110_pc },  // Gurmukhi
     { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
     { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
@@ -493,14 +494,15 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"среди индейцев, к 1830 грамотны были {{%|90}} чероки.</p>"sv
             u8"<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.</p>",
             EcFont::CHEROKEE },
-    /// @todo [tofu] 2C80 block is not covered at all under W7
+    // Coptic OK, W7 problems → installed Google Noto font
     { "Copt"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Коптская"sv, u8"II век"sv,
         u8"коптский"sv,
         u8"<p>Происходит из [[pop_scr:Grek|греческого]]. Используется коптами (египетскими христианами) как богослужебный. "
                 "Общаются копты по-арабски, как разговорный коптский умер от XVII до XIX{{_}}века."
-            "<p>С Юникода 4.1 (2005) коптский отделён от греческого."sv },
+            "<p>С Юникода 4.1 (2005) коптский отделён от греческого."sv,
+                EcFont::COPTIC },
     /// @todo [tofu] Troubles with some rare letters, what to do?
     { "Cyrl"sv, QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -1772,7 +1774,7 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] Latin C
     { 0x2C60, 0x2C7F,
             "Latin Extended-C", u8"Латиница расширенная C", {}, EcScript::Latn },
-    /// @todo [semi-tofu] We take Coptic from Segoe symbol, check W7
+    // Coptic OK
     { 0x2C80, 0x2CFF,
             "Coptic", u8"Коптский", {}, EcScript::Copt },
     // Georgian supp OK
@@ -1785,18 +1787,18 @@ constinit const uc::Block uc::blocks[302] {
     // Ethiopic ex OK
     /// @todo [desc] Ethiopic ex
     { 0x2D80, 0x2DDF,
-            "Ethiopic Extended", u8"Эфиопский расширенный", {}, EcScript::Ethi },
+            "Ethiopic Extended", u8"Эфиопский расширенный"sv, {}, EcScript::Ethi },
     /// @todo [semi-tofu] Cyr ex A renders badly
     /// @todo [desc] Cyr ex A
     { 0x2DE0, 0x2DFF,
-            "Cyrillic Extended-A", u8"Кириллица расширенная A", {},
+            "Cyrillic Extended-A", u8"Кириллица расширенная A"sv, {},
             EcScript::Cyrl, EcFont::NOTO },
     // Supp punct OK
     /// @todo [desc] Supp punct
     { 0x2E00, 0x2E7F,
             "Supplemental Punctuation", u8"Дополнительные знаки препинания"sv },
     { 0x2E80, 0x2EFF,
-            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи", {}, EcScript::Hani },
+            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи"sv, {}, EcScript::Hani },
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи канси", {}, EcScript::Hani },
     { 0x2FF0, 0x2FFF,
