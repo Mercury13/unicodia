@@ -27,7 +27,7 @@ constinit const uc::Font uc::fontInfo[] {
     { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,"
             "Noto Sans Symbols2,Segoe UI Historic", {} },  // Normal
     { "Noto Serif",                 {} },                                       // Noto
-    { "Segoe UI Emoji,Noto Sans Symbols", {}, {}, {}, 120_pc },                 // Noto symbol
+    { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {}, {}, {}, 120_pc },  // Noto symbol
     { "Noto Sans Symbols2",         {} },                                       // Noto symbol2
     { "Noto Sans Symbols2",         {}, Ffg::DESC_BIGGER },                     // Noto symbol2 bigger
     { "Segoe UI Symbol",            {} },                                       // Symbol
@@ -1560,6 +1560,7 @@ constinit const uc::Block uc::blocks[302] {
             "Superscripts and Subscripts", u8"Верхние и нижние индексы" },
     { 0x20A0, 0x20CF,
             "Currency Symbols", u8"Символы валют" },
+    /// @todo [semi-tofu] Need SVG images, existing are BAD!
     { 0x20D0, 0x20FF,
             "Combining Diacritical Marks for Symbols",
             u8"Диакритические метки для символов"sv, {},
@@ -1576,7 +1577,12 @@ constinit const uc::Block uc::blocks[302] {
             "Miscellaneous Technical", u8"Разные технические"sv,
             {}, EcScript::NONE, EcFont::NOTO_SYMBOL },
     { 0x2400, 0x243F,
-            "Control Pictures", u8"Изображения управляющих" },
+            "Control Pictures", u8"Изображения управляющих"sv,
+            u8"<p>Сами по себе управляющие символы не имеют никакого графического представления. "
+                    "В этом блоке собраны условные знаки, изображающие эти символы. "
+                    "В первую очередь нам важен символ {{sm|␣}}, изображающий пробел."
+                "<p>Несколько изображений управляющих символов есть в и других блоках: {{sm|↵←⌫}}."sv,
+            EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     { 0x2440, 0x245F,
             "Optical Character Recognition",
             u8"Оптическое распознавание символов"sv,
@@ -1586,9 +1592,9 @@ constinit const uc::Block uc::blocks[302] {
                     "Система понимает десять цифр и четыре специальных символа, задающих смысл поля. "
                     "Магнитное распознавание работает значительно надёжнее оптического."
                 "<p>В 1968 в США сделали первую действующую технологию оптического распознавания{{-}}OCR-A. "
-                    "Документ печатают специальным моноширинным шрифтом; этот шрифт часто встречается в титрах "
-                        "киберпанк-фильмов. "
-                    "Для разделения полей используются специальные символы: крючок, стул, вилка, пряжка и бабочка."sv,
+                    "Для разделения полей используются специальные символы: крючок, стул, вилка, пряжка и бабочка."
+                "<p>Обе технологии используют специальные моноширинные шрифты. "
+                    "Эти шрифты (иногда в несколько искажённом виде) встречаются в фильмах и играх жанра «киберпанк»."sv,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     { 0x2460, 0x24FF,
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры" },
