@@ -167,6 +167,7 @@ namespace uc {
         CHEROKEE,
         CJK,
         DEVANAGARI,
+        DOGRA,
         ETHIOPIC,
         GEORGIAN,
         GLAGOLITIC,

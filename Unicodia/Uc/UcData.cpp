@@ -48,8 +48,11 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Cham",             "NotoSansCham-Regular.ttf" },               // Cham
     { "Noto Sans Cherokee",         "NotoSansCherokee-Regular.ttf" },           // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD, {}, 120_pc }, // CJK
+    { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc",
+                Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc }, // CJK
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
+    { "Noto Serif Dogra",           "NotoSerifDogra-Regular.ttf",               // Dogra
+                Ffg::STUB_ON | Ffg::DESC_BIGGER },
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },
@@ -337,6 +340,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "в письменность добавлены десятичные цифры, не имеющие исторического обоснования.</p>"sv,
                 EcFont::AHOM },
     /// @todo [tofu, BMP] Real troubles, even W10 + Noto cannot display those chars
+    ///    08BE+ (2020),
     { "Arab"sv, QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Арабская"sv, u8"IV—VI век"sv,
@@ -523,6 +527,21 @@ constinit const uc::Script uc::scriptInfo[] {
                 "<nobr>ка {{sm|क}} + и {{sm| ि}} = ки {{sm|कि}}</nobr>. "
                 "Чтобы получить простую согласную, надо добавить знак «вирама» («убийца»): к {{sm|क्}}.</p>"sv,
                 EcFont::DEVANAGARI },
+    { "Dogr"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Догра"sv, u8"XIX век",
+        u8"догри <i>(Кашмир)</i>"sv,
+        u8"<p>Язык догров, индийской народности. Письменность позаимствована из [[pop_scr:Takr|такри]], стандартизирована "
+                "в середине XIX{{_}}века при магарадже Ранбире Сингхе. "
+                "После смерти Ранбира в 1885 под давлением британцев официальным языком выбрали [[pop_scr:Arab|урду]]. "
+                "В XX{{_}}веке стали писать на [[pop_scr:Deva|деванагари]], с XXI{{_}}века появился интерес и к своей "
+                "письменности."
+            "<p>Перед нами брахмийская абугида с гласной по умолчанию «ə» (в Юникоде условно названа «а»), "
+                "которая в безударных слогах сильно редуцировалась, как в [[pop_scr:Guru|пенджабском]]. "
+                "К тому же в догри встречаются лигатуры, не закодированные в данном шрифте. "
+                "Потому вирама в догри используется редко, что видно в самоназвании: {{sm|𑠖𑠵𑠌𑠤𑠬}} «до-гᵊ-ра:»."
+            "<p>Цифры берутся из такри."sv,
+                EcFont::DOGRA },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -1519,7 +1538,8 @@ constinit const uc::Block uc::blocks[302] {
             "Currency Symbols", u8"Символы валют" },
     { 0x20D0, 0x20FF,
             "Combining Diacritical Marks for Symbols",
-            u8"Диакритические метки для символов" },
+            u8"Диакритические метки для символов"sv, {},
+            EcScript::NONE, EcFont::SYMBOL },
     { 0x2100, 0x214F,
             "Letterlike Symbols", u8"Буквоподобные символы" },
     { 0x2150, 0x218F,
