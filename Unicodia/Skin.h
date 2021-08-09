@@ -16,9 +16,10 @@
     LINK_SUBTAG(CNAME_LINK_POPUP, "0.05")
 
 #ifdef _WIN32
-    #define FAMILY_DEFAULT "Cambria"
-    #define FAMILY_BACKUP "Noto Serif"
-    #define FAMILY_CONDENSED "Arial"
+    #define FAM_DEFAULT "Cambria"
+    #define FAM_BACKUP "Noto Serif"
+    #define FAM_CONDENSED "Arial"
+    #define FAM_EMOJI "Segoe UI Emoji"
 #else
     #error Unknown OS
 #endif

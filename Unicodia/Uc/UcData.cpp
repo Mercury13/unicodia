@@ -24,8 +24,8 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
     ///       e.g. 1DE0
-    { FAMILY_DEFAULT "," FAMILY_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,"
-            "Noto Sans Symbols2,Segoe UI Historic", {} },  // Normal
+    { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,"
+            "Noto Sans Symbols2,Segoe UI Historic", {} },                       // Normal
     { "Noto Serif",                 {} },                                       // Noto
     { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {}, {}, {}, 120_pc },  // Noto symbol
     { "Noto Sans Symbols2",         {} },                                       // Noto symbol2
@@ -33,11 +33,13 @@ constinit const uc::Font uc::fontInfo[] {
     { "Segoe UI Symbol",            {} },                                       // Symbol
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Lucida Sans Unicode",        {} },                                       // Block
+    { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP, {} },                     // Punctuation
+        //-----
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "Noto Naskh Arabic",          "NotoNaskhArabic-Regular.ttf" },            // Arabic
-    { FAMILY_DEFAULT ",Sylfaen",    {} },                                       // Armenian
+    { FAM_DEFAULT ",Sylfaen",    {} },                                       // Armenian
     { "Noto Sans Balinese",         "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc }, // Balinese
     /// @todo [future] Stub is vice-versa because of missing circle
     { "Noto Sans Bamum",            "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, {}, 110_pc }, // Bamum
@@ -794,14 +796,14 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
         u8"большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; "sv
             u8"вьетнамский, карельский, курдский, эсперанто"sv,
-        u8"<p>Латиница{{-}}[[pop_scr:Grek|древнегреческое]] письмо, адаптированное около VII{{_}}в. до нашей эры "sv
-                u8"для записи [[pop_scr:Ital|этрусских]] говоров, впоследствии ставших латинском языком.</p>"sv
-            u8"<p>В средние века к латинице добавились буквы J, V и W. Минускульное письмо, изобретённое для экономии дорогого пергамента, "sv
-                u8"превратилось в строчные буквы.</p>"sv
-            u8"<p>Латинский язык давно мёртв, но широкая территория Римской империи, миссионерская деятельность Папского престола "sv
-                u8"и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "sv
-                u8"Латиница используется в математике, медицине, фонетике, программировании.</p>"sv
-            u8"<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>" },
+        u8"<p>Латиница{{-}}[[pop_scr:Grek|древнегреческое]] письмо, адаптированное около VII{{_}}в. до{{_}}н.э. "
+                "для записи [[pop_scr:Ital|этрусских]] говоров, впоследствии ставших латинском языком.</p>"
+            "<p>В средние века к латинице добавились буквы J, V и W. Минускульное письмо, изобретённое для экономии дорогого пергамента, "
+                "превратилось в строчные буквы.</p>"
+            "<p>Латинский язык давно мёртв, но широкая территория Римской империи, миссионерская деятельность Папского престола "
+                "и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "
+                "Латиница используется в математике, медицине, фонетике, программировании.</p>"
+            "<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -1644,8 +1646,9 @@ constinit const uc::Block uc::blocks[302] {
             u8"<p>Пунктуация (лат. ''punctum'' «точка»){{—}}система знаков, подчёркивающих синтаксис и интонацию речи, "
                     "а также правила постановки их в тексте."
                 "<p>Очевидно, основные знаки препинания (точка, запятая, двоеточие…) закодированы в ASCII и латинице-1. "
-                    "А в блоке знаков препинания находятся так называемые '''типографские знаки''', "
-                    "чтобы красиво оформить текст."sv },
+                    "А в блоке знаков препинания находятся так называемые ''типографские знаки'', "
+                    "чтобы красиво оформить текст."sv,
+            EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
     /// @todo [semi-tofu] Some are absent in W7, and Noto does fun
     /// @todo [future] Links to other blocks when they are ready
@@ -1655,9 +1658,12 @@ constinit const uc::Block uc::blocks[302] {
             u8"<p>Блок содержит надстрочные и подстрочные буквы, знаки и цифры, применяемые "
                     "в математике и фонетике." },
     // Curr symbols OK
-    /// @todo [desc] Curr symbols
     { 0x20A0, 0x20CF,
-            "Currency Symbols", u8"Символы валют" },
+            "Currency Symbols", u8"Символы валют"sv,
+            u8"Символы валют делятся на две чёткие категории. Одна группа возникла в XVII–XIX{{_}}веке с развитием "
+                    "делового языка: доллар {{sm|$}}, фунт {{sm|£}}, [[pop_scr:Taml|тамильский]] знак рупии {{sm|௹}}. "
+                    "Другая{{-}}принята государством с конца XX{{_}}века: евро {{sm|€}}, гривна {{sm|₴}}, "
+                    "рубль {{sm|₽}}, рупия {{sm|₹}}."sv },
     /// @todo [semi-tofu] Need SVG images, existing are BAD!
     /// @todo [desc] Diacrit
     { 0x20D0, 0x20FF,

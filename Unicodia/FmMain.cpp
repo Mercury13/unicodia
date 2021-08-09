@@ -154,7 +154,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 
 CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
-    match(str::toQ(FAMILY_DEFAULT)),
+    match(str::toQ(FAM_DEFAULT)),
     rows(NCOLS) {}
 
 
@@ -378,7 +378,7 @@ namespace {
         painter->drawRect(rcFrame);
         // Draw text
         auto sz = availSize / 3.3;
-        QFont font { str::toQ(FAMILY_CONDENSED) };
+        QFont font { str::toQ(FAM_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
             font.setPointSizeF(sz);
         painter->setFont(font);
@@ -497,7 +497,7 @@ void WiCustomDraw::setAbbreviation(std::u8string_view x)
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain), model(this),
-      fontBig(str::toQ(FAMILY_DEFAULT), FSZ_BIG),
+      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       charsDelegate(*this)
 {
     ui->setupUi(this);

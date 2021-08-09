@@ -154,6 +154,7 @@ namespace uc {
          SYMBOL,
          HISTORIC,
          BLOCK,
+         PUNCTUATION,
         ADLAM,
         AHOM,
         ARABIC,
