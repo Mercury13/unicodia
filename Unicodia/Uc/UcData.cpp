@@ -1642,10 +1642,12 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2000, 0x206F,
             "General Punctuation", u8"Знаки препинания" },
     // Sup/sub OK
-    /// @todo [desc] Sup/sub
+    /// @todo [future] Links to other blocks when they are ready
     { 0x2070, 0x209F,
             "Superscripts and Subscripts",
-            u8"Верхние и нижние индексы"sv },
+            u8"Верхние и нижние индексы"sv,
+            u8"<p>Блок содержит надстрочные и подстрочные буквы, знаки и цифры, применяемые "
+                    "в математике и фонетике." },
     /// @todo [tofu?] Check curr symbols
     /// @todo [desc] Curr symbols
     { 0x20A0, 0x20CF,
