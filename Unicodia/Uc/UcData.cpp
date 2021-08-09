@@ -50,7 +50,7 @@ constinit const uc::Font uc::fontInfo[] {
         // CJK chars are square, and there’s always not enough detail → bigger
     { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc",
                 Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc }, // CJK
-    { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf" },        // Devanagari
+    { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc }, // Devanagari
     { "Noto Serif Dogra",           "NotoSerifDogra-Regular.ttf",               // Dogra
                 Ffg::STUB_ON | Ffg::DESC_BIGGER },
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
@@ -1327,6 +1327,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 
 
 constinit const uc::Block uc::blocks[302] {
+    // Basic Latin OK
     { 0x0000, 0x007F,
             "Basic Latin",
             u8"Базовая латиница"sv,
@@ -1338,6 +1339,7 @@ constinit const uc::Block uc::blocks[302] {
                     "говорят, что символ выбит ошибочно и не подлежит считыванию.</p>"
                 "<p>Управляющие символы, если те не задействованы в программе, часто служат пользовательскими: "
                     "разного рода символы подстановки, пустое место в базе данных, отличающееся от пустой строки, и т.д.</p>"sv },
+    // Latin-1 OK
     { 0x0080, 0x00FF,
             "Latin-1 Supplement", u8"Латиница-1"sv,
             u8"<p>Латиница-1 совпадает с однобайтовой кодировкой ISO 8859-1, появившейся в 1987 году и расширяющей ASCII до европейских языков.</p>"
@@ -1346,14 +1348,17 @@ constinit const uc::Block uc::blocks[302] {
                     "по назначению и служат пользовательскими. Так, кодировка Windows-1252{{-}}это та же латиница-1, только вместо "
                     "управляющих символов типографские.</p>"
                 "<p>Среди букв видны символы × и ÷, изначально там должен быть Œœ.</p>"sv },
+    // Latin extended A OK
     { 0x0100, 0x017F,
             "Latin Extended-A", u8"Латиница расширенная A"sv,
             u8"Содержит символы языков Центральной и Восточной Европы, Прибалтики, кельтских, а также саамского, мальтийского, "
                 "турецкого, эсперанто и некоторых других."sv },
+    // Latin extended B OK
     { 0x0180, 0x024F,
             "Latin Extended-B", u8"Латиница расширенная B"sv,
             u8"Содержит символы словенского, хорватского, румынского, ливского, чжуанского, пиньиня (латинизации китайского), африканских, "
                     "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР."sv },
+    // IPA extensions OK
     { 0x0250, 0x02AF,
             "IPA Extensions", u8"Расширения МФА"sv,
             u8"<p>Международный фонетический алфавит на основе латинского используется языковедами, логопедами, певцами и актёрами, "
@@ -1366,13 +1371,14 @@ constinit const uc::Block uc::blocks[302] {
                     "низкой мужской голос, пройдя через некачественный динамик и столь же некачественный микрофон, стал восприниматься "
                     "как «Янни».</p>"
                 "<p>А ещё символы МФА позволяют перевернуть текст шутки ради.</p>"sv },
-    /// @todo [desc] Cannot use {sm} here, what to do?
+    // Spacing letter modifiers OK
     { 0x02B0, 0x02FF,
             "Spacing Modifier Letters", u8"Протяжённые модификаторы букв"sv,
             u8"<p>Модификаторы букв используются в фонетике и языкознании, чтобы передать тоны, длину, мягкость и условные звуки: "
                     "так, английское ''car'' (легковой автомобиль) записывается как {{sm|[kɑːʳ]}},"
                     "и последние два символа{{-}}модификаторы, обозначающие длину и условное «r».</p>"
                 "<p>Также в этом блоке есть протяжённые копии диакритических меток.</p>"sv },
+    /// @todo [semi-tofu] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F,
             "Combining Diacritical Marks", u8"Диакритические метки"sv,
             u8"<p>Диакритические знаки{{-}}надстрочные, подстрочные или внутристрочные знаки, прикрепляемые к букве и изменяющие "
@@ -1386,12 +1392,15 @@ constinit const uc::Block uc::blocks[302] {
                     "Таковы русские Ё и Й. Считается, что все такие «другие буквы» крупных живых языков представлены в Юникоде "
                     "монолитными символами. Ударение другой буквой не считается, к тому же сразу в нескольких шрифтах Windows "
                     "его неудачно нарисовали{{-}}потому нередко ударные русские буквы имитируют похожими монолитными латинскими.</p>"sv },
+    // Greek and Coptic OK
     { 0x0370, 0x03FF,
             "Greek and Coptic", u8"Греческий и коптский",
             u8"<p>[[pop_scr:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.</p>"
                 "<p>[[pop_scr:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.</p>"sv },
+    /// @todo [semi-tofu] 0488, 0489 renders too badly for a sample
     { 0x0400, 0x04FF,
             "Cyrillic", u8"Кириллица", {}, EcScript::Cyrl },
+    // Cyrillic supplement OK
     { 0x0500, 0x052F,
             "Cyrillic Supplement", u8"Кириллица дополнительная",
             u8"<p>Буквы нескольких мелких кириллических языков: абзахского, курдского ''(как нацменьшинства СССР)'', коми, "
@@ -1402,31 +1411,42 @@ constinit const uc::Block uc::blocks[302] {
                     "И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, "
                     "что и дало букве {{sm|Ԥ}} место в Юникоде."sv,
             EcScript::Cyrl },
+    /// @todo [tofu] Armenian 0560, 0588 (both are 2018)
     { 0x0530, 0x058F,
             "Armenian", u8"Армянский", {}, EcScript::Armn },
+    /// @todo [tofu] Hebrew 05EF of 2018, yod triangle
     { 0x0590, 0x05FF,
             "Hebrew", u8"Иврит", {}, EcScript::Hebr },
+    // Arabic OK
     { 0x0600, 0x06FF,
             "Arabic", u8"Арабский", {}, EcScript::Arab },
+    /// @todo [font] Which font to select and what to do with Syriac Malayalam?
     { 0x0700, 0x074F,
             "Syriac", u8"Сирийский", {}, EcScript::Syrc },
+    // Arabic supplement OK
     { 0x0750, 0x077F,
             "Arabic Supplement", u8"Арабский дополнительный"sv,
             u8"<p>Буквы для языков Африки, Пакистана и раннего персидского."sv,
             EcScript::Arab },
+    // Thaana OK
     { 0x0780, 0x07BF,
             "Thaana", u8"Тана", {}, EcScript::Thaa },
+    // N’ko OK
     { 0x07C0, 0x07FF,
             "NKo", u8"Нко", {}, EcScript::Nkoo },
+    // Samaritan OK
     { 0x0800, 0x083F,
             "Samaritan", u8"Самаритянский", {}, EcScript::Samr },
+    // Mandaic OK
     { 0x0840, 0x085F,
             "Mandaic", u8"Мандейский", {}, EcScript::Mand },
+    /// @todo [font] Which font to select and what to do with Syriac Malayalam?
     { 0x0860, 0x086F,
             "Syriac Supplement", u8"Сирийский дополнительный"sv,
             u8"<p>Необычная запись языка [[pop_scr:Mlym|мамая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века."sv,
             EcScript::Syrc },
+    /// @todo [tofu] 08BE+, all are 2020, 11 chars
     { 0x08A0, 0x08FF,
             "Arabic Extended-A", u8"Арабский расширенный A"sv,
             u8"<p>Дополнительные арабские буквы для рохинджа ''(Мьянма)'', белорусского, татарского, башкирского, "
@@ -1434,148 +1454,227 @@ constinit const uc::Block uc::blocks[302] {
                     "и африканских языков (в частности, берберского). "
                     "Также знаки комментариев к Корану.",
             EcScript::Arab },
+    // Devanagari OK
     { 0x0900, 0x097F,
             "Devanagari", u8"Деванагари", {}, EcScript::Deva },
+    // Bengali OK
     { 0x0980, 0x09FF,
             "Bengali", u8"Бенгальский", {}, EcScript::Beng },
+    // Gurmukhi OK
     { 0x0A00, 0x0A7F,
             "Gurmukhi", u8"Гурмукхи", {}, EcScript::Guru },
+    /// @todo [tofu?] Check for Gujarati
     { 0x0A80, 0x0AFF,
             "Gujarati", u8"Гуджарати", {}, EcScript::Gujr },
+    /// @todo [tofu] Check for Oriya
     { 0x0B00, 0x0B7F,
             "Oriya", u8"Ория", {}, EcScript::Orya },
+    /// @todo [tofu?] Check for Tamil
     { 0x0B80, 0x0BFF,
             "Tamil", u8"Тамильский", {}, EcScript::Taml },
+    // Telugu OK
     { 0x0C00, 0x0C7F,
             "Telugu", u8"Телугу", {}, EcScript::Telu },
+    // Kannada OK
     { 0x0C80, 0x0CFF,
             "Kannada", u8"Каннада", {}, EcScript::Knda },
+    // Malayalam OK
     { 0x0D00, 0x0D7F,
             "Malayalam", u8"Малаялам", {}, EcScript::Mlym },
+    // Sinhala OK
     { 0x0D80, 0x0DFF,
             "Sinhala", u8"Сингальский", {}, EcScript::Sinh },
+    // Thai OK
     { 0x0E00, 0x0E7F,
             "Thai", u8"Тайский", {}, EcScript::Thai },
+    // Lao OK
     { 0x0E80, 0x0EFF,
             "Lao", u8"Лаосский", {}, EcScript::Laoo },
+    // Tibetan OK
     { 0x0F00, 0x0FFF,
             "Tibetan", u8"Тибетский", {}, EcScript::Tibt },
+    // Myanmar OK
     { 0x1000, 0x109F,
             "Myanmar", u8"Бирманский", {}, EcScript::Mymr },
+    /// @todo [tofu] Need special support of custom fonts (someone may install obsolete Noto)
     { 0x10A0, 0x10FF,
             "Georgian", u8"Грузинский", {}, EcScript::Geor },
+    /// @todo [semi-tofu] How to show filler 115F, 1160?
     { 0x1100, 0x11FF,
             "Hangul Jamo", u8"Хангыль\u00A0— чамо"sv,
             u8"<p>В хангыле (корейском алфавите) всего 51 буква ''(чамо)''. Блок намного больше: одна и та же буква "
                     "в начале и конце слога кодируется разными символами, к тому же в блоке много устаревших чамо."
                 "<p>Чхосон{{-}}начальные буквы, чунсон{{-}}средние, чонсон{{-}}конечные."sv,
             EcScript::Hang },
+    // Ethiopic OK
     { 0x1200, 0x137F,
             "Ethiopic", u8"Эфиопский", {}, EcScript::Ethi },
+    // Ethiopic supplement OK
     { 0x1380, 0x139F,
             "Ethiopic Supplement", u8"Эфиопский дополнительный"sv,
             u8"<p>Буквы языка себат-бет гураге (Эфиопия, 1,5{{_}}млн, ''Ethnologue'' статус 5: развивающийся), "
                     "а также метки тонов."sv, EcScript::Ethi },
+    // Cherokee OK
     { 0x13A0, 0x13FF,
             "Cherokee", u8"Чероки", {}, EcScript::Cher },
+    // Canadian aboriginal OK
     { 0x1400, 0x167F,
             "Unified Canadian Aboriginal Syllabics", u8"Канадская слоговая",
             {}, EcScript::Cans },
+    // Ogham OK
     { 0x1680, 0x169F,
             "Ogham", u8"Огамическая", {}, EcScript::Ogam },
+    // Runic OK
     { 0x16A0, 0x16FF,
             "Runic", u8"Руны", {}, EcScript::Runr },
+    // Tagalog OK
     { 0x1700, 0x171F,
             "Tagalog", u8"Тагальский", {}, EcScript::Tglg },
+    // Hanunoo OK
     { 0x1720, 0x173F,
             "Hanunoo", u8"Хануноо", {}, EcScript::Hano },
+    // Buhid OK
     { 0x1740, 0x175F,
             "Buhid", u8"Бухид", {}, EcScript::Buhd },
+    // Tagbanwa OK
     { 0x1760, 0x177F,
             "Tagbanwa", u8"Тагбанва", {}, EcScript::Tang },
+    // Khmer OK
     { 0x1780, 0x17FF,
             "Khmer", u8"Кхмерский", {}, EcScript::Khmr },
+    /// @todo [wrong glyph] 18A9
     { 0x1800, 0x18AF,
             "Mongolian", u8"Монгольский", {}, EcScript::Mong },
+    // Canadian extended OK
     { 0x18B0, 0x18FF,
             "Unified Canadian Aboriginal Syllabics Extended",
             u8"Канадская слоговая расширенная"sv,
-            u8"<p>Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''.", EcScript::Cans },
+            u8"<p>Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''."sv,
+            EcScript::Cans },
+    // Limbu OK
     { 0x1900, 0x194F,
             "Limbu", u8"Лимбу", {}, EcScript::Limb },
+    // Tai Le OK
     { 0x1950, 0x197F,
             "Tai Le", u8"Лы (тайлэ)", {}, EcScript::Tale },
+    // New Tai Lue OK
     { 0x1980, 0x19DF,
             "New Tai Lue", u8"Новое письмо лы", {}, EcScript::Talu },
+    // Khmer syms OK
+    /// @todo [desc] Khmer symbols
     { 0x19E0, 0x19FF,
             "Khmer Symbols", u8"Кхмерские символы", {}, EcScript::Khmr },
+    // Buginese OK
     { 0x1A00, 0x1A1F,
             "Buginese", u8"Лонтара (бугийский)", {}, EcScript::Bugi },
+    // Lanna OK
     { 0x1A20, 0x1AAF,
             "Tai Tham", u8"Ланна (тай-тхам)", {}, EcScript::Lana },
+    // Diacritical ex OK
     { 0x1AB0, 0x1AFF,
             "Combining Diacritical Marks Extended",
             u8"Диакритические метки расширенные"sv,
             u8"<p>Используются в немецкой и шотландской диалектологии."sv,
             EcScript::NONE, EcFont::NOTO },
+    // Balinese OK
     { 0x1B00, 0x1B7F,
             "Balinese", u8"Балийский", {}, EcScript::Bali },
+    // Sundanese OK
     { 0x1B80, 0x1BBF,
             "Sundanese", u8"Сунданский", {}, EcScript::Sund },
+    // Batak OK
     { 0x1BC0, 0x1BFF,
             "Batak", u8"Батакская", {}, EcScript::Batk },
+    // Lepcha OK
     { 0x1C00, 0x1C4F,
             "Lepcha", u8"Лепча", {}, EcScript::Lepc },
+    // Ol Chiki OK
     { 0x1C50, 0x1C7F,
             "Ol Chiki", u8"Ол-чики", {}, EcScript::Olck },
+    // Cyr C OK
+    /// @todo [desc] Cyr C
     { 0x1C80, 0x1C8F,
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
             {}, EcScript::Cyrl },
+    /// @todo [semi-tofu] What to do with those Mtavruli?
     { 0x1C90, 0x1CBF,
             "Georgian Extended", u8"Грузинский расширенный",
             {}, EcScript::Geor },
+    // Sundanese suplement OK
+    /// @todo [desc] Sundanese supplement
     { 0x1CC0, 0x1CCF,
             "Sundanese Supplement", u8"Сунданский дополнительный",
             {}, EcScript::Sund },
+    /// @todo [tofu] 1CF7+, 4 chars
+    /// @todo [desc] Vedic extensions
     { 0x1CD0, 0x1CFF,
             "Vedic Extensions", u8"Ведические символы", {}, EcScript::Deva },
+    // Phonetic ext OK
+    /// @todo [desc] Phonetic ext
     { 0x1D00, 0x1D7F,
             "Phonetic Extensions", u8"Фонетические расширения"sv },
+    // Phonetic ext supp OK
+    /// @todo [desc] Phonetic ext supp
     { 0x1D80, 0x1DBF,
             "Phonetic Extensions Supplement",
             u8"Фонетические расширения дополнительные"sv },
+    /// @todo [semi-tofu] Win/Qt cannot render 1DD4..1DF4, 33 chars
+    /// @todo [desc] Diacrit supp
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные"sv,
             {}, EcScript::NONE, EcFont::NOTO },
+    // Lat ex OK
+    /// @todo [desc] Lat ex
     { 0x1E00, 0x1EFF,
             "Latin Extended Additional",
-            u8"Латиница расширенная дополнительная" },
+            u8"Латиница расширенная дополнительная"sv },
+    /// @todo [semi-tofu] Bad chars, but OK
+    /// @todo [desc] Greek ex
     { 0x1F00, 0x1FFF,
             "Greek Extended", u8"Греческий расширенный", {},
             EcScript::Grek, EcFont::NOTO },
+    // Punct OK
+    /// @todo [desc] Punctuation
     { 0x2000, 0x206F,
             "General Punctuation", u8"Знаки препинания" },
+    // Sup/sub OK
+    /// @todo [desc] Sup/sub
     { 0x2070, 0x209F,
-            "Superscripts and Subscripts", u8"Верхние и нижние индексы" },
+            "Superscripts and Subscripts",
+            u8"Верхние и нижние индексы"sv },
+    /// @todo [tofu?] Check curr symbols
+    /// @todo [desc] Curr symbols
     { 0x20A0, 0x20CF,
             "Currency Symbols", u8"Символы валют" },
     /// @todo [semi-tofu] Need SVG images, existing are BAD!
+    /// @todo [desc] Diacrit
     { 0x20D0, 0x20FF,
             "Combining Diacritical Marks for Symbols",
             u8"Диакритические метки для символов"sv, {},
             EcScript::NONE, EcFont::SYMBOL },
+    // Letterlike OK
+    /// @todo [desc] Letterlike
     { 0x2100, 0x214F,
-            "Letterlike Symbols", u8"Буквоподобные символы" },
+            "Letterlike Symbols", u8"Буквоподобные символы"sv },
+    // Number forms OK
+    /// @todo [desc] Number forms
     { 0x2150, 0x218F,
-            "Number Forms", u8"Числовые формы" },
+            "Number Forms", u8"Числовые формы"sv },
+    // Arrows OK
+    /// @todo desc] Arrows
     { 0x2190, 0x21FF,
             "Arrows", u8"Стрелки" },
+    // Math op OK
+    /// @todo [desc] Math op
     { 0x2200, 0x22FF,
-            "Mathematical Operators", u8"Математические знаки" },
+            "Mathematical Operators", u8"Математические знаки"sv },
+    // Misc tech OK
+    /// @todo [desc] Misc tech
     { 0x2300, 0x23FF,
             "Miscellaneous Technical", u8"Разные технические"sv,
             {}, EcScript::NONE, EcFont::NOTO_SYMBOL },
+    // Control pictures OK
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих"sv,
             u8"<p>Сами по себе управляющие символы не имеют никакого графического представления. "
@@ -1583,6 +1682,7 @@ constinit const uc::Block uc::blocks[302] {
                     "В первую очередь нам важен символ {{sm|␣}}, изображающий пробел."
                 "<p>Несколько изображений управляющих символов есть в и других блоках: {{sm|↵←⌫}}."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
+    // OCR/MICR OK
     { 0x2440, 0x245F,
             "Optical Character Recognition",
             u8"Оптическое распознавание символов"sv,
@@ -1596,50 +1696,89 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>Обе технологии используют специальные моноширинные шрифты. "
                     "Эти шрифты (иногда в несколько искажённом виде) встречаются в фильмах и играх жанра «киберпанк»."sv,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
+    // Enclosed alnum OK
+    /// @todo [desc] Enclosed alnum
     { 0x2460, 0x24FF,
-            "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры" },
+            "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры"sv },
+    // Box drawing OK
+    /// @todo [desc] Box draw
     { 0x2500, 0x257F,
             "Box Drawing", u8"Рисование рамок" },
+    /// @todo [semi-tofu] Find font for block elem, need A SINGLE FONT
+    /// @todo [desc] Block elem
     { 0x2580, 0x259F,
-            "Block Elements", u8"Блочные элементы" },
+            "Block Elements", u8"Блочные элементы"sv },
+    // Geometric OK
+    /// @todo [desc] Geometric
     { 0x25A0, 0x25FF,
-            "Geometric Shapes", u8"Геометрические фигуры" },
+            "Geometric Shapes", u8"Геометрические фигуры"sv },
+    // Misc sym OK
+    /// @todo [desc] Misc sym
     { 0x2600, 0x26FF,
             "Miscellaneous Symbols", u8"Разные символы" },
+    // Dingbats OK
+    /// @todo [desc] Dingbats
     { 0x2700, 0x27BF,
             "Dingbats", u8"Украшения" },
+    // Misc math A OK
+    /// @todo [desc] Misc math A
     { 0x27C0, 0x27EF,
             "Miscellaneous Mathematical Symbols-A",
-            u8"Разные математические символы A" },
+            u8"Разные математические символы A"sv },
+    // Arrows A OK
+    /// @todo [desc] Arrows A
     { 0x27F0, 0x27FF,
-            "Supplemental Arrows-A", u8"Дополнительные стрелки A" },
+            "Supplemental Arrows-A", u8"Дополнительные стрелки A"sv },
+    // Braille OK
     { 0x2800, 0x28FF,
             "Braille Patterns", u8"Шрифт Брайля", {}, EcScript::Brai },
+    // Arrows B OK
+    /// @todo [desc] Arrows B
     { 0x2900, 0x297F,
-            "Supplemental Arrows-B", u8"Дополнительные стрелки B" },
+            "Supplemental Arrows-B", u8"Дополнительные стрелки B"sv },
+    // Misc math B OK
+    /// @todo [desc] Misc math B
     { 0x2980, 0x29FF,
             "Miscellaneous Mathematical Symbols-B",
-            u8"Разные математические символы B" },
+            u8"Разные математические символы B"sv },
+    // Supp math ops OK
+    /// @todo [desc] Supp math ops
     { 0x2A00, 0x2AFF,
             "Supplemental Mathematical Operators",
-            u8"Дополнительные математические знаки" },
+            u8"Дополнительные математические знаки"sv },
+    // Misc syms & arrows OK
+    /// @todo [desc] Misc syms & arrows
     { 0x2B00, 0x2BFF,
             "Miscellaneous Symbols and Arrows",
-            u8"Разные символы и стрелки" },
+            u8"Разные символы и стрелки"sv },
+    // Glagolitic OK
     { 0x2C00, 0x2C5F,
-            "Glagolitic", u8"Глаголица", {}, EcScript::Glag },
+            "Glagolitic", u8"Глаголица"sv, {}, EcScript::Glag },
+    // Latin C OK
+    /// @todo [desc] Latin C
     { 0x2C60, 0x2C7F,
             "Latin Extended-C", u8"Латиница расширенная C", {}, EcScript::Latn },
+    /// @todo [semi-tofu] We take Coptic from Segoe symbol, check W7
     { 0x2C80, 0x2CFF,
             "Coptic", u8"Коптский", {}, EcScript::Copt },
+    // Georgian supp OK
+    /// @todo [desc] Georgian supp
     { 0x2D00, 0x2D2F,
             "Georgian Supplement", u8"Грузинский дополнительный", {}, EcScript::Geor },
+    // Tifinagh OK
     { 0x2D30, 0x2D7F,
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
+    // Ethiopic ex OK
+    /// @todo [desc] Ethiopic ex
     { 0x2D80, 0x2DDF,
             "Ethiopic Extended", u8"Эфиопский расширенный", {}, EcScript::Ethi },
+    /// @todo [semi-tofu] Cyr ex A renders badly
+    /// @todo [desc] Cyr ex A
     { 0x2DE0, 0x2DFF,
-            "Cyrillic Extended-A", u8"Кириллица расширенная A", {}, EcScript::Cyrl },
+            "Cyrillic Extended-A", u8"Кириллица расширенная A", {},
+            EcScript::Cyrl, EcFont::NOTO },
+    // Supp punct OK
+    /// @todo [desc] Supp punct
     { 0x2E00, 0x2E7F,
             "Supplemental Punctuation", u8"Дополнительные знаки препинания"sv },
     { 0x2E80, 0x2EFF,
@@ -1791,7 +1930,8 @@ constinit const uc::Block uc::blocks[302] {
     { 0x10080, 0x100FF,
             "Linear B Ideograms", u8"Линейное письмо Б\u00A0— иероглифы", {}, EcScript::Linb },
     { 0x10100, 0x1013F,
-            "Aegean Numbers", u8"Эгейские цифры" },
+            "Aegean Numbers", u8"Эгейские цифры"sv },
+    // Greek numbers OK
     { 0x10140, 0x1018F,
         "Ancient Greek Numbers", u8"Древнегреческие цифры"sv,
         u8"<p>Аттическая система счисления была акрофонической, то есть цифрами служили первые буквы слов:<br>"
@@ -1809,8 +1949,11 @@ constinit const uc::Block uc::blocks[302] {
             "<p>Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. "
                 "В древней Греции ''литра''{{-}}мера массы и монета. "
                 "Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''."sv  },
+    // Ancient symbols OK
+    /// @todo [desc] Ancient symbols
     { 0x10190, 0x101CF,
-            "Ancient Symbols", u8"Древние символы" },
+            "Ancient Symbols", u8"Древние символы"sv },
+    // Phaistos Disc OK
     { 0x101D0, 0x101FF,
         "Phaistos Disc", u8"Фестский диск"sv,
         u8"<p>Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины "
@@ -1830,9 +1973,10 @@ constinit const uc::Block uc::blocks[302] {
                 "Названия символов{{-}}по Луи Годáру (1995)."sv,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     { 0x10280, 0x1029F,
-            "Lycian", u8"Ликийский", {}, EcScript::Lyci },
+            "Lycian", u8"Ликийский"sv, {}, EcScript::Lyci },
     { 0x102A0, 0x102DF,
-            "Carian", u8"Карийский", {}, EcScript::Cari },
+            "Carian", u8"Карийский"sv, {}, EcScript::Cari },
+    // Coptic epact OK
     { 0x102E0, 0x102FF,
         "Coptic Epact Numbers", u8"Коптские курсивные цифры"sv,
         u8"<p>Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не «епакта» (формулы для перевода из солнечного "
@@ -1845,6 +1989,8 @@ constinit const uc::Block uc::blocks[302] {
                 "письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект "
                 "''Google Noto'' попытался повторить росчерки постоянной шириной."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+    /// @todo [tofu] Old Italic
+    /// @todo [script] Old Italic
     { 0x10300, 0x1032F,
             "Old Italic", u8"Этрусский", {}, EcScript::Ital },
     { 0x10330, 0x1034F,
@@ -1855,8 +2001,11 @@ constinit const uc::Block uc::blocks[302] {
             "Ugaritic", u8"Угаритский", {}, EcScript::Ugar },
     { 0x103A0, 0x103DF,
             "Old Persian", u8"Древнеперсидский", {}, EcScript::Xpeo },
+    // Deseret OK
     { 0x10400, 0x1044F,
             "Deseret", u8"Дезеретский (мормонский)", {}, EcScript::Dsrt },
+    // Shavian OK
+    /// @todo [script] Shavian
     { 0x10450, 0x1047F,
             "Shavian", u8"Алфавит Б.Шоу", {}, EcScript::Shaw },
     { 0x10480, 0x104AF,
