@@ -785,7 +785,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В Юникоде для пустого места над меткой принят пунктирный кружок; лаосцы традиционно используют косой крест, "
                 "в Юникод не попавший. Иногда для этого используют [[pop_scr:Latn|латинскую]] «x».</p>"sv,
                 EcFont::LAO },
-    /// @todo [tofu] Latin is very extensive, check it thoroughly
+    /// @todo [semi-tofu] Latin is not OK, see ranges
     { "Latn"sv, QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
@@ -1836,6 +1836,8 @@ constinit const uc::Block uc::blocks[302] {
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
     { 0xA700, 0xA71F,
             "Modifier Tone Letters", u8"Символы изменения тона" },
+    /// @todo [semi-tofu] A7F8, A7F9 render badly
+    /// @todo [desc] Latin ex D
     { 0xA720, 0xA7FF,
             "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
     { 0xA800, 0xA82F,
@@ -1873,6 +1875,8 @@ constinit const uc::Block uc::blocks[302] {
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
     { 0xAB00, 0xAB2F,
             "Ethiopic Extended-A", u8"Эфиопский расширенный А", {}, EcScript::Ethi },
+    // Latin ex E OK
+    /// @todo [desc] Latin ex E
     { 0xAB30, 0xAB6F,
             "Latin Extended-E", u8"Латиница расширенная E", {}, EcScript::Latn },
     { 0xAB70, 0xABBF,
