@@ -638,7 +638,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX{{_}}веке, "
                 "официальным стал в 1945. Единственная письменность Северной Кореи и основная{{-}}в Южной."sv,
                 EcFont::CJK },
-    /// @todo [tofu, BMP] Current Noto font is limited with 2017
+    // Hani will never be OK, what a pity…
     { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
         u8"Китайские иероглифы"sv, u8"около 2000 до н.э."sv,
@@ -1815,11 +1815,13 @@ constinit const uc::Block uc::blocks[302] {
     { 0x3300, 0x33FF,
             "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости"sv,
             {}, EcScript::Hani },
+    /// @todo [tofu] 10 hieroglyphs from 2018 and 2020, 4BD6+
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
             u8"ККЯ иероглифы расширение A"sv, {}, EcScript::Hani },
     { 0x4DC0, 0x4DFF,
-            "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)" },
+            "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)"sv },
+    /// @todo [tofu] 18 hieroglyphs from 2018 and 2020, 9FEB+
     { 0x4E00, 0x9FFF,
             "CJK Unified Ideographs", u8"ККЯ иероглифы", {}, EcScript::Hani },
     { 0xA000, 0xA48F,
@@ -1871,6 +1873,8 @@ constinit const uc::Block uc::blocks[302] {
             "Myanmar Extended-A", u8"Бирманский расширенный А", {}, EcScript::Mymr },
     { 0xAA80, 0xAADF,
             "Tai Viet", u8"Тай-вьет", {}, EcScript::Tavt },
+    // Meetei ex OK
+    /// @todo [desc] Meetei ex
     { 0xAAE0, 0xAAFF,
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
     { 0xAB00, 0xAB2F,
@@ -1879,8 +1883,11 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] Latin ex E
     { 0xAB30, 0xAB6F,
             "Latin Extended-E", u8"Латиница расширенная E", {}, EcScript::Latn },
+    // Cherokee supp OK
+    /// @todo [desc] Cherokee supp
     { 0xAB70, 0xABBF,
             "Cherokee Supplement", u8"Чероки дополнительный", {}, EcScript::Cher },
+    // Meetei OK
     { 0xABC0, 0xABFF,
             "Meetei Mayek", u8"Манипури (мейтей-майек)", {}, EcScript::Mtei },
     { 0xAC00, 0xD7AF,
