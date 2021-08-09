@@ -544,6 +544,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Потому вирама в догри используется редко, что видно в самоназвании: {{sm|𑠖𑠵𑠌𑠤𑠬}} «до-гᵊ-ра:»."
             "<p>Цифры берутся из такри."sv,
                 EcFont::DOGRA },
+    // Deseret OK, W10 Segoe UI Symbol, plane 1
     { "Dsrt"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMANTAL, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Дезеретская (мормонская)"sv, u8"1854",
