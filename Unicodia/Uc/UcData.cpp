@@ -2300,6 +2300,7 @@ constinit const uc::Block uc::blocks[302] {
                     "Китайцы пишут иероглиф <font size='+1'>正</font>. Лесники считают десятками, этот метод описан у Я.И.{{_}}Перельмана, "
                     "но отсутствует в Юникоде."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
+    /// @todo [block] Letterlike
     { 0x1D400, 0x1D7FF,
             "Mathematical Alphanumeric Symbols",
             u8"Математические буквы и цифры"sv,
