@@ -2363,7 +2363,7 @@ constinit const uc::Block uc::blocks[302] {
             "Supplemental Arrows-C", u8"Стрелки дополнительные C" },
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
-            u8"Символы и пиктограммы дополнительные" },
+            u8"Символы и пиктограммы дополнительные"sv },
     /// @todo [wrong glyph] 1FA38, 1FA3E — replace with SVG
     { 0x1FA00, 0x1FA6F,
             "Chess Symbols", u8"Шахматные символы",
