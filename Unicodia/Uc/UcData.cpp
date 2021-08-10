@@ -2274,13 +2274,13 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии"sv },
+    /// @todo [semi-tofu] Increase size very much!!
     /// @todo [desc] Byzantine music
     { 0x1D000, 0x1D0FF,
             "Byzantine Musical Symbols",
             u8"Византийские музыкальные символы"sv,
             {},
             EcScript::NONE, EcFont::MUSIC },
-    /// @todo [desc] Music
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы"sv,
             u8"<p>С X{{_}}века появилась нотная запись, похожая на современную. "
