@@ -156,6 +156,7 @@ namespace uc {
          BLOCK,
          PUNCTUATION,
          MATH,
+         MUSIC,
         ADLAM,
         AHOM,
         ARABIC,

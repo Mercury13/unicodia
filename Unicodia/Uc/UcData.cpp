@@ -35,6 +35,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Lucida Sans Unicode",        {} },                                       // Block
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP, {} },                     // Punctuation
     { "Noto Sans Math",             {} },                                       // Math
+    { "Noto Music",                 "NotoMusic-Regular.ttf", {}, {}, 110_pc },  // Music
         //-----
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
@@ -2272,15 +2273,24 @@ constinit const uc::Block uc::blocks[302] {
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
-            u8"Форматирующие символы стенографии" },
+            u8"Форматирующие символы стенографии"sv },
+    /// @todo [desc] Byzantine music
     { 0x1D000, 0x1D0FF,
             "Byzantine Musical Symbols",
-            u8"Византийские музыкальные символы" },
+            u8"Византийские музыкальные символы"sv,
+            {},
+            EcScript::NONE, EcFont::MUSIC },
+    /// @todo [desc] Music
     { 0x1D100, 0x1D1FF,
-            "Musical Symbols", u8"Музыкальные символы" },
+            "Musical Symbols", u8"Музыкальные символы"sv,
+            {},
+            EcScript::NONE, EcFont::MUSIC },
+    /// @todo [desc] Greek music
     { 0x1D200, 0x1D24F,
             "Ancient Greek Musical Notation",
-            u8"Древнегреческая музыкальная нотация" },
+            u8"Древнегреческая музыкальная нотация"sv,
+            {},
+            EcScript::NONE, EcFont::MUSIC },
     { 0x1D2E0, 0x1D2FF,
             "Mayan Numerals", u8"Цифры майя" },
     { 0x1D300, 0x1D35F,
