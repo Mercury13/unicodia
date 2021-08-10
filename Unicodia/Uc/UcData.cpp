@@ -1666,7 +1666,6 @@ constinit const uc::Block uc::blocks[302] {
                     "Другая{{-}}принята государством с конца XX{{_}}века: евро {{sm|€}}, гривна {{sm|₴}}, "
                     "рубль {{sm|₽}}, рупия {{sm|₹}}."sv },
     /// @todo [semi-tofu] Need SVG images, existing are BAD!
-    /// @todo [desc] Diacrit
     /// @todo [term] Ligature
     { 0x20D0, 0x20FF,
             "Combining Diacritical Marks for Symbols",
