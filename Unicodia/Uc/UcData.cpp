@@ -24,7 +24,7 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
     ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
     ///       e.g. 1DE0
-    { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Symbols,"
+    { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Math,Noto Sans Symbols,"
             "Noto Sans Symbols2,Segoe UI Historic", {} },                       // Normal
     { "Noto Serif",                 {} },                                       // Noto
     { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {}, {}, {}, 120_pc },  // Noto symbol
@@ -34,6 +34,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Segoe UI Historic",          {} },                                       // Historic
     { "Lucida Sans Unicode",        {} },                                       // Block
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP, {} },                     // Punctuation
+    { "Noto Sans Math",             {} },                                       // Math
         //-----
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
@@ -1640,7 +1641,7 @@ constinit const uc::Block uc::blocks[302] {
             "Greek Extended", u8"Греческий расширенный"sv, {},
             EcScript::Grek, EcFont::NOTO },
     /// @todo [semi-tofu] What is two-point leader and what font to use?
-    /// @todo [future] Link to ASCII
+    /// @todo [block] Link to ASCII
     { 0x2000, 0x206F,
             "General Punctuation", u8"Знаки препинания"sv,
             u8"<p>Пунктуация (лат. ''punctum'' «точка»){{—}}система знаков, подчёркивающих синтаксис и интонацию речи, "
@@ -1651,7 +1652,7 @@ constinit const uc::Block uc::blocks[302] {
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
     /// @todo [semi-tofu] Some are absent in W7, and Noto does fun
-    /// @todo [future] Links to other blocks when they are ready
+    /// @todo [block] Links to other blocks when they are ready
     { 0x2070, 0x209F,
             "Superscripts and Subscripts",
             u8"Верхние и нижние индексы"sv,
@@ -1666,26 +1667,46 @@ constinit const uc::Block uc::blocks[302] {
                     "рубль {{sm|₽}}, рупия {{sm|₹}}."sv },
     /// @todo [semi-tofu] Need SVG images, existing are BAD!
     /// @todo [desc] Diacrit
+    /// @todo [term] Ligature
     { 0x20D0, 0x20FF,
             "Combining Diacritical Marks for Symbols",
-            u8"Диакритические метки для символов"sv, {},
-            EcScript::NONE, EcFont::SYMBOL },
+            u8"Диакритические метки для символов"sv,
+            u8"Практически все из этих символов нормально работают только если в шрифте есть подходящая лигатура{{-}}"
+                "например, {{sm| 1⃣}}. Образцы всех символов, кроме двух, пришлось рисовать в SVG."sv,
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Letterlike OK
-    /// @todo [desc] Letterlike
     { 0x2100, 0x214F,
-            "Letterlike Symbols", u8"Буквоподобные символы"sv },
+            "Letterlike Symbols", u8"Буквоподобные символы"sv,
+            u8"<p>Математические, технические и деловые символы буквенного происхождения."
+                "<p>Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. "
+                    "Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси."
+                "<p>Символ {{sm|ℵ}} для мощности множеств предложен Г.{{_}}Кантором."sv },
     // Number forms OK
-    /// @todo [desc] Number forms
+    /// @todo [block] Latin-1
     { 0x2150, 0x218F,
-            "Number Forms", u8"Числовые формы"sv },
+            "Number Forms", u8"Числовые формы"sv,
+            u8"<p>Монолитные обыкновенные дроби и римские цифры. "
+                    "Дробь {{sm|↉}} используется в бейсболе, "
+                        "{{sm|↊}} и {{sm|↋}}{{-}}в двенадцатеричной системе счисления. "
+                "<p>Ещё три дроби закодированы в латинице-1."sv },
     // Arrows OK
-    /// @todo desc] Arrows
     { 0x2190, 0x21FF,
-            "Arrows", u8"Стрелки" },
+            "Arrows", u8"Стрелки"sv,
+            u8"Стрелки{{-}}символы, напоминающие стрелу и указывающие направление. "
+                    "Вот немногие примеры использования стрелок:<br>"
+                    "• для маркировки клавиш;<br>"
+                    "• на дорожных знаках, транспортных схемах;<br>"
+                    "• в математике{{-}}отображение, следствие, вектор, монотонность;<br>"
+                    "• в химии{{-}}реакция, идущая в одну или обе стороны, выделяется газ, выпадает осадок."sv },
     // Math op OK
-    /// @todo [desc] Math op
     { 0x2200, 0x22FF,
-            "Mathematical Operators", u8"Математические знаки"sv },
+            "Mathematical Operators", u8"Математические знаки"sv,
+            u8"<p>Простейшие математические знаки: математические операции, сравнение, интегралы, теория множеств. "
+                    "Система математических обозначений складывалась веками и отличается для разных стран, "
+                        "областей математики и даже математических школ. "
+                    "Например, плюс в круге {{sm|⊕}} может означать исключающее ИЛИ в формальной логике "
+                        "и машинное сложение в численных методах. "
+                    "Для равенства по определению используют {{sm|≔}}, {{sm|≝}}, {{sm|≡}}." },
     // Misc tech OK
     /// @todo [desc] Misc tech
     { 0x2300, 0x23FF,
@@ -1749,18 +1770,25 @@ constinit const uc::Block uc::blocks[302] {
     { 0x25A0, 0x25FF,
             "Geometric Shapes", u8"Геометрические фигуры"sv },
     // Misc sym OK
-    /// @todo [desc] Misc sym
+    /// @todo [term] Link to emoji
     { 0x2600, 0x26FF,
-            "Miscellaneous Symbols", u8"Разные символы" },
+            "Miscellaneous Symbols", u8"Разные символы"sv,
+            u8"<p>В этом разделе есть эмодзи, знаки из астрономии, астрологии, настольных игр, восточной эзотерики, "
+                    "религии, политики и просто для украшения печатного текста." },
     // Dingbats OK
-    /// @todo [desc] Dingbats
+    /// @todo [term] Link to emoji
     { 0x2700, 0x27BF,
-            "Dingbats", u8"Украшения" },
+            "Dingbats", u8"Украшения"sv,
+            u8"<p>Символы, чаще всего используемые для украшения печатного текста. "
+                    "Блок содержат несколько эмодзи, что вполне оправдано: в интернете это будут цветные картинки, "
+                    "а печатник оформит публикацию чёрно-белым шрифтом."sv },
     // Misc math A OK
-    /// @todo [desc] Misc math A
     { 0x27C0, 0x27EF,
             "Miscellaneous Mathematical Symbols-A",
-            u8"Разные математические символы A"sv },
+            u8"Разные математические символы A"sv,
+            u8"<p>Несколько символов, используемых в геометрии, формальной логике, верификации программ, теории баз данных "
+                    "и других разделах математики. Также западный символ деления столбиком."sv,
+            EcScript::NONE, EcFont::MATH },
     // Arrows A OK
     /// @todo [desc] Arrows A
     { 0x27F0, 0x27FF,
@@ -1773,17 +1801,17 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2900, 0x297F,
             "Supplemental Arrows-B", u8"Дополнительные стрелки B"sv },
     // Misc math B OK
-    /// @todo [desc] Misc math B
     { 0x2980, 0x29FF,
             "Miscellaneous Mathematical Symbols-B",
-            u8"Разные математические символы B"sv },
+            u8"Разные математические символы B"sv,
+            u8"<p>Различные математические символы: скобки, углы, пустые множества, «ящики с усами»…"sv },
     // Supp math ops OK
-    /// @todo [semi-tofu] Top/bottom integral
-    /// @todo [desc] Supp math ops
     { 0x2A00, 0x2AFF,
             "Supplemental Mathematical Operators",
             u8"Дополнительные математические знаки"sv,
-            {} },
+            u8"<p>Символы, используемые в математическом анализе, функциях комплексного переменного, Z-нотации, "
+                    "теории баз данных, теории управления, формальной логике и других разделах математики."sv,
+            EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
     /// @todo [desc] Misc syms & arrows
     { 0x2B00, 0x2BFF,

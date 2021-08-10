@@ -155,6 +155,7 @@ namespace uc {
          HISTORIC,
          BLOCK,
          PUNCTUATION,
+         MATH,
         ADLAM,
         AHOM,
         ARABIC,
@@ -411,6 +412,15 @@ namespace uc {
     enum class TermCat {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS
     };
+    /// @todo [term] Character classes:
+    //     Control
+    //     Formatting
+    //     Space
+    //     Spacing
+    //     Combining
+    //     Virama
+    //     Emoji
+    //     Ligature
 
     struct Term
     {

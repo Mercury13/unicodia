@@ -17,6 +17,7 @@ int main(int argc, char *argv[])
     installTempFontRel("NotoSerif-Regular.ttf");
     installTempFontRel("NotoSansSymbols-Regular.ttf");
     installTempFontRel("NotoSansSymbols2-Regular.ttf");
+    installTempFontRel("NotoSansMath-Regular.ttf");
 
     uc::completeData();
     w.show();
