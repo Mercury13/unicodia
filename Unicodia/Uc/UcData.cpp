@@ -1778,10 +1778,12 @@ constinit const uc::Block uc::blocks[302] {
             "Miscellaneous Mathematical Symbols-B",
             u8"Разные математические символы B"sv },
     // Supp math ops OK
+    /// @todo [semi-tofu] Top/bottom integral
     /// @todo [desc] Supp math ops
     { 0x2A00, 0x2AFF,
             "Supplemental Mathematical Operators",
-            u8"Дополнительные математические знаки"sv },
+            u8"Дополнительные математические знаки"sv,
+            {} },
     // Misc syms & arrows OK
     /// @todo [desc] Misc syms & arrows
     { 0x2B00, 0x2BFF,
