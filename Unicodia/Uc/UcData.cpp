@@ -1993,8 +1993,11 @@ constinit const uc::Block uc::blocks[302] {
     { 0xF900, 0xFAFF,
             "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы",
             {}, EcScript::Hani },
+    // Alphabetic presentation forms OK
+    /// @todo [term] Ligature
     { 0xFB00, 0xFB4F,
-            "Alphabetic Presentation Forms", u8"Алфавитные формы начертания"sv },
+            "Alphabetic Presentation Forms", u8"Алфавитные формы начертания"sv,
+            u8"<p>Стандартные лигатуры для [[pop_scr:Latn|латиницы]], [[pop_scr:Armn|армянского]] и [[pop_scr:Hebr|иврита]]."sv },
     { 0xFB50, 0xFDFF,
             "Arabic Presentation Forms-A", u8"Арабские формы начертания А",
             {}, EcScript::Arab },
