@@ -1979,9 +1979,10 @@ constinit const uc::Block uc::blocks[302] {
     { 0xAB30, 0xAB6F,
             "Latin Extended-E", u8"Латиница расширенная E", {}, EcScript::Latn },
     // Cherokee supp OK
-    /// @todo [desc] Cherokee supp
     { 0xAB70, 0xABBF,
-            "Cherokee Supplement", u8"Чероки дополнительный", {}, EcScript::Cher },
+            "Cherokee Supplement", u8"Чероки дополнительный",
+            u8"<p>В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.",
+            EcScript::Cher },
     // Meetei OK
     { 0xABC0, 0xABFF,
             "Meetei Mayek", u8"Манипури (мейтей-майек)", {}, EcScript::Mtei },
