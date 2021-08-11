@@ -131,6 +131,7 @@ namespace uc {
         LTR_CJK,
         LTR_BU,
         LTR_COL,
+        BOTH,
         NN,
     };
 
@@ -189,6 +190,7 @@ namespace uc {
         LAO,
         LEPCHA,
         LIMBU,
+        LINEAR_B,
         LISU,
         MALAYALAM,
         MANDAIC,
@@ -199,6 +201,7 @@ namespace uc {
         NUSHU,
         OGHAM,
         OLCHIKI,
+        OLD_ITALIC,
         PHAGS_PA,
         PHAISTOS_DISC,
         REJANG,

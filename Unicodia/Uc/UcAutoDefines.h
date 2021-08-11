@@ -51,6 +51,7 @@ namespace uc {
         Hebr,   // Hebrew
         Hent,   // Hentaigana
         Hira,   // Hiragana
+        Ital,   // Old Italic
         Java,   // Javanese
         Kali,   // Kayah Li
         Kana,   // Katakana
@@ -61,6 +62,7 @@ namespace uc {
         Latn,   // Latin
         Lepc,   // Lepcha
         Limb,   // Limbu
+        Linb,   // Linear B
         Lisu,   // Lisu
         Mand,   // Mandaic
         Mlym,   // Malayalam
@@ -133,7 +135,6 @@ namespace uc {
         //Hrkt  no chars
         Hung = Zyyy,        // beyond BMP
         //Inds  no chars
-        Ital = Zyyy,        // beyond BMP
         //Jamo  no chars
         //Jpan  no chars
         //Jurc  no chars
@@ -148,7 +149,6 @@ namespace uc {
         //Latg  no chars
         //Leke  no chars
         Lina = Zyyy,        // beyond BMP
-        Linb = Zyyy,        // beyond BMP
         //Loma  no chars
         Lyci = Zyyy,        // beyond BMP
         Lydi = Zyyy,        // beyond BMP

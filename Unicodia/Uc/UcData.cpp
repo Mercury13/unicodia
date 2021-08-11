@@ -66,7 +66,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Hanunoo",          "NotoSansHanunoo-Regular.ttf" },            // Hanunoo
     { "Noto Serif Hebrew",          "NotoSerifHebrew-Regular.ttf" },            // Hebrew
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
-    { "HanaMinA",                   "HanaMinA.ttf", Ffg::DESC_STD },      // Hentaigana
+    { "HanaMinA",                   "HanaMinA.ttf", Ffg::DESC_STD },            // Hentaigana
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
@@ -74,18 +74,20 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Khmer UI"sv,       "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc }, // Khmer
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
-    { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },
-    { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },
-    { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },
+    { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },             // Lepcha
+    { "Noto Sans Limbu",            "NotoSansLimbu-Regular.ttf" },              // Limbu
+    { "Noto Sans Linear B",         "NotoSansLinearB-Regular.ttf" },            // Linear B
+    { "Noto Sans Lisu",             "NotoSansLisu-Regular.ttf" },               // Lisu
     { "Noto Sans Malayalam",        "NotoSansMalayalam-Light.ttf", Ffg::LIGHT }, // Malayalam
-    { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },
-    { "Noto Sans MeeteiMayek"sv,    "NotoSansMeeteiMayek-Regular.ttf" },
+    { "Noto Sans Mandaic",          "NotoSansMandaic-Regular.ttf" },            // Mandaic
+    { "Noto Sans MeeteiMayek",      "NotoSansMeeteiMayek-Regular.ttf" },        // Meetei Mayek
     { "Noto Sans Mongolian",        "NotoSansMongolian-Regular.ttf" },          // Mongol
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },            // Myanmar
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
     { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf", {}, {}, 110_pc }, // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
+    { "Noto Sans Old Italic",       "NotoSansOldItalic-Regular.ttf" },          // Old Italic
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, {}, 150_pc },                       // Phaistos disc
     { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER }, // Rejang
@@ -147,6 +149,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"→ <i>(исторически ←↓↓ по столбцам)</i>"sv },
     { u8"→, ↑"sv },
     { u8"↓↓→ по столбцам"sv },
+    { u8"писали и ←, и →"sv },
     //{ u8"Ошибка"sv },
 };
 
@@ -708,6 +711,15 @@ constinit const uc::Script uc::scriptInfo[] {
                 "[[pop_scr:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
                 EcFont::CJK },
+    // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
+    { "Ital", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
+        u8"Этрусский"sv, u8"700–100 до н.э.",
+        u8"этрусский и другие языки Италии"sv,
+        u8"<p>Алфавит развился под влиянием [[pop_scr:Pnhx|финикийского]] и [[pop_scr:Grek|греческого]]. "
+                "В дальнейшем развился в [[pop_scr:Latn|латинский]]."
+            "<p>Юникод не различает языков Италии, объединяя все в один блок{{-}}этрусский."sv,
+                EcFont::OLD_ITALIC },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -826,6 +838,20 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
+    // Linear B OK, W10 none, installed Google Noto font
+    { "Linb"sv, QFontDatabase::Any,
+        EcScriptType::SYLLABOHEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        u8"Линейное письмо Б"sv, u8"≈1450 до н.э."sv,
+        u8"микенский <i>(протогреческий)</i>"sv,
+        u8"<p>Достаточно точно известен момент утверждения на Крите греческой власти{{-}}1450{{_}}до{{_}}н.э. "
+                "[[pop_scr:Lina|Линейное письмо А]] начало выходить из использования."
+            "<p>Витиеватая форма символов позволяет предположить, что писали на коже или папирусе, тем более линейным письмом А "
+                    "действительно писали чернилами. "
+                "Но все сохранившиеся памятники выполнены на глиняных табличках, которые обожглись в пожарах и сохранились тысячелетиями. "
+                "Письмо использовалось узкой кастой писцов, ориентировавшихся на грамматику минойского языка, а не греческого. "
+                "Все сохранившиеся памятники{{-}}канцелярские книги: договоры аренды, списки ремесленников, описи имущества…"
+            "<p>Открыто в начале XX{{_}}века Артуром Эвансом. Расшифровано в 1950-е годы."sv,
+                EcFont::LINEAR_B },
     /// @todo [tofu, P1] 11FB0 (a single Lisu letter), what to do?
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu"sv, QFontDatabase::Any,
@@ -2011,14 +2037,22 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>В этом блоке собраны «неправильные» символы, занимающие "
                     "половину клетки вместо целой и наоборот.",
             EcScript::NONE, EcFont::CJK },
+    // Specials OK
     { 0xFFF0, 0xFFFF,
             "Specials", u8"Спецсимволы" },
+    // Linear B syll OK
     { 0x10000, 0x1007F,
             "Linear B Syllabary", u8"Линейное письмо Б\u00A0— слоги", {}, EcScript::Linb },
+    // Linear B hier OK
     { 0x10080, 0x100FF,
             "Linear B Ideograms", u8"Линейное письмо Б\u00A0— иероглифы", {}, EcScript::Linb },
+    // Aegean numbers OK
     { 0x10100, 0x1013F,
-            "Aegean Numbers", u8"Эгейские цифры"sv },
+            "Aegean Numbers", u8"Эгейские цифры"sv,
+            u8"<p>Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями."
+                    "Замечена в линейном письме [[pop_scr:Lina|А]] и [[pop_scr:Linb|Б]]. "
+                    "В [[pop_scr:Cypr|кипрском]] письме была обнаружена единственная табличка с числом «100»."sv,
+            EcScript::Linb },
     // Greek numbers OK
     { 0x10140, 0x1018F,
         "Ancient Greek Numbers", u8"Древнегреческие цифры"sv,
@@ -2060,8 +2094,10 @@ constinit const uc::Block uc::blocks[302] {
                 "Два символа из Реестра в Юникод не вошли и берутся из латиницы: | и ¦. "
                 "Названия символов{{-}}по Луи Годáру (1995)."sv,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
+    // Lycian OK
     { 0x10280, 0x1029F,
             "Lycian", u8"Ликийский"sv, {}, EcScript::Lyci },
+    // Carian OK
     { 0x102A0, 0x102DF,
             "Carian", u8"Карийский"sv, {}, EcScript::Cari },
     // Coptic epact OK
@@ -2077,10 +2113,10 @@ constinit const uc::Block uc::blocks[302] {
                 "письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект "
                 "''Google Noto'' попытался повторить росчерки постоянной шириной."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
-    /// @todo [tofu] Old Italic
-    /// @todo [script] Old Italic
+    // Old Italic OK
     { 0x10300, 0x1032F,
             "Old Italic", u8"Этрусский", {}, EcScript::Ital },
+    // Gothic OK
     { 0x10330, 0x1034F,
             "Gothic", u8"Готский", {}, EcScript::Goth },
     { 0x10350, 0x1037F,
