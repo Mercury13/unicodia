@@ -1789,6 +1789,7 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] Enclosed alnum
     { 0x2460, 0x24FF,
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры"sv },
+    /// @todo [term] pseudographics
     // Box drawing OK
     { 0x2500, 0x257F,
             "Box Drawing", u8"Рисование рамок"sv,
@@ -1797,6 +1798,7 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>В IBM-совместимых ПК были две разновидности линий{{-}}одиночная и двойная. "
                     "Юникод добавляет к ним тонкую, пунктирную и тонкую пунктирную."
                 "<p>В компьютере BBC{{_}}Master есть закруглённые уголки."sv },
+    /// @todo [term] pseudographics
     // Block elements OK
     { 0x2580, 0x259F,
             "Block Elements", u8"Блочные элементы"sv,
