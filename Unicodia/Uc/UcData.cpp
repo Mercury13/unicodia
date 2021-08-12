@@ -1753,10 +1753,13 @@ constinit const uc::Block uc::blocks[302] {
                         "и машинное сложение в численных методах. "
                     "Для равенства по определению используют {{sm|≔}}, {{sm|≝}}, {{sm|≡}}." },
     // Misc tech OK
-    /// @todo [desc] Misc tech
     { 0x2300, 0x23FF,
             "Miscellaneous Technical", u8"Разные технические"sv,
-            {}, EcScript::NONE, EcFont::NOTO_SYMBOL },
+            u8"<p>Символы, используемые в черчении, электронике, программировании, стоматологии, поэзии, химии, оптике, "
+                        "пользовательских интерфейсах."
+                "<p>Также символы, используемые в системах компьютерной математики вроде MathType (он же ''Microsoft Equation'') "
+                        "и TᴇX (читается «тех») для создания многоэтажных скобок."sv,
+            EcScript::NONE, EcFont::NOTO_SYMBOL },
     // Control pictures OK
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих"sv,
