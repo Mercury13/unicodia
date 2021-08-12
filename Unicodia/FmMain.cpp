@@ -1327,6 +1327,21 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 }
 
 
+void FmMain::showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect)
+{
+    QString text;
+    str::append(text, "<p><b><nobr>");
+    str::append(text, x.locName);
+    str::append(text, "</b> /</nobr> <nobr>"sv);
+    str::append(text, x.engName);
+    str::append(text, "</nobr>");
+
+    str::append(text, "<p>");
+    appendWiki(text, x, x.locDesc);
+    popupText(text, widget, rect);
+}
+
+
 void FmMain::showFonts(
         char32_t cp, QFontDatabase::WritingSystem ws,
         QWidget* widget, TinyOpt<QRect> rect)
@@ -1380,6 +1395,9 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
             fromChars(sv[1], ws);
             showFonts(cp, static_cast<QFontDatabase::WritingSystem>(ws), widget, rect);
         }
+    } else if (scheme == "pop_term"sv) {
+        if (auto* term = uc::findTerm(target))
+            showPopup(*term, widget, rect);
     }
 }
 

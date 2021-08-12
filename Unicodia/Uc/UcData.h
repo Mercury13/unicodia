@@ -434,8 +434,14 @@ namespace uc {
         TermCat cat;
         std::u8string_view locName;
         std::u8string_view engName;
-        std::u8string_view desc;
+        std::u8string_view locDesc;
+
+        const uc::Font& font() const { return fontInfo[0]; }
     };
+
+    extern const Term terms[];
+
+    const Term* findTerm(std::string_view id);
 
     constexpr bool isNonChar(char32_t cp)
     {
