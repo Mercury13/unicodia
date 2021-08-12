@@ -77,14 +77,15 @@ namespace uc {
         ABUGIDA,        ///< Syllable script where similar syllables have
                             ///<   similar symbols (Canadian syllable)
         ABUGIDA_BRAHMI, ///< … + based on Brahmi: K=ka, K*=ki, K’=K (Kannada, Thai)
-        HIEROGLYPH,     ///< Pictures of things (CJK, ancient Egyptian)
-        SYLLABOHEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
+        HIEROGLYPH,     ///< Pictures of things (CJK)
+        SYLLABOHIEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
+        CONSONANTHIEROGLYPH, ///< Consonant + hieroglyph (Egyptian)
         //SHORTHAND,      ///< Mostly alphabet, but with some simplifications
         //                ///<   (English stenography)
         CODE,           ///< System for encoding other scripts (Braille)
         SYMBOL,         ///< Miscellaneous symbols
-        GAME,           ///< Tabletop games
-        EMOJI,          ///< Emoji pictures
+        //GAME,           ///< Tabletop games
+        //EMOJI,          ///< Emoji pictures
         NN,
     };
 
@@ -175,6 +176,7 @@ namespace uc {
         COPTIC,
         DEVANAGARI,
         DOGRA,
+        EGYPTIAN,
         ETHIOPIC,
         GEORGIAN,
         GLAGOLITIC,

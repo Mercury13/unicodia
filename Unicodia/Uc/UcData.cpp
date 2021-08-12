@@ -59,6 +59,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc }, // Devanagari
     { "Noto Serif Dogra",           "NotoSerifDogra-Regular.ttf",               // Dogra
                 Ffg::STUB_ON | Ffg::DESC_BIGGER },
+    { "Noto Sans EgyptHiero",       "NotoSansEgyptianHieroglyphs-Regular.ttf"}, // Egyptian
     { "Noto Serif Ethiopic",        "NotoSerifEthiopic-Regular.ttf" },          // Ethiopic
     { "Noto Serif Georgian",        "NotoSerifGeorgian-Regular.ttf" },          // Georgian
     { "Noto Sans Glagolitic",       "NotoSansGlagolitic-Regular.ttf" },         // Glagolitic
@@ -171,10 +172,11 @@ constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType:
         "добавляется знак «вирама»\u00A0— «убийца»)</i>"sv },
     { u8"иероглифическая <i>(символ означает понятие, как китайский)</i>"sv },
     { u8"слогоиероглифическая <i>(как линейное письмо Б)</i>"sv },
+    { u8"консонантно-иероглифическое <i>(как египетские иероглифы)</i>"sv },
     { u8"код <i>(записывает информацию в другой форме, как шрифт Брайля)</i>"sv },
     { u8"символы <i>(как ноты)</i>"sv },
-    { u8"настольная игра <i>(как игральные карты)</i>"sv },
-    { u8"эмодзи <i>(японские SMS-картинки)</i>"sv },
+    //{ u8"настольная игра <i>(как игральные карты)</i>"sv },
+    //{ u8"эмодзи <i>(японские SMS-картинки)</i>"sv },
     //{ u8"Ошибка"sv },
 };
 
@@ -569,6 +571,23 @@ constinit const uc::Script uc::scriptInfo[] {
                 "библиотеку, эксперименты прекратились."
             "<p>В 1997 алфавит внесён в Реестр искусственных письменностей. "
                 "Исключён в 2001, когда мормонский появился в настоящем Юникоде."sv },
+    /// @todo [tofu] Hieroglyphs themselves re OK, need formatting chars
+    { "Egyp"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,
+        u8"Египетские иероглифы"sv, u8"≈3200 до н.э.",
+        u8"древнеегипетский"sv,
+        u8"<p>Египетская письменность прошла обычный путь от пиктографического письма (слова изображаются наглядными рисунками) "
+                "через идеографическое (появляются абстрактные понятия{{-}}знаком «солнце» обозначают день) "
+                "к консонантному (начали появляться звуковые знаки). "
+                "Подобное мы видели и в других развитых цивилизациях{{-}}например, [[pop_scr:Xsux|шумерской]]."
+            "<p>Писали чаще всего справа налево, иногда слева направо или сверху вниз."
+            "<p>Помимо иероглифов, были не две не внесённые в Юникод письменности:<br>"
+                "• иератическое (''священное'') письмо{{-}}сильно упрощённые иероглифы, книги и хозяйственные документы;<br>"
+                "• демотическое (''народное'') письмо{{-}}появилось в поздний период, больше алфавитных знаков, "
+                    "сначала письма и хозяйственные документы, потом и книги.<br>"
+                "Но лучше всех мы знаем именно иероглифы, потому что на камне они лучше всех сохранились."
+            "<p>В шрифтах Windows отсутствуют три иероглифа полового члена."sv,
+                EcFont::EGYPTIAN },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -840,7 +859,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::LIMBU },
     // Linear B OK, W10 none, installed Google Noto font
     { "Linb"sv, QFontDatabase::Any,
-        EcScriptType::SYLLABOHEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Линейное письмо Б"sv, u8"≈1450 до н.э."sv,
         u8"микенский <i>(протогреческий)</i>"sv,
         u8"<p>Достаточно точно известен момент утверждения на Крите греческой власти{{-}}1450{{_}}до{{_}}н.э. "

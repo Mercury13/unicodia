@@ -39,6 +39,7 @@ namespace uc {
         Deva,   // Devanagari
         Dogr,   // Dogra
         Dsrt,   // Deseret (Mormon)
+        Egyp,   // Egyptian hieroglyphs
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
@@ -117,7 +118,6 @@ namespace uc {
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars
         //Egyh  no chars
-        Egyp = Zyyy,        // beyond BMP
         Elba = Zyyy,        // beyond BMP
         Elym = Zyyy,        // Elymaic, beyond BMP
         //Geok  no chars
