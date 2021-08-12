@@ -571,7 +571,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "библиотеку, эксперименты прекратились."
             "<p>В 1997 алфавит внесён в Реестр искусственных письменностей. "
                 "Исключён в 2001, когда мормонский появился в настоящем Юникоде."sv },
-    /// @todo [tofu] Hieroglyphs themselves re OK, need formatting chars
+    // Egyptian hiero OK
     { "Egyp"sv, QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,
         u8"Египетские иероглифы"sv, u8"≈3200 до н.э.",
@@ -2277,8 +2277,10 @@ constinit const uc::Block uc::blocks[302] {
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     { 0x11EE0, 0x11EFF,
             "Makasar", u8"Старый макасарский", {}, EcScript::Maka },
+    /// @tofo [tofu] Only one char, and it’s tofu
     { 0x11FB0, 0x11FBF,
             "Lisu Supplement", u8"Лису дополнительный", {}, EcScript::Lisu },
+    /// @todo [tofu] Tamil supp
     { 0x11FC0, 0x11FFF,
             "Tamil Supplement", u8"Тамильский дополнительный", {}, EcScript::Taml },
     { 0x12000, 0x123FF,
@@ -2289,13 +2291,17 @@ constinit const uc::Block uc::blocks[302] {
     { 0x12480, 0x1254F,
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
+    // Egyptian hiero OK
     { 0x13000, 0x1342F,
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
+    // Egyptian hiero format OK
     { 0x13430, 0x1343F,
             "Egyptian Hieroglyph Format Controls",
             u8"Форматирующие символы для египетских иероглифов", {}, EcScript::Egyp },
+    /// @todo [tofu] Anatolyan hiero
     { 0x14400, 0x1467F,
             "Anatolian Hieroglyphs", u8"Анатолийские иероглифы", {}, EcScript::Hluw },
+    // Bamum supplement OK
     { 0x16800, 0x16A3F,
             "Bamum Supplement", u8"Бамум дополнительный", {}, EcScript::Bamu },
     { 0x16A40, 0x16A6F,
@@ -2470,6 +2476,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1FA70, 0x1FAFF,
             "Symbols and Pictographs Extended-A",
             u8"Символы и пиктограммы расширенные А"sv },
+    // Legacy OK
     { 0x1FB00, 0x1FBFF,
             "Symbols for Legacy Computing",
             u8"Символы со старых компьютеров"sv,
