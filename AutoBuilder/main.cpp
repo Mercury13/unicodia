@@ -183,13 +183,27 @@ class StringLib
 public:
     /// @return offset
     RememberResult remember(const std::string& s, char32_t subj);
+    RememberResult forceRemember(const std::string& s, char32_t subj);
     auto& inOrder() const { return fInOrder; }
 private:
     using M = std::unordered_map<std::string, StringPayload>;
     M fData;
+    std::deque<M::value_type> fRepeats;     // need ptrs → deque
     std::vector<const M::value_type*> fInOrder;
     size_t fLength = 0;
 };
+
+RememberResult StringLib::forceRemember(const std::string& s, char32_t subj)
+{
+    auto res = remember(s, subj);
+    if (!res.wasIns) {
+        auto& v = fRepeats.emplace_back(s, StringPayload{subj, static_cast<int>(fLength)});
+        res.offset = fLength;
+        fLength += (s.length() + 1);
+        fInOrder.push_back(&v);
+    }
+    return res;
+}
 
 RememberResult StringLib::remember(const std::string& s, char32_t subj)
 {
@@ -335,11 +349,7 @@ int main()
         }
 
         for (auto& v : allAbbrevs) {
-            auto [i, wasIns2] = strings.remember(std::string{v}, cp);
-            if (!wasIns2) {
-                nl.trigger();
-                std::cout << "WARNING: char " << std::hex << cp << " has a repeating abbreviation." << std::endl;
-            }
+            strings.forceRemember(std::string{v}, cp);
         }
 
         auto nAliases = allAbbrevs.size();
@@ -431,7 +441,7 @@ int main()
 
         ++nBlocks;
     }
-    std::cout << "Found " << nBlocks << " blocks" << std::endl;
+    std::cout << "Found " << std::dec << nBlocks << " blocks" << std::endl;
 
     ///// Numerics /////////////////////////////////////////////////////////////
 

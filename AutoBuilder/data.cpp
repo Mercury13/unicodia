@@ -796,7 +796,7 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x202F, "!" },    // Narrow NBSP has abbrevs, turn them to aliases
     { 0x205F, "!" },    // Medium math space same
     { 0x2061, "f()" },  // Function application
-    { 0x2062, "×" },    // Invisible times
+    { 0x2062, "✕" },   // Invisible times
     { 0x2063, "," },    // Invisible separator
     { 0x2064, "+" },    // Invisible plus
     { 0x206A, "ISS" },  // Inhibit symmetric swapping
@@ -810,6 +810,15 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0xFFFA, "IA S" }, // Interlinear annotation separator
     { 0xFFFB, "IA T" }, // Interlinear annotation terminator
     { 0xFFFC, "OBJ" },  // Object replacement character
+    { 0x13430, ":" },   // Egyptian hiero vertical joiner
+    { 0x13431, "✻" },   // Egyptian hiero horiz joiner
+    { 0x13432, "`" },   // Egyptian hiero insert at top start
+    { 0x13433, "`" },   // Egyptian hiero insert at bottom start
+    { 0x13434, "`" },   // Egyptian hiero insert at top end
+    { 0x13435, "`" },   // Egyptian hiero insert at bottom end
+    { 0x13436, "+" },   // Egyptian hiero overlay middle
+    { 0x13437, "(" },   // Egyptian hiero begin segment
+    { 0x13438, ")" },   // Egyptian hiero end segment
     // Then Variation Selectors
 };
 

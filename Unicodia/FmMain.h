@@ -131,13 +131,14 @@ class WiCustomDraw : public QWidget
     using Super = QWidget;
 public:
     using Super::Super;
-    void setAbbreviation(std::u8string_view x);
+    void setAbbreviation(std::u8string_view x, char32_t aSubj);
 protected:
     void paintEvent(QPaintEvent *event);
 private:
     enum class Mode { NONE, ABBREVIATION };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
+    char32_t subj = 0;
 };
 
 

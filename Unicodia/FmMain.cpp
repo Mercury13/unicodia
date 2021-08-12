@@ -359,9 +359,46 @@ namespace {
         }
     };
 
+    struct Rc3Matrix {
+        int side, side2, side3, x0, y0;
+        Rc3Matrix(const QRectF& rcFrame) {
+            auto sz = std::min(rcFrame.width(), rcFrame.height());
+            side = std::round(sz / 5.5);
+            side2 = side * 2;
+            side3 = side * 3;
+            auto cen = rcFrame.center();
+            x0 = std::round(cen.x() - side * 1.5);
+            y0 = std::round(cen.y() - side * 1.5);
+        }
+
+        //  789
+        //  456
+        //  123
+        QRect rect7() const
+            { return QRect( QPoint{ x0, y0 }, QSize { side, side }); }
+        QRect rect96() const
+            { return QRect( QPoint{ x0 + side2, y0 }, QSize { side, side2 }); }
+        QRect rect13() const
+            { return QRect( QPoint{ x0, y0 + side2 }, QSize { side3, side }); }
+        QRect rect1() const
+            { return QRect( QPoint{ x0, y0 + side2 }, QSize { side, side }); }
+        QRect rect63() const
+            { return QRect( QPoint{ x0 + side2, y0 + side }, QSize { side, side2 }); }
+        QRect rect79() const
+            { return QRect( QPoint{ x0, y0 }, QSize { side3, side }); }
+        QRect rect74() const
+            { return QRect( QPoint{ x0, y0 }, QSize { side, side2 }); }
+        QRect rect9() const
+            { return QRect( QPoint{ x0 + side2, y0 }, QSize { side, side }); }
+        QRect rect41() const
+            { return QRect( QPoint{ x0, y0 + side }, QSize { side, side2 }); }
+        QRect rect3() const
+            { return QRect( QPoint{ x0 + side2, y0 + side2 }, QSize { side, side }); }
+    };
+
     void drawAbbreviation(
             QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
-            const QColor& color)
+            const QColor& color, char32_t subj)
     {
         const auto availW = rect.width() * 5 / 6;
         const auto availH = rect.height() * 7 / 10;
@@ -376,21 +413,56 @@ namespace {
         painter->setPen(QPen(color, thickness, Qt::DashLine));
         painter->setBrush(Qt::NoBrush);
         painter->drawRect(rcFrame);
-        // Draw text
-        auto sz = availSize / 3.3;
-        QFont font { str::toQ(FAM_CONDENSED) };
-            font.setStyleStrategy(QFont::PreferAntialias);
-            font.setPointSizeF(sz);
-        painter->setFont(font);
-        painter->setBrush(QBrush(color, Qt::SolidPattern));
-        rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
-        auto sp = splitAbbr(abbreviation);
-        if (sp.wasSplit()) {
-            RcPair p(rcFrame);
-            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
-            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+
+        // Need this brush for both rects and fonts
+
+        if (abbreviation == u8"`"sv) {
+            // Draw special image
+            switch (subj) {
+            case 0x13432: {
+                    Rc3Matrix m(rcFrame);
+                    painter->fillRect(m.rect7(), color);
+                    painter->fillRect(m.rect96(), color);
+                    painter->fillRect(m.rect13(), color);
+                } break;
+            case 0x13433: {
+                    Rc3Matrix m(rcFrame);
+                    painter->fillRect(m.rect79(), color);
+                    painter->fillRect(m.rect63(), color);
+                    painter->fillRect(m.rect1(), color);
+                } break;
+            case 0x13434: {
+                    Rc3Matrix m(rcFrame);
+                    painter->fillRect(m.rect74(), color);
+                    painter->fillRect(m.rect9(), color);
+                    painter->fillRect(m.rect13(), color);
+                } break;
+            case 0x13435: {
+                    Rc3Matrix m(rcFrame);
+                    painter->fillRect(m.rect79(), color);
+                    painter->fillRect(m.rect41(), color);
+                    painter->fillRect(m.rect3(), color);
+                } break;
+            }
         } else {
-            painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
+            // Draw text
+            auto sz = (abbreviation.size() == 1)
+                    ? availSize / 2
+                    : availSize / 3.3;
+            QFont font { str::toQ(FAM_CONDENSED) };
+                font.setStyleStrategy(QFont::PreferAntialias);
+                font.setPointSizeF(sz);
+            painter->setFont(font);
+            painter->setBrush(QBrush(color, Qt::SolidPattern));
+            rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
+            auto sp = splitAbbr(abbreviation);
+            if (sp.wasSplit()) {
+                RcPair p(rcFrame);
+                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+            } else {
+                painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
+            }
         }
     }
 
@@ -406,7 +478,7 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
         auto abbr = ch->abbrev();
         if (!abbr.empty()) {
             // Abbreviation
-            drawAbbreviation(painter, rect, abbr, color);
+            drawAbbreviation(painter, rect, abbr, color, ch->subj);
         }
         else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
             // Char
@@ -478,16 +550,18 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::ABBREVIATION: {
             QPainter painter(this);
             drawAbbreviation(&painter, geometry(), abbreviation,
-                             palette().windowText().color());
+                             palette().windowText().color(),
+                             subj);
         }
     }
 }
 
 
-void WiCustomDraw::setAbbreviation(std::u8string_view x)
+void WiCustomDraw::setAbbreviation(std::u8string_view x, char32_t aSubj)
 {
     mode = Mode::ABBREVIATION;
     abbreviation = x;
+    subj = aSubj;
     update();
 }
 
@@ -974,7 +1048,7 @@ void FmMain::showCp(MaybeChar ch)
         bool wantSysFont = true;
         if (ch->isAbbreviated()) {
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setAbbreviation(ch->abbrev());
+            ui->pageSampleCustom->setAbbreviation(ch->abbrev(), ch.code);
             wantSysFont = false;
         } else {
             drawSampleWithQt(*ch);
