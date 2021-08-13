@@ -793,7 +793,7 @@ namespace {
         auto dest = x[0];
         auto text = x[1];
         std::string_view style;
-        if (dest.starts_with("pop_") && dest.find(':') != std::string_view::npos)
+        if (dest.size() >= 4 && dest[0] == 'p' && dest[2] == ':')
             style = SUBTAG_POPUP;
 
         auto q = prepareRecursion(text);
@@ -926,7 +926,7 @@ namespace {
         // UTF-8
         sp.sep();
         auto sChar = str::toQ(code);
-        str::append(text, u8"<a href='pop_term:utf8'" SUBTAG_POPUP ">UTF-8</a>:");
+        str::append(text, u8"<a href='pt:utf8'" SUBTAG_POPUP ">UTF-8</a>:");
         auto u8 = sChar.toUtf8();
         for (unsigned char v : u8) {
             snprintf(buf, 10, " %02X", static_cast<int>(v));
@@ -935,7 +935,7 @@ namespace {
 
         // UTF-16: QString us UTF-16
         sp.sep();
-        str::append(text, u8"<a href='pop_term:utf16'" SUBTAG_POPUP ">UTF-16</a>:");
+        str::append(text, u8"<a href='pt:utf16'" SUBTAG_POPUP ">UTF-16</a>:");
         for (auto v : sChar) {
             snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
             str::append(text, buf);
@@ -1095,7 +1095,7 @@ void FmMain::showCp(MaybeChar ch)
 
             // Script
             auto& scr = ch->script();
-            appendValuePopup(text, scr, u8"Письменность", "pop_scr");
+            appendValuePopup(text, scr, u8"Письменность", "ps");
 
             // Unicode version
             sp.sep();
@@ -1103,7 +1103,7 @@ void FmMain::showCp(MaybeChar ch)
 
             // Character type
             sp.sep();
-            appendValuePopup(text, ch->category(), u8"Тип", "pop_cat");
+            appendValuePopup(text, ch->category(), u8"Тип", "pc");
 
             // Numeric value
             auto& numc = ch->numeric();
@@ -1120,11 +1120,11 @@ void FmMain::showCp(MaybeChar ch)
 
             // Bidi writing
             sp.sep();
-            appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pop_bidi");
+            appendValuePopup(text, ch.cp->bidiClass(), u8"В двунаправленном письме", "pb");
 
             // Block
             sp.sep();
-            appendValuePopup(text, *hint.sample, u8"Блок", "pop_blk");
+            appendValuePopup(text, *hint.sample, u8"Блок", "pk");
 
             auto comps = uc::cpOldComps(ch.code);
             if (comps) {
@@ -1147,7 +1147,7 @@ void FmMain::showCp(MaybeChar ch)
             if (font) {
                 sp.sep();
                 FontLink lnk { font->family(), ch.code, ws };
-                appendValuePopup(text, lnk, u8"Системный шрифт", "pop_font");
+                appendValuePopup(text, lnk, u8"Системный шрифт", "pf");
             }
 
             // HTML
@@ -1170,6 +1170,7 @@ void FmMain::showCp(MaybeChar ch)
                 appendScript(text, sc, false);
             }
         }
+        std::cout << text.toStdString() << std::endl;
         ui->vwInfo->setText(text);
     } else {
         // No character
@@ -1381,20 +1382,20 @@ void FmMain::showFonts(
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
-    if (scheme == "pop_bidi"sv) {
+    if (scheme == "pb"sv) {
         if (auto* bidi = uc::findBidiClass(target))
             showPopup(*bidi, widget, rect);
-    } else if (scheme == "pop_cat"sv) {
+    } else if (scheme == "pc"sv) {
         if (auto* cat = uc::findCategory(target))
             showPopup(*cat, widget, rect);
-    } else if (scheme == "pop_scr"sv) {
+    } else if (scheme == "ps"sv) {
         if (auto* script = uc::findScript(target))
             showPopup(*script, widget, rect);
-    } else if (scheme == "pop_blk"sv) {
+    } else if (scheme == "pk"sv) {
         int iBlock = 0;
         fromChars(target, iBlock);
         showPopup(uc::blocks[iBlock], widget, rect);
-    } else if (scheme == "pop_font"sv) {
+    } else if (scheme == "pf"sv) {
         auto sv = str::splitSv(target, '/');
         if (sv.size() >= 2) {
             unsigned int cp = 0, ws = 0;
@@ -1402,7 +1403,7 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
             fromChars(sv[1], ws);
             showFonts(cp, static_cast<QFontDatabase::WritingSystem>(ws), widget, rect);
         }
-    } else if (scheme == "pop_term"sv) {
+    } else if (scheme == "pt"sv) {
         if (auto* term = uc::findTerm(target))
             showPopup(*term, widget, rect);
     }
@@ -1421,7 +1422,7 @@ void FmMain::linkClicked(
 
 void FmMain::on_vwInfo_anchorClicked(const QUrl &arg)
 {
-    auto str = arg.path().toStdString();
+    auto str = arg.url().toStdString();
     auto rect = ui->vwInfo->cursorRect();
     // Get some parody for link rect
     // Unglitch: we don’t know how to get EXACT coords of link,
