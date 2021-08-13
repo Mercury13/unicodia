@@ -922,7 +922,7 @@ namespace {
         // UTF-8
         sp.sep();
         auto sChar = str::toQ(code);
-        str::append(text, u8"UTF-8:");
+        str::append(text, u8"<a href='pop_term:utf8'" SUBTAG_POPUP ">UTF-8</a>:");
         auto u8 = sChar.toUtf8();
         for (unsigned char v : u8) {
             snprintf(buf, 10, " %02X", static_cast<int>(v));
@@ -931,7 +931,7 @@ namespace {
 
         // UTF-16: QString us UTF-16
         sp.sep();
-        str::append(text, u8"UTF-16:");
+        str::append(text, u8"<a href='pop_term:utf16'" SUBTAG_POPUP ">UTF-16</a>:");
         for (auto v : sChar) {
             snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
             str::append(text, buf);
@@ -964,7 +964,7 @@ namespace {
             str::append(text, "<p>");
             str::QSep sp(text, "<br>");
             str::append(text, u8"• Тип: ");
-            str::append(text, x.type().locName);
+            appendWiki(text, x, x.type().locName);
             if (x.ecDir != uc::EcWritingDir::NOMATTER) {
                 sp.sep();
                 str::append(text, u8"• Направление: ");
@@ -1332,8 +1332,11 @@ void FmMain::showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect)
     QString text;
     str::append(text, "<p><b><nobr>");
     str::append(text, x.locName);
-    str::append(text, "</b> /</nobr> <nobr>"sv);
-    str::append(text, x.engName);
+    str::append(text, "</b>"sv);
+    if (!x.engName.empty()) {
+        str::append(text, " /</nobr> <nobr>"sv);
+        str::append(text, x.engName);
+    }
     str::append(text, "</nobr>");
 
     str::append(text, "<p>");
