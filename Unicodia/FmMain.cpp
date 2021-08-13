@@ -839,6 +839,10 @@ namespace {
         } else if (name == "%"sv) {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+        } else if (name == "em"sv) {
+            str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
+            str::append(s, x.safeGetV(1, {}));
+            str::append(s, "</font>");
         } else {
             wiki::appendHtml(s, x[0]);
         }
