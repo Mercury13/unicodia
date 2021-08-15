@@ -1160,7 +1160,12 @@ void FmMain::showCp(MaybeChar ch)
 
             text.append("</p>");
 
-            if (!hint.sample->locDescription.empty()) {
+            if (ch->ecCategory == uc::EcCategory::CONTROL) {
+                //  Control char description
+                str::append(text, u8"<h2>Об управляющих символах</h2>");
+                appendWiki(text, *hint.sample,
+                           uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
+            } else if (!hint.sample->locDescription.empty()) {
                 // Block description
                 str::append(text, u8"<h2>О блоке</h2>");
                 appendWiki(text, *hint.sample, hint.sample->locDescription);
@@ -1335,14 +1340,13 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 void FmMain::showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect)
 {
     QString text;
-    str::append(text, "<p><b><nobr>");
+    str::append(text, "<p><b>");
     str::append(text, x.locName);
     str::append(text, "</b>"sv);
     if (!x.engName.empty()) {
-        str::append(text, " /</nobr> <nobr>"sv);
+        str::append(text, u8"\u00A0/ "sv);
         str::append(text, x.engName);
     }
-    str::append(text, "</nobr>");
 
     str::append(text, "<p>");
     appendWiki(text, x, x.locDesc);
