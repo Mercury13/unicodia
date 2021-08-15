@@ -70,7 +70,7 @@ namespace uc {
         NONE,
         UNKNOWN,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
-        PSEUDOALPHABET, ///< Alphabet scripts that use syllables as units
+        ARGUABLE,       ///< Alphabet scripts that use syllables as units
         CONSONANT,      ///< Consonant script (Hebrew)
         SYLLABLE,       ///< Syllable script (Hiragana)
         ALPHASYLLABLE,  ///< Partly alphabet, partly syllable (Iberian)
