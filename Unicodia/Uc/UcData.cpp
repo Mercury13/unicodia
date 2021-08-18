@@ -2719,6 +2719,9 @@ constinit const uc::Term uc::terms[] {
                 "Простейший пример{{-}}A [[ps:Latn|латинское]] и [[ps:Cyrl|русское]]."sv },
     { "noncharacter", TermCat::ENCODING,
       u8"зарезервирован как отсутствующий"sv, u8"non-character"sv, CT_NOCHAR },
+
+    ///// Serialization ////////////////////////////////////////////////////////
+
     { "serialization", TermCat::SERIALIZATION,
       u8"сериализация"sv, u8"serialization"sv,
         u8"<p>Метод преобразования данных (например, юникодного текста) в цепочку ''кодовых единиц''{{-}}байтов для [[pt:utf8|UTF-8]], "
