@@ -880,6 +880,9 @@ namespace {
             str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
+        } else if (name == "№"sv) {
+            str::append(s, u8"№<span style='font-size:3pt'>\u00A0</span>"sv);
+            str::append(s, x.safeGetV(1, {}));
         } else {
             wiki::appendHtml(s, x[0]);
         }
