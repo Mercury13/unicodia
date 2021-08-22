@@ -415,23 +415,21 @@ namespace uc {
     inline const Block* blockOf(char32_t subj, int iHint)
         { return blockOf(subj, std::begin(blocks) + std::max(iHint, 0)); }
 
-    enum class TermCat {
-        ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS
+    enum class EcTermCat {
+        ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, NN
     };
-    /// @todo [term] Character classes:
-    //     Control
-    //     Formatting
-    //     Space
-    //     Spacing
-    //     Combining
-    //     Virama
-    //     Emoji
-    //     Ligature
+
+    struct TermCat
+    {
+        std::u8string_view locName;
+    };
+
+    extern const TermCat termCats[];
 
     struct Term
     {
         std::string_view key;
-        TermCat cat;
+        EcTermCat cat;
         std::u8string_view locName;
         std::u8string_view engName;
         std::u8string_view locDesc;
@@ -440,6 +438,7 @@ namespace uc {
     };
 
     extern const Term terms[];
+    size_t nTerms();
 
     const Term* findTerm(std::string_view id);
 

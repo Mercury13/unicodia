@@ -200,12 +200,13 @@ private:
     void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);
+    void initTerms();
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();
     void copyCurrentSample();
     void popupLinkActivated(const QString& link);
-    void on_vwInfo_anchorClicked(const QUrl &arg1);
+    void anchorClicked(const QUrl &arg1);
     void on_comboBlock_currentIndexChanged(int index);
 };
 

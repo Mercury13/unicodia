@@ -633,9 +633,46 @@ FmMain::FmMain(QWidget *parent)
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
 
+    // Clicked
+    connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+
+    // Terms
+    initTerms();
+
     // Select index
     ui->tableChars->setFocus();
     ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
+}
+
+
+void FmMain::initTerms()
+{
+    QString text;
+
+    const size_t n = uc::nTerms();
+    auto lastCat = uc::EcTermCat::NN;
+    for (size_t i = 0; i < n; ++i) {
+        const uc::Term& term = uc::terms[i];
+        if (term.cat != lastCat) {
+            lastCat = term.cat;
+            auto& cat = uc::termCats[static_cast<int>(lastCat)];
+            str::append(text, "<h1>");
+            str::append(text, cat.locName);
+            str::append(text, "</h1>");
+        }
+        str::append(text, "<p><a href='pt:");
+        str::append(text, term.key);
+        str::append(text, "'" SUBTAG_POPUP "><b>");
+        str::append(text, term.locName);
+        str::append(text, "</b></a>");
+        if (!term.engName.empty()) {
+            str::append(text, "&nbsp;/ ");
+            str::append(text, term.engName);
+        }
+    }
+
+    ui->vwTerms->setText(text);
+    connect(ui->vwTerms, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
 }
 
 
@@ -1424,16 +1461,17 @@ void FmMain::linkClicked(
 }
 
 
-void FmMain::on_vwInfo_anchorClicked(const QUrl &arg)
+void FmMain::anchorClicked(const QUrl &arg)
 {
     auto str = arg.url().toStdString();
-    auto rect = ui->vwInfo->cursorRect();
+    auto snd = qobject_cast<QTextBrowser*>(sender());
+    auto rect = snd->cursorRect();
     // Get some parody for link rect
     // Unglitch: we don’t know how to get EXACT coords of link,
     // so improvise somehow
     rect.setLeft(rect.left() - 80);
 
-    linkClicked(str, ui->vwInfo, rect);
+    linkClicked(str, snd, rect);
 }
 
 
