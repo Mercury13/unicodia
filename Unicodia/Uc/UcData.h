@@ -416,7 +416,7 @@ namespace uc {
         { return blockOf(subj, std::begin(blocks) + std::max(iHint, 0)); }
 
     enum class EcTermCat {
-        ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, NN
+        ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM, NN
     };
 
     struct TermCat
