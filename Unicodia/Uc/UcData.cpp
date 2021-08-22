@@ -358,7 +358,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [tofu, P1] W7/10 no font at all
     { "Aghb"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Агванская"sv, u8"II век до н.э."sv,
+        u8"Агванский"sv, u8"II век до н.э."sv,
         u8"агванский <i>(язык Кавказской Албании)</i>"sv,
         u8"<p>Считается, что создана Месропом Маштоцем, создателем армянского алфавита\u00A0— впрочем, это не так: "
                 "Маштоц жил 362–440, и непонятно, какова была его роль. "
@@ -377,7 +377,7 @@ constinit const uc::Script uc::scriptInfo[] {
     ///    08BE+ (2020),
     { "Arab"sv, QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Арабская"sv, u8"IV—VI век"sv,
+        u8"Арабский"sv, u8"IV—VI век"sv,
         u8"арабский, персидский, урду, уйгурский, пуштунский…"sv,
         u8"<p>Письменность развилась из [[ps:Syrc|сирийской]]. "
                 "Арабский язык тесно связан с исламом; на этом языке написан Коран (610–632). "
@@ -390,7 +390,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [tofu, P1] No font at all
     { "Armi"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Имперская арамейская"sv, u8"VII в. до н.э."sv,
+        u8"Имперский арамейский"sv, u8"VII в. до н.э."sv,
         u8"имперский арамейский <i>(также канцелярский арамейский\u00A0— язык Персии 500—329 до н.э.)</i>",
         u8"<p>Использовался в Ахеменидской империи как книжный язык. Был кодифицирован настолько, что крайне сложно опознать "
                 "время и место конкретного документа. С завоеванием Персии Александром Македонским началась "
@@ -400,7 +400,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [tofu, BMP] Noto is ugly and has tofu 0560 and 0588, W7 has tofu 058D+.
     { "Armn"sv, QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Армянская"sv, u8"405"sv,
+        u8"Армянский"sv, u8"405"sv,
         u8"армянский"sv,
         u8"<p>Изобретён учёным и священником Месропом Маштоцем (362–440). Непонятно, брался ли какой-то алфавит за основу "
                 u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. "
@@ -411,7 +411,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Балийская"sv, u8"≈1000"sv,
+        u8"Балийский"sv, u8"≈1000"sv,
         u8"балийский, сасакский"sv,
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv,
@@ -437,7 +437,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng"sv, QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Бенгальская"sv, u8"XV век"sv,
+        u8"Бенгальский"sv, u8"XV век"sv,
         u8"бенгальский, ассамский, санскрит <i>(Бангладеш, Индия)</i>"sv,
         u8"<p>Относится к восточной ветви индийского письма. Гласная по умолчанию{{-}}среднее между «а» и «о», "
                 "в Юникоде условно обозначается «а», в других источниках «ɔ» или «ô». "
@@ -478,7 +478,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buginese OK, W10 only → installed Google Noto
     { "Bugi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Бугийская (лонтара)"sv, u8"XVII век"sv,
+        u8"Бугийский (лонтара)"sv, u8"XVII век"sv,
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара\u00A0— потомок брахми и работает по тому же принципу. Гласная по умолчанию «а». "
             "Со времён голландской колонизации заменяется латиницей.</p>"sv,
@@ -506,7 +506,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::CANADIAN_ABORIGINAL },
     { "Cham"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Чамская"sv, u8"IV век"sv,
+        u8"Чамский"sv, u8"IV век"sv,
         u8"чамский <i>(Вьетнам, Камбоджа)</i>"sv,
         u8"<p>Чамская письменность произошла из брахми, и слоги по умолчанию заканчиваются гласной «а». Чтобы добавить другую гласную, "
                 "дописывается огласовка. Но у чамов исчез знак «вирама» (убрать гласную), вместо этого к слогу добавляется знак "
@@ -529,7 +529,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Коптская"sv, u8"II век"sv,
+        u8"Коптский"sv, u8"II век"sv,
         u8"коптский"sv,
         u8"<p>Происходит из [[ps:Grek|греческого]]. Используется коптами (египетскими христианами) как богослужебный. "
                 "Общаются копты по-арабски, как разговорный коптский умер от XVII до XIX{{_}}века."
@@ -625,7 +625,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Georgian OK, installed Google Noto font
     { "Geor"sv, QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Грузинская"sv, u8"≈V век"sv,
+        u8"Грузинский"sv, u8"≈V век"sv,
         u8"грузинский, мегрельский и другие картвельские"sv,
         u8"<p>Достоверно неизвестно, когда создана грузиница и что было прототипом. "
                 "Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, "
@@ -644,7 +644,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, W7 Cambria is horrible → installed Google Noto and checked umlauts
     { "Grek"sv, QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Греческая"sv, u8"IX век до н.э."sv,
+        u8"Греческий"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,
         u8"<p>Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}"
                     "[[ps:Linb|линейное письмо Б]] и [[pt:Cypr|кипрское]]. "
@@ -768,9 +768,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Яванская"sv, u8"XV век"sv,
+        u8"Яванский"sv, u8"XV век"sv,
         u8"яванский, мелкие языки Явы"sv,
-        u8"<p>Происходит из брахми. Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
+        u8"<p>Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
                 "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
                 "В настоящее время вытесняется латиницей.</p>"sv,
                 EcFont::JAVANESE },
@@ -803,7 +803,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [desc] Describe Khmer, interesting script
     { "Khmr"sv, QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Кхмерская"sv, u8"VI век"sv,
+        u8"Кхмерский"sv, u8"VI век"sv,
         u8"кхмерский <i>(Камбоджа)</i>"sv,
         u8"<p>Как и другие языки Юго-Восточной Азии, произошёл из брахми. Гласная по умолчанию для одних согласных «а», "
                 "для других «о». Самый старый источник датируется 611. "
@@ -835,7 +835,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Lao OK, W10 partial, installed SengBuhan font
     { "Laoo"sv, QFontDatabase::Lao,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Лаосская"sv, u8"≈1350"sv,
+        u8"Лаосский"sv, u8"≈1350"sv,
         u8"лаосский"sv,
         u8"<p>Лаосский алфавит стандартизирован в XIV веке. Как и тайский, происходит из [[ps:Khmr|кхмерского]]. "
                 "После реформы, сделанной коммунистами в 1960-е, исчезли гласная по умолчанию и знак вирамы, и у лаосского остался последний "
@@ -912,7 +912,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Мандейская"sv, u8"II—VII век"sv,
+        u8"Мандейский"sv, u8"II—VII век"sv,
         u8"мандейский <i>(Иран и Ирак)</i>"sv,
         u8"<p>Произошла из арамейского или парфянского письма. Используется так называемыми «болотными арабами», живущими у слияния рек "sv
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
@@ -1081,7 +1081,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Самаритянская"sv, u8"около 600—200 до н.э.",
+        u8"Самаритянский"sv, u8"около 600—200 до н.э.",
         u8"иврит, самаритянский арамейский"sv,
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
                 "религию и культуру. На 2021 существует не более 700 самаритян.</p>"sv,
@@ -1102,7 +1102,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [desc, BMP] interesting script, describe
     { "Sinh"sv, QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Сингальская"sv, u8"300",
+        u8"Сингальский"sv, u8"300",
         u8"сингальский <i>(Шри-Ланка)</i>",
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "
                 "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv,
@@ -1110,7 +1110,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sundanese OK, even W10 off → installed Google Noto
     { "Sund"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Сунданская"sv, u8"XIV век",
+        u8"Сунданский"sv, u8"XIV век",
         u8"сунданский <i>(Ява)</i>"sv,
         u8"<p>Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. Обычная брахмийская абугида с гласной по умолчанию «а». "
                 "Для других гласных используются огласовки, для голой согласной{{-}}знак «вирама» ''(pamaaeh)'': "
@@ -1139,7 +1139,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc"sv, QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
-        u8"Сирийская"sv, u8"I век",
+        u8"Сирийский"sv, u8"I век",
         u8"сирийский <i>(исп. как литургический)</i>, новоарамейские, малаялам, согдийский"sv,
         u8"<p>Потомок [[ps:Armi|арамейского]] алфавита, впоследствии развившийся в [[ps:Arab|арабицу]]. "
                 "Используется малыми семитскими народами. В сирийском письме уже видны некоторые особенности арабицы: "
@@ -1192,7 +1192,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [tofu, P1] Aux. Tamil characters are still tofu
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Тамильская"sv, u8"VI—IX век"sv,
+        u8"Тамильский"sv, u8"VI—IX век"sv,
         u8"тамильский <i>(Индия, Шри-Ланка, Сингапур)</i>"sv,
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». Вирама употребляется очень часто и превратилась в точку. "
@@ -1237,7 +1237,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Тагальская (байбайин)"sv, u8"1300 (спорно) — 1500 (точно)"sv,
+        u8"Тагальский (байбайин)"sv, u8"1300 (спорно) — 1500 (точно)"sv,
         u8"старотагальский и другие языки Явы и Филиппин"sv,
         u8"<p>Обычная брахмийская абугида с гласной по умолчанию «а» и вирамой. Обойдусь самоназванием письменности: "
             "{{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} «ба-й-ба-йи-н»."
@@ -1271,7 +1271,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai"sv, QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Тайская"sv, u8"1283"sv,
+        u8"Тайский"sv, u8"1283"sv,
         u8"тайский"sv,
         u8"<p>Произошла из старокхмерского, который, в свою очередь, произошёл из брахми. "
                 "Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.</p>"
