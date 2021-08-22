@@ -1518,7 +1518,7 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [font] Which font to select and what to do with Syriac Malayalam?
     { 0x0860, 0x086F,
             "Syriac Supplement", u8"Сирийский дополнительный"sv,
-            u8"<p>Необычная запись языка [[ps:Mlym|мамая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
+            u8"<p>Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века."sv,
             EcScript::Syrc },
     /// @todo [tofu] 08BE+, all are 2020, 11 chars
