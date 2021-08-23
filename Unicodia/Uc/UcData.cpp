@@ -557,7 +557,6 @@ constinit const uc::Script uc::scriptInfo[] {
             u8"<p>СССР сделал кириллическую письменность для многих языков союзных республик. С развалом СССР на латиницу перешли "
                 u8"Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
     /// @todo [tofu, BMP] Main block OK, but Vedic is a read PitA.
-    /// @todo [tofu, BMP] Another PitA in W7, A8FC+
     { "Deva"sv, QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари"sv, u8"I—VII век",
@@ -1997,7 +1996,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0xA6A0, 0xA6FF,
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
     { 0xA700, 0xA71F,
-            "Modifier Tone Letters", u8"Символы изменения тона" },
+            "Modifier Tone Letters", u8"Символы изменения тона"sv },
     /// @todo [semi-tofu] A7F8, A7F9 render badly
     /// @todo [desc] Latin ex D
     { 0xA720, 0xA7FF,
@@ -2014,6 +2013,7 @@ constinit const uc::Block uc::blocks[302] {
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
     { 0xA880, 0xA8DF,
             "Saurashtra", u8"Саураштра", {}, EcScript::Saur },
+    /// @todo [tofu] Another PitA in W7, A8FC+
     { 0xA8E0, 0xA8FF,
             "Devanagari Extended", u8"Деванагари расширенный", {}, EcScript::Deva },
     { 0xA900, 0xA92F,
