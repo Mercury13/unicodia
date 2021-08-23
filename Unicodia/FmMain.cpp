@@ -466,6 +466,19 @@ namespace {
         }
     }
 
+    void drawDeprecated(QPainter* painter, const QRect& r)
+    {
+        static constexpr int SZ = 8;    // we draw lines between pixel centers, actually +1
+        static constexpr int OFS = 4;
+        const int x1 = r.right() - OFS;
+        const int x0 = x1 - SZ;
+        const int y0 = r.top() + OFS;
+        const int y1 = y0 + SZ;
+        painter->setPen(CL_DEPRECATED);
+        painter->drawLine(x0, y0, x1, y1);
+        painter->drawLine(x0, y1, x1, y0);
+    }
+
 }   // anon namespace
 
 
@@ -489,6 +502,8 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
                               model.textAt(*ch));
         }
+        if (ch->isDeprecated())
+            drawDeprecated(painter, rect);
     }
 }
 
@@ -1129,11 +1144,17 @@ void FmMain::showCp(MaybeChar ch)
         str::append(text, ch->name.tech());
         str::append(text, "</h1>");
 
+        // Deprecated
+        if (ch->isDeprecated()) {
+            str::append(text, u8"<h3><a href='pt:deprecated'" SUBTAG_DEPRECATED ">Запрещённый символ</a></h3>"sv);
+        }
+
         {   // Info box
             str::append(text, "<p>");
             str::QSep sp(text, "<br>");
 
             // Script
+            sp.sep();
             auto& scr = ch->script();
             appendValuePopup(text, scr, u8"Письменность", "ps");
 

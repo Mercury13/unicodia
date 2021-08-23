@@ -390,7 +390,7 @@ namespace uc {
 
     enum class Cfg : unsigned char {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
-        IS_DEPRECATED = 2,      ///< [+] char is deprecated
+        DEPRECATED = 2,         ///< [+] char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
@@ -432,6 +432,7 @@ namespace uc {
 
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
+        constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }
     };
 
     extern Cp cpInfo[N_CPS];

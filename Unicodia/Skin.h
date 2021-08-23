@@ -1,10 +1,14 @@
 #pragma once
 
+#include <QColor>
+
 // Colors, sizes etc that are NOT derived from system
 
 // Color names
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP "ForestGreen"
+#define CNAME_LINK_DEPRECATED "#CC0000"
+constexpr QColor CL_DEPRECATED { 0xDD, 0x00, 0x00 };
 
 #define LINK_SUBTAG(color, place) \
             " style='color:" color "; "   \
@@ -14,6 +18,9 @@
 
 #define SUBTAG_POPUP \
     LINK_SUBTAG(CNAME_LINK_POPUP, "0.05")
+
+#define SUBTAG_DEPRECATED \
+    LINK_SUBTAG(CNAME_LINK_DEPRECATED, "0.05")
 
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"
