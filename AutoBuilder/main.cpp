@@ -272,6 +272,7 @@ int main()
 
     StringLib strings;
     NumCache nums;
+    int nDeprecated = 0;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
         std::string_view sCp = elChar.attribute("cp").as_string();
         if (sCp.empty()) {
@@ -356,6 +357,11 @@ int main()
         int flags = 0;
         if (!allAbbrevs.empty())
             flags |= 1;
+        // Deprecated
+        if (elChar.attribute("Dep").as_string()[0] == 'Y') {
+            flags |= 2;
+            ++nDeprecated;
+        }
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
@@ -418,7 +424,9 @@ int main()
     os << "};" << '\n';
 
     std::cout << "OK" << std::endl;
-    std::cout << "Found " << nChars << " chars, " << nSpecialRanges << " special ranges " << std::endl;
+    std::cout << "Found " << std::dec << nChars << " chars, "
+              << nDeprecated << " deprecated, "
+              << nSpecialRanges << " special ranges." << std::endl;
 
     os << "const char8_t uc::allStrings[] = \n";
     for (auto& v : strings.inOrder()) {
@@ -441,11 +449,11 @@ int main()
 
         ++nBlocks;
     }
-    std::cout << "Found " << std::dec << nBlocks << " blocks" << std::endl;
+    std::cout << "Found " << std::dec << nBlocks << " blocks." << std::endl;
 
     ///// Numerics /////////////////////////////////////////////////////////////
 
-    std::cout << "Stockpiled " << nums.size() << " numerics" << std::endl;
+    std::cout << "Stockpiled " << nums.size() << " numerics." << std::endl;
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
         os << "{ " << std::dec << v.num << ", " << v.denom
