@@ -1829,7 +1829,6 @@ constinit const uc::Block uc::blocks[302] {
                     "«Электронные жучки» и других."sv,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK
-    /// @todo [desc] Enclosed alnum
     { 0x2460, 0x24FF,
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры"sv,
             u8"По данным английской Википедии, эти символы в основном предназначены для списков{{-}}"
