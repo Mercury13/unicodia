@@ -1149,7 +1149,9 @@ void FmMain::showCp(MaybeChar ch)
             auto& numc = ch->numeric();
             if (numc.isPresent()) {
                 sp.sep();
+                str::append(text, "<a href='pt:number'" SUBTAG_POPUP ">");
                 str::append(text, numc.type().locName);
+                str::append(text, "</a>");
                 str::append(text, ": ");
                 str::append(text, numc.num);
                 if (numc.denom != 1) {
