@@ -80,10 +80,8 @@ namespace uc {
         HIEROGLYPH,     ///< Pictures of things (CJK)
         SYLLABOHIEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
         CONSONANTHIEROGLYPH, ///< Consonant + hieroglyph (Egyptian)
-        //SHORTHAND,      ///< Mostly alphabet, but with some simplifications
-        //                ///<   (English stenography)
-        CODE,           ///< System for encoding other scripts (Braille)
-        SYMBOL,         ///< Miscellaneous symbols
+        OTHER,          ///< Other systems
+        //SYMBOL,         ///< Miscellaneous symbols
         //GAME,           ///< Tabletop games
         //EMOJI,          ///< Emoji pictures
         NN,
