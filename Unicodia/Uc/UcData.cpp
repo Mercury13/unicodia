@@ -89,6 +89,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf", {}, {}, 110_pc }, // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
     { "Noto Sans Old Italic",       "NotoSansOldItalic-Regular.ttf" },          // Old Italic
+    { "Noto Sans Old Permic",       "NotoSansOldPermic-Regular.ttf" },          // Old Permic
     { "Microsoft PhagsPa",          {} },                                       // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, {}, 150_pc },                       // Phaistos disc
     { "Noto Sans Rejang",           "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER }, // Rejang
@@ -1069,6 +1070,17 @@ constinit const uc::Script uc::scriptInfo[] {
                 "нет вирам вообще, в другой{{-}}одна вирама. "
                 "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
                 EcFont::GURMUKHI },
+    // Old Permic ???, W10 none, installed Google Noto
+    { "Perm"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        u8"Древнепермский (коми-зырянский, анбур)", u8"1372",
+        u8"коми-зырянский, коми-пермяцкий",
+        u8"<p>Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] "
+                    "с вкраплением [[ps:Grek|греческого]] и местных рун. "
+                "Названа по первым двум буквам, «ан» и «бур». "
+                "Иногда использовалась как тайнопись для тогдашнего русского. "
+                "В XVII{{_}}веке окончательно вытеснена кириллицей."sv,
+                EcFont::OLD_PERMIC },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA_INDIAN,

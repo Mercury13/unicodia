@@ -204,6 +204,7 @@ namespace uc {
         OGHAM,
         OLCHIKI,
         OLD_ITALIC,
+        OLD_PERMIC,
         PHAGS_PA,
         PHAISTOS_DISC,
         REJANG,

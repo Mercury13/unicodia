@@ -75,6 +75,7 @@ namespace uc {
         Ogam,   // Ogham
         Olck,   // Ol Chiki
         Orya,   // Oriya
+        Perm,   // Old Permic
         Phag,   // Phags-Pa
         Rjng,   // Rejang
         Runr,   // European runes
@@ -176,7 +177,6 @@ namespace uc {
         Osma = Zyyy,        // beyond BMP
         Palm = Zyyy,        // beyond BMP
         Pauc = Zyyy,        // beyond BMP
-        Perm = Zyyy,        // beyond BMP
         Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars
