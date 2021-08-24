@@ -1070,7 +1070,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 "нет вирам вообще, в другой{{-}}одна вирама. "
                 "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
                 EcFont::GURMUKHI },
-    // Old Permic ???, W10 none, installed Google Noto
+    // Old Permic OK, W10 none, installed Google Noto
+    /// @todo [link] Hungarian runes
     { "Perm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Древнепермский (коми-зырянский, анбур)", u8"1372",
@@ -1079,7 +1080,9 @@ constinit const uc::Script uc::scriptInfo[] {
                     "с вкраплением [[ps:Grek|греческого]] и местных рун. "
                 "Названа по первым двум буквам, «ан» и «бур». "
                 "Иногда использовалась как тайнопись для тогдашнего русского. "
-                "В XVII{{_}}веке окончательно вытеснена кириллицей."sv,
+                "В XVII{{_}}веке окончательно вытеснена кириллицей."
+            "<p>Анбур{{-}}важный источник по финно-угорским языкам. "
+                "Древнее только венгерские руны."sv,
                 EcFont::OLD_PERMIC },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag"sv, QFontDatabase::Any,
@@ -2217,6 +2220,7 @@ constinit const uc::Block uc::blocks[302] {
     // Gothic OK
     { 0x10330, 0x1034F,
             "Gothic", u8"Готский", {}, EcScript::Goth },
+    // Old Permic OK
     { 0x10350, 0x1037F,
             "Old Permic", u8"Древнепермский (анбур)", {}, EcScript::Perm },
     { 0x10380, 0x1039F,
@@ -2422,6 +2426,7 @@ constinit const uc::Block uc::blocks[302] {
             {},
             EcScript::NONE, EcFont::MUSIC },
     /// @todo [tofu] How to show chars like NULL NOTE HEAD?
+    /// @todo [semi-tofu] Check and take smth from Segoe UI Symbol
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы"sv,
             u8"<p>С X{{_}}века появилась нотная запись, похожая на современную. "
