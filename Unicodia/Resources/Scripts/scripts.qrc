@@ -50,5 +50,10 @@
         <file>1800.png</file>
         <file>18B0.png</file>
         <file>1900.png</file>
+        <file>1950.png</file>
+        <file>1980.png</file>
+        <file>19E0.png</file>
+        <file>1A00.png</file>
+        <file>1A20.png</file>
     </qresource>
 </RCC>
