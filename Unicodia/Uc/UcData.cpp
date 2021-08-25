@@ -1456,7 +1456,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 constinit const uc::Block uc::blocks[302] {
     // Basic Latin OK
     { 0x0000, 0x007F,
-            "Basic Latin", u8"Базовая латиница"sv, CT_ASCII, EcScript::Latn },
+            "Basic Latin", u8"Латиница базовая"sv, CT_ASCII, EcScript::Latn },
     // Latin-1 OK
     { 0x0080, 0x00FF,
             "Latin-1 Supplement", u8"Латиница-1"sv, CT_LATIN1, EcScript::Latn },
