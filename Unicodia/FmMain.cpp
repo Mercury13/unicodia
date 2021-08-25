@@ -129,12 +129,15 @@ int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
 QVariant BlocksModel::data(const QModelIndex& index, int role) const
 {
+    #define GET_BLOCK \
+            size_t i = index.row();         \
+            if (i >= uc::N_BLOCKS)          \
+                return {};                  \
+            auto& block = uc::blocks[i];
+
     switch (role) {
     case Qt::DisplayRole: {
-            size_t i = index.row();
-            if (i >= uc::N_BLOCKS)
-                return {};
-            auto& block = uc::blocks[i];
+            GET_BLOCK
             return str::toQ(block.locName);
             /// @todo [ui] how to show character ranges? — now they are bad
             //char buf[200];
@@ -143,9 +146,21 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             //         static_cast<int>(block.startingCp),
             //         static_cast<int>(block.endingCp));
         }
+    case Qt::DecorationRole: {
+            GET_BLOCK
+            if (!block.icon) {
+                char buf[48];
+                snprintf(buf, std::size(buf), ":/Scripts/%04X.png", static_cast<int>(block.startingCp));
+                block.icon.reset(new QImage());
+                block.icon->load(buf);
+            }
+            return *block.icon;
+        }
     default:
         return {};
     }
+
+    #undef GET_BLOCK
 }
 
 

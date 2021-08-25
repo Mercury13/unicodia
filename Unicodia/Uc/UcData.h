@@ -6,6 +6,7 @@
 // Qt
 #include <QFont>
 #include <QFontDatabase>
+#include <QImage>
 
 // Misc
 #include "u_TypedFlags.h"
@@ -351,6 +352,7 @@ namespace uc {
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
+        mutable std::unique_ptr<QImage> icon {};
 
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
