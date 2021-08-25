@@ -38,5 +38,10 @@
         <file>1100.png</file>
         <file>1200.png</file>
         <file>1380.png</file>
+        <file>13A0.png</file>
+        <file>1400.png</file>
+        <file>1680.png</file>
+        <file>16A0.png</file>
+        <file>1700.png</file>
     </qresource>
 </RCC>
