@@ -273,6 +273,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
+    { "AESCULAPIUS",    Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
     { "APOSTROPHE"sv,   Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
@@ -296,7 +297,10 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "HASANTA"sv,      Dicf::PART_NOUN },
     { "HERMES"sv,       Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "HOOK"sv,         Dicf::PART_NOUN },
+    { "JERUSALEM"sv,    Dicf::PART_NOUN | Dicf::CAP_TITLE },
+    { "LILITH",         Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "LINE"sv,         Dicf::PART_NOUN },
+    { "LORRAINE"sv,     Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "MCHU"sv,         Dicf::PART_NOUN },
     { "PLUS"sv,         Dicf::PART_NOUN },
     { "REDUPLICATION"sv, Dicf::PART_NOUN },
