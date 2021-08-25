@@ -10,7 +10,31 @@
         <file>0370.png</file>
         <file>0400.png</file>
         <file>0500.png</file>
+        <file>0530.png</file>
+        <file>0590.png</file>
+        <file>0600.png</file>
+        <file>0700.png</file>
+        <file>0750.png</file>
+        <file>0780.png</file>
+        <file>07C0.png</file>
+        <file>0800.png</file>
+        <file>0840.png</file>
+        <file>08A0.png</file>
         <file>0900.png</file>
         <file>0980.png</file>
+        <file>0A00.png</file>
+        <file>0A80.png</file>
+        <file>0B00.png</file>
+        <file>0B80.png</file>
+        <file>0C00.png</file>
+        <file>0C80.png</file>
+        <file>0D00.png</file>
+        <file>0D80.png</file>
+        <file>0E00.png</file>
+        <file>0E80.png</file>
+        <file>0F00.png</file>
+        <file>1000.png</file>
+        <file>10A0.png</file>
+        <file>1100.png</file>
     </qresource>
 </RCC>

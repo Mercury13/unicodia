@@ -6,7 +6,7 @@
 // Qt
 #include <QFont>
 #include <QFontDatabase>
-#include <QImage>
+#include <QPixmap>
 
 // Misc
 #include "u_TypedFlags.h"
@@ -179,6 +179,7 @@ namespace uc {
         ETHIOPIC,
         GEORGIAN,
         GLAGOLITIC,
+        GUJARATI,
         GURMUKHI,
         HANUNOO,
         HEBREW,
@@ -352,7 +353,7 @@ namespace uc {
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
-        mutable std::unique_ptr<QImage> icon {};
+        mutable std::unique_ptr<QPixmap> icon {};
 
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
