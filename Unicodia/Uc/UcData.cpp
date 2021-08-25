@@ -1081,7 +1081,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Иногда использовалась как тайнопись для тогдашнего русского. "
                 "В XVII{{_}}веке окончательно вытеснена кириллицей."
             "<p>Анбур{{-}}важный источник по финно-угорским языкам. "
-                "Древнее только венгерские руны."sv,
+                "Древнее только [[ps:Hung|венгерские руны]]."sv,
                 EcFont::OLD_PERMIC },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag"sv, QFontDatabase::Any,
