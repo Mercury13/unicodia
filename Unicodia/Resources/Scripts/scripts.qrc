@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/Scripts">
+        <file>0000.png</file>
+        <file>0080.png</file>
+        <file>0100.png</file>
+        <file>0180.png</file>
+        <file>0250.png</file>
+        <file>0900.png</file>
+        <file>0980.png</file>
+    </qresource>
+</RCC>

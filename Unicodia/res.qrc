@@ -1,5 +1,0 @@
-<RCC>
-    <qresource prefix="/Scripts">
-        <file alias="0900.png">Resources/Scripts/0900.png</file>
-    </qresource>
-</RCC>
