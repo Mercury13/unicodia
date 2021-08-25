@@ -36,5 +36,7 @@
         <file>1000.png</file>
         <file>10A0.png</file>
         <file>1100.png</file>
+        <file>1200.png</file>
+        <file>1380.png</file>
     </qresource>
 </RCC>
