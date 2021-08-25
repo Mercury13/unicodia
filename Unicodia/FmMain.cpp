@@ -1253,7 +1253,7 @@ void FmMain::showCp(MaybeChar ch)
                 appendScript(text, sc, false);
             }
         }
-        std::cout << text.toStdString() << std::endl;
+        //std::cout << text.toStdString() << std::endl;
         ui->vwInfo->setText(text);
     } else {
         // No character
