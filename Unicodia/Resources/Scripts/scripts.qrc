@@ -79,5 +79,15 @@
         <file>2200.png</file>
         <file>2300.png</file>
         <file>2400.png</file>
+        <file>25A0.png</file>
+        <file>27C0.png</file>
+        <file>27F0.png</file>
+        <file>2440.png</file>
+        <file>2460.png</file>
+        <file>2500.png</file>
+        <file>2580.png</file>
+        <file>2600.png</file>
+        <file>2700.png</file>
+        <file>2800.png</file>
     </qresource>
 </RCC>
