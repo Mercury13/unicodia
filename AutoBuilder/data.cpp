@@ -273,7 +273,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
-    { "AESCULAPIUS",    Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "ANUSVARA"sv,     Dicf::PART_NOUN },
     { "APOSTROPHE"sv,   Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
@@ -290,18 +289,13 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "COMMA"sv,        Dicf::PART_NOUN },
     { "CIRCLE"sv,       Dicf::PART_NOUN },
     { "DANDA"sv,        Dicf::PART_NOUN },
-    { "DAVID"sv,        Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "DNA"sv,          Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "DOT"sv,          Dicf::PART_NOUN },
     { "DOTS"sv,         Dicf::PART_NOUN },
     { "FORM"sv,         Dicf::PART_NOUN },
     { "HASANTA"sv,      Dicf::PART_NOUN },
-    { "HERMES"sv,       Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "HOOK"sv,         Dicf::PART_NOUN },
-    { "JERUSALEM"sv,    Dicf::PART_NOUN | Dicf::CAP_TITLE },
-    { "LILITH",         Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "LINE"sv,         Dicf::PART_NOUN },
-    { "LORRAINE"sv,     Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "MCHU"sv,         Dicf::PART_NOUN },
     { "PLUS"sv,         Dicf::PART_NOUN },
     { "REDUPLICATION"sv, Dicf::PART_NOUN },
@@ -413,7 +407,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "FINAL"sv,        Dicf::PART_ADJECTIVE },
     { "FLAT"sv,         Dicf::PART_ADJECTIVE },
     { "FLATTENED"sv,    Dicf::PART_ADJECTIVE },
-    { "FRANKS"sv,       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "FRICATIVE"sv,    Dicf::PART_ADJECTIVE },
     { "GLOTTAL"sv,      Dicf::PART_ADJECTIVE },
     { "GRAVE"sv,        Dicf::PART_ADJECTIVE },
@@ -451,7 +444,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "NORTH"sv,        Dicf::PART_ADJECTIVE },
     { "OBLIQUE"sv,      Dicf::PART_ADJECTIVE },
     { "OPEN"sv,         Dicf::PART_ADJECTIVE },
-    { "ORKHON"sv,       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "OVERLONG"sv,     Dicf::PART_ADJECTIVE },
     { "PALATAL"sv,      Dicf::PART_ADJECTIVE },
     { "PHARYNGEAL"sv,   Dicf::PART_ADJECTIVE },
@@ -494,15 +486,24 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "UP"sv,           Dicf::PART_ADJECTIVE },
     { "VERTICAL"sv,     Dicf::PART_ADJECTIVE },
     { "VOCALIC"sv,      Dicf::PART_ADJECTIVE },
-    { "VOLAPUK"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "VOICED"sv,       Dicf::PART_ADJECTIVE },
     { "VOICELESS"sv,    Dicf::PART_ADJECTIVE },
-    { "YENISEI"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
     // Names
+    { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CHRISTMAS"sv,    Dicf::CAP_TITLE },
+    { "DAVID"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "FITZPATRICK"sv,  Dicf::CAP_TITLE },
-    { "JAPAN"sv,        Dicf::PART_NOUN | Dicf::CAP_TITLE },
-    { "FUJI"sv,         Dicf::PART_NOUN | Dicf::CAP_TITLE },
+    { "FRANKS"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FUJI"sv,         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HERMES"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JAPAN"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JERUSALEM"sv,    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LORRAINE"sv,     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ORKHON"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "VOLAPUK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
+    { "YENISEI"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
 
     // Some letters
     { "A"sv,            Dicf::PART_MAYBE_LETTER },
