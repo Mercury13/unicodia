@@ -126,7 +126,7 @@
                  <item>
                   <widget class="QComboBox" name="comboBlock">
                    <property name="maxVisibleItems">
-                    <number>35</number>
+                    <number>28</number>
                    </property>
                   </widget>
                  </item>
