@@ -55,5 +55,19 @@
         <file>19E0.png</file>
         <file>1A00.png</file>
         <file>1A20.png</file>
+        <file>1AB0.png</file>
+        <file>1B00.png</file>
+        <file>1B80.png</file>
+        <file>1BC0.png</file>
+        <file>1C00.png</file>
+        <file>1C50.png</file>
+        <file>1C80.png</file>
+        <file>1CC0.png</file>
+        <file>1CD0.png</file>
+        <file>1D00.png</file>
+        <file>1D80.png</file>
+        <file>1DC0.png</file>
+        <file>1E00.png</file>
+        <file>1F00.png</file>
     </qresource>
 </RCC>
