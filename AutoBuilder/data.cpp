@@ -290,6 +290,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "COMMA"sv,        Dicf::PART_NOUN },
     { "CIRCLE"sv,       Dicf::PART_NOUN },
     { "DANDA"sv,        Dicf::PART_NOUN },
+    { "DAVID"sv,        Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "DNA"sv,          Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "DOT"sv,          Dicf::PART_NOUN },
     { "DOTS"sv,         Dicf::PART_NOUN },
