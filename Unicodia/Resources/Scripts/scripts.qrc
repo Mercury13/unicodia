@@ -89,5 +89,8 @@
         <file>2600.png</file>
         <file>2700.png</file>
         <file>2800.png</file>
+        <file>2A00.png</file>
+        <file>2900.png</file>
+        <file>2980.png</file>
     </qresource>
 </RCC>

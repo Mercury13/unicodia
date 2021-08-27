@@ -45,8 +45,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "CHAM"sv,         Dicf::TRIG_SCRIPT },
     { "CHEROKEE"sv,     Dicf::TRIG_SCRIPT },
     { "CIRTH"sv,        Dicf::TRIG_SCRIPT },
-    { "COPTIC"sv,       Dicf::TRIG_SCRIPT },
-    { "NUBIAN"sv,       Dicf::TRIG_SCRIPT },
+    { "COPTIC"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "NUBIAN"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "CYPRO-MINOAN"sv, { Dicf::TRIG_SCRIPT, "Cypro-Minoan"sv } },
     { "CYPRIOT"sv,      Dicf::TRIG_SCRIPT },
     { "CYRILLIC"sv,     Dicf::TRIG_SCRIPT },
@@ -108,7 +108,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "JAVANESE"sv,     Dicf::TRIG_SCRIPT },
     { "JAPANESE"sv,     Dicf::TRIG_SCRIPT },
     { "KAYAH"sv,        { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LI"sv } },
-    { "KATAKANA"sv,     Dicf::TRIG_SCRIPT },
+    { "KATAKANA"sv,     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KATAKANA-HIRAGANA"sv, { Dicf::TRIG_SCRIPT, "Katakana-Hiragana"sv } },
     { "KHAROSHTHI"sv,   Dicf::TRIG_SCRIPT },
     { "KHMER"sv,        Dicf::TRIG_SCRIPT },
@@ -150,6 +150,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "NABATAEAN"sv,    Dicf::TRIG_SCRIPT },
     { "NEWA"sv,         Dicf::TRIG_SCRIPT },
     { "NKO"sv,          { Dicf::TRIG_SCRIPT, "NKo" } },
+    { "NUBIAN"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "NUSHU"sv,        Dicf::TRIG_SCRIPT },
     { "OGHAM"sv,        Dicf::TRIG_SCRIPT },
     { "OL"sv,           { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv } },
@@ -270,6 +271,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "OJIBWAY",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Other nations
+    { "AKHMIMIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "BOHAIRIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
@@ -393,15 +396,19 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BOOK"sv,         Dicf::PART_ADJECTIVE },
     { "BOTTOM"sv,       Dicf::PART_ADJECTIVE },
     { "CAPITAL"sv,      Dicf::PART_ADJECTIVE },
-    { "CASKET"sv,       Dicf::PART_ADJECTIVE },
+    { "CASKET"sv,       Dicf::PART_ADJECTIVE },  // OK here, runes
+    { "CIRCLED"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
     { "CLOSED"sv,       Dicf::PART_ADJECTIVE },
     { "COMBINING"sv,    Dicf::PART_ADJECTIVE },
+    { "CROSSED"sv,      Dicf::PART_ADJECTIVE },
+    { "CRYPTOGRAMMIC",  Dicf::PART_ADJECTIVE },
     { "DOUBLE"sv,       Dicf::PART_ADJECTIVE },
     { "DOTTED"sv,       Dicf::PART_ADJECTIVE },
     { "DOTLESS"sv,      Dicf::PART_ADJECTIVE },
     { "DOWN"sv,         Dicf::PART_ADJECTIVE },
     { "DIAERESIZED",    Dicf::PART_ADJECTIVE },
     { "DIAGONAL"sv,     Dicf::PART_ADJECTIVE },
+    { "DIALECT-P"sv,    { Dicf::PART_ADJECTIVE, "dialect-P" } },
     { "EXCLAMATION"sv,  Dicf::PART_ADJECTIVE },
     { "FIXED-FORM"sv,   Dicf::PART_ADJECTIVE },
     { "FINAL"sv,        Dicf::PART_ADJECTIVE },
@@ -423,6 +430,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "INSCRIPTIONAL"sv, Dicf::PART_ADJECTIVE },
     { "INSULAR"sv,      Dicf::PART_ADJECTIVE },
     { "INVERTED"sv,     Dicf::PART_ADJECTIVE },
+    { "L-SHAPED"sv,     Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "LATINATE"sv,     Dicf::PART_ADJECTIVE },
     { "LEFT"sv,         Dicf::PART_ADJECTIVE },
     { "LEFT-STEM"sv,    Dicf::PART_ADJECTIVE },
@@ -491,17 +499,21 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "CHRISTMAS"sv,    Dicf::CAP_TITLE },
     { "DAVID"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "FITZPATRICK"sv,  Dicf::CAP_TITLE },
     { "FRANKS"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "FUJI"sv,         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HERMES"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HYGIEIA"sv,      Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JAPAN"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JERUSALEM"sv,    Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "LORRAINE"sv,     Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ORKHON"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SELENA"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "URANUS"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "VOLAPUK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
     { "YENISEI"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
 
@@ -526,6 +538,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "L"sv,            Dicf::CAP_TITLE },
     { "M"sv,            Dicf::CAP_TITLE },
     { "N"sv,            Dicf::CAP_TITLE },
+    //{ "NI"sv,           Dicf::CAP_TITLE },    // widely used in cuneiform, IDK what to do
     { "O"sv,            Dicf::CAP_TITLE },
     { "OM"sv,           Dicf::CAP_TITLE },
     { "OU"sv,           Dicf::CAP_TITLE },
@@ -542,9 +555,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "Y"sv,            Dicf::CAP_TITLE },
     { "Z"sv,            Dicf::CAP_TITLE },
     { "J-SIMPLIFIED"sv, Dicf::CAP_TITLE },
-
-    // Planets
-    { "URANUS"sv,       Dicf::PART_NOUN | Dicf::CAP_TITLE },
 
     // Some prepositions
     { "WITH"sv,         Dicf::CAP_SMALL },
@@ -770,8 +780,8 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Runic letter Short-twig-Madr M")
     EX("Runic letter Short-twig-Tyr T")
     EX("Yi syllable iteration mark")    // Maybe so
-    EX("Bowl of Hygieia")               // Special proper name
     EX("Symbol for type A electronics") // A is tricky
+    EX("Coptic combining Ni above") // Ni is widely used in cuneiform, and IDK what to do
 };
 
 const std::multiset<PrefixEntry> prefixes {
@@ -790,6 +800,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
     { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
     { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
+    { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
 };
 
 
