@@ -489,7 +489,7 @@ namespace {
         const int x0 = x1 - SZ;
         const int y0 = r.top() + OFS;
         const int y1 = y0 + SZ;
-        painter->setPen(CL_DEPRECATED);
+        painter->setPen(TX_DEPRECATED);
         painter->drawLine(x0, y0, x1, y1);
         painter->drawLine(x0, y1, x1, y0);
     }
@@ -605,6 +605,11 @@ FmMain::FmMain(QWidget *parent)
       charsDelegate(*this)
 {
     ui->setupUi(this);
+
+    // Collapse bar
+    ui->wiCollapse->hide();
+    ui->wiCollapse->setStyleSheet(
+                "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();

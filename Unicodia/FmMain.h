@@ -91,6 +91,7 @@ class CharsModel : public QAbstractTableModel
 public:
     QWidget* const owner;
     FontMatch match;
+    bool isCjkCollapsed = true;
 
     CharsModel(QWidget* aOwner);
 
