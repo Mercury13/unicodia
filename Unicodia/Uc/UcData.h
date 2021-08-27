@@ -132,6 +132,7 @@ namespace uc {
         LTR_BU,
         LTR_COL,
         BOTH,
+        TANGUT,
         NN,
     };
 
@@ -221,6 +222,7 @@ namespace uc {
         TAILUE,
         TAI_VIET,
         TAMIL,
+        TANGUT,
         TELUGU,
         THAANA,
         THAI,

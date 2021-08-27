@@ -107,6 +107,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Microsoft New Tai Lue",      {} },                                       // Tai Lue (new)
     { "Noto Sans Tai Viet",         "NotoSansTaiViet-Regular.ttf" },            // Tai Viet
     { "Nirmala UI,Latha",           {} },                                       // Tamil
+    { "Noto Serif Tangut",          "NotoSerifTangut-Regular.ttf", {}, {}, 125_pc }, // Tangut
     { "Noto Sans Telugu",           "NotoSansTelugu-Light.ttf", Ffg::LIGHT },   // Telugu
     { "MV Boli",                    {}, {}, {}, 110_pc },                       // Thaana
     { "Leelawadee,Leelawadee UI",   {}, Ffg::STUB_ON, "padding-bottom:10%;", 110_pc },  // Thai
@@ -141,6 +142,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"→, ↑"sv },
     { u8"↓↓→ по столбцам"sv },
     { u8"писали и ←, и →"sv },
+    { u8"писали ←↓↓ по столбцам и →"sv },
     //{ u8"Ошибка"sv },
 };
 
@@ -1253,6 +1255,21 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В английском также <i>cash</i> (касса, наличные), <i>ginger</i> (имбирь), <i>coolie</i> (чернорабочий) и другие."
             "<p>До того, как правительство Индии утвердило знак рупии ₹, у тамилов он существовал: {{sm|௹}}."sv,
                 EcFont::TAMIL },
+    // Tangut OK, installed Google Noto
+    { "Tang"sv, QFontDatabase::Any,
+        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::TANGUT, EcContinent::ASIA_INDIAN,
+        u8"Тангутский"sv, u8"1036"sv,
+        u8"тангутский <i>(северо-западный Китай)</i>"sv,
+        u8"<p>Очень сложная иероглифическая система, существовавшая в тангутском царстве Си Ся (северо-западный Китай). "
+                "Самые простые иероглифы состоят из 4{{_}}черт, в иероглифе «один» их 6. "
+                "Наиболее распространённая версия{{-}}письмо разработали около 1036 император Ли Юань-хао и учёный Ири Жэнь-юн."
+            "<p>Как и у [[ps:Hani|китайцев]], у тангутов была развита каллиграфия, у одного иероглифа было до 4 форм. "
+                "В Юникоде они закодированы одним символом, если не встречаются в одним источнике. "
+                "Знаки, имеющие одинаковую форму, но разные названия, также объединены."
+            "<p>Тангутское государство уничтожено Чингисханом в 1227, но письмо продолжало использоваться ещё несколько веков: "
+                "самый поздний памятник{{-}}1502, также существует рукописная помета позднее 1680."
+            "<p>Изучать мёртвое письмо начали европейцы с 1870, ключевую роль сыграл советский учёный Николай Невский."sv,
+                EcFont::TANGUT },
     // Tai Viet OK, installed Google Noto font
     { "Tavt"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -2397,14 +2414,21 @@ constinit const uc::Block uc::blocks[302] {
     { 0x16FE0, 0x16FFF,
             "Ideographic Symbols and Punctuation",
             u8"Символы и знаки препинания для иероглифов", {}, EcScript::Hani },
+    // Tangut OK
     { 0x17000, 0x187FF,
-            "Tangut", u8"Тангутский", {}, EcScript::Tang },
+            "Tangut", u8"Тангутский"sv, {}, EcScript::Tang },
+    // Tangut components OK
     { 0x18800, 0x18AFF,
-            "Tangut Components", u8"Элементы тангутского письма", {}, EcScript::Tang },
+            "Tangut Components", u8"Элементы тангутского письма"sv, {}, EcScript::Tang },
     { 0x18B00, 0x18CFF,
             "Khitan Small Script", u8"Малое киданьское письмо", {}, EcScript::Kits },
+    // Tangut supplement OK
     { 0x18D00, 0x18D8F,
-            "Tangut Supplement", u8"Тангутский дополнительный", {}, EcScript::Tang },
+            "Tangut Supplement", u8"Тангутский дополнительный"sv,
+            u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
+                "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
+                "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
+            EcScript::Tang },
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv },
     { 0x1B100, 0x1B12F,

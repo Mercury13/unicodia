@@ -101,5 +101,22 @@
         <file>2D80.png</file>
         <file>2DE0.png</file>
         <file>2E00.png</file>
+        <file>2E80.png</file>
+        <file>2F00.png</file>
+        <file>2FF0.png</file>
+        <file>3000.png</file>
+        <file>4DC0.png</file>
+        <file>4E00.png</file>
+        <file>30A0.png</file>
+        <file>31A0.png</file>
+        <file>31C0.png</file>
+        <file>31F0.png</file>
+        <file>3040.png</file>
+        <file>3100.png</file>
+        <file>3130.png</file>
+        <file>3190.png</file>
+        <file>3200.png</file>
+        <file>3300.png</file>
+        <file>3400.png</file>
     </qresource>
 </RCC>
