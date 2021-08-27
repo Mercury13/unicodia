@@ -55,6 +55,7 @@ constinit const uc::Font uc::fontInfo[] {
         // CJK chars are square, and there’s always not enough detail → bigger
     { "Noto Serif CJK SC",          "NotoSerifCJK-Regular.ttc",                 // CJK
                 Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc },
+    { "Microsoft YaHei",            {} },                                       // CJK fallback
     { "Noto Sans Coptic",           "NotoSansCoptic-Regular.ttf" },             // Coptic
     { "Noto Serif Devanagari",      "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc }, // Devanagari
     { "Noto Serif Dogra",           "NotoSerifDogra-Regular.ttf",               // Dogra
@@ -1998,7 +1999,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
             u8"Символы структуры иероглифов"sv },
-    /// @todo [tofu] 302E/F, these are Hangul
+    // CJK sym/punct OK
     { 0x3000, 0x303F,
             "CJK Symbols and Punctuation",
             u8"ККЯ символы и знаки препинания"sv, {}, EcScript::Hani },
@@ -2011,8 +2012,18 @@ constinit const uc::Block uc::blocks[302] {
     { 0x3130, 0x318F,
             "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо",
             {}, EcScript::Hang },
+    // Kanbun OK
     { 0x3190, 0x319F,
-            "Kanbun", u8"Камбун (подсказки к древнеяпонским иероглифам)" },
+            "Kanbun", u8"Камбун (подсказки к древнеяпонским иероглифам)"sv,
+            u8"Название блока «камбун» не совсем корректное, его лучше назвать «каэритэн»."
+                "<p>Словом «камбун» (''китайское письмо'') называли письменный язык средневековой Японии, основанный на [[ps:Hani|китайском]]. "
+                    "Поскольку порядок слов в китайском несколько отличается от японского, приходилось писать значки "
+                        "''каэритэн'', которые и закодированы в этом блоке. "
+                    "Эти значки обычно меньше иероглифов."
+                "<p>Помимо каэритэна, в камбуне были и другие значки: склонение слов, знаки препинания, японское прочтение иероглифа…"
+                "<p>В модернизацию Мэйдзи (конец XIX{{_}}века) камбун отменили. "
+                    "Камбун учат в современных японских школах, но новых текстов на нём не пишут."sv,
+            EcScript::NONE, EcFont::CJK_FALLBACK },
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный" },
     { 0x31C0, 0x31EF,

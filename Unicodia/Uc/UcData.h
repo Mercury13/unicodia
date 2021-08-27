@@ -173,6 +173,7 @@ namespace uc {
         CHAM,
         CHEROKEE,
         CJK,
+         CJK_FALLBACK,
         COPTIC,
         DEVANAGARI,
         DOGRA,
