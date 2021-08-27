@@ -206,6 +206,7 @@ private:
     void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
+    void reflectCjkCollapseState();
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();

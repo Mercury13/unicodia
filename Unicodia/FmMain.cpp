@@ -639,6 +639,7 @@ FmMain::FmMain(QWidget *parent)
     ui->wiCollapse->hide();
     ui->wiCollapse->setStyleSheet(
                 "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
+    reflectCjkCollapseState();
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
@@ -1134,6 +1135,7 @@ void FmMain::showCp(MaybeChar ch)
     int newIBlock = block->index();
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
+    ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
 
     // Copy
     ui->btCopy->setEnabled(ch.hasCp());
@@ -1571,5 +1573,18 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
 
 void FmMain::selectChar(char32_t code)
 {
+    /// @todo [urgent] collapsed — what to do?
     ui->tableChars->setCurrentIndex(model.indexOf(code));
+}
+
+
+void FmMain::reflectCjkCollapseState()
+{
+    if (model.isCjkCollapsed) {
+        ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
+        ui->btCollapse->setText(str::toQ(u8"Развернуть"sv));
+    } else {
+        ui->lbCollapse->setText(str::toQ(u8"ККЯ развёрнуты."sv));
+        ui->btCollapse->setText(str::toQ(u8"Свернуть"sv));
+    }
 }
