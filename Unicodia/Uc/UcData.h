@@ -341,7 +341,6 @@ namespace uc {
 
     enum class Bfg {
         COLLAPSIBLE = 1,
-        FIXUP_FONT_WIN = 2
     };
 
     DEFINE_ENUM_OPS(Bfg)
@@ -356,8 +355,8 @@ namespace uc {
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
-        mutable std::unique_ptr<QPixmap> icon {};
 
+        mutable std::unique_ptr<QPixmap> icon {};
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
         mutable EcVersion ecVersion = EcVersion::NN;

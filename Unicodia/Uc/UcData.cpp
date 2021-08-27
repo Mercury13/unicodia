@@ -1637,7 +1637,7 @@ constinit const uc::Block uc::blocks[302] {
             u8"<p>В хангыле (корейском алфавите) всего 51 буква ''(чамо)''. Блок намного больше: одна и та же буква "
                     "в начале и конце слога кодируется разными символами, к тому же в блоке много устаревших чамо."
                 "<p>Чхосон{{-}}начальные буквы, чунсон{{-}}средние, чонсон{{-}}конечные."sv,
-            EcScript::Hang },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Ethiopic OK
     { 0x1200, 0x137F,
             "Ethiopic", u8"Эфиопский", {}, EcScript::Ethi },
@@ -1993,26 +1993,39 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2E00, 0x2E7F,
             "Supplemental Punctuation", u8"Дополнительные знаки препинания"sv },
     { 0x2E80, 0x2EFF,
-            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи"sv, {}, EcScript::Hani },
+            "CJK Radicals Supplement", u8"ККЯ дополнительные ключи"sv, {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x2F00, 0x2FDF,
-            "Kangxi Radicals", u8"Ключи канси", {}, EcScript::Hani },
+            "Kangxi Radicals", u8"Ключи канси", {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [desc]
+    // Ideographic desc OK
+    // Not collapsible: small block
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
             u8"Символы структуры иероглифов"sv },
+    /// @todo [desc] CJK sym/punct
     // CJK sym/punct OK
     { 0x3000, 0x303F,
             "CJK Symbols and Punctuation",
-            u8"ККЯ символы и знаки препинания"sv, {}, EcScript::Hani },
+            u8"ККЯ символы и знаки препинания"sv, {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Hiragana OK, not collapsible: syllabary
     { 0x3040, 0x309F,
             "Hiragana", u8"Хирагана", {}, EcScript::Hira },
+    // Katakana OK, not collapsible: syllabary
     { 0x30A0, 0x30FF,
             "Katakana", u8"Катакана", {}, EcScript::Kana },
+    // Bopomofo OK
     { 0x3100, 0x312F,
-            "Bopomofo", u8"Бопомофо (чжуинь)", {}, EcScript::Bopo },
+            "Bopomofo", u8"Бопомофо (чжуинь)", {},
+            EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Hangul compat jamo OK
     { 0x3130, 0x318F,
-            "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо",
-            {}, EcScript::Hang },
-    // Kanbun OK
+            "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо"sv,
+            {},
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Kanbun OK, not collapsible: small block
     { 0x3190, 0x319F,
             "Kanbun", u8"Камбун (подсказки к древнеяпонским иероглифам)"sv,
             u8"Словом «камбун» (''китайское письмо'') называли письменный язык средневековой Японии, основанный на [[ps:Hani|китайском]]. "
@@ -2025,27 +2038,48 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) "
                         "и 15 значков порядка."sv,
             EcScript::NONE, EcFont::CJK_FALLBACK },
+    /// @todo [desc] Bopomofo ex
+    /// @todo [tofu] 31BB+
     { 0x31A0, 0x31BF,
-            "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный" },
+            "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
+            {},
+            EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [desc] CJK strokes
+    // CJK strokes OK
     { 0x31C0, 0x31EF,
-        "CJK Strokes", u8"Черты ККЯ"sv, {}, EcScript::Hani },
+            "CJK Strokes", u8"Черты ККЯ"sv, {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Katakana phon OK, not collapsible: small block
+    /// @todo [desc] Katakana phon extensions
     { 0x31F0, 0x31FF,
-            "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения" },
+            "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения"sv },
+    // Enclosed CJK letters and months OK
+    /// @todo [desc] Enclosed CJK letters and months
     { 0x3200, 0x32FF,
-            "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ",
-            {}, EcScript::Hani },
+            "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // CJK compatibility OK
+    /// @todo [desc] CJK compat
     { 0x3300, 0x33FF,
             "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости"sv,
-            {}, EcScript::Hani },
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu] 10 hieroglyphs from 2018 and 2020, 4BD6+
+    /// @todo [desc] CJK A
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
-            u8"ККЯ иероглифы расширение A"sv, {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение A"sv, {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [desc] Yijing
+    // Yijing OK
     { 0x4DC0, 0x4DFF,
             "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)"sv },
     /// @todo [tofu] 18 hieroglyphs from 2018 and 2020, 9FEB+
     { 0x4E00, 0x9FFF,
-            "CJK Unified Ideographs", u8"ККЯ иероглифы", {}, EcScript::Hani },
+            "CJK Unified Ideographs", u8"ККЯ иероглифы"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0xA000, 0xA48F,
             "Yi Syllables", u8"И\u00A0— слоги", {}, EcScript::Yiii },
     { 0xA490, 0xA4CF,
@@ -2083,9 +2117,12 @@ constinit const uc::Block uc::blocks[302] {
             "Kayah Li", u8"Кая-ли", {}, EcScript::Kali },
     { 0xA930, 0xA95F,
             "Rejang", u8"Реджанг", {}, EcScript::Rjng },
+    // Hangul jamo A OK
+    /// @todo [desc] Hangul jamo A
     { 0xA960, 0xA97F,
             "Hangul Jamo Extended-A", u8"Хангыль\u00A0— расширенные чамо А",
-            {}, EcScript::Hang },
+            {},
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0xA980, 0xA9DF,
             "Javanese", u8"Яванский", {}, EcScript::Java },
     { 0xA9E0, 0xA9FF,
@@ -2113,22 +2150,33 @@ constinit const uc::Block uc::blocks[302] {
             EcScript::Cher },
     // Meetei OK
     { 0xABC0, 0xABFF,
-            "Meetei Mayek", u8"Манипури (мейтей-майек)", {}, EcScript::Mtei },
+            "Meetei Mayek", u8"Манипури (мейтей-майек)"sv, {}, EcScript::Mtei },
+    // Hangul syllables OK
     { 0xAC00, 0xD7AF,
-            "Hangul Syllables", u8"Хангыль\u00A0— слоги", {}, EcScript::Hang },
+            "Hangul Syllables", u8"Хангыль\u00A0— слоги", {},
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Hangul Jamo B OK
+    /// @todo [desc] Hangul jamo B
     { 0xD7B0, 0xD7FF,
-            "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B",
-            {}, EcScript::Hang },
+            "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B"sv,
+            {},
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] four hieros FACF+
+    /// @todo [desc] CJK compat
     { 0xF900, 0xFAFF,
-            "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы",
-            {}, EcScript::Hani },
+            "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Alphabetic presentation forms OK
     { 0xFB00, 0xFB4F,
             "Alphabetic Presentation Forms", u8"Алфавитные формы начертания"sv,
             u8"<p>Стандартные [[pt:ligature|лигатуры]] для [[ps:Latn|латиницы]], [[ps:Armn|армянского]] и [[ps:Hebr|иврита]]."sv },
+    /// @todo [semi-tofu] Should use circle for FBB2+?
+    /// @todo [desc] Arabic pres
     { 0xFB50, 0xFDFF,
-            "Arabic Presentation Forms-A", u8"Арабские формы начертания А",
-            {}, EcScript::Arab },
+            "Arabic Presentation Forms-A", u8"Арабские формы начертания А"sv,
+            {},
+            EcScript::Arab },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
             "Variation Selectors", u8"Селекторы начертания"sv,
@@ -2137,7 +2185,7 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>[[ps:Latn|Латиница]], [[ps:Mymr|бирманский и ещё несколько письменностей используют VS1. "
                     "[[ps:Hani|Китайские иероглифы]] используют VS1…VS3. [[pt:emoji|Эмодзи]] можно сделать цветными (VS16) "
                     "и текстовыми (VS15)."sv },
-    // Vertical forms OK
+    // Vertical forms OK, not collapsible: small
     { 0xFE10, 0xFE1F,
             "Vertical Forms", u8"Вертикальные формы"sv,
             u8"<p>[[ps:Hani|Китайский язык]] изначально писался по столбцам справа налево, и сейчас так пишут "
@@ -2152,13 +2200,26 @@ constinit const uc::Block uc::blocks[302] {
                     "В большинстве шрифтов реализованы плохо, и автор «Юникодии» специально подобрал "
                     "три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо."sv,
             EcScript::NONE, EcFont::NOTO },
+    // CJK compat forms OK
+    /// @todo [desc] CJK compat forms
     { 0xFE30, 0xFE4F,
-            "CJK Compatibility Forms", u8"ККЯ совместимые формы", {}, EcScript::Hani },
+            "CJK Compatibility Forms", u8"ККЯ совместимые формы"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Small variants OK
+    /// @todo [desc] Small variants
     { 0xFE50, 0xFE6F,
-            "Small Form Variants", u8"Малые формы знаков препинания" },
+            "Small Form Variants", u8"Малые формы знаков препинания"sv,
+            {},
+            EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
+    // Arabic forms B OK, no combinings
+    /// @todo [desc] Arabic B
     { 0xFE70, 0xFEFF,
-            "Arabic Presentation Forms-B", u8"Арабские формы начертания B", {}, EcScript::Arab },
-    /// @todo [font, BMP] CJK probably has no such chars, find smth siutable for W7 and 10
+            "Arabic Presentation Forms-B", u8"Арабские формы начертания B"sv,
+            {},
+            EcScript::Arab },
+    // Half/full OK
+    /// @todo [desc] half/full
     { 0xFF00, 0xFFEF,
             "Halfwidth and Fullwidth Forms",
             u8"Полуширинные и полноширинные формы",
@@ -2167,7 +2228,7 @@ constinit const uc::Block uc::blocks[302] {
                     "с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм». "
                 "<p>В этом блоке собраны «неправильные» символы, занимающие "
                     "половину клетки вместо целой и наоборот.",
-            EcScript::NONE, EcFont::CJK },
+            EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
     // Specials OK
     { 0xFFF0, 0xFFFF,
             "Specials", u8"Спецсимволы" },
@@ -2428,13 +2489,14 @@ constinit const uc::Block uc::blocks[302] {
             u8"Символы и знаки препинания для иероглифов", {}, EcScript::Hani },
     // Tangut OK
     { 0x17000, 0x187FF,
-            "Tangut", u8"Тангутский"sv, {}, EcScript::Tang },
+            "Tangut", u8"Тангутский"sv, {},
+            EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK
     { 0x18800, 0x18AFF,
             "Tangut Components", u8"Элементы тангутского письма"sv, {}, EcScript::Tang },
     { 0x18B00, 0x18CFF,
             "Khitan Small Script", u8"Малое киданьское письмо", {}, EcScript::Kits },
-    // Tangut supplement OK
+    // Tangut supplement OK, not collapsible: too small
     { 0x18D00, 0x18D8F,
             "Tangut Supplement", u8"Тангутский дополнительный"sv,
             u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
@@ -2442,15 +2504,20 @@ constinit const uc::Block uc::blocks[302] {
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
             EcScript::Tang },
     /// @todo [tofu] We should choose from several fonts, and current engine does tot permit that.
+    // Kana supplement not collapsible: syllabary
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv },
+    // Kana ex A not collapsible: syllabary
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A"sv },
+    /// @todo [tofu] Small kana ex, the entire block
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны", {},
-            EcScript::NONE, EcFont::HENTAIGANA },
+            EcScript::NONE, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE },
+    // Nushu OK, not collapsible: syllabary
     { 0x1B170, 0x1B2FF,
-            "Nushu", u8"Нюй-шу", {}, EcScript::Nshu },
+            "Nushu", u8"Нюй-шу"sv, {},
+            EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
     { 0x1BCA0, 0x1BCAF,
@@ -2621,34 +2688,65 @@ constinit const uc::Block uc::blocks[302] {
                     "Часть знаков с этих компьютеров уже есть в других блоках Юникода{{-}}в некоторых шрифтах оказывается, "
                     "что символы [[pt:pseudographics|псевдографики]] не стыкуются с символами из данного блока: {{sm|█🬗}}."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
+    /// @todo [tofu] CJK B
+    /// @todo [desc] CJK B
     { 0x20000, 0x2A6DF,
             "CJK Unified Ideographs Extension B",
-            u8"ККЯ иероглифы расширение B", {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение B"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK C
+    /// @todo [desc] CJK C
     { 0x2A700, 0x2B73F,
             "CJK Unified Ideographs Extension C",
-            u8"ККЯ иероглифы расширение C", {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение C"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK D
+    /// @todo [desc] CJK D
     { 0x2B740, 0x2B81F,
             "CJK Unified Ideographs Extension D",
-            u8"ККЯ иероглифы расширение D", {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение D"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK E
+    /// @todo [desc] CJK E
     { 0x2B820, 0x2CEAF,
             "CJK Unified Ideographs Extension E",
-            u8"ККЯ иероглифы расширение E", {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение E"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK F
+    /// @todo [desc] CJK F
     { 0x2CEB0, 0x2EBEF,
             "CJK Unified Ideographs Extension F",
-            u8"ККЯ иероглифы расширение F", {}, EcScript::Hani  },
+            u8"ККЯ иероглифы расширение F"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK compat supp
+    /// @todo [desc] CJK compat supp
     { 0x2F800, 0x2FA1F,
             "CJK Compatibility Ideographs Supplement",
-            u8"ККЯ совместимые иероглифы дополнение", {}, EcScript::Hani },
+            u8"ККЯ совместимые иероглифы дополнение"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] CJK G
+    /// @todo [desc] CJK G
     { 0x30000, 0x3134F,
             "CJK Unified Ideographs Extension G",
-            u8"ККЯ иероглифы расширение G", {}, EcScript::Hani },
+            u8"ККЯ иероглифы расширение G"sv,
+            {},
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] Tags are invisible, what to draw?
+    /// @todo [desc] Tags
     { 0xE0000, 0xE007F,
             "Tags", u8"Тэги" },
     // Var sel supp OK
     { 0xE0100, 0xE01EF,
             "Variation Selectors Supplement", u8"Селекторы начертания дополнительные",
             u8"Дополнительные селекторы начертания используются только с [[ps:Hani|китайскими иероглифами]], чтобы дать тот или иной "
-                "вариант начертания."sv },
+                    "вариант начертания. "
+                "Хотя ничего не мешает использовать их с другими символами по желанию дизайнера шрифта."sv },
     //{ 0xE0100, 0xE01EF, "Check for error"sv },
 };
 
