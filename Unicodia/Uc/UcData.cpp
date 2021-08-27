@@ -2429,6 +2429,7 @@ constinit const uc::Block uc::blocks[302] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
             EcScript::Tang },
+    /// @todo [tofu] We should choose from several fonts, and current engine does tot permit that.
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv },
     { 0x1B100, 0x1B12F,
