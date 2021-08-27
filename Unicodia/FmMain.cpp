@@ -199,21 +199,28 @@ const QFont* CharsModel::fontAt(const uc::Cp& cp) const
 }
 
 
-QColor CharsModel::fgAt(const QModelIndex& index) const
+QColor CharsModel::fgAt(const QModelIndex& index, TableColors tcl) const
 {
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return fgAt(*cp);
+    return fgAt(*cp, tcl);
 }
 
 
-QColor CharsModel::fgAt(const uc::Cp& cp) const
+QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 {
     if (cp.isTrueSpace()) {
         auto c = owner->palette().text().color();
         c.setAlpha(ALPHA_SPACE);
         return c;
+    }
+    if (tcl != TableColors::NO) {
+        if (isCjkCollapsed) {
+            auto block = uc::blockOf(cp.subj, hint.cell);
+            if (block->flags.have(uc::Bfg::COLLAPSIBLE))
+                return TX_CJK;
+        }
     }
     return {};
 }
@@ -253,14 +260,23 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
 
     case Qt::ForegroundRole:
         if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
-            if (auto c = fgAt(index); c.isValid())
+            if (auto c = fgAt(index, TableColors::YES); c.isValid())
                 return c;
+        }
+        if (isCjkCollapsed) {
+
         }
         return {};
 
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
-            if (!cp) {
+            if (cp) {
+                if (isCjkCollapsed) {
+                    auto block = uc::blockOf(cp->subj, hint.cell);
+                    if (block->flags.have(uc::Bfg::COLLAPSIBLE))
+                        return BG_CJK;
+                }
+            } else {
                 if (uc::isNonChar(cp.code)) {
                     return QBrush(owner->palette().windowText().color(), Qt::DiagCrossPattern);
                 }
@@ -331,6 +347,19 @@ QModelIndex CharsModel::indexOf(char32_t code)
     return index(coords.row, coords.col);
 }
 
+void CharsModel::build()
+{
+    const uc::Block* hint = &uc::blocks[0];
+    for (auto& cp : uc::cpInfo) {
+        if (isCjkCollapsed) {
+            auto blk = uc::blockOf(cp.subj, hint);
+            if (blk->flags.have(uc::Bfg::COLLAPSIBLE)
+                    && static_cast<int>(cp.subj) - blk->startingCp >= NCOLS)
+                continue;
+        }
+        addCp(cp);
+    }
+}
 
 ///// CharsDelegate ////////////////////////////////////////////////////////////
 
@@ -511,7 +540,7 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
         else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
             // Char
             painter->setFont(*model.fontAt(*ch));
-            auto specialColor = model.fgAt(*ch);
+            auto specialColor = model.fgAt(*ch, TableColors::YES);
             painter->setBrush(specialColor.isValid() ? specialColor : color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
@@ -617,9 +646,7 @@ FmMain::FmMain(QWidget *parent)
     ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
 
     // Fill chars
-    for (auto& cp : uc::cpInfo) {
-        model.addCp(cp);
-    }
+    model.build();
 
     // Combobox
     ui->comboBlock->setModel(&blocksModel);

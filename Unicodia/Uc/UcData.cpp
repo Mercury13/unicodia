@@ -2502,8 +2502,11 @@ constinit const uc::Block uc::blocks[302] {
             "Tangut", u8"Тангутский"sv, {},
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK
+    /// @todo [desc] Tangut components
     { 0x18800, 0x18AFF,
-            "Tangut Components", u8"Элементы тангутского письма"sv, {}, EcScript::Tang },
+            "Tangut Components", u8"Элементы тангутского письма"sv,
+            {},
+            EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x18B00, 0x18CFF,
             "Khitan Small Script", u8"Малое киданьское письмо", {}, EcScript::Kits },
     // Tangut supplement OK, not collapsible: too small
@@ -2526,8 +2529,7 @@ constinit const uc::Block uc::blocks[302] {
             EcScript::NONE, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE },
     // Nushu OK, not collapsible: syllabary
     { 0x1B170, 0x1B2FF,
-            "Nushu", u8"Нюй-шу"sv, {},
-            EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            "Nushu", u8"Нюй-шу"sv, {}, EcScript::Nshu },
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
     { 0x1BCA0, 0x1BCAF,

@@ -10,7 +10,9 @@
 #define CNAME_LINK_DEPRECATED "#CC0000"
 
 constexpr QColor TX_DEPRECATED { 0xDD, 0x00, 0x00 };
-constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 }; // lavenderblush
+constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush
+constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
+//constexpr QColor TX_CJK { 0x5C, 0x35, 0x66 };   // Tango dark violet
 
 #define LINK_SUBTAG(color, place) \
             " style='color:" color "; "   \
