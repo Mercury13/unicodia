@@ -2043,10 +2043,21 @@ constinit const uc::Block uc::blocks[302] {
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
             u8"Символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [desc] CJK strokes
     // CJK strokes OK
     { 0x31C0, 0x31EF,
-            "CJK Strokes", u8"Черты ККЯ"sv, {},
+            "CJK Strokes", u8"Черты ККЯ"sv,
+            u8"Иероглифы ККЯ состоят из основных восьми элементов:"
+                 "<p>• точки D;<br>"
+                    "• крючка G;<br>"
+                    "• горизонтальной H;<br>"
+                    "• откидной черты вправо N;<br>"
+                    "• откидной черты влево P;<br>"
+                    "• вертикальной S;<br>"
+                    "• восходящей T;<br>"
+                    "• изогнутой откидной W."
+                "<p>Из дополнительных элементов{{-}}плоский участок B, кружок Q, наклон X, излом Z. "
+                    "Для каждой черты кодифицировано, в каком направлении её писать."
+                "<p>Все названия китайские: например, B от ''biǎn{{-}}плоский''."sv,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Katakana phon OK, not collapsible: small block
     /// @todo [desc] Katakana phon extensions

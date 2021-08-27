@@ -801,6 +801,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
     { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
     { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
+    { { "CJK"sv, "STROKE"sv }, PrefixAction::REST_ALLCAP },
 };
 
 
@@ -1043,6 +1044,7 @@ namespace {
 
     struct Word {
         std::string_view original;
+        bool isAllCap = false;
         bool isCapital = false;
         bool isAsIs = false;
         bool nextNoun = false;
@@ -1117,6 +1119,10 @@ namespace {
         case PrefixAction::REST_CAP:
             for (size_t i = prefixSize; i < words.size(); ++i)
                 words[i].isCapital = true;
+            break;
+        case PrefixAction::REST_ALLCAP:
+            for (size_t i = prefixSize; i < words.size(); ++i)
+                words[i].isAllCap = true;
             break;
         case PrefixAction::REST_CAPSMALL:
             for (size_t i = prefixSize + 1; i < words.size(); ++i)
@@ -1394,6 +1400,8 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
             state = WordState::TITLE;
         } else if (word.isAsIs) {
             state = word.isCapital ? WordState::AS_IS_TITLE : WordState::AS_IS;
+        } else if (word.isAllCap) {
+            state = WordState::ALL_CAP;
         } else if (word.isCapital) {
             state = WordState::TITLE;
         }
