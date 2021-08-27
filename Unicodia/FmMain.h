@@ -65,6 +65,7 @@ public:
     int startingCpAt(size_t iRow) const;
 
     CacheCoords findCode(char32_t code) const;
+    void clear() { rows.clear(); }
 protected:
     const int fnCols, fColMask, fRowMask;
 
@@ -91,6 +92,7 @@ enum class TableColors { NO, YES };
 
 class CharsModel : public QAbstractTableModel
 {
+    using Super = QAbstractTableModel;
 public:
     QWidget* const owner;
     FontMatch match;
@@ -98,7 +100,7 @@ public:
 
     CharsModel(QWidget* aOwner);
 
-    int rowCount(const QModelIndex&) const override;
+    int rowCount(const QModelIndex& = {}) const override;
     int columnCount(const QModelIndex&) const override;
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
@@ -114,6 +116,8 @@ public:
             { return rows.charAt(index.row(), index.column()); }
     QModelIndex indexOf(char32_t code);
     void build();
+    using Super::beginResetModel;
+    using Super::endResetModel;
 private:
     RowCache rows;
     mutable struct Hint {
@@ -213,6 +217,7 @@ private slots:
     void copyCurrentSample();
     void popupLinkActivated(const QString& link);
     void anchorClicked(const QUrl &arg1);
+    void collapseClicked();
     void on_comboBlock_currentIndexChanged(int index);
 };
 

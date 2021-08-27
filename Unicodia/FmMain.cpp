@@ -349,6 +349,8 @@ QModelIndex CharsModel::indexOf(char32_t code)
 
 void CharsModel::build()
 {
+    rows.clear();
+    beginResetModel();
     const uc::Block* hint = &uc::blocks[0];
     for (auto& cp : uc::cpInfo) {
         if (isCjkCollapsed) {
@@ -359,6 +361,7 @@ void CharsModel::build()
         }
         addCp(cp);
     }
+    endResetModel();
 }
 
 ///// CharsDelegate ////////////////////////////////////////////////////////////
@@ -639,6 +642,8 @@ FmMain::FmMain(QWidget *parent)
     ui->wiCollapse->hide();
     ui->wiCollapse->setStyleSheet(
                 "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
+    connect(ui->btCollapse, &QPushButton::clicked,
+            this, &This::collapseClicked);
     reflectCjkCollapseState();
 
     // Top bar
@@ -1587,4 +1592,37 @@ void FmMain::reflectCjkCollapseState()
         ui->lbCollapse->setText(str::toQ(u8"ККЯ развёрнуты."sv));
         ui->btCollapse->setText(str::toQ(u8"Свернуть"sv));
     }
+}
+
+
+void FmMain::collapseClicked()
+{
+    // Remember current char, index and offset
+    auto viewport = ui->tableChars->viewport();
+    auto oldIndex = ui->tableChars->currentIndex();
+    auto cp = model.charAt(oldIndex);
+    auto scrollTop = ui->tableChars->verticalHeader()->logicalIndexAt(0);
+    auto scrollBottom = ui->tableChars->verticalHeader()->logicalIndexAt(viewport->geometry().bottom());
+    auto scrollOffset = std::max(0, oldIndex.row() - scrollTop);
+    auto scrollNRows = std::max(0, scrollBottom - scrollTop - 1);
+
+    // Rebuild model
+    model.isCjkCollapsed = !model.isCjkCollapsed;
+    model.build();
+
+    // Generate new index
+    auto newIndex = model.indexOf(cp.code);
+    auto newIndex2 = model.index(newIndex.row(), oldIndex.column());
+    auto newScrollTop = std::max(0, newIndex2.row() - scrollOffset);
+    auto newScrollBottom = std::min(model.rowCount() - 1, newScrollTop + scrollNRows);
+    auto newTopIndex = model.index(newScrollTop, 0);
+    auto newBottomIndex = model.index(newScrollBottom, 0);
+
+    // UI changes
+    ui->tableChars->setCurrentIndex(newIndex2);
+    ui->tableChars->scrollTo(newBottomIndex);
+    ui->tableChars->scrollTo(newTopIndex);
+    ui->tableChars->scrollTo(newIndex2);
+    ui->tableChars->viewport()->setFocus();
+    reflectCjkCollapseState();
 }
