@@ -92,5 +92,14 @@
         <file>2A00.png</file>
         <file>2900.png</file>
         <file>2980.png</file>
+        <file>2B00.png</file>
+        <file>2C00.png</file>
+        <file>2C60.png</file>
+        <file>2C80.png</file>
+        <file>2D00.png</file>
+        <file>2D30.png</file>
+        <file>2D80.png</file>
+        <file>2DE0.png</file>
+        <file>2E00.png</file>
     </qresource>
 </RCC>
