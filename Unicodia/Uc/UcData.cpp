@@ -2038,11 +2038,10 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) "
                         "и 15 значков порядка."sv,
             EcScript::NONE, EcFont::CJK_FALLBACK },
-    /// @todo [desc] Bopomofo ex
     /// @todo [tofu] 31BB+
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
-            {},
+            u8"Символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [desc] CJK strokes
     // CJK strokes OK
