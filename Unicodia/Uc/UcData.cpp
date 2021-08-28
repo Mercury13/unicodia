@@ -1987,9 +1987,9 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2D80, 0x2DDF,
             "Ethiopic Extended", u8"Эфиопский расширенный"sv, {}, EcScript::Ethi },
     /// @todo [semi-tofu] Cyr ex A renders badly
-    /// @todo [desc] Cyr ex A
     { 0x2DE0, 0x2DFF,
-            "Cyrillic Extended-A", u8"Кириллица расширенная A"sv, {},
+            "Cyrillic Extended-A", u8"Кириллица расширенная A"sv,
+            u8"Комбинирующие кириллические буквы из церковнославянского."sv,
             EcScript::Cyrl, EcFont::NOTO },
     // Supp punct OK
     { 0x2E00, 0x2E7F,
