@@ -1997,7 +1997,7 @@ constinit const uc::Block uc::blocks[302] {
             "Supplemental Punctuation", u8"Дополнительные знаки препинания"sv },
     { 0x2E80, 0x2EFF,
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные"sv,
-            u8"Данные символы используются в заголовках словарей и представляют собой альтернативные формы ключей Канси.",
+            u8"Альтернативные формы ключей Канси, применяющиеся в заголовкай словарей.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи Канси"sv,
