@@ -1644,7 +1644,7 @@ constinit const uc::Block uc::blocks[302] {
     // Ethiopic supplement OK
     { 0x1380, 0x139F,
             "Ethiopic Supplement", u8"Эфиопский дополнительный"sv,
-            u8"<p>Буквы языка себат-бет гураге (Эфиопия, 1,5{{_}}млн, ''Ethnologue'' статус 5: развивающийся), "
+            u8"<p>Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн, ''Ethnologue'' статус 5: развивающийся), "
                     "а также метки тонов."sv, EcScript::Ethi },
     // Cherokee OK
     { 0x13A0, 0x13FF,
@@ -1983,9 +1983,11 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2D30, 0x2D7F,
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
     // Ethiopic ex OK
-    /// @todo [desc] Ethiopic ex
     { 0x2D80, 0x2DDF,
-            "Ethiopic Extended", u8"Эфиопский расширенный"sv, {}, EcScript::Ethi },
+            "Ethiopic Extended", u8"Эфиопский расширенный"sv,
+            u8"Эфиопское письмо для языков мекан (с 2009 перешёл на [[ps:Latn|латиницу]], "
+                    "билин (с 1990-х полностью на латинице), бенч (с 2008 на латинице), себат-бет."sv,
+            EcScript::Ethi },
     /// @todo [semi-tofu] Cyr ex A renders badly
     { 0x2DE0, 0x2DFF,
             "Cyrillic Extended-A", u8"Кириллица расширенная A"sv,
@@ -2191,7 +2193,8 @@ constinit const uc::Block uc::blocks[302] {
     { 0xAAE0, 0xAAFF,
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
     { 0xAB00, 0xAB2F,
-            "Ethiopic Extended-A", u8"Эфиопский расширенный А", {}, EcScript::Ethi },
+            "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
+            u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).", EcScript::Ethi },
     // Latin ex E OK
     /// @todo [desc] Latin ex E
     { 0xAB30, 0xAB6F,
