@@ -1619,6 +1619,7 @@ void FmMain::collapseClicked()
     auto newBottomIndex = model.index(newScrollBottom, 0);
 
     // UI changes
+    /// @todo [help!] Looks like unglitch, help me how to scroll the table properly
     ui->tableChars->setCurrentIndex(newIndex2);
     ui->tableChars->scrollTo(newBottomIndex);
     ui->tableChars->scrollTo(newTopIndex);
