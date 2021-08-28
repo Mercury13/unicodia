@@ -1999,7 +1999,7 @@ constinit const uc::Block uc::blocks[302] {
                     "и многое другое."sv },
     { 0x2E80, 0x2EFF,
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные"sv,
-            u8"Альтернативные формы ключей Канси, применяющиеся в заголовкай словарей.",
+            u8"Альтернативные формы ключей Канси, применяющиеся в заголовках словарей.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи Канси"sv,
