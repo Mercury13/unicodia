@@ -941,6 +941,8 @@ namespace {
             s.append(QChar(0x00A0));
         } else if (name == "-"sv) {
             str::append(s, "<span style='font-size:4pt'>\u00A0</span>—<span style='font-size:4pt'> </span>"sv);
+        } else if (name == ",-"sv) {
+            str::append(s, ",—<span style='font-size:4pt'> </span>"sv);
         } else if (name == "%"sv) {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
