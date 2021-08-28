@@ -2084,7 +2084,7 @@ constinit const uc::Block uc::blocks[302] {
     // CJK compatibility OK
     { 0x3300, 0x33FF,
             "CJK Compatibility", u8"ККЯ\u00A0— символы совместимости"sv,
-            u8"Символы, предназначенные для обеспечения совместимости с кодировками ККЯ. "
+            u8"Символы, предназначенные для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. "
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
@@ -2103,16 +2103,24 @@ constinit const uc::Block uc::blocks[302] {
             "CJK Unified Ideographs", u8"ККЯ иероглифы"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Yi OK
     { 0xA000, 0xA48F,
-            "Yi Syllables", u8"И\u00A0— слоги", {}, EcScript::Yiii },
+            "Yi Syllables", u8"И\u00A0— слоги"sv, {}, EcScript::Yiii },
+    // Yi radicals OK
     { 0xA490, 0xA4CF,
-            "Yi Radicals", u8"И\u00A0— компоненты", {}, EcScript::Yiii },
+            "Yi Radicals", u8"И\u00A0— ключи"sv,
+            u8"Ключи, используемые для «алфавитной сортировки» словарей языка '''[[ps:Yiii|и]]'''."sv,
+            EcScript::Yiii },
+    // Lisu OK
     { 0xA4D0, 0xA4FF,
             "Lisu", u8"Лису (алфавит Фрейзера)", {}, EcScript::Lisu },
     { 0xA500, 0xA63F,
             "Vai", u8"Ваи", {}, EcScript::Vaii },
+    /// @todo [semi-tofu] A670+ enclosing marks, A674+, A69C+ badly rendered
     { 0xA640, 0xA69F,
-            "Cyrillic Extended-B", u8"Кириллица расширенная B", {}, EcScript::Cyrl },
+            "Cyrillic Extended-B", u8"Кириллица расширенная B"sv,
+            u8"Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), "
+                        "знаки интонации для литовской диалектологии.", EcScript::Cyrl },
     { 0xA6A0, 0xA6FF,
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
     // Modifier tone OK
