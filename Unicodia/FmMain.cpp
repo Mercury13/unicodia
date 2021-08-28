@@ -1598,7 +1598,6 @@ void FmMain::reflectCjkCollapseState()
 void FmMain::collapseClicked()
 {
     // Remember current char, index and offset
-    auto viewport = ui->tableChars->viewport();
     auto oldIndex = ui->tableChars->currentIndex();
     auto cp = model.charAt(oldIndex);
     auto scrollTop = ui->tableChars->verticalHeader()->logicalIndexAt(0);
