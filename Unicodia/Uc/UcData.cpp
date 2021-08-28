@@ -1998,12 +1998,13 @@ constinit const uc::Block uc::blocks[302] {
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи канси", {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [desc]
-    // Ideographic desc OK
-    // Not collapsible: small block
+    // Ideographic desc OK, not collapsible: small block
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
-            u8"Символы структуры иероглифов"sv },
+            u8"Символы структуры иероглифов"sv,
+            u8"В Юникоде есть механизм описания незакодированного иероглифа. "
+                    "А для этого важно указать, на какие части он разбит и что в каждой. "
+                    "Для первого и предназначен данный блок."sv },
     /// @todo [desc] CJK sym/punct
     // CJK sym/punct OK
     { 0x3000, 0x303F,
