@@ -2053,7 +2053,7 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [tofu] 31BB+
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
-            u8"Символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
+            u8"Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK strokes OK
     { 0x31C0, 0x31EF,
