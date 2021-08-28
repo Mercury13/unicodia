@@ -1602,9 +1602,7 @@ void FmMain::collapseClicked()
     auto oldIndex = ui->tableChars->currentIndex();
     auto cp = model.charAt(oldIndex);
     auto scrollTop = ui->tableChars->verticalHeader()->logicalIndexAt(0);
-    auto scrollBottom = ui->tableChars->verticalHeader()->logicalIndexAt(viewport->geometry().bottom());
     auto scrollOffset = std::max(0, oldIndex.row() - scrollTop);
-    auto scrollNRows = std::max(0, scrollBottom - scrollTop - 1);
 
     // Rebuild model
     model.isCjkCollapsed = !model.isCjkCollapsed;
@@ -1614,15 +1612,11 @@ void FmMain::collapseClicked()
     auto newIndex = model.indexOf(cp.code);
     auto newIndex2 = model.index(newIndex.row(), oldIndex.column());
     auto newScrollTop = std::max(0, newIndex2.row() - scrollOffset);
-    auto newScrollBottom = std::min(model.rowCount() - 1, newScrollTop + scrollNRows);
     auto newTopIndex = model.index(newScrollTop, 0);
-    auto newBottomIndex = model.index(newScrollBottom, 0);
 
     // UI changes
-    /// @todo [help!] Looks like unglitch, help me how to scroll the table properly
     ui->tableChars->setCurrentIndex(newIndex2);
-    ui->tableChars->scrollTo(newBottomIndex);
-    ui->tableChars->scrollTo(newTopIndex);
+    ui->tableChars->scrollTo(newTopIndex, QAbstractItemView::PositionAtTop);
     ui->tableChars->scrollTo(newIndex2);
     ui->tableChars->viewport()->setFocus();
     reflectCjkCollapseState();
