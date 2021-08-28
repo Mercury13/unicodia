@@ -593,6 +593,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Musical symbol Right repeat sign")      // The same
     EX("Musical symbol Half pedal mark")        // The same
     EX("Square hPa")                            // A whole cohort of Chinese units
+    EX("Square IU")
     EX("Square da")
     EX("Square AU")
     EX("Square bar")

@@ -217,7 +217,7 @@ private slots:
     void copyCurrentSample();
     void popupLinkActivated(const QString& link);
     void anchorClicked(const QUrl &arg1);
-    void collapseClicked();
+    void cjkExpandCollapse();
     void on_comboBlock_currentIndexChanged(int index);
 };
 

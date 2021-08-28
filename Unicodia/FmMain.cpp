@@ -643,7 +643,7 @@ FmMain::FmMain(QWidget *parent)
     ui->wiCollapse->setStyleSheet(
                 "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
     connect(ui->btCollapse, &QPushButton::clicked,
-            this, &This::collapseClicked);
+            this, &This::cjkExpandCollapse);
     reflectCjkCollapseState();
 
     // Top bar
@@ -1595,7 +1595,7 @@ void FmMain::reflectCjkCollapseState()
 }
 
 
-void FmMain::collapseClicked()
+void FmMain::cjkExpandCollapse()
 {
     // Remember current char, index and offset
     auto oldIndex = ui->tableChars->currentIndex();
