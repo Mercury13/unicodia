@@ -2146,14 +2146,19 @@ constinit const uc::Block uc::blocks[302] {
             "Hangul Jamo Extended-A", u8"Хангыль\u00A0— расширенные чамо А",
             {},
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Javanese OK
     { 0xA980, 0xA9DF,
             "Javanese", u8"Яванский", {}, EcScript::Java },
+    // Myanmar ex B OK
     { 0xA9E0, 0xA9FF,
             "Myanmar Extended-B", u8"Бирманский расширенный B", {}, EcScript::Mymr },
+    // Cham OK
     { 0xAA00, 0xAA5F,
             "Cham", u8"Чамский", {}, EcScript::Cham },
+    // Myanmar ex A OK
     { 0xAA60, 0xAA7F,
             "Myanmar Extended-A", u8"Бирманский расширенный А", {}, EcScript::Mymr },
+    // Tai viet OK
     { 0xAA80, 0xAADF,
             "Tai Viet", u8"Тай-вьет", {}, EcScript::Tavt },
     // Meetei ex OK
