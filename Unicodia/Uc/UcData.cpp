@@ -2194,7 +2194,8 @@ constinit const uc::Block uc::blocks[302] {
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
     { 0xAB00, 0xAB2F,
             "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
-            u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).", EcScript::Ethi },
+            u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]])."sv,
+            EcScript::Ethi },
     // Latin ex E OK
     /// @todo [desc] Latin ex E
     { 0xAB30, 0xAB6F,
