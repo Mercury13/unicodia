@@ -2197,9 +2197,11 @@ constinit const uc::Block uc::blocks[302] {
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]])."sv,
             EcScript::Ethi },
     // Latin ex E OK
-    /// @todo [desc] Latin ex E
     { 0xAB30, 0xAB6F,
-            "Latin Extended-E", u8"Латиница расширенная E", {}, EcScript::Latn },
+            "Latin Extended-E", u8"Латиница расширенная E"sv,
+            u8"Буквы, используемые в германской и шотландской диалектологии, транскрипции индейских и сино-тибетских языков, "
+                    "а также в латинской записи якутского (алфавит Новгородова, 1920–1929)."sv,
+            EcScript::Latn },
     // Cherokee supp OK
     { 0xAB70, 0xABBF,
             "Cherokee Supplement", u8"Чероки дополнительный",
