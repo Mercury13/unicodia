@@ -1005,23 +1005,6 @@ void FmMain::showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect)
 }
 
 
-void FmMain::showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect)
-{
-    QString text;
-    str::append(text, "<p><b>");
-    str::append(text, x.locName);
-    str::append(text, "</b>"sv);
-    if (!x.engName.empty()) {
-        str::append(text, u8"\u00A0/ "sv);
-        str::append(text, x.engName);
-    }
-
-    str::append(text, "<p>");
-    appendWiki(text, x, x.locDesc);
-    popupText(text, widget, rect);
-}
-
-
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
@@ -1029,9 +1012,6 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
         int iBlock = 0;
         str::fromChars(target, iBlock);
         showPopup(uc::blocks[iBlock], widget, rect);
-    } else if (scheme == "pt"sv) {
-        if (auto* term = uc::findTerm(target))
-            showPopup(*term, widget, rect);
     }
 }
 

@@ -70,7 +70,7 @@ namespace {
         gui.popupAtRelMaybe(widget, rect, html);
     }
 
-    // Some sort of deduction guide
+    // Some sort of deduction guide, MU = Make Unique
     template <class Thing>
     inline std::unique_ptr<PopLink<Thing>> mu(const Thing& x)
         { return std::make_unique<PopLink<Thing>>(x); }
@@ -116,6 +116,12 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopScriptLink(std::string_view target
     return {};
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parsePopTermLink(std::string_view target)
+{
+    if (auto* term = uc::findTerm(target))
+        return mu(*term);
+    return {};
+}
 
 std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
 {
@@ -150,8 +156,7 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
     } else if (scheme == "pf"sv) {
         return parsePopFontsLink(target);
     } else if (scheme == "pt"sv) {
-        //if (auto* term = uc::findTerm(target))
-        //    showPopup(*term, widget, rect);
+        return parsePopTermLink(target);
     }
     return {};
 }
@@ -707,5 +712,22 @@ QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
     str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
     mywiki::appendMissingCharInfo(text, code);
     appendWiki(text, *hint, uc::TX_NOCHAR);
+    return text;
+}
+
+
+QString mywiki::buildHtml(const uc::Term& x)
+{
+    QString text;
+    str::append(text, "<p><b>");
+    str::append(text, x.locName);
+    str::append(text, "</b>"sv);
+    if (!x.engName.empty()) {
+        str::append(text, u8"\u00A0/ "sv);
+        str::append(text, x.engName);
+    }
+
+    str::append(text, "<p>");
+    appendWiki(text, x, x.locDesc);
     return text;
 }

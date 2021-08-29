@@ -19,7 +19,6 @@
 // Forms
 #include "FmPopup.h"
 
-// Unicode data
 #include "UcData.h"
 
 QT_BEGIN_NAMESPACE
