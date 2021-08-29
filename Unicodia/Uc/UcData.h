@@ -129,6 +129,7 @@ namespace uc {
         LTR,
         RTL,
         LTR_CJK,
+        LTR_CUNEIFORM,
         LTR_BU,
         LTR_COL,
         BOTH,

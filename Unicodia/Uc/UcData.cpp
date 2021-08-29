@@ -141,6 +141,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"→"sv },
     { u8"←"sv },
     { u8"→ <i>(исторически ←↓↓ по столбцам)</i>"sv },
+    { u8"←↓↓ по столбцам, затем →"sv },
     { u8"→, ↑"sv },
     { u8"↓↓→ по столбцам"sv },
     { u8"писали и ←, и →"sv },
@@ -1369,7 +1370,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::VAI },
     /// @todo [semi-tofu] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
     { "Xsux"sv, QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::ASIA_INDIAN,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA_INDIAN,
         u8"Клинопись"sv, u8"≈3200 до н.э."sv,
         u8"шумерский, аккадский, хеттский, эламский, хурритский, урартский, древнеперсидский"sv,
         u8"Изначально (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров), но к 3200 появились иероглифы, "
