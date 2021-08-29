@@ -16,6 +16,8 @@
 
 using namespace std::string_view_literals;
 
+#define NBSP "\u00A0"
+
 
 ///// Gui //////////////////////////////////////////////////////////////////////
 
@@ -330,6 +332,8 @@ namespace {
         } else if (name == "№"sv) {
             str::append(s, u8"№<span style='font-size:3pt'>\u00A0</span>"sv);
             str::append(s, x.safeGetV(1, {}));
+        } else if (name == "bc"sv) {
+            str::append(s, u8"" NBSP "до" NBSP "н.э."sv );
         } else {
             wiki::appendHtml(s, x[0]);
         }

@@ -175,6 +175,7 @@ namespace uc {
         CJK,
          CJK_FALLBACK,
         COPTIC,
+        CUNEIFORM,
         DEVANAGARI,
         DOGRA,
         EGYPTIAN,
