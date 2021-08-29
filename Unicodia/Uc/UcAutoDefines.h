@@ -98,6 +98,7 @@ namespace uc {
         Thai,   // Thai
         Tibt,   // Tibetan
         Vaii,   // Vai
+        Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
         Yiii,   // Yi
         Zinh,   // Unicode technical
@@ -211,7 +212,6 @@ namespace uc {
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
-        Xpeo = Zyyy,        // Old Persian beyond BMP
         Yezi = Zyyy,        // Yezidi beyond BMP
         Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars

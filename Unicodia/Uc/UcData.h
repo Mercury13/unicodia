@@ -209,6 +209,7 @@ namespace uc {
         OLCHIKI,
         OLD_ITALIC,
         OLD_PERMIC,
+        OLD_PERSIAN,
         PHAGS_PA,
         PHAISTOS_DISC,
         REJANG,
