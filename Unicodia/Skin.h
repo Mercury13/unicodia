@@ -26,6 +26,9 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 #define SUBTAG_DEPRECATED \
     LINK_SUBTAG(CNAME_LINK_DEPRECATED, "0.04")
 
+#define SUBTAG_MISSING \
+            " style='color:" CNAME_LINK_DEPRECATED ";'"
+
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"
     #define FAM_BACKUP "Noto Serif"

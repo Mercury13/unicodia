@@ -269,18 +269,21 @@ namespace {
 
     void Eng::appendLink(const SafeVector<std::string_view> x, bool hasRemainder)
     {
-        auto dest = x[0];
+        auto target = x[0];
         auto text = x[1];
         std::string_view style;
-        if (dest.size() >= 4 && dest[0] == 'p' && dest[2] == ':')
+        if (!mywiki::parseLink(target)) {
+            style = SUBTAG_MISSING;
+        } else if (target.size() >= 4 && target[0] == 'p' && target[2] == ':') {
             style = SUBTAG_POPUP;
+        }
 
         auto q = prepareRecursion(text);
 
         s.append("<a");
         str::append(s, style);
         s.append(" href='");
-        str::append(s, dest);
+        str::append(s, target);
         s.append("'>");
 
         runRecursive(text);

@@ -56,6 +56,7 @@ namespace mywiki
     };
 
     std::unique_ptr<Link> parseLink(std::string_view link);
+    std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view scheme, std::string_view target);
     std::unique_ptr<Link> parsePopBidiLink(std::string_view target);
     std::unique_ptr<Link> parsePopCatLink(std::string_view target);
