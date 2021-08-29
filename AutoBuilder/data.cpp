@@ -304,6 +304,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "REDUPLICATION"sv, Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING"sv,         Dicf::PART_NOUN },
+    { "SIGNWRITING",    { Dicf::PART_NOUN, "SignWriting" } },
     { "SHAD"sv,         Dicf::PART_NOUN },
     { "SHELF"sv,        Dicf::PART_NOUN },
     { "SHOE"sv,         Dicf::PART_NOUN },  // For APL not really, but OK

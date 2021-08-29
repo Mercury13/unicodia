@@ -21,9 +21,6 @@ constexpr QChar ZWSP(0x200B);
 
 constinit const uc::Font uc::fontInfo[] {
     /// @todo [tofu] 10E60, that’s Arabic too
-    /// @todo [semi-tofu] Qt’s font matching algorithm is extremely poor!
-    ///       If we’ve got circle in Cambria and umlaut in Noto → complete random!
-    ///       e.g. 1DE0
     { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Math,Noto Sans Symbols,"
             "Noto Sans Symbols2,Segoe UI Historic", {} },                       // Normal
     { "Noto Serif",                 {} },                                       // Noto
@@ -100,6 +97,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Runic",            "NotoSansRunic-Regular.ttf" },              // Runic
     { "Noto Sans Samaritan",        "NotoSansSamaritan-Regular.ttf" },          // Samaritan
     { "Noto Sans Saurashtra",       "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON }, // Saurashtra
+    { "Noto Sans SignWriting",      "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF, {}, 145_pc }, // SignWriting
     { "Noto Sans Sinhala",          "NotoSansSinhala-Light.ttf", Ffg::LIGHT },  // Sinhala
     { "Noto Sans Sundanese",        "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON }, // Sundanese
     { "Noto Sans Syloti Nagri",     "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON }, // Syloti Nagri
@@ -145,6 +143,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"←↓↓ по столбцам, затем →"sv },
     { u8"→, ↑"sv },
     { u8"↓↓→ по столбцам"sv },
+    { u8"↓"sv },
     { u8"писали и ←, и →"sv },
     { u8"писали ←↓↓ по столбцам и →"sv },
     //{ u8"Ошибка"sv },
@@ -1153,6 +1152,27 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{sm|ꢒ}}=ка, {{sm|ꢒꢶ}}=ки, {{sm|ꢒ꣄}}=к. Вирама употребляется часто. "
                 "Начальная гласная{{-}}отдельный символ: {{sm|ꢄ}}=и."sv,
                 EcFont::SAURASHTRA },
+    // Sutton SignWriting OK, installed Google Noto font
+    /// @todo [tool] Make a SignWriting tool!
+    { "Sgnw"sv, QFontDatabase::Any,
+        EcScriptType::OTHER, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
+        u8"Жестовое письмо Саттон"sv, u8"1974",
+        u8"жестовые языки, в частности амслен <i>(язык американских глухих)</i>",
+        u8"Систему придумала в 1974 танцовщица Валери Саттон на основе созданной двумя годами ранее системы записи танцев. "
+                "Впоследствии она же придумала системы для записи пантомимы, других видов спорта (фигурного катания, каратэ…), "
+                    "физических упражнений, языка тела людей и животных, которые, впрочем, не были столь успешны."
+            "<p>Не указано, с чьей точки зрения пишутся жесты{{-}}исполнителя или зрителя. "
+                "Но большинство публикаций ориентируются на исполнителя. "
+                "Символов очень много и передают движения пальцев, рук, плеч, взгляда, а также прикосновения и выражения лица. "
+                "Для ладони есть кулак (квадрат), несжатый кулак (круг), открытая ладонь (пятиугольник), ребро (прямоугольник) и другое. "
+                "Один и тот же жест можно передать несколькими способами."
+            "<p>Хотя система не является строго [[pt:universality|текстовой]]{{-}}положение жестов на странице ''играет'' роль{{-}}"
+                    "её в 2015 добавили в Юникод. "
+                "Добавили только символы, без какого-либо форматирования. "
+                "Но существует много программ, фиксирующих координаты X/Y на листе{{-}}например, векторные редакторы. "
+            "<p>Жесты другой рукой, в другую сторону, с поворотом задаются комбинирующими метками{{-}}"
+                    "любая из Fill{{_}}2…6, и одновременно любая из Rotation{{_}}2…16."sv,
+                EcFont::SIGNWRITING },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     /// @todo [desc, BMP] interesting script, describe
     { "Sinh"sv, QFontDatabase::Sinhala,

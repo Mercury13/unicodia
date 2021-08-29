@@ -81,6 +81,7 @@ namespace uc {
         Runr,   // European runes
         Samr,   // Samaritan
         Saur,   // Saurashtra
+        Sgnw,   // Sutton SignWriting
         Sinh,   // Sinhala
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
@@ -191,7 +192,6 @@ namespace uc {
         //Roro  no chars
         //Sara  no chars
         Sarb = Zyyy,        // beyond BMP
-        Sgnw = Zyyy,        // SignWriting, beyond BMP
         Shaw = Zyyy,        // beyond BMP
         Shrd = Zyyy,        // beyond BMP
         //Shui  no chars
