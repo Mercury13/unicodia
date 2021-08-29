@@ -1369,7 +1369,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Другая{{-}}он использовался для торговли с голландцами и португальцами. "
                 "В 1962 Университет Либерии добавил знаки для недостающих слогов.</p>"sv,
                 EcFont::VAI },
-    // Small font, let’s install!!
+    // Old Persian OK. Small font, let’s install!!
     { "Xpeo"sv, QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Дневнеперсидская клинопись"sv, u8"≈520 до н.э."sv,
