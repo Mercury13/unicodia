@@ -201,9 +201,8 @@ private:
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <class T>
     [[deprecated]] void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect);
+    [[deprecated]] void showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect);
+    [[deprecated]] void showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect);
     [[deprecated]] void showFonts(char32_t cp, QFontDatabase::WritingSystem ws,
                    QWidget* widget, TinyOpt<QRect> rect);
     [[deprecated]] void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);

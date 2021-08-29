@@ -14,9 +14,18 @@
 class QWidget;
 class QRect;
 
+namespace str {
+    class QSep;
+}
+
 namespace uc {
     class BidiClass;
     class Category;
+    class Font;
+    class Script;
+    class Version;
+    class Cp;
+    class Block;
 }
 
 namespace mywiki
@@ -50,10 +59,21 @@ namespace mywiki
     std::unique_ptr<Link> parsePopBidiLink(std::string_view target);
     std::unique_ptr<Link> parsePopCatLink(std::string_view target);
     std::unique_ptr<Link> parsePopFontsLink(std::string_view target);
+    std::unique_ptr<Link> parsePopScriptLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
+    QString buildHtml(const uc::Script& x);
     QString buildFontsHtml(const char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
+    QString buildHtml(const uc::Cp& cp, const uc::Block* hint,
+            const std::optional<QFont>& font, QFontDatabase::WritingSystem ws);
+    void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendNoFont(QString& x, const std::u8string_view wiki);
+    void append(QString& x, const std::u8string_view wiki, const uc::Font& font);
+    void appendVersionValue(QString& text, const uc::Version& version);
+    void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
+    void appendUtf(QString& text, str::QSep& sp, char32_t code);
+    void appendMissingCharInfo(QString& text, char32_t code);
+    QString buildNonCharHtml(char32_t code, const uc::Block* hint);
 
 }   // namespace mywiki
