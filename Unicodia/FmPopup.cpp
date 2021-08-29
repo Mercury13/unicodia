@@ -151,6 +151,16 @@ FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
 }
 
 
+FmPopup& FmPopup::popupAtAbsBacked(QWidget* widget, const QRect& absRect)
+{
+    if (widget) {
+        return popupAtAbs(widget, absRect);
+    } else {
+        return popupAtAbs(fLastWidget, fLastAbsRect);
+    }
+}
+
+
 FmPopup& FmPopup::popup(QWidget* widget, TinyOpt<QRect> rect)
 {
     if (rect) {

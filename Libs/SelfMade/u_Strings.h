@@ -2,6 +2,7 @@
 
 #include <string>
 #include <utility>
+#include <charconv>
 
 #include "u_Vector.h"
 
@@ -50,6 +51,10 @@ namespace str {
         str::replace(cache, needle, byWhat);
         return cache;
     }
+
+    template <class T>
+    inline auto fromChars(std::string_view s, T& v)
+        { return std::from_chars(s.data(), s.data() + s.size(), v); }
 
 }   // namespace str
 

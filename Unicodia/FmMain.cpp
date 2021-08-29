@@ -22,6 +22,7 @@
 // Project-local
 #include "Skin.h"
 #include "Wiki.h"
+#include "MyWiki.h"
 
 // Forms
 #include "FmPopup.h"
@@ -814,7 +815,7 @@ void wiki::append(QString& s, const char* start, const char* end)
 
 namespace {
 
-    class Eng : public wiki::Engine
+    class [[deprecated]] Eng : public wiki::Engine
     {
     public:
         QString& s;
@@ -1060,15 +1061,9 @@ namespace {
     }
 
     template <class X>
-    void appendWiki(QString& text, const X& obj, std::u8string_view x)
+    [[deprecated]] void appendWiki(QString& text, const X& obj, std::u8string_view x)
     {
         Eng eng(text, obj.font());
-        wiki::run(eng, x);
-    }
-
-    void appendWikiNoFont(QString& text, std::u8string_view x)
-    {
-        Eng eng(text, uc::fontInfo[0]);
         wiki::run(eng, x);
     }
 
@@ -1325,7 +1320,7 @@ void FmMain::charChanged(const QModelIndex& current)
 
 
 namespace {
-    inline void appendHeader(QString& text, std::string_view x)
+    [[deprecated]] inline void appendHeader(QString& text, std::string_view x)
     {
         str::append(text, "<p><nobr><b>");
         str::append(text, x);
@@ -1333,14 +1328,14 @@ namespace {
     }
 
     template <int N>
-    inline void appendHeader(QString& text, char (&x)[N])
+    [[deprecated]] inline void appendHeader(QString& text, char (&x)[N])
     {
         size_t len = strnlen(x, N);
         appendHeader(text, std::string_view{ x, len });
     }
 
     template <class T>
-    inline void appendHeader(QString& text, const T& x)
+    [[deprecated]] inline void appendHeader(QString& text, const T& x)
     {
         str::append(text, "<p><nobr><b>");
         str::append(text, x.locName);
@@ -1352,6 +1347,20 @@ namespace {
 }   // anon namespace
 
 
+void FmMain::popupAtAbs(
+        QWidget* widget, const QRect& absRect, const QString& html)
+{
+    ensure(popup, this)
+          .setText(html)
+          .popupAtAbsBacked(widget, absRect);
+}
+
+
+FontList FmMain::allSysFonts(
+        char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount)
+    { return model.match.allSysFonts(cp, ws, maxCount); }
+
+
 void FmMain::popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect)
 {
     ensure(popup, this)
@@ -1361,43 +1370,14 @@ void FmMain::popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect
 
 
 template <class T>
-void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
+[[deprecated]] void FmMain::showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect)
 {
     QString text;
     appendHeader(text, x);
     str::append(text, "<p>");
-    appendWikiNoFont(text, x.locDescription);
+    mywiki::appendNoFont(text, x.locDescription);
     str::append(text, "</p>");
     popupText(text, widget, rect);
-}
-
-
-void FmMain::showPopup(
-        const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect)
-{
-    QString text;
-    appendHeader(text, x);
-
-    str::append(text, "<p>");
-    str::QSep sp(text, "<br>");
-
-    sp.sep();
-    str::append(text, u8"• В техдокументации: ");
-    str::append(text, x.locId);
-
-    str::append(text, "</p>");
-
-    str::append(text, "<p>");
-    appendWikiNoFont(text, x.locDescription);
-    str::append(text, "</p>");
-    popupText(text, widget, rect);
-}
-
-
-void FmMain::showPopup(
-        const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect)
-{
-    showPopupT(x, widget, rect);
 }
 
 
@@ -1414,10 +1394,6 @@ void FmMain::showPopup(
 
 namespace {
     const char8_t* STR_RANGE = u8"%04X…%04X";
-
-    template <class T>
-    inline auto fromChars(std::string_view s, T& v)
-        { return std::from_chars(s.data(), s.data() + s.size(), v); }
 }
 
 
@@ -1473,59 +1449,16 @@ void FmMain::showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect)
 }
 
 
-void FmMain::showFonts(
-        char32_t cp, QFontDatabase::WritingSystem ws,
-        QWidget* widget, TinyOpt<QRect> rect)
-{
-    if (cp >= uc::N_CHARS || ws >= QFontDatabase::WritingSystemsCount)
-        return;
-    QString text;
-    char buf[50];
-    auto format = u8"Шрифты для U+%04X";
-    snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
-    appendHeader(text, buf);
-
-    auto fonts = model.match.allSysFonts(cp, ws, 20);
-    str::append(text, "<p>");
-    str::QSep sp(text, "<br>");
-    for (auto& v : fonts.lines) {
-        sp.sep();
-        str::append(text, u8"•\u00A0");
-        text += v.name;
-    }
-    if (fonts.hasMore) {
-        sp.sep();
-        str::append(text, u8"•\u00A0…");
-    }
-
-    popupText(text, widget, rect);
-}
-
-
 void FmMain::linkClicked(std::string_view scheme, std::string_view target,
                  QWidget* widget, TinyOpt<QRect> rect)
 {
-    if (scheme == "pb"sv) {
-        if (auto* bidi = uc::findBidiClass(target))
-            showPopup(*bidi, widget, rect);
-    } else if (scheme == "pc"sv) {
-        if (auto* cat = uc::findCategory(target))
-            showPopup(*cat, widget, rect);
-    } else if (scheme == "ps"sv) {
+    if (scheme == "ps"sv) {
         if (auto* script = uc::findScript(target))
             showPopup(*script, widget, rect);
     } else if (scheme == "pk"sv) {
         int iBlock = 0;
-        fromChars(target, iBlock);
+        str::fromChars(target, iBlock);
         showPopup(uc::blocks[iBlock], widget, rect);
-    } else if (scheme == "pf"sv) {
-        auto sv = str::splitSv(target, '/');
-        if (sv.size() >= 2) {
-            unsigned int cp = 0, ws = 0;
-            fromChars(sv[0], cp);
-            fromChars(sv[1], ws);
-            showFonts(cp, static_cast<QFontDatabase::WritingSystem>(ws), widget, rect);
-        }
     } else if (scheme == "pt"sv) {
         if (auto* term = uc::findTerm(target))
             showPopup(*term, widget, rect);
@@ -1536,10 +1469,7 @@ void FmMain::linkClicked(std::string_view scheme, std::string_view target,
 void FmMain::linkClicked(
         std::string_view link, QWidget* widget, TinyOpt<QRect> rect)
 {
-    auto things = str::splitSv(link, ':');
-    if (things.size() >= 2) {
-        linkClicked(things[0], things[1], widget, rect);
-    }
+    mywiki::go(widget, rect, *this, link);
 }
 
 

@@ -1,6 +1,11 @@
 #pragma once
 
 ///
+/// LICENSE: PUBLIC DOMAIN
+/// beacuse of extreme simplicity
+///
+
+///
 /// @brief Tiny optional for passing param into function
 /// @warning PASS BY VALUE
 ///

@@ -14,6 +14,7 @@
 
 // Project-local
 #include "FontMatch.h"
+#include "MyWiki.h"
 
 // Forms
 #include "FmPopup.h"
@@ -151,7 +152,8 @@ private:
 };
 
 
-class FmMain : public QMainWindow
+class FmMain : public QMainWindow,
+               private mywiki::Gui
 {
     Q_OBJECT
     using Super = QMainWindow;
@@ -198,19 +200,23 @@ private:
                      QWidget* widget, TinyOpt<QRect> rect);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <class T>
-    void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showPopup(const uc::BidiClass& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showPopup(const uc::Category& x, QWidget* widget, TinyOpt<QRect> rect);
+    [[deprecated]] void showPopupT(const T& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Script& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Block& x, QWidget* widget, TinyOpt<QRect> rect);
     void showPopup(const uc::Term& x, QWidget* widget, TinyOpt<QRect> rect);
-    void showFonts(char32_t cp, QFontDatabase::WritingSystem ws,
+    [[deprecated]] void showFonts(char32_t cp, QFontDatabase::WritingSystem ws,
                    QWidget* widget, TinyOpt<QRect> rect);
-    void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
+    [[deprecated]] void popupText(const QString& text, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
     void reflectCjkCollapseState();
+
+    // mywiki::Gui
+    void popupAtAbs(
+            QWidget* widget, const QRect& absRect, const QString& html) override;
+    FontList allSysFonts(
+            char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();

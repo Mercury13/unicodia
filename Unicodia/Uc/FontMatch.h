@@ -14,6 +14,7 @@
 
 // Unicode
 #include "UcAutoDefines.h"
+#include "FontDef.h"
 
 namespace mask {
     using T = uint64_t;
@@ -31,18 +32,6 @@ namespace mask {
     // Some day Qt may increase it to 65.
     static_assert(QFontDatabase::WritingSystemsCount <= std::numeric_limits<T>::digits);
 }   // namespace mask
-
-enum class FontPrio { BAD, NORMAL, GOOD, MAIN };
-
-struct FontLine {
-    QString name;
-    FontPrio priority = FontPrio::NORMAL;
-};
-
-struct FontList {
-    SafeVector<FontLine> lines;
-    bool hasMore = false;
-};
 
 class FontMatch
 {
