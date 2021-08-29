@@ -3752,7 +3752,6 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
 }
 
 
-
 namespace {
 
     bool isLessCB(char32_t x, const uc::Block& y)

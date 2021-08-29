@@ -62,10 +62,12 @@ namespace mywiki
     std::unique_ptr<Link> parsePopFontsLink(std::string_view target);
     std::unique_ptr<Link> parsePopScriptLink(std::string_view target);
     std::unique_ptr<Link> parsePopTermLink(std::string_view target);
+    std::unique_ptr<Link> parsePopIBlockLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
     QString buildHtml(const uc::Term& x);
+    QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(const char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
     QString buildHtml(const uc::Cp& cp, const uc::Block* hint,
             const std::optional<QFont>& font, QFontDatabase::WritingSystem ws);

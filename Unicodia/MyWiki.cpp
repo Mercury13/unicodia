@@ -123,6 +123,16 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopTermLink(std::string_view target)
     return {};
 }
 
+
+std::unique_ptr<mywiki::Link> mywiki::parsePopIBlockLink(std::string_view target)
+{
+    size_t iBlock = 0;
+    str::fromChars(target, iBlock);
+    if (iBlock < uc::N_BLOCKS)
+        return mu(uc::blocks[iBlock]);
+    return {};
+}
+
 std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
 {
     auto sv = str::splitSv(target, '/');
@@ -147,12 +157,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopCatLink(target);
     } else if (scheme == "ps"sv) {
         return parsePopScriptLink(target);
-        //if (auto* script = uc::findScript(target))
-        //    showPopup(*script, widget, rect);
     } else if (scheme == "pk"sv) {
-        //int iBlock = 0;
-        //fromChars(target, iBlock);
-        //showPopup(uc::blocks[iBlock], widget, rect);
+        return parsePopIBlockLink(target);
     } else if (scheme == "pf"sv) {
         return parsePopFontsLink(target);
     } else if (scheme == "pt"sv) {
@@ -729,5 +735,44 @@ QString mywiki::buildHtml(const uc::Term& x)
 
     str::append(text, "<p>");
     appendWiki(text, x, x.locDesc);
+    return text;
+}
+
+
+namespace {
+    const char8_t* STR_RANGE = u8"%04X…%04X";
+}
+
+QString mywiki::buildHtml(const uc::Block& x)
+{
+    QString text;
+    appendHeader(text, x);
+
+    str::append(text, "<p>");
+    str::QSep sp(text, "<br>");
+
+    sp.sep();
+    str::append(text, u8"• Английское: ");
+    str::append(text, x.name);
+
+    sp.sep();
+    str::append(text, u8"• Диапазон: ");
+    char buf[30];
+    snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RANGE),
+                int(x.startingCp), int(x.endingCp));
+    str::append(text, buf);
+
+    sp.sep();
+    str::append(text, u8"• Появился в версии: ");
+    mywiki::appendVersionValue(text, x.version());
+
+    if (!x.locDescription.empty()) {
+        str::append(text, "<p>");
+        appendWiki(text, x, x.locDescription);
+        str::append(text, "</p>");
+    } else if (x.ecScript != uc::EcScript::NONE) {
+        str::append(text, u8"<p><b>О письменности</b></p>"sv);
+        mywiki::appendHtml(text, x.script(), false);
+    }
     return text;
 }
