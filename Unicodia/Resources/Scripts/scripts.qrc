@@ -157,5 +157,21 @@
         <file>FFF0.png</file>
         <file>FB00.png</file>
         <file>FE00.png</file>
+        <file>10000.png</file>
+        <file>10080.png</file>
+        <file>10100.png</file>
+        <file>10140.png</file>
+        <file>101D0.png</file>
+        <file>102E0.png</file>
+        <file>10300.png</file>
+        <file>10350.png</file>
+        <file>1B000.png</file>
+        <file>1B100.png</file>
+        <file>103A0.png</file>
+        <file>10400.png</file>
+        <file>16800.png</file>
+        <file>12000.png</file>
+        <file>12400.png</file>
+        <file>13000.png</file>
     </qresource>
 </RCC>
