@@ -844,10 +844,10 @@ TEST (Decap, Pada)
 
 
 ///
-///  RestSmall bhv: Cyrillic is small, G is always capital
+///  RestSmall bhv: Cyrillic is script, G is always capital
 ///
 TEST (Decap, RestSmall)
 {
     auto r = decapitalize("SIGNWRITING CYRILLIC LETTER G");
-    EXPECT_EQ("Signwriting cyrillic letter G", r);
+    EXPECT_EQ("SignWriting Cyrillic letter G", r);
 }
