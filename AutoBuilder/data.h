@@ -106,6 +106,8 @@ extern const std::map<std::string_view, std::string_view> exceptions;
 extern const std::multiset<PrefixEntry> prefixes;
 extern const std::set<std::string_view> langNames;
 extern const std::map<char32_t, std::string_view> abbrevs;
+extern const std::set<std::string_view> cuneiformKeywords;
+extern const std::set<std::string_view> cuneiformSymbols;
 
 enum class DecapDebug { NO, YES };
 

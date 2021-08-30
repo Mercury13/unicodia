@@ -851,3 +851,45 @@ TEST (Decap, RestSmall)
     auto r = decapitalize("SIGNWRITING CYRILLIC LETTER G");
     EXPECT_EQ("SignWriting Cyrillic letter G", r);
 }
+
+
+///
+///  Word divider
+///  Does not work, none in base
+///
+//TEST (Decap, WordDivider1)
+//{
+//    auto r = decapitalize("SIGNWRITING NUMERIC SIGN WORD DIVIDER");
+//    EXPECT_EQ("SignWriting numeric sign Word divider", r);
+//}
+
+
+///
+///  Word divider
+///
+TEST (Decap, WordDivider2)
+{
+    auto r = decapitalize("SIGNWRITING SIGN ASSYRIAN WORD DIVIDER");
+    EXPECT_EQ("SignWriting sign Assyrian word divider", r);
+}
+
+
+///
+///  Cuneiform prerequisites
+///  That’s just how should decapitalize when cunei DOES NOT TRIGGER
+///
+TEST (Decap, CuneiPrereq)
+{
+    auto r = decapitalize("SIGNWRITING SIGN ASSYRIAN WORD DIVIDER OVER ASH");
+    EXPECT_EQ("SignWriting sign Assyrian word divider over ash", r);
+}
+
+
+///
+///  And when triggering cunei…
+///
+TEST (Decap, Cunei1)
+{
+    auto r = decapitalize("CUNEIFORM SIGN ASSYRIAN WORD DIVIDER OVER ASH TIMES LAK-123");
+    EXPECT_EQ("Cuneiform sign Assyrian word divider over ASH times LAK-123", r);
+}

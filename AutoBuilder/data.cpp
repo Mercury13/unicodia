@@ -107,14 +107,15 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "JAMO"sv,         Dicf::TRIG_SCRIPT },
     { "JAVANESE"sv,     Dicf::TRIG_SCRIPT },
     { "JAPANESE"sv,     Dicf::TRIG_SCRIPT },
-    { "KAYAH"sv,        { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LI"sv } },
+    { "KANNADA"sv,      Dicf::TRIG_SCRIPT },
     { "KATAKANA"sv,     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KATAKANA-HIRAGANA"sv, { Dicf::TRIG_SCRIPT, "Katakana-Hiragana"sv } },
+    { "KAYAH"sv,        { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LI"sv } },
     { "KHAROSHTHI"sv,   Dicf::TRIG_SCRIPT },
     { "KHMER"sv,        Dicf::TRIG_SCRIPT },
     { "KHOJKI"sv,       Dicf::TRIG_SCRIPT },
     { "KHITAN"sv,       Dicf::TRIG_SCRIPT },
-    { "KANNADA"sv,      Dicf::TRIG_SCRIPT },
+    { "KHUDAWADI"sv,    Dicf::TRIG_SCRIPT },
     { "KOREAN"sv,       Dicf::TRIG_SCRIPT },
     { "KPELLE"sv,       Dicf::TRIG_SCRIPT },
     { "KAITHI"sv,       Dicf::TRIG_SCRIPT },
@@ -179,7 +180,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SHARADA"sv,      Dicf::TRIG_SCRIPT },
     { "SHUISHU"sv,      Dicf::TRIG_SCRIPT },
     { "SIDDHAM"sv,      Dicf::TRIG_SCRIPT },
-    { "KHUDAWADI"sv,    Dicf::TRIG_SCRIPT },
+    { "SIGNWRITING",    { Dicf::PART_NOUN | Dicf::TRIG_SCRIPT, "SignWriting" } },
     { "SINHALA"sv,      Dicf::TRIG_SCRIPT },
     { "SIYAQ"sv,        Dicf::TRIG_SCRIPT },
     { "SORA"sv,         { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "SOMPENG"sv } },
@@ -249,6 +250,8 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Mixed
     { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "WORD"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "REPETITION"sv,   Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
     // American tribes
     { "TH-CREE"sv,      { Dicf::PART_ADJECTIVE, "Th-Cree" } },
@@ -272,7 +275,9 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Other nations
     { "AKHMIMIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "ASSYRIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "BOHAIRIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "ELAMITE",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
@@ -292,6 +297,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "COMMA"sv,        Dicf::PART_NOUN },
     { "CIRCLE"sv,       Dicf::PART_NOUN },
     { "DANDA"sv,        Dicf::PART_NOUN },
+    { "DIVIDER"sv,      Dicf::PART_NOUN },
     { "DNA"sv,          Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "DOT"sv,          Dicf::PART_NOUN },
     { "DOTS"sv,         Dicf::PART_NOUN },
@@ -304,8 +310,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "REDUPLICATION"sv, Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING"sv,         Dicf::PART_NOUN },
-    { "SIGNWRITING",    { Dicf::PART_NOUN, "SignWriting" } },
-    { "SHAD"sv,         Dicf::PART_NOUN },
+    { "SEPARATOR",      Dicf::PART_NOUN },
+    { "SHAD",           Dicf::PART_NOUN },
     { "SHELF"sv,        Dicf::PART_NOUN },
     { "SHOE"sv,         Dicf::PART_NOUN },  // For APL not really, but OK
     { "SPIRANT"sv,      Dicf::PART_NOUN },  // One time, probably OK
@@ -337,6 +343,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TEN"sv,          Dicf::PART_NUMERAL },
     { "ELEVEN"sv,       Dicf::PART_NUMERAL },
     { "TWELVE"sv,       Dicf::PART_NUMERAL },
+    { "FORTY"sv,        Dicf::PART_NUMERAL },
+    { "FIFTY"sv,        Dicf::PART_NUMERAL },
 
     // Numeric tones are nouns
     { "TONE-1"sv,       Dicf::PART_NOUN },
@@ -842,6 +850,42 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x13438, ")" },   // Egyptian hiero end segment
     // Then Variation Selectors
 };
+
+const std::set<std::string_view> cuneiformSymbols {
+    "BAR"
+};
+
+const std::set<std::string_view> cuneiformKeywords {
+    "CUNEIFORM",
+    "SIGN",
+    "TIMES",
+    "OVER",
+    "CROSSING",
+    "PLUS",
+    "NUMERIC",
+    "INVERTED",
+    "ROTATED",
+    "NINETY",
+    "DEGREES",
+    "PUNCTUATION",
+    "DIAGONAL",
+    "QUADCOLON",
+    "OPPOSING",
+    "SQUARED",
+    "VARIANT",
+    "ASTERISK",
+    "WORD",
+    "DIVIDER",
+    "THIRD",
+    "THIRDS",
+    "FOURTH",
+    "FOURTHS",
+    "FIFTH",
+    "FIFTHS",
+    "SIXTH",
+    "SIXTHS",
+};
+
 
 
 /// @todo [langs] Stopped at Canadian syllabics
@@ -1383,6 +1427,24 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
     size_t newLen = words.empty() ? 0 : words.size() - 1;
     for (auto& word : words) {
         newLen += word.original.length();
+    }
+
+    // Cuneiform recapitalization
+    if (words[0].original == "CUNEIFORM"sv) {
+        for (auto& word : words) {
+            auto q = dictionary.find(word.original);
+            // 1. Symbols — YES
+            if (cuneiformSymbols.contains(word.original)) {
+                word.isAllCap = true;
+            // 2. Script/noun/adjective — NO
+            } else if (q->second.flags.haveAny(TRIG_ANY_SCRIPT
+                        | Dicf::PART_ADJECTIVE | Dicf::PART_NOUN | Dicf::PART_NUMERAL)) {
+                // do nothing
+            // 3. Keyword — YES
+            } else if (!cuneiformKeywords.contains(word.original)) {
+                    word.isAllCap = true;
+            }
+        }
     }
 
     // Compose
