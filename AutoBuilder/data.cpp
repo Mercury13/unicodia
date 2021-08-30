@@ -139,7 +139,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MENDE"sv,        Dicf::TRIG_SCRIPT | Dicf::TRIG_DIGIT_PROPAGATES_RIGHT },
     { "KIKAKUI"sv,      Dicf::TRIG_SCRIPT | Dicf::TRIG_DIGIT_PROPAGATES_RIGHT },
     { "MEROITIC"sv,     Dicf::TRIG_SCRIPT },
-    { "MALAYALAM"sv,    Dicf::TRIG_SCRIPT },
+    { "MALAYALAM"sv,    Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "MODI"sv,         Dicf::TRIG_SCRIPT },
     { "MONGOLIAN"sv,    Dicf::TRIG_SCRIPT },
     { "MRO"sv,          Dicf::TRIG_SCRIPT },
