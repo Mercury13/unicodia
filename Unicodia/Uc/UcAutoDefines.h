@@ -98,6 +98,7 @@ namespace uc {
         Thaa,   // Thaana
         Thai,   // Thai
         Tibt,   // Tibetan
+        Ugar,   // Ugaritic
         Vaii,   // Vai
         Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
@@ -207,7 +208,6 @@ namespace uc {
         Takr = Zyyy,        // beyond BMP
         //Teng  no chars
         Tirh = Zyyy,        // Tirhuta beyond BMP
-        Ugar = Zyyy,        // Ugaritic beyond BMP
         //Visp  no chars
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
