@@ -2221,7 +2221,11 @@ constinit const uc::Block uc::blocks[302] {
             "Saurashtra", u8"Саураштра", {}, EcScript::Saur },
     /// @todo [tofu] Another PitA in W7, A8FC+
     { 0xA8E0, 0xA8FF,
-            "Devanagari Extended", u8"Деванагари расширенный", {}, EcScript::Deva },
+            "Devanagari Extended", u8"Деванагари расширенный"sv,
+            u8"Распевы из Самаведы (книги релизиозных песен), варианты знака чандрабинду (носовая гласная), "
+                    "редакторские пометы, религиозные символы, "
+                    "гласная «ай» для мелких неписьменных языков Индии, придуманная европейцами.",
+            EcScript::Deva },
     { 0xA900, 0xA92F,
             "Kayah Li", u8"Кая-ли", {}, EcScript::Kali },
     { 0xA930, 0xA95F,
