@@ -426,7 +426,7 @@ namespace uc {
 
     enum class EcTermCat {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM,
-        PRINCIPLES, NN
+        PRINCIPLES, OTHER, NN
     };
 
     struct TermCat

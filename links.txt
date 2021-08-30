@@ -28,6 +28,7 @@ https://github.com/twitter/twemoji — эмодзи от Твиттера и к�
 https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
 https://commons.wikimedia.org/wiki/Category:Unicode_BMP
 https://www.unicode.org/charts/lastresort.html — интересные изображения письменностей
+https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_Viewer.html — тест символов жестового письма Саттон
 
 
 ПИСЬМЕННОСТИ
