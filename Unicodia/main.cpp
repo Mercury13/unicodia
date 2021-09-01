@@ -1,6 +1,7 @@
 // Qt
 #include <QApplication>
 #include <QWidget>
+#include <QTranslator>
 
 // Libs
 #include <i_TempFont.h>
@@ -11,6 +12,12 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+    // Install standard Qt translation
+    QTranslator tr;
+    if (tr.load("qtbase_ru", QApplication::applicationDirPath()))
+        QApplication::installTranslator(&tr);
+
     FmMain w;
 
     // Preinstall backup fonts!
