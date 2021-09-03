@@ -3736,6 +3736,7 @@ void uc::completeData()
         ++block->nChars;
         hint = block;
         block->ecVersion = std::min(block->ecVersion, cp.ecVersion);
+        block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
         // Lookup table
         cps[cp.subj.val()] = &cp;
     }
@@ -3936,6 +3937,17 @@ const uc::Block* uc::blockOf(char32_t subj, const Block* hint)
 size_t uc::Block::index() const
 {
     return this - std::begin(blocks);
+}
+
+
+unsigned uc::Block::nNonChars() const
+{
+    unsigned r = 0;
+    if (flags.have(Bfg::HAS_32_NONCHARS))
+        r += 32;
+    if ((endingCp & 0xFFFF) == 0xFFFF)
+        r += 2;
+    return r;
 }
 
 

@@ -367,13 +367,21 @@ namespace uc {
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
+        mutable EcVersion ecLastVersion = EcVersion::FIRST;
 
         size_t index() const;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
+        const Version& lastVersion() const { return versionInfo[static_cast<int>(ecLastVersion)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-        const Font& font() const { return (ecFont != EcFont::NORMAL)
-                                            ? fontInfo[static_cast<int>(ecFont)]
-                                            : script().font(); }
+        const Font& font() const
+        {
+            return (ecFont != EcFont::NORMAL)
+                ? fontInfo[static_cast<int>(ecFont)]
+                : script().font();
+        }
+        unsigned nNonChars() const;
+        unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
+        unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
 
         Block& operator = (const Block&) = delete;
         Block& operator = (Block&&) = delete;

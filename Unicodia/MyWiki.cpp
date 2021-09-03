@@ -747,7 +747,7 @@ QString mywiki::buildHtml(const uc::Term& x)
 
 
 namespace {
-    const char8_t* STR_RANGE = u8"%04X…%04X";
+    const char8_t* STR_RANGE = u8"%04X…%04X";    
 }
 
 QString mywiki::buildHtml(const uc::Block& x)
@@ -772,6 +772,23 @@ QString mywiki::buildHtml(const uc::Block& x)
     sp.sep();
     str::append(text, u8"• Появился в версии: ");
     mywiki::appendVersionValue(text, x.version());
+
+    auto nNonChars = x.nNonChars();
+    if (nNonChars) {
+        sp.sep();
+        str::append(text, u8"• <a href='pt:noncharacter'" SUBTAG_POPUP ">Отсутствующих символов</a>: "sv);
+        str::append(text, nNonChars);
+    }
+
+    sp.sep();
+    auto nEmpty = x.nEmptyPlaces();
+    if (nEmpty != 0) {
+        str::append(text, u8"• Пустых мест: "sv);
+        str::append(text, nEmpty);
+    } else {
+        str::append(text, u8"• Заполнен в версии: "sv);
+        mywiki::appendVersionValue(text, x.lastVersion());
+    }
 
     if (!x.locDescription.empty()) {
         str::append(text, "<p>");
