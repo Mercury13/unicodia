@@ -2423,7 +2423,9 @@ constinit const uc::Block uc::blocks[302] {
     // Ancient symbols OK
     /// @todo [desc] Ancient symbols
     { 0x10190, 0x101CF,
-            "Ancient Symbols", u8"Древние символы"sv },
+            "Ancient Symbols", u8"Древние символы",
+            u8"Римские символы для денег, мер и весов. "
+                    "Также греческое библейское сокращение «крест» (реже «Христос»)." },
     // Phaistos Disc OK
     { 0x101D0, 0x101FF,
         "Phaistos Disc", u8"Фестский диск"sv,
