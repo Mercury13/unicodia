@@ -2637,7 +2637,9 @@ constinit const uc::Block uc::blocks[302] {
     // Egyptian hiero format OK
     { 0x13430, 0x1343F,
             "Egyptian Hieroglyph Format Controls",
-            u8"Форматирующие символы для египетских иероглифов", {}, EcScript::Egyp },
+            u8"Форматирующие символы для египетских иероглифов",
+            u8"Семь необязательных символов, обеспечивающих полное форматирование египетских иероглифов.",
+            EcScript::Egyp },
     /// @todo [tofu] Anatolyan hiero
     { 0x14400, 0x1467F,
             "Anatolian Hieroglyphs", u8"Анатолийские иероглифы", {}, EcScript::Hluw },
