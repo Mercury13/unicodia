@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
     if (tr.load("qtbase_ru", QApplication::applicationDirPath()))
         QApplication::installTranslator(&tr);
 
+    uc::completeData();
     FmMain w;
 
     // Preinstall backup fonts!
@@ -26,7 +27,6 @@ int main(int argc, char *argv[])
     installTempFontRel("NotoSansSymbols2-Regular.ttf");
     installTempFontRel("NotoSansMath-Regular.ttf");
 
-    uc::completeData();
     w.show();
     return a.exec();
 }

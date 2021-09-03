@@ -357,7 +357,7 @@ void CharsModel::build()
         if (isCjkCollapsed) {
             auto blk = uc::blockOf(cp.subj, hint);
             if (blk->flags.have(uc::Bfg::COLLAPSIBLE)
-                    && static_cast<int>(cp.subj) - blk->startingCp >= NCOLS)
+                    && ((cp.subj.uval() ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS))
                 continue;
         }
         addCp(cp);

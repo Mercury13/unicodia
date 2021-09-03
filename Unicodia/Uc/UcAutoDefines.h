@@ -311,6 +311,9 @@ namespace uc {
         constexpr int32_t val() const
             { return (static_cast<int32_t>(hi) << 16) | (med << 8) | lo; }
         constexpr operator int32_t() const { return val(); }
+        constexpr uint32_t uval() const
+            { return (static_cast<uint32_t>(hi) << 16) | (med << 8) | lo; }
+        constexpr operator uint32_t() const { return uval(); }
 
         constexpr operator char32_t() const { return val(); }
         constexpr char32_t ch32() const { return val(); }

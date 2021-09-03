@@ -2684,9 +2684,10 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A"sv },
     /// @todo [tofu] Small kana ex, the entire block
+    // Small kana ex not collapsible: syllabary
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны", {},
-            EcScript::NONE, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::CJK },
     // Nushu OK, not collapsible: syllabary
     { 0x1B170, 0x1B2FF,
             "Nushu", u8"Нюй-шу"sv, {}, EcScript::Nshu },
