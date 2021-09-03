@@ -131,11 +131,11 @@
         <file>A830.png</file>
         <file>A840.png</file>
         <file>A880.png</file>
-        <file>A9E0.png</file>
         <file>A900.png</file>
         <file>A930.png</file>
         <file>A960.png</file>
         <file>A980.png</file>
+        <file>A9E0.png</file>
         <file>AA00.png</file>
         <file>AA60.png</file>
         <file>AA80.png</file>
@@ -161,29 +161,33 @@
         <file>10080.png</file>
         <file>10100.png</file>
         <file>10140.png</file>
+        <file>10190.png</file>
         <file>101D0.png</file>
         <file>102E0.png</file>
         <file>10300.png</file>
         <file>10350.png</file>
-        <file>1B000.png</file>
-        <file>1B100.png</file>
+        <file>10380.png</file>
         <file>103A0.png</file>
         <file>10400.png</file>
-        <file>16800.png</file>
         <file>12000.png</file>
         <file>12400.png</file>
+        <file>12480.png</file>
         <file>13000.png</file>
+        <file>13430.png</file>
+        <file>16800.png</file>
+        <file>17000.png</file>
+        <file>18800.png</file>
+        <file>18D00.png</file>
+        <file>1B000.png</file>
+        <file>1B100.png</file>
+        <file>1B170.png</file>
+        <file>1D2E0.png</file>
+        <file>1D800.png</file>
         <file>1FB00.png</file>
         <file>1FA00.png</file>
-        <file>1D800.png</file>
-        <file>10380.png</file>
-        <file>12480.png</file>
-        <file>1D2E0.png</file>
-        <file>1B170.png</file>
-        <file>13430.png</file>
-        <file>10190.png</file>
         <file>1D400.png</file>
         <file>1D360.png</file>
         <file>1F100.png</file>
+        <file>1E900.png</file>
     </qresource>
 </RCC>
