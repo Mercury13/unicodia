@@ -52,15 +52,16 @@ namespace uc {
     {
         NOMATTER,       ///< Symbols (language’s life does not matter)
         ALIVE,          ///< UNESCO safe (Ukrainian)
-                        ///< UNESCO vulnerable (Belorussian)
-        ENDANGERED,     ///< UNESCO endangered (Walloon)
+        ENDANGERED,     ///< UNESCO vulnerable (Belorussian)
+                        ///< UNESCO endangered (Walloon)
                         ///< UNESCO highly endangered (Crimean Tatar)
+        COMPETING,      ///< Loses competition to another script
         DEAD,           ///< UNESCO elders only (Votic)
                         ///< UNESCO dead (Yugh)
         HISTORICAL,     ///< Dead long ago (Latin, Coptic)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
-        EXPERIMANTAL,   ///< Experimantal script for existing languages (Deseret)
+        EXPERIMENTAL,   ///< Experimantal script for existing languages (Deseret)
         //ARTIFICIAL,     ///< Artificial languages (Esperanto); unencoded right now
         //FICTIONAL       ///< Fictional languages (Quenya, Klingon); unencoded right now
         NN

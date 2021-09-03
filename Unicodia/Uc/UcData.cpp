@@ -124,14 +124,14 @@ static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));
 
 constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
     { {} },
-    { u8"живая <i>(основным языкам ничего не угрожает, как кириллица)</i>"sv },
-    { u8"в опасности <i>(задавлена соседними языками, как чероки, или социальными потрясениями, как сирийская, "
-        "или соседними письменностями, как ланна)</i>"sv },
-    { u8"мёртвая <i>(скоро потеряет/недавно потеряла носителей, как нюй-шу)</i>"sv },
-    { u8"историческая <i>(давно мертва, как глаголица)</i>"sv },
-    { u8"новая <i>(появилась в новейшее время, как нко)</i>"sv },
-    { u8"возрождённая <i>(как ахом)</i>"sv },
-    { u8"экспериментальная <i>(попытка придумать имеющемуся языку новую письменность, как мормонская)</i>"sv },
+    { u8"живая ''(основным языкам ничего не угрожает, как кириллица)''" },
+    { u8"в опасности{{-}}из-за языка ''(как чероки)''" },
+    { u8"в опасности{{-}}из-за конкуренции письменностей ''(как ланна)''" },
+    { u8"мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)''" },
+    { u8"историческая ''(давно мертва, как глаголица)''" },
+    { u8"новая ''(появилась в новейшее время, как нко)''" },
+    { u8"возрождённая ''(как ахом)''"sv },
+    { u8"экспериментальная <i>(попытка придумать имеющемуся языку новую письменность, как мормонская)</i>" },
     //{ u8"Ошибка"sv },
 };
 
@@ -510,7 +510,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::SYMBOL },
     // Buginese OK, W10 only → installed Google Noto
     { "Bugi"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бугийский (лонтара)"sv, u8"XVII век"sv,
         u8"бугийский и другие языки о. Сулавеси"sv,
         u8"<p>Бугийская письменность, или лонтара{{-}}потомок брахми и работает по тому же принципу. "
@@ -527,7 +527,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Бухид"sv, u8"≈1300"sv,
         u8"бухидский <i>(Филиппины)</i>"sv,
-        u8"<p>Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991\u00A0год). "
+        u8"<p>Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991{{_}}год). "
                 "Восходит к брахми и родственный с тагальским.</p>"
             "<p>В языке всего 15 согласных и три гласных: «а» по умолчанию, «и» и «у» задаются огласовками. Начальные гласные{{-}}"
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
@@ -544,7 +544,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Простая согласная{{-}}уменьшенная буква: к={{sm|ᒃ}}.</p>"sv,
                 EcFont::CANADIAN_ABORIGINAL },
     { "Cham"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Чамский"sv, u8"IV век"sv,
         u8"чамский <i>(Вьетнам, Камбоджа)</i>"sv,
         u8"<p>Чамская письменность произошла из брахми, и слоги по умолчанию заканчиваются гласной «а»."
@@ -622,7 +622,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::DOGRA },
     // Deseret OK, W10 Segoe UI Symbol, plane 1
     { "Dsrt"sv, QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::EXPERIMANTAL, EcWritingDir::LTR, EcContinent::AMERICA,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Дезеретская (мормонская)"sv, u8"1854",
         u8"английский, отдельные языки индейцев"sv,
         u8"<p>В XIX{{_}}веке было множество попыток придумать фонетический алфавит для английского, "
@@ -809,7 +809,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::OLD_ITALIC },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Яванский"sv, u8"XV век"sv,
         u8"яванский, мелкие языки Явы"sv,
         u8"<p>Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
@@ -863,7 +863,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::KANNADA },
     // Lanna OK, W10 none, installed Google Noto font
     { "Lana"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ланна (тай-тхам)"sv, u8"≈1300"sv,
         u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все\u00A0— Таиланд"sv,
         u8"<p>Происходит из северотайского государства Ланна или Ланнатай (1296—1558).</p>"
@@ -907,13 +907,13 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</p>"sv },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Лепча (ронг)"sv, u8"≈1700"sv,
         u8"лепча <i>(Индия, Бутан, Непал)</i>"sv,
-        u8"<p>Гласная по умолчанию «а». Произошла из тибетского, изначально писалась сверху вниз, но потом стали писать горизонтально, "
+        u8"<p>Гласная по умолчанию «а». Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, "
                 "потому буквы напоминают тибетские, повёрнутые на 90°.</p>"
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. "
-                "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
+                "[[pt:virama|Вирамы]] нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
                 "Между словами нет пробелов.</p>"sv,
                 EcFont::LEPCHA },
     // Limbu OK, W10 none, installed Google Noto font
@@ -1106,11 +1106,11 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::PHAGS_PA },
     // Rejang OK, installed Google Noto font
     { "Rjng"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Реджанг", u8"≈1750 (первый известный документ)",
         u8"реджанг <i>(Суматра)</i>",
         u8"<p>На языке реджанг говорят 200{{_}}тыс. человек (2000), большинство из них неграмотно. "
-                "Письмо постепенно заменяется [[ps:Latn|латиницей]]."
+                "Полностью заменена [[ps:Latn|латиницей]]."
             "<p>Перед нами обычная брахмийская абугида с гласной по умолчанию «а» и вирамой: "
                 "{{sm|ꤰ}}=ка, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. "
                 "Письменность деградировала по той же причине, что и [[ps:Runr|руны]]: проще выцарапывать на дереве."sv,
@@ -1144,7 +1144,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::SAMARITAN },
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Саураштра"sv, u8"XIX век (возможно, раньше)",
         u8"саураштра <i>(Индия, письменность используется только в штате Тамилнад)</i>"sv,
         u8"<p>Происхождение неясно, все [[ps:Taml|тамильские]] саураштра двуязычны, а в остальных штатах пишут на "
@@ -1237,7 +1237,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Тагбанва"sv, u8"≈1300"sv,
         u8"языки о. Палаван <i>(Филиппины)</i>"sv,
-        u8"<p>Восходит к брахми и родственная с тагальской. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv,
+        u8"<p>Восходит к брахми и родственная с [[ps:Tglg|тагальской]]. Осталось не более 25000 людей, говорящих на этих языках.</p>"sv,
                 EcFont::TAGBANWA },
     // Old Tai Le OK, M$ has a good font
     { "Tale"sv, QFontDatabase::Any,
@@ -1257,7 +1257,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::TAILE },
     // New Tai Lue OK, M$ has a good font
     { "Talu"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Новое письмо лы"sv, u8"1950-е"sv,
         u8"дайские (=лы; <i>Китай; общины лы в других странах пользуются старым письмом</i>)"sv,
         u8"<p>Созданный в 1950-е годы китайскими властями алфавит встретил сопротивление народа, и Китай пошёл по пути "

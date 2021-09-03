@@ -486,7 +486,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
             str::append(text, u8"• Состояние: ");
-            str::append(text, x.life().locName);
+            append(text, x.life().locName, x.font());
         }
         if (isScript) {
             if (x.ecVersion != uc::EcVersion::UNKNOWN) {
