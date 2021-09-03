@@ -1603,7 +1603,7 @@ constinit const uc::Block uc::blocks[302] {
                     "метки, получается красиво (о́). А если нет{{-}}обычно плохо (8́).</p>"
                 "<p>Иногда диакритические знаки настолько срастаются с буквой, что получается, по сути, другая буква. "
                     "Таковы русские Ё и Й. Считается, что все такие «другие буквы» крупных живых языков представлены в Юникоде "
-                    "монолитными символами. Ударение другой буквой не считается, к тому же сразу в нескольких шрифтах Windows "
+                    "монолитными символами. Ударение другой буквой не{{_}}считается, к тому же сразу в нескольких шрифтах Windows "
                     "его неудачно нарисовали{{-}}потому нередко ударные русские буквы имитируют похожими монолитными латинскими.</p>"sv },
     // Greek and Coptic OK
     { 0x0370, 0x03FF,
@@ -1901,7 +1901,7 @@ constinit const uc::Block uc::blocks[302] {
                     "Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси."
                 "<p>Символ {{sm|ℵ}} для мощности множеств предложен Г.{{_}}Кантором."sv },
     // Number forms OK
-    /// @todo [block] Latin-1
+    /// @todo [link,block] Latin-1
     { 0x2150, 0x218F,
             "Number Forms", u8"Числовые формы"sv,
             u8"<p>Монолитные обыкновенные дроби и римские цифры. "
@@ -2080,10 +2080,12 @@ constinit const uc::Block uc::blocks[302] {
             u8"Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, "
                     "старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) "
                     "и многое другое."sv },
+    // CJK radicals supp OK
     { 0x2E80, 0x2EFF,
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные"sv,
             u8"Альтернативные формы ключей Канси, применяющиеся в заголовках словарей.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Kangxi OK
     { 0x2F00, 0x2FDF,
             "Kangxi Radicals", u8"Ключи Канси"sv,
             u8"Вы спросите: а как найти нужный иероглиф в словаре, если нет произношения? "
@@ -2205,6 +2207,7 @@ constinit const uc::Block uc::blocks[302] {
     // Lisu OK
     { 0xA4D0, 0xA4FF,
             "Lisu", u8"Лису (алфавит Фрейзера)", {}, EcScript::Lisu },
+    // Vai OK
     { 0xA500, 0xA63F,
             "Vai", u8"Ваи", {}, EcScript::Vaii },
     /// @todo [semi-tofu] A670+ enclosing marks, A674+, A69C+ badly rendered
@@ -2212,6 +2215,7 @@ constinit const uc::Block uc::blocks[302] {
             "Cyrillic Extended-B", u8"Кириллица расширенная B"sv,
             u8"Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), "
                         "знаки интонации для литовской диалектологии.", EcScript::Cyrl },
+    // Bamum OK
     { 0xA6A0, 0xA6FF,
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
     // Modifier tone OK
@@ -2230,16 +2234,20 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] Latin ex D
     { 0xA720, 0xA7FF,
             "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
+    // Syloti OK
     { 0xA800, 0xA82F,
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
+    // Common Indic OK
     { 0xA830, 0xA83F,
             "Common Indic Number Forms", u8"Общеиндийские числовые символы",
             u8"Такие знаки присутствуют в источниках XVI{{_}}века, и применяются по сей день "
                 "в Северной Индии, Пакистане и Непале для записи дробей: например, "
                 "размера, веса или цены.",
             EcScript::Deva },
+    // Phang-pa OK
     { 0xA840, 0xA87F,
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
+    // Saurashtra OK
     { 0xA880, 0xA8DF,
             "Saurashtra", u8"Саураштра", {}, EcScript::Saur },
     /// @todo [tofu] Another PitA in W7, A8FC+
@@ -2249,8 +2257,10 @@ constinit const uc::Block uc::blocks[302] {
                     "редакторские пометы, религиозные символы, "
                     "гласная «ай» для мелких неписьменных языков Индии, придуманная европейцами.",
             EcScript::Deva },
+    // Kayah Li OK
     { 0xA900, 0xA92F,
             "Kayah Li", u8"Кая-ли", {}, EcScript::Kali },
+    // Rejang OK
     { 0xA930, 0xA95F,
             "Rejang", u8"Реджанг", {}, EcScript::Rjng },
     // Hangul jamo A OK
@@ -2278,6 +2288,7 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [desc] Meetei ex
     { 0xAAE0, 0xAAFF,
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
+    // Ethiopic ex A OK
     { 0xAB00, 0xAB2F,
             "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]])."sv,
@@ -2318,6 +2329,7 @@ constinit const uc::Block uc::blocks[302] {
     { 0xFB00, 0xFB4F,
             "Alphabetic Presentation Forms", u8"Алфавитные формы начертания"sv,
             u8"<p>Стандартные [[pt:ligature|лигатуры]] для [[ps:Latn|латиницы]], [[ps:Armn|армянского]] и [[ps:Hebr|иврита]]."sv },
+    // Arabic presentation forms A OK
     { 0xFB50, 0xFDFF,
             "Arabic Presentation Forms-A", u8"Арабские формы начертания А"sv,
             u8"Блок создан для [[pt:convertibility|совместимости]] со старыми кодировками вроде CP864 (DOS), "
@@ -2328,7 +2340,7 @@ constinit const uc::Block uc::blocks[302] {
                 "<p>В обычном письме эти символы лучше не использовать. "
                     "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                         "(во многих тогдашних кодировках текст записывался слева направо)."sv,
-            EcScript::Arab },
+            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_32_NONCHARS },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
             "Variation Selectors", u8"Селекторы начертания"sv,

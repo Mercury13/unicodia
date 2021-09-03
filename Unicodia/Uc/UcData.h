@@ -347,6 +347,7 @@ namespace uc {
 
     enum class Bfg {
         COLLAPSIBLE = 1,
+        HAS_32_NONCHARS = 2,
     };
 
     DEFINE_ENUM_OPS(Bfg)
