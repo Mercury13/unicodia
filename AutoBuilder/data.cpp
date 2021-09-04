@@ -38,12 +38,13 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BRAILLE"sv,      Dicf::TRIG_SCRIPT },
     { "BUGINESE"sv,     Dicf::TRIG_SCRIPT },
     { "BUHID"sv,        Dicf::TRIG_SCRIPT },
-    { "CHAKMA"sv,       Dicf::TRIG_SCRIPT },
     { "CANADIAN"sv,     Dicf::TRIG_SCRIPT },
      { "WOODS-CREE"sv,  Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "CARIAN"sv,       Dicf::TRIG_SCRIPT },
+    { "CHAKMA"sv,       Dicf::TRIG_SCRIPT },
     { "CHAM"sv,         Dicf::TRIG_SCRIPT },
     { "CHEROKEE"sv,     Dicf::TRIG_SCRIPT },
+    { "CHINESE"sv,      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "CIRTH"sv,        Dicf::TRIG_SCRIPT },
     { "COPTIC"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "NUBIAN"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
@@ -324,7 +325,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TREE"sv,         Dicf::PART_NOUN },
     { "TSHEG"sv,        Dicf::PART_NOUN },
     { "UNDERBAR"sv,     Dicf::PART_NOUN },
+    { "YANG"sv,         Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT"sv,          Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
+    { "YIN"sv,          Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
     { "YUS"sv,          Dicf::PART_NOUN },   // …but yus is big & little → do not cap
 
     // Adverbs
