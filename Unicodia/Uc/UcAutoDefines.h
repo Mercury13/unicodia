@@ -57,6 +57,7 @@ namespace uc {
         Kali,   // Kayah Li
         Kana,   // Katakana
         Khmr,   // Khmer
+        Kits,   // Khitan small
         Knda,   // Kannada
         Lana,   // Tai-tham = Lanna
         Laoo,   // Lao
@@ -146,8 +147,7 @@ namespace uc {
         //Jurc  no chars
         Khar = Zyyy,        // beyond BMP
         Khoj = Zyyy,        // beyond BMP
-        //Kitl  no chars
-        Kits = Zyyy,        // beyond BMP
+        //Kitl  Khitan large, no chars
         //Kore  no chars
         //Kpel  no chars
         Kthi = Zyyy,        // beyond BMP

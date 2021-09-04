@@ -136,6 +136,7 @@ namespace uc {
         TD,
         BOTH,
         TANGUT,
+        RTL_COL,
         NN,
     };
 
@@ -146,7 +147,7 @@ namespace uc {
         PACIFIC,        ///< All Pacific Ocean, incl. Japan
         AFRICA,
         AMERICA,
-        TECHNICAL
+        CJK,
     };
 
     enum class EcFont
@@ -193,6 +194,7 @@ namespace uc {
         JAVANESE,
         KANNADA,
         KAYAH_LI,
+        KHITAN_SMALL,
         KHMER,
         LANNA,
         LAO,

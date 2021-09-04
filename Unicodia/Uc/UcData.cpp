@@ -71,8 +71,8 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
-        // Initial Noto Sans Khmer loses umlauts
-    { "Noto Sans Khmer UI"sv,       "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc }, // Khmer
+    { "Khitan Small Linear",        "KhitanSmallLinear.ttf", {}, {}, 115_pc },  // Khitan small
+    { "Noto Sans Khmer UI"sv,       "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc }, // Khmer — initial Noto loses umlauts
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
     { "Noto Sans Lepcha",           "NotoSansLepcha-Regular.ttf" },             // Lepcha
@@ -138,15 +138,16 @@ constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] 
 
 constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir::NN)] {
     { {} },
-    { u8"→"sv },
-    { u8"←"sv },
-    { u8"→ <i>(исторически ←↓↓ по столбцам)</i>"sv },
-    { u8"←↓↓ по столбцам, затем →"sv },
-    { u8"→, ↑"sv },
-    { u8"↓↓→ по столбцам"sv },
-    { u8"↓"sv },
-    { u8"писали и ←, и →"sv },
-    { u8"писали ←↓↓ по столбцам и →"sv },
+    { u8"→" },
+    { u8"←" },
+    { u8"→ <i>(исторически ←↓↓ по столбцам)</i>" },
+    { u8"←↓↓ по столбцам, затем →" },
+    { u8"→, ↑" },
+    { u8"↓↓→ по столбцам" },
+    { u8"↓" },
+    { u8"писали и ←, и →" },
+    { u8"писали ←↓↓ по столбцам и →" },
+    { u8"←↓↓ по столбцам" },
     //{ u8"Ошибка"sv },
 };
 
@@ -497,7 +498,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::CJK },
     // Braille OK, “Segoe UI Symbol”
     { "Brai"sv, QFontDatabase::Any,
-        EcScriptType::OTHER, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::TECHNICAL,
+        EcScriptType::OTHER, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Шрифт Брайля"sv, u8"1824"sv, {},
         u8"<p>Шрифт Брайля{{-}}точечный шрифт для слепых. В нём используются группы 2×3 точки с двоичным кодированием; иногда добавляется "
                 "и четвёртая строка. Кодирование различается даже для британского и американского Брайля.</p>"
@@ -832,7 +833,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::KAYAH_LI },
     /// @todo [img] what images to choose for Katakana/Hiragana?
     { "Kana"sv, QFontDatabase::Japanese,
-        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::PACIFIC,
+        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Катакана"sv, u8"VIII—IX век"sv,
         u8"японский"sv,
         u8"<p>Около III{{_}}века японцы стали писать [[ps:Hani|китайскими иероглифами]]. "
@@ -851,6 +852,20 @@ constinit const uc::Script uc::scriptInfo[] {
                 "для других «о». Самый старый источник датируется 611. "
                 "Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]]."sv,
                 EcFont::KHMER },
+    // Khitan small OK, installed a font
+    { "Kits"sv, QFontDatabase::Any,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::ASIA_INDIAN,
+        u8"Малое киданьское письмо", u8"X век",
+        u8"киданьский <i>(северо-восточный Китай)</i>"sv,
+        u8"Изобретено около 925 учёным по имени Елюй Дела на основе уйгурского. "
+                "Слова записываются блоками до семи иероглифов. "
+                "Из 378 известных символов 125{{-}}иероглифы, 115{{-}}фонетические, остальные не расшифрованы."
+            "<p>Большое и малое письмо использовались параллельно, малое проще (большое{{-}}чисто иероглифическое). "
+                "Киданьских книг не сохранилось, только предметы и монументальные надписи, последняя{{-}}около 1200. "
+                "В 1216 киданей окончательно разбили монголы и корейцы."
+            "<p>Многие шрифты кладут киданьский текст на 90°."
+                "Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''.",
+                EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     /// @todo [desc, BMP] Interesting script, describe
     { "Knda"sv, QFontDatabase::Kannada,
@@ -2497,8 +2512,12 @@ constinit const uc::Block uc::blocks[302] {
     /// @todo [script] Shavian
     { 0x10450, 0x1047F,
             "Shavian", u8"Алфавит Б.Шоу", {}, EcScript::Shaw },
+    // Osmanya OK
+    /// @todo [script] Osmanya
     { 0x10480, 0x104AF,
             "Osmanya", u8"Исмания (сомалийский)", {}, EcScript::Osma },
+    // Osage OK
+    /// @todo [script] Osage
     { 0x104B0, 0x104FF,
             "Osage", u8"Осейдж", {}, EcScript::Osge },
     { 0x10500, 0x1052F,
@@ -2686,8 +2705,10 @@ constinit const uc::Block uc::blocks[302] {
             "Tangut Components", u8"Элементы тангутского письма"sv,
             {},
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    // Khitan small OK
     { 0x18B00, 0x18CFF,
-            "Khitan Small Script", u8"Малое киданьское письмо", {}, EcScript::Kits },
+            "Khitan Small Script", u8"Малое киданьское письмо",
+            {}, EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
     { 0x18D00, 0x18D8F,
             "Tangut Supplement", u8"Тангутский дополнительный"sv,
