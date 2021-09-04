@@ -420,7 +420,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "
                 "Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
                 EcFont::ARABIC },
-    /// @todo [tofu, P1] No font at all
+    // Imperial Aramaic OK, have Segoe UI Historic, and W7 I don’t support.
     { "Armi"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Имперский арамейский"sv, u8"VII в. до н.э."sv,
@@ -2509,6 +2509,7 @@ constinit const uc::Block uc::blocks[302] {
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрский", {}, EcScript::Cprt },
+    // Imperial Aramaic OK
     { 0x10840, 0x1085F,
             "Imperial Aramaic", u8"Имперский арамейский", {}, EcScript::Armi },
     { 0x10860, 0x1087F,
