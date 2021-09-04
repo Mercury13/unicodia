@@ -2732,9 +2732,10 @@ constinit const uc::Block uc::blocks[302] {
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны", {},
             EcScript::NONE, EcFont::CJK },
-    // Nushu OK, not collapsible: syllabary
+    // Nushu OK
     { 0x1B170, 0x1B2FF,
-            "Nushu", u8"Нюй-шу"sv, {}, EcScript::Nshu },
+            "Nushu", u8"Нюй-шу"sv,
+            {}, EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
     { 0x1BCA0, 0x1BCAF,
