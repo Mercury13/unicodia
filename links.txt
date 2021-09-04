@@ -19,6 +19,7 @@ https://babelstone.co.uk/Software/BabelMap.html
 https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
 https://laoscript.net/download/ — лаосские шрифты
 http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html — индийский шрифт
+https://babelstone.co.uk/Fonts/index.html — разные шрифты
 
 
 ИЗОБРАЖЕНИЯ СИМВОЛОВ
