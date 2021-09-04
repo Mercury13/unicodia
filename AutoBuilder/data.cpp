@@ -1239,6 +1239,16 @@ namespace {
         }
     }
 
+    constexpr auto STR_IDEOGRAPH = "IDEOGRAPH-"sv;
+
+    bool isHex(std::string_view s) {
+        for (char c : s) {
+            if (!isxdigit(c))
+                return false;
+        }
+        return true;
+    }
+
 }   // anon namespace
 
 
@@ -1265,6 +1275,8 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
     bool digitPropagatesRight = false;
     Word* nextWord = nullptr;
     Word* nextNextWord = nullptr;
+    std::vector<std::string> tempWords;
+
     for (auto iWord = words.size(); iWord != 0; ) { --iWord;
         auto& word = words[iWord];
         auto itWord = dictionary.find(word.original);
@@ -1321,6 +1333,20 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
                 word.isAsIs = true;
             }
         }
+
+        // Check for ideograph capitalization
+        if (word.original.starts_with(STR_IDEOGRAPH)) {
+            auto remainder = word.original.substr(STR_IDEOGRAPH.length());
+            if (isHex(remainder)) {
+                auto& w = tempWords.emplace_back(word.original);
+                for (size_t i = 0; i < STR_IDEOGRAPH.length(); ++i) {
+                    w[i] = tolower(w[i]);
+                }
+                word.original = w;
+                word.isAsIs = true;
+            }
+        }
+
         if (nextWord) {
             if (nextWord->dicFlags.have(Dicf::PART_NOUN)) {
                 word.nextNoun = true;
