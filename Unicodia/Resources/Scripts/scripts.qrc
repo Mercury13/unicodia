@@ -147,7 +147,9 @@
         <file>AC00.png</file>
         <file>D7B0.png</file>
         <file>F900.png</file>
+        <file>FB00.png</file>
         <file>FB50.png</file>
+        <file>FE00.png</file>
         <file>FE10.png</file>
         <file>FE20.png</file>
         <file>FE30.png</file>
@@ -155,8 +157,6 @@
         <file>FE70.png</file>
         <file>FF00.png</file>
         <file>FFF0.png</file>
-        <file>FB00.png</file>
-        <file>FE00.png</file>
         <file>10000.png</file>
         <file>10080.png</file>
         <file>10100.png</file>
@@ -169,6 +169,7 @@
         <file>10380.png</file>
         <file>103A0.png</file>
         <file>10400.png</file>
+        <file>11660.png</file>
         <file>12000.png</file>
         <file>12400.png</file>
         <file>12480.png</file>
@@ -182,12 +183,13 @@
         <file>1B100.png</file>
         <file>1B170.png</file>
         <file>1D2E0.png</file>
-        <file>1D800.png</file>
-        <file>1FB00.png</file>
-        <file>1FA00.png</file>
-        <file>1D400.png</file>
         <file>1D360.png</file>
-        <file>1F100.png</file>
+        <file>1D400.png</file>
+        <file>1D800.png</file>
         <file>1E900.png</file>
+        <file>1F100.png</file>
+        <file>1F780.png</file>
+        <file>1FA00.png</file>
+        <file>1FB00.png</file>
     </qresource>
 </RCC>
