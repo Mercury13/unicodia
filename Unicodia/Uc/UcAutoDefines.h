@@ -43,6 +43,7 @@ namespace uc {
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
+        Goth,   // Gothic
         Grek,   // Greek
         Gujr,   // Gujarati
         Guru,   // Gurmukhi
@@ -130,7 +131,6 @@ namespace uc {
         //Geok  no chars
         Gong = Zyyy,        // beyond BMP
         Gonm = Zyyy,        // beyond BMP
-        Goth = Zyyy,        // beyond BMP
         Gran = Zyyy,        // beyond BMP
         //Hanb  no chars
         //Hans  no chars
