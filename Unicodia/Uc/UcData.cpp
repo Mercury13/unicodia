@@ -2719,14 +2719,16 @@ constinit const uc::Block uc::blocks[302] {
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
             EcScript::Tang },
     /// @todo [tofu] We should choose from several fonts, and current engine does tot permit that.
-    // Kana supplement not collapsible: syllabary
+    /// @todo [desc] ???
     { 0x1B000, 0x1B0FF,
-            "Kana Supplement", u8"Кана дополнительная"sv },
-    // Kana ex A not collapsible: syllabary
+            "Kana Supplement", u8"Кана дополнительная"sv,
+            {}, EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [desc] Kana ex A
     { 0x1B100, 0x1B12F,
-            "Kana Extended-A", u8"Кана расширенная A"sv },
+            "Kana Extended-A", u8"Кана расширенная A"sv,
+            {}, EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu] Small kana ex, the entire block
-    // Small kana ex not collapsible: syllabary
+    /// @todo [desc] Small kana ex
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны", {},
             EcScript::NONE, EcFont::CJK },
