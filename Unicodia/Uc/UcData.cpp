@@ -71,7 +71,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Javanese",         "NotoSansJavanese-Regular.ttf" },           // Javanese
     { "Noto Serif Kannada",         "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc }, // Kannada
     { "Noto Sans Kayah Li"sv,       "NotoSansKayahLi-Regular.ttf" },            // Kayah Li
-    { "Khitan Small Linear",        "KhitanSmallLinear.ttf", {}, {}, 115_pc },  // Khitan small
+    { "BabelStone Khitan Small Linear", "BabelStoneKhitanSmallLinear.ttf", {}, {}, 115_pc },  // Khitan small
     { "Noto Sans Khmer UI"sv,       "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc }, // Khmer — initial Noto loses umlauts
     { "Noto Sans Tai Tham"sv,       "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },    // Lanna
     { "SengBuhan",                  "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },   // Lao
@@ -880,7 +880,9 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Киданьских книг не сохранилось, только предметы и монументальные надписи, последняя{{-}}около 1200. "
                 "В 1216 киданей окончательно разбили монголы и корейцы."
             "<p>Многие шрифты кладут киданьский текст на 90°."
-                "Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''.",
+                "Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''. "
+                "Из-за вопросов с авторскими правами иконка показывает один из символов с медного киданьского зеркала, "
+                    "а шрифт{{-}}прямой современный, перерисованный Эндрю Уэстом.",
                 EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     /// @todo [desc, BMP] Interesting script, describe
@@ -1326,7 +1328,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Знаки, имеющие одинаковую форму, но разные названия, также объединены."
             "<p>Тангутское государство уничтожено Чингисханом в 1227, но письмо продолжало использоваться ещё несколько веков: "
                 "самый поздний памятник{{-}}1502, также существует рукописная помета позднее 1680."
-            "<p>Изучать мёртвое письмо начали европейцы с 1870, ключевую роль сыграл советский учёный Николай Невский."sv,
+            "<p>Изучать мёртвое письмо начали европейцы с 1870, ключевую роль сыграл советский учёный Николай Невский."
+            "<p>Из-за вопросов с авторскими правами шрифт прямой современный, перерисованный компанией Google."sv,
                 EcFont::TANGUT },
     // Tai Viet OK, installed Google Noto font
     { "Tavt"sv, QFontDatabase::Any,
