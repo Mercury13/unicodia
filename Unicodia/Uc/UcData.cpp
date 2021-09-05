@@ -872,7 +872,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::ASIA_INDIAN,
         u8"Малое киданьское письмо", u8"X век",
         u8"киданьский <i>(северо-восточный Китай)</i>"sv,
-        u8"Использовалось в государстве Ляо (Даурия, Манчжурия, Северо-Восточный Китай). "
+        u8"Использовалось в государстве Ляо (Даурия, Манчжурия, северо-восточный Китай). "
                 "Изобретено около 925 учёным по имени Елюй Дела на основе уйгурского. "
                 "Слова записываются блоками до семи иероглифов. "
                 "Из 378 известных на 1987{{_}}год символов 125{{-}}иероглифы, 115{{-}}фонетические, остальные не расшифрованы."
@@ -2721,10 +2721,9 @@ constinit const uc::Block uc::blocks[302] {
             "Tangut", u8"Тангутский"sv, {},
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK
-    /// @todo [desc] Tangut components
     { 0x18800, 0x18AFF,
             "Tangut Components", u8"Элементы тангутского письма"sv,
-            {},
+            u8"Компоненты и радикалы, используемые в современном изучении тангутского письма.",
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Khitan small OK
     { 0x18B00, 0x18CFF,
