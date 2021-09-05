@@ -24,14 +24,18 @@
 
     TempFont installTempFontFull(QString fname)
     {
-        auto id = QFontDatabase::addApplicationFont(fname);
+        /// @todo [urgent] What to do with fonts?
+        QFile f(fname);
+        f.open(QIODevice::ReadOnly);
+        QByteArray ba = f.readAll();
+        auto id = QFontDatabase::addApplicationFontFromData(ba);
         if (id < 0) {
             std::cout << "Cannot install " << fname.toStdString() << std::endl;
         }
         auto families = QFontDatabase::applicationFontFamilies(id);
-        //for (auto& v : families) {
-        //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
-        //}
+        for (auto& v : families) {
+            std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
+        }
         return { id, families.join(',') };
     }
 #endif
