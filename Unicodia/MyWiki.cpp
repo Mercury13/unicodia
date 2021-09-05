@@ -476,7 +476,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (!x.locLangs.empty()) {
             sp.sep();
             str::append(text, u8"• Языки: ");
-            str::append(text, x.locLangs);
+            appendWiki(text, x, x.locLangs);
         }
         if (!x.locTime.empty()) {
             sp.sep();
