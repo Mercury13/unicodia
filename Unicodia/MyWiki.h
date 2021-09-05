@@ -79,7 +79,7 @@ namespace mywiki
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
     void appendUtf(QString& text, str::QSep& sp, char32_t code);
-    void appendMissingCharInfo(QString& text, char32_t code);
+    void appendMissingCharInfo(QString& text, const uc::Block* hint, char32_t code);
     QString buildNonCharHtml(char32_t code, const uc::Block* hint);
 
 }   // namespace mywiki

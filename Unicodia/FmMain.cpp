@@ -903,8 +903,8 @@ void FmMain::showCp(MaybeChar ch)
         } else {
             auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
             QString text;
-            text = "<h1 style='color:" + color.name() + "'>Отсутствует в Юникоде</h1>";
-            mywiki::appendMissingCharInfo(text, ch.code);
+            text = "<h1 style='color:" + color.name() + "'>Свободное место</h1>";
+            mywiki::appendMissingCharInfo(text, hint.sample, ch.code);
             ui->vwInfo->setText(text);
         }
     }

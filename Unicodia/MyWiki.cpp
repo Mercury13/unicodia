@@ -603,6 +603,17 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
 }
 
 
+namespace {
+
+    void appendBlock(QString& text, const uc::Block& block, str::QSep& sp)
+    {
+        sp.sep();
+        appendValuePopup(text, block, u8"Блок", "pk");
+    }
+
+}   // anon namespace
+
+
 QString mywiki::buildHtml(
         const uc::Cp& cp, const uc::Block* hint,
         const std::optional<QFont>& font, QFontDatabase::WritingSystem ws)
@@ -654,8 +665,7 @@ QString mywiki::buildHtml(
         appendValuePopup(text, cp.bidiClass(), u8"В двунаправленном письме", "pb");
 
         // Block
-        sp.sep();
-        appendValuePopup(text, *hint, u8"Блок", "pk");
+        appendBlock(text, *hint, sp);
 
         auto comps = uc::cpOldComps(cp.subj);
         if (comps) {
@@ -711,10 +721,11 @@ QString mywiki::buildHtml(
 }
 
 
-void mywiki::appendMissingCharInfo(QString& text, char32_t code)
+void mywiki::appendMissingCharInfo(QString& text, const uc::Block* hint, char32_t code)
 {
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
+    appendBlock(text, *hint, sp);
     mywiki::appendUtf(text, sp, code);
 }
 
@@ -723,7 +734,7 @@ QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
 {
     QString text;
     str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
-    mywiki::appendMissingCharInfo(text, code);
+    mywiki::appendMissingCharInfo(text, hint, code);
     appendWiki(text, *hint, uc::TX_NOCHAR);
     return text;
 }
