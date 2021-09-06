@@ -2669,7 +2669,9 @@ constinit const uc::Block uc::blocks[] {
             "Makasar", u8"Старый макасарский", {}, EcScript::Maka },
     /// @tofo [tofu] Only one char, and it’s tofu
     { 0x11FB0, 0x11FBF,
-            "Lisu Supplement", u8"Лису дополнительный", {}, EcScript::Lisu },
+            "Lisu Supplement", u8"Лису дополнительный",
+            u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
+            EcScript::Lisu },
     /// @todo [tofu] Tamil supp
     { 0x11FC0, 0x11FFF,
             "Tamil Supplement", u8"Тамильский дополнительный", {}, EcScript::Taml },
