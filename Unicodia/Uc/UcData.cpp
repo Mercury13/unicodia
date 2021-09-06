@@ -825,7 +825,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Церковь активно проповедовала, и письменность распространилась по США. "
                 "Ограниченно используется в Азии и Австралии."
             "<p>Название нечитаемое, письменность новая, и автору «Юникодии» пришлось расшифровать название "
-                    "на стандартной хмонгской [[ps:Latn|латинице]]{{-}}''Ntawv Nyiajkeeb Puajtxwm Hmoob''. "
+                    "на стандартной хмонгской [[ps:Latn|латинице]]{{-}}''Nyiajkeeb Puajtxwm Hmoob''. "
                 "Если он ошибся{{-}}поправьте.",
                 EcFont::NORMAL },
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
