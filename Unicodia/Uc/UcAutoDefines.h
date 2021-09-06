@@ -53,6 +53,7 @@ namespace uc {
         Hebr,   // Hebrew
         Hent,   // Hentaigana
         Hira,   // Hiragana
+        Hmnp,   // NP hmong (American script for White/Green Hmongs)
         Ital,   // Old Italic
         Java,   // Javanese
         Kali,   // Kayah Li
@@ -139,7 +140,6 @@ namespace uc {
         Hatr = Zyyy,        // beyond BMP
         Hluw = Zyyy,        // beyond BMP
         Hmng = Zyyy,        // beyond BMP
-        Hmnp = Zyyy,        // beyond BMP
         //Hrkt  no chars
         Hung = Zyyy,        // beyond BMP
         //Inds  no chars
