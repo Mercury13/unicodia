@@ -1590,7 +1590,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 };
 
 
-constinit const uc::Block uc::blocks[302] {
+constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
     { 0x0000, 0x007F,
             "Basic Latin", u8"Латиница базовая"sv, CT_ASCII, EcScript::Latn },
@@ -3024,8 +3024,8 @@ constinit const uc::Block uc::blocks[302] {
             u8"Дополнительные селекторы начертания используются только с [[ps:Hani|китайскими иероглифами]], чтобы дать тот или иной "
                     "вариант начертания. "
                 "Хотя ничего не мешает использовать их с другими символами по желанию дизайнера шрифта."sv },
-    //{ 0xE0100, 0xE01EF, "Check for error"sv },
 };
+static_assert(std::size(uc::blocks) == uc::N_BLOCKS);
 
 constinit const uc::TermCat uc::termCats[] {
     { u8"Кодирование"sv },

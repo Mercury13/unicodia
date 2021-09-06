@@ -422,7 +422,7 @@ namespace uc {
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
-    extern const Block blocks[N_BLOCKS];
+    extern const Block blocks[];
     constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
 
     constexpr int N_CHARS = 65536 * 17;
@@ -434,7 +434,7 @@ namespace uc {
     void completeData();
     const Block* blockOf(char32_t subj, const Block* hint);
     inline const Block* blockOf(char32_t subj, int iHint)
-        { return blockOf(subj, std::begin(blocks) + std::max(iHint, 0)); }
+        { return blockOf(subj, blocks + std::max(iHint, 0)); }
 
     enum class EcTermCat {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM,
