@@ -31,6 +31,7 @@ namespace uc {
         Brai,   // Braille dots
         Bugi,   // Buginese
         Buhd,   // Buhid
+        Cari,   // Carian
         Cans,   // Canadian syllabic
         Cham,   // Cham
         Cher,   // Cherokee
@@ -118,7 +119,6 @@ namespace uc {
         //Blis  no chars
         Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
-        Cari = Zyyy,        // beyond BMP
         Chrs = Zyyy,        // Chorasmian, beyond BMP
         //Cirt no chars
         //Cpmn  no chars

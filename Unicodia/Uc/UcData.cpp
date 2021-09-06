@@ -536,6 +536,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
                 "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''</p>",
                 EcFont::BUHID },
+    // Carian OK, W10 P1
+    { "Cari"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::ASIA_INDIAN,
+        u8"Карийский"sv, u8"VII век до н.э."sv,
+        u8"карийский ''(Малая Азия)''"sv,
+        u8"Использовался с VII до I веков{{bc}} "
+                "Существовало множество вариантов алфавита. "
+                "В Малой Азии писали слева направо, наёмники в Египте{{-}}справа налево."
+            "<p>Советский (тогда ещё) учёный Виталий Шеворошкин в 1960 показал, что письменность не слоговая, а алфавитная. "
+                "Ключевая книга по расшифровке (Игнасий-Хавьер Адьего) вышла в 1993. "
+                "Некоторые символы всё ещё не известны.",
+                EcFont::HISTORIC },
     // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -998,7 +1010,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
                 "и письменность на [[ps:Thai|тайской]] основе.</p>"sv,
                 EcFont::LISU },
-    // Lycian
+    // Lycian OK, W10 P1
     { "Lyci"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ликийский"sv, u8"VI век до н.э.",
