@@ -67,6 +67,7 @@ namespace uc {
         Limb,   // Limbu
         Linb,   // Linear B
         Lisu,   // Lisu
+        Lyci,   // Lycian
         Mand,   // Mandaic
         Mlym,   // Malayalam
         Mong,   // Mongolian (old)
@@ -156,7 +157,6 @@ namespace uc {
         //Leke  no chars
         Lina = Zyyy,        // beyond BMP
         //Loma  no chars
-        Lyci = Zyyy,        // beyond BMP
         Lydi = Zyyy,        // beyond BMP
         Mahj = Zyyy,        // Mahajani, beyond BMP
         Maka = Zyyy,        // beyond BMP

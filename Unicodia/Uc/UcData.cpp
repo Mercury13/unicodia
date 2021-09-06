@@ -984,6 +984,18 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
                 "и письменность на [[ps:Thai|тайской]] основе.</p>"sv,
                 EcFont::LISU },
+    // Lycian
+    { "Lyci"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Ликийский"sv, u8"VI век до н.э.",
+        u8"ликийский ''(Малая Азия)''"sv,
+        u8"Придуман под влиянием [[ps:Phnx|финикийского]] и [[ps:Grek|греческого]]. "
+                "Так что сходство с греческим алфавитом обманчиво: часть букв финикийские. "
+                "Вытеснен греческим с IV до I{{_}}века{{bc}}, когда Ликию завоевал Александр Македонский."
+            "<p>Ликия{{-}}не самоназвание, так называли область греки. "
+                "Самоназвание языка{{-}}''trm̃mili''."
+            "<p>Расшифрован в начале XX{{_}}века.",
+                EcFont::HISTORIC },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
