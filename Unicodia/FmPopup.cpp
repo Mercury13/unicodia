@@ -7,9 +7,15 @@
 #include <QScreen>
 #include <QLayout>
 #include <QMouseEvent>
+#include <QGraphicsDropShadowEffect>
 
 namespace {
-    constexpr auto WF_POPUP = Qt::FramelessWindowHint | Qt::Popup | Qt::WindowStaysOnTopHint;
+    enum class PopupMode { NATIVE, ARTIFICIAL };
+    constexpr auto popupMode = PopupMode::NATIVE;
+
+    constexpr auto WF_POPUP = (popupMode == PopupMode::ARTIFICIAL)
+            ? Qt::FramelessWindowHint | Qt::Tool
+            : Qt::Popup;
 }
 
 
@@ -83,11 +89,25 @@ FmPopup::FmPopup(QWidget* owner, const char* color) : Super(owner, WF_POPUP)
 {
     auto vl = new QVBoxLayout(this);
     setLayout(vl);
-    vl->setContentsMargins(1, 1, 1, 1);
+    if constexpr (popupMode == PopupMode::ARTIFICIAL) {
+        vl->setContentsMargins(10, 10, 10, 10);
+    } else {
+        vl->setContentsMargins(1, 1, 1, 1);
+    }
 
     lbText = new ClickableLabel("[QLabel]", this);
     lbText->setWordWrap(true);
     vl->addWidget(lbText);
+
+    if constexpr (popupMode == PopupMode::ARTIFICIAL) {
+        setAttribute(Qt::WA_TranslucentBackground); //enable window to be transparent
+        //setWindowModality(Qt::ApplicationModal);
+        QGraphicsDropShadowEffect* effect = new QGraphicsDropShadowEffect();
+        effect->setXOffset(2);
+        effect->setYOffset(2);
+        effect->setBlurRadius(6);
+        lbText->setGraphicsEffect(effect);
+    }
 
     setStyleSheet("QWidget { background-color: black }");
     char buf[100];
@@ -113,7 +133,11 @@ void FmPopup::popupAtY(const QRect& absRect, const QRect& screenRect, int y)
     x = std::max(x, 0);
     move(x, y);
     show();
+
     lbText->setFocus();
+    if (popupMode == PopupMode::ARTIFICIAL) {
+        setFocus();
+    }
 }
 
 
