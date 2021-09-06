@@ -2679,7 +2679,7 @@ constinit const uc::Block uc::blocks[] {
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     { 0x11EE0, 0x11EFF,
             "Makasar", u8"Старый макасарский", {}, EcScript::Maka },
-    /// @tofo [tofu] Only one char, and it’s tofu
+    /// @tofo [tofu] Only one char, and it’s tofu → NEED NEW FONT ENGINE!!
     { 0x11FB0, 0x11FBF,
             "Lisu Supplement", u8"Лису дополнительный",
             u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
