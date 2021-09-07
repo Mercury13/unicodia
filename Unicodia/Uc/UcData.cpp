@@ -85,6 +85,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Mongolian",        "NotoSansMongolian-Regular.ttf" },          // Mongol
     { "Noto Sans Myanmar",          "NotoSansMyanmar-Regular.ttf" },            // Myanmar
     { "Noto Sans NKo",              "NotoSansNKo-Regular.ttf" },                // N’Ko
+    { "Noto Serif Hmong Nyiakeng",  "NotoSerifNyiakengPuachueHmong-Regular.ttf" },  // NP Hmong
     { "Noto Sans Nushu",            "NotoSansNushu-Regular.ttf" },              // Nushu
     { "Noto Sans Ogham",            "NotoSansOgham-Regular.ttf", {}, {}, 110_pc }, // Ogham
     { "Noto Sans Ol Chiki",         "NotoSansOlChiki-Regular.ttf" },            // Ol Chiki
@@ -826,20 +827,21 @@ constinit const uc::Script uc::scriptInfo[] {
                 "[[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
                 EcFont::CJK },
-    /// @todo [tofu] find font
+    // NP Hmong OK, installed Google Noto
     { "Hmnp"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Ньякэ пуацы хмонг", u8"1980-е",
+        u8"Ньякэ пуацы хмонг (алфавит Черванга)", u8"1980-е",
         u8"языки белых и зелёных хмонгов",
         u8"В 1970-е вьетнамские и лаосские хмонги разбежались по странам, в том числе осели в США. "
                 "О судьбе американского хмонга есть великолепный фильм «Гран-Торино» (2008)."
-            "<p>Письменность придумал в 1980-е Черван Кон, священник одной из протестантских церквей Америки. "
+            "<p>Письменность придумал в 1980-е Черванг Конг, священник одной из протестантских церквей Америки. "
                 "Церковь активно проповедовала, и письменность распространилась по США. "
-                "Ограниченно используется в Азии и Австралии."
+                "Ограниченно используется в Азии и Австралии. "
+                "Для собственных имён вместо заглавных букв используются специальные знаки."
             "<p>Название нечитаемое, письменность новая, и автору «Юникодии» пришлось расшифровать название "
                     "на стандартной хмонгской [[ps:Latn|латинице]]{{-}}''Nyiajkeeb Puajtxwm Hmoob''. "
                 "Если он ошибся{{-}}поправьте.",
-                EcFont::NORMAL },
+                EcFont::NP_HMONG },
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
@@ -2880,7 +2882,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная", {}, EcScript::Glag },
     { 0x1E100, 0x1E14F,
-            "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг", {}, EcScript::Hmnp },
+            "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
     { 0x1E2C0, 0x1E2FF,
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
     { 0x1E800, 0x1E8DF,
