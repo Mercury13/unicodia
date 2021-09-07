@@ -33,6 +33,7 @@ constinit const uc::Font uc::fontInfo[] {
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP, {} },                     // Punctuation
     { "Noto Sans Math",             {} },                                       // Math
     { "Noto Music",                 "NotoMusic-Regular.ttf", {}, {}, 110_pc },  // Music
+    { "Gadugi",                     {} },                                       // Gadugi
         //-----
     { "Noto Sans Adlam",            "NotoSansAdlam-Regular.ttf" },              // Adlam
     { "Noto Serif Ahom",            "NotoSerifAhom-Regular.ttf" },              // Ahom
@@ -1151,6 +1152,17 @@ constinit const uc::Script uc::scriptInfo[] {
                 "нет вирам вообще, в другой{{-}}одна вирама. "
                 "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
                 EcFont::GURMUKHI },
+    // Osage OK, W10 Gadugi
+    { "Osge"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
+        u8"Осейдж"sv, u8"2006"sv,
+        u8"осейдж ''(индейский язык группы сиу)''"sv,
+        u8"Письменность придумал в 2006 Герман Монгрейн Лукаут для возрождаемого языка осейдж (последняя носительница умерла в 2005). "
+                "Он выяснил, что ученики переносили английскую орфографию на индейский. "
+                "За основу взята сильно изменённая [[ps:Latn|латиница]]. "
+                "Используются европейские цифры и знаки препинания."
+            "<p>С 2012, когда началась работа по внесению языка в Юникод, совершена реформа письма.",
+                EcFont::GADUGI },
     // Osmanya OK, W10 Ebrima
     { "Osma"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -2601,11 +2613,9 @@ constinit const uc::Block uc::blocks[] {
     { 0x10450, 0x1047F,
             "Shavian", u8"Алфавит Бернарда Шоу", {}, EcScript::Shaw },
     // Osmanya OK
-    /// @todo [script] Osmanya
     { 0x10480, 0x104AF,
             "Osmanya", u8"Османья (сомалийский)", {}, EcScript::Osma },
     // Osage OK
-    /// @todo [script] Osage
     { 0x104B0, 0x104FF,
             "Osage", u8"Осейдж", {}, EcScript::Osge },
     { 0x10500, 0x1052F,

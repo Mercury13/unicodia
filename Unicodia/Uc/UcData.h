@@ -163,6 +163,7 @@ namespace uc {
          PUNCTUATION,
          MATH,
          MUSIC,
+         GADUGI,
         ADLAM,
         AHOM,
         ARABIC,
