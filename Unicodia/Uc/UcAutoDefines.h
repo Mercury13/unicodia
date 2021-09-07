@@ -80,6 +80,7 @@ namespace uc {
         Ogam,   // Ogham
         Olck,   // Ol Chiki
         Orya,   // Oriya
+        Osma,   // Osmanya
         Perm,   // Old Permic
         Phag,   // Phags-Pa
         Rjng,   // Rejang
@@ -180,7 +181,6 @@ namespace uc {
         //Nkgb  no chars
         Orkh = Zyyy,        // Turkic runes, beyond BMP
         Osge = Zyyy,        // beyond BMP
-        Osma = Zyyy,        // beyond BMP
         Palm = Zyyy,        // beyond BMP
         Pauc = Zyyy,        // beyond BMP
         Phli = Zyyy,        // beyond BMP

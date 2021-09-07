@@ -1151,6 +1151,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "нет вирам вообще, в другой{{-}}одна вирама. "
                 "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
                 EcFont::GURMUKHI },
+    // Osmanya OK, W10 Ebrima
+    { "Osma"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"Османья (сомалийский)"sv, u8"1920"sv,
+        u8"сомалийский"sv,
+        u8"Придуман ≈1920 Османом Юсуфом Кенадидом, братом султана Али Юсуфа Кенадида. "
+                "Письменность получила определённое распространение в Сомали, но конкуренция с новоприбывшей [[ps:Latn|латиницей]] "
+                    "и традиционным [[ps:Arab|арабским]] была серьёзной."
+            "<p>В 1961 османья становится официальным письмом, наряду с латиницей. "
+                "В 1972 диктатор Мохаммед Барре запретил османью, в первую очередь из-за распространившихся пишущих машинок."
+            "<p>Из-за нестабильной обстановки в Сомали нет современных данных."sv,
+                EcFont::VAI },
     // Old Permic OK, W10 none, installed Google Noto
     /// @todo [link] Hungarian runes
     { "Perm"sv, QFontDatabase::Any,
@@ -2591,7 +2603,7 @@ constinit const uc::Block uc::blocks[] {
     // Osmanya OK
     /// @todo [script] Osmanya
     { 0x10480, 0x104AF,
-            "Osmanya", u8"Исмания (сомалийский)", {}, EcScript::Osma },
+            "Osmanya", u8"Османья (сомалийский)", {}, EcScript::Osma },
     // Osage OK
     /// @todo [script] Osage
     { 0x104B0, 0x104FF,
