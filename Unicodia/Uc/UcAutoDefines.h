@@ -87,6 +87,7 @@ namespace uc {
         Samr,   // Samaritan
         Saur,   // Saurashtra
         Sgnw,   // Sutton SignWriting
+        Shaw,   // Shavian
         Sinh,   // Sinhala
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
@@ -193,7 +194,6 @@ namespace uc {
         //Roro  no chars
         //Sara  no chars
         Sarb = Zyyy,        // beyond BMP
-        Shaw = Zyyy,        // beyond BMP
         Shrd = Zyyy,        // beyond BMP
         //Shui  no chars
         Sidd = Zyyy,        // beyond BMP
