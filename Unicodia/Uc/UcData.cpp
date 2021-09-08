@@ -2866,7 +2866,7 @@ constinit const uc::Block uc::blocks[] {
                         "до более чем 2600 символов с использованием позиций для [[pt:private|личного пользования]]."
                 "<p>Также в этом блоке есть несколько символов из устаревших музыкальных нотаций."sv,
             EcScript::NONE, EcFont::MUSIC },
-    /// @todo [desc] Greek music
+    // Greek music OK
     { 0x1D200, 0x1D24F,
             "Ancient Greek Musical Notation",
             u8"Древнегреческая музыкальная нотация"sv,
@@ -2878,6 +2878,7 @@ constinit const uc::Block uc::blocks[] {
                     "Ноты записывались старинными буквами, и те из них, что не{{_}}совпадают с греческими, приведены в этом блоке "
                         "без всякой системы.",
             EcScript::NONE, EcFont::MUSIC_NORMAL },
+    // Mayan numerals OK
     { 0x1D2E0, 0x1D2FF,
             "Mayan Numerals", u8"Цифры майя",
             u8"Майя пользовались двадцатеричной позиционной системой счисления. "
