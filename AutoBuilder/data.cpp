@@ -796,6 +796,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Yi syllable iteration mark")    // Maybe so
     EX("Symbol for type A electronics") // A is tricky
     EX("Coptic combining Ni above") // Ni is widely used in cuneiform, and IDK what to do
+    EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
 };
 
 const std::multiset<PrefixEntry> prefixes {
