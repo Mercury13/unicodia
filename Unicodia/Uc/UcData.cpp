@@ -2906,6 +2906,7 @@ constinit const uc::Block uc::blocks[] {
                     "но отсутствует в Юникоде."sv,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     /// @todo [block] Letterlike
+    // Math alnum OK
     { 0x1D400, 0x1D7FF,
             "Mathematical Alphanumeric Symbols",
             u8"Математические буквы и цифры"sv,
@@ -2922,27 +2923,35 @@ constinit const uc::Block uc::blocks[] {
                     "Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси."
                 "<p>Наиболее распространённые из таких обозначений находятся в базовой плоскости в разделе буквоподобных символов. "
                     "С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами." },
+    // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF,
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
+    // Glagolitic supp OK
+    /// @todo [desc] Glag supp
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная", {}, EcScript::Glag },
+    // NP Hmong OK
     { 0x1E100, 0x1E14F,
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
     { 0x1E2C0, 0x1E2FF,
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
     { 0x1E800, 0x1E8DF,
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
+    // Adlam OK
     { 0x1E900, 0x1E95F,
             "Adlam", u8"Адлам", {}, EcScript::Adlm },
     { 0x1EC70, 0x1ECBF,
             "Indic Siyaq Numbers", u8"Индийские цифры сийяк" },
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
+    /// @todo [desc] Arabic math symbols
     { 0x1EE00, 0x1EEFF,
             "Arabic Mathematical Alphabetic Symbols",
             u8"Арабские математические алфавитные символы" },
+    /// @todo [desc] Mahjong tiles
     { 0x1F000, 0x1F02F,
             "Mahjong Tiles", u8"Фишки маджонга" },
+    /// @todo [desc] Domino tiles
     { 0x1F030, 0x1F09F,
             "Domino Tiles", u8"Кости домино" },
     { 0x1F0A0, 0x1F0FF,
