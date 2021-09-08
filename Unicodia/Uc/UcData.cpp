@@ -3952,16 +3952,6 @@ void uc::Font::load() const
         newLoaded->familiesComma = str::toQ(family);
         newLoaded->families = toQList(family);
     }
-
-//    if (q.tempFont.id != FONT_NOT_INSTALLED)
-//        return;
-//    if (!fileName.empty()) {
-//        q.tempFont = installTempFontRel(fileName);
-//        //q.raw = std::make_unique<QRawFont>(expandTempFontName(fileName), 10);
-//    } else {
-//        q.tempFont.id = FONT_CHECKED;
-//    }
-//    q.families = toQList(family);
 }
 
 
