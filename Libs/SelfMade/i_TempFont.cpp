@@ -33,10 +33,10 @@
             std::cout << "Cannot install " << fname.toStdString() << std::endl;
         }
         auto families = QFontDatabase::applicationFontFamilies(id);
-        for (auto& v : families) {
-            std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
-        }
-        return { id, families.join(',') };
+        //for (auto& v : families) {
+        //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
+        //}
+        return { id, std::move(families) };
     }
 #endif
 

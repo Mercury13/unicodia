@@ -17,9 +17,6 @@
 
 /// ALL NAMES HERE ARE IN UTF-8!
 
-constexpr auto FONT_CHECKED = -999;
-
-
 template <class T, size_t N>
 const T* findInArray(std::string_view needle, const T (&haystack)[N])
 {
@@ -262,17 +259,19 @@ namespace uc {
 
     DEFINE_ENUM_OPS(Ffg)
 
+    struct LoadedFont;
+
     struct Font
     {
         static const QString qempty;
 
-        std::string_view family, fileName;
+        std::string_view family;
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
 
         mutable struct Q {
-            QList<QString> families {};
+            std::shared_ptr<LoadedFont> loaded {};
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
             TempFont tempFont;
@@ -280,8 +279,7 @@ namespace uc {
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
         bool doesSupportChar(char32_t x) const;
-        const QString& onlyFamily() const
-            { return (q.families.size() == 1) ? q.families[0] : qempty; }
+        const QString& onlyFamily() const;
     };
     extern const Font fontInfo[];
 

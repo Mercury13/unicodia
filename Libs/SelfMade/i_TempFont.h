@@ -1,12 +1,13 @@
 #pragma once
 
+#include <QList>
 #include <QString>
 
 constexpr auto FONT_NOT_INSTALLED = -1000;
 
 struct TempFont {
     intptr_t id = FONT_NOT_INSTALLED;
-    QString namesComma;
+    QList<QString> families;
 };
 
 TempFont installTempFontFull(QString fname);
