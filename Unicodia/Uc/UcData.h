@@ -171,6 +171,7 @@ namespace uc {
         BAMUM,
         BATAK,
         BENGALI,
+        BHAIKSUKI,
         BUGINESE,
         BUHID,
         CANADIAN_ABORIGINAL,
@@ -282,6 +283,7 @@ namespace uc {
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
         bool doesSupportChar(char32_t x) const;
         const QString& onlyFamily() const;
+        const QString& familiesComma() const;
     };
     extern const Font fontInfo[];
 

@@ -27,6 +27,7 @@ namespace uc {
         Bamu,   // Bamum
         Batk,   // Batak
         Beng,   // Bengali
+        Bhks,   // Bhaiksuki
         Bopo,   // Bopomofo
         Brai,   // Braille dots
         Bugi,   // Buginese
@@ -118,7 +119,6 @@ namespace uc {
         //Aran  no chars
         Avst = Zyyy,        // beyond BMP
         Bass = Zyyy,        // beyond BMP
-        Bhks = Zyyy,        // beyond BMP
         //Blis  no chars
         Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
