@@ -161,6 +161,7 @@ namespace uc {
          MATH,
          MUSIC,
          MUSIC_BIGGER,
+         MUSIC_NORMAL,
          GADUGI,
         ADLAM,
         AHOM,

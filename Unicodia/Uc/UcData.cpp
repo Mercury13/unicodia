@@ -34,6 +34,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Math" },                                                       // Math
     { "NotoMusic-Regular.ttf", {}, {}, 110_pc },                                // Music
     { "NotoMusic-Regular.ttf", {}, {}, 150_pc },                                // Music bigger
+    { "NotoMusic-Regular.ttf" },                                                // Music normal
     { "Gadugi" },                                                               // Gadugi
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
@@ -2870,7 +2871,7 @@ constinit const uc::Block uc::blocks[] {
             "Ancient Greek Musical Notation",
             u8"Древнегреческая музыкальная нотация"sv,
             {},
-            EcScript::NONE, EcFont::MUSIC },
+            EcScript::NONE, EcFont::MUSIC_NORMAL },
     { 0x1D2E0, 0x1D2FF,
             "Mayan Numerals", u8"Цифры майя",
             u8"Майя пользовались двадцатеричной позиционной системой счисления. "
