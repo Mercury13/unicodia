@@ -234,3 +234,36 @@ FontList FontMatch::allSysFonts(
     }
     return r;
 }
+
+std::string FontMatch::findPrefix() const
+{
+    // size / # of digits
+    size_t sz = allFonts.size() + 2;
+    int nDigs = std::ceil(log10(sz + 1));
+
+    // is occupied?
+    Array1d<bool> isOcc(sz);
+    isOcc.fill(false);
+
+    // Find whether is occupied
+    for (auto& v : allFonts) {
+        auto& fam = v->family;
+        if (fam.length() >= nDigs) {
+            auto firstDigs = fam.left(nDigs);
+            bool isOk = false;
+            auto asInt = firstDigs.toInt(&isOk);
+            if (isOk)
+                isOcc[asInt] = true;
+        }
+    }
+
+    // Find 1st remaining
+    for (size_t i = 0; i < isOcc.size(); ++i) {
+        if (!isOcc[i]) {
+            char buf[20];
+            snprintf(buf, std::size(buf), "%0*d", nDigs, static_cast<int>(i));
+            return buf;
+        }
+    }
+    throw std::logic_error("Could not find free prefix, should not happen normally!");
+}

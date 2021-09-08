@@ -171,7 +171,10 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
     match(str::toQ(FAM_DEFAULT)),
-    rows(NCOLS) {}
+    rows(NCOLS)
+{
+    tempPrefix = match.findPrefix();
+}
 
 
 int CharsModel::rowCount(const QModelIndex&) const

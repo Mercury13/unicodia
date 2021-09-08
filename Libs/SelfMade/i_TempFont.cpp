@@ -9,6 +9,8 @@
 
 //#define USE_WIN32_FONTS
 
+std::string tempPrefix;
+
 #if defined(_WIN32) && defined(USE_WIN32_FONTS)
     #include <windows.h>
 
@@ -25,10 +27,15 @@
     TempFont installTempFontFull(QString fname)
     {
         /// @todo [urgent] What to do with fonts?
-        QFile f(fname);
-        f.open(QIODevice::ReadOnly);
-        QByteArray ba = f.readAll();
-        auto id = QFontDatabase::addApplicationFontFromData(ba);
+        int id = -1;
+        if (fname.endsWith(".ttf")) {
+            QFile f(fname);
+            f.open(QIODevice::ReadOnly);
+            QByteArray ba = f.readAll();
+            id = QFontDatabase::addApplicationFontFromData(ba);
+        } else {
+            id = QFontDatabase::addApplicationFont(fname);
+        }
         if (id < 0) {
             std::cout << "Cannot install " << fname.toStdString() << std::endl;
         }

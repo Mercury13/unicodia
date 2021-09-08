@@ -44,6 +44,7 @@ public:
     [[nodiscard]] FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem writingSystem,
             size_t maxCount = std::numeric_limits<size_t>::max());
+    [[nodiscard]] std::string findPrefix() const;
 private:
     static constexpr auto TEST_POINT_SIZE = 50;     // point size for testing font
     static constexpr auto PRIO_MINE = 1'000'000;
