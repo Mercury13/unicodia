@@ -33,6 +33,7 @@ constinit const uc::Font uc::fontInfo[] {
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP },                         // Punctuation
     { "Noto Sans Math" },                                                       // Math
     { "NotoMusic-Regular.ttf", {}, {}, 110_pc },                                // Music
+    { "NotoMusic-Regular.ttf", {}, {}, 150_pc },                                // Music bigger
     { "Gadugi" },                                                               // Gadugi
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
@@ -2836,13 +2837,14 @@ constinit const uc::Block uc::blocks[] {
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии"sv },
-    /// @todo [semi-tofu] Increase size very much!!
-    /// @todo [desc] Byzantine music
+    // Byzantine music seemingly OK
     { 0x1D000, 0x1D0FF,
             "Byzantine Musical Symbols",
-            u8"Византийские музыкальные символы"sv,
-            {},
-            EcScript::NONE, EcFont::MUSIC },
+            u8"Византийские музыкальные символы",
+            u8"О византийской церковной музыке известно мало, а о светской{{-}}вообще ничего. "
+                    "Тем не менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, "
+                        "даже под властью турок, и были реформированы около 1800.",
+            EcScript::NONE, EcFont::MUSIC_BIGGER  },
     /// @todo [tofu] How to show chars like NULL NOTE HEAD?
     /// @todo [semi-tofu] Check and take smth from Segoe UI Symbol
     { 0x1D100, 0x1D1FF,

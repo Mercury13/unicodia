@@ -160,6 +160,7 @@ namespace uc {
          PUNCTUATION,
          MATH,
          MUSIC,
+         MUSIC_BIGGER,
          GADUGI,
         ADLAM,
         AHOM,
