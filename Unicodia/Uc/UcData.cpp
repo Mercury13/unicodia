@@ -62,6 +62,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc },                      // Devanagari
     { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
+    { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
@@ -685,14 +686,28 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В Юникоде{{_}}14.0 обещают серьёзную перерисовку иероглифов, имеющийся в «Юникодии» шрифт соответствует "
                 "Юникоду{{_}}13.0."sv,
                 EcFont::EGYPTIAN },
+    // Elbasan OK, none in W10 → installed Google Noto
+    /// @todo [link,U14] Vithkuqi
+    { "Elba"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        u8"Эльбасанский албанский", u8"XVIII век",
+        u8"албанский",
+        u8"Придумана в середине XVIII{{_}}века и использовалась в окрестностях города Эльбасан (Албания). "
+                "Создание приписывается учителю Теодору Хаджи Филиппу (1730–1806), которого убили, когда он перевозил шрифт. "
+                "Применялась до XIX{{_}}века. "
+            "<p>Полагают, что создание местных письменностей в Албании (эльбасанской, виткутьской, Весо-Бея, Веллары) "
+                    "служило для конспирации от турок. "
+                "По другим данным, албанские просвещённые умы смотрели на славян, греков и турок с собственным алфавитом. "
+                "Известны рукописное Эльбасанское Евангелие размером всего 7×10{{_}}см, 59{{_}}страниц и несколько записок.",
+                EcFont::ELBASAN },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Эфиопская"sv, u8"I—VII век",
-        u8"амхарский, тигринья и другие эфиосемитские"sv,
-        u8"<p>Эфиопская письменность использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "
+        u8"Эфиопская", u8"I—VII век",
+        u8"амхарский, тигринья и другие эфиосемитские",
+        u8"Эфиопская письменность использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "
                 "Геэз всё ещё используется эфиопскими христианами как литургический{{-}}"
-                "а письменность распространилась на другие языки Эфиопии.</p>"sv,
+                "а письменность распространилась на другие языки Эфиопии.</p>",
                 EcFont::ETHIOPIC },
     // Georgian OK, installed Google Noto font
     { "Geor"sv, QFontDatabase::Georgian,

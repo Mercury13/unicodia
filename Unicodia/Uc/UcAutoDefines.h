@@ -42,6 +42,7 @@ namespace uc {
         Dogr,   // Dogra
         Dsrt,   // Deseret (Mormon)
         Egyp,   // Egyptian hieroglyphs
+        Elba,   // Elbasan Albanian
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
@@ -131,7 +132,6 @@ namespace uc {
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars
         //Egyh  no chars
-        Elba = Zyyy,        // beyond BMP
         Elym = Zyyy,        // Elymaic, beyond BMP
         //Geok  no chars
         Gong = Zyyy,        // beyond BMP

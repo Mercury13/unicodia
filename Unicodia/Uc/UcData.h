@@ -184,6 +184,7 @@ namespace uc {
         DEVANAGARI,
         DOGRA,
         EGYPTIAN,
+        ELBASAN,
         ETHIOPIC,
         GEORGIAN,
         GLAGOLITIC,
