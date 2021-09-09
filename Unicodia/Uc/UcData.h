@@ -211,6 +211,7 @@ namespace uc {
         MEETEI,
         MONGOLIAN,
         MYANMAR,
+        NABATAEAN,
         NKO,
         NP_HMONG,
         NUSHU,

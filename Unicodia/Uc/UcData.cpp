@@ -90,6 +90,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansMeeteiMayek-Regular.ttf" },                                      // Meetei Mayek
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
+    { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSerifNyiakengPuachueHmong-Regular.ttf" },                            // NP Hmong
     { "NotoSansNushu-Regular.ttf" },                                            // Nushu
@@ -431,7 +432,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Арабский"sv, u8"IV—VI век"sv,
         u8"арабский, персидский, урду, уйгурский, пуштунский…"sv,
-        u8"<p>Письменность развилась из [[ps:Syrc|сирийской]]. "
+        u8"Письменность развилась из [[ps:Armi|арамейской]] через [[ps:Syrc|сирийскую]] и/или [[ps:Nbat|набатейскую]]. "
                 "Арабский язык тесно связан с исламом; на этом языке написан Коран (610–632). "
                 "Арабский халифат насаждал как ислам, так и вязь. "
                 "Многие исламские народы (турки, казахи, башкиры) пользовались арабицей до начала XX{{_}}века.</p>"
@@ -1152,6 +1153,18 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII{{_}}века, когда распространилось письмо на пальмовых листьях: "
                 "прямая линия может разрезать лист по жилкам.</p>"sv,
                 EcFont::MYANMAR },
+    // Nabataean OK, W10 none → installed Google Noto
+    { "Nbat"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Набатейский"sv, u8"II век до н.э."sv,
+        u8"набатейский"sv,
+        u8"Происходит из [[ps:Armi|арамейского]]. "
+                "Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II века{{bc}} "
+                "В 106 Траян присоединил Набатею к римской империи, а письменность просуществовала до IV{{_}}века "
+                    "и, возможно, стала предком [[ps:Arab|арабского]] через плохо изученное новосинайское письмо. "
+                "Между словами нет пробелов. "
+                "Числа писались справа налево непозиционной системой счисления, похожей на римские цифры.",
+                EcFont::NABATAEAN },
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo"sv, QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,

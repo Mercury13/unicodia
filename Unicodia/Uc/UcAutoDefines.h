@@ -79,6 +79,7 @@ namespace uc {
         Mong,   // Mongolian (old)
         Mtei,   // Meitei Mayek
         Mymr,   // Myanmar
+        Nbat,   // Nabataean
         Nkoo,   // NKo
         Nshu,   // Nushu
         Ogam,   // Ogham
@@ -177,7 +178,6 @@ namespace uc {
         Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
         Narb = Zyyy,        // beyond BMP
-        Nbat = Zyyy,        // beyond BMP
         Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars
         //Nkgb  no chars
