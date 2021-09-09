@@ -98,6 +98,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
+    { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, 150_pc },                           // Phaistos disc
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
@@ -1243,13 +1244,25 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1972 диктатор Мохаммед Барре запретил османью, в первую очередь из-за распространившихся пишущих машинок."
             "<p>Из-за нестабильной обстановки в Сомали нет современных данных."sv,
                 EcFont::VAI },
+    // Plamyrene OK, W10 none, installed Google Noto
+    { "Palm"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Пальмирский", u8"100 до н.э.",
+        u8"пальмирский арамейский",
+        u8"Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). "
+                "Происходит из [[ps:Armi|арамейского]]. "
+                "В алфавите 22 согласных буквы, одна в двух вариантах. "
+                "Пробелов и знаков препинания нет. "
+                "Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево. "
+                "Расшифрована в 1754.",
+                EcFont::PALMYRENE },
     // Old Permic OK, W10 none, installed Google Noto
     /// @todo [link] Hungarian runes
     { "Perm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Древнепермский (коми-зырянский, анбур)", u8"1372",
         u8"коми-зырянский, коми-пермяцкий",
-        u8"<p>Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] "
+        u8"Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] "
                     "с вкраплением [[ps:Grek|греческого]] и местных рун. "
                 "Названа по первым двум буквам, «ан» и «бур». "
                 "Иногда использовалась как тайнопись для тогдашнего русского. "

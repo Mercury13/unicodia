@@ -86,6 +86,7 @@ namespace uc {
         Orya,   // Oriya
         Osge,   // Osage
         Osma,   // Osmanya
+        Palm,   // Palmyrene
         Perm,   // Old Permic
         Phag,   // Phags-Pa
         Rjng,   // Rejang
@@ -181,7 +182,6 @@ namespace uc {
         //Nkdb  no chars
         //Nkgb  no chars
         Orkh = Zyyy,        // Turkic runes, beyond BMP
-        Palm = Zyyy,        // beyond BMP
         Pauc = Zyyy,        // beyond BMP
         Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP

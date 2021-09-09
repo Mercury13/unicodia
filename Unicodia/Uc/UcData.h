@@ -219,6 +219,7 @@ namespace uc {
         OLD_ITALIC,
         OLD_PERMIC,
         OLD_PERSIAN,
+        PALMYRENE,
         PHAGS_PA,
         PHAISTOS_DISC,
         REJANG,
