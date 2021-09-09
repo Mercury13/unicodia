@@ -621,6 +621,17 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Общаются копты по-арабски, как разговорный коптский умер от XVII до XIX{{_}}века."
             "<p>С Юникода 4.1 (2005) коптский отделён от греческого."sv,
                 EcFont::COPTIC },
+    // Cypriot OK, W10 Segoe Historic
+    { "Cprt"sv, QFontDatabase::Any,
+        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
+        u8"Кипрская", u8"XI век до н.э.",
+        u8"древнегреческий, этеокипрский, финикийский ''(одна кототкая надпись)''",
+        u8"Происходит из [[ps:Lina|линейного письма А]] через кипро-минойский (не путать!). "
+                "Встречалось с XI до III{{_}}века{{bc}} "
+                "Надписи IX–VIII{{_}}веков не обнаружены, в дальнейшем письмо разделилось на два варианта: "
+                    "пафосский с сохранением направления →, и общекипрский, перевернувшийся в ←. "
+                "Частично расшифровано уже в конце XIX{{_}}века, полностью в 1961.",
+                EcFont::HISTORIC },
     /// @todo [tofu] Troubles with some rare letters, what to do?
     { "Cyrl"sv, QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -2681,7 +2692,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
     { 0x10800, 0x1083F,
-            "Cypriot Syllabary", u8"Кипрский", {}, EcScript::Cprt },
+            "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
     // Imperial Aramaic OK
     { 0x10840, 0x1085F,
             "Imperial Aramaic", u8"Имперский арамейский", {}, EcScript::Armi },

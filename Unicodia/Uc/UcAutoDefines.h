@@ -37,6 +37,7 @@ namespace uc {
         Cham,   // Cham
         Cher,   // Cherokee
         Copt,   // Coptic
+        Cprt,   // Cypriot
         Cyrl,   // Cyrillic
         Deva,   // Devanagari
         Dogr,   // Dogra
@@ -125,9 +126,8 @@ namespace uc {
         Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
         Chrs = Zyyy,        // Chorasmian, beyond BMP
-        //Cirt no chars
-        //Cpmn  no chars
-        Cprt = Zyyy,        // beyond BMP
+        //Cirt  Cirth  no chars
+        //Cpmn  Cypro-Minoan no chars
         //Cyrs  no chars
         Diak = Zyyy,        // Dives Akuru, beyond BMP
         Dupl = Zyyy,        // beyond BMP
@@ -139,8 +139,8 @@ namespace uc {
         Gonm = Zyyy,        // beyond BMP
         Gran = Zyyy,        // beyond BMP
         //Hanb  no chars
-        //Hans  no chars
-        //Hant  no chars
+        //Hans  Han simplified   no chars
+        //Hant  Han traditional  no chars
         Hatr = Zyyy,        // beyond BMP
         Hluw = Zyyy,        // beyond BMP
         Hmng = Zyyy,        // beyond BMP
@@ -206,7 +206,7 @@ namespace uc {
         //Syrj  no chars
         //Syrn  no chars
         Takr = Zyyy,        // beyond BMP
-        //Teng  no chars
+        //Teng  Tengwar  no chars
         Tirh = Zyyy,        // Tirhuta beyond BMP
         //Visp  no chars
         Wara = Zyyy,        // Warang Citi beyond BMP
