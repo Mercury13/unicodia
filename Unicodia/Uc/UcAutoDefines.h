@@ -18,7 +18,7 @@ namespace uc {
     enum class EcScript : unsigned char {
         Zyyy,
         Adlm,   // Adlam
-        Aghb,   // Caucasian Albaniam
+        Aghb,   // Caucasian Albanian
         Ahom,   // Ahom
         Arab,   // Arabic
         Armi,   // Imperial Aramaic

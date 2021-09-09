@@ -175,6 +175,7 @@ namespace uc {
         BUGINESE,
         BUHID,
         CANADIAN_ABORIGINAL,
+        CAUCASIAN_ALBANIAN,
         CHAM,
         CHEROKEE,
         CJK,

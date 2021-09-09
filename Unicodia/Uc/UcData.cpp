@@ -51,6 +51,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },                           // Buginese
     { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
+    { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -395,15 +396,24 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Иногда использовался волоф{{-}}сильно видоизменённый [[ps:Arab|арабский]] шрифт. "
                 "Основная же письменность{{-}}[[ps:Latn|латиница]].</p>"sv,
                 EcFont::ADLAM },
-    /// @todo [tofu, P1] W7/10 no font at all
+    // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Агванский"sv, u8"II век до н.э."sv,
-        u8"агванский <i>(язык Кавказской Албании)</i>"sv,
-        u8"<p>Считается, что создана Месропом Маштоцем, создателем армянского алфавита{{-}}впрочем, это не так: "
+        u8"Агванский (Кавказская Албания)", u8"II век до н.э.",
+        u8"агванский ''(язык Кавказской Албании)''",
+        u8"Никакого отношения к балканской Албании страна не имеет, и вообще самоназвание неизвестно: "
+                "''Албания''{{-}}название греческое, ''Агванк''{{-}}современное армянское. "
+                "Заселена людьми, говорившими на лезгинских языках. "
+                "С I{{_}}века{{bc}} имела сильное царство. "
+                "В 461 завоёвана персами, в VII{{_}}веке снова получила свободу. "
+                "С X{{_}}века часть Албании тюркизировалась и преобразовалась в Ширван (современный Азербайджан) и Карабах. "
+                "Другие части участвовали в этногенезе армян, грузин Кахетии, дагестанцев. "
+                "Поскольку страна захватывает современную Россию и Грузию, условно отнесена к Европе."
+            "<p>Считается, что письменность создана Месропом Маштоцем, создателем [[ps:Armn|армянского]] алфавита{{-}}впрочем, это не так: "
                 "Маштоц жил 362–440, и непонятно, какова была его роль. "
                 "Упоминалась с конца XIX века. Окончательно открыта в 1937 году советскими арменоведами. "
-                "Первая расшифровка вышла в 2009 году.</p>"sv },
+                "Первая расшифровка вышла в 2009 году.",
+                EcFont::CAUCASIAN_ALBANIAN },
     // Ahom OK, installed Google Noto font
     { "Ahom"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
