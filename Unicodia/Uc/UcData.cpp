@@ -82,6 +82,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },                     // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
+    { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMalayalam-Light.ttf", Ffg::LIGHT },                              // Malayalam
@@ -1029,6 +1030,20 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Начальные гласные не имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
                 "Вирамы нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный.</p>"sv,
                 EcFont::LIMBU },
+    // Linear A OK, W10 none, installed Google Noto font
+    { "Lina"sv, QFontDatabase::Any,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        u8"Линейное письмо А"sv, u8"≈1800 до н.э."sv,
+        u8"предположительно минойский"sv,
+        u8"<p>Использовалось на островах Крит и Киклады. "
+                "Все известные записи канцелярские и выполнены на глине, но форма знаков подразумевает, "
+                    "что писали чернилами на коже или другом недолговечном материале. "
+                "Около 1450, с вторжением греков, заменяется [[ps:Linb|линейным письмом Б]]."
+            "<p>Артур Эванс обнаружил письмо в конце XIX{{_}}века, причём часть артефактов погибла{{-}}"
+                    "необожжённая глина, залитая дождём, размякла. "
+                "Он затягивал публикацию, надеясь расшифровать самостоятельно, вплоть до смерти в 1941. "
+                "Исчерпывающей расшифровки всё ещё нет{{-}}в отличие от более позднего линейного Б.",
+                EcFont::LINEAR_A },
     // Linear B OK, W10 none, installed Google Noto font
     { "Linb"sv, QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,

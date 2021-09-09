@@ -203,6 +203,7 @@ namespace uc {
         LAO,
         LEPCHA,
         LIMBU,
+        LINEAR_A,
         LINEAR_B,
         LISU,
         MALAYALAM,

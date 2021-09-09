@@ -69,6 +69,7 @@ namespace uc {
         Latn,   // Latin
         Lepc,   // Lepcha
         Limb,   // Limbu
+        Lina,   // Linear A
         Linb,   // Linear B
         Lisu,   // Lisu
         Lyci,   // Lycian
@@ -158,7 +159,6 @@ namespace uc {
         //Latf  no chars
         //Latg  no chars
         //Leke  no chars
-        Lina = Zyyy,        // beyond BMP
         //Loma  no chars
         Lydi = Zyyy,        // beyond BMP
         Mahj = Zyyy,        // Mahajani, beyond BMP
