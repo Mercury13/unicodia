@@ -192,6 +192,7 @@ namespace uc {
         GUJARATI,
         GURMUKHI,
         HANUNOO,
+        HATRAN,
         HEBREW,
         HENTAIGANA,
         JAVANESE,

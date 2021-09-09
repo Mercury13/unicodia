@@ -54,6 +54,7 @@ namespace uc {
         Hang,   // Hangul
         Hani,   // Chinese hieroglyphs
         Hano,   // Hanunoo
+        Hatr,   // Hatran
         Hebr,   // Hebrew
         Hent,   // Hentaigana
         Hira,   // Hiragana
@@ -143,7 +144,6 @@ namespace uc {
         //Hanb  no chars
         //Hans  Han simplified   no chars
         //Hant  Han traditional  no chars
-        Hatr = Zyyy,        // beyond BMP
         Hluw = Zyyy,        // beyond BMP
         Hmng = Zyyy,        // beyond BMP
         //Hrkt  no chars

@@ -70,6 +70,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSerifGujarati-Regular.ttf", {}, {}, 110_pc },                        // Gujarati
     { "NotoSansGurmukhiUI-Regular.ttf", {}, {}, 110_pc },                       // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
+    { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
@@ -846,7 +847,16 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Хануноо"sv, u8"≈1300"sv,
         u8"филиппинские горные народы"sv,
         u8"<p>Хануноо восходит к брахми и похож на тагальский.</p>"sv,
-            EcFont::HANUNOO },
+                EcFont::HANUNOO },
+    // Hatran OK, W10 none, installed Google Noto
+    { "Hatr"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Хатранский (ашшурский)", u8"≈100 до н.э.",
+        u8"хатранский (ашшурский) арамейский",
+        u8"Потомок [[ps:Armi|арамейского]]. "
+                "Использовался в Хатре (современный Ирак) до III{{_}}века, когда Хатру разрушил Шапур{{_}}I Сасанид. "
+                "Все известные надписи очень короткие, самая длинная{{-}}13 строк.",
+                EcFont::HATRAN },
     /// @todo [tofu, BMP] 05EF in W7, Yod triangle (rare historical char)
     { "Hebr"sv, QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
@@ -2727,7 +2737,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10880, 0x108AF,
             "Nabataean", u8"Набатейский", {}, EcScript::Nbat },
     { 0x108E0, 0x108FF,
-            "Hatran", u8"Хатранский", {}, EcScript::Hatr },
+            "Hatran", u8"Хатранский (ашшурский)", {}, EcScript::Hatr },
     { 0x10900, 0x1091F,
             "Phoenician", u8"Финикийский", {}, EcScript::Phnx },
     { 0x10920, 0x1093F,
