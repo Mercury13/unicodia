@@ -91,6 +91,7 @@ namespace uc {
         Palm,   // Palmyrene
         Perm,   // Old Permic
         Phag,   // Phags-Pa
+        Phnx,   // Phoenician
         Rjng,   // Rejang
         Runr,   // European runes
         Samr,   // Samaritan
@@ -186,7 +187,6 @@ namespace uc {
         Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars
-        Phnx = Zyyy,        // beyond BMP
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP
         Prti = Zyyy,        // beyond BMP

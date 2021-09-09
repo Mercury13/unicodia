@@ -224,6 +224,7 @@ namespace uc {
         PALMYRENE,
         PHAGS_PA,
         PHAISTOS_DISC,
+        PHOENICIAN,
         REJANG,
         RUNIC,
         SAMARITAN,

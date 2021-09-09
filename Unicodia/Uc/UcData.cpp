@@ -103,6 +103,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, 150_pc },                           // Phaistos disc
+    { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansRunic-Regular.ttf" },                                            // Runic
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
@@ -168,7 +169,7 @@ constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType:
     { u8"[[pt:arguable|спорный]]{{-}}''как тана''"sv },
     { u8"[[pt:abjad|консонантная]]{{-}}''как иврит''"sv },
     { u8"[[pt:syllabic|слоговая]]{{-}}''как японские катакана/хирагана''"sv },
-    { u8"алфавитно-слоговая <i>(как иберийский)</i>"sv },
+    { u8"алфавитно-слоговая <i>(как иберский)</i>"sv },
     { u8"[[pt:abugida|абугида]]{{-}}''как эфиопский''"sv },
     { u8"[[pt:brahmic|брахмийская абугида]]{{-}}''как деванагари''"sv },
     { u8"[[pt:hiero|иероглифическая]]{{-}}''как китайский''"sv },
@@ -1305,6 +1306,24 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Если отбросить необычное направление письма, письмо Пагба-ламы{{-}}обычная брахмийская абугида с гласной "
                 "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>"sv,
                 EcFont::PHAGS_PA },
+    // Phoenician OK, because of importance installed Google Noto
+    { "Phnx"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Финикийский", u8"XI век до н.э.",
+        u8"финикийский и другие семитские (моавитский, филистимский…), пунический",
+        u8"Хоть не финикийский, а [[ps:Ugar|угаритский]] алфавит считается первым известным консонантным "
+                    "и первым известным алфавитным порядком, важность финикийского письма трудно переоценить: "
+                    "финикийцы были хорошими мореплавателями и разнесли азбуку по древнему миру."
+            "<p>Из финикийской письменности развились:<br>"
+                "• малоазийские алфавиты (например, [[ps:Lyci|ликийский]]{{-}}исчезли);<br>"
+                "• древнеливийская (предок [[ps:Tfng|тифинага]]);<br>"
+                "• палеоиспанская, или иберская (исчезла);<br>"
+                "• [[ps:Armi|арамейская]] (предок [[ps:Syrc|сирийской]], [[ps:Arab|арабской]] и [[ps:Brah|брахми]]{{-}}"
+                    "''касательно последнего общепринятая гипотеза, но нет надёжных данных'');<br>"
+                "• [[ps:Grek|греческая]] (предок [[ps:Latn|латиницы]] и [[ps:Cyrl|кириллицы]])."
+            "<p>Таким образом, большая часть грамотного мира обязана финикийцам."
+            "<p>Исчезла около 150{{bc}} с разрушением Карфагена; в самой Финикии уже давно ходили письменности-потомки.",
+                EcFont::PHOENICIAN },
     // Rejang OK, installed Google Noto font
     { "Rjng"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
