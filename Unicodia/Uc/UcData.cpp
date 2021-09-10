@@ -158,6 +158,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"писали и ←, и →" },
     { u8"писали ←↓↓ по столбцам и →" },
     { u8"←↓↓ по столбцам" },
+    { u8"преимущественно ←" },
     //{ u8"Ошибка"sv },
 };
 
@@ -627,7 +628,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::COPTIC },
     // Cypriot OK, W10 Segoe Historic
     { "Cprt"sv, QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
+        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
         u8"Кипрская", u8"XI век до н.э.",
         u8"древнегреческий, этеокипрский, финикийский ''(одна кототкая надпись)''",
         u8"Происходит из [[ps:Lina|линейного письма А]] через кипро-минойский (не путать!). "
@@ -776,7 +777,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Греческий"sv, u8"IX век до н.э."sv,
         u8"греческий"sv,
         u8"<p>Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}"
-                    "[[ps:Linb|линейное письмо Б]] и [[pt:Cypr|кипрское]]. "
+                    "[[ps:Linb|линейное письмо Б]] и [[pt:Cprt|кипрское]]. "
                 "Финикийский алфавит был [[pt:abjad|консонантным]] (задаёт согласные звуки), и семитским языкам это подходит, ведь корень слова{{-}}"
                 "костяк согласных, а гласные играют роль окончаний: так, в [[ps:Arab|арабском]] (тоже семитский) ''джихадом'' занимается <i>моджахед</i> "
                 "(или, точнее, ''муджахид'').</p>"
@@ -1094,7 +1095,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>До этого лису писали слоговым письмом, напоминающим иероглифы. Также миссионеры использовали алфавит Полларда (мяо) "
                 "и письменность на [[ps:Thai|тайской]] основе.</p>"sv,
                 EcFont::LISU },
-    // Lycian OK, W10 P1
+    // Lycian OK, W10 P1 Segoe Historic
     { "Lyci"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ликийский"sv, u8"VI век до н.э.",
@@ -1105,6 +1106,17 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Ликия{{-}}не самоназвание, так называли область греки. "
                 "Самоназвание языка{{-}}''trm̃mili''."
             "<p>Расшифрован в начале XX{{_}}века.",
+                EcFont::HISTORIC },
+    // Lydian OK, W10 P1 Segoe Historic
+    { "Lydi"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA_INDIAN,
+        u8"Лидийский (сардийский)"sv, u8"VII век до н.э.",
+        u8"лидийский ''(=сардийский, Малая Азия)''"sv,
+        u8"Близок к [[ps:Lyci|ликийскому]], произошёл из [[ps:Phnx|финикийского]]. "
+                "Вытеснен греческим около III{{_}}века{{bc}}, когда Лидию завоевал Александр Македонский."
+            "<p>Ранние надписи были в обоих направлениях, поздний исключительно справа налево."
+            "<p>Лидия{{-}}не самоназвание, сами лидийцы называли область по столице{{-}}Сарды."
+            "<p>Расшифрован в 1916 и изучен хорошо, несмотря на небольшое количество (на 1986{{-}}109{{_}}шт.) надписей.",
                 EcFont::HISTORIC },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
@@ -2651,7 +2663,7 @@ constinit const uc::Block uc::blocks[] {
             "Aegean Numbers", u8"Эгейские цифры"sv,
             u8"<p>Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями."
                     "Замечена в линейном письме [[ps:Lina|А]] и [[ps:Linb|Б]]. "
-                    "В [[ps:Cypr|кипрском]] письме была обнаружена единственная табличка с числом «100»."sv,
+                    "В [[ps:Cprt|кипрском]] письме была обнаружена единственная табличка с числом «100»."sv,
             EcScript::Linb },
     // Greek numbers OK
     { 0x10140, 0x1018F,
@@ -2760,7 +2772,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10900, 0x1091F,
             "Phoenician", u8"Финикийский", {}, EcScript::Phnx },
     { 0x10920, 0x1093F,
-            "Lydian", u8"Лидийский", {}, EcScript::Lydi },
+            "Lydian", u8"Лидийский (сардийский)", {}, EcScript::Lydi },
     { 0x10980, 0x1099F,
             "Meroitic Hieroglyphs", u8"Мероитские иероглифы", {}, EcScript::Mero },
     { 0x109A0, 0x109FF,

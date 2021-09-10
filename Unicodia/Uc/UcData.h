@@ -134,6 +134,7 @@ namespace uc {
         BOTH,
         TANGUT,
         RTL_COL,
+        RTL_MOSTLY,
         NN,
     };
 

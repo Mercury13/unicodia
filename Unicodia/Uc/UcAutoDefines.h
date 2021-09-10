@@ -75,6 +75,7 @@ namespace uc {
         Linb,   // Linear B
         Lisu,   // Lisu
         Lyci,   // Lycian
+        Lydi,   // Lydian
         Mand,   // Mandaic
         Mlym,   // Malayalam
         Mong,   // Mongolian (old)
@@ -163,7 +164,6 @@ namespace uc {
         //Latg  no chars
         //Leke  no chars
         //Loma  no chars
-        Lydi = Zyyy,        // beyond BMP
         Mahj = Zyyy,        // Mahajani, beyond BMP
         Maka = Zyyy,        // beyond BMP
         Mani = Zyyy,        // beyond BMP
