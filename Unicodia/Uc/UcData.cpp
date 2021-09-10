@@ -300,6 +300,15 @@ constexpr auto CT_LATIN1 =
         "<p>Среди букв видны символы × и ÷, изначально там должен быть Œœ."sv;
 
 
+constexpr auto CT_MEROITIC =
+    u8"Мероитская письменность применялась в Нубии и Судане для записи местных языков до VII{{_}}века. "
+            "Имеет две формы: иероглифическую и курсивную. "
+            "Иероглифическая форма происходит от [[ps:Egyp|египетских иероглифов]] и писалась справа налево по столбцам; "
+                "известны только надписи, высеченные на монументах. "
+            "Курсивная{{-}}от египетского демотического письма и писалась справа налево, {{%|90}} всех надписей."
+        "<p>Существует более 2000 надписей. "
+            "Алфавит расшифрован в начале XX{{_}}века, но язык во многом непонятен."sv;
+
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      "Cc"sv,     u8"Управляющий"sv, CT_CONTROL },
     { UpCategory::FORMAT,       "Cf"sv,     u8"Форматирующий"sv, CT_FORMAT },
@@ -1129,19 +1138,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv,
                 EcFont::MANDAIC },
-    // Meroitic OK, W10 has small part
-    { "Mero"sv, QFontDatabase::Any,
+    // Meroitic cursive OK, W10 has small part
+    { "Merc"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Мероитский"sv, u8"III в. до н.э.",
+        u8"Мероитский курсив", u8"III в. до н.э.",
         u8"мероитский; возможно, древненубийский",
-        u8"Применялась в Нубии и Судане для записи местных языков до VII{{_}}века. "
-                "Имеет две формы: иероглифическую и курсивную. "
-                "Иероглифическая форма происходит от [[ps:Egyp|египетских иероглифов]] и писалась справа налево по столбцам; "
-                    "известны только надписи, высеченные на монументах. "
-                "Курсивная{{-}}от египетского демотического письма и писалась справа налево, {{%|90}} всех надписей."
-            "<p>Существует более 2000 надписей. "
-                "Алфавит расшифрован в начале XX{{_}}века, но язык во многом непонятен.",
-                EcFont::MEROITIC },
+        CT_MEROITIC, EcFont::MEROITIC },
+    // Meroitic OK, W10 none
+    { "Mero"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::AFRICA,
+        u8"Мероитские иероглифы", u8"III в. до н.э.",
+        u8"мероитский; возможно, древненубийский",
+        CT_MEROITIC, EcFont::MEROITIC },
     /// @todo [desc] Malayalam
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym"sv, QFontDatabase::Malayalam,
