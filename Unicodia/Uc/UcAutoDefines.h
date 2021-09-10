@@ -77,6 +77,7 @@ namespace uc {
         Lyci,   // Lycian
         Lydi,   // Lydian
         Mand,   // Mandaic
+        Mero,   // Meroitic
         Mlym,   // Malayalam
         Mong,   // Mongolian (old)
         Mtei,   // Meitei Mayek
@@ -172,7 +173,6 @@ namespace uc {
         Medf = Zyyy,        // beyond BMP
         Mend = Zyyy,        // beyond BMP
         Merc = Zyyy,        // beyond BMP
-        Mero = Zyyy,        // beyond BMP
         Modi = Zyyy,        // beyond BMP
         //Moon  no chars
         Mroo = Zyyy,        // beyond BMP

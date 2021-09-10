@@ -89,6 +89,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansMalayalam-Light.ttf", Ffg::LIGHT },                              // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansMeeteiMayek-Regular.ttf" },                                      // Meetei Mayek
+    { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
@@ -1128,6 +1129,19 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv,
                 EcFont::MANDAIC },
+    // Meroitic OK, W10 has small part
+    { "Mero"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
+        u8"Мероитский"sv, u8"III в. до н.э.",
+        u8"мероитский; возможно, древненубийский",
+        u8"Применялась в Нубии и Судане для записи местных языков до VII{{_}}века. "
+                "Имеет две формы: имероглифическую и курсивную. "
+                "Иероглифическая форма происходит от [[ps:Egyp|египетских иероглифов]] и писалась справа налево по столбцам; "
+                    "известны только надписи, высеченные на монументах. "
+                "Курсивная{{-}}от египетского демотического письма и писалась справа налево, {{%|90}} всех надписей."
+            "<p>Существует более 2000 надписей. "
+                "Алфавит расшифрован в начале XX{{_}}века, но язык во многом непонятен.",
+                EcFont::MEROITIC },
     /// @todo [desc] Malayalam
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym"sv, QFontDatabase::Malayalam,

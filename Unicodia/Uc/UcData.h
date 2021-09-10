@@ -211,6 +211,7 @@ namespace uc {
         MALAYALAM,
         MANDAIC,
         MEETEI,
+        MEROITIC,
         MONGOLIAN,
         MYANMAR,
         NABATAEAN,
