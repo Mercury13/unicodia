@@ -63,6 +63,7 @@ namespace uc {
         Java,   // Javanese
         Kali,   // Kayah Li
         Kana,   // Katakana
+        Khar,   // Kharoshthi
         Khmr,   // Khmer
         Kits,   // Khitan small
         Knda,   // Kannada
@@ -156,7 +157,6 @@ namespace uc {
         //Jamo  no chars
         //Jpan  no chars
         //Jurc  no chars
-        Khar = Zyyy,        // beyond BMP
         Khoj = Zyyy,        // beyond BMP
         //Kitl  Khitan large, no chars
         //Kore  no chars

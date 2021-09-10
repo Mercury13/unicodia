@@ -199,6 +199,7 @@ namespace uc {
         JAVANESE,
         KANNADA,
         KAYAH_LI,
+        KHAROSHTHI,
         KHITAN_SMALL,
         KHMER,
         LANNA,

@@ -77,6 +77,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc },                   // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
+    { "NotoSansKharoshthi-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },      // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", {}, {}, 115_pc },                      // Khitan small
     { "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc },                          // Khmer — initial Noto loses umlauts
     { "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },                            // Lanna
@@ -964,6 +965,18 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).</p>"sv,
                 EcFont::CJK },
+    // Kharoshthi OK, W10 tofu → installed Noto
+    { "Khar"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Кхароштхи"sv, u8"IV век до н.э.",
+        u8"гандхари, пали, сакские, санскрит",
+        u8"Письменность применялась в Средней Азии и Афганистане до III{{_}}века. "
+            "<p>Не является потомком [[ps:Brah|брахми]], но обладает всеми свойствами брахмийской абугиды, разве что написание справа налево:<br>"
+                    "{{_}}{{_}}{{_}}{{_}}ка {{sm|𐨐}} + и {{sm|◌𐨁}} = ки {{sm|𐨐𐨁}}<br>"
+                    "{{_}}{{_}}{{_}}{{_}}ка {{sm|𐨐}} + вирама {{sm|◌𐨿}} = к {{sm|𐨐𐨿}}"
+            "<p>Есть около 30 [[pt:ligature|лигатур]] из согласных, которые не удалось извлечь из шрифта: например, ка+вирама+та=кта."
+            "<p>Открыт в XIX{{_}}веке и довольно быстро расшифрован.",
+                EcFont::KHAROSHTHI },
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     /// @todo [desc] Describe Khmer, interesting script
     { "Khmr"sv, QFontDatabase::Khmer,
