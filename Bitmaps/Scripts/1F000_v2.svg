@@ -39,7 +39,7 @@
      inkscape:current-layer="layer1"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:snap-global="true"
+     inkscape:snap-global="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-center="true"
@@ -52,7 +52,7 @@
        orientation="0,-1"
        id="guide1351" />
     <sodipodi:guide
-       position="2.1166667,1.5875"
+       position="2.1166667,2.1166667"
        orientation="1,0"
        id="guide1353" />
   </sodipodi:namedview>
@@ -63,14 +63,14 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#f2f2f2;stroke:#cccccc;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
+       style="fill:#f2f2f2;stroke:#b3b3b3;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
        id="rect887"
        width="2.3812504"
        height="3.4395838"
        x="0.92604148"
        y="0.39687485" />
     <path
-       style="fill:#ffd5e5;stroke:#de87aa;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
+       style="fill:#ffd5e5;stroke:#ff5599;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
        d="M 2.1166667,1.1468198 A 0.37151599,0.37119588 0 0 0 1.745233,1.5179334 0.37151599,0.37119588 0 0 0 1.755304,1.6040704 0.37151599,0.37119588 0 0 0 1.676747,1.5678444 0.37151599,0.37119588 0 0 0 1.2086278,1.8061299 a 0.37151599,0.37119588 0 0 0 0.238491,0.4677159 0.37151599,0.37119588 0 0 0 0.085003,0.016503 0.37151599,0.37119588 0 0 0 -0.058817,0.063597 0.37151599,0.37119588 0 0 0 0.082183,0.5184321 0.37151599,0.37119588 0 0 0 0.5188792,-0.082112 0.37151599,0.37119588 0 0 0 0.0423,-0.074867 0.37151599,0.37119588 0 0 0 0.0423,0.074867 0.37151599,0.37119588 0 0 0 0.5188791,0.082112 0.37151599,0.37119588 0 0 0 0.082183,-0.5184321 0.37151599,0.37119588 0 0 0 -0.058817,-0.063597 0.37151599,0.37119588 0 0 0 0.085003,-0.016503 0.37151599,0.37119588 0 0 0 0.238491,-0.467716 0.37151599,0.37119588 0 0 0 -0.4681193,-0.2382855 0.37151599,0.37119588 0 0 0 -0.078557,0.036226 0.37151599,0.37119588 0 0 0 0.010071,-0.086137 0.37151599,0.37119588 0 0 0 -0.3714341,-0.3711135 z"
        id="path1615" />
     <circle
@@ -78,6 +78,6 @@
        id="path3370"
        cx="2.1166668"
        cy="2.1166668"
-       r="0.45056379" />
+       r="0.41687682" />
   </g>
 </svg>
