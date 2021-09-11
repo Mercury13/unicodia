@@ -3,49 +3,62 @@
 // Qt
 #include <QApplication>
 #include <QDir>
+#include <QFontDatabase>
 
 #include "u_Qstrings.h"
 #include <iostream>
 
-//#define USE_WIN32_FONTS
-
 std::string tempPrefix;
 
-#if defined(_WIN32) && defined(USE_WIN32_FONTS)
-    #include <windows.h>
 
-    intptr_t installTempFontFull(QString fname)
-    {
-        fname.replace('/', '\\');
-        const QChar* data1 = fname.data();
-        auto data2 = reinterpret_cast<const wchar_t*>(data1);
-        AddFontResourceExW(data2, FR_PRIVATE, 0);
-    }
-#else
-    #include <QFontDatabase>
+namespace {
 
-    TempFont installTempFontFull(QString fname)
+    class MemFont
     {
-        /// @todo [urgent] What to do with fonts?
-        int id = -1;
-        if (fname.endsWith(".ttf")) {
-            QFile f(fname);
-            f.open(QIODevice::ReadOnly);
-            QByteArray ba = f.readAll();
-            id = QFontDatabase::addApplicationFontFromData(ba);
-        } else {
-            id = QFontDatabase::addApplicationFont(fname);
-        }
-        if (id < 0) {
-            std::cout << "Cannot install " << fname.toStdString() << std::endl;
-        }
-        auto families = QFontDatabase::applicationFontFamilies(id);
-        //for (auto& v : families) {
-        //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
-        //}
-        return { id, std::move(families) };
+    public:
+        bool load(const QString& fname);
+        bool load(QIODevice& f);
+        const QByteArray& data() const { return d; }
+    private:
+        QByteArray d;
+    };
+
+    bool MemFont::load(const QString& fname)
+    {
+        QFile f(fname);
+        if (!f.open(QIODevice::ReadOnly))
+            return false;
+        return load(f);
     }
-#endif
+
+    bool MemFont::load(QIODevice& f)
+    {
+        d = f.readAll();
+        return true;
+    }
+}
+
+
+TempFont installTempFontFull(QString fname)
+{
+    /// @todo [urgent] What to do with fonts?
+    int id = -1;
+    if (!tempPrefix.empty() && fname.endsWith(".ttf")) {
+        MemFont mf;
+        mf.load(fname);
+        id = QFontDatabase::addApplicationFontFromData(mf.data());
+    } else {
+        id = QFontDatabase::addApplicationFont(fname);
+    }
+    if (id < 0) {
+        std::cout << "Cannot install " << fname.toStdString() << std::endl;
+    }
+    auto families = QFontDatabase::applicationFontFamilies(id);
+    //for (auto& v : families) {
+    //    std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
+    //}
+    return { id, std::move(families) };
+}
 
 
 QString expandTempFontName(std::string_view fname)
