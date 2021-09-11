@@ -2,6 +2,8 @@
 
 #include <QByteArray>
 
+#include "u_Array.h"
+
 ///
 /// \brief The Mems class
 ///   Simple memory stream; need stream-like bhv because of Motorola data
@@ -11,14 +13,17 @@ class Mems
 public:
     Mems() = default;
     // Ctor; by-val+move idiom
-    Mems(QByteArray dd) : d(std::move(dd)) {}
+    Mems(Buf1d<char> dd) { d.borrow(dd); }
     // Move only, do not copy
     Mems(const Mems&) = delete;
     Mems(Mems&&) = default;
     Mems& operator = (const Mems&) = delete;
     Mems& operator = (Mems&&) = default;
 
-    const QByteArray& data() const { return d; }
+    Buf1d<char> data() { return d; }
+    Buf1d<const char> data() const { return d; }
+
+    QByteArray qdata() const { return QByteArray::fromRawData(d.buffer(), d.size()); }
 
     /// @return  ptr to beginning
     char* beg() { return d.begin(); }
@@ -101,6 +106,6 @@ public:
     }
 
 protected:
-    QByteArray d {};
+    Array1d<char> d;
     char* p = nullptr;
 };

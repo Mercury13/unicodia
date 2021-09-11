@@ -47,12 +47,30 @@ namespace {
     {
         Char4 name;
         uint32_t posInDir = 0, posInFile = 0, length = 0;
+
+        Buf1d<char> toBuf(Buf1d<char> data);
     };
+
+    Buf1d<char> Block::toBuf(Buf1d<char> data)
+    {
+        auto end = posInFile + length;
+        if (end > data.size() || end < posInFile) {
+            char buf[100];
+            snprintf(buf, std::size(buf), "[Block.toBuf] File overrun in %.4s: pos %lld+%lld, file size %lld",
+                     name.d.asChars,
+                     static_cast<unsigned long long>(posInFile),
+                     static_cast<unsigned long long>(length),
+                     static_cast<unsigned long long>(data.size()));
+            throw std::logic_error(buf);
+        }
+        return { length, data.buffer() + posInFile };
+    }
+
 
     struct Block2
     {
         const Block* b = nullptr;
-        QByteArray d {};
+        Buf1d<char> d;
 
         operator bool() const { return b; }
     };
@@ -65,7 +83,8 @@ namespace {
 
         // High-level bhv
         Block2 findBlock(Char4 name);
-        const Block* rqBlock(Char4 name, uint32_t len = 0) const;
+        Block2 rqBlock(Char4 name, uint32_t len = 0);
+        void mangle(std::string_view bytes);
     private:
         SafeVector<Block> blocks;
 
@@ -83,7 +102,9 @@ namespace {
 
     bool MemFont::load(QIODevice& f)
     {
-        d = f.readAll();
+        auto sz = f.size();
+        d.alloc(sz);
+        f.read(d.buffer(), sz);
         p = beg();
         return readDir();
     }
@@ -122,6 +143,39 @@ namespace {
 
         return true;
     }
+
+    Block2 MemFont::findBlock(Char4 name)
+    {
+        for (auto& v : blocks)
+            if (v.name == name)
+                return { &v, v.toBuf(d) };
+        return {};
+    }
+
+
+    Block2 MemFont::rqBlock(Char4 name, uint32_t len)
+    {
+        auto r = findBlock(name);
+        if (!r) {
+            char buf[100];
+            snprintf(buf, sizeof(buf), "Block <%.4s> not found", name.d.asChars);
+            throw std::logic_error(buf);
+        }
+        if (r.b->length <= len) {
+            char buf[100];
+            snprintf(buf, sizeof(buf), "Block <%.4s> wanted %lu, found %lu",
+                     name.d.asChars, long(len), long(r.b->length));
+            throw std::logic_error(buf);
+        }
+        return r;
+    }
+
+    void MemFont::mangle(std::string_view bytes)
+    {
+        auto v = rqBlock("name", 32);
+        Mems blk(v.d);
+    }
+
 }
 
 
@@ -134,7 +188,7 @@ TempFont installTempFontFull(QString fname)
         try {
             MemFont mf;
             mf.load(fname);
-            id = QFontDatabase::addApplicationFontFromData(mf.data());
+            id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << std::endl;
         }
