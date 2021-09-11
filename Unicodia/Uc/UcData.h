@@ -362,8 +362,9 @@ namespace uc {
     struct Cp;
 
     enum class Bfg {
-        COLLAPSIBLE = 1,
-        HAS_32_NONCHARS = 2,
+        COLLAPSIBLE = 1,        /// [+] collapsible CJK
+        HAS_32_NONCHARS = 2,    /// [+] block has 32 non-characters
+        FORCE_FONT = 4,         /// [+] force NORMAL font
     };
 
     DEFINE_ENUM_OPS(Bfg)

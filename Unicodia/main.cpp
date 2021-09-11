@@ -21,11 +21,14 @@ int main(int argc, char *argv[])
     uc::completeData();
     FmMain w;
 
-    // Preinstall backup fonts!
+    // Preinstall backup fonts w/o mangling…
+    /// @todo [fonts] When the font engine is ready, we’ll install fonts when needed
     installTempFontRel("NotoSerif-Regular.ttf");
     installTempFontRel("NotoSansSymbols-Regular.ttf");
     installTempFontRel("NotoSansSymbols2-Regular.ttf");
     installTempFontRel("NotoSansMath-Regular.ttf");
+
+    // …and then install temporary prefix
     w.installTempPrefix();
 
     w.show();

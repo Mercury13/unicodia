@@ -1884,7 +1884,8 @@ constinit const uc::Block uc::blocks[] {
             u8"<p>Модификаторы букв используются в фонетике и языкознании, чтобы передать тоны, длину, мягкость и условные звуки: "
                     "так, английское ''car'' (легковой автомобиль) записывается как {{sm|[kɑːʳ]}},"
                     "и последние два символа{{-}}модификаторы, обозначающие длину и условное «r».</p>"
-                "<p>Также в этом блоке есть протяжённые копии диакритических меток.</p>"sv },
+                "<p>Также в этом блоке есть протяжённые копии диакритических меток.</p>"sv,
+            EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
     /// @todo [semi-tofu] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F,
             "Combining Diacritical Marks", u8"Диакритические метки"sv,
@@ -4351,14 +4352,21 @@ uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
 
 const uc::Font& uc::Cp::font(const Block*& hint) const
 {
-    // Priority: Script unless font is normal → block → block’s script
+    // Priority: block → script — block’s script
+    hint = blockOf(subj, hint);
+    // Block
+    auto hfont = hint->ecFont;
+    if (hfont != EcFont::NORMAL || hint->flags.have(Bfg::FORCE_FONT)) {
+        return fontInfo[static_cast<int>(hfont)];
+    }
+    // Script
     if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh) {
         auto& si = scriptInfo[static_cast<int>(ecScript)];
         if (si.ecFont != EcFont::NORMAL)
             return si.font();
     }
-    hint = blockOf(subj, hint);
-    return hint->font();
+    // Block’s script
+    return hint->script().font();
 }
 
 
