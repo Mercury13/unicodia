@@ -964,8 +964,9 @@ constinit const uc::Script uc::scriptInfo[] {
                 "роль играло не изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.</p>"
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).</p>"sv,
-                EcFont::CJK },
+                EcFont::CJK },    
     // Kharoshthi OK, W10 tofu → installed Noto
+        /// @todo [portability] Ligature is created from a wrong sequence here
     { "Khar"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Кхароштхи"sv, u8"IV век до н.э.",
@@ -1031,7 +1032,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Между словами не ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. "
                 "Вирама называется «ra haam» и используется нечасто.</p>"
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные).</p>"
-            "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут тайским письмом.</p>"sv,
+            "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут [[ps:Thai|тайским]] письмом.</p>"sv,
                 EcFont::LANNA },
     // Lao OK, W10 partial, installed SengBuhan font
     { "Laoo"sv, QFontDatabase::Lao,
