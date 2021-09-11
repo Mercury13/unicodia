@@ -9,6 +9,14 @@
 class Mems
 {
 public:
+    Mems() = default;
+    Mems(QByteArray dd) : d(std::move(dd)) {}
+    // Move only, do not copy
+    Mems(const Mems&) = delete;
+    Mems(Mems&&) = default;
+    Mems& operator = (const Mems&) = delete;
+    Mems& operator = (Mems&&) = default;
+
     // Stream-like bhv (Motorola data here)
     const QByteArray& data() const { return d; }
 
