@@ -3211,9 +3211,9 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F600, 0x1F64F,
             "Emoticons", u8"Смайлики"sv },
     // Orna dingbats OK
-    /// @todo [desc] Dingbats
     { 0x1F650, 0x1F67F,
-            "Ornamental Dingbats", u8"Печатные узоры" },
+            "Ornamental Dingbats", u8"Печатные узоры",
+            u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''." },
     /// @todo [semi-tofu] Transport/map: Some chars are not colored
     /// @todo [desc] Transport/map
     { 0x1F680, 0x1F6FF,
