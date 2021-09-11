@@ -172,9 +172,7 @@ CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
     match(str::toQ(FAM_DEFAULT)),
     rows(NCOLS)
-{
-    tempPrefix = match.findPrefix();
-}
+{}
 
 
 int CharsModel::rowCount(const QModelIndex&) const
@@ -1033,4 +1031,10 @@ void FmMain::cjkExpandCollapse()
     ui->tableChars->scrollTo(newIndex2);
     ui->tableChars->viewport()->setFocus();
     reflectCjkCollapseState();
+}
+
+
+void FmMain::installTempPrefix()
+{
+    tempPrefix = model.match.findPrefix();
 }

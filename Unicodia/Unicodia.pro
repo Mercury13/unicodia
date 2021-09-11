@@ -35,6 +35,7 @@ SOURCES += \
     FmMain.cpp
 
 HEADERS += \
+    ../Libs/SelfMade/i_ByteSwap.h \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Qstrings.h \

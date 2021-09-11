@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
     installTempFontRel("NotoSansSymbols-Regular.ttf");
     installTempFontRel("NotoSansSymbols2-Regular.ttf");
     installTempFontRel("NotoSansMath-Regular.ttf");
+    w.installTempPrefix();
 
     w.show();
     return a.exec();

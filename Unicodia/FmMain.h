@@ -162,6 +162,7 @@ class FmMain : public QMainWindow,
 public:
     FmMain(QWidget *parent = nullptr);
     ~FmMain() override;
+    void installTempPrefix();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

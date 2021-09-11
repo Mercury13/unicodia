@@ -4,6 +4,7 @@
 #include <QString>
 
 constexpr auto FONT_NOT_INSTALLED = -1000;
+constexpr auto FONT_BADLY_INSTALLED = -1;
 extern std::string tempPrefix;
 
 struct TempFont {
