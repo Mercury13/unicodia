@@ -2779,8 +2779,10 @@ constinit const uc::Block uc::blocks[] {
     // Old Permic OK
     { 0x10350, 0x1037F,
             "Old Permic", u8"Древнепермский (анбур)", {}, EcScript::Perm },
+    // Ugaritic OK
     { 0x10380, 0x1039F,
             "Ugaritic", u8"Угаритский", {}, EcScript::Ugar },
+    // Old Persian OK
     { 0x103A0, 0x103DF,
             "Old Persian", u8"Древнеперсидский", {}, EcScript::Xpeo },
     // Deseret OK
@@ -2795,31 +2797,43 @@ constinit const uc::Block uc::blocks[] {
     // Osage OK
     { 0x104B0, 0x104FF,
             "Osage", u8"Осейдж", {}, EcScript::Osge },
+    // Elbasan OK
     { 0x10500, 0x1052F,
             "Elbasan", u8"Эльбасанский албанский", {}, EcScript::Elba },
+    // Caucasian OK
     { 0x10530, 0x1056F,
             "Caucasian Albanian", u8"Агванский (Кавказская Албания)", {}, EcScript::Aghb },
+    // Linear A OK
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
+    // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
     // Imperial Aramaic OK
     { 0x10840, 0x1085F,
             "Imperial Aramaic", u8"Имперский арамейский", {}, EcScript::Armi },
+    // Palmyrene OK
     { 0x10860, 0x1087F,
             "Palmyrene", u8"Пальмирский", {}, EcScript::Palm },
+    // Nabataean OK
     { 0x10880, 0x108AF,
             "Nabataean", u8"Набатейский", {}, EcScript::Nbat },
+    // Hatran OK
     { 0x108E0, 0x108FF,
             "Hatran", u8"Хатранский (ашшурский)", {}, EcScript::Hatr },
+    // Phoenician OK
     { 0x10900, 0x1091F,
             "Phoenician", u8"Финикийский", {}, EcScript::Phnx },
+    // Lydian OK
     { 0x10920, 0x1093F,
             "Lydian", u8"Лидийский (сардийский)", {}, EcScript::Lydi },
+    // Meroitic hiero OK
     { 0x10980, 0x1099F,
             "Meroitic Hieroglyphs", u8"Мероитские иероглифы", {}, EcScript::Mero },
+    // Meroitic cursive OK
     { 0x109A0, 0x109FF,
             "Meroitic Cursive", u8"Мероитский курсив", {}, EcScript::Mero },
+    // Kharoshthi OK
     { 0x10A00, 0x10A5F,
             "Kharoshthi", u8"Кхароштхи", {}, EcScript::Khar },
     { 0x10A60, 0x10A7F,
@@ -2884,6 +2898,7 @@ constinit const uc::Block uc::blocks[] {
             "Siddham", u8"Сиддхаматрика", {}, EcScript::Sidd },
     { 0x11600, 0x1165F,
             "Modi", u8"Моди", {}, EcScript::Modi },
+    // Mongolian supp OK
     { 0x11660, 0x1167F,
             "Mongolian Supplement", u8"Монгольский дополнительный"sv,
             u8"Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. "
@@ -2895,8 +2910,10 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Mong },
     { 0x11680, 0x116CF,
             "Takri", u8"Такри", {}, EcScript::Takr },
+    // Ahom OK
     { 0x11700, 0x1173F,
             "Ahom", u8"Ахом", {}, EcScript::Ahom },
+    // Dogra OK
     { 0x11800, 0x1184F,
             "Dogra", u8"Догра", {}, EcScript::Dogr },
     { 0x118A0, 0x118FF,
@@ -3121,6 +3138,7 @@ constinit const uc::Block uc::blocks[] {
             "Indic Siyaq Numbers", u8"Индийские цифры сийяк" },
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
+    // Arab mathematical OK, W10 Amiri
     { 0x1EE00, 0x1EEFF,
             "Arabic Mathematical Alphabetic Symbols",
             u8"Арабские математические алфавитные символы",
