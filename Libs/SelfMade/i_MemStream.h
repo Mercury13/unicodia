@@ -1,15 +1,16 @@
 #pragma once
 
-#include "QByteArray"
+#include <QByteArray>
 
 ///
 /// \brief The Mems class
-///   Simple memory stream
+///   Simple memory stream; need stream-like bhv because of Motorola data
 ///
 class Mems
 {
 public:
     Mems() = default;
+    // Ctor; by-val+move idiom
     Mems(QByteArray dd) : d(std::move(dd)) {}
     // Move only, do not copy
     Mems(const Mems&) = delete;
@@ -17,7 +18,6 @@ public:
     Mems& operator = (const Mems&) = delete;
     Mems& operator = (Mems&&) = default;
 
-    // Stream-like bhv (Motorola data here)
     const QByteArray& data() const { return d; }
 
     /// @return  ptr to beginning
