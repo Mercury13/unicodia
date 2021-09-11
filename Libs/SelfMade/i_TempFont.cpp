@@ -155,14 +155,13 @@ namespace {
 
     Block2 MemFont::rqBlock(Char4 name, uint32_t len)
     {
+        char buf[100];
         auto r = findBlock(name);
         if (!r) {
-            char buf[100];
             snprintf(buf, sizeof(buf), "Block <%.4s> not found", name.d.asChars);
             throw std::logic_error(buf);
         }
         if (r.b->length <= len) {
-            char buf[100];
             snprintf(buf, sizeof(buf), "Block <%.4s> wanted %lu, found %lu",
                      name.d.asChars, long(len), long(r.b->length));
             throw std::logic_error(buf);
