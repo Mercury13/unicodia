@@ -14,8 +14,7 @@
 
 // Libs
 #include "u_Vector.h"
-#include "i_ByteSwap.h"
-
+#include "i_MemStream.h"
 
 std::string tempPrefix;
 
@@ -58,68 +57,16 @@ namespace {
         operator bool() const { return b; }
     };
 
-    class MemFont
+    class MemFont : public Mems
     {
     public:
         bool load(const QString& fname);
         bool load(QIODevice& f);
 
-        // Stream-like bhv (Motorola data here)
-        const QByteArray& data() const { return d; }
-        char* beg() { return d.begin(); }
-        char* end() { return d.end(); }
-        const char* beg() const { return d.begin(); }
-        const char* end() const { return d.end(); }
-        char* ptr() { return p; }
-        const char* ptr() const { return p; }
-        size_t size() const { return d.size(); }
-        size_t pos() const { return p - beg(); }
-        size_t remainder() const { return end() - p; }
-        void seek(size_t x);
-        void read(char* data, size_t dsize);
-        template <size_t Len, class T>
-        void readStruc(T& data)
-        {
-            static constexpr auto actualLen = sizeof(std::remove_reference_t<T>);
-            static_assert(Len == actualLen, "Wrong Len, maybe mistake?");
-            read(reinterpret_cast<char*>(&data), Len);
-        }
-        void write(const char* data, size_t dsize);
-        template <size_t Len, class T>
-        void writeStruc(const T& data)
-        {
-            static constexpr auto actualLen = sizeof(std::remove_reference_t<T>);
-            static_assert(Len == actualLen, "Wrong Len, maybe mistake?");
-            write(reinterpret_cast<const char*>(&data), Len);
-        }
-
-        Block2 findBlock(Char4 x);
-        uint8_t readB() {
-            uint8_t r;
-            readStruc<1>(r);
-            return r;
-        }
-
-        /// read Intel word (2 bytes)
-        [[maybe_unused]] uint16_t readIW();
-
-        /// read Motorola word (2 bytes)
-        [[maybe_unused]] uint16_t readMW();
-
-        /// read Intel dword (4 bytes)
-        [[maybe_unused]] uint32_t readID();
-
-        /// read Motorola dword (4 bytes)
-        [[maybe_unused]] uint32_t readMD();
-
-        /// write Motorola dword (4 bytes)
-        [[maybe_unused]] void writeMD(uint32_t x);
-
-        /// Skip dword (4 bytes)
-        inline void skipD();
+        // High-level bhv
+        Block2 findBlock(Char4 name);
+        const Block* rqBlock(Char4 name, uint32_t len = 0) const;
     private:
-        QByteArray d;
-        char* p = nullptr;
         SafeVector<Block> blocks;
 
         bool readDir();
@@ -139,95 +86,6 @@ namespace {
         d = f.readAll();
         p = beg();
         return readDir();
-    }
-
-    uint16_t MemFont::readIW()
-    {
-        Word1 w;
-        readStruc<2>(w);
-        swapIW(w);
-        return w.asWord;
-    }
-
-    uint16_t MemFont::readMW()
-    {
-        Word1 w;
-        readStruc<2>(w);
-        swapMW(w);
-        return w.asWord;
-    }
-
-    uint32_t MemFont::readID()
-    {
-        Dword1 d;
-        readStruc<4>(d);
-        swapID(d);
-        return d.asDword;
-    }
-
-    uint32_t MemFont::readMD()
-    {
-        Dword1 d;
-        readStruc<4>(d);
-        swapMD(d);
-        return d.asDword;
-    }
-
-    void MemFont::writeMD(uint32_t x)
-    {
-        Dword1 d;
-        d.asDword = x;
-        swapMD(d);
-        writeStruc<4>(d);
-    }
-
-    void MemFont::skipD()
-    {
-        uint32_t noMatter;
-        readStruc<4>(noMatter);
-    }
-
-    void MemFont::seek(size_t x)
-    {
-        if (x > size()) {
-            char buf[100];
-            snprintf(buf, sizeof(buf), "[MF.seek] Seek past end: %llu/%llu, former pos=%llu",
-                     static_cast<unsigned long long>(x), static_cast<unsigned long long>(size()),
-                     static_cast<unsigned long long>(pos()));
-            throw std::logic_error(buf);
-        }
-        x = std::min(x, size());
-        p = beg() + x;
-    }
-
-    void MemFont::read(char* data, size_t dsize)
-    {
-        auto rem = remainder();
-        if (dsize > rem) {
-            char buf[100];
-            snprintf(buf, sizeof(buf), "[MF.read] Cannot read %llu bytes: pos=%llu/%llu, rem=%llu",
-                     static_cast<unsigned long long>(dsize), static_cast<unsigned long long>(pos()),
-                     static_cast<unsigned long long>(size()), static_cast<unsigned long long>(rem));
-            throw std::logic_error(buf);
-        }
-        auto pNew = p + dsize;
-        std::copy(p, pNew, data);
-        p = pNew;
-    }
-
-    void MemFont::write(const char* data, size_t dsize)
-    {
-        auto rem = remainder();
-        if (dsize > rem) {
-            char buf[100];
-            snprintf(buf, sizeof(buf), "[MF.write] Cannot write %llu bytes: pos=%llu/%llu, rem=%llu",
-                     static_cast<unsigned long long>(dsize), static_cast<unsigned long long>(pos()),
-                     static_cast<unsigned long long>(size()), static_cast<unsigned long long>(rem));
-            throw std::logic_error(buf);
-        }
-        auto pNew = p + dsize;
-        p = std::copy(data, data + dsize, p);
-        p = pNew;
     }
 
     Block MemFont::readBlockEntry()

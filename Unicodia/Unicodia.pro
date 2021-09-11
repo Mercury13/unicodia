@@ -22,6 +22,7 @@ debug {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/SelfMade/i_MemStream.cpp \
 ../Libs/SelfMade/i_TempFont.cpp \
     ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/SelfMade/i_ByteSwap.h \
+    ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Qstrings.h \
