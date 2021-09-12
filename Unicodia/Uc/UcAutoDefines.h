@@ -92,6 +92,7 @@ namespace uc {
         Nshu,   // Nushu
         Ogam,   // Ogham
         Olck,   // Ol Chiki
+        Orkh,   // Turkic runes
         Orya,   // Oriya
         Osge,   // Osage
         Osma,   // Osmanya
@@ -99,6 +100,7 @@ namespace uc {
         Perm,   // Old Permic
         Phag,   // Phags-Pa
         Phli,   // Inscriptional Pahlavi
+        Phlp,   // Psalter Pahlavi
         Phnx,   // Phoenician
         Prti,   // Inscriptional Parthian
         Rjng,   // Rejang
@@ -185,9 +187,7 @@ namespace uc {
         Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
-        Orkh = Zyyy,        // Turkic runes, beyond BMP
         Pauc = Zyyy,        // beyond BMP
-        Phlp = Zyyy,        // beyond BMP
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP

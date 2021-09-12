@@ -29,6 +29,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Noto Sans Symbols2", Ffg::DESC_BIGGER },                                 // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
+    { "Segoe UI Historic", {}, {}, 115_pc },                                    // Historic bigger
     { "Lucida Sans Unicode" },                                                  // Block
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP },                         // Punctuation
     { "Noto Sans Math" },                                                       // Math
@@ -110,6 +111,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, 150_pc },                           // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
+    { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansRunic-Regular.ttf" },                                            // Runic
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
@@ -481,13 +483,14 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::ARMENIAN },
     // Avestan OK, installed Google Noto
     /// @todo [link] to range
+    /// @todo [future, link] wait bit book Pahlavi
     { "Avst"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Авестийский", u8"≈400",
         u8"авестийский, среднеперсидский",
         u8"Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. "
                 "Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит "
-                    "на основе [[ps:Phli|книжного пехлеви]] (письма среднеперсидских рукописей). "
+                    "на основе книжного пехлеви (письма среднеперсидских рукописей). "
                 "К тому времени зороастризму было много веков и язык был малопонятен, а для действенности молитв важно точное повторение{{-}}"
                     "так что алфавит снабдили настоящими гласными, позаимствованными из других письменностей."
             "<p>При арабах зороастрийцы стали переселяться в Индию, "
@@ -498,8 +501,9 @@ constinit const uc::Script uc::scriptInfo[] {
                     "B2 (изученные некодируемые{{-}}[[ps:Egyp|египетские иероглифы]]), "
                     "C1 (малоизученные, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), "
                     "и C2 (неизученные, запросы от любителей{{-}}Фестский диск). "
-                "Авестийский попал в самую важную категорию A, что дало ему шанс на кодирование в [[pt:bmp|базовой плоскости]]. "
-                "Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phli|пехлеви]] рядом, так что закодировали в дополнительной.",
+                "Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. "
+                "Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. "
+                "Для незакодированного книжного пехлеви в Юникоде оставлена дыра.",
                 EcFont::AVESTAN },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
@@ -1334,6 +1338,19 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: {{sm|ᱚ}}{{_}}огонь, {{sm|ᱛ}}{{_}}земля, "
                 "{{sm|ᱜ}}{{_}}отрыжка.",
                 EcFont::OLCHIKI },
+    { "Orkh"sv, QFontDatabase::Any,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Тюркские (орхоно-енисейские) руны", u8"VI век",
+        u8"орхоно-тюркский, енисейско-кыргызский и др. ''(современная Монголия, Прибайкалье, Синьцзян-Уйгурский округ)''",
+        u8"Русские исследователи начали собирать информацию ещё с Петра{{_}}I, их сразу же сравнили с [[ps:Runr|рунами]], "
+                "тем более Даниэлю Мессершмидту действительно помогали пленённые под Полтавой шведы. "
+                "Финны поспешили приписать эту письменность своим предкам."
+            "<p>По исследованиям датского учёного Вильгельма Томсена (1893) оказалось, что финны неправы: это тюркский текст."
+            "<p>Известно около 200 надписей VII–X{{_}}веков и несколько рукописей IX–X{{_}}веков. "
+                "Второй тюркский каганат был 682–744, Уйгурский каганат 744–840. "
+                "После поражения от енисейских кыргызов уйгуры ушли на юг и в 1030 были завоёваны [[ps:Tang|тангутами]]. "
+                "История енисейских кыргызов не вполне понятна; известно только, что они стали вассалами Чингисхана.",
+                EcFont::HISTORIC_BIGGER },
     /// @todo [tofu] Even Noto has no U+0B55 (2020)
     /// @todo [tofu] Noto has badly placed circle, W7 lacks 2010 fractions
     /// @todo [font] Build a genuine Oriya pair, W7’s Oriya font is Kalinga
@@ -1413,14 +1430,24 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Если отбросить необычное направление письма, письмо Пагба-ламы{{-}}обычная брахмийская абугида с гласной "
                 "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>",
                 EcFont::PHAGS_PA },
-    // Inscrriptional Pahlavi OK, W10 Historic
+    // Inscriptional Pahlavi OK, W10 Historic
     { "Phli"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Пехлевийские надписи", u8"≈150 до н.э.",
         u8"иранские языки",
         u8"Язык иранских надписей на глине, самый ранний вариант письма пехлеви. "
-                "Использовался даже в начале Сасанидской империи (III{{_}}век).",
+                "Использовался даже в начале Сасанидской империи, до V{{_}}века.",
                 EcFont::HISTORIC },
+    // Psalter Pahlavi OK, W10 none → installed Google Noto
+    { "Phlp"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Псалтырское пехлеви", u8"до IV в., точнее неизвестно",
+        u8"среднеперсидский",
+        u8"Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. "
+                "Есть лишь два источника: 12-страничный фрагмент Псалтыря VI в., найденный в Синцзян-Уйгурском округе, и крест из Афганистана. "
+                "Знаки параграфов писались наполовину красным, наполовину чёрным."
+            "<p>''Книжное пехлеви'', последняя форма письма, так и не вошло в Юникод, для него оставлена дыра.",
+                EcFont::PSALTER_PAHLAVI },
     // Phoenician OK, because of importance installed Google Noto
     { "Phnx"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
@@ -1445,7 +1472,8 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Парфянские надписи", u8"≈250 до н.э.",
         u8"парфянский",
         u8"Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). "
-                "Повлиял на [[ps:Armn|армянский]], но впоследствии уступил персидскому.",
+                "Повлиял на [[ps:Armn|армянский]], но впоследствии уступил персидскому. "
+                "Содержит семь [[pt:ligature|лигатур]], которые не удалось извлечь из имеющегося шрифта.",
                 EcFont::HISTORIC },
     // Rejang OK, installed Google Noto font
     { "Rjng"sv, QFontDatabase::Any,
@@ -2945,7 +2973,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10B80, 0x10BAF,
             "Psalter Pahlavi", u8"Псалтырское пехлеви", {}, EcScript::Phlp },
     { 0x10C00, 0x10C4F,
-            "Old Turkic", u8"Тюркские руны", {}, EcScript::Orkh },
+            "Old Turkic", u8"Тюркские (орхоно-енисейские) руны", {}, EcScript::Orkh },
     { 0x10C80, 0x10CFF,
             "Old Hungarian", u8"Венгерские руны", {}, EcScript::Hung },
     { 0x10D00, 0x10D3F,
