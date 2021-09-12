@@ -55,7 +55,8 @@ namespace uc {
         COMPETING,      ///< Loses competition to another script
         DEAD,           ///< UNESCO elders only (Votic)
                         ///< UNESCO dead (Yugh)
-        HISTORICAL,     ///< Dead long ago (Latin, Coptic)
+        HISTORICAL,     ///< Dead long ago (Egyptian hieroglyphs)
+        SACRED,         ///< Used nowadays as sacred (Coptic, Avestan)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
         EXPERIMENTAL,   ///< Experimantal script for existing languages (Deseret)

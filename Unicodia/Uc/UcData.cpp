@@ -147,6 +147,7 @@ constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] 
     { u8"в опасности{{-}}из-за конкуренции письменностей ''(как ланна)''" },
     { u8"мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)''" },
     { u8"историческая ''(давно мертва, как глаголица)''" },
+    { u8"религиозная ''(мертва в светском обороте, как балийская)''" },
     { u8"новая ''(появилась в новейшее время, как нко)''" },
     { u8"возрождённая ''(как ахом)''"sv },
     { u8"экспериментальная <i>(попытка придумать имеющемуся языку новую письменность, как мормонская)</i>" },
@@ -485,7 +486,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [link] to range
     /// @todo [future, link] wait bit book Pahlavi
     { "Avst"sv, QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Авестийский", u8"≈400",
         u8"авестийский, среднеперсидский",
         u8"Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. "
@@ -508,7 +509,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::AVESTAN },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Балийский"sv, u8"≈1000"sv,
         u8"балийский, сасакский"sv,
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
@@ -661,7 +662,7 @@ constinit const uc::Script uc::scriptInfo[] {
             EcFont::CHEROKEE },
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt"sv, QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Коптский"sv, u8"II век"sv,
         u8"коптский"sv,
         u8"<p>Происходит из [[ps:Grek|греческого]]. Используется коптами (египетскими христианами) как богослужебный. "
