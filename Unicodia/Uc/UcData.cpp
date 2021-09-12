@@ -2088,7 +2088,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1AB0, 0x1AFF,
             "Combining Diacritical Marks Extended",
             u8"Диакритические метки расширенные"sv,
-            u8"<p>Используются в немецкой и шотландской диалектологии."sv,
+            u8"Используются в немецкой и шотландской диалектологии."sv,
             EcScript::NONE, EcFont::NOTO },
     // Balinese OK
     { 0x1B00, 0x1B7F,
@@ -2110,11 +2110,15 @@ constinit const uc::Block uc::blocks[] {
     { 0x1C80, 0x1C8F,
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
             {}, EcScript::Cyrl },
-    /// @todo [semi-tofu] What to do with those Mtavruli?
-    /// @todo [desc] Georgian extended
+    // Geor ex OK
     { 0x1C90, 0x1CBF,
             "Georgian Extended", u8"Грузинский расширенный",
-            {}, EcScript::Geor },
+            u8"''Мтаврули''{{-}}заглавная форма стандартного грузинского письма ''мхедрули''. "
+                    "Заглавные буквы из основного блока называются ''асомтаврули'' и считаются устаревшими."
+                "<p>Мтаврули обычно используется в заголовках и долгое время считался вариантом шрифта. "
+                    "Однако исследователи нашли документы XIX и начала XX{{_}}века, где мхедрули и мтаврули смешивались. "
+                    "К тому же грузинские шрифты ходят парами{{-}}мхедрули и мтаврули, что усложняет работу.",
+            EcScript::Geor },
     // Sundanese suplement OK
     /// @todo [desc] Sundanese supplement
     { 0x1CC0, 0x1CCF,
@@ -2352,9 +2356,13 @@ constinit const uc::Block uc::blocks[] {
     { 0x2C80, 0x2CFF,
             "Coptic", u8"Коптский", {}, EcScript::Copt },
     // Georgian supp OK
-    /// @todo [desc] Georgian supp
+    /// @todo [font, W7] which font?
     { 0x2D00, 0x2D2F,
-            "Georgian Supplement", u8"Грузинский дополнительный", {}, EcScript::Geor },
+            "Georgian Supplement", u8"Грузинский дополнительный",
+            u8"Устаревший минускульный грузинский шрифт ''нусхури''. "
+                    "Буквы наклонены вправо и очень угловатые. "
+                    "Буквицы при этом оформляли шрифтом ''асомтаврули'' из основного блока.",
+            EcScript::Geor },
     // Tifinagh OK
     { 0x2D30, 0x2D7F,
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
