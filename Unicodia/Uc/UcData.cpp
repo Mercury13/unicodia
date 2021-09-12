@@ -90,12 +90,14 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMalayalam-Light.ttf", Ffg::LIGHT },                              // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
+    { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
     { "NotoSansMeeteiMayek-Regular.ttf" },                                      // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
+    { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifNyiakengPuachueHmong-Regular.ttf" },                            // NP Hmong
     { "NotoSansNushu-Regular.ttf" },                                            // Nushu
     { "NotoSansOgham-Regular.ttf", {}, {}, 110_pc },                            // Ogham
@@ -474,7 +476,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. "
                 u8"В XII веке добавились буквы {{sm|Օ}} и {{sm|Ֆ}}.</p>"
             u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "
-                u8"[[ps:Syrc|манихейской]] вязи.</p>"sv,
+                u8"[[ps:Mani|манихейской]] вязи.</p>"sv,
                 EcFont::ARMENIAN },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
@@ -749,7 +751,8 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"амхарский, тигринья и другие эфиосемитские",
         u8"Эфиопская письменность использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "
                 "Геэз всё ещё используется эфиопскими христианами как литургический{{-}}"
-                "а письменность распространилась на другие языки Эфиопии.</p>",
+                "а письменность распространилась на другие языки Эфиопии."
+            "<p>С конца XX{{_}}века теряет влияние и заменяется [[ps:Latn|латиницей]].",
                 EcFont::ETHIOPIC },
     // Georgian OK, installed Google Noto font
     { "Geor"sv, QFontDatabase::Georgian,
@@ -1165,6 +1168,16 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv,
                 EcFont::MANDAIC },
+    // Mandaic OK, W10 has not, installed Google Noto
+    { "Mani"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Манихейская"sv, u8"III век",
+        u8"согдийский, парфянский, среднеперсидский",
+        u8"Происходит из [[ps:Syrc|сирийского]] и связано с распространением религии манихейства. "
+                "Когда Сасанидская империя стала запрещать манихейство, источники стали встречаться севернее, в Средней Азии. "
+                "Последние источники датируются X{{_}}веком и найдены в современном Синцзян-Уйгурском округе."
+            "<p>Термин придумал немец Фридрих Мюллер, он же в 1903 прочитал письмо.",
+                EcFont::MANICHAEAN },
     // Meroitic cursive OK, W10 has small part
     { "Merc"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -1218,14 +1231,23 @@ constinit const uc::Script uc::scriptInfo[] {
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr"sv, QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Бирманская"sv, u8"XI век"sv,
-        u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>"sv,
+        u8"Бирманская", u8"XI век",
+        u8"бирманский <i>(Мьянма)</i>, пали <i>(мёртвый, культовый в буддизме)</i>",
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошёл из брахми. Согласная буква означает слог с «ə». "
                 "Чтобы поставить другую гласную, используются огласовки, чтобы убрать{{-}}знак «вирама», которая по-бирмански называется "
                 "«а-сат».</p>"
             "<p>Раннебирманское письмо было квадратным; закруглилось оно около XVII{{_}}века, когда распространилось письмо на пальмовых листьях: "
-                "прямая линия может разрезать лист по жилкам.</p>"sv,
+                "прямая линия может разрезать лист по жилкам.</p>",
                 EcFont::MYANMAR },
+    // North Arabian OK, W10 none → installed Google Noto
+    { "Narb"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Древняя североаравийская", u8"III век до н.э.",
+        u8"североаравийский оазисов, сафаитский, хисмайский и другие",
+        u8"Понятие относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. "
+                "Происходят из протосинайской письменности. "
+                "Известны по кратким надписям III{{_}}века{{bc}}— IV{{_}}века.",
+                EcFont::NORTH_ARABIAN },
     // Nabataean OK, W10 none → installed Google Noto
     { "Nbat"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
@@ -1424,6 +1446,14 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"<p>Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
                 "религию и культуру. На 2021 существует не более 700 самаритян.</p>"sv,
                 EcFont::SAMARITAN },
+    // South Arabian OK, W10 Segoe UI Historic
+    { "Sarb"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA_INDIAN,
+        u8"Древняя южноаравийская", u8"IX век д.э.",
+        u8"южноаравийские ''(сабейский, катабанский и прочие)'', геэз",
+        u8"Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. "
+                "В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].",
+                EcFont::HISTORIC },
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -2860,11 +2890,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x10A00, 0x10A5F,
             "Kharoshthi", u8"Кхароштхи", {}, EcScript::Khar },
     { 0x10A60, 0x10A7F,
-            "Old South Arabian", u8"Древний южноаравийский", {}, EcScript::Sarb },
+            "Old South Arabian", u8"Древняя южноаравийская", {}, EcScript::Sarb },
     { 0x10A80, 0x10A9F,
-            "Old North Arabian", u8"Древний североаравийский", {}, EcScript::Narb },
+            "Old North Arabian", u8"Древняя североаравийская", {}, EcScript::Narb },
     { 0x10AC0, 0x10AFF,
-            "Manichaean", u8"Манихейский", {}, EcScript::Mani },
+            "Manichaean", u8"Манихейская", {}, EcScript::Mani },
     { 0x10B00, 0x10B3F,
             "Avestan", u8"Авестийский", {}, EcScript::Avst },
     { 0x10B40, 0x10B5F,

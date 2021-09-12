@@ -78,12 +78,14 @@ namespace uc {
         Lyci,   // Lycian
         Lydi,   // Lydian
         Mand,   // Mandaic
+        Mani,   // Manichean
         Merc,   // Meroitic cursive
         Mero,   // Meroitic hieroglyphs
         Mlym,   // Malayalam
         Mong,   // Mongolian (old)
         Mtei,   // Meitei Mayek
         Mymr,   // Myanmar
+        Narb,   // North Arabian
         Nbat,   // Nabataean
         Nkoo,   // NKo
         Nshu,   // Nushu
@@ -99,6 +101,7 @@ namespace uc {
         Rjng,   // Rejang
         Runr,   // European runes
         Samr,   // Samaritan
+        Sarb,   // South Arabian
         Saur,   // Saurashtra
         Sgnw,   // Sutton SignWriting
         Shaw,   // Shavian
@@ -168,7 +171,6 @@ namespace uc {
         //Loma  no chars
         Mahj = Zyyy,        // Mahajani, beyond BMP
         Maka = Zyyy,        // beyond BMP
-        Mani = Zyyy,        // beyond BMP
         Marc = Zyyy,        // beyond BMP
         //Maya  no chars
         Medf = Zyyy,        // beyond BMP
@@ -178,7 +180,6 @@ namespace uc {
         Mroo = Zyyy,        // beyond BMP
         Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
-        Narb = Zyyy,        // beyond BMP
         Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars
         //Nkgb  no chars
@@ -193,7 +194,6 @@ namespace uc {
         Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
         //Roro  no chars
         //Sara  no chars
-        Sarb = Zyyy,        // beyond BMP
         Shrd = Zyyy,        // beyond BMP
         //Shui  no chars
         Sidd = Zyyy,        // beyond BMP
