@@ -164,6 +164,7 @@ namespace uc {
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
+         SEGOE,
         ADLAM,
         AHOM,
         ARABIC,
