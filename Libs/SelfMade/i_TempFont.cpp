@@ -18,7 +18,11 @@
 
 std::string tempPrefix;
 
-constexpr bool debugTempFont = true;
+constexpr bool debugTempFont = false;
+
+#define MSG0(x) if constexpr (debugTempFont) { std::cout << x; }
+#define MSG(x)  if constexpr (debugTempFont) { std::cout << x << std::endl; }
+#define MSGLN   if constexpr (debugTempFont) { std::cout << std::endl; }
 
 namespace {
 
@@ -84,6 +88,7 @@ namespace {
         // High-level bhv
         Block2 findBlock(Char4 name);
         Block2 rqBlock(Char4 name, uint32_t len = 0);
+        /// @param bytes  ASCII only!!
         void mangle(std::string_view bytes);
     private:
         SafeVector<Block> blocks;
@@ -134,11 +139,11 @@ namespace {
         }
 
         if constexpr (debugTempFont) {
-            std::cout << "Read blocks:";
+            MSG0("Read blocks:");
             for (auto& v : blocks) {
-                std::cout << ' ' << v.name.toSv();
+                MSG0(' ' << v.name.toSv());
             }
-            std::cout << std::endl;
+            MSGLN;
         }
 
         return true;
@@ -173,6 +178,30 @@ namespace {
     {
         auto v = rqBlock("name", 32);
         Mems blk(v.d);
+
+        blk.skipW();    // should be 0
+        unsigned nRecs = blk.readMW();
+        unsigned stringOffset = blk.readMW();
+        MSG(nRecs << " records found");
+        MSG0("Records found:");
+        for (unsigned i = 0; i < nRecs; ++i) {
+            blk.skip(6);    // platform, platformSpecific, language
+            unsigned nameId = blk.readMW();
+            unsigned length = blk.readMW();
+            unsigned offset = blk.readMW();
+            MSG0(' ' << nameId);
+            if (nameId == 1 || nameId == 4 || nameId == 6) {
+                if (length < bytes.length()) {
+                    throw std::logic_error("Font name is too short");
+                }
+                auto oldPos = blk.pos();
+                blk.seek(stringOffset + offset);
+                for (auto v : bytes)
+                    blk.writeMW(v);
+                blk.seek(oldPos);
+            }
+        }
+        MSGLN
     }
 
 }
@@ -180,13 +209,13 @@ namespace {
 
 TempFont installTempFontFull(QString fname)
 {
-    /// @todo [urgent] What to do with fonts?
     int id = -1;
     if (!tempPrefix.empty() && fname.endsWith(".ttf")) {
         // TTF, load + rename
         try {
             MemFont mf;
             mf.load(fname);
+            mf.mangle(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << std::endl;
@@ -202,7 +231,7 @@ TempFont installTempFontFull(QString fname)
     auto families = QFontDatabase::applicationFontFamilies(id);
     if constexpr (debugTempFont) {
         for (auto& v : families) {
-            std::cout << "Installed " << v.toStdString() << ", id=" << id << std::endl;
+            MSG("Installed " << v.toStdString() << ", id=" << id);
         }
     }
     return { id, std::move(families) };

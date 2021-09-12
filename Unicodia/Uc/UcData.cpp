@@ -486,12 +486,12 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bamum OK, none even in W10, installed Google Noto + STUB_VICEVERSA.
     { "Bamu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Бамум"sv, u8"1895—1910"sv,
-        u8"бамум <i>(Камерун)</i>"sv,
-        u8"<p>Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). Было выпущено семь версий, начиная от иероглифов "
+        u8"Бамум", u8"1895—1910",
+        u8"бамум ''(Камерун)''",
+        u8"Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). Было выпущено семь версий (A…G), начиная от иероглифов "
                 "и заканчивая слоговой. Правда, Нджойя не учёл, что бамум{{-}}тональный язык, потому возникло много омографов. "
-                "Пришедшие в 1918 французы выгнали Нджойю и перевели язык на латиницу. В 2007 начат проект по возрождению, "
-                "прогресс незначителен. Более ранние художества Нджойи можно увидеть в дополнительных плоскостях Юникода.</p>"sv,
+                "Пришедшие в 1918 французы выгнали Нджойю и перевели язык на [[ps:Latn|латиницу]]. В 2007 начат проект по возрождению, "
+                "прогресс незначителен. Более ранние художества Нджойи можно увидеть в дополнительных плоскостях Юникода.",
                 EcFont::BAMUM },
     // Batak OK, installed Google Noto font
     { "Batk"sv, QFontDatabase::Any,
@@ -2952,8 +2952,10 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Tamil supp
     { 0x11FC0, 0x11FFF,
             "Tamil Supplement", u8"Тамильский дополнительный", {}, EcScript::Taml },
+    // Cuneiform OK
     { 0x12000, 0x123FF,
             "Cuneiform", u8"Клинопись", {}, EcScript::Xsux },
+    // Cuneiform nembers and punct OK
     { 0x12400, 0x1247F,
             "Cuneiform Numbers and Punctuation",
             u8"Клинописные цифры и знаки препинания"sv,
@@ -2964,6 +2966,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>До этого использовалась непозиционная система, когда разные предметы и разные разряды "
                     "записывались разными знаками."sv,
             EcScript::Xsux },
+    // Early cuneiform OK
     { 0x12480, 0x1254F,
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
@@ -2981,7 +2984,10 @@ constinit const uc::Block uc::blocks[] {
             "Anatolian Hieroglyphs", u8"Анатолийские иероглифы", {}, EcScript::Hluw },
     // Bamum supplement OK
     { 0x16800, 0x16A3F,
-            "Bamum Supplement", u8"Бамум дополнительный", {}, EcScript::Bamu },
+            "Bamum Supplement", u8"Бамум дополнительный",
+            u8"Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. "
+                "Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].",
+            EcScript::Bamu },
     { 0x16A40, 0x16A6F,
             "Mro", u8"Мру", {}, EcScript::Mroo },
     { 0x16AD0, 0x16AFF,

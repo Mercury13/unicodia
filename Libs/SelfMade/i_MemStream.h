@@ -13,7 +13,7 @@ class Mems
 public:
     Mems() = default;
     // Ctor; by-val+move idiom
-    Mems(Buf1d<char> dd) { d.borrow(dd); }
+    Mems(Buf1d<char> dd) { d.borrow(dd); p = dd.begin(); }
     // Move only, do not copy
     Mems(const Mems&) = delete;
     Mems(Mems&&) = default;
@@ -96,14 +96,19 @@ public:
     /// read Motorola dword (4 bytes)
     uint32_t readMD();
 
+    /// write Motorola word (2 bytes)
+    void writeMW(uint16_t x);
+
     /// write Motorola dword (4 bytes)
     void writeMD(uint32_t x);
 
+    void skip(size_t dsize);
+
+    /// Skip word (2 bytes)
+    inline void skipW() { skip(2); }
+
     /// Skip dword (4 bytes)
-    inline void skipD() {
-        uint32_t noMatter;
-        readStruc<4>(noMatter);
-    }
+    inline void skipD() { skip(4); }
 
 protected:
     Array1d<char> d;
