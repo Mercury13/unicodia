@@ -169,6 +169,7 @@ namespace uc {
         AHOM,
         ARABIC,
         ARMENIAN,
+        AVESTAN,
         BALINESE,
         BAMUM,
         BATAK,

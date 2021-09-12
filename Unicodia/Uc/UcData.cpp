@@ -43,6 +43,7 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [font] Arabic has tall math operators ≈1EE50, what to do?
     { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic
     { FAM_DEFAULT ",Sylfaen" },                                                 // Armenian
+    { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },      // Balinese
     /// @todo [future] Stub is vice-versa because of missing circle
     { "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, {}, 110_pc },           // Bamum
@@ -478,6 +479,28 @@ constinit const uc::Script uc::scriptInfo[] {
             u8"<p>Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще "
                 u8"[[ps:Mani|манихейской]] вязи.</p>"sv,
                 EcFont::ARMENIAN },
+    // Avestan OK, installed Google Noto
+    /// @todo [link] to range
+    { "Avst"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Авестийский", u8"≈400",
+        u8"авестийский, среднеперсидский",
+        u8"Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. "
+                "Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит "
+                    "на основе [[ps:Phli|книжного пехлеви]] (письма среднеперсидских рукописей). "
+                "К тому времени зороастризму было много веков и язык был малопонятен, а для действенности молитв важно точное повторение{{-}}"
+                    "так что алфавит снабдили настоящими гласными, позаимствованными из других письменностей."
+            "<p>При арабах зороастрийцы стали переселяться в Индию, "
+                    "а с XII{{_}}века писали на авестийском местным письмом, традиционно [[ps:Gujr|гуджарати]]. "
+                "Самый известный из таких зороастрийцев{{-}}Фредди Меркьюри (правда, его родителей судьба занесла аж на Занзибар)."
+            "<p>В 2000 древние письменности разделили на пять категорий: "
+                    "A (используемые{{-}}[[ps:Copt|коптский]]), B1 (изученные [[pt:character|кодируемые]]{{-}}[[ps:Xpeo|персидская клинопись]]), "
+                    "B2 (изученные некодируемые{{-}}[[ps:Egyp|египетские иероглифы]]), "
+                    "C1 (малоизученные, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), "
+                    "и C2 (неизученные, запросы от любителей{{-}}Фестский диск). "
+                "Авестийский попал в самую важную категорию A, что дало ему шанс на кодирование в [[pt:bmp|базовой плоскости]]. "
+                "Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phli|пехлеви]] рядом, так что закодировали в дополнительной.",
+                EcFont::AVESTAN },
     // Balinese OK, installed Google Noto font
     { "Bali"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -1388,8 +1411,16 @@ constinit const uc::Script uc::scriptInfo[] {
                 "и эту задачу выполнил Пагба-лама, наставник Хубилая.</p>"
             "<p>В 1368 году китайцы выбили монголов, письмо быстро забыли.</p>"
             "<p>Если отбросить необычное направление письма, письмо Пагба-ламы{{-}}обычная брахмийская абугида с гласной "
-                "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>"sv,
+                "по умолчанию «а». В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам.</p>",
                 EcFont::PHAGS_PA },
+    // Inscrriptional Pahlavi OK, W10 Historic
+    { "Phli"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Пехлевийские надписи", u8"≈150 до н.э.",
+        u8"иранские языки",
+        u8"Язык иранских надписей на глине, самый ранний вариант письма пехлеви. "
+                "Использовался даже в начале Сасанидской империи (III{{_}}век).",
+                EcFont::HISTORIC },
     // Phoenician OK, because of importance installed Google Noto
     { "Phnx"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
@@ -1408,6 +1439,14 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Таким образом, большая часть грамотного мира обязана финикийцам."
             "<p>Исчезла около 150{{bc}} с разрушением Карфагена; в самой Финикии уже давно ходили письменности-потомки.",
                 EcFont::PHOENICIAN },
+    // Inscriptional Parthian OK, W10 Historic
+    { "Prti"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Парфянские надписи", u8"≈250 до н.э.",
+        u8"парфянский",
+        u8"Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). "
+                "Повлиял на [[ps:Armn|армянский]], но впоследствии уступил персидскому.",
+                EcFont::HISTORIC },
     // Rejang OK, installed Google Noto font
     { "Rjng"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -2904,7 +2943,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10B60, 0x10B7F,
             "Inscriptional Pahlavi", u8"Пехлевийские надписи", {}, EcScript::Phli },
     { 0x10B80, 0x10BAF,
-            "Psalter Pahlavi", u8"Пехлевийский псалтырь", {}, EcScript::Phlp },
+            "Psalter Pahlavi", u8"Псалтырское пехлеви", {}, EcScript::Phlp },
     { 0x10C00, 0x10C4F,
             "Old Turkic", u8"Тюркские руны", {}, EcScript::Orkh },
     { 0x10C80, 0x10CFF,
@@ -4064,7 +4103,8 @@ constinit const uc::Term uc::terms[] {
     { "minuscule", EcTermCat::OTHER,
       u8"минýскульное письмо", u8"minuscule writing",
         u8"Стиль письма с низкой строкой и обилием выносных элементов. "
-                "Использовался в средние века для экономии пергамента, распространён в [[ps:Latn|латинице]], [[ps:Geor|грузинском]]. "
+                "Использовался в средние века для экономии пергамента, распространён в [[ps:Latn|латинице]], [[ps:Geor|грузинском]], "
+                    "[[ps:Grek|греческом]]. "
                 "В латинице он превратился в строчные буквы{{-}}а грузиница является регистровой лишь формально."
             "<p>Если у письменности в принципе большие выносные элементы ([[ps:Lana|ланна]]), минускулом это называть не принято." },
 };

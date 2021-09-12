@@ -23,6 +23,7 @@ namespace uc {
         Arab,   // Arabic
         Armi,   // Imperial Aramaic
         Armn,   // Armenian
+        Avst,   // Avestan
         Bali,   // Balinese
         Bamu,   // Bamum
         Batk,   // Batak
@@ -97,7 +98,9 @@ namespace uc {
         Palm,   // Palmyrene
         Perm,   // Old Permic
         Phag,   // Phags-Pa
+        Phli,   // Inscriptional Pahlavi
         Phnx,   // Phoenician
+        Prti,   // Inscriptional Parthian
         Rjng,   // Rejang
         Runr,   // European runes
         Samr,   // Samaritan
@@ -129,96 +132,93 @@ namespace uc {
         Zinh,   // Unicode technical
         NN,
 
-        //Afak  no chars
-        //Aran  no chars
-        Avst = Zyyy,        // beyond BMP
+        //Afak  no chars — Afaka (Suriname)
+        //Aran  no chars — Arabic Nastaliq
         Bass = Zyyy,        // beyond BMP
         //Blis  no chars
         Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
         Chrs = Zyyy,        // Chorasmian, beyond BMP
-        //Cirt  Cirth  no chars
-        //Cpmn  Cypro-Minoan no chars
+        //Cirt  no chars — Cirth
+        //Cpmn  no chars — Cypro-Minoan
         //Cyrs  no chars
         Diak = Zyyy,        // Dives Akuru, beyond BMP
         Dupl = Zyyy,        // beyond BMP
-        //Egyd  no chars
-        //Egyh  no chars
+        //Egyd  no chars — Egyptian demotic
+        //Egyh  no chars — Egyptian hieratic
         Elym = Zyyy,        // Elymaic, beyond BMP
         //Geok  no chars
         Gong = Zyyy,        // beyond BMP
         Gonm = Zyyy,        // beyond BMP
         Gran = Zyyy,        // beyond BMP
-        //Hanb  no chars
-        //Hans  Han simplified   no chars
-        //Hant  Han traditional  no chars
+        //Hanb  no chars — Han + Bopomofo
+        //Hans  no chars — Han simplified
+        //Hant  no chars — Han traditional
         Hluw = Zyyy,        // beyond BMP
         Hmng = Zyyy,        // beyond BMP
         //Hrkt  no chars
         Hung = Zyyy,        // beyond BMP
-        //Inds  no chars
-        //Jamo  no chars
-        //Jpan  no chars
-        //Jurc  no chars
+        //Inds  no chars — Indus
+        //Jamo  no chars — Hangul jamo
+        //Jpan  no chars — Japanese
+        //Jurc  no chars — Jurchen
         Khoj = Zyyy,        // beyond BMP
-        //Kitl  Khitan large, no chars
-        //Kore  no chars
-        //Kpel  no chars
+        //Kitl  no chars — Khitan large
+        //Kore  no chars — Hangul+Han
+        //Kpel  no chars — Kpelle (Africa)
         Kthi = Zyyy,        // beyond BMP
-        //Latf  no chars
-        //Latg  no chars
-        //Leke  no chars
-        //Loma  no chars
+        //Latf  no chars — Latin Fraktur
+        //Latg  no chars — Latin Gaelic
+        //Leke  no chars — Leke (Pwo Karen)
+        //Loma  no chars — Loma (Africa)
         Mahj = Zyyy,        // Mahajani, beyond BMP
         Maka = Zyyy,        // beyond BMP
         Marc = Zyyy,        // beyond BMP
-        //Maya  no chars
+        //Maya  no chars — Maya
         Medf = Zyyy,        // beyond BMP
         Mend = Zyyy,        // beyond BMP
         Modi = Zyyy,        // beyond BMP
-        //Moon  no chars
+        //Moon  no chars — Moon’s embossing
         Mroo = Zyyy,        // beyond BMP
         Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
         Newa = Zyyy,        // beyond BMP
-        //Nkdb  no chars
-        //Nkgb  no chars
+        //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
+        //Nkgb  no chars — Naxi Geba
         Orkh = Zyyy,        // Turkic runes, beyond BMP
         Pauc = Zyyy,        // beyond BMP
-        Phli = Zyyy,        // beyond BMP
         Phlp = Zyyy,        // beyond BMP
-        //Phlv  no chars
+        //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP
-        Prti = Zyyy,        // beyond BMP
         Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
-        //Roro  no chars
-        //Sara  no chars
+        //Roro  no chars — Rongorongo (Easter Island)
+        //Sara  no chars — Sarati (Tolkien)
         Shrd = Zyyy,        // beyond BMP
-        //Shui  no chars
+        //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
         Sidd = Zyyy,        // beyond BMP
         Sind = Zyyy,        // beyond BMP
         Sora = Zyyy,        // beyond BMP
         Sogd = Zyyy,        // beyond BMP
         Sogo = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
-        //Syre  no chars
-        //Syrj  no chars
-        //Syrn  no chars
+        //Syre  no chars — Syriac Estrangelo
+        //Syrj  no chars — Syriac Western
+        //Syrn  no chars — Syriac Eastern
         Takr = Zyyy,        // beyond BMP
-        //Teng  Tengwar  no chars
+        //Teng  no chars — Tengwar
         Tirh = Zyyy,        // Tirhuta beyond BMP
-        //Visp  no chars
+        //Visp  no chars — Visible speech
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
         Yezi = Zyyy,        // Yezidi beyond BMP
         Zanb = Zyyy,        // Zanabazar beyond BMP
-        //Zmth  no chars
-        //Zsye  no chars
-        //Zsym  no chars
-        //Zxxx  no chars
-        //Zzzz  no chars
+        //Zmth  no chars — math notation
+        //Zsye  no chars — emoji
+        //Zsym  no chars — misc symbols
+        //Zxxx  no chars — unwritten documents
+        //Zzzz  no chars — unencoded script
         NONE = Zyyy
     };
 
