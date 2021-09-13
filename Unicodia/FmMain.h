@@ -88,11 +88,14 @@ protected:
 
 
 enum class TableColors { NO, YES };
+enum class CharSet { SAFE, FULL };
 
-
-class CharsModel : public QAbstractTableModel
+class CharsModel
+        : public QAbstractTableModel,
+          public QStyledItemDelegate
 {
     using Super = QAbstractTableModel;
+    using SuperD = QStyledItemDelegate;
 public:
     QWidget* const owner;
     FontMatch match;
@@ -109,8 +112,8 @@ public:
     const QFont* fontAt(const uc::Cp& cp) const;
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
-    QString textAt(const QModelIndex& index) const;
-    QString textAt(const uc::Cp& cp) const;
+    QString textAt(const QModelIndex& index, CharSet chset = CharSet::FULL) const;
+    QString textAt(const uc::Cp& cp, CharSet chset = CharSet::FULL) const;
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -118,11 +121,24 @@ public:
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
+
+    // Delegate
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override;
+protected:
+    // Delegate
+    void initStyleOption(QStyleOptionViewItem *option,
+                         const QModelIndex &index) const override;
 private:
     RowCache rows;
+    mutable QPixmap canvas;
+    static constexpr auto SHRINK_Q = 4;
+    static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
     mutable struct Hint {
         const uc::Block* cell = &uc::blocks[0];
     } hint;
+    void tryDrawCustom(QPainter* painter, const QRect& rect,
+                const QModelIndex& index, const QColor& color) const;
 };
 
 
@@ -177,23 +193,6 @@ private:
     mutable struct Hint {
         const uc::Block* sample = &uc::blocks[0];
     } hint;
-
-    class CharsDelegate : public QStyledItemDelegate
-    {
-    private:
-        using Super = QStyledItemDelegate;
-    public:
-        FmMain& owner;
-
-        CharsDelegate(FmMain& aOwner) : owner(aOwner) {}
-        void paint(QPainter *painter, const QStyleOptionViewItem &option,
-                   const QModelIndex &index) const override;
-    protected:
-        void tryDrawCustom(QPainter* painter, const QRect& rect,
-                    const QModelIndex& index, const QColor& color) const;
-        void initStyleOption(QStyleOptionViewItem *option,
-                             const QModelIndex &index) const override;
-    } charsDelegate;
 
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);

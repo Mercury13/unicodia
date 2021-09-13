@@ -228,17 +228,22 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 }
 
 
-QString CharsModel::textAt(const QModelIndex& index) const
+QString CharsModel::textAt(const QModelIndex& index, CharSet chset) const
 {
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return textAt(*cp);
+    return textAt(*cp, chset);
 }
 
 
-QString CharsModel::textAt(const uc::Cp& cp) const
+QString CharsModel::textAt(const uc::Cp& cp, CharSet chset) const
 {
+    if (chset == CharSet::SAFE) {
+        hint.cell = uc::blockOf(cp.subj, hint.cell);
+        if (hint.cell->flags.have(uc::Bfg::EXPERIMENT))
+            return {};
+    }
     return cp.sampleProxy(hint.cell).text;
 }
 
@@ -248,7 +253,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
-            if (auto q = textAt(index); !q.isEmpty())
+            if (auto q = textAt(index, CharSet::SAFE); !q.isEmpty())
                 return q;
         }
         return {};
@@ -274,8 +279,8 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = charAt(index);
             if (cp) {
                 if (isCjkCollapsed) {
-                    auto block = uc::blockOf(cp->subj, hint.cell);
-                    if (block->flags.have(uc::Bfg::COLLAPSIBLE))
+                    hint.cell = uc::blockOf(cp->subj, hint.cell);
+                    if (hint.cell->flags.have(uc::Bfg::COLLAPSIBLE))
                         return BG_CJK;
                 }
             } else {
@@ -365,8 +370,6 @@ void CharsModel::build()
     }
     endResetModel();
 }
-
-///// CharsDelegate ////////////////////////////////////////////////////////////
 
 
 namespace {
@@ -531,25 +534,50 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
+void CharsModel::tryDrawCustom(QPainter* painter, const QRect& rect,
             const QModelIndex& index, const QColor& color) const
 {
-    auto& model = owner.model;
-    auto ch = model.charAt(index);
+    auto ch = charAt(index);
     if (ch) {
         auto abbr = ch->abbrev();
         if (!abbr.empty()) {
             // Abbreviation
             drawAbbreviation(painter, rect, abbr, color, ch->subj);
         }
+        else if (hint.cell = uc::blockOf(ch->subj, hint.cell);
+                 hint.cell->flags.have(uc::Bfg::EXPERIMENT)) {
+            /// @todo [urgent] experimental drawing
+            // Prepare canvas
+            QSize szBig { rect.width() * SHRINK_Q, rect.height() * SHRINK_Q };
+            if (canvas.size() != szBig) {
+                canvas = QPixmap(szBig);
+            }
+            canvas.fill(Qt::transparent);
+            // Prepare font
+            auto bigFont = *fontAt(*ch);
+            bigFont.setPointSize(bigFont.pointSize() * SHRINK_Q1);
+            // Draw text to offscreen canvas
+            { QPainter pCanvas(&canvas);
+                pCanvas.setFont(bigFont);
+                auto specialColor = fgAt(*ch, TableColors::YES);
+                pCanvas.setBrush(specialColor.isValid() ? specialColor : color);
+                pCanvas.drawText(canvas.rect(),
+                                  Qt::AlignCenter | Qt::TextSingleLine,
+                                  textAt(*ch));
+            }
+            canvas.save("xxx.png");
+            // Shrink offscreen canvas
+            painter->setRenderHint(QPainter::SmoothPixmapTransform);
+            painter->drawPixmap(rect, canvas);
+        }
         else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
             // Char
-            painter->setFont(*model.fontAt(*ch));
-            auto specialColor = model.fgAt(*ch, TableColors::YES);
+            painter->setFont(*fontAt(*ch));
+            auto specialColor = fgAt(*ch, TableColors::YES);
             painter->setBrush(specialColor.isValid() ? specialColor : color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
-                              model.textAt(*ch));
+                              textAt(*ch));
         }
         if (ch->isDeprecated())
             drawDeprecated(painter, rect);
@@ -557,10 +585,10 @@ void FmMain::CharsDelegate::tryDrawCustom(QPainter* painter, const QRect& rect,
 }
 
 
-void FmMain::CharsDelegate::initStyleOption(QStyleOptionViewItem *option,
+void CharsModel::initStyleOption(QStyleOptionViewItem *option,
                      const QModelIndex &index) const
 {
-    Super::initStyleOption(option, index);
+    SuperD::initStyleOption(option, index);
     if (option->state & (QStyle::State_HasFocus | QStyle::State_Selected)) {
         option->state.setFlag(QStyle::State_Selected, false);
         option->state.setFlag(QStyle::State_HasFocus, false);
@@ -575,7 +603,7 @@ void FmMain::CharsDelegate::initStyleOption(QStyleOptionViewItem *option,
 }
 
 
-void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option,
+void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
            const QModelIndex &index) const
 {
     if (option.state.testFlag(QStyle::State_HasFocus)) {
@@ -586,19 +614,19 @@ void FmMain::CharsDelegate::paint(QPainter *painter, const QStyleOptionViewItem 
             sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
                         | QStyle::State_Active | QStyle::State_Enabled;
             sob.rect = option.rect;
-        owner.style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
-        Super::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner.palette().buttonText().color());
+        owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
+        SuperD::paint(painter, option, index);
+        tryDrawCustom(painter, option.rect, index, owner->palette().buttonText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
-        owner.style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-        Super::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner.palette().windowText().color());
+        owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
+        SuperD::paint(painter, option, index);
+        tryDrawCustom(painter, option.rect, index, owner->palette().windowText().color());
     } else {
-        Super::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner.palette().windowText().color());
+        SuperD::paint(painter, option, index);
+        tryDrawCustom(painter, option.rect, index, owner->palette().windowText().color());
     }
 }
 
@@ -634,9 +662,9 @@ void WiCustomDraw::setAbbreviation(std::u8string_view x, char32_t aSubj)
 
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
-      ui(new Ui::FmMain), model(this),
-      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
-      charsDelegate(*this)
+      ui(new Ui::FmMain),
+      model(this),
+      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG)
 {
     ui->setupUi(this);
 
@@ -662,7 +690,7 @@ FmMain::FmMain(QWidget *parent)
     // Table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-    ui->tableChars->setItemDelegate(&charsDelegate);
+    ui->tableChars->setItemDelegate(&model);
     ui->tableChars->setModel(&model);
 
     // Divider
