@@ -227,6 +227,7 @@ namespace uc {
         NUSHU,
         OGHAM,
         OLCHIKI,
+        OLD_HUNGARIAN,
         OLD_ITALIC,
         OLD_PERMIC,
         OLD_PERSIAN,

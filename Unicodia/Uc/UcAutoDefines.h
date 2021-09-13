@@ -60,6 +60,7 @@ namespace uc {
         Hent,   // Hentaigana
         Hira,   // Hiragana
         Hmnp,   // NP hmong (American script for White/Green Hmongs)
+        Hung,   // Old Hungarian runes
         Ital,   // Old Italic
         Java,   // Javanese
         Kali,   // Kayah Li
@@ -143,7 +144,7 @@ namespace uc {
         Chrs = Zyyy,        // Chorasmian, beyond BMP
         //Cirt  no chars — Cirth
         //Cpmn  no chars — Cypro-Minoan
-        //Cyrs  no chars
+        //Cyrs  no chars — Cyrillic Old Church
         Diak = Zyyy,        // Dives Akuru, beyond BMP
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars — Egyptian demotic
@@ -158,8 +159,7 @@ namespace uc {
         //Hant  no chars — Han traditional
         Hluw = Zyyy,        // beyond BMP
         Hmng = Zyyy,        // beyond BMP
-        //Hrkt  no chars
-        Hung = Zyyy,        // beyond BMP
+        //Hrkt  no chars — Hiragana + Katakana
         //Inds  no chars — Indus
         //Jamo  no chars — Hangul jamo
         //Jpan  no chars — Japanese

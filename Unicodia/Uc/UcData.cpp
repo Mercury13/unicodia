@@ -104,6 +104,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansNushu-Regular.ttf" },                                            // Nushu
     { "NotoSansOgham-Regular.ttf", {}, {}, 110_pc },                            // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki
+    { "OldHungarian.ttf" },                                                     // Old Hungarian runes
     { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
@@ -946,7 +947,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "[[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
                 EcFont::CJK },
-    // NP Hmong OK, installed Google Noto
+    // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
         u8"Ньякэ пуацы хмонг (алфавит Черванга)", u8"1980-е",
@@ -961,6 +962,22 @@ constinit const uc::Script uc::scriptInfo[] {
                     "на стандартной хмонгской [[ps:Latn|латинице]]{{-}}''Nyiajkeeb Puajtxwm Hmoob''. "
                 "Если он ошибся{{-}}поправьте.",
                 EcFont::NP_HMONG },
+    // Hungarian runes OK, W10 none → installed Google Noto
+    { "Hung"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
+        u8"Венгерские руны", u8"X век (возможно, раньше)",
+        u8"венгерский",
+        u8"Неизвестно, как и откуда произошли эти руны, и как связаны с [[ps:Orkh|тюркскими]]. "
+                "Обычно считают, что это сестринские письменности."
+            "<p>Иштван{{_}}I, первый король Венгрии, объединил венгерские племена, обратил в христианство "
+                    "и около 1000 перешёл на [[ps:Latn|латиницу]], но руны продолжают использоваться, постепенно угасая. "
+                "Последние надписи датируются ≈1800."
+            "<p>С XVII{{_}}века началось изучение, около 1900 проведена основная работа"
+                    "и даже придумали руны для недостающих звуков венгерского. "
+                "Венгры гордятся рунами и иногда дублируют ими надписи. "
+                "Но мало кто умеет читать руны: "
+                    "в 2017 шутники заменили знак города Эрд на «Szia» (''привет''), и заметили это через месяц.",
+                EcFont::OLD_HUNGARIAN },
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
