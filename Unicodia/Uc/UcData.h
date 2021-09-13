@@ -168,6 +168,7 @@ namespace uc {
          MUSIC_NORMAL,
          GADUGI,
          SEGOE,
+         DEJAVU,
         ADLAM,
         AHOM,
         ARABIC,
@@ -375,9 +376,10 @@ namespace uc {
     struct Cp;
 
     enum class Bfg {
-        COLLAPSIBLE = 1,        /// [+] collapsible CJK
-        HAS_32_NONCHARS = 2,    /// [+] block has 32 non-characters
-        FORCE_FONT = 4,         /// [+] force NORMAL font
+        COLLAPSIBLE     = 1<<0,     /// [+] collapsible CJK
+        HAS_32_NONCHARS = 1<<1,     /// [+] block has 32 non-characters
+        FORCE_FONT      = 1<<2,     /// [+] force NORMAL font
+        EXPERIMENT      = 1<<8,     /// Left for experiments
     };
 
     DEFINE_ENUM_OPS(Bfg)
