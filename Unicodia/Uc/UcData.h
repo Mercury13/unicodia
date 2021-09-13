@@ -136,6 +136,7 @@ namespace uc {
         TANGUT,
         RTL_COL,
         RTL_MOSTLY,
+        SOGDIAN,
         NN,
     };
 
@@ -231,12 +232,14 @@ namespace uc {
         OLD_ITALIC,
         OLD_PERMIC,
         OLD_PERSIAN,
+        OLD_SOGDIAN,
         PALMYRENE,
         PHAGS_PA,
         PHAISTOS_DISC,
         PHOENICIAN,
         PSALTER_PAHLAVI,
         REJANG,
+        ROHINGYA,
         RUNIC,
         SAMARITAN,
         SAURASHTRA,
@@ -258,6 +261,7 @@ namespace uc {
         TIBETAN,
         TIFINAGH,
         VAI,
+        YEZIDI,
         YI,
         NN
     };

@@ -108,12 +108,14 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
+    { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "Noto Sans Symbols2",         {}, {}, 150_pc },                           // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
+    { "NotoSansHanifiRohingya-Regular.ttf" },                                   // Rohingya (Hanifi)
     { "NotoSansRunic-Regular.ttf" },                                            // Runic
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON },                         // Saurashtra
@@ -136,6 +138,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSerifTibetan-Regular.ttf", {}, {}, 90_pc },                          // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "Ebrima" },                                                               // Vai
+    { "NotoSerifYezidi-Regular.ttf" },                                          // Yezidi
     { "Microsoft Yi Baiti", {}, {}, 120_pc },                       // Yi
 };
 
@@ -169,6 +172,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
     { u8"писали ←↓↓ по столбцам и →" },
     { u8"←↓↓ по столбцам" },
     { u8"преимущественно ←" },
+    { u8"↓↓→ по столбцам; ←" },
     //{ u8"Ошибка"sv },
 };
 
@@ -962,7 +966,7 @@ constinit const uc::Script uc::scriptInfo[] {
                     "на стандартной хмонгской [[ps:Latn|латинице]]{{-}}''Nyiajkeeb Puajtxwm Hmoob''. "
                 "Если он ошибся{{-}}поправьте.",
                 EcFont::NP_HMONG },
-    // Hungarian runes OK, W10 none → installed Google Noto
+    // Hungarian runes OK, W10 none → installed some open-source font
     { "Hung"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
         u8"Венгерские руны", u8"X век (возможно, раньше)",
@@ -1505,7 +1509,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{sm|ꤰ}}=ка, {{sm|ꤰꥉ}}=ke, {{sm|ꤰ꥓}}=k. "
                 "Письменность деградировала по той же причине, что и [[ps:Runr|руны]]: проще выцарапывать на дереве."sv,
                 EcFont::REJANG },
-    // Runes OK, installed Google Noto font
+    // Rohingya, installed Google Noto font
+    { "Rohg"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Ханифи (рохинджа)", u8"1980-е",
+        u8"рохинджа ''(Бангладеш, Мьянма)''",
+        u8"Рохинджа{{-}}небольшой преимущественно исламский народ (2{{_}}млн), раскиданный по Бангладеш, Мьянме и сопредельным странам. "
+                "С XIX{{_}}века известно письмо [[ps:Arab|арабицей]]."
+            "<p>С 1980 проповедник Мохаммад Ханиф придумал более подходящую письменность для рохинджа. "
+                "В письме используются собственные десятичные цифры. "
+                "Буквы соединены, как в арабице.",
+                EcFont::ROHINGYA },
+    // Runes OK, several tofu → installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Руны", u8"I век",
@@ -1594,15 +1609,25 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::HISTORIC },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     /// @todo [desc, BMP] interesting script, describe
-    { "Sinh"sv, QFontDatabase::Sinhala,
+    { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Сингальский"sv, u8"300",
         u8"сингальский <i>(Шри-Ланка)</i>",
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "
-                "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.</p>"sv,
+                "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.",
                 EcFont::SINHALA },
+    // Old Sogdian OK, W10 None → installed Google Noto
+    { "Sogo", QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA_INDIAN,
+        u8"Древнесогдийский", u8"≈100",
+        u8"согдийский ''(Самарканд)''",
+        u8"Письменность происходит из [[ps:Syrc|сирийской]]. Предок староуйгурской, а из неё пошла [[ps:Mong|старомонгольская]]. "
+                "Употреблялась до 1200."
+            "<p>Видно, как монгольское письмо стало вертикальным: согдийцы иногда заваливали текст на 90° влево, "
+                "и именно такой вариант позаимствовали уйгуры.",
+                EcFont::OLD_SOGDIAN },
     // Sundanese OK, even W10 off → installed Google Noto
-    { "Sund"sv, QFontDatabase::Any,
+    { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Сунданский"sv, u8"XIV век",
         u8"сунданский <i>(Ява)</i>"sv,
@@ -1611,13 +1636,13 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Начальные гласные{{-}}отдельные буквы.</p>"
             "<p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[ps:Java|яванскую]] и "
                 "пегон (местный вариант [[ps:Arab|арабского]]); с XX века{{-}}[[ps:Latn|латиницу]]. "
-                "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>"sv,
+                "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского."sv,
                 EcFont::SUNDANESE },
     // Syloti Nagri OK, W10 none → installed Google Noto
-    { "Sylo"sv, QFontDatabase::Any,
+    { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Силхети-нагари"sv, u8"XV век",
-        u8"силхетский <i>(Бангладеш, Индия)</i>"sv,
+        u8"силхетский <i>(Бангладеш, Индия)</i>",
         u8"<p>По одной из теорий, письменность произошла из кайтхи и изобретена мусульманами. За простоту письменность была любима поэтами "
                 "XIX{{_}}века, но к середине XX{{_}}века уступила [[ps:Beng|бенгальской]]. В 2000-е годы в Бангладеше "
                 "начали снова изучать силхети. На 2007 было 11{{_}}млн силхетов."
@@ -1866,6 +1891,16 @@ constinit const uc::Script uc::scriptInfo[] {
                     "а более поздние формы (старо- и новоассирийская) [[pt:unification|унифицируются]] как варианты. "
                 "Диапазон «Раннединастическая клинопись» описывает более старые символы ≈2900."sv,
                 EcFont::CUNEIFORM },
+    // Yezidi OK, W10 none → installed Google Noto
+    { "Yezi"sv, QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Езидская", u8"XIII–XVII век"sv,
+        u8"курдские"sv,
+        u8"Езиды{{-}}часть курдского народа, исповедуют религию езидизм, вышедшую из [[ps:Avst|зороастризма]]. "
+                "Священные езидские книги, ''Книга откровения'' и ''Чёрная книга'', написаны особым письмом "
+                    "(известны и более ранние версии на [[ps:Arab|арабице]]). "
+                "Консенсуса насчёт датировки этих книг нет.",
+                EcFont::YEZIDI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -2982,30 +3017,42 @@ constinit const uc::Block uc::blocks[] {
     // Kharoshthi OK
     { 0x10A00, 0x10A5F,
             "Kharoshthi", u8"Кхароштхи", {}, EcScript::Khar },
+    // Old South Arab OK
     { 0x10A60, 0x10A7F,
             "Old South Arabian", u8"Древняя южноаравийская", {}, EcScript::Sarb },
+    // Old North Arab OK
     { 0x10A80, 0x10A9F,
             "Old North Arabian", u8"Древняя североаравийская", {}, EcScript::Narb },
+    // Manichaean OK
     { 0x10AC0, 0x10AFF,
             "Manichaean", u8"Манихейская", {}, EcScript::Mani },
+    // Avestan OK
     { 0x10B00, 0x10B3F,
             "Avestan", u8"Авестийский", {}, EcScript::Avst },
+    // Inscr Parthian OK
     { 0x10B40, 0x10B5F,
             "Inscriptional Parthian", u8"Парфянские надписи", {}, EcScript::Prti },
+    // Inscr Pahlavi OK
     { 0x10B60, 0x10B7F,
             "Inscriptional Pahlavi", u8"Пехлевийские надписи", {}, EcScript::Phli },
+    // Psalter Pahlavi OK
     { 0x10B80, 0x10BAF,
             "Psalter Pahlavi", u8"Псалтырское пехлеви", {}, EcScript::Phlp },
+    // Turkic runes OK
     { 0x10C00, 0x10C4F,
             "Old Turkic", u8"Тюркские (орхоно-енисейские) руны", {}, EcScript::Orkh },
+    // Hung runes OK
     { 0x10C80, 0x10CFF,
             "Old Hungarian", u8"Венгерские руны", {}, EcScript::Hung },
+    // Hanifi OK
     { 0x10D00, 0x10D3F,
             "Hanifi Rohingya", u8"Ханифи (рохинджа)", {}, EcScript::Rohg },
     { 0x10E60, 0x10E7F,
-            "Rumi Numeral Symbols", u8"Цифры руми" },
+            "Rumi Numeral Symbols", u8"Цифры руми",
+            u8"Цифры, использовавшиеся в арабской Африке с X по XVII{{_}}век, особенно в Фесе ''(Марокко)''.",
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     { 0x10E80, 0x10EBF,
-            "Yezidi", u8"Езидский", {}, EcScript::Yezi },
+            "Yezidi", u8"Езидская", {}, EcScript::Yezi },
     { 0x10F00, 0x10F2F,
             "Old Sogdian", u8"Древнесогдийский", {}, EcScript::Sogo },
     { 0x10F30, 0x10F6F,

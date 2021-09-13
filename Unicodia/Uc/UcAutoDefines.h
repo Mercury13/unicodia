@@ -105,6 +105,7 @@ namespace uc {
         Phnx,   // Phoenician
         Prti,   // Inscriptional Parthian
         Rjng,   // Rejang
+        Rohg,   // Hanifi Rohingya
         Runr,   // European runes
         Samr,   // Samaritan
         Sarb,   // South Arabian
@@ -112,6 +113,7 @@ namespace uc {
         Sgnw,   // Sutton SignWriting
         Shaw,   // Shavian
         Sinh,   // Sinhala
+        Sogo,   // Old Sogdian
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
         Syrc,   // Syriac
@@ -131,6 +133,7 @@ namespace uc {
         Vaii,   // Vai
         Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
+        Yezi,   // Yezidi
         Yiii,   // Yi
         Zinh,   // Unicode technical
         NN,
@@ -191,7 +194,6 @@ namespace uc {
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP
-        Rohg = Zyyy,        // Hanifi Rohingya, beyond BMP
         //Roro  no chars — Rongorongo (Easter Island)
         //Sara  no chars — Sarati (Tolkien)
         Shrd = Zyyy,        // beyond BMP
@@ -200,7 +202,6 @@ namespace uc {
         Sind = Zyyy,        // beyond BMP
         Sora = Zyyy,        // beyond BMP
         Sogd = Zyyy,        // beyond BMP
-        Sogo = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western
@@ -212,7 +213,6 @@ namespace uc {
         Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
-        Yezi = Zyyy,        // Yezidi beyond BMP
         Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars — math notation
         //Zsye  no chars — emoji
