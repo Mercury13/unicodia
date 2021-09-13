@@ -245,6 +245,7 @@ namespace uc {
         SAURASHTRA,
         SIGNWRITING,
         SINHALA,
+        SOGDIAN,
         SUNDANESE,
         SYLOTI_NAGRI,
         SYRIAC,

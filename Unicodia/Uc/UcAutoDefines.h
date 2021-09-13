@@ -113,6 +113,7 @@ namespace uc {
         Sgnw,   // Sutton SignWriting
         Shaw,   // Shavian
         Sinh,   // Sinhala
+        Sogd,   // Sogdian
         Sogo,   // Old Sogdian
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
@@ -201,7 +202,6 @@ namespace uc {
         Sidd = Zyyy,        // beyond BMP
         Sind = Zyyy,        // beyond BMP
         Sora = Zyyy,        // beyond BMP
-        Sogd = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western

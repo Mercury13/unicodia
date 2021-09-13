@@ -121,6 +121,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON },                         // Saurashtra
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, {}, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
+    { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON },                          // Sundanese
     { "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON },                        // Syloti Nagri
     { "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc },                    // Syriac
@@ -321,6 +322,16 @@ constexpr auto CT_MEROITIC =
             "Курсивная{{-}}от египетского демотического письма и писалась справа налево, {{%|90}} всех надписей."
         "<p>Существует более 2000 надписей. "
             "Алфавит расшифрован в начале XX{{_}}века, но язык во многом непонятен."sv;
+
+constexpr auto CT_SOGDIAN =
+    u8"Согдийская письменность происходит из [[ps:Syrc|сирийской]], появилась ≈100. "
+            "Предок староуйгурской, а из неё пошла [[ps:Mong|старомонгольская]]. "
+            "Употреблялась до 1200."
+        "<p>В Юникоде закодированы два варианта согдийского: старый (по образцу ≈300) и новый "
+            "(по образцу буддийских рукописей с VI{{_}}века)."
+        "<p>Видно, как монгольское письмо стало вертикальным: согдийцы иногда заваливали текст на 90° влево, "
+                "и именно такой вариант позаимствовали уйгуры."sv;
+
 
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      "Cc"sv,     u8"Управляющий"sv, CT_CONTROL },
@@ -1616,16 +1627,16 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. Буквы имеют витиеватую форму, "
                 "потому что в древности часто писали на пальмовых листьях, а прямые линии разрезали бы лист по жилкам.",
                 EcFont::SINHALA },
+    // Sogdian OK, W10 None → installed Google Noto
+    { "Sogd", QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA_INDIAN,
+        u8"Согдийский", u8"≈500",
+        u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::SOGDIAN },
     // Old Sogdian OK, W10 None → installed Google Noto
     { "Sogo", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA_INDIAN,
-        u8"Древнесогдийский", u8"≈100",
-        u8"согдийский ''(Самарканд)''",
-        u8"Письменность происходит из [[ps:Syrc|сирийской]]. Предок староуйгурской, а из неё пошла [[ps:Mong|старомонгольская]]. "
-                "Употреблялась до 1200."
-            "<p>Видно, как монгольское письмо стало вертикальным: согдийцы иногда заваливали текст на 90° влево, "
-                "и именно такой вариант позаимствовали уйгуры.",
-                EcFont::OLD_SOGDIAN },
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Старосогдийский", u8"≈100",
+        u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
     // Sundanese OK, even W10 off → installed Google Noto
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
@@ -3047,14 +3058,18 @@ constinit const uc::Block uc::blocks[] {
     // Hanifi OK
     { 0x10D00, 0x10D3F,
             "Hanifi Rohingya", u8"Ханифи (рохинджа)", {}, EcScript::Rohg },
+    // Rumi OK
     { 0x10E60, 0x10E7F,
             "Rumi Numeral Symbols", u8"Цифры руми",
             u8"Цифры, использовавшиеся в арабской Африке с X по XVII{{_}}век, особенно в Фесе ''(Марокко)''.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+    // Yezidi OK
     { 0x10E80, 0x10EBF,
             "Yezidi", u8"Езидская", {}, EcScript::Yezi },
+    // Old Sogdian OK
     { 0x10F00, 0x10F2F,
-            "Old Sogdian", u8"Древнесогдийский", {}, EcScript::Sogo },
+            "Old Sogdian", u8"Старосогдийский", {}, EcScript::Sogo },
+    // Sogdian OK
     { 0x10F30, 0x10F6F,
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
     { 0x10FB0, 0x10FDF,
