@@ -2315,11 +2315,12 @@ constinit const uc::Block uc::blocks[] {
             "Phonetic Extensions Supplement",
             u8"Фонетические расширения дополнительные"sv },
     /// @todo [semi-tofu] Win/Qt cannot render 1DD4..1DF4, 33 chars
-    /// @todo [desc] Diacrit supp
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные"sv,
-            {}, EcScript::NONE, EcFont::NOTO },
+            u8"Символы Уральского фонетического алфавита, средневековых сокращений "
+                    "и Teuthonista (системы записи немецких диалектов).",
+        EcScript::NONE, EcFont::NOTO, Bfg::EXPERIMENT },
     // Lat ex OK
     /// @todo [desc] Lat ex
     { 0x1E00, 0x1EFF,
