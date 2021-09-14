@@ -11,12 +11,12 @@ What was done by authors of Unicodia:
   - Renamed to NNoto, mostly for debugging
   - Dereferenced glyphs in ranges:
     > Combining diacritical marks supplement
-	> Superscripts and subscripts
-	> Cyrillic extended A, B
-	> Latin extended D, E
+    > Superscripts and subscripts
+    > Cyrillic extended A, B
+    > Latin extended D, E
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
-	> Cyrillic extended B
+    > Cyrillic extended B
 * Hebrew
   - Implemented 05EF yod triangle
 * OriyaUI
