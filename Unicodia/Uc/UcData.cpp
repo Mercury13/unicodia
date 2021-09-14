@@ -109,7 +109,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
-    { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, {}, 120_pc },            // Oriya
+    { "NotoSansOriyaUI-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, {}, 120_pc }, // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "Noto Sans Symbols2", {}, {}, 150_pc },                                   // Phaistos disc
@@ -1386,7 +1386,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "После поражения от енисейских кыргызов уйгуры ушли на юг и в 1030 были завоёваны [[ps:Tang|тангутами]]. "
                 "История кыргызов не вполне понятна; известно только, что в XIII{{_}}веке они стали вассалами Чингисхана.",
                 EcFont::HISTORIC_BIGGER },
-    /// @todo [tofu] Even Noto has no U+0B55 (2020)
+    // Oriya OK, took Noto + everything bad manually fixed
     { "Orya"sv, QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
@@ -2144,7 +2144,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu?] Check for Gujarati
     { 0x0A80, 0x0AFF,
             "Gujarati", u8"Гуджарати", {}, EcScript::Gujr },
-    /// @todo [tofu] Check for Oriya
+    // Oriya OK, Noto + everything bad manually fixed
     { 0x0B00, 0x0B7F,
             "Oriya", u8"Ория", {}, EcScript::Orya },
     /// @todo [tofu?] Check for Tamil

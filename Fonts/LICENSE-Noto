@@ -19,6 +19,11 @@ What was done by authors of Unicodia:
 	> Cyrillic extended B
 * Hebrew
   - Implemented 05EF yod triangle
+* OriyaUI
+  - Added anchors to 25CC dotted circle
+  - Implemented ligature 25CC dotted circle + 03BC nukta,
+    mostly because of bad default anchoring of nukta
+  - Implemented 0B55 combining overline  
 * Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
 * Tagalog:
