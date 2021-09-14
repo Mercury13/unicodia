@@ -16,6 +16,7 @@ What was done by authors of Unicodia:
 	> Cyrillic extended B
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
+	> Cyrillic extended B
 * Hebrew
   - Implemented 05EF yod triangle
 * Samaritan:

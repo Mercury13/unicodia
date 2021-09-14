@@ -2702,11 +2702,12 @@ constinit const uc::Block uc::blocks[] {
     // Vai OK
     { 0xA500, 0xA63F,
             "Vai", u8"Ваи", {}, EcScript::Vaii },
-    /// @todo [semi-tofu] A670+ enclosing marks, A674+, A69C+ badly rendered
+    // Cyr ex B OK, modified font a bit
     { 0xA640, 0xA69F,
-            "Cyrillic Extended-B", u8"Кириллица расширенная B"sv,
+            "Cyrillic Extended-B", u8"Кириллица расширенная B",
             u8"Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), "
-                        "знаки интонации для литовской диалектологии.", EcScript::Cyrl },
+                        "знаки интонации для литовской диалектологии.",
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
     // Bamum OK
     { 0xA6A0, 0xA6FF,
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
