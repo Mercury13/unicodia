@@ -7,6 +7,8 @@ This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 
 What was done by authors of Unicodia:
+* Noto Sans Latin/Greek/Cyrillic:
+  - Dereferenced buggy combining Latin/Cyrillic letters
 * Noto Sans Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
 * Noto Sans Tagalog:
