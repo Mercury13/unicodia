@@ -556,6 +556,8 @@ void CharsModel::tryDrawCustom(QPainter* painter, const QRect& rect,
             // Prepare font
             auto bigFont = *fontAt(*ch);
             bigFont.setPointSize(bigFont.pointSize() * SHRINK_Q1);
+            bigFont.setStyleStrategy(static_cast<QFont::StyleStrategy>(
+                            QFont::PreferAntialias | QFont::NoSubpixelAntialias));
             // Draw text to offscreen canvas
             { QPainter pCanvas(&canvas);
                 pCanvas.setFont(bigFont);
