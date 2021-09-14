@@ -1880,7 +1880,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Расшифровка персидской клинописи стала ключом к шумерской."sv,
                 EcFont::OLD_PERSIAN },
     /// @todo [semi-tofu] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
-    /// @todo [autobuild] “LAK” shold be capital, it’s some German dictionary of cuneiform
     { "Xsux"sv, QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA_INDIAN,
         u8"Клинопись"sv, u8"≈3200 до н.э."sv,
