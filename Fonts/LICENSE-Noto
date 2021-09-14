@@ -7,7 +7,7 @@ This license is copied below, and is also available with a FAQ at:
 http://scripts.sil.org/OFL
 
 What was done by authors of Unicodia:
-* Noto Sans Latin/Greek/Cyrillic:
+* Latin/Greek/Cyrillic:
   - Renamed to NNoto, mostly for debugging
   - Dereferenced glyphs in ranges:
     > Combining diacritical marks supplement
@@ -16,9 +16,11 @@ What was done by authors of Unicodia:
 	> Cyrillic extended B
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
-* Noto Sans Samaritan:
+* Hebrew
+  - Implemented 05EF yod triangle
+* Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
-* Noto Sans Tagalog:
+* Tagalog:
   - Enlarged virama
 
 -----------------------------------------------------------

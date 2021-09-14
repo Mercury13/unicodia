@@ -925,7 +925,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Использовался в Хатре (современный Ирак) до III{{_}}века, когда Хатру разрушил Шапур{{_}}I Сасанид. "
                 "Все известные надписи очень короткие, самая длинная{{-}}13 строк.",
                 EcFont::HATRAN },
-    /// @todo [tofu, BMP] 05EF in W7, Yod triangle (rare historical char)
+    // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr"sv, QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Иврит"sv, u8"VI—II в. до н.э."sv,
@@ -2094,7 +2094,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Armenian 0560, 0588 (both are 2018)
     { 0x0530, 0x058F,
             "Armenian", u8"Армянский", {}, EcScript::Armn },
-    /// @todo [tofu] Hebrew 05EF of 2018, yod triangle
+    // Hebrew OK, managed to draw yod triangle
     { 0x0590, 0x05FF,
             "Hebrew", u8"Иврит", {}, EcScript::Hebr },
     // Arabic OK
@@ -2176,7 +2176,7 @@ constinit const uc::Block uc::blocks[] {
     // Myanmar OK
     { 0x1000, 0x109F,
             "Myanmar", u8"Бирманский", {}, EcScript::Mymr },
-    /// @todo [tofu] Need special support of custom fonts (someone may install obsolete Noto)
+    // Georgian OK
     { 0x10A0, 0x10FF,
             "Georgian", u8"Грузинский", {}, EcScript::Geor },
     /// @todo [semi-tofu] How to show filler 115F, 1160?
@@ -3158,7 +3158,7 @@ constinit const uc::Block uc::blocks[] {
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     { 0x11EE0, 0x11EFF,
             "Makasar", u8"Старый макасарский", {}, EcScript::Maka },
-    /// @tofo [tofu] Only one char, and it’s tofu → NEED NEW FONT ENGINE!!
+    // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF,
             "Lisu Supplement", u8"Лису дополнительный",
             u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
