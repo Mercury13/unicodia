@@ -12,8 +12,8 @@ What was done by authors of Unicodia:
   - Dereferenced glyphs in ranges:
     > Combining diacritical marks supplement
 	> Superscripts and subscripts
-	> Cyrillic extended A
-	> Cyrillic extended B
+	> Cyrillic extended A, B
+	> Latin extended D, E
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
 	> Cyrillic extended B

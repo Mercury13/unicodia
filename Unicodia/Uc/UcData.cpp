@@ -1185,7 +1185,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Все сохранившиеся памятники{{-}}канцелярские книги: договоры аренды, списки ремесленников, описи имущества…"
             "<p>Открыто в начале XX{{_}}века Артуром Эвансом. Расшифровано в 1950-е годы."sv,
                 EcFont::LINEAR_B },
-    /// @todo [tofu, P1] 11FB0 (a single Lisu letter), what to do?
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -1640,12 +1639,15 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,
         u8"Сунданский"sv, u8"XIV век",
         u8"сунданский <i>(Ява)</i>"sv,
-        u8"<p>Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. Обычная брахмийская абугида с гласной по умолчанию «а». "
-                "Для других гласных используются огласовки, для голой согласной{{-}}знак «вирама» ''(pamaaeh)'': "
-                "{{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Начальные гласные{{-}}отдельные буквы.</p>"
+        u8"Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. Обычная брахмийская абугида с гласной по умолчанию «а». "
+                "Для других гласных используются огласовки, для голой согласной{{-}}знак «[[pt:virama|вирама]]» ''(pamaaeh)'': "
+                    "{{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. "
+                "Начальные гласные{{-}}отдельные буквы. "
             "<p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[ps:Java|яванскую]] и "
                 "пегон (местный вариант [[ps:Arab|арабского]]); с XX века{{-}}[[ps:Latn|латиницу]]. "
-                "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского."sv,
+                "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского."
+            "<p>Вторая крестообразная вирама служит исключительно для набора исторических [[pt:ligature|лигатур]]: ка+вирама+та = кта. "
+                "В имеющемся шрифте этих лигатур нет.",
                 EcFont::SUNDANESE },
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
@@ -2025,14 +2027,14 @@ constinit const uc::Block uc::blocks[] {
             "Latin-1 Supplement", u8"Латиница-1"sv, CT_LATIN1, EcScript::Latn },
     // Latin extended A OK
     { 0x0100, 0x017F,
-            "Latin Extended-A", u8"Латиница расширенная A"sv,
+            "Latin Extended-A", u8"Латиница расширенная A",
             u8"Содержит символы языков Центральной и Восточной Европы, Прибалтики, кельтских, а также саамского, мальтийского, "
-                "турецкого, эсперанто и некоторых других."sv },
+                "турецкого, эсперанто и некоторых других." },
     // Latin extended B OK
     { 0x0180, 0x024F,
-            "Latin Extended-B", u8"Латиница расширенная B"sv,
+            "Latin Extended-B", u8"Латиница расширенная B",
             u8"Содержит символы словенского, хорватского, румынского, ливского, чжуанского, пиньиня (латинизации китайского), африканских, "
-                    "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР."sv },
+                    "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР." },
     // IPA extensions OK
     { 0x0250, 0x02AF,
             "IPA Extensions", u8"Расширения МФА"sv,
@@ -2275,10 +2277,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x1C50, 0x1C7F,
             "Ol Chiki", u8"Ол-чики", {}, EcScript::Olck },
     // Cyr C OK
-    /// @todo [desc] Cyr C
     { 0x1C80, 0x1C8F,
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
-            {}, EcScript::Cyrl },
+            u8"Варианты кириллических букв из печатных церковных книг: "
+                        "от Библии Франсиска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).",
+            EcScript::Cyrl },
     // Geor ex OK
     { 0x1C90, 0x1CBF,
             "Georgian Extended", u8"Грузинский расширенный",
@@ -2298,7 +2301,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] Sundanese supplement
     { 0x1CC0, 0x1CCF,
             "Sundanese Supplement", u8"Сунданский дополнительный",
-            {}, EcScript::Sund },
+            u8"Исторические знаки препинания для сунданского.",
+            EcScript::Sund },
     /// @todo [tofu] 1CF7+, 4 chars
     /// @todo [desc] Vedic extensions
     { 0x1CD0, 0x1CFF,
@@ -2323,8 +2327,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] Lat ex
     { 0x1E00, 0x1EFF,
             "Latin Extended Additional",
-            u8"Латиница расширенная дополнительная"sv },
-    /// @todo [desc] Greek ex
+            u8"Латиница расширенная дополнительная" },
+    // Greek ex OK, though DejaVu is a big gun
     { 0x1F00, 0x1FFF,
             "Greek Extended", u8"Греческий расширенный",
             u8"Политоническая фонетика, существовавшая в некоторых диалектах древнегреческого:<br>"
@@ -2349,7 +2353,7 @@ constinit const uc::Block uc::blocks[] {
                     "чтобы красиво оформить текст."sv,
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
-    /// @todo [block] Links to other blocks when they are ready
+    /// @todo [link,block] Links to other blocks when they are ready
     { 0x2070, 0x209F,
             "Superscripts and Subscripts",
             u8"Верхние и нижние индексы"sv,
@@ -2720,7 +2724,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>{{sm|ꜗꜘꜙꜚ}} применяются в чинантекском."
                 "<p>Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). "
                     "Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах."sv },
-    /// @todo [semi-tofu] A7F8, A7F9 render badly
+    // Latin ex D OK, dereferenced bad chars of Google Noto
     /// @todo [desc] Latin ex D
     { 0xA720, 0xA7FF,
             "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
@@ -2783,17 +2787,16 @@ constinit const uc::Block uc::blocks[] {
             "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]])."sv,
             EcScript::Ethi },
-    /// @todo [semi-tofu] AB5C..5F
-    // Latin ex E OK
+    // Latin ex E OK, dereferenced bad chars of Google Noto
     { 0xAB30, 0xAB6F,
-            "Latin Extended-E", u8"Латиница расширенная E"sv,
+            "Latin Extended-E", u8"Латиница расширенная E",
             u8"Буквы, используемые в германской и шотландской диалектологии, транскрипции индейских и сино-тибетских языков, "
-                    "а также в латинской записи якутского (алфавит Новгородова, 1920–1929)."sv,
+                    "а также в латинской записи якутского (алфавит Новгородова, 1920–1929).",
             EcScript::Latn },
     // Cherokee supp OK
     { 0xAB70, 0xABBF,
             "Cherokee Supplement", u8"Чероки дополнительный",
-            u8"<p>В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.",
+            u8"В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.",
             EcScript::Cher },
     // Meetei OK
     { 0xABC0, 0xABFF,
@@ -3733,8 +3736,10 @@ constinit const uc::Term uc::terms[] {
                 "• реформа орфографии лишила букву гласной по умолчанию{{-}}[[ps:Laoo|лаосский]];<br>"
                 "• вирама может быть единым целым с согласной{{-}}[[ps:Talu|новое письмо лы]];<br>"
                 "• не способны записывать «лишние» согласные{{-}}[[ps:Bugi|лонтара]]."
-        u8"<p>Большинство вирам{{-}}[[pt:combining|комбинирующие метки]]. "
-            "Но встречаются и [[pt:spacing|протяжённые]] ([[ps:Java|яванский]])."sv },
+            "<p>Большинство вирам{{-}}[[pt:combining|комбинирующие метки]]. "
+                "Но встречаются и [[pt:spacing|протяжённые]] ([[ps:Java|яванский]])."
+            "<p>В качестве исключения в [[ps:Sund|сунданском]] две вирамы. "
+                "Одна{{-}}современная вирама, убирающая гласную, вторая для набора [[pt:obsolete|исторических]] лигатур." },
     { "graphic", EcTermCat::CHAR_CLASS,
       u8"графический символ, печатаемый символ"sv, u8"graphic character, printable character"sv,
         u8"<p>Символ, который печатается на экране или бумаге. "
@@ -3832,7 +3837,10 @@ constinit const uc::Term uc::terms[] {
     { "obsolete", EcTermCat::CHAR_CLASS,
       u8"устаревший символ"sv, u8"obsolete character"sv,
         u8"<p>Символ, который вышел из использования. "
-                "Например, [[ps:Cyrl|кириллический]] ять <big>'''ѣ'''</big>, превратившийся в Е."
+                "Например, [[ps:Cyrl|кириллический]] ять <big>'''ѣ'''</big>, во всех языках превратившийся в другие гласные: "
+                    "'''е''' в русском, '''і''' в украинском."
+            "<p>В соответствующем контексте его использовать совершенно законно: "
+                    "«бѣлый, блѣдный, бѣдный бѣсъ…»"
             "<p>Не путать с [[pt:deprecated|запрещённым символом]]."sv },
     { "format", EcTermCat::CHAR_CLASS,
       u8"форматирующий символ"sv, u8"format character"sv, CT_FORMAT },
