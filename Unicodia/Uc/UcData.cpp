@@ -499,8 +499,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 u8"[[ps:Mani|манихейской]] вязи.</p>"sv,
                 EcFont::ARMENIAN },
     // Avestan OK, installed Google Noto
-    /// @todo [link] to range
-    /// @todo [future, link] wait bit book Pahlavi
+    /// @todo [link, block] Phaistos disc
+    /// @todo [future, link] wait for book Pahlavi
     { "Avst"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Авестийский", u8"≈400",
@@ -1439,7 +1439,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Расшифрована в 1754.",
                 EcFont::PALMYRENE },
     // Old Permic OK, W10 none, installed Google Noto
-    /// @todo [link] Hungarian runes
     { "Perm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Древнепермский (коми-зырянский, анбур)", u8"1372",
