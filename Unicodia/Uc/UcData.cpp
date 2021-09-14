@@ -696,7 +696,7 @@ constinit const uc::Script uc::scriptInfo[] {
                     "пафосский с сохранением направления →, и общекипрский, перевернувшийся в ←. "
                 "Частично расшифровано уже в конце XIX{{_}}века, полностью в 1961.",
                 EcFont::HISTORIC },
-    /// @todo [semi-tofu, BMP] main 0488-89, exA the entire range, exB 6A74-7B
+    // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Кириллица", u8"конец IX века",
@@ -851,7 +851,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''.</p>"
             u8"<p>Из греческого письма пошли [[ps:Latn|латиница]], [[ps:Cyrl|кириллица]], "
                 "[[ps:Copt|коптский]] и, возможно, [[ps:Armn|армянский]] и [[ps:Runr|руны]].</p>"sv },
-    /// @todo [tofu] Sorry have tofu in W7, install a font
+    /// @todo [tofu] Installed font, check for tofu in W7
     { "Gujr"sv, QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Гуджарати"sv, u8"X–XVI век"sv,
@@ -1122,7 +1122,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В Юникоде для пустого места над меткой принят пунктирный кружок; лаосцы традиционно используют косой крест, "
                 "в Юникод не попавший. Иногда для этого используют [[ps:Latn|латинскую]] «x».</p>"sv,
                 EcFont::LAO },
-    /// @todo [semi-tofu] Latin is not OK, see ranges
+    // Latin OK, managed to modify
     { "Latn"sv, QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Латиница"sv, u8"I тысячелетие до н.э."sv,
@@ -2076,9 +2076,10 @@ constinit const uc::Block uc::blocks[] {
             "Greek and Coptic", u8"Греческий и коптский",
             u8"<p>[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.</p>"
                 "<p>[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.</p>"sv },
-    /// @todo [semi-tofu] 0488, 0489 renders too badly for a sample
+    // Cyrillic OK
     { 0x0400, 0x04FF,
-            "Cyrillic", u8"Кириллица", {}, EcScript::Cyrl },
+            "Cyrillic", u8"Кириллица", {},
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
     // Cyrillic supplement OK
     { 0x0500, 0x052F,
             "Cyrillic Supplement", u8"Кириллица дополнительная",
@@ -2352,7 +2353,6 @@ constinit const uc::Block uc::blocks[] {
                     "чтобы красиво оформить текст."sv,
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
-    /// @todo [semi-tofu] Some are absent in W7, and Noto does fun
     /// @todo [block] Links to other blocks when they are ready
     { 0x2070, 0x209F,
             "Superscripts and Subscripts",
@@ -4588,6 +4588,9 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
     // Priority: block → script — block’s script
     hint = blockOf(subj, hint);
     // Block
+    if (hint->flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == UpCategory::MARK) {
+        return fontInfo[static_cast<int>(EcFont::NOTO)];
+    }
     auto hfont = hint->ecFont;
     if (hfont != EcFont::NORMAL || hint->flags.have(Bfg::FORCE_FONT)) {
         return fontInfo[static_cast<int>(hfont)];

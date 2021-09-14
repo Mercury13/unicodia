@@ -8,7 +8,14 @@ http://scripts.sil.org/OFL
 
 What was done by authors of Unicodia:
 * Noto Sans Latin/Greek/Cyrillic:
-  - Dereferenced buggy combining Latin/Cyrillic letters
+  - Renamed to NNoto, mostly for debugging
+  - Dereferenced glyphs in ranges:
+    > Combining diacritical marks supplement
+	> Superscripts and subscripts
+	> Cyrillic extended A
+	> Cyrillic extended B
+  - Created ligatures for enclosing chars in ranges:
+    > Cyrillic
 * Noto Sans Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
 * Noto Sans Tagalog:
