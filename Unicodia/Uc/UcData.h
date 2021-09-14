@@ -234,6 +234,7 @@ namespace uc {
         OLD_PERMIC,
         OLD_PERSIAN,
         OLD_SOGDIAN,
+        ORIYA,
         PALMYRENE,
         PHAGS_PA,
         PHAISTOS_DISC,

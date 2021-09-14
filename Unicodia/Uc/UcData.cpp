@@ -109,9 +109,10 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
+    { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, {}, 120_pc },            // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
-    { "Noto Sans Symbols2",         {}, {}, 150_pc },                           // Phaistos disc
+    { "Noto Sans Symbols2", {}, {}, 150_pc },                                   // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
@@ -140,7 +141,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf" },                                          // Yezidi
-    { "Microsoft Yi Baiti", {}, {}, 120_pc },                       // Yi
+    { "Microsoft Yi Baiti", {}, {}, 120_pc },                                   // Yi
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));
@@ -1386,8 +1387,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "История кыргызов не вполне понятна; известно только, что в XIII{{_}}веке они стали вассалами Чингисхана.",
                 EcFont::HISTORIC_BIGGER },
     /// @todo [tofu] Even Noto has no U+0B55 (2020)
-    /// @todo [tofu] Noto has badly placed circle, W7 lacks 2010 fractions
-    /// @todo [font] Build a genuine Oriya pair, W7’s Oriya font is Kalinga
     { "Orya"sv, QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Ория"sv, u8"XIV век (в современном виде)"sv,
@@ -1402,7 +1401,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В одной редакции 1-й статьи Декларации прав человека (стандартного текста для показа чужого языка) "
                 "нет вирам вообще, в другой{{-}}одна вирама. "
                 "Набор таких лигатур стандартный: первая буква, вирама, вторая буква.</p>"sv,
-                EcFont::GURMUKHI },
+                EcFont::ORIYA },
     // Osage OK, W10 Gadugi
     { "Osge"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
