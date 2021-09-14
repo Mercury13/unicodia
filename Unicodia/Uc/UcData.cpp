@@ -2342,7 +2342,6 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Добавлены в начале нашей эры, убраны только в 1982, когда столь сложной фонетики много веков не было.",
             EcScript::Grek, EcFont::DEJAVU },
     /// @todo [semi-tofu] What is two-point leader and what font to use?
-    /// @todo [block] Link to ASCII
     { 0x2000, 0x206F,
             "General Punctuation", u8"Знаки препинания"sv,
             u8"<p>Пунктуация (лат. ''punctum'' «точка»){{-}}система знаков, подчёркивающих синтаксис и интонацию речи, "
