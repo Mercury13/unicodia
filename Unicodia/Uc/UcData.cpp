@@ -16,7 +16,6 @@ using namespace std::string_view_literals;
 uc::Cp* uc::cps[N_CHARS];
 const QString uc::Font::qempty;
 
-constexpr QChar STUB_CIRCLE(0x25CC);
 constexpr QChar ZWSP(0x200B);
 
 constinit const uc::Font uc::fontInfo[] {
@@ -1646,8 +1645,9 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[ps:Java|яванскую]] и "
                 "пегон (местный вариант [[ps:Arab|арабского]]); с XX века{{-}}[[ps:Latn|латиницу]]. "
                 "В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского."
-            "<p>Вторая крестообразная вирама служит исключительно для набора исторических [[pt:ligature|лигатур]]: ка+вирама+та = кта. "
-                "В имеющемся шрифте этих лигатур нет.",
+            "<p>Вторая крестообразная вирама служит исключительно для набора исторических [[pt:ligature|лигатур]]. "
+                "В имеющемся шрифте лигатур нет, но автор «Юникодии» нарисовал одну в [[pt:private|личной]] позиции:<br>"
+                    "{{_}}{{_}}{{_}}{{_}}ка {{sm|ᮊ}} + вирама {{sm|◌᮫}}{{_}} + та {{sm|ᮒ}} = кта {{sm|\uE000}}",
                 EcFont::SUNDANESE },
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,

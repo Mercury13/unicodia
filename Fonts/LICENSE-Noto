@@ -26,6 +26,9 @@ What was done by authors of Unicodia:
   - Implemented 0B55 combining overline  
 * Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
+* Sundanese:
+  - Enlarged 1BAB new virama for ligatures
+  - Implemented KTA ligature in E000 private-use
 * Tagalog:
   - Enlarged virama
 

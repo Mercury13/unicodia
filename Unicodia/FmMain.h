@@ -166,6 +166,9 @@ private:
 };
 
 
+enum class CurrThing { CHAR, SAMPLE };
+
+
 class FmMain : public QMainWindow,
                private mywiki::Gui
 {
@@ -199,6 +202,7 @@ private:
     void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
     void reflectCjkCollapseState();
+    void copyCurrentThing(CurrThing thing);
 
     // mywiki::Gui
     void popupAtAbs(

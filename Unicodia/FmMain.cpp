@@ -697,7 +697,7 @@ FmMain::FmMain(QWidget *parent)
         // 2click
     ui->tableChars->viewport()->installEventFilter(this);
 
-    // Copy sample
+    // Copy sample: Ctrl+Shift+C
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
@@ -768,23 +768,31 @@ FmMain::~FmMain()
 }
 
 
-void FmMain::copyCurrentChar()
+void FmMain::copyCurrentThing(CurrThing thing)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
     if (ch) {
-        auto q = str::toQ(ch->subj);
+        QString q;
+        if (thing == CurrThing::SAMPLE
+                && ch->category().upCat == uc::UpCategory::MARK) {
+            q = uc::STUB_CIRCLE + str::toQ(ch->subj);
+        } else {
+            q = str::toQ(ch->subj);
+        }
         QApplication::clipboard()->setText(q);
     }
 }
 
 
+void FmMain::copyCurrentChar()
+{
+    copyCurrentThing(CurrThing::CHAR);
+}
+
+
 void FmMain::copyCurrentSample()
 {
-    auto ch = model.charAt(ui->tableChars->currentIndex());
-    if (ch) {
-        auto q = model.textAt(*ch);
-        QApplication::clipboard()->setText(q);
-    }
+    copyCurrentThing(CurrThing::SAMPLE);
 }
 
 
