@@ -240,9 +240,9 @@ QString CharsModel::textAt(const QModelIndex& index, CharSet chset) const
 QString CharsModel::textAt(const uc::Cp& cp, CharSet chset) const
 {
     if (chset == CharSet::SAFE) {
-        hint.cell = uc::blockOf(cp.subj, hint.cell);
-        if (hint.cell->flags.have(uc::Bfg::EXPERIMENT))
-            return {};
+//        hint.cell = uc::blockOf(cp.subj, hint.cell);
+//        if (hint.cell->flags.have(uc::Bfg::EXPERIMENT))
+//            return {};
     }
     return cp.sampleProxy(hint.cell).text;
 }
@@ -543,34 +543,6 @@ void CharsModel::tryDrawCustom(QPainter* painter, const QRect& rect,
         if (!abbr.empty()) {
             // Abbreviation
             drawAbbreviation(painter, rect, abbr, color, ch->subj);
-        }
-        else if (hint.cell = uc::blockOf(ch->subj, hint.cell);
-                 hint.cell->flags.have(uc::Bfg::EXPERIMENT)) {
-            /// @todo [urgent] experimental drawing
-            // Prepare canvas
-            QSize szBig { rect.width() * SHRINK_Q, rect.height() * SHRINK_Q };
-            if (canvas.size() != szBig) {
-                canvas = QPixmap(szBig);
-            }
-            canvas.fill(Qt::transparent);
-            // Prepare font
-            auto bigFont = *fontAt(*ch);
-            bigFont.setPointSize(bigFont.pointSize() * SHRINK_Q1);
-            bigFont.setStyleStrategy(static_cast<QFont::StyleStrategy>(
-                            QFont::PreferAntialias | QFont::NoSubpixelAntialias));
-            // Draw text to offscreen canvas
-            { QPainter pCanvas(&canvas);
-                pCanvas.setFont(bigFont);
-                auto specialColor = fgAt(*ch, TableColors::YES);
-                pCanvas.setBrush(specialColor.isValid() ? specialColor : color);
-                pCanvas.drawText(canvas.rect(),
-                                  Qt::AlignCenter | Qt::TextSingleLine,
-                                  textAt(*ch));
-            }
-            canvas.save("xxx.png");
-            // Shrink offscreen canvas
-            painter->setRenderHint(QPainter::SmoothPixmapTransform);
-            painter->drawPixmap(rect, canvas);
         }
         else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
             // Char

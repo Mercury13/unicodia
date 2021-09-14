@@ -131,7 +131,6 @@ protected:
                          const QModelIndex &index) const override;
 private:
     RowCache rows;
-    mutable QPixmap canvas;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
     mutable struct Hint {
