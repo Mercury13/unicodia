@@ -2312,7 +2312,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D80, 0x1DBF,
             "Phonetic Extensions Supplement",
             u8"Фонетические расширения дополнительные"sv },
-    /// @todo [semi-tofu] Win/Qt cannot render 1DD4..1DF4, 33 chars
+    // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные"sv,
@@ -2558,7 +2558,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Эфиопское письмо для языков мекан (с 2009 перешёл на [[ps:Latn|латиницу]], "
                     "билин (с 1990-х полностью на латинице), бенч (с 2008 на латинице), себат-бет."sv,
             EcScript::Ethi },
-    /// @todo [semi-tofu] Cyr ex A renders badly
+    // Cyr ex A OK, fixed those renderings in Noto
     { 0x2DE0, 0x2DFF,
             "Cyrillic Extended-A", u8"Кириллица расширенная A"sv,
             u8"Комбинирующие кириллические буквы из церковнославянского."sv,
@@ -2783,6 +2783,7 @@ constinit const uc::Block uc::blocks[] {
             "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]])."sv,
             EcScript::Ethi },
+    /// @todo [semi-tofu] AB5C..5F
     // Latin ex E OK
     { 0xAB30, 0xAB6F,
             "Latin Extended-E", u8"Латиница расширенная E"sv,
