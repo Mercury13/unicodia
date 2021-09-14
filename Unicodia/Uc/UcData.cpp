@@ -23,7 +23,7 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [tofu] 10E60, that’s Arabic too
     { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Math,Noto Sans Symbols,"
             "Noto Sans Symbols2,Segoe UI Historic" },                           // Normal
-    { "Noto Serif" },                                                           // Noto
+    { FAM_BACKUP },                                                             // Noto
     { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {}, {}, 120_pc },  // Noto symbol
     { "Noto Sans Symbols2" },                                                   // Noto symbol2
     { "Noto Sans Symbols2", Ffg::DESC_BIGGER },                                 // Noto symbol2 bigger
@@ -2320,7 +2320,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Диакритические метки дополнительные"sv,
             u8"Символы Уральского фонетического алфавита, средневековых сокращений "
                     "и Teuthonista (системы записи немецких диалектов).",
-        EcScript::NONE, EcFont::NOTO, Bfg::EXPERIMENT },
+        EcScript::NONE, EcFont::NOTO },
     // Lat ex OK
     /// @todo [desc] Lat ex
     { 0x1E00, 0x1EFF,
