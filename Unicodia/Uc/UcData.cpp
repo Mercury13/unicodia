@@ -1529,7 +1529,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::ROHINGYA },
     // Runes OK, several tofu → installed Google Noto font
     { "Runr"sv, QFontDatabase::Runic,
-        EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Руны", u8"I век",
         u8"древние германские и скандинавские языки",
         u8"Руны имеют специфическую угловатую форму, приспособленную для вырезания: вдоль и поперёк волокон дерево сопротивляется по-разному, "
@@ -2280,7 +2280,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1C80, 0x1C8F,
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
             u8"Варианты кириллических букв из печатных церковных книг: "
-                        "от Библии Франсиска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).",
+                        "от Библии Франциска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).",
             EcScript::Cyrl },
     // Geor ex OK
     { 0x1C90, 0x1CBF,
