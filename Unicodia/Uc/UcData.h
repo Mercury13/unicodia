@@ -170,6 +170,7 @@ namespace uc {
          GADUGI,
          SEGOE,
          DEJAVU,
+         FUNKY,
         ADLAM,
         AHOM,
         ARABIC,

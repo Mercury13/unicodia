@@ -37,6 +37,7 @@ namespace uc {
         Cans,   // Canadian syllabic
         Cham,   // Cham
         Cher,   // Cherokee
+        Chrs,   // Chorasmian
         Copt,   // Coptic
         Cprt,   // Cypriot
         Cyrl,   // Cyrillic
@@ -145,7 +146,6 @@ namespace uc {
         //Blis  no chars
         Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
-        Chrs = Zyyy,        // Chorasmian, beyond BMP
         //Cirt  no chars — Cirth
         //Cpmn  no chars — Cypro-Minoan
         //Cyrs  no chars — Cyrillic Old Church
