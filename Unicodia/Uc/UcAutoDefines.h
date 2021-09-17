@@ -72,6 +72,7 @@ namespace uc {
         Khmr,   // Khmer
         Kits,   // Khitan small
         Knda,   // Kannada
+        Kthi,   // Kaithi
         Lana,   // Tai-tham = Lanna
         Laoo,   // Lao
         Latn,   // Latin
@@ -172,7 +173,6 @@ namespace uc {
         //Kitl  no chars — Khitan large
         //Kore  no chars — Hangul+Han
         //Kpel  no chars — Kpelle (Africa)
-        Kthi = Zyyy,        // beyond BMP
         //Latf  no chars — Latin Fraktur
         //Latg  no chars — Latin Gaelic
         //Leke  no chars — Leke (Pwo Karen)

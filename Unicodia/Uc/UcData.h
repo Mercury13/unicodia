@@ -208,6 +208,7 @@ namespace uc {
         HEBREW,
         HENTAIGANA,
         JAVANESE,
+        KAITHI,
         KANNADA,
         KAYAH_LI,
         KHAROSHTHI,

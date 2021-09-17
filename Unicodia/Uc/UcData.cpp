@@ -81,6 +81,7 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
+    { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc },                   // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },      // Kharoshthi
@@ -1137,14 +1138,26 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     /// @todo [desc, BMP] Interesting script, describe
-    { "Knda"sv, QFontDatabase::Kannada,
+    { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
-        u8"Каннада"sv, u8"XIV век"sv,
-        u8"кáннада <i>(Юго-Западная Индия)</i>"sv,
+        u8"Каннада", u8"XIV век",
+        u8"кáннада ''(Юго-Западная Индия)''",
         u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
                 "Гласная по умолчанию «а». "
                 "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.</p>"sv,
                 EcFont::KANNADA },
+    // Kaithi OK, W10 none → installed Google Noto
+    { "Kthi", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Кайтхи", u8"XVI век",
+        u8"хиндустани ''(=хинди/урду)''; мелкие языки Индии",
+        u8"Название письменности происходит от касты «каястха» (конторщики). "
+                "Является очень [[pt:cursive|беглым]] вариантом деванагари. "
+                "Использовалось с Империи великих моголов в северо-восточной Индии, разрешалось в судах, "
+                    "а с 1950 до 1954 было основной судебной письменностью. "
+                "Рассчитывали расширить пользование кайтхи, но каста брахманов воспротивилась этому, и современные индусы "
+                    "едва читают кайтхи.",
+                EcFont::KAITHI},
     // Lanna OK, W10 none, installed Google Noto font
     { "Lana"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
@@ -4265,7 +4278,7 @@ constinit const uc::Term uc::terms[] {
             "<p>Вязь{{-}}не [[pt:plaintext|простой текст]] и потому не покрывается Юникодом."
             "<p>Также не совсем корректно вязью называют арабское или [[ps:Syrc|сирийское]] письмо одним росчерком." },
     { "cursive", EcTermCat::WRITING_STYLE,
-      u8"курсив, беглое письмо", u8"cursive",
+      u8"курсив, скоропись, беглое письмо", u8"cursive",
         u8"Стиль письма, когда нужно быстро написать что-то, особенно хрупким гусиным пером. "
                 "Особенности варьируются от языка к языку, но в целом:<br>"
                 "• Простая форма букв.<br>"
