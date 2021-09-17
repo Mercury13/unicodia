@@ -993,10 +993,10 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hungarian runes OK, W10 none → installed some open-source font
     { "Hung"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
-        u8"Венгерские руны", u8"X век (возможно, раньше)",
+        u8"Венгерские (секейские) руны", u8"X век (возможно, раньше)",
         u8"венгерский",
-        u8"Неизвестно, как и откуда произошли эти руны, и как связаны с [[ps:Orkh|тюркскими]]. "
-                "Обычно считают, что это сестринские письменности."
+        u8"Неизвестно, как венгерские руны связаны с [[ps:Orkh|тюркскими]]: "
+                "то ли произошли от них, то ли сестринские письменности."
             "<p>Иштван{{_}}I, первый король Венгрии, объединил венгерские племена, обратил в христианство "
                     "и около 1000 перешёл на [[ps:Latn|латиницу]], но руны продолжают использоваться, постепенно угасая. "
                 "Последние надписи датируются ≈1800."
@@ -3082,7 +3082,7 @@ constinit const uc::Block uc::blocks[] {
             "Old Turkic", u8"Тюркские (орхоно-енисейские) руны", {}, EcScript::Orkh },
     // Hung runes OK
     { 0x10C80, 0x10CFF,
-            "Old Hungarian", u8"Венгерские руны", {}, EcScript::Hung },
+            "Old Hungarian", u8"Венгерские (секейские) руны", {}, EcScript::Hung },
     // Hanifi OK
     { 0x10D00, 0x10D3F,
             "Hanifi Rohingya", u8"Ханифи (рохинджа)", {}, EcScript::Rohg },
