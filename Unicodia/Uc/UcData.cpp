@@ -1701,6 +1701,16 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
         u8"Старосогдийский", u8"≈100",
         u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
+    // Sora Sompeng OK, W10 Nirmala UI
+    { "Sogo", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Соранг-сомпенг", u8"1936",
+        u8"сора ''(Индия)''",
+        u8"Сора или савара{{-}}небольшой (400{{_}}тыс. на 2011) австроазиатский (не индоевропейский!) язык Восточной Индии. "
+                "Письменность придумал в 1936 Мангей Гоманго, до этого писали [[ps:Latn|латиницей]]. "
+                "Позднее для сора придумали чисто алфавитную (без огласовок и [[pt:virama|вирам]]) письменность "
+                    "на основе [[ps:Orya|ории]] и [[ps:Telu|телугу]].",
+                EcFont::TAMIL },
     // Sundanese OK, even W10 off → installed Google Noto
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::PACIFIC,

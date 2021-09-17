@@ -119,6 +119,7 @@ namespace uc {
         Sinh,   // Sinhala
         Sogd,   // Sogdian
         Sogo,   // Old Sogdian
+        Sora,   // Sora Sompeng
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
         Syrc,   // Syriac
@@ -201,7 +202,6 @@ namespace uc {
         //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
         Sidd = Zyyy,        // beyond BMP
         Sind = Zyyy,        // beyond BMP
-        Sora = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western
