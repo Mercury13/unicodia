@@ -846,6 +846,7 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0xFFFA, "IA S" }, // Interlinear annotation separator
     { 0xFFFB, "IA T" }, // Interlinear annotation terminator
     { 0xFFFC, "OBJ" },  // Object replacement character
+    { 0x1107F, "BNJ" }, // Brahmi number joiner
     { 0x13430, ":" },   // Egyptian hiero vertical joiner
     { 0x13431, "✻" },   // Egyptian hiero horiz joiner
     { 0x13432, "`" },   // Egyptian hiero insert at top start

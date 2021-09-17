@@ -30,6 +30,7 @@ namespace uc {
         Beng,   // Bengali
         Bhks,   // Bhaiksuki
         Bopo,   // Bopomofo
+        Brah,   // Brahmi
         Brai,   // Braille dots
         Bugi,   // Buginese
         Buhd,   // Buhid
@@ -145,7 +146,6 @@ namespace uc {
         //Aran  no chars — Arabic Nastaliq
         Bass = Zyyy,        // beyond BMP
         //Blis  no chars
-        Brah = Zyyy,        // historical, beyond BMP
         Cakm = Zyyy,        // beyond BMP
         //Cirt  no chars — Cirth
         //Cpmn  no chars — Cypro-Minoan
