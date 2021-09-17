@@ -67,6 +67,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
+    { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
@@ -186,7 +187,7 @@ constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType:
     { u8"[[pt:arguable|спорный]]{{-}}''как тана''"sv },
     { u8"[[pt:abjad|консонантная]]{{-}}''как иврит''"sv },
     { u8"[[pt:syllabic|слоговая]]{{-}}''как японские катакана/хирагана''"sv },
-    { u8"алфавитно-слоговая <i>(как иберский)</i>"sv },
+    { u8"алфавитно-слоговая{{-}}''как иберский''"sv },
     { u8"[[pt:abugida|абугида]]{{-}}''как эфиопский''"sv },
     { u8"[[pt:brahmic|брахмийская абугида]]{{-}}''как деванагари''"sv },
     { u8"[[pt:hiero|иероглифическая]]{{-}}''как китайский''"sv },
@@ -802,6 +803,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "По другим данным, албанские просвещённые умы смотрели на славян, греков и турок с собственным алфавитом. "
                 "Известны рукописное Эльбасанское Евангелие размером всего 7×10{{_}}см, 59{{_}}страниц и несколько записок.",
                 EcFont::ELBASAN },
+    // Elymaic OK, W10 none → installed Google Noto
+    { "Elym"sv, QFontDatabase::Any,
+        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA_INDIAN,
+        u8"Элимайский (эламский)", u8"II век до н.э.",
+        u8"элимайский ''(=эламский, Персидский залив)''",
+        u8"После военных поражений от Александра Македонского Персия прекратила своё существование. "
+                "Последователи Александра не смогли удержать огромное многонациональное государство, и в результате распада "
+                    "появился в том числе и Элам."
+            "<p>Государство существовало с 147{{bc}} до 224, часто попадало под власть парфян "
+                "и имело письменность [[ps:Armi|арамейского]] происхождения с несоединёнными буквами. "
+                "Собственные названия букв неизвестны и взяты из арамейского.",
+                EcFont::ELYMAIC },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
@@ -3103,7 +3116,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10FB0, 0x10FDF,
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
     { 0x10FE0, 0x10FFF,
-            "Elymaic", u8"Элимайский", {}, EcScript::Elym },
+            "Elymaic", u8"Элимайский (эламский)", {}, EcScript::Elym },
     { 0x11000, 0x1107F,
             "Brahmi", u8"Брахми", {}, EcScript::Brah },
     { 0x11080, 0x110CF,

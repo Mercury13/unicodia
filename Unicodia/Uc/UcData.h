@@ -195,6 +195,7 @@ namespace uc {
         DOGRA,
         EGYPTIAN,
         ELBASAN,
+        ELYMAIC,
         ETHIOPIC,
         GEORGIAN,
         GLAGOLITIC,
