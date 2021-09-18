@@ -171,6 +171,7 @@ namespace uc {
          SEGOE,
          DEJAVU,
          FUNKY,
+         FUNKY_BIGGER,
         ADLAM,
         AHOM,
         ARABIC,

@@ -44,6 +44,7 @@ namespace uc {
         Cprt,   // Cypriot
         Cyrl,   // Cyrillic
         Deva,   // Devanagari
+        Diak,   // Dives Akuru
         Dogr,   // Dogra
         Dsrt,   // Deseret (Mormon)
         Egyp,   // Egyptian hieroglyphs
@@ -152,7 +153,6 @@ namespace uc {
         //Cirt  no chars — Cirth
         //Cpmn  no chars — Cypro-Minoan
         //Cyrs  no chars — Cyrillic Old Church
-        Diak = Zyyy,        // Dives Akuru, beyond BMP
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars — Egyptian demotic
         //Egyh  no chars — Egyptian hieratic
