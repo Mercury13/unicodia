@@ -39,7 +39,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Segoe UI" },                                                             // Segoe
     { "DejaVuSerif.ttf" },                                                      // DejaVu
     { "FunkySample.ttf" },                                                      // Funky
-    { "FunkySample.ttf", {}, {}, 115_pc },                                      // Funky bigger
+    { "FunkySample.ttf", Ffg::STUB_ON, {}, 115_pc },                            // Funky bigger
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
