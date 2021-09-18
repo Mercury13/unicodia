@@ -85,7 +85,7 @@ void TableCache::drop()
     cells.clear();
 }
 
-#define DEBUG_PAINT
+//#define DEBUG_PAINT
 
 #ifdef DEBUG_PAINT
     #include <iostream>
