@@ -34,6 +34,7 @@ namespace uc {
         Brai,   // Braille dots
         Bugi,   // Buginese
         Buhd,   // Buhid
+        Cakm,   // Chakma
         Cari,   // Carian
         Cans,   // Canadian syllabic
         Cham,   // Cham
@@ -147,8 +148,7 @@ namespace uc {
         //Afak  no chars — Afaka (Suriname)
         //Aran  no chars — Arabic Nastaliq
         Bass = Zyyy,        // beyond BMP
-        //Blis  no chars
-        Cakm = Zyyy,        // beyond BMP
+        //Blis  no chars — Blissymbols
         //Cirt  no chars — Cirth
         //Cpmn  no chars — Cypro-Minoan
         //Cyrs  no chars — Cyrillic Old Church

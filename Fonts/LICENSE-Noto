@@ -17,6 +17,10 @@ What was done by authors of Unicodia:
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
     > Cyrillic extended B
+* Chakma (DO NOT USE, ruined a bit)
+  - Compressed sign TAA_BELOW (just it!) to make KTAA viewable
+  - Implemented ligature KAA + I
+  - Implemented Pali VAA
 * Hebrew
   - Implemented 05EF yod triangle
 * OriyaUI

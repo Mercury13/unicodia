@@ -57,6 +57,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
+    { "NotoSansChakma-Regular.ttf", Ffg::STUB_ON },                             // Chakma
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -135,7 +136,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Microsoft Tai Le" },                                                     // Tai Le
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
-    { "Nirmala UI,Latha" },                                                     // Tamil
+    { "Nirmala UI,Latha", Ffg::STUB_ON },                                       // Tamil
     { "NotoSerifTangut-Regular.ttf", {}, {}, 125_pc },                          // Tangut
     { "NotoSansTelugu-Light.ttf", Ffg::LIGHT },                                 // Telugu
     { "MV Boli", {}, {}, 110_pc },                                              // Thaana
@@ -650,16 +651,32 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Некоторые специалисты по старому письму пользуются вирамой."sv,
                 EcFont::BUGINESE },
     // Buhid OK, installed Google Noto font
-    { "Buhd"sv, QFontDatabase::Any,
+    { "Buhd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::PACIFIC,
-        u8"Бухид"sv, u8"≈1300"sv,
-        u8"бухидский <i>(Филиппины)</i>"sv,
-        u8"<p>Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991{{_}}год). "
-                "Восходит к брахми и родственный с тагальским.</p>"
+        u8"Бухид", u8"≈1300",
+        u8"бухидский ''(Филиппины)''",
+        u8"Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991{{_}}год). "
+                "Восходит к [[ps:Brah|брахми]] и родственный с [[ps:Tglg|тагальским]]."
             "<p>В языке всего 15 согласных и три гласных: «а» по умолчанию, «и» и «у» задаются огласовками. Начальные гласные{{-}}"
                 "отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не записываются: "
-                "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''</p>",
+                "{{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''.",
                 EcFont::BUHID },
+    // Chakma OK, added Noto font, mostly because of missing glyphs
+    { "Cakm", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
+        u8"Чакма", u8"после XI века",
+        u8"чакма ''(Индия, Бангладеш, Мьянма)''",
+        u8"На языке чакма говорят 500{{_}}тыс. человек и он вне угрозы, но письменность вытесняется [[ps:Beng|бенгальской]]. "
+                "Точную датировку автору «Юникодии» найти не удалось, но если это потомок [[ps:Mymr|бирманского]]{{-}}то "
+                    "точно после XI{{_}}века."
+            "<p>Обычная брахмийская абугида с гласной по умолчанию «а:» (длинное «а») "
+                    "и часто употребляемой [[pt:virama|вирамой]] ''(maayaa)''. "
+                    "Вторая вирама служит для сборки [[pt:ligature|лигатур]], многие из них "
+                        "упразднены реформой 2001.<br>"
+                    "{{_}}{{_}}ка: {{sm|𑄇}} + и {{sm|◌𑄨}} = ки {{sm|𑄇𑄨}}<br>"
+                    "{{_}}{{_}}ка: {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = к {{sm|𑄇𑄴}}<br>"
+                    "{{_}}{{_}}ка: {{sm|𑄇}} + virama {{sm|◌𑄳}} + та: {{sm|𑄖}} = кта: {{sm|𑄇𑄳𑄖}}",
+                EcFont::CHAKMA },
     // Carian OK, W10 P1
     { "Cari"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::ASIA_INDIAN,
@@ -1702,7 +1719,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Старосогдийский", u8"≈100",
         u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
     // Sora Sompeng OK, W10 Nirmala UI
-    { "Sogo", QFontDatabase::Any,
+    { "Sora", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Соранг-сомпенг", u8"1936",
         u8"сора ''(Индия)''",
@@ -3163,16 +3180,22 @@ constinit const uc::Block uc::blocks[] {
     // Sogdian OK
     { 0x10F30, 0x10F6F,
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
+    // Chorasmian OK, built own font
     { 0x10FB0, 0x10FDF,
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
+    // Elymaic OK
     { 0x10FE0, 0x10FFF,
             "Elymaic", u8"Элимайский (эламский)", {}, EcScript::Elym },
+    // Brahmi OK
     { 0x11000, 0x1107F,
             "Brahmi", u8"Брахми", {}, EcScript::Brah },
+    // Kaithi OK
     { 0x11080, 0x110CF,
             "Kaithi", u8"Кайтхи", {}, EcScript::Kthi },
+    // Sora OK
     { 0x110D0, 0x110FF,
             "Sora Sompeng", u8"Соранг-сомпенг", {}, EcScript::Sora },
+    // Chakma OK
     { 0x11100, 0x1114F,
             "Chakma", u8"Чакма", {}, EcScript::Cakm },
     { 0x11150, 0x1117F,
