@@ -21,6 +21,7 @@ https://laoscript.net/download/ — лаосские шрифты
 http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html — индийский шрифт
 https://babelstone.co.uk/Fonts/index.html — разные шрифты
 https://www.jawish.org/blog/archives/429-Dhives-A-free-Dhives-Akuru-font.html — дивес акуру
+https://github.com/pandey/graphite-fonts — это работает Anshuman Pandey
 
 
 ИЗОБРАЖЕНИЯ СИМВОЛОВ
@@ -31,6 +32,7 @@ https://openmoji.org/library/ — эмодзи от любителей [UC13, CC
 https://commons.wikimedia.org/wiki/Category:Unicode_BMP
 https://www.unicode.org/charts/lastresort.html — интересные изображения письменностей
 https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_Viewer.html — тест символов жестового письма Саттон
+https://commons.wikimedia.org/wiki/Category:Makasar_letters — макассарский шрифт
 
 
 ПИСЬМЕННОСТИ
