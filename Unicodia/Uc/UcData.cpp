@@ -771,7 +771,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Шрифт стал компромиссом между сторонниками традиций и западниками."
             "<p>СССР сделал кириллическую письменность для многих языков союзных республик. "
                 "С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан." },
-    /// @todo [tofu, BMP] Main block OK, but Vedic is a read PitA.
+    // Devanagari OK, added 8 characters to Noto Serif
     { "Deva"sv, QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Деванагари", u8"I—VII век",
@@ -2409,15 +2409,16 @@ constinit const uc::Block uc::blocks[] {
                     "Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.",
             EcScript::Geor },
     // Sundanese suplement OK
-    /// @todo [desc] Sundanese supplement
     { 0x1CC0, 0x1CCF,
             "Sundanese Supplement", u8"Сунданский дополнительный",
             u8"Исторические знаки препинания для сунданского.",
             EcScript::Sund },
-    /// @todo [tofu] 1CF7+, 4 chars
-    /// @todo [desc] Vedic extensions
+    // Vedic ex OK
     { 0x1CD0, 0x1CFF,
-            "Vedic Extensions", u8"Ведические символы", {}, EcScript::Deva },
+            "Vedic Extensions", u8"Ведические символы",
+            u8"Символы из Вед, применяемые в [[ps:Deva|деванагари]] и других индийских письменностях. "
+                "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки.",
+            EcScript::Deva },
     // Phonetic ext OK
     /// @todo [desc] Phonetic ext
     { 0x1D00, 0x1D7F,

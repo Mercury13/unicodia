@@ -22,8 +22,9 @@ What was done by authors of Unicodia:
   - Implemented ligature KAA + I
   - Implemented Pali VAA
 * Devanagari
-  - Implemented 4 chars at Devanagari Extended.
-    (A8FF is just for showcasing and actually unusable)
+  - Implemented 4 chars at Devanagari Extended,
+    and 4 characters from Vedic Extensions
+    (umlauts are just for showcasing and actually unusable!)
 * Hebrew
   - Implemented 05EF yod triangle
 * OriyaUI
