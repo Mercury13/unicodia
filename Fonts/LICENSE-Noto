@@ -21,13 +21,16 @@ What was done by authors of Unicodia:
   - Compressed sign TAA_BELOW (just it!) to make KTAA viewable
   - Implemented ligature KAA + I
   - Implemented Pali VAA
+* Devanagari
+  - Implemented 4 chars at Devanagari Extended.
+    (A8FF is just for showcasing and actually unusable)
 * Hebrew
   - Implemented 05EF yod triangle
 * OriyaUI
   - Added anchors to 25CC dotted circle
   - Implemented ligature 25CC dotted circle + 03BC nukta,
     mostly because of bad default anchoring of nukta
-  - Implemented 0B55 combining overline  
+  - Implemented 0B55 combining overline, possibly unusable
 * Samaritan:
   - Copied a dashed circle from Devanagari, implemented anchors
 * Sundanese:

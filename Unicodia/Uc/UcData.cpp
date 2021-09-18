@@ -67,7 +67,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "Microsoft YaHei" },                                                      // CJK fallback
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari-Regular.ttf", {}, {}, 110_pc },                      // Devanagari
+    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, {}, 110_pc },                    // Devanagari
     { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -2855,7 +2855,7 @@ constinit const uc::Block uc::blocks[] {
     // Saurashtra OK
     { 0xA880, 0xA8DF,
             "Saurashtra", u8"Саураштра", {}, EcScript::Saur },
-    /// @todo [tofu] Another PitA in W7, A8FC+
+    // Devanagari ex OK, drew 4 chars
     { 0xA8E0, 0xA8FF,
             "Devanagari Extended", u8"Деванагари расширенный"sv,
             u8"Распевы из Самаведы (книги релизиозных песен), варианты знака чандрабинду (носовая гласная), "

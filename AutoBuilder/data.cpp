@@ -280,6 +280,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ASSYRIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "BOHAIRIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ELAMITE",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "JAIN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
