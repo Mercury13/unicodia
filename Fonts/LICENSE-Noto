@@ -33,6 +33,8 @@ What was done by authors of Unicodia:
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
   - Implemented KTA ligature in E000 private-use
+* Syloti Nagri
+  - Rehinted
 * Tagalog:
   - Enlarged virama
 
