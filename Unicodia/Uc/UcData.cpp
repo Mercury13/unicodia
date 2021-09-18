@@ -58,7 +58,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
-    { "NotoSansChakma-Regular.ttf", Ffg::STUB_ON },                             // Chakma
+    { "NotoSansChakma-DO-NOT-USE.ttf", Ffg::STUB_ON },                          // Chakma
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
