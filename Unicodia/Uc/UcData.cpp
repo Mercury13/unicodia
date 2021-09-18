@@ -785,7 +785,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{_}}{{_}}{{_}}{{_}}ка {{sm|क}} + вирама {{sm|◌्}} + сса {{sm|स}} = ксса {{sm|क्ष}}",
                 EcFont::DEVANAGARI },
     /// @todo [urgent] Diak: working
-    /// @todo [urgent, desc] Diak and Thaa should not contradict
     { "Diak"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA_INDIAN,
         u8"Дивес-акуру (древнемальдивский)", u8"VIII–XII век",
