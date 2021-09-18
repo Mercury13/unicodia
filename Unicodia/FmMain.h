@@ -11,6 +11,7 @@
 // My libs
 #include "u_Vector.h"
 #include "u_TinyOpt.h"
+#include "c_TableCache.h"
 
 // Project-local
 #include "FontMatch.h"
@@ -92,7 +93,8 @@ enum class CharSet { SAFE, FULL };
 
 class CharsModel
         : public QAbstractTableModel,
-          public QStyledItemDelegate
+          public QStyledItemDelegate,
+          protected ItemPainter
 {
     using Super = QAbstractTableModel;
     using SuperD = QStyledItemDelegate;
@@ -100,6 +102,7 @@ public:
     QWidget* const owner;
     FontMatch match;
     bool isCjkCollapsed = true;
+    mutable TableCache tcache;
 
     CharsModel(QWidget* aOwner);
 
@@ -129,6 +132,10 @@ protected:
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,
                          const QModelIndex &index) const override;
+    void paintItem(
+            QPainter* painter,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index) const override;
 private:
     RowCache rows;
     static constexpr auto SHRINK_Q = 4;

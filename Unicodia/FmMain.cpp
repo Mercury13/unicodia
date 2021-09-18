@@ -172,7 +172,9 @@ CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
     match(str::toQ(FAM_DEFAULT)),
     rows(NCOLS)
-{}
+{
+    tcache.connectSignals(this);
+}
 
 
 int CharsModel::rowCount(const QModelIndex&) const
@@ -577,8 +579,8 @@ void CharsModel::initStyleOption(QStyleOptionViewItem *option,
 }
 
 
-void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
-           const QModelIndex &index) const
+void CharsModel::paintItem(
+        QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
     if (option.state.testFlag(QStyle::State_HasFocus)) {
         // It’d be nice to draw some nice focus using Windows skin, but cannot
@@ -603,6 +605,14 @@ void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
         tryDrawCustom(painter, option.rect, index, owner->palette().windowText().color());
     }
 }
+
+
+void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
+           const QModelIndex &index) const
+{
+    tcache.paint(painter, option, index, *this);
+}
+
 
 
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
