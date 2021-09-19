@@ -96,6 +96,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
+    { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
     { "NotoSansMalayalam-Light.ttf", Ffg::LIGHT },                              // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
@@ -1307,10 +1308,10 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Расшифрован в начале XX{{_}}века.",
                 EcFont::HISTORIC },
     // Lydian OK, W10 P1 Segoe Historic
-    { "Lydi"sv, QFontDatabase::Any,
+    { "Lydi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         u8"Лидийский (сардийский)"sv, u8"VII век до н.э.",
-        u8"лидийский ''(=сардийский, Малая Азия)''"sv,
+        u8"лидийский ''(=сардийский, Малая Азия)''",
         u8"Близок к [[ps:Lyci|ликийскому]], произошёл из [[ps:Phnx|финикийского]]. "
                 "Вытеснен греческим около III{{_}}века{{bc}}, когда Лидию завоевал Александр Македонский."
             "<p>Ранние надписи были в обоих направлениях, поздний исключительно справа налево. "
@@ -1318,12 +1319,25 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Лидия{{-}}не самоназвание, сами лидийцы называли область по столице{{-}}Сарды."
             "<p>Расшифрован в 1916 и изучен хорошо, несмотря на небольшое количество (на 1986{{-}}109{{_}}шт.) надписей.",
                 EcFont::HISTORIC },
+    // Mahajani OK, W10 none, installed Google Noto
+    { "Mahj", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Махаджани", u8"неизвестно (порядка XVI века)",
+        u8"хинди, пенджабский, марвари ''(небольшой язык Индии)''",
+        u8"Ещё один, как и [[ps:Kthi|кайтхи]], отголосок индийской кастовой системы{{-}}эта письменность использовалась банкирами "
+                "и бухгалтерами вплоть до XX{{_}}века, и поныне в крайне малом пользовании."
+            "<p>Письменность деградировала почти до [[pt:abjad|консонантной]]: согласная буква означает и «ка», и «ки», и «к». "
+                "Если всё-таки гласная важна, есть специальные знаки. "
+                "[[pt:virama|Вирам]] и [[pt:ligature|лигатур]] нет. "
+                "Зато есть куча сокращений и дробей, важных для бухгалтерских книг. "
+                "Многие из них плохо исследованы и потому всё ещё не закодированы.",
+                EcFont::MAHAJANI },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Мандейский"sv, u8"II—VII век"sv,
-        u8"мандейский <i>(Иран и Ирак)</i>"sv,
-        u8"<p>Произошла из арамейского или парфянского письма. Используется так называемыми «болотными арабами», живущими у слияния рек "sv
+        u8"Мандейский", u8"II—VII век",
+        u8"мандейский ''(Иран и Ирак)''",
+        u8"Произошла из арамейского или парфянского письма. Используется так называемыми «болотными арабами», живущими у слияния рек "sv
                 u8"Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается "sv
                 u8"с 45&nbsp;000 (1996) до 5000 (2007), около 60&nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</p>"sv,
                 EcFont::MANDAIC },
