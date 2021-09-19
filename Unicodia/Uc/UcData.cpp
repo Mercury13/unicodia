@@ -1184,7 +1184,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Кайтхи", u8"XVI век",
-        u8"хиндустани ''(=хинди/урду)''; мелкие языки Индии",
+        u8"хинди, мелкие языки Индии",
         u8"Название письменности происходит от касты «каястха» (конторщики). "
                 "Является очень [[pt:cursive|беглым]] вариантом [[ps:Deva|деванагари]]. "
                 "Использовалось с Империи великих моголов в северо-восточной Индии, разрешалось в судах, "
@@ -1322,7 +1322,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mahajani OK, W10 none, installed Google Noto
     { "Mahj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Махаджани", u8"неизвестно (порядка XVI века)",
+        u8"Махаджани", u8"неизвестно (порядка XVII века)",
         u8"хинди, пенджабский, марвари ''(небольшой язык Индии)''",
         u8"Ещё один, как и [[ps:Kthi|кайтхи]], отголосок индийской кастовой системы{{-}}эта письменность использовалась банкирами "
                 "и бухгалтерами вплоть до XX{{_}}века, и поныне в крайне малом пользовании."
