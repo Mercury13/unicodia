@@ -100,7 +100,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansMalayalam-Light.ttf", Ffg::LIGHT },                              // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
-    { "NotoSansMeeteiMayek-Regular.ttf" },                                      // Meetei Mayek
+    { "NotoSansMeeteiMayek-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },     // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
@@ -1395,13 +1395,16 @@ constinit const uc::Script uc::scriptInfo[] {
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Манипури (мейтей-майек)"sv, u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"sv,
-        u8"манипури <i>(Индия)</i>"sv,
-        u8"<p>Какая бы версия о происхождении манипури ни была верной, с XVIII века пользовались бенгальским. Письменность возродили в 1930-х, "
-                "в 1976 подогнали под современную фонетику.</p>"
+        u8"Манипури (мейтей-майек)", u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки",
+        u8"манипури <i>(Индия)</i>",
+        u8"<p>Какая бы версия о происхождении манипури ни была верной, с XVIII века пользовались [[ps:Beng|бенгальским]]. "
+                "Письменность возродили в 1930-х, в 1976 подогнали под современную фонетику."
             "<p>Буквы называются по частям тела: скажем, первая{{-}}«kok» (голова). "
-                "Гласная по умолчанию «а». Вирама есть, но применяется крайне редко: "
-                "одинокий звук обозначается обрезанными версиями согласных.</p>"sv,
+                "Гласная по умолчанию «а». "
+                "[[pt:virama|Вирама]] служит только для сборки старинных [[pt:ligature|лигатур]]: "
+                    "одинокий звук обозначается обрезанными версиями согласных.<br>"
+                "{{_}}{{_}}ка {{sm|ꯀ}} + и {{sm|◌ꯤ}} = ки {{sm|ꯀꯤ}}<br>"
+                "{{_}}{{_}}к {{sm|ꯛ}}",
                 EcFont::MEETEI },
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr"sv, QFontDatabase::Myanmar,
@@ -2925,9 +2928,9 @@ constinit const uc::Block uc::blocks[] {
     { 0xAA80, 0xAADF,
             "Tai Viet", u8"Тай-вьет", {}, EcScript::Tavt },
     // Meetei ex OK
-    /// @todo [desc] Meetei ex
     { 0xAAE0, 0xAAFF,
-            "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения" },
+            "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения",
+            u8"Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]]." },
     // Ethiopic ex A OK
     { 0xAB00, 0xAB2F,
             "Ethiopic Extended-A", u8"Эфиопский расширенный А"sv,
