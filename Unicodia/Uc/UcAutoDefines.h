@@ -72,6 +72,7 @@ namespace uc {
         Kana,   // Katakana
         Khar,   // Kharoshthi
         Khmr,   // Khmer
+        Khoj,   // Khojki
         Kits,   // Khitan small
         Knda,   // Kannada
         Kthi,   // Kaithi
@@ -172,7 +173,6 @@ namespace uc {
         //Jamo  no chars — Hangul jamo
         //Jpan  no chars — Japanese
         //Jurc  no chars — Jurchen
-        Khoj = Zyyy,        // beyond BMP
         //Kitl  no chars — Khitan large
         //Kore  no chars — Hangul+Han
         //Kpel  no chars — Kpelle (Africa)

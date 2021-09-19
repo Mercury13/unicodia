@@ -216,6 +216,7 @@ namespace uc {
         KHAROSHTHI,
         KHITAN_SMALL,
         KHMER,
+        KHOJKI,
         LANNA,
         LAO,
         LEPCHA,
