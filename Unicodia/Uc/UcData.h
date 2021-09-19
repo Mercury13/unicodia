@@ -254,6 +254,7 @@ namespace uc {
         RUNIC,
         SAMARITAN,
         SAURASHTRA,
+        SHARADA,
         SIGNWRITING,
         SINHALA,
         SOGDIAN,

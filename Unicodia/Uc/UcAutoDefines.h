@@ -119,6 +119,7 @@ namespace uc {
         Saur,   // Saurashtra
         Sgnw,   // Sutton SignWriting
         Shaw,   // Shavian
+        Shrd,   // Sharada
         Sinh,   // Sinhala
         Sogd,   // Sogdian
         Sogo,   // Old Sogdian
@@ -198,7 +199,6 @@ namespace uc {
         Plrd = Zyyy,        // beyond BMP
         //Roro  no chars — Rongorongo (Easter Island)
         //Sara  no chars — Sarati (Tolkien)
-        Shrd = Zyyy,        // beyond BMP
         //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
         Sidd = Zyyy,        // beyond BMP
         Sind = Zyyy,        // beyond BMP
