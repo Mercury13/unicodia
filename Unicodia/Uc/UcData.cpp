@@ -83,7 +83,7 @@ constinit const uc::Font uc::fontInfo[] {
     /// @todo [semi-tofu] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
-    { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
+    { "NotoSansKaithi-Regular.ttf", Ffg::STUB_ON },                             // Kaithi
     { "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc },                   // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },      // Kharoshthi
