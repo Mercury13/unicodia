@@ -3338,7 +3338,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11D60, 0x11DAF,
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     { 0x11EE0, 0x11EFF,
-            "Makasar", u8"Старый макасарский", {}, EcScript::Maka },
+            "Makasar", u8"Макасарский", {}, EcScript::Maka },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF,
             "Lisu Supplement", u8"Лису дополнительный",
