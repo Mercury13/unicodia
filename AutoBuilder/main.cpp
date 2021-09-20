@@ -299,7 +299,9 @@ int main()
         std::vector<std::string> restAliases;
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
-        if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
+        if (cp >= 0xE0000 && cp <= 0xE007F) {
+            allAbbrevs.push_back("`");
+        } else if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
             if (it->second.empty()) {
                 abbrevState = AbbrevState::DISABLE;
             } else {

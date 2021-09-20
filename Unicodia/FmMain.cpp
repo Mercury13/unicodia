@@ -376,14 +376,19 @@ void CharsModel::build()
 
 namespace {
 
+    enum class SplitMode { NORMAL, FIXED };
+
     struct StrPair {
         std::u8string_view line1, line2;
 
         bool wasSplit() const { return !line2.empty(); }
+        size_t length() const { return std::max(line1.length(), line2.length()); }
     };
 
-    StrPair splitAbbr(std::u8string_view abbr)
+    StrPair splitAbbr(std::u8string_view abbr, SplitMode mode)
     {
+        if (mode == SplitMode::FIXED)
+            return { abbr, {} };
         if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos)
             return { abbr.substr(0, pSpace), abbr.substr(pSpace + 1) };
         switch (abbr.size()) {
@@ -450,6 +455,33 @@ namespace {
             { return QRect( QPoint{ x0 + side2, y0 + side2 }, QSize { side, side }); }
     };
 
+    void drawAbbrevText(QPainter* painter, std::u8string_view abbreviation,
+            const QColor& color, QRectF rcFrame, qreal thickness,
+            SplitMode mode = SplitMode::NORMAL)
+    {
+        // Draw text
+        auto sp = splitAbbr(abbreviation, mode);
+        auto availSize = rcFrame.width();
+        auto sz = (abbreviation.length() == 1)      // ONE line of ONE char → left for tags
+                ? availSize / 2
+                : (sp.length() <= 3)
+                  ? availSize / 3.3
+                  : availSize / 5.0;
+        QFont font { str::toQ(FAM_CONDENSED) };
+            font.setStyleStrategy(QFont::PreferAntialias);
+            font.setPointSizeF(sz);
+        painter->setFont(font);
+        painter->setBrush(QBrush(color, Qt::SolidPattern));
+        rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
+        if (sp.wasSplit()) {
+            RcPair p(rcFrame);
+            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+        } else {
+            painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
+        }
+    }
+
     void drawAbbreviation(
             QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
             const QColor& color, char32_t subj)
@@ -463,7 +495,7 @@ namespace {
         auto rcFrame = QRectF(QPoint(rect.left() + ofsX, rect.top() + ofsY),
                               QSize(availSize, availSize));
         // Draw frame
-        auto thickness = availSize / 60.0;
+        auto thickness = availSize / 60.0f;
         painter->setPen(QPen(color, thickness, Qt::DashLine));
         painter->setBrush(Qt::NoBrush);
         painter->drawRect(rcFrame);
@@ -497,26 +529,25 @@ namespace {
                     painter->fillRect(m.rect41(), color);
                     painter->fillRect(m.rect3(), color);
                 } break;
+            case 0xE0001:
+                drawAbbrevText(painter, u8"BEGIN"sv, color, rcFrame, thickness, SplitMode::FIXED);
+                break;
+            case 0xE0020:
+                drawAbbrevText(painter, u8"SP"sv, color, rcFrame, thickness);
+                break;
+            case 0xE007F:
+                drawAbbrevText(painter, u8"END"sv, color, rcFrame, thickness);
+                break;
+            default:
+                // Tags
+                if (subj >= 0xE0000 && subj <= 0xE00FF) {
+                    char8_t c = subj;
+                    std::u8string_view uv { &c, 1 };
+                    drawAbbrevText(painter, uv, color, rcFrame, thickness);
+                }
             }
         } else {
-            // Draw text
-            auto sz = (abbreviation.size() == 1)
-                    ? availSize / 2
-                    : availSize / 3.3;
-            QFont font { str::toQ(FAM_CONDENSED) };
-                font.setStyleStrategy(QFont::PreferAntialias);
-                font.setPointSizeF(sz);
-            painter->setFont(font);
-            painter->setBrush(QBrush(color, Qt::SolidPattern));
-            rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
-            auto sp = splitAbbr(abbreviation);
-            if (sp.wasSplit()) {
-                RcPair p(rcFrame);
-                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
-                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
-            } else {
-                painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
-            }
+            drawAbbrevText(painter, abbreviation, color, rcFrame, thickness);
         }
     }
 

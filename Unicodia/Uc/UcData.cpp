@@ -3744,10 +3744,13 @@ constinit const uc::Block uc::blocks[] {
             u8"ККЯ иероглифы расширение G"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] Tags are invisible, what to draw?
-    /// @todo [desc] Tags
     { 0xE0000, 0xE007F,
-            "Tags", u8"Тэги" },
+            "Tags", u8"Тэги",
+            u8"Блок тэгов повторяет [[pt:ascii|ASCII]]. "
+                    "Изначально (Unicode 3.1, 2001) тэги применялись для задания языка. "
+                    "Это применение быстро [[pt:deprecated|запретили]], но в Юникоде 9.0 (2017) тэги вернули "
+                        "как модификаторы [[pt:emoji|эмодзи]]. "
+                    "Используются только для флагов регионов, определены три региона: Англия, Уэльс, Шотландия."},
     // Var sel supp OK
     { 0xE0100, 0xE01EF,
             "Variation Selectors Supplement", u8"Селекторы начертания дополнительные",
