@@ -3346,7 +3346,7 @@ constinit const uc::Block uc::blocks[] {
             "Lisu Supplement", u8"Лису дополнительный",
             u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
             EcScript::Lisu },
-    /// @todo [tofu] Tamil supp
+    // Tamil supp OK
     { 0x11FC0, 0x11FFF,
             "Tamil Supplement", u8"Тамильский дополнительный",
             u8"Старинные тамильские дроби и другие символы.",
