@@ -812,7 +812,7 @@ TEST (Decap, BugZanabazar)
 TEST (Decap, ArabicAlef)
 {
     auto r = decapitalize("ARABIC LIGATURE ALEF MAKSURA WITH SUPERSCRIPT ALEF FINAL FORM");
-    EXPECT_EQ("Arabic ligature Alef maksura with superscript alef final form", r);
+    EXPECT_EQ("Arabic ligature Alef maksura with superscript Alef final form", r);
 }
 
 
@@ -893,3 +893,24 @@ TEST (Decap, Cunei1)
     auto r = decapitalize("CUNEIFORM SIGN ASSYRIAN WORD DIVIDER OVER ASH TIMES LAK-123");
     EXPECT_EQ("Cuneiform sign Assyrian word divider over ASH times LAK-123", r);
 }
+
+
+///
+///  What happens with Arabic?
+///
+TEST (Decap, ArabicBug)
+{
+    auto r = decapitalize("ARABIC LETTER AFRICAN QAF WITH THREE DOTS ABOVE");
+    EXPECT_EQ("Arabic letter African Qaf with three dots above", r);
+}
+
+
+///
+///  BUG: Cuneiform and Arabic interact strangely
+///
+TEST (Decap, BugCuneiTimesArabic)
+{
+    auto r = decapitalize("CUNEIFORM SIGN LAM TIMES KUR PLUS RU");
+    EXPECT_EQ("Cuneiform sign LAM times KUR plus RU", r);
+}
+

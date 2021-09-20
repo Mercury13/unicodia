@@ -287,57 +287,60 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
-    { "ANUSVARA"sv,     Dicf::PART_NOUN },
-    { "APOSTROPHE"sv,   Dicf::PART_NOUN },
+    { "ANUSVARA",       Dicf::PART_NOUN },
+    { "APOSTROPHE",     Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
-    { "ARROW"sv,        Dicf::PART_NOUN },
-    { "ARROWHEAD"sv,    Dicf::PART_NOUN },
-    { "BAR"sv,          Dicf::PART_NOUN },
-    { "BEAT"sv,         Dicf::PART_NOUN },
-    { "BOX"sv,          Dicf::PART_NOUN },
-    { "CANDRABINDU"sv,  Dicf::PART_NOUN },
-    { "CARET"sv,        Dicf::PART_NOUN },  // For APL not really, but OK
-    { "COLON"sv,        Dicf::PART_NOUN },
-     { "TRICOLON"sv,    Dicf::PART_NOUN },
-     { "QUADCOLON"sv,    Dicf::PART_NOUN },
-    { "COMMA"sv,        Dicf::PART_NOUN },
-    { "CIRCLE"sv,       Dicf::PART_NOUN },
-    { "DANDA"sv,        Dicf::PART_NOUN },
-    { "DIVIDER"sv,      Dicf::PART_NOUN },
-    { "DNA"sv,          Dicf::PART_NOUN | Dicf::CAP_ALL },
-    { "DOT"sv,          Dicf::PART_NOUN },
-    { "DOTS"sv,         Dicf::PART_NOUN },
-    { "FORM"sv,         Dicf::PART_NOUN },
-    { "HASANTA"sv,      Dicf::PART_NOUN },
-    { "HOOK"sv,         Dicf::PART_NOUN },
-    { "LINE"sv,         Dicf::PART_NOUN },
-    { "MCHU"sv,         Dicf::PART_NOUN },
-    { "PLUS"sv,         Dicf::PART_NOUN },
-    { "REDUPLICATION"sv, Dicf::PART_NOUN },
+    { "ARROW",          Dicf::PART_NOUN },
+    { "ARROWHEAD",      Dicf::PART_NOUN },
+    { "BAR",            Dicf::PART_NOUN },
+    { "BEAT",           Dicf::PART_NOUN },
+    { "BIRD",           Dicf::PART_NOUN },  // For some CJK hiero
+    { "BOX",            Dicf::PART_NOUN },
+    { "CANDRABINDU",    Dicf::PART_NOUN },
+    { "CARET",          Dicf::PART_NOUN },  // For APL not really, but OK
+    { "COLON",          Dicf::PART_NOUN },
+     { "TRICOLON",      Dicf::PART_NOUN },
+     { "QUADCOLON",     Dicf::PART_NOUN },
+    { "COMMA",          Dicf::PART_NOUN },
+    { "CIRCLE",         Dicf::PART_NOUN },
+    { "DANDA",          Dicf::PART_NOUN },
+    { "DIVIDER",        Dicf::PART_NOUN },
+    { "DNA",            Dicf::PART_NOUN | Dicf::CAP_ALL },
+    { "DOT",            Dicf::PART_NOUN },
+    { "DOTS",           Dicf::PART_NOUN },
+    { "FORM",           Dicf::PART_NOUN },
+    { "HAMZA",          Dicf::PART_NOUN },  // Arabic, not really letter
+    { "HASANTA",        Dicf::PART_NOUN },
+    { "HOOK",           Dicf::PART_NOUN },
+    { "LINE",           Dicf::PART_NOUN },
+    { "MCHU",           Dicf::PART_NOUN },
+    { "PLUS",           Dicf::PART_NOUN },
+    { "REDUPLICATION",  Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING"sv,         Dicf::PART_NOUN },
     { "SEPARATOR",      Dicf::PART_NOUN },
     { "SHAD",           Dicf::PART_NOUN },
-    { "SHELF"sv,        Dicf::PART_NOUN },
-    { "SHOE"sv,         Dicf::PART_NOUN },  // For APL not really, but OK
-    { "SPIRANT"sv,      Dicf::PART_NOUN },  // One time, probably OK
-    { "STOP"sv,         Dicf::PART_NOUN },
-    { "STROKE"sv,       Dicf::PART_NOUN },
-    { "STROKES"sv,      Dicf::PART_NOUN },
-    { "SVARITA"sv,      Dicf::PART_NOUN },
-    { "TACK"sv,         Dicf::PART_NOUN },
-    { "TREE"sv,         Dicf::PART_NOUN },
-    { "TSHEG"sv,        Dicf::PART_NOUN },
-    { "UNDERBAR"sv,     Dicf::PART_NOUN },
-    { "VIRAMA"sv,       Dicf::PART_NOUN },
-    { "YANG"sv,         Dicf::PART_MIXED },  // for Chinese tones, need more things
-    //{ "YAT"sv,          Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
-    { "YIN"sv,          Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
-    { "YUS"sv,          Dicf::PART_NOUN },   // …but yus is big & little → do not cap
+    { "SHELF",          Dicf::PART_NOUN },
+    { "SHOE",           Dicf::PART_NOUN },  // For APL not really, but OK
+    { "SPIRANT",        Dicf::PART_NOUN },  // One time, probably OK
+    { "STOP",           Dicf::PART_NOUN },
+    { "STROKE",         Dicf::PART_NOUN },
+    { "STROKES",        Dicf::PART_NOUN },
+    { "SVARITA",        Dicf::PART_NOUN },
+    { "TACK",           Dicf::PART_NOUN },
+    { "TREE",           Dicf::PART_NOUN },
+    { "TSHEG",          Dicf::PART_NOUN },
+    { "UNDERBAR",       Dicf::PART_NOUN },
+    { "VIRAMA",         Dicf::PART_NOUN },
+    { "VISARGA",        Dicf::PART_NOUN },
+    { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
+    //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
+    { "YIN",            Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
+    { "YUS",            Dicf::PART_NOUN },   // …but yus is big & little → do not cap
 
     // Adverbs
-    { "ABOVE"sv,        Dicf::PART_NOUN },
-    { "BELOW"sv,        Dicf::PART_NOUN },
+    { "ABOVE",          Dicf::PART_NOUN },
+    { "BELOW",          Dicf::PART_NOUN },
 
     // Numerals
     { "ONE"sv,          Dicf::PART_NUMERAL },
@@ -405,25 +408,27 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TURN"sv,         Dicf::PART_NOUN },
 
     // Adjectives
-    { "ACUTE"sv,        Dicf::PART_ADJECTIVE },
-    { "ALTERNATE"sv,    Dicf::PART_ADJECTIVE },
-    { "ARCHAIC"sv,      Dicf::PART_ADJECTIVE },
-    { "ASPIRATED"sv,    Dicf::PART_ADJECTIVE },
-    { "BARRED"sv,       Dicf::PART_ADJECTIVE },
-    { "BIG"sv,          Dicf::PART_ADJECTIVE },
-    { "BOOK"sv,         Dicf::PART_ADJECTIVE },
-    { "BOTTOM"sv,       Dicf::PART_ADJECTIVE },
-    { "CAPITAL"sv,      Dicf::PART_ADJECTIVE },
-    { "CASKET"sv,       Dicf::PART_ADJECTIVE },  // OK here, runes
-    { "CIRCLED"sv,      Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
-    { "CLOSED"sv,       Dicf::PART_ADJECTIVE },
-    { "COMBINING"sv,    Dicf::PART_ADJECTIVE },
-    { "CROSSED"sv,      Dicf::PART_ADJECTIVE },
+    { "ACUTE",          Dicf::PART_ADJECTIVE },
+    { "ALTERNATE",      Dicf::PART_ADJECTIVE },
+    { "ARCHAIC",        Dicf::PART_ADJECTIVE },
+    { "ASPIRATED",      Dicf::PART_ADJECTIVE },
+    { "BARRED",         Dicf::PART_ADJECTIVE },
+    { "BIG",            Dicf::PART_ADJECTIVE },
+    { "BOOK",           Dicf::PART_ADJECTIVE },
+    { "BOTTOM",         Dicf::PART_ADJECTIVE },
+    { "CAPITAL",        Dicf::PART_ADJECTIVE },
+    { "CASKET",         Dicf::PART_ADJECTIVE },  // OK here, runes
+    { "CIRCLED",        Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
+    { "CLOSED",         Dicf::PART_ADJECTIVE },
+    { "COMBINING",      Dicf::PART_ADJECTIVE },
+    { "CROSSED",        Dicf::PART_ADJECTIVE },
     { "CRYPTOGRAMMIC",  Dicf::PART_ADJECTIVE },
-    { "DOUBLE"sv,       Dicf::PART_ADJECTIVE },
-    { "DOTTED"sv,       Dicf::PART_ADJECTIVE },
-    { "DOTLESS"sv,      Dicf::PART_ADJECTIVE },
-    { "DOWN"sv,         Dicf::PART_ADJECTIVE },
+    { "CURLED",         Dicf::PART_ADJECTIVE },
+    { "DOUBLE",         Dicf::PART_ADJECTIVE },
+    { "DOUBLE-STRUCK",  Dicf::PART_ADJECTIVE },
+    { "DOTTED",         Dicf::PART_ADJECTIVE },
+    { "DOTLESS",        Dicf::PART_ADJECTIVE },
+    { "DOWN",           Dicf::PART_ADJECTIVE },
     { "DIAERESIZED",    Dicf::PART_ADJECTIVE },
     { "DIAGONAL"sv,     Dicf::PART_ADJECTIVE },
     { "DIALECT-P"sv,    { Dicf::PART_ADJECTIVE, "dialect-P" } },
@@ -452,13 +457,13 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LATINATE"sv,     Dicf::PART_ADJECTIVE },
     { "LEFT"sv,         Dicf::PART_ADJECTIVE },
     { "LEFT-STEM"sv,    Dicf::PART_ADJECTIVE },
-    { "RIGHT-STEM"sv,   Dicf::PART_ADJECTIVE },
-    { "LARYNGEAL"sv,    Dicf::PART_ADJECTIVE },
-    { "LONG"sv,         Dicf::PART_ADJECTIVE },
-    { "LONG-LEGGED"sv,  Dicf::PART_ADJECTIVE },
-    { "LOW"sv,          Dicf::PART_ADJECTIVE },
-    { "LUNATE"sv,       Dicf::PART_ADJECTIVE },
-    { "LITTLE"sv,       Dicf::PART_ADJECTIVE },
+    { "LARYNGEAL",      Dicf::PART_ADJECTIVE },
+    { "LONG",           Dicf::PART_ADJECTIVE },
+    { "LONG-LEGGED",    Dicf::PART_ADJECTIVE },
+    { "LOOPED",         Dicf::PART_ADJECTIVE },
+    { "LOW",            Dicf::PART_ADJECTIVE },
+    { "LUNATE",         Dicf::PART_ADJECTIVE },
+    { "LITTLE",         Dicf::PART_ADJECTIVE },
     { "MAI"sv,          Dicf::PART_ADJECTIVE },
     { "MALAYALAM"sv,    Dicf::PART_ADJECTIVE },
     { "MARWARI"sv,      Dicf::PART_ADJECTIVE },
@@ -479,102 +484,142 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PHASE-D"sv,      { Dicf::PART_ADJECTIVE, "phase-D" } },
     { "PHASE-E"sv,      { Dicf::PART_ADJECTIVE, "phase-E" } },
     { "PHASE-F"sv,      { Dicf::PART_ADJECTIVE, "phase-F" } },
-    { "PSALTER"sv,      Dicf::PART_ADJECTIVE },
-    { "QUARTER"sv,      Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
-    { "REVERSE"sv,      Dicf::PART_ADJECTIVE },
-    { "REVERSED"sv,     Dicf::PART_ADJECTIVE },
-    { "RETROFLEX"sv,    Dicf::PART_ADJECTIVE },
-    { "RIGHT"sv,        Dicf::PART_ADJECTIVE },
-    { "SARA"sv,         Dicf::PART_ADJECTIVE },
-    { "SEMISOFT"sv,     Dicf::PART_ADJECTIVE },
-    { "SHARP"sv,        Dicf::PART_ADJECTIVE },
-    { "SHORT"sv,        Dicf::PART_ADJECTIVE },
-    { "SHORT-TWIG-AR"sv, Dicf::PART_ADJECTIVE },
+    { "PSALTER",        Dicf::PART_ADJECTIVE },
+    { "QUARTER",        Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
+    { "REVERSE",        Dicf::PART_ADJECTIVE },
+    { "REVERSED",       Dicf::PART_ADJECTIVE },
+    { "RETROFLEX",      Dicf::PART_ADJECTIVE },
+    { "RIGHT",          Dicf::PART_ADJECTIVE },
+    { "RIGHT-STEM",     Dicf::PART_ADJECTIVE },
+    { "ROUNDED",        Dicf::PART_ADJECTIVE },
+    { "SARA",           Dicf::PART_ADJECTIVE },
+    { "SEMISOFT",       Dicf::PART_ADJECTIVE },
+    { "SHARP",          Dicf::PART_ADJECTIVE },
+    { "SHORT",          Dicf::PART_ADJECTIVE },
+    { "SHORT-TWIG-AR",  Dicf::PART_ADJECTIVE },
     /// @todo [decap] Arabic mark Sideways Noon gnunna — is it right?
     { "SIDEWAYS",       Dicf::PART_ADJECTIVE },
-    { "SMALL"sv,        Dicf::PART_ADJECTIVE },
-    { "SNAP"sv,         Dicf::PART_ADJECTIVE },     // OK, music only
-    { "SPACING"sv,      Dicf::PART_ADJECTIVE },
-    { "SOFT"sv,         Dicf::PART_ADJECTIVE },
-    { "SOUTH"sv,        Dicf::PART_ADJECTIVE },
-    { "STRAIGHT"sv,     Dicf::PART_ADJECTIVE },
-    { "SYLLABIC"sv,     Dicf::PART_ADJECTIVE },
-    { "TALL"sv,         Dicf::PART_ADJECTIVE },
-    { "THREE-D"sv,      { Dicf::PART_ADJECTIVE, "three-D" } },
-    { "TOP"sv,          Dicf::PART_ADJECTIVE },
-    { "TRIANGULAR"sv,   Dicf::PART_ADJECTIVE },
-    { "TRIPLE"sv,       Dicf::PART_ADJECTIVE },
-    { "TROKUTASTI"sv,   Dicf::PART_ADJECTIVE },
-    { "TRADITIONAL"sv,  Dicf::PART_ADJECTIVE },
-    { "TRUNCATED"sv,    Dicf::PART_ADJECTIVE },
-    { "TURNED"sv,       Dicf::PART_ADJECTIVE },
-    { "UNBLENDED"sv,    Dicf::PART_ADJECTIVE },    
-    { "UP"sv,           Dicf::PART_ADJECTIVE },
-    { "VERTICAL"sv,     Dicf::PART_ADJECTIVE },
-    { "VOCALIC"sv,      Dicf::PART_ADJECTIVE },
-    { "VOICED"sv,       Dicf::PART_ADJECTIVE },
-    { "VOICELESS"sv,    Dicf::PART_ADJECTIVE },
+    { "SMALL",          Dicf::PART_ADJECTIVE },
+    { "SNAP",           Dicf::PART_ADJECTIVE },     // OK, music only
+    { "SPACING",        Dicf::PART_ADJECTIVE },
+    { "SOFT",           Dicf::PART_ADJECTIVE },
+    { "SOUTH",          Dicf::PART_ADJECTIVE },
+    { "STRAIGHT",       Dicf::PART_ADJECTIVE },
+    { "STRETCHED",      Dicf::PART_ADJECTIVE },
+    { "SYLLABIC",       Dicf::PART_ADJECTIVE },
+    { "TAILED",         Dicf::PART_ADJECTIVE },
+    { "TALL",           Dicf::PART_ADJECTIVE },
+    { "THREE-D",        { Dicf::PART_ADJECTIVE, "three-D" } },
+    { "THREE-LEGGED",   Dicf::PART_ADJECTIVE },
+    { "TOP",            Dicf::PART_ADJECTIVE },
+    { "TRIANGULAR",     Dicf::PART_ADJECTIVE },
+    { "TRIPLE",         Dicf::PART_ADJECTIVE },
+    { "TROKUTASTI",     Dicf::PART_ADJECTIVE },
+    { "TRADITIONAL",    Dicf::PART_ADJECTIVE },
+    { "TRUNCATED",      Dicf::PART_ADJECTIVE },
+    { "TURNED",         Dicf::PART_ADJECTIVE },
+    { "UNBLENDED",      Dicf::PART_ADJECTIVE },
+    { "UP",             Dicf::PART_ADJECTIVE },
+    { "VERTICAL",       Dicf::PART_ADJECTIVE },
+    { "VOCALIC",        Dicf::PART_ADJECTIVE },
+    { "VOICED",         Dicf::PART_ADJECTIVE },
+    { "VOICELESS",      Dicf::PART_ADJECTIVE },
+    { "WIDE",           Dicf::PART_ADJECTIVE },
 
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "AFRICAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "CHRISTMAS"sv,    Dicf::CAP_TITLE },
-    { "DAVID"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "FITZPATRICK"sv,  Dicf::CAP_TITLE },
-    { "FRANKS"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "FUJI"sv,         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "HERMES"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "HYGIEIA"sv,      Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "JAPAN"sv,        Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "JERUSALEM"sv,    Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "JOVE"sv,         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CHRISTMAS",      Dicf::CAP_TITLE },
+    { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FARSI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FITZPATRICK",    Dicf::CAP_TITLE },
+    { "FRANKS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HERMES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HYGIEIA",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JAPAN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JERUSALEM",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JOVE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "KASHMIRI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KIRGHIZ",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KORANIC",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "LORRAINE"sv,     Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "MARY"sv,         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "ORKHON"sv,       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "SELENA"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "URANUS"sv,       Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "VOLAPUK"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
-    { "YENISEI"sv,      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
+    { "LORRAINE",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
+    { "YENISEI",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
 
     // Some letters
-    { "A"sv,            Dicf::PART_MAYBE_LETTER },
-    { "-A"sv,           Dicf::CAP_ALL },
-    { "AA"sv,           Dicf::CAP_TITLE },
-    { "AE"sv,           Dicf::CAP_TITLE },
-    { "AU"sv,           Dicf::CAP_TITLE },
-    { "B"sv,            Dicf::CAP_TITLE },
-    { "C"sv,            Dicf::CAP_TITLE },
-    { "D"sv,            Dicf::CAP_TITLE },
-    { "E"sv,            Dicf::CAP_TITLE },
-    { "EE"sv,           Dicf::CAP_TITLE },
-    { "EH"sv,           Dicf::CAP_TITLE },
-    { "F"sv,            Dicf::CAP_TITLE },
-    { "G"sv,            Dicf::CAP_TITLE },
-    { "H"sv,            Dicf::CAP_TITLE },
-    { "I"sv,            Dicf::CAP_TITLE },
-    { "J"sv,            Dicf::CAP_TITLE },
-    { "K"sv,            Dicf::CAP_TITLE },
-    { "L"sv,            Dicf::CAP_TITLE },
-    { "M"sv,            Dicf::CAP_TITLE },
-    { "N"sv,            Dicf::CAP_TITLE },
-    //{ "NI"sv,           Dicf::CAP_TITLE },    // widely used in cuneiform, IDK what to do
-    { "O"sv,            Dicf::CAP_TITLE },
-    { "OM"sv,           Dicf::CAP_TITLE },
-    { "OU"sv,           Dicf::CAP_TITLE },
-    { "P"sv,            Dicf::CAP_TITLE },
-    { "Q"sv,            Dicf::CAP_TITLE },
-    { "R"sv,            Dicf::CAP_TITLE },
-    { "S"sv,            Dicf::CAP_TITLE },
-    { "T"sv,            Dicf::CAP_TITLE },
-    { "TH"sv,           Dicf::CAP_TITLE },
-    { "U"sv,            Dicf::CAP_TITLE },
-    { "V"sv,            Dicf::CAP_TITLE },
-    { "W"sv,            Dicf::CAP_TITLE },
-    { "X"sv,            Dicf::CAP_TITLE },
-    { "Y"sv,            Dicf::CAP_TITLE },
-    { "Z"sv,            Dicf::CAP_TITLE },
-    { "J-SIMPLIFIED"sv, Dicf::CAP_TITLE },
+    { "A",              Dicf::PART_MAYBE_LETTER },
+    { "-A",             Dicf::CAP_ALL },
+    { "ALEF",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "AA",             Dicf::CAP_TITLE },
+    { "AE",             Dicf::CAP_TITLE },
+    { "AIN",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "AU",             Dicf::CAP_TITLE },
+    { "BEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "B",              Dicf::CAP_TITLE },
+    { "C",              Dicf::CAP_TITLE },
+    { "D",              Dicf::CAP_TITLE },
+    { "DAD",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "DAL",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "E",              Dicf::CAP_TITLE },
+    { "EE",             Dicf::CAP_TITLE },
+    { "EH",             Dicf::CAP_TITLE },
+    { "F",              Dicf::CAP_TITLE },
+    { "FEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "G",              Dicf::CAP_TITLE },
+    { "GHAIN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "H",              Dicf::CAP_TITLE },
+    { "HAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "I",              Dicf::CAP_TITLE },
+    { "J",              Dicf::CAP_TITLE },
+    { "JEEM",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "K",              Dicf::CAP_TITLE },
+    { "KAF",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "KHAH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "L",              Dicf::CAP_TITLE },
+    { "LAM",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "M",              Dicf::CAP_TITLE },
+    { "MEEM",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "N",              Dicf::CAP_TITLE },
+    { "NOON",           Dicf::CAP_TITLE | Dicf::PART_NOUN },    // OK here, no English noon (12:00)
+    //{ "NI",             Dicf::CAP_TITLE },    // widely used in cuneiform, IDK what to do
+    { "O",              Dicf::CAP_TITLE },
+    { "OM",             Dicf::CAP_TITLE },
+    { "OU",             Dicf::CAP_TITLE },
+    { "P",              Dicf::CAP_TITLE },
+    { "Q",              Dicf::CAP_TITLE },
+    { "QAF",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "R",              Dicf::CAP_TITLE },
+    { "REH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "S",              Dicf::CAP_TITLE },
+    { "SAD",            Dicf::PART_MAYBE_LETTER },
+    { "SEEN",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SHEEN",          Dicf::PART_MAYBE_LETTER },
+    { "T",              Dicf::CAP_TITLE },
+    { "TAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "TEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "THAL",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "THEH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "TH",             Dicf::CAP_TITLE },
+    { "U",              Dicf::CAP_TITLE },
+    { "V",              Dicf::CAP_TITLE },
+    { "W",              Dicf::CAP_TITLE },
+    { "WAW",            Dicf::CAP_TITLE },
+    { "X",              Dicf::CAP_TITLE },
+    { "Y",              Dicf::CAP_TITLE },
+    { "YU",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "YEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "Z",              Dicf::CAP_TITLE },
+    { "ZAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ZAIN",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "J-SIMPLIFIED",   Dicf::CAP_TITLE },
 
     // Some prepositions
     { "WITH"sv,         Dicf::CAP_SMALL },
@@ -807,6 +852,14 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Dives Akuru medial Ya")             // The same
     EX("Dives Akuru initial Ra")
     EX("Dives Akuru medial Ra")
+    EX("Arabic letter Lam with small Arabic letter Tah above")  // Some bug
+    EX("Arabic letter Teh with small Teh above")    // Tricky
+    EX("Arabic letter Reh with small Noon above")   // Same
+    EX("Arabic letter Yeh with two dots below and small Noon above")
+    EX("Arabic letter Peh with small Meem above")
+    EX("Arabic letter Beh with small Meem above")
+    EX("Arabic-Indic Per mille sign")               // Tricky
+    EX("Arabic-Indic Per ten thousand sign")        // Tricky
 };
 
 const std::multiset<PrefixEntry> prefixes {
@@ -867,8 +920,9 @@ const std::map<char32_t, std::string_view> abbrevs {
     // Then Variation Selectors
 };
 
+// Just capitalize them!
 const std::set<std::string_view> cuneiformSymbols {
-    "BAR"
+    "BAR", "LAM"
 };
 
 const std::set<std::string_view> cuneiformKeywords {
@@ -1498,7 +1552,9 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
 
         WordState state = WordState::SMALL;
         auto& word = words[iWord];
-        if (word.dicFlags.have(Dicf::CAP_SMALL)) {
+        if (word.isAllCap) {
+            state = WordState::ALL_CAP;
+        } else if (word.dicFlags.have(Dicf::CAP_SMALL)) {
             state = WordState::SMALL;
         } else if (word.dicFlags.have(Dicf::CAP_ALL)) {
             state = WordState::ALL_CAP;
@@ -1506,8 +1562,6 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
             state = WordState::TITLE;
         } else if (word.isAsIs) {
             state = word.isCapital ? WordState::AS_IS_TITLE : WordState::AS_IS;
-        } else if (word.isAllCap) {
-            state = WordState::ALL_CAP;
         } else if (word.isCapital) {
             state = WordState::TITLE;
         }
