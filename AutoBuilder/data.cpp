@@ -860,13 +860,14 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Arabic letter Beh with small Meem above")
     EX("Arabic-Indic Per mille sign")               // Tricky
     EX("Arabic-Indic Per ten thousand sign")        // Tricky
+    EX("Arabic mathematical Sad")                   // Ambiguous
+    EX("Arabic mathematical Sheen")                 // Ambiguous
 };
 
 const std::multiset<PrefixEntry> prefixes {
     { { "APL"sv, "FUNCTIONAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
     { { "QUADRANT"sv }, PrefixAction::NEXT_CAP },
     { { "BOX"sv, "DRAWINGS"sv }, PrefixAction::NEXT_CAP },
-    { { "ARABIC"sv, "MATHEMATICAL"sv }, PrefixAction::NEXT_CAP },
     { { "MAHJONG"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "DOMINO"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "PLAYING"sv, "CARD"sv }, PrefixAction::REST_CAPSMALL },

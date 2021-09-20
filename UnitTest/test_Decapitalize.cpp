@@ -259,12 +259,12 @@ TEST (Decap, Siyaq)
 
 
 ///
-///  Arabic mathematical prefix
+///  Circled Katakana prefix
 ///
-TEST (Decap, ArabicMath)
+TEST (Decap, CircledKatakana)
 {
-    auto r = decapitalize("ARABIC MATHEMATICAL SAD");
-    EXPECT_EQ("Arabic mathematical Sad", r);
+    auto r = decapitalize("CIRCLED KATAKANA ALPHA BRAVO ALEF CHARLIE");
+    EXPECT_EQ("Circled Katakana Alpha bravo Alef charlie", r);
 }
 
 
