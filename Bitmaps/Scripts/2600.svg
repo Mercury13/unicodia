@@ -7,7 +7,7 @@
    sodipodi:docname="2600.svg"
    width="16"
    height="16"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
    inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\2600.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -31,7 +31,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-nodes="false"
      inkscape:zoom="11.765625"
-     inkscape:cx="25.115538"
+     inkscape:cx="25.158035"
      inkscape:cy="18.358566"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -47,13 +47,14 @@
      id="g840"
      transform="matrix(0.235,0,0,0.23333333,0.43,0.53333333)"
      style="stroke-width:4.27049">
-    <circle
-       cx="32"
-       cy="32"
-       r="30"
+    <ellipse
+       cx="32.212605"
+       cy="32.000137"
        fill="#ffdd67"
        id="circle2"
-       style="stroke-width:18.8318;fill:#ffcc00" />
+       style="fill:#ffdd55;stroke:#d4aa00;stroke-width:4.27049;stroke-miterlimit:4;stroke-dasharray:none"
+       rx="27.652433"
+       ry="27.864338" />
     <g
        fill="#664e27"
        id="g10"
