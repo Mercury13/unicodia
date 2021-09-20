@@ -268,6 +268,7 @@ namespace uc {
         TAILUE,
         TAI_VIET,
         TAMIL,
+        TAMIL_SUPPLEMENT,
         TANGUT,
         TELUGU,
         THAANA,

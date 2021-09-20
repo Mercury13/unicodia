@@ -142,6 +142,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
     { "Nirmala UI,Latha", Ffg::STUB_ON },                                       // Tamil
+    { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { "NotoSansTelugu-Light.ttf", Ffg::LIGHT },                                 // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
@@ -3347,7 +3348,9 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Lisu },
     /// @todo [tofu] Tamil supp
     { 0x11FC0, 0x11FFF,
-            "Tamil Supplement", u8"Тамильский дополнительный", {}, EcScript::Taml },
+            "Tamil Supplement", u8"Тамильский дополнительный",
+            u8"Старинные тамильские дроби и другие символы.",
+            EcScript::Taml, EcFont::TAMIL_SUPPLEMENT },
     // Cuneiform OK
     { 0x12000, 0x123FF,
             "Cuneiform", u8"Клинопись", {}, EcScript::Xsux },
