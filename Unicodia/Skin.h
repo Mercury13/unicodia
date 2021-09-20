@@ -31,9 +31,13 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"
-    #define FAM_BACKUP "NNoto Serif"
     #define FAM_CONDENSED "Arial"
     #define FAM_EMOJI "Segoe UI Emoji"
 #else
     #error Unknown OS
 #endif
+
+#define FNAME_NOTO "NotoSerif-Regular.ttf"
+#define FNAME_NOTOMATH "NotoSansMath-Regular.ttf"
+#define FNAME_NOTOSYM1 "NotoSansSymbols-Regular.ttf"
+#define FNAME_NOTOSYM2 "NotoSansSymbols2-Regular.ttf"

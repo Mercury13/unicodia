@@ -154,8 +154,16 @@ namespace uc {
     enum class EcFont
     {
         NORMAL,
+          Z_NOR_1,
+          Z_NOR_2,
+          Z_NOR_3,
+          Z_NOR_4,
+          Z_NOR_5,
+          Z_NOR_6,
          NOTO,
-         NOTO_SYMBOL,
+         EMOJI_BIGGER,
+          Z_SYM_1,
+          Z_SYM_2,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
@@ -163,6 +171,7 @@ namespace uc {
          HISTORIC_BIGGER,
          BLOCK,
          PUNCTUATION,
+           Z_PUN_1,
          MATH,
          MUSIC,
          MUSIC_BIGGER,
@@ -295,6 +304,7 @@ namespace uc {
         DESC_STD      = 1<<6,   ///< Use standard font in descriptions, not this
         DESC_BIGGER   = 1<<7,   ///< Use bigger font in descriptions
         DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
+        FALL_TO_NEXT  = 1<<9,   ///< Also use the next font if failed to find
     };
 
     DEFINE_ENUM_OPS(Ffg)
@@ -305,7 +315,7 @@ namespace uc {
         std::string_view v;
         constexpr operator const std::string_view& () const { return v; }
 
-        constexpr StyleSheet() = default;
+        explicit constexpr StyleSheet() = default;
         explicit constexpr StyleSheet(std::string_view x) : v(x) {}
     };
 
@@ -335,7 +345,7 @@ namespace uc {
         consteval Font(
                 std::string_view aFamily,
                 Flags<Ffg> aFlags = {},
-                StyleSheet aStylesheet = {},
+                StyleSheet aStylesheet = StyleSheet{},
                 Percent aSizeAdjust = Percent())
             : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}

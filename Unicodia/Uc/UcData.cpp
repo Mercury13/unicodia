@@ -2,6 +2,7 @@
 
 // Qt
 #include <QFontDatabase>
+#include <QFontMetrics>
 
 // Libs
 #include "i_TempFont.h"
@@ -20,18 +21,26 @@ constexpr QChar ZWSP(0x200B);
 
 constinit const uc::Font uc::fontInfo[] = {
     /// @todo [tofu] 10E60, that’s Arabic too
-    { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Math,Noto Sans Symbols,"
-            "Noto Sans Symbols2,Segoe UI Historic" },                           // Normal
-    { FAM_BACKUP },                                                             // Noto
-    { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", 120_pc },          // Noto symbol
-    { "Noto Sans Symbols2" },                                                   // Noto symbol2
-    { "Noto Sans Symbols2", Ffg::DESC_BIGGER },                                 // Noto symbol2 bigger
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
+      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …2
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
+      { "Segoe UI Historic" },                                                  // …6
+    { FNAME_NOTO },                                                             // Noto
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Noto symbol
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …1
+      { FNAME_NOTOSYM2, 120_pc },                                               // …2
+    { FNAME_NOTOSYM2 },                                                         // Noto symbol2
+    { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
     { "Segoe UI Historic", 115_pc },                                            // Historic bigger
     { "Lucida Sans Unicode" },                                                  // Block
-    { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP },                         // Punctuation
-    { "Noto Sans Math" },                                                       // Math
+    { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                 // Punctuation — both are built-in
+      { FNAME_NOTO },                                                           // …1
+    { FNAME_NOTOMATH },                                                         // Math
     { "NotoMusic-Regular.ttf", 110_pc },                                        // Music
     { "NotoMusic-Regular.ttf", 150_pc },                                        // Music bigger
     { "NotoMusic-Regular.ttf" },                                                // Music normal
@@ -45,6 +54,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
+        // Two fonts OK, as they both are built-in
     { FAM_DEFAULT ",Sylfaen" },                                                 // Armenian
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
@@ -52,7 +62,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, 110_pc },               // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
-    { "NotoSansBhaiksuki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, {}, 130_pc }, // Bhaiksuki
+    { "NotoSansBhaiksuki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 130_pc }, // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
     { "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },                           // Buginese
     { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
@@ -67,7 +77,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft YaHei" },                                                      // CJK fallback
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, {}, 110_pc },                    // Devanagari
+    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, 110_pc },                    // Devanagari
     { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -120,8 +130,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOriyaUI-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 120_pc }, // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
-        /// @todo [font engine] Phaistos disc — rename font
-    { "Noto Sans Symbols2", 150_pc },                                           // Phaistos disc
+    { FNAME_NOTOSYM2, 150_pc },                                                 // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
@@ -2592,7 +2601,7 @@ constinit const uc::Block uc::blocks[] {
                         "пользовательских интерфейсах."
                 "<p>Также символы, используемые в системах компьютерной математики вроде MathType (он же ''Microsoft Equation'') "
                         "и TᴇX (читается «тех») для создания многоэтажных скобок."sv,
-            EcScript::NONE, EcFont::NOTO_SYMBOL },
+            EcScript::NONE, EcFont::EMOJI_BIGGER },
     // Control pictures OK
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих"sv,
@@ -4610,6 +4619,8 @@ struct uc::LoadedFont
     QList<QString> families;
     QString familiesComma;
     intptr_t tempId = FONT_NOT_INSTALLED;
+    std::unique_ptr<QFont> probe {};
+    std::unique_ptr<QFontMetrics> probeMetrics;
 };
 
 
@@ -4667,6 +4678,13 @@ void uc::Font::load() const
         newLoaded->familiesComma = str::toQ(family);
         newLoaded->families = toQList(family);
     }
+
+    // Make probe font
+    get(newLoaded->probe, 50);
+        // force EXACT match
+    newLoaded->probe->setStyleStrategy(static_cast<QFont::StyleStrategy>(
+            QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality | QFont::PreferAntialias));
+    newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
 }
 
 
@@ -4684,14 +4702,10 @@ const QString& uc::Font::familiesComma() const
 }
 
 
-bool uc::Font::doesSupportChar(char32_t) const
+bool uc::Font::doesSupportChar(char32_t subj) const
 {
-    /// @todo [urgent] supportsChar
     load();
-//    if (!q.raw)
-//        return true;
-//    return q.raw->supportsCharacter(static_cast<uint>(x));
-    return false;
+    return q.loaded->probeMetrics->inFontUcs4(subj);
 }
 
 
@@ -4807,7 +4821,7 @@ uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
 }
 
 
-const uc::Font& uc::Cp::font(const Block*& hint) const
+const uc::Font& uc::Cp::firstFont(const Block*& hint) const
 {
     // Priority: block → script — block’s script
     hint = blockOf(subj, hint);
@@ -4828,6 +4842,19 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
     // Block’s script
     return hint->script().font();
 }
+
+
+const uc::Font& uc::Cp::font(const Block*& hint) const
+{
+    auto v = &firstFont(hint);
+    while (v->flags.have(Ffg::FALL_TO_NEXT)) {
+        if (v->doesSupportChar(subj))
+            break;
+        ++v;
+    }
+    return *v;
+}
+
 
 
 namespace {

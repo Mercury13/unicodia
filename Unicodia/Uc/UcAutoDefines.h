@@ -424,6 +424,7 @@ namespace uc {
         const Numeric& numeric() const;
         EcScript ecScriptEx(const Block*& hint) const;
         const Script& scriptEx(const Block*& hint) const;
+        const Font& firstFont(const Block*& hint) const;
         const Font& font(const Block*& hint) const;
         SampleProxy sampleProxy(const Block*& hint) const;
         QString osProxy() const;
