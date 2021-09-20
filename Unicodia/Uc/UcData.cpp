@@ -1144,7 +1144,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>''(В «Юникодии» почему-то нарисовало правильный знак через ка+вираму+дха+и{{_}}/ та+ка+вираму, "
                     "и копирование через буфер даст неправильную последовательность, "
                     "но во всех браузерах, даже в древнем Internet Explorer, всё работает верно.)''"
-            "<p>Открыт в XIX{{_}}веке и довольно быстро расшифрован.",
+            "<p>Кхароштхи открыто в XIX{{_}}веке и довольно быстро расшифровано.",
                 EcFont::KHAROSHTHI },
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     /// @todo [desc] Describe Khmer, interesting script
