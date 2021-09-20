@@ -1852,7 +1852,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "(1560–1627), а довёл до компьютерного шрифта институт ''Beth Mardutho'' для издания Антиохийской Библии.</p>"sv,
                 EcFont::SYRIAC },
     // Tagbanwa OK, W10 off → installed Google Noto
-            /// @todo [describe] Another interesting script            
+            /// @todo [desc] Another interesting script
     { "Tagb"sv, QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Тагбанва"sv, u8"≈1300"sv,
@@ -2478,26 +2478,27 @@ constinit const uc::Block uc::blocks[] {
                 "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки.",
             EcScript::Deva },
     // Phonetic ext OK
-    /// @todo [desc] Phonetic ext
     { 0x1D00, 0x1D7F,
-            "Phonetic Extensions", u8"Фонетические расширения"sv },
+            "Phonetic Extensions", u8"Фонетические расширения",
+            u8"Символы Уральского фонетического алфавита, фонетики древнеирландских языков, Оксфордского словаря английского языка, "
+                        "фонетике индейских и русского." },
     // Phonetic ext supp OK
-    /// @todo [desc] Phonetic ext supp
     { 0x1D80, 0x1DBF,
-            "Phonetic Extensions Supplement",
-            u8"Фонетические расширения дополнительные"sv },
+            "Phonetic Extensions Supplement", u8"Фонетические расширения дополнительные",
+            u8"Специализированные и устаревшие формы Международного фонетического алфавита." },
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF,
             "Combining Diacritical Marks Supplement",
-            u8"Диакритические метки дополнительные"sv,
+            u8"Диакритические метки дополнительные",
             u8"Символы Уральского фонетического алфавита, средневековых сокращений "
                     "и Teuthonista (системы записи немецких диалектов).",
         EcScript::NONE, EcFont::NOTO },
     // Lat ex OK
-    /// @todo [desc] Lat ex
     { 0x1E00, 0x1EFF,
-            "Latin Extended Additional",
-            u8"Латиница расширенная дополнительная" },
+            "Latin Extended Additional", u8"Латиница расширенная дополнительная",
+            u8"[[pt:precomposed|Монолитные]] символы с различными метками. "
+                    "Девяносто из этих символов вьетнамские, около десятка{{-}}средневековые, "
+                    "в том числе заглавный эсцет '''ẞ'''." },
     // Greek ex OK, though DejaVu is a big gun
     { 0x1F00, 0x1FFF,
             "Greek Extended", u8"Греческий расширенный",
@@ -3035,10 +3036,9 @@ constinit const uc::Block uc::blocks[] {
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Small variants OK
-    /// @todo [desc] Small variants
     { 0xFE50, 0xFE6F,
-            "Small Form Variants", u8"Малые формы знаков препинания"sv,
-            {},
+            "Small Form Variants", u8"Малые формы знаков препинания",
+            u8"Уменьшенные знаки препинания для совместимости с китайской кодировкой CNS 11643.",
             EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
     { 0xFE70, 0xFEFF,
@@ -3283,6 +3283,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x111E0, 0x111FF,
             "Sinhala Archaic Numbers", u8"Старые сингальские цифры",
             u8"Старинная непозиционная система счисления, использовавшаяся в Шри-Ланке до начала XIX{{_}}века." },
+    // Khojki OK
     { 0x11200, 0x1124F,
             "Khojki", u8"Ходжки", {}, EcScript::Khoj },
     { 0x11280, 0x112AF,
