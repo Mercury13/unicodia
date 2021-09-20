@@ -18,28 +18,28 @@ const QString uc::Font::qempty;
 
 constexpr QChar ZWSP(0x200B);
 
-constinit const uc::Font uc::fontInfo[] {
+constinit const uc::Font uc::fontInfo[] = {
     /// @todo [tofu] 10E60, that’s Arabic too
     { FAM_DEFAULT "," FAM_BACKUP ",Segoe UI Emoji,Noto Sans Math,Noto Sans Symbols,"
             "Noto Sans Symbols2,Segoe UI Historic" },                           // Normal
     { FAM_BACKUP },                                                             // Noto
-    { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", {}, {}, 120_pc },  // Noto symbol
+    { "Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2", 120_pc },          // Noto symbol
     { "Noto Sans Symbols2" },                                                   // Noto symbol2
     { "Noto Sans Symbols2", Ffg::DESC_BIGGER },                                 // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
-    { "Segoe UI Historic", {}, {}, 115_pc },                                    // Historic bigger
+    { "Segoe UI Historic", 115_pc },                                            // Historic bigger
     { "Lucida Sans Unicode" },                                                  // Block
     { FAM_EMOJI "," FAM_DEFAULT ",Arial," FAM_BACKUP },                         // Punctuation
     { "Noto Sans Math" },                                                       // Math
-    { "NotoMusic-Regular.ttf", {}, {}, 110_pc },                                // Music
-    { "NotoMusic-Regular.ttf", {}, {}, 150_pc },                                // Music bigger
+    { "NotoMusic-Regular.ttf", 110_pc },                                        // Music
+    { "NotoMusic-Regular.ttf", 150_pc },                                        // Music bigger
     { "NotoMusic-Regular.ttf" },                                                // Music normal
     { "Gadugi" },                                                               // Gadugi
     { "Segoe UI" },                                                             // Segoe
     { "DejaVuSerif.ttf" },                                                      // DejaVu
     { "FunkySample.ttf" },                                                      // Funky
-    { "FunkySample.ttf", Ffg::STUB_ON, {}, 115_pc },                            // Funky bigger
+    { "FunkySample.ttf", Ffg::STUB_ON, 115_pc },                                // Funky bigger
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
@@ -47,11 +47,11 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
     { FAM_DEFAULT ",Sylfaen" },                                                 // Armenian
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
-    { "NotoSansBalinese-Regular.ttf", {}, "padding-bottom: 12%;", 90_pc },      // Balinese
+    { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
     /// @todo [future] Stub is vice-versa because of missing circle
-    { "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, {}, 110_pc },           // Bamum
+    { "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, 110_pc },               // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
-    { "NotoSerifBengali-Regular.ttf", {}, {}, 120_pc },                         // Bengali
+    { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, {}, 130_pc }, // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
     { "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },                           // Buginese
@@ -63,7 +63,7 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
             /// @todo [fonts,urgent] Right now we install a TT collection, and we need just SC!!
-    { "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD | Ffg::STUB_OFF, {}, 120_pc },  // CJK
+    { "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD | Ffg::STUB_OFF, 120_pc },      // CJK
     { "Microsoft YaHei" },                                                      // CJK fallback
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
@@ -75,8 +75,8 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
-    { "NotoSerifGujarati-Regular.ttf", {}, {}, 110_pc },                        // Gujarati
-    { "NotoSansGurmukhiUI-Regular.ttf", {}, {}, 110_pc },                       // Gurmukhi
+    { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
+    { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
@@ -84,14 +84,14 @@ constinit const uc::Font uc::fontInfo[] {
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf", Ffg::STUB_ON },                             // Kaithi
-    { "NotoSerifKannada-Light.ttf", Ffg::LIGHT, {}, 110_pc },                   // Kannada
+    { "NotoSerifKannada-Light.ttf", Ffg::LIGHT, 110_pc },                       // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },      // Kharoshthi
-    { "BabelStoneKhitanSmallLinear.ttf", {}, {}, 115_pc },                      // Khitan small
-    { "NotoSansKhmerUI-Regular.ttf", {}, {}, 110_pc },                          // Khmer — initial Noto loses umlauts
+    { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
+    { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Khojki
     { "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },                            // Lanna
-    { "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;" },                     // Lao
+    { "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;"_sty },                 // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
@@ -110,17 +110,18 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifNyiakengPuachueHmong-Regular.ttf" },                            // NP Hmong
     { "NotoSansNushu-Regular.ttf" },                                            // Nushu
-    { "NotoSansOgham-Regular.ttf", {}, {}, 110_pc },                            // Ogham
+    { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki
     { "OldHungarian.ttf" },                                                     // Old Hungarian runes
     { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
-    { "NotoSansOriyaUI-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, {}, 120_pc }, // Oriya
+    { "NotoSansOriyaUI-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 120_pc }, // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
-    { "Noto Sans Symbols2", {}, {}, 150_pc },                                   // Phaistos disc
+        /// @todo [font engine] Phaistos disc — rename font
+    { "Noto Sans Symbols2", 150_pc },                                           // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
@@ -129,28 +130,28 @@ constinit const uc::Font uc::fontInfo[] {
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON },                         // Saurashtra
     { "NotoSansSharada-Regular.ttf", Ffg::STUB_ON },                            // Sharada
-    { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, {}, 145_pc }, // SignWriting
+    { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON },                          // Sundanese
     { "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON },                        // Syloti Nagri
-    { "SertoAntochBible_2020_Release.ttf", {}, {}, 120_pc },                    // Syriac
+    { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
     { "NotoSansTagalog-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },         // Tagalog
     { "NotoSansTagbanwa-Regular.ttf" },                                         // Tagbanwa
     { "Microsoft Tai Le" },                                                     // Tai Le
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
     { "Nirmala UI,Latha", Ffg::STUB_ON },                                       // Tamil
-    { "NotoSerifTangut-Regular.ttf", {}, {}, 125_pc },                          // Tangut
+    { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { "NotoSansTelugu-Light.ttf", Ffg::LIGHT },                                 // Telugu
-    { "MV Boli", {}, {}, 110_pc },                                              // Thaana
-    { "Leelawadee,Leelawadee UI", Ffg::STUB_ON, "padding-bottom:10%;", 110_pc }, // Thai
+    { "MV Boli", 110_pc },                                                      // Thaana
+    { "Leelawadee,Leelawadee UI", Ffg::STUB_ON, "padding-bottom:10%;"_sty, 110_pc }, // Thai
         // Tibetan chars are VERY high → 90%
-    { "NotoSerifTibetan-Regular.ttf", {}, {}, 90_pc },                          // Tibetan
+    { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf" },                                          // Yezidi
-    { "Microsoft Yi Baiti", {}, {}, 120_pc },                                   // Yi
+    { "Microsoft Yi Baiti", 120_pc },                                           // Yi
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));

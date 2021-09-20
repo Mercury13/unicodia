@@ -300,6 +300,14 @@ namespace uc {
 
     struct LoadedFont;
 
+    struct StyleSheet {
+        std::string_view v;
+        constexpr operator const std::string_view& () const { return v; }
+
+        constexpr StyleSheet() = default;
+        explicit constexpr StyleSheet(std::string_view x) : v(x) {}
+    };
+
     struct Font
     {
         static const QString qempty;
@@ -314,12 +322,37 @@ namespace uc {
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
             TempFont tempFont;
+            constexpr Q() = default;
+            consteval Q(const Q&) {};
         } q {};
         void load() const;
         const QFont& get(std::unique_ptr<QFont>& font, int size) const;
         bool doesSupportChar(char32_t x) const;
         const QString& onlyFamily() const;
         const QString& familiesComma() const;
+
+        consteval Font(
+                std::string_view aFamily,
+                Flags<Ffg> aFlags = {},
+                StyleSheet aStylesheet = {},
+                Percent aSizeAdjust = Percent())
+            : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
+              sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                Flags<Ffg> aFlags,
+                Percent aSizeAdjust)
+            : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                Percent aSizeAdjust)
+            : family(aFamily), sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                StyleSheet aStylesheet,
+                Percent aSizeAdjust = Percent())
+            : family(aFamily), styleSheet(aStylesheet),
+              sizeAdjust(aSizeAdjust) {}
     };
     extern const Font fontInfo[];
 
@@ -556,3 +589,6 @@ namespace uc {
     Flags<OldComp> cpOldComps(char32_t cp);
 
 }   // namespace uc
+
+consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
+    { return uc::StyleSheet{std::string_view { data, n }}; }
