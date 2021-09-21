@@ -65,7 +65,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic Noto
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
-    { FAM_DEFAULT ",Sylfaen" },                                                 // Armenian
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
+      { "NotoSerifArmenian-Regular.ttf" },                                      // …1
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
     /// @todo [future] Stub is vice-versa because of missing circle
@@ -497,28 +498,28 @@ constinit const uc::Script uc::scriptInfo[] {
     // Arabic OK, three fonts, incl. Windows Amiri, Google Noto and SIL Sheherazade
     { "Arab"sv, QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Арабский"sv, u8"IV—VI век"sv,
-        u8"арабский, персидский, урду, уйгурский, пуштунский…"sv,
+        u8"Арабский", u8"IV—VI век",
+        u8"арабский, персидский, урду, уйгурский, пуштунский…",
         u8"Письменность развилась из [[ps:Armi|арамейской]] через [[ps:Syrc|сирийскую]] и/или [[ps:Nbat|набатейскую]]. "
                 "Арабский язык тесно связан с исламом; на этом языке написан Коран (610–632). "
                 "Арабский халифат насаждал как ислам, так и вязь. "
-                "Многие исламские народы (турки, казахи, башкиры) пользовались арабицей до начала XX{{_}}века.</p>"
+                "Многие исламские народы (турки, казахи, башкиры) пользовались арабицей до начала XX{{_}}века."
             "<p>Компьютерная арабица осложняется написанием арабских букв: у каждой есть обособленная, начальная, средняя и конечная форма. "
                 "В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. "
-                "Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</p>"sv,
+                "Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.",
                 EcFont::ARABIC },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
-    { "Armi"sv, QFontDatabase::Any,
+    { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Имперский арамейский"sv, u8"IX–VII в. до н.э."sv,
-        u8"имперский арамейский <i>(также канцелярский арамейский{{-}}язык Персии 500—329 до н.э.)</i>",
+        u8"Имперский арамейский", u8"IX–VII в. до н.э.",
+        u8"имперский арамейский ''(также канцелярский арамейский{{-}}язык Персии 500—329{{bc}})''",
         u8"На основе арамейского в Ахеменидской империи создали книжный язык, "
                     " кодифицированный настолько, что крайне сложно опознать время и место конкретного документа. "
                 "С завоеванием Персии Александром Македонским началась фрагментация языка и дальнейшее формирование "
                     "[[ps:Syrc|сирийских]] языков (предков [[ps:Arab|арабского]]) "
-                    "и иудейских (предков [[ps:Hebr|иврита]]).</p>"sv,
+                    "и иудейских (предков [[ps:Hebr|иврита]]).",
                 EcFont::ARAMAIC },
-    /// @todo [tofu, BMP] Noto is ugly and has tofu 0560 and 0588, W7 has tofu 058D+.
+    // Armenian OK, Cambria+Noto is more than nice!
     { "Armn"sv, QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Армянский"sv, u8"405"sv,
@@ -1906,7 +1907,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "приписываться к слогу в конце, итого 2·3=6 тонов.</p>",
                 EcFont::TAILUE },
     // Tamil BMP OK, different fonts in W10 and W7
-    /// @todo [tofu, P1] Aux. Tamil characters are still tofu
     { "Taml"sv, QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Тамильский"sv, u8"VI—IX век"sv,
@@ -2278,7 +2278,7 @@ constinit const uc::Block uc::blocks[] {
                     "И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, "
                     "что и дало букве {{sm|Ԥ}} место в Юникоде."sv,
             EcScript::Cyrl },
-    /// @todo [tofu] Armenian 0560, 0588 (both are 2018)
+    // Armenian OK
     { 0x0530, 0x058F,
             "Armenian", u8"Армянский", {}, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
@@ -2313,7 +2313,7 @@ constinit const uc::Block uc::blocks[] {
             u8"<p>Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века."sv,
             EcScript::Syrc },
-    /// @todo [tofu] 08BE+, all are 2020, 11 chars
+    // Arabic ex A OK
     { 0x08A0, 0x08FF,
             "Arabic Extended-A", u8"Арабский расширенный A"sv,
             u8"<p>Дополнительные арабские буквы для рохинджа ''(Мьянма)'', белорусского, татарского, башкирского, "
@@ -2409,7 +2409,7 @@ constinit const uc::Block uc::blocks[] {
     // Khmer OK
     { 0x1780, 0x17FF,
             "Khmer", u8"Кхмерский", {}, EcScript::Khmr },
-    /// @todo [wrong glyph] 18A9
+    /// @todo [semi-tofu,wrong glyph] 18A9
     { 0x1800, 0x18AF,
             "Mongolian", u8"Монгольский", {}, EcScript::Mong },
     // Canadian extended OK
@@ -3438,7 +3438,7 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
             EcScript::Tang },
-    /// @todo [tofu] We should choose from several fonts, and current engine does tot permit that.
+    /// @todo [tofu] We should choose from several fonts, and current engine does not permit that.
     /// @todo [desc] ???
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv,

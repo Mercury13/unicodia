@@ -187,6 +187,7 @@ namespace uc {
         ARABIC_NOTO,
         ARAMAIC,
         ARMENIAN,
+         Z_ARM_1,
         AVESTAN,
         BALINESE,
         BAMUM,
