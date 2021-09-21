@@ -139,8 +139,7 @@ void TableCache::paint(
         drop();
         fWidget = w;
     }
-    drop();
-    //dropExceptMe();
+    dropExceptMe();
 
     // Partial drop
     if (fWidget) {  // just for reliability
