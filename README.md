@@ -29,9 +29,7 @@ x64 only. My tofu policy is: **W10 should support everything possible, W7 base p
   * All chars of Unicode 13 are drawn, even badly.
   * Basic search.
   * Icon/logo, About, legal info.
-* Unicode 14: when **one** of these happens…
-  * Any of U14 scripts is ready, incl. Arabic but excl. other amendments (even greatly revamped Egyptian hieroglyphs).
-  * Someone releases emoji for U14, and I manage to pull them somehow.
+* Unicode 14: when any of U14 scripts is ready, incl. Arabic and emoji but excl. other amendments (even greatly revamped Egyptian hieroglyphs).
 * Future tools (**not** milestones of 1.0):
   * Emoji tools: ligatures, more comprehensive reference.
   * Better CJK reference.
