@@ -22,6 +22,7 @@ x64 only. My tofu policy is: **W10 should support everything possible, W7 base p
 * W11 will probably work, but there will be problems for two reasons.
   * Qt is a large wad of software, and something may go wrong (like Embarcadero VCL + Aero Flip)
   * No one checked fonts. Even in W7 and W10 they are different.
+* Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi.
 
 # Release policy
 * Version 0.1: when tofu policy of base plane is fulfilled.
