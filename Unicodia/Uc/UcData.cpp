@@ -50,9 +50,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                 // Punctuation — both are built-in
       { FNAME_NOTO },                                                           // …1
     { FNAME_NOTOMATH },                                                         // Math
-    { "NotoMusic-Regular.ttf", 110_pc },                                        // Music
-    { "NotoMusic-Regular.ttf", 150_pc },                                        // Music bigger
-    { "NotoMusic-Regular.ttf" },                                                // Music normal
+    { FNAME_NOTOMUSIC, 110_pc },                                                // Music
+    { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
+    { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { "Segoe UI" },                                                             // Segoe
     { "DejaVuSerif.ttf" },                                                      // DejaVu
@@ -841,11 +841,11 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Цифры берутся из такри."sv,
                 EcFont::DOGRA },
     // Deseret OK, W10 Segoe UI Symbol, plane 1
-    { "Dsrt"sv, QFontDatabase::Any,
+    { "Dsrt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Дезеретская (мормонская)"sv, u8"1854",
-        u8"английский, отдельные языки индейцев"sv,
-        u8"<p>В XIX{{_}}веке было множество попыток придумать фонетический алфавит для английского, "
+        u8"Дезеретская (мормонская)", u8"1854",
+        u8"английский, отдельные языки индейцев",
+        u8"В XIX{{_}}веке было множество попыток придумать фонетический алфавит для английского, "
                 "и Бригам Янг, второй руководитель мормонской церкви, был не первый и не последний. "
                 "Считалось, что это позволит иммигрантам лучше ознакомиться с английским. "
                 "Основную работу выполнили Парли Пратт и Джордж Уотт."
@@ -854,7 +854,8 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В новом алфавите вышло четыре книги. Когда Янг осознал, сколько денег потребуется, чтобы издать "
                 "библиотеку, эксперименты прекратились."
             "<p>В 1997 алфавит внесён в Реестр искусственных письменностей. "
-                "Исключён в 2001, когда мормонский появился в настоящем Юникоде."sv },
+                "Исключён в 2001, когда мормонский появился в настоящем Юникоде.",
+                EcFont::SYMBOL },
     // Egyptian hiero OK
     { "Egyp"sv, QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,

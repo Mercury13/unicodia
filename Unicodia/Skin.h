@@ -41,3 +41,4 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 #define FNAME_NOTOMATH "NotoSansMath-Regular.ttf"
 #define FNAME_NOTOSYM1 "NotoSansSymbols-Regular.ttf"
 #define FNAME_NOTOSYM2 "NotoSansSymbols2-Regular.ttf"
+#define FNAME_NOTOMUSIC "NotoMusic-Regular.ttf"
