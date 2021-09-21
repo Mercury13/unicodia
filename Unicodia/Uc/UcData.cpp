@@ -146,7 +146,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
-    { "NotoSansHanifiRohingya-Regular.ttf" },                                   // Rohingya (Hanifi)
+    { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
     { "NotoSansRunic-Regular.ttf" },                                            // Runic
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON },                         // Saurashtra
