@@ -94,6 +94,7 @@ namespace uc {
         Mlym,   // Malayalam
         Mong,   // Mongolian (old)
         Mtei,   // Meitei Mayek
+        Mult,   // Multani
         Mymr,   // Myanmar
         Narb,   // North Arabian
         Nbat,   // Nabataean
@@ -188,7 +189,6 @@ namespace uc {
         Modi = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
         Mroo = Zyyy,        // beyond BMP
-        Mult = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
         Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)

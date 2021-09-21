@@ -242,6 +242,7 @@ namespace uc {
         MEETEI,
         MEROITIC,
         MONGOLIAN,
+        MULTANI,
         MYANMAR,
         NABATAEAN,
         NKO,
