@@ -15,6 +15,8 @@
 // Unicode data
 #include "UcAutoDefines.h"
 
+constexpr char32_t NO_TRIGGER = 0xDEADBEEF;
+
 /// ALL NAMES HERE ARE IN UTF-8!
 
 template <class T, size_t N>
@@ -162,8 +164,8 @@ namespace uc {
           Z_NOR_6,
          NOTO,
          EMOJI_BIGGER,
-          Z_SYM_1,
-          Z_SYM_2,
+          Z_EMB_1,
+          Z_EMB_2,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
@@ -339,11 +341,11 @@ namespace uc {
             constexpr Q() = default;
             consteval Q(const Q&) {};
         } q {};
-        void load() const;
-        const QFont& get(std::unique_ptr<QFont>& font, int size) const;
+        void load(char32_t trigger) const;
+        const QFont& get(std::unique_ptr<QFont>& font, int size, char32_t trigger) const;
         bool doesSupportChar(char32_t x) const;
-        const QString& onlyFamily() const;
-        const QString& familiesComma() const;
+        const QString& onlyFamily(char32_t trigger) const;
+        const QString& familiesComma(char32_t trigger) const;
 
         consteval Font(
                 std::string_view aFamily,
@@ -367,6 +369,7 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
+        Font(const Font&) = delete;
     };
     extern const Font fontInfo[];
 

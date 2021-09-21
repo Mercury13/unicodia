@@ -207,7 +207,7 @@ namespace {
 }
 
 
-TempFont installTempFontFull(QString fname)
+TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
 {
     int id = -1;
     if (!tempPrefix.empty() && fname.endsWith(".ttf")) {
@@ -231,7 +231,8 @@ TempFont installTempFontFull(QString fname)
     auto families = QFontDatabase::applicationFontFamilies(id);
     if constexpr (debugTempFont) {
         for (auto& v : families) {
-            MSG("Installed " << v.toStdString() << ", id=" << id);
+            MSG("Installed " << v.toStdString() << ", id=" << id << " for the sake of "
+                << std::hex << static_cast<uint32_t>(trigger) << std::dec);
         }
     }
     return { id, std::move(families) };
@@ -250,8 +251,8 @@ QString expandTempFontName(std::string_view fname)
 }
 
 
-TempFont installTempFontRel(std::string_view fname)
+TempFont installTempFontRel(std::string_view fname, char32_t trigger)
 {
     QString absPath = expandTempFontName(fname);
-    return installTempFontFull(absPath);
+    return installTempFontFull(absPath, trigger);
 }

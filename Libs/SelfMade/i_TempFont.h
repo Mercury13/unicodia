@@ -12,6 +12,6 @@ struct TempFont {
     QList<QString> families;
 };
 
-TempFont installTempFontFull(QString fname);
+TempFont installTempFontFull(QString fname, char32_t trigger);
 QString expandTempFontName(std::string_view fname);
-TempFont installTempFontRel(std::string_view fname);
+TempFont installTempFontRel(std::string_view fname, char32_t trigger);

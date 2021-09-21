@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu  [-] try smth from system
-constexpr bool FORCE_TOFU = true;
+constexpr bool FORCE_TOFU = false;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -38,7 +38,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Historic" },                                                  // …6
     { FNAME_NOTO },                                                             // Noto
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Noto symbol
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Emoji bigger
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …1
       { FNAME_NOTOSYM2, 120_pc },                                               // …2
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
@@ -3141,12 +3141,14 @@ constinit const uc::Block uc::blocks[] {
             "<p>Также в этом блоке находятся символы древнегреческих единиц измерения."
             "<p>Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. "
                 "В древней Греции ''литра''{{-}}мера массы и монета. "
-                "Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''."sv  },
+                "Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.",
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Ancient symbols OK
     { 0x10190, 0x101CF,
             "Ancient Symbols", u8"Древние символы",
             u8"Римские символы для денег, мер и весов. "
-                    "Также греческое библейское сокращение «крест» (реже «Христос»)." },
+                    "Также греческое библейское сокращение «крест» (реже «Христос»).",
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Phaistos Disc OK
     { 0x101D0, 0x101FF,
         "Phaistos Disc", u8"Фестский диск"sv,
@@ -4681,7 +4683,7 @@ namespace {
 }   // anon namespace
 
 
-void uc::Font::load() const
+void uc::Font::load(char32_t trigger) const
 {
     // Loaded?
     if (q.loaded)
@@ -4701,7 +4703,7 @@ void uc::Font::load() const
     // Create/load it
     if (isFontFname(family)) {
         // FILE
-        auto tempFont = installTempFontRel(family);
+        auto tempFont = installTempFontRel(family, trigger);
         newLoaded->tempId = tempFont.id;
         newLoaded->familiesComma = tempFont.families.join(',');
         newLoaded->families = std::move(tempFont.families);
@@ -4712,39 +4714,39 @@ void uc::Font::load() const
     }
 
     // Make probe font
-    get(newLoaded->probe, 50);
+    get(newLoaded->probe, 50, trigger);
         // force EXACT match
     newLoaded->probe->setStyleStrategy(STRATEGY_TOFU);
     newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
 }
 
 
-const QString& uc::Font::onlyFamily() const
+const QString& uc::Font::onlyFamily(char32_t trigger) const
 {
-    load();
+    load(trigger);
     return (q.loaded->families.size() == 1) ? q.loaded->families[0] : qempty;
 }
 
 
-const QString& uc::Font::familiesComma() const
+const QString& uc::Font::familiesComma(char32_t trigger) const
 {
-    load();
+    load(trigger);
     return q.loaded->familiesComma;
 }
 
 
 bool uc::Font::doesSupportChar(char32_t subj) const
 {
-    load();
+    load(subj);
     return q.loaded->probeMetrics->inFontUcs4(subj);
 }
 
 
-const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
+const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size, char32_t trigger) const
 {
     if (!font) {
         //load();  onlyFamily WILL load
-        auto& family1 = onlyFamily();
+        auto& family1 = onlyFamily(trigger);
         font.reset(new QFont(family1, sizeAdjust.apply(size), QFont::Normal));
         if (family1.isEmpty())
             font->setFamilies(q.loaded->families);

@@ -308,7 +308,7 @@ namespace {
             str::append(s, '\'');
             if (useCustom) {
                 str::append(s, " face='"sv);
-                s += font.familiesComma();
+                s += font.familiesComma(NO_TRIGGER);
                 str::append(s, '\'');
             }
             str::append(s, '>');
