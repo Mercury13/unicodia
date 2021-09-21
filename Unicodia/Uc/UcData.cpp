@@ -30,7 +30,6 @@ constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
 constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
 
 constinit const uc::Font uc::fontInfo[] = {
-    /// @todo [tofu] 10E60, that’s Arabic too
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …2
