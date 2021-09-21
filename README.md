@@ -22,3 +22,17 @@ x64 only. My tofu policy is: **W10 should support everything possible, W7 base p
 * W11 will probably work, but there will be problems for two reasons.
   * Qt is a large wad of software, and something may go wrong (like Embarcadero VCL + Aero Flip)
   * No one checked fonts. Even in W7 and W10 they are different.
+
+# Release policy
+* Version 0.1: when tofu policy of base plane is fulfilled.
+* Version 1.0: when **both** happen…
+  * All chars of Unicode 13 are drawn, even badly.
+  * Basic search.
+* Unicode 14: when one of three happens…
+  * Scheherazade (a well-known Arabic font) is updated to U14.
+  * Any of U14 scripts is ready.
+  * Someone releases emoji for U14, and I manage to pull them somehow.
+* Future tools (**not** milestones of 1.0):
+  * Emoji tools: ligatures, more comprehensive reference.
+  * Better CJK reference.
+  * Sutton SignWriting tool.
