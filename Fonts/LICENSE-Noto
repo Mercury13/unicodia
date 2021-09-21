@@ -44,7 +44,7 @@ What was done by authors of Unicodia:
 * Yezidi
   - Copied 25CC dotted circle from Devanagari
   - Moved umlaut 10EAC to the right for default anchoring
-    (anchors and ligatures really glitch!)
+    (default anchoring is somehow the safest way to plant umlauts!)
   - Rehinted
 
 -----------------------------------------------------------
