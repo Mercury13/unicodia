@@ -3467,7 +3467,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A"sv,
-            u8"35 (на Юникод{{_}}13) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
+            u8"35 (на Юникод{{_}}14) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
             EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu] Small kana ex, the entire block
     /// @todo [desc] Small kana ex
