@@ -352,13 +352,16 @@ namespace {
     }
 
     template <class T>
-    inline void appendHeader(QString& text, const T& x)
+    inline void appendHeader(QString& text, const T& x,
+                             std::u8string_view addText = {})
     {
         str::append(text, "<p><nobr><b>");
         str::append(text, x.locName);
         str::append(text, "</b> ("sv);
         str::append(text, x.nChars);
-        str::append(text, " шт.)</nobr></p>");
+        str::append(text, u8" шт."sv);
+        str::append(text, addText);
+        str::append(text, ")</nobr></p>"sv);
     }
 
 
@@ -513,7 +516,10 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 QString mywiki::buildHtml(const uc::Script& x)
 {
     QString r;
-    appendHeader(r, x);
+    std::u8string_view add;
+    if (x.id == "Hira"sv)
+        add = u8" без <a href='ps:Hent'" SUBTAG_POPUP ">хэнтайганы</a>";
+    appendHeader(r, x, add);
     appendHtml(r, x, true);
     return r;
 }

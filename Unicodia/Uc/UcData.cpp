@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu  [-] try smth from system
-constexpr bool FORCE_TOFU = false;
+constexpr bool FORCE_TOFU = true;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -3433,20 +3433,21 @@ constinit const uc::Block uc::blocks[] {
             {}, EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
     { 0x18D00, 0x18D8F,
-            "Tangut Supplement", u8"Тангутский дополнительный"sv,
+            "Tangut Supplement", u8"Тангутский дополнительный",
             u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
-                "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00."sv,
+                "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang },
     /// @todo [tofu] We should choose from several fonts, and current engine does not permit that.
-    /// @todo [desc] ???
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv,
-            {}, EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [desc] Kana ex A
+            u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
+                    "Хэнтайгана продолжается и в следующем блоке.",
+            EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A"sv,
-            {}, EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            u8"35 (на Юникод{{_}}13) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
+            EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu] Small kana ex, the entire block
     /// @todo [desc] Small kana ex
     { 0x1B130, 0x1B16F,
