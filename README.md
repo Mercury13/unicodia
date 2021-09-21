@@ -25,9 +25,10 @@ x64 only. My tofu policy is: **W10 should support everything possible, W7 base p
 
 # Release policy
 * Version 0.1: when tofu policy of base plane is fulfilled.
-* Version 1.0: when **both** happen…
+* Version 1.0: when **all** happen…
   * All chars of Unicode 13 are drawn, even badly.
   * Basic search.
+  * Icon/logo, About, legal info.
 * Unicode 14: when one of three happens…
   * Scheherazade (a well-known Arabic font) is updated to U14.
   * Any of U14 scripts is ready.
