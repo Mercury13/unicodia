@@ -1178,7 +1178,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Самый старый источник датируется 611. "
                 "Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].",
                 EcFont::KHMER },
-    /// @todo [link] to COmmon Indic non-positional
     { "Khoj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Ходжки", u8"XIV–XVI век",
