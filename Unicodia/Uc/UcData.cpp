@@ -494,8 +494,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "К XIX веку язык окончательно заместился ассамским с бенгальским письмом. Возрождается с 1954 года, "
                 "в письменность добавлены десятичные цифры, не имеющие исторического обоснования.</p>"sv,
                 EcFont::AHOM },
-    /// @todo [tofu, BMP] Real troubles, even W10 + Noto cannot display those chars
-    ///    08BE+ (2020),
+    // Arabic OK, three fonts, incl. Windows Amiri, Google Noto and SIL Sheherazade
     { "Arab"sv, QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
         u8"Арабский"sv, u8"IV—VI век"sv,
