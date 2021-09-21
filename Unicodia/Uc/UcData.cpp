@@ -19,6 +19,16 @@ const QString uc::Font::qempty;
 
 constexpr QChar ZWSP(0x200B);
 
+// [+] any missing char is tofu  [-] try smth from system
+constexpr bool FORCE_TOFU = false;
+
+constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
+            QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
+            | QFont::PreferQuality | QFont::PreferFullHinting);
+constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
+            QFont::PreferAntialias | QFont::PreferMatch | QFont::PreferFullHinting);
+constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
+
 constinit const uc::Font uc::fontInfo[] = {
     /// @todo [tofu] 10E60, that’s Arabic too
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
@@ -52,7 +62,8 @@ constinit const uc::Font uc::fontInfo[] = {
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
-    { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic
+    { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
+    { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic Noto
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT ",Sylfaen" },                                                 // Armenian
@@ -3015,7 +3026,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В обычном письме эти символы лучше не использовать. "
                     "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                         "(во многих тогдашних кодировках текст записывался слева направо)."sv,
-            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_32_NONCHARS },
+            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
             "Variation Selectors", u8"Селекторы начертания"sv,
@@ -3060,7 +3071,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>В обычном письме эти символы лучше не использовать. "
                 "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                     "(во многих тогдашних кодировках текст записывался слева направо)."sv,
-            EcScript::Arab },
+            EcScript::Arab, EcFont::ARABIC_NOTO },
     // Half/full OK
     { 0xFF00, 0xFFEF,
             "Halfwidth and Fullwidth Forms",
@@ -4682,8 +4693,7 @@ void uc::Font::load() const
     // Make probe font
     get(newLoaded->probe, 50);
         // force EXACT match
-    newLoaded->probe->setStyleStrategy(static_cast<QFont::StyleStrategy>(
-            QFont::PreferOutline | QFont::NoFontMerging | QFont::PreferQuality | QFont::PreferAntialias));
+    newLoaded->probe->setStyleStrategy(STRATEGY_TOFU);
     newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
 }
 
@@ -4725,9 +4735,7 @@ const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size) const
         } else if (flags.have(Ffg::LIGHT)) {
             font->setWeight(QFont::Light);
         }
-        int strategy = QFont::PreferAntialias | QFont::PreferMatch | QFont::PreferFullHinting;
-        font->setStyleStrategy(
-                    static_cast<QFont::StyleStrategy>(strategy));
+        font->setStyleStrategy(STRATEGY_DEFAULT);
     }
     return *font;
 }
