@@ -130,7 +130,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
-    { "NotoSerifNyiakengPuachueHmong-Regular.ttf" },                            // NP Hmong
+    { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
     { "NotoSansNushu-Regular.ttf" },                                            // Nushu
     { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki

@@ -32,8 +32,10 @@ What was done by authors of Unicodia:
   - Implemented ligature 25CC dotted circle + 03BC nukta,
     mostly because of bad default anchoring of nukta
   - Implemented 0B55 combining overline, possibly unusable
+* NP Hmong:
+  - Copied a dotted circle from Devanagari
 * Samaritan:
-  - Copied a dashed circle from Devanagari, implemented anchors
+  - Copied a dotted circle from Devanagari
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
   - Implemented KTA ligature in E000 private-use
