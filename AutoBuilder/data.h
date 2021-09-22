@@ -112,3 +112,4 @@ extern const std::set<std::string_view> cuneiformSymbols;
 enum class DecapDebug { NO, YES };
 
 std::string decapitalize(std::string_view x, DecapDebug debug = DecapDebug::NO);
+bool isAlternate(char32_t x);

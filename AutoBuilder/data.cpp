@@ -958,6 +958,20 @@ const std::set<std::string_view> cuneiformKeywords {
     "SIXTHS",
 };
 
+struct RangeByEnd {
+    char32_t a = 0, b = 0;
+    constexpr RangeByEnd() = default;
+    constexpr RangeByEnd(char32_t aa, char32_t bb) : a(aa), b(bb) {}
+};
+
+constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
+
+/// First max, then min!
+const std::set<RangeByEnd> alternateRanges {
+    { 0x2336, 0x237A },     // Technical — APL
+    { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
+};
+
 
 
 /// @todo [langs] Stopped at Canadian syllabics
@@ -1598,4 +1612,15 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
     }
 
     return r;
+}
+
+
+bool isAlternate(char32_t x)
+{
+    auto it = alternateRanges.lower_bound(RangeByEnd{x,x});
+    if (it == alternateRanges.end())
+        return false;
+    // so x <= it->b
+    // upper_bound gives x < it->b
+    return (it->a <= x);
 }

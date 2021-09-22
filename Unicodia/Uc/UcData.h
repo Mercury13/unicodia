@@ -167,6 +167,7 @@ namespace uc {
           Z_TEC_1,
           Z_TEC_2,
           Z_TEC_3,
+          Z_TEC_4,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,

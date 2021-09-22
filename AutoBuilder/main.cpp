@@ -364,6 +364,9 @@ int main()
             flags |= 2;
             ++nDeprecated;
         }
+        // Alternate
+        if (isAlternate(cp))
+            flags |= 4;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

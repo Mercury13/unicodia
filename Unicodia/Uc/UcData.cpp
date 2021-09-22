@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = false;
+constexpr bool FORCE_TOFU = true;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -38,10 +38,11 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Historic" },                                                  // …6
     { FNAME_NOTO },                                                             // Noto
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Technical
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …1
-      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …2
-      { FNAME_NOTOSYM2, 120_pc },                                               // …3
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
+      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …2
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_NOTOSYM2, 120_pc },                                               // …4
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
@@ -4896,9 +4897,12 @@ const uc::Font& uc::Cp::firstFont(const Block*& hint) const
 const uc::Font& uc::Cp::font(const Block*& hint) const
 {
     auto v = &firstFont(hint);
+    bool isAlternate = flags.have(Cfg::ALT_FONT);
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-        if (v->doesSupportChar(subj))
-            break;
+        if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
+            if (v->doesSupportChar(subj))
+                break;
+        }
         ++v;
     }
     return *v;
