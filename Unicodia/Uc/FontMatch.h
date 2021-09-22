@@ -98,7 +98,6 @@ private:
 
     VFn allFonts;
     Fix1d<Ws, QFontDatabase::WritingSystemsCount> allWss;
-    /// @todo [match] if it works, implement some cache
 
     void retrieveFonts(const QString& myName);
     static bool prioGreater(const PFn& x, const PFn& y)
