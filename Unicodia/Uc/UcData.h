@@ -305,7 +305,7 @@ namespace uc {
         LIGHT         = 1<<2,   ///< Lighter
         STUB_OFF      = 1<<3,   ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
         STUB_ON       = 1<<4,   ///< Circle stub explicitly on
-        STUB_VICEVERSA= 1<<5,   ///< Unglitch for missing circle, currently unused
+        STUB_VICEVERSA= 1<<5,   ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
         DESC_STD      = 1<<6,   ///< Use standard font in descriptions, not this
         DESC_BIGGER   = 1<<7,   ///< Use bigger font in descriptions
         DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
