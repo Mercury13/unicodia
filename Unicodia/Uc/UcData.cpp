@@ -3700,7 +3700,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
             u8"Символы и пиктограммы дополнительные"sv },
-    /// @todo [wrong glyph] 1FA38, 1FA3E — replace with SVG
+    // Chess OK, turned bad pawn
     { 0x1FA00, 0x1FA6F,
             "Chess Symbols", u8"Шахматные символы",
             u8"<p>В сказочной композиции в эпоху наборного шрифта за неимением другого использовали обычные повёрнутые фигуры. "
