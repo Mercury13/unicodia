@@ -39,6 +39,8 @@ What was done by authors of Unicodia:
   - Implemented KTA ligature in E000 private-use
 * Syloti Nagri
   - Rehinted
+* Symbols2
+  - Fixed rotated chess pawns, they were standing
 * Tagalog:
   - Enlarged virama
 * Yezidi
