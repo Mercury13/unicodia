@@ -71,7 +71,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
-    /// @todo [future] Stub is vice-versa because of missing circle
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
@@ -568,7 +567,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"<p>Гласная по умолчанию «а». Балийская письменность не используется в общении (вместо неё латиница), "
                 "но важна в индуизме.</p>"sv,
                 EcFont::BALINESE },
-    // Bamum OK, none even in W10, installed Google Noto + STUB_VICEVERSA.
+    // Bamum OK, none even in W10, installed Google Noto and fixed stub
     { "Bamu"sv, QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Бамум", u8"1895—1910",
