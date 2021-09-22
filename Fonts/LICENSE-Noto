@@ -17,7 +17,7 @@ What was done by authors of Unicodia:
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
     > Cyrillic extended B
-* Glagolitic, NP Hmong, Samaritan
+* Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Chakma (DO NOT USE, ruined a bit)
   - Compressed sign TAA_BELOW (just it!) to make KTAA viewable
