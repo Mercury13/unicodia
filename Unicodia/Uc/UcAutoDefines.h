@@ -122,6 +122,7 @@ namespace uc {
         Sgnw,   // Sutton SignWriting
         Shaw,   // Shavian
         Shrd,   // Sharada
+        Sind,   // Sindham (Khudawadi)
         Sinh,   // Sinhala
         Sogd,   // Sogdian
         Sogo,   // Old Sogdian
@@ -201,7 +202,6 @@ namespace uc {
         //Sara  no chars — Sarati (Tolkien)
         //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
         Sidd = Zyyy,        // beyond BMP
-        Sind = Zyyy,        // beyond BMP
         Soyo = Zyyy,        // beyond BMP
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western

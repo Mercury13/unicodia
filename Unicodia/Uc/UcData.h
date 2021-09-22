@@ -231,6 +231,7 @@ namespace uc {
         KHITAN_SMALL,
         KHMER,
         KHOJKI,
+        KHUDAWADI,
         LANNA,
         LAO,
         LEPCHA,
