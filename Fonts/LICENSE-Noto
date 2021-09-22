@@ -17,6 +17,7 @@ What was done by authors of Unicodia:
   - Created ligatures for enclosing chars in ranges:
     > Cyrillic
     > Cyrillic extended B
+  - Changed 2025 Two point leader to low one
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Chakma (DO NOT USE, ruined a bit)
