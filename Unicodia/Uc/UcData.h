@@ -46,7 +46,7 @@ constexpr Percent operator "" _pc (unsigned long long x) { return Percent(x); }
 namespace uc {
 
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
-    constexpr QChar STUB_CIRCLE(0x25CC);
+    constexpr QChar STUB_CIRCLE { 0x25CC };
 
     enum class EcLangLife
     {
