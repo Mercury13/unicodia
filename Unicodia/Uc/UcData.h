@@ -145,7 +145,7 @@ namespace uc {
 
     enum class EcContinent {
         NONE,
-        EUROPE,
+        EUROPE,     ///< Europe, incl. Georgia and Mediterranean
         ASIA,       ///< Mainland Asia
         OCEAN,      ///< Indian and Pacific Ocean, incl. Japan
         AFRICA,
