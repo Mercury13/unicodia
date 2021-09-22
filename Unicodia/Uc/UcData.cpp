@@ -88,9 +88,10 @@ constinit const uc::Font uc::fontInfo[] = {
             /// @todo [fonts,urgent] Right now we install a TT collection, and we need just SC!!
     { "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD | Ffg::STUB_OFF, 120_pc },      // CJK
     { "Microsoft YaHei" },                                                      // CJK fallback
+    { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, 110_pc },                    // Devanagari
+    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, 110_pc },                        // Devanagari
     { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -2822,10 +2823,11 @@ constinit const uc::Block uc::blocks[] {
     // Ideographic desc OK, not collapsible: small block
     { 0x2FF0, 0x2FFF,
             "Ideographic Description Characters",
-            u8"Символы структуры иероглифов"sv,
+            u8"Символы структуры иероглифов",
             u8"В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. "
                     "А для этого важно указать, на какие части он разбит и что в каждой. "
-                    "Для первого и предназначен данный блок."sv },
+                    "Для первого и предназначен данный блок.",
+            EcScript::NONE, EcFont::CJK_STRUCTURE },
     /// @todo [desc] CJK sym/punct
     // CJK sym/punct OK
     { 0x3000, 0x303F,
