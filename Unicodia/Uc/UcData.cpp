@@ -1422,7 +1422,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "в середине и в конце{{-}}сокращённые.</p>"sv,
                 EcFont::MALAYALAM },
     // Mongol OK, dislike standard font of W10 → installed Google Noto
-    /// @todo [semi-tofu] 18A9 bad rendering
     { "Mong"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA,
         u8"Монгольская (старая)"sv, u8"1204"sv,
@@ -2431,7 +2430,7 @@ constinit const uc::Block uc::blocks[] {
     // Khmer OK
     { 0x1780, 0x17FF,
             "Khmer", u8"Кхмерский", {}, EcScript::Khmr },
-    /// @todo [semi-tofu,wrong glyph] 18A9
+    // Mongol OK, implemented ligature
     { 0x1800, 0x18AF,
             "Mongolian", u8"Монгольский", {}, EcScript::Mong },
     // Canadian extended OK
