@@ -70,7 +70,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
     /// @todo [future] Stub is vice-versa because of missing circle
-    { "NotoSansBamum-Regular.ttf", Ffg::STUB_VICEVERSA, 110_pc },               // Bamum
+    { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 130_pc }, // Bhaiksuki
