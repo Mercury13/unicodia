@@ -29,6 +29,10 @@ What was done by authors of Unicodia:
     (umlauts are just for showcasing and actually unusable!)
 * Hebrew
   - Implemented 05EF yod triangle
+* Mongol
+  - Implemented ligature 25CC dotted circle + 18A9 some umlaut,
+    that umlaut mostly relies on ligatures and default anchoring
+    is really bad.
 * OriyaUI
   - Added anchors to 25CC dotted circle
   - Implemented ligature 25CC dotted circle + 03BC nukta,
