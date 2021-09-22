@@ -3595,9 +3595,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D800, 0x1DAAF,
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
     // Glagolitic supp OK
-    /// @todo [desc] Glag supp
     { 0x1E000, 0x1E02F,
-            "Glagolitic Supplement", u8"Глаголица дополнительная", {}, EcScript::Glag },
+            "Glagolitic Supplement", u8"Глаголица дополнительная",
+            u8"Надстрочные буквы глаголицы, встречающиеся в различных источниках.",
+            EcScript::Glag },
     // NP Hmong OK
     { 0x1E100, 0x1E14F,
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
@@ -4842,6 +4843,14 @@ bool uc::Cp::isGraphical() const
     default:;
     }
     return bidiClass().isGraphical;
+}
+
+
+uc::DrawMethod uc::Cp::drawMethod() const
+{
+    if (isAbbreviated())
+        return uc::DrawMethod::ABBREVIATION;
+    return uc::DrawMethod::SAMPLE;
 }
 
 

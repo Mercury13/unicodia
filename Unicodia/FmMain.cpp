@@ -198,7 +198,7 @@ const QFont* CharsModel::fontAt(const QModelIndex& index) const
 
 const QFont* CharsModel::fontAt(const uc::Cp& cp) const
 {
-    if (cp.isAbbreviated())
+    if (cp.drawMethod() != uc::DrawMethod::SAMPLE)
         return {};
     auto& font = cp.font(hint.cell);
     return &font.get(font.q.table, FSZ_TABLE, cp.subj);
@@ -912,12 +912,15 @@ void FmMain::showCp(MaybeChar ch)
 
         // Sample char
         bool wantSysFont = true;
-        if (ch->isAbbreviated()) {
+        switch (ch->drawMethod()) {
+        case uc::DrawMethod::ABBREVIATION:
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setAbbreviation(ch->abbrev(), ch.code);
             wantSysFont = false;
-        } else {
+            break;
+        case uc::DrawMethod::SAMPLE:
             drawSampleWithQt(*ch);
+            break;
         }
 
         // OS char

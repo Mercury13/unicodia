@@ -401,6 +401,7 @@ namespace uc {
     };
 
     using Cfgs = Flags<Cfg>;
+    enum class DrawMethod { SAMPLE, ABBREVIATION };
 
     struct Cp   // code point
     {
@@ -435,6 +436,7 @@ namespace uc {
         bool isGraphical() const;
         constexpr int plane() const { return subj.val() >> 16; }
 
+        DrawMethod drawMethod() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }
