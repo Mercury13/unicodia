@@ -1043,7 +1043,8 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
 
 void FmMain::selectChar(char32_t code)
 {
-    /// @todo [urgent] collapsed — what to do?
+    /// @todo [future] Right now we do not go to collapsed chars.
+    ///                But someday we will.
     ui->tableChars->setCurrentIndex(model.indexOf(code));
 }
 
