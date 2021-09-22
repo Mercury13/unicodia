@@ -3329,6 +3329,7 @@ constinit const uc::Block uc::blocks[] {
     // Khojki OK
     { 0x11200, 0x1124F,
             "Khojki", u8"Ходжки", {}, EcScript::Khoj },
+    // Multani OK
     { 0x11280, 0x112AF,
             "Multani", u8"Мултани", {}, EcScript::Mult },
     { 0x112B0, 0x112FF,
@@ -3391,7 +3392,7 @@ constinit const uc::Block uc::blocks[] {
     // Tamil supp OK
     { 0x11FC0, 0x11FFF,
             "Tamil Supplement", u8"Тамильский дополнительный",
-            u8"Старинные тамильские дроби и другие символы.",
+            u8"Старинные тамильские дроби и другие символы: для валют, сельского хозяйства, бухгалтерии.",
             EcScript::Taml, EcFont::TAMIL_SUPPLEMENT },
     // Cuneiform OK
     { 0x12000, 0x123FF,
