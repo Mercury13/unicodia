@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = true;
+constexpr bool FORCE_TOFU = false;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -38,9 +38,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Historic" },                                                  // …6
     { FNAME_NOTO },                                                             // Noto
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Emoji bigger
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Technical
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …1
-      { FNAME_NOTOSYM2, 120_pc },                                               // …2
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …2
+      { FNAME_NOTOSYM2, 120_pc },                                               // …3
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
@@ -2632,7 +2633,7 @@ constinit const uc::Block uc::blocks[] {
                         "пользовательских интерфейсах."
                 "<p>Также символы, используемые в системах компьютерной математики вроде MathType (он же ''Microsoft Equation'') "
                         "и TᴇX (читается «тех») для создания многоэтажных скобок."sv,
-            EcScript::NONE, EcFont::EMOJI_BIGGER },
+            EcScript::NONE, EcFont::TECHNICAL },
     // Control pictures OK
     { 0x2400, 0x243F,
             "Control Pictures", u8"Изображения управляющих"sv,

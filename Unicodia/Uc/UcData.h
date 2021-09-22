@@ -163,9 +163,10 @@ namespace uc {
           Z_NOR_5,
           Z_NOR_6,
          NOTO,
-         EMOJI_BIGGER,
-          Z_EMB_1,
-          Z_EMB_2,
+         TECHNICAL,
+          Z_TEC_1,
+          Z_TEC_2,
+          Z_TEC_3,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
@@ -300,9 +301,9 @@ namespace uc {
     ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
-        BOLD          = 1<<0,   ///< Really bold
-        SEMIBOLD      = 1<<1,   ///< Bolder
-        LIGHT         = 1<<2,   ///< Lighter
+        BOLD          = 1<<0,   ///< Weight: bold
+        SEMIBOLD      = 1<<1,   ///< Weight: semibold
+        LIGHT         = 1<<2,   ///< Weight: light
         STUB_OFF      = 1<<3,   ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
         STUB_ON       = 1<<4,   ///< Circle stub explicitly on
         STUB_VICEVERSA= 1<<5,   ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
@@ -310,6 +311,7 @@ namespace uc {
         DESC_BIGGER   = 1<<7,   ///< Use bigger font in descriptions
         DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
         FALL_TO_NEXT  = 1<<9,   ///< Also use the next font if failed to find
+        ALTERNATE     = 1<<10,  ///< Marked as “alternate”: works only for chars flagged as “alternate font”
     };
 
     DEFINE_ENUM_OPS(Ffg)
