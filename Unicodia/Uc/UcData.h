@@ -293,6 +293,8 @@ namespace uc {
         THAI,
         TIBETAN,
         TIFINAGH,
+        UMLAUT_SYMBOL,
+          Z_USY_1,
         VAI,
         YEZIDI,
         YI,

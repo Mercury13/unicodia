@@ -174,6 +174,8 @@ constinit const uc::Font uc::fontInfo[] = {
         // Tibetan chars are VERY high → 90%
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
+    { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlaut symbol
+      { FNAME_NOTO },                                                           // …2
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
@@ -2609,7 +2611,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Диакритические метки для символов"sv,
             u8"Практически все из этих символов нормально работают только если в шрифте есть подходящая [[pt:ligature|лигатура]]{{-}}"
                 "например, {{sm| 1⃣}}. Образцы всех символов, кроме двух, пришлось рисовать в SVG."sv,
-            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+            EcScript::NONE, EcFont::UMLAUT_SYMBOL },
     // Letterlike OK
     { 0x2100, 0x214F,
             "Letterlike Symbols", u8"Буквоподобные символы"sv,
