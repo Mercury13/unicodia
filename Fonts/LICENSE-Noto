@@ -8,7 +8,6 @@ http://scripts.sil.org/OFL
 
 What was done by authors of Unicodia:
 * Latin/Greek/Cyrillic:
-  - Renamed to NNoto, mostly for debugging
   - Dereferenced glyphs in ranges:
     > Combining diacritical marks supplement
     > Superscripts and subscripts
@@ -18,6 +17,8 @@ What was done by authors of Unicodia:
     > Cyrillic
     > Cyrillic extended B
   - Changed 2025 Two point leader to low one
+  - Made 30 chars from Combining Diacritical Marks for Symbols.
+    Work somehow, but optimized for 25CC dotted circle.
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Chakma (DO NOT USE, ruined a bit)
