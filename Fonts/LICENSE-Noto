@@ -21,10 +21,6 @@ What was done by authors of Unicodia:
     Work somehow, but optimized for 25CC dotted circle.
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
-* Chakma (DO NOT USE, ruined a bit)
-  - Compressed sign TAA_BELOW (just it!) to make KTAA viewable
-  - Implemented ligature KAA + I
-  - Implemented Pali VAA
 * Devanagari
   - Implemented 4 chars at Devanagari Extended,
     and 4 characters from Vedic Extensions
