@@ -54,4 +54,5 @@ namespace str {
         int len;
         QString fSep;
     };
+
 }   // namespace str

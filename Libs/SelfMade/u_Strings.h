@@ -56,6 +56,8 @@ namespace str {
     inline auto fromChars(std::string_view s, T& v)
         { return std::from_chars(s.data(), s.data() + s.size(), v); }
 
+    bool containsWord(std::string_view haystack, std::string_view needle);
+
 }   // namespace str
 
 namespace detail {

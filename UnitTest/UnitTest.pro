@@ -17,6 +17,7 @@ SOURCES += \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
     test_Iterator.cpp \
+    test_Strings.cpp \
     test_Wiki.cpp
 
 HEADERS += \
