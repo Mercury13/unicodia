@@ -437,7 +437,6 @@ QString mywiki::buildFontsHtml(
         const char32_t cp, QFontDatabase::WritingSystem ws,
         Gui& gui)
 {
-    /// @todo [urgent] What to do with fonts?
     if (cp >= uc::N_CHARS || ws >= QFontDatabase::WritingSystemsCount)
         return {};
     QString text;
