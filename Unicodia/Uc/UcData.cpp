@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = true;
+constexpr bool FORCE_TOFU = false;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -175,7 +175,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlaut symbol
-      { FNAME_NOTO },                                                           // …2
+      { FNAME_NOTO },                                                           // …1
     { "Ebrima" },                                                               // Vai
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
