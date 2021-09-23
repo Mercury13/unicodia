@@ -5,11 +5,12 @@
 #include <set>
 #include <atomic>
 
+// Self-made lib
+#include "u_Strings.h"
+
 // Project-local
 #include "UcData.h"
 
-
-// Blacklist unused
 namespace {
 
     enum class NameOp { EXACT, START };
@@ -70,6 +71,19 @@ namespace {
     FontPrio matchPrio(const std::string_view name)
     {
         checkFontList();
+
+        // 1. Check for styles
+        std::string loName;
+        loName.reserve(name.length());
+        for (auto c : name)
+            loName += std::tolower(c);
+
+        for (auto& v : fontStyles) {
+            if (str::containsWord(loName, v))
+                return FontPrio::BAD;
+        }
+
+        // 2. Check for families
         auto it = std::upper_bound(std::begin(fontList), std::end(fontList), name, isLess);
         if (it == std::begin(fontList))
             return FontPrio::NORMAL;    // not found
