@@ -118,7 +118,10 @@ void TableCache::paint(
     // Situations when cannot cache
     if (!option.widget      // unreal
             || ir < 0       // unreal
-            || ic < 0) {    // unreal
+            || ic < 0       // unreal
+                // Selected/focused — just handpaint, less glitches
+            || (option.state & (QStyle::State_Selected | QStyle::State_HasFocus))
+                ) {
             //   Used to be (the trouble is typography engine → do not cache empty strings)
             //   Because of another architecture of table painting in Qt 5.15
             //   (initStyleOption is inside paint) it effectively disables cache.
