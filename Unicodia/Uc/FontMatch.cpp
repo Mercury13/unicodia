@@ -32,6 +32,20 @@ namespace {
         { "Wingdings ",      NameOp::START, FontPrio::BAD  },
     };
 
+    std::string_view fontStyles[] {
+        "black",
+        "bold",
+        "cond",
+        "condensed",
+        "demi",
+        "italic",
+        "light",
+        "narrow",
+        "semibold",
+        "semilight",
+        "slanted",
+    };
+
     //bool isLess(const ListLine& x, std::string_view y)
     //    { return (x.text < y); }
 
