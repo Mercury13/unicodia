@@ -3517,7 +3517,7 @@ constinit const uc::Block uc::blocks[] {
                     "Тем не менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, "
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
-    /// @todo [tofu] How to show chars like NULL NOTE HEAD?
+    /// @todo [tofu] How to show chars like NULL-NOTE-HEAD?
     /// @todo [semi-tofu] Check and take smth from Segoe UI Symbol
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы"sv,
