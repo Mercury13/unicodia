@@ -56,7 +56,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
-    { "Segoe UI" },                                                             // Segoe
     { "DejaVuSerif.ttf" },                                                      // DejaVu
     { "FunkySample.ttf" },                                                      // Funky
     { "FunkySample.ttf", Ffg::STUB_ON, 115_pc },                                // Funky bigger
@@ -96,6 +95,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
+    { "Segoe UI", Ffg::FALL_TO_NEXT },                                          // Georgian Nuskhuri — FALL
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
@@ -969,7 +969,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''.</p>"
             u8"<p>Из греческого письма пошли [[ps:Latn|латиница]], [[ps:Cyrl|кириллица]], "
                 "[[ps:Copt|коптский]] и, возможно, [[ps:Armn|армянский]] и [[ps:Runr|руны]].</p>"sv },
-    /// @todo [tofu] Installed font, check for tofu in W7
+    // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10
     { "Gujr"sv, QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Гуджарати"sv, u8"X–XVI век"sv,
@@ -2286,7 +2286,7 @@ constinit const uc::Block uc::blocks[] {
                     "и последние два символа{{-}}модификаторы, обозначающие длину и условное «r».</p>"
                 "<p>Также в этом блоке есть протяжённые копии диакритических меток.</p>"sv,
             EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
-    /// @todo [semi-tofu] Diacritical marks work somehow, though circle from 6 circles is too rough
+    /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F,
             "Combining Diacritical Marks", u8"Диакритические метки"sv,
             u8"<p>Диакритические знаки{{-}}надстрочные, подстрочные или внутристрочные знаки, прикрепляемые к букве и изменяющие "
@@ -2372,13 +2372,13 @@ constinit const uc::Block uc::blocks[] {
     // Gurmukhi OK
     { 0x0A00, 0x0A7F,
             "Gurmukhi", u8"Гурмукхи", {}, EcScript::Guru },
-    /// @todo [tofu?] Check for Gujarati
+    // Gujarati OK, Google Noto + FORCE_TOFU show nothing
     { 0x0A80, 0x0AFF,
             "Gujarati", u8"Гуджарати", {}, EcScript::Gujr },
     // Oriya OK, Noto + everything bad manually fixed
     { 0x0B00, 0x0B7F,
             "Oriya", u8"Ория", {}, EcScript::Orya },
-    /// @todo [tofu?] Check for Tamil
+    // Tamil OK, font pair is good
     { 0x0B80, 0x0BFF,
             "Tamil", u8"Тамильский", {}, EcScript::Taml },
     // Telugu OK
@@ -2408,7 +2408,7 @@ constinit const uc::Block uc::blocks[] {
     // Georgian OK
     { 0x10A0, 0x10FF,
             "Georgian", u8"Грузинский", {}, EcScript::Geor },
-    /// @todo [semi-tofu] How to show filler 115F, 1160?
+    /// @todo [semi-tofu, BMP] How to show filler 115F, 1160?
     { 0x1100, 0x11FF,
             "Hangul Jamo", u8"Хангыль\u00A0— чамо"sv,
             u8"<p>В хангыле (корейском алфавите) всего 51 буква ''(чамо)''. Блок намного больше: одна и та же буква "
@@ -2785,7 +2785,7 @@ constinit const uc::Block uc::blocks[] {
                     "Буквицы при этом оформляли шрифтом ''асомтаврули'' из основного блока."
                 "<p>Ещё в 2000 департамент информатизации Грузии и католикóс (глава грузинской церкви) "
                     "просили закодировать нусхури, и Консорциум откликнулся.",
-            EcScript::Geor, EcFont::SEGOE },
+            EcScript::Geor, EcFont::GEORGIAN_NUSKHURI },
     // Tifinagh OK
     { 0x2D30, 0x2D7F,
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
@@ -2864,7 +2864,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) "
                         "и 15 значков порядка."sv,
             EcScript::NONE, EcFont::CJK_FALLBACK },
-    /// @todo [tofu] 31BB+
+    /// @todo [tofu, BMP] 31BB+
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
             u8"Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
@@ -2902,7 +2902,7 @@ constinit const uc::Block uc::blocks[] {
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] 10 hieroglyphs from 2018 and 2020, 4BD6+
+    /// @todo [tofu, BMP] 10 hieroglyphs from 2018 and 2020, 4BD6+
     /// @todo [desc] CJK A
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
@@ -2918,7 +2918,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Известно, что для гадания применялся пучок из 50 палочек, традиционно стеблей тысячелистника, но как именно{{-}}неизвестно. "
                     "Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция."
                 "<p>В Китае также был философ И Цзин, никак с книгой не{{_}}связанный."sv },
-    /// @todo [tofu] 18 hieroglyphs from 2018 and 2020, 9FEB+
+    /// @todo [tofu, BMP] 18 hieroglyphs from 2018 and 2020, 9FEB+
     { 0x4E00, 0x9FFF,
             "CJK Unified Ideographs", u8"ККЯ иероглифы"sv,
             {},
@@ -3045,7 +3045,7 @@ constinit const uc::Block uc::blocks[] {
             "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B"sv,
             {},
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] four hieros FACF+
+    /// @todo [tofu, BMP] four hieros FACF+
     { 0xF900, 0xFAFF,
             "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы"sv,
             u8"Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, "

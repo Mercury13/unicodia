@@ -181,7 +181,6 @@ namespace uc {
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
-         SEGOE,
          DEJAVU,
          FUNKY,
          FUNKY_BIGGER,
@@ -217,6 +216,7 @@ namespace uc {
         ELBASAN,
         ELYMAIC,
         ETHIOPIC,
+        GEORGIAN_NUSKHURI,  // Special bhv for W7
         GEORGIAN,
         GLAGOLITIC,
         GUJARATI,
