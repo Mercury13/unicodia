@@ -79,7 +79,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
-    { "NotoSansChakma-DO-NOT-USE.ttf", Ffg::STUB_ON },                          // Chakma
+    { "NotoSansChakma-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty },  // Chakma
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -103,7 +103,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
-    /// @todo [semi-tofu] Sort out hiragana and hentaigana!
+    /// @todo [semi-tofu, P1] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf", Ffg::STUB_ON },                             // Kaithi
@@ -706,7 +706,7 @@ constinit const uc::Script uc::scriptInfo[] {
                         "упразднены реформой 2001.<br>"
                     "{{_}}{{_}}ка: {{sm|𑄇}} + и {{sm|◌𑄨}} = ки {{sm|𑄇𑄨}}<br>"
                     "{{_}}{{_}}ка: {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = к {{sm|𑄇𑄴}}<br>"
-                    "{{_}}{{_}}ка: {{sm|𑄇}} + virama {{sm|◌𑄳}} + та: {{sm|𑄖}} = кта: {{sm|𑄇𑄳𑄖}}",
+                    "{{_}}{{_}}ка: {{sm|𑄇}} + virama {{sm|◌𑄳}} + та: {{sm|𑄖}} = кта: {{sm|𑄇𑄳𑄖}}<br>",
                 EcFont::CHAKMA },
     // Carian OK, W10 P1
     { "Cari"sv, QFontDatabase::Any,
@@ -2111,7 +2111,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1836 Эжéн Бюрнýф, догадавшись, что одна из надписей{{-}}список сатрапий Дария, расшифровал почти весь алфавит. "
                 "Расшифровка персидской клинописи стала ключом к шумерской."sv,
                 EcFont::OLD_PERSIAN },
-    /// @todo [semi-tofu] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
+    /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
     { "Xsux"sv, QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
         u8"Клинопись"sv, u8"≈3200 до н.э."sv,
@@ -3443,7 +3443,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Форматирующие символы для египетских иероглифов",
             u8"Семь необязательных символов, обеспечивающих полное форматирование египетских иероглифов.",
             EcScript::Egyp },
-    /// @todo [tofu] Anatolyan hiero
+    /// @todo [tofu, P1] Anatolyan hiero
     { 0x14400, 0x1467F,
             "Anatolian Hieroglyphs", u8"Анатолийские иероглифы", {}, EcScript::Hluw },
     // Bamum supplement OK
@@ -3485,7 +3485,7 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang },
-    /// @todo [tofu] We should choose from several fonts, and current engine does not permit that.
+    /// @todo [tofu, P1] We should choose from several fonts, and current engine does not permit that.
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная"sv,
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
@@ -3495,7 +3495,7 @@ constinit const uc::Block uc::blocks[] {
             "Kana Extended-A", u8"Кана расширенная A"sv,
             u8"35 (на Юникод{{_}}14) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
             EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] Small kana ex, the entire block
+    /// @todo [tofu, P1] Small kana ex, the entire block
     /// @todo [desc] Small kana ex
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны", {},
@@ -3517,8 +3517,8 @@ constinit const uc::Block uc::blocks[] {
                     "Тем не менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, "
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
-    /// @todo [tofu] How to show chars like NULL-NOTE-HEAD?
-    /// @todo [semi-tofu] Check and take smth from Segoe UI Symbol
+    /// @todo [tofu, P1] How to show chars like NULL-NOTE-HEAD?
+    /// @todo [semi-tofu, P1] Check and take smth from Segoe UI Symbol
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы"sv,
             u8"<p>С X{{_}}века появилась нотная запись, похожая на современную. "
@@ -3694,7 +3694,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F650, 0x1F67F,
             "Ornamental Dingbats", u8"Печатные узоры",
             u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''." },
-    /// @todo [semi-tofu] Transport/map: Some chars are not colored
+    /// @todo [semi-tofu, P1] Transport/map: Some chars are not colored
     /// @todo [desc] Transport/map
     { 0x1F680, 0x1F6FF,
             "Transport and Map Symbols",
@@ -3719,7 +3719,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F800, 0x1F8FF,
             "Supplemental Arrows-C", u8"Стрелки дополнительные C",
             u8"По состоянию на Юникод 13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров." },
-    /// @todo [tofu] 1F900..0C,  72, 77, 78, A3, A4, AB..AD, CB
+    /// @todo [tofu, P1] 1F900..0C,  72, 77, 78, A3, A4, AB..AD, CB
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
             u8"Символы и пиктограммы дополнительные"sv },
@@ -3768,49 +3768,49 @@ constinit const uc::Block uc::blocks[] {
                         "причём в некоторых шрифтах оказывается, что старые символы не стыкуются с новыми:<br>"
                         "{{_}}{{_}}{{_}}{{sm|█🬗}}",
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
-    /// @todo [tofu] CJK B
+    /// @todo [tofu, P2] CJK B
     /// @todo [desc] CJK B
     { 0x20000, 0x2A6DF,
             "CJK Unified Ideographs Extension B",
             u8"ККЯ иероглифы расширение B"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK C
+    /// @todo [tofu, P2] CJK C
     /// @todo [desc] CJK C
     { 0x2A700, 0x2B73F,
             "CJK Unified Ideographs Extension C",
             u8"ККЯ иероглифы расширение C"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK D
+    /// @todo [tofu, P2] CJK D
     /// @todo [desc] CJK D
     { 0x2B740, 0x2B81F,
             "CJK Unified Ideographs Extension D",
             u8"ККЯ иероглифы расширение D"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK E
+    /// @todo [tofu, P2] CJK E
     /// @todo [desc] CJK E
     { 0x2B820, 0x2CEAF,
             "CJK Unified Ideographs Extension E",
             u8"ККЯ иероглифы расширение E"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK F
+    /// @todo [tofu, P2] CJK F
     /// @todo [desc] CJK F
     { 0x2CEB0, 0x2EBEF,
             "CJK Unified Ideographs Extension F",
             u8"ККЯ иероглифы расширение F"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK compat supp
+    /// @todo [tofu, P2] CJK compat supp
     /// @todo [desc] CJK compat supp
     { 0x2F800, 0x2FA1F,
             "CJK Compatibility Ideographs Supplement",
             u8"ККЯ совместимые иероглифы дополнение"sv,
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] CJK G
+    /// @todo [tofu, P3] CJK G
     /// @todo [desc] CJK G
     { 0x30000, 0x3134F,
             "CJK Unified Ideographs Extension G",
