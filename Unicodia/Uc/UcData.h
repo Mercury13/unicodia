@@ -311,15 +311,14 @@ namespace uc {
         BOLD          = 1<<0,   ///< Weight: bold
         SEMIBOLD      = 1<<1,   ///< Weight: semibold
         LIGHT         = 1<<2,   ///< Weight: light
-        STUB_OFF      = 1<<3,   ///< Circle stub explicitly off (auto: off for Brahmic, on for the rest)
-        STUB_ON       = 1<<4,   ///< Circle stub explicitly on
-        STUB_VICEVERSA= 1<<5,   ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
-        DESC_STD      = 1<<6,   ///< Use standard font in descriptions, not this
-        DESC_BIGGER   = 1<<7,   ///< Use bigger font in descriptions
-        DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
-        FALL_TO_NEXT  = 1<<9,   ///< Also use the next font if failed to find
-        ALTERNATE     = 1<<10,  ///< Marked as “alternate”: works only for chars flagged as “alternate font”
-        CELL_SMALLER  = 1<<11,  ///< Make cell text a bit smaller
+        STUB_OFF      = 1<<3,   ///< Disable circle stub
+        STUB_VICEVERSA= 1<<4,   ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
+        DESC_STD      = 1<<5,   ///< Use standard font in descriptions, not this
+        DESC_BIGGER   = 1<<6,   ///< Use bigger font in descriptions
+        DESC_SMALLER  = 1<<7,   ///< Use smaller font in descriptions
+        FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
+        ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
+        CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
     };
 
     DEFINE_ENUM_OPS(Ffg)

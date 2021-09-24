@@ -58,7 +58,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Gadugi" },                                                               // Gadugi
     { "DejaVuSerif.ttf" },                                                      // DejaVu
     { "FunkySample.ttf" },                                                      // Funky
-    { "FunkySample.ttf", Ffg::STUB_ON, 115_pc },                                // Funky bigger
+    { "FunkySample.ttf", 115_pc },                                              // Funky bigger
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
@@ -69,17 +69,17 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
-    { "NotoSansBalinese-Regular.ttf", "padding-bottom: 12%;"_sty, 90_pc },      // Balinese
+    { "NotoSansBalinese-Regular.ttf", Ffg::STUB_OFF, "padding-bottom: 12%;"_sty, 90_pc }, // Balinese
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
-    { "NotoSansBhaiksuki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 130_pc }, // Bhaiksuki
+    { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
-    { "NotoSansBuginese-Regular.ttf", Ffg::STUB_ON },                           // Buginese
-    { "NotoSansBuhid-Regular.ttf", Ffg::STUB_ON },                              // Buhid
+    { "NotoSansBuginese-Regular.ttf" },                                         // Buginese
+    { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
-    { "NotoSansChakma-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty },  // Chakma
+    { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty }, // Chakma
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -89,8 +89,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", Ffg::STUB_ON, 110_pc },                        // Devanagari
-    { "NotoSerifDogra-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Dogra
+    { "NotoSerifDevanagari.ttf", 110_pc },                                      // Devanagari
+    { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
@@ -108,16 +108,16 @@ constinit const uc::Font uc::fontInfo[] = {
     /// @todo [semi-tofu, P1] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
-    { "NotoSansKaithi-Regular.ttf", Ffg::STUB_ON },                             // Kaithi
-    { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                       // Kannada
+    { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
+    { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
-    { "NotoSansKharoshthi-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },      // Kharoshthi
+    { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
     { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
-    { "NotoSansKhojki-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },          // Khojki
+    { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { "NotoSansTaiTham-Regular.ttf", Ffg::STUB_ON },                            // Lanna
-    { "sengbuhan.ttf", Ffg::STUB_ON, "padding-top: 12%;"_sty },                 // Lao
+    { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
+    { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
@@ -127,13 +127,13 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT, 110_pc },                    // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
-    { "NotoSansMeeteiMayek-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },     // Meetei Mayek
+    { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
-    { "NotoSansNewa-Regular.ttf", Ffg::STUB_ON },                               // Newa
+    { "NotoSansNewa-Regular.ttf", Ffg::DESC_BIGGER },                           // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
@@ -145,7 +145,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
-    { "NotoSansOriyaUI-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER, 120_pc }, // Oriya
+    { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { FNAME_NOTOSYM2, 150_pc },                                                 // Phaistos disc
@@ -155,25 +155,25 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
     { "NotoSansRunic-Regular.ttf" },                                            // Runic
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
-    { "NotoSansSaurashtra-Regular.ttf", Ffg::STUB_ON },                         // Saurashtra
-    { "NotoSansSharada-Regular.ttf", Ffg::STUB_ON },                            // Sharada
+    { "NotoSansSaurashtra-Regular.ttf" },                                       // Saurashtra
+    { "NotoSansSharada-Regular.ttf" },                                          // Sharada
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
-    { "NotoSansSundanese-Regular.ttf", Ffg::STUB_ON },                          // Sundanese
-    { "NotoSansSylotiNagri-Regular.ttf", Ffg::STUB_ON },                        // Syloti Nagri
+    { "NotoSansSundanese-Regular.ttf" },                                        // Sundanese
+    { "NotoSansSylotiNagri-Regular.ttf" },                                      // Syloti Nagri
     { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
-    { "NotoSansTagalog-Regular.ttf", Ffg::STUB_ON | Ffg::DESC_BIGGER },         // Tagalog
+    { "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                        // Tagalog
     { "NotoSansTagbanwa-Regular.ttf" },                                         // Tagbanwa
     { "Microsoft Tai Le" },                                                     // Tai Le
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
-    { "Nirmala UI,Latha", Ffg::STUB_ON },                                       // Tamil
+    { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT, 110_pc },                       // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
-    { "Leelawadee,Leelawadee UI", Ffg::STUB_ON, "padding-bottom:10%;"_sty, 110_pc }, // Thai
+    { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
@@ -4867,21 +4867,15 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     auto style = fn.styleSheet;
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
-        //return { STUB_CIRCLE + QString(" ") + str::toQ(subj.ch32()), style };
     case EcCategory::MARK_NONSPACING:
         if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
             return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
         }
         [[fallthrough]];
     case EcCategory::MARK_SPACING:
-        // Brahmi scripts probably do fine
-        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI) {
-            if (!fn.flags.have(Ffg::STUB_ON))
-                break;
-        } else {
-            if (fn.flags.have(Ffg::STUB_OFF))
-                break;
-        }
+        // Stub off?
+        if (fn.flags.have(Ffg::STUB_OFF))
+            break;
         return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {
@@ -4922,10 +4916,6 @@ QString uc::Cp::osProxy() const
 
     switch (category().upCat) {
     case UpCategory::MARK:
-        // Brahmi scripts probably do fine
-        if (script().ecType == EcScriptType::ABUGIDA_BRAHMI
-                && !script().font().flags.have(Ffg::STUB_ON))
-            break;
         return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
     default: ;
     }
