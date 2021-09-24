@@ -98,7 +98,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Segoe UI", Ffg::FALL_TO_NEXT },                                          // Georgian Nuskhuri — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
-    { "NotoSansGrantha-Regular.ttf", Ffg::DESC_BIGGER,
+    { "NotoSansGrantha-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                        // Grantha
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
     { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
@@ -4762,7 +4762,7 @@ void uc::Font::load(char32_t trigger) const
     }
 
     // Make probe font
-    get(newLoaded->probe, 50, trigger);
+    get(newLoaded->probe, FontPlace::PROBE, 50, trigger);
         // force EXACT match
     newLoaded->probe->setStyleStrategy(STRATEGY_TOFU);
     newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
@@ -4789,13 +4789,29 @@ bool uc::Font::doesSupportChar(char32_t subj) const
     return q.loaded->probeMetrics->inFontUcs4(subj);
 }
 
+int uc::Font::computeSize(FontPlace place, int size) const
+{
+    auto r = sizeAdjust.apply(size);
+    switch (place) {
+    case FontPlace::CELL:
+        if (flags.have(Ffg::CELL_SMALLER))
+            r = r * 9 / 10;
+        break;
+    case FontPlace::SAMPLE:
+    case FontPlace::PROBE: break;
+    }
+    return r;
+}
 
-const QFont& uc::Font::get(std::unique_ptr<QFont>& font, int size, char32_t trigger) const
+const QFont& uc::Font::get(
+        std::unique_ptr<QFont>& font,
+        FontPlace place,
+        int size, char32_t trigger) const
 {
     if (!font) {
         //load();  onlyFamily WILL load
         auto& family1 = onlyFamily(trigger);
-        font.reset(new QFont(family1, sizeAdjust.apply(size), QFont::Normal));
+        font.reset(new QFont(family1, computeSize(place, size), QFont::Normal));
         if (family1.isEmpty())
             font->setFamilies(q.loaded->families);
         // Weight

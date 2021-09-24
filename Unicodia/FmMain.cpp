@@ -201,7 +201,7 @@ const QFont* CharsModel::fontAt(const uc::Cp& cp) const
     if (cp.drawMethod() != uc::DrawMethod::SAMPLE)
         return {};
     auto& font = cp.font(hint.cell);
-    return &font.get(font.q.table, FSZ_TABLE, cp.subj);
+    return &font.get(font.q.table, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
 }
 
 
@@ -724,7 +724,7 @@ FmMain::FmMain(QWidget *parent)
 
     // OS style
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(font.q.big, FSZ_BIG, NO_TRIGGER));
+    ui->lbOs->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));
 
     // Copy
         // Ctrl+C
@@ -843,7 +843,7 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 {
     // Font
     auto& font = ch.font(hint.sample);
-    ui->lbSample->setFont(font.get(font.q.big, FSZ_BIG, ch.subj));
+    ui->lbSample->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);

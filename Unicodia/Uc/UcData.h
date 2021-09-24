@@ -318,6 +318,7 @@ namespace uc {
         DESC_SMALLER  = 1<<8,   ///< Use smaller font in descriptions
         FALL_TO_NEXT  = 1<<9,   ///< Also use the next font if failed to find
         ALTERNATE     = 1<<10,  ///< Marked as “alternate”: works only for chars flagged as “alternate font”
+        CELL_SMALLER  = 1<<11,  ///< Make cell text a bit smaller
     };
 
     DEFINE_ENUM_OPS(Ffg)
@@ -331,6 +332,8 @@ namespace uc {
         explicit constexpr StyleSheet() = default;
         explicit constexpr StyleSheet(std::string_view x) : v(x) {}
     };
+
+    enum class FontPlace { CELL, SAMPLE, PROBE };
 
     struct Font
     {
@@ -350,7 +353,11 @@ namespace uc {
             consteval Q(const Q&) {};
         } q {};
         void load(char32_t trigger) const;
-        const QFont& get(std::unique_ptr<QFont>& font, int size, char32_t trigger) const;
+
+        int computeSize(FontPlace place, int size) const;
+        const QFont& get(std::unique_ptr<QFont>& font,
+                         FontPlace place,
+                         int size, char32_t trigger) const;
         bool doesSupportChar(char32_t x) const;
         const QString& onlyFamily(char32_t trigger) const;
         const QString& familiesComma(char32_t trigger) const;
