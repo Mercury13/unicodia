@@ -54,6 +54,7 @@ namespace uc {
         Geor,   // Georgian
         Glag,   // Glagolitic
         Goth,   // Gothic
+        Gran,   // Grantha
         Grek,   // Greek
         Gujr,   // Gujarati
         Guru,   // Gurmukhi
@@ -164,7 +165,6 @@ namespace uc {
         //Geok  no chars
         Gong = Zyyy,        // beyond BMP
         Gonm = Zyyy,        // beyond BMP
-        Gran = Zyyy,        // beyond BMP
         //Hanb  no chars — Han + Bopomofo
         //Hans  no chars — Han simplified
         //Hant  no chars — Han traditional

@@ -219,6 +219,7 @@ namespace uc {
         GEORGIAN_NUSKHURI,  // Special bhv for W7
         GEORGIAN,
         GLAGOLITIC,
+        GRANTHA,
         GUJARATI,
         GURMUKHI,
         HANUNOO,
