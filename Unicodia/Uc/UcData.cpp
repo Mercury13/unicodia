@@ -2110,7 +2110,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::TIBETAN },
     // Tirhuta OK, W10 none, installed Google Noto
     { "Tirh", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Тирхута (митхилакшар)", u8"XIII век",
         u8"майтхили ''(Индия)'', санскрит",
         u8"Письмо близко к [[ps:Beng|бенгальскому]], многие символы похожи. "
