@@ -133,6 +133,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
+    { "NotoSansNewa-Regular.ttf", Ffg::STUB_ON },                               // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
@@ -1518,8 +1519,8 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nabataean OK, W10 none → installed Google Noto
     { "Nbat"sv, QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Набатейский"sv, u8"II век до н.э."sv,
-        u8"набатейский"sv,
+        u8"Набатейский", u8"II век до н.э.",
+        u8"набатейский",
         u8"Происходит из [[ps:Armi|арамейского]]. "
                 "Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II века{{bc}} "
                 "В 106 Траян присоединил Набатею к римской империи, а письменность просуществовала до IV{{_}}века "
@@ -1527,6 +1528,21 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Между словами нет пробелов. "
                 "Числа писались справа налево непозиционной системой счисления, похожей на римские цифры.",
                 EcFont::NABATAEAN },
+    // Newa OK, W10 none → installed Google Noto
+    { "Newa"sv, QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Неварский (прахалит)", u8"1654 (первое свидетельство)",
+        u8"бхаса ''(=неварский, Непал)'', санскрит, пали",
+        u8"Истоки неизвестны{{-}}разные стили письма существовали с X{{_}}века. "
+                "Первое свидетельство{{-}}непальский царь Пратап Малла написал в 1654 «письмо невара». "
+                "Реально сохранившиеся источники{{-}}XVIII{{_}}век. "
+                "В 1905 непальские диктаторы династии Рана запретили язык и письмо. "
+                "В 1951 Индия вмешалась, прогнала узурпаторов, посадила старую династию Шах и разрешила снова. "
+                "На 2010-е на бхаса говорят 800{{_}}тыс. человек."
+            "<p>Классическая брахмийская абугида. "
+                "Несмотря на множество [[pt:ligature|лигатур]] из уменьшенных согласных, [[pt:virama|вирама]] всё-таки встречается. "
+                "Уменьшенные формы согласных, составляющие лигатуру, можно написать и явно, буква+вирама+ZWJ.",
+                EcFont::NEWA },
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo"sv, QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -3383,7 +3399,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11300, 0x1137F,
             "Grantha", u8"Грантха", {}, EcScript::Gran },
     { 0x11400, 0x1147F,
-            "Newa"sv, u8"Неварский", {}, EcScript::Newa },
+            "Newa"sv, u8"Неварский (прахалит)", {}, EcScript::Newa },
     { 0x11480, 0x114DF,
             "Tirhuta", u8"Тирхута (митхилакшар)", {}, EcScript::Tirh },
     { 0x11580, 0x115FF,

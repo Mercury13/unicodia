@@ -99,6 +99,7 @@ namespace uc {
         Mymr,   // Myanmar
         Narb,   // North Arabian
         Nbat,   // Nabataean
+        Newa,   // Newa
         Nkoo,   // NKo
         Nshu,   // Nushu
         Ogam,   // Ogham
@@ -191,7 +192,6 @@ namespace uc {
         //Moon  no chars — Moon’s embossing
         Mroo = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP
-        Newa = Zyyy,        // beyond BMP
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
         Pauc = Zyyy,        // beyond BMP

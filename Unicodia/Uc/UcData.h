@@ -252,6 +252,7 @@ namespace uc {
         MULTANI,
         MYANMAR,
         NABATAEAN,
+        NEWA,
         NKO,
         NORTH_ARABIAN,
         NP_HMONG,
