@@ -460,7 +460,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy"sv, QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет"sv, {}, {}, u8"Символы вне письменности."sv },
-    // Adlam OK, beyond BMP, we could work somehow with umlauts, but font is REALLY small.
+    // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Адлам"sv, u8"конец 1980-х"sv,
