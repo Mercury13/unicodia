@@ -170,7 +170,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha", Ffg::STUB_ON },                                       // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
-    { "NotoSansTelugu-Light.ttf", Ffg::LIGHT },                                 // Telugu
+    { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT, 110_pc },                       // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", Ffg::STUB_ON, "padding-bottom:10%;"_sty, 110_pc }, // Thai
         // Tibetan chars are VERY high → 90%
