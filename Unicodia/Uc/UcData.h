@@ -207,7 +207,7 @@ namespace uc {
         CHEROKEE,
         CJK,
          CJK_FALLBACK,
-        CJK_STRUCTURE,
+         CJK_STRUCTURE,
         COPTIC,
         CUNEIFORM,
         DEVANAGARI,

@@ -3522,9 +3522,14 @@ constinit const uc::Block uc::blocks[] {
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
     { 0x16F00, 0x16F9F,
             "Miao", u8"Мяо (письмо Полларда)", {}, EcScript::Plrd },
+    /// @todo [desc] Ideographic Symbols and Punctuation
     { 0x16FE0, 0x16FFF,
             "Ideographic Symbols and Punctuation",
-            u8"Символы и знаки препинания для иероглифов", {}, EcScript::Hani },
+            u8"Символы и знаки препинания для иероглифов",
+            {},
+            // Hard block, though small, but Hani seems to do the job
+            // First scripts (Khitan, Nushu, Tangut), then CJK
+            EcScript::Hani },
     // Tangut OK
     { 0x17000, 0x187FF,
             "Tangut", u8"Тангутский"sv, {},

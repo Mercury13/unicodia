@@ -1,5 +1,8 @@
 #pragma once
 
+// STL
+#include <string_view>
+
 #include <QColor>
 
 // Colors, sizes etc that are NOT derived from system
@@ -37,8 +40,8 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
     #error Unknown OS
 #endif
 
-#define FNAME_NOTO "NotoSerif-Regular.ttf"
-#define FNAME_NOTOMATH "NotoSansMath-Regular.ttf"
-#define FNAME_NOTOSYM1 "NotoSansSymbols-Regular.ttf"
-#define FNAME_NOTOSYM2 "NotoSansSymbols2-Regular.ttf"
-#define FNAME_NOTOMUSIC "NotoMusic-Regular.ttf"
+constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
+constexpr std::string_view FNAME_NOTOMATH = "NotoSansMath-Regular.ttf";
+constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
+constexpr std::string_view FNAME_NOTOSYM2 = "NotoSansSymbols2-Regular.ttf";
+constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
