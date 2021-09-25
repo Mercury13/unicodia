@@ -157,7 +157,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf" },                                       // Saurashtra
     { "NotoSansSharada-Regular.ttf" },                                          // Sharada
-    { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER, "padding-right:2em"_sty }, // Siddham
+    { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER },                        // Siddham
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
