@@ -21,6 +21,8 @@ What was done by authors of Unicodia:
     Work somehow, but optimized for 25CC dotted circle.
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
+* Egyptian hieroglyphs, Syloti Nagri
+  - Rehinted
 * Devanagari
   - Made 4 chars at Devanagari Extended,
     and 4 characters from Vedic Extensions
@@ -46,8 +48,6 @@ What was done by authors of Unicodia:
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
   - Made KTA ligature in E000 private-use
-* Syloti Nagri
-  - Rehinted
 * Symbols2
   - Fixed rotated chess pawns, they were standing
 * Tagalog:
