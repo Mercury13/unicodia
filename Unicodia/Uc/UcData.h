@@ -276,6 +276,7 @@ namespace uc {
         SAMARITAN,
         SAURASHTRA,
         SHARADA,
+        SIDDHAM,
         SIGNWRITING,
         SINHALA,
         SOGDIAN,

@@ -157,6 +157,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSamaritan-Regular.ttf" },                                        // Samaritan
     { "NotoSansSaurashtra-Regular.ttf" },                                       // Saurashtra
     { "NotoSansSharada-Regular.ttf" },                                          // Sharada
+    { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER, "padding-right:2em"_sty }, // Siddham
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
@@ -1860,6 +1861,25 @@ constinit const uc::Script uc::scriptInfo[] {
                     "{{_}}{{_}}ка {{sm|𑆑}} + и {{sm|◌𑆴}} = ки {{sm|𑆑𑆴}}<br>"
                     "{{_}}{{_}}ка {{sm|𑆑}} + вирама {{sm|◌𑇀}} = к {{sm|𑆑𑇀}}",
                 EcFont::SHARADA },
+    // Siddham OK, W10 none, installed Google Noto font
+    { "Sidd", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Сиддхаматрика", u8"VI век",
+        u8"санскрит",
+        u8"Средневековое североиндийское письмо, появившееся из [[ps:Brah|брахми]] и связанное с буддизмом. "
+                "Часта запись кистью на китайский манер. "
+                "Между словами не ставятся пробелы. "
+                "К 1200 сиддхам заменился другими шрифтами и в настоящее время сохранился только в японском буддизме "
+                    "под названием ''бондзи''."
+            "<p>В японском бондзи нет цифр, а под староиндийские формы цифр оставили место. "
+                "Закодировано много свойственных религиозным текстам знаков препинания и украшений."
+            "<p>Обычная брахмийская абугида. "
+                "[[pt:virama|Вирама]] крайне редка и встречается только на конце слов "
+                    "из-за большого количества [[pt:ligature|лигатур]]{{-}}букв, записанных сверху вниз.<br>"
+                "{{_}}{{_}}ка {{sm|𑖎}} + и {{sm|◌𑖰}} = ки {{sm|𑖎𑖰}}<br>"
+                "{{_}}{{_}}ка {{sm|𑖎}} + вирама {{sm|◌𑖿}} = к {{sm|𑖎𑖿}}<br>"
+                "{{_}}{{_}}ка {{sm|𑖎}} + вирама {{sm|◌𑖿}} + та {{sm|𑖝}} = кта {{sm|𑖎𑖿𑖝}}",
+                EcFont::SIDDHAM },
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
