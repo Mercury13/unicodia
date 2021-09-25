@@ -216,9 +216,9 @@ namespace uc {
         ELBASAN,
         ELYMAIC,
         ETHIOPIC,
-        GEORGIAN_NUSKHURI,  // Special bhv for W7
-          Z_NUS_1,      // DejaVu is a REALLY WONDERFUL Nuskhuri → a few chars are missing
-        GEORGIAN,
+        GEORGIAN_NUSKHURI,  // Special bhv for Nuskhuri W7/10. First Sylfaen that covers all Nuskuri in W10.
+          Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
+        GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
         GRANTHA,
         GUJARATI,

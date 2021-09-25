@@ -94,8 +94,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
-    { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri — FALL to Georgian
-      { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1
+    { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
+      { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
     { "NotoSansGrantha-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_SMALLER,
