@@ -30,9 +30,6 @@
 using namespace std::string_view_literals;
 
 namespace {
-    /// Alpha for space characters
-    constexpr int ALPHA_SPACE = 60;
-
     enum class TableDraw { INTERNAL, CUSTOM };
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
@@ -198,7 +195,7 @@ const QFont* CharsModel::fontAt(const QModelIndex& index) const
 
 const QFont* CharsModel::fontAt(const uc::Cp& cp) const
 {
-    if (cp.drawMethod() != uc::DrawMethod::SAMPLE)
+    if (cp.drawMethod() > uc::DrawMethod::LAST_FONT)
         return {};
     auto& font = cp.font(hint.cell);
     return &font.get(font.q.table, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
@@ -216,11 +213,6 @@ QColor CharsModel::fgAt(const QModelIndex& index, TableColors tcl) const
 
 QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 {
-    if (cp.isTrueSpace()) {
-        auto c = owner->palette().text().color();
-        c.setAlpha(ALPHA_SPACE);
-        return c;
-    }
     if (tcl != TableColors::NO) {
         if (isCjkCollapsed) {
             auto block = uc::blockOf(cp.subj, hint.cell);
@@ -553,6 +545,36 @@ namespace {
         }
     }
 
+    QSize spaceDimensions(const QFont& font, char32_t subj)
+    {
+        QString s = QString::fromUcs4(&subj, 1);
+        QFontMetrics metrics(font);
+        return {   // Spaces are SPACING → ban 0
+                   // All known spaces are direction-neutral and thus LTR, but who knows?
+            std::max(std::abs(metrics.horizontalAdvance(s)), 1),
+            metrics.height() * 4 / 5 };
+    }
+
+    void drawSpace(
+            QPainter* painter, const QRect& rect,
+            const QFont& font, QColor color, char32_t subj)
+    {
+        // Quotient to convert space height to line thickness
+        constexpr auto Q_H2THICK = 1.0 / 25.0;
+
+        auto dim = spaceDimensions(font, subj);
+        color.setAlpha(ALPHA_SPACE);
+        auto lineW = std::max(
+                    static_cast<int>(std::round(dim.height() * Q_H2THICK)), 1);
+        auto x = rect.left() - lineW + (rect.width() - dim.width()) / 2;
+        auto y = rect.top() + (rect.height() - dim.height()) / 2;
+        QBrush brush(color);
+        painter->fillRect(x, y, lineW, dim.height(), brush);
+        x += lineW;
+        x += dim.width();
+        painter->fillRect(x, y, lineW, dim.height(), brush);
+    }
+
     void drawDeprecated(QPainter* painter, const QRect& r)
     {
         static constexpr int SZ = 8;    // we draw lines between pixel centers, actually +1
@@ -574,19 +596,26 @@ void CharsModel::tryDrawCustom(QPainter* painter, const QRect& rect,
 {
     auto ch = charAt(index);
     if (ch) {
-        auto abbr = ch->abbrev();
-        if (!abbr.empty()) {
-            // Abbreviation
-            drawAbbreviation(painter, rect, abbr, color, ch->subj);
-        }
-        else if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
-            // Char
-            painter->setFont(*fontAt(*ch));
-            auto specialColor = fgAt(*ch, TableColors::YES);
-            painter->setBrush(specialColor.isValid() ? specialColor : color);
-            painter->drawText(rect,
-                              Qt::AlignCenter | Qt::TextSingleLine,
-                              textAt(*ch));
+        switch (ch->drawMethod()) {
+        case uc::DrawMethod::ABBREVIATION:
+            drawAbbreviation(painter, rect, ch->abbrev(), color, ch->subj);
+            break;
+        case uc::DrawMethod::SPACE: {
+                auto color = fgAt(*ch, TableColors::YES);
+                if (!color.isValid())
+                    color = owner->palette().windowText().color();
+                drawSpace(painter, rect, *fontAt(*ch), color, ch.code);
+            } break;
+        case uc::DrawMethod::SAMPLE:
+            if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
+                // Char
+                painter->setFont(*fontAt(*ch));
+                auto specialColor = fgAt(*ch, TableColors::YES);
+                painter->setBrush(specialColor.isValid() ? specialColor : color);
+                painter->drawText(rect,
+                                  Qt::AlignCenter | Qt::TextSingleLine,
+                                  textAt(*ch));
+            } break;
         }
         if (ch->isDeprecated())
             drawDeprecated(painter, rect);
@@ -651,6 +680,12 @@ void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
 
 
+void WiCustomDraw::init()
+{
+    initialSize = minimumSize();
+}
+
+
 void WiCustomDraw::paintEvent(QPaintEvent *event)
 {
     Super::paintEvent(event);
@@ -661,17 +696,41 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             drawAbbreviation(&painter, geometry(), abbreviation,
                              palette().windowText().color(),
                              subj);
-        }
+        } break;
+    case Mode::SPACE: {
+            QPainter painter(this);
+            drawSpace(&painter, geometry(), *fontSpace,
+                      palette().windowText().color(),
+                      subj);
+            /// @todo [urgent] draw space
+        } break;
     }
 }
 
 
 void WiCustomDraw::setAbbreviation(std::u8string_view x, char32_t aSubj)
 {
+    setMinimumSize(initialSize);
     mode = Mode::ABBREVIATION;
     abbreviation = x;
     subj = aSubj;
     update();
+}
+
+
+void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
+{
+    static constexpr auto SPACE_PLUS = 30;
+
+    fontSpace = &font;
+    mode = Mode::SPACE;
+    subj = aSubj;
+
+    // Set appropriate size
+    auto dim = spaceDimensions(font, aSubj);
+    setMinimumSize(QSize(
+                std::max(initialSize.width(), dim.width() + SPACE_PLUS),
+                std::max(initialSize.height(), dim.height())));
 }
 
 
@@ -918,6 +977,12 @@ void FmMain::showCp(MaybeChar ch)
             ui->pageSampleCustom->setAbbreviation(ch->abbrev(), ch.code);
             wantSysFont = false;
             break;
+        case uc::DrawMethod::SPACE: {
+                ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+                auto& font = ch->font(hint.sample);
+                auto& qfont = font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
+                ui->pageSampleCustom->setSpace(qfont, ch.code);
+            } break;
         case uc::DrawMethod::SAMPLE:
             drawSampleWithQt(*ch);
             break;

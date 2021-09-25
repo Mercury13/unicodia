@@ -163,12 +163,16 @@ class WiCustomDraw : public QWidget
 public:
     using Super::Super;
     void setAbbreviation(std::u8string_view x, char32_t aSubj);
+    void setSpace(const QFont& font, char32_t aSubj);
+    void init();
 protected:
     void paintEvent(QPaintEvent *event);
 private:
-    enum class Mode { NONE, ABBREVIATION };
+    QSize initialSize;
+    enum class Mode { NONE, SPACE, ABBREVIATION };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
+    const QFont* fontSpace = nullptr;
     char32_t subj = 0;
 };
 

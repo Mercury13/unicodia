@@ -401,7 +401,9 @@ namespace uc {
     };
 
     using Cfgs = Flags<Cfg>;
-    enum class DrawMethod { SAMPLE, ABBREVIATION };
+    enum class DrawMethod {
+            SAMPLE, SPACE, ABBREVIATION,
+            LAST_FONT = SPACE };            // Last using (loading, checking) font
 
     struct Cp   // code point
     {
