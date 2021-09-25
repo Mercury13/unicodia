@@ -22,29 +22,29 @@ What was done by authors of Unicodia:
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Devanagari
-  - Implemented 4 chars at Devanagari Extended,
+  - Made 4 chars at Devanagari Extended,
     and 4 characters from Vedic Extensions
     (umlauts are just for showcasing and actually unusable!)
 * Hebrew
-  - Implemented 05EF yod triangle
+  - Made 05EF yod triangle
 * Khudawadi
   - Made default anchoring of umlauts
   - Rehinted
 * Mongol
-  - Implemented ligature 25CC dotted circle + 18A9 some umlaut,
+  - Made ligature 25CC dotted circle + 18A9 some umlaut,
     that umlaut mostly relies on ligatures and default anchoring
     is really bad.
 * OriyaUI
   - Added anchors to 25CC dotted circle
-  - Implemented ligature 25CC dotted circle + 03BC nukta,
+  - Made ligature 25CC dotted circle + 03BC nukta,
     mostly because of bad default anchoring of nukta
   - Implemented 0B55 combining overline, possibly unusable
 * Siddham
-  - Implemented ligatures 25CC dotted circle + some umlauts
+  - Made ligatures 25CC dotted circle + some umlauts
   - Rehinted
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
-  - Implemented KTA ligature in E000 private-use
+  - Made KTA ligature in E000 private-use
 * Syloti Nagri
   - Rehinted
 * Symbols2
