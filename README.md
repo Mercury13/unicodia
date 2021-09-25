@@ -18,7 +18,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 x64 only. My tofu policy is:
 * **W10 should support everything possible, W7 base plane only**.
 * Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi.
-* Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the fonts has other problems.
+* Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 Rationale:
 * WXP, WVista and W8 are completely abandoned by all imaginable software.
