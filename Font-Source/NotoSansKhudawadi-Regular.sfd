@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1449699788
-ModificationTime: 1632338264
+ModificationTime: 1632578150
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -57,6 +57,7 @@ OS2XHeight: 536
 OS2Vendor: 'GOOG'
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 80008003.02002000.00000000.00000000
+Lookup: 4 0 1 "'rlig' Required Ligatures lookup 0" { "'rlig' Required Ligatures lookup 0-1"  } ['rlig' ('DFLT' <'dflt' > 'dev2' <'dflt' > 'sind' <'dflt' > ) ]
 Lookup: 4 8 0 "'abvf' Above Base Forms in Khudawadi lookup 0" { "'abvf' Above Base Forms in Khudawadi lookup 0 subtable"  } ['abvf' ('sind' <'dflt' > ) ]
 Lookup: 4 8 0 "'abvs' Above Base Substitutions in Khudawadi lookup 1" { "'abvs' Above Base Substitutions in Khudawadi lookup 1 subtable"  } ['abvs' ('sind' <'dflt' > ) ]
 Lookup: 6 512 0 "'abvs' Above Base Substitutions in Khudawadi lookup 2" { "'abvs' Above Base Substitutions in Khudawadi lookup 2 subtable"  } ['abvs' ('sind' <'dflt' > ) ]
@@ -926,7 +927,7 @@ WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Khudawadi lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Khudawadi lookup 3 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning in Khudawadi lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in Khudawadi lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in Khudawadi lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mkmk' Mark to Mark in Khudawadi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mkmk' Mark to Mark in Khudawadi lookup 8 subtable"
-BeginChars: 110 110
+BeginChars: 111 111
 
 StartChar: .notdef
 Encoding: 90 -1 0
@@ -2881,7 +2882,7 @@ StartChar: u112B1
 Encoding: 22 70321 23
 Width: 1214
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 75<865.568 965.562> 0 21G<177 264.468 477 564.035> 535 85<360.865 453.728 676.614 764.883>
 VStem: 761 86<86.6619 402.697> 782 85<178.97 519.418> 1069 84<0 610>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 540 680 basechar 0
@@ -3592,7 +3593,7 @@ StartChar: u112B6
 Encoding: 27 70326 28
 Width: 996
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 75<865.568 965.562> 0 21G<177 264.468 477 564.035> 535 85<360.865 453.728 676.614 764.883> 728 68<-82 61.0952>
 VStem: 761 86<86.6619 402.697> 782 85<178.97 519.418>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 666 790 basechar 0
@@ -3607,7 +3608,7 @@ StartChar: u112B7
 Encoding: 28 70327 29
 Width: 996
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 75<865.568 965.562> 0 21G<177 264.468 477 564.035> 535 85<360.865 453.728 676.614 764.883> 728 68<-70 73.3143>
 VStem: 761 86<86.6619 402.697> 782 85<178.97 519.418>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 729 850 basechar 0
@@ -3622,7 +3623,7 @@ StartChar: u112B8
 Encoding: 29 70328 30
 Width: 996
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 75<865.568 965.562> 0 21G<177 264.468 477 564.035> 535 85<360.865 453.728 676.614 764.883> 668 71<-233.556 -38.8214> 700 71<-92.6797 109.757>
 VStem: -326 72<761.69 802> 130 80<590.25 679.369> 761 86<86.6619 402.697> 782 85<178.97 519.418>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 540 800 basechar 0
@@ -3637,7 +3638,7 @@ StartChar: u112B9
 Encoding: 30 70329 31
 Width: 996
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 75<865.568 965.562> 0 21G<177 264.468 477 564.035> 535 85<360.865 453.728 676.614 764.883> 596 71<97.4255 186.9> 723 71<-167.555 14.2583> 768 66<94.9722 185.355>
 VStem: -259 71<814.112 852> 15 74<676.055 745.7> 198 74<678.257 756.032> 761 86<86.6619 402.697> 782 85<178.97 519.418>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 530 850 basechar 0
@@ -4684,7 +4685,7 @@ StartChar: u112BF
 Encoding: 36 70335 37
 Width: 688
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: 167 135<194.049 280.92> 219 75<40 240.496> 535 75<90 367>
 VStem: 176 124<183.505 286.526> 412 85<339.968 492.154>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 444 680 basechar 0
@@ -5683,7 +5684,7 @@ StartChar: u112C5
 Encoding: 42 70341 43
 Width: 675
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: -10 80<142.526 331.786> 186 135<182.049 268.92> 273 80<140.473 307.687> 540 80<137.815 332.989>
 VStem: 164 124<202.505 305.526> 374 85<385.913 501.897> 384 85<118.131 241.965>
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 484 680 basechar 0
@@ -15195,6 +15196,19 @@ SplineSet
  170 -10 l 1,0,-1
 EndSplineSet
 PairPos2: "'dist' Distance in Khudawadi lookup 0 subtable" u112CE dx=0 dy=0 dh=0 dv=0 dx=85 dy=0 dh=85 dv=0
+EndChar
+
+StartChar: dottedI
+Encoding: 110 -1 110
+Width: 774
+Flags: W
+HStem: 42 52<470.735 507.265> 60 52<386.735 423.265 554.735 591.265> 107 52<312.735 349.265 628.735 665.265> 181 52<265.735 302.265 675.735 712.265> 265 52<247.735 284.265 693.735 730.265> 349 52<265.735 302.265 675.735 712.265> 423 52<312.735 349.265 628.735 665.265> 470 52<386.735 423.265 554.735 591.265> 488 52<470.735 507.265> 700 80<223.185 367.884>
+VStem: 85 85<0 638.451> 240 52<272.735 309.265> 258 52<188.735 225.265 356.735 393.265> 305 52<114.735 151.265 430.735 467.265> 379 52<67.7352 104.265 477.735 514.265> 463 52<49.7352 86.2648 495.735 532.265> 547 52<67.7352 104.265 477.735 514.265> 621 52<114.735 151.265 430.735 467.265> 668 52<188.735 225.265 356.735 393.265> 686 52<272.735 309.265>
+LayerCount: 2
+Fore
+Refer: 107 -1 N 1 0 0 1 0 0 2
+Refer: 11 9676 S 1 0 0 1 192 0 2
+Ligature2: "'rlig' Required Ligatures lookup 0-1" uni25CC u112E1
 EndChar
 EndChars
 EndSplineFont
