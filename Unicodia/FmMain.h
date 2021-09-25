@@ -164,6 +164,7 @@ public:
     using Super::Super;
     void setAbbreviation(std::u8string_view x, char32_t aSubj);
     void setSpace(const QFont& font, char32_t aSubj);
+    void setNormal();
     void init();
 protected:
     void paintEvent(QPaintEvent *event);
@@ -214,6 +215,7 @@ private:
     void initTerms();
     void reflectCjkCollapseState();
     void copyCurrentThing(CurrThing thing);
+    void clearSample();
 
     // mywiki::Gui
     void popupAtAbs(

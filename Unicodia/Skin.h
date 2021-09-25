@@ -48,4 +48,4 @@ constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 
 /// Alpha for space characters
-constexpr int ALPHA_SPACE = 60;
+constexpr int ALPHA_SPACE = 70;

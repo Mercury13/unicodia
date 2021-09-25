@@ -707,10 +707,15 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     }
 }
 
+void WiCustomDraw::setNormal()
+{
+    mode = Mode::NONE;
+    setMinimumSize(initialSize);
+}
 
 void WiCustomDraw::setAbbreviation(std::u8string_view x, char32_t aSubj)
 {
-    setMinimumSize(initialSize);
+    setNormal();
     mode = Mode::ABBREVIATION;
     abbreviation = x;
     subj = aSubj;
@@ -781,9 +786,9 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
-    // OS style
+    // OS style    
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));
+    ui->lbOs->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));    
 
     // Copy
         // Ctrl+C
@@ -900,6 +905,8 @@ void FmMain::copyCurrentSample()
 
 void FmMain::drawSampleWithQt(const uc::Cp& ch)
 {
+    ui->pageSampleCustom->setNormal();
+
     // Font
     auto& font = ch.font(hint.sample);
     ui->lbSample->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
@@ -933,6 +940,13 @@ namespace {
         { mywiki::append(text, x, obj.font()); }
 
 }   // anon namespace
+
+
+void FmMain::clearSample()
+{
+    ui->lbSample->clear();
+    ui->lbSample->setFont(QFont());
+}
 
 
 void FmMain::showCp(MaybeChar ch)
@@ -973,11 +987,13 @@ void FmMain::showCp(MaybeChar ch)
         bool wantSysFont = true;
         switch (ch->drawMethod()) {
         case uc::DrawMethod::ABBREVIATION:
+            clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setAbbreviation(ch->abbrev(), ch.code);
             wantSysFont = false;
             break;
         case uc::DrawMethod::SPACE: {
+                clearSample();
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
                 auto& font = ch->font(hint.sample);
                 auto& qfont = font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
