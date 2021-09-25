@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = false;
+constexpr bool FORCE_TOFU = true;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -63,7 +63,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
-    { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic Noto
+    { "Amiri-Regular.ttf" },                                                    // Arabic Amiri
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
@@ -3151,7 +3151,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В обычном письме эти символы лучше не использовать. "
                     "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                         "(во многих тогдашних кодировках текст записывался слева направо)."sv,
-            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS },
+            EcScript::Arab, EcFont::ARABIC_AMIRI, Bfg::HAS_32_NONCHARS },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
             "Variation Selectors", u8"Селекторы начертания"sv,
@@ -3196,7 +3196,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>В обычном письме эти символы лучше не использовать. "
                 "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                     "(во многих тогдашних кодировках текст записывался слева направо)."sv,
-            EcScript::Arab, EcFont::ARABIC_NOTO },
+            EcScript::Arab, EcFont::ARABIC_AMIRI },
     // Half/full OK
     { 0xFF00, 0xFFEF,
             "Halfwidth and Fullwidth Forms",
@@ -3714,7 +3714,8 @@ constinit const uc::Block uc::blocks[] {
                         "у арабов есть буквы изолированные, начальные, с хвостом, с оттяжкой, с петлей и ажурные. "
                     "Знаки общеевропейские отзеркаленные, но встречаются и собственные{{-}}например, сумма."
                 "<p>Первыми такой набор реализовали разработчики системы математического текста TᴇX (читается «тех»), и в 2012, "
-                    "после семи лет утрясок, эти наработки перенесли в Юникод." },
+                    "после семи лет утрясок, эти наработки перенесли в Юникод.",
+            EcScript::NONE, EcFont::ARABIC_AMIRI },
     // Mahjong tiles OK
     { 0x1F000, 0x1F02F,
             "Mahjong Tiles", u8"Фишки маджонга",
