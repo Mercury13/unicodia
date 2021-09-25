@@ -148,8 +148,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
-    { FNAME_NOTOSYM2, 150_pc },                                                 // Phaistos disc
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Playing cards
+      { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
@@ -2767,6 +2768,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Шрифтонезависимое оптическое распознавание появилось лишь в 1990-е. "
                     "Оно используется для оцифровки книг, обработки анкет и значительно менее надёжное. "
                     "Так что загранпаспорт с машиночитаемой страницей, написанной шрифтом OCR-B{{,-}}не{{_}}анахронизм."sv,
+            // Fonts coincide
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK
     { 0x2460, 0x24FF,
@@ -3741,7 +3743,9 @@ constinit const uc::Block uc::blocks[] {
                     "По второй, игру разрешали в монастырях, а там любое дело начинали с молитвы Господу (итал. ''domino''). "
                     "По третьей{{-}}в честь чёрно-белого карнавального костюма ''domino'', разыгрывающего монаха."
                 "<p>В результате переосмысления слова «домино» появились ''тримино'', ''тетрамино'' и{{_}}т.д.{{-}}"
-                        "фигуры из 3, 4 и{{_}}т.д. квадратов." },
+                        "фигуры из 3, 4 и{{_}}т.д. квадратов.",
+            // Fonts coincide
+            EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Cards OK
     { 0x1F0A0, 0x1F0FF,
             "Playing Cards", u8"Игральные карты",
@@ -3756,7 +3760,10 @@ constinit const uc::Block uc::blocks[] {
                         "7){{_}}день; 8){{_}}вечер; 9){{_}}ночь; 10){{_}}земля и воздух; 11){{_}}вода и огонь; 12){{_}}танец; 13){{_}}покупки; "
                         "14){{_}}забавы на воздухе; 15){{_}}искусство; 16){{_}}весна; 17){{_}}лето; 18){{_}}осень; 19){{_}}зима; "
                         "20){{_}}игра; 21){{_}}коллектив."
-                "<p>В блоке один [[pt:emoji|эмодзи]], чёрный джокер." },
+                "<p>В блоке один [[pt:emoji|эмодзи]], чёрный джокер.",
+            // Font coincides with Phaistos Disc, with one difference:
+            // One emoji here → colour emoji font
+            EcScript::NONE, EcFont::PLAYING_CARDS },
     { 0x1F100, 0x1F1FF,
             "Enclosed Alphanumeric Supplement",
             u8"Обрамлённые буквы и цифры дополнительные",
