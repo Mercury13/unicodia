@@ -1864,11 +1864,13 @@ constinit const uc::Script uc::scriptInfo[] {
     // Siddham OK, W10 none, installed Google Noto font
     { "Sidd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Сиддхаматрика", u8"VI век",
+        u8"Сиддхаматрика (сиддхам, бондзи)", u8"VI век",
         u8"санскрит",
         u8"Средневековое североиндийское письмо, появившееся из [[ps:Brah|брахми]] и связанное с буддизмом. "
                 "Часта запись кистью на китайский манер. "
                 "Между словами не ставятся пробелы. "
+            "<p>Распространилось по всему буддийскому Востоку, включая Японию, но в IX{{_}}веке Китай устроил несколько "
+                    "чисток «иностранных религий», отрезав Японию от материковых источников. "
                 "К 1200 сиддхам заменился другими шрифтами и в настоящее время сохранился только в японском буддизме "
                     "под названием ''бондзи''."
             "<p>В японском бондзи нет цифр, а под староиндийские формы цифр оставили место. "
@@ -3444,7 +3446,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11480, 0x114DF,
             "Tirhuta", u8"Тирхута (митхилакшар)", {}, EcScript::Tirh },
     { 0x11580, 0x115FF,
-            "Siddham", u8"Сиддхаматрика", {}, EcScript::Sidd },
+            "Siddham", u8"Сиддхаматрика (сиддхам, бондзи)", {}, EcScript::Sidd },
     { 0x11600, 0x1165F,
             "Modi", u8"Моди", {}, EcScript::Modi },
     // Mongolian supp OK
@@ -4960,7 +4962,7 @@ QString uc::Cp::osProxy() const
 
     switch (category().upCat) {
     case UpCategory::MARK:
-        return QChar(STUB_CIRCLE) + str::toQ(subj.ch32());
+        return STUB_CIRCLE + str::toQ(subj.ch32());
     default: ;
     }
     return str::toQ(subj.ch32());
