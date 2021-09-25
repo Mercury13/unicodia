@@ -174,7 +174,6 @@ namespace uc {
          SYMBOL,
          HISTORIC,
          HISTORIC_BIGGER,
-         BLOCK,
          PUNCTUATION,
            Z_PUN_1,
          MATH,
@@ -218,6 +217,7 @@ namespace uc {
         ELYMAIC,
         ETHIOPIC,
         GEORGIAN_NUSKHURI,  // Special bhv for W7
+          Z_NUS_1,      // DejaVu is a REALLY WONDERFUL Nuskhuri → a few chars are missing
         GEORGIAN,
         GLAGOLITIC,
         GRANTHA,
