@@ -5016,9 +5016,10 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
 {
     auto v = &firstFont(hint);
     bool isAlternate = flags.have(Cfg::ALT_FONT);
+    auto sb = subj.uval();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-            if (v->doesSupportChar(subj))
+            if (v->doesSupportChar(sb))
                 break;
         }
         ++v;
@@ -5027,6 +5028,24 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
 }
 
 
+uc::TofuState uc::Cp::tofuState(const Block*& hint) const
+{
+    if (drawMethod() > uc::DrawMethod::LAST_FONT)
+        return TofuState::NO_FONT;
+
+    auto v = &firstFont(hint);
+    bool isAlternate = flags.have(Cfg::ALT_FONT);
+    auto sb = subj.uval();
+    while (v->flags.have(Ffg::FALL_TO_NEXT)) {
+        if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
+            if (v->doesSupportChar(sb))
+                return TofuState::PRESENT;
+        }
+        ++v;
+    }
+    return v->doesSupportChar(subj)
+            ? TofuState::PRESENT : TofuState::TOFU;
+}
 
 namespace {
 

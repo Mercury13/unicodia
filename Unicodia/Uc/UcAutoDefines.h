@@ -405,6 +405,11 @@ namespace uc {
             SAMPLE, SPACE, ABBREVIATION,
             LAST_FONT = SPACE };            // Last using (loading, checking) font
 
+    enum class TofuState {
+        PRESENT,    ///< Not a tofu, have char
+        TOFU,       ///< Tofu, have no char
+        NO_FONT };  ///< Have so custom method of drawing that no font needed
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -439,6 +444,7 @@ namespace uc {
         constexpr int plane() const { return subj.val() >> 16; }
 
         DrawMethod drawMethod() const;
+        TofuState tofuState(const Block*& hint) const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }

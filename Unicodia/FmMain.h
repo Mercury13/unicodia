@@ -229,6 +229,7 @@ private slots:
     void popupLinkActivated(const QString& link);
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
+    void showTofuStats();
     void on_comboBlock_currentIndexChanged(int index);
 };
 

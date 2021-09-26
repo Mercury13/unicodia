@@ -14,6 +14,7 @@
 #include <QPainter>
 #include <QShortcut>
 #include <QPaintEngine>
+#include <QMessageBox>
 
 // Misc
 #include "u_Strings.h"
@@ -812,6 +813,10 @@ FmMain::FmMain(QWidget *parent)
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
 
+    // Tofu stats
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
+    connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
+
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
 
@@ -1175,4 +1180,42 @@ void FmMain::cjkExpandCollapse()
 void FmMain::installTempPrefix()
 {
     tempPrefix = model.match.findPrefix();
+}
+
+
+void FmMain::showTofuStats()
+{
+    int nGoodBasic = 0, nTofuBasic = 0,
+        nGoodOther = 0, nTofuOther = 0,
+        firstTofu = 0;
+    const uc::Block* hint = &uc::blocks[0];
+    for (size_t i = 0; i < uc::N_CPS; ++i) {
+        auto& cp = uc::cpInfo[i];
+        switch (cp.tofuState(hint)) {
+        case uc::TofuState::NO_FONT: break;
+        case uc::TofuState::TOFU:
+            if (cp.subj.uval() <= 65535)
+                ++nTofuBasic;
+                else ++nTofuOther;
+            if (firstTofu == 0)
+                firstTofu = cp.subj.uval();
+            break;
+        case uc::TofuState::PRESENT:
+            if (cp.subj.uval() <= 65535)
+                ++nGoodBasic;
+                else ++nGoodOther;
+            break;
+        }
+    }
+    char buf[200];
+    int nTotalBasic = nGoodBasic + nTofuBasic;
+    int nTotalOther = nGoodOther + nTofuOther;
+    snprintf(buf, std::size(buf),
+             "Basic: %d good, %d tofu, %d total" "\n"
+             "Other: %d good, %d tofu, %d total" "\n"
+             "First tofu: %04X",
+             nGoodBasic, nTofuBasic, nTotalBasic,
+             nGoodOther, nTofuOther, nTotalOther,
+             firstTofu);
+    QMessageBox::information(this, "Tofu stats", buf);
 }
