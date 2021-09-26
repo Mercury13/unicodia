@@ -37,9 +37,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
-      /// @todo [urgent] Emoji1 unavailable in W7
-      { "EmojiOne Color", Ffg::FALL_TO_NEXT },                                  // …6
-      { "Segoe UI Historic" },                                                  // …7
+      { "Segoe UI Historic" },                                                  // …6
     { FNAME_NOTO },                                                             // Noto
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
@@ -108,9 +106,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
-    { "Yu Gothic", Ffg::FALL_TO_NEXT, 110_pc },                                 // Kana (Katakana/Hiragana)
-      { "Malgun Gothic", Ffg::FALL_TO_NEXT, 110_pc },                           // …1
-      { "MS Gothic", Ffg::FALL_TO_NEXT, 110_pc },                               // …2
+    { "Yu Gothic", Ffg::FALL_TO_NEXT, 110_pc },                                 // Kana (Katakana/Hiragana) Nice W10 font
+      { "Malgun Gothic", Ffg::FALL_TO_NEXT, 110_pc },                           // …1  Korean font, but in W7 supports lots of nice kana
+      { "MS Gothic", 110_pc },                                                  // …2  fallback W7 font, extreme hinting you can’t switch off
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
@@ -118,6 +116,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
+    { "Malgun Gothic", 110_pc },                                                // Korean
     { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
@@ -1042,7 +1041,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "плохо передают корейский язык и сложны для народа. Образованная публика смотрела на хангыль надменно, "
                 "считая женским, детским или народным письмом. Последующие цари даже запрещали хангыль. Возрождение началось в XX{{_}}веке, "
                 "официальным стал в 1945. Единственная письменность Северной Кореи и основная{{-}}в Южной."sv,
-                EcFont::CJK },
+                EcFont::KOREAN },
     // Hani will never be OK, what a pity…
     { "Hani"sv, WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA,

@@ -863,6 +863,8 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Arabic-Indic Per ten thousand sign")        // Tricky
     EX("Arabic mathematical Sad")                   // Ambiguous
     EX("Arabic mathematical Sheen")                 // Ambiguous
+    EX("Hangul choseong filler")                    // Simpler to add exception
+    EX("Hangul jungseong filler")                   // Same
 };
 
 const std::multiset<PrefixEntry> prefixes {

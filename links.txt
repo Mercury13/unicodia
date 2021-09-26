@@ -22,7 +22,8 @@ http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html —
 https://babelstone.co.uk/Fonts/index.html — разные шрифты
 https://www.jawish.org/blog/archives/429-Dhives-A-free-Dhives-Akuru-font.html — дивес акуру
 https://github.com/pandey/graphite-fonts — это работает Anshuman Pandey
-https://software.sil.org/scheherazade/download/ — «Шехерезада», открытый арабский шрифт, даже Windows его тянет
+https://software.sil.org/scheherazade/download/ — «Шехерезада», открытый арабский шрифт, полное покрытие U13 в основных блоках
+https://www.amirifont.org/ — «Амири», открытый арабский шрифт, полное покрытие доп. блоков, кроме одного символа
 
 
 ИЗОБРАЖЕНИЯ СИМВОЛОВ
