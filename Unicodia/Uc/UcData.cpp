@@ -170,12 +170,13 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
+        /// @todo [debug] Segoe UI Emoji temporarily disabled!
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                                  // …1
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …2
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, 120_pc, },                           // …4
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, },                                   // …4
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …5
-      { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …6
+      { FNAME_DEJAVU },                                                         // …6
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT, 110_pc },                       // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
