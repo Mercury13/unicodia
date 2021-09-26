@@ -89,7 +89,7 @@ namespace {
         Block2 findBlock(Char4 name);
         Block2 rqBlock(Char4 name, uint32_t len = 0);
         /// @param bytes  ASCII only!!
-        void mangle(std::string_view bytes);
+        void mangleTtf(std::string_view bytes);
     private:
         SafeVector<Block> blocks;
 
@@ -174,7 +174,7 @@ namespace {
         return r;
     }
 
-    void MemFont::mangle(std::string_view bytes)
+    void MemFont::mangleTtf(std::string_view bytes)
     {
         auto v = rqBlock("name", 32);
         Mems blk(v.d);
@@ -215,7 +215,7 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
         try {
             MemFont mf;
             mf.load(fname);
-            mf.mangle(tempPrefix);
+            mf.mangleTtf(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << std::endl;
