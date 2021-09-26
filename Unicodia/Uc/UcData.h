@@ -188,6 +188,7 @@ namespace uc {
         AHOM,
         ARABIC,
         ARABIC_AMIRI,
+          Z_AMI_1,          // Amiri does not have one char → took it from Noto
         ARAMAIC,
         ARMENIAN,
           Z_ARM_1,

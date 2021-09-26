@@ -56,13 +56,14 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
-    { "FunkySample.ttf" },                                                      // Funky
-    { "FunkySample.ttf", 115_pc },                                              // Funky bigger
+    { FNAME_FUNKY },                                                            // Funky
+    { FNAME_FUNKY, 115_pc },                                                    // Funky bigger
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
-    { "Amiri-Regular.ttf" },                                                    // Arabic Amiri
+    { "Amiri-Regular.ttf", Ffg::FALL_TO_NEXT },                                 // Arabic Amiri
+      { FNAME_FUNKY },                                                          // …1, ONE FUKY CHAR!
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
