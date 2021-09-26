@@ -62,8 +62,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
-    { "Amiri-Regular.ttf", Ffg::FALL_TO_NEXT },                                 // Arabic Amiri
-      { FAM_ARABIC_FALLBACK },                                                  // …1, Amiri has ONE FUNKY CHAR missing
+    { "Amiri-Regular.ttf" },                                                    // Arabic Amiri
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
