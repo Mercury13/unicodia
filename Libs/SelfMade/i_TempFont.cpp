@@ -18,7 +18,7 @@
 
 std::string tempPrefix;
 
-constexpr bool debugTempFont = false;
+constexpr bool debugTempFont = true;
 
 #define MSG0(x) if constexpr (debugTempFont) { std::cout << x; }
 #define MSG(x)  if constexpr (debugTempFont) { std::cout << x << std::endl; }
@@ -216,6 +216,16 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
             MemFont mf;
             mf.load(fname);
             mf.mangle(tempPrefix);
+            id = QFontDatabase::addApplicationFontFromData(mf.qdata());
+        } catch (const std::exception& e) {
+            std::cout << "ERROR: " << e.what() << std::endl;
+        }
+    } else if (!tempPrefix.empty() && fname.endsWith(".otf")) {
+        // OTF, try from memory
+        try {
+            MemFont mf;
+            mf.load(fname);
+            //mf.mangle(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << std::endl;
