@@ -38,11 +38,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Historic" },                                                  // …6
     { FNAME_NOTO },                                                             // Noto
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
-      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …2
-      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
-      { FNAME_NOTOSYM2, 120_pc },                                               // …4
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
@@ -174,6 +169,13 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
+      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                                  // …1
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT, 120_pc },                            // …2
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, 120_pc, },                           // …4
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …5
+      { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …6
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT, 110_pc },                       // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
