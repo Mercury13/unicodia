@@ -37,6 +37,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
+      /// @todo [urgent] Emoji1 unavailable in W7
       { "EmojiOne Color", Ffg::FALL_TO_NEXT },                                  // …6
       { "Segoe UI Historic" },                                                  // …7
     { FNAME_NOTO },                                                             // Noto
