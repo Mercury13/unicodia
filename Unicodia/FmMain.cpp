@@ -787,6 +787,9 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
+    // Sample
+    ui->pageSampleCustom->init();
+
     // OS style    
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));    
