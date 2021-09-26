@@ -224,7 +224,6 @@ namespace uc {
           Z_DIN_2,
           Z_DIN_3,
           Z_DIN_4,
-          Z_DIN_5,
         DOGRA,
         EGYPTIAN,
         ELBASAN,

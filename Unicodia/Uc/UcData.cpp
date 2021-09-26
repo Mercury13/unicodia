@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = false;
+constexpr bool FORCE_TOFU = true;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
@@ -103,7 +103,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
-      { "HanaMinA.ttf" },                                                       // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
