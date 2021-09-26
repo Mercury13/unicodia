@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1632623935
+ModificationTime: 1632627206
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -41,6 +41,7 @@ HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
+OS2UnicodeRanges: 00002000.02002080.00000008.00000000
 Lookup: 257 1 0 "Single Positioning in 'Chrs' lookup 0" { "Chrs"  } ['Chrs' ('Chrs' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125

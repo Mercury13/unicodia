@@ -26,7 +26,8 @@ constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
             | QFont::PreferQuality | QFont::PreferFullHinting);
 constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
-            QFont::PreferAntialias | QFont::PreferMatch | QFont::PreferFullHinting);
+            QFont::PreferAntialias | QFont::PreferOutline | QFont::PreferMatch
+            | QFont::PreferFullHinting);
 constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
 
 constinit const uc::Font uc::fontInfo[] = {
@@ -36,7 +37,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
-      { "Segoe UI Historic" },                                                  // …6
+      { "EmojiOne Color", Ffg::FALL_TO_NEXT },                                  // …6
+      { "Segoe UI Historic" },                                                  // …7
     { FNAME_NOTO },                                                             // Noto
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
@@ -105,6 +107,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
+    { "Yu Gothic", Ffg::FALL_TO_NEXT, 110_pc },                                 // Kana (Katakana/Hiragana)
+      { "Malgun Gothic", Ffg::FALL_TO_NEXT, 110_pc },                           // …1
+      { "MS Gothic", Ffg::FALL_TO_NEXT, 110_pc },                               // …2
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
@@ -1110,7 +1115,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Женщины, которым не было доступно образование, писали слоговой азбукой, и предпочитали не рубленую "
                 "[[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
-                EcFont::CJK },
+                EcFont::KANA },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -1184,7 +1189,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "роль играло не изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.</p>"
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).</p>"sv,
-                EcFont::CJK },    
+                EcFont::KANA },
     // Kharoshthi OK, W10 tofu → installed Noto
         /// @todo [portability] Ligature is created from a wrong sequence here
     { "Khar"sv, QFontDatabase::Any,
@@ -3173,7 +3178,7 @@ constinit const uc::Block uc::blocks[] {
             u8"<p>[[ps:Hani|Китайский язык]] изначально писался по столбцам справа налево, и сейчас так пишут "
                     "в художественных целях: стихи, открытки, вывески."
                 "<p>Блок кодирует символы из китайской кодировки GB{{_}}18030 (2005), предназначенные для вертикального письма."sv,
-            EcScript::Hani },
+            EcScript::NONE, EcFont::CJK_STRUCTURE },
     // Combining half marks OK
     { 0xFE20, 0xFE2F,
             "Combining Half Marks", u8"Комбинирующие полузнаки"sv,

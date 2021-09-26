@@ -1188,7 +1188,7 @@ void FmMain::showTofuStats()
     int nGoodBasic = 0, nTofuBasic = 0,
         nGoodOther = 0, nTofuOther = 0,
         nGoodNonCjk = 0, nTofuNonCjk = 0,
-        firstTofu, firstTofuNonCjk = 0;
+        firstTofu = 0, firstTofuNonCjk = 0;
     const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];

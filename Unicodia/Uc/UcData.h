@@ -163,6 +163,7 @@ namespace uc {
           Z_NOR_4,
           Z_NOR_5,
           Z_NOR_6,
+          Z_NOR_7,
          NOTO,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
@@ -225,6 +226,9 @@ namespace uc {
         HENTAIGANA,
         JAVANESE,
         KAITHI,
+        KANA,
+          Z_KNA_1,
+          Z_KNA_2,
         KANNADA,
         KAYAH_LI,
         KHAROSHTHI,
@@ -326,6 +330,7 @@ namespace uc {
         FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
+        NO_HINTING    = 1<<11,  ///< No hinting
     };
 
     DEFINE_ENUM_OPS(Ffg)
