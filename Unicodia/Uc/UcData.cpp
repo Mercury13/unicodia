@@ -20,7 +20,7 @@ const QString uc::Font::qempty;
 constexpr QChar ZWSP(0x200B);
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
-constexpr bool FORCE_TOFU = true;
+constexpr bool FORCE_TOFU = false;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
             QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
