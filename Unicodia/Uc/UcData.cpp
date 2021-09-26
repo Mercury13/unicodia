@@ -37,8 +37,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
-      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6
-      { "Segoe UI Historic" },                                                  // …7
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
+      { "Segoe UI Historic" },                                                  // …7  Let it be, system font
     { FNAME_NOTO },                                                             // Noto
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
