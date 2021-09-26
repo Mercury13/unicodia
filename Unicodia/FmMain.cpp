@@ -1187,35 +1187,47 @@ void FmMain::showTofuStats()
 {
     int nGoodBasic = 0, nTofuBasic = 0,
         nGoodOther = 0, nTofuOther = 0,
-        firstTofu = 0;
+        nGoodNonCjk = 0, nTofuNonCjk = 0,
+        firstTofu, firstTofuNonCjk = 0;
     const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
+        auto code = cp.subj.uval();
         switch (cp.tofuState(hint)) {
         case uc::TofuState::NO_FONT: break;
         case uc::TofuState::TOFU:
-            if (cp.subj.uval() <= 65535)
+            if (code <= 65535)
                 ++nTofuBasic;
                 else ++nTofuOther;
             if (firstTofu == 0)
-                firstTofu = cp.subj.uval();
+                firstTofu = code;
+            if (!hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
+                ++nTofuNonCjk;
+                if (firstTofuNonCjk == 0)
+                    firstTofuNonCjk = code;
+            }
             break;
         case uc::TofuState::PRESENT:
-            if (cp.subj.uval() <= 65535)
+            if (code <= 65535)
                 ++nGoodBasic;
                 else ++nGoodOther;
+            if (!hint->flags.have(uc::Bfg::COLLAPSIBLE))
+                ++nGoodNonCjk;
             break;
         }
     }
     char buf[200];
     int nTotalBasic = nGoodBasic + nTofuBasic;
     int nTotalOther = nGoodOther + nTofuOther;
+    int nTotalNonCjk = nGoodNonCjk + nTofuNonCjk;
     snprintf(buf, std::size(buf),
              "Basic: %d good, %d tofu, %d total" "\n"
              "Other: %d good, %d tofu, %d total" "\n"
-             "First tofu: %04X",
+             "Non-CJK: %d good, %d tofu, %d total" "\n"
+             "First tofu: %04X, non-CJK %04X",
              nGoodBasic, nTofuBasic, nTotalBasic,
              nGoodOther, nTofuOther, nTotalOther,
-             firstTofu);
+             nGoodNonCjk, nTofuNonCjk, nTotalNonCjk,
+             firstTofu, firstTofuNonCjk);
     QMessageBox::information(this, "Tofu stats", buf);
 }

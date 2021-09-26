@@ -36,6 +36,8 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
     #define FAM_DEFAULT "Cambria"
     #define FAM_CONDENSED "Arial"
     #define FAM_EMOJI "Segoe UI Emoji"
+    // Amiri has ONE FUNKY CHAR missing, and it is REALLY PRESENT in Arial
+    #define FAM_ARABIC_FALLBACK "Arial"
 #else
     #error Unknown OS
 #endif
