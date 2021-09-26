@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 16 16"
+   id="svg4"
+   sodipodi:docname="A960_v2.svg"
+   width="16"
+   height="16"
+   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\A960.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#fff0f5"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     showgrid="true"
+     inkscape:snap-global="false"
+     inkscape:zoom="23.53125"
+     inkscape:cx="11.814077"
+     inkscape:cy="8.4568393"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4">
+    <inkscape:grid
+       type="xygrid"
+       id="grid2045" />
+  </sodipodi:namedview>
+  <g
+     aria-label="ꥵ"
+     id="text7745"
+     style="font-weight:bold;font-size:19.2969px;line-height:1.25;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#5c3566;stroke-width:0.999999">
+    <path
+       d="M 3.7978697,8.7668204 H 1.8459351 V 5.4072408 h 1.9519346 z m 0,-7.7326637 V 4.1685131 H 1.8459351 V 1.0341567 H 0.55090168 V 8.7105146 C -0.93181777,7.5093242 -1.2696526,5.4635466 -1.2696526,3.8869841 V 1.0529253 h -1.4076451 v 2.8340588 c 0,1.5014881 -0.281529,3.434654 -1.5390254,4.6921503 C -5.4362821,7.3216381 -5.7365798,5.3697036 -5.7365798,3.8869841 V 1.0529253 h -1.4264138 v 2.8340588 c 0,1.7267113 -0.3941405,3.9789434 -2.1771578,5.086291 l 0.8633557,1.0510419 c 1.0698104,-0.67567 1.6704056,-1.7830174 2.027009,-2.984208 0.3566035,1.3138021 1.0322732,2.5337613 2.2334636,3.246968 1.2199592,-0.7132067 1.8768602,-1.9143972 2.2522323,-3.2281994 0.3566033,1.2011906 0.9571987,2.2897694 2.00824025,2.9654394 L 0.55090168,9.4237215 V 10.024317 H 5.0929033 V 1.0341567 Z"
+       style="font-weight:normal;font-size:medium;font-family:'Noto Sans KR';-inkscape-font-specification:'Noto Sans KR';stroke-width:0.999998"
+       id="path15928" />
+  </g>
+</svg>

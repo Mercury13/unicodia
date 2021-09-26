@@ -226,15 +226,16 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MICR"sv,         Dicf::CAP_ALL },
 
     // Capitalize next
-    { "CHARACTER"sv,    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "CHOSEONG"sv,     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-      { "JUNGSEONG"sv,  Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-      { "JONGSEONG"sv,  Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "DIGIT"sv,        Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
-    { "FRACTION"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "HIEROGLYPH"sv,   Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "IDEOGRAM"sv,     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "LETTER"sv,       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "CHARACTER",      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "CHOSEONG",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+      { "JUNGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+      { "JONGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "DIGIT",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
+    { "FRACTION",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "HIEROGLYPH",     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "IDEOGRAM",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "LETTER",         Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "DIGRAPH",        Dicf::TRIG_CAP_NEXT | Dicf::PART_NOUN | Dicf::CAP_SMALL },
     /// @todo [spelling] Ligature Alpha Bravo — how to kick?
     { "LIGATURE"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "LOGICAL"sv,      Dicf::TRIG_CAP_NEXT },
@@ -553,6 +554,20 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
     { "YENISEI",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
+
+    // Months
+    { "JANUARY",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FEBRUARY",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "MARCH",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "APRIL",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "MAY",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JUNE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JULY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "AUGUST",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SEPTEMBER",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "OCTOBER",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "NOVEMBER",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "DECEMBER",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
     // Some letters
     { "A",              Dicf::PART_MAYBE_LETTER },
