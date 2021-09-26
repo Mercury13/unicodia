@@ -1185,10 +1185,11 @@ void FmMain::installTempPrefix()
 
 void FmMain::showTofuStats()
 {
-    int nGoodBasic = 0, nTofuBasic = 0,
-        nGoodOther = 0, nTofuOther = 0,
-        nGoodNonCjk = 0, nTofuNonCjk = 0,
-        firstTofu = 0, firstTofuNonCjk = 0;
+    int nGoodP0 = 0, nTofuP0 = 0,
+        nGoodP1 = 0, nTofuP1 = 0,
+        nGoodCjk = 0, nTofuCjk = 0,
+        nGoodRest = 0, nTofuRest = 0,
+        firstTofuCjk = 0, firstTofuRest = 0;
     const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
@@ -1197,37 +1198,45 @@ void FmMain::showTofuStats()
         case uc::TofuState::NO_FONT: break;
         case uc::TofuState::TOFU:
             if (code <= 65535)
-                ++nTofuBasic;
-                else ++nTofuOther;
-            if (firstTofu == 0)
-                firstTofu = code;
-            if (!hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                ++nTofuNonCjk;
-                if (firstTofuNonCjk == 0)
-                    firstTofuNonCjk = code;
+                ++nTofuP0;
+                else ++nTofuP1;
+            if (hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
+                ++nTofuCjk;
+                if (firstTofuCjk == 0)
+                    firstTofuCjk = code;
+            } else {
+                ++nTofuRest;
+                if (firstTofuRest == 0)
+                    firstTofuRest = code;
             }
             break;
         case uc::TofuState::PRESENT:
             if (code <= 65535)
-                ++nGoodBasic;
-                else ++nGoodOther;
-            if (!hint->flags.have(uc::Bfg::COLLAPSIBLE))
-                ++nGoodNonCjk;
+                ++nGoodP0;
+                else ++nGoodP1;
+            if (hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
+                ++nGoodCjk;
+            } else {
+                ++nGoodRest;
+            }
             break;
         }
     }
-    char buf[200];
-    int nTotalBasic = nGoodBasic + nTofuBasic;
-    int nTotalOther = nGoodOther + nTofuOther;
-    int nTotalNonCjk = nGoodNonCjk + nTofuNonCjk;
+    char buf[300];
+    int nTotalP0 = nGoodP0 + nTofuP0;
+    int nTotalP1 = nGoodP1 + nTofuP1;
+    int nTotalCjk = nGoodCjk + nTofuCjk;
+    int nTotalRest = nGoodRest + nTofuRest;
     snprintf(buf, std::size(buf),
-             "Basic: %d good, %d tofu, %d total" "\n"
-             "Other: %d good, %d tofu, %d total" "\n"
-             "Non-CJK: %d good, %d tofu, %d total" "\n"
-             "First tofu: %04X, non-CJK %04X",
-             nGoodBasic, nTofuBasic, nTotalBasic,
-             nGoodOther, nTofuOther, nTotalOther,
-             nGoodNonCjk, nTofuNonCjk, nTotalNonCjk,
-             firstTofu, firstTofuNonCjk);
+             "Basic (P0): %d good, %d tofu, %d total" "\n"
+             "Supp (P1+): %d good, %d tofu, %d total" "\n"
+             "CJK: %d good, %d tofu, %d total" "\n"
+             "Rest: %d good, %d tofu, %d total" "\n"
+             "First tofu: CJK %04X, rest %04X",
+             nGoodP0, nTofuP0, nTotalP0,
+             nGoodP1, nTofuP1, nTotalP1,
+             nGoodCjk, nTofuCjk, nTotalCjk,
+             nGoodRest, nTofuRest, nTotalRest,
+             firstTofuCjk, firstTofuRest);
     QMessageBox::information(this, "Tofu stats", buf);
 }

@@ -37,7 +37,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
-      { "Segoe UI Historic" },                                                  // …6
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6
+      { "Segoe UI Historic" },                                                  // …7
     { FNAME_NOTO },                                                             // Noto
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
@@ -80,12 +81,29 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
             /// @todo [fonts,urgent] Right now we install a TT collection, and we need just SC!!
-    { "NotoSerifCJK-Regular.ttc", Ffg::DESC_STD | Ffg::STUB_OFF, 120_pc },      // CJK
-    { "Microsoft YaHei" },                                                      // CJK fallback
+    { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                    // CJK
+      { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
+      { "BabelStoneHan.ttf", Ffg::FALL_TO_NEXT, 120_pc },                       // …2
+      { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
+      { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …4 Japanese
+      { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …5 Korean
+      { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …6 Japanese
+      { "HanaMinA.ttf", Ffg::FALL_TO_NEXT, 120_pc },                            // …7
+      { "HanaMinB.ttf", 120_pc },                                               // …8
+    { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
+      { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
+      { "HanaMinA.ttf", 120_pc },                                               // …2
+    { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", 110_pc },                                      // Devanagari
+    { "NotoSerifDevanagari.ttf", 110_pc },                                      // Devanagari    
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …1
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
+      { "HanaMinA.ttf" },                                                       // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -103,7 +121,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
     /// @todo [semi-tofu, P1] Sort out hiragana and hentaigana!
-    { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
+    { "HanaMinA.ttf", Ffg::DESC_STD, 110_pc },                                  // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
@@ -114,7 +132,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT, 110_pc },                    // Korean:  we use it for well-known chars, no need to rename
-      { "Yu Gothic" },                                                          // …1 — for P1 Katakana
+      { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
+      { "BabelStoneHan.ttf" },                                                  // …2 U14
     { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
@@ -2820,10 +2839,11 @@ constinit const uc::Block uc::blocks[] {
                         "информации о дорожных заторах через цифровое телевидение."sv },
     // Dingbats OK
     { 0x2700, 0x27BF,
-            "Dingbats", u8"Украшения"sv,
+            "Dingbats", u8"Украшения",
             u8"<p>Символы, чаще всего используемые для украшения печатного текста. "
                     "Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, "
-                    "а печатник оформит публикацию чёрно-белым шрифтом."sv },
+                    "а печатник оформит публикацию чёрно-белым шрифтом.",
+            EcScript::NONE, EcFont::DINGBAT },
     // Misc math A OK
     { 0x27C0, 0x27EF,
             "Miscellaneous Mathematical Symbols-A",
@@ -2956,8 +2976,8 @@ constinit const uc::Block uc::blocks[] {
                     "Камбун учат в современных японских школах, но новых текстов на нём не пишут."
                 "<p>В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) "
                         "и 15 значков порядка."sv,
-            EcScript::NONE, EcFont::CJK_FALLBACK },
-    /// @todo [tofu, BMP] 31BB+
+            EcScript::NONE, EcFont::CJK_KANBUN },
+    // Bopomofo OK, at least in W10
     { 0x31A0, 0x31BF,
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный"sv,
             u8"Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского."sv,
@@ -2990,12 +3010,11 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compatibility OK
     { 0x3300, 0x33FF,
-            "CJK Compatibility", u8"ККЯ символы совместимости"sv,
+            "CJK Compatibility", u8"ККЯ символы совместимости",
             u8"Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. "
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, BMP] 10 hieroglyphs from 2018 and 2020, 4BD6+
+            EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE },
     /// @todo [desc] CJK A
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
