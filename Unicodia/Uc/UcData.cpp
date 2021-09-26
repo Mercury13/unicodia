@@ -106,9 +106,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "HanaMinA.ttf", Ffg::DESC_STD },                                          // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
-    { "Yu Gothic", Ffg::FALL_TO_NEXT, 110_pc },                                 // Kana (Katakana/Hiragana) Nice W10 font
-      { "Malgun Gothic", Ffg::FALL_TO_NEXT, 110_pc },                           // …1  Korean font, but in W7 supports lots of nice kana
-      { "MS Gothic", 110_pc },                                                  // …2  fallback W7 font, extreme hinting you can’t switch off
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
@@ -116,7 +113,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { "Malgun Gothic", 110_pc },                                                // Korean
+    { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT, 110_pc },                    // Korean:  we use it for well-known chars, no need to rename
+      { "Yu Gothic" },                                                          // …1 — for P1 Katakana
     { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
@@ -1104,7 +1102,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>«Китайские порномультики» хентай{{-}}омофон: они происходят от {{sm|変態}} «хэнтай»{{-}}извращённый, "
                 "а хэнтайгана от {{sm|変体}} «хэнтай»{{-}}необычный."sv,
                 EcFont::HENTAIGANA },
-    // Hiragana OK, found W7/10 font not pair, but triad
+    // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
@@ -1115,7 +1113,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Женщины, которым не было доступно образование, писали слоговой азбукой, и предпочитали не рубленую "
                 "[[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов."sv,
-                EcFont::KANA },
+                EcFont::KOREAN },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp"sv, QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -1179,7 +1177,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Карены{{-}}разнородная группа народов, среди них есть красные, чёрные, белые и другие, по цвету национального костюма. "
                 "Помимо кая-ли, пишут [[ps:Thai|тайским]], латиницей и [[ps:Mymr|бирманским]].</p>"sv,
                 EcFont::KAYAH_LI },
-    // Katakana OK, found W7/10 font not pair, but triad
+    // Katakana OK, installed small version of Noto CJK Korean
     { "Kana"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Катакана"sv, u8"VIII—IX век"sv,
@@ -1189,7 +1187,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "роль играло не изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.</p>"
             "<p>Катáкану используют для записи заимствованных слов и начального обучения иностранцев. "
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).</p>"sv,
-                EcFont::KANA },
+                EcFont::KOREAN },
     // Kharoshthi OK, W10 tofu → installed Noto
         /// @todo [portability] Ligature is created from a wrong sequence here
     { "Khar"sv, QFontDatabase::Any,
@@ -2931,7 +2929,7 @@ constinit const uc::Block uc::blocks[] {
             "CJK Symbols and Punctuation",
             u8"ККЯ символы и знаки препинания"sv, {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    // Hiragana OK, not collapsible: syllabary
+    // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F,
             "Hiragana", u8"Хирагана", {}, EcScript::Hira },
     // Katakana OK, not collapsible: syllabary
