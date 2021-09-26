@@ -175,8 +175,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
-        /// @todo [debug] Segoe UI Emoji temporarily disabled!
-      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                                  // …1
+      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, },                                   // …4
@@ -1105,6 +1104,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>«Китайские порномультики» хентай{{-}}омофон: они происходят от {{sm|変態}} «хэнтай»{{-}}извращённый, "
                 "а хэнтайгана от {{sm|変体}} «хэнтай»{{-}}необычный."sv,
                 EcFont::HENTAIGANA },
+    // Hiragana OK, found W7/10 font not pair, but triad
     { "Hira"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA,
         u8"Хирагана"sv, u8"VIII—IX век"sv,
@@ -1179,7 +1179,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Карены{{-}}разнородная группа народов, среди них есть красные, чёрные, белые и другие, по цвету национального костюма. "
                 "Помимо кая-ли, пишут [[ps:Thai|тайским]], латиницей и [[ps:Mymr|бирманским]].</p>"sv,
                 EcFont::KAYAH_LI },
-    /// @todo [img] what images to choose for Katakana/Hiragana?
+    // Katakana OK, found W7/10 font not pair, but triad
     { "Kana"sv, QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Катакана"sv, u8"VIII—IX век"sv,
