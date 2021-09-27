@@ -344,7 +344,7 @@ int main()
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has no default abbreviation." << std::endl;
         }
-        std::string sLowerName = decapitalize(sName);
+        std::string sLowerName = decapitalize(sName, cp);
         auto [iTech, wasIns] = strings.remember(sLowerName, cp);
         if (!allAbbrevs.empty() && !wasIns) {
             nl.trigger();

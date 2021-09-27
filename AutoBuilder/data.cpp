@@ -886,6 +886,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Hangul jungseong filler")                   // Same
 };
 
+/// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
 const std::multiset<PrefixEntry> prefixes {
     { { "APL"sv, "FUNCTIONAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
     { { "QUADRANT"sv }, PrefixAction::NEXT_CAP },
@@ -901,9 +902,11 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
     { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
     { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
-    { { "CIRCLED", "KATAKANA" }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
-    { { "CJK", "STROKE" }, PrefixAction::REST_ALLCAP },
-    { { "MIAO", "LETTER", "YI" }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
+    { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
+    { { "CJK"sv, "STROKE"sv }, PrefixAction::REST_ALLCAP },
+    { { "MIAO"sv, "LETTER"sv, "YI"sv }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
+    { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
+    { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
 };
 
 
@@ -1362,7 +1365,7 @@ namespace {
 }   // anon namespace
 
 
-std::string decapitalize(std::string_view x, DecapDebug debug)
+std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
 {
     // Tetect exceptions
     std::string upper = toUpper(x);
@@ -1554,7 +1557,7 @@ std::string decapitalize(std::string_view x, DecapDebug debug)
     auto range = prefixes.equal_range(prefixKey);
     for (auto it = range.first; it != range.second; ++it) {
         auto& entry = *it;
-        if (doWordsFit(words, entry.toBuf())) {
+        if (cp >= entry.lo && cp <= entry.hi && doWordsFit(words, entry.toBuf())) {
             doPrefixAction(words, entry.nTriggers, entry.action);
             break;
         }

@@ -78,10 +78,14 @@ enum class PrefixAction {
 };
 
 struct PrefixEntry {
+private:
+    using This = PrefixEntry;
+public:
     size_t nTriggers;
     enum { SZ = 10 };
     std::string_view triggers[SZ];
     const PrefixAction action;
+    char32_t lo = 0, hi = 0xFFFFFF;
 
     template <size_t N>
     constexpr PrefixEntry(const std::string_view (&aTriggers)[N],
@@ -92,6 +96,12 @@ struct PrefixEntry {
         for (size_t i = 0; i < N; ++i)
             triggers[i] = aTriggers[i];
     }
+    template <size_t N>
+    constexpr PrefixEntry(const std::string_view (&aTriggers)[N],
+                          char32_t aLo, char32_t aHi,
+                          PrefixAction aAction)
+        : This(aTriggers, aAction)
+        { lo = aLo; hi = aHi; }
     PrefixEntry(std::string_view aTrigger, PrefixAction aAction)
         : nTriggers(1), triggers { aTrigger, {} }, action(aAction) {}
 
@@ -111,5 +121,8 @@ extern const std::set<std::string_view> cuneiformSymbols;
 
 enum class DecapDebug { NO, YES };
 
-std::string decapitalize(std::string_view x, DecapDebug debug = DecapDebug::NO);
+std::string decapitalize(
+        std::string_view x,
+        char32_t cp = 0,
+        DecapDebug debug = DecapDebug::NO);
 bool isAlternate(char32_t x);
