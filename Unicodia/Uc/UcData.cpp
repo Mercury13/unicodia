@@ -1263,7 +1263,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Малое киданьское письмо", u8"X век",
         u8"киданьский <i>(северо-восточный Китай)</i>"sv,
         u8"Использовалось в государстве Ляо (северо-восточный Китай). "
-                "Изобретено около 925 учёным по имени Елюй Дела н а основе уйгурского. "
+                "Изобретено около 925 учёным по имени Елюй Дела на основе уйгурского. "
                 "Слова записываются блоками до семи иероглифов. "
                 "Из 378 известных на 1987{{_}}год символов 125{{-}}иероглифы, 115{{-}}фонетические, остальные не расшифрованы."
             "<p>Большое и малое письмо использовались параллельно, малое проще (большое{{-}}чисто иероглифическое). "
@@ -3526,16 +3526,22 @@ constinit const uc::Block uc::blocks[] {
     // Multani OK
     { 0x11280, 0x112AF,
             "Multani", u8"Мултани", {}, EcScript::Mult },
+    // Khuda OK
     { 0x112B0, 0x112FF,
             "Khudawadi", u8"Кхудабади (синдхи)", {}, EcScript::Sind },
+    // Grantha OK
     { 0x11300, 0x1137F,
             "Grantha", u8"Грантха", {}, EcScript::Gran },
+    // Newa OK
     { 0x11400, 0x1147F,
             "Newa"sv, u8"Неварский (прахалит)", {}, EcScript::Newa },
+    // Tirhuta OK
     { 0x11480, 0x114DF,
             "Tirhuta", u8"Тирхута (митхилакшар)", {}, EcScript::Tirh },
+    // Siddham OK
     { 0x11580, 0x115FF,
             "Siddham", u8"Сиддхаматрика (сиддхам, бондзи)", {}, EcScript::Sidd },
+    // Modi OK
     { 0x11600, 0x1165F,
             "Modi", u8"Моди", {}, EcScript::Modi },
     // Mongolian supp OK
@@ -3548,6 +3554,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Иконка соответствует написанию сверху вниз{{-}}"
                         "а глифы в шрифтах повёрнуты на 90° против часовой стрелки.",
             EcScript::Mong },
+    // Takri OK
     { 0x11680, 0x116CF,
             "Takri", u8"Такри", {}, EcScript::Takr },
     // Ahom OK
@@ -3556,6 +3563,7 @@ constinit const uc::Block uc::blocks[] {
     // Dogra OK
     { 0x11800, 0x1184F,
             "Dogra", u8"Догра", {}, EcScript::Dogr },
+    // Warang OK
     { 0x118A0, 0x118FF,
             "Warang Citi", u8"Варанг-кшити", {}, EcScript::Wara },
     { 0x11900, 0x1195F,
@@ -3634,11 +3642,16 @@ constinit const uc::Block uc::blocks[] {
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
     { 0x16F00, 0x16F9F,
             "Miao", u8"Мяо (письмо Полларда)", {}, EcScript::Plrd },
-    /// @todo [desc] Ideographic Symbols and Punctuation
+    // Ideographic sym/punct OK
     { 0x16FE0, 0x16FFF,
             "Ideographic Symbols and Punctuation",
             u8"Символы и знаки препинания для иероглифов",
-            {},
+            u8"Различные символы, используемые в старых [[pt:cjk|ККЯ]]-письменностях: "
+                        "[[ps:Nshu|нюй-шу]], [[ps:Tang|тангутском]], [[ps:Kits|малом киданьском]], "
+                        "старых [[ps:Hani|китайских иероглифах]]."
+                "<p>Одинаковые иероглифы не пишут рядом, вместо этого используют знак повтора. "
+                    "Крючок в старых рукописях означает конец предложения или главы. "
+                    "Если блок малого киданьского начинается с одного иероглифа, а не двух, на вакантное место ставят заполнитель.",
             // Hard block, though small, but Hani seems to do the job
             // First scripts (Khitan, Nushu, Tangut), then CJK
             EcScript::Hani },
