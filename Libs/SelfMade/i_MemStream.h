@@ -58,6 +58,7 @@ public:
     /// Writes dsize bytes, native byte order
     /// @throw too big dsize
     void write(const char* data, size_t dsize);
+    void write(std::string_view data) { write(data.data(), data.size()); }
 
     /// Helper function: reads struc of known length, native byte order
     template <size_t Len, class T>

@@ -7,6 +7,7 @@
 // Qt
 #include <QApplication>
 #include <QDir>
+#include <QFileInfo>
 #include <QFontDatabase>
 
 // Qt misc
@@ -89,12 +90,13 @@ namespace {
         Block2 findBlock(Char4 name);
         Block2 rqBlock(Char4 name, uint32_t len = 0);
         /// @param bytes  ASCII only!!
-        void mangleTtf(std::string_view bytes);
+        void mangle(std::string_view bytes);
     private:
         SafeVector<Block> blocks;
 
         bool readDir();
         Block readBlockEntry();
+        void recomputeChecksum(const Block& b);
     };
 
     bool MemFont::load(const QString& fname)
@@ -174,7 +176,7 @@ namespace {
         return r;
     }
 
-    void MemFont::mangleTtf(std::string_view bytes)
+    void MemFont::mangle(std::string_view bytes)
     {
         auto v = rqBlock("name", 32);
         Mems blk(v.d);
@@ -202,30 +204,36 @@ namespace {
             }
         }
         MSGLN
+        recomputeChecksum(*v.b);
     }
 
+    void MemFont::recomputeChecksum(const Block& b)
+    {
+        seek(b.posInFile);
+        uint32_t sum = 0;
+        for (auto nLongs = (b.length + 3) / 4; nLongs > 0; --nLongs) {
+            sum += readMD();
+        }
+        seek(b.posInDir + 4);
+        writeMD(sum);
+    }
 }
 
 
 TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
 {
     int id = -1;
-    if (!tempPrefix.empty() && fname.endsWith(".ttf")) {
+    if (!tempPrefix.empty() &&
+            (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
+        MSG("Loading TTF/OTF "
+            << QFileInfo(fname).fileName().toStdString()
+            << " for the sake of " << std::hex << static_cast<int32_t>(trigger)
+            << std::dec);
         // TTF, load + rename
         try {
             MemFont mf;
             mf.load(fname);
-            mf.mangleTtf(tempPrefix);
-            id = QFontDatabase::addApplicationFontFromData(mf.qdata());
-        } catch (const std::exception& e) {
-            std::cout << "ERROR: " << e.what() << std::endl;
-        }
-    } else if (!tempPrefix.empty() && fname.endsWith(".otf")) {
-        // OTF, try from memory
-        try {
-            MemFont mf;
-            mf.load(fname);
-            //mf.mangle(tempPrefix);
+            mf.mangle(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
         } catch (const std::exception& e) {
             std::cout << "ERROR: " << e.what() << std::endl;
