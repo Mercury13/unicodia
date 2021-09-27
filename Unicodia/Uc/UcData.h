@@ -304,6 +304,7 @@ namespace uc {
         SYRIAC,
         TAGALOG,
         TAGBANWA,
+        TAKRI,
         TAILE,
         TAILUE,
         TAI_VIET,
@@ -324,8 +325,9 @@ namespace uc {
         TIFINAGH,
         TIRHUTA,
         UMLAUT_SYMBOL,
-          Z_USY_1,
+          Z_USY_1,        
         VAI,
+        WARANG_CITI,
         YEZIDI,
         YI,
         NN

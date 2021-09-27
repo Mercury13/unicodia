@@ -135,6 +135,7 @@ namespace uc {
         Sylo,   // Syloti Nagri
         Syrc,   // Syriac
         Tagb,   // Tagbanwa
+        Takr,   // Takri
         Tale,   // Tai Le (old)
         Talu,   // New Tai Lue
         Taml,   // Tamil
@@ -149,6 +150,7 @@ namespace uc {
         Tirh,   // Tirhuta
         Ugar,   // Ugaritic
         Vaii,   // Vai
+        Wara,   // Warang Citi
         Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
         Yezi,   // Yezidi
@@ -207,10 +209,8 @@ namespace uc {
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western
         //Syrn  no chars — Syriac Eastern
-        Takr = Zyyy,        // beyond BMP
         //Teng  no chars — Tengwar
         //Visp  no chars — Visible speech
-        Wara = Zyyy,        // Warang Citi beyond BMP
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
         Zanb = Zyyy,        // Zanabazar beyond BMP
