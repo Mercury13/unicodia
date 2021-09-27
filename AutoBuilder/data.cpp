@@ -217,6 +217,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "UIGHUR",         Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE },
     { "UGARITIC",       Dicf::TRIG_SCRIPT },
     { "VAI",            Dicf::TRIG_SCRIPT },
+    { "VIETNAMESE",     Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "WARANG",         { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CITI"sv } },
     { "WANCHO",         Dicf::TRIG_SCRIPT },
     { "YI"sv,           Dicf::TRIG_SCRIPT_IF_FIRST },
@@ -289,6 +290,7 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
+    { "ASPIRATION",     Dicf::PART_NOUN },
     { "APOSTROPHE",     Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
     { "ARROW",          Dicf::PART_NOUN },
@@ -334,6 +336,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "UNDERBAR",       Dicf::PART_NOUN },
     { "VIRAMA",         Dicf::PART_NOUN },
     { "VISARGA",        Dicf::PART_NOUN },
+    { "VOICING",        Dicf::PART_NOUN },
     { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
     { "YIN",            Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
@@ -487,6 +490,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PHASE-F"sv,      { Dicf::PART_ADJECTIVE, "phase-F" } },
     { "PSALTER",        Dicf::PART_ADJECTIVE },
     { "QUARTER",        Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
+    { "REFORMED",       Dicf::PART_ADJECTIVE },
     { "REVERSE",        Dicf::PART_ADJECTIVE },
     { "REVERSED",       Dicf::PART_ADJECTIVE },
     { "RETROFLEX",      Dicf::PART_ADJECTIVE },
@@ -897,8 +901,9 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
     { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
     { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
-    { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
-    { { "CJK"sv, "STROKE"sv }, PrefixAction::REST_ALLCAP },
+    { { "CIRCLED", "KATAKANA" }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
+    { { "CJK", "STROKE" }, PrefixAction::REST_ALLCAP },
+    { { "MIAO", "LETTER", "YI" }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
 };
 
 
