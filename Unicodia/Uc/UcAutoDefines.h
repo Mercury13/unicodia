@@ -93,6 +93,7 @@ namespace uc {
         Merc,   // Meroitic cursive
         Mero,   // Meroitic hieroglyphs
         Mlym,   // Malayalam
+        Modi,   // Modi
         Mong,   // Mongolian (old)
         Mtei,   // Meitei Mayek
         Mult,   // Multani
@@ -190,7 +191,6 @@ namespace uc {
         //Maya  no chars — Maya
         Medf = Zyyy,        // beyond BMP
         Mend = Zyyy,        // beyond BMP
-        Modi = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
         Mroo = Zyyy,        // beyond BMP
         Nand = Zyyy,        // Nandinagari, beyond BMP

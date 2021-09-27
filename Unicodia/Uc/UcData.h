@@ -265,6 +265,7 @@ namespace uc {
         MANICHAEAN,
         MEETEI,
         MEROITIC,
+        MODI,
         MONGOLIAN,
         MULTANI,
         MYANMAR,
