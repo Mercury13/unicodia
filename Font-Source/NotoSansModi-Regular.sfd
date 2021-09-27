@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1516652263
-ModificationTime: 1632738126
+ModificationTime: 1632739826
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -1314,13 +1314,13 @@ ShortTable: cvt  6
   82
 EndShort
 ShortTable: maxp 16
-  1
   0
-  209
-  192
-  16
-  77
-  4
+  0
+  0
+  0
+  0
+  0
+  0
   2
   1
   2
@@ -1328,8 +1328,8 @@ ShortTable: maxp 16
   0
   256
   0
-  3
-  1
+  0
+  0
 EndShort
 LangName: 1033 "" "" "" "2.000;GOOG;NotoSansModi-Regular" "" "Version 2.000" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
