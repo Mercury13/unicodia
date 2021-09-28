@@ -3968,12 +3968,13 @@ constinit const uc::Block uc::blocks[] {
                         "В правильном шрифте старая псевдографика должна полностью стыковаться с новыми символами{{-}}"
                             "правда, невозможно показать: нет шрифта, поддерживающего и старую, и новую псевдографику.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
-    /// @todo [tofu, P2] CJK B
-    /// @todo [desc] CJK B
+    // CJK B OK
     { 0x20000, 0x2A6DF,
             "CJK Unified Ideographs Extension B",
-            u8"ККЯ иероглифы расширение B"sv,
-            {},
+            u8"ККЯ иероглифы расширение B",
+            u8"Редкие и исторические [[ps:Hani|китайские иероглифы]]. "
+                "Эти иероглифы упаковали в стандартный шрифт «SimSunExtB» для Windows. "
+                "Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu, P2] CJK C
     /// @todo [desc] CJK C

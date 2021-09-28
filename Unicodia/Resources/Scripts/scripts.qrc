@@ -264,6 +264,7 @@
         <file>1F800.png</file>
         <file>1FA00.png</file>
         <file>1FB00.png</file>
+        <file>20000.png</file>
         <file>E0000.png</file>
         <file>E0100.png</file>
     </qresource>
