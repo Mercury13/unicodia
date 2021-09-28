@@ -622,8 +622,14 @@ QString mywiki::buildHtml(
         const std::optional<QFont>& font, QFontDatabase::WritingSystem ws)
 {
     QString text;
+    char buf[30];
     str::append(text, "<h1>");
-    str::append(text, cp.name.tech());
+    std::u8string name = cp.name.tech();
+    if (auto pos = name.find('#'); pos != std::u8string::npos) {
+        snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(cp.subj.uval()));
+        name.replace(pos, 1, reinterpret_cast<const char8_t*>(buf));
+    }
+    str::append(text, name);
     str::append(text, "</h1>");
 
     // Deprecated
@@ -697,7 +703,6 @@ QString mywiki::buildHtml(
         // HTML
         sp.sep();
         str::append(text, u8"HTML: ");
-        char buf[30];
         snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(cp.subj));
         str::append(text, buf);
 
