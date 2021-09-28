@@ -178,6 +178,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSiddham-Regular.ttf", Ffg::DESC_BIGGER },                        // Siddham
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Light.ttf", Ffg::LIGHT },                                // Sinhala
+    { "NotoSansIndicSiyaqNumbers-Regular.ttf" },                                // Siyaq Indic
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSundanese-Regular.ttf" },                                        // Sundanese
     { "NotoSansSylotiNagri-Regular.ttf" },                                      // Syloti Nagri
@@ -3806,7 +3807,14 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E900, 0x1E95F,
             "Adlam", u8"Адлам", {}, EcScript::Adlm },
     { 0x1EC70, 0x1ECBF,
-            "Indic Siyaq Numbers", u8"Индийские цифры сийяк" },
+            "Indic Siyaq Numbers", u8"Индийские цифры сийяк",
+            u8"Арабские непозиционные цифры, применявшиеся в Индии с XVII{{_}}века "
+                        "(ещё под империей Великих Моголов) до середины XX{{_}}века. "
+                    "Арабское «сийяк» означает «порядок». "
+                    "Также цифры известны под названием «ракм», арабское «счёт»."
+                "<p>Цифры [[pt:acrophonic|акрофонические]], до 90{{_}}тысяч из арабского, со 100{{_}}тысяч из индийских языков. "
+                    "Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.",
+            EcScript::NONE, EcFont::SIYAQ_INDIC },
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
     // Arab mathematical OK, W10 Amiri

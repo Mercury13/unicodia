@@ -298,6 +298,7 @@ namespace uc {
         SIDDHAM,
         SIGNWRITING,
         SINHALA,
+        SIYAQ_INDIC,
         SOGDIAN,
         SUNDANESE,
         SYLOTI_NAGRI,
