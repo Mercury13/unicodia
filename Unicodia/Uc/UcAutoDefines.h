@@ -98,6 +98,7 @@ namespace uc {
         Mtei,   // Meitei Mayek
         Mult,   // Multani
         Mymr,   // Myanmar
+        Nand,   // Nandinagari
         Narb,   // North Arabian
         Nbat,   // Nabataean
         Newa,   // Newa
@@ -195,7 +196,6 @@ namespace uc {
         Mend = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
         Mroo = Zyyy,        // beyond BMP
-        Nand = Zyyy,        // Nandinagari, beyond BMP
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
         Pauc = Zyyy,        // beyond BMP

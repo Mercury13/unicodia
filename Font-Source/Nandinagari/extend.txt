@@ -1,0 +1,1 @@
+﻿Extend stroke: 80×30 units, 135°
