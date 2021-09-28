@@ -130,7 +130,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT, 110_pc },                    // Korean:  we use it for well-known chars, no need to rename
+    { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },    // Korean:  we use it for well-known chars, no need to rename
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
       { "BabelStoneHan.ttf" },                                                  // …2 U14
     { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
@@ -446,7 +446,7 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
             u8"Римские, китайские и другие цифры, основанные на буквах. Древнерусские также основаны на буквах, "sv
             u8"но в Юникоде для этого используются обычные А, Б, Г… с комбинирующими метками."sv },
     { UpCategory::NUMBER,       "No"sv,     u8"Числовой/другой"sv,
-            u8"Архаичные системы счисления, монолитные дроби, верхние и нижние индексы, цифры в кругах, "sv
+            u8"Архаичные системы счисления, [[pt:precomposed|монолитные]] дроби, верхние и нижние индексы, цифры в кругах, "
             u8"сокращения для больших чисел и другие цифровые символы."sv },
     { UpCategory::PUNCTUATION,  "Pc"sv, u8"Знак препинания/соединитель"sv,
             u8"Небольшая группа символов. Наиболее известный из них{{-}}знак подчёркивания."sv },
@@ -3650,6 +3650,7 @@ constinit const uc::Block uc::blocks[] {
                         "[[ps:Nshu|нюй-шу]], [[ps:Tang|тангутском]], [[ps:Kits|малом киданьском]], "
                         "старых [[ps:Hani|китайских иероглифах]]."
                 "<p>Одинаковые иероглифы не пишут рядом, вместо этого используют знак повтора. "
+                    "В современном печатном китайском уже повторяют, китайцы неформально и японцы используют {{sm|々}} U+3005."
                 "<p>Крючок в старых рукописях означает конец предложения или главы. "
                 "<p>Если блок малого киданьского начинается с одного иероглифа, а не двух, на вакантное место ставят заполнитель. "
                 "<p>Пока Вьетнам писал иероглифами, два символа служили для передачи местного произношения. "
