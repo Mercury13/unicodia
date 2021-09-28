@@ -131,7 +131,10 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="lineEdit">
+                  <widget class="QLineEdit" name="edSearch">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
                    <property name="placeholderText">
                     <string>Поиск</string>
                    </property>
