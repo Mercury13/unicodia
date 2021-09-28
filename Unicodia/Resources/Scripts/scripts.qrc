@@ -265,6 +265,12 @@
         <file>1FA00.png</file>
         <file>1FB00.png</file>
         <file>20000.png</file>
+        <file>2A700.png</file>
+        <file>2B740.png</file>
+        <file>2B820.png</file>
+        <file>2CEB0.png</file>
+        <file>2F800.png</file>
+        <file>30000.png</file>
         <file>E0000.png</file>
         <file>E0100.png</file>
     </qresource>

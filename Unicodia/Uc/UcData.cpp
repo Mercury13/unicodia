@@ -119,7 +119,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
-    /// @todo [semi-tofu, P1] Sort out hiragana and hentaigana!
     { "HanaMinA.ttf", Ffg::DESC_STD, 110_pc },                                  // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
@@ -652,7 +651,7 @@ constinit const uc::Script uc::scriptInfo[] {
                     "{{_}}{{_}}{{_}}{{_}}ка {{sm|𑰎}} + вирама {{sm|◌𑰿}} = к {{sm|𑰎𑰿}}<br>"
                     "{{_}}{{_}}{{_}}{{_}}ка {{sm|𑰎}} + вирама {{sm|◌𑰿}} + та {{sm|𑰝}} = кта {{sm|𑰎𑰿𑰝}}",
                 EcFont::BHAIKSUKI },
-    /// @todo [tofu, BMP] Managed to dispose of tofu in main block, but extended is here, 31BB+, 2020!
+    // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Бопомофо (чжуинь)"sv, u8"1913"sv,
@@ -2571,7 +2570,6 @@ constinit const uc::Block uc::blocks[] {
     // Georgian OK
     { 0x10A0, 0x10FF,
             "Georgian", u8"Грузинский", {}, EcScript::Geor },
-    /// @todo [semi-tofu, BMP] How to show filler 115F, 1160?
     { 0x1100, 0x11FF,
             "Hangul Jamo", u8"Хангыль\u00A0— чамо"sv,
             u8"<p>В хангыле (корейском алфавите) всего 51 буква ''(чамо)''. Блок намного больше: одна и та же буква "
@@ -3071,7 +3069,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] CJK A
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
-            u8"ККЯ иероглифы расширение A"sv, {},
+            u8"ККЯ иероглифы расширение A", {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Yijing OK
     { 0x4DC0, 0x4DFF,
@@ -3976,47 +3974,49 @@ constinit const uc::Block uc::blocks[] {
                 "Эти иероглифы упаковали в стандартный шрифт «SimSunExtB» для Windows. "
                 "Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P2] CJK C
-    /// @todo [desc] CJK C
+    // CJK C OK
     { 0x2A700, 0x2B73F,
             "CJK Unified Ideographs Extension C",
-            u8"ККЯ иероглифы расширение C"sv,
-            {},
+            u8"ККЯ иероглифы расширение C",
+            u8"4149 редких и старых иероглифов, добавленных в 2009. "
+                    "В 2021 добавили ещё 4 штуки.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P2] CJK D
-    /// @todo [desc] CJK D
+    // CJK D OK
     { 0x2B740, 0x2B81F,
             "CJK Unified Ideographs Extension D",
-            u8"ККЯ иероглифы расширение D"sv,
-            {},
+            u8"ККЯ иероглифы расширение D",
+            u8"222 редких и старых иероглифа, добавленных в 2010.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P2] CJK E
-    /// @todo [desc] CJK E
+    // CJK E OK
     { 0x2B820, 0x2CEAF,
             "CJK Unified Ideographs Extension E",
-            u8"ККЯ иероглифы расширение E"sv,
-            {},
+            u8"ККЯ иероглифы расширение E",
+            u8"5762 редких и старых иероглифа, добавленных в 2015.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P2] CJK F
-    /// @todo [desc] CJK F
+    // CJK F OK
     { 0x2CEB0, 0x2EBEF,
             "CJK Unified Ideographs Extension F",
             u8"ККЯ иероглифы расширение F"sv,
-            {},
+            u8"7473 иероглифа, добавленных в 2017. "
+                    "Включают редкие, старые, а также больше тысячи чжуанских (один из языков Китая).",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P2] CJK compat supp
-    /// @todo [desc] CJK compat supp
+    // CJK compat OK
     { 0x2F800, 0x2FA1F,
             "CJK Compatibility Ideographs Supplement",
-            u8"ККЯ совместимые иероглифы дополнение"sv,
-            {},
+            u8"ККЯ совместимые иероглифы дополнение",
+            u8"Появившаяся в 2001 [[pt:unification|разунификация]] 542 иероглифов "
+                        "для [[pt:convertibility|круговой совместимости]] с тайваньской кодировкой CNS{{_}}11643-1992. "
+                    "Разумеется, все иероглифы этого блока традиционные.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     /// @todo [tofu, P3] CJK G
-    /// @todo [desc] CJK G
     { 0x30000, 0x3134F,
             "CJK Unified Ideographs Extension G",
-            u8"ККЯ иероглифы расширение G"sv,
-            {},
+            u8"ККЯ иероглифы расширение G",
+            u8"В 2020 Юникод перешагнул в [[pt:plane|плоскость]] номер 3, выделив там 4939 редких и старых иероглифов. "
+                    "Именно здесь находятся два знаменитых рекордных иероглифа:<br>"
+                    "• ''бян''{{-}}китайский сорт лапши: U+30EDD упрощённый 42 черты, U+30EDE традиционный 58 черт;<br>"
+                    "• ''тайто''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C."
+                "<p>Хотя Эндрю Уэст китаевед, он не мог не добавить в шрифт рекордный японский знак.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tags OK
     { 0xE0000, 0xE007F,
@@ -4461,7 +4461,7 @@ constinit const uc::Term uc::terms[] {
             "<p>И наоборот: разные символы могут записываться одной кодовой позицией: сходные [[ps:Hani|иероглифы]] китайского и японского."sv },
     { "latin1", EcTermCat::ENCODING, u8"латиница-1"sv, u8"Latin-1"sv, CT_LATIN1 },
     { "plane", EcTermCat::ENCODING,
-      u8"плоскость"sv, u8"plane"sv,
+      u8"плоскость", u8"plane",
         u8"<p>Диапазон символов от *0000 до *FFFD. "
                 "Последние две [[pt:codepoint|позиции]] каждой плоскости, *FFFE и *FFFF, "
                     "[[pt:noncharacter|зарезервированы как отсутствующие]]. "
