@@ -122,7 +122,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "HanaMinA.ttf", Ffg::DESC_STD, 110_pc },                                  // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
-    { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT, 110_pc },                     // Kannada
+    { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },  // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
@@ -1273,13 +1273,16 @@ constinit const uc::Script uc::scriptInfo[] {
                     "(прорисовал проф. Цзин Юнши), а шрифт{{-}}прямой современный, перерисованный Эндрю Уэстом.",
                 EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
-    /// @todo [desc, BMP] Interesting script, describe
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Каннада", u8"XIV век",
+        u8"Кáннада", u8"XIV век",
         u8"кáннада ''(Юго-Западная Индия)''",
-        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
-                "Гласная по умолчанию «а». "
+        u8"<p>Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
+                "Гласная по умолчанию «а», заменяется огласовками:<br>"
+                "{{_}}{{_}}ка {{sm|ಕ}} + и {{sm|◌ಿ}} = ки {{sm|ಕಿ}}<br>"
+                "[[pt:virama|Вирама]] (знак «убрать гласную») появляется на письме только для передачи санскрита. "
+                "На компьютерах вирама служит для набора [[pt:ligature|лигатур]] «согласная+согласная»:<br>"
+                "{{_}}{{_}}ка {{sm|ಕ}} + вирама {{sm|◌್}} + та {{sm|ತ}} = кта {{sm|ಕ್ತ}}<br>"
                 "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.",
                 EcFont::KANNADA },
     // Kaithi OK, W10 none → installed Google Noto
@@ -1563,8 +1566,14 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"санскрит, кáннада ''(Южная Индия)''",
         u8"Происходит из нагари, промежуточной формы индийского письма. "
                 "Сестра [[ps:Deva|деванагари]], «нандинагари» также означает «письмо священного города». "
-                "Если бы не различия{{-}}разорванная черта, другие [[pt:ligature|лигатуры]]{{-}}"
-                    "его можно было бы считать разновидностью деванагари.",
+                "Если бы не различия{{-}}разорванная черта, другие [[pt:ligature|лигатуры]] и цифры{{-}}"
+                    "его можно было бы считать разновидностью деванагари."
+            "<p>Шрифт разработан автором «Юникодии» и неполнофункционален. "
+                "Из-за нефункциональности не могу объяснить работу письменности{{-}}но перед нами обычная брахмийская абугида. "
+                "Гласная по умолчанию «а», заменяется на другую огласовками. "
+                "[[pt:virama|Вирама]] используется только для передачи санскрита: каннада тяготеет к открытым слогам,"
+                    "а редкие стыки согласных передаются лигатурами. "
+                "Цифры похожи на [[ps:Knda|каннаду]] (есть разница в 2 и 6) и [[pt:unification|унифицированы]] с ней.",
                 EcFont::FUNKY },
     // North Arabian OK, W10 none → installed Google Noto
     { "Narb", QFontDatabase::Any,

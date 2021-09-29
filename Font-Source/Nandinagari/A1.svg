@@ -24,9 +24,9 @@
      inkscape:document-units="px"
      showgrid="true"
      units="px"
-     inkscape:zoom="0.69130191"
-     inkscape:cx="765.22282"
-     inkscape:cy="393.46051"
+     inkscape:zoom="1.3826038"
+     inkscape:cx="382.61141"
+     inkscape:cy="287.86265"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -36,7 +36,7 @@
      inkscape:snap-page="false"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:snap-grids="true"
+     inkscape:snap-grids="false"
      inkscape:snap-smooth-nodes="true">
     <inkscape:grid
        type="xygrid"
@@ -58,17 +58,18 @@
      id="layer1">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 25.650409,52.916667 69.599592,0.226638 c 0,0 -18.20608,52.083215 -59.457835,75.589805 0,0 83.194854,-9.44874 84.116684,46.32179 0.23046,14.05787 -14.06117,36.61178 -28.579949,36.61178 -27.88525,0 -28.80376,-32.46355 -13.82408,-50.43918 C 92.484511,143.25188 175.44892,58.213353 175.44892,58.213353"
+       d="m 26.128824,52.916667 69.121177,-0.156094 c 0,0 -18.20608,52.465947 -59.457835,75.972537 0,0 83.194854,-9.44874 84.116684,46.32179 0.23046,14.05787 -14.06117,36.61178 -28.579949,36.61178 -27.88525,0 -28.80376,-32.46355 -13.82408,-50.43918 C 92.484511,143.25188 175.44892,58.213353 175.44892,58.213353"
        id="path2352"
        sodipodi:nodetypes="ccccssc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 151.97584,53.029714 26.1292,0.354635 V 211.66667"
+       d="m 151.97584,52.916665 h 26.1292 V 211.66667"
        id="path2354"
        sodipodi:nodetypes="ccc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 178.10504,53.384349 50.16742,-0.467683 V 211.66667"
-       id="path5076" />
+       d="m 178.10504,52.916665 50.16742,10e-7 V 211.66667"
+       id="path5076"
+       sodipodi:nodetypes="ccc" />
   </g>
 </svg>
