@@ -73,6 +73,8 @@ win32-g++ {
     LIBS += -lgdi32
 }
 
+VERSION = 0.1
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
