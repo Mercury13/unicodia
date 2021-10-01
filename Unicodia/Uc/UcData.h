@@ -254,6 +254,7 @@ namespace uc {
         KOREAN,
           Z_KOR_1,
           Z_KOR_2,
+          Z_KOR_3,
         LANNA,
         LAO,
         LEPCHA,

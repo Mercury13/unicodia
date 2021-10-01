@@ -133,6 +133,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },    // Korean:  we use it for well-known chars, no need to rename
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
+      { FNAME_HANA_A, Ffg::FALL_TO_NEXT },                                      // …2 HanaMin
       { "BabelStoneHan.ttf" },                                                  // …2 U14
     { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
@@ -3732,20 +3733,19 @@ constinit const uc::Block uc::blocks[] {
             "Kana Supplement", u8"Кана дополнительная",
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
                     "Хэнтайгана продолжается и в следующем блоке.",
-            EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A",
             u8"35 (на Юникод{{_}}14) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
-            EcScript::NONE, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P1] Small kana ex, the entire block
-    /// @todo [desc] Small kana ex
+            EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+    // Small kana ex OK
     { 0x1B130, 0x1B16F,
             "Small Kana Extension", u8"Маленькие символы каны",
             u8"Маленькие символы катаканы используются для передачи звуков, отсутствующих в японском. "
                     "Так, маленькое {{sm|ケヰ}} передаёт огублённое «кʷи»."
                     "Также добавлены соответствующие символы хираганы{{-}}правда, к моменту принятия заявка похудела: "
                         "отпали «ко» обеих азбук и «н» хираганы.",
-            EcScript::NONE, EcFont::CJK },
+            EcScript::NONE, EcFont::KOREAN },
     // Nushu OK
     { 0x1B170, 0x1B2FF,
             "Nushu", u8"Нюй-шу",
