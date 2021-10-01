@@ -169,7 +169,6 @@ namespace uc {
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
          HISTORIC,
-         HISTORIC_BIGGER,
          PUNCTUATION,
            Z_PUN_1,
          MATH,
@@ -234,8 +233,8 @@ namespace uc {
           Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
-        GOTHIC,
-          Z_GOT_1,
+        GOTHIC,     // Old Goth language, chain Historic → HanaA (BAD!), also Lycian, Carian, Lydian
+          ORKHON,   // For Orkhon HanaA >> Segoe Historic
         GRANTHA,
         GUJARATI,
         GURMUKHI,

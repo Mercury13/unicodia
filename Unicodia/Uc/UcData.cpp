@@ -44,7 +44,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
-    { "Segoe UI Historic", 115_pc },                                            // Historic bigger
     { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                 // Punctuation — both are built-in
       { FNAME_NOTO },                                                           // …1
     { FNAME_NOTOMATH },                                                         // Math
@@ -753,7 +752,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Советский (тогда ещё) учёный Виталий Шеворошкин в 1960 показал, что письменность не слоговая, а алфавитная. "
                 "Ключевая книга по расшифровке (Игнасий-Хавьер Адьего) вышла в 1993. "
                 "Некоторые символы всё ещё не известны.",
-                EcFont::HISTORIC },
+                EcFont::GOTHIC },
     // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -1415,7 +1414,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Ликия{{-}}не самоназвание, так называли область греки. "
                 "Самоназвание языка{{-}}''trm̃mili''."
             "<p>Расшифрован в начале XX{{_}}века.",
-                EcFont::HISTORIC },
+                EcFont::GOTHIC },
     // Lydian OK, W10 P1 Segoe Historic
     { "Lydi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
@@ -1427,7 +1426,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Уникальная черта{{-}}треугольная кавычка."
             "<p>Лидия{{-}}не самоназвание, сами лидийцы называли область по столице{{-}}Сарды."
             "<p>Расшифрован в 1916 и изучен хорошо, несмотря на небольшое количество (на 1986{{-}}109{{_}}шт.) надписей.",
-                EcFont::HISTORIC },
+                EcFont::GOTHIC },
     // Mahajani OK, W10 none, installed Google Noto
     { "Mahj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -1682,7 +1681,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Второй тюркский каганат был 682–744, Уйгурский каганат 744–840. "
                 "После поражения от енисейских кыргызов уйгуры ушли на юг и в 1030 были завоёваны [[ps:Tang|тангутами]]. "
                 "История кыргызов не вполне понятна; известно только, что в XIII{{_}}веке они стали вассалами Чингисхана.",
-                EcFont::HISTORIC_BIGGER },
+                EcFont::ORKHON },
     // Oriya OK, took Noto + everything bad manually fixed
     { "Orya", QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -1865,7 +1864,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"южноаравийские ''(сабейский, катабанский и прочие)'', геэз",
         u8"Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. "
                 "В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].",
-                EcFont::HISTORIC },
+                EcFont::GOTHIC },
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
