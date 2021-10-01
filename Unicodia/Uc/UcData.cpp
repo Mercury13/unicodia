@@ -3914,9 +3914,12 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Группы крови, знак стоянки и некоторые другие символы являются [[pt:emoji|эмодзи]]."
                 "<p>Из региональных индикаторов собирают эмодзи флагов: "
                         "если написать эмодзи «GB», получится флаг Великобритании." },
+    /// @todo [desc] Enclosed hiero supp
     { 0x1F200, 0x1F2FF,
             "Enclosed Ideographic Supplement",
-            u8"Обрамлённые иероглифы дополнительные" },
+            u8"Обрамлённые иероглифы дополнительные",
+            {},
+            EcScript::NONE, EcFont::DINGBAT },
     // Misc OK
     { 0x1F300, 0x1F5FF,
             "Miscellaneous Symbols and Pictographs",
