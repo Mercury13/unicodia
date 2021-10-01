@@ -1171,7 +1171,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
         u8"Этрусский", u8"700–100 до н.э.",
         u8"этрусский и другие языки Италии",
-        u8"Алфавит развился под влиянием [[ps:Pnhx|финикийского]] и [[ps:Grek|греческого]]. "
+        u8"Алфавит развился под влиянием [[ps:Phnx|финикийского]] и [[ps:Grek|греческого]]. "
                 "В дальнейшем развился в [[ps:Latn|латинский]]."
             "<p>Юникод не различает языков Италии, объединяя все в один блок{{-}}этрусский.",
                 EcFont::OLD_ITALIC },
