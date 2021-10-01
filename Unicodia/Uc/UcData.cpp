@@ -1620,8 +1620,10 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
         u8"Нко", u8"1949",
         u8"языки манден ''(Западная Африка)''",
-        u8"Алфавит создал гвинейский писатель Соломана Канте в 1949 году. Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
-            "«N’ko» означает «я говорю».",
+        u8"Алфавит создал гвинейский писатель Соломана Канте в 1949 году. "
+                "Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
+                "«N’ko» означает «я говорю». "
+                "Буквы соединены.",
                 EcFont::NKO },
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
