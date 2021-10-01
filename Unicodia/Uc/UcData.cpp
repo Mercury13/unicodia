@@ -103,6 +103,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
+      { "BabelStoneHan.ttf", 130_pc },                                          // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -3957,7 +3958,9 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu, P1] 1F900..0C,  72, 77, 78, A3, A4, AB..AD, CB
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
-            u8"Символы и пиктограммы дополнительные" },
+            u8"Символы и пиктограммы дополнительные",
+            {},
+            EcScript::NONE, EcFont::DINGBAT },
     // Chess OK, turned bad pawn
     { 0x1FA00, 0x1FA6F,
             "Chess Symbols", u8"Шахматные символы",
