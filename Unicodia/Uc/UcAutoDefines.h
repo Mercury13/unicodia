@@ -88,6 +88,7 @@ namespace uc {
         Lyci,   // Lycian
         Lydi,   // Lydian
         Mahj,   // Mahajani
+        Maka,   // Makasar
         Mand,   // Mandaic
         Mani,   // Manichean
         Merc,   // Meroitic cursive
@@ -189,7 +190,6 @@ namespace uc {
         //Latg  no chars — Latin Gaelic
         //Leke  no chars — Leke (Pwo Karen)
         //Loma  no chars — Loma (Africa)
-        Maka = Zyyy,        // beyond BMP
         Marc = Zyyy,        // beyond BMP
         //Maya  no chars — Maya
         Medf = Zyyy,        // beyond BMP

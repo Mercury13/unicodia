@@ -142,6 +142,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
+    { "MakasarGraphite.ttf", Ffg::STUB_OFF },                                   // Makasar
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT, 110_pc },                    // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
@@ -1443,6 +1444,23 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Цифры замечены похожие на [[ps:Deva|деванагари]] и [[ps:Gujr|гуджарати]]; "
                     "в Юникоде [[pt:unification|унифицированы]] с первым.",
                 EcFont::MAHAJANI },
+    // Makasar OK, installed strange font by Anshuman Pandey
+    { "Maka", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
+        u8"Макасарский (птичье письмо)", u8"XVII век (возможно, XVI)",
+        u8"макасарский ''(южный Сулавеси)''",
+        u8"За форму букв письмо получило прозвище «птичье». "
+                "Первый известный источник{{-}}подпись на договоре с Голландской Ост-Индской компанией (1667)."
+            "<p>Брахмийская абугида из 18 букв без [[pt:virama|вирамы]]. "
+                "Начальная гласная{{-}}буква {{sm|𑻱}} (возможно, с огласовками). "
+                "Конечные согласные{{-}}''м'', ''нн'' и гортанная смычка{{-}}опускаются. "
+                "Между словами не ставятся пробелы. "
+                "С такой функциональностью письменность будет неполной{{-}}потому к XIX{{_}}веку была полностью заменена "
+                    "[[ps:Bugi|лонтарой]], которая считается сестринской."
+            "<p>Цифры встречались как европейские, так и арабо-индийские. "
+                "В одной из рукописей встречался знак препинания в виде пальмы, "
+                    "[[pt:unification|унифицированный]] с [[pt:emoji|эмодзи]] {{sm|🌴}}.",
+                EcFont::MAKASAR },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -3615,7 +3633,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11D60, 0x11DAF,
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     { 0x11EE0, 0x11EFF,
-            "Makasar", u8"Макасарский", {}, EcScript::Maka },
+            "Makasar", u8"Макасарский (птичье письмо)", {}, EcScript::Maka },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF,
             "Lisu Supplement", u8"Лису дополнительный",
