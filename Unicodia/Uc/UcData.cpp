@@ -88,11 +88,11 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …4 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …5 Korean
       { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …6 Japanese
-      { "HanaMinA.ttf", Ffg::FALL_TO_NEXT, 120_pc },                            // …7
-      { "HanaMinB.ttf", 120_pc },                                               // …8
+      { FNAME_HANA_A, Ffg::FALL_TO_NEXT, 120_pc },                            // …7
+      { FNAME_HANA_B, 120_pc },                                               // …8
     { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
-      { "HanaMinA.ttf", 120_pc },                                               // …2
+      { FNAME_HANA_A, 120_pc },                                                 // …2
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
@@ -113,8 +113,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
+    { "Segoe UI Historic", Ffg::FALL_TO_NEXT },                                 // Gothic
+      { FNAME_HANA_A },                                                         // …1
     { "NotoSansGrantha-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_SMALLER,
-            "padding-top:10%; padding-bottom:12%;"_sty },                        // Grantha
+            "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
     { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
@@ -986,7 +988,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Две буквы имеют только числовое значение: {{sm|𐍁}}=90 и {{sm|𐍊}}=900. "
                 "Благодаря такому происхождению письменности «канонический» вид готских букв{{-}}написанные жирным пером, "
                     "а не острым предметом.",
-                EcFont::HISTORIC },
+                EcFont::GOTHIC },
     // Grantha OK, W10 none → installed Google Noto
     { "Gran", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,

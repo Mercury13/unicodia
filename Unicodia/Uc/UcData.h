@@ -234,6 +234,8 @@ namespace uc {
           Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
+        GOTHIC,
+          Z_GOT_1,
         GRANTHA,
         GUJARATI,
         GURMUKHI,

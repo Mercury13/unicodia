@@ -750,6 +750,9 @@ FmMain::FmMain(QWidget *parent)
 {
     ui->setupUi(this);
 
+    // Tabs to 0
+    ui->tabsMain->setCurrentIndex(0);
+
     // Collapse bar
     ui->wiCollapse->hide();
     ui->wiCollapse->setStyleSheet(
