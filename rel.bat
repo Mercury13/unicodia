@@ -21,6 +21,7 @@
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
 @copy %QTDIR%\translations\qtbase_ru.qm %DEPLOY%
+@copy LICENSE %DEPLOY%
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
