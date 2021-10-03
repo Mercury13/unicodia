@@ -11,6 +11,7 @@
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP "ForestGreen"
 #define CNAME_LINK_DEPRECATED "#CC0000"
+#define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 
 constexpr QColor TX_DEPRECATED { 0xDD, 0x00, 0x00 };
 constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush

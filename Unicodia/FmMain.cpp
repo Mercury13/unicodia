@@ -15,6 +15,7 @@
 #include <QShortcut>
 #include <QPaintEngine>
 #include <QMessageBox>
+#include <QFile>
 
 // Misc
 #include "u_Strings.h"
@@ -872,8 +873,16 @@ void FmMain::initAbout()
 {
     // Get version
     auto version = QApplication::applicationVersion();
-    while (version.endsWith(".0"))
+        // Count “.” chars
+    int nDots = 0;
+    for (auto c : version)
+        if (c == '.')
+            ++nDots;
+    // Remove '.0' if there will be dots remaining
+    while (nDots > 1 && version.endsWith(".0")) {
         version.resize(version.length() - 2);
+        --nDots;
+    }
 
     // lbVersion
     QString text;
@@ -883,6 +892,13 @@ void FmMain::initAbout()
     str::append(text, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
     text.append(")");
     ui->lbVersion->setText(text);
+
+    // vwVersion
+    QFile f(":/Texts/about.htm");
+    f.open(QIODevice::ReadOnly);
+    QString s = f.readAll();
+    s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
+    ui->vwAbout->setText(s);
 }
 
 

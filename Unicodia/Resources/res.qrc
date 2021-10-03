@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>Misc/about.png</file>
+        <file>Texts/about.htm</file>
     </qresource>
 </RCC>

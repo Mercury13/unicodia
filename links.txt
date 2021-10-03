@@ -24,6 +24,7 @@ https://www.jawish.org/blog/archives/429-Dhives-A-free-Dhives-Akuru-font.html �
 https://github.com/pandey/graphite-fonts — это работает Anshuman Pandey
 https://software.sil.org/scheherazade/download/ — «Шехерезада», открытый арабский шрифт, полное покрытие U13 в основных блоках
 https://www.amirifont.org/ — «Амири», открытый арабский шрифт, полное покрытие доп. блоков, кроме одного символа
+https://oldhungarian.eu/index_en.html — венгерские руны
 
 
 ИЗОБРАЖЕНИЯ СИМВОЛОВ

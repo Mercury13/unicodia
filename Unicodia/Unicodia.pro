@@ -83,3 +83,11 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 RESOURCES += \
     Resources/Scripts/scripts.qrc \
     Resources/res.qrc
+
+win32|win64 {
+    RC_ICONS = Unicodia-win.ico
+    QMAKE_TARGET_COMPANY = Mikhail Merkuryev
+    QMAKE_TARGET_PRODUCT = Unicodia
+    QMAKE_TARGET_DESCRIPTION = Unicodia: character encyclopedia
+    QMAKE_TARGET_COPYRIGHT =  Mikhail Merkuryev
+}

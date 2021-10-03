@@ -509,7 +509,11 @@
          </layout>
         </item>
         <item>
-         <widget class="QTextBrowser" name="vwAbout"/>
+         <widget class="QTextBrowser" name="vwAbout">
+          <property name="openExternalLinks">
+           <bool>true</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>

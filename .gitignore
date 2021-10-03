@@ -52,7 +52,7 @@ compile_commands.json
 *creator.user*
 
 # Directories we do not want to create
-~Downloads
+~*
 
 # Auto-created files.
 UcAuto.cpp
