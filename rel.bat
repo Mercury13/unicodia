@@ -1,5 +1,7 @@
+@set PRONAME=Unicodia\Unicodia.pro
 @set EXENAME=Unicodia.exe
 @set ARCNAME=Unicodia-0.1.7z
+@set BUILD=~Build-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set MINGW=c:\msys64\mingw64\bin
@@ -11,9 +13,17 @@
 @if exist %DEPLOY% rmdir /S /Q %DEPLOY%
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
+@if not exist %BUILD% md %BUILD%
+
+@echo ===== Building for Win64 =====
+@path %MINGW%;%PATH%
+@cd %BUILD%
+@%QTDIR%\bin\qmake.exe ..\%PRONAME% -r -spec win32-g++ "CONFIG+=release"
+@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@cd ..
 
 @echo ===== Copying files =====
-@copy build-Unicodia-Qt_MinGW_newest_x64-Release\release\%EXENAME% %DEPLOY%
+@copy %BUILD%\release\%EXENAME% %DEPLOY%
 @copy %MINGW%\libgcc_s_seh-1.dll %DEPLOY%
 @copy "%MINGW%\libstdc++-6.dll" %DEPLOY%
 @copy %MINGW%\libwinpthread-1.dll %DEPLOY%
@@ -27,7 +37,7 @@
 @md %DEPLOY%\styles
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
 @md %DEPLOY%\Fonts
-@copy Fonts\* %DEPLOY%\Fonts
+@copy Fonts\* %DEPLOY%\Fonts >nul
 
 @echo ===== Archiving =====
 @cd %DEPLOY%
