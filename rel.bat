@@ -32,7 +32,7 @@
 @cd %DEPLOY%
 @set ARCPATH=..\%DEPLOY1%\%ARCNAME%
 @if exist %ARCPATH% del %ARCPATH%
-@%SEVENZIP% a %ARCPATH% * -mx9
+@%SEVENZIP% a %ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
 @cd ..
 
 @pause
