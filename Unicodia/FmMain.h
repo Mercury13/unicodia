@@ -208,6 +208,7 @@ private:
         const uc::Block* sample = &uc::blocks[0];
     } hint;
 
+    void initAbout();
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);

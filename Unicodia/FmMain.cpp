@@ -828,6 +828,8 @@ FmMain::FmMain(QWidget *parent)
 
     // Terms
     initTerms();
+    // About
+    initAbout();
 
     // Select index
     ui->tableChars->setFocus();
@@ -863,6 +865,24 @@ void FmMain::initTerms()
 
     ui->vwTerms->setText(text);
     connect(ui->vwTerms, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+}
+
+
+void FmMain::initAbout()
+{
+    // Get version
+    auto version = QApplication::applicationVersion();
+    while (version.endsWith(".0"))
+        version.resize(version.length() - 2);
+
+    // lbVersion
+    QString text;
+    str::append(text, u8"Версия <b>");
+    text.append(version);
+    str::append(text, u8"</b> (Юникод ");
+    str::append(text, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
+    text.append(")");
+    ui->lbVersion->setText(text);
 }
 
 
