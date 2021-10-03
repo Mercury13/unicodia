@@ -335,6 +335,7 @@ namespace uc {
         WARANG_CITI,
         YEZIDI,
         YI,
+        ZANABAZAR,
         NN
     };
 

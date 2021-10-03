@@ -157,6 +157,7 @@ namespace uc {
         Xsux,   // Cuneiform
         Yezi,   // Yezidi
         Yiii,   // Yi
+        Zanb,   // Zanabazar square
         Zinh,   // Unicode technical
         NN,
 
@@ -213,7 +214,6 @@ namespace uc {
         //Visp  no chars — Visible speech
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
-        Zanb = Zyyy,        // Zanabazar beyond BMP
         //Zmth  no chars — math notation
         //Zsye  no chars — emoji
         //Zsym  no chars — misc symbols
