@@ -892,6 +892,9 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Raised MC sign")                            // Same
     EX("Raised MD sign")
     EX("Raised MR sign")
+    EX("Square Hiragana Hoka")                      // Better exception
+    EX("Squared Katakana Koko")
+    EX("Squared Katakana Sa")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
