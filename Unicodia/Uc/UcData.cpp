@@ -254,7 +254,7 @@ constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir:
 };
 
 
-constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType::NN)] {
+constinit const uc::ScriptType uc::scriptTypeInfo[] {
     { {} },
     { u8"неизвестно" },
     { u8"[[pt:alphabet|алфавитная]]{{-}}''как кириллица''" },
@@ -267,9 +267,11 @@ constinit const uc::ScriptType uc::scriptTypeInfo[static_cast<int>(EcScriptType:
     { u8"[[pt:hiero|иероглифическая]]{{-}}''как китайский''" },
     { u8"слогоиероглифическая{{-}}''как линейное письмо Б''" },
     { u8"консонантно-иероглифическое{{-}}''как египетские иероглифы''" },
-    { u8"[[pt:other|прочие]]{{-}}''как шрифт Брайля''" },
+    { u8"[[pt:code|коды и стенография]]{{-}}''как шрифт Брайля''" },
+    { u8"[[pt:nontext|нетекстовые]]{{-}}''как ноты''" },
     //{ u8"Ошибка" },
 };
+static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
 
 
 const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
@@ -689,7 +691,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::BRAHMI },
     // Braille OK, “Segoe UI Symbol”
     { "Brai", QFontDatabase::Any,
-        EcScriptType::OTHER, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+        EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Шрифт Брайля", u8"1824",
         u8"крупные языки мира, включая латинские, кириллические, брахмийские, арабские, китайские иероглифы",
         u8"Шрифт Брайля{{-}}точечный шрифт для слепых. "
@@ -1900,7 +1902,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sutton SignWriting OK, installed Google Noto font
     /// @todo [tool] Make a SignWriting tool!
     { "Sgnw", QFontDatabase::Any,
-        EcScriptType::OTHER, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
+        EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
         u8"Жестовое письмо Саттон", u8"1974",
         u8"жестовые языки, в частности амслен <i>(язык американских глухих)</i>",
         u8"Систему придумала в 1974 танцовщица Валери Саттон на основе созданной двумя годами ранее системы записи танцев. "
@@ -4266,13 +4268,19 @@ constinit const uc::Term uc::terms[] {
                     "И поныне японские комиксы ''манга'' читаются справа налево;<br>"
                 "• иероглифы несколько отличаются от страны к стране, Юникод оставляет эти тонкости за шрифтами;<br>"
                 "• поскольку символы не вписываются в 256 [[pt:codepoint|позиций]], существовали специфичные кодировки для иероглифов." },
-    { "other", EcTermCat::SCRIPT_CLASS,
-      u8"прочие письменности", {},
-        u8"Прочие виды письменностей{{-}}это кодировки письменной речи "
-                "(код Морзе, флажный семафор, [[ps:Brai|шрифт Брайля]]), "
-                "стенография ([[ps:Dupl|система Дюплойе]]), "
-                "запись других видов информации, кроме речи (ноты, [[ps:Sgnw|жестовое письмо]])."
-            "<p>Автор «Юникодии» не нашёл общепринятой классификации, так что не будем уточнять." },
+    { "code", EcTermCat::SCRIPT_CLASS,
+      u8"коды и стенография", u8"codes and shorthand",
+        u8"Коды и стенография{{-}}это другая форма   письменной речи. "
+                "Цель такой записи бывает разная:<br>"
+                "• связь и сигнализация (флажный семафор, код Морзе);<br>"
+                "• реабилитация инвалидов ([[ps:Brai|шрифт Брайля]]);<br>"
+                "• стенография{{-}}письмо, выполняемое специально обученным писцом и успевающее за устной речью "
+                    "([[ps:Dupl|система Дюплойе]])."
+            "<p>Коды часто захватывают много языков, и в разных языках кодовые таблицы разные. "
+                "Так, отличается даже британский и американский Брайль." },
+    { "nontext", EcTermCat::SCRIPT_CLASS,
+      u8"нетекстовая", u8"non-text",
+        u8"Запись других видов информации, кроме речи: музыки (ноты), жестов ([[ps:Sgnw|жестовое письмо]])." },
 
     ///// Char classes /////////////////////////////////////////////////////////
 

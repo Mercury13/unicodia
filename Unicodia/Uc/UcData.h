@@ -84,7 +84,8 @@ namespace uc {
         HIEROGLYPH,     ///< Pictures of things (CJK)
         SYLLABOHIEROGLYPH, ///< Syllable + hieroglyph (Linear A/B)
         CONSONANTHIEROGLYPH, ///< Consonant + hieroglyph (Egyptian)
-        OTHER,          ///< Other systems
+        CODE,           ///< Code/shorthand
+        NONTEXT,        ///< Non-text
         //SYMBOL,         ///< Miscellaneous symbols
         //GAME,           ///< Tabletop games
         //EMOJI,          ///< Emoji pictures
@@ -436,7 +437,7 @@ namespace uc {
     {
         std::u8string_view locName;
     };
-    extern const ScriptType scriptTypeInfo[static_cast<int>(EcScriptType::NN)];
+    extern const ScriptType scriptTypeInfo[];
 
 
     struct WritingDir
