@@ -710,7 +710,7 @@ QString mywiki::buildHtml(
 
         text.append("</p>");
 
-        if (cp.ecCategory == uc::EcCategory::CONTROL) {
+        if (cp.ecCategory == uc::EcCategory::CONTROL && cp.subj.uval() < 0x80) {
             //  Control char description
             str::append(text, u8"<h2>Об управляющих символах</h2>");
             appendWiki(text, *hint,
