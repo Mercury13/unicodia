@@ -704,7 +704,6 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             drawSpace(&painter, geometry(), *fontSpace,
                       palette().windowText().color(),
                       subj);
-            /// @todo [urgent] draw space
         } break;
     }
 }

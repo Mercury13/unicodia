@@ -78,7 +78,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCham-Regular.ttf" },                                             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
         // CJK chars are square, and there’s always not enough detail → bigger
-            /// @todo [fonts,urgent] Right now we install a TT collection, and we need just SC!!
     { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                    // CJK
       { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
       { "BabelStoneHan.ttf", Ffg::FALL_TO_NEXT, 120_pc },                       // …2
@@ -2071,12 +2070,15 @@ constinit const uc::Script uc::scriptInfo[] {
                 "(1560–1627), а довёл до компьютерного шрифта институт ''Beth Mardutho'' для издания Антиохийской Библии.",
                 EcFont::SYRIAC },
     // Tagbanwa OK, W10 off → installed Google Noto
-            /// @todo [desc] Another interesting script
     { "Tagb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Тагбанва", u8"≈1300",
         u8"языки о. Палаван ''(Филиппины)''",
-        u8"Восходит к [[ps:Brah|брахми]] и родственная с [[ps:Tglg|тагальской]]. Осталось не более 25000 людей, говорящих на этих языках.",
+        u8"Восходит к [[ps:Brah|брахми]] и родственная с [[ps:Tglg|тагальской]]. "
+                "Осталось не более 25000 людей, говорящих на этих языках. "
+                "Новые поколения предпочитают говорить по-тагальски."
+            "<p>[[pt:virama|Вирамы]] и каких-то знаков для заключительных букв нет, так что эти буквы угадываются из контекста, "
+                    "как в [[ps:Buhd|бухиде]].",
                 EcFont::TAGBANWA },
     // Takri OK, W10 none → installed Google Noto
     { "Takr", QFontDatabase::Any,
@@ -3013,7 +3015,6 @@ constinit const uc::Block uc::blocks[] {
     { 0x2C80, 0x2CFF,
             "Coptic", u8"Коптский", {}, EcScript::Copt },
     // Georgian supp OK
-    /// @todo [font, W7] which font?
     { 0x2D00, 0x2D2F,
             "Georgian Supplement", u8"Грузинский дополнительный",
             u8"Устаревший [[pt:minuscule|минускульный]] грузинский шрифт ''нусхури''. "
@@ -3289,7 +3290,7 @@ constinit const uc::Block uc::blocks[] {
             "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B",
             {},
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, BMP] four hieros FACF+
+    // CJK compat hiero OK
     { 0xF900, 0xFAFF,
             "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы",
             u8"Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, "
@@ -3751,7 +3752,7 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang },
-    /// @todo [tofu, P1] We should choose from several fonts, and current engine does not permit that.
+    // Kana supp OK
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная",
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
@@ -3851,7 +3852,7 @@ constinit const uc::Block uc::blocks[] {
                     "Китайцы пишут иероглиф <font size='+1'>正</font>. Лесники считают десятками, этот метод описан у Я.И.{{_}}Перельмана, "
                     "но отсутствует в Юникоде.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
-    /// @todo [block] Letterlike
+    /// @todo [link,block] Letterlike
     // Math alnum OK
     { 0x1D400, 0x1D7FF,
             "Mathematical Alphanumeric Symbols",
