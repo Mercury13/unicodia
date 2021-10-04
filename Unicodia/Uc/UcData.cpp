@@ -97,9 +97,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { "NotoSerifDevanagari.ttf", 110_pc },                                      // Devanagari    
     { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat
-      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …1
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …1
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
       { "BabelStoneHan.ttf", 130_pc },                                          // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
@@ -3965,7 +3965,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Группы крови, знак стоянки и некоторые другие символы являются [[pt:emoji|эмодзи]]."
                 "<p>Из региональных индикаторов собирают эмодзи флагов: "
                         "если написать эмодзи «GB», получится флаг Великобритании.",
-            EcScript::NONE, EcFont::NORMAL },
+            EcScript::NONE, EcFont::DINGBAT },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             "Enclosed Ideographic Supplement",
