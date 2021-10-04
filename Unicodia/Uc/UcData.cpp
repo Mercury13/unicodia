@@ -58,8 +58,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
-    { "Amiri-Regular.ttf", Ffg::FALL_TO_NEXT },                                 // Arabic Amiri
-      { FNAME_FUNKY },                                                          // …1, ONE FUKY CHAR!
+    { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic Noto
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
@@ -3313,7 +3312,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В обычном письме эти символы лучше не использовать. "
                     "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                         "(во многих тогдашних кодировках текст записывался слева направо).",
-            EcScript::Arab, EcFont::ARABIC_AMIRI, Bfg::HAS_32_NONCHARS },
+            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
             "Variation Selectors", u8"Селекторы начертания",
@@ -3358,7 +3357,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>В обычном письме эти символы лучше не использовать. "
                 "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                     "(во многих тогдашних кодировках текст записывался слева направо).",
-            EcScript::Arab, EcFont::ARABIC_AMIRI },
+            EcScript::Arab, EcFont::ARABIC_NOTO },
     // Half/full OK
     { 0xFF00, 0xFFEF,
             "Halfwidth and Fullwidth Forms",
@@ -3912,7 +3911,7 @@ constinit const uc::Block uc::blocks[] {
                         "Озеркаливают даже знаки «существует» или «частный дифференциал»."
                 "<p>Первыми такой набор реализовали разработчики системы математического текста TᴇX (читается «тех»), и в 2012, "
                     "после семи лет утрясок, эти наработки перенесли в Юникод.",
-            EcScript::NONE, EcFont::ARABIC_AMIRI },
+            EcScript::NONE, EcFont::MATH },
     // Mahjong tiles OK
     { 0x1F000, 0x1F02F,
             "Mahjong Tiles", u8"Фишки маджонга",
@@ -3965,7 +3964,8 @@ constinit const uc::Block uc::blocks[] {
             u8"Японские телевизионные символы, символы из шрифта Webdings, символы интеллектуальной собственности…"
                 "<p>Группы крови, знак стоянки и некоторые другие символы являются [[pt:emoji|эмодзи]]."
                 "<p>Из региональных индикаторов собирают эмодзи флагов: "
-                        "если написать эмодзи «GB», получится флаг Великобритании." },
+                        "если написать эмодзи «GB», получится флаг Великобритании.",
+            EcScript::NONE, EcFont::NORMAL },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             "Enclosed Ideographic Supplement",

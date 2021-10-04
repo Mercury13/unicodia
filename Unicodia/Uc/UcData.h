@@ -183,8 +183,7 @@ namespace uc {
         ADLAM,
         AHOM,
         ARABIC,
-        ARABIC_AMIRI,
-          Z_AMI_1,          // Amiri does not have one char → took it from Noto
+        ARABIC_NOTO,
         ARAMAIC,
         ARMENIAN,
           Z_ARM_1,
