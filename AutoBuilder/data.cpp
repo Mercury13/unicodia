@@ -885,6 +885,10 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Arabic mathematical Sheen")                 // Ambiguous
     EX("Hangul choseong filler")                    // Simpler to add exception
     EX("Hangul jungseong filler")                   // Same
+    EX("Circled CC")                                // Would be Cc
+    EX("Raised MC sign")                            // Same
+    EX("Raised MD sign")
+    EX("Raised MR sign")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
