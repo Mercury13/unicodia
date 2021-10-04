@@ -6,7 +6,7 @@
 @set DEPLOY1=~Deployed
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@set QTDIR=c:\Qt\6.1.3\mingw81_64
+@set QTDIR=c:\Qt\6.2.0\mingw81_64
 
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY%
