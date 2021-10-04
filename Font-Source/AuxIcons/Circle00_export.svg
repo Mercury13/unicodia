@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1000"
+   height="1000"
+   viewBox="0 0 264.58333 264.58333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Circle00_export.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="0.64052329"
+     inkscape:cx="433.23952"
+     inkscape:cy="483.97928"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-page="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-center="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1085" />
+    <sodipodi:guide
+       position="132.29166,179.91666"
+       orientation="1,0"
+       id="guide1238" />
+    <sodipodi:guide
+       position="158.75,132.29166"
+       orientation="0,-1"
+       id="guide1240" />
+    <sodipodi:guide
+       position="0,264.58333"
+       orientation="0.70710678,0.70710678"
+       id="guide1434"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
+    <sodipodi:guide
+       position="264.58333,264.58333"
+       orientation="-0.70710678,0.70710678"
+       id="guide1436"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path943"
+       style="fill:#000000;stroke:none;stroke-width:0.800001;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       d="M 500 0.40039062 A 499.60002 499.60002 0 0 0 0.40039062 500 A 499.60002 499.60002 0 0 0 500 999.59961 A 499.60002 499.60002 0 0 0 999.59961 500 A 499.60002 499.60002 0 0 0 500 0.40039062 z M 728.09961 100.66211 A 459.99999 459.99999 0 0 1 899.33789 271.90039 C 852.75241 408.82061 736.1077 452.28497 603.21289 465.07031 L 532.08398 467.91602 L 534.92773 396.79883 C 547.71165 263.89914 591.17535 147.24897 728.09961 100.66211 z M 273.14648 101.09766 C 409.08146 147.96833 452.32697 264.3032 465.07227 396.79492 L 467.91797 467.91602 L 396.79492 465.07227 C 264.3032 452.32697 147.96833 409.08145 101.09766 273.14648 A 459.99999 459.99999 0 0 1 273.14648 101.09766 z M 270 200 A 70.000003 70.000003 0 0 0 200 270 A 70.000003 70.000003 0 0 0 270 340 A 70.000003 70.000003 0 0 0 340 270 A 70.000003 70.000003 0 0 0 270 200 z M 730 200 A 70.000003 70.000003 0 0 0 660 270 A 70.000003 70.000003 0 0 0 730 340 A 70.000003 70.000003 0 0 0 800 270 A 70.000003 70.000003 0 0 0 730 200 z M 467.91602 532.08398 L 465.07227 603.20508 C 452.32697 735.69681 409.08145 852.03167 273.14648 898.90234 A 459.99999 459.99999 0 0 1 101.09766 726.85352 C 147.96694 590.92258 264.29637 547.67641 396.7832 534.92969 L 467.91602 532.08398 z M 532.08398 532.08398 L 603.20508 534.92773 C 736.10317 547.71212 852.75149 591.17668 899.33789 728.09961 A 459.99999 459.99999 0 0 1 728.09961 899.33789 C 591.1794 852.75241 547.71503 736.1077 534.92969 603.21289 L 532.08398 532.08398 z M 270 660 A 70.000003 70.000003 0 0 0 200 730 A 70.000003 70.000003 0 0 0 270 800 A 70.000003 70.000003 0 0 0 340 730 A 70.000003 70.000003 0 0 0 270 660 z M 730 660 A -70.000003 -70.000003 0 0 0 660 730 A -70.000003 -70.000003 0 0 0 730 800 A -70.000003 -70.000003 0 0 0 800 730 A -70.000003 -70.000003 0 0 0 730 660 z "
+       transform="scale(0.26458333)" />
+    <g
+       id="g2573" />
+  </g>
+</svg>
