@@ -233,6 +233,7 @@ const std::map<std::string_view, DicEntry> dictionary {
       { "JONGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGIT",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
     { "FRACTION",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "GALI",           Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT },
     { "HIEROGLYPH",     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "IDEOGRAM",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "LETTER",         Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -295,6 +296,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
     { "ARROW",          Dicf::PART_NOUN },
     { "ARROWHEAD",      Dicf::PART_NOUN },
+    { "BALUDA",         Dicf::PART_NOUN },
     { "BAR",            Dicf::PART_NOUN },
     { "BEAT",           Dicf::PART_NOUN },
     { "BIRD",           Dicf::PART_NOUN },  // For some CJK hiero
@@ -334,6 +336,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TACK",           Dicf::PART_NOUN },
     { "TREE",           Dicf::PART_NOUN },
     { "TSHEG",          Dicf::PART_NOUN },
+    { "UBADAMA",        Dicf::PART_NOUN },
     { "UNDERBAR",       Dicf::PART_NOUN },
     { "VIRAMA",         Dicf::PART_NOUN },
     { "VISARGA",        Dicf::PART_NOUN },
