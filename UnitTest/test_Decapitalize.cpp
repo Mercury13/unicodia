@@ -914,3 +914,12 @@ TEST (Decap, BugCuneiTimesArabic)
     EXPECT_EQ("Cuneiform sign LAM times KUR plus RU", r);
 }
 
+
+///
+///  BUG: Very Heavy Greek cross
+///
+TEST (Decap, BugGreekCross)
+{
+    auto r = decapitalize("VERY HEAVY GREEK CROSS");
+    EXPECT_EQ("Very heavy Greek cross", r);
+}

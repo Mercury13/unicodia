@@ -78,7 +78,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "GOTHIC",         Dicf::TRIG_SCRIPT },
     { "GLAGOLITIC",     Dicf::TRIG_SCRIPT },
     { "GRANTHA",        Dicf::TRIG_SCRIPT },
-    { "GREEK",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "GREEK",          Dicf::TRIG_SCRIPT_IF_FIRST | Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
       { "PAMPHYLIAN",     Dicf::TRIG_SCRIPT },
       { "ATTIC",          Dicf::TRIG_SCRIPT },
       { "TROEZENIAN",     Dicf::TRIG_SCRIPT },
