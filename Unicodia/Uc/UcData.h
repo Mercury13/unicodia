@@ -191,6 +191,7 @@ namespace uc {
         BALINESE,
         BAMUM,
         BATAK,
+        VEDIC,      // Devanagari → Bengali
         BENGALI,
         BHAIKSUKI,
         BRAHMI,

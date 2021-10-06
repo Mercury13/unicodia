@@ -30,6 +30,8 @@ constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
             | QFont::PreferFullHinting);
 constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
 
+constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
+
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
@@ -67,6 +69,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBalinese-Regular.ttf", Ffg::STUB_OFF, "padding-bottom: 12%;"_sty, 90_pc }, // Balinese
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
+    { "NotoSerifDevanagari.ttf", Ffg::FALL_TO_NEXT, STYLE_DEVA, 110_pc },       // Vedic = Devanagari → Bengali
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
@@ -85,8 +88,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …4 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …5 Korean
       { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …6 Japanese
-      { FNAME_HANA_A, Ffg::FALL_TO_NEXT, 120_pc },                            // …7
-      { FNAME_HANA_B, 120_pc },                                               // …8
+      { FNAME_HANA_A, Ffg::FALL_TO_NEXT, 120_pc },                              // …7
+      { FNAME_HANA_B, 120_pc },                                                 // …8
     { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_HANA_A, 120_pc },                                                 // …2
@@ -94,7 +97,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", 110_pc },                                      // Devanagari    
+    { "NotoSerifDevanagari.ttf", STYLE_DEVA, 110_pc },                          // Devanagari
     { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …1
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
@@ -2774,7 +2777,7 @@ constinit const uc::Block uc::blocks[] {
             "Vedic Extensions", u8"Ведические символы",
             u8"Символы из Вед, применяемые в [[ps:Deva|деванагари]] и других индийских письменностях. "
                 "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки.",
-            EcScript::Deva },
+            EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
     { 0x1D00, 0x1D7F,
             "Phonetic Extensions", u8"Фонетические расширения",
