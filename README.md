@@ -7,7 +7,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 # How to compile?
 * Download MSYS, slight C++20 here.
-* Make custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2.
+* Make custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2 to 6.2.0.
 * Compile AutoBuilder.
 * Download and unzip big 220 M https://www.unicode.org/Public/13.0.0/ucdxml/ucd.all.flat.zip
 * Run AutoBuilder.
@@ -31,11 +31,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Future functionality
-* Version 0.1: when tofu policy of base plane is fulfilled, and some sort of About is made.
 * Version 1.0: when **all** happen…
   * All chars of Unicode 13 are drawn, even badly.
   * Basic search.
-  * Icon/logo, legal info.
 * Unicode 14: when any of U14 scripts is ready, incl. Arabic and emoji but excl. other amendments (even greatly revamped Egyptian hieroglyphs).
 * Future tools (**not** milestones of 1.0):
   * Emoji tools: ligatures, more comprehensive reference.
