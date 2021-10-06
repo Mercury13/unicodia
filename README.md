@@ -33,7 +33,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 ## Future functionality
 * Version 1.0: when **all** happen…
-  * All chars of Unicode 13 are drawn, even badly.
+  * All chars of Unicode 13 except CJK G are drawn, even badly.
   * Basic search.
 * Unicode 14: when any of U14 scripts is ready, incl. Arabic and emoji but excl. other amendments (even greatly revamped Egyptian hieroglyphs).
 * Future tools (**not** milestones of 1.0):
