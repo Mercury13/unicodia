@@ -25,6 +25,7 @@ What was done by authors of Unicodia:
   - Rehinted
 * Devanagari
   - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.
+    (note: scale new → old 194%)
   - Made 1CF8..FA (Vedic Extensions).
   - Copied 2 chars 1CF5, F6 (Vedic Extensions) form newer version.
     (umlauts are just for showcasing and actually unusable!)
