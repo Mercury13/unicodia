@@ -27,6 +27,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 ## Tofu/misrenderings
 * **W10 should support everything possible, W7 base plane only**.
 * Some base plane scripts (e.g. Georgian Nuskhuri) will not be shown the best way in W7, but will be shown.
+* Of course, same for plane 1 scripts: if I find that some font supports e.g. Gothic, I’ll include it to font chain.
 * Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi.
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
