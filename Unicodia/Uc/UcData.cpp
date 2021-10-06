@@ -60,7 +60,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
-    { "NotoNaskhArabic-Regular.ttf" },                                          // Arabic Noto
+    { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic Noto — Scheh has a few nice chars!
+      { "NotoNaskhArabic-Regular.ttf" },                                        // …1, main font
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
@@ -2776,7 +2777,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x1CD0, 0x1CFF,
             "Vedic Extensions", u8"Ведические символы",
             u8"Символы из Вед, применяемые в [[ps:Deva|деванагари]] и других индийских письменностях. "
-                "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки.",
+                    "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки."
+                "<p>Часть символов отличаются по форме от письменности к письменности. "
+                    "1CF5 в деванагари похож на песочные часы, в бенгальском на крест. "
+                    "1CF6 в деванагари похож на кратку от Й, в бенгальском{{-}}на прямую или перевёрнутую малую омегу ω. "
+                    "Символ в виде прямой и перевёрнутой омеги, некоторое время существовавший в Юникоде, "
+                            "чаще встречается у исследователей, чем в первичных источниках.",
             EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
     { 0x1D00, 0x1D7F,

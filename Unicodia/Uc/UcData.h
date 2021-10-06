@@ -184,6 +184,7 @@ namespace uc {
         AHOM,
         ARABIC,
         ARABIC_NOTO,
+          Z_ARN_1,
         ARAMAIC,
         ARMENIAN,
           Z_ARM_1,
