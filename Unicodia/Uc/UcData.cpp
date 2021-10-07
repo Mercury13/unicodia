@@ -4051,9 +4051,13 @@ constinit const uc::Block uc::blocks[] {
                         "должны быть пусты. "
                         "Очень манёвренный, но ограничен четвертью клеток."
                 "<p>Также в этом блоке есть фишки китайской игры сянци." },
+    // Sym and picto ext A OK
     { 0x1FA70, 0x1FAFF,
             "Symbols and Pictographs Extended-A",
-            u8"Символы и пиктограммы расширенные А" },
+            u8"Символы и пиктограммы расширенные А",
+            u8"Блок [[pt:emoji|эмодзи]], появившийся в 2019. "
+                "Одежда, медицина, развлечения, разные предметы, еда…",
+            EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
     { 0x1FB00, 0x1FBFF,
             "Symbols for Legacy Computing",
