@@ -4003,11 +4003,15 @@ constinit const uc::Block uc::blocks[] {
     // Orna dingbats OK
     { 0x1F650, 0x1F67F,
             "Ornamental Dingbats", u8"Печатные узоры",
-            u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''." },
-    /// @todo [desc] Transport/map
+            u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''.",
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+    // Transport/map OK
     { 0x1F680, 0x1F6FF,
             "Transport and Map Symbols",
-            u8"Транспортные и картографические символы" },
+            u8"Транспортные и картографические символы",
+            u8"Иконки и [[pt:emoji|эмодзи]] транспортных средств, картографических символов и знаков навигации, "
+                        "во многом для совместимости с кодировками японских телефонных операторов.",
+            EcScript::NONE, EcFont::DINGBAT },
     // Alchem OK
     { 0x1F700, 0x1F77F,
             "Alchemical Symbols", u8"Алхимические символы",
