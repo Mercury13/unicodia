@@ -4004,7 +4004,6 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F650, 0x1F67F,
             "Ornamental Dingbats", u8"Печатные узоры",
             u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''." },
-    /// @todo [semi-tofu, P1] Transport/map: Some chars are not colored
     /// @todo [desc] Transport/map
     { 0x1F680, 0x1F6FF,
             "Transport and Map Symbols",
@@ -4029,12 +4028,13 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F800, 0x1F8FF,
             "Supplemental Arrows-C", u8"Стрелки дополнительные C",
             u8"По состоянию на Юникод 13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров." },
-    /// @todo [desc] Supplemental sym/picto
-    /// @todo [tofu, P1] 1F900..0C,  72, 77, 78, A3, A4, AB..AD, CB
+    // Supp sym/picto OK
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
             u8"Символы и пиктограммы дополнительные",
-            {},
+            u8"Появившийся в 2015 блок символов разного назначения, в основном [[pt:emoji|эмодзи]]. "
+                    "Также несколько символов из Типикона{{-}}типового устава православного богослужения, "
+                        "кодифицированного около 1100, последние крупные правки 1695.",
             EcScript::NONE, EcFont::DINGBAT },
     // Chess OK, turned bad pawn
     { 0x1FA00, 0x1FA6F,
