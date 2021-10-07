@@ -4034,7 +4034,8 @@ constinit const uc::Block uc::blocks[] {
     // Arrows C OK
     { 0x1F800, 0x1F8FF,
             "Supplemental Arrows-C", u8"Стрелки дополнительные C",
-            u8"По состоянию на Юникод 13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров." },
+            u8"По состоянию на Юникод{{_}}13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров. "
+                    "Юникод{{_}}14 не принёс новых стрелок." },
     // Supp sym/picto OK
     { 0x1F900, 0x1F9FF,
             "Supplemental Symbols and Pictographs",
