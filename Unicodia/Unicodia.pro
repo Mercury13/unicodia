@@ -22,6 +22,7 @@ debug {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    FmMessage.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
@@ -49,6 +50,7 @@ HEADERS += \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     FmMain.h \
+    FmMessage.h \
     FmPopup.h \
     MyWiki.h \
     Skin.h \

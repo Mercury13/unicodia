@@ -28,6 +28,7 @@
 
 // Forms
 #include "FmPopup.h"
+#include "FmMessage.h"
 
 using namespace std::string_view_literals;
 
@@ -934,6 +935,33 @@ void FmMain::copyCurrentThing(CurrThing thing)
         }
         QApplication::clipboard()->setText(q);
     }
+
+    auto widget = qobject_cast<QWidget*>(sender());
+    QPoint corner { 0, 0 };
+    QSize size { 0, 0 };
+    if (widget) {
+        corner = widget->mapToGlobal(QPoint{0, 0});
+        size = widget->size();
+    } else {
+        auto selIndex = ui->tableChars->currentIndex();
+        auto selRect = ui->tableChars->visualRect(selIndex);
+        widget = ui->tableChars->viewport();
+        // Geometry is in PARENT’s coord system
+        // Rect is (0,0) W×H
+        auto visibleGeo = widget->rect();
+        selRect = selRect.intersected(visibleGeo);
+        if (selRect.isEmpty()) {
+            corner = widget->mapToGlobal(visibleGeo.center());
+            // Size is still 0
+        } else {
+            corner = widget->mapToGlobal(selRect.topLeft());
+            size = selRect.size();
+        }
+    }
+
+    if (!fmMessage)
+        fmMessage = std::make_unique<FmMessage>(this);
+    fmMessage->showAtAbs("Скопировано", widget, QRect{ corner, size} );
 }
 
 

@@ -32,6 +32,7 @@ constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
 
 class FmPopup2;
+class FmMessage;
 
 struct MaybeChar {
     char32_t code = 0;
@@ -202,6 +203,7 @@ private:
     CharsModel model;
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup2> popup;
+    std::unique_ptr<FmMessage> fmMessage;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
     mutable struct Hint {

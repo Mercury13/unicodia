@@ -167,9 +167,12 @@ FmPopup& FmPopup::popupAtAbs(QWidget* widget, const QRect& absRect)
         throw std::invalid_argument("[FmPopup.popupAtAbs] Widget should be non-null!");
     fLastAbsRect = absRect;
     fLastWidget = widget;
-    auto screen = QApplication::screenAt(absRect.topLeft());
-    if (!screen)
+    auto screen = QApplication::screenAt(absRect.center());
+    if (!screen) {
         screen = widget->screen();
+        if (!screen)
+            screen = QApplication::primaryScreen();
+    }
     popupAtScreen(screen, absRect);
     return *this;
 }
