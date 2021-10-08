@@ -940,7 +940,7 @@ void FmMain::copyCurrentThing(CurrThing thing)
     QPoint corner { 0, 0 };
     QSize size { 0, 0 };
     if (widget) {
-        corner = widget->mapToGlobal(QPoint{0, 0});
+        // corner is (0,0)
         size = widget->size();
     } else {
         auto selIndex = ui->tableChars->currentIndex();
@@ -951,16 +951,17 @@ void FmMain::copyCurrentThing(CurrThing thing)
         auto visibleGeo = widget->rect();
         selRect = selRect.intersected(visibleGeo);
         if (selRect.isEmpty()) {
-            corner = widget->mapToGlobal(visibleGeo.center());
+            corner = visibleGeo.center();
             // Size is still 0
         } else {
-            corner = widget->mapToGlobal(selRect.topLeft());
+            corner = selRect.topLeft();
             size = selRect.size();
         }
     }
 
     if (!fmMessage)
         fmMessage = std::make_unique<FmMessage>(this);
+    corner = widget->mapToGlobal(corner);
     fmMessage->showAtAbs("Скопировано", widget, QRect{ corner, size} );
 }
 
