@@ -63,9 +63,6 @@ Latin
 * Блок F: 57 символов, даже разбираться облом
 * На Noto Serif забил
 
-Mongol
-* Добавился спецсимвол 180F, шрифты трогать не надо
-
 Oriya
 * Noto UI не готов даже к U13, ищи Combining overline 0B55
 
@@ -113,3 +110,6 @@ Telugu:
 Canadian aboriginal OK
 * Новые символы 11AB0…BF
 * Noto ГОТОВ
+
+Mongol OK
+* Добавился спецсимвол 180F, шрифты трогать не надо
