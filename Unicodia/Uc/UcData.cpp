@@ -3649,6 +3649,7 @@ constinit const uc::Block uc::blocks[] {
             "Warang Citi", u8"Варанг-кшити", {}, EcScript::Wara },
     { 0x11900, 0x1195F,
             "Dives Akuru", u8"Дивес-акуру (древнемальдивский)", {}, EcScript::Diak },
+    // Nandi OK, built own font
     { 0x119A0, 0x119FF,
             "Nandinagari", u8"Нандинагари", {}, EcScript::Nand },
     { 0x11A00, 0x11A4F,
@@ -3795,7 +3796,6 @@ constinit const uc::Block uc::blocks[] {
                     "Тем не менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, "
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
-    /// @todo [tofu, P1] How to show chars like NULL-NOTE-HEAD?
     /// @todo [semi-tofu, P1] Check and take smth from Segoe UI Symbol
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы",
@@ -3838,6 +3838,7 @@ constinit const uc::Block uc::blocks[] {
                     "Ракушки, палочки и точки говорят, что такая система счисления родом со счётных досок."
                 "<p>Некоторые источники говорят, что в быту майя пользовались более простой непозиционной системой счисления.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+    // Tai Xuan Jing OK
     { 0x1D300, 0x1D35F,
             "Tai Xuan Jing Symbols", u8"Символы Тайсюаньцзин (Канона великой тайны)",
             u8"Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый Книгой перемен. "
@@ -3847,6 +3848,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В Консорциуме Юникода по ошибке спутали землю и человека. "
                     "С гарантиями [[pt:stability|стабильности]] оставалось только объяснить эту досадную ошибку в комментариях."
                 "<p>Часть монограмм и диграмм уже есть в базовой плоскости." },
+    // Counting rods OK
     { 0x1D360, 0x1D37F,
             "Counting Rod Numerals", u8"Счётные палочки",
             u8"Палочками учат считать детей. "
@@ -3897,6 +3899,7 @@ constinit const uc::Block uc::blocks[] {
     // Adlam OK
     { 0x1E900, 0x1E95F,
             "Adlam", u8"Адлам", {}, EcScript::Adlm },
+    // Indic Siyaq OK
     { 0x1EC70, 0x1ECBF,
             "Indic Siyaq Numbers", u8"Индийские цифры сийяк",
             u8"Арабские непозиционные цифры, применявшиеся в Индии с XVII{{_}}века "
@@ -3907,6 +3910,7 @@ constinit const uc::Block uc::blocks[] {
                         "со 100{{_}}тысяч{{-}}индийские слова. "
                     "Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.",
             EcScript::NONE, EcFont::SIYAQ_INDIC },
+    /// @todo [tofu] Ottoman Siyaq, and no fonts
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
     // Arab mathematical OK, W10 Amiri
@@ -3968,6 +3972,7 @@ constinit const uc::Block uc::blocks[] {
             // Font coincides with Phaistos Disc, with one difference:
             // One emoji here → colour emoji font
             EcScript::NONE, EcFont::PLAYING_CARDS },
+    // Enclosed alnum OK, added a few symbols to FunkySample
     { 0x1F100, 0x1F1FF,
             "Enclosed Alphanumeric Supplement",
             u8"Обрамлённые буквы и цифры дополнительные",
