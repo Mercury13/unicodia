@@ -375,41 +375,72 @@ namespace {
 
     enum class SplitMode { NORMAL, FIXED };
 
-    struct StrPair {
-        std::u8string_view line1, line2;
+    struct AbbrLines {
+        std::u8string_view line1, line2, line3;
 
+        unsigned nLines() const { return line2.empty() ? 1 : line3.empty() ? 2 : 3; }
         bool wasSplit() const { return !line2.empty(); }
-        size_t length() const { return std::max(line1.length(), line2.length()); }
+        unsigned length() const {
+            return std::max(std::max(line1.length(), line2.length()), line3.length()); }
+        qreal sizeQuo() const;
     };
 
-    StrPair splitAbbr(std::u8string_view abbr, SplitMode mode)
+    constexpr qreal Q1 = 2.0;
+    constexpr qreal Q3 = 3.3;
+    constexpr qreal Q4 = 4.0;
+    constexpr qreal Q5 = 5.0;
+    const qreal lenQuos[]  = { Q3, Q3, Q3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 };
+
+    qreal AbbrLines::sizeQuo() const
+    {
+        auto sz = nLines(), len = length();
+        switch (sz) {
+        case 3: return Q5;
+        case 1:
+            if (len == 1)
+                return Q1;
+            [[fallthrough]];
+        default:
+            return lenQuos[len];
+        }
+    }
+
+    AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode)
     {
         if (mode == SplitMode::FIXED)
-            return { abbr, {} };
-        if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos)
-            return { abbr.substr(0, pSpace), abbr.substr(pSpace + 1) };
+            return { abbr, {}, {} };
+        if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos) {
+            auto line1 = abbr.substr(0, pSpace), line23 = abbr.substr(pSpace + 1);
+            if (auto pSpace2 = line23.find(' '); pSpace2 != std::u8string_view::npos) {
+                auto line2 = line23.substr(0, pSpace2);
+                auto line3 = line23.substr(pSpace + 1);
+                return { line1, line2, line3 };
+            } else {
+                return { line1, line23, {} };
+            }
+        }
         switch (abbr.size()) {
         case 4:
         case 6: {
                 auto split = abbr.size() / 2;
-                return { abbr.substr(0, split), abbr.substr(split) };
+                return { abbr.substr(0, split), abbr.substr(split), {} };
             }
         case 5: {
                 auto split = 3;
                 if (isdigit(abbr[2]) && isdigit(abbr[3]))
                     split = 2;
-                return { abbr.substr(0, split), abbr.substr(split) };
+                return { abbr.substr(0, split), abbr.substr(split), {} };
             }
         default:
-            return { abbr, {} };
+            return { abbr, {}, {} };
         }
     }
 
     struct RcPair {
         QRectF rc1, rc2;
 
-        RcPair(const QRectF& rcFrame) : rc1(rcFrame), rc2(rcFrame) {
-            auto dh = rcFrame.height() / 2.5;
+        RcPair(const QRectF& rcFrame, qreal quo) : rc1(rcFrame), rc2(rcFrame) {
+            auto dh = rcFrame.height() / quo;
             rc1.setBottom(rc1.bottom() - dh);
             rc2.setTop(rc2.top() + dh);
         }
@@ -459,23 +490,28 @@ namespace {
         // Draw text
         auto sp = splitAbbr(abbreviation, mode);
         auto availSize = rcFrame.width();
-        auto sz = (abbreviation.length() == 1)      // ONE line of ONE char → left for tags
-                ? availSize / 2
-                : (sp.length() <= 3)
-                  ? availSize / 3.3
-                  : availSize / 5.0;
+        auto sz = availSize / sp.sizeQuo();
         QFont font { str::toQ(FAM_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
             font.setPointSizeF(sz);
         painter->setFont(font);
         painter->setBrush(QBrush(color, Qt::SolidPattern));
         rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
-        if (sp.wasSplit()) {
-            RcPair p(rcFrame);
-            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
-            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
-        } else {
+        switch (sp.nLines()) {
+        case 1:
             painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
+            break;
+        case 2: {
+                RcPair p(rcFrame, 2.5);
+                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+            } break;
+        default: { // case 3
+                RcPair p(rcFrame, 1.8);
+                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+                painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line2));
+                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line3));
+            }
         }
     }
 

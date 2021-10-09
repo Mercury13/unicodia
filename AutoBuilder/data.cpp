@@ -958,6 +958,15 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x13437, "(" },   // Egyptian hiero begin segment
     { 0x13438, ")" },   // Egyptian hiero end segment
     { 0x16FE4, "KSS F" }, // Khitan small filler
+    { 0x1D159, "NULL NOTE HEAD" }, // Music
+    { 0x1D173, "BEGIN BEAM" },
+    { 0x1D174, "END BEAM" },
+    { 0x1D175, "BEGIN TIE" },
+    { 0x1D176, "END TIE" },
+    { 0x1D177, "BEGIN SLUR" },
+    { 0x1D178, "END SLUR" },
+    { 0x1D179, "BEGIN PHR." },
+    { 0x1D17A, "END PHR." },
     // Then Variation Selectors
 };
 
