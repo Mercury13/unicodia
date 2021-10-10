@@ -21,14 +21,12 @@ constexpr auto FGS_MESSAGE =
 constexpr auto STY_LABEL =
         "QLabel { color : white; "
         "font-size: 10pt; "
-        "margin-top: 6px; "
-        "margin-bottom: 6px; "
-        "margin-left: 10px; "
-        "margin-right: 10px; }";
+        "margin: 6px 10px; }";
 
 constexpr auto ALPHA_DEFAULT = 180;
 constexpr auto CORNER_RADIUS = 10;
-constexpr auto SHADOW_GAP = 5;
+constexpr auto SHADOW_GAP = 0;
+constexpr auto WINDOW_GAP = 4;
 
 constexpr auto TIME_APPEAR = 150;
 constexpr auto TIME_STAY = 1500;
@@ -48,6 +46,7 @@ FmMessage::FmMessage(QWidget* parent)
 
     // Layout
     layout = std::make_unique<QGridLayout>(this);
+    layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(label.get(), 0, 0);
     setLayout(layout.get());
 
@@ -153,11 +152,11 @@ void FmMessage::moveTo(const QWidget* widget, const QRect& globalRect)
     if (auto bottomRemainder = screenRect.bottom() - globalRect.bottom();
             bottomRemainder >= myH) {
         // Try on the bottom
-        setY(globalRect, screenRect, globalRect.bottom());
+        setY(globalRect, screenRect, globalRect.bottom() + WINDOW_GAP);
     } else if (auto topRemainder = globalRect.top() - screenRect.top();
             topRemainder >= myH) {
         // Try on the top
-        setY(globalRect, screenRect, globalRect.top() - myH);
+        setY(globalRect, screenRect, globalRect.top() - myH - WINDOW_GAP);
     } else {
         // Try everywhere
         setY(globalRect, screenRect, screenRect.bottom() - myH);
