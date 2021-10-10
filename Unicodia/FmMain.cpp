@@ -868,6 +868,10 @@ FmMain::FmMain(QWidget *parent)
     // About
     initAbout();
 
+    // Set focus defered
+    connect(this, &This::setFocusDefered, this, &This::slotSetFocusDefered,
+            Qt::QueuedConnection);
+
     // Select index
     ui->tableChars->setFocus();
     ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
@@ -1227,6 +1231,12 @@ void FmMain::popupLinkActivated(const QString& link)
 }
 
 
+void FmMain::slotSetFocusDefered(QWidget* wi)
+{
+    wi->setFocus();
+}
+
+
 void FmMain::on_comboBlock_currentIndexChanged(int index)
 {
     if (index < 0)
@@ -1236,7 +1246,7 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
     if (oldBlock->index() != static_cast<size_t>(index)) {
         auto& newBlock = uc::blocks[index];
         selectChar(newBlock.firstAllocated->subj);
-        ui->tableChars->setFocus();
+        emit setFocusDefered(ui->tableChars);
     }
 }
 

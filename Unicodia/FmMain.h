@@ -226,6 +226,8 @@ private:
             QWidget* widget, const QRect& absRect, const QString& html) override;
     FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
+signals:
+    void setFocusDefered(QWidget* wi);
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();
@@ -234,6 +236,7 @@ private slots:
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
     void showTofuStats();
+    void slotSetFocusDefered(QWidget* wi);
     void on_comboBlock_currentIndexChanged(int index);
 };
 
