@@ -945,10 +945,13 @@ void FmMain::initAbout()
 bool FmMain::eventFilter(QObject *obj, QEvent *event)
 {
     switch (event->type()) {
-    case QEvent::MouseButtonDblClick:
-        if (obj == ui->tableChars->viewport()) {
-            copyCurrentChar();
-            return true;
+    case QEvent::MouseButtonDblClick: {
+            auto mouseEvent = static_cast<QMouseEvent*>(event);
+            if (obj == ui->tableChars->viewport()
+                    && mouseEvent->button() == Qt::LeftButton) {
+                copyCurrentChar();
+                return true;
+            }
         }
     default:;
     }
