@@ -958,20 +958,8 @@ FmMain::~FmMain()
 }
 
 
-void FmMain::copyCurrentThing(CurrThing thing)
+void FmMain::showCopied(QAbstractItemView* table)
 {
-    auto ch = model.charAt(ui->tableChars->currentIndex());
-    if (ch) {
-        QString q;
-        if (thing == CurrThing::SAMPLE
-                && ch->category().upCat == uc::UpCategory::MARK) {
-            q = uc::STUB_CIRCLE + str::toQ(ch->subj);
-        } else {
-            q = str::toQ(ch->subj);
-        }
-        QApplication::clipboard()->setText(q);
-    }
-
     auto widget = qobject_cast<QWidget*>(sender());
     QPoint corner { 0, 0 };
     QSize size { 0, 0 };
@@ -979,9 +967,9 @@ void FmMain::copyCurrentThing(CurrThing thing)
         // corner is (0,0)
         size = widget->size();
     } else {
-        auto selIndex = ui->tableChars->currentIndex();
-        auto selRect = ui->tableChars->visualRect(selIndex);
-        widget = ui->tableChars->viewport();
+        auto selIndex = table->currentIndex();
+        auto selRect = table->visualRect(selIndex);
+        widget = table->viewport();
         // Geometry is in PARENT’s coord system
         // Rect is (0,0) W×H
         auto visibleGeo = widget->rect();
@@ -999,6 +987,24 @@ void FmMain::copyCurrentThing(CurrThing thing)
         fmMessage = std::make_unique<FmMessage>(this);
     corner = widget->mapToGlobal(corner);
     fmMessage->showAtAbs("Скопировано", widget, QRect{ corner, size} );
+}
+
+
+void FmMain::copyCurrentThing(CurrThing thing)
+{
+    auto ch = model.charAt(ui->tableChars->currentIndex());
+    if (ch) {
+        QString q;
+        if (thing == CurrThing::SAMPLE
+                && ch->category().upCat == uc::UpCategory::MARK) {
+            q = uc::STUB_CIRCLE + str::toQ(ch->subj);
+        } else {
+            q = str::toQ(ch->subj);
+        }
+        QApplication::clipboard()->setText(q);
+    }
+
+    showCopied(ui->tableChars);
 }
 
 

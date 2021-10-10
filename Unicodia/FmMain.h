@@ -218,6 +218,7 @@ private:
     void initTerms();
     void reflectCjkCollapseState();
     void copyCurrentThing(CurrThing thing);
+    void showCopied(QAbstractItemView* table);
     void clearSample();
 
     // mywiki::Gui
