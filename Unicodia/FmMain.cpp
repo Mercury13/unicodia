@@ -1002,9 +1002,8 @@ void FmMain::copyCurrentThing(CurrThing thing)
             q = str::toQ(ch->subj);
         }
         QApplication::clipboard()->setText(q);
+        showCopied(ui->tableChars);
     }
-
-    showCopied(ui->tableChars);
 }
 
 
