@@ -243,6 +243,47 @@ void NewLine::trigger()
 }
 
 
+std::string_view findTag(
+        std::string_view haystack,
+        std::string_view open, std::string_view close)
+{
+    auto p = haystack.find(open);
+    if (p == std::string_view::npos)
+        return {};
+    size_t p1 = haystack.find('>', p + open.length());
+    if (p1 == std::string_view::npos)
+        return {};
+    ++p1;
+    if (close.empty()) {
+        // Special close tag
+        size_t p2 = haystack.find(close, p1);
+        if (p2 == std::string_view::npos)
+            return {};
+        return std::string_view(haystack.data() + p1, p2 - p1);
+    } else {
+        // Close same as open; did not find → return entire tail
+        size_t p2 = haystack.find(open, p1);
+        if (p2 == std::string_view::npos)
+            return std::string_view(haystack.data() + p1, p2);
+        return std::string_view(haystack.data() + p1, p2 - p1);
+    }
+}
+
+
+std::string_view rqTag(
+        std::string_view haystack,
+        std::string_view open, std::string_view close)
+{
+    auto r = findTag(haystack, open, close);
+    if (r.empty()) {
+        std::string data = "Cannot find tag ";
+        data.append(open);
+        throw std::logic_error(data);
+    }
+    return r;
+}
+
+
 int main()
 {
     std::ofstream os("UcAuto.cpp");
@@ -467,8 +508,30 @@ int main()
     }
     os << "};\n";
 
-    os.close();
+    ///// HTML entities ////////////////////////////////////////////////////////
 
+    std::cout << "Loading entities..." << std::flush;
+    std::ifstream is("../MiscFiles/entities.htm", std::ios::binary);
+    if (!is.is_open())
+        throw std::logic_error("Cannot open entities.htm");
+
+    is.seekg(0, std::ios::end);
+    auto fsize = is.tellg();
+    is.seekg(0, std::ios::beg);
+
+    std::string sEntities;
+    sEntities.resize(fsize);
+    is.read(sEntities.data(), fsize);
+
+    size_t nEntityChars = 0;
+    auto tagTable = rqTag(sEntities, "<table", "</table");
+
+    std::cout << "OK" << std::endl;
+    std::cout << "File size is " << std::dec << fsize << ", found " << nEntityChars << " chars." << std::endl;
+
+    ///// Close main file, write UcAutoCount ///////////////////////////////////
+
+    os.close();
     os.open("UcAutoCount.h");
     os << "#pragma once\n";
     os << '\n';
@@ -479,6 +542,8 @@ int main()
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "}\n";
+
+    ///// Done !! //////////////////////////////////////////////////////////////
 
     std::cout << "Successfully finished!" << std::endl << std::endl;
 
