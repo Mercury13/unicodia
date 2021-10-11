@@ -621,7 +621,7 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
         str::append(text, "' class='"sv);
         str::append(text, clazz);
         str::append(text, "' >"sv);
-    text += x;
+    text += x.toHtmlEscaped();
     str::append(text, "</a>"sv);
 }
 
@@ -770,8 +770,8 @@ QString mywiki::buildHtml(
         // HTML
         sp.sep();
         str::append(text, u8"HTML: ");
-        snprintf(buf, std::size(buf), "&amp;#%d;", static_cast<int>(cp.subj));
-        str::append(text, buf);
+        snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
+        appendCopyable(text, buf);
 
         appendUtf(text, sp, cp.subj);
 
