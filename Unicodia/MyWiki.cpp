@@ -772,6 +772,18 @@ QString mywiki::buildHtml(
         str::append(text, u8"HTML: ");
         snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
         appendCopyable(text, buf);
+        if (cp.name.alts != 0) {
+            int nNames = cp.name.alts;
+            std::u8string_view currName = cp.name.tech();
+            for (; nNames != 0; --nNames) {
+                currName = std::to_address(currName.end() + 1);
+                if (currName.size() >= 3 && currName.starts_with('&')
+                       && currName.ends_with(';')) {
+                    text += ' ';
+                    appendCopyable(text, str::toQ(currName));
+                }
+            }
+        }
 
         appendUtf(text, sp, cp.subj);
 
