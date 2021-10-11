@@ -271,11 +271,18 @@ std::string_view findTag(
 }
 
 
-void tagMinus(std::string_view& haystack, std::string_view r)
+void tagMinus(std::string_view& haystack,
+              size_t lenClose,
+              std::string_view r)
 {
     auto pBeg = std::to_address(r.end());
     auto pEnd = std::to_address(haystack.end());
+    if (pBeg == pEnd) {
+        haystack = {};
+        return;
+    }
 
+    pBeg += lenClose;
     size_t newLen = pEnd - pBeg;
     if (newLen >= haystack.length())
         throw std::logic_error("[tagMinus] Result is not within haystack's memory");
@@ -284,6 +291,16 @@ void tagMinus(std::string_view& haystack, std::string_view r)
 }
 
 
+/// \brief findTagMinus
+///    Finds tag (open..open) or (open..close), sets haystack to
+///        (close .. haystack.end)
+/// \param haystack   where we find///
+/// \param open       opening tag
+/// \param close      closing tag (⌀ to find from open to open)
+/// \return  IF FINDING OPEN..CLOSE:  [+] [open.end .. close.begin), haystack := [close.end .. )
+///          IF FINDING OPEN..OPEN: [+] [open.end .. open2.begin), haystack := [open2.begin .. )
+///          [-] not found (in both cases), haystack intact
+///
 std::string_view findTagMinus(
         std::string_view& haystack,
         std::string_view open, std::string_view close)
@@ -292,7 +309,7 @@ std::string_view findTagMinus(
     if (r.empty())
         return {};
 
-    tagMinus(haystack, r);
+    tagMinus(haystack, close.length(), r);
     return r;
 }
 
@@ -311,12 +328,16 @@ std::string_view rqTag(
 }
 
 
+///
+/// \brief rqTagMinus
+/// @see findTagMinus, but it REQUIRES that tag
+///
 std::string_view rqTagMinus(
         std::string_view& haystack,
         std::string_view open, std::string_view close)
 {
     auto r = rqTag(haystack, open, close);
-    tagMinus(haystack, r);
+    tagMinus(haystack, close.length(), r);
     return r;
 }
 
@@ -325,7 +346,7 @@ int main()
 {    
     ///// HTML entities ////////////////////////////////////////////////////////
 
-    std::cout << "Loading entities..." << std::flush;
+    std::cout << "Loading HTML entities..." << std::flush;
     std::ifstream is("../MiscFiles/entities.htm", std::ios::binary);
     if (!is.is_open())
         throw std::logic_error("Cannot open entities.htm");
@@ -341,6 +362,7 @@ int main()
     std::unordered_map<char32_t, std::vector<std::string>> htmlEntities;
     auto tagTable = rqTag(sEntities, "<table", "</table");
 
+    size_t nEntities = 0;
     while (true) {
         auto tagTr = findTagMinus(tagTable, "<tr ", {});
         if (tagTr.empty())
@@ -357,10 +379,12 @@ int main()
         str::replace(spanNames, "&amp;"sv, "&"sv);
         auto names = str::splitSv(spanNames, ' ', true);
         second.assign(names.begin(), names.end());
+        nEntities += second.size();
     }
 
     std::cout << "OK" << std::endl;
-    std::cout << "File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars." << std::endl;
+    std::cout << "File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars, "
+              << nEntities << " entities." << std::endl;
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -463,11 +487,19 @@ int main()
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has no default abbreviation." << std::endl;
         }
+        bool hasAbbrev = !allAbbrevs.empty();
         std::string sLowerName = decapitalize(sName, cp);
         auto [iTech, wasIns] = strings.remember(sLowerName, cp);
         if (!allAbbrevs.empty() && !wasIns) {
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
+        }
+
+        // HTML
+        auto v = htmlEntities.find(cp);
+        if (v != htmlEntities.end()) {
+            for (auto &w : v->second)
+                allAbbrevs.emplace_back(w);
         }
 
         for (auto& v : allAbbrevs) {
@@ -476,7 +508,7 @@ int main()
 
         auto nAliases = allAbbrevs.size();
         int flags = 0;
-        if (!allAbbrevs.empty())
+        if (hasAbbrev)
             flags |= 1;
         // Deprecated
         if (elChar.attribute("Dep").as_string()[0] == 'Y') {
