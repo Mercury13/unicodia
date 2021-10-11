@@ -13,7 +13,7 @@
 #define CNAME_LINK_DEPRECATED "#CC0000"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_LINK_COPY "#000090"           // Some blue that is barely seen
-#define CNAME_LINK_BIGCOPY "#000070"        // Some blue that more barely seen
+#define CNAME_LINK_BIGCOPY "#000077"        // Some blue that more barely seen
 
 
 constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };

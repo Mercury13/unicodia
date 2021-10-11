@@ -614,14 +614,25 @@ namespace {
 }
 
 
+void mywiki::appendCopyable(QString& text, const QString& x, std::string_view clazz)
+{
+    str::append(text, "<a href='c:"sv);
+        text += x;
+        str::append(text, "' class='"sv);
+        str::append(text, clazz);
+        str::append(text, "' >"sv);
+    text += x;
+    str::append(text, "</a>"sv);
+}
+
+
+
 void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
 {
     char buf[30];
 
     // UTF-8
-    sp.sep();
     auto sChar = str::toQ(code);
-
     auto u8 = sChar.toUtf8();
     QString u8Hex;
     { str::QSep spU8(u8Hex, " ");
@@ -632,11 +643,9 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
         }
     }
 
-    str::append(text, u8"<a href='pt:utf8' class='popup' >UTF-8</a>: <a href='c:");
-        text += u8Hex;
-        str::append(text, "' class='copy' >");
-    text += u8Hex;
-    str::append(text, "</a>");
+    sp.sep();
+    str::append(text, u8"<a href='pt:utf8' class='popup' >UTF-8</a>: ");
+    appendCopyable(text, u8Hex);
 
     // UTF-16: QString is UTF-16
     QString u16Hex;
@@ -649,11 +658,8 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
     }
 
     sp.sep();
-    str::append(text, u8"<a href='pt:utf16' class='popup'>UTF-16</a>: <a href='c:");
-        text += u16Hex;
-        str::append(text, "' class='copy' >");
-    text += u16Hex;
-    str::append(text, "</a>");
+    str::append(text, u8"<a href='pt:utf16' class='popup'>UTF-16</a>: ");
+    appendCopyable(text, u16Hex);
 }
 
 
@@ -685,12 +691,12 @@ QString mywiki::buildHtml(
 
     appendStylesheet(text);
     str::append(text, "<h1>");
-    std::u8string name = cp.name.tech();
-    if (auto pos = name.find('#'); pos != std::u8string::npos) {
+    QString name = cp.name.tech();
+    if (auto pos = name.indexOf('#'); pos >= 0) {
         snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(cp.subj.uval()));
-        name.replace(pos, 1, reinterpret_cast<const char8_t*>(buf));
+        name.replace(pos, 1, buf);
     }
-    str::append(text, name);
+    appendCopyable(text, name, "bigcopy");
     str::append(text, "</h1>");
 
     // Deprecated
