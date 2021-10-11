@@ -38,6 +38,8 @@ namespace mywiki
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
         virtual FontList allSysFonts(
                 char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) = 0;
+        virtual void copyTextAbs(
+                QWidget* widget, const QRect& absRect, const QString& text) = 0;
         virtual ~Gui() = default;
 
         // Utils
@@ -46,6 +48,8 @@ namespace mywiki
         void popupAtRelMaybe(
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& html);
         void popupAtWidget(QWidget* widget, const QString& html);
+        void copyTextRel(
+                QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
     class Link    // interface
@@ -72,6 +76,7 @@ namespace mywiki
     QString buildFontsHtml(const char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
     QString buildHtml(const uc::Cp& cp, const uc::Block* hint,
             const std::optional<QFont>& font, QFontDatabase::WritingSystem ws);
+    void appendStylesheet(QString& text);
     void appendHtml(QString& text, const uc::Script& x, bool isScript);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendNoFont(QString& x, const std::u8string_view wiki);
@@ -81,5 +86,6 @@ namespace mywiki
     void appendUtf(QString& text, str::QSep& sp, char32_t code);
     void appendMissingCharInfo(QString& text, const uc::Block* hint, char32_t code);
     QString buildNonCharHtml(char32_t code, const uc::Block* hint);
+    QString buildEmptyCpHtml(char32_t code, const QColor& color, const uc::Block* hint);
 
 }   // namespace mywiki

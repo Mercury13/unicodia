@@ -622,7 +622,7 @@ namespace {
         const int x0 = x1 - SZ;
         const int y0 = r.top() + OFS;
         const int y1 = y0 + SZ;
-        painter->setPen(TX_DEPRECATED);
+        painter->setPen(FG_DEPRECATED);
         painter->drawLine(x0, y0, x1, y1);
         painter->drawLine(x0, y1, x1, y0);
     }
@@ -881,6 +881,7 @@ FmMain::FmMain(QWidget *parent)
 void FmMain::initTerms()
 {
     QString text;
+    mywiki::appendStylesheet(text);
 
     const size_t n = uc::nTerms();
     auto lastCat = uc::EcTermCat::NN;
@@ -895,7 +896,7 @@ void FmMain::initTerms()
         }
         str::append(text, "<p><a href='pt:");
         str::append(text, term.key);
-        str::append(text, "'" SUBTAG_POPUP "><b>");
+        str::append(text, "' style='popup'><b>");
         str::append(text, term.locName);
         str::append(text, "</b></a>");
         if (!term.engName.empty()) {
@@ -965,6 +966,14 @@ FmMain::~FmMain()
 }
 
 
+void FmMain::showCopied(QWidget* widget, const QRect& absRect)
+{
+    if (!fmMessage)
+        fmMessage = std::make_unique<FmMessage>(this);
+    fmMessage->showAtAbs("Скопировано", widget, absRect);
+}
+
+
 void FmMain::showCopied(QAbstractItemView* table)
 {
     auto widget = qobject_cast<QWidget*>(sender());
@@ -990,10 +999,8 @@ void FmMain::showCopied(QAbstractItemView* table)
         }
     }
 
-    if (!fmMessage)
-        fmMessage = std::make_unique<FmMessage>(this);
     corner = widget->mapToGlobal(corner);
-    fmMessage->showAtAbs("Скопировано", widget, QRect{ corner, size} );
+    showCopied(widget, QRect{ corner, size});
 }
 
 
@@ -1163,9 +1170,7 @@ void FmMain::showCp(MaybeChar ch)
             ui->vwInfo->setText(text);
         } else {
             auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-            QString text;
-            text = "<h1 style='color:" + color.name() + "'>Свободное место</h1>";
-            mywiki::appendMissingCharInfo(text, hint.sample, ch.code);
+            QString text = mywiki::buildEmptyCpHtml(ch.code, color, hint.sample);
             ui->vwInfo->setText(text);
         }
     }
@@ -1198,6 +1203,13 @@ void FmMain::popupAtAbs(
     ensure(popup, this)
           .setText(html)
           .popupAtAbsBacked(widget, absRect);
+}
+
+void FmMain::copyTextAbs(
+        QWidget* widget, const QRect& absRect, const QString& text)
+{
+    QApplication::clipboard()->setText(text);
+    showCopied(widget, absRect);
 }
 
 

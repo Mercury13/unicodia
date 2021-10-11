@@ -12,26 +12,32 @@
 #define CNAME_LINK_POPUP "ForestGreen"
 #define CNAME_LINK_DEPRECATED "#CC0000"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
+#define CNAME_LINK_COPY "#000090"           // Some blue that is barely seen
+#define CNAME_LINK_BIGCOPY "#000070"        // Some blue that more barely seen
 
-constexpr QColor TX_DEPRECATED { 0xDD, 0x00, 0x00 };
+
+constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush
 constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 //constexpr QColor TX_CJK { 0x5C, 0x35, 0x66 };   // Tango dark violet
 
-#define LINK_SUBTAG(color, place) \
-            " style='color:" color "; "   \
+#define STYLE_LINK(color,place) \
+            "color:" color "; "   \
             "text-decoration:none; "      \
             "background:qlineargradient(x1:0, y1:1, x2:0, y2:0, " \
-                    "stop:0 " color ", stop:" place " #00000000, stop:1 #00000000);'"
+                    "stop:0 " color ", stop:" place " #00000000, stop:1 #00000000);"
 
-#define SUBTAG_POPUP \
-    LINK_SUBTAG(CNAME_LINK_POPUP, "0.05")
+#define STYLE_POPUP        STYLE_LINK(CNAME_LINK_POPUP, "0.05")
+#define STYLE_DEPRECATED   STYLE_LINK(CNAME_LINK_DEPRECATED, "0.04")
+#define STYLE_COPY         "color: " CNAME_LINK_COPY "; text-decoration:none;"
+#define STYLE_BIGCOPY      "color: " CNAME_LINK_BIGCOPY "; text-decoration:none;"
 
-#define SUBTAG_DEPRECATED \
-    LINK_SUBTAG(CNAME_LINK_DEPRECATED, "0.04")
-
-#define SUBTAG_MISSING \
-            " style='color:" CNAME_LINK_DEPRECATED ";'"
+#define STYLES_WIKI \
+        ".copy { " STYLE_COPY " } "                                             \
+        ".bigcopy { " STYLE_BIGCOPY " } "                                       \
+        ".popup { " STYLE_POPUP " } "                                           \
+        ".deprecated { " STYLE_DEPRECATED " } "                                 \
+        ".missing { color: " CNAME_LINK_DEPRECATED "; } "
 
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"

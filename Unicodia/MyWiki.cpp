@@ -34,6 +34,18 @@ void mywiki::Gui::popupAtRel(
 }
 
 
+void mywiki::Gui::copyTextRel(
+        QWidget* widget, const TinyOpt<QRect> relRect, const QString& text)
+{
+    QRect r = relRect
+            ? QRect { relRect->topLeft(), relRect->size() }
+            : widget->rect();
+    copyTextAbs(widget,
+            QRect{ widget->mapToGlobal(r.topLeft()), r.size() },
+            text);
+}
+
+
 void mywiki::Gui::popupAtWidget(
         QWidget* widget, const QString& html)
 {
@@ -90,6 +102,20 @@ namespace {
     {
         auto html = mywiki::buildFontsHtml(cp, ws, gui);
         gui.popupAtRelMaybe(widget, rect, html);
+    }
+
+    class CopyLink : public mywiki::Link
+    {
+    public:
+        QString text;
+        QFontDatabase::WritingSystem ws;
+        CopyLink(std::string_view aText) : text(str::toQ(aText)) {}
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui);
+    };
+
+    void CopyLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
+    {
+        gui.copyTextRel(widget, rect, text);
     }
 
 }   // anon namespace
@@ -165,6 +191,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopFontsLink(target);
     } else if (scheme == "pt"sv) {
         return parsePopTermLink(target);
+    } else if (scheme == "c"sv) {
+        return std::make_unique<CopyLink>(target);
     }
     return {};
 }
@@ -275,14 +303,14 @@ namespace {
         auto text = x[1];
         std::string_view style;
         if (!mywiki::parseLink(target)) {
-            style = SUBTAG_MISSING;
+            style = "class=missing";
         } else if (target.size() >= 4 && target[0] == 'p' && target[2] == ':') {
-            style = SUBTAG_POPUP;
+            style = "class=popup";
         }
 
         auto q = prepareRecursion(text);
 
-        s.append("<a");
+        s.append("<a ");
         str::append(s, style);
         s.append(" href='");
         str::append(s, target);
@@ -406,6 +434,7 @@ void mywiki::appendVersion(QString& text, std::u8string_view prefix, const uc::V
 QString mywiki::buildHtml(const uc::BidiClass& x)
 {
     QString text;
+    appendStylesheet(text);
     appendHeader(text, x);
 
     str::append(text, "<p>");
@@ -426,6 +455,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 QString mywiki::buildHtml(const uc::Category& x)
 {
     QString text;
+    appendStylesheet(text);
     appendHeader(text, x);
     str::append(text, "<p>");
     appendNoFont(text, x.locDescription);
@@ -443,6 +473,7 @@ QString mywiki::buildFontsHtml(
     char buf[50];
     auto format = u8"Шрифты для U+%04X";
     snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
+    appendStylesheet(text);
     appendHeader(text, buf);
 
     auto fonts = gui.allSysFonts(cp, ws, 20);
@@ -517,7 +548,8 @@ QString mywiki::buildHtml(const uc::Script& x)
     QString r;
     std::u8string_view add;
     if (x.id == "Hira"sv)
-        add = u8" без <a href='ps:Hent'" SUBTAG_POPUP ">хэнтайганы</a>";
+        add = u8" без <a href='ps:Hent' class='popup' >хэнтайганы</a>";
+    appendStylesheet(r);
     appendHeader(r, x, add);
     appendHtml(r, x, true);
     return r;
@@ -572,7 +604,7 @@ namespace {
         str::append(text, name);
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
-                 ": <a href='%s:%.*s'" SUBTAG_POPUP ">",
+                 ": <a href='%s:%.*s' class='popup' >",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
         appendVal(text, value);
@@ -589,20 +621,39 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
     // UTF-8
     sp.sep();
     auto sChar = str::toQ(code);
-    str::append(text, u8"<a href='pt:utf8'" SUBTAG_POPUP ">UTF-8</a>:");
+
     auto u8 = sChar.toUtf8();
-    for (unsigned char v : u8) {
-        snprintf(buf, 10, " %02X", static_cast<int>(v));
-        str::append(text, buf);
+    QString u8Hex;
+    { str::QSep spU8(u8Hex, " ");
+        for (unsigned char v : u8) {
+            spU8.sep();
+            snprintf(buf, std::size(buf), "%02X", static_cast<int>(v));
+            str::append(u8Hex, buf);
+        }
     }
 
-    // UTF-16: QString us UTF-16
-    sp.sep();
-    str::append(text, u8"<a href='pt:utf16'" SUBTAG_POPUP ">UTF-16</a>:");
-    for (auto v : sChar) {
-        snprintf(buf, std::size(buf), " %04X", static_cast<int>(v.unicode()));
-        str::append(text, buf);
+    str::append(text, u8"<a href='pt:utf8' class='popup' >UTF-8</a>: <a href='c:");
+        text += u8Hex;
+        str::append(text, "' class='copy' >");
+    text += u8Hex;
+    str::append(text, "</a>");
+
+    // UTF-16: QString is UTF-16
+    QString u16Hex;
+    { str::QSep spU16(u16Hex, " ");
+        for (auto v : sChar) {
+            spU16.sep();
+            snprintf(buf, std::size(buf), "%04X", static_cast<int>(v.unicode()));
+            str::append(u16Hex, buf);
+        }
     }
+
+    sp.sep();
+    str::append(text, u8"<a href='pt:utf16' class='popup'>UTF-16</a>: <a href='c:");
+        text += u16Hex;
+        str::append(text, "' class='copy' >");
+    text += u16Hex;
+    str::append(text, "</a>");
 }
 
 
@@ -617,12 +668,22 @@ namespace {
 }   // anon namespace
 
 
+void mywiki::appendStylesheet(QString& text)
+{
+    str::append(text, "<style>");
+    str::append(text, STYLES_WIKI);
+    str::append(text, "</style>");
+}
+
+
 QString mywiki::buildHtml(
         const uc::Cp& cp, const uc::Block* hint,
         const std::optional<QFont>& font, QFontDatabase::WritingSystem ws)
 {
-    QString text;
     char buf[30];
+    QString text;
+
+    appendStylesheet(text);
     str::append(text, "<h1>");
     std::u8string name = cp.name.tech();
     if (auto pos = name.find('#'); pos != std::u8string::npos) {
@@ -634,7 +695,7 @@ QString mywiki::buildHtml(
 
     // Deprecated
     if (cp.isDeprecated()) {
-        str::append(text, u8"<h3><a href='pt:deprecated'" SUBTAG_DEPRECATED ">Запрещённый символ</a></h3>"sv);
+        str::append(text, u8"<h3><a href='pt:deprecated' class='deprecated'>Запрещённый символ</a></h3>"sv);
     }
 
     {   // Info box
@@ -658,7 +719,7 @@ QString mywiki::buildHtml(
         auto& numc = cp.numeric();
         if (numc.isPresent()) {
             sp.sep();
-            str::append(text, "<a href='pt:number'" SUBTAG_POPUP ">");
+            str::append(text, "<a href='pt:number' class='popup'>");
             str::append(text, numc.type().locName);
             str::append(text, "</a>");
             str::append(text, ": ");
@@ -738,9 +799,20 @@ void mywiki::appendMissingCharInfo(QString& text, const uc::Block* hint, char32_
 }
 
 
+QString mywiki::buildEmptyCpHtml(char32_t code, const QColor& color, const uc::Block* hint)
+{
+    QString text;
+    appendStylesheet(text);
+    text += "<h1 style='color:" + color.name() + "'>Свободное место</h1>";
+    mywiki::appendMissingCharInfo(text, hint, code);
+    return text;
+}
+
+
 QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
 {
     QString text;
+    appendStylesheet(text);
     str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
     mywiki::appendMissingCharInfo(text, hint, code);
     str::append(text, "<p>");
@@ -752,6 +824,7 @@ QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
 QString mywiki::buildHtml(const uc::Term& x)
 {
     QString text;
+    appendStylesheet(text);
     str::append(text, "<p><b>");
     str::append(text, x.locName);
     str::append(text, "</b>"sv);
@@ -773,6 +846,7 @@ namespace {
 QString mywiki::buildHtml(const uc::Block& x)
 {
     QString text;
+    appendStylesheet(text);
     appendHeader(text, x);
 
     str::append(text, "<p>");
@@ -796,7 +870,7 @@ QString mywiki::buildHtml(const uc::Block& x)
     auto nNonChars = x.nNonChars();
     if (nNonChars) {
         sp.sep();
-        str::append(text, u8"• <a href='pt:noncharacter'" SUBTAG_POPUP ">Отсутствующих символов</a>: "sv);
+        str::append(text, u8"• <a href='pt:noncharacter' class='popup'>Отсутствующих символов</a>: "sv);
         str::append(text, nNonChars);
     }
 

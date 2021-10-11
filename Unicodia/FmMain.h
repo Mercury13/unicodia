@@ -199,7 +199,7 @@ protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
-    Ui::FmMain *ui;
+    Ui::FmMain *ui = nullptr;
     CharsModel model;
     BlocksModel blocksModel;
     std::unique_ptr<FmPopup2> popup;
@@ -219,6 +219,7 @@ private:
     void reflectCjkCollapseState();
     void copyCurrentThing(CurrThing thing);
     void showCopied(QAbstractItemView* table);
+    void showCopied(QWidget* widget, const QRect& absRect);
     void clearSample();
 
     // mywiki::Gui
@@ -226,6 +227,8 @@ private:
             QWidget* widget, const QRect& absRect, const QString& html) override;
     FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
+    void copyTextAbs(
+            QWidget* widget, const QRect& absRect, const QString& text) override;
 signals:
     void setFocusDefered(QWidget* wi);
 private slots:
