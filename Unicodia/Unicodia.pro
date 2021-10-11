@@ -22,6 +22,7 @@ debug {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
@@ -39,6 +40,7 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/SelfMade/c_TableCache.h \
+    ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \

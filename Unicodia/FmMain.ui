@@ -57,7 +57,7 @@
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="QTableView" name="tableChars">
+          <widget class="WrapAroundTable" name="tableChars">
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
@@ -559,6 +559,11 @@ padding-bottom: 1px;</string>
    <extends>QWidget</extends>
    <header>FmMain.h</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WrapAroundTable</class>
+   <extends>QTableView</extends>
+   <header>c_WrapAroundTable.h</header>
   </customwidget>
  </customwidgets>
  <resources>
