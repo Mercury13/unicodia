@@ -1090,7 +1090,7 @@ void FmMain::showCp(MaybeChar ch)
     char buf[30];
     { QString ucName;
         snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
-        mywiki::appendCopyable(ucName, buf, "' style='" STYLE_COPY);
+        mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         ui->lbCharCode->setText(ucName);
     }
 
