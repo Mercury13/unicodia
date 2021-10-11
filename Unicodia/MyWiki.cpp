@@ -776,7 +776,7 @@ QString mywiki::buildHtml(
             int nNames = cp.name.alts;
             std::u8string_view currName = cp.name.tech();
             for (; nNames != 0; --nNames) {
-                currName = std::to_address(currName.end() + 1);
+                currName = std::to_address(currName.end()) + 1;
                 if (currName.size() >= 3 && currName.starts_with('&')
                        && currName.ends_with(';')) {
                     text += ' ';
