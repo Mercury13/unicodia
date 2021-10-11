@@ -12,9 +12,6 @@
 #define CNAME_LINK_POPUP "ForestGreen"
 #define CNAME_LINK_DEPRECATED "#CC0000"
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
-//#define CNAME_LINK_COPY "#000090"           // Some blue that is barely seen
-//#define CNAME_LINK_BIGCOPY "#000077"        // Some blue that more barely seen
-//#define CNAME_BG_COPY "#F0F0F0"
 #define CNAME_U_COPY "#808080"
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
 
@@ -35,8 +32,6 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 
 #define STYLE_POPUP        STYLE_LINK(CNAME_LINK_POPUP, "0.05")
 #define STYLE_DEPRECATED   STYLE_LINK(CNAME_LINK_DEPRECATED, "0.04")
-//#define STYLE_COPY         "color: " CNAME_LINK_COPY "; text-decoration:none;"
-//#define STYLE_BIGCOPY      "color: " CNAME_LINK_BIGCOPY "; text-decoration:none;"
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 

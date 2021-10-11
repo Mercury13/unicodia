@@ -38,7 +38,7 @@ void mywiki::Gui::copyTextRel(
         QWidget* widget, const TinyOpt<QRect> relRect, const QString& text)
 {
     QRect r = relRect
-            ? QRect { relRect->topLeft(), relRect->size() }
+            ? *relRect
             : widget->rect();
     copyTextAbs(widget,
             QRect{ widget->mapToGlobal(r.topLeft()), r.size() },

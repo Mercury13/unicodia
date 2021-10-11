@@ -862,6 +862,7 @@ FmMain::FmMain(QWidget *parent)
 
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+    connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
     // Terms
     initTerms();
@@ -1087,8 +1088,11 @@ void FmMain::showCp(MaybeChar ch)
 
     // Code
     char buf[30];
-    snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
-    ui->lbCharCode->setText(buf);
+    { QString ucName;
+        snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
+        mywiki::appendCopyable(ucName, buf, "' style='" STYLE_COPY);
+        ui->lbCharCode->setText(ucName);
+    }
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1243,6 +1247,20 @@ void FmMain::popupLinkActivated(const QString& link)
 {
     // nullptr & {} = last position
     linkClicked(link.toStdString(), nullptr, {});
+}
+
+
+void FmMain::labelLinkActivated(const QString& link)
+{
+    QRect rect;
+    auto snd = qobject_cast<QWidget*>(sender());
+    if (snd) {
+        rect = snd->rect();
+    } else {
+        snd = this;
+        rect = QRect(snd->rect().center(), QSize{1, 1});
+    }
+    mywiki::go(snd, rect, *this, link.toStdString());
 }
 
 
