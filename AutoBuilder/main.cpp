@@ -7,6 +7,9 @@
 // PugiXML
 #include "pugixml.hpp"
 
+// My libs
+#include "u_Strings.h"
+
 // Project-local
 #include "data.h"
 
@@ -250,23 +253,47 @@ std::string_view findTag(
     auto p = haystack.find(open);
     if (p == std::string_view::npos)
         return {};
-    size_t p1 = haystack.find('>', p + open.length());
-    if (p1 == std::string_view::npos)
-        return {};
-    ++p1;
-    if (close.empty()) {
+    // Skip what we found
+    p += open.size();
+    if (!close.empty()) {
         // Special close tag
-        size_t p2 = haystack.find(close, p1);
+        size_t p2 = haystack.find(close, p);
         if (p2 == std::string_view::npos)
             return {};
-        return std::string_view(haystack.data() + p1, p2 - p1);
+        return haystack.substr(p, p2 - p);
     } else {
         // Close same as open; did not find → return entire tail
-        size_t p2 = haystack.find(open, p1);
+        size_t p2 = haystack.find(open, p);
         if (p2 == std::string_view::npos)
-            return std::string_view(haystack.data() + p1, p2);
-        return std::string_view(haystack.data() + p1, p2 - p1);
+            return haystack.substr(p);
+        return haystack.substr(p, p2 - p);
     }
+}
+
+
+void tagMinus(std::string_view& haystack, std::string_view r)
+{
+    auto pBeg = std::to_address(r.end());
+    auto pEnd = std::to_address(haystack.end());
+
+    size_t newLen = pEnd - pBeg;
+    if (newLen >= haystack.length())
+        throw std::logic_error("[tagMinus] Result is not within haystack's memory");
+
+    haystack = { pBeg, newLen };
+}
+
+
+std::string_view findTagMinus(
+        std::string_view& haystack,
+        std::string_view open, std::string_view close)
+{
+    auto r = findTag(haystack, open, close);
+    if (r.empty())
+        return {};
+
+    tagMinus(haystack, r);
+    return r;
 }
 
 
@@ -284,8 +311,59 @@ std::string_view rqTag(
 }
 
 
-int main()
+std::string_view rqTagMinus(
+        std::string_view& haystack,
+        std::string_view open, std::string_view close)
 {
+    auto r = rqTag(haystack, open, close);
+    tagMinus(haystack, r);
+    return r;
+}
+
+
+int main()
+{    
+    ///// HTML entities ////////////////////////////////////////////////////////
+
+    std::cout << "Loading entities..." << std::flush;
+    std::ifstream is("../MiscFiles/entities.htm", std::ios::binary);
+    if (!is.is_open())
+        throw std::logic_error("Cannot open entities.htm");
+
+    is.seekg(0, std::ios::end);
+    auto fsize = is.tellg();
+    is.seekg(0, std::ios::beg);
+
+    std::string sEntities;
+    sEntities.resize(fsize);
+    is.read(sEntities.data(), fsize);
+
+    std::unordered_map<char32_t, std::vector<std::string>> htmlEntities;
+    auto tagTable = rqTag(sEntities, "<table", "</table");
+
+    while (true) {
+        auto tagTr = findTagMinus(tagTable, "<tr ", {});
+        if (tagTr.empty())
+            break;
+        auto hexCode = rqTagMinus(tagTr, "U+", " ");
+        char32_t charCode = fromHex(hexCode);
+        auto& second = htmlEntities[charCode];
+        if (!second.empty()) {
+            throw std::logic_error("Found the same char once again");
+        }
+        auto spanNames1 = rqTag(tagTr, "class=\"named\"", "</code>");
+        auto cleanNames = rqTag(spanNames1, "<code>", "");
+        std::string spanNames { cleanNames };
+        str::replace(spanNames, "&amp;"sv, "&"sv);
+        auto names = str::splitSv(spanNames, ' ', true);
+        second.assign(names.begin(), names.end());
+    }
+
+    std::cout << "OK" << std::endl;
+    std::cout << "File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars." << std::endl;
+
+    ///// Open output file /////////////////////////////////////////////////////
+
     std::ofstream os("UcAuto.cpp");
     os << "// Automatically generated, do not edit!" << '\n';
     os << '\n';
@@ -507,27 +585,6 @@ int main()
            << " },  // " << v.index << " is " << v.textValue << '\n';
     }
     os << "};\n";
-
-    ///// HTML entities ////////////////////////////////////////////////////////
-
-    std::cout << "Loading entities..." << std::flush;
-    std::ifstream is("../MiscFiles/entities.htm", std::ios::binary);
-    if (!is.is_open())
-        throw std::logic_error("Cannot open entities.htm");
-
-    is.seekg(0, std::ios::end);
-    auto fsize = is.tellg();
-    is.seekg(0, std::ios::beg);
-
-    std::string sEntities;
-    sEntities.resize(fsize);
-    is.read(sEntities.data(), fsize);
-
-    size_t nEntityChars = 0;
-    auto tagTable = rqTag(sEntities, "<table", "</table");
-
-    std::cout << "OK" << std::endl;
-    std::cout << "File size is " << std::dec << fsize << ", found " << nEntityChars << " chars." << std::endl;
 
     ///// Close main file, write UcAutoCount ///////////////////////////////////
 
