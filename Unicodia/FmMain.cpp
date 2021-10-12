@@ -802,6 +802,7 @@ FmMain::FmMain(QWidget *parent)
     QPalette pal = ui->wiCharBar->palette();
     const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
     ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
+    ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + color.name() + " }");
 
     // Fill chars
     model.build();
