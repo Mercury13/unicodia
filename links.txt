@@ -36,6 +36,7 @@ https://commons.wikimedia.org/wiki/Category:Unicode_BMP
 https://www.unicode.org/charts/lastresort.html — интересные изображения письменностей
 https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_Viewer.html — тест символов жестового письма Саттон
 https://commons.wikimedia.org/wiki/Category:Makasar_letters — макассарский шрифт
+http://en.glyphwiki.org — изображения китайских иероглифов
 
 
 ПИСЬМЕННОСТИ
