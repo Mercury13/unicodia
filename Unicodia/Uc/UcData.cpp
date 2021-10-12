@@ -2985,21 +2985,22 @@ constinit const uc::Block uc::blocks[] {
                     "и других разделах математики. Также западный символ деления столбиком.",
             EcScript::NONE, EcFont::MATH },
     // Arrows A OK
-    /// @todo [desc] Arrows A
     { 0x27F0, 0x27FF,
-            "Supplemental Arrows-A", u8"Дополнительные стрелки A" },
+            "Supplemental Arrows-A", u8"Дополнительные стрелки A",
+            u8"Шестнадцать разных математических и технических стрелок, в основном круговые и удлинённые." },
     // Braille OK
     { 0x2800, 0x28FF,
             "Braille Patterns", u8"Шрифт Брайля", {}, EcScript::Brai },
     // Arrows B OK
-    /// @todo [desc] Arrows B
     { 0x2900, 0x297F,
-            "Supplemental Arrows-B", u8"Дополнительные стрелки B" },
+            "Supplemental Arrows-B", u8"Дополнительные стрелки B",
+            u8"Пересекающиеся стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы." },
     // Misc math B OK
     { 0x2980, 0x29FF,
             "Miscellaneous Mathematical Symbols-B",
             u8"Разные математические символы B",
-            u8"Различные математические символы: скобки, углы, пустые множества, «ящики с усами»…" },
+            u8"Различные математические символы: скобки, углы, пустые множества, «ящики с усами»…",
+            EcScript::NONE, EcFont::MATH },
     // Supp math ops OK
     { 0x2A00, 0x2AFF,
             "Supplemental Mathematical Operators",
@@ -3008,10 +3009,11 @@ constinit const uc::Block uc::blocks[] {
                     "теории баз данных, теории управления, формальной логике и других разделах математики.",
             EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
-    /// @todo [desc] Misc syms & arrows
     { 0x2B00, 0x2BFF,
             "Miscellaneous Symbols and Arrows", u8"Разные символы и стрелки",
-            {} },
+            u8"Стрелки разного назначения, геометрические фигуры, символы из шрифтов ''Wingdigs'' и ''Webdings'', "
+                        "японские телевизионные символы, астрологические символы, звёзды оценок."
+                "<p>''Hellschreiber pause symbol'' использовался в немецких телеграфных аппаратах." },
     // Glagolitic OK
     { 0x2C00, 0x2C5F,
             "Glagolitic", u8"Глаголица", {}, EcScript::Glag },
