@@ -3672,6 +3672,7 @@ constinit const uc::Block uc::blocks[] {
     // Nandi OK, built own font
     { 0x119A0, 0x119FF,
             "Nandinagari", u8"Нандинагари", {}, EcScript::Nand },
+    // Zanabazar square OK
     { 0x11A00, 0x11A4F,
             "Zanabazar Square", u8"Монгольское горизонтально-квадратное (Дзанабадзара)", {}, EcScript::Zanb },
     { 0x11A50, 0x11AAF,
