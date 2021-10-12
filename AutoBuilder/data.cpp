@@ -942,6 +942,7 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x206D, "AAFS" }, // Activate Arabic form shaping
     { 0x206E, "NADS" }, // National digit shapes
     { 0x206F, "NODS" }, // Nominal digit shapes
+    { 0x3164, "HF" },   // Hangul filler
     { 0xFEFF, "BOM" },  // BOM or ZWNBSP
     { 0xFFF9, "IA A" }, // Interlinear annotation anchor
     { 0xFFFA, "IA S" }, // Interlinear annotation separator

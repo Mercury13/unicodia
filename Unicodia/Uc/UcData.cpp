@@ -3018,9 +3018,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x2C00, 0x2C5F,
             "Glagolitic", u8"Глаголица", {}, EcScript::Glag },
     // Latin C OK
-    /// @todo [desc] Latin C
     { 0x2C60, 0x2C7F,
-            "Latin Extended-C", u8"Латиница расширенная C", {}, EcScript::Latn },
+            "Latin Extended-C", u8"Латиница расширенная C",
+            u8"Символы разных малых языков: чимбу и ваги ''(Папуа{{-}}Новая Гвинея)'', шона ''(Зимбабве)'', уйгурского и других. "
+                    "Также семь букв уральского фонетического алфавита, "
+                        "и клавдиева буква Ⱶ, означавшая то же, что современный Y, но рассчитанная на печать существующими трафаретами.",
+            EcScript::Latn },
     // Coptic OK
     { 0x2C80, 0x2CFF,
             "Coptic", u8"Коптский", {}, EcScript::Copt },
@@ -3077,11 +3080,18 @@ constinit const uc::Block uc::blocks[] {
                     "А для этого важно указать, на какие части он разбит и что в каждой. "
                     "Для первого и предназначен данный блок.",
             EcScript::NONE, EcFont::CJK_STRUCTURE },
-    /// @todo [desc] CJK sym/punct
     // CJK sym/punct OK
     { 0x3000, 0x303F,
             "CJK Symbols and Punctuation",
-            u8"ККЯ символы и знаки препинания", {},
+            u8"ККЯ символы и знаки препинания",
+            u8"Знаки препинания и прочие символы, применяемые в [[pt:cjk|ККЯ]]:<br>"
+                "• [[pt:space|Пробел]] шириной в иероглиф.<br>"
+                "• В ККЯ не принято один иероглиф писать дважды подряд, а если приходится{{-}}используется знак повтора,"
+                    "разный для горизонтального и вертикального письма, иероглифов и каны. "
+                    "(Китайцы на печати уже повторяют, но на письме всё ещё пользуются знаком повтора.)<br>"
+                "• Несколько японских эмблем.<br>"
+                "• Японские скобки и кавычки.<br>"
+                "• Знак «то же» —//—, широко используемый и в наших перечнях{{-}}только в иероглифическом варианте.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F,
@@ -3094,10 +3104,9 @@ constinit const uc::Block uc::blocks[] {
             "Bopomofo", u8"Бопомофо (чжуинь)", {},
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul compat jamo OK
-    /// @todo [desc] Hangul compat jamo
     { 0x3130, 0x318F,
             "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо",
-            {},
+            u8"Символы совместимости с корейской кодировкой KS{{_}}X{{_}}1001.",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Kanbun OK, not collapsible: small block
     { 0x3190, 0x319F,
@@ -3134,15 +3143,16 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Все названия китайские: например, B от ''biǎn{{-}}плоский''.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Katakana phon OK, not collapsible: small block
-    /// @todo [desc] Katakana phon extensions
     { 0x31F0, 0x31FF,
             "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения",
-            {} },
+            u8"Символы катаканы для передачи звуков айнского языка." },
     // Enclosed CJK letters and months OK
-    /// @todo [desc] Enclosed CJK letters and months
     { 0x3200, 0x32FF,
             "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ",
-            {},
+            u8"[[ps:Kana|Катакана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах."
+                "<p>Также несколько символов, которым место в других блоках: сокращения единиц измерения, "
+                    "цифры 21…50 в кругах, знаки ограничения скорости (10…80 в круге и квадрате)."
+                "<p>В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compatibility OK
     { 0x3300, 0x33FF,
@@ -3151,10 +3161,13 @@ constinit const uc::Block uc::blocks[] {
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
             EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE },
-    /// @todo [desc] CJK A
     { 0x3400, 0x4DBF,
             "CJK Unified Ideographs Extension A",
-            u8"ККЯ иероглифы расширение A", {},
+            u8"ККЯ иероглифы расширение A",
+            u8"6582 редких [[ps:Hani|китайских иероглифа]]. "
+                    "В 2020 добавили ещё 10, заполнив блок до отказа."
+                "<p>Так, первый из иероглифов означает «гора, холм, могила», и сейчас заменён символом {{sm|丘}}. "
+                    "Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», бамбуковые ножны», «неосвещённый».",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Yijing OK
     { 0x4DC0, 0x4DFF,
@@ -3207,9 +3220,11 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). "
                     "Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах." },
     // Latin ex D OK, dereferenced bad chars of Google Noto
-    /// @todo [desc] Latin ex D
     { 0xA720, 0xA7FF,
-            "Latin Extended-D", u8"Латиница расширенная D", {}, EcScript::Latn },
+            "Latin Extended-D", u8"Латиница расширенная D",
+            u8"Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, "
+                "дополнительные буквы алфавита майя, употреблявшиеся в колониальный период, и другое.",
+            EcScript::Latn },
     // Syloti OK
     { 0xA800, 0xA82F,
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
@@ -3240,10 +3255,11 @@ constinit const uc::Block uc::blocks[] {
     { 0xA930, 0xA95F,
             "Rejang", u8"Реджанг", {}, EcScript::Rjng },
     // Hangul jamo A OK
-    /// @todo [desc] Hangul jamo A
     { 0xA960, 0xA97F,
             "Hangul Jamo Extended-A", u8"Хангыль\u00A0— расширенные чамо А",
-            {},
+            u8"Начальные ''(чхосон)'' старые согласные буквы корейского языка. "
+                    "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
+                        "а значит, нет в [[pt:precomposed|монолитном виде]].",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Javanese OK
     { 0xA980, 0xA9DF,
@@ -3295,10 +3311,11 @@ constinit const uc::Block uc::blocks[] {
                         "больше ни один символ не сдвинется и не исчезнет.",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul Jamo B OK
-    /// @todo [desc] Hangul jamo B
     { 0xD7B0, 0xD7FF,
             "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B",
-            {},
+            u8"Средние и конечные ''(чунсон и чонсон)'' старые буквы корейского языка. "
+                    "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
+                        "а значит, нет в [[pt:precomposed|монолитном виде]].",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compat hiero OK
     { 0xF900, 0xFAFF,
@@ -3329,7 +3346,7 @@ constinit const uc::Block uc::blocks[] {
             "Variation Selectors", u8"Селекторы начертания",
             u8"Чаще всего (например, в браузерах) тот или иной вариант написания символа включают, выбирая другой шрифт "
                     "или включая функции OpenType. Юникод позволяет это ещё одним методом: созданием лигатур из символа и селектора."
-                "<p>[[ps:Latn|Латиница]], [[ps:Mymr|бирманский и ещё несколько письменностей используют VS1. "
+                "<p>[[ps:Latn|Латиница]], [[ps:Mymr|бирманский]] и ещё несколько письменностей используют VS1. "
                     "[[ps:Hani|Китайские иероглифы]] используют VS1…VS3. [[pt:emoji|Эмодзи]] можно сделать цветными (VS16) "
                     "и текстовыми (VS15)." },
     // Vertical forms OK, not collapsible: small
@@ -3348,10 +3365,11 @@ constinit const uc::Block uc::blocks[] {
                     "три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо.",
             EcScript::NONE, EcFont::NOTO },
     // CJK compat forms OK
-    /// @todo [desc] CJK compat forms
     { 0xFE30, 0xFE4F,
             "CJK Compatibility Forms", u8"ККЯ совместимые формы",
-            {},
+            u8"Символы для вертикального письма [[pt:cjk|ККЯ]], в основном для совместимости со старыми кодировками. "
+                    "В частности, с китайской кодировкой CNS{{_}}11643{{-}}"
+                        "отсюда название в Юникоде{{_}}1.0, ''CNS 11643 Compatibility''.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Small variants OK
     { 0xFE50, 0xFE6F,
