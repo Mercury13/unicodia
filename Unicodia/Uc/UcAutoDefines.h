@@ -97,6 +97,7 @@ namespace uc {
         Mlym,   // Malayalam
         Modi,   // Modi
         Mong,   // Mongolian (old)
+        Mroo,   // Mro
         Mtei,   // Meitei Mayek
         Mult,   // Multani
         Mymr,   // Myanmar
@@ -196,7 +197,6 @@ namespace uc {
         Medf = Zyyy,        // beyond BMP
         Mend = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
-        Mroo = Zyyy,        // beyond BMP
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
         Pauc = Zyyy,        // beyond BMP

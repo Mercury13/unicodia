@@ -154,6 +154,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
+    { "NotoSansMro-Regular.ttf" },                                              // Mro
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
@@ -1560,6 +1561,20 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Содержит омографы (например, {{sm|ᠣ}}=o/u), однако закон гармонии гласных{{-}}в слове могут быть или одни твёрдые гласные, "
                 "или одни мягкие{{-}}часто позволяют раскрыть эти омографы.",
                 EcFont::MONGOLIAN },
+    // Mro OK, installed Google Noto font
+    { "Mroo", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Мру", u8"1980-е",
+        u8"мру ''(Бангладеш, Индия, Мьянма)''",
+        u8"Мру{{-}}небольшой азиатский народ (20…100 тыс. по разным подсчётам). "
+                "Большинство из них{{-}}буддисты, и власти исламской страны не желают поддерживать их."
+            "<p>Письмо мру придумал в 1980-е основатель религии ''крама'' Менлай Муранг. "
+                "В 2000-е алфавит Муранга стал популярным и обошёл прошлую письменность{{-}}[[ps:Latn|латиницу]]: "
+                    "более {{%|80}} мру грамотны в нём."
+            "<p>Никаких технических сложностей нет: письмо слева направо, "
+                "без [[pt:format|форматирующих]] символов и [[pt:combining|комбинирующих]] меток, "
+                "[[pt:abc|алфавитный порядок]] соответствует кодировке, правила переноса строк стандартные.",
+                EcFont::MRO },
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
