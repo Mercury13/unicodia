@@ -182,6 +182,7 @@ namespace uc {
          FUNKY_BIGGER,
         ADLAM,
         AHOM,
+        ANATOLIAN,
         ARABIC,
         ARABIC_NOTO,
           Z_ARN_1,

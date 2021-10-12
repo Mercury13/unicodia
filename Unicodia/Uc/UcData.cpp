@@ -59,6 +59,7 @@ constinit const uc::Font uc::fontInfo[] = {
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
+    { "NotoSansAnatolianHieroglyphs-Regular.ttf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic Noto — Scheh has a few nice chars!
       { "NotoNaskhArabic-Regular.ttf" },                                        // …1, main font
@@ -1142,6 +1143,22 @@ constinit const uc::Script uc::scriptInfo[] {
                 "[[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме "
                 "заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.",
                 EcFont::KOREAN },
+    // Anatolian hiero OK, installed Google Noto
+    { "Hluw", QFontDatabase::Any,
+        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Анатолийские (лувийские, хеттские) иероглифы", u8"XIV век до н.э.",
+        u8"лувийский",
+        u8"Называются иероглифы по месту, где они найдены ''(анатолийские, т.е. Передняя Азия)'', или по языку ''(лувийские)''. "
+                "А вот название «хеттские» некорректно, хеттский никогда не писался этими иероглифами, "
+                    "хоть первые из них и разрабатывались в хетто-лувийском двуязычии "
+                    "(около 1240 хетты были завоёваны ассирийцами). "
+                "Около VII{{_}}века заменены алфавитным письмом и забыты."
+            "<p>Известно около 500 иероглифов. "
+                "Отдельные иероглифы могут означать не только понятие, но и слог, но таких мало."
+            "<p>Внимание исследователей иероглифы привлекли около 1800, предположили, что они хеттские. "
+                "В 1915 лувийский язык расшифровали через клинопись, в 1930-е появились первые расшифровки. "
+                "В 1973 расшифрованы окончательно.",
+                EcFont::ANATOLIAN },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
@@ -3728,7 +3745,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Egyp },
     /// @todo [tofu, P1] Anatolyan hiero
     { 0x14400, 0x1467F,
-            "Anatolian Hieroglyphs", u8"Анатолийские иероглифы", {}, EcScript::Hluw },
+            "Anatolian Hieroglyphs", u8"Анатолийские (лувийские, хеттские) иероглифы", {}, EcScript::Hluw },
     // Bamum supplement OK
     { 0x16800, 0x16A3F,
             "Bamum Supplement", u8"Бамум дополнительный",
