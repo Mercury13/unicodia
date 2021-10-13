@@ -197,7 +197,8 @@ namespace uc {
         BENGALI,
         BHAIKSUKI,
         BRAHMI,
-        BUGINESE,
+        BUGINESE,   // Here we use Lelewadee UI → specialized W7 font
+          Z_BUG_1,
         BUHID,
         CANADIAN_ABORIGINAL,
         CAUCASIAN_ALBANIAN,

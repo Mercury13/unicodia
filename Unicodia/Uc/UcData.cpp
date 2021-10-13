@@ -75,7 +75,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
-    { "NotoSansBuginese-Regular.ttf" },                                         // Buginese
+    { "Leelawadee UI", Ffg::FALL_TO_NEXT, 110_pc },                             // Buginese
+      { "NotoSansBuginese-Regular.ttf" },                                       // …1
     { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
