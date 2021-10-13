@@ -710,7 +710,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Шрифт Брайля поставил реабилитацию слепых на промышленные рельсы: легко сделать устройство для тиснения Брайлем, "
                 "он не бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.",
                 EcFont::SYMBOL },
-    // Buginese OK, W10 only → installed Google Noto
+    // Buginese OK, W10 only → made LelawadeeUI → Google Noto chain
     { "Bugi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Бугийский (лонтара)"sv, u8"XVII век"sv,
