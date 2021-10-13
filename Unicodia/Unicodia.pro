@@ -35,6 +35,7 @@ SOURCES += \
     Uc/FontMatch.cpp \
     Uc/UcData.cpp \
     Wiki.cpp \
+    c_SearchEdit.cpp \
     main.cpp \
     FmMain.cpp
 
@@ -61,7 +62,8 @@ HEADERS += \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
     Uc/UcData.h \
-    Wiki.h
+    Wiki.h \
+    c_SearchEdit.h
 
 FORMS += \
     FmMain.ui

@@ -119,22 +119,22 @@
                 <number>0</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1">
+                <layout class="QHBoxLayout" name="layComboSearch" stretch="3,1">
                  <property name="spacing">
                   <number>4</number>
                  </property>
                  <item>
-                  <widget class="QComboBox" name="comboBlock">
+                  <widget class="WideComboBox" name="comboBlock">
                    <property name="maxVisibleItems">
                     <number>28</number>
+                   </property>
+                   <property name="minimumContentsLength">
+                    <number>30</number>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLineEdit" name="edSearch">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
+                  <widget class="SearchEdit" name="edSearch">
                    <property name="placeholderText">
                     <string>Поиск</string>
                    </property>
@@ -622,6 +622,16 @@ padding-bottom: 1px;</string>
    <class>WrapAroundTable</class>
    <extends>QTableView</extends>
    <header>c_WrapAroundTable.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SearchEdit</class>
+   <extends>QLineEdit</extends>
+   <header>c_SearchEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>WideComboBox</class>
+   <extends>QComboBox</extends>
+   <header>c_SearchEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources>
