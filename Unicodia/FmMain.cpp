@@ -1262,6 +1262,10 @@ void FmMain::labelLinkActivated(const QString& link)
         rect = QRect(snd->rect().center(), QSize{1, 1});
     }
     mywiki::go(snd, rect, *this, link.toStdString());
+    // Deselect, does not influence double and triple clicks
+    if (auto label = qobject_cast<QLabel*>(sender())) {
+        label->setSelection(0, 0);
+    }
 }
 
 
