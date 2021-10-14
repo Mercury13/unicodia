@@ -359,12 +359,8 @@ void CharsModel::build()
     beginResetModel();
     const uc::Block* hint = &uc::blocks[0];
     for (auto& cp : uc::cpInfo) {
-        if (isCjkCollapsed) {
-            auto blk = uc::blockOf(cp.subj, hint);
-            if (blk->flags.have(uc::Bfg::COLLAPSIBLE)
-                    && ((cp.subj.uval() ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS))
-                continue;
-        }
+        if (isCharCollapsed(cp.subj, hint))
+            continue;
         addCp(cp);
     }
     endResetModel();
@@ -715,6 +711,24 @@ void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
 }
 
 
+bool CharsModel::isCharCollapsed(char32_t code, const uc::Block*& hint) const
+{
+    if (isCjkCollapsed) {
+        auto blk = uc::blockOf(code, hint);
+        return (blk->flags.have(uc::Bfg::COLLAPSIBLE)
+                && (code ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS);
+    } else {
+        return false;
+    }
+}
+
+
+bool CharsModel::isCharCollapsed(char32_t code) const
+{
+    const uc::Block* hint = &uc::blocks[0];
+    return isCharCollapsed(code, hint);
+}
+
 
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
 
@@ -796,7 +810,7 @@ FmMain::FmMain(QWidget *parent)
                 "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
     connect(ui->btCollapse, &QPushButton::clicked,
             this, &This::cjkExpandCollapse);
-    reflectCjkCollapseState();
+    cjkReflectCollapseState();
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
@@ -860,10 +874,15 @@ FmMain::FmMain(QWidget *parent)
     // Tofu stats
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
+    connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
 
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
+
+    // Search
+    ui->stackSearch->setCurrentWidget(ui->pageInfo);
+    connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
 
     // Terms
     initTerms();
@@ -970,9 +989,8 @@ FmMain::~FmMain()
 
 void FmMain::showCopied(QWidget* widget, const QRect& absRect)
 {
-    if (!fmMessage)
-        fmMessage = std::make_unique<FmMessage>(this);
-    fmMessage->showAtAbs("Скопировано", widget, absRect);
+    fmMessage.ensure(this)
+             .showAtAbs("Скопировано", widget, absRect);
 }
 
 
@@ -1205,9 +1223,9 @@ namespace {
 void FmMain::popupAtAbs(
         QWidget* widget, const QRect& absRect, const QString& html)
 {
-    ensure(popup, this)
-          .setText(html)
-          .popupAtAbsBacked(widget, absRect);
+    popup.ensure(this)
+         .setText(html)
+         .popupAtAbsBacked(widget, absRect);
 }
 
 void FmMain::copyTextAbs(
@@ -1291,13 +1309,32 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
 
 void FmMain::selectChar(char32_t code)
 {
-    /// @todo [future] Right now we do not go to collapsed chars.
-    ///                But someday we will.
-    ui->tableChars->setCurrentIndex(model.indexOf(code));
+    auto index = model.indexOf(code);
+    ui->tableChars->setCurrentIndex(index);
+    ui->tableChars->scrollTo(index);
 }
 
 
-void FmMain::reflectCjkCollapseState()
+void FmMain::cjkSetCollapseState(bool x)
+{
+    if (model.isCjkCollapsed == x)
+        return;
+    model.isCjkCollapsed = false;
+    model.build();
+    cjkReflectCollapseState();
+}
+
+
+void FmMain::selectCharEx(char32_t code)
+{
+    if (model.isCharCollapsed(code)) {
+        cjkSetCollapseState(false);
+    }
+    selectChar(code);
+}
+
+
+void FmMain::cjkReflectCollapseState()
 {
     if (model.isCjkCollapsed) {
         ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
@@ -1318,8 +1355,7 @@ void FmMain::cjkExpandCollapse()
     auto scrollOffset = std::max(0, oldIndex.row() - scrollTop);
 
     // Rebuild model
-    model.isCjkCollapsed = !model.isCjkCollapsed;
-    model.build();
+    cjkSetCollapseState(!model.isCjkCollapsed);
 
     // Generate new index
     auto newIndex = model.indexOf(cp.code);
@@ -1332,7 +1368,6 @@ void FmMain::cjkExpandCollapse()
     ui->tableChars->scrollTo(newTopIndex, QAbstractItemView::PositionAtTop);
     ui->tableChars->scrollTo(newIndex2);
     ui->tableChars->viewport()->setFocus();
-    reflectCjkCollapseState();
 }
 
 
@@ -1398,4 +1433,120 @@ void FmMain::showTofuStats()
              nGoodRest, nTofuRest, nTotalRest,
              firstTofuCjk, firstTofuRest);
     QMessageBox::information(this, "Tofu stats", buf);
+}
+
+
+void FmMain::closeSearch()
+{
+    ui->stackSearch->setCurrentWidget(ui->pageInfo);
+}
+
+
+void FmMain::startSearch()
+{
+    doSearch(ui->edSearch->text());
+}
+
+
+void FmMain::showSearchError(const QString& text)
+{
+    fmMessage.ensure(this)
+             .showAtWidget(text, ui->edSearch);
+}
+
+
+void FmMain::showNotFound()
+{
+    showSearchError("Не найдено");
+}
+
+
+SingleSearchResult FmMain::findCode(char32_t code)
+{
+    if (code < uc::N_CHARS) {
+        auto pCp = uc::cps[code];
+        if (pCp) {
+            return { SingleSearchError::OK, pCp };
+        } else {
+            return { SingleSearchError::NOT_FOUND };
+        }
+    } else {
+        return { SingleSearchError::TOO_BIG };
+    }
+}
+
+
+SingleSearchResult FmMain::findHex(QStringView what)
+{
+    uint code = 0;
+    bool isOk = false;
+    if (code = what.toUInt(&isOk, 16); isOk) {
+        return findCode(code);
+    } else {
+        return { SingleSearchError::CONVERT_ERROR };
+    }
+}
+
+
+void FmMain::showSingleSearch(const SingleSearchResult& x)
+{
+    switch (x.err) {
+    case SingleSearchError::CONVERT_ERROR:
+        showSearchError("Код символа не распознан");
+        break;
+    case SingleSearchError::TOO_BIG:
+        showSearchError("Код символа слишком велик");
+        break;
+    case SingleSearchError::NOT_FOUND:
+        showNotFound();
+        break;
+    case SingleSearchError::OK:
+        closeSearch();
+        selectCharEx(x.result->subj);
+        break;
+    }
+}
+
+
+bool FmMain::isNameChar(char32_t cp)
+{
+    return (cp >= 'A' && cp <= 'Z')
+        || (cp >= 'a' && cp <= 'z')
+        || (cp >= '0' && cp <= '9')
+        || (cp == '-');
+}
+
+
+void FmMain::doSearch(QString what)
+{
+    if (what.isEmpty())
+        return;
+
+    // Find a single character
+    if (what.size() <= 2) {
+        auto u32 = what.toUcs4();
+        if (u32.size() == 1) {
+            auto code = u32[0];
+            if (!isNameChar(code)) {
+                auto res = findCode(code);
+                showSingleSearch(res);
+                return;
+            }
+        }
+    }
+
+    what = what.trimmed();
+
+    // Searching for nothing?
+    if (what.isEmpty())
+        return;
+
+    if (what.startsWith("U+", Qt::CaseInsensitive)) {
+        // U+:
+        auto sHex = QStringView(what).mid(2);
+        auto res = findHex(sHex);
+        showSingleSearch(res);
+    } else {
+        showNotFound();
+    }
 }

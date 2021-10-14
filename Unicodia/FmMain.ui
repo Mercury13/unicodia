@@ -443,6 +443,9 @@ padding-bottom: 1px;</string>
               </widget>
               <widget class="QWidget" name="pageSearch">
                <layout class="QVBoxLayout" name="verticalLayout_10">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
                 <property name="leftMargin">
                  <number>0</number>
                 </property>
@@ -455,6 +458,32 @@ padding-bottom: 1px;</string>
                 <property name="bottomMargin">
                  <number>0</number>
                 </property>
+                <item>
+                 <widget class="QWidget" name="wiSearchBar" native="true">
+                  <layout class="QHBoxLayout" name="horizontalLayout">
+                   <item>
+                    <spacer name="horizontalSpacer_3">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>433</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="btCloseSearch">
+                     <property name="text">
+                      <string>Закрыть</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                 <item>
                  <widget class="QTreeView" name="listSearch">
                   <property name="frameShape">

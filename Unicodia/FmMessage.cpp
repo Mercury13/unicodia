@@ -170,3 +170,10 @@ void FmMessage::showAtAbs(const QString& text, const QWidget* widget, const QRec
     moveTo(widget, globalRect);
     show();
 }
+
+
+void FmMessage::showAtWidget(const QString& text, const QWidget* widget)
+{
+    showAtAbs(text, widget,
+              QRect { widget->mapToGlobal(QPoint{0, 0}), widget->size() });
+}

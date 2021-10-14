@@ -32,7 +32,9 @@ public:
 protected:
     void focusInEvent(QFocusEvent* ev) override;
     void focusOutEvent(QFocusEvent* ev) override;
+    void keyPressEvent(QKeyEvent* ev) override;
 signals:
     void focusIn();
     void focusOut();
+    void searchPressed();
 };

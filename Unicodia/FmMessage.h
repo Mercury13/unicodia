@@ -27,6 +27,7 @@ public slots:
     void moveTo(const QWidget* widget, const QRect& globalRect);
     void show();
     void showAtAbs(const QString& text, const QWidget* widget, const QRect& globalRect);
+    void showAtWidget(const QString& text, const QWidget* widget);
 protected:
     void paintEvent(QPaintEvent*) override;
 private:

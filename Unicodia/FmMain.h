@@ -122,6 +122,15 @@ public:
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
     QModelIndex indexOf(char32_t code);
+
+    /// \brief isCharCollapsed
+    /// \param code
+    ///    Code of valid (in a block) character
+    /// \return
+    ///    [+] it is collapsed
+    ///
+    bool isCharCollapsed(char32_t code) const;
+    bool isCharCollapsed(char32_t code, const uc::Block*& hint) const;
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
@@ -179,7 +188,31 @@ private:
 };
 
 
+template <class T>
+class Uptr : public std::unique_ptr<T>
+{
+    using Super = std::unique_ptr<T>;
+public:
+    using Super::operator =;
+
+    template <class... UU>
+    T& ensure(UU&&... u) {
+        if (!*this) {
+            *this = std::make_unique<T>(std::forward<UU>(u)...);
+        }
+        return **this;
+    }
+};
+
+
 enum class CurrThing { CHAR, SAMPLE };
+
+enum class SingleSearchError { OK, NOT_FOUND, TOO_BIG, CONVERT_ERROR };
+
+struct SingleSearchResult {
+    SingleSearchError err = SingleSearchError::CONVERT_ERROR;
+    const uc::Cp* result = nullptr;
+};
 
 
 class FmMain : public QMainWindow,
@@ -202,8 +235,8 @@ private:
     Ui::FmMain *ui = nullptr;
     CharsModel model;
     BlocksModel blocksModel;
-    std::unique_ptr<FmPopup2> popup;
-    std::unique_ptr<FmMessage> fmMessage;
+    Uptr<FmPopup2> popup;
+    Uptr<FmMessage> fmMessage;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
     mutable struct Hint {
@@ -214,13 +247,22 @@ private:
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     void selectChar(char32_t code);
+    void selectCharEx(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
-    void reflectCjkCollapseState();
     void copyCurrentThing(CurrThing thing);
     void showCopied(QAbstractItemView* table);
     void showCopied(QWidget* widget, const QRect& absRect);
     void clearSample();
+    void doSearch(QString what);
+    bool isNameChar(char32_t cp);
+    void showSingleSearch(const SingleSearchResult& x);
+    SingleSearchResult findHex(QStringView what);
+    SingleSearchResult findCode(char32_t cp);
+    void showSearchError(const QString& text);
+    void showNotFound();
+    void cjkSetCollapseState(bool x);
+    void cjkReflectCollapseState();
 
     // mywiki::Gui
     void popupAtAbs(
@@ -228,7 +270,7 @@ private:
     FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
     void copyTextAbs(
-            QWidget* widget, const QRect& absRect, const QString& text) override;
+            QWidget* widget, const QRect& absRect, const QString& text) override;    
 signals:
     void setFocusDefered(QWidget* wi);
 private slots:
@@ -241,6 +283,8 @@ private slots:
     void cjkExpandCollapse();
     void showTofuStats();
     void slotSetFocusDefered(QWidget* wi);
+    void closeSearch();
+    void startSearch();
     void on_comboBlock_currentIndexChanged(int index);
 };
 

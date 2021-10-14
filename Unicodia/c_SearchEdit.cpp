@@ -2,6 +2,7 @@
 
 #include <QScrollBar>
 #include <QAbstractItemView>
+#include <QKeyEvent>
 
 
 ///// WideComboBox /////////////////////////////////////////////////////////////
@@ -67,4 +68,18 @@ void SearchEdit::focusOutEvent(QFocusEvent* ev)
 {
     Super::focusOutEvent(ev);
     emit focusOut();
+}
+
+
+void SearchEdit::keyPressEvent(QKeyEvent* ev)
+{
+    switch (ev->key()) {
+    case Qt::Key_Enter:
+    case Qt::Key_Return:
+        ev->accept();
+        emit searchPressed();
+        return;
+    default:
+        Super::keyPressEvent(ev);
+    }
 }
