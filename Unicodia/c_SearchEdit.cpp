@@ -83,3 +83,29 @@ void SearchEdit::keyPressEvent(QKeyEvent* ev)
         Super::keyPressEvent(ev);
     }
 }
+
+
+///// SearchCombo //////////////////////////////////////////////////////////////
+
+
+SearchCombo::SearchCombo(QWidget* parent) : Super(parent)
+{
+    setStyleSheet("SearchCombo:drop-down { width:0; }");
+    auto edit = new SearchEdit(this);
+    setLineEdit(edit);
+    connect(edit, &SearchEdit::searchPressed, this, &This::emitSearchPressed);
+    addItem("Test");
+}
+
+
+void SearchCombo::focusInEvent(QFocusEvent* ev)
+{
+    Super::focusInEvent(ev);
+    showPopup();
+}
+
+
+void SearchCombo::emitSearchPressed()
+{
+    emit searchPressed();
+}

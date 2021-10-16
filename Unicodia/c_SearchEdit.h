@@ -5,6 +5,20 @@
 #include <QComboBox>
 
 
+//template <class Signal, class Receiver, class Slot>
+//void installResizeChain(
+//        QWidget* sender, QWidget* chainEnd,
+//        Receiver* receiver, Slot slot)
+//{
+//    for (QWidget* widget = sender; widget != nullptr;
+//            widget = qobject_cast<QWidget*>(sender->parent())) {
+//        connect(widget, &QWidget::, receiver, slot);
+//        if (widget == chainEnd)
+//            break;
+//    }
+//}
+
+
 class WideComboBox : public QComboBox
 {
 private:
@@ -37,4 +51,21 @@ signals:
     void focusIn();
     void focusOut();
     void searchPressed();
+};
+
+
+class SearchCombo : public WideComboBox {
+    Q_OBJECT
+    using Super = WideComboBox;
+    using This = SearchCombo;
+public:
+    SearchCombo(QWidget* parent = nullptr);
+protected:
+    void focusInEvent(QFocusEvent* ev) override;
+//    void focusOutEvent(QFocusEvent* ev) override;
+//    void keyPressEvent(QKeyEvent* ev) override;
+signals:
+    void searchPressed();
+protected slots:
+    void emitSearchPressed();
 };
