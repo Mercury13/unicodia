@@ -1485,13 +1485,6 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
         break;
     case uc::SingleError::NO_SEARCH:
         break;
-    case uc::SingleError::RESERVED: {
-            QString s;
-            str::append(s, u8"Пустое место в блоке «");
-            str::append(s, uc::blockOf(x.one->subj.ch32(), 0)->locName);
-            str::append(s, u8"»");
-            showSearchError(s);
-        } break;
     default:
         showSearchError(str::toQ(
                 uc::errorStrings[static_cast<int>(x.err)]));
