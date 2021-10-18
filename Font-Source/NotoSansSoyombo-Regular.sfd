@@ -15,14 +15,14 @@ sfntRevision: 0x00020000
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 7677]
+XUID: [1021 59 1751208496 22815]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1573062772
-ModificationTime: 1634581938
+ModificationTime: 1634589065
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -250,33 +250,6 @@ Lookup: 6 0 0 "'psts' Post Base Substitutions in Soyombo lookup 189" { "'psts' P
 Lookup: 6 0 0 "'psts' Post Base Substitutions in Soyombo lookup 190" { "'psts' Post Base Substitutions in Soyombo lookup 190 subtable"  } ['psts' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 191" { "Single Substitution lookup 191 subtable"  } []
 Lookup: 6 0 0 "'psts' Post Base Substitutions in Soyombo lookup 192" { "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 0"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 1"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 2"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 3"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 4"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 5"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 6"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 7"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 8"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 9"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 10"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 11"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 12"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 13"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 14"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 15"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 16"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 17"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 18"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 19"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 20"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 21"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 22"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 23"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 24"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 25"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 26"  "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 27"  } ['psts' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
-Lookup: 4 0 0 "Ligature Substitution lookup 193" { "Ligature Substitution lookup 193 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 194" { "Ligature Substitution lookup 194 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 195" { "Ligature Substitution lookup 195 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 196" { "Ligature Substitution lookup 196 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 197" { "Ligature Substitution lookup 197 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 198" { "Ligature Substitution lookup 198 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 199" { "Ligature Substitution lookup 199 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 200" { "Ligature Substitution lookup 200 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 201" { "Ligature Substitution lookup 201 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 202" { "Ligature Substitution lookup 202 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 203" { "Ligature Substitution lookup 203 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 204" { "Ligature Substitution lookup 204 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 205" { "Ligature Substitution lookup 205 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 206" { "Ligature Substitution lookup 206 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 207" { "Ligature Substitution lookup 207 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 208" { "Ligature Substitution lookup 208 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 209" { "Ligature Substitution lookup 209 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 210" { "Ligature Substitution lookup 210 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 211" { "Ligature Substitution lookup 211 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 212" { "Ligature Substitution lookup 212 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 213" { "Ligature Substitution lookup 213 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 214" { "Ligature Substitution lookup 214 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 215" { "Ligature Substitution lookup 215 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 216" { "Ligature Substitution lookup 216 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 217" { "Ligature Substitution lookup 217 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 218" { "Ligature Substitution lookup 218 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 219" { "Ligature Substitution lookup 219 subtable"  } []
 Lookup: 1 0 0 "Single Substitution lookup 220" { "Single Substitution lookup 220 subtable"  } []
 Lookup: 6 0 0 "'psts' Post Base Substitutions in Soyombo lookup 221" { "'psts' Post Base Substitutions in Soyombo lookup 221 subtable"  } ['psts' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
 Lookup: 6 0 0 "'psts' Post Base Substitutions in Soyombo lookup 222" { "'psts' Post Base Substitutions in Soyombo lookup 222 contextual 0"  "'psts' Post Base Substitutions in Soyombo lookup 222 contextual 1"  } ['psts' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
@@ -344,6 +317,7 @@ Lookup: 2 0 0 "Multiple Substitution lookup 283" { "Multiple Substitution lookup
 Lookup: 2 0 0 "Multiple Substitution lookup 284" { "Multiple Substitution lookup 284 subtable"  } []
 Lookup: 6 16 0 "'psts' Post Base Substitutions in Soyombo lookup 285" { "'psts' Post Base Substitutions in Soyombo lookup 285 subtable"  } ['psts' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
 Lookup: 1 16 0 "Single Substitution lookup 286" { "Single Substitution lookup 286 subtable"  } []
+Lookup: 258 0 0 "'kern' Horizontal Kerning in Soyombo lookup 0" { "'kern' Horizontal Kerning in Soyombo lookup 0-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
 Lookup: 264 0 0 "'dist' Distance in Soyombo lookup 0" { "'dist' Distance in Soyombo lookup 0 contextual 0"  "'dist' Distance in Soyombo lookup 0 contextual 1"  "'dist' Distance in Soyombo lookup 0 contextual 2"  "'dist' Distance in Soyombo lookup 0 contextual 3"  "'dist' Distance in Soyombo lookup 0 contextual 4"  "'dist' Distance in Soyombo lookup 0 contextual 5"  "'dist' Distance in Soyombo lookup 0 contextual 6"  "'dist' Distance in Soyombo lookup 0 contextual 7"  "'dist' Distance in Soyombo lookup 0 contextual 8"  "'dist' Distance in Soyombo lookup 0 contextual 9"  "'dist' Distance in Soyombo lookup 0 contextual 10"  "'dist' Distance in Soyombo lookup 0 contextual 11"  "'dist' Distance in Soyombo lookup 0 contextual 12"  "'dist' Distance in Soyombo lookup 0 contextual 13"  "'dist' Distance in Soyombo lookup 0 contextual 14"  "'dist' Distance in Soyombo lookup 0 contextual 15"  "'dist' Distance in Soyombo lookup 0 contextual 16"  } ['dist' ('DFLT' <'dflt' > 'soyo' <'dflt' > ) ]
 Lookup: 257 0 0 "Single Positioning lookup 1" { "Single Positioning lookup 1 subtable"  } []
 Lookup: 257 0 0 "Single Positioning lookup 2" { "Single Positioning lookup 2 subtable"  } []
@@ -832,190 +806,163 @@ ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contex
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 13 anusvara-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 219"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 25" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 visagra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 218"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 24" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 auMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 217"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 23" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 aiMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 216"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 22" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 16 vowelLength-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 215"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 21" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 18 lVocalicMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 214"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 20" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 18 rVocalicMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 213"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 19" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 oeMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 212"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 18" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 oMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 211"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 17" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 eMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 210"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 16" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 uMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 209"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 15" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 ueMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 208"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 14" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 iMatra-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 207"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 13" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 aFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 206"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 12" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 sFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 205"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 11" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 shFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 204"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 10" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 lFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 203"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 9" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 rFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 202"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 8" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 mFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 201"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 7" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 bFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 200"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 6" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 nFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 199"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 5" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 dFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 198"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 4" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 12 ngFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 197"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 3" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 kFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 196"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 2" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 11 gFinal-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 195"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 1" 0 0 0 1
  2 0 0
   Coverage: 15 gemination-soyo
   Coverage: 12 dottedCircle
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 194"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 192 contextual 0" 0 0 0 1
  2 0 0
   Coverage: 12 dottedCircle
   Coverage: 15 gemination-soyo
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 193"
+ 0
 EndFPST
 ChainSub2: coverage "'psts' Post Base Substitutions in Soyombo lookup 190 subtable" 0 0 0 1
  1 0 1
@@ -4653,11 +4600,11 @@ ShortTable: cvt  3
   24
 EndShort
 ShortTable: maxp 16
+  1
   0
-  0
-  0
-  0
-  0
+  323
+  249
+  16
   0
   0
   2
@@ -4681,7 +4628,6 @@ FitToEm: 0
 WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
-TeXData: 1 0 0 272629 136314 90876 0 1048576 90876 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Soyombo lookup 61 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Soyombo lookup 61 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mkmk' Mark to Mark in Soyombo lookup 62 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mkmk' Mark to Mark in Soyombo lookup 63 subtable"
 BeginChars: 323 323
 
@@ -4899,14 +4845,14 @@ AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 452 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-60 714 m 5,0,-1
- 546 714 l 5,1,-1
+60 714 m 1,0,-1
+ 546 714 l 1,1,-1
  546 -50 l 1,2,-1
  452 0 l 1,3,-1
  452 703 l 1,4,-1
  260 589 l 1,5,-1
  60 708 l 1,6,-1
- 60 714 l 5,0,-1
+ 60 714 l 1,0,-1
 110 609 m 0,7,8
  147 609 147 609 163 591 c 1,9,10
  156 584 156 584 152 574 c 128,-1,11
@@ -4984,20 +4930,20 @@ SplineSet
  -69 149 l 1,3,-1
  -69 222 l 1,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
-Position2: "Single Positioning lookup 42 subtable" dx=0 dy=0 dh=50 dv=0
-Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 24 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 25 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 26 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 27 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 28 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 29 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 30 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 31 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 32 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 31 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 30 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 29 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 28 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 27 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 26 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 25 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 24 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
+Position2: "Single Positioning lookup 42 subtable" dx=0 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
 EndChar
 
 StartChar: aSub-soyo
@@ -6552,20 +6498,20 @@ SplineSet
  18 48 18 48 -12 115 c 128,-1,17
  -42 182 -42 182 -90 238 c 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 1 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 2 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 3 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 4 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 5 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 6 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 7 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 8 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 9 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 10 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 11 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 12 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 186 subtable" aiMatra-soyo
 Substitution2: "Single Substitution lookup 286 subtable" aiMatra-soyo.open
+Substitution2: "Single Substitution lookup 186 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 12 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 11 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 10 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 9 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 8 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 7 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 6 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 5 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 4 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 3 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 2 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 1 subtable" gFinal-soyo
 EndChar
 
 StartChar: aiMatra-soyo.open
@@ -6842,20 +6788,20 @@ SplineSet
  58 674 58 674 -90 674 c 1,31,-1
  -90 714 l 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 1 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 2 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 3 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 4 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 5 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 6 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 7 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 8 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 9 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 10 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 11 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 12 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 186 subtable" auMatra-soyo
 Substitution2: "Single Substitution lookup 286 subtable" auMatra-soyo.open
+Substitution2: "Single Substitution lookup 186 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 12 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 11 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 10 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 9 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 8 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 7 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 6 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 5 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 4 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 3 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 2 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 1 subtable" gFinal-soyo
 EndChar
 
 StartChar: auMatra-soyo.open
@@ -7041,25 +6987,25 @@ SplineSet
  -334 170 -334 170 -302 170 c 0,0,1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 233 subtable" bFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" bFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" bFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" bFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: bFinal-soyo.half
@@ -9899,25 +9845,25 @@ SplineSet
  -261 0 -261 0 -302 0 c 0,0,1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 231 subtable" dFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" dFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" dFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" dFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: dFinal-soyo.half
@@ -12662,7 +12608,7 @@ StartChar: dottedCircle
 Encoding: 4 9676 73
 Width: 594
 GlyphClass: 2
-Flags: WO
+Flags: W
 HStem: 42 52<271.383 315.265> 60 52<187.383 231.265 355.383 399.265> 107 52<113.383 157.265 429.383 473.265> 181 52<66.3828 110.265 476.383 520.265> 265 52<48.3828 92.2648 494.383 538.265> 349 52<66.3828 110.265 476.383 520.265> 423 52<113.383 157.265 429.383 473.265> 470 52<187.383 231.265 355.383 399.265> 488 52<271.383 315.265>
 VStem: 48 52<265.383 309.265> 66 52<181.383 225.265 349.383 393.265> 113 52<107.383 151.265 423.383 467.265> 187 52<60.3828 104.265 470.383 514.265> 271 52<42.3828 86.2648 488.383 532.265> 355 52<60.3828 104.265 470.383 514.265> 429 52<107.383 151.265 423.383 467.265> 476 52<181.383 225.265 349.383 393.265> 494 52<265.383 309.265>
 TtInstrs:
@@ -13027,8 +12973,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 300 714 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 506 -178 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 294 714 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 508 -171 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13246,14 +13192,14 @@ AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 402 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-10 714 m 5,0,-1
- 496 714 l 5,1,-1
- 496 -50 l 5,2,-1
- 402 0 l 5,3,-1
- 402 703 l 5,4,-1
- 210 589 l 5,5,-1
- 10 708 l 5,6,-1
- 10 714 l 5,0,-1
+10 714 m 1,0,-1
+ 496 714 l 1,1,-1
+ 496 -50 l 1,2,-1
+ 402 0 l 1,3,-1
+ 402 703 l 1,4,-1
+ 210 589 l 1,5,-1
+ 10 708 l 1,6,-1
+ 10 714 l 1,0,-1
 207 159 m 1,7,-1
  12 354 l 1,8,-1
  207 549 l 1,9,-1
@@ -13343,6 +13289,7 @@ SplineSet
  -268 489 l 1,13,-1
  -418 489 l 1,11,-1
 EndSplineSet
+LCarets2: 1 0
 Substitution2: "Single Substitution lookup 279 subtable" dzaSub-soyo.ini2
 Substitution2: "Single Substitution lookup 277 subtable" dzaSub-soyo.2
 Substitution2: "Single Substitution lookup 276 subtable" dzaSub-soyo.ini2
@@ -13749,18 +13696,18 @@ SplineSet
  -44 727 l 1,8,-1
  6 754 l 1,6,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
 EndChar
 
 StartChar: gFinal-soyo
@@ -13831,25 +13778,25 @@ SplineSet
  -377 170 -377 170 -325 170 c 0,0,1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 228 subtable" gFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" gFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" gFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" gFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" gFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: gFinal-soyo.half
@@ -14613,7 +14560,7 @@ EndChar
 
 StartChar: gemination-soyo
 Encoding: 77 72344 89
-Width: 0
+Width: 620
 GlyphClass: 2
 Flags: W
 HStem: 589 125
@@ -14637,35 +14584,37 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -340 714 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -148 614 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 260 714 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 452 614 basechar 0
 LayerCount: 2
 Fore
 SplineSet
--140 708 m 1,0,-1
- -340 589 l 1,1,-1
- -540 708 l 1,2,-1
- -540 714 l 1,3,-1
- -140 714 l 1,4,-1
- -140 708 l 1,0,-1
+460 708 m 5,0,-1
+ 260 589 l 5,1,-1
+ 60 708 l 5,2,-1
+ 60 714 l 5,3,-1
+ 460 714 l 5,4,-1
+ 460 708 l 5,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0
-Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0
-Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0
-Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0
-Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0
-Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0
-Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0
-Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0
-Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0
-Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0
-Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0
-Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0
-Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0
-Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0
-Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0
-Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0
-Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0
+Kerns2: 73 -660 "'kern' Horizontal Kerning in Soyombo lookup 0-1"
+Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Substitution2: "'pref' Pre Base Forms in Soyombo lookup 187 subtable" gemination-soyo
 EndChar
 
 StartChar: gha-soyo
@@ -17880,18 +17829,18 @@ SplineSet
  -524 813 -524 813 -469 849.5 c 128,-1,13
  -414 886 -414 886 -319 886 c 256,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
 EndChar
 
 StartChar: ja-soyo
@@ -19273,25 +19222,25 @@ SplineSet
  -307 0 -307 0 -325 0 c 0,0,1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 229 subtable" kFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" kFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" kFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" kFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: kFinal-soyo.half
@@ -22079,25 +22028,25 @@ SplineSet
  -377 44 l 1,0,-1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 236 subtable" lFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" lFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" lFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" lFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: lFinal-soyo.half
@@ -22291,37 +22240,37 @@ SplineSet
  -511 28 -511 28 -505 11 c 1,34,-1
  -540 -3 l 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 225 subtable" lVocalicMatra-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" lVocalicMatra-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" lVocalicMatra-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: lVocalicMatra-soyo.half
@@ -23636,25 +23585,25 @@ SplineSet
  -307 39 -307 39 -285 39 c 256,12,13
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 234 subtable" mFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" mFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" mFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" mFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: mFinal-soyo.half
@@ -24819,25 +24768,25 @@ SplineSet
  -296 43 -296 43 -254 43 c 1,13,-1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 232 subtable" nFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" nFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" nFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" nFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: nFinal-soyo.half
@@ -25189,8 +25138,8 @@ SplineSet
  -560 407 -560 407 -560 489 c 0,11,12
  -560 572 -560 572 -511.5 618 c 128,-1,13
  -463 664 -463 664 -346 664 c 1,14,-1
- -252 714 l 1,15,-1
- -252 514 l 1,16,-1
+ -252 714 l 5,15,-1
+ -252 514 l 5,16,-1
  -148 514 l 1,17,-1
  -148 714 l 1,0,-1
 -496 489 m 256,18,19
@@ -25200,6 +25149,7 @@ SplineSet
  -433 600 -433 600 -464.5 572.5 c 128,-1,24
  -496 545 -496 545 -496 489 c 256,18,19
 EndSplineSet
+LCarets2: 1 0
 Substitution2: "Single Substitution lookup 279 subtable" naSub-soyo.ini2
 Substitution2: "Single Substitution lookup 277 subtable" naSub-soyo.2
 Substitution2: "Single Substitution lookup 276 subtable" naSub-soyo.ini2
@@ -25775,25 +25725,25 @@ SplineSet
  -296 175 l 1,0,-1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 230 subtable" ngFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" ngFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" ngFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" ngFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: ngFinal-soyo.half
@@ -27521,18 +27471,18 @@ SplineSet
  -554 806 l 1,7,-1
  -554 886 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
 EndChar
 
 StartChar: oeMatra-soyo
@@ -27614,18 +27564,18 @@ SplineSet
  -305 777 -305 777 -316 740 c 1,28,-1
  -322 740 l 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
 EndChar
 
 StartChar: pa-soyo
@@ -29509,26 +29459,25 @@ SplineSet
  -327 121 l 1,0,-1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 235 subtable" rFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" rFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" rFinal-soyo.half
-LCarets2: 1 0
+Substitution2: "Single Substitution lookup 225 subtable" rFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: rFinal-soyo.half
@@ -29710,37 +29659,37 @@ SplineSet
  -388 36 -388 36 -411 16.5 c 128,-1,34
  -434 -3 -434 -3 -468 -3 c 0,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 225 subtable" rVocalicMatra-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" rVocalicMatra-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" rVocalicMatra-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: rVocalicMatra-soyo.half
@@ -30729,25 +30678,25 @@ SplineSet
  -240 0 -240 0 -278 0 c 0,0,1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 238 subtable" sFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" sFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" sFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" sFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: sFinal-soyo.half
@@ -31623,25 +31572,25 @@ SplineSet
  -377 45 l 1,0,-1
 EndSplineSet
 MultipleSubs2: "Multiple Substitution lookup 237 subtable" shFinal-soyo tail-soyo
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 225 subtable" shFinal-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" shFinal-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" shFinal-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: shFinal-soyo.half
@@ -33182,8 +33131,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -85 -232 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -85 -232 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -107 -200 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -107 -200 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -38730,37 +38679,37 @@ SplineSet
  -287 81 l 1,5,-1
  -329 160 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 225 subtable" uMatra-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" uMatra-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" uMatra-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: uMatra-soyo.half
@@ -38920,37 +38869,37 @@ SplineSet
  -351 156 l 1,30,31
  -326 170 -326 170 -297 170 c 0,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
-Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
-Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
-Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
-Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
-Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
-Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
-Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
-Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
-Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
-Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
-Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
-Substitution2: "Single Substitution lookup 220 subtable" ueMatra-soyo
-Substitution2: "Single Substitution lookup 225 subtable" ueMatra-soyo.half
 Substitution2: "Single Substitution lookup 226 subtable" ueMatra-soyo.half
+Substitution2: "Single Substitution lookup 225 subtable" ueMatra-soyo.half
+Substitution2: "Single Substitution lookup 220 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 55 subtable" lVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 54 subtable" rVocalicMatra-soyo
+Substitution2: "Single Substitution lookup 53 subtable" oeMatra-soyo
+Substitution2: "Single Substitution lookup 52 subtable" oMatra-soyo
+Substitution2: "Single Substitution lookup 51 subtable" eMatra-soyo
+Substitution2: "Single Substitution lookup 50 subtable" uMatra-soyo
+Substitution2: "Single Substitution lookup 49 subtable" ueMatra-soyo
+Substitution2: "Single Substitution lookup 48 subtable" iMatra-soyo
+Substitution2: "Single Substitution lookup 47 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 46 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 45 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 44 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 43 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 42 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 41 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 40 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 39 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 38 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 37 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 36 subtable" gFinal-soyo
+Substitution2: "Single Substitution lookup 34 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 33 subtable" vowelLength-soyo
+Substitution2: "Single Substitution lookup 19 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 18 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 17 subtable" aiMatra-soyo
+Substitution2: "Single Substitution lookup 16 subtable" visagra-soyo
+Substitution2: "Single Substitution lookup 15 subtable" auMatra-soyo
+Substitution2: "Single Substitution lookup 14 subtable" aiMatra-soyo
 EndChar
 
 StartChar: ueMatra-soyo.half
@@ -39454,25 +39403,24 @@ SplineSet
  -444 496 -444 496 -415 467 c 128,-1,31
  -386 438 -386 438 -343 438 c 0,20,21
 EndSplineSet
-Ligature2: "'half' Half Forms in Soyombo lookup 188 subtable" subjoiner-soyo va-soyo
-MultipleSubs2: "Multiple Substitution lookup 134 subtable" vaSub-soyo tail-soyo.long
-MultipleSubs2: "Multiple Substitution lookup 176 subtable" vaSub-soyo joiner-soyo.right
-Substitution2: "Single Substitution lookup 260 subtable" vaSub-soyo.ini3
-Substitution2: "Single Substitution lookup 262 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 263 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 264 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 265 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 266 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 267 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 268 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 269 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 270 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 272 subtable" vaSub-soyo.ini3
-Substitution2: "Single Substitution lookup 274 subtable" vaSub-soyo.3
-Substitution2: "Single Substitution lookup 276 subtable" vaSub-soyo.ini2
-Substitution2: "Single Substitution lookup 277 subtable" vaSub-soyo.2
 Substitution2: "Single Substitution lookup 279 subtable" vaSub-soyo.ini2
-LCarets2: 1 0
+Substitution2: "Single Substitution lookup 277 subtable" vaSub-soyo.2
+Substitution2: "Single Substitution lookup 276 subtable" vaSub-soyo.ini2
+Substitution2: "Single Substitution lookup 274 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 272 subtable" vaSub-soyo.ini3
+Substitution2: "Single Substitution lookup 270 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 269 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 268 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 267 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 266 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 265 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 264 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 263 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 262 subtable" vaSub-soyo.3
+Substitution2: "Single Substitution lookup 260 subtable" vaSub-soyo.ini3
+Ligature2: "'half' Half Forms in Soyombo lookup 188 subtable" subjoiner-soyo va-soyo
+MultipleSubs2: "Multiple Substitution lookup 176 subtable" vaSub-soyo joiner-soyo.right
+MultipleSubs2: "Multiple Substitution lookup 134 subtable" vaSub-soyo tail-soyo.long
 EndChar
 
 StartChar: vaSub-soyo.2
@@ -40029,7 +39977,6 @@ SplineSet
  10 95 l 1,18,-1
  90 15 l 1,15,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 218 subtable" dottedCircle visagra-soyo
 Substitution2: "Single Substitution lookup 186 subtable" visagra-soyo
 Substitution2: "Single Substitution lookup 12 subtable" aFinal-soyo
 Substitution2: "Single Substitution lookup 11 subtable" sFinal-soyo
@@ -40086,19 +40033,19 @@ SplineSet
  -148 -10 l 1,3,-1
  -148 91 l 1,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
-Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
-Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
-Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
-Substitution2: "Single Substitution lookup 24 subtable" dFinal-soyo
-Substitution2: "Single Substitution lookup 25 subtable" nFinal-soyo
-Substitution2: "Single Substitution lookup 26 subtable" bFinal-soyo
-Substitution2: "Single Substitution lookup 27 subtable" mFinal-soyo
-Substitution2: "Single Substitution lookup 28 subtable" rFinal-soyo
-Substitution2: "Single Substitution lookup 29 subtable" lFinal-soyo
-Substitution2: "Single Substitution lookup 30 subtable" shFinal-soyo
-Substitution2: "Single Substitution lookup 31 subtable" sFinal-soyo
 Substitution2: "Single Substitution lookup 32 subtable" aFinal-soyo
+Substitution2: "Single Substitution lookup 31 subtable" sFinal-soyo
+Substitution2: "Single Substitution lookup 30 subtable" shFinal-soyo
+Substitution2: "Single Substitution lookup 29 subtable" lFinal-soyo
+Substitution2: "Single Substitution lookup 28 subtable" rFinal-soyo
+Substitution2: "Single Substitution lookup 27 subtable" mFinal-soyo
+Substitution2: "Single Substitution lookup 26 subtable" bFinal-soyo
+Substitution2: "Single Substitution lookup 25 subtable" nFinal-soyo
+Substitution2: "Single Substitution lookup 24 subtable" dFinal-soyo
+Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
+Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
+Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
+Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
 EndChar
 
 StartChar: ya-soyo
