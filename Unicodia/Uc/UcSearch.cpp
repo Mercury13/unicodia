@@ -46,11 +46,11 @@ uc::SingleSearchResult uc::findCode(char32_t code)
 }
 
 
-uc::SingleSearchResult uc::findHex(QStringView what)
+uc::SingleSearchResult uc::findStrCode(QStringView what, int base)
 {
     uint code = 0;
     bool isOk = false;
-    if (code = what.toUInt(&isOk, 16); isOk) {
+    if (code = what.toUInt(&isOk, base); isOk) {
         return findCode(code);
     } else {
         return { SingleError::CONVERT_ERROR };
@@ -92,7 +92,7 @@ uc::SearchResult uc::doSearch(QString what)
     if (what.startsWith("U+", Qt::CaseInsensitive)) {
         // U+:
         auto sHex = QStringView(what).mid(2);
-        return uc::findHex(sHex);
+        return uc::findStrCode(sHex, 16);
     } else {
         return {{ SingleError::NOT_FOUND }};
     }

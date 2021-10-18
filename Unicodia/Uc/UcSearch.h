@@ -43,7 +43,7 @@ namespace uc {
     }
 
     SingleSearchResult findCode(char32_t code);
-    SingleSearchResult findHex(QStringView what);
+    SingleSearchResult findStrCode(QStringView what, int base);
     SearchResult doSearch(QString what);
     bool isNameChar(char32_t cp);
 }
