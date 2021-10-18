@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1573062772
-ModificationTime: 1634576866
+ModificationTime: 1634581938
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -1158,622 +1158,622 @@ ContextSub2: coverage "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD
 EndFPST
 ContextSub2: glyph "Contextual Substitution lookup 140 subtable" 0 0 0 41
  String: 9 aSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 141"
  String: 10 aaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 172"
  String: 10 baSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 164"
  String: 11 bhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 165"
  String: 10 caSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 147"
  String: 11 chaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 148"
  String: 10 daSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 159"
  String: 11 ddaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 154"
  String: 12 ddhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 155"
  String: 11 dhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 160"
  String: 11 dzaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 169"
  String: 10 gaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 144"
  String: 11 ghaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 145"
  String: 10 haSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 180"
  String: 10 jaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 149"
  String: 11 jhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 150"
  String: 10 kaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 142"
  String: 11 khaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 143"
  String: 12 kssaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 181"
  String: 10 laSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 175"
  String: 10 maSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 166"
  String: 10 naSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 161"
  String: 11 ngaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 146"
  String: 11 nnaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 156"
  String: 11 nyaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 151"
  String: 10 paSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 162"
  String: 11 phaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 163"
  String: 10 raSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 174"
  String: 10 saSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 179"
  String: 11 shaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 177"
  String: 11 ssaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 178"
  String: 10 taSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 157"
  String: 11 thaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 158"
  String: 11 tsaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 167"
  String: 12 tshaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 168"
  String: 11 ttaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 152"
  String: 12 tthaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 153"
  String: 10 vaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 176"
  String: 10 yaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 173"
  String: 10 zaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 171"
  String: 11 zhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 170"
 EndFPST
 ContextSub2: glyph "Contextual Substitution lookup 98 subtable" 0 0 0 41
  String: 9 aSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 99"
  String: 10 aaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 130"
  String: 10 baSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 122"
  String: 11 bhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 123"
  String: 10 caSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 105"
  String: 11 chaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 106"
  String: 10 daSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 117"
  String: 11 ddaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 112"
  String: 12 ddhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 113"
  String: 11 dhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 118"
  String: 11 dzaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 127"
  String: 10 gaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 102"
  String: 11 ghaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 103"
  String: 10 haSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 138"
  String: 10 jaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 107"
  String: 11 jhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 108"
  String: 10 kaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 100"
  String: 11 khaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 101"
  String: 12 kssaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 139"
  String: 10 laSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 133"
  String: 10 maSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 124"
  String: 10 naSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 119"
  String: 11 ngaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 104"
  String: 11 nnaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 114"
  String: 11 nyaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 109"
  String: 10 paSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 120"
  String: 11 phaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 121"
  String: 10 raSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 132"
  String: 10 saSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 137"
  String: 11 shaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 135"
  String: 11 ssaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 136"
  String: 10 taSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 115"
  String: 11 thaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 116"
  String: 11 tsaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 125"
  String: 12 tshaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 126"
  String: 11 ttaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 110"
  String: 12 tthaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 111"
  String: 10 vaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 134"
  String: 10 yaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 131"
  String: 10 zaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 129"
  String: 11 zhaSub-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 128"
 EndFPST
 ContextSub2: glyph "Contextual Substitution lookup 56 subtable" 0 0 0 41
  String: 6 a-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 57"
  String: 7 aa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 88"
  String: 7 ba-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 80"
  String: 8 bha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 81"
  String: 7 ca-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 63"
  String: 8 cha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 64"
  String: 7 da-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 75"
  String: 8 dda-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 70"
  String: 9 ddha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 71"
  String: 8 dha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 76"
  String: 8 dza-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 85"
  String: 7 ga-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 60"
  String: 8 gha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 61"
  String: 7 ha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 96"
  String: 7 ja-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 65"
  String: 8 jha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 66"
  String: 7 ka-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 58"
  String: 8 kha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 59"
  String: 9 kssa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 97"
  String: 7 la-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 91"
  String: 7 ma-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 82"
  String: 7 na-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 77"
  String: 8 nga-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 62"
  String: 8 nna-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 72"
  String: 8 nya-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 67"
  String: 7 pa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 78"
  String: 8 pha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 79"
  String: 7 ra-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 90"
  String: 7 sa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 95"
  String: 8 sha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 93"
  String: 8 ssa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 94"
  String: 7 ta-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 73"
  String: 8 tha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 74"
  String: 8 tsa-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 83"
  String: 9 tsha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 84"
  String: 8 tta-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 68"
  String: 9 ttha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 69"
  String: 7 va-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 92"
  String: 7 ya-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 89"
  String: 7 za-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 87"
  String: 8 zha-soyo
- BString: 0
- FString: 0
+ BString: 0 
+ FString: 0 
  1
   SeqLookup: 0 "Multiple Substitution lookup 86"
 EndFPST
@@ -4984,8 +4984,8 @@ SplineSet
  -69 149 l 1,3,-1
  -69 222 l 1,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 42 subtable" dx=0 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 42 subtable" dx=0 dy=0 dh=50 dv=0
 Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
 Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
 Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
@@ -12662,7 +12662,7 @@ StartChar: dottedCircle
 Encoding: 4 9676 73
 Width: 594
 GlyphClass: 2
-Flags: W
+Flags: WO
 HStem: 42 52<271.383 315.265> 60 52<187.383 231.265 355.383 399.265> 107 52<113.383 157.265 429.383 473.265> 181 52<66.3828 110.265 476.383 520.265> 265 52<48.3828 92.2648 494.383 538.265> 349 52<66.3828 110.265 476.383 520.265> 423 52<113.383 157.265 429.383 473.265> 470 52<187.383 231.265 355.383 399.265> 488 52<271.383 315.265>
 VStem: 48 52<265.383 309.265> 66 52<181.383 225.265 349.383 393.265> 113 52<107.383 151.265 423.383 467.265> 187 52<60.3828 104.265 470.383 514.265> 271 52<42.3828 86.2648 488.383 532.265> 355 52<60.3828 104.265 470.383 514.265> 429 52<107.383 151.265 423.383 467.265> 476 52<181.383 225.265 349.383 393.265> 494 52<265.383 309.265>
 TtInstrs:
@@ -13027,8 +13027,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 260 714 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 452 -178 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 300 714 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 506 -178 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14649,23 +14649,23 @@ SplineSet
  -140 714 l 1,4,-1
  -140 708 l 1,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0
+Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0
+Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0
+Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0
+Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0
+Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0
+Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0
+Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0
+Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0
+Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0
+Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0
+Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0
 EndChar
 
 StartChar: gha-soyo
@@ -33101,7 +33101,7 @@ StartChar: subjoiner-soyo
 Encoding: 78 72345 249
 Width: 0
 GlyphClass: 4
-Flags: WO
+Flags: W
 HStem: -264 60<-333 -243 -183 -93>
 VStem: -243 60<-354 -264 -204 -114>
 TtInstrs:
@@ -40086,7 +40086,7 @@ SplineSet
  -148 -10 l 1,3,-1
  -148 91 l 1,0,-1
 EndSplineSet
-Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 40 subtable" dx=0 dy=0 dh=50 dv=0
 Substitution2: "Single Substitution lookup 21 subtable" gFinal-soyo
 Substitution2: "Single Substitution lookup 22 subtable" kFinal-soyo
 Substitution2: "Single Substitution lookup 23 subtable" ngFinal-soyo
