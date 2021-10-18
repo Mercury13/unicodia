@@ -20,7 +20,7 @@ std::u8string_view uc::errorStrings[uc::SingleError_N] {
 };
 
 
-uc::SearchResult uc::findCode(char32_t code)
+uc::SingleSearchResult uc::findCode(char32_t code)
 {
     // Too big?
     if (code >= uc::N_CHARS)
@@ -46,7 +46,7 @@ uc::SearchResult uc::findCode(char32_t code)
 }
 
 
-uc::SearchResult uc::findHex(QStringView what)
+uc::SingleSearchResult uc::findHex(QStringView what)
 {
     uint code = 0;
     bool isOk = false;
@@ -70,7 +70,7 @@ bool uc::isNameChar(char32_t cp)
 uc::SearchResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
-        return { SingleError::NO_SEARCH };
+        return {{ SingleError::NO_SEARCH }};
 
     // Find a single character, maybe space
     if (what.size() <= 2) {
@@ -87,13 +87,13 @@ uc::SearchResult uc::doSearch(QString what)
 
     // Searching for nothing?
     if (what.isEmpty())
-        return { SingleError::NO_SEARCH };
+        return {{ SingleError::NO_SEARCH }};
 
     if (what.startsWith("U+", Qt::CaseInsensitive)) {
         // U+:
         auto sHex = QStringView(what).mid(2);
         return uc::findHex(sHex);
     } else {
-        return { SingleError::NOT_FOUND };
+        return {{ SingleError::NOT_FOUND }};
     }
 }

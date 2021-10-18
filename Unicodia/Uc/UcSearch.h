@@ -24,10 +24,15 @@ namespace uc {
     constexpr auto SingleError_N = static_cast<int>(SingleError::NN);
     extern std::u8string_view errorStrings[SingleError_N];
 
-    struct SearchResult {
+    struct SingleSearchResult {
         SingleError err = SingleError::CONVERT_ERROR;
         const uc::Cp* one = nullptr;
+    };
+
+    struct SearchResult : public SingleSearchResult {
         std::vector<const uc::Cp*> multiple {};
+        SearchResult() = default;
+        SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
     };
 
     /// @return [+] cp is noncharacter
@@ -37,8 +42,8 @@ namespace uc {
             || (cp >= 0xFDD0 && cp <= 0xFDEF);
     }
 
-    SearchResult findCode(char32_t code);
-    SearchResult findHex(QStringView what);
+    SingleSearchResult findCode(char32_t code);
+    SingleSearchResult findHex(QStringView what);
     SearchResult doSearch(QString what);
     bool isNameChar(char32_t cp);
 }
