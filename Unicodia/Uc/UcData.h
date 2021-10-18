@@ -309,6 +309,7 @@ namespace uc {
         SINHALA,
         SIYAQ_INDIC,
         SOGDIAN,
+        SOYOMBO,
         SUNDANESE,
         SYLOTI_NAGRI,
         SYRIAC,

@@ -48,6 +48,11 @@ What was done by authors of Unicodia:
 * Siddham
   - Made ligatures 25CC dotted circle + some umlauts
   - Rehinted
+* Soyombo
+  - Deleted ligatures 25CC + umlaut → umlaut
+  - Moved anchors on 25CC, virtual virama
+  - Turned gemination mark to zero-width; COULD BREAK IT!
+  - Rehinted
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
   - Made KTA ligature in E000 private-use

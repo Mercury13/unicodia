@@ -65,7 +65,7 @@ namespace uc {
         Hebr,   // Hebrew
         Hent,   // Hentaigana
         Hira,   // Hiragana
-        Hluw,   // Anatolian hieroglyphs
+        Hluw,   // Anatolian (Luwian, Hittite) hieroglyphs
         Hmnp,   // NP hmong (American script for White/Green Hmongs)
         Hung,   // Old Hungarian runes
         Ital,   // Old Italic
@@ -135,6 +135,7 @@ namespace uc {
         Sogd,   // Sogdian
         Sogo,   // Old Sogdian
         Sora,   // Sora Sompeng
+        Soyo,   // Soyombo
         Sund,   // Sundanese
         Sylo,   // Syloti Nagri
         Syrc,   // Syriac
@@ -206,7 +207,6 @@ namespace uc {
         //Roro  no chars — Rongorongo (Easter Island)
         //Sara  no chars — Sarati (Tolkien)
         //Shui  no chars — Shuishu hieroglyphs (Sui language, China)
-        Soyo = Zyyy,        // beyond BMP
         //Syre  no chars — Syriac Estrangelo
         //Syrj  no chars — Syriac Western
         //Syrn  no chars — Syriac Eastern
