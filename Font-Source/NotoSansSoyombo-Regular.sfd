@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1573062772
-ModificationTime: 1634589065
+ModificationTime: 1634593204
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -3934,6 +3934,24 @@ ChainPos2: coverage "'dist' Distance in Soyombo lookup 0 contextual 0" 0 0 0 1
   FCoverage: 660 ddhaSub-soyo ddhaSub-soyo.2 ddhaSub-soyo.3 ddhaSub-soyo.ini2 ddhaSub-soyo.ini3 dhaSub-soyo dhaSub-soyo.2 dhaSub-soyo.3 dhaSub-soyo.ini2 dhaSub-soyo.ini3 gaSub-soyo gaSub-soyo.2 gaSub-soyo.3 gaSub-soyo.ini2 gaSub-soyo.ini3 ghaSub-soyo ghaSub-soyo.2 ghaSub-soyo.3 ghaSub-soyo.ini2 ghaSub-soyo.ini3 haSub-soyo haSub-soyo.2 haSub-soyo.3 haSub-soyo.ini2 haSub-soyo.ini3 kaSub-soyo kaSub-soyo.2 kaSub-soyo.3 kaSub-soyo.ini2 kaSub-soyo.ini3 khaSub-soyo khaSub-soyo.2 khaSub-soyo.3 khaSub-soyo.ini2 khaSub-soyo.ini3 kssaSub-soyo kssaSub-soyo.2 kssaSub-soyo.3 kssaSub-soyo.ini2 kssaSub-soyo.ini3 ngaSub-soyo ngaSub-soyo.2 ngaSub-soyo.3 ngaSub-soyo.ini2 ngaSub-soyo.ini3
  0
 EndFPST
+ShortTable: maxp 16
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+  2
+  1
+  2
+  22
+  0
+  256
+  0
+  0
+  0
+EndShort
 TtTable: prep
 PUSHW_1
  511
@@ -4599,24 +4617,6 @@ ShortTable: cvt  3
   40
   24
 EndShort
-ShortTable: maxp 16
-  1
-  0
-  323
-  249
-  16
-  0
-  0
-  2
-  1
-  2
-  22
-  0
-  256
-  0
-  0
-  0
-EndShort
 LangName: 1033 "" "" "" "2.000;GOOG;NotoSansSoyombo-Regular" "" "Version 2.000" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: Custom
@@ -4628,6 +4628,10 @@ FitToEm: 0
 WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
+Grid
+-1000 714 m 4
+ 2000 714 l 1028
+EndSplineSet
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Soyombo lookup 61 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Soyombo lookup 61 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mkmk' Mark to Mark in Soyombo lookup 62 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mkmk' Mark to Mark in Soyombo lookup 63 subtable"
 BeginChars: 323 323
 
@@ -4715,8 +4719,8 @@ StartChar: a-soyo
 Encoding: 5 72272 3
 Width: 620
 GlyphClass: 2
-Flags: W
-HStem: 116 60<157.72 312.638> 309 64<203.879 318.682> 433 71<162.839 314.72>
+Flags: MWO
+HStem: 116 60<157.72 312.638> 309 64<203.879 318.682> 433 71<162.839 314.72> 589 125<248.235 271.789>
 VStem: 34 114<516.801 589.16> 334 74<195.717 293.41> 452 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -4737,6 +4741,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -4836,6 +4846,29 @@ PUSHB_5
  49
 DEPTH
 SLOOP
+IP
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
+IP
 IP
 IUP[y]
 IUP[x]
@@ -5751,8 +5784,8 @@ StartChar: aa-soyo
 Encoding: 47 72314 10
 Width: 570
 GlyphClass: 2
-Flags: W
-HStem: 475 74<117.074 269.886>
+Flags: MW
+HStem: 475 74<117.074 269.886> 589 125<198.235 221.789>
 VStem: 23 64<329.53 445.524> 298 60<307.29 447.855> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -5761,6 +5794,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  10
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -5823,6 +5862,14 @@ DEPTH
 SLOOP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -7092,8 +7139,8 @@ StartChar: ba-soyo
 Encoding: 39 72306 23
 Width: 580
 GlyphClass: 2
-Flags: W
-HStem: 122 74<121.114 273.926>
+Flags: MW
+HStem: 122 74<121.114 273.926> 589 125<208.235 231.789>
 VStem: 33 60<223.428 363.87> 304 64<225.476 341.47> 412 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -7102,6 +7149,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  24
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -7164,6 +7217,25 @@ DEPTH
 SLOOP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 5
+ 24
+SRP1
+SRP2
+PUSHB_4
+ 7
+ 13
+ 17
+ 30
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -7172,14 +7244,14 @@ AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 412 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-20 714 m 1,0,-1
- 506 714 l 1,1,-1
+20 714 m 5,0,-1
+ 506 714 l 5,1,-1
  506 -50 l 1,2,-1
  412 0 l 1,3,-1
  412 703 l 1,4,-1
  220 589 l 1,5,-1
  20 708 l 1,6,-1
- 20 714 l 1,0,-1
+ 20 714 l 5,0,-1
 368 269 m 0,7,8
  368 205 368 205 325.5 163.5 c 128,-1,9
  283 122 283 122 203 122 c 0,10,11
@@ -7777,8 +7849,8 @@ StartChar: bha-soyo
 Encoding: 40 72307 29
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 75 74<147.029 310.847> 433 71<152.839 304.72>
+Flags: MW
+HStem: 75 74<147.029 310.847> 433 71<152.839 304.72> 589 125<238.235 261.789>
 VStem: 24 114<516.801 589.16> 63 60<167.437 262.492> 334 64<167.333 239.032> 442 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -7793,6 +7865,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -7909,6 +7987,29 @@ PUSHB_4
  51
 DEPTH
 SLOOP
+IP
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
+IP
 IP
 IUP[y]
 IUP[x]
@@ -8931,10 +9032,17 @@ StartChar: ca-soyo
 Encoding: 22 72289 35
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<198.235 221.789>
 VStem: 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  15
@@ -8969,6 +9077,14 @@ PUSHB_1
  14
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -9329,10 +9445,17 @@ StartChar: cha-soyo
 Encoding: 23 72290 41
 Width: 620
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<248.235 271.789>
 VStem: 452 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  21
@@ -9367,6 +9490,14 @@ PUSHB_1
  16
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -9950,10 +10081,14 @@ StartChar: da-soyo
 Encoding: 34 72301 49
 Width: 600
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 617 97
 VStem: 27 74<321.199 447.303> 193 94<111 228.406 539.594 617> 432 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 13
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  24
@@ -10537,10 +10672,14 @@ StartChar: dda-soyo
 Encoding: 29 72296 55
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 617 97
 VStem: 163 94<111 324 444 617> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  13
@@ -10913,10 +11052,10 @@ StartChar: ddha-soyo
 Encoding: 30 72297 61
 Width: 670
 GlyphClass: 2
-Flags: W
-HStem: 376 50<157.75 263>
+Flags: MW
+HStem: 376 50<157.75 263> 617 97
 VStem: 24 94<463.039 596.793> 263 94<63 164 284 376 426 617> 502 94<0 703>
-CounterMasks: 1 70
+CounterMasks: 1 38
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -10925,6 +11064,9 @@ MDAP[rnd]
 PUSHB_1
  15
 MDRP[min,rnd,black]
+PUSHB_1
+ 20
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  28
@@ -10992,6 +11134,19 @@ PUSHB_2
 IP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 20
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 6
+ 8
+ 23
+ 24
+DEPTH
+SLOOP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -11561,8 +11716,8 @@ StartChar: dha-soyo
 Encoding: 35 72302 67
 Width: 660
 GlyphClass: 2
-Flags: W
-HStem: 50 64<203.826 342.545> 326 50<147.75 253>
+Flags: MW
+HStem: 50 64<203.826 342.545> 326 50<147.75 253> 617 97
 VStem: 14 94<413.039 546.793> 124 74<122.333 193.913> 253 94<265.561 326 376 617> 492 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -11578,6 +11733,9 @@ MDAP[rnd]
 PUSHB_1
  20
 MDRP[min,rnd,black]
+PUSHB_1
+ 25
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  40
@@ -11691,6 +11849,19 @@ PUSHB_3
 IP
 IP
 IP
+PUSHB_2
+ 25
+ 20
+SRP1
+SRP2
+PUSHB_4
+ 11
+ 13
+ 28
+ 29
+DEPTH
+SLOOP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -11714,7 +11885,7 @@ SplineSet
  108 427 108 427 142 401.5 c 128,-1,19
  176 376 176 376 249 376 c 2,20,-1
  253 376 l 1,21,-1
- 253 617 l 1,22,-1
+ 253 617 l 5,22,-1
  100 708 l 1,23,-1
  100 714 l 1,24,-1
  586 714 l 1,25,-1
@@ -13129,8 +13300,8 @@ StartChar: dza-soyo
 Encoding: 44 72311 74
 Width: 570
 GlyphClass: 2
-Flags: W
-HStem: 324 60<132 282>
+Flags: MW
+HStem: 324 60<132 282> 589 125<198.235 221.789>
 VStem: 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -13139,6 +13310,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  11
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -13184,6 +13361,20 @@ PUSHB_2
  8
 IP
 IP
+PUSHB_1
+ 5
+SRP1
+PUSHB_2
+ 9
+ 13
+IP
+IP
+PUSHB_1
+ 1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -13197,7 +13388,7 @@ SplineSet
  496 -50 l 1,2,-1
  402 0 l 1,3,-1
  402 703 l 1,4,-1
- 210 589 l 1,5,-1
+ 210 589 l 5,5,-1
  10 708 l 1,6,-1
  10 714 l 1,0,-1
 207 159 m 1,7,-1
@@ -13872,10 +14063,10 @@ StartChar: ga-soyo
 Encoding: 19 72286 83
 Width: 660
 GlyphClass: 2
-Flags: W
-HStem: 364 50<108 253 347 492>
+Flags: MW
+HStem: 364 50<108 253 347 492> 617 97
 VStem: 14 94<294.067 364 414 483.933> 253 94<181 364 414 617> 492 94<0 364 414 574>
-CounterMasks: 1 70
+CounterMasks: 1 38
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -13890,6 +14081,9 @@ MDRP[min,rnd,black]
 PUSHB_1
  9
 SHP[rp2]
+PUSHB_1
+ 6
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  27
@@ -13966,6 +14160,14 @@ SRP1
 SRP2
 PUSHB_1
  24
+IP
+PUSHB_1
+ 6
+SRP1
+PUSHB_2
+ 0
+ 12
+IP
 IP
 IUP[y]
 IUP[x]
@@ -14110,6 +14312,7 @@ SplineSet
  -148 529 l 1,22,-1
  -148 664 l 1,0,-1
 EndSplineSet
+LCarets2: 1 0
 Substitution2: "Single Substitution lookup 279 subtable" gaSub-soyo.ini2
 Substitution2: "Single Substitution lookup 277 subtable" gaSub-soyo.2
 Substitution2: "Single Substitution lookup 276 subtable" gaSub-soyo.ini2
@@ -14597,23 +14800,23 @@ SplineSet
  460 708 l 5,0,-1
 EndSplineSet
 Kerns2: 73 -660 "'kern' Horizontal Kerning in Soyombo lookup 0-1"
-Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0 [ddx={} ddy={} ddh={} ddv={}]
-Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0 [ddx={} ddy={} ddh={} ddv={}]
+Position2: "Single Positioning lookup 60 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 58 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 56 subtable" dx=50 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 54 subtable" dx=50 dy=0 dh=50 dv=0
+Position2: "Single Positioning lookup 52 subtable" dx=60 dy=0 dh=60 dv=0
+Position2: "Single Positioning lookup 50 subtable" dx=60 dy=0 dh=60 dv=0
+Position2: "Single Positioning lookup 48 subtable" dx=70 dy=0 dh=70 dv=0
+Position2: "Single Positioning lookup 46 subtable" dx=70 dy=0 dh=70 dv=0
+Position2: "Single Positioning lookup 44 subtable" dx=80 dy=0 dh=80 dv=0
+Position2: "Single Positioning lookup 29 subtable" dx=-50 dy=0 dh=-50 dv=0
+Position2: "Single Positioning lookup 28 subtable" dx=-40 dy=0 dh=-40 dv=0
+Position2: "Single Positioning lookup 27 subtable" dx=-30 dy=0 dh=-30 dv=0
+Position2: "Single Positioning lookup 26 subtable" dx=-20 dy=0 dh=-20 dv=0
+Position2: "Single Positioning lookup 25 subtable" dx=-10 dy=0 dh=-10 dv=0
+Position2: "Single Positioning lookup 24 subtable" dx=10 dy=0 dh=10 dv=0
+Position2: "Single Positioning lookup 23 subtable" dx=40 dy=0 dh=40 dv=0
+Position2: "Single Positioning lookup 22 subtable" dx=50 dy=0 dh=50 dv=0
 Substitution2: "'pref' Pre Base Forms in Soyombo lookup 187 subtable" gemination-soyo
 EndChar
 
@@ -14621,8 +14824,8 @@ StartChar: gha-soyo
 Encoding: 20 72287 90
 Width: 660
 GlyphClass: 2
-Flags: W
-HStem: 364 50<153.042 253 347 492>
+Flags: MW
+HStem: 364 50<153.042 253 347 492> 617 97
 VStem: 253 94<181 364 414 617> 492 94<0 364 414 574>
 TtInstrs:
 SVTCA[y-axis]
@@ -14638,6 +14841,9 @@ MDRP[min,rnd,black]
 PUSHB_1
  11
 SHP[rp2]
+PUSHB_1
+ 8
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  33
@@ -14701,6 +14907,16 @@ SRP1
 SRP2
 PUSHB_1
  29
+IP
+PUSHB_1
+ 8
+SRP1
+PUSHB_3
+ 0
+ 14
+ 32
+IP
+IP
 IP
 IUP[y]
 IUP[x]
@@ -15294,10 +15510,10 @@ StartChar: ha-soyo
 Encoding: 55 72322 96
 Width: 670
 GlyphClass: 2
-Flags: W
-HStem: 383 54<138.691 246.979>
+Flags: MW
+HStem: 383 54<138.691 246.979> 616 98
 VStem: 24 94<209 375.09 501 579> 263 94<252.009 366.685> 502 94<0 404 496 574>
-CounterMasks: 1 70
+CounterMasks: 1 38
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -15306,6 +15522,9 @@ MDAP[rnd]
 PUSHB_1
  30
 MDRP[min,rnd,black]
+PUSHB_1
+ 18
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  34
@@ -15400,6 +15619,18 @@ PUSHB_2
  28
 IP
 IP
+PUSHB_1
+ 18
+SRP1
+PUSHB_5
+ 14
+ 12
+ 21
+ 23
+ 27
+DEPTH
+SLOOP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -15421,7 +15652,7 @@ SplineSet
  118 501 l 1,14,-1
  265 616 l 1,15,-1
  110 708 l 1,16,-1
- 110 714 l 1,17,-1
+ 110 714 l 5,17,-1
  510 714 l 1,18,-1
  510 708 l 1,19,-1
  352 614 l 1,20,-1
@@ -17847,10 +18078,17 @@ StartChar: ja-soyo
 Encoding: 24 72291 110
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<198.235 221.789>
 VStem: 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  15
@@ -17885,6 +18123,14 @@ PUSHB_1
  14
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -18247,10 +18493,17 @@ StartChar: jha-soyo
 Encoding: 25 72292 116
 Width: 590
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<218.235 241.789>
 VStem: 32 66<420 514> 422 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  18
@@ -18297,6 +18550,14 @@ IP
 IP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -19325,10 +19586,10 @@ StartChar: ka-soyo
 Encoding: 17 72284 131
 Width: 670
 GlyphClass: 2
-Flags: W
-HStem: 242 50<177.508 263> 328 50<357 502>
+Flags: MW
+HStem: 242 50<177.508 263> 328 50<357 502> 617 97
 VStem: 24 94<349.583 530.843> 263 94<191 242 292 328 378 617> 502 94<0 328 378 574>
-CounterMasks: 1 38
+CounterMasks: 1 1c
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -19343,6 +19604,9 @@ MDAP[rnd]
 PUSHB_1
  14
 MDRP[min,rnd,black]
+PUSHB_1
+ 11
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  29
@@ -19423,6 +19687,20 @@ PUSHB_1
  2
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 11
+ 14
+SRP1
+SRP2
+PUSHB_5
+ 5
+ 8
+ 0
+ 17
+ 27
+DEPTH
+SLOOP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -20037,10 +20315,10 @@ StartChar: kha-soyo
 Encoding: 18 72285 137
 Width: 670
 GlyphClass: 2
-Flags: W
-HStem: 341 50<357 502> 508 50<177.508 263>
+Flags: MW
+HStem: 341 50<357 502> 508 50<177.508 263> 617 97
 VStem: 24 94<269.157 450.417> 263 94<191 341 391 508 558 617> 502 94<0 341 391 574>
-CounterMasks: 1 38
+CounterMasks: 1 1c
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -20055,6 +20333,9 @@ MDAP[rnd]
 PUSHB_1
  5
 MDRP[min,rnd,black]
+PUSHB_1
+ 9
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  29
@@ -20143,6 +20424,18 @@ SRP2
 PUSHB_2
  2
  24
+IP
+IP
+PUSHB_2
+ 9
+ 5
+SRP1
+SRP2
+PUSHB_3
+ 11
+ 14
+ 15
+IP
 IP
 IP
 IUP[y]
@@ -20832,8 +21125,8 @@ StartChar: kssa-soyo
 Encoding: 56 72323 143
 Width: 660
 GlyphClass: 2
-Flags: W
-HStem: 50 64<203.826 342.545> 326 50<147.75 253> 384 50<347 492>
+Flags: MW
+HStem: 50 64<203.826 342.545> 326 50<147.75 253> 384 50<347 492> 617 97
 VStem: 14 94<413.039 546.793> 124 74<122.333 193.913> 253 94<265.561 326 376 384 434 617> 492 94<0 384 434 574>
 TtInstrs:
 SVTCA[y-axis]
@@ -20855,6 +21148,9 @@ MDAP[rnd]
 PUSHB_1
  28
 MDRP[min,rnd,black]
+PUSHB_1
+ 25
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  46
@@ -20985,6 +21281,20 @@ PUSHB_3
 IP
 IP
 IP
+PUSHB_2
+ 25
+ 28
+SRP1
+SRP2
+PUSHB_5
+ 11
+ 17
+ 22
+ 13
+ 31
+DEPTH
+SLOOP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -21010,7 +21320,7 @@ SplineSet
  253 376 l 1,21,-1
  253 617 l 1,22,-1
  100 708 l 1,23,-1
- 100 714 l 1,24,-1
+ 100 714 l 5,24,-1
  500 714 l 1,25,-1
  500 708 l 1,26,-1
  347 617 l 1,27,-1
@@ -22416,8 +22726,8 @@ StartChar: la-soyo
 Encoding: 50 72317 153
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 262 60<125.396 187> 393 71<157.599 187>
+Flags: MW
+HStem: 262 60<125.396 187> 393 71<157.599 187> 589 125<238.235 261.789>
 VStem: 24 114<476.801 549.16> 24 72<144.356 234.59> 187 66<322 393> 442 94<-1 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -22432,6 +22742,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  29
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -22543,6 +22859,23 @@ SRP1
 SRP2
 PUSHB_1
  36
+IP
+PUSHB_1
+ 5
+SRP1
+PUSHB_4
+ 17
+ 20
+ 32
+ 33
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP2
+PUSHB_1
+ 4
 IP
 IUP[y]
 IUP[x]
@@ -23702,8 +24035,8 @@ StartChar: ma-soyo
 Encoding: 41 72308 162
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 102 66<194.707 299.293> 306 66<194.707 299.293> 433 71<152.839 304.947>
+Flags: MW
+HStem: 102 66<194.707 299.293> 306 66<194.707 299.293> 433 71<152.839 304.947> 589 125<238.235 261.789>
 VStem: 24 114<516.801 589.16> 110 66<186.645 287.612> 318 66<186.645 287.612> 442 94<31 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -23724,6 +24057,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -23832,6 +24171,29 @@ SRP2
 PUSHB_2
  37
  31
+IP
+IP
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
 IP
 IP
 IUP[y]
@@ -24889,8 +25251,8 @@ StartChar: na-soyo
 Encoding: 36 72303 170
 Width: 600
 GlyphClass: 2
-Flags: W
-HStem: 149 64<124.049 234> 299 50<328 432> 435 64<124.049 234>
+Flags: MW
+HStem: 149 64<124.049 234> 299 50<328 432> 435 64<124.049 234> 589 125<228.235 251.789>
 VStem: 20 64<250.835 396.465> 234 94<79 149 213 299 349 435> 432 94<0 299 349 703>
 CounterMasks: 1 e0
 TtInstrs:
@@ -24912,6 +25274,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  14
+MDRP[min,rnd,black]
+PUSHB_1
+ 19
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -24991,6 +25359,20 @@ PUSHB_2
  11
  21
 IP
+IP
+PUSHB_2
+ 19
+ 14
+SRP1
+SRP2
+PUSHB_1
+ 15
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_1
+ 18
 IP
 IUP[y]
 IUP[x]
@@ -25822,10 +26204,10 @@ StartChar: nga-soyo
 Encoding: 21 72288 178
 Width: 670
 GlyphClass: 2
-Flags: W
-HStem: 364 50<118 263 357 502>
+Flags: MW
+HStem: 364 50<118 263 357 502> 617 97
 VStem: 24 94<277 364 414 501> 263 94<181 364 414 617> 502 94<0 364 414 574>
-CounterMasks: 1 70
+CounterMasks: 1 38
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -25840,6 +26222,9 @@ MDRP[min,rnd,black]
 PUSHB_1
  10
 SHP[rp2]
+PUSHB_1
+ 7
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  24
@@ -25909,6 +26294,18 @@ PUSHB_2
  1
 CALL
 SVTCA[y-axis]
+PUSHB_2
+ 7
+ 2
+SRP1
+SRP2
+PUSHB_3
+ 0
+ 1
+ 13
+IP
+IP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -26430,8 +26827,8 @@ StartChar: nna-soyo
 Encoding: 31 72298 184
 Width: 570
 GlyphClass: 2
-Flags: W
-HStem: 359 50<257 402>
+Flags: MW
+HStem: 359 50<257 402> 617 97
 VStem: 163 94<111 324 444 617> 402 94<0 359 409 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -26441,6 +26838,9 @@ MDAP[rnd]
 PUSHB_1
  13
 MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  17
@@ -26494,6 +26894,14 @@ SRP2
 PUSHB_1
  0
 IP
+PUSHB_1
+ 5
+SRP1
+PUSHB_2
+ 1
+ 15
+IP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -26504,7 +26912,7 @@ Fore
 SplineSet
 51 384 m 1,0,-1
  163 444 l 1,1,-1
- 163 617 l 1,2,-1
+ 163 617 l 5,2,-1
  10 708 l 1,3,-1
  10 714 l 1,4,-1
  496 714 l 1,5,-1
@@ -26952,10 +27360,17 @@ StartChar: nya-soyo
 Encoding: 26 72293 190
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<198.235 221.789>
 VStem: 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  20
@@ -26990,6 +27405,14 @@ PUSHB_1
  19
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -27582,8 +28005,8 @@ StartChar: pa-soyo
 Encoding: 37 72304 198
 Width: 620
 GlyphClass: 2
-Flags: W
-HStem: 229 60<118.206 301.102> 450 64<109.999 240.155>
+Flags: MW
+HStem: 229 60<118.206 301.102> 450 64<109.999 240.155> 589 125<248.235 271.789>
 VStem: 14 74<317.994 428.697> 452 94<0 353 405.43 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -27598,6 +28021,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  0
+MDRP[min,rnd,black]
+PUSHB_1
+ 16
+MDAP[rnd]
+PUSHB_1
+ 19
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -27665,6 +28094,14 @@ PUSHB_5
 DEPTH
 SLOOP
 IP
+PUSHB_2
+ 19
+ 16
+SRP1
+SRP2
+PUSHB_1
+ 15
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -27684,7 +28121,7 @@ SplineSet
  146 289 146 289 199 289 c 0,12,13
  331 289 331 289 452 426 c 1,14,-1
  452 703 l 1,15,-1
- 260 589 l 1,16,-1
+ 260 589 l 5,16,-1
  60 708 l 1,17,-1
  60 714 l 1,18,-1
  546 714 l 1,19,-1
@@ -28301,8 +28738,8 @@ StartChar: pha-soyo
 Encoding: 38 72305 204
 Width: 630
 GlyphClass: 2
-Flags: W
-HStem: 118 60<123.503 310.51> 309 64<115.823 244.578> 433 71<172.839 324.72>
+Flags: MW
+HStem: 118 60<123.503 310.51> 309 64<115.823 244.578> 433 71<172.839 324.72> 589 125<258.235 281.789>
 VStem: 24 74<200.258 292.015> 44 114<516.801 589.16> 462 94<0 238 288.481 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -28323,6 +28760,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  39
+MDRP[min,rnd,black]
+PUSHB_1
+ 16
+MDAP[rnd]
+PUSHB_1
+ 19
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -28409,6 +28852,29 @@ PUSHB_5
  28
 DEPTH
 SLOOP
+IP
+PUSHB_2
+ 16
+ 39
+SRP1
+SRP2
+PUSHB_4
+ 36
+ 42
+ 43
+ 49
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 19
+SRP1
+PUSHB_3
+ 15
+ 31
+ 33
+IP
+IP
 IP
 IUP[y]
 IUP[x]
@@ -29835,8 +30301,8 @@ StartChar: ra-soyo
 Encoding: 49 72316 215
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 83 63<170 324> 433 71<152.839 304.947>
+Flags: MW
+HStem: 83 63<170 324> 433 71<152.839 304.947> 589 125<238.235 261.789>
 VStem: 24 114<516.801 589.16> 442 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -29851,6 +30317,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -29921,6 +30393,29 @@ SRP2
 PUSHB_2
  30
  33
+IP
+IP
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
 IP
 IP
 IUP[y]
@@ -30801,8 +31296,8 @@ StartChar: sa-soyo
 Encoding: 54 72321 224
 Width: 600
 GlyphClass: 2
-Flags: W
-HStem: 266 70<108.632 196.127>
+Flags: MW
+HStem: 266 70<108.632 196.127> 601 113
 VStem: 197 73<337.462 411.63> 432 94<0 320 424 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -30812,6 +31307,9 @@ MDAP[rnd]
 PUSHB_1
  22
 MDRP[min,rnd,black]
+PUSHB_1
+ 4
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  31
@@ -30870,6 +31368,19 @@ SRP1
 SRP2
 PUSHB_1
  7
+IP
+PUSHB_1
+ 4
+SRP1
+PUSHB_6
+ 8
+ 12
+ 18
+ 19
+ 28
+ 30
+DEPTH
+SLOOP
 IP
 IUP[y]
 IUP[x]
@@ -31700,10 +32211,17 @@ StartChar: sha-soyo
 Encoding: 52 72319 233
 Width: 590
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<218.235 241.789>
 VStem: 422 94<0 213 304 478 569 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 11
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  19
@@ -31740,6 +32258,14 @@ PUSHB_2
  1
 CALL
 SVTCA[y-axis]
+PUSHB_2
+ 11
+ 8
+SRP1
+SRP2
+PUSHB_1
+ 7
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -32332,8 +32858,8 @@ StartChar: ssa-soyo
 Encoding: 53 72320 243
 Width: 600
 GlyphClass: 2
-Flags: W
-HStem: 147 70<101.873 176.127>
+Flags: MW
+HStem: 147 70<101.873 176.127> 589 125<228.235 251.789>
 VStem: 177 73<218.462 298.389> 432 94<-6 213 304 478 569 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -32342,6 +32868,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  28
+MDRP[min,rnd,black]
+PUSHB_1
+ 7
+MDAP[rnd]
+PUSHB_1
+ 10
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -32413,6 +32945,29 @@ SRP1
 SRP2
 PUSHB_1
  13
+IP
+PUSHB_1
+ 7
+SRP1
+NPUSHB
+ 9
+ 3
+ 5
+ 4
+ 14
+ 18
+ 24
+ 25
+ 34
+ 35
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 10
+SRP2
+PUSHB_1
+ 6
 IP
 IUP[y]
 IUP[x]
@@ -33156,8 +33711,8 @@ StartChar: ta-soyo
 Encoding: 32 72299 250
 Width: 620
 GlyphClass: 2
-Flags: W
-HStem: 234 64<109.999 239.558> 459 60<118.356 315.964>
+Flags: MW
+HStem: 234 64<109.999 239.558> 459 60<118.356 315.964> 589 125<248.235 271.789>
 VStem: 14 74<320.378 430.321> 452 94<0 369.064 421 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -33172,6 +33727,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  6
+MDRP[min,rnd,black]
+PUSHB_1
+ 11
+MDAP[rnd]
+PUSHB_1
+ 14
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -33238,6 +33799,14 @@ PUSHB_5
  30
 DEPTH
 SLOOP
+IP
+PUSHB_2
+ 14
+ 11
+SRP1
+SRP2
+PUSHB_1
+ 10
 IP
 IUP[y]
 IUP[x]
@@ -35704,8 +36273,8 @@ StartChar: tha-soyo
 Encoding: 33 72300 260
 Width: 570
 GlyphClass: 2
-Flags: W
-HStem: 131 68<48 176 244 366> 484 65<157.41 256.898>
+Flags: MW
+HStem: 131 68<48 176 244 366> 484 65<157.41 256.898> 589 125<198.235 221.789>
 VStem: 75 65<370.831 466.988> 176 68<199 297.916> 274 65<371.077 466.988> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -35723,6 +36292,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -35826,6 +36401,14 @@ PUSHB_3
  26
 IP
 IP
+IP
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
 IP
 IUP[y]
 IUP[x]
@@ -36714,10 +37297,17 @@ StartChar: tsa-soyo
 Encoding: 42 72309 266
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<198.235 221.789>
 VStem: 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  15
@@ -36752,6 +37342,14 @@ PUSHB_1
  10
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -37135,10 +37733,17 @@ StartChar: tsha-soyo
 Encoding: 43 72310 272
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 589 125<198.235 221.789>
 VStem: 177 60<279 429> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  17
@@ -37195,6 +37800,14 @@ PUSHB_2
 IP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -37752,10 +38365,14 @@ StartChar: tta-soyo
 Encoding: 27 72294 279
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 617 97
 VStem: 163 94<111 264 504 617> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 7
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  15
@@ -38152,10 +38769,14 @@ StartChar: ttha-soyo
 Encoding: 28 72295 285
 Width: 570
 GlyphClass: 2
-Flags: W
+Flags: MW
+HStem: 617 97
 VStem: 163 94<111 264 504 617> 402 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
+PUSHB_1
+ 7
+MDAP[rnd]
 SVTCA[x-axis]
 PUSHB_1
  18
@@ -39158,8 +39779,8 @@ StartChar: va-soyo
 Encoding: 51 72318 297
 Width: 570
 GlyphClass: 2
-Flags: W
-HStem: 199 74<143.568 271.523> 475 74<142.43 272>
+Flags: MW
+HStem: 199 74<143.568 271.523> 475 74<142.43 272> 589 125<198.235 221.789>
 VStem: 32 74<310.568 438.523> 308 74<309.43 439> 402 94<20 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -39174,6 +39795,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -39242,6 +39869,14 @@ PUSHB_2
  19
  11
 IP
+IP
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
 IP
 IUP[y]
 IUP[x]
@@ -40052,8 +40687,8 @@ StartChar: ya-soyo
 Encoding: 48 72315 305
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 81 68<135 359> 302 67<176.853 317.555> 433 71<152.839 304.947>
+Flags: MW
+HStem: 81 68<135 359> 302 67<176.853 317.555> 433 71<152.839 304.947> 589 125<238.235 261.789>
 VStem: 24 114<516.801 589.16> 72 63<149 261.505> 442 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -40074,6 +40709,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -40156,6 +40797,29 @@ DEPTH
 SLOOP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
+IP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -40781,8 +41445,8 @@ StartChar: za-soyo
 Encoding: 46 72313 311
 Width: 620
 GlyphClass: 2
-Flags: W
-HStem: 187 67<38 196 263 415> 393 71<167.599 196> 419 150<56.6899 142.521>
+Flags: MW
+HStem: 187 67<38 196 263 415> 393 71<167.599 196> 419 150<56.6899 142.521> 589 125<248.235 271.789>
 VStem: 34 114<476.801 549.16> 196 67<254 393> 452 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -40798,6 +41462,12 @@ SHP[rp2]
 PUSHB_1
  15
 MDAP[rnd]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  36
@@ -40889,6 +41559,14 @@ PUSHB_2
 IP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 1
+ 5
+SRP1
+SRP2
+PUSHB_1
+ 4
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -40897,14 +41575,14 @@ AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 452 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-60 714 m 1,0,-1
- 546 714 l 1,1,-1
+60 714 m 5,0,-1
+ 546 714 l 5,1,-1
  546 -50 l 1,2,-1
  452 0 l 1,3,-1
  452 703 l 1,4,-1
  260 589 l 1,5,-1
  60 708 l 1,6,-1
- 60 714 l 1,0,-1
+ 60 714 l 5,0,-1
 38 254 m 1,7,-1
  196 254 l 1,8,-1
  196 393 l 1,9,10
@@ -41720,8 +42398,8 @@ StartChar: zha-soyo
 Encoding: 45 72312 317
 Width: 610
 GlyphClass: 2
-Flags: W
-HStem: 302 67<172.869 321.797> 433 71<152.839 304.947>
+Flags: MW
+HStem: 302 67<172.869 321.797> 433 71<152.839 304.947> 589 125<238.235 261.789>
 VStem: 24 114<516.801 589.16> 72 62<81 259.63> 360 62<81 261.807> 442 94<0 703>
 TtInstrs:
 SVTCA[y-axis]
@@ -41750,6 +42428,12 @@ PUSHB_1
 MDAP[rnd]
 PUSHB_1
  15
+MDRP[min,rnd,black]
+PUSHB_1
+ 5
+MDAP[rnd]
+PUSHB_1
+ 1
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
@@ -41838,6 +42522,29 @@ PUSHB_2
 IP
 IP
 SVTCA[y-axis]
+PUSHB_2
+ 5
+ 15
+SRP1
+SRP2
+PUSHB_4
+ 12
+ 18
+ 19
+ 25
+DEPTH
+SLOOP
+IP
+PUSHB_1
+ 1
+SRP1
+PUSHB_3
+ 4
+ 7
+ 9
+IP
+IP
+IP
 IUP[y]
 IUP[x]
 EndTTInstrs
@@ -41851,7 +42558,7 @@ SplineSet
  536 -50 l 1,2,-1
  442 0 l 1,3,-1
  442 703 l 1,4,-1
- 250 589 l 1,5,-1
+ 250 589 l 5,5,-1
  50 708 l 1,6,-1
  50 714 l 1,0,-1
 100 609 m 0,7,8
