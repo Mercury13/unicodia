@@ -2,6 +2,7 @@
 #define FMMAIN_H
 
 // C++
+#include <unordered_set>
 
 // Qt
 #include <QMainWindow>
@@ -20,7 +21,9 @@
 // Forms
 #include "FmPopup.h"
 
+// Unicode data
 #include "UcData.h"
+#include "UcSearch.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
@@ -167,6 +170,18 @@ public:
 };
 
 
+class SearchModel : public QAbstractTableModel
+{
+public:
+    int rowCount(const QModelIndex& index) const;
+    void forceAdd(char32_t x);
+    void softAdd(char32_t x);
+private:
+    std::vector<char32_t> result;
+    std::unordered_set<char32_t> ndx;
+};
+
+
 class WiCustomDraw : public QWidget
 {
     using Super = QWidget;
@@ -206,13 +221,6 @@ public:
 
 
 enum class CurrThing { CHAR, SAMPLE };
-
-enum class SingleSearchError { OK, NOT_FOUND, TOO_BIG, CONVERT_ERROR };
-
-struct SingleSearchResult {
-    SingleSearchError err = SingleSearchError::CONVERT_ERROR;
-    const uc::Cp* result = nullptr;
-};
 
 
 class FmMain : public QMainWindow,
@@ -255,12 +263,8 @@ private:
     void showCopied(QWidget* widget, const QRect& absRect);
     void clearSample();
     void doSearch(QString what);
-    bool isNameChar(char32_t cp);
-    void showSingleSearch(const SingleSearchResult& x);
-    SingleSearchResult findHex(QStringView what);
-    SingleSearchResult findCode(char32_t cp);
+    void showSearchResult(uc::SearchResult&& x);
     void showSearchError(const QString& text);
-    void showNotFound();
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
 

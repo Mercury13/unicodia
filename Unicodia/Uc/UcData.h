@@ -614,12 +614,6 @@ namespace uc {
 
     const Term* findTerm(std::string_view id);
 
-    constexpr bool isNonChar(char32_t cp)
-    {
-        // There’re also 32 positions in Arabics; they are unseen right now.
-        return ((cp & 0xFFFF) >= 0xFFFE);
-    }
-
     extern const std::u8string_view TX_NOCHAR;
 
     // Implementation of Numeric inlines

@@ -730,6 +730,24 @@ bool CharsModel::isCharCollapsed(char32_t code) const
 }
 
 
+///// SearchModel //////////////////////////////////////////////////////////////
+
+
+void SearchModel::forceAdd(char32_t x)
+{
+    ndx.insert(x);
+    result.push_back(x);
+}
+
+
+void SearchModel::softAdd(char32_t x)
+{
+    if (ndx.insert(x).second)
+        result.push_back(x);
+}
+
+
+
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
 
 
@@ -1455,98 +1473,34 @@ void FmMain::showSearchError(const QString& text)
 }
 
 
-void FmMain::showNotFound()
-{
-    showSearchError("Не найдено");
-}
-
-
-SingleSearchResult FmMain::findCode(char32_t code)
-{
-    if (code < uc::N_CHARS) {
-        auto pCp = uc::cps[code];
-        if (pCp) {
-            return { SingleSearchError::OK, pCp };
-        } else {
-            return { SingleSearchError::NOT_FOUND };
-        }
-    } else {
-        return { SingleSearchError::TOO_BIG };
-    }
-}
-
-
-SingleSearchResult FmMain::findHex(QStringView what)
-{
-    uint code = 0;
-    bool isOk = false;
-    if (code = what.toUInt(&isOk, 16); isOk) {
-        return findCode(code);
-    } else {
-        return { SingleSearchError::CONVERT_ERROR };
-    }
-}
-
-
-void FmMain::showSingleSearch(const SingleSearchResult& x)
+void FmMain::showSearchResult(uc::SearchResult&& x)
 {
     switch (x.err) {
-    case SingleSearchError::CONVERT_ERROR:
-        showSearchError("Код символа не распознан");
-        break;
-    case SingleSearchError::TOO_BIG:
-        showSearchError("Код символа слишком велик");
-        break;
-    case SingleSearchError::NOT_FOUND:
-        showNotFound();
-        break;
-    case SingleSearchError::OK:
+    case uc::SingleError::ONE:
         closeSearch();
-        selectCharEx(x.result->subj);
+        selectCharEx(x.one->subj);
         break;
+    case uc::SingleError::MULTIPLE:
+        /// @todo [urgent] multiple
+        break;
+    case uc::SingleError::NO_SEARCH:
+        break;
+    case uc::SingleError::RESERVED: {
+            QString s;
+            str::append(s, u8"Пустое место в блоке «");
+            str::append(s, uc::blockOf(x.one->subj.ch32(), 0)->locName);
+            str::append(s, u8"»");
+            showSearchError(s);
+        } break;
+    default:
+        showSearchError(str::toQ(
+                uc::errorStrings[static_cast<int>(x.err)]));
     }
-}
-
-
-bool FmMain::isNameChar(char32_t cp)
-{
-    return (cp >= 'A' && cp <= 'Z')
-        || (cp >= 'a' && cp <= 'z')
-        || (cp >= '0' && cp <= '9')
-        || (cp == '-');
 }
 
 
 void FmMain::doSearch(QString what)
 {
-    if (what.isEmpty())
-        return;
-
-    // Find a single character
-    if (what.size() <= 2) {
-        auto u32 = what.toUcs4();
-        if (u32.size() == 1) {
-            auto code = u32[0];
-            if (!isNameChar(code)) {
-                auto res = findCode(code);
-                showSingleSearch(res);
-                return;
-            }
-        }
-    }
-
-    what = what.trimmed();
-
-    // Searching for nothing?
-    if (what.isEmpty())
-        return;
-
-    if (what.startsWith("U+", Qt::CaseInsensitive)) {
-        // U+:
-        auto sHex = QStringView(what).mid(2);
-        auto res = findHex(sHex);
-        showSingleSearch(res);
-    } else {
-        showNotFound();
-    }
+    auto r = uc::doSearch(what);
+    showSearchResult(std::move(r));
 }

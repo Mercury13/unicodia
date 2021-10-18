@@ -34,6 +34,7 @@ SOURCES += \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
     Uc/UcData.cpp \
+    Uc/UcSearch.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
     main.cpp \
@@ -62,6 +63,7 @@ HEADERS += \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
     Uc/UcData.h \
+    Uc/UcSearch.h \
     Wiki.h \
     c_SearchEdit.h
 
