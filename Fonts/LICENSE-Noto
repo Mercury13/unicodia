@@ -51,7 +51,7 @@ What was done by authors of Unicodia:
 * Soyombo
   - Deleted tables 25CC + umlaut → umlaut
   - Moved anchors on 25CC and virtual virama
-  - Added kerning 25CC / gemination mark
+  - Added kerning 25CC / gemination mark = −660
   - Rehinted
 * Sundanese:
   - Enlarged 1BAB new virama for ligatures
