@@ -53,4 +53,7 @@ namespace uc {
     SearchResult doSearch(QString what);
     bool isNameChar(char32_t cp);
     bool isNameChar(QStringView x);
+    bool isMnemoChar(char32_t cp);
+    bool isMnemoChar(QStringView x);
+    std::u8string toMnemo(QString x);
 }

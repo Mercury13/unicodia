@@ -80,6 +80,24 @@ bool uc::isNameChar(QStringView x)
 }
 
 
+bool uc::isMnemoChar(char32_t cp)
+{
+    return (cp >= 'A' && cp <= 'Z')
+        || (cp >= 'a' && cp <= 'z')
+        || (cp >= '0' && cp <= '9');
+}
+
+
+bool uc::isMnemoChar(QStringView x)
+{
+    for (auto v : x) {
+        if (!isMnemoChar(v.unicode()))
+            return false;
+    }
+    return true;
+}
+
+
 namespace {
 
     //constexpr uint8_t TOTAL_FRACTION = 200;
@@ -121,6 +139,31 @@ namespace {
 }   // anon namespace
 
 
+std::u8string uc::toMnemo(QString x)
+{
+    // Check for &
+    if (!x.startsWith('&'))
+        return {};
+    // Virtually chop &
+    auto sv = QStringView(x).sliced(1);
+    // Virtually chop ;
+    if (sv.endsWith(';'))
+        sv.chop(1);
+    // Result is bad/empty?
+    if (sv.empty() || !isMnemoChar(sv))
+        return {};
+    // Buils string: & + sv + ;
+    std::u8string s;
+    s.reserve(sv.length() + 2);
+    s += '&';
+    for (auto v : sv)
+        s += v.unicode();
+    s += ';';
+    return s;
+}
+
+
+
 uc::SearchResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -151,19 +194,17 @@ uc::SearchResult uc::doSearch(QString what)
 
     SafeVector<const uc::Cp*> r;
 
-    if (what.startsWith('&') && what.endsWith(';')) {
+    if (auto mnemo = toMnemo(what); !mnemo.empty()) {
         // SEARCH BY HTML MNEMONIC
+        // Search
         for (auto& cp : uc::cpInfo) {
-            auto u8Name = what.toStdString();
-            auto sv = toU8(u8Name);
             auto names = cp.allRawNames();
             for (auto& nm : names) {
-                if (stringsCIeq(sv, nm)) {
+                if (stringsCIeq(mnemo, nm)) {
                     r.emplace_back(&cp);
-                    goto found1;
+                    break;
                 }
             }
-            found1:;
         }
         if (r.size() == 1)
             return {{ SingleError::ONE, r[0] }};
@@ -179,11 +220,10 @@ uc::SearchResult uc::doSearch(QString what)
                     /// @todo [urgent] How to find, here we do case-insensitive
                     if (nm.find(sv) != std::u8string_view::npos) {
                         r.emplace_back(&cp);
-                        goto found2;
+                        break;
                     }
                 }
             }
-            found2:;
         }
     } else {
         // DEBRIEF STRING
