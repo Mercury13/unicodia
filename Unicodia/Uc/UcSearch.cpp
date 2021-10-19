@@ -99,6 +99,28 @@ namespace {
 }
 
 
+namespace {
+
+    inline std::u8string_view toU8(std::string& x)
+    {
+        return { reinterpret_cast<const char8_t*>(x.data()), x.length() };
+    }
+
+    inline bool charsCIeq(char8_t c1, char8_t c2)
+    {
+        return (c1 == c2
+            || std::toupper(c1) == std::toupper(c2));
+    }
+
+    bool stringsCIeq(std::u8string_view s1, std::u8string_view s2)
+    {
+        return ( s1.size() == s2.size()
+            && std::equal(s1.begin(), s1.end(), s2.begin(), &charsCIeq) );
+    }
+
+}   // anon namespace
+
+
 uc::SearchResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -129,7 +151,24 @@ uc::SearchResult uc::doSearch(QString what)
 
     SafeVector<const uc::Cp*> r;
 
-    if (isNameChar(what)) {
+    if (what.startsWith('&') && what.endsWith(';')) {
+        // SEARCH BY HTML MNEMONIC
+        for (auto& cp : uc::cpInfo) {
+            auto u8Name = what.toStdString();
+            auto sv = toU8(u8Name);
+            auto names = cp.allRawNames();
+            for (auto& nm : names) {
+                if (stringsCIeq(sv, nm)) {
+                    r.emplace_back(&cp);
+                    goto found1;
+                }
+            }
+            found1:;
+        }
+        if (r.size() == 1)
+            return {{ SingleError::ONE, r[0] }};
+    } else if (isNameChar(what)) {
+        // SEARCH BY KEYWORD
         //std::unordered_set<const uc::Cp*> ndx;
         auto u8Name = what.toStdString();
         std::u8string_view sv(reinterpret_cast<const char8_t*>(u8Name.data()), u8Name.length());
@@ -137,15 +176,17 @@ uc::SearchResult uc::doSearch(QString what)
             auto names = cp.allRawNames();
             for (auto& nm : names) {
                 if (nm.find('#') == std::u8string_view::npos) {
+                    /// @todo [urgent] How to find, here we do case-insensitive
                     if (nm.find(sv) != std::u8string_view::npos) {
                         r.emplace_back(&cp);
-                        goto found;
+                        goto found2;
                     }
                 }
             }
-            found:;
+            found2:;
         }
     } else {
+        // DEBRIEF STRING
         auto u32 = what.toUcs4();
         for (auto v : u32) {
             auto find = uc::findCode(v);
