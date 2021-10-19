@@ -177,6 +177,7 @@ public:
     int columnCount(const QModelIndex&) const override { return 1; }
     QVariant data(const QModelIndex& index, int role) const override;
     void set(SafeVector<const uc::Cp*>&& x);
+    void clear();
 private:
     SafeVector<const uc::Cp*> v;
 };
@@ -288,6 +289,7 @@ private slots:
     void cjkExpandCollapse();
     void showTofuStats();
     void slotSetFocusDefered(QWidget* wi);
+    void openSearch();
     void closeSearch();
     void startSearch();
     void on_comboBlock_currentIndexChanged(int index);

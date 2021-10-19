@@ -1,6 +1,9 @@
 // My header
 #include "UcSearch.h"
 
+// STL
+#include <unordered_set>
+
 // Unicode
 #include "UcData.h"
 
@@ -67,6 +70,35 @@ bool uc::isNameChar(char32_t cp)
 }
 
 
+bool uc::isNameChar(QStringView x)
+{
+    for (auto v : x) {
+        if (!isNameChar(v.unicode()))
+            return false;
+    }
+    return true;
+}
+
+
+namespace {
+
+    //constexpr uint8_t TOTAL_FRACTION = 200;
+
+    struct ResultPrio {
+        uint8_t exactFraction = 0,
+                initialFraction = 0,
+                partialFraction = 0;
+        std::strong_ordering operator <=>(const ResultPrio& x) const = default;
+    };
+
+    struct ResultEx {
+        const uc::Cp* subj = nullptr;
+        ResultPrio prio;
+    };
+
+}
+
+
 uc::SearchResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -93,7 +125,38 @@ uc::SearchResult uc::doSearch(QString what)
         // U+:
         auto sHex = QStringView(what).mid(2);
         return uc::findStrCode(sHex, 16);
+    }
+
+    SafeVector<const uc::Cp*> r;
+
+    if (isNameChar(what)) {
+        //std::unordered_set<const uc::Cp*> ndx;
+        auto u8Name = what.toStdString();
+        std::u8string_view sv(reinterpret_cast<const char8_t*>(u8Name.data()), u8Name.length());
+        for (auto& cp : uc::cpInfo) {
+            auto names = cp.allRawNames();
+            for (auto& nm : names) {
+                if (nm.find('#') == std::u8string_view::npos) {
+                    if (nm.find(sv) != std::u8string_view::npos) {
+                        r.emplace_back(&cp);
+                        goto found;
+                    }
+                }
+            }
+            found:;
+        }
     } else {
+        auto u32 = what.toUcs4();
+        for (auto v : u32) {
+            auto find = uc::findCode(v);
+            if (find.one)
+                r.emplace_back(find.one);
+        }
+    }
+
+    if (r.empty()) {
         return {{ SingleError::NOT_FOUND }};
+    } else {
+        return r;
     }
 }

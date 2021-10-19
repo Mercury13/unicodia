@@ -739,6 +739,14 @@ int SearchModel::rowCount(const QModelIndex&) const
 }
 
 
+void SearchModel::clear()
+{
+    beginResetModel();
+    v.clear();
+    endResetModel();
+}
+
+
 void SearchModel::set(SafeVector<const uc::Cp*>&& x)
 {
     beginResetModel();
@@ -862,6 +870,7 @@ FmMain::FmMain(QWidget *parent)
     const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
     ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
     ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + color.name() + " }");
+    ui->pageSearch->setStyleSheet("#pageSearch { background-color: " + color.name() + " }");
 
     // Fill chars
     model.build();
@@ -1483,6 +1492,12 @@ void FmMain::showTofuStats()
 }
 
 
+void FmMain::openSearch()
+{
+    ui->stackSearch->setCurrentWidget(ui->pageSearch);
+}
+
+
 void FmMain::closeSearch()
 {
     if (ui->stackSearch->currentWidget() == ui->pageSearch)
@@ -1511,8 +1526,10 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
         selectCharEx(x.one->subj);
         break;
     case uc::SingleError::MULTIPLE:
-
-        /// @todo [urgent] multiple
+        searchModel.set(std::move(x.multiple));
+        openSearch();
+        ui->listSearch->setFocus();
+        ui->listSearch->setCurrentIndex(searchModel.index(0, 0));
         break;
     case uc::SingleError::NO_SEARCH:
         break;

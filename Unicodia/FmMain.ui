@@ -148,7 +148,7 @@
             <item>
              <widget class="QStackedWidget" name="stackSearch">
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="pageInfo">
                <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0,1">
@@ -485,7 +485,7 @@ padding-bottom: 1px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QTreeView" name="listSearch">
+                 <widget class="QListView" name="listSearch">
                   <property name="frameShape">
                    <enum>QFrame::NoFrame</enum>
                   </property>

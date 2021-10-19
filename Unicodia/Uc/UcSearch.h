@@ -37,6 +37,8 @@ namespace uc {
         SafeVector<const uc::Cp*> multiple {};
         SearchResult() = default;
         SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
+        SearchResult(SafeVector<const uc::Cp*>&& v)
+            : SingleSearchResult { SingleError::MULTIPLE },  multiple(std::move(v)) {}
     };
 
     /// @return [+] cp is noncharacter
@@ -50,4 +52,5 @@ namespace uc {
     SingleSearchResult findStrCode(QStringView what, int base);
     SearchResult doSearch(QString what);
     bool isNameChar(char32_t cp);
+    bool isNameChar(QStringView x);
 }

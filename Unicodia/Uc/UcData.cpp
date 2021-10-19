@@ -5395,6 +5395,13 @@ uc::TofuState uc::Cp::tofuState(const Block*& hint) const
 SafeVector<std::u8string_view> uc::Cp::allRawNames() const
 {
     SafeVector<std::u8string_view> r;
+    r.reserve(name.alts + 1);
+    std::u8string_view it = name.tech();
+    r.emplace_back(it);
+    for (auto n = name.alts; n != 0; --n) {
+        it = std::to_address(it.end()) + 1;
+        r.emplace_back(it);
+    }
     return r;
 }
 
