@@ -3734,6 +3734,7 @@ constinit const uc::Block uc::blocks[] {
     // Zanabazar square OK
     { 0x11A00, 0x11A4F,
             "Zanabazar Square", u8"Монгольское горизонтально-квадратное (Дзанабадзара)", {}, EcScript::Zanb },
+    // Soyombo OK
     { 0x11A50, 0x11AAF,
             "Soyombo", u8"Соёмбо", {}, EcScript::Soyo },
     { 0x11AC0, 0x11AFF,
@@ -3785,7 +3786,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Форматирующие символы для египетских иероглифов",
             u8"Семь необязательных символов, обеспечивающих полное форматирование египетских иероглифов.",
             EcScript::Egyp },
-    /// @todo [tofu, P1] Anatolyan hiero
+    // Anatolian hiero OK
     { 0x14400, 0x1467F,
             "Anatolian Hieroglyphs", u8"Анатолийские (лувийские, хеттские) иероглифы", {}, EcScript::Hluw },
     // Bamum supplement OK
@@ -3794,6 +3795,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. "
                 "Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].",
             EcScript::Bamu },
+    // Mro OK
     { 0x16A40, 0x16A6F,
             "Mro", u8"Мру", {}, EcScript::Mroo },
     { 0x16AD0, 0x16AFF,
