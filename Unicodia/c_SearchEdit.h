@@ -4,6 +4,9 @@
 #include <QLineEdit>
 #include <QComboBox>
 
+// Qt ex
+#include "c_WrapAroundTable.h"
+
 
 //template <class Signal, class Receiver, class Slot>
 //void installResizeChain(
@@ -54,18 +57,16 @@ signals:
 };
 
 
-class SearchCombo : public WideComboBox {
+class CharsTable : public WrapAroundTable
+{
     Q_OBJECT
-    using Super = WideComboBox;
-    using This = SearchCombo;
+    using Super = WrapAroundTable;
 public:
-    SearchCombo(QWidget* parent = nullptr);
+    using Super::Super;
 protected:
     void focusInEvent(QFocusEvent* ev) override;
-//    void focusOutEvent(QFocusEvent* ev) override;
-//    void keyPressEvent(QKeyEvent* ev) override;
+    void focusOutEvent(QFocusEvent* ev) override;
 signals:
-    void searchPressed();
-protected slots:
-    void emitSearchPressed();
+    void focusIn();
+    void focusOut();
 };

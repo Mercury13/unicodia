@@ -57,7 +57,7 @@
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="WrapAroundTable" name="tableChars">
+          <widget class="CharsTable" name="tableChars">
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
@@ -648,9 +648,9 @@ padding-bottom: 1px;</string>
    <container>1</container>
   </customwidget>
   <customwidget>
-   <class>WrapAroundTable</class>
-   <extends>QTableView</extends>
-   <header>c_WrapAroundTable.h</header>
+   <class>WideComboBox</class>
+   <extends>QComboBox</extends>
+   <header>c_SearchEdit.h</header>
   </customwidget>
   <customwidget>
    <class>SearchEdit</class>
@@ -658,8 +658,8 @@ padding-bottom: 1px;</string>
    <header>c_SearchEdit.h</header>
   </customwidget>
   <customwidget>
-   <class>WideComboBox</class>
-   <extends>QComboBox</extends>
+   <class>CharsTable</class>
+   <extends>QTableView</extends>
    <header>c_SearchEdit.h</header>
   </customwidget>
  </customwidgets>

@@ -733,18 +733,45 @@ bool CharsModel::isCharCollapsed(char32_t code) const
 ///// SearchModel //////////////////////////////////////////////////////////////
 
 
-void SearchModel::forceAdd(char32_t x)
+int SearchModel::rowCount(const QModelIndex&) const
 {
-    ndx.insert(x);
-    result.push_back(x);
+    return v.size();
 }
 
 
-void SearchModel::softAdd(char32_t x)
+void SearchModel::set(SafeVector<const uc::Cp*>&& x)
 {
-    if (ndx.insert(x).second)
-        result.push_back(x);
+    beginResetModel();
+    v = std::move(x);
+    endResetModel();
 }
+
+
+QVariant SearchModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole:
+        if (static_cast<size_t>(index.row()) < v.size()) {
+            return v[index.row()]->viewableName();
+        } else { return {}; }
+    default:
+        return {};
+    }
+}
+
+
+//void SearchModel::forceAdd(char32_t x)
+//{
+//    ndx.insert(x);
+//    result.push_back(x);
+//}
+
+
+//void SearchModel::softAdd(char32_t x)
+//{
+//    if (ndx.insert(x).second)
+//        result.push_back(x);
+//}
 
 
 
@@ -901,6 +928,8 @@ FmMain::FmMain(QWidget *parent)
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
     connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
+    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
+    ui->listSearch->setModel(&searchModel);
 
     // Terms
     initTerms();
@@ -1456,7 +1485,8 @@ void FmMain::showTofuStats()
 
 void FmMain::closeSearch()
 {
-    ui->stackSearch->setCurrentWidget(ui->pageInfo);
+    if (ui->stackSearch->currentWidget() == ui->pageSearch)
+        ui->stackSearch->setCurrentWidget(ui->pageInfo);
 }
 
 
@@ -1481,6 +1511,7 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
         selectCharEx(x.one->subj);
         break;
     case uc::SingleError::MULTIPLE:
+
         /// @todo [urgent] multiple
         break;
     case uc::SingleError::NO_SEARCH:

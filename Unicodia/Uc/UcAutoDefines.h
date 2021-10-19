@@ -9,6 +9,7 @@
 
 // Libs
 #include "u_TypedFlags.h"
+#include "u_Vector.h"
 
 // Project-local
 #include "UcAutoCount.h"
@@ -444,6 +445,8 @@ namespace uc {
         bool isGraphical() const;
         constexpr int plane() const { return subj.val() >> 16; }
 
+        QString viewableName() const;
+        SafeVector<std::u8string_view> allRawNames() const;
         DrawMethod drawMethod() const;
         TofuState tofuState(const Block*& hint) const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }

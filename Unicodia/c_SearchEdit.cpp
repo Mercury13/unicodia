@@ -85,27 +85,18 @@ void SearchEdit::keyPressEvent(QKeyEvent* ev)
 }
 
 
-///// SearchCombo //////////////////////////////////////////////////////////////
+///// CharsTable ///////////////////////////////////////////////////////////////
 
 
-SearchCombo::SearchCombo(QWidget* parent) : Super(parent)
-{
-    setStyleSheet("SearchCombo:drop-down { width:0; }");
-    auto edit = new SearchEdit(this);
-    setLineEdit(edit);
-    connect(edit, &SearchEdit::searchPressed, this, &This::emitSearchPressed);
-    addItem("Test");
-}
-
-
-void SearchCombo::focusInEvent(QFocusEvent* ev)
+void CharsTable::focusInEvent(QFocusEvent* ev)
 {
     Super::focusInEvent(ev);
-    showPopup();
+    emit focusIn();
 }
 
 
-void SearchCombo::emitSearchPressed()
+void CharsTable::focusOutEvent(QFocusEvent* ev)
 {
-    emit searchPressed();
+    Super::focusOutEvent(ev);
+    emit focusOut();
 }

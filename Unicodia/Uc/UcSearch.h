@@ -1,6 +1,10 @@
 #pragma once
 
+// Qt
 #include <QString>
+
+// Libs
+#include "u_Vector.h"
 
 namespace uc {
 
@@ -30,7 +34,7 @@ namespace uc {
     };
 
     struct SearchResult : public SingleSearchResult {
-        std::vector<const uc::Cp*> multiple {};
+        SafeVector<const uc::Cp*> multiple {};
         SearchResult() = default;
         SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
     };

@@ -173,12 +173,12 @@ public:
 class SearchModel : public QAbstractTableModel
 {
 public:
-    int rowCount(const QModelIndex& index) const;
-    void forceAdd(char32_t x);
-    void softAdd(char32_t x);
+    int rowCount(const QModelIndex&) const override;
+    int columnCount(const QModelIndex&) const override { return 1; }
+    QVariant data(const QModelIndex& index, int role) const override;
+    void set(SafeVector<const uc::Cp*>&& x);
 private:
-    std::vector<char32_t> result;
-    std::unordered_set<char32_t> ndx;
+    SafeVector<const uc::Cp*> v;
 };
 
 
@@ -243,6 +243,7 @@ private:
     Ui::FmMain *ui = nullptr;
     CharsModel model;
     BlocksModel blocksModel;
+    SearchModel searchModel;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
     QFont fontBig;

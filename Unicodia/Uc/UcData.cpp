@@ -5232,6 +5232,19 @@ const QFont& uc::Font::get(
 }
 
 
+QString uc::Cp::viewableName() const
+{
+    QString r = name.tech();
+    if (auto pos = r.indexOf('#'); pos >= 0) {
+        char buf[30];
+        snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(subj.uval()));
+        r.replace(pos, 1, buf);
+    }
+    return r;
+}
+
+
+
 std::u8string_view uc::Cp::abbrev() const
 {
     if (!isAbbreviated())
@@ -5377,6 +5390,14 @@ uc::TofuState uc::Cp::tofuState(const Block*& hint) const
     return v->doesSupportChar(subj)
             ? TofuState::PRESENT : TofuState::TOFU;
 }
+
+
+SafeVector<std::u8string_view> uc::Cp::allRawNames() const
+{
+    SafeVector<std::u8string_view> r;
+    return r;
+}
+
 
 namespace {
 

@@ -691,11 +691,7 @@ QString mywiki::buildHtml(
 
     appendStylesheet(text);
     str::append(text, "<h1>");
-    QString name = cp.name.tech();
-    if (auto pos = name.indexOf('#'); pos >= 0) {
-        snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(cp.subj.uval()));
-        name.replace(pos, 1, buf);
-    }
+    QString name = cp.viewableName();
     appendCopyable(text, name, "bigcopy");
     str::append(text, "</h1>");
 
