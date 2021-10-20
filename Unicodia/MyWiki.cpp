@@ -827,7 +827,7 @@ QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
 {
     QString text;
     appendStylesheet(text);
-    str::append(text, u8"<h1>Зарезервирован как отсутствующий</h1>"sv);
+    str::append(text, u8"<h1>Выброшенная позиция</h1>"sv);
     mywiki::appendMissingCharInfo(text, hint, code);
     str::append(text, "<p>");
     appendWiki(text, *hint, uc::TX_NOCHAR);
