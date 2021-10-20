@@ -662,14 +662,14 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
 }
 
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const QModelIndex& index, const QColor& color, TableDraw mode) const
+            const QModelIndex& index, const QColor& color) const
 {
     auto ch = charAt(index);
     if (ch) {
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        drawChar(painter, rect, *ch, color1, hint.cell, mode);
+        drawChar(painter, rect, *ch, color1, hint.cell, TABLE_DRAW);
     }
 }
 
@@ -705,17 +705,17 @@ void CharsModel::paintItem(
             sob.rect = option.rect;
         owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
         SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().buttonText().color(), TABLE_DRAW);
+        drawChar(painter, option.rect, index, owner->palette().buttonText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
         owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
         SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().windowText().color(), TABLE_DRAW);
+        drawChar(painter, option.rect, index, owner->palette().windowText().color());
     } else {
         SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().windowText().color(), TABLE_DRAW);
+        drawChar(painter, option.rect, index, owner->palette().windowText().color());
     }
 }
 

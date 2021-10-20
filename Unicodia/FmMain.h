@@ -156,7 +156,7 @@ protected:
             const QStyleOptionViewItem& option,
             const QModelIndex& index) const override;
     void drawChar(QPainter* painter, const QRect& rect,
-                const QModelIndex& index, const QColor& color, TableDraw mode) const;
+                const QModelIndex& index, const QColor& color) const;
 private:
     RowCache rows;
     static constexpr auto SHRINK_Q = 4;
