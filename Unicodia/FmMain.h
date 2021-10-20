@@ -1,5 +1,4 @@
-#ifndef FMMAIN_H
-#define FMMAIN_H
+#pragma once
 
 // C++
 #include <unordered_set>
@@ -13,6 +12,7 @@
 #include "u_Vector.h"
 #include "u_TinyOpt.h"
 #include "c_TableCache.h"
+#include "u_LruCache.h"
 
 // Project-local
 #include "FontMatch.h"
@@ -181,6 +181,7 @@ public:
     bool hasData() const { return !v.empty(); }
 private:
     SafeVector<const uc::Cp*> v;
+    LruCache<char32_t, QPixmap> cache { 300 };
 };
 
 
@@ -307,4 +308,4 @@ public:
     ~FmPopup2() override = default;
 };
 
-#endif // FMMAIN_H
+extern template class LruCache<char32_t, QPixmap>;

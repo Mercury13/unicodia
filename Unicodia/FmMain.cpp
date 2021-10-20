@@ -30,6 +30,8 @@
 #include "FmPopup.h"
 #include "FmMessage.h"
 
+template class LruCache<char32_t, QPixmap>;
+
 using namespace std::string_view_literals;
 
 namespace {

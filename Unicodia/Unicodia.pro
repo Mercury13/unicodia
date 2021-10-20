@@ -49,6 +49,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
+    ../Libs/SelfMade/u_LruCache.h \
     ../Libs/SelfMade/u_Strings.h \
     ../Libs/SelfMade/u_TinyOpt.h \
     ../Libs/SelfMade/u_TypedFlags.h \
