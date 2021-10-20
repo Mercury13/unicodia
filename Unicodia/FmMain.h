@@ -178,6 +178,7 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     void set(SafeVector<const uc::Cp*>&& x);
     void clear();
+    bool hasData() const { return !v.empty(); }
 private:
     SafeVector<const uc::Cp*> v;
 };
@@ -292,6 +293,7 @@ private slots:
     void openSearch();
     void closeSearch();
     void startSearch();
+    void focusSearch();
     void on_comboBlock_currentIndexChanged(int index);
 };
 

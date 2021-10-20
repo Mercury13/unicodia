@@ -928,7 +928,6 @@ FmMain::FmMain(QWidget *parent)
     // Tofu stats
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
-    connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
 
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
@@ -937,8 +936,10 @@ FmMain::FmMain(QWidget *parent)
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
     connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
-    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
+    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);    
     ui->listSearch->setModel(&searchModel);
+    connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
+    connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
 
     // Terms
     initTerms();
@@ -1546,4 +1547,11 @@ void FmMain::doSearch(QString what)
 {
     auto r = uc::doSearch(what);
     showSearchResult(std::move(r));
+}
+
+
+void FmMain::focusSearch()
+{
+    if (searchModel.hasData())
+        openSearch();
 }
