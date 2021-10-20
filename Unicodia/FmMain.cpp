@@ -1525,12 +1525,14 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
         closeSearch();
         selectCharEx(x.one->subj);
         break;
-    case uc::SingleError::MULTIPLE:
-        searchModel.set(std::move(x.multiple));
-        openSearch();
-        ui->listSearch->setFocus();
-        ui->listSearch->setCurrentIndex(searchModel.index(0, 0));
-        break;
+    case uc::SingleError::MULTIPLE: {
+            searchModel.set(std::move(x.multiple));
+            openSearch();
+            ui->listSearch->setFocus();
+            auto index0 = searchModel.index(0, 0);
+            ui->listSearch->setCurrentIndex(index0);
+            ui->listSearch->scrollTo(index0);
+        } break;
     case uc::SingleError::NO_SEARCH:
         break;
     default:
