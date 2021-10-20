@@ -219,6 +219,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlaut symbol
       { FNAME_NOTO },                                                           // …1
     { "Ebrima" },                                                               // Vai
+    { "NotoSerifVithkuqi-Regular.ttf" },                                        // Vithkuqi
     { "NotoSansWarangCiti-Regular.ttf", Ffg::DESC_BIGGER },                     // Warang Citi
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
@@ -931,13 +932,13 @@ constinit const uc::Script uc::scriptInfo[] {
     // Elbasan OK, none in W10 → installed Google Noto
     /// @todo [link,U14] Vithkuqi
     { "Elba", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Эльбасанский албанский", u8"XVIII век",
         u8"албанский",
         u8"Придумана в середине XVIII{{_}}века и использовалась в окрестностях города Эльбасан (Албания). "
                 "Создание приписывается учителю Теодору Хаджи Филиппу (1730–1806), которого убили, когда он перевозил шрифт. "
                 "Применялась до XIX{{_}}века. "
-            "<p>Полагают, что создание местных письменностей в Албании (эльбасанской, виткутьской, Весо-Бея, Веллары) "
+            "<p>Полагают, что создание местных письменностей в Албании (эльбасанской, [[ps:Vith|виткутьской]], Весо-Бея, Веллары) "
                     "служило для конспирации от турок. "
                 "По другим данным, албанские просвещённые умы смотрели на славян, греков и турок с собственным алфавитом. "
                 "Известны рукописное Эльбасанское Евангелие размером всего 7×10{{_}}см, 59{{_}}страниц и несколько записок.",
@@ -2356,6 +2357,22 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Другая{{-}}он использовался для торговли с голландцами и португальцами. "
                 "В 1962 Университет Либерии добавил знаки для недостающих слогов.",
                 EcFont::VAI },
+    // Vithkuqi OK
+    { "Vith", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"Виткутьский албанский", u8"1844 (первый известный источник)",
+        u8"албанский",
+        u8"Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. "
+                "Алфавит назван по родному селу Наума{{-}}Виткуть. "
+                "Также распространено онемеченное «алфавит Бютакукье»."
+            "<p>Алфавит хорошо отвечает фонетике албанского, но почему-то нет букв для звуков «rr», «xh» и «zh»."
+            "<p>Есть несколько причин большого количества албанских алфавитов: "
+                    "мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, "
+                    "и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции). "
+                "Для Наума причина точно первая: сохранились его письма, где он отвечал на критику, "
+                    "и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] "
+                    "ради религиозной нейтральности.",
+                EcFont::VITHKUQI },
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -2656,6 +2673,12 @@ constinit const uc::Block uc::blocks[] {
             u8"Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века.",
             EcScript::Syrc },
+    /// @todo [desc] Arabic Extended-B
+    /// @todo [tofu] Arabic Extended-B
+    { 0x0870, 0x089F,
+            "Arabic Extended-B", u8"Арабский расширенный B",
+            {},
+            EcScript::Arab},
     // Arabic ex A OK
     { 0x08A0, 0x08FF,
             "Arabic Extended-A", u8"Арабский расширенный A",
@@ -3576,9 +3599,17 @@ constinit const uc::Block uc::blocks[] {
     // Caucasian OK
     { 0x10530, 0x1056F,
             "Caucasian Albanian", u8"Агванский (Кавказская Албания)", {}, EcScript::Aghb },
+    /// @todo [tofu] Vithkuqi
+    { 0x10570, 0x105BF,
+            "Vithkuqi", u8"Виткутьский албанский", {}, EcScript::Vith },
     // Linear A OK
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
+    /// @todo [tofu] Latin ex F
+    /// @todo [desc] Latin ex F
+    { 0x10780, 0x107BF,
+            "Latin Extended-F", u8"Латиница расширенная F",
+            {}, EcScript::Latn },
     // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
@@ -3653,6 +3684,9 @@ constinit const uc::Block uc::blocks[] {
     // Sogdian OK
     { 0x10F30, 0x10F6F,
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
+    /// @todo [tofu] Old Uyghur
+    { 0x10F70, 0x10FAF,
+            "Old Uyghur", u8"Староуйгурский", {}, EcScript::Ougr },
     // Chorasmian OK, built own font
     { 0x10FB0, 0x10FDF,
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
@@ -3738,6 +3772,12 @@ constinit const uc::Block uc::blocks[] {
     // Soyombo OK
     { 0x11A50, 0x11AAF,
             "Soyombo", u8"Соёмбо", {}, EcScript::Soyo },
+    { 0x11AB0, 0x11ABF,
+            "Unified Canadian Aboriginal Syllabics Extended-A",
+            u8"Канадская слоговая расширенная A",
+            u8"Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), "
+                        "и четыре исторических слога индейцев кри и оджибве.",
+            EcScript::Cans },
     { 0x11AC0, 0x11AFF,
             "Pau Cin Hau", u8"Письмо По Чин Хо", {}, EcScript::Pauc },
     { 0x11C00, 0x11C6F,
@@ -3778,6 +3818,9 @@ constinit const uc::Block uc::blocks[] {
     { 0x12480, 0x1254F,
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
+    /// @todo [tofu] Cypro-Minoan
+    { 0x12F90, 0x12FFF,
+            "Cypro-Minoan", u8"Кипро-минойский", {}, EcScript::Cpmn },
     // Egyptian hiero OK
     { 0x13000, 0x1342F,
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
@@ -3799,6 +3842,9 @@ constinit const uc::Block uc::blocks[] {
     // Mro OK
     { 0x16A40, 0x16A6F,
             "Mro", u8"Мру", {}, EcScript::Mroo },
+    /// @todo [tofu] Tangsa
+    { 0x16A70, 0x16ACF,
+            "Tangsa", u8"Тангса", {}, EcScript::Tnsa },
     { 0x16AD0, 0x16AFF,
             "Bassa Vah", u8"Басса", {}, EcScript::Bass },
     { 0x16B00, 0x16B8F,
@@ -3844,6 +3890,11 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang },
+    /// @todo [tofu] Kana ex B
+    /// @todo [desc] Kana ex B
+    { 0x1AFF0, 0x1AFFF,
+            "Kana Extended-B", u8"Кана расширенная B",
+            {} },
     // Kana supp OK
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная",
@@ -3871,6 +3922,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии" },
+    /// @todo [tofu] Znamenny
+    /// @todo [desc] Znamenny
+    { 0x1CF00, 0x1CFCF,
+            "Znamenny Musical Notation", u8"Знаменное пение" },
     // Byzantine music seemingly OK
     { 0x1D000, 0x1D0FF,
             "Byzantine Musical Symbols",
@@ -3967,6 +4022,10 @@ constinit const uc::Block uc::blocks[] {
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF,
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
+    /// @todo [desc] Latin ex G
+    /// @todo [tofu] Latin ex G
+    { 0x1DF00, 0x1DFFF,
+            "Latin Extended-G", u8"Латиница расширенная G", {}, EcScript::Latn },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная",
@@ -3975,8 +4034,18 @@ constinit const uc::Block uc::blocks[] {
     // NP Hmong OK
     { 0x1E100, 0x1E14F,
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
+    /// @todo [tofu] Toto
+    { 0x1E290, 0x1E2BF,
+            "Toto", u8"Тото", {}, EcScript::Toto },
+    /// @todo [tofu] Wancho
     { 0x1E2C0, 0x1E2FF,
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
+    /// @todo [desc] Ethiopic B
+    /// @todo [tofu] Ethiopic B
+    { 0x1E7E0, 0x1E7FF,
+            "Ethiopic Extended-B", u8"Эфиопский расширенный B",
+            {}, EcScript::Ethi },
+    /// @todo [tofu] Mende Kikakui
     { 0x1E800, 0x1E8DF,
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
     // Adlam OK

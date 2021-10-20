@@ -338,6 +338,7 @@ namespace uc {
         UMLAUT_SYMBOL,
           Z_USY_1,        
         VAI,
+        VITHKUQI,
         WARANG_CITI,
         YEZIDI,
         YI,

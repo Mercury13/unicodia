@@ -156,6 +156,7 @@ namespace uc {
         Tirh,   // Tirhuta
         Ugar,   // Ugaritic
         Vaii,   // Vai
+        Vith,   // Vithkuqi Albanian
         Wara,   // Warang Citi
         Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
@@ -170,7 +171,7 @@ namespace uc {
         Bass = Zyyy,        // beyond BMP
         //Blis  no chars — Blissymbols
         //Cirt  no chars — Cirth
-        //Cpmn  no chars — Cypro-Minoan
+        Cpmn = Zyyy,        // Cypro-Minoan, U14
         //Cyrs  no chars — Cyrillic Old Church
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars — Egyptian demotic
@@ -201,6 +202,7 @@ namespace uc {
         //Moon  no chars — Moon’s embossing
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
+        Ougr = Zyyy,        // Old Uyghur, U14
         Pauc = Zyyy,        // beyond BMP
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
@@ -212,6 +214,8 @@ namespace uc {
         //Syrj  no chars — Syriac Western
         //Syrn  no chars — Syriac Eastern
         //Teng  no chars — Tengwar
+        Tnsa = Zyyy,        // Tangsa, U14
+        Toto = Zyyy,        // Toto, U14
         //Visp  no chars — Visible speech
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
@@ -250,6 +254,7 @@ namespace uc {
         V_12_0,
         V_12_1,
         V_13_0,
+        V_14_0,
         NN,
         UNKNOWN = NN,
         FIRST = 0,
