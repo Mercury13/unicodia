@@ -459,7 +459,7 @@ namespace uc {
 
         //unsigned nNewChars = 0;
     };
-    extern const Version versionInfo[static_cast<int>(EcVersion::NN)];
+    extern const Version versionInfo[];
 
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;

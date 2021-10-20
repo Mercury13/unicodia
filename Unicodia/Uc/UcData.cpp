@@ -281,7 +281,7 @@ constinit const uc::ScriptType uc::scriptTypeInfo[] {
 static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
 
 
-const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
+const uc::Version uc::versionInfo[] {
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
     { "1.1",  1993 },
@@ -307,8 +307,9 @@ const uc::Version uc::versionInfo[static_cast<int>(uc::EcVersion::NN)] {
     { "12.0", 2019 },
     { "12.1", 2019 },
     { "13.0", 2020 },
-    //{ "14.0", 2021 },       //check for equal number
+    { "14.0", 2021 },
 };
+static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
 
 constexpr auto CT_NOCHAR =
