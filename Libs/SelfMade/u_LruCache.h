@@ -11,10 +11,11 @@ public:
 };
 
 
-template <class T, class V>
-concept Making = requires(const T& t, V& v) {
-    { t(v) };
+template <class Maker, class What>
+concept Making = requires(const Maker& that, What& what) {
+    { maker(what) };
 };
+
 
 template <class V, class Body> requires Making<Body,V>
 class MakerT

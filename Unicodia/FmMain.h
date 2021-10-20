@@ -94,6 +94,7 @@ protected:
 
 enum class TableColors { NO, YES };
 enum class CharSet { SAFE, FULL };
+enum class TableDraw { INTERNAL, CUSTOM };
 
 class CharsModel
         : public QAbstractTableModel,
@@ -117,10 +118,12 @@ public:
                         int role = Qt::DisplayRole) const override;
     const QFont* fontAt(const QModelIndex& index) const;
     const QFont* fontAt(const uc::Cp& cp) const;
+    static const QFont* fontAt(const uc::Cp& cp, const uc::Block*& hint);
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index, CharSet chset = CharSet::FULL) const;
     QString textAt(const uc::Cp& cp, CharSet chset = CharSet::FULL) const;
+    static QString textAt(const uc::Cp& cp, const uc::Block*& hint, CharSet chset = CharSet::FULL);
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -141,6 +144,9 @@ public:
     // Delegate
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
+    static void drawChar(QPainter* painter, const QRect& rect,
+                const uc::Cp& cp, const QColor& color,
+                const uc::Block*& hint, TableDraw mode);
 protected:
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,
@@ -149,6 +155,8 @@ protected:
             QPainter* painter,
             const QStyleOptionViewItem& option,
             const QModelIndex& index) const override;
+    void drawChar(QPainter* painter, const QRect& rect,
+                const QModelIndex& index, const QColor& color, TableDraw mode) const;
 private:
     RowCache rows;
     static constexpr auto SHRINK_Q = 4;
@@ -156,8 +164,6 @@ private:
     mutable struct Hint {
         const uc::Block* cell = &uc::blocks[0];
     } hint;
-    void tryDrawCustom(QPainter* painter, const QRect& rect,
-                const QModelIndex& index, const QColor& color) const;
 };
 
 

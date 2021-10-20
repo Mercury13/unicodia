@@ -35,7 +35,6 @@ template class LruCache<char32_t, QPixmap>;
 using namespace std::string_view_literals;
 
 namespace {
-    enum class TableDraw { INTERNAL, CUSTOM };
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 }
@@ -198,12 +197,18 @@ const QFont* CharsModel::fontAt(const QModelIndex& index) const
 }
 
 
-const QFont* CharsModel::fontAt(const uc::Cp& cp) const
+const QFont* CharsModel::fontAt(const uc::Cp& cp, const uc::Block*& hint)
 {
     if (cp.drawMethod() > uc::DrawMethod::LAST_FONT)
         return {};
-    auto& font = cp.font(hint.cell);
+    auto& font = cp.font(hint);
     return &font.get(font.q.table, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
+}
+
+
+const QFont* CharsModel::fontAt(const uc::Cp& cp) const
+{
+    return fontAt(cp, hint.cell);
 }
 
 
@@ -239,13 +244,16 @@ QString CharsModel::textAt(const QModelIndex& index, CharSet chset) const
 
 
 QString CharsModel::textAt(const uc::Cp& cp, CharSet chset) const
+    { return textAt(cp, hint.cell, chset); }
+
+QString CharsModel::textAt(const uc::Cp& cp, const uc::Block*& hint, CharSet chset)
 {
     if (chset == CharSet::SAFE) {
 //        hint.cell = uc::blockOf(cp.subj, hint.cell);
 //        if (hint.cell->flags.have(uc::Bfg::EXPERIMENT))
 //            return {};
     }
-    return cp.sampleProxy(hint.cell).text;
+    return cp.sampleProxy(hint).text;
 }
 
 
@@ -628,34 +636,40 @@ namespace {
 }   // anon namespace
 
 
-void CharsModel::tryDrawCustom(QPainter* painter, const QRect& rect,
-            const QModelIndex& index, const QColor& color) const
+void CharsModel::drawChar(QPainter* painter, const QRect& rect,
+            const uc::Cp& cp, const QColor& color,
+            const uc::Block*& hint, TableDraw mode)
+{
+    switch (cp.drawMethod()) {
+    case uc::DrawMethod::ABBREVIATION:
+        drawAbbreviation(painter, rect, cp.abbrev(), color, cp.subj);
+        break;
+    case uc::DrawMethod::SPACE:
+        drawSpace(painter, rect, *fontAt(cp, hint), color, cp.subj);
+        break;
+    case uc::DrawMethod::SAMPLE:
+        if (mode == TableDraw::CUSTOM) {
+            // Char
+            painter->setFont(*fontAt(cp, hint));
+            painter->setBrush(color);
+            painter->drawText(rect,
+                              Qt::AlignCenter | Qt::TextSingleLine,
+                              textAt(cp, hint));
+        } break;
+    }
+    if (cp.isDeprecated())
+        drawDeprecated(painter, rect);
+}
+
+void CharsModel::drawChar(QPainter* painter, const QRect& rect,
+            const QModelIndex& index, const QColor& color, TableDraw mode) const
 {
     auto ch = charAt(index);
     if (ch) {
-        switch (ch->drawMethod()) {
-        case uc::DrawMethod::ABBREVIATION:
-            drawAbbreviation(painter, rect, ch->abbrev(), color, ch->subj);
-            break;
-        case uc::DrawMethod::SPACE: {
-                auto color = fgAt(*ch, TableColors::YES);
-                if (!color.isValid())
-                    color = owner->palette().windowText().color();
-                drawSpace(painter, rect, *fontAt(*ch), color, ch.code);
-            } break;
-        case uc::DrawMethod::SAMPLE:
-            if constexpr (TABLE_DRAW == TableDraw::CUSTOM) {
-                // Char
-                painter->setFont(*fontAt(*ch));
-                auto specialColor = fgAt(*ch, TableColors::YES);
-                painter->setBrush(specialColor.isValid() ? specialColor : color);
-                painter->drawText(rect,
-                                  Qt::AlignCenter | Qt::TextSingleLine,
-                                  textAt(*ch));
-            } break;
-        }
-        if (ch->isDeprecated())
-            drawDeprecated(painter, rect);
+        auto color1 = fgAt(*ch, TableColors::YES);
+        if (!color1.isValid())
+            color1 = color;
+        drawChar(painter, rect, *ch, color1, hint.cell, mode);
     }
 }
 
@@ -691,17 +705,17 @@ void CharsModel::paintItem(
             sob.rect = option.rect;
         owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
         SuperD::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner->palette().buttonText().color());
+        drawChar(painter, option.rect, index, owner->palette().buttonText().color(), TABLE_DRAW);
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
         owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
         SuperD::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner->palette().windowText().color());
+        drawChar(painter, option.rect, index, owner->palette().windowText().color(), TABLE_DRAW);
     } else {
         SuperD::paint(painter, option, index);
-        tryDrawCustom(painter, option.rect, index, owner->palette().windowText().color());
+        drawChar(painter, option.rect, index, owner->palette().windowText().color(), TABLE_DRAW);
     }
 }
 
