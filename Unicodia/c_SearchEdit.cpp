@@ -100,3 +100,38 @@ void CharsTable::focusOutEvent(QFocusEvent* ev)
     Super::focusOutEvent(ev);
     emit focusOut();
 }
+
+
+///// SearchList ///////////////////////////////////////////////////////////////
+
+
+void SearchList::keyPressEvent(QKeyEvent* ev)
+{
+    switch (ev->key()) {
+    case Qt::Key_Enter:
+    case Qt::Key_Return:
+        ev->accept();
+        if (auto index = currentIndex(); index.isValid()) {
+            emit enterPressed(index.row());
+        }
+        break;
+    default:
+        Super::keyPressEvent(ev);
+        break;
+    }
+}
+
+
+void SearchList::mouseDoubleClickEvent(QMouseEvent* ev)
+{
+    if (ev->button() == Qt::LeftButton
+            && !ev->modifiers().testAnyFlags(Qt::KeyboardModifierMask)) {
+        auto pt = ev->pos();
+        auto index = indexAt(pt);
+        if (index.isValid()) {
+            emit enterPressed(index.row());
+        }
+    } else {
+        Super::mouseDoubleClickEvent(ev);
+    }
+}

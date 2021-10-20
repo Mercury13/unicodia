@@ -3,6 +3,7 @@
 // Qt
 #include <QLineEdit>
 #include <QComboBox>
+#include <QListView>
 
 // Qt ex
 #include "c_WrapAroundTable.h"
@@ -69,4 +70,18 @@ protected:
 signals:
     void focusIn();
     void focusOut();
+};
+
+
+class SearchList : public QListView
+{
+    Q_OBJECT
+    using Super = QListView;
+public:
+    using Super::Super;
+protected:
+    void keyPressEvent(QKeyEvent* ev) override;
+    void mouseDoubleClickEvent(QMouseEvent* ev) override;
+signals:
+    void enterPressed(int index);
 };
