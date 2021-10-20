@@ -10,7 +10,13 @@ public:
     virtual ~Maker() = default;
 };
 
-template <class V, class Body>
+
+template <class T, class V>
+concept Making = requires(const T& t, V& v) {
+    { t(v) };
+};
+
+template <class V, class Body> requires Making<Body,V>
 class MakerT
 {
 public:
@@ -56,7 +62,13 @@ private:
 public:
     using Super::Super;
     LruCache(size_t aCapacity);
+
     V& get(const K& key, const Maker<V>& maker);
+
+    template <class Body> requires Making<Body,V>
+        V& getT(const K& key, const Body& body)
+            { return get(key, MakerT<V,Body>(body)); }
+
     using Super::size;
     using Super::capacity;
 protected:
