@@ -336,6 +336,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BEAT",           Dicf::PART_NOUN },
     { "BIRD",           Dicf::PART_NOUN },  // For some CJK hiero
     { "BOX",            Dicf::PART_NOUN },
+    { "BRDA",           Dicf::PART_NOUN },
     { "CANDRABINDU",    Dicf::PART_NOUN },
     { "CARET",          Dicf::PART_NOUN },  // For APL not really, but OK
     { "CIRCLE",         Dicf::PART_NOUN },
@@ -383,6 +384,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "WAVE",           Dicf::PART_NOUN },
     { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
+    { "YIG",            Dicf::PART_NOUN },
     { "YIN",            Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
     { "YUS",            Dicf::PART_NOUN },   // …but yus is big & little → do not cap
 
@@ -476,6 +478,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "CASKET",         Dicf::PART_ADJECTIVE },  // OK here, runes
     { "CIRCLED",        Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
     { "CLOSED",         Dicf::PART_ADJECTIVE },
+    { "CLOSING",        Dicf::PART_ADJECTIVE },
     { "COMBINING",      Dicf::PART_ADJECTIVE },
     { "CROSSED",        Dicf::PART_ADJECTIVE },
     { "CRYPTOGRAMMIC",  Dicf::PART_ADJECTIVE },
