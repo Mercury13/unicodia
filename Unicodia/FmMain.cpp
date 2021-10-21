@@ -365,8 +365,8 @@ QModelIndex CharsModel::indexOf(char32_t code)
 
 void CharsModel::build()
 {
-    rows.clear();
     beginResetModel();
+    rows.clear();
     const uc::Block* hint = &uc::blocks[0];
     for (auto& cp : uc::cpInfo) {
         if (isCharCollapsed(cp.subj, hint))
@@ -1392,7 +1392,7 @@ void FmMain::cjkSetCollapseState(bool x)
 {
     if (model.isCjkCollapsed == x)
         return;
-    model.isCjkCollapsed = false;
+    model.isCjkCollapsed = x;
     model.build();
     cjkReflectCollapseState();
 }
