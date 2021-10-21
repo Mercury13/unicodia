@@ -56,7 +56,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "CYRILLIC",       Dicf::TRIG_SCRIPT },
       { "KOMI"sv,       Dicf::TRIG_SCRIPT },
       { "UKRAINIAN",    Dicf::TRIG_SCRIPT },
-      { "BYELORUSSIAN-UKRAINIAN", { Dicf::TRIG_SCRIPT, "Byelorussian-Ukrainian"sv } },
+      { "BYELORUSSIAN-UKRAINIAN", { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Byelorussian-Ukrainian"sv } },
       { "BASHKIR",      Dicf::TRIG_SCRIPT },
     { "DEVANAGARI",     Dicf::TRIG_SCRIPT },
     { "DOGRA",          Dicf::TRIG_SCRIPT },
@@ -111,7 +111,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "KANNADA",        Dicf::TRIG_SCRIPT },
     { "KATAKANA",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KATAKANA-HIRAGANA", { Dicf::TRIG_SCRIPT, "Katakana-Hiragana"sv } },
-    { "KAYAH",          { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LI"sv } },
+    { "KAYAH",          { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE, {}, "LI"sv } },
     { "KHAROSHTHI",     Dicf::TRIG_SCRIPT },
     { "KHMER",          Dicf::TRIG_SCRIPT },
     { "KHOJKI",         Dicf::TRIG_SCRIPT },
@@ -149,7 +149,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MRO",            Dicf::TRIG_SCRIPT },
     { "MULTANI",        Dicf::TRIG_SCRIPT },
     { "MYANMAR",        Dicf::TRIG_SCRIPT },
-     { "KHAMTI",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "NABATAEAN",      Dicf::TRIG_SCRIPT },
     { "NANDINAGARI",    Dicf::TRIG_SCRIPT },
     { "NEWA",           Dicf::TRIG_SCRIPT },
@@ -232,13 +231,13 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MICR"sv,         Dicf::CAP_ALL },
 
     // Capitalize next
+    { "AFFIX",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "CHARACTER",      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "CHOSEONG",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
       { "JUNGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
       { "JONGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGIT",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
     { "FRACTION",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "GALI",           Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT },
     { "HIEROGLYPH",     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "IDEOGRAM",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "LETTER",         Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -290,6 +289,33 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SAYISI",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SOUTH-SLAVEY",   { Dicf::PART_ADJECTIVE, "South-Slavey" } },
 
+    // Myanmar nations
+    { "AITON",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KAREN",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+      // KAYAH (above)
+    { "KHAMTI",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "MON",            Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "PALAUNG",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "PWO",            Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "RUMAI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SGAW",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SHAN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+      { "COUNCIL",      Dicf::CAP_TITLE | Dicf::PART_MIXED },
+    { "SHWE",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+
+    // Mongolian nations/alphabets
+    { "ALI",            Dicf::PART_ADJECTIVE },
+    { "GALI",           Dicf::CAP_SMALL | Dicf::TRIG_CAP_NEXT },
+    { "MANCHU",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SIBE",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "TODO",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+
+    // Indonesian nations
+    { "KARO",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "MANDAILING",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "PAKPAK",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SIMALUNGUN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+
     // Other nations
     { "AKHMIMIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ASSYRIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
@@ -319,6 +345,7 @@ const std::map<std::string_view, DicEntry> dictionary {
      { "QUADCOLON",     Dicf::PART_NOUN },
     { "COMMA",          Dicf::PART_NOUN },
     { "CROSS",          Dicf::PART_NOUN },
+    { "DAMARU",         Dicf::PART_NOUN },
     { "DANDA",          Dicf::PART_NOUN },
     { "DIVIDER",        Dicf::PART_NOUN },
     { "DNA",            Dicf::PART_NOUN | Dicf::CAP_ALL },
@@ -334,6 +361,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "REDUPLICATION",  Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING",           Dicf::PART_NOUN },
+    { "SECANT",         Dicf::PART_NOUN },
     { "SECTION",        Dicf::PART_NOUN },
     { "SEPARATOR",      Dicf::PART_NOUN },
     { "SHAD",           Dicf::PART_NOUN },
@@ -352,6 +380,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "VIRAMA",         Dicf::PART_NOUN },
     { "VISARGA",        Dicf::PART_NOUN },
     { "VOICING",        Dicf::PART_NOUN },
+    { "WAVE",           Dicf::PART_NOUN },
     { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
     { "YIN",            Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
@@ -435,6 +464,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ALVEOLAR",       Dicf::PART_ADJECTIVE },
     { "ARCHAIC",        Dicf::PART_ADJECTIVE },
     { "ASPIRATED",      Dicf::PART_ADJECTIVE },
+    { "ATACHED",        Dicf::PART_ADJECTIVE },
     { "BARRED",         Dicf::PART_ADJECTIVE },
     { "BIG",            Dicf::PART_ADJECTIVE },
     { "BIDENTAL",       Dicf::PART_ADJECTIVE },
@@ -501,8 +531,10 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MID",            Dicf::PART_ADJECTIVE },
     { "MIDDLE",         Dicf::PART_ADJECTIVE },
     { "MONOGRAPH",      Dicf::PART_ADJECTIVE },
+    { "NASAL",          Dicf::PART_ADJECTIVE },
     { "NEW",            Dicf::PART_ADJECTIVE },
     { "NORTH",          Dicf::PART_ADJECTIVE },
+    { "NORTHERN",       Dicf::PART_ADJECTIVE },
     { "OBLIQUE",        Dicf::PART_ADJECTIVE },
     { "OPEN",           Dicf::PART_ADJECTIVE },
     { "OVERLONG",       Dicf::PART_ADJECTIVE },
@@ -523,6 +555,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "RETROFLEX",      Dicf::PART_ADJECTIVE },
     { "RIGHT",          Dicf::PART_ADJECTIVE },
     { "RIGHT-STEM",     Dicf::PART_ADJECTIVE },
+    { "ROMANIAN",       Dicf::PART_ADJECTIVE },
     { "ROUNDED",        Dicf::PART_ADJECTIVE },
     { "SARA",           Dicf::PART_ADJECTIVE },
     { "SCRIPT",         Dicf::PART_MIXED },
@@ -539,6 +572,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SPACING",        Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
     { "SOUTH",          Dicf::PART_ADJECTIVE },
+    { "SOUTHERN",       Dicf::PART_ADJECTIVE },
     { "STRAIGHT",       Dicf::PART_ADJECTIVE },
     { "STRETCHED",      Dicf::PART_ADJECTIVE },
     { "SYLLABIC",       Dicf::PART_ADJECTIVE },
@@ -546,6 +580,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "TALL",           Dicf::PART_ADJECTIVE },
     { "THREE-D",        { Dicf::PART_ADJECTIVE, "three-D" } },
     { "THREE-LEGGED",   Dicf::PART_ADJECTIVE },
+    { "TIGHT",          Dicf::PART_ADJECTIVE },
     { "TOP",            Dicf::PART_ADJECTIVE },
     { "TRIANGULAR",     Dicf::PART_ADJECTIVE },
     { "TRIPLE",         Dicf::PART_ADJECTIVE },
@@ -631,7 +666,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "H",              Dicf::CAP_TITLE },
     { "HAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "I",              Dicf::CAP_TITLE },
+    { "I",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
     { "J",              Dicf::CAP_TITLE },
     { "JEEM",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "K",              Dicf::CAP_TITLE },
@@ -653,7 +688,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "QAF",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "R",              Dicf::CAP_TITLE },
     { "REH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "S",              Dicf::PART_MAYBE_LETTER },
+    { "S",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
+    { "SA",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SAD",            Dicf::PART_MAYBE_LETTER },
     { "SEEN",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SHEEN",          Dicf::PART_MAYBE_LETTER },
@@ -949,6 +985,8 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Duployan letter T R S")                     // Same
     EX("Duployan letter K R S")                     // Same
     EX("Duployan letter G R S")                     // Same
+    EX("Duployan affix Attached I hook")            // Same
+    EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -973,6 +1011,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
     { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
     { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::NEXT_CAP },
+    { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
 };
 
 
@@ -1028,7 +1067,7 @@ const std::map<char32_t, std::string_view> abbrevs {
 
 // Just capitalize them!
 const std::set<std::string_view> cuneiformSymbols {
-    "BAR", "LAM"
+    "BAR", "LAM", "SA"
 };
 
 const std::set<std::string_view> cuneiformKeywords {
