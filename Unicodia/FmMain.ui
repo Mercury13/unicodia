@@ -485,7 +485,7 @@ padding-bottom: 1px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QListView" name="listSearch">
+                 <widget class="SearchList" name="listSearch">
                   <property name="frameShape">
                    <enum>QFrame::NoFrame</enum>
                   </property>
@@ -660,6 +660,11 @@ padding-bottom: 1px;</string>
   <customwidget>
    <class>CharsTable</class>
    <extends>QTableView</extends>
+   <header>c_SearchEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>SearchList</class>
+   <extends>QListView</extends>
    <header>c_SearchEdit.h</header>
   </customwidget>
  </customwidgets>

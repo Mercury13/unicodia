@@ -179,15 +179,20 @@ public:
 class SearchModel : public QAbstractTableModel
 {
 public:
-    int rowCount(const QModelIndex&) const override;
+    SearchModel(QWidget* aSample) : sample(aSample) {}
+    int size() const { return v.size(); }
+    int rowCount(const QModelIndex&) const override { return v.size(); }
     int columnCount(const QModelIndex&) const override { return 1; }
     QVariant data(const QModelIndex& index, int role) const override;
     void set(SafeVector<const uc::Cp*>&& x);
     void clear();
     bool hasData() const { return !v.empty(); }
+    const uc::Cp& cpAt(size_t index) const;
 private:
+    QWidget* const sample;
     SafeVector<const uc::Cp*> v;
-    LruCache<char32_t, QPixmap> cache { 300 };
+    mutable LruCache<char32_t, QPixmap> cache { 300 };
+    mutable const uc::Block* hint = &uc::blocks[0];
 };
 
 
@@ -301,6 +306,7 @@ private slots:
     void closeSearch();
     void startSearch();
     void focusSearch();
+    void searchEnterPressed(int index);
     void on_comboBlock_currentIndexChanged(int index);
 };
 

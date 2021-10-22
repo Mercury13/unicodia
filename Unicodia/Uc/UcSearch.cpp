@@ -66,7 +66,8 @@ bool uc::isNameChar(char32_t cp)
     return (cp >= 'A' && cp <= 'Z')
         || (cp >= 'a' && cp <= 'z')
         || (cp >= '0' && cp <= '9')
-        || (cp == '-');
+        || (cp == '-')
+        || (cp == ' ');
 }
 
 
@@ -174,7 +175,7 @@ uc::SearchResult uc::doSearch(QString what)
         auto u32 = what.toUcs4();
         if (u32.size() == 1) {
             auto code = u32[0];
-            if (!isNameChar(code)) {
+            if (code == ' ' || !isNameChar(code)) {
                 return uc::findCode(code);
             }
         }

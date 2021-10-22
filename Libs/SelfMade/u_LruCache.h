@@ -13,17 +13,17 @@ public:
 
 template <class Maker, class What>
 concept Making = requires(const Maker& that, What& what) {
-    { maker(what) };
+    { that(what) };
 };
 
 
 template <class V, class Body> requires Making<Body,V>
-class MakerT
+class MakerT : public Maker<V>
 {
 public:
-    Body& body;
+    const Body& body;
     MakerT(const Body& aBody) : body(aBody) {}
-    virtual void make(V& v) const { body(v); }
+    virtual void make(V& v) const override { body(v); }
 };
 
 

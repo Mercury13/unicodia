@@ -652,6 +652,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
             // Char
             painter->setFont(*fontAt(cp, hint));
             painter->setBrush(color);
+            painter->setPen(color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
                               textAt(cp, hint));
@@ -749,17 +750,19 @@ bool CharsModel::isCharCollapsed(char32_t code) const
 ///// SearchModel //////////////////////////////////////////////////////////////
 
 
-int SearchModel::rowCount(const QModelIndex&) const
-{
-    return v.size();
-}
-
-
 void SearchModel::clear()
 {
     beginResetModel();
     v.clear();
     endResetModel();
+}
+
+
+const uc::Cp& SearchModel::cpAt(size_t index) const
+{
+    if (index >= v.size())
+        return uc::cpInfo[0];
+    return *v[index];
 }
 
 
@@ -773,11 +776,44 @@ void SearchModel::set(SafeVector<const uc::Cp*>&& x)
 
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
+    auto& cp = cpAt(index.row());
+    char buf[30];
+
     switch (role) {
     case Qt::DisplayRole:
-        if (static_cast<size_t>(index.row()) < v.size()) {
-            return v[index.row()]->viewableName();
-        } else { return {}; }
+        uc::sprintUPLUS(buf, cp.subj.ch32());
+        return QString(buf) + '\n' + cp.viewableName();
+
+    case Qt::DecorationRole:
+        return cache.getT(cp.subj.ch32(),
+            [&cp, this](QPixmap& pix) {
+                auto& font = sample->font();
+                QFontMetrics metrics{font};
+                auto size = (metrics.ascent() + metrics.descent()) * 3;
+                if (pix.size() != QSize{size, size}) {
+                    pix = QPixmap{size, size};
+                }
+                pix.fill(Qt::transparent);
+
+                // Create painter
+                QColor color = sample->palette().windowText().color();
+                QPainter painter(&pix);
+                auto bounds = pix.rect();
+
+                // Create transparent color
+                QColor clTrans(color);
+                clTrans.setAlpha(30);
+
+                // Draw bounds
+                auto bounds1 = bounds;
+                bounds1.adjust(0, 0, -1, -1);
+                painter.setBrush(Qt::NoBrush);
+                painter.setPen(clTrans);
+                painter.drawRect(bounds1);
+
+                // OK w/o size, as 39 ≈ 40
+                CharsModel::drawChar(&painter, bounds, cp, color, hint, TableDraw::CUSTOM);
+            });
     default:
         return {};
     }
@@ -866,6 +902,7 @@ FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain),
       model(this),
+      searchModel(this),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG)
 {
     ui->setupUi(this);
@@ -956,6 +993,7 @@ FmMain::FmMain(QWidget *parent)
     ui->listSearch->setModel(&searchModel);
     connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
+    connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
     // Terms
     initTerms();
@@ -1181,7 +1219,7 @@ void FmMain::showCp(MaybeChar ch)
     // Code
     char buf[30];
     { QString ucName;
-        snprintf(buf, std::size(buf), "U+%04X", static_cast<unsigned>(ch.code));
+        uc::sprintUPLUS(buf, ch.code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         ui->lbCharCode->setText(ucName);
     }
@@ -1570,4 +1608,11 @@ void FmMain::focusSearch()
 {
     if (searchModel.hasData())
         openSearch();
+}
+
+
+void FmMain::searchEnterPressed(int index)
+{
+    selectCharEx(searchModel.cpAt(index).subj);
+    ui->tableChars->setFocus();
 }

@@ -658,6 +658,13 @@ namespace uc {
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
+    inline size_t sprintUPLUS(char* buf, size_t n, char32_t code)
+        { return snprintf(buf, n, "U+%04X", static_cast<unsigned>(code)); }
+
+    template<size_t N>
+    inline size_t sprintUPLUS(char (&buf)[N], char32_t code)
+        { return sprintUPLUS(buf, N, code); }
+
 }   // namespace uc
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
