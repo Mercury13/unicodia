@@ -927,10 +927,10 @@ TEST (Decap, BugGreekCross)
 
 ///
 ///  BUG: Cypro-Minoan sign Cm005b, ad what to do?
-///  Cause: strange interaction of custom decapitalization with
-///     prefix dictionary
-///  Solution: did not reprogram, just fixed prefix dictionary
-///     CYPRO-MINOAN → Cypro-Minoan
+///  Cause: custom decapitalization replaced originals, so you needed to write
+///      ~~CYPRO-MINOAN~~ → Cypro-Minoan
+///  Solution: original + isAsIs → customCap
+///    Another clause related to Sutton SignWriting was discovered
 ///
 TEST (Decap, BugCyproMinoan)
 {

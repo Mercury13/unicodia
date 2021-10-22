@@ -1005,7 +1005,6 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SUBSCRIPT"sv }, PrefixAction::NEXT_CAP },
     { { "INDIC"sv, "SIYAQ"sv, "NUMBER"sv }, PrefixAction::REST_CAPSMALL },
     { { "MODIFIER"sv, "LETTER"sv, "CHINESE"sv, "TONE"sv, }, PrefixAction::NEXT_CAP },
-    { { "SIGNWRITING"sv }, PrefixAction::REST_SMALL },
     { { "RUNIC"sv, "LETTER"sv, "FRANKS"sv, "CASKET"sv }, PrefixAction::REST_CAP },      // prevent next!
     { { "RUNIC"sv, "LETTER"sv }, PrefixAction::REST_CAP },
     { { "CIRCLED"sv, "KATAKANA"sv }, PrefixAction::NEXT_CAP },  // IDK what to do, normal rules fail
@@ -1013,7 +1012,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "MIAO"sv, "LETTER"sv, "YI"sv }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
     { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
     { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
-    { { "Cypro-Minoan"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },  // Because of custom capitalization
+    { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },
     { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
 };
 
@@ -1318,13 +1317,12 @@ const std::set<std::string_view> langNames {
 
 namespace {
 
-    enum class WordState { SMALL, TITLE, AS_IS_TITLE, AS_IS, ALL_CAP };
+    enum class WordState { SMALL, TITLE, CUSTOM_TITLE, CUSTOM, ALL_CAP };
 
     struct Word {
-        std::string_view original;
+        std::string_view original, customCap;
         bool isAllCap = false;
         bool isCapital = false;
-        bool isAsIs = false;
         bool nextNoun = false;
         bool nextAdjective = false;
         bool nextNumeral = false;
@@ -1560,8 +1558,7 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
             }
             // Check for custom capitalization
             if (!wordInfo.customCap.empty()) {
-                word.original = wordInfo.customCap;
-                word.isAsIs = true;
+                word.customCap = wordInfo.customCap;
             }
         }
 
@@ -1573,8 +1570,7 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
                 for (size_t i = 0; i < STR_IDEOGRAPH.length(); ++i) {
                     w[i] = tolower(w[i]);
                 }
-                word.original = w;
-                word.isAsIs = true;
+                word.customCap = w;
             }
         }
 
@@ -1722,8 +1718,8 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
             state = WordState::ALL_CAP;
         } else if (word.dicFlags.have(Dicf::CAP_TITLE)) {
             state = WordState::TITLE;
-        } else if (word.isAsIs) {
-            state = word.isCapital ? WordState::AS_IS_TITLE : WordState::AS_IS;
+        } else if (!word.customCap.empty()) {
+            state = word.isCapital ? WordState::CUSTOM_TITLE : WordState::CUSTOM;
         } else if (word.isCapital) {
             state = WordState::TITLE;
         }
@@ -1731,19 +1727,19 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
         if (iWord == 0) {
             switch (state) {
             case WordState::SMALL: state = WordState::TITLE; break;
-            case WordState::AS_IS: state = WordState::AS_IS_TITLE; break;
+            case WordState::CUSTOM: state = WordState::CUSTOM_TITLE; break;
             case WordState::TITLE:
-            case WordState::AS_IS_TITLE:
+            case WordState::CUSTOM_TITLE:
             case WordState::ALL_CAP:;
             }
         }
 
         switch (state) {
-        case WordState::AS_IS:
-            r.append(word.original);
+        case WordState::CUSTOM:
+            r.append(word.customCap);
             break;
-        case WordState::AS_IS_TITLE:
-            appendAsIsTitle(r, word.original);
+        case WordState::CUSTOM_TITLE:
+            appendAsIsTitle(r, word.customCap);
             break;
         case WordState::SMALL:
             appendLower(r, word.original);
