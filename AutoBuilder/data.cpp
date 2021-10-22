@@ -1013,7 +1013,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "MIAO"sv, "LETTER"sv, "YI"sv }, PrefixAction::NEXT_CAP }, // Yi is ambiguous
     { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
     { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
-    { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::NEXT_CAP },
+    { { "Cypro-Minoan"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },  // Because of custom capitalization
     { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
 };
 

@@ -923,3 +923,17 @@ TEST (Decap, BugGreekCross)
     auto r = decapitalize("VERY HEAVY GREEK CROSS");
     EXPECT_EQ("Very heavy Greek cross", r);
 }
+
+
+///
+///  BUG: Cypro-Minoan sign Cm005b, ad what to do?
+///  Cause: strange interaction of custom decapitalization with
+///     prefix dictionary
+///  Solution: did not reprogram, just fixed prefix dictionary
+///     CYPRO-MINOAN → Cypro-Minoan
+///
+TEST (Decap, BugCyproMinoan)
+{
+    auto r = decapitalize("CYPRO-MINOAN SIGN CM005B");
+    EXPECT_EQ("Cypro-Minoan sign CM005B", r);
+}
