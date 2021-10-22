@@ -931,7 +931,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Юникоду{{_}}13.0.",
                 EcFont::EGYPTIAN },
     // Elbasan OK, none in W10 → installed Google Noto
-    /// @todo [link,U14] Vithkuqi
     { "Elba", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Эльбасанский албанский", u8"XVIII век",
