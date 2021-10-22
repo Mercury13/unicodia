@@ -476,7 +476,7 @@ TEST (Decap, ToneLao)
 TEST (Decap, ToneMyanmar)
 {
     auto r = decapitalize("MYANMAR TONE MARK SGAW KAREN HATHI");
-    EXPECT_EQ("Myanmar tone mark Sgaw karen hathi", r);
+    EXPECT_EQ("Myanmar tone mark Sgaw Karen Hathi", r);
 }
 
 
@@ -486,7 +486,7 @@ TEST (Decap, ToneMyanmar)
 TEST (Decap, ToneMyanmar1)
 {
     auto r = decapitalize("MYANMAR SIGN SHAN COUNCIL EMPHATIC TONE");
-    EXPECT_EQ("Myanmar sign Shan council emphatic tone", r);
+    EXPECT_EQ("Myanmar sign Shan Council emphatic tone", r);
 }
 
 
@@ -607,7 +607,7 @@ TEST (Decap, ToneKayah)
 TEST (Decap, ToneMyanmar2)
 {
     auto r = decapitalize("MYANMAR SIGN PAO KAREN TONE");
-    EXPECT_EQ("Myanmar sign Pao karen tone", r);
+    EXPECT_EQ("Myanmar sign Pao Karen tone", r);
 }
 
 
