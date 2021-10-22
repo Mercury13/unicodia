@@ -3601,7 +3601,7 @@ constinit const uc::Block uc::blocks[] {
     // Caucasian OK
     { 0x10530, 0x1056F,
             "Caucasian Albanian", u8"Агванский (Кавказская Албания)", {}, EcScript::Aghb },
-    /// @todo [tofu] Vithkuqi
+    // Vithkuqi OK
     { 0x10570, 0x105BF,
             "Vithkuqi", u8"Виткутьский албанский", {}, EcScript::Vith },
     // Linear A OK
