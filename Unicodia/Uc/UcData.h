@@ -517,7 +517,7 @@ namespace uc {
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
 
-        mutable std::unique_ptr<QPixmap> icon {};
+        mutable QPixmap* icon = nullptr;
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
@@ -536,9 +536,6 @@ namespace uc {
         unsigned nNonChars() const;
         unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
         unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
-
-        Block& operator = (const Block&) = delete;
-        Block& operator = (Block&&) = delete;
     };
 
 

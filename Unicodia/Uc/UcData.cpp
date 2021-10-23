@@ -374,7 +374,7 @@ constexpr auto CT_SPACE =
         "<p>Все пробелы являются [[pt:spacing|протяжёнными]] символами. "
             "Пробелы нулевой ширины, которые не оставляют места, отнесены не к пробелам, а к [[pt:format|форматирующим]]."sv;
 
-constexpr auto CT_ASCII =
+constexpr std::u8string_view CT_ASCII =
     u8"'''American Standard Code for Information Interchange (ASCII)'''{{-}}разработанная в США в 1963 семибитная кодировка символов. "
             "Ширину в 7 бит выбрали как компромисс для передачи данных по телеграфу, "
                 "к тому же ASCII легко обрезать до 6 бит, оставив символы 40…5F и 20…3F. "
@@ -2571,7 +2571,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
     { 0x0000, 0x007F,
-            "Basic Latin", u8"Латиница базовая", CT_ASCII, EcScript::Latn },
+            "Basic Latin", u8"Латиница базовая", CT_ASCII, uc::EcScript::Latn },
     // Latin-1 OK
     { 0x0080, 0x00FF,
             "Latin-1 Supplement", u8"Латиница-1", CT_LATIN1, EcScript::Latn },
@@ -3030,7 +3030,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В IBM-совместимых ПК были две разновидности линий{{-}}одиночная и двойная. "
                     "Юникод добавляет к ним тонкую, пунктирную и тонкую пунктирную."
                 "<p>В компьютере BBC{{_}}Master есть закруглённые уголки.",
-            EcScript::NONE, EcFont::DEJAVU },
+            EcScript::NONE, EcFont::DEJAVU },    // Block elements OK
     // Block elements OK
     { 0x2580, 0x259F,
             "Block Elements", u8"Блочные элементы",
