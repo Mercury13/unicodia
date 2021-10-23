@@ -393,7 +393,7 @@ namespace uc {
             std::unique_ptr<QFont> table {};
             std::unique_ptr<QFont> big {};
             TempFont tempFont;
-            constexpr Q() = default;
+            consteval Q() = default;
             consteval Q(const Q&) {};
         } q {};
         void load(char32_t trigger) const;
@@ -517,6 +517,7 @@ namespace uc {
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
 
+        /// @warning We do not delete that icon, strange constinit problems, but OK
         mutable QPixmap* icon = nullptr;
         mutable const Cp* firstAllocated = nullptr;
         mutable int nChars = 0;
