@@ -139,7 +139,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
       { FNAME_HANA_A, Ffg::FALL_TO_NEXT },                                      // …2 HanaMin
       { "BabelStoneHan.ttf" },                                                  // …2 U14
-    { "NotoSansTaiTham-Regular.ttf" },                                          // Lanna
+    { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
@@ -1341,7 +1341,8 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях "
                 "(прямая черта прорежет лист по жилкам). Гласная по умолчанию «а». "
                 "Между словами не ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. "
-                "Вирама называется «ra haam» и используется нечасто."
+                "[[pt:virama|Вирамы]] нет, взамен есть похожий спецсимвол для сборки слогов:<br>"
+                "{{_}}{{_}}высокое ха {{sm|ᩉ}} + и {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + на {{sm|ᨶ}} = хин {{sm|ᩉᩥ᩠ᨶ}}"
             "<p>Имеет два набора цифр: хора (повседневные) и тхам (священные)."
             "<p>Говорящих на языке юан несколько миллионов, но с XX века не многие грамотны в ланне, чаще пишут [[ps:Thai|тайским]] письмом.",
                 EcFont::LANNA },
