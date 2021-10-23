@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="HoldTears.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="8.4734963"
+     inkscape:cx="83.023581"
+     inkscape:cy="65.852392"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path848"
+       cx="60"
+       cy="60"
+       r="55" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 45,90 c 5,-5 10,-5 15,-5 5,0 10,0 15,5"
+       id="path1090" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1378"
+       cx="37.5"
+       cy="47.5"
+       r="17.5" />
+    <circle
+       style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path1380"
+       cx="82.5"
+       cy="47.5"
+       r="17.5" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="path1382"
+       cx="42.5"
+       cy="42.5"
+       r="7.5" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="path1428"
+       cx="87.5"
+       cy="42.5"
+       r="7.5" />
+    <path
+       id="path2884"
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       d="m 47.166898,53.32267 c 0,2.761424 -4.7275,6.335188 -10.250348,6.335188 -5.522847,0 -10.083449,-3.573764 -10.083449,-6.335188 C 26.833101,50.561246 31.477152,56 37,56 c 5.522847,0 10.166898,-5.438754 10.166898,-2.67733 z"
+       sodipodi:nodetypes="sssss" />
+    <path
+       id="path3432"
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       d="M 92.250348,53.664812 C 92.250348,56.426236 87.522848,60 82,60 76.477153,60 71.916551,56.426236 71.916551,53.664812 c 0,-2.761424 4.644051,2.67733 10.166899,2.67733 5.522847,0 10.166898,-5.438754 10.166898,-2.67733 z"
+       sodipodi:nodetypes="sssss" />
+  </g>
+</svg>
