@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="PregnantMan.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="1"
+     inkscape:cx="65.5"
+     inkscape:cy="24"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="false"
+     inkscape:snap-smooth-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="path3373"
+       sodipodi:type="arc"
+       sodipodi:cx="65"
+       sodipodi:cy="27.5"
+       sodipodi:rx="17.5"
+       sodipodi:ry="17.5"
+       sodipodi:start="0"
+       sodipodi:end="3.1415927"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="m 82.5,27.5 a 17.5,17.5 0 0 1 -8.75,15.155445 17.5,17.5 0 0 1 -17.5,-10e-7 A 17.5,17.5 0 0 1 47.5,27.5" />
+    <path
+       id="path3861"
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       d="m 50,115 c -7.145312,0 -13.747852,-3.81198 -17.320508,-10 -3.572656,-6.188022 -3.572656,-13.811978 0,-20 C 36.252148,78.811978 42.854688,75 50,75 v -5 c 0,-8.284271 6.715729,-15 15,-15 8.284271,0 15,6.715729 15,15 v 45"
+       sodipodi:nodetypes="csscsssc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 35,20 H 95"
+       id="path4617"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 45,20 55,5 h 25 l 3,15"
+       id="path5148"
+       sodipodi:nodetypes="cccc" />
+  </g>
+</svg>
