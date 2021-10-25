@@ -33,11 +33,35 @@ namespace uc {
         const uc::Cp* one = nullptr;
     };
 
+    enum {
+        // LOWEST
+        HIPRIO_KEYWORD,
+        HIPRIO_MNEMONIC_CASE,
+        HIPRIO_MNEMONIC_EXACT,
+        HIPRIO_HEX,
+        // HIGHEST
+        HIPRIO_FIRST_ONE = HIPRIO_MNEMONIC_EXACT  // [>=] can convert multiple to one
+    };
+
+    struct SearchPrio {
+        int high = HIPRIO_KEYWORD, exact = 0, initial = 0, partial = 0;
+        std::partial_ordering operator <=>(const SearchPrio& x) const = default;
+        static const SearchPrio EMPTY;
+    };
+
+    struct SearchLine {
+        const uc::Cp* cp;
+        SearchPrio prio;
+        // reverse order!!
+        std::partial_ordering operator <=>(const SearchLine& x) const
+            { return x.prio <=> prio; }
+    };
+
     struct SearchResult : public SingleSearchResult {
-        SafeVector<const uc::Cp*> multiple {};
+        SafeVector<SearchLine> multiple {};
         SearchResult() = default;
         SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
-        SearchResult(SafeVector<const uc::Cp*>&& v)
+        SearchResult(SafeVector<uc::SearchLine>&& v)
             : SingleSearchResult { SingleError::MULTIPLE },  multiple(std::move(v)) {}
     };
 

@@ -762,11 +762,11 @@ const uc::Cp& SearchModel::cpAt(size_t index) const
 {
     if (index >= v.size())
         return uc::cpInfo[0];
-    return *v[index];
+    return *v[index].cp;
 }
 
 
-void SearchModel::set(SafeVector<const uc::Cp*>&& x)
+void SearchModel::set(SafeVector<uc::SearchLine>&& x)
 {
     beginResetModel();
     v = std::move(x);

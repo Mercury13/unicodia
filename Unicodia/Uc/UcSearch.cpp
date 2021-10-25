@@ -4,9 +4,14 @@
 // STL
 #include <unordered_set>
 
+// Libs
+#include "u_Strings.h"
+
 // Unicode
 #include "UcData.h"
 
+
+const uc::SearchPrio uc::SearchPrio::EMPTY;
 
 std::u8string_view uc::errorStrings[uc::SingleError_N] {
     {},     // one
@@ -101,25 +106,6 @@ bool uc::isMnemoChar(QStringView x)
 
 namespace {
 
-    //constexpr uint8_t TOTAL_FRACTION = 200;
-
-    struct ResultPrio {
-        uint8_t exactFraction = 0,
-                initialFraction = 0,
-                partialFraction = 0;
-        std::strong_ordering operator <=>(const ResultPrio& x) const = default;
-    };
-
-    struct ResultEx {
-        const uc::Cp* subj = nullptr;
-        ResultPrio prio;
-    };
-
-}
-
-
-namespace {
-
     inline std::u8string_view toU8(std::string& x)
     {
         return { reinterpret_cast<const char8_t*>(x.data()), x.length() };
@@ -164,6 +150,111 @@ std::u8string uc::toMnemo(QString x)
 }
 
 
+namespace {
+
+    enum class CharClass { OTHER, LETTER, DIGIT };
+
+    CharClass classify(char8_t x)
+    {
+        if ((x >= 'A' && x <= 'Z') || (x >= 'a' || (x <= 'z')))
+            return CharClass::LETTER;
+        if (x >= '0' && x <= '9')
+            return CharClass::DIGIT;
+        return CharClass::OTHER;
+    }
+
+    struct CompiledWord {
+        std::u8string v;
+        CharClass ccFirst = CharClass::OTHER, ccLast = CharClass::OTHER;
+
+        CompiledWord() = default;
+        CompiledWord(std::u8string x)
+            : v(std::move(x)), ccFirst(classify(v.front())), ccLast(classify(v.back())) {}
+
+        std::u8string_view sv() const { return v; }
+        size_t length() const { return v.length(); }
+    };
+
+    struct CompiledNeedle
+    {
+        SafeVector<CompiledWord> words;
+
+        CompiledNeedle(std::u8string_view x);
+    };
+
+    CompiledNeedle::CompiledNeedle(std::u8string_view x)
+    {
+        auto w1 = str::splitSv(x, ' ');
+        words.reserve(w1.size());
+        for (auto v : w1) {
+            if (!v.empty())
+                words.emplace_back(str::toUpper(v));
+        }
+    }
+
+    template<typename charT>
+    bool myEqual(charT ch1, charT ch2) {
+        return std::toupper(ch1) == std::toupper(ch2);
+    }
+
+    template<typename T>
+    size_t ciFind( const T& haystack, const T& needle, size_t pos)
+    {
+        typename T::const_iterator it = std::search( haystack.begin() + pos, haystack.end(),
+            needle.begin(), needle.end(), myEqual<typename T::value_type> );
+        if ( it != haystack.end() ) return it - haystack.begin();
+        else return std::string::npos; // not found
+    }
+
+    enum class ResultType { NONE, PARTIAL, INITIAL, EXACT };
+
+    bool isOther(std::u8string_view s, size_t pos, CharClass c)
+    {
+        if (pos >= s.size())
+            return true;
+        auto clazz = classify(s[pos]);
+        return (clazz == CharClass::OTHER || clazz != c);
+    }
+
+    ResultType myFind1(std::u8string_view haystack, const CompiledWord& needle)
+    {
+        ResultType r = ResultType::NONE;
+        size_t pos = 0;
+        while (true) {
+            auto where = ciFind(haystack, needle.sv(), pos);
+            if (where == std::u8string_view::npos)
+                break;
+            ResultType r1 =
+                isOther(haystack, where - 1, needle.ccFirst)
+                    ? (isOther(haystack, where + needle.length(), needle.ccLast)
+                            ? ResultType::EXACT : ResultType::INITIAL)
+                    : ResultType::PARTIAL;
+            if (r1 == ResultType::EXACT)
+                return r1;
+            r = std::max(r, r1);
+            pos = where + 1;
+        }
+        return r;
+    }
+
+    uc::SearchPrio myFind(
+            std::u8string_view haystack, CompiledNeedle needle)
+    {
+        uc::SearchPrio r;
+        for (auto& v : needle.words) {
+            auto type = myFind1(haystack, v);
+            switch (type) {
+            case ResultType::EXACT: ++r.exact; break;
+            case ResultType::INITIAL: ++r.initial; break;
+            case ResultType::PARTIAL: ++r.partial; break;
+            case ResultType::NONE: ;
+            }
+        }
+        return r;
+    }
+
+}   // anon namespace
+
 
 uc::SearchResult uc::doSearch(QString what)
 {
@@ -193,7 +284,7 @@ uc::SearchResult uc::doSearch(QString what)
         return uc::findStrCode(sHex, 16);
     }
 
-    SafeVector<const uc::Cp*> r;
+    SafeVector<uc::SearchLine> r;
 
     if (auto mnemo = toMnemo(what); !mnemo.empty()) {
         // SEARCH BY HTML MNEMONIC
@@ -208,24 +299,60 @@ uc::SearchResult uc::doSearch(QString what)
             }
         }
         if (r.size() == 1)
-            return {{ SingleError::ONE, r[0] }};
+            return {{ SingleError::ONE, r[0].cp }};
     } else if (isNameChar(what)) {
-        // SEARCH BY KEYWORD
-        //std::unordered_set<const uc::Cp*> ndx;
-        auto u8Name = what.toStdString();
-        std::u8string_view sv(reinterpret_cast<const char8_t*>(u8Name.data()), u8Name.length());
-        for (auto& cp : uc::cpInfo) {
-            auto names = cp.allRawNames();
-            for (auto& nm : names) {
-                if (nm.find('#') == std::u8string_view::npos) {
-                    /// @todo [urgent] How to find, here we do case-insensitive
-                    if (nm.find(sv) != std::u8string_view::npos) {
-                        r.emplace_back(&cp);
-                        break;
-                    }
-                }
+        // Try find hex
+        const uc::Cp* hex = nullptr;
+        if (what.size() >= 2) {
+            if (auto q = uc::findStrCode(what, 16); q.err == SingleError::ONE) {
+                hex = q.one;
+                auto& bk = r.emplace_back(q.one);
+                bk.prio.high = uc::HIPRIO_HEX;
             }
         }
+
+        // SEARCH BY KEYWORD/mnemonic
+        auto u8Name = what.toStdString();
+        auto sv = toU8(u8Name);
+        CompiledNeedle needle(sv);
+        for (auto& cp : uc::cpInfo) {
+            if (&cp != hex) {   // Do not check hex once again
+                auto names = cp.allRawNames();
+                uc::SearchPrio prio;
+                for (auto& nm : names) {
+                    if (nm.starts_with('&')) {
+                        // Search by HTML mnemonic
+                        if (nm.size() == sv.size() + 2) {
+                            auto mnemo = nm.substr(1, sv.size());
+                            if (sv == mnemo) {
+                                auto& bk = r.emplace_back(&cp);
+                                bk.prio.high = HIPRIO_MNEMONIC_EXACT;
+                                goto brk;
+                            } else if (stringsCIeq(sv, mnemo)) {
+                                auto& bk = r.emplace_back(&cp);
+                                bk.prio.high = HIPRIO_MNEMONIC_CASE;
+                                goto brk;
+                            }
+                        }
+                    } if (nm.find('#') == std::u8string_view::npos) {
+                        // Search by keyword
+                        if (auto pr = myFind(nm, needle); pr > prio) {
+                            prio = pr;
+                        }
+                    }
+                }
+                if (prio > SearchPrio::EMPTY) {
+                    r.emplace_back(&cp, prio);
+                }
+            brk:;
+            }
+        }
+
+        if (r.size() == 1 && r[0].prio.high >= HIPRIO_FIRST_ONE)
+            return {{ SingleError::ONE, r[0].cp }};
+
+        // Sort by relevance
+        std::stable_sort(r.begin(), r.end());
     } else {
         // DEBRIEF STRING
         auto u32 = what.toUcs4();

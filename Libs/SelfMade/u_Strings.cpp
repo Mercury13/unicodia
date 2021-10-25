@@ -12,6 +12,17 @@ void str::trim(const char* &start, const char* &end)
 }
 
 
+void str::trim(const char8_t* &start, const char8_t* &end)
+{
+    while (start != end
+           && isBlank(*start))
+        ++start;
+    if (start == end) return;
+    while (isBlank(*(end - 1)))
+        --end;
+}
+
+
 std::string_view str::trimSv(std::string_view s)
 {
     const char* start = s.data();
@@ -47,6 +58,33 @@ SafeVector<std::string_view> str::splitSv(std::string_view s, char comma, bool s
 }
 
 
+SafeVector<std::u8string_view> str::splitSv(std::u8string_view s, char comma, bool skipEmpty)
+{
+    SafeVector<std::u8string_view> r;
+
+    const char8_t* start = s.data();
+    const char8_t* end = start + s.length();
+    str::trim(start, end);
+    if (start == end)
+        return r;
+
+    const char8_t *sstart = start;
+    for (const char8_t *p = start; p != end; ++p)
+    {
+        if (*p != comma) continue;
+        const char8_t *send = p;
+        str::trim(sstart, send);
+        if (p != sstart || !skipEmpty)
+            r.emplace_back(sstart, send-sstart);
+        sstart = p + 1;
+    }
+    str::trim(sstart, end);
+    if (sstart != end || !skipEmpty)
+        r.emplace_back(sstart, end-sstart);
+    return r;
+}
+
+
 bool str::containsWord(std::string_view haystack, std::string_view needle)
 {
     if (needle.empty())
@@ -59,10 +97,18 @@ bool str::containsWord(std::string_view haystack, std::string_view needle)
             return false;
 
         if (auto rt = pos + needle.size();
-                (rt >= haystack.size() || haystack[rt] == ' ')
+                (rt >= haystack.size() || isBlank(haystack[rt]))
                 && (pos == 0 || haystack[pos - 1] == ' ')) {
             return true;
         }
         start = pos + 1;
+    }
+}
+
+
+void str::toUpperInPlace(std::u8string& x)
+{
+    for (auto& v : x) {
+        v = toupper(v);
     }
 }

@@ -9,9 +9,12 @@
 namespace str {
 
     inline bool isBlank(char c) { return static_cast<unsigned char>(c) <= 32; }
+    inline bool isBlank(char8_t c) { return (c <= 32); }
     void trim(const char* &start, const char* &end);
+    void trim(const char8_t* &start, const char8_t* &end);
     std::string_view trimSv(std::string_view s);
     [[nodiscard]] SafeVector<std::string_view> splitSv(std::string_view s, char comma, bool skipEmpty = true);
+    [[nodiscard]] SafeVector<std::u8string_view> splitSv(std::u8string_view s, char comma, bool skipEmpty = true);
 
     ///
     /// @return   # of replacements
@@ -57,6 +60,13 @@ namespace str {
         { return std::from_chars(s.data(), s.data() + s.size(), v); }
 
     bool containsWord(std::string_view haystack, std::string_view needle);
+
+    void toUpperInPlace(std::u8string& x);
+    inline std::u8string toUpper(std::u8string_view x) {
+        std::u8string r{x};
+        toUpperInPlace(r);
+        return r;
+    }
 
 }   // namespace str
 
