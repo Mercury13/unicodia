@@ -464,6 +464,10 @@ namespace uc {
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;
 
+    enum class Sfg {
+        NONSCRIPT = 1
+    };
+
     struct Script
     {
         std::string_view id;
@@ -474,6 +478,7 @@ namespace uc {
         EcContinent ecContinent;
         std::u8string_view locName, locTime, locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
+        Flags<Sfg> flags {};
 
         mutable unsigned nChars = 0;
         mutable int plane = -1;
@@ -501,6 +506,7 @@ namespace uc {
         HAS_32_NONCHARS = 1<<1,     /// [+] block has 32 non-characters
         FORCE_FONT      = 1<<2,     /// [+] force NORMAL font
         UNGLITCH_MARKS  = 1<<3,     /// [+] every combining will be from NOTO
+        SCRIPTLIKE      = 1<<4,     /// [+] keywords like LETTER behave as in script
         EXPERIMENT      = 1<<8,     /// Left for experiments
     };
 

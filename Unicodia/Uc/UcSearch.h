@@ -37,7 +37,6 @@ namespace uc {
 
     enum {
         // LOWEST
-        //HIPRIO_BAD_KEYWORD = -1,
         HIPRIO_KEYWORD = 0,
         HIPRIO_MNEMONIC_CASE,
         HIPRIO_MNEMONIC_EXACT,

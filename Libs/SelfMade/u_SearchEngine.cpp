@@ -4,6 +4,17 @@
 
 const srh::Prio srh::Prio::EMPTY;
 
+namespace {
+
+    /// If we find those words → treat as low-priority
+    /// @warning Alphabetical order, upper case
+    constinit std::u8string_view DIC_WORDS[] {
+        u8"LETTER",
+        u8"SIGN"
+    };
+
+}
+
 
 srh::Class srh::classify(char8_t x)
 {
@@ -13,6 +24,46 @@ srh::Class srh::classify(char8_t x)
         return Class::DIGIT;
     return Class::OTHER;
 }
+
+
+namespace {
+
+    inline bool charsCiEq(char8_t c1, char8_t c2)
+    {
+        return (c1 == c2
+            || std::toupper(c1) == std::toupper(c2));
+    }
+
+}   // anon namespace
+
+bool srh::stringsCiEq(std::u8string_view s1, std::u8string_view s2)
+{
+    return ( s1.size() == s2.size()
+        && std::equal(s1.begin(), s1.end(), s2.begin(), &charsCiEq) );
+}
+
+
+
+///// Word /////////////////////////////////////////////////////////////////////
+
+
+srh::Word::Word(std::u8string x)
+    : v(std::move(x)),
+      ccFirst(classify(v.front())),
+      ccLast(classify(v.back()))
+{
+    auto beg = std::begin(DIC_WORDS);
+    auto end = std::end(DIC_WORDS);
+    auto it = std::upper_bound(beg, end, v);
+    if (it != beg) {
+        --it;
+        if (it->starts_with(v))
+            dicWord = *it;
+    }
+}
+
+
+///// Needle ///////////////////////////////////////////////////////////////////
 
 
 srh::Needle::Needle(std::u8string_view x)
@@ -52,7 +103,8 @@ namespace {
 
 }   // anon namespace
 
-srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle)
+srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
+                         bool isNonScript)
 {
     Place r = Place::NONE;
     size_t pos = 0;
@@ -65,6 +117,12 @@ srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle)
                 ? (isOther(haystack, where + needle.length(), needle.ccLast)
                         ? Place::EXACT : Place::INITIAL)
                 : Place::PARTIAL;
+        // Check for dictionary word
+        if (r1 >= Place::INITIAL && !needle.dicWord.empty() && !isNonScript) {
+            auto q = haystack.substr(where, needle.dicWord.length());
+            if (stringsCiEq(q, needle.v))
+                r1 = Place::DIC;
+        }
         if (r1 == Place::EXACT)
             return r1;
         r = std::max(r, r1);
@@ -73,14 +131,16 @@ srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle)
     return r;
 }
 
-srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle)
+srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
+                          bool isNonScript)
 {
     srh::Prio r;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, v);
+        auto type = findWord(haystack, v, isNonScript);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
         case Place::INITIAL: ++r.initial; break;
+        case Place::DIC: ++r.dic; break;
         case Place::PARTIAL: ++r.partial; break;
         case Place::NONE: ;
         }

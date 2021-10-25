@@ -10,9 +10,6 @@
 // Unicode
 #include "UcData.h"
 
-// IDK right now what to do with “LETTER”, “SIGN” etc. keywords,
-// but this checks once again if we someday add some HIPRIO < 0
-static_assert(uc::HIPRIO_MNEMONIC_CASE == 1);
 
 std::u8string_view uc::errorStrings[uc::SingleError_N] {
     {},     // one
@@ -112,18 +109,6 @@ namespace {
         return { reinterpret_cast<const char8_t*>(x.data()), x.length() };
     }
 
-    inline bool charsCIeq(char8_t c1, char8_t c2)
-    {
-        return (c1 == c2
-            || std::toupper(c1) == std::toupper(c2));
-    }
-
-    bool stringsCIeq(std::u8string_view s1, std::u8string_view s2)
-    {
-        return ( s1.size() == s2.size()
-            && std::equal(s1.begin(), s1.end(), s2.begin(), &charsCIeq) );
-    }
-
 }   // anon namespace
 
 
@@ -187,7 +172,7 @@ uc::SearchResult uc::doSearch(QString what)
         for (auto& cp : uc::cpInfo) {
             auto names = cp.allRawNames();
             for (auto& nm : names) {
-                if (stringsCIeq(mnemo, nm)) {
+                if (srh::stringsCiEq(mnemo, nm)) {
                     r.emplace_back(&cp);
                     break;
                 }
@@ -207,6 +192,7 @@ uc::SearchResult uc::doSearch(QString what)
         }
 
         // SEARCH BY KEYWORD/mnemonic
+        const uc::Block* block = &uc::blocks[0];
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
@@ -214,6 +200,14 @@ uc::SearchResult uc::doSearch(QString what)
             if (&cp != hex) {   // Do not check hex once again
                 auto names = cp.allRawNames();
                 srh::Prio prio;
+                auto& cat = cp.category();
+                block = blockOf(cp.subj, block);
+                bool isNonScript =
+                        (cp.ecCategory != EcCategory::SYMBOL_MODIFIER
+                        && cat.upCat != UpCategory::LETTER
+                        && cat.upCat != UpCategory::MARK
+                        && !block->flags.have(Bfg::SCRIPTLIKE)
+                        && cp.script().flags.have(Sfg::NONSCRIPT));
                 for (auto& nm : names) {
                     if (nm.starts_with('&')) {
                         // Search by HTML mnemonic
@@ -223,7 +217,7 @@ uc::SearchResult uc::doSearch(QString what)
                                 auto& bk = r.emplace_back(&cp);
                                 bk.prio.high = HIPRIO_MNEMONIC_EXACT;
                                 goto brk;
-                            } else if (stringsCIeq(sv, mnemo)) {
+                            } else if (srh::stringsCiEq(sv, mnemo)) {
                                 auto& bk = r.emplace_back(&cp);
                                 bk.prio.high = HIPRIO_MNEMONIC_CASE;
                                 goto brk;
@@ -231,7 +225,8 @@ uc::SearchResult uc::doSearch(QString what)
                         }
                     } if (nm.find('#') == std::u8string_view::npos) {
                         // Search by keyword
-                        if (auto pr = srh::findNeedle(nm, needle); pr > prio) {
+                        if (auto pr = srh::findNeedle(nm, needle, isNonScript);
+                                pr > prio) {
                             prio = pr;
                         }
                     }

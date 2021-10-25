@@ -507,7 +507,8 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-            u8"Нет", {}, {}, u8"Символы вне письменности." },
+            u8"Нет", {}, {}, u8"Символы вне письменности.",
+            EcFont::NORMAL, Sfg::NONSCRIPT },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -2472,7 +2473,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Zinh", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные", {}, {},
-        u8"Комбинирующая метка используется в нескольких разных письменностях." },
+        u8"Комбинирующая метка используется в нескольких разных письменностях.",
+        EcFont::NORMAL, Sfg::NONSCRIPT },
 };
 
 
@@ -2606,7 +2608,8 @@ constinit const uc::Block uc::blocks[] {
                     "так, английское ''car'' (легковой автомобиль) записывается как {{sm|[kɑːʳ]}},"
                     "и последние два символа{{-}}модификаторы, обозначающие длину и условное «r»."
                 "<p>Также в этом блоке есть протяжённые копии диакритических меток.",
-            EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
+            EcScript::NONE, EcFont::NORMAL,
+            Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F,
             "Combining Diacritical Marks", u8"Диакритические метки",
@@ -2951,7 +2954,8 @@ constinit const uc::Block uc::blocks[] {
             u8"Математические, технические и деловые символы буквенного происхождения."
                 "<p>Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. "
                     "Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси."
-                "<p>Символ {{sm|ℵ}} для мощности множеств предложен Г.{{_}}Кантором." },
+                "<p>Символ {{sm|ℵ}} для мощности множеств предложен Г.{{_}}Кантором.",
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
     /// @todo [link,block] Latin-1
     { 0x2150, 0x218F,
@@ -3022,7 +3026,8 @@ constinit const uc::Block uc::blocks[] {
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры",
             u8"По данным английской Википедии, эти символы в основном предназначены для списков{{-}}"
                         "«наполовину маркированных, наполовину нумерованных». "
-                    "{{em|Ⓜ}} используется как [[pt:emoji|эмодзи]] для метро." },
+                    "{{em|Ⓜ}} используется как [[pt:emoji|эмодзи]] для метро.",
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Box drawing OK
     { 0x2500, 0x257F,
             "Box Drawing", u8"Рисование рамок",
@@ -3920,11 +3925,14 @@ constinit const uc::Block uc::blocks[] {
     { 0x1B170, 0x1B2FF,
             "Nushu", u8"Нюй-шу",
             {}, EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+    /// @todo [tofu] Duployan
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
+    /// @todo [desc] Shorthand format
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
-            u8"Форматирующие символы стенографии" },
+            u8"Форматирующие символы стенографии", {},
+            EcScript::Dupl, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     /// @todo [tofu] Znamenny
     /// @todo [desc] Znamenny
     { 0x1CF00, 0x1CFCF,
@@ -4137,7 +4145,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Группы крови, знак стоянки и некоторые другие символы являются [[pt:emoji|эмодзи]]."
                 "<p>Из региональных индикаторов собирают эмодзи флагов: "
                         "если написать эмодзи «GB», получится флаг Великобритании.",
-            EcScript::NONE, EcFont::DINGBAT },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             "Enclosed Ideographic Supplement",
@@ -4315,7 +4323,8 @@ constinit const uc::Block uc::blocks[] {
                         "по договорённости между отправителем и получателем. "
                     "Это применение полностью [[pt:deprecated|запретили]], но в Юникоде 9.0 (2017) тэги вернули "
                         "как модификаторы [[pt:emoji|эмодзи]]. "
-                    "Используются только для флагов регионов, определены три региона: Англия, Уэльс, Шотландия."},
+                    "Используются только для флагов регионов, определены три региона: Англия, Уэльс, Шотландия.",
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
     { 0xE0100, 0xE01EF,
             "Variation Selectors Supplement", u8"Селекторы начертания дополнительные",
