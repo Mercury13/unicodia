@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1635023938
+ModificationTime: 1635201301
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -737,12 +737,12 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 129360 33 14
+WinInfo: 128964 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
 Grid
--1000 305.4480896 m 0
+-1000 305.4480896 m 0,0,-1
  2000 305.4480896 l 1024
 780 -700 m 1,0,-1
  780 1300 l 1,1,-1
@@ -760,7 +760,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "NandLt"""  "NandTopLt"""  "Nand BotRt" "'blwm' Nand1-1"
-BeginChars: 1114123 209
+BeginChars: 1114123 210
 
 StartChar: u10FB0
 Encoding: 69552 69552 0
@@ -13511,6 +13511,53 @@ SplineSet
  1150.87890625 374.690429688 1150.87890625 374.690429688 1112.67675781 406.176757812 c 5,100,101
  1112.234375 352.825195312 1112.234375 352.825195312 1098.29296875 307.224609375 c 4,102,103
  1088.19824219 274.208007812 1088.19824219 274.208007812 1073.44433594 244.430664062 c 5,96,97
+EndSplineSet
+EndChar
+
+StartChar: u1F7F0
+Encoding: 129008 129008 209
+Width: 1000
+Flags: WO
+HStem: 43.5 187.5<30.875 968.375> 443.5 187.5<31.25 968.75>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 2
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_2
+ 9
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+968.375 231 m 1,0,-1
+ 968.375 43.5 l 1,1,-1
+ 30.875 43.5 l 1,2,-1
+ 30.875 231 l 1,3,-1
+ 968.375 231 l 1,0,-1
+968.75 631 m 1,4,-1
+ 968.75 443.5 l 1,5,-1
+ 31.25 443.5 l 1,6,-1
+ 31.25 631 l 1,7,-1
+ 968.75 631 l 1,4,-1
 EndSplineSet
 EndChar
 EndChars
