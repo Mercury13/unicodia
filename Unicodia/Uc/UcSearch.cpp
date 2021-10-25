@@ -10,6 +10,9 @@
 // Unicode
 #include "UcData.h"
 
+// IDK right now what to do with “LETTER”, “SIGN” etc. keywords,
+// but this checks once again if we someday add some HIPRIO < 0
+static_assert(uc::HIPRIO_MNEMONIC_CASE == 1);
 
 std::u8string_view uc::errorStrings[uc::SingleError_N] {
     {},     // one
