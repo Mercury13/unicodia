@@ -758,11 +758,11 @@ void SearchModel::clear()
 }
 
 
-const uc::Cp& SearchModel::cpAt(size_t index) const
+const uc::SearchLine& SearchModel::lineAt(size_t index) const
 {
     if (index >= v.size())
-        return uc::cpInfo[0];
-    return *v[index].cp;
+        return uc::SearchLine::STUB;
+    return v[index];
 }
 
 
@@ -784,17 +784,24 @@ int SearchModel::pixSize() const
 
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
-    auto& cp = cpAt(index.row());
+    auto& line = lineAt(index.row());
     char buf[30];
 
     switch (role) {
     case Qt::DisplayRole:
-        uc::sprintUPLUS(buf, cp.subj.ch32());
-        return QString(buf) + '\n' + cp.viewableName();
+        uc::sprintUPLUS(buf, line.cp->subj.ch32());
+        if (!line.triggerName.empty()) {
+            // Triggered alt. name
+            return QString(buf) + ": " + str::toQ(line.triggerName)
+                    + '\n' + line.cp->viewableName();
+        } else {
+            // Triggered main name
+            return QString(buf) + '\n' + line.cp->viewableName();
+        }
 
     case Qt::DecorationRole:
-        return cache.getT(cp.subj.ch32(),
-            [&cp, this](QPixmap& pix) {
+        return cache.getT(line.cp->subj.ch32(),
+            [&cp = *line.cp, this](QPixmap& pix) {
                 auto size = pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
@@ -1620,6 +1627,6 @@ void FmMain::focusSearch()
 
 void FmMain::searchEnterPressed(int index)
 {
-    selectCharEx(searchModel.cpAt(index).subj);
+    selectCharEx(searchModel.lineAt(index).cp->subj);
     ui->tableChars->setFocus();
 }

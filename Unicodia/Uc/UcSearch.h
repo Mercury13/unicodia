@@ -46,11 +46,13 @@ namespace uc {
     };
 
     struct SearchLine {
-        const uc::Cp* cp;
-        srh::Prio prio;
+        const uc::Cp* cp;                   ///< code point
+        std::u8string_view triggerName;     ///< name that triggered inclusion to search results
+        srh::Prio prio;                     ///< its priority
         // reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const
             { return x.prio <=> prio; }
+        static const SearchLine STUB;
     };
 
     struct SearchResult : public SingleSearchResult {

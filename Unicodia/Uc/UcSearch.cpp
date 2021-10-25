@@ -11,6 +11,11 @@
 #include "UcData.h"
 
 
+constinit const uc::SearchLine uc::SearchLine::STUB {
+    &cpInfo[0], {}, {}
+};
+
+
 std::u8string_view uc::errorStrings[uc::SingleError_N] {
     {},     // one
     {},     // multiple
@@ -199,7 +204,10 @@ uc::SearchResult uc::doSearch(QString what)
         for (auto& cp : uc::cpInfo) {
             if (&cp != hex) {   // Do not check hex once again
                 auto names = cp.allRawNames();
-                srh::Prio prio;
+                struct {
+                    srh::Prio prio;
+                    std::u8string_view name;
+                } best;
                 auto& cat = cp.category();
                 block = blockOf(cp.subj, block);
                 bool isNonScript =
@@ -214,11 +222,11 @@ uc::SearchResult uc::doSearch(QString what)
                         if (nm.size() == sv.size() + 2) {
                             auto mnemo = nm.substr(1, sv.size());
                             if (sv == mnemo) {
-                                auto& bk = r.emplace_back(&cp);
+                                auto& bk = r.emplace_back(&cp, nm);
                                 bk.prio.high = HIPRIO_MNEMONIC_EXACT;
                                 goto brk;
                             } else if (srh::stringsCiEq(sv, mnemo)) {
-                                auto& bk = r.emplace_back(&cp);
+                                auto& bk = r.emplace_back(&cp, nm);
                                 bk.prio.high = HIPRIO_MNEMONIC_CASE;
                                 goto brk;
                             }
@@ -226,13 +234,16 @@ uc::SearchResult uc::doSearch(QString what)
                     } if (nm.find('#') == std::u8string_view::npos) {
                         // Search by keyword
                         if (auto pr = srh::findNeedle(nm, needle, isNonScript);
-                                pr > prio) {
-                            prio = pr;
+                                pr > best.prio) {
+                            best.prio = pr;
+                            best.name = nm;
                         }
                     }
                 }
-                if (prio > srh::Prio::EMPTY) {
-                    r.emplace_back(&cp, prio);
+                if (best.prio > srh::Prio::EMPTY) {
+                    if (best.name == names[0])
+                        best.name = std::u8string();
+                    r.emplace_back(&cp, best.name, best.prio);
                 }
             brk:;
             }
