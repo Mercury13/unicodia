@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1635201301
+ModificationTime: 1635201416
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -13517,7 +13517,7 @@ EndChar
 StartChar: u1F7F0
 Encoding: 129008 129008 209
 Width: 1000
-Flags: WO
+Flags: W
 HStem: 43.5 187.5<30.875 968.375> 443.5 187.5<31.25 968.75>
 TtInstrs:
 SVTCA[y-axis]
