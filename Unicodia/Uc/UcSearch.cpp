@@ -10,6 +10,9 @@
 // Unicode
 #include "UcData.h"
 
+// Other
+#include "u_SearchEngine.h"
+
 
 const uc::SearchPrio uc::SearchPrio::EMPTY;
 
@@ -152,32 +155,9 @@ std::u8string uc::toMnemo(QString x)
 
 namespace {
 
-    enum class CharClass { OTHER, LETTER, DIGIT };
-
-    CharClass classify(char8_t x)
-    {
-        if ((x >= 'A' && x <= 'Z') || (x >= 'a' || (x <= 'z')))
-            return CharClass::LETTER;
-        if (x >= '0' && x <= '9')
-            return CharClass::DIGIT;
-        return CharClass::OTHER;
-    }
-
-    struct CompiledWord {
-        std::u8string v;
-        CharClass ccFirst = CharClass::OTHER, ccLast = CharClass::OTHER;
-
-        CompiledWord() = default;
-        CompiledWord(std::u8string x)
-            : v(std::move(x)), ccFirst(classify(v.front())), ccLast(classify(v.back())) {}
-
-        std::u8string_view sv() const { return v; }
-        size_t length() const { return v.length(); }
-    };
-
     struct CompiledNeedle
     {
-        SafeVector<CompiledWord> words;
+        SafeVector<srh::Word> words;
 
         CompiledNeedle(std::u8string_view x);
     };
@@ -208,15 +188,15 @@ namespace {
 
     enum class ResultType { NONE, PARTIAL, INITIAL, EXACT };
 
-    bool isOther(std::u8string_view s, size_t pos, CharClass c)
+    bool isOther(std::u8string_view s, size_t pos, srh::Class c)
     {
         if (pos >= s.size())
             return true;
-        auto clazz = classify(s[pos]);
-        return (clazz == CharClass::OTHER || clazz != c);
+        auto clazz = srh::classify(s[pos]);
+        return (clazz == srh::Class::OTHER || clazz != c);
     }
 
-    ResultType myFind1(std::u8string_view haystack, const CompiledWord& needle)
+    ResultType myFind1(std::u8string_view haystack, const srh::Word& needle)
     {
         ResultType r = ResultType::NONE;
         size_t pos = 0;

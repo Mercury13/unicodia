@@ -30,6 +30,7 @@ SOURCES += \
     ../Libs/SelfMade/i_TempFont.cpp \
     ../Libs/SelfMade/u_Qstrings.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
+    ../Libs/SelfMade/u_SearchEngine.cpp \
     FmPopup.cpp \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
@@ -54,6 +55,7 @@ HEADERS += \
     ../Libs/SelfMade/u_TinyOpt.h \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
+    ../Libs/SelfMade/u_SearchEngine.h \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \

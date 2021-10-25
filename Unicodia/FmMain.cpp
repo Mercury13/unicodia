@@ -774,6 +774,14 @@ void SearchModel::set(SafeVector<uc::SearchLine>&& x)
 }
 
 
+int SearchModel::pixSize() const
+{
+    auto& font = sample->font();
+    QFontMetrics metrics{font};
+    return (metrics.ascent() + metrics.descent()) * 3;
+}
+
+
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
     auto& cp = cpAt(index.row());
@@ -787,9 +795,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole:
         return cache.getT(cp.subj.ch32(),
             [&cp, this](QPixmap& pix) {
-                auto& font = sample->font();
-                QFontMetrics metrics{font};
-                auto size = (metrics.ascent() + metrics.descent()) * 3;
+                std::cout << "Drawing char " << std::hex << cp.subj.uval() << std::endl;
+                auto size = pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
                 }
@@ -990,6 +997,7 @@ FmMain::FmMain(QWidget *parent)
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
     connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
     connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);    
+    ui->listSearch->setUniformItemSizes(true);
     ui->listSearch->setModel(&searchModel);
     connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);

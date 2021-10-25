@@ -13,16 +13,19 @@ SOURCES += \
     ../AutoBuilder/data.cpp \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
+    ../Libs/SelfMade/u_SearchEngine.cpp \
     ../Libs/SelfMade/u_Strings.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
     test_Iterator.cpp \
+    test_Search.cpp \
     test_Strings.cpp \
     test_Wiki.cpp
 
 HEADERS += \
     ../AutoBuilder/data.h \
     ../Libs/SelfMade/u_Iterator.h \
+    ../Libs/SelfMade/u_SearchEngine.h \
     ../Libs/SelfMade/u_Strings.h \
     ../Unicodia/Wiki.h
 

@@ -6,6 +6,7 @@
 // Libs
 #include "u_Vector.h"
 
+
 namespace uc {
 
     struct Cp;
@@ -35,7 +36,7 @@ namespace uc {
 
     enum {
         // LOWEST
-        HIPRIO_KEYWORD,
+        HIPRIO_KEYWORD = 0,
         HIPRIO_MNEMONIC_CASE,
         HIPRIO_MNEMONIC_EXACT,
         HIPRIO_HEX,

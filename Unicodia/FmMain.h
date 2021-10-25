@@ -188,6 +188,7 @@ public:
     void clear();
     bool hasData() const { return !v.empty(); }
     const uc::Cp& cpAt(size_t index) const;
+    int pixSize() const;
 private:
     QWidget* const sample;
     SafeVector<uc::SearchLine> v;
