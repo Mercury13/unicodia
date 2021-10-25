@@ -57,8 +57,10 @@ srh::Word::Word(std::u8string x)
     auto it = std::upper_bound(beg, end, v);
     if (it != beg) {
         --it;
-        if (it->starts_with(v))
+        if (it->starts_with(v)) {
             dicWord = *it;
+            doesCoincide = (dicWord == v);
+        }
     }
 }
 
@@ -115,17 +117,30 @@ srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
         Place r1 =
             isOther(haystack, where - 1, needle.ccFirst)
                 ? (isOther(haystack, where + needle.length(), needle.ccLast)
-                        ? Place::EXACT : Place::INITIAL)
+                        ? (needle.doesCoincide && !isNonScript
+                           // No need to find again if we found exactly a dictionary word
+                           ? Place::EXACT_SCRIPT
+                           : Place::EXACT)
+                        : Place::INITIAL)
                 : Place::PARTIAL;
         // Check for dictionary word
-        if (r1 >= Place::INITIAL && !needle.dicWord.empty() && !isNonScript) {
-            auto q = haystack.substr(where, needle.dicWord.length());
-            if (stringsCiEq(q, needle.v))
-                r1 = Place::DIC;
-        }
-        if (r1 == Place::EXACT)
+        switch (r1) {
+        case Place::EXACT:
+        case Place::EXACT_SCRIPT:
             return r1;
-        r = std::max(r, r1);
+        case Place::INITIAL:
+            if (!needle.dicWord.empty() && !isNonScript) {
+                auto q = haystack.substr(where, needle.dicWord.length());
+                if (stringsCiEq(q, needle.v))
+                    r1 = Place::INITIAL_SRIPT;
+            }
+            [[fallthrough]];
+        case Place::INITIAL_SRIPT:
+        case Place::PARTIAL:
+            r = std::max(r, r1);
+            [[fallthrough]];
+        case Place::NONE: ;
+        }
         pos = where + 1;
     }
     return r;
@@ -139,8 +154,9 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         auto type = findWord(haystack, v, isNonScript);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
+        case Place::EXACT_SCRIPT: ++r.exactScript; break;
         case Place::INITIAL: ++r.initial; break;
-        case Place::DIC: ++r.dic; break;
+        case Place::INITIAL_SRIPT: ++r.initialScript; break;
         case Place::PARTIAL: ++r.partial; break;
         case Place::NONE: ;
         }

@@ -2474,7 +2474,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные", {}, {},
         u8"Комбинирующая метка используется в нескольких разных письменностях.",
-        EcFont::NORMAL, Sfg::NONSCRIPT },
+        EcFont::NORMAL },
 };
 
 

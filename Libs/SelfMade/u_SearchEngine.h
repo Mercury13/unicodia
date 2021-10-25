@@ -14,6 +14,7 @@ namespace srh {
         std::u8string v;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
+        bool doesCoincide = false;  ///< [+] v == dicWord
 
         Word() = default;
         Word(std::u8string x);
@@ -22,10 +23,13 @@ namespace srh {
         size_t length() const { return v.length(); }
     };
 
-    enum class Place { NONE, PARTIAL, DIC, INITIAL, EXACT };
+    enum class Place { NONE, PARTIAL, INITIAL_SRIPT, INITIAL, EXACT_SCRIPT, EXACT };
 
     struct Prio {
-        int high = 0, exact = 0, initial = 0, dic = 0, partial = 0;
+        short high = 0;
+        unsigned short exact = 0, exactScript = 0,
+                       initial = 0, initialScript = 0,
+                       partial = 0;
         std::partial_ordering operator <=>(const Prio& x) const = default;
         static const Prio EMPTY;
     };
