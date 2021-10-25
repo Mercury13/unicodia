@@ -23,10 +23,10 @@ constexpr QChar ZWSP(0x200B);
 constexpr bool FORCE_TOFU = false;
 
 constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
-            QFont::PreferAntialias | QFont::PreferOutline | QFont::NoFontMerging
+            QFont::PreferAntialias | QFont::ForceOutline | QFont::NoFontMerging
             | QFont::PreferQuality | QFont::PreferFullHinting);
 constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
-            QFont::PreferAntialias | QFont::PreferOutline | QFont::PreferMatch
+            QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch
             | QFont::PreferFullHinting);
 constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
 
