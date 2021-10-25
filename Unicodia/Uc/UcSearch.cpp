@@ -10,11 +10,6 @@
 // Unicode
 #include "UcData.h"
 
-// Other
-#include "u_SearchEngine.h"
-
-
-const uc::SearchPrio uc::SearchPrio::EMPTY;
 
 std::u8string_view uc::errorStrings[uc::SingleError_N] {
     {},     // one
@@ -153,89 +148,6 @@ std::u8string uc::toMnemo(QString x)
 }
 
 
-namespace {
-
-    struct CompiledNeedle
-    {
-        SafeVector<srh::Word> words;
-
-        CompiledNeedle(std::u8string_view x);
-    };
-
-    CompiledNeedle::CompiledNeedle(std::u8string_view x)
-    {
-        auto w1 = str::splitSv(x, ' ');
-        words.reserve(w1.size());
-        for (auto v : w1) {
-            if (!v.empty())
-                words.emplace_back(str::toUpper(v));
-        }
-    }
-
-    template<typename charT>
-    bool myEqual(charT ch1, charT ch2) {
-        return std::toupper(ch1) == std::toupper(ch2);
-    }
-
-    template<typename T>
-    size_t ciFind( const T& haystack, const T& needle, size_t pos)
-    {
-        typename T::const_iterator it = std::search( haystack.begin() + pos, haystack.end(),
-            needle.begin(), needle.end(), myEqual<typename T::value_type> );
-        if ( it != haystack.end() ) return it - haystack.begin();
-        else return std::string::npos; // not found
-    }
-
-    enum class ResultType { NONE, PARTIAL, INITIAL, EXACT };
-
-    bool isOther(std::u8string_view s, size_t pos, srh::Class c)
-    {
-        if (pos >= s.size())
-            return true;
-        auto clazz = srh::classify(s[pos]);
-        return (clazz == srh::Class::OTHER || clazz != c);
-    }
-
-    ResultType myFind1(std::u8string_view haystack, const srh::Word& needle)
-    {
-        ResultType r = ResultType::NONE;
-        size_t pos = 0;
-        while (true) {
-            auto where = ciFind(haystack, needle.sv(), pos);
-            if (where == std::u8string_view::npos)
-                break;
-            ResultType r1 =
-                isOther(haystack, where - 1, needle.ccFirst)
-                    ? (isOther(haystack, where + needle.length(), needle.ccLast)
-                            ? ResultType::EXACT : ResultType::INITIAL)
-                    : ResultType::PARTIAL;
-            if (r1 == ResultType::EXACT)
-                return r1;
-            r = std::max(r, r1);
-            pos = where + 1;
-        }
-        return r;
-    }
-
-    uc::SearchPrio myFind(
-            std::u8string_view haystack, CompiledNeedle needle)
-    {
-        uc::SearchPrio r;
-        for (auto& v : needle.words) {
-            auto type = myFind1(haystack, v);
-            switch (type) {
-            case ResultType::EXACT: ++r.exact; break;
-            case ResultType::INITIAL: ++r.initial; break;
-            case ResultType::PARTIAL: ++r.partial; break;
-            case ResultType::NONE: ;
-            }
-        }
-        return r;
-    }
-
-}   // anon namespace
-
-
 uc::SearchResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -294,11 +206,11 @@ uc::SearchResult uc::doSearch(QString what)
         // SEARCH BY KEYWORD/mnemonic
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
-        CompiledNeedle needle(sv);
+        srh::Needle needle(sv);
         for (auto& cp : uc::cpInfo) {
             if (&cp != hex) {   // Do not check hex once again
                 auto names = cp.allRawNames();
-                uc::SearchPrio prio;
+                srh::Prio prio;
                 for (auto& nm : names) {
                     if (nm.starts_with('&')) {
                         // Search by HTML mnemonic
@@ -316,12 +228,12 @@ uc::SearchResult uc::doSearch(QString what)
                         }
                     } if (nm.find('#') == std::u8string_view::npos) {
                         // Search by keyword
-                        if (auto pr = myFind(nm, needle); pr > prio) {
+                        if (auto pr = srh::findNeedle(nm, needle); pr > prio) {
                             prio = pr;
                         }
                     }
                 }
-                if (prio > SearchPrio::EMPTY) {
+                if (prio > srh::Prio::EMPTY) {
                     r.emplace_back(&cp, prio);
                 }
             brk:;

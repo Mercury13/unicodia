@@ -795,7 +795,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole:
         return cache.getT(cp.subj.ch32(),
             [&cp, this](QPixmap& pix) {
-                std::cout << "Drawing char " << std::hex << cp.subj.uval() << std::endl;
                 auto size = pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
