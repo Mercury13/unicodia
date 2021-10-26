@@ -2116,12 +2116,13 @@ EndShort
 LangName: 1033 "" "" "" "2.002;GOOG;NotoSerifKannada-Regular" "" "Version 2.002; ttfautohint (v1.8.3) -l 8 -r 50 -G 200 -x 14 -D knda -f none -a qsq -X +ACIAIgAA" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Universal Thirst, Indian Type Foundry and the Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeBmp
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 3234 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 53 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 53 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 54 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning lookup 55 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning lookup 55 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning lookup 55 subtable"
