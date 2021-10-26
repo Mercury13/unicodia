@@ -4051,11 +4051,13 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Wancho
     { 0x1E2C0, 0x1E2FF,
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
-    /// @todo [desc] Ethiopic B
-    /// @todo [tofu] Ethiopic B
+    // Ethiopic ex B OK, built chars somehow
     { 0x1E7E0, 0x1E7FF,
             "Ethiopic Extended-B", u8"Эфиопский расширенный B",
-            {}, EcScript::Ethi },
+            u8"Новая орфография языков гураге, появившаяся в 2013. "
+                "Последние изменения в эфиопский вносились в 2010 "
+                    "и не могли захватить новые буквы.",
+            EcScript::Ethi },
     /// @todo [tofu] Mende Kikakui
     { 0x1E800, 0x1E8DF,
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
