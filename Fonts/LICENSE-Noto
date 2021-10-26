@@ -62,6 +62,7 @@ What was done by authors of Unicodia:
   - Fixed rotated chess pawns, they were standing
 * Tagalog:
   - Enlarged virama
+  - Implemented three U14 chars, hope usable
   - Rehinted
 * Yezidi
   - Copied 25CC dotted circle from Devanagari
