@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xml:space="preserve"
+   version="1.1"
+   style="shape-rendering:geometricPrecision;text-rendering:geometricPrecision;image-rendering:optimizeQuality;"
+   viewBox="0 0 327 327.5"
+   x="0px"
+   y="0px"
+   fill-rule="evenodd"
+   clip-rule="evenodd"
+   id="svg18"
+   sodipodi:docname="PouringLiquid.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview20"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:snap-global="false"
+     inkscape:zoom="2.1954198"
+     inkscape:cx="163.29451"
+     inkscape:cy="163.52225"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg18" /><defs
+     id="defs4"><style
+       type="text/css"
+       id="style2">
+   
+    .fil1 {fill:black}
+    .fil0 {fill:black;fill-rule:nonzero}
+   
+  </style></defs><path
+     class="fil0"
+     d="M 217,0 0,162 53,262 308,174 Z m -4,15 80,153 -235,82 -45,-85 z"
+     id="path6" /><polygon
+     class="fil1"
+     points="25,167 47,151 294,151 295,157 62,238 "
+     id="polygon8" /><text
+     x="0"
+     y="277"
+     fill="#000000"
+     font-size="5px"
+     font-weight="bold"
+     font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
+     id="text14">Created by RULI</text><text
+     x="0"
+     y="282"
+     fill="#000000"
+     font-size="5px"
+     font-weight="bold"
+     font-family="'Helvetica Neue', Helvetica, Arial-Unicode, Arial, Sans-serif"
+     id="text16">from the Noun Project</text><path
+     style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="m 306.09179,158.51182 c 11.38735,0 21.40821,7.7434 20.95272,13.66481 -0.4555,5.92142 8.65438,120.70585 8.65438,120.70585 h -32.79555 l 11.28278,-103.96279 c 1.15197,-10.61461 0.0899,-15.98811 -8.09433,-30.40787 z"
+     id="path986"
+     sodipodi:nodetypes="csccsc" /></svg>
