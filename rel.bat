@@ -1,12 +1,12 @@
 @set PRONAME=Unicodia\Unicodia.pro
 @set EXENAME=Unicodia.exe
-@set ARCNAME=Unicodia-0.1.7z
+@set ARCNAME=Unicodia-0.2.7z
 @set BUILD=~Build-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@set QTDIR=c:\Qt\6.2.0\mingw81_64
+@set QTDIR=c:\Qt\6.2.1\mingw81_64
 
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY%
