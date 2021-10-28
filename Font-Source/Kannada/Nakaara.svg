@@ -27,9 +27,9 @@
      inkscape:guide-bbox="true"
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-global="false"
-     inkscape:zoom="1.438"
-     inkscape:cx="222.879"
-     inkscape:cy="577.88595"
+     inkscape:zoom="1.0168196"
+     inkscape:cx="432.23008"
+     inkscape:cy="613.67821"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -48,27 +48,6 @@
        orientation="0,-1"
        id="guide846" />
     <sodipodi:guide
-       position="63.977747,474"
-       orientation="0,1"
-       id="guide1114"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,0,255)" />
-    <sodipodi:guide
-       position="-25.034771,361"
-       orientation="0,1"
-       id="guide1293"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,0,255)" />
-    <sodipodi:guide
-       position="23.64395,590"
-       orientation="0,1"
-       id="guide1295"
-       inkscape:label=""
-       inkscape:locked="false"
-       inkscape:color="rgb(0,0,255)" />
-    <sodipodi:guide
        position="110.5,706"
        orientation="0,-1"
        id="guide1373" />
@@ -84,21 +63,19 @@
        orientation="0,-1"
        id="guide1847" />
     <sodipodi:guide
-       position="-199.98331,509"
-       orientation="0,-1"
-       id="guide1849" />
+       position="-199.98331,353"
+       orientation="0,1"
+       id="guide1851"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
-       position="-199.98331,427"
-       orientation="0,-1"
-       id="guide1851" />
-    <sodipodi:guide
-       position="-493.78164,632.2573"
-       orientation="0,-1"
-       id="guide2367" />
-    <sodipodi:guide
-       position="-500.78164,545.2573"
-       orientation="0,-1"
-       id="guide2464" />
+       position="-500.78164,507"
+       orientation="0,1"
+       id="guide2464"
+       inkscape:label=""
+       inkscape:locked="false"
+       inkscape:color="rgb(0,0,255)" />
     <sodipodi:guide
        position="60,661.21152"
        orientation="1,0"
@@ -119,9 +96,9 @@
   <path
      id="path2"
      style="stroke-width:1"
-     d="m 249,253 c -117.22008,0 -189.378293,45.19844 -189,95.77674 0.183657,24.55515 28.51128,53.73466 68.83309,64.54748 C 88.51128,416.39248 60,453.57732 60,474.90051 c 0,21.85582 28.51128,47.16566 68.83309,53.03113 C 89.003009,529.54407 60,564.3343 60,587.67578 c 0,25.33276 29.003009,50.83249 68.83309,55.91211 C 89.003009,648.39472 59.798266,689.13162 60,716.10378 c 0.466631,62.38922 64.05748,83.83958 142,83.83958 h 146 v -71 H 210 c -26.52746,-0.15761 -95,-3.95721 -95,-22.70898 0,-17.36096 77.56157,-21.03516 112,-21.03516 h 121.34766 v -71 h -138 C 183.8202,614.04161 115,608.15792 115,590.10156 c 0,-20.14259 77.56157,-21.03515 112,-21.03515 h 121 v -71 H 210 c -26.52746,-0.15761 -95,-4.65068 -95,-22.70703 0,-14.14233 50.87346,-19.51333 88.53711,-20.61719 H 348 v -71 H 210 C 183.47254,383.58458 115,370.7466 115,361.03516 115,351.32372 192.56157,340 227,340 h 425.9043 l 7,-87 z"
+     d="m 249,253 c -130.9885,0 -189,65.36393 -189,115.94364 0,36.38119 29.329044,72.05331 68.83309,82.63839 C 88.51128,462.99521 60,496.47705 60,528.4471 c 0,33.6778 28.51128,63.90315 68.83309,77.41813 C 88.51128,614.43176 60,657.64585 60,696.8552 60,737.13446 73.91609,800 227,800 h 121.34766 v -71 h -138 C 183.8202,728.84239 115,721.5098 115,689.54523 115,658.27608 176.56713,647 211.00556,647 H 348 V 576 H 210 C 183.47254,575.84239 115,562.88686 115,531.68761 115,504.69043 165.87346,494.10386 203.53711,493 H 348 V 422 H 210 C 183.47254,421.84239 115,408.99416 115,379.11583 115,352.64465 182.82583,340 227,340 h 425.9043 l 7,-87 z"
      transform="translate(-10)"
-     sodipodi:nodetypes="sscscscsscccsccccsscccsccccssccs" />
+     sodipodi:nodetypes="sscscsscccsscccsccccssccs" />
   <path
      fill="currentColor"
      d="m -810.78164,914.7427 q -34,0 -66.5,-13.5 -32.5,-13.5 -54,-42.5 -21.5,-29 -21.5,-76 0,-42 20.5,-73.5 20.5,-31.5 58.5,-47.5 -37,-19 -58,-53.5 -21,-34.5 -21,-83.5 0,-75 50.5,-116 50.5,-41 138.5,-41 h 260 l -7,87 h -275 q -59,0 -85.5,20 -26.5,20 -26.5,55 0,37 27,56.5 27,19.5 68,19.5 h 138 v 82 h -146 q -41,0 -64,18.5 -23,18.5 -23,52.5 0,31 21,50.5 21,19.5 61,19.5 h 29 v 86 z"
