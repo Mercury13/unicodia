@@ -87,7 +87,7 @@ constinit const uc::Font uc::fontInfo[] = {
         // CJK chars are square, and there’s always not enough detail → bigger
     { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                    // CJK
       { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
-      { "BabelStoneHan.ttf", Ffg::FALL_TO_NEXT, 120_pc },                       // …2
+      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …4 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …5 Korean
@@ -107,7 +107,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
-      { "BabelStoneHan.ttf", 130_pc },                                          // …5
+      { FNAME_BABEL, 130_pc },                                                  // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
@@ -139,7 +139,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },    // Korean:  we use it for well-known chars, no need to rename
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
       { FNAME_HANA_A, Ffg::FALL_TO_NEXT },                                      // …2 HanaMin
-      { "BabelStoneHan.ttf" },                                                  // …2 U14
+      { FNAME_BABEL },                                                          // …2 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha

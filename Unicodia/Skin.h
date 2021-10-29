@@ -59,6 +59,7 @@ constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "FunkySample.ttf";
 constexpr std::string_view FNAME_HANA_A = "HanaMinA.ttf";
 constexpr std::string_view FNAME_HANA_B = "HanaMinB.ttf";
+constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 
 /// Alpha for space characters
 constexpr int ALPHA_SPACE = 70;
