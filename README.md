@@ -32,7 +32,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Future functionality
-* Version 1.0: when all chars of Unicode 13 except CJK G are drawn, even badly.
+* Version 1.0: when **all** those chars are drawn, even badly:
+  * U13: everything except CJK G.
+  * U14: basic emoji w/o ligatures, plus small holes like Telugu, new umlauts, Persian semi-sharp/semi-flat…
 * Future tools (**not** milestones of 1.0):
   * Emoji tools: ligatures, more comprehensive reference.
   * Better CJK reference.
