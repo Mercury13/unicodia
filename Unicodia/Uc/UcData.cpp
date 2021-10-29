@@ -70,6 +70,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
     { "NotoSansBalinese-Regular.ttf", Ffg::STUB_OFF, "padding-bottom: 12%;"_sty, 90_pc }, // Balinese
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
+    { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
     { "NotoSansBatak-Regular.ttf" },                                            // Batak
     { "NotoSerifDevanagari.ttf", Ffg::FALL_TO_NEXT, STYLE_DEVA, 110_pc },       // Vedic = Devanagari → Bengali
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
@@ -632,13 +633,23 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Пришедшие в 1918 французы выгнали Нджойю и перевели язык на [[ps:Latn|латиницу]]. В 2007 начат проект по возрождению, "
                 "прогресс незначителен. Более ранние художества Нджойи можно увидеть в дополнительных плоскостях Юникода.",
                 EcFont::BAMUM },
+    // Bassa Vah OK, none in W10, installed Google Noto
+    { "Bass", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"Басса", u8"≈1900",
+        u8"басса ''(Либерия, 400 тыс. на 2006)''",
+        u8"Басса по имени Томас Льюис открыл, что бывшие рабы басса из Америки используют необычное письмо. "
+                "По другим данным, он создал письмо сам. "
+                "Самобытное письмо всё больше заменяется Международным фонетическим алфавитом.",
+                EcFont::BASSA_VAH },
     // Batak OK, installed Google Noto font
     { "Batk", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Батакская", u8"≈1300",
         u8"батакские ''(Суматра)''",
-        u8"Происходит от брахми и мало чем отличается от других абугид Юго-Восточной Азии. Гласная по умолчанию «а». "
-                "Практически не используется, заменена латиницей.",
+        u8"Происходит от [[ps:Brah|брахми]] и мало чем отличается от других абугид Юго-Восточной Азии. "
+                "Гласная по умолчанию «а». "
+                "Практически не используется, заменена [[ps:Latn|латиницей]].",
                 EcFont::BATAK },
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
@@ -1555,6 +1566,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
                 "в середине и в конце{{-}}сокращённые.",
                 EcFont::MALAYALAM },
+    // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Моди", u8"1200–1600",

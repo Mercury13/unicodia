@@ -192,6 +192,7 @@ namespace uc {
         AVESTAN,
         BALINESE,
         BAMUM,
+        BASSA_VAH,
         BATAK,
         VEDIC,      // Devanagari → Bengali
         BENGALI,

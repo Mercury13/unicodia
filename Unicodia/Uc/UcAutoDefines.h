@@ -27,6 +27,7 @@ namespace uc {
         Avst,   // Avestan
         Bali,   // Balinese
         Bamu,   // Bamum
+        Bass,   // Bassa Vah
         Batk,   // Batak
         Beng,   // Bengali
         Bhks,   // Bhaiksuki
@@ -170,7 +171,6 @@ namespace uc {
 
         //Afak  no chars — Afaka (Suriname)
         //Aran  no chars — Arabic Nastaliq
-        Bass = Zyyy,        // beyond BMP
         //Blis  no chars — Blissymbols
         //Cirt  no chars — Cirth
         Cpmn = Zyyy,        // Cypro-Minoan, U14
