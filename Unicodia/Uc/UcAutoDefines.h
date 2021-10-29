@@ -93,6 +93,7 @@ namespace uc {
         Maka,   // Makasar
         Mand,   // Mandaic
         Mani,   // Manichean
+        Marc,   // Marchen
         Merc,   // Meroitic cursive
         Mero,   // Meroitic hieroglyphs
         Mlym,   // Malayalam
@@ -196,7 +197,6 @@ namespace uc {
         //Latg  no chars — Latin Gaelic
         //Leke  no chars — Leke (Pwo Karen)
         //Loma  no chars — Loma (Africa)
-        Marc = Zyyy,        // beyond BMP
         //Maya  no chars — Maya
         Medf = Zyyy,        // beyond BMP
         Mend = Zyyy,        // beyond BMP

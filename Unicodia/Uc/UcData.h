@@ -271,6 +271,7 @@ namespace uc {
         MALAYALAM,
         MANDAIC,
         MANICHAEAN,
+        MARCHEN,
         MEETEI,
         MEROITIC,
         MODI,
