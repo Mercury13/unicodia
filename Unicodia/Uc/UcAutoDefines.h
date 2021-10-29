@@ -115,6 +115,7 @@ namespace uc {
         Osge,   // Osage
         Osma,   // Osmanya
         Palm,   // Palmyrene
+        Pauc,   // Pau Cin Hau
         Perm,   // Old Permic
         Phag,   // Phags-Pa
         Phli,   // Inscriptional Pahlavi
@@ -203,7 +204,6 @@ namespace uc {
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
         Ougr = Zyyy,        // Old Uyghur, U14
-        Pauc = Zyyy,        // beyond BMP
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
         Plrd = Zyyy,        // beyond BMP

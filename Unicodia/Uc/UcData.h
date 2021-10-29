@@ -293,6 +293,7 @@ namespace uc {
         OLD_SOGDIAN,
         ORIYA,
         PALMYRENE,
+        PAU_CIN_HAU,
         PHAGS_PA,
         PHOENICIAN,
         PLAYING_CARDS,     // Fall down to Phaistos Disc

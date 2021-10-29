@@ -173,6 +173,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
+    { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Playing cards
@@ -1803,6 +1804,20 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево. "
                 "Расшифрована в 1754.",
                 EcFont::PALMYRENE },
+    // Pau Cin Hau OK, W10 none, installed Google Noto
+    { "Pauc", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Письмо По Чин Хо", u8"1902 (первое иероглифическое), 1931 (алфавитное)",
+        u8"тедим (=зоми) и другие северные куки-чинские языки ''(Мьянма)''",
+        u8"Письмо изобретено По Чин Хо (1859–1948), основателем новой религии из народа тедим. "
+                "Религия называлась ''Laipian''{{-}}«религия письма». "
+                "Сначала письмо было иероглифическим, потом алфавитным. "
+                "В письме есть согласные R, F, Ch и несколько тонов, отсутствующие в тедиме{{-}}"
+                    "так что По Чин Хо намеревался сделать письмо для всех куки-чинских языков."
+            "<p>Впоследствии письмо перехватили христиане, и оно поныне ограниченно используется народом тедим (340{{_}}тыс. на 1990) "
+                    "вместе с [[ps:Latn|латиницей]]. "
+                "Родственные народы пишут только латиницей.",
+                EcFont::PAU_CIN_HAU},
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
