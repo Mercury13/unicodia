@@ -32,9 +32,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Future functionality
-* Version 1.0: when **all** happen…
-  * All chars of Unicode 13 except CJK G are drawn, even badly.
-  * Basic search.
+* Version 1.0: when all chars of Unicode 13 except CJK G are drawn, even badly.
 * Future tools (**not** milestones of 1.0):
   * Emoji tools: ligatures, more comprehensive reference.
   * Better CJK reference.
