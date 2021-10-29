@@ -3959,7 +3959,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A",
-            u8"35 (на Юникод{{_}}14) символов [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]].",
+            u8"31 символ [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]], и 4 символа [[ps:Kana|катаканы]] и хираганы.",
             EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
     // Small kana ex OK
     { 0x1B130, 0x1B16F,
