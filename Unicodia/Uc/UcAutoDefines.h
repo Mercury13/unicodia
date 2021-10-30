@@ -70,6 +70,7 @@ namespace uc {
         Hent,   // Hentaigana
         Hira,   // Hiragana
         Hluw,   // Anatolian (Luwian, Hittite) hieroglyphs
+        Hmng,   // Pahawh Hmong
         Hmnp,   // NP hmong (American script for White/Green Hmongs)
         Hung,   // Old Hungarian runes
         Ital,   // Old Italic
@@ -185,8 +186,6 @@ namespace uc {
         //Hanb  no chars — Han + Bopomofo
         //Hans  no chars — Han simplified
         //Hant  no chars — Han traditional
-        /// @todo [urgent] Pahaw Hmong
-        Hmng = Zyyy,        // beyond BMP
         //Hrkt  no chars — Hiragana + Katakana
         //Inds  no chars — Indus
         //Jamo  no chars — Hangul jamo

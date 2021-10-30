@@ -177,6 +177,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
+    { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa" },                                                    // Phags-Pa
@@ -1219,6 +1220,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1915 лувийский язык расшифровали через клинопись, в 1930-е появились первые расшифровки. "
                 "В 1973 расшифрованы окончательно.",
                 EcFont::ANATOLIAN },
+    // Pahawh Hmong OK, W10 none → installed Google Noto
+    { "Hmng", QFontDatabase::Any,
+        EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AMERICA,
+        u8"Пахау хмонг", u8"1959 (первая версия)",
+        u8"языки белых и зелёных хмонгов",
+        u8"Автор письменности Шон-лы Я заявляет, что письмо дано ему богом. "
+                "Название «пахау» означает «объединиться». "
+                "Разработка шла с 1959 до 1971."
+            "<p>Большинство абугид «согласно-центричные». "
+                "Центральный компонент пахау{{-}}гласная буква, а начальные согласные стоят справа от неё. "
+                "Например, слово «хмонг» {{sm|𖬌𖬣𖬵}} состоит из гласной «oob», согласной «qh» и тона-гвоздика.",
+                EcFont::PAHAWH_HMONG },
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,

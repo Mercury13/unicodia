@@ -23,7 +23,9 @@ What was done by authors of Unicodia:
 * Bamum, Glagolitic, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Egyptian hieroglyphs, Kannada, Modi, Syloti Nagri, Zanabazar square
-  - Rehinted
+  - Rehinted with hinting VM
+* Pahawh Hmong
+  - Rehinted w/o hinting VM
 * Devanagari
   - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.
     (note: scale new → old 194%)

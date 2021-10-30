@@ -296,6 +296,7 @@ namespace uc {
         OLD_PERSIAN,
         OLD_SOGDIAN,
         ORIYA,
+        PAHAWH_HMONG,
         PALMYRENE,
         PAU_CIN_HAU,
         PHAGS_PA,
