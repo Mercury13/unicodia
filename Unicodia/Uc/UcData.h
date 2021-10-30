@@ -275,6 +275,7 @@ namespace uc {
         MANICHAEAN,
         MARCHEN,
         MASARAM_GONDI,
+        MEDEFAIDRIN,
         MEETEI,
         MEROITIC,
         MODI,

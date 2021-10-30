@@ -156,6 +156,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMarchen-Regular.ttf", "padding-bottom:20%;"_sty, 110_pc },       // Marchen
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Masaram Gondi
+    { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
@@ -1595,6 +1596,18 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В настоящее время используется в ''бон''{{-}}тибетской околобуддийской религии, вышедшей из раннего буддизма "
                     "(не{{_}}путать с настоящим тибетским буддизмом).",
                 EcFont::MARCHEN },
+    // Medefaidrin OK, W10 none, installed Google Noto
+    { "Medf", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
+        u8"Обэри-окаимэ (медефайдрин)", u8"1930-е",
+        u8"обэри-окаимэ/медефайдрин ''(Нигерия)''",
+        u8"Искусственный язык и письменность для него создали Майкл Укпонг и Акпан Акпан Удофиа в 1930-е годы в нигерийской "
+                    "околохристианской церкви ''обэри-окаимэ''. "
+                "Слова собственные, грамматика{{-}}помесь английского и местного языка ибибио."
+            "<p>Новый язык использовали в богослужениях, преподавали в школе. "
+                "Это не понравилось британским колониальным властям, и обучение свернули. "
+                "Осталось несколько рукописей, и те в плохом состоянии.",
+                EcFont::MEDEFAIDRIN },
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -3879,22 +3892,29 @@ constinit const uc::Block uc::blocks[] {
     // Soyombo OK
     { 0x11A50, 0x11AAF,
             "Soyombo", u8"Соёмбо", {}, EcScript::Soyo },
+    // Canadian A OK
     { 0x11AB0, 0x11ABF,
             "Unified Canadian Aboriginal Syllabics Extended-A",
             u8"Канадская слоговая расширенная A",
             u8"Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), "
                         "и четыре исторических слога индейцев кри и оджибве.",
             EcScript::Cans },
+    // Pau Cin Hau OK
     { 0x11AC0, 0x11AFF,
             "Pau Cin Hau", u8"Письмо По Чин Хо", {}, EcScript::Pauc },
+    // Bhaiksuki OK
     { 0x11C00, 0x11C6F,
             "Bhaiksuki", u8"Бхаикшуки (стрелоглавое письмо)", {}, EcScript::Bhks },
+    /// @todo [semi-tofu] Marchen too small because of subjoining
     { 0x11C70, 0x11CBF,
             "Marchen", u8"Марчхен", {}, EcScript::Marc },
+    /// @todo [semi-tofu] Masaram: no virtual virama
     { 0x11D00, 0x11D5F,
             "Masaram Gondi", u8"Письмо Масарама (гонди)", {}, EcScript::Gonm },
+    /// @todo [semi-tofu] Gunjala: no virtual virama
     { 0x11D60, 0x11DAF,
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
+    // Makasar OK
     { 0x11EE0, 0x11EFF,
             "Makasar", u8"Макасарский (птичье письмо)", {}, EcScript::Maka },
     // Lisu supplement OK, new font engine works
@@ -3952,8 +3972,10 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Tangsa
     { 0x16A70, 0x16ACF,
             "Tangsa", u8"Тангса", {}, EcScript::Tnsa },
+    // Bassa OK
     { 0x16AD0, 0x16AFF,
             "Bassa Vah", u8"Басса (вах)", {}, EcScript::Bass },
+    // Pahawh OK
     { 0x16B00, 0x16B8F,
             "Pahawh Hmong", u8"Пахау хмонг", {}, EcScript::Hmng },
     { 0x16E40, 0x16E9F,
@@ -4008,6 +4030,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
                     "Хэнтайгана продолжается и в следующем блоке.",
             EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+    // Kana ex A OK
     { 0x1B100, 0x1B12F,
             "Kana Extended-A", u8"Кана расширенная A",
             u8"31 символ [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]], и 4 символа [[ps:Kana|катаканы]] и хираганы.",
