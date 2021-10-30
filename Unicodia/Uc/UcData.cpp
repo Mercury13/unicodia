@@ -951,7 +951,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Elbasan OK, none in W10 → installed Google Noto
     { "Elba", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Эльбасанский албанский", u8"XVIII век",
+        u8"Эльбасанский алфавит (албанский)", u8"XVIII век",
         u8"албанский",
         u8"Придумана в середине XVIII{{_}}века и использовалась в окрестностях города Эльбасан (Албания). "
                 "Создание приписывается учителю Теодору Хаджи Филиппу (1730–1806), которого убили, когда он перевозил шрифт. "
@@ -2448,7 +2448,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vithkuqi OK
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Виткутьский албанский", u8"1844 (первый известный источник)",
+        u8"Виткутьский алфавит (албанский)", u8"1844 (первый известный источник)",
         u8"албанский",
         u8"Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. "
                 "Через два года Наум умер, и алфавит не получил особого распространения. "

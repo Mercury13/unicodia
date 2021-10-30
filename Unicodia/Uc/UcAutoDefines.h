@@ -177,6 +177,7 @@ namespace uc {
         //Cirt  no chars — Cirth
         Cpmn = Zyyy,        // Cypro-Minoan, U14
         //Cyrs  no chars — Cyrillic Old Church
+        /// @todo [urgent] Duployan
         Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars — Egyptian demotic
         //Egyh  no chars — Egyptian hieratic
@@ -184,6 +185,7 @@ namespace uc {
         //Hanb  no chars — Han + Bopomofo
         //Hans  no chars — Han simplified
         //Hant  no chars — Han traditional
+        /// @todo [urgent] Pahaw Hmong
         Hmng = Zyyy,        // beyond BMP
         //Hrkt  no chars — Hiragana + Katakana
         //Inds  no chars — Indus
@@ -198,7 +200,9 @@ namespace uc {
         //Leke  no chars — Leke (Pwo Karen)
         //Loma  no chars — Loma (Africa)
         //Maya  no chars — Maya
+        /// @todo [urgent] Medefaidrin
         Medf = Zyyy,        // beyond BMP
+        /// @todo [urgent] Mende Kikakui
         Mend = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
@@ -206,6 +210,7 @@ namespace uc {
         Ougr = Zyyy,        // Old Uyghur, U14
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
+        /// @todo [urgent] Miao/Pollard
         Plrd = Zyyy,        // beyond BMP
         //Roro  no chars — Rongorongo (Easter Island)
         //Sara  no chars — Sarati (Tolkien)
@@ -217,6 +222,7 @@ namespace uc {
         Tnsa = Zyyy,        // Tangsa, U14
         Toto = Zyyy,        // Toto, U14
         //Visp  no chars — Visible speech
+        /// @todo [urgent] Wancho
         Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
         //Zmth  no chars — math notation
