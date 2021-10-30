@@ -661,34 +661,8 @@ TEST (Decap, ToneBassa)
 }
 
 
-///
-///  Bug: Tone 27
-///
-TEST (Decap, ToneMiao1)
-{
-    auto r = decapitalize("MIAO TONE TOP RIGHT");
-    EXPECT_EQ("Miao tone Top right", r);
-}
-
-
-///
-///  Bug: Tone 28
-///
-TEST (Decap, ToneMiao2)
-{
-    auto r = decapitalize("MIAO TONE ABOVE");
-    EXPECT_EQ("Miao tone Above", r);
-}
-
-
-///
-///  Bug: Tone 29
-///
-TEST (Decap, ToneMiao3)
-{
-    auto r = decapitalize("MIAO TONE BELOW");
-    EXPECT_EQ("Miao tone Below", r);
-}
+// 27..29 are Miao-related and moved to manual exceptions
+// See also test BugMiaoTone
 
 
 ///
@@ -936,4 +910,15 @@ TEST (Decap, BugCyproMinoan)
 {
     auto r = decapitalize("CYPRO-MINOAN SIGN CM005B");
     EXPECT_EQ("Cypro-Minoan sign CM005B", r);
+}
+
+
+
+///
+///  BUG: Miao tone Below
+///
+TEST (Decap, BugMiaoTone)
+{
+    auto r = decapitalize("MIAO TONE BELOW");
+    EXPECT_EQ("Miao tone below", r);
 }

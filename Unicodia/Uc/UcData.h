@@ -304,6 +304,7 @@ namespace uc {
         PHOENICIAN,
         PLAYING_CARDS,     // Fall down to Phaistos Disc
          PHAISTOS_DISC,
+        POLLARD,
         PSALTER_PAHLAVI,
         REJANG,
         ROHINGYA,
@@ -369,7 +370,7 @@ namespace uc {
         FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
-        NO_HINTING    = 1<<11,  ///< No hinting
+        DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
     DEFINE_ENUM_OPS(Ffg)

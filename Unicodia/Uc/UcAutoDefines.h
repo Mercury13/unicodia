@@ -55,8 +55,8 @@ namespace uc {
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
-        Gong,   // Gondi/Gunjala
-        Gonm,   // Gondi/Masaram
+        Gong,   // Gondi / Gunjala
+        Gonm,   // Gondi / Masaram
         Goth,   // Gothic
         Gran,   // Grantha
         Grek,   // Greek
@@ -127,6 +127,7 @@ namespace uc {
         Phli,   // Inscriptional Pahlavi
         Phlp,   // Psalter Pahlavi
         Phnx,   // Phoenician
+        Plrd,   // Miao / Pollard
         Prti,   // Inscriptional Parthian
         Rjng,   // Rejang
         Rohg,   // Hanifi Rohingya
@@ -208,8 +209,6 @@ namespace uc {
         Ougr = Zyyy,        // Old Uyghur, U14
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
-        /// @todo [urgent] Miao/Pollard
-        Plrd = Zyyy,        // beyond BMP
         //Roro  no chars — Rongorongo (Easter Island)
         //Sara  no chars — Sarati (Tolkien)
         //Shui  no chars — Shuishu hieroglyphs (Sui language, China)

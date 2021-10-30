@@ -746,8 +746,6 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Squared SS")
     EX("Squared PPV")
     EX("Squared WC")
-    EX("Miao tone Above")                       // Adverb!
-    EX("Miao tone Below")                       // Adverb!
     EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
     EX("Musical symbol Right repeat sign")      // The same
     EX("Musical symbol Half pedal mark")        // The same
@@ -990,6 +988,10 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Duployan letter G R S")                     // Same
     EX("Duployan affix Attached I hook")            // Same
     EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
+    EX("Miao tone right")                           // A clear miss of my algorithm, actually a semi-format tone combiner
+    EX("Miao tone top right")                       // Same
+    EX("Miao tone above")                           // Same
+    EX("Miao tone below")                           // Same
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban

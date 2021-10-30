@@ -119,7 +119,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
     { "Segoe UI Historic", Ffg::FALL_TO_NEXT },                                 // Gothic
       { FNAME_HANA_A },                                                         // …1
-    { "NotoSansGrantha-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_SMALLER,
+    { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
@@ -140,7 +140,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },    // Korean:  we use it for well-known chars, no need to rename
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
       { FNAME_HANA_A, Ffg::FALL_TO_NEXT },                                      // …2 HanaMin
-      { FNAME_BABEL },                                                          // …2 U14
+      { FNAME_BABEL },                                                          // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
@@ -155,7 +155,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
     { "NotoSansMarchen-Regular.ttf", "padding-bottom:20%;"_sty, 110_pc },       // Marchen
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
-    { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Masaram Gondi
+    { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
@@ -165,7 +165,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
-    { "NotoSansNewa-Regular.ttf", Ffg::DESC_BIGGER },                           // Newa
+    { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
@@ -185,6 +185,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Playing cards
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
+    { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
     { "NotoSansRejang-Regular.ttf", Ffg::DESC_BIGGER },                         // Rejang
     { "NotoSansHanifiRohingya-Regular.ttf", Ffg::DESC_BIGGER },                 // Rohingya (Hanifi)
@@ -1607,7 +1608,9 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Новый язык использовали в богослужениях, преподавали в школе. "
                 "Это нарушало местный закон об образовании, школа подвергалась преследованиям и штрафам, и обучение свернули. "
                 "Осталось несколько рукописей, и те в плохом состоянии. "
-                "Исследователи узнали о медефайдрине в 1947.",
+                "Исследователи узнали о медефайдрине в 1947. "
+                "Около 4000 обэри существует и поныне (2020), но носителей языка единицы. "
+                "Нигерийские власти усиленно исследуют язык и сканируют сохранившиеся документы.",
                 EcFont::MEDEFAIDRIN },
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
@@ -1974,6 +1977,17 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Таким образом, большая часть грамотного мира обязана финикийцам."
             "<p>Исчезла около 150{{bc}} с разрушением Карфагена; в самой Финикии уже давно ходили письменности-потомки.",
                 EcFont::PHOENICIAN },
+    // Miao/Pollard OK, W10 none, installed Google Noto
+    { "Plrd", QFontDatabase::Any,
+        EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Мяо (письмо Полларда)", u8"1936",
+        u8"языки разноцветных и сычуаньских хмонгов (=мяо), лису, и",
+        u8"Придумана в 1936 проповедником методистской церкви Сэмюэлем Поллардом на основе [[ps:Cans|канадской слоговой]]. "
+                "Первая попытка закодировать мяо была в 1997. "
+                "Из-за сложной тоновой структуры хмонгских языков только в 2010 удалось довести мяо до кодировки."
+            "<p>Схема кодирования такая:<br>"
+                "{{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}",
+                EcFont::POLLARD },
     // Inscriptional Parthian OK, W10 Historic
     { "Prti", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
@@ -3982,6 +3996,7 @@ constinit const uc::Block uc::blocks[] {
     // Medefaidrin OK
     { 0x16E40, 0x16E9F,
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
+    /// @todo [semi-tofu] Draw special chars for tone
     { 0x16F00, 0x16F9F,
             "Miao", u8"Мяо (письмо Полларда)", {}, EcScript::Plrd },
     // Ideographic sym/punct OK
