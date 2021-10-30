@@ -3978,6 +3978,7 @@ constinit const uc::Block uc::blocks[] {
     // Pahawh OK
     { 0x16B00, 0x16B8F,
             "Pahawh Hmong", u8"Пахау хмонг", {}, EcScript::Hmng },
+    // Medefaidrin OK
     { 0x16E40, 0x16E9F,
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
     { 0x16F00, 0x16F9F,
