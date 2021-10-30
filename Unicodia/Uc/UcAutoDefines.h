@@ -55,6 +55,8 @@ namespace uc {
         Ethi,   // Ethiopic
         Geor,   // Georgian
         Glag,   // Glagolitic
+        Gong,   // Gondi/Gunjala
+        Gonm,   // Gondi/Masaram
         Goth,   // Gothic
         Gran,   // Grantha
         Grek,   // Greek
@@ -179,8 +181,6 @@ namespace uc {
         //Egyd  no chars — Egyptian demotic
         //Egyh  no chars — Egyptian hieratic
         //Geok  no chars
-        Gong = Zyyy,        // beyond BMP
-        Gonm = Zyyy,        // beyond BMP
         //Hanb  no chars — Han + Bopomofo
         //Hans  no chars — Han simplified
         //Hant  no chars — Han traditional

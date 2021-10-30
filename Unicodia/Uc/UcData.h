@@ -242,6 +242,7 @@ namespace uc {
           ORKHON,   // For Orkhon HanaA >> Segoe Historic
         GRANTHA,
         GUJARATI,
+        GUNJALA_GONDI,
         GURMUKHI,
         HANUNOO,
         HATRAN,
@@ -273,6 +274,7 @@ namespace uc {
         MANDAIC,
         MANICHAEAN,
         MARCHEN,
+        MASARAM_GONDI,
         MEETEI,
         MEROITIC,
         MODI,
