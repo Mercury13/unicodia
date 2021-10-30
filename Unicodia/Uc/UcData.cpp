@@ -4085,6 +4085,7 @@ constinit const uc::Block uc::blocks[] {
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
     /// @todo [semi-tofu, P1] Check and take smth from Segoe UI Symbol
+    /// @todo [tofu, U14] Persian semi-sharp / semi-flat
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы",
             u8"С X{{_}}века появилась нотная запись, похожая на современную. "
