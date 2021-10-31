@@ -166,6 +166,7 @@ namespace uc {
         Ugar,   // Ugaritic
         Vaii,   // Vai
         Vith,   // Vithkuqi Albanian
+        Wcho,   // Wancho
         Wara,   // Warang Citi
         Xpeo,   // Old Persian cuneiform
         Xsux,   // Cuneiform
@@ -218,8 +219,6 @@ namespace uc {
         Tnsa = Zyyy,        // Tangsa, U14
         Toto = Zyyy,        // Toto, U14
         //Visp  no chars — Visible speech
-        /// @todo [urgent] Wancho
-        Wcho = Zyyy,        // Wancho beyond BMP
         //Wole  no chars
         //Zmth  no chars — math notation
         //Zsye  no chars — emoji

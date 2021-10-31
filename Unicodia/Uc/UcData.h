@@ -348,6 +348,7 @@ namespace uc {
           Z_USY_1,        
         VAI,
         VITHKUQI,
+        WANCHO,
         WARANG_CITI,
         YEZIDI,
         YI,

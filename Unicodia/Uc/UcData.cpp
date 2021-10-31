@@ -230,6 +230,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO },                                                           // …1
     { "Ebrima" },                                                               // Vai
     { "NotoSerifVithkuqi-Regular.ttf" },                                        // Vithkuqi
+    { "NotoSansWancho-Regular.ttf", Ffg::DESC_BIGGER },                         // Wancho
     { "NotoSansWarangCiti-Regular.ttf", Ffg::DESC_BIGGER },                     // Warang Citi
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
@@ -2498,7 +2499,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Другая{{-}}он использовался для торговли с голландцами и португальцами. "
                 "В 1962 Университет Либерии добавил знаки для недостающих слогов.",
                 EcFont::VAI },
-    // Vithkuqi OK
+    // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AFRICA,
         u8"Виткутьский алфавит (албанский)", u8"1844 (первый известный источник)",
@@ -2516,6 +2517,16 @@ constinit const uc::Script uc::scriptInfo[] {
                     "и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] "
                     "ради религиозной нейтральности.",
                 EcFont::VITHKUQI },
+    // Wancho OK, W10 none, installed Google Noto
+    { "Wcho", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Ванчо", u8"2001…2012",
+        u8"ванчо ''(Индия, 59 тыс. на 2011)''",
+        u8"Обычно на ванчо пишут [[ps:Deva|деванагари]] или [[ps:Latn|латиницей]]. "
+                "Между 2001 и 2012 учитель Банванг Лосу придумал свой алфавит. "
+                "Четыре тона обозначаются диакритикой. "
+                "Знаки препинания обычные европейские.",
+                EcFont::WANCHO },
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
