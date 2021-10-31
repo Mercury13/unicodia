@@ -4236,7 +4236,7 @@ constinit const uc::Block uc::blocks[] {
                     "всё семейство, не только закодированный в 2005 себат-бет. "
                 "Часть старых себатбетских букв объявлены [[pt:obsolete|устаревшими]].",
             EcScript::Ethi },
-    /// @todo [tofu] Mende Kikakui
+    // Mende Kikakui OK
     { 0x1E800, 0x1E8DF,
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
     // Adlam OK
