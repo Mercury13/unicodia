@@ -49,6 +49,7 @@ namespace uc {
         Diak,   // Dives Akuru
         Dogr,   // Dogra
         Dsrt,   // Deseret (Mormon)
+        Dupl,   // Duployan shorthand
         Egyp,   // Egyptian hieroglyphs
         Elba,   // Elbasan Albanian
         Elym,   // Elymaic
@@ -180,8 +181,6 @@ namespace uc {
         //Cirt  no chars — Cirth
         Cpmn = Zyyy,        // Cypro-Minoan, U14
         //Cyrs  no chars — Cyrillic Old Church
-        /// @todo [urgent] Duployan
-        Dupl = Zyyy,        // beyond BMP
         //Egyd  no chars — Egyptian demotic
         //Egyh  no chars — Egyptian hieratic
         //Geok  no chars

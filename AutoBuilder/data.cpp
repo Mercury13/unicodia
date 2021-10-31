@@ -987,11 +987,13 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Duployan letter K R S")                     // Same
     EX("Duployan letter G R S")                     // Same
     EX("Duployan affix Attached I hook")            // Same
+    EX("Duployan thick letter selector")            // A clear miss of my algo, IDK what to do
     EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
     EX("Miao tone right")                           // A clear miss of my algorithm, actually a semi-format tone combiner
     EX("Miao tone top right")                       // Same
     EX("Miao tone above")                           // Same
     EX("Miao tone below")                           // Same
+    EX("Shorthand format Letter overlap")           // Letter is not low-case!
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -1017,6 +1019,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },
     { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
     { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, PrefixAction::NEXT_CAP },   // Consonant is tricky
+    { { "SHORTHAND"sv, "FORMAT"sv }, PrefixAction::REST_CAPSMALL },
 };
 
 
@@ -1058,6 +1061,9 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x13437, "(" },   // Egyptian hiero begin segment
     { 0x13438, ")" },   // Egyptian hiero end segment
     { 0x16FE4, "KSS F" }, // Khitan small filler
+    { 0x1BC9D, "DTLS" }, // Duployan thick letter selector
+    { 0x1BCA2, "↓" },   // Shorthand format Down step
+    { 0x1BCA3, "↑" },   // Shorthand format Up step
     { 0x1D159, "NULL NOTE HEAD" }, // Music
     { 0x1D173, "BEGIN BEAM" },
     { 0x1D174, "END BEAM" },

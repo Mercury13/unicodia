@@ -403,7 +403,9 @@ namespace {
         switch (sz) {
         case 3: return Q5;
         case 1:
-            if (len == 1)
+            if (len == 1
+                || (len == 2 && line1[0] >= 0b1100'0000 && line1[0] <= 0b1101'1111)     // 2-byte seq of UTF-8
+                || (len == 3 && line1[0] >= 0b1110'0000 && line1[0] <= 0b1110'1111))    // 3-byte seq of UTF-8
                 return Q1;
             [[fallthrough]];
         default:

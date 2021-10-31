@@ -109,6 +109,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
       { FNAME_BABEL, 130_pc },                                                  // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
+    { "NotoSansDuployan-Regular.ttf", Ffg::STUB_DUPLOYAN_UNGLITCH },            // Duployan
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
@@ -932,6 +933,17 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>В 1997 алфавит внесён в Реестр искусственных письменностей. "
                 "Исключён в 2001, когда мормонский появился в настоящем Юникоде.",
                 EcFont::SYMBOL },
+    // Duployan OK, W10 none → installed Google Noto
+    { "Dupl", QFontDatabase::Any,
+        EcScriptType::CODE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
+        u8"Стенография Дюплойе", u8"1860",
+        u8"изначально французский, потом румынский, английский, испанский, немецкий, отдельные индейские",
+        u8"Система стенографии, придуманная французским священником Эмилем Дюплойе. "
+                "По классификации стенографий{{-}}геометрическая (основы знаков{{-}}точки, линии, круги), буквенная."
+            "<p>Слова пишутся одним росчерком, при этом письмо может уходить далеко вверх или вниз. "
+                "Для этого нужен не только шрифт, но и специальный типографский движок, "
+                    "чего в Windows, разумеется, нет.",
+                EcFont::DUPLOYAN },
     // Egyptian hiero OK
     { "Egyp", QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,
@@ -4064,14 +4076,15 @@ constinit const uc::Block uc::blocks[] {
     { 0x1B170, 0x1B2FF,
             "Nushu", u8"Нюй-шу",
             {}, EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu] Duployan
+    // Duployan OK
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
-    /// @todo [desc] Shorthand format
+    /// @todo [semi-tofu] Complex arrows are just taken from font
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
-            u8"Форматирующие символы стенографии", {},
-            EcScript::Dupl, EcFont::NORMAL, Bfg::SCRIPTLIKE },
+            u8"Форматирующие символы стенографии",
+            u8"Невидимые символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.",
+            EcScript::Dupl, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE },
     /// @todo [tofu] Znamenny
     /// @todo [desc] Znamenny
     { 0x1CF00, 0x1CFCF,
@@ -5496,6 +5509,10 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
     case EcCategory::MARK_NONSPACING:
+        // Stub off?
+        if (fn.flags.have(Ffg::STUB_DUPLOYAN_UNGLITCH))
+            return { NBSP + str::toQ(subj.ch32()) + NBSP + NBSP + NBSP + NBSP, style };
+        // Stub vice versa?
         if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
             return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
         }

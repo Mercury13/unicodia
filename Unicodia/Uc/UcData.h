@@ -230,6 +230,7 @@ namespace uc {
           Z_DIN_4,
           Z_DIN_5,
         DOGRA,
+        DUPLOYAN,
         EGYPTIAN,
         ELBASAN,
         ELYMAIC,
@@ -370,6 +371,7 @@ namespace uc {
         FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
+        STUB_DUPLOYAN_UNGLITCH = 1<<11,
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
