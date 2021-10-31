@@ -1073,6 +1073,26 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x1D178, "END SLUR" },
     { 0x1D179, "BEGIN PHR." },
     { 0x1D17A, "END PHR." },
+    { 0x1DA9B, "SW F2" },   // Sutton SignWriting fill
+    { 0x1DA9C, "SW F3" },
+    { 0x1DA9D, "SW F4" },
+    { 0x1DA9E, "SW F5" },
+    { 0x1DA9F, "SW F6" },
+    { 0x1DAA1, "SW R2" },   // Sutton SignWriting rotation
+    { 0x1DAA2, "SW R3" },
+    { 0x1DAA3, "SW R4" },
+    { 0x1DAA4, "SW R5" },
+    { 0x1DAA5, "SW R6" },
+    { 0x1DAA6, "SW R7" },
+    { 0x1DAA7, "SW R8" },
+    { 0x1DAA8, "SW R9" },
+    { 0x1DAA9, "SW R10" },
+    { 0x1DAAA, "SW R11" },
+    { 0x1DAAB, "SW R12" },
+    { 0x1DAAC, "SW R13" },
+    { 0x1DAAD, "SW R14" },
+    { 0x1DAAE, "SW R15" },
+    { 0x1DAAF, "SW R16" },
     // Then Variation Selectors
 };
 
