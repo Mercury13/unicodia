@@ -159,6 +159,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin
     { "NotoSansMeeteiMayek-Regular.ttf", Ffg::DESC_BIGGER },                    // Meetei Mayek
+    { "NotoSansMendeKikakui-Regular.ttf" },                                     // Mende Kikakui
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
@@ -1625,6 +1626,18 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Около 4000 обэри существует и поныне (2020), но носителей языка единицы. "
                 "Нигерийские власти усиленно исследуют язык и сканируют сохранившиеся документы.",
                 EcFont::MEDEFAIDRIN },
+    // Mende Kikakui OK, W10 none → installed Google Noto
+    { "Mend", QFontDatabase::Any,
+        EcScriptType::SYLLABLE, EcLangLife::COMPETING, EcWritingDir::RTL, EcContinent::AFRICA,
+        u8"Кикакуи (менде)", u8"≈1917",
+        u8"менде ''(Сьерра-Леоне, 1,5 млн на 2006)''",
+        u8"Изобрёл кикакуи исламский проповедник Мохаммед Турай. "
+                "Письмо слоговое, до [[pt:abugida|абугиды]] ему не хватает системности. "
+                "Название{{-}}по первым трём слогам в азбуке. "
+                "Также в письмо вошла своя непозиционная система счисления."
+            "<p>В начале XX{{_}}века письмо использовалось широко, но позже менде приняли [[ps:Latn|латиницу]]. "
+                "Современных (2010-е) грамотных в кикакуи несколько сотен.",
+            EcFont::MENDE_KIKAKUI },
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -4212,7 +4225,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Toto
     { 0x1E290, 0x1E2BF,
             "Toto", u8"Тото", {}, EcScript::Toto },
-    /// @todo [tofu] Wancho
+    // Wancho OK
     { 0x1E2C0, 0x1E2FF,
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
     // Ethiopic ex B OK, built chars somehow

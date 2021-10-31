@@ -278,6 +278,7 @@ namespace uc {
         MASARAM_GONDI,
         MEDEFAIDRIN,
         MEETEI,
+        MENDE_KIKAKUI,
         MEROITIC,
         MODI,
         MONGOLIAN,

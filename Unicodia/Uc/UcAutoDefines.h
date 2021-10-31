@@ -100,6 +100,7 @@ namespace uc {
         Mani,   // Manichean
         Marc,   // Marchen
         Medf,   // Medefaidrin
+        Mend,   // Mende Kikakui
         Merc,   // Meroitic cursive
         Mero,   // Meroitic hieroglyphs
         Mlym,   // Malayalam
@@ -201,8 +202,6 @@ namespace uc {
         //Leke  no chars — Leke (Pwo Karen)
         //Loma  no chars — Loma (Africa)
         //Maya  no chars — Maya
-        /// @todo [urgent] Mende Kikakui
-        Mend = Zyyy,        // beyond BMP
         //Moon  no chars — Moon’s embossing
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
