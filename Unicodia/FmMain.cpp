@@ -1022,7 +1022,9 @@ FmMain::FmMain(QWidget *parent)
 
     // Select index
     ui->tableChars->setFocus();
-    ui->tableChars->selectionModel()->select(model.index(0, 0), QItemSelectionModel::SelectCurrent);
+    auto index = model.index(0, 0);
+    ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
+    charChanged(index);
 }
 
 
