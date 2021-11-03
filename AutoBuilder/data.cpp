@@ -1017,6 +1017,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "SQUARE"sv, "ERA"sv, "NAME"sv }, PrefixAction::NEXT_CAP },
     { { "SQUARE"sv }, 0x3300, 0x3357, PrefixAction::NEXT_CAP },     // And what to do with those Katakana chars?
     { { "CYPRO-MINOAN"sv, "SIGN"sv }, PrefixAction::REST_ALLCAP },
+    { { "LINEAR"sv, "A"sv, "SIGN"sv }, PrefixAction::REST_CAP },
     { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
     { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, PrefixAction::NEXT_CAP },   // Consonant is tricky
     { { "SHORTHAND"sv, "FORMAT"sv }, PrefixAction::REST_CAPSMALL },
