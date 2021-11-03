@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1635969372
+ModificationTime: 1635969386
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -4032,7 +4032,7 @@ EndChar
 StartChar: DiakYA
 Encoding: 76 71973 59
 Width: 1276
-Flags: WO
+Flags: W
 HStem: 342.713 61.6558<402.779 578.519> 630.389 59.9961<188.428 513.772>
 VStem: 19.1289 60<489.642 560.129> 1122.16 60.1255<169.727 415.045>
 LayerCount: 2
