@@ -55,7 +55,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
     { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky
-    { FNAME_FUNKY, Ffg::DESC_BIGGER, 115_pc },                                  // Funky bigger
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
@@ -902,7 +901,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Гласная по умолчанию «а», заменяется на другую огласовками, убирается знаком «[[pt:virama|вирама]]» ''(халанта)''. "
                 "Вторая вирама служит для сборки [[pt:ligature|лигатур]]. "
                 "Начальные гласные{{-}}отдельные буквы.",
-                EcFont::FUNKY_BIGGER },
+                EcFont::FUNKY },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,

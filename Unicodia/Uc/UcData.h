@@ -179,7 +179,6 @@ namespace uc {
          GADUGI,
          DEJAVU,
          FUNKY,
-         FUNKY_BIGGER,
         ADLAM,
         AHOM,
         ANATOLIAN,
