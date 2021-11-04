@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1636018936
+ModificationTime: 1636019890
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -12427,7 +12427,9 @@ EndChar
 StartChar: u1FAAA
 Encoding: 192 129706 202
 Width: 1254
-Flags: W
+Flags: MWO
+HStem: -69.1992 76<96 1143.85> 630 76<96 1143.85>
+VStem: 20 76<6.80078 630> 1143.85 76<6.80078 630>
 LayerCount: 2
 Fore
 SplineSet
@@ -12543,6 +12545,80 @@ StartChar: u1FAAB
 Encoding: 193 129707 203
 Width: 551
 Flags: W
+HStem: -198 52.5<83.5 468.5> 677 113.75<188.5 363.5> 677 52.5<83.5 188.5 363.5 468.5>
+VStem: 31 52.5<-145.5 677> 468.5 52.5<-145.5 677>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 3
+MDAP[rnd]
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_1
+ 12
+MDAP[rnd]
+PUSHB_1
+ 8
+MDRP[min,rnd,black]
+PUSHB_1
+ 4
+SHP[rp2]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 15
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 14
+MDRP[min,rnd,black]
+PUSHB_1
+ 14
+SRP0
+PUSHB_2
+ 11
+ 1
+CALL
+PUSHB_1
+ 10
+MDRP[min,rnd,black]
+PUSHB_2
+ 16
+ 1
+CALL
+PUSHB_2
+ 11
+ 14
+SRP1
+SRP2
+PUSHB_5
+ 1
+ 5
+ 7
+ 8
+ 0
+DEPTH
+SLOOP
+IP
+SVTCA[y-axis]
+PUSHB_2
+ 12
+ 14
+SRP1
+SRP2
+PUSHB_2
+ 0
+ 1
+IP
+IP
+IUP[y]
+IUP[x]
+EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
