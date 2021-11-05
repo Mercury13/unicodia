@@ -417,6 +417,17 @@ namespace uc {
         TOFU,       ///< Tofu, have no char
         NO_FONT };  ///< Have so custom method of drawing that no font needed
 
+    enum class TofuPlace {
+        CJK,        ///< In CJK chars
+        POSTPONED,  ///< In postponed chars (e.g. Arabic calligraphy is so bad that cannot implement at all)
+        REST        ///< In rest of chars
+    };
+
+    struct TofuInfo {
+        TofuState state = TofuState::NO_FONT;
+        TofuPlace place = TofuPlace::REST;
+    };
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -453,7 +464,7 @@ namespace uc {
         QString viewableName() const;
         SafeVector<std::u8string_view> allRawNames() const;
         DrawMethod drawMethod() const;
-        TofuState tofuState(const Block*& hint) const;
+        TofuInfo tofuInfo(const Block*& hint) const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }

@@ -1512,32 +1512,38 @@ void FmMain::showTofuStats()
         nGoodP1 = 0, nTofuP1 = 0,
         nGoodCjk = 0, nTofuCjk = 0,
         nGoodRest = 0, nTofuRest = 0,
-        firstTofuCjk = 0, firstTofuRest = 0;
+        firstTofuCjk = 0, firstTofuPostponed = 0, firstTofuRest = 0;
     const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
         auto code = cp.subj.uval();
-        switch (cp.tofuState(hint)) {
+        auto tofuInfo = cp.tofuInfo(hint);
+        switch (tofuInfo.state) {
         case uc::TofuState::NO_FONT: break;
         case uc::TofuState::TOFU:
             if (code <= 65535)
                 ++nTofuP0;
                 else ++nTofuP1;
-            if (hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
+            if (tofuInfo.place == uc::TofuPlace::CJK) {
                 ++nTofuCjk;
                 if (firstTofuCjk == 0)
                     firstTofuCjk = code;
             } else {
                 ++nTofuRest;
-                if (firstTofuRest == 0)
-                    firstTofuRest = code;
+                if (tofuInfo.place == uc::TofuPlace::POSTPONED) {
+                    if (firstTofuPostponed == 0)
+                        firstTofuPostponed = code;
+                } else {
+                    if (firstTofuRest == 0)
+                        firstTofuRest = code;
+                }
             }
             break;
         case uc::TofuState::PRESENT:
             if (code <= 65535)
                 ++nGoodP0;
                 else ++nGoodP1;
-            if (hint->flags.have(uc::Bfg::COLLAPSIBLE)) {
+            if (tofuInfo.place == uc::TofuPlace::CJK) {
                 ++nGoodCjk;
             } else {
                 ++nGoodRest;
@@ -1555,12 +1561,12 @@ void FmMain::showTofuStats()
              "Supp (P1+): %d good, %d tofu, %d total" "\n"
              "CJK: %d good, %d tofu, %d total" "\n"
              "Rest: %d good, %d tofu, %d total" "\n"
-             "First tofu: CJK %04X, rest %04X",
+             "First tofu: CJK %04X, postponed %04X, rest %04X",
              nGoodP0, nTofuP0, nTotalP0,
              nGoodP1, nTofuP1, nTotalP1,
              nGoodCjk, nTofuCjk, nTotalCjk,
              nGoodRest, nTofuRest, nTotalRest,
-             firstTofuCjk, firstTofuRest);
+             firstTofuCjk, firstTofuPostponed, firstTofuRest);
     QMessageBox::information(this, "Tofu stats", buf);
 }
 

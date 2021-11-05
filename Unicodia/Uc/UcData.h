@@ -518,6 +518,7 @@ namespace uc {
         FORCE_FONT      = 1<<2,     /// [+] force NORMAL font
         UNGLITCH_MARKS  = 1<<3,     /// [+] every combining will be from NOTO
         SCRIPTLIKE      = 1<<4,     /// [+] keywords like LETTER behave as in script
+        POSTPONED_TOFU  = 1<<5,     /// [+] Here’s tofu and we know it
         EXPERIMENT      = 1<<8,     /// Left for experiments
     };
 

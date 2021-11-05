@@ -898,9 +898,12 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В начале XVIII{{_}}века по указу султана был заменён [[ps:Thaa|таной]]{{-}}уже справа налево."
             "<p>Буквы-образцы соответствуют письму ''эвела'', а ''дивес'' частично [[pt:unification|унифицирован]]. "
             "<p>Гласная по умолчанию «а», заменяется на другую [[pt:combining|метками]]-огласовками, "
-                    "убирается знаком «[[pt:virama|вирама]]» ''(халанта)''. "
-                "Вторая вирама служит для сборки [[pt:ligature|лигатур]]. "
-                "Начальные гласные{{-}}отдельные буквы.",
+                    "в конце слов убирается знаком «[[pt:virama|вирама]]» ''(халанта)''. "
+                "Вторая вирама служит для стыков согласных{{-}}две буквы записываются без промежутка. "
+                "Начальные гласные{{-}}отдельные буквы.<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|𑤌}} + и {{sm|◌𑤱}} = ки {{sm|𑤌𑤱}}<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|𑤌}} + halanta {{sm|◌𑤽}} = к {{sm|𑤌𑤽}}<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|𑤌}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = кта {{sm|𑤌𑤾𑤛}}",
                 EcFont::FUNKY },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
@@ -2815,7 +2818,8 @@ constinit const uc::Block uc::blocks[] {
             "Hebrew", u8"Иврит", {}, EcScript::Hebr },
     // Arabic OK
     { 0x0600, 0x06FF,
-            "Arabic", u8"Арабский", {}, EcScript::Arab },
+            "Arabic", u8"Арабский", {}, EcScript::Arab,
+            EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     /// @todo [font] Which font to select and what to do with Syriac Malayalam?
     { 0x0700, 0x074F,
             "Syriac", u8"Сирийский", {}, EcScript::Syrc },
@@ -2847,7 +2851,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0870, 0x089F,
             "Arabic Extended-B", u8"Арабский расширенный B",
             {},
-            EcScript::Arab},
+            EcScript::Arab, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Arabic ex A OK
     { 0x08A0, 0x08FF,
             "Arabic Extended-A", u8"Арабский расширенный A",
@@ -2855,7 +2859,7 @@ constinit const uc::Block uc::blocks[] {
                     "арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' "
                     "и африканских языков (в частности, берберского). "
                     "Также знаки комментариев к Корану.",
-            EcScript::Arab },
+            EcScript::Arab, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Devanagari OK
     { 0x0900, 0x097F,
             "Devanagari", u8"Деванагари", {}, EcScript::Deva },
@@ -5642,23 +5646,35 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
 }
 
 
-uc::TofuState uc::Cp::tofuState(const Block*& hint) const
+uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
 {
-    if (drawMethod() > uc::DrawMethod::LAST_FONT)
-        return TofuState::NO_FONT;
+    uc::TofuInfo r;
+    auto sb = subj.ch32();
+    hint = blockOf(sb, hint);
+    if (hint->flags.have(Bfg::COLLAPSIBLE))
+        r.place = TofuPlace::CJK;
+    else if (hint->flags.have(Bfg::POSTPONED_TOFU))
+        r.place = TofuPlace::POSTPONED;
 
-    auto v = &firstFont(hint);
-    bool isAlternate = flags.have(Cfg::ALT_FONT);
-    auto sb = subj.uval();
-    while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-        if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-            if (v->doesSupportChar(sb))
-                return TofuState::PRESENT;
+    if (drawMethod() > uc::DrawMethod::LAST_FONT) {
+        r.state = TofuState::NO_FONT;
+    } else {
+        auto v = &firstFont(hint);
+        bool isAlternate = flags.have(Cfg::ALT_FONT);
+        while (v->flags.have(Ffg::FALL_TO_NEXT)) {
+            if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
+                if (v->doesSupportChar(sb)) {
+                    r.state = TofuState::PRESENT;
+                    goto brk1;
+                }
+            }
+            ++v;
         }
-        ++v;
+        r.state = v->doesSupportChar(subj)
+                ? TofuState::PRESENT : TofuState::TOFU;
+    brk1: ;
     }
-    return v->doesSupportChar(subj)
-            ? TofuState::PRESENT : TofuState::TOFU;
+    return r;
 }
 
 
