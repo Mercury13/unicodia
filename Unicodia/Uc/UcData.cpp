@@ -890,7 +890,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [urgent] Diak: working
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Дивес-акуру (древнемальдивский)", u8"VIII–XII век",
+        u8"Дивес-акуру (древнемальдивский)", u8"VII–VIII век (раннее письмо ''эвела-акуру'')",
         u8"дивехи ''(мальдивский)''",
         u8"Развился на Мальдивских островах из [[ps:Gran|грантхи]] и существовал до XVIII{{_}}века, а на некоторых островах и до XX. "
                     "Раннюю форму (до XII{{_}}века) исследователи называют ''эвела-акуру''. "
