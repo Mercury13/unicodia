@@ -4,7 +4,7 @@
 <svg
    height="1000"
    width="1000"
-   sodipodi:docname="33.svg"
+   sodipodi:docname="34.svg"
    version="1.1"
    id="svg833"
    viewBox="0 0 1000 1000"
@@ -24,8 +24,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.748"
-     inkscape:cx="788.1016"
-     inkscape:cy="500"
+     inkscape:cx="789.4385"
+     inkscape:cy="687.16578"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -96,9 +96,9 @@
        id="path44166"
        sodipodi:nodetypes="ccsssccssscc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:60;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-       d="m 907.5147,309.60129 c 45.26286,-19.37294 102.2113,-11.54999 127.2221,27.38468 10.0434,16.63381 14.7068,42.2969 14.7068,73.44215 0,116.50187 -49.3619,309.27837 -45.875,392.96182 2.1961,52.70378 19.392,80.74679 55.2628,105.76981"
-       id="path6400"
-       sodipodi:nodetypes="ccssc" />
+       style="fill:none;stroke:#000000;stroke-width:60;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 895.8062,286.40993 c 44.82979,-34.35032 94.86274,-60.56763 145.6727,-28.73579 27.9034,17.48114 39.2155,51.85583 39.2729,95.26342 0.2348,177.88953 -117.43983,341.58787 -124.30444,504.02804 0,36.15489 37.47343,56.248 61.34404,56.248 29.9419,0 55.5666,-22.49397 55.5666,-57.7382 0,-35.58106 -30.8358,-56.60631 -84.00727,-56.60631 -130.54403,0 -292.57816,98.50713 -370.36252,98.94539 -38.31375,0.21588 -56.1869,-19.75422 -41.12482,-69.13336"
+       id="path7280"
+       sodipodi:nodetypes="csscssssc" />
   </g>
 </svg>
