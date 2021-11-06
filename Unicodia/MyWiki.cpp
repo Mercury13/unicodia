@@ -512,7 +512,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (!x.locTime.empty()) {
             sp.sep();
             str::append(text, u8"• Появилась: ");
-            str::append(text, x.locTime);
+            appendWiki(text, x, x.locTime);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
