@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1636264883
+ModificationTime: 1636264910
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -16778,7 +16778,7 @@ EndChar
 StartChar: TotoWA
 Encoding: 123548 123548 263
 Width: 612
-Flags: WO
+Flags: W
 HStem: 99 110<107.261 186.996> 474 105<213.21 409.643>
 VStem: 39 65<209.969 364.437> 517 55<216.402 384.119>
 TtInstrs:
