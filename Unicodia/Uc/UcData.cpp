@@ -3039,7 +3039,7 @@ constinit const uc::Block uc::blocks[] {
                         "только с другими правилами употребления{{-}}выделяется всё слово. "
                     "Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.",
             EcScript::Geor },
-    // Sundanese suplement OK
+    // Sundanese supplement OK
     { 0x1CC0, 0x1CCF,
             "Sundanese Supplement", u8"Сунданский дополнительный",
             u8"Исторические знаки препинания для сунданского.",
@@ -5571,7 +5571,7 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 
     if (fn.flags.have(Ffg::STUB_FINEGRAINED)) {
         switch (code) {
-        case 0x1BC9E:   // Supolyan shorthand
+        case 0x1BC9E:   // Duployan shorthand
             return { NBSP + str::toQ(code) + NBSP + NBSP + NBSP + NBSP, style };
         case 0x1CF42:   // Znamenny
         case 0x1CF43:
