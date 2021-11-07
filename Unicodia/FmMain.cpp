@@ -1422,25 +1422,27 @@ void FmMain::slotSetFocusDefered(QWidget* wi)
 }
 
 
-void FmMain::on_comboBlock_currentIndexChanged(int index)
+template<>
+void FmMain::selectChar<SelectMode::NONE>(char32_t code)
 {
-    if (index < 0)
-        return;
-    auto oldChar = model.charAt(ui->tableChars->currentIndex());
-    auto oldBlock = uc::blockOf(oldChar.code, index);
-    if (oldBlock->index() != static_cast<size_t>(index)) {
-        auto& newBlock = uc::blocks[index];
-        selectChar(newBlock.firstAllocated->subj);
-        emit setFocusDefered(ui->tableChars);
+    if (model.isCharCollapsed(code)) {
+        cjkSetCollapseState(false);
     }
-}
-
-
-void FmMain::selectChar(char32_t code)
-{
     auto index = model.indexOf(code);
     ui->tableChars->setCurrentIndex(index);
     ui->tableChars->scrollTo(index);
+}
+
+
+void FmMain::cjkReflectCollapseState()
+{
+    if (model.isCjkCollapsed) {
+        ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
+        ui->btCollapse->setText(str::toQ(u8"Развернуть"sv));
+    } else {
+        ui->lbCollapse->setText(str::toQ(u8"ККЯ развёрнуты."sv));
+        ui->btCollapse->setText(str::toQ(u8"Свернуть"sv));
+    }
 }
 
 
@@ -1454,23 +1456,31 @@ void FmMain::cjkSetCollapseState(bool x)
 }
 
 
-void FmMain::selectCharEx(char32_t code)
+template<>
+void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
 {
-    if (model.isCharCollapsed(code)) {
-        cjkSetCollapseState(false);
-    }
-    selectChar(code);
+    selectChar<SelectMode::NONE>(code);
+    emit setFocusDefered(ui->tableChars);
 }
 
 
-void FmMain::cjkReflectCollapseState()
+template<>
+void FmMain::selectChar<SelectMode::INSTANT>(char32_t code)
 {
-    if (model.isCjkCollapsed) {
-        ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
-        ui->btCollapse->setText(str::toQ(u8"Развернуть"sv));
-    } else {
-        ui->lbCollapse->setText(str::toQ(u8"ККЯ развёрнуты."sv));
-        ui->btCollapse->setText(str::toQ(u8"Свернуть"sv));
+    selectChar<SelectMode::NONE>(code);
+    ui->tableChars->setFocus();
+}
+
+
+void FmMain::on_comboBlock_currentIndexChanged(int index)
+{
+    if (index < 0)
+        return;
+    auto oldChar = model.charAt(ui->tableChars->currentIndex());
+    auto oldBlock = uc::blockOf(oldChar.code, index);
+    if (oldBlock->index() != static_cast<size_t>(index)) {
+        auto& newBlock = uc::blocks[index];
+        selectChar<SelectMode::DEFERED>(newBlock.firstAllocated->subj);
     }
 }
 
@@ -1602,7 +1612,7 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
     switch (x.err) {
     case uc::SingleError::ONE:
         closeSearch();
-        selectCharEx(x.one->subj);
+        selectChar<SelectMode::INSTANT>(x.one->subj);
         break;
     case uc::SingleError::MULTIPLE: {
             searchModel.set(std::move(x.multiple));
@@ -1637,6 +1647,5 @@ void FmMain::focusSearch()
 
 void FmMain::searchEnterPressed(int index)
 {
-    selectCharEx(searchModel.lineAt(index).cp->subj);
-    ui->tableChars->setFocus();
+    selectChar<SelectMode::INSTANT>(searchModel.lineAt(index).cp->subj);
 }

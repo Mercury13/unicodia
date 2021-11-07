@@ -236,6 +236,7 @@ public:
 
 
 enum class CurrThing { CHAR, SAMPLE };
+enum class SelectMode { NONE, INSTANT, DEFERED };
 
 
 class FmMain : public QMainWindow,
@@ -270,8 +271,7 @@ private:
     void initAbout();
     void showCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
-    void selectChar(char32_t code);
-    void selectCharEx(char32_t code);
+    template <SelectMode mode> void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
     void copyCurrentThing(CurrThing thing);
