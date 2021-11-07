@@ -108,7 +108,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
       { FNAME_BABEL, 130_pc },                                                  // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
-    { "NotoSansDuployan-Regular.ttf", Ffg::STUB_DUPLOYAN_UNGLITCH },            // Duployan
+    { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
@@ -235,7 +235,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
     { "NotoSansZanabazarSquare-Regular.ttf" },                                  // Zanabazar square
-    { "MezenetsUnicode.ttf", 120_pc },                                          // Znamenny
+    { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));
@@ -5567,30 +5567,44 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 
     auto& fn = font(hint);
     auto style = fn.styleSheet;
+    auto code = subj.ch32();
+
+    if (fn.flags.have(Ffg::STUB_FINEGRAINED)) {
+        switch (code) {
+        case 0x1BC9E:   // Supolyan shorthand
+            return { NBSP + str::toQ(code) + NBSP + NBSP + NBSP + NBSP, style };
+        case 0x1CF42:   // Znamenny
+        case 0x1CF43:
+        case 0x1CF44:
+        case 0x1CF45:
+        case 0x1CF46:
+            return { str::toQ(code), style };
+        }
+
+        //if (code >= )
+    }
+
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
     case EcCategory::MARK_NONSPACING:
-        // Stub off?
-        if (fn.flags.have(Ffg::STUB_DUPLOYAN_UNGLITCH))
-            return { NBSP + str::toQ(subj.ch32()) + NBSP + NBSP + NBSP + NBSP, style };
         // Stub vice versa?
         if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
-            return { ZWSP + str::toQ(subj.ch32()) + STUB_CIRCLE, style };
+            return { ZWSP + str::toQ(code) + STUB_CIRCLE, style };
         }
         [[fallthrough]];
     case EcCategory::MARK_SPACING:
         // Stub off?
         if (fn.flags.have(Ffg::STUB_OFF))
             break;
-        return { STUB_CIRCLE + str::toQ(subj.ch32()), style };
+        return { STUB_CIRCLE + str::toQ(code), style };
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {
-            return { QChar(L'▕') + str::toQ(subj.ch32()) + QChar(L'▏'), style };
+            return { QChar(L'▕') + str::toQ(code) + QChar(L'▏'), style };
         }
         break;
     default: ;
     }
-    return { str::toQ(subj.ch32()), style };
+    return { str::toQ(code), style };
 }
 
 
