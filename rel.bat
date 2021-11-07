@@ -1,6 +1,6 @@
 @set PRONAME=Unicodia\Unicodia.pro
 @set EXENAME=Unicodia.exe
-@set ARCNAME=Unicodia-0.2.1.7z
+@set ARCNAME=Unicodia-w64-0.2.2.7z
 @set BUILD=~Build-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed

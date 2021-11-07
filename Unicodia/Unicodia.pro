@@ -84,7 +84,7 @@ win32-g++ {
     LIBS += -lgdi32
 }
 
-VERSION = 0.2.1
+VERSION = 0.2.2
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
