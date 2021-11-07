@@ -994,6 +994,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Miao tone above")                           // Same
     EX("Miao tone below")                           // Same
     EX("Shorthand format Letter overlap")           // Letter is not low-case!
+    EX("Znamenny neume Dva v chelnu")               // Better not to make exception from V
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -1021,6 +1022,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "LINEAR"sv, "B"sv, "SYLLABLE"sv }, PrefixAction::REST_CAP },
     { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, PrefixAction::NEXT_CAP },   // Consonant is tricky
     { { "SHORTHAND"sv, "FORMAT"sv }, PrefixAction::REST_CAPSMALL },
+    { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, PrefixAction::NEXT_CAP },
 };
 
 

@@ -353,6 +353,7 @@ namespace uc {
         YEZIDI,
         YI,
         ZANABAZAR,
+        ZNAMENNY,
         NN
     };
 
