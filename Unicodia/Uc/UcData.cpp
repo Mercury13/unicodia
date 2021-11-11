@@ -2195,7 +2195,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{_}}{{_}}ка {{sm|𑊺}} + вирама {{sm|◌𑋪}} = к {{sm|𑊺𑋪}}",
                 EcFont::KHUDAWADI },
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
-    /// @todo [desc, BMP] interesting script, describe
+    /// @todo [desc, BMP] Sinhala interesting script, describe
     { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Сингальский", u8"300",
@@ -2840,7 +2840,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0600, 0x06FF,
             "Arabic", u8"Арабский", {}, EcScript::Arab,
             EcFont::NORMAL, Bfg::POSTPONED_TOFU },
-    /// @todo [font] Which font to select and what to do with Syriac Malayalam?
+    /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
     { 0x0700, 0x074F,
             "Syriac", u8"Сирийский", {}, EcScript::Syrc },
     // Arabic supplement OK
@@ -2860,14 +2860,14 @@ constinit const uc::Block uc::blocks[] {
     // Mandaic OK
     { 0x0840, 0x085F,
             "Mandaic", u8"Мандейский", {}, EcScript::Mand },
-    /// @todo [font] Which font to select and what to do with Syriac Malayalam?
+    /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
     { 0x0860, 0x086F,
             "Syriac Supplement", u8"Сирийский дополнительный",
             u8"Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века.",
             EcScript::Syrc },
-    /// @todo [desc] Arabic Extended-B
-    /// @todo [tofu] Arabic Extended-B
+    /// @todo [desc] #40 Arabic Extended-B
+    /// @todo [tofu] #40 Arabic Extended-B
     { 0x0870, 0x089F,
             "Arabic Extended-B", u8"Арабский расширенный B",
             {},
@@ -3800,8 +3800,8 @@ constinit const uc::Block uc::blocks[] {
     // Linear A OK
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
-    /// @todo [tofu] Latin ex F
-    /// @todo [desc] Latin ex F
+    /// @todo [tofu] #52 Latin ex F
+    /// @todo [desc] #52 Latin ex F
     { 0x10780, 0x107BF,
             "Latin Extended-F", u8"Латиница расширенная F",
             {}, EcScript::Latn },
@@ -3981,13 +3981,13 @@ constinit const uc::Block uc::blocks[] {
     // Bhaiksuki OK
     { 0x11C00, 0x11C6F,
             "Bhaiksuki", u8"Бхаикшуки (стрелоглавое письмо)", {}, EcScript::Bhks },
-    /// @todo [semi-tofu] Marchen too small because of subjoining
+    /// @todo [semi-tofu] #85 Marchen too small because of subjoining
     { 0x11C70, 0x11CBF,
             "Marchen", u8"Марчхен", {}, EcScript::Marc },
-    /// @todo [semi-tofu] Masaram: no virtual virama
+    /// @todo [semi-tofu] #83 Masaram: no virtual virama
     { 0x11D00, 0x11D5F,
             "Masaram Gondi", u8"Письмо Масарама (гонди)", {}, EcScript::Gonm },
-    /// @todo [semi-tofu] Gunjala: no virtual virama
+    /// @todo [semi-tofu] #84 Gunjala: no virtual virama
     { 0x11D60, 0x11DAF,
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     // Makasar OK
@@ -4021,7 +4021,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x12480, 0x1254F,
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
-    /// @todo [tofu] Cypro-Minoan
+    /// @todo [tofu] #58 Cypro-Minoan
     { 0x12F90, 0x12FFF,
             "Cypro-Minoan", u8"Кипро-минойский", {}, EcScript::Cpmn },
     // Egyptian hiero OK
@@ -4045,7 +4045,7 @@ constinit const uc::Block uc::blocks[] {
     // Mro OK
     { 0x16A40, 0x16A6F,
             "Mro", u8"Мру", {}, EcScript::Mroo },
-    /// @todo [tofu] Tangsa
+    /// @todo [tofu] #59 Tangsa
     { 0x16A70, 0x16ACF,
             "Tangsa", u8"Тангса", {}, EcScript::Tnsa },
     // Bassa OK
@@ -4057,7 +4057,7 @@ constinit const uc::Block uc::blocks[] {
     // Medefaidrin OK
     { 0x16E40, 0x16E9F,
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
-    /// @todo [semi-tofu] Draw special chars for tone
+    /// @todo [semi-tofu] #80 Draw special chars for tone
     { 0x16F00, 0x16F9F,
             "Miao", u8"Мяо (письмо Полларда)", {}, EcScript::Plrd },
     // Ideographic sym/punct OK
@@ -4097,8 +4097,8 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang },
-    /// @todo [tofu] Kana ex B
-    /// @todo [desc] Kana ex B
+    /// @todo [tofu] #60 Kana ex B
+    /// @todo [desc] #60 Kana ex B
     { 0x1AFF0, 0x1AFFF,
             "Kana Extended-B", u8"Кана расширенная B",
             {} },
@@ -4128,7 +4128,7 @@ constinit const uc::Block uc::blocks[] {
     // Duployan OK
     { 0x1BC00, 0x1BC9F,
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
-    /// @todo [semi-tofu] Complex arrows are just taken from font
+    /// @todo [semi-tofu] #81 Complex arrows are just taken from font
     { 0x1BCA0, 0x1BCAF,
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии",
@@ -4164,7 +4164,7 @@ constinit const uc::Block uc::blocks[] {
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
     /// @todo [semi-tofu, P1] Check and take smth from Segoe UI Symbol
-    /// @todo [tofu, U14] Persian semi-sharp / semi-flat
+    /// @todo [tofu, U14] #82 Persian semi-sharp / semi-flat
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы",
             u8"С X{{_}}века появилась нотная запись, похожая на современную. "
@@ -4264,7 +4264,7 @@ constinit const uc::Block uc::blocks[] {
     // NP Hmong OK
     { 0x1E100, 0x1E14F,
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
-    /// @todo [tofu] Toto
+    // Toto OK
     { 0x1E290, 0x1E2BF,
             "Toto", u8"Тото", {}, EcScript::Toto },
     // Wancho OK
@@ -4294,7 +4294,7 @@ constinit const uc::Block uc::blocks[] {
                         "со 100{{_}}тысяч{{-}}индийские слова. "
                     "Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.",
             EcScript::NONE, EcFont::SIYAQ_INDIC },
-    /// @todo [tofu] Ottoman Siyaq, and no fonts
+    /// @todo [tofu] #76 Ottoman Siyaq, and no fonts
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
     // Arab mathematical OK, W10 Amiri
