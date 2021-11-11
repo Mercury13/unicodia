@@ -205,7 +205,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
     { "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                        // Tagalog
     { "NotoSansTagbanwa-Regular.ttf" },                                         // Tagbanwa
-    { "NotoSansTakri-Regular.ttf", Ffg::DESC_BIGGER },                          // Takri
+    { "NotoSansTakri-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT },      // Takri
+      { FNAME_FUNKY },                                                          // …1
     { "Microsoft Tai Le" },                                                     // Tai Le
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet

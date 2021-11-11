@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1636264910
+ModificationTime: 1636602483
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -733,7 +733,7 @@ ShortTable: cvt  1
 EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
-Encoding: Custom
+Encoding: UnicodeFull
 Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
@@ -761,7 +761,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt" "'blwm' Nand1-1"
-BeginChars: 1114136 282
+BeginChars: 1114136 283
 
 StartChar: u10FB0
 Encoding: 69552 69552 0
@@ -18864,6 +18864,21 @@ SplineSet
  -401.9995 663.0005 -401.9995 663.0005 -403 674 c 1,21,22
  -344.9995 726.0005 -344.9995 726.0005 -281 779 c 128,-1,23
  -216.9995 831.9995 -216.9995 831.9995 -146 886 c 1,0,1
+EndSplineSet
+EndChar
+
+StartChar: TakrABBR
+Encoding: 71353 71353 282
+Width: 356
+Flags: WO
+LayerCount: 2
+Fore
+SplineSet
+71.330078125 304.93359375 m 5,0,-1
+ 188 421.606445312 l 5,1,-1
+ 304.672851562 304.93359375 l 5,2,-1
+ 188 188.260742188 l 5,3,-1
+ 71.330078125 304.93359375 l 5,0,-1
 EndSplineSet
 EndChar
 EndChars

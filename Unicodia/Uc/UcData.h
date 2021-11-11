@@ -325,6 +325,7 @@ namespace uc {
         TAGALOG,
         TAGBANWA,
         TAKRI,
+          Z_TAK_1,
         TAILE,
         TAILUE,
         TAI_VIET,
