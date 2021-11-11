@@ -913,7 +913,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Догра", u8"XIX век",
-        u8"догри ''(Кашмир)''",
+        u8"догри ''(Кашмир, 2,6 млн на 2011)''",
         u8"Язык догров, индийской народности. Письменность позаимствована из [[ps:Takr|такри]], стандартизирована "
                 "в середине XIX{{_}}века при магарадже Ранбире Сингхе. "
                 "После смерти Ранбира в 1885 под давлением британцев официальным языком выбрали [[ps:Arab|урду]]. "
@@ -2396,7 +2396,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Телугу", u8"XIV век",
-        u8"телугу ''(Юго-Восточная Индия)''",
+        u8"телугу ''(Юго-Восточная Индия, 83 млн на 2011)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.",
                 EcFont::TELUGU },
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
@@ -2435,7 +2435,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Thaa", QFontDatabase::Thaana,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::OCEAN,
         u8"Тана", u8"XVIII век",
-        u8"дивехи ''(мальдивский)''",
+        u8"дивехи ''(мальдивский, 340 тыс. на 2012)''",
         u8"Письменная культура пришла на Мальдивские острова вместе с буддизмом, появилось письмо ''эвела-акуру'' на основе "
                     "[[ps:Sinh|сингальского]]. "
                 "Самая старая надпись датируется VII—VIII веком. "
