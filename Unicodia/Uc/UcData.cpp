@@ -219,7 +219,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, },                                   // …4
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …5
       { FNAME_DEJAVU },                                                         // …6
-    { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT, 110_pc },                       // Telugu
+    { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },    // Telugu
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
@@ -2392,12 +2392,17 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Традиционно читатель должен был угадывать тон, уже в первой стандартизации добавили тоновые знаки.",
                 EcFont::TAI_VIET },
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
-    /// @todo [desc, BMP] Telugu
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Телугу", u8"XIV век",
         u8"телугу ''(Юго-Восточная Индия, 83 млн на 2011)''",
-        u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми.",
+        u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми. "
+                "[[pt:virama|Вирама]] в явном виде используется только при записи санскрита{{-}}"
+                    "как из-за развитой системы [[pt:ligature|лигатур]], так и из-за тяги телугу к открытым слогам. "
+                "Галочка наверху буквы означает гласную «а». "
+                "Если огласовка меняется на другую{{-}}галочка исчезает.<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|క}} + и {{sm|◌ి}} = ки {{sm|కి}}<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|క}} + вирама {{sm|◌్}} + та {{sm|త}} = кта {{sm|క్త}}",
                 EcFont::TELUGU },
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
