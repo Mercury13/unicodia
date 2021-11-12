@@ -150,7 +150,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
     { "NotoSansMahajani-Regular.ttf" },                                         // Mahajani
     { "MakasarGraphite.ttf", Ffg::STUB_OFF },                                   // Makasar
-    { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT, 110_pc },                    // Malayalam
+    { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
     { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:20%;"_sty, 110_pc }, // Marchen
@@ -1658,15 +1658,19 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Мероитские иероглифы", u8"III в. до н.э.",
         u8"мероитский; возможно, древненубийский",
         CT_MEROITIC, EcFont::MEROITIC },
-    /// @todo [desc] Malayalam
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym", QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Малаялам", u8"830 (первый источник)",
         u8"малая́лам ''(Южная Индия, 35 млн на 2019)''",
-        u8"Как и большинство других письменностей Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. "
-                "Гласная по умолчанию «а». Отличается тем, что в начале слова используются полные огласовки, "
-                "в середине и в конце{{-}}сокращённые.",
+        u8"Происходит из [[ps:Gran|грантхи]]. "
+                "Гласная по умолчанию «а». "
+                "[[pt:virama|Вирама]] редка и встречается только в конце слов: "
+                    "[[pt:ligature|лигатуры]] на стыках согласных собраны из букв, записанных слева направо, "
+                    "а не сверху вниз, как в похожих письменностях.<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|ക}} + и {{sm|◌ി}} = ки {{sm|കി}}<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|ക}} + вирама {{sm|◌്}} = к {{sm|ക്}}<br>"
+                "{{_}}{{_}}{{_}}ка {{sm|ക}} + вирама {{sm|◌്}} + ка {{sm|ക}} = кка {{sm|ക്ക}}",
                 EcFont::MALAYALAM },
     // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,

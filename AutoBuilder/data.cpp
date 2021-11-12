@@ -475,7 +475,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BOOK",           Dicf::PART_ADJECTIVE },
     { "BOTTOM",         Dicf::PART_ADJECTIVE },
     { "CAPITAL",        Dicf::PART_ADJECTIVE },
-    { "CASKET",         Dicf::PART_ADJECTIVE },  // OK here, runes
+    { "CASKET",         Dicf::PART_ADJECTIVE }, // OK here, runes
+    { "CHILLU",         Dicf::PART_ADJECTIVE }, // used for Malayalam
     { "CIRCLED",        Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
     { "CLOSED",         Dicf::PART_ADJECTIVE },
     { "CLOSING",        Dicf::PART_ADJECTIVE },
@@ -551,7 +552,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PHASE-E",        { Dicf::PART_ADJECTIVE, "phase-E" } },
     { "PHASE-F",        { Dicf::PART_ADJECTIVE, "phase-F" } },
     { "PSALTER",        Dicf::PART_ADJECTIVE },
-    { "QUARTER",        Dicf::PART_ADJECTIVE },     // Not really OK, but works somehow
+    { "QUARTER",        Dicf::PART_ADJECTIVE }, // Not really OK, but works somehow
     { "REFORMED",       Dicf::PART_ADJECTIVE },
     { "REVERSE",        Dicf::PART_ADJECTIVE },
     { "REVERSED",       Dicf::PART_ADJECTIVE },
@@ -560,18 +561,18 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "RIGHT-STEM",     Dicf::PART_ADJECTIVE },
     { "ROMANIAN",       Dicf::PART_ADJECTIVE },
     { "ROUNDED",        Dicf::PART_ADJECTIVE },
-    { "SARA",           Dicf::PART_ADJECTIVE },
+    { "SARA",           Dicf::PART_ADJECTIVE }, // Used for Thai
     { "SCRIPT",         Dicf::PART_MIXED },
     { "SEMISOFT",       Dicf::PART_ADJECTIVE },
     { "SHARP",          Dicf::PART_ADJECTIVE },
     { "SHORT",          Dicf::PART_ADJECTIVE },
-    { "SHORT-TWIG-AR",  Dicf::PART_ADJECTIVE },
+    { "SHORT-TWIG-AR",  Dicf::PART_ADJECTIVE }, // used for runes
     /// @todo [decap] Arabic mark Sideways Noon gnunna — is it right?
     { "SIDEWAYS",       Dicf::PART_ADJECTIVE },
     { "SIGMOID",        Dicf::PART_ADJECTIVE },
     { "SLOAN",          Dicf::PART_ADJECTIVE },
     { "SMALL",          Dicf::PART_ADJECTIVE },
-    { "SNAP",           Dicf::PART_ADJECTIVE },     // OK, music only
+    { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
     { "SPACING",        Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
     { "SOUTH",          Dicf::PART_ADJECTIVE },
