@@ -1672,7 +1672,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Моди", u8"1200–1600",
-        u8"маратхи ''(Западная Индия)''",
+        u8"маратхи ''(Западная Индия, 83 млн на 2011)''",
         u8"Письмо родственное с [[ps:Deva|деванагари]], но значительно более [[pt:cursive|беглое]]. "
                 "Есть две стандартных теории появления: Хемадри Пандит, дипломат и министр (около 1260), "
                     "и Кхандерао Баллал, дипломат (около 1700). "
