@@ -836,21 +836,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 }
 
 
-//void SearchModel::forceAdd(char32_t x)
-//{
-//    ndx.insert(x);
-//    result.push_back(x);
-//}
-
-
-//void SearchModel::softAdd(char32_t x)
-//{
-//    if (ndx.insert(x).second)
-//        result.push_back(x);
-//}
-
-
-
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
 
 
