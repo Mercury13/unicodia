@@ -395,6 +395,7 @@ namespace {
     constexpr qreal Q3 = 3.3;
     constexpr qreal Q4 = 4.0;
     constexpr qreal Q5 = 5.0;
+                          //   0   1   2   3   4   5   6   7   8   9
     const qreal lenQuos[]  = { Q3, Q3, Q3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 };
 
     qreal AbbrLines::sizeQuo() const
