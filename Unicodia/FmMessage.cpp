@@ -13,7 +13,6 @@
 constexpr auto FGS_MESSAGE =
         Qt::Tool
         | Qt::FramelessWindowHint
-        | Qt::WindowStaysOnTopHint
         | Qt::NoDropShadowWindowHint
         | Qt::WindowTransparentForInput
         | Qt::WindowDoesNotAcceptFocus;
