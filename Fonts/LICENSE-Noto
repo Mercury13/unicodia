@@ -43,6 +43,8 @@ What was done by authors of Unicodia:
   - Made ligature 25CC dotted circle + 18A9 some umlaut,
     that umlaut mostly relies on ligatures and default anchoring
     is really bad.
+* Nandinagari
+  - Anchored 25CC dotted circle
 * OriyaUI
   - Added anchors to 25CC dotted circle
   - Made ligature 25CC dotted circle + 03BC nukta,
