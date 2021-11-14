@@ -1401,7 +1401,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Кáннада", u8"XIV век",
-        u8"кáннада ''(Юго-Западная Индия)''",
+        u8"кáннада ''(Юго-Западная Индия, 38 млн на 2001)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Гласная по умолчанию «а», заменяется огласовками:<br>"
                 "{{_}}{{_}}ка {{sm|ಕ}} + и {{sm|◌ಿ}} = ки {{sm|ಕಿ}}<br>"
