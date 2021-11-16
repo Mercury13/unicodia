@@ -4313,7 +4313,10 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::SIYAQ_INDIC },
     /// @todo [tofu] #76 Ottoman Siyaq, and no fonts
     { 0x1ED00, 0x1ED4F,
-            "Ottoman Siyaq Numbers", u8"Османские цифры сийяк" },
+            "Ottoman Siyaq Numbers", u8"Османские цифры сийяк",
+            u8"Арабские непозиционные цифры, использовавшиеся в средневековой Турции, "
+                    "также «раккамлары»{{-}}от арабского ''ракм'' «счёт».",
+            EcScript::NONE, EcFont::FUNKY },
     // Arab mathematical OK, W10 Amiri
     { 0x1EE00, 0x1EEFF,
             "Arabic Mathematical Alphabetic Symbols",
