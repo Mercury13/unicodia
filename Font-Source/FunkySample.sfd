@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1637052508
+ModificationTime: 1637052521
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -20113,7 +20113,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: u1ED17
+StartChar: Osyq500
 Encoding: 126231 126231 305
 Width: 1048
 Flags: W
