@@ -4311,7 +4311,7 @@ constinit const uc::Block uc::blocks[] {
                         "со 100{{_}}тысяч{{-}}индийские слова. "
                     "Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.",
             EcScript::NONE, EcFont::SIYAQ_INDIC },
-    /// @todo [tofu] #76 Ottoman Siyaq, and no fonts
+    // Ottoman Siyaq OK, drew in FunkySample
     { 0x1ED00, 0x1ED4F,
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк",
             u8"Арабские непозиционные [[pt:acrophonic|акрофонические]] цифры, использовавшиеся в Турции позднего средневековья, "
