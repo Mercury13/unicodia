@@ -4320,7 +4320,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Написание справа налево, порядок сложный: 123 записывается как 100, 3, 20. "
                     "Символ ''marratan'' употребляется с тысячами для записи миллионов.",
             EcScript::NONE, EcFont::FUNKY },
-    // Arab mathematical OK, W10 Amiri
+    // Arab mathematical OK, currently we use Noto Math
     { 0x1EE00, 0x1EEFF,
             "Arabic Mathematical Alphabetic Symbols",
             u8"Арабские математические алфавитные символы",

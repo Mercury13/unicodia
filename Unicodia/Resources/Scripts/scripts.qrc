@@ -20,6 +20,7 @@
         <file>0800.png</file>
         <file>0840.png</file>
         <file>0860.png</file>
+        <file>0870.png</file>
         <file>08A0.png</file>
         <file>0900.png</file>
         <file>0980.png</file>
@@ -181,6 +182,7 @@
         <file>10530.png</file>
         <file>10570.png</file>
         <file>10600.png</file>
+        <file>10780.png</file>
         <file>10800.png</file>
         <file>10840.png</file>
         <file>10860.png</file>
@@ -205,6 +207,7 @@
         <file>10E80.png</file>
         <file>10F00.png</file>
         <file>10F30.png</file>
+        <file>10F70.png</file>
         <file>10FB0.png</file>
         <file>10FE0.png</file>
         <file>11000.png</file>
@@ -243,11 +246,13 @@
         <file>12000.png</file>
         <file>12400.png</file>
         <file>12480.png</file>
+        <file>12F90.png</file>
         <file>13000.png</file>
         <file>13430.png</file>
         <file>14400.png</file>
         <file>16800.png</file>
         <file>16A40.png</file>
+        <file>16A70.png</file>
         <file>16AD0.png</file>
         <file>16B00.png</file>
         <file>16E40.png</file>
@@ -257,6 +262,7 @@
         <file>18800.png</file>
         <file>18B00.png</file>
         <file>18D00.png</file>
+        <file>1AFF0.png</file>
         <file>1B000.png</file>
         <file>1B100.png</file>
         <file>1B130.png</file>
@@ -272,6 +278,7 @@
         <file>1D360.png</file>
         <file>1D400.png</file>
         <file>1D800.png</file>
+        <file>1DF00.png</file>
         <file>1E000.png</file>
         <file>1E100.png</file>
         <file>1E290.png</file>
