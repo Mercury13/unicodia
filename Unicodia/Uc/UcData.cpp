@@ -14,7 +14,7 @@
 #define NBSP "\u00A0"
 
 using namespace std::string_view_literals;
-uc::Cp* uc::cps[N_CHARS];
+uc::Cp* uc::cpsByCode[N_CHARS];
 const QString uc::Font::qempty;
 
 constexpr QChar ZWSP(0x200B);
@@ -5406,7 +5406,7 @@ Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
 void uc::completeData()
 {
     const Block* hint = std::begin(blocks);
-    std::fill(std::begin(cps), std::end(cps), nullptr);
+    std::fill(std::begin(cpsByCode), std::end(cpsByCode), nullptr);
     for (auto& cp : cpInfo) {
         // Bidi class
         ++cp.bidiClass().nChars;
@@ -5427,7 +5427,7 @@ void uc::completeData()
         block->ecVersion = std::min(block->ecVersion, cp.ecVersion);
         block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
         // Lookup table
-        cps[cp.subj.val()] = &cp;
+        cpsByCode[cp.subj.val()] = &cp;
     }
 
     // Check blocks — they should have at least one char
@@ -5527,9 +5527,11 @@ const QString& uc::Font::familiesComma(char32_t trigger) const
 
 bool uc::Font::doesSupportChar(char32_t subj, EcVersion charVersion) const
 {
+    // First load, then check version: if YES, we’ll need this char;
+    //                                 if NO, check using probeMetrics
+    load(subj);
     if (charVersion <= supportedVersion)
         return true;
-    load(subj);
     return q.loaded->probeMetrics->inFontUcs4(subj);
 }
 
@@ -5734,9 +5736,6 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
 {
     uc::TofuInfo r;
     auto sb = subj.ch32();
-    if (sb == 0x11FC0) {
-        std::cout << "Tamil aux!" << std::endl;
-    }
     hint = blockOf(sb, hint);
     if (hint->flags.have(Bfg::COLLAPSIBLE))
         r.place = TofuPlace::CJK;

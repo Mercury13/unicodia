@@ -38,7 +38,7 @@ uc::SingleSearchResult uc::findCode(char32_t code)
         return { SingleError::TOO_BIG };
 
     // Have that character?
-    auto pCp = uc::cps[code];
+    auto pCp = uc::cpsByCode[code];
     if (pCp)
         return { SingleError::ONE, pCp };
 

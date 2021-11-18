@@ -610,7 +610,7 @@ namespace uc {
     constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
 
     constexpr int N_CHARS = 65536 * 17;
-    extern Cp* cps[N_CHARS];
+    extern Cp* cpsByCode[N_CHARS];
 
     // We’ll use this WS for Hani, we could take Japanese as well
     static constexpr auto WS_HANI = QFontDatabase::SimplifiedChinese;

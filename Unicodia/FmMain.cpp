@@ -1414,6 +1414,10 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
     if (model.isCharCollapsed(code)) {
         cjkSetCollapseState(false);
     }
+    if (auto cp = uc::cpsByCode[code]) {
+        // Just get font, moving reference to nowhere
+        (void)cp->font(hint.sample);
+    }
     auto index = model.indexOf(code);
     ui->tableChars->setCurrentIndex(index);
     ui->tableChars->scrollTo(index);
