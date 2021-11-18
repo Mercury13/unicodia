@@ -403,6 +403,10 @@ namespace uc {
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
+        /// Sometimes the font thinks that is supports nothing
+        /// (maybe because of scripts: happened only for aux.Tamil)
+        /// Then we may unglitch: everything that triggers this font and up to version
+        /// e.g. 14 is supported for sure!
         EcVersion supportedVersion = EcVersion::NONE;
 
         mutable struct Q {
