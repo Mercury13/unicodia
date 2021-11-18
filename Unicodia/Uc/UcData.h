@@ -404,7 +404,7 @@ namespace uc {
         std::string_view styleSheet {};
         Percent sizeAdjust {};
         /// Sometimes the font thinks that is supports nothing
-        /// (maybe because of scripts: happened only for aux.Tamil)
+        /// (maybe because of declared script support: happened only for aux.Tamil)
         /// Then we may unglitch: everything that triggers this font and up to version
         /// e.g. 14 is supported for sure!
         /// When U15 arrives and aux.Tamil block extends, everything’s OK:
