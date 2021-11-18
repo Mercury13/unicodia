@@ -229,6 +229,7 @@ namespace uc {
 
     enum class EcVersion : unsigned char
     {
+        NONE,
         //V_1_0,        unused
         //V_1_0_1,      unused
         V_1_1,
@@ -259,6 +260,7 @@ namespace uc {
         UNKNOWN = NN,
         FIRST = 0,
         LAST = NN - 1,
+        FIRST_DUBIOUS = V_14_0,
     };
 
     enum class EcBidiStrength

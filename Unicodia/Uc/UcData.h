@@ -376,6 +376,8 @@ namespace uc {
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
         STUB_FINEGRAINED = 1<<11, ///< Stub on/off is controlled on finer level
+        SUPPORTS_ALL  = 1<<12,  ///< Font supports all characters that fall to it
+                                ///< (used for tofu stats)
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -401,6 +403,7 @@ namespace uc {
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
+        EcVersion supportedVersion = EcVersion::NONE;
 
         mutable struct Q {
             std::shared_ptr<LoadedFont> loaded {};
@@ -416,7 +419,7 @@ namespace uc {
         const QFont& get(std::unique_ptr<QFont>& font,
                          FontPlace place,
                          int size, char32_t trigger) const;
-        bool doesSupportChar(char32_t x) const;
+        bool doesSupportChar(char32_t x, EcVersion charVersion) const;
         const QString& onlyFamily(char32_t trigger) const;
         const QString& familiesComma(char32_t trigger) const;
 
@@ -442,6 +445,10 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                EcVersion aVersion)
+            : family(aFamily), supportedVersion(aVersion) {}
         Font(const Font&) = delete;
     };
     extern const Font fontInfo[];

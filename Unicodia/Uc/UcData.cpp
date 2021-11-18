@@ -212,7 +212,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft New Tai Lue" },                                                // Tai Lue (new)
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
     { "Nirmala UI,Latha" },                                                     // Tamil
-    { "NotoSansTamilSupplement-Regular.ttf" },                                  // Tamil supplement
+            // Somehow font does not respond to char support
+    { "NotoSansTamilSupplement-Regular.ttf", EcVersion::V_14_0 },               // Tamil supplement
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
@@ -296,6 +297,7 @@ static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptTyp
 
 
 const uc::Version uc::versionInfo[] {
+    { {},     0    },
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
     { "1.1",  1993 },
@@ -5523,8 +5525,10 @@ const QString& uc::Font::familiesComma(char32_t trigger) const
 }
 
 
-bool uc::Font::doesSupportChar(char32_t subj) const
+bool uc::Font::doesSupportChar(char32_t subj, EcVersion charVersion) const
 {
+    if (charVersion <= supportedVersion)
+        return true;
     load(subj);
     return q.loaded->probeMetrics->inFontUcs4(subj);
 }
@@ -5717,7 +5721,7 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
     auto sb = subj.uval();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-            if (v->doesSupportChar(sb))
+            if (v->doesSupportChar(sb, ecVersion))
                 break;
         }
         ++v;
@@ -5730,6 +5734,9 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
 {
     uc::TofuInfo r;
     auto sb = subj.ch32();
+    if (sb == 0x11FC0) {
+        std::cout << "Tamil aux!" << std::endl;
+    }
     hint = blockOf(sb, hint);
     if (hint->flags.have(Bfg::COLLAPSIBLE))
         r.place = TofuPlace::CJK;
@@ -5743,14 +5750,14 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
         bool isAlternate = flags.have(Cfg::ALT_FONT);
         while (v->flags.have(Ffg::FALL_TO_NEXT)) {
             if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-                if (v->doesSupportChar(sb)) {
+                if (v->doesSupportChar(sb, ecVersion)) {
                     r.state = TofuState::PRESENT;
                     goto brk1;
                 }
             }
             ++v;
         }
-        r.state = v->doesSupportChar(subj)
+        r.state = v->doesSupportChar(sb, ecVersion)
                 ? TofuState::PRESENT : TofuState::TOFU;
     brk1: ;
     }

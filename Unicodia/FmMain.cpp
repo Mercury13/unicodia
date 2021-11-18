@@ -1504,11 +1504,18 @@ void FmMain::installTempPrefix()
 
 void FmMain::showTofuStats()
 {
+    static constexpr bool LIST_TOFU = false;
+    FILE* f = nullptr;
+    if constexpr (LIST_TOFU) {
+        fopen("~tofu.log", "w");
+    }
+
     int nGoodP0 = 0, nTofuP0 = 0,
         nGoodP1 = 0, nTofuP1 = 0,
         nGoodCjk = 0, nTofuCjk = 0,
         nGoodRest = 0, nTofuRest = 0,
-        firstTofuCjk = 0, firstTofuPostponed = 0, firstTofuRest = 0;
+        firstTofuCjk = 0, firstTofuPostponed = 0, firstTofuRest = 0,
+        firstTofuOldUnicode = 0;
     const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
@@ -1534,6 +1541,13 @@ void FmMain::showTofuStats()
                         firstTofuRest = code;
                 }
             }
+            if (cp.ecVersion < uc::EcVersion::FIRST_DUBIOUS) {
+                if (firstTofuOldUnicode == 0)
+                    firstTofuOldUnicode = code;
+            }
+            if constexpr (LIST_TOFU) {
+                fprintf(f, "%04X\n", static_cast<int>(code));
+            }
             break;
         case uc::TofuState::PRESENT:
             if (code <= 65535)
@@ -1547,7 +1561,12 @@ void FmMain::showTofuStats()
             break;
         }
     }
-    char buf[300];
+
+    if constexpr (LIST_TOFU) {
+        fclose(f);
+    }
+
+    char buf[400];
     int nTotalP0 = nGoodP0 + nTofuP0;
     int nTotalP1 = nGoodP1 + nTofuP1;
     int nTotalCjk = nGoodCjk + nTofuCjk;
@@ -1557,12 +1576,12 @@ void FmMain::showTofuStats()
              "Supp (P1+): %d good, %d tofu, %d total" "\n"
              "CJK: %d good, %d tofu, %d total" "\n"
              "Rest: %d good, %d tofu, %d total" "\n"
-             "First tofu: CJK %04X, postponed %04X, rest %04X",
+             "First tofu: CJK %04X, postponed %04X, rest %04X, old Unicode %04X",
              nGoodP0, nTofuP0, nTotalP0,
              nGoodP1, nTofuP1, nTotalP1,
              nGoodCjk, nTofuCjk, nTotalCjk,
              nGoodRest, nTofuRest, nTotalRest,
-             firstTofuCjk, firstTofuPostponed, firstTofuRest);
+             firstTofuCjk, firstTofuPostponed, firstTofuRest, firstTofuOldUnicode);
     QMessageBox::information(this, "Tofu stats", buf);
 }
 
