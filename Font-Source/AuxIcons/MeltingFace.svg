@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120"
+   height="120"
+   viewBox="0 0 120 120"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="MeltingFace.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     inkscape:zoom="5.9916667"
+     inkscape:cx="58.83171"
+     inkscape:cy="60.917941"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:object-paths="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-global="false">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       id="path848"
+       sodipodi:type="arc"
+       sodipodi:cx="59.920238"
+       sodipodi:cy="50"
+       sodipodi:rx="40.079762"
+       sodipodi:ry="40"
+       sodipodi:start="3.1415927"
+       sodipodi:end="0"
+       sodipodi:open="true"
+       sodipodi:arc-type="arc"
+       d="M 19.840477,50 A 40.079762,40 0 0 1 59.920238,10 40.079762,40 0 0 1 100,50" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="path1428"
+       cx="45"
+       cy="35"
+       r="7.5" />
+    <circle
+       style="fill:#000000;stroke:none;stroke-width:0.3;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="circle1973"
+       cx="77.5"
+       cy="50"
+       r="7.5" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 19.893286,50.629714 c 0,9.728217 2.94862,18.620357 1.755831,28.257554 C 20.77666,85.936325 15.247254,86.705557 10.999001,88.90523 7.7737668,90.575202 0.56798064,95.847562 5.4012279,99.291776 9.6768453,102.33862 15.587795,98.51676 20.310377,96.971148 c 4.206673,-1.376765 7.126296,-0.480979 8.761217,4.543152 1.301596,3.99982 6.001271,8.48981 9.987907,5.31067 3.973115,-3.16836 6.17829,-8.856717 11.258404,-10.491973 5.158636,-1.660532 8.714885,2.545153 13.150891,3.667003 4.693642,1.18701 7.610853,-5.076687 12.428213,-5.052227 11.044525,0.05608 21.015378,8.058637 32.075801,6.472587 4.37537,-0.62742 9.64044,-4.61685 9.39478,-9.974129 -0.23179,-5.055015 -6.00016,-6.21938 -9.55238,-7.798614 C 103.97048,81.938339 98.314141,82.24069 96.312167,78.179075 94.195509,73.884788 97.333585,68.393067 97.857334,63.583409 98.595901,59.370182 100,55.641797 100,49.848851"
+       id="path2479"
+       sodipodi:nodetypes="cssssssssssssscc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:6;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 41.827413,55.416416 c 4.913003,13.644855 14.990281,22.670216 28.863374,25.219093"
+       id="path3784"
+       sodipodi:nodetypes="cc" />
+  </g>
+</svg>
