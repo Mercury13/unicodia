@@ -407,6 +407,8 @@ namespace uc {
         /// (maybe because of scripts: happened only for aux.Tamil)
         /// Then we may unglitch: everything that triggers this font and up to version
         /// e.g. 14 is supported for sure!
+        /// When U15 arrives and aux.Tamil block extends, everything’s OK:
+        /// U15 is not supported by default.
         EcVersion supportedVersion = EcVersion::NONE;
 
         mutable struct Q {
