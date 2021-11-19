@@ -214,6 +214,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Nirmala UI,Latha" },                                                     // Tamil
             // Somehow font does not respond to char support
     { "NotoSansTamilSupplement-Regular.ttf", EcVersion::V_14_0 },               // Tamil supplement
+    { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
@@ -2512,6 +2513,16 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{_}}{{_}}ка {{sm|𑒏}} + и {{sm|◌𑒱}} = ки {{sm|𑒏𑒱}}<br>"
                 "{{_}}{{_}}ка {{sm|𑒏}} + вирама {{sm|◌𑓂}} + та {{sm|𑒞}} = кта {{sm|𑒏𑓂𑒞}}",
                 EcFont::TIRHUTA },
+    // Tangsa OK, U14, called author and he gave font
+    { "Tnsa", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        u8"Тангса", u8"1990",
+        u8"языки тангса ''(=тасе-нага, Северо-Восточная Индия, Мьянма, 100 тыс. на 2010)''",
+        u8"Небольшое семейство сино-тибетских языков; письменность{{-}}различные виды [[ps:Latn|латиницы]]. "
+                "В 1990 индиец Лакхум Моссанг создал алфавит и до смерти в 2020 обучил ему около 100 человек."
+            "<p>Названия гласных{{-}}звук + обозначение одного из четырёх тонов. "
+                "(См. [[ps:Hmnp|письменности хмонгов]]{{-}}в хмонгской латинице тоны тоже обозначаются буквами.)",
+                EcFont::TANGSA },
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,

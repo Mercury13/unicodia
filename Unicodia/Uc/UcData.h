@@ -332,6 +332,7 @@ namespace uc {
         TAI_VIET,
         TAMIL,
         TAMIL_SUPPLEMENT,
+        TANGSA,
         TANGUT,
         TECHNICAL,
          Z_TEC_1,

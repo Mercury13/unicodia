@@ -164,6 +164,7 @@ namespace uc {
         Thai,   // Thai
         Tibt,   // Tibetan
         Tirh,   // Tirhuta
+        Tnsa,   // Tangsa
         Toto,   // Toto
         Ugar,   // Ugaritic
         Vaii,   // Vai
@@ -216,7 +217,6 @@ namespace uc {
         //Syrj  no chars — Syriac Western
         //Syrn  no chars — Syriac Eastern
         //Teng  no chars — Tengwar
-        Tnsa = Zyyy,        // Tangsa, U14
         //Visp  no chars — Visible speech
         //Wole  no chars
         //Zmth  no chars — math notation
