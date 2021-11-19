@@ -341,6 +341,7 @@ namespace uc {
          Z_TEC_5,
          Z_TEC_6,
         TELUGU,
+         Z_TEL_1,
         THAANA,
         THAI,
         TIBETAN,

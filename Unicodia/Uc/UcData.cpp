@@ -222,7 +222,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT, },                                   // …4
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …5
       { FNAME_DEJAVU },                                                         // …6
-    { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },    // Telugu
+    { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Telugu
+      { FNAME_FUNKY },                                                          // …1
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
