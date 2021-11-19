@@ -80,11 +80,7 @@ INCLUDEPATH += \
 TRANSLATIONS += \
     Unicodia_en_001.ts
 
-win32-g++ {
-    LIBS += -lgdi32
-}
-
-VERSION = 0.2.2
+VERSION = 0.3
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
