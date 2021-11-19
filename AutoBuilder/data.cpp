@@ -382,6 +382,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "VISARGA",        Dicf::PART_NOUN },
     { "VOICING",        Dicf::PART_NOUN },
     { "WAVE",           Dicf::PART_NOUN },
+    { "X-X",            Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
     { "YIG",            Dicf::PART_NOUN },
