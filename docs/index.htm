@@ -4,24 +4,70 @@
    <title>Unicodia&nbsp;— encyclopedia of characters</title>
  </head>
  <body>
-  <table>
+  <table border='0' style='border-spacing:2em 0'>
+    <col width='50%' valign='top'>
+    <col width='50%' valign='top'>
     <tr>
-	  <td><h1>Юникодия&nbsp;— энциклопедия символов
-	  <td><h1>Unicodia&nbsp;— encyclopedia of characters
+	 <td><h1>Юникодия&nbsp;— энциклопедия символов
+	 <td><h1>Unicodia&nbsp;— encyclopedia of characters
 	<tr>
-      <td><h3><a href='https://github.com/Mercury13/unicodia/releases'>Качать здесь</a></h3>
-      <td><h3><a href='https://github.com/Mercury13/unicodia/releases'>Download here (sorry, right now Russian only)</a></h3>
+     <td><h3><a href='https://github.com/Mercury13/unicodia/releases'>Качать здесь</a></h3>
+     <td><h3><a href='https://github.com/Mercury13/unicodia/releases'>Download here (sorry, right now Russian only)</a></h3>
 	<tr>
-	  <td><h2>Что такое Юникодия?</h2>
-	    <p>Это программа, заменяющая Таблицу символов Windows.
-	    <ul><li>Все символы Юникода 12, и большинство из Юникода 13/14, включая все эмодзи.
-		  <li>Простейший поиск.		  
-		</ul>
-	  <td><h2>What is Unicodia?</h2>
-	    <p>This is a replacement for Windows Character Map.
-	    <ul><li>All characters of Unicode 12, and most of Unicode 13/14, including all emoji.
-		  <li>Simple search.
-		</ul>
+     <td><h2>Что такое Юникодия?</h2>
+	  <p>Это программа, заменяющая Таблицу символов Windows.
+	   <ul><li>Под Windows 10&nbsp;— <b>все</b> символы Юникода 12, и большинство из Юникода 13/14, включая <b>все</b> односимвольные эмодзи.
+	    <li>Под Windows 7&nbsp;— все символы базовой плоскости Юникода 13, и часть из Юникода 14.
+		<li>Видно, есть ли символ в вашей системе, и если да&nbsp;— то какой шрифт.
+		<li>Простейший поиск.		  
+		<li>Немного слов по каждой письменности. Юникодию просто классно читать.
+		<li>Китайский/корейский/японский изначально свёрнуты. Иначе ткни куда-то&nbsp;— 75%, что попадёшь в иероглиф.
+		<li>Пока поддерживает русский язык и только Windows.
+		<li>Открытая и свободная (кроме лицензии на один шрифт, см. About).
+	  </ul>
+	 <td><h2>What is Unicodia?</h2>
+	  <p>This is a replacement for Windows Character Map.
+	   <ul><li>In Windows 10&nbsp;— <b>all</b> characters of Unicode 12, and most of Unicode 13/14, including <b>all</b> single-character emoji.
+	    <li>In Windows 7&nbsp;— all characters of Unicode 13 Base Multilingual Plane, and some of Unicode 14.
+	    <li>Shows if the character is supported in your system, and if so&nbsp;— which font.
+		<li>Simple search.
+		<li>A few words on every script. Unicodia is just fun to read.
+		<li>Chinese/Japanese/Korean are collapsed initially. Otherwise point somewhere, and 75% you hit an ideograph.
+		<li>Right now supports Russian only, Windows only.
+		<li>Free/libre (except license for one font, see About).
+	   </ul>
+	<tr>
+	 <td><h2>Чем плоха штатная Таблица символов?</h2>
+	  <p>Её сделали, когда существовали только однобайтовые кодировки и нестандартные шрифты. Она поддерживает Юникод, но сам принцип поиска&nbsp;— сначала найти шрифт, а потом в нём символ&nbsp;— это ещё из Windows 3.1. Юникодия устроена наоборот: ищем символ и проверяем, кто из шрифтов его поддерживает.
+	 <td><h2>Why is built-in Character Map so bad?</h2>
+	  <p>It was made when single-byte encodings and non-standard fonts were the only option. It supports Unicode, but the core principle&nbsp;— find font, then character in it&nbsp;— is back from Windows 3.1. Unicodia works conversely: first find character, then check which fonts support it.
+	<tr>
+	 <td><h2>Почему настольная программа?</h2>
+	  <p>Я настольный программист. И гигантская таблица просто медленная в вебе. И никто не знает, что делать с гигантскими ККЯ-шрифтами, некоторые из которых даже не открываются в редакторе.
+	 <td><h2>Why desktop program?</h2>
+	  <p>I am a desktop programmer. And a giant table is just slow on Web. And nobody known what to do with giant CJK fonts that sometimes are even unopenable in font editors.
+	<tr>
+	 <td><h2>Какие планы на будущее?</h2>
+	  <p>В таком порядке:
+	  <ul><li>Дождаться, когда в шрифте «Шехерезада» будет арабский из Юникода 14, и обновить его.
+	   <li>Закрыть мелкие тофу Юникода 14.
+	   <li>Утилита для жестового письма Саттон.
+	   <li>Рубрикатор эмодзи, многосимвольные эмодзи, поддержка цветных эмодзи Google.
+	 <td><h2>What are the plans for future?</h2>
+	  <p>The order is…
+	  <ul><li>Wait until Scheherazade font supports Arabic from Unicode 14, and update it.
+	   <li>Close small tofu of Unicode 14.
+	   <li>Sutton SignWriting tool.
+	   <li>Emoji reference, multi-character emoji, Google colour emoji support.
+	<tr>
+	 <td><h2>Есть аналоги?</h2>
+	  <ul><li>Куча баз Юникода, механически перенесённых в Веб. Настолько унылы, что не буду упоминать ни одной.
+	   <li><a href='https://utils.kde.org/projects/kcharselect/'>KCharSelect</a>. Базы данных Юникода, перенесённые в настольную программу, без встроенных шрифтов и дополнительных данных. Из-за скорости настольной программы всё уже не настолько уныло.
+	 <td><h2>Got any similar software?</h2>
+	  <ul><li>Lots of Unicode databases mechanically moved to Web. They are so dull that I won’t even mention one.
+	   <li><a href='https://utils.kde.org/projects/kcharselect/'>KCharSelect</a>. Unicode bases compiled into desktop program, without built-in fonts and auxiliary data. Because of sheer speed of desktop program the things are not so dull.
+	<tr>
+	 <td colspan='2'><hr><center><i>© 2021 Mikhail Merkuryev</i></center>
   </table>
  </body>
 </html>
