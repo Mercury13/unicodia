@@ -2868,8 +2868,7 @@ constinit const uc::Block uc::blocks[] {
             "Hebrew", u8"Иврит", {}, EcScript::Hebr },
     // Arabic OK
     { 0x0600, 0x06FF,
-            "Arabic", u8"Арабский", {}, EcScript::Arab,
-            EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            "Arabic", u8"Арабский", {}, EcScript::Arab },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
     { 0x0700, 0x074F,
             "Syriac", u8"Сирийский", {}, EcScript::Syrc },
@@ -2896,14 +2895,14 @@ constinit const uc::Block uc::blocks[] {
             u8"Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века.",
             EcScript::Syrc },
-    /// @todo [tofu] #40 Arabic Extended-B
+    // Arabic ex B OK, Sceherazade updated in Nov 2021
     { 0x0870, 0x089F,
             "Arabic Extended-B", u8"Арабский расширенный B",
             u8"Символы из комментариев к Корану. "
                     "Также бошняцкий (запись сербохорватского арабскими буквами), "
                         "пегон (запись индонезийских языков арабскими буквами), "
                         "египетский пиастр (валюта до 1834) и египетский фунт (современная валюта).",
-            EcScript::Arab, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            EcScript::Arab },
     // Arabic ex A OK
     { 0x08A0, 0x08FF,
             "Arabic Extended-A", u8"Арабский расширенный A",
@@ -2911,7 +2910,7 @@ constinit const uc::Block uc::blocks[] {
                     "арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' "
                     "и африканских языков (в частности, берберского). "
                     "Также знаки комментариев к Корану.",
-            EcScript::Arab, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            EcScript::Arab },
     // Devanagari OK
     { 0x0900, 0x097F,
             "Devanagari", u8"Деванагари", {}, EcScript::Deva },
@@ -3836,7 +3835,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] #52 Latin ex F
     { 0x10780, 0x107BF,
             "Latin Extended-F", u8"Латиница расширенная F",
-            {}, EcScript::Latn },
+            {}, EcScript::Latn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
@@ -3913,7 +3912,8 @@ constinit const uc::Block uc::blocks[] {
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
     /// @todo [tofu] Old Uyghur
     { 0x10F70, 0x10FAF,
-            "Old Uyghur", u8"Староуйгурский", {}, EcScript::Ougr },
+            "Old Uyghur", u8"Староуйгурский", {},
+            EcScript::Ougr, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Chorasmian OK, built own font
     { 0x10FB0, 0x10FDF,
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
@@ -4055,7 +4055,8 @@ constinit const uc::Block uc::blocks[] {
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
     /// @todo [tofu] #58 Cypro-Minoan
     { 0x12F90, 0x12FFF,
-            "Cypro-Minoan", u8"Кипро-минойский", {}, EcScript::Cpmn },
+            "Cypro-Minoan", u8"Кипро-минойский", {},
+            EcScript::Cpmn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Egyptian hiero OK
     { 0x13000, 0x1342F,
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
@@ -4077,7 +4078,7 @@ constinit const uc::Block uc::blocks[] {
     // Mro OK
     { 0x16A40, 0x16A6F,
             "Mro", u8"Мру", {}, EcScript::Mroo },
-    /// @todo [tofu] #59 Tangsa
+    // Tangsa OK, found the author
     { 0x16A70, 0x16ACF,
             "Tangsa", u8"Тангса", {}, EcScript::Tnsa },
     // Bassa OK
@@ -4288,7 +4289,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] Latin ex G
     /// @todo [tofu] Latin ex G
     { 0x1DF00, 0x1DFFF,
-            "Latin Extended-G", u8"Латиница расширенная G", {}, EcScript::Latn },
+            "Latin Extended-G", u8"Латиница расширенная G", {},
+            EcScript::Latn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная",
