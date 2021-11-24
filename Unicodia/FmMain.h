@@ -36,6 +36,7 @@ constexpr int FSZ_BIG = 50;
 
 class FmPopup2;
 class FmMessage;
+class FmTofuStats;
 
 struct MaybeChar {
     char32_t code = 0;
@@ -262,6 +263,7 @@ private:
     SearchModel searchModel;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
+    Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
     mutable struct Hint {

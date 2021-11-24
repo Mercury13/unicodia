@@ -24,6 +24,7 @@ debug {
 SOURCES += \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
+    FmTofuStats.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
@@ -59,6 +60,7 @@ HEADERS += \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
+    FmTofuStats.h \
     MyWiki.h \
     Skin.h \
     Uc/FontDef.h \
@@ -71,7 +73,8 @@ HEADERS += \
     c_SearchEdit.h
 
 FORMS += \
-    FmMain.ui
+    FmMain.ui \
+    FmTofuStats.ui
 
 INCLUDEPATH += \
     ../Libs/SelfMade \

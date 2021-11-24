@@ -16,6 +16,8 @@
 
 namespace uc {
 
+    constexpr int N_PLANES = 17;
+
     enum class EcScript : unsigned char {
         Zyyy,
         Adlm,   // Adlam
@@ -421,13 +423,13 @@ namespace uc {
 
     enum class TofuPlace {
         CJK,        ///< In CJK chars
-        POSTPONED,  ///< In postponed chars (e.g. Arabic calligraphy is so bad that cannot implement at all)
         REST        ///< In rest of chars
     };
 
     struct TofuInfo {
         TofuState state = TofuState::NO_FONT;
         TofuPlace place = TofuPlace::REST;
+        const uc::Block* block = nullptr;
     };
 
     struct Cp   // code point

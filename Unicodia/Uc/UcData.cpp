@@ -3839,7 +3839,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [desc] #52 Latin ex F
     { 0x10780, 0x107BF,
             "Latin Extended-F", u8"Латиница расширенная F",
-            {}, EcScript::Latn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            {}, EcScript::Latn },
     // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
@@ -3917,7 +3917,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Old Uyghur
     { 0x10F70, 0x10FAF,
             "Old Uyghur", u8"Староуйгурский", {},
-            EcScript::Ougr, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            EcScript::Ougr },
     // Chorasmian OK, built own font
     { 0x10FB0, 0x10FDF,
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
@@ -4060,7 +4060,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] #58 Cypro-Minoan
     { 0x12F90, 0x12FFF,
             "Cypro-Minoan", u8"Кипро-минойский", {},
-            EcScript::Cpmn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            EcScript::Cpmn },
     // Egyptian hiero OK
     { 0x13000, 0x1342F,
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
@@ -4133,12 +4133,13 @@ constinit const uc::Block uc::blocks[] {
             u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
-            EcScript::Tang },
+            EcScript::Tang, EcFont::NORMAL, Bfg::CJK },
     /// @todo [tofu] #60 Kana ex B
     /// @todo [desc] #60 Kana ex B
     { 0x1AFF0, 0x1AFFF,
             "Kana Extended-B", u8"Кана расширенная B",
-            {} },
+            {},
+            EcScript::NONE, EcFont::NORMAL, Bfg::CJK },
     // Kana supp OK
     { 0x1B000, 0x1B0FF,
             "Kana Supplement", u8"Кана дополнительная",
@@ -4294,7 +4295,7 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [tofu] Latin ex G
     { 0x1DF00, 0x1DFFF,
             "Latin Extended-G", u8"Латиница расширенная G", {},
-            EcScript::Latn, EcFont::NORMAL, Bfg::POSTPONED_TOFU },
+            EcScript::Latn },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная",
@@ -5754,11 +5755,10 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
 {
     uc::TofuInfo r;
     auto sb = subj.ch32();
-    hint = blockOf(sb, hint);
-    if (hint->flags.have(Bfg::COLLAPSIBLE))
+    r.block = hint = blockOf(sb, hint);
+    if (hint->flags.haveAny(Bfg::COLLAPSIBLE | Bfg::CJK)
+            || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
-    else if (hint->flags.have(Bfg::POSTPONED_TOFU))
-        r.place = TofuPlace::POSTPONED;
 
     if (drawMethod() > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
