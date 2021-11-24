@@ -61,7 +61,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAnatolianHieroglyphs-Regular.ttf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic Noto — Scheh has a few nice chars!
-      { "NotoNaskhArabic-Regular.ttf" },                                        // …1, main font
+      { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, main font
+      { FNAME_FUNKY },                                                          // …2, fallback font for Presentation-A
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
