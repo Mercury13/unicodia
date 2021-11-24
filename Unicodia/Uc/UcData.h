@@ -166,6 +166,7 @@ namespace uc {
           Z_NOR_6,
           Z_NOR_7,
          NOTO,
+          Z_NOT_1,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
          SYMBOL,
