@@ -233,8 +233,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf", Ffg::DESC_BIGGER },                        // Tirhuta
-    { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlaut symbol
-      { FNAME_NOTO },                                                           // …1
+    { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
+      { FNAME_FUNKY },                                                          // …3 — use it as default
     { "Ebrima" },                                                               // Vai
     { "NotoSerifVithkuqi-Regular.ttf" },                                        // Vithkuqi
     { "NotoSansWancho-Regular.ttf", Ffg::DESC_BIGGER },                         // Wancho

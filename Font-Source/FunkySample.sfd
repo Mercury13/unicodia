@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1637746056
+ModificationTime: 1637747617
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -42,6 +42,7 @@ HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
 OS2UnicodeRanges: 00002000.02002080.00000008.00000000
+Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  } ['rlig' ('DFLT' <'dflt' > ) ]
 Lookup: 4 0 1 "Diak RLIG" { "Diak RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'diak' <'dflt' > ) ]
 Lookup: 4 0 0 "Nand RLIG" { "Nand RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'arab' <'dflt' > 'nand' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
@@ -734,12 +735,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 6765 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -762,7 +764,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt" "'blwm' Nand1-1"
-BeginChars: 1114136 365
+BeginChars: 1114137 367
 
 StartChar: u10FB0
 Encoding: 69552 69552 0
@@ -24903,7 +24905,7 @@ EndChar
 StartChar: uni1AC5
 Encoding: 6853 6853 364
 Width: 0
-Flags: WO
+Flags: W
 HStem: 652 28<-539 -491 -110 -62> 866 28<-539 -491 -110 -62>
 VStem: -595 104<652 680 866 894> -595 56<680 866> -110 104<655 683 869 897> -62 56<683 869>
 TtInstrs:
@@ -24996,6 +24998,82 @@ SplineSet
  -491 866 l 1,15,-1
  -539 866 l 1,8,-1
 EndSplineSet
+EndChar
+
+StartChar: uni20E7
+Encoding: 8423 8423 365
+Width: 0
+Flags: W
+HStem: 760 60<-673 123>
+VStem: 123 60<-144 760>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 1
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+PUSHB_3
+ 1
+ 2
+ 10
+CALL
+PUSHB_4
+ 64
+ 1
+ 5
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 6
+MDAP[rnd]
+PUSHB_1
+ 5
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 4
+MDRP[min,rnd,black]
+PUSHB_3
+ 5
+ 4
+ 10
+CALL
+PUSHB_4
+ 64
+ 5
+ 1
+ 9
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+123 760 m 5,0,-1
+ -673 760 l 5,1,-1
+ -673 820 l 5,2,-1
+ 183 820 l 5,3,-1
+ 183 -144 l 5,4,-1
+ 123 -144 l 5,5,-1
+ 123 760 l 5,0,-1
+EndSplineSet
+EndChar
+
+StartChar: CircleAnnuity
+Encoding: 1114136 -1 366
+Width: 936
+Flags: W
+HStem: 48 55.6396<429.838 484.162> 67.2402 55.1191<348.321 386.547 527.201 565.68> 117.16 55.6396<261.358 315.682 605.973 644.468> 196.2 55.1191<219.361 257.84 655.893 694.388> 285.64 55.1201<200.121 238.6 675.133 713.627> 375.08 55.1201<219.361 257.84 655.893 694.388> 453.6 55.6406<261.358 315.682 605.973 644.468> 504.04 55.1211<340.398 386.547 519.278 573.602> 522.759 55.6426<429.839 484.162> 760 60<39 835>
+VStem: 191.54 55.6406<293.953 332.447> 210.78 55.6396<204.512 243.007 383.392 421.887> 260.7 55.6406<117.818 172.142 454.258 508.582> 339.74 55.1201<75.5525 114.047 512.352 558.503> 429.18 55.6406<48.6581 102.981 523.417 577.742> 518.62 55.6396<75.5525 114.047 504.678 558.503> 597.66 55.1201<125.74 164.219 462.181 500.659> 647.58 55.1201<204.512 243.007 383.392 421.887> 666.82 55.1201<293.953 332.447> 835 60<-144 760>
+LayerCount: 2
+Fore
+Refer: 365 8423 N 1 0 0 1 712 0 2
+Refer: 71 9676 N 1 0 0 1 141 0 2
+Ligature2: "Umlaut RLIG-1" uni25CC uni20E7
 EndChar
 EndChars
 EndSplineFont
