@@ -20,7 +20,7 @@ What was done by authors of Unicodia:
   - Made 30 chars from Combining Diacritical Marks for Symbols.
     Work somehow, but optimized for 25CC dotted circle.
   - Made 20C0 Kyrghyz som sign
-* Bamum, Glagolitic, NP Hmong, Samaritan
+* Bamum, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Egyptian hieroglyphs, Kannada, Modi, Syloti Nagri, Zanabazar square
   - Rehinted with hinting VM
@@ -33,6 +33,9 @@ What was done by authors of Unicodia:
   - Copied 2 chars 1CF5, F6 (Vedic Extensions) form newer version.
     (umlauts are just for showcasing and actually unusable!)
   - Rehinted
+* Glagolitic
+  - Copied 25CC dotted circle from Devanagari
+  - Made Caudate Chrivi 2C2F and 5F
 * Hebrew
   - Made 05EF yod triangle
 * Khudawadi
