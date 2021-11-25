@@ -69,7 +69,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
       { "NotoSerifArmenian-Regular.ttf" },                                      // …1
     { "NotoSansAvestan-Regular.ttf" },                                          // Avestan
-    { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF },                         // Balinese
+    { "NotoSerifBalinese-Regular.ttf", Ffg::STUB_OFF | Ffg::FALL_TO_NEXT },     // Balinese
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
     { "NotoSansBatak-Regular.ttf" },                                            // Batak

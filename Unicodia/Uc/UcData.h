@@ -192,6 +192,7 @@ namespace uc {
           Z_ARM_1,
         AVESTAN,
         BALINESE,
+          Z_BAL_1,
         BAMUM,
         BASSA_VAH,
         BATAK,
