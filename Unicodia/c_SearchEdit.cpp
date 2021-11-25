@@ -125,7 +125,7 @@ void SearchList::keyPressEvent(QKeyEvent* ev)
 void SearchList::mouseDoubleClickEvent(QMouseEvent* ev)
 {
     if (ev->button() == Qt::LeftButton
-            && !ev->modifiers().testAnyFlags(Qt::KeyboardModifierMask)) {
+            && !ev->modifiers().testFlag(Qt::KeyboardModifierMask)) {
         auto pt = ev->pos();
         auto index = indexAt(pt);
         if (index.isValid()) {

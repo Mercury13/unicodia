@@ -1,13 +1,13 @@
 @set PRONAME=Unicodia\Unicodia.pro
 @set EXENAME=Unicodia.exe
-@set VERSION=0.3
+@set VERSION=0.3.1
 @set ARCNAME=Unicodia-w64-%VERSION%.7z
 @set BUILD=~Build-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@set QTDIR=c:\Qt\6.2.1\mingw81_64
+@set QTDIR=c:\Qt\6.1.3\mingw81_64
 
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY%
@@ -22,6 +22,8 @@
 @%QTDIR%\bin\qmake.exe ..\%PRONAME% -r -spec win32-g++ "CONFIG+=release"
 @%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
 @cd ..
+
+@if not exist %BUILD%\release\%EXENAME% goto no_exe
 
 @echo ===== Copying files =====
 @copy %BUILD%\release\%EXENAME% %DEPLOY%
@@ -47,4 +49,11 @@
 @%SEVENZIP% a %ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
 @cd ..
 
+goto end
+
+:no_exe
+echo BAD: EXE NOT FOUND
+goto end
+
+:end
 @pause

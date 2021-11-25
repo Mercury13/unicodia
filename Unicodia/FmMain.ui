@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -613,6 +613,13 @@ padding-bottom: 1px;</string>
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lbTofuStats">
+            <property name="text">
+             <string>Статистика тофу</string>
+            </property>
+           </widget>
           </item>
          </layout>
         </item>

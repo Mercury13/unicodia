@@ -900,6 +900,16 @@ void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
 
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
+namespace {
+
+    void surroundWithPopupLink(QLabel* lb, const char* target)
+    {
+        lb->setText(QString("<a href='") + target + "' style='" STYLE_POPUP "'>" + lb->text() + "</a>");
+    }
+
+}   // anon namespace
+
+
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain),
@@ -1077,6 +1087,9 @@ void FmMain::initAbout()
     QString s = f.readAll();
     s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
     ui->vwAbout->setText(s);
+
+    surroundWithPopupLink(ui->lbTofuStats, "ac:tofustats");
+    connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
 }
 
 
@@ -1581,3 +1594,4 @@ void FmMain::searchEnterPressed(int index)
 {
     selectChar<SelectMode::INSTANT>(searchModel.lineAt(index).cp->subj);
 }
+
