@@ -48,7 +48,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
     { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                 // Punctuation — both are built-in
-      { FNAME_NOTO },                                                           // …1
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
+      { FNAME_FUNKY },                                                          // …2 fallback for special punctuation
     { FNAME_NOTOMATH },                                                         // Math
     { FNAME_NOTOMUSIC, 110_pc },                                                // Music
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
@@ -3366,10 +3367,11 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Cyrl, EcFont::NOTO },
     // Supp punct OK
     { 0x2E00, 0x2E7F,
-            "Supplemental Punctuation", u8"Дополнительные знаки препинания",
+            "Supplemental Punctuation", u8"Знаки препинания дополнительные",
             u8"Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, "
                     "старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) "
-                    "и многое другое." },
+                    "и многое другое.",
+            EcScript::NONE, EcFont::PUNCTUATION },
     // CJK radicals supp OK
     { 0x2E80, 0x2EFF,
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные",

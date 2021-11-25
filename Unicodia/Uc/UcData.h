@@ -173,6 +173,7 @@ namespace uc {
          HISTORIC,
          PUNCTUATION,
            Z_PUN_1,
+           Z_PUN_2,
          MATH,
          MUSIC,
          MUSIC_BIGGER,
