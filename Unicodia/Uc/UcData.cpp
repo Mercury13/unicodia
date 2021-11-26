@@ -95,11 +95,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …4 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …5 Korean
       { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …6 Japanese
-      { FNAME_HANA_A, Ffg::FALL_TO_NEXT, 120_pc },                              // …7
       { FNAME_HANA_B, 120_pc },                                                 // …8
     { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
-      { FNAME_HANA_A, 120_pc },                                                 // …2
+      { FNAME_KOREAN, 120_pc },                                                 // …2
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
@@ -127,8 +126,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
-    { "Segoe UI Historic", Ffg::FALL_TO_NEXT },                                 // Gothic
-      { FNAME_HANA_A },                                                         // …1
+    { "Segoe UI Historic" },                                                    // Gothic
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
@@ -147,10 +145,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { "NotoSansKR-Regular.otf", Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },    // Korean:  we use it for well-known chars, no need to rename
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },                // Korean: managed to auto-rename OTF
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
-      { FNAME_HANA_A, Ffg::FALL_TO_NEXT },                                      // …2 HanaMin
-      { FNAME_BABEL },                                                          // …3 U14
+      { FNAME_BABEL },                                                          // …2 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Latin
@@ -193,6 +190,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
+    { "NotoSansOldTurkic-Regular.ttf" },                                        // Orkhon
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau

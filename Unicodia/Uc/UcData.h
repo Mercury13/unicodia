@@ -217,7 +217,6 @@ namespace uc {
           Z_CJK_5,
           Z_CJK_6,
           Z_CJK_7,
-          Z_CJK_8,
          CJK_COMPAT,
            Z_CJC_1,
            Z_CJC_2,
@@ -249,7 +248,6 @@ namespace uc {
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
         GOTHIC,     // Old Goth language, chain Historic → HanaA (BAD!), also Lycian, Carian, Lydian
-          ORKHON,   // For Orkhon HanaA >> Segoe Historic
         GRANTHA,
         GUJARATI,
         GUNJALA_GONDI,
@@ -270,7 +268,6 @@ namespace uc {
         KOREAN,
           Z_KOR_1,
           Z_KOR_2,
-          Z_KOR_3,
         LANNA,
         LAO,
         LATIN,
@@ -312,6 +309,7 @@ namespace uc {
         OLD_PERSIAN,
         OLD_SOGDIAN,
         ORIYA,
+        ORKHON,
         PAHAWH_HMONG,
         PALMYRENE,
         PAU_CIN_HAU,
