@@ -237,6 +237,7 @@ namespace uc {
           Z_DI2_2,
           Z_DI2_3,
           Z_DI2_4,
+          Z_DI2_5,
         DOGRA,
         DUPLOYAN,
         EGYPTIAN,
