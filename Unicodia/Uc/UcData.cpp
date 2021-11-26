@@ -3365,7 +3365,7 @@ constinit const uc::Block uc::blocks[] {
             "Cyrillic Extended-A", u8"Кириллица расширенная A",
             u8"Комбинирующие кириллические буквы из церковнославянского.",
             EcScript::Cyrl, EcFont::NOTO },
-    // Supp punct OK
+    // Supp punct OK, drew U14 in FunkySample
     { 0x2E00, 0x2E7F,
             "Supplemental Punctuation", u8"Знаки препинания дополнительные",
             u8"Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, "
