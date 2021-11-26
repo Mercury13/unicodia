@@ -83,7 +83,7 @@ INCLUDEPATH += \
 TRANSLATIONS += \
     Unicodia_en_001.ts
 
-VERSION = 0.4
+VERSION = 0.4.1
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
