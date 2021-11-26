@@ -147,6 +147,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL },                                                          // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Latin
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
+      { FNAME_FUNKY },                                                          // …2
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
@@ -3535,12 +3538,13 @@ constinit const uc::Block uc::blocks[] {
                 "<p>{{sm|ꜗꜘꜙꜚ}} применяются в чинантекском."
                 "<p>Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). "
                     "Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах." },
+    /// @todo [tofu] Latin ex D U14
     // Latin ex D OK, dereferenced bad chars of Google Noto
     { 0xA720, 0xA7FF,
             "Latin Extended-D", u8"Латиница расширенная D",
             u8"Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, "
                 "дополнительные буквы алфавита майя, употреблявшиеся в колониальный период, и другое.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::LATIN },
     // Syloti OK
     { 0xA800, 0xA82F,
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
