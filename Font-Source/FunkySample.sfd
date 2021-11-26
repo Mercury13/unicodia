@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1637919400
+ModificationTime: 1637921017
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -41,7 +41,7 @@ HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
-OS2UnicodeRanges: 08002000.02002080.00000008.00000000
+OS2UnicodeRanges: 28002000.0200e080.00000008.00000000
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  } ['rlig' ('DFLT' <'dflt' > ) ]
 Lookup: 4 0 1 "Diak RLIG" { "Diak RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'diak' <'dflt' > ) ]
 Lookup: 4 0 0 "Nand RLIG" { "Nand RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'arab' <'dflt' > 'nand' <'dflt' > ) ]
@@ -737,12 +737,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 42900 33 14
+WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -30268,7 +30269,7 @@ EndChar
 StartChar: uniA7F4
 Encoding: 42996 42996 406
 Width: 480
-Flags: WO
+Flags: W
 HStem: 142.096 31.6904<300.468 369.526> 279.422 36.2178<156.842 188.974 260.872 285.536> 682.346 39.9912<153.33 290.265>
 VStem: 24.7012 73.1904<381.297 616.725> 343.117 73.1904<384.368 616.458>
 TtInstrs:

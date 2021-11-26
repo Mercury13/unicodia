@@ -232,6 +232,11 @@ namespace uc {
           Z_DIN_3,
           Z_DIN_4,
           Z_DIN_5,
+        DINGBAT2,       // Dingbats of BOM — need main font Cambria
+          Z_DI2_1,
+          Z_DI2_2,
+          Z_DI2_3,
+          Z_DI2_4,
         DOGRA,
         DUPLOYAN,
         EGYPTIAN,

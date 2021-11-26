@@ -111,6 +111,11 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
       { FNAME_BABEL, 130_pc },                                                  // …5
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat 2
+      { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                       // …1
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
+      { FNAME_FUNKY },                                                          // …4
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
@@ -3295,7 +3300,8 @@ constinit const uc::Block uc::blocks[] {
             "Dingbats", u8"Украшения",
             u8"Символы, чаще всего используемые для украшения печатного текста. "
                     "Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, "
-                    "а печатник оформит публикацию чёрно-белым шрифтом." },
+                    "а печатник оформит публикацию чёрно-белым шрифтом.",
+            EcScript::NONE, EcFont::DINGBAT2 },
     // Misc math A OK
     { 0x27C0, 0x27EF,
             "Miscellaneous Mathematical Symbols-A", u8"Разные математические символы A",
