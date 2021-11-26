@@ -80,12 +80,44 @@ QVariant tofu::Model::headerData(
 }
 
 
+namespace {
+
+    class VersionCounter
+    {
+    public:
+        void reg(int code, uc::EcVersion version, uc::TofuState state);
+        void drop(SafeVector<tofu::Named>& r, const char* name);
+    private:
+        tofu::Counter total;
+        tofu::Counter byVer[static_cast<int>(uc::EcVersion::NN)];
+    };
+
+    void VersionCounter::reg(int code, uc::EcVersion version, uc::TofuState state)
+    {
+        total.reg(code, state);
+        byVer[static_cast<int>(version)].reg(code, state);
+    }
+
+    void VersionCounter::drop(SafeVector<tofu::Named>& r, const char* name)
+    {
+        r.emplace_back(name, total);
+        for (size_t iVer = 0; iVer < std::size(byVer); ++iVer) {
+            auto& ctr = byVer[iVer];
+            if (ctr.nTofu != 0) {
+                r.emplace_back("-- v" + str::toQ(uc::versionInfo[iVer].name), ctr);
+            }
+        }
+    }
+
+}   // anon namespace
+
 
 SafeVector<int> tofu::Model::build()
 {
     SafeVector<int> allTofu;
 
-    Counter all, cjk, rest;
+    Counter all;
+    VersionCounter cjk, rest;
     Counter byPlane[uc::N_PLANES];
     Counter byBlock[uc::N_BLOCKS];
 
@@ -101,9 +133,9 @@ SafeVector<int> tofu::Model::build()
         byBlock[iBlock].reg(code, tofuInfo.state);
 
         if (tofuInfo.place == uc::TofuPlace::CJK) {
-            cjk.reg(code, tofuInfo.state);
+            cjk.reg(code, cp.ecVersion, tofuInfo.state);
         } else {
-            rest.reg(code, tofuInfo.state);
+            rest.reg(code, cp.ecVersion, tofuInfo.state);
         }
 
         if (tofuInfo.state == uc::TofuState::TOFU)
@@ -111,8 +143,8 @@ SafeVector<int> tofu::Model::build()
     }
 
     rows.emplace_back("All", all);
-    rows.emplace_back("CJK", cjk);
-    rows.emplace_back("Rest", rest);
+    cjk.drop(rows, "CJK");
+    rest.drop(rows, "Rest");
 
     for (int iPlane = 0; iPlane < uc::N_PLANES; ++iPlane) {
         auto& ctr = byPlane[iPlane];

@@ -991,7 +991,7 @@ FmMain::FmMain(QWidget *parent)
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
 
     // Tofu stats
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_T), this);
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
     connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
 
     // Clicked
