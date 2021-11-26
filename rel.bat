@@ -49,11 +49,11 @@
 @%SEVENZIP% a %ARCPATH% * -mx9 -mmt%NUMBER_OF_PROCESSORS%
 @cd ..
 
-goto end
+@goto end
 
 :no_exe
-echo BAD: EXE NOT FOUND
-goto end
+@echo BAD: EXE NOT FOUND
+@goto end
 
 :end
 @pause
