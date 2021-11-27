@@ -56,3 +56,6 @@ compile_commands.json
 
 # Auto-created files.
 UcAuto.cpp
+
+# Really big sources
+HanaMinLiteCSC.sfd

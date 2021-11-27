@@ -217,6 +217,8 @@ namespace uc {
           Z_CJK_5,
           Z_CJK_6,
           Z_CJK_7,
+          Z_CJK_8,
+          Z_CJK_9,
          CJK_COMPAT,
            Z_CJC_1,
            Z_CJC_2,
