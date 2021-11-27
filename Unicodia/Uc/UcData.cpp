@@ -40,7 +40,7 @@ constexpr std::string_view FNAME_NOTOSYM2 = "NotoSansSymbols2-Regular.ttf";
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "FunkySample.ttf";
-constexpr std::string_view FNAME_HANA_B = "HanaMinLiteCJKBSC!!.otf";
+//constexpr std::string_view FNAME_HANA_B = "HanaMinLiteCJKBSC!!.otf";
 constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
@@ -106,7 +106,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
-      { FNAME_HANA_B, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
+      //{ FNAME_HANA_B, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …5
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …6 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …7 Korean
@@ -115,6 +115,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, 120_pc },                                                 // …2
+    { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK plane 3
+      { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …1
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
@@ -5555,6 +5557,7 @@ void uc::Font::load(char32_t trigger) const
         // force EXACT match
     newLoaded->probe->setStyleStrategy(STRATEGY_TOFU);
     newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
+    doesSupportChar(trigger, EcVersion::LAST);
 }
 
 

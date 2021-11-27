@@ -19,7 +19,7 @@
 
 std::string tempPrefix;
 
-constexpr bool debugTempFont = false;
+constexpr bool debugTempFont = true;
 
 #define MSG0(x) if constexpr (debugTempFont) { std::cout << x; }
 #define MSG(x)  if constexpr (debugTempFont) { std::cout << x << std::endl; }
