@@ -221,8 +221,6 @@ namespace uc {
          CJK_COMPAT,
            Z_CJC_1,
            Z_CJC_2,
-         CJK_PLANE3,
-           Z_CJ3_1,
          CJK_KANBUN,
          CJK_STRUCTURE,
         COPTIC,
