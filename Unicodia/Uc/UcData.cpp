@@ -4588,7 +4588,7 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension B",
             u8"ККЯ иероглифы расширение B",
             u8"Редкие и исторические [[ps:Hani|китайские иероглифы]]. "
-                "Эти иероглифы упаковали в стандартный шрифт «SimSunExtB» для Windows. "
+                "Эти иероглифы упаковали в стандартный шрифт «SimSun-ExtB» для Windows. "
                 "Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK C OK
