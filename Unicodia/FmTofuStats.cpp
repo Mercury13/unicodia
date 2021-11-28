@@ -185,6 +185,7 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
     ui->memoTofuList->setPlainText(s);
     ui->tableStats->setModel(&model);
     ui->tableStats->resizeColumnsToContents();
+    ui->tableStats->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
 }
 
 FmTofuStats::~FmTofuStats()
