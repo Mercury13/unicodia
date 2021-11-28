@@ -162,7 +162,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },                // Korean: managed to auto-rename OTF
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
-      { FNAME_BABEL },                                                          // …2 U14
+      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2 U14
+      { FNAME_FUNKY },                                                          // …3 Old Katakana/Hiragana
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Latin
@@ -4161,11 +4162,11 @@ constinit const uc::Block uc::blocks[] {
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK },
-    /// @todo [tofu] #60 Kana ex B
-    /// @todo [desc] #60 Kana ex B
+    // Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF,
             "Kana Extended-B", u8"Кана расширенная B",
-            {},
+            u8"Изобретённая японскиим лингвистами незадолго до Второй мировой войны запись каной "
+                "тайваньского диалекта южноминьского языка.",
             EcScript::NONE, EcFont::NORMAL, Bfg::CJK },
     // Kana supp OK
     { 0x1B000, 0x1B0FF,
