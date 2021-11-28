@@ -45,6 +45,7 @@ namespace uc {
         Cher,   // Cherokee
         Chrs,   // Chorasmian
         Copt,   // Coptic
+        Cpmn,   // Cypro-Minoan
         Cprt,   // Cypriot
         Cyrl,   // Cyrillic
         Deva,   // Devanagari
@@ -124,6 +125,7 @@ namespace uc {
         Orya,   // Oriya
         Osge,   // Osage
         Osma,   // Osmanya
+        Ougr,   // Old Uyghur, U14
         Palm,   // Palmyrene
         Pauc,   // Pau Cin Hau
         Perm,   // Old Permic
@@ -185,7 +187,6 @@ namespace uc {
         //Aran  no chars — Arabic Nastaliq
         //Blis  no chars — Blissymbols
         //Cirt  no chars — Cirth
-        Cpmn = Zyyy,        // Cypro-Minoan, U14
         //Cyrs  no chars — Cyrillic Old Church
         //Egyd  no chars — Egyptian demotic
         //Egyh  no chars — Egyptian hieratic
@@ -209,7 +210,6 @@ namespace uc {
         //Moon  no chars — Moon’s embossing
         //Nkdb  no chars — Naxi Dongba (Naxi hieroglyphs)
         //Nkgb  no chars — Naxi Geba
-        Ougr = Zyyy,        // Old Uyghur, U14
         //Phlv  no chars — Book Pahvali
         //Piqd  no chars — Klingon :)
         //Roro  no chars — Rongorongo (Easter Island)
