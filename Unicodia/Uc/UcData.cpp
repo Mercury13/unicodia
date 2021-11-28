@@ -4189,7 +4189,7 @@ constinit const uc::Block uc::blocks[] {
     // Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF,
             "Kana Extended-B", u8"Кана расширенная B",
-            u8"Изобретённая японскиим лингвистами незадолго до Второй мировой войны запись каной "
+            u8"Изобретённая японскими лингвистами незадолго до Второй мировой войны запись каной "
                 "тайваньского диалекта южноминьского языка.",
             EcScript::NONE, EcFont::NORMAL, Bfg::CJK },
     // Kana supp OK
