@@ -4625,7 +4625,7 @@ constinit const uc::Block uc::blocks[] {
                         "для [[pt:convertibility|круговой совместимости]] с тайваньской кодировкой CNS{{_}}11643-1992. "
                     "Разумеется, все иероглифы этого блока традиционные.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
-    /// @todo [tofu, P3] CJK G
+    // CJK G OK, found a HanaMin version supporting CJK G
     { 0x30000, 0x3134F,
             "CJK Unified Ideographs Extension G",
             u8"ККЯ иероглифы расширение G",
