@@ -176,6 +176,7 @@ namespace uc {
            Z_PUN_2,
          MATH,
          MUSIC,
+           Z_MUS_1,
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
