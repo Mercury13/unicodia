@@ -888,7 +888,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [tofu] Cypro-Minoan
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Кипро-минойский", u8"≈1550 до н.э. (первые известные надписи)",
+        u8"Кипро-минойская", u8"≈1550 до н.э. (первые известные надписи)",
         u8"этеокипрский (предположительно), филистимский (существует несколько надписей)",
         u8"Происходит предположительно из [[ps:Lina|линейного письма А]]. "
                 "Около XI{{_}}века{{bc}} преобразовалось в [[ps:Cprt|кипрское]]. "
@@ -901,8 +901,8 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Cprt", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
         u8"Кипрская", u8"XI век до н.э.",
-        u8"древнегреческий, этеокипрский, финикийский ''(одна кототкая надпись)''",
-        u8"Происходит из [[ps:Lina|линейного письма А]] через кипро-минойский (не путать!). "
+        u8"древнегреческий, этеокипрский, финикийский ''(одна короткая надпись)''",
+        u8"Происходит из [[ps:Lina|линейного письма А]] через [[ps:Cpmn|кипро-минойскую]] (не путать!). "
                 "Встречалось с XI до III{{_}}века{{bc}} "
                 "Надписи IX–VIII{{_}}веков не обнаружены, в дальнейшем письмо разделилось на два варианта: "
                     "пафосский с сохранением направления →, и общекипрский, перевернувшийся в ←. "
@@ -4113,7 +4113,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
     /// @todo [tofu] #58 Cypro-Minoan
     { 0x12F90, 0x12FFF,
-            "Cypro-Minoan", u8"Кипро-минойский", {},
+            "Cypro-Minoan", u8"Кипро-минойская", {},
             EcScript::Cpmn },
     // Egyptian hiero OK
     { 0x13000, 0x1342F,
