@@ -93,7 +93,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifDevanagari.ttf", Ffg::FALL_TO_NEXT, STYLE_DEVA, 110_pc },       // Vedic = Devanagari → Bengali
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
-    { "NotoSansBrahmi-Regular.ttf" },                                           // Brahmi
+    { "NotoSansBrahmi-Regular.ttf", Ffg::FALL_TO_NEXT },                        // Brahmi
+      { FNAME_FUNKY },                                                          // …1
     { "Leelawadee UI", Ffg::FALL_TO_NEXT, 110_pc },                             // Buginese
       { "NotoSansBuginese-Regular.ttf" },                                       // …1
     { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
