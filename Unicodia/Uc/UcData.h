@@ -249,7 +249,6 @@ namespace uc {
           Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
-        GOTHIC,     // Old Goth language, chain Historic → HanaA (BAD!), also Lycian, Carian, Lydian
         GRANTHA,
         GUJARATI,
         GUNJALA_GONDI,
