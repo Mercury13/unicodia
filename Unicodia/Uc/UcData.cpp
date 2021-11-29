@@ -153,7 +153,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
     { "HanaMinA.ttf", Ffg::DESC_STD, 110_pc },                                  // Hentaigana
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
-    { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
+    { "NotoSansKaithi-Regular.ttf", Ffg::FALL_TO_NEXT },                        // Kaithi
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },  // Kannada
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi

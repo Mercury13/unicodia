@@ -260,6 +260,7 @@ namespace uc {
         HENTAIGANA,
         JAVANESE,
         KAITHI,
+          Z_KAI_1,
         KANNADA,
         KAYAH_LI,
         KHAROSHTHI,
