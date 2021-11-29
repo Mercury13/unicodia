@@ -2875,10 +2875,11 @@ constinit const uc::Block uc::blocks[] {
     // Spacing letter modifiers OK
     { 0x02B0, 0x02FF,
             "Spacing Modifier Letters", u8"Протяжённые модификаторы букв",
-            u8"Модификаторы букв используются в фонетике и языкознании, чтобы передать тоны, длину, мягкость и условные звуки: "
-                    "так, английское ''car'' (легковой автомобиль) записывается как {{sm|[kɑːʳ]}},"
+            u8"Модификаторы букв используются в фонетике и языкознании, чтобы передать тоны, длину, мягкость, "
+                    "не полностью проговариваемые и условные звуки: "
+                    "так, английское ''car'' (легковой автомобиль, вагон, кабина [лифта]) записывается как {{sm|[kɑːʳ]}}, "
                     "и последние два символа{{-}}модификаторы, обозначающие длину и условное «r»."
-                "<p>Также в этом блоке есть протяжённые копии диакритических меток.",
+                "<p>Также в этом блоке есть [[pt:spacing|протяжённые]] копии диакритических меток.",
             EcScript::NONE, EcFont::NORMAL,
             Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
@@ -3585,8 +3586,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>{{sm|ꜗꜘꜙꜚ}} применяются в чинантекском."
                 "<p>Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). "
                     "Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах." },
-    /// @todo [tofu] Latin ex D U14
-    // Latin ex D OK, dereferenced bad chars of Google Noto
+    // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
     { 0xA720, 0xA7FF,
             "Latin Extended-D", u8"Латиница расширенная D",
             u8"Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, "
@@ -3890,10 +3890,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
     /// @todo [tofu] #52 Latin ex F
-    /// @todo [desc] #52 Latin ex F
     { 0x10780, 0x107BF,
             "Latin Extended-F", u8"Латиница расширенная F",
-            {}, EcScript::Latn },
+            u8"Модификатор AA используется в нотации расстройств речи (VoQS). "
+                "Остальные{{-}}в фонетике и означают звуки, проговариваемые не полностью.",
+            EcScript::Latn },
     // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
@@ -4345,10 +4346,11 @@ constinit const uc::Block uc::blocks[] {
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF,
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
-    /// @todo [desc] Latin ex G
     /// @todo [tofu] Latin ex G
     { 0x1DF00, 0x1DFFF,
-            "Latin Extended-G", u8"Латиница расширенная G", {},
+            "Latin Extended-G", u8"Латиница расширенная G",
+            u8"Различные символы для расстройств речи и фонетики: "
+                    "мягкие и ретрофлексные звуки, щелчки и некоторые другие.",
             EcScript::Latn },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F,
