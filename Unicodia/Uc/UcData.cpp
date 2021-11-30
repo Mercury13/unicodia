@@ -40,7 +40,6 @@ constexpr std::string_view FNAME_NOTOSYM2 = "NotoSansSymbols2-Regular.ttf";
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr std::string_view FNAME_FUNKY = "FunkySample.ttf";
-//constexpr std::string_view FNAME_HANA_B = "HanaMinB.ttf";
 constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
@@ -65,8 +64,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
       { FNAME_FUNKY },                                                          // …2 fallback for special punctuation
     { FNAME_NOTOMATH },                                                         // Math
-    { FNAME_NOTOMUSIC, Ffg::FALL_TO_NEXT, 110_pc },                             // Music
-      { FNAME_FUNKY, 110_pc },                                                  // …1
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
+      { FNAME_NOTOMUSIC, 110_pc },                                              // …1
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
