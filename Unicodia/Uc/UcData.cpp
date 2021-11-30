@@ -5688,6 +5688,9 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     if (drawMethod() != DrawMethod::SAMPLE)
         return {};
 
+    if (flags.have(Cfg::VIRTUAL_VIRAMA))
+        return { STUB_VIRAMA, {} };
+
     auto& fn = font(hint);
     auto style = fn.styleSheet;
     auto code = subj.ch32();
@@ -5802,6 +5805,10 @@ const uc::Font& uc::Cp::firstFont(const Block*& hint) const
 
 const uc::Font& uc::Cp::font(const Block*& hint) const
 {
+    // Virtual virama?
+    if (flags.have(Cfg::VIRTUAL_VIRAMA))
+        return fontInfo[static_cast<int>(EcFont::FUNKY)];
+
     auto v = &firstFont(hint);
     bool isAlternate = flags.have(Cfg::ALT_FONT);
     auto sb = subj.uval();

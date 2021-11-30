@@ -518,6 +518,9 @@ int main()
         // Alternate
         if (isAlternate(cp))
             flags |= 4;
+        // Virtual virama
+        if (virtualViramas.contains(cp))
+            flags |= 8;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

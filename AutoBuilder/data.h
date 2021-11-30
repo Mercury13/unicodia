@@ -118,6 +118,7 @@ extern const std::set<std::string_view> langNames;
 extern const std::map<char32_t, std::string_view> abbrevs;
 extern const std::set<std::string_view> cuneiformKeywords;
 extern const std::set<std::string_view> cuneiformSymbols;
+extern const std::set<char32_t> virtualViramas;
 
 enum class DecapDebug { NO, YES };
 

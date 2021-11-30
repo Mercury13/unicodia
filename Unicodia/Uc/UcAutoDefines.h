@@ -407,6 +407,7 @@ namespace uc {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
         DEPRECATED = 2,         ///< [+] char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
+        VIRTUAL_VIRAMA = 8,     ///< [+] custom-drawn virtual virama
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };

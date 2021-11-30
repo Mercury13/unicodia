@@ -1151,6 +1151,11 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
 };
 
+const std::set<char32_t> virtualViramas {
+    0x11D45,        // Masaram Gondi
+    0x11D97,        // Gunjala Gondi
+};
+
 
 
 /// @todo [langs] Stopped at Canadian syllabics

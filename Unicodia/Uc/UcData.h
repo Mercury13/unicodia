@@ -48,6 +48,7 @@ namespace uc {
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };
+    constexpr QChar STUB_VIRAMA { 0xE001 };
 
     enum class EcLangLife
     {
