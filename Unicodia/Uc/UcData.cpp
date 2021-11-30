@@ -73,7 +73,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
-    { "NotoSerifAhom-Regular.ttf" },                                            // Ahom
+    { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSansAnatolianHieroglyphs-Regular.ttf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf" },                                          // Arabic
     { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic Noto — Scheh has a few nice chars!

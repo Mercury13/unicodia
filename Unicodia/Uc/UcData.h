@@ -185,6 +185,7 @@ namespace uc {
          FUNKY,
         ADLAM,
         AHOM,
+          Z_AHO_1,
         ANATOLIAN,
         ARABIC,
         ARABIC_NOTO,
