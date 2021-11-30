@@ -5689,7 +5689,7 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
         return {};
 
     if (flags.have(Cfg::VIRTUAL_VIRAMA))
-        return { STUB_VIRAMA, {} };
+        return { STUB_PUA_VIRAMA, {} };
 
     auto& fn = font(hint);
     auto style = fn.styleSheet;

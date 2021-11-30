@@ -48,7 +48,8 @@ namespace uc {
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };
-    constexpr QChar STUB_VIRAMA { 0xE001 };
+        // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
+    constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
 
     enum class EcLangLife
     {
