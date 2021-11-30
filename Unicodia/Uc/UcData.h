@@ -66,7 +66,7 @@ namespace uc {
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
         EXPERIMENTAL,   ///< Experimantal script for existing languages (Deseret)
-        //ARTIFICIAL,     ///< Artificial languages (Esperanto); unencoded right now
+        //ARTIFICIAL,     ///< Artificial languages (Esperanto, Ithkuil); unencoded right now
         //FICTIONAL       ///< Fictional languages (Quenya, Klingon); unencoded right now
         NN
     };
