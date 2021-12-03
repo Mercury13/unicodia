@@ -1058,10 +1058,6 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x1107F, "BNJ" }, // Brahmi number joiner
     { 0x13430, ":" },   // Egyptian hiero vertical joiner
     { 0x13431, "✻" },   // Egyptian hiero horiz joiner
-    { 0x13432, "`" },   // Egyptian hiero insert at top start
-    { 0x13433, "`" },   // Egyptian hiero insert at bottom start
-    { 0x13434, "`" },   // Egyptian hiero insert at top end
-    { 0x13435, "`" },   // Egyptian hiero insert at bottom end
     { 0x13436, "+" },   // Egyptian hiero overlay middle
     { 0x13437, "(" },   // Egyptian hiero begin segment
     { 0x13438, ")" },   // Egyptian hiero end segment
@@ -1151,9 +1147,13 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
 };
 
-const std::set<char32_t> virtualViramas {
-    0x11D45,        // Masaram Gondi
-    0x11D97,        // Gunjala Gondi
+const std::set<char32_t> customDrawnControlChars {
+    0x11D45,    // Masaram Gondi virtual virama
+    0x11D97,    // Gunjala Gondi virtual virama
+    0x13432,    // Egyptian hiero insert at top start
+    0x13433,    // Egyptian hiero insert at bottom start
+    0x13434,    // Egyptian hiero insert at top end
+    0x13435,    // Egyptian hiero insert at bottom end
 };
 
 

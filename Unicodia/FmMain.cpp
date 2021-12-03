@@ -189,25 +189,25 @@ int CharsModel::columnCount(const QModelIndex&) const
     { return NCOLS; }
 
 
-const QFont* CharsModel::fontAt(const QModelIndex& index) const
+std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     auto cp = charAt(index);
     if (!cp)
-        return nullptr;
+        return {};
     return fontAt(*cp);
 }
 
 
-const QFont* CharsModel::fontAt(const uc::Cp& cp, const uc::Block*& hint)
+std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp, const uc::Block*& hint)
 {
     if (cp.drawMethod() > uc::DrawMethod::LAST_FONT)
         return {};
     auto& font = cp.font(hint);
-    return &font.get(font.q.table, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
+    return font.get(uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
 }
 
 
-const QFont* CharsModel::fontAt(const uc::Cp& cp) const
+std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp) const
 {
     return fontAt(cp, hint.cell);
 }
@@ -525,9 +525,13 @@ namespace {
         }
     }
 
-    void drawAbbreviation(
-            QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
-            const QColor& color, char32_t subj)
+    struct ControlFrame {
+        QRectF r;
+        qreal thickness;
+    };
+
+    ControlFrame drawControlFrame(
+            QPainter* painter, const QRect& rect, const QColor& color)
     {
         const auto availW = rect.width() * 5 / 6;
         const auto availH = rect.height() * 7 / 10;
@@ -543,55 +547,80 @@ namespace {
         painter->setBrush(Qt::NoBrush);
         painter->drawRect(rcFrame);
 
+        return { rcFrame, thickness };
+    }
+
+    void drawFunkySample(
+            QPainter* painter, const QRect& rect, const QColor& color,
+            uc::FontPlace place, int fontSize, char32_t trigger, QChar sample)
+    {
+        auto fn = uc::funkyFont(place, fontSize, trigger);
+        painter->setFont(fn);
+        painter->setBrush(QBrush(color, Qt::SolidPattern));
+        painter->drawText(rect, Qt::AlignCenter, sample);
+    }
+
+    void drawCustomControl(
+            QPainter* painter, const QRect& rect, const QColor& color,
+            uc::FontPlace place, int fontSize, char32_t subj)
+    {
+        auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
         // Need this brush for both rects and fonts
 
-        if (abbreviation == u8"`"sv) {
-            // Draw special image
-            switch (subj) {
-            case 0x13432: {
-                    Rc3Matrix m(rcFrame);
-                    painter->fillRect(m.rect7(), color);
-                    painter->fillRect(m.rect96(), color);
-                    painter->fillRect(m.rect13(), color);
-                } break;
-            case 0x13433: {
-                    Rc3Matrix m(rcFrame);
-                    painter->fillRect(m.rect79(), color);
-                    painter->fillRect(m.rect63(), color);
-                    painter->fillRect(m.rect1(), color);
-                } break;
-            case 0x13434: {
-                    Rc3Matrix m(rcFrame);
-                    painter->fillRect(m.rect74(), color);
-                    painter->fillRect(m.rect9(), color);
-                    painter->fillRect(m.rect13(), color);
-                } break;
-            case 0x13435: {
-                    Rc3Matrix m(rcFrame);
-                    painter->fillRect(m.rect79(), color);
-                    painter->fillRect(m.rect41(), color);
-                    painter->fillRect(m.rect3(), color);
-                } break;
-            case 0xE0001:
-                drawAbbrevText(painter, u8"BEGIN"sv, color, rcFrame, thickness, SplitMode::FIXED);
-                break;
-            case 0xE0020:
-                drawAbbrevText(painter, u8"SP"sv, color, rcFrame, thickness);
-                break;
-            case 0xE007F:
-                drawAbbrevText(painter, u8"END"sv, color, rcFrame, thickness);
-                break;
-            default:
-                // Tags
-                if (subj >= 0xE0000 && subj <= 0xE00FF) {
-                    char8_t c = subj;
-                    std::u8string_view uv { &c, 1 };
-                    drawAbbrevText(painter, uv, color, rcFrame, thickness);
-                }
+        switch (subj) {
+        case 0x11D45:   // Masaram Gondi virama
+        case 0x11D97:   // Gunjala Gondi virama
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_VIRAMA);
+            break;
+        case 0x13432: {
+                Rc3Matrix m(rcFrame);
+                painter->fillRect(m.rect7(), color);
+                painter->fillRect(m.rect96(), color);
+                painter->fillRect(m.rect13(), color);
+            } break;
+        case 0x13433: {
+                Rc3Matrix m(rcFrame);
+                painter->fillRect(m.rect79(), color);
+                painter->fillRect(m.rect63(), color);
+                painter->fillRect(m.rect1(), color);
+            } break;
+        case 0x13434: {
+                Rc3Matrix m(rcFrame);
+                painter->fillRect(m.rect74(), color);
+                painter->fillRect(m.rect9(), color);
+                painter->fillRect(m.rect13(), color);
+            } break;
+        case 0x13435: {
+                Rc3Matrix m(rcFrame);
+                painter->fillRect(m.rect79(), color);
+                painter->fillRect(m.rect41(), color);
+                painter->fillRect(m.rect3(), color);
+            } break;
+        case 0xE0001:
+            drawAbbrevText(painter, u8"BEGIN"sv, color, rcFrame, thickness, SplitMode::FIXED);
+            break;
+        case 0xE0020:
+            drawAbbrevText(painter, u8"SP"sv, color, rcFrame, thickness);
+            break;
+        case 0xE007F:
+            drawAbbrevText(painter, u8"END"sv, color, rcFrame, thickness);
+            break;
+        default:
+            // Tags
+            if (subj >= 0xE0000 && subj <= 0xE00FF) {
+                char8_t c = subj;
+                std::u8string_view uv { &c, 1 };
+                drawAbbrevText(painter, uv, color, rcFrame, thickness);
             }
-        } else {
-            drawAbbrevText(painter, abbreviation, color, rcFrame, thickness);
         }
+    }
+
+    void drawAbbreviation(
+            QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
+            const QColor& color)
+    {
+        auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
+        drawAbbrevText(painter, abbreviation, color, rcFrame, thickness);
     }
 
     QSize spaceDimensions(const QFont& font, char32_t subj)
@@ -645,8 +674,11 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
             const uc::Block*& hint, TableDraw mode)
 {
     switch (cp.drawMethod()) {
+    case uc::DrawMethod::CUSTOM_CONTROL:
+        drawCustomControl(painter, rect, color, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
+        break;
     case uc::DrawMethod::ABBREVIATION:
-        drawAbbreviation(painter, rect, cp.abbrev(), color, cp.subj);
+        drawAbbreviation(painter, rect, cp.abbrev(), color);
         break;
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(cp, hint), color, cp.subj);
@@ -854,8 +886,12 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::ABBREVIATION: {
             QPainter painter(this);
             drawAbbreviation(&painter, geometry(), abbreviation,
-                             palette().windowText().color(),
-                             subj);
+                             palette().windowText().color());
+        } break;
+    case Mode::CUSTOM_CONTROL: {
+            QPainter painter(this);
+            drawCustomControl(&painter, geometry(), palette().windowText().color(),
+                        uc::FontPlace::SAMPLE, FSZ_BIG, subj);
         } break;
     case Mode::SPACE: {
             QPainter painter(this);
@@ -872,11 +908,19 @@ void WiCustomDraw::setNormal()
     setMinimumSize(initialSize);
 }
 
-void WiCustomDraw::setAbbreviation(std::u8string_view x, char32_t aSubj)
+void WiCustomDraw::setAbbreviation(std::u8string_view x)
 {
     setNormal();
     mode = Mode::ABBREVIATION;
     abbreviation = x;
+    update();
+}
+
+
+void WiCustomDraw::setCustomControl(char32_t aSubj)
+{
+    setNormal();
+    mode = Mode::CUSTOM_CONTROL;
     subj = aSubj;
     update();
 }
@@ -966,7 +1010,7 @@ FmMain::FmMain(QWidget *parent)
 
     // OS style    
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));    
+    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));
 
     // Copy
         // Ctrl+C
@@ -1188,7 +1232,7 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
     // Font
     auto& font = ch.font(hint.sample);
-    ui->lbSample->setFont(font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
+    ui->lbSample->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -1268,17 +1312,23 @@ void FmMain::showCp(MaybeChar ch)
         // Sample char
         bool wantSysFont = true;
         switch (ch->drawMethod()) {
+        case uc::DrawMethod::CUSTOM_CONTROL:
+            clearSample();
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setCustomControl(ch.code);
+            wantSysFont = false;
+            break;
         case uc::DrawMethod::ABBREVIATION:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setAbbreviation(ch->abbrev(), ch.code);
+            ui->pageSampleCustom->setAbbreviation(ch->abbrev());
             wantSysFont = false;
             break;
         case uc::DrawMethod::SPACE: {
                 clearSample();
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
                 auto& font = ch->font(hint.sample);
-                auto& qfont = font.get(font.q.big, uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
+                auto qfont = font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
         case uc::DrawMethod::SAMPLE:

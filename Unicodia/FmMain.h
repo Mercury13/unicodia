@@ -117,9 +117,9 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
-    const QFont* fontAt(const QModelIndex& index) const;
-    const QFont* fontAt(const uc::Cp& cp) const;
-    static const QFont* fontAt(const uc::Cp& cp, const uc::Block*& hint);
+    std::optional<QFont> fontAt(const QModelIndex& index) const;
+    std::optional<QFont> fontAt(const uc::Cp& cp) const;
+    static std::optional<QFont> fontAt(const uc::Cp& cp, const uc::Block*& hint);
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index, CharSet chset = CharSet::FULL) const;
@@ -203,15 +203,16 @@ class WiCustomDraw : public QWidget
     using Super = QWidget;
 public:
     using Super::Super;
-    void setAbbreviation(std::u8string_view x, char32_t aSubj);
+    void setAbbreviation(std::u8string_view x);
     void setSpace(const QFont& font, char32_t aSubj);
+    void setCustomControl(char32_t aSubj);
     void setNormal();
     void init();
 protected:
     void paintEvent(QPaintEvent *event);
 private:
     QSize initialSize;
-    enum class Mode { NONE, SPACE, ABBREVIATION };
+    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     const QFont* fontSpace = nullptr;

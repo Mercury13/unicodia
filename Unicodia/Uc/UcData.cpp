@@ -895,7 +895,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Около XI{{_}}века{{bc}} преобразовалось в [[ps:Cprt|кипрское]]. "
                 "Памятники находили на Кипре и в Палестине."
             "<p>Примерно по 30 символам у исследователей есть консенсус, но перспективы полной расшифровки туманны: "
-                    "в доступных надписях 2500 знаков. "
+                    "доступны 250 надписей общей длиной 2500 знаков. "
                 "Для сравнения: в нерасшифрованном линейном письме А{{-}}7{{_}}тыс., "
                     "в [[ps:Linb|линейном письме Б]] на момент расшифровки{{-}}30{{_}}тыс." },
     // Cypriot OK, W10 Segoe Historic
@@ -5526,9 +5526,46 @@ struct uc::LoadedFont
     QList<QString> families;
     QString familiesComma;
     intptr_t tempId = FONT_NOT_INSTALLED;
-    std::unique_ptr<QFont> probe {};
+    std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
+
+    const QString& onlyFamily() const;
+    const QFont& get(
+            std::unique_ptr<QFont>& font,
+            QFont::StyleStrategy strategy,
+            Flags<uc::Ffg> flags) const;
 };
+
+
+const QString& uc::LoadedFont::onlyFamily() const
+{
+    return (families.size() == 1) ? families[0] : uc::Font::qempty;
+}
+
+
+const QFont& uc::LoadedFont::get(
+        std::unique_ptr<QFont>& font,
+        QFont::StyleStrategy strategy,
+        Flags<uc::Ffg> flags) const
+{
+    if (!font) {
+        //load();  onlyFamily WILL load
+        auto& family1 = onlyFamily();
+        font.reset(new QFont(family1, 50, QFont::Normal));
+        if (family1.isEmpty())
+            font->setFamilies(families);
+        // Weight
+        if (flags.have(Ffg::BOLD)) {
+            font->setBold(true);
+        } else if (flags.have(Ffg::SEMIBOLD)) {
+            font->setWeight(QFont::DemiBold);
+        } else if (flags.have(Ffg::LIGHT)) {
+            font->setWeight(QFont::Light);
+        }
+        font->setStyleStrategy(strategy);
+    }
+    return *font;
+}
 
 
 namespace {
@@ -5587,18 +5624,20 @@ void uc::Font::load(char32_t trigger) const
     }
 
     // Make probe font
-    get(newLoaded->probe, FontPlace::PROBE, 50, trigger);
+    newLoaded->get(newLoaded->probe,  STRATEGY_TOFU,   flags);
+    newLoaded->get(newLoaded->normal, STRATEGY_DEFAULT, flags);
         // force EXACT match
-    newLoaded->probe->setStyleStrategy(STRATEGY_TOFU);
     newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
     doesSupportChar(trigger, EcVersion::LAST);
 }
 
 
-const QString& uc::Font::onlyFamily(char32_t trigger) const
+QFont uc::Font::get(FontPlace place, int size, char32_t trigger) const
 {
     load(trigger);
-    return (q.loaded->families.size() == 1) ? q.loaded->families[0] : qempty;
+    QFont font = *q.loaded->normal;
+    font.setPointSize(computeSize(place, size));
+    return font;
 }
 
 
@@ -5633,30 +5672,6 @@ int uc::Font::computeSize(FontPlace place, int size) const
     return r;
 }
 
-const QFont& uc::Font::get(
-        std::unique_ptr<QFont>& font,
-        FontPlace place,
-        int size, char32_t trigger) const
-{
-    if (!font) {
-        //load();  onlyFamily WILL load
-        auto& family1 = onlyFamily(trigger);
-        font.reset(new QFont(family1, computeSize(place, size), QFont::Normal));
-        if (family1.isEmpty())
-            font->setFamilies(q.loaded->families);
-        // Weight
-        if (flags.have(Ffg::BOLD)) {
-            font->setBold(true);
-        } else if (flags.have(Ffg::SEMIBOLD)) {
-            font->setWeight(QFont::DemiBold);
-        } else if (flags.have(Ffg::LIGHT)) {
-            font->setWeight(QFont::Light);
-        }
-        font->setStyleStrategy(STRATEGY_DEFAULT);
-    }
-    return *font;
-}
-
 
 QString uc::Cp::viewableName() const
 {
@@ -5687,9 +5702,6 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
 {
     if (drawMethod() != DrawMethod::SAMPLE)
         return {};
-
-    if (flags.have(Cfg::VIRTUAL_VIRAMA))
-        return { STUB_PUA_VIRAMA, {} };
 
     auto& fn = font(hint);
     auto style = fn.styleSheet;
@@ -5749,6 +5761,8 @@ bool uc::Cp::isGraphical() const
 
 uc::DrawMethod uc::Cp::drawMethod() const
 {
+    if (flags.have(Cfg::CUSTOM_CONTROL))
+        return uc::DrawMethod::CUSTOM_CONTROL;
     if (isAbbreviated())
         return uc::DrawMethod::ABBREVIATION;
     if (isTrueSpace())
@@ -5805,10 +5819,6 @@ const uc::Font& uc::Cp::firstFont(const Block*& hint) const
 
 const uc::Font& uc::Cp::font(const Block*& hint) const
 {
-    // Virtual virama?
-    if (flags.have(Cfg::VIRTUAL_VIRAMA))
-        return fontInfo[static_cast<int>(EcFont::FUNKY)];
-
     auto v = &firstFont(hint);
     bool isAlternate = flags.have(Cfg::ALT_FONT);
     auto sb = subj.uval();
@@ -5911,4 +5921,11 @@ const uc::Term* uc::findTerm(std::string_view id)
             return &v;
     }
     return nullptr;
+}
+
+
+QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
+{
+    auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
+    return font.get(place, size, trigger);
 }

@@ -435,8 +435,6 @@ namespace uc {
 
         mutable struct Q {
             std::shared_ptr<LoadedFont> loaded {};
-            std::unique_ptr<QFont> table {};
-            std::unique_ptr<QFont> big {};
             TempFont tempFont;
             consteval Q() = default;
             consteval Q(const Q&) {};
@@ -444,11 +442,8 @@ namespace uc {
         void load(char32_t trigger) const;
 
         int computeSize(FontPlace place, int size) const;
-        const QFont& get(std::unique_ptr<QFont>& font,
-                         FontPlace place,
-                         int size, char32_t trigger) const;
+        QFont get(FontPlace place, int size, char32_t trigger) const;
         bool doesSupportChar(char32_t x, EcVersion charVersion) const;
-        const QString& onlyFamily(char32_t trigger) const;
         const QString& familiesComma(char32_t trigger) const;
 
         consteval Font(
@@ -718,6 +713,8 @@ namespace uc {
     template<size_t N>
     inline size_t sprintUPLUS(char (&buf)[N], char32_t code)
         { return sprintUPLUS(buf, N, code); }
+
+    QFont funkyFont(FontPlace place, int size, char32_t trigger);
 
 }   // namespace uc
 

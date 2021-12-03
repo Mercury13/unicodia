@@ -407,14 +407,17 @@ namespace uc {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
         DEPRECATED = 2,         ///< [+] char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
-        VIRTUAL_VIRAMA = 8,     ///< [+] custom-drawn virtual virama
+        CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };
 
     using Cfgs = Flags<Cfg>;
     enum class DrawMethod {
-            SAMPLE, SPACE, ABBREVIATION,
+            // Font-based methods
+            SAMPLE,
+            // Char-based methods
+            SPACE, ABBREVIATION, CUSTOM_CONTROL,
             LAST_FONT = SPACE };            // Last using (loading, checking) font
 
     enum class TofuState {
