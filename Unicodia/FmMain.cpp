@@ -572,6 +572,18 @@ namespace {
         case 0x11D97:   // Gunjala Gondi virama
             drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_VIRAMA);
             break;
+        case 0x16F8F:   // Miao tone right
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_RIGHT);
+            break;
+        case 0x16F90:   // Miao tone top right
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_TOPRIGHT);
+            break;
+        case 0x16F91:   // Miao tone above
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_ABOVE);
+            break;
+        case 0x16F92:   // Miao tone below
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_BELOW);
+            break;
         case 0x13432: {
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect7(), color);
@@ -891,7 +903,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::CUSTOM_CONTROL: {
             QPainter painter(this);
             drawCustomControl(&painter, geometry(), palette().windowText().color(),
-                        uc::FontPlace::SAMPLE, FSZ_BIG, subj);
+                        uc::FontPlace::SAMPLE, FSZ_BIG_CONTROL, subj);
         } break;
     case Mode::SPACE: {
             QPainter painter(this);

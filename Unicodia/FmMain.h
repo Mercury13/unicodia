@@ -33,6 +33,7 @@ QT_END_NAMESPACE
 constexpr int NCOLS = 8;
 constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
+constexpr int FSZ_BIG_CONTROL = 45;
 
 class FmPopup2;
 class FmMessage;

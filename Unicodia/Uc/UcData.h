@@ -50,6 +50,10 @@ namespace uc {
     constexpr QChar STUB_CIRCLE { 0x25CC };
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
     constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
+    constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };
+    constexpr QChar STUB_PUA_TONE_TOPRIGHT { 0xE003 };
+    constexpr QChar STUB_PUA_TONE_ABOVE { 0xE004 };
+    constexpr QChar STUB_PUA_TONE_BELOW { 0xE005 };
 
     enum class EcLangLife
     {

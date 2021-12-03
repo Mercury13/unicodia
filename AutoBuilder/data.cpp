@@ -1154,6 +1154,10 @@ const std::set<char32_t> customDrawnControlChars {
     0x13433,    // Egyptian hiero insert at bottom start
     0x13434,    // Egyptian hiero insert at top end
     0x13435,    // Egyptian hiero insert at bottom end
+    0x16F8F,    // Miao tone right
+    0x16F90,    // Miao tone top right
+    0x16F91,    // Miao tone above
+    0x16F92,    // Miao tone below
 };
 
 
