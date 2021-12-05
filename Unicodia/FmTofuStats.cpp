@@ -114,6 +114,9 @@ namespace {
 
 SafeVector<int> tofu::Model::build()
 {
+    beginResetModel();
+    rows.clear();
+
     SafeVector<int> allTofu;
 
     Counter all;
@@ -163,6 +166,7 @@ SafeVector<int> tofu::Model::build()
     }
 
     return allTofu;
+    endResetModel();
 }
 
 
@@ -174,6 +178,25 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
     ui(new Ui::FmTofuStats)
 {
     ui->setupUi(this);
+    ui->tableStats->setModel(&model);
+}
+
+
+FmTofuStats::~FmTofuStats()
+{
+    delete ui;
+}
+
+
+int FmTofuStats::exec()
+{
+    buildModel();
+    return Super::exec();
+}
+
+
+void FmTofuStats::buildModel()
+{
     auto r = model.build();
     QString s;
     s.reserve(r.size() * 5);
@@ -183,12 +206,6 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
         s.append(buf);
     }
     ui->memoTofuList->setPlainText(s);
-    ui->tableStats->setModel(&model);
-    ui->tableStats->resizeColumnsToContents();
     ui->tableStats->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
-}
-
-FmTofuStats::~FmTofuStats()
-{
-    delete ui;
+    ui->tableStats->resizeColumnsToContents();
 }

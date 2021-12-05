@@ -56,14 +56,16 @@ namespace tofu
 class FmTofuStats : public QDialog
 {
     Q_OBJECT
-
+    using Super = QDialog;
 public:
     explicit FmTofuStats(QWidget *parent = nullptr);
-    ~FmTofuStats();
-
+    ~FmTofuStats() override;
+    int exec() override;
 private:
     Ui::FmTofuStats *ui;
     tofu::Model model;
+
+    void buildModel();
 };
 
 #endif // FMTOFUSTATS_H
