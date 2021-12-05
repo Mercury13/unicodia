@@ -462,8 +462,9 @@ constexpr std::u8string_view CT_MEROITIC =
 
 constexpr std::u8string_view CT_SOGDIAN =
     u8"Согдийская письменность происходит из [[ps:Syrc|сирийской]], появилась ≈100. "
-            "Предок староуйгурской, а из неё пошла [[ps:Mong|старомонгольская]]. "
-            "Употреблялась до 1200."
+            "Из согдийской пошла [[ps:Ougr|староуйгурская]], а из неё{{-}}[[ps:Mong|старомонгольская]]. "
+            "Употреблялась до X{{_}}века, после чего Согдиана была окончательно исламизована и переведена на [[ps:Arab|арабицу]]. "
+            "Последний источник{{-}}около 1200."
         "<p>В Юникоде закодированы два варианта согдийского: старый (по образцу ≈300) и новый "
             "(по образцу буддийских рукописей с VI{{_}}века)."
         "<p>Видно, как монгольское письмо стало вертикальным: согдийцы иногда заваливали текст на 90° влево, "
@@ -2285,12 +2286,12 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sogd", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
         u8"Согдийский", u8"≈500",
-        u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::SOGDIAN },
+        u8"согдийский ''(Самарканд{{-}}сейчас в Узбекистане)''", CT_SOGDIAN, EcFont::SOGDIAN },
     // Old Sogdian OK, W10 None → installed Google Noto
     { "Sogo", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
         u8"Старосогдийский", u8"≈100",
-        u8"согдийский ''(Самарканд)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
+        u8"согдийский ''(Самарканд{{-}}cейчас в Узбекистане)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
     // Sora Sompeng OK, W10 Nirmala UI
     { "Sora", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
@@ -2715,7 +2716,9 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Езиды{{-}}часть курдского народа, исповедуют религию езидизм, вышедшую из [[ps:Avst|зороастризма]]. "
                 "Священные езидские книги, ''Книга откровения'' и ''Чёрная книга'', написаны особым письмом "
                     "(известны и более ранние версии на [[ps:Arab|арабице]]). "
-                "Консенсуса насчёт датировки этих книг нет.",
+                "Консенсуса насчёт датировки этих книг нет."
+            "<p>С 2014 до 2017 Запрещённое государство устраивало геноцид езидов: около 5000 убиты, не{{_}}менее 5000 пропали, "
+                    "около 500{{_}}тыс. сбежали из Ирака.",
                 EcFont::YEZIDI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
