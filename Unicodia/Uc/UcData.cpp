@@ -5611,12 +5611,11 @@ namespace {
 }   // anon namespace
 
 
-std::shared_ptr<uc::LoadedFont> uc::Font::newLoadedStruc() const
+void uc::Font::newLoadedStruc() const
 {
     auto newLoaded = std::make_shared<LoadedFont>();
     loadedFonts[family] = newLoaded;
     q.loaded = newLoaded;
-    return newLoaded;
 }
 
 
@@ -5633,31 +5632,28 @@ onceAgain:
         return;
     }
 
-    // Create empty font
-    std::shared_ptr<LoadedFont> newLoaded;
-
     // Create/load it
     if (isFontFname(family)) {
         // FILE
         if (preloadFonts())     // File → preload other files
             goto onceAgain;
-        newLoaded = newLoadedStruc();
+        newLoadedStruc();
         auto tempFont = installTempFontRel(family, trigger);
-        newLoaded->tempId = tempFont.id;
-        newLoaded->familiesComma = tempFont.families.join(',');
-        newLoaded->families = std::move(tempFont.families);
+        q.loaded->tempId = tempFont.id;
+        q.loaded->familiesComma = tempFont.families.join(',');
+        q.loaded->families = std::move(tempFont.families);
     } else {
         // FAMILY
-        newLoaded = newLoadedStruc();
-        newLoaded->familiesComma = str::toQ(family);
-        newLoaded->families = toQList(family);
+        newLoadedStruc();
+        q.loaded->familiesComma = str::toQ(family);
+        q.loaded->families = toQList(family);
     }
 
     // Make probe font
-    newLoaded->get(newLoaded->probe,  STRATEGY_TOFU,   flags);
-    newLoaded->get(newLoaded->normal, STRATEGY_DEFAULT, flags);
+    q.loaded->get(q.loaded->probe,  STRATEGY_TOFU,   flags);
+    q.loaded->get(q.loaded->normal, STRATEGY_DEFAULT, flags);
         // force EXACT match
-    newLoaded->probeMetrics = std::make_unique<QFontMetrics>(*newLoaded->probe);
+    q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
     doesSupportChar(trigger, EcVersion::LAST);
 }
 
