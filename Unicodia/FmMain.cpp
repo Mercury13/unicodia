@@ -584,6 +584,12 @@ namespace {
         case 0x16F92:   // Miao tone below
             drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_BELOW);
             break;
+        case 0x1BCA0:   // Shorthand format Letter overlap
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_OVERLAP);
+            break;
+        case 0x1BCA1:   // Shorthand format Continuing overlap
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_CONTINUING_OVERLAP);
+            break;
         case 0x13432: {
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect7(), color);

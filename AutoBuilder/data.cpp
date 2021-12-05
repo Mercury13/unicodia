@@ -1158,6 +1158,8 @@ const std::set<char32_t> customDrawnControlChars {
     0x16F90,    // Miao tone top right
     0x16F91,    // Miao tone above
     0x16F92,    // Miao tone below
+    0x1BCA0,    // Shorthand format Letter overlap
+    0x1BCA1,    // Shorthand format Continuing overlap
 };
 
 
