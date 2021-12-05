@@ -477,6 +477,8 @@ namespace uc {
                 EcVersion aVersion)
             : family(aFamily), supportedVersion(aVersion) {}
         Font(const Font&) = delete;
+    private:
+        std::shared_ptr<LoadedFont> newLoadedStruc() const;
     };
     extern const Font fontInfo[];
 

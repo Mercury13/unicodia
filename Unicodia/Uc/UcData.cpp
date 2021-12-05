@@ -5319,14 +5319,6 @@ constinit const uc::Term uc::terms[] {
 
     ///// Writing styles ///////////////////////////////////////////////////////
 
-    { "vyaz", EcTermCat::WRITING_STYLE,
-      u8"вязь", {},
-        u8"Нелинейный стиль письма, используемый для красоты и экономии материала: "
-                    "текст превращается в узор, покрывающий большую площадь и читающийся по ломаной линии. "
-                "Распространён в [[ps:Cyrl|кириллице]] (надписи на иконах), [[ps:Arab|арабице]] "
-                    "(узоры-арабески, террористические флаги)."
-            "<p>Вязь{{-}}не [[pt:plaintext|простой текст]] и потому не покрывается Юникодом."
-            "<p>Также не совсем корректно вязью называют арабское или [[ps:Syrc|сирийское]] письмо одним росчерком." },
     { "cursive", EcTermCat::WRITING_STYLE,
       u8"курсив, скоропись, беглое письмо", u8"cursive",
         u8"Стиль письма, когда нужно быстро написать что-то, особенно хрупким гусиным пером. "
@@ -5551,7 +5543,6 @@ const QFont& uc::LoadedFont::get(
         Flags<uc::Ffg> flags) const
 {
     if (!font) {
-        //load();  onlyFamily WILL load
         auto& family1 = onlyFamily();
         font.reset(new QFont(family1, 50, QFont::Normal));
         if (family1.isEmpty())
@@ -5592,11 +5583,46 @@ namespace {
             || name.ends_with(".otf"sv);
     }
 
+    void preloadFont(uc::EcFont font)
+    {
+        uc::fontInfo[static_cast<int>(font)].load(0);
+    }
+
+    bool wantPreloadFonts = true;
+
+    ///
+    /// @brief preloadFonts
+    ///   Preloads fonts for unglitching
+    ///   (we somehow depend on font loading order)
+    /// @return [+] preload occured
+    ///
+    bool preloadFonts()
+    {
+        bool r = wantPreloadFonts;
+        if (r) {
+            // Prevent from triggering again…
+            wantPreloadFonts = false;
+            // …and recursively preload, here are fonts
+            preloadFont(uc::EcFont::NOTO_SYMBOL2);
+        }
+        return r;
+    }
+
 }   // anon namespace
+
+
+std::shared_ptr<uc::LoadedFont> uc::Font::newLoadedStruc() const
+{
+    auto newLoaded = std::make_shared<LoadedFont>();
+    loadedFonts[family] = newLoaded;
+    q.loaded = newLoaded;
+    return newLoaded;
+}
 
 
 void uc::Font::load(char32_t trigger) const
 {
+onceAgain:
     // Loaded?
     if (q.loaded)
         return;
@@ -5608,19 +5634,21 @@ void uc::Font::load(char32_t trigger) const
     }
 
     // Create empty font
-    auto newLoaded = std::make_shared<LoadedFont>();
-    loadedFonts[family] = newLoaded;
-    q.loaded = newLoaded;
+    std::shared_ptr<LoadedFont> newLoaded;
 
     // Create/load it
     if (isFontFname(family)) {
         // FILE
+        if (preloadFonts())     // File → preload other files
+            goto onceAgain;
+        newLoaded = newLoadedStruc();
         auto tempFont = installTempFontRel(family, trigger);
         newLoaded->tempId = tempFont.id;
         newLoaded->familiesComma = tempFont.families.join(',');
         newLoaded->families = std::move(tempFont.families);
     } else {
         // FAMILY
+        newLoaded = newLoadedStruc();
         newLoaded->familiesComma = str::toQ(family);
         newLoaded->families = toQList(family);
     }
