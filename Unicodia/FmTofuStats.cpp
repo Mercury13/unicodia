@@ -179,19 +179,13 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->tableStats->setModel(&model);
+    buildModel();
 }
 
 
 FmTofuStats::~FmTofuStats()
 {
     delete ui;
-}
-
-
-int FmTofuStats::exec()
-{
-    buildModel();
-    return Super::exec();
 }
 
 

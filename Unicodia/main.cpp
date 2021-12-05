@@ -22,6 +22,9 @@ int main(int argc, char *argv[])
     FmMain w;
     w.installTempPrefix();
 
+    // Unglitch — should be loaded before small Arabic fonts
+    uc::fontInfo[static_cast<int>(uc::EcFont::NOTO_SYMBOL2)].load(0);
+
     w.show();
     return a.exec();
 }

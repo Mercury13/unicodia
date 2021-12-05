@@ -60,7 +60,6 @@ class FmTofuStats : public QDialog
 public:
     explicit FmTofuStats(QWidget *parent = nullptr);
     ~FmTofuStats() override;
-    int exec() override;
 private:
     Ui::FmTofuStats *ui;
     tofu::Model model;
