@@ -617,6 +617,8 @@ namespace uc {
     };
     extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
 
+    enum class Graphical { NO, YES };
+
     struct BidiClass
     {
         std::string_view id;
@@ -625,7 +627,7 @@ namespace uc {
         std::u8string_view locShortName;
         std::u8string_view locId;
         std::u8string_view locDescription;
-        bool isGraphical;
+        Graphical isGraphical;
         mutable unsigned nChars = 0;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
