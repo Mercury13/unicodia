@@ -5788,7 +5788,7 @@ bool uc::Cp::isGraphical() const
         return true;
     default:;
     }
-    return bidiClass().isGraphical;
+    return static_cast<bool>(bidiClass().isGraphical);
 }
 
 

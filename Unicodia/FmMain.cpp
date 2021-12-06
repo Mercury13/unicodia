@@ -913,7 +913,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
         } break;
     case Mode::SPACE: {
             QPainter painter(this);
-            drawSpace(&painter, geometry(), *fontSpace,
+            drawSpace(&painter, geometry(), fontSpace,
                       palette().windowText().color(),
                       subj);
         } break;
@@ -948,7 +948,7 @@ void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
 {
     static constexpr auto SPACE_PLUS = 30;
 
-    fontSpace = &font;
+    fontSpace = font;
     mode = Mode::SPACE;
     subj = aSubj;
 

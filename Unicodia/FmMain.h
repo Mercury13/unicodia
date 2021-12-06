@@ -216,7 +216,7 @@ private:
     enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
-    const QFont* fontSpace = nullptr;
+    QFont fontSpace;
     char32_t subj = 0;
 };
 
