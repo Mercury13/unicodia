@@ -1057,12 +1057,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Эфиопская", u8"I—VII век",
+        u8"Эфиопская (гéэз)", u8"I—VII век",
         u8"амхарский, тигринья и другие эфиосемитские",
-        u8"Эфиопская письменность использовалась для записи языка геэз, вышедшего из употребления в XIII{{_}}веке. "
+        u8"Эфиопская письменность использовалась для записи языка гéэз, вышедшего из употребления в XIII{{_}}веке. "
                 "Геэз всё ещё используется эфиопскими христианами как литургический{{-}}"
-                "а письменность распространилась на другие языки Эфиопии."
-            "<p>С конца XX{{_}}века теряет влияние и заменяется [[ps:Latn|латиницей]].",
+                    "а письменность распространилась на другие языки Эфиопии."
+            "<p>С конца XX{{_}}века теряет влияние. "
+                "Для всех языков, кроме эфиосемитских (билин{{-}}кушитская семья, мекан{{-}}кир-аббайская), "
+                    "придумана [[ps:Latn|латинская]] письменность.",
                 EcFont::ETHIOPIC },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
@@ -2166,7 +2168,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sarb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         u8"Древняя южноаравийская", u8"IX век д.э.",
-        u8"южноаравийские ''(сабейский, катабанский и прочие)'', геэз",
+        u8"южноаравийские ''(сабейский, катабанский и прочие)'', гéэз",
         u8"Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. "
                 "В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].",
                 EcFont::HISTORIC },
@@ -3035,10 +3037,10 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Ethiopic OK
     { 0x1200, 0x137F,
-            "Ethiopic", u8"Эфиопский", {}, EcScript::Ethi },
+            "Ethiopic", u8"Эфиопская (гéэз)", {}, EcScript::Ethi },
     // Ethiopic supplement OK
     { 0x1380, 0x139F,
-            "Ethiopic Supplement", u8"Эфиопский дополнительный",
+            "Ethiopic Supplement", u8"Эфиопская дополнительная",
             u8"Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн, ''Ethnologue'' статус 5: развивающийся), "
                     "а также метки тонов.",
             EcScript::Ethi },
@@ -3422,7 +3424,7 @@ constinit const uc::Block uc::blocks[] {
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
     // Ethiopic ex OK
     { 0x2D80, 0x2DDF,
-            "Ethiopic Extended", u8"Эфиопский расширенный",
+            "Ethiopic Extended", u8"Эфиопская расширенная",
             u8"Эфиопское письмо для языков мекан (с 2009 перешёл на [[ps:Latn|латиницу]], "
                     "билин (с 1990‑х полностью на латинице), бенч (с 2008 на латинице), себат-бет.",
             EcScript::Ethi },
@@ -3664,7 +3666,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]]." },
     // Ethiopic ex A OK
     { 0xAB00, 0xAB2F,
-            "Ethiopic Extended-A", u8"Эфиопский расширенный А",
+            "Ethiopic Extended-A", u8"Эфиопская расширенная А",
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).",
             EcScript::Ethi },
     // Latin ex E OK, dereferenced bad chars of Google Noto
@@ -4383,7 +4385,7 @@ constinit const uc::Block uc::blocks[] {
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
     // Ethiopic ex B OK, built chars somehow
     { 0x1E7E0, 0x1E7FF,
-            "Ethiopic Extended-B", u8"Эфиопский расширенный B",
+            "Ethiopic Extended-B", u8"Эфиопская расширенная B",
             u8"Новая орфография языков гураге (эфиосемитская группа, до 5 млн), появившаяся в 2013 и сделавшая письменным "
                     "всё семейство, не только закодированный в 2005 себат-бет. "
                 "Часть старых себатбетских букв объявлены [[pt:obsolete|устаревшими]].",
