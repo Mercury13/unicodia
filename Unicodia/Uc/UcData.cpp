@@ -604,7 +604,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Возрождается с 1954, в письменность добавлены десятичные цифры, не имеющие исторического обоснования. "
                 "Тоновая система тайско-ахомского языка полностью потеряна{{-}}письменность её не передавала.",
                 EcFont::AHOM },
-    // Arabic OK, three fonts: SIL Sheherazade main, Google Noto Math + Google Noto Arabic for special ranges
+    // Arabic OK, three fonts: SIL Scheherazade main, Google Noto Math + Google Noto Arabic for special ranges
     { "Arab", QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
         u8"Арабский", u8"VI век (в современном виде)",
