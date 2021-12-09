@@ -707,7 +707,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Бенгальский", u8"XI век",
+        u8"Бенгальский", u8"XI век (отделилась от [[ps:Brah|гупты]]), XV век (в современном виде)",
         u8"бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''",
         u8"Относится к восточной ветви индийского письма. "
                 "Бенгальское и ассамкое письмо незначительно отличаются и [[pt:unification|унифицированы]]. "
