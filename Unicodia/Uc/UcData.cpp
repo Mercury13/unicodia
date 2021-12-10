@@ -89,7 +89,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …1
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
-    { "NotoSansBatak-Regular.ttf" },                                            // Batak
+    { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
     { "NotoSerifDevanagari.ttf", Ffg::FALL_TO_NEXT, STYLE_DEVA, 110_pc },       // Vedic = Devanagari → Bengali
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
@@ -701,9 +701,14 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Батакская", u8"≈1300",
         u8"батакские ''(Суматра)''",
-        u8"Происходит от [[ps:Brah|брахми]] и мало чем отличается от других абугид Юго-Восточной Азии. "
-                "Гласная по умолчанию «а». "
-                "Практически не используется, заменена [[ps:Latn|латиницей]].",
+        u8"Немцы, а потом и голландцы, стали обучать островитян как батакской грамоте, так и [[ps:Latn|латинице]]. "
+                "Незадолго до Первой мировой войны от батакского алфавита отказались, и он окончательно уступил латинице, "
+                    "основной письменности индонезийского языка."
+            "<p>Гласная по умолчанию «а». "
+                "В разных языках (каро, мандайлинг, пакпак, тоба, сималунгун) буквы имеют несколько разный вид. "
+                "[[pt:virama|Вирам]] тоже две штуки: горизонтальная используется в каро и сималунгуне, косая{{-}}в остальных.<br>"
+                "{{__}}ба {{sm|ᯅ}} + вирама {{sm|◌᯳}} = б {{sm|ᯅ᯳}}<br>"
+                "{{__}}ба {{sm|ᯅ}} + и {{sm|◌ᯪ}} + нг {{sm|◌ᯰ}} = бинг {{sm|ᯅᯪᯰ}}",
                 EcFont::BATAK },
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
