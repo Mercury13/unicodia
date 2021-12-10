@@ -207,6 +207,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
     { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
+    { "NotoSerifOldUyghur-Regular.ttf", Ffg::STUB_RTL },                        // Old Uyghur
     { "NotoSansOriyaUI-Regular.ttf", Ffg::DESC_BIGGER, 120_pc },                // Oriya
     { "NotoSansOldTurkic-Regular.ttf" },                                        // Orkhon
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
@@ -2000,7 +2001,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1972 диктатор Мохаммед Барре запретил османью, в первую очередь из-за распространившихся пишущих машинок."
             "<p>Из-за нестабильной обстановки в Сомали нет современных данных.",
                 EcFont::VAI },
-    /// @todo [tofu] Old Uyghur
+    // Old Uyghur OK, installed Noto font
     { "Ougr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA,
         u8"Староуйгурский", u8"VIII век",
@@ -2009,7 +2010,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Согдийцы писали справа налево, сильно заваливая текст влево{{-}}отсюда письмо слева направо по столбцам. "
                 "Промежуточным оказалось и по типу{{-}}часть гласных получили свои буквы. "
                 "Письмо использовалось в современном Синьцзян-Уйгурском округе до XVIII{{_}}века."
-            "<p>Современные исследователи также часто пишут по-уйгурски справа налево{{-}}отсюда принцип кодирования Юникодом." },
+            "<p>Современные исследователи также часто пишут по-уйгурски справа налево{{-}}отсюда принцип кодирования Юникодом.",
+                EcFont::OLD_UYGHUR },
     // Plamyrene OK, W10 none, installed Google Noto
     { "Palm", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
@@ -5780,6 +5782,8 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
         // Stub off?
         if (fn.flags.have(Ffg::STUB_OFF))
             break;
+        if (fn.flags.have(Ffg::STUB_RTL))
+            return { str::toQ(STUB_RTL_CIRCLE) + str::toQ(code), style };
         return { STUB_CIRCLE + str::toQ(code), style };
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {

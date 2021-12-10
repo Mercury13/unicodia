@@ -48,6 +48,7 @@ namespace uc {
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };
+    constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
     constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
     constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };
@@ -321,6 +322,7 @@ namespace uc {
         OLD_PERMIC,
         OLD_PERSIAN,
         OLD_SOGDIAN,
+        OLD_UYGHUR,
         ORIYA,
         ORKHON,
         PAHAWH_HMONG,
@@ -406,6 +408,7 @@ namespace uc {
         STUB_FINEGRAINED = 1<<11, ///< Stub on/off is controlled on finer level
         SUPPORTS_ALL  = 1<<12,  ///< Font supports all characters that fall to it
                                 ///< (used for tofu stats)
+        STUB_RTL      = 1<<13,  ///< Use “RtL isolate” char in stub
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
