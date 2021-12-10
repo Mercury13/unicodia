@@ -5756,6 +5756,7 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
     auto code = subj.ch32();
 
     if (fn.flags.have(Ffg::STUB_FINEGRAINED)) {
+        // Special stubs char-by char, enabled by STUB_FINEGRAINED flag
         switch (code) {
         case 0x1BC9E:   // Duployan shorthand
             return { NBSP + str::toQ(code) + NBSP + NBSP + NBSP + NBSP, style };
@@ -5766,8 +5767,6 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
         case 0x1CF46:
             return { str::toQ(code), style };
         }
-
-        //if (code >= )
     }
 
     switch (ecCategory) {
