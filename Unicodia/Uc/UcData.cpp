@@ -138,7 +138,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
-    { "NotoSerifEthiopic-Regular.ttf" },                                        // Ethiopic
+    { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
@@ -1075,11 +1075,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Эфиопская (гéэз)", u8"I—VII век",
+        u8"Эфиопская (гéэз)", u8"IV век (как абугида)",
         u8"амхарский, тигринья и другие эфиосемитские",
         u8"Эфиопская письменность использовалась для записи языка гéэз, вышедшего из употребления в XIII{{_}}веке. "
+                "Письменность [[ps:Sarb|южноаравийского]] происхождения, огласовывать начали в IV{{_}}веке "
+                    "с приходом христианства. "
                 "Геэз всё ещё используется эфиопскими христианами как литургический{{-}}"
                     "а письменность распространилась на другие языки Эфиопии."
+            "<p>Имеет собственную систему счисления [[ps:Grek|греческого]] типа, с 26 согласными получается записать 1…9 и 10…90. "
+                "83692={{sm|፰፼፴፮፻፺፪}}, то есть 8-10000-30-6-100-90-2."
             "<p>С конца XX{{_}}века теряет влияние. "
                 "Для всех языков, кроме эфиосемитских (билин{{-}}кушитская семья, мекан{{-}}кир-аббайская), "
                     "придумана [[ps:Latn|латинская]] письменность.",
