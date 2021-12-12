@@ -1703,6 +1703,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
         u8"Мандейский", u8"II—VII век",
         u8"мандейский ''(Иран и Ирак)''",
+        // For translator: Marsh Arabs
         u8"Произошла из [[ps:Armi|арамейского]] или [[ps:Prti|парфянского]] письма. "
                 "Используется так называемыми «болотными арабами», живущими у слияния рек Тигр и Евфрат "
                     "и исповедующими мандеизм, необычную гностическую религию. "
