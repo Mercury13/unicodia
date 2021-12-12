@@ -1211,8 +1211,10 @@ constinit const uc::Script uc::scriptInfo[] {
                     "но встречается в мелких языках, обслуживаемых письмом. "
                     "Входя в лигатуру, согласная теряет правую палочку, если она есть.<br>"
                 "{{__}}кə {{sm|ક}} + и {{sm|◌િ}} = ки {{sm|કિ}}<br>"
-                "{{__}}дхə {{sm|ધ}} + вирама {{sm|◌્}} + кə {{sm|ક}} = дхкə {{sm|ધ્ક}}",
-            EcFont::GUJARATI },
+                "{{__}}дхə {{sm|ધ}} + вирама {{sm|◌્}} + кə {{sm|ક}} = дхкə {{sm|ધ્ક}}"
+            "<p>Зороастрийцы сбежали от мусульман в Индию и стали писать Авесту местным письмом, традиционно гуджарати. "
+                "Буквы «з» в гуджарати нет, и она записывается как «дж» с нуктой (точкой снизу).",
+                EcFont::GUJARATI },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
