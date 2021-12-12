@@ -1,8 +1,24 @@
 ===== НЕГОТОВЫЕ =====
 
+Egyptian Hieroglyphs
+* Куча перерисовок иероглифов. Простейшая — 13032 женщине убрали бороду
+* Noto не готов
+
+Latin
+* Блок D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
+* Блок F: 57 символов, даже разбираться облом
+* Noto Serif не готов
+
+Новые письменности
+* кипро-минойская
+
+
+===== ЗАТКНУТЫЕ =====
+
 Ahom
 * Новые символы 11740…46
 * Noto не готов
+* Нарисовал сам в FunkySample
 
 Arabic
 * +1 символ 061D основной блок
@@ -11,14 +27,17 @@ Arabic
 * Pres-A: добавились FBC2, FD40…4F, FDCF, FDFE, FDFF
 * Noto Naskh НЕ готов.
 * Scheherazade ГОТОВА, но в ней нет FBC2.
+* Выдрал из Noto Naskh в FunkySample.
 
 Balinese
 * 3 символа 1B4C, 1B7D, 1B7E
 * Noto не готов
+* Нарисовал сам в FunkySample
 
 Brahmi
 * Новые символы 11070…75
 * Noto не готов
+* Нарисовал сам в FunkySample
 
 CJK
 * 9FFD…FF (иероглифы) Babelstone ПОДДЕРЖИВАЕТ.
@@ -26,55 +45,29 @@ CJK
 * 1B11F…22 (архаичная катакана) Babelstone НЕ поддерживает.
 * 2A6DE,DF (иероглифы B) Babelstone ПОДДЕРЖИВАЕТ.
 * 2B735…38 (иероглифы C) Babelstone ПОДДЕРЖИВАЕТ.
+* Сумел найти какую-то комбинацию чужих шрифтов.
 
 Combining diacritical marks ex
 * Добавились символы 1AC1…CE (МФА)
 * Noto Serif не готов
+* Нарисовал сам в FunkySample
 
 Combining diacritical marks supplement
 * Добавился 1DFA (сирийский)
 * На Noto Serif забил, Syriac не готов
-
-Egyptian Hieroglyphs
-* Куча перерисовок иероглифов. Простейшая — 13032 женщине убрали бороду
-* Noto не готов
+* Нарисовал сам в FunkySample
 
 Glagolitic
 * Добавились 2C2F, 2C5F
 * Noto не готов
+* Нарисовал сам в FunkySample
 
 Kaithi
 * Новый символ 110C2
 * Noto не готов
+* Нарисовал сам в FunkySample
 
-Latin
-* Блок D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
-* Блок F: 57 символов, даже разбираться облом
-* На Noto Serif забил
-
-Supplemental punctuation
-* Добавились 2E53…2E5D.
-* На Noto Serif забил
-
-Syriac
-* Syriac Malayalam не готов, что уж говорить про 1DFA
-
-Takri
-* Новый символ 116B9, очень простой
-* Noto не готов
-
-Музыка
-* Два новых символа 1D1E9,EA
-* Noto не готов
-
-Новые письменности
-* староуйгурская
-* кипро-минойская
-
-
-===== ЗАТКНУТЫЕ =====
-
-Kannada OK
+Kannada
 * +1 символ 0CDD
 * Нарисовал в Kannada
 
@@ -82,10 +75,23 @@ Oriya
 * Noto UI не готов даже к U13, ищи Combining overline 0B55
 * Нарисовал сам в OriyaUi
 
+Supplemental punctuation
+* Добавились 2E53…2E5D.
+* На Noto Serif забил
+* Нарисовал сам в FunkySample
+
+Syriac
+* Syriac Malayalam не готов, что уж говорить про 1DFA
+
 Tagalog
 * +3 символа 170D, 1715 (разунифицировали с хануноо?), 171F
 * Noto не готов
 * Нарисовал в Tagalog
+
+Takri
+* Новый символ 116B9, очень простой
+* Noto не готов
+* Нарисовал сам в FunkySample
 
 Telugu
 * +2 символа 0C3C, 0C5D
@@ -95,6 +101,11 @@ Telugu
 Валютные символы
 * Добавился 20C0 киргизский сом
 * Нарисовал в Noto Sans
+
+Музыка
+* Два новых символа 1D1E9,EA
+* Noto не готов
+* Нарисовал сам в FunkySample
 
 Эмодзи
 * Transport: 1F6DD детская горка, 1F6DE колесо, 1F6DF спасательный круг
@@ -118,6 +129,10 @@ Ethiopic OK
 
 Mongol OK
 * Добавился спецсимвол 180F, шрифты трогать не надо
+
+Old Uyghur OK
+* Новая письменность
+* Noto ВЫШЕЛ
 
 Tangsa OK
 * Связался с автором, лицензии пока нет

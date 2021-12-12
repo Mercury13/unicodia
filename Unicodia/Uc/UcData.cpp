@@ -1396,9 +1396,9 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
-        u8"Этрусский", u8"700–100 до н.э.",
+        u8"Этрусский", u8"≈700 до н.э.",
         u8"этрусский и другие языки Италии",
-        u8"Алфавит развился под влиянием [[ps:Phnx|финикийского]] и [[ps:Grek|греческого]]. "
+        u8"Алфавит создали из [[ps:Phnx|финикийского]] и раннего [[ps:Grek|греческого]]. "
                 "В дальнейшем развился в [[ps:Latn|латинский]]."
             "<p>Юникод не различает языков Италии, объединяя все в один блок{{-}}этрусский.",
                 EcFont::OLD_ITALIC },
@@ -1407,9 +1407,9 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Яванский", u8"XV век",
         u8"яванский, мелкие языки Явы",
-        u8"Гласная по умолчанию «а». Знак «вирама» (стереть гласную) называется «пангкон» "
-                "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к балийской. "
-                "В настоящее время вытесняется латиницей.",
+        u8"Гласная по умолчанию «а». Знак «[[pt:virama|вирама]]» (стереть гласную) называется «пангкон» "
+                "и представляет собой не косую чёрточку, а длинный крюк. Яванская письменность близка к [[ps:Bali|балийской]]. "
+                "В настоящее время вытесняется [[ps:Latn|латиницей]].",
                 EcFont::JAVANESE },
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
