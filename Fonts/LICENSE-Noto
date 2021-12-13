@@ -49,6 +49,7 @@ What was done by authors of Unicodia:
 * Nandinagari
   - Anchored 25CC dotted circle
 * OriyaUI
+  - Rehinted; now the font is hinted in sample (up to 20 px) and unhinted in table
   - Added anchors to 25CC dotted circle
   - Made ligature 25CC dotted circle + 03BC nukta,
     mostly because of bad default anchoring of nukta
