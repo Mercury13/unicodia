@@ -130,7 +130,7 @@ std::u8string uc::toMnemo(QString x)
     // Result is bad/empty?
     if (sv.empty() || !isMnemoChar(sv))
         return {};
-    // Buils string: & + sv + ;
+    // Build string: & + sv + ;
     std::u8string s;
     s.reserve(sv.length() + 2);
     s += '&';
