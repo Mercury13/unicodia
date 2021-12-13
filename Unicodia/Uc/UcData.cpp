@@ -260,7 +260,7 @@ constinit const uc::Font uc::fontInfo[] = {
         // Tibetan chars are VERY high → 90%
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
-    { "NotoSansTirhuta-Regular.ttf", Ffg::DESC_BIGGER },                        // Tirhuta
+    { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
