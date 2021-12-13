@@ -196,13 +196,25 @@ uc::SearchResult uc::doSearch(QString what)
             }
         }
 
+        // Try find dec
+        const uc::Cp* dec = nullptr;
+        if (what.size() >= 2) {
+            if (auto q = uc::findStrCode(what, 10);
+                    q.err == SingleError::ONE
+                    && q.one->subj.val() >= 10) {       // if you find 08 → do not dupe
+                dec = q.one;
+                auto& bk = r.emplace_back(q.one);
+                bk.prio.high = uc::HIPRIO_DEC;
+            }
+        }
+
         // SEARCH BY KEYWORD/mnemonic
         const uc::Block* block = &uc::blocks[0];
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
         for (auto& cp : uc::cpInfo) {
-            if (&cp != hex) {   // Do not check hex once again
+            if (&cp != hex && &cp != dec) {   // Do not check hex/dec once again
                 auto names = cp.allRawNames();
                 struct {
                     srh::Prio prio;

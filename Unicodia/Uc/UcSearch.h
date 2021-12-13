@@ -40,6 +40,7 @@ namespace uc {
         HIPRIO_KEYWORD = 0,
         HIPRIO_MNEMONIC_CASE,
         HIPRIO_MNEMONIC_EXACT,
+        HIPRIO_DEC,
         HIPRIO_HEX,
         // HIGHEST
         HIPRIO_FIRST_ONE = HIPRIO_MNEMONIC_EXACT  // [>=] can convert multiple to one

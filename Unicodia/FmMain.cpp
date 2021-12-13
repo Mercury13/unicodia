@@ -842,15 +842,20 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     char buf[30];
 
     switch (role) {
-    case Qt::DisplayRole:
-        uc::sprintUPLUS(buf, line.cp->subj.ch32());
-        if (!line.triggerName.empty()) {
-            // Triggered alt. name
-            return QString(buf) + ": " + str::toQ(line.triggerName)
-                    + '\n' + line.cp->viewableName();
-        } else {
-            // Triggered main name
-            return QString(buf) + '\n' + line.cp->viewableName();
+    case Qt::DisplayRole: {
+            uc::sprintUPLUS(buf, line.cp->subj.ch32());
+            QString s = buf;
+            if (line.prio.high == uc::HIPRIO_DEC) {
+                // Found by decimal
+                s += " = ";
+                s += QString::number(line.cp->subj.val());
+                s += "₁₀";
+            } if (!line.triggerName.empty()) {
+                // Triggered alt. name
+                s += ": ";
+                s += str::toQ(line.triggerName);
+            };
+            return s + '\n' + line.cp->viewableName();
         }
 
     case Qt::DecorationRole:
