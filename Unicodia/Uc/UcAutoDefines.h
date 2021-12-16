@@ -415,9 +415,9 @@ namespace uc {
     using Cfgs = Flags<Cfg>;
     enum class DrawMethod {
             // Font-based methods
-            SAMPLE,
+            SAMPLE, CUSTOM_AA, SPACE,
             // Char-based methods
-            SPACE, ABBREVIATION, CUSTOM_CONTROL,
+            ABBREVIATION, CUSTOM_CONTROL,
             LAST_FONT = SPACE };            // Last using (loading, checking) font
 
     enum class TofuState {
@@ -460,7 +460,7 @@ namespace uc {
         const Script& scriptEx(const Block*& hint) const;
         const Font& firstFont(const Block*& hint) const;
         const Font& font(const Block*& hint) const;
-        SampleProxy sampleProxy(const Block*& hint) const;
+        SampleProxy sampleProxy(const Block*& hint, int dpi) const;
         QString osProxy() const;
 
         ///  @return [+] it is a true space, really white
@@ -471,7 +471,7 @@ namespace uc {
 
         QString viewableName() const;
         SafeVector<std::u8string_view> allRawNames() const;
-        DrawMethod drawMethod() const;
+        DrawMethod drawMethod(int dpi) const;
         TofuInfo tofuInfo(const Block*& hint) const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;

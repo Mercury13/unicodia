@@ -198,9 +198,11 @@ std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 }
 
 
-std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp, const uc::Block*& hint)
+std::optional<QFont> CharsModel::fontAt(
+        const uc::Cp& cp, const uc::Block*& hint)
 {
-    if (cp.drawMethod() > uc::DrawMethod::LAST_FONT)
+    static constexpr int DUMMY_DPI = 96;
+    if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
         return {};
     auto& font = cp.font(hint);
     return font.get(uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
@@ -235,26 +237,21 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 }
 
 
-QString CharsModel::textAt(const QModelIndex& index, CharSet chset) const
+QString CharsModel::textAt(const QModelIndex& index, int aDpi) const
 {
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return textAt(*cp, chset);
+    return textAt(*cp, aDpi);
 }
 
 
-QString CharsModel::textAt(const uc::Cp& cp, CharSet chset) const
-    { return textAt(cp, hint.cell, chset); }
+QString CharsModel::textAt(const uc::Cp& cp, int aDpi) const
+    { return textAt(cp, hint.cell, aDpi); }
 
-QString CharsModel::textAt(const uc::Cp& cp, const uc::Block*& hint, CharSet chset)
+QString CharsModel::textAt(const uc::Cp& cp, const uc::Block*& hint, int dpi)
 {
-    if (chset == CharSet::SAFE) {
-//        hint.cell = uc::blockOf(cp.subj, hint.cell);
-//        if (hint.cell->flags.have(uc::Bfg::EXPERIMENT))
-//            return {};
-    }
-    return cp.sampleProxy(hint).text;
+    return cp.sampleProxy(hint, dpi).text;
 }
 
 
@@ -263,7 +260,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
-            if (auto q = textAt(index, CharSet::SAFE); !q.isEmpty())
+            if (auto q = textAt(index, uc::DPI_ALL_CHARS); !q.isEmpty())
                 return q;
         }
         return {};
@@ -689,9 +686,9 @@ namespace {
 
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
             const uc::Cp& cp, const QColor& color,
-            const uc::Block*& hint, TableDraw mode)
+            const uc::Block*& hint, TableDraw mode, int dpi)
 {
-    switch (cp.drawMethod()) {
+    switch (cp.drawMethod(dpi)) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
         break;
@@ -701,6 +698,15 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(cp, hint), color, cp.subj);
         break;
+    case uc::DrawMethod::CUSTOM_AA: {
+            auto font = *fontAt(cp, hint);
+            font.setStyleStrategy(fst::CUSTOM_AA);
+            painter->setFont(font);
+            painter->setBrush(color);
+            painter->setPen(color);
+            auto text = textAt(cp, hint);
+            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
+        } break;
     case uc::DrawMethod::SAMPLE:
         if (mode == TableDraw::CUSTOM) {
             // Char
@@ -717,14 +723,14 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
 }
 
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const QModelIndex& index, const QColor& color) const
+            const QModelIndex& index, const QColor& color, int dpi) const
 {
     auto ch = charAt(index);
     if (ch) {
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        drawChar(painter, rect, *ch, color1, hint.cell, TABLE_DRAW);
+        drawChar(painter, rect, *ch, color1, hint.cell, TABLE_DRAW, dpi);
     }
 }
 
@@ -744,8 +750,23 @@ void CharsModel::initStyleOption(QStyleOptionViewItem *option,
             }
         }
     }
+    if (!hasText)
+        option->text.clear();
 }
 
+
+void CharsModel::paintItem1(
+        QPainter* painter,
+        const QStyleOptionViewItem& option,
+        const QModelIndex& index,
+        const QColor& color) const
+{
+    auto ch = charAt(index);
+    auto dpi = painter->device()->physicalDpiX();
+    hasText = !(ch && ch->drawMethod(dpi) == uc::DrawMethod::CUSTOM_AA);
+    SuperD::paint(painter, option, index);
+    drawChar(painter, option.rect, index, color, dpi);
+}
 
 void CharsModel::paintItem(
         QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
@@ -759,18 +780,15 @@ void CharsModel::paintItem(
                         | QStyle::State_Active | QStyle::State_Enabled;
             sob.rect = option.rect;
         owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
-        SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().buttonText().color());
+        paintItem1(painter, option, index, owner->palette().buttonText().color());
     } else if (option.state.testFlag(QStyle::State_Selected)) {
         // Selected, not focused? Initial style is bad
         auto opt2 = option;
         opt2.state.setFlag(QStyle::State_Selected, false);
         owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-        SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().windowText().color());
+        paintItem1(painter, option, index, owner->palette().windowText().color());
     } else {
-        SuperD::paint(painter, option, index);
-        drawChar(painter, option.rect, index, owner->palette().windowText().color());
+        paintItem1(painter, option, index, owner->palette().windowText().color());
     }
 }
 
@@ -884,7 +902,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 painter.drawRect(bounds1);
 
                 // OK w/o size, as 39 ≈ 40
-                CharsModel::drawChar(&painter, bounds, cp, color, hint, TableDraw::CUSTOM);
+                /// @todo [bad] default DPI here
+                CharsModel::drawChar(&painter, bounds, cp, color, hint, TableDraw::CUSTOM, 96);
             });
     default:
         return {};
@@ -1259,7 +1278,7 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(hint.sample);
+    auto proxy = ch.sampleProxy(hint.sample, uc::DPI_ALL_CHARS);
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -1334,7 +1353,7 @@ void FmMain::showCp(MaybeChar ch)
 
         // Sample char
         bool wantSysFont = true;
-        switch (ch->drawMethod()) {
+        switch (ch->drawMethod(uc::DPI_ALL_CHARS)) {
         case uc::DrawMethod::CUSTOM_CONTROL:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
@@ -1355,6 +1374,7 @@ void FmMain::showCp(MaybeChar ch)
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
         case uc::DrawMethod::SAMPLE:
+        case uc::DrawMethod::CUSTOM_AA:
             drawSampleWithQt(*ch);
             break;
         }

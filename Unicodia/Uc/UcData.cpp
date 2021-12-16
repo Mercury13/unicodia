@@ -22,13 +22,9 @@ constexpr QChar ZWSP(0x200B);
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
 
-constexpr auto STRATEGY_TOFU = static_cast<QFont::StyleStrategy>(
-            QFont::PreferAntialias | QFont::ForceOutline | QFont::NoFontMerging
-            | QFont::PreferQuality | QFont::PreferFullHinting);
-constexpr auto STRATEGY_COMPAT = static_cast<QFont::StyleStrategy>(
-            QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch
-            | QFont::PreferFullHinting);
-constexpr auto STRATEGY_DEFAULT = FORCE_TOFU ? STRATEGY_TOFU : STRATEGY_COMPAT;
+namespace fst {
+    constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;
+}
 
 constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
 
@@ -135,7 +131,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
-    { "NotoSansEgyptianHieroglyphs-Regular.ttf"},                               // Egyptian
+    { "NotoSansEgyptianHieroglyphs-Regular.ttf", Ffg::CELL_BIGGER },            // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
@@ -5747,8 +5743,8 @@ onceAgain:
     }
 
     // Make probe font
-    q.loaded->get(q.loaded->probe,  STRATEGY_TOFU,   flags);
-    q.loaded->get(q.loaded->normal, STRATEGY_DEFAULT, flags);
+    q.loaded->get(q.loaded->probe,  fst::TOFU,   flags);
+    q.loaded->get(q.loaded->normal, fst::DEFAULT, flags);
         // force EXACT match
     q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
     doesSupportChar(trigger, EcVersion::LAST);
@@ -5787,7 +5783,9 @@ int uc::Font::computeSize(FontPlace place, int size) const
     switch (place) {
     case FontPlace::CELL:
         if (flags.have(Ffg::CELL_SMALLER))
-            r = r * 9 / 10;
+            r = r * 9 / 10;     // =90%
+        if (flags.have(Ffg::CELL_BIGGER))
+            r = r * 23 / 20;    // =115%
         break;
     case FontPlace::SAMPLE:
     case FontPlace::PROBE: break;
@@ -5821,10 +5819,18 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint) const
+uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint, int dpi) const
 {
-    if (drawMethod() != DrawMethod::SAMPLE)
+    switch (drawMethod(dpi)) {
+    case DrawMethod::SAMPLE:
+        break;  // go through
+    case DrawMethod::CUSTOM_AA:
+        if (dpi == DPI_ALL_CHARS)
+            break;
+        [[fallthrough]];
+    default:
         return {};
+    }
 
     auto& fn = font(hint);
     auto style = fn.styleSheet;
@@ -5883,7 +5889,7 @@ bool uc::Cp::isGraphical() const
 }
 
 
-uc::DrawMethod uc::Cp::drawMethod() const
+uc::DrawMethod uc::Cp::drawMethod(int dpi) const
 {
     if (flags.have(Cfg::CUSTOM_CONTROL))
         return uc::DrawMethod::CUSTOM_CONTROL;
@@ -5891,6 +5897,8 @@ uc::DrawMethod uc::Cp::drawMethod() const
         return uc::DrawMethod::ABBREVIATION;
     if (isTrueSpace())
         return uc::DrawMethod::SPACE;
+    if (dpi < 130 && script().font().flags.have(Ffg::CUSTOM_AA))
+        return uc::DrawMethod::CUSTOM_AA;
     return uc::DrawMethod::SAMPLE;
 }
 
@@ -5966,7 +5974,8 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 
-    if (drawMethod() > uc::DrawMethod::LAST_FONT) {
+    static constexpr auto DPI_DUMMY = 96;
+    if (drawMethod(DPI_DUMMY) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
         auto v = &firstFont(hint);

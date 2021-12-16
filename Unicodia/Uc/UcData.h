@@ -30,6 +30,18 @@ const T* findInArray(std::string_view needle, const T (&haystack)[N])
     return nullptr;
 }
 
+namespace fst {
+    constexpr auto TOFU = static_cast<QFont::StyleStrategy>(
+                QFont::PreferAntialias | QFont::ForceOutline | QFont::NoFontMerging
+                | QFont::PreferQuality | QFont::PreferFullHinting);
+    constexpr auto COMPAT = static_cast<QFont::StyleStrategy>(
+                QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch
+                | QFont::PreferFullHinting);
+    constexpr auto CUSTOM_AA = static_cast<QFont::StyleStrategy>(
+                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
+                | QFont::PreferFullHinting);
+}
+
 class Percent
 {
 public:
@@ -405,10 +417,12 @@ namespace uc {
         FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
-        STUB_FINEGRAINED = 1<<11, ///< Stub on/off is controlled on finer level
-        SUPPORTS_ALL  = 1<<12,  ///< Font supports all characters that fall to it
+        CELL_BIGGER   = 1<<11,  ///< Make cell text a bit smaller
+        STUB_FINEGRAINED =1<<12, ///< Stub on/off is controlled on finer level
+        SUPPORTS_ALL  = 1<<13,  ///< Font supports all characters that fall to it
                                 ///< (used for tofu stats)
-        STUB_RTL      = 1<<13,  ///< Use “RtL isolate” char in stub
+        STUB_RTL      = 1<<14,  ///< Use “RtL isolate” char in stub
+        CUSTOM_AA     = 1<<15,  ///< Use custom antialiasing in table
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -425,6 +439,9 @@ namespace uc {
     };
 
     enum class FontPlace { CELL, SAMPLE, PROBE };
+
+    /// used as a sign for “Draw all chars”
+    constexpr int DPI_ALL_CHARS = 0;
 
     struct Font
     {

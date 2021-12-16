@@ -95,7 +95,6 @@ protected:
 
 
 enum class TableColors { NO, YES };
-enum class CharSet { SAFE, FULL };
 enum class TableDraw { INTERNAL, CUSTOM };
 
 class CharsModel
@@ -123,9 +122,9 @@ public:
     static std::optional<QFont> fontAt(const uc::Cp& cp, const uc::Block*& hint);
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
-    QString textAt(const QModelIndex& index, CharSet chset = CharSet::FULL) const;
-    QString textAt(const uc::Cp& cp, CharSet chset = CharSet::FULL) const;
-    static QString textAt(const uc::Cp& cp, const uc::Block*& hint, CharSet chset = CharSet::FULL);
+    QString textAt(const QModelIndex& index, int aDpi = uc::DPI_ALL_CHARS) const;
+    QString textAt(const uc::Cp& cp, int aDpi = uc::DPI_ALL_CHARS) const;
+    static QString textAt(const uc::Cp& cp, const uc::Block*& hint, int dpi = uc::DPI_ALL_CHARS);
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -148,7 +147,7 @@ public:
                const QModelIndex &index) const override;
     static void drawChar(QPainter* painter, const QRect& rect,
                 const uc::Cp& cp, const QColor& color,
-                const uc::Block*& hint, TableDraw mode);
+                const uc::Block*& hint, TableDraw mode, int dpi);
 protected:
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,
@@ -157,10 +156,16 @@ protected:
             QPainter* painter,
             const QStyleOptionViewItem& option,
             const QModelIndex& index) const override;
+    void paintItem1(
+            QPainter* painter,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index,
+            const QColor& color) const;
     void drawChar(QPainter* painter, const QRect& rect,
-                const QModelIndex& index, const QColor& color) const;
+                const QModelIndex& index, const QColor& color, int dpi) const;
 private:
     RowCache rows;
+    mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
     mutable struct Hint {
