@@ -1507,7 +1507,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "[[pt:virama|Вирама]] (знак «убрать гласную») появляется на письме только для передачи санскрита. "
                 "На компьютерах вирама служит для набора [[pt:ligature|лигатур]] «согласная+согласная»:<br>"
                 "{{__}}ка {{sm|ಕ}} + вирама {{sm|◌್}} + та {{sm|ತ}} = кта {{sm|ಕ್ತ}}<br>"
-                "Часто применяется в смайликах: {{sm|ಠ␣ಠ}}.",
+                "Часто применяется в смайликах: <font face='{{fontface}},Cambria' size='+3'>ಠ͜ಠ</font>.",
                 EcFont::KANNADA },
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,

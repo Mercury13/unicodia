@@ -364,6 +364,8 @@ namespace {
             str::append(s, x.safeGetV(1, {}));
         } else if (name == "bc"sv) {
             str::append(s, u8"" NBSP "до" NBSP "н.э."sv );
+        } else if (name == "fontface"sv) {
+            s += font.familiesComma(0);
         } else {
             wiki::appendHtml(s, x[0]);
         }
