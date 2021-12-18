@@ -2799,7 +2799,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Запрещённое государство устроило геноцид 2014–2017: около 5000 убиты, не{{_}}менее 5000 пропали, "
                     "около 500{{_}}тыс. сбежали из Ирака. "
                 "Езидка Надия Мурад попала в плен, сумела сбежать, стала послом доброй воли ООН "
-                     "и в 2018 получила Нобелевскую премию мира.",
+                    "и в 2018 получила Нобелевскую премию мира.",
                 EcFont::YEZIDI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
