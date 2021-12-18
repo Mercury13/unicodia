@@ -131,7 +131,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …5
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
-    { "NotoSansEgyptianHieroglyphs-Regular.ttf", Ffg::CELL_BIGGER },            // Egyptian
+    { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },            // Egyptian
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
@@ -2448,10 +2448,11 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
         u8"Тагбанва", u8"≈1300",
         u8"языки о. Палаван ''(Филиппины)''",
-        u8"Восходит к [[ps:Brah|брахми]] и родственная с [[ps:Tglg|тагальской]]. "
+        u8"Происходит из [[ps:Tglg|тагальской]]. "
                 "Осталось не более 25000 людей, говорящих на этих языках. "
                 "Новые поколения предпочитают говорить по-тагальски."
-            "<p>[[pt:virama|Вирамы]] и каких-то знаков для заключительных букв нет, так что эти буквы угадываются из контекста, "
+            "<p>Гласная по умолчанию «а». "
+                "[[pt:virama|Вирамы]] и каких-то знаков для заключительных букв нет, так что эти буквы угадываются из контекста, "
                     "как в [[ps:Buhd|бухиде]].",
                 EcFont::TAGBANWA },
     // Takri OK, W10 none → installed Google Noto
