@@ -865,7 +865,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
     case Qt::DecorationRole:
         return cache.getT(line.code,
-            [cp = line.cp, this](QPixmap& pix) {
+            [cp = line.cp, type = line.type, this](QPixmap& pix) {
                 auto size = pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
@@ -888,11 +888,26 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 painter.setPen(clTrans);
                 painter.drawRect(bounds1);
 
-                // OK w/o size, as 39 ≈ 40
-                /// @todo [future] default DPI here, DPI is unused right now
-                enum { DPI_STUB = 96 };
-                if (cp)
-                    CharsModel::drawChar(&painter, bounds, *cp, color, TableDraw::CUSTOM, DPI_STUB);
+                switch (type) {
+                case uc::CpType::NONCHARACTER: {
+                        QBrush brush (color, Qt::DiagCrossPattern);
+                        painter.fillRect(bounds, brush);
+                    } break;
+                case uc::CpType::PRIVATE_USE:
+                case uc::CpType::SURROGATE:
+                case uc::CpType::NN:
+                case uc::CpType::RESERVED:
+                case uc::CpType::UNALLOCATED: {
+                        painter.fillRect(bounds, clTrans);
+                    } [[fallthrough]];
+                case uc::CpType::EXISTING: {
+                    // OK w/o size, as 39 ≈ 40
+                    /// @todo [future] default DPI here, DPI is unused right now
+                        enum { DPI_STUB = 96 };
+                        if (cp)
+                            CharsModel::drawChar(&painter, bounds, *cp, color, TableDraw::CUSTOM, DPI_STUB);
+                    }
+                }
             });
     default:
         return {};

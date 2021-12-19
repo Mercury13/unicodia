@@ -72,7 +72,7 @@ uc::SingleResult uc::findCode(char32_t code)
     if (code >= 0xD800 && code <= 0xDFFF)
         return { code, CpType::SURROGATE };
     auto v = uc::blockOf(code);
-    if (code > v->endingCp)
+    if (!v || code > v->endingCp)
         return { code, CpType::UNALLOCATED };
 
     return { code, CpType::RESERVED, v->firstAllocated };
