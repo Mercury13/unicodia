@@ -1635,6 +1635,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     if (one) {
         closeSearch();
         selectChar<SelectMode::INSTANT>(one->subj);
+        return;
     }
 
     switch (x.err) {

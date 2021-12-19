@@ -36,8 +36,10 @@ extern const std::u8string_view uc::searchErrorMsgs[SearchError_N] {
 uc::MultiResult::MultiResult(const SingleResult& x)
     : err(x.err)
 {
-    if (err == SearchError::OK)
-        v.emplace_back(x);
+    if (err == SearchError::OK) {
+        auto& bk = v.emplace_back(x);
+        bk.prio.high = HIPRIO_HEX;
+    }
 }
 
 const uc::Cp* uc::MultiResult::one() const
@@ -159,25 +161,6 @@ std::u8string uc::toMnemo(QString x)
     s += ';';
     return s;
 }
-
-
-namespace {
-
-//    uc::SearchResult toMultiple(const uc::SingleSearchResult& x)
-//    {
-//        using enum uc::SingleError;
-//        // Found one, or search has no CP
-//        if (x.err == ONE || !uc::errorInfo[static_cast<int>(x.err)].isCp())
-//            return {x};
-
-//        // Turn single to multiple
-//        uc::SearchResult r;
-//        r.err = MULTIPLE;
-//        r.multiple.emplace_back(x.singleCode, x.err, x.one);
-//        return r;
-//    }
-
-}   // anon namespace
 
 
 uc::MultiResult uc::doSearch(QString what)
@@ -313,8 +296,10 @@ uc::MultiResult uc::doSearch(QString what)
         auto u32 = what.toUcs4();
         for (auto v : u32) {
             auto find = uc::findCode(v);
-            if (find.err == SearchError::OK)
-                r.emplace_back(find);
+            if (find.err == SearchError::OK) {
+                auto& bk = r.emplace_back(find);
+                bk.prio.high = HIPRIO_HEX;
+            }
         }
     }
 
