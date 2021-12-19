@@ -1174,7 +1174,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Около 2010 не удалась попытка ввести грантху в Юникод в [[pt:unification|унификации]] с тамильской. "
                 "Из-за поднявшегося шума (у тамилов силён национализм) решили разунифицировать письменности, "
                     "оставив только цифры, которые в поздней грантхе совпадают с тамильскими."
-        /// @todo [fact] Does Sanskrit likes open syllables?
+        /// @todo [fact] Does Sanskrit like open syllables?
             "<p>Гласная по умолчанию «а». "
                 "[[pt:virama|Вирама]] крайне редка из-за тяги санскрита к открытым слогам "
                     "и большого количества [[pt:ligature|лигатур]].<br>"
@@ -4170,10 +4170,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [semi-tofu] #85 Marchen too small because of subjoining
     { 0x11C70, 0x11CBF,
             "Marchen", u8"Марчхен", {}, EcScript::Marc },
-    /// @todo [semi-tofu] #83 Masaram: no virtual virama
     { 0x11D00, 0x11D5F,
             "Masaram Gondi", u8"Письмо Масарама (гонди)", {}, EcScript::Gonm },
-    /// @todo [semi-tofu] #84 Gunjala: no virtual virama
     { 0x11D60, 0x11DAF,
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     // Makasar OK
