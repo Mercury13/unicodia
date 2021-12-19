@@ -10,61 +10,81 @@
 // Unicode
 #include "UcData.h"
 
+constinit const uc::SearchLine uc::SearchLine::STUB;
 
-constinit const uc::SearchLine uc::SearchLine::STUB {
-    0, SingleError::ONE, &cpInfo[0], {}, {}
+extern const std::u8string_view uc::cpTypeMsgs[CpType_N] {
+    {},     // existing
+    u8"Выброшенная позиция",
+    u8"Символ для личного пользования",
+    u8"Код из суррогатной пары",
+    u8"Нераспределённый символ",
+    u8"Свободное место",
+};
+
+extern const std::u8string_view uc::searchErrorMsgs[SearchError_N] {
+    {},     // OK
+    {},     // no search
+    u8"Не найдено",
+    u8"Код символа не распознан",
+    u8"Код символа слишком велик",
 };
 
 
-const uc::ErrorInfo uc::errorInfo[SingleError_N] {
-    { IsCp::YES, {} },     // one
-    { IsCp::NO,  {} },     // multiple
-    { IsCp::NO,  {} },     // no search
-    { IsCp::NO,  u8"Не найдено" },
-    { IsCp::NO,  u8"Код символа не распознан" },
-    { IsCp::NO,  u8"Код символа слишком велик" },
-    { IsCp::YES, u8"Выброшенная позиция" },
-    { IsCp::YES, u8"Символ для личного пользования" },
-    { IsCp::YES, u8"Код из суррогатной пары" },
-    { IsCp::YES, u8"Нераспределённый символ" },
-    { IsCp::YES, u8"Свободное место" },
-};
+///// MultiResult //////////////////////////////////////////////////////////////
 
 
-uc::SingleSearchResult uc::findCode(char32_t code)
+uc::MultiResult::MultiResult(const SingleResult& x)
+    : err(x.err)
+{
+    if (err == SearchError::OK)
+        v.emplace_back(x);
+}
+
+const uc::Cp* uc::MultiResult::one() const
+{
+    if (err == SearchError::OK && v.size() == 1 && v[0].type == CpType::EXISTING)
+        return v[0].cp;
+    return nullptr;
+}
+
+
+///// Search functions /////////////////////////////////////////////////////////
+
+
+uc::SingleResult uc::findCode(char32_t code)
 {
     // Too big?
     if (code >= uc::N_CHARS)
-        return { code, SingleError::TOO_BIG };
+        return { SearchError::TOO_BIG };
 
     // Have that character?
     auto pCp = uc::cpsByCode[code];
     if (pCp)
-        return { code, SingleError::ONE, pCp };
+        return { *pCp };
 
     // If not → find what the heck
     if (isNonChar(code))
-        return { code, SingleError::NONCHARACTER };
+        return { code, CpType::NONCHARACTER };
     if ((code >= 0xE000 && code <= 0xF8FF) || code >= 0xF'0000)
-        return { code, SingleError::PRIVATE_USE };
+        return { code, CpType::PRIVATE_USE };
     if (code >= 0xD800 && code <= 0xDFFF)
-        return { code, SingleError::SURROGATE };
+        return { code, CpType::SURROGATE };
     auto v = uc::blockOf(code);
     if (code > v->endingCp)
-        return { code, SingleError::UNALLOCATED };
+        return { code, CpType::UNALLOCATED };
 
-    return { code, SingleError::RESERVED, v->firstAllocated  };
+    return { code, CpType::RESERVED, v->firstAllocated };
 }
 
 
-uc::SingleSearchResult uc::findStrCode(QStringView what, int base)
+uc::SingleResult uc::findStrCode(QStringView what, int base)
 {
     uint code = 0;
     bool isOk = false;
     if (code = what.toUInt(&isOk, base); isOk) {
         return findCode(code);
     } else {
-        return { 0, SingleError::CONVERT_ERROR };
+        return { SearchError::CONVERT_ERROR };
     }
 }
 
@@ -143,27 +163,27 @@ std::u8string uc::toMnemo(QString x)
 
 namespace {
 
-    uc::SearchResult toMultiple(const uc::SingleSearchResult& x)
-    {
-        using enum uc::SingleError;
-        // Found one, or search has no CP
-        if (x.err == ONE || !uc::errorInfo[static_cast<int>(x.err)].isCp())
-            return {x};
+//    uc::SearchResult toMultiple(const uc::SingleSearchResult& x)
+//    {
+//        using enum uc::SingleError;
+//        // Found one, or search has no CP
+//        if (x.err == ONE || !uc::errorInfo[static_cast<int>(x.err)].isCp())
+//            return {x};
 
-        // Turn single to multiple
-        uc::SearchResult r;
-        r.err = MULTIPLE;
-        r.multiple.emplace_back(x.singleCode, x.err, x.one);
-        return r;
-    }
+//        // Turn single to multiple
+//        uc::SearchResult r;
+//        r.err = MULTIPLE;
+//        r.multiple.emplace_back(x.singleCode, x.err, x.one);
+//        return r;
+//    }
 
 }   // anon namespace
 
 
-uc::SearchResult uc::doSearch(QString what)
+uc::MultiResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
-        return {{ 0, SingleError::NO_SEARCH }};
+        return { SearchError::NO_SEARCH };
 
     // Find a single character, maybe space
     if (what.size() <= 2) {
@@ -172,7 +192,7 @@ uc::SearchResult uc::doSearch(QString what)
             auto code = u32[0];
             if (code == ' ' || !isNameChar(code)) {
                 auto codeResult = uc::findCode(code);
-                return toMultiple(codeResult);
+                return codeResult;
             }
         }
     }
@@ -181,13 +201,13 @@ uc::SearchResult uc::doSearch(QString what)
 
     // Searching for nothing?
     if (what.isEmpty())
-        return {{ 0, SingleError::NO_SEARCH }};
+        return { SearchError::NO_SEARCH };
 
     if (what.startsWith("U+", Qt::CaseInsensitive)) {
         // U+:
         auto sHex = QStringView(what).mid(2);
         auto codeResult = uc::findStrCode(sHex, 16);
-        return toMultiple(codeResult);
+        return codeResult;
     }
 
     SafeVector<uc::SearchLine> r;
@@ -198,21 +218,28 @@ uc::SearchResult uc::doSearch(QString what)
         for (auto& cp : uc::cpInfo) {
             auto names = cp.allRawNames();
             for (auto& nm : names) {
-                if (srh::stringsCiEq(mnemo, nm)) {
-                    r.emplace_back(cp.subj, uc::SingleError::ONE, &cp);
+                if (mnemo == nm) {
+                    auto& v = r.emplace_back(cp);
+                    v.prio.high = uc::HIPRIO_MNEMONIC_EXACT;
+                    break;
+                } if (srh::stringsCiEq(mnemo, nm)) {
+                    auto& v = r.emplace_back(cp);
+                    v.prio.high = uc::HIPRIO_MNEMONIC_CASE;
                     break;
                 }
             }
         }
-        if (r.size() == 1)
-            return {{ r[0].cp->subj, SingleError::ONE, r[0].cp }};
+
+        // Sort by relevance
+        std::stable_sort(r.begin(), r.end());
+
+        return r;
     } else if (isNameChar(what)) {
         // Try find hex
         const uc::Cp* hex = nullptr;
         if (what.size() >= 2) {
-            if (auto q = uc::findStrCode(what, 16); q.err == SingleError::ONE) {
-                hex = q.one;
-                auto& bk = r.emplace_back(q.singleCode, uc::SingleError::ONE, q.one);
+            if (auto q = uc::findStrCode(what, 16); q.err == SearchError::OK) {
+                auto& bk = r.emplace_back(q);
                 bk.prio.high = uc::HIPRIO_HEX;
             }
         }
@@ -221,10 +248,8 @@ uc::SearchResult uc::doSearch(QString what)
         const uc::Cp* dec = nullptr;
         if (what.size() >= 2) {
             if (auto q = uc::findStrCode(what, 10);
-                    q.err == SingleError::ONE
-                    && q.one->subj.val() >= 10) {       // if you find 08 → do not dupe
-                dec = q.one;
-                auto& bk = r.emplace_back(q.singleCode, uc::SingleError::ONE, q.one);
+                    q.err == SearchError::OK && q.code >= 10) {       // if you find 08 → do not dupe
+                auto& bk = r.emplace_back(q);
                 bk.prio.high = uc::HIPRIO_DEC;
             }
         }
@@ -254,11 +279,11 @@ uc::SearchResult uc::doSearch(QString what)
                         if (nm.size() == sv.size() + 2) {
                             auto mnemo = nm.substr(1, sv.size());
                             if (sv == mnemo) {
-                                auto& bk = r.emplace_back(cp.subj, uc::SingleError::ONE, &cp, nm);
+                                auto& bk = r.emplace_back(cp, nm);
                                 bk.prio.high = HIPRIO_MNEMONIC_EXACT;
                                 goto brk;
                             } else if (srh::stringsCiEq(sv, mnemo)) {
-                                auto& bk = r.emplace_back(cp.subj, uc::SingleError::ONE, &cp, nm);
+                                auto& bk = r.emplace_back(cp, nm);
                                 bk.prio.high = HIPRIO_MNEMONIC_CASE;
                                 goto brk;
                             }
@@ -275,14 +300,11 @@ uc::SearchResult uc::doSearch(QString what)
                 if (best.prio > srh::Prio::EMPTY) {
                     if (best.name == names[0])
                         best.name = std::u8string();
-                    r.emplace_back(cp.subj, uc::SingleError::ONE, &cp, best.name, best.prio);
+                    r.emplace_back(cp, best.name, best.prio);
                 }
             brk:;
             }
         }
-
-        if (r.size() == 1 && r[0].prio.high >= HIPRIO_FIRST_ONE)
-            return {{ r[0].cp->subj, SingleError::ONE, r[0].cp }};
 
         // Sort by relevance
         std::stable_sort(r.begin(), r.end());
@@ -291,15 +313,10 @@ uc::SearchResult uc::doSearch(QString what)
         auto u32 = what.toUcs4();
         for (auto v : u32) {
             auto find = uc::findCode(v);
-            if (errorInfo[static_cast<int>(find.err)].isCp()) {
-                r.emplace_back(find.singleCode, find.err, find.one);
-            }
+            if (find.err == SearchError::OK)
+                r.emplace_back(find);
         }
     }
 
-    if (r.empty()) {
-        return {{ 0, SingleError::NOT_FOUND }};
-    } else {
-        return r;
-    }
+    return r;
 }

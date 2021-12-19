@@ -853,13 +853,13 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             };
             s += '\n';
             switch (line.type) {
-            case uc::SingleError::ONE:
+            case uc::CpType::EXISTING:
                 return s + line.cp->viewableName();
-            case uc::SingleError::RESERVED:
+            case uc::CpType::RESERVED:
                 return s + str::toQ(u8"Свободное место: ")
                          + str::toQ(uc::blockOf(line.code)->locName);
             default:
-                return s + str::toQ(uc::errorInfo[static_cast<int>(line.type)].message);
+                return s + str::toQ(uc::cpTypeMsgs[static_cast<int>(line.type)]);
             }
         }
 
@@ -1629,26 +1629,28 @@ void FmMain::showSearchError(const QString& text)
 }
 
 
-void FmMain::showSearchResult(uc::SearchResult&& x)
+void FmMain::showSearchResult(uc::MultiResult&& x)
 {
-    switch (x.err) {
-    case uc::SingleError::ONE:
+    auto one = x.one();
+    if (one) {
         closeSearch();
-        selectChar<SelectMode::INSTANT>(x.one->subj);
-        break;
-    case uc::SingleError::MULTIPLE: {
-            searchModel.set(std::move(x.multiple));
+        selectChar<SelectMode::INSTANT>(one->subj);
+    }
+
+    switch (x.err) {
+    case uc::SearchError::OK: {
+            searchModel.set(std::move(x.v));
             openSearch();
             ui->listSearch->setFocus();
             auto index0 = searchModel.index(0, 0);
             ui->listSearch->setCurrentIndex(index0);
             ui->listSearch->scrollTo(index0);
         } break;
-    case uc::SingleError::NO_SEARCH:
+    case uc::SearchError::NO_SEARCH:
         break;
     default:
         showSearchError(str::toQ(
-                uc::errorInfo[static_cast<int>(x.err)].message));
+                uc::searchErrorMsgs[static_cast<int>(x.err)]));
     }
 }
 

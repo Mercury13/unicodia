@@ -7,40 +7,35 @@
 #include "u_Vector.h"
 #include "u_SearchEngine.h"
 
+// Unicode
+#include "UcAutoDefines.h"
 
 namespace uc {
 
     struct Cp;
 
-    enum class SingleError {
-        // Not errors
-        ONE,
-        MULTIPLE,
-        NO_SEARCH,          ///< Search did not occur at all
-        NOT_FOUND,
-        CONVERT_ERROR,
-        TOO_BIG,
+    enum class CpType {
+        EXISTING,
         NONCHARACTER,
         PRIVATE_USE,
         SURROGATE,
         UNALLOCATED,
         RESERVED,           ///< Allocated but still reserved
-        NN,
+        NN
     };
-    constexpr auto SingleError_N = static_cast<int>(SingleError::NN);
-    enum class IsCp { NO, YES };
-    struct ErrorInfo {
-        IsCp ecIsCp;
-        std::u8string_view message;
-        bool isCp() const { return static_cast<bool>(ecIsCp); }
-    };
-    extern const ErrorInfo errorInfo[SingleError_N];
+    constexpr auto CpType_N = static_cast<int>(CpType::NN);
+    extern const std::u8string_view cpTypeMsgs[CpType_N];
 
-    struct SingleSearchResult {
-        char32_t singleCode = 0;
-        SingleError err = SingleError::CONVERT_ERROR;        
-        const uc::Cp* one = nullptr;
+    enum class SearchError {
+        OK,
+        NO_SEARCH,          ///< Search did not occur at all
+        NOT_FOUND,
+        CONVERT_ERROR,
+        TOO_BIG,
+        NN
     };
+    constexpr auto SearchError_N = static_cast<int>(SearchError::NN);
+    extern const std::u8string_view searchErrorMsgs[SearchError_N];
 
     enum {
         // LOWEST
@@ -53,24 +48,51 @@ namespace uc {
         HIPRIO_FIRST_ONE = HIPRIO_MNEMONIC_EXACT  // [>=] can convert multiple to one
     };
 
-    struct SearchLine {
+    struct MiniLine {
         char32_t code = 0;                  ///< char code
-        SingleError type = SingleError::ONE;  ///< what found
+        CpType type = CpType::NONCHARACTER; ///< what found
         const uc::Cp* cp = nullptr;         ///< code point
+    };
+
+    struct SearchLine : public MiniLine {
         std::u8string_view triggerName;     ///< name that triggered inclusion to search results
         srh::Prio prio;                     ///< its priority
         /// @warning in reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const
             { return x.prio <=> prio; }
         static const SearchLine STUB;
+        SearchLine() = default;
+        SearchLine(const MiniLine& x)
+            : MiniLine{x} {}
+        SearchLine(const uc::Cp& cp)
+            : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
+        SearchLine(const uc::Cp& cp, std::u8string_view tn)
+            : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
+        SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr)
+            : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn), prio(pr) {}
     };
 
-    struct SearchResult : public SingleSearchResult {
-        SafeVector<SearchLine> multiple {};
-        SearchResult() = default;
-        SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
-        SearchResult(SafeVector<uc::SearchLine>&& v)
-            : SingleSearchResult { 0, SingleError::MULTIPLE },  multiple(std::move(v)) {}
+    struct SingleResult : public MiniLine {
+        SearchError err = SearchError::OK;
+
+        SingleResult(char32_t code, CpType type)
+            : MiniLine{ code, type } {}
+        SingleResult(char32_t code, CpType type, const uc::Cp* cp)
+            : MiniLine{ code, type, cp } {}
+        SingleResult(const uc::Cp& cp)
+            : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
+        SingleResult(const MiniLine& line) : MiniLine(line) {}
+        SingleResult(SearchError aErr) : err(aErr) {}
+    };
+
+    struct MultiResult {
+        SearchError err = SearchError::OK;
+        SafeVector<SearchLine> v {};
+        MultiResult(const SingleResult& x);
+        MultiResult(SafeVector<SearchLine>&& aV) :
+            err(aV.empty() ? SearchError::NOT_FOUND : SearchError::OK),
+            v(std::move(aV)) {}
+        const uc::Cp* one() const;
     };
 
     /// @return [+] cp is noncharacter
@@ -80,9 +102,9 @@ namespace uc {
             || (cp >= 0xFDD0 && cp <= 0xFDEF);
     }
 
-    SingleSearchResult findCode(char32_t code);
-    SingleSearchResult findStrCode(QStringView what, int base);
-    SearchResult doSearch(QString what);
+    SingleResult findCode(char32_t code);
+    SingleResult findStrCode(QStringView what, int base);
+    MultiResult doSearch(QString what);
     bool isNameChar(char32_t cp);
     bool isNameChar(QStringView x);
     bool isMnemoChar(char32_t cp);

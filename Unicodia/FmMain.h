@@ -277,7 +277,7 @@ private:
     void showCopied(QWidget* widget, const QRect& absRect);
     void clearSample();
     void doSearch(QString what);
-    void showSearchResult(uc::SearchResult&& x);
+    void showSearchResult(uc::MultiResult&& x);
     void showSearchError(const QString& text);
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
