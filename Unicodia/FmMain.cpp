@@ -861,24 +861,33 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
     switch (role) {
     case Qt::DisplayRole: {
-            uc::sprintUPLUS(buf, line.cp->subj.ch32());
+            uc::sprintUPLUS(buf, line.code);
             QString s = buf;
             if (line.prio.high == uc::HIPRIO_DEC) {
                 // Found by decimal
                 s += " = ";
-                s += QString::number(line.cp->subj.val());
+                s += QString::number(line.code);
                 s += "₁₀";
             } if (!line.triggerName.empty()) {
                 // Triggered alt. name
                 s += ": ";
                 s += str::toQ(line.triggerName);
             };
-            return s + '\n' + line.cp->viewableName();
+            s += '\n';
+            switch (line.type) {
+            case uc::SingleError::ONE:
+                return s + line.cp->viewableName();
+            case uc::SingleError::RESERVED:
+                return s + str::toQ(u8"Свободное место: ")
+                         + str::toQ(uc::blockOf(line.code, 0)->locName);
+            default:
+                return s + str::toQ(uc::errorInfo[static_cast<int>(line.type)].message);
+            }
         }
 
     case Qt::DecorationRole:
-        return cache.getT(line.cp->subj.ch32(),
-            [&cp = *line.cp, this](QPixmap& pix) {
+        return cache.getT(line.code,
+            [cp = line.cp, this](QPixmap& pix) {
                 auto size = pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
@@ -902,8 +911,10 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 painter.drawRect(bounds1);
 
                 // OK w/o size, as 39 ≈ 40
-                /// @todo [future] default DPI here
-                CharsModel::drawChar(&painter, bounds, cp, color, hint, TableDraw::CUSTOM, 96);
+                /// @todo [future] default DPI here, DPI is unused right now
+                enum { DPI_STUB = 96 };
+                if (cp)
+                    CharsModel::drawChar(&painter, bounds, *cp, color, hint, TableDraw::CUSTOM, DPI_STUB);
             });
     default:
         return {};
@@ -1242,17 +1253,16 @@ void FmMain::showCopied(QAbstractItemView* table)
 void FmMain::copyCurrentThing(CurrThing thing)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
-    if (ch) {
-        QString q;
-        if (thing == CurrThing::SAMPLE
-                && ch->category().upCat == uc::UpCategory::MARK) {
-            q = uc::STUB_CIRCLE + str::toQ(ch->subj);
-        } else {
-            q = str::toQ(ch->subj);
-        }
-        QApplication::clipboard()->setText(q);
-        showCopied(ui->tableChars);
+    QString q;
+    if (thing == CurrThing::SAMPLE
+            && ch
+            && ch->category().upCat == uc::UpCategory::MARK) {
+        q = uc::STUB_CIRCLE + str::toQ(ch->subj);
+    } else {
+        q = str::toQ(ch.code);
     }
+    QApplication::clipboard()->setText(q);
+    showCopied(ui->tableChars);
 }
 
 
@@ -1335,9 +1345,6 @@ void FmMain::showCp(MaybeChar ch)
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
-
-    // Copy
-    ui->btCopy->setEnabled(ch.hasCp());
 
     hint.sample = uc::blockOf(ch.code, hint.sample);
     if (ch) {
@@ -1664,7 +1671,7 @@ void FmMain::showSearchResult(uc::SearchResult&& x)
         break;
     default:
         showSearchError(str::toQ(
-                uc::errorStrings[static_cast<int>(x.err)]));
+                uc::errorInfo[static_cast<int>(x.err)].message));
     }
 }
 
@@ -1685,6 +1692,13 @@ void FmMain::focusSearch()
 
 void FmMain::searchEnterPressed(int index)
 {
-    selectChar<SelectMode::INSTANT>(searchModel.lineAt(index).cp->subj);
+    auto line = searchModel.lineAt(index);
+    if (line.cp) {
+        selectChar<SelectMode::INSTANT>(line.cp->subj);
+    } else {
+        auto relRect = ui->listSearch->visualRect(searchModel.index(index, 0));
+        fmMessage.ensure(this)
+                 .showAtRel("Такого символа нет", ui->listSearch->viewport(), relRect);
+    }
 }
 

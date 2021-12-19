@@ -13,6 +13,7 @@ namespace uc {
     struct Cp;
 
     enum class SingleError {
+        // Not errors
         ONE,
         MULTIPLE,
         NO_SEARCH,          ///< Search did not occur at all
@@ -25,13 +26,19 @@ namespace uc {
         UNALLOCATED,
         RESERVED,           ///< Allocated but still reserved
         NN,
-        MIN_ERROR = MULTIPLE + 1
     };
     constexpr auto SingleError_N = static_cast<int>(SingleError::NN);
-    extern std::u8string_view errorStrings[SingleError_N];
+    enum class IsCp { NO, YES };
+    struct ErrorInfo {
+        IsCp ecIsCp;
+        std::u8string_view message;
+        bool isCp() const { return static_cast<bool>(ecIsCp); }
+    };
+    extern const ErrorInfo errorInfo[SingleError_N];
 
     struct SingleSearchResult {
-        SingleError err = SingleError::CONVERT_ERROR;
+        char32_t singleCode = 0;
+        SingleError err = SingleError::CONVERT_ERROR;        
         const uc::Cp* one = nullptr;
     };
 
@@ -47,10 +54,12 @@ namespace uc {
     };
 
     struct SearchLine {
-        const uc::Cp* cp;                   ///< code point
+        char32_t code = 0;                  ///< char code
+        SingleError type = SingleError::ONE;  ///< what found
+        const uc::Cp* cp = nullptr;         ///< code point
         std::u8string_view triggerName;     ///< name that triggered inclusion to search results
         srh::Prio prio;                     ///< its priority
-        // reverse order!!
+        /// @warning in reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const
             { return x.prio <=> prio; }
         static const SearchLine STUB;
@@ -61,7 +70,7 @@ namespace uc {
         SearchResult() = default;
         SearchResult(const SingleSearchResult& x) : SingleSearchResult(x) {}
         SearchResult(SafeVector<uc::SearchLine>&& v)
-            : SingleSearchResult { SingleError::MULTIPLE },  multiple(std::move(v)) {}
+            : SingleSearchResult { 0, SingleError::MULTIPLE },  multiple(std::move(v)) {}
     };
 
     /// @return [+] cp is noncharacter
