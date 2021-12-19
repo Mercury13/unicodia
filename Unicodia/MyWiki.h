@@ -74,8 +74,8 @@ namespace mywiki
     QString buildHtml(const uc::Term& x);
     QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(const char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
-    QString buildHtml(const uc::Cp& cp, const uc::Block* hint,
-            const std::optional<QFont>& font, QFontDatabase::WritingSystem ws);
+    QString buildHtml(const uc::Cp& cp, const std::optional<QFont>& font,
+                      QFontDatabase::WritingSystem qws);
     void appendStylesheet(QString& text);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
@@ -85,8 +85,8 @@ namespace mywiki
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
     void appendUtf(QString& text, str::QSep& sp, char32_t code);
-    void appendMissingCharInfo(QString& text, const uc::Block* hint, char32_t code);
-    QString buildNonCharHtml(char32_t code, const uc::Block* hint);
-    QString buildEmptyCpHtml(char32_t code, const QColor& color, const uc::Block* hint);
+    void appendMissingCharInfo(QString& text, char32_t code);
+    QString buildNonCharHtml(char32_t code);
+    QString buildEmptyCpHtml(char32_t code, const QColor& color);
 
 }   // namespace mywiki

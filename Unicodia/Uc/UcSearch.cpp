@@ -49,7 +49,7 @@ uc::SingleSearchResult uc::findCode(char32_t code)
         return { code, SingleError::PRIVATE_USE };
     if (code >= 0xD800 && code <= 0xDFFF)
         return { code, SingleError::SURROGATE };
-    auto v = uc::blockOf(code, 0);
+    auto v = uc::blockOf(code);
     if (code > v->endingCp)
         return { code, SingleError::UNALLOCATED };
 
@@ -230,7 +230,6 @@ uc::SearchResult uc::doSearch(QString what)
         }
 
         // SEARCH BY KEYWORD/mnemonic
-        const uc::Block* block = &uc::blocks[0];
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
@@ -242,7 +241,7 @@ uc::SearchResult uc::doSearch(QString what)
                     std::u8string_view name;
                 } best;
                 auto& cat = cp.category();
-                block = blockOf(cp.subj, block);
+                auto block = blockOf(cp.subj);
                 bool isNonScript =
                         (cp.ecCategory != EcCategory::SYMBOL_MODIFIER
                         && cat.upCat != UpCategory::LETTER

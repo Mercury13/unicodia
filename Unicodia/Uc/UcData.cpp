@@ -14,7 +14,8 @@
 #define NBSP "\u00A0"
 
 using namespace std::string_view_literals;
-uc::Cp* uc::cpsByCode[N_CHARS];
+const uc::Cp* uc::cpsByCode[N_CHARS];
+short uc::blocksByCode16[N_CHARS >> 4];
 const QString uc::Font::qempty;
 
 constexpr QChar ZWSP(0x200B);
@@ -4134,7 +4135,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11680, 0x116CF,
             "Takri", u8"Такри", {}, EcScript::Takr },
     // Ahom OK
-    { 0x11700, 0x1173F,
+    { 0x11700, 0x1174F,
             "Ahom", u8"Ахом", {}, EcScript::Ahom },
     // Dogra OK
     { 0x11800, 0x1184F,
@@ -5576,7 +5577,17 @@ Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
 
 void uc::completeData()
 {
-    const Block* hint = std::begin(blocks);
+    // Fill CP → block mapping
+    std::fill(std::begin(blocksByCode16), std::end(blocksByCode16), -1);
+    for (int iBlock = 0; iBlock < N_BLOCKS; ++iBlock) {
+        auto& block = blocks[iBlock];
+        auto i16 = block.startingCp >> 4;
+        auto end16 = block.endingCp >> 4;
+        for (; i16 <= end16; ++i16)
+            blocksByCode16[i16] = iBlock;
+    }
+
+    // Fill CP info
     std::fill(std::begin(cpsByCode), std::end(cpsByCode), nullptr);
     for (auto& cp : cpInfo) {
         // Bidi class
@@ -5590,11 +5601,10 @@ void uc::completeData()
         if (script.plane == PLANE_UNKNOWN)
             script.plane = cp.plane();
         // Block
-        auto block = blockOf(cp.subj.ch32(), hint);
+        auto block = blockOf(cp.subj);
         if (!block->firstAllocated)
             block->firstAllocated = &cp;
         ++block->nChars;
-        hint = block;
         block->ecVersion = std::min(block->ecVersion, cp.ecVersion);
         block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
         // Lookup table
@@ -5820,7 +5830,7 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint, int dpi) const
+uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
 {
     switch (drawMethod(dpi)) {
     case DrawMethod::SAMPLE:
@@ -5833,7 +5843,7 @@ uc::SampleProxy uc::Cp::sampleProxy(const Block*& hint, int dpi) const
         return {};
     }
 
-    auto& fn = font(hint);
+    auto& fn = font();
     auto style = fn.styleSheet;
     auto code = subj.ch32();
 
@@ -5918,25 +5928,24 @@ QString uc::Cp::osProxy() const
 }
 
 
-uc::EcScript uc::Cp::ecScriptEx(const Block*& hint) const
+uc::EcScript uc::Cp::ecScriptEx() const
 {
     if (ecScript != EcScript::NONE && ecScript != EcScript::Zinh)
         return ecScript;
-    hint = blockOf(subj, hint);
-    return hint->ecScript;
+    return block().ecScript;
 }
 
 
-const uc::Font& uc::Cp::firstFont(const Block*& hint) const
+const uc::Font& uc::Cp::firstFont() const
 {
     // Priority: block → script — block’s script
-    hint = blockOf(subj, hint);
+    auto& blk = block();
     // Block
-    if (hint->flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == UpCategory::MARK) {
+    if (blk.flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == UpCategory::MARK) {
         return fontInfo[static_cast<int>(EcFont::NOTO)];
     }
-    auto hfont = hint->ecFont;
-    if (hfont != EcFont::NORMAL || hint->flags.have(Bfg::FORCE_FONT)) {
+    auto hfont = blk.ecFont;
+    if (hfont != EcFont::NORMAL || blk.flags.have(Bfg::FORCE_FONT)) {
         return fontInfo[static_cast<int>(hfont)];
     }
     // Script
@@ -5946,13 +5955,13 @@ const uc::Font& uc::Cp::firstFont(const Block*& hint) const
             return si.font();
     }
     // Block’s script
-    return hint->script().font();
+    return blk.script().font();
 }
 
 
-const uc::Font& uc::Cp::font(const Block*& hint) const
+const uc::Font& uc::Cp::font() const
 {
-    auto v = &firstFont(hint);
+    auto v = &firstFont();
     bool isAlternate = flags.have(Cfg::ALT_FONT);
     auto sb = subj.uval();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
@@ -5966,12 +5975,12 @@ const uc::Font& uc::Cp::font(const Block*& hint) const
 }
 
 
-uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
+uc::TofuInfo uc::Cp::tofuInfo() const
 {
     uc::TofuInfo r;
     auto sb = subj.ch32();
-    r.block = hint = blockOf(sb, hint);
-    if (hint->flags.haveAny(Bfg::COLLAPSIBLE | Bfg::CJK)
+    r.block = &block();
+    if (r.block->flags.haveAny(Bfg::COLLAPSIBLE | Bfg::CJK)
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 
@@ -5979,7 +5988,7 @@ uc::TofuInfo uc::Cp::tofuInfo(const Block*& hint) const
     if (drawMethod(DPI_DUMMY) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
-        auto v = &firstFont(hint);
+        auto v = &firstFont();
         bool isAlternate = flags.have(Cfg::ALT_FONT);
         while (v->flags.have(Ffg::FALL_TO_NEXT)) {
             if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
@@ -6012,22 +6021,10 @@ SafeVector<std::u8string_view> uc::Cp::allRawNames() const
 }
 
 
-namespace {
-
-    bool isLessCB(char32_t x, const uc::Block& y)
-        { return (x < y.startingCp); }
-
-}   // anon namespace
-
-
-const uc::Block* uc::blockOf(char32_t subj, const Block* hint)
+const uc::Block* uc::blockOf(char32_t subj)
 {
-    auto it = hintedUpperBound(
-                std::begin(blocks), std::end(blocks), subj, isLessCB,
-                hint + 1);
-    if (it != std::begin(blocks))
-        --it;
-    return it;
+    auto q = blocksByCode16[subj >> 4];
+    return (q >= 0) ? &blocks[q] : nullptr;
 }
 
 

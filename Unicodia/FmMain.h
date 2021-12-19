@@ -118,13 +118,11 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
     std::optional<QFont> fontAt(const QModelIndex& index) const;
-    std::optional<QFont> fontAt(const uc::Cp& cp) const;
-    static std::optional<QFont> fontAt(const uc::Cp& cp, const uc::Block*& hint);
+    static std::optional<QFont> fontAt(const uc::Cp& cp);
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index, int aDpi = uc::DPI_ALL_CHARS) const;
-    QString textAt(const uc::Cp& cp, int aDpi = uc::DPI_ALL_CHARS) const;
-    static QString textAt(const uc::Cp& cp, const uc::Block*& hint, int dpi = uc::DPI_ALL_CHARS);
+    static QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS);
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -137,7 +135,6 @@ public:
     ///    [+] it is collapsed
     ///
     bool isCharCollapsed(char32_t code) const;
-    bool isCharCollapsed(char32_t code, const uc::Block*& hint) const;
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
@@ -146,8 +143,7 @@ public:
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
     static void drawChar(QPainter* painter, const QRect& rect,
-                const uc::Cp& cp, const QColor& color,
-                const uc::Block*& hint, TableDraw mode, int dpi);
+                const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi);
 protected:
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,
@@ -168,9 +164,6 @@ private:
     mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
-    mutable struct Hint {
-        const uc::Block* cell = &uc::blocks[0];
-    } hint;
 };
 
 
@@ -200,7 +193,6 @@ private:
     QWidget* const sample;
     SafeVector<uc::SearchLine> v;
     mutable LruCache<char32_t, QPixmap> cache { 300 };
-    mutable const uc::Block* hint = &uc::blocks[0];
 };
 
 
@@ -273,9 +265,6 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
-    mutable struct Hint {
-        const uc::Block* sample = &uc::blocks[0];
-    } hint;
 
     void initAbout();
     void showCp(MaybeChar ch);

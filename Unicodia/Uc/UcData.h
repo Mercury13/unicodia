@@ -657,15 +657,15 @@ namespace uc {
     constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
 
     constexpr int N_CHARS = 65536 * N_PLANES;
-    extern Cp* cpsByCode[N_CHARS];
+    extern const Cp* cpsByCode[N_CHARS];
+    extern short blocksByCode16[N_CHARS >> 4];
 
     // We’ll use this WS for Hani, we could take Japanese as well
     static constexpr auto WS_HANI = QFontDatabase::SimplifiedChinese;
 
     void completeData();
-    const Block* blockOf(char32_t subj, const Block* hint);
-    inline const Block* blockOf(char32_t subj, int iHint)
-        { return blockOf(subj, blocks + std::max(iHint, 0)); }
+    const Block* blockOf(char32_t subj);
+    inline const uc::Block& uc::Cp::block() const { return *blockOf(subj); }
 
     enum class EcTermCat {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM,
@@ -707,8 +707,8 @@ namespace uc {
     inline const Category& Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
     inline const BidiClass& Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
     inline const Script& Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-    inline const Script& Cp::scriptEx(const Block*& hint) const
-        { return scriptInfo[static_cast<int>(ecScriptEx(hint))]; }
+    inline const Script& Cp::scriptEx() const
+        { return scriptInfo[static_cast<int>(ecScriptEx())]; }
     inline bool Cp::isTrueSpace() const
             { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                       ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)

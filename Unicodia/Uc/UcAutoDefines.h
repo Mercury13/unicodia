@@ -456,12 +456,13 @@ namespace uc {
         const BidiClass& bidiClass() const;
         const Script& script() const;
         const Numeric& numeric() const;
-        EcScript ecScriptEx(const Block*& hint) const;
-        const Script& scriptEx(const Block*& hint) const;
-        const Font& firstFont(const Block*& hint) const;
-        const Font& font(const Block*& hint) const;
-        SampleProxy sampleProxy(const Block*& hint, int dpi) const;
+        EcScript ecScriptEx() const;
+        const Script& scriptEx() const;
+        const Font& firstFont() const;
+        const Font& font() const;
+        SampleProxy sampleProxy(int dpi) const;
         QString osProxy() const;
+        inline const Block& block() const;
 
         ///  @return [+] it is a true space, really white
         bool isTrueSpace() const;
@@ -472,7 +473,7 @@ namespace uc {
         QString viewableName() const;
         SafeVector<std::u8string_view> allRawNames() const;
         DrawMethod drawMethod(int dpi) const;
-        TofuInfo tofuInfo(const Block*& hint) const;
+        TofuInfo tofuInfo() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }

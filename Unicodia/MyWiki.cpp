@@ -689,8 +689,8 @@ void mywiki::appendStylesheet(QString& text)
 
 
 QString mywiki::buildHtml(
-        const uc::Cp& cp, const uc::Block* hint,
-        const std::optional<QFont>& font, QFontDatabase::WritingSystem ws)
+        const uc::Cp& cp, const std::optional<QFont>& font,
+        QFontDatabase::WritingSystem qws)
 {
     char buf[30];
     QString text;
@@ -743,7 +743,8 @@ QString mywiki::buildHtml(
         appendValuePopup(text, cp.bidiClass(), u8"В двунаправленном письме", "pb");
 
         // Block
-        appendBlock(text, *hint, sp);
+        auto& blk = cp.block();
+        appendBlock(text, blk, sp);
 
         auto comps = uc::cpOldComps(cp.subj);
         if (comps) {
@@ -765,7 +766,7 @@ QString mywiki::buildHtml(
         // Font
         if (font) {
             sp.sep();
-            FontLink lnk { font->family(), cp.subj, ws };
+            FontLink lnk { font->family(), cp.subj, qws };
             appendValuePopup(text, lnk, u8"Системный шрифт", "pf");
         }
 
@@ -794,13 +795,12 @@ QString mywiki::buildHtml(
         if (cp.ecCategory == uc::EcCategory::CONTROL && cp.subj.uval() < 0x80) {
             //  Control char description
             str::append(text, u8"<h2>Об управляющих символах</h2>");
-            appendWiki(text, *hint,
-                       uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
-        } else if (!hint->locDescription.empty()) {
+            appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
+        } else if (!blk.locDescription.empty()) {
             // Block description
             str::append(text, u8"<h2>О блоке</h2>");
-            appendWiki(text, *hint, hint->locDescription);
-        } else if (auto sc = cp.scriptEx(hint); &sc != uc::scriptInfo){
+            appendWiki(text, blk, blk.locDescription);
+        } else if (auto sc = cp.scriptEx(); &sc != uc::scriptInfo){
             // Script description
             str::append(text, u8"<h2>О письменности</h2>");
             mywiki::appendHtml(text, sc, false);
@@ -810,33 +810,33 @@ QString mywiki::buildHtml(
 }
 
 
-void mywiki::appendMissingCharInfo(QString& text, const uc::Block* hint, char32_t code)
+void mywiki::appendMissingCharInfo(QString& text, char32_t code)
 {
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
-    appendBlock(text, *hint, sp);
+    appendBlock(text, *uc::blockOf(code), sp);
     mywiki::appendUtf(text, sp, code);
 }
 
 
-QString mywiki::buildEmptyCpHtml(char32_t code, const QColor& color, const uc::Block* hint)
+QString mywiki::buildEmptyCpHtml(char32_t code, const QColor& color)
 {
     QString text;
     appendStylesheet(text);
     text += "<h1 style='color:" + color.name() + "'>Свободное место</h1>";
-    mywiki::appendMissingCharInfo(text, hint, code);
+    mywiki::appendMissingCharInfo(text, code);
     return text;
 }
 
 
-QString mywiki::buildNonCharHtml(char32_t code, const uc::Block* hint)
+QString mywiki::buildNonCharHtml(char32_t code)
 {
     QString text;
     appendStylesheet(text);
     str::append(text, u8"<h1>Выброшенная позиция</h1>"sv);
-    mywiki::appendMissingCharInfo(text, hint, code);
+    mywiki::appendMissingCharInfo(text, code);
     str::append(text, "<p>");
-    appendWiki(text, *hint, uc::TX_NOCHAR);
+    appendWiki(text, *uc::blockOf(code), uc::TX_NOCHAR);
     return text;
 }
 

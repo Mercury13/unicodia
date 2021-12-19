@@ -124,11 +124,10 @@ SafeVector<int> tofu::Model::build()
     Counter byPlane[uc::N_PLANES];
     Counter byBlock[uc::N_BLOCKS];
 
-    const uc::Block* hint = &uc::blocks[0];
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
         auto code = cp.subj.val();
-        auto tofuInfo = cp.tofuInfo(hint);
+        auto tofuInfo = cp.tofuInfo();
 
         all.reg(code, tofuInfo.state);
         byPlane[cp.plane()].reg(code, tofuInfo.state);

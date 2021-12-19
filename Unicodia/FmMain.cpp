@@ -191,27 +191,19 @@ int CharsModel::columnCount(const QModelIndex&) const
 
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
-    auto cp = charAt(index);
-    if (!cp)
-        return {};
-    return fontAt(*cp);
+    if (auto cp = charAt(index))
+        return fontAt(*cp);
+    return {};
 }
 
 
-std::optional<QFont> CharsModel::fontAt(
-        const uc::Cp& cp, const uc::Block*& hint)
+std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp)
 {
     static constexpr int DUMMY_DPI = 96;
     if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
         return {};
-    auto& font = cp.font(hint);
+    auto& font = cp.font();
     return font.get(uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
-}
-
-
-std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp) const
-{
-    return fontAt(cp, hint.cell);
 }
 
 
@@ -228,7 +220,7 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 {
     if (tcl != TableColors::NO) {
         if (isCjkCollapsed) {
-            auto block = uc::blockOf(cp.subj, hint.cell);
+            auto block = uc::blockOf(cp.subj);
             if (block->flags.have(uc::Bfg::COLLAPSIBLE))
                 return TX_CJK;
         }
@@ -246,13 +238,8 @@ QString CharsModel::textAt(const QModelIndex& index, int aDpi) const
 }
 
 
-QString CharsModel::textAt(const uc::Cp& cp, int aDpi) const
-    { return textAt(cp, hint.cell, aDpi); }
-
-QString CharsModel::textAt(const uc::Cp& cp, const uc::Block*& hint, int dpi)
-{
-    return cp.sampleProxy(hint, dpi).text;
-}
+QString CharsModel::textAt(const uc::Cp& cp, int dpi)
+    { return cp.sampleProxy(dpi).text; }
 
 
 QVariant CharsModel::data(const QModelIndex& index, int role) const
@@ -286,8 +273,8 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             auto cp = charAt(index);
             if (cp) {
                 if (isCjkCollapsed) {
-                    hint.cell = uc::blockOf(cp->subj, hint.cell);
-                    if (hint.cell->flags.have(uc::Bfg::COLLAPSIBLE))
+                    auto block = uc::blockOf(cp->subj);
+                    if (block->flags.have(uc::Bfg::COLLAPSIBLE))
                         return BG_CJK;
                 }
             } else {
@@ -365,9 +352,8 @@ void CharsModel::build()
 {
     beginResetModel();
     rows.clear();
-    const uc::Block* hint = &uc::blocks[0];
     for (auto& cp : uc::cpInfo) {
-        if (isCharCollapsed(cp.subj, hint))
+        if (isCharCollapsed(cp.subj))
             continue;
         addCp(cp);
     }
@@ -685,8 +671,7 @@ namespace {
 
 
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const uc::Cp& cp, const QColor& color,
-            const uc::Block*& hint, TableDraw mode, int dpi)
+            const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi)
 {
     switch (cp.drawMethod(dpi)) {
     case uc::DrawMethod::CUSTOM_CONTROL:
@@ -696,26 +681,26 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         drawAbbreviation(painter, rect, cp.abbrev(), color);
         break;
     case uc::DrawMethod::SPACE:
-        drawSpace(painter, rect, *fontAt(cp, hint), color, cp.subj);
+        drawSpace(painter, rect, *fontAt(cp), color, cp.subj);
         break;
     case uc::DrawMethod::CUSTOM_AA: {
-            auto font = *fontAt(cp, hint);
+            auto font = *fontAt(cp);
             font.setStyleStrategy(fst::CUSTOM_AA);
             painter->setFont(font);
             painter->setBrush(color);
             painter->setPen(color);
-            auto text = textAt(cp, hint);
+            auto text = textAt(cp);
             painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
         } break;
     case uc::DrawMethod::SAMPLE:
         if (mode == TableDraw::CUSTOM) {
             // Char
-            painter->setFont(*fontAt(cp, hint));
+            painter->setFont(*fontAt(cp));
             painter->setBrush(color);
             painter->setPen(color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
-                              textAt(cp, hint));
+                              textAt(cp));
         } break;
     }
     if (cp.isDeprecated())
@@ -730,7 +715,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        drawChar(painter, rect, *ch, color1, hint.cell, TABLE_DRAW, dpi);
+        drawChar(painter, rect, *ch, color1, TABLE_DRAW, dpi);
     }
 }
 
@@ -800,22 +785,15 @@ void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
 }
 
 
-bool CharsModel::isCharCollapsed(char32_t code, const uc::Block*& hint) const
+bool CharsModel::isCharCollapsed(char32_t code) const
 {
     if (isCjkCollapsed) {
-        auto blk = uc::blockOf(code, hint);
+        auto blk = uc::blockOf(code);
         return (blk->flags.have(uc::Bfg::COLLAPSIBLE)
                 && (code ^ static_cast<uint32_t>(blk->firstAllocated->subj)) >= NCOLS);
     } else {
         return false;
     }
-}
-
-
-bool CharsModel::isCharCollapsed(char32_t code) const
-{
-    const uc::Block* hint = &uc::blocks[0];
-    return isCharCollapsed(code, hint);
 }
 
 
@@ -879,7 +857,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 return s + line.cp->viewableName();
             case uc::SingleError::RESERVED:
                 return s + str::toQ(u8"Свободное место: ")
-                         + str::toQ(uc::blockOf(line.code, 0)->locName);
+                         + str::toQ(uc::blockOf(line.code)->locName);
             default:
                 return s + str::toQ(uc::errorInfo[static_cast<int>(line.type)].message);
             }
@@ -914,7 +892,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 /// @todo [future] default DPI here, DPI is unused right now
                 enum { DPI_STUB = 96 };
                 if (cp)
-                    CharsModel::drawChar(&painter, bounds, *cp, color, hint, TableDraw::CUSTOM, DPI_STUB);
+                    CharsModel::drawChar(&painter, bounds, *cp, color, TableDraw::CUSTOM, DPI_STUB);
             });
     default:
         return {};
@@ -1283,12 +1261,12 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
     ui->pageSampleCustom->setNormal();
 
     // Font
-    auto& font = ch.font(hint.sample);
+    auto& font = ch.font();
     ui->lbSample->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(hint.sample, uc::DPI_ALL_CHARS);
+    auto proxy = ch.sampleProxy(uc::DPI_ALL_CHARS);
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -1340,13 +1318,12 @@ void FmMain::showCp(MaybeChar ch)
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
-    auto block = uc::blockOf(ch.code, iBlock);
+    auto block = uc::blockOf(ch.code);
     int newIBlock = block->index();
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
 
-    hint.sample = uc::blockOf(ch.code, hint.sample);
     if (ch) {
         if (ch->isTrueSpace()) {
                 auto palette = this->palette();
@@ -1376,7 +1353,7 @@ void FmMain::showCp(MaybeChar ch)
         case uc::DrawMethod::SPACE: {
                 clearSample();
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-                auto& font = ch->font(hint.sample);
+                auto& font = ch->font();
                 auto qfont = font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
@@ -1395,7 +1372,7 @@ void FmMain::showCp(MaybeChar ch)
                 ui->lbOs->setFont(fontBig);
                 ui->lbOs->setText({});
             } else {
-                ws = ch->scriptEx(hint.sample).qtCounterpart;
+                ws = ch->scriptEx().qtCounterpart;
                 font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
                 if (font) {
                     ui->lbOs->setFont(*font);
@@ -1410,7 +1387,7 @@ void FmMain::showCp(MaybeChar ch)
             ui->lbOs->setText({});
         }
 
-        QString text = mywiki::buildHtml(*ch, hint.sample, font, ws);
+        QString text = mywiki::buildHtml(*ch, font, ws);
         ui->vwInfo->setText(text);
     } else {
         // No character
@@ -1418,11 +1395,11 @@ void FmMain::showCp(MaybeChar ch)
         ui->lbSample->setText({});
         ui->lbOs->setText({});
         if (uc::isNonChar(ch.code)) {
-            QString text = mywiki::buildNonCharHtml(ch.code, hint.sample);
+            QString text = mywiki::buildNonCharHtml(ch.code);
             ui->vwInfo->setText(text);
         } else {
             auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-            QString text = mywiki::buildEmptyCpHtml(ch.code, color, hint.sample);
+            QString text = mywiki::buildEmptyCpHtml(ch.code, color);
             ui->vwInfo->setText(text);
         }
     }
@@ -1530,7 +1507,7 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
     }
     if (auto cp = uc::cpsByCode[code]) {
         // Just get font, moving reference to nowhere
-        (void)cp->font(hint.sample);
+        (void)cp->font();
     }
     auto index = model.indexOf(code);
     ui->tableChars->setCurrentIndex(index);
@@ -1581,7 +1558,7 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
     if (index < 0)
         return;
     auto oldChar = model.charAt(ui->tableChars->currentIndex());
-    auto oldBlock = uc::blockOf(oldChar.code, index);
+    auto oldBlock = uc::blockOf(oldChar.code);
     if (oldBlock->index() != static_cast<size_t>(index)) {
         auto& newBlock = uc::blocks[index];
         selectChar<SelectMode::DEFERED>(newBlock.firstAllocated->subj);
