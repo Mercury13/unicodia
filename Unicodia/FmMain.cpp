@@ -894,7 +894,11 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                         painter.fillRect(bounds, brush);
                     } break;
                 case uc::CpType::PRIVATE_USE:
+                    drawAbbreviation(&painter, bounds, u8"PUA", color);
+                    break;
                 case uc::CpType::SURROGATE:
+                    drawAbbreviation(&painter, bounds, u8"SUR", color);
+                    break;
                 case uc::CpType::NN:
                 case uc::CpType::RESERVED:
                 case uc::CpType::UNALLOCATED: {
