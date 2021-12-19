@@ -902,7 +902,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 painter.drawRect(bounds1);
 
                 // OK w/o size, as 39 ≈ 40
-                /// @todo [bad] default DPI here
+                /// @todo [future] default DPI here
                 CharsModel::drawChar(&painter, bounds, cp, color, hint, TableDraw::CUSTOM, 96);
             });
     default:

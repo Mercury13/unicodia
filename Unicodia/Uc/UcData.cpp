@@ -1436,7 +1436,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).",
                 EcFont::KOREAN },
     // Kharoshthi OK, W10 tofu → installed Noto
-        /// @todo [portability] Ligature is created from a wrong sequence here
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
         u8"Кхароштхи", u8"IV век до н.э.",
@@ -4064,7 +4063,7 @@ constinit const uc::Block uc::blocks[] {
     // Sogdian OK
     { 0x10F30, 0x10F6F,
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
-    /// @todo [tofu] Old Uyghur
+    // Old Uyghur OK
     { 0x10F70, 0x10FAF,
             "Old Uyghur", u8"Староуйгурский", {},
             EcScript::Ougr },
@@ -4350,8 +4349,7 @@ constinit const uc::Block uc::blocks[] {
                     "Тем не менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, "
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
-    /// @todo [semi-tofu, P1] Check and take smth from Segoe UI Symbol
-    /// @todo [tofu, U14] #82 Persian semi-sharp / semi-flat
+    // Music OK
     { 0x1D100, 0x1D1FF,
             "Musical Symbols", u8"Музыкальные символы",
             u8"С X{{_}}века появилась нотная запись, похожая на современную. "
