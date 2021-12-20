@@ -2,7 +2,6 @@
 
 It is a simple Unicode encyclopedia and replacement for Character Map.
 * Right now Russian only.
-* Right now deep WIP
 * Right now Windows only.
 
 # How to compile?
