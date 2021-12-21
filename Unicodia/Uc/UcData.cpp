@@ -130,6 +130,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …4
       { FNAME_FUNKY },                                                          // …5
+      // Unlike Egyptian, OTF is poor;
+      // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },            // Egyptian
