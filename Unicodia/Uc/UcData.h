@@ -233,6 +233,7 @@ namespace uc {
         CHAKMA,
         CHAM,
         CHEROKEE,
+        CHORASMIAN,
         CJK,
           Z_CJK_1,
           Z_CJK_2,

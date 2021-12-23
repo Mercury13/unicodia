@@ -100,6 +100,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty }, // Chakma
     { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
+    { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
     { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                    // CJK
       { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
@@ -884,18 +885,15 @@ constinit const uc::Script uc::scriptInfo[] {
                 "среди индейцев, к 1830 грамотны были {{%|90}} чероки."
             "<p>С 1828 года Секвойя участвовал в переговорах с США за землю чероки.",
             EcFont::CHEROKEE },
-    // Chorasmian OK, built my own font
+    // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
         u8"Хорезмийский", u8"550 до н.э.",
         u8"хорезмийский",
         u8"Язык использовался в Хорезме в районе Амударьи до XIII{{_}}века, постепенно заменяясь персидским. "
                 "На этом языке говорили учёный Бируни и проповедник Замахшари{{-}}"
-                    "но письменность [[ps:Armi|арамейского]] происхождения ещё в VIII{{_}}веке заменили [[ps:Arab|арабицей]]."
-            "<p>Шрифт сделан автором Юникодии и откровенно плохого качества. "
-                "Найдёте лучше{{-}}сообщите. "
-                "Английская Википедия для объяснения языка пользуется арамейским алфавитом.",
-            EcFont::FUNKY },
+                    "но письменность [[ps:Armi|арамейского]] происхождения ещё в VIII{{_}}веке заменили [[ps:Arab|арабицей]].",
+            EcFont::CHORASMIAN },
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::AFRICA,
