@@ -888,7 +888,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
-        u8"Хорезмийский", u8"550 до н.э.",
+        u8"Хорезмийский", u8"II век (первые известные памятники)",
         u8"хорезмийский",
         u8"Язык использовался в Хорезме в районе Амударьи до XIII{{_}}века, постепенно заменяясь персидским. "
                 "На этом языке говорили учёный Бируни и проповедник Замахшари{{-}}"
