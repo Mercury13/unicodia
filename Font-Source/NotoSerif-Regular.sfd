@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1608594664
-ModificationTime: 1635236031
+ModificationTime: 1640941320
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -4356,7 +4356,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 2838 33 14
+WinInfo: 528 33 14
 BeginPrivate: 0
 EndPrivate
 Grid
@@ -115405,16 +115405,6 @@ Encoding: 647 647 1094
 Width: 352
 GlyphClass: 2
 Flags: W
-TtInstrs:
-PUSHB_2
- 0
- 1
-PUSHW_1
- 536
-PUSHB_1
- 53
-CALL
-EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 196 268 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 333 546 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 176 546 basechar 0
@@ -116602,16 +116592,6 @@ Encoding: 662 662 1109
 Width: 485
 GlyphClass: 2
 Flags: W
-TtInstrs:
-PUSHB_2
- 0
- 1
-PUSHW_1
- 751
-PUSHB_1
- 53
-CALL
-EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 497 -9 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 243 751 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 243 0 basechar 0
@@ -116624,7 +116604,7 @@ StartChar: uni0297
 Encoding: 663 663 1110
 Width: 492
 GlyphClass: 2
-Flags: W
+Flags: WO
 TtInstrs:
 NPUSHB
  53
