@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 657 1000"
+   id="svg4"
+   sodipodi:docname="1DF05.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.3595"
+     inkscape:cx="218.35883"
+     inkscape:cy="915.15994"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4"
+     inkscape:object-paths="true" />
+  <path
+     fill="currentColor"
+     d="m 337,991.32128 c -50.66667,0 -90.33333,-5 -119,-15 -28.66667,-10 -48.83333,-22.5 -60.5,-37.5 -11.66667,-15 -17.5,-30.16667 -17.5,-45.5 0,-19.33333 5.66667,-34.83333 17,-46.5 11.33333,-11.66667 18.33333,-17.5 45,-17.5 0,18 4.33333,35.83333 13,53.5 8.66667,17.66667 22,32.16667 40,43.5 18,11.33333 53,17 81,17 29.33333,0 56,-6.5 80,-19.5 24,-13 43.16667,-33.66667 57.5,-62 14.33333,-28.33333 21.5,-65.16667 21.5,-110.5 0,-116 -66.66667,-174 -200,-174 H 272 V 518.24061 L 446.74687,344 H 202 V 786.13908 H 108 V 150 C 108,120.66667 99.833333,102 83.5,94 67.166667,86 48,82 26,82 H 13 V 40 h 189 v 224 h 364 v 49 L 350,524.32128 c 46,2.66667 87.16667,11.33333 123.5,26 36.33333,14.66667 65.16667,37.5 86.5,68.5 21.33333,31 32,72.5 32,124.5 0,58 -12,105.16667 -36,141.5 -24,36.33333 -55.33333,63.16667 -94,80.5 -38.66667,17.33333 -80.33333,26 -125,26 z"
+     id="path2"
+     sodipodi:nodetypes="ssssscsssssssccccccssscccccccssssss" />
+  <path
+     fill="currentColor"
+     d="m 253,1080.0443 c -50.66667,0 -87.5,-11.5 -110.5,-34.5 -23,-23 -34.5,-63.1667 -34.5,-120.50001 V 495.04428 l 94,-5 v 438.00001 c 0,34.00001 7,59.00001 21,75.00001 14,16 32.33333,24 55,24 12,0 23,-0.6667 33,-2 10,-1.3333 20.33333,-3 31,-5 v 44 c -8.66667,4 -21.66667,7.6667 -39,11 -17.33333,3.3333 -34,5 -50,5 z"
+     id="path2-2"
+     sodipodi:nodetypes="sssccssssccss" />
+</svg>

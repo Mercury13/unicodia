@@ -4447,7 +4447,7 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended-G", u8"Латиница расширенная G",
             u8"Различные символы для расстройств речи и фонетики: "
                     "мягкие и ретрофлексные (получаемые загибанием языка назад к нёбу) звуки, щелчки и некоторые другие.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::FUNKY },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F,
             "Glagolitic Supplement", u8"Глаголица дополнительная",
