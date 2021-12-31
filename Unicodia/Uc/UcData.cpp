@@ -3993,7 +3993,7 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended-F", u8"Латиница расширенная F",
             u8"Модификатор AA используется в нотации расстройств речи (VoQS). "
                 "Остальные{{-}}в фонетике и означают звуки, проговариваемые не полностью.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::FUNKY },
     // Cypriot OK
     { 0x10800, 0x1083F,
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
