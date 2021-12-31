@@ -4442,7 +4442,7 @@ constinit const uc::Block uc::blocks[] {
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF,
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
-    /// @todo [tofu] Latin ex G
+    // Latin ex G OK, drew in FunkySample
     { 0x1DF00, 0x1DFFF,
             "Latin Extended-G", u8"Латиница расширенная G",
             u8"Различные символы для расстройств речи и фонетики: "
