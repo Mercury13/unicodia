@@ -3988,7 +3988,7 @@ constinit const uc::Block uc::blocks[] {
     // Linear A OK
     { 0x10600, 0x1077F,
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
-    /// @todo [tofu] #52 Latin ex F
+    // Latin ex F OK, drew in FunkySample
     { 0x10780, 0x107BF,
             "Latin Extended-F", u8"Латиница расширенная F",
             u8"Модификатор AA используется в нотации расстройств речи (VoQS). "
