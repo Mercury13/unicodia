@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 587 1000"
+   id="svg4"
+   sodipodi:docname="Yturned-Medium.svg"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.719"
+     inkscape:cx="294.15855"
+     inkscape:cy="499.30459"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="currentColor"
+     d="M535 74q-68 0 -111.5 25t-70 68t-42.5 99l184 437q13 30 27.5 40t41.5 10h3v47h-252v-45h3q60 0 60 -45q0 -16 -9 -38l-72 -179q-14 -35 -26 -73t-16 -61q-6 26 -16.5 56t-18.5 54l-67 195q-9 24 -9 44q0 47 67 47h3v45h-213v-45h3q29 0 44.5 -15.5t31.5 -61.5l152 -417 q26 -73 50 -119t54 -72t74.5 -36t113.5 -10h11v50z"
+     id="path2" />
+  <path
+     id="path1133"
+     d="m 209.60084,104.79555 c -24.00001,0 -43.50001,4.83333 -58.50001,14.5 -15,9.66667 -26,21.33333 -33,35 -7,13.66667 -10.5,26.83333 -10.5,39.5 0,30.66667 9.16667,54.16667 27.5,70.5 18.33333,16.33333 48.83333,24.5 91.5,24.5 h 211 v -50 H 289.00278 c -5.79543,-85.33436 -36.74695,-134 -79.40194,-134 z m -10,50 c 12.66666,0 22.16666,4.83333 28.49999,14.5 6.33333,9.66667 9.5,23.16667 9.5,40.5 v 29 h -9 c -22.66666,0 -39.5,-4.33333 -50.5,-13 -11,-8.66667 -16.5,-19.66667 -16.5,-33 0,-10 3.33333,-18.83333 10,-26.5 6.66668,-7.66667 16,-11.5 28.00001,-11.5 z"
+     sodipodi:nodetypes="csssscccccssscsssss" />
+</svg>
