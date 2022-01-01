@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1641057940
+ModificationTime: 1641058258
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -32,8 +32,8 @@ OS2TypoAOffset: 1
 OS2TypoDescent: 0
 OS2TypoDOffset: 1
 OS2TypoLinegap: 0
-OS2WinAscent: 0
-OS2WinAOffset: 1
+OS2WinAscent: 1069
+OS2WinAOffset: 0
 OS2WinDescent: 0
 OS2WinDOffset: 1
 HheadAscent: 0
@@ -47092,7 +47092,7 @@ EndChar
 StartChar: u107AF
 Encoding: 67503 67503 430
 Width: 202
-Flags: WO
+Flags: W
 HStem: 143.005 36.5986<126.312 197.395> 572.588 35.999<114.245 192.241> 572.588 25.7988<3.24902 43.4852>
 VStem: 48.2471 65.998<193.838 572.588> 80.6465 33.5986<634.634 682.384>
 TtInstrs:
