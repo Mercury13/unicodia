@@ -165,7 +165,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "PALMYRENE",      Dicf::TRIG_SCRIPT },
     { "PAU",            { Dicf::TRIG_THREE_WORD_SCRIPT, {}, "CIN"sv, "HAU"sv } },
     { "PERMIC",         Dicf::TRIG_SCRIPT },
-    { "PERSIAN",        Dicf::TRIG_SCRIPT },
+    { "PERSIAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "PHAISTOS",       { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "DISC" } },
     { "PHAGS-PA",       Dicf::TRIG_SCRIPT },
     { "PAHLAVI",        Dicf::TRIG_SCRIPT },
@@ -193,7 +193,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SUNDANESE",      Dicf::TRIG_SCRIPT },
     { "SYLOTI",         Dicf::TRIG_SCRIPT },
     { "NAGRI",          Dicf::TRIG_SCRIPT },
-    { "SOGDIAN",        Dicf::TRIG_SCRIPT },
+    { "SOGDIAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "SYRIAC",         Dicf::TRIG_SCRIPT },
     { "TAGBANWA",       Dicf::TRIG_SCRIPT },
     { "TAKRI",          Dicf::TRIG_SCRIPT },
@@ -227,8 +227,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ZANABAZAR",      Dicf::TRIG_SCRIPT },
     { "ZNAMENNY",       Dicf::TRIG_SCRIPT },
 
-    { "OCR"sv,          Dicf::CAP_ALL },
-    { "MICR"sv,         Dicf::CAP_ALL },
+    { "OCR",            Dicf::CAP_ALL },
+    { "MICR",           Dicf::CAP_ALL },
 
     // Capitalize next
     { "AFFIX",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -243,28 +243,28 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LETTER",         Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGRAPH",        Dicf::TRIG_CAP_NEXT | Dicf::PART_NOUN | Dicf::CAP_SMALL },
     /// @todo [spelling] Ligature Alpha Bravo — how to kick?
-    { "LIGATURE"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "LOGICAL"sv,      Dicf::TRIG_CAP_NEXT },
-    { "LOGOGRAM"sv,     Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "MARK"sv,         Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "LIGATURE",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "LOGICAL",        Dicf::TRIG_CAP_NEXT },
+    { "LOGOGRAM",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "MARK",           Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "NEUME",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "NUMBER"sv,       Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "NUMERAL"sv,      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "NUMERATOR"sv,    Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "PADA"sv,         Dicf::IF_SCRIPT | Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT },
-    { "PATTERN"sv,      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "PUNCTUATION"sv,  Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "RADICAL"sv,      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "SIGN"sv,         Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "SYMBOL"sv,       Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "SYLLABICS"sv,    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "SYLLABLE"sv,     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
-    { "VOWEL"sv,        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "NUMBER",         Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "NUMERAL",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "NUMERATOR",      Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "PADA",           Dicf::IF_SCRIPT | Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT },
+    { "PATTERN",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "PUNCTUATION",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "RADICAL",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "SIGN",           Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "SYMBOL",         Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "SYLLABICS",      Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "SYLLABLE",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "VOWEL",          Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
 
     // Mixed
-    { "TONE"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
-    { "WORD"sv,         Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
-    { "REPETITION"sv,   Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "TONE",           Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "WORD",           Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "REPETITION",     Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
     // American tribes
     { "AIVILIK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
@@ -275,8 +275,8 @@ const std::map<std::string_view, DicEntry> dictionary {
       // CREE here
       { "BIBLE-CREE",   { Dicf::PART_ADJECTIVE, "Bible-Cree" } },
       { "MOOSE-CREE",   { Dicf::PART_ADJECTIVE, "Moose-Cree" } },
-      { "N-CREE"sv,     { Dicf::PART_ADJECTIVE, "N-Cree" } },
-      { "R-CREE"sv,     { Dicf::PART_ADJECTIVE, "R-Cree" } },
+      { "N-CREE",       { Dicf::PART_ADJECTIVE, "N-Cree" } },
+      { "R-CREE",       { Dicf::PART_ADJECTIVE, "R-Cree" } },
       { "TH-CREE",      { Dicf::PART_ADJECTIVE, "Th-Cree" } },
       { "WEST-CREE",    { Dicf::PART_ADJECTIVE, "West-Cree" } },
       { "WOODS-CREE",   { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Woods-Cree" } },
@@ -321,7 +321,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ASSYRIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "BOHAIRIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ELAMITE",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "JAIN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "JAIN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },    
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
@@ -722,7 +722,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     //{ "AND",            Dicf::CAP_SMALL },    // Tricky word, all And’s are tested manually
     { "JOINER",         Dicf::CAP_SMALL },
     //{ "ABOVE",          Dicf::CAP_SMALL },    // Tricky word, all above’s are tested manually
-    { "FOR"sv,          Dicf::CAP_SMALL },
+    { "FOR",            Dicf::CAP_SMALL },
 };
 
 
@@ -1025,6 +1025,8 @@ const std::multiset<PrefixEntry> prefixes {
     { { "PAHAWH"sv, "HMONG"sv, "CONSONANT"sv }, PrefixAction::NEXT_CAP },   // Consonant is tricky
     { { "SHORTHAND"sv, "FORMAT"sv }, PrefixAction::REST_CAPSMALL },
     { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, PrefixAction::NEXT_CAP },
+    { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
+    { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
 };
 
 
