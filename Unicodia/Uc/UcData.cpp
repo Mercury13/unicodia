@@ -917,7 +917,8 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Примерно по 30 символам у исследователей есть консенсус, но перспективы полной расшифровки туманны: "
                     "доступны 250 надписей общей длиной 2500 знаков. "
                 "Для сравнения: в нерасшифрованном линейном письме А{{-}}7{{_}}тыс., "
-                    "в [[ps:Linb|линейном письме Б]] на момент расшифровки{{-}}30{{_}}тыс." },
+                    "в [[ps:Linb|линейном письме Б]] на момент расшифровки{{-}}30{{_}}тыс.",
+                EcFont::FUNKY },
     // Cypriot OK, W10 Segoe Historic
     { "Cprt", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
