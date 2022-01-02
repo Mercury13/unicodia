@@ -419,11 +419,12 @@ namespace uc {
         ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
         CELL_BIGGER   = 1<<11,  ///< Make cell text a bit smaller
-        STUB_FINEGRAINED =1<<12, ///< Stub on/off is controlled on finer level
+        STUB_FINEGRAINED=1<<12, ///< Stub on/off is controlled on finer level
         SUPPORTS_ALL  = 1<<13,  ///< Font supports all characters that fall to it
                                 ///< (used for tofu stats)
         STUB_RTL      = 1<<14,  ///< Use “RtL isolate” char in stub
         CUSTOM_AA     = 1<<15,  ///< Use custom antialiasing in table
+        STUB_INTERCHAR= 1<<16,  ///< Debug: test inter-character interval
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 

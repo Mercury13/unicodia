@@ -67,7 +67,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
-    { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky
+    { FNAME_FUNKY, Ffg::DESC_BIGGER | Ffg::STUB_INTERCHAR },                    // Funky
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
