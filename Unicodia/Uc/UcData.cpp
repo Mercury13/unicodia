@@ -67,7 +67,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
-    { FNAME_FUNKY, Ffg::DESC_BIGGER | Ffg::STUB_INTERCHAR },                    // Funky
+    { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
@@ -5887,6 +5887,8 @@ uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
         break;
     default: ;
     }
+    if (fn.flags.have(Ffg::STUB_INTERCHAR))
+        return { str::toQ(code) + str::toQ(code), style };
     return { str::toQ(code), style };
 }
 
