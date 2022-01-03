@@ -906,7 +906,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Общаются копты [[ps:Arab|по-арабски]], как разговорный коптский умер от XVII до XIX{{_}}века."
             "<p>С Юникода 4.1 (2005) коптский отделён от греческого.",
                 EcFont::COPTIC },
-    /// @todo [tofu] Cypro-Minoan
+    // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Кипро-минойская", u8"≈1550 до н.э. (первые известные надписи)",
@@ -4210,7 +4210,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x12480, 0x1254F,
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
-    /// @todo [tofu] #58 Cypro-Minoan
+    // Cypro-Minoan OK
     { 0x12F90, 0x12FFF,
             "Cypro-Minoan", u8"Кипро-минойская", {},
             EcScript::Cpmn },
