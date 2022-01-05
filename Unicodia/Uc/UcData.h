@@ -607,6 +607,8 @@ namespace uc {
         char32_t subj;
         EcContinent ecContinent;
         Flags<Ifg> flags {};
+
+        const Cp& cp() const;
     };
 
     struct Block
@@ -775,3 +777,5 @@ namespace uc {
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
     { return uc::StyleSheet{std::string_view { data, n }}; }
+
+inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
