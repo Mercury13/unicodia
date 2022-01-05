@@ -576,20 +576,43 @@ namespace uc {
     struct Cp;
 
     enum class Bfg {
-        COLLAPSIBLE     = 1<<0,     /// [+] collapsible CJK
-        HAS_32_NONCHARS = 1<<1,     /// [+] block has 32 non-characters
-        FORCE_FONT      = 1<<2,     /// [+] force NORMAL font
-        UNGLITCH_MARKS  = 1<<3,     /// [+] every combining will be from NOTO
-        SCRIPTLIKE      = 1<<4,     /// [+] keywords like LETTER behave as in script
-        CJK             = 1<<5,     /// [+] Non-collapsible CJK
-        EXPERIMENT      = 1<<8,     /// Left for experiments
+        COLLAPSIBLE     = 1<<0,     ///< [+] collapsible CJK
+        HAS_32_NONCHARS = 1<<1,     ///< [+] block has 32 non-characters
+        FORCE_FONT      = 1<<2,     ///< [+] force NORMAL font
+        UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
+        SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
+        CJK             = 1<<5,     ///< [+] Non-collapsible CJK
+        EXPERIMENT      = 1<<8,     ///< Left for experiments
     };
 
     DEFINE_ENUM_OPS(Bfg)
 
+    enum class Ifg {
+        CONTINENT_OK    = 1<<0,     ///< [+] disable auto-check, continent is really OK
+        // These flags are merely informational and do nothing,
+        // and certify that the icon is synthesized approximately because of…
+        APPROX_2_CHARS  = 1<<10,    ///< [+] 2 chars on icon
+        APPROX_ROTATED  = 1<<11,    ///< [+] rotated text on icon
+        APPROX_LINES    = 1<<12,    ///< [+] lines on icon
+        APPROX_COLLECTIVE=1<<13,    ///< [+] icon contains collective image, not specific char
+        APPROX_COLOR    = 1<<14,    ///< [+] icon is multi-colour
+        APPROX_HISTORICAL=1<<15,    ///< [+] icon is from historical font with © issues
+        // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
+        // dotted circle completely → no flag for such approximation
+    };
+    DEFINE_ENUM_OPS(Ifg)
+
+    struct SynthIcon
+    {
+        char32_t subj;
+        EcContinent ecContinent;
+        Flags<Ifg> flags {};
+    };
+
     struct Block
     {
         char32_t startingCp, endingCp;
+        SynthIcon synthIcon;
         std::string_view name;
         std::u8string_view locName;
 

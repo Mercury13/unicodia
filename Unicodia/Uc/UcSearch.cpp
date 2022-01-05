@@ -75,7 +75,8 @@ uc::SingleResult uc::findCode(char32_t code)
     if (!v || code > v->endingCp)
         return { code, CpType::UNALLOCATED };
 
-    return { code, CpType::RESERVED, v->firstAllocated };
+    /// @todo [urgent] We go to that synth icon character, what to do?
+    return { code, CpType::RESERVED, cpsByCode[v->synthIcon.subj] };
 }
 
 

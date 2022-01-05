@@ -748,7 +748,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::BHAIKSUKI },
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
-        EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
         u8"Бопомофо (чжуинь)", u8"1913",
         u8"китайский",
         u8"Бопомофо (по первым четырём буквам), или чжуинь фухао{{-}}китайская фонетическая система, придуманная У Чжихуэем в 1912–13 "
@@ -1243,7 +1243,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::GURMUKHI },
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
-        EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
         u8"Хангыль", u8"1443",
         u8"корейский",
         u8"Хангыль (мужской род!){{-}}корейское алфавитно-слоговое письмо. "
@@ -1260,9 +1260,9 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1946, после освобождения от Японии, опубликована новая орфография. "
                 "Единственная письменность Северной Кореи и основная{{-}}в Южной.",
                 EcFont::KOREAN },
-    // Hani will never be OK, what a pity…
+    // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
-        EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA,
+        EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Китайские иероглифы", u8"около 2000 до н.э.",
         u8"китайский, японский, ранее вьетнамский и корейский",
         u8"Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, "
@@ -1314,7 +1314,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "С появлением государства Израиль иврит снова сделали языком повседневного общения.",
                 EcFont::HEBREW },
     { "Hent", QFontDatabase::Japanese,
-        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::OCEAN,
+        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Хэнтайгана", u8"≈X век",
         u8"японский",
         // For translators: устав = uncial, «китайские порномультики» = Japornimation
@@ -1330,7 +1330,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::HENTAIGANA },
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
-        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::ASIA,
+        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Хирагана", u8"VIII—IX век",
         u8"японский",
         // For translator: окончание = suffix
@@ -1360,7 +1360,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::ANATOLIAN },
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
-        EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AMERICA,
+        EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Пахау хмонг", u8"1959 (первая версия)",
         u8"языки белых и зелёных хмонгов",
         // For translator: тон-гвоздик = tack for tone, author = Shong Lue Yang, первая версия = stage 1
@@ -1489,7 +1489,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::KHOJKI },
     // Khitan small OK, installed a font
     { "Kits", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::ASIA,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::CJK,
         u8"Малое киданьское письмо", u8"X век",
         u8"киданьский ''(северо-восточный Китай)''",
         u8"Использовалось в государстве Ляо (северо-восточный Китай). "
@@ -1964,7 +1964,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::NKO },
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::ASIA,
+        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::CJK,
         u8"Нюй-шу", u8"900 (предположительно) … 1300 (точно)",
         u8"один из диалектов сянского ''(Хунань, Китай)''",
         u8"Нюй-шу существовало веками и использовалось как женское письмо: [[ps:Hani|грамоте]] учили мужчин, а женщины "
@@ -2465,7 +2465,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::TAGBANWA },
     // Takri OK, W10 none → installed Google Noto
     { "Takr", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Такри", u8"≈XVI век",
         u8"малые языки Северной Индии и Пакистана",
         u8"Происходит из [[ps:Shrd|шарады]]. "
@@ -2527,7 +2527,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::TAMIL },
     // Tangut OK, installed Google Noto
     { "Tang", QFontDatabase::Any,
-        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::TANGUT, EcContinent::ASIA,
+        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::TANGUT, EcContinent::CJK,
         u8"Тангутский", u8"1036",
         u8"тангутский ''(северо-западный Китай)''",
         u8"Очень сложная иероглифическая система, существовавшая в тангутском царстве Си Ся (северо-западный Китай). "
@@ -2715,7 +2715,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::VAI },
     // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Виткутьский алфавит (албанский)", u8"1844 (первый известный источник)",
         u8"албанский",
         u8"Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. "
@@ -2810,7 +2810,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::YEZIDI },
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
+        EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"И (носу)", u8"1974 (слоговая)",
         u8"и ''(Китай)''",
         u8"Первый известный экземпляр старого (иероглифического) письма '''и''' датируется ≈1500, но письмо наверняка намного старше. "
@@ -2943,23 +2943,25 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F,
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE },
             "Basic Latin", u8"Латиница базовая", CT_ASCII, uc::EcScript::Latn },
     // Latin-1 OK
-    { 0x0080, 0x00FF,
+    { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
             "Latin-1 Supplement", u8"Латиница-1", CT_LATIN1, EcScript::Latn },
     // Latin extended A OK
-    { 0x0100, 0x017F,
+    { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE },
             "Latin Extended-A", u8"Латиница расширенная A",
             u8"Содержит символы языков Центральной и Восточной Европы, Прибалтики, кельтских, а также саамского, мальтийского, "
-                "турецкого, эсперанто и некоторых других." },
+                "турецкого, эсперанто и некоторых других.",
+            EcScript::Latn },
     // Latin extended B OK
-    { 0x0180, 0x024F,
+    { 0x0180, 0x024F, { 0x188, EcContinent::EUROPE },
             "Latin Extended-B", u8"Латиница расширенная B",
             u8"Содержит символы словенского, хорватского, румынского, ливского, чжуанского, пиньиня (латинизации китайского), африканских, "
-                    "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР." },
+                    "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР.",
+            EcScript::Latn },
     // IPA extensions OK
-    { 0x0250, 0x02AF,
+    { 0x0250, 0x02AF, { 0x259, EcContinent::NONE },
             "IPA Extensions", u8"Расширения МФА",
             u8"Международный фонетический алфавит на основе латинского используется языковедами, логопедами, певцами и актёрами, "
                     "чтобы передавать произношение языков. Для передачи дополнительных особенностей речи{{-}}шепелявости, скрипа зубов "
@@ -2972,7 +2974,7 @@ constinit const uc::Block uc::blocks[] {
                     "как «Янни»."
                 "<p>А ещё символы МФА позволяют перевернуть текст шутки ради." },
     // Spacing letter modifiers OK
-    { 0x02B0, 0x02FF,
+    { 0x02B0, 0x02FF, { 0x2D0, EcContinent::NONE },
             "Spacing Modifier Letters", u8"Протяжённые модификаторы букв",
             u8"Модификаторы букв используются в фонетике и языкознании, чтобы передать тоны, длину, мягкость, "
                     "не полностью проговариваемые и условные звуки: "
@@ -2982,7 +2984,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::NORMAL,
             Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
-    { 0x0300, 0x036F,
+    { 0x0300, 0x036F, { 0x301, EcContinent::NONE },
             "Combining Diacritical Marks", u8"Диакритические метки",
             u8"Диакритические знаки{{-}}надстрочные, подстрочные или внутристрочные знаки, прикрепляемые к букве и изменяющие "
                     "или уточняющие её значение. Например, точки над Ё или ударéние."
@@ -2996,16 +2998,16 @@ constinit const uc::Block uc::blocks[] {
                     "монолитными символами. Ударение другой буквой не{{_}}считается, к тому же сразу в нескольких шрифтах Windows "
                     "его неудачно нарисовали{{-}}потому нередко ударные русские буквы имитируют похожими монолитными латинскими." },
     // Greek and Coptic OK
-    { 0x0370, 0x03FF,
+    { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Greek and Coptic", u8"Греческий и коптский",
             u8"[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов."
                 "<p>[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом." },
     // Cyrillic OK
-    { 0x0400, 0x04FF,
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE },
             "Cyrillic", u8"Кириллица", {},
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
     // Cyrillic supplement OK
-    { 0x0500, 0x052F,
+    { 0x0500, 0x052F, { 0x524, EcContinent::EUROPE },
             "Cyrillic Supplement", u8"Кириллица дополнительная",
             u8"Буквы нескольких мелких кириллических языков: абзахского, курдского ''(как нацменьшинства СССР)'', коми, "
                     "мордовского, алеутского, азербайджанского ''(ныне на [[ps:Latn|латинице]])'' "
@@ -3016,42 +3018,42 @@ constinit const uc::Block uc::blocks[] {
                     "что и дало букве {{sm|Ԥ}} место в Юникоде.",
             EcScript::Cyrl },
     // Armenian OK
-    { 0x0530, 0x058F,
+    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA },
             "Armenian", u8"Армянский", {}, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
-    { 0x0590, 0x05FF,
+    { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA },
             "Hebrew", u8"Иврит", {}, EcScript::Hebr },
     // Arabic OK
-    { 0x0600, 0x06FF,
+    { 0x0600, 0x06FF, { 0x636, EcContinent::ASIA },
             "Arabic", u8"Арабский", {}, EcScript::Arab },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
-    { 0x0700, 0x074F,
+    { 0x0700, 0x074F, { 0x71B, EcContinent::ASIA },
             "Syriac", u8"Сирийский", {}, EcScript::Syrc },
     // Arabic supplement OK
-    { 0x0750, 0x077F,
+    { 0x0750, 0x077F, { 0x762, EcContinent::ASIA },
             "Arabic Supplement", u8"Арабский дополнительный",
             u8"Буквы для языков Африки, Пакистана и раннего персидского.",
             EcScript::Arab },
     // Thaana OK
-    { 0x0780, 0x07BF,
+    { 0x0780, 0x07BF, { 0x798, EcContinent::OCEAN },
             "Thaana", u8"Тана", {}, EcScript::Thaa },
     // N’ko OK
-    { 0x07C0, 0x07FF,
+    { 0x07C0, 0x07FF, { 0x7D0, EcContinent::AFRICA },
             "NKo", u8"Нко", {}, EcScript::Nkoo },
     // Samaritan OK
-    { 0x0800, 0x083F,
+    { 0x0800, 0x083F, { 0x800, EcContinent::ASIA },
             "Samaritan", u8"Самаритянский", {}, EcScript::Samr },
     // Mandaic OK
-    { 0x0840, 0x085F,
+    { 0x0840, 0x085F, { 0x84C, EcContinent::ASIA },
             "Mandaic", u8"Мандейский", {}, EcScript::Mand },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
-    { 0x0860, 0x086F,
+    { 0x0860, 0x086F, { 0x862, EcContinent::ASIA },
             "Syriac Supplement", u8"Сирийский дополнительный",
             u8"Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века.",
             EcScript::Syrc },
     // Arabic ex B OK, Sceherazade updated in Nov 2021
-    { 0x0870, 0x089F,
+    { 0x0870, 0x089F, { 0x877, EcContinent::ASIA },
             "Arabic Extended-B", u8"Арабский расширенный B",
             u8"Символы из комментариев к Корану. "
                     "Также бошняцкий (запись сербохорватского арабскими буквами), "
@@ -3059,7 +3061,7 @@ constinit const uc::Block uc::blocks[] {
                         "египетский пиастр (валюта до 1834) и египетский фунт (современная валюта).",
             EcScript::Arab },
     // Arabic ex A OK
-    { 0x08A0, 0x08FF,
+    { 0x08A0, 0x08FF, { 0x8A4, EcContinent::ASIA },
             "Arabic Extended-A", u8"Арабский расширенный A",
             u8"Дополнительные арабские буквы для рохинджа ''(Мьянма)'', белорусского, татарского, башкирского, "
                     "арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' "
@@ -3067,113 +3069,113 @@ constinit const uc::Block uc::blocks[] {
                     "Также знаки комментариев к Корану.",
             EcScript::Arab },
     // Devanagari OK
-    { 0x0900, 0x097F,
+    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA },
             "Devanagari", u8"Деванагари", {}, EcScript::Deva },
     // Bengali OK
-    { 0x0980, 0x09FF,
+    { 0x0980, 0x09FF, { 0x98B, EcContinent::ASIA },
             "Bengali", u8"Бенгальский", {}, EcScript::Beng },
     // Gurmukhi OK
-    { 0x0A00, 0x0A7F,
+    { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA },
             "Gurmukhi", u8"Гурмукхи", {}, EcScript::Guru },
     // Gujarati OK, Google Noto + FORCE_TOFU show nothing
-    { 0x0A80, 0x0AFF,
+    { 0x0A80, 0x0AFF, { 0xA9B, EcContinent::ASIA },
             "Gujarati", u8"Гуджарати", {}, EcScript::Gujr },
     // Oriya OK, Noto + everything bad manually fixed
-    { 0x0B00, 0x0B7F,
+    { 0x0B00, 0x0B7F, { 0xB1C, EcContinent::ASIA },
             "Oriya", u8"Ория", {}, EcScript::Orya },
     // Tamil OK, font pair is good
-    { 0x0B80, 0x0BFF,
+    { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA },
             "Tamil", u8"Тамильский", {}, EcScript::Taml },
     // Telugu OK
-    { 0x0C00, 0x0C7F,
+    { 0x0C00, 0x0C7F, { 0xC1C, EcContinent::ASIA },
             "Telugu", u8"Телугу", {}, EcScript::Telu },
     // Kannada OK
-    { 0x0C80, 0x0CFF,
+    { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA },
             "Kannada", u8"Каннада", {}, EcScript::Knda },
     // Malayalam OK
-    { 0x0D00, 0x0D7F,
+    { 0x0D00, 0x0D7F, { 0xD16, EcContinent::ASIA },
             "Malayalam", u8"Малаялам", {}, EcScript::Mlym },
     // Sinhala OK
-    { 0x0D80, 0x0DFF,
+    { 0x0D80, 0x0DFF, { 0xD9A, EcContinent::OCEAN },
             "Sinhala", u8"Сингальский", {}, EcScript::Sinh },
     // Thai OK
-    { 0x0E00, 0x0E7F,
+    { 0x0E00, 0x0E7F, { 0xE0A, EcContinent::ASIA },
             "Thai", u8"Тайский", {}, EcScript::Thai },
     // Lao OK
-    { 0x0E80, 0x0EFF,
+    { 0x0E80, 0x0EFF, { 0xE9D, EcContinent::ASIA },
             "Lao", u8"Лаосский", {}, EcScript::Laoo },
     // Tibetan OK
-    { 0x0F00, 0x0FFF,
+    { 0x0F00, 0x0FFF, { 0xF4F, EcContinent::ASIA },
             "Tibetan", u8"Тибетский", {}, EcScript::Tibt },
     // Myanmar OK
-    { 0x1000, 0x109F,
+    { 0x1000, 0x109F, { 0x101E, EcContinent::ASIA },
             "Myanmar", u8"Бирманский", {}, EcScript::Mymr },
     // Georgian OK
-    { 0x10A0, 0x10FF,
+    { 0x10A0, 0x10FF, { 0x10D3, EcContinent::EUROPE },
             "Georgian", u8"Грузинский", {}, EcScript::Geor },
-    { 0x1100, 0x11FF,
+    { 0x1100, 0x11FF, { 0x113F, EcContinent::CJK },
             "Hangul Jamo", u8"Хангыль\u00A0— чамо",
             u8"В хангыле (корейском алфавите) всего 51 буква ''(чамо)''. Блок намного больше: одна и та же буква "
                     "в начале и конце слога кодируется разными символами, к тому же в блоке много устаревших чамо."
                 "<p>Чхосон{{-}}начальные буквы, чунсон{{-}}средние, чонсон{{-}}конечные.",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Ethiopic OK
-    { 0x1200, 0x137F,
+    { 0x1200, 0x137F, { 0x12F1, EcContinent::AFRICA },
             "Ethiopic", u8"Эфиопская (гéэз)", {}, EcScript::Ethi },
     // Ethiopic supplement OK
-    { 0x1380, 0x139F,
+    { 0x1380, 0x139F, { 0x1382, EcContinent::AFRICA },
             "Ethiopic Supplement", u8"Эфиопская дополнительная",
             u8"Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн, ''Ethnologue'' статус 5: развивающийся), "
                     "а также метки тонов.",
             EcScript::Ethi },
     // Cherokee OK
-    { 0x13A0, 0x13FF,
+    { 0x13A0, 0x13FF, { 0x13B6, EcContinent::AMERICA },
             "Cherokee", u8"Чероки", {}, EcScript::Cher },
     // Canadian aboriginal OK
-    { 0x1400, 0x167F,
+    { 0x1400, 0x167F, { 0x140E, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics", u8"Канадская слоговая",
             {}, EcScript::Cans },
     // Ogham OK
-    { 0x1680, 0x169F,
+    { 0x1680, 0x169F, { 0x168E, EcContinent::EUROPE },
             "Ogham", u8"Огамическая", {}, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF,
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE },
             "Runic", u8"Руны", {}, EcScript::Runr },
     // Tagalog OK
-    { 0x1700, 0x171F,
+    { 0x1700, 0x171F, { 0x1706, EcContinent::OCEAN },
             "Tagalog", u8"Тагальский (байбайин)", {}, EcScript::Tglg },
     // Hanunoo OK
-    { 0x1720, 0x173F,
+    { 0x1720, 0x173F, { 0x1726, EcContinent::OCEAN },
             "Hanunoo", u8"Хануноо", {}, EcScript::Hano },
     // Buhid OK
-    { 0x1740, 0x175F,
+    { 0x1740, 0x175F, { 0x1746, EcContinent::OCEAN },
             "Buhid", u8"Бухид", {}, EcScript::Buhd },
     // Tagbanwa OK
-    { 0x1760, 0x177F,
-            "Tagbanwa", u8"Тагбанва", {}, EcScript::Tang },
+    { 0x1760, 0x177F, { 0x1766, EcContinent::OCEAN },
+            "Tagbanwa", u8"Тагбанва", {}, EcScript::Tagb },
     // Khmer OK
-    { 0x1780, 0x17FF,
+    { 0x1780, 0x17FF, { 0x178D, EcContinent::ASIA },
             "Khmer", u8"Кхмерский", {}, EcScript::Khmr },
     // Mongol OK, implemented ligature
-    { 0x1800, 0x18AF,
+    { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Mongolian", u8"Монгольский", {}, EcScript::Mong },
     // Canadian extended OK
-    { 0x18B0, 0x18FF,
+    { 0x18B0, 0x18FF, { 0x18E5, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended",
             u8"Канадская слоговая расширенная",
             u8"Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''.",
             EcScript::Cans },
     // Limbu OK
-    { 0x1900, 0x194F,
+    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA },
             "Limbu", u8"Лимбу", {}, EcScript::Limb },
     // Tai Le OK
-    { 0x1950, 0x197F,
+    { 0x1950, 0x197F, { 0x195E, EcContinent::ASIA },
             "Tai Le", u8"Лы (тайлэ)", {}, EcScript::Tale },
     // New Tai Lue OK
-    { 0x1980, 0x19DF,
+    { 0x1980, 0x19DF, { 0x19C5, EcContinent::ASIA },
             "New Tai Lue", u8"Новое письмо лы", {}, EcScript::Talu },
     // Khmer syms OK
-    { 0x19E0, 0x19FF,
+    { 0x19E0, 0x19FF, { 0x19EF, EcContinent::ASIA },
             "Khmer Symbols", u8"Кхмерские символы",
             u8"Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре "
                         "(по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). "
@@ -3183,40 +3185,40 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Остальные{{-}}названия лунных дней от новолуния до полнолуния и обратно.",
             EcScript::Khmr },
     // Buginese OK
-    { 0x1A00, 0x1A1F,
+    { 0x1A00, 0x1A1F, { 0x1A01, EcContinent::OCEAN },
             "Buginese", u8"Лонтара (бугийский)", {}, EcScript::Bugi },
     // Lanna OK
-    { 0x1A20, 0x1AAF,
+    { 0x1A20, 0x1AAF, { 0x1A28, EcContinent::ASIA },
             "Tai Tham", u8"Ланна (тай-тхам)", {}, EcScript::Lana },
     // Diacritical ex OK
-    { 0x1AB0, 0x1AFF,
+    { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE },
             "Combining Diacritical Marks Extended",
             u8"Диакритические метки расширенные",
             u8"Используются в немецкой и шотландской диалектологии.",
             EcScript::NONE, EcFont::NOTO },
     // Balinese OK
-    { 0x1B00, 0x1B7F,
+    { 0x1B00, 0x1B7F, { 0x1B11, EcContinent::OCEAN },
             "Balinese", u8"Балийский", {}, EcScript::Bali },
     // Sundanese OK
-    { 0x1B80, 0x1BBF,
+    { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN },
             "Sundanese", u8"Сунданский", {}, EcScript::Sund },
     // Batak OK
-    { 0x1BC0, 0x1BFF,
+    { 0x1BC0, 0x1BFF, { 0x1BD4, EcContinent::OCEAN },
             "Batak", u8"Батакская", {}, EcScript::Batk },
     // Lepcha OK
-    { 0x1C00, 0x1C4F,
+    { 0x1C00, 0x1C4F, { 0x1C1D, EcContinent::ASIA },
             "Lepcha", u8"Лепча", {}, EcScript::Lepc },
     // Ol Chiki OK
-    { 0x1C50, 0x1C7F,
+    { 0x1C50, 0x1C7F, { 0x1C5A, EcContinent::ASIA },
             "Ol Chiki", u8"Ол-чики", {}, EcScript::Olck },
     // Cyr C OK
-    { 0x1C80, 0x1C8F,
+    { 0x1C80, 0x1C8F, { 0x1C88, EcContinent::EUROPE },
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
             u8"Варианты кириллических букв из печатных церковных книг: "
                         "от Библии Франциска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).",
             EcScript::Cyrl },
     // Geor ex OK
-    { 0x1C90, 0x1CBF,
+    { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_LINES },
             "Georgian Extended", u8"Грузинский расширенный",
             u8"''Мтаврули''{{-}}заглавная форма стандартного грузинского письма ''мхедрули''. "
                     "Заглавные буквы из основного блока называются ''асомтаврули'' и считаются устаревшими."
@@ -3231,12 +3233,12 @@ constinit const uc::Block uc::blocks[] {
                     "Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.",
             EcScript::Geor },
     // Sundanese supplement OK
-    { 0x1CC0, 0x1CCF,
+    { 0x1CC0, 0x1CCF, { 0x1CC6, EcContinent::OCEAN },
             "Sundanese Supplement", u8"Сунданский дополнительный",
             u8"Исторические знаки препинания для сунданского.",
             EcScript::Sund },
     // Vedic ex OK
-    { 0x1CD0, 0x1CFF,
+    { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Vedic Extensions", u8"Ведические символы",
             u8"Символы из Вед, применяемые в [[ps:Deva|деванагари]] и других индийских письменностях. "
                     "Произношение тех времён сильно отличалось от современного, и в основном это фонетические знаки."
@@ -3247,29 +3249,30 @@ constinit const uc::Block uc::blocks[] {
                             "чаще встречается у исследователей, чем в первичных источниках.",
             EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
-    { 0x1D00, 0x1D7F,
+    { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
             "Phonetic Extensions", u8"Фонетические расширения",
             u8"Символы Уральского фонетического алфавита, фонетики древнеирландских языков, Оксфордского словаря английского языка, "
                         "фонетики индейских и русского." },
     // Phonetic ext supp OK
-    { 0x1D80, 0x1DBF,
+    { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE },
             "Phonetic Extensions Supplement", u8"Фонетические расширения дополнительные",
             u8"Специализированные и устаревшие формы Международного фонетического алфавита." },
     // Combining supp OK, fixed manually in Noto
-    { 0x1DC0, 0x1DFF,
+    { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
             u8"Диакритические метки дополнительные",
             u8"Символы Уральского фонетического алфавита, средневековых сокращений "
                     "и Teuthonista (системы записи немецких диалектов).",
         EcScript::NONE, EcFont::NOTO },
     // Lat ex OK
-    { 0x1E00, 0x1EFF,
+    { 0x1E00, 0x1EFF, { 0x1EEA, EcContinent::EUROPE },
             "Latin Extended Additional", u8"Латиница расширенная дополнительная",
             u8"[[pt:precomposed|Монолитные]] символы с различными метками. "
                     "Девяносто из этих символов вьетнамские, около десятка{{-}}средневековые, "
-                    "в том числе заглавный эсцет '''ẞ'''." },
+                    "в том числе заглавный эсцет '''ẞ'''.",
+            EcScript::Latn },
     // Greek ex OK, though DejaVu is a big gun
-    { 0x1F00, 0x1FFF,
+    { 0x1F00, 0x1FFF, { 0x1F6A, EcContinent::EUROPE },
             "Greek Extended", u8"Греческий расширенный",
             u8"Политоническая фонетика, существовавшая в некоторых диалектах древнегреческого:<br>"
                     "• даси́я{{-}}густое придыхание (добавление ''h'');<br>"
@@ -3284,7 +3287,8 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Добавлены в начале нашей эры, убраны только в 1982, когда столь сложной фонетики много веков не было.",
             EcScript::Grek, EcFont::DEJAVU },
     // General punct OK, changed 2-dot leader to low one.
-    { 0x2000, 0x206F,
+    /// @todo [semi-tofu] Permille is somehow not Cambria
+    { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation", u8"Знаки препинания",
             u8"Пунктуация (лат. ''punctum'' «точка»){{-}}система знаков, подчёркивающих синтаксис и интонацию речи, "
                     "а также правила постановки их в тексте."
@@ -3294,7 +3298,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
     /// @todo [link,block] Links to other blocks when they are ready
-    { 0x2070, 0x209F,
+    { 0x2070, 0x209F, { 0x2074, EcContinent::NONE, Ifg::APPROX_2_CHARS },
             "Superscripts and Subscripts",
             u8"Верхние и нижние индексы",
             u8"Блок содержит надстрочные и подстрочные буквы, знаки и цифры, применяемые в математике и фонетике. "
@@ -3307,7 +3311,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Многие из важных индексов есть в других местах: например, транспонирование матрицы Aᵀ{{-}}"
                         "в блоке фонетических расширений." },
     // Curr symbols OK
-    { 0x20A0, 0x20CF,
+    { 0x20A0, 0x20CF, { 0x20AC, EcContinent::NONE },
             "Currency Symbols", u8"Символы валют",
             u8"Символы валют делятся на две чёткие категории. Одна группа возникла в XVII–XIX{{_}}веке с развитием "
                     "делового языка: доллар {{sm|$}}, фунт {{sm|£}}, [[ps:Taml|тамильский]] знак рупии {{sm|௹}}. "
@@ -3318,7 +3322,7 @@ constinit const uc::Block uc::blocks[] {
                     "Шрифты семейства PT оказались хорошими и распространились по интернету. "
                     "Так что не удивляйтесь, если новый символ 2021 года «поддерживается» знаком ₽." },
     // Marks for symbols OK, made optimized versions in Noto
-    { 0x20D0, 0x20FF,
+    { 0x20D0, 0x20FF, { 0x20E0, EcContinent::NONE },
             "Combining Diacritical Marks for Symbols",
             u8"Диакритические метки для символов",
             u8"Практически все из этих символов нормально работают, если в шрифте есть подходящая [[pt:ligature|лигатура]]{{-}}"
@@ -3326,7 +3330,7 @@ constinit const uc::Block uc::blocks[] {
                     "Образцы всех символов, кроме трёх, пришлось собирать в редакторе шрифтов.",
             EcScript::NONE, EcFont::UMLAUT_SYMBOL },
     // Letterlike OK
-    { 0x2100, 0x214F,
+    { 0x2100, 0x214F, { 0x211D, EcContinent::NONE },
             "Letterlike Symbols", u8"Буквоподобные символы",
             u8"Математические, технические и деловые символы буквенного происхождения."
                 "<p>Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. "
@@ -3335,14 +3339,14 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
     /// @todo [link,block] Latin-1
-    { 0x2150, 0x218F,
+    { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
             "Number Forms", u8"Числовые формы",
             u8"Монолитные обыкновенные дроби и римские цифры. "
                     "Дробь {{sm|↉}} используется в бейсболе, "
                         "{{sm|↊}} и {{sm|↋}}{{-}}в двенадцатеричной системе счисления. "
                 "<p>Ещё три дроби закодированы в латинице-1." },
     // Arrows OK
-    { 0x2190, 0x21FF,
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE },
             "Arrows", u8"Стрелки",
             u8"Стрелки{{-}}символы, напоминающие стрелу и указывающие направление. "
                     "Вот немногие примеры использования стрелок:<br>"
@@ -3351,7 +3355,7 @@ constinit const uc::Block uc::blocks[] {
                     "• в математике{{-}}отображение, следствие, предел, вектор, монотонность;<br>"
                     "• в химии{{-}}реакция, идущая в одну или обе стороны, выделяется газ, выпадает осадок." },
     // Math op OK
-    { 0x2200, 0x22FF,
+    { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
             "Mathematical Operators", u8"Математические знаки",
             u8"Простейшие математические знаки: математические операции, сравнение, интегралы, теория множеств. "
                     "Система математических обозначений складывалась веками и отличается для разных стран, "
@@ -3360,7 +3364,7 @@ constinit const uc::Block uc::blocks[] {
                         "и машинное сложение в численных методах. "
                     "Для равенства по определению используют {{sm|≔}}, {{sm|≝}}, {{sm|≡}}." },
     // Misc tech OK
-    { 0x2300, 0x23FF,
+    { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical", u8"Разные технические",
             u8"Символы, используемые в черчении, электронике, программировании, стоматологии, поэзии, химии, оптике, "
                         "пользовательских интерфейсах."
@@ -3368,7 +3372,7 @@ constinit const uc::Block uc::blocks[] {
                         "и TᴇX (читается «тех») для создания многоэтажных скобок.",
             EcScript::NONE, EcFont::TECHNICAL },
     // Control pictures OK
-    { 0x2400, 0x243F,
+    { 0x2400, 0x243F, { L'␣', EcContinent::NONE },
             "Control Pictures", u8"Изображения управляющих",
             u8"Сами по себе управляющие символы не имеют никакого графического представления. "
                     "В этом блоке собраны условные знаки, которыми изображают управляющие символы. "
@@ -3376,7 +3380,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Несколько изображений управляющих символов есть в и других блоках: {{sm|↵←⌫}}.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     // OCR/MICR OK
-    { 0x2440, 0x245F,
+    { 0x2440, 0x245F, { L'⑀', EcContinent::NONE },
             "Optical Character Recognition", u8"Оптическое распознавание символов",
             u8"Оптическое и магнитное распознавание символов служит для автоматического ввода документов, "
                     "в первую очередь паспортов, банковских чеков, транспортных билетов. "
@@ -3399,14 +3403,14 @@ constinit const uc::Block uc::blocks[] {
             // Fonts coincide
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK, need ordinary Cambria
-    { 0x2460, 0x24FF,
+    { 0x2460, 0x24FF, { L'①', EcContinent::NONE },
             "Enclosed Alphanumerics", u8"Обрамлённые буквы и цифры",
             u8"По данным английской Википедии, эти символы в основном предназначены для списков{{-}}"
                         "«наполовину маркированных, наполовину нумерованных». "
                     "{{em|Ⓜ}} используется как [[pt:emoji|эмодзи]] для метро.",
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Box drawing OK
-    { 0x2500, 0x257F,
+    { 0x2500, 0x257F, { L'╢', EcContinent::NONE },
             "Box Drawing", u8"Рисование рамок",
             u8"Элементы [[pt:pseudographics|псевдографики]], используемые для рисования рамок. "
                     "Как и любая псевдографика, чаще всего используются в моноширинных шрифтах."
@@ -3415,7 +3419,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В компьютере BBC{{_}}Master есть закруглённые уголки.",
             EcScript::NONE, EcFont::DEJAVU },    // Block elements OK
     // Block elements OK
-    { 0x2580, 0x259F,
+    { 0x2580, 0x259F, { L'░', EcContinent::NONE },
             "Block Elements", u8"Блочные элементы",
             u8"Элементы [[pt:pseudographics|псевдографики]], используемые для сплошной заливки. "
                     "Как и любая псевдографика, чаще всего используются в моноширинных шрифтах. "
@@ -3428,76 +3432,76 @@ constinit const uc::Block uc::blocks[] {
                     "здесь отсутствуют и добавлены только в 2020.",
             EcScript::NONE, EcFont::DEJAVU },
     // Geometric OK
-    { 0x25A0, 0x25FF,
+    { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE },
             "Geometric Shapes", u8"Геометрические фигуры",
             u8"Геометрические фигуры используются для маркировки кнопок, грубого рисования пользовательских интерфейсов. "
                     "Вот, например, четыре кнопки ''Sony Playstation'' {{sm|🞩○△□}}{{-}}три из них взяты из этого блока. "
                     "Символ {{sm|◌}} используется в Юникоде для маркировки [[pt:combining|комбинирующих]] знаков." },
     // Misc sym OK
-    { 0x2600, 0x26FF,
+    { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
             "Miscellaneous Symbols", u8"Разные символы",
             u8"В этом разделе есть [[pt:emoji|эмодзи]], знаки из астрономии, астрологии, настольных игр, восточной эзотерики, "
                         "религии, политики и просто для украшения печатного текста. "
                     "Многие символы взяты из японской кодировки ARIB STD B24, используемой для передачи новостей, погоды, "
                         "информации о дорожных заторах через цифровое телевидение." },
     // Dingbats OK, need Cambria here!
-    { 0x2700, 0x27BF,
+    { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats", u8"Украшения",
             u8"Символы, чаще всего используемые для украшения печатного текста. "
                     "Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, "
                     "а печатник оформит публикацию чёрно-белым шрифтом.",
             EcScript::NONE, EcFont::DINGBAT2 },
     // Misc math A OK
-    { 0x27C0, 0x27EF,
+    { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A", u8"Разные математические символы A",
             u8"Несколько символов, используемых в геометрии, формальной логике, верификации программ, теории баз данных "
                     "и других разделах математики. Также западный символ деления столбиком.",
             EcScript::NONE, EcFont::MATH },
     // Arrows A OK
-    { 0x27F0, 0x27FF,
+    { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE },
             "Supplemental Arrows-A", u8"Дополнительные стрелки A",
             u8"Шестнадцать разных математических и технических стрелок, в основном круговые и удлинённые." },
     // Braille OK
-    { 0x2800, 0x28FF,
+    { 0x2800, 0x28FF, { L'⠝', EcContinent::NONE },
             "Braille Patterns", u8"Шрифт Брайля", {}, EcScript::Brai },
     // Arrows B OK
-    { 0x2900, 0x297F,
+    { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
             "Supplemental Arrows-B", u8"Дополнительные стрелки B",
             u8"Пересекающиеся стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы." },
     // Misc math B OK
-    { 0x2980, 0x29FF,
+    { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
             u8"Разные математические символы B",
             u8"Различные математические символы: скобки, углы, пустые множества, «ящики с усами»…",
             EcScript::NONE, EcFont::MATH },
     // Supp math ops OK
-    { 0x2A00, 0x2AFF,
+    { 0x2A00, 0x2AFF, { L'⨔', EcContinent::NONE },
             "Supplemental Mathematical Operators",
             u8"Дополнительные математические знаки",
             u8"Символы, используемые в математическом анализе, функциях комплексного переменного, Z-нотации, "
                     "теории баз данных, теории управления, формальной логике и других разделах математики.",
             EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
-    { 0x2B00, 0x2BFF,
+    { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
             "Miscellaneous Symbols and Arrows", u8"Разные символы и стрелки",
             u8"Стрелки разного назначения, геометрические фигуры, символы из шрифтов ''Wingdigs'' и ''Webdings'', "
                         "японские телевизионные символы, астрологические символы, звёзды оценок."
                 "<p>''Hellschreiber pause symbol'' использовался в немецких телеграфных аппаратах." },
     // Glagolitic OK
-    { 0x2C00, 0x2C5F,
+    { 0x2C00, 0x2C5F, { 0x2C19, EcContinent::EUROPE },
             "Glagolitic", u8"Глаголица", {}, EcScript::Glag },
     // Latin C OK
-    { 0x2C60, 0x2C7F,
+    { 0x2C60, 0x2C7F, { L'Ɱ', EcContinent::EUROPE },
             "Latin Extended-C", u8"Латиница расширенная C",
             u8"Символы разных малых языков: чимбу и ваги ''(Папуа{{-}}Новая Гвинея)'', шона ''(Зимбабве)'', уйгурского и других. "
                     "Также семь букв уральского фонетического алфавита, "
                         "и клавдиева буква Ⱶ, означавшая то же, что современный Y, но рассчитанная на печать существующими трафаретами.",
             EcScript::Latn },
     // Coptic OK
-    { 0x2C80, 0x2CFF,
+    { 0x2C80, 0x2CFF, { L'Ⲁ', EcContinent::AFRICA },
             "Coptic", u8"Коптский", {}, EcScript::Copt },
     // Georgian supp OK
-    { 0x2D00, 0x2D2F,
+    { 0x2D00, 0x2D2F, { L'ⴃ', EcContinent::EUROPE },
             "Georgian Supplement", u8"Грузинский дополнительный",
             u8"Устаревший [[pt:minuscule|минускульный]] грузинский шрифт ''нусхури''. "
                     "Буквы наклонены вправо и очень угловатые. "
@@ -3506,33 +3510,33 @@ constinit const uc::Block uc::blocks[] {
                     "просили закодировать нусхури, и Консорциум откликнулся.",
             EcScript::Geor, EcFont::GEORGIAN_NUSKHURI },
     // Tifinagh OK
-    { 0x2D30, 0x2D7F,
+    { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA },
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
     // Ethiopic ex OK
-    { 0x2D80, 0x2DDF,
+    { 0x2D80, 0x2DDF, { L'ⶤ', EcContinent::AFRICA },
             "Ethiopic Extended", u8"Эфиопская расширенная",
             u8"Эфиопское письмо для языков мекан (с 2009 перешёл на [[ps:Latn|латиницу]], "
                     "билин (с 1990‑х полностью на латинице), бенч (с 2008 на латинице), себат-бет.",
             EcScript::Ethi },
     // Cyr ex A OK, fixed those renderings in Noto
-    { 0x2DE0, 0x2DFF,
+    { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE },
             "Cyrillic Extended-A", u8"Кириллица расширенная A",
             u8"Комбинирующие кириллические буквы из церковнославянского.",
             EcScript::Cyrl, EcFont::NOTO },
     // Supp punct OK, drew U14 in FunkySample
-    { 0x2E00, 0x2E7F,
+    { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
             "Supplemental Punctuation", u8"Знаки препинания дополнительные",
             u8"Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, "
                     "старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) "
                     "и многое другое.",
             EcScript::NONE, EcFont::PUNCTUATION },
     // CJK radicals supp OK
-    { 0x2E80, 0x2EFF,
+    { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK },
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные",
             u8"Альтернативные формы ключей Канси, применяющиеся в заголовках словарей.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Kangxi OK
-    { 0x2F00, 0x2FDF,
+    { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK },
             "Kangxi Radicals", u8"Ключи Канси",
             u8"Вы спросите: а как найти нужный иероглиф в словаре, если нет произношения? "
                     "Для этого находят в иероглифе ''ключ''{{-}}черту или их комбинацию."
@@ -3543,7 +3547,7 @@ constinit const uc::Block uc::blocks[] {
                         "сделал её стандартом.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Ideographic desc OK, not collapsible: small block
-    { 0x2FF0, 0x2FFF,
+    { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Ideographic Description Characters",
             u8"Символы структуры иероглифов",
             u8"В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. "
@@ -3551,7 +3555,7 @@ constinit const uc::Block uc::blocks[] {
                     "Для первого и предназначен данный блок.",
             EcScript::NONE, EcFont::CJK_STRUCTURE },
     // CJK sym/punct OK
-    { 0x3000, 0x303F,
+    { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
             u8"ККЯ символы и знаки препинания",
             u8"Знаки препинания и прочие символы, применяемые в [[pt:cjk|ККЯ]]:<br>"
@@ -3564,22 +3568,22 @@ constinit const uc::Block uc::blocks[] {
                 "• Знак «то же» —//—, широко используемый и в наших перечнях{{-}}только в иероглифическом варианте.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hiragana OK, installed small version of Noto CJK Korean
-    { 0x3040, 0x309F,
+    { 0x3040, 0x309F, { L'ぢ', EcContinent::CJK },
             "Hiragana", u8"Хирагана", {}, EcScript::Hira },
     // Katakana OK, not collapsible: syllabary
-    { 0x30A0, 0x30FF,
+    { 0x30A0, 0x30FF, { L'ヂ', EcContinent::CJK },
             "Katakana", u8"Катакана", {}, EcScript::Kana },
     // Bopomofo OK
-    { 0x3100, 0x312F,
+    { 0x3100, 0x312F, { L'ㄉ', EcContinent::CJK },
             "Bopomofo", u8"Бопомофо (чжуинь)", {},
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul compat jamo OK
-    { 0x3130, 0x318F,
+    { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK },
             "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо",
             u8"Символы совместимости с корейской кодировкой KS{{_}}X{{_}}1001.",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Kanbun OK, not collapsible: small block
-    { 0x3190, 0x319F,
+    { 0x3190, 0x319F, { L'㆝', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Kanbun", u8"Камбун (подсказки к древнеяпонским иероглифам)",
             u8"Словом «камбун» (''китайское письмо'') называли письменный язык средневековой Японии, основанный на [[ps:Hani|китайском]]. "
                     "Китайцы говорят «подлежащее-сказуемое-дополнение», а японцы{{-}}«подлежащее-дополнение-сказуемое», "
@@ -3592,12 +3596,12 @@ constinit const uc::Block uc::blocks[] {
                         "и 15 значков порядка.",
             EcScript::NONE, EcFont::CJK_KANBUN },
     // Bopomofo OK, at least in W10
-    { 0x31A0, 0x31BF,
+    { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный",
             u8"Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского.",
             EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK strokes OK
-    { 0x31C0, 0x31EF,
+    { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
             "CJK Strokes", u8"Черты ККЯ",
             u8"Иероглифы [[pt:cjk|ККЯ]] состоят из основных восьми элементов:"
                  "<p>• точки D;<br>"
@@ -3613,11 +3617,12 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Все названия китайские: например, B от ''biǎn{{-}}плоский''.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Katakana phon OK, not collapsible: small block
-    { 0x31F0, 0x31FF,
+    { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
             "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения",
-            u8"Символы катаканы для передачи звуков айнского языка." },
+            u8"Символы катаканы для передачи звуков айнского языка.",
+            EcScript::Kana },
     // Enclosed CJK letters and months OK
-    { 0x3200, 0x32FF,
+    { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK },
             "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ",
             u8"[[ps:Kana|Катакана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах."
                 "<p>Также несколько символов, которым место в других блоках: сокращения единиц измерения, "
@@ -3625,13 +3630,13 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compatibility OK
-    { 0x3300, 0x33FF,
+    { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility", u8"ККЯ символы совместимости",
             u8"Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. "
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
             EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE },
-    { 0x3400, 0x4DBF,
+    { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK },
             "CJK Unified Ideographs Extension A",
             u8"ККЯ иероглифы расширение A",
             u8"6582 редких [[ps:Hani|китайских иероглифа]]. "
@@ -3640,7 +3645,7 @@ constinit const uc::Block uc::blocks[] {
                     "Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», «бамбуковые ножны», «неосвещённый».",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Yijing OK
-    { 0x4DC0, 0x4DFF,
+    { 0x4DC0, 0x4DFF, { L'䷜', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)",
             u8"Книга перемен (И цзин){{-}}китайский эзотерический трактат, написанный разными поколениями людей. "
                     "Наиболее старая его часть написана около 700{{bc}} и описывает знаменитую методику "
@@ -3650,35 +3655,35 @@ constinit const uc::Block uc::blocks[] {
                     "Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция."
                 "<p>В Китае также был философ И Цзин, никак с книгой не{{_}}связанный." },
     // CJK hieroglyphs OK
-    { 0x4E00, 0x9FFF,
+    { 0x4E00, 0x9FFF, { L'丈', EcContinent::CJK },
             "CJK Unified Ideographs", u8"ККЯ иероглифы",
             {},
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Yi OK
-    { 0xA000, 0xA48F,
+    { 0xA000, 0xA48F, { 0xA011, EcContinent::ASIA },
             "Yi Syllables", u8"И\u00A0— слоги", {}, EcScript::Yiii },
     // Yi radicals OK
-    { 0xA490, 0xA4CF,
+    { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::ASIA },
             "Yi Radicals", u8"И\u00A0— ключи",
             u8"Ключи, используемые для «алфавитной сортировки» словарей языка '''[[ps:Yiii|и]]'''.",
             EcScript::Yiii },
     // Lisu OK
-    { 0xA4D0, 0xA4FF,
+    { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA },
             "Lisu", u8"Лису (алфавит Фрейзера)", {}, EcScript::Lisu },
     // Vai OK
-    { 0xA500, 0xA63F,
+    { 0xA500, 0xA63F, { L'ꔃ', EcContinent::AFRICA },
             "Vai", u8"Ваи", {}, EcScript::Vaii },
     // Cyr ex B OK, modified font a bit
-    { 0xA640, 0xA69F,
+    { 0xA640, 0xA69F, { L'Ꙛ', EcContinent::EUROPE },
             "Cyrillic Extended-B", u8"Кириллица расширенная B",
             u8"Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), "
                         "знаки интонации для литовской диалектологии.",
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
     // Bamum OK
-    { 0xA6A0, 0xA6FF,
+    { 0xA6A0, 0xA6FF, { 0xA6AE, EcContinent::AFRICA },
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
     // Modifier tone OK
-    { 0xA700, 0xA71F,
+    { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE },
             "Modifier Tone Letters", u8"Модифицирующие символы тона",
             u8"Символы Международного фонетического алфавита, используемые в китайском, чинантекском ''(индейцы Мексики)'' "
                         "и африканских языках для указания тона{{-}}изменения высоты звука в пределах одной фонемы."
@@ -3690,87 +3695,88 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). "
                     "Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах." },
     // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
-    { 0xA720, 0xA7FF,
+    { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE },
             "Latin Extended-D", u8"Латиница расширенная D",
             u8"Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, "
                 "дополнительные буквы алфавита майя, употреблявшиеся в колониальный период, и другое.",
             EcScript::Latn, EcFont::LATIN },
     // Syloti OK
-    { 0xA800, 0xA82F,
+    { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA },
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
     // Common Indic OK
-    { 0xA830, 0xA83F,
+    { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA },
             "Common Indic Number Forms", u8"Общеиндийские числовые символы",
             u8"Такие знаки присутствуют в источниках XVI{{_}}века, и применяются по сей день "
                 "в Северной Индии, Пакистане и Непале для записи дробей: например, "
                 "размера, веса или цены.",
             EcScript::Deva },
     // Phang-pa OK
-    { 0xA840, 0xA87F,
+    { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
     // Saurashtra OK
-    { 0xA880, 0xA8DF,
+    { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA },
             "Saurashtra", u8"Саураштра", {}, EcScript::Saur },
     // Devanagari ex OK, drew 4 chars
-    { 0xA8E0, 0xA8FF,
+    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA },
             "Devanagari Extended", u8"Деванагари расширенный",
             u8"Распевы из Самаведы (книги релизиозных песен), варианты знака чандрабинду (носовая гласная), "
                     "редакторские пометы, религиозные символы, "
                     "гласная «ай» для мелких неписьменных языков Индии, придуманная европейцами.",
             EcScript::Deva },
     // Kayah Li OK
-    { 0xA900, 0xA92F,
+    { 0xA900, 0xA92F, { 0xA922, EcContinent::ASIA, Ifg::APPROX_2_CHARS },
             "Kayah Li", u8"Кая-ли", {}, EcScript::Kali },
     // Rejang OK
-    { 0xA930, 0xA95F,
+    { 0xA930, 0xA95F, { 0xA93B, EcContinent::OCEAN },
             "Rejang", u8"Реджанг", {}, EcScript::Rjng },
     // Hangul jamo A OK
-    { 0xA960, 0xA97F,
+    { 0xA960, 0xA97F, { L'ꥵ', EcContinent::CJK },
             "Hangul Jamo Extended-A", u8"Хангыль\u00A0— расширенные чамо А",
             u8"Начальные ''(чхосон)'' старые согласные буквы корейского языка. "
                     "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
                         "а значит, нет в [[pt:precomposed|монолитном виде]].",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Javanese OK
-    { 0xA980, 0xA9DF,
+    { 0xA980, 0xA9DF, { L'ꦈ', EcContinent::OCEAN },
             "Javanese", u8"Яванский", {}, EcScript::Java },
     // Myanmar ex B OK
-    { 0xA9E0, 0xA9FF,
+    { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA },
             "Myanmar Extended-B", u8"Бирманский расширенный B", {}, EcScript::Mymr },
     // Cham OK
-    { 0xAA00, 0xAA5F,
+    { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA },
             "Cham", u8"Чамский", {}, EcScript::Cham },
     // Myanmar ex A OK
-    { 0xAA60, 0xAA7F,
+    { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA },
             "Myanmar Extended-A", u8"Бирманский расширенный А", {}, EcScript::Mymr },
-    // Tai viet OK
-    { 0xAA80, 0xAADF,
+    // Tai Viet OK
+    { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA },
             "Tai Viet", u8"Тай-вьет", {}, EcScript::Tavt },
     // Meetei ex OK
-    { 0xAAE0, 0xAAFF,
+    { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA },
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения",
-            u8"Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]]." },
+            u8"Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]].",
+            EcScript::Mtei },
     // Ethiopic ex A OK
-    { 0xAB00, 0xAB2F,
+    { 0xAB00, 0xAB2F, { 0xAB2A, EcContinent::AFRICA },
             "Ethiopic Extended-A", u8"Эфиопская расширенная А",
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).",
             EcScript::Ethi },
     // Latin ex E OK, dereferenced bad chars of Google Noto
-    { 0xAB30, 0xAB6F,
+    { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE },
             "Latin Extended-E", u8"Латиница расширенная E",
             u8"Буквы, используемые в германской и шотландской диалектологии, транскрипции индейских и сино-тибетских языков, "
                     "а также в латинской записи якутского (алфавит Новгородова, 1920–1929).",
             EcScript::Latn },
     // Cherokee supp OK
-    { 0xAB70, 0xABBF,
+    { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA },
             "Cherokee Supplement", u8"Чероки дополнительный",
             u8"В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.",
             EcScript::Cher },
     // Meetei OK
-    { 0xABC0, 0xABFF,
+    { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA },
             "Meetei Mayek", u8"Манипури (мейтей-майек)", {}, EcScript::Mtei },
     // Hangul syllables OK
-    { 0xAC00, 0xD7AF,
+    { 0xAC00, 0xD7AF, { L'괏', EcContinent::CJK },
             "Hangul Syllables", u8"Хангыль\u00A0— слоги",
             u8"[[pt:precomposed|Монолитные]] слоги хангыля, большей частью для совместимости со старыми кодировками. "
                 "<p>Добавление корейского в Юникод сопровождалось большими трудностями. "
@@ -3781,14 +3787,14 @@ constinit const uc::Block uc::blocks[] {
                         "больше ни один символ не сдвинется и не исчезнет.",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Hangul Jamo B OK
-    { 0xD7B0, 0xD7FF,
+    { 0xD7B0, 0xD7FF, { L'ힽ', EcContinent::CJK },
             "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B",
             u8"Средние и конечные ''(чунсон и чонсон)'' старые буквы корейского языка. "
                     "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
                         "а значит, нет в [[pt:precomposed|монолитном виде]].",
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compat hiero OK
-    { 0xF900, 0xFAFF,
+    { 0xF900, 0xFAFF, { L'車', EcContinent::CJK },
             "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы",
             u8"Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, "
                         "чтобы не терять информацию при круговом [[pt:convertibility|преобразовании]]. "
@@ -3796,11 +3802,11 @@ constinit const uc::Block uc::blocks[] {
                     "Впрочем, встречаются и обычные [[pt:unification|унифицированные]]{{-}}например, FA0E и 0F, 11, 13, 14…",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Alphabetic presentation forms OK
-    { 0xFB00, 0xFB4F,
+    { 0xFB00, 0xFB4F, { L'ﬄ', EcContinent::NONE },
             "Alphabetic Presentation Forms", u8"Алфавитные формы начертания",
             u8"Стандартные [[pt:ligature|лигатуры]] для [[ps:Latn|латиницы]], [[ps:Armn|армянского]] и [[ps:Hebr|иврита]]." },
     // Arabic presentation forms A OK
-    { 0xFB50, 0xFDFF,
+    { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA },
             "Arabic Presentation Forms-A", u8"Арабские формы начертания А",
             u8"Блок создан для [[pt:convertibility|совместимости]] со старыми кодировками вроде CP864 (DOS), "
                         "где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды "
@@ -3812,7 +3818,7 @@ constinit const uc::Block uc::blocks[] {
                         "(во многих тогдашних кодировках текст записывался слева направо).",
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS },
     // Variation selectors OK
-    { 0xFE00, 0xFE0F,
+    { 0xFE00, 0xFE0F, { 0xFE00, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Variation Selectors", u8"Селекторы начертания",
             u8"Чаще всего (например, в браузерах) тот или иной вариант написания символа включают, выбирая другой шрифт "
                     "или включая функции OpenType. Юникод позволяет это ещё одним методом: созданием лигатур из символа и селектора."
@@ -3820,14 +3826,14 @@ constinit const uc::Block uc::blocks[] {
                     "[[ps:Hani|Китайские иероглифы]] используют VS1…VS3. [[pt:emoji|Эмодзи]] можно сделать цветными (VS16) "
                     "и текстовыми (VS15)." },
     // Vertical forms OK, not collapsible: small
-    { 0xFE10, 0xFE1F,
+    { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Vertical Forms", u8"Вертикальные формы",
             u8"[[ps:Hani|Китайский язык]] изначально писался по столбцам справа налево, и сейчас так пишут "
                     "в художественных целях: стихи, открытки, вывески."
                 "<p>Блок кодирует символы из китайской кодировки GB{{_}}18030 (2005), предназначенные для вертикального письма.",
             EcScript::NONE, EcFont::CJK_STRUCTURE },
     // Combining half marks OK
-    { 0xFE20, 0xFE2F,
+    { 0xFE20, 0xFE2F, { 0xFE20, EcContinent::NONE, Ifg::APPROX_2_CHARS },
             "Combining Half Marks", u8"Комбинирующие полузнаки",
             u8"Части диакритических знаков, охватывающих несколько символов. "
                     "Например, можно накрыть три буквы {{sm|a︤c︦e︥}} одной чертой. "
@@ -3835,19 +3841,19 @@ constinit const uc::Block uc::blocks[] {
                     "три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо.",
             EcScript::NONE, EcFont::NOTO },
     // CJK compat forms OK
-    { 0xFE30, 0xFE4F,
+    { 0xFE30, 0xFE4F, { L'﹃', EcContinent::CJK },
             "CJK Compatibility Forms", u8"ККЯ совместимые формы",
             u8"Символы для вертикального письма [[pt:cjk|ККЯ]], в основном для совместимости со старыми кодировками. "
                     "В частности, с китайской кодировкой CNS{{_}}11643{{-}}"
                         "отсюда название в Юникоде{{_}}1.0, ''CNS 11643 Compatibility''.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Small variants OK
-    { 0xFE50, 0xFE6F,
+    { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants", u8"Малые формы знаков препинания",
             u8"Уменьшенные знаки препинания для совместимости с китайской кодировкой CNS 11643.",
             EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
-    { 0xFE70, 0xFEFF,
+    { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
             "Arabic Presentation Forms-B", u8"Арабские формы начертания B",
             u8"Блок предназначен для [[pt:convertibility|совместимости]] со старыми кодировками, "
                     "где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды "
@@ -3858,7 +3864,7 @@ constinit const uc::Block uc::blocks[] {
                     "(во многих тогдашних кодировках текст записывался слева направо).",
             EcScript::Arab, EcFont::ARABIC_NOTO },
     // Half/full OK
-    { 0xFF00, 0xFFEF,
+    { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Halfwidth and Fullwidth Forms",
             u8"Полуширинные и полноширинные формы",
             u8"В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}половину клетки. "
@@ -3867,7 +3873,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.",
             EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
     // Specials OK
-    { 0xFFF0, 0xFFFF,
+    { 0xFFF0, 0xFFFF, { L'�', EcContinent::NONE },
             "Specials", u8"Спецсимволы",
             u8"Короткий блок в конце [[pt:bmp|базовой плоскости]]. Из 14 символов "
                     "(два [[pt:noncharacter|выброшены]]) назначены только пять: "
@@ -3877,20 +3883,20 @@ constinit const uc::Block uc::blocks[] {
                         "не из-за отсутствия символа в шрифте, а из-за неудачной раскодировки. "
                         "Обычно{{-}}текст в однобайтовой кодировке попыталось прочитать как [[pt:utf8|UTF-8]]." },
     // Linear B syll OK
-    { 0x10000, 0x1007F,
+    { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE },
             "Linear B Syllabary", u8"Линейное письмо Б\u00A0— слоги", {}, EcScript::Linb },
     // Linear B hier OK
-    { 0x10080, 0x100FF,
+    { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE },
             "Linear B Ideograms", u8"Линейное письмо Б\u00A0— иероглифы", {}, EcScript::Linb },
     // Aegean numbers OK
-    { 0x10100, 0x1013F,
+    { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE },
             "Aegean Numbers", u8"Эгейские цифры",
             u8"Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями."
                     "Замечена в линейном письме [[ps:Lina|А]] и [[ps:Linb|Б]]. "
                     "В [[ps:Cprt|кипрском]] письме была обнаружена единственная табличка с числом «100».",
             EcScript::Linb },
     // Greek numbers OK
-    { 0x10140, 0x1018F,
+    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE },
         "Ancient Greek Numbers", u8"Древнегреческие цифры",
         u8"Аттическая система счисления была [[pt:acrophonic|акрофонической]], то есть цифрами служили первые буквы слов:<br>"
                 "• Ι = 1, ἴος<br>"
@@ -3907,15 +3913,15 @@ constinit const uc::Block uc::blocks[] {
             "<p>Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. "
                 "В древней Греции ''литра''{{-}}мера массы и монета. "
                 "Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.",
-            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+            EcScript::Grek, EcFont::NOTO_SYMBOL2 },
     // Ancient symbols OK
-    { 0x10190, 0x101CF,
+    { 0x10190, 0x101CF, { 0x10192, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Ancient Symbols", u8"Древние символы",
             u8"Римские символы для денег, мер и весов. "
                     "Также греческое библейское сокращение «крест» (реже «Христос»).",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Phaistos Disc OK
-    { 0x101D0, 0x101FF,
+    { 0x101D0, 0x101FF, { 0x101D1, EcContinent::EUROPE, Ifg::CONTINENT_OK },
         "Phaistos Disc", u8"Фестский диск",
         u8"Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины "
                 "без гончарного круга, найден в 1908 на Крите, имеет диаметр 160{{_}}мм и толщину 20{{_}}мм. "
@@ -3935,13 +3941,13 @@ constinit const uc::Block uc::blocks[] {
                 "Названия символов{{-}}по Луи Годáру (1995).",
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Lycian OK
-    { 0x10280, 0x1029F,
+    { 0x10280, 0x1029F, { 0x10299, EcContinent::ASIA },
             "Lycian", u8"Ликийский", {}, EcScript::Lyci },
     // Carian OK
-    { 0x102A0, 0x102DF,
+    { 0x102A0, 0x102DF, { 0x102C6, EcContinent::ASIA },
             "Carian", u8"Карийский", {}, EcScript::Cari },
     // Coptic epact OK
-    { 0x102E0, 0x102FF,
+    { 0x102E0, 0x102FF, { 0x102F1, EcContinent::AFRICA },
         "Coptic Epact Numbers", u8"Коптские курсивные цифры",
         u8"Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не «епакта» (формулы для перевода из солнечного "
                 "календаря в лунный) или «пасхалия» (формулы для расчёта пасхи). "
@@ -3952,184 +3958,186 @@ constinit const uc::Block uc::blocks[] {
             "<p>В изображениях символов вы увидите серьёзное расхождение с таблицами Юникода: специалист по древним "
                 "письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект "
                 "''Google Noto'' попытался повторить росчерки постоянной шириной.",
-            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+            EcScript::Copt, EcFont::NOTO_SYMBOL2 },
     // Old Italic OK
-    { 0x10300, 0x1032F,
+    { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE },
             "Old Italic", u8"Этрусский", {}, EcScript::Ital },
     // Gothic OK
-    { 0x10330, 0x1034F,
+    { 0x10330, 0x1034F, { 0x10330, EcContinent::EUROPE },
             "Gothic", u8"Готский", {}, EcScript::Goth },
     // Old Permic OK
-    { 0x10350, 0x1037F,
+    { 0x10350, 0x1037F, { 0x10350, EcContinent::EUROPE },
             "Old Permic", u8"Древнепермский (анбур)", {}, EcScript::Perm },
     // Ugaritic OK
-    { 0x10380, 0x1039F,
+    { 0x10380, 0x1039F, { 0x10380, EcContinent::ASIA },
             "Ugaritic", u8"Угаритский", {}, EcScript::Ugar },
     // Old Persian OK
-    { 0x103A0, 0x103DF,
+    { 0x103A0, 0x103DF, { 0x103A2, EcContinent::ASIA },
             "Old Persian", u8"Древнеперсидский", {}, EcScript::Xpeo },
     // Deseret OK
-    { 0x10400, 0x1044F,
+    { 0x10400, 0x1044F, { 0x10414, EcContinent::AMERICA },
             "Deseret", u8"Дезеретский (мормонский)", {}, EcScript::Dsrt },
     // Shavian OK
-    { 0x10450, 0x1047F,
+    { 0x10450, 0x1047F, { 0x10459, EcContinent::EUROPE },
             "Shavian", u8"Алфавит Бернарда Шоу", {}, EcScript::Shaw },
     // Osmanya OK
-    { 0x10480, 0x104AF,
+    { 0x10480, 0x104AF, { 0x10499, EcContinent::AFRICA },
             "Osmanya", u8"Османья (сомалийский)", {}, EcScript::Osma },
     // Osage OK
-    { 0x104B0, 0x104FF,
+    { 0x104B0, 0x104FF, { 0x104C8, EcContinent::AMERICA },
             "Osage", u8"Осейдж", {}, EcScript::Osge },
     // Elbasan OK
-    { 0x10500, 0x1052F,
+    { 0x10500, 0x1052F, { 0x10500, EcContinent::EUROPE },
             "Elbasan", u8"Эльбасанский албанский", {}, EcScript::Elba },
     // Caucasian OK
-    { 0x10530, 0x1056F,
+    { 0x10530, 0x1056F, { 0x10530, EcContinent::EUROPE },
             "Caucasian Albanian", u8"Агванский (Кавказская Албания)", {}, EcScript::Aghb },
     // Vithkuqi OK
-    { 0x10570, 0x105BF,
+    { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
             "Vithkuqi", u8"Виткутьский албанский", {}, EcScript::Vith },
     // Linear A OK
-    { 0x10600, 0x1077F,
+    { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE },
             "Linear A", u8"Линейное письмо А", {}, EcScript::Lina },
     // Latin ex F OK, drew in FunkySample
-    { 0x10780, 0x107BF,
+    { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_LINES },
             "Latin Extended-F", u8"Латиница расширенная F",
             u8"Модификатор AA используется в нотации расстройств речи (VoQS). "
                 "Остальные{{-}}в фонетике и означают звуки, проговариваемые не полностью.",
             EcScript::Latn, EcFont::FUNKY },
     // Cypriot OK
-    { 0x10800, 0x1083F,
+    { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE },
             "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
     // Imperial Aramaic OK
-    { 0x10840, 0x1085F,
+    { 0x10840, 0x1085F, { 0x10840, EcContinent::ASIA },
             "Imperial Aramaic", u8"Имперский арамейский", {}, EcScript::Armi },
     // Palmyrene OK
-    { 0x10860, 0x1087F,
+    { 0x10860, 0x1087F, { 0x10860, EcContinent::ASIA },
             "Palmyrene", u8"Пальмирский", {}, EcScript::Palm },
     // Nabataean OK
-    { 0x10880, 0x108AF,
+    { 0x10880, 0x108AF, { 0x10880, EcContinent::ASIA },
             "Nabataean", u8"Набатейский", {}, EcScript::Nbat },
     // Hatran OK
-    { 0x108E0, 0x108FF,
+    { 0x108E0, 0x108FF, { 0x108E0, EcContinent::ASIA },
             "Hatran", u8"Хатранский (ашшурский)", {}, EcScript::Hatr },
     // Phoenician OK
-    { 0x10900, 0x1091F,
+    { 0x10900, 0x1091F, { 0x10900, EcContinent::ASIA },
             "Phoenician", u8"Финикийский", {}, EcScript::Phnx },
     // Lydian OK
-    { 0x10920, 0x1093F,
+    { 0x10920, 0x1093F, { 0x10920, EcContinent::ASIA },
             "Lydian", u8"Лидийский (сардийский)", {}, EcScript::Lydi },
     // Meroitic hiero OK
-    { 0x10980, 0x1099F,
+    { 0x10980, 0x1099F, { 0x10980, EcContinent::AFRICA },
             "Meroitic Hieroglyphs", u8"Мероитские иероглифы", {}, EcScript::Mero },
     // Meroitic cursive OK
-    { 0x109A0, 0x109FF,
+    { 0x109A0, 0x109FF, { 0x109A0, EcContinent::AFRICA },
             "Meroitic Cursive", u8"Мероитский курсив", {}, EcScript::Mero },
     // Kharoshthi OK
-    { 0x10A00, 0x10A5F,
+    { 0x10A00, 0x10A5F, { 0x10A10, EcContinent::ASIA },
             "Kharoshthi", u8"Кхароштхи", {}, EcScript::Khar },
     // Old South Arab OK
-    { 0x10A60, 0x10A7F,
+    { 0x10A60, 0x10A7F, { 0x10A71, EcContinent::ASIA },
             "Old South Arabian", u8"Древняя южноаравийская", {}, EcScript::Sarb },
     // Old North Arab OK
-    { 0x10A80, 0x10A9F,
+    { 0x10A80, 0x10A9F, { 0x10A91, EcContinent::ASIA },
             "Old North Arabian", u8"Древняя североаравийская", {}, EcScript::Narb },
     // Manichaean OK
-    { 0x10AC0, 0x10AFF,
+    { 0x10AC0, 0x10AFF, { 0x10AC0, EcContinent::ASIA },
             "Manichaean", u8"Манихейская", {}, EcScript::Mani },
     // Avestan OK
-    { 0x10B00, 0x10B3F,
+    { 0x10B00, 0x10B3F, { 0x10B00, EcContinent::ASIA },
             "Avestan", u8"Авестийский", {}, EcScript::Avst },
     // Inscr Parthian OK
-    { 0x10B40, 0x10B5F,
+    { 0x10B40, 0x10B5F, { 0x10B40, EcContinent::ASIA },
             "Inscriptional Parthian", u8"Парфянские надписи", {}, EcScript::Prti },
     // Inscr Pahlavi OK
-    { 0x10B60, 0x10B7F,
+    { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA },
             "Inscriptional Pahlavi", u8"Пехлевийские надписи", {}, EcScript::Phli },
     // Psalter Pahlavi OK
-    { 0x10B80, 0x10BAF,
+    { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::APPROX_COLOR },
             "Psalter Pahlavi", u8"Псалтырское пехлеви", {}, EcScript::Phlp },
     // Turkic runes OK
-    { 0x10C00, 0x10C4F,
+    { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA },
             "Old Turkic", u8"Тюркские (орхоно-енисейские) руны", {}, EcScript::Orkh },
     // Hung runes OK
-    { 0x10C80, 0x10CFF,
+    { 0x10C80, 0x10CFF, { 0x10CAF, EcContinent::EUROPE },
             "Old Hungarian", u8"Венгерские (секейские) руны", {}, EcScript::Hung },
     // Hanifi OK
-    { 0x10D00, 0x10D3F,
+    { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA },
             "Hanifi Rohingya", u8"Ханифи (рохинджа)", {}, EcScript::Rohg },
     // Rumi OK
-    { 0x10E60, 0x10E7F,
+    { 0x10E60, 0x10E7F, { 0x10E77, EcContinent::AFRICA, Ifg::CONTINENT_OK },
             "Rumi Numeral Symbols", u8"Цифры руми",
             u8"Цифры, использовавшиеся в арабской Африке с X по XVII{{_}}век, особенно в Фесе ''(Марокко)''.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Yezidi OK
-    { 0x10E80, 0x10EBF,
+    { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA },
             "Yezidi", u8"Езидская", {}, EcScript::Yezi },
     // Old Sogdian OK
-    { 0x10F00, 0x10F2F,
+    { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA },
             "Old Sogdian", u8"Старосогдийский", {}, EcScript::Sogo },
     // Sogdian OK
-    { 0x10F30, 0x10F6F,
+    { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA },
             "Sogdian", u8"Согдийский", {}, EcScript::Sogd },
     // Old Uyghur OK
-    { 0x10F70, 0x10FAF,
+    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
             "Old Uyghur", u8"Староуйгурский", {},
             EcScript::Ougr },
     // Chorasmian OK, built own font
-    { 0x10FB0, 0x10FDF,
+    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA },
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
     // Elymaic OK
-    { 0x10FE0, 0x10FFF,
+    { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA },
             "Elymaic", u8"Элимайский (эламский)", {}, EcScript::Elym },
     // Brahmi OK
-    { 0x11000, 0x1107F,
+    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA },
             "Brahmi", u8"Брахми", {}, EcScript::Brah },
     // Kaithi OK
-    { 0x11080, 0x110CF,
+    { 0x11080, 0x110CF, { 0x1108D, EcContinent::ASIA },
             "Kaithi", u8"Кайтхи", {}, EcScript::Kthi },
     // Sora OK
-    { 0x110D0, 0x110FF,
+    { 0x110D0, 0x110FF, { 0x110D0, EcContinent::ASIA },
             "Sora Sompeng", u8"Соранг-сомпенг", {}, EcScript::Sora },
     // Chakma OK
-    { 0x11100, 0x1114F,
+    { 0x11100, 0x1114F, { 0x11110, EcContinent::ASIA },
             "Chakma", u8"Чакма", {}, EcScript::Cakm },
     // Mahajani OK
-    { 0x11150, 0x1117F,
+    { 0x11150, 0x1117F, { 0x11158, EcContinent::ASIA },
             "Mahajani", u8"Махаджани", {}, EcScript::Mahj },
     // Sharada OK
-    { 0x11180, 0x111DF,
+    { 0x11180, 0x111DF, { 0x11191, EcContinent::ASIA },
             "Sharada", u8"Шарада", {}, EcScript::Shrd },
     // Sinhala archaic OK
-    { 0x111E0, 0x111FF,
+    // Noto Sinhala is light but archaic numbers are bold!
+    { 0x111E0, 0x111FF, { 0x111E1, EcContinent::OCEAN },
             "Sinhala Archaic Numbers", u8"Старые сингальские цифры",
-            u8"Старинная непозиционная система счисления, использовавшаяся в Шри-Ланке до начала XIX{{_}}века." },
+            u8"Старинная непозиционная система счисления, использовавшаяся в Шри-Ланке до начала XIX{{_}}века.",
+            EcScript::Sinh },
     // Khojki OK
-    { 0x11200, 0x1124F,
+    { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA },
             "Khojki", u8"Ходжки", {}, EcScript::Khoj },
     // Multani OK
-    { 0x11280, 0x112AF,
+    { 0x11280, 0x112AF, { 0x11284, EcContinent::ASIA },
             "Multani", u8"Мултани", {}, EcScript::Mult },
     // Khuda OK
-    { 0x112B0, 0x112FF,
+    { 0x112B0, 0x112FF, { 0x112BA, EcContinent::ASIA },
             "Khudawadi", u8"Кхудабади (синдхи)", {}, EcScript::Sind },
     // Grantha OK
-    { 0x11300, 0x1137F,
+    { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA },
             "Grantha", u8"Грантха", {}, EcScript::Gran },
     // Newa OK
-    { 0x11400, 0x1147F,
+    { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA },
             "Newa", u8"Неварский (прахалит)", {}, EcScript::Newa },
     // Tirhuta OK
-    { 0x11480, 0x114DF,
+    { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA },
             "Tirhuta", u8"Тирхута (митхилакшар)", {}, EcScript::Tirh },
     // Siddham OK
-    { 0x11580, 0x115FF,
+    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA },
             "Siddham", u8"Сиддхаматрика (сиддхам, бондзи)", {}, EcScript::Sidd },
     // Modi OK
-    { 0x11600, 0x1165F,
+    { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA },
             "Modi", u8"Моди", {}, EcScript::Modi },
     // Mongolian supp OK
-    { 0x11660, 0x1167F,
+    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Mongolian Supplement", u8"Монгольский дополнительный",
             u8"Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. "
                         "Поскольку монгольский пишется сверху вниз, а тибетский{{-}}слева направо, тибетские ''yig-mgo'' использовать нельзя."
@@ -4139,67 +4147,68 @@ constinit const uc::Block uc::blocks[] {
                         "а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.",
             EcScript::Mong },
     // Takri OK
-    { 0x11680, 0x116CF,
+    { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri", u8"Такри", {}, EcScript::Takr },
     // Ahom OK
-    { 0x11700, 0x1174F,
+    { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom", u8"Ахом", {}, EcScript::Ahom },
     // Dogra OK
-    { 0x11800, 0x1184F,
+    /// @todo [icon] Non-existent char, maybe 11816
+    { 0x11800, 0x1184F, { 0x11816, EcContinent::ASIA },
             "Dogra", u8"Догра", {}, EcScript::Dogr },
     // Warang OK
-    { 0x118A0, 0x118FF,
+    { 0x118A0, 0x118FF, { 0x118FF, EcContinent::ASIA },
             "Warang Citi", u8"Варанг-кшити", {}, EcScript::Wara },
     // Dives Akuru OK
-    { 0x11900, 0x1195F,
+    { 0x11900, 0x1195F, { 0x1190D, EcContinent::OCEAN },
             "Dives Akuru", u8"Дивес-акуру (древнемальдивский)", {}, EcScript::Diak },
-    // Nandi OK, built own font
-    { 0x119A0, 0x119FF,
+    // Nandi OK
+    { 0x119A0, 0x119FF, { 0x119B4, EcContinent::ASIA },
             "Nandinagari", u8"Нандинагари", {}, EcScript::Nand },
     // Zanabazar square OK
-    { 0x11A00, 0x11A4F,
+    { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA },
             "Zanabazar Square", u8"Монгольское горизонтально-квадратное (Дзанабадзара)", {}, EcScript::Zanb },
     // Soyombo OK
-    { 0x11A50, 0x11AAF,
+    { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA },
             "Soyombo", u8"Соёмбо", {}, EcScript::Soyo },
     // Canadian A OK
-    { 0x11AB0, 0x11ABF,
+    { 0x11AB0, 0x11ABF, { 0x11AB0, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended-A",
             u8"Канадская слоговая расширенная A",
             u8"Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), "
                         "и четыре исторических слога индейцев кри и оджибве.",
             EcScript::Cans },
     // Pau Cin Hau OK
-    { 0x11AC0, 0x11AFF,
+    { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA },
             "Pau Cin Hau", u8"Письмо По Чин Хо", {}, EcScript::Pauc },
     // Bhaiksuki OK
-    { 0x11C00, 0x11C6F,
+    { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
             "Bhaiksuki", u8"Бхаикшуки (стрелоглавое письмо)", {}, EcScript::Bhks },
     /// @todo [semi-tofu] #85 Marchen too small because of subjoining
-    { 0x11C70, 0x11CBF,
+    { 0x11C70, 0x11CBF, { 0x11C74, EcContinent::ASIA },
             "Marchen", u8"Марчхен", {}, EcScript::Marc },
-    { 0x11D00, 0x11D5F,
+    { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA },
             "Masaram Gondi", u8"Письмо Масарама (гонди)", {}, EcScript::Gonm },
-    { 0x11D60, 0x11DAF,
+    { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA },
             "Gunjala Gondi", u8"Гунджала (гонди)", {}, EcScript::Gong },
     // Makasar OK
-    { 0x11EE0, 0x11EFF,
+    { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar", u8"Макасарский (птичье письмо)", {}, EcScript::Maka },
     // Lisu supplement OK, new font engine works
-    { 0x11FB0, 0x11FBF,
+    { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA },
             "Lisu Supplement", u8"Лису дополнительный",
             u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
             EcScript::Lisu },
     // Tamil supp OK
-    { 0x11FC0, 0x11FFF,
+    { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA },
             "Tamil Supplement", u8"Тамильский дополнительный",
             u8"Старинные тамильские дроби и другие символы: для валют, сельского хозяйства, бухгалтерии.",
             EcScript::Taml, EcFont::TAMIL_SUPPLEMENT },
     // Cuneiform OK
-    { 0x12000, 0x123FF,
+    { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
             "Cuneiform", u8"Клинопись", {}, EcScript::Xsux },
     // Cuneiform nembers and punct OK
-    { 0x12400, 0x1247F,
+    { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA },
             "Cuneiform Numbers and Punctuation",
             u8"Клинописные цифры и знаки препинания",
             u8"Вавилонянам около 2000{{bc}} приписывается первая позиционная система счисления, основание у неё было 60. "
@@ -4210,51 +4219,52 @@ constinit const uc::Block uc::blocks[] {
                     "записывались разными знаками.",
             EcScript::Xsux },
     // Early cuneiform OK
-    { 0x12480, 0x1254F,
+    { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA },
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
     // Cypro-Minoan OK
-    { 0x12F90, 0x12FFF,
+    { 0x12F90, 0x12FFF, { 0x12FA5, EcContinent::EUROPE },
             "Cypro-Minoan", u8"Кипро-минойская", {},
             EcScript::Cpmn },
     // Egyptian hiero OK
-    { 0x13000, 0x1342F,
+    /// @todo [icon] Non-contrast, possibly non-historical, from Segoe, not Noto
+    { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
     // Egyptian hiero format OK
-    { 0x13430, 0x1343F,
+    { 0x13430, 0x1343F, { 0x13434, EcContinent::AFRICA },
             "Egyptian Hieroglyph Format Controls",
             u8"Форматирующие символы для египетских иероглифов",
             u8"Семь необязательных символов, обеспечивающих полное форматирование египетских иероглифов.",
             EcScript::Egyp },
     // Anatolian hiero OK
-    { 0x14400, 0x1467F,
+    { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs", u8"Анатолийские (лувийские, хеттские) иероглифы", {}, EcScript::Hluw },
     // Bamum supplement OK
-    { 0x16800, 0x16A3F,
+    { 0x16800, 0x16A3F, { 0x16812, EcContinent::AFRICA },
             "Bamum Supplement", u8"Бамум дополнительный",
             u8"Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. "
                 "Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].",
             EcScript::Bamu },
     // Mro OK
-    { 0x16A40, 0x16A6F,
+    { 0x16A40, 0x16A6F, { 0x16A52, EcContinent::ASIA },
             "Mro", u8"Мру", {}, EcScript::Mroo },
     // Tangsa OK, found the author
-    { 0x16A70, 0x16ACF,
+    { 0x16A70, 0x16ACF, { 0x16A86, EcContinent::ASIA },
             "Tangsa", u8"Тангса", {}, EcScript::Tnsa },
     // Bassa OK
-    { 0x16AD0, 0x16AFF,
+    { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA },
             "Bassa Vah", u8"Басса (вах)", {}, EcScript::Bass },
     // Pahawh OK
-    { 0x16B00, 0x16B8F,
+    { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
             "Pahawh Hmong", u8"Пахау хмонг", {}, EcScript::Hmng },
     // Medefaidrin OK
-    { 0x16E40, 0x16E9F,
+    { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA },
             "Medefaidrin", u8"Обэри-окаимэ (медефайдрин)", {}, EcScript::Medf },
-    /// @todo [semi-tofu] #80 Draw special chars for tone
-    { 0x16F00, 0x16F9F,
+    // Miao OK
+    { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA },
             "Miao", u8"Мяо (письмо Полларда)", {}, EcScript::Plrd },
     // Ideographic sym/punct OK
-    { 0x16FE0, 0x16FFF,
+    { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK },
             "Ideographic Symbols and Punctuation",
             u8"Символы и знаки препинания для иероглифов",
             u8"Различные символы, используемые в старых [[pt:cjk|ККЯ]]-письменностях: "
@@ -4271,65 +4281,65 @@ constinit const uc::Block uc::blocks[] {
             // Hani is just over-insurance.
             EcScript::Hani },
     // Tangut OK
-    { 0x17000, 0x187FF,
+    { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut", u8"Тангутский", {},
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK
-    { 0x18800, 0x18AFF,
+    { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut Components", u8"Элементы тангутского письма",
             u8"Компоненты и радикалы, используемые в современном изучении тангутского письма.",
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Khitan small OK
-    { 0x18B00, 0x18CFF,
+    { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Khitan Small Script", u8"Малое киданьское письмо",
             {}, EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
-    { 0x18D00, 0x18D8F,
+    { 0x18D00, 0x18D8F, { 0x18D00, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut Supplement", u8"Тангутский дополнительный",
             u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK },
-    // Made for myself tofu from GlyphWiki
-    { 0x1AFF0, 0x1AFFF,
+    // Kana ex B OK: Made for myself tofu from GlyphWiki
+    { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B", u8"Кана расширенная B",
             u8"Изобретённая японскими лингвистами незадолго до Второй мировой войны запись каной "
                 "тайваньского диалекта южноминьского языка.",
-            EcScript::NONE, EcFont::NORMAL, Bfg::CJK },
+            EcScript::Kana, EcFont::NORMAL, Bfg::CJK },
     // Kana supp OK
-    { 0x1B000, 0x1B0FF,
+    { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
             "Kana Supplement", u8"Кана дополнительная",
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
                     "Хэнтайгана продолжается и в следующем блоке.",
-            EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE },
     // Kana ex A OK
-    { 0x1B100, 0x1B12F,
+    { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK },
             "Kana Extended-A", u8"Кана расширенная A",
             u8"31 символ [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]], и 4 символа [[ps:Kana|катаканы]] и хираганы.",
-            EcScript::NONE, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE },
     // Small kana ex OK
-    { 0x1B130, 0x1B16F,
+    { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension", u8"Маленькие символы каны",
             u8"Маленькие символы катаканы используются для передачи звуков, отсутствующих в японском. "
                     "Так, маленькое {{sm|ケヰ}} передаёт огублённое «кʷи». "
                     "Также добавлены соответствующие символы хираганы{{-}}правда, к моменту принятия заявка похудела: "
                         "отпали «ко» обеих азбук и «н» хираганы.",
-            EcScript::NONE, EcFont::KOREAN },
+            EcScript::Kana, EcFont::KOREAN },
     // Nushu OK
-    { 0x1B170, 0x1B2FF,
+    { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
             "Nushu", u8"Нюй-шу",
             {}, EcScript::Nshu, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Duployan OK
-    { 0x1BC00, 0x1BC9F,
+    { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE },
             "Duployan", u8"Стенография Дюплойе", {}, EcScript::Dupl },
-    /// @todo [semi-tofu] #81 Complex arrows are just taken from font
-    { 0x1BCA0, 0x1BCAF,
+    // Shorthand format controls OK
+    { 0x1BCA0, 0x1BCAF, { 0x1BCA3, EcContinent::NONE },
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии",
             u8"Невидимые символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.",
-            EcScript::Dupl, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE },
     // Znamenny OK, found cool font on Ponomar
-    { 0x1CF00, 0x1CFCF,
+    { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation", u8"Знаменное пение",
             u8"Знáменное, или крюковое пение{{-}}одноголосое (то есть весь хор поёт в унисон) православное пение. "
                     "Названо в честь знамён{{-}}нотных знаков, к которым прикрепляются признáки. "
@@ -4351,7 +4361,7 @@ constinit const uc::Block uc::blocks[] {
                         "церковнославянских словарей орфографии и распознавания, оцифровкой книг.",
             EcScript::NONE, EcFont::ZNAMENNY },
     // Byzantine music seemingly OK
-    { 0x1D000, 0x1D0FF,
+    { 0x1D000, 0x1D0FF, { 0x1D035, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Byzantine Musical Symbols",
             u8"Византийские музыкальные символы",
             u8"О византийской церковной музыке известно мало, а о светской{{-}}вообще ничего. "
@@ -4359,7 +4369,7 @@ constinit const uc::Block uc::blocks[] {
                         "даже под властью турок, и были реформированы около 1800.",
             EcScript::NONE, EcFont::MUSIC_BIGGER  },
     // Music OK
-    { 0x1D100, 0x1D1FF,
+    { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE },
             "Musical Symbols", u8"Музыкальные символы",
             u8"С X{{_}}века появилась нотная запись, похожая на современную. "
                     "Ноты были квадратными, потому что рисовались жирным пером. "
@@ -4379,7 +4389,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Также в этом блоке есть несколько символов из устаревших музыкальных нотаций.",
             EcScript::NONE, EcFont::MUSIC },
     // Greek music OK
-    { 0x1D200, 0x1D24F,
+    { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE },
             "Ancient Greek Musical Notation",
             u8"Древнегреческая музыкальная нотация",
             u8"Про древних греков известно мало. "
@@ -4389,9 +4399,9 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Для музыкантов и певцов были разные нотации, это позволяло писать одновременно слова, музыку и подсказки для певцов. "
                     "Ноты записывались старинными буквами, и те из них, что не{{_}}совпадают с греческими, приведены в этом блоке "
                         "без всякой системы.",
-            EcScript::NONE, EcFont::MUSIC_NORMAL },
+            EcScript::Grek, EcFont::MUSIC_NORMAL },
     // Mayan numerals OK
-    { 0x1D2E0, 0x1D2FF,
+    { 0x1D2E0, 0x1D2FF, { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Mayan Numerals", u8"Цифры майя",
             u8"Майя пользовались двадцатеричной позиционной системой счисления. "
                     "Разряды записывались сверху вниз. "
@@ -4401,7 +4411,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Некоторые источники говорят, что в быту майя пользовались более простой непозиционной системой счисления.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Tai Xuan Jing OK
-    { 0x1D300, 0x1D35F,
+    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK },
             "Tai Xuan Jing Symbols", u8"Символы Тайсюаньцзин (Канона великой тайны)",
             u8"Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый Книгой перемен. "
                     "В трактате описана 81 тетраграмма. "
@@ -4411,7 +4421,7 @@ constinit const uc::Block uc::blocks[] {
                     "С гарантиями [[pt:stability|стабильности]] оставалось только объяснить эту досадную ошибку в комментариях."
                 "<p>Часть монограмм и диграмм уже есть в базовой плоскости." },
     // Counting rods OK
-    { 0x1D360, 0x1D37F,
+    { 0x1D360, 0x1D37F, { 0x1D378, EcContinent::NONE },
             "Counting Rod Numerals", u8"Счётные палочки",
             u8"Палочками учат считать детей. "
                     "Древние китайцы, начиная с Воюющих царств (V{{_}}век) до XVI{{_}}века пользовались настоящей позиционной "
@@ -4427,7 +4437,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     /// @todo [link,block] Letterlike
     // Math alnum OK
-    { 0x1D400, 0x1D7FF,
+    { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE },
             "Mathematical Alphanumeric Symbols",
             u8"Математические буквы и цифры",
             u8"Математики обозначают различными шрифтами объекты, с которыми имеют дело:<br>"
@@ -4444,43 +4454,43 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Наиболее распространённые из таких обозначений находятся в базовой плоскости в разделе буквоподобных символов. "
                     "С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами." },
     // Sutton SignWriting OK
-    { 0x1D800, 0x1DAAF,
+    { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
     // Latin ex G OK, drew in FunkySample
-    { 0x1DF00, 0x1DFFF,
+    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE },
             "Latin Extended-G", u8"Латиница расширенная G",
             u8"Различные символы для расстройств речи и фонетики: "
                     "мягкие и ретрофлексные (получаемые загибанием языка назад к нёбу) звуки, щелчки и некоторые другие.",
             EcScript::Latn, EcFont::FUNKY },
     // Glagolitic supp OK
-    { 0x1E000, 0x1E02F,
+    { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE },
             "Glagolitic Supplement", u8"Глаголица дополнительная",
             u8"Надстрочные буквы глаголицы, встречающиеся в различных источниках.",
             EcScript::Glag },
     // NP Hmong OK
-    { 0x1E100, 0x1E14F,
+    { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA },
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
     // Toto OK
-    { 0x1E290, 0x1E2BF,
+    { 0x1E290, 0x1E2BF, { 0x1E290, EcContinent::ASIA },
             "Toto", u8"Тото", {}, EcScript::Toto },
     // Wancho OK
-    { 0x1E2C0, 0x1E2FF,
+    { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho", u8"Ванчо", {}, EcScript::Wcho },
-    // Ethiopic ex B OK, built chars somehow
-    { 0x1E7E0, 0x1E7FF,
+    // Ethiopic ex B OK, Noto quickly arrived
+    { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA },
             "Ethiopic Extended-B", u8"Эфиопская расширенная B",
             u8"Новая орфография языков гураге (эфиосемитская группа, до 5 млн), появившаяся в 2013 и сделавшая письменным "
                     "всё семейство, не только закодированный в 2005 себат-бет. "
                 "Часть старых себатбетских букв объявлены [[pt:obsolete|устаревшими]].",
             EcScript::Ethi },
     // Mende Kikakui OK
-    { 0x1E800, 0x1E8DF,
+    { 0x1E800, 0x1E8DF, { 0x1E800, EcContinent::AFRICA },
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
     // Adlam OK
-    { 0x1E900, 0x1E95F,
+    { 0x1E900, 0x1E95F, { 0x1E902, EcContinent::AFRICA },
             "Adlam", u8"Адлам", {}, EcScript::Adlm },
     // Indic Siyaq OK
-    { 0x1EC70, 0x1ECBF,
+    { 0x1EC70, 0x1ECBF, { 0x1EC77, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Indic Siyaq Numbers", u8"Индийские цифры сийяк",
             u8"Арабские непозиционные цифры, применявшиеся в Индии с XVII{{_}}века "
                         "(ещё под империей Великих Моголов) до середины XX{{_}}века. "
@@ -4491,7 +4501,7 @@ constinit const uc::Block uc::blocks[] {
                     "Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.",
             EcScript::NONE, EcFont::SIYAQ_INDIC },
     // Ottoman Siyaq OK, drew in FunkySample
-    { 0x1ED00, 0x1ED4F,
+    { 0x1ED00, 0x1ED4F, { 0x1ED0A, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Ottoman Siyaq Numbers", u8"Османские цифры сийяк",
             u8"Арабские непозиционные [[pt:acrophonic|акрофонические]] цифры, использовавшиеся в Турции позднего средневековья, "
                     "также «раккамлары»{{-}}от арабского ''ракм'' «счёт». "
@@ -4500,7 +4510,7 @@ constinit const uc::Block uc::blocks[] {
                     "Символ ''marratan'' употребляется с тысячами для записи миллионов.",
             EcScript::NONE, EcFont::FUNKY },
     // Arab mathematical OK, currently we use Noto Math
-    { 0x1EE00, 0x1EEFF,
+    { 0x1EE00, 0x1EEFF, { 0x1EEA5, EcContinent::ASIA },
             "Arabic Mathematical Alphabetic Symbols",
             u8"Арабские математические алфавитные символы",
             u8"У арабов своя математическая нотация. "
@@ -4511,9 +4521,9 @@ constinit const uc::Block uc::blocks[] {
                         "Отзеркаливают даже знаки «существует» или «частный дифференциал»."
                 "<p>Первыми такой набор реализовали разработчики системы математического текста TᴇX (читается «тех»), и в 2012, "
                     "после семи лет утрясок, эти наработки перенесли в Юникод.",
-            EcScript::NONE, EcFont::MATH },
+            EcScript::Arab, EcFont::MATH },
     // Mahjong tiles OK
-    { 0x1F000, 0x1F02F,
+    { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR },
             "Mahjong Tiles", u8"Фишки маджонга",
             u8"Азартная игра мацзян (часто через романизацию именуемая маджонг) изобретена в конце XIX{{_}}века, "
                         "первый сохранившийся набор{{-}}1870. "
@@ -4530,7 +4540,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>…Локард так и остался прикованным к коляске, но прославился как разработчик игр "
                     "и ПО для реабилитации, и на 2019 жив." },
     // Domino tiles OK
-    { 0x1F030, 0x1F09F,
+    { 0x1F030, 0x1F09F, { 0x1F043, EcContinent::NONE },
             "Domino Tiles", u8"Кости домино",
             u8"Домино изобрели китайцы около XIII{{_}}века. "
                     "В XVIII{{_}}веке игра попала в Италию."
@@ -4543,7 +4553,7 @@ constinit const uc::Block uc::blocks[] {
             // Fonts coincide
             EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Cards OK
-    { 0x1F0A0, 0x1F0FF,
+    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR },
             "Playing Cards", u8"Игральные карты",
             u8"Блок объединяет стандартные карты и колоду таро."
                 "<p>Игру в карты придумали около XII{{_}}века в Восточной Азии. "
@@ -4561,7 +4571,7 @@ constinit const uc::Block uc::blocks[] {
             // One emoji here → colour emoji font
             EcScript::NONE, EcFont::PLAYING_CARDS },
     // Enclosed alnum OK, added a few symbols to FunkySample
-    { 0x1F100, 0x1F1FF,
+    { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE },
             "Enclosed Alphanumeric Supplement",
             u8"Обрамлённые буквы и цифры дополнительные",
             u8"Японские телевизионные символы, символы из шрифта Webdings, символы интеллектуальной собственности…"
@@ -4570,7 +4580,7 @@ constinit const uc::Block uc::blocks[] {
                         "если написать эмодзи «GB», получится флаг Великобритании.",
             EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE },
     // Enclosed hiero OK
-    { 0x1F200, 0x1F2FF,
+    { 0x1F200, 0x1F2FF, { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR },
             "Enclosed Ideographic Supplement",
             u8"Обрамлённые иероглифы дополнительные",
             u8"Иероглифы в скобках, квадратах, кругах. "
@@ -4582,7 +4592,7 @@ constinit const uc::Block uc::blocks[] {
                         "удача, процветание, долголетие, счастье, любовь, изобилие.",
             EcScript::NONE, EcFont::DINGBAT },
     // Misc OK
-    { 0x1F300, 0x1F5FF,
+    { 0x1F300, 0x1F5FF, { 0x1F52B, EcContinent::NONE },
             "Miscellaneous Symbols and Pictographs",
             u8"Разные символы и пиктограммы",
             u8"В блоке содержатся [[pt:emoji|эмодзи]] (как японские, так и международные), "
@@ -4590,26 +4600,26 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Примечательна судьба символа «пистолет» {{em|🔫}}{{-}}с подачи ''Apple'' большинство производителей "
                     "делают его игрушечным для снижения сетевых угроз." },
     // Emoticons OK
-    { 0x1F600, 0x1F64F,
+    { 0x1F600, 0x1F64F, { 0x1F60D, EcContinent::NONE },
             "Emoticons", u8"Смайлики",
             u8"Эмоциконы или смайлики{{-}}символы и пиктограммы, изображающие эмоции. "
                     "К моменту предложения (2008) смайлики ходили в японских мобильных сетях около 9{{_}}лет. "
                     "По исследованию Консорциума 2019, из десяти самых используемых [[pt:emoji|эмодзи]] шесть{{-}}смайлики.",
             EcScript::NONE, EcFont::DINGBAT },
     // Orna dingbats OK
-    { 0x1F650, 0x1F67F,
+    { 0x1F650, 0x1F67F, { 0x1F650, EcContinent::NONE },
             "Ornamental Dingbats", u8"Печатные узоры",
             u8"Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Transport/map OK
-    { 0x1F680, 0x1F6FF,
+    { 0x1F680, 0x1F6FF, { 0x1F697, EcContinent::NONE },
             "Transport and Map Symbols",
             u8"Транспортные и картографические символы",
             u8"Иконки и [[pt:emoji|эмодзи]] транспортных средств, картографических символов и знаков навигации, "
                         "во многом для совместимости с кодировками японских телефонных операторов.",
             EcScript::NONE, EcFont::DINGBAT },
     // Alchem OK
-    { 0x1F700, 0x1F77F,
+    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
             "Alchemical Symbols", u8"Алхимические символы",
             u8"Основоположником химии считается Антуан Лавуазье (конец XVIII{{_}}века), закрывший, например, понятие «флогистон». "
                     "А до этого были очень разные теории, почему и как вещества взаимодействуют, подчас дикие. "
@@ -4617,7 +4627,7 @@ constinit const uc::Block uc::blocks[] {
                     "У них были бессистемные, но понятные любому знакомому с латынью и древними учениями знаки "
                         "для разных веществ и методов обработки." },
     // Geo shapes ex OK
-    { 0x1F780, 0x1F7FF,
+    { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE },
             "Geometric Shapes Extended",
             u8"Геометрические фигуры расширенные",
             u8"Блок появился в попытке перенести в Юникод пиктографические шрифты ''Wingdings'' и ''Webdings''. "
@@ -4626,12 +4636,12 @@ constinit const uc::Block uc::blocks[] {
                     "жёлтого бантика, пара {{em|🟨🎀}} будет понятной.",
             EcScript::NONE, EcFont::DINGBAT },
     // Arrows C OK
-    { 0x1F800, 0x1F8FF,
+    { 0x1F800, 0x1F8FF, { 0x1F882, EcContinent::NONE },
             "Supplemental Arrows-C", u8"Стрелки дополнительные C",
             u8"По состоянию на Юникод{{_}}13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров. "
                     "Юникод{{_}}14 не принёс новых стрелок." },
     // Supp sym/picto OK
-    { 0x1F900, 0x1F9FF,
+    { 0x1F900, 0x1F9FF, { 0x1F98A, EcContinent::NONE },
             "Supplemental Symbols and Pictographs",
             u8"Символы и пиктограммы дополнительные",
             u8"Появившийся в 2015 блок символов разного назначения, в основном [[pt:emoji|эмодзи]]. "
@@ -4639,7 +4649,7 @@ constinit const uc::Block uc::blocks[] {
                         "кодифицированного около 1100, последние крупные правки 1695.",
             EcScript::NONE, EcFont::DINGBAT },
     // Chess OK, turned bad pawn
-    { 0x1FA00, 0x1FA6F,
+    { 0x1FA00, 0x1FA6F, { 0x1FA10, EcContinent::NONE },
             "Chess Symbols", u8"Шахматные символы",
             u8"В сказочной композиции в эпоху наборного шрифта за неимением другого использовали обычные повёрнутые фигуры. "
                     "Из нестандартных фигур устоялись:<br>"
@@ -4654,14 +4664,14 @@ constinit const uc::Block uc::blocks[] {
                         "Очень манёвренный, но ограничен четвертью клеток."
                 "<p>Также в этом блоке есть фишки китайской игры сянци." },
     // Sym and picto ext A OK
-    { 0x1FA70, 0x1FAFF,
+    { 0x1FA70, 0x1FAFF, { 0x1FA82, EcContinent::NONE },
             "Symbols and Pictographs Extended-A",
             u8"Символы и пиктограммы расширенные А",
             u8"Блок [[pt:emoji|эмодзи]], появившийся в 2019. "
                 "Одежда, медицина, развлечения, разные предметы, еда…",
             EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
-    { 0x1FB00, 0x1FBFF,
+    { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS },
             "Symbols for Legacy Computing",
             u8"Символы со старых компьютеров",
             u8"Символы с разных компьютеров и систем 1970‑х и 80‑х:<br>"
@@ -4688,7 +4698,7 @@ constinit const uc::Block uc::blocks[] {
                             "правда, невозможно показать: нет шрифта, поддерживающего и старую, и новую псевдографику.",
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
     // CJK B OK
-    { 0x20000, 0x2A6DF,
+    { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK },
             "CJK Unified Ideographs Extension B",
             u8"ККЯ иероглифы расширение B",
             u8"Редкие и исторические [[ps:Hani|китайские иероглифы]]. "
@@ -4696,33 +4706,34 @@ constinit const uc::Block uc::blocks[] {
                 "Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK C OK
-    { 0x2A700, 0x2B73F,
+    { 0x2A700, 0x2B73F, { 0x2A704, EcContinent::CJK },
             "CJK Unified Ideographs Extension C",
             u8"ККЯ иероглифы расширение C",
             u8"4149 редких и старых иероглифов, добавленных в 2009. "
                     "В 2021 добавили ещё 4 штуки.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK D OK
-    { 0x2B740, 0x2B81F,
+    { 0x2B740, 0x2B81F, { 0x2B742, EcContinent::CJK },
             "CJK Unified Ideographs Extension D",
             u8"ККЯ иероглифы расширение D",
             u8"222 редких и старых иероглифа, добавленных в 2010.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK E OK
-    { 0x2B820, 0x2CEAF,
+    /// @todo [icon] Remove 2nd horizontal line from above, and you’ll get common 4E1C “east”
+    { 0x2B820, 0x2CEAF, { 0x2B823, EcContinent::CJK },
             "CJK Unified Ideographs Extension E",
             u8"ККЯ иероглифы расширение E",
             u8"5762 редких и старых иероглифа, добавленных в 2015.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK F OK
-    { 0x2CEB0, 0x2EBEF,
+    { 0x2CEB0, 0x2EBEF, { 0x2CEB5, EcContinent::CJK },
             "CJK Unified Ideographs Extension F",
             u8"ККЯ иероглифы расширение F",
             u8"7473 иероглифа, добавленных в 2017. "
                     "Включают редкие, старые, а также больше тысячи чжуанских (один из языков Китая).",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK compat OK
-    { 0x2F800, 0x2FA1F,
+    { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
             "CJK Compatibility Ideographs Supplement",
             u8"ККЯ совместимые иероглифы дополнение",
             u8"Появившаяся в 2001 [[pt:unification|разунификация]] 542 иероглифов "
@@ -4730,7 +4741,7 @@ constinit const uc::Block uc::blocks[] {
                     "Разумеется, все иероглифы этого блока традиционные.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK G OK, found a HanaMin version supporting CJK G
-    { 0x30000, 0x3134F,
+    { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
             "CJK Unified Ideographs Extension G",
             u8"ККЯ иероглифы расширение G",
             u8"В 2020 Юникод перешагнул в [[pt:plane|плоскость]] номер 3, выделив там 4939 редких и старых иероглифов. "
@@ -4740,7 +4751,7 @@ constinit const uc::Block uc::blocks[] {
                     "• ''дайто'' или ''отодо''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tags OK
-    { 0xE0000, 0xE007F,
+    { 0xE0000, 0xE007F, { 0xE0041, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Tags", u8"Тэги",
             u8"Блок тэгов повторяет [[pt:ascii|ASCII]]. "
                     "Изначально (Unicode 3.1, 2001) тэги применялись для задания языка "
@@ -4750,7 +4761,7 @@ constinit const uc::Block uc::blocks[] {
                     "Используются только для флагов регионов, определены три региона: Англия, Уэльс, Шотландия.",
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
-    { 0xE0100, 0xE01EF,
+    { 0xE0100, 0xE01EF, { 0xE0100, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Variation Selectors Supplement", u8"Селекторы начертания дополнительные",
             u8"Дополнительные селекторы начертания используются только с [[ps:Hani|китайскими иероглифами]], чтобы дать тот или иной "
                     "вариант начертания. "
@@ -5622,6 +5633,19 @@ void uc::completeData()
     for (auto& v : blocks) {
         if (!v.firstAllocated)
             throw std::logic_error("Block w/o chars leaked into data!");
+
+        // Check synthesized icon
+        if (v.synthIcon.subj < v.startingCp || v.synthIcon.subj > v.endingCp)
+            throw std::logic_error(
+                    "Synthesized icon is not within block " + std::string{v.name});
+        if (!cpsByCode[v.synthIcon.subj])
+            throw std::logic_error("Synthesized icon points to bad char!");
+        if (!v.synthIcon.flags.have(Ifg::CONTINENT_OK)) {
+            auto& script = v.script();
+            if (script.ecContinent != v.synthIcon.ecContinent) {
+                std::cout << "Continent mismatch: " << v.name << std::endl;
+            }
+        }
     }
 }
 
