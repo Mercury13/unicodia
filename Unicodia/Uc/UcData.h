@@ -724,22 +724,6 @@ namespace uc {
 
     extern const std::u8string_view TX_NOCHAR;
 
-    // Implementation of Numeric inlines
-    inline const NumType& Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
-
-    // Implementations of Cp inlines
-    inline const char8_t* Cp::Name::tech() const { return allStrings + iTech.val(); }
-    inline const Numeric& Cp::numeric() const { return allNumerics[iNumeric]; }
-    inline const Version& Cp::version() const { return versionInfo[static_cast<int>(ecVersion)]; }
-    inline const Category& Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
-    inline const BidiClass& Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
-    inline const Script& Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
-    inline const Script& Cp::scriptEx() const
-        { return scriptInfo[static_cast<int>(ecScriptEx())]; }
-    inline bool Cp::isTrueSpace() const
-            { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
-                      ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
-
     enum class OldComp {
         AMSTRAD     = 1 << 0,
         APPLE       = 1 << 1,
@@ -778,4 +762,23 @@ namespace uc {
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
     { return uc::StyleSheet{std::string_view { data, n }}; }
 
+
+// Inline implementations
+// …Numeric
+inline const uc::NumType& uc::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
+
+// …Cp
+inline const char8_t* uc::Cp::Name::tech() const { return allStrings + iTech.val(); }
+inline const uc::Numeric& uc::Cp::numeric() const { return allNumerics[iNumeric]; }
+inline const uc::Version& uc::Cp::version() const { return versionInfo[static_cast<int>(ecVersion)]; }
+inline const uc::Category& uc::Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
+inline const uc::BidiClass& uc::Cp::bidiClass() const { return bidiClassInfo[static_cast<int>(ecBidiClass)]; }
+inline const uc::Script& uc::Cp::script() const { return scriptInfo[static_cast<int>(ecScript)]; }
+inline const uc::Script& uc::Cp::scriptEx() const
+    { return scriptInfo[static_cast<int>(ecScriptEx())]; }
+inline bool uc::Cp::isTrueSpace() const
+        { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
+                  ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+
+// SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
