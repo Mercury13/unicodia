@@ -71,12 +71,19 @@ uc::SingleResult uc::findCode(char32_t code)
         return { code, CpType::PRIVATE_USE };
     if (code >= 0xD800 && code <= 0xDFFF)
         return { code, CpType::SURROGATE };
-    auto v = uc::blockOf(code);
-    if (!v || code > v->endingCp)
+    auto blk = uc::blockOf(code);
+    if (!blk || code > blk->endingCp)
         return { code, CpType::UNALLOCATED };
 
+    // Find nearest char
+    const uc::Cp* nearestCp =
+            (code <= *blk->firstAllocated)
+                ? blk->firstAllocated
+                : (code >= *blk->lastAllocated)
+                  ? blk->lastAllocated
+                  : std::lower_bound(blk->firstAllocated, blk->lastAllocated, code);
     /// @todo [urgent] We go to that synth icon character, what to do?
-    return { code, CpType::RESERVED, cpsByCode[v->synthIcon.subj] };
+    return { code, CpType::RESERVED, nearestCp };
 }
 
 

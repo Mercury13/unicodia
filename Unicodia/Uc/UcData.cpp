@@ -917,7 +917,8 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Примерно по 30 символам у исследователей есть консенсус, но перспективы полной расшифровки туманны: "
                     "доступны 250 надписей общей длиной 2500 знаков. "
                 "Для сравнения: в нерасшифрованном линейном письме А{{-}}7{{_}}тыс., "
-                    "в [[ps:Linb|линейном письме Б]] на момент расшифровки{{-}}30{{_}}тыс.",
+                    "в [[ps:Linb|линейном письме Б]] на момент расшифровки{{-}}30{{_}}тыс."
+            "<p>Изображение на значке аутентичное, шрифт{{-}}на основе прорисовки Майкла Эверсона (2020).",
                 EcFont::FUNKY },
     // Cypriot OK, W10 Segoe Historic
     { "Cprt", QFontDatabase::Any,
@@ -1501,7 +1502,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "В 1216 киданей окончательно разбили монголы и корейцы."
             "<p>Многие шрифты кладут киданьский текст на 90°. "
                 "Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''. "
-                "Из-за вопросов с авторскими правами иконка показывает один из символов с медного киданьского зеркала "
+                "Из-за вопросов с авторскими правами значок показывает один из символов с медного киданьского зеркала "
                     "(прорисовал проф. Цзин Юнши), а шрифт{{-}}прямой современный, перерисованный Эндрю Уэстом.",
                 EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
@@ -4223,7 +4224,7 @@ constinit const uc::Block uc::blocks[] {
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
     // Cypro-Minoan OK
-    { 0x12F90, 0x12FFF, { 0x12FA5, EcContinent::EUROPE },
+    { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::APPROX_HISTORICAL },
             "Cypro-Minoan", u8"Кипро-минойская", {},
             EcScript::Cpmn },
     // Egyptian hiero OK
@@ -5622,6 +5623,7 @@ void uc::completeData()
         auto block = blockOf(cp.subj);
         if (!block->firstAllocated)
             block->firstAllocated = &cp;
+        block->lastAllocated = &cp;
         ++block->nChars;
         block->ecVersion = std::min(block->ecVersion, cp.ecVersion);
         block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
@@ -5631,7 +5633,7 @@ void uc::completeData()
 
     // Check blocks — they should have at least one char
     for (auto& v : blocks) {
-        if (!v.firstAllocated)
+        if (!v.firstAllocated || !v.lastAllocated)
             throw std::logic_error("Block w/o chars leaked into data!");
 
         // Check synthesized icon

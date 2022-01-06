@@ -591,12 +591,12 @@ namespace uc {
         CONTINENT_OK    = 1<<0,     ///< [+] disable auto-check, continent is really OK
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
-        APPROX_2_CHARS  = 1<<10,    ///< [+] 2 chars on icon
-        APPROX_ROTATED  = 1<<11,    ///< [+] rotated text on icon
-        APPROX_LINES    = 1<<12,    ///< [+] lines on icon
-        APPROX_COLLECTIVE=1<<13,    ///< [+] icon contains collective image, not specific char
-        APPROX_COLOR    = 1<<14,    ///< [+] icon is multi-colour
-        APPROX_HISTORICAL=1<<15,    ///< [+] icon is from historical font with © issues
+        APPROX_2_CHARS  = 0,        ///< [+] 2 chars on icon
+        APPROX_ROTATED  = 0,        ///< [+] rotated text on icon
+        APPROX_LINES    = 0,        ///< [+] lines on icon
+        APPROX_COLLECTIVE=0,        ///< [+] icon contains collective image, not specific char
+        APPROX_COLOR    = 0,        ///< [+] icon is multi-colour
+        APPROX_HISTORICAL=0,        ///< [+] icon is from historical font with © issues
         // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
         // dotted circle completely → no flag for such approximation
     };
@@ -626,6 +626,7 @@ namespace uc {
         /// @warning We do not delete that icon, strange constinit problems, but OK
         mutable QPixmap* icon = nullptr;
         mutable const Cp* firstAllocated = nullptr;
+        mutable const Cp* lastAllocated = nullptr;
         mutable int nChars = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
         mutable EcVersion ecLastVersion = EcVersion::FIRST;
@@ -779,6 +780,13 @@ inline const uc::Script& uc::Cp::scriptEx() const
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+inline std::strong_ordering operator <=> (char32_t x, const uc::Cp& y)
+    { return x <=> y.subj.ch32(); }
+inline std::strong_ordering operator <=> (const uc::Cp& x, char32_t y)
+    { return x.subj.ch32() <=> y; }
+// Need somehow for lower_bound
+inline bool operator < (const uc::Cp& x, char32_t y)
+    { return x.subj.ch32() < y; }
 
 // SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
