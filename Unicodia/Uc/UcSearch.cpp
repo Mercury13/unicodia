@@ -82,7 +82,8 @@ uc::SingleResult uc::findCode(char32_t code)
                 : (code >= *blk->lastAllocated)
                   ? blk->lastAllocated
                   // If we have { 1, 3 } and finding 2, l_b and u_b will return [3..3)
-                  // Thus −1
+                  // Thus −1, as we need 1
+                  // We cannot find 1− and 3+, these are covered by branches above
                   : std::lower_bound(blk->firstAllocated, blk->lastAllocated, code) - 1;
     return { code, CpType::RESERVED, nearestCp };
 }
