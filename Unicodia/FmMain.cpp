@@ -888,6 +888,9 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 painter.setPen(clTrans);
                 painter.drawRect(bounds1);
 
+                /// @todo [future] default DPI here, DPI is unused right now
+                enum { DPI_STUB = 96 };
+
                 switch (type) {
                 case uc::CpType::NONCHARACTER: {
                         QBrush brush (color, Qt::DiagCrossPattern);
@@ -899,15 +902,18 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 case uc::CpType::SURROGATE:
                     drawAbbreviation(&painter, bounds, u8"SUR", color);
                     break;
-                case uc::CpType::NN:
                 case uc::CpType::RESERVED:
+                    /// @todo [urgent] draw smth else looking like icon?
+                    painter.fillRect(bounds, clTrans);
+                    CharsModel::drawChar(&painter, bounds, cp->block().synthIcon.cp(),
+                                         color, TableDraw::CUSTOM, DPI_STUB);
+                    break;
+                case uc::CpType::NN:
                 case uc::CpType::UNALLOCATED: {
                         painter.fillRect(bounds, clTrans);
                     } [[fallthrough]];
                 case uc::CpType::EXISTING: {
                     // OK w/o size, as 39 ≈ 40
-                    /// @todo [future] default DPI here, DPI is unused right now
-                        enum { DPI_STUB = 96 };
                         if (cp)
                             CharsModel::drawChar(&painter, bounds, *cp, color, TableDraw::CUSTOM, DPI_STUB);
                     }

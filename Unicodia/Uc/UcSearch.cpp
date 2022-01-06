@@ -81,8 +81,9 @@ uc::SingleResult uc::findCode(char32_t code)
                 ? blk->firstAllocated
                 : (code >= *blk->lastAllocated)
                   ? blk->lastAllocated
-                  : std::lower_bound(blk->firstAllocated, blk->lastAllocated, code);
-    /// @todo [urgent] We go to that synth icon character, what to do?
+                  // If we have { 1, 3 } and finding 2, l_b and u_b will return [3..3)
+                  // Thus −1
+                  : std::lower_bound(blk->firstAllocated, blk->lastAllocated, code) - 1;
     return { code, CpType::RESERVED, nearestCp };
 }
 
