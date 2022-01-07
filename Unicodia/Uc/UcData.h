@@ -590,7 +590,11 @@ namespace uc {
 
     struct Continent
     {
-        QColor iconBg, iconFg;
+        // Colors used on 16×16 icons: BG and FG
+        // We use the same colors for synthesized icons
+        struct Icon {
+            QColor bgColor, fgColor;
+        } icon;
     };
     extern const Continent continentInfo[];
 

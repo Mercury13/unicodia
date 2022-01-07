@@ -873,12 +873,12 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 pix.fill(Qt::transparent);
 
                 // Create painter
-                QColor color = sample->palette().windowText().color();
+                QColor clFg = sample->palette().windowText().color();
                 QPainter painter(&pix);
                 auto bounds = pix.rect();
 
                 // Create transparent color
-                QColor clTrans(color);
+                QColor clTrans(clFg);
                 clTrans.setAlpha(30);
 
                 // Draw bounds
@@ -893,30 +893,44 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
                 switch (type) {
                 case uc::CpType::NONCHARACTER: {
-                        QBrush brush (color, Qt::DiagCrossPattern);
+                        painter.drawRect(bounds1);
+                        QBrush brush (clFg, Qt::DiagCrossPattern);
                         painter.fillRect(bounds, brush);
                     } break;
                 case uc::CpType::PRIVATE_USE:
-                    drawAbbreviation(&painter, bounds, u8"PUA", color);
+                    painter.drawRect(bounds1);
+                    drawAbbreviation(&painter, bounds, u8"PUA", clFg);
                     break;
                 case uc::CpType::SURROGATE:
-                    drawAbbreviation(&painter, bounds, u8"SUR", color);
+                    painter.drawRect(bounds1);
+                    drawAbbreviation(&painter, bounds, u8"SUR", clFg);
                     break;
-                case uc::CpType::RESERVED:
-                    /// @todo [urgent] draw smth else looking like icon?
-                    painter.fillRect(bounds, clTrans);
-                    CharsModel::drawChar(&painter, bounds, cp->block().synthIcon.cp(),
-                                         color, TableDraw::CUSTOM, DPI_STUB);
-                    break;
+                case uc::CpType::RESERVED: {
+                        /// @todo [urgent] draw smth else looking like icon?
+                        auto& si = cp->block().synthIcon;
+                        auto clBg = clTrans;
+                        // No continent → draw murky, otherwise use icon colours
+                        if (si.ecContinent != uc::EcContinent::NONE) {
+                            auto cont = si.continent();
+                            clBg = cont.icon.bgColor;
+                            clFg = cont.icon.fgColor;
+                        }
+                        painter.fillRect(bounds, clBg);
+                        painter.drawRect(bounds1);
+                        CharsModel::drawChar(&painter, bounds, si.cp(),
+                                             clFg, TableDraw::CUSTOM, DPI_STUB);
+                    } break;
                 case uc::CpType::NN:
-                case uc::CpType::UNALLOCATED: {
-                        painter.fillRect(bounds, clTrans);
-                    } [[fallthrough]];
-                case uc::CpType::EXISTING: {
+                case uc::CpType::UNALLOCATED:
+                    // Just draw murky w/o foreground
+                    painter.drawRect(bounds1);
+                    painter.fillRect(bounds, clTrans);
+                    break;
+                case uc::CpType::EXISTING:
+                    painter.drawRect(bounds1);
                     // OK w/o size, as 39 ≈ 40
-                        if (cp)
-                            CharsModel::drawChar(&painter, bounds, *cp, color, TableDraw::CUSTOM, DPI_STUB);
-                    }
+                    if (cp)
+                        CharsModel::drawChar(&painter, bounds, *cp, clFg, TableDraw::CUSTOM, DPI_STUB);
                 }
             });
     default:
