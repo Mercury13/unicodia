@@ -174,6 +174,7 @@ namespace uc {
         AFRICA,
         AMERICA,
         CJK,
+        NN
     };
 
     enum class EcFont
@@ -587,6 +588,12 @@ namespace uc {
 
     DEFINE_ENUM_OPS(Bfg)
 
+    struct Continent
+    {
+        QColor iconBg, iconFg;
+    };
+    extern const Continent continentInfo[];
+
     enum class Ifg {
         CONTINENT_OK    = 1<<0,     ///< [+] disable auto-check, continent is really OK
         // These flags are merely informational and do nothing,
@@ -608,7 +615,9 @@ namespace uc {
         EcContinent ecContinent;
         Flags<Ifg> flags {};
 
-        const Cp& cp() const;
+        inline const Cp& cp() const;
+        const Continent& continent() const
+            { return continentInfo[static_cast<int>(ecContinent)]; }
     };
 
     struct Block

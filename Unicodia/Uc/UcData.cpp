@@ -5487,6 +5487,25 @@ constinit const uc::Term uc::terms[] {
 size_t uc::nTerms() { return std::size(terms); }
 
 
+const uc::Continent uc::continentInfo[] {
+    // None
+    { {}, {} },
+    // Europe
+    { 0x7fffff, 0x204a87 },
+    // Asia
+    { 0xffff83, 0xf57900 },
+    // Ocean
+    { 0xc8ffc8, 0x006400 },
+    // Africa
+    { 0xf5deb3, 0x8f5902 },
+    // America
+    { 0xffc8c8, 0xcc0000 },
+    // CJK
+    { 0xfff0f5, 0x5c3566 },
+};
+static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
+
+
 std::u8string_view uc::oldCompNames[] {
     u8"Amstrad" NBSP "CPC",
     u8"Apple" NBSP "IIc+",
