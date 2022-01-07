@@ -2,6 +2,11 @@
 
 #include "u_Array.h"
 
+//
+//  Simple least-recently-used cache
+//
+
+
 template <class V>
 class Maker  // interface
 {
@@ -11,6 +16,10 @@ public:
 };
 
 
+
+///
+/// Assures that Maker has op()(What&)
+///
 template <class Maker, class What>
 concept Making = requires(const Maker& that, What& what) {
     { that(what) };
@@ -52,10 +61,37 @@ namespace detail {
     };
 }
 
+///
+/// @brief NdxOf
+///   Assures that template Ndx is an index of key K and value V
+///   * find returns iterator whose first is comparable with K, and second is approx. V&
+///   * op[] for creation (≈V&) and erase for deletion are present somehow
+/// @tparam K     key type
+/// @tparam V     value type
+/// @tparam Ndx   index template
+///
+template <class K, class V, template<class, class> class Ndx>
+concept NdxOf = requires(Ndx<K,V>& ndx, const K& k, const V& v) {
+    { ndx.find(k)->first == k };
+    { ndx.find(k)->second = v };
+    { ndx.erase(k) };
+    { ndx[k] = v };
+};
+
+
 template<class K, class V>
 using UoMap = std::unordered_map<K,V>;
 
+///
+/// @brief The LruCache class
+///    Simple least-recently-used cache
+///
+/// @tparam K    key type
+/// @tparam V    value type
+/// @tparam Ndx  index template that checks whether we got
+///
 template <class K, class V, template<class, class> class Ndx = UoMap>
+    requires NdxOf<K,V,Ndx>
 class LruCache : public detail::LruCacheBase<K,V>
 {
 private:
@@ -144,10 +180,12 @@ void detail::LruCacheBase<K,V>::bump(Entry* entry)
 
 
 template<class K, class V, template<class, class> class Ndx>
+    requires NdxOf<K,V,Ndx>
 LruCache<K,V,Ndx>::LruCache(size_t aCapacity) : Super(aCapacity) {}
 
 
 template <class K, class V, template<class, class> class Ndx>
+    requires NdxOf<K,V,Ndx>
 V& LruCache<K,V,Ndx>::get(const K& key, const Maker<V>& maker)
 {
     auto it = ndx.find(key);
