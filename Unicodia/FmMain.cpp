@@ -906,7 +906,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     drawAbbreviation(&painter, bounds, u8"SUR", clFg);
                     break;
                 case uc::CpType::RESERVED: {
-                        /// @todo [urgent] draw smth else looking like icon?
                         auto& si = cp->block().synthIcon;
                         auto clBg = clTrans;
                         // No continent → draw murky, otherwise use icon colours
