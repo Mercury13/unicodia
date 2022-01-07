@@ -3346,13 +3346,12 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Символ {{sm|ℵ}} для мощности множеств предложен Г.{{_}}Кантором.",
             EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
-    /// @todo [link,block] Latin-1
     { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
             "Number Forms", u8"Числовые формы",
             u8"Монолитные обыкновенные дроби и римские цифры. "
                     "Дробь {{sm|↉}} используется в бейсболе, "
                         "{{sm|↊}} и {{sm|↋}}{{-}}в двенадцатеричной системе счисления. "
-                "<p>Ещё три дроби закодированы в латинице-1." },
+                "<p>Ещё три дроби закодированы в [[pt:latin1|латинице-1]]." },
     // Arrows OK
     { 0x2190, 0x21FF, { L'↑', EcContinent::NONE },
             "Arrows", u8"Стрелки",
