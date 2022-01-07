@@ -159,7 +159,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
-    { "NotoSansKhmerUI-Regular.ttf", 110_pc },                                  // Khmer — initial Noto loses umlauts
+    { "NotoSansKhmerUI-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                // Khmer — initial Noto loses umlauts
     { "NotoSansKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },                // Korean: managed to auto-rename OTF
@@ -1460,15 +1460,22 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Кхароштхи открыто в XIX{{_}}веке и довольно быстро расшифровано.",
                 EcFont::KHAROSHTHI },
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
-    /// @todo [desc] Describe Khmer, interesting script
     { "Khmr", QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Кхмерский", u8"VI век",
         u8"кхмерский ''(Камбоджа)''",
-        u8"Как и другие языки Юго-Восточной Азии, произошёл из брахми. "
-                "Гласная по умолчанию для одних согласных «а», для других «о». "
+        u8"Как и другие языки Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. "
                 "Самый старый источник датируется 611. "
-                "Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].",
+                "Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]]."
+            "<p>Между словами не ставятся пробелы. "
+                "Гласная по умолчанию для одних согласных «а», для других «о». "
+                "Огласовки на этих согласных также звучат по-разному. "
+                "Те согласные, что на «о», заодно служат конечными. "
+                "Существует две [[pt:virama|вирамы]]: одна видимая устаревшая, "
+                    "вторая виртуальная для сборки стечений согласных: "
+                    "под первой согласной записывается уменьшенная вторая. "
+                    "Например, самоназвание {{sm|ខ្មែរ}} записывается как<br>"
+                    "{{__}}{{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}",
                 EcFont::KHMER },
     { "Khoj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
