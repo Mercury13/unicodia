@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1641647262
+ModificationTime: 1641670234
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -749,13 +749,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 180 30 13
+WinInfo: 57270 30 13
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -827,7 +826,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
-BeginChars: 1114134 549
+BeginChars: 1114134 550
 
 StartChar: DiakAfull
 Encoding: 71936 71936 0
@@ -1213,14 +1212,14 @@ EndChar
 StartChar: DiakAAfull
 Encoding: 71937 71937 1
 Width: 1204
-Flags: HW
+Flags: W
 HStem: -196.625 60<705.286 809.218> -0.0296627 58.7711<319.258 410.997> 212.898 60.4986<104.403 227.413> 429.46 59.568<522.197 716.922> 631.543 60<101.451 207.217>
 VStem: 19.8132 60.289<298.482 374.284 533.805 610.661> 210.826 59.7832<545.109 627.667> 218.156 60.2594<101.109 214.718> 438.217 57.4281<86.7624 185.851> 595.337 59.902<-79.8804 170.358> 815.481 59.7781<210.428 335.683> 845.695 59.7306<-94.1861 94.4631> 1075 60<92.1648 326.206>
 LayerCount: 2
 Fore
 Refer: 118 -1 N 1 0 0 1 905 -100.552 2
 Refer: 0 71936 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: DiakIfull
@@ -1580,14 +1579,14 @@ EndChar
 StartChar: DiakIIfull
 Encoding: 71939 71939 3
 Width: 1136
-Flags: HW
+Flags: W
 HStem: -205.414 60.3803<116.648 463.998> -0.773261 59.4499<268.933 372.702> 281.429 58.3714<800.26 860.519> 354.993 60.6159<384.528 551.376> 405.379 58.6207<808.966 855> 482.111 60.8889<703.675 854.371> 629.716 60.5878<92.3075 190.79>
 VStem: 21.7637 98.8286<516.114 592.875> 189.452 60.1028<77.4633 225.526> 220.612 60.5646<485.729 598.631> 383.152 59.7171<68.6762 174.563> 553.944 56.0556<339.847 391.59> 661.852 60.7027<55.7441 252.089> 740.32 59.6644<339.931 396.212> 987.04 59.96<84.9093 326.349>
 LayerCount: 2
 Fore
 Refer: 119 -1 N 1 0 0 1 518 -36 2
 Refer: 2 71938 N 1 0 0 1 0 0 2
-Validated: 98309
+Validated: 32773
 EndChar
 
 StartChar: DiakUfull
@@ -12781,7 +12780,7 @@ LayerCount: 2
 Fore
 Refer: 49 71989 N 1 0 0 1 3 0 2
 Refer: 49 71989 N 1 0 0 1 296 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: DiakANU
@@ -15765,7 +15764,7 @@ EndChar
 StartChar: Hook0B
 Encoding: 129291 129291 88
 Width: 692
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 91 -1 S 1 0 0 1 0 0 2
@@ -15960,7 +15959,7 @@ EndChar
 StartChar: Hook0A
 Encoding: 129290 129290 92
 Width: 692
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 90 -1 S 1 0 0 1 0 0 2
@@ -15971,7 +15970,7 @@ EndChar
 StartChar: Circle09
 Encoding: 129289 129289 93
 Width: 692
-Flags: HW
+Flags: W
 LayerCount: 2
 Fore
 Refer: 91 -1 S 1 0 0 1 0 0 2
@@ -19150,7 +19149,7 @@ LayerCount: 2
 Fore
 Refer: 44 71984 N 1 0 0 1 645 -75 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 590
 Ligature2: "Diak RLIG-1" uni25CC DiakAAuml
 EndChar
@@ -19165,7 +19164,7 @@ LayerCount: 2
 Fore
 Refer: 45 71985 N 1 0 0 1 669 -47 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 584
 Ligature2: "Diak RLIG-1" uni25CC DiakIuml
 EndChar
@@ -19180,7 +19179,7 @@ LayerCount: 2
 Fore
 Refer: 46 71986 N 1 0 0 1 645 -42 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 599
 Ligature2: "Diak RLIG-1" uni25CC DiakIIuml
 EndChar
@@ -19195,7 +19194,7 @@ LayerCount: 2
 Fore
 Refer: 21 71963 N 1 0 0 1 727 0 2
 Refer: 8 71948 N 1 0 0 1 0 0 2
-Validated: 98309
+Validated: 32773
 Ligature2: "Diak RLIG-1" DiakKA DiakVIR DiakTA
 LCarets2: 2 0 771
 EndChar
@@ -19210,7 +19209,7 @@ LayerCount: 2
 Fore
 Refer: 49 71989 N 1 0 0 1 -3 -86 2
 Refer: 43 9676 N 1 0 0 1 295 0 2
-Validated: 98305
+Validated: 32769
 Ligature2: "Diak RLIG-1" uni25CC DiakEuml
 LCarets2: 1 813
 EndChar
@@ -19225,7 +19224,7 @@ LayerCount: 2
 Fore
 Refer: 50 71991 N 1 0 0 1 -11 -88 2
 Refer: 43 9676 N 1 0 0 1 592 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 1138
 Ligature2: "Diak RLIG-1" uni25CC DiakAIuml
 EndChar
@@ -19240,7 +19239,7 @@ LayerCount: 2
 Fore
 Refer: 49 71989 N 1 0 0 1 -3 -86 2
 Refer: 120 -1 N 1 0 0 1 284 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 878
 Ligature2: "Diak RLIG-1" uni25CC DiakOuml
 EndChar
@@ -19248,13 +19247,13 @@ EndChar
 StartChar: DiakOuml
 Encoding: 71992 71992 127
 Width: 1117
-Flags: HW
+Flags: W
 HStem: 42 52<555.383 599.265> 60 52<471.383 515.265 639.383 683.265> 82 60<48.645 151.006> 107 52<397.383 441.265 713.383 757.265> 181 52<350.383 394.265 760.383 804.265> 265 52<332.383 376.265 778.383 822.265> 319 60<109.869 197.148> 349 52<350.383 394.265 760.383 804.265> 423 52<397.383 441.265 713.383 757.265> 470 52<471.383 515.265 639.383 683.265> 488 52<555.383 599.265> 513 60<111.104 195.089>
 VStem: 36 60<391.126 490.599> 215 64<388.959 429.938> 332 52<265.383 309.265> 350 52<181.383 225.265 349.383 393.265> 397 52<107.383 151.265 423.383 467.265> 471 52<60.3828 104.265 470.383 514.265> 555 52<42.3828 86.2648 488.383 532.265> 639 52<60.3828 104.265 470.383 514.265> 713 52<107.383 151.265 423.383 467.265> 760 52<181.383 225.265 349.383 393.265> 778 52<265.383 309.265> 988 60<202.02 474.619>
 LayerCount: 2
 Fore
 Refer: 126 -1 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 EndChar
 
 StartChar: DiakCircleANU
@@ -19267,7 +19266,7 @@ LayerCount: 2
 Fore
 Refer: 51 71995 S 1 0 0 1 754 -56 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 0
 Ligature2: "Diak RLIG-1" uni25CC DiakANU
 EndChar
@@ -19282,7 +19281,7 @@ LayerCount: 2
 Fore
 Refer: 52 71996 S 1 0 0 1 695 -46 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 0
 Ligature2: "Diak RLIG-1" uni25CC DiakCAND
 EndChar
@@ -19297,7 +19296,7 @@ LayerCount: 2
 Fore
 Refer: 53 71997 N 1 0 0 1 642 -93 2
 Refer: 43 9676 N 1 0 0 1 0 0 2
-Validated: 98305
+Validated: 32769
 LCarets2: 1 0
 Ligature2: "Diak RLIG-1" uni25CC DiakHAL
 EndChar
@@ -19714,7 +19713,7 @@ EndChar
 StartChar: DiakNUK
 Encoding: 72003 72003 135
 Width: 0
-Flags: HW
+Flags: W
 HStem: -192.429 156.123<-351.487 -243.967>
 VStem: -375.788 156.123<-168.127 -60.608>
 LayerCount: 2
@@ -22418,7 +22417,7 @@ SplineSet
  253.0005 298 253.0005 298 275 317 c 0,88,89
  296 335 296 335 319 350 c 1,72,73
 EndSplineSet
-Validated: 543777
+Validated: 19489
 EndChar
 
 StartChar: TotoBA
@@ -45300,7 +45299,7 @@ SplineSet
  530 770 530 770 563 756 c 1,100,101
  587 770 587 770 624 770 c 0,0,1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF01
@@ -46993,7 +46992,7 @@ SplineSet
  103 -152 103 -152 103 -85 c 2,30,-1
  103 51 l 2,4,5
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF0B
@@ -49016,7 +49015,7 @@ SplineSet
  406 -240 406 -240 352 -240 c 2,65,-1
  337 -240 l 1,0,-1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF15
@@ -49184,7 +49183,7 @@ SplineSet
  149 536 l 1,54,-1
  438 536 l 1,0,-1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF16
@@ -49640,7 +49639,7 @@ SplineSet
  453 -132 453 -132 410 -186 c 128,-1,79
  367 -240 367 -240 296 -240 c 0,9,10
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF18
@@ -49863,7 +49862,7 @@ SplineSet
  468 32 468 32 407 10.5 c 128,-1,57
  346 -11 346 -11 274 -11 c 0,0,1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF19
@@ -50205,7 +50204,7 @@ SplineSet
  824 -146 824 -146 766 -172 c 128,-1,99
  708 -198 708 -198 641 -198 c 0,12,13
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u1DF1A
@@ -50442,7 +50441,7 @@ SplineSet
  117 -120 117 -120 117 -50 c 2,35,-1
  117 60 l 1,8,9
 EndSplineSet
-Validated: 8391681
+Validated: 3073
 EndChar
 
 StartChar: u1DF1C
@@ -57756,7 +57755,7 @@ SplineSet
  87 716 l 1,41,-1
  87 743 l 1,0,-1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u107A8
@@ -57891,7 +57890,7 @@ SplineSet
  193 149 193 149 176.5 146 c 128,-1,40
  160 143 160 143 142 143 c 0,0,1
 EndSplineSet
-Validated: 8391681
+Validated: 3073
 EndChar
 
 StartChar: u107A9
@@ -59141,7 +59140,7 @@ SplineSet
  190 150 190 150 172.5 146.5 c 128,-1,26
  155 143 155 143 136 143 c 0,0,1
 EndSplineSet
-Validated: 8408065
+Validated: 19457
 EndChar
 
 StartChar: u107B0
@@ -67305,6 +67304,80 @@ SplineSet
  464 217 l 1,2,-1
  464 198 l 1,3,-1
  49 198 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uniE008
+Encoding: 57352 57352 549
+Width: 800
+Flags: WO
+HStem: 265 70<49.625 339 461 750.375>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 28
+MDAP[rnd]
+PUSHB_1
+ 8
+SHP[rp1]
+PUSHB_1
+ 33
+MDRP[min,rnd,black]
+PUSHB_1
+ 2
+SHP[rp2]
+SVTCA[x-axis]
+PUSHB_1
+ 51
+MDAP[rnd]
+PUSHB_2
+ 52
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+589 558 m 2,0,1
+ 461 335 l 1,2,-1
+ 718 335 l 2,3,4
+ 732 335 732 335 742.5 324.5 c 128,-1,5
+ 753 314 753 314 753 300 c 128,-1,6
+ 753 286 753 286 742.5 275.5 c 128,-1,7
+ 732 265 732 265 718 265 c 2,8,-1
+ 461 265 l 1,9,-1
+ 589 42 l 2,10,11
+ 594 34 594 34 594 25 c 0,12,13
+ 594 11 594 11 583.5 0.5 c 128,-1,14
+ 573 -10 573 -10 559 -10 c 0,15,16
+ 539 -10 539 -10 529 7 c 2,17,-1
+ 400 230 l 1,18,-1
+ 271 7 l 2,19,20
+ 261 -10 261 -10 241 -10 c 0,21,22
+ 227 -10 227 -10 216.5 0 c 128,-1,23
+ 206 10 206 10 206 25 c 0,24,25
+ 206 34 206 34 211 42 c 2,26,-1
+ 339 265 l 1,27,-1
+ 82 265 l 2,28,29
+ 68 265 68 265 57.5 275.5 c 128,-1,30
+ 47 286 47 286 47 300 c 128,-1,31
+ 47 314 47 314 57.5 324.5 c 128,-1,32
+ 68 335 68 335 82 335 c 2,33,-1
+ 339 335 l 1,34,-1
+ 211 558 l 2,35,36
+ 206 566 206 566 206 575 c 0,37,38
+ 206 589 206 589 216.5 599.5 c 128,-1,39
+ 227 610 227 610 241 610 c 0,40,41
+ 261 610 261 610 271 593 c 2,42,-1
+ 400 370 l 1,43,-1
+ 529 593 l 2,44,45
+ 539 610 539 610 559 610 c 0,46,47
+ 573 610 573 610 583.5 600 c 128,-1,48
+ 594 590 594 590 594 575 c 0,49,50
+ 594 566 594 566 589 558 c 2,0,1
 EndSplineSet
 EndChar
 EndChars

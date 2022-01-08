@@ -1059,7 +1059,6 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0xFFFC, "OBJ" },  // Object replacement character
     { 0x1107F, "BNJ" }, // Brahmi number joiner
     { 0x13430, ":" },   // Egyptian hiero vertical joiner
-    { 0x13431, "✻" },   // Egyptian hiero horiz joiner
     { 0x13436, "+" },   // Egyptian hiero overlay middle
     { 0x13437, "(" },   // Egyptian hiero begin segment
     { 0x13438, ")" },   // Egyptian hiero end segment
@@ -1155,6 +1154,7 @@ const std::set<RangeByEnd> noAaRanges {
 const std::set<char32_t> customDrawnControlChars {
     0x11D45,    // Masaram Gondi virtual virama
     0x11D97,    // Gunjala Gondi virtual virama
+    0x13431,    // Egyptian hiero horiz joiner
     0x13432,    // Egyptian hiero insert at top start
     0x13433,    // Egyptian hiero insert at bottom start
     0x13434,    // Egyptian hiero insert at top end

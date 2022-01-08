@@ -574,6 +574,9 @@ namespace {
         case 0x1BCA1:   // Shorthand format Continuing overlap
             drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_CONTINUING_OVERLAP);
             break;
+        case 0x13431:   // Egyptian hiero horz joiner
+            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_BIG_STAR);
+            break;
         case 0x13432: {
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect7(), color);
