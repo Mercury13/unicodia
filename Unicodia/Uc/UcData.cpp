@@ -4234,7 +4234,6 @@ constinit const uc::Block uc::blocks[] {
             "Cypro-Minoan", u8"Кипро-минойская", {},
             EcScript::Cpmn },
     // Egyptian hiero OK
-    /// @todo [icon] Non-contrast, possibly non-historical, from Segoe, not Noto
     { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
     // Egyptian hiero format OK
