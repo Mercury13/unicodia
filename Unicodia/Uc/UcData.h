@@ -37,6 +37,9 @@ namespace fst {
     constexpr auto COMPAT = static_cast<QFont::StyleStrategy>(
                 QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch
                 | QFont::PreferFullHinting);
+    constexpr auto NO_AA = static_cast<QFont::StyleStrategy>(
+                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
+                | QFont::PreferFullHinting);
     constexpr auto CUSTOM_AA = static_cast<QFont::StyleStrategy>(
                 QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
                 | QFont::PreferFullHinting);
@@ -267,6 +270,7 @@ namespace uc {
         DOGRA,
         DUPLOYAN,
         EGYPTIAN,
+          Z_EGY_1,
         ELBASAN,
         ELYMAIC,
         ETHIOPIC,
@@ -471,7 +475,7 @@ namespace uc {
         void load(char32_t trigger) const;
 
         int computeSize(FontPlace place, int size) const;
-        QFont get(FontPlace place, int size, char32_t trigger) const;
+        QFont get(FontPlace place, int size, bool noAa, char32_t trigger) const;
         bool doesSupportChar(char32_t x, EcVersion charVersion) const;
         const QString& familiesComma(char32_t trigger) const;
 

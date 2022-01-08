@@ -520,6 +520,9 @@ int main()
         if (customDrawnControlChars.contains(cp)
                 || (cp >= 0xE0000 && cp <= 0xE007F))
             flags |= 8;
+        // No anti-aliasing
+        if (isNoAa(cp))
+            flags |= 16;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

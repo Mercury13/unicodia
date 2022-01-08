@@ -203,7 +203,8 @@ std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp)
     if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
         return {};
     auto& font = cp.font();
-    return font.get(uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
+    return font.get(uc::FontPlace::CELL, FSZ_TABLE,
+                    cp.flags.have(uc::Cfg::NO_AA), cp.subj);
 }
 
 
@@ -1079,7 +1080,7 @@ FmMain::FmMain(QWidget *parent)
 
     // OS style    
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_TRIGGER));
+    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
 
     // Copy
         // Ctrl+C
@@ -1300,7 +1301,7 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
     // Font
     auto& font = ch.font();
-    ui->lbSample->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.subj));
+    ui->lbSample->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -1392,7 +1393,7 @@ void FmMain::showCp(MaybeChar ch)
                 clearSample();
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
                 auto& font = ch->font();
-                auto qfont = font.get(uc::FontPlace::SAMPLE, FSZ_BIG, ch.code);
+                auto qfont = font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
         case uc::DrawMethod::SAMPLE:

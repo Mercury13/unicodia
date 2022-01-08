@@ -408,6 +408,7 @@ namespace uc {
         DEPRECATED = 2,         ///< [+] char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
         CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
+        NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };

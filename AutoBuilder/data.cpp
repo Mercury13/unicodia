@@ -1143,10 +1143,13 @@ struct RangeByEnd {
 
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
-/// First max, then min!
 const std::set<RangeByEnd> alternateRanges {
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
+};
+
+const std::set<RangeByEnd> noAaRanges {
+    { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
 const std::set<char32_t> customDrawnControlChars {
@@ -1808,6 +1811,17 @@ bool isAlternate(char32_t x)
 {
     auto it = alternateRanges.lower_bound(RangeByEnd{x,x});
     if (it == alternateRanges.end())
+        return false;
+    // so x <= it->b
+    // upper_bound gives x < it->b
+    return (it->a <= x);
+}
+
+
+bool isNoAa(char32_t x)
+{
+    auto it = noAaRanges.lower_bound(RangeByEnd{x,x});
+    if (it == noAaRanges.end())
         return false;
     // so x <= it->b
     // upper_bound gives x < it->b

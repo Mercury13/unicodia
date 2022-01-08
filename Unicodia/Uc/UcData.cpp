@@ -135,7 +135,8 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
-    { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },            // Egyptian
+    { FNAME_FUNKY, Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT },                      // Egyptian
+      { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
     { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
     { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
@@ -5819,11 +5820,14 @@ onceAgain:
 }
 
 
-QFont uc::Font::get(FontPlace place, int size, char32_t trigger) const
+QFont uc::Font::get(FontPlace place, int size, bool noAa, char32_t trigger) const
 {
     load(trigger);
     QFont font = *q.loaded->normal;
     font.setPointSize(computeSize(place, size));
+    if (place == FontPlace::CELL && noAa) {
+        font.setStyleStrategy(fst::NO_AA);
+    }
     return font;
 }
 
@@ -6020,6 +6024,9 @@ const uc::Font& uc::Cp::firstFont() const
 
 const uc::Font& uc::Cp::font() const
 {
+    if (subj.ch32() == 0xFFFFFF) {
+        std::cout << "Debug here!" << std::endl;
+    }
     auto v = &firstFont();
     bool isAlternate = flags.have(Cfg::ALT_FONT);
     auto sb = subj.uval();
@@ -6117,5 +6124,5 @@ const uc::Term* uc::findTerm(std::string_view id)
 QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
 {
     auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    return font.get(place, size, trigger);
+    return font.get(place, size, false, trigger);
 }

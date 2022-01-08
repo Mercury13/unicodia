@@ -127,3 +127,4 @@ std::string decapitalize(
         char32_t cp = 0,
         DecapDebug debug = DecapDebug::NO);
 bool isAlternate(char32_t x);
+bool isNoAa(char32_t x);
