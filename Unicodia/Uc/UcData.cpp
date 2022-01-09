@@ -4164,8 +4164,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom", u8"Ахом", {}, EcScript::Ahom },
     // Dogra OK
-    /// @todo [icon] Non-existent char, maybe 11816
-    { 0x11800, 0x1184F, { 0x11816, EcContinent::ASIA },
+    { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA },
             "Dogra", u8"Догра", {}, EcScript::Dogr },
     // Warang OK
     { 0x118A0, 0x118FF, { 0x118FF, EcContinent::ASIA },
