@@ -1103,6 +1103,10 @@ const std::set<std::string_view> cuneiformSymbols {
     "BAR", "LAM", "SA"
 };
 
+const std::set<std::string_view> cuneiformSuffixes {
+    "TENU", "GUNU", "SHESHIG", "NUTILLU"
+};
+
 const std::set<std::string_view> cuneiformKeywords {
     "CUNEIFORM",
     "SIGN",
@@ -1744,9 +1748,12 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
             } else if (q->second.flags.haveAny(TRIG_ANY_SCRIPT
                         | Dicf::PART_ADJECTIVE | Dicf::PART_NOUN | Dicf::PART_NUMERAL)) {
                 // do nothing
-            // 3. Keyword — YES
+            // 3. Suffix — initial capital
+            } else if (cuneiformSuffixes.contains(word.original)) {
+                word.isCapital = true;
+            // 4. Keyword — YES
             } else if (!cuneiformKeywords.contains(word.original)) {
-                    word.isAllCap = true;
+                word.isAllCap = true;
             }
         }
     }
