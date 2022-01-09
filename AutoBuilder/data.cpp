@@ -70,7 +70,7 @@ const std::map<std::string_view, DicEntry> dictionary {
       { "GURAGE",       Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KHUTSURI",       Dicf::TRIG_SCRIPT },    // Unused, but…
     { "FRAKTUR",        Dicf::TRIG_SCRIPT },
-    { "GEORGIAN",       Dicf::TRIG_SCRIPT },
+    { "GEORGIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
      { "MTAVRULI",      Dicf::TRIG_SCRIPT },
     { "GUNJALA",        Dicf::TRIG_SCRIPT },
     { "GONDI",          Dicf::TRIG_SCRIPT },
