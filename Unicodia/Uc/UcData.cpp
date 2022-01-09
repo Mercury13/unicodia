@@ -57,9 +57,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
-    { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                 // Punctuation — both are built-in
-      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
-      { FNAME_FUNKY },                                                          // …2 fallback for special punctuation
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Punctuation
+      { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
+      { FNAME_FUNKY },                                                          // …3 fallback for special punctuation
     { FNAME_NOTOMATH },                                                         // Math
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
@@ -3299,7 +3300,6 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Добавлены в начале нашей эры, убраны только в 1982, когда столь сложной фонетики много веков не было.",
             EcScript::Grek, EcFont::DEJAVU },
     // General punct OK, changed 2-dot leader to low one.
-    /// @todo [semi-tofu] Permille is somehow not Cambria
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation", u8"Знаки препинания",
             u8"Пунктуация (лат. ''punctum'' «точка»){{-}}система знаков, подчёркивающих синтаксис и интонацию речи, "
@@ -4729,7 +4729,8 @@ constinit const uc::Block uc::blocks[] {
             u8"222 редких и старых иероглифа, добавленных в 2010.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // CJK E OK
-    /// @todo [icon] Remove 2nd horizontal line from above, and you’ll get common 4E1C “east”
+    // Remove 2nd horizontal line from above from 2B283, and you’ll get
+    //   common 4E1C “east”. But that’s probably feature, not bug
     { 0x2B820, 0x2CEAF, { 0x2B823, EcContinent::CJK },
             "CJK Unified Ideographs Extension E",
             u8"ККЯ иероглифы расширение E",

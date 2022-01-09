@@ -1147,6 +1147,7 @@ struct RangeByEnd {
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
 const std::set<RangeByEnd> alternateRanges {
+    { L'‰', L'‰' },         // Permille — somehow implemented in B/W by Emoji
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
 };
