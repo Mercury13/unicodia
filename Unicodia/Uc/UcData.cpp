@@ -443,6 +443,7 @@ constexpr std::u8string_view CT_ASCII =
                 "также вошла в Юникод.";
 
 constexpr std::u8string_view CT_LATIN1 =
+        // French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god
     u8"Латиница-1{{-}}второе название 8-битной кодировки '''ISO{{_}}8859-1''', появившейся в 1987 году "
                 "и расширяющей [[pt:ascii|ASCII]] до европейских языков."
         "<p>Первые 32 символа, 80…9F, [[pt:control|управляющие]] для совместимости с 7-битными кодировками: "
