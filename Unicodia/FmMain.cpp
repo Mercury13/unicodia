@@ -366,6 +366,10 @@ namespace {
 
     enum class SplitMode { NORMAL, FIXED };
 
+    struct AbbrTable {
+        qreal quos[10];     // 0 = 1-character
+    };
+
     struct AbbrLines {
         std::u8string_view line1, line2, line3;
 
@@ -373,31 +377,40 @@ namespace {
         bool wasSplit() const { return !line2.empty(); }
         unsigned length() const {
             return std::max(std::max(line1.length(), line2.length()), line3.length()); }
-        qreal sizeQuo() const;
+        qreal sizeQuo(const AbbrTable& table) const;
     };
 
-    constexpr qreal Q1 = 2.0;
-    constexpr qreal Q3 = 3.3;
-    constexpr qreal Q4 = 4.0;
-    constexpr qreal Q5 = 5.0;
-                          //   0   1   2   3   4   5   6   7   8   9
-    const qreal lenQuos[]  = { Q3, Q3, Q3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 };
+    template <class T, size_t N>
+    constexpr T& last(T(&x)[N]) { return x[N-1]; }
 
-    qreal AbbrLines::sizeQuo() const
+    qreal AbbrLines::sizeQuo(const AbbrTable& tb) const
     {
         auto sz = nLines(), len = length();
         switch (sz) {
-        case 3: return Q5;
+        case 3: return last(tb.quos);
         case 1:
             if (len == 1
                 || (len == 2 && line1[0] >= 0b1100'0000 && line1[0] <= 0b1101'1111)     // 2-byte seq of UTF-8
                 || (len == 3 && line1[0] >= 0b1110'0000 && line1[0] <= 0b1110'1111))    // 3-byte seq of UTF-8
-                return Q1;
+                return tb.quos[0];
             [[fallthrough]];
         default:
-            return lenQuos[len];
+            return tb.quos[len];
         }
     }
+
+    // Table for normal abbreviations
+    constexpr qreal Q1 = 2.0;
+    constexpr qreal Q3 = 3.3;
+    constexpr qreal Q4 = 4.0;
+    constexpr qreal Q5 = 5.0;
+                    //   0   1   2   3   4   5   6   7   8   9
+    AbbrTable atAbbr { { Q1, Q3, Q3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
+
+    // Table for tags
+    constexpr qreal T3 = 2.8;
+                    //   0   1   2   3   4   5   6   7   8   9
+    AbbrTable atTags { { Q1, T3, T3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
 
     AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode)
     {
@@ -477,14 +490,13 @@ namespace {
             { return QRect( QPoint{ x0 + side2, y0 + side2 }, QSize { side, side }); }
     };
 
-    void drawAbbrevText(QPainter* painter, std::u8string_view abbreviation,
+    void drawCustomAbbrText(QPainter* painter, const AbbrLines& sp,
             const QColor& color, QRectF rcFrame, qreal thickness,
-            SplitMode mode = SplitMode::NORMAL)
+            const AbbrTable& table)
     {
         // Draw text
-        auto sp = splitAbbr(abbreviation, mode);
         auto availSize = rcFrame.width();
-        auto sz = availSize / sp.sizeQuo();
+        auto sz = availSize / sp.sizeQuo(table);
         QFont font { str::toQ(FAM_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
             font.setPointSizeF(sz);
@@ -507,6 +519,22 @@ namespace {
                 painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line3));
             }
         }
+    }
+
+    void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
+            const QColor& color, QRectF rcFrame, qreal thickness)
+    {
+        // Draw text
+        auto lines = splitAbbr(abbreviation, SplitMode::NORMAL);
+        drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atAbbr);
+    }
+
+    void drawTagText(QPainter* painter, std::u8string_view abbreviation,
+            const QColor& color, QRectF rcFrame, qreal thickness)
+    {
+        // Draw text
+        AbbrLines lines { abbreviation, u8" ", {} };
+        drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atTags);
     }
 
     struct ControlFrame {
@@ -602,20 +630,21 @@ namespace {
                 painter->fillRect(m.rect3(), color);
             } break;
         case 0xE0001:
-            drawAbbrevText(painter, u8"BEGIN"sv, color, rcFrame, thickness, SplitMode::FIXED);
+                // 00A0 = NBSP
+            drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness);
             break;
         case 0xE0020:
-            drawAbbrevText(painter, u8"SP"sv, color, rcFrame, thickness);
+            drawTagText(painter, u8"SP"sv, color, rcFrame, thickness);
             break;
         case 0xE007F:
-            drawAbbrevText(painter, u8"END"sv, color, rcFrame, thickness);
+            drawTagText(painter, u8"END"sv, color, rcFrame, thickness);
             break;
         default:
             // Tags
             if (subj >= 0xE0000 && subj <= 0xE00FF) {
                 char8_t c = subj;
-                std::u8string_view uv { &c, 1 };
-                drawAbbrevText(painter, uv, color, rcFrame, thickness);
+                std::u8string_view line1 { &c, 1 };
+                drawTagText(painter, line1, color, rcFrame, thickness);
             }
         }
     }
@@ -625,7 +654,7 @@ namespace {
             const QColor& color)
     {
         auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
-        drawAbbrevText(painter, abbreviation, color, rcFrame, thickness);
+        drawAbbrText(painter, abbreviation, color, rcFrame, thickness);
     }
 
     QSize spaceDimensions(const QFont& font, char32_t subj)
