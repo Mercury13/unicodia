@@ -56,8 +56,8 @@ namespace str {
     }
 
     template <class T>
-    inline auto fromChars(std::string_view s, T& v)
-        { return std::from_chars(s.data(), s.data() + s.size(), v); }
+    inline auto fromChars(std::string_view s, T& v, int base = 10)
+        { return std::from_chars(s.data(), s.data() + s.size(), v, base); }
 
     bool containsWord(std::string_view haystack, std::string_view needle);
 

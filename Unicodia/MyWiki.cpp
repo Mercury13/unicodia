@@ -154,10 +154,11 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopTermLink(std::string_view target)
 
 std::unique_ptr<mywiki::Link> mywiki::parsePopIBlockLink(std::string_view target)
 {
-    size_t iBlock = 0;
-    str::fromChars(target, iBlock);
-    if (iBlock < uc::N_BLOCKS)
-        return mu(uc::blocks[iBlock]);
+    uint32_t code = 0;
+    str::fromChars(target, code, 16);
+    auto block = uc::blockOf(code);
+    if (block)
+        return mu(*block);
     return {};
 }
 
@@ -577,7 +578,7 @@ namespace {
     std::string_view idOf(const uc::Block& value, StrCache& cache)
     {
         auto beg = std::begin(cache);
-        auto r = std::to_chars(beg, std::end(cache), value.index());
+        auto r = std::to_chars(beg, std::end(cache), value.startingCp, 16);
         return { beg, r.ptr };
     }
 
@@ -712,7 +713,7 @@ QString mywiki::buildHtml(
 
     // Deprecated
     if (cp.isDefaultIgnorable()) {
-        str::append(text, u8"<h4><a href='pt:ignorable' class='popup'>Невидимый символ</a></h4>"sv);
+        str::append(text, u8"<h4><a href='pt:ignorable' class='popup'>Игнорируемый символ</a></h4>"sv);
     }
 
     {   // Info box
