@@ -142,12 +142,6 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     case Qt::DisplayRole: {
             GET_BLOCK
             return str::toQ(block.locName);
-            /// @todo [ui] how to show character ranges? — now they are bad
-            //char buf[200];
-            //snprintf(buf, 200, reinterpret_cast<const char*>(u8"%.*s (%04X—%04X)"),
-            //         block.name.length(), block.name.data(),
-            //         static_cast<int>(block.startingCp),
-            //         static_cast<int>(block.endingCp));
         }
     case Qt::DecorationRole: {
             GET_BLOCK

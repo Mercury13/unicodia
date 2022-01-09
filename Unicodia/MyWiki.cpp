@@ -366,6 +366,10 @@ namespace {
             str::append(s, u8"" NBSP "до" NBSP "н.э."sv );
         } else if (name == "fontface"sv) {
             s += font.familiesComma(0);
+        } else if (name == "nchars"sv) {
+            s += QString::number(uc::N_CPS);
+        } else if (name == "version"sv) {
+            str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
         } else {
             wiki::appendHtml(s, x[0]);
         }
@@ -704,6 +708,11 @@ QString mywiki::buildHtml(
     // Deprecated
     if (cp.isDeprecated()) {
         str::append(text, u8"<h3><a href='pt:deprecated' class='deprecated'>Запрещённый символ</a></h3>"sv);
+    }
+
+    // Deprecated
+    if (cp.isDefaultIgnorable()) {
+        str::append(text, u8"<h4><a href='pt:ignorable' class='popup'>Невидимый символ</a></h4>"sv);
     }
 
     {   // Info box

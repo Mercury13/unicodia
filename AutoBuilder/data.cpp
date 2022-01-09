@@ -1027,6 +1027,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, PrefixAction::NEXT_CAP },
     { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
     { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
+    { { "TAG"sv }, PrefixAction::NEXT_CAP },      // Tags
 };
 
 
@@ -1442,26 +1443,36 @@ namespace {
 
     void doPrefixAction(SafeVector<Word>& words, size_t prefixSize, PrefixAction action)
     {
+        // Prefix actions remove appropriate dictionary flags,
+        // as they are more important than dic. properties
         switch (action) {
         case PrefixAction::REST_SMALL:
             for (size_t i = prefixSize; i < words.size(); ++i)
                 words[i].isCapital = false;
             break;
         case PrefixAction::REST_CAP:
-            for (size_t i = prefixSize; i < words.size(); ++i)
-                words[i].isCapital = true;
+            for (size_t i = prefixSize; i < words.size(); ++i) {
+                auto& w = words[i];
+                w.isCapital = true;
+                w.dicFlags.remove(Dicf::CAP_SMALL);
+            }
             break;
         case PrefixAction::REST_ALLCAP:
-            for (size_t i = prefixSize; i < words.size(); ++i)
-                words[i].isAllCap = true;
+            for (size_t i = prefixSize; i < words.size(); ++i) {
+                auto& w = words[i];
+                w.isAllCap = true;
+                w.dicFlags.remove(Dicf::CAP_SMALL);
+            }
             break;
         case PrefixAction::REST_CAPSMALL:
             for (size_t i = prefixSize + 1; i < words.size(); ++i)
                 words[i].isCapital = false;
             [[fallthrough]];
-        case PrefixAction::NEXT_CAP:
-            words[prefixSize].isCapital = true;
-            break;
+        case PrefixAction::NEXT_CAP: {
+                auto& wp = words[prefixSize];
+                wp.isCapital = true;
+                wp.dicFlags.remove(Dicf::CAP_SMALL);
+            } break;
         case PrefixAction::NEXT_SMALL:
             words[prefixSize].isCapital = false;
             break;

@@ -827,10 +827,11 @@ TEST (Decap, RestSmall)
 }
 
 
-///
-///  Word divider
-///  Does not work, none in base
-///
+//
+//  Word divider
+//  Does not work because of strange status of “Word” word,
+//   isn’t it better to check manually?
+//
 //TEST (Decap, WordDivider1)
 //{
 //    auto r = decapitalize("SIGNWRITING NUMERIC SIGN WORD DIVIDER");
@@ -921,4 +922,14 @@ TEST (Decap, BugMiaoTone)
 {
     auto r = decapitalize("MIAO TONE BELOW");
     EXPECT_EQ("Miao tone below", r);
+}
+
+
+///
+///  BUG: Tag Digit Five
+///
+TEST (Decap, BugTagDigit)
+{
+    auto r = decapitalize("TAG DIGIT FIVE");
+    EXPECT_EQ("Tag Digit Five", r);
 }

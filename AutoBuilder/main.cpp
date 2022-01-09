@@ -523,6 +523,11 @@ int main()
         // No anti-aliasing
         if (isNoAa(cp))
             flags |= 16;
+        // Default-ignorable
+        if (elChar.attribute("DI").as_string()[0] == 'Y') {
+            flags |= 32;
+            ++nDeprecated;
+        }
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

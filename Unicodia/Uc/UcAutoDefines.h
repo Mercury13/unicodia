@@ -405,10 +405,11 @@ namespace uc {
 
     enum class Cfg : unsigned char {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
-        DEPRECATED = 2,         ///< [+] char is deprecated
+        DEPRECATED = 2,         ///< [+] UC feature: char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
         CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
         NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
+        DEFAULT_IGNORABLE = 32, ///< [+] UC feature: char is default-ignorable
 
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };
@@ -478,6 +479,7 @@ namespace uc {
         constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }
+        constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::DEFAULT_IGNORABLE); }
     };
 
     extern Cp cpInfo[N_CPS];
