@@ -35,3 +35,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Emoji tools: ligatures, more comprehensive reference.
 * Better CJK reference.
 * Sutton SignWriting tool.
+
+# What do utilities do?
+* AutoBuilder — build UcAuto.cpp from Unicode base.
+  * '''Warning''': transition to older/newer Unicode requires a bit of handwork.
+* PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
+* [UcTranslator](https://github.com/Mercury13/utranslator) — incomplete translation tool. Data is still hardcoded into Unicodia.exe, but someday I’ll globalize it.
