@@ -6033,6 +6033,10 @@ const uc::Font& uc::Cp::firstFont() const
     auto& blk = block();
     // Block
     if (blk.flags.have(Bfg::UNGLITCH_MARKS) && category().upCat == UpCategory::MARK) {
+        // All enclosing marks are in Funky now,
+        // and the rest are still in Noto
+        if (ecCategory == EcCategory::MARK_ENCLOSING)
+            return fontInfo[static_cast<int>(EcFont::FUNKY)];
         return fontInfo[static_cast<int>(EcFont::NOTO)];
     }
     auto hfont = blk.ecFont;
