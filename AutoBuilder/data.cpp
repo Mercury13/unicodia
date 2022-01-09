@@ -730,6 +730,7 @@ const std::map<std::string_view, DicEntry> dictionary {
 
 const std::map<std::string_view, std::string_view> exceptions{
     EX("Commercial At")                         // At is not a preposition
+    EX("Tag Commercial At")                     // Same
     EX("Fraction slash")                        // Fraction’s slash
     EX("Musical symbol With fingernails")       // With is not a preposition
     EX("Devanagari letter Candra A")            // Both Candra and A are tricky, better to make an exception
