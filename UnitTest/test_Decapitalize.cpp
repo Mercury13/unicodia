@@ -864,8 +864,8 @@ TEST (Decap, CuneiPrereq)
 ///
 TEST (Decap, Cunei1)
 {
-    auto r = decapitalize("CUNEIFORM SIGN ASSYRIAN WORD DIVIDER OVER ASH TIMES LAK-123");
-    EXPECT_EQ("Cuneiform sign Assyrian word divider over ASH times LAK-123", r);
+    auto r = decapitalize("CUNEIFORM SIGN ASSYRIAN WORD DIVIDER OVER ASH TENU TIMES LAK-123");
+    EXPECT_EQ("Cuneiform sign Assyrian word divider over ASH Tenu times LAK-123", r);
 }
 
 
