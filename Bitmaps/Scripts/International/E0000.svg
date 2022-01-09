@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
    sodipodi:docname="E0000.svg"
    inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\E0000.png"
    inkscape:export-xdpi="96"
@@ -28,7 +28,7 @@
      inkscape:document-units="px"
      showgrid="true"
      inkscape:zoom="47.125"
-     inkscape:cx="7.7029178"
+     inkscape:cx="7.7135279"
      inkscape:cy="8"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -36,7 +36,8 @@
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1"
-     inkscape:snap-global="false">
+     inkscape:snap-global="false"
+     inkscape:snap-bbox="true">
     <inkscape:grid
        type="xygrid"
        id="grid824" />
@@ -264,30 +265,33 @@
        id="rect1873"
        width="4"
        height="1"
-       x="8"
-       y="6" />
+       x="-8"
+       y="6"
+       transform="scale(-1,1)" />
     <rect
        style="opacity:1;fill:#000000;stroke-width:100;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
        id="rect1875"
        width="1"
        height="5"
-       x="11"
-       y="6" />
+       x="-5"
+       y="6"
+       transform="scale(-1,1)" />
     <rect
        style="opacity:1;fill:#000000;stroke-width:99.9996;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
        id="rect1877"
        width="4"
        height="1"
-       x="8"
-       y="10" />
+       x="-8"
+       y="10"
+       transform="scale(-1,1)" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.6;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 8.1485411,10.509284 6,9 V 8 L 8.1697613,6.4907162"
+       style="fill:none;stroke:#000000;stroke-width:0.7;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 7.8514589,10.509284 10.594164,8.5000001 7.8302387,6.4907163"
        id="path1942"
-       sodipodi:nodetypes="cccc" />
+       sodipodi:nodetypes="ccc" />
     <path
-       style="fill:none;stroke:#000000;stroke-width:0.4;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
-       d="M 5.933687,8.5119363 C 5.9893822,8.5175028 3.784294,8.6810692 3.403183,6.7904509"
+       style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 8.5596817,8.5119364 C 11.177722,9.3238724 12.215706,8.6810693 12.596817,6.790451"
        id="path2133"
        sodipodi:nodetypes="cc" />
   </g>

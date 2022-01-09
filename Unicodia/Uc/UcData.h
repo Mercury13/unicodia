@@ -73,6 +73,7 @@ namespace uc {
     constexpr QChar STUB_PUA_OVERLAP { 0xE006 };
     constexpr QChar STUB_PUA_CONTINUING_OVERLAP { 0xE007 };
     constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };
+    constexpr QChar STUB_PUA_TAG { 0xE009 };
 
     enum class EcLangLife
     {

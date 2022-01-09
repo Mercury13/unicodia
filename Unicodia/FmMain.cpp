@@ -400,15 +400,15 @@ namespace {
     }
 
     // Table for normal abbreviations
-    constexpr qreal Q1 = 2.0;
-    constexpr qreal Q3 = 3.3;
-    constexpr qreal Q4 = 4.0;
-    constexpr qreal Q5 = 5.0;
+    constexpr qreal Q1 = 1.5;
+    constexpr qreal Q3 = 2.5;
+    constexpr qreal Q4 = 3.0;
+    constexpr qreal Q5 = 3.75;
                     //   0   1   2   3   4   5   6   7   8   9
     AbbrTable atAbbr { { Q1, Q3, Q3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
 
     // Table for tags
-    constexpr qreal T3 = 2.8;
+    constexpr qreal T3 = 2.1;
                     //   0   1   2   3   4   5   6   7   8   9
     AbbrTable atTags { { Q1, T3, T3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
 
@@ -499,7 +499,7 @@ namespace {
         auto sz = availSize / sp.sizeQuo(table);
         QFont font { str::toQ(FAM_CONDENSED) };
             font.setStyleStrategy(QFont::PreferAntialias);
-            font.setPointSizeF(sz);
+            font.setPixelSize(sz);
         painter->setFont(font);
         painter->setBrush(QBrush(color, Qt::SolidPattern));
         rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
@@ -529,14 +529,6 @@ namespace {
         drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atAbbr);
     }
 
-    void drawTagText(QPainter* painter, std::u8string_view abbreviation,
-            const QColor& color, QRectF rcFrame, qreal thickness)
-    {
-        // Draw text
-        AbbrLines lines { abbreviation, u8" ", {} };
-        drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atTags);
-    }
-
     struct ControlFrame {
         QRectF r;
         qreal thickness;
@@ -563,18 +555,29 @@ namespace {
     }
 
     void drawFunkySample(
-            QPainter* painter, const QRect& rect, const QColor& color,
-            uc::FontPlace place, int fontSize, char32_t trigger, QChar sample)
+            QPainter* painter, const QRectF& rect, const QColor& color,
+            uc::FontPlace place, float quo, char32_t trigger, QChar sample)
     {
-        auto fn = uc::funkyFont(place, fontSize, trigger);
+        auto fn = uc::funkyFont(place, 50, trigger);
+        fn.setPixelSize(std::round(rect.width() * 0.75f * quo));
         painter->setFont(fn);
         painter->setBrush(QBrush(color, Qt::SolidPattern));
         painter->drawText(rect, Qt::AlignCenter, sample);
     }
 
+    void drawTagText(QPainter* painter, std::u8string_view abbreviation,
+            const QColor& color, const QRectF& rcFrame, qreal thickness,
+            uc::FontPlace place, char32_t trigger)
+    {
+        // Draw text
+        AbbrLines lines { abbreviation, u8" ", {} };
+        drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atTags);
+        drawFunkySample(painter, rcFrame, color, place, 1.2f, trigger, uc::STUB_PUA_TAG);
+    }
+
     void drawCustomControl(
             QPainter* painter, const QRect& rect, const QColor& color,
-            uc::FontPlace place, int fontSize, char32_t subj)
+            uc::FontPlace place, char32_t subj)
     {
         auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
         // Need this brush for both rects and fonts
@@ -582,28 +585,28 @@ namespace {
         switch (subj) {
         case 0x11D45:   // Masaram Gondi virama
         case 0x11D97:   // Gunjala Gondi virama
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_VIRAMA);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_VIRAMA);
             break;
         case 0x16F8F:   // Miao tone right
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_RIGHT);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_RIGHT);
             break;
         case 0x16F90:   // Miao tone top right
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_TOPRIGHT);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_TOPRIGHT);
             break;
         case 0x16F91:   // Miao tone above
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_ABOVE);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_ABOVE);
             break;
         case 0x16F92:   // Miao tone below
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_TONE_BELOW);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_BELOW);
             break;
         case 0x1BCA0:   // Shorthand format Letter overlap
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_OVERLAP);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_OVERLAP);
             break;
         case 0x1BCA1:   // Shorthand format Continuing overlap
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_CONTINUING_OVERLAP);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_CONTINUING_OVERLAP);
             break;
         case 0x13431:   // Egyptian hiero horz joiner
-            drawFunkySample(painter, rect, color, place, fontSize, subj, uc::STUB_PUA_BIG_STAR);
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_BIG_STAR);
             break;
         case 0x13432: {
                 Rc3Matrix m(rcFrame);
@@ -631,20 +634,24 @@ namespace {
             } break;
         case 0xE0001:
                 // 00A0 = NBSP
-            drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness);
+            drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness,
+                        place, subj);
             break;
         case 0xE0020:
-            drawTagText(painter, u8"SP"sv, color, rcFrame, thickness);
+            drawTagText(painter, u8"SP"sv, color, rcFrame, thickness,
+                        place, subj);
             break;
         case 0xE007F:
-            drawTagText(painter, u8"END"sv, color, rcFrame, thickness);
+            drawTagText(painter, u8"END"sv, color, rcFrame, thickness,
+                        place, subj);
             break;
         default:
             // Tags
             if (subj >= 0xE0000 && subj <= 0xE00FF) {
                 char8_t c = subj;
                 std::u8string_view line1 { &c, 1 };
-                drawTagText(painter, line1, color, rcFrame, thickness);
+                drawTagText(painter, line1, color, rcFrame, thickness,
+                            place, subj);
             }
         }
     }
@@ -708,7 +715,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
 {
     switch (cp.drawMethod(dpi)) {
     case uc::DrawMethod::CUSTOM_CONTROL:
-        drawCustomControl(painter, rect, color, uc::FontPlace::CELL, FSZ_TABLE, cp.subj);
+        drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
         break;
     case uc::DrawMethod::ABBREVIATION:
         drawAbbreviation(painter, rect, cp.abbrev(), color);
@@ -993,7 +1000,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::CUSTOM_CONTROL: {
             QPainter painter(this);
             drawCustomControl(&painter, geometry(), palette().windowText().color(),
-                        uc::FontPlace::SAMPLE, FSZ_BIG_CONTROL, subj);
+                        uc::FontPlace::SAMPLE, subj);
         } break;
     case Mode::SPACE: {
             QPainter painter(this);

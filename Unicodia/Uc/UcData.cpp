@@ -4761,7 +4761,7 @@ constinit const uc::Block uc::blocks[] {
                     "• ''дайто'' или ''отодо''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C.",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tags OK
-    { 0xE0000, 0xE007F, { 0xE0041, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
+    { 0xE0000, 0xE007F, { 0xE0054, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Tags", u8"Тэги",
             u8"Блок тэгов повторяет [[pt:ascii|ASCII]]. "
                     "Изначально (Unicode 3.1, 2001) тэги применялись для задания языка "
