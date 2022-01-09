@@ -5051,7 +5051,7 @@ constinit const uc::Term uc::terms[] {
     { "ignorable", EcTermCat::CHAR_CLASS,
       u8"невидимый символ", u8"default-ignorable character",
         // For translator: столбики = stacks, шрифтовые механизмы = font features,
-        //   стыковаться = tile
+        //   стыковаться = tile, разъединитель графем = grapheme joiner
         /// @todo [link] Tags, Notes, CGJ, etc.
         u8"Ни один шрифт не поддержит весь Юникод: дело и в простом размере (в Юникоде {{version}} символов уже {{nchars}}), "
                     "и в тонкостях шрифтовых файлов (и TTF, и OTF ограничены 65535 [[pt:character|глифами]]), "
