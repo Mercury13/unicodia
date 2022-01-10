@@ -998,6 +998,10 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Miao tone below")                           // Same
     EX("Shorthand format Letter overlap")           // Letter is not low-case!
     EX("Znamenny neume Dva v chelnu")               // Better not to make exception from V
+    EX("Hebrew Yod triangle")                       // IDK what to do
+    EX("Hebrew ligature Yiddish Vav Yod")           // Same
+    EX("Hebrew ligature Yiddish double Yod")
+    EX("Hebrew ligature Yiddish double Vav")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
