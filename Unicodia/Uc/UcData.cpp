@@ -2788,7 +2788,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
     { "Xsux", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
-        u8"Клинопись", u8"≈3200 до н.э."sv,
+        u8"Шумеро-аккадская клинопись", u8"≈3200 до н.э.",
         u8"шумерский, аккадский, хеттский, эламский, хурритский, урартский, древнеперсидский",
         u8"Изначально (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров), но к 3200 появились иероглифы, "
                     "а к 3000{{bc}} иероглифы стали использовать как слоги. "
@@ -2807,7 +2807,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Yezidi OK, W10 none → installed Google Noto
     { "Yezi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Езидская", u8"XIII–XVII век"sv,
+        u8"Езидская", u8"XIII–XVII век",
         u8"северокурдский",
         u8"Езиды{{-}}часть курдского народа, исповедуют религию езидизм, вышедшую из [[ps:Avst|зороастризма]]. "
                 "Священные езидские книги, ''Книга откровения'' и ''Чёрная книга'', написаны особым письмом "
