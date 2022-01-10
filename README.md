@@ -16,15 +16,13 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 # Compatibility and policies
 
 ## Platforms
-**Win7/10 x64 only.** Rationale:
+**Win7/10/11 x64 only.** Rationale:
 * WXP, WVista and W8 are completely abandoned by all imaginable software.
 * No obstacles for x86, just untested because no one compiled Qt for x86.
-* W11 will probably work, but there will be problems for two reasons.
-  * Qt is a large wad of software, and something may go wrong (like Embarcadero VCL + Aero Flip)
-  * No one checked fonts. Even in W7 and W10 they are different.
+* Recently checked Windows 11, and it works.
 
 ## Tofu/misrenderings
-* **W10 should support everything possible, W7 base plane only**.
+* **W10/11 should support everything possible, W7 base plane only**.
 * Some base plane scripts (e.g. Georgian Nuskhuri) will not be shown the best way in W7, but will be shown.
 * Of course, same for plane 1 scripts: if I find that some font supports e.g. Gothic, I’ll include it to font chain.
 * Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi.
