@@ -15,7 +15,6 @@
 
 // Libs
 #include "u_Vector.h"
-#include "i_MemStream.h"
 
 std::string tempPrefix;
 
@@ -222,6 +221,7 @@ namespace {
 
 TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
 {
+    MemFont mf;
     int id = -1;
     if (!tempPrefix.empty() &&
             (fname.endsWith(".ttf") || fname.endsWith(".otf"))) {
@@ -231,7 +231,6 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
             << std::dec);
         // TTF, load + rename
         try {
-            MemFont mf;
             mf.load(fname);
             mf.mangle(tempPrefix);
             id = QFontDatabase::addApplicationFontFromData(mf.qdata());
@@ -244,7 +243,7 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
     }
     if (id < 0) {
         std::cout << "Cannot install " << fname.toStdString() << std::endl;
-        return { FONT_BADLY_INSTALLED, {} };
+        return { FONT_BADLY_INSTALLED, {}, {} };
     }
     auto families = QFontDatabase::applicationFontFamilies(id);
     if constexpr (debugTempFont) {
@@ -253,7 +252,7 @@ TempFont installTempFontFull(QString fname, [[maybe_unused]] char32_t trigger)
                 << std::hex << static_cast<uint32_t>(trigger) << std::dec);
         }
     }
-    return { id, std::move(families) };
+    return { id, std::move(families), std::make_unique<Mems>(std::move(mf)) };
 }
 
 

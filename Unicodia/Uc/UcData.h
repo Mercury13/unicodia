@@ -429,11 +429,9 @@ namespace uc {
         CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
         CELL_BIGGER   = 1<<11,  ///< Make cell text a bit smaller
         STUB_FINEGRAINED=1<<12, ///< Stub on/off is controlled on finer level
-        SUPPORTS_ALL  = 1<<13,  ///< Font supports all characters that fall to it
-                                ///< (used for tofu stats)
-        STUB_RTL      = 1<<14,  ///< Use “RtL isolate” char in stub
-        CUSTOM_AA     = 1<<15,  ///< Use custom antialiasing in table
-        STUB_INTERCHAR= 1<<16,  ///< Debug: test inter-character interval
+        STUB_RTL      = 1<<13,  ///< Use “RtL isolate” char in stub
+        CUSTOM_AA     = 1<<14,  ///< Use custom antialiasing in table (unused right now)
+        STUB_INTERCHAR= 1<<15,  ///< Debug: test inter-character interval
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -454,21 +452,30 @@ namespace uc {
     /// used as a sign for “Draw all chars”
     constexpr int DPI_ALL_CHARS = 0;
 
+    enum class Fafg {
+        RAW_FONT = 1<<0,    ///< [+] use RawFont structure, not QFont
+    };
+
+    struct Family
+    {
+        std::string_view text;
+        Flags<Fafg> flags {};
+
+        constexpr Family(std::string_view aText) : text(aText) {}
+        constexpr Family(std::string_view aText, Fafg aFlag)
+            : text(aText), flags(aFlag) {}
+        constexpr Family(std::string_view aText, Flags<Fafg> aFlags)
+            : text(aText), flags(aFlags) {}
+    };
+
     struct Font
     {
         static const QString qempty;
 
-        std::string_view family;
+        Family family;
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
-        /// Sometimes the font thinks that is supports nothing
-        /// (maybe because of declared script support: happened only for aux.Tamil)
-        /// Then we may unglitch: everything that triggers this font and up to version
-        /// e.g. 14 is supported for sure!
-        /// When U15 arrives and aux.Tamil block extends, everything’s OK:
-        /// U15 is not supported by default.
-        EcVersion supportedVersion = EcVersion::NONE;
 
         mutable struct Q {
             std::shared_ptr<LoadedFont> loaded {};
@@ -480,7 +487,7 @@ namespace uc {
 
         int computeSize(FontPlace place, int size) const;
         QFont get(FontPlace place, int size, bool noAa, char32_t trigger) const;
-        bool doesSupportChar(char32_t x, EcVersion charVersion) const;
+        bool doesSupportChar(char32_t x) const;
         const QString& familiesComma(char32_t trigger) const;
 
         consteval Font(
@@ -491,7 +498,19 @@ namespace uc {
             : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
         consteval Font(
+                const Family& aFamily,
+                Flags<Ffg> aFlags = {},
+                StyleSheet aStylesheet = StyleSheet{},
+                Percent aSizeAdjust = Percent())
+            : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
+              sizeAdjust(aSizeAdjust) {}
+        consteval Font(
                 std::string_view aFamily,
+                Flags<Ffg> aFlags,
+                Percent aSizeAdjust)
+            : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                const Family& aFamily,
                 Flags<Ffg> aFlags,
                 Percent aSizeAdjust)
             : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust) {}
@@ -505,10 +524,6 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
-        consteval Font(
-                std::string_view aFamily,
-                EcVersion aVersion)
-            : family(aFamily), supportedVersion(aVersion) {}
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;

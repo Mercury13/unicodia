@@ -3,6 +3,7 @@
 // Qt
 #include <QFontDatabase>
 #include <QFontMetrics>
+#include <QRawFont>
 
 // Libs
 #include "i_TempFont.h"
@@ -36,11 +37,10 @@ constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr std::string_view FNAME_NOTOSYM2 = "NotoSansSymbols2-Regular.ttf";
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
-constexpr std::string_view FNAME_FUNKY = "FunkySample.ttf";
+constexpr uc::Family FNAME_FUNKY { "FunkySample.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
-
 
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
@@ -246,7 +246,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTaiViet-Regular.ttf" },                                          // Tai Viet
     { "Nirmala UI,Latha" },                                                     // Tamil
             // Somehow font does not respond to char support
-    { "NotoSansTamilSupplement-Regular.ttf", EcVersion::V_14_0 },               // Tamil supplement
+    { Family{ "NotoSansTamilSupplement-Regular.ttf", Fafg::RAW_FONT } },        // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
@@ -5719,6 +5719,7 @@ struct uc::LoadedFont
     intptr_t tempId = FONT_NOT_INSTALLED;
     std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
+    std::unique_ptr<QRawFont> rawFont;
 
     const QString& onlyFamily() const;
     const QFont& get(
@@ -5811,7 +5812,7 @@ namespace {
 void uc::Font::newLoadedStruc() const
 {
     auto newLoaded = std::make_shared<LoadedFont>();
-    loadedFonts[family] = newLoaded;
+    loadedFonts[family.text] = newLoaded;
     q.loaded = newLoaded;
 }
 
@@ -5824,26 +5825,31 @@ onceAgain:
         return;
 
     // Find in cache
-    if (auto it = loadedFonts.find(family); it != loadedFonts.end()) {
+    if (auto it = loadedFonts.find(family.text); it != loadedFonts.end()) {
         q.loaded = it->second;
         return;
     }
 
     // Create/load it
-    if (isFontFname(family)) {
+    if (isFontFname(family.text)) {
         // FILE
         if (preloadFonts())     // File → preload other files
             goto onceAgain;
         newLoadedStruc();
-        auto tempFont = installTempFontRel(family, trigger);
+
+        auto tempFont = installTempFontRel(family.text, trigger);
         q.loaded->tempId = tempFont.id;
         q.loaded->familiesComma = tempFont.families.join(',');
         q.loaded->families = std::move(tempFont.families);
+
+        if (family.flags.have(Fafg::RAW_FONT) && tempFont.mems) {
+            q.loaded->rawFont = std::make_unique<QRawFont>(tempFont.mems->qdata(), 50);
+        }
     } else {
         // FAMILY
         newLoadedStruc();
-        q.loaded->familiesComma = str::toQ(family);
-        q.loaded->families = toQList(family);
+        q.loaded->familiesComma = str::toQ(family.text);
+        q.loaded->families = toQList(family.text);
     }
 
     // Make probe font
@@ -5851,7 +5857,7 @@ onceAgain:
     q.loaded->get(q.loaded->normal, fst::DEFAULT, flags);
         // force EXACT match
     q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
-    doesSupportChar(trigger, EcVersion::LAST);
+    doesSupportChar(trigger);
 }
 
 
@@ -5874,14 +5880,16 @@ const QString& uc::Font::familiesComma(char32_t trigger) const
 }
 
 
-bool uc::Font::doesSupportChar(char32_t subj, EcVersion charVersion) const
+bool uc::Font::doesSupportChar(char32_t subj) const
 {
     // First load, then check version: if YES, we’ll need this char;
     //                                 if NO, check using probeMetrics
     load(subj);
-    if (charVersion <= supportedVersion)
-        return true;
-    return q.loaded->probeMetrics->inFontUcs4(subj);
+    if (q.loaded->rawFont) {
+        return q.loaded->rawFont->supportsCharacter(subj);
+    } else {
+        return q.loaded->probeMetrics->inFontUcs4(subj);
+    }
 }
 
 int uc::Font::computeSize(FontPlace place, int size) const
@@ -6071,7 +6079,7 @@ const uc::Font& uc::Cp::font() const
     auto sb = subj.uval();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-            if (v->doesSupportChar(sb, ecVersion))
+            if (v->doesSupportChar(sb))
                 break;
         }
         ++v;
@@ -6097,14 +6105,14 @@ uc::TofuInfo uc::Cp::tofuInfo() const
         bool isAlternate = flags.have(Cfg::ALT_FONT);
         while (v->flags.have(Ffg::FALL_TO_NEXT)) {
             if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
-                if (v->doesSupportChar(sb, ecVersion)) {
+                if (v->doesSupportChar(sb)) {
                     r.state = TofuState::PRESENT;
                     goto brk1;
                 }
             }
             ++v;
         }
-        r.state = v->doesSupportChar(sb, ecVersion)
+        r.state = v->doesSupportChar(sb)
                 ? TofuState::PRESENT : TofuState::TOFU;
     brk1: ;
     }
