@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1641804555
+ModificationTime: 1641808940
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -41,7 +41,7 @@ HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
 OS2Vendor: 'PfEd'
-OS2UnicodeRanges: 28002200.0206e080.00000008.00000000
+OS2UnicodeRanges: a8202240.8206e086.01000008.00000000
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  } ['rlig' ('DFLT' <'dflt' > ) ]
 Lookup: 4 0 1 "Diak RLIG" { "Diak RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'diak' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
@@ -70678,7 +70678,7 @@ EndChar
 StartChar: twodotenleader
 Encoding: 8229 8229 586
 Width: 536
-Flags: WO
+Flags: W
 HStem: -7 136<81.08 168.92 367.08 454.92>
 VStem: 62 126<8.47437 114.041> 348 126<8.47437 114.041>
 TtInstrs:
