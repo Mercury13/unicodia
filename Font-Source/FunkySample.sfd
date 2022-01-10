@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1641808940
+ModificationTime: 1641814057
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -40,8 +40,9 @@ HheadAscent: 0
 HheadAOffset: 1
 HheadDescent: 0
 HheadDOffset: 1
-OS2Vendor: 'PfEd'
-OS2UnicodeRanges: a8202240.8206e086.01000008.00000000
+OS2Vendor: 'Merc'
+OS2CodePages: 00000007.00000000
+OS2UnicodeRanges: a8200241.9200a086.01000008.00000000
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  } ['rlig' ('DFLT' <'dflt' > ) ]
 Lookup: 4 0 1 "Diak RLIG" { "Diak RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'diak' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
@@ -754,7 +755,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8190 30 13
+WinInfo: 960 30 13
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
