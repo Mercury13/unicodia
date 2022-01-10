@@ -44,6 +44,7 @@ constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
 
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3

@@ -192,6 +192,7 @@ namespace uc {
           Z_NOR_5,
           Z_NOR_6,
           Z_NOR_7,
+          Z_NOR_8,
          NOTO,
           Z_NOT_1,
          NOTO_SYMBOL2,
