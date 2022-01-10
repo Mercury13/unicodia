@@ -8,18 +8,11 @@ http://scripts.sil.org/OFL
 
 What was done by authors of Unicodia:
 * Latin/Greek/Cyrillic:
-  - Dereferenced glyphs in ranges:
+  - Dereferenced/rehinted glyphs in ranges:
     > Combining diacritical marks supplement
     > Superscripts and subscripts
     > Cyrillic extended A, B
     > Latin extended D, E
-  - Created ligatures for enclosing chars in ranges:
-    > Cyrillic
-    > Cyrillic extended B
-  - Changed 2025 Two point leader to low one
-  - Made 30 chars from Combining Diacritical Marks for Symbols.
-    Work somehow, but optimized for 25CC dotted circle.
-  - Made 20C0 Kyrghyz som sign
 * Bamum, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
 * Kannada, Modi, Syloti Nagri, Zanabazar square

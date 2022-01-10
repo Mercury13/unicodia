@@ -45,13 +45,13 @@ constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
-      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
-      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …2
-      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
-      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
-      { "Segoe UI Historic" },                                                  // …7  Let it be, system font
+      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
+      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …3
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …4
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …5
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …6
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …7  Let it be, system font
+      { "Segoe UI Historic" },                                                  // …8  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
@@ -60,8 +60,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Segoe UI Historic" },                                                    // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Punctuation
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
-      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
-      { FNAME_FUNKY },                                                          // …3 fallback for special punctuation
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
+      { FNAME_NOTO },                                                           // …3
     { FNAME_NOTOMATH },                                                         // Math
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1

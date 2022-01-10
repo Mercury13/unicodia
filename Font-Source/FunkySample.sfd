@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1641803392
+ModificationTime: 1641804555
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -754,7 +754,7 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 8280 30 13
+WinInfo: 8190 30 13
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -826,7 +826,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
-BeginChars: 1114134 586
+BeginChars: 1114134 587
 
 StartChar: DiakAfull
 Encoding: 71936 71936 0
@@ -70540,7 +70540,7 @@ EndChar
 StartChar: KyrghyzSom
 Encoding: 8384 8384 585
 Width: 517
-Flags: WO
+Flags: W
 HStem: 0 56<64 481> 150 65<231.473 401.578> 678 50<221.398 354.323>
 VStem: 55 97<304.777 587.731> 387 89<571.958 644.006>
 TtInstrs:
@@ -70672,6 +70672,81 @@ SplineSet
  64 56 l 257,41,-1
  481 56 l 257,42,-1
  481 0 l 257,39,-1
+EndSplineSet
+EndChar
+
+StartChar: twodotenleader
+Encoding: 8229 8229 586
+Width: 536
+Flags: WO
+HStem: -7 136<81.08 168.92 367.08 454.92>
+VStem: 62 126<8.47437 114.041> 348 126<8.47437 114.041>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 12
+SHP[rp1]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+PUSHB_1
+ 18
+SHP[rp2]
+PUSHB_1
+ 6
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 24
+MDAP[rnd]
+PUSHB_1
+ 3
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 9
+MDRP[min,rnd,black]
+PUSHB_1
+ 9
+SRP0
+PUSHB_2
+ 15
+ 1
+CALL
+PUSHB_1
+ 21
+MDRP[min,rnd,black]
+PUSHB_2
+ 25
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+125 -7 m 256,0,1
+ 99 -7 99 -7 80.5 8 c 128,-1,2
+ 62 23 62 23 62 61 c 256,3,4
+ 62 100 62 100 80.5 114.5 c 128,-1,5
+ 99 129 99 129 125 129 c 256,6,7
+ 151 129 151 129 169.5 114.5 c 128,-1,8
+ 188 100 188 100 188 61 c 256,9,10
+ 188 23 188 23 169.5 8 c 128,-1,11
+ 151 -7 151 -7 125 -7 c 256,0,1
+411 -7 m 256,12,13
+ 385 -7 385 -7 366.5 8 c 128,-1,14
+ 348 23 348 23 348 61 c 256,15,16
+ 348 100 348 100 366.5 114.5 c 128,-1,17
+ 385 129 385 129 411 129 c 256,18,19
+ 437 129 437 129 455.5 114.5 c 128,-1,20
+ 474 100 474 100 474 61 c 256,21,22
+ 474 23 474 23 455.5 8 c 128,-1,23
+ 437 -7 437 -7 411 -7 c 256,12,13
 EndSplineSet
 EndChar
 EndChars
