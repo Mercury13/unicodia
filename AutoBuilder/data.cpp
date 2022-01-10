@@ -242,7 +242,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "IDEOGRAM",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "LETTER",         Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGRAPH",        Dicf::TRIG_CAP_NEXT | Dicf::PART_NOUN | Dicf::CAP_SMALL },
-    /// @todo [spelling] Ligature Alpha Bravo — how to kick?
     { "LIGATURE",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "LOGICAL",        Dicf::TRIG_CAP_NEXT },
     { "LOGOGRAM",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -599,11 +598,15 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "VOCALIC",        Dicf::PART_ADJECTIVE },
     { "VOICED",         Dicf::PART_ADJECTIVE },
     { "VOICELESS",      Dicf::PART_ADJECTIVE },
+    { "WESTERN",        Dicf::PART_ADJECTIVE },
     { "WIDE",           Dicf::PART_ADJECTIVE },
 
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "AFRICAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "ALLAAH",         Dicf::CAP_TITLE },
+    { "ALLAAHU",        Dicf::CAP_TITLE },
+    { "ALLAHOU",        Dicf::CAP_TITLE },
     { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "CHRISTMAS",      Dicf::CAP_TITLE },
     { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -664,6 +667,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "E",              Dicf::CAP_TITLE },
     { "EE",             Dicf::CAP_TITLE },
     { "EH",             Dicf::CAP_TITLE },
+    { "EU",             Dicf::CAP_TITLE },
     { "F",              Dicf::CAP_TITLE },
     { "FEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "G",              Dicf::CAP_TITLE },
@@ -680,12 +684,14 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "L",              Dicf::CAP_TITLE },
     { "LLA",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "LAM",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LAMED",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "M",              Dicf::CAP_TITLE },
     { "MEEM",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "N",              Dicf::CAP_TITLE },
     { "NOON",           Dicf::CAP_TITLE | Dicf::PART_NOUN },    // OK here, no English noon (12:00)
     //{ "NI",             Dicf::CAP_TITLE },    // widely used in cuneiform, IDK what to do
     { "O",              Dicf::CAP_TITLE },
+    { "OE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "OM",             Dicf::CAP_TITLE },
     { "OU",             Dicf::CAP_TITLE },
     { "P",              Dicf::CAP_TITLE },
@@ -705,6 +711,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "THEH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "TH",             Dicf::CAP_TITLE },
     { "U",              Dicf::CAP_TITLE },
+    { "UE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "V",              Dicf::CAP_TITLE },
     { "W",              Dicf::CAP_TITLE },
     { "WAW",            Dicf::CAP_TITLE },
@@ -1002,6 +1009,26 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Hebrew ligature Yiddish Vav Yod")           // Same
     EX("Hebrew ligature Yiddish double Yod")
     EX("Hebrew ligature Yiddish double Vav")
+    // Ligature word: all I see
+    EX("Cyrillic capital ligature En Ghe")
+    EX("Cyrillic small ligature En Ghe")
+    EX("Cyrillic capital ligature Te Tse")
+    EX("Cyrillic small ligature Te Tse")
+    EX("Cyrillic capital ligature A Ie")
+    EX("Cyrillic small ligature A Ie")
+    EX("Armenian small ligature Ech Yiwn")
+    EX("Armenian small ligature Men Now")
+    EX("Armenian small ligature Men Ech")
+    EX("Armenian small ligature Men Ini")
+    EX("Armenian small ligature Vew Now")
+    EX("Armenian small ligature Men Xeh")
+    EX("Hebrew ligature Yiddish Yod Yod Patah")
+    EX("Hebrew ligature Alef Lamed")
+    EX("Combining ligature left half")      // Other meaning of ligature — horz parenthesis
+    EX("Combining ligature right half")     // Same
+    EX("Combining ligature left half below")
+    EX("Combining ligature right half below")
+    EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
