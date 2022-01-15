@@ -3,26 +3,26 @@ FontName: NotoSansModi-Regular
 FullName: Noto Sans Modi Regular
 FamilyName: Noto Sans Modi
 Weight: Book
-Copyright: Copyright 2018 Google Inc. All Rights Reserved.
-Version: 2.000
+Copyright: Copyright 2018-2022 Google Inc. All Rights Reserved.
+Version: 2.001
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020000
+sfntRevision: 0x00020042
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 17582]
+XUID: [1021 465 1806557349 9582]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1516652263
-ModificationTime: 1632739826
+ModificationTime: 1642236502
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -57,593 +57,820 @@ OS2XHeight: 536
 OS2Vendor: 'GOOG'
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 80000003.02002000.00000000.00000000
-Lookup: 6 0 0 "'rphf' Reph Form in Modi lookup 0" { "'rphf' Reph Form in Modi lookup 0 subtable"  } ['rphf' ('modi' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 1" { "Single Substitution lookup 1 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 2" { "Ligature Substitution lookup 2 subtable"  } []
-Lookup: 5 0 0 "'half' Half Forms in Modi lookup 3" { "'half' Half Forms in Modi lookup 3 subtable"  } ['half' ('modi' <'dflt' > ) ]
-Lookup: 4 0 0 "Ligature Substitution lookup 4" { "Ligature Substitution lookup 4 subtable"  } []
-Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 5" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 5 subtable"  } ['calt' ('modi' <'dflt' > ) ]
-Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 6" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 6 subtable"  } ['calt' ('modi' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 7" { "Single Substitution lookup 7 subtable"  } []
+Lookup: 2 0 0 "Multiple Substitution lookup 0" { "Multiple Substitution lookup 0 subtable"  } []
+Lookup: 2 0 0 "Multiple Substitution lookup 1" { "Multiple Substitution lookup 1 subtable"  } []
+Lookup: 1 0 0 "Single Substitution lookup 2" { "Single Substitution lookup 2 subtable"  } []
+Lookup: 1 0 0 "Single Substitution lookup 3" { "Single Substitution lookup 3 subtable"  } []
+Lookup: 1 0 0 "Single Substitution lookup 4" { "Single Substitution lookup 4 subtable"  } []
+Lookup: 1 0 0 "Single Substitution lookup 5" { "Single Substitution lookup 5 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 6" { "Ligature Substitution lookup 6 subtable"  } []
+Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 7" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 7 subtable"  } ['calt' ('modi' <'dflt' > ) ]
 Lookup: 1 0 0 "Single Substitution lookup 8" { "Single Substitution lookup 8 subtable"  } []
-Lookup: 2 0 0 "Multiple Substitution lookup 9" { "Multiple Substitution lookup 9 subtable"  } []
-Lookup: 2 0 0 "Multiple Substitution lookup 10" { "Multiple Substitution lookup 10 subtable"  } []
-Lookup: 6 256 0 "'pres' Pre Base Substitutions in Modi lookup 11" { "'pres' Pre Base Substitutions in Modi lookup 11 subtable"  } ['pres' ('modi' <'dflt' > ) ]
-Lookup: 5 256 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 12" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 12 subtable"  } ['calt' ('modi' <'dflt' > ) ]
+Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 0"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 1"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 2"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 3"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 4"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 5"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 6"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 7"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 8"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 9"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 10"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 11"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 12"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 13"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 14"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 15"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 16"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 17"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 18"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 19"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 20"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 21"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 22"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 23"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 24"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 25"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 26"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 27"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 28"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 29"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 30"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 31"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 32"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 33"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 34"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 35"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 36"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 37"  "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 38"  } ['calt' ('modi' <'dflt' > ) ]
+Lookup: 1 0 0 "Single Substitution lookup 10" { "Single Substitution lookup 10 subtable"  } []
+Lookup: 1 0 0 "Single Substitution lookup 11" { "Single Substitution lookup 11 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 12" { "Ligature Substitution lookup 12 subtable"  } []
 Lookup: 4 0 0 "Ligature Substitution lookup 13" { "Ligature Substitution lookup 13 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 14" { "Single Substitution lookup 14 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 15" { "Single Substitution lookup 15 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 16" { "Single Substitution lookup 16 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 17" { "Single Substitution lookup 17 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 18" { "Single Substitution lookup 18 subtable"  } []
-Lookup: 1 0 0 "Single Substitution lookup 19" { "Single Substitution lookup 19 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 20" { "Ligature Substitution lookup 20 subtable"  } []
-Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 21" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 21 subtable"  } ['calt' ('modi' <'dflt' > ) ]
-Lookup: 5 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 22" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 22 subtable"  } ['calt' ('modi' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 23" { "Single Substitution lookup 23 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 24" { "Ligature Substitution lookup 24 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 25" { "Ligature Substitution lookup 25 subtable"  } []
-Lookup: 4 0 0 "Ligature Substitution lookup 26" { "Ligature Substitution lookup 26 subtable"  } []
+Lookup: 6 256 0 "'pres' Pre Base Substitutions in Modi lookup 14" { "'pres' Pre Base Substitutions in Modi lookup 14 subtable"  } ['pres' ('modi' <'dflt' > ) ]
+Lookup: 4 256 0 "Ligature Substitution lookup 15" { "Ligature Substitution lookup 15 subtable"  } []
+Lookup: 1 256 0 "Single Substitution lookup 16" { "Single Substitution lookup 16 subtable"  } []
+Lookup: 5 256 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 17" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 17 subtable"  } ['calt' ('modi' <'dflt' > ) ]
+Lookup: 4 0 0 "Ligature Substitution lookup 18" { "Ligature Substitution lookup 18 subtable"  } []
+Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 19" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 19 subtable"  } ['calt' ('modi' <'dflt' > ) ]
+Lookup: 1 0 0 "Single Substitution lookup 20" { "Single Substitution lookup 20 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 21" { "Ligature Substitution lookup 21 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 22" { "Ligature Substitution lookup 22 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 23" { "Ligature Substitution lookup 23 subtable"  } []
+Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 24" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 24 subtable"  } ['calt' ('modi' <'dflt' > ) ]
+Lookup: 1 0 0 "Single Substitution lookup 25" { "Single Substitution lookup 25 subtable"  } []
+Lookup: 5 0 0 "'half' Half Forms in Modi lookup 26" { "'half' Half Forms in Modi lookup 26 contextual 0"  "'half' Half Forms in Modi lookup 26 contextual 1"  "'half' Half Forms in Modi lookup 26 contextual 2"  "'half' Half Forms in Modi lookup 26 contextual 3"  "'half' Half Forms in Modi lookup 26 contextual 4"  "'half' Half Forms in Modi lookup 26 contextual 5"  "'half' Half Forms in Modi lookup 26 contextual 6"  "'half' Half Forms in Modi lookup 26 contextual 7"  "'half' Half Forms in Modi lookup 26 contextual 8"  "'half' Half Forms in Modi lookup 26 contextual 9"  "'half' Half Forms in Modi lookup 26 contextual 10"  "'half' Half Forms in Modi lookup 26 contextual 11"  "'half' Half Forms in Modi lookup 26 contextual 12"  "'half' Half Forms in Modi lookup 26 contextual 13"  "'half' Half Forms in Modi lookup 26 contextual 14"  "'half' Half Forms in Modi lookup 26 contextual 15"  "'half' Half Forms in Modi lookup 26 contextual 16"  "'half' Half Forms in Modi lookup 26 contextual 17"  "'half' Half Forms in Modi lookup 26 contextual 18"  "'half' Half Forms in Modi lookup 26 contextual 19"  "'half' Half Forms in Modi lookup 26 contextual 20"  "'half' Half Forms in Modi lookup 26 contextual 21"  "'half' Half Forms in Modi lookup 26 contextual 22"  "'half' Half Forms in Modi lookup 26 contextual 23"  "'half' Half Forms in Modi lookup 26 contextual 24"  "'half' Half Forms in Modi lookup 26 contextual 25"  "'half' Half Forms in Modi lookup 26 contextual 26"  "'half' Half Forms in Modi lookup 26 contextual 27"  "'half' Half Forms in Modi lookup 26 contextual 28"  "'half' Half Forms in Modi lookup 26 contextual 29"  "'half' Half Forms in Modi lookup 26 contextual 30"  "'half' Half Forms in Modi lookup 26 contextual 31"  "'half' Half Forms in Modi lookup 26 contextual 32"  "'half' Half Forms in Modi lookup 26 contextual 33"  "'half' Half Forms in Modi lookup 26 contextual 34"  } ['half' ('modi' <'dflt' > ) ]
+Lookup: 4 0 0 "Ligature Substitution lookup 27" { "Ligature Substitution lookup 27 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 28" { "Ligature Substitution lookup 28 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 29" { "Ligature Substitution lookup 29 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 30" { "Ligature Substitution lookup 30 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 31" { "Ligature Substitution lookup 31 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 32" { "Ligature Substitution lookup 32 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 33" { "Ligature Substitution lookup 33 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 34" { "Ligature Substitution lookup 34 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 35" { "Ligature Substitution lookup 35 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 36" { "Ligature Substitution lookup 36 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 37" { "Ligature Substitution lookup 37 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 38" { "Ligature Substitution lookup 38 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 39" { "Ligature Substitution lookup 39 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 40" { "Ligature Substitution lookup 40 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 41" { "Ligature Substitution lookup 41 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 42" { "Ligature Substitution lookup 42 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 43" { "Ligature Substitution lookup 43 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 44" { "Ligature Substitution lookup 44 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 45" { "Ligature Substitution lookup 45 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 46" { "Ligature Substitution lookup 46 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 47" { "Ligature Substitution lookup 47 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 48" { "Ligature Substitution lookup 48 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 49" { "Ligature Substitution lookup 49 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 50" { "Ligature Substitution lookup 50 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 51" { "Ligature Substitution lookup 51 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 52" { "Ligature Substitution lookup 52 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 53" { "Ligature Substitution lookup 53 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 54" { "Ligature Substitution lookup 54 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 55" { "Ligature Substitution lookup 55 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 56" { "Ligature Substitution lookup 56 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 57" { "Ligature Substitution lookup 57 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 58" { "Ligature Substitution lookup 58 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 59" { "Ligature Substitution lookup 59 subtable"  } []
+Lookup: 4 0 0 "Ligature Substitution lookup 60" { "Ligature Substitution lookup 60 subtable"  } []
+Lookup: 6 0 0 "'rphf' Reph Form in Modi lookup 61" { "'rphf' Reph Form in Modi lookup 61 subtable"  } ['rphf' ('modi' <'dflt' > ) ]
+Lookup: 4 0 0 "Ligature Substitution lookup 62" { "Ligature Substitution lookup 62 subtable"  } []
 Lookup: 258 0 0 "'kern' Horizontal Kerning in Modi lookup 0" { "'kern' Horizontal Kerning in Modi lookup 0 subtable"  } ['kern' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 1" { "'mark' Mark Positioning in Modi lookup 1 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 2" { "'mark' Mark Positioning in Modi lookup 2 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 3" { "'mark' Mark Positioning in Modi lookup 3 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 4" { "'mark' Mark Positioning in Modi lookup 4 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 5" { "'mark' Mark Positioning in Modi lookup 5 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 6" { "'mark' Mark Positioning in Modi lookup 6 subtable"  } ['mark' ('modi' <'dflt' > ) ]
+Lookup: 260 0 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 1" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 1 subtable"  } ['abvm' ('modi' <'dflt' > ) ]
+Lookup: 260 0 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 2" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 2 subtable"  } ['abvm' ('modi' <'dflt' > ) ]
+Lookup: 262 16 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 3" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 3 subtable"  } ['abvm' ('modi' <'dflt' > ) ]
+Lookup: 262 65552 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 4" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 4 subtable"  } ['abvm' ('modi' <'dflt' > ) ]
+Lookup: 260 0 0 "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 5" { "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 5 subtable"  } ['blwm' ('modi' <'dflt' > ) ]
+Lookup: 260 0 0 "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 6" { "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 6 subtable"  } ['blwm' ('modi' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 7" { "'mark' Mark Positioning in Modi lookup 7 subtable"  } ['mark' ('modi' <'dflt' > ) ]
-Lookup: 262 0 0 "'mkmk' Mark to Mark in Modi lookup 8" { "'mkmk' Mark to Mark in Modi lookup 8 subtable"  } ['mkmk' ('modi' <'dflt' > ) ]
-Lookup: 262 0 0 "'mkmk' Mark to Mark in Modi lookup 9" { "'mkmk' Mark to Mark in Modi lookup 9 subtable"  } ['mkmk' ('modi' <'dflt' > ) ]
-MarkAttachClasses: 3
+Lookup: 260 0 0 "'mark' Mark Positioning in Modi lookup 8" { "'mark' Mark Positioning in Modi lookup 8 subtable"  } ['mark' ('modi' <'dflt' > ) ]
+Lookup: 258 8 0 "'kern' Horizontal Kerning lookup 9" { "'kern' Horizontal Kerning lookup 9 subtable"  } ['dist' ('DFLT' <'dflt' > ) 'kern' ('DFLT' <'dflt' > ) ]
+MarkAttachClasses: 2
 "MarkClass-1" 81 U_dv UU_dv VocR_dv VocRR_dv VocL_dv VocLL_dv Virama Rakar Vattu Ra.alt5 Rakar.alt
-"MarkClass-2" 37 E_dv AI_dv Anusvara Ardhacandra Repha
+MarkAttachSets: 2
+"MarkSet-0" 22 E_dv AI_dv Ardhacandra
+"MarkSet-1" 37 E_dv AI_dv Anusvara Ardhacandra Repha
 DEI: 91125
-ContextSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 22 subtable" 3 0 0 1
-  Class: 80 Gha Nga Cha Tta Ttha Dda Ddha Nna Bha Sha Ssa Lla Tha.alt Pa.alt Ya.alt Dha.alt2
-  Class: 5 UU_dv
- 2 0 0
-  ClsList: 1 2
-  BClsList:
-  FClsList:
+ChainSub2: glyph "'rphf' Reph Form in Modi lookup 61 subtable" 0 0 0 2
+ String: 9 Ra Virama
+ BString: 0 
+ FString: 7 uni200D
+ 0
+ String: 9 Ra Virama
+ BString: 0 
+ FString: 0 
  1
-  SeqLookup: 1 "Single Substitution lookup 23"
-  ClassNames: "0" "1" "2"
+  SeqLookup: 0 "Ligature Substitution lookup 62"
 EndFPST
-ChainSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 21 subtable" 4 5 1 6
-  Class: 2 Ra
-  Class: 6 Virama
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 34" 0 0 0 1
+ 2 0 0
+  Coverage: 4 KSsa
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 60"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 33" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Lla
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 59"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 32" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 58"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 31" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Sa
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 57"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 30" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Ssa
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 56"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 29" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Sha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 55"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 28" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Va
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 54"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 27" 0 0 0 1
+ 2 0 0
+  Coverage: 2 La
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 53"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 26" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ya
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 52"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 25" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ma
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 51"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 24" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Bha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 50"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 23" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ba
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 49"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 22" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Pha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 48"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 21" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Pa
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 47"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 20" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Na
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 46"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 19" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Dha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 45"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 18" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Da
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 44"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 17" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Tha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 43"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 16" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ta
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 42"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 15" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Nna
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 41"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 14" 0 0 0 1
+ 2 0 0
+  Coverage: 4 Ddha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 40"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 13" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Dda
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 39"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 12" 0 0 0 1
+ 2 0 0
+  Coverage: 4 Ttha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 38"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 11" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Tta
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 37"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 10" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Nya
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 36"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 9" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Jha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 35"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 8" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ja
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 34"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 7" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Cha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 33"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 6" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ca
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 32"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 5" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Nga
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 31"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 4" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Gha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 30"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 3" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ga
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 29"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 2" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Kha
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 28"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 1" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ka
+  Coverage: 6 Virama
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 27"
+EndFPST
+ContextSub2: coverage "'half' Half Forms in Modi lookup 26 contextual 0" 0 0 0 1
+ 3 0 0
+  Coverage: 118 Ka Kha Ga Gha Nga Ca Cha Ja Jha Nya Tta Ttha Dda Ddha Nna Ta Tha Da Dha Na Pa Pha Ba Bha Ma Ya La Va Sha Ssa Sa Ha Lla
+  Coverage: 6 Virama
+  Coverage: 2 Ra
+ 0
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 24 subtable" 0 0 0 1
+ 1 1 0
+  Coverage: 5 UU_dv
+  BCoverage: 80 Gha Nga Cha Tta Ttha Dda Ddha Nna Bha Sha Ssa Lla Tha.alt Pa.alt Ya.alt Dha.alt2
+ 1
+  SeqLookup: 0 "Single Substitution lookup 25"
+EndFPST
+ChainSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 19 subtable" 4 5 1 6
   Class: 12 Tha Pa Ma Ya
-  BClass: 293 Ta.half Ma.half Sa.half KSsa.half Ka.half Kha.half Ga.half Gha.half Nga.half Cha.half Ja.half Tta.half Ttha.half Dda.half Ddha.half Nna.half Na.half Pa.half Pha.half Bha.half Ya.half Sha.half Ssa.half Ha.half Lla.half Ca.half Ba.half La.half Va.half Jha.half Nya.half Tha.half Da.half Dha.half
+  Class: 6 Virama
+  Class: 2 Ra
   BClass: 155 Kha Ga Gha Nga Ca Cha Ja Tta Ttha Dda Ddha Nna Tha Da Dha Na Pa Ba Ya Ra La Va Ssa Sa Ha Lla Tha.alt Da.alt Dha.alt Pa.alt Ma.alt Ya.alt Ra.alt Ru Laa DNya
+  BClass: 293 Ta.half Ma.half Sa.half KSsa.half Ka.half Kha.half Ga.half Gha.half Nga.half Cha.half Ja.half Tta.half Ttha.half Dda.half Ddha.half Nna.half Na.half Pa.half Pha.half Bha.half Ya.half Sha.half Ssa.half Ha.half Lla.half Ca.half Ba.half La.half Va.half Jha.half Nya.half Tha.half Da.half Dha.half
   BClass: 139 Ka Jha Nya Ta Pha Bha Ma Sha Kaa Ku Khaa Guu Jaa Ju Jhaa Nyaa Ttaa Tthaa Naa Nu Phaa Phu Baa Bhaa Maa Muu Yaa Vaa KSsa KSsYa DNyaa DNyu RKa
   BClass: 5 II_dv
- 1 1 0
-  ClsList: 1
-  BClsList: 4
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 18"
- 2 2 0
-  ClsList: 2 1
-  BClsList: 2 1
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 24"
- 2 2 0
-  ClsList: 2 1
-  BClsList: 3 1
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 24"
- 2 1 0
-  ClsList: 2 1
-  BClsList: 2
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 25"
- 2 1 0
-  ClsList: 2 1
-  BClsList: 3
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 26"
  3 0 0
-  ClsList: 3 2 1
+  ClsList: 1 2 3
   BClsList:
   FClsList:
  2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Ligature Substitution lookup 25"
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Ligature Substitution lookup 18"
+ 2 2 0
+  ClsList: 2 3
+  BClsList: 1 2
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 21"
+ 2 2 0
+  ClsList: 2 3
+  BClsList: 3 2
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 22"
+ 2 1 0
+  ClsList: 2 3
+  BClsList: 1
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 18"
+ 2 1 0
+  ClsList: 2 3
+  BClsList: 3
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 23"
+ 1 1 0
+  ClsList: 3
+  BClsList: 4
+  FClsList:
+ 1
+  SeqLookup: 0 "Single Substitution lookup 20"
   ClassNames: "0" "1" "2" "3"
   BClassNames: "0" "1" "2" "3" "4"
   FClassNames: "0"
 EndFPST
-ContextSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 12 subtable" 5 0 0 5
-  Class: 50 Ka Da Kaa Ta.half Sa.half Ka.half Ssa.half Da.half
+ContextSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 17 subtable" 5 0 0 5
   Class: 47 Nya Ddha Ya Sha Ssa Tha.alt Ya.alt Nyaa Nya.alt
+  Class: 50 Ka Da Kaa Ta.half Sa.half Ka.half Ssa.half Da.half
   Class: 11 AA_dv UU_dv
   Class: 2 Ra
  3 0 0
-  ClsList: 1 1 2
+  ClsList: 2 2 1
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
  3 0 0
-  ClsList: 1 2 3
+  ClsList: 2 1 3
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
  2 0 0
-  ClsList: 1 1
+  ClsList: 2 2
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
  2 0 0
-  ClsList: 1 2
+  ClsList: 2 1
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
  2 0 0
-  ClsList: 1 4
+  ClsList: 2 4
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
   ClassNames: "0" "1" "2" "3" "4"
 EndFPST
-ChainSub2: class "'pres' Pre Base Substitutions in Modi lookup 11 subtable" 11 8 1 13
-  Class: 2 Ra
-  Class: 6 Virama
-  Class: 7 uni200D
-  Class: 10 U_dv UU_dv
-  Class: 2 Ka
-  Class: 2 Ta
+ChainSub2: class "'pres' Pre Base Substitutions in Modi lookup 14 subtable" 11 6 1 13
   Class: 8 Pa Ma Ya
+  Class: 10 U_dv UU_dv
+  Class: 7 uni200D
+  Class: 6 Virama
+  Class: 2 Ta
   Class: 3 Saa
-  Class: 2 Da
+  Class: 2 Ra
   Class: 3 Nya
-  BClass: 28 Ga Gha Nna Ta Ba Bha Sha Ssa
+  Class: 2 Ka
+  Class: 2 Da
   BClass: 84 Ka Kha Nga Ca Cha Ja Jha Nya Tta Ttha Dda Tha Da Dha Na Pa Pha Ma Ya Ra La Va Ha Lla
-  BClass: 0 
-  BClass: 0 
+  BClass: 28 Ga Gha Nna Ta Ba Bha Sha Ssa
   BClass: 15 AA_dv I_dv O_dv
-  BClass: 2 Sa
   BClass: 14 Danda DblDanda
+  BClass: 2 Sa
  3 0 0
-  ClsList: 1 2 3
+  ClsList: 1 4 7
+  BClsList:
+  FClsList:
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 2 "Ligature Substitution lookup 13"
+ 2 0 0
+  ClsList: 2 7
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+ 3 0 0
+  ClsList: 5 4 7
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 12"
+ 3 0 0
+  ClsList: 7 4 3
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 15"
  1 1 0
-  ClsList: 1
+  ClsList: 7
+  BClsList: 2
+  FClsList:
+ 1
+  SeqLookup: 0 "Single Substitution lookup 4"
+ 1 1 0
+  ClsList: 7
+  BClsList: 3
+  FClsList:
+ 1
+  SeqLookup: 0 "Single Substitution lookup 4"
+ 1 1 0
+  ClsList: 7
   BClsList: 1
   FClsList:
  1
-  SeqLookup: 0 "Single Substitution lookup 16"
+  SeqLookup: 0 "Single Substitution lookup 5"
+ 1 2 0
+  ClsList: 7
+  BClsList: 3 1
+  FClsList:
+ 1
+  SeqLookup: 0 "Single Substitution lookup 5"
  1 1 0
-  ClsList: 1
+  ClsList: 7
   BClsList: 5
   FClsList:
  1
+  SeqLookup: 0 "Single Substitution lookup 3"
+ 1 1 0
+  ClsList: 7
+  BClsList: 4
+  FClsList:
+ 1
   SeqLookup: 0 "Single Substitution lookup 16"
- 1 1 0
-  ClsList: 1
-  BClsList: 2
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 17"
- 1 2 0
-  ClsList: 1
-  BClsList: 5 2
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 17"
- 1 1 0
-  ClsList: 1
-  BClsList: 6
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 15"
- 1 1 0
-  ClsList: 1
-  BClsList: 7
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 19"
  2 0 0
-  ClsList: 4 1
+  ClsList: 9 7
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
+ 3 0 0
+  ClsList: 9 4 6
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 12"
  2 0 0
-  ClsList: 5 1
+  ClsList: 10 8
   BClsList:
   FClsList:
  1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
- 3 0 0
-  ClsList: 5 2 8
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
- 3 0 0
-  ClsList: 6 2 1
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
- 3 0 0
-  ClsList: 7 2 1
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 2 "Ligature Substitution lookup 24"
- 2 0 0
-  ClsList: 9 10
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 20"
+  SeqLookup: 0 "Ligature Substitution lookup 12"
   ClassNames: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "10"
-  BClassNames: "0" "1" "2" "3" "4" "5" "6" "7"
+  BClassNames: "0" "1" "2" "3" "4" "5"
   FClassNames: "0"
 EndFPST
-ChainSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 6 subtable" 13 4 3 16
-  Class: 32 Ca Jha Nya Tha Pa Ba Ya La Va Sa
-  Class: 15 Ka Ja Na Pha Ra
-  Class: 2 Ga
-  Class: 2 Ma
-  Class: 5 Da Ha
-  Class: 6 Kha Ta
-  Class: 3 Dha
-  Class: 0 
-  Class: 0 
-  Class: 4 U_dv
-  Class: 5 UU_dv
-  Class: 7 VocR_dv
-  BClass: 0 
-  BClass: 0 
-  BClass: 50 Ca.alt Jha.alt Nya.alt Ba.alt La.alt Va.alt Sa.alt
-  FClass: 4 U_dv
-  FClass: 5 UU_dv
- 1 0 1
-  ClsList: 1
-  BClsList:
-  FClsList: 2
- 1
-  SeqLookup: 0 "Single Substitution lookup 14"
- 1 0 1
-  ClsList: 1
-  BClsList:
-  FClsList: 1
- 1
-  SeqLookup: 0 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 2 11
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 2 10
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 2 12
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 3 11
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 1 0 1
-  ClsList: 4
-  BClsList:
-  FClsList: 1
- 1
-  SeqLookup: 0 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 4 11
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 5 10
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 17"
- 2 0 0
-  ClsList: 5 11
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 16"
- 2 0 0
-  ClsList: 6 10
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 6 11
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 16"
- 2 0 0
-  ClsList: 7 10
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 16"
- 2 0 0
-  ClsList: 7 11
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 15"
-  SeqLookup: 1 "Single Substitution lookup 23"
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 38" 0 0 0 1
  1 1 0
-  ClsList: 10
-  BClsList: 3
-  FClsList:
+  Coverage: 5 UU_dv
+  BCoverage: 50 Ca.alt Jha.alt Nya.alt Ba.alt La.alt Va.alt Sa.alt
  1
-  SeqLookup: 0 "Single Substitution lookup 16"
- 1 1 0
-  ClsList: 11
-  BClsList: 3
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 14"
-  ClassNames: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12"
-  BClassNames: "0" "1" "2" "3"
-  FClassNames: "0" "1" "2"
+  SeqLookup: 0 "Single Substitution lookup 10"
 EndFPST
-ChainSub2: class "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 5 subtable" 18 5 1 26
-  Class: 4 I_dv
-  Class: 5 II_dv
-  Class: 5 AA_dv
-  Class: 10 O_dv AU_dv
-  Class: 0 
-  Class: 0 
-  Class: 0 
-  Class: 0 
-  Class: 0 
-  Class: 2 La
-  Class: 49 Ka Kha Ja Jha Nya Tta Ttha Na Pha Ba Bha Va Sa Ha
-  Class: 2 Ra
-  Class: 6 Da Dha
-  Class: 3 Dda
-  Class: 5 Ma Ya
-  Class: 6 Tha Pa
-  Class: 2 Ca
-  BClass: 36 Kha Nga Ca Cha Ddha Tha Da Dha Pa Sa
-  BClass: 3 Lla
-  BClass: 2 Ka
-  BClass: 299 Repha Ta.half Ma.half Sa.half KSsa.half Ka.half Kha.half Ga.half Gha.half Nga.half Cha.half Ja.half Tta.half Ttha.half Dda.half Ddha.half Nna.half Na.half Pa.half Pha.half Bha.half Ya.half Sha.half Ssa.half Ha.half Lla.half Ca.half Ba.half La.half Va.half Jha.half Nya.half Tha.half Da.half Dha.half
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 37" 0 0 0 1
  1 1 0
-  ClsList: 1
-  BClsList: 1
-  FClsList:
+  Coverage: 4 U_dv
+  BCoverage: 50 Ca.alt Jha.alt Nya.alt Ba.alt La.alt Va.alt Sa.alt
  1
-  SeqLookup: 0 "Single Substitution lookup 7"
- 1 1 0
-  ClsList: 1
-  BClsList: 2
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 8"
- 1 1 0
-  ClsList: 2
-  BClsList: 1
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 7"
- 1 1 0
-  ClsList: 2
-  BClsList: 2
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 8"
+  SeqLookup: 0 "Single Substitution lookup 10"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 36" 0 0 0 1
  2 0 0
-  ClsList: 10 1
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 10 2
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 10 4
-  BClsList:
-  FClsList:
+  Coverage: 3 Dha
+  Coverage: 5 UU_dv
  2
-  SeqLookup: 1 "Multiple Substitution lookup 9"
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  SeqLookup: 0 "Single Substitution lookup 3"
+  SeqLookup: 1 "Single Substitution lookup 8"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 35" 0 0 0 1
  2 0 0
-  ClsList: 10 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 11 4
-  BClsList:
-  FClsList:
+  Coverage: 3 Dha
+  Coverage: 4 U_dv
  2
-  SeqLookup: 1 "Multiple Substitution lookup 9"
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 4"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 34" 0 0 0 1
  2 0 0
-  ClsList: 11 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  Coverage: 6 Kha Ta
+  Coverage: 5 UU_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 4"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 33" 0 0 0 1
  2 0 0
-  ClsList: 12 4
-  BClsList:
-  FClsList:
+  Coverage: 6 Kha Ta
+  Coverage: 4 U_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 32" 0 0 0 1
+ 2 0 0
+  Coverage: 5 Da Ha
+  Coverage: 5 UU_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 4"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 31" 0 0 0 1
+ 2 0 0
+  Coverage: 5 Da Ha
+  Coverage: 4 U_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 5"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 30" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ma
+  Coverage: 5 UU_dv
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 29" 0 0 0 1
+ 1 0 1
+  Coverage: 2 Ma
+  FCoverage: 4 U_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 28" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ga
+  Coverage: 5 UU_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 27" 0 0 0 1
+ 2 0 0
+  Coverage: 15 Ka Ja Na Pha Ra
+  Coverage: 7 VocR_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 26" 0 0 0 1
+ 2 0 0
+  Coverage: 15 Ka Ja Na Pha Ra
+  Coverage: 4 U_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 25" 0 0 0 1
+ 2 0 0
+  Coverage: 15 Ka Ja Na Pha Ra
+  Coverage: 5 UU_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 24" 0 0 0 1
+ 1 0 1
+  Coverage: 32 Ca Jha Nya Tha Pa Ba Ya La Va Sa
+  FCoverage: 4 U_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 23" 0 0 0 1
+ 1 0 1
+  Coverage: 32 Ca Jha Nya Tha Pa Ba Ya La Va Sa
+  FCoverage: 5 UU_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 22" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ca
+  Coverage: 10 O_dv AU_dv
+ 1
+  SeqLookup: 1 "Multiple Substitution lookup 1"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 21" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ca
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 1 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 20" 0 0 0 1
+ 1 1 0
+  Coverage: 6 Tha Pa
+  BCoverage: 299 Repha Ta.half Ma.half Sa.half KSsa.half Ka.half Kha.half Ga.half Gha.half Nga.half Cha.half Ja.half Tta.half Ttha.half Dda.half Ddha.half Nna.half Na.half Pa.half Pha.half Bha.half Ya.half Sha.half Ssa.half Ha.half Lla.half Ca.half Ba.half La.half Va.half Jha.half Nya.half Tha.half Da.half Dha.half
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 19" 0 0 0 1
+ 2 0 0
+  Coverage: 6 Tha Pa
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 18" 0 0 0 1
  2 1 0
-  ClsList: 12 3
-  BClsList: 3
-  FClsList:
+  Coverage: 6 Tha Pa
+  Coverage: 5 AA_dv
+  BCoverage: 2 Ka
+ 0
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 17" 0 0 0 1
+ 2 0 0
+  Coverage: 6 Tha Pa
+  Coverage: 10 O_dv AU_dv
  1
-  SeqLookup: 0 "Single Substitution lookup 1"
- 2 0 0
-  ClsList: 12 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 13 4
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 15"
- 2 0 0
-  ClsList: 13 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 15"
- 2 0 0
-  ClsList: 14 1
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 17"
- 2 0 0
-  ClsList: 14 2
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 0 "Single Substitution lookup 14"
-  SeqLookup: 1 "Single Substitution lookup 16"
- 2 0 0
-  ClsList: 15 4
-  BClsList:
-  FClsList:
- 2
-  SeqLookup: 1 "Multiple Substitution lookup 9"
-  SeqLookup: 0 "Ligature Substitution lookup 13"
- 2 0 0
-  ClsList: 15 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 13"
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 16" 0 0 0 1
  1 1 0
-  ClsList: 15
-  BClsList: 4
-  FClsList:
+  Coverage: 5 Ma Ya
+  BCoverage: 299 Repha Ta.half Ma.half Sa.half KSsa.half Ka.half Kha.half Ga.half Gha.half Nga.half Cha.half Ja.half Tta.half Ttha.half Dda.half Ddha.half Nna.half Na.half Pa.half Pha.half Bha.half Ya.half Sha.half Ssa.half Ha.half Lla.half Ca.half Ba.half La.half Va.half Jha.half Nya.half Tha.half Da.half Dha.half
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 15" 0 0 0 1
  2 0 0
-  ClsList: 16 4
-  BClsList:
-  FClsList:
+  Coverage: 5 Ma Ya
+  Coverage: 5 AA_dv
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 14" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Dda
+  Coverage: 5 II_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 4"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 13" 0 0 0 1
+ 2 0 0
+  Coverage: 3 Dda
+  Coverage: 4 I_dv
+ 2
+  SeqLookup: 0 "Single Substitution lookup 2"
+  SeqLookup: 1 "Single Substitution lookup 5"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 12" 0 0 0 1
+ 2 0 0
+  Coverage: 6 Da Dha
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 3"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 11" 0 0 0 1
+ 2 0 0
+  Coverage: 6 Da Dha
+  Coverage: 10 O_dv AU_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 3"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 10" 0 0 0 1
+ 2 0 0
+  Coverage: 2 Ra
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 9" 0 0 0 1
  2 1 0
-  ClsList: 16 3
-  BClsList: 3
-  FClsList:
- 1
-  SeqLookup: 0 "Single Substitution lookup 1"
+  Coverage: 2 Ra
+  Coverage: 5 AA_dv
+  BCoverage: 2 Ka
+ 0
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 8" 0 0 0 1
  2 0 0
-  ClsList: 16 3
-  BClsList:
-  FClsList:
+  Coverage: 2 Ra
+  Coverage: 10 O_dv AU_dv
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
+  SeqLookup: 0 "Single Substitution lookup 2"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 7" 0 0 0 1
+ 2 0 0
+  Coverage: 49 Ka Kha Ja Jha Nya Tta Ttha Na Pha Ba Bha Va Sa Ha
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 6" 0 0 0 1
+ 2 0 0
+  Coverage: 2 La
+  Coverage: 5 AA_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 5" 0 0 0 1
+ 2 0 0
+  Coverage: 2 La
+  Coverage: 5 II_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 4" 0 0 0 1
+ 2 0 0
+  Coverage: 2 La
+  Coverage: 4 I_dv
+ 1
+  SeqLookup: 0 "Ligature Substitution lookup 6"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 3" 0 0 0 1
  1 1 0
-  ClsList: 16
-  BClsList: 4
-  FClsList:
+  Coverage: 5 II_dv
+  BCoverage: 3 Lla
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 17 3
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 1 "Single Substitution lookup 14"
- 2 0 0
-  ClsList: 17 4
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 1 "Multiple Substitution lookup 10"
-  ClassNames: "0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "10" "11" "12" "13" "14" "15" "16" "17"
-  BClassNames: "0" "1" "2" "3" "4"
-  FClassNames: "0"
+  SeqLookup: 0 "Single Substitution lookup 11"
 EndFPST
-ContextSub2: class "'half' Half Forms in Modi lookup 3 subtable" 4 0 0 2
-  Class: 118 Ka Kha Ga Gha Nga Ca Cha Ja Jha Nya Tta Ttha Dda Ddha Nna Ta Tha Da Dha Na Pa Pha Ba Bha Ma Ya La Va Sha Ssa Sa Ha Lla
-  Class: 6 Virama
-  Class: 2 Ra
- 3 0 0
-  ClsList: 1 2 3
-  BClsList:
-  FClsList:
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 2" 0 0 0 1
+ 1 1 0
+  Coverage: 4 I_dv
+  BCoverage: 3 Lla
  1
-  SeqLookup: 0 "Single Substitution lookup 1"
- 2 0 0
-  ClsList: 1 2
-  BClsList:
-  FClsList:
- 1
-  SeqLookup: 0 "Ligature Substitution lookup 4"
-  ClassNames: "0" "1" "2" "3"
+  SeqLookup: 0 "Single Substitution lookup 11"
 EndFPST
-ChainSub2: class "'rphf' Reph Form in Modi lookup 0 subtable" 3 1 2 2
-  Class: 2 Ra
-  Class: 6 Virama
-  FClass: 7 uni200D
- 2 0 1
-  ClsList: 1 2
-  BClsList:
-  FClsList: 1
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 1" 0 0 0 1
+ 1 1 0
+  Coverage: 5 II_dv
+  BCoverage: 36 Kha Nga Ca Cha Ddha Tha Da Dha Pa Sa
  1
-  SeqLookup: 0 "Single Substitution lookup 1"
- 2 0 0
-  ClsList: 1 2
-  BClsList:
-  FClsList:
+  SeqLookup: 0 "Single Substitution lookup 10"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 9 contextual 0" 0 0 0 1
+ 1 1 0
+  Coverage: 4 I_dv
+  BCoverage: 36 Kha Nga Ca Cha Ddha Tha Da Dha Pa Sa
  1
-  SeqLookup: 0 "Ligature Substitution lookup 2"
-  ClassNames: "0" "1" "2"
-  BClassNames: "0"
-  FClassNames: "0" "1"
+  SeqLookup: 0 "Single Substitution lookup 10"
+EndFPST
+ChainSub2: coverage "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in Modi lookup 7 subtable" 0 0 0 1
+ 1 1 0
+  Coverage: 10 O_dv AU_dv
+  BCoverage: 58 Ka Kha Ja Jha Nya Tta Ttha Na Pha Ba Bha Ma Ya La Va Sa Ha
+ 1
+  SeqLookup: 0 "Multiple Substitution lookup 0"
 EndFPST
 TtTable: prep
 PUSHW_1
@@ -1314,13 +1541,13 @@ ShortTable: cvt  6
   82
 EndShort
 ShortTable: maxp 16
+  1
   0
-  0
-  0
-  0
-  0
-  0
-  0
+  209
+  192
+  16
+  77
+  4
   2
   1
   2
@@ -1328,10 +1555,10 @@ ShortTable: maxp 16
   0
   256
   0
-  0
-  0
+  3
+  1
 EndShort
-LangName: 1033 "" "" "" "2.000;GOOG;NotoSansModi-Regular" "" "Version 2.000" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "2.001;GOOG;NotoSansModi-Regular" "" "Version 2.001" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
 Compacted: 1
@@ -1340,10 +1567,10 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 33 14
+WinInfo: 0 26 14
 BeginPrivate: 0
 EndPrivate
-AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Modi lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Modi lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning in Modi lookup 3 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in Modi lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in Modi lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning in Modi lookup 6 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mark' Mark Positioning in Modi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mkmk' Mark to Mark in Modi lookup 8 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'mkmk' Mark to Mark in Modi lookup 9 subtable"
+AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 3 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 6 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Modi lookup 6 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" "'mark' Mark Positioning in Modi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" "'mark' Mark Positioning in Modi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" "'mark' Mark Positioning in Modi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" "'mark' Mark Positioning in Modi lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--13" "'mark' Mark Positioning in Modi lookup 8 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--14" "'mark' Mark Positioning in Modi lookup 8 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--15" "'mark' Mark Positioning in Modi lookup 8 subtable"
 BeginChars: 1114225 209
 
 StartChar: .notdef
@@ -1431,7 +1658,6 @@ Encoding: 32 32 3
 Width: 260
 Flags: W
 LayerCount: 2
-Substitution2: "Single Substitution lookup 1 subtable" space
 EndChar
 
 StartChar: uni00A0
@@ -1824,13 +2050,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 297 674 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 406 669 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 429 539 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 297 -20 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 297 70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 297 -20 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 297 -20 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--15" 297 -20 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--14" 297 674 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--13" 297 -20 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" 297 70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 406 669 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 429 539 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 297 -20 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1984,7 +2210,6 @@ EndChar
 StartChar: uniA830
 Encoding: 43056 43056 8
 Width: 237
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<78 159>
 VStem: 78 81<0 622>
@@ -2028,7 +2253,6 @@ EndChar
 StartChar: uniA831
 Encoding: 43057 43057 9
 Width: 437
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<78 159 278 359>
 VStem: 78 81<0 622> 278 81<0 622>
@@ -2087,7 +2311,6 @@ EndChar
 StartChar: uniA832
 Encoding: 43058 43058 10
 Width: 637
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<78 159 278 359 479 559>
 VStem: 78 81<0 622> 278 81<0 622> 479 80<0 622>
@@ -2163,7 +2386,6 @@ EndChar
 StartChar: uniA833
 Encoding: 43059 43059 11
 Width: 622
-GlyphClass: 2
 Flags: W
 HStem: 412 210
 TtInstrs:
@@ -2246,7 +2468,6 @@ EndChar
 StartChar: uniA834
 Encoding: 43060 43060 12
 Width: 622
-GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -2267,7 +2488,6 @@ EndChar
 StartChar: uniA835
 Encoding: 43061 43061 13
 Width: 622
-GlyphClass: 2
 Flags: W
 LayerCount: 2
 Fore
@@ -2293,7 +2513,6 @@ EndChar
 StartChar: uniA836
 Encoding: 43062 43062 14
 Width: 460
-GlyphClass: 2
 Flags: W
 HStem: 167 70<167.781 292.523> 404 69<168.067 290.562>
 VStem: 67 76<261.318 379.052> 317 76<261.626 378.349>
@@ -2387,7 +2606,6 @@ EndChar
 StartChar: uniA837
 Encoding: 43063 43063 15
 Width: 509
-GlyphClass: 2
 Flags: W
 HStem: 86 70<157.834 281.79>
 VStem: 57 76<181.294 297.696> 307 76<181.294 296.792>
@@ -2471,7 +2689,6 @@ EndChar
 StartChar: uniA838
 Encoding: 43064 43064 16
 Width: 307
-GlyphClass: 2
 Flags: W
 HStem: -188 73<-150.189 51.975>
 VStem: 101 81<546.289 616.556> 164 82<12.9103 421.278>
@@ -2551,7 +2768,6 @@ EndChar
 StartChar: uniA839
 Encoding: 43065 43065 17
 Width: 337
-GlyphClass: 2
 Flags: W
 HStem: -240 75<-155 51.4034> 558 75<254.875 315.24>
 VStem: 65 81<331.17 482.37> 176 81<-61.9504 146.877>
@@ -2823,7 +3039,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 636 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 636 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3302,7 +3518,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 610 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 610 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3539,8 +3755,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 319 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 578 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 319 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 578 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3796,8 +4012,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 320 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 710 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 320 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 710 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4054,8 +4270,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 371 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 682 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 371 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 682 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4323,8 +4539,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 371 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 685 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 371 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 685 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4626,7 +4842,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 620 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 620 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4959,7 +5175,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 617 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 617 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5224,7 +5440,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 475 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 475 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5509,7 +5725,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 475 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 475 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -5776,8 +5992,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 485 900 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 701 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 485 900 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 701 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6066,8 +6282,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 461 900 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 741 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 461 900 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 741 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -6574,8 +6790,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 447 920 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 683 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 447 920 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 683 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -7126,8 +7342,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 427 900 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 718 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 427 900 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 718 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -7400,13 +7616,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 327 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 529 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 556 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 532 -47 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 447 90 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 339 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 491 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 532 -47 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 339 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 447 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 491 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 327 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 529 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 556 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -7646,13 +7862,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 498 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 534 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 646 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 357 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 421 61 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 357 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 357 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 357 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 357 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 421 61 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 357 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 498 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 534 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 646 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -7711,7 +7927,7 @@ SplineSet
  250 343 250 343 274 355 c 1,70,-1
  304 293 l 1,45,46
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Kha.alt
+Substitution2: "Single Substitution lookup 2 subtable" Kha.alt
 EndChar
 
 StartChar: Ga
@@ -7852,10 +8068,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 537 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 582 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 503 160 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 502 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 503 160 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 502 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 537 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 582 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8031,10 +8247,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 511 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 556 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 476 120 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 476 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 476 120 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 476 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 511 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 556 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8234,12 +8450,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 462 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 556 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 358 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 390 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 355 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 319 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 358 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 355 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 390 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 319 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 462 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 556 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8421,12 +8637,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 493 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 520 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 382 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 395 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 382 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 379 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 382 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 382 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 395 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 379 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 493 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 520 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8472,7 +8688,7 @@ SplineSet
  655 622 l 1,52,-1
  655 551 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ca.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ca.alt
 EndChar
 
 StartChar: Cha
@@ -8671,13 +8887,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 348 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 532 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 546 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 353 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 383 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 353 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 354 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 353 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 353 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 383 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 354 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 348 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 532 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 546 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8901,13 +9117,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 375 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 512 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 585 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 365 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 383 52 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 365 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 363 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 365 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 365 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 383 52 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 363 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 375 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 512 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 585 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8960,6 +9176,7 @@ SplineSet
  428 95 428 95 428 123 c 0,59,60
  428 159 428 159 366 257 c 1,51,52
 EndSplineSet
+Kerns2: 68 0 "'kern' Horizontal Kerning lookup 9 subtable" 67 0 "'kern' Horizontal Kerning lookup 9 subtable"
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" II_dv dx=0 dy=0 dh=0 dv=0 dx=70 dy=0 dh=70 dv=0
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" I_dv dx=0 dy=0 dh=0 dv=0 dx=70 dy=0 dh=70 dv=0
 EndChar
@@ -9186,12 +9403,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 595 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 631 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 608 -47 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 522 90 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 375 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 566 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 608 -47 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 375 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 522 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 566 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 595 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 631 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9268,7 +9485,7 @@ SplineSet
  81 80 81 80 92 70 c 128,-1,94
  103 60 103 60 127 60 c 0,83,84
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Jha.alt
+Substitution2: "Single Substitution lookup 2 subtable" Jha.alt
 EndChar
 
 StartChar: Nya
@@ -9418,12 +9635,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 600 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 637 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 615 -47 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 519 90 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 391 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 573 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 615 -47 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 391 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 519 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 573 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 600 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 637 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9475,7 +9692,7 @@ SplineSet
  629 60 629 60 635 71.5 c 128,-1,62
  641 83 641 83 641 89 c 0,54,55
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Nya.alt
+Substitution2: "Single Substitution lookup 2 subtable" Nya.alt
 EndChar
 
 StartChar: Tta
@@ -9727,12 +9944,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 422 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 458 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 277 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 322 57 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 273 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 282 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 277 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 273 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 322 57 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 282 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 422 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 458 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9783,12 +10000,12 @@ GlyphClass: 2
 Flags: HW
 HStem: -10 74<195.253 349.777> 150 110<241.986 314.014> 341 74<200.301 281> 551 71<0 373 450.58 564>
 VStem: 60 80<122.069 279.496> 226 104<160.893 243.498> 365 80<358.969 550.374> 414 80<131.643 336.833>
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 442 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 458 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 277 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 322 57 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 273 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 288 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 277 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 273 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 322 57 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 288 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 442 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 458 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 42 71192 N 1 0 0 1 0 0 3
@@ -9928,12 +10145,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 472 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 463 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 355 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 401 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 358 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 338 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 355 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 358 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 401 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 338 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 472 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 463 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9973,7 +10190,7 @@ SplineSet
  640 622 l 1,45,-1
  640 551 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Dda.alt
+Substitution2: "Single Substitution lookup 2 subtable" Dda.alt
 EndChar
 
 StartChar: Ddha
@@ -10143,13 +10360,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 337 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 459 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 385 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 289 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 347 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 291 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 316 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 289 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 291 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 347 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 316 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 337 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 459 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 385 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10199,6 +10416,7 @@ SplineSet
  338 227 338 227 332 211 c 128,-1,55
  326 195 326 195 326 181 c 0,44,45
 EndSplineSet
+Kerns2: 171 0 "'kern' Horizontal Kerning lookup 9 subtable" 169 0 "'kern' Horizontal Kerning lookup 9 subtable"
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" II.med dx=0 dy=0 dh=0 dv=0 dx=-40 dy=0 dh=-40 dv=0
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" I.med dx=0 dy=0 dh=0 dv=0 dx=-30 dy=0 dh=-30 dv=0
 EndChar
@@ -10378,10 +10596,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 596 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 641 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 561 120 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 561 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 561 120 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 561 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 596 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 641 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10531,11 +10749,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 407 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 452 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 372 80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 296 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 372 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 296 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 372 80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 372 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 407 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 452 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10560,7 +10778,7 @@ SplineSet
  452 551 l 1,22,-1
  452 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ta.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ta.alt
 EndChar
 
 StartChar: Tha
@@ -10766,9 +10984,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 669 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 702 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 507 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 507 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 669 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 702 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10838,7 +11056,7 @@ SplineSet
  143 406 143 406 159.5 399 c 128,-1,83
  176 392 176 392 189 392 c 0,67,68
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Tha.alt
+Substitution2: "Single Substitution lookup 2 subtable" Tha.alt
 EndChar
 
 StartChar: Da
@@ -10977,13 +11195,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 321 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 485 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 516 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 331 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 374 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 321 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 335 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 331 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 321 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 374 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 335 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 321 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 485 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 516 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11026,8 +11244,8 @@ SplineSet
  411 64 411 64 456.5 121.5 c 128,-1,48
  502 179 502 179 502 311 c 0,25,26
 EndSplineSet
-Substitution2: "Single Substitution lookup 15 subtable" Da.alt2
-Substitution2: "Single Substitution lookup 14 subtable" Da.alt
+Substitution2: "Single Substitution lookup 3 subtable" Da.alt2
+Substitution2: "Single Substitution lookup 2 subtable" Da.alt
 EndChar
 
 StartChar: Dha
@@ -11219,13 +11437,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 336 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 515 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 544 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 374 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 414 55 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 336 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 371 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 374 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 336 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 414 55 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 371 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 336 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 515 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 544 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11286,8 +11504,8 @@ SplineSet
  128 467 128 467 128 450 c 2,71,-1
  128 441 l 1,58,59
 EndSplineSet
-Substitution2: "Single Substitution lookup 15 subtable" Dha.alt2
-Substitution2: "Single Substitution lookup 14 subtable" Dha.alt
+Substitution2: "Single Substitution lookup 3 subtable" Dha.alt2
+Substitution2: "Single Substitution lookup 2 subtable" Dha.alt
 EndChar
 
 StartChar: Na
@@ -11399,13 +11617,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 375 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 512 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 585 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 363 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 393 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 363 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 363 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 363 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 363 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 393 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 363 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 375 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 512 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 585 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11447,6 +11665,7 @@ SplineSet
  400 200 400 200 380 235 c 2,47,-1
  366 257 l 1,36,37
 EndSplineSet
+Kerns2: 67 0 "'kern' Horizontal Kerning lookup 9 subtable"
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" II_dv dx=0 dy=0 dh=0 dv=0 dx=25 dy=0 dh=25 dv=0
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" I_dv dx=0 dy=0 dh=0 dv=0 dx=25 dy=0 dh=25 dv=0
 EndChar
@@ -11598,12 +11817,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 357 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 513 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 575 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 356 -79 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 357 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 455 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 356 -79 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 357 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 455 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 357 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 513 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 575 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11647,7 +11866,7 @@ SplineSet
  317 132 317 132 319 213 c 1,48,-1
  395 213 l 1,25,26
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Pa.alt
+Substitution2: "Single Substitution lookup 2 subtable" Pa.alt
 EndChar
 
 StartChar: Pha
@@ -11850,12 +12069,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 644 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 676 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 653 -50 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 573 90 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 471 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 610 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 653 -50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 471 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 573 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 610 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 644 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 676 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12071,11 +12290,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 516 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 561 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 356 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 320 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 481 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 320 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 356 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 481 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 516 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 561 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12117,7 +12336,7 @@ SplineSet
  481 188 481 188 481 236 c 2,45,-1
  481 551 l 1,23,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ba.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ba.alt
 EndChar
 
 StartChar: Bha
@@ -12257,11 +12476,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 603 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 648 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 568 120 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 449 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 568 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 449 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 568 120 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 568 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 603 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 648 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12485,12 +12704,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 500 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 547 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 525 -47 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 438 90 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 328 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 482 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 525 -47 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 328 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 438 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 482 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 500 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 547 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12538,7 +12757,7 @@ SplineSet
  539 60 539 60 545 71.5 c 128,-1,54
  551 83 551 83 551 89 c 0,46,47
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ma.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ma.alt
 EndChar
 
 StartChar: Ya
@@ -12684,12 +12903,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 324 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 523 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 568 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 323 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 324 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 323 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 323 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 324 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 323 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 324 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 523 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 568 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12737,7 +12956,7 @@ SplineSet
  270 492 270 492 254.5 512.5 c 128,-1,51
  239 533 239 533 210 533 c 0,40,41
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ya.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ya.alt
 EndChar
 
 StartChar: Ra
@@ -12952,12 +13171,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 285 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 415 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 478 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 286 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 285 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 284 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 286 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 285 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 284 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 285 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 415 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 478 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12989,12 +13208,12 @@ SplineSet
  580 622 l 1,33,-1
  580 551 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 19 subtable" Ra.alt6
-Substitution2: "Single Substitution lookup 18 subtable" Ra.alt5
-Substitution2: "Single Substitution lookup 17 subtable" Ra.alt4
-Substitution2: "Single Substitution lookup 16 subtable" Ra.alt3
-Substitution2: "Single Substitution lookup 15 subtable" Ra.alt2
-Substitution2: "Single Substitution lookup 14 subtable" Ra.alt
+Substitution2: "Single Substitution lookup 20 subtable" Ra.alt5
+Substitution2: "Single Substitution lookup 16 subtable" Ra.alt6
+Substitution2: "Single Substitution lookup 5 subtable" Ra.alt4
+Substitution2: "Single Substitution lookup 4 subtable" Ra.alt3
+Substitution2: "Single Substitution lookup 3 subtable" Ra.alt2
+Substitution2: "Single Substitution lookup 2 subtable" Ra.alt
 EndChar
 
 StartChar: La
@@ -13150,13 +13369,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 311 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 472 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 528 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 311 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 359 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 301 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 311 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 301 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 359 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 311 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 472 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 528 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13208,7 +13427,7 @@ SplineSet
  359 62 359 62 385.5 78.5 c 128,-1,59
  412 95 412 95 412 129 c 256,47,48
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" La.alt
+Substitution2: "Single Substitution lookup 2 subtable" La.alt
 EndChar
 
 StartChar: Va
@@ -13640,13 +13859,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 315 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 494 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 546 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 333 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 356 56 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 351 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 473 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 333 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 351 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 356 56 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 473 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 315 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 494 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 546 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13693,7 +13912,7 @@ SplineSet
  180 104 180 104 208.5 82.5 c 128,-1,51
  237 61 237 61 283 61 c 0,32,33
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Va.alt
+Substitution2: "Single Substitution lookup 2 subtable" Va.alt
 EndChar
 
 StartChar: Sha
@@ -13871,11 +14090,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 481 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 526 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 446 55 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 303 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 446 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 303 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 446 55 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 446 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 481 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 526 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14032,10 +14251,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 462 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 507 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 427 140 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 427 140 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 462 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 507 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14186,13 +14405,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 324 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 492 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 524 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 323 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 359 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 325 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 323 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 359 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 324 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 492 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 524 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14245,7 +14464,7 @@ SplineSet
  401 406 401 406 417.5 399 c 128,-1,58
  434 392 434 392 447 392 c 0,46,47
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Sa.alt
+Substitution2: "Single Substitution lookup 2 subtable" Sa.alt
 EndChar
 
 StartChar: Ha
@@ -14350,13 +14569,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 316 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 508 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 553 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 312 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 335 54 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 315 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 295 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 312 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 315 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 335 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 295 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 316 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 508 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 553 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14394,7 +14613,7 @@ SplineSet
  473 236 473 236 473 302 c 2,38,-1
  473 551 l 1,21,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" Ha.alt
+Substitution2: "Single Substitution lookup 2 subtable" Ha.alt
 EndChar
 
 StartChar: Lla
@@ -14556,13 +14775,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 391 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 634 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 432 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 391 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 575 50 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 391 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 555 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 391 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 391 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 575 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 555 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 391 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 634 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 432 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14681,8 +14900,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -74 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 115 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -74 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 115 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14696,7 +14915,7 @@ SplineSet
  160 551 l 1,7,-1
  160 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 14 subtable" AA_dv.alt
+Substitution2: "Single Substitution lookup 2 subtable" AA_dv.alt
 EndChar
 
 StartChar: I_dv
@@ -14821,8 +15040,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 230 806 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 195 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 230 806 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 195 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14850,9 +15069,9 @@ SplineSet
  -30 551 l 1,27,-1
  -30 622 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 17 subtable" U.alt4
-Substitution2: "Single Substitution lookup 8 subtable" I.lg
-Substitution2: "Single Substitution lookup 7 subtable" I.med
+Substitution2: "Single Substitution lookup 11 subtable" I.lg
+Substitution2: "Single Substitution lookup 10 subtable" I.med
+Substitution2: "Single Substitution lookup 5 subtable" U.alt4
 EndChar
 
 StartChar: II_dv
@@ -15015,8 +15234,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 264 806 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 242 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 264 806 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 242 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15061,9 +15280,10 @@ SplineSet
  180 61 180 61 188.5 100 c 128,-1,52
  197 139 197 139 197 198 c 0,43,44
 EndSplineSet
-Substitution2: "Single Substitution lookup 16 subtable" UU.alt3
-Substitution2: "Single Substitution lookup 8 subtable" II.lg
-Substitution2: "Single Substitution lookup 7 subtable" II.med
+Kerns2: 44 0 "'kern' Horizontal Kerning lookup 9 subtable" 39 65 "'kern' Horizontal Kerning lookup 9 subtable"
+Substitution2: "Single Substitution lookup 11 subtable" II.lg
+Substitution2: "Single Substitution lookup 10 subtable" II.med
+Substitution2: "Single Substitution lookup 4 subtable" UU.alt3
 EndChar
 
 StartChar: U_dv
@@ -15120,7 +15340,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -159 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -159 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -159 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15145,9 +15366,10 @@ SplineSet
  -242 -270 -242 -270 -312.5 -237.5 c 128,-1,26
  -383 -205 -383 -205 -442 -144 c 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 17 subtable" U.alt4
-Substitution2: "Single Substitution lookup 16 subtable" U.alt3
-Substitution2: "Single Substitution lookup 14 subtable" UU.alt3
+Substitution2: "Single Substitution lookup 10 subtable" U.alt3
+Substitution2: "Single Substitution lookup 5 subtable" U.alt4
+Substitution2: "Single Substitution lookup 4 subtable" U.alt3
+Substitution2: "Single Substitution lookup 2 subtable" UU.alt3
 EndChar
 
 StartChar: UU_dv
@@ -15205,7 +15427,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -179 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -179 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -179 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15232,9 +15455,11 @@ SplineSet
  21 -75 21 -75 70.5 -111 c 128,-1,28
  120 -147 120 -147 159 -188 c 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 23 subtable" U_dv
-Substitution2: "Single Substitution lookup 16 subtable" UU.alt3
-Substitution2: "Single Substitution lookup 14 subtable" UU.alt1
+Substitution2: "Single Substitution lookup 25 subtable" U_dv
+Substitution2: "Single Substitution lookup 10 subtable" UU.alt1
+Substitution2: "Single Substitution lookup 8 subtable" U_dv
+Substitution2: "Single Substitution lookup 4 subtable" UU.alt3
+Substitution2: "Single Substitution lookup 2 subtable" UU.alt1
 EndChar
 
 StartChar: VocR_dv
@@ -15288,7 +15513,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -143 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -143 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -143 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15409,7 +15635,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -163 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -163 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -163 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15586,8 +15813,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -202 -50 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -146 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--13" -202 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -146 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -202 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -146 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15826,8 +16055,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -201 -50 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -146 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--13" -201 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -146 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -201 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -146 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15906,9 +16137,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 13 758 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -160 920 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 0 617 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 0 617 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 13 758 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -160 920 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 0 617 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -15995,9 +16227,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 63 758 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -220 900 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 0 617 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 0 617 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 63 758 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -220 900 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 0 617 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16096,7 +16329,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 171 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 171 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16119,8 +16352,8 @@ SplineSet
  160 551 l 1,18,-1
  160 0 l 1,0,-1
 EndSplineSet
-MultipleSubs2: "Multiple Substitution lookup 10 subtable" AA_dv.alt E_dv
-MultipleSubs2: "Multiple Substitution lookup 9 subtable" AA_dv E_dv
+MultipleSubs2: "Multiple Substitution lookup 1 subtable" AA_dv.alt E_dv
+MultipleSubs2: "Multiple Substitution lookup 0 subtable" AA_dv E_dv
 EndChar
 
 StartChar: AU_dv
@@ -16215,7 +16448,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 228 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 228 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16242,8 +16475,8 @@ SplineSet
  160 551 l 1,24,-1
  160 0 l 1,0,-1
 EndSplineSet
-MultipleSubs2: "Multiple Substitution lookup 10 subtable" AA_dv.alt AI_dv
-MultipleSubs2: "Multiple Substitution lookup 9 subtable" AA_dv AI_dv
+MultipleSubs2: "Multiple Substitution lookup 1 subtable" AA_dv.alt AI_dv
+MultipleSubs2: "Multiple Substitution lookup 0 subtable" AA_dv AI_dv
 EndChar
 
 StartChar: Anusvara
@@ -16281,8 +16514,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 0 680 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 0 680 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 0 680 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 0 680 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 0 680 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16301,7 +16535,6 @@ EndChar
 StartChar: Visarga
 Encoding: 71230 71230 80
 Width: 316
-GlyphClass: 2
 Flags: W
 HStem: -10 123<114.872 201.128> 377 123<114.872 201.128>
 VStem: 100 116<4.16406 99.2188 391.164 486.219>
@@ -16399,7 +16632,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -129 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -129 -50 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -129 -50 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16436,11 +16670,13 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 0 799 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 80 712 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 0 712 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 0 712 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 80 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--14" 0 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 80 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 0 799 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 0 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 712 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 80 712 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -16459,7 +16695,6 @@ EndChar
 StartChar: Danda
 Encoding: 71233 71233 83
 Width: 280
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<100 180>
 VStem: 100 80<0 622>
@@ -16503,7 +16738,6 @@ EndChar
 StartChar: DblDanda
 Encoding: 71234 71234 84
 Width: 460
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<100 180 280 360>
 VStem: 100 80<0 622> 280 80<0 622>
@@ -16562,7 +16796,6 @@ EndChar
 StartChar: Abbreviation
 Encoding: 71235 71235 85
 Width: 407
-GlyphClass: 2
 Flags: W
 HStem: -10 67<168.686 267.484> 199 68<169.209 267.484>
 VStem: 80 70<76.1418 178.765> 287 70<76.918 179.023>
@@ -16659,7 +16892,6 @@ EndChar
 StartChar: Huva
 Encoding: 71236 71236 86
 Width: 472
-GlyphClass: 2
 Flags: W
 HStem: -10 74<165.989 287.524>
 VStem: 312 80<89.2972 622>
@@ -16722,7 +16954,6 @@ EndChar
 StartChar: u11650
 Encoding: 71248 71248 87
 Width: 521
-GlyphClass: 2
 Flags: W
 HStem: 91 71<189.215 327.818> 418 72<193.457 331.645>
 VStem: 60 82<210.327 365.228> 379 82<215.544 369.673>
@@ -16819,7 +17050,6 @@ EndChar
 StartChar: u11651
 Encoding: 71249 71249 88
 Width: 497
-GlyphClass: 2
 Flags: W
 HStem: -10 74<407.502 437.041> 275 73<167.625 310.155> 527 73<167.475 283.293>
 VStem: 60 81<374.445 500.132> 311 80<84.5061 289 358.876 496.768>
@@ -16948,7 +17178,6 @@ EndChar
 StartChar: u11652
 Encoding: 71250 71250 89
 Width: 479
-GlyphClass: 2
 Flags: W
 HStem: 53 70<54.0714 164.375> 526 74<72.1555 261.638>
 VStem: 323 80<262.416 464.057>
@@ -17050,7 +17279,6 @@ EndChar
 StartChar: u11653
 Encoding: 71251 71251 90
 Width: 442
-GlyphClass: 2
 Flags: W
 HStem: -10 74<40.4156 259.657> 270 62<97 209.037> 526 74<61.7205 251.057>
 VStem: 282 80<391.164 497.396> 302 80<106.251 231.85>
@@ -17288,7 +17516,6 @@ EndChar
 StartChar: u11654
 Encoding: 71252 71252 91
 Width: 575
-GlyphClass: 2
 Flags: W
 HStem: -10 72<222.78 334.662>
 VStem: 126 80<80.4573 204.011> 349 80<79.4761 197.856>
@@ -17397,7 +17624,6 @@ EndChar
 StartChar: u11655
 Encoding: 71253 71253 92
 Width: 606
-GlyphClass: 2
 Flags: W
 HStem: -10 74<324.251 484.574> 393 74<73.1416 216.184>
 VStem: 179 80<138.369 354.979>
@@ -17499,7 +17725,6 @@ EndChar
 StartChar: u11656
 Encoding: 71254 71254 93
 Width: 482
-GlyphClass: 2
 Flags: W
 HStem: -10 74<171.344 380.416> 282 65.5<268.344 316.588> 534 75<230.522 310.653>
 VStem: 60 80<93.2388 210.874> 75 80<378.506 477.383>
@@ -17623,7 +17848,6 @@ EndChar
 StartChar: u11657
 Encoding: 71255 71255 94
 Width: 654
-GlyphClass: 2
 Flags: W
 HStem: -10 74<219.173 392.195> 319 74<403.988 511.543> 526 74<399.134 489.857>
 VStem: 30 79<204.528 287.684> 309 75<409.362 509.804> 512 82<216.641 322 393.969 492.992>
@@ -17787,7 +18011,6 @@ EndChar
 StartChar: u11658
 Encoding: 71256 71256 95
 Width: 463
-GlyphClass: 2
 Flags: W
 HStem: -10 74<123.883 350.227>
 VStem: 30 80<80.7842 190.536>
@@ -17856,7 +18079,6 @@ EndChar
 StartChar: u11659
 Encoding: 71257 71257 96
 Width: 690
-GlyphClass: 2
 Flags: W
 HStem: -10 74<260.804 437.615> 292 74<145 263.795> 526 74<167.431 272.416>
 VStem: 60 79<223.733 294 367.777 495.683> 290 80<395.143 507.417> 583 77<264.401 320.727>
@@ -18160,10 +18382,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 507 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 552 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 354 177 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 472 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 354 177 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 472 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 507 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 552 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -18394,12 +18616,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 378 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 413 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 306 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 362 60 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 283 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 235 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 306 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 283 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 362 60 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 235 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 378 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 413 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -18611,12 +18833,12 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 433 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 463 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 351 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 407 59 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 351 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 351 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 351 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 407 59 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 433 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 463 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -18771,10 +18993,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 462 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 507 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 321 215 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 321 215 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 462 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 507 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19112,10 +19334,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 462 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 507 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 427 213 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 427 213 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 427 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 462 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 507 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19260,10 +19482,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 467 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 512 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 324 185 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 432 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 324 185 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 432 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 467 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 512 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19386,9 +19608,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 437 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 357 213 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 357 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 357 213 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 357 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 437 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19602,8 +19824,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 552 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 472 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 472 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 552 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19887,8 +20109,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 711 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 602 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 602 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 711 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -19951,7 +20173,7 @@ SplineSet
  703 60 703 60 709 71.5 c 128,-1,74
  715 83 715 83 715 89 c 0,66,67
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ka AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ka AA_dv
 EndChar
 
 StartChar: Ku
@@ -20272,7 +20494,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 968 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 968 90 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -20366,8 +20588,8 @@ SplineSet
  1069 60 1069 60 1075 71.5 c 128,-1,116
  1081 83 1081 83 1081 89 c 0,108,109
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ka U_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" Ka UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ka U_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ka UU_dv
 EndChar
 
 StartChar: Khaa
@@ -20603,8 +20825,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 819 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 710 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 710 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 819 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -20684,7 +20906,7 @@ SplineSet
  811 60 811 60 817 71.5 c 128,-1,99
  823 83 823 83 823 89 c 0,91,92
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Kha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Kha AA_dv
 EndChar
 
 StartChar: Kha.alt
@@ -20883,7 +21105,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 421 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 421 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -21173,8 +21395,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 232 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 487 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 232 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 487 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -21488,8 +21710,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 261 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 552 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 261 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 552 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -21682,7 +21904,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 662 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 662 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -21972,7 +22194,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 484 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 484 90 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -22056,8 +22278,7 @@ SplineSet
  599 120 599 120 605 170.5 c 128,-1,100
  611 221 611 221 611 280 c 0,88,89
 EndSplineSet
-LCarets2: 1 0
-Ligature2: "Ligature Substitution lookup 13 subtable" Ga UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ga UU_dv
 EndChar
 
 StartChar: Jaa
@@ -22270,8 +22491,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 647 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 538 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 538 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 647 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -22332,7 +22553,7 @@ SplineSet
  639 60 639 60 645 71.5 c 128,-1,72
  651 83 651 83 651 89 c 0,64,65
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ja AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ja AA_dv
 EndChar
 
 StartChar: Ju
@@ -22552,7 +22773,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 567 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 567 50 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -22626,8 +22847,8 @@ SplineSet
  579 60 579 60 585 71.5 c 128,-1,91
  591 83 591 83 591 89 c 0,83,84
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ja U_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" Ja UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ja U_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ja UU_dv
 EndChar
 
 StartChar: Jhaa
@@ -22902,8 +23123,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 851 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 742 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 742 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 851 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -22989,7 +23210,7 @@ SplineSet
  81 80 81 80 92 70 c 128,-1,107
  103 60 103 60 127 60 c 0,96,97
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Jha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Jha AA_dv
 EndChar
 
 StartChar: Jha.alt
@@ -23237,7 +23458,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 480 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 480 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -23525,8 +23746,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 801 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 692 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 692 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 801 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -23590,7 +23811,7 @@ SplineSet
  793 60 793 60 799 71.5 c 128,-1,77
  805 83 805 83 805 89 c 0,69,70
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Nya AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Nya AA_dv
 EndChar
 
 StartChar: Nya.alt
@@ -23763,7 +23984,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 521 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 521 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -23969,8 +24190,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 656 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 550 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 550 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 656 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24023,7 +24244,7 @@ SplineSet
  649 60 649 60 654.5 73.5 c 128,-1,61
  660 87 660 87 660 106 c 0,52,53
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Tta AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Tta AA_dv
 EndChar
 
 StartChar: Tthaa
@@ -24033,13 +24254,13 @@ GlyphClass: 2
 Flags: W
 HStem: -10 74<189.585 355.629 611.542 657.983> 142 110<229.986 302.014> 318 74<186.841 323.119> 551 71<0 576 648.977 765>
 VStem: 60 80<115.306 269.457> 214 104<152.893 235.498> 576 80<479.776 551> 660 75<60.3415 166.475>
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 656 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 548 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 548 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 656 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 79 71229 N 1 0 0 1 266 -538 2
 Refer: 119 -1 N 1 0 0 1 0 0 3
-Ligature2: "Ligature Substitution lookup 13 subtable" Ttha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ttha AA_dv
 EndChar
 
 StartChar: Dda.alt
@@ -24191,7 +24412,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 449 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 449 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24237,6 +24458,7 @@ SplineSet
  244 271 244 271 226 296.5 c 128,-1,52
  208 322 208 322 208 363 c 0,28,29
 EndSplineSet
+Kerns2: 125 0 "'kern' Horizontal Kerning lookup 9 subtable" 124 0 "'kern' Horizontal Kerning lookup 9 subtable"
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" UU.alt3 dx=0 dy=0 dh=0 dv=0 dx=-125 dy=0 dh=-125 dv=0
 PairPos2: "'kern' Horizontal Kerning in Modi lookup 0 subtable" U.alt4 dx=0 dy=0 dh=0 dv=0 dx=-125 dy=0 dh=-125 dv=0
 EndChar
@@ -24400,7 +24622,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 421 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 421 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24487,9 +24709,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 2 702 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 125 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 25 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 2 702 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 125 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 25 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24604,8 +24826,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -6 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 322 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -6 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 322 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24761,8 +24983,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 44 880 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 401 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 44 880 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 401 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -24919,7 +25141,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 360 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 360 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -25211,8 +25433,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 647 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 538 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 538 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 647 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -25266,7 +25488,7 @@ SplineSet
  639 60 639 60 645 71.5 c 128,-1,64
  651 83 651 83 651 89 c 0,56,57
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Na AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Na AA_dv
 EndChar
 
 StartChar: Nu
@@ -25475,7 +25697,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 567 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 567 50 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -25543,8 +25765,8 @@ SplineSet
  579 60 579 60 585 71.5 c 128,-1,83
  591 83 591 83 591 89 c 0,75,76
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Na U_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" Na UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Na U_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Na UU_dv
 EndChar
 
 StartChar: Phaa
@@ -25898,8 +26120,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 899 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 790 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 790 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 899 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -25973,7 +26195,7 @@ SplineSet
  891 60 891 60 897 71.5 c 128,-1,86
  903 83 903 83 903 89 c 0,78,79
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Pha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Pha AA_dv
 EndChar
 
 StartChar: Phu
@@ -26239,7 +26461,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 683 51 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 683 51 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -26324,8 +26546,8 @@ SplineSet
  271 -36 271 -36 247 -47 c 1,100,-1
  221 19 l 1,80,81
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Pha U_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" Pha UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Pha U_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Pha UU_dv
 EndChar
 
 StartChar: Baa
@@ -26563,8 +26785,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 650 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 541 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 541 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 650 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -26626,7 +26848,7 @@ SplineSet
  642 60 642 60 647.5 73.5 c 128,-1,72
  653 87 653 87 653 106 c 0,63,64
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ba AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ba AA_dv
 EndChar
 
 StartChar: Ba.alt
@@ -26738,7 +26960,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 375 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 375 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -27035,8 +27257,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 876 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 767 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 767 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 876 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -27109,7 +27331,7 @@ SplineSet
  868 60 868 60 874 71.5 c 128,-1,83
  880 83 880 83 880 89 c 0,75,76
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Bha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Bha AA_dv
 EndChar
 
 StartChar: Maa
@@ -27321,8 +27543,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 547 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 438 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 438 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 547 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -27383,7 +27605,7 @@ SplineSet
  539 60 539 60 545 71.5 c 128,-1,72
  551 83 551 83 551 89 c 0,64,65
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ma AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ma AA_dv
 EndChar
 
 StartChar: Muu
@@ -27668,7 +27890,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 637 100 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 637 100 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -27759,7 +27981,7 @@ SplineSet
  679 283 679 283 679 343 c 0,112,113
  679 373 679 373 676 401 c 1,102,103
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ma UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ma UU_dv
 EndChar
 
 StartChar: Yaa
@@ -27981,8 +28203,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 692 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 583 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 583 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 692 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -28040,7 +28262,7 @@ SplineSet
  684 60 684 60 690 71.5 c 128,-1,68
  696 83 696 83 696 89 c 0,60,61
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ya AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ya AA_dv
 EndChar
 
 StartChar: Ru
@@ -28398,7 +28620,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 352 -47 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 352 -47 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -28466,8 +28688,8 @@ SplineSet
  524 60 524 60 530 74 c 128,-1,80
  536 88 536 88 536 108 c 0,70,71
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ra U_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" Ra UU_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ra U_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ra UU_dv
 EndChar
 
 StartChar: Laa
@@ -28676,8 +28898,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 556 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 447 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 447 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 556 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -28744,7 +28966,7 @@ SplineSet
  548 60 548 60 554 68.5 c 128,-1,81
  560 77 560 77 560 89 c 0,73,74
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" La AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" La AA_dv
 EndChar
 
 StartChar: Li
@@ -28875,8 +29097,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 273 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 404 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 273 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 404 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -28923,8 +29145,8 @@ SplineSet
  23 13 23 13 5 37 c 1,53,-1
  63 90 l 1,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" La I_dv
-Ligature2: "Ligature Substitution lookup 13 subtable" La II_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" La I_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" La II_dv
 EndChar
 
 StartChar: La.alt
@@ -29049,8 +29271,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 267 -60 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 267 -60 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -29350,8 +29572,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 639 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 530 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 530 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 639 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -29408,7 +29630,7 @@ SplineSet
  631 60 631 60 637 71.5 c 128,-1,65
  643 83 643 83 643 89 c 0,57,58
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Va AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Va AA_dv
 EndChar
 
 StartChar: Va.alt
@@ -29498,7 +29720,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 332 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 332 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30161,8 +30383,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 611 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 625 140 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 625 140 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 611 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30223,7 +30445,7 @@ SplineSet
  263 266 l 1,67,-1
  263 337 l 1,45,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Sa AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Sa AA_dv
 EndChar
 
 StartChar: Sa.alt
@@ -30310,7 +30532,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 333 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 333 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30473,9 +30695,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 355 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 534 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 585 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 355 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 534 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 585 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30523,7 +30745,7 @@ SplineSet
  329 232 329 232 340 254 c 1,55,-1
  410 223 l 1,28,29
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ha AA_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ha AA_dv
 EndChar
 
 StartChar: Ha.alt
@@ -30710,7 +30932,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 419 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 419 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30843,10 +31065,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 464 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 512 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 362 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 432 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 362 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 432 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 464 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 512 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30872,7 +31094,7 @@ SplineSet
  512 0 l 1,23,-1
  432 0 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ta Virama Ra
+Ligature2: "Ligature Substitution lookup 12 subtable" Ta Virama Ra
 EndChar
 
 StartChar: Repha
@@ -30912,8 +31134,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -19 653 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -102 618 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -102 618 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -19 653 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -102 618 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30933,13 +31156,12 @@ SplineSet
  105 835 105 835 135 797 c 1,19,-1
  83 750 l 1,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 2 subtable" Ra Virama
+Ligature2: "Ligature Substitution lookup 62 subtable" Ra Virama
 EndChar
 
 StartChar: EyelashRa
 Encoding: 1114165 -1 149
 Width: 298
-GlyphClass: 2
 Flags: W
 HStem: 298 75<66.5759 283.634> 551 71<0 308>
 TtInstrs:
@@ -31006,7 +31228,7 @@ SplineSet
  280 391 280 391 304 405 c 1,17,-1
  338 338 l 1,4,5
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ra Virama uni200D
+Ligature2: "Ligature Substitution lookup 15 subtable" Ra Virama uni200D
 EndChar
 
 StartChar: Rakar
@@ -31038,7 +31260,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -41 -40 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" -41 -40 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -41 -40 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31048,7 +31271,7 @@ SplineSet
  -9 -93 l 1,3,-1
  -276 -268 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 25 subtable" Virama Ra
+Ligature2: "Ligature Substitution lookup 18 subtable" Virama Ra
 EndChar
 
 StartChar: Vattu
@@ -31084,8 +31307,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -207 -130 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -247 -80 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--15" -207 -130 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -247 -80 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -207 -130 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -247 -80 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31098,7 +31323,9 @@ SplineSet
  -207 -142 l 1,6,-1
  -360 -300 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 24 subtable" Virama Ra
+Ligature2: "Ligature Substitution lookup 22 subtable" Virama Ra
+Ligature2: "Ligature Substitution lookup 21 subtable" Virama Ra
+Ligature2: "Ligature Substitution lookup 13 subtable" Virama Ra
 EndChar
 
 StartChar: KaRa
@@ -31344,8 +31571,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 218 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 364 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 218 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 364 718 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31402,7 +31629,7 @@ SplineSet
  0 551 l 1,66,-1
  0 622 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ka Ra
+Ligature2: "Ligature Substitution lookup 12 subtable" Ka Ra
 EndChar
 
 StartChar: KaaRa
@@ -31558,9 +31785,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 300 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 514 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 310 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 300 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 514 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 310 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31625,7 +31852,7 @@ SplineSet
  719 -180 719 -180 672.5 -196 c 128,-1,79
  626 -212 626 -212 593 -212 c 0,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Kaa Ra
+Ligature2: "Ligature Substitution lookup 12 subtable" Kaa Ra
 EndChar
 
 StartChar: Ra.alt2
@@ -31703,8 +31930,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 110 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 198 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 110 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 198 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31805,8 +32032,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 80 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -81 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 80 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -81 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -31946,8 +32173,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 209 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 227 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 209 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 227 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -32058,7 +32285,6 @@ EndChar
 StartChar: Ra.alt6
 Encoding: 1114174 -1 158
 Width: 200
-GlyphClass: 2
 Flags: W
 HStem: -210 71<114.073 249.781> 0 72<-125 -45.4097> 551 71<-110 210>
 TtInstrs:
@@ -32233,8 +32459,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 0 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -79 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 0 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -79 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -32276,14 +32502,13 @@ SplineSet
  -111 -245 -111 -245 -144 -234 c 1,45,-1
  -134 -164 l 1,4,5
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" UU_dv Ra
-Ligature2: "Ligature Substitution lookup 13 subtable" U_dv Ra
+Ligature2: "Ligature Substitution lookup 6 subtable" UU_dv Ra
+Ligature2: "Ligature Substitution lookup 6 subtable" U_dv Ra
 EndChar
 
 StartChar: Ta.half
 Encoding: 1114176 -1 160
 Width: 282
-GlyphClass: 2
 Flags: W
 HStem: 384 73<159.846 352> 551 71<0 292>
 VStem: 26 80<215.976 342.218>
@@ -32354,13 +32579,12 @@ SplineSet
  190 124 190 124 241 65 c 1,21,-1
  213 -14 l 1,4,5
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ta Virama
+Ligature2: "Ligature Substitution lookup 42 subtable" Ta Virama
 EndChar
 
 StartChar: Ma.half
 Encoding: 1114177 -1 161
 Width: 350
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<69 152.5> 228 70<338.673 450> 551 71<0 84.0806 162 360>
 VStem: 111 80<193.844 505.782>
@@ -32480,13 +32704,12 @@ SplineSet
  375 298 375 298 450 298 c 1,27,-1
  450 228 l 1,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ma Virama
+Ligature2: "Ligature Substitution lookup 51 subtable" Ma Virama
 EndChar
 
 StartChar: Sa.half
 Encoding: 1114178 -1 162
 Width: 340
-GlyphClass: 2
 Flags: W
 HStem: 271 74<168.814 438.874> 551 71<0 154.719 231 350>
 VStem: 155.5 81<495.406 551> 157 81<416.282 550.516>
@@ -32709,7 +32932,7 @@ SplineSet
  0 551 l 1,34,-1
  0 622 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Sa Virama
+Ligature2: "Ligature Substitution lookup 57 subtable" Sa Virama
 EndChar
 
 StartChar: KSsa
@@ -33031,7 +33254,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 362 30 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 362 30 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -33095,13 +33318,12 @@ SplineSet
  161 533 161 533 142 513 c 128,-1,74
  123 493 123 493 123 470 c 0,62,63
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ka.half Ssa
+Ligature2: "Ligature Substitution lookup 12 subtable" Ka.half Ssa
 EndChar
 
 StartChar: KSsa.half
 Encoding: 1114180 -1 164
 Width: 440
-GlyphClass: 2
 Flags: W
 HStem: -10 74<155.089 279.97> 307 70<307 507.569> 533 89<140.26 235.014> 551 71<0 80 298 450>
 VStem: 50 81<87.2812 210.145> 50 73<416.985 515.667> 251 75<389.291 518.02> 320 72<107.708 186>
@@ -33433,8 +33655,8 @@ SplineSet
  123 432 123 432 151.5 411.5 c 128,-1,70
  180 391 180 391 225 383 c 1,58,59
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ka.half Ssa.half
-Ligature2: "Ligature Substitution lookup 4 subtable" KSsa Virama
+Ligature2: "Ligature Substitution lookup 60 subtable" KSsa Virama
+Ligature2: "Ligature Substitution lookup 12 subtable" Ka.half Ssa.half
 EndChar
 
 StartChar: KSsYa
@@ -33803,7 +34025,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 694 180 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 694 180 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -33887,7 +34109,7 @@ SplineSet
  123 432 123 432 151.5 411.5 c 128,-1,102
  180 391 180 391 225 383 c 1,90,91
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ka.half Ssa.half Ya.alt
+Ligature2: "Ligature Substitution lookup 12 subtable" Ka.half Ssa.half Ya.alt
 EndChar
 
 StartChar: DNya
@@ -34107,7 +34329,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 421 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 421 -86 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -34183,7 +34405,7 @@ SplineSet
  566 62 566 62 577.5 87.5 c 128,-1,95
  589 113 589 113 589 138 c 0,84,85
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Da.half Nya
+Ligature2: "Ligature Substitution lookup 12 subtable" Da.half Nya
 EndChar
 
 StartChar: DNyaa
@@ -34480,8 +34702,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 827 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 805 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 805 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 827 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -34563,7 +34785,7 @@ SplineSet
  819 60 819 60 825 71.5 c 128,-1,103
  831 83 831 83 831 89 c 0,95,96
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Da.half Nyaa
+Ligature2: "Ligature Substitution lookup 12 subtable" Da.half Nyaa
 EndChar
 
 StartChar: DNyu
@@ -34891,7 +35113,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 785 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 785 50 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -34986,7 +35208,7 @@ SplineSet
  799 60 799 60 805 71.5 c 128,-1,122
  811 83 811 83 811 89 c 0,114,115
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Da.half Nya.alt U.alt3
+Ligature2: "Ligature Substitution lookup 12 subtable" Da.half Nya.alt U.alt3
 EndChar
 
 StartChar: I.med
@@ -35111,7 +35333,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 185 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 185 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -35256,7 +35478,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 165 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 165 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -35446,7 +35668,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 242 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 242 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -35655,7 +35877,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 212 758 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 212 758 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -35707,7 +35929,6 @@ EndChar
 StartChar: Ka.half
 Encoding: 1114189 -1 173
 Width: 550
-GlyphClass: 2
 Flags: W
 HStem: -10 70<403.589 464.551> 0 21G<88 172> 551 71<0 102 177.899 560>
 VStem: 40 80<302.065 481.593> 320 74<70.5397 172.469> 470 75<67.8024 147.533>
@@ -35913,13 +36134,12 @@ SplineSet
  432 164 432 164 401 173 c 1,59,60
  394 147 394 147 394 126 c 0,50,51
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ka Virama
+Ligature2: "Ligature Substitution lookup 27 subtable" Ka Virama
 EndChar
 
 StartChar: Kha.half
 Encoding: 1114190 -1 174
 Width: 455
-GlyphClass: 2
 Flags: W
 HStem: -10 74<271.153 417.696> 551 71<0 157 290 465> 728 72<113.181 208.089>
 VStem: 55 80<340.942 435.892> 146 80<108.875 244.166> 218 80<622.625 715.087>
@@ -36127,13 +36347,12 @@ SplineSet
  482 166 482 166 499 204 c 1,64,-1
  555 148 l 1,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Kha Virama
+Ligature2: "Ligature Substitution lookup 28 subtable" Kha Virama
 EndChar
 
 StartChar: Ga.half
 Encoding: 1114191 -1 175
 Width: 385
-GlyphClass: 2
 Flags: W
 HStem: 45 71<133.763 220.461> 233 71<136.577 237.46> 551 71<0 194.795 274 395>
 VStem: 40 80<131.77 218.867> 187 87<486.203 551>
@@ -36271,13 +36490,12 @@ SplineSet
  120 154 120 154 134.5 135 c 128,-1,38
  149 116 149 116 177 116 c 0,26,27
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ga Virama
+Ligature2: "Ligature Substitution lookup 29 subtable" Ga Virama
 EndChar
 
 StartChar: Gha.half
 Encoding: 1114192 -1 176
 Width: 390
-GlyphClass: 2
 Flags: W
 HStem: 89 71<193.218 368.116> 551 71<0 75 150.75 400>
 VStem: 40 80<412.22 517.776> 91 81<181.824 293.529>
@@ -36417,7 +36635,7 @@ SplineSet
  237 407 237 407 253 414 c 1,41,-1
  276 351 l 1,0,1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Gha Virama
+Ligature2: "Ligature Substitution lookup 30 subtable" Gha Virama
 EndChar
 
 StartChar: Nga.half
@@ -36427,11 +36645,17 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<255.762 441.76> 249 71<278.048 396.529> 259 71<314.188 467.875> 372 110<497.986 570.014> 551 71<0 315 409.837 670>
 VStem: 180 80<329.142 423.401> 225 289 482 104<382.893 465.498> 490 80<109.568 236.364>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 358 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 355 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 390 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 319 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 462 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 556 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 36 71186 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 479 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Nga Virama
+Ligature2: "Ligature Substitution lookup 31 subtable" Nga Virama
 EndChar
 
 StartChar: Cha.half
@@ -36441,18 +36665,23 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<249.534 444.563> 345 68<431.676 533.509> 532 90<429.926 509.591> 551 71<0 85 157.396 364 577 706>
 VStem: 40 80<388.365 507.189> 108 80<119.076 260.053> 205 289 338 78<427.524 517.081> 536 80<170.266 359 421.603 510.589>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 353 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 353 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 383 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 354 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 348 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 532 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 546 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 38 71188 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 459 0 2
-LCarets2: 1 0
-Ligature2: "Ligature Substitution lookup 4 subtable" Cha Virama
+Ligature2: "Ligature Substitution lookup 33 subtable" Cha Virama
 EndChar
 
 StartChar: Ja.half
 Encoding: 1114195 -1 179
 Width: 540
-GlyphClass: 2
 Flags: W
 HStem: -10 72<311.975 401.865> 323 69<133.164 222.144> 371 80<536.375 630> 501 121<132.708 220.55> 551 71<0 107 244 550>
 VStem: 50 73<403.485 490.225> 217 78<78.3519 201.212> 418 78<78.2578 207.284>
@@ -36680,7 +36909,7 @@ SplineSet
  329 225 329 225 312 193.5 c 128,-1,64
  295 162 295 162 295 133 c 0,53,54
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ja Virama
+Ligature2: "Ligature Substitution lookup 34 subtable" Ja Virama
 EndChar
 
 StartChar: Tta.half
@@ -36690,11 +36919,17 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<195.253 349.777> 341 74<200.301 281> 551 71<0 373 450.58 564>
 VStem: 60 80<122.069 279.496> 147 289 365 80<358.969 550.374> 414 80<131.643 336.833>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 277 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 273 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 322 57 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 282 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 422 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 458 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 42 71192 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 401 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Tta Virama
+Ligature2: "Ligature Substitution lookup 37 subtable" Tta Virama
 EndChar
 
 StartChar: Ttha.half
@@ -36704,12 +36939,18 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<195.253 349.777> 150 110<241.986 314.014> 341 74<200.301 281> 551 71<0 373 450.58 564>
 VStem: 60 80<122.069 279.496> 147 289 226 104<160.893 243.498> 365 80<358.969 550.374> 414 80<131.643 336.833>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 277 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 273 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 322 57 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 282 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 422 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 458 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 42 71192 N 1 0 0 1 0 0 3
 Refer: 79 71229 N 1 0 0 1 278 -530 2
 Refer: 81 71231 N 1 0 0 1 401 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Ttha Virama
+Ligature2: "Ligature Substitution lookup 38 subtable" Ttha Virama
 EndChar
 
 StartChar: Dda.half
@@ -36719,11 +36960,17 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<255.762 441.76> 249 71<278.048 396.529> 259 71<314.188 467.875> 551 71<0 315 409.837 640>
 VStem: 180 80<329.142 423.401> 205 289 490 80<109.568 236.364>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 355 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 358 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 401 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 338 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 472 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 463 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 44 71194 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 459 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Dda Virama
+Ligature2: "Ligature Substitution lookup 39 subtable" Dda Virama
 EndChar
 
 StartChar: Ddha.half
@@ -36733,17 +36980,23 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<199.618 315.248> 250 68<342.142 441.045> 551 71<0 305 382.447 584>
 VStem: 60 80<122.286 264.815> 145 289 251 75<133.169 234.368> 305 80<488.349 551> 459 75<116.043 230.938>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 289 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 291 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 347 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 316 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 337 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 459 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 385 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 45 71195 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 399 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Ddha Virama
+Ligature2: "Ligature Substitution lookup 40 subtable" Ddha Virama
 EndChar
 
 StartChar: Nna.half
 Encoding: 1114200 -1 184
 Width: 515
-GlyphClass: 2
 Flags: W
 HStem: 40 74<195.657 345.351> 551 71<0 89 162.094 349.019 419 525>
 VStem: 60 80<181.328 525.845> 89 78<446.603 551> 364 80<410.242 540.228> 386 79<151.977 274.596>
@@ -36927,13 +37180,12 @@ SplineSet
  327 315 327 315 265 320 c 1,49,-1
  270 386 l 2,26,27
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Nna Virama
+Ligature2: "Ligature Substitution lookup 41 subtable" Nna Virama
 EndChar
 
 StartChar: Na.half
 Encoding: 1114201 -1 185
 Width: 540
-GlyphClass: 2
 Flags: W
 HStem: -10 72<311.204 399.865> 371 80<536.847 630> 392 128<62.3348 228.219> 551 71<0 550>
 VStem: 217 78<78.3378 201.431> 412 78<77.1945 199.587>
@@ -37090,13 +37342,12 @@ SplineSet
  326 221 326 221 310.5 190.5 c 128,-1,52
  295 160 295 160 295 133 c 0,41,42
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Na Virama
+Ligature2: "Ligature Substitution lookup 46 subtable" Na Virama
 EndChar
 
 StartChar: Pa.half
 Encoding: 1114202 -1 186
 Width: 370
-GlyphClass: 2
 Flags: W
 HStem: 146 71<192.181 358.618> 551 71<0 80 160 380>
 VStem: 80 80<249.352 551>
@@ -37193,13 +37444,12 @@ SplineSet
  0 551 l 1,24,-1
  0 622 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Pa Virama
+Ligature2: "Ligature Substitution lookup 47 subtable" Pa Virama
 EndChar
 
 StartChar: Pha.half
 Encoding: 1114203 -1 187
 Width: 543
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<226 316> 289 81<567.63 633> 318 71<157.51 252.324> 551 71<0 50 130 271 351 553>
 VStem: 50 80<409.707 551> 274 77<214.249 336 410.438 551>
@@ -37363,13 +37613,12 @@ SplineSet
  130 551 l 1,40,-1
  130 515 l 2,31,32
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Pha Virama
+Ligature2: "Ligature Substitution lookup 48 subtable" Pha Virama
 EndChar
 
 StartChar: Bha.half
 Encoding: 1114204 -1 188
 Width: 470
-GlyphClass: 2
 Flags: W
 HStem: 0 21G<270 350> 271 71<167.066 270 350 570> 533 89<157.831 246.705> 551 71<0 93 311 480>
 VStem: 60 80<368.156 515.192> 270 80<0 271 342 508.574>
@@ -37520,13 +37769,12 @@ SplineSet
  178 533 178 533 159 512.5 c 128,-1,34
  140 492 140 492 140 431 c 0,22,23
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Bha Virama
+Ligature2: "Ligature Substitution lookup 50 subtable" Bha Virama
 EndChar
 
 StartChar: Ya.half
 Encoding: 1114205 -1 189
 Width: 384
-GlyphClass: 2
 Flags: W
 HStem: 105 74<163.839 338.91> 551 71<0 98.1708 170 394>
 VStem: 134 76<322.748 505.316>
@@ -37638,13 +37886,12 @@ SplineSet
  394 622 l 1,33,-1
  394 551 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ya Virama
+Ligature2: "Ligature Substitution lookup 52 subtable" Ya Virama
 EndChar
 
 StartChar: Sha.half
 Encoding: 1114206 -1 190
 Width: 340
-GlyphClass: 2
 Flags: W
 HStem: -10 72<149.061 318.929> 551 71<0 124 204 350>
 VStem: 50 80<76.0107 176.766> 124 80<476.927 551> 210 80<315.434 400.23>
@@ -37818,13 +38065,12 @@ SplineSet
  0 551 l 1,44,-1
  0 622 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Sha Virama
+Ligature2: "Ligature Substitution lookup 55 subtable" Sha Virama
 EndChar
 
 StartChar: Ssa.half
 Encoding: 1114207 -1 191
 Width: 390
-GlyphClass: 2
 Flags: W
 HStem: 146 71<192.181 363.588> 551 71<0 80 205 400>
 VStem: 80 80<249.352 507>
@@ -37923,7 +38169,7 @@ SplineSet
  183 242 183 242 204.5 229.5 c 128,-1,26
  226 217 226 217 263 217 c 0,17,18
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ssa Virama
+Ligature2: "Ligature Substitution lookup 56 subtable" Ssa Virama
 EndChar
 
 StartChar: Ha.half
@@ -37933,11 +38179,18 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<208.719 385.483> 551 71<0 36.8242 114 473 553 643>
 VStem: 60 80<132.326 289.839> 165 289 473 80<168.844 551>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 312 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 315 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 335 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 295 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 316 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 508 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 553 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 64 71214 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 419 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Ha Virama
+Ligature2: "Ligature Substitution lookup 58 subtable" Ha Virama
 EndChar
 
 StartChar: Lla.half
@@ -37947,11 +38200,18 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 71<163.009 282.723 500.923 620.462> 327 71<161.532 281.15 500.897 622.004> 551 71<0 350 432 792>
 VStem: 40 80<106.147 282.926> 264 289 350 82<341 551> 662 80<104.929 286.604>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 391 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 391 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 575 50 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 555 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 391 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 634 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 432 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 65 71215 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 518 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Lla Virama
+Ligature2: "Ligature Substitution lookup 59 subtable" Lla Virama
 EndChar
 
 StartChar: Ca.half
@@ -38037,7 +38297,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 418 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 418 54 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -38082,7 +38342,7 @@ SplineSet
  42 154 42 154 31 150 c 1,47,-1
  10 218 l 1,4,5
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Ca Virama
+Ligature2: "Ligature Substitution lookup 32 subtable" Ca Virama
 EndChar
 
 StartChar: Ba.half
@@ -38092,11 +38352,16 @@ GlyphClass: 2
 Flags: W
 HStem: -249 199 -10 74<231.507 408.576> 0 21G<481 561> 551 71<0 67 139.435 481 561 651>
 VStem: 40 80<392.839 533.513> 105 80<108.756 253.385> 196 289 481 80<0 43 139.5 551>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 320 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 356 54 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 481 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 516 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 561 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 54 71204 N 1 0 0 1 0 0 3
 Refer: 81 71231 N 1 0 0 1 450 0 2
-Ligature2: "Ligature Substitution lookup 4 subtable" Ba Virama
+Ligature2: "Ligature Substitution lookup 49 subtable" Ba Virama
 EndChar
 
 StartChar: La.half
@@ -38106,11 +38371,12 @@ GlyphClass: 2
 Flags: W
 HStem: -10 72<205.254 331.823> 551 71<0 79 151.264 470>
 VStem: 60 80<403.121 550.343> 110 80<77.5651 186.456> 352 80<80.241 184.653>
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 267 -60 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 267 -60 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 140 -1 N 1 0 0 1 0 0 3
-Ligature2: "Ligature Substitution lookup 4 subtable" La Virama
+Ligature2: "Ligature Substitution lookup 53 subtable" La Virama
 EndChar
 
 StartChar: Va.half
@@ -38120,16 +38386,16 @@ GlyphClass: 2
 Flags: W
 HStem: -10 71<202.061 363.652> 551 71<0 83 160.466 382>
 VStem: 60 80<142.84 536.398> 83 82<381.483 551>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 332 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 142 -1 N 1 0 0 1 0 0 3
-Ligature2: "Ligature Substitution lookup 4 subtable" Va Virama
+Ligature2: "Ligature Substitution lookup 54 subtable" Va Virama
 EndChar
 
 StartChar: Jha.half
 Encoding: 1114214 -1 198
 Width: 505
-GlyphClass: 2
 Flags: W
 HStem: -10 70<87.6805 200.672> 125 70<90.0621 179.572> 278 70<149.403 256.628> 287 70<188.438 294.651> 308 74<520.566 595> 551 71<0 161 251.837 515>
 VStem: 5 76<67.2119 118.434> 60 80<355.245 446.918>
@@ -38329,13 +38595,12 @@ SplineSet
  81 80 81 80 92 70 c 128,-1,65
  103 60 103 60 127 60 c 0,54,55
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Jha Virama
+Ligature2: "Ligature Substitution lookup 35 subtable" Jha Virama
 EndChar
 
 StartChar: Nya.half
 Encoding: 1114215 -1 199
 Width: 495
-GlyphClass: 2
 Flags: W
 HStem: 40 70<149.805 284.988> 307 70<136.125 292.577 515.662 595> 551 71<0 505>
 VStem: 320 80<146.134 226.734>
@@ -38444,7 +38709,7 @@ SplineSet
  537 375 537 375 595 382 c 1,36,-1
  595 308 l 1,4,5
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Nya Virama
+Ligature2: "Ligature Substitution lookup 36 subtable" Nya Virama
 EndChar
 
 StartChar: Tha.half
@@ -38621,7 +38886,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 640 622 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 640 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -38684,7 +38949,7 @@ SplineSet
  206 392 206 392 220.5 397.5 c 128,-1,76
  235 403 235 403 247 412 c 1,60,61
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 4 subtable" Tha Virama
+Ligature2: "Ligature Substitution lookup 43 subtable" Tha Virama
 EndChar
 
 StartChar: Da.half
@@ -38694,10 +38959,11 @@ GlyphClass: 2
 Flags: W
 HStem: -10 74<250.302 407.693> 551 71<0 67 139.435 410>
 VStem: 40 80<392.344 533.513> 118 80<114.392 263.021>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 360 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 126 -1 N 1 0 0 1 0 0 3
-Ligature2: "Ligature Substitution lookup 4 subtable" Da Virama
+Ligature2: "Ligature Substitution lookup 44 subtable" Da Virama
 EndChar
 
 StartChar: Dha.half
@@ -38707,10 +38973,16 @@ GlyphClass: 2
 Flags: W
 HStem: -10 72<294.424 436.504> 353 68<146.386 230.467> 535 87<145.639 231.59> 551 71<0 82 300 513>
 VStem: 50 78<430.026 518.444> 185 75<95.1053 219.139> 245 78<434.795 521.084>
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 351 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 351 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 407 59 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 325 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 433 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 463 622 basechar 0
 LayerCount: 2
 Fore
 Refer: 99 -1 N 1 0 0 1 0 0 3
-Ligature2: "Ligature Substitution lookup 4 subtable" Dha Virama
+Ligature2: "Ligature Substitution lookup 45 subtable" Dha Virama
 EndChar
 
 StartChar: RKa
@@ -38974,7 +39246,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 848 90 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 848 90 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -39051,7 +39323,7 @@ SplineSet
  948 60 948 60 954 71.5 c 128,-1,95
  960 83 960 83 960 89 c 0,87,88
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 13 subtable" Ka VocR_dv
+Ligature2: "Ligature Substitution lookup 6 subtable" Ka VocR_dv
 EndChar
 
 StartChar: TYa
@@ -39211,10 +39483,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 684 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 732 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 652 120 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 652 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 652 120 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 652 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 684 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 732 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -39262,7 +39534,7 @@ SplineSet
  410 519 410 519 420 483.5 c 128,-1,53
  430 448 430 448 430 412 c 0,38,39
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ta.half Ya.alt
+Ligature2: "Ligature Substitution lookup 12 subtable" Ta.half Ya.alt
 EndChar
 
 StartChar: STha
@@ -39457,10 +39729,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 734 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 783 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 703 140 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 703 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 703 140 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 703 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 734 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 783 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -39525,7 +39797,7 @@ SplineSet
  385 424 385 424 408.5 408 c 128,-1,77
  432 392 432 392 454 392 c 0,64,65
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Sa.half Tha.alt
+Ligature2: "Ligature Substitution lookup 12 subtable" Sa.half Tha.alt
 EndChar
 
 StartChar: DYa
@@ -39726,10 +39998,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 824 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 872 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 792 140 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 792 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 792 140 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 792 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 824 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 872 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -39785,7 +40057,7 @@ SplineSet
  560 509 560 509 564.5 456 c 128,-1,65
  569 403 569 403 569 338 c 0,53,54
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Da.half Ya.alt
+Ligature2: "Ligature Substitution lookup 12 subtable" Da.half Ya.alt
 EndChar
 
 StartChar: SsDdha
@@ -40007,13 +40279,13 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 587 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 619 718 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 635 622 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 541 -70 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 601 56 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 541 -80 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 566 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 541 -70 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 541 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 601 56 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 566 -80 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 587 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 619 718 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 635 622 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -40078,7 +40350,7 @@ SplineSet
  576 158 576 158 597.5 133 c 128,-1,73
  619 108 619 108 667 96 c 1,62,63
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 20 subtable" Ssa.half Ddha
+Ligature2: "Ligature Substitution lookup 12 subtable" Ssa.half Ddha
 EndChar
 
 StartChar: Rakar.alt
@@ -40110,7 +40382,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -41 -40 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" -41 -40 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -41 -40 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -40120,7 +40393,7 @@ SplineSet
  -9 -93 l 1,3,-1
  -166 -268 l 1,0,-1
 EndSplineSet
-Ligature2: "Ligature Substitution lookup 26 subtable" Virama Ra
+Ligature2: "Ligature Substitution lookup 23 subtable" Virama Ra
 EndChar
 EndChars
 EndSplineFont
