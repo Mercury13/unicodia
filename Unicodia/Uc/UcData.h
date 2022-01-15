@@ -785,6 +785,25 @@ namespace uc {
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
+    struct AltCode {
+        unsigned char dosCommon = 0, dosEn = 0, dosRu = 0, win = 0;
+        unsigned short unicode = 0;
+        bool hasLocaleIndependent() const
+            { return (dosCommon != 0 || win != 0); }
+        constexpr bool operator == (const AltCode& x) const = default;
+    };
+
+    struct InputMethods {
+        AltCode alt;
+        std::u8string_view sometimesKey;
+        constexpr bool operator == (const InputMethods& x) const = default;
+        static const uc::InputMethods NONE;
+        bool hasSmth() const { return (*this != NONE); }
+        bool hasAltCode() const { return (alt != NONE.alt); }
+    };
+
+    InputMethods cpInputMethods(char32_t cp);
+
     inline size_t sprintUPLUS(char* buf, size_t n, char32_t code)
         { return snprintf(buf, n, "U+%04X", static_cast<unsigned>(code)); }
 

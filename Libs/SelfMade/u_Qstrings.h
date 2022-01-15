@@ -43,6 +43,16 @@ namespace str {
         x.append(QByteArray::fromRawData(beg, res.ptr - beg));
     }
 
+    template <class T, std::enable_if_t<std::is_integral<T>::value, bool> = true>
+    void appendHex(QString& x, T y)
+    {
+        char buf[30];
+        auto beg = std::begin(buf);
+        auto end = std::end(buf);
+        auto res = std::to_chars(beg, end, y, 16);
+        x.append(QByteArray::fromRawData(beg, res.ptr - beg));
+    }
+
     class QSep
     {
     public:

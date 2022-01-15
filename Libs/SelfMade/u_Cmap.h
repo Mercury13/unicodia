@@ -1,0 +1,99 @@
+#pragma once
+
+#include <algorithm>
+
+
+///
+/// \brief  Constant map implemented by array
+///
+template <class K, class V, size_t N>
+class Cmap
+{
+public:
+    using value_type = std::pair<K, V>;
+    using iterator = const value_type*;
+    using const_iterator = iterator;
+
+    static constexpr bool isLess(const value_type& x, const value_type& y)
+        { return x.first < y.first; }
+    static constexpr bool isLess1(K x, const value_type& y)
+        { return x < y.first; }
+    static constexpr bool isLess2(const value_type& x, K y)
+        { return x.first < y; }
+    static constexpr bool areEqual(const value_type& x, const value_type& y)
+        { return x.first == y.first; }
+
+    template <class...X>
+    consteval Cmap() : d{}, n(0) {}
+
+    template <class...X>
+    consteval Cmap(std::initializer_list<value_type> x) : n(x.size())
+    {
+        assert(x.size() <= N);
+        std::copy(x.begin(), x.end(), d.begin());
+        std::sort(d.begin(), d.begin() + n, isLess);
+        checkForRepeat();
+    }
+
+    constexpr size_t size() const { return n; }
+    constexpr iterator begin() const { return d.data(); }
+    constexpr iterator cbegin() const { return begin(); }
+    constexpr iterator end() const { return begin() + n; }
+    constexpr iterator cend() const { return end(); }
+    iterator findNull(K k) const;
+    bool contains(K k) const { return findNull(k); }
+    iterator lower_bound(K k) const;
+    iterator upper_bound(K k) const;
+    [[nodiscard]] constexpr bool empty() const { return (n != 0); }
+    [[nodiscard]] constexpr bool isEmpty() const { return (n != 0); }
+
+    ///  If k is found: changes v, returns true
+    ///  If k is not found: v intact, returns false
+    bool query(K k, V& v) const;
+private:
+    std::array<value_type, N> d;
+    const size_t n;
+
+    consteval void checkForRepeat() {
+        auto b = d.begin();
+        auto e = b + n;
+        auto v = std::unique(b, e, areEqual);
+        assert(v == e);
+    }
+};
+
+template <class K, class V, size_t N>
+typename Cmap<K, V, N>::iterator Cmap<K, V, N>::lower_bound(K k) const
+{
+    return std::lower_bound(begin(), end(), k, isLess2);
+}
+
+
+template <class K, class V, size_t N>
+typename Cmap<K, V, N>::iterator Cmap<K, V, N>::upper_bound(K k) const
+{
+    return std::upper_bound(begin(), end(), k, isLess1);
+}
+
+
+template <class K, class V, size_t N>
+typename Cmap<K, V, N>::iterator Cmap<K, V, N>::findNull(K k) const
+{
+    auto b = begin();
+    auto e = end();
+    auto v = std::lower_bound(b, e, k, isLess2);
+    return (v != e && v->first == k) ? v : nullptr;
+}
+
+template <class K, class V, size_t N>
+bool Cmap<K, V, N>::query(K k, V& v) const
+{
+    if (auto vFound = findNull(k)) {
+        v = vFound->second;
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Deduction guides

@@ -48,6 +48,7 @@ HEADERS += \
     ../Libs/SelfMade/i_ByteSwap.h \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \
+    ../Libs/SelfMade/u_Cmap.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \

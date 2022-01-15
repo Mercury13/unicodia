@@ -10,14 +10,21 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 #include "u_Iterator.h"
+#include "u_Cmap.h"
+
+// Project-local
 #include "Skin.h"
 
 #define NBSP "\u00A0"
+
+using ReverseMap = Cmap<char16_t, unsigned char, 128>;
+template class Cmap<char16_t, unsigned char, 128>;
 
 using namespace std::string_view_literals;
 const uc::Cp* uc::cpsByCode[N_CHARS];
 short uc::blocksByCode16[N_CHARS >> 4];
 const QString uc::Font::qempty;
+constinit const uc::InputMethods uc::InputMethods::NONE;
 
 constexpr QChar ZWSP(0x200B);
 
@@ -4834,7 +4841,7 @@ constinit const uc::Term uc::terms[] {
             "<p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Скачать тут]]" },
     { "birman", EcTermCat::INPUT,
       u8"типографская раскладка Ильи Бирмана", u8"Ilya Birman’s typography layout",
-        u8"Существует в двух языках: английский (США) и русский. "
+        u8"Существует в двух языках: английский (США) и русский, специальные клавиши для них одинаковы. "
                 "Позволяет вводить такие символы через AltGr на Windows, Alt на MacOS:"
              "<p>• дореволюционная кириллица ѣѵѳ<br>"
                 "• математика −±≠≈′×·<br>"
@@ -5695,7 +5702,108 @@ namespace {
 
     static_assert(std::size(oldCompData) == 0xFA);                              // FA first free
 
+    #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
+    #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
+    #define REV_16(x, y) REV_8(x, y), REV_8((x)+8, (y)+8)
+    #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
+
+    constinit const ReverseMap rmDosCommon {
+        { u'☺',  1 }, { u'☻',  2 }, { u'♥',  3 },  { u'♦',  4 },
+        { u'♣',  5 }, { u'♠',  6 }, { u'•',  7 },  { u'◘',  8 },
+        { u'○',  9 }, { u'◙', 10 }, { u'♂', 11 },  { u'♀', 12 },
+        { u'♪', 13 }, { u'♫', 14 }, { u'☼', 15 },  { u'►', 16 },
+        { u'◄', 17 }, { u'↕', 18 }, { u'‼', 19 },  { u'¶', 20 },
+        { u'§', 21 }, { u'▬', 22 }, { u'↨', 23 },  { u'↑', 24 },
+        { u'↓', 25 }, { u'→', 26 }, { u'←', 27 },  { u'∟', 28 },
+        { u'↔', 29 }, { u'▲', 30 }, { u'▼', 31 },  { u'⌂', 127 },
+        { u'░', 0xB0 }, { u'▒', 0xB1 }, { u'▓', 0xB2 }, { u'│', 0xB3 },
+        { u'┤', 0xB4 }, { u'╡', 0xB5 }, { u'╢', 0xB6 }, { u'╖', 0xB7 },
+        { u'╕', 0xB8 }, { u'╣', 0xB9 }, { u'║', 0xBA }, { u'╗', 0xBB },
+        { u'╝', 0xBC }, { u'╜', 0xBD }, { u'╛', 0xBE }, { u'┐', 0xBF },
+        { u'└', 0xC0 }, { u'┴', 0xC1 }, { u'┬', 0xC2 }, { u'├', 0xC3 },
+        { u'─', 0xC4 }, { u'┼', 0xC5 }, { u'╞', 0xC6 }, { u'╟', 0xC7 },
+        { u'╚', 0xC8 }, { u'╔', 0xC9 }, { u'╩', 0xCA }, { u'╦', 0xCB },
+        { u'╠', 0xCC }, { u'═', 0xCD }, { u'╬', 0xCE }, { u'╧', 0xCF },
+        { u'╨', 0xD0 }, { u'╤', 0xD1 }, { u'╥', 0xD2 }, { u'╙', 0xD3 },
+        { u'╘', 0xD4 }, { u'╒', 0xD5 }, { u'╓', 0xD6 }, { u'╫', 0xD7 },
+        { u'╪', 0xD8 }, { u'┘', 0xD9 }, { u'┌', 0xDA }, { u'█', 0xDB },
+        { u'▄', 0xDC }, { u'▌', 0xDD }, { u'▐', 0xDE }, { u'▀', 0xDF },
+        { u'■', 0xFE }, { 0xA0, 0xFF }
+    };
+
+    constinit const ReverseMap rmDosRu {
+        REV_32(u'А', 0x80),      // Cyrillic A
+        REV_16(u'а', 0xA0),      // Cyrillic a
+        REV_16(u'р', 0xE0),      // Cyrillic r
+        { u'Ё', 0xF0 }, { u'ё', 0xF1 }, { u'Є', 0xF2 }, { u'є', 0xF3 },
+        { u'Ї', 0xF4 }, { u'ї', 0xF5 }, { u'Ў', 0xF6 }, { u'ў', 0xF7 },
+        { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
+        { u'№', 0xFC }, { u'¤', 0xFD }
+    };
+
+    constinit const ReverseMap rmDosEn {
+        { u'Ç', 0x80 }, { u'ü', 0x81 }, { u'é', 0x82 }, { u'â', 0x83 },
+        { u'ä', 0x84 }, { u'à', 0x85 }, { u'å', 0x86 }, { u'ç', 0x87 },
+        { u'ê', 0x88 }, { u'ë', 0x89 }, { u'è', 0x8A }, { u'ï', 0x8B },
+        { u'î', 0x8C }, { u'ì', 0x8D }, { u'Ä', 0x8E }, { u'Å', 0x8F },
+        { u'É', 0x90 }, { u'æ', 0x91 }, { u'Æ', 0x92 }, { u'ô', 0x93 },
+        { u'ö', 0x94 }, { u'ò', 0x95 }, { u'û', 0x96 }, { u'ù', 0x97 },
+        { u'ÿ', 0x98 }, { u'Ö', 0x99 }, { u'Ü', 0x9A }, { u'¢', 0x9B },
+        { u'£', 0x9C }, { u'¥', 0x9D }, { u'₧', 0x9E }, { u'ƒ', 0x9F },
+        { u'á', 0xA0 }, { u'í', 0xA1 }, { u'ó', 0xA2 }, { u'ú', 0xA3 },
+        { u'ñ', 0xA4 }, { u'Ñ', 0xA5 }, { u'ª', 0xA6 }, { u'º', 0xA6 },
+        { u'¿', 0xA8 }, { u'⌐', 0xA9 }, { u'¬', 0xAA }, { u'½', 0xAB },
+        { u'¼', 0xAC }, { u'¡', 0xAD }, { u'«', 0xAE }, { u'»', 0xAF },
+        { u'α', 0xE0 }, { u'ß', 0xE1 }, { u'Γ', 0xE2 }, { u'π', 0xE3 },
+        { u'Σ', 0xE4 }, { u'σ', 0xE5 }, { u'µ', 0xE6 }, { u'τ', 0xE7 },
+        { u'Φ', 0xE8 }, { u'Θ', 0xE9 }, { u'Ω', 0xEA }, { u'δ', 0xEB },
+        { u'∞', 0xEC }, { u'φ', 0xED }, { u'ε', 0xEE }, { u'∩', 0xEF },
+        { u'≡', 0xF0 }, { u'±', 0xF1 }, { u'≥', 0xF2 }, { u'≤', 0xF3 },
+        { u'⌠', 0xF4 }, { u'⌡', 0xF5 }, { u'÷', 0xF6 }, { u'≈', 0xF7 },
+        { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
+        { u'ⁿ', 0xFC }, { u'²', 0xFD }
+    };
+
+    constinit const ReverseMap rmWin {
+        { u'‚', 130 }, { u'ƒ', 131 }, { u'„', 132 }, { u'…', 133 },
+        { u'†', 134 }, { u'‡', 135 }, { u'ˆ', 136 }, { u'‰', 137 },
+        { u'Š', 138 }, { u'‹', 139 }, { u'Œ', 140 }, { u'Ž', 142 },
+        { u'‘', 145 }, { u'’', 146 }, { u'“', 147 }, { u'”', 148 },
+        { u'•', 149 }, { u'–', 150 }, { u'—', 151 }, { u'˜', 152 },
+        { u'™', 153 }, { u'š', 154 }, { u'›', 155 }, { u'œ', 156 },
+        { u'ž', 158 }, { u'Ÿ', 159 }
+    };
+
 }   // anon namespace
+
+
+uc::InputMethods uc::cpInputMethods(char32_t cp)
+{
+    uc::InputMethods r;
+    if (cp < 127) {   // ASCII characters except 7F
+        switch (cp) {
+        case 13:
+        case 10:
+            r.sometimesKey = u8"Enter, Shift/Ctrl/Alt+Enter";
+            break;
+        case 9:
+            r.sometimesKey = u8"Tab";
+            break;
+        default:;
+        }
+    } else if (cp >= 0xA0 && cp < 0x10000) {  // Rest of BMP
+        rmDosCommon.query(cp, r.alt.dosCommon);
+        rmDosEn.query(cp, r.alt.dosEn);
+        rmDosRu.query(cp, r.alt.dosRu);
+        if (cp <= 0xFF) {     // ISO1
+            r.alt.win = cp;
+        } else {
+            rmWin.query(cp, r.alt.win);
+        }
+        r.alt.unicode = cp;
+    }
+    return r;
+}
 
 
 Flags<uc::OldComp> uc::cpOldComps(char32_t cp)

@@ -780,6 +780,50 @@ QString mywiki::buildHtml(
             appendValuePopup(text, lnk, u8"Системный шрифт", "pf");
         }
 
+        // Input
+        auto im = uc::cpInputMethods(cp.subj);
+        if (im.hasSmth()) {
+            sp.sep();
+            str::append(text, "Ввод: ");
+            str::QSep sp1(text, "; ");
+            if (!im.sometimesKey.empty()) {
+                sp1.sep();
+                str::append(text, u8"иногда ");
+                str::append(text, im.sometimesKey);
+            }
+            if (im.hasAltCode()) {
+                sp1.sep();
+                str::append(text, u8"<a href='pt:altcode' class='popup'>Alt-код</a> ");
+                str::QSep sp2(text, ", ");
+                if (im.alt.dosCommon) {
+                    sp2.sep();
+                    str::append(text, static_cast<int>(im.alt.dosCommon));
+                }
+                if (im.alt.win) {
+                    sp2.sep();
+                    str::append(text, "0");
+                    str::append(text, static_cast<int>(im.alt.win));
+                }
+                if (!im.alt.hasLocaleIndependent()) {
+                    if (im.alt.dosEn) {
+                        sp2.sep();
+                        str::append(text, static_cast<int>(im.alt.dosEn));
+                        str::append(text, u8" (en)");
+                    }
+                    if (im.alt.dosRu) {
+                        sp2.sep();
+                        str::append(text, static_cast<int>(im.alt.dosRu));
+                        str::append(text, u8" (ru)");
+                    }
+                    if (im.alt.unicode) {
+                        sp2.sep();
+                        str::append(text, "+");
+                        str::appendHex(text, im.alt.unicode);
+                    }
+                }
+            }
+        }
+
         // HTML
         sp.sep();
         str::append(text, u8"HTML: ");
