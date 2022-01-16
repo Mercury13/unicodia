@@ -4,7 +4,7 @@
 
 
 ///
-/// \brief  Constant map implemented by array
+/// \brief  Constant map implemented with sorted array
 ///
 template <class K, class V, size_t N>
 class Cmap
