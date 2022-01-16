@@ -793,13 +793,21 @@ namespace uc {
         constexpr bool operator == (const AltCode& x) const = default;
     };
 
+    struct AltgrKey {
+        char key = 0, letter = 0;
+        bool isTwice = false;
+        constexpr bool operator == (const AltgrKey& x) const = default;
+    };
+
     struct InputMethods {
         AltCode alt;
+        AltgrKey birman;
         std::u8string_view sometimesKey;
         constexpr bool operator == (const InputMethods& x) const = default;
         static const uc::InputMethods NONE;
         bool hasSmth() const { return (*this != NONE); }
         bool hasAltCode() const { return (alt != NONE.alt); }
+        bool hasBirman() const { return (birman != NONE.birman); }
     };
 
     InputMethods cpInputMethods(char32_t cp);

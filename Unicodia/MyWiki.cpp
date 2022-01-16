@@ -682,6 +682,15 @@ namespace {
         appendValuePopup(text, block, u8"Блок", "pk");
     }
 
+    void appendKey(QString& text, std::u8string_view header, char main)
+    {
+        str::append(text, u8"<span style='background-color:palette(midlight);'>\u00A0");
+        str::append(text, header);
+        if (main)
+            text += QChar(main);
+        str::append(text, u8"\u00A0</span>");
+    }
+
 }   // anon namespace
 
 
@@ -785,7 +794,7 @@ QString mywiki::buildHtml(
         if (im.hasSmth()) {
             sp.sep();
             str::append(text, "Ввод: ");
-            str::QSep sp1(text, "; ");
+            str::QSep sp1(text, ";&nbsp; ");
             if (!im.sometimesKey.empty()) {
                 sp1.sep();
                 str::append(text, u8"иногда ");
@@ -821,6 +830,16 @@ QString mywiki::buildHtml(
                         str::appendHex(text, im.alt.unicode);
                     }
                 }
+            }
+            // Birman test
+            if (im.hasBirman()) {
+                sp1.sep();
+                str::append(text, "<a href='pt:birman' class='popup'>Бирман</a> ");
+                if (im.birman.isTwice)
+                    str::append(text, u8"дважды ");
+                appendKey(text, u8"AltGr+", im.birman.key);
+                if (im.birman.letter != 0)
+                    appendKey(text, {}, im.birman.letter);
             }
         }
 
