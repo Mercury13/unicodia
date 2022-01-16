@@ -720,8 +720,15 @@ namespace {
     {
         str::append(text, u8"<span style='background-color:palette(midlight);'>\u00A0");
         str::append(text, header);
-        if (main)
-            text += QChar(main);
+        if (main) {
+            switch (main) {
+            case ' ':
+                str::append(text, u8"Пробел");
+                break;
+            default:
+                text += QChar(main);
+            }
+        }
         str::append(text, u8"\u00A0</span>");
     }
 
@@ -872,8 +879,10 @@ QString mywiki::buildHtml(
                 if (im.birman.isTwice)
                     str::append(text, u8"дважды ");
                 appendKey(text, u8"AltGr+", im.birman.key);
-                if (im.birman.letter != 0)
+                if (im.birman.letter != 0) {
+                    text += ' ';
                     appendKey(text, {}, im.birman.letter);
+                }
             }
         }
 
