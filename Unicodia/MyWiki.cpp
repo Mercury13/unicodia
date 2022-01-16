@@ -74,7 +74,7 @@ namespace {
         static_assert(!std::is_pointer<Thing>::value);
         const Thing& thing;
         PopLink(const Thing& aThing) : thing(aThing) {}
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui);
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
     };
 
     template <class Thing>
@@ -95,7 +95,7 @@ namespace {
         char32_t cp;
         QFontDatabase::WritingSystem ws;
         PopFontsLink(char32_t aCp, QFontDatabase::WritingSystem aWs) : cp(aCp), ws(aWs) {}
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui);
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
     };
 
     void PopFontsLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
@@ -110,12 +110,35 @@ namespace {
         QString text;
         QFontDatabase::WritingSystem ws;
         CopyLink(std::string_view aText) : text(str::toQ(aText)) {}
-        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui);
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::COPY; }
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
     };
 
     void CopyLink::go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui)
     {
         gui.copyTextRel(widget, rect, text);
+    }
+
+    class InetLink : public mywiki::Link
+    {
+    public:
+        QString s;
+        InetLink(std::string_view scheme, std::string_view target);
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INET; }
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+    };
+
+    InetLink::InetLink(std::string_view scheme, std::string_view target)
+    {
+        s.reserve(scheme.length() + 1 + target.length());
+        str::append(s, scheme);
+        s += ':';
+        str::append(s, target);
+    }
+
+    void InetLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    {
+        gui.followUrl(s);
     }
 
 }   // anon namespace
@@ -194,6 +217,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopTermLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
+    } else if (scheme == "http"sv || scheme == "https"sv) {
+        return std::make_unique<InetLink>(scheme, target);
     }
     return {};
 }
@@ -303,10 +328,19 @@ namespace {
         auto target = x[0];
         auto text = x[1];
         std::string_view style;
-        if (!mywiki::parseLink(target)) {
+        auto link = mywiki::parseLink(target);
+        if (!link) {
             style = "class=missing";
-        } else if (target.size() >= 4 && target[0] == 'p' && target[2] == ':') {
+        } else switch (link->clazz()) {
+        case mywiki::LinkClass::COPY:
+            style = "class=copy";
+            break;
+        case mywiki::LinkClass::INET:
+            style = "class=inet";
+            break;
+        case mywiki::LinkClass::POPUP:
             style = "class=popup";
+            break;
         }
 
         auto q = prepareRecursion(text);

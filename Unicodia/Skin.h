@@ -32,6 +32,7 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 
 #define STYLE_POPUP        STYLE_LINK(CNAME_LINK_POPUP, "0.05")
 #define STYLE_DEPRECATED   STYLE_LINK(CNAME_LINK_DEPRECATED, "0.04")
+#define STYLE_INET         STYLE_LINK(CNAME_LINK_OUTSIDE, "0.05")
 #define STYLE_COPY         STYLE_LINK_CAMO(CNAME_U_COPY, "0.05")
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 
@@ -40,6 +41,7 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
         ".bigcopy { " STYLE_BIGCOPY " } "                                       \
         ".popup { " STYLE_POPUP " } "                                           \
         ".deprecated { " STYLE_DEPRECATED " } "                                 \
+        ".inet { " STYLE_INET " } "                                             \
         ".missing { color: " CNAME_LINK_DEPRECATED "; } "
 
 #ifdef _WIN32

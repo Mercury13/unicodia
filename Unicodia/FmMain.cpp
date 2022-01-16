@@ -16,6 +16,8 @@
 #include <QPaintEngine>
 #include <QMessageBox>
 #include <QFile>
+#include <QDesktopServices>
+#include <QUrl>
 
 // Misc
 #include "u_Strings.h"
@@ -1511,6 +1513,11 @@ void FmMain::copyTextAbs(
 {
     QApplication::clipboard()->setText(text);
     showCopied(widget, absRect);
+}
+
+void FmMain::followUrl(const QString& x)
+{
+    QDesktopServices::openUrl(x);
 }
 
 

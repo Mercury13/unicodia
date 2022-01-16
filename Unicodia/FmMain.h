@@ -289,6 +289,7 @@ private:
             char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text) override;    
+    void followUrl(const QString& x) override;
 signals:
     void setFocusDefered(QWidget* wi);
 private slots:

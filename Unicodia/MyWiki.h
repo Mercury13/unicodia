@@ -41,6 +41,7 @@ namespace mywiki
         virtual void copyTextAbs(
                 QWidget* widget, const QRect& absRect, const QString& text) = 0;
         virtual ~Gui() = default;
+        virtual void followUrl(const QString& x) = 0;
 
         // Utils
         void popupAtRel(
@@ -52,10 +53,13 @@ namespace mywiki
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
+    enum class LinkClass { POPUP, COPY, INET };
+
     class Link    // interface
     {
     public:
         virtual void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui) = 0;
+        virtual LinkClass clazz() const { return LinkClass::POPUP; }
         virtual ~Link() = default;
     };
 
