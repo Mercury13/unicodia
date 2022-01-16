@@ -180,7 +180,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2 U14
       { FNAME_FUNKY },                                                          // …3 Old Katakana/Hiragana
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
-    { "sengbuhan.ttf", "padding-top: 12%;"_sty },                               // Lao
+    { "SengBuhan-Regular.ttf", Ffg::DESC_BADLY_HINTED, 115_pc },                // Lao
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Latin
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
       { FNAME_FUNKY },                                                          // …2
