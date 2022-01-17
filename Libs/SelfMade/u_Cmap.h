@@ -23,14 +23,13 @@ public:
     static constexpr bool areEqual(const value_type& x, const value_type& y)
         { return x.first == y.first; }
 
-    template <class...X>
     consteval Cmap() : d{}, n(0) {}
 
-    template <class...X>
-    consteval Cmap(std::initializer_list<value_type> x) : n(x.size())
+    template <size_t N1>
+    consteval Cmap(const value_type (&x)[N1]) : n(N1)
     {
-        assert(x.size() <= N);
-        std::copy(x.begin(), x.end(), d.begin());
+        static_assert(N1 <= N);
+        std::copy(std::begin(x), std::end(x), d.begin());
         std::sort(d.begin(), d.begin() + n, isLess);
         checkForRepeat();
     }
@@ -61,6 +60,10 @@ private:
         assert(v == e);
     }
 };
+
+template <class K, class V, size_t N1>
+Cmap(const std::pair<K,V> (&x)[N1]) -> Cmap<K, V, N1>;
+
 
 template <class K, class V, size_t N>
 typename Cmap<K, V, N>::iterator Cmap<K, V, N>::lower_bound(K k) const

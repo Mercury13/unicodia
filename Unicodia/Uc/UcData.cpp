@@ -20,9 +20,6 @@
 using ReverseMap = Cmap<char16_t, unsigned char, 128>;
 template class Cmap<char16_t, unsigned char, 128>;
 
-using KeyMap = Cmap<char16_t, uc::AltgrKey, 260>;
-template class Cmap<char16_t, uc::AltgrKey, 260>;
-
 using namespace std::string_view_literals;
 const uc::Cp* uc::cpsByCode[N_CHARS];
 short uc::blocksByCode16[N_CHARS >> 4];
@@ -5714,7 +5711,7 @@ namespace {
     #define REV_16(x, y) REV_8(x, y), REV_8((x)+8, (y)+8)
     #define REV_32(x, y) REV_16(x, y), REV_16((x)+16, (y)+16)
 
-    constinit const ReverseMap rmDosCommon {
+    constinit const ReverseMap rmDosCommon {{
         { u'☺',  1 }, { u'☻',  2 }, { u'♥',  3 },  { u'♦',  4 },
         { u'♣',  5 }, { u'♠',  6 }, { u'•',  7 },  { u'◘',  8 },
         { u'○',  9 }, { u'◙', 10 }, { u'♂', 11 },  { u'♀', 12 },
@@ -5736,9 +5733,9 @@ namespace {
         { u'╪', 0xD8 }, { u'┘', 0xD9 }, { u'┌', 0xDA }, { u'█', 0xDB },
         { u'▄', 0xDC }, { u'▌', 0xDD }, { u'▐', 0xDE }, { u'▀', 0xDF },
         { u'■', 0xFE }, { 0xA0, 0xFF }
-    };
+    }};
 
-    constinit const ReverseMap rmDosRu {
+    constinit const ReverseMap rmDosRu {{
         REV_32(u'А', 0x80),      // Cyrillic A
         REV_16(u'а', 0xA0),      // Cyrillic a
         REV_16(u'р', 0xE0),      // Cyrillic r
@@ -5746,9 +5743,9 @@ namespace {
         { u'Ї', 0xF4 }, { u'ї', 0xF5 }, { u'Ў', 0xF6 }, { u'ў', 0xF7 },
         { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
         { u'№', 0xFC }, { u'¤', 0xFD }
-    };
+    }};
 
-    constinit const ReverseMap rmDosEn {
+    constinit const ReverseMap rmDosEn {{
         { u'Ç', 0x80 }, { u'ü', 0x81 }, { u'é', 0x82 }, { u'â', 0x83 },
         { u'ä', 0x84 }, { u'à', 0x85 }, { u'å', 0x86 }, { u'ç', 0x87 },
         { u'ê', 0x88 }, { u'ë', 0x89 }, { u'è', 0x8A }, { u'ï', 0x8B },
@@ -5769,9 +5766,9 @@ namespace {
         { u'⌠', 0xF4 }, { u'⌡', 0xF5 }, { u'÷', 0xF6 }, { u'≈', 0xF7 },
         { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
         { u'ⁿ', 0xFC }, { u'²', 0xFD }
-    };
+    }};
 
-    constinit const ReverseMap rmWin {
+    constinit const ReverseMap rmWin {{
         { u'‚', 130 }, { u'ƒ', 131 }, { u'„', 132 }, { u'…', 133 },
         { u'†', 134 }, { u'‡', 135 }, { u'ˆ', 136 }, { u'‰', 137 },
         { u'Š', 138 }, { u'‹', 139 }, { u'Œ', 140 }, { u'Ž', 142 },
@@ -5779,15 +5776,17 @@ namespace {
         { u'•', 149 }, { u'–', 150 }, { u'—', 151 }, { u'˜', 152 },
         { u'™', 153 }, { u'š', 154 }, { u'›', 155 }, { u'œ', 156 },
         { u'ž', 158 }, { u'Ÿ', 159 }
-    };
+    }};
 
-    consteval KeyMap::value_type altgr(char16_t subj, char key)
+    using AltgrPair = std::pair<char16_t, uc::AltgrKey>;
+
+    consteval AltgrPair altgr(char16_t subj, char key)
         { return { subj, { key } }; }
 
-    consteval KeyMap::value_type altgruml(char16_t subj, char key)
+    consteval AltgrPair altgruml(char16_t subj, char key)
         { return { subj, { key, 0, true } }; }
 
-    constinit const KeyMap kmBirman {
+    constinit Cmap kmBirman {{
         altgr ( 0xA0, ' ' ),
         altgruml ( u'̀', '~' ),
             { u'ẁ', { '~', 'w' } },
@@ -6035,7 +6034,7 @@ namespace {
             { u'Ć', { '?', 'C' } },
             { u'Ń', { '?', 'N' } },
             { u'Ḿ', { '?', 'M' } },
-    };
+    }};
 
 }   // anon namespace
 
