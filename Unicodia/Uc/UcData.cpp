@@ -280,6 +280,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansWancho-Regular.ttf", Ffg::DESC_BIGGER },                         // Wancho
     { "NotoSansWarangCiti-Regular.ttf", Ffg::DESC_BIGGER },                     // Warang Citi
     { "NotoSerifYezidi-Regular.ttf", 110_pc },                                  // Yezidi
+        // Normal is too thin, but bold is too coarse → worse
     { "Microsoft Yi Baiti", 120_pc },                                           // Yi
     { "NotoSansZanabazarSquare-Regular.ttf" },                                  // Zanabazar square
     { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
