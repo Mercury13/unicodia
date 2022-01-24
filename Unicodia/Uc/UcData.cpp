@@ -4808,7 +4808,7 @@ static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN)
 constinit const uc::Term uc::terms[] {
     { "altcode", EcTermCat::INPUT,
       u8"Alt-коды", u8"Alt codes",
-        u8"Появившийся ещё в DOS метод ввода символов по коду. "
+        u8"Появившийся в BIOS IBM-совместимых компьютеров метод ввода символов по коду. "
                 "В Windows семейства NT есть три типа кодов."
             "<p>'''Коды DOS'''"
             "<p>Удерживая '''Alt''' (левый{{-}}везде, правый{{-}}зависит от раскладки), "
