@@ -53,7 +53,7 @@ private:
     std::array<value_type, N> d;
     const size_t n;
 
-    consteval void checkForRepeat() {
+    constexpr void checkForRepeat() {
         auto b = d.begin();
         auto e = b + n;
         auto v = std::unique(b, e, areEqual);
