@@ -996,7 +996,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{__}}ка {{sm|𑤌}} + и {{sm|◌𑤱}} = ки {{sm|𑤌𑤱}}<br>"
                 "{{__}}ка {{sm|𑤌}} + halanta {{sm|◌𑤽}} = к {{sm|𑤌𑤽}}<br>"
                 "{{__}}ка {{sm|𑤌}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = кта {{sm|𑤌𑤾𑤛}}<br>"
-                "{{__}}са + halanta + тта + halanta + на = сýттýна {{sm|𑤬𑤽𑤖𑤽𑤟}}",
+                "{{__}}са + halanta + тта + halanta + на = сÿттÿна {{sm|𑤬𑤽𑤖𑤽𑤟}}",
                 EcFont::FUNKY },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
