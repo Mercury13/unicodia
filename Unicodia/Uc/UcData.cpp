@@ -140,14 +140,16 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …4
       { FNAME_FUNKY },                                                          // …5
+    { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER,
+            "padding-bottom:12%;"_sty },                                        // Dives Akuru
       // Unlike Egyptian, OTF is poor;
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { FNAME_FUNKY, Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT },                      // Egyptian
       { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
-    { "NotoSansElbasan-Regular.ttf"},                                           // Elbasan
-    { "NotoSansElymaic-Regular.ttf"},                                           // Elymaic
+    { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
+    { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
@@ -997,7 +999,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{__}}ка {{sm|𑤌}} + halanta {{sm|◌𑤽}} = к {{sm|𑤌𑤽}}<br>"
                 "{{__}}ка {{sm|𑤌}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = кта {{sm|𑤌𑤾𑤛}}<br>"
                 "{{__}}са + halanta + тта + halanta + на = сÿттÿна {{sm|𑤬𑤽𑤖𑤽𑤟}}",
-                EcFont::FUNKY },
+                EcFont::DIVES_AKURU },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
