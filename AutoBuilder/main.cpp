@@ -12,6 +12,7 @@
 
 // Project-local
 #include "data.h"
+#include "loader.h"
 
 using namespace std::string_view_literals;
 
@@ -343,7 +344,16 @@ std::string_view rqTagMinus(
 
 
 int main()
-{    
+{
+    ///// Loader ///////////////////////////////////////////////////////////////
+    std::cout << "Checking for loader..." << std::flush;
+    if (checkLoader()) {
+        std::cout << "OK" << std::endl;
+    } else {
+        std::cout << "RE-RUN" << std::endl;
+        runLoader();
+    }
+
     ///// HTML entities ////////////////////////////////////////////////////////
 
     std::cout << "Loading HTML entities..." << std::flush;
