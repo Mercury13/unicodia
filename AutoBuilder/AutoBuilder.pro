@@ -31,4 +31,5 @@ HEADERS += \
 
 INCLUDEPATH += \
     ../Libs/PugiXml \
-    ../Libs/SelfMade
+    ../Libs/SelfMade \
+    ../Libs/Zippy

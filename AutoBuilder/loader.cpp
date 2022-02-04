@@ -7,9 +7,11 @@
 #include <string>
 #include <filesystem>
 #include <iostream>
+#include <fstream>
 
 // Libs
 #include "u_TypedFlags.h"
+#include "Zippy.hpp"
 
 
 namespace {
@@ -39,6 +41,29 @@ namespace {
         std::string_view url, fname;
     };
 
+    class SingleZip final : public Action
+    {
+    public:
+        constexpr SingleZip(std::string_view aArc, std::string_view aFile)
+            : arc(aArc), file(aFile) {}
+        void exec() const override;
+    private:
+        std::string_view arc, file;
+    };
+
+    void SingleZip::exec() const
+    {
+        Zippy::ZipArchive za;
+        za.Open(std::string{arc});
+        auto entry = za.GetEntry(std::string{file});
+        auto data = entry.GetData();
+        if (data.empty())
+            throw std::logic_error("File not found in archive");
+        std::ofstream os(std::filesystem::path(file), std::ios::binary);
+        static_assert(sizeof(decltype(data)::value_type) == sizeof(char));
+        os.write(reinterpret_cast<const char*>(data.data()), data.size());
+    }
+
     void CurlAction::exec() const
     {
         std::string s = "curl --output ";
@@ -60,12 +85,15 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constexpr const char* UCD_ALL = "ucd.all.flat.zip";
+    constexpr const char* UCD_ZIP = "ucd.all.flat.zip";
+    constexpr const char* UCD_XML = "ucd.all.flat.xml";
 
-    constinit const CurlAction AC_UCD_ALL { "https://www.unicode.org/Public/14.0.0/ucdxml/ucd.all.flat.zip", UCD_ALL };
+    constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/14.0.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
+    constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
 
     constinit const Step allSteps[] {
-        { "Load UCD XML database", AC_UCD_ALL, UCD_ALL, Stfg::FINAL },
+        { "Load UCD XML database", AC_UCD_ZIP, UCD_ZIP, NO_FLAGS },
+        { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
     };
 
 }

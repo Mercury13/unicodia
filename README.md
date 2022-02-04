@@ -5,11 +5,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Right now Windows only.
 
 # How to compile?
-* Download MSYS, slight C++20 here.
+* Download MSYS, slight C++20 and std::filesystem here.
 * Make custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2 to 6.2.2, though 6.2 branch does not work under W7.
-* Compile AutoBuilder.
-* Download and unzip big 220 M https://www.unicode.org/Public/14.0.0/ucdxml/ucd.all.flat.zip
-* Run AutoBuilder.
+* Compile and run AutoBuilder; in W7 and VERY old W10 need curl.exe.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
 
