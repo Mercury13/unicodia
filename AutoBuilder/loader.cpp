@@ -7,7 +7,7 @@
 
 bool checkLoader()
 {
-    return false;
+    return true;
 }
 
 
