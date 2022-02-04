@@ -998,6 +998,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 "{{__}}ка {{sm|𑤌}} + и {{sm|◌𑤱}} = ки {{sm|𑤌𑤱}}<br>"
                 "{{__}}ка {{sm|𑤌}} + halanta {{sm|◌𑤽}} = к {{sm|𑤌𑤽}}<br>"
                 "{{__}}ка {{sm|𑤌}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = кта {{sm|𑤌𑤾𑤛}}<br>"
+                "{{__}}са {{sm|𑤬}} + virama {{sm|◌𑤾}} + та {{sm|𑤛}} = ста {{sm|𑤬𑤾𑤛}}<br>"
+                // For translator: prefer ú to ü in English etc where ú is not loaded
                 "{{__}}са + halanta + тта + halanta + на = сÿттÿна {{sm|𑤬𑤽𑤖𑤽𑤟}}",
                 EcFont::DIVES_AKURU },
     // Dogri OK, W10 off → installed Google Noto
