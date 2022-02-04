@@ -15,6 +15,8 @@ struct FlagStorage {
                                             >::type;
 };
 
+enum class NoFlags { INST };
+
 template <class En>
 class Flags
 {
@@ -26,23 +28,24 @@ public:
     static inline constexpr Storage toSignedStorage(bool x) { return static_cast<SignedStorage>(x); }
 
     // ctor
-    inline constexpr Flags() = default;
-    explicit inline constexpr Flags(Storage x) : fValue(x) {}
-    inline constexpr Flags(En x) : fValue(toStorage(x)) {}
+    constexpr Flags() = default;
+    constexpr Flags(NoFlags) {}
+    explicit constexpr Flags(Storage x) : fValue(x) {}
+    constexpr Flags(En x) : fValue(toStorage(x)) {}
 
     // helper function for variadic templates
-    static inline constexpr Flags valueOf(En x) { return Flags<En>(x); }
-    static inline constexpr Flags valueOf(Flags<En> x) { return x; }
+    static constexpr Flags valueOf(En x) { return Flags<En>(x); }
+    static constexpr Flags valueOf(Flags<En> x) { return x; }
 
     template <class First, class... Args>
-    static inline constexpr Flags<En> valueOf(First x, Args... rest)
+    static constexpr Flags<En> valueOf(First x, Args... rest)
         { return valueOf(x) | valueOf(rest...); }
 
     template <En V>
-    static inline constexpr Flags<En> valueOf() noexcept
+    static constexpr Flags<En> valueOf() noexcept
         { return Flags<En>(V); }
     template <En First, En Second, En... Rest>
-    static inline constexpr Flags<En> valueOf() noexcept
+    static constexpr Flags<En> valueOf() noexcept
         { return Flags<En>(First) | valueOf<Second, Rest...>(); }
 
     void setNumeric(Storage x) noexcept { fValue = x; }
@@ -65,30 +68,30 @@ public:
     constexpr Storage numeric() const { return fValue; }
 
     // or
-    constexpr inline Flags& operator |= (En x) { fValue |= toStorage(x); return *this; }
-    constexpr inline Flags& operator |= (Flags<En> x) { fValue |= x.fValue; return *this; }
+    constexpr Flags& operator |= (En x) { fValue |= toStorage(x); return *this; }
+    constexpr Flags& operator |= (Flags<En> x) { fValue |= x.fValue; return *this; }
 
     // and
-    constexpr inline Flags& operator &= (En x) { fValue &= toStorage(x); return *this; }
-    constexpr inline Flags& operator &= (Flags<En> x) { fValue &= x.fValue; return *this; }
+    constexpr Flags& operator &= (En x) { fValue &= toStorage(x); return *this; }
+    constexpr Flags& operator &= (Flags<En> x) { fValue &= x.fValue; return *this; }
 
     // xor
-    constexpr inline Flags& operator ^= (En x) { fValue ^= toStorage(x); return *this; }
-    constexpr inline Flags& operator ^= (Flags<En> x) { fValue ^= x.fValue; return *this; }
+    constexpr Flags& operator ^= (En x) { fValue ^= toStorage(x); return *this; }
+    constexpr Flags& operator ^= (Flags<En> x) { fValue ^= x.fValue; return *this; }
 
-    constexpr inline bool have(En x) const { return fValue & toStorage(x); }
-    constexpr inline bool haveAny(Flags<En> x) const { return fValue & x.fValue; }
-    constexpr inline bool haveAll(Flags<En> x) const { return (fValue & x.fValue) == x.fValue; }
+    constexpr bool have(En x) const { return fValue & toStorage(x); }
+    constexpr bool haveAny(Flags<En> x) const { return fValue & x.fValue; }
+    constexpr bool haveAll(Flags<En> x) const { return (fValue & x.fValue) == x.fValue; }
 
     template<class... Args>
-    constexpr inline bool haveAny(Args... flags) const { return haveAny(valueOf(flags...)); }
+    constexpr bool haveAny(Args... flags) const { return haveAny(valueOf(flags...)); }
     template<class... Args>
-    constexpr inline bool haveAll(Args... flags) const { return haveAll(valueOf(flags...)); }
+    constexpr bool haveAll(Args... flags) const { return haveAll(valueOf(flags...)); }
 
     template<En... Args>
-    constexpr inline bool haveAny() const { return haveAny(valueOf<Args...>()); }
+    constexpr bool haveAny() const { return haveAny(valueOf<Args...>()); }
     template<En... Args>
-    constexpr inline bool haveAll() const { return haveAll(valueOf<Args...>()); }
+    constexpr bool haveAll() const { return haveAll(valueOf<Args...>()); }
 
     /// @return  if we have any of FROM flags → remove them all, add TO flags
     ///          otherwise no change
@@ -110,12 +113,12 @@ public:
     /// @return  0 or one flag — the smallest of them
     /// @warning If you suspect extraneous flags, use switch - default,
     ///          not switch — case NO_FLAG
-    constexpr inline En smallest() const { return static_cast<En>(fValue & (-fValue)); }
+    constexpr En smallest() const { return static_cast<En>(fValue & (-fValue)); }
 
     /// @return  0 or one flag — the smallest of X that’s set in this
-    constexpr inline En smallestOf(Flags<En> x) const { return (*this & x).smallest(); }
+    constexpr En smallestOf(Flags<En> x) const { return (*this & x).smallest(); }
 
-    constexpr inline Flags& setIf(bool cond, En x) { if (cond) this->operator|=(x); return *this; }
+    constexpr Flags& setIf(bool cond, En x) { if (cond) this->operator|=(x); return *this; }
     constexpr bool holdsValue() const noexcept { return operator bool(); }
     constexpr bool empty() const noexcept { return !holdsValue(); }
 
