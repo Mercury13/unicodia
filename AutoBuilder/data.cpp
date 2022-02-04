@@ -1029,6 +1029,9 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Combining ligature left half below")
     EX("Combining ligature right half below")
     EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
+    EX("Runic Arlaug symbol")               // IDK
+    EX("Runic Tvimadur symbol")             // Same
+    EX("Runic Belgthor symbol")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
