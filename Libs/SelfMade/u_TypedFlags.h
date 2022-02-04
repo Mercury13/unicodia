@@ -16,6 +16,7 @@ struct FlagStorage {
 };
 
 enum class NoFlags { INST };
+constexpr NoFlags NO_FLAGS = NoFlags::INST;
 
 template <class En>
 class Flags
