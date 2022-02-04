@@ -141,7 +141,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …4
       { FNAME_FUNKY },                                                          // …5
     { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER,
-            "padding-bottom:12%;"_sty },                                        // Dives Akuru
+            "padding-bottom:12%;"_sty, 110_pc },                                // Dives Akuru
       // Unlike Egyptian, OTF is poor;
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
