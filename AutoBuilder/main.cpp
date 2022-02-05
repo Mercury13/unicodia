@@ -409,7 +409,7 @@ int main()
     pugi::xml_document doc;
 
     std::cout << "Loading Unicode base..." << std::flush;
-    doc.load_file("ucd.all.flat.xml");
+    doc.load_file(UCD_XML);
     std::cout << "OK" << std::endl;
 
     ///// CpInfo ///////////////////////////////////////////////////////////////

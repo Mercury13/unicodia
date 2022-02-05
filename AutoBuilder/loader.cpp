@@ -85,15 +85,14 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constexpr const char* UCD_ZIP = "ucd.all.flat.zip";
-    constexpr const char* UCD_XML = "ucd.all.flat.xml";
-
     constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/14.0.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
+    constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/14.0/emoji-test.txt", EMOJI_TEST };
 
     constinit const Step allSteps[] {
         { "Load UCD XML database", AC_UCD_ZIP, UCD_ZIP, NO_FLAGS },
         { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
+        { "Load emoji test", AC_EMOJI, EMOJI_TEST, Stfg::FINAL },
     };
 
 }
