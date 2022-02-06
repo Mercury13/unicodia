@@ -4,14 +4,6 @@ Egyptian Hieroglyphs
 * Куча перерисовок иероглифов. Простейшая — 13032 женщине убрали бороду
 * Noto не готов
 
-Latin
-* Блок D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
-* Блок F: 57 символов, даже разбираться облом
-* Noto Serif не готов
-
-Новые письменности
-* кипро-минойская
-
 
 ===== ЗАТКНУТЫЕ =====
 
@@ -71,6 +63,13 @@ Kannada
 * +1 символ 0CDD
 * Нарисовал в Kannada
 
+Latin
+* Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
+* Block F: 57 chars
+* Block G: 31 chars
+* Drew for myself in FunkySample
+* Noto Serif NOT READY
+
 Oriya
 * Noto UI не готов даже к U13, ищи Combining overline 0B55
 * Нарисовал сам в OriyaUi
@@ -122,6 +121,10 @@ Telugu
 Canadian aboriginal OK
 * Новые символы 11AB0…BF
 * Noto ГОТОВ
+
+* Cypro-Minoan OK
+* New script
+* Noto CAME, but my version is more stylish :)
 
 Ethiopic OK
 * Новый блок 1E7E0+
