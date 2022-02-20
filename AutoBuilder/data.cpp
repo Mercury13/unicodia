@@ -529,7 +529,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LUNATE",         Dicf::PART_ADJECTIVE },
     { "LITTLE",         Dicf::PART_ADJECTIVE },
     { "MAI",            Dicf::PART_ADJECTIVE },
-    { "MALAYALAM",      Dicf::PART_ADJECTIVE },
     { "MARWARI",        Dicf::PART_ADJECTIVE },
     { "MEDIAL",         Dicf::PART_ADJECTIVE },
     { "MID",            Dicf::PART_ADJECTIVE },
