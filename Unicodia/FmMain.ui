@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -148,7 +148,7 @@
             <item>
              <widget class="QStackedWidget" name="stackSearch">
               <property name="currentIndex">
-               <number>1</number>
+               <number>0</number>
               </property>
               <widget class="QWidget" name="pageInfo">
                <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0,1">
@@ -377,6 +377,19 @@ padding-bottom: 1px;</string>
                         <widget class="QPushButton" name="btCopy">
                          <property name="text">
                           <string>Копировать</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QPushButton" name="btCopyEx">
+                         <property name="sizePolicy">
+                          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                          </sizepolicy>
+                         </property>
+                         <property name="text">
+                          <string>+25CC</string>
                          </property>
                         </widget>
                        </item>
@@ -642,7 +655,7 @@ padding-bottom: 1px;</string>
      <x>0</x>
      <y>0</y>
      <width>900</width>
-     <height>19</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>

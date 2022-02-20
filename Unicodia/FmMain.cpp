@@ -1086,6 +1086,13 @@ FmMain::FmMain(QWidget *parent)
     ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + color.name() + " }");
     ui->pageSearch->setStyleSheet("#pageSearch { background-color: " + color.name() + " }");
 
+    { // Copy ex
+        auto font = ui->btCopyEx->font();
+        QFontMetrics metrics(font);
+        auto sz = metrics.horizontalAdvance("+0000000");
+        ui->btCopyEx->setFixedWidth(sz);
+    }
+
     // Fill chars
     model.build();
 
@@ -1138,6 +1145,7 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
+    connect(ui->btCopyEx, &QPushButton::clicked, this, &This::copyCurrentSample);
 
     // Tofu stats
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
@@ -1408,6 +1416,7 @@ void FmMain::showCp(MaybeChar ch)
         } else {
             ui->lbSample->setPalette(this->palette());
         }
+        ui->btCopyEx->setVisible(ch->category().upCat == uc::UpCategory::MARK);
 
         // Sample char
         bool wantSysFont = true;
@@ -1468,6 +1477,7 @@ void FmMain::showCp(MaybeChar ch)
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText({});
         ui->lbOs->setText({});
+        ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             ui->vwInfo->setText(text);
