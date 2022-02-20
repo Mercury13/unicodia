@@ -1032,6 +1032,8 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Runic Arlaug symbol")               // IDK
     EX("Runic Tvimadur symbol")             // Same
     EX("Runic Belgthor symbol")
+    EX("Ethiopic combining gemination and vowel length mark")   // False alarm here
+    EX("Ethiopic combining vowel length mark")                  // Same
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
