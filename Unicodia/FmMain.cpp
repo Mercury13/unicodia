@@ -1089,7 +1089,7 @@ FmMain::FmMain(QWidget *parent)
     { // Copy ex
         auto font = ui->btCopyEx->font();
         QFontMetrics metrics(font);
-        auto sz = metrics.horizontalAdvance("+0000000");
+        auto sz = metrics.horizontalAdvance("+000000");
         ui->btCopyEx->setFixedWidth(sz);
     }
 
