@@ -566,7 +566,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SEMISOFT",       Dicf::PART_ADJECTIVE },
     { "SHARP",          Dicf::PART_ADJECTIVE },
     { "SHORT",          Dicf::PART_ADJECTIVE },
-    { "SHORT-TWIG-AR",  Dicf::PART_ADJECTIVE }, // used for runes
     /// @todo [decap] Arabic mark Sideways Noon gnunna — is it right?
     { "SIDEWAYS",       Dicf::PART_ADJECTIVE },
     { "SIGMOID",        Dicf::PART_ADJECTIVE },
