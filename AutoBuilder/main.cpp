@@ -377,7 +377,7 @@ EmojiData loadEmoji()
         for (size_t i = 0; i < nCodes; ++i) {
             codes[i] = fromHex(hexCodes[i]);
         }
-        if (nCodes == 2 && codes[1] == 0xFE0F) {
+        if (nCodes == 2 && qualType == "fully-qualified"sv && codes[1] == 0xFE0F) {
             r.vs16.insert(codes[0]);
         }
     }
@@ -441,9 +441,9 @@ int main()
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading emoji..." << std::flush;
-    EmojiData ed = loadEmoji();
+    EmojiData emoji = loadEmoji();
     std::cout << "OK" << std::endl;
-    std::cout << "  Found " << ed.vs16.size() << " VS16 emoji." << std::endl;
+    std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -587,6 +587,9 @@ int main()
             flags |= 32;
             ++nDeprecated;
         }
+        // VS16
+        if (emoji.vs16.contains(cp))
+            flags |= 64;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

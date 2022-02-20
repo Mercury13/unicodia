@@ -766,6 +766,11 @@ QString mywiki::buildHtml(
         str::append(text, u8"<h4><a href='pt:ignorable' class='popup'>Игнорируемый символ</a></h4>"sv);
     }
 
+    // Deprecated
+    if (cp.isVs16Emoji()) {
+        str::append(text, u8"<h4>Графическое <a href='pt:emoji' class='popup'>эмодзи</a> требует U+FE0F (=VS16)</h4>"sv);
+    }
+
     {   // Info box
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");

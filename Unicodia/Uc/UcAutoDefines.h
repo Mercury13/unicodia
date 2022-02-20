@@ -410,7 +410,7 @@ namespace uc {
         CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
         NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
         DEFAULT_IGNORABLE = 32, ///< [+] UC feature: char is default-ignorable
-
+        VS16_EMOJI = 64,        ///< [+] UC feature: to surely make this char graphic, use VS16
         DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
     };
 
@@ -480,6 +480,7 @@ namespace uc {
         std::u8string_view abbrev() const;
         constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::DEFAULT_IGNORABLE); }
+        constexpr bool isVs16Emoji() const { return flags.have(Cfg::VS16_EMOJI); }        
     };
 
     extern Cp cpInfo[N_CPS];

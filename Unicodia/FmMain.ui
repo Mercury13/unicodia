@@ -389,7 +389,7 @@ padding-bottom: 1px;</string>
                           </sizepolicy>
                          </property>
                          <property name="text">
-                          <string>+25CC</string>
+                          <string>[+25CC]</string>
                          </property>
                         </widget>
                        </item>

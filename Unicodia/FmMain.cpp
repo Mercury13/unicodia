@@ -1313,13 +1313,13 @@ void FmMain::showCopied(QAbstractItemView* table)
 void FmMain::copyCurrentThing(CurrThing thing)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
-    QString q;
-    if (thing == CurrThing::SAMPLE
-            && ch
-            && ch->category().upCat == uc::UpCategory::MARK) {
-        q = uc::STUB_CIRCLE + str::toQ(ch->subj);
-    } else {
-        q = str::toQ(ch.code);
+    QString q = str::toQ(ch.code);
+    if (thing == CurrThing::SAMPLE && ch) {
+        if (ch->category().upCat == uc::UpCategory::MARK) {
+            q = uc::STUB_CIRCLE + q;
+        } else if (ch->isVs16Emoji()) {
+            q += QChar(0xFE0F);
+        }
     }
     QApplication::clipboard()->setText(q);
     showCopied(ui->tableChars);
@@ -1416,7 +1416,15 @@ void FmMain::showCp(MaybeChar ch)
         } else {
             ui->lbSample->setPalette(this->palette());
         }
-        ui->btCopyEx->setVisible(ch->category().upCat == uc::UpCategory::MARK);
+        if (ch->category().upCat == uc::UpCategory::MARK) {
+            ui->btCopyEx->setText("+25CC");
+            ui->btCopyEx->show();
+        } else if (ch->isVs16Emoji()) {
+            ui->btCopyEx->setText("+VS16");
+            ui->btCopyEx->show();
+        } else {
+            ui->btCopyEx->hide();
+        }
 
         // Sample char
         bool wantSysFont = true;
