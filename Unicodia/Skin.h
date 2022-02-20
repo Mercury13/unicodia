@@ -37,6 +37,8 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 
 #define STYLES_WIKI \
+        ".tab { border-collapse:collapse; margin:0.5ex 0; } "                   \
+        ".tab td { border:1px solid #CCC; padding:0 2px; } "                    \
         ".copy { " STYLE_COPY " } "                                             \
         ".bigcopy { " STYLE_BIGCOPY " } "                                       \
         ".popup { " STYLE_POPUP " } "                                           \

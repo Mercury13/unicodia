@@ -732,6 +732,58 @@ namespace {
         str::append(text, u8"\u00A0</span>");
     }
 
+    void appendSgnwVariants(QString& text, const uc::Cp& cp)
+    {
+        static constexpr int N_FILL = 6;
+        static constexpr int N_ROT = 16;
+        // Load font
+        auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::SIGNWRITING)];
+        auto families = font.familiesComma(cp.subj);
+        // Start table
+        text += "<table class='tab'>";
+        // Draw head
+        text += "<tr><th>&nbsp;</th>";
+        for (int col = 0; col < N_FILL; ++col) {
+            text += "<th>";
+            if (col == 0) {
+                str::append(text, u8"–");   // short dash
+            } else {
+                text += 'F';
+                text += static_cast<char>('1' + col);
+            }
+            text += "</th>";
+        }
+        for (int row = 0; row < N_ROT; ++row) {
+            // Draw vert header
+            text += "<tr><th>";
+            if (row == 0) {
+                str::append(text, u8"–");   // short dash
+            } else {
+                text += 'R';
+                str::append(text, row + 1);
+            }
+            text += "</th>";
+            // Draw cell
+            for (int col = 0; col < N_FILL; ++col) {
+                text += "<td style='border-collapse:collapse; font-size:24pt; font-family:";
+                text += families;
+                text += ";'>";
+                str::append(text, cp.subj.ch32());
+                if (col != 0)
+                    str::append(text, static_cast<char32_t>(0x1DA9A + col));
+                if (row != 0)
+                    str::append(text, static_cast<char32_t>(0x1DAA0 + row));
+            }
+        }
+        // Draw chars
+        text += "</table><tr>";
+    }
+
+    template <auto... Params>
+    inline bool isIn(auto what) {
+        return ((what == Params) || ...);
+    }
+
 }   // anon namespace
 
 
@@ -917,6 +969,8 @@ QString mywiki::buildHtml(
             //  Control char description
             str::append(text, u8"<h2>Об управляющих символах</h2>");
             appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
+        } else if (cp.ecScript == uc::EcScript::Sgnw && cp.subj.val() < 0x1DA9B) {
+            appendSgnwVariants(text, cp);
         } else if (!blk.locDescription.empty()) {
             // Block description
             str::append(text, u8"<h2>О блоке</h2>");
@@ -928,7 +982,7 @@ QString mywiki::buildHtml(
         }
     }
     return text;
-}
+}   // buildHtml
 
 
 void mywiki::appendMissingCharInfo(QString& text, char32_t code)
