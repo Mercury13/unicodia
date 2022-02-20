@@ -3,6 +3,7 @@
 #include <fstream>
 #include <charconv>
 #include <deque>
+#include <unordered_set>
 
 // PugiXML
 #include "pugixml.hpp"
@@ -343,6 +344,47 @@ std::string_view rqTagMinus(
 }
 
 
+struct EmojiData
+{
+    std::unordered_set<char32_t> vs16;
+};
+
+
+EmojiData loadEmoji()
+{
+    std::ifstream is("emoji-test.txt");
+    if (!is.is_open())
+        throw std::logic_error("Cannot open emoji-test.txt");
+
+    Fix1d<char32_t, 20> codes;
+
+    EmojiData r;
+    std::string s;
+    while (std::getline(is, s)) {
+        std::string_view mainLine{str::trimSv(s)}, qualType{}, comment{};
+        if (auto pPound = mainLine.find('#');
+                pPound != std::string_view::npos) {
+            comment = str::trimSv(mainLine.substr(pPound + 1));
+            mainLine = str::trimSv(mainLine.substr(0, pPound));
+        }
+        if (auto pColon = mainLine.find(';');
+                pColon != std::string_view::npos) {
+            qualType = str::trimSv(mainLine.substr(pColon + 1));
+            mainLine = str::trimSv(mainLine.substr(0, pColon));
+        }
+        auto hexCodes = str::splitSv(mainLine, ' ');
+        auto nCodes = hexCodes.size();
+        for (size_t i = 0; i < nCodes; ++i) {
+            codes[i] = fromHex(hexCodes[i]);
+        }
+        if (nCodes == 2 && codes[1] == 0xFE0F) {
+            r.vs16.insert(codes[0]);
+        }
+    }
+    return r;
+}
+
+
 int main()
 {
     ///// Loader ///////////////////////////////////////////////////////////////
@@ -393,8 +435,15 @@ int main()
     }
 
     std::cout << "OK" << std::endl;
-    std::cout << "File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars, "
+    std::cout << "  File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars, "
               << nEntities << " entities." << std::endl;
+
+    ///// Emoji ////////////////////////////////////////////////////////////////
+
+    std::cout << "Loading emoji..." << std::flush;
+    EmojiData ed = loadEmoji();
+    std::cout << "OK" << std::endl;
+    std::cout << "  Found " << ed.vs16.size() << " VS16 emoji." << std::endl;
 
     ///// Open output file /////////////////////////////////////////////////////
 
