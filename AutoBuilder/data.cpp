@@ -1032,6 +1032,8 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Runic Belgthor symbol")
     EX("Ethiopic combining gemination and vowel length mark")   // False alarm here
     EX("Ethiopic combining vowel length mark")                  // Same
+    EX("National digit shapes")
+    EX("Nominal digit shapes")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
