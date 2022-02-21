@@ -69,6 +69,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Math Cambria (fall to next)
     { FNAME_NOTOMATH },                                                         // Math
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
@@ -4484,7 +4485,8 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. "
                     "Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси."
                 "<p>Наиболее распространённые из таких обозначений находятся в базовой плоскости в разделе [[pk:2100|буквоподобных символов]]. "
-                    "С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами." },
+                    "С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами.",
+            EcScript::NONE, EcFont::MATH_CAMBRIA },
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting", u8"Жестовое письмо Саттон", {}, EcScript::Sgnw },
