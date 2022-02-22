@@ -108,7 +108,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
     { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty }, // Chakma
-    { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Cham
+    { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, "padding-bottom:12%"_sty }, // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -883,7 +883,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Чамский", u8"IV век",
         u8"чамский ''(Вьетнам, Камбоджа, 320 тыс. на 2008)''",
-        u8"Чамская письменность произошла из [[ps:Brah|брахми]], и слоги по умолчанию заканчиваются гласной «а»."
+        u8"Чамская письменность произошла из [[ps:Brah|брахми]], и слоги по умолчанию заканчиваются гласной «а». "
                 "Чтобы добавить другую гласную, дописывается огласовка. "
                 "Знака «[[pt:virama|вирама]]» (убрать гласную) нет, вместо этого конечные согласные: "
                     "{{sm|ꨆ}}=ка, {{sm|ꨆꨯ}}=ко, {{sm|ꨆꨯꩃ}}=конг."
