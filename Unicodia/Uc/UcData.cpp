@@ -5651,10 +5651,12 @@ std::u8string_view uc::oldCompNames[] {
 #define REP_4(x) x,x,x,x
 #define REP_5(x) x,x,x,x,x
 #define REP_6(x) x,x,x,x,x,x
+#define REP_7(x) x,x,x,x,x,x,x
 #define REP_8(x) REP_4(x),REP_4(x)
 #define REP_10(x) REP_4(x),REP_4(x),x,x
 #define REP_11(x) REP_4(x),REP_4(x),REP_3(x)
 #define REP_12(x) REP_4(x),REP_4(x),REP_4(x)
+#define REP_13(x) REP_12(x),x
 #define REP_16(x) REP_4(x),REP_4(x),REP_4(x),REP_4(x)
 #define REP_32(x) REP_16(x),REP_16(x)
 #define REP_48(x) REP_16(x),REP_16(x),REP_16(x)
@@ -5723,6 +5725,216 @@ namespace {
     };
 
     static_assert(std::size(oldCompData) == 0xFA);                              // FA first free
+
+    // Sutton SignWriting data
+    constexpr int N_FILL = 6;
+    constexpr int N_ROT = 16;
+    constexpr int SHIFT_FILL = 0;
+    constexpr int SHIFT_FILLPLUS = SHIFT_FILL + N_FILL;
+    constexpr int SHIFT_ROT = SHIFT_FILLPLUS;
+    constexpr int SHIFT_ROTPLUS = SHIFT_ROT + 16;
+    constexpr int SHIFT_MISC = SHIFT_ROTPLUS;
+    enum class Sw {
+        F1  = 1 << (SHIFT_FILL + 0),
+        F2  = 1 << (SHIFT_FILL + 1),
+        F3  = 1 << (SHIFT_FILL + 2),
+        F4  = 1 << (SHIFT_FILL + 3),
+        F5  = 1 << (SHIFT_FILL + 4),
+        F6  = 1 << (SHIFT_FILL + 5),
+        F_TO_2 = F1 | F2,
+        F_TO_3 = F1 | F2 | F3,
+        F_TO_4 = F1 | F2 | F3 | F4,
+        F_TO_5 = F1 | F2 | F3 | F4 | F5,
+        F_ALL = F1 | F2 | F4 | F4 | F5 | F6,
+        R1  = 1 << (SHIFT_ROT + 0),
+        R2  = 1 << (SHIFT_ROT + 1),
+        R3  = 1 << (SHIFT_ROT + 2),
+        R4  = 1 << (SHIFT_ROT + 3),
+        R5  = 1 << (SHIFT_ROT + 4),
+        R6  = 1 << (SHIFT_ROT + 5),
+        R7  = 1 << (SHIFT_ROT + 6),
+        R8  = 1 << (SHIFT_ROT + 7),
+        R9  = 1 << (SHIFT_ROT + 8),
+        R10 = 1 << (SHIFT_ROT + 9),
+        R11 = 1 << (SHIFT_ROT + 10),
+        R12 = 1 << (SHIFT_ROT + 11),
+        R13 = 1 << (SHIFT_ROT + 12),
+        R14 = 1 << (SHIFT_ROT + 13),
+        R15 = 1 << (SHIFT_ROT + 14),
+        R16 = 1 << (SHIFT_ROT + 15),
+        R_TO_2 = R1 | R2,
+        R_TO_4 = R1 | R2 | R3 | R4,
+        R_TO_6 = R1 | R2 | R3 | R4 | R5 | R6,
+        R_TO_8 = R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8,
+        R_ALL = ((1 << N_ROT) - 1) << SHIFT_ROT,
+        R_124568 = R1 | R2 | R4 | R5 | R6 | R8,
+        R_XC_3_7_11_15 = R_ALL & ~(R3 | R7 | R11 | R15),
+        ALL = F_ALL | R_ALL,
+        NO_TRANS = 1 << (SHIFT_MISC + 0),
+        SIMPLE = F1 | R1 | NO_TRANS,
+    };
+    DEFINE_ENUM_OPS(Sw)
+
+    constinit Flags<Sw> signWritingData[] {
+        REP_16(Sw::ALL),            // 1D80*
+        REP_16(Sw::ALL),            // 1D81*
+        REP_16(Sw::ALL),            // 1D82*
+        REP_16(Sw::ALL),            // 1D83*
+        REP_13(Sw::ALL),            // 1D840..4C
+          Sw::F2 | Sw::R_ALL,       // 1D84D
+          Sw::ALL,                  // 1D84E
+          Sw::F2 | Sw::R_ALL,       // 1D84F
+        Sw::ALL,                    // 1D850
+          Sw::F2 | Sw::R_ALL,       // 1D851
+          REP_6(Sw::ALL),           // 1D852..57
+          REP_3(Sw::ALL),           // 1D858..5A
+          Sw::F_TO_4 | Sw::R_ALL,   // 1D85B
+          Sw::F2 | Sw::R_ALL,       // 1D85C
+          Sw::ALL,                  // 1D85D
+          Sw::F2 | Sw::R_ALL,       // 1D85E
+          Sw::ALL,                  // 1D85F
+        REP_16(Sw::ALL),            // 1D86*
+        REP_16(Sw::ALL),            // 1D87*
+        REP_16(Sw::ALL),            // 1D88*
+        REP_16(Sw::ALL),            // 1D89*
+        REP_16(Sw::ALL),            // 1D8A*
+        REP_16(Sw::ALL),            // 1D8B*
+        REP_16(Sw::ALL),            // 1D8C*
+        REP_16(Sw::ALL),            // 1D8D*
+        REP_16(Sw::ALL),            // 1D8E*
+        REP_6(Sw::ALL),             // 1D8F0..F5
+          Sw::F2 | Sw::R_ALL,       // 1D8F6
+          Sw::ALL,                  // 1D8F7
+          REP_8(Sw::ALL),           // 1D8F8..FF
+        REP_4(Sw::ALL),             // 1D900..03
+          Sw::F2 | Sw::R_ALL,       // 1D904
+          Sw::SIMPLE,               // 1D905
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D906
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D907
+          Sw::SIMPLE,               // 1D908
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D909
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D90A
+          Sw::SIMPLE,               // 1D90B
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D90C
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D90D
+          Sw::SIMPLE,               // 1D90E
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D90F
+        Sw::F_TO_2 | Sw::R_TO_4,    // 1D910
+          Sw::SIMPLE,               // 1D911
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D912
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D913
+          Sw::F_TO_2 | Sw::R_TO_8,  // 1D914
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D915
+          Sw::SIMPLE,               // 1D916
+          Sw::SIMPLE,               // 1D917
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D918
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D919
+          Sw::ALL,                  // 1D91A
+          Sw::SIMPLE,               // 1D91B
+          Sw::SIMPLE,               // 1D91C
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D91D
+          Sw::F_TO_2 | Sw::R_TO_4,  // 1D91E
+          Sw::ALL,                  // 1D91F
+        Sw::F_TO_2 | Sw::R_TO_8,    // 1D920
+          REP_2(Sw::F_TO_5 | Sw::R_TO_8), // 1D921,22
+          REP_2(Sw::ALL),           // 1D923,24
+          REP_3(Sw::F_TO_4 | Sw::R_TO_8), // 1D925..27
+          REP_2(Sw::F_TO_5 | Sw::R_TO_8), // 1D928,29
+          REP_5(Sw::F_TO_4 | Sw::R_TO_8), // 1D92A..2E
+          Sw::F_TO_3 | Sw::R_TO_8,  // 1D92F
+        Sw::F_TO_3 | Sw::R_TO_8,    // 1D930
+          REP_3(Sw::F_TO_3 | Sw::R_ALL), // 1D931..33
+          REP_2(Sw::F_TO_3 | Sw::R_TO_8), // 1D934,35
+          REP_2(Sw::F_TO_3 | Sw::R_ALL), // 1D936,37
+          REP_8(Sw::F_TO_4 | Sw::R_ALL), // 1D938..3F
+        REP_11(Sw::F_TO_4 | Sw::R_ALL), // 1D940..4A
+          REP_3(Sw::ALL),           // 1D94B..4D
+          REP_2(Sw::F_ALL | Sw::R_XC_3_7_11_15), // 1D94E,4F
+        Sw::F_ALL | Sw::R_XC_3_7_11_15, // 1D950
+          Sw::F_TO_3 | Sw::R_TO_8,  // 1D951
+          REP_3(Sw::F_TO_3 | Sw::R_ALL), // 1D952..54
+          REP_3(Sw::F_TO_5 | Sw::R_124568), // 1D955..57
+          REP_5(Sw::F_TO_5 | Sw::R_124568), // 1D958..5C
+          REP_3(Sw::F_TO_4 | Sw::R_124568), // 1D95D..5F
+        REP_5(Sw::F_TO_4 | Sw::R_124568), // 1D960..64
+          REP_3(Sw::F_TO_4 | Sw::R_TO_8), // 1D965..67
+          REP_2(Sw::F_TO_4 | Sw::R_TO_8), // 1D968,69
+          REP_2(Sw::F_TO_3 | Sw::R_TO_8), // 1D96A,6B
+          REP_3(Sw::F_TO_3 | Sw::R_ALL), // 1D96C..6E
+          Sw::F_TO_3 | Sw::R_TO_8,  // 1D96F
+        Sw::F_TO_3 | Sw::R_TO_8,    // 1D970
+          REP_2(Sw::F_TO_3 | Sw::R_ALL), // 1D971,72
+          REP_5(Sw::F_TO_4 | Sw::R_ALL), // 1D973..77
+          REP_8(Sw::F_TO_4 | Sw::R_ALL), // 1D978..7F
+        Sw::F_TO_4 | Sw::R_ALL,     // 1D980
+          REP_6(Sw::ALL),           // 1D981..86
+          Sw::F_TO_3 | Sw::R_TO_8,  // 1D987
+          REP_8(Sw::F_TO_4 | Sw::R_ALL), // 1D988..8F
+        REP_16(Sw::F_TO_4 | Sw::R_ALL), // 1D99*
+        REP_2(Sw::F_TO_4 | Sw::R_ALL),  // 1D9A0,A1
+          REP_3(Sw::ALL),           // 1D9A2..A4
+          Sw::F_TO_5 | Sw::R_ALL,   // 1D9A5
+          REP_2(Sw::F_TO_3 | Sw::R_TO_4), // 1D9A6,A7
+          REP_8(Sw::F_TO_3 | Sw::R_TO_4), // 1D9A8..AF
+        REP_4(Sw::F_TO_3 | Sw::R_TO_4), // 1D9B0..B3
+          REP_3(Sw::F_TO_3 | Sw::R_XC_3_7_11_15), // 1D9B4..B6
+          Sw::F_ALL | Sw::R_TO_8,   // 1D9B7
+          Sw::F_ALL | Sw::R_TO_8,   // 1D9B8
+          REP_7(Sw::F_TO_4 | Sw::R_TO_8), // 1D9B9..BF
+        REP_3(Sw::F_TO_4 | Sw::R_TO_8), // 1D9C0..C2
+          REP_5(Sw::F_ALL | Sw::R_TO_8), // 1D9C3..C7
+          REP_8(Sw::F_TO_4 | Sw::R_TO_8), // 1D9C8..CF
+        REP_2(Sw::F_TO_4 | Sw::R_TO_8), // 1D9D0,D1
+          REP_3(Sw::F_ALL | Sw::R_TO_8), // 1D9D2..D4
+          REP_3(Sw::F_TO_4 | Sw::R_ALL), // 1D9D5..D7
+          REP_7(Sw::F_TO_4 | Sw::R_ALL), // 1D9D8..DE
+          Sw::ALL,                  // 1D9DF
+        REP_2(Sw::ALL),             // 1D9E0,E1
+          Sw::F_TO_5 | Sw::R_ALL,   // 1D9E2
+          REP_4(Sw::F_TO_3 | Sw::R_ALL), // 1D9E3..E6
+          Sw::ALL,                  // 1D9E7
+          REP_5(Sw::ALL),           // 1D9E8..EC
+          REP_2(Sw::F_TO_3 | Sw::R_ALL), // 1D9ED,EE
+          Sw::F_TO_3 | Sw::R_TO_6,  // 1D9EF
+        Sw::F_TO_3 | Sw::R_TO_6,    // 1D9F0
+          REP_4(Sw::F_TO_2 | Sw::R_TO_8), // 1D9F1..F4
+          REP_2(Sw::F_ALL | Sw::R_TO_8), // 1D9F5,F6
+          Sw::F_TO_4 | Sw::R1,      // 1D9F7
+          Sw::F1 | Sw::R_TO_8,      // 1D9F8
+          REP_2(Sw::F_TO_4 | Sw::R1), // 1D9F9,FA
+          REP_4(Sw::F1 | Sw::R_TO_8), // 1D9FB..FE
+          Sw::F_TO_4 | Sw::R_TO_4,  // 1D9FF
+        Sw::F1 | Sw::R_TO_8,        // 1DA00
+          Sw::F_ALL | Sw::R_TO_8,   // 1DA01
+          Sw::F_ALL | Sw::R_TO_2,   // 1DA02
+          Sw::F_ALL | Sw::R_TO_8,   // 1DA03
+          REP_3(Sw::F_TO_2 | Sw::R_TO_4), // 1DA04..06
+          Sw::F_ALL | Sw::R_TO_2,   // 1DA07
+          REP_2(Sw::F_TO_3 | Sw::R_ALL), // 1DA08,09
+          REP_6(Sw::F_ALL | Sw::R1), // 1DA0A..0F
+        Sw::F_ALL | Sw::R1,         // 1DA10
+          REP_3(Sw::F_TO_2 | Sw::R1), // 1DA11..13
+          REP_4(Sw::F_TO_5 | Sw::R1), // 1DA14..17
+          REP_8(Sw::F_TO_5 | Sw::R1), // 1DA18..1F
+        Sw::F_TO_5 | Sw::R1,        // 1DA20
+          REP_6(Sw::F_TO_4 | Sw::R_TO_8), // 1DA21..26
+          Sw::F_TO_3 | Sw::R_ALL,   // 1DA27
+          REP_2(Sw::F_TO_3 | Sw::R_ALL), // 1DA28,29
+          REP_3(Sw::F_TO_5 | Sw::R1), // 1DA2A..2C
+          REP_3(Sw::F_TO_4 | Sw::R1), // 1DA2D..2F
+        Sw::F_TO_5 | Sw::R1,        // 1DA30
+          REP_4(Sw::F_TO_2 | Sw::R1), // 1DA31..34
+          REP_2(Sw::F_ALL | Sw::R1), // 1DA35,36
+          REP_2(Sw::F_TO_2 | Sw::R_TO_8), // 1DA37,38
+          REP_2(Sw::F_ALL | Sw::R1), // 1DA39,3A
+          REP_5(Sw::F_TO_2 | Sw::R1), // 1DA3B..3F
+        REP_16(Sw::F_TO_2 | Sw::R1), // 1DA4*
+        REP_6(Sw::F_TO_2 | Sw::R1), // 1DA50..55
+          REP_3(Sw::F_ALL | Sw::R1), // 1DA56..58
+          REP_5(Sw::F_TO_2 | Sw::R_TO_8), // 1DA59..5D
+    };
+
+    static_assert(std::size(signWritingData) == 0x25E);
 
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
