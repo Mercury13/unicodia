@@ -823,6 +823,13 @@ namespace uc {
 
     QFont funkyFont(FontPlace place, int size, char32_t trigger);
 
+    class SwInfo
+    {
+        SwInfo get(char32_t cp);
+    private:
+        uint32_t flags = 0;
+    };
+
 }   // namespace uc
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)

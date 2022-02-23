@@ -5766,11 +5766,14 @@ namespace {
         R_TO_4 = R1 | R2 | R3 | R4,
         R_TO_6 = R1 | R2 | R3 | R4 | R5 | R6,
         R_TO_8 = R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8,
+        R_TO_9 = R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9,
         R_ALL = ((1 << N_ROT) - 1) << SHIFT_ROT,
         R_124568 = R1 | R2 | R4 | R5 | R6 | R8,
         R_XC_3_7_11_15 = R_ALL & ~(R3 | R7 | R11 | R15),
         ALL = F_ALL | R_ALL,
-        NO_TRANS = 1 << (SHIFT_MISC + 0),
+        // Misc flags
+        NO_TRANS    = 1 << (SHIFT_MISC + 0),
+        FINEGRAINED = 1 << (SHIFT_MISC + 1),
         SIMPLE = F1 | R1 | NO_TRANS,
     };
     DEFINE_ENUM_OPS(Sw)
@@ -5932,9 +5935,35 @@ namespace {
         REP_6(Sw::F_TO_2 | Sw::R1), // 1DA50..55
           REP_3(Sw::F_ALL | Sw::R1), // 1DA56..58
           REP_5(Sw::F_TO_2 | Sw::R_TO_8), // 1DA59..5D
+          Sw::F_TO_4 | Sw::R_TO_8 | Sw::FINEGRAINED, // 1DA5E
+          Sw::F_ALL | Sw::R1,       // 1DA5F
+        Sw::F_TO_4 | Sw::R1,        // 1DA60
+          REP_7(Sw::F_ALL | Sw::R1), // 1DA61..67
+          REP_2(Sw::F_TO_3 | Sw::R_TO_8), // 1DA68,69
+          Sw::F_ALL | Sw::R1,       // 1DA6A
+          REP_2(Sw::F_TO_4 | Sw::R1), // 1DA6B,6C
+          Sw::F_TO_3 | Sw::R_TO_4,  // 1DA6D
+          Sw::F_TO_5 | Sw::R_TO_6,  // 1DA6E
+          Sw::ALL,                  // 1DA6F
+        REP_2(Sw::ALL),             // 1DA70,71
+          REP_3(Sw::F_TO_4 | Sw::R_TO_4), // 1DA72..74
+          Sw::F_ALL | Sw::R_TO_8,   // 1DA75
+          Sw::F1 | Sw::R_ALL,       // 1DA76
+          REP_7(Sw::F_TO_2 | Sw::R_ALL), // 1DA77..7D
+          Sw::ALL,                  // 1DA7E
+          Sw::F_TO_4 | Sw::R_TO_8,  // 1DA7F
+        Sw::F_TO_4 | Sw::R_TO_8,    // 1DA80
+          Sw::F_TO_2 | Sw::R_TO_8,  // 1DA81
+          Sw::F1 | Sw::R_TO_9,      // 1DA82
+          Sw::F1 | Sw::R_TO_8,      // 1DA83
+          Sw::F_ALL | Sw::R_TO_8,   // 1DA84
+          Sw::F_TO_5 | Sw::R_TO_8,  // 1DA85
+          Sw::ALL,                  // 1DA86
+          REP_2(Sw::F_TO_4 | Sw::R_TO_8), // 1DA87,88
+          REP_3(Sw::F1 | Sw::R_TO_8), // 1DA89,8B
     };
 
-    static_assert(std::size(signWritingData) == 0x25E);
+    static_assert(std::size(signWritingData) == 0x28C);
 
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
