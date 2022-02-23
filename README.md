@@ -30,7 +30,6 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Translate into English.
 * Emoji tools: ligatures, more comprehensive reference.
 * Better CJK reference.
-* Sutton SignWriting tool.
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.

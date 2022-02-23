@@ -741,51 +741,71 @@ namespace {
         str::append(text, u8"\u00A0</span>");
     }
 
-    void appendSgnwVariants(QString& text, const uc::Cp& cp)
+    void appendSgnwVariants(QString& text, const uc::SwInfo& sw)
     {
-        static constexpr int N_FILL = 6;
-        static constexpr int N_ROT = 16;
-        // Load font
-        auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::SIGNWRITING)];
-        auto families = font.familiesComma(cp.subj);
+        if (!sw)
+            return;
+
+        if (sw.isSimple()) {
+            str::append(text, u8"<h4>Заливок и поворотов нет.</h4>");
+            return;
+        }
+
         // Start table
-        text += "<table class='tab'>";
+        text += "<table class='swt'>";
         // Draw head
         text += "<tr><th>&nbsp;</th>";
-        for (int col = 0; col < N_FILL; ++col) {
-            text += "<th>";
-            if (col == 0) {
-                str::append(text, u8"–");   // short dash
-            } else {
-                text += 'F';
-                text += static_cast<char>('1' + col);
+        for (int col = 0; col < uc::SwInfo::N_FILL; ++col) {
+            if (sw.hasFill0(col)) {
+                text += "<th>";
+                if (col == 0) {
+                    str::append(text, u8"–");   // short dash
+                } else {
+                    text += 'F';
+                    text += static_cast<char>('1' + col);
+                }
+                text += "</th>";
             }
-            text += "</th>";
         }
-        for (int row = 0; row < N_ROT; ++row) {
-            // Draw vert header
-            text += "<tr><th>";
-            if (row == 0) {
-                str::append(text, u8"–");   // short dash
-            } else {
-                text += 'R';
-                str::append(text, row + 1);
-            }
-            text += "</th>";
-            // Draw cell
-            for (int col = 0; col < N_FILL; ++col) {
-                text += "<td style='border-collapse:collapse; font-size:24pt; font-family:";
-                text += families;
-                text += ";'>";
-                str::append(text, cp.subj.ch32());
-                if (col != 0)
-                    str::append(text, static_cast<char32_t>(0x1DA9A + col));
-                if (row != 0)
-                    str::append(text, static_cast<char32_t>(0x1DAA0 + row));
-            }
+        for (int row = 0; row < uc::SwInfo::N_ROT; ++row) {
+            if (sw.hasRot0(row)) {
+                // Draw vert header
+                text += "<tr><th>";
+                if (row == 0) {
+                    str::append(text, u8"–");   // short dash
+                } else {
+                    text += 'R';
+                    str::append(text, row + 1);
+                }
+                text += "</th>";
+                // Draw cell
+                for (int col = 0; col < uc::SwInfo::N_FILL; ++col) {
+                    if (sw.hasFill0(col)) {
+                        char32_t cp = sw.cp();
+                        auto copyable = QString::fromUcs4(&cp, 1);
+                        if (col != 0)
+                            str::append(copyable, static_cast<char32_t>(0x1DA9A + col));
+                        if (row != 0)
+                            str::append(copyable, static_cast<char32_t>(0x1DAA0 + row));
+                        text += "<td><a href='c:";
+                            text += copyable;
+                            text += "'>";
+                        if (auto bc = sw.baseChar(col, row))
+                            str::append(text, bc);
+                        text += copyable;
+                        text += "</a>";
+                    }
+                }
+            }   // if hasRot0
         }
         // Draw chars
         text += "</table><tr>";
+
+        if (auto note = sw.note(); !note.empty()) {
+            text += "<h4>* ";
+            str::append(text, note);
+            text += "</h4>";
+        }
     }
 
     template <auto... Params>
@@ -796,10 +816,22 @@ namespace {
 }   // anon namespace
 
 
-void mywiki::appendStylesheet(QString& text)
+void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 {
     str::append(text, "<style>");
     str::append(text, STYLES_WIKI);
+
+    // SignWriting: add more styles
+    if (hasSignWriting) {
+        auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::SIGNWRITING)];
+        text += ".swt { border-collapse:collapse; margin:0.8ex 0; } "
+                ".swt td { border:1px solid #CCC; padding:0 2px; font-family:";
+            text += font.familiesComma(NO_TRIGGER);
+        text += "; } "
+                ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
+                ".swt th { vertical-align:middle; } ";
+    }
+
     str::append(text, "</style>");
 }
 
@@ -811,7 +843,9 @@ QString mywiki::buildHtml(
     char buf[30];
     QString text;
 
-    appendStylesheet(text);
+    auto sw = uc::SwInfo::get(cp.subj);
+
+    appendStylesheet(text, sw);
     str::append(text, "<h1>");
     QString name = cp.viewableName();
     appendCopyable(text, name, "bigcopy");
@@ -831,6 +865,8 @@ QString mywiki::buildHtml(
     if (cp.isVs16Emoji()) {
         str::append(text, u8"<h4>Графическое <a href='pt:emoji' class='popup'>эмодзи</a> требует U+FE0F (=VS16)</h4>"sv);
     }
+
+    appendSgnwVariants(text, sw);
 
     {   // Info box
         str::append(text, "<p>");
@@ -978,8 +1014,6 @@ QString mywiki::buildHtml(
             //  Control char description
             str::append(text, u8"<h2>Об управляющих символах</h2>");
             appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
-        } else if (cp.ecScript == uc::EcScript::Sgnw && cp.subj.val() < 0x1DA9B) {
-            appendSgnwVariants(text, cp);
         } else if (!blk.locDescription.empty()) {
             // Block description
             str::append(text, u8"<h2>О блоке</h2>");

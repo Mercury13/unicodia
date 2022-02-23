@@ -823,11 +823,29 @@ namespace uc {
 
     QFont funkyFont(FontPlace place, int size, char32_t trigger);
 
-    class SwInfo
-    {
-        SwInfo get(char32_t cp);
+    // Opaque structure that holds Sutton SignWriting character info.
+    class SwInfo {
+    public:
+        static constexpr int N_FILL = 6;
+        static constexpr int N_ROT = 16;
+
+        /// Pseudo-ctor
+        static SwInfo get(char32_t cp);
+
+        char32_t cp() const { return fCp; }
+        /// @return [+] It is actually a SignWriting character, but has no variations
+        bool isSimple() const;
+        bool hasSmth() const { return flags; }
+        /// @return [+] has at least one char of fill, 0-based
+        bool hasFill0(int i) const;
+        /// @return [+] has at least one char of rotation, 0-based
+        bool hasRot0(int i) const;
+        operator bool() const { return hasSmth(); }
+        char32_t baseChar(int fill, int rot) const;
+        std::u8string_view note() const;
     private:
         uint32_t flags = 0;
+        char32_t fCp = 0;
     };
 
 }   // namespace uc
