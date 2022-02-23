@@ -407,9 +407,9 @@ namespace {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
         } else if (name == "noto"sv) {
             str::append(s, "<font face='");
-            auto& fNoto = uc::fontInfo[static_cast<int>(uc::EcFont::NOTO)];
-            fNoto.load(NO_TRIGGER);
-            s += fNoto.familiesComma(NO_TRIGGER);
+            auto& fnNoto = uc::fontInfo[static_cast<int>(uc::EcFont::NOTO)];
+            fnNoto.load(NO_TRIGGER);
+            s += fnNoto.familiesComma(NO_TRIGGER);
             str::append(s, '\'');
             str::append(s, '>');
             str::append(s, x.safeGetV(1, {}));
