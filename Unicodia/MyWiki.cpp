@@ -2,6 +2,7 @@
 
 // Qt
 #include <QWidget>
+#include <QApplication>
 
 // Libs
 #include "u_Strings.h"
@@ -822,13 +823,17 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
     str::append(text, STYLES_WIKI);
 
     // SignWriting: add more styles
+    auto color = QApplication::palette().windowText().color();
+    color.setAlpha(20);
     if (hasSignWriting) {
         auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::SIGNWRITING)];
         text += ".swt { border-collapse:collapse; margin:0.8ex 0; } "
-                ".swt td { border:1px solid #CCC; padding:0 2px; font-family:";
+                ".swt td { border:1px solid ";
+            text += color.name(QColor::HexArgb);
+            text += "; padding:0 2px; font-family:";
             text += font.familiesComma(NO_TRIGGER);
-        text += "; } "
-                ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
+            text += "; } ";
+        text += ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
                 ".swt th { vertical-align:middle; } ";
     }
 
