@@ -405,6 +405,15 @@ namespace {
             s += QString::number(uc::N_CPS);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
+        } else if (name == "noto"sv) {
+            str::append(s, "<font face='");
+            auto& fNoto = uc::fontInfo[static_cast<int>(uc::EcFont::NOTO)];
+            fNoto.load(NO_TRIGGER);
+            s += fNoto.familiesComma(NO_TRIGGER);
+            str::append(s, '\'');
+            str::append(s, '>');
+            str::append(s, x.safeGetV(1, {}));
+            str::append(s, "</font>");
         } else {
             wiki::appendHtml(s, x[0]);
         }
