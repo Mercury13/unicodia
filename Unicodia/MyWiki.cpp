@@ -800,7 +800,7 @@ namespace {
             }   // if hasRot0
         }
         // Draw chars
-        text += "</table><tr>";
+        text += "</table>";
 
         if (auto note = sw.note(); !note.empty()) {
             text += "<h4>* ";
