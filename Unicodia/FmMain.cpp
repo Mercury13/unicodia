@@ -1638,10 +1638,29 @@ void FmMain::cjkSetCollapseState(bool x)
 }
 
 
+void FmMain::preloadVisibleFonts()
+{
+    auto vport = ui->tableChars->viewport();
+    auto vheader = ui->tableChars->verticalHeader();
+    auto rwTop = vheader->logicalIndexAt(0);
+    auto rwBottom = vheader->logicalIndexAt(vport->height() - 1);
+    int nCols = model.columnCount();
+    for (auto row = rwTop; row <= rwBottom; ++row) {
+        for (int col = 0; col < nCols; ++col) {
+            auto index = model.index(row, col);
+            if (auto cp = model.charAt(index)) {
+                (void)cp->font();
+            }
+        }
+    }
+}
+
+
 template<>
 void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
 {
     selectChar<SelectMode::NONE>(code);
+    preloadVisibleFonts();
     timerSetFocus->start();
 }
 

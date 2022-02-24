@@ -113,7 +113,7 @@ public:
     CharsModel(QWidget* aOwner);
 
     int rowCount(const QModelIndex& = {}) const override;
-    int columnCount(const QModelIndex&) const override;
+    int columnCount(const QModelIndex& = {}) const override;
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
@@ -282,6 +282,7 @@ private:
     void showSearchError(const QString& text);
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
+    void preloadVisibleFonts();
 
     // mywiki::Gui
     void popupAtAbs(
