@@ -18,6 +18,7 @@
 #include <QFile>
 #include <QDesktopServices>
 #include <QUrl>
+#include <QTimer>
 
 // Misc
 #include "u_Strings.h"
@@ -1171,8 +1172,11 @@ FmMain::FmMain(QWidget *parent)
     initAbout();
 
     // Set focus defered
-    connect(this, &This::setFocusDefered, this, &This::slotSetFocusDefered,
-            Qt::QueuedConnection);
+        // Windows timer is low-priority, even after paint
+    timerSetFocus = std::make_unique<QTimer>(this);
+    timerSetFocus->setSingleShot(true);
+    timerSetFocus->setInterval(5);
+    connect(timerSetFocus.get(), &QTimer::timeout, this, &This::slotSetFocusDefered);
 
     // Select index
     ui->tableChars->setFocus();
@@ -1590,9 +1594,9 @@ void FmMain::labelLinkActivated(const QString& link)
 }
 
 
-void FmMain::slotSetFocusDefered(QWidget* wi)
+void FmMain::slotSetFocusDefered()
 {
-    wi->setFocus();
+    ui->tableChars->setFocus();
 }
 
 
@@ -1638,7 +1642,7 @@ template<>
 void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
 {
     selectChar<SelectMode::NONE>(code);
-    emit setFocusDefered(ui->tableChars);
+    timerSetFocus->start();
 }
 
 

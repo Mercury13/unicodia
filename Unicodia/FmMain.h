@@ -263,6 +263,7 @@ private:
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;
+    std::unique_ptr<QTimer> timerSetFocus;
     QFont fontBig;
     char32_t shownCp = uc::NO_CHAR;
 
@@ -290,8 +291,6 @@ private:
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text) override;    
     void followUrl(const QString& x) override;
-signals:
-    void setFocusDefered(QWidget* wi);
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();
@@ -301,7 +300,7 @@ private slots:
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
     void showTofuStats();
-    void slotSetFocusDefered(QWidget* wi);
+    void slotSetFocusDefered();
     void openSearch();
     void closeSearch();
     void startSearch();
