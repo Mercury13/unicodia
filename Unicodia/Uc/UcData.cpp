@@ -272,6 +272,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // Tibetan
+    //{ "BabelStoneTibetanSlim.ttf", Ffg::CELL_SMALLER, "padding-bottom:15%;"_sty }, // Test: Babelstone Slim
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts
