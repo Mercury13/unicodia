@@ -83,12 +83,14 @@ protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;
 private:
+    QWidget* fOwner;
     ClickableLabel* lbText;    
     QRect fLastAbsRect;
     QWidget* fLastWidget;
 
     void popupAtY(
-            const QRect& absRect, const QRect& screenRect,
+            const QRect& hotspotAbsRect,
+            const QRect& screenRect,
             int y);
     FmPopup& popupAtScreen(QScreen* screen, const QRect& absRect);
 };

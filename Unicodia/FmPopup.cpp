@@ -10,7 +10,10 @@
 #include <QGraphicsDropShadowEffect>
 
 namespace {
-    enum class PopupMode { NATIVE, ARTIFICIAL };
+    enum class PopupMode {
+        NATIVE,         ///< Use native popup window (default)
+        ARTIFICIAL      ///< Simulate popup with other means
+    };
     constexpr auto popupMode = PopupMode::NATIVE;
 
     constexpr auto WF_POPUP = (popupMode == PopupMode::ARTIFICIAL)
@@ -85,8 +88,11 @@ bool ClickableLabel::event(QEvent* ev)
 ///// FmPopup //////////////////////////////////////////////////////////////////
 
 
-FmPopup::FmPopup(QWidget* owner, const char* color) : Super(owner, WF_POPUP)
+FmPopup::FmPopup(QWidget* owner, const char* color)
+    : Super(owner, WF_POPUP), fOwner(owner)
 {
+    if (!owner)
+        throw std::invalid_argument("[FmPopup] Need owner widget");
     auto vl = new QVBoxLayout(this);
     setLayout(vl);
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
@@ -126,16 +132,21 @@ FmPopup& FmPopup::setText(const QString& x)
 }
 
 
-void FmPopup::popupAtY(const QRect& absRect, const QRect& screenRect, int y)
+void FmPopup::popupAtY(
+        const QRect& hotspotAbsRect,
+        const QRect& screenRect,
+        int y)
 {
     auto myW = width();
-    auto x = std::min(absRect.left(), screenRect.right() - myW);
+    auto x = std::min(hotspotAbsRect.left(), screenRect.right() - myW);
     x = std::max(x, 0);
     move(x, y);
     show();
 
+    /// @todo [urgent] use ownerRect
+
     lbText->setFocus();
-    if (popupMode == PopupMode::ARTIFICIAL) {
+    if constexpr (popupMode == PopupMode::ARTIFICIAL) {
         setFocus();
     }
 }
@@ -145,18 +156,26 @@ FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
 {
     adjustSize();
     auto screenRect = screen->availableGeometry();
+    auto ownerRect = fOwner->geometry().intersected(screenRect);
     auto myH = height();
-    if (auto bottomRemainder = screenRect.bottom() - absRect.bottom();
+    if (auto bottomRemainder = ownerRect.bottom() - absRect.bottom();
             bottomRemainder >= myH) {
         // Try on the bottom
         popupAtY(absRect, screenRect, absRect.bottom());
-    } else if (auto topRemainder = absRect.top() - screenRect.top();
+    } else if (auto topRemainder = absRect.top() - ownerRect.top();
             topRemainder >= myH) {
         // Try on the top
         popupAtY(absRect, screenRect, absRect.top() - myH);
+    } else if (myH <= ownerRect.height()) {
+        // Try stuck to owner rect
+        popupAtY(absRect, screenRect, ownerRect.bottom() - myH);
     } else {
         // Try everywhere
-        popupAtY(absRect, screenRect, screenRect.bottom() - myH);
+        const auto maxY = screenRect.bottom() - myH;
+        auto myY = ownerRect.top() + (ownerRect.height() - myH) / 2;
+        if (myY > maxY) myY = maxY;
+        if (myY < 0) myY = 0;
+        popupAtY(absRect, screenRect, myY);
     }
     return *this;
 }
