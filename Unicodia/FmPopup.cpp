@@ -132,18 +132,41 @@ FmPopup& FmPopup::setText(const QString& x)
 }
 
 
+namespace {
+
+    void eatRightMargin(QRect& rect, int margin)
+    {
+        margin = std::min(margin, rect.width() / 2);
+        rect.setWidth(rect.width() - margin);
+        if (QApplication::layoutDirection() == Qt::RightToLeft)
+            rect.moveLeft(rect.left() + margin);
+    }
+
+    void eatBottomMargin(QRect& rect, int margin)
+    {
+        margin = std::min(margin, rect.height() / 2);
+        rect.setHeight(rect.height() - margin);
+    }
+
+}   // anon namespace
+
+
 void FmPopup::popupAtY(
         const QRect& hotspotAbsRect,
+        QRect ownerRect,
         const QRect& screenRect,
         int y)
 {
-    auto myW = width();
-    auto x = std::min(hotspotAbsRect.left(), screenRect.right() - myW);
+    // Modify ownerRect
+    static constexpr int RIGHT_MARGIN = 10;
+    eatRightMargin(ownerRect, RIGHT_MARGIN);
+
+    auto myW = width();    
+    QRect testRect = (myW <= ownerRect.width()) ? ownerRect : screenRect;
+    auto x = std::min(hotspotAbsRect.left(), testRect.right() - myW);
     x = std::max(x, 0);
     move(x, y);
     show();
-
-    /// @todo [urgent] use ownerRect
 
     lbText->setFocus();
     if constexpr (popupMode == PopupMode::ARTIFICIAL) {
@@ -157,25 +180,28 @@ FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
     adjustSize();
     auto screenRect = screen->availableGeometry();
     auto ownerRect = fOwner->geometry().intersected(screenRect);
+    static constexpr int BOTTOM_MARGIN = 4;
+    eatBottomMargin(ownerRect, BOTTOM_MARGIN);
+
     auto myH = height();
     if (auto bottomRemainder = ownerRect.bottom() - absRect.bottom();
             bottomRemainder >= myH) {
         // Try on the bottom
-        popupAtY(absRect, screenRect, absRect.bottom());
+        popupAtY(absRect, ownerRect, screenRect, absRect.bottom());
     } else if (auto topRemainder = absRect.top() - ownerRect.top();
             topRemainder >= myH) {
         // Try on the top
-        popupAtY(absRect, screenRect, absRect.top() - myH);
+        popupAtY(absRect, ownerRect, screenRect, absRect.top() - myH);
     } else if (myH <= ownerRect.height()) {
         // Try stuck to owner rect
-        popupAtY(absRect, screenRect, ownerRect.bottom() - myH);
+        popupAtY(absRect, ownerRect, screenRect, ownerRect.bottom() - myH);
     } else {
         // Try everywhere
         const auto maxY = screenRect.bottom() - myH;
         auto myY = ownerRect.top() + (ownerRect.height() - myH) / 2;
         if (myY > maxY) myY = maxY;
         if (myY < 0) myY = 0;
-        popupAtY(absRect, screenRect, myY);
+        popupAtY(absRect, ownerRect, screenRect, myY);
     }
     return *this;
 }

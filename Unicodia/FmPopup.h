@@ -90,6 +90,7 @@ private:
 
     void popupAtY(
             const QRect& hotspotAbsRect,
+            QRect ownerRect,
             const QRect& screenRect,
             int y);
     FmPopup& popupAtScreen(QScreen* screen, const QRect& absRect);
