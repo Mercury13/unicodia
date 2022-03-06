@@ -150,6 +150,9 @@ namespace {
 
 }   // anon namespace
 
+constexpr int POPUP_RIGHT_MARGIN = 8;
+constexpr int POPUP_BOTTOM_MARGIN = 3;
+
 
 void FmPopup::popupAtY(
         const QRect& hotspotAbsRect,
@@ -158,13 +161,12 @@ void FmPopup::popupAtY(
         int y)
 {
     // Modify ownerRect
-    static constexpr int RIGHT_MARGIN = 10;
-    eatRightMargin(ownerRect, RIGHT_MARGIN);
+    eatRightMargin(ownerRect, POPUP_RIGHT_MARGIN);
 
     auto myW = width();    
     QRect testRect = (myW <= ownerRect.width()) ? ownerRect : screenRect;
     auto x = std::min(hotspotAbsRect.left(), testRect.right() - myW);
-    x = std::max(x, 0);
+    x = std::max(x, screenRect.left());
     move(x, y);
     show();
 
@@ -180,8 +182,7 @@ FmPopup& FmPopup::popupAtScreen(QScreen* screen, const QRect& absRect)
     adjustSize();
     auto screenRect = screen->availableGeometry();
     auto ownerRect = fOwner->geometry().intersected(screenRect);
-    static constexpr int BOTTOM_MARGIN = 4;
-    eatBottomMargin(ownerRect, BOTTOM_MARGIN);
+    eatBottomMargin(ownerRect, POPUP_BOTTOM_MARGIN);
 
     auto myH = height();
     if (auto bottomRemainder = ownerRect.bottom() - absRect.bottom();
