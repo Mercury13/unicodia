@@ -406,7 +406,7 @@ namespace Zippy
                 info.m_is_encrypted     = false;
                 info.m_is_supported     = true;
 
-#if _MSC_VER    // On MSVC, use the safe version of strcpy
+#if _MSC_VER || __MINGW_GCC_VERSION >= 10000    // On MSVC, use the safe version of strcpy
                 strcpy_s(info.m_filename, sizeof info.m_filename, name.c_str());
                 strcpy_s(info.m_comment, sizeof info.m_comment, "");
 #else           // Otherwise, use the unsafe version as fallback :(

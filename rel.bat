@@ -1,23 +1,43 @@
-@set PRONAME=Unicodia\Unicodia.pro
-@set EXENAME=Unicodia.exe
 @set VERSION=1.2.3
+@set PRONAME=Unicodia\Unicodia.pro
+@set PRONAME_AB=AutoBuilder\AutoBuilder.pro
+@set PRONAME_SC=SmartCopy\SmartCopy.pro
+@set EXENAME=Unicodia.exe
 @set ARCNAME=Unicodia-w64-%VERSION%.7z
 @set BUILD=~Build-win64
+@set BUILD_AB=~Build-AB-win64
+@set BUILD_SC=~Build-SC-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
+@path %MINGW%;%PATH%
 
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY%
 @if exist %DEPLOY% rmdir /S /Q %DEPLOY%
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
+@if not exist %BUILD_AB% md %BUILD_AB%
 @if not exist %BUILD% md %BUILD%
 
+@echo.
+@echo ===== Building AutoBuilder =====
+@cd %BUILD_AB%
+@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
+@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@cd ..
+
+@echo.
+@echo ===== Building SmartCopy =====
+@cd %BUILD_SC%
+@%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
+@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@cd ..
+
+@echo.
 @echo ===== Building for Win64 =====
-@path %MINGW%;%PATH%
 @cd %BUILD%
 @%QTDIR%\bin\qmake.exe ..\%PRONAME% -r -spec win32-g++ "CONFIG+=release"
 @%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
@@ -25,6 +45,7 @@
 
 @if not exist %BUILD%\release\%EXENAME% goto no_exe
 
+@echo.
 @echo ===== Copying files =====
 @copy %BUILD%\release\%EXENAME% %DEPLOY%
 @copy %MINGW%\libgcc_s_seh-1.dll %DEPLOY%
@@ -42,6 +63,7 @@
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
 
+@echo.
 @echo ===== Archiving =====
 @cd %DEPLOY%
 @set ARCPATH=..\%DEPLOY1%\%ARCNAME%
