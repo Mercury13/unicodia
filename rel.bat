@@ -53,13 +53,10 @@
 @echo.
 @echo ===== Checking for file existence =====
 @if not exist %AB_UCAUTO% goto end
-@if not exist %AB_UCCOUNT% goto end
 
 @echo.
 @echo ===== Running SmartCopy =====
 @%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
-@if errorlevel 1 goto end
-@%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
 @if errorlevel 1 goto end
 
 @echo.
