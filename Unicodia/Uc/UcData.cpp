@@ -2284,7 +2284,6 @@ constinit const uc::Script uc::scriptInfo[] {
                 "Начальная гласная{{-}}отдельный символ: {{sm|ꢄ}}=и.",
                 EcFont::SAURASHTRA },
     // Sutton SignWriting OK, installed Google Noto font
-    /// @todo [tool] Make a SignWriting tool!
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
         u8"Жестовое письмо Саттон", u8"1974",
