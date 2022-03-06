@@ -1,4 +1,10 @@
+@rem Settings
 @set VERSION=1.2.3
+@set QTDIR=c:\Qt\6.1.3\mingw81_64
+@set MINGW=c:\msys64\mingw64\bin
+@set SEVENZIP="c:\Program Files\7-zip\7z.exe"
+
+@rem Rest things
 @set PRONAME=Unicodia\Unicodia.pro
 @set PRONAME_AB=AutoBuilder\AutoBuilder.pro
 @set PRONAME_SC=SmartCopy\SmartCopy.pro
@@ -9,10 +15,6 @@
 @set BUILD_SC=~Build-SC-win64
 @set DEPLOY=~Deploy
 @set DEPLOY1=~Deployed
-@set MINGW=c:\msys64\mingw64\bin
-@set SEVENZIP="c:\Program Files\7-zip\7z.exe"
-@set QTDIR=c:\Qt\6.1.3\mingw81_64
-
 @set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
 @set UCCOUNT=UcAutoCount.h

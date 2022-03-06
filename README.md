@@ -4,10 +4,15 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Right now Russian only.
 * Right now Windows only.
 
-# How to compile?
+# How to build?
 * Download MSYS, slight C++20 and std::filesystem here.
+* Also need cURL (present in W10 18H2+) and 7-zip.
+* Configure and run rel.bat file.
+
+# How to develop?
+* Download/find all tools mentioned above.
 * Make custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2 to 6.2.2, though 6.2 branch does not work under W7.
-* Compile and run AutoBuilder; in W7 and VERY old W10 need curl.exe.
+* Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
 
