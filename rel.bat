@@ -20,19 +20,20 @@
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %BUILD_AB% md %BUILD_AB%
+@if not exist %BUILD_SC% md %BUILD_SC%
 @if not exist %BUILD% md %BUILD%
-
-@echo.
-@echo ===== Building AutoBuilder =====
-@cd %BUILD_AB%
-@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
-@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
-@cd ..
 
 @echo.
 @echo ===== Building SmartCopy =====
 @cd %BUILD_SC%
 @%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
+@%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+@cd ..
+
+@echo.
+@echo ===== Building AutoBuilder =====
+@cd %BUILD_AB%
+@%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
 @%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
 @cd ..
 
