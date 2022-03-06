@@ -12,6 +12,13 @@
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
+
+@set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
+@set UCAUTO=UcAuto.cpp
+@set UCCOUNT=UcAutoCount.h
+@set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
+@set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
+
 @path %MINGW%;%PATH%
 
 @echo ===== Creating directories =====
@@ -35,7 +42,23 @@
 @cd %BUILD_AB%
 @%QTDIR%\bin\qmake.exe ..\%PRONAME_AB% -r -spec win32-g++ "CONFIG+=release"
 @%MINGW%\mingw32-make.exe -f Makefile.Release -j%NUMBER_OF_PROCESSORS%
+
+@echo.
+@echo ===== Running AutoBuilder =====
+@release\AutoBuilder.exe
 @cd ..
+
+@echo.
+@echo ===== Checking for file existence =====
+@if not exist %AB_UCAUTO% goto end
+@if not exist %AB_UCCOUNT% goto end
+
+@echo.
+@echo ===== Running SmartCopy =====
+@%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
+@if errorlevel 1 goto end
+@%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
+@if errorlevel 1 goto end
 
 @echo.
 @echo ===== Building for Win64 =====

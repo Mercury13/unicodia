@@ -29,7 +29,7 @@ CmpRet compareFiles(
     // Load p1
     CmpRet r;
     std::istream::pos_type sz1;
-    { std::ifstream is1(p1);
+    { std::ifstream is1(p1, std::ios::binary);
         if (!is1.is_open())
             return {};
         is1.seekg(0, std::ios::end);
@@ -38,22 +38,20 @@ CmpRet compareFiles(
             return { Rs::CANT_READ };
         r.srcFile = std::make_unique<char[]>(sz1);
         r.size = sz1;
-        is1.seekg(0);
-        auto nRead = is1.readsome(r.srcFile.get(), sz1);
-        if (nRead != sz1) {
+        is1.seekg(0, std::ios::beg);
+        if (!is1.read(r.srcFile.get(), sz1))
             return { Rs::CANT_READ };
-        }
     }
 
     // Now temporarily inequal
     r.state = Rs::INEQUAL;
 
     // Check for p2
-    if (std::filesystem::exists(p2))
+    if (!std::filesystem::exists(p2))
         return r;
 
     // Load p2
-    { std::ifstream is2(p2);
+    { std::ifstream is2(p2, std::ios::binary);
         if (!is2.is_open())
             return r;
         is2.seekg(0, std::ios::end);
@@ -62,10 +60,8 @@ CmpRet compareFiles(
             return r;
         auto d2 = std::make_unique<char[]>(sz1);
         is2.seekg(0);
-        auto nRead = is2.readsome(r.srcFile.get(), sz1);
-        if (nRead != sz1) {
+        if (!is2.read(d2.get(), sz1))
             return r;
-        }
         auto eq = std::equal(r.srcFile.get(), r.srcFile.get() + sz1, d2.get());
         if (eq)
             r.state = Rs::EQUAL;
@@ -75,7 +71,7 @@ CmpRet compareFiles(
 
 int main(int argc, char** argv)
 {
-    if (argc <= 3) {
+    if (argc < 3) {
         std::cout << std::endl
                   << "SmartCopy file_in file_out" << std::endl
                   << std::endl;
@@ -87,25 +83,25 @@ int main(int argc, char** argv)
 
     switch (cmpr.state) {
     case Rs::NO_SRC:
-        std::cout << "No source file " << p1 << std::endl;
+        std::cout << "No source file " << p1.filename() << std::endl;
         return ret::NO_SRC;
     case Rs::CANT_READ:
-        std::cout << "Can't read source file " << p1 << std::endl;
+        std::cout << "Can't read source file " << p1.filename() << std::endl;
         return ret::CANT_READ_SRC;
     case Rs::EQUAL:
-        std::cout << "Files are equal, nothing to do" << std::endl;
+        std::cout << p2.filename().generic_string() << ": files are equal, nothing to do" << std::endl;
         return ret::OK;
     case Rs::INEQUAL: {
-            std::ofstream os(p2);
-            if (os.is_open()) {
-                std::cout << "Cannot open " << p2 << std::endl;
+            std::ofstream os(p2, std::ios::binary);
+            if (!os.is_open()) {
+                std::cout << "Cannot open " << p2.filename().generic_string() << std::endl;
                 return ret::CANT_WRITE_DEST;
             }
             if (!os.write(cmpr.srcFile.get(), cmpr.size)) {
-                std::cout << "Cannot write " << p2 << std::endl;
+                std::cout << "Cannot write " << p2.filename().generic_string() << std::endl;
                 return ret::CANT_WRITE_DEST;
             }
-            std::cout << "Written " << p2 << std::endl;
+            std::cout << "Written " << p2.filename().generic_string() << std::endl;
             return ret::OK;
         }
     }
