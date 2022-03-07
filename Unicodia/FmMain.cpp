@@ -1432,19 +1432,17 @@ void FmMain::showCp(MaybeChar ch)
         }
 
         // Sample char
-        bool wantSysFont = true;
+        const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
         switch (ch->drawMethod(uc::DPI_ALL_CHARS)) {
         case uc::DrawMethod::CUSTOM_CONTROL:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setCustomControl(ch.code);
-            wantSysFont = true;
             break;
         case uc::DrawMethod::ABBREVIATION:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setAbbreviation(ch->abbrev());
-            wantSysFont = false;
             break;
         case uc::DrawMethod::SPACE: {
                 clearSample();
@@ -1467,7 +1465,7 @@ void FmMain::showCp(MaybeChar ch)
             if (osProxy.isEmpty()) {
                 ui->lbOs->setFont(fontBig);
                 ui->lbOs->setText({});
-                ui->lbOsTitle->setText(u8"(Управляющий)");
+                ui->lbOsTitle->setText(u8"(Невидимый)");
             } else {
                 ws = ch->scriptEx().qtCounterpart;
                 font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
@@ -1488,7 +1486,7 @@ void FmMain::showCp(MaybeChar ch)
         } else {
             ui->lbOs->setFont(fontBig);
             ui->lbOs->setText({});
-            ui->lbOsTitle->setText(u8"(Управляющий)");
+            ui->lbOsTitle->setText(u8"(Невидимый)");
         }
 
         QString text = mywiki::buildHtml(*ch);
