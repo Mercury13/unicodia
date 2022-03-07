@@ -41,9 +41,8 @@ using namespace std::string_view_literals;
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
+    const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
-
-
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
 
@@ -1065,7 +1064,8 @@ FmMain::FmMain(QWidget *parent)
       ui(new Ui::FmMain),
       model(this),
       searchModel(this),
-      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG)
+      fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
+      fontTofu(str::toQ(FAM_TOFU), FSZ_BIG)
 {
     ui->setupUi(this);
 
@@ -1122,6 +1122,7 @@ FmMain::FmMain(QWidget *parent)
     ui->pageSampleCustom->init();
 
     // OS style    
+    fontTofu.setStyleStrategy(fst::TOFU);
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
 
@@ -1478,8 +1479,8 @@ void FmMain::showCp(MaybeChar ch)
                     ui->lbOsTitle->setText(
                         buf + font->family().toHtmlEscaped() + "</a>");
                 } else {
-                    ui->lbOs->setFont(fontBig);
-                    ui->lbOs->setText("?");
+                    ui->lbOs->setFont(fontTofu);
+                    ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
                     ui->lbOsTitle->setText(u8"<a href='pt:tofu' style='" STYLE_POPUP "'>(Тофу)</a>");
                 }
             }

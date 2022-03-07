@@ -264,7 +264,7 @@ private:
     Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;
     std::unique_ptr<QTimer> timerSetFocus;
-    QFont fontBig;
+    QFont fontBig, fontTofu;
     char32_t shownCp = uc::NO_CHAR;
 
     void initAbout();
