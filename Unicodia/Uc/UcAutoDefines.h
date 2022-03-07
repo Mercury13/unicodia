@@ -417,7 +417,9 @@ namespace uc {
     using Cfgs = Flags<Cfg>;
     enum class DrawMethod {
             // Font-based methods
-            SAMPLE, CUSTOM_AA, SPACE,
+            SAMPLE,
+            CUSTOM_AA,      ///< Unused right now, no fonts have custom AA right now
+            SPACE,
             // Char-based methods
             ABBREVIATION, CUSTOM_CONTROL,
             LAST_FONT = SPACE };            // Last using (loading, checking) font

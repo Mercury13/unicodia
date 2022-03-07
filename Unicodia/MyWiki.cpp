@@ -640,17 +640,6 @@ namespace {
         QFontDatabase::WritingSystem ws;
     };
 
-    template <>
-    std::string_view idOf(const FontLink& value, StrCache& cache)
-    {
-        snprintf(cache, std::size(cache), "%d/%d", (int)value.cp, (int)value.ws);
-        return cache;
-    }
-
-    template<>
-    inline void appendVal(QString& text, const FontLink& value)
-        { text += value.family.toHtmlEscaped(); }
-
     template <class T, class Name1>
     inline void appendValuePopup(
             QString& text, const T& value, Name1 name, const char* scheme)
