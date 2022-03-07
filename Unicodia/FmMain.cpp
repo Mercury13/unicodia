@@ -1155,6 +1155,7 @@ FmMain::FmMain(QWidget *parent)
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
+    connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1395,7 +1396,7 @@ void FmMain::showCp(MaybeChar ch)
     shownCp = ch.code;
 
     // Code
-    char buf[30];
+    char buf[300];
     { QString ucName;
         uc::sprintUPLUS(buf, ch.code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
@@ -1437,7 +1438,7 @@ void FmMain::showCp(MaybeChar ch)
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setCustomControl(ch.code);
-            wantSysFont = false;
+            wantSysFont = true;
             break;
         case uc::DrawMethod::ABBREVIATION:
             clearSample();
@@ -1466,29 +1467,38 @@ void FmMain::showCp(MaybeChar ch)
             if (osProxy.isEmpty()) {
                 ui->lbOs->setFont(fontBig);
                 ui->lbOs->setText({});
+                ui->lbOsTitle->setText(u8"(Управляющий)");
             } else {
                 ws = ch->scriptEx().qtCounterpart;
                 font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
                 if (font) {
                     ui->lbOs->setFont(*font);
                     ui->lbOs->setText(osProxy);
+                    snprintf(buf, std::size(buf),
+                            "<a href='pf:%d/%d' style='" STYLE_POPUP "'>",
+                            ch->subj.val(), static_cast<int>(ws));
+                    ui->lbOsTitle->setText(
+                        buf + font->family().toHtmlEscaped() + "</a>");
                 } else {
                     ui->lbOs->setFont(fontBig);
                     ui->lbOs->setText("?");
+                    ui->lbOsTitle->setText(u8"<a href='pt:tofu' style='" STYLE_POPUP "'>(Тофу)</a>");
                 }
             }
         } else {
             ui->lbOs->setFont(fontBig);
             ui->lbOs->setText({});
+            ui->lbOsTitle->setText(u8"(Управляющий)");
         }
 
-        QString text = mywiki::buildHtml(*ch, font, ws);
+        QString text = mywiki::buildHtml(*ch);
         ui->vwInfo->setText(text);
     } else {
         // No character
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText({});
         ui->lbOs->setText({});
+        ui->lbOsTitle->setText(u8"(Свободное место)");
         ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);

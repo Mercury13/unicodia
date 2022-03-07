@@ -78,8 +78,7 @@ namespace mywiki
     QString buildHtml(const uc::Term& x);
     QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(const char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
-    QString buildHtml(const uc::Cp& cp, const std::optional<QFont>& font,
-                      QFontDatabase::WritingSystem qws);
+    QString buildHtml(const uc::Cp& cp);
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");

@@ -841,9 +841,7 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 }
 
 
-QString mywiki::buildHtml(
-        const uc::Cp& cp, const std::optional<QFont>& font,
-        QFontDatabase::WritingSystem qws)
+QString mywiki::buildHtml(const uc::Cp& cp)
 {
     char buf[30];
     QString text;
@@ -928,13 +926,6 @@ QString mywiki::buildHtml(
                 spC.sep();
                 str::append(text, uc::oldCompNames[iBit]);
             }
-        }
-
-        // Font
-        if (font) {
-            sp.sep();
-            FontLink lnk { font->family(), cp.subj, qws };
-            appendValuePopup(text, lnk, u8"Системный шрифт", "pf");
         }
 
         // Input
