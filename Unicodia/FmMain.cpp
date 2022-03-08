@@ -1497,7 +1497,10 @@ void FmMain::showCp(MaybeChar ch)
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText({});
         ui->lbOs->setText({});
-        ui->lbOsTitle->setText(u8"(Свободное место)");
+        const auto osTitle = uc::isNonChar(ch.code)
+                ? u8"(Выброшен)"
+                : u8"(Свободное место)";
+        ui->lbOsTitle->setText(osTitle);
         ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
