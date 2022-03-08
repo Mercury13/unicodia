@@ -112,3 +112,39 @@ void str::toUpperInPlace(std::u8string& x)
         v = toupper(v);
     }
 }
+
+
+namespace {
+
+    int CHAR_END = -1;
+
+    inline int getChar(const char* &p, const char* end)
+    {
+        if (p == end)
+            return CHAR_END;
+        return *(p++);
+    }
+
+}
+
+
+bool str::isIndex(std::string_view s)
+{
+    // Length
+    if (s.size() < 2)
+        return false;
+    const char* p = s.data();
+    const char* const end = p + s.size();
+    // Alpha, then digit
+    if (!isalpha(getChar(p, end)) || !isdigit(getChar(p, end)))
+        return false;
+    int a;
+    do {
+        a = getChar(p, end);
+    } while (isdigit(a));
+    // Alpha
+    if (isalpha(a))
+        a = getChar(p, end);
+    // End;
+    return (a == CHAR_END);
+}

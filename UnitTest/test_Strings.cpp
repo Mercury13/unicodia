@@ -39,3 +39,26 @@ TEST (ContainsWord, BadWords)
     EXPECT_FALSE(str::containsWord("alpha bravo charlie", "ch"));
     EXPECT_FALSE(str::containsWord("alpha bravo charlie", "ie"));
 }
+
+
+///
+///  isIndex
+///
+TEST (isIndex, Simple)
+{
+    EXPECT_FALSE(str::isIndex(""));
+    EXPECT_FALSE(str::isIndex("A"));
+    EXPECT_FALSE(str::isIndex("1"));
+    EXPECT_FALSE(str::isIndex("SDKLJFHSDKFJH"));
+    EXPECT_FALSE(str::isIndex("46238476239"));
+    EXPECT_TRUE (str::isIndex("A1"));
+    EXPECT_TRUE (str::isIndex("Z9"));
+    EXPECT_TRUE (str::isIndex("G1221498723948728945623846823746238764"));
+    EXPECT_TRUE (str::isIndex("A1J"));
+    EXPECT_TRUE (str::isIndex("G1221498723948728945623846823746238764J"));
+    EXPECT_FALSE(str::isIndex("GH1212"));
+    EXPECT_TRUE (str::isIndex("G1212"));
+    EXPECT_TRUE (str::isIndex("G1212L"));
+    EXPECT_FALSE(str::isIndex("G1212LL"));
+    EXPECT_FALSE(str::isIndex("G1212L9"));
+}

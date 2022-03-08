@@ -16,6 +16,10 @@ namespace str {
     [[nodiscard]] SafeVector<std::string_view> splitSv(std::string_view s, char comma, bool skipEmpty = true);
     [[nodiscard]] SafeVector<std::u8string_view> splitSv(std::u8string_view s, char comma, bool skipEmpty = true);
 
+    /// @return [+] is letter digits+ [letter]
+    ///       (used for Linear B etc. where chars are marked with these indexes)
+    bool isIndex(std::string_view s);
+
     ///
     /// @return   # of replacements
     ///
