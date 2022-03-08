@@ -1612,6 +1612,10 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
 
     for (auto iWord = words.size(); iWord != 0; ) { --iWord;
         auto& word = words[iWord];
+
+        if (str::isIndex(word.original))
+            word.isCapital = true;
+
         auto itWord = dictionary.find(word.original);
         if (itWord != dictionary.end()) {
             auto& wordInfo = itWord->second;

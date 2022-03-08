@@ -61,4 +61,5 @@ TEST (isIndex, Simple)
     EXPECT_TRUE (str::isIndex("G1212L"));
     EXPECT_FALSE(str::isIndex("G1212LL"));
     EXPECT_FALSE(str::isIndex("G1212L9"));
+    EXPECT_TRUE (str::isIndex("B105"));
 }
