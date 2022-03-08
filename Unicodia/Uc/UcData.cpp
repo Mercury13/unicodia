@@ -6101,8 +6101,8 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
             rmWin.query(cp, r.alt.win);
         }
         r.alt.unicode = cp;
+        kmBirman.query(cp, r.birman);
     }
-    kmBirman.query(cp, r.birman);
     return r;
 }
 
