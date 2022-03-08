@@ -1180,7 +1180,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Есть несколько [[pt:ligature|лигатур]] с буквой «р»:<br>"
                 "{{__}}ка {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = кра {{sm|𑴌𑵇}}",
                 EcFont::MASARAM_GONDI },
-    // Gothic OK, took from Junicode and ×1.3
+    // Gothic OK, took from Junicode and enlarged ×1.3
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Готский", u8"IV век",
