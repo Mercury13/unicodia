@@ -134,12 +134,18 @@ FmPopup& FmPopup::setText(const QString& x)
 
 namespace {
 
-    void eatRightMargin(QRect& rect, int margin)
+    void eatRightMargin(QRect& rect, int mainMargin, int auxMargin)
     {
-        margin = std::min(margin, rect.width() / 2);
-        rect.setWidth(rect.width() - margin);
-        if (QApplication::layoutDirection() == Qt::RightToLeft)
-            rect.moveLeft(rect.left() + margin);
+        mainMargin = std::min(mainMargin, rect.width() / 2);
+        rect.setWidth(rect.width() - mainMargin);
+        if (QApplication::layoutDirection() == Qt::RightToLeft) {
+            // ←
+            rect.moveLeft(rect.left() + mainMargin);
+            rect.moveRight(rect.right() - auxMargin);
+        } else {
+            // →
+            rect.moveLeft(rect.left() + auxMargin);
+        }
     }
 
     void eatBottomMargin(QRect& rect, int margin)
@@ -151,8 +157,8 @@ namespace {
 }   // anon namespace
 
 constexpr int POPUP_RIGHT_MARGIN = 8;
+constexpr int POPUP_LEFT_MARGIN = 1;
 constexpr int POPUP_BOTTOM_MARGIN = 3;
-
 
 void FmPopup::popupAtY(
         const QRect& hotspotAbsRect,
@@ -161,12 +167,12 @@ void FmPopup::popupAtY(
         int y)
 {
     // Modify ownerRect
-    eatRightMargin(ownerRect, POPUP_RIGHT_MARGIN);
+    eatRightMargin(ownerRect, POPUP_RIGHT_MARGIN, POPUP_LEFT_MARGIN);
 
     auto myW = width();    
     QRect testRect = (myW <= ownerRect.width()) ? ownerRect : screenRect;
     auto x = std::min(hotspotAbsRect.left(), testRect.right() - myW);
-    x = std::max(x, screenRect.left());
+    x = std::max(x, testRect.left());
     move(x, y);
     show();
 
