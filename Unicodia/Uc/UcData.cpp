@@ -1180,8 +1180,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Есть несколько [[pt:ligature|лигатур]] с буквой «р»:<br>"
                 "{{__}}ка {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = кра {{sm|𑴌𑵇}}",
                 EcFont::MASARAM_GONDI },
-    // Gothic OK, the best is Segoe UI Historic
-    /// @todo [font???] Old Gothic
+    // Gothic OK, took from Junicode and ×1.3
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Готский", u8"IV век",
@@ -1192,8 +1191,9 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Алфавит взят из [[ps:Grek|греческого]], названия букв те же, что и у рун. "
                 "Две буквы имеют только числовое значение: {{sm|𐍁}}=90 и {{sm|𐍊}}=900. "
                 "Благодаря такому происхождению письменности «канонический» вид готских букв{{-}}написанные жирным пером, "
-                    "а не острым предметом.",
-                EcFont::HISTORIC },
+                    "а не острым предметом."
+            "<p>Буква {{sm|𐌹̈}} состоит из буквы {{sm|𐌹}} и комбинирующего умляута U+0308.",
+                EcFont::FUNKY },
     // Grantha OK, W10 none → installed Google Noto
     { "Gran", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
