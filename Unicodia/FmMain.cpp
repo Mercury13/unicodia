@@ -1481,7 +1481,7 @@ void FmMain::showCp(MaybeChar ch)
                 } else {
                     ui->lbOs->setFont(fontTofu);
                     ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
-                    ui->lbOsTitle->setText(u8"<a href='pt:tofu' style='" STYLE_POPUP "'>(Тофу)</a>");
+                    ui->lbOsTitle->setText(u8"<a href='pt:tofu' style='" STYLE_POPUP "'>(В системе нет)</a>");
                 }
             }
         } else {
