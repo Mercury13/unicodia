@@ -77,7 +77,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
-    { FNAME_FUNKY, Ffg::DESC_BIGGER },                                          // Funky
+    { FNAME_FUNKY },                                                            // Funky
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
@@ -1180,7 +1180,7 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Есть несколько [[pt:ligature|лигатур]] с буквой «р»:<br>"
                 "{{__}}ка {{sm|𑴌}} + ra-kara {{sm|◌𑵇}} = кра {{sm|𑴌𑵇}}",
                 EcFont::MASARAM_GONDI },
-    // Gothic OK, took from Junicode and enlarged ×1.3
+    // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
         u8"Готский", u8"IV век",
