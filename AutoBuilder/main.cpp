@@ -344,8 +344,57 @@ std::string_view rqTagMinus(
 }
 
 
-struct EmojiData
+struct NotoData {
+    std::unordered_set<char32_t> singleChar;
+};
+
+
+inline std::string_view chompPrefSuffSv(
+        std::string_view x, std::string_view pref, std::string_view suff)
 {
+    auto len2 = pref.length() + suff.length();
+    if (x.length() > len2 && x.starts_with(pref) && x.ends_with(suff)) {
+        return x.substr(pref.length(), x.length() - len2);
+    } else {
+        return {};
+    }
+}
+
+
+inline std::string_view chompPref(std::string_view x, std::string_view pref)
+{
+    if (x.starts_with(pref)) {
+        return x.substr(pref.length());
+    } else {
+        return {};
+    }
+}
+
+
+NotoData loadNotoEmoji()
+{
+    constexpr std::string_view PREFIX { "emoji_" };
+    constexpr std::string_view SUFFIX { ".svg" };
+
+    NotoData r;
+    std::ifstream is(NOTOEMOJI_TXT);
+    std::string s;
+    while (std::getline(is, s)) {
+        if (auto ss = chompPrefSuffSv(s, PREFIX, SUFFIX); !ss.empty()) {
+            if (ss.find('_') == std::string_view::npos) {
+                // Single-char emoji
+                if (auto sCode = chompPref(ss, "u"); !sCode.empty()) {
+                    auto code = fromHex(sCode);
+                    r.singleChar.insert(code);
+                }
+            }
+        }
+    }
+    return r;
+}
+
+
+struct EmojiData {
     std::unordered_set<char32_t> vs16;
 };
 
@@ -388,18 +437,24 @@ EmojiData loadEmoji()
 int main()
 {
     ///// Loader ///////////////////////////////////////////////////////////////
+    ///
     std::cout << "Checking for loader..." << std::flush;
-    if (checkLoader()) {
-        std::cout << "OK" << std::endl;
-    } else {
-        std::cout << "RE-RUN" << std::endl;
-        runLoader();
+    try {
+        if (checkLoader()) {
+            std::cout << "OK" << std::endl;
+        } else {
+            std::cout << "RE-RUN" << std::endl;
+            runLoader();
+        }
+    } catch (const std::exception& e) {
+        std::cout << "ERROR: " << e.what() << std::endl;
+        return 1;
     }
 
     ///// HTML entities ////////////////////////////////////////////////////////
 
     std::cout << "Loading HTML entities..." << std::flush;
-    std::ifstream is("../MiscFiles/entities.htm", std::ios::binary);
+    std::ifstream is(ENTITIES_HTML, std::ios::binary);
     if (!is.is_open())
         throw std::logic_error("Cannot open entities.htm");
 
@@ -437,6 +492,13 @@ int main()
     std::cout << "OK" << std::endl;
     std::cout << "  File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars, "
               << nEntities << " entities." << std::endl;
+
+    ///// Noto emoji ///////////////////////////////////////////////////////////
+
+    std::cout << "Loading Noto emoji directory..." << std::flush;
+    NotoData noto = loadNotoEmoji();
+    std::cout << "OK" << std::endl;
+    std::cout << "  Found " << noto.singleChar.size() << " single-char emoji." << std::endl;
 
     ///// Emoji ////////////////////////////////////////////////////////////////
 
@@ -591,7 +653,8 @@ int main()
         if (emoji.vs16.contains(cp))
             flags |= 64;
         // SVG emoji
-        /// @todo [urgent] SVG emoji
+        if (noto.singleChar.contains(cp))
+            flags |= 128;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

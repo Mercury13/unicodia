@@ -73,6 +73,37 @@ namespace {
         system(s.c_str());
     }
 
+    constexpr int N_UPDIRS = 4;
+
+    class LocalFile
+    {
+    public:
+        constexpr LocalFile(std::string_view aFname) : fname(aFname) {}
+        void preload() const;
+    private:
+        std::string_view fname;
+    };
+
+    void LocalFile::preload() const
+    {
+        std::filesystem::path rqPath(fname);
+        auto destPath = rqPath.filename();
+        std::string testPath { fname };
+        for (int i = 0; i < N_UPDIRS; ++i) {
+            std::filesystem::path srcPath(testPath);
+            if (std::filesystem::exists(srcPath)) {
+                // filesystem::copy does not overwrite, even with options
+                if (std::filesystem::exists(destPath))
+                    std::filesystem::remove(destPath);
+                // Will throw if problems, that’s OK
+                std::filesystem::copy(srcPath, destPath);
+                return;
+            }
+            testPath = "../" + testPath;
+        }
+        throw std::runtime_error("Cannot find file " + rqPath.generic_string());
+    }
+
     // Step flags
     enum class Stfg {
         FINAL = 1,
@@ -89,6 +120,11 @@ namespace {
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
     constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/14.0/emoji-test.txt", EMOJI_TEST };
 
+    constinit const LocalFile allLocalFiles[] {
+        { MISCFILES ENTITIES_HTML },
+        { MISCFILES NOTOEMOJI_TXT },
+    };
+
     constinit const Step allSteps[] {
         { "Load UCD XML database", AC_UCD_ZIP, UCD_ZIP, NO_FLAGS },
         { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
@@ -100,6 +136,9 @@ namespace {
 
 bool checkLoader()
 {
+    for (auto& lf : allLocalFiles) {
+        lf.preload();
+    }
     for (auto& st : allSteps) {
         if (st.flags.have(Stfg::FINAL)) {
             if (!std::filesystem::exists(st.file))
