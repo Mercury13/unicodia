@@ -738,6 +738,9 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
                               textAt(cp));
         } break;
+    case uc::DrawMethod::EMOJI:
+        /// @todo [urgent] draw emoji
+        break;
     }
     if (cp.isDeprecated())
         drawDeprecated(painter, rect);
@@ -1455,6 +1458,9 @@ void FmMain::showCp(MaybeChar ch)
         case uc::DrawMethod::SAMPLE:
         case uc::DrawMethod::CUSTOM_AA:
             drawSampleWithQt(*ch);
+            break;
+        case uc::DrawMethod::EMOJI:
+            /// @todo [urgent] draw emoji
             break;
         }
 

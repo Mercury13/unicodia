@@ -417,11 +417,13 @@ namespace uc {
     using Cfgs = Flags<Cfg>;
     enum class DrawMethod {
             // Font-based methods
-            SAMPLE,
-            CUSTOM_AA,      ///< Unused right now, no fonts have custom AA right now
-            SPACE,
+            SAMPLE,             ///< Take font and draw string
+            CUSTOM_AA,          ///< Unused right now, no fonts have custom anti-aliasing right now
+            SPACE,              ///< Take font, measure space width and draw 2 lines
             // Char-based methods
-            ABBREVIATION, CUSTOM_CONTROL,
+            ABBREVIATION,       ///< Draw dotted square and abbreviation
+            CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
+            EMOJI,              ///< Draw SVG emoji
             LAST_FONT = SPACE };            // Last using (loading, checking) font
 
     enum class TofuState {
