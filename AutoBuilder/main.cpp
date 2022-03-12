@@ -590,6 +590,8 @@ int main()
         // VS16
         if (emoji.vs16.contains(cp))
             flags |= 64;
+        // SVG emoji
+        /// @todo [urgent] SVG emoji
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

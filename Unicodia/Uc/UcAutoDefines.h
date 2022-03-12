@@ -403,7 +403,7 @@ namespace uc {
         SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
     };
 
-    enum class Cfg : unsigned char {
+    enum class Cfg : unsigned short {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
         DEPRECATED = 2,         ///< [+] UC feature: char is deprecated
         ALT_FONT = 4,           ///< [+] use alternate font
@@ -411,7 +411,8 @@ namespace uc {
         NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
         DEFAULT_IGNORABLE = 32, ///< [+] UC feature: char is default-ignorable
         VS16_EMOJI = 64,        ///< [+] UC feature: to surely make this char graphic, use VS16
-        DYN_SYSTEM_TOFU = 128,  ///< cached in runtime; [+] the char is tofu in system fonts
+        SVG_EMOJI = 128,        ///< [+] SVG emoji
+        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts
     };
 
     using Cfgs = Flags<Cfg>;
@@ -455,7 +456,7 @@ namespace uc {
         EcBidiClass ecBidiClass;        // +1 = 10
         EcScript ecScript;              // +1 = 11
         uint8_t iNumeric;               // +1 = 12
-        mutable Cfgs flags;             // +1 = 13
+        mutable Cfgs flags;             // +2 = 14
 
         const Version& version() const;
         const Category& category() const;
@@ -486,6 +487,9 @@ namespace uc {
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::DEFAULT_IGNORABLE); }
         constexpr bool isVs16Emoji() const { return flags.have(Cfg::VS16_EMOJI); }        
     };
+
+    // Check your calculations once again
+    static_assert(sizeof(Cp) == 14);
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
