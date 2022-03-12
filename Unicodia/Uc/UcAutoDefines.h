@@ -424,7 +424,7 @@ namespace uc {
             // Char-based methods
             ABBREVIATION,       ///< Draw dotted square and abbreviation
             CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
-            EMOJI,              ///< Draw SVG emoji
+            SVG_EMOJI,          ///< Draw SVG emoji
             LAST_FONT = SPACE };            // Last using (loading, checking) font
 
     enum class TofuState {

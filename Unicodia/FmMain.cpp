@@ -738,7 +738,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
                               textAt(cp));
         } break;
-    case uc::DrawMethod::EMOJI:
+    case uc::DrawMethod::SVG_EMOJI:
         /// @todo [urgent] draw emoji
         break;
     }
@@ -1459,7 +1459,7 @@ void FmMain::showCp(MaybeChar ch)
         case uc::DrawMethod::CUSTOM_AA:
             drawSampleWithQt(*ch);
             break;
-        case uc::DrawMethod::EMOJI:
+        case uc::DrawMethod::SVG_EMOJI:
             /// @todo [urgent] draw emoji
             break;
         }

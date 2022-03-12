@@ -6770,6 +6770,8 @@ uc::DrawMethod uc::Cp::drawMethod(int dpi) const
 {
     if (flags.have(Cfg::CUSTOM_CONTROL))
         return uc::DrawMethod::CUSTOM_CONTROL;
+    if (flags.have(Cfg::SVG_EMOJI))
+        return uc::DrawMethod::SVG_EMOJI;
     if (isAbbreviated())
         return uc::DrawMethod::ABBREVIATION;
     if (isTrueSpace())
