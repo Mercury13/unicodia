@@ -349,46 +349,37 @@ struct NotoData {
 };
 
 
-inline std::string_view chompPrefSuffSv(
-        std::string_view x, std::string_view pref, std::string_view suff)
-{
-    auto len2 = pref.length() + suff.length();
-    if (x.length() > len2 && x.starts_with(pref) && x.ends_with(suff)) {
-        return x.substr(pref.length(), x.length() - len2);
-    } else {
-        return {};
-    }
-}
+//inline std::string_view chompPrefSuffSv(
+//        std::string_view x, std::string_view pref, std::string_view suff)
+//{
+//    auto len2 = pref.length() + suff.length();
+//    if (x.length() > len2 && x.starts_with(pref) && x.ends_with(suff)) {
+//        return x.substr(pref.length(), x.length() - len2);
+//    } else {
+//        return {};
+//    }
+//}
 
 
-inline std::string_view chompPref(std::string_view x, std::string_view pref)
-{
-    if (x.starts_with(pref)) {
-        return x.substr(pref.length());
-    } else {
-        return {};
-    }
-}
+//inline std::string_view chompPref(std::string_view x, std::string_view pref)
+//{
+//    if (x.starts_with(pref)) {
+//        return x.substr(pref.length());
+//    } else {
+//        return {};
+//    }
+//}
 
 
 NotoData loadNotoEmoji()
 {
-    constexpr std::string_view PREFIX { "emoji_" };
-    constexpr std::string_view SUFFIX { ".svg" };
-
     NotoData r;
-    std::ifstream is(NOTOEMOJI_TXT);
+    std::ifstream is(SINGLEEMOJI_TXT);
     std::string s;
     while (std::getline(is, s)) {
-        if (auto ss = chompPrefSuffSv(s, PREFIX, SUFFIX); !ss.empty()) {
-            if (ss.find('_') == std::string_view::npos) {
-                // Single-char emoji
-                if (auto sCode = chompPref(ss, "u"); !sCode.empty()) {
-                    auto code = fromHex(sCode);
-                    r.singleChar.insert(code);
-                }
-            }
-        }
+        // Single-char emoji
+        auto code = fromHex(s);
+        r.singleChar.insert(code);
     }
     return r;
 }
