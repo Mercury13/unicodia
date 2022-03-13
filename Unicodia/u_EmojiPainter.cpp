@@ -95,7 +95,7 @@ std::string_view EmojiPainter::getSvg(char32_t cp)
 
     // Find in directory
     char fname[40];
-    std::to_chars(std::begin(fname), std::end(fname), static_cast<int>(cp));
+    snprintf(fname, std::size(fname), "%x.svg", static_cast<int>(cp));
     auto it = directory.find(fname);
     if (it == directory.end())
         return {};
