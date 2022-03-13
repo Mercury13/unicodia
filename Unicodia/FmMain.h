@@ -97,6 +97,8 @@ protected:
 enum class TableColors { NO, YES };
 enum class TableDraw { INTERNAL, CUSTOM };
 
+class EmojiPainter;
+
 class CharsModel
         : public QAbstractTableModel,
           public QStyledItemDelegate,
@@ -111,6 +113,7 @@ public:
     mutable TableCache tcache;
 
     CharsModel(QWidget* aOwner);
+    ~CharsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
     int columnCount(const QModelIndex& = {}) const override;
@@ -161,6 +164,7 @@ protected:
                 const QModelIndex& index, const QColor& color, int dpi) const;
 private:
     RowCache rows;
+    std::unique_ptr<EmojiPainter> emp;
     mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems

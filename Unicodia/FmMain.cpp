@@ -6,6 +6,7 @@
 #include <iostream>
 #include <cmath>
 #include <bit>
+#include <filesystem>
 
 // Qt
 #include <QTableView>
@@ -19,10 +20,14 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QTimer>
+#include <QSvgRenderer>
 
 // Misc
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+
+// Zip
+#include "Zippy.hpp"
 
 // Project-local
 #include "Skin.h"
@@ -43,6 +48,47 @@ namespace {
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
     const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
+
+
+///// EmojiPainter /////////////////////////////////////////////////////////////
+
+
+class EmojiPainter
+{
+public:
+    void draw(QPainter* painter, const QRect& rect, char32_t cp);
+private:
+    void ensureTape();
+    QSvgRenderer* getSvg(char32_t cp);
+    std::string zipTape;
+    std::unordered_map<char32_t, QSvgRenderer> renderers;
+};
+
+
+void EmojiPainter::ensureTape()
+{
+    if (!zipTape.empty())
+        return;
+
+    auto tempName = expandTempFontName("emoji.zip");
+    std::filesystem::path p{ tempName.toStdWString() };
+}
+
+
+QSvgRenderer* EmojiPainter::getSvg(char32_t cp)
+{
+    ensureTape();
+}
+
+
+void EmojiPainter::draw(QPainter* painter, const QRect& rect, char32_t cp)
+{
+    if (auto rend = getSvg(cp)) {
+        /// @todo [urgent] set appropriate size
+        rend->render(painter, rect);
+    }
+}
+
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
 
@@ -169,10 +215,14 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
     match(str::toQ(FAM_DEFAULT)),
-    rows(NCOLS)
+    rows(NCOLS),
+    emp(new EmojiPainter)
 {
     tcache.connectSignals(this);
 }
+
+
+CharsModel::~CharsModel() = default;
 
 
 int CharsModel::rowCount(const QModelIndex&) const

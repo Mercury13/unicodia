@@ -232,7 +232,7 @@
                              <property name="minimumSize">
                               <size>
                                <width>120</width>
-                               <height>110</height>
+                               <height>108</height>
                               </size>
                              </property>
                              <property name="font">
@@ -253,14 +253,7 @@
                            </item>
                           </layout>
                          </widget>
-                         <widget class="WiCustomDraw" name="pageSampleCustom">
-                          <property name="minimumSize">
-                           <size>
-                            <width>120</width>
-                            <height>100</height>
-                           </size>
-                          </property>
-                         </widget>
+                         <widget class="WiCustomDraw" name="pageSampleCustom"/>
                         </widget>
                        </item>
                       </layout>
@@ -303,7 +296,7 @@
                          <property name="minimumSize">
                           <size>
                            <width>120</width>
-                           <height>110</height>
+                           <height>108</height>
                           </size>
                          </property>
                          <property name="text">

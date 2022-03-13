@@ -36,6 +36,7 @@
 #include <cstddef>
 #include <memory>
 #include <fstream>
+#include <filesystem>
 
 // ===== Other Includes
 #include "miniz/miniz.h"
@@ -111,11 +112,11 @@ namespace Zippy
          * and will be opened. Otherwise, the file does not exist and will be created.
          * @param fileName The name of the file to open or create.
          */
-        explicit ZipArchive(const std::string& fileName)
+        explicit ZipArchive(const std::filesystem::path& fileName)
                 : m_ArchivePath(fileName) {
 
             // ===== Open file stream
-            std::ifstream f(fileName.c_str());
+            std::ifstream f(fileName);
 
             // ===== If successful, continue to open the file.
             if (f.good()) {
@@ -180,7 +181,7 @@ namespace Zippy
          * After ensuring that the file is valid (i.e. not somehow corrupted), it is opened using the Open() member function.
          * @param fileName The filename for the new archive.
          */
-        void Create(const std::string& fileName) {
+        void Create(const std::filesystem::path& fileName) {
 
             // ===== Prepare an archive file;
             mz_zip_archive archive = mz_zip_archive();
@@ -209,7 +210,7 @@ namespace Zippy
          * @note If more than one entry with the same name exists in the archive, only the newest one will be loaded.
          * When saving the archive, only the loaded entries will be kept; other entries with the same name will be deleted.
          */
-        void Open(const std::string& fileName) {
+        void Open(const std::filesystem::path& fileName) {
 
             // ===== Open the archive file for reading.
             if (m_IsOpen)
@@ -444,7 +445,7 @@ namespace Zippy
          * @note If no filename is provided, the file will be saved with the existing name, overwriting any existing data.
          * @throws ZipException A ZipException object is thrown if calls to miniz function fails.
          */
-        void Save(std::string filename = "") {
+        void Save(std::filesystem::path filename = "") {
 
             if (!IsOpen()) throw ZipLogicError("Cannot call Save on empty ZipArchive object!");
 
@@ -452,7 +453,7 @@ namespace Zippy
                 filename = m_ArchivePath;
 
             // ===== Generate a random file name with the same path as the current file
-            std::string tempPath = filename.substr(0, filename.rfind('/') + 1) + Impl::GenerateRandomName(20);
+            std::filesystem::path tempPath = filename.parent_path() / Impl::GenerateRandomName(20);
 
             // ===== Prepare an temporary archive file with the random filename;
             mz_zip_archive tempArchive = mz_zip_archive();
@@ -488,8 +489,8 @@ namespace Zippy
 
             // ===== Close the current archive, delete the file with input filename (if it exists), rename the temporary and call Open.
             Close();
-            std::remove(filename.c_str());
-            std::rename(tempPath.c_str(), filename.c_str());
+            std::filesystem::remove(filename);
+            std::filesystem::rename(tempPath, filename);
             Open(filename);
 
         }
@@ -683,8 +684,8 @@ namespace Zippy
 
     private:
         mz_zip_archive m_Archive     = mz_zip_archive(); /**< The struct used by miniz, to handle archive files. */
-        std::string    m_ArchivePath = ""; /**< The path of the archive file. */
-        bool           m_IsOpen      = false; /**< A flag indicating if the file is currently open for reading and writing. */
+        std::filesystem::path m_ArchivePath;    /**< The path of the archive file. */
+        bool           m_IsOpen      = false;   /**< A flag indicating if the file is currently open for reading and writing. */
 
         std::vector<Impl::ZipEntry> m_ZipEntries = std::vector<Impl::ZipEntry>(); /**< Data structure for all entries in the archive. */
 

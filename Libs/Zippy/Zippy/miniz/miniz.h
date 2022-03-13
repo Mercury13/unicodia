@@ -113,6 +113,32 @@
 #pragma once
 
 
+#define FM_READA "rb"
+#define FM_WRITEA "wb"
+#define FM_WPLUSA "w+b"
+#define FM_RPLUSA "r+b"
+
+#if defined(_MSC_VER) || defined(__MINGW64__)
+
+    typedef const wchar_t* Fpath;
+    #define FM_READ L"rb"
+    #define FM_WRITE L"wb"
+    #define FM_WPLUS L"w+b"
+    #define FM_RPLUS L"r+b"
+    #define mz_utime _wutime
+    typedef struct _utimbuf mz_utimbuf;
+
+#else
+
+    typedef const char* Fpath;
+    #define FM_READ FM_READA
+    #define FM_WRITE FM_WRITEA
+    #define FM_WPLUS FM_WPLUSA
+    #define FM_RPLUS FM_RPLUSA
+    #define mz_utime utime
+    typedef struct utimbuf mz_utimbuf;
+
+#endif
 
 
 /* Defines to completely disable specific portions of miniz.c: 
@@ -1148,9 +1174,9 @@ inline mz_bool mz_zip_reader_init_mem(mz_zip_archive* pZip, const void* pMem, si
 /* Read a archive from a disk file. */
 /* file_start_ofs is the file offset where the archive actually begins, or 0. */
 /* actual_archive_size is the true total size of the archive, which may be smaller than the file's actual size on disk. If zero the entire file is treated as the archive. */
-inline mz_bool mz_zip_reader_init_file(mz_zip_archive* pZip, const char* pFilename, mz_uint32 flags);
+inline mz_bool mz_zip_reader_init_file(mz_zip_archive* pZip, Fpath pFilename, mz_uint32 flags);
 inline mz_bool mz_zip_reader_init_file_v2(mz_zip_archive* pZip,
-                                          const char* pFilename,
+                                          Fpath pFilename,
                                           mz_uint flags,
                                           mz_uint64 file_start_ofs,
                                           mz_uint64 archive_size);
@@ -1278,10 +1304,10 @@ inline mz_bool mz_zip_reader_extract_iter_free(mz_zip_reader_extract_iter_state*
 #ifndef MINIZ_NO_STDIO
 /* Extracts a archive file to a disk file and sets its last accessed and modified times. */
 /* This function only extracts files, not archive directory records. */
-inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_index, const char* pDst_filename,
+inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_index, Fpath pDst_filename,
                                              mz_uint flags);
 inline mz_bool
-mz_zip_reader_extract_file_to_file(mz_zip_archive* pZip, const char* pArchive_filename, const char* pDst_filename,
+mz_zip_reader_extract_file_to_file(mz_zip_archive* pZip, const char* pArchive_filename, Fpath pDst_filename,
                                    mz_uint flags);
 
 /* Extracts a archive file starting at the current position in the destination FILE stream. */
@@ -1310,7 +1336,7 @@ inline mz_bool mz_zip_validate_archive(mz_zip_archive* pZip, mz_uint flags);
 
 /* Misc utils/helpers, valid for ZIP reading or writing */
 inline mz_bool mz_zip_validate_mem_archive(const void* pMem, size_t size, mz_uint flags, mz_zip_error* pErr);
-inline mz_bool mz_zip_validate_file_archive(const char* pFilename, mz_uint flags, mz_zip_error* pErr);
+inline mz_bool mz_zip_validate_file_archive(Fpath pFilename, mz_uint flags, mz_zip_error* pErr);
 
 /* Universal end function - calls either mz_zip_reader_end() or mz_zip_writer_end(). */
 inline mz_bool mz_zip_end(mz_zip_archive* pZip);
@@ -1333,10 +1359,10 @@ inline mz_bool mz_zip_writer_init_heap_v2(mz_zip_archive* pZip,
                                           mz_uint flags);
 
 #ifndef MINIZ_NO_STDIO
-inline mz_bool mz_zip_writer_init_file(mz_zip_archive* pZip, const char* pFilename,
+inline mz_bool mz_zip_writer_init_file(mz_zip_archive* pZip, Fpath pFilename,
                                        mz_uint64 size_to_reserve_at_beginning);
 inline mz_bool
-mz_zip_writer_init_file_v2(mz_zip_archive* pZip, const char* pFilename, mz_uint64 size_to_reserve_at_beginning,
+mz_zip_writer_init_file_v2(mz_zip_archive* pZip, Fpath pFilename, mz_uint64 size_to_reserve_at_beginning,
                            mz_uint flags);
 inline mz_bool mz_zip_writer_init_cfile(mz_zip_archive* pZip, MZ_FILE* pFile, mz_uint flags);
 #endif
@@ -1347,8 +1373,8 @@ inline mz_bool mz_zip_writer_init_cfile(mz_zip_archive* pZip, MZ_FILE* pFile, mz
 /* Finally, for archives opened using mz_zip_reader_init, the mz_zip_archive's user provided m_pWrite function cannot be NULL. */
 /* Note: In-place archive modification is not recommended unless you know what you're doing, because if execution stops or something goes wrong before */
 /* the archive is finalized the file's central directory will be hosed. */
-inline mz_bool mz_zip_writer_init_from_reader(mz_zip_archive* pZip, const char* pFilename);
-inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, const char* pFilename, mz_uint flags);
+inline mz_bool mz_zip_writer_init_from_reader(mz_zip_archive* pZip, Fpath pFilename);
+inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, Fpath pFilename, mz_uint flags);
 
 /* Adds the contents of a memory buffer to an archive. These functions record the current local time into the archive. */
 /* To add a directory entry, call this method with an archive name ending in a forwardslash with an empty buffer. */
@@ -1391,7 +1417,7 @@ inline mz_bool mz_zip_writer_add_mem_ex_v2(mz_zip_archive* pZip,
 /* level_and_flags - compression level (0-10, see MZ_BEST_SPEED, MZ_BEST_COMPRESSION, etc.) logically OR'd with zero or more mz_zip_flags, or just set to MZ_DEFAULT_COMPRESSION. */
 inline mz_bool mz_zip_writer_add_file(mz_zip_archive* pZip,
                                       const char* pArchive_name,
-                                      const char* pSrc_filename,
+                                      Fpath pSrc_filename,
                                       const void* pComment,
                                       mz_uint16 comment_size,
                                       mz_uint level_and_flags);
@@ -1435,14 +1461,14 @@ inline mz_bool mz_zip_writer_end(mz_zip_archive* pZip);
 /* Note this is NOT a fully safe operation. If it crashes or dies in some way your archive can be left in a screwed up state (without a central directory). */
 /* level_and_flags - compression level (0-10, see MZ_BEST_SPEED, MZ_BEST_COMPRESSION, etc.) logically OR'd with zero or more mz_zip_flags, or just set to MZ_DEFAULT_COMPRESSION. */
 /* TODO: Perhaps add an option to leave the existing central dir in place in case the add dies? We could then truncate the file (so the old central dir would be at the end) if something goes wrong. */
-inline mz_bool mz_zip_add_mem_to_archive_file_in_place(const char* pZip_filename,
+inline mz_bool mz_zip_add_mem_to_archive_file_in_place(Fpath pZip_filename,
                                                        const char* pArchive_name,
                                                        const void* pBuf,
                                                        size_t buf_size,
                                                        const void* pComment,
                                                        mz_uint16 comment_size,
                                                        mz_uint level_and_flags);
-inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(const char* pZip_filename,
+inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(Fpath pZip_filename,
                                                           const char* pArchive_name,
                                                           const void* pBuf,
                                                           size_t buf_size,
@@ -1455,8 +1481,8 @@ inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(const char* pZip_filen
 /* If pComment is not NULL, only the file with the specified comment will be extracted. */
 /* Returns NULL on failure. */
 inline void*
-mz_zip_extract_archive_file_to_heap(const char* pZip_filename, const char* pArchive_name, size_t* pSize, mz_uint flags);
-inline void* mz_zip_extract_archive_file_to_heap_v2(const char* pZip_filename,
+mz_zip_extract_archive_file_to_heap(Fpath pZip_filename, const char* pArchive_name, size_t* pSize, mz_uint flags);
+inline void* mz_zip_extract_archive_file_to_heap_v2(Fpath pZip_filename,
                                                     const char* pArchive_name,
                                                     const char* pComment,
                                                     size_t* pSize,
@@ -4518,14 +4544,24 @@ extern "C" {
 #include <sys/stat.h>
 
 #if defined(_MSC_VER) || defined(__MINGW64__)
-static FILE *mz_fopen(const char *pFilename, const char *pMode)
+
+/// @todo [urgent] Other OS besides Windows?
+typedef const wchar_t* Fpath;
+#define FM_READ L"rb"
+
+static FILE *mz_fopen(Fpath pFilename, Fpath pMode)
+{
+    FILE *pFile = _wfopen(pFilename, pMode);
+    return pFile;
+}
+static FILE *mz_fopena(const char* pFilename, const char* pMode)
 {
     FILE *pFile = fopen(pFilename, pMode);
     return pFile;
 }
-static FILE *mz_freopen(const char *pPath, const char *pMode, FILE *pStream)
+static FILE *mz_freopen(Fpath pPath, Fpath pMode, FILE *pStream)
 {
-    FILE *pFile = freopen(pPath, pMode, pStream);
+    FILE *pFile = _wfreopen(pPath, pMode, pStream);
     if (!pFile)
         return NULL;
     return pFile;
@@ -4534,21 +4570,23 @@ static FILE *mz_freopen(const char *pPath, const char *pMode, FILE *pStream)
 #include <sys/utime.h>
 #endif
 #define MZ_FOPEN mz_fopen
+#define MZ_FOPENA mz_fopena
 #define MZ_FCLOSE fclose
 #define MZ_FREAD fread
 #define MZ_FWRITE fwrite
 #define MZ_FTELL64 _ftelli64
 #define MZ_FSEEK64 _fseeki64
 #define MZ_FILE_STAT_STRUCT _stat
-#define MZ_FILE_STAT _stat
+#define MZ_FILE_STAT _wstat
 #define MZ_FFLUSH fflush
 #define MZ_FREOPEN mz_freopen
-#define MZ_DELETE_FILE remove
+#define MZ_DELETE_FILE _wremove
 #elif defined(__MINGW32__)
 #ifndef MINIZ_NO_TIME
 #include <sys/utime.h>
 #endif
 #define MZ_FOPEN(f, m) fopen(f, m)
+#define MZ_FOPENA(f, m) fopen(f, m)
 #define MZ_FCLOSE fclose
 #define MZ_FREAD fread
 #define MZ_FWRITE fwrite
@@ -4880,7 +4918,7 @@ static void mz_zip_time_t_to_dos_time(MZ_TIME_T time, mz_uint16* pDOS_time, mz_u
 #ifndef MINIZ_NO_STDIO
 #ifndef MINIZ_NO_ARCHIVE_WRITING_APIS
 
-static mz_bool mz_zip_get_file_modified_time(const char* pFilename, MZ_TIME_T* pTime) {
+static mz_bool mz_zip_get_file_modified_time(Fpath pFilename, MZ_TIME_T* pTime) {
 
     struct MZ_FILE_STAT_STRUCT file_stat;
 
@@ -4895,9 +4933,21 @@ static mz_bool mz_zip_get_file_modified_time(const char* pFilename, MZ_TIME_T* p
 
 #endif /* #ifndef MINIZ_NO_ARCHIVE_WRITING_APIS*/
 
-static mz_bool mz_zip_set_file_times(const char* pFilename, MZ_TIME_T access_time, MZ_TIME_T modified_time) {
+static mz_bool mz_zip_set_file_times(Fpath pFilename, MZ_TIME_T access_time, MZ_TIME_T modified_time) {
 
-    struct utimbuf t;
+    mz_utimbuf t;
+
+    memset(&t, 0, sizeof(t));
+    t.actime = access_time;
+    t.modtime = modified_time;
+
+    return !mz_utime(pFilename, &t);
+}
+
+/*  ASCII version probably unused
+static mz_bool mz_zip_set_file_timesa(const char* pFilename, MZ_TIME_T access_time, MZ_TIME_T modified_time) {
+
+    utimbuf t;
 
     memset(&t, 0, sizeof(t));
     t.actime = access_time;
@@ -4905,6 +4955,7 @@ static mz_bool mz_zip_set_file_times(const char* pFilename, MZ_TIME_T access_tim
 
     return !utime(pFilename, &t);
 }
+*/
 
 #endif /* #ifndef MINIZ_NO_STDIO */
 #endif /* #ifndef MINIZ_NO_TIME */
@@ -5453,13 +5504,13 @@ static size_t mz_zip_file_read_func(void* pOpaque, mz_uint64 file_ofs, void* pBu
     return MZ_FREAD(pBuf, 1, n, pZip->m_pState->m_pFile);
 }
 
-inline mz_bool mz_zip_reader_init_file(mz_zip_archive* pZip, const char* pFilename, mz_uint32 flags) {
+inline mz_bool mz_zip_reader_init_file(mz_zip_archive* pZip, Fpath pFilename, mz_uint32 flags) {
 
     return mz_zip_reader_init_file_v2(pZip, pFilename, flags, 0, 0);
 }
 
 inline mz_bool mz_zip_reader_init_file_v2(mz_zip_archive* pZip,
-                                          const char* pFilename,
+                                          Fpath pFilename,
                                           mz_uint flags,
                                           mz_uint64 file_start_ofs,
                                           mz_uint64 archive_size) {
@@ -5470,7 +5521,7 @@ inline mz_bool mz_zip_reader_init_file_v2(mz_zip_archive* pZip,
     if ((!pZip) || (!pFilename) || ((archive_size) && (archive_size < MZ_ZIP_END_OF_CENTRAL_DIR_HEADER_SIZE)))
         return mz_zip_set_error(pZip, MZ_ZIP_INVALID_PARAMETER);
 
-    pFile = MZ_FOPEN(pFilename, "rb");
+    pFile = MZ_FOPEN(pFilename, FM_READ);
     if (!pFile)
         return mz_zip_set_error(pZip, MZ_ZIP_FILE_OPEN_FAILED);
 
@@ -6652,7 +6703,7 @@ static size_t mz_zip_file_write_callback(void* pOpaque, mz_uint64 ofs, const voi
     return MZ_FWRITE(pBuf, 1, n, (MZ_FILE*)pOpaque);
 }
 
-inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_index, const char* pDst_filename,
+inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_index, Fpath pDst_filename,
                                              mz_uint flags) {
 
     mz_bool status;
@@ -6665,7 +6716,7 @@ inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_
     if ((file_stat.m_is_directory) || (!file_stat.m_is_supported))
         return mz_zip_set_error(pZip, MZ_ZIP_UNSUPPORTED_FEATURE);
 
-    pFile = MZ_FOPEN(pDst_filename, "wb");
+    pFile = MZ_FOPEN(pDst_filename, FM_WRITE);
     if (!pFile)
         return mz_zip_set_error(pZip, MZ_ZIP_FILE_OPEN_FAILED);
 
@@ -6688,7 +6739,7 @@ inline mz_bool mz_zip_reader_extract_to_file(mz_zip_archive* pZip, mz_uint file_
 
 inline mz_bool mz_zip_reader_extract_file_to_file(mz_zip_archive* pZip,
                                                   const char* pArchive_filename,
-                                                  const char* pDst_filename,
+                                                  Fpath pDst_filename,
                                                   mz_uint flags) {
 
     mz_uint32 file_index;
@@ -7027,7 +7078,7 @@ inline mz_bool mz_zip_validate_mem_archive(const void* pMem, size_t size, mz_uin
 
 #ifndef MINIZ_NO_STDIO
 
-inline mz_bool mz_zip_validate_file_archive(const char* pFilename, mz_uint flags, mz_zip_error* pErr) {
+inline mz_bool mz_zip_validate_file_archive(Fpath pFilename, mz_uint flags, mz_zip_error* pErr) {
 
     mz_bool success = MZ_TRUE;
     mz_zip_archive zip;
@@ -7280,14 +7331,14 @@ static size_t mz_zip_file_write_func(void* pOpaque, mz_uint64 file_ofs, const vo
     return MZ_FWRITE(pBuf, 1, n, pZip->m_pState->m_pFile);
 }
 
-inline mz_bool mz_zip_writer_init_file(mz_zip_archive* pZip, const char* pFilename,
+inline mz_bool mz_zip_writer_init_file(mz_zip_archive* pZip, Fpath pFilename,
                                        mz_uint64 size_to_reserve_at_beginning) {
 
     return mz_zip_writer_init_file_v2(pZip, pFilename, size_to_reserve_at_beginning, 0);
 }
 
 inline mz_bool
-mz_zip_writer_init_file_v2(mz_zip_archive* pZip, const char* pFilename, mz_uint64 size_to_reserve_at_beginning,
+mz_zip_writer_init_file_v2(mz_zip_archive* pZip, Fpath pFilename, mz_uint64 size_to_reserve_at_beginning,
                            mz_uint flags) {
 
     MZ_FILE* pFile;
@@ -7303,7 +7354,7 @@ mz_zip_writer_init_file_v2(mz_zip_archive* pZip, const char* pFilename, mz_uint6
     if (!mz_zip_writer_init_v2(pZip, size_to_reserve_at_beginning, flags))
         return MZ_FALSE;
 
-    if (NULL == (pFile = MZ_FOPEN(pFilename, (flags & MZ_ZIP_FLAG_WRITE_ALLOW_READING) ? "w+b" : "wb"))) {
+    if (NULL == (pFile = MZ_FOPEN(pFilename, (flags & MZ_ZIP_FLAG_WRITE_ALLOW_READING) ? FM_WPLUS : FM_WRITE))) {
         mz_zip_writer_end(pZip);
         return mz_zip_set_error(pZip, MZ_ZIP_FILE_OPEN_FAILED);
     }
@@ -7353,7 +7404,7 @@ inline mz_bool mz_zip_writer_init_cfile(mz_zip_archive* pZip, MZ_FILE* pFile, mz
 
 #endif /* #ifndef MINIZ_NO_STDIO */
 
-inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, const char* pFilename, mz_uint flags) {
+inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, Fpath pFilename, mz_uint flags) {
 
     mz_zip_internal_state* pState;
 
@@ -7394,7 +7445,7 @@ inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, const cha
                 return mz_zip_set_error(pZip, MZ_ZIP_INVALID_PARAMETER);
 
             /* Archive is being read from stdio and was originally opened only for reading. Try to reopen as writable. */
-            if (NULL == (pState->m_pFile = MZ_FREOPEN(pFilename, "r+b", pState->m_pFile))) {
+            if (NULL == (pState->m_pFile = MZ_FREOPEN(pFilename, FM_RPLUS, pState->m_pFile))) {
                 /* The mz_zip_archive is now in a bogus state because pState->m_pFile is NULL, so just close it. */
                 mz_zip_reader_end_internal(pZip, MZ_FALSE);
                 return mz_zip_set_error(pZip, MZ_ZIP_FILE_OPEN_FAILED);
@@ -7433,7 +7484,7 @@ inline mz_bool mz_zip_writer_init_from_reader_v2(mz_zip_archive* pZip, const cha
     return MZ_TRUE;
 }
 
-inline mz_bool mz_zip_writer_init_from_reader(mz_zip_archive* pZip, const char* pFilename) {
+inline mz_bool mz_zip_writer_init_from_reader(mz_zip_archive* pZip, Fpath pFilename) {
 
     return mz_zip_writer_init_from_reader_v2(pZip, pFilename, 0);
 }
@@ -8397,7 +8448,7 @@ inline mz_bool mz_zip_writer_add_cfile(mz_zip_archive* pZip,
 
 inline mz_bool mz_zip_writer_add_file(mz_zip_archive* pZip,
                                       const char* pArchive_name,
-                                      const char* pSrc_filename,
+                                      Fpath pSrc_filename,
                                       const void* pComment,
                                       mz_uint16 comment_size,
                                       mz_uint level_and_flags) {
@@ -8416,7 +8467,7 @@ inline mz_bool mz_zip_writer_add_file(mz_zip_archive* pZip,
         return mz_zip_set_error(pZip, MZ_ZIP_FILE_STAT_FAILED);
 #endif
 
-    pSrc_file = MZ_FOPEN(pSrc_filename, "rb");
+    pSrc_file = MZ_FOPEN(pSrc_filename, FM_READ);
     if (!pSrc_file)
         return mz_zip_set_error(pZip, MZ_ZIP_FILE_OPEN_FAILED);
 
@@ -9027,7 +9078,7 @@ inline mz_bool mz_zip_writer_end(mz_zip_archive* pZip) {
 
 #ifndef MINIZ_NO_STDIO
 
-inline mz_bool mz_zip_add_mem_to_archive_file_in_place(const char* pZip_filename,
+inline mz_bool mz_zip_add_mem_to_archive_file_in_place(Fpath pZip_filename,
                                                        const char* pArchive_name,
                                                        const void* pBuf,
                                                        size_t buf_size,
@@ -9045,7 +9096,7 @@ inline mz_bool mz_zip_add_mem_to_archive_file_in_place(const char* pZip_filename
                                                       NULL);
 }
 
-inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(const char* pZip_filename,
+inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(Fpath pZip_filename,
                                                           const char* pArchive_name,
                                                           const void* pBuf,
                                                           size_t buf_size,
@@ -9148,7 +9199,7 @@ inline mz_bool mz_zip_add_mem_to_archive_file_in_place_v2(const char* pZip_filen
     return status;
 }
 
-inline void* mz_zip_extract_archive_file_to_heap_v2(const char* pZip_filename,
+inline void* mz_zip_extract_archive_file_to_heap_v2(Fpath pZip_filename,
                                                     const char* pArchive_name,
                                                     const char* pComment,
                                                     size_t* pSize,
@@ -9191,7 +9242,7 @@ inline void* mz_zip_extract_archive_file_to_heap_v2(const char* pZip_filename,
 }
 
 inline void*
-mz_zip_extract_archive_file_to_heap(const char* pZip_filename, const char* pArchive_name, size_t* pSize,
+mz_zip_extract_archive_file_to_heap(Fpath pZip_filename, const char* pArchive_name, size_t* pSize,
                                     mz_uint flags) {
 
     return mz_zip_extract_archive_file_to_heap_v2(pZip_filename, pArchive_name, NULL, pSize, flags, NULL);

@@ -58,6 +58,7 @@ HEADERS += \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     ../Libs/SelfMade/u_SearchEngine.h \
+    ../Libs/Zippy/Zippy.hpp \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
@@ -78,8 +79,12 @@ FORMS += \
     FmTofuStats.ui
 
 INCLUDEPATH += \
+    ../Libs \
     ../Libs/SelfMade \
+    ../Libs/Zippy \
     Uc
+
+LIBS += -lz
 
 TRANSLATIONS += \
     Unicodia_en_001.ts
