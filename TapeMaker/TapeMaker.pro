@@ -9,6 +9,7 @@ win32-g++ {
 }
 
 SOURCES += \
+        ../Libs/SelfMade/u_Strings.cpp \
         main.cpp
 
 HEADERS += \

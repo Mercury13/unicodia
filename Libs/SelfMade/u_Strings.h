@@ -42,6 +42,25 @@ namespace str {
     }
 
     ///
+    /// @return   # of replacements
+    ///
+    template <class C, class T, class A>
+    size_t replace(
+            std::basic_string<C, T, A>& s,
+            C what,
+            C byWhat)
+    {
+        size_t r = 0;
+        for (auto& v : s) {
+            if (v == what) {
+                v = byWhat;
+                ++r;
+            }
+        }
+        return r;
+    }
+
+    ///
     /// @return   haystack or cache
     ///
     template <class C, class T, class A>

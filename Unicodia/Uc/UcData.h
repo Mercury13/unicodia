@@ -608,6 +608,7 @@ namespace uc {
         UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
         CJK             = 1<<5,     ///< [+] Non-collapsible CJK
+        NO_EMOJI        = 1<<6,     ///< [+] No graphic emoji
         EXPERIMENT      = 1<<8,     ///< Left for experiments
     };
 

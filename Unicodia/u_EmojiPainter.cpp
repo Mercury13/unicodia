@@ -1,5 +1,8 @@
 #include "u_EmojiPainter.h"
 
+// C++
+#include "charconv"
+
 // Qt
 #include <QSvgRenderer>
 
@@ -92,7 +95,7 @@ std::string_view EmojiPainter::getSvg(char32_t cp)
 
     // Find in directory
     char fname[40];
-    snprintf(fname, std::size(fname), "emoji_u%04x.svg", static_cast<int>(cp));
+    std::to_chars(std::begin(fname), std::end(fname), static_cast<int>(cp));
     auto it = directory.find(fname);
     if (it == directory.end())
         return {};

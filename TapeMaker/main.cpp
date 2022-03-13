@@ -5,19 +5,41 @@
 
 // Libs
 #include "i_ByteSwap.h"
+#include "u_Strings.h"
+
+using namespace std::string_view_literals;
 
 struct TapeEntry
 {
     unsigned subtape,
              offset,
              length;
-    std::string filename;
+    std::u32string seq;
+
+    std::string toName(std::string_view extension) const;
 };
+
+
+std::string TapeEntry::toName(std::string_view extension) const
+{
+    std::string r;
+    char buf[20];
+    for (auto v : seq) {
+        if (!r.empty())
+            r += '-';
+        snprintf(buf, std::size(buf), "%x", v);
+        r += buf;
+    }
+    r += extension;
+    return r;
+}
+
 
 class TapeWriter
 {
 public:
-    void addFile(const std::filesystem::path& p, size_t fsize);
+    /// @return [0] not added [+] its filename
+    std::string addFile(const std::filesystem::path& p, size_t fsize);
     void finish();
 private:
     static constexpr int SUBTAPE_SIZE = 1'000'000;
@@ -30,15 +52,41 @@ private:
     void writeList() const;
 };
 
-void TapeWriter::addFile(const std::filesystem::path& p, size_t fsize)
+bool isBlacklistedPart(std::string_view s)
+{
+    return (s == "emoji"sv);
+}
+
+std::u32string parseSeq(std::string s)
+{
+    str::replace(s, '_', '-');      // for Noto
+    auto things = str::splitSv(s, '-');
+    std::u32string r;
+    for (auto v : things) {
+        if (isBlacklistedPart(v))
+            continue;
+        if (v.starts_with('u'))
+            v = v.substr(1);
+        int value = -1;
+        std::from_chars(
+            std::to_address(v.begin()), std::to_address(v.end()), value, 16);
+        if (value >= 0)
+            r += char32_t(value);
+    }
+    return r;
+}
+
+std::string TapeWriter::addFile(const std::filesystem::path& p, size_t fsize)
 {
     // Tape will not
     if (fsize == 0)
-        return;
+        return {};
 
     // Create entry
-    entries.emplace_back(
-            iSubTape, subtapeSize, fsize, p.filename().generic_string() );
+    auto fname = p.filename().generic_string();
+    auto seq = parseSeq(fname);
+    auto& entry = entries.emplace_back(
+            iSubTape, subtapeSize, fsize, seq );
 
     // Add to subtape
     auto newSize = subtapeSize + fsize;
@@ -53,6 +101,8 @@ void TapeWriter::addFile(const std::filesystem::path& p, size_t fsize)
     // Next??
     if (subtapeSize >= SUBTAPE_SIZE)
         nextSubtape();
+
+    return entry.toName(".svg");
 }
 
 void TapeWriter::nextSubtape()
@@ -99,16 +149,18 @@ void TapeWriter::writeDirectory() const
         writeIW(os, entry.subtape);
         writeID(os, entry.offset);
         writeID(os, entry.length);
-        writeIW(os, entry.filename.length());
-        os.write(entry.filename.data(), entry.filename.length());
+        auto fname = entry.toName(".svg");
+        writeIW(os, fname.length());
+        os.write(fname.data(), fname.length());
     }
 }
 
 void TapeWriter::writeList() const
 {
-    std::ofstream os("notoemoji.txt");
+    std::ofstream os("single-char-emoji.txt");
     for (auto& entry : entries) {
-        os << entry.filename << '\n';
+        if (entry.seq.size() == 1)
+            os << entry.toName({}) << '\n';
     }
 }
 
@@ -139,8 +191,12 @@ int main()
     std::filesystem::directory_iterator di(".");
     for (const auto& entry: di) {
         if (entry.is_regular_file() && entry.path().extension() == pExt) {
-            tw.addFile(entry.path(), entry.file_size());
-            std::cout << entry.path().filename().generic_string() << std::endl;
+            auto name = tw.addFile(entry.path(), entry.file_size());
+            if (name.empty()) {
+                std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << std::endl;
+            } else {
+                std::cout << name << std::endl;
+            }
         }
     }
     tw.finish();

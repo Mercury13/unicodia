@@ -2980,7 +2980,8 @@ constinit const uc::Block uc::blocks[] {
             "Basic Latin", u8"Латиница базовая", CT_ASCII, uc::EcScript::Latn },
     // Latin-1 OK
     { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
-            "Latin-1 Supplement", u8"Латиница-1", CT_LATIN1, EcScript::Latn },
+            "Latin-1 Supplement", u8"Латиница-1", CT_LATIN1,
+            EcScript::Latn, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Latin extended A OK
     { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE },
             "Latin Extended-A", u8"Латиница расширенная A",
@@ -3386,7 +3387,8 @@ constinit const uc::Block uc::blocks[] {
                     "• для маркировки клавиш;<br>"
                     "• на дорожных знаках, транспортных схемах;<br>"
                     "• в математике{{-}}отображение, следствие, предел, вектор, монотонность;<br>"
-                    "• в химии{{-}}реакция, идущая в одну или обе стороны, выделяется газ, выпадает осадок." },
+                    "• в химии{{-}}реакция, идущая в одну или обе стороны, выделяется газ, выпадает осадок.",
+            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK
     { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
             "Mathematical Operators", u8"Математические знаки",
@@ -6771,7 +6773,9 @@ uc::DrawMethod uc::Cp::drawMethod(int dpi) const
     if (flags.have(Cfg::CUSTOM_CONTROL))
         return uc::DrawMethod::CUSTOM_CONTROL;
     if (flags.have(Cfg::SVG_EMOJI))
-        return uc::DrawMethod::SVG_EMOJI;
+        return (block().flags.have(Bfg::NO_EMOJI))
+                ? uc::DrawMethod::SAMPLE
+                : uc::DrawMethod::SVG_EMOJI;
     if (isAbbreviated())
         return uc::DrawMethod::ABBREVIATION;
     if (isTrueSpace())
