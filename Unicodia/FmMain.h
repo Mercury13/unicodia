@@ -164,7 +164,6 @@ protected:
                 const QModelIndex& index, const QColor& color, int dpi) const;
 private:
     RowCache rows;
-    std::unique_ptr<EmojiPainter> emp;
     mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems

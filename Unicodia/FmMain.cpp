@@ -70,14 +70,19 @@ void EmojiPainter::ensureTape()
     if (!zipTape.empty())
         return;
 
+    constexpr auto TAPE_NAME = "emoji1.zip";
+
     auto tempName = expandTempFontName("emoji.zip");
-    std::filesystem::path p{ tempName.toStdWString() };
+    Zippy::ZipArchive arc( tempName.toStdWString() );
+    auto entry = arc.GetEntry(TAPE_NAME);
+    zipTape = entry.GetDataAsString();
 }
 
 
 QSvgRenderer* EmojiPainter::getSvg(char32_t cp)
 {
     ensureTape();
+    return nullptr;
 }
 
 
@@ -87,6 +92,11 @@ void EmojiPainter::draw(QPainter* painter, const QRect& rect, char32_t cp)
         /// @todo [urgent] set appropriate size
         rend->render(painter, rect);
     }
+}
+
+
+namespace {
+    EmojiPainter emp;
 }
 
 
@@ -215,8 +225,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 CharsModel::CharsModel(QWidget* aOwner) :
     owner(aOwner),
     match(str::toQ(FAM_DEFAULT)),
-    rows(NCOLS),
-    emp(new EmojiPainter)
+    rows(NCOLS)
 {
     tcache.connectSignals(this);
 }
@@ -789,7 +798,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
                               textAt(cp));
         } break;
     case uc::DrawMethod::SVG_EMOJI:
-        /// @todo [urgent] draw emoji
+        emp.draw(painter, rect, cp.subj.ch32());
         break;
     }
     if (cp.isDeprecated())

@@ -555,7 +555,7 @@ namespace Zippy
          * @param name The name of the entry to extract.
          * @param dest The path to extract the entry to.
          */
-        void ExtractEntry(const std::string& name, const std::string& dest) {
+        void ExtractEntry(const std::string& name, const std::filesystem::path& dest) {
 
             if (!IsOpen()) throw ZipLogicError("Cannot call ExtractEntry on empty ZipArchive object!");
 
@@ -563,16 +563,17 @@ namespace Zippy
 
             // ===== If the entry is a directory, create the directory as a subdirectory to dest
             if (entry.IsDirectory()) {
-#ifdef _WIN32
-                mkdir((dest + entry.Filename()).c_str());
-#else
-                mkdir((dest + entry.Filename()).c_str(), 0733);
-#endif
+                std::filesystem::create_directory(dest / entry.Filename());
+//#ifdef _WIN32
+//                mkdir((dest + entry.Filename()).c_str());
+//#else
+//                mkdir((dest + entry.Filename()).c_str(), 0733);
+//#endif
             }
 
             // ===== If the entry is a file, stream the entry data to a file.
             else {
-                std::ofstream output(dest + "/" + entry.Filename(), std::ios::binary);
+                std::ofstream output(dest / entry.Filename(), std::ios::binary);
                 for (auto ch : entry.GetData())
                     output << static_cast<unsigned char>(ch);
                 output.close();
