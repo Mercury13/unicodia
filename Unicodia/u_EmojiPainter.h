@@ -2,28 +2,39 @@
 
 #include <memory>
 #include <unordered_map>
-
-// Qt
-#include <QSvgRenderer>
+#include <vector>
 
 namespace Zippy {
     class ZipArchive;
 }
+
+class QSvgRenderer;
+class QRect;
+class QPainter;
+
 
 class EmojiPainter
 {
 public:
     EmojiPainter();
     ~EmojiPainter();
+    QSvgRenderer* getRenderer(char32_t cp);
+    std::string_view getSvg(char32_t cp);
     void draw(QPainter* painter, const QRect& rect, char32_t cp);
 private:
+    // Types
     struct TapeEntry {
         unsigned subtape = 0, offset = 0, length = 0;
+        constexpr unsigned end() const { return offset + length; }
     };
-    void ensureTape();
-    QSvgRenderer* getSvg(char32_t cp);
+
+    // Vars
     std::unique_ptr<Zippy::ZipArchive> arc;
-    std::unordered_map<int, std::string> subtapes;
-    std::unordered_map<std::string, TapeEntry> dir;
-    std::unordered_map<char32_t, QSvgRenderer> renderers;
+    std::vector<std::string> subtapes;
+    std::unordered_map<std::string, TapeEntry> directory;
+    std::unordered_map<char32_t, std::unique_ptr<QSvgRenderer>> renderers;
+
+    // Functions
+    void ensureTape();
+    std::string_view getSubtape(unsigned index);
 };

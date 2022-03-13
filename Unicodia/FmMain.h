@@ -205,13 +205,14 @@ public:
     void setAbbreviation(std::u8string_view x);
     void setSpace(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
+    void setEmoji(char32_t aSubj);
     void setNormal();
     void init();
 protected:
     void paintEvent(QPaintEvent *event);
 private:
     QSize initialSize;
-    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL };
+    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;

@@ -1014,6 +1014,10 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                       palette().windowText().color(),
                       subj);
         } break;
+    case Mode::EMOJI: {
+            QPainter painter(this);
+            emp.draw(&painter, geometry(), subj);
+        } break;
     }
 }
 
@@ -1036,6 +1040,15 @@ void WiCustomDraw::setCustomControl(char32_t aSubj)
 {
     setNormal();
     mode = Mode::CUSTOM_CONTROL;
+    subj = aSubj;
+    update();
+}
+
+
+void WiCustomDraw::setEmoji(char32_t aSubj)
+{
+    setNormal();
+    mode = Mode::EMOJI;
     subj = aSubj;
     update();
 }
@@ -1467,7 +1480,8 @@ void FmMain::showCp(MaybeChar ch)
             drawSampleWithQt(*ch);
             break;
         case uc::DrawMethod::SVG_EMOJI:
-            /// @todo [urgent] draw emoji
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setEmoji(ch.code);
             break;
         }
 

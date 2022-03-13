@@ -1,5 +1,8 @@
 #include "u_EmojiPainter.h"
 
+// Qt
+#include <QSvgRenderer>
+
 // Libs
 #include "i_TempFont.h"
 #include "i_ByteSwap.h"
@@ -43,6 +46,7 @@ void EmojiPainter::ensureTape()
 
     std::istringstream iss(tapeBin);
     auto nEntries = readID(iss);
+    size_t maxSubtape = 0;
     for (unsigned iEntry = 0; iEntry < nEntries; ++iEntry) {
         TapeEntry te;
         te.subtape = readIW(iss);
@@ -52,20 +56,78 @@ void EmojiPainter::ensureTape()
         std::string fname;
         fname.resize(length);
         iss.read(fname.data(), length);
+        directory[fname] = te;
+        if (te.subtape > maxSubtape)
+            maxSubtape = te.subtape;
     }
+    subtapes.resize(maxSubtape + 1);
 }
 
 
-QSvgRenderer* EmojiPainter::getSvg(char32_t cp)
+std::string_view EmojiPainter::getSubtape(unsigned index)
 {
+    // Load tape
     ensureTape();
-    return nullptr;
+
+    if (index > subtapes.size())
+        return {};
+
+    auto& v = subtapes[index];
+    if (!v.empty())
+        return v;
+
+    char fname[20];
+    snprintf(fname, std::size(fname), "%u.bin", index);
+
+    auto entry = arc->GetEntry(fname);
+    v = entry.GetDataAsString();
+    return v;
+}
+
+
+std::string_view EmojiPainter::getSvg(char32_t cp)
+{
+    // Load tape
+    ensureTape();
+
+    // Find in directory
+    char fname[40];
+    snprintf(fname, std::size(fname), "emoji_u%04x.svg", static_cast<int>(cp));
+    auto it = directory.find(fname);
+    if (it == directory.end())
+        return {};
+    auto ent = it->second;
+
+    // Load subtape
+    auto subtape = getSubtape(ent.subtape);
+    if (subtape.length() < ent.end())
+        throw std::runtime_error("Subtape too short!");
+    return subtape.substr(ent.offset, ent.length);
+}
+
+
+QSvgRenderer* EmojiPainter::getRenderer(char32_t cp)
+{
+    auto it = renderers.find(cp);
+    if (it != renderers.end())
+        return it->second.get();
+
+    // No cached renderer!
+    auto svg = getSvg(cp);
+    if (svg.empty())
+        return nullptr;
+
+    QByteArray bytes(svg.data(), svg.length());
+    auto rend = std::make_unique<QSvgRenderer>(bytes);
+    rend->setAspectRatioMode(Qt::KeepAspectRatio);
+    auto [it2, wasIns] = renderers.emplace(cp, std::move(rend));
+    return it2->second.get();
 }
 
 
 void EmojiPainter::draw(QPainter* painter, const QRect& rect, char32_t cp)
 {
-    if (auto rend = getSvg(cp)) {
+    if (auto* rend = getRenderer(cp)) {
         /// @todo [urgent] set appropriate size
         rend->render(painter, rect);
     }
