@@ -27,6 +27,7 @@ private:
     std::vector<TapeEntry> entries;
     void nextSubtape();
     void writeDirectory() const;
+    void writeList() const;
 };
 
 void TapeWriter::addFile(const std::filesystem::path& p, size_t fsize)
@@ -103,16 +104,38 @@ void TapeWriter::writeDirectory() const
     }
 }
 
+void TapeWriter::writeList() const
+{
+    std::ofstream os("notoemoji.txt");
+    for (auto& entry : entries) {
+        os << entry.filename << '\n';
+    }
+}
+
+
 void TapeWriter::finish()
 {
     nextSubtape();
     writeDirectory();
+    writeList();
+}
+
+void deleteBinaries()
+{
+    std::filesystem::path pExt(".bin");
+    std::filesystem::directory_iterator di(".");
+    for (const auto& entry: di) {
+        if (entry.is_regular_file() && entry.path().extension() == pExt) {
+            std::filesystem::remove(entry.path());
+        }
+    }
 }
 
 int main()
 {
+    deleteBinaries();
     TapeWriter tw;
-    std::filesystem::path pExt(".Debug");
+    std::filesystem::path pExt(".svg");
     std::filesystem::directory_iterator di(".");
     for (const auto& entry: di) {
         if (entry.is_regular_file() && entry.path().extension() == pExt) {
