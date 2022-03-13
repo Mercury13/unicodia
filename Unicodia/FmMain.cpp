@@ -70,7 +70,7 @@ void EmojiPainter::ensureTape()
     if (!zipTape.empty())
         return;
 
-    constexpr auto TAPE_NAME = "emoji1.zip";
+    constexpr auto TAPE_NAME = "zipios.cpp";
 
     auto tempName = expandTempFontName("emoji.zip");
     Zippy::ZipArchive arc( tempName.toStdWString() );

@@ -5,10 +5,10 @@ TAPE DIRECTORY  [=tape.bin]
 0 DWORD      # of entries [=NE]
 4 NE× {
     0 WORD    # of subtape
-	2 DWORD   offset in body
-	6 DWORD   file length
-	10 WORD   filename length [=FNL]
-	12 FNL×BYTE  filename
+    2 DWORD   offset in body
+    6 DWORD   file length
+    10 WORD   filename length [=FNL]
+    12 FNL×BYTE  filename
 }
 
 
