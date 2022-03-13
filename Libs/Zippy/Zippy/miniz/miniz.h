@@ -4554,11 +4554,13 @@ static FILE *mz_fopen(Fpath pFilename, Fpath pMode)
     FILE *pFile = _wfopen(pFilename, pMode);
     return pFile;
 }
+/*  mz_fopen ASCII version unused
 static FILE *mz_fopena(const char* pFilename, const char* pMode)
 {
     FILE *pFile = fopen(pFilename, pMode);
     return pFile;
 }
+*/
 static FILE *mz_freopen(Fpath pPath, Fpath pMode, FILE *pStream)
 {
     FILE *pFile = _wfreopen(pPath, pMode, pStream);
