@@ -26,13 +26,11 @@
 #include "u_Strings.h"
 #include "u_Qstrings.h"
 
-// Zip
-#include "Zippy.hpp"
-
 // Project-local
 #include "Skin.h"
 #include "Wiki.h"
 #include "MyWiki.h"
+#include "u_EmojiPainter.h"
 
 // Forms
 #include "FmPopup.h"
@@ -47,58 +45,8 @@ namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
     const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
-}
-
-
-///// EmojiPainter /////////////////////////////////////////////////////////////
-
-
-class EmojiPainter
-{
-public:
-    void draw(QPainter* painter, const QRect& rect, char32_t cp);
-private:
-    void ensureTape();
-    QSvgRenderer* getSvg(char32_t cp);
-    std::string zipTape;
-    std::unordered_map<char32_t, QSvgRenderer> renderers;
-};
-
-
-void EmojiPainter::ensureTape()
-{
-    if (!zipTape.empty())
-        return;
-
-    constexpr auto TAPE_NAME = "zipios.cpp";
-
-    auto tempName = expandTempFontName("emoji.zip");
-    Zippy::ZipArchive arc( tempName.toStdWString() );
-    auto entry = arc.GetEntry(TAPE_NAME);
-    zipTape = entry.GetDataAsString();
-}
-
-
-QSvgRenderer* EmojiPainter::getSvg(char32_t cp)
-{
-    ensureTape();
-    return nullptr;
-}
-
-
-void EmojiPainter::draw(QPainter* painter, const QRect& rect, char32_t cp)
-{
-    if (auto rend = getSvg(cp)) {
-        /// @todo [urgent] set appropriate size
-        rend->render(painter, rect);
-    }
-}
-
-
-namespace {
     EmojiPainter emp;
 }
-
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
 

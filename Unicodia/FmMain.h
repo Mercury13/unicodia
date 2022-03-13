@@ -97,8 +97,6 @@ protected:
 enum class TableColors { NO, YES };
 enum class TableDraw { INTERNAL, CUSTOM };
 
-class EmojiPainter;
-
 class CharsModel
         : public QAbstractTableModel,
           public QStyledItemDelegate,

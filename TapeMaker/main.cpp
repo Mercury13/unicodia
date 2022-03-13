@@ -20,7 +20,7 @@ public:
     void addFile(const std::filesystem::path& p, size_t fsize);
     void finish();
 private:
-    static constexpr int SUBTAPE_SIZE = 250'000;
+    static constexpr int SUBTAPE_SIZE = 1'000'000;
     int iSubTape = 0;
     size_t subtapeSize = 0;
     std::string readySubtape;

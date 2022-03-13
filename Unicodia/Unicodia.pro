@@ -40,7 +40,8 @@ SOURCES += \
     Wiki.cpp \
     c_SearchEdit.cpp \
     main.cpp \
-    FmMain.cpp
+    FmMain.cpp \
+    u_EmojiPainter.cpp
 
 HEADERS += \
     ../Libs/SelfMade/c_TableCache.h \
@@ -72,7 +73,8 @@ HEADERS += \
     Uc/UcData.h \
     Uc/UcSearch.h \
     Wiki.h \
-    c_SearchEdit.h
+    c_SearchEdit.h \
+    u_EmojiPainter.h
 
 FORMS += \
     FmMain.ui \
