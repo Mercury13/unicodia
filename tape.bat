@@ -29,4 +29,10 @@ rem Rest things
 @%SEVENZIP% a emoji.zip *.bin -mx9
 @del *.bin
 @cd ..
-pause
+
+@echo.
+@echo ===== Moving emoji ZIP =====
+@if exist Fonts\emoji.zip del Fonts\emoji.zip
+@move %EMOJI%\emoji.zip Fonts\emoji.zip
+
+@pause
