@@ -59,3 +59,6 @@ UcAuto.cpp
 
 # Really big sources
 Hana*.sfd
+
+# Temporarily removed emoji.zip
+emoji.zip
