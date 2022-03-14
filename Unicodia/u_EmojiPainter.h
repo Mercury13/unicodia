@@ -20,7 +20,7 @@ public:
     ~EmojiPainter();
     QSvgRenderer* getRenderer(char32_t cp);
     std::string_view getSvg(char32_t cp);
-    void draw(QPainter* painter, const QRect& rect, char32_t cp);
+    void draw(QPainter* painter, QRect rect, char32_t cp, int height);
 private:
     // Types
     struct TapeEntry {

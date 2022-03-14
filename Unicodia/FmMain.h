@@ -193,7 +193,7 @@ public:
 private:
     QWidget* const sample;
     SafeVector<uc::SearchLine> v;
-    mutable LruCache<char32_t, QPixmap> cache { 300 };
+    mutable LruCache<char32_t, QPixmap> cache { 400 };
 };
 
 
@@ -205,7 +205,7 @@ public:
     void setAbbreviation(std::u8string_view x);
     void setSpace(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
-    void setEmoji(char32_t aSubj);
+    void setEmoji(char32_t aSubj, int height);
     void setNormal();
     void init();
 protected:
@@ -216,6 +216,7 @@ private:
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;
+    int emojiHeight = 12;
     char32_t subj = 0;
 };
 

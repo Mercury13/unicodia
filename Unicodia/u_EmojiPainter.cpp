@@ -130,10 +130,16 @@ QSvgRenderer* EmojiPainter::getRenderer(char32_t cp)
 }
 
 
-void EmojiPainter::draw(QPainter* painter, const QRect& rect, char32_t cp)
+void EmojiPainter::draw(
+            QPainter* painter, QRect rect,
+            char32_t cp, int height)
 {
     if (auto* rend = getRenderer(cp)) {
-        /// @todo [urgent] set appropriate size
+        if (rect.height() > height) {
+            auto delta = (rect.height() - height) / 2;
+            rect.moveTop(rect.top() + delta);
+            rect.setHeight(height);
+        }
         rend->render(painter, rect);
     }
 }
