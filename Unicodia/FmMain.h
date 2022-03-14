@@ -205,7 +205,7 @@ public:
     void setAbbreviation(std::u8string_view x);
     void setSpace(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
-    void setEmoji(char32_t aSubj, int height);
+    void setEmoji(char32_t aSubj);
     void setNormal();
     void init();
 protected:
@@ -216,7 +216,6 @@ private:
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;
-    int emojiHeight = 12;
     char32_t subj = 0;
 };
 

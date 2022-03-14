@@ -748,7 +748,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
     case uc::DrawMethod::SVG_EMOJI: {
             auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
             QFontMetrics m(*font);
-            auto h = m.height() * 14 / 10;
+            auto h = rect.height() * 8 / 10;
             emp.draw(painter, rect, cp.subj.ch32(), h);
         } break;
     }
@@ -1019,7 +1019,8 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
         } break;
     case Mode::EMOJI: {
             QPainter painter(this);
-            emp.draw(&painter, geometry(), subj, emojiHeight);
+            auto r = geometry();
+            emp.draw(&painter, geometry(), subj, r.height() * 17 / 20);
         } break;
     }
 }
@@ -1048,12 +1049,11 @@ void WiCustomDraw::setCustomControl(char32_t aSubj)
 }
 
 
-void WiCustomDraw::setEmoji(char32_t aSubj, int height)
+void WiCustomDraw::setEmoji(char32_t aSubj)
 {
     setNormal();
     mode = Mode::EMOJI;
     subj = aSubj;
-    emojiHeight = height;
     update();
 }
 
@@ -1485,7 +1485,7 @@ void FmMain::showCp(MaybeChar ch)
             break;
         case uc::DrawMethod::SVG_EMOJI:
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setEmoji(ch.code, 13);
+            ui->pageSampleCustom->setEmoji(ch.code);
             break;
         }
 
