@@ -53,12 +53,11 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
-      { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …3
-      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …4
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …5
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …6
-      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …7  Let it be, system font
-      { "Segoe UI Historic" },                                                  // …8  Let it be, system font
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
+      { "Segoe UI Historic" },                                                  // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
@@ -129,18 +128,16 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { "NotoSerifDevanagari.ttf", STYLE_DEVA, 110_pc },                          // Devanagari
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat
+    { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                      // Dingbat
+      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …1
+      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …2
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …3
+      { FNAME_BABEL, 130_pc },                                                  // …4
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Dingbat 2
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …1
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
-      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …4
-      { FNAME_BABEL, 130_pc },                                                  // …5
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Dingbat 2
-      { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                       // …1
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …3
-      { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …4
-      { FNAME_FUNKY },                                                          // …5
+      { FNAME_FUNKY },                                                          // …4
     { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER,
             "padding-bottom:12%;"_sty, 110_pc },                                // Dives Akuru
       // Unlike Egyptian, OTF is poor;
