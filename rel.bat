@@ -1,5 +1,5 @@
 @rem Settings
-@set VERSION=1.2.7
+@set VERSION=1.2.8
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
