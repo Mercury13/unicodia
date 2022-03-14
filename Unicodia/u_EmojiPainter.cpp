@@ -14,6 +14,7 @@
 
 namespace {
 
+    ///  Read Intel word
     [[maybe_unused]] uint16_t readIW(std::istream& is)
     {
         Word1 w;
@@ -22,6 +23,7 @@ namespace {
         return w.asWord;
     }
 
+    ///  Read Intel dword
     [[maybe_unused]] uint32_t readID(std::istream& is)
     {
         Dword1 d;
