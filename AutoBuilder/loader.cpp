@@ -122,7 +122,7 @@ namespace {
 
     constinit const LocalFile allLocalFiles[] {
         { MISCFILES ENTITIES_HTML },
-        { MISCFILES SINGLEEMOJI_TXT },
+        { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 
     constinit const Step allSteps[] {
