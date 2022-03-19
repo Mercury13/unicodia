@@ -731,7 +731,7 @@ namespace {
         str::append(text, u8"\u00A0</span>");
     }
 
-    void appendSgnwVariants(QString& text, const uc::SwInfo& sw)
+    void appendSgnwVariants(QString& text, const uc::Cp& cp, const uc::SwInfo& sw)
     {
         if (!sw)
             return;
@@ -793,7 +793,7 @@ namespace {
 
         if (auto note = sw.note(); !note.empty()) {
             text += "<h4>* ";
-            str::append(text, note);
+            appendWiki(text, cp, note);
             text += "</h4>";
         }
     }
@@ -858,7 +858,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         str::append(text, u8"<h4>Графическое <a href='pt:emoji' class='popup'>эмодзи</a> требует U+FE0F (=VS16)</h4>"sv);
     }
 
-    appendSgnwVariants(text, sw);
+    appendSgnwVariants(text, cp, sw);
 
     {   // Info box
         str::append(text, "<p>");
