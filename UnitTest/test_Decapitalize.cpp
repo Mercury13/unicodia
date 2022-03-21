@@ -562,7 +562,6 @@ TEST (Decap, ToneLisyu)
 
 ///
 ///  Bug: Tone 17
-///  @todo [spelling, future] I don’t know how to make this right, Tone is a tricky word
 ///
 TEST (Decap, ToneModChinese)
 {
@@ -881,7 +880,7 @@ TEST (Decap, ArabicBug)
 
 
 ///
-///  BUG: Cuneiform and Arabic interact strangely
+///  Bug: Cuneiform and Arabic interact strangely
 ///
 TEST (Decap, BugCuneiTimesArabic)
 {
@@ -891,7 +890,7 @@ TEST (Decap, BugCuneiTimesArabic)
 
 
 ///
-///  BUG: Very Heavy Greek cross
+///  Bug: Very Heavy Greek cross
 ///
 TEST (Decap, BugGreekCross)
 {
@@ -901,7 +900,7 @@ TEST (Decap, BugGreekCross)
 
 
 ///
-///  BUG: Cypro-Minoan sign Cm005b, ad what to do?
+///  Bug: Cypro-Minoan sign Cm005b, ad what to do?
 ///  Cause: custom decapitalization replaced originals, so you needed to write
 ///      ~~CYPRO-MINOAN~~ → Cypro-Minoan
 ///  Solution: original + isAsIs → customCap
@@ -916,7 +915,7 @@ TEST (Decap, BugCyproMinoan)
 
 
 ///
-///  BUG: Miao tone Below
+///  Bug: Miao tone Below
 ///
 TEST (Decap, BugMiaoTone)
 {
@@ -926,7 +925,7 @@ TEST (Decap, BugMiaoTone)
 
 
 ///
-///  BUG: Tag Digit Five
+///  Bug: Tag Digit Five
 ///
 TEST (Decap, BugTagDigit)
 {
