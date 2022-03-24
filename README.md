@@ -4,6 +4,8 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Right now Russian only.
 * Right now Windows only.
 
+**Lifecycle phase: 5** (production/stable)
+
 # How to build?
 * Download MSYS, slight C++20 and std::filesystem here.
 * Also need cURL (present in W10 18H2+) and 7-zip.
