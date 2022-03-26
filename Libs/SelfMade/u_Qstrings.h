@@ -1,6 +1,8 @@
 #pragma once
 
 #include <QString>
+#include <QStringView>
+
 #include <string_view>
 #include <charconv>
 
@@ -13,9 +15,9 @@ namespace str {
         { return QString::fromUtf8(x.data(), x.size()); }
 
     inline QString toQ(char32_t x)
-    {
-        return QString::fromUcs4(&x, 1);
-    }
+        { return QString::fromUcs4(&x, 1); }
+
+    std::u8string_view toU8(const QString& x, std::string& cache);
 
     void append(QString& x, std::string_view s);
     void append(QString& x, std::u8string_view s);

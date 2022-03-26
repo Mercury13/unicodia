@@ -29,3 +29,10 @@ void str::QSep::sep()
     if (s.length() != len)
         s.append(fSep);
 }
+
+
+std::u8string_view str::toU8(const QString& x, std::string& cache)
+{
+    cache = x.toStdString();
+    return { reinterpret_cast<const char8_t*>(cache.data()), cache.length() };
+}
