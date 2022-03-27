@@ -213,6 +213,11 @@ namespace str {
             trait::Str<S,A>& cache) -> trait::Sv<S>
         { return detail::replaceSv<trait::Sv<S>, A>(s, needle, byWhat, cache); }
 
+    /// @return [+] string contains word
+    template <class S>
+    inline bool containsWord(const S& haystack, trait::Sv<S> needle)
+        { return detail::containsWord<trait::Sv<S>>(haystack, needle); }
+
 }   // namespace str
 
 namespace detail {
