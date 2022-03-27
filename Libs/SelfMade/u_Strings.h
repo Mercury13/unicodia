@@ -7,9 +7,13 @@
 #include "u_Vector.h"
 
 namespace str {
+    static_assert(sizeof(char) == sizeof(char8_t), "Strange machine with char != char8");
 
     inline bool isBlank(char c) { return static_cast<unsigned char>(c) <= 32; }
+    inline bool isBlank(wchar_t c) { return (c <= 32); }
     inline bool isBlank(char8_t c) { return (c <= 32); }
+    inline bool isBlank(char16_t c) { return (c <= 32); }
+    inline bool isBlank(char32_t c) { return (c <= 32); }
     void trim(const char* &start, const char* &end);
     void trim(const char8_t* &start, const char8_t* &end);
     std::string_view trimSv(std::string_view s);
@@ -60,11 +64,32 @@ namespace str {
         return r;
     }
 
+    /// Two versions only: normal and u8
     template <class T>
     inline auto fromChars(std::string_view s, T& v, int base = 10)
         { return std::from_chars(s.data(), s.data() + s.size(), v, base); }
 
-    bool containsWord(std::string_view haystack, std::string_view needle);
+    template <class T>
+    inline auto fromChars(std::u8string_view s, T& v, int base = 10)
+        { return std::from_chars(
+                    reinterpret_cast<const char*>(s.data()),
+                    reinterpret_cast<const char*>(s.data() + s.size()), v, base); }
+
+    template <class T, size_t N>
+    inline std::string_view toChars(char (&buf)[N], T v, int base = 10)
+    {
+        auto res = std::to_chars(std::begin(buf), std::end(buf), v, base);
+        if (res.ec != std::errc())
+            return {};
+        return { std::begin(buf), res.ptr };
+    }
+
+    template <class T, size_t N>
+    inline std::u8string_view toCharsU8(char (&buf)[N], T v, int base = 10)
+    {
+        auto r = toChars<T,N>(buf, v, base);
+        return { reinterpret_cast<const char8_t*>(r.data()), r.size() };
+    }
 
     void toUpperInPlace(std::u8string& x);
     inline std::u8string toUpper(std::u8string_view x) {
@@ -144,6 +169,26 @@ namespace str {
             return cache;
         }
 
+        template <class Sv>
+        bool containsWord(Sv haystack, Sv needle)
+        {
+            if (needle.empty())
+                return false;
+
+            size_t start = 0;
+            while (true){
+                auto pos = haystack.find(needle, start);
+                if (pos == std::string_view::npos)
+                    return false;
+
+                if (auto rt = pos + needle.size();
+                        (rt >= haystack.size() || isBlank(haystack[rt]))
+                        && (pos == 0 || haystack[pos - 1] == ' ')) {
+                    return true;
+                }
+                start = pos + 1;
+            }
+        }
     }
 
     /// @brief remainderSv
@@ -167,6 +212,7 @@ namespace str {
             trait::Sv<S> needle, trait::Sv<S> byWhat,
             trait::Str<S,A>& cache) -> trait::Sv<S>
         { return detail::replaceSv<trait::Sv<S>, A>(s, needle, byWhat, cache); }
+
 }   // namespace str
 
 namespace detail {

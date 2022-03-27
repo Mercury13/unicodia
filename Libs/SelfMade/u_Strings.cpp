@@ -85,27 +85,6 @@ SafeVector<std::u8string_view> str::splitSv(std::u8string_view s, char comma, bo
 }
 
 
-bool str::containsWord(std::string_view haystack, std::string_view needle)
-{
-    if (needle.empty())
-        return false;
-
-    size_t start = 0;
-    while (true){
-        auto pos = haystack.find(needle, start);
-        if (pos == std::string_view::npos)
-            return false;
-
-        if (auto rt = pos + needle.size();
-                (rt >= haystack.size() || isBlank(haystack[rt]))
-                && (pos == 0 || haystack[pos - 1] == ' ')) {
-            return true;
-        }
-        start = pos + 1;
-    }
-}
-
-
 void str::toUpperInPlace(std::u8string& x)
 {
     for (auto& v : x) {
