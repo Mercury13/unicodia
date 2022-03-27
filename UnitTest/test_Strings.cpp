@@ -63,3 +63,35 @@ TEST (isIndex, Simple)
     EXPECT_FALSE(str::isIndex("G1212L9"));
     EXPECT_TRUE (str::isIndex("B105"));
 }
+
+
+///
+///  remainder
+///
+TEST (RemainderSv, Pref)
+{
+    EXPECT_EQ("", str::remainderSv("", ""));
+    EXPECT_EQ("ing", str::remainderSv("string", "str"));
+    EXPECT_EQ("", str::remainderSv("string", "string"));
+    EXPECT_EQ("", str::remainderSv("string", "sta"));
+    EXPECT_EQ("", str::remainderSv("string", "stringify"));
+    EXPECT_EQ("", str::remainderSv("string", "kawaii"));
+    EXPECT_EQ("", str::remainderSv("string", "q"));
+    EXPECT_EQ("string", str::remainderSv("string", {}));
+}
+
+
+TEST (RemainderSv, PrefSuff)
+{
+    EXPECT_EQ("in", str::remainderSv("string", "str", "g"));
+    EXPECT_EQ("", str::remainderSv("string", "str", "ing"));
+    EXPECT_EQ("", str::remainderSv("string", "sta", "g"));
+    EXPECT_EQ("", str::remainderSv("string", "s", "eng"));
+    EXPECT_EQ("", str::remainderSv("string", "stri", "ring"));
+    EXPECT_EQ("", str::remainderSv("string", "kawaii", ""));
+    EXPECT_EQ("", str::remainderSv("string", "q", {}));
+    EXPECT_EQ("", str::remainderSv("string", {}, "w"));
+    EXPECT_EQ("ring", str::remainderSv("string", "st", {}));
+    EXPECT_EQ("stri", str::remainderSv("string", {}, "ng"));
+    EXPECT_EQ("string", str::remainderSv("string", {}, {}));
+}

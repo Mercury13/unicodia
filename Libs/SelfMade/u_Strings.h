@@ -91,6 +91,76 @@ namespace str {
         return r;
     }
 
+    template <class T> struct string_traits;
+
+    template <class C, class T, class A>
+    struct string_traits<std::basic_string<C,T,A>> {
+        using Ch = C;
+        using Tr = T;
+        using Sv = std::basic_string_view<C,T>;
+    };
+
+    template <class C, class T>
+    struct string_traits<std::basic_string_view<C,T>> {
+        using Ch = C;
+        using Tr = T;
+        using Sv = std::basic_string_view<C,T>;
+    };
+
+    template <class C>
+    struct string_traits<const C*> {
+        using Ch = C;
+        using Tr = std::char_traits<C>;
+        using Sv = std::basic_string_view<C>;
+    };
+
+    template <class C, size_t N>
+    struct string_traits<C[N]> {
+        using Ch = C;
+        using Tr = std::char_traits<C>;
+        using Sv = std::basic_string_view<C>;
+    };
+
+    namespace trait {
+        template<class S>
+        using Sv = typename string_traits<std::remove_cvref_t<S>>::Sv;
+    }
+
+    namespace detail {
+        template <class Sv>
+        Sv remainderSv(Sv s, Sv prefix, Sv suffix)
+        {
+            if (s.length() <= prefix.length() + suffix.length()
+                    || !s.starts_with(prefix)
+                    || !s.ends_with(suffix))
+                return {};
+            return s.substr(prefix.length(), s.length() - prefix.length() - suffix.length());
+        }
+
+        template <class Sv>
+        Sv remainderSv(Sv s, Sv prefix)
+        {
+            if (s.length() <= prefix.length()
+                    || !s.starts_with(prefix))
+                return {};
+            return s.substr(prefix.length(), s.length() - prefix.length());
+        }
+    }
+
+    /// @brief remainderSv
+    ///    Chops from s prefix and suffix, and returns what remains
+    ///         remainderSv("string", "st", "g") = "rin"
+    ///    No prefix and/or suffix → returns ⌀
+    ///         remainderSv("string", "a", "g") = ""
+    template <class A>
+    inline auto remainderSv(const A& s, trait::Sv<A> prefix, trait::Sv<A> suffix) -> trait::Sv<A>
+        { return detail::remainderSv<trait::Sv<A>>(s, prefix, suffix); }
+
+    /// @brief remainderSv
+    ///    Same for prefix only
+    template <class A>
+    inline auto remainderSv(const A& s, trait::Sv<A> prefix) -> trait::Sv<A>
+        { return detail::remainderSv<trait::Sv<A>>(s, prefix); }
 }   // namespace str
 
 namespace detail {
