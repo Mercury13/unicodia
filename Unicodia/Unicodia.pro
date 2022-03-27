@@ -12,7 +12,7 @@ win32-g++ {
 # deprecated API in order to know how to port your code away from it.
 DEFINES += QT_DEPRECATED_WARNINGS
 
-debug {
+CONFIG(debug, debug|release) {
     DEFINES += AT_RANGE_CHECK
 }
 
