@@ -60,24 +60,6 @@ namespace str {
         return r;
     }
 
-    ///
-    /// @return   haystack or cache
-    ///
-    template <class C, class T, class A>
-    std::basic_string_view<C> replaceSv(
-            std::basic_string_view<C> haystack,
-            std::basic_string_view<C> needle,
-            std::basic_string_view<C> byWhat,
-            std::basic_string<C, T, A>& cache)
-    {
-        using Sv = std::basic_string_view<C>;
-        if (haystack.find(needle) == Sv::npos)
-            return haystack;
-        cache = haystack;
-        str::replace(cache, needle, byWhat);
-        return cache;
-    }
-
     template <class T>
     inline auto fromChars(std::string_view s, T& v, int base = 10)
         { return std::from_chars(s.data(), s.data() + s.size(), v, base); }
@@ -97,33 +79,38 @@ namespace str {
     struct string_traits<std::basic_string<C,T,A>> {
         using Ch = C;
         using Tr = T;
-        using Sv = std::basic_string_view<C,T>;
     };
 
     template <class C, class T>
     struct string_traits<std::basic_string_view<C,T>> {
         using Ch = C;
         using Tr = T;
-        using Sv = std::basic_string_view<C,T>;
     };
 
     template <class C>
     struct string_traits<const C*> {
-        using Ch = C;
+        using Ch = std::remove_cv_t<C>;
         using Tr = std::char_traits<C>;
-        using Sv = std::basic_string_view<C>;
     };
 
     template <class C, size_t N>
     struct string_traits<C[N]> {
-        using Ch = C;
-        using Tr = std::char_traits<C>;
-        using Sv = std::basic_string_view<C>;
+        using Ch = std::remove_cv_t<C>;
+        using Tr = std::char_traits<Ch>;
     };
 
     namespace trait {
         template<class S>
-        using Sv = typename string_traits<std::remove_cvref_t<S>>::Sv;
+        using Ch = typename string_traits<std::remove_cvref_t<S>>::Ch;
+
+        template<class S>
+        using Tr = typename string_traits<std::remove_cvref_t<S>>::Tr;
+
+        template<class S>
+        using Sv = std::basic_string_view<Ch<S>, Tr<S>>;
+
+        template<class S, class A>
+        using Str = std::basic_string<Ch<S>, Tr<S>, A>;
     }
 
     namespace detail {
@@ -145,6 +132,18 @@ namespace str {
                 return {};
             return s.substr(prefix.length(), s.length() - prefix.length());
         }
+
+        template <class Sv, class A>
+        Sv replaceSv(Sv haystack, Sv needle, Sv byWhat,
+                trait::Str<Sv,A>& cache)
+        {
+            if (haystack.find(needle) == Sv::npos)
+                return haystack;
+            cache = haystack;
+            str::replace(cache, needle, byWhat);
+            return cache;
+        }
+
     }
 
     /// @brief remainderSv
@@ -152,15 +151,22 @@ namespace str {
     ///         remainderSv("string", "st", "g") = "rin"
     ///    No prefix and/or suffix → returns ⌀
     ///         remainderSv("string", "a", "g") = ""
-    template <class A>
-    inline auto remainderSv(const A& s, trait::Sv<A> prefix, trait::Sv<A> suffix) -> trait::Sv<A>
-        { return detail::remainderSv<trait::Sv<A>>(s, prefix, suffix); }
+    template <class S>
+    inline auto remainderSv(const S& s, trait::Sv<S> prefix, trait::Sv<S> suffix) -> trait::Sv<S>
+        { return detail::remainderSv<trait::Sv<S>>(s, prefix, suffix); }
 
     /// @brief remainderSv
     ///    Same for prefix only
-    template <class A>
-    inline auto remainderSv(const A& s, trait::Sv<A> prefix) -> trait::Sv<A>
-        { return detail::remainderSv<trait::Sv<A>>(s, prefix); }
+    template <class S>
+    inline auto remainderSv(const S& s, trait::Sv<S> prefix) -> trait::Sv<S>
+        { return detail::remainderSv<trait::Sv<S>>(s, prefix); }
+
+    /// @return   haystack or cache
+    template <class S, class A>
+    inline auto replaceSv(const S& s,
+            trait::Sv<S> needle, trait::Sv<S> byWhat,
+            trait::Str<S,A>& cache) -> trait::Sv<S>
+        { return detail::replaceSv<trait::Sv<S>, A>(s, needle, byWhat, cache); }
 }   // namespace str
 
 namespace detail {
