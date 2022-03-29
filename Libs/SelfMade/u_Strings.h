@@ -104,6 +104,9 @@ namespace str {
     inline const char* toC(const std::u8string& x)
         { return reinterpret_cast<const char*>(x.c_str()); }
 
+    inline const char* toC(const char8_t* x)
+        { return reinterpret_cast<const char*>(x); }
+
     template <class T> struct string_traits;
 
     template <class C, class T, class A>
