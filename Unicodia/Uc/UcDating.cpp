@@ -71,6 +71,9 @@ void uc::DatingLoc::appendNote(
     case StdNote::MODERN_FORM:
         appendCustomNote(r, modernForm);
         break;
+    case StdNote::MAYBE_EARLIER:
+        appendCustomNote(r, maybeEarlier);
+        break;
     }
 }
 
@@ -140,7 +143,7 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
     // DECADE
     case Mode::DECADE: {
             auto u8 = str::toCharsU8(buf, fValue1);     // never BC
-            r = loc.yBefore;
+            r = loc.decade;
             str::replace(r, BUCK, u8);
         } break;
     // CENTURY

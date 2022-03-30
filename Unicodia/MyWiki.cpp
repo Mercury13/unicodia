@@ -575,6 +575,7 @@ namespace {
         // Comments
         .firstInscription = u8"первая известная надпись",
         .modernForm = u8"в современном виде",
+        .maybeEarlier = u8"возможно, раньше",
     };
 
 }   // anon namespace

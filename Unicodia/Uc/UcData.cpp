@@ -1385,13 +1385,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Anatolian hiero OK, installed Google Noto
     { "Hluw", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Анатолийские (лувийские, хеттские) иероглифы", Dating::century(-14),
+        u8"Анатолийские (лувийские, хеттские) иероглифы", Dating::crange(-14, -13, StdNote::FIRST_KNOWN),
         u8"лувийский",
         u8"Называются иероглифы по месту, где они найдены ''(анатолийские, т.е. Малая Азия)'', или по языку ''(лувийские)''. "
                 "А вот название «хеттские» некорректно, хеттский никогда не{{_}}писался этими иероглифами, "
                     "хоть первые из них и разрабатывались в хетто-лувийском двуязычии "
                     "(около 1240{{bc}} хетты были завоёваны ассирийцами). "
-                "Около VII{{_}}века{{bc}} иероглифы заменили алфавитным письмом и забыли."
+                "В XII и XI{{_}}веке{{bc}} была Катастрофа бронзового века с нехваткой материалов, "
+                    "с X{{_}}века{{bc}} надписи снова появляются. "
+                "Около VII{{_}}века{{bc}} иероглифы заменили [[pt:alphabet|алфавитным]] письмом и забыли."
             "<p>Известно около 500 иероглифов. "
                 "Отдельные иероглифы могут означать не{{_}}только понятие, но и слог, но таких мало."
             "<p>Внимание исследователей иероглифы привлекли около 1800, предположили, что они хеттские. "
@@ -1426,7 +1428,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hungarian runes OK, W10 none → installed some open-source font
     { "Hung", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
-        u8"Венгерские (секейские) руны", Dating::century(10, u8"возможно, раньше"),
+        u8"Венгерские (секейские) руны", Dating::century(10, StdNote::MAYBE_EARLIER),
         u8"венгерский",
         // For translator: Hi, not Hello
         u8"Неизвестно, как венгерские руны связаны с [[ps:Orkh|тюркскими]]: "
@@ -1447,7 +1449,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"этрусский и другие языки Италии",
         u8"Алфавит создали из [[ps:Phnx|финикийского]] и раннего [[ps:Grek|греческого]]. "
                 "В дальнейшем развился в [[ps:Latn|латинский]]."
-            "<p>Юникод не{{_}}различает языков Италии, объединяя все в один блок{{-}}этрусский.",
+            "<p>Юникод не{{_}}различает языков Италии, [[pt:unification|объединяя]] все в один блок{{-}}этрусский.",
                 EcFont::OLD_ITALIC },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java", QFontDatabase::Any,
@@ -2303,7 +2305,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Саураштра", Dating::century(19, u8"возможно, раньше"),
+        u8"Саураштра", Dating::century(19, StdNote::MAYBE_EARLIER),
         u8"саураштра ''(Индия, 247{{_}}тыс. на 2007, письменность используется только в штате Тамилнад)''",
         u8"Происхождение неясно, все [[ps:Taml|тамильские]] саураштра двуязычны, а в остальных штатах пишут на "
                 "[[ps:Deva|деванагари]], [[ps:Gujr|гуджарати]], [[ps:Telu|телугу]]. "

@@ -12,7 +12,8 @@ namespace uc {
     enum class StdNote {
         CUSTOM,         ///< Custom (none = CUSTOM + no note)
         FIRST_KNOWN,    ///< (first known inscription)
-        MODERN_FORM     ///< (in modern form)
+        MODERN_FORM,    ///< (in modern form)
+        MAYBE_EARLIER,  ///< (maybe earlier)
     };
 
     struct DatingLoc
@@ -46,6 +47,7 @@ namespace uc {
         // Notes
         std::u8string_view firstInscription;    /// first inscription
         std::u8string_view modernForm;          /// modern form
+        std::u8string_view maybeEarlier;        /// maybe earlier
 
         std::u8string_view formatCentury(int x) const;
         std::u8string_view format1stCentury(int x, char* start, char* end) const;
@@ -111,6 +113,8 @@ namespace uc {
                     { return { Mode::CENTURY, c, note }; }
         static constexpr Dating crange(int c1, int c2, std::u8string_view note = {}) noexcept
                     { return { Mode::CRANGE, c1, c2, note }; }
+        static constexpr Dating crange(int c1, int c2, StdNote note) noexcept
+                    { return { Mode::CRANGE, c1, c2, note }; }
                  // Need note here!
         static constexpr Dating crange_ins(int c1, int c2, std::u8string_view note) noexcept
                     { return { Mode::CRANGE_INS, c1, c2, note }; }
@@ -137,6 +141,8 @@ namespace uc {
                 : fMode(aMode), fValue1(value), fStdNote(aNote) {}
         constexpr Dating(Mode aMode, int value1, int value2, std::u8string_view aNote) noexcept
                 : fMode(aMode), fValue1(value1), fValue2(value2), fNote(aNote) {}
+        constexpr Dating(Mode aMode, int value1, int value2, StdNote aNote) noexcept
+                : fMode(aMode), fValue1(value1), fValue2(value2), fStdNote(aNote) {}
         constexpr Dating(std::u8string_view aNote) noexcept
                 : fMode(Mode::SPECIAL), fNote(aNote) {}
     };
