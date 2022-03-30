@@ -546,6 +546,34 @@ QString mywiki::buildFontsHtml(
     return text;
 }
 
+namespace {
+
+    const uc::DatingLoc rusDatingLoc {
+        // Year
+        .yBc = u8"$ до н.э.",
+        .yBefore = u8"до $",
+        .yApprox = u8"≈$",
+        .yApproxBc = u8"≈$ до н.э.",
+
+        // Decade
+        .decade = u8"$-е",
+
+        // Century
+        .centuryNames = { u8"",
+                u8"I", u8"II", u8"III", u8"IV", u8"V",
+                u8"VI", u8"VII", u8"VIII", u8"IX", u8"X",
+                u8"XI", u8"XII", u8"XIII", u8"XIV", u8"XV",
+                u8"XVI", u8"XVII", u8"XVIII", u8"XIX", u8"XX" },
+        .century = u8"$ век",
+        .centuryBc = u8"$ век до н.э.",
+        .crangeMode = uc::CrangeMode::SPECIAL_SPECIAL,
+        //.crangeBcCe = u8"$ век до н.э. – & век н.э.",
+        .capprox = u8"≈$ век",
+        .capproxBc = u8"≈$ век до н.э."
+    };
+
+}   // anon namespace
+
 
 void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 {
@@ -564,10 +592,11 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             str::append(text, u8"• Языки: ");
             appendWiki(text, x, x.locLangs);
         }
-        if (!x.locTime.empty()) {
+        if (x.locTime) {
             sp.sep();
             str::append(text, u8"• Появилась: ");
-            appendWiki(text, x, x.locTime);
+            auto wikiTime = x.locTime.wikiText(rusDatingLoc);
+            appendWiki(text, x, wikiTime);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();

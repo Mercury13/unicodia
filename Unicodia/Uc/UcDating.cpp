@@ -1,0 +1,103 @@
+// My header
+#include "UcDating.h"
+
+#include "u_Strings.h"
+
+
+///// DatingLoc ////////////////////////////////////////////////////////////////
+
+
+std::u8string_view uc::DatingLoc::formatCentury(int x) const
+{
+    x = std::abs(x);
+    if (x == 0 || x > MAX_CENTURY)
+        return u8"[CENTURY??]";
+    return centuryNames[x];
+}
+
+
+///// Dating ///////////////////////////////////////////////////////////////////
+
+
+std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
+{
+    char buf[60];
+    char buf2[20];
+    std::u8string r, t;
+
+    static constexpr std::u8string_view NDASH = u8"–";
+    static constexpr auto BUCK = u8'$';
+
+    switch (fMode) {
+    // SPECIAL
+    case Mode::SPECIAL:
+        return std::u8string { fNote };
+    // YEAR
+    case Mode::YEAR: {
+            auto u8 = str::toCharsU8(buf, std::abs(fValue1));
+            if (fValue1 >= 0) {     // Year CE
+                r.append(u8);
+            } else {        // Year BC
+                r = loc.yBc;
+                str::replace(r, u8'$', u8);
+            }
+        } break;
+    case Mode::YRANGE: {
+            auto y1 = str::toCharsU8(buf,  std::abs(fValue1));
+            auto y2 = str::toCharsU8(buf2, std::abs(fValue2));
+            if (fValue1 < 0) {
+                if (fValue2 < 0) {  // BC to BC
+                    t.append(y1);
+                    t.append(NDASH);
+                    t.append(y2);
+                    r = loc.yBc;
+                    str::replace(r, BUCK, t);
+                } else {    // BC to CE
+                    return u8"[Range BC…CE!!!!!!!!!!!!]";
+                }
+            } else {    // CE to CE
+                r.append(y1);
+                r.append(NDASH);
+                r.append(y2);
+            }
+        } break;
+    case Mode::YAPPROX: {
+            auto u8 = str::toCharsU8(buf, std::abs(fValue1));
+            if (fValue1 >= 0) {     // ≈1234 CE
+                r = loc.yApprox;
+            } else {        // ≈1234 BC
+                r = loc.yApproxBc;
+            }
+            str::replace(r, BUCK, u8);
+        } break;
+    case Mode::YBEFORE: {
+            auto u8 = str::toCharsU8(buf, fValue1);     // never BC
+            r = loc.yBefore;
+            str::replace(r, BUCK, u8);
+        } break;
+    // DECADE
+    case Mode::DECADE: {
+            auto u8 = str::toCharsU8(buf, fValue1);     // never BC
+            r = loc.yBefore;
+            str::replace(r, BUCK, u8);
+        } break;
+    // CENTURY
+    case Mode::CENTURY: {
+            auto u8 = loc.formatCentury(fValue1);
+            if (fValue1 > 0) {
+                r = loc.century;
+            } else {
+                r = loc.centuryBc;
+            }
+            str::replace(r, BUCK, u8);
+        } break;
+    default:
+        return u8"[Unknown mode]";
+    }
+    if (!fNote.empty()) {
+        r.append(u8" (");
+        r.append(fNote);
+        r.append(u8")");
+    }
+    return r;
+}

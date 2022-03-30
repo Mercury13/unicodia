@@ -14,6 +14,7 @@
 
 // Unicode data
 #include "UcAutoDefines.h"
+#include "UcDating.h"
 
 constexpr char32_t NO_TRIGGER = 0xDEADBEEF;
 
@@ -48,10 +49,10 @@ namespace fst {
 class Percent
 {
 public:
-    constexpr explicit Percent() = default;
-    constexpr explicit Percent(int x) : fValue(x) {}
-    constexpr int value() const { return fValue; }
-    constexpr int apply(int x) const { return x * fValue / 100; }
+    constexpr explicit Percent() noexcept = default;
+    constexpr explicit Percent(int x) noexcept : fValue(x) {}
+    constexpr int value() const noexcept { return fValue; }
+    constexpr int apply(int x) const noexcept { return x * fValue / 100; }
 private:
     int fValue = 100;
 };
@@ -89,7 +90,7 @@ namespace uc {
         SACRED,         ///< Used nowadays as sacred (Coptic, Avestan)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
-        EXPERIMENTAL,   ///< Experimantal script for existing languages (Deseret)
+        EXPERIMENTAL,   ///< Experimental script for existing languages (Deseret)
         //ARTIFICIAL,     ///< Artificial languages (Esperanto, Ithkuil); unencoded right now
         //FICTIONAL       ///< Fictional languages (Quenya, Klingon); unencoded right now
         NN
@@ -573,7 +574,10 @@ namespace uc {
         EcLangLife ecLife;
         EcWritingDir ecDir;
         EcContinent ecContinent;
-        std::u8string_view locName, locTime, locLangs, locDescription;
+        std::u8string_view locName;
+            /// @todo [i18n] What to do?
+        Dating locTime;
+        std::u8string_view locLangs, locDescription;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Sfg> flags {};
 
