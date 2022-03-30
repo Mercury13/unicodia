@@ -46,6 +46,12 @@ namespace uc {
             { return format1stCentury(x, std::begin(buf), std::end(buf)); }
     };
 
+    enum class StdNote {
+        CUSTOM,         ///< Custom (none = CUSTOM + no note)
+        FIRST_KNOWN,    ///< (first known inscription)
+        MODERN_FORM     ///< (in modern form)
+    };
+
     ///
     ///  Used for i18n: dates are written in code, only notes are localized
     ///
@@ -55,20 +61,21 @@ namespace uc {
         enum class Mode {
             NONE,       ///<  ???
             // Year
-            YEAR,       ///<  1234
-            YBEFORE,    ///<  before 1234
-            YRANGE,     ///<  1234-1357
-            YAPPROX,    ///<  ≈1234
+            YEAR,       ///<  1234              Armn, Bopo, Brai …………
+            YBEFORE,    ///<  before 1234       Cyrl, Zanb
+            YRANGE,     ///<  1234-1357         Bamu, Modi, Samr …
+            YAPPROX,    ///<  ≈1234             Avst, Bali, Cpmn …………
             // Decade
-            DECADE,     ///<  1230s
+            DECADE,     ///<  1230s             Hmnp, Vaii, Talu …
             //DEND,       ///<  end of 1230s
             // Century
-            CENTURY,    ///<  12th century
-            CRANGE,     ///<  12–13th century
-            CAPPROX,    ///<  ≈12th century
+            CENTURY,    ///<  12th century      Arab, Bhks, Cprt …………
+            CRANGE,     ///<  12–13th century   Deva, Diak, Taml …………
+            CAPPROX,    ///<  ≈12th century     Hentaigana, Takr
             // Special
-            UNKNOWN,    ///<  really unknown (Chakma)
+            UNKNOWN,    ///<  really unknown    Cakm
             SPECIAL,    ///<  2nd century (main hypothesis), 7th century (for sure)
+                        ///<                    Adlm, Aghb, Brah …………
         };
         int value1() const { return fValue1; }
         int value2() const { return fValue2; }
@@ -110,6 +117,7 @@ namespace uc {
         Mode fMode;
         int fValue1 = 0, fValue2 = 0;
         std::u8string_view fNote;
+        StdNote fStdNote = StdNote::CUSTOM;
 
         constexpr Dating(Mode aMode, int value, std::u8string_view aNote) noexcept
                 : fMode(aMode), fValue1(value), fNote(aNote) {}

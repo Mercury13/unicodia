@@ -1136,11 +1136,12 @@ constinit const uc::Script uc::scriptInfo[] {
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Грузинский", Dating::capprox(5),
+        u8"Грузинский", Dating::year(430, u8"первая известная надпись"),
         u8"грузинский, мегрельский и другие картвельские",
         u8"Достоверно неизвестно, когда создана грузиница и что было прототипом. "
                 "Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, "
-                "отметается учёными."
+                    "отметается учёными. "
+                "Алфавитный порядок [[ps:Grek|греческий]]."
             "<p>Грузинский язык безрегистровый, однако в Юникоде исторически существуют четыре стиля письма, по порядку кодов:<br>"
                 "• асомтаврули{{-}}устаревшие заглавные буквы. "
                     "Из-за неудачных образцовых [[pt:character|глифов]] этот диапазон закрепился именно за ними;<br />"
@@ -1164,7 +1165,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gondi/Gunjala OK, W10 none, installed Google Noto
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гунджала", Dating::ybefore(1750),
+        u8"Гунджала", Dating::year(1750, u8"первый известный документ"),
         u8"южный гонди ''(Центральная Индия, 100{{_}}тыс. на 2010-е)''",
         u8"В 2006 в деревушке Гунджала обнаружили документы 1750{{_}}года. "
                 "Позже люди, способные прочитать письмо, подтвердили, что это гонди. "
@@ -1213,7 +1214,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Grantha OK, W10 none → installed Google Noto
     { "Gran", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Грантха", Dating::special(u8"IV–V век (памятники паллавы), VII век (памятники средней грантхи)"),
+        u8"Грантха", Dating::special(u8"IV век (памятники паллавы), VII век (памятники средней грантхи)"),
         u8"санскрит, тамильский",
         u8"Грантха{{-}}промежуточная ступень развития южной ветви [[ps:Brah|брахми]]. "
                 "Древний вариант грантхи называется ''паллава'' и использовался в государстве Паллавов (275–897). "
