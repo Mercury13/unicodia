@@ -569,7 +569,10 @@ namespace {
         .crangeMode = uc::CrangeMode::SPECIAL_SPECIAL,
         //.crangeBcCe = u8"$ век до н.э. – & век н.э.",
         .capprox = u8"≈$ век",
-        .capproxBc = u8"≈$ век до н.э."
+        .capproxBc = u8"≈$ век до н.э.",
+
+        // Other
+        .unknown = u8"неизвестно",
     };
 
 }   // anon namespace

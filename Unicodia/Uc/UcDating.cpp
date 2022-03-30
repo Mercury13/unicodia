@@ -43,8 +43,13 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
 
     switch (fMode) {
     // SPECIAL
+    case Mode::NONE:
+        return u8"[NONE!!!!!!]";
     case Mode::SPECIAL:
         return std::u8string { fNote };
+    case Mode::UNKNOWN:
+        r = loc.unknown;
+        break;
     // YEAR
     case Mode::YEAR: {
             auto u8 = str::toCharsU8(buf, std::abs(fValue1));

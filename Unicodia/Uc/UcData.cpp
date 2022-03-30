@@ -574,7 +574,7 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-            u8"Нет", Dating::unknown(), {}, u8"Символы вне письменности.",
+            u8"Нет", Dating::none(), {}, u8"Символы вне письменности.",
             EcFont::NORMAL, Sfg::NONSCRIPT },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
@@ -743,9 +743,11 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bengali OK, W7 has tofu of 2009+ → installed Google Noto
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Бенгальский", Dating::special(u8"XI век (отделилась от [[ps:Brah|гупты]]), XV век (в современном виде)"),
+        u8"Бенгальский",
+            Dating::special(u8"XI век (отделилась от гауди), XV век (в современном виде)"),
         u8"бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''",
         u8"Относится к восточной ветви индийского письма. "
+                "Происходит из [[ps:Sidd|сиддхама]] через ''гауди'', предок бенгальского и [[ps:Orya|ории]]. "
                 "Бенгальское и ассамское письмо незначительно отличаются и [[pt:unification|унифицированы]]. "
                 "Гласная по умолчанию{{-}}среднее между «а» и «о», "
                 "в Юникоде условно обозначается «а», в других источниках «ɔ» или «ô». "
@@ -833,7 +835,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buginese OK, W10 only → made LelawadeeUI → Google Noto chain
     { "Bugi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Бугийский (лонтара)", Dating::century(17),
+        u8"Бугийский (лонтара)", Dating::crange(15, 17),
         u8"бугийский ''(4 млн)'' и другие языки о. Сулавеси",
         u8"Бугийская письменность, или лонтара{{-}}потомок [[ps:Brah|брахми]] и работает по тому же принципу. "
                 "Со времён голландской колонизации заменяется [[ps:Latn|латиницей]]. "
@@ -858,7 +860,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chakma OK, added Noto font, mostly because of missing glyphs
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Чакма", Dating::special(u8"после XI века"),
+        u8"Чакма", Dating::unknown(),
         u8"чакма ''(Индия, Бангладеш, Мьянма, 500 тыс. на 2011)''",
         u8"Говорящих на языке чакма немало и язык в списках исчезающих не{{_}}числится, но письменность вытесняется [[ps:Beng|бенгальской]]. "
                 "Точную датировку автору «Юникодии» найти не{{_}}удалось, но если это потомок [[ps:Mymr|бирманского]]{{-}}то "
@@ -899,7 +901,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Чамский", Dating::century(4),
         u8"чамский ''(Вьетнам, Камбоджа, 320 тыс. на 2008)''",
-        u8"Чамская письменность произошла из [[ps:Brah|брахми]], и слоги по умолчанию заканчиваются гласной «а». "
+        u8"Чамская письменность произошла из паллавы (ранней [[ps:Gran|грантхи]]), и слоги по умолчанию заканчиваются гласной «а». "
                 "Чтобы добавить другую гласную, дописывается огласовка. "
                 "Знака «[[pt:virama|вирама]]» (убрать гласную) нет, вместо этого конечные согласные: "
                     "{{sm|ꨆ}}=ка, {{sm|ꨆꨯ}}=ко, {{sm|ꨆꨯꩃ}}=конг."
@@ -2904,7 +2906,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::ZANABAZAR },
     { "Zinh", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-        u8"Разные", Dating::unknown(), {},
+        u8"Разные", Dating::none(), {},
         u8"Комбинирующая метка используется в нескольких разных письменностях.",
         EcFont::NORMAL },
 };

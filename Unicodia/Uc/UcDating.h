@@ -36,6 +36,9 @@ namespace uc {
         std::u8string_view capproxBc;   ///< ≈12th century BC
                 // Before 12th century is Special
 
+        // Other
+        std::u8string_view unknown;     ///< unknown;
+
         std::u8string_view formatCentury(int x) const;
         std::u8string_view format1stCentury(int x, char* start, char* end) const;
         template <size_t N>
@@ -50,7 +53,7 @@ namespace uc {
     {
     public:
         enum class Mode {
-            UNKNOWN,    ///<  ???
+            NONE,       ///<  ???
             // Year
             YEAR,       ///<  1234
             YBEFORE,    ///<  before 1234
@@ -64,6 +67,7 @@ namespace uc {
             CRANGE,     ///<  12–13th century
             CAPPROX,    ///<  ≈12th century
             // Special
+            UNKNOWN,    ///<  really unknown (Chakma)
             SPECIAL,    ///<  2nd century (main hypothesis), 7th century (for sure)
         };
         int value1() const { return fValue1; }
@@ -99,8 +103,9 @@ namespace uc {
         // Other
         static constexpr Dating special(std::u8string_view note) noexcept { return { note }; }
         static constexpr Dating unknown() noexcept { return { Mode::UNKNOWN, 0, {} }; }
+        static constexpr Dating none() noexcept { return { Mode::NONE, 0, {} }; }
 
-        constexpr explicit operator bool() const noexcept { return (fMode != Mode::UNKNOWN); }
+        constexpr explicit operator bool() const noexcept { return (fMode != Mode::NONE); }
     private:
         Mode fMode;
         int fValue1 = 0, fValue2 = 0;
