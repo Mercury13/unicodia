@@ -6,6 +6,7 @@
 
 ///// DatingLoc ////////////////////////////////////////////////////////////////
 
+constexpr auto BUCK = u8'$';
 
 std::u8string_view uc::DatingLoc::formatCentury(int x) const
 {
@@ -29,8 +30,52 @@ std::u8string_view uc::DatingLoc::format1stCentury(int x, char* start, char* end
 }
 
 
-///// Dating ///////////////////////////////////////////////////////////////////
+std::u8string uc::DatingLoc::formatCenturyText(int x) const
+{
+    auto cry = formatCentury(x);
+    std::u8string r;
+    if (x > 0) {
+        r = century;
+    } else {
+        r = centuryBc;
+    }
+    str::replace(r, BUCK, cry);
+    return r;
+}
 
+
+void uc::DatingLoc::appendCenturyText(std::u8string& r, int x) const
+    { r.append(formatCenturyText(x)); }
+
+namespace {
+    void appendCustomNote(std::u8string& r, std::u8string_view note)
+    {
+        if (!note.empty()) {
+            r.append(u8" (");
+            r.append(note);
+            r.append(u8")");
+        }
+    }
+}
+
+void uc::DatingLoc::appendNote(
+        std::u8string& r, StdNote sn, std::u8string_view note) const
+{
+    switch (sn) {
+    case StdNote::CUSTOM:
+        appendCustomNote(r, note);
+        break;
+    case StdNote::FIRST_KNOWN:
+        appendCustomNote(r, firstInscription);
+        break;
+    case StdNote::MODERN_FORM:
+        appendCustomNote(r, modernForm);
+        break;
+    }
+}
+
+
+///// Dating ///////////////////////////////////////////////////////////////////
 
 std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
 {
@@ -39,7 +84,6 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
     std::u8string r, t;
 
     static constexpr std::u8string_view NDASH = u8"–";
-    static constexpr auto BUCK = u8'$';
 
     switch (fMode) {
     // SPECIAL
@@ -100,15 +144,9 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
             str::replace(r, BUCK, u8);
         } break;
     // CENTURY
-    case Mode::CENTURY: {
-            auto cry = loc.formatCentury(fValue1);
-            if (fValue1 > 0) {
-                r = loc.century;
-            } else {
-                r = loc.centuryBc;
-            }
-            str::replace(r, BUCK, cry);
-        } break;
+    case Mode::CENTURY:
+        r = loc.formatCenturyText(fValue1);
+        break;
     case Mode::CRANGE: {
             auto c1 = loc.format1stCentury(fValue1, buf2);
             auto c2 = loc.formatCentury(fValue2);
@@ -126,14 +164,14 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
             }
             str::replace(r, BUCK, t);
         } break;
-        /// @todo [urgent] The rest modes!
-    default:
-        return u8"[Unknown mode]";
+    case Mode::CRANGE_INS:
+        r = loc.formatCenturyText(fValue1);
+        loc.appendNote(r, fStdNote, fNote);
+        r.append(u8", ");
+        loc.appendCenturyText(r, fValue2);
+        loc.appendNote(r, StdNote::FIRST_KNOWN, {});
+        return r;
     }
-    if (!fNote.empty()) {
-        r.append(u8" (");
-        r.append(fNote);
-        r.append(u8")");
-    }
+    loc.appendNote(r, fStdNote, fNote);
     return r;
 }

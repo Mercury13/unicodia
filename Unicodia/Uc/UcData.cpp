@@ -1136,7 +1136,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Грузинский", Dating::year(430, u8"первая известная надпись"),
+        u8"Грузинский", Dating::year(430, StdNote::FIRST_KNOWN),
         u8"грузинский, мегрельский и другие картвельские",
         u8"Достоверно неизвестно, когда создана грузиница и что было прототипом. "
                 "Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, "
@@ -1165,7 +1165,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gondi/Gunjala OK, W10 none, installed Google Noto
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гунджала", Dating::year(1750, u8"первый известный документ"),
+        u8"Гунджала", Dating::year(1750, StdNote::FIRST_KNOWN),
         u8"южный гонди ''(Центральная Индия, 100{{_}}тыс. на 2010-е)''",
         u8"В 2006 в деревушке Гунджала обнаружили документы 1750{{_}}года. "
                 "Позже люди, способные прочитать письмо, подтвердили, что это гонди. "
@@ -1233,7 +1233,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, W7 Cambria + Noto do the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Греческий", Dating::century(-9),
+        u8"Греческий", Dating::crange_ins(-9, -8, u8"основная гипотеза"),
         u8"греческий",
         u8"Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}"
                     "[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. "
@@ -1248,7 +1248,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гуджарати", Dating::crange(10, 16),
+        u8"Гуджарати", Dating::year(1592, StdNote::FIRST_KNOWN),
         u8"гуджаратский ''(запад Индии, 56 млн на 2011)'', авестийский",
         u8"Появился из [[ps:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "
                 "Гласная по умолчанию «ə». "
@@ -1339,10 +1339,10 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr", QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Иврит", Dating::crange(-6, -2),
+        u8"Иврит", Dating::century(-2, StdNote::MODERN_FORM),
         // For translator: крымчакский = Krymchak, элемент мироздания = pillar of the Universe
         u8"иврит, ладино, идиш, караимский, крымчакский",
-        u8"Иврит развился из [[ps:Armi|арамейской]] письменности. "
+        u8"Иврит развился из [[ps:Armi|арамейской]] письменности через палеоеврейскую. "
                 "В еврейском мистицизме алфавит является едва ли не{{_}}элементом мироздания, "
                     "и 22 арамейских буквы дожили до наших дней, ко II{{_}}в.{{bc}} приобретя почти современный вид."
             "<p>Записывает только согласные буквы, но четыре буквы {{sm|אהוי}} могут означать гласные, "
@@ -1355,7 +1355,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::HEBREW },
     { "Hent", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Хэнтайгана", Dating::capprox(10),
+        u8"Хэнтайгана", Dating::crange(8, 9),
         u8"японский",
         // For translators: устав = uncial, «китайские порномультики» = Japornimation
         u8"Хэнтáйгана{{-}}общее название устаревших знаков [[ps:Hira|хирáганы]], записанных крайне небрежно."
@@ -1834,7 +1834,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym", QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Малаялам", Dating::year(830, u8"первый источник"),
+        u8"Малаялам", Dating::year(830, StdNote::FIRST_KNOWN),
         u8"малая́лам ''(Южная Индия, 35 млн на 2019)''",
         u8"Происходит из [[ps:Gran|грантхи]]. "
                 "Гласная по умолчанию «а». "
@@ -2017,14 +2017,16 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Нюй-шу", Dating::special(u8"900 (предположительно) … 1300 (точно)"),
+        u8"Нюй-шу", Dating::special(u8"900 (предположительно), 1300 (доказано)"),
         u8"один из диалектов сянского ''(Хунань, Китай)''",
         u8"Нюй-шу существовало веками и использовалось как женское письмо: [[ps:Hani|грамоте]] учили мужчин, а женщины "
                 "использовали более простое слоговое письмо. "
                 "В отличие от размашистых иероглифов, нюй-шу писали тонкой щепкой. "
                 "Многие из памятников нюй-шу{{-}}''послания третьего дня'': "
-                "девушка уходила замуж в другую деревню, а подруги и сёстры вышивали ей пожелания, часто в стихах. "
-            "<p>Несмотря на распространённое заблуждение, нюй-шу не{{_}}было тайнописью; на него смотрели как на «низкое» письмо."
+                "девушка уходила замуж в другую деревню, а подруги и сёстры вышивали ей пожелания, часто в стихах."
+            "<p>Несмотря на распространённое заблуждение, нюй-шу не{{_}}было тайнописью; на него смотрели как на «низкое» письмо. "
+                "Первая известная надпись сделана в начале XX{{_}}века, но по форме иероглифов доказали, "
+                    "что нюй-шу существовало в 1300."
             "<p>В отличие от японской [[ps:Hira|хираганы]] сходного назначения, нюй-шу так и осталось неофициальным письмом. "
                 "К закату нюй-шу привели ликбез и распространение швейных машин в XX{{_}}веке. "
                 "К тому же японские оккупанты запрещали нюй-шу, видя в нём шифровку, "
@@ -2239,7 +2241,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Rejang OK, installed Google Noto font
     { "Rjng", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Реджанг", Dating::yapprox(1750, u8"первый известный документ"),
+        u8"Реджанг", Dating::yapprox(1750, StdNote::FIRST_KNOWN),
         u8"реджанг ''(Суматра, 200–350 тыс.)''",
         u8"Большинство из 200 тысяч говорящих неграмотно. "
                 "Полностью заменена [[ps:Latn|латиницей]]."
@@ -2527,7 +2529,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Takri OK, W10 none → installed Google Noto
     { "Takr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Такри", Dating::capprox(16),
+        u8"Такри", Dating::crange(14, 18),
         u8"малые языки Северной Индии и Пакистана",
         u8"Происходит из [[ps:Shrd|шарады]]. "
                 "Ранее такри широко применялся в делопроизводстве, "
@@ -2782,7 +2784,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Виткутьский алфавит (албанский)", Dating::year(1844, u8"первый известный источник"),
+        u8"Виткутьский алфавит (албанский)", Dating::year(1844, StdNote::FIRST_KNOWN),
         u8"албанский",
         u8"Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. "
                 "Через два года Наум умер, и алфавит не{{_}}получил особого распространения. "

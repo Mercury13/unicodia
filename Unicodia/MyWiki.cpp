@@ -568,11 +568,13 @@ namespace {
         .centuryBc = u8"$ век до н.э.",
         .crangeMode = uc::CrangeMode::SPECIAL_SPECIAL,
         //.crangeBcCe = u8"$ век до н.э. – & век н.э.",
-        .capprox = u8"≈$ век",
-        .capproxBc = u8"≈$ век до н.э.",
 
         // Other
         .unknown = u8"неизвестно",
+
+        // Comments
+        .firstInscription = u8"первая известная надпись",
+        .modernForm = u8"в современном виде",
     };
 
 }   // anon namespace
