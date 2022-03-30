@@ -16,6 +16,19 @@ std::u8string_view uc::DatingLoc::formatCentury(int x) const
 }
 
 
+std::u8string_view uc::DatingLoc::format1stCentury(int x, char* start, char* end) const
+{
+    switch (crangeMode) {
+    case CrangeMode::SPECIAL_SPECIAL:
+        return formatCentury(x);
+    case CrangeMode::ARABIC_SPECIAL:
+        return str::toCharsU8(start, end, std::abs(x));
+    default:
+        return u8"[format1stCentury!!! strange mode]";
+    }
+}
+
+
 ///// Dating ///////////////////////////////////////////////////////////////////
 
 
@@ -83,13 +96,30 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
         } break;
     // CENTURY
     case Mode::CENTURY: {
-            auto u8 = loc.formatCentury(fValue1);
+            auto cry = loc.formatCentury(fValue1);
             if (fValue1 > 0) {
                 r = loc.century;
             } else {
                 r = loc.centuryBc;
             }
-            str::replace(r, BUCK, u8);
+            str::replace(r, BUCK, cry);
+        } break;
+    case Mode::CRANGE: {
+            auto c1 = loc.format1stCentury(fValue1, buf2);
+            auto c2 = loc.formatCentury(fValue2);
+            t.append(c1);
+            t.append(NDASH);
+            t.append(c2);
+            if (fValue1 < 0) {
+                if (fValue2 < 0) {  // BC to BC
+                    r = loc.centuryBc;
+                } else {    // BC to CE
+                    return u8"[Range BC…CE!!!!!!!!!!!!]";
+                }
+            } else {    // CE to CE
+                r = loc.century;
+            }
+            str::replace(r, BUCK, t);
         } break;
         /// @todo [urgent] The rest modes!
     default:

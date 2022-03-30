@@ -37,6 +37,10 @@ namespace uc {
                 // Before 12th century is Special
 
         std::u8string_view formatCentury(int x) const;
+        std::u8string_view format1stCentury(int x, char* start, char* end) const;
+        template <size_t N>
+          std::u8string_view format1stCentury(int x, char(&buf)[N]) const
+            { return format1stCentury(x, std::begin(buf), std::end(buf)); }
     };
 
     ///

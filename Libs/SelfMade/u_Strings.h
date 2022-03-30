@@ -116,13 +116,26 @@ namespace str {
                     reinterpret_cast<const char*>(s.data()),
                     reinterpret_cast<const char*>(s.data() + s.size()), v, base); }
 
+    template <class T>
+    inline std::string_view toChars(char* start, char* end, T v, int base = 10)
+    {
+        auto res = std::to_chars(start, end, v, base);
+        if (res.ec != std::errc())
+            return {};
+        return { start, res.ptr };
+    }
+
     template <class T, size_t N>
     inline std::string_view toChars(char (&buf)[N], T v, int base = 10)
     {
-        auto res = std::to_chars(std::begin(buf), std::end(buf), v, base);
-        if (res.ec != std::errc())
-            return {};
-        return { std::begin(buf), res.ptr };
+        return toChars(std::begin(buf), std::end(buf), v, base);
+    }
+
+    template <class T>
+    inline std::u8string_view toCharsU8(char* start, char* end, T v, int base = 10)
+    {
+        auto r = toChars<T>(start, end, v, base);
+        return { reinterpret_cast<const char8_t*>(r.data()), r.size() };
     }
 
     template <class T, size_t N>
