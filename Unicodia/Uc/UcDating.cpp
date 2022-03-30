@@ -91,6 +91,7 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
             }
             str::replace(r, BUCK, u8);
         } break;
+        /// @todo [urgent] The rest modes!
     default:
         return u8"[Unknown mode]";
     }
