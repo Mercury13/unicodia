@@ -1628,19 +1628,24 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан." },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Лепча (ронг)", Dating::yapprox(1700),
         u8"лепча ''(Индия, Бутан, Непал, 65 тыс. на 2011)''",
-        u8"Гласная по умолчанию «а». Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, "
-                "потому буквы напоминают тибетские, повёрнутые на 90°."
-            "<p>Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. "
-                "[[pt:virama|Вирамы]] нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
+        u8"Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, "
+                    "потому буквы напоминают тибетские, повёрнутые на 90°. "
+                "Традиционно считается, что разработали письмо буддийские проповедники около 1700, а внедрил Чакдор Намгьял, князь Сиккима "
+                    "(правил 1700–1717). "
+                "Первый печатный текст{{-}}Евангелие от Матфея, 1845."
+            "<p>Гласная по умолчанию «а»."
+                "Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. "
+                "[[pt:virama|Вирамы]] нет. "
+                "Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. "
                 "Между словами нет пробелов.",
                 EcFont::LEPCHA },
     // Limbu OK, W10 none, installed Google Noto font
     { "Limb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лимбу", Dating::yapprox(1700),
+        u8"Лимбу", Dating::century(18),
         u8"лимбу ''(Непал, 380 тыс. на 2011)''",
         u8"Гласная по умолчанию «о»."
             "<p>Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
@@ -1722,7 +1727,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mahajani OK, W10 none, installed Google Noto
     { "Mahj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Махаджани", Dating::special(u8"неизвестно (порядка XVII–XVIII века)"),
+        u8"Махаджани", Dating::unknown(),
         u8"хинди, пенджабский, марвари ''(Северо-Западная Индия, 7,8 млн на 2011)''",
         u8"Ещё один, как и [[ps:Kthi|кайтхи]], отголосок индийской кастовой системы{{-}}эта письменность использовалась банкирами "
                 "и бухгалтерами вплоть до XX{{_}}века, и поныне в крайне малом пользовании."
@@ -1738,7 +1743,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Makasar OK, installed strange font by Anshuman Pandey
     { "Maka", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Макасарский (птичье письмо)", Dating::century(17, u8"возможно, XVI"),
+        u8"Макасарский (птичье письмо)", Dating::crange(16, 17),
         u8"макасарский ''(южный Сулавеси)''",
         u8"Происходит из кави (старояванского), а оно из паллавы (ранней [[ps:Gran|грантхи]]). "
                 "За форму букв письмо получило прозвище «птичье». "
@@ -1810,8 +1815,8 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::MEDEFAIDRIN },
     // Mende Kikakui OK, W10 none → installed Google Noto
     { "Mend", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::COMPETING, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Кикакуи (менде)", Dating::yapprox(1917),
+        EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL, EcContinent::AFRICA,
+        u8"Кикакуи (менде)", Dating::yapprox(1920),
         u8"менде ''(Сьерра-Леоне, 1,5 млн на 2006)''",
         u8"Изобрёл кикакуи исламский проповедник Мохаммед Турай. "
                 "Изначальное письмо из 42 символов было [[pt:abugida|абугидой]], "
@@ -1909,9 +1914,10 @@ constinit const uc::Script uc::scriptInfo[] {
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Манипури (мейтей-майек)", Dating::special(u8"XI век; по другим данным, 1930 и всё, что раньше,— подделки"),
+        u8"Манипури (мейтей-майек)", Dating::yapprox(1500, StdNote::FIRST_KNOWN),
         u8"манипури ''(Индия)''",
-        u8"Какая бы версия о происхождении манипури ни была верной, с XVIII века пользовались [[ps:Beng|бенгальским]]. "
+        u8"Считается, что письмо появилось в XI{{_}}веке. "
+                "С XVIII{{_}}века перешли на [[ps:Beng|бенгальский]]. "
                 "Письменность возродили в 1930‑х, в 1976 подогнали под современную фонетику."
             "<p>Буквы называются по частям тела: скажем, первая{{-}}«kok» (голова). "
                 "Гласная по умолчанию «а». "
@@ -1939,9 +1945,10 @@ constinit const uc::Script uc::scriptInfo[] {
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Бирманская", Dating::century(11),
+        u8"Бирманская", Dating::year(1035, StdNote::FIRST_KNOWN),
         u8"бирманский ''(Мьянма)'', пали ''(мёртвый, культовый в буддизме)''",
-        u8"Как и большинство других письменностей Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. Согласная буква означает слог с «ə». "
+        u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
+                "Согласная буква означает слог с «ə». "
                 "Чтобы поставить другую гласную, используются огласовки, чтобы убрать{{-}}знак «[[pt:virama|вирама]]», "
                     "которая по-бирмански называется «а-сат». "
                 "Вторая виртуальная вирама служит для сборки [[pt:ligature|лигатур]]{{-}}две буквы друг под другом."
@@ -1952,7 +1959,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Нандинагари", Dating::century(8),
+        u8"Нандинагари", Dating::century(8, StdNote::FIRST_KNOWN),
         u8"санскрит, кáннада ''(Южная Индия)''",
         u8"Происходит из нагари, промежуточной формы индийского письма. "
                 "Сестра [[ps:Deva|деванагари]], «нандинагари» означает «письмо священного города». "
