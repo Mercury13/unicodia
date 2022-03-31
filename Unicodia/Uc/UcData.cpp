@@ -2724,7 +2724,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tirhuta OK, W10 none, installed Google Noto
     { "Tirh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тирхута (митхилакшар)", Dating::century(13, u8"отделилось от гауди{{-}}прото-бенгальского"),
+        u8"Тирхута (митхилакшар)", Dating::century(13, u8"отделилось от ''гауди''{{-}}прото-бенгальского"),
         u8"майтхили ''(Индия)'', санскрит",
         u8"Письмо близко к [[ps:Beng|бенгальскому]], многие символы похожи, "
                     "но [[pt:unification|унификация]] невозможна из-за других [[pt:ligature|лигатур]]. "
@@ -2899,7 +2899,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Zanabazar square OK, installed Google Noto
     { "Zanb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Монгольское горизонтально-квадратное (Дзанабадзара)", Dating::ybefore(1700),
+        u8"Монгольское горизонтально-квадратное (Дзанабáдзара)", Dating::ybefore(1700),
         u8"монгольский, лхасский тибетский, санскрит",
         u8"Буддийский монах Дзанабáдзар (1635–1723), языковед и художник, известен разработкой письма [[ps:Soyo|соёмбо]]. "
                 "Менее известно, что он придумал монгольское горизонтально-квадратное письмо, также на основе [[ps:Tibt|тибетского]]{{-}}"
@@ -4235,7 +4235,7 @@ constinit const uc::Block uc::blocks[] {
             "Nandinagari", u8"Нандинагари", {}, EcScript::Nand },
     // Zanabazar square OK
     { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA },
-            "Zanabazar Square", u8"Монгольское горизонтально-квадратное (Дзанабадзара)", {}, EcScript::Zanb },
+            "Zanabazar Square", u8"Монгольское горизонтально-квадратное (Дзанабáдзара)", {}, EcScript::Zanb },
     // Soyombo OK
     { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA },
             "Soyombo", u8"Соёмбо", {}, EcScript::Soyo },
