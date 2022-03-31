@@ -1978,11 +1978,12 @@ constinit const uc::Script uc::scriptInfo[] {
     // North Arabian OK, W10 none → installed Google Noto
     { "Narb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Древняя североаравийская", Dating::century(-3),
+        u8"Древняя североаравийская", Dating::century(-3, StdNote::FIRST_KNOWN),
         u8"североаравийский оазисов, сафаитский, хисмайский и другие",
         u8"Понятие относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. "
                 "Происходят из протосинайской письменности. "
-                "Известны по кратким надписям III{{_}}века{{bc}}— IV{{_}}века.",
+                "Известны по кратким надписям III{{_}}века{{bc}}{{_}}— IV{{_}}века, но письмо значительно более древнее; "
+                    "вероятно, VIII{{_}}века{{bc}}",
                 EcFont::NORTH_ARABIAN },
     // Nabataean OK, W10 none → installed Google Noto
     { "Nbat", QFontDatabase::Any,
@@ -1990,7 +1991,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Набатейский", Dating::century(-2),
         u8"набатейский",
         u8"Происходит из [[ps:Armi|арамейского]]. "
-                "Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II века{{bc}} "
+                "Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II{{_}}века{{bc}} "
                 "В 106 Траян присоединил Набатею к римской империи, а письменность просуществовала до IV{{_}}века "
                     "и, возможно, стала предком [[ps:Arab|арабского]] через плохо изученное новосинайское письмо. "
                 "Между словами нет пробелов. "
@@ -2049,7 +2050,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam", QFontDatabase::Ogham,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
-        u8"Огамическая", Dating::century(4),
+        u8"Огамическая", Dating::century(4, StdNote::FIRST_KNOWN),
         u8"древнеирландский, пиктский",
         u8"Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X{{_}}века. "
                 "Заодно в ходу была [[ps:Latn|латиница]], потому есть мнение, что это тайнопись. "
@@ -2085,7 +2086,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Oriya OK, took Noto + everything bad manually fixed
     { "Orya", QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ория (одия)", Dating::century(14, u8"в современном виде"),
+        u8"Ория (одия)", Dating::century(14, StdNote::MODERN_FORM),
         u8"ори́я ''(=оди́я, Восточная Индия, 35 млн на 2019)''",
         u8"Ори́я (традиционно, но неверно считается однокоренным с ''арийцами'') развилась из [[ps:Sidd|сиддхаматрики]], "
                 "письменности с разорванной верхней чертой."
@@ -2134,7 +2135,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Plamyrene OK, W10 none, installed Google Noto
     { "Palm", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Пальмирский", Dating::yapprox(-100),
+        u8"Пальмирский", Dating::year(-44, StdNote::FIRST_KNOWN),
         u8"пальмирский арамейский",
         u8"Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). "
                 "Происходит из [[ps:Armi|арамейского]]. "
@@ -2193,15 +2194,15 @@ constinit const uc::Script uc::scriptInfo[] {
     // Inscriptional Pahlavi OK, W10 Historic
     { "Phli", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Пехлевийские надписи", Dating::yapprox(-150),
+        u8"Пехлевийские надписи", Dating::century(-2),
         u8"иранские языки",
         u8"Язык иранских надписей на глине, самый ранний вариант письма пехлеви. "
-                "Использовался даже в начале Сасанидской империи, до V{{_}}века.",
+                "Использовался до V{{_}}века, начала Сасанидской империи.",
                 EcFont::HISTORIC },
     // Psalter Pahlavi OK, W10 none → installed Google Noto
     { "Phlp", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Псалтырское пехлеви", Dating::special(u8"до IV в., точнее неизвестно"),
+        u8"Псалтырское пехлеви", Dating::century(6, StdNote::FIRST_KNOWN),
         u8"среднеперсидский",
         u8"Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. "
                 "Есть лишь два источника: 12-страничный фрагмент Псалтыря VI в., найденный в Синцзян-Уйгурском округе, и крест из Афганистана. "
@@ -2244,7 +2245,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"Парфянские надписи", Dating::yapprox(-250),
         u8"парфянский",
         u8"Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). "
-                "Повлиял на [[ps:Armn|армянский]], но впоследствии уступил персидскому. "
+                "Впоследствии уступил персидскому. "
                 "Содержит семь [[pt:ligature|лигатур]], которые не{{_}}удалось извлечь из имеющегося шрифта.",
                 EcFont::HISTORIC },
     // Rejang OK, installed Google Noto font
@@ -2304,7 +2305,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [font???] South Arabian
     { "Sarb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
-        u8"Древняя южноаравийская", Dating::century(-9),
+        u8"Древняя южноаравийская", Dating::century(-9, StdNote::FIRST_KNOWN),
         u8"южноаравийские ''(сабейский, катабанский и прочие)'', гéэз",
         u8"Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. "
                 "В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].",
