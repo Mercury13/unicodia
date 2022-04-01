@@ -155,6 +155,13 @@ namespace str {
     inline std::string_view toSv(std::u8string_view x)
         { return { reinterpret_cast<const char*>(x.data()), x.length() }; }
 
+    inline std::u8string_view toU8sv(const char* x)
+    {
+        if (!x)
+            return {};
+        return reinterpret_cast<const char8_t*>(x);
+    }
+
     inline const char* toC(const std::u8string& x)
         { return reinterpret_cast<const char*>(x.c_str()); }
 
