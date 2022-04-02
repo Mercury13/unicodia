@@ -70,7 +70,7 @@
     </text>
    </group>
    <group id="Name">
-    <au-cmt>$ = makeshift substitution char<br />Range = “somewhere in 1234–1357”, not “throughout 1234–1357”</au-cmt>
+    <au-cmt>$ = makeshift substitution char<br />Range = “somewhere in 1234–1357”, not “throughout 1234–1357”<br />All start with small letters</au-cmt>
     <text id="YBc">
      <orig>$ до н.э.</orig>
     </text>
