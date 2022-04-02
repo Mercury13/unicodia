@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ut type="original">
+ <info>
+  <orig lang="en" />
+ </info>
+ <file name="file0.txt">
+  <group id="Dating">
+   <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>
+   <group id="Century">
+    <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
+    <text id="1">
+     <orig>I</orig>
+    </text>
+    <text id="2">
+     <orig>II</orig>
+    </text>
+    <text id="3">
+     <orig>III</orig>
+    </text>
+    <text id="4">
+     <orig>IV</orig>
+    </text>
+    <text id="5">
+     <orig>V</orig>
+    </text>
+    <text id="6">
+     <orig>VI</orig>
+    </text>
+    <text id="7">
+     <orig>VII</orig>
+    </text>
+    <text id="8">
+     <orig>VIII</orig>
+    </text>
+    <text id="9">
+     <orig>IX</orig>
+    </text>
+    <text id="10">
+     <orig>X</orig>
+    </text>
+    <text id="11">
+     <orig>XI</orig>
+    </text>
+    <text id="12">
+     <orig>XII</orig>
+    </text>
+    <text id="13">
+     <orig>XIII</orig>
+    </text>
+    <text id="14">
+     <orig>XIV</orig>
+    </text>
+    <text id="15">
+     <orig>XV</orig>
+    </text>
+    <text id="16">
+     <orig>XVI</orig>
+    </text>
+    <text id="17">
+     <orig>XVII</orig>
+    </text>
+    <text id="18">
+     <orig>XVIII</orig>
+    </text>
+    <text id="19">
+     <orig>XIX</orig>
+    </text>
+    <text id="20">
+     <orig>XX</orig>
+    </text>
+   </group>
+   <group id="Name">
+    <au-cmt>$ = makeshift substitution char<br />Range = “somewhere in 1234–1357”, not “throughout 1234–1357”</au-cmt>
+    <text id="YBc">
+     <orig>$ до н.э.</orig>
+    </text>
+    <text id="YBefore">
+     <orig>до $</orig>
+     <au-cmt>Years BC are unsupported</au-cmt>
+    </text>
+    <text id="YApprox">
+     <orig>≈$</orig>
+    </text>
+    <text id="YApproxBc">
+     <orig>≈$ до н.э.</orig>
+    </text>
+    <text id="Decade">
+     <orig>$-е</orig>
+    </text>
+    <text id="Century">
+     <orig>$ век</orig>
+    </text>
+    <text id="CenturyBc">
+     <orig>$ век до н.э.</orig>
+    </text>
+    <text id="Unknown">
+     <orig>неизвестно</orig>
+    </text>
+   </group>
+   <group id="StdComments">
+    <text id="FirstInsc">
+     <orig>первая известная надпись</orig>
+    </text>
+    <text id="ModernForm">
+     <orig>в современном виде</orig>
+    </text>
+    <text id="MaybeEarlier">
+     <orig>возможно, раньше</orig>
+    </text>
+   </group>
+  </group>
+ </file>
+</ut>
