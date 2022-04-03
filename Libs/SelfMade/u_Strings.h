@@ -89,6 +89,17 @@ namespace str {
     ///
     /// @return   # of replacements
     ///
+    template <class C, class T, class A, class N, class B>
+    inline size_t replace(
+            std::basic_string<C, T, A>& haystack,
+            const N& needle,
+            const B& byWhat)
+        { return replace(
+                    haystack, detail::toSv(needle), detail::toSv(byWhat)); }
+
+    ///
+    /// @return   # of replacements
+    ///
     template <class C, class T, class A>
     size_t replace(
             std::basic_string<C, T, A>& s,
