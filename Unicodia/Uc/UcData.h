@@ -610,6 +610,7 @@ namespace uc {
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
         CJK             = 1<<5,     ///< [+] Non-collapsible CJK
         NO_EMOJI        = 1<<6,     ///< [+] No graphic emoji
+        HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description
         EXPERIMENT      = 1<<8,     ///< Left for experiments
     };
 

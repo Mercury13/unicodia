@@ -3006,23 +3006,24 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
     { 0x0000, 0x007F, { 'L', EcContinent::EUROPE },
-            "Basic Latin", u8"Латиница базовая", CT_ASCII, uc::EcScript::Latn },
+            "Basic Latin", u8"Латиница базовая", CT_ASCII,
+            uc::EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Latin-1 OK
     { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
             "Latin-1 Supplement", u8"Латиница-1", CT_LATIN1,
-            EcScript::Latn, EcFont::NORMAL, Bfg::NO_EMOJI },
+            EcScript::Latn, EcFont::NORMAL, Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION },
     // Latin extended A OK
     { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE },
             "Latin Extended-A", u8"Латиница расширенная A",
             u8"Содержит символы языков Центральной и Восточной Европы, Прибалтики, кельтских, а также саамского, мальтийского, "
                 "турецкого, эсперанто и некоторых других.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Latin extended B OK
     { 0x0180, 0x024F, { 0x188, EcContinent::EUROPE },
             "Latin Extended-B", u8"Латиница расширенная B",
             u8"Содержит символы словенского, хорватского, румынского, ливского, чжуанского, пиньиня (латинизации китайского), африканских, "
                     "индейских языков, а также старой (до 1930) латиницы языков бывшего СССР.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // IPA extensions OK
     { 0x0250, 0x02AF, { 0x259, EcContinent::NONE },
             "IPA Extensions", u8"Расширения МФА",
@@ -3079,7 +3080,7 @@ constinit const uc::Block uc::blocks[] {
                     "не{{_}}первым: ещё за три года до его заметки (2008) майки с этой буквой продавались в России. "
                     "И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, "
                     "что и дало букве {{sm|Ԥ}} место в Юникоде.",
-            EcScript::Cyrl },
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Armenian OK
     { 0x0530, 0x058F, { 0x536, EcContinent::ASIA },
             "Armenian", u8"Армянский", {}, EcScript::Armn },
@@ -3096,7 +3097,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0750, 0x077F, { 0x762, EcContinent::ASIA },
             "Arabic Supplement", u8"Арабский дополнительный",
             u8"Буквы для языков Африки, Пакистана и раннего персидского.",
-            EcScript::Arab },
+            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Thaana OK
     { 0x0780, 0x07BF, { 0x798, EcContinent::OCEAN },
             "Thaana", u8"Тана", {}, EcScript::Thaa },
@@ -3114,7 +3115,7 @@ constinit const uc::Block uc::blocks[] {
             "Syriac Supplement", u8"Сирийский дополнительный",
             u8"Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. "
                     "Использовалась индийскими христианами до XIX{{_}}века.",
-            EcScript::Syrc },
+            EcScript::Syrc, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Arabic ex B OK, Sceherazade updated in Nov 2021
     { 0x0870, 0x089F, { 0x877, EcContinent::ASIA },
             "Arabic Extended-B", u8"Арабский расширенный B",
@@ -3122,7 +3123,7 @@ constinit const uc::Block uc::blocks[] {
                     "Также бошняцкий (запись сербохорватского арабскими буквами), "
                         "пегон (запись индонезийских языков арабскими буквами), "
                         "египетский пиастр (валюта до 1834) и египетский фунт (современная валюта).",
-            EcScript::Arab },
+            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Arabic ex A OK
     { 0x08A0, 0x08FF, { 0x8A4, EcContinent::ASIA },
             "Arabic Extended-A", u8"Арабский расширенный A",
@@ -3130,7 +3131,7 @@ constinit const uc::Block uc::blocks[] {
                     "арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' "
                     "и африканских языков (в частности, берберского). "
                     "Также знаки комментариев к Корану.",
-            EcScript::Arab },
+            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Devanagari OK
     { 0x0900, 0x097F, { 0x915, EcContinent::ASIA },
             "Devanagari", u8"Деванагари", {}, EcScript::Deva },
@@ -3183,7 +3184,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Чхосон{{-}}начальные буквы, чунсон{{-}}средние, чонсон{{-}}конечные. "
                     "Блок устроен очень просто: между первой и средней буквой, а также между средней и конечной "
                         "отрицательное расстояние, и две-три буквы, написанные вместе, автоматически складываются в слог.",
-            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ethiopic OK
     { 0x1200, 0x137F, { 0x12F1, EcContinent::AFRICA },
             "Ethiopic", u8"Эфиопская (гéэз)", {}, EcScript::Ethi },
@@ -3192,7 +3193,7 @@ constinit const uc::Block uc::blocks[] {
             "Ethiopic Supplement", u8"Эфиопская дополнительная",
             u8"Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн на 2018, ''Ethnologue'' статус 5: развивающийся), "
                     "а также метки тонов.",
-            EcScript::Ethi },
+            EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cherokee OK
     { 0x13A0, 0x13FF, { 0x13B6, EcContinent::AMERICA },
             "Cherokee", u8"Чероки", {}, EcScript::Cher },
@@ -3229,7 +3230,7 @@ constinit const uc::Block uc::blocks[] {
             "Unified Canadian Aboriginal Syllabics Extended",
             u8"Канадская слоговая расширенная",
             u8"Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''.",
-            EcScript::Cans },
+            EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Limbu OK
     { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA },
             "Limbu", u8"Лимбу", {}, EcScript::Limb },
@@ -3248,7 +3249,7 @@ constinit const uc::Block uc::blocks[] {
                     "Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, "
                         "да и в Юникоде{{_}}14.0 всё еще не{{_}}рекомендуется."
                 "<p>Остальные{{-}}названия лунных дней от новолуния до полнолуния и обратно.",
-            EcScript::Khmr },
+            EcScript::Khmr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Buginese OK
     { 0x1A00, 0x1A1F, { 0x1A01, EcContinent::OCEAN },
             "Buginese", u8"Лонтара (бугийский)", {}, EcScript::Bugi },
@@ -3281,7 +3282,7 @@ constinit const uc::Block uc::blocks[] {
             "Cyrillic Extended-C", u8"Кириллица расширенная C",
             u8"Варианты кириллических букв из печатных церковных книг: "
                         "от Библии Франциска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).",
-            EcScript::Cyrl },
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Geor ex OK
     { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_LINES },
             "Georgian Extended", u8"Грузинский расширенный",
@@ -3296,12 +3297,12 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Теперь Юникод смотрит на мхедрули и мтаврули как на строчные и заглавные, "
                         "только с другими правилами употребления{{-}}выделяется всё слово. "
                     "Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.",
-            EcScript::Geor },
+            EcScript::Geor, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Sundanese supplement OK
     { 0x1CC0, 0x1CCF, { 0x1CC6, EcContinent::OCEAN },
             "Sundanese Supplement", u8"Сунданский дополнительный",
             u8"Исторические знаки препинания для сунданского.",
-            EcScript::Sund },
+            EcScript::Sund, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Vedic ex OK
     { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Vedic Extensions", u8"Ведические символы",
@@ -3335,7 +3336,7 @@ constinit const uc::Block uc::blocks[] {
             u8"[[pt:precomposed|Монолитные]] символы с различными метками. "
                     "Девяносто из этих символов вьетнамские, около десятка{{-}}средневековые, "
                     "в том числе заглавный эсцет '''ẞ'''.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek ex OK, though DejaVu is a big gun
     { 0x1F00, 0x1FFF, { 0x1F6A, EcContinent::EUROPE },
             "Greek Extended", u8"Греческий расширенный",
@@ -3350,7 +3351,7 @@ constinit const uc::Block uc::blocks[] {
                     "• черта{{-}}длинный звук;<br>"
                     "• диерезис{{-}}раздельное прочтение звуков."
                 "<p>Добавлены в начале нашей эры, убраны только в 1982, когда столь сложной фонетики много веков не{{_}}было.",
-            EcScript::Grek, EcFont::DEJAVU },
+            EcScript::Grek, EcFont::DEJAVU, Bfg::HAS_DESCRIPTION },
     // General punct OK, changed 2-dot leader to low one.
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation", u8"Знаки препинания",
@@ -3560,7 +3561,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Символы разных малых языков: чимбу и ваги ''(Папуа{{-}}Новая Гвинея)'', шона ''(Зимбабве)'', уйгурского и других. "
                     "Также семь букв уральского фонетического алфавита, "
                         "и клавдиева буква Ⱶ, означавшая то же, что современный Y, но рассчитанная на печать существующими трафаретами.",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Coptic OK
     { 0x2C80, 0x2CFF, { L'Ⲁ', EcContinent::AFRICA },
             "Coptic", u8"Коптский", {}, EcScript::Copt },
@@ -3572,7 +3573,7 @@ constinit const uc::Block uc::blocks[] {
                     "Буквицы при этом оформляли шрифтом ''асомтаврули'' из основного блока."
                 "<p>Ещё в 2000 департамент информатизации Грузии и католикóс (глава грузинской церкви) "
                     "просили закодировать нусхури, и Консорциум откликнулся.",
-            EcScript::Geor, EcFont::GEORGIAN_NUSKHURI },
+            EcScript::Geor, EcFont::GEORGIAN_NUSKHURI, Bfg::HAS_DESCRIPTION },
     // Tifinagh OK
     { 0x2D30, 0x2D7F, { L'ⵣ', EcContinent::AFRICA },
             "Tifinagh", u8"Тифинаг (берберский)", {}, EcScript::Tfng },
@@ -3584,12 +3585,12 @@ constinit const uc::Block uc::blocks[] {
                 "• билин: кушитская семья, 91{{_}}тыс. на 2006, с 1990‑х полностью на латинице;<br>"
                 "• бенч: омотская семья, 350{{_}}тыс. на 2007, с 2008 на латинице;<br>"
                 "• себат-бет: эфиосемитская ветвь, 1,5{{_}}млн на 2010.",
-            EcScript::Ethi },
+            EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cyr ex A OK, fixed those renderings in Noto
     { 0x2DE0, 0x2DFF, { 0x2DF0, EcContinent::EUROPE },
             "Cyrillic Extended-A", u8"Кириллица расширенная A",
             u8"Комбинирующие кириллические буквы из церковнославянского.",
-            EcScript::Cyrl, EcFont::NOTO },
+            EcScript::Cyrl, EcFont::NOTO, Bfg::HAS_DESCRIPTION },
     // Supp punct OK, drew U14 in FunkySample
     { 0x2E00, 0x2E7F, { L'⸘', EcContinent::NONE },
             "Supplemental Punctuation", u8"Знаки препинания дополнительные",
@@ -3601,7 +3602,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2E80, 0x2EFF, { L'⺓', EcContinent::CJK },
             "CJK Radicals Supplement", u8"ККЯ ключи дополнительные",
             u8"Альтернативные формы ключей Канси, применяющиеся в заголовках словарей.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kangxi OK
     { 0x2F00, 0x2FDF, { L'⼊', EcContinent::CJK },
             "Kangxi Radicals", u8"Ключи Канси",
@@ -3612,7 +3613,7 @@ constinit const uc::Block uc::blocks[] {
                     "В 1831 исправили 2500 ошибок, вызванных спешкой первоначальных составителей."
                 "<p>Система «алфавитной» расстановки иероглифов из 214 ключей придумана ещё в 1615, но именно словарь Канси "
                         "сделал её стандартом.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ideographic desc OK, not collapsible: small block
     { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Ideographic Description Characters",
@@ -3633,7 +3634,7 @@ constinit const uc::Block uc::blocks[] {
                 "• Несколько японских эмблем.<br>"
                 "• Японские скобки и кавычки.<br>"
                 "• Знак «то же» —//—, широко используемый и в наших перечнях{{-}}только в иероглифическом варианте.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F, { L'ぢ', EcContinent::CJK },
             "Hiragana", u8"Хирагана", {}, EcScript::Hira },
@@ -3648,7 +3649,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x3130, 0x318F, { L'ㅭ', EcContinent::CJK },
             "Hangul Compatibility Jamo", u8"Хангыль\u00A0— совместимые чамо",
             u8"Символы совместимости с корейской кодировкой KS{{_}}X{{_}}1001.",
-            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kanbun OK, not collapsible: small block
     { 0x3190, 0x319F, { L'㆝', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Kanbun", u8"Камбун (подсказки к древнеяпонским иероглифам)",
@@ -3666,7 +3667,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный",
             u8"Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского.",
-            EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK strokes OK
     { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
             "CJK Strokes", u8"Черты ККЯ",
@@ -3682,12 +3683,12 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Из дополнительных элементов{{-}}прямой участок B, кружок Q, наклон X, излом Z. "
                     "Для каждой черты кодифицировано, в каком направлении её писать."
                 "<p>Все названия китайские: например, B от ''biǎn{{-}}плоский''.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Katakana phon OK, not collapsible: small block
     { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
             "Katakana Phonetic Extensions", u8"Катакана\u00a0— фонетические расширения",
             u8"Символы катаканы для передачи звуков айнского языка.",
-            EcScript::Kana },
+            EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Enclosed CJK letters and months OK
     { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK },
             "Enclosed CJK Letters and Months", u8"Обрамлённые буквы и месяцы ККЯ",
@@ -3695,14 +3696,14 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Также несколько символов, которым место в других блоках: сокращения единиц измерения, "
                     "цифры 21…50 в кругах, знаки ограничения скорости (10…80 в круге и квадрате)."
                 "<p>В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility", u8"ККЯ символы совместимости",
             u8"Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. "
                     "Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, "
                         "эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.",
-            EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK },
             "CJK Unified Ideographs Extension A",
             u8"ККЯ иероглифы расширение A",
@@ -3710,7 +3711,7 @@ constinit const uc::Block uc::blocks[] {
                     "В 2020 добавили ещё 10, заполнив блок до отказа."
                 "<p>Так, первый из иероглифов означает «гора, холм, могила», и сейчас заменён символом {{sm|丘}}. "
                     "Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», «бамбуковые ножны», «неосвещённый».",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Yijing OK
     { 0x4DC0, 0x4DFF, { L'䷜', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Yijing Hexagram Symbols", u8"Гексаграммы И цзин (Книги перемен)",
@@ -3733,7 +3734,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA490, 0xA4CF, { 0xA4BA, EcContinent::ASIA },
             "Yi Radicals", u8"И\u00A0— ключи",
             u8"Ключи, используемые для «алфавитной сортировки» словарей языка '''[[ps:Yiii|и]]'''.",
-            EcScript::Yiii },
+            EcScript::Yiii, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Lisu OK
     { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA },
             "Lisu", u8"Лису (алфавит Фрейзера)", {}, EcScript::Lisu },
@@ -3747,7 +3748,7 @@ constinit const uc::Block uc::blocks[] {
                         "знаки интонации для литовской диалектологии."
                 "<p>Редкая [[pt:ligature|лигатура]] «мультиокулярная О», используемая в церковном эпитете «мног{{noto|ꙮ}}кий», "
                         "наперёд заменена на форму из десяти «глаз», которая ожидается в Юникоде 15.",
-            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS | Bfg::HAS_DESCRIPTION },
     // Bamum OK
     { 0xA6A0, 0xA6FF, { 0xA6AE, EcContinent::AFRICA },
             "Bamum", u8"Бамум", {}, EcScript::Bamu },
@@ -3768,7 +3769,7 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended-D", u8"Латиница расширенная D",
             u8"Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, "
                 "дополнительные буквы алфавита майя, употреблявшиеся в колониальный период, и другое.",
-            EcScript::Latn, EcFont::LATIN },
+            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Syloti OK
     { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA },
             "Syloti Nagri", u8"Силхети-нагари", {}, EcScript::Sylo },
@@ -3791,7 +3792,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Распевы из Самаведы (книги релизиозных песен), варианты знака чандрабинду (носовая гласная), "
                     "редакторские пометы, религиозные символы, "
                     "гласная «ай» для мелких неписьменных языков Индии, придуманная европейцами.",
-            EcScript::Deva },
+            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Kayah Li OK
     { 0xA900, 0xA92F, { 0xA922, EcContinent::ASIA, Ifg::APPROX_2_CHARS },
             "Kayah Li", u8"Кая-ли", {}, EcScript::Kali },
@@ -3804,17 +3805,19 @@ constinit const uc::Block uc::blocks[] {
             u8"Начальные ''(чхосон)'' старые согласные буквы корейского языка. "
                     "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
                         "а значит, нет в [[pt:precomposed|монолитном виде]].",
-            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Javanese OK
     { 0xA980, 0xA9DF, { L'ꦈ', EcContinent::OCEAN },
             "Javanese", u8"Яванский", {}, EcScript::Java },
     // Myanmar ex B OK
+    /// @todo [desc] Mymr ex B
     { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA },
             "Myanmar Extended-B", u8"Бирманский расширенный B", {}, EcScript::Mymr },
     // Cham OK
     { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA },
             "Cham", u8"Чамский", {}, EcScript::Cham },
     // Myanmar ex A OK
+    /// @todo [desc] Mymr ex A
     { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA },
             "Myanmar Extended-A", u8"Бирманский расширенный А", {}, EcScript::Mymr },
     // Tai Viet OK
