@@ -3831,23 +3831,23 @@ constinit const uc::Block uc::blocks[] {
     { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA },
             "Meetei Mayek Extensions", u8"Манипури\u00A0— расширения",
             u8"Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]].",
-            EcScript::Mtei },
+            EcScript::Mtei, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Ethiopic ex A OK
     { 0xAB00, 0xAB2F, { 0xAB2A, EcContinent::AFRICA },
             "Ethiopic Extended-A", u8"Эфиопская расширенная А",
             u8"Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).",
-            EcScript::Ethi },
+            EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Latin ex E OK, dereferenced bad chars of Google Noto
     { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE },
             "Latin Extended-E", u8"Латиница расширенная E",
             u8"Буквы, используемые в германской и шотландской диалектологии, транскрипции индейских и сино-тибетских языков, "
                     "а также в латинской записи якутского (алфавит Новгородова, 1920–1929).",
-            EcScript::Latn },
+            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cherokee supp OK
     { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA },
             "Cherokee Supplement", u8"Чероки дополнительный",
             u8"В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.",
-            EcScript::Cher },
+            EcScript::Cher, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Meetei OK
     { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA },
             "Meetei Mayek", u8"Манипури (мейтей-майек)", {}, EcScript::Mtei },
@@ -3861,14 +3861,14 @@ constinit const uc::Block uc::blocks[] {
                     "Этот случай даже обозвали «корейский бардак». "
                     "В ответ Юникод выпустил главную гарантию [[pt:stability|стабильности]]: "
                         "больше ни один символ не{{_}}сдвинется и не{{_}}исчезнет.",
-            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Hangul Jamo B OK
     { 0xD7B0, 0xD7FF, { L'ힽ', EcContinent::CJK },
             "Hangul Jamo Extended-B", u8"Хангыль\u00A0— расширенные чамо B",
             u8"Средние и конечные ''(чунсон и чонсон)'' старые буквы корейского языка. "
                     "С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}"
                         "а значит, нет в [[pt:precomposed|монолитном виде]].",
-            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compat hiero OK
     { 0xF900, 0xFAFF, { L'車', EcContinent::CJK },
             "CJK Compatibility Ideographs", u8"ККЯ совместимые иероглифы",
@@ -3876,7 +3876,7 @@ constinit const uc::Block uc::blocks[] {
                         "чтобы не{{_}}терять информацию при круговом [[pt:convertibility|преобразовании]]. "
                     "У них жёстко задано начертание. "
                     "Впрочем, встречаются и обычные [[pt:unification|унифицированные]]{{-}}например, FA0E и 0F, 11, 13, 14…",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Alphabetic presentation forms OK
     { 0xFB00, 0xFB4F, { L'ﬄ', EcContinent::NONE },
             "Alphabetic Presentation Forms", u8"Алфавитные формы начертания",
@@ -3892,7 +3892,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>В обычном письме эти символы лучше не{{_}}использовать. "
                     "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                         "(во многих тогдашних кодировках текст записывался слева направо).",
-            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS },
+            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
     { 0xFE00, 0xFE0F, { 0xFE00, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Variation Selectors", u8"Селекторы начертания",
@@ -3926,7 +3926,7 @@ constinit const uc::Block uc::blocks[] {
     // Small variants OK
     { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants", u8"Малые формы знаков препинания",
-            u8"Уменьшенные знаки препинания для совместимости с китайской кодировкой CNS 11643.",
+            u8"Уменьшенные знаки препинания для совместимости с китайской кодировкой CNS{{_}}11643.",
             EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
     { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
@@ -3947,7 +3947,7 @@ constinit const uc::Block uc::blocks[] {
                     "Отсюда необычное начертание текста на китайских товарах с плохо подобранными шрифтами: "
                         "так, в интернете нашумели стельки «Атлетизм»."
                 "<p>В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.",
-            EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::NONE },
             "Specials", u8"Спецсимволы",
@@ -3967,10 +3967,10 @@ constinit const uc::Block uc::blocks[] {
     // Aegean numbers OK
     { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE },
             "Aegean Numbers", u8"Эгейские цифры",
-            u8"Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями."
+            u8"Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями. "
                     "Замечена в линейном письме [[ps:Lina|А]] и [[ps:Linb|Б]]. "
                     "В [[ps:Cprt|кипрском]] письме была обнаружена единственная табличка с числом «100».",
-            EcScript::Linb },
+            EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek numbers OK
     { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE },
         "Ancient Greek Numbers", u8"Древнегреческие цифры",
@@ -3989,7 +3989,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. "
                 "В древней Греции ''литра''{{-}}мера массы и монета. "
                 "Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.",
-            EcScript::Grek, EcFont::NOTO_SYMBOL2 },
+            EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Ancient symbols OK
     { 0x10190, 0x101CF, { 0x10192, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Ancient Symbols", u8"Древние символы",
@@ -4034,7 +4034,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>В изображениях символов вы увидите серьёзное расхождение с таблицами Юникода: специалист по древним "
                 "письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект "
                 "''Google Noto'' попытался повторить росчерки постоянной шириной.",
-            EcScript::Copt, EcFont::NOTO_SYMBOL2 },
+            EcScript::Copt, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Old Italic OK
     { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE },
             "Old Italic", u8"Этрусский", {}, EcScript::Ital },
@@ -4079,10 +4079,10 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended-F", u8"Латиница расширенная F",
             u8"Модификатор AA используется в нотации расстройств речи (VoQS). "
                 "Остальные{{-}}в фонетике и означают звуки, проговариваемые не{{_}}полностью.",
-            EcScript::Latn, EcFont::FUNKY },
+            EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Cypriot OK
     { 0x10800, 0x1083F, { 0x1080E, EcContinent::EUROPE },
-            "Cypriot Syllabary", u8"Кипрская", {}, EcScript::Cprt },
+            "Cypriot Syllabary", u8"Кипрская слоговая", {}, EcScript::Cprt },
     // Imperial Aramaic OK
     { 0x10840, 0x1085F, { 0x10840, EcContinent::ASIA },
             "Imperial Aramaic", u8"Имперский арамейский", {}, EcScript::Armi },
@@ -4158,7 +4158,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
             "Old Uyghur", u8"Староуйгурский", {},
             EcScript::Ougr },
-    // Chorasmian OK, built own font
+    // Chorasmian OK
     { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA },
             "Chorasmian", u8"Хорезмийский", {}, EcScript::Chrs },
     // Elymaic OK
