@@ -4187,7 +4187,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x111E0, 0x111FF, { 0x111E1, EcContinent::OCEAN },
             "Sinhala Archaic Numbers", u8"Старые сингальские цифры",
             u8"Старинная непозиционная система счисления, использовавшаяся в Шри-Ланке до начала XIX{{_}}века.",
-            EcScript::Sinh },
+            EcScript::Sinh, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Khojki OK
     { 0x11200, 0x1124F, { 0x11208, EcContinent::ASIA },
             "Khojki", u8"Ходжки", {}, EcScript::Khoj },
@@ -4221,7 +4221,7 @@ constinit const uc::Block uc::blocks[] {
                         "правда, не{{_}}в [[pt:bmp|базовой плоскости]], а в дополнительной."
                 "<p>Иконка соответствует написанию сверху вниз{{-}}"
                         "а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.",
-            EcScript::Mong },
+            EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Takri OK
     { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri", u8"Такри", {}, EcScript::Takr },
@@ -4252,7 +4252,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Канадская слоговая расширенная A",
             u8"Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), "
                         "и четыре исторических слога индейцев кри и оджибве.",
-            EcScript::Cans },
+            EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Pau Cin Hau OK
     { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA },
             "Pau Cin Hau", u8"Письмо По Чин Хо", {}, EcScript::Pauc },
@@ -4273,12 +4273,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA },
             "Lisu Supplement", u8"Лису дополнительный",
             u8"Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).",
-            EcScript::Lisu },
+            EcScript::Lisu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tamil supp OK
     { 0x11FC0, 0x11FFF, { 0x11FD8, EcContinent::ASIA },
             "Tamil Supplement", u8"Тамильский дополнительный",
             u8"Старинные тамильские дроби и другие символы: для валют, сельского хозяйства, бухгалтерии.",
-            EcScript::Taml, EcFont::TAMIL_SUPPLEMENT },
+            EcScript::Taml, EcFont::TAMIL_SUPPLEMENT, Bfg::HAS_DESCRIPTION },
     // Cuneiform OK
     { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
             "Cuneiform", u8"Клинопись", {}, EcScript::Xsux },
@@ -4292,15 +4292,14 @@ constinit const uc::Block uc::blocks[] {
                         "только из контекста."
                 "<p>До этого использовалась непозиционная система, когда разные предметы и разные разряды "
                     "записывались разными знаками.",
-            EcScript::Xsux },
+            EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Early cuneiform OK
     { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA },
             "Early Dynastic Cuneiform",
             u8"Раннединастическая клинопись", {}, EcScript::Xsux },
     // Cypro-Minoan OK
     { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::APPROX_HISTORICAL },
-            "Cypro-Minoan", u8"Кипро-минойская", {},
-            EcScript::Cpmn },
+            "Cypro-Minoan", u8"Кипро-минойская", {}, EcScript::Cpmn },
     // Egyptian hiero OK
     { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs", u8"Египетские иероглифы", {}, EcScript::Egyp },
@@ -4310,7 +4309,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Форматирующие символы для египетских иероглифов",
             u8"Девять необязательных символов, обеспечивающих полное форматирование египетских иероглифов."
                 "<p>В Юникоде 15 ожидаются 8 новых символов форматирования, 2 пробела и 19 символов для частично стёртых надписей.",
-            EcScript::Egyp },
+            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs", u8"Анатолийские (лувийские, хеттские) иероглифы", {}, EcScript::Hluw },
@@ -4319,7 +4318,7 @@ constinit const uc::Block uc::blocks[] {
             "Bamum Supplement", u8"Бамум дополнительный",
             u8"Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. "
                 "Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].",
-            EcScript::Bamu },
+            EcScript::Bamu, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Mro OK
     { 0x16A40, 0x16A6F, { 0x16A52, EcContinent::ASIA },
             "Mro", u8"Мру", {}, EcScript::Mroo },
@@ -4354,7 +4353,7 @@ constinit const uc::Block uc::blocks[] {
                     "Вторая форма напоминает соответственно стрелку <big>↑</big> и молнию <big>ϟ</big>.",
             // Hard block, though small, but all chars have scripts.
             // Hani is just over-insurance.
-            EcScript::Hani },
+            EcScript::Hani, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tangut OK
     { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut", u8"Тангутский", {},
@@ -4363,7 +4362,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut Components", u8"Элементы тангутского письма",
             u8"Компоненты и радикалы, используемые в современном изучении тангутского письма.",
-            EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Khitan small OK
     { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Khitan Small Script", u8"Малое киданьское письмо",
@@ -4374,24 +4373,24 @@ constinit const uc::Block uc::blocks[] {
             u8"Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. "
                 "Другими словами: все девять иероглифов{{-}}чьи-то омографы. "
                 "Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.",
-            EcScript::Tang, EcFont::NORMAL, Bfg::CJK },
+            EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B", u8"Кана расширенная B",
             u8"Изобретённая японскими лингвистами незадолго до Второй мировой войны запись каной "
                 "тайваньского диалекта южноминьского языка.",
-            EcScript::Kana, EcFont::NORMAL, Bfg::CJK },
+            EcScript::Kana, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana supp OK
     { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
             "Kana Supplement", u8"Кана дополнительная",
             u8"Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). "
                     "Хэнтайгана продолжается и в следующем блоке.",
-            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex A OK
     { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK },
             "Kana Extended-A", u8"Кана расширенная A",
             u8"31 символ [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]], и 4 символа [[ps:Kana|катаканы]] и хираганы.",
-            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE },
+            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small kana ex OK
     { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension", u8"Маленькие символы каны",
@@ -4399,7 +4398,7 @@ constinit const uc::Block uc::blocks[] {
                     "Так, маленькое {{sm|ケヰ}} передаёт огублённое «кʷи». "
                     "Также добавлены соответствующие символы хираганы{{-}}правда, к моменту принятия заявка похудела: "
                         "отпали «ко» обеих азбук и «н» хираганы.",
-            EcScript::Kana, EcFont::KOREAN },
+            EcScript::Kana, EcFont::KOREAN, Bfg::HAS_DESCRIPTION },
     // Nushu OK
     { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
             "Nushu", u8"Нюй-шу",
@@ -4412,7 +4411,7 @@ constinit const uc::Block uc::blocks[] {
             "Shorthand Format Controls",
             u8"Форматирующие символы стенографии",
             u8"[[pt:ignorable|Невидимые]] символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.",
-            EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
     // Znamenny OK, found cool font on Ponomar
     { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation", u8"Знаменное пение",
@@ -4474,7 +4473,7 @@ constinit const uc::Block uc::blocks[] {
                 "<p>Для музыкантов и певцов были разные нотации, это позволяло писать одновременно слова, музыку и подсказки для певцов. "
                     "Ноты записывались старинными буквами, и те из них, что не{{_}}совпадают с греческими, приведены в этом блоке "
                         "без всякой системы.",
-            EcScript::Grek, EcFont::MUSIC_NORMAL },
+            EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
     // Mayan numerals OK
     { 0x1D2E0, 0x1D2FF, { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Mayan Numerals", u8"Цифры майя",
@@ -4537,12 +4536,12 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended-G", u8"Латиница расширенная G",
             u8"Различные символы для расстройств речи и фонетики: "
                     "мягкие и ретрофлексные (получаемые загибанием языка назад к нёбу) звуки, щелчки и некоторые другие.",
-            EcScript::Latn, EcFont::FUNKY },
+            EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Glagolitic supp OK
     { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE },
             "Glagolitic Supplement", u8"Глаголица дополнительная",
             u8"Надстрочные буквы глаголицы, встречающиеся в различных источниках.",
-            EcScript::Glag },
+            EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // NP Hmong OK
     { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA },
             "Nyiakeng Puachue Hmong", u8"Ньякэ пуацы хмонг (алфавит Черванга)", {}, EcScript::Hmnp },
@@ -4558,7 +4557,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Новая орфография языков гураге (эфиосемитская группа, до 5{{_}}млн), появившаяся в 2013 и сделавшая письменным "
                     "всё семейство, не{{_}}только закодированный в 2005 себат-бет (1,5{{_}}млн на 2010). "
                 "Часть старых себатбетских букв объявлены [[pt:obsolete|устаревшими]].",
-            EcScript::Ethi },
+            EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Mende Kikakui OK
     { 0x1E800, 0x1E8DF, { 0x1E800, EcContinent::AFRICA },
             "Mende Kikakui", u8"Кикакуи (менде)", {}, EcScript::Mend },
