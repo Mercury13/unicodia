@@ -4596,7 +4596,7 @@ constinit const uc::Block uc::blocks[] {
                         "Отзеркаливают даже знаки «существует» или «частный дифференциал»."
                 "<p>Первыми такой набор реализовали разработчики системы математического текста TᴇX (читается «тех»), и в 2012, "
                     "после семи лет утрясок, эти наработки перенесли в Юникод.",
-            EcScript::Arab, EcFont::MATH },
+            EcScript::Arab, EcFont::MATH, Bfg::HAS_DESCRIPTION },
     // Mahjong tiles OK
     { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR },
             "Mahjong Tiles", u8"Фишки маджонга",
@@ -4781,20 +4781,20 @@ constinit const uc::Block uc::blocks[] {
             u8"Редкие и исторические [[ps:Hani|китайские иероглифы]]. "
                 "Эти иероглифы упаковали в стандартный шрифт «SimSun-ExtB» для Windows. "
                 "Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK C OK
     { 0x2A700, 0x2B73F, { 0x2A704, EcContinent::CJK },
             "CJK Unified Ideographs Extension C",
             u8"ККЯ иероглифы расширение C",
             u8"4149 редких и старых иероглифов, добавленных в 2009. "
                     "В 2021 добавили ещё 4 штуки.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK D OK
     { 0x2B740, 0x2B81F, { 0x2B742, EcContinent::CJK },
             "CJK Unified Ideographs Extension D",
             u8"ККЯ иероглифы расширение D",
             u8"222 редких и старых иероглифа, добавленных в 2010.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK E OK
     // Remove 2nd horizontal line from above from 2B283, and you’ll get
     //   common 4E1C “east”. But that’s probably feature, not bug
@@ -4802,14 +4802,14 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension E",
             u8"ККЯ иероглифы расширение E",
             u8"5762 редких и старых иероглифа, добавленных в 2015.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK F OK
     { 0x2CEB0, 0x2EBEF, { 0x2CEB5, EcContinent::CJK },
             "CJK Unified Ideographs Extension F",
             u8"ККЯ иероглифы расширение F",
             u8"7473 иероглифа, добавленных в 2017. "
                     "Включают редкие, старые, а также больше тысячи чжуанских (один из языков Китая).",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compat OK
     { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
             "CJK Compatibility Ideographs Supplement",
@@ -4817,7 +4817,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Появившаяся в 2001 [[pt:unification|разунификация]] 542 иероглифов "
                         "для [[pt:convertibility|круговой совместимости]] с тайваньской кодировкой CNS{{_}}11643-1992. "
                     "Разумеется, все иероглифы этого блока традиционные.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK G OK, found a HanaMin version supporting CJK G
     { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
             "CJK Unified Ideographs Extension G",
@@ -4827,7 +4827,7 @@ constinit const uc::Block uc::blocks[] {
                     "• ''бян''{{-}}пишется дважды в названии китайской лапши ''бянбян'': "
                         "U+30EDD упрощённый 42 черты, U+30EDE традиционный 58 черт;<br>"
                     "• ''дайто'' или ''отодо''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Tags OK
     { 0xE0000, 0xE007F, { 0xE0054, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Tags", u8"Тэги",
