@@ -3810,16 +3810,20 @@ constinit const uc::Block uc::blocks[] {
     { 0xA980, 0xA9DF, { L'ꦈ', EcContinent::OCEAN },
             "Javanese", u8"Яванский", {}, EcScript::Java },
     // Myanmar ex B OK
-    /// @todo [desc] Mymr ex B
     { 0xA9E0, 0xA9FF, { L'ꧬ', EcContinent::ASIA },
-            "Myanmar Extended-B", u8"Бирманский расширенный B", {}, EcScript::Mymr },
+            "Myanmar Extended-B", u8"Бирманский расширенный B",
+            u8"Буквы и цифры для языков пали ''(литургический в буддизме)'' "
+                "и красных тай ''(Мьянма, 100{{_}}тыс. на 2010)''.",
+            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cham OK
     { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA },
             "Cham", u8"Чамский", {}, EcScript::Cham },
     // Myanmar ex A OK
-    /// @todo [desc] Mymr ex A
     { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA },
-            "Myanmar Extended-A", u8"Бирманский расширенный А", {}, EcScript::Mymr },
+            "Myanmar Extended-A", u8"Бирманский расширенный А",
+            u8"Буквы для языков кхамти ''(Мьянма, Индия, 13{{_}}тыс. на 2007)'' "
+                "и тай-айтонского ''(Ассам, 1500 на 2006)''.",
+            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tai Viet OK
     { 0xAA80, 0xAADF, { 0xAA8F, EcContinent::ASIA },
             "Tai Viet", u8"Тай-вьет", {}, EcScript::Tavt },
