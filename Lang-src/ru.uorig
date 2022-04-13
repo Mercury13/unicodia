@@ -3,7 +3,7 @@
  <info>
   <orig lang="ru" />
  </info>
- <file name="file0.txt" idless="false">
+ <file name="lang.ini" idless="false">
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>
    <group id="Century">
