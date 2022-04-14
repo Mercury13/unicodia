@@ -95,3 +95,56 @@ TEST (RemainderSv, PrefSuff)
     EXPECT_EQ("stri", str::remainderSv("string", {}, "ng"));
     EXPECT_EQ("string", str::remainderSv("string", {}, {}));
 }
+
+
+///// str::replaceSv(sv, char, char, string) ///////////////////////////////////
+
+
+///
+///  Not found → should return haystack
+///  VCCS = string_view, char, char, string
+///
+TEST (ReplaceSv_VCCS, NotFound)
+{
+    std::string_view hay("alpha");
+    std::string cache;
+    auto r = str::replaceSv(hay, 'A', 'B', cache);
+    EXPECT_EQ("alpha", r);
+    EXPECT_EQ(hay.data(), r.data());
+    EXPECT_TRUE(cache.empty());
+}
+
+
+///
+///  Found → should cache
+///
+TEST (ReplaceSv_VCCS, Found)
+{
+    std::string_view hay("alpha");
+    std::string cache;
+    auto r = str::replaceSv(hay, 'a', 'A', cache);
+    EXPECT_EQ("AlphA", r);
+    EXPECT_EQ("AlphA", cache);
+    EXPECT_EQ(cache.data(), r.data());
+}
+
+
+///
+///  Longer replace, then shorter → should not reallocate cache
+///
+TEST (ReplaceSv_VCCS, CacheShorter)
+{
+    std::string_view hay1("alphabravo");
+    std::string_view hay2("beta");
+    std::string cache;
+    // Replace1, just over-assurance
+    auto r = str::replaceSv(hay1, 'a', 'A', cache);
+    EXPECT_EQ("AlphAbrAvo", r);
+    EXPECT_EQ(cache.data(), r.data());
+    auto oldCacheData = cache.data();
+    // Replace2
+    r = str::replaceSv(hay2, 'a', 'A', cache);
+    EXPECT_EQ("betA", r);
+    EXPECT_EQ(oldCacheData, cache.data());
+    EXPECT_EQ("betAAbrAvo", cache);
+}
