@@ -66,7 +66,13 @@ namespace str {
     }
 
     namespace detail {
-        template<class T>
+
+        template <class T>
+        concept Svable = requires (const T& t) {
+            std::basic_string_view{t};
+        };
+
+        template<Svable T>
         inline auto toSv(const T& x) { return std::basic_string_view{x}; }
 
         template<class C, class T, class A>
@@ -248,6 +254,26 @@ namespace str {
             cache = haystack;
             str::replace(cache, needle, byWhat);
             return cache;
+        }
+
+        template <class Sv, class A>
+        Sv replaceSv(Sv haystack,
+                typename Sv::value_type needle,
+                typename Sv::value_type byWhat,
+                trait::Str<Sv,A>& cache)
+        {
+            // Check whether exists
+            if (haystack.find(needle) == Sv::npos)
+                return haystack;
+            // Resize
+            if (cache.length() < haystack.length())
+                cache.resize(haystack.length());
+            // Replace
+            auto p = cache.data();
+            for (auto v : haystack) {
+                *(p++) = (v == needle) ? byWhat : v;
+            }
+            return { cache.data(), p };
         }
 
         template <class Sv>
