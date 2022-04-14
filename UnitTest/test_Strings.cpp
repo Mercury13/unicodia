@@ -148,3 +148,30 @@ TEST (ReplaceSv_VCCS, CacheShorter)
     EXPECT_EQ(oldCacheData, cache.data());
     EXPECT_EQ("betAAbrAvo", cache);
 }
+
+
+///
+///  Compile: const char*, wchar, wchar, string
+///
+TEST (ReplaceSv_VCCS, Compile1)
+{
+    std::string cache;
+    auto r = str::replaceSv("alpha", L'a', L'A', cache);
+    EXPECT_EQ("AlphA", r);
+    EXPECT_EQ("AlphA", cache);
+    EXPECT_EQ(cache.data(), r.data());
+}
+
+
+///
+///  Compile: string, wchar, wchar, string
+///
+TEST (ReplaceSv_VCCS, Compile2)
+{
+    std::string hay("alpha");
+    std::string cache;
+    auto r = str::replaceSv(hay, L'a', L'A', cache);
+    EXPECT_EQ("AlphA", r);
+    EXPECT_EQ("AlphA", cache);
+    EXPECT_EQ(cache.data(), r.data());
+}
