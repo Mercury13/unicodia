@@ -6,6 +6,8 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 **Lifecycle phase: 4** (beta). Usable but some problems with functionality/bugs.
 
+**I’m in Ukraine torn with war, so I’ll release often.** Current short-term reasons for release: fixed SA/SE difference in Ethiopic, fixed banned characters in Tibetan, half-working globalization.
+
 # How to build?
 * Download MSYS, slight C++20 and std::filesystem here.
 * Also need cURL (present in W10 18H2+) and 7-zip.
