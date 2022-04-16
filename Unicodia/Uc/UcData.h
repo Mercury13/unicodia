@@ -627,15 +627,15 @@ namespace uc {
     extern const Continent continentInfo[];
 
     enum class Ifg {
-        CONTINENT_OK    = 1<<0,     ///< [+] disable auto-check, continent is really OK
+        CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
-        APPROX_2_CHARS  = 0,        ///< [+] 2 chars on icon
-        APPROX_ROTATED  = 0,        ///< [+] rotated text on icon
-        APPROX_LINES    = 0,        ///< [+] lines on icon
-        APPROX_COLLECTIVE=0,        ///< [+] icon contains collective image, not specific char
-        APPROX_COLOR    = 0,        ///< [+] icon is multi-colour
-        APPROX_HISTORICAL=0,        ///< [+] icon is from historical font with © issues
+        APPROX_2_CHARS    = 0,      ///< [+] 2 chars on icon
+        APPROX_ROTATED    = 0,      ///< [+] rotated text on icon
+        APPROX_LINES      = 0,      ///< [+] lines on icon
+        APPROX_COLLECTIVE = 0,      ///< [+] icon contains collective image, not specific char
+        APPROX_COLOR      = 0,      ///< [+] icon is multi-colour
+        APPROX_HISTORICAL = 0,      ///< [+] icon is from historical font with © issues
         // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
         // dotted circle completely → no flag for such approximation
     };
