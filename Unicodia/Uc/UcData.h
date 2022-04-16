@@ -611,7 +611,7 @@ namespace uc {
         CJK             = 1<<5,     ///< [+] Non-collapsible CJK (for tofu counting)
         NO_EMOJI        = 1<<6,     ///< [+] No graphic emoji
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — SHOULD have)
-        EXPERIMENT      = 1<<8,     ///< Left for experiments
+        EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
 
     DEFINE_ENUM_OPS(Bfg)
