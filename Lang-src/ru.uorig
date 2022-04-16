@@ -4,6 +4,11 @@
   <orig lang="ru" />
  </info>
  <file name="lang.ini" idless="false">
+  <format name="ini">
+   <text-format bom="true" line-break="crlf" />
+   <text-escape line-break-mode="c-lf" />
+   <multitier separator="." />
+  </format>
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>
    <group id="Century">
