@@ -31,8 +31,15 @@ void str::QSep::sep()
 }
 
 
-std::u8string_view str::toU8(const QString& x, std::string& cache)
+std::u8string_view str::toU8sv(const QString& x, std::string& cache)
 {
     cache = x.toStdString();
     return { reinterpret_cast<const char8_t*>(cache.data()), cache.length() };
+}
+
+
+std::u8string str::toU8(const QString& x)
+{
+    std::string cache;
+    return std::u8string { toU8sv(x, cache) };
 }

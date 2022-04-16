@@ -17,7 +17,8 @@ namespace str {
     inline QString toQ(char32_t x)
         { return QString::fromUcs4(&x, 1); }
 
-    std::u8string_view toU8(const QString& x, std::string& cache);
+    std::u8string_view toU8sv(const QString& x, std::string& cache);
+    std::u8string toU8(const QString& x);
 
     void append(QString& x, std::string_view s);
     void append(QString& x, std::u8string_view s);
