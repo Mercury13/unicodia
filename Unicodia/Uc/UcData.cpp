@@ -3779,7 +3779,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Такие знаки присутствуют в источниках XVI{{_}}века, и применяются по сей день "
                 "в Северной Индии, Пакистане и Непале для записи дробей: например, "
                 "размера, веса или цены.",
-            EcScript::Deva },
+            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Phang-pa OK
     { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Phags-pa", u8"Монгольское квадратное (Пагба-ламы)", {}, EcScript::Phag },
@@ -3922,7 +3922,7 @@ constinit const uc::Block uc::blocks[] {
             u8"Символы для вертикального письма [[pt:cjk|ККЯ]], в основном для совместимости со старыми кодировками. "
                     "В частности, с китайской кодировкой CNS{{_}}11643{{-}}"
                         "отсюда название в Юникоде{{_}}1.0, ''CNS 11643 Compatibility''.",
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small variants OK
     { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants", u8"Малые формы знаков препинания",
@@ -3938,7 +3938,7 @@ constinit const uc::Block uc::blocks[] {
             "<p>В обычном письме эти символы лучше не{{_}}использовать. "
                 "Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» "
                     "(во многих тогдашних кодировках текст записывался слева направо).",
-            EcScript::Arab, EcFont::ARABIC_NOTO },
+            EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_DESCRIPTION },
     // Half/full OK
     { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Halfwidth and Fullwidth Forms",
@@ -6512,6 +6512,16 @@ void uc::completeData()
             if (script.ecContinent != v.synthIcon.ecContinent) {
                 std::cout << "Continent mismatch: " << v.name << std::endl;
             }
+        }
+
+        // Check flags
+        if (v.locDescription.empty()) { // No actual description
+            if (v.flags.have(Bfg::HAS_DESCRIPTION))
+                std::cout << "Block falsely has description: " << v.name << std::endl;
+        } else {    // Has actual description
+            if (v.ecScript != EcScript::NONE
+                    && !v.flags.have(Bfg::HAS_DESCRIPTION))
+                std::cout << "Block still has no description: " << v.name << std::endl;
         }
     }
 }
