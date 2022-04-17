@@ -4,7 +4,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * Right now Russian only.
 * Right now Windows only.
 
-**Lifecycle phase: 4** (beta). Usable but some problems with functionality/bugs.
+**Lifecycle phase: 4+ (old beta).** Usable program that lacks some functionality.
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
