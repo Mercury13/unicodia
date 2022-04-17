@@ -352,6 +352,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "DNA",            Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "DOT",            Dicf::PART_NOUN },
     { "DOTS",           Dicf::PART_NOUN },
+    { "DVD",            Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "FORM",           Dicf::PART_NOUN },
     { "HAMZA",          Dicf::PART_NOUN },  // Arabic, not really letter
     { "HASANTA",        Dicf::PART_NOUN },
