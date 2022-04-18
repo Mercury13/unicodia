@@ -6762,11 +6762,11 @@ uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
         return {};
     }
 
-    auto& fn = font();
-    auto style = fn.styleSheet;
+    auto fn = font(uc::MatchLast::NO);
+    auto style = fn->styleSheet;
     auto code = subj.ch32();
 
-    if (fn.flags.have(Ffg::STUB_FINEGRAINED)) {
+    if (fn->flags.have(Ffg::STUB_FINEGRAINED)) {
         // Special stubs char-by char, enabled by STUB_FINEGRAINED flag
         switch (code) {
         case 0x1BC9E:   // Duployan shorthand
@@ -6784,15 +6784,15 @@ uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
     case EcCategory::MARK_ENCLOSING:
     case EcCategory::MARK_NONSPACING:
         // Stub vice versa?
-        if (fn.flags.have(Ffg::STUB_VICEVERSA)) {
+        if (fn->flags.have(Ffg::STUB_VICEVERSA)) {
             return { ZWSP + str::toQ(code) + STUB_CIRCLE, style };
         }
         [[fallthrough]];
     case EcCategory::MARK_SPACING:
         // Stub off?
-        if (fn.flags.have(Ffg::STUB_OFF))
+        if (fn->flags.have(Ffg::STUB_OFF))
             break;
-        if (fn.flags.have(Ffg::STUB_RTL))
+        if (fn->flags.have(Ffg::STUB_RTL))
             return { str::toQ(STUB_RTL_CIRCLE) + str::toQ(code), style };
         return { STUB_CIRCLE + str::toQ(code), style };
     case EcCategory::SEPARATOR_SPACE:
@@ -6802,7 +6802,7 @@ uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
         break;
     default: ;
     }
-    if (fn.flags.have(Ffg::STUB_INTERCHAR))
+    if (fn->flags.have(Ffg::STUB_INTERCHAR))
         return { str::toQ(code) + str::toQ(code), style };
     return { str::toQ(code), style };
 }
@@ -6881,29 +6881,32 @@ const uc::Font& uc::Cp::firstFont() const
 }
 
 
-const uc::Font& uc::Cp::font() const
+const uc::Font* uc::Cp::font(MatchLast matchLast) const
 {
     if (subj.ch32() == 0xFFFFFF) {
         std::cout << "Debug here!" << std::endl;
     }
     auto v = &firstFont();
     bool isBuggy = flags.have(Cfg::RENDER_BUG);
-    auto sb = subj.uval();
+    auto sb = subj.ch32();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         if (isBuggy || !v->flags.have(Ffg::BUG_PREFER)) {
             if (v->doesSupportChar(sb))
-                break;
+                return v;
         }
         ++v;
     }
-    return *v;
+    if (matchLast != MatchLast::NO) {
+        if (!v->doesSupportChar(sb))
+            return nullptr;
+    }
+    return v;
 }
 
 
 uc::TofuInfo uc::Cp::tofuInfo() const
 {
     uc::TofuInfo r;
-    auto sb = subj.ch32();
     r.block = &block();
     if (r.block->flags.haveAny(Bfg::COLLAPSIBLE | Bfg::CJK)
             || script().ecContinent == EcContinent::CJK)
@@ -6913,20 +6916,7 @@ uc::TofuInfo uc::Cp::tofuInfo() const
     if (drawMethod(DPI_DUMMY) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
-        auto v = &firstFont();
-        bool isBuggy = flags.have(Cfg::RENDER_BUG);
-        while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-            if (isBuggy || !v->flags.have(Ffg::BUG_PREFER)) {
-                if (v->doesSupportChar(sb)) {
-                    r.state = TofuState::PRESENT;
-                    goto brk1;
-                }
-            }
-            ++v;
-        }
-        r.state = v->doesSupportChar(sb)
-                ? TofuState::PRESENT : TofuState::TOFU;
-    brk1: ;
+        r.state = font(MatchLast::YES) ? TofuState::PRESENT : TofuState::TOFU;
     }
     return r;
 }

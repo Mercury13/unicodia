@@ -447,11 +447,19 @@ namespace {
         str::append(text, ")</nobr></p>"sv);
     }
 
+    template <class X>
+    inline const uc::Font& getFont(const X& obj)
+        { return obj.font(); }
+
+    template <>
+    inline const uc::Font& getFont(const uc::Cp& obj)
+        { return *obj.font(uc::MatchLast::NO); }
+
 
     template <class X>
     void appendWiki(QString& text, const X& obj, std::u8string_view x)
     {
-        Eng eng(text, obj.font());
+        Eng eng(text, getFont(obj));
         wiki::run(eng, x);
     }
 

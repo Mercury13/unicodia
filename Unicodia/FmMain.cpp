@@ -205,8 +205,8 @@ std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp)
     static constexpr int DUMMY_DPI = 96;
     if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
         return {};
-    auto& font = cp.font();
-    return font.get(uc::FontPlace::CELL, FSZ_TABLE,
+    auto font = cp.font(uc::MatchLast::NO);
+    return font->get(uc::FontPlace::CELL, FSZ_TABLE,
                     cp.flags.have(uc::Cfg::NO_AA), cp.subj);
 }
 
@@ -1376,8 +1376,8 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
     ui->pageSampleCustom->setNormal();
 
     // Font
-    auto& font = ch.font();
-    ui->lbSample->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
+    auto font = ch.font(uc::MatchLast::NO);
+    ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -1475,8 +1475,8 @@ void FmMain::showCp(MaybeChar ch)
         case uc::DrawMethod::SPACE: {
                 clearSample();
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-                auto& font = ch->font();
-                auto qfont = font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
+                auto font = ch->font(uc::MatchLast::NO);
+                auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
         case uc::DrawMethod::SAMPLE:
@@ -1651,7 +1651,7 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
     }
     if (auto cp = uc::cpsByCode[code]) {
         // Just get font, moving reference to nowhere
-        (void)cp->font();
+        (void)cp->font(uc::MatchLast::NO);
     }
     auto index = model.indexOf(code);
     ui->tableChars->setCurrentIndex(index);
@@ -1692,7 +1692,7 @@ void FmMain::preloadVisibleFonts()
         for (int col = 0; col < nCols; ++col) {
             auto index = model.index(row, col);
             if (auto cp = model.charAt(index)) {
-                (void)cp->font();
+                (void)cp->font(uc::MatchLast::NO);
             }
         }
     }

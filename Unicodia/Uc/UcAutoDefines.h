@@ -443,6 +443,8 @@ namespace uc {
         const uc::Block* block = nullptr;
     };
 
+    enum class MatchLast { NO, YES };
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -466,7 +468,10 @@ namespace uc {
         EcScript ecScriptEx() const;
         const Script& scriptEx() const;
         const Font& firstFont() const;
-        const Font& font() const;
+
+        /// @param [in] matchLast  [+] match last font, can return null
+        ///                        [-] take last font, never null
+        const Font* font(MatchLast matchLast) const;
         SampleProxy sampleProxy(int dpi) const;
         QString osProxy() const;
         inline const Block& block() const;
