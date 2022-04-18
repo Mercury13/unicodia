@@ -1,88 +1,22 @@
 #include "u_Strings.h"
 
+template void str::trim<char>(const char*&, const char*&);
+template void str::trim<wchar_t>(const wchar_t*&, const wchar_t*&);
+template void str::trim<char8_t>(const char8_t*&, const char8_t*&);
+template void str::trim<char16_t>(const char16_t*&, const char16_t*&);
+template void str::trim<char32_t>(const char32_t*&, const char32_t*&);
 
-void str::trim(const char* &start, const char* &end)
-{
-    while (start != end
-           && isBlank(*start))
-        ++start;
-    if (start == end) return;
-    while (isBlank(*(end - 1)))
-        --end;
-}
+template std::string_view str::detail::trimSv<std::string_view>(std::string_view);
+template std::wstring_view str::detail::trimSv<std::wstring_view>(std::wstring_view);
+template std::u8string_view str::detail::trimSv<std::u8string_view>(std::u8string_view);
+template std::u16string_view str::detail::trimSv<std::u16string_view>(std::u16string_view);
+template std::u32string_view str::detail::trimSv<std::u32string_view>(std::u32string_view);
 
-
-void str::trim(const char8_t* &start, const char8_t* &end)
-{
-    while (start != end
-           && isBlank(*start))
-        ++start;
-    if (start == end) return;
-    while (isBlank(*(end - 1)))
-        --end;
-}
-
-
-std::string_view str::trimSv(std::string_view s)
-{
-    const char* start = s.data();
-    const char* end = start + s.length();
-    trim(start, end);
-    return std::string_view(start, end - start);
-}
-
-SafeVector<std::string_view> str::splitSv(std::string_view s, char comma, bool skipEmpty)
-{
-    SafeVector<std::string_view> r;
-
-    const char* start = s.data();
-    const char* end = start + s.length();
-    str::trim(start, end);
-    if (start == end)
-        return r;
-
-    const char *sstart = start;
-    for (const char *p = start; p != end; ++p)
-    {
-        if (*p != comma) continue;
-        const char *send = p;
-        str::trim(sstart, send);
-        if (p != sstart || !skipEmpty)
-            r.emplace_back(sstart, send-sstart);
-        sstart = p + 1;
-    }
-    str::trim(sstart, end);
-    if (sstart != end || !skipEmpty)
-        r.emplace_back(sstart, end-sstart);
-    return r;
-}
-
-
-SafeVector<std::u8string_view> str::splitSv(std::u8string_view s, char comma, bool skipEmpty)
-{
-    SafeVector<std::u8string_view> r;
-
-    const char8_t* start = s.data();
-    const char8_t* end = start + s.length();
-    str::trim(start, end);
-    if (start == end)
-        return r;
-
-    const char8_t *sstart = start;
-    for (const char8_t *p = start; p != end; ++p)
-    {
-        if (*p != comma) continue;
-        const char8_t *send = p;
-        str::trim(sstart, send);
-        if (p != sstart || !skipEmpty)
-            r.emplace_back(sstart, send-sstart);
-        sstart = p + 1;
-    }
-    str::trim(sstart, end);
-    if (sstart != end || !skipEmpty)
-        r.emplace_back(sstart, end-sstart);
-    return r;
-}
+template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
+template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);
+template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, char8_t, bool);
+template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
+template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
 
 
 void str::toUpperInPlace(std::u8string& x)

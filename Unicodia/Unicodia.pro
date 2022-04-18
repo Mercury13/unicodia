@@ -10,7 +10,7 @@ win32-g++ {
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS QT_STRINGS
 
 CONFIG(debug, debug|release) {
     DEFINES += AT_RANGE_CHECK
@@ -22,6 +22,7 @@ CONFIG(debug, debug|release) {
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    ../Libs/L10n/LocDic.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
@@ -45,6 +46,7 @@ SOURCES += \
     u_EmojiPainter.cpp
 
 HEADERS += \
+    ../Libs/L10n/LocDic.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
