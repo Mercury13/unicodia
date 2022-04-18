@@ -425,7 +425,7 @@ namespace uc {
         DESC_BIGGER     = 1<<6,     ///< Use bigger font in descriptions
         DESC_SMALLER    = 1<<7,     ///< Use smaller font in descriptions
         FALL_TO_NEXT    = 1<<8,     ///< Also use the next font if failed to find
-        BUG_PREFER      = 1<<9,     ///< Use only for chars flagged as “render bug”
+        BUG_FIXUP       = 1<<9,     ///< Use only for chars flagged as “render bug”
         BUG_AVOID       = 1<<10,    ///< Avoid for chars flagged as “render bug”
         CELL_SMALLER    = 1<<11,    ///< Make cell text a bit smaller
         CELL_BIGGER     = 1<<12,    ///< Make cell text a bit smaller

@@ -1191,6 +1191,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x203D, 0x203E },     // …Skip emoji and go on
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
+    { 0x22ACF, 0x22ACF },   // A single char redrawn in U15 and already present in Babel
 };
 
 const std::set<RangeByEnd> noAaRanges {

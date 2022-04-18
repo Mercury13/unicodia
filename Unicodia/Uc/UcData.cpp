@@ -64,7 +64,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_PREFER },                       // Punctuation
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
@@ -111,8 +111,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                    // CJK
-      { "SimSun-ExtB", Ffg::FALL_TO_NEXT, 120_pc },                             // …1
+    { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                   // CJK
+      { "SimSun-ExtB", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },            // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
       { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
@@ -256,7 +256,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { Family{ "NotoSansTamilSupplement-Regular.ttf", Fafg::RAW_FONT } },        // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_PREFER },                       // Technical
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Technical
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
@@ -6890,7 +6890,9 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
     bool isBuggy = flags.have(Cfg::RENDER_BUG);
     auto sb = subj.ch32();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-        if (isBuggy || !v->flags.have(Ffg::BUG_PREFER)) {
+        if (isBuggy
+                ? !v->flags.have(Ffg::BUG_AVOID)        // BUGGY: avoid flag → bad, it’s for normal only
+                : !v->flags.have(Ffg::BUG_FIXUP)) {     // NORMAL: fixup flag → bad, it’s for buggy only
             if (v->doesSupportChar(sb))
                 return v;
         }
