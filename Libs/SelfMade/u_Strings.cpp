@@ -6,11 +6,17 @@ template void str::trim<char8_t>(const char8_t*&, const char8_t*&);
 template void str::trim<char16_t>(const char16_t*&, const char16_t*&);
 template void str::trim<char32_t>(const char32_t*&, const char32_t*&);
 
-template std::string_view str::detail::trimSv<std::string_view>(std::string_view);
-template std::wstring_view str::detail::trimSv<std::wstring_view>(std::wstring_view);
-template std::u8string_view str::detail::trimSv<std::u8string_view>(std::u8string_view);
-template std::u16string_view str::detail::trimSv<std::u16string_view>(std::u16string_view);
-template std::u32string_view str::detail::trimSv<std::u32string_view>(std::u32string_view);
+template void str::trimLeft<char>(const char*&, const char*&);
+template void str::trimLeft<wchar_t>(const wchar_t*&, const wchar_t*&);
+template void str::trimLeft<char8_t>(const char8_t*&, const char8_t*&);
+template void str::trimLeft<char16_t>(const char16_t*&, const char16_t*&);
+template void str::trimLeft<char32_t>(const char32_t*&, const char32_t*&);
+
+template void str::trimRight<char>(const char*&, const char*&);
+template void str::trimRight<wchar_t>(const wchar_t*&, const wchar_t*&);
+template void str::trimRight<char8_t>(const char8_t*&, const char8_t*&);
+template void str::trimRight<char16_t>(const char16_t*&, const char16_t*&);
+template void str::trimRight<char32_t>(const char32_t*&, const char32_t*&);
 
 template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, char, bool);
 template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, wchar_t, bool);

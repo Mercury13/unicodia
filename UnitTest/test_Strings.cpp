@@ -175,3 +175,81 @@ TEST (ReplaceSv_VCCS, Compile2)
     EXPECT_EQ("AlphA", cache);
     EXPECT_EQ(cache.data(), r.data());
 }
+
+
+///// str::trimLeftSv //////////////////////////////////////////////////////////
+
+
+TEST (TrimLeftSv, None)
+{
+    std::string x("alpha");
+    auto r = str::trimLeftSv(x);
+    EXPECT_EQ("alpha", r);
+    EXPECT_EQ(x.data(), r.data());
+}
+
+
+TEST (TrimLeftSv, Normal)
+{
+    std::string x("  alpha   ");
+    auto r = str::trimLeftSv(x);
+    EXPECT_EQ("alpha   ", r);
+    EXPECT_EQ(x.data() + 2, r.data());
+}
+
+
+TEST (TrimLeftSv, AllSpaces)
+{
+    std::string x("      ");
+    auto r = str::trimLeftSv(x);
+    EXPECT_EQ("", r);
+    EXPECT_EQ(x.data() + 6, r.data());
+}
+
+
+TEST (TrimLeftSv, Empty)
+{
+    std::string_view x { nullptr, 0 };
+    auto r = str::trimLeftSv(x);
+    EXPECT_EQ("", r);
+    EXPECT_EQ(nullptr, r.data());
+}
+
+
+///// str::trimRightSv /////////////////////////////////////////////////////////
+
+
+TEST (TrimRightSv, None)
+{
+    std::string x("alpha");
+    auto r = str::trimRightSv(x);
+    EXPECT_EQ("alpha", r);
+    EXPECT_EQ(x.data(), r.data());
+}
+
+
+TEST (TrimRightSv, Normal)
+{
+    std::string x("  alpha   ");
+    auto r = str::trimRightSv(x);
+    EXPECT_EQ("  alpha", r);
+    EXPECT_EQ(x.data(), r.data());
+}
+
+
+TEST (TrimRightSv, AllSpaces)
+{
+    std::string x("      ");
+    auto r = str::trimRightSv(x);
+    EXPECT_EQ("", r);
+    EXPECT_EQ(x.data(), r.data());
+}
+
+
+TEST (TrimRightSv, Empty)
+{
+    std::string_view x { nullptr, 0 };
+    auto r = str::trimRightSv(x);
+    EXPECT_EQ("", r);
+    EXPECT_EQ(nullptr, r.data());
+}

@@ -2,6 +2,7 @@
 
 #include <unordered_map>
 #include <filesystem>
+#include "u_Strings.h"
 
 namespace loc {
 
@@ -12,6 +13,9 @@ namespace loc {
 
         template <class T>
         Text(T&& x) : fSrc(std::forward<T>(x)) {}
+
+        std::u8string_view u8() const { return fSrc; }
+        const char* c_str() const { return str::toC(fSrc); }
     private:
         std::u8string fSrc;
     };
