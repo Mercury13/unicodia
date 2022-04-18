@@ -406,7 +406,7 @@ namespace uc {
     enum class Cfg : unsigned short {
         HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
         DEPRECATED = 2,         ///< [+] UC feature: char is deprecated
-        ALT_FONT = 4,           ///< [+] use alternate font
+        RENDER_BUG = 4,         ///< [+] use font BUG_PREFER, or drop BUG_AVOID
         CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
         NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
         DEFAULT_IGNORABLE = 32, ///< [+] UC feature: char is default-ignorable

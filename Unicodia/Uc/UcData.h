@@ -416,22 +416,23 @@ namespace uc {
     ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
-        BOLD          = 1<<0,   ///< Weight: bold
-        SEMIBOLD      = 1<<1,   ///< Weight: semibold
-        LIGHT         = 1<<2,   ///< Weight: light
-        STUB_OFF      = 1<<3,   ///< Disable circle stub
-        STUB_VICEVERSA= 1<<4,   ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
-        DESC_STD      = 1<<5,   ///< Use standard font in descriptions, not this
-        DESC_BIGGER   = 1<<6,   ///< Use bigger font in descriptions
-        DESC_SMALLER  = 1<<7,   ///< Use smaller font in descriptions
-        FALL_TO_NEXT  = 1<<8,   ///< Also use the next font if failed to find
-        ALTERNATE     = 1<<9,   ///< Marked as “alternate”: works only for chars flagged as “alternate font”
-        CELL_SMALLER  = 1<<10,  ///< Make cell text a bit smaller
-        CELL_BIGGER   = 1<<11,  ///< Make cell text a bit smaller
-        STUB_FINEGRAINED=1<<12, ///< Stub on/off is controlled on finer level
-        STUB_RTL      = 1<<13,  ///< Use “RtL isolate” char in stub
-        CUSTOM_AA     = 1<<14,  ///< Use custom antialiasing in table (unused right now)
-        STUB_INTERCHAR= 1<<15,  ///< Debug: test inter-character interval
+        BOLD            = 1<<0,     ///< Weight: bold
+        SEMIBOLD        = 1<<1,     ///< Weight: semibold
+        LIGHT           = 1<<2,     ///< Weight: light
+        STUB_OFF        = 1<<3,     ///< Disable circle stub
+        STUB_VICEVERSA  = 1<<4,     ///< Unglitch for missing circle (ZWSP + char + circle), currently unused
+        DESC_STD        = 1<<5,     ///< Use standard font in descriptions, not this
+        DESC_BIGGER     = 1<<6,     ///< Use bigger font in descriptions
+        DESC_SMALLER    = 1<<7,     ///< Use smaller font in descriptions
+        FALL_TO_NEXT    = 1<<8,     ///< Also use the next font if failed to find
+        BUG_PREFER      = 1<<9,     ///< Use only for chars flagged as “render bug”
+        BUG_AVOID       = 1<<10,    ///< Avoid for chars flagged as “render bug”
+        CELL_SMALLER    = 1<<11,    ///< Make cell text a bit smaller
+        CELL_BIGGER     = 1<<12,    ///< Make cell text a bit smaller
+        STUB_FINEGRAINED= 1<<13,    ///< Stub on/off is controlled on finer level
+        STUB_RTL        = 1<<13,    ///< Use “RtL isolate” char in stub
+        CUSTOM_AA       = 1<<14,    ///< Use custom antialiasing in table (unused right now)
+        STUB_INTERCHAR  = 1<<15,    ///< Debug: test inter-character interval
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 

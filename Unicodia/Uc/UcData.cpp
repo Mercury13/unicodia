@@ -64,7 +64,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
     { "Segoe UI Historic" },                                                    // Historic
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Punctuation
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_PREFER },                       // Punctuation
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
@@ -256,7 +256,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { Family{ "NotoSansTamilSupplement-Regular.ttf", Fafg::RAW_FONT } },        // Tamil supplement
     { "TangsaLakhumUnicode.ttf" },                                              // Tangsa
     { "NotoSerifTangut-Regular.ttf", 125_pc },                                  // Tangut
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::ALTERNATE },                        // Technical
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_PREFER },                       // Technical
       { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                  // …1
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
@@ -6887,10 +6887,10 @@ const uc::Font& uc::Cp::font() const
         std::cout << "Debug here!" << std::endl;
     }
     auto v = &firstFont();
-    bool isAlternate = flags.have(Cfg::ALT_FONT);
+    bool isBuggy = flags.have(Cfg::RENDER_BUG);
     auto sb = subj.uval();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-        if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
+        if (isBuggy || !v->flags.have(Ffg::BUG_PREFER)) {
             if (v->doesSupportChar(sb))
                 break;
         }
@@ -6914,9 +6914,9 @@ uc::TofuInfo uc::Cp::tofuInfo() const
         r.state = TofuState::NO_FONT;
     } else {
         auto v = &firstFont();
-        bool isAlternate = flags.have(Cfg::ALT_FONT);
+        bool isBuggy = flags.have(Cfg::RENDER_BUG);
         while (v->flags.have(Ffg::FALL_TO_NEXT)) {
-            if (isAlternate || !v->flags.have(Ffg::ALTERNATE)) {
+            if (isBuggy || !v->flags.have(Ffg::BUG_PREFER)) {
                 if (v->doesSupportChar(sb)) {
                     r.state = TofuState::PRESENT;
                     goto brk1;
