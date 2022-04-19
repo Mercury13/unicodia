@@ -4,7 +4,7 @@ FullName: Noto Sans Zanabazar Square Regular
 FamilyName: Noto Sans Zanabazar
 Weight: Book
 Copyright: Copyright 2020 Google Inc. All Rights Reserved.
-Version: 2.001
+Version: 2.002
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
@@ -15,14 +15,14 @@ sfntRevision: 0x00020083
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 14659]
+XUID: [1021 59 1751208496 28211]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 0
 CreationTime: 1590597928
-ModificationTime: 1634601983
+ModificationTime: 1650350329
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -58,38 +58,40 @@ OS2Vendor: 'GOOG'
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000003.02002000.00000000.00000000
 Lookup: 6 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable"  } ['ccmp' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 2 0 0 "Multiple Substitution lookup 1" { "Multiple Substitution lookup 1 subtable"  } []
+Lookup: 2 0 0 "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 1" { "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 1 subtable"  } []
 Lookup: 4 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable"  } ['ccmp' ('DFLT' <'SAN ' 'dflt' > ) ]
 Lookup: 6 16 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 3" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 3 subtable"  } ['ccmp' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 16 0 "Single Substitution lookup 4" { "Single Substitution lookup 4 subtable"  } []
+Lookup: 1 16 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 4" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 4 subtable"  } []
 Lookup: 6 0 0 "'rclt' Required Contextual Alternates lookup 5" { "'rclt' Required Contextual Alternates lookup 5 subtable"  } ['rclt' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 6" { "Single Substitution lookup 6 subtable"  } []
+Lookup: 1 0 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6 subtable"  } []
 Lookup: 6 0 0 "'rclt' Required Contextual Alternates lookup 7" { "'rclt' Required Contextual Alternates lookup 7 subtable"  } ['rclt' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 8" { "Single Substitution lookup 8 subtable"  } []
+Lookup: 1 0 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable"  } []
 Lookup: 6 256 0 "'rclt' Required Contextual Alternates lookup 9" { "'rclt' Required Contextual Alternates lookup 9 subtable"  } ['rclt' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 256 0 "Single Substitution lookup 10" { "Single Substitution lookup 10 subtable"  } []
+Lookup: 1 256 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 10" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 10 subtable"  } []
 Lookup: 6 512 0 "'rclt' Required Contextual Alternates lookup 11" { "'rclt' Required Contextual Alternates lookup 11 subtable"  } ['rclt' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 512 0 "Single Substitution lookup 12" { "Single Substitution lookup 12 subtable"  } []
+Lookup: 1 512 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable"  } []
 Lookup: 6 65552 0 "'rclt' Required Contextual Alternates lookup 13" { "'rclt' Required Contextual Alternates lookup 13 contextual 0"  "'rclt' Required Contextual Alternates lookup 13 contextual 1"  "'rclt' Required Contextual Alternates lookup 13 contextual 2"  "'rclt' Required Contextual Alternates lookup 13 contextual 3"  "'rclt' Required Contextual Alternates lookup 13 contextual 4"  "'rclt' Required Contextual Alternates lookup 13 contextual 5"  "'rclt' Required Contextual Alternates lookup 13 contextual 6"  "'rclt' Required Contextual Alternates lookup 13 contextual 7"  } ['rclt' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 65552 0 "Single Substitution lookup 14" { "Single Substitution lookup 14 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 15" { "Single Substitution lookup 15 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 16" { "Single Substitution lookup 16 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 17" { "Single Substitution lookup 17 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 18" { "Single Substitution lookup 18 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 19" { "Single Substitution lookup 19 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 20" { "Single Substitution lookup 20 subtable"  } []
-Lookup: 1 65552 0 "Single Substitution lookup 21" { "Single Substitution lookup 21 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20 subtable"  } []
+Lookup: 1 65552 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21 subtable"  } []
 Lookup: 6 768 0 "'rclt' Required Contextual Alternates lookup 22" { "'rclt' Required Contextual Alternates lookup 22 contextual 0"  "'rclt' Required Contextual Alternates lookup 22 contextual 1"  } ['rclt' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 768 0 "Single Substitution lookup 23" { "Single Substitution lookup 23 subtable"  } []
-Lookup: 1 768 0 "Single Substitution lookup 24" { "Single Substitution lookup 24 subtable"  } []
+Lookup: 1 768 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23 subtable"  } []
+Lookup: 1 768 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24 subtable"  } []
 Lookup: 5 0 0 "'ss01' Style Set 1 lookup 25" { "'ss01' Style Set 1 lookup 25 contextual 0"  "'ss01' Style Set 1 lookup 25 contextual 1"  } ['ss01' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 1 0 0 "Single Substitution lookup 26" { "Single Substitution lookup 26 subtable"  } []
+Lookup: 1 0 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable"  } []
 Lookup: 264 131088 0 "'kern' Horizontal Kerning lookup 0" { "'kern' Horizontal Kerning lookup 0 subtable"  } ['kern' ('DFLT' <'SAN ' 'dflt' > ) ]
 Lookup: 257 131088 0 "Single Positioning lookup 1" { "Single Positioning lookup 1 subtable"  } []
-Lookup: 260 0 0 "'mark' Mark Positioning lookup 2" { "'mark' Mark Positioning lookup 2 subtable"  } ['mark' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 262 196624 0 "'mkmk' Mark to Mark lookup 3" { "'mkmk' Mark to Mark lookup 3 subtable"  } ['mkmk' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 262 262160 0 "'mkmk' Mark to Mark lookup 4" { "'mkmk' Mark to Mark lookup 4 subtable"  } ['mkmk' ('DFLT' <'SAN ' 'dflt' > ) ]
-Lookup: 262 327696 0 "'mkmk' Mark to Mark lookup 5" { "'mkmk' Mark to Mark lookup 5 subtable"  } ['mkmk' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 260 0 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 2" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 2 subtable"  } ['abvm' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 262 196624 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 3" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 3 subtable"  } ['abvm' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 260 0 0 "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 4" { "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 4 subtable"  } ['blwm' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 262 262160 0 "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 5" { "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 5 subtable"  } ['blwm' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 262 327696 0 "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 6" { "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 6 subtable"  } ['blwm' ('DFLT' <'SAN ' 'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning lookup 7" { "'mark' Mark Positioning lookup 7 subtable"  } ['mark' ('DFLT' <'SAN ' 'dflt' > ) ]
 MarkAttachClasses: 4
 "MarkClass-1" 39 ue_zanb ue_zanb.wide u_zanb u_zanb.wide
 "MarkClass-2" 164 i_zanb i_zanb.wide e_zanb e_zanb.wide oe_zanb oe_zanb.wide o_zanb o_zanb.wide o_zanb.wide.ai o_zanb.ai o_zanb.wide.au o_zanb.au reversed_i_zanb reversed_i_zanb.wide
@@ -98,35 +100,35 @@ MarkAttachSets: 6
 "MarkSet-0" 852 ue_zanb u_zanb finalConsonantMark_zanb virama_zanb finalYa_zanb finalRa_zanb finalLa_zanb finalVa_zanb finalVa_zanb.stem a_zanb.sub ka_zanb.sub kha_zanb.sub ga_zanb.sub gha_zanb.sub nga_zanb.sub ca_zanb.sub cha_zanb.sub ja_zanb.sub nya_zanb.sub tta_zanb.sub ttha_zanb.sub dda_zanb.sub ddha_zanb.sub nna_zanb.sub ta_zanb.sub tha_zanb.sub da_zanb.sub dha_zanb.sub na_zanb.sub pa_zanb.sub pha_zanb.sub ba_zanb.sub bha_zanb.sub ma_zanb.sub tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub zha_zanb.sub za_zanb.sub aa_zanb.sub ya_zanb.sub ra_zanb.sub la_zanb.sub va_zanb.sub sha_zanb.sub ssa_zanb.sub sa_zanb.sub ha_zanb.sub kssa_zanb.sub ka_zanb.short ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
 "MarkSet-1" 279 i_zanb i_zanb.wide e_zanb e_zanb.wide e_zanb.wide.ai oe_zanb oe_zanb.wide o_zanb o_zanb.wide o_zanb.wide.ai o_zanb.ai o_zanb.wide.au o_zanb.au ai_zanb au_zanb reversed_i_zanb reversed_i_zanb.wide candrabindu_zanb candrabinduWithOrnament_zanb candraWithOrnament_zanb anusvara_zanb
 "MarkSet-2" 10 a_zanb.sub
-"MarkSet-3" 873 ue_zanb ue_zanb.wide finalConsonantMark_zanb virama_zanb finalYa_zanb finalRa_zanb finalLa_zanb finalVa_zanb subjoiner_zanb finalVa_zanb.stem a_zanb.sub ka_zanb.sub kha_zanb.sub ga_zanb.sub gha_zanb.sub nga_zanb.sub ca_zanb.sub cha_zanb.sub ja_zanb.sub nya_zanb.sub tta_zanb.sub ttha_zanb.sub dda_zanb.sub ddha_zanb.sub nna_zanb.sub ta_zanb.sub tha_zanb.sub da_zanb.sub dha_zanb.sub na_zanb.sub pa_zanb.sub pha_zanb.sub ba_zanb.sub bha_zanb.sub ma_zanb.sub tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub zha_zanb.sub za_zanb.sub aa_zanb.sub ya_zanb.sub ra_zanb.sub la_zanb.sub va_zanb.sub sha_zanb.sub ssa_zanb.sub sa_zanb.sub ha_zanb.sub kssa_zanb.sub ka_zanb.short ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
-"MarkSet-4" 358 u_zanb u_zanb.wide lengthMark_zanb finalYa_zanb finalRa_zanb finalLa_zanb finalVa_zanb finalVa_zanb.stem tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
-"MarkSet-5" 273 i_zanb i_zanb.wide e_zanb e_zanb.wide e_zanb.wide.ai e_zanb.ai oe_zanb oe_zanb.wide o_zanb o_zanb.wide o_zanb.wide.ai o_zanb.ai o_zanb.wide.au o_zanb.au reversed_i_zanb reversed_i_zanb.wide candrabindu_zanb candrabinduWithOrnament_zanb candraWithOrnament_zanb anusvara_zanb
+"MarkSet-3" 273 i_zanb i_zanb.wide e_zanb e_zanb.wide e_zanb.wide.ai e_zanb.ai oe_zanb oe_zanb.wide o_zanb o_zanb.wide o_zanb.wide.ai o_zanb.ai o_zanb.wide.au o_zanb.au reversed_i_zanb reversed_i_zanb.wide candrabindu_zanb candrabinduWithOrnament_zanb candraWithOrnament_zanb anusvara_zanb
+"MarkSet-4" 873 ue_zanb ue_zanb.wide finalConsonantMark_zanb virama_zanb finalYa_zanb finalRa_zanb finalLa_zanb finalVa_zanb subjoiner_zanb finalVa_zanb.stem a_zanb.sub ka_zanb.sub kha_zanb.sub ga_zanb.sub gha_zanb.sub nga_zanb.sub ca_zanb.sub cha_zanb.sub ja_zanb.sub nya_zanb.sub tta_zanb.sub ttha_zanb.sub dda_zanb.sub ddha_zanb.sub nna_zanb.sub ta_zanb.sub tha_zanb.sub da_zanb.sub dha_zanb.sub na_zanb.sub pa_zanb.sub pha_zanb.sub ba_zanb.sub bha_zanb.sub ma_zanb.sub tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub zha_zanb.sub za_zanb.sub aa_zanb.sub ya_zanb.sub ra_zanb.sub la_zanb.sub va_zanb.sub sha_zanb.sub ssa_zanb.sub sa_zanb.sub ha_zanb.sub kssa_zanb.sub ka_zanb.short ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
+"MarkSet-5" 358 u_zanb u_zanb.wide lengthMark_zanb finalYa_zanb finalRa_zanb finalLa_zanb finalVa_zanb finalVa_zanb.stem tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
 DEI: 91125
 ContextSub2: coverage "'ss01' Style Set 1 lookup 25 contextual 1" 0 0 0 1
  1 0 0
   Coverage: 213 ka_zanb.short ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
  1
-  SeqLookup: 0 "Single Substitution lookup 26"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26"
 EndFPST
 ContextSub2: coverage "'ss01' Style Set 1 lookup 25 contextual 0" 0 0 0 1
  1 0 0
   Coverage: 25 la_zanb.head sa_zanb.head
  1
-  SeqLookup: 0 "Single Substitution lookup 26"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 22 contextual 1" 0 0 0 1
  1 0 1
   Coverage: 37 tsa_zanb tsha_zanb dza_zanb dzha_zanb
   FCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 24"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 22 contextual 0" 0 0 0 1
  1 1 0
   Coverage: 37 tsa_zanb tsha_zanb dza_zanb dzha_zanb
   BCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 23"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 7" 0 0 0 1
  1 2 0
@@ -134,14 +136,14 @@ ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 
   BCoverage: 15 lengthMark_zanb
   BCoverage: 7 au_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 21"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 6" 0 0 0 1
  1 1 0
   Coverage: 18 o_zanb o_zanb.wide
   BCoverage: 7 au_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 20"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 5" 0 0 0 1
  1 0 2
@@ -149,14 +151,14 @@ ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 
   FCoverage: 15 lengthMark_zanb
   FCoverage: 7 au_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 19"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 4" 0 0 0 1
  1 0 1
   Coverage: 18 o_zanb o_zanb.wide
   FCoverage: 7 au_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 18"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 3" 0 0 0 1
  1 2 0
@@ -164,14 +166,14 @@ ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 
   BCoverage: 15 lengthMark_zanb
   BCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 17"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 2" 0 0 0 1
  1 1 0
   Coverage: 37 e_zanb e_zanb.wide o_zanb o_zanb.wide
   BCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 16"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 1" 0 0 0 1
  1 0 2
@@ -179,56 +181,56 @@ ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 
   FCoverage: 15 lengthMark_zanb
   FCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 15"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 13 contextual 0" 0 0 0 1
  1 0 1
   Coverage: 37 e_zanb e_zanb.wide o_zanb o_zanb.wide
   FCoverage: 7 ai_zanb
  1
-  SeqLookup: 0 "Single Substitution lookup 14"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 11 subtable" 0 0 0 1
  1 1 0
   Coverage: 64 i_zanb e_zanb oe_zanb o_zanb o_zanb.ai o_zanb.au reversed_i_zanb
   BCoverage: 17 a_zanb a_zanb.sub
  1
-  SeqLookup: 0 "Single Substitution lookup 12"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 9 subtable" 0 0 0 1
  1 1 0
   Coverage: 14 ue_zanb u_zanb
   BCoverage: 17 a_zanb a_zanb.sub
  1
-  SeqLookup: 0 "Single Substitution lookup 10"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 10"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 7 subtable" 0 0 0 1
  1 1 0
   Coverage: 183 ka_zanb.sub ga_zanb.sub nga_zanb.sub ca_zanb.sub ja_zanb.sub nya_zanb.sub ta_zanb.sub da_zanb.sub na_zanb.sub pa_zanb.sub ba_zanb.sub ma_zanb.sub tsa_zanb.sub dza_zanb.sub ha_zanb.sub
   BCoverage: 56 la_zanb sa_zanb initialRa_zanb la_zanb.head sa_zanb.head
  1
-  SeqLookup: 0 "Single Substitution lookup 8"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8"
 EndFPST
 ChainSub2: coverage "'rclt' Required Contextual Alternates lookup 5 subtable" 0 0 0 1
  1 0 1
   Coverage: 15 la_zanb sa_zanb
   FCoverage: 517 a_zanb.sub ka_zanb.sub kha_zanb.sub ga_zanb.sub gha_zanb.sub nga_zanb.sub ca_zanb.sub cha_zanb.sub ja_zanb.sub nya_zanb.sub tta_zanb.sub ttha_zanb.sub dda_zanb.sub ddha_zanb.sub nna_zanb.sub ta_zanb.sub tha_zanb.sub da_zanb.sub dha_zanb.sub na_zanb.sub pa_zanb.sub pha_zanb.sub ba_zanb.sub bha_zanb.sub ma_zanb.sub tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub zha_zanb.sub za_zanb.sub aa_zanb.sub ya_zanb.sub ra_zanb.sub la_zanb.sub va_zanb.sub sha_zanb.sub ssa_zanb.sub sa_zanb.sub ha_zanb.sub kssa_zanb.sub
  1
-  SeqLookup: 0 "Single Substitution lookup 6"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6"
 EndFPST
 ChainSub2: coverage "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 3 subtable" 0 0 0 1
  1 1 0
   Coverage: 12 finalVa_zanb
   BCoverage: 1081 finalRa_zanb a_zanb ka_zanb kha_zanb ga_zanb gha_zanb nga_zanb ca_zanb cha_zanb ja_zanb nya_zanb ttha_zanb dda_zanb ddha_zanb nna_zanb ta_zanb tha_zanb da_zanb dha_zanb na_zanb pa_zanb pha_zanb ba_zanb bha_zanb ma_zanb tsa_zanb tsha_zanb dza_zanb dzha_zanb zha_zanb za_zanb aa_zanb ya_zanb ra_zanb la_zanb sha_zanb ssa_zanb sa_zanb ha_zanb kssa_zanb a_zanb.sub ka_zanb.sub kha_zanb.sub ga_zanb.sub gha_zanb.sub nga_zanb.sub ca_zanb.sub cha_zanb.sub ja_zanb.sub nya_zanb.sub tta_zanb.sub ttha_zanb.sub dda_zanb.sub ddha_zanb.sub nna_zanb.sub ta_zanb.sub tha_zanb.sub da_zanb.sub dha_zanb.sub na_zanb.sub pa_zanb.sub pha_zanb.sub ba_zanb.sub bha_zanb.sub ma_zanb.sub tsa_zanb.sub tsha_zanb.sub dza_zanb.sub dzha_zanb.sub zha_zanb.sub za_zanb.sub aa_zanb.sub ya_zanb.sub ra_zanb.sub la_zanb.sub va_zanb.sub sha_zanb.sub ssa_zanb.sub sa_zanb.sub ha_zanb.sub kssa_zanb.sub ka_zanb.short ga_zanb.short nga_zanb.short ca_zanb.short ja_zanb.short nya_zanb.short ta_zanb.short da_zanb.short na_zanb.short pa_zanb.short ba_zanb.short ma_zanb.short tsa_zanb.short dza_zanb.short ha_zanb.short
  1
-  SeqLookup: 0 "Single Substitution lookup 4"
+  SeqLookup: 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 4"
 EndFPST
 ChainSub2: coverage "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" 0 0 0 1
  1 0 1
   Coverage: 14 initialRa_zanb
   FCoverage: 353 a_zanb ka_zanb kha_zanb ga_zanb gha_zanb nga_zanb ca_zanb cha_zanb ja_zanb nya_zanb tta_zanb ttha_zanb dda_zanb ddha_zanb nna_zanb ta_zanb tha_zanb da_zanb dha_zanb na_zanb pa_zanb pha_zanb ba_zanb bha_zanb ma_zanb tsa_zanb tsha_zanb dza_zanb dzha_zanb zha_zanb za_zanb aa_zanb ya_zanb ra_zanb la_zanb va_zanb sha_zanb ssa_zanb sa_zanb ha_zanb kssa_zanb
  1
-  SeqLookup: 0 "Multiple Substitution lookup 1"
+  SeqLookup: 0 "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 1"
 EndFPST
 ChainPos2: coverage "'kern' Horizontal Kerning lookup 0 subtable" 0 0 0 1
  1 0 1
@@ -918,7 +920,7 @@ ShortTable: maxp 16
   2
   1
 EndShort
-LangName: 1033 "" "" "" "2.001;GOOG;NotoSansZanabazarSquare-Regular" "" "Version 2.001" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL" "" "Noto Sans Zanabazar Square"
+LangName: 1033 "" "" "" "2.002;GOOG;NotoSansZanabazarSquare-Regular" "" "Version 2.002" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL" "" "Noto Sans Zanabazar Square"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
 Compacted: 1
@@ -930,12 +932,13 @@ FitToEm: 0
 WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
-AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mkmk' Mark to Mark lookup 3 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mkmk' Mark to Mark lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mkmk' Mark to Mark lookup 5 subtable"
+AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 3 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'blwm' +BB8EPgQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL lookup 6 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'mark' Mark Positioning lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" "'mark' Mark Positioning lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" "'mark' Mark Positioning lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" "'mark' Mark Positioning lookup 7 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" "'mark' Mark Positioning lookup 7 subtable"
 BeginChars: 1114189 154
 
 StartChar: .notdef
 Encoding: 1114112 -1 0
 Width: 600
+GlyphClass: 1
 Flags: W
 HStem: 0 51<145 454> 663 51<145 454>
 VStem: 94 51<51 663> 454 51<51 663>
@@ -1002,6 +1005,7 @@ EndChar
 StartChar: NULL
 Encoding: 0 0 1
 Width: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -1009,6 +1013,7 @@ EndChar
 StartChar: CR
 Encoding: 13 13 2
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -1016,6 +1021,7 @@ EndChar
 StartChar: space
 Encoding: 32 32 3
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -1023,6 +1029,7 @@ EndChar
 StartChar: nbspace
 Encoding: 160 160 4
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -1325,11 +1332,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 88 566 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 550 566 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 514 -15 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 295 -12 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 295 640 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" 88 566 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 550 566 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 514 -15 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 295 -12 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 295 640 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1483,8 +1490,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -413 1035 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -413 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -413 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -413 1035 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -413 798 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -413 798 mark 0
 LayerCount: 2
 Fore
@@ -1505,7 +1513,7 @@ SplineSet
  -106 737 -106 737 -87 702 c 1,17,-1
  -93 702 l 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 12 subtable" i_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" i_zanb.wide
 EndChar
 
 StartChar: i_zanb.wide
@@ -1547,8 +1555,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -433 1005 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -433 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -433 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -433 1005 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -433 798 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -433 798 mark 0
 LayerCount: 2
 Fore
@@ -1607,9 +1616,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -120 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -120 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1627,7 +1637,7 @@ SplineSet
  -206 -255 -206 -255 -274 -286.5 c 128,-1,15
  -342 -318 -342 -318 -420 -318 c 0,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 10 subtable" ue_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 10 subtable" ue_zanb.wide
 EndChar
 
 StartChar: ue_zanb.wide
@@ -1666,9 +1676,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -570 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -421 -120 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -421 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -421 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -570 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -421 -120 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -421 -120 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1745,8 +1756,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 38 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -176 38 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1758,7 +1770,7 @@ SplineSet
  -80 -232 l 1,5,-1
  -760 -232 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 10 subtable" u_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 10 subtable" u_zanb.wide
 EndChar
 
 StartChar: u_zanb.wide
@@ -1812,8 +1824,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 38 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 38 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -176 38 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -1878,8 +1891,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -421 995 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -420 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -420 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -421 995 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -420 813 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -420 813 mark 0
 LayerCount: 2
 Fore
@@ -1892,11 +1906,11 @@ SplineSet
  -80 641 l 1,5,-1
  -142 641 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 17 subtable" e_zanb.ai
-Substitution2: "Single Substitution lookup 16 subtable" e_zanb.ai
-Substitution2: "Single Substitution lookup 15 subtable" e_zanb.ai
-Substitution2: "Single Substitution lookup 14 subtable" e_zanb.ai
-Substitution2: "Single Substitution lookup 12 subtable" e_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17 subtable" e_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16 subtable" e_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15 subtable" e_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14 subtable" e_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" e_zanb.wide
 EndChar
 
 StartChar: e_zanb.wide
@@ -1950,8 +1964,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -568 965 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -568 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -568 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -568 965 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -568 813 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -568 813 mark 0
 LayerCount: 2
 Fore
@@ -1964,10 +1979,10 @@ SplineSet
  -80 641 l 1,5,-1
  -142 641 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 17 subtable" e_zanb.wide.ai
-Substitution2: "Single Substitution lookup 16 subtable" e_zanb.wide.ai
-Substitution2: "Single Substitution lookup 15 subtable" e_zanb.wide.ai
-Substitution2: "Single Substitution lookup 14 subtable" e_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17 subtable" e_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16 subtable" e_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15 subtable" e_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14 subtable" e_zanb.wide.ai
 EndChar
 
 StartChar: e_zanb.wide.ai
@@ -2021,8 +2036,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -478 965 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -478 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -478 813 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -478 965 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -478 813 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -478 813 mark 0
 LayerCount: 2
 Fore
@@ -2088,8 +2104,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -715 965 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -715 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -715 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -715 965 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -715 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -715 811 mark 0
 LayerCount: 2
 Fore
@@ -2169,8 +2186,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -421 965 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -420 808 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -420 808 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -421 965 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -420 808 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -420 808 mark 0
 LayerCount: 2
 Fore
@@ -2185,7 +2203,7 @@ SplineSet
  -395 641 l 1,7,-1
  -445 641 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 12 subtable" oe_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" oe_zanb.wide
 EndChar
 
 StartChar: oe_zanb.wide
@@ -2253,8 +2271,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 965 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -568 808 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -568 808 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 965 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -568 808 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -568 808 mark 0
 LayerCount: 2
 Fore
@@ -2299,8 +2318,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -421 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -419 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -419 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -421 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -419 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -419 811 mark 0
 LayerCount: 2
 Fore
@@ -2322,15 +2342,15 @@ SplineSet
  -348 858 l 1,14,-1
  -421 711 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 21 subtable" o_zanb.au
-Substitution2: "Single Substitution lookup 20 subtable" o_zanb.au
-Substitution2: "Single Substitution lookup 19 subtable" o_zanb.au
-Substitution2: "Single Substitution lookup 18 subtable" o_zanb.au
-Substitution2: "Single Substitution lookup 17 subtable" o_zanb.ai
-Substitution2: "Single Substitution lookup 16 subtable" o_zanb.ai
-Substitution2: "Single Substitution lookup 15 subtable" o_zanb.ai
-Substitution2: "Single Substitution lookup 14 subtable" o_zanb.ai
-Substitution2: "Single Substitution lookup 12 subtable" o_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21 subtable" o_zanb.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20 subtable" o_zanb.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19 subtable" o_zanb.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18 subtable" o_zanb.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17 subtable" o_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16 subtable" o_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15 subtable" o_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14 subtable" o_zanb.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" o_zanb.wide
 EndChar
 
 StartChar: o_zanb.wide
@@ -2361,8 +2381,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -569 811 mark 0
 LayerCount: 2
 Fore
@@ -2384,14 +2405,14 @@ SplineSet
  -464 858 l 1,14,-1
  -569 711 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 21 subtable" o_zanb.wide.au
-Substitution2: "Single Substitution lookup 20 subtable" o_zanb.wide.au
-Substitution2: "Single Substitution lookup 19 subtable" o_zanb.wide.au
-Substitution2: "Single Substitution lookup 18 subtable" o_zanb.wide.au
-Substitution2: "Single Substitution lookup 17 subtable" o_zanb.wide.ai
-Substitution2: "Single Substitution lookup 16 subtable" o_zanb.wide.ai
-Substitution2: "Single Substitution lookup 15 subtable" o_zanb.wide.ai
-Substitution2: "Single Substitution lookup 14 subtable" o_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 21 subtable" o_zanb.wide.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 20 subtable" o_zanb.wide.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 19 subtable" o_zanb.wide.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 18 subtable" o_zanb.wide.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 17 subtable" o_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 16 subtable" o_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 15 subtable" o_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 14 subtable" o_zanb.wide.ai
 EndChar
 
 StartChar: o_zanb.wide.ai
@@ -2422,8 +2443,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -569 811 mark 0
 LayerCount: 2
 Fore
@@ -2475,8 +2497,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -715 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -715 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -715 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -715 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -715 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -715 811 mark 0
 LayerCount: 2
 Fore
@@ -2498,7 +2521,7 @@ SplineSet
  -684 858 l 1,14,-1
  -771 711 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 12 subtable" o_zanb.wide.ai
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" o_zanb.wide.ai
 EndChar
 
 StartChar: o_zanb.wide.au
@@ -2529,8 +2552,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -569 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -569 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -569 811 mark 0
 LayerCount: 2
 Fore
@@ -2582,8 +2606,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -483 994 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -483 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -483 811 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -483 994 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -483 811 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -483 811 mark 0
 LayerCount: 2
 Fore
@@ -2605,7 +2630,7 @@ SplineSet
  -337 858 l 1,14,-1
  -423 711 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 12 subtable" o_zanb.wide.au
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" o_zanb.wide.au
 EndChar
 
 StartChar: ai_zanb
@@ -2659,7 +2684,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -58 713 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" -58 713 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -58 713 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2724,7 +2750,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -142 713 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" -142 713 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -142 713 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2777,8 +2804,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -381 1035 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -413 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -413 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -381 1035 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -413 798 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -413 798 mark 0
 LayerCount: 2
 Fore
@@ -2799,7 +2827,7 @@ SplineSet
  -686 734 -686 734 -724 702 c 1,17,-1
  -730 702 l 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 12 subtable" reversed_i_zanb.wide
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 12 subtable" reversed_i_zanb.wide
 EndChar
 
 StartChar: reversed_i_zanb.wide
@@ -2841,8 +2869,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -383 1005 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -383 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -383 798 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -383 1005 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -383 798 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -383 798 mark 0
 LayerCount: 2
 Fore
@@ -2902,8 +2931,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 0 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -176 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2946,8 +2976,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -283 -100 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -283 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -283 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -283 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -283 -100 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -2963,37 +2994,10 @@ StartChar: virama_zanb
 Encoding: 72244 72244 30
 Width: 0
 GlyphClass: 4
-Flags: W
-HStem: -202 112<-645.871 -374.279>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 3
-MDAP[rnd]
-PUSHB_1
- 14
-MDRP[min,rnd,black]
-PUSHB_3
- 3
- 14
- 10
-CALL
-PUSHB_4
- 0
- 3
- 7
- 9
-CALL
-SVTCA[x-axis]
-PUSHB_1
- 19
-MDAP[rnd]
-SVTCA[y-axis]
-IUP[y]
-IUP[x]
-EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -444 -53 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -444 -53 mark 0
+Flags: MW
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -444 -53 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -444 -53 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -444 -53 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3094,7 +3098,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -411 768 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -411 768 mark 0
 LayerCount: 2
 Fore
@@ -3253,7 +3258,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -411 768 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -411 768 mark 0
 LayerCount: 2
 Fore
@@ -3396,7 +3402,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -411 768 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -411 768 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -411 768 mark 0
 LayerCount: 2
 Fore
@@ -3510,7 +3517,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -238 822 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" -238 822 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -238 822 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -238 822 mark 0
 LayerCount: 2
 Fore
@@ -3543,6 +3551,7 @@ EndChar
 StartChar: visarga_zanb
 Encoding: 72249 72249 35
 Width: 403
+GlyphClass: 1
 Flags: W
 HStem: 45 64<158.008 245.621> 228 64<157.539 245.621> 385 64<158.008 245.621> 568 64<157.539 245.621>
 VStem: 78 64<125.008 212.621 465.008 552.621> 261 64<124.539 212.621 464.539 552.621>
@@ -3770,9 +3779,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -177 -317 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -80 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -80 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -80 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -177 -317 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -80 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -80 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3880,9 +3890,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -258 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -100 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -258 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -100 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -3974,10 +3985,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -309 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -100 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -309 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -100 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -100 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4033,10 +4045,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -177 3 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -177 3 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -177 3 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -177 3 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -177 3 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4049,7 +4062,7 @@ SplineSet
  -372 -186 l 1,5,-1
  -176 -251 l 1,3,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 4 subtable" finalVa_zanb.stem
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 4 subtable" finalVa_zanb.stem
 EndChar
 
 StartChar: subjoiner_zanb
@@ -4137,8 +4150,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4183,10 +4197,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 0 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -419 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -419 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -176 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4285,10 +4300,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 1056 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 960 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 716 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 960 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 716 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 1056 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 568 778 basechar 0
 LayerCount: 2
 Fore
@@ -4395,10 +4410,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4490,10 +4505,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4584,10 +4599,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4690,10 +4705,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4783,10 +4798,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4879,10 +4894,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -4973,10 +4988,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5066,10 +5081,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5168,10 +5183,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5254,10 +5269,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 396 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 396 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5342,10 +5357,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5417,10 +5432,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5519,10 +5534,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5599,10 +5614,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5685,10 +5700,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5774,10 +5789,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5865,10 +5880,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -5980,10 +5995,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 626 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 626 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 401 778 basechar 0
 LayerCount: 2
 Fore
@@ -6100,10 +6115,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6189,10 +6204,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6278,10 +6293,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6355,10 +6370,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6472,10 +6487,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6574,10 +6589,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6712,10 +6727,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6745,8 +6760,8 @@ SplineSet
  468 592 l 1,25,-1
  468 86 l 1,22,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 24 subtable" tsa_zanb.flat
-Substitution2: "Single Substitution lookup 23 subtable" tsa_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24 subtable" tsa_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23 subtable" tsa_zanb.flat
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -6859,10 +6874,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -6893,8 +6908,8 @@ SplineSet
  468 592 l 1,25,-1
  468 86 l 1,22,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 24 subtable" tsha_zanb.flat
-Substitution2: "Single Substitution lookup 23 subtable" tsha_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24 subtable" tsha_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23 subtable" tsha_zanb.flat
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -6987,10 +7002,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7018,8 +7033,8 @@ SplineSet
  760 0 l 1,24,-1
  80 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 24 subtable" dza_zanb.flat
-Substitution2: "Single Substitution lookup 23 subtable" dza_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24 subtable" dza_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23 subtable" dza_zanb.flat
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -7153,10 +7168,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7200,8 +7215,8 @@ SplineSet
  760 0 l 1,48,-1
  80 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 24 subtable" dzha_zanb.flat
-Substitution2: "Single Substitution lookup 23 subtable" dzha_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 24 subtable" dzha_zanb.flat
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 23 subtable" dzha_zanb.flat
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -7286,10 +7301,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7387,10 +7402,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7485,10 +7500,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7587,10 +7602,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7690,10 +7705,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7787,10 +7802,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -7809,7 +7824,7 @@ SplineSet
  176 0 l 1,11,-1
  80 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 6 subtable" la_zanb.head
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6 subtable" la_zanb.head
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -7923,10 +7938,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8050,10 +8065,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8160,10 +8175,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8247,10 +8262,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8267,7 +8282,7 @@ SplineSet
  176 0 l 1,9,-1
  80 0 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 6 subtable" sa_zanb.head
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 6 subtable" sa_zanb.head
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -8345,10 +8360,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8452,10 +8467,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8550,9 +8565,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 435 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 435 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -8567,7 +8582,7 @@ SplineSet
  468 375 l 1,7,-1
  372 375 l 1,0,-1
 EndSplineSet
-MultipleSubs2: "Multiple Substitution lookup 1 subtable" initialRa_zanb subjoiner_zanb
+MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 1 subtable" initialRa_zanb subjoiner_zanb
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -8647,8 +8662,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8749,9 +8765,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8771,7 +8788,7 @@ SplineSet
  -372 -801 l 1,13,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ka_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ka_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ka_zanb
 EndChar
 
@@ -8837,9 +8854,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8923,9 +8941,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8944,7 +8963,7 @@ SplineSet
  -664 -209 l 1,11,-1
  -664 -715 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ga_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ga_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ga_zanb
 EndChar
 
@@ -9022,9 +9041,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9107,9 +9127,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9127,7 +9148,7 @@ SplineSet
  -80 -801 l 1,11,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" nga_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" nga_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb nga_zanb
 EndChar
 
@@ -9196,9 +9217,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9217,7 +9239,7 @@ SplineSet
  -372 -209 l 1,11,-1
  -372 -715 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ca_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ca_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ca_zanb
 EndChar
 
@@ -9283,9 +9305,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9368,9 +9391,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9388,7 +9412,7 @@ SplineSet
  -80 -801 l 1,11,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ja_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ja_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ja_zanb
 EndChar
 
@@ -9463,9 +9487,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9485,7 +9510,7 @@ SplineSet
  -380 -801 l 1,13,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" nya_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" nya_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb nya_zanb
 EndChar
 
@@ -9552,9 +9577,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9632,9 +9658,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9699,9 +9726,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9793,9 +9821,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9867,9 +9896,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9955,9 +9985,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -9975,7 +10006,7 @@ SplineSet
  -664 -801 l 1,11,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ta_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ta_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ta_zanb
 EndChar
 
@@ -10037,9 +10068,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10120,9 +10152,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10140,7 +10173,7 @@ SplineSet
  -80 -801 l 1,11,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" da_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" da_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb da_zanb
 EndChar
 
@@ -10228,9 +10261,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10340,9 +10374,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10365,7 +10400,7 @@ SplineSet
  -664 -519 l 1,15,-1
  -664 -715 l 1,12,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" na_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" na_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb na_zanb
 EndChar
 
@@ -10422,9 +10457,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10438,7 +10474,7 @@ SplineSet
  -80 -801 l 1,7,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" pa_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" pa_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb pa_zanb
 EndChar
 
@@ -10504,9 +10540,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10573,9 +10610,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10590,7 +10628,7 @@ SplineSet
  -664 -209 l 1,7,-1
  -664 -715 l 1,4,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ba_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ba_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ba_zanb
 EndChar
 
@@ -10683,9 +10721,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10777,9 +10816,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10798,7 +10838,7 @@ SplineSet
  -664 -209 l 1,11,-1
  -664 -715 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ma_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ma_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ma_zanb
 EndChar
 
@@ -10885,10 +10925,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -801 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -801 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -10920,7 +10961,7 @@ SplineSet
  -372 -209 l 1,30,-1
  -372 -715 l 1,27,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" tsa_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" tsa_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb tsa_zanb
 EndChar
 
@@ -11004,10 +11045,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -801 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -801 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11112,10 +11154,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -159 -801 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -159 -801 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11146,7 +11189,7 @@ SplineSet
  140 -107 140 -107 121.5 -130.5 c 128,-1,30
  103 -154 103 -154 79 -168 c 1,0,1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" dza_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" dza_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb dza_zanb
 EndChar
 
@@ -11259,10 +11302,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -173 -801 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -173 -801 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11387,9 +11431,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11480,9 +11525,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11570,9 +11616,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11664,9 +11711,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11769,9 +11817,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11858,9 +11907,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -11987,9 +12037,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12106,9 +12157,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12208,9 +12260,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12282,9 +12335,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12371,9 +12425,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12393,7 +12448,7 @@ SplineSet
  -372 -801 l 1,13,-1
  -760 -801 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 8 subtable" ha_zanb.short
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 8 subtable" ha_zanb.short
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 2 subtable" subjoiner_zanb ha_zanb
 EndChar
 
@@ -12471,9 +12526,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -887 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -123 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -887 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -123 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -123 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12587,10 +12643,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -12711,10 +12767,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -12827,10 +12883,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 681 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 681 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -12982,10 +13038,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 667 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 667 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -13104,9 +13160,9 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 433 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 427 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 433 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 427 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -13125,7 +13181,7 @@ SplineSet
  760 341 l 1,11,-1
  372 341 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" la_zanb
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" la_zanb
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -13207,9 +13263,9 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 433 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 427 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 433 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 427 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -13227,7 +13283,7 @@ SplineSet
  760 341 l 1,10,-1
  664 341 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" sa_zanb
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" sa_zanb
 Position2: "Single Positioning lookup 1 subtable" dx=296 dy=0 dh=296 dv=0
 EndChar
 
@@ -13299,9 +13355,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13321,7 +13378,7 @@ SplineSet
  -372 -450 l 1,13,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ka_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ka_zanb.sub
 EndChar
 
 StartChar: ga_zanb.short
@@ -13386,10 +13443,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13408,7 +13466,7 @@ SplineSet
  -664 -109 l 1,11,-1
  -664 -364 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ga_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ga_zanb.sub
 EndChar
 
 StartChar: nga_zanb.short
@@ -13468,10 +13526,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13489,7 +13548,7 @@ SplineSet
  -80 -450 l 1,11,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" nga_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" nga_zanb.sub
 EndChar
 
 StartChar: ca_zanb.short
@@ -13557,10 +13616,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13579,7 +13639,7 @@ SplineSet
  -372 -109 l 1,11,-1
  -372 -364 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ca_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ca_zanb.sub
 EndChar
 
 StartChar: ja_zanb.short
@@ -13643,10 +13703,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -453 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -453 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13664,7 +13725,7 @@ SplineSet
  -80 -453 l 1,11,-1
  -760 -453 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ja_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ja_zanb.sub
 EndChar
 
 StartChar: nya_zanb.short
@@ -13738,10 +13799,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13761,7 +13823,7 @@ SplineSet
  -380 -450 l 1,13,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" nya_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" nya_zanb.sub
 EndChar
 
 StartChar: ta_zanb.short
@@ -13829,10 +13891,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13850,7 +13913,7 @@ SplineSet
  -664 -450 l 1,11,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ta_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ta_zanb.sub
 EndChar
 
 StartChar: da_zanb.short
@@ -13910,10 +13973,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -13931,7 +13995,7 @@ SplineSet
  -80 -450 l 1,11,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" da_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" da_zanb.sub
 EndChar
 
 StartChar: na_zanb.short
@@ -14008,10 +14072,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14034,7 +14099,7 @@ SplineSet
  -664 -278 l 1,15,-1
  -664 -364 l 1,12,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" na_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" na_zanb.sub
 EndChar
 
 StartChar: pa_zanb.short
@@ -14090,10 +14155,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14107,7 +14173,7 @@ SplineSet
  -80 -450 l 1,7,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" pa_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" pa_zanb.sub
 EndChar
 
 StartChar: ba_zanb.short
@@ -14155,10 +14221,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14173,7 +14240,7 @@ SplineSet
  -664 -109 l 1,7,-1
  -664 -364 l 1,4,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ba_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ba_zanb.sub
 EndChar
 
 StartChar: ma_zanb.short
@@ -14238,10 +14305,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -175 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -419 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -175 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -419 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14260,7 +14328,7 @@ SplineSet
  -664 -109 l 1,11,-1
  -664 -364 l 1,8,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ma_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ma_zanb.sub
 EndChar
 
 StartChar: tsa_zanb.short
@@ -14346,10 +14414,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -424 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -424 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -424 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -424 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -424 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14381,7 +14450,7 @@ SplineSet
  -372 -109 l 1,30,-1
  -372 -364 l 1,27,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" tsa_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" tsa_zanb.sub
 EndChar
 
 StartChar: dza_zanb.short
@@ -14452,10 +14521,11 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -159 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -159 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14486,7 +14556,7 @@ SplineSet
  -80 -450 l 1,30,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" dza_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" dza_zanb.sub
 EndChar
 
 StartChar: ha_zanb.short
@@ -14557,10 +14627,11 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -176 -450 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -536 basemark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -420 -23 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -176 -450 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -536 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -420 -23 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 -23 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -14580,7 +14651,7 @@ SplineSet
  -372 -450 l 1,13,-1
  -760 -450 l 1,0,-1
 EndSplineSet
-Substitution2: "Single Substitution lookup 26 subtable" ha_zanb.sub
+Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 26 subtable" ha_zanb.sub
 EndChar
 
 StartChar: initialHeadMark_zanb
@@ -14658,10 +14729,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -14685,6 +14756,7 @@ EndChar
 StartChar: closingHeadMark_zanb
 Encoding: 72256 72256 147
 Width: 840
+GlyphClass: 1
 Flags: W
 HStem: 0 86<80 664> 592 86<450 664>
 VStem: 354 96<320 592> 664 96<86 592>
@@ -14774,6 +14846,7 @@ EndChar
 StartChar: tsheg_zanb
 Encoding: 72257 72257 148
 Width: 257
+GlyphClass: 1
 Flags: W
 HStem: 587 150<80 177>
 VStem: 80 97<587 737>
@@ -14823,10 +14896,10 @@ EndChar
 StartChar: longTsheg_zanb
 Encoding: 72260 72260 149
 Width: 840
-Flags: W
-HStem: -50 86<176 664> 160 86<176 664> 332 86<80 760> 504 86<176 664> 714 86<176 664>
+GlyphClass: 1
+Flags: MWO
+HStem: -50 86<176 664> 160 86<176 664> 504 86<176 664> 714 86<176 664>
 VStem: 80 96<36 160 590 714> 664 96<36 160 590 714>
-CounterMasks: 1 f8
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -14937,6 +15010,7 @@ EndChar
 StartChar: shad_zanb
 Encoding: 72258 72258 150
 Width: 257
+GlyphClass: 1
 Flags: W
 HStem: 0 21G<80 177>
 VStem: 80 97<0 678>
@@ -14980,6 +15054,7 @@ EndChar
 StartChar: doubleShad_zanb
 Encoding: 72259 72259 151
 Width: 514
+GlyphClass: 1
 Flags: W
 HStem: 0 21G<80 177 337 434>
 VStem: 80 97<0 678> 337 97<0 678>
@@ -15076,10 +15151,10 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 80 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 760 678 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 664 -86 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 420 -172 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 664 -86 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 420 -172 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 80 678 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 760 678 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 420 778 basechar 0
 LayerCount: 2
 Fore
@@ -15108,6 +15183,7 @@ EndChar
 StartChar: finalDoubleHeadMark_zanb
 Encoding: 72262 72262 153
 Width: 840
+GlyphClass: 1
 Flags: W
 HStem: -86 86<80 760> 100 86<80 664> 592 86<450 664>
 VStem: 354 96<320 592> 664 96<186 592>

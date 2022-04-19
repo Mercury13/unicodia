@@ -16,7 +16,7 @@ What was done by authors of Unicodia:
   - Turned in advance Multiocular O to U15 version
 * Bamum, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
-* Dives Akuru, Kannada, Modi, Syloti Nagri, Zanabazar square
+* Dives Akuru, Kannada, Modi, Syloti Nagri
   - Rehinted with hinting VM
 * Pahawh Hmong
   - Rehinted w/o hinting VM
@@ -70,6 +70,8 @@ What was done by authors of Unicodia:
   - Moved umlaut 10EAC to the right for default anchoring
     (default anchoring is somehow the safest way to plant umlauts!)
   - Rehinted
+* Zanabazar aquare
+  - Rehinted (except virama)
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
