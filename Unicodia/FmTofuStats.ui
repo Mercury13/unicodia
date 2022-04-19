@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>861</width>
-    <height>450</height>
+    <width>860</width>
+    <height>473</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,13 @@
          <attribute name="verticalHeaderDefaultSectionSize">
           <number>21</number>
          </attribute>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbLegend">
+         <property name="text">
+          <string>* &lt;b&gt;Custom-drawn&lt;/b&gt;: drawn programmatically (vector emoji, custom images…) &lt;b&gt;Good&lt;/b&gt;: have glyph. &lt;b&gt;Tofu&lt;/b&gt;: no glyph</string>
+         </property>
         </widget>
        </item>
       </layout>
