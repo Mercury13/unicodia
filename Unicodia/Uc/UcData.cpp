@@ -269,7 +269,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
     { { "UnicodiaTibetanFixup-Regular.ttf", Fafg::RAW_FONT },                   // Tibetan
-            Ffg::BUG_FIXUP | Ffg::FALL_TO_NEXT, 90_pc },   // Some bug → 95% instead of 90
+            Ffg::BUG_FIXUP | Ffg::FALL_TO_NEXT, 90_pc },
     { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // …1
     //{ "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty },                 // Test: Babelstone Slim
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
