@@ -64,7 +64,7 @@
      <item>
       <widget class="QLabel" name="lbLegend">
        <property name="text">
-        <string>* &lt;b&gt;Custom-drawn&lt;/b&gt;: drawn programmatically (vector emoji, custom images…) &lt;b&gt;Good&lt;/b&gt;: have glyph. &lt;b&gt;Tofu&lt;/b&gt;: no glyph</string>
+        <string>* &lt;b&gt;Custom-drawn&lt;/b&gt;: control/format, vector emoji. &lt;b&gt;Good&lt;/b&gt;: have glyph. &lt;b&gt;Tofu&lt;/b&gt;: no glyph.</string>
        </property>
       </widget>
      </item>
