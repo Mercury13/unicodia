@@ -604,6 +604,8 @@ namespace uc {
 
     struct Cp;
 
+    ///  Flags of Unicode block
+    ///
     enum class Bfg {
         COLLAPSIBLE     = 1<<0,     ///< [+] collapsible CJK
         HAS_32_NONCHARS = 1<<1,     ///< [+] block has 32 non-characters
@@ -615,6 +617,20 @@ namespace uc {
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
+    ///< @warning  Bfg::CJK ≠ SynthIcon.continent
+    ///    Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
+    ///     • CJK scripts like Hani, Hang, Kana, Nshu
+    ///     • CJK abbreviations
+    ///     • Associated chars like halfwidth letters or vertical punctuation
+    ///     !!! Big enough blocks only (checked by hand), not Kana/Hira
+    ///    Bfg::CJK is used together with Bfg::COLLAPSIBLE for tofu counting,
+    ///    and also contains:
+    ///     • Two SMP blocks that are too small to collapse
+    ///    SynthIcon.continent is for synthesized icon drawing, and also contains:
+    ///     • Ideograph-based emoji like TV, baseball
+    ///     • Non-text characters of Chinese origin: Yijing and Tai Xuan
+    ///     • Kana/Hira: not collapsible and not CJK tofu because of mere importance!
+    ///     • Kambun and other small blocks: they are just too important
 
     DEFINE_ENUM_OPS(Bfg)
 
