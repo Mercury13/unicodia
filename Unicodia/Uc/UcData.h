@@ -619,7 +619,7 @@ namespace uc {
     };
     ///< @warning  Bfg::CJK ≠ SynthIcon.continent
     ///    Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
-    ///     • CJK scripts like Hani, Hang, Kana, Nshu
+    ///     • CJK scripts like Hani, Hang, Kits, Nshu
     ///     • CJK abbreviations
     ///     • Associated chars like halfwidth letters or vertical punctuation
     ///     !!! Big enough blocks only (checked by hand), not Kana/Hira
