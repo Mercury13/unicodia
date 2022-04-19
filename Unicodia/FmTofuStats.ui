@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>860</width>
-    <height>473</height>
+    <width>840</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,1">
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="4,1">
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
@@ -41,13 +41,6 @@
          </attribute>
         </widget>
        </item>
-       <item>
-        <widget class="QLabel" name="lbLegend">
-         <property name="text">
-          <string>* &lt;b&gt;Custom-drawn&lt;/b&gt;: drawn programmatically (vector emoji, custom images…) &lt;b&gt;Good&lt;/b&gt;: have glyph. &lt;b&gt;Tofu&lt;/b&gt;: no glyph</string>
-         </property>
-        </widget>
-       </item>
       </layout>
      </item>
      <item>
@@ -67,17 +60,28 @@
     </layout>
    </item>
    <item>
-    <widget class="QDialogButtonBox" name="buttonBox">
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-     <property name="standardButtons">
-      <set>QDialogButtonBox::Ok</set>
-     </property>
-     <property name="centerButtons">
-      <bool>true</bool>
-     </property>
-    </widget>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QLabel" name="lbLegend">
+       <property name="text">
+        <string>* &lt;b&gt;Custom-drawn&lt;/b&gt;: drawn programmatically (vector emoji, custom images…) &lt;b&gt;Good&lt;/b&gt;: have glyph. &lt;b&gt;Tofu&lt;/b&gt;: no glyph</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDialogButtonBox" name="buttonBox">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="standardButtons">
+        <set>QDialogButtonBox::Ok</set>
+       </property>
+       <property name="centerButtons">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
   </layout>
  </widget>
