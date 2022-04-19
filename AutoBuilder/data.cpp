@@ -1036,6 +1036,16 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Ethiopic combining vowel length mark")                  // Same
     EX("National digit shapes")
     EX("Nominal digit shapes")
+    EX("Thaana Abafili")        // Thaana: I think they should be capitalized
+    EX("Thaana Aabaafili")
+    EX("Thaana Ibifili")
+    EX("Thaana Eebeefili")
+    EX("Thaana Ubufili")
+    EX("Thaana Ooboofili")
+    EX("Thaana Ebefili")
+    EX("Thaana Eybeyfili")
+    EX("Thaana Obofili")
+    EX("Thaana Oaboafili")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -1192,6 +1202,8 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
     { 0x22ACF, 0x22ACF },   // A single char redrawn in U15 and already present in Babel
+    { 0x0F77, 0x0F77 },     // Two badly-rendered chars of Tibetan
+    { 0x0F79, 0x0F79 },
 };
 
 const std::set<RangeByEnd> noAaRanges {
