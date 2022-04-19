@@ -58,9 +58,10 @@ void loc::loadIni(Dic& d, const std::filesystem::path& path)
                 newId.append(key);
 
                 // Get value
-                auto value = line.substr(pEq + 1);
+                std::string_view value = line.substr(pEq + 1);
 
-                if (value.find('\\') != std::string_view::npos) {
+                    // —warn, actually value.find
+                if (line.find('\\', pEq + 1) != std::string_view::npos) {
                     // Unescape
                     std::u8string newValue;
                     newValue.reserve(value.length());   // string will be shorter, not longer

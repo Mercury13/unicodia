@@ -493,9 +493,8 @@ template <class Sv> Sv inline str::detail::trimSv(Sv s)
 
 template <class Sv> inline Sv str::detail::trimLeftSv(Sv s)
 {
-    using Ch = str::trait::Ch<Sv>;
-    const Ch* start = s.data();
-    const Ch* end = start + s.length();
+    auto start = s.data();
+    auto end = start + s.length();
     trimLeft(start, end);
     return Sv(start, end);
 }
