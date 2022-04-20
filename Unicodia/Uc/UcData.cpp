@@ -268,7 +268,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
-    { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 115_pc },         // Tibetan
+    { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 120_pc },         // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts
@@ -2713,12 +2713,7 @@ constinit const uc::Script uc::scriptInfo[] {
         u8"тибетские, дзонг-кэ ''(Бутан)'', шерпский…",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а»."
             "<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "
-                "За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием."
-            "<p>Юникодия использует серию шрифтов [[https://github.com/googlefonts/noto-fonts|Noto]]: "
-                    "она удачнее показывает образцы символов. "
-                "Настоящий тибетский текст лучше набирать шрифтом [[https://babelstone.co.uk/Fonts/Tibetan.html|BabelStone Tibetan]] "
-                    "как более отлаженным. "
-                "У него есть две версии: высокая для исторических текстов, и низкая для современных.",
+                "За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.",
                 EcFont::TIBETAN },
     // Tirhuta OK, W10 none, installed Google Noto
     { "Tirh", QFontDatabase::Any,
