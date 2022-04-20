@@ -3615,7 +3615,7 @@ constinit const uc::Block uc::blocks[] {
             u8"В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. "
                     "А для этого важно указать, на какие части он разбит и что в каждой. "
                     "Для первого и предназначен данный блок.",
-            EcScript::NONE, EcFont::CJK_STRUCTURE },
+            EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
     // CJK sym/punct OK
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
@@ -3656,7 +3656,7 @@ constinit const uc::Block uc::blocks[] {
                     "Камбун учат в современных японских школах, но новых текстов на нём не{{_}}пишут."
                 "<p>В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) "
                         "и 15 значков порядка.",
-            EcScript::NONE, EcFont::CJK_KANBUN },
+            EcScript::NONE, EcFont::CJK_KANBUN, Bfg::CJK },
     // Bopomofo OK, at least in W10
     { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
             "Bopomofo Extended", u8"Бопомофо (чжуинь) расширенный",

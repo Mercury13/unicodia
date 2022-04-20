@@ -611,25 +611,24 @@ namespace uc {
         FORCE_FONT      = 1<<2,     ///< [+] force NORMAL font
         UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
-        CJK             = 1<<5,     ///< [+] Non-collapsible CJK (for tofu counting)
+        CJK             = 1<<5,     ///< [+] CJK for tofu counting (see remark below)
         NO_EMOJI        = 1<<6,     ///< [+] No graphic emoji
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
     ///< @warning  Bfg::CJK ≠ SynthIcon.continent
-    ///    Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
-    ///     • CJK scripts like Hani, Hang, Kits, Nshu
-    ///     • CJK abbreviations
-    ///     • Associated chars like halfwidth letters or vertical punctuation
-    ///     !!! Big enough blocks only (checked by hand), not Kana/Hira
-    ///    Bfg::CJK is used together with Bfg::COLLAPSIBLE for tofu counting,
-    ///    and also contains:
-    ///     • Two SMP blocks that are too small to collapse
-    ///    SynthIcon.continent is for synthesized icon drawing, and also contains:
+    ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
+    ///     • All big (32+) hand-picked CJK blocks
+    ///     !!! Kana/Hira main blocks are NOT collapsible because of importance
+    ///   Bfg::CJK is for tofu counting
+    ///     • Blocks from CJK encodings that are too small to be collapsible,
+    ///       and cannot identify CJK by script
+    ///     !!! Chars from CJK scripts and collapsible blocks are automatically CJK
+    ///     !!! See also exceptions below
+    ///   SynthIcon.continent is for synthesized icon drawing, and contains
+    ///      all CJK incl. implicit, plus:
     ///     • Ideograph-based emoji like TV, baseball
     ///     • Non-text characters of Chinese origin: Yijing and Tai Xuan
-    ///     • Kana/Hira: not collapsible and not CJK tofu because of mere importance!
-    ///     • Kambun and other small blocks: they are just too important
 
     DEFINE_ENUM_OPS(Bfg)
 
