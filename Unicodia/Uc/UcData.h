@@ -623,7 +623,7 @@ namespace uc {
     ///   Bfg::CJK is for tofu counting
     ///     • Blocks from CJK encodings that are too small to be collapsible,
     ///       and cannot identify CJK by script
-    ///     !!! Chars from CJK scripts and collapsible blocks are automatically CJK
+    ///     !!! CJK scripts and Bfg::COLLAPSIBLE are automatically CJK
     ///     !!! See also exceptions below
     ///   SynthIcon.continent is for synthesized icon drawing, and contains
     ///      all CJK incl. implicit, plus:
