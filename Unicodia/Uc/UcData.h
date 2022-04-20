@@ -394,7 +394,6 @@ namespace uc {
         THAANA,
         THAI,
         TIBETAN,
-          Z_TIB_1,
         TIFINAGH,
         TIRHUTA,
         UMLAUT_SYMBOL,

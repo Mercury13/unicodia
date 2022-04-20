@@ -268,10 +268,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
         // Tibetan chars are VERY high → 90%
-    { { "UnicodiaTibetanFixup-Regular.ttf", Fafg::RAW_FONT },                   // Tibetan
-            Ffg::BUG_FIXUP | Ffg::FALL_TO_NEXT, 90_pc },
-    { "NotoSerifTibetan-Regular.ttf", 90_pc },                                  // …1
-    //{ "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty },                 // Test: Babelstone Slim
+    { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 115_pc },         // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts
