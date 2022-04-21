@@ -30,9 +30,9 @@ SOURCES += \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
     ../Libs/SelfMade/i_TempFont.cpp \
-    ../Libs/SelfMade/u_Qstrings.cpp \
-    ../Libs/SelfMade/u_Strings.cpp \
     ../Libs/SelfMade/u_SearchEngine.cpp \
+    ../Libs/SelfMade/Strings/u_Qstrings.cpp \
+    ../Libs/SelfMade/Strings/u_Strings.cpp \
     FmPopup.cpp \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
@@ -54,14 +54,14 @@ HEADERS += \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Cmap.h \
     ../Libs/SelfMade/u_Iterator.h \
-    ../Libs/SelfMade/u_Qstrings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_LruCache.h \
-    ../Libs/SelfMade/u_Strings.h \
     ../Libs/SelfMade/u_TinyOpt.h \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     ../Libs/SelfMade/u_SearchEngine.h \
+    ../Libs/SelfMade/Strings/u_Qstrings.h \
+    ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/Zippy/Zippy.hpp \
     FmMain.h \
     FmMessage.h \
@@ -87,6 +87,7 @@ FORMS += \
 INCLUDEPATH += \
     ../Libs \
     ../Libs/SelfMade \
+    ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
     Uc
 
