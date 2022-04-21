@@ -618,7 +618,8 @@ namespace uc {
     };
     ///< @warning  Bfg::CJK ≠ SynthIcon.continent
     ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
-    ///     • Big (32+) hand-picked CJK blocks
+    ///     • Big (32+) hand-picked CJK blocks, incl. Tang, Nshu,
+    ///       CJK punctuation and special chars
     ///     !!! Kana/Hira main blocks are NOT collapsible because of importance
     ///   Bfg::CJK is for tofu counting
     ///     • Blocks from CJK encodings that are too small to be collapsible,
