@@ -313,7 +313,7 @@ namespace str {
     ///         remainderSv("string", "st", "g") = "rin"
     ///    No prefix and/or suffix → returns ⌀
     ///         remainderSv("string", "a", "g") = ""
-    template <detail::Svable S>
+    template <class S>
     inline auto remainderSv(const S& s, trait::Sv<S> prefix, trait::Sv<S> suffix) -> trait::Sv<S>
         { return detail::remainderSv<trait::Sv<S>>(s, prefix, suffix); }
 
