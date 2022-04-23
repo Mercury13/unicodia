@@ -147,7 +147,7 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
             GET_BLOCK
-            return str::toQ(block.locName);
+            return str::toQ(block.loc.name);
         }
     case Qt::DecorationRole: {
             GET_BLOCK
@@ -906,7 +906,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 return s + line.cp->viewableName();
             case uc::CpType::RESERVED:
                 return s + str::toQ(u8"Свободное место: ")
-                         + str::toQ(uc::blockOf(line.code)->locName);
+                         + str::toQ(uc::blockOf(line.code)->loc.name);
             default:
                 return s + str::toQ(uc::cpTypeMsgs[static_cast<int>(line.type)]);
             }

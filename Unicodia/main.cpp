@@ -6,17 +6,34 @@
 // Libs
 #include <i_TempFont.h>
 
+// L10n
+#include "LocDic.h"
+
 // Qt forms
 #include "FmMain.h"
+
+void doTranslate()
+{
+    auto dir = QApplication::applicationDirPath();
+
+    // Install standard Qt translation
+    QTranslator tr;
+    if (tr.load("qtbase_ru", dir))
+        QApplication::installTranslator(&tr);
+
+    std::filesystem::path pDir = dir.toStdWString();
+    pDir /= "lang.ini";
+    loc::loadIni(loc::dic, pDir);
+
+    loc::dic.dump(20);
+    uc::finishTranslation();
+}
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    // Install standard Qt translation
-    QTranslator tr;
-    if (tr.load("qtbase_ru", QApplication::applicationDirPath()))
-        QApplication::installTranslator(&tr);
+    doTranslate();
 
     uc::completeData();
     FmMain w;

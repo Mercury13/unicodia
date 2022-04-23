@@ -18,6 +18,31 @@ void loc::Dic::add(std::string_view id, std::u8string translation)
 }
 
 
+void loc::Dic::dump(size_t maxSize)
+{
+    for (auto& v : fMap) {
+        std::cout << v.first << " = " << v.second.c_str() << std::endl;
+        if ((--maxSize) == 0)
+            break;
+    }
+}
+
+
+const loc::Text& loc::Dic::get(std::string_view id)
+{
+    auto& data = fMap[std::string{id}];
+    if (!data.isFull()) {
+        std::u8string r;
+        r.push_back('[');
+        r.append(str::toU8(id));
+        r.push_back(']');
+        data = std::move(r);
+    }
+    return data;
+}
+
+
+
 ///// Misc loaders /////////////////////////////////////////////////////////////
 
 
@@ -41,11 +66,12 @@ void loc::loadIni(Dic& d, const std::filesystem::path& path)
             continue;
         // Head
         if (firstChar == '[') {
-            line = line.substr(1);
-            if (line.ends_with(']'))
-                line = line.substr(line.length() - 1);
-            head = line;
-            head.push_back('.');
+            line = str::trimRightSv(line);
+            line = str::remainderSv(line, "[", "]");
+            if (!line.empty()) {
+                head = line;
+                head.push_back('.');
+            }
         } else {
             auto pEq = line.find('=');
             if (pEq != std::string_view::npos) {
@@ -91,10 +117,10 @@ void loc::loadIni(Dic& d, const std::filesystem::path& path)
                             newValue.push_back(c);
                         }
                     }
-                    d.add(key, newValue);
+                    d.add(newId, newValue);
                 } else {
                     // No need to unescape
-                    d.add(key, str::toU8(value));
+                    d.add(newId, str::toU8(value));
                 }
             }
         }

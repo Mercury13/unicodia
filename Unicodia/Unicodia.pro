@@ -86,6 +86,7 @@ FORMS += \
 
 INCLUDEPATH += \
     ../Libs \
+    ../Libs/L10n \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \

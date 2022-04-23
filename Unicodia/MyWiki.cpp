@@ -435,11 +435,21 @@ namespace {
     }
 
     template <class T>
+    inline std::u8string_view locName(const T& x) {
+        return x.locName;
+    }
+
+    template <Locable T>
+    inline std::u8string_view locName(const T& x) {
+        return x.loc.name;
+    }
+
+    template <class T>
     inline void appendHeader(QString& text, const T& x,
                              std::u8string_view addText = {})
     {
         str::append(text, "<p><nobr><b>");
-        str::append(text, x.locName);
+        str::append(text, locName(x));
         str::append(text, "</b> ("sv);
         str::append(text, x.nChars);
         str::append(text, u8" шт."sv);
@@ -672,6 +682,10 @@ namespace {
     template <class T>
     inline void appendVal(QString& text, const T& value)
         { str::append(text, value.locName); }
+
+    template <Locable T>
+    inline void appendVal(QString& text, const T& value)
+        { str::append(text, value.loc.name); }
 
     template<>
     inline void appendVal(QString& text, const uc::BidiClass& value)
@@ -1042,10 +1056,10 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             //  Control char description
             str::append(text, u8"<h2>Об управляющих символах</h2>");
             appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
-        } else if (!blk.locDescription.empty()) {
+        } else if (blk.hasDescription()) {
             // Block description
             str::append(text, u8"<h2>О блоке</h2>");
-            appendWiki(text, blk, blk.locDescription);
+            appendWiki(text, blk, blk.loc.description);
         } else if (auto sc = cp.scriptEx(); &sc != uc::scriptInfo){
             // Script description
             str::append(text, u8"<h2>О письменности</h2>");
@@ -1150,9 +1164,9 @@ QString mywiki::buildHtml(const uc::Block& x)
         mywiki::appendVersionValue(text, x.lastVersion());
     }
 
-    if (!x.locDescription.empty()) {
+    if (x.hasDescription()) {
         str::append(text, "<p>");
-        appendWiki(text, x, x.locDescription);
+        appendWiki(text, x, x.loc.description);
         str::append(text, "</p>");
     } else if (x.ecScript != uc::EcScript::NONE) {
         str::append(text, u8"<p><b>О письменности</b></p>"sv);

@@ -31,6 +31,9 @@ const T* findInArray(std::string_view needle, const T (&haystack)[N])
     return nullptr;
 }
 
+template <class T>
+concept Locable = requires(const T& x) { x.loc; };
+
 namespace fst {
     constexpr auto TOFU = static_cast<QFont::StyleStrategy>(
                 QFont::PreferAntialias | QFont::ForceOutline | QFont::NoFontMerging
@@ -680,9 +683,6 @@ namespace uc {
         char32_t startingCp, endingCp;
         SynthIcon synthIcon;
         std::string_view name;
-        std::u8string_view locName;
-
-        std::u8string_view locDescription {};
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
@@ -694,6 +694,11 @@ namespace uc {
         mutable int nChars = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
         mutable EcVersion ecLastVersion = EcVersion::FIRST;
+
+        mutable struct Loc {
+            std::u8string_view name {};
+            std::u8string_view description {};
+        } loc {};
 
         size_t index() const;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
@@ -708,6 +713,13 @@ namespace uc {
         unsigned nNonChars() const;
         unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
         unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
+        bool hasDescription() const
+            { return (ecScript == EcScript::NONE || flags.have(Bfg::HAS_DESCRIPTION)); }
+        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        template <size_t N>
+        void printfLocKey(char (&buf)[N], const char* suffix) const
+            { printfLocKey(buf, N, suffix); }
     };
 
     enum class Graphical { NO, YES };
@@ -872,6 +884,8 @@ namespace uc {
         uint32_t flags = 0;
         char32_t fCp = 0;
     };
+
+    void finishTranslation();
 
 }   // namespace uc
 
