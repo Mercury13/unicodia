@@ -12,11 +12,11 @@ using namespace std::string_view_literals;
 
 const std::map<std::string_view, DicEntry> dictionary {
     // Language names
-    { "ABKHASIAN",      Dicf::TRIG_SCRIPT },
+    { "ABKHASIAN",      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "ADLAM",          Dicf::TRIG_SCRIPT },
     { "AFAKA",          Dicf::TRIG_SCRIPT },
     { "ANATOLIAN",      Dicf::TRIG_SCRIPT },
-    { "ALEUT"sv,        Dicf::TRIG_SCRIPT },
+    { "ALEUT"sv,        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "ALBANIAN",       Dicf::TRIG_SCRIPT },
       { "CAUCASIAN",    Dicf::TRIG_SCRIPT },
     { "AHOM",           Dicf::TRIG_SCRIPT },
@@ -53,9 +53,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "CUNEIFORM",      Dicf::TRIG_SCRIPT | Dicf::CAP_SMALL },
     { "CYPRO-MINOAN",   { Dicf::TRIG_SCRIPT, "Cypro-Minoan"sv } },
     { "CYPRIOT",        Dicf::TRIG_SCRIPT },
-    { "CYRILLIC",       Dicf::TRIG_SCRIPT },
-      { "KOMI"sv,       Dicf::TRIG_SCRIPT },
-      { "UKRAINIAN",    Dicf::TRIG_SCRIPT },
+    { "CYRILLIC",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+      { "KOMI"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+      { "UKRAINIAN",    Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
       { "BYELORUSSIAN-UKRAINIAN", { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Byelorussian-Ukrainian"sv } },
       { "BASHKIR",      Dicf::TRIG_SCRIPT },
     { "DEVANAGARI",     Dicf::TRIG_SCRIPT },
@@ -236,6 +236,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "CHOSEONG",       Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
       { "JUNGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
       { "JONGSEONG",    Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "DENOMINATOR",    Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "DIGIT",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL  },
     { "FRACTION",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "HIEROGLYPH",     Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -495,6 +496,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "DIAERESIZED",    Dicf::PART_ADJECTIVE },
     { "DIAGONAL",       Dicf::PART_ADJECTIVE },
     { "DIALECT-P",      { Dicf::PART_ADJECTIVE, "dialect-P" } },
+    { "EGYPTOLOGICAL",  Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "EXCLAMATION",    Dicf::PART_ADJECTIVE },
     { "FIXED-FORM",     Dicf::PART_ADJECTIVE },
     { "FINAL",          Dicf::PART_ADJECTIVE },
@@ -1046,6 +1048,11 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Thaana Eybeyfili")
     EX("Thaana Obofili")
     EX("Thaana Oaboafili")
+    EX("Combining Cyrillic Hundred thousands sign")     // Who knows, maybe so
+    EX("Combining Cyrillic Millions sign")
+    EX("Combining Cyrillic Ten millions sign")
+    EX("Combining Cyrillic Hundred millions sign")
+    EX("Combining Cyrillic Thousand millions sign")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
