@@ -33,6 +33,13 @@
 @if not exist %BUILD% md %BUILD%
 
 @echo.
+@echo ===== Pulling UTranslator =====
+@cd utranslator
+@git reset --hard
+@git pull
+@cd ..
+
+@echo.
 @echo ===== Building SmartCopy =====
 @cd %BUILD_SC%
 @%QTDIR%\bin\qmake.exe ..\%PRONAME_SC% -r -spec win32-g++ "CONFIG+=release"
