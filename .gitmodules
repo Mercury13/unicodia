@@ -1,0 +1,3 @@
+[submodule "utranslator"]
+	path = utranslator
+	url = https://github.com/Mercury13/utranslator.git
