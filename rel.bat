@@ -20,6 +20,7 @@
 @set UCCOUNT=UcAutoCount.h
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
+@set UTRANSL=UTransCon.exe
 
 @path %MINGW%;%PATH%
 
@@ -113,6 +114,10 @@
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
+
+@echo.
+@echo ===== Building L10n =====
+@%UTRANSL% lang-src\ru.uorig -build:%DEPLOY%
 
 @echo.
 @echo ===== Archiving =====
