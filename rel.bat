@@ -53,6 +53,12 @@
 @if not exist %BUILD_SC% md %BUILD_SC%
 @if not exist %BUILD% md %BUILD%
 
+@if exist Fonts\emoji.zip goto fonts_ok
+@echo.
+@echo ===== Building graphic emoji =====
+@call tape.bat
+:fonts_ok
+
 @echo.
 @echo ===== Pulling UTranslator =====
 @cd utranslator
