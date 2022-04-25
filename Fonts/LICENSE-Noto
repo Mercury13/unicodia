@@ -16,10 +16,12 @@ What was done by authors of Unicodia:
   - Turned in advance Multiocular O to U15 version
 * Bamum, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
-* Dives Akuru, Kannada, Modi, Syloti Nagri
+* Kannada, Modi, Syloti Nagri
   - Rehinted with hinting VM
 * Pahawh Hmong
   - Rehinted w/o hinting VM
+* Dives Akuru
+  - Rehinted w/TtfAutoHint, see settings PNG
 * Devanagari
   - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.
     (note: scale new → old 194%)
