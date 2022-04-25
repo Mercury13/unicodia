@@ -52,8 +52,8 @@
 @echo UTranslator OK
 
 @echo ===== Creating directories =====
-@if exist %DEPLOY% del /S /Q %DEPLOY%
-@if exist %DEPLOY% rmdir /S /Q %DEPLOY%
+@if exist %DEPLOY% del /S /Q %DEPLOY% >nul
+@if exist %DEPLOY% rmdir /S /Q %DEPLOY% >nul
 @if not exist %DEPLOY% md %DEPLOY%
 @if not exist %DEPLOY1% md %DEPLOY1%
 @if not exist %BUILD_AB% md %BUILD_AB%
