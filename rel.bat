@@ -3,6 +3,7 @@
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
+@set UTRANSL=UTransCon.exe
 
 @rem Rest things
 @set PRONAME=Unicodia\Unicodia.pro
@@ -20,7 +21,6 @@
 @set UCCOUNT=UcAutoCount.h
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
-@set UTRANSL=UTransCon.exe
 
 @path %MINGW%;%PATH%
 
@@ -43,6 +43,13 @@
 @goto end
 :mingw_ok
 @echo MinGW OK
+
+@if exist %UTRANSL% goto mingw_ok
+@echo BAD: UTranslCon not found.
+@echo Build it manually from https://github.com/Mercury13/utranslator
+@goto end
+:utransl_ok
+@echo UTranslator OK
 
 @echo ===== Creating directories =====
 @if exist %DEPLOY% del /S /Q %DEPLOY%
