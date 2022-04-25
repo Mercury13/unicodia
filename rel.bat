@@ -59,12 +59,12 @@
 @call tape.bat
 :fonts_ok
 
-@echo.
-@echo ===== Pulling UTranslator =====
-@cd utranslator
-@git reset --hard
-@git pull
-@cd ..
+@rem echo.
+@rem echo ===== Pulling UTranslator =====
+@rem cd utranslator
+@rem git reset --hard
+@rem git pull
+@rem cd ..
 
 @echo.
 @echo ===== Building SmartCopy =====
