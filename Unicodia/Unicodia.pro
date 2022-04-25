@@ -97,7 +97,7 @@ LIBS += -lz
 TRANSLATIONS += \
     Unicodia_en_001.ts
 
-VERSION = 1.2.14
+VERSION = 1.2.15
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
