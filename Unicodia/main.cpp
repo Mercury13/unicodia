@@ -26,6 +26,7 @@ void doTranslate()
     loc::loadIni(loc::dic, pDir);
 
     uc::finishTranslation();
+    mywiki::translateDatingLoc();
 }
 
 int main(int argc, char *argv[])

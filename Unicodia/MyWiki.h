@@ -63,6 +63,8 @@ namespace mywiki
         virtual ~Link() = default;
     };
 
+    void translateDatingLoc();
+
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view link);
     std::unique_ptr<Link> parseLink(std::string_view scheme, std::string_view target);

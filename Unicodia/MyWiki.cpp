@@ -11,6 +11,9 @@
 // Unicode
 #include "UcData.h"
 
+// L10n
+#include "LocDic.h"
+
 // Wiki
 #include "Wiki.h"
 #include "Skin.h"
@@ -565,38 +568,33 @@ QString mywiki::buildFontsHtml(
 }
 
 namespace {
-
-    const uc::DatingLoc rusDatingLoc {
-        // Year
-        .yBc = u8"$ до н.э.",
-        .yBefore = u8"до $",
-        .yApprox = u8"≈$",
-        .yApproxBc = u8"≈$ до н.э.",
-
-        // Decade
-        .decade = u8"$-е",
-
-        // Century
-        .centuryNames = { u8"",
-                u8"I", u8"II", u8"III", u8"IV", u8"V",
-                u8"VI", u8"VII", u8"VIII", u8"IX", u8"X",
-                u8"XI", u8"XII", u8"XIII", u8"XIV", u8"XV",
-                u8"XVI", u8"XVII", u8"XVIII", u8"XIX", u8"XX" },
-        .century = u8"$ век",
-        .centuryBc = u8"$ век до н.э.",
-        .crangeMode = uc::CrangeMode::SPECIAL_SPECIAL,
-        //.crangeBcCe = u8"$ век до н.э. – & век н.э.",
-
-        // Other
-        .unknown = u8"неизвестно",
-
-        // Comments
-        .firstInscription = u8"первая известная надпись",
-        .modernForm = u8"в современном виде",
-        .maybeEarlier = u8"возможно, раньше",
-    };
-
+    uc::DatingLoc rusDatingLoc;
 }   // anon namespace
+
+
+void mywiki::translateDatingLoc()
+{
+    rusDatingLoc = uc::DatingLoc {
+        .yBc            = loc::get("Dating.Name.YBc"),
+        .yBefore        = loc::get("Dating.Name.YBefore"),
+        .yApprox        = loc::get("Dating.Name.YApprox"),
+        .yApproxBc      = loc::get("Dating.Name.YApproxBc"),
+        .decade         = loc::get("Dating.Name.Decade"),
+        .centuryNames   = {},
+        .century        = loc::get("Dating.Name.Century"),
+        .centuryBc      = loc::get("Dating.Name.CenturyBc"),
+        .crangeMode     = uc::CrangeMode::SPECIAL_SPECIAL,
+        .unknown        = loc::get("Dating.Name.Unknown"),
+        .firstInscription = loc::get("Dating.StdComment.FirstInsc"),
+        .modernForm     = loc::get("Dating.StdComment.ModernForm"),
+        .maybeEarlier   = loc::get("Dating.StdComment.MaybeEarlier"),
+    };
+    char buf[30];
+    for (int i = 1; i < std::ssize(rusDatingLoc.centuryNames); ++i) {
+        snprintf(buf, std::size(buf), "Dating.Century.%d", i);
+        rusDatingLoc.centuryNames[i] = loc::get(buf);
+    }
+}
 
 
 void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
