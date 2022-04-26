@@ -62,6 +62,8 @@ void uc::DatingLoc::appendNote(
         std::u8string& r, StdNote sn, std::u8string_view note) const
 {
     switch (sn) {
+    case StdNote::NONE:
+        break;
     case StdNote::CUSTOM:
         appendCustomNote(r, note);
         break;
@@ -80,7 +82,7 @@ void uc::DatingLoc::appendNote(
 
 ///// Dating ///////////////////////////////////////////////////////////////////
 
-std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
+std::u8string uc::Dating::wikiText(const DatingLoc& loc, std::u8string_view customNote) const
 {
     char buf[60];
     char buf2[20];
@@ -93,7 +95,7 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
     case Mode::NONE:
         return u8"[NONE!!!!!!]";
     case Mode::SPECIAL:
-        return std::u8string { fNote };
+        return std::u8string { customNote };
     case Mode::UNKNOWN:
         r = loc.unknown;
         break;
@@ -169,12 +171,12 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc) const
         } break;
     case Mode::CRANGE_INS:
         r = loc.formatCenturyText(fValue1);
-        loc.appendNote(r, fStdNote, fNote);
+        loc.appendNote(r, fStdNote, customNote);
         r.append(u8", ");
         loc.appendCenturyText(r, fValue2);
         loc.appendNote(r, StdNote::FIRST_KNOWN, {});
         return r;
     }
-    loc.appendNote(r, fStdNote, fNote);
+    loc.appendNote(r, fStdNote, customNote);
     return r;
 }

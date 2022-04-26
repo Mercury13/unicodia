@@ -577,12 +577,12 @@ constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::N
 constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-            u8"Нет", Dating::none(), {}, u8"Символы вне письменности.",
+            u8"Нет", Dating::none(), {}, {}, u8"Символы вне письменности.",
             EcFont::NORMAL, Sfg::NONSCRIPT },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Адлам", Dating::special(u8"конец 1980-х"),
+        u8"Адлам", Dating::special(), u8"конец 1980-х",
         u8"фулá ''(семейство языков Западной Африки, 10 млн)''",
         u8"Фулá или фульбе{{-}}кочевники-скотоводы, антропологически самые близкие в Чёрной Африке к европейцам "
                     "и самые ярые проповедники ислама в западной Африке."
@@ -599,7 +599,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Агванский (Кавказская Албания)", Dating::special(u8"до IV века"),
+        u8"Агванский (Кавказская Албания)", Dating::special(), u8"до IV века",
         u8"агванский ''(=гаргарский, язык Кавказской Албании)''",
         u8"Никакого отношения к балканской Албании страна не{{_}}имеет, и вообще самоназвание неизвестно: "
                     "''Албания''{{-}}название греческое, ''Агванк''{{-}}современное армянское. "
@@ -620,7 +620,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ahom OK, installed Google Noto font
     { "Ahom", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ахом", Dating::century(13),
+        u8"Ахом", Dating::century(13), {},
         u8"тайско-ахомский ''(Ассам, возрождается)''",
         u8"Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. "
                 "К XIX{{_}}веку язык окончательно заместился ассамским с [[ps:Beng|бенгальским]] письмом. "
@@ -632,7 +632,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Arabic OK, three fonts: SIL Scheherazade main, Google Noto Math + Google Noto Arabic for special ranges
     { "Arab", QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Арабский", Dating::century(7, u8"в современном виде"),
+        u8"Арабский", Dating::century(7, StdNote::MODERN_FORM), {},
         u8"арабский, персидский, урду, уйгурский, пуштунский…",
         u8"Письменность развилась из [[ps:Armi|арамейской]] через [[ps:Syrc|сирийскую]] и/или [[ps:Nbat|набатейскую]]. "
                 "Арабский язык тесно связан с исламом; на этом языке написан Коран (610–632). "
@@ -646,7 +646,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Имперский арамейский", Dating::crange(-10, -9),
+        u8"Имперский арамейский", Dating::crange(-10, -9), {},
         u8"имперский арамейский ''(также канцелярский арамейский{{-}}язык Персии 500—329{{bc}})''",
         u8"На основе арамейского в Ахеменидской империи создали книжный язык, "
                     " кодифицированный настолько, что крайне сложно опознать время и место конкретного документа. "
@@ -660,7 +660,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Armenian OK, Cambria+Noto is more than nice!
     { "Armn", QFontDatabase::Armenian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Армянский", Dating::year(405),
+        u8"Армянский", Dating::year(405), {},
         u8"армянский",
         u8"Изобретён учёным и священником Месропом Маштоцем (362–440). Непонятно, брался ли какой-то алфавит за основу "
                 "(возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. "
@@ -672,7 +672,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [future, link] wait for book Pahlavi
     { "Avst", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Авестийский", Dating::yapprox(400),
+        u8"Авестийский", Dating::yapprox(400), {},
         u8"авестийский, среднеперсидский",
         u8"Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. "
                 "Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит "
@@ -695,7 +695,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Balinese OK, installed Google Noto font
     { "Bali", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Балийский", Dating::yapprox(1000),
+        u8"Балийский", Dating::yapprox(1000), {},
         u8"балийский, сасакский",
         u8"Гласная по умолчанию «а». Балийская письменность не{{_}}используется в общении (вместо неё [[ps:Latn|латиница]]), "
                 "но важна в индуизме.",
@@ -703,7 +703,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bamum OK, none even in W10, installed Google Noto and fixed stub
     { "Bamu", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Бамум", Dating::yrange(1895, 1910),
+        u8"Бамум", Dating::yrange(1895, 1910), {},
         u8"бамум ''(Камерун)''",
         u8"Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). "
                 "Было выпущено семь версий (A…G), начиная от иероглифов и заканчивая слоговой. "
@@ -722,7 +722,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bassa Vah OK, none in W10, installed Google Noto
     { "Bass", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Басса (вах)", Dating::yapprox(1900),
+        u8"Басса (вах)", Dating::yapprox(1900), {},
         u8"басса ''(Либерия, 400 тыс. на 2006)''",
         u8"Басса по имени Томас Льюис открыл, что бывшие рабы басса из Америки используют необычное письмо. "
                 "По другим данным, он создал письмо сам. "
@@ -732,7 +732,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Batak OK, installed Google Noto font
     { "Batk", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Батакская", Dating::yapprox(1300),
+        u8"Батакская", Dating::yapprox(1300), {},
         u8"батакские ''(Суматра)''",
         u8"Немцы, а потом и голландцы, стали обучать островитян как батакской грамоте, так и [[ps:Latn|латинице]]. "
                 "Незадолго до Первой мировой войны от батакского алфавита отказались, и он окончательно уступил латинице, "
@@ -747,7 +747,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Beng", QFontDatabase::Bengali,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         u8"Бенгальский",
-            Dating::special(u8"XI век (отделилась от гауди), XV век (в современном виде)"),
+            Dating::special(), u8"XI век (отделилась от гауди), XV век (в современном виде)",
         u8"бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''",
         u8"Относится к восточной ветви индийского письма. "
                 "Происходит из [[ps:Sidd|сиддхама]] через ''гауди'', предок бенгальского и [[ps:Orya|ории]]. "
@@ -766,7 +766,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bhaiksuki OK, installed Google Noto
     { "Bhks", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Бхаикшуки (стрелоглавое письмо)", Dating::century(11),
+        u8"Бхаикшуки (стрелоглавое письмо)", Dating::century(11), {},
         u8"санскрит",
         u8"Было в ходу в Восточной Индии в XI–XII{{_}}веках, его упоминал хорезмский (современные Туркмения/Узбекистан) учёный Бируни́. "
                 "Первый источник был открыт в Катманду в 1884, предположили, что это и есть «бхаикшуки» Бируни. "
@@ -784,7 +784,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
-        u8"Бопомофо (чжуинь)", Dating::year(1913),
+        u8"Бопомофо (чжуинь)", Dating::year(1913), {},
         u8"китайский",
         u8"Бопомофо (по первым четырём буквам), или чжуинь фухао{{-}}китайская фонетическая система, придуманная У Чжихуэем в 1912–13 "
                     "и принятая в 1918. "
@@ -799,7 +799,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Brahmi OK, because of sheer importance installed Google Noto
     { "Brah", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Брахми", Dating::special(u8"до III века до н.э. (точно), VIII–VII век до н.э. (основная гипотеза)"),
+        u8"Брахми", Dating::special(), u8"до III века до н.э. (точно), VIII–VII век до н.э. (основная гипотеза)",
         u8"санскрит, пали, праиндийские языки",
         u8"Неизвестно, когда и откуда брахми произошёл{{-}}обычно считают, что из [[ps:Armi|арамейского]] "
                     "в VIII–VII{{_}}веке{{bc}} "
@@ -822,7 +822,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Braille OK, “Segoe UI Symbol”
     { "Brai", QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-        u8"Шрифт Брайля", Dating::year(1824),
+        u8"Шрифт Брайля", Dating::year(1824), {},
         u8"крупные языки мира, включая латинские, кириллические, брахмийские, арабские, китайские иероглифы",
         u8"Шрифт Брайля{{-}}точечный шрифт для слепых. "
                 "В нём используются группы 2×3 точки с двоичным кодированием; иногда добавляется и четвёртая строка. "
@@ -838,7 +838,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buginese OK, W10 only → made LelawadeeUI → Google Noto chain
     { "Bugi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Бугийский (лонтара)", Dating::crange(15, 17),
+        u8"Бугийский (лонтара)", Dating::crange(15, 17), {},
         u8"бугийский ''(4 млн)'' и другие языки о. Сулавеси",
         u8"Бугийская письменность, или лонтара{{-}}потомок [[ps:Brah|брахми]] и работает по тому же принципу. "
                 "Со времён голландской колонизации заменяется [[ps:Latn|латиницей]]. "
@@ -852,7 +852,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Buhid OK, installed Google Noto font
     { "Buhd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Бухид", Dating::yapprox(1300),
+        u8"Бухид", Dating::yapprox(1300), {},
         u8"бухидский ''(Филиппины)''",
         u8"Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991{{_}}год). "
                 "Восходит к [[ps:Brah|брахми]] и родственный с [[ps:Tglg|тагальским]]."
@@ -863,7 +863,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chakma OK, added Noto font, mostly because of missing glyphs
     { "Cakm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Чакма", Dating::unknown(),
+        u8"Чакма", Dating::unknown(), {},
         u8"чакма ''(Индия, Бангладеш, Мьянма, 500 тыс. на 2011)''",
         u8"Говорящих на языке чакма немало и язык в списках исчезающих не{{_}}числится, но письменность вытесняется [[ps:Beng|бенгальской]]. "
                 "Точную датировку автору «Юникодии» найти не{{_}}удалось, но если это потомок [[ps:Mymr|бирманского]]{{-}}то "
@@ -880,7 +880,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [font???] Carian
     { "Cari", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::ASIA,
-        u8"Карийский", Dating::century(-7),
+        u8"Карийский", Dating::century(-7), {},
         u8"карийский ''(Малая Азия)''",
         u8"Использовался с VII до I веков{{bc}} "
                 "Существовало множество вариантов алфавита. "
@@ -893,7 +893,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Канадская слоговая", Dating::year(1833),
+        u8"Канадская слоговая", Dating::year(1833), {},
         u8"языки канадских аборигенов: кри, оджибве ''(алгонкинский)'', наскапи, инуктитут ''(эскимосский)''…",
         u8"Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: "
                 "ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. "
@@ -902,7 +902,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::CANADIAN_ABORIGINAL },
     { "Cham", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Чамский", Dating::century(4),
+        u8"Чамский", Dating::century(4), {},
         u8"чамский ''(Вьетнам, Камбоджа, 320 тыс. на 2008)''",
         u8"Чамская письменность произошла из паллавы (ранней [[ps:Gran|грантхи]]), и слоги по умолчанию заканчиваются гласной «а». "
                 "Чтобы добавить другую гласную, дописывается огласовка. "
@@ -914,7 +914,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cherokee OK, installed Google Noto font. Need it, W7 has no 2014 extensions.
     { "Cher", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Чероки", Dating::year(1821),
+        u8"Чероки", Dating::year(1821), {},
         u8"чероки",
         u8"Будущий вождь Секвойя, изобретатель азбуки чероки, был неграмотен, но брал символы из имевшихся книг{{-}}потому они значат "
                 "совсем не{{_}}то, что в языке-прообразе. Так, гласная «i» записывается буквой {{sm|Ꭲ}}."
@@ -926,7 +926,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
-        u8"Хорезмийский", Dating::century(2, u8"первые известные памятники"),
+        u8"Хорезмийский", Dating::century(2, StdNote::FIRST_KNOWN), {},
         u8"хорезмийский ''(современные Туркмения/Узбекистан)''",
         u8"Язык использовался в Хорезме в районе Амударьи до XIII{{_}}века, постепенно заменяясь персидским. "
                 "На этом языке говорили учёный Бируни и проповедник Замахшари{{-}}"
@@ -938,7 +938,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Коптский", Dating::century(2),
+        u8"Коптский", Dating::century(2), {},
         u8"коптский",
         u8"Происходит из [[ps:Grek|греческого]]. Используется коптами (египетскими христианами) как богослужебный. "
                 "Общаются копты [[ps:Arab|по-арабски]], как разговорный коптский умер от XVII до XIX{{_}}века."
@@ -947,7 +947,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Кипро-минойская", Dating::yapprox(-1550, u8"первые известные надписи"),
+        u8"Кипро-минойская", Dating::yapprox(-1550), u8"первые известные надписи",
         u8"этеокипрский (предположительно), филистимский (существует несколько надписей)",
         u8"Происходит предположительно из [[ps:Lina|линейного письма А]]. "
                 "Около XI{{_}}века{{bc}} преобразовалось в [[ps:Cprt|кипрское]]. "
@@ -961,7 +961,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cypriot OK, W10 Segoe Historic
     { "Cprt", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
-        u8"Кипрская", Dating::century(-11),
+        u8"Кипрская", Dating::century(-11), {},
         u8"древнегреческий, этеокипрский, финикийский ''(одна короткая надпись)''",
         u8"Происходит из [[ps:Lina|линейного письма А]] через [[ps:Cpmn|кипро-минойскую]] (не путать!). "
                 "Встречалось с XI до III{{_}}века{{bc}} "
@@ -972,7 +972,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Кириллица", Dating::ybefore(900),
+        u8"Кириллица", Dating::ybefore(900), {},
         u8"русский ''(160 млн на 2015 как родной)'', украинский ''(35 млн на 2003)'', белорусский, "
                     "русинский, болгарский, македонский, сербохорватский ''(Сербия)'', "
                     "казахский, киргизский, таджикский, языки народов России",
@@ -986,11 +986,12 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Современная кириллица восходит к гражданскому шрифту, введённому Петром{{_}}I. "
                 "Шрифт стал компромиссом между сторонниками традиций и западниками."
             "<p>СССР сделал кириллическую письменность для многих языков союзных республик. "
-                "С развалом СССР на [[ps:Latn|латиницу]] перешли Азербайджан, Молдавия, Туркмения, Узбекистан." },
+                "С развалом СССР на [[ps:Latn|латиницу]] перешли Азербайджан, Молдавия, Туркмения, Узбекистан.",
+                EcFont::NORMAL },
     // Devanagari OK, added 8 characters to Noto Serif
     { "Deva", QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Деванáгари", Dating::crange(1, 7),
+        u8"Деванáгари", Dating::crange(1, 7), {},
         u8"хинди, санскрит и другие языки Индии",
         u8"Деванáгари (буквально «язык божественного города») развился из письма брахми и стал алфавитом для многих языков Индии. "
                 "Особенность деванагари{{-}}все буквы свисают с горизонтальной черты."
@@ -1004,7 +1005,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Diak OK, built some samples
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Дивес-акуру (древнемальдивский)", Dating::crange(9, 10, u8"первые известные надписи"),
+        u8"Дивес-акуру (древнемальдивский)", Dating::crange(9, 10), u8"первые известные надписи",
         u8"дивехи ''(мальдивский)''",
         u8"Развился на Мальдивских островах из [[ps:Gran|грантхи]] и существовал до XVIII{{_}}века, а на некоторых островах и до XX. "
                     "Раннюю форму (до XII{{_}}века) исследователи называют ''эвела-акуру''. "
@@ -1027,7 +1028,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Догра", Dating::century(19),
+        u8"Догра", Dating::century(19), {},
         u8"догри ''(Кашмир, 2,6 млн на 2011)''",
         u8"Язык догров, индийской народности. Письменность позаимствована из [[ps:Takr|такри]], стандартизирована "
                 "в середине XIX{{_}}века при магарадже Ранбире Сингхе. "
@@ -1043,7 +1044,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Deseret OK, W10 Segoe UI Symbol, plane 1
     { "Dsrt", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Дезеретская (мормонская)", Dating::year(1854),
+        u8"Дезеретская (мормонская)", Dating::year(1854), {},
         u8"английский, отдельные языки индейцев",
         u8"В XIX{{_}}веке было множество попыток придумать фонетический алфавит для английского, "
                 "и Бригам Янг, второй руководитель мормонской церкви, был не{{_}}первый и не{{_}}последний. "
@@ -1061,7 +1062,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Duployan OK, W10 none → installed Google Noto
     { "Dupl", QFontDatabase::Any,
         EcScriptType::CODE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Стенография Дюплойе", Dating::year(1860),
+        u8"Стенография Дюплойе", Dating::year(1860), {},
         u8"изначально французский, потом румынский, английский, испанский, немецкий, отдельные индейские",
         u8"Система стенографии, придуманная французским священником Эмилем Дюплойе. "
                 "По классификации стенографий{{-}}геометрическая (основы знаков{{-}}точки, линии, круги), буквенная."
@@ -1072,7 +1073,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Egyptian hiero OK
     { "Egyp", QFontDatabase::Any,
         EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,
-        u8"Египетские иероглифы", Dating::yapprox(-3200),
+        u8"Египетские иероглифы", Dating::yapprox(-3200), {},
         u8"древнеегипетский",
         u8"Египетская письменность прошла обычный путь от пиктографического письма (слова изображаются наглядными рисунками) "
                 "через идеографическое (появляются абстрактные понятия{{-}}знаком «солнце» обозначают день) "
@@ -1097,7 +1098,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Elbasan OK, none in W10 → installed Google Noto
     { "Elba", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Эльбасанский алфавит (албанский)", Dating::century(18),
+        u8"Эльбасанский алфавит (албанский)", Dating::century(18), {},
         u8"албанский",
         u8"Придумана в середине XVIII{{_}}века и использовалась в окрестностях города Эльбасан (Албания). "
                 "Создание приписывается учителю Теодору Хаджи Филиппу (1730–1806), которого убили, когда он перевозил шрифт. "
@@ -1110,7 +1111,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Elymaic OK, W10 none → installed Google Noto
     { "Elym", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Элимайский (эламский)", Dating::century(-2),
+        u8"Элимайский (эламский)", Dating::century(-2), {},
         u8"элимайский ''(=эламский, Персидский залив)''",
         u8"После военных поражений от Александра Македонского Персия прекратила своё существование. "
                 "Последователи Александра не{{_}}смогли удержать огромное многонациональное государство, и в результате распада "
@@ -1123,7 +1124,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Эфиопская (гéэз)", Dating::century(4, u8"как абугида"),
+        u8"Эфиопская (гéэз)", Dating::century(4, StdNote::CUSTOM), u8"как абугида",
         u8"амхарский, тигринья и другие эфиосемитские",
         u8"Эфиопская письменность использовалась для записи языка гéэз, вышедшего из употребления в XIII{{_}}веке. "
                 "Письменность [[ps:Sarb|южноаравийского]] происхождения, огласовывать начали в IV{{_}}веке "
@@ -1139,7 +1140,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Грузинский", Dating::year(430, StdNote::FIRST_KNOWN),
+        u8"Грузинский", Dating::year(430, StdNote::FIRST_KNOWN), {},
         u8"грузинский, мегрельский и другие картвельские",
         u8"Достоверно неизвестно, когда создана грузиница и что было прототипом. "
                 "Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, "
@@ -1155,7 +1156,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Glagolitic OK, installed Google Noto font
     { "Glag", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Глаголица", Dating::century(9),
+        u8"Глаголица", Dating::century(9), {},
         u8"древнеславянский",
         u8"Глаголица, по наиболее распространённому мнению, была составлена около 863 византийцами Кириллом и Мефодием "
                     "для решения политической задачи{{-}}выгнать западных священников из Моравии и наладить автономную церковь, "
@@ -1168,7 +1169,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gondi/Gunjala OK, W10 none, installed Google Noto
     { "Gong", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гунджала", Dating::year(1750, StdNote::FIRST_KNOWN),
+        u8"Гунджала", Dating::year(1750, StdNote::FIRST_KNOWN), {},
         u8"южный гонди ''(Центральная Индия, 100{{_}}тыс. на 2010-е)''",
         u8"В 2006 в деревушке Гунджала обнаружили документы 1750{{_}}года. "
                 "Позже люди, способные прочитать письмо, подтвердили, что это гонди. "
@@ -1186,7 +1187,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gondi/Masaram OK, W10 none, installed Google Noto
     { "Gonm", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Письмо Масарама", Dating::year(1918),
+        u8"Письмо Масарама", Dating::year(1918), {},
         u8"гонди ''(Центральная Индия, 3 млн на 2011)'', маратхи",
         u8"По переписи 2011, 13{{_}}млн людей считают себя гондами, но только 3{{_}}млн знают язык. "
                 "На гонди обычно пишут [[ps:Deva|деванагари]] и [[ps:Telu|телугу]], но в 1918 некто "
@@ -1203,7 +1204,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Готский", Dating::century(4),
+        u8"Готский", Dating::century(4), {},
         u8"готский",
         u8"Считается, что алфавит создал епископ Вульфила, который перевёл Библию на готский и не{{_}}хотел, чтобы священный текст "
                     "писался [[ps:Runr|рунами]]. "
@@ -1217,7 +1218,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Grantha OK, W10 none → installed Google Noto
     { "Gran", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Грантха", Dating::special(u8"IV век (памятники паллавы), VII век (памятники средней грантхи)"),
+        u8"Грантха", Dating::special(), u8"IV век (памятники паллавы), VII век (памятники средней грантхи)",
         u8"санскрит, тамильский",
         u8"Грантха{{-}}промежуточная ступень развития южной ветви [[ps:Brah|брахми]]. "
                 "Древний вариант грантхи называется ''паллава'' и использовался в государстве Паллавов (275–897). "
@@ -1236,7 +1237,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, W7 Cambria + Noto do the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Греческий", Dating::crange_ins(-9, -8, u8"основная гипотеза"),
+        u8"Греческий", Dating::crange_ins(-9, -8), u8"основная гипотеза",
         u8"греческий",
         u8"Греческий сделан из [[ps:Phnx|финикийского]] без оглядки на раннегреческие системы{{-}}"
                     "[[ps:Linb|линейное письмо Б]] и [[ps:Cprt|кипрское]]. "
@@ -1247,11 +1248,12 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Греки добавили гласные звуки, и греческий{{-}}первый известный истинный алфавит, кодирующий как согласные, так и гласные. "
                 "Названия букв изменились мало, но перестали что-то значить: ''алеф=бык''{{_}}→ ''альфа''."
             "<p>Из греческого письма пошли [[ps:Latn|латиница]], [[ps:Cyrl|кириллица]], "
-                "[[ps:Copt|коптский]] и, возможно, [[ps:Armn|армянский]] и [[ps:Runr|руны]]." },
+                "[[ps:Copt|коптский]] и, возможно, [[ps:Armn|армянский]] и [[ps:Runr|руны]].",
+                EcFont::NORMAL },
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гуджарати", Dating::year(1592, StdNote::FIRST_KNOWN),
+        u8"Гуджарати", Dating::year(1592, StdNote::FIRST_KNOWN), {},
         u8"гуджаратский ''(запад Индии, 56 млн на 2011)'', авестийский",
         u8"Появился из [[ps:Deva|деванагари]] и очень похож на него, но уже старый гуджарати потерял характерную черту сверху. "
                 "Гласная по умолчанию «ə». "
@@ -1267,7 +1269,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Гурмукхи", Dating::century(16),
+        u8"Гурмукхи", Dating::century(16), {},
         u8"пенджабский",
         u8"С X века в Пенджабе использовалась письменность [[ps:Shrd|шарада]], плохо отвечавшая местному языку. Новую письменность придумал "
                 "сикхский гуру Ангад, один из основателей религии. Он основывал школы, где учились родному пенджабскому, "
@@ -1287,7 +1289,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hangul OK, installed Noto CJK font
     { "Hang", QFontDatabase::Korean,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
-        u8"Хангыль", Dating::year(1443),
+        u8"Хангыль", Dating::year(1443), {},
         u8"корейский",
         u8"Хангыль (мужской род!){{-}}корейское алфавитно-слоговое письмо. "
                 "В нём 51 чамо (буква) объединяется в группы приблизительно по слогам."
@@ -1306,7 +1308,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hani OK
     { "Hani", WS_HANI,       // Special rules for hieroglyphs, SimChi triggers them
         EcScriptType::HIEROGLYPH, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Китайские иероглифы", Dating::yapprox(-2000),
+        u8"Китайские иероглифы", Dating::yapprox(-2000), {},
         u8"китайский, японский, ранее вьетнамский и корейский",
         u8"Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, "
                     "впоследствии они видоизменились под письмо кистью и тушью. "
@@ -1327,14 +1329,14 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hanunoo OK, installed Google Noto font
     { "Hano", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Хануноо", Dating::yapprox(1300),
+        u8"Хануноо", Dating::yapprox(1300), {},
         u8"филиппинские горные народы",
         u8"Хануноо восходит к [[ps:Brah|брахми]] и похож на [[ps:Tglg|тагальский]].",
                 EcFont::HANUNOO },
     // Hatran OK, W10 none, installed Google Noto
     { "Hatr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Хатранский (ашшурский)", Dating::yapprox(-100),
+        u8"Хатранский (ашшурский)", Dating::yapprox(-100), {},
         u8"хатранский (ашшурский) арамейский",
         u8"Потомок [[ps:Armi|арамейского]]. "
                 "Использовался в Хатре (современный Ирак) до III{{_}}века, когда Хатру разрушил Шапур{{_}}I Сасанид. "
@@ -1343,7 +1345,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr", QFontDatabase::Hebrew,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Иврит", Dating::century(-2, StdNote::MODERN_FORM),
+        u8"Иврит", Dating::century(-2, StdNote::MODERN_FORM), {},
         // For translator: крымчакский = Krymchak, элемент мироздания = pillar of the Universe
         u8"иврит, ладино, идиш, караимский, крымчакский",
         u8"Иврит развился из [[ps:Armi|арамейской]] письменности через палеоеврейскую. "
@@ -1359,7 +1361,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::HEBREW },
     { "Hent", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Хэнтайгана", Dating::crange(8, 9),
+        u8"Хэнтайгана", Dating::crange(8, 9), {},
         u8"японский",
         // For translators: устав = uncial, «китайские порномультики» = Japornimation
         u8"Хэнтáйгана{{-}}общее название устаревших знаков [[ps:Hira|хирáганы]], записанных крайне небрежно."
@@ -1375,7 +1377,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Хирагана", Dating::crange(8, 9),
+        u8"Хирагана", Dating::crange(8, 9), {},
         u8"японский",
         // For translator: окончание = suffix
         u8"Около III{{_}}века японцы стали писать [[ps:Hani|китайскими иероглифами]]. "
@@ -1389,7 +1391,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Anatolian hiero OK, installed Google Noto
     { "Hluw", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Анатолийские (лувийские, хеттские) иероглифы", Dating::crange(-14, -13, StdNote::FIRST_KNOWN),
+        u8"Анатолийские (лувийские, хеттские) иероглифы", Dating::crange(-14, -13, StdNote::FIRST_KNOWN), {},
         u8"лувийский",
         u8"Называются иероглифы по месту, где они найдены ''(анатолийские, т.е. Малая Азия)'', или по языку ''(лувийские)''. "
                 "А вот название «хеттские» некорректно, хеттский никогда не{{_}}писался этими иероглифами, "
@@ -1407,7 +1409,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Пахау хмонг", Dating::year(1959, u8"первая версия"),
+        u8"Пахау хмонг", Dating::year(1959), u8"первая версия",
         u8"языки белых и зелёных хмонгов",
         // For translator: тон-гвоздик = tack for tone, author = Shong Lue Yang, первая версия = stage 1
         u8"Автор письменности Шон-лы Я заявляет, что письмо дано ему богом. "
@@ -1420,7 +1422,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // NP Hmong OK, W10 none → installed Google Noto
     { "Hmnp", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Ньякэ пуацы хмонг (алфавит Черванга)", Dating::decade(1980),
+        u8"Ньякэ пуацы хмонг (алфавит Черванга)", Dating::decade(1980), {},
         u8"языки белых и зелёных хмонгов",
         u8"В 1970‑е вьетнамские и лаосские хмонги разбежались по странам, в том числе осели в США. "
                 "О судьбе американского хмонга есть великолепный фильм «Гран-Торино» (2008)."
@@ -1432,7 +1434,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hungarian runes OK, W10 none → installed some open-source font
     { "Hung", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
-        u8"Венгерские (секейские) руны", Dating::century(10, StdNote::MAYBE_EARLIER),
+        u8"Венгерские (секейские) руны", Dating::century(10, StdNote::MAYBE_EARLIER), {},
         u8"венгерский",
         // For translator: Hi, not Hello
         u8"Неизвестно, как венгерские руны связаны с [[ps:Orkh|тюркскими]]: "
@@ -1449,7 +1451,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
-        u8"Этрусский", Dating::yapprox(-700),
+        u8"Этрусский", Dating::yapprox(-700), {},
         u8"этрусский и другие языки Италии",
         u8"Алфавит создали из [[ps:Phnx|финикийского]] и раннего [[ps:Grek|греческого]]. "
                 "В дальнейшем развился в [[ps:Latn|латинский]]."
@@ -1458,7 +1460,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Яванский", Dating::century(15),
+        u8"Яванский", Dating::century(15), {},
         u8"яванский, мелкие языки Явы",
         u8"Гласная по умолчанию «а». Знак «[[pt:virama|вирама]]» (стереть гласную) называется «пангкон» "
                 "и представляет собой не{{_}}косую чёрточку, а длинный крюк. Яванская письменность близка к [[ps:Bali|балийской]]. "
@@ -1467,7 +1469,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kayah Li OK, W10 none, installed Google Noto font
     { "Kali", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кая-ли", Dating::year(1962),
+        u8"Кая-ли", Dating::year(1962), {},
         u8"краснокаренский ''(Мьянма)''",
         u8"Кая-ли происходит из [[ps:Brah|брахми]], создана Хтаэ Бу Пхаэ в 1962 в ответ на распространение [[ps:Latn|латиницы]]{{-}}"
                 "но буквы не{{_}}имеют гласной по умолчанию, и потому это не{{_}}[[pt:abugida|абугида]]. "
@@ -1481,7 +1483,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Katakana OK, installed small version of Noto CJK Korean
     { "Kana", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Катакана", Dating::crange(8, 9),
+        u8"Катакана", Dating::crange(8, 9), {},
         u8"японский",
         u8"Около III{{_}}века японцы стали писать [[ps:Hani|китайскими иероглифами]]. "
                 "Из них произошла вспомогательная азбука манъёгана{{-}}"
@@ -1492,7 +1494,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kharoshthi OK, W10 tofu → installed Noto
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Кхароштхи", Dating::century(-4),
+        u8"Кхароштхи", Dating::century(-4), {},
         u8"гандхари, пали, сакские, санскрит",
         u8"Кхароштхи (индобактрийское, кабульское письмо) применялось в Средней Азии и Афганистане до III{{_}}века. "
             "Происходит из [[ps:Armi|арамейского]] и считается сестринским с [[ps:Brah|брахми]], потомков нет. "
@@ -1508,7 +1510,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     { "Khmr", QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кхмерский", Dating::year(611, StdNote::FIRST_KNOWN),
+        u8"Кхмерский", Dating::year(611, StdNote::FIRST_KNOWN), {},
         u8"кхмерский ''(Камбоджа)''",
         u8"Как и другие языки Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. "
                 "Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]]."
@@ -1524,7 +1526,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::KHMER },
     { "Khoj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ходжки", Dating::crange(14, 16),
+        u8"Ходжки", Dating::crange(14, 16), {},
         u8"качи, синдхи ''(Индия)''",
         u8"Традиционно считается, что ходжки придумал Пир Садардин (XIV{{_}}век), посланный в Индию проповедовать ислам. "
                 "По более приземлённой версии, это выделившийся в XVI{{_}}веке вариант ланды{{-}}"
@@ -1543,7 +1545,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Khitan small OK, installed a font
     { "Kits", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::CJK,
-        u8"Малое киданьское письмо", Dating::year(925),
+        u8"Малое киданьское письмо", Dating::year(925), {},
         u8"киданьский ''(северо-восточный Китай)''",
         u8"Использовалось в государстве Ляо (северо-восточный Китай). "
                 "Изобретено около 925 учёным по имени Елюй Дела на основе [[ps:Ougr|уйгурского]]. "
@@ -1560,7 +1562,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кáннада", Dating::century(14, u8"отделилась от сестринской [[ps:Telu|телугу]]"),
+        u8"Кáннада", Dating::century(14), u8"отделилась от сестринской [[ps:Telu|телугу]]",
         u8"кáннада ''(Юго-Западная Индия, 38 млн на 2001)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Гласная по умолчанию «а», заменяется огласовками:<br>"
@@ -1573,7 +1575,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кайтхи", Dating::century(16),
+        u8"Кайтхи", Dating::century(16), {},
         u8"хинди, мелкие языки Индии",
         u8"Название письменности происходит от касты «каястха» (конторщики). "
                 "Является очень [[pt:cursive|беглым]] вариантом [[ps:Deva|деванагари]]. "
@@ -1586,7 +1588,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Lanna OK, W10 none, installed Google Noto font
     { "Lana", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ланна (тай-тхам)", Dating::year(1376, StdNote::FIRST_KNOWN),
+        u8"Ланна (тай-тхам)", Dating::year(1376, StdNote::FIRST_KNOWN), {},
         u8"юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все{{-}}Таиланд",
         u8"Происходит из северотайского государства Ланна или Ланнатай (1296—1558)."
             "<p>Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях "
@@ -1600,7 +1602,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Lao OK, W10 partial, installed SengBuhan font
     { "Laoo", QFontDatabase::Lao,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лаосский", Dating::yapprox(1350),
+        u8"Лаосский", Dating::yapprox(1350), {},
         u8"лаосский",
         u8"Лаосский алфавит стандартизирован в XIV веке. Как и [[ps:Thai|тайский]], происходит из [[ps:Khmr|кхмерского]]. "
                 "После реформы, сделанной коммунистами в 1960‑е, исчезли гласная по умолчанию и знак [[pt:virama|вирамы]], "
@@ -1619,7 +1621,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Latin OK, managed to modify
     { "Latn", QFontDatabase::Latin,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Латиница", Dating::yapprox(-700),
+        u8"Латиница", Dating::yapprox(-700), {},
         u8"большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; "
                 "вьетнамский, карельский, курдский, эсперанто",
         u8"Латиница{{-}}[[ps:Grek|древнегреческое]] письмо, адаптированное около 700{{bc}} "
@@ -1629,11 +1631,12 @@ constinit const uc::Script uc::scriptInfo[] {
             "<p>Латинский язык давно мёртв, но широкая территория Римской империи, миссионерская деятельность Папского престола "
                 "и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. "
                 "Латиница используется в математике, медицине, фонетике, программировании."
-            "<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан." },
+            "<p>С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.",
+                EcFont::NORMAL },
     // Lepcha OK, W10 none, installed Google Noto font
     { "Lepc", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лепча (ронг)", Dating::yapprox(1700),
+        u8"Лепча (ронг)", Dating::yapprox(1700), {},
         u8"лепча ''(Индия, Бутан, Непал, 65 тыс. на 2011)''",
         u8"Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, "
                     "потому буквы напоминают тибетские, повёрнутые на 90°. "
@@ -1649,7 +1652,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Limbu OK, W10 none, installed Google Noto font
     { "Limb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лимбу", Dating::century(18),
+        u8"Лимбу", Dating::century(18), {},
         u8"лимбу ''(Непал, 380 тыс. на 2011)''",
         u8"Гласная по умолчанию «о»."
             "<p>Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой {{sm|ᤀ}}, похожей на непальский флаг. "
@@ -1659,7 +1662,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Linear A OK, W10 none, installed Google Noto font
     { "Lina", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Линейное письмо А", Dating::yapprox(-1800),
+        u8"Линейное письмо А", Dating::yapprox(-1800), {},
         u8"предположительно минойский",
         u8"Использовалось на островах Крит и Киклады. "
                 "Большая часть надписей канцелярские и выполнены на глине, встречаются нарисованные чернилами на сосудах и других предметах. "
@@ -1675,7 +1678,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Linear B OK, W10 none, installed Google Noto font
     { "Linb", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Линейное письмо Б", Dating::yapprox(-1450),
+        u8"Линейное письмо Б", Dating::yapprox(-1450), {},
         u8"микенский ''(протогреческий)''",
         u8"Достаточно точно известен момент утверждения на Крите греческой власти{{-}}1450{{bc}} "
                 "[[ps:Lina|Линейное письмо А]] начало выходить из использования."
@@ -1689,7 +1692,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лису (алфавит Фрейзера)", Dating::year(1915),
+        u8"Лису (алфавит Фрейзера)", Dating::year(1915), {},
         u8"лису ''(Китай, 940 тыс. на 2007)''",
         // For translator: Sara Ba Thaw
         u8"Алфавит придуман бирманским проповедником Сара Ба Тау и британским миссионером Джеймсом Фрейзером. "
@@ -1706,7 +1709,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [font???] Lycian
     { "Lyci", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ликийский", Dating::century(-6),
+        u8"Ликийский", Dating::century(-6), {},
         u8"ликийский ''(Малая Азия)''",
         u8"Алфавит придуман под влиянием [[ps:Phnx|финикийского]] и [[ps:Grek|греческого]]. "
                 "Так что сходство с греческим алфавитом обманчиво: часть букв финикийские. "
@@ -1719,7 +1722,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [font???] Lydian
     { "Lydi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
-        u8"Лидийский (сардийский)", Dating::crange(-8, -7),
+        u8"Лидийский (сардийский)", Dating::crange(-8, -7), {},
         u8"лидийский ''(=сардийский, Малая Азия)''",
         u8"Алфавит близок к [[ps:Lyci|ликийскому]], произошёл из [[ps:Phnx|финикийского]]. "
                 "Вытеснен [[ps:Grek|греческим]] около III{{_}}века{{bc}}, когда Лидию завоевал Александр Македонский."
@@ -1731,7 +1734,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mahajani OK, W10 none, installed Google Noto
     { "Mahj", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Махаджани", Dating::unknown(),
+        u8"Махаджани", Dating::unknown(), {},
         u8"хинди, пенджабский, марвари ''(Северо-Западная Индия, 7,8 млн на 2011)''",
         u8"Ещё один, как и [[ps:Kthi|кайтхи]], отголосок индийской кастовой системы{{-}}эта письменность использовалась банкирами "
                 "и бухгалтерами вплоть до XX{{_}}века, и поныне в крайне малом пользовании."
@@ -1747,7 +1750,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Makasar OK, installed strange font by Anshuman Pandey
     { "Maka", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Макасарский (птичье письмо)", Dating::crange(16, 17),
+        u8"Макасарский (птичье письмо)", Dating::crange(16, 17), {},
         u8"макасарский ''(южный Сулавеси)''",
         u8"Происходит из кави (старояванского), а оно из паллавы (ранней [[ps:Gran|грантхи]]). "
                 "За форму букв письмо получило прозвище «птичье». "
@@ -1767,7 +1770,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Мандейский", Dating::crange(2, 7),
+        u8"Мандейский", Dating::crange(2, 7), {},
         u8"мандейский ''(Иран и Ирак)''",
         // For translator: Marsh Arabs
         u8"Произошла из [[ps:Armi|арамейского]] или [[ps:Prti|парфянского]] письма. "
@@ -1779,7 +1782,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Manichaean OK, W10 has not, installed Google Noto
     { "Mani", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Манихейская", Dating::century(3),
+        u8"Манихейская", Dating::century(3), {},
         u8"согдийский, парфянский, среднеперсидский",
         u8"Происходит из [[ps:Syrc|сирийского]] и связано с распространением религии манихейства. "
                 "Когда сасанидская Персия около 300 изгнала манихеев, источники стали встречаться севернее, в Средней Азии. "
@@ -1789,7 +1792,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Marchen OK, W10 none, installed Google Noto
     { "Marc", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Марчхен", Dating::century(7),
+        u8"Марчхен", Dating::century(7), {},
         u8"шангшунгский ''(Тибет)'', тибетские (в религии ''бон'')",
         u8"Шангшунгский{{-}}вымерший в X{{_}}веке сино-тибетский язык, на котором писали минимум пятью разными письменностями. "
                 "Из них в Юникоде{{_}}14 есть только марчхен, а остальные [[pt:unification|унифицированы]] с ним. "
@@ -1805,7 +1808,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Medefaidrin OK, W10 none, installed Google Noto
     { "Medf", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Обэри-окаимэ (медефайдрин)", Dating::yapprox(1931),
+        u8"Обэри-окаимэ (медефайдрин)", Dating::yapprox(1931), {},
         u8"обэри-окаимэ/медефайдрин ''(Нигерия)''",
         u8"Искусственный язык и письменность для него создали Майкл Укпонг и Акпан Акпан Удофиа около 1931 в нигерийской "
                     "околохристианской церкви ''обэри-окаимэ''. "
@@ -1820,7 +1823,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mende Kikakui OK, W10 none → installed Google Noto
     { "Mend", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Кикакуи (менде)", Dating::yapprox(1920),
+        u8"Кикакуи (менде)", Dating::yapprox(1920), {},
         u8"менде ''(Сьерра-Леоне, 1,5 млн на 2006)''",
         u8"Изобрёл кикакуи исламский проповедник Мохаммед Турай. "
                 "Изначальное письмо из 42 символов было [[pt:abugida|абугидой]], "
@@ -1833,19 +1836,19 @@ constinit const uc::Script uc::scriptInfo[] {
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Мероитский курсив", Dating::century(-3),
+        u8"Мероитский курсив", Dating::century(-3), {},
         u8"мероитский; возможно, древненубийский",
         CT_MEROITIC, EcFont::MEROITIC },
     // Meroitic OK, W10 none
     { "Mero", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::AFRICA,
-        u8"Мероитские иероглифы", Dating::century(-3),
+        u8"Мероитские иероглифы", Dating::century(-3), {},
         u8"мероитский; возможно, древненубийский",
         CT_MEROITIC, EcFont::MEROITIC },
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym", QFontDatabase::Malayalam,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Малаялам", Dating::year(830, StdNote::FIRST_KNOWN),
+        u8"Малаялам", Dating::year(830, StdNote::FIRST_KNOWN), {},
         u8"малая́лам ''(Южная Индия, 35 млн на 2019)''",
         u8"Происходит из [[ps:Gran|грантхи]]. "
                 "Гласная по умолчанию «а». "
@@ -1863,7 +1866,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Modi OK, W10 none, installed Google Noto
     { "Modi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Моди", Dating::yrange(1200, 1600),
+        u8"Моди", Dating::yrange(1200, 1600), {},
         u8"маратхи ''(Западная Индия, 83 млн на 2011)''",
         u8"Письмо родственное с [[ps:Deva|деванагари]], но значительно более [[pt:cursive|беглое]]. "
                 "Есть две стандартных теории появления: Хемадри Пандит, дипломат и министр (около 1260), "
@@ -1884,7 +1887,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mongol OK, dislike standard font of W10 → installed Google Noto
     { "Mong", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR_COL, EcContinent::ASIA,
-        u8"Монгольская (старая)", Dating::special(u8"1204 (старая), 1648 (тодо-бичиг)"),
+        u8"Монгольская (старая)", Dating::special(), u8"1204 (старая), 1648 (тодо-бичиг)",
         u8"монгольский",
         u8"В 1204 монголы завоевали уйгуров и позаимствовали [[ps:Ougr|алфавит]], восходящий к [[ps:Syrc|сирийскому]]. "
                 "Единственная действующая система с записью слева направо по столбцам, из-за чего компьютеры "
@@ -1904,7 +1907,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Mro OK, installed Google Noto font
     { "Mroo", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Мру", Dating::decade(1980),
+        u8"Мру", Dating::decade(1980), {},
         u8"мру ''(Бангладеш, Индия, Мьянма, 20…100 тыс. по разным подсчётам)''",
         u8"Большинство мру{{-}}буддисты, и власти исламской Бангладеш не{{_}}желают поддерживать их."
             "<p>Письмо мру придумал в 1980-е основатель религии ''крама'' Менлай Муранг. "
@@ -1918,7 +1921,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Meetei Mayek OK, W10 does not have extensions → installed Google Noto
     { "Mtei", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Манипури (мейтей-майек)", Dating::yapprox(1500, StdNote::FIRST_KNOWN),
+        u8"Манипури (мейтей-майек)", Dating::yapprox(1500, StdNote::FIRST_KNOWN), {},
         u8"манипури ''(Индия)''",
         u8"Считается, что письмо появилось в XI{{_}}веке. "
                 "С XVIII{{_}}века перешли на [[ps:Beng|бенгальский]]. "
@@ -1933,7 +1936,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Multani OK, W10 none → installed Google Noto
     { "Mult", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Мултани", Dating::century(18),
+        u8"Мултани", Dating::century(18), {},
         u8"сирайки, синдхи, пенджабский ''(Пакистан, Индия)''",
         u8"Сирайки{{-}}почти поголовно мусульмане. "
                 "На 2010‑е их 14…19{{_}}млн по разным источникам только в Пакистане. "
@@ -1949,7 +1952,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Myanmar OK, W10 “Myanmar Text”, W7 none → installed Google Noto font
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Бирманская", Dating::year(1035, StdNote::FIRST_KNOWN),
+        u8"Бирманская", Dating::year(1035, StdNote::FIRST_KNOWN), {},
         u8"бирманский ''(Мьянма)'', пали ''(мёртвый, культовый в буддизме)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Согласная буква означает слог с «ə». "
@@ -1963,7 +1966,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Нандинагари", Dating::century(8, StdNote::FIRST_KNOWN),
+        u8"Нандинагари", Dating::century(8, StdNote::FIRST_KNOWN), {},
         u8"санскрит, кáннада ''(Южная Индия)''",
         u8"Происходит из нагари, промежуточной формы индийского письма. "
                 "Сестра [[ps:Deva|деванагари]], «нандинагари» означает «письмо священного города». "
@@ -1982,7 +1985,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // North Arabian OK, W10 none → installed Google Noto
     { "Narb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Древняя североаравийская", Dating::century(-3, StdNote::FIRST_KNOWN),
+        u8"Древняя североаравийская", Dating::century(-3, StdNote::FIRST_KNOWN), {},
         u8"североаравийский оазисов, сафаитский, хисмайский и другие",
         u8"Понятие относится ко всем южносемитским письменностям, за исключением [[ps:Sarb|южноаравийской]]. "
                 "Происходят из протосинайской письменности. "
@@ -1992,7 +1995,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nabataean OK, W10 none → installed Google Noto
     { "Nbat", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Набатейский", Dating::century(-2),
+        u8"Набатейский", Dating::century(-2), {},
         u8"набатейский",
         u8"Происходит из [[ps:Armi|арамейского]]. "
                 "Язык применялся в Набатее (столица Пéтра на территории современной Иордании) со II{{_}}века{{bc}} "
@@ -2004,7 +2007,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Newa OK, W10 none → installed Google Noto
     { "Newa", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Неварский (прахалит)", Dating::year(1654, u8"первое свидетельство"),
+        u8"Неварский (прахалит)", Dating::year(1654), u8"первое свидетельство",
         u8"бхаса ''(=неварский, Непал)'', санскрит, пали",
         u8"Истоки неизвестны{{-}}разные стили письма существовали с X{{_}}века. "
                 "Первое свидетельство{{-}}непальский царь Пратап Малла написал в 1654 «письмо невара». "
@@ -2021,7 +2024,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // NKo ok, W10 “Ebrima”, W7 lacks a few chars → installed Google Noto
     { "Nkoo", QFontDatabase::Nko,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
-        u8"Нко", Dating::year(1949),
+        u8"Нко", Dating::year(1949), {},
         u8"языки манден ''(Западная Африка)''",
         u8"Алфавит создал гвинейский писатель Соломана Канте в 1949 году. "
                 "Применяется в основном в Гвинее, Кот-д’Ивуаре и Мали. "
@@ -2031,7 +2034,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Nushu OK, W10 off, installed Google Noto
     { "Nshu", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::DEAD, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        u8"Нюй-шу", Dating::special(u8"900 (предположительно), 1300 (доказано)"),
+        u8"Нюй-шу", Dating::special(), u8"900 (предположительно), 1300 (доказано)",
         u8"один из диалектов сянского ''(Хунань, Китай)''",
         u8"Нюй-шу существовало веками и использовалось как женское письмо: [[ps:Hani|грамоте]] учили мужчин, а женщины "
                 "использовали более простое слоговое письмо. "
@@ -2054,7 +2057,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam", QFontDatabase::Ogham,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
-        u8"Огамическая", Dating::century(4, StdNote::FIRST_KNOWN),
+        u8"Огамическая", Dating::century(4, StdNote::FIRST_KNOWN), {},
         u8"древнеирландский, пиктский",
         u8"Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X{{_}}века. "
                 "Заодно в ходу была [[ps:Latn|латиница]], потому есть мнение, что это тайнопись. "
@@ -2064,7 +2067,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ol Chiki OK, W10 “Nirmala UI”, W7 none → installed Google Noto
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ол-чики", Dating::year(1925),
+        u8"Ол-чики", Dating::year(1925), {},
         u8"сантальский ''(Индия)''",
         u8"Алфавит придумал в 1925 Рагхунатх Мурму. До этого пользовались [[ps:Beng|бенгальской]] письменностью, "
                 "[[ps:Orya|орией]] или [[ps:Latn|латиницей]], хотя большинство населения было неграмотным. "
@@ -2075,7 +2078,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::OLCHIKI },
     { "Orkh", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Тюркские (орхоно-енисейские) руны", Dating::century(6),
+        u8"Тюркские (орхоно-енисейские) руны", Dating::century(6), {},
         u8"орхоно-тюркский, енисейско-кыргызский и др. ''(современная Монголия, Прибайкалье, Синьцзян-Уйгурский округ)''",
         u8"Русские исследователи начали собирать информацию ещё с Петра{{_}}I, письмена сразу же сравнили с [[ps:Runr|германскими рунами]], "
                 "тем более Даниэлю Мессершмидту действительно помогали пленённые под Полтавой шведы. "
@@ -2090,7 +2093,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Oriya OK, took Noto + everything bad manually fixed
     { "Orya", QFontDatabase::Oriya,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ория (одия)", Dating::century(14, StdNote::MODERN_FORM),
+        u8"Ория (одия)", Dating::century(14, StdNote::MODERN_FORM), {},
         u8"ори́я ''(=оди́я, Восточная Индия, 35 млн на 2019)''",
         u8"Ори́я (традиционно, но неверно считается однокоренным с ''арийцами'') развилась из [[ps:Sidd|сиддхаматрики]], "
                 "письменности с разорванной верхней чертой."
@@ -2105,7 +2108,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Osage OK, W10 Gadugi
     { "Osge", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AMERICA,
-        u8"Осейдж", Dating::year(2006),
+        u8"Осейдж", Dating::year(2006), {},
         u8"осейдж ''(индейский язык группы сиу)''",
         u8"Письменность придумал в 2006 Герман Монгрейн Лукаут для возрождаемого языка осейдж (последняя носительница умерла в 2005). "
                 "Он выяснил, что ученики переносили английскую орфографию на индейский. "
@@ -2116,7 +2119,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Osmanya OK, W10 Ebrima
     { "Osma", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Османья (сомалийский)", Dating::yapprox(1920),
+        u8"Османья (сомалийский)", Dating::yapprox(1920), {},
         u8"сомалийский",
         u8"Придуман ≈1920 Османом Юсуфом Кенадидом, братом султана Али Юсуфа Кенадида. "
                 "Письменность получила определённое распространение в Сомали, но конкуренция с новоприбывшей [[ps:Latn|латиницей]] "
@@ -2128,7 +2131,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Uyghur OK, installed Noto font
     { "Ougr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA,
-        u8"Староуйгурский", Dating::century(8),
+        u8"Староуйгурский", Dating::century(8), {},
         u8"староуйгурский, восточноуйгурский",
         u8"Промежуточная стадия между [[ps:Sogd|согдийским]] и [[ps:Mong|монгольским]] письмом. "
                 "Согдийцы писали справа налево, сильно заваливая текст влево{{-}}отсюда письмо слева направо по столбцам. "
@@ -2139,7 +2142,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Plamyrene OK, W10 none, installed Google Noto
     { "Palm", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Пальмирский", Dating::year(-44, StdNote::FIRST_KNOWN),
+        u8"Пальмирский", Dating::year(-44, StdNote::FIRST_KNOWN), {},
         u8"пальмирский арамейский",
         u8"Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). "
                 "Происходит из [[ps:Armi|арамейского]]. "
@@ -2151,7 +2154,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pau Cin Hau OK, W10 none, installed Google Noto
     { "Pauc", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Письмо По Чин Хо", Dating::special(u8"1902 (первое иероглифическое), 1931 (алфавитное)"),
+        u8"Письмо По Чин Хо", Dating::special(), u8"1902 (первое иероглифическое), 1931 (алфавитное)",
         u8"тедим (=зоми) и другие северные куки-чинские языки ''(Мьянма)''",
         u8"Письмо изобретено По Чин Хо (1859–1948), основателем новой религии из народа тедим. "
                 "Религия называлась ''Laipian''{{-}}«религия письма». "
@@ -2165,7 +2168,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Древнепермский (коми-зырянский, анбур)", Dating::year(1372),
+        u8"Древнепермский (коми-зырянский, анбур)", Dating::year(1372), {},
         u8"коми-зырянский, коми-пермяцкий",
         u8"Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] "
                     "с вкраплением [[ps:Grek|греческого]] и местных рун. "
@@ -2178,7 +2181,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA,
-        u8"Монгольское квадратное (Пагба-ламы)", Dating::year(1269),
+        u8"Монгольское квадратное (Пагба-ламы)", Dating::year(1269), {},
         u8"китайский, монгольский, тибетский, санскрит, уйгурский",
         u8"[[ps:Mong|Монгольское]] письмо использовало [[ps:Ougr|уйгурский]] алфавит с минимальными изменениями. "
                 "С захватом монголами Китая у императора Хубилая возникли проблемы с коммуникацией между двором и многонациональным народом, "
@@ -2198,7 +2201,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Inscriptional Pahlavi OK, W10 Historic
     { "Phli", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Пехлевийские надписи", Dating::century(-2),
+        u8"Пехлевийские надписи", Dating::century(-2), {},
         u8"иранские языки",
         u8"Язык иранских надписей на глине, самый ранний вариант письма пехлеви. "
                 "Использовался до V{{_}}века, начала Сасанидской империи.",
@@ -2206,7 +2209,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Psalter Pahlavi OK, W10 none → installed Google Noto
     { "Phlp", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Псалтырское пехлеви", Dating::century(6, StdNote::FIRST_KNOWN),
+        u8"Псалтырское пехлеви", Dating::century(6, StdNote::FIRST_KNOWN), {},
         u8"среднеперсидский",
         u8"Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. "
                 "Есть лишь два источника: 12-страничный фрагмент Псалтыря VI в., найденный в Синцзян-Уйгурском округе, и крест из Афганистана. "
@@ -2216,7 +2219,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Phoenician OK, because of importance installed Google Noto
     { "Phnx", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Финикийский", Dating::century(-11),
+        u8"Финикийский", Dating::century(-11), {},
         u8"финикийский и другие семитские (моавитский, филистимский…), пунический",
         u8"Названия букв [[pt:acrophonic|акрофонические]]: алеф=бык, бет=дом, гимел=верблюд…"
             "<p>Хоть не{{_}}финикийский, а [[ps:Ugar|угаритский]] алфавит считается первым расшифрованным консонантным "
@@ -2235,7 +2238,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Miao/Pollard OK, W10 none, installed Google Noto
     { "Plrd", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Мяо (письмо Полларда)", Dating::year(1936),
+        u8"Мяо (письмо Полларда)", Dating::year(1936), {},
         u8"языки разноцветных и сычуаньских хмонгов (=мяо), лису, и",
         u8"Придумана в 1936 проповедником методистской церкви Сэмюэлем Поллардом на основе [[ps:Cans|канадской слоговой]]. "
                 "Первая попытка закодировать мяо была в 1997. "
@@ -2246,7 +2249,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Inscriptional Parthian OK, W10 Historic
     { "Prti", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Парфянские надписи", Dating::yapprox(-250),
+        u8"Парфянские надписи", Dating::yapprox(-250), {},
         u8"парфянский",
         u8"Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). "
                 "Впоследствии уступил персидскому. "
@@ -2255,7 +2258,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Rejang OK, installed Google Noto font
     { "Rjng", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Реджанг", Dating::yapprox(1750, StdNote::FIRST_KNOWN),
+        u8"Реджанг", Dating::yapprox(1750, StdNote::FIRST_KNOWN), {},
         u8"реджанг ''(Суматра, 200–350 тыс.)''",
         u8"Большинство из 200 тысяч говорящих неграмотно. "
                 "Полностью заменена [[ps:Latn|латиницей]]."
@@ -2268,7 +2271,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Rohingya, installed Google Noto font
     { "Rohg", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Ханифи (рохинджа)", Dating::decade(1980),
+        u8"Ханифи (рохинджа)", Dating::decade(1980), {},
         u8"рохинджа ''(Бангладеш, Мьянма, &lt;2 млн на 2012)''",
         u8"Рохинджа или руэйнджа{{-}}небольшой преимущественно исламский народ, раскиданный по Бангладеш, Мьянме и сопредельным странам. "
                 "С XIX{{_}}века известно письмо [[ps:Arab|арабицей]]."
@@ -2279,7 +2282,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Runes OK, several tofu → installed Google Noto font
     { "Runr", QFontDatabase::Runic,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Руны", Dating::century(2, StdNote::FIRST_KNOWN),
+        u8"Руны", Dating::century(2, StdNote::FIRST_KNOWN), {},
         u8"древние германские и скандинавские языки",
         u8"Руны имеют специфическую угловатую форму, приспособленную для вырезания: вдоль и поперёк волокон дерево сопротивляется по-разному, "
                     "потому сложно делать кривые линии. "
@@ -2300,7 +2303,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Самаритянский", Dating::yrange(-600, -200),
+        u8"Самаритянский", Dating::yrange(-600, -200), {},
         u8"иврит, самаритянский арамейский",
         u8"Происходит из палеоеврейского письма. По Библии, самаритяне пришли в Палестину из Двуречья и приняли еврейскую "
                 "религию и культуру. На 2021 существует не{{_}}более 700 самаритян.",
@@ -2309,7 +2312,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [font???] South Arabian
     { "Sarb", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
-        u8"Древняя южноаравийская", Dating::century(-9, StdNote::FIRST_KNOWN),
+        u8"Древняя южноаравийская", Dating::century(-9, StdNote::FIRST_KNOWN), {},
         u8"южноаравийские ''(сабейский, катабанский и прочие)'', гéэз",
         u8"Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. "
                 "В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].",
@@ -2317,7 +2320,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Саураштра", Dating::century(19, StdNote::MAYBE_EARLIER),
+        u8"Саураштра", Dating::century(19, StdNote::MAYBE_EARLIER), {},
         u8"саураштра ''(Индия, 247{{_}}тыс. на 2007, письменность используется только в штате Тамилнад)''",
         u8"Происхождение неясно, все [[ps:Taml|тамильские]] саураштра двуязычны, а в остальных штатах пишут на "
                 "[[ps:Deva|деванагари]], [[ps:Gujr|гуджарати]], [[ps:Telu|телугу]]. "
@@ -2329,7 +2332,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sutton SignWriting OK, installed Google Noto font
     { "Sgnw", QFontDatabase::Any,
         EcScriptType::NONTEXT, EcLangLife::NEW, EcWritingDir::TD, EcContinent::NONE,
-        u8"Жестовое письмо Саттон", Dating::year(1974),
+        u8"Жестовое письмо Саттон", Dating::year(1974), {},
         u8"жестовые языки, в частности амслен <i>(язык американских глухих)</i>",
         u8"Систему придумала в 1974 танцовщица Валери Саттон на основе созданной двумя годами ранее системы записи танцев. "
                 "Впоследствии она же придумала системы для записи пантомимы, других видов спорта (фигурного катания, каратэ…), "
@@ -2350,7 +2353,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Shavian OK, W10 Segoe UI Historic
     { "Shaw", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Алфавит Бернарда Шоу", Dating::year(1960),
+        u8"Алфавит Бернарда Шоу", Dating::year(1960), {},
         u8"английский, эсперанто",
         u8"Ирландский писатель Джордж Бернард Шоу работал в комитете Би-Би-Си по произношению и увлекался стенографией. "
                 "Так что он завещал сделать фонетический алфавит для английского, "
@@ -2366,7 +2369,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sharada OK, W10 none → installed Google Noto
     { "Shrd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Шарада", Dating::yapprox(700),
+        u8"Шарада", Dating::yapprox(700), {},
         u8"санскрит, кашмирский",
         u8"Шарада происходит из гупты (северной ветви [[ps:Brah|брахми]]), была распространена в VIII–XII{{_}}веке "
                     "в северо-западной Индии и Афганистане. "
@@ -2386,7 +2389,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Siddham OK, W10 none, installed Google Noto font
     { "Sidd", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Сиддхаматрика (сиддхам, бондзи)", Dating::century(6),
+        u8"Сиддхаматрика (сиддхам, бондзи)", Dating::century(6), {},
         u8"санскрит",
         u8"Средневековое североиндийское письмо, появившееся из [[ps:Brah|брахми]] и связанное с буддизмом. "
                 "Часта запись кистью на китайский манер. "
@@ -2406,7 +2409,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sindhi (Khudawadi) OK, W10 none, installed Google Noto font
     { "Sind", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кхудабади (синдхи)", Dating::century(16),
+        u8"Кхудабади (синдхи)", Dating::century(16), {},
         u8"синдхи ''(Пакистан, Индия, 32 млн на 2010-е)''",
         u8"Письмо названо в честь пакистанского города Кхудабад. "
                 "В 1868 году объявлено британской администрацией основным письмом синдхов. "
@@ -2421,7 +2424,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Сингальский", Dating::century(13, u8"в современном виде"),
+        u8"Сингальский", Dating::century(13), u8"в современном виде",
         u8"сингальский ''(Шри-Ланка, 17 млн на 2012)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Писать на Шри-Ланке начали с III{{_}}века, и к XIII{{_}}веку письмо сформировалось. "
@@ -2438,17 +2441,17 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sogdian OK, W10 None → installed Google Noto
     { "Sogd", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
-        u8"Согдийский", Dating::yapprox(500),
+        u8"Согдийский", Dating::yapprox(500), {},
         u8"согдийский ''(Самарканд{{-}}сейчас в Узбекистане)''", CT_SOGDIAN, EcFont::SOGDIAN },
     // Old Sogdian OK, W10 None → installed Google Noto
     { "Sogo", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Старосогдийский", Dating::yapprox(100),
+        u8"Старосогдийский", Dating::yapprox(100), {},
         u8"согдийский ''(Самарканд{{-}}cейчас в Узбекистане)''", CT_SOGDIAN, EcFont::OLD_SOGDIAN },
     // Sora Sompeng OK, W10 Nirmala UI
     { "Sora", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Соранг-сомпенг", Dating::year(1936),
+        u8"Соранг-сомпенг", Dating::year(1936), {},
         u8"сора ''(Индия, 400{{_}}тыс. на 2011)''",
         u8"Сора или савара{{-}}небольшой уязвимый австроазиатский (не индоевропейский!) язык Восточной Индии. "
                 "Письменность придумал в 1936 Мангей Гоманго, до этого писали [[ps:Latn|латиницей]]. "
@@ -2461,7 +2464,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Soyombo OK, W10 none → installed Google Noto
     { "Soyo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Соёмбо", Dating::year(1686),
+        u8"Соёмбо", Dating::year(1686), {},
         u8"монгольский, лхасский тибетский, санскрит",
         u8"Письменность придумал буддийский монах Дзанабáдзар, художник и автор квадратного письма [[ps:Zanb|имени себя]]. "
                 "Название из санскритского ''сваямбху{{-}}сотворение самого себя''. "
@@ -2478,7 +2481,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sundanese OK, even W10 off → installed Google Noto
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Сунданский", Dating::century(14),
+        u8"Сунданский", Dating::century(14), {},
         u8"сунданский ''(Ява)''",
         u8"Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. "
                 "Брахмийская абугида с гласной по умолчанию «а». "
@@ -2495,7 +2498,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Силхети-нагари", Dating::century(15),
+        u8"Силхети-нагари", Dating::century(15), {},
         u8"силхетский ''(Бангладеш, Индия, 10 млн на 2017)''",
         u8"По одной из теорий, письменность произошла из [[ps:Kthi|кайтхи]] и изобретена мусульманами. "
                 "За простоту письменность была любима поэтами XIX{{_}}века, но к середине XX{{_}}века уступила [[ps:Beng|бенгальской]]. "
@@ -2513,7 +2516,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc", QFontDatabase::Syriac,
         EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Сирийский", Dating::century(1),
+        u8"Сирийский", Dating::century(1), {},
         u8"сирийский ''(исп. как литургический)'', новоарамейские, малаялам, согдийский",
         u8"Потомок [[ps:Armi|арамейского]] алфавита, впоследствии развившийся в [[ps:Arab|арабицу]]. "
                 "Используется малыми семитскими народами. В сирийском письме уже видны некоторые особенности арабицы: "
@@ -2531,7 +2534,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tagbanwa OK, W10 off → installed Google Noto
     { "Tagb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Тагбанва", Dating::yapprox(1300),
+        u8"Тагбанва", Dating::yapprox(1300), {},
         u8"языки о. Палаван ''(Филиппины)''",
         u8"Происходит из [[ps:Tglg|тагальской]]. "
                 "Осталось не{{_}}более 25000 людей, говорящих на языках тагбанва, новые поколения предпочитают говорить по-тагальски. "
@@ -2543,7 +2546,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Takri OK, W10 none → installed Google Noto
     { "Takr", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Такри", Dating::crange(14, 18),
+        u8"Такри", Dating::crange(14, 18), {},
         u8"малые языки Северной Индии и Пакистана",
         u8"Происходит из [[ps:Shrd|шарады]]. "
                 "Ранее такри широко применялся в делопроизводстве, "
@@ -2559,7 +2562,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Tai Le OK, M$ has a good font
     { "Tale", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Лы", Dating::yapprox(1200),
+        u8"Лы", Dating::yapprox(1200), {},
         u8"дайские (=лы; ''Китай, Вьетнам, Лаос, Мьянма, Таиланд'')",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Тона изначально не{{_}}записывались. "
@@ -2576,7 +2579,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // New Tai Lue OK, M$ has a good font
     { "Talu", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Новое письмо лы", Dating::decade(1950),
+        u8"Новое письмо лы", Dating::decade(1950), {},
         u8"дайские (=лы; ''Китай; общины лы в других странах пользуются старым письмом'')",
         u8"Созданный в 1950‑е годы китайскими властями алфавит встретил сопротивление народа, и Китай пошёл по пути "
                 "постепенного упрощения [[ps:Tale|старого письма лы]]."
@@ -2587,7 +2590,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tamil BMP OK, different fonts in W10 and W7
     { "Taml", QFontDatabase::Tamil,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тамильский", Dating::crange(6, 9),
+        u8"Тамильский", Dating::crange(6, 9), {},
         u8"тамильский ''(Индия, Шри-Ланка, Сингапур)''",
         u8"Письменность произошла из [[ps:Brah|брахми]] через паллаву (старую [[ps:Gran|грантху]]). "
                 "Гласная по умолчанию «а». "
@@ -2605,7 +2608,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tangut OK, installed Google Noto
     { "Tang", QFontDatabase::Any,
         EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::TANGUT, EcContinent::CJK,
-        u8"Тангутский", Dating::year(1036),
+        u8"Тангутский", Dating::year(1036), {},
         u8"тангутский ''(северо-западный Китай)''",
         u8"Очень сложная иероглифическая система, существовавшая в тангутском царстве Си Ся (северо-западный Китай). "
                 "Самые простые иероглифы состоят из 4{{_}}черт, в иероглифе «один» их 6. "
@@ -2622,7 +2625,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tai Viet OK, installed Google Noto font
     { "Tavt", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тай-вьет", Dating::century(16),
+        u8"Тай-вьет", Dating::century(16), {},
         u8"языки чёрных тай ''(Вьетнам)''",
         u8"Происходит из [[ps:Thai|старотайского]] (царство Сукхотаи). "
                 "Впервые стандартизирована в 1961, позднее под эгидой ЮНЕСКО в 2006."
@@ -2633,7 +2636,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Телугу", Dating::century(14, u8"отделилась от [[ps:Knda|каннады]]"),
+        u8"Телугу", Dating::century(14), u8"отделилась от [[ps:Knda|каннады]]",
         u8"телугу ''(Юго-Восточная Индия, 83 млн на 2011)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Около 1300 отделилась от [[ps:Knda|каннады]], являющейся сестринской. "
@@ -2651,7 +2654,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Тифинаг (берберский)", Dating::special(u8"до III в. (древняя консонантная), XX в. (современная)"),
+        u8"Тифинаг (берберский)", Dating::special(), u8"до III в. (древняя консонантная), XX в. (современная)",
         u8"туарегские и другие берберские ''(Марокко)''",
         u8"Происхождение староливийского письма неясно, обычно считают, что из [[ps:Phnx|финикийского]]. "
                 "Самый старый памятник{{-}}погребение царицы Тин-Хинан (IV{{_}}в.). "
@@ -2663,7 +2666,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Тагальский (байбайин)", Dating::yrange(1300, 1500),
+        u8"Тагальский (байбайин)", Dating::yrange(1300, 1500), {},
         u8"старотагальский и другие языки Явы и Филиппин",
         u8"Брахмийская абугида с гласной по умолчанию «а» и [[pt:virama|вирамой]]. "
                 "Обойдусь самоназванием письменности: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} «ба-й-ба-йи-н»."
@@ -2684,7 +2687,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa", QFontDatabase::Thaana,
         EcScriptType::ARGUABLE, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::OCEAN,
-        u8"Тана", Dating::century(18),
+        u8"Тана", Dating::century(18), {},
         u8"дивехи ''(мальдивский, 340 тыс. на 2012)''",
         u8"Письменная культура пришла на Мальдивские острова вместе с буддизмом, появилось письмо ''эвела-акуру'' на основе "
                     "[[ps:Sinh|сингальского]]. "
@@ -2703,7 +2706,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Thai OK, W7 and 10 fonts are different, but managed to
     { "Thai", QFontDatabase::Thai,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тайский", Dating::year(1283),
+        u8"Тайский", Dating::year(1283), {},
         u8"тайский ''(20…36 млн на 2000 как родной)''",
         u8"Произошла из [[ps:Khmr|старокхмерского]], который, в свою очередь, произошёл из [[ps:Brah|брахми]]. "
                 "Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году."
@@ -2714,7 +2717,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tibetan OK, W10 did not have swastika, installed Google Noto
     { "Tibt", QFontDatabase::Tibetan,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тибетская", Dating::yapprox(650),
+        u8"Тибетская", Dating::yapprox(650), {},
         u8"тибетские, дзонг-кэ ''(Бутан)'', шерпский…",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а»."
             "<p>Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. "
@@ -2723,7 +2726,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tirhuta OK, W10 none, installed Google Noto
     { "Tirh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тирхута (митхилакшар)", Dating::century(13, u8"отделилось от ''гауди''{{-}}прото-бенгальского"),
+        u8"Тирхута (митхилакшар)", Dating::century(13), u8"отделилось от ''гауди''{{-}}прото-бенгальского",
         u8"майтхили ''(Индия)'', санскрит",
         u8"Письмо близко к [[ps:Beng|бенгальскому]], многие символы похожи, "
                     "но [[pt:unification|унификация]] невозможна из-за других [[pt:ligature|лигатур]]. "
@@ -2741,7 +2744,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tangsa OK, U14, called author and he gave font
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тангса", Dating::year(1990),
+        u8"Тангса", Dating::year(1990), {},
         u8"языки тангса ''(=тасе-нага, Северо-Восточная Индия, Мьянма, 100 тыс. на 2010)''",
         u8"Небольшое семейство сино-тибетских языков; письменность{{-}}различные виды [[ps:Latn|латиницы]]. "
                 "В 1990 индиец Лакхум Моссанг создал алфавит и до смерти в 2020 обучил ему около 100 человек."
@@ -2751,7 +2754,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тото", Dating::year(2015),
+        u8"Тото", Dating::year(2015), {},
         u8"тото ''(Восточная Индия, 1400 чел. на 2014)''",
         u8"Маленький сино-тибетский язык, используемый в деревне Тотопара племенем тото. "
                 "Состояние{{-}}на грани исчезновения: передача языка уже нарушена. "
@@ -2762,7 +2765,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Угаритский", Dating::yapprox(-1400),
+        u8"Угаритский", Dating::yapprox(-1400), {},
         u8"угаритский, хурритский ''(только в районе Угарита)''",
         u8"Жившие в Передней Азии (современная Сирия) семиты не{{_}}хвастались экономической, культурной или военной мощью, "
                     "зато были на пересечении торговых путей. "
@@ -2781,7 +2784,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vai OK, have good M$ font Ebrima
     { "Vaii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
-        u8"Ваи", Dating::decade(1830),
+        u8"Ваи", Dating::decade(1830), {},
         u8"ваи ''(Либерия)''",
         u8"Письмо появилось около 1833. Разработал его Момолу Дувалу Букеле, полагают, что под влиянием "
                 "[[ps:Cher|письма чероки]] (вместе с неграми в Либерию эмигрировали и индейцы, "
@@ -2793,7 +2796,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Vithkuqi OK, installed Google Noto
     { "Vith", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Виткутьский алфавит (албанский)", Dating::year(1844, StdNote::FIRST_KNOWN),
+        u8"Виткутьский алфавит (албанский)", Dating::year(1844, StdNote::FIRST_KNOWN), {},
         u8"албанский",
         u8"Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. "
                 "Через два года Наум умер, и алфавит не{{_}}получил особого распространения. "
@@ -2811,7 +2814,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Wancho OK, W10 none, installed Google Noto
     { "Wcho", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Ванчо", Dating::yrange(2001, 2012),
+        u8"Ванчо", Dating::yrange(2001, 2012), {},
         u8"ванчо ''(Индия, 59 тыс. на 2011)''",
         u8"Обычно на ванчо пишут [[ps:Deva|деванагари]] или [[ps:Latn|латиницей]]. "
                 "Между 2001 и 2012 учитель Банванг Лосу придумал свой алфавит. "
@@ -2821,7 +2824,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Warang Citi OK, W10 none → installed Google Noto
     { "Wara", QFontDatabase::Any,
         EcScriptType::ARGUABLE, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Варанг-кшити", Dating::decade(1950),
+        u8"Варанг-кшити", Dating::decade(1950), {},
         u8"хо ''(Восточная Индия, >1{{_}}млн)''",
         u8"Письменность придумал с нуля лидер коммуны Лако Бодра, заявив, что она пришла ему в божественном откровении от некоего "
                     "Дхавана Тури из XIII{{_}}века. "
@@ -2838,7 +2841,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Дневнеперсидская клинопись", Dating::yapprox(-520),
+        u8"Дневнеперсидская клинопись", Dating::yapprox(-520), {},
         u8"древнеперсидский",
         u8"Из [[ps:Xsux|шумеро-аккадской клинописи]] взят только принцип письма, символы почти полностью другие. "
                 "Наиболее распространённая версия{{-}}письменность создана искусственно для фиксации достижений царей Ахемендиской империи. "
@@ -2853,7 +2856,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
     { "Xsux", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
-        u8"Шумеро-аккадская клинопись", Dating::yapprox(-3200),
+        u8"Шумеро-аккадская клинопись", Dating::yapprox(-3200), {},
         u8"шумерский, аккадский, хеттский, эламский, хурритский, урартский…",
         u8"Изначально (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров), но к 3200 появились иероглифы, "
                     "а к 3000{{bc}} иероглифы стали использовать как слоги. "
@@ -2872,7 +2875,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Yezidi OK, W10 none → installed Google Noto
     { "Yezi", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
-        u8"Езидская", Dating::crange(13, 17),
+        u8"Езидская", Dating::crange(13, 17), {},
         u8"северокурдский",
         u8"Езиды{{-}}часть курдского народа, исповедуют религию езидизм, вышедшую из [[ps:Avst|зороастризма]]. "
                 "Священные езидские книги, ''Книга откровения'' и ''Чёрная книга'', написаны особым письмом "
@@ -2888,7 +2891,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Yi OK, have M$ font. Though quite thin, Noto is better, I managed to counteract by increasing font.
     { "Yiii", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"И (носу)", Dating::year(1974, u8"слоговая"),
+        u8"И (носу)", Dating::year(1974, StdNote::CUSTOM), u8"слоговая",
         u8"и ''(Китай)''",
         u8"Первый известный экземпляр старого (иероглифического) письма '''и''' датируется ≈1500, но письмо наверняка намного старше. "
                 "Предания говорят, что оно существовало ещё в династию Тан (618—907). Письмо состоит из 8000…10000 иероглифов."
@@ -2898,7 +2901,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Zanabazar square OK, installed Google Noto
     { "Zanb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Монгольское горизонтально-квадратное (Дзанабáдзара)", Dating::ybefore(1700),
+        u8"Монгольское горизонтально-квадратное (Дзанабáдзара)", Dating::ybefore(1700), {},
         u8"монгольский, лхасский тибетский, санскрит",
         u8"Буддийский монах Дзанабáдзар (1635–1723), языковед и художник, известен разработкой письма [[ps:Soyo|соёмбо]]. "
                 "Менее известно, что он придумал монгольское горизонтально-квадратное письмо, также на основе [[ps:Tibt|тибетского]]{{-}}"
@@ -2918,7 +2921,7 @@ constinit const uc::Script uc::scriptInfo[] {
                 EcFont::ZANABAZAR },
     { "Zinh", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-        u8"Разные", Dating::none(), {},
+        u8"Разные", Dating::none(), {}, {},
         u8"Комбинирующая метка используется в нескольких разных письменностях.",
         EcFont::NORMAL },
 };

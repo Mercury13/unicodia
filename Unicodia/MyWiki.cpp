@@ -616,10 +616,10 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             str::append(text, u8"• Языки: ");
             appendWiki(text, x, x.locLangs);
         }
-        if (x.locTime) {
+        if (x.time) {
             sp.sep();
             str::append(text, u8"• Появилась: ");
-            auto wikiTime = x.locTime.wikiText(rusDatingLoc);
+            auto wikiTime = x.time.wikiText(rusDatingLoc, x.locTimeComment);
             appendWiki(text, x, wikiTime);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {

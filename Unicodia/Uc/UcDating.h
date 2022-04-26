@@ -10,7 +10,8 @@ namespace uc {
         SPECIAL_SPECIAL };      // Russian: XII-XIII век
 
     enum class StdNote {
-        CUSTOM,         ///< Custom (none = CUSTOM + no note)
+        NONE,           ///< no note
+        CUSTOM,         ///< custom
         FIRST_KNOWN,    ///< (first known inscription)
         MODERN_FORM,    ///< (in modern form)
         MAYBE_EARLIER,  ///< (maybe earlier)
@@ -89,42 +90,33 @@ namespace uc {
         int value2() const { return fValue2; }
         Mode mode() const { return fMode; }
         StdNote stdNote() const { return fStdNote; }
-        std::u8string_view note() const { return fNote; }
-        std::u8string wikiText(const DatingLoc& loc) const;
+        std::u8string wikiText(const DatingLoc& loc, std::u8string_view customNote) const;
 
         // Year
-        static constexpr Dating year(int y, std::u8string_view note = {}) noexcept
+        static constexpr Dating year(int y, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::YEAR, y, note }; }
-        static constexpr Dating year(int y, StdNote note) noexcept
-                    { return { Mode::YEAR, y, note }; }
-        static constexpr Dating ybefore(int y, std::u8string_view note = {}) noexcept
+        static constexpr Dating ybefore(int y, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::YBEFORE, y, note }; }
-        static constexpr Dating yrange(int y1, int y2, std::u8string_view note = {}) noexcept
+        static constexpr Dating yrange(int y1, int y2, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::YRANGE, y1, y2, note }; }
-        static constexpr Dating yapprox(int y, std::u8string_view note = {}) noexcept
-                    { return { Mode::YAPPROX, y, note }; }
-        static constexpr Dating yapprox(int y, StdNote note) noexcept
+        static constexpr Dating yapprox(int y, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::YAPPROX, y, note }; }
 
         // Century
-        static constexpr Dating century(int c, std::u8string_view note = {}) noexcept
+        static constexpr Dating century(int c, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::CENTURY, c, note }; }
-        static constexpr Dating century(int c, StdNote note) noexcept
-                    { return { Mode::CENTURY, c, note }; }
-        static constexpr Dating crange(int c1, int c2, std::u8string_view note = {}) noexcept
-                    { return { Mode::CRANGE, c1, c2, note }; }
-        static constexpr Dating crange(int c1, int c2, StdNote note) noexcept
+        static constexpr Dating crange(int c1, int c2, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::CRANGE, c1, c2, note }; }
                  // Need note here!
-        static constexpr Dating crange_ins(int c1, int c2, std::u8string_view note) noexcept
-                    { return { Mode::CRANGE_INS, c1, c2, note }; }
+        static constexpr Dating crange_ins(int c1, int c2) noexcept
+                    { return { Mode::CRANGE_INS, c1, c2, StdNote::CUSTOM }; }
 
         // Decade
-        static constexpr Dating decade(int y, std::u8string_view note = {}) noexcept
+        static constexpr Dating decade(int y, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::DECADE, y, note }; }
 
         // Other
-        static constexpr Dating special(std::u8string_view note) noexcept { return { note }; }
+        static constexpr Dating special() noexcept { return { Mode::SPECIAL, 0, StdNote::CUSTOM }; }
         static constexpr Dating unknown() noexcept { return { Mode::UNKNOWN, 0, {} }; }
         static constexpr Dating none() noexcept { return { Mode::NONE, 0, {} }; }
 
@@ -132,19 +124,12 @@ namespace uc {
     private:
         Mode fMode;
         int fValue1 = 0, fValue2 = 0;
-        std::u8string_view fNote;
         StdNote fStdNote = StdNote::CUSTOM;
 
-        constexpr Dating(Mode aMode, int value, std::u8string_view aNote) noexcept
-                : fMode(aMode), fValue1(value), fNote(aNote) {}
         constexpr Dating(Mode aMode, int value, StdNote aNote) noexcept
                 : fMode(aMode), fValue1(value), fStdNote(aNote) {}
-        constexpr Dating(Mode aMode, int value1, int value2, std::u8string_view aNote) noexcept
-                : fMode(aMode), fValue1(value1), fValue2(value2), fNote(aNote) {}
         constexpr Dating(Mode aMode, int value1, int value2, StdNote aNote) noexcept
                 : fMode(aMode), fValue1(value1), fValue2(value2), fStdNote(aNote) {}
-        constexpr Dating(std::u8string_view aNote) noexcept
-                : fMode(Mode::SPECIAL), fNote(aNote) {}
     };
 
 }

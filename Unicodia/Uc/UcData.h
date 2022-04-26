@@ -579,10 +579,10 @@ namespace uc {
         EcWritingDir ecDir;
         EcContinent ecContinent;
         std::u8string_view locName;
-            /// @todo [i18n] What to do?
-        Dating locTime;
+        Dating time;
+        std::u8string_view locTimeComment;
         std::u8string_view locLangs, locDescription;
-        EcFont ecFont = EcFont::NORMAL;
+        EcFont ecFont;
         Flags<Sfg> flags {};
 
         mutable unsigned nChars = 0;
