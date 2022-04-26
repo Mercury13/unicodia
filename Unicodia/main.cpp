@@ -25,7 +25,6 @@ void doTranslate()
     pDir /= "lang.ini";
     loc::loadIni(loc::dic, pDir);
 
-    loc::dic.dump(20);
     uc::finishTranslation();
 }
 
