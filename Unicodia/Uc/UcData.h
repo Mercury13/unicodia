@@ -18,7 +18,6 @@
 
 constexpr char32_t NO_TRIGGER = 0xDEADBEEF;
 
-/// ALL NAMES HERE ARE IN UTF-8!
 
 template <class T, size_t N>
 const T* findInArray(std::string_view needle, const T (&haystack)[N])
