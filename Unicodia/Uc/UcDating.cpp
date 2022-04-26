@@ -50,11 +50,9 @@ void uc::DatingLoc::appendCenturyText(std::u8string& r, int x) const
 namespace {
     void appendCustomNote(std::u8string& r, std::u8string_view note)
     {
-        if (!note.empty()) {
-            r.append(u8" (");
-            r.append(note);
-            r.append(u8")");
-        }
+        r.append(u8" (");
+        r.append(note);
+        r.append(u8")");
     }
 }
 
