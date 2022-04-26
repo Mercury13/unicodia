@@ -78,6 +78,7 @@ namespace uc {
             //DEND,       ///<  end of 1230s
             // Century
             CENTURY,    ///<  12th century      Arab, Bhks, Cprt …………
+            //CBEFORE,   before 4th century → Aghb only, will not make a special algo
             CRANGE,     ///<  12–13th century   Deva, Diak, Taml …………
             CRANGE_INS, ///<  12th century (some comment), 13th century (first known inscription)
                         ///<                    Grek

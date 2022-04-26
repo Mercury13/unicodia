@@ -566,8 +566,10 @@ namespace uc {
     constexpr int PLANE_UNKNOWN = -1;
 
     enum class Sfg {
-        NONSCRIPT = 1
+        NONSCRIPT = 1,
+        NO_LANGS = 2,
     };
+    DEFINE_ENUM_OPS(Sfg)
 
     struct Script
     {

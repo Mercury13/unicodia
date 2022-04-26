@@ -1050,18 +1050,34 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
         text.append("</p>");
 
-        if (cp.ecCategory == uc::EcCategory::CONTROL && cp.subj.uval() < 0x80) {
-            //  Control char description
-            str::append(text, u8"<h2>Об управляющих символах</h2>");
-            appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
-        } else if (blk.hasDescription()) {
-            // Block description
-            str::append(text, u8"<h2>О блоке</h2>");
-            appendWiki(text, blk, blk.loc.description);
-        } else if (auto sc = cp.scriptEx(); &sc != uc::scriptInfo){
-            // Script description
-            str::append(text, u8"<h2>О письменности</h2>");
-            mywiki::appendHtml(text, sc, false);
+        if (cp.block().startingCp == 0) {
+            // Basic Latin:
+            // Control → t:control (stored in catInfo)
+            // Latn → s:Latn
+            // Others → t:ASCII, stored here for simplicity
+            if (cp.ecCategory == uc::EcCategory::CONTROL) {
+                //  Control char description
+                str::append(text, u8"<h2>Об управляющих символах</h2>");
+                appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
+            } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
+                // Script description
+                str::append(text, u8"<h2>О письменности</h2>");
+                mywiki::appendHtml(text, sc, false);
+            } else {
+                // Script description
+                str::append(text, u8"<h2>О блоке</h2>");
+                appendWiki(text, blk, blk.loc.description);
+            }
+        } else {
+            if (blk.hasDescription()) {
+                // Block description
+                str::append(text, u8"<h2>О блоке</h2>");
+                appendWiki(text, blk, blk.loc.description);
+            } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
+                // Script description
+                str::append(text, u8"<h2>О письменности</h2>");
+                mywiki::appendHtml(text, sc, false);
+            }
         }
     }
     return text;

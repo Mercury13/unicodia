@@ -17,6 +17,7 @@
 
 // L10n
 #include "LocDic.h"
+#include "Decoders.h"
 
 
 #define NBSP "\u00A0"
@@ -578,7 +579,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             u8"Нет", Dating::none(), {}, {}, u8"Символы вне письменности.",
-            EcFont::NORMAL, Sfg::NONSCRIPT },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -2923,7 +2924,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
         u8"Разные", Dating::none(), {}, {},
         u8"Комбинирующая метка используется в нескольких разных письменностях.",
-        EcFont::NORMAL },
+        EcFont::NORMAL, Sfg::NO_LANGS },
 };
 
 
@@ -5727,6 +5728,15 @@ std::u8string_view uc::SwInfo::note() const
 
 ///// UC misc //////////////////////////////////////////////////////////////////
 
+namespace {
+    std::u8string cache;
+    inline std::string_view esc(std::u8string_view x)
+    {
+        return str::toSv(escape::cppSv(
+                        x, cache, 'n', escape::Spaces::YES, Enquote::NO));
+    }
+}
+
 
 void uc::completeData()
 {
@@ -5789,6 +5799,19 @@ void uc::completeData()
         if (v.time.needsCustomNote() != !v.locTimeComment.empty()) {
             std::cout << "Bad note: " << v.id << std::endl;
         }
+    }
+
+    // Save script INI
+    std::ofstream os("script.ini");
+    for (auto& v : scriptInfo) {
+        os << "[Script." << v.id << "]\n";
+        if (!v.flags.have(Sfg::NO_LANGS))
+            os << "Lang=" << esc(v.locLangs) << '\n';
+        os << "Name=" << esc(v.locName) << '\n';
+        if (v.time.needsCustomNote())
+            os << "Note=" << esc(v.locTimeComment) << '\n';
+        os << "Text=" << esc(v.locDescription) << '\n';
+        os << '\n';
     }
 }
 

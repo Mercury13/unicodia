@@ -23,6 +23,7 @@ CONFIG(debug, debug|release) {
 
 SOURCES += \
     ../Libs/L10n/LocDic.cpp \
+    ../Libs/SelfMade/Decoders.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
@@ -47,6 +48,7 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
+    ../Libs/SelfMade/Decoders.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
