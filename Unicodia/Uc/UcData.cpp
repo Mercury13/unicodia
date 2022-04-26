@@ -947,7 +947,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        u8"Кипро-минойская", Dating::yapprox(-1550), u8"первые известные надписи",
+        u8"Кипро-минойская", Dating::yapprox(-1550, StdNote::CUSTOM), u8"первые известные надписи",
         u8"этеокипрский (предположительно), филистимский (существует несколько надписей)",
         u8"Происходит предположительно из [[ps:Lina|линейного письма А]]. "
                 "Около XI{{_}}века{{bc}} преобразовалось в [[ps:Cprt|кипрское]]. "
@@ -1005,7 +1005,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Diak OK, built some samples
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Дивес-акуру (древнемальдивский)", Dating::crange(9, 10), u8"первые известные надписи",
+        u8"Дивес-акуру (древнемальдивский)", Dating::crange(9, 10, StdNote::FIRST_KNOWN), {},
         u8"дивехи ''(мальдивский)''",
         u8"Развился на Мальдивских островах из [[ps:Gran|грантхи]] и существовал до XVIII{{_}}века, а на некоторых островах и до XX. "
                     "Раннюю форму (до XII{{_}}века) исследователи называют ''эвела-акуру''. "
@@ -1409,7 +1409,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Пахау хмонг", Dating::year(1959), u8"первая версия",
+        u8"Пахау хмонг", Dating::year(1959, StdNote::CUSTOM), u8"первая версия",
         u8"языки белых и зелёных хмонгов",
         // For translator: тон-гвоздик = tack for tone, author = Shong Lue Yang, первая версия = stage 1
         u8"Автор письменности Шон-лы Я заявляет, что письмо дано ему богом. "
@@ -1562,7 +1562,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Кáннада", Dating::century(14), u8"отделилась от сестринской [[ps:Telu|телугу]]",
+        u8"Кáннада", Dating::century(14, StdNote::CUSTOM), u8"отделилась от сестринской [[ps:Telu|телугу]]",
         u8"кáннада ''(Юго-Западная Индия, 38 млн на 2001)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Гласная по умолчанию «а», заменяется огласовками:<br>"
@@ -2007,7 +2007,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Newa OK, W10 none → installed Google Noto
     { "Newa", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Неварский (прахалит)", Dating::year(1654), u8"первое свидетельство",
+        u8"Неварский (прахалит)", Dating::year(1654, StdNote::CUSTOM), u8"первое свидетельство",
         u8"бхаса ''(=неварский, Непал)'', санскрит, пали",
         u8"Истоки неизвестны{{-}}разные стили письма существовали с X{{_}}века. "
                 "Первое свидетельство{{-}}непальский царь Пратап Малла написал в 1654 «письмо невара». "
@@ -2424,7 +2424,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Sinhala OK, W10 obviously has no 2020 extension → installed Google Noto
     { "Sinh", QFontDatabase::Sinhala,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::OCEAN,
-        u8"Сингальский", Dating::century(13), u8"в современном виде",
+        u8"Сингальский", Dating::century(13, StdNote::CUSTOM), u8"в современном виде",
         u8"сингальский ''(Шри-Ланка, 17 млн на 2012)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Писать на Шри-Ланке начали с III{{_}}века, и к XIII{{_}}веку письмо сформировалось. "
@@ -2636,7 +2636,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Telugu OK, W7 lacks recent extensions → installed Google Noto
     { "Telu", QFontDatabase::Telugu,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Телугу", Dating::century(14), u8"отделилась от [[ps:Knda|каннады]]",
+        u8"Телугу", Dating::century(14, StdNote::CUSTOM), u8"отделилась от [[ps:Knda|каннады]]",
         u8"телугу ''(Юго-Восточная Индия, 83 млн на 2011)''",
         u8"Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. "
                 "Около 1300 отделилась от [[ps:Knda|каннады]], являющейся сестринской. "
@@ -2726,7 +2726,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Tirhuta OK, W10 none, installed Google Noto
     { "Tirh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::ASIA,
-        u8"Тирхута (митхилакшар)", Dating::century(13), u8"отделилось от ''гауди''{{-}}прото-бенгальского",
+        u8"Тирхута (митхилакшар)", Dating::century(13, StdNote::CUSTOM), u8"отделилось от ''гауди''{{-}}прото-бенгальского",
         u8"майтхили ''(Индия)'', санскрит",
         u8"Письмо близко к [[ps:Beng|бенгальскому]], многие символы похожи, "
                     "но [[pt:unification|унификация]] невозможна из-за других [[pt:ligature|лигатур]]. "
@@ -5781,6 +5781,13 @@ void uc::completeData()
             if (script.ecContinent != v.synthIcon.ecContinent) {
                 std::cout << "Continent mismatch: " << v.name << std::endl;
             }
+        }
+    }
+
+    // Check scripts
+    for (auto& v : scriptInfo) {
+        if (v.time.needsCustomNote() != !v.locTimeComment.empty()) {
+            std::cout << "Bad note: " << v.id << std::endl;
         }
     }
 }

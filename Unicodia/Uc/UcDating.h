@@ -92,6 +92,8 @@ namespace uc {
         StdNote stdNote() const { return fStdNote; }
         std::u8string wikiText(const DatingLoc& loc, std::u8string_view customNote) const;
 
+        bool needsCustomNote() const;
+
         // Year
         static constexpr Dating year(int y, StdNote note = StdNote::NONE) noexcept
                     { return { Mode::YEAR, y, note }; }

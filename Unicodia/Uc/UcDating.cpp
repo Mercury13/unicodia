@@ -82,6 +82,28 @@ void uc::DatingLoc::appendNote(
 
 ///// Dating ///////////////////////////////////////////////////////////////////
 
+
+bool uc::Dating::needsCustomNote() const
+{
+    switch (fMode) {
+    case Mode::SPECIAL:     // 2ND CENTURY (MAIN HYPOTHESIS), 7TH CENTURY (FOR SURE)
+    case Mode::CRANGE_INS:  // 12th century (SOME COMMENT), 13th century (first known inscription)
+        return true;
+    case Mode::NONE:        // technical
+        return false;
+    case Mode::YEAR:
+    case Mode::YBEFORE:
+    case Mode::YRANGE:
+    case Mode::YAPPROX:
+    case Mode::DECADE:
+    case Mode::CENTURY:
+    case Mode::CRANGE:
+    case Mode::UNKNOWN:
+        return (fStdNote == StdNote::CUSTOM);
+    }
+}
+
+
 std::u8string uc::Dating::wikiText(const DatingLoc& loc, std::u8string_view customNote) const
 {
     char buf[60];
