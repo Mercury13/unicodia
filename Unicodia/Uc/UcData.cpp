@@ -40,8 +40,6 @@ namespace fst {
     constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;
 }
 
-constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
-
 // File names
 constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
 constexpr std::string_view FNAME_NOTOMATH = "NotoSansMath-Regular.ttf";
@@ -53,6 +51,10 @@ constexpr uc::Family FNAME_FUNKY { "FunkySample.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
+
+constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari.ttf";
+constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
+constexpr auto SIZE_DEVA = 110_pc;
 
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
@@ -101,7 +103,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
-    { "NotoSerifDevanagari.ttf", Ffg::FALL_TO_NEXT, STYLE_DEVA, 110_pc },       // Vedic = Devanagari → Bengali
+    { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                   // Vedic = Devanagari → Bengali
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },     // Brahmi
@@ -132,7 +134,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { "NotoSerifDevanagari.ttf", STYLE_DEVA, 110_pc },                          // Devanagari
+    { FNAME_DEVA, STYLE_DEVA, SIZE_DEVA },                                      // Devanagari
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                      // Dingbat
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …1
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …2
