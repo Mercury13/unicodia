@@ -747,12 +747,20 @@ namespace uc {
     struct BidiClass
     {
         std::string_view id;
+        std::u8string_view tech;
         EcBidiStrength strength;
-        std::u8string_view locName;
-        std::u8string_view locShortName;
-        std::u8string_view locId;
-        std::u8string_view locDescription;
         mutable unsigned nChars = 0;
+        struct Loc {
+            std::u8string_view name;
+            std::u8string_view shortName;
+            std::u8string_view description;
+        } mutable loc {};
+
+        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        template <size_t N>
+        void printfLocKey(char (&buf)[N], const char* suffix) const
+            { printfLocKey(buf, N, suffix); }
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }

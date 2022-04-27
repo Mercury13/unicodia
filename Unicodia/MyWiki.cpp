@@ -518,12 +518,12 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
 
     sp.sep();
     str::append(text, u8"• В техдокументации: ");
-    str::append(text, x.locId);
+    str::append(text, x.tech);
 
     str::append(text, "</p>");
 
     str::append(text, "<p>");
-    appendNoFont(text, x.locDescription);
+    appendNoFont(text, x.loc.description);
     return text;
 }
 
@@ -687,7 +687,7 @@ namespace {
 
     template<>
     inline void appendVal(QString& text, const uc::BidiClass& value)
-        { str::append(text, value.locShortName); }
+        { str::append(text, value.loc.shortName); }
 
     struct FontLink {
         QString family;

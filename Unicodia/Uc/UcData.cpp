@@ -2943,67 +2943,33 @@ constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)]
 
 
 constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
-    { "DIR", EcBidiStrength::EXPLICIT,    u8"Тэг направления",
-                u8"Тэг направления", u8"FSI, LRE и др.",
-                u8"Форматирующие символы, корректирующие работу двунаправленного алгоритма Юникода."
-                    "<p>Строго говоря, каждый из этих символов{{-}}это отдельный класс в двунаправленном алгоритме, "
-                    "но если вы не{{_}}программист, вам достаточно знать: это тэги направления." },
-    { "AL",  EcBidiStrength::STRONG,      u8"Арабская буква",
-                u8"Арабская буква", u8"AL",
-                u8"Пишутся справа налево. Есть тонкие правила, связанные с европейскими цифрами." },
-    { "AN",  EcBidiStrength::WEAK,        u8"Арабская цифра",
-                u8"Арабская цифра", u8"AN",
-                u8"Пишутся справа налево. Есть тонкие правила, связанные с уровнями вложенности." },
+    { "DIR", u8"FSI, LRE, LRI…",    EcBidiStrength::EXPLICIT, },    // Explicit chars in GenPunct
+    { "AL",  u8"AL",                EcBidiStrength::STRONG },       // Any Arabic letter
+    { "AN",  u8"AN",                EcBidiStrength::WEAK },         // Arabic digits (0660…), Rumi (10E60)
 
-    { "B",   EcBidiStrength::NEUTRAL,     u8"Разделитель абзацев",
-                u8"Разделитель абзацев", u8"B",
-                u8"Каждый абзац обрабатывается двунаправленным алгоритмом по отдельности." },
-    { "BN",  EcBidiStrength::NEUTRAL,     u8"Неграфический",
-                u8"Неграфический", u8"BN",
-                u8"[[pt:control|Управляющие]], соединители и [[pk:E0000|тэги]], не{{_}}имеющие своего написания."
-                    "<p>См. [[pt:graphic|графический символ]]." },
-    { "CS",  EcBidiStrength::WEAK,        u8"Цифровой разделитель",
-                u8"Цифровой разделитель", u8"CS",
-                u8"Оказавшись в арабском или европейском числе, эти символы становятся его частью." },
+    { "B",   u8"B",                 EcBidiStrength::NEUTRAL },      // CR, LF and a few more
+    { "BN",  u8"Неграфический",     EcBidiStrength::NEUTRAL },      // Most controls
+    { "CS",  u8"CS",                EcBidiStrength::WEAK },         // ,.
 
-    { "EN",  EcBidiStrength::WEAK,        u8"Европейская цифра",
-                u8"Европейская цифра", u8"EN",
-                u8"Пишутся слева направо. Есть тонкие правила, связанные с арабским текстом." },
-    { "ES",  EcBidiStrength::WEAK,        u8"Европейский ±",
-                u8"Европейский ±", u8"ES",
-                u8"Символы + и − внутри европейского [[pt:number|числа]] становятся его частью. Символ ± к этому классу не{{_}}относится." },
-    { "ET",  EcBidiStrength::WEAK,        u8"Европейская единица измерения",
-                u8"Европейская единица измерения", u8"ET",
-                u8"Валютные и прочие символы, встречающиеся рядом с числами. Оказавшись рядом с европейским числом, они становятся частью числа." },
+    { "EN",  u8"EN",                EcBidiStrength::WEAK },         // 012…
+    { "ES",  u8"ES",                EcBidiStrength::WEAK },         // +-
+    { "ET",  u8"ET",                EcBidiStrength::WEAK },         // #$°
 
-    { "L",   EcBidiStrength::STRONG,      u8"Слева направо", u8"→", u8"L",
-                u8"Латиница, кириллица и прочие алфавиты с написанием слева направо. "
-                    "Поскольку подавляющая доля Юникода{{-}}[[ps:Hani|китайские иероглифы]], это самый многочисленный класс." },
-    { "NSM", EcBidiStrength::WEAK,        u8"Непротяжённая метка",
-                u8"Непротяжённая метка", u8"NSM",
-                u8"Непротяжённые и охватывающие комбинирующие метки. Направление написания{{-}}как у основного символа." },
-    { "ON",  EcBidiStrength::NEUTRAL,     u8"Прочий нейтральный",
-                u8"Прочий нейтральный", u8"ON\u00A0+\u00A0¬\u00A0Bidi_M",
-                u8"Приспосабливается к направлению окружающего текста." },
+    { "L",   u8"L",                 EcBidiStrength::STRONG },       // ABC…
+    { "NSM", u8"NSM",               EcBidiStrength::WEAK },         // Combining umlaut
+    { "ON",  u8"ON\u00A0+\u00A0¬\u00A0Bidi_M", EcBidiStrength::NEUTRAL },  // !"
 
-    { "NM",  EcBidiStrength::NEUTRAL,     u8"Нейтральный отзеркаливающийся",
-                u8"Отзеркаливающийся", u8"ON\u00A0+\u00A0Bidi_M",
-                u8"Скобки и похожие символы при написании справа налево отзеркаливаются. "
-                    "По понятным причинам все такие символы являются нейтральными: "
-                        "приспосабливаются к направлению окружающего текста." },
-    { "R",   EcBidiStrength::STRONG,      u8"Справа налево", u8"←", u8"R",
-                u8"[[ps:Hebr|Иврит]], а также исторические письменности Ближнего Востока." },
-    { "S",   EcBidiStrength::NEUTRAL,     u8"Разделитель участков",
-                u8"Разделитель участков", u8"S",
-                u8"Tab и некоторые другие символы. "
-                        "Посреди текстового абзаца встречаются редко, но обычно каждый участок обрабатывается "
-                        "двунаправленным алгоритмом по отдельности. "
-                    "Направление табуляции внутри абзаца постоянное." },
-    { "WS",  EcBidiStrength::NEUTRAL,     u8"Пробел", u8"Пробел", u8"WS",
-                u8"Нейтральны. Есть тонкие правила, касающиеся форматирования пробелами."
-                "<p>См. термин [[pt:space|пробел]]." },
+    { "NM",  u8"ON\u00A0+\u00A0Bidi_M", EcBidiStrength::NEUTRAL },  // ()
+
+    { "R",   u8"R",                 EcBidiStrength::STRONG },
+    { "S",   u8"S",                 EcBidiStrength::NEUTRAL },      // 09, 0B, 1F
+    { "WS",  u8"WS",                EcBidiStrength::NEUTRAL },      // FF, space
     // { u8"Error" },  // check for equal number
 };
+
+void uc::BidiClass::printfLocKey(char* buf, size_t n, const char* suffix) const
+    { snprintf(buf, n, "Prop.Bidi.%s.%s", id.data(), suffix); }
+
 
 
 constinit const uc::Block uc::blocks[] {
@@ -6288,5 +6254,14 @@ void uc::finishTranslation()
             blk.printfLocKey(c, "Text");
             blk.loc.description = loc::get(c);
         }
+    }
+
+    for (auto& bidi : bidiClassInfo) {
+        bidi.printfLocKey(c, "Name");
+            bidi.loc.name = loc::get(c);
+        bidi.printfLocKey(c, "Short");
+            bidi.loc.shortName = loc::get(c);
+        bidi.printfLocKey(c, "Text");
+            bidi.loc.description = loc::get(c);
     }
 }

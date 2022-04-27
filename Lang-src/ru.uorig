@@ -114,6 +114,196 @@
     </text>
    </group>
   </group>
+  <group id="Prop">
+   <group id="Bidi">
+    <group id="DIR">
+     <text id="Name">
+      <orig>Тэг направления</orig>
+     </text>
+     <text id="Short">
+      <orig>Тэг направления</orig>
+     </text>
+     <text id="Text">
+      <orig>Форматирующие символы, корректирующие работу двунаправленного алгоритма Юникода.&lt;p&gt;Строго говоря, каждый из этих символов{{-}}это отдельный класс в двунаправленном алгоритме, но если вы не{{_}}программист, вам достаточно знать: это тэги направления.</orig>
+     </text>
+    </group>
+    <group id="AL">
+     <text id="Name">
+      <orig>Арабская буква</orig>
+     </text>
+     <text id="Short">
+      <orig>Арабская буква</orig>
+     </text>
+     <text id="Text">
+      <orig>Пишутся справа налево. Есть тонкие правила, связанные с европейскими цифрами.</orig>
+     </text>
+    </group>
+    <group id="AN">
+     <au-cmt>Arabic Number</au-cmt>
+     <text id="Name">
+      <orig>Арабская цифоа</orig>
+     </text>
+     <text id="Short">
+      <orig>Арабская цифра</orig>
+     </text>
+     <text id="Text">
+      <orig>Пишутся справа налево. Есть тонкие правила, связанные с уровнями вложенности.</orig>
+     </text>
+    </group>
+    <group id="B">
+     <au-cmt>Paragraph Separator</au-cmt>
+     <text id="Name">
+      <orig>Разделитель абзацев</orig>
+     </text>
+     <text id="Short">
+      <orig>Разделитель абзацев</orig>
+     </text>
+     <text id="Text">
+      <orig>Каждый абзац обрабатывается двунаправленным алгоритмом по отдельности.</orig>
+     </text>
+    </group>
+    <group id="BN">
+     <au-cmt>Boundary Neutral</au-cmt>
+     <text id="Name">
+      <orig>Неграфический</orig>
+     </text>
+     <text id="Short">
+      <orig>Неграфический</orig>
+     </text>
+     <text id="Text">
+      <orig>[[pt:control|Управляющие]], соединители и [[pk:E0000|тэги]], не{{_}}имеющие своего написания.&lt;p&gt;См. [[pt:graphic|графический символ]].</orig>
+     </text>
+    </group>
+    <group id="CS">
+     <au-cmt>Common Separator</au-cmt>
+     <text id="Name">
+      <orig>Цифровой разделитель</orig>
+     </text>
+     <text id="Short">
+      <orig>Цифровой разделитель</orig>
+     </text>
+     <text id="Text">
+      <orig>Оказавшись в арабском или европейском числе, эти символы становятся его частью.</orig>
+     </text>
+    </group>
+    <group id="EN">
+     <au-cmt>European Number</au-cmt>
+     <text id="Name">
+      <orig>Европейская цифра</orig>
+     </text>
+     <text id="Short">
+      <orig>Европейская цифра</orig>
+     </text>
+     <text id="Text">
+      <orig>Пишутся слева направо. Есть тонкие правила, связанные с арабским текстом.</orig>
+     </text>
+    </group>
+    <group id="ES">
+     <au-cmt>European Separator</au-cmt>
+     <text id="Name">
+      <orig>Европейский ±</orig>
+     </text>
+     <text id="Short">
+      <orig>Европейский ±</orig>
+     </text>
+     <text id="Text">
+      <orig>Символы + и − внутри европейского [[pt:number|числа]] становятся его частью. Символ ± к этому классу не{{_}}относится.</orig>
+     </text>
+    </group>
+    <group id="ET">
+     <au-cmt>European Terminator</au-cmt>
+     <text id="Name">
+      <orig>Европейская единица измерения</orig>
+     </text>
+     <text id="Short">
+      <orig>Европейская единица измерения</orig>
+     </text>
+     <text id="Text">
+      <orig>Валютные и прочие символы, встречающиеся рядом с числами. Оказавшись рядом с европейским числом, они становятся частью числа.</orig>
+     </text>
+    </group>
+    <group id="L">
+     <text id="Name">
+      <orig>Слева направо</orig>
+     </text>
+     <text id="Short">
+      <orig>→</orig>
+     </text>
+     <text id="Text">
+      <orig>Латиница, кириллица и прочие алфавиты с написанием слева направо. Поскольку подавляющая доля Юникода{{-}}[[ps:Hani|китайские иероглифы]], это самый многочисленный класс.</orig>
+     </text>
+    </group>
+    <group id="NSM">
+     <au-cmt>Nonspacing Mark</au-cmt>
+     <text id="Name">
+      <orig>Непротяжённая метка</orig>
+     </text>
+     <text id="Short">
+      <orig>Непротяжённая метка</orig>
+     </text>
+     <text id="Text">
+      <orig>Непротяжённые и охватывающие комбинирующие метки. Направление написания{{-}}как у основного символа.</orig>
+     </text>
+    </group>
+    <group id="ON">
+     <text id="Name">
+      <orig>Прочий нейтральный</orig>
+     </text>
+     <text id="Short">
+      <orig>Прочий нейтральный</orig>
+     </text>
+     <text id="Text">
+      <orig>Приспосабливается к направлению окружающего текста.</orig>
+     </text>
+    </group>
+    <group id="NM">
+     <text id="Name">
+      <orig>Нейтральный отзеркаливающийся</orig>
+     </text>
+     <text id="Short">
+      <orig>Отзеркаливающийся</orig>
+     </text>
+     <text id="Text">
+      <orig>Скобки и похожие символы при написании справа налево отзеркаливаются. Все такие символы являются нейтральными: приспосабливаются к направлению окружающего текста.</orig>
+     </text>
+    </group>
+    <group id="R">
+     <text id="Name">
+      <orig>Справа налево</orig>
+     </text>
+     <text id="Short">
+      <orig>←</orig>
+     </text>
+     <text id="Text">
+      <orig>[[ps:Hebr|Иврит]], а также исторические письменности Ближнего Востока.&lt;p&gt;[[pb:AL|Арабские буквы]] по-особому ведут себя с европейскими цифрами и попадают в отдельную категорию.</orig>
+     </text>
+    </group>
+    <group id="S">
+     <au-cmt>Segment Separator</au-cmt>
+     <text id="Name">
+      <orig>Разделитель участков</orig>
+     </text>
+     <text id="Short">
+      <orig>Разделитель участков</orig>
+     </text>
+     <text id="Text">
+      <orig>Три управляющих символа: 09 (табуляция), 0B (вертикальная табуляция), 1F (разделитель 1).</orig>
+     </text>
+    </group>
+    <group id="WS">
+     <au-cmt>White Space</au-cmt>
+     <text id="Name">
+      <orig>Пробел</orig>
+     </text>
+     <text id="Short">
+      <orig>Пробел</orig>
+     </text>
+     <text id="Text">
+      <orig>Нейтральны. Есть тонкие правила, касающиеся форматирования пробелами.&lt;p&gt;См. термин [[pt:space|пробел]].</orig>
+     </text>
+    </group>
+   </group>
+  </group>
   <group id="Block">
    <group id="0000">
     <text id="Name">
