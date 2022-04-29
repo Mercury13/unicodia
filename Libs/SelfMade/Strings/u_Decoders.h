@@ -45,7 +45,7 @@ namespace escape {
         LineBreakMode lineBreak = LineBreakMode::BANNED;
         std::u8string lineBreakText { DEFAULT_LINE_BREAK_TEXT };
         SpaceMode space;
-        std::u8string spaceDemimiter { DEFAULT_SPACE_DELIMITER };
+        std::u8string spaceDelimiter { DEFAULT_SPACE_DELIMITER };
 
         std::u8string bannedSubstring() const;
         static void writeQuoted(std::ostream& os, std::u8string_view x);
@@ -62,6 +62,9 @@ namespace escape {
         /// @return  space delimiter that actually works
         ///          (empty if not demimited)
         std::u8string_view activeSpaceDelimiter() const noexcept;
+
+        std::u8string unescape(std::u8string_view text) const;
+        std::u8string unescapeMaybeQuoted(std::u8string_view text) const;
     };
 
     enum class Spaces { NO, YES };
@@ -85,6 +88,21 @@ namespace decode {
     /// \return BOM type
     ///
     BomType detectBom(std::istream& is);
+
+    class IniCallback {     // interface
+    public:
+        virtual void onGroup(std::u8string_view) = 0;
+        /// @warning  decode rawValue as you want!!
+        ///           No text formats here!
+        virtual void onVar(std::u8string_view name, std::u8string_view rawValue) = 0;
+        /// @warning  Also on bad line
+        virtual void onEmptyLine() {}
+        virtual void onComment(std::u8string_view) {}
+        virtual ~IniCallback() = default;
+    };
+
+    void ini(std::istream& is, IniCallback& cb);
+
 
     /// @return 0..15 if x = 0..F
     ///         999 otherwise
@@ -112,6 +130,30 @@ namespace decode {
         ///  @return [+] x is Latin letter a..z A..Z, or underscore _
         bool isAlpha(char32_t x);
     }
+
+    enum class MaybeQuoted { NO, YES };
+
+    /// Lighter C++ decode
+    /// Supports:
+    /// • \s for space
+    ///
+    /// Does NOT support:
+    /// • C++ syntax peculiarities: prefixes, suffixes, raw strings, "str" "str"
+    /// • \xXX, \oXXX, \uXXXX
+    /// • trails of source code "xxxx" },
+    ///
+    /// @warning Special bhv when maybeQuoted+ → cannot make 2 functions
+    ///               "\" → ",  \ = everything
+    /// @warning Is NOT bug-compatible with decodeCpp
+    ///
+    /// @param [in] maybeQuoted  [+] the string is possibly quoted    ///
+    ///
+    std::u8string cppLite(std::u8string_view x, MaybeQuoted maybeQuoted);
+
+    ///
+    /// Decoding of "some ""quoted"" string"
+    ///
+    std::u8string quoted(std::u8string_view x);
 
     /// Decodes C++
     /// "alpha\nbravo" → alpha<LF>bravo

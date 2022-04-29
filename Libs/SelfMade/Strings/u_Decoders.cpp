@@ -83,6 +83,43 @@ void escape::Text::write(
 }
 
 
+std::u8string escape::Text::unescapeMaybeQuoted(std::u8string_view text) const
+{
+    if (space == SpaceMode::QUOTED) {
+        return decode::quoted(text);
+    } else {
+        return std::u8string{text};
+    }
+}
+
+
+std::u8string escape::Text::unescape(std::u8string_view text) const
+{
+    // Delimited mode: ends → remove
+    if (space == SpaceMode::DELIMITED && text.ends_with(spaceDelimiter))
+        text = text.substr(text.length() - spaceDelimiter.length());
+    switch (lineBreak) {
+    case LineBreakMode::SPECIFIED_TEXT:
+        if (!lineBreakText.empty()) {
+            std::u8string tmp {text};
+            str::replace(tmp, lineBreakText, u8"\n");
+            return unescapeMaybeQuoted(tmp);
+        }
+        [[fallthrough]];
+    case LineBreakMode::BANNED:
+        return unescapeMaybeQuoted(text);
+    case LineBreakMode::C_CR:
+    case LineBreakMode::C_LF: { // We recognize both \r and \n
+            // Only two modes remain here: bare/quoted
+            // \s will be recognized anyway
+            auto mq = ecIf<decode::MaybeQuoted>(space == SpaceMode::QUOTED);
+            return decode::cppLite(text, mq);
+        }
+    }
+    return {};
+}
+
+
 void escape::Text::setLineBreakText(std::u8string_view x)
 {
     if (x.empty()) {
@@ -105,7 +142,7 @@ std::u8string_view escape::Text::visibleLineBreakText() const noexcept
 std::u8string_view escape::Text::visibleSpaceDelimiter() const noexcept
 {
     return (space == escape::SpaceMode::DELIMITED)
-            ? spaceDemimiter
+            ? spaceDelimiter
             : DEFAULT_SPACE_DELIMITER;
 }
 
@@ -113,7 +150,7 @@ std::u8string_view escape::Text::visibleSpaceDelimiter() const noexcept
 std::u8string_view escape::Text::activeSpaceDelimiter() const noexcept
 {
     return (space == escape::SpaceMode::DELIMITED)
-            ? spaceDemimiter
+            ? spaceDelimiter
             : std::u8string_view{};
 }
 
@@ -645,4 +682,143 @@ std::u8string_view escape::cppSv(
     if (static_cast<bool>(enquote))
         *(p++) = '"';
     return { cache.data(), p };
+}
+
+
+void decode::ini(std::istream& is, IniCallback& cb)
+{
+    auto bomType = detectBom(is);
+    switch (bomType) {
+    case BomType::UTF16BE:
+    case BomType::UTF16LE:
+        throw std::logic_error("UTF-16 INI files are not supported!");
+    case BomType::NONE:     // These two are supported
+    case BomType::UTF8:;
+    }
+    std::string line;
+    while (std::getline(is, line)) {
+        std::u8string_view s = str::toU8sv(str::trimLeftSv(line));
+        if (s.empty()) {
+            cb.onEmptyLine();
+            continue;
+        }
+        if (s.starts_with(';') || s.starts_with('#')) {
+            s = str::trimSv(s.substr(1));
+            cb.onComment(s);
+            continue;
+        }
+        if (s.starts_with('[')) {   // “[ group ] ”
+            // GROUP
+            s = s.substr(1);        // “ group ] ”
+            auto s1 = str::trimRightSv(s);  // “ group ]”
+            if (s1.ends_with(']'))
+                s = s1.substr(0, s1.length() - 1);  // “ group ”
+            s = str::trimSv(s);     // Let it be: IDs are trimmed, values are not
+            cb.onGroup(s);
+        } else {
+            // VARIABLE
+            auto pEq = s.find('=');
+            if (pEq != 0 && pEq != std::string_view::npos) {
+                auto name = s.substr(0, pEq);  // starts with non-blank!
+                auto value = s.substr(pEq + 1);
+                // Check for “name = value”, rather common
+                if (name.back() == ' '
+                        && !value.empty()
+                        && str::isBlank(value.front())) {
+                    value = value.substr(1);
+                }
+                name = str::trimRightSv(name);
+                cb.onVar(name, value);
+            } else {
+                cb.onEmptyLine();
+            }
+        }
+    }
+}
+
+
+std::u8string decode::cppLite(std::u8string_view x, MaybeQuoted maybeQuoted)
+{
+    bool hasRightQuote = false;
+    if (maybeQuoted != MaybeQuoted::NO) {
+        auto x1 = str::trimLeftSv(x);
+        if (x1.starts_with('"')) {
+            x = x.substr(1);
+            auto x2 = str::trimRightSv(x);
+            if (x2.ends_with('"')) {
+                x = x2.substr(0, x2.length() - 1);
+                hasRightQuote = true;
+            }
+        }
+    }
+    // Totally unescaped?
+    if (x.find('\\') != std::u8string_view::npos) {
+        return std::u8string{x};
+    }
+    std::u8string r;
+    auto p = std::to_address(x.begin());
+    auto end = std::to_address(x.end());
+    while (p != end) {
+        auto c = *(p++);
+        if (c == '\\') {
+            if (p == end) {
+                if (hasRightQuote)
+                    r += '"';
+            } else {
+                c = *(p++);
+                switch (c) {
+                case 'n':
+                case 'r':
+                    r += '\n';
+                    break;
+                case 's':
+                    r += ' ';
+                    break;
+                case '\\':
+                    r += '\\';
+                    break;
+                default:
+                    r += c;
+                }
+            }
+        } else {
+            r += c;
+        }
+    }
+    return r;
+}
+
+
+std::u8string decode::quoted(std::u8string_view x)
+{
+    // Does not start with quote → return param
+    auto x1 = str::trimLeftSv(x);
+    if (!x1.starts_with('"')) {
+        return std::u8string(x);
+    }
+    // Now have starting quote
+    x = x1.substr(1);
+
+    // Find ending quote; cut it if found
+    auto x2 = str::trimRightSv(x);
+    if (x2.ends_with('"'))
+        x = x2.substr(0, x2.length() - 1);
+
+    std::u8string r;
+    r.reserve(x.length());
+    auto p = std::to_address(x.begin());
+    auto end = std::to_address(x.end());
+    while (p != end) {
+        auto c = *(p++);
+        if (c == '"') {
+            // Skip one more quote
+            if (p != end && *p == '"')
+                ++p;
+            r += '"';
+        } else {
+            r += c;
+        }
+    }
+    r.shrink_to_fit();
+    return r;
 }
