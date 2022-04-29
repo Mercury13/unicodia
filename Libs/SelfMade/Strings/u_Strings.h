@@ -367,7 +367,16 @@ namespace str {
     template <class S, class Co>
     [[nodiscard]] inline SafeVector<trait::Sv<S>> splitSv(
             const S& s, const Co& comma, bool skipEmpty = true)
-        { return detail::splitSv<trait::Sv<S>>(s, comma, skipEmpty); }
+    {
+        static_assert(!std::is_same_v<bool, Co>, "Bool as comma is forbidden!");
+        if constexpr (std::is_integral_v<Co>) {
+            return detail::splitSv<trait::Sv<S>>(
+                        s, static_cast<trait::Ch<S>>(comma), skipEmpty);
+        } else {
+            return detail::splitSv<trait::Sv<S>>(
+                        s, static_cast<trait::Sv<S>>(comma), skipEmpty);
+        }
+    }
 
 }   // namespace str
 
