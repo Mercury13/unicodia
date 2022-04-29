@@ -253,3 +253,15 @@ TEST (TrimRightSv, Empty)
     EXPECT_EQ("", r);
     EXPECT_EQ(nullptr, r.data());
 }
+
+
+///// str::splitSv /////////////////////////////////////////////////////////////
+
+
+TEST (SplitSv, MultiRepeat)
+{
+    std::string_view s = "///////";
+    auto r = str::splitSv(s, "//", false);
+    std::vector<std::string_view> ex { "", "", "", "/"};
+    EXPECT_EQ(ex, r);
+}

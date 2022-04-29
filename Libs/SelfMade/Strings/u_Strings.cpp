@@ -24,6 +24,11 @@ template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>
 template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, char16_t, bool);
 template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, char32_t, bool);
 
+template SafeVector<std::string_view> str::detail::splitSv<std::string_view>(std::string_view, std::string_view, bool);
+template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_view>(std::wstring_view, std::wstring_view, bool);
+template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
+template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
+template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
 
 void str::toUpperInPlace(std::u8string& x)
 {
