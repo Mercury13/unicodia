@@ -9,11 +9,12 @@ win32-g++ {
 }
 
 SOURCES += \
-        ../Libs/SelfMade/u_Strings.cpp \
+        ../Libs/SelfMade/Strings/u_Strings.cpp \
         main.cpp
 
 HEADERS += \
     ../Libs/SelfMade/i_ByteSwap.h
 
 INCLUDEPATH += \
-    ../Libs/SelfMade
+    ../Libs/SelfMade \
+    ../Libs/SelfMade/Strings
