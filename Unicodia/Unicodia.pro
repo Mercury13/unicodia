@@ -23,7 +23,6 @@ CONFIG(debug, debug|release) {
 
 SOURCES += \
     ../Libs/L10n/LocDic.cpp \
-    ../Libs/SelfMade/Decoders.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
@@ -32,6 +31,7 @@ SOURCES += \
     ../Libs/SelfMade/i_MemStream.cpp \
     ../Libs/SelfMade/i_TempFont.cpp \
     ../Libs/SelfMade/u_SearchEngine.cpp \
+    ../Libs/SelfMade/Strings/u_Decoders.cpp \
     ../Libs/SelfMade/Strings/u_Qstrings.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     FmPopup.cpp \
@@ -48,7 +48,6 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
-    ../Libs/SelfMade/Decoders.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
@@ -62,6 +61,7 @@ HEADERS += \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     ../Libs/SelfMade/u_SearchEngine.h \
+    ../Libs/SelfMade/Strings/u_Decoders.h \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/Zippy/Zippy.hpp \

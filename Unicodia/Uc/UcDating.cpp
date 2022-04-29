@@ -99,6 +99,7 @@ bool uc::Dating::needsCustomNote() const
     case Mode::UNKNOWN:
         return (fStdNote == StdNote::CUSTOM);
     }
+    throw std::logic_error("[needsCustomNote] Strange mode");
 }
 
 

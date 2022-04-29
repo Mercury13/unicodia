@@ -17,7 +17,7 @@
 
 // L10n
 #include "LocDic.h"
-#include "Decoders.h"
+#include "u_Decoders.h"
 
 
 #define NBSP "\u00A0"

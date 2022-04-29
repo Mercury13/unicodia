@@ -1,5 +1,5 @@
 // My header
-#include "Decoders.h"
+#include "u_Decoders.h"
 
 // C++
 #include <regex>
@@ -8,6 +8,183 @@ using namespace std::string_view_literals;
 
 constexpr char32_t PARA_SEP_32 = 0x2029;      // U+2029 paragraph separator
 constexpr wchar_t PARA_SEP_16 = PARA_SEP_32;
+
+
+///// escape::Text /////////////////////////////////////////////////////////////
+
+
+std::u8string escape::Text::bannedSubstring() const
+{
+    switch (lineBreak) {
+    case LineBreakMode::BANNED:
+        return u8"\n";
+    case LineBreakMode::SPECIFIED_TEXT:
+        return lineBreakText;
+    case LineBreakMode::C_CR:
+    case LineBreakMode::C_LF:
+        return {};
+    }
+    throw std::logic_error("[TextEscape.bannedSubstring] Strange mode");
+}
+
+
+void escape::Text::writeQuoted(std::ostream& os, std::u8string_view x)
+{
+#define S_QUOTE "\""
+    constexpr auto C_QUOTE = '"';
+    os << C_QUOTE;
+    if (x.find(C_QUOTE) != std::u8string_view::npos) { // Char-by-char
+        for (auto v : x) {
+            if (v == C_QUOTE) {
+                os << S_QUOTE S_QUOTE;
+            } else {
+                os << static_cast<char>(v);
+            }
+        }
+    } else { // Quick
+        os << str::toSv(x);
+    }
+    os << C_QUOTE;
+#undef S_QUOTE
+}
+
+
+void escape::Text::writeSimpleString(std::ostream& os, std::u8string_view x) const
+{
+    if (space == SpaceMode::QUOTED) {
+        writeQuoted(os, x);
+    } else {
+        os << str::toSv(x);
+    }
+}
+
+
+void escape::Text::write(
+        std::ostream& os, std::u8string_view x, std::u8string& cache) const
+{
+    switch (lineBreak) {
+    case LineBreakMode::BANNED:
+        writeSimpleString(os, x);
+        break;
+    case LineBreakMode::SPECIFIED_TEXT: {
+            auto s = str::replaceSv(x, u8"\n", lineBreakText, cache);
+            writeSimpleString(os, s);
+        } break;
+    case LineBreakMode::C_CR:
+    case LineBreakMode::C_LF: {
+            auto ch = (lineBreak == LineBreakMode::C_CR) ? 'r' : 'n';
+            auto s = escape::cppSv(x, cache, ch,
+                ecIf<escape::Spaces>(space == SpaceMode::SLASH_SPACE),
+                ecIf<Enquote>(space == SpaceMode::QUOTED));
+            os << str::toSv(s);
+        } break;
+    }
+    os << str::toSv(activeSpaceDelimiter());
+}
+
+
+void escape::Text::setLineBreakText(std::u8string_view x)
+{
+    if (x.empty()) {
+        lineBreak = LineBreakMode::BANNED;
+    } else {
+        lineBreak = LineBreakMode::SPECIFIED_TEXT;
+        lineBreakText = x;
+    }
+}
+
+
+std::u8string_view escape::Text::visibleLineBreakText() const noexcept
+{
+    return (lineBreak == escape::LineBreakMode::SPECIFIED_TEXT)
+            ? lineBreakText
+            : DEFAULT_LINE_BREAK_TEXT;
+}
+
+
+std::u8string_view escape::Text::visibleSpaceDelimiter() const noexcept
+{
+    return (space == escape::SpaceMode::DELIMITED)
+            ? spaceDemimiter
+            : DEFAULT_SPACE_DELIMITER;
+}
+
+
+std::u8string_view escape::Text::activeSpaceDelimiter() const noexcept
+{
+    return (space == escape::SpaceMode::DELIMITED)
+            ? spaceDemimiter
+            : std::u8string_view{};
+}
+
+
+///// Misc functions ///////////////////////////////////////////////////////////
+
+namespace {
+
+    constexpr auto I_EOF = std::istream::traits_type::eof();
+
+    void myPutBack(std::istream& is, std::istream::traits_type::int_type x)
+    {
+        if (x != I_EOF)
+            is.putback(x);
+    }
+
+    decode::BomType detectBomEnd(
+            std::istream& is, unsigned char cRead, unsigned char cNext,
+            decode::BomType btWanted, std::istream::iostate state)
+    {
+        auto c2 = is.get();
+        if (c2 != cNext) {
+            is.clear(state);
+            myPutBack(is, c2);
+            is.putback(cRead);
+            return decode::BomType::NONE;
+        }
+        return btWanted;
+    }
+
+}
+
+decode::BomType decode::detectBom(std::istream& is)
+{
+    auto state = is.rdstate();
+    auto c1 = is.get();
+    if (!is)
+        return BomType::NONE;
+
+    switch (c1) {
+    case 0xEF: {  // UTF-8
+            // Char 2
+            auto c2 = is.get();
+            if (c2 != 0xBB) {
+                is.clear(state);
+                myPutBack(is, c2);
+                is.putback(c1);
+                return BomType::NONE;
+            }
+            // Char 3
+            int c3 = is.get();
+            if (c3 != 0xBF) {
+                is.clear(state);
+                myPutBack(is, c3);
+                is.putback(c2);
+                is.putback(c1);
+                return BomType::NONE;
+            }
+            return BomType::UTF8;
+        }
+    case 0xFF:
+        return detectBomEnd(is, 0xFF, 0xFE, BomType::UTF16LE, state);
+    case 0xFE:
+        return detectBomEnd(is, 0xFE, 0xFF, BomType::UTF16BE, state);
+    default:    // also I_EOF
+        is.clear(state);
+        myPutBack(is, c1);
+        return BomType::NONE;
+    }
+}
+
 
 std::u32string_view decode::normalizeEolSv(
         std::u32string_view x,
@@ -387,7 +564,7 @@ std::u8string_view escape::cppSv(
     case 0:
         return static_cast<bool>(enquote)
             ? std::u8string_view { u8"\"\"" }
-            : std::u8string_view {};
+            : std::u8string_view{};
     case 1:
         // Special bhv on " " → now leading space is not the same as trailing
         if (x[0] == ' ') {
