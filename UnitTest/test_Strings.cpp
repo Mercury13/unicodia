@@ -283,3 +283,20 @@ TEST (SplitSv, MultiRepeat3)
     std::vector<std::string_view> ex { "/-" };
     EXPECT_EQ(ex, r);
 }
+
+
+TEST (SplitSv, Empty)
+{
+    std::string_view s = "";
+    auto r = str::splitSv(s, "//", false);
+    EXPECT_TRUE(r.empty());
+}
+
+
+TEST (SplitSv, Single)
+{
+    std::string_view s = "  alpha  ";
+    auto r = str::splitSv(s, "//", false);
+    std::vector<std::string_view> ex { "alpha" };
+    EXPECT_EQ(ex, r);
+}
