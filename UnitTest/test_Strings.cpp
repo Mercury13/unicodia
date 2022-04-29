@@ -265,3 +265,21 @@ TEST (SplitSv, MultiRepeat)
     std::vector<std::string_view> ex { "", "", "", "/"};
     EXPECT_EQ(ex, r);
 }
+
+
+TEST (SplitSv, MultiRepeat2)
+{
+    std::string_view s = "///-/////";
+    auto r = str::splitSv(s, "//");
+    std::vector<std::string_view> ex { "/-", "/" };
+    EXPECT_EQ(ex, r);
+}
+
+
+TEST (SplitSv, MultiRepeat3)
+{
+    std::string_view s = "///-////";
+    auto r = str::splitSv(s, "//");
+    std::vector<std::string_view> ex { "/-" };
+    EXPECT_EQ(ex, r);
+}
