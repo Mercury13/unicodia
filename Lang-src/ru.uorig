@@ -6,7 +6,7 @@
  <file name="lang.ini" idless="false">
   <format name="ini">
    <text-format bom="false" line-break="crlf" />
-   <text-escape line-break-mode="c-lf" c-subformat="bare" />
+   <text-escape line-break-mode="c-lf" space-escape="bare" />
    <multitier separator="." />
   </format>
   <group id="Dating">
