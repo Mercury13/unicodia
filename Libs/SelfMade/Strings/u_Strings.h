@@ -560,6 +560,12 @@ template <class Sv>
     if (start == end)
         return r;
 
+    // Empty comma → do not split at all
+    if (comma.empty()) {
+        r.emplace_back(start, end);
+        return r;
+    }
+
     size_t p = 0;
     while (true) {
         size_t p1 = s.find(comma, p);

@@ -300,3 +300,12 @@ TEST (SplitSv, Single)
     std::vector<std::string_view> ex { "alpha" };
     EXPECT_EQ(ex, r);
 }
+
+
+TEST (SplitSv, EmptyComma)
+{
+    std::string_view s = "  alpha  ";
+    auto r = str::splitSv(s, "", false);
+    std::vector<std::string_view> ex { "alpha" };
+    EXPECT_EQ(ex, r);
+}
