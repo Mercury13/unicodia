@@ -40,7 +40,8 @@ namespace loc {
         QString q() const { return QString::fromUtf8(fSrc.data(), fSrc.size()); }
         operator QString() const { return q(); }
     #endif
-        std::u8string buck(std::u8string_view x) const;
+        std::u8string arg(std::u8string_view x) const;
+        std::u8string arg(std::u8string_view x, std::u8string_view y) const;
     private:
         std::u8string fSrc;
         bool fIsFull = false;

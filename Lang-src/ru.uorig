@@ -145,8 +145,8 @@
      <au-cmt>Test: CGJ, Tags…</au-cmt>
     </text>
     <text id="Emoji16">
-     <orig>Графическое &lt;a $&gt;эмодзи&lt;/a&gt; требует U+FE0F (=VS16)</orig>
-     <au-cmt>$=misc props, do not forget<br />Test: Misc symbols (U+2600)</au-cmt>
+     <orig>Графическое &lt;a {1}&gt;эмодзи&lt;/a&gt; требует U+FE0F (=VS16)</orig>
+     <au-cmt>{1}=misc props of &lt;a&gt;, do not forget<br />Test: Misc symbols (U+2600)</au-cmt>
     </text>
     <text id="SuttonNoFill">
      <orig>Заливок и поворотов нет</orig>
@@ -384,11 +384,11 @@
      <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
     </text>
     <text id="Sometimes">
-     <orig>иногда $</orig>
+     <orig>иногда {1}</orig>
      <au-cmt>Test: Tab U+09</au-cmt>
     </text>
     <text id="Twice">
-     <orig>дважды $</orig>
+     <orig>дважды {1}</orig>
      <au-cmt>Test: combining acute</au-cmt>
     </text>
     <text id="Space">
@@ -475,7 +475,7 @@
     </text>
     <text id="base">
      <orig>базовая</orig>
-     <au-cmt>Test: any base plane script</au-cmt>
+     <au-cmt>Test: props of any base plane script</au-cmt>
     </text>
     <text id="Utf8">
      <orig>UTF-8</orig>
@@ -4408,6 +4408,59 @@
    </text>
    <text id="BigCode">
     <orig>Код символа слишком велик</orig>
+   </text>
+  </group>
+  <group id="Expand">
+   <au-cmt>Test: expand/collapse CJK</au-cmt>
+   <group id="0">
+    <text id="Label">
+     <orig>ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков).</orig>
+    </text>
+    <text id="Button">
+     <orig>Развернуть</orig>
+    </text>
+   </group>
+   <group id="1">
+    <text id="Label">
+     <orig>ККЯ развёрнуты.</orig>
+    </text>
+    <text id="Button">
+     <orig>Свернуть</orig>
+    </text>
+   </group>
+  </group>
+  <group id="About">
+   <au-cmt>About tab</au-cmt>
+   <text id="TofuStats">
+    <orig>Статистика тофу</orig>
+   </text>
+   <text id="Version">
+    <orig>Версия &lt;b&gt;{1}&lt;/b&gt; (Юникод {2})</orig>
+   </text>
+   <text id="MyName">
+    <orig>Михаил Меркурьев</orig>
+    <au-cmt>Михайло Меркур'єв, Mikhail Merkuryev</au-cmt>
+   </text>
+   <text id="HomePage">
+    <orig>Домашняя страница</orig>
+   </text>
+   <text id="NoUnicode">
+    <orig>Программа не имеет отношения к Консорциуму Юникода</orig>
+   </text>
+   <text id="FontDevs">
+    <orig>Разработчики шрифтов, по алфавиту</orig>
+   </text>
+   <text id="NonComm">
+    <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!) </orig>
+   </text>
+   <text id="License">
+    <orig>Распространяется под лицензией &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</orig>
+   </text>
+   <text id="And">
+    <orig>и</orig>
+   </text>
+   <text id="Etc">
+    <orig>и другие</orig>
    </text>
   </group>
  </file>

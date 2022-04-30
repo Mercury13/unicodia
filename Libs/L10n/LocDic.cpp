@@ -12,10 +12,20 @@ loc::Dic loc::dic;
 ///// Text /////////////////////////////////////////////////////////////////////
 
 
-std::u8string loc::Text::buck(std::u8string_view x) const
+std::u8string loc::Text::arg(std::u8string_view x) const
 {
     std::u8string r = fSrc;
-    str::replace(r, u8'$', x);
+    str::replace(r, u8"{1}", x);
+    return r;
+}
+
+
+std::u8string loc::Text::arg(
+        std::u8string_view x, std::u8string_view y) const
+{
+    std::u8string r = fSrc;
+    str::replace(r, u8"{1}", x);
+    str::replace(r, u8"{2}", y);
     return r;
 }
 

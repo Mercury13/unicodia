@@ -969,7 +969,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     if (cp.isVs16Emoji()) {
         text += "<h4>";
         str::append(text, loc::get("Prop.Head.Emoji16")
-                          .buck(u8"href='pt:emoji' class='popup'"));
+                          .arg(u8"href='pt:emoji' class='popup'"));
         text += "</h4>";
     }
 
@@ -1039,7 +1039,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             if (!im.sometimesKey.empty()) {
                 sp1.sep();
                 str::append(text, loc::get("Prop.Input.Sometimes")
-                                  .buck(im.sometimesKey));
+                                  .arg(im.sometimesKey));
             }
             if (im.hasAltCode()) {
                 sp1.sep();
@@ -1088,7 +1088,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
                     }
                 if (im.birman.isTwice) {
                     str::append(text, loc::get("Prop.Input.Twice")
-                                      .buck(sKey));
+                                      .arg(sKey));
                 } else {
                     str::append(text, sKey);
                 }

@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -595,7 +595,7 @@ padding-bottom: 1px;</string>
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="lbName">
+           <widget class="QLabel" name="lbAboutTitle">
             <property name="font">
              <font>
               <pointsize>14</pointsize>
@@ -610,7 +610,7 @@ padding-bottom: 1px;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="label">
+           <widget class="QLabel" name="lbAboutSubtitle">
             <property name="text">
              <string>Энциклопедия символов Юникода</string>
             </property>
@@ -620,9 +620,9 @@ padding-bottom: 1px;</string>
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="lbVersion">
+           <widget class="QLabel" name="lbAboutVersion">
             <property name="text">
-             <string>[lbVersion]</string>
+             <string notr="true">[lbAboutVersion]</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -645,7 +645,7 @@ padding-bottom: 1px;</string>
           <item>
            <widget class="QLabel" name="lbTofuStats">
             <property name="text">
-             <string>Статистика тофу</string>
+             <string notr="true">[Tofu stats]</string>
             </property>
            </widget>
           </item>

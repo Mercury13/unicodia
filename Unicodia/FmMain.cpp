@@ -1079,15 +1079,6 @@ void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
 
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
-namespace {
-
-    void surroundWithPopupLink(QLabel* lb, const char* target)
-    {
-        lb->setText(QString("<a href='") + target + "' style='" STYLE_POPUP "'>" + lb->text() + "</a>");
-    }
-
-}   // anon namespace
-
 
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
@@ -1198,10 +1189,7 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
-    // Terms
-    initTerms();
-    // About
-    initAbout();
+    finishTranslation();
 
     // Set focus defered
         // Windows timer is low-priority, even after paint
@@ -1216,6 +1204,14 @@ FmMain::FmMain(QWidget *parent)
     ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
     charChanged(index);
 }
+
+
+void FmMain::finishTranslation()
+{
+    initTerms();
+    initAbout();
+}
+
 
 
 void FmMain::initTerms()
@@ -1250,6 +1246,23 @@ void FmMain::initTerms()
 }
 
 
+namespace {
+
+//    QString qEpaulets(
+//            std::string_view locKey,
+//            const char* left, const char* right)
+//        { return left + loc::get(locKey).q() + right; }
+
+    QString qPopupLink(
+            std::string_view locKey, const char* target)
+    {
+        return QString("<a href='") + target + "' style='" STYLE_POPUP "'>"
+                + loc::get(locKey) + "</a>";
+    }
+
+}   // anon namespace
+
+
 void FmMain::initAbout()
 {
     // Get version
@@ -1266,23 +1279,34 @@ void FmMain::initAbout()
     }
 
     // lbVersion
-    /// @todo [L10n] About
-    QString text;
-    str::append(text, u8"Версия <b>");
-    text.append(version);
-    str::append(text, u8"</b> (Юникод ");
-    str::append(text, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
-    text.append(")");
-    ui->lbVersion->setText(text);
+    ui->lbAboutVersion->setText(str::toQ(
+                loc::get("About.Version")
+                .arg(str::toU8sv(version.toStdString()),
+                     str::toU8sv(uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name))));
 
     // vwVersion
     QFile f(":/Texts/about.htm");
     f.open(QIODevice::ReadOnly);
     QString s = f.readAll();
+    while (true) {
+        auto pos = s.indexOf("{#");
+        if (pos < 0)
+            break;
+        auto posKey = pos + 2;
+        auto pos1 = s.indexOf('}', posKey);
+        if (pos1 < 0)
+            break;
+        auto lenKey = pos1 - posKey;
+        auto key = "About." + s.mid(posKey, lenKey).toStdString();
+        s.remove(pos, pos1 + 1 - pos);
+        s.insert(pos, loc::get(key));
+    }
+
     s = "<style>a { text-decoration: none; color: " CNAME_LINK_OUTSIDE "; }</style>" + s;
     ui->vwAbout->setText(s);
 
-    surroundWithPopupLink(ui->lbTofuStats, "ac:tofustats");
+    // lbTofuStats
+    ui->lbTofuStats->setText(qPopupLink("About.TofuStats", "ac:tofustats"));
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
 }
 
@@ -1405,16 +1429,6 @@ void wiki::append(QString& s, const char* start, const char* end)
     s.append(QByteArray::fromRawData(start, end - start));
 }
 
-namespace {
-
-    QString qEpaulets(
-            std::string_view locKey,
-            const char* left, const char* right)
-        { return left + loc::get(locKey).q() + right; }
-
-}   // anon namespace
-
-
 void FmMain::clearSample()
 {
     ui->lbSample->clear();
@@ -1517,10 +1531,7 @@ void FmMain::showCp(MaybeChar ch)
                 } else {
                     ui->lbOs->setFont(fontTofu);
                     ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
-                    ui->lbOsTitle->setText(
-                            qEpaulets("Prop.Os.Tofu",
-                                      "<a href='pt:tofu' style='" STYLE_POPUP "'>",
-                                      "</a>"));
+                    ui->lbOsTitle->setText(qPopupLink("Prop.Os.Tofu", "pt:tofu"));
                 }
             }
         } else {
@@ -1654,13 +1665,12 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
 
 void FmMain::cjkReflectCollapseState()
 {
-    /// @todo [L10n] expand/collapse
     if (model.isCjkCollapsed) {
-        ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
-        ui->btCollapse->setText(str::toQ(u8"Развернуть"sv));
+        ui->lbCollapse->setText(loc::get("Expand.0.Label"));
+        ui->btCollapse->setText(loc::get("Expand.0.Button"));
     } else {
-        ui->lbCollapse->setText(str::toQ(u8"ККЯ развёрнуты."sv));
-        ui->btCollapse->setText(str::toQ(u8"Свернуть"sv));
+        ui->lbCollapse->setText(loc::get("Expand.1.Label"));
+        ui->btCollapse->setText(loc::get("Expand.1.Button"));
     }
 }
 
