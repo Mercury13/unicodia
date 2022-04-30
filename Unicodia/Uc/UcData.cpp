@@ -5776,9 +5776,9 @@ void uc::completeData()
     std::ofstream os("script.ini");
     for (auto& v : scriptInfo) {
         os << "[Script." << v.id << "]\n";
+        os << "Name=" << esc(v.locName) << '\n';
         if (!v.flags.have(Sfg::NO_LANGS))
             os << "Lang=" << esc(v.locLangs) << '\n';
-        os << "Name=" << esc(v.locName) << '\n';
         if (v.time.needsCustomNote())
             os << "Note=" << esc(v.locTimeComment) << '\n';
         os << "Text=" << esc(v.locDescription) << '\n';
