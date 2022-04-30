@@ -907,6 +907,15 @@ namespace uc {
 
     void finishTranslation();
 
+
+    inline std::strong_ordering operator <=> (char32_t x, const Cp& y)
+        { return x <=> y.subj.ch32(); }
+    inline std::strong_ordering operator <=> (const Cp& x, char32_t y)
+        { return x.subj.ch32() <=> y; }
+    // Need somehow for lower_bound
+    inline bool operator < (const Cp& x, char32_t y)
+        { return x.subj.ch32() < y; }
+
 }   // namespace uc
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
@@ -929,15 +938,6 @@ inline const uc::Script& uc::Cp::scriptEx() const
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
-inline std::strong_ordering operator <=> (char32_t x, const uc::Cp& y)
-    { return x <=> y.subj.ch32(); }
-inline std::strong_ordering operator <=> (const uc::Cp& x, char32_t y)
-    { return x.subj.ch32() <=> y; }
-// Need somehow for lower_bound
-inline bool operator < (const uc::Cp& x, char32_t y)
-    { return x.subj.ch32() < y; }
-inline bool operator < (char32_t y, const uc::Cp& x)
-    { return y < x.subj.ch32(); }
 
 // SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
