@@ -937,7 +937,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         if (numc.isPresent()) {
             sp.sep();
             str::append(text, "<a href='pt:number' class='popup'>");
-            str::append(text, numc.type().locName);
+            str::append(text, loc::get(numc.type().locKey));
             str::append(text, "</a>");
             str::append(text, ": ");
             str::append(text, numc.num);

@@ -318,6 +318,20 @@
      <orig>Корвет</orig>
     </text>
    </group>
+   <group id="Num">
+    <text id="Digit">
+     <orig>Цифра</orig>
+     <au-cmt>Test: 0…9</au-cmt>
+    </text>
+    <text id="SpecDigit">
+     <orig>Особая цифра</orig>
+     <au-cmt>Test: ¹²³</au-cmt>
+    </text>
+    <text id="Number">
+     <orig>Число</orig>
+     <au-cmt>Test: ½⅓¼</au-cmt>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

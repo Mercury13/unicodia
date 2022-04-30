@@ -746,7 +746,7 @@ namespace uc {
 
     struct NumType
     {
-        std::u8string_view locName;
+        std::string_view locKey;
     };
     extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
 

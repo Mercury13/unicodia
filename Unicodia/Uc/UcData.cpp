@@ -1217,12 +1217,13 @@ const uc::Script* uc::findScript(std::string_view x) { return findInArray(x, scr
 
 constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
     { {} },
-    { u8"Цифра" },
-    { u8"Особая цифра" },
-    { u8"Число" },
+    { "Prop.Num.Digit" },
+    { "Prop.Num.SpecDigit" },
+    { "Prop.Num.Number" },
 };
 
 
+/// @todo [L10n] Still need some loc keys here
 constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
     { "DIR", u8"FSI, LRE, LRI…",    EcBidiStrength::EXPLICIT, },    // Explicit chars in GenPunct
     { "AL",  u8"AL",                EcBidiStrength::STRONG },       // Any Arabic letter
