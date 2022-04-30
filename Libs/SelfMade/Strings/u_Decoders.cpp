@@ -763,7 +763,7 @@ std::u8string decode::cppLite(std::u8string_view x, MaybeQuoted maybeQuoted)
         }
     }
     // Totally unescaped?
-    if (x.find('\\') != std::u8string_view::npos) {
+    if (x.find('\\') == std::u8string_view::npos) {
         return std::u8string{x};
     }
     std::u8string r;
