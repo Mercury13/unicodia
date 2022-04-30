@@ -55,6 +55,8 @@ namespace escape {
         void setLineBreakText(std::u8string_view x);
         std::u8string_view visibleLineBreakText() const noexcept;
 
+        void setSpaceDelimiter(std::u8string_view x);
+
         /// @return  space delimiter visible in UI
         ///          (default if not demimited)
         std::u8string_view visibleSpaceDelimiter() const noexcept;

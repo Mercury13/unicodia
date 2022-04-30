@@ -139,6 +139,17 @@ std::u8string_view escape::Text::visibleLineBreakText() const noexcept
 }
 
 
+void escape::Text::setSpaceDelimiter(std::u8string_view x)
+{
+    if (x.empty()) {
+        space = SpaceMode::BARE;
+    } else {
+        space = SpaceMode::DELIMITED;
+        spaceDelimiter = x;
+    }
+}
+
+
 std::u8string_view escape::Text::visibleSpaceDelimiter() const noexcept
 {
     return (space == escape::SpaceMode::DELIMITED)

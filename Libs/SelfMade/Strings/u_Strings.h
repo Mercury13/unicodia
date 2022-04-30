@@ -184,6 +184,9 @@ namespace str {
     inline std::u8string toU8(std::string_view x)
         { return { reinterpret_cast<const char8_t*>(x.data()), x.length() }; }
 
+    inline std::string toStr(std::u8string_view x)
+        { return { reinterpret_cast<const char*>(x.data()), x.length() }; }
+
     inline const char* toC(const std::u8string& x)
         { return reinterpret_cast<const char*>(x.c_str()); }
 
@@ -367,7 +370,16 @@ namespace str {
     template <class S, class Co>
     [[nodiscard]] inline SafeVector<trait::Sv<S>> splitSv(
             const S& s, const Co& comma, bool skipEmpty = true)
-        { return detail::splitSv<trait::Sv<S>>(s, comma, skipEmpty); }
+    {
+        using Sv = trait::Sv<S>;
+        using Ch = trait::Ch<S>;
+        static_assert(!std::is_same_v<bool, Co>, "Cannot use bool as comma!");
+        if constexpr (std::is_convertible_v<Co, Ch>) {
+            return detail::splitSv<Sv>(s, static_cast<Ch>(comma), skipEmpty);
+        } else {
+            return detail::splitSv<Sv>(s, static_cast<Sv>(comma), skipEmpty);
+        }
+    }
 
 }   // namespace str
 
