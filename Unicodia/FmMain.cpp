@@ -37,6 +37,9 @@
 #include "FmMessage.h"
 #include "FmTofuStats.h"
 
+// L10n
+#include "LocDic.h"
+
 template class LruCache<char32_t, QPixmap>;
 
 using namespace std::string_view_literals;
@@ -1403,9 +1406,10 @@ void wiki::append(QString& s, const char* start, const char* end)
 
 namespace {
 
-    template <class X>
-    [[deprecated]] inline void appendWiki(QString& text, const X& obj, std::u8string_view x)
-        { mywiki::append(text, x, obj.font()); }
+    QString qEpaulets(
+            std::string_view locKey,
+            const char* left, const char* right)
+        { return left + loc::get(locKey).q() + right; }
 
 }   // anon namespace
 
@@ -1497,7 +1501,7 @@ void FmMain::showCp(MaybeChar ch)
             if (osProxy.isEmpty()) {
                 ui->lbOs->setFont(fontBig);
                 ui->lbOs->setText({});
-                ui->lbOsTitle->setText(u8"(Невидимый)");
+                ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
             } else {
                 ws = ch->scriptEx().qtCounterpart;
                 font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
@@ -1512,13 +1516,16 @@ void FmMain::showCp(MaybeChar ch)
                 } else {
                     ui->lbOs->setFont(fontTofu);
                     ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
-                    ui->lbOsTitle->setText(u8"<a href='pt:tofu' style='" STYLE_POPUP "'>(В системе нет)</a>");
+                    ui->lbOsTitle->setText(
+                            qEpaulets("Prop.Os.Tofu",
+                                      "<a href='pt:tofu' style='" STYLE_POPUP "'>",
+                                      "</a>"));
                 }
             }
         } else {
             ui->lbOs->setFont(fontBig);
             ui->lbOs->setText({});
-            ui->lbOsTitle->setText(u8"(Невидимый)");
+            ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
         }
 
         QString text = mywiki::buildHtml(*ch);
@@ -1528,9 +1535,8 @@ void FmMain::showCp(MaybeChar ch)
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         ui->lbSample->setText({});
         ui->lbOs->setText({});
-        const auto osTitle = uc::isNonChar(ch.code)
-                ? u8"(Выброшен)"
-                : u8"(Свободное место)";
+        const auto& osTitle = loc::get(
+                uc::isNonChar(ch.code) ? "Prop.Os.NonChar" : "Prop.Os.Empty");
         ui->lbOsTitle->setText(osTitle);
         ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
@@ -1549,20 +1555,6 @@ void FmMain::charChanged(const QModelIndex& current)
 {
     showCp(model.charAt(current));
 }
-
-
-namespace {
-    template <class T>
-    [[deprecated]] inline void appendHeader(QString& text, const T& x)
-    {
-        str::append(text, "<p><nobr><b>");
-        str::append(text, x.locName);
-        str::append(text, "</b> ("sv);
-        str::append(text, x.nChars);
-        str::append(text, " шт.)</nobr></p>");
-    }
-
-}   // anon namespace
 
 
 void FmMain::popupAtAbs(

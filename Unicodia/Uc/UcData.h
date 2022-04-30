@@ -936,6 +936,8 @@ inline std::strong_ordering operator <=> (const uc::Cp& x, char32_t y)
 // Need somehow for lower_bound
 inline bool operator < (const uc::Cp& x, char32_t y)
     { return x.subj.ch32() < y; }
+inline bool operator < (char32_t y, const uc::Cp& x)
+    { return y < x.subj.ch32(); }
 
 // SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }

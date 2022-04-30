@@ -115,6 +115,44 @@
    </group>
   </group>
   <group id="Prop">
+   <group id="Head">
+    <text id="NonChar">
+     <orig>Выброшенная позиция</orig>
+     <au-cmt>Test: FFFF (go to FFFD, then manually)</au-cmt>
+    </text>
+    <text id="Empty">
+     <orig>Свободное место</orig>
+     <au-cmt>Test: 1st empty is in Greek+Coptic</au-cmt>
+    </text>
+    <text id="Block">
+     <orig>О блоке</orig>
+     <au-cmt>Test: any special block (e.g. Latin 1)</au-cmt>
+    </text>
+    <text id="Script">
+     <orig>О письменности</orig>
+     <au-cmt>Test: any normal block (e.g. Deva, Hebr…)</au-cmt>
+    </text>
+    <text id="Control">
+     <orig>Об управляющих символах</orig>
+     <au-cmt>Test: control chars are above fold</au-cmt>
+    </text>
+    <text id="Deprec">
+     <orig>Запрещённый символ</orig>
+     <au-cmt>Test: the 1st is U+0149</au-cmt>
+    </text>
+    <text id="DefIgn">
+     <orig>Игнорируемый символ</orig>
+     <au-cmt>Test: CGJ, Tags…</au-cmt>
+    </text>
+    <text id="Emoji16">
+     <orig>Графическое &lt;a $&gt;эмодзи&lt;/a&gt; требует U+FE0F (=VS16)</orig>
+     <au-cmt>$=misc props, do not forget<br />Test: Misc symbols (U+2600)</au-cmt>
+    </text>
+    <text id="SuttonNoFill">
+     <orig>Заливок и поворотов нет</orig>
+     <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
+    </text>
+   </group>
    <group id="Bidi">
     <group id="DIR">
      <au-cmt>Test: Explicit chars in GenPunct</au-cmt>
@@ -330,6 +368,145 @@
     <text id="Number">
      <orig>Число</orig>
      <au-cmt>Test: ½⅓¼</au-cmt>
+    </text>
+   </group>
+   <group id="Input">
+    <text id="Bullet">
+     <orig>Ввод</orig>
+     <au-cmt>Test: any char with alt input</au-cmt>
+    </text>
+    <text id="Birman">
+     <orig>Бирман</orig>
+     <au-cmt>Means Ilya Birman’s typography layout<br />Test: U+011B both Alt code and Birman</au-cmt>
+    </text>
+    <text id="AltCode">
+     <orig>Alt-код</orig>
+     <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+    </text>
+    <text id="Sometimes">
+     <orig>иногда $</orig>
+     <au-cmt>Test: Tab U+09</au-cmt>
+    </text>
+    <text id="Twice">
+     <orig>дважды $</orig>
+     <au-cmt>Test: combining acute</au-cmt>
+    </text>
+    <text id="Space">
+     <orig>Пробел</orig>
+     <au-cmt>Test: NBSP U+00A0</au-cmt>
+    </text>
+   </group>
+   <group id="Bullet">
+    <text id="EngTech">
+     <orig>Английское</orig>
+     <au-cmt>English — maybe Technical<br />Test: block info</au-cmt>
+    </text>
+    <text id="Range">
+     <orig>Диапазон</orig>
+     <au-cmt>test: block info</au-cmt>
+    </text>
+    <text id="VerAppear">
+     <orig>Появился в версии</orig>
+     <au-cmt>Test: block info</au-cmt>
+    </text>
+    <text id="NonChars">
+     <orig>Выброшенных позиций</orig>
+     <au-cmt>Test: any block with nonchars (e.g. Specials)</au-cmt>
+    </text>
+    <text id="Empty">
+     <orig>Пустых мест</orig>
+     <au-cmt>Test: Any block with empty places: Specials, Greek/Coptic…</au-cmt>
+    </text>
+    <text id="VerFilled">
+     <orig>Заполнен в версии</orig>
+     <au-cmt>Test: Any full block (e.g. ASCII)</au-cmt>
+    </text>
+    <text id="Version">
+     <orig>Версия Юникода</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="InTech">
+     <orig>В техдокументации</orig>
+     <au-cmt>Test: bidi info</au-cmt>
+    </text>
+    <text id="Block">
+     <orig>Блок</orig>
+     <au-cmt>Any char</au-cmt>
+    </text>
+    <text id="Script">
+     <orig>Письменность</orig>
+     <au-cmt>Test: Any char w/script (e.g. A)</au-cmt>
+    </text>
+    <text id="Type">
+     <orig>Тип</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="Bidi">
+     <orig>В двунаправленном письме</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="Computers">
+     <orig>Компьютеры</orig>
+     <au-cmt>Test: any char from Legacy computing</au-cmt>
+    </text>
+    <text id="Dir">
+     <orig>Направление</orig>
+     <au-cmt>Test: Any script except Braille and technical</au-cmt>
+    </text>
+    <text id="Type">
+     <orig>Тип</orig>
+     <au-cmt>Test: Any script</au-cmt>
+    </text>
+    <text id="Langs">
+     <orig>Языки</orig>
+     <au-cmt>Test: Any script except few technical</au-cmt>
+    </text>
+    <text id="Appear">
+     <orig>Появилась</orig>
+     <au-cmt>Test: Any script except few technical</au-cmt>
+    </text>
+    <text id="Condition">
+     <orig>Состояние</orig>
+     <au-cmt>Maybe status<br />Test: any live (or prevly live) script</au-cmt>
+    </text>
+    <text id="Plane">
+     <orig>Плоскость</orig>
+     <au-cmt>Test: any script</au-cmt>
+    </text>
+    <text id="base">
+     <orig>базовая</orig>
+     <au-cmt>Test: any base plane script</au-cmt>
+    </text>
+    <text id="Utf8">
+     <orig>UTF-8</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="Utf16">
+     <orig>UTF-16</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="Html">
+     <orig>HTML</orig>
+     <au-cmt>Test: any char</au-cmt>
+    </text>
+   </group>
+   <group id="Os">
+    <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
+    <text id="Invisible">
+     <orig>(Невидимый)</orig>
+    </text>
+    <text id="Tofu">
+     <orig>(В системе нет)</orig>
+    </text>
+    <text id="NonChar">
+     <orig>(Выброшен)</orig>
+    </text>
+    <text id="Empty">
+     <orig>(Свободное место)</orig>
+    </text>
+    <text id="FontsFor">
+     <orig>Шрифты для U+%04X</orig>
+     <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
     </text>
    </group>
   </group>

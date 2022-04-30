@@ -4,6 +4,10 @@
 #include <filesystem>
 #include "u_Strings.h"
 
+#ifdef QT_STRINGS
+    #include <QString>
+#endif
+
 namespace loc {
 
     class Text
@@ -24,9 +28,14 @@ namespace loc {
 
         std::u8string_view u8() const { return fSrc; }
         operator std::u8string_view() const { return fSrc; }
-        operator std::u8string() const { return fSrc; }
+        operator const std::u8string&() const { return fSrc; }
         const char* c_str() const { return str::toC(fSrc); }
+        const std::u8string& str() const { return fSrc; }
         bool isFull() const { return fIsFull; }
+    #ifdef QT_STRINGS
+        QString q() const { return QString::fromUtf8(fSrc.data(), fSrc.size()); }
+        operator QString() const { return q(); }
+    #endif
     private:
         std::u8string fSrc;
         bool fIsFull = false;

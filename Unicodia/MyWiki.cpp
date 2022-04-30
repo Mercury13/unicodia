@@ -399,6 +399,7 @@ namespace {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else if (name == "№"sv) {
+            /// @todo [L10n] Check all them, move to lang resource some
             str::append(s, u8"№<span style='font-size:3pt'>\u00A0</span>"sv);
             str::append(s, x.safeGetV(1, {}));
         } else if (name == "bc"sv) {
@@ -455,6 +456,7 @@ namespace {
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
         str::append(text, x.nChars);
+        /// @todo [L10n] what to do?
         str::append(text, u8" шт."sv);
         str::append(text, addText);
         str::append(text, ")</nobr></p>"sv);
@@ -500,10 +502,38 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
     str::append(text, ")");
 }
 
-void mywiki::appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version)
+namespace {
+    constexpr std::u8string_view BULLET = u8"•\u00A0";
+
+    void appendSomeBullet(QString& text,
+                    std::u8string_view bullet,
+                    std::string_view locKey,
+                    std::string_view tag1={}, std::string_view tag2={})
+    {
+        str::append(text, bullet);
+        str::append(text, tag1);
+        str::append(text, loc::get(locKey));
+        str::append(text, tag2);
+        text += ": ";
+    }
+
+    void appendNonBullet(QString& text, std::string_view locKey,
+                      std::string_view tag1={}, std::string_view tag2={})
+    {
+        appendSomeBullet(text, {}, locKey, tag1, tag2);
+    }
+
+    void appendBullet(QString& text, std::string_view locKey,
+                      std::string_view tag1={}, std::string_view tag2={})
+    {
+        appendSomeBullet(text, BULLET, locKey, tag1, tag2);
+    }
+}
+
+
+void mywiki::appendVersion(QString& text, std::u8string_view bullet, const uc::Version& version)
 {
-    str::append(text, prefix);
-    str::append(text, u8"Версия Юникода: ");
+    appendSomeBullet(text, bullet, "Prop.Bullet.Version");
     appendVersionValue(text, version);
 }
 
@@ -517,7 +547,7 @@ QString mywiki::buildHtml(const uc::BidiClass& x)
     str::QSep sp(text, "<br>");
 
     sp.sep();
-    str::append(text, u8"• В техдокументации: ");
+    appendBullet(text, "Prop.Bullet.InTech");
     str::append(text, x.tech);
 
     str::append(text, "</p>");
@@ -547,7 +577,7 @@ QString mywiki::buildFontsHtml(
         return {};
     QString text;
     char buf[50];
-    auto format = u8"Шрифты для U+%04X";
+    auto format = loc::get("Prop.Os.FontsFor").c_str();
     snprintf(buf, std::size(buf), reinterpret_cast<const char*>(format), (int)cp);
     appendStylesheet(text);
     appendHeader(text, buf);
@@ -557,7 +587,7 @@ QString mywiki::buildFontsHtml(
     str::QSep sp(text, "<br>");
     for (auto& v : fonts.lines) {
         sp.sep();
-        str::append(text, u8"•\u00A0");
+        str::append(text, BULLET);
         text += v.name;
     }
     if (fonts.hasMore) {
@@ -568,13 +598,13 @@ QString mywiki::buildFontsHtml(
 }
 
 namespace {
-    uc::DatingLoc rusDatingLoc;
+    uc::DatingLoc myDatingLoc;
 }   // anon namespace
 
 
 void mywiki::translateDatingLoc()
 {
-    rusDatingLoc = uc::DatingLoc {
+    myDatingLoc = uc::DatingLoc {
         .yBc            = loc::get("Dating.Name.YBc"),
         .yBefore        = loc::get("Dating.Name.YBefore"),
         .yApprox        = loc::get("Dating.Name.YApprox"),
@@ -590,9 +620,9 @@ void mywiki::translateDatingLoc()
         .maybeEarlier   = loc::get("Dating.StdComment.MaybeEarlier"),
     };
     char buf[30];
-    for (int i = 1; i < std::ssize(rusDatingLoc.centuryNames); ++i) {
+    for (int i = 1; i < std::ssize(myDatingLoc.centuryNames); ++i) {
         snprintf(buf, std::size(buf), "Dating.Century.%d", i);
-        rusDatingLoc.centuryNames[i] = loc::get(buf);
+        myDatingLoc.centuryNames[i] = loc::get(buf);
     }
 }
 
@@ -602,39 +632,39 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
     if (x.ecType != uc::EcScriptType::NONE) {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
-        str::append(text, u8"• Тип: ");
+        appendBullet(text, "Prop.Bullet.Type");
         appendWiki(text, x, x.type().locName);
         if (x.ecDir != uc::EcWritingDir::NOMATTER) {
             sp.sep();
-            str::append(text, u8"• Направление: ");
+            appendBullet(text, "Prop.Bullet.Dir");
             str::append(text, x.dir().locName);
         }
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
-            str::append(text, u8"• Языки: ");
+            appendBullet(text, "Prop.Bullet.Langs");
             appendWiki(text, x, x.loc.langs);
         }
         if (x.time) {
             sp.sep();
-            str::append(text, u8"• Появилась: ");
-            auto wikiTime = x.time.wikiText(rusDatingLoc, x.loc.timeComment);
+            appendBullet(text, "Prop.Bullet.Appear");
+            auto wikiTime = x.time.wikiText(myDatingLoc, x.loc.timeComment);
             appendWiki(text, x, wikiTime);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
-            str::append(text, u8"• Состояние: ");
+            appendBullet(text, "Prop.Bullet.Condition");
             append(text, x.life().locName, x.font());
         }
         if (isScript) {
             if (x.ecVersion != uc::EcVersion::UNKNOWN) {
                 sp.sep();
-                appendVersion(text, u8"• "sv, x.version());
+                appendVersion(text, BULLET, x.version());
             }
 
             sp.sep();
-            str::append(text, u8"• Плоскость: ");
+            appendBullet(text, "Prop.Bullet.Plane");
             if (x.plane == uc::PLANE_BASE) {
-                str::append(text, u8"базовая");
+                str::append(text, loc::get("Prop.Bullet.base"));
             } else {
                 str::append(text, std::to_string(x.plane));
             }
@@ -653,6 +683,7 @@ QString mywiki::buildHtml(const uc::Script& x)
 {
     QString r;
     std::u8string_view add;
+    /// @todo [L10n] what to do?
     if (x.id == "Hira"sv)
         add = u8" без <a href='ps:Hent' class='popup' >хэнтайганы</a>";
     appendStylesheet(r);
@@ -695,15 +726,15 @@ namespace {
         QFontDatabase::WritingSystem ws;
     };
 
-    template <class T, class Name1>
+    template <class T>
     inline void appendValuePopup(
-            QString& text, const T& value, Name1 name, const char* scheme)
+            QString& text, const T& value, std::string_view locKey, const char* scheme)
     {
         StrCache cache, buf;
-        str::append(text, name);
+        appendNonBullet(text, locKey);
         auto vid = idOf(value, cache);
         snprintf(buf, std::size(buf),
-                 ": <a href='%s:%.*s' class='popup' >",
+                 "<a href='%s:%.*s' class='popup' >",
                 scheme, int(vid.size()), vid.data());
         str::append(text, buf);
         appendVal(text, value);
@@ -743,7 +774,8 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
     }
 
     sp.sep();
-    str::append(text, u8"<a href='pt:utf8' class='popup' >UTF-8</a>: ");
+    appendNonBullet(text, "Prop.Bullet.Utf8",
+                    "<a href='pt:utf8' class='popup'>", "</a>");
     appendCopyable(text, u8Hex);
 
     // UTF-16: QString is UTF-16
@@ -757,7 +789,8 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
     }
 
     sp.sep();
-    str::append(text, u8"<a href='pt:utf16' class='popup'>UTF-16</a>: ");
+    appendNonBullet(text, "Prop.Bullet.Utf16",
+                    "<a href='pt:utf16' class='popup'>", "</a>");
     appendCopyable(text, u16Hex);
 }
 
@@ -767,23 +800,23 @@ namespace {
     void appendBlock(QString& text, const uc::Block& block, str::QSep& sp)
     {
         sp.sep();
-        appendValuePopup(text, block, u8"Блок", "pk");
+        appendValuePopup(text, block, "Prop.Bullet.Block", "pk");
     }
 
-    void appendKey(QString& text, std::u8string_view header, char main)
+    void appendKey(std::u8string& text, std::u8string_view header, char main)
     {
-        str::append(text, u8"<span style='background-color:palette(midlight);'>\u00A0");
-        str::append(text, header);
+        text += u8"<span style='background-color:palette(midlight);'>\u00A0";
+        text += header;
         if (main) {
             switch (main) {
             case ' ':
-                str::append(text, u8"Пробел");
+                text += loc::get("Prop.Input.Space");
                 break;
             default:
-                text += QChar(main);
+                text += main;
             }
         }
-        str::append(text, u8"\u00A0</span>");
+        text += u8"\u00A0</span>";
     }
 
     void appendSgnwVariants(QString& text, const uc::Cp& cp, const uc::SwInfo& sw)
@@ -792,7 +825,9 @@ namespace {
             return;
 
         if (sw.isSimple()) {
-            str::append(text, u8"<h4>Заливок и поворотов нет.</h4>");
+            text += "<h4>";
+            str::append(text, loc::get("Prop.Head.SuttonNoFill"));
+            text += "</h4>";
             return;
         }
 
@@ -885,6 +920,24 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
 }
 
 
+namespace {
+
+    void appendSubhead(QString& text, std::string_view key)
+    {
+        text += "<h2>";
+        str::append(text, loc::get(key));
+        text += "</h2>";
+    }
+
+    void appendBlockSubhead(QString& text)
+        { appendSubhead(text, "Prop.Head.Block"); }
+
+    void appendScriptSubhead(QString& text)
+        { appendSubhead(text, "Prop.Head.Script"); }
+
+}   // anon namespace
+
+
 QString mywiki::buildHtml(const uc::Cp& cp)
 {
     char buf[30];
@@ -900,17 +953,25 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
     // Deprecated
     if (cp.isDeprecated()) {
-        str::append(text, u8"<h3><a href='pt:deprecated' class='deprecated'>Запрещённый символ</a></h3>"sv);
+        text += "<h3><a href='pt:deprecated' class='deprecated'>";
+        str::append(text, loc::get("Prop.Head.Deprec"));
+        text += "</h3>";
     }
 
     // Deprecated
     if (cp.isDefaultIgnorable()) {
-        str::append(text, u8"<h4><a href='pt:ignorable' class='popup'>Игнорируемый символ</a></h4>"sv);
+        text += "<h4><a href='pt:ignorable' class='popup'>";
+        str::append(text, loc::get("Prop.Head.DefIgn"));
+        text += "</a></h4>";
     }
 
     // Deprecated
     if (cp.isVs16Emoji()) {
-        str::append(text, u8"<h4>Графическое <a href='pt:emoji' class='popup'>эмодзи</a> требует U+FE0F (=VS16)</h4>"sv);
+        text += "<h4>";
+        std::u8string s = loc::get("Prop.Head.Emoji16");
+        str::replace(s, u8"$", u8"href='pt:emoji' class='popup'");
+        str::append(text, s);
+        text += "</h4>";
     }
 
     appendSgnwVariants(text, cp, sw);
@@ -922,7 +983,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         // Script
         sp.sep();
         auto& scr = cp.script();
-        appendValuePopup(text, scr, u8"Письменность", "ps");
+        appendValuePopup(text, scr, "Prop.Bullet.Script", "ps");
 
         // Unicode version
         sp.sep();
@@ -930,16 +991,14 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
         // Character type
         sp.sep();
-        appendValuePopup(text, cp.category(), u8"Тип", "pc");
+        appendValuePopup(text, cp.category(), "Prop.Bullet.Type", "pc");
 
         // Numeric value
         auto& numc = cp.numeric();
         if (numc.isPresent()) {
             sp.sep();
-            str::append(text, "<a href='pt:number' class='popup'>");
-            str::append(text, loc::get(numc.type().locKey));
-            str::append(text, "</a>");
-            str::append(text, ": ");
+            appendNonBullet(text, numc.type().locKey,
+                    "<a href='pt:number' class='popup'>", "</a>");
             str::append(text, numc.num);
             if (numc.denom != 1) {
                 str::append(text, "/");
@@ -949,7 +1008,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
         // Bidi writing
         sp.sep();
-        appendValuePopup(text, cp.bidiClass(), u8"В двунаправленном письме", "pb");
+        appendValuePopup(text, cp.bidiClass(), "Prop.Bullet.Bidi", "pb");
 
         // Block
         auto& blk = cp.block();
@@ -958,7 +1017,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         auto comps = uc::cpOldComps(cp.subj);
         if (comps) {
             sp.sep();
-            str::append(text, u8"Компьютеры: ");
+            appendNonBullet(text, "Prop.Bullet.Computers");
             str::QSep spC(text, ", ");
             while (comps) {
                 // Extract and remove bit
@@ -976,16 +1035,19 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         auto im = uc::cpInputMethods(cp.subj);
         if (im.hasSmth()) {
             sp.sep();
-            str::append(text, "Ввод: ");
+            appendNonBullet(text, "Prop.Input.Bullet");
             str::QSep sp1(text, ";&nbsp; ");
             if (!im.sometimesKey.empty()) {
                 sp1.sep();
-                str::append(text, u8"иногда ");
-                str::append(text, im.sometimesKey);
+                std::u8string s = loc::get("Prop.Input.Sometimes");
+                str::replace(s, u8"$", im.sometimesKey);
+                str::append(text, s);
             }
             if (im.hasAltCode()) {
                 sp1.sep();
-                str::append(text, u8"<a href='pt:altcode' class='popup'>Alt-код</a> ");
+                text += "<a href='pt:altcode' class='popup'>";
+                str::append(text, loc::get("Prop.Input.AltCode"));
+                text += "</a> ";
                 str::QSep sp2(text, ", ");
                 if (im.alt.dosCommon) {
                     sp2.sep();
@@ -1017,20 +1079,28 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             // Birman test
             if (im.hasBirman()) {
                 sp1.sep();
-                str::append(text, "<a href='pt:birman' class='popup'>Бирман</a> ");
-                if (im.birman.isTwice)
-                    str::append(text, u8"дважды ");
-                appendKey(text, u8"AltGr+", im.birman.key);
-                if (im.birman.letter != 0) {
-                    text += ' ';
-                    appendKey(text, {}, im.birman.letter);
+                text += "<a href='pt:birman' class='popup'>";
+                str::append(text, loc::get("Prop.Input.Birman"));
+                text += "</a> ";
+                std::u8string sKey;
+                    appendKey(sKey, u8"AltGr+", im.birman.key);
+                    if (im.birman.letter != 0) {
+                        sKey += ' ';
+                        appendKey(sKey, {}, im.birman.letter);
+                    }
+                if (im.birman.isTwice) {
+                    std::u8string s = loc::get("Prop.Input.Twice");
+                    str::replace(s, u8"$", sKey);
+                    str::append(text, s);
+                } else {
+                    str::append(text, sKey);
                 }
             }
         }
 
         // HTML
         sp.sep();
-        str::append(text, u8"HTML: ");
+        appendNonBullet(text, "Prop.Bullet.Html");
         snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
         appendCopyable(text, buf);
         if (cp.name.alts != 0) {
@@ -1057,25 +1127,25 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             // Others → t:ASCII, stored here for simplicity
             if (cp.ecCategory == uc::EcCategory::CONTROL) {
                 //  Control char description
-                str::append(text, u8"<h2>Об управляющих символах</h2>");
+                appendSubhead(text, "Prop.Head.Control");
                 appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
             } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
                 // Script description
-                str::append(text, u8"<h2>О письменности</h2>");
+                appendScriptSubhead(text);
                 mywiki::appendHtml(text, sc, false);
             } else {
                 // Script description
-                str::append(text, u8"<h2>О блоке</h2>");
+                appendBlockSubhead(text);
                 appendWiki(text, blk, blk.loc.description);
             }
         } else {
             if (blk.hasDescription()) {
                 // Block description
-                str::append(text, u8"<h2>О блоке</h2>");
+                appendBlockSubhead(text);
                 appendWiki(text, blk, blk.loc.description);
             } else if (auto& sc = cp.scriptEx(); &sc != uc::scriptInfo){
                 // Script description
-                str::append(text, u8"<h2>О письменности</h2>");
+                appendScriptSubhead(text);
                 mywiki::appendHtml(text, sc, false);
             }
         }
@@ -1097,7 +1167,9 @@ QString mywiki::buildEmptyCpHtml(char32_t code, const QColor& color)
 {
     QString text;
     appendStylesheet(text);
-    text += "<h1 style='color:" + color.name() + "'>Свободное место</h1>";
+    text += "<h1 style='color:" + color.name() + "'>";
+    str::append(text, loc::get("Prop.Head.Empty"));
+    text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
     return text;
 }
@@ -1107,9 +1179,11 @@ QString mywiki::buildNonCharHtml(char32_t code)
 {
     QString text;
     appendStylesheet(text);
-    str::append(text, u8"<h1>Выброшенная позиция</h1>"sv);
+    text += "<h1>";
+    str::append(text, loc::get("Prop.Head.NonChar"));
+    text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
-    str::append(text, "<p>");
+    text += "<p>";
     appendWiki(text, *uc::blockOf(code), uc::TX_NOCHAR);
     return text;
 }
@@ -1134,7 +1208,7 @@ QString mywiki::buildHtml(const uc::Term& x)
 
 
 namespace {
-    const char8_t* STR_RANGE = u8"%04X…%04X";    
+    const char8_t* STR_RANGE = u8"%04X…%04X";
 }
 
 QString mywiki::buildHtml(const uc::Block& x)
@@ -1147,34 +1221,35 @@ QString mywiki::buildHtml(const uc::Block& x)
     str::QSep sp(text, "<br>");
 
     sp.sep();
-    str::append(text, u8"• Английское: ");
+    appendBullet(text, "Prop.Bullet.EngTech");
     str::append(text, x.name);
 
     sp.sep();
-    str::append(text, u8"• Диапазон: ");
+    appendBullet(text, "Prop.Bullet.Range");
     char buf[30];
     snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RANGE),
                 int(x.startingCp), int(x.endingCp));
     str::append(text, buf);
 
     sp.sep();
-    str::append(text, u8"• Появился в версии: ");
+    appendBullet(text, "Prop.Bullet.VerAppear");
     mywiki::appendVersionValue(text, x.version());
 
     auto nNonChars = x.nNonChars();
     if (nNonChars) {
         sp.sep();
-        str::append(text, u8"• <a href='pt:noncharacter' class='popup'>Отсутствующих символов</a>: "sv);
+        appendBullet(text, "Prop.Bullet.NonChars",
+                     "<a href='pt:noncharacter' class='popup'>", "</a>");
         str::append(text, nNonChars);
     }
 
     sp.sep();
     auto nEmpty = x.nEmptyPlaces();
     if (nEmpty != 0) {
-        str::append(text, u8"• Пустых мест: "sv);
+        appendBullet(text, "Prop.Bullet.Empty");
         str::append(text, nEmpty);
     } else {
-        str::append(text, u8"• Заполнен в версии: "sv);
+        appendBullet(text, "Prop.Bullet.VerFilled");
         mywiki::appendVersionValue(text, x.lastVersion());
     }
 
@@ -1183,7 +1258,9 @@ QString mywiki::buildHtml(const uc::Block& x)
         appendWiki(text, x, x.loc.description);
         str::append(text, "</p>");
     } else if (x.ecScript != uc::EcScript::NONE) {
-        str::append(text, u8"<p><b>О письменности</b></p>"sv);
+        text += "<p><b>";
+        str::append(text, loc::get("Prop.Head.Script"));
+        text += "</b></p>";
         mywiki::appendHtml(text, x.script(), false);
     }
     return text;
