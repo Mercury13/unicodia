@@ -568,6 +568,7 @@ namespace uc {
     enum class Sfg {
         NONSCRIPT = 1,
         NO_LANGS = 2,
+        DESC_FROM_PREV = 4,
     };
     DEFINE_ENUM_OPS(Sfg)
 
@@ -579,22 +580,27 @@ namespace uc {
         EcLangLife ecLife;
         EcWritingDir ecDir;
         EcContinent ecContinent;
-        std::u8string_view locName;
         Dating time;
-        std::u8string_view locTimeComment;
-        std::u8string_view locLangs, locDescription;
         EcFont ecFont;
         Flags<Sfg> flags {};
 
         mutable unsigned nChars = 0;
         mutable int plane = -1;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
+        struct Loc {
+            std::u8string_view name, timeComment, langs, description;
+        } mutable loc {};
 
         inline const ScriptType& type() const { return scriptTypeInfo[static_cast<int>(ecType)]; }
         inline const LangLife& life() const { return langLifeInfo[static_cast<int>(ecLife)]; }
         inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
         inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
+        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        template <size_t N>
+        void printfLocKey(char (&buf)[N], const char* suffix) const
+            { printfLocKey(buf, N, suffix); }
     };
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);

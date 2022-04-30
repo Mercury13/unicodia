@@ -609,15 +609,15 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
             str::append(text, u8"• Направление: ");
             str::append(text, x.dir().locName);
         }
-        if (!x.locLangs.empty()) {
+        if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();
             str::append(text, u8"• Языки: ");
-            appendWiki(text, x, x.locLangs);
+            appendWiki(text, x, x.loc.langs);
         }
         if (x.time) {
             sp.sep();
             str::append(text, u8"• Появилась: ");
-            auto wikiTime = x.time.wikiText(rusDatingLoc, x.locTimeComment);
+            auto wikiTime = x.time.wikiText(rusDatingLoc, x.loc.timeComment);
             appendWiki(text, x, wikiTime);
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
@@ -644,7 +644,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
     }
 
     str::append(text, "<p>");
-    appendWiki(text, x, x.locDescription);
+    appendWiki(text, x, x.loc.description);
     str::append(text, "</p>");
 }
 
