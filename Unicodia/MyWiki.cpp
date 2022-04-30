@@ -411,12 +411,11 @@ namespace {
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
         } else if (name == "noto"sv) {
-            str::append(s, "<font face='");
+            s += "<font face='";
             auto& fnNoto = uc::fontInfo[static_cast<int>(uc::EcFont::NOTO)];
             fnNoto.load(NO_TRIGGER);
             s += fnNoto.familiesComma(NO_TRIGGER);
-            str::append(s, '\'');
-            str::append(s, '>');
+            s += "'>";
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else {

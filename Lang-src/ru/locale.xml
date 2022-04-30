@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- term-suppress-en: [+] suppress English terms (mainly for English)
+-->
+<locale term-suppress-en="0">
+	<!-- You can make any templates (w/o params) you want. As it’s XML, you’d like to enclose them in CDATA. -->
+	<wiki-templates>
+		<!-- №, narrow NBSP -->
+		<tmpl name="№"><![CDATA[<№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
+		<!-- non-break BC -->
+		<tmpl name="bc">&#xA0;до&#xA0;н.э.</tmpl>
+		<!-- typographic dash -->
+		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
+		<!-- typographic comma-dash -->
+		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
+	</wiki-templates>
+</locale>
