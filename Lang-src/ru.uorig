@@ -117,6 +117,7 @@
   <group id="Prop">
    <group id="Bidi">
     <group id="DIR">
+     <au-cmt>Test: Explicit chars in GenPunct</au-cmt>
      <text id="Name">
       <orig>Тэг направления</orig>
      </text>
@@ -128,6 +129,7 @@
      </text>
     </group>
     <group id="AL">
+     <au-cmt>Test: Any Arabic letter</au-cmt>
      <text id="Name">
       <orig>Арабская буква</orig>
      </text>
@@ -139,7 +141,7 @@
      </text>
     </group>
     <group id="AN">
-     <au-cmt>Arabic Number</au-cmt>
+     <au-cmt>Arabic Number<br />Test: Arabic digits (0660…), Rumi (10E60)</au-cmt>
      <text id="Name">
       <orig>Арабская цифоа</orig>
      </text>
@@ -151,7 +153,7 @@
      </text>
     </group>
     <group id="B">
-     <au-cmt>Paragraph Separator</au-cmt>
+     <au-cmt>Paragraph Separator<br />Test: CR, LF and a few more</au-cmt>
      <text id="Name">
       <orig>Разделитель абзацев</orig>
      </text>
@@ -163,7 +165,7 @@
      </text>
     </group>
     <group id="BN">
-     <au-cmt>Boundary Neutral</au-cmt>
+     <au-cmt>Boundary Neutral<br />Test: most controls</au-cmt>
      <text id="Name">
       <orig>Неграфический</orig>
      </text>
@@ -175,7 +177,7 @@
      </text>
     </group>
     <group id="CS">
-     <au-cmt>Common Separator</au-cmt>
+     <au-cmt>Common Separator<br />Test: ,.</au-cmt>
      <text id="Name">
       <orig>Цифровой разделитель</orig>
      </text>
@@ -187,7 +189,7 @@
      </text>
     </group>
     <group id="EN">
-     <au-cmt>European Number</au-cmt>
+     <au-cmt>European Number<br />Test: 012…</au-cmt>
      <text id="Name">
       <orig>Европейская цифра</orig>
      </text>
@@ -199,7 +201,7 @@
      </text>
     </group>
     <group id="ES">
-     <au-cmt>European Separator</au-cmt>
+     <au-cmt>European Separator<br />Test: +-</au-cmt>
      <text id="Name">
       <orig>Европейский ±</orig>
      </text>
@@ -211,7 +213,7 @@
      </text>
     </group>
     <group id="ET">
-     <au-cmt>European Terminator</au-cmt>
+     <au-cmt>European Terminator<br />Test: #$°</au-cmt>
      <text id="Name">
       <orig>Европейская единица измерения</orig>
      </text>
@@ -223,6 +225,7 @@
      </text>
     </group>
     <group id="L">
+     <au-cmt>Test: ABC…</au-cmt>
      <text id="Name">
       <orig>Слева направо</orig>
      </text>
@@ -234,7 +237,7 @@
      </text>
     </group>
     <group id="NSM">
-     <au-cmt>Nonspacing Mark</au-cmt>
+     <au-cmt>Nonspacing Mark<br />Test: any combining umlaut</au-cmt>
      <text id="Name">
       <orig>Непротяжённая метка</orig>
      </text>
@@ -246,6 +249,7 @@
      </text>
     </group>
     <group id="ON">
+     <au-cmt>Test: !"…</au-cmt>
      <text id="Name">
       <orig>Прочий нейтральный</orig>
      </text>
@@ -257,6 +261,7 @@
      </text>
     </group>
     <group id="NM">
+     <au-cmt>Test: most braces, e.g. ()</au-cmt>
      <text id="Name">
       <orig>Нейтральный отзеркаливающийся</orig>
      </text>
@@ -268,6 +273,7 @@
      </text>
     </group>
     <group id="R">
+     <au-cmt>Test: Hebrew</au-cmt>
      <text id="Name">
       <orig>Справа налево</orig>
      </text>
@@ -279,7 +285,7 @@
      </text>
     </group>
     <group id="S">
-     <au-cmt>Segment Separator</au-cmt>
+     <au-cmt>Segment Separator<br />Test: 09, 0B, 1F</au-cmt>
      <text id="Name">
       <orig>Разделитель участков</orig>
      </text>
@@ -291,7 +297,7 @@
      </text>
     </group>
     <group id="WS">
-     <au-cmt>White Space</au-cmt>
+     <au-cmt>Whitespace<br />Test: FF, space</au-cmt>
      <text id="Name">
       <orig>Пробел</orig>
      </text>
@@ -304,6 +310,7 @@
     </group>
    </group>
    <group id="OldComp">
+    <au-cmt>Test in Symbols for legacy computing</au-cmt>
     <text id="Teletext">
      <orig>телетекст</orig>
     </text>

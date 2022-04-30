@@ -1242,7 +1242,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
 
     { "NM",  u8"ON\u00A0+\u00A0Bidi_M", EcBidiStrength::NEUTRAL },  // ()
 
-    { "R",   u8"R",                 EcBidiStrength::STRONG },
+    { "R",   u8"R",                 EcBidiStrength::STRONG },       // Hebrew
     { "S",   u8"S",                 EcBidiStrength::NEUTRAL },      // 09, 0B, 1F
     { "WS",  u8"WS",                EcBidiStrength::NEUTRAL },      // FF, space
     // { u8"Error" },  // check for equal number
