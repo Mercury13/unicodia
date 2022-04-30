@@ -2355,6 +2355,18 @@ constinit const uc::TermCat uc::termCats[] {
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 
 constinit const uc::Term uc::terms[] {
+    { "winemoji", EcTermCat::INPUT,
+      u8"панель эмодзи Windows 10", u8"Windows 10 emoji panel",
+        u8"В Windows 10 нажмите Win+; или Win+., чтобы раскрыть панель эмодзи. "
+            "Умеет вводить:<br>"
+            "• [[pt:emoji|эмодзи]], существующие в стандартном шрифте. С пополнением шрифта пополнялась и панель;<br>"
+            "• текстовые смайлики;<br>"
+            "• типографские символы;<br>"
+            "• латиницу с умляутами;<br>"
+            "• валютные символы;<br>"
+            "• греческий;<br>"
+            "• стрелки;<br>"
+            "• индексы, дроби, математические символы." },
     { "altcode", EcTermCat::INPUT,
       u8"Alt-коды", u8"Alt codes",
         u8"Появившийся в BIOS компьютера IBM PC метод ввода символов по коду. "
