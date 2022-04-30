@@ -968,7 +968,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
                 auto iBit = std::countr_zero(static_cast<unsigned>(bit));
                 // Write what we got
                 spC.sep();
-                str::append(text, uc::oldCompNames[iBit]);
+                str::append(text, uc::oldCompInfo[iBit].locName());
             }
         }
 

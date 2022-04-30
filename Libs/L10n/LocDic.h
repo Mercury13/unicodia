@@ -24,6 +24,7 @@ namespace loc {
 
         std::u8string_view u8() const { return fSrc; }
         operator std::u8string_view() const { return fSrc; }
+        operator std::u8string() const { return fSrc; }
         const char* c_str() const { return str::toC(fSrc); }
         bool isFull() const { return fIsFull; }
     private:

@@ -303,6 +303,14 @@
      </text>
     </group>
    </group>
+   <group id="OldComp">
+    <text id="Teletext">
+     <orig>телетекст</orig>
+    </text>
+    <text id="Korvet">
+     <orig>Корвет</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

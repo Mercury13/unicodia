@@ -2355,18 +2355,19 @@ constinit const uc::TermCat uc::termCats[] {
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 
 constinit const uc::Term uc::terms[] {
+    /// @todo [windows] draw buttons
     { "winemoji", EcTermCat::INPUT,
-      u8"панель эмодзи Windows 10", u8"Windows 10 emoji panel",
-        u8"В Windows 10 нажмите Win+; или Win+., чтобы раскрыть панель эмодзи. "
+      u8"панель эмодзи Windows 10/11", u8"Windows 10/11 emoji panel",
+        u8"В Windows 10/11 нажмите '''Win'''+''';''' или '''Win'''+'''.''', чтобы раскрыть панель эмодзи. "
             "Умеет вводить:<br>"
             "• [[pt:emoji|эмодзи]], существующие в стандартном шрифте. С пополнением шрифта пополнялась и панель;<br>"
             "• текстовые смайлики;<br>"
             "• типографские символы;<br>"
             "• латиницу с умляутами;<br>"
             "• валютные символы;<br>"
-            "• греческий;<br>"
+            "• [[ps:Grek|греческий]];<br>"
             "• стрелки;<br>"
-            "• индексы, дроби, математические символы." },
+            "• индексы, дроби, математические знаки." },
     { "altcode", EcTermCat::INPUT,
       u8"Alt-коды", u8"Alt codes",
         u8"Появившийся в BIOS компьютера IBM PC метод ввода символов по коду. "
@@ -3200,25 +3201,34 @@ const uc::Continent uc::continentInfo[] {
 };
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
 
-/// @todo [L10n] Korvet is an interesting case, what to do?
-///       And what to do with those NBSPs?
-std::u8string_view uc::oldCompNames[] {
-    u8"Amstrad" NBSP "CPC",
-    u8"Apple" NBSP "IIc+",
-    u8"Mattel" NBSP "Aquaruis",
-    u8"Atari" NBSP "ST",
-    u8"Atari" NBSP "400/800",
-    u8"Minitel",
-    u8"MSX",
-    u8"Oric",
-    u8"Commodore" NBSP "PET/64",
-    u8"RISC OS",
-    u8"Sinclair" NBSP "ZX80/81",
-    u8"телетекст",
-    u8"Tandy" NBSP "TRS80" NBSP "Mark" NBSP "1",
-    u8"Tandy" NBSP "TRS80" NBSP "Color",
-    u8"Корвет",
+constinit const uc::OldCompInfo uc::oldCompInfo[] {
+    { u8"Amstrad" NBSP "CPC" },
+    { u8"Apple" NBSP "IIc+" },
+    { u8"Mattel" NBSP "Aquaruis" },
+    { u8"Atari" NBSP "ST" },
+    { u8"Atari" NBSP "400/800" },
+    { u8"Minitel" },
+    { u8"MSX" },
+    { u8"Oric" },
+    { u8"Commodore" NBSP "PET/64" },
+    { u8"RISC OS" },
+    { u8"Sinclair" NBSP "ZX80/81" },
+    { {}, "Prop.OldComp.Teletext" },
+    { u8"Tandy" NBSP "TRS80" NBSP "Mark" NBSP "1" },
+    { u8"Tandy" NBSP "TRS80" NBSP "Color" },
+    { {}, "Prop.OldComp.Korvet" },
 };
+
+std::u8string uc::OldCompInfo::locName() const
+{
+    if (locKey.empty()) {
+        return std::u8string{fixedName};
+    } else {
+        std::u8string r = loc::get(locKey);
+        str::replace(r, u8" ", u8"" NBSP);
+        return r;
+    }
+}
 
 #define REP_2(x) x,x
 #define REP_3(x) x,x,x

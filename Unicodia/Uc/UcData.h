@@ -835,7 +835,12 @@ namespace uc {
     };
     DEFINE_ENUM_OPS(OldComp)
 
-    extern std::u8string_view oldCompNames[];
+    struct OldCompInfo {
+        std::u8string_view fixedName;
+        std::string_view locKey {};
+        std::u8string locName() const;
+    };
+    extern const OldCompInfo oldCompInfo[];
 
     Flags<OldComp> cpOldComps(char32_t cp);
 
