@@ -2,10 +2,10 @@
 <!-- term-suppress-en: [+] suppress English terms (mainly for English)
 -->
 <locale term-suppress-en="0">
-	<!-- You can make any templates (w/o params) you want. As it’s XML, you’d like to enclose them in CDATA. -->
+	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
 		<!-- №, narrow NBSP -->
-		<tmpl name="№"><![CDATA[<№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
+		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
 		<!-- non-break BC -->
 		<tmpl name="bc">&#xA0;до&#xA0;н.э.</tmpl>
 		<!-- typographic dash -->
