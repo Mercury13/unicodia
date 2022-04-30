@@ -754,7 +754,9 @@ std::u8string decode::cppLite(std::u8string_view x, MaybeQuoted maybeQuoted)
     if (maybeQuoted != MaybeQuoted::NO) {
         auto x1 = str::trimLeftSv(x);
         if (x1.starts_with('"')) {
-            x = x.substr(1);
+            // Cut that quote
+            x = x1.substr(1);
+            // Find other quote
             auto x2 = str::trimRightSv(x);
             if (x2.ends_with('"')) {
                 x = x2.substr(0, x2.length() - 1);
