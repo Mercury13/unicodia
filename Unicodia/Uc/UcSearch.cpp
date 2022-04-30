@@ -12,6 +12,7 @@
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
 
+/// @todo [L10n] Strings here
 extern const std::u8string_view uc::cpTypeMsgs[CpType_N] {
     {},     // existing
     u8"Выброшенная позиция",
@@ -21,6 +22,7 @@ extern const std::u8string_view uc::cpTypeMsgs[CpType_N] {
     u8"Свободное место",
 };
 
+/// @todo [L10n] Strings here
 extern const std::u8string_view uc::searchErrorMsgs[SearchError_N] {
     {},     // OK
     {},     // no search
@@ -56,7 +58,7 @@ const uc::Cp* uc::MultiResult::one() const
 uc::SingleResult uc::findCode(char32_t code)
 {
     // Too big?
-    if (code >= uc::N_CHARS)
+    if (code >= uc::CAPACITY)
         return { SearchError::TOO_BIG };
 
     // Have that character?

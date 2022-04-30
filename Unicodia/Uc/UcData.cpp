@@ -26,8 +26,8 @@ using ReverseMap = Cmap<char16_t, unsigned char, 128>;
 template class Cmap<char16_t, unsigned char, 128>;
 
 using namespace std::string_view_literals;
-const uc::Cp* uc::cpsByCode[N_CHARS];
-short uc::blocksByCode16[N_CHARS >> 4];
+const uc::Cp* uc::cpsByCode[CAPACITY];
+short uc::blocksByCode16[CAPACITY >> 4];
 const QString uc::Font::qempty;
 constinit const uc::InputMethods uc::InputMethods::NONE;
 

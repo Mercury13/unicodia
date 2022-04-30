@@ -196,7 +196,7 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
         unsigned int cp = 0, ws = 0;
         str::fromChars(sv[0], cp);
         str::fromChars(sv[1], ws);
-        if (cp < uc::N_CHARS && ws < QFontDatabase::WritingSystemsCount)
+        if (cp < uc::CAPACITY && ws < QFontDatabase::WritingSystemsCount)
             return std::make_unique<PopFontsLink>(
                         cp, static_cast<QFontDatabase::WritingSystem>(ws));
     }
@@ -573,7 +573,7 @@ QString mywiki::buildFontsHtml(
         const char32_t cp, QFontDatabase::WritingSystem ws,
         Gui& gui)
 {
-    if (cp >= uc::N_CHARS || ws >= QFontDatabase::WritingSystemsCount)
+    if (cp >= uc::CAPACITY || ws >= QFontDatabase::WritingSystemsCount)
         return {};
     QString text;
     char buf[50];
