@@ -908,7 +908,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::EXISTING:
                 return s + line.cp->viewableName();
             case uc::CpType::RESERVED:
-                return s + str::toQ(u8"Свободное место: ")
+                return s + loc::get("Search.Empty") + ": "
                          + str::toQ(uc::blockOf(line.code)->loc.name);
             default:
                 return s + loc::get(uc::cpTypeKeys[static_cast<int>(line.type)]);
