@@ -2370,7 +2370,7 @@
    </group>
    <group id="Aghb">
     <text id="Name">
-     <orig>Агванский (Кавказская Албания)</orig>
+     <orig>Агванская (Кавказская Албания)</orig>
     </text>
     <text id="Lang">
      <orig>агванский ''(=гаргарский, язык Кавказской Албании)''</orig>
@@ -2395,7 +2395,7 @@
    </group>
    <group id="Arab">
     <text id="Name">
-     <orig>Арабский</orig>
+     <orig>Арабская</orig>
     </text>
     <text id="Lang">
      <orig>арабский, персидский, урду, уйгурский, пуштунский…</orig>
@@ -2406,7 +2406,7 @@
    </group>
    <group id="Armi">
     <text id="Name">
-     <orig>Имперский арамейский</orig>
+     <orig>Имперская арамейская</orig>
     </text>
     <text id="Lang">
      <orig>имперский арамейский ''(также канцелярский арамейский{{-}}язык Персии 500—329{{bc}})''</orig>
@@ -2417,7 +2417,7 @@
    </group>
    <group id="Armn">
     <text id="Name">
-     <orig>Армянский</orig>
+     <orig>Армянская</orig>
     </text>
     <text id="Lang">
      <orig>армянский</orig>
@@ -2428,7 +2428,7 @@
    </group>
    <group id="Avst">
     <text id="Name">
-     <orig>Авестийский</orig>
+     <orig>Авестийская</orig>
     </text>
     <text id="Lang">
      <orig>авестийский, среднеперсидский</orig>
@@ -2439,7 +2439,7 @@
    </group>
    <group id="Bali">
     <text id="Name">
-     <orig>Балийский</orig>
+     <orig>Балийская</orig>
     </text>
     <text id="Lang">
      <orig>балийский, сасакский</orig>
@@ -2483,7 +2483,7 @@
    </group>
    <group id="Beng">
     <text id="Name">
-     <orig>Бенгальский</orig>
+     <orig>Бенгальская</orig>
     </text>
     <text id="Lang">
      <orig>бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''</orig>
@@ -2544,7 +2544,7 @@
    </group>
    <group id="Bugi">
     <text id="Name">
-     <orig>Бугийский (лонтара)</orig>
+     <orig>Бугийская (лонтара)</orig>
     </text>
     <text id="Lang">
      <orig>бугийский ''(4 млн)'' и другие языки о. Сулавеси</orig>
@@ -2577,7 +2577,7 @@
    </group>
    <group id="Cari">
     <text id="Name">
-     <orig>Карийский</orig>
+     <orig>Карийская</orig>
     </text>
     <text id="Lang">
      <orig>карийский ''(Малая Азия)''</orig>
@@ -2599,7 +2599,7 @@
    </group>
    <group id="Cham">
     <text id="Name">
-     <orig>Чамский</orig>
+     <orig>Чамская</orig>
     </text>
     <text id="Lang">
      <orig>чамский ''(Вьетнам, Камбоджа, 320 тыс. на 2008)''</orig>
@@ -2621,7 +2621,7 @@
    </group>
    <group id="Chrs">
     <text id="Name">
-     <orig>Хорезмийский</orig>
+     <orig>Хорезмийская</orig>
     </text>
     <text id="Lang">
      <orig>хорезмийский ''(современные Туркмения/Узбекистан)''</orig>
@@ -2632,7 +2632,7 @@
    </group>
    <group id="Copt">
     <text id="Name">
-     <orig>Коптский</orig>
+     <orig>Коптская</orig>
     </text>
     <text id="Lang">
      <orig>коптский</orig>
@@ -2690,7 +2690,7 @@
    </group>
    <group id="Diak">
     <text id="Name">
-     <orig>Дивес-акуру (древнемальдивский)</orig>
+     <orig>Дивес-акуру (древнемальдивская)</orig>
     </text>
     <text id="Lang">
      <orig>дивехи ''(мальдивский)''</orig>
@@ -2756,7 +2756,7 @@
    </group>
    <group id="Elym">
     <text id="Name">
-     <orig>Элимайский (эламский)</orig>
+     <orig>Элимайская (эламская)</orig>
     </text>
     <text id="Lang">
      <orig>элимайский ''(=эламский, Персидский залив)''</orig>
@@ -2781,7 +2781,7 @@
    </group>
    <group id="Geor">
     <text id="Name">
-     <orig>Грузинский</orig>
+     <orig>Грузинская</orig>
     </text>
     <text id="Lang">
      <orig>грузинский, мегрельский и другие картвельские</orig>
@@ -2825,7 +2825,7 @@
    </group>
    <group id="Goth">
     <text id="Name">
-     <orig>Готский</orig>
+     <orig>Готская</orig>
     </text>
     <text id="Lang">
      <orig>готский</orig>
@@ -2850,7 +2850,7 @@
    </group>
    <group id="Grek">
     <text id="Name">
-     <orig>Греческий</orig>
+     <orig>Греческая</orig>
     </text>
     <text id="Lang">
      <orig>греческий</orig>
@@ -2919,7 +2919,7 @@
    </group>
    <group id="Hatr">
     <text id="Name">
-     <orig>Хатранский (ашшурский)</orig>
+     <orig>Хатранская (ашшурская)</orig>
     </text>
     <text id="Lang">
      <orig>хатранский (ашшурский) арамейский</orig>
@@ -3014,7 +3014,7 @@
    </group>
    <group id="Ital">
     <text id="Name">
-     <orig>Этрусский</orig>
+     <orig>Этрусская</orig>
     </text>
     <text id="Lang">
      <orig>этрусский и другие языки Италии</orig>
@@ -3025,7 +3025,7 @@
    </group>
    <group id="Java">
     <text id="Name">
-     <orig>Яванский</orig>
+     <orig>Яванская</orig>
     </text>
     <text id="Lang">
      <orig>яванский, мелкие языки Явы</orig>
@@ -3047,7 +3047,7 @@
    </group>
    <group id="Kana">
     <text id="Name">
-     <orig>Катакана</orig>
+     <orig>Катáкана</orig>
     </text>
     <text id="Lang">
      <orig>японский</orig>
@@ -3069,7 +3069,7 @@
    </group>
    <group id="Khmr">
     <text id="Name">
-     <orig>Кхмерский</orig>
+     <orig>Кхмерская</orig>
     </text>
     <text id="Lang">
      <orig>кхмерский ''(Камбоджа)''</orig>
@@ -3138,7 +3138,7 @@
    </group>
    <group id="Laoo">
     <text id="Name">
-     <orig>Лаосский</orig>
+     <orig>Лаосская</orig>
     </text>
     <text id="Lang">
      <orig>лаосский</orig>
@@ -3216,7 +3216,7 @@
    </group>
    <group id="Lyci">
     <text id="Name">
-     <orig>Ликийский</orig>
+     <orig>Ликийская</orig>
     </text>
     <text id="Lang">
      <orig>ликийский ''(Малая Азия)''</orig>
@@ -3227,7 +3227,7 @@
    </group>
    <group id="Lydi">
     <text id="Name">
-     <orig>Лидийский (сардийский)</orig>
+     <orig>Лидийская (сардийская)</orig>
     </text>
     <text id="Lang">
      <orig>лидийский ''(=сардийский, Малая Азия)''</orig>
@@ -3249,7 +3249,7 @@
    </group>
    <group id="Maka">
     <text id="Name">
-     <orig>Макасарский (птичье письмо)</orig>
+     <orig>Макасарская (птичье письмо)</orig>
     </text>
     <text id="Lang">
      <orig>макасарский ''(южный Сулавеси)''</orig>
@@ -3260,7 +3260,7 @@
    </group>
    <group id="Mand">
     <text id="Name">
-     <orig>Мандейский</orig>
+     <orig>Мандейская</orig>
     </text>
     <text id="Lang">
      <orig>мандейский ''(Иран и Ирак)''</orig>
@@ -3448,7 +3448,7 @@
    </group>
    <group id="Newa">
     <text id="Name">
-     <orig>Неварский (прахалит)</orig>
+     <orig>Неварская (прахалит)</orig>
     </text>
     <text id="Lang">
      <orig>бхаса ''(=неварский, Непал)'', санскрит, пали</orig>
@@ -3520,7 +3520,7 @@
    </group>
    <group id="Orya">
     <text id="Name">
-     <orig>Ория (одия)</orig>
+     <orig>Ори́я (оди́я)</orig>
     </text>
     <text id="Lang">
      <orig>ори́я ''(=оди́я, Восточная Индия, 35 млн на 2019)''</orig>
@@ -3542,7 +3542,7 @@
    </group>
    <group id="Osma">
     <text id="Name">
-     <orig>Османья (сомалийский)</orig>
+     <orig>Османья (сомалийская)</orig>
     </text>
     <text id="Lang">
      <orig>сомалийский</orig>
@@ -3553,7 +3553,7 @@
    </group>
    <group id="Ougr">
     <text id="Name">
-     <orig>Староуйгурский</orig>
+     <orig>Староуйгурская</orig>
     </text>
     <text id="Lang">
      <orig>староуйгурский, восточноуйгурский</orig>
@@ -3564,7 +3564,7 @@
    </group>
    <group id="Palm">
     <text id="Name">
-     <orig>Пальмирский</orig>
+     <orig>Пальмирская</orig>
     </text>
     <text id="Lang">
      <orig>пальмирский арамейский</orig>
@@ -3589,7 +3589,7 @@
    </group>
    <group id="Perm">
     <text id="Name">
-     <orig>Древнепермский (коми-зырянский, анбур)</orig>
+     <orig>Древнепермская (коми-зырянская, анбур)</orig>
     </text>
     <text id="Lang">
      <orig>коми-зырянский, коми-пермяцкий</orig>
@@ -3600,7 +3600,7 @@
    </group>
    <group id="Phag">
     <text id="Name">
-     <orig>Монгольское квадратное (Пагба-ламы)</orig>
+     <orig>Монгольское квадратное письмо (Пагба-ламы)</orig>
     </text>
     <text id="Lang">
      <orig>китайский, монгольский, тибетский, санскрит, уйгурский</orig>
@@ -3633,7 +3633,7 @@
    </group>
    <group id="Phnx">
     <text id="Name">
-     <orig>Финикийский</orig>
+     <orig>Финикийская</orig>
     </text>
     <text id="Lang">
      <orig>финикийский и другие семитские (моавитский, филистимский…), пунический</orig>
@@ -3699,7 +3699,7 @@
    </group>
    <group id="Samr">
     <text id="Name">
-     <orig>Самаритянский</orig>
+     <orig>Самаритянская</orig>
     </text>
     <text id="Lang">
      <orig>иврит, самаритянский арамейский</orig>
@@ -3787,7 +3787,7 @@
    </group>
    <group id="Sinh">
     <text id="Name">
-     <orig>Сингальский</orig>
+     <orig>Сингальская</orig>
     </text>
     <text id="Lang">
      <orig>сингальский ''(Шри-Ланка, 17 млн на 2012)''</orig>
@@ -3798,7 +3798,7 @@
    </group>
    <group id="Sogd">
     <text id="Name">
-     <orig>Согдийский</orig>
+     <orig>Согдийская</orig>
     </text>
     <text id="Lang">
      <orig>согдийский ''(Самарканд{{-}}сейчас в Узбекистане)''</orig>
@@ -3809,7 +3809,7 @@
    </group>
    <group id="Sogo">
     <text id="Name">
-     <orig>Старосогдийский</orig>
+     <orig>Старосогдийская</orig>
     </text>
     <text id="Lang">
      <orig>согдийский ''(Самарканд{{-}}cейчас в Узбекистане)''</orig>
@@ -3839,7 +3839,7 @@
    </group>
    <group id="Sund">
     <text id="Name">
-     <orig>Сунданский</orig>
+     <orig>Сунданская</orig>
     </text>
     <text id="Lang">
      <orig>сунданский ''(Ява)''</orig>
@@ -3861,7 +3861,7 @@
    </group>
    <group id="Syrc">
     <text id="Name">
-     <orig>Сирийский</orig>
+     <orig>Сирийская</orig>
     </text>
     <text id="Lang">
      <orig>сирийский ''(исп. как литургический)'', новоарамейские, малаялам, согдийский</orig>
@@ -3916,7 +3916,7 @@
    </group>
    <group id="Taml">
     <text id="Name">
-     <orig>Тамильский</orig>
+     <orig>Тамильская</orig>
     </text>
     <text id="Lang">
      <orig>тамильский ''(Индия, Шри-Ланка, Сингапур)''</orig>
@@ -3927,7 +3927,7 @@
    </group>
    <group id="Tang">
     <text id="Name">
-     <orig>Тангутский</orig>
+     <orig>Тангутская</orig>
     </text>
     <text id="Lang">
      <orig>тангутский ''(северо-западный Китай)''</orig>
@@ -3963,7 +3963,7 @@
    </group>
    <group id="Tfng">
     <text id="Name">
-     <orig>Тифинаг (берберский)</orig>
+     <orig>Тифинаг (берберская)</orig>
     </text>
     <text id="Lang">
      <orig>туарегские и другие берберские ''(Марокко)''</orig>
@@ -3977,7 +3977,7 @@
    </group>
    <group id="Tglg">
     <text id="Name">
-     <orig>Тагальский (байбайин)</orig>
+     <orig>Тагальская (байбайин)</orig>
     </text>
     <text id="Lang">
      <orig>старотагальский и другие языки Явы и Филиппин</orig>
@@ -3999,7 +3999,7 @@
    </group>
    <group id="Thai">
     <text id="Name">
-     <orig>Тайский</orig>
+     <orig>Тайская</orig>
     </text>
     <text id="Lang">
      <orig>тайский ''(20…36 млн на 2000 как родной)''</orig>
@@ -4057,7 +4057,7 @@
    </group>
    <group id="Ugar">
     <text id="Name">
-     <orig>Угаритский</orig>
+     <orig>Угаритская</orig>
     </text>
     <text id="Lang">
      <orig>угаритский, хурритский ''(только в районе Угарита)''</orig>
@@ -4159,7 +4159,7 @@
    </group>
    <group id="Zanb">
     <text id="Name">
-     <orig>Монгольское горизонтально-квадратное (Дзанабáдзара)</orig>
+     <orig>Монгольское горизонтально-квадратное письмо (Дзанабáдзара)</orig>
     </text>
     <text id="Lang">
      <orig>монгольский, лхасский тибетский, санскрит</orig>
