@@ -455,10 +455,11 @@ namespace {
         str::append(text, "<p><nobr><b>");
         str::append(text, locName(x));
         str::append(text, "</b> ("sv);
-        str::append(text, x.nChars);
-        /// @todo [L10n] what to do?
-        str::append(text, u8" шт."sv);
-        str::append(text, addText);
+        str::append(text, loc::get("Prop.Head.NChars").arg(x.nChars));
+        if (!addText.empty()) {
+            text += " ";
+            str::append(text, addText);
+        }
         str::append(text, ")</nobr></p>"sv);
     }
 
@@ -682,10 +683,10 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
 QString mywiki::buildHtml(const uc::Script& x)
 {
     QString r;
-    std::u8string_view add;
-    /// @todo [L10n] what to do?
-    if (x.id == "Hira"sv)
-        add = u8" без <a href='ps:Hent' class='popup' >хэнтайганы</a>";
+    std::u8string add;
+    if (x.id == "Hira"sv) {
+        add = loc::get("Prop.Head.NoHent").arg(u8"href='ps:Hent' class='popup'");
+    }
     appendStylesheet(r);
     appendHeader(r, x, add);
     appendHtml(r, x, true);

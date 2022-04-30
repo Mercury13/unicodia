@@ -1223,14 +1223,13 @@ constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)]
 };
 
 
-/// @todo [L10n] Still need some loc keys here
 constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN)] {
     { "DIR", u8"FSI, LRE, LRI…",    EcBidiStrength::EXPLICIT, },    // Explicit chars in GenPunct
     { "AL",  u8"AL",                EcBidiStrength::STRONG },       // Any Arabic letter
     { "AN",  u8"AN",                EcBidiStrength::WEAK },         // Arabic digits (0660…), Rumi (10E60)
 
     { "B",   u8"B",                 EcBidiStrength::NEUTRAL },      // CR, LF and a few more
-    { "BN",  u8"Неграфический",     EcBidiStrength::NEUTRAL },      // Most controls
+    { "BN",  u8"BN",                EcBidiStrength::NEUTRAL },      // Most controls
     { "CS",  u8"CS",                EcBidiStrength::WEAK },         // ,.
 
     { "EN",  u8"EN",                EcBidiStrength::WEAK },         // 012…

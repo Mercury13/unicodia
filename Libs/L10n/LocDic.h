@@ -41,6 +41,7 @@ namespace loc {
         operator QString() const { return q(); }
     #endif
         std::u8string arg(std::u8string_view x) const;
+        std::u8string arg(int x) const;
         std::u8string arg(std::u8string_view x, std::u8string_view y) const;
     private:
         std::u8string fSrc;

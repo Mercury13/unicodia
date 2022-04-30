@@ -20,6 +20,16 @@ std::u8string loc::Text::arg(std::u8string_view x) const
 }
 
 
+std::u8string loc::Text::arg(int x) const
+{
+    std::u8string r = fSrc;
+    char c[30];
+    auto u8 = str::toCharsU8(c, x);
+    str::replace(r, u8"{1}", u8);
+    return r;
+}
+
+
 std::u8string loc::Text::arg(
         std::u8string_view x, std::u8string_view y) const
 {

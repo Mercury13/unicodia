@@ -152,6 +152,13 @@
      <orig>Заливок и поворотов нет</orig>
      <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
     </text>
+    <text id="NChars">
+     <orig>{1} симв.</orig>
+    </text>
+    <text id="NoHent">
+     <orig>без &lt;a {1} &gt;хэнтайганы&lt;/a&gt;</orig>
+     <au-cmt>Test: Hiragana</au-cmt>
+    </text>
    </group>
    <group id="Bidi">
     <group id="DIR">
@@ -4439,7 +4446,7 @@
    </text>
    <text id="MyName">
     <orig>Михаил Меркурьев</orig>
-    <au-cmt>Михайло Меркур'єв, Mikhail Merkuryev</au-cmt>
+    <au-cmt>Михайло Меркур’єв, Mikhail Merkuryev</au-cmt>
    </text>
    <text id="HomePage">
     <orig>Домашняя страница</orig>
