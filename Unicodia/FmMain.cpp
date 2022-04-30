@@ -1266,6 +1266,7 @@ void FmMain::initAbout()
     }
 
     // lbVersion
+    /// @todo [L10n] About
     QString text;
     str::append(text, u8"Версия <b>");
     text.append(version);
@@ -1653,6 +1654,7 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
 
 void FmMain::cjkReflectCollapseState()
 {
+    /// @todo [L10n] expand/collapse
     if (model.isCjkCollapsed) {
         ui->lbCollapse->setText(str::toQ(u8"ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков)."sv));
         ui->btCollapse->setText(str::toQ(u8"Развернуть"sv));

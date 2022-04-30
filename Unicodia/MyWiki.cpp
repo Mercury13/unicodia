@@ -958,19 +958,18 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         text += "</h3>";
     }
 
-    // Deprecated
+    // Default ignorable
     if (cp.isDefaultIgnorable()) {
         text += "<h4><a href='pt:ignorable' class='popup'>";
         str::append(text, loc::get("Prop.Head.DefIgn"));
         text += "</a></h4>";
     }
 
-    // Deprecated
+    // VS16 emoji
     if (cp.isVs16Emoji()) {
         text += "<h4>";
-        std::u8string s = loc::get("Prop.Head.Emoji16");
-        str::replace(s, u8"$", u8"href='pt:emoji' class='popup'");
-        str::append(text, s);
+        str::append(text, loc::get("Prop.Head.Emoji16")
+                          .buck(u8"href='pt:emoji' class='popup'"));
         text += "</h4>";
     }
 
@@ -1039,9 +1038,8 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             str::QSep sp1(text, ";&nbsp; ");
             if (!im.sometimesKey.empty()) {
                 sp1.sep();
-                std::u8string s = loc::get("Prop.Input.Sometimes");
-                str::replace(s, u8"$", im.sometimesKey);
-                str::append(text, s);
+                str::append(text, loc::get("Prop.Input.Sometimes")
+                                  .buck(im.sometimesKey));
             }
             if (im.hasAltCode()) {
                 sp1.sep();
@@ -1089,9 +1087,8 @@ QString mywiki::buildHtml(const uc::Cp& cp)
                         appendKey(sKey, {}, im.birman.letter);
                     }
                 if (im.birman.isTwice) {
-                    std::u8string s = loc::get("Prop.Input.Twice");
-                    str::replace(s, u8"$", sKey);
-                    str::append(text, s);
+                    str::append(text, loc::get("Prop.Input.Twice")
+                                      .buck(sKey));
                 } else {
                     str::append(text, sKey);
                 }

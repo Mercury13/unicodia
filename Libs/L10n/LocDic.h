@@ -14,6 +14,10 @@ namespace loc {
     {
     public:
         Text() noexcept = default;
+        Text(const Text&) = delete;
+        Text(Text&&) = default;
+        Text& operator = (const Text&) = delete;
+        Text& operator = (Text&&) = default;
 
         template <class T>
         Text(T&& x) : fSrc(std::forward<T>(x)), fIsFull(true) {}
@@ -36,6 +40,7 @@ namespace loc {
         QString q() const { return QString::fromUtf8(fSrc.data(), fSrc.size()); }
         operator QString() const { return q(); }
     #endif
+        std::u8string buck(std::u8string_view x) const;
     private:
         std::u8string fSrc;
         bool fIsFull = false;
