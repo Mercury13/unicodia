@@ -24,7 +24,7 @@ namespace uc {
         NN
     };
     constexpr auto CpType_N = static_cast<int>(CpType::NN);
-    extern const std::u8string_view cpTypeMsgs[CpType_N];
+    extern const std::string_view cpTypeKeys[CpType_N];
 
     enum class SearchError {
         OK,
@@ -35,7 +35,7 @@ namespace uc {
         NN
     };
     constexpr auto SearchError_N = static_cast<int>(SearchError::NN);
-    extern const std::u8string_view searchErrorMsgs[SearchError_N];
+    extern const std::string_view searchErrorKeys[SearchError_N];
 
     enum {
         // LOWEST

@@ -4383,5 +4383,32 @@
     </text>
    </group>
   </group>
+  <group id="Search">
+   <au-cmt>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF<br />Not FFFF!</au-cmt>
+   <text id="NonChar">
+    <orig>Выброшенная позиция</orig>
+   </text>
+   <text id="Private">
+    <orig>Символ для личного пользования</orig>
+   </text>
+   <text id="Surrogate">
+    <orig>Код из суррогатной пары</orig>
+   </text>
+   <text id="Unassigned">
+    <orig>Нераспределённый код</orig>
+   </text>
+   <text id="Empty">
+    <orig>Свободное место</orig>
+   </text>
+   <text id="NotFound">
+    <orig>Не найдено</orig>
+   </text>
+   <text id="BadCode">
+    <orig>Код символа не распознан</orig>
+   </text>
+   <text id="BigCode">
+    <orig>Код символа слишком велик</orig>
+   </text>
+  </group>
  </file>
 </ut>

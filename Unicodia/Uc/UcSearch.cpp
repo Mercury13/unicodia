@@ -12,23 +12,21 @@
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
 
-/// @todo [L10n] Strings here
-extern const std::u8string_view uc::cpTypeMsgs[CpType_N] {
+const std::string_view uc::cpTypeKeys[CpType_N] {
     {},     // existing
-    u8"Выброшенная позиция",
-    u8"Символ для личного пользования",
-    u8"Код из суррогатной пары",
-    u8"Нераспределённый символ",
-    u8"Свободное место",
+    "Search.NonChar",
+    "Search.Private",
+    "Search.Surrogate",
+    "Search.Unassigned",
+    "Search.Empty",
 };
 
-/// @todo [L10n] Strings here
-extern const std::u8string_view uc::searchErrorMsgs[SearchError_N] {
+const std::string_view uc::searchErrorKeys[SearchError_N] {
     {},     // OK
     {},     // no search
-    u8"Не найдено",
-    u8"Код символа не распознан",
-    u8"Код символа слишком велик",
+    "Search.NotFound",
+    "Search.BadCode",
+    "Search.BigCode",
 };
 
 

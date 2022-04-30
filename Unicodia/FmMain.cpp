@@ -911,7 +911,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 return s + str::toQ(u8"Свободное место: ")
                          + str::toQ(uc::blockOf(line.code)->loc.name);
             default:
-                return s + str::toQ(uc::cpTypeMsgs[static_cast<int>(line.type)]);
+                return s + loc::get(uc::cpTypeKeys[static_cast<int>(line.type)]);
             }
         }
 
@@ -1805,8 +1805,8 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     case uc::SearchError::NO_SEARCH:
         break;
     default:
-        showSearchError(str::toQ(
-                uc::searchErrorMsgs[static_cast<int>(x.err)]));
+        showSearchError(loc::get(
+                uc::searchErrorKeys[static_cast<int>(x.err)]));
     }
 }
 
