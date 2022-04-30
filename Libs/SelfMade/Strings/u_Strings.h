@@ -23,47 +23,6 @@ namespace str {
     ///       (used for Linear B etc. where chars are marked with these indexes)
     bool isIndex(std::string_view s);
 
-    ///
-    /// @return   # of replacements
-    ///
-    template <class C, class T, class A>
-    size_t replace(
-            std::basic_string<C, T, A>& haystack,
-            std::basic_string_view<C, T> needle,
-            std::basic_string_view<C, T> byWhat)
-    {
-        using Str = std::basic_string<C, T, A>;
-        const size_t szNeedle = needle.length();
-        const size_t szByWhat = byWhat.length();
-        size_t p = 0, r = 0;
-        while ((p = haystack.find(needle.data(), p, needle.size())) != Str::npos) {
-            haystack.replace(p, szNeedle, byWhat);
-            p += szByWhat;
-            ++r;
-        }
-        return r;
-    }
-
-    ///
-    /// @return   # of replacements
-    ///
-    template <class C, class T, class A>
-    size_t replace(
-            std::basic_string<C, T, A>& haystack,
-            C needle,
-            std::basic_string_view<C, T> byWhat)
-    {
-        using Str = std::basic_string<C, T, A>;
-        const size_t szByWhat = byWhat.length();
-        size_t p = 0, r = 0;
-        while ((p = haystack.find(needle, p)) != Str::npos) {
-            haystack.replace(p, 1, byWhat);
-            p += szByWhat;
-            ++r;
-        }
-        return r;
-    }
-
     namespace detail {
 
         template <class T>
@@ -78,6 +37,42 @@ namespace str {
         inline std::basic_string_view<C, T> toSv(
                 const std::basic_string<C, T, A>& x)
             { return x; }
+
+        template <class C, class T, class A>
+        size_t replace(
+                std::basic_string<C, T, A>& haystack,
+                std::basic_string_view<C, T> needle,
+                std::basic_string_view<C, T> byWhat)
+        {
+            using Str = std::basic_string<C, T, A>;
+            const size_t szNeedle = needle.length();
+            const size_t szByWhat = byWhat.length();
+            size_t p = 0, r = 0;
+            while ((p = haystack.find(needle.data(), p, needle.size())) != Str::npos) {
+                haystack.replace(p, szNeedle, byWhat);
+                p += szByWhat;
+                ++r;
+            }
+            return r;
+        }
+
+        template <class C, class T, class A>
+        size_t replace(
+                std::basic_string<C, T, A>& haystack,
+                C needle,
+                std::basic_string_view<C, T> byWhat)
+        {
+            using Str = std::basic_string<C, T, A>;
+            const size_t szByWhat = byWhat.length();
+            size_t p = 0, r = 0;
+            while ((p = haystack.find(needle, p)) != Str::npos) {
+                haystack.replace(p, 1, byWhat);
+                p += szByWhat;
+                ++r;
+            }
+            return r;
+        }
+
     }
 
     ///
@@ -88,7 +83,7 @@ namespace str {
             std::basic_string<C, T, A>& haystack,
             C needle,
             const B& byWhat)
-        { return replace(
+        { return detail::replace<C, T, A>(
                     haystack, needle, detail::toSv(byWhat)); }
 
     ///
@@ -99,7 +94,7 @@ namespace str {
             std::basic_string<C, T, A>& haystack,
             const N& needle,
             const B& byWhat)
-        { return replace(
+        { return detail::replace<C, T, A>(
                     haystack, detail::toSv(needle), detail::toSv(byWhat)); }
 
     ///
