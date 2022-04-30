@@ -3200,7 +3200,8 @@ const uc::Continent uc::continentInfo[] {
 };
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
 
-
+/// @todo [L10n] Korvet is an interesting case, what to do?
+///       And what to do with those NBSPs?
 std::u8string_view uc::oldCompNames[] {
     u8"Amstrad" NBSP "CPC",
     u8"Apple" NBSP "IIc+",
