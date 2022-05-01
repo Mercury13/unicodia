@@ -545,6 +545,95 @@
      <orig>экспериментальная ''(попытка придумать имеющемуся языку новую письменность, как мормонская)''</orig>
     </text>
    </group>
+   <group id="Dir">
+    <text id="L">
+     <orig>→</orig>
+     <au-cmt>Test: any LTR script, e.g. Latin</au-cmt>
+    </text>
+    <text id="R">
+     <orig>←</orig>
+     <au-cmt>Test: any RTL script, eg Arabic, Hebrew</au-cmt>
+    </text>
+    <text id="L_cjk">
+     <orig>→ ''(исторически ←↓↓ по столбцам)''</orig>
+     <au-cmt>Test: any CJK script: Hani, Nshu</au-cmt>
+    </text>
+    <text id="L_cunei">
+     <orig>←↓↓ по столбцам, затем →</orig>
+     <au-cmt>Test: cuneiform</au-cmt>
+    </text>
+    <text id="L_ogam">
+     <orig>→, ↑</orig>
+     <au-cmt>Test: Ogam</au-cmt>
+    </text>
+    <text id="L_col">
+     <orig>↓↓→ по столбцам</orig>
+     <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
+    </text>
+    <text id="TD">
+     <orig>↓</orig>
+     <au-cmt>Test: Sgnw</au-cmt>
+    </text>
+    <text id="Both">
+     <orig>писали и ←, и →</orig>
+     <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
+    </text>
+    <text id="Tang">
+     <orig>писали ←↓↓ по столбцам и →</orig>
+     <au-cmt>test: Tang</au-cmt>
+    </text>
+    <text id="R_col">
+     <orig>←↓↓ по столбцам</orig>
+     <au-cmt>Test: Kits, Mero</au-cmt>
+    </text>
+    <text id="R_most">
+     <orig>преимущественно ←</orig>
+     <au-cmt>Test: Cprt, Lydi, Sarb</au-cmt>
+    </text>
+    <text id="Sogd">
+     <orig>↓↓→ по столбцам; ←</orig>
+     <au-cmt>Test: Sogd (new!), Chrs</au-cmt>
+    </text>
+   </group>
+   <group id="Type">
+    <text id="Alph">
+     <orig>[[pt:alphabet|алфавитная]]{{-}}''как кириллица''</orig>
+    </text>
+    <text id="Argu">
+     <orig>[[pt:arguable|спорный]]{{-}}''как тана''</orig>
+    </text>
+    <text id="Cons">
+     <orig>[[pt:abjad|консонантная]]{{-}}''как иврит''</orig>
+    </text>
+    <text id="Syll">
+     <orig>[[pt:syllabic|слоговая]]{{-}}''как японские катакана/хирагана''</orig>
+    </text>
+    <text id="Asyl">
+     <orig>алфавитно-слоговая{{-}}''как персидская клинопись''</orig>
+    </text>
+    <text id="Abug">
+     <orig>[[pt:abugida|абугида]]{{-}}''как эфиопская''</orig>
+    </text>
+    <text id="Brah">
+     <orig>[[pt:brahmic|брахмийская абугида]]{{-}}''как деванагари''</orig>
+    </text>
+    <text id="Hier">
+     <orig>[[pt:hiero|иероглифическая]]{{-}}''как китайские иероглифы''</orig>
+    </text>
+    <text id="Syhi">
+     <orig>слогоиероглифическая{{-}}''как линейное письмо Б''</orig>
+    </text>
+    <text id="Cohi">
+     <orig>консонантно-иероглифическое{{-}}''как египетские иероглифы''</orig>
+    </text>
+    <text id="Code">
+     <orig>[[pt:code|коды и стенография]]{{-}}''как шрифт Брайля''</orig>
+    </text>
+    <text id="Nota">
+     <orig>[[pt:nontext|нетекстовая]]{{-}}''как ноты''</orig>
+     <au-cmt>Test: Sgnw</au-cmt>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

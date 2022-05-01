@@ -633,11 +633,11 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
         appendBullet(text, "Prop.Bullet.Type");
-        appendWiki(text, x, x.type().locName);
+        appendWiki(text, x, loc::get(x.type().locKey));
         if (x.ecDir != uc::EcWritingDir::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Dir");
-            str::append(text, x.dir().locName);
+            append(text, loc::get(x.dir().locKey), x.font());
         }
         if (!x.flags.have(uc::Sfg::NO_LANGS)) {
             sp.sep();

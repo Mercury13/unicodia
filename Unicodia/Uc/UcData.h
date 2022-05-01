@@ -101,7 +101,6 @@ namespace uc {
     enum class EcScriptType
     {
         NONE,
-        UNKNOWN,
         ALPHABET,       ///< Pure alphabet script (Latin, Cyrillic)
         ARGUABLE,       ///< Alphabet scripts that use syllables as units
         CONSONANT,      ///< Consonant script (Hebrew)
@@ -542,14 +541,14 @@ namespace uc {
 
     struct ScriptType
     {
-        std::u8string_view locName;
+        std::string_view locKey;
     };
     extern const ScriptType scriptTypeInfo[];
 
 
     struct WritingDir
     {
-        std::u8string_view locName;
+        std::string_view locKey;
     };
     extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
 
