@@ -535,7 +535,7 @@ namespace uc {
 
     struct LangLife
     {
-        std::u8string_view locName;
+        std::string_view locKey;
     };
     extern const LangLife langLifeInfo[static_cast<int>(EcLangLife::NN)];
 

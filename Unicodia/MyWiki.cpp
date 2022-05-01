@@ -653,7 +653,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
             appendBullet(text, "Prop.Bullet.Condition");
-            append(text, x.life().locName, x.font());
+            append(text, loc::get(x.life().locKey), x.font());
         }
         if (isScript) {
             if (x.ecVersion != uc::EcVersion::UNKNOWN) {

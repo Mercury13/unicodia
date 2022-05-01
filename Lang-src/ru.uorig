@@ -516,6 +516,35 @@
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
     </text>
    </group>
+   <group id="Life">
+    <text id="Alive">
+     <orig>живая ''(основным языкам ничего не угрожает, как кириллица)''</orig>
+    </text>
+    <text id="Danger">
+     <orig>в опасности{{-}}из-за языка ''(как чероки)''</orig>
+    </text>
+    <text id="Competing">
+     <orig>в опасности{{-}}из-за конкуренции письменностей ''(как ланна)''</orig>
+    </text>
+    <text id="Dead">
+     <orig>мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)</orig>
+    </text>
+    <text id="Hist">
+     <orig>историческая ''(давно мертва, как глаголица)''</orig>
+    </text>
+    <text id="Sacred">
+     <orig>религиозная ''(мертва в светском обороте, как коптская)''</orig>
+    </text>
+    <text id="New">
+     <orig>новая ''(появилась в новейшее время, как нко)''</orig>
+    </text>
+    <text id="Reborn">
+     <orig>возрождённая ''(как ахом)''</orig>
+    </text>
+    <text id="Exp">
+     <orig>экспериментальная ''(попытка придумать имеющемуся языку новую письменность, как мормонская)''</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
