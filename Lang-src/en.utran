@@ -16,102 +16,133 @@
     <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
     <text id="1">
      <orig>I</orig>
+     <transl>1st</transl>
     </text>
     <text id="2">
      <orig>II</orig>
+     <transl>2nd</transl>
     </text>
     <text id="3">
      <orig>III</orig>
+     <transl>3rd</transl>
     </text>
     <text id="4">
      <orig>IV</orig>
+     <transl>4th</transl>
     </text>
     <text id="5">
      <orig>V</orig>
+     <transl>5th</transl>
     </text>
     <text id="6">
      <orig>VI</orig>
+     <transl>6th</transl>
     </text>
     <text id="7">
      <orig>VII</orig>
+     <transl>7th</transl>
     </text>
     <text id="8">
      <orig>VIII</orig>
+     <transl>8th</transl>
     </text>
     <text id="9">
      <orig>IX</orig>
+     <transl>9th</transl>
     </text>
     <text id="10">
      <orig>X</orig>
+     <transl>10th</transl>
     </text>
     <text id="11">
      <orig>XI</orig>
+     <transl>11th</transl>
     </text>
     <text id="12">
      <orig>XII</orig>
+     <transl>12th</transl>
     </text>
     <text id="13">
      <orig>XIII</orig>
+     <transl>13th</transl>
     </text>
     <text id="14">
      <orig>XIV</orig>
+     <transl>14th</transl>
     </text>
     <text id="15">
      <orig>XV</orig>
+     <transl>15th</transl>
     </text>
     <text id="16">
      <orig>XVI</orig>
+     <transl>16th</transl>
     </text>
     <text id="17">
      <orig>XVII</orig>
+     <transl>17th</transl>
     </text>
     <text id="18">
      <orig>XVIII</orig>
+     <transl>18th</transl>
     </text>
     <text id="19">
      <orig>XIX</orig>
+     <transl>19th</transl>
     </text>
     <text id="20">
      <orig>XX</orig>
+     <transl>20th</transl>
     </text>
    </group>
    <group id="Name">
     <au-cmt>$ = makeshift substitution char<br />Range = “somewhere in 1234–1357”, not “throughout 1234–1357”<br />All start with small letters</au-cmt>
     <text id="YBc">
      <orig>$ до н.э.</orig>
+     <transl>$ BC</transl>
     </text>
     <text id="YBefore">
      <orig>до $</orig>
      <au-cmt>Years BC are unsupported</au-cmt>
+     <transl>before $</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
+     <transl>≈$</transl>
     </text>
     <text id="YApproxBc">
      <orig>≈$ до н.э.</orig>
+     <transl>≈$ BC</transl>
     </text>
     <text id="Decade">
      <orig>$-е</orig>
+     <transl>$s</transl>
     </text>
     <text id="Century">
      <orig>$ век</orig>
+     <transl>$ century</transl>
     </text>
     <text id="CenturyBc">
      <orig>$ век до н.э.</orig>
+     <transl>$ century BC</transl>
     </text>
     <text id="Unknown">
      <orig>неизвестно</orig>
+     <transl>unknown</transl>
     </text>
    </group>
    <group id="StdComment">
     <text id="FirstInsc">
      <orig>первая известная надпись</orig>
+     <transl>first known inscription</transl>
     </text>
     <text id="ModernForm">
      <orig>в современном виде</orig>
+     <transl>in modern form</transl>
     </text>
     <text id="MaybeEarlier">
      <orig>возможно, раньше</orig>
+     <transl>maybe earlier</transl>
     </text>
    </group>
   </group>
@@ -120,45 +151,56 @@
     <text id="NonChar">
      <orig>Выброшенная позиция</orig>
      <au-cmt>Test: FFFF (go to FFFD, then manually)</au-cmt>
+     <transl>Non-character</transl>
     </text>
     <text id="Empty">
      <orig>Свободное место</orig>
      <au-cmt>Test: 1st empty is in Greek+Coptic</au-cmt>
+     <transl>Vacant position</transl>
     </text>
     <text id="Block">
      <orig>О блоке</orig>
      <au-cmt>Test: any special block (e.g. Latin 1)</au-cmt>
+     <transl>Block info</transl>
     </text>
     <text id="Script">
      <orig>О письменности</orig>
      <au-cmt>Test: any normal block (e.g. Deva, Hebr…)</au-cmt>
+     <transl>Script info</transl>
     </text>
     <text id="Control">
      <orig>Об управляющих символах</orig>
      <au-cmt>Test: control chars are above fold</au-cmt>
+     <transl>About control characters</transl>
     </text>
     <text id="Deprec">
      <orig>Запрещённый символ</orig>
      <au-cmt>Test: the 1st is U+0149</au-cmt>
+     <transl>Deprecated character</transl>
     </text>
     <text id="DefIgn">
      <orig>Игнорируемый символ</orig>
      <au-cmt>Test: CGJ, Tags…</au-cmt>
+     <transl>Default-ignorable character</transl>
     </text>
     <text id="Emoji16">
      <orig>Графическое &lt;a {1}&gt;эмодзи&lt;/a&gt; требует U+FE0F (=VS16)</orig>
      <au-cmt>{1}=misc props of &lt;a&gt;, do not forget<br />Test: Misc symbols (U+2600)</au-cmt>
+     <transl>Graphic &lt;a {1}&gt;emoji&lt;/a&gt; requires U+FE0F (=VS16)</transl>
     </text>
     <text id="SuttonNoFill">
      <orig>Заливок и поворотов нет</orig>
      <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
+     <transl>No fills and rotations</transl>
     </text>
     <text id="NChars">
      <orig>{1} симв.</orig>
+     <transl>{1} ch.</transl>
     </text>
     <text id="NoHent">
      <orig>без &lt;a {1} &gt;хэнтайганы&lt;/a&gt;</orig>
      <au-cmt>Test: Hiragana</au-cmt>
+     <transl>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</transl>
     </text>
    </group>
    <group id="Bidi">
@@ -166,192 +208,240 @@
      <au-cmt>Test: Explicit chars in GenPunct</au-cmt>
      <text id="Name">
       <orig>Тэг направления</orig>
+      <transl>Direction tag</transl>
      </text>
      <text id="Short">
       <orig>Тэг направления</orig>
+      <transl>Direction tag</transl>
      </text>
      <text id="Text">
       <orig>Форматирующие символы, корректирующие работу двунаправленного алгоритма Юникода.&lt;p&gt;Строго говоря, каждый из этих символов{{-}}это отдельный класс в двунаправленном алгоритме, но если вы не{{_}}программист, вам достаточно знать: это тэги направления.</orig>
+      <transl>Formatting characters that correct operation of Unicode bidirectional algorithm.&lt;p&gt;Strictly saying, each of these characters is a separate class in bidirectional algorithm, but for non-programmers it’s enough to know: these are direction tags.</transl>
      </text>
     </group>
     <group id="AL">
      <au-cmt>Test: Any Arabic letter</au-cmt>
      <text id="Name">
       <orig>Арабская буква</orig>
+      <transl>Arabic letter</transl>
      </text>
      <text id="Short">
       <orig>Арабская буква</orig>
+      <transl>Arabic letter</transl>
      </text>
      <text id="Text">
       <orig>Пишутся справа налево. Есть тонкие правила, связанные с европейскими цифрами.</orig>
+      <transl>Written right to left. There are some subtle rules related to European numbers.</transl>
      </text>
     </group>
     <group id="AN">
      <au-cmt>Arabic Number<br />Test: Arabic digits (0660…), Rumi (10E60)</au-cmt>
      <text id="Name">
       <orig>Арабская цифоа</orig>
+      <transl>Arabic number</transl>
      </text>
      <text id="Short">
       <orig>Арабская цифра</orig>
+      <transl>Arabic number</transl>
      </text>
      <text id="Text">
       <orig>Пишутся справа налево. Есть тонкие правила, связанные с уровнями вложенности.</orig>
+      <transl>Written right to left. There are some subtle rules related no nesting levels.</transl>
      </text>
     </group>
     <group id="B">
      <au-cmt>Paragraph Separator<br />Test: CR, LF and a few more</au-cmt>
      <text id="Name">
       <orig>Разделитель абзацев</orig>
+      <transl>Paragraph separator</transl>
      </text>
      <text id="Short">
       <orig>Разделитель абзацев</orig>
+      <transl>Paragraph separator</transl>
      </text>
      <text id="Text">
       <orig>Каждый абзац обрабатывается двунаправленным алгоритмом по отдельности.</orig>
+      <transl>Every paragraph is processed separately with bidirectional algorithm.</transl>
      </text>
     </group>
     <group id="BN">
      <au-cmt>Boundary Neutral<br />Test: most controls</au-cmt>
      <text id="Name">
       <orig>Неграфический</orig>
+      <transl>Boundary neutral</transl>
      </text>
      <text id="Short">
       <orig>Неграфический</orig>
+      <transl>Boundary neutral</transl>
      </text>
      <text id="Text">
       <orig>[[pt:control|Управляющие]], соединители и [[pk:E0000|тэги]], не{{_}}имеющие своего написания.&lt;p&gt;См. [[pt:graphic|графический символ]].</orig>
+      <transl>[[pt:control|Control characters]], joiners and [[pk:E0000|tags]] that have no graphic representation.&lt;p&gt;See [[pt:graphic|graphic character]].</transl>
      </text>
     </group>
     <group id="CS">
      <au-cmt>Common Separator<br />Test: ,.</au-cmt>
      <text id="Name">
       <orig>Цифровой разделитель</orig>
+      <transl>Common separator</transl>
      </text>
      <text id="Short">
       <orig>Цифровой разделитель</orig>
+      <transl>Common separator</transl>
      </text>
      <text id="Text">
       <orig>Оказавшись в арабском или европейском числе, эти символы становятся его частью.</orig>
+      <transl>When appear in European or Arabic number, these characters become its part.</transl>
      </text>
     </group>
     <group id="EN">
      <au-cmt>European Number<br />Test: 012…</au-cmt>
      <text id="Name">
       <orig>Европейская цифра</orig>
+      <transl>European number</transl>
      </text>
      <text id="Short">
       <orig>Европейская цифра</orig>
+      <transl>European number</transl>
      </text>
      <text id="Text">
       <orig>Пишутся слева направо. Есть тонкие правила, связанные с арабским текстом.</orig>
+      <transl>Written left to right. There are subtle rules related to Arabic text.</transl>
      </text>
     </group>
     <group id="ES">
      <au-cmt>European Separator<br />Test: +-</au-cmt>
      <text id="Name">
       <orig>Европейский ±</orig>
+      <transl>European separator</transl>
      </text>
      <text id="Short">
       <orig>Европейский ±</orig>
+      <transl>European separator</transl>
      </text>
      <text id="Text">
       <orig>Символы + и − внутри европейского [[pt:number|числа]] становятся его частью. Символ ± к этому классу не{{_}}относится.</orig>
+      <transl>+ and − characters inside a European number become its part. ± character is outside of this class.</transl>
      </text>
     </group>
     <group id="ET">
      <au-cmt>European Terminator<br />Test: #$°</au-cmt>
      <text id="Name">
       <orig>Европейская единица измерения</orig>
+      <transl>European terminator</transl>
      </text>
      <text id="Short">
       <orig>Европейская единица измерения</orig>
+      <transl>European terminator</transl>
      </text>
      <text id="Text">
       <orig>Валютные и прочие символы, встречающиеся рядом с числами. Оказавшись рядом с европейским числом, они становятся частью числа.</orig>
+      <transl>Currency and other characters that commonly appear near numbers. When near a European number, these characters become its part.</transl>
      </text>
     </group>
     <group id="L">
      <au-cmt>Test: ABC…</au-cmt>
      <text id="Name">
       <orig>Слева направо</orig>
+      <transl>Left-to-right</transl>
      </text>
      <text id="Short">
       <orig>→</orig>
+      <transl>→</transl>
      </text>
      <text id="Text">
       <orig>Латиница, кириллица и прочие алфавиты с написанием слева направо. Поскольку подавляющая доля Юникода{{-}}[[ps:Hani|китайские иероглифы]], это самый многочисленный класс.</orig>
+      <transl>Latin, Cyrillic and other scripts written left-to-right. As [[ps:Hani|CJK ideographs]] are the most numerous part of Unicode, it is the pargest class.</transl>
      </text>
     </group>
     <group id="NSM">
      <au-cmt>Nonspacing Mark<br />Test: any combining umlaut</au-cmt>
      <text id="Name">
       <orig>Непротяжённая метка</orig>
+      <transl>Non-spacing mark</transl>
      </text>
      <text id="Short">
       <orig>Непротяжённая метка</orig>
+      <transl>Non-spacing mark</transl>
      </text>
      <text id="Text">
       <orig>Непротяжённые и охватывающие комбинирующие метки. Направление написания{{-}}как у основного символа.</orig>
+      <transl>Non-spacing and enclosing combining marks. Writing direction is borrowed from base character.</transl>
      </text>
     </group>
     <group id="ON">
      <au-cmt>Test: !"…</au-cmt>
      <text id="Name">
       <orig>Прочий нейтральный</orig>
+      <transl>Other neutral</transl>
      </text>
      <text id="Short">
       <orig>Прочий нейтральный</orig>
+      <transl>Other neutral</transl>
      </text>
      <text id="Text">
       <orig>Приспосабливается к направлению окружающего текста.</orig>
+      <transl>Adapts to direction of surrounding text.</transl>
      </text>
     </group>
     <group id="NM">
      <au-cmt>Test: most braces, e.g. ()</au-cmt>
      <text id="Name">
       <orig>Нейтральный отзеркаливающийся</orig>
+      <transl>Mirroring neutral</transl>
      </text>
      <text id="Short">
       <orig>Отзеркаливающийся</orig>
+      <transl>Mirroring neutral</transl>
      </text>
      <text id="Text">
       <orig>Скобки и похожие символы при написании справа налево отзеркаливаются. Все такие символы являются нейтральными: приспосабливаются к направлению окружающего текста.</orig>
+      <transl>Parentheses and other similar characters are mirrored. All these characters are neutral, as they adapt to direction of surrounding text.</transl>
      </text>
     </group>
     <group id="R">
      <au-cmt>Test: Hebrew</au-cmt>
      <text id="Name">
       <orig>Справа налево</orig>
+      <transl>Right-to-left</transl>
      </text>
      <text id="Short">
       <orig>←</orig>
+      <transl>←</transl>
      </text>
      <text id="Text">
       <orig>[[ps:Hebr|Иврит]], а также исторические письменности Ближнего Востока.&lt;p&gt;[[pb:AL|Арабские буквы]] по-особому ведут себя с европейскими цифрами и попадают в отдельную категорию.</orig>
+      <transl>[[ps:Hebr|Hebrew]] and historical scripts of Middle East.&lt;p&gt;[[pb:AL|Arabic letters]] behave differently with European numbers and comprise a separate category.</transl>
      </text>
     </group>
     <group id="S">
      <au-cmt>Segment Separator<br />Test: 09, 0B, 1F</au-cmt>
      <text id="Name">
       <orig>Разделитель участков</orig>
+      <transl>Segment separator</transl>
      </text>
      <text id="Short">
       <orig>Разделитель участков</orig>
+      <transl>Segment separator</transl>
      </text>
      <text id="Text">
       <orig>Три управляющих символа: 09 (табуляция), 0B (вертикальная табуляция), 1F (разделитель 1).</orig>
+      <transl>Three control characters: 09 (tabulation), 0B (vertical tabulation), 1F (separator 1).</transl>
      </text>
     </group>
     <group id="WS">
      <au-cmt>Whitespace<br />Test: FF, space</au-cmt>
      <text id="Name">
       <orig>Пробел</orig>
+      <transl>Whitespace</transl>
      </text>
      <text id="Short">
       <orig>Пробел</orig>
+      <transl>Whitespace</transl>
      </text>
      <text id="Text">
       <orig>Нейтральны. Есть тонкие правила, касающиеся форматирования пробелами.&lt;p&gt;См. термин [[pt:space|пробел]].</orig>
+      <transl>Neutral. There are subtle rules regarding text formatting with spaces.&lt;p&gt;See also [[pt:space|space]].</transl>
      </text>
     </group>
    </group>
@@ -359,280 +449,352 @@
     <au-cmt>Test in Symbols for legacy computing</au-cmt>
     <text id="Teletext">
      <orig>телетекст</orig>
+     <transl>teletext</transl>
     </text>
     <text id="Korvet">
      <orig>Корвет</orig>
+     <transl>Korvet</transl>
     </text>
    </group>
    <group id="Num">
     <text id="Digit">
      <orig>Цифра</orig>
      <au-cmt>Test: 0…9</au-cmt>
+     <transl>Digit</transl>
     </text>
     <text id="SpecDigit">
      <orig>Особая цифра</orig>
      <au-cmt>Test: ¹²³</au-cmt>
+     <transl>Special digit</transl>
     </text>
     <text id="Number">
      <orig>Число</orig>
      <au-cmt>Test: ½⅓¼</au-cmt>
+     <transl>Number</transl>
     </text>
    </group>
    <group id="Input">
     <text id="Bullet">
      <orig>Ввод</orig>
      <au-cmt>Test: any char with alt input</au-cmt>
+     <transl>Input</transl>
     </text>
     <text id="Birman">
      <orig>Бирман</orig>
      <au-cmt>Means Ilya Birman’s typography layout<br />Test: U+011B both Alt code and Birman</au-cmt>
+     <transl>Birman</transl>
     </text>
     <text id="AltCode">
      <orig>Alt-код</orig>
      <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+     <transl>Alt code</transl>
     </text>
     <text id="Sometimes">
      <orig>иногда {1}</orig>
      <au-cmt>Test: Tab U+09</au-cmt>
+     <transl>sometimes {1}</transl>
     </text>
     <text id="Twice">
      <orig>дважды {1}</orig>
      <au-cmt>Test: combining acute</au-cmt>
+     <transl>twice {1}</transl>
     </text>
     <text id="Space">
      <orig>Пробел</orig>
      <au-cmt>Test: NBSP U+00A0</au-cmt>
+     <transl>Space</transl>
     </text>
    </group>
    <group id="Bullet">
     <text id="EngTech">
      <orig>Английское</orig>
      <au-cmt>English — maybe Technical<br />Test: block info</au-cmt>
+     <transl>Technical</transl>
     </text>
     <text id="Range">
      <orig>Диапазон</orig>
      <au-cmt>test: block info</au-cmt>
+     <transl>Range</transl>
     </text>
     <text id="VerAppear">
      <orig>Появился в версии</orig>
      <au-cmt>Test: block info</au-cmt>
+     <transl>Appeared in version</transl>
     </text>
     <text id="NonChars">
      <orig>Выброшенных позиций</orig>
      <au-cmt>Test: any block with nonchars (e.g. Specials)</au-cmt>
+     <transl>Non-characters</transl>
     </text>
     <text id="Empty">
      <orig>Пустых мест</orig>
      <au-cmt>Test: Any block with empty places: Specials, Greek/Coptic…</au-cmt>
+     <transl>Vacant positions</transl>
     </text>
     <text id="VerFilled">
      <orig>Заполнен в версии</orig>
      <au-cmt>Test: Any full block (e.g. ASCII)</au-cmt>
+     <transl>Filled in version</transl>
     </text>
     <text id="Version">
      <orig>Версия Юникода</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>Unicode version</transl>
     </text>
     <text id="InTech">
      <orig>В техдокументации</orig>
      <au-cmt>Test: bidi info</au-cmt>
+     <transl>In technical documentation</transl>
     </text>
     <text id="Block">
      <orig>Блок</orig>
      <au-cmt>Any char</au-cmt>
+     <transl>Block</transl>
     </text>
     <text id="Script">
      <orig>Письменность</orig>
      <au-cmt>Test: Any char w/script (e.g. A)</au-cmt>
+     <transl>Script</transl>
     </text>
     <text id="Type">
      <orig>Тип</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>Type</transl>
     </text>
     <text id="Bidi">
      <orig>В двунаправленном письме</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>In bidirectional writing</transl>
     </text>
     <text id="Computers">
      <orig>Компьютеры</orig>
      <au-cmt>Test: any char from Legacy computing</au-cmt>
+     <transl>Computers</transl>
     </text>
     <text id="Dir">
      <orig>Направление</orig>
      <au-cmt>Test: Any script except Braille and technical</au-cmt>
+     <transl>Direction</transl>
     </text>
     <text id="Type">
      <orig>Тип</orig>
      <au-cmt>Test: Any script</au-cmt>
+     <transl>Type</transl>
     </text>
     <text id="Langs">
      <orig>Языки</orig>
      <au-cmt>Test: Any script except few technical</au-cmt>
+     <transl>Lanugages</transl>
     </text>
     <text id="Appear">
      <orig>Появилась</orig>
      <au-cmt>Test: Any script except few technical</au-cmt>
+     <transl>Appeared</transl>
     </text>
     <text id="Condition">
      <orig>Состояние</orig>
      <au-cmt>Maybe status<br />Test: any live (or prevly live) script</au-cmt>
+     <transl>Status</transl>
     </text>
     <text id="Plane">
      <orig>Плоскость</orig>
      <au-cmt>Test: any script</au-cmt>
+     <transl>Plane</transl>
     </text>
     <text id="base">
      <orig>базовая</orig>
      <au-cmt>Test: props of any base plane script</au-cmt>
+     <transl>Base</transl>
     </text>
     <text id="Utf8">
      <orig>UTF-8</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-8</transl>
     </text>
     <text id="Utf16">
      <orig>UTF-16</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-16</transl>
     </text>
     <text id="Html">
      <orig>HTML</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>HTML</transl>
     </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
     <text id="Invisible">
      <orig>(Невидимый)</orig>
+     <transl>(Invisible)</transl>
     </text>
     <text id="Tofu">
      <orig>(В системе нет)</orig>
+     <transl>(Absent in system)</transl>
     </text>
     <text id="NonChar">
      <orig>(Выброшен)</orig>
+     <transl>(Non-character)</transl>
     </text>
     <text id="Empty">
      <orig>(Свободное место)</orig>
+     <transl>(Vacant position)</transl>
     </text>
     <text id="FontsFor">
      <orig>Шрифты для U+%04X</orig>
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
+     <transl>Fonts for U+%04X</transl>
     </text>
    </group>
    <group id="Life">
     <text id="Alive">
      <orig>живая ''(основным языкам ничего не угрожает, как кириллица)''</orig>
+     <transl>alive ''(no threats for main language, like Cyrillic)''</transl>
     </text>
     <text id="Danger">
      <orig>в опасности{{-}}из-за языка ''(как чероки)''</orig>
+     <transl>endangered due to language ''(like Cherokee)''</transl>
     </text>
     <text id="Competing">
      <orig>в опасности{{-}}из-за конкуренции письменностей ''(как ланна)''</orig>
+     <transl>endangered due to script competition ''(like Tai Tham)''</transl>
     </text>
     <text id="Dead">
      <orig>мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)</orig>
+     <transl>dead ''(will lose soon/recently lost users, like Nüshu)''</transl>
     </text>
     <text id="Hist">
      <orig>историческая ''(давно мертва, как глаголица)''</orig>
+     <transl>historical ''(dead long ago, like Glagolitic)''</transl>
     </text>
     <text id="Sacred">
      <orig>религиозная ''(мертва в светском обороте, как коптская)''</orig>
+     <transl>religious ''(dead in secular use, like Coptic)''</transl>
     </text>
     <text id="New">
      <orig>новая ''(появилась в новейшее время, как нко)''</orig>
+     <transl>new ''(appeared recently, like N’Ko)''</transl>
     </text>
     <text id="Reborn">
      <orig>возрождённая ''(как ахом)''</orig>
+     <transl>revived ''(like Ahom)''</transl>
     </text>
     <text id="Exp">
      <orig>экспериментальная ''(попытка придумать имеющемуся языку новую письменность, как мормонская)''</orig>
+     <transl>experimental ''(attempt to make a new script for existing language, like Deseret)''</transl>
     </text>
    </group>
    <group id="Dir">
     <text id="L">
      <orig>→</orig>
      <au-cmt>Test: any LTR script, e.g. Latin</au-cmt>
+     <transl>→</transl>
     </text>
     <text id="R">
      <orig>←</orig>
      <au-cmt>Test: any RTL script, eg Arabic, Hebrew</au-cmt>
+     <transl>←</transl>
     </text>
     <text id="L_cjk">
      <orig>→ ''(исторически ←↓↓ по столбцам)''</orig>
      <au-cmt>Test: any CJK script: Hani, Nshu</au-cmt>
+     <transl>→ ''(historically ←↓↓ in columns)''</transl>
     </text>
     <text id="L_cunei">
      <orig>←↓↓ по столбцам, затем →</orig>
      <au-cmt>Test: cuneiform</au-cmt>
+     <transl>←↓↓ in columns, then →</transl>
     </text>
     <text id="L_ogam">
      <orig>→, ↑</orig>
      <au-cmt>Test: Ogam</au-cmt>
+     <transl>→, ↑</transl>
     </text>
     <text id="L_col">
      <orig>↓↓→ по столбцам</orig>
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
+     <transl>↓↓→ in columns</transl>
     </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>↓</transl>
     </text>
     <text id="Both">
      <orig>писали и ←, и →</orig>
      <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
+     <transl>wrote both ← and →</transl>
     </text>
     <text id="Tang">
      <orig>писали ←↓↓ по столбцам и →</orig>
      <au-cmt>test: Tang</au-cmt>
+     <transl>wrote ←↓↓ in columns and →</transl>
     </text>
     <text id="R_col">
      <orig>←↓↓ по столбцам</orig>
      <au-cmt>Test: Kits, Mero</au-cmt>
+     <transl>←↓↓ in columns</transl>
     </text>
     <text id="R_most">
      <orig>преимущественно ←</orig>
      <au-cmt>Test: Cprt, Lydi, Sarb</au-cmt>
+     <transl>mostly ←</transl>
     </text>
     <text id="Sogd">
      <orig>↓↓→ по столбцам; ←</orig>
      <au-cmt>Test: Sogd (new!), Chrs</au-cmt>
+     <transl>↓↓→ in columns; ←</transl>
     </text>
    </group>
    <group id="Type">
     <text id="Alph">
      <orig>[[pt:alphabet|алфавитная]]{{-}}''как кириллица''</orig>
+     <transl>[[pt:alphabet|alphabetic]]{{-}}''like Cyrillic''</transl>
     </text>
     <text id="Argu">
      <orig>[[pt:arguable|спорный]]{{-}}''как тана''</orig>
+     <transl>[[pt:arguable|arguable]]{{-}}''like Thaana''</transl>
     </text>
     <text id="Cons">
      <orig>[[pt:abjad|консонантная]]{{-}}''как иврит''</orig>
+     <transl>[[pt:abjad|consonant]]{{-}}''like Hebrew''</transl>
     </text>
     <text id="Syll">
      <orig>[[pt:syllabic|слоговая]]{{-}}''как японские катакана/хирагана''</orig>
+     <transl>[[pt:syllabic|syllabic]]{{-}}''like Japanese Katakana/Hiragana''</transl>
     </text>
     <text id="Asyl">
      <orig>алфавитно-слоговая{{-}}''как персидская клинопись''</orig>
+     <transl>Alphasyllabic{{-}}''like Old Persian cuneiform''</transl>
     </text>
     <text id="Abug">
      <orig>[[pt:abugida|абугида]]{{-}}''как эфиопская''</orig>
+     <transl>[[pt:abugida|abugida]]{{-}}''like Ethiopic''</transl>
     </text>
     <text id="Brah">
      <orig>[[pt:brahmic|брахмийская абугида]]{{-}}''как деванагари''</orig>
+     <transl>[[pt:brahmic|Brahmic abugida]]{{-}}''like Devanagari''</transl>
     </text>
     <text id="Hier">
      <orig>[[pt:hiero|иероглифическая]]{{-}}''как китайские иероглифы''</orig>
+     <transl>[[pt:hiero|ideographic]]{{-}}''like CJK ideographs''</transl>
     </text>
     <text id="Syhi">
      <orig>слогоиероглифическая{{-}}''как линейное письмо Б''</orig>
+     <transl>Ideosyllabic{{-}}''like Linear B''</transl>
     </text>
     <text id="Cohi">
      <orig>консонантно-иероглифическое{{-}}''как египетские иероглифы''</orig>
+     <transl>Ideoconsonant{{-}}''like Egyptian hieroglyphs''</transl>
     </text>
     <text id="Code">
      <orig>[[pt:code|коды и стенография]]{{-}}''как шрифт Брайля''</orig>
+     <transl>[[pt:code|codes and shorthand]]{{-}}''like Braille embossings''</transl>
     </text>
     <text id="Nota">
      <orig>[[pt:nontext|нетекстовая]]{{-}}''как ноты''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>[[pt:nontext|non-text]]{{-}}''like musical notes''</transl>
     </text>
    </group>
   </group>
@@ -640,6 +802,7 @@
    <group id="0000">
     <text id="Name">
      <orig>Латиница базовая</orig>
+     <transl>Basic Latin</transl>
     </text>
     <text id="Text">
      <orig>'''American Standard Code for Information Interchange (ASCII)'''{{-}}разработанная в США в 1963 семибитная кодировка символов. Ширину в 7 бит выбрали как компромисс для передачи данных по телеграфу, к тому же ASCII легко обрезать до 6 бит, оставив символы 40…5F и 20…3F. '''Базовая латиница''' Юникода совпадает с ASCII{{-}}так что английский юникодный текст читается, даже если кодировка сбита.&lt;p&gt;Первые 32 символа, 00…1F, [[pt:control|управляющие]], и сегодня немногие из них действительно используются. Затем идут 95 печатных символов. Многие из них с пишущих машинок: например, чтобы пропечатать À, нужно напечатать A, вернуть каретку и напечатать обратный апостроф. Последний символ, 7F=DEL, также управляющий, родом с перфолент{{-}}отверстия, пробитые во всех дорожках, говорят, что символ выбит ошибочно и не{{_}}подлежит считыванию.&lt;p&gt;Существовало множество национальных вариантов ASCII: британцы заменяли решётку # на фунт £, СССР доллар $ на монету ¤, немцы [\]{|} на умляуты ÄÖÜäöü, японцы обратную косую черту \ на иену ¥…&lt;p&gt;Оставшиеся 128 символов могли заполняться чем угодно. Одна из таких 8-битных кодировок, [[pt:latin1|латиница-1]], также вошла в Юникод.</orig>
@@ -2681,20 +2844,25 @@
    <group id="Zyyy">
     <text id="Name">
      <orig>Нет</orig>
+     <transl>None</transl>
     </text>
     <text id="Text">
      <orig>Символы вне письменности.</orig>
+     <transl>Characters outside script.</transl>
     </text>
    </group>
    <group id="Adlm">
     <text id="Name">
      <orig>Адлам</orig>
+     <transl>Adlam</transl>
     </text>
     <text id="Lang">
      <orig>фулá ''(семейство языков Западной Африки, 10 млн)''</orig>
+     <transl>Fula ''(family of West African languages, 10M)''</transl>
     </text>
     <text id="Note">
      <orig>конец 1980-х</orig>
+     <transl>late 1980s</transl>
     </text>
     <text id="Text">
      <orig>Фулá или фульбе{{-}}кочевники-скотоводы, антропологически самые близкие в Чёрной Африке к европейцам и самые ярые проповедники ислама в западной Африке.&lt;p&gt;Алфавит придуман братьями Ибрагима и Абдулайе Барри, тогда ещё подростками, чтобы лучше передавать языки фулá, чем латиница или арабский. Новая письменность прижилась, и её учат в школах Гвинеи, Либерии и других стран, локализован Android.&lt;p&gt;Алфавит назван по первым четырём буквам: A, D, L, M. Эти буквы означают «Alkule Dandayɗe Leñol Mulugol»{{-}}«алфавит, защищающий народы от исчезновения».&lt;p&gt;До этого были ещё две неудачных попытки придумать письменность фулá, не{{_}}описанных в Юникоде: фула Дита (≈1958, вдохновлена доарабской культурой) и фула Ба (1963). Иногда использовался ''аджам'' или ''волофал''{{-}}сильно видоизменённый [[ps:Arab|арабский]] шрифт. Основная же письменность{{-}}[[ps:Latn|латиница]].</orig>
@@ -2703,12 +2871,15 @@
    <group id="Aghb">
     <text id="Name">
      <orig>Агванская (Кавказская Албания)</orig>
+     <transl>Causasian Albanian (Aghwank)</transl>
     </text>
     <text id="Lang">
      <orig>агванский ''(=гаргарский, язык Кавказской Албании)''</orig>
+     <transl>Aghwank ''(=Gargarean, language of Caucasian Albania)''</transl>
     </text>
     <text id="Note">
      <orig>до IV века</orig>
+     <transl>before 4th century</transl>
     </text>
     <text id="Text">
      <orig>Никакого отношения к балканской Албании страна не{{_}}имеет, и вообще самоназвание неизвестно: ''Албания''{{-}}название греческое, ''Агванк''{{-}}современное армянское. Заселена людьми, говорившими на лезгинских языках. С I{{_}}века{{bc}} имела сильное царство. В 461 завоёвана персами, в VII{{_}}веке ненадолго подчинилась хазарам и снова получила свободу. С X{{_}}века часть Албании тюркизировалась и преобразовалась в Ширван (современный Азербайджан) и Карабах. Другие части участвовали в этногенезе армян, грузин Кахетии, дагестанцев. Алфавит, возможно, использовался и в XII{{_}}веке в языках-потомках. Поскольку страна захватывает современную Россию и Грузию, условно отнесена к Европе.&lt;p&gt;Считается, что письменность создал Месроп Маштоц, создатель [[ps:Armn|армянского]] алфавита{{-}}впрочем, это не{{_}}так: Маштоц жил 362–440, и непонятно, какова была его роль. Письменность с XV{{_}}века несколько раз открывали и забывали. В 1937 году советские арменоведы нашли полный алфавит. В 1948 при строительстве ГЭС раскопали раннехристианский храм VI{{_}}века с аутентичными надписями. Первая расшифровка вышла в 2009.</orig>
@@ -2717,9 +2888,11 @@
    <group id="Ahom">
     <text id="Name">
      <orig>Ахом</orig>
+     <transl>Ahom</transl>
     </text>
     <text id="Lang">
      <orig>тайско-ахомский ''(Ассам, возрождается)''</orig>
+     <transl>Thai-Ahom ''(Assam, under revival)''</transl>
     </text>
     <text id="Text">
      <orig>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. К XIX{{_}}веку язык окончательно заместился ассамским с [[ps:Beng|бенгальским]] письмом. Возрождается с 1954, в письменность добавлены десятичные цифры, не{{_}}имеющие исторического обоснования. Тоновая система тайско-ахомского языка полностью потеряна{{-}}письменность её не{{_}}передавала.&lt;p&gt;Блок «Ахом» в Юникоде{{_}}14.0 расширили на 16 позиций{{-}}первый такой блок с Юникода{{_}}2.0, когда приняли политику [[pt:stability|стабильности]].</orig>
@@ -2728,9 +2901,11 @@
    <group id="Arab">
     <text id="Name">
      <orig>Арабская</orig>
+     <transl>Arabic</transl>
     </text>
     <text id="Lang">
      <orig>арабский, персидский, урду, уйгурский, пуштунский…</orig>
+     <transl>Arabic, Persian, Urdu, Uighur, Pashto…</transl>
     </text>
     <text id="Text">
      <orig>Письменность развилась из [[ps:Armi|арамейской]] через [[ps:Syrc|сирийскую]] и/или [[ps:Nbat|набатейскую]]. Арабский язык тесно связан с исламом; на этом языке написан Коран (610–632). Переписчики Корана и установили окончательный алфавит. Арабский халифат насаждал как ислам, так и вязь. Многие исламские народы (турки, казахи, башкиры) пользовались арабицей до начала XX{{_}}века.&lt;p&gt;Компьютерная арабица осложняется написанием арабских букв: у каждой есть обособленная, начальная, средняя и конечная форма. В обычном тексте предпочтительнее «общая» форма буквы, подстраивающаяся под положение в слове. Но если нужна конечная форма в обособленной букве, в Юникоде есть и «жёсткие» варианты.</orig>
@@ -2739,9 +2914,11 @@
    <group id="Armi">
     <text id="Name">
      <orig>Имперская арамейская</orig>
+     <transl>Imperial Aramaic</transl>
     </text>
     <text id="Lang">
      <orig>имперский арамейский ''(также канцелярский арамейский{{-}}язык Персии 500—329{{bc}})''</orig>
+     <transl>Imperial Apamaic ''(=Official Aramaic{{-}}language of Persia 500—329{{_}}BC)''</transl>
     </text>
     <text id="Text">
      <orig>На основе арамейского в Ахеменидской империи создали книжный язык,  кодифицированный настолько, что крайне сложно опознать время и место конкретного документа. С завоеванием Персии Александром Македонским (330{{bc}}) началась фрагментация языка и дальнейшее формирование [[ps:Syrc|сирийских]] языков (предков [[ps:Arab|арабского]]) и иудейских (предков [[ps:Hebr|иврита]]).&lt;p&gt;Числа получаются комбинированием цифр 1, 2, 3, 10, 20, 100, 1000 и 10000: 55{{_}}= 20 20 10 3 2;{{_}} 103{{_}}= 100 3;{{_}} 300{{_}}= 3 100 (справа налево!).</orig>
@@ -2750,9 +2927,11 @@
    <group id="Armn">
     <text id="Name">
      <orig>Армянская</orig>
+     <transl>Armenian</transl>
     </text>
     <text id="Lang">
      <orig>армянский</orig>
+     <transl>Armenian</transl>
     </text>
     <text id="Text">
      <orig>Изобретён учёным и священником Месропом Маштоцем (362–440). Непонятно, брался ли какой-то алфавит за основу (возможно, несохранившиеся древнеармянские буквы). Алфавит тесно связан с распространением христианства в Армении. В XII веке добавились буквы {{sm|Օ}} и {{sm|Ֆ}}.&lt;p&gt;Считается, что армянская литература богаче среднеперсидской (доисламской), потому что армянский алфавит проще [[ps:Mani|манихейской]] вязи.</orig>
@@ -2761,9 +2940,11 @@
    <group id="Avst">
     <text id="Name">
      <orig>Авестийская</orig>
+     <transl>Avestan</transl>
     </text>
     <text id="Lang">
      <orig>авестийский, среднеперсидский</orig>
+     <transl>Avestan, Middle Persian</transl>
     </text>
     <text id="Text">
      <orig>Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит на основе книжного пехлеви (письма среднеперсидских рукописей). К тому времени зороастризму было много веков и язык был малопонятен, а для действенности молитв важно точное повторение{{-}}так что алфавит снабдили настоящими гласными, позаимствованными из других письменностей.&lt;p&gt;При арабах зороастрийцы стали переселяться в Индию, а с XII{{_}}века писали на авестийском местным письмом, традиционно [[ps:Gujr|гуджарати]]. Самый известный из таких зороастрийцев{{-}}Фредди Меркьюри (правда, его родителей судьба занесла аж на Занзибар).&lt;p&gt;В 2000 древние письменности разделили на пять категорий: A (используемые{{-}}[[ps:Copt|коптский]], [[ps:Runr|руны]]), B1 (изученные [[pt:character|кодируемые]]{{-}}[[ps:Xpeo|персидская клинопись]]), B2 (изученные некодируемые{{-}}[[ps:Egyp|египетские иероглифы]]), C1 (несистематизируемые, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), и C2 (малоизученные, запросы от любителей{{-}}[[pk:101D0|Фестский диск]]). Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. Для незакодированного книжного пехлеви в Юникоде оставлена дыра.</orig>
@@ -2772,20 +2953,25 @@
    <group id="Bali">
     <text id="Name">
      <orig>Балийская</orig>
+     <transl>Balinese</transl>
     </text>
     <text id="Lang">
      <orig>балийский, сасакский</orig>
+     <transl>Balinese, Sasak</transl>
     </text>
     <text id="Text">
      <orig>Гласная по умолчанию «а». Балийская письменность не{{_}}используется в общении (вместо неё [[ps:Latn|латиница]]), но важна в индуизме.</orig>
+     <transl>Inherene vowel is “a”. Balinese script is supplanted by [[ps:Latn|Latin]] in everyday use, but is still important in Hindu religion.</transl>
     </text>
    </group>
    <group id="Bamu">
     <text id="Name">
      <orig>Бамум</orig>
+     <transl>Bamum</transl>
     </text>
     <text id="Lang">
      <orig>бамум ''(Камерун)''</orig>
+     <transl>Bamum ''(Cameroon)''</transl>
     </text>
     <text id="Text">
      <orig>Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). Было выпущено семь версий (A…G), начиная от иероглифов и заканчивая слоговой. Правда, алфавит Нджойи передавал не все тоны, и возникло много омографов. Пришедшие в 1918 французы выгнали Нджойю и перевели язык на [[ps:Latn|латиницу]], но письмо продолжало ограниченно работать до смерти Нджойи в 1930-х. В 2007 начат проект по возрождению, прогресс незначителен. Более ранние художества Нджойи [[pk:16800|можно увидеть]] в дополнительных плоскостях Юникода.&lt;p&gt;Изначально согласные глухие, добавление той же гласной делает согласную звонкой: {{sm|ꚫ}} па + {{sm|ꚠ}} а = ба. Гласная после слога ставит другую гласную: {{sm|ꚫ}} па + {{sm|ꚧ}} о = по. Крышка над символом как-то изменяет слог{{-}}ставит гортанную смычку, убирает носовую согласную, меняет гласную… Верхняя черта играет роль [[pt:virama|вирамы]], убирающей гласную из слога.</orig>
@@ -4310,9 +4496,11 @@
    <group id="Tglg">
     <text id="Name">
      <orig>Тагальская (байбайин)</orig>
+     <transl>Tagalog (Baybayin)</transl>
     </text>
     <text id="Lang">
      <orig>старотагальский и другие языки Явы и Филиппин</orig>
+     <transl>Old Tagalog and other languages of Java and Philippines</transl>
     </text>
     <text id="Text">
      <orig>Брахмийская абугида с гласной по умолчанию «а» и [[pt:virama|вирамой]]. Обойдусь самоназванием письменности: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} «ба-й-ба-йи-н».&lt;p&gt;Испанские миссионеры (XVI{{_}}век) увидели, что островитяне поголовно грамотны, и сами стали учить их на байбайине. При этом не{{_}}сразу поняли, в каком направлении пишут: текст вырезали на бамбуковых дощечках, направляя нож от себя, потому могли писать в одном направлении и читать в другом.&lt;p&gt;Причин упадка байбайина много: испанцы завезли бумагу, перо и печать, под их влиянием аборигены стали различать звуки r/d, u/o, i/e. А главное: [[ps:Latn|латиница]] помогает в жизни, позволяя получить престижную конторскую работу. Так что в XVIII{{_}}веке обнаружили, что аборигены переняли латиницу. К XIX{{_}}веку байбайин был мёртв, и оставалось только упорядочить латинский алфавит. Есть современные попытки возродить байбайин.&lt;p&gt;В 2021 закодировали новый звук «r»{{-}}обе версии XIX{{_}}века, и та, что дожила до наших дней, неофициально (до Юникода 14) закрепилась за позицией 170D. Также появилась вторая вирама{{-}}крест придуман испанцами и ссылается на колониальное прошлое, да и просто плохо различим в мелком шрифте.</orig>
@@ -4321,9 +4509,11 @@
    <group id="Thaa">
     <text id="Name">
      <orig>Тана</orig>
+     <transl>Thaana</transl>
     </text>
     <text id="Lang">
      <orig>дивехи ''(мальдивский, 340 тыс. на 2012)''</orig>
+     <transl>Dhivehi ''(Maldivian, 340k as of 2012)''</transl>
     </text>
     <text id="Text">
      <orig>Письменная культура пришла на Мальдивские острова вместе с буддизмом, появилось письмо ''эвела-акуру'' на основе [[ps:Sinh|сингальского]]. Самая старая надпись датируется VII—VIII веком. В 1153 году некто Мухаммад ул-Абдалла провозгласил себя султаном и обратил мальдивцев в ислам; к XIV веку письмо видоизменилось в ''[[ps:Diak|дивес-акуру]]'', но так и осталось слева направо. В 1703 году султан Ибрахим{{_}}III заменил старую графику новой{{-}}''габули таной'' (стандартным письмом).&lt;p&gt;Происхождение таны уникально: согласные произошли из арабских и доисламских цифр, гласные{{-}}из [[ps:Arab|арабских]] огласовок. Со временем линии сгладились, стали писать с изящным 45-градусным наклоном. Путешественник Тур Хейердал сравнил тану с нарезанной лапшой.&lt;p&gt;В 1970‑е годы тане грозило исчезновение: при президенте Ибрагиме Насире появилась телексная связь, и правительство перешло на довольно некачественную латинскую транслитерацию. Новый президент Момун Абдул Гайюм восстановил тану, и обе письменности используются параллельно.</orig>
@@ -4332,12 +4522,15 @@
    <group id="Thai">
     <text id="Name">
      <orig>Тайская</orig>
+     <transl>Thai</transl>
     </text>
     <text id="Lang">
      <orig>тайский ''(20…36 млн на 2000 как родной)''</orig>
+     <transl>Thai ''(20 to 36M as of 2000 as native)''</transl>
     </text>
     <text id="Text">
      <orig>Произошла из [[ps:Khmr|старокхмерского]], который, в свою очередь, произошёл из [[ps:Brah|брахми]]. Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.&lt;p&gt;Гласная по умолчанию «а» в открытых слогах и «о» в закрытых: {{sm|ถนน}}=тханон (дорога). Но буквы называются по словам: так, буква {{sm|ช}} называется «чо-чан» (слон). Между словами не{{_}}ставятся пробелы.</orig>
+     <transl>Comes from [[ps:Khmr|Old Khmer]], that in turn comes from [[ps:Brah|Brahmi]]. The alphabet was arranged and approved by King Ramkhamhaeng the Great in 1283.&lt;p&gt;Inherent vowel is “a” in open syllables and “o” in closed ones: {{sm|ถนน}}=thanon (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</transl>
     </text>
    </group>
    <group id="Tibt">
@@ -4379,20 +4572,25 @@
    <group id="Toto">
     <text id="Name">
      <orig>Тото</orig>
+     <transl>Toto</transl>
     </text>
     <text id="Lang">
      <orig>тото ''(Восточная Индия, 1400 чел. на 2014)''</orig>
+     <transl>Toto ''(Eastern India, 1400 people as of 2014)''</transl>
     </text>
     <text id="Text">
      <orig>Маленький сино-тибетский язык, используемый в деревне Тотопара племенем тото. Состояние{{-}}на грани исчезновения: передача языка уже нарушена. Грамотны около трети. Пишут [[ps:Beng|бенгальской]] или собственной письменностью, которую придумал в 2015 старейшина племени Дханирам Тото.</orig>
+     <transl>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</transl>
     </text>
    </group>
    <group id="Ugar">
     <text id="Name">
      <orig>Угаритская</orig>
+     <transl>Ugaritic</transl>
     </text>
     <text id="Lang">
      <orig>угаритский, хурритский ''(только в районе Угарита)''</orig>
+     <transl>Ugaritic, Hurrian ''(only near Ugarit)''</transl>
     </text>
     <text id="Text">
      <orig>Жившие в Передней Азии (современная Сирия) семиты не{{_}}хвастались экономической, культурной или военной мощью, зато были на пересечении торговых путей. Так что они переняли принцип [[ps:Xsux|клинописи]] под свои нужды. Получился алфавит из 30 согласных, писавшийся слева направо; откуда он взялся и что было до него{{-}}неизвестно. Названия многих букв{{-}}реконструкции и достоверно неизвестны. Единственный знак препинания{{-}}разделитель слов.&lt;p&gt;Сохранилось много литературы и хозяйственных документов, дававших представление о разных сторонах угаритской жизни. Есть подозрение, что алфавит авторский, поскольку экономный{{-}}чем чаще буква, тем меньше в ней клиньев.&lt;p&gt;Считается, что потомков у угаритского не{{_}}было, хотя порядок букв близок к [[ps:Phnx|финикийскому]], и существуют два необычных варианта: сокращённый алфавит из 21 буквы с записью справа налево, и табличка с [[ps:Sarb|южноаравийским]] порядкой букв.&lt;p&gt;Город Угарит брошен около 1200{{bc}} с катастрофой бронзового века{{-}}общим упадком спорной природы, царившим в древнем мире того времени.</orig>
@@ -4401,20 +4599,25 @@
    <group id="Vaii">
     <text id="Name">
      <orig>Ваи</orig>
+     <transl>Vai</transl>
     </text>
     <text id="Lang">
      <orig>ваи ''(Либерия)''</orig>
+     <transl>Vai ''(Liberia)''</transl>
     </text>
     <text id="Text">
      <orig>Письмо появилось около 1833. Разработал его Момолу Дувалу Букеле, полагают, что под влиянием [[ps:Cher|письма чероки]] (вместе с неграми в Либерию эмигрировали и индейцы, один стал даже вождём ваи).&lt;p&gt;Одна из причин выживания ваи{{-}}удачные знаки, применявшиеся и до этого в негритянской культуре. Другая{{-}}он использовался для торговли с голландцами и португальцами. В 1962 Университет Либерии добавил знаки для недостающих слогов.</orig>
+     <transl>Script appeared about 1833. It was invented by Momolu Duwalu Bukele, probably under influence of [[ps:Cher|Cherokee]] (along with Africans several Native Americans migrated to Liberia, one even became a Vai chief).&lt;p&gt;One of causes of Vai survival is good characters borrowed from African culture. The other is because it was used in trade with Dutch and Portuguese. In 1962 University of Liberia added characters for missing syllables.</transl>
     </text>
    </group>
    <group id="Vith">
     <text id="Name">
      <orig>Виткутьский алфавит (албанский)</orig>
+     <transl>Vithkuqi Albanian</transl>
     </text>
     <text id="Lang">
      <orig>албанский</orig>
+     <transl>Albanian</transl>
     </text>
     <text id="Text">
      <orig>Алфавит придумал Наум Векилхарджи, писатель, переводчик и адвокат{{-}}над ним он работал 20 лет, 1824–1844. Через два года Наум умер, и алфавит не{{_}}получил особого распространения. Назван по родине Наума{{-}}селу Виткуть. Также распространено онемеченное «алфавит Бютакукье».&lt;p&gt;Алфавит хорошо отвечает фонетике албанского, но почему-то нет букв для звуков «rr», «xh» и «zh».&lt;p&gt;Есть несколько причин большого количества албанских алфавитов ([[ps:Elba|эльбасанский]], виткутьский, Тодри, Весо-Бея, Веллары): мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции). Для Наума причина точно первая: сохранились его письма, где он отвечал на критику, и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] ради религиозной нейтральности.</orig>
@@ -4423,20 +4626,25 @@
    <group id="Wcho">
     <text id="Name">
      <orig>Ванчо</orig>
+     <transl>Wancho</transl>
     </text>
     <text id="Lang">
      <orig>ванчо ''(Индия, 59 тыс. на 2011)''</orig>
+     <transl>Wancho ''(India, 59k as of 2011)''</transl>
     </text>
     <text id="Text">
      <orig>Обычно на ванчо пишут [[ps:Deva|деванагари]] или [[ps:Latn|латиницей]]. Между 2001 и 2012 учитель Банванг Лосу придумал свой алфавит. Четыре тона обозначаются диакритикой. Знаки препинания обычные европейские.</orig>
+     <transl>Ordinarily Wancho is written with [[ps:Deva|Devanagari]] or [[ps:Latn|Latin]]. Between 2001 and 2012 a teacher named Banwang Losu devised a new alphabet. Four tones are written with diacritics. Punctuation is normal European.</transl>
     </text>
    </group>
    <group id="Wara">
     <text id="Name">
      <orig>Варанг-кшити</orig>
+     <transl>Warand City</transl>
     </text>
     <text id="Lang">
      <orig>хо ''(Восточная Индия, &gt;1{{_}}млн)''</orig>
+     <transl>Ho ''(East India, &gt;1M)''</transl>
     </text>
     <text id="Text">
      <orig>Письменность придумал с нуля лидер коммуны Лако Бодра, заявив, что она пришла ему в божественном откровении от некоего Дхавана Тури из XIII{{_}}века. Алфавит начинается с символа «ом»{{-}}первого звука создания Вселенной. Хо{{-}}бесписьменный язык, около {{%|2}} пишет варанг-кшити и столько же [[ps:Orya|орией]].&lt;p&gt;Тип спорный: у каждой буквы есть гласная по умолчанию «а» (реже «о» или «э»), как в [[pt:brahmic|брахмийских абугидах]], но есть и присущие алфавиту черты: два регистра, все гласные буквы полные, не{{_}}огласовки. Из‑за этого возможны разночтения: непонятно, немеет ли гласная по умолчанию (в конечной позиции немеет всегда). Прочитайте самоназвание {{sm|𑢹𑣗𑣁𑣜𑣊 𑣏𑣂𑣕𑣂}}, и заодно поймёте, где ставить ударение. Буквы читаются по ''последнему'' звуку названия, кроме {{sm|𑢹}}=х и {{sm|𑣗}}=б, этот диграф читается «в».</orig>
@@ -4445,9 +4653,11 @@
    <group id="Xpeo">
     <text id="Name">
      <orig>Дневнеперсидская клинопись</orig>
+     <transl>Old Persian cuneiform</transl>
     </text>
     <text id="Lang">
      <orig>древнеперсидский</orig>
+     <transl>Old Persian</transl>
     </text>
     <text id="Text">
      <orig>Из [[ps:Xsux|шумеро-аккадской клинописи]] взят только принцип письма, символы почти полностью другие. Наиболее распространённая версия{{-}}письменность создана искусственно для фиксации достижений царей Ахемендиской империи. Все известные надписи относятся к двум векам 520–330{{bc}}&lt;p&gt;К 1800 расшифровали слово «царь». В 1802 Георг Гротефенд прочитал имена царей{{-}}он не{{_}}имел билингвы, только знал их греческое прочтение вроде «Дарий» или «Ксеркс»{{-}}в оригинале «Дараявауш» и «Хшаярша». В 1823 Франсуа Шампольон, найдя билингву [[ps:Egyp|египетский]]-клинопись, подтвердил, что Гротефенд прав. В 1836 Эжéн Бюрнýф, догадавшись, что одна из надписей{{-}}список сатрапий Дария, расшифровал почти весь алфавит. Расшифровка персидской клинописи стала ключом к шумерской.</orig>
@@ -4456,9 +4666,11 @@
    <group id="Xsux">
     <text id="Name">
      <orig>Шумеро-аккадская клинопись</orig>
+     <transl>Sumero-Akkadian cuneiform</transl>
     </text>
     <text id="Lang">
      <orig>шумерский, аккадский, хеттский, эламский, хурритский, урартский…</orig>
+     <transl>Sumerian, Akkadian, Hittite, Elamite, Hurrian, Urartian…</transl>
     </text>
     <text id="Text">
      <orig>Изначально (≈3500{{bc}}) на глине писали хозяйственные документы (10 коров), но к 3200 появились иероглифы, а к 3000{{bc}} иероглифы стали использовать как слоги. Параллельно менялся и стиль: символы повернулись на 90° против часовой стрелки, стали выдавливаться палочкой в виде призмы{{-}}отсюда элементы письма, острые клинышки.&lt;p&gt;В 1 тысячелетии{{bc}} клинопись стала вытесняться более прогрессивным письмом. Так, [[ps:Xpeo|персидская клинопись]] (1{{_}}тыс.{{bc}}) была уже алфавитно-слоговой. Последний известный памятник{{-}}75 уже нашей эры.&lt;p&gt;Многотысячелетняя клинопись хорошо сохранилась в пустынях Персии и Ирака, и в первой половине XIX{{_}}века расшифровали персидскую клинопись. Она стала ключом к шумерской, и к 1900 расшифровали все известные языки.&lt;p&gt;Блок «Клинопись» примерно соответствует клинописи третьей династии Ура (≈2100{{bc}}), а более поздние формы (старо- и новоассирийская) [[pt:unification|унифицируются]] как варианты. Блок «Раннединастическая клинопись» описывает более старые символы ≈2900.</orig>
@@ -4467,34 +4679,43 @@
    <group id="Yezi">
     <text id="Name">
      <orig>Езидская</orig>
+     <transl>Yezidi</transl>
     </text>
     <text id="Lang">
      <orig>северокурдский</orig>
+     <transl>Northern Kurdish (=Kurmanji)</transl>
     </text>
     <text id="Text">
      <orig>Езиды{{-}}часть курдского народа, исповедуют религию езидизм, вышедшую из [[ps:Avst|зороастризма]]. Священные езидские книги, ''Книга откровения'' и ''Чёрная книга'', написаны особым письмом (известны и более ранние версии на [[ps:Arab|арабице]]). Консенсуса насчёт датировки этих книг нет.&lt;p&gt;Езиды постоянно подвергались гонениям со стороны мусульман, и потому их религия во многом устная, мало кто видел книги в письменном виде. Запрещённое государство устроило геноцид 2014–2017: около 5000 убиты, не{{_}}менее 5000 пропали, около 500{{_}}тыс. сбежали из Ирака. Езидка Надия Мурад попала в плен, сумела сбежать, стала послом доброй воли ООН и в 2018 получила Нобелевскую премию мира.</orig>
+     <transl>Yezidis are a part of Kurdish people that profess religion of Yezidism derived from [[ps:Avst|Zoroastrianism]]. Yazidi holy books, ''Book of Revelation'' and ''Black Book'', are written with special script (earlier versions in [[ps:Arab|Arabic]] are also known). There is no consensus on dating of these books.&lt;p&gt;Yezidis were constantly oppressed by Muslims, so their religion is mostly oral, few witnessed books in written form. Islamic State made a genocide of Yezidis in 2014–2017: about 5000 are killed, at least 5000 went missing, and about 500k fled from Iraq. Yezidi girl Nadia Murad was captured, managed to escape, became UN Goodwill Ambassador, and was awarded Nobel Peace Prize in 2018.</transl>
     </text>
    </group>
    <group id="Yiii">
     <text id="Name">
      <orig>И (носу)</orig>
+     <transl>Yi (Nuosu)</transl>
     </text>
     <text id="Lang">
      <orig>и ''(Китай)''</orig>
+     <transl>Yi ''(China)''</transl>
     </text>
     <text id="Note">
      <orig>слоговая</orig>
+     <transl>syllabic</transl>
     </text>
     <text id="Text">
      <orig>Первый известный экземпляр старого (иероглифического) письма '''и''' датируется ≈1500, но письмо наверняка намного старше. Предания говорят, что оно существовало ещё в династию Тан (618—907). Письмо состоит из 8000…10000 иероглифов.&lt;p&gt;Современный слоговой '''и''' придуман правительством Китая в 1974. В языке 43 согласных, 8 гласных и 4 тона (простой, p, t и x), но не{{_}}все комбинации возможны, и письмом '''и''' можно записать 1165 слогов.</orig>
+     <transl>The first sample of old (ideographic) Yi script is dated ≈1500, but the script id definitely older. Legends say that it existed in Tang dynasty (618—907). Script consists of 8000 to 10000 ideographs.&lt;p&gt;Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not all combinations are possible, and Yi script can write 1165 syllables.</transl>
     </text>
    </group>
    <group id="Zanb">
     <text id="Name">
      <orig>Монгольское горизонтально-квадратное письмо (Дзанабáдзара)</orig>
+     <transl>Zanabazar Square (Mongolian horizontal)</transl>
     </text>
     <text id="Lang">
      <orig>монгольский, лхасский тибетский, санскрит</orig>
+     <transl>Mongolian, Lhasa Tibetan, Sanskrit</transl>
     </text>
     <text id="Text">
      <orig>Буддийский монах Дзанабáдзар (1635–1723), языковед и художник, известен разработкой письма [[ps:Soyo|соёмбо]]. Менее известно, что он придумал монгольское горизонтально-квадратное письмо, также на основе [[ps:Tibt|тибетского]]{{-}}неизвестно, раньше или позже соёмбо (основная гипотеза{{-}}раньше), зачем и насколько широко использовалось. Заново открыто в 1801, сохранилось лишь немного источников.&lt;p&gt;Брахмийская абугида с гласной по умолчанию «а» и [[pt:virama|вирамой]]. Точнее, физических вирам целых две{{-}}обе встречаются в источниках и не{{_}}имеют управляющего значения, одна для последней буквы в слове, другая для стыков согласных. Есть ещё два способа стыковать согласные{{-}}через третью виртуальную вираму (буквы ставятся друг на друга, часто уменьшаясь по высоте), и через уменьшенные знаки дополнительных согласных. Эти методы причудливо переплетаются: например, одна согласная с вирамой, и ещё три{{-}}друг на друге. Начальные гласные образуются прикреплением огласовок к {{sm|𑨀}}. Цифр нет ни{{_}}в{{_}}одном источнике. Вертикальная запись причудлива и за пределами Юникода: так, изначально находившийся над второй буквой знак может оказаться над всей надписью.</orig>
@@ -4503,9 +4724,11 @@
    <group id="Zinh">
     <text id="Name">
      <orig>Разные</orig>
+     <transl>Various</transl>
     </text>
     <text id="Text">
      <orig>Комбинирующая метка используется в нескольких разных письменностях.</orig>
+     <transl>Combining mark is used in several scripts.</transl>
     </text>
    </group>
   </group>
@@ -4513,27 +4736,35 @@
    <au-cmt>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF<br />Not FFFF!</au-cmt>
    <text id="NonChar">
     <orig>Выброшенная позиция</orig>
+    <transl>Non-character</transl>
    </text>
    <text id="Private">
     <orig>Символ для личного пользования</orig>
+    <transl>Private-use character</transl>
    </text>
    <text id="Surrogate">
     <orig>Код из суррогатной пары</orig>
+    <transl>Code from surrogate pair</transl>
    </text>
    <text id="Unassigned">
     <orig>Нераспределённый код</orig>
+    <transl>Unassigned code</transl>
    </text>
    <text id="Empty">
     <orig>Свободное место</orig>
+    <transl>Vacant position</transl>
    </text>
    <text id="NotFound">
     <orig>Не найдено</orig>
+    <transl>Not found</transl>
    </text>
    <text id="BadCode">
     <orig>Код символа не распознан</orig>
+    <transl>Cannot parse character code</transl>
    </text>
    <text id="BigCode">
     <orig>Код символа слишком велик</orig>
+    <transl>Characher code is too great</transl>
    </text>
   </group>
   <group id="Expand">
@@ -4541,17 +4772,21 @@
    <group id="0">
     <text id="Label">
      <orig>ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков).</orig>
+     <transl>CJK are collapsed (except syllabaries and small blocks)</transl>
     </text>
     <text id="Button">
      <orig>Развернуть</orig>
+     <transl>Expand</transl>
     </text>
    </group>
    <group id="1">
     <text id="Label">
      <orig>ККЯ развёрнуты.</orig>
+     <transl>CJK are expanded.</transl>
     </text>
     <text id="Button">
      <orig>Свернуть</orig>
+     <transl>Collapse</transl>
     </text>
    </group>
   </group>
@@ -4559,34 +4794,44 @@
    <au-cmt>About tab</au-cmt>
    <text id="TofuStats">
     <orig>Статистика тофу</orig>
+    <transl>Tofu statistics</transl>
    </text>
    <text id="Version">
     <orig>Версия &lt;b&gt;{1}&lt;/b&gt; (Юникод {2})</orig>
+    <transl>Version &lt;b&gt;{1}&lt;/b&gt; (Unicode {2})</transl>
    </text>
    <text id="MyName">
     <orig>Михаил Меркурьев</orig>
     <au-cmt>Михайло Меркур’єв, Mikhail Merkuryev</au-cmt>
+    <transl>Mikhail Merkuryev</transl>
    </text>
    <text id="HomePage">
     <orig>Домашняя страница</orig>
+    <transl>Home page</transl>
    </text>
    <text id="NoUnicode">
     <orig>Программа не имеет отношения к Консорциуму Юникода</orig>
+    <transl>This program is not related to Unicode Consortium</transl>
    </text>
    <text id="FontDevs">
     <orig>Разработчики шрифтов, по алфавиту</orig>
+    <transl>Font designers, alphabetically</transl>
    </text>
    <text id="NonComm">
     <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!) </orig>
+    <transl>(CC&amp;nbsp;BY-NC-SA, talk to them about commercial distribution!)</transl>
    </text>
    <text id="License">
     <orig>Распространяется под лицензией &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</orig>
+    <transl>Licensed under &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</transl>
    </text>
    <text id="And">
     <orig>и</orig>
+    <transl>and</transl>
    </text>
    <text id="Etc">
     <orig>и другие</orig>
+    <transl>and others</transl>
    </text>
   </group>
  </file>

@@ -188,7 +188,7 @@
     <group id="AN">
      <au-cmt>Arabic Number<br />Test: Arabic digits (0660…), Rumi (10E60)</au-cmt>
      <text id="Name">
-      <orig>Арабская цифоа</orig>
+      <orig>Арабская цифра</orig>
      </text>
      <text id="Short">
       <orig>Арабская цифра</orig>
@@ -459,10 +459,6 @@
     <text id="Dir">
      <orig>Направление</orig>
      <au-cmt>Test: Any script except Braille and technical</au-cmt>
-    </text>
-    <text id="Type">
-     <orig>Тип</orig>
-     <au-cmt>Test: Any script</au-cmt>
     </text>
     <text id="Langs">
      <orig>Языки</orig>
