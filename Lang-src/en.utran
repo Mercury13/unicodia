@@ -885,6 +885,7 @@
     </text>
     <text id="Text">
      <orig>Буквы нескольких мелких кириллических языков: абзахского, курдского ''(как нацменьшинства СССР)'', коми, мордовского, алеутского, азербайджанского ''(ныне на [[ps:Latn|латинице]])'' и чувашского в алфавите Яковлева ''(использовался 1873–1938)''.&lt;p&gt;Содержит смешную букву {{sm|Ԥ}}. Её «изобрёл» писатель Леонид Каганов{{-}}как оказалось, не{{_}}первым: ещё за три года до его заметки (2008) майки с этой буквой продавались в России. И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, что и дало букве {{sm|Ԥ}} место в Юникоде.</orig>
+     <transl>Letters of small Cyrillic languages: Abkhaz, Kurdish ''(as minority of USSR)'', Komi, Mordovian, Aleut, Azerbaijan ''(now [[pt:Latn|Latin]])'' and Chuvash in Yakovlev alphabet ''(used 1873–1938)''.<br /><br />Contains funny letter {{sm|Ԥ}} (looks like word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not the first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him Abkhazians instead of hook {{sm|Ҧ}} (pronounced [pʰ]) started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</transl>
     </text>
    </group>
    <group id="0530">
@@ -918,6 +919,7 @@
     </text>
     <text id="Text">
      <orig>Буквы для языков Африки, Пакистана и раннего персидского.</orig>
+     <transl>Letters for African languages, Pakistan and early Persian.</transl>
     </text>
    </group>
    <group id="0780">
@@ -951,6 +953,7 @@
     </text>
     <text id="Text">
      <orig>Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. Использовалась индийскими христианами до XIX{{_}}века.</orig>
+     <transl>'''Suriyani''' or '''Karshoni''', unusual form of writing [[ps:Mlym|Malayalam]] with Syriac letters. Was used by Indian Christians until 19th century.</transl>
     </text>
    </group>
    <group id="0870">
@@ -960,6 +963,7 @@
     </text>
     <text id="Text">
      <orig>Символы из комментариев к Корану. Также бошняцкий (запись сербохорватского арабскими буквами), пегон (запись индонезийских языков арабскими буквами), египетский пиастр (валюта до 1834) и египетский фунт (современная валюта).</orig>
+     <transl>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</transl>
     </text>
    </group>
    <group id="08A0">
@@ -969,6 +973,7 @@
     </text>
     <text id="Text">
      <orig>Дополнительные арабские буквы для [[ps:Rohg|рохинджа]] ''(Мьянма)'', белорусского, татарского, башкирского, арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' и африканских языков (в частности, берберского). Также знаки комментариев к Корану.</orig>
+     <transl>Additional Arabic letters for [[ps:Rohg|Rohingya]] ''(Myanmar)'', Belorussian, Tatar, Bashkir, Arvi ''(India, Sri Lanka)'', Shahmukhi ''([[ps:Guru|Punjabi]])'', Hindko ''(Pakistan)'' and African languges (e.g. Berber). Also signs of comments to Quran.</transl>
     </text>
    </group>
    <group id="0900">
@@ -980,7 +985,7 @@
    <group id="0980">
     <text id="Name">
      <orig>Бенгальский</orig>
-     <transl>Brngali</transl>
+     <transl>Bengali</transl>
     </text>
    </group>
    <group id="0A00">
@@ -1083,6 +1088,7 @@
     </text>
     <text id="Text">
      <orig>Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн на 2018, ''Ethnologue'' статус 5: развивающийся), а также метки тонов.</orig>
+     <transl>Letters of Sebat Bet language (Ethiopia, 1.5M as of 2018, ''Ethnogogue'' status 5: developing), and tone marks.</transl>
     </text>
    </group>
    <group id="13A0">
@@ -1152,6 +1158,7 @@
     </text>
     <text id="Text">
      <orig>Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''.</orig>
+     <transl>Letters for Cree, Ojibwe ''(Angonquin)'', Carrier, Dene ''(Atabascan)''.</transl>
     </text>
    </group>
    <group id="1900">
@@ -1179,6 +1186,7 @@
     </text>
     <text id="Text">
      <orig>Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре (по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). Чтобы не{{_}}отставать от смены времён года, этот месяц повторяется дважды каждые два-три года. Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, да и в Юникоде{{_}}14.0 всё еще не{{_}}рекомендуется.&lt;p&gt;Остальные{{-}}названия лунных дней от новолуния до полнолуния и обратно.</orig>
+     <transl>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}14.0 is still not recommented.<br /><br />The rest are names of days in lunar calendar from new moon to full and back.</transl>
     </text>
    </group>
    <group id="1A00">
@@ -1200,6 +1208,7 @@
     </text>
     <text id="Text">
      <orig>Используются в немецкой и шотландской диалектологии.</orig>
+     <transl>Used un German and Scottish dialectology.</transl>
     </text>
    </group>
    <group id="1B00">
@@ -1239,6 +1248,7 @@
     </text>
     <text id="Text">
      <orig>Варианты кириллических букв из печатных церковных книг: от Библии Франциска Скорины (Прага, 1519, ещё до Фёдорова) до Киево-Печерского Типикона (1893).</orig>
+     <transl>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</transl>
     </text>
    </group>
    <group id="1C90">
@@ -1248,6 +1258,7 @@
     </text>
     <text id="Text">
      <orig>''Мтаврули''{{-}}заглавная форма стандартного грузинского письма ''мхедрули''. Заглавные буквы из [[pk:10A0|основного блока]] называются ''асомтаврули'' и считаются устаревшими.&lt;p&gt;Мтаврули используется в выделении и заголовках, и долгое время считался вариантом шрифта. Однако исследователи нашли документы XIX и начала XX{{_}}века, где мхедрули и мтаврули смешивались. К тому же грузинские шрифты ходят парами{{-}}мхедрули и мтаврули, что усложняет повседневную работу и снижает выразительность грузинского текста, если смена шрифтов недоступна. Майклу Эверсону, типографу из Консорциума, прислали перевод «Алисы в стране чудес» в 8-битной кодировке, где «ВЫПЕЙ МЕНЯ» было набрано мтаврули.&lt;p&gt;Теперь Юникод смотрит на мхедрули и мтаврули как на строчные и заглавные, только с другими правилами употребления{{-}}выделяется всё слово. Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.</orig>
+     <transl>''Mtavruli'' is a capital form of standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.<br /><br />Mtavruli is used in highlights and captions, and for a long time was considered as a variant of font. But scholars found documents from 19th and early 20th century where Mkhedruli and Mtavruli were mixed. Algo Georgian fonts come in pairs, Mkhedruli and Mtavruli, that complicates daily work and makes Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.<br /><br />Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. Double line below that’s barely visible on icon is an editorial mark meaning capital letter.</transl>
     </text>
    </group>
    <group id="1CC0">
@@ -1257,6 +1268,7 @@
     </text>
     <text id="Text">
      <orig>Исторические знаки препинания для сунданского.</orig>
+     <transl>Historical punctuation marks for Sundanese.</transl>
     </text>
    </group>
    <group id="1CD0">
@@ -1284,6 +1296,7 @@
     </text>
     <text id="Text">
      <orig>Специализированные и устаревшие формы Международного фонетического алфавита.</orig>
+     <transl>Specialized and obsolete forms of International Phonetic Alphabet.</transl>
     </text>
    </group>
    <group id="1DC0">
@@ -1302,6 +1315,7 @@
     </text>
     <text id="Text">
      <orig>[[pt:precomposed|Монолитные]] символы с различными метками. Девяносто из этих символов вьетнамские, около десятка{{-}}средневековые, в том числе заглавный эсцет '''ẞ'''.</orig>
+     <transl>[[pt:precomposed|Precomposed]] characters with various marks. Ninety of them are Vietnamese, about dozen are medieval, including capital Eszett '''ẞ'''.</transl>
     </text>
    </group>
    <group id="1F00">
@@ -2687,6 +2701,7 @@
    <group id="1E2C0">
     <text id="Name">
      <orig>Ванчо</orig>
+     <transl>Wancho</transl>
     </text>
    </group>
    <group id="1E7E0">
@@ -2705,6 +2720,7 @@
    <group id="1E900">
     <text id="Name">
      <orig>Адлам</orig>
+     <transl>Adlam</transl>
     </text>
    </group>
    <group id="1EC70">
@@ -2734,6 +2750,7 @@
    <group id="1F000">
     <text id="Name">
      <orig>Фишки маджонга</orig>
+     <transl>Mahjong tiles</transl>
     </text>
     <text id="Text">
      <orig>Азартная игра мацзян (часто через романизацию именуемая маджонг) изобретена в конце XIX{{_}}века, первый сохранившийся набор{{-}}1870. Сама игра западному миру малоизвестна, однако распространён пасьянс: с боков фигуры снимать одинаковые фишки. &lt;p&gt;Пасьянс изобрёл студент Броди Локард в 1981{{-}}он упал с батута, был полностью парализован и во время реабилитации уговорил компанию CDC поставить терминал, с которого и программировал, держа в зубах палку. Пасьянс был помесью двух китайских игр{{-}}маджонга и «охоты на черепаху», игравшейся костями домино. Терминал системы PLATO был монохромным с разрешением 512×512{{-}}этого хватало для столь сложной игры.&lt;p&gt;Масти маджонга происходят от одной монеты (кóльца), связки из 100 монет (бамбуки) и 10{{_}}тысяч монет (иероглиф внизу означает 10000). Козыри{{-}}четыре ветра, три дракона, четыре времени года и четыре цветка. В некоторых вариантах маджонга встречаются и другие козыри{{-}}профессии (рыбак, дровосек, крестьянин, учёный) или виды искусства (музыка, го, каллиграфия, рисование).&lt;p&gt;…Локард так и остался прикованным к коляске, но прославился как разработчик игр и ПО для реабилитации, и на 2020 жив.</orig>
@@ -2742,6 +2759,7 @@
    <group id="1F030">
     <text id="Name">
      <orig>Кости домино</orig>
+     <transl>Domino tiles</transl>
     </text>
     <text id="Text">
      <orig>Домино изобрели китайцы около XIII{{_}}века. В XVIII{{_}}веке игра попала в Италию.&lt;p&gt;Есть три версии происхождения названия. По первой, выигравший становился ''domino'', то есть господином. По второй, игру разрешали в монастырях, а там любое дело начинали с молитвы Господу (итал. ''domino''). По третьей{{-}}в честь чёрно-белого карнавального костюма ''domino'', разыгрывающего монаха.&lt;p&gt;В результате переосмысления слова «домино» появились ''тримино'', ''тетрамино'' и{{_}}т.д.{{-}}фигуры из 3, 4 и{{_}}т.д. квадратов.</orig>
@@ -2750,6 +2768,7 @@
    <group id="1F0A0">
     <text id="Name">
      <orig>Игральные карты</orig>
+     <transl>Playing cards</transl>
     </text>
     <text id="Text">
      <orig>Блок объединяет стандартные карты и колоду таро.&lt;p&gt;Игру в карты придумали около XII{{_}}века в Восточной Азии. Первые упоминания карт в Европе относят к XIV{{_}}веку. Хотя мусульмане отрицают, что игра в карты пришла через них, оказалось, что мамлюки даже сделали свою колоду, напоминающую таро.&lt;p&gt;Джокер никакого отношения к козырям таро не{{_}}имеет, его добавили в XIX{{_}}веке.&lt;p&gt;Юникодные названия козырей соответствуют французской колоде таро (гадают обычно итальянской колодой). А именно: 0){{_}}шут; 1){{_}}человек; 2){{_}}детство; 3){{_}}юность; 4){{_}}зрелость; 5){{_}}старость; 6){{_}}утро; 7){{_}}день; 8){{_}}вечер; 9){{_}}ночь; 10){{_}}земля и воздух; 11){{_}}вода и огонь; 12){{_}}танец; 13){{_}}покупки; 14){{_}}забавы на воздухе; 15){{_}}искусство; 16){{_}}весна; 17){{_}}лето; 18){{_}}осень; 19){{_}}зима; 20){{_}}игра; 21){{_}}коллектив.&lt;p&gt;В блоке один [[pt:emoji|эмодзи]], чёрный джокер.</orig>
@@ -2902,14 +2921,17 @@
    <group id="2F800">
     <text id="Name">
      <orig>ККЯ совместимые иероглифы дополнение</orig>
+     <transl>CJK compatibility ideographs supplement</transl>
     </text>
     <text id="Text">
      <orig>Появившаяся в 2001 [[pt:unification|разунификация]] 542 иероглифов для [[pt:convertibility|круговой совместимости]] с тайваньской кодировкой CNS{{_}}11643-1992. Разумеется, все иероглифы этого блока традиционные.</orig>
+     <transl>Introduced in 2001. [[pt:unification|Deunification]] of 542 ideographs for [[pt:convertibility|round-trip compatibility]] with Taiwanese encoding CNS{{_}}11643-1992. Of course, all ideographs in this block are traditional.</transl>
     </text>
    </group>
    <group id="30000">
     <text id="Name">
      <orig>ККЯ иероглифы расширение G</orig>
+     <transl>CJK unified ideographs extension G</transl>
     </text>
     <text id="Text">
      <orig>В 2020 Юникод перешагнул в [[pt:plane|плоскость]] номер 3, выделив там 4939 редких и старых иероглифов. Именно здесь находятся два знаменитых рекордных иероглифа:&lt;br&gt;• ''бян''{{-}}пишется дважды в названии китайской лапши ''бянбян'': U+30EDD упрощённый 42 черты, U+30EDE традиционный 58 черт;&lt;br&gt;• ''дайто'' или ''отодо''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C.</orig>
@@ -2918,17 +2940,21 @@
    <group id="E0000">
     <text id="Name">
      <orig>Тэги</orig>
+     <transl>Tags</transl>
     </text>
     <text id="Text">
      <orig>Блок тэгов повторяет [[pt:ascii|ASCII]]. Изначально (Unicode 3.1, 2001) тэги применялись для задания языка по договорённости между отправителем и получателем. Это применение полностью [[pt:deprecated|запретили]], но в Юникоде 9.0 (2017) тэги вернули как модификаторы [[pt:emoji|эмодзи]]. Используются только для флагов регионов, определены три региона: Англия, Уэльс, Шотландия.</orig>
+     <transl>This block mirrors [[pt:ascii|ASCII]]. Initially (Unicode{{_}}3.1, 2001) tags used to specify language by agreement between sender and receiver. This use was completely [[pt:deprecated|deprecated]], but in Unicode{{_}}9.0 (2017) tags were returned as [[pt:emoji|emoji]] modifiers. Now they are used only for regional flags, three regions are defined: England, Wales, Scotland.</transl>
     </text>
    </group>
    <group id="E0100">
     <text id="Name">
      <orig>Селекторы начертания дополнительные</orig>
+     <transl>Variation selectors supplement</transl>
     </text>
     <text id="Text">
      <orig>Дополнительные селекторы начертания используются только с [[ps:Hani|китайскими иероглифами]], чтобы дать тот или иной вариант начертания. Хотя ничего не{{_}}мешает использовать их с другими символами по желанию дизайнера шрифта.</orig>
+     <transl>Supplemental variation selectors are used with [[ps:Hani|CJK ideographs]] only to set specific regional variation. But nothing prevents from using them with other characters by discretion of font designer.</transl>
     </text>
    </group>
   </group>
