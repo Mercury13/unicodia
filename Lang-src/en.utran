@@ -1186,7 +1186,7 @@
     </text>
     <text id="Text">
      <orig>Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре (по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). Чтобы не{{_}}отставать от смены времён года, этот месяц повторяется дважды каждые два-три года. Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, да и в Юникоде{{_}}14.0 всё еще не{{_}}рекомендуется.&lt;p&gt;Остальные{{-}}названия лунных дней от новолуния до полнолуния и обратно.</orig>
-     <transl>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}14.0 is still not recommented.<br /><br />The rest are names of days in lunar calendar from new moon to full and back.</transl>
+     <transl>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}14.0 is still not recommended.<br /><br />The rest are names of days in lunar calendar from new moon to full and back.</transl>
     </text>
    </group>
    <group id="1A00">
