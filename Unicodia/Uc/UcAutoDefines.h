@@ -262,7 +262,6 @@ namespace uc {
         UNKNOWN = NN,
         FIRST = 0,
         LAST = NN - 1,
-        FIRST_DUBIOUS = V_14_0,
     };
 
     enum class EcBidiStrength
