@@ -2338,7 +2338,8 @@ constinit const uc::Block uc::blocks[] {
     { 0xE0100, 0xE01EF, { 0xE0100, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
             "Variation Selectors Supplement" },
 };
-static_assert(std::size(uc::blocks) == uc::N_BLOCKS);
+static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
+              "Sorry, need to set block data manually");
 
 constinit const uc::TermCat uc::termCats[] {
     { u8"Кодирование" },
