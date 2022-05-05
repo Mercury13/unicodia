@@ -97,7 +97,7 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                     brk:;
                 }   // if ()
             } break;
-        case '\'':
+        case '\'':  // Programmer’s apostrophe
             if (pos != minus1 && *(pos + 1) == '\'') {
                 auto q = pos + 2;
                 while (q != end && *q == '\'')
@@ -108,6 +108,18 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                         : ((nQuotes == 5) ? Type::BOLD_ITALIC : Type::BOLD);
                 return { type, pos, q, {} };
             }
+            break;
+        case '\n': {
+            // Count those LFs
+                auto q = pos + 1;
+                while (q != end && *q == '\n') {
+                    ++q;
+                }
+                auto n = q - pos;
+                if (n > 1) {
+                    return { Type::PARAGRAPH, pos, q, {} };
+                }
+            } break;
         default: ;
         }   // switch (c)
     }
@@ -167,6 +179,8 @@ void wiki::run(Engine& engine, const char* start, const char* end)
         case Type::TEMPLATE:
             engine.appendTemplate(x.params, (x.posNext != end));
             break;
+        case Type::PARAGRAPH:
+            engine.appendParagraph();
         }
         start = x.posNext;
     }

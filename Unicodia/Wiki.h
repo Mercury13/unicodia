@@ -33,7 +33,9 @@ namespace wiki {
     inline Param skipParam(std::string_view data, char cEnd)
         { return skipParam(data.data(), data.data() + data.length(), cEnd); }
 
-    enum class Type { EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE };
+    enum class Type {
+            EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE,
+            PARAGRAPH };
     struct Thing {
         Type type;
         const char* posStart;
@@ -75,6 +77,7 @@ namespace wiki {
         virtual void appendTemplate(
                     const SafeVector<std::string_view> x,
                     bool hasRemainder) = 0;
+        virtual void appendParagraph() = 0;
 
         /// Called after wiki parsing.
         /// Closes weight tags that are not open.

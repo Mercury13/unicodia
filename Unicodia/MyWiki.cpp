@@ -263,6 +263,7 @@ namespace {
                 const SafeVector<std::string_view> x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
+        void appendParagraph() override;
         void finish() override;
     protected:
         wiki::HtWeight weight;
@@ -303,6 +304,11 @@ namespace {
             isSuppressed = true;
         }
         return false;
+    }
+
+    void Eng::appendParagraph()
+    {
+        s += "<p>";
     }
 
     void Eng::runRecursive(std::string_view text)
