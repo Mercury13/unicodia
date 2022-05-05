@@ -216,7 +216,7 @@
      </text>
      <text id="Text">
       <orig>Форматирующие символы, корректирующие работу двунаправленного алгоритма Юникода.&lt;p&gt;Строго говоря, каждый из этих символов{{-}}это отдельный класс в двунаправленном алгоритме, но если вы не{{_}}программист, вам достаточно знать: это тэги направления.</orig>
-      <transl>Formatting characters that correct operation of Unicode bidirectional algorithm.&lt;p&gt;Strictly saying, each of these characters is a separate class in bidirectional algorithm, but for non-programmers it’s enough to know: these are direction tags.</transl>
+      <transl>Format characters that correct operation of Unicode bidirectional algorithm.<br /><br />Strictly saying, each of these characters is a separate class in bidirectional algorithm, but for non-programmers it’s enough to know: these are direction tags.</transl>
      </text>
     </group>
     <group id="AL">
