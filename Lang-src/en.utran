@@ -1478,6 +1478,7 @@
     </text>
     <text id="Text">
      <orig>Символы, чаще всего используемые для украшения печатного текста. Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, а печатник оформит публикацию чёрно-белым шрифтом.</orig>
+     <transl>Symbols that are mainly used for decorating printed text. Block contains several [[pt:emoji|emoji]], and that’s justified: in Internet they will be colour pictures, and typesetter will set the document in monochrome font.</transl>
     </text>
    </group>
    <group id="27C0">
@@ -1487,6 +1488,7 @@
     </text>
     <text id="Text">
      <orig>Несколько символов, используемых в геометрии, формальной логике, верификации программ, теории баз данных и других разделах математики. Также западный символ деления столбиком.</orig>
+     <transl>Several characters used in geometry, formal logic, program verification, database theory and other fields of mathematics. Also Western symbol of long division (former USSR primarily uses turned T or straight L).</transl>
     </text>
    </group>
    <group id="27F0">
@@ -1496,6 +1498,7 @@
     </text>
     <text id="Text">
      <orig>Шестнадцать разных математических и технических стрелок, в основном круговые и удлинённые.</orig>
+     <transl>Sixteen various mathematical and technical arrows, mainly circular and elongated.</transl>
     </text>
    </group>
    <group id="2800">
@@ -1511,14 +1514,17 @@
     </text>
     <text id="Text">
      <orig>Пересекающиеся стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы.</orig>
+     <transl>Intersecting arrows from theory of knots, harpoons, curved arrows and other symbols.</transl>
     </text>
    </group>
    <group id="2980">
     <text id="Name">
      <orig>Разные математические символы B</orig>
+     <transl>Miscellaneous mathematical symbols B</transl>
     </text>
     <text id="Text">
      <orig>Различные математические символы: скобки, углы, пустые множества, «ящики с усами»…</orig>
+     <transl>Various mathematical symbols: brackets, angles, empty sets, box-and-whiskers…</transl>
     </text>
    </group>
    <group id="2A00">
