@@ -257,10 +257,10 @@ namespace {
         Eng(QString& aS, const uc::Font& aFont) : s(aS), font(aFont) {}
         void appendPlain(std::string_view x) override;
         void appendLink(
-                const SafeVector<std::string_view> x,
+                const SafeVector<std::string_view>& x,
                 bool hasRemainder) override;
         void appendTemplate(
-                const SafeVector<std::string_view> x,
+                const SafeVector<std::string_view>& x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendParagraph() override;
@@ -333,7 +333,7 @@ namespace {
         isSuppressed = prepareResult;
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view> x, bool hasRemainder)
+    void Eng::appendLink(const SafeVector<std::string_view>& x, bool hasRemainder)
     {
         auto target = x[0];
         auto text = x[1];
@@ -368,7 +368,7 @@ namespace {
         finishRecursion(hasRemainder, q);
     }
 
-    void Eng::appendTemplate(const SafeVector<std::string_view> x, bool)
+    void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
     {
         auto name = x[0];
         if (name == "sm"sv) {

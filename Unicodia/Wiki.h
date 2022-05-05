@@ -72,10 +72,10 @@ namespace wiki {
         /// Writes plain text
         virtual void appendPlain(std::string_view x) = 0;
         virtual void appendLink(
-                    const SafeVector<std::string_view> x,
+                    const SafeVector<std::string_view>& x,
                     bool hasRemainder) = 0;
         virtual void appendTemplate(
-                    const SafeVector<std::string_view> x,
+                    const SafeVector<std::string_view>& x,
                     bool hasRemainder) = 0;
         virtual void appendParagraph() = 0;
 

@@ -216,8 +216,8 @@ namespace {
         std::string s;
         Flags<wiki::Weight> weight;
         void appendPlain(std::string_view x) override;
-        void appendLink(const SafeVector<std::string_view> x, bool) override;
-        void appendTemplate(const SafeVector<std::string_view> x, bool) override;
+        void appendLink(const SafeVector<std::string_view>& x, bool) override;
+        void appendTemplate(const SafeVector<std::string_view>& x, bool) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
         void appendParagraph() override;
     };
@@ -243,7 +243,7 @@ namespace {
         s.push_back('\n');
     }
 
-    void Eng::appendLink(const SafeVector<std::string_view> x, bool)
+    void Eng::appendLink(const SafeVector<std::string_view>& x, bool)
     {
         s.append("Link:");
         for (size_t i = 0; i < x.size(); ++i) {
@@ -254,7 +254,7 @@ namespace {
         s.append("\n");
     }
 
-    void Eng::appendTemplate(const SafeVector<std::string_view> x, bool)
+    void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
     {
         s.append("Template:");
         for (size_t i = 0; i < x.size(); ++i) {
