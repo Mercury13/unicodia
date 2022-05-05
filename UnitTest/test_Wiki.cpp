@@ -210,7 +210,7 @@ TEST (appendHtml, Simple)
 
 namespace {
 
-    class Eng : public wiki::Engine
+    class Eng final : public wiki::Engine
     {
     public:
         std::string s;
@@ -219,6 +219,7 @@ namespace {
         void appendLink(const SafeVector<std::string_view> x, bool) override;
         void appendTemplate(const SafeVector<std::string_view> x, bool) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
+        void appendParagraph() override;
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -264,6 +265,11 @@ namespace {
         s.append("\n");
     }
 
+    void Eng::appendParagraph()
+    {
+        s.append("Paragraph!\n");
+    }
+
 }   // anon namespace
 
 
@@ -282,7 +288,7 @@ TEST (Run, Plain)
 ///
 TEST (Run, Simple)
 {
-    std::string_view s = "The [[wiki]]s are ''much'' {{big|simpler}} than '''HTML'''.";
+    std::string_view s = "The [[wiki]]s are ''much'' {{big|simpler}} than '''HTML'''.\n\n\nSome more text";
     Eng eng;
     wiki::run(eng, s);
     std::string_view expected =
@@ -294,7 +300,9 @@ TEST (Run, Simple)
             "Template:big,simpler\n"
             "Plain: than \n"
             "Plain[b]:HTML\n"
-            "Plain:.\n";
+            "Plain:.\n"
+            "Paragraph!\n"
+            "Plain:Some more text\n";
     EXPECT_EQ(expected, eng.s);
 }
 
