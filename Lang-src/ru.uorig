@@ -103,6 +103,7 @@
     </text>
    </group>
    <group id="StdComment">
+    <au-cmt>Standard comments for script dates<br /></au-cmt>
     <text id="FirstInsc">
      <orig>первая известная надпись</orig>
     </text>
