@@ -1258,7 +1258,7 @@
     </text>
     <text id="Text">
      <orig>''Мтаврули''{{-}}заглавная форма стандартного грузинского письма ''мхедрули''. Заглавные буквы из [[pk:10A0|основного блока]] называются ''асомтаврули'' и считаются устаревшими.&lt;p&gt;Мтаврули используется в выделении и заголовках, и долгое время считался вариантом шрифта. Однако исследователи нашли документы XIX и начала XX{{_}}века, где мхедрули и мтаврули смешивались. К тому же грузинские шрифты ходят парами{{-}}мхедрули и мтаврули, что усложняет повседневную работу и снижает выразительность грузинского текста, если смена шрифтов недоступна. Майклу Эверсону, типографу из Консорциума, прислали перевод «Алисы в стране чудес» в 8-битной кодировке, где «ВЫПЕЙ МЕНЯ» было набрано мтаврули.&lt;p&gt;Теперь Юникод смотрит на мхедрули и мтаврули как на строчные и заглавные, только с другими правилами употребления{{-}}выделяется всё слово. Двойная черта снизу, едва заметно выведенная на иконке{{,-}}редакторская помета, означающая заглавную букву.</orig>
-     <transl>''Mtavruli'' is a capital form of standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.<br /><br />Mtavruli is used in highlights and captions, and for a long time was considered as a variant of font. But scholars found documents from 19th and early 20th century where Mkhedruli and Mtavruli were mixed. Algo Georgian fonts come in pairs, Mkhedruli and Mtavruli, that complicates daily work and makes Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.<br /><br />Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. Double line below that’s barely visible on icon is an editorial mark meaning capital letter.</transl>
+     <transl>''Mtavruli'' is a capital form of standard Georgian type ''Mkhedruli''. Capital letters from [[pk:10A0|main block]] are named ''Asomtavruli'' and considered obsolete.<br /><br />Mtavruli is used in highlights and captions, and for a long time was considered as a variant of font. But scholars found documents from 19th and early 20th century where Mkhedruli and Mtavruli were mixed. Also Georgian fonts come in pairs, Mkhedruli and Mtavruli, that complicates daily work and makes Georgian text less expressive if font change is impossible. Michael Everson, a typographer from Consortium, received translation of ''Alice in Wonderland'' in 8-bit encoding where DRINK ME was typed in Mtavruli.<br /><br />Now Unicode considers Mkhedruli and Mtavruli as small and capital letters, just with other rules of use{{-}}the entire word is capitalized. Double line below that’s barely visible on icon is an editorial mark meaning capital letter.</transl>
     </text>
    </group>
    <group id="1CC0">
@@ -1530,14 +1530,17 @@
    <group id="2A00">
     <text id="Name">
      <orig>Дополнительные математические знаки</orig>
+     <transl>Supplemental mathematical operators</transl>
     </text>
     <text id="Text">
      <orig>Символы, используемые в математическом анализе, функциях комплексного переменного, Z-нотации, теории баз данных, теории управления, формальной логике и других разделах математики.</orig>
+     <transl>Symbols from calculus, complex analysis, Z notation, database theory, control theory, formal logic and other fields of mathematics.</transl>
     </text>
    </group>
    <group id="2B00">
     <text id="Name">
      <orig>Разные символы и стрелки</orig>
+     <transl>Miscellaneous symbols and arrows</transl>
     </text>
     <text id="Text">
      <orig>Стрелки разного назначения, геометрические фигуры, символы из шрифтов ''Wingdigs'' и ''Webdings'', японские телевизионные символы, астрологические символы, звёзды оценок.&lt;p&gt;''Hellschreiber pause symbol'' использовался в немецких телеграфных аппаратах.</orig>
@@ -1546,11 +1549,13 @@
    <group id="2C00">
     <text id="Name">
      <orig>Глаголица</orig>
+     <transl>Glagolitic</transl>
     </text>
    </group>
    <group id="2C60">
     <text id="Name">
      <orig>Латиница расширенная C</orig>
+     <transl>Latin extended C</transl>
     </text>
     <text id="Text">
      <orig>Символы разных малых языков: чимбу и ваги ''(Папуа{{-}}Новая Гвинея)'', шона ''(Зимбабве)'', уйгурского и других. Также семь букв уральского фонетического алфавита, и клавдиева буква Ⱶ, означавшая то же, что современный Y, но рассчитанная на печать существующими трафаретами.</orig>
@@ -1559,48 +1564,59 @@
    <group id="2C80">
     <text id="Name">
      <orig>Коптский</orig>
+     <transl> Coptic</transl>
     </text>
    </group>
    <group id="2D00">
     <text id="Name">
      <orig>Грузинский дополнительный</orig>
+     <transl>Georgian supplement</transl>
     </text>
     <text id="Text">
      <orig>Устаревший [[pt:minuscule|минускульный]] грузинский шрифт ''нусхури''. Буквы наклонены вправо и очень угловатые. Буквицы при этом оформляли шрифтом ''асомтаврули'' из основного блока.&lt;p&gt;Ещё в 2000 департамент информатизации Грузии и католикóс (глава грузинской церкви) просили закодировать нусхури, и Консорциум откликнулся.</orig>
+     <transl>Obsolete [[pt:minuscule|minuscule]] Georgian type ''Nuskhuri''. Letters are slanted to the right and very boxy. Initials were typed in ''Asomtavruli'' from main block.<br /><br />Back in 2000 Georgian State Department of Information Technology and Catholicos Patriarch (head of Georgian church) asked to encode Nushkhuri, and Consortium came forward.</transl>
     </text>
    </group>
    <group id="2D30">
     <text id="Name">
      <orig>Тифинаг (берберский)</orig>
+     <transl>Tifinagh (Berber)</transl>
     </text>
    </group>
    <group id="2D80">
     <text id="Name">
      <orig>Эфиопская расширенная</orig>
+     <transl>Ethiopic extended</transl>
     </text>
     <text id="Text">
      <orig>Эфиопское письмо для языков:&lt;br&gt;• мекан: кир-аббайская семья, 150{{_}}тыс. на 2007, с 2009 перешёл на [[ps:Latn|латиницу]];&lt;br&gt;• билин: кушитская семья, 91{{_}}тыс. на 2006, с 1990‑х полностью на латинице;&lt;br&gt;• бенч: омотская семья, 350{{_}}тыс. на 2007, с 2008 на латинице;&lt;br&gt;• себат-бет: эфиосемитская ветвь, 1,5{{_}}млн на 2010.</orig>
+     <transl>Ethiopic script for languages:<br />• Mekan: Nilo-Saharan family, 150k as of 2007, in [[ps:Latn|Latin] from 2009;<br />• Blin (=Bilen): Cushitic family, 91k as of 2006, in Latin from 1990s;<br />• Bench: Omotic family, 350k as of 2007, in Latin from 2008;<br />• Sebat Bet: Ethiosemitic branch, 1.5M as of 2010.</transl>
     </text>
    </group>
    <group id="2DE0">
     <text id="Name">
      <orig>Кириллица расширенная A</orig>
+     <transl>Cyrillic extended A</transl>
     </text>
     <text id="Text">
      <orig>Комбинирующие кириллические буквы из церковнославянского.</orig>
+     <transl>Combining Cyrillic letters from Church Slavonic.</transl>
     </text>
    </group>
    <group id="2E00">
     <text id="Name">
      <orig>Знаки препинания дополнительные</orig>
+     <transl>Supplemental punctuation</transl>
     </text>
     <text id="Text">
      <orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) и многое другое.</orig>
+     <transl>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (Russian monks’ statute of 15th century) and more.</transl>
     </text>
    </group>
    <group id="2E80">
     <text id="Name">
      <orig>ККЯ ключи дополнительные</orig>
+     <transl>CJK radicals supplement</transl>
     </text>
     <text id="Text">
      <orig>Альтернативные формы ключей Канси, применяющиеся в заголовках словарей.</orig>
@@ -1609,6 +1625,7 @@
    <group id="2F00">
     <text id="Name">
      <orig>Ключи Канси</orig>
+     <transl>Kangxi radicals</transl>
     </text>
     <text id="Text">
      <orig>Вы спросите: а как найти нужный иероглиф в словаре, если нет произношения? Для этого находят в иероглифе ''ключ''{{-}}черту или их комбинацию.&lt;p&gt;Словарь китайского языка Канси составлен 1710–1716 по приказу императора Канси и содержит 49030 позиций. Считался стандартным вплоть до конца XIX{{_}}века. В 1831 исправили 2500 ошибок, вызванных спешкой первоначальных составителей.&lt;p&gt;Система «алфавитной» расстановки иероглифов из 214 ключей придумана ещё в 1615, но именно словарь Канси сделал её стандартом.</orig>
@@ -1617,6 +1634,7 @@
    <group id="2FF0">
     <text id="Name">
      <orig>Символы структуры иероглифов</orig>
+     <transl>Ideographic description characters</transl>
     </text>
     <text id="Text">
      <orig>В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. А для этого важно указать, на какие части он разбит и что в каждой. Для первого и предназначен данный блок.</orig>
@@ -1625,6 +1643,7 @@
    <group id="3000">
     <text id="Name">
      <orig>ККЯ символы и знаки препинания</orig>
+     <transl>CJK symbols and punctuation</transl>
     </text>
     <text id="Text">
      <orig>Знаки препинания и прочие символы, применяемые в [[pt:cjk|ККЯ]]:&lt;br&gt;• [[pt:space|Пробел]] шириной в иероглиф.&lt;br&gt;• В ККЯ не{{_}}принято один иероглиф писать дважды подряд, а если приходится{{-}}используется знак повтора,разный для горизонтального и вертикального письма, иероглифов и каны. (Китайцы на печати уже повторяют, но на письме всё ещё пользуются знаком повтора.)&lt;br&gt;• Несколько японских эмблем.&lt;br&gt;• Японские скобки и кавычки.&lt;br&gt;• Знак «то же» —//—, широко используемый и в наших перечнях{{-}}только в иероглифическом варианте.</orig>
@@ -1633,21 +1652,25 @@
    <group id="3040">
     <text id="Name">
      <orig>Хирагана</orig>
+     <transl>Hiragana</transl>
     </text>
    </group>
    <group id="30A0">
     <text id="Name">
      <orig>Катакана</orig>
+     <transl>Katakana</transl>
     </text>
    </group>
    <group id="3100">
     <text id="Name">
      <orig>Бопомофо (чжуинь)</orig>
+     <transl>Bopomofo (Zhuyin)</transl>
     </text>
    </group>
    <group id="3130">
     <text id="Name">
      <orig>Хангыль — совместимые чамо</orig>
+     <transl>Hangul compatibility jamo</transl>
     </text>
     <text id="Text">
      <orig>Символы совместимости с корейской кодировкой KS{{_}}X{{_}}1001.</orig>
@@ -1656,6 +1679,7 @@
    <group id="3190">
     <text id="Name">
      <orig>Камбун (подсказки к древнеяпонским иероглифам)</orig>
+     <transl>Kanbun (hints to early Japanese)</transl>
     </text>
     <text id="Text">
      <orig>Словом «камбун» (''китайское письмо'') называли письменный язык средневековой Японии, основанный на [[ps:Hani|китайском]]. Китайцы говорят «подлежащее-сказуемое-дополнение», а японцы{{-}}«подлежащее-дополнение-сказуемое», так что текст читался не{{_}}по порядку, и приходилось писать значки ''каэритэн''. Эти значки обычно меньше иероглифов.&lt;p&gt;Помимо каэритэна, в камбуне были и другие значки: склонение слов, знаки препинания, японское прочтение иероглифа…&lt;p&gt;В модернизацию Мэйдзи (конец XIX{{_}}века) камбун отменили. Камбун учат в современных японских школах, но новых текстов на нём не{{_}}пишут.&lt;p&gt;В данном блоке закодирован один значок, использовавшийся для слитного прочтения и собственных имён (вертикальная черта) и 15 значков порядка.</orig>
@@ -1664,6 +1688,7 @@
    <group id="31A0">
     <text id="Name">
      <orig>Бопомофо (чжуинь) расширенный</orig>
+     <transl>Bopomofo (Zhuyin) extended</transl>
     </text>
     <text id="Text">
      <orig>Фонетические символы для языков: южноминьского (миньнань), хакка, хмонгских и кантонского.</orig>
@@ -1672,6 +1697,7 @@
    <group id="31C0">
     <text id="Name">
      <orig>Черты ККЯ</orig>
+     <transl>CJK strokes</transl>
     </text>
     <text id="Text">
      <orig>Иероглифы [[pt:cjk|ККЯ]] состоят из основных восьми элементов:&lt;p&gt;• точки D;&lt;br&gt;• крючка G;&lt;br&gt;• горизонтальной H;&lt;br&gt;• откидной черты вправо N;&lt;br&gt;• откидной черты влево P;&lt;br&gt;• вертикальной S;&lt;br&gt;• восходящей T;&lt;br&gt;• изогнутой откидной W.&lt;p&gt;Из дополнительных элементов{{-}}прямой участок B, кружок Q, наклон X, излом Z. Для каждой черты кодифицировано, в каком направлении её писать.&lt;p&gt;Все названия китайские: например, B от ''biǎn{{-}}плоский''.</orig>
@@ -1680,6 +1706,7 @@
    <group id="31F0">
     <text id="Name">
      <orig>Катакана — фонетические расширения</orig>
+     <transl>Katakana phonetic extensions</transl>
     </text>
     <text id="Text">
      <orig>Символы катаканы для передачи звуков айнского языка.</orig>
@@ -1688,6 +1715,7 @@
    <group id="3200">
     <text id="Name">
      <orig>Обрамлённые буквы и месяцы ККЯ</orig>
+     <transl>Enclosed CJK letters and months</transl>
     </text>
     <text id="Text">
      <orig>[[ps:Kana|Катакана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах.&lt;p&gt;Также несколько символов, которым место в других блоках: сокращения единиц измерения, цифры 21…50 в кругах, знаки ограничения скорости (10…80 в круге и квадрате).&lt;p&gt;В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.</orig>
@@ -1696,6 +1724,7 @@
    <group id="3300">
     <text id="Name">
      <orig>ККЯ символы совместимости</orig>
+     <transl>CJK compatibility</transl>
     </text>
     <text id="Text">
      <orig>Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.</orig>
@@ -1704,6 +1733,7 @@
    <group id="3400">
     <text id="Name">
      <orig>ККЯ иероглифы расширение A</orig>
+     <transl>CJK unified ideographs extension A</transl>
     </text>
     <text id="Text">
      <orig>6582 редких [[ps:Hani|китайских иероглифа]]. В 2020 добавили ещё 10, заполнив блок до отказа.&lt;p&gt;Так, первый из иероглифов означает «гора, холм, могила», и сейчас заменён символом {{sm|丘}}. Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», «бамбуковые ножны», «неосвещённый».</orig>
@@ -1712,6 +1742,7 @@
    <group id="4DC0">
     <text id="Name">
      <orig>Гексаграммы И цзин (Книги перемен)</orig>
+     <transl>Yijing hexagram symbols</transl>
     </text>
     <text id="Text">
      <orig>Книга перемен (И цзин){{-}}китайский эзотерический трактат, написанный разными поколениями людей. Наиболее старая его часть написана около 700{{bc}} и описывает знаменитую методику клеромантии (гадания на случайных числах). Нужно разыграть гексаграмму и прочитать её значение.&lt;p&gt;Известно, что для гадания применялся пучок из 50 палочек, традиционно стеблей тысячелистника, но как именно{{-}}неизвестно. Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция.&lt;p&gt;В Китае также был философ И Цзин, никак с книгой не{{_}}связанный.</orig>
@@ -1720,16 +1751,19 @@
    <group id="4E00">
     <text id="Name">
      <orig>ККЯ иероглифы</orig>
+     <transl>CJK unified ideographs</transl>
     </text>
    </group>
    <group id="A000">
     <text id="Name">
      <orig>И — слоги</orig>
+     <transl>Yi syllables</transl>
     </text>
    </group>
    <group id="A490">
     <text id="Name">
      <orig>И — ключи</orig>
+     <transl>Yi radicals</transl>
     </text>
     <text id="Text">
      <orig>Ключи, используемые для «алфавитной сортировки» словарей языка '''[[ps:Yiii|и]]'''.</orig>
@@ -1738,16 +1772,19 @@
    <group id="A4D0">
     <text id="Name">
      <orig>Лису (алфавит Фрейзера)</orig>
+     <transl>Lisu (Fraser alphabet)</transl>
     </text>
    </group>
    <group id="A500">
     <text id="Name">
      <orig>Ваи</orig>
+     <transl>Vai</transl>
     </text>
    </group>
    <group id="A640">
     <text id="Name">
      <orig>Кириллица расширенная B</orig>
+     <transl>Cyrillic extended B</transl>
     </text>
     <text id="Text">
      <orig>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.&lt;p&gt;Редкая [[pt:ligature|лигатура]] «мультиокулярная О», используемая в церковном эпитете «мног{{noto|ꙮ}}кий», наперёд заменена на форму из десяти «глаз», которая ожидается в Юникоде 15.</orig>
@@ -1756,11 +1793,13 @@
    <group id="A6A0">
     <text id="Name">
      <orig>Бамум</orig>
+     <transl>Bamum</transl>
     </text>
    </group>
    <group id="A700">
     <text id="Name">
      <orig>Модифицирующие символы тона</orig>
+     <transl>Modifier tone letters</transl>
     </text>
     <text id="Text">
      <orig>Символы Международного фонетического алфавита, используемые в китайском, чинантекском ''(индейцы Мексики)'' и африканских языках для указания тона{{-}}изменения высоты звука в пределах одной фонемы.&lt;p&gt;Символы {{sm|꜀꜁}} и прочие используются в этимологическом анализе китайских тонов.&lt;p&gt;{{sm|꜈꜉}} и прочие{{-}}для прямого задания высоты звука и ''тонового сандхи''. (''Сандхи''{{-}}санскритское понятие, означающее изменение звука в зависимости от соседних звуков. Например, русское ''обой'''щик'''/пулемёт'''чик'''''{{-}}правда, это сандхи не{{_}}тоновое, в русском тонов нет.)&lt;p&gt;{{sm|ꜗꜘꜙꜚ}} применяются в чинантекском.&lt;p&gt;Стрелки используются для ''тоновых шагов'' (в следующем слоге тон выше или ниже, чем в предыдущем). Восклицательные знаки{{-}}частый суррогат, использовавшийся до широкой поддержки МФА в шрифтах.</orig>
@@ -1769,6 +1808,7 @@
    <group id="A720">
     <text id="Name">
      <orig>Латиница расширенная D</orig>
+     <transl>Latin extended D</transl>
     </text>
     <text id="Text">
      <orig>Буквы, используемые в Уральском фонетическом алфавите, при изучении древних языков, дополнительные буквы алфавита майя, употреблявшиеся в колониальный период, и другое.</orig>
@@ -1777,11 +1817,13 @@
    <group id="A800">
     <text id="Name">
      <orig>Силхети-нагари</orig>
+     <transl>Syloti Nagri</transl>
     </text>
    </group>
    <group id="A830">
     <text id="Name">
      <orig>Общеиндийские числовые символы</orig>
+     <transl>Common Indic number forms</transl>
     </text>
     <text id="Text">
      <orig>Такие знаки присутствуют в источниках XVI{{_}}века, и применяются по сей день в Северной Индии, Пакистане и Непале для записи дробей: например, размера, веса или цены.</orig>
@@ -1790,16 +1832,19 @@
    <group id="A840">
     <text id="Name">
      <orig>Монгольское квадратное (Пагба-ламы)</orig>
+     <transl>Phags-Pa (Mongolian square)</transl>
     </text>
    </group>
    <group id="A880">
     <text id="Name">
      <orig>Саураштра</orig>
+     <transl>Saurashtra</transl>
     </text>
    </group>
    <group id="A8E0">
     <text id="Name">
      <orig>Деванáгари расширенный</orig>
+     <transl>Devanagari extended</transl>
     </text>
     <text id="Text">
      <orig>Распевы из Самаведы (книги релизиозных песен), варианты знака чандрабинду (носовая гласная), редакторские пометы, религиозные символы, гласная «ай» для мелких неписьменных языков Индии, придуманная европейцами.</orig>
@@ -1808,16 +1853,19 @@
    <group id="A900">
     <text id="Name">
      <orig>Кая-ли</orig>
+     <transl>Kayah Li</transl>
     </text>
    </group>
    <group id="A930">
     <text id="Name">
      <orig>Реджанг</orig>
+     <transl>Rejang</transl>
     </text>
    </group>
    <group id="A960">
     <text id="Name">
      <orig>Хангыль — расширенные чамо А</orig>
+     <transl> Hangul jamo extended A</transl>
     </text>
     <text id="Text">
      <orig>Начальные ''(чхосон)'' старые согласные буквы корейского языка. С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}а значит, нет в [[pt:precomposed|монолитном виде]].</orig>
@@ -1826,11 +1874,13 @@
    <group id="A980">
     <text id="Name">
      <orig>Яванский</orig>
+     <transl>Javanese</transl>
     </text>
    </group>
    <group id="A9E0">
     <text id="Name">
      <orig>Бирманский расширенный B</orig>
+     <transl>Myanmar extended B</transl>
     </text>
     <text id="Text">
      <orig>Буквы и цифры для языков пали ''(литургический в буддизме)'' и красных тай ''(Мьянма, 100{{_}}тыс. на 2010)''.</orig>
@@ -1839,11 +1889,13 @@
    <group id="AA00">
     <text id="Name">
      <orig>Чамский</orig>
+     <transl>Cham</transl>
     </text>
    </group>
    <group id="AA60">
     <text id="Name">
      <orig>Бирманский расширенный A</orig>
+     <transl>Myanmar extended A</transl>
     </text>
     <text id="Text">
      <orig>Буквы для языков кхамти ''(Мьянма, Индия, 13{{_}}тыс. на 2007)'' и тай-айтонского ''(Ассам, 1500 на 2006)''.</orig>
@@ -1852,11 +1904,13 @@
    <group id="AA80">
     <text id="Name">
      <orig>Тай-вьет</orig>
+     <transl> Tai viet</transl>
     </text>
    </group>
    <group id="AAE0">
     <text id="Name">
      <orig>Манипури — расширения</orig>
+     <transl>Meetei Mayek extensions</transl>
     </text>
     <text id="Text">
      <orig>Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]].</orig>
@@ -1865,6 +1919,7 @@
    <group id="AB00">
     <text id="Name">
      <orig>Эфиопская расширенная А</orig>
+     <transl>Ethiopic extended A</transl>
     </text>
     <text id="Text">
      <orig>Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).</orig>
@@ -1873,6 +1928,7 @@
    <group id="AB30">
     <text id="Name">
      <orig>Латиница расширенная E</orig>
+     <transl>Latin extended E</transl>
     </text>
     <text id="Text">
      <orig>Буквы, используемые в германской и шотландской диалектологии, транскрипции индейских и сино-тибетских языков, а также в латинской записи якутского (алфавит Новгородова, 1920–1929).</orig>
@@ -1881,6 +1937,7 @@
    <group id="AB70">
     <text id="Name">
      <orig>Чероки дополнительный</orig>
+     <transl>Cherokee supplement</transl>
     </text>
     <text id="Text">
      <orig>В этом блоке находятся строчные буквы письменности чероки, кроме шести, закодированных в основном блоке.</orig>
@@ -1889,11 +1946,13 @@
    <group id="ABC0">
     <text id="Name">
      <orig>Манипури (мейтей-майек)</orig>
+     <transl>Meetei Mayek (Manipuri)</transl>
     </text>
    </group>
    <group id="AC00">
     <text id="Name">
      <orig>Хангыль — слоги</orig>
+     <transl>Hangul syllables</transl>
     </text>
     <text id="Text">
      <orig>[[pt:precomposed|Монолитные]] слоги хангыля, большей частью для совместимости со старыми кодировками. &lt;p&gt;Добавление корейского в Юникод сопровождалось большими трудностями. В Юникоде 1.0 блок был на месте 3400…3D2D (сейчас там [[ps:Hani|китайские иероглифы]]). В Юникоде 2.0 (1996) блок поставили на окончательное место, полагая, что корейского юникодного текста ещё мало. Этот случай даже обозвали «корейский бардак». В ответ Юникод выпустил главную гарантию [[pt:stability|стабильности]]: больше ни один символ не{{_}}сдвинется и не{{_}}исчезнет.</orig>
@@ -1902,6 +1961,7 @@
    <group id="D7B0">
     <text id="Name">
      <orig>Хангыль — расширенные чамо B</orig>
+     <transl>Hangul jamo extended B</transl>
     </text>
     <text id="Text">
      <orig>Средние и конечные ''(чунсон и чонсон)'' старые буквы корейского языка. С их помощью можно динамически строить слоги, которых нет в современном корейском{{-}}а значит, нет в [[pt:precomposed|монолитном виде]].</orig>
@@ -1910,6 +1970,7 @@
    <group id="F900">
     <text id="Name">
      <orig>ККЯ совместимые иероглифы</orig>
+     <transl>CJK compatibility ideographs</transl>
     </text>
     <text id="Text">
      <orig>Блок содержит [[ps:Hani|китайские иероглифы]], которые закодированы в других кодировках несколько раз, чтобы не{{_}}терять информацию при круговом [[pt:convertibility|преобразовании]]. У них жёстко задано начертание. Впрочем, встречаются и обычные [[pt:unification|унифицированные]]{{-}}например, FA0E и 0F, 11, 13, 14…</orig>
@@ -1918,6 +1979,7 @@
    <group id="FB00">
     <text id="Name">
      <orig>Алфавитные формы начертания</orig>
+     <transl> Alphabetic presentation forms</transl>
     </text>
     <text id="Text">
      <orig>Стандартные [[pt:ligature|лигатуры]] для [[ps:Latn|латиницы]], [[ps:Armn|армянского]] и [[ps:Hebr|иврита]].</orig>
@@ -1926,6 +1988,7 @@
    <group id="FB50">
     <text id="Name">
      <orig>Арабские формы начертания А</orig>
+     <transl>Arabic presentation forms A</transl>
     </text>
     <text id="Text">
      <orig>Блок создан для [[pt:convertibility|совместимости]] со старыми кодировками вроде CP864 (DOS), где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.&lt;p&gt;32 позиции FDDx и FDEx [[pt:noncharacter|выброшены]].&lt;p&gt;Также содержит [[pt:spacing|протяжённые]] огласовки.&lt;p&gt;В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</orig>
@@ -1934,6 +1997,7 @@
    <group id="FE00">
     <text id="Name">
      <orig>Селекторы начертания</orig>
+     <transl>Variation selectors</transl>
     </text>
     <text id="Text">
      <orig>Чаще всего (например, в браузерах) тот или иной вариант написания символа включают, выбирая другой шрифт или включая функции OpenType. Юникод позволяет это ещё одним методом: созданием лигатур из символа и селектора.&lt;p&gt;[[ps:Latn|Латиница]], [[ps:Mymr|бирманский]] и ещё несколько письменностей используют VS1. [[ps:Hani|Китайские иероглифы]] используют VS1…VS3. [[pt:emoji|Эмодзи]] можно сделать цветными (VS16) и текстовыми (VS15).</orig>
@@ -1942,6 +2006,7 @@
    <group id="FE10">
     <text id="Name">
      <orig>Вертикальные формы</orig>
+     <transl> Vertical forms</transl>
     </text>
     <text id="Text">
      <orig>[[ps:Hani|Китайский язык]] изначально писался по столбцам справа налево, и сейчас так пишут в художественных целях: стихи, открытки, вывески.&lt;p&gt;Блок кодирует символы из китайской кодировки GB{{_}}18030 (2005), предназначенные для вертикального письма.</orig>
@@ -1950,6 +2015,7 @@
    <group id="FE20">
     <text id="Name">
      <orig>Комбинирующие полузнаки</orig>
+     <transl>Combining half marks</transl>
     </text>
     <text id="Text">
      <orig>Части диакритических знаков, охватывающих несколько символов. Например, можно накрыть три буквы {{sm|a︤c︦e︥}} одной чертой. В большинстве шрифтов реализованы плохо, и автор «Юникодии» специально подобрал три удачных символа. А вот церковнославянское сокращение {{sm|Х︮с︯}} выглядит плохо.</orig>
@@ -1958,6 +2024,7 @@
    <group id="FE30">
     <text id="Name">
      <orig>ККЯ совместимые формы</orig>
+     <transl>CJK compatibility forms</transl>
     </text>
     <text id="Text">
      <orig>Символы для вертикального письма [[pt:cjk|ККЯ]], в основном для совместимости со старыми кодировками. В частности, с китайской кодировкой CNS{{_}}11643{{-}}отсюда название в Юникоде{{_}}1.0, ''CNS 11643 Compatibility''.</orig>
@@ -1966,6 +2033,7 @@
    <group id="FE50">
     <text id="Name">
      <orig>Малые формы знаков препинания</orig>
+     <transl>Small form variants</transl>
     </text>
     <text id="Text">
      <orig>Уменьшенные знаки препинания для совместимости с китайской кодировкой CNS{{_}}11643.</orig>
@@ -1974,6 +2042,7 @@
    <group id="FE70">
     <text id="Name">
      <orig>Арабские формы начертания B</orig>
+     <transl>Arabic presentation forms B</transl>
     </text>
     <text id="Text">
      <orig>Блок предназначен для [[pt:convertibility|совместимости]] со старыми кодировками, где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.&lt;p&gt;Содержит символ FEFF «[[pt:bom|метка порядка байтов]]».&lt;p&gt;В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</orig>
@@ -1982,6 +2051,7 @@
    <group id="FF00">
     <text id="Name">
      <orig>Полуширинные и полноширинные формы</orig>
+     <transl> Halfwidth and fullwidth forms</transl>
     </text>
     <text id="Text">
      <orig>В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}половину клетки. Отсюда необычное начертание текста на китайских товарах с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм».&lt;p&gt;В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.</orig>
@@ -1990,24 +2060,29 @@
    <group id="FFF0">
     <text id="Name">
      <orig>Спецсимволы</orig>
+     <transl>Specials</transl>
     </text>
     <text id="Text">
      <orig>Короткий блок в конце [[pt:bmp|базовой плоскости]]. Из 14 символов (два [[pt:noncharacter|выброшены]]) назначены только пять: три символа межстрочных помет, символ подстановки в составном документе («здесь должна быть картинка») и знак неудачного считывания.&lt;p&gt;С последним, {{sm|�}}, мы чаще всего и сталкиваемся{{-}}он означает, что «крокозябра» появилась не из-за отсутствия символа в шрифте, а из-за неудачной раскодировки. Обычно{{-}}текст в однобайтовой кодировке попыталось прочитать как [[pt:utf8|UTF-8]].</orig>
+     <transl>A short block in the end of [[pt:bmp|Base Plane]]. From 14 characters (two are [[pt|noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in composite document (“picture here”) and sign of failed reading.<br /><br />The latter, {{sm|�}}, we see most of all, it means that “mojibake” appeared not because of missing glyph in font, but ecause of failed decoding. Usually{{-}}someone attempted to read text in single-byte encoding as [[pt:utf8|UTF-8]].</transl>
     </text>
    </group>
    <group id="10000">
     <text id="Name">
      <orig>Линейное письмо Б — слоги</orig>
+     <transl>Linear B syllabary</transl>
     </text>
    </group>
    <group id="10080">
     <text id="Name">
      <orig>Линейное письмо Б — иероглифы</orig>
+     <transl>Linear B ideograms</transl>
     </text>
    </group>
    <group id="10100">
     <text id="Name">
      <orig>Эгейские цифры</orig>
+     <transl>Aegean numbers</transl>
     </text>
     <text id="Text">
      <orig>Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями. Замечена в линейном письме [[ps:Lina|А]] и [[ps:Linb|Б]]. В [[ps:Cprt|кипрском]] письме была обнаружена единственная табличка с числом «100».</orig>
@@ -2016,6 +2091,7 @@
    <group id="10140">
     <text id="Name">
      <orig>Древнегреческие цифры</orig>
+     <transl>Ancient Greek numbers</transl>
     </text>
     <text id="Text">
      <orig>Аттическая система счисления была [[pt:acrophonic|акрофонической]], то есть цифрами служили первые буквы слов:&lt;br&gt;• Ι = 1, ἴος&lt;br&gt;• обрезанное Π = 5, πέντε&lt;br&gt;• Δ = 10, δέκα&lt;br&gt;• Η = 100, ηἑκατόν&lt;br/&gt;• Χ = 1000, χίλιοι&lt;br/&gt;• Μ = 10{{_}}000, μύριοι&lt;p&gt;Для цифр 50, 500 и{{_}}т.д. существовали символы, состоящие из Π и 10/100/1000…&lt;p&gt;Впоследствии аттическая система уступила место [[ps:Grek|ионийской]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), но взаимообмен культур повлиял на этрусков, что и привело к появлению римских цифр.&lt;p&gt;Также в этом блоке находятся символы древнегреческих единиц измерения.&lt;p&gt;Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. В древней Греции ''литра''{{-}}мера массы и монета. Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.</orig>
@@ -2024,6 +2100,7 @@
    <group id="10190">
     <text id="Name">
      <orig>Древние символы</orig>
+     <transl>Ancient Symbols</transl>
     </text>
     <text id="Text">
      <orig>Римские символы для денег, мер и весов. Также греческое библейское сокращение «крест» (реже «Христос»).</orig>
@@ -2032,6 +2109,7 @@
    <group id="101D0">
     <text id="Name">
      <orig>Фестский диск</orig>
+     <transl>Phaistos Disc</transl>
     </text>
     <text id="Text">
      <orig>Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины без гончарного круга, найден в 1908 на Крите, имеет диаметр 160{{_}}мм и толщину 20{{_}}мм. Датируется 2100–1100{{bc}}, и содержит две надписи, сделанных по спирали неизвестной письменностью с помощью штампов. Выставлен в Археологическом музее Ираклиона (Крит).&lt;p&gt;Общепринята гипотеза, что текст читается от края к центру (справа налево). Для написания слева направо многие из символов отражены: так, в оригинале ПЕШЕХОД идёт направо. Никто не{{_}}знает, критская ли это письменность и к какому типу относится. В числе необычных гипотез{{-}}подделка работавшего на раскопках художника, список владений критского царя и игра-ходилка.&lt;p&gt;В 2006 Фестский диск предложен в [[pt:private|Реестр искусственных письменностей]] на место E6D0–E6FF; порядок символов тот же (по Артуру Эвансу, 1905, по убыванию частоты). С появлением Фестского диска в настоящем Юникоде диапазон расформирован. Два символа из Реестра в Юникод не{{_}}вошли и берутся из латиницы: | и ¦. Названия символов{{-}}по Луи Годáру (1995).</orig>
@@ -2040,16 +2118,19 @@
    <group id="10280">
     <text id="Name">
      <orig>Ликийский</orig>
+     <transl>Lycian</transl>
     </text>
    </group>
    <group id="102A0">
     <text id="Name">
      <orig>Карийский</orig>
+     <transl>Carian</transl>
     </text>
    </group>
    <group id="102E0">
     <text id="Name">
      <orig>Коптские курсивные цифры</orig>
+     <transl>Coptic epact numbers</transl>
     </text>
     <text id="Text">
      <orig>Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не{{_}}«епакта» (формулы для перевода из солнечного календаря в лунный) или «пасхалия» (формулы для расчёта пасхи). И действительно, эти цифры, будучи потомками обычной [[ps:Copt|коптской]] записи (которая, в свою очередь, позаимствована из [[ps:Grek|греческого]]), широко использовались в копто-арабском мире с X по XIX век; в частности, в астрономических таблицах ≈1800. Запись слева направо.&lt;p&gt;Из-за такого необычного использования эти цифры закодированы отдельным блоком, а не{{_}}как вариант коптского.&lt;p&gt;В изображениях символов вы увидите серьёзное расхождение с таблицами Юникода: специалист по древним письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект ''Google Noto'' попытался повторить росчерки постоянной шириной.</orig>
@@ -2058,71 +2139,85 @@
    <group id="10300">
     <text id="Name">
      <orig>Этрусский</orig>
+     <transl>Old Italic (Etruscan)</transl>
     </text>
    </group>
    <group id="10330">
     <text id="Name">
      <orig>Готский</orig>
+     <transl>Gothic</transl>
     </text>
    </group>
    <group id="10350">
     <text id="Name">
      <orig>Древнепермский (анбур)</orig>
+     <transl>Old Permic (Anbur)</transl>
     </text>
    </group>
    <group id="10380">
     <text id="Name">
      <orig>Угаритский</orig>
+     <transl>Ugaritic</transl>
     </text>
    </group>
    <group id="103A0">
     <text id="Name">
      <orig>Древнеперсидский</orig>
+     <transl>Old Persian</transl>
     </text>
    </group>
    <group id="10400">
     <text id="Name">
      <orig>Дезеретский (мормонский)</orig>
+     <transl>Deseret (Mormon)</transl>
     </text>
    </group>
    <group id="10450">
     <text id="Name">
      <orig>Алфавит Бернарда Шоу</orig>
+     <transl>Shavian</transl>
     </text>
    </group>
    <group id="10480">
     <text id="Name">
      <orig>Османья (сомалийский)</orig>
+     <transl>Osmanya (Somali)</transl>
     </text>
    </group>
    <group id="104B0">
     <text id="Name">
      <orig>Осейдж</orig>
+     <transl>Osage</transl>
     </text>
    </group>
    <group id="10500">
     <text id="Name">
      <orig>Эльбасанский албанский</orig>
+     <transl>Elbasan Albanian</transl>
     </text>
    </group>
    <group id="10530">
     <text id="Name">
      <orig>Агванский (Кавказская Албания)</orig>
+     <transl>Caucasian Albanian (Aghwank)</transl>
     </text>
    </group>
    <group id="10570">
     <text id="Name">
      <orig>Виткутьский албанский</orig>
+     <transl>Vithkuqi Albanian</transl>
     </text>
    </group>
    <group id="10600">
     <text id="Name">
      <orig>Линейное письмо А</orig>
+     <transl>Linear A</transl>
     </text>
    </group>
    <group id="10780">
     <text id="Name">
      <orig>Латиница расширенная F</orig>
+     <transl>Latin extended F</transl>
     </text>
     <text id="Text">
      <orig>Модификатор AA используется в нотации расстройств речи (VoQS). Остальные{{-}}в фонетике и означают звуки, проговариваемые не{{_}}полностью.</orig>
@@ -2131,222 +2226,267 @@
    <group id="10800">
     <text id="Name">
      <orig>Кипрская слоговая</orig>
+     <transl>Cypriot syllabary</transl>
     </text>
    </group>
    <group id="10840">
     <text id="Name">
      <orig>Имперский арамейский</orig>
+     <transl>Imperial Aramaic</transl>
     </text>
    </group>
    <group id="10860">
     <text id="Name">
      <orig>Пальмирский</orig>
+     <transl>Palmyrene</transl>
     </text>
    </group>
    <group id="10880">
     <text id="Name">
      <orig>Набатейский</orig>
+     <transl>Nabataean</transl>
     </text>
    </group>
    <group id="108E0">
     <text id="Name">
      <orig>Хатранский (ашшурский)</orig>
+     <transl>Hatran (Ashurian)</transl>
     </text>
    </group>
    <group id="10900">
     <text id="Name">
      <orig>Финикийский</orig>
+     <transl>Phoenician</transl>
     </text>
    </group>
    <group id="10920">
     <text id="Name">
      <orig>Лидийский (сардийский)</orig>
+     <transl>Lydian (Sardis)</transl>
     </text>
    </group>
    <group id="10980">
     <text id="Name">
      <orig>Мероитские иероглифы</orig>
+     <transl>Meroitic hieroglyphs</transl>
     </text>
    </group>
    <group id="109A0">
     <text id="Name">
      <orig>Мероитский курсив</orig>
+     <transl>Meroitic cursive</transl>
     </text>
    </group>
    <group id="10A00">
     <text id="Name">
      <orig>Кхароштхи</orig>
+     <transl>Kharoshthi</transl>
     </text>
    </group>
    <group id="10A60">
     <text id="Name">
      <orig>Древняя южноаравийская</orig>
+     <transl>Old South Arabian</transl>
     </text>
    </group>
    <group id="10A80">
     <text id="Name">
      <orig>Древняя североаравийская</orig>
+     <transl>Old North Arabian</transl>
     </text>
    </group>
    <group id="10AC0">
     <text id="Name">
      <orig>Манихейская</orig>
+     <transl>Manichaean</transl>
     </text>
    </group>
    <group id="10B00">
     <text id="Name">
      <orig>Авестийский</orig>
+     <transl>Avestan</transl>
     </text>
    </group>
    <group id="10B40">
     <text id="Name">
      <orig>Парфянские надписи</orig>
+     <transl>Inscriptional Parthian</transl>
     </text>
    </group>
    <group id="10B60">
     <text id="Name">
      <orig>Пехлевийские надписи</orig>
+     <transl>Inscriptional Pahlavi</transl>
     </text>
    </group>
    <group id="10B80">
     <text id="Name">
      <orig>Псалтырское пехлеви</orig>
+     <transl>Psalter Pahlavi</transl>
     </text>
    </group>
    <group id="10C00">
     <text id="Name">
      <orig>Тюркские (орхоно-енисейские) руны</orig>
+     <transl>Old Turkic (Orkhon-Yenisei) runes</transl>
     </text>
    </group>
    <group id="10C80">
     <text id="Name">
      <orig>Венгерские (секейские) руны</orig>
+     <transl> Old Hungarian (Székely) runes</transl>
     </text>
    </group>
    <group id="10D00">
     <text id="Name">
      <orig>Ханифи (рохинджа)</orig>
+     <transl>Hanifi Rohingya</transl>
     </text>
    </group>
    <group id="10E60">
     <text id="Name">
      <orig>Цифры руми</orig>
+     <transl>Rumi numeral symbols</transl>
     </text>
     <text id="Text">
      <orig>Цифры, использовавшиеся в арабской Африке с X по XVII{{_}}век, особенно в Фесе ''(Марокко)''.</orig>
+     <transl>Numbers that were used in Arabic Africa from 10th to 17th century, especially in Fez ''(Morocco)''.</transl>
     </text>
    </group>
    <group id="10E80">
     <text id="Name">
      <orig>Езидская</orig>
+     <transl>Yezidi</transl>
     </text>
    </group>
    <group id="10F00">
     <text id="Name">
      <orig>Старосогдийский</orig>
+     <transl>Old Sogdian</transl>
     </text>
    </group>
    <group id="10F30">
     <text id="Name">
      <orig>Согдийский</orig>
+     <transl>Sogdian</transl>
     </text>
    </group>
    <group id="10F70">
     <text id="Name">
      <orig>Староуйгурский</orig>
+     <transl>Old Uyghur</transl>
     </text>
    </group>
    <group id="10FB0">
     <text id="Name">
      <orig>Хорезмийский</orig>
+     <transl>Chorasmian</transl>
     </text>
    </group>
    <group id="10FE0">
     <text id="Name">
      <orig>Элимайский (эламский)</orig>
+     <transl>Elymaic</transl>
     </text>
    </group>
    <group id="11000">
     <text id="Name">
      <orig>Брахми</orig>
+     <transl>Brahmi</transl>
     </text>
    </group>
    <group id="11080">
     <text id="Name">
      <orig>Кайтхи</orig>
+     <transl>Kaithi</transl>
     </text>
    </group>
    <group id="110D0">
     <text id="Name">
      <orig>Соранг-сомпенг</orig>
+     <transl>Sora Sompeng</transl>
     </text>
    </group>
    <group id="11100">
     <text id="Name">
      <orig>Чакма</orig>
+     <transl>Chakma</transl>
     </text>
    </group>
    <group id="11150">
     <text id="Name">
      <orig>Махаджани</orig>
+     <transl>Mahajani</transl>
     </text>
    </group>
    <group id="11180">
     <text id="Name">
      <orig>Шарада</orig>
+     <transl>Sharada</transl>
     </text>
    </group>
    <group id="111E0">
     <text id="Name">
      <orig>Старые сингальские цифры</orig>
+     <transl>Sinhala archaic numbers</transl>
     </text>
     <text id="Text">
      <orig>Старинная непозиционная система счисления, использовавшаяся в Шри-Ланке до начала XIX{{_}}века.</orig>
+     <transl>Old non-positional number system used in Sri Lanka up to early 19th century.</transl>
     </text>
    </group>
    <group id="11200">
     <text id="Name">
      <orig>Ходжки</orig>
+     <transl>Khojki</transl>
     </text>
    </group>
    <group id="11280">
     <text id="Name">
      <orig>Мултани</orig>
+     <transl>Multani</transl>
     </text>
    </group>
    <group id="112B0">
     <text id="Name">
      <orig>Кхудабади (синдхи)</orig>
+     <transl>Khudawadi (Sindhi)</transl>
     </text>
    </group>
    <group id="11300">
     <text id="Name">
      <orig>Грантха</orig>
+     <transl>Grantha</transl>
     </text>
    </group>
    <group id="11400">
     <text id="Name">
      <orig>Неварский (прахалит)</orig>
+     <transl>Newa (Prahalit)</transl>
     </text>
    </group>
    <group id="11480">
     <text id="Name">
      <orig>Тирхута (митхилакшар)</orig>
+     <transl>Tirhuta (Maithili)</transl>
     </text>
    </group>
    <group id="11580">
     <text id="Name">
      <orig>Сиддхаматрика (сиддхам, бондзи)</orig>
+     <transl>Siddham (Bonji)</transl>
     </text>
    </group>
    <group id="11600">
     <text id="Name">
      <orig>Моди</orig>
+     <transl>Modi</transl>
     </text>
    </group>
    <group id="11660">
     <text id="Name">
      <orig>Монгольский дополнительный</orig>
+     <transl>Mongolian supplement</transl>
     </text>
     <text id="Text">
      <orig>Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. Поскольку монгольский пишется сверху вниз, а тибетский{{-}}слева направо, тибетские ''yig-mgo'' использовать нельзя.&lt;p&gt;Юникод расщедрился не{{_}}на варианты написания, а на настоящие кодовые позиции{{-}}правда, не{{_}}в [[pt:bmp|базовой плоскости]], а в дополнительной.&lt;p&gt;Иконка соответствует написанию сверху вниз{{-}}а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.</orig>
@@ -2355,179 +2495,217 @@
    <group id="11680">
     <text id="Name">
      <orig>Такри</orig>
+     <transl>Takri</transl>
     </text>
    </group>
    <group id="11700">
     <text id="Name">
      <orig>Ахом</orig>
+     <transl>Ahom</transl>
     </text>
    </group>
    <group id="11800">
     <text id="Name">
      <orig>Догра</orig>
+     <transl>Dogra</transl>
     </text>
    </group>
    <group id="118A0">
     <text id="Name">
      <orig>Варанг-кшити</orig>
+     <transl>Warand Citi</transl>
     </text>
    </group>
    <group id="11900">
     <text id="Name">
      <orig>Дивес-акуру (древнемальдивский)</orig>
+     <transl>Dives Akuru (ancient Maldivian)</transl>
     </text>
    </group>
    <group id="119A0">
     <text id="Name">
      <orig>Нандинагари</orig>
+     <transl>Nandinagari</transl>
     </text>
    </group>
    <group id="11A00">
     <text id="Name">
      <orig>Монгольское горизонтально-квадратное (Дзанабáдзара)</orig>
+     <transl>Zanabazar square (Mongolian horizontal square)</transl>
     </text>
    </group>
    <group id="11A50">
     <text id="Name">
      <orig>Соёмбо</orig>
+     <transl>Soyombo</transl>
     </text>
    </group>
    <group id="11AB0">
     <text id="Name">
      <orig>Канадская слоговая расширенная A</orig>
+     <transl>Unified Canadian Aboriginal syllabics extended A</transl>
     </text>
     <text id="Text">
      <orig>Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), и четыре исторических слога индейцев кри и оджибве.</orig>
+     <transl>Twelve syllables of Inuit (Eskimo) people of Nattilik (literally ''people of seal''), and four historical syllables of Cree and Ojibwe.</transl>
     </text>
    </group>
    <group id="11AC0">
     <text id="Name">
      <orig>Письмо По Чин Хо</orig>
+     <transl>Pau Cin Hau</transl>
     </text>
    </group>
    <group id="11C00">
     <text id="Name">
      <orig>Бхаикшуки (стрелоглавое письмо)</orig>
+     <transl>Bhaiksuki (arrowhead script)</transl>
     </text>
    </group>
    <group id="11C70">
     <text id="Name">
      <orig>Марчхен</orig>
+     <transl>Marchen</transl>
     </text>
    </group>
    <group id="11D00">
     <text id="Name">
      <orig>Письмо Масарама (гонди)</orig>
+     <transl>Masaram Gondi</transl>
     </text>
    </group>
    <group id="11D60">
     <text id="Name">
      <orig>Гунджала (гонди)</orig>
+     <transl>Gunjala Gondi</transl>
     </text>
    </group>
    <group id="11EE0">
     <text id="Name">
      <orig>Макасарский (птичье письмо)</orig>
+     <transl>Makasar (bird script)</transl>
     </text>
    </group>
    <group id="11FB0">
     <text id="Name">
      <orig>Лису дополнительный</orig>
+     <transl>Lisu supplement</transl>
     </text>
     <text id="Text">
      <orig>Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).</orig>
+     <transl>One character from Naxi language (South-East China, 300K, safe).</transl>
     </text>
    </group>
    <group id="11FC0">
     <text id="Name">
      <orig>Тамильский дополнительный</orig>
+     <transl>Tamil supplement</transl>
     </text>
     <text id="Text">
      <orig>Старинные тамильские дроби и другие символы: для валют, сельского хозяйства, бухгалтерии.</orig>
+     <transl>Old Tamil fractions and other characters{{-}}for currencies, agriculture, accounting.</transl>
     </text>
    </group>
    <group id="12000">
     <text id="Name">
      <orig>Клинопись</orig>
+     <transl>Cuneiform</transl>
     </text>
    </group>
    <group id="12400">
     <text id="Name">
      <orig>Клинописные цифры и знаки препинания</orig>
+     <transl>Cuneiform numbers and punctuation</transl>
     </text>
     <text id="Text">
      <orig>Вавилонянам около 2000{{bc}} приписывается первая позиционная система счисления, основание у неё было 60. {{sm|𒐕}}{{-}}единица от 0 до 9 штук, {{sm|𒌋}}{{-}}десятка от 0 до 5. Ноль {{sm|𒑊}} писали только между разрядами, но не{{_}}на конце числа, порядок можно определить только из контекста.&lt;p&gt;До этого использовалась непозиционная система, когда разные предметы и разные разряды записывались разными знаками.</orig>
+     <transl>Babylonians about 2000{{_}}BC devised the first positional number system, it was 60-based. {{sm|𒐕}} is a unit from 0 to 9, {{sm|𒌋}} is ten from 0 to 5. Zero {{sm|𒑊}} was written only between positions, but not{{_}}in the end of number, number’s order is deducible only from context.<br /><br />Before that a non-positional system was used, when different object and different positions were written with different signs.</transl>
     </text>
    </group>
    <group id="12480">
     <text id="Name">
      <orig>Раннединастическая клинопись</orig>
+     <transl>Early dynastic cuneiform</transl>
     </text>
    </group>
    <group id="12F90">
     <text id="Name">
      <orig>Кипро-минойская</orig>
+     <transl>Cypro-Minoan</transl>
     </text>
    </group>
    <group id="13000">
     <text id="Name">
      <orig>Египетские иероглифы</orig>
+     <transl>Egyptian hieroglyphs</transl>
     </text>
    </group>
    <group id="13430">
     <text id="Name">
      <orig>Форматирующие символы для египетских иероглифов</orig>
+     <transl>Egyptian hieroglyph format controls</transl>
     </text>
     <text id="Text">
      <orig>Девять необязательных символов, обеспечивающих полное форматирование египетских иероглифов.&lt;p&gt;В Юникоде 15 ожидаются 8 новых символов форматирования, 2 пробела и 19 символов для частично стёртых надписей.</orig>
+     <transl>Nine optional characters that provide full formatting of Egyptian hieroglyphs.<br /><br />In Unicode 15 more characters are expected: 8 new format characters, 2 spaces and 19 characters for partly erased inscriptions.</transl>
     </text>
    </group>
    <group id="14400">
     <text id="Name">
      <orig>Анатолийские (лувийские, хеттские) иероглифы</orig>
+     <transl>Anatolian (Luwian, Hittite) heroglyphs</transl>
     </text>
    </group>
    <group id="16800">
     <text id="Name">
      <orig>Бамум дополнительный</orig>
+     <transl>Bamum supplement</transl>
     </text>
     <text id="Text">
      <orig>Ранние варианты [[ps:Bamu|бамума]] A…F, как иероглифические, так и слоговые. Окончательная слоговая версия G{{-}}в [[pt:bmp|базовой плоскости]].</orig>
+     <transl>Early phases of [[ps:Bamu|Bamum]] A to F, both ideographic and syllabic. Final syllabic phase G is in [[pt:bmp|Base Plane]].</transl>
     </text>
    </group>
    <group id="16A40">
     <text id="Name">
      <orig>Мру</orig>
+     <transl>Mro</transl>
     </text>
    </group>
    <group id="16A70">
     <text id="Name">
      <orig>Тангса</orig>
+     <transl>Tangsa</transl>
     </text>
    </group>
    <group id="16AD0">
     <text id="Name">
      <orig>Басса (вах)</orig>
+     <transl>Bassa Vah</transl>
     </text>
    </group>
    <group id="16B00">
     <text id="Name">
      <orig>Пахау хмонг</orig>
+     <transl>Pahawh Hmong</transl>
     </text>
    </group>
    <group id="16E40">
     <text id="Name">
      <orig>Обэри-окаимэ (медефайдрин)</orig>
+     <transl> Medefaidrin (Obɛri Ɔkaimɛ)</transl>
     </text>
    </group>
    <group id="16F00">
     <text id="Name">
      <orig>Мяо (письмо Полларда)</orig>
+     <transl>Miao (Pollard script)</transl>
     </text>
    </group>
    <group id="16FE0">
     <text id="Name">
      <orig>Символы и знаки препинания для иероглифов</orig>
+     <transl>Ideographic symbols and punctuation</transl>
     </text>
     <text id="Text">
      <orig>Различные символы, используемые в старых [[pt:cjk|ККЯ]]-письменностях: [[ps:Nshu|нюй-шу]], [[ps:Tang|тангутском]], [[ps:Kits|малом киданьском]], старых [[ps:Hani|китайских иероглифах]].&lt;p&gt;Одинаковые иероглифы не{{_}}пишут рядом, вместо этого используют знак повтора. В современном печатном китайском уже повторяют, китайцы неформально и японцы используют {{sm|々}} U+3005.&lt;p&gt;Крючок в старых рукописях означает конец предложения или главы. &lt;p&gt;Если блок малого киданьского начинается с одного иероглифа, а не{{_}}двух, на вакантное место ставят заполнитель. &lt;p&gt;Пока Вьетнам писал иероглифами, два символа служили для передачи местного произношения. У обоих есть два варианта, никогда не{{_}}встречавшиеся в одном тексте и потому [[pt:unification|унифицированные]]. Вторая форма напоминает соответственно стрелку &lt;big&gt;↑&lt;/big&gt; и молнию &lt;big&gt;ϟ&lt;/big&gt;.</orig>
@@ -2536,11 +2714,13 @@
    <group id="17000">
     <text id="Name">
      <orig>Тангутский</orig>
+     <transl>Tangut</transl>
     </text>
    </group>
    <group id="18800">
     <text id="Name">
      <orig>Элементы тангутского письма</orig>
+     <transl>Tangut components</transl>
     </text>
     <text id="Text">
      <orig>Компоненты и радикалы, используемые в современном изучении тангутского письма.</orig>
@@ -2549,27 +2729,33 @@
    <group id="18B00">
     <text id="Name">
      <orig>Малое киданьское письмо</orig>
+     <transl>Khitan small script</transl>
     </text>
    </group>
    <group id="18D00">
     <text id="Name">
      <orig>Тангутский дополнительный</orig>
+     <transl>Tangut supplement</transl>
     </text>
     <text id="Text">
      <orig>Блок содержит девять [[pt:unification|деунификаций]] тангутского языка. Другими словами: все девять иероглифов{{-}}чьи-то омографы. Например: «пара» осталась на старом месте 17134, а омограф «глупый» получил новый номер 18D00.</orig>
+     <transl>The block contains nine [[pt:unification|disunifications]] of Tangut language. In other words: all nine characters are someone’s homographs. For example, ''pair'' was left on the same place 17134, and homograph ''foolish'' got a new number 18D00.</transl>
     </text>
    </group>
    <group id="1AFF0">
     <text id="Name">
      <orig>Кана расширенная B</orig>
+     <transl>Kana extended B</transl>
     </text>
     <text id="Text">
      <orig>Изобретённая японскими лингвистами незадолго до Второй мировой войны запись каной тайваньского диалекта южноминьского языка.</orig>
+     <transl>Writing of Taiwanese dialect of Southern Min language with kana. Invented by Japanese linguists before World War 2.</transl>
     </text>
    </group>
    <group id="1B000">
     <text id="Name">
      <orig>Кана дополнительная</orig>
+     <transl>Kana supplement</transl>
     </text>
     <text id="Text">
      <orig>Один устаревший символ [[ps:Kana|катаканы]] и 255 символов [[ps:Hent|хэнтайганы]] (старой [[ps:Hira|хираганы]]). Хэнтайгана продолжается и в следующем блоке.</orig>
@@ -2578,6 +2764,7 @@
    <group id="1B100">
     <text id="Name">
      <orig>Кана расширенная A</orig>
+     <transl>Kana extended A</transl>
     </text>
     <text id="Text">
      <orig>31 символ [[ps:Hent|хэнтайганы]]{{-}}старой [[ps:Hira|хираганы]], и 4 символа [[ps:Kana|катаканы]] и хираганы.</orig>
@@ -2586,6 +2773,7 @@
    <group id="1B130">
     <text id="Name">
      <orig>Маленькие символы каны</orig>
+     <transl>Small kana extension</transl>
     </text>
     <text id="Text">
      <orig>Маленькие символы катаканы используются для передачи звуков, отсутствующих в японском. Так, маленькое {{sm|ケヰ}} передаёт огублённое «кʷи». Также добавлены соответствующие символы хираганы{{-}}правда, к моменту принятия заявка похудела: отпали «ко» обеих азбук и «н» хираганы.</orig>
@@ -2594,16 +2782,19 @@
    <group id="1B170">
     <text id="Name">
      <orig>Нюй-шу</orig>
+     <transl>Nüshu</transl>
     </text>
    </group>
    <group id="1BC00">
     <text id="Name">
      <orig>Стенография Дюплойе</orig>
+     <transl>Duployan shorthand</transl>
     </text>
    </group>
    <group id="1BCA0">
     <text id="Name">
      <orig>Форматирующие символы стенографии</orig>
+     <transl>Shorthand format controls</transl>
     </text>
     <text id="Text">
      <orig>[[pt:ignorable|Невидимые]] символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.</orig>
@@ -2612,6 +2803,7 @@
    <group id="1CF00">
     <text id="Name">
      <orig>Знаменное пение</orig>
+     <transl>Znamenny musical notation</transl>
     </text>
     <text id="Text">
      <orig>Знáменное, или крюковое пение{{-}}одноголосое (то есть весь хор поёт в унисон) православное пение. Названо в честь знамён{{-}}нотных знаков, к которым прикрепляются признáки. Признáки изначально писались красным; Александр Мезенец (XVII{{_}}век) придумал систему признáков, не{{_}}требующую киновари. В отличие от европейских нот, которые закодированы больше для упрощения жизни программистам и в [[pt:plaintext|простом тексте]] передают только ритм, кодировка знаменного пения вполне работоспособна.&lt;p&gt;Знамёна записывают выпеваемую фигуру, а высота задаётся признáками.&lt;p&gt;Древнейшие партитуры датируются XI{{_}}веком. В церковную реформу («раскол») XVII{{_}}века заменены киевской нотацией («топориками»). Двоезнáменники{{-}}партитуры, записанные и знамёнами, и нотами{{-}}дали ключ к пониманию знаменной нотации. До XIX{{_}}века постепенно вытеснялось многоголосым пением, которое звучит в церквях и поныне. А знаменное пение и одноголосие стало атрибутом старообрядцев.&lt;p&gt;Есть несколько видов такого пения: кондакарное, столповое, путевое, демественное. В последнем начинают появляться элементы многоголосия.&lt;p&gt;Есть современные попытки возродить знаменное пение. В Юникод его внёс проект «Пономарь», занимающийся разработкой шрифтов, церковнославянских словарей орфографии и распознавания, оцифровкой книг.</orig>
@@ -2620,6 +2812,7 @@
    <group id="1D000">
     <text id="Name">
      <orig>Византийские музыкальные символы</orig>
+     <transl> Byzantine musical symbols</transl>
     </text>
     <text id="Text">
      <orig>О византийской церковной музыке известно мало, а о светской{{-}}вообще ничего. Тем{{_}}не{{_}}менее, символы византийского происхождения использовались православными как минимум до XIX{{_}}века, даже под властью турок, и были реформированы около 1800.</orig>
@@ -2628,6 +2821,7 @@
    <group id="1D100">
     <text id="Name">
      <orig>Музыкальные символы</orig>
+     <transl>Musical symbols</transl>
     </text>
     <text id="Text">
      <orig>С X{{_}}века появилась нотная запись, похожая на современную. Ноты были квадратными, потому что рисовались жирным пером. Для певцов делали 4 линии на строку, для инструментов больше. Абсолютной привязки к частотам не{{_}}было. Круглые ноты появились в попытке бегло нарисовать ноту пером средней толщины, тем более такая нота может передавать какую-то информацию вроде длительности. И поныне производят такие перья для музыкантов.&lt;p&gt;До современного вида ноты дошли в XVII{{_}}веке с появлением равнотемперированного строя, позволившего переносить музыку на другие инструменты, играть оркестрами.&lt;p&gt;Музыка{{-}}[[pt:universality|нетекстовая]] информация и потому вне внимания Юникода. Однако заманчиво использовать имеющиеся типографские движки для хранения нот и их частей в шрифтах, чтобы упрощать нотное ПО, сокращать нотные PDF. В этом свете непонятно назначение восьми [[pt:format|форматирующих]] символов (ребро, связка, лига, фраза). В 2013 вышел открытый стандарт ''Standard Music Font Layout'' (SMuFL), расширяющий блок до более чем 2600 символов с использованием позиций для [[pt:private|личного пользования]].&lt;p&gt;Также в этом блоке есть несколько символов из устаревших музыкальных нотаций.</orig>
@@ -2636,6 +2830,7 @@
    <group id="1D200">
     <text id="Name">
      <orig>Древнегреческая музыкальная нотация</orig>
+     <transl>Ancient Greek musical notation</transl>
     </text>
     <text id="Text">
      <orig>Про древних греков известно мало. Изначально они имели пять нот на октаву, компенсируя такую нехватку разными методами настройки инструментов, но впоследствии добрались до полутонов, изредка используя четверть-тоны. Основными инструментами были авлос (две дудки, на которых играют одновременно) и лира.&lt;p&gt;Для музыкантов и певцов были разные нотации, это позволяло писать одновременно слова, музыку и подсказки для певцов. Ноты записывались старинными буквами, и те из них, что не{{_}}совпадают с греческими, приведены в этом блоке без всякой системы.</orig>
@@ -2644,6 +2839,7 @@
    <group id="1D2E0">
     <text id="Name">
      <orig>Цифры майя</orig>
+     <transl>Mayan numerals</transl>
     </text>
     <text id="Text">
      <orig>Майя пользовались двадцатеричной позиционной системой счисления. Разряды записывались сверху вниз. Иногда вместо цифры рисовали лицо соответствующего бога. Считают, что позиционный счёт и ноль были изобретены до майя (возможно, ольмеками) до нашей эры. Ракушки, палочки и точки говорят, что такая система счисления родом со счётных досок.&lt;p&gt;Некоторые источники говорят, что в быту майя пользовались более простой непозиционной системой счисления.</orig>
@@ -2652,6 +2848,7 @@
    <group id="1D300">
     <text id="Name">
      <orig>Символы Тайсюаньцзин (Канона великой тайны)</orig>
+     <transl>Tai Xuan Jing symbols</transl>
     </text>
     <text id="Text">
      <orig>Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый [[pk:4DC0|Книгой перемен]]. В трактате описана 81 тетраграмма. Каждая линия бывает в трёх вариантах: сплошная (небеса), с одним разрывом (земля), и с двумя разрывами (человек). Надлежало четыре раза выкинуть случайное число, получить тетраграмму и прочитать её расшифровку в книге.&lt;p&gt;В Консорциуме Юникода спутали землю и человека. С гарантиями [[pt:stability|стабильности]] оставалось только объяснить эту досадную ошибку в комментариях.&lt;p&gt;Часть монограмм и диграмм уже есть в базовой плоскости.</orig>
@@ -2660,6 +2857,7 @@
    <group id="1D360">
     <text id="Name">
      <orig>Счётные палочки</orig>
+     <transl>Counting rod numerals</transl>
     </text>
     <text id="Text">
      <orig>Палочками учат считать детей. Древние китайцы, начиная с Воюющих царств (V{{_}}век) до XVI{{_}}века пользовались настоящей позиционной системой счисления из палочек, раскладываемых на счётной доске. Была запись для дробей и даже отрицательных чисел (палочками другого цвета).&lt;p&gt;Вертикальные палочки означали единицы, сотни, десятки тысяч…, горизонтальные{{-}}десятки, тысячи, сотни тысяч… Иногда наоборот{{-}}именно в таком виде палочки вошли в Юникод. Символы счётных палочек часто писали и на бумаге.&lt;p&gt;Если нужно что-то сосчитать и запомнить количество, используют счётные символы. Европейские пятёрки {{sm|𝍸}} чаще всего ассоциируются с тюрьмой. Китайцы пишут иероглиф &lt;font size='+1'&gt;正&lt;/font&gt;. Лесники считают десятками, этот метод описан у Я.И.{{_}}Перельмана, но отсутствует в Юникоде.</orig>
@@ -2668,6 +2866,7 @@
    <group id="1D400">
     <text id="Name">
      <orig>Математические буквы и цифры</orig>
+     <transl> Mathematical alphanumeric symbols</transl>
     </text>
     <text id="Text">
      <orig>Математики обозначают различными шрифтами объекты, с которыми имеют дело:&lt;br&gt;• векторы{{-}}жирным, скаляры{{-}}курсивом: {{sm|𝐅=𝑚𝐚}};&lt;br&gt;• особые множества{{-}}жирным или ажурным: {{sm|ℕ}}{{-}}натуральные числа 1, 2, 3…;&lt;br&gt;• пространства{{-}}рукописным: {{sm|𝒰}}{{-}}универсальное множество;&lt;br&gt;• мощности множеств{{-}}готическим: {{sm|𝔠}}{{-}}континуум;&lt;br&gt;• различные определения одного и того же{{-}}рукописным или готическим: предел {{sm|ℋlim}} по Гейне и {{sm|𝒞lim}} по Коши;&lt;br&gt;• функции{{-}}самыми разными шрифтами: математическое ожидание {{sm|𝖬ξ}} часто без засечек;&lt;br&gt;• константы{{-}}жирным или ажурным: границы решётки {{sm|𝟘}} и {{sm|𝟙}}, мнимые единицы {{sm|𝕚𝕛𝕜}}…&lt;p&gt;Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси.&lt;p&gt;Наиболее распространённые из таких обозначений находятся в базовой плоскости в разделе [[pk:2100|буквоподобных символов]]. С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами.</orig>
@@ -2676,11 +2875,13 @@
    <group id="1D800">
     <text id="Name">
      <orig>Жестовое письмо Саттон</orig>
+     <transl>Sutton SignWriting</transl>
     </text>
    </group>
    <group id="1DF00">
     <text id="Name">
      <orig>Латиница расширенная G</orig>
+     <transl>Latin extended G</transl>
     </text>
     <text id="Text">
      <orig>Различные символы для расстройств речи и фонетики: мягкие и ретрофлексные (получаемые загибанием языка назад к нёбу) звуки, щелчки и некоторые другие.</orig>
@@ -2689,6 +2890,7 @@
    <group id="1E000">
     <text id="Name">
      <orig>Глаголица дополнительная</orig>
+     <transl>Glagolitic supplement</transl>
     </text>
     <text id="Text">
      <orig>Надстрочные буквы глаголицы, встречающиеся в различных источниках.</orig>
@@ -2697,11 +2899,13 @@
    <group id="1E100">
     <text id="Name">
      <orig>Ньякэ пуацы хмонг (алфавит Черванга)</orig>
+     <transl>Nyiakeng Puachue Hmong (Chervang alphabet)</transl>
     </text>
    </group>
    <group id="1E290">
     <text id="Name">
      <orig>Тото</orig>
+     <transl>Toto</transl>
     </text>
    </group>
    <group id="1E2C0">
@@ -2713,6 +2917,7 @@
    <group id="1E7E0">
     <text id="Name">
      <orig>Эфиопская расширенная B</orig>
+     <transl>Ethiopic extended B</transl>
     </text>
     <text id="Text">
      <orig>Новая орфография языков гураге (эфиосемитская группа, до 5{{_}}млн), появившаяся в 2013 и сделавшая письменным всё семейство, не{{_}}только закодированный в 2005 себат-бет (1,5{{_}}млн на 2010). Часть старых себатбетских букв объявлены [[pt:obsolete|устаревшими]].</orig>
@@ -2721,6 +2926,7 @@
    <group id="1E800">
     <text id="Name">
      <orig>Кикакуи (менде)</orig>
+     <transl>Mende Kikakui</transl>
     </text>
    </group>
    <group id="1E900">
@@ -2732,6 +2938,7 @@
    <group id="1EC70">
     <text id="Name">
      <orig>Индийские цифры сийяк</orig>
+     <transl>Indic Siyaq numbers</transl>
     </text>
     <text id="Text">
      <orig>Арабские непозиционные цифры, применявшиеся в Индии с XVII{{_}}века (ещё под империей Великих Моголов) до середины XX{{_}}века. Арабское «сийяк» означает «порядок». Также цифры известны под названием «ракм», арабское «счёт».&lt;p&gt;Цифры до 90{{_}}тысяч [[pt:acrophonic|акрофонические]], из арабского, со 100{{_}}тысяч{{-}}индийские слова. Написание справа налево, порядок сложный: 515 записывается как 500, 5 (в варианте ''prefixed''), 10.</orig>
@@ -2740,6 +2947,7 @@
    <group id="1ED00">
     <text id="Name">
      <orig>Османские цифры сийяк</orig>
+     <transl>Ottoman Siyaq numbers</transl>
     </text>
     <text id="Text">
      <orig>Арабские непозиционные [[pt:acrophonic|акрофонические]] цифры, использовавшиеся в Турции позднего средневековья, также «раккамлары»{{-}}от арабского ''ракм'' «счёт». Арабское «сийяк» означает «порядок».&lt;p&gt;Написание справа налево, порядок сложный: 123 записывается как 100, 3, 20. Символ ''marratan'' употребляется с тысячами для записи миллионов.</orig>
@@ -2748,6 +2956,7 @@
    <group id="1EE00">
     <text id="Name">
      <orig>Арабские математические алфавитные символы</orig>
+     <transl>Arabic mathematical alphabetic symbols</transl>
     </text>
     <text id="Text">
      <orig>У арабов своя математическая нотация. Они пользуются [[ps:Arab|собственными]] буквами с написанием справа налево, и как на Западе есть прямой, жирный, курсив и другие, у арабов есть буквы изолированные, начальные, с хвостом, с оттяжкой, с петлей и ажурные. Знаки общеевропейские отзеркаленные, но встречаются и собственные{{-}}например, сумма. Отзеркаливают даже знаки «существует» или «частный дифференциал».&lt;p&gt;Первыми такой набор реализовали разработчики системы математического текста TᴇX (читается «тех»), и в 2012, после семи лет утрясок, эти наработки перенесли в Юникод.</orig>
@@ -2783,6 +2992,7 @@
    <group id="1F100">
     <text id="Name">
      <orig>Обрамлённые буквы и цифры дополнительные</orig>
+     <transl>Enclosed alphanumeric supplement</transl>
     </text>
     <text id="Text">
      <orig>Японские телевизионные символы, символы из шрифта Webdings, символы интеллектуальной собственности…&lt;p&gt;Группы крови, знак стоянки и некоторые другие символы являются [[pt:emoji|эмодзи]].&lt;p&gt;Из региональных индикаторов собирают эмодзи флагов: если написать эмодзи «GB», получится флаг Великобритании.</orig>
@@ -2791,6 +3001,7 @@
    <group id="1F200">
     <text id="Name">
      <orig>Обрамлённые иероглифы дополнительные</orig>
+     <transl>Enclosed ideographic supplement</transl>
     </text>
     <text id="Text">
      <orig>Иероглифы в скобках, квадратах, кругах. Используются в Японии в плакатах, телевидении.&lt;p&gt;1F227…1F231, 1F240…1F248{{-}}знаки из японских бейсбольных сводок: подающий, ловец, игрок на 1-й базе… Этот спорт в Японии популярен, на Олимпиаде 2021 в Токио у них золото по бейсболу и софтболу! У 1F214 двойное назначение: двуязычная трансляция и игрок на 2-й базе.&lt;p&gt;1F260…1F265{{-}}шесть символов из китайских народных верований: удача, процветание, долголетие, счастье, любовь, изобилие.</orig>
@@ -2799,6 +3010,7 @@
    <group id="1F300">
     <text id="Name">
      <orig>Разные символы и пиктограммы</orig>
+     <transl>Miscellaneous symbols and pictographs</transl>
     </text>
     <text id="Text">
      <orig>В блоке содержатся [[pt:emoji|эмодзи]] (как японские, так и международные), а также типографские узоры и символы из пользовательских интерфейсов.&lt;p&gt;Примечательна судьба символа «пистолет» {{em|🔫}}{{-}}с подачи ''Apple'' большинство производителей делают его игрушечным для снижения сетевых угроз.</orig>
@@ -2807,6 +3019,7 @@
    <group id="1F600">
     <text id="Name">
      <orig>Смайлики</orig>
+     <transl>Emoticons</transl>
     </text>
     <text id="Text">
      <orig>Эмоциконы или смайлики{{-}}символы и пиктограммы, изображающие эмоции. К моменту предложения (2008) смайлики ходили в японских мобильных сетях около 9{{_}}лет. По исследованию Консорциума 2019, из десяти самых используемых [[pt:emoji|эмодзи]] шесть{{-}}смайлики.</orig>
@@ -2815,6 +3028,7 @@
    <group id="1F650">
     <text id="Name">
      <orig>Печатные узоры</orig>
+     <transl>Ornamental Dingbats</transl>
     </text>
     <text id="Text">
      <orig>Часть пиктографических шрифтов ''Wingdings'' и ''Webdings''.</orig>
@@ -2823,6 +3037,7 @@
    <group id="1F680">
     <text id="Name">
      <orig>Транспортные и картографические символы</orig>
+     <transl>Transport and map symbols</transl>
     </text>
     <text id="Text">
      <orig>Иконки и [[pt:emoji|эмодзи]] транспортных средств, картографических символов и знаков навигации, во многом для совместимости с кодировками японских телефонных операторов.</orig>
@@ -2831,6 +3046,7 @@
    <group id="1F700">
     <text id="Name">
      <orig>Алхимические символы</orig>
+     <transl>Alchemical symbols</transl>
     </text>
     <text id="Text">
      <orig>Основоположником химии считается Антуан Лавуазье (конец XVIII{{_}}века), закрывший, например, понятие «флогистон». А до этого были очень разные теории, почему и как вещества взаимодействуют, подчас дикие. Отдельные алхимики даже предполагали, что наука сможет сделать золото или получить искусственную жизнь. У них были бессистемные, но понятные любому знакомому с латынью и древними учениями знаки для разных веществ и методов обработки.&lt;p&gt;В Юникоде 15.0 ожидаются 8 символов из астрономии и астрологии.</orig>
@@ -2839,6 +3055,7 @@
    <group id="1F780">
     <text id="Name">
      <orig>Геометрические фигуры расширенные</orig>
+     <transl>Geometric shapes extended</transl>
     </text>
     <text id="Text">
      <orig>Блок появился в попытке перенести в Юникод пиктографические шрифты ''Wingdings'' и ''Webdings''. К тому же он позволил поставить стрелку или крест именно той толщины, что надо. &lt;p&gt;Позднее добавились символы для игры го, знаки цветов{{-}}даже если нет [[pt:ligature|лигатуры]] жёлтого бантика, пара {{em|🟨🎀}} будет понятной.</orig>
@@ -2847,6 +3064,7 @@
    <group id="1F800">
     <text id="Name">
      <orig>Стрелки дополнительные C</orig>
+     <transl>Supplemental arrows C</transl>
     </text>
     <text id="Text">
      <orig>По состоянию на Юникод{{_}}13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров. Юникод{{_}}14 не{{_}}принёс новых стрелок.</orig>
@@ -2855,6 +3073,7 @@
    <group id="1F900">
     <text id="Name">
      <orig>Символы и пиктограммы дополнительные</orig>
+     <transl>Supplemental symbols and pictographs</transl>
     </text>
     <text id="Text">
      <orig>Появившийся в 2015 блок символов разного назначения, в основном [[pt:emoji|эмодзи]]. Также несколько символов из Типикона{{-}}типового устава православного богослужения, кодифицированного около 1100, последние крупные правки 1695.</orig>
@@ -2863,6 +3082,7 @@
    <group id="1FA00">
     <text id="Name">
      <orig>Шахматные символы</orig>
+     <transl>Chess symbols</transl>
     </text>
     <text id="Text">
      <orig>В сказочной композиции в эпоху наборного шрифта за неимением другого использовали обычные повёрнутые фигуры. Из нестандартных фигур устоялись:&lt;br&gt;• чёрно-белая фигура, которой может ходить любая из сторон;&lt;br&gt;• конеферзь{{-}}также суперферзь, ферзь всяческая, магараджа;&lt;br&gt;• конеслон{{-}}также кардинал;&lt;br&gt;• конеладья{{-}}также маршал, канцлер;&lt;br&gt;• эквихоппер{{-}}выбирает любую фигуру (свою или чужую), прыгает через неё и приземляется на таком же расстоянии с другой стороны. Если он прыгает в восьми основных направлениях, все поля от старта до финиша (кроме опорной фигуры) должны быть пусты. Очень манёвренный, но ограничен четвертью клеток.&lt;p&gt;Также в этом блоке есть фишки китайской игры сянци.</orig>
@@ -2871,6 +3091,7 @@
    <group id="1FA70">
     <text id="Name">
      <orig>Символы и пиктограммы расширенные А</orig>
+     <transl>Symbols and pictographs extended A</transl>
     </text>
     <text id="Text">
      <orig>Блок [[pt:emoji|эмодзи]], появившийся в 2019. Одежда, медицина, развлечения, разные предметы, еда…</orig>
@@ -2879,6 +3100,7 @@
    <group id="1FB00">
     <text id="Name">
      <orig>Символы со старых компьютеров</orig>
+     <transl>Symbols for legacy computing</transl>
     </text>
     <text id="Text">
      <orig>Символы с разных компьютеров и систем 1970‑х и 80‑х:&lt;br&gt;• Amstrad CPC{{-}}успешный британский ПК;&lt;br&gt;• Mattel Aquarius{{-}}гонконго-американский ПК, устаревший ещё при появлении;&lt;br /&gt;• Atari 400, 800 и ST{{-}}серия успешных американских ПК;&lt;br /&gt;• Tandy/RadioShack TRS-80 (Mark 1 и Color){{-}}успешные американские ПК;&lt;br&gt;• Oric{{-}}британский ПК, получивший определённую популярность во Франции и известный по болгарскому клону «Правец-8D»;&lt;br&gt;• Apple IIc и более поздние (кодировка ''MouseText''){{-}}сверхуспешные американские ПК;&lt;br&gt;• Commodore PET и 64{{-}}сверхуспешные американские ПК;&lt;br&gt;• Sinclair ZX80 и ZX81{{-}}успешные британские ПК;&lt;br&gt;• MSX, он же КУВТ Ямаха (комплекс учебной вычислительной техники){{-}}японский открытый стандарт ПК;&lt;br&gt;• Acorn Archimedes ''(RISC OS)''{{-}}прогрессивный британский ПК, сметённый IBM-совместимыми;&lt;br&gt;• телетекст{{-}}система передачи текста в полях гашения телевизионного сигнала;&lt;br&gt;• Minitel{{-}}французская терминальная служба;&lt;br&gt;• и, по случайному совпадению, «Корвет»{{-}}советский технологический/учебный ПК.&lt;p&gt;В стандарт '''не вошли''':&lt;br&gt;• два яблока Apple{{-}}из-за политики Консорциума не{{_}}включать товарные знаки;&lt;br&gt;• инверсная псевдографика: например, у Apple [[pt:mono|знакоместо]] 7×8, и чтобы заливка не{{_}}была клетчатой, прямой символ заливки чередуют с инверсным;&lt;br&gt;• знаки, [[pt:unification|уже имеющиеся]] в разделе [[pt:pseudographics|псевдографики]]. В правильном шрифте старая псевдографика должна полностью стыковаться с новыми символами{{-}}правда, невозможно показать: нет шрифта, поддерживающего и старую, и новую псевдографику.</orig>
@@ -2887,6 +3109,7 @@
    <group id="20000">
     <text id="Name">
      <orig>ККЯ иероглифы расширение B</orig>
+     <transl>CJK unified ideographs extension B</transl>
     </text>
     <text id="Text">
      <orig>Редкие и исторические [[ps:Hani|китайские иероглифы]]. Эти иероглифы упаковали в стандартный шрифт «SimSun-ExtB» для Windows. Впоследствии в блоке нашли много ошибок, и даже восемь ошибочно продублированных иероглифов.</orig>
@@ -2895,30 +3118,37 @@
    <group id="2A700">
     <text id="Name">
      <orig>ККЯ иероглифы расширение C</orig>
+     <transl>CJK unified ideographs extension C</transl>
     </text>
     <text id="Text">
      <orig>4149 редких и старых иероглифов, добавленных в 2009. В 2021 добавили ещё 4 штуки.</orig>
+     <transl>4149 rare and old ideographs added in 2009. In 2021 4 more were added.</transl>
     </text>
    </group>
    <group id="2B740">
     <text id="Name">
      <orig>ККЯ иероглифы расширение D</orig>
+     <transl>CJK unified ideographs extension D</transl>
     </text>
     <text id="Text">
      <orig>222 редких и старых иероглифа, добавленных в 2010.</orig>
+     <transl>222 rare and old ideographs added in 2010.</transl>
     </text>
    </group>
    <group id="2B820">
     <text id="Name">
      <orig>ККЯ иероглифы расширение E</orig>
+     <transl>CJK unified ideographs extension E</transl>
     </text>
     <text id="Text">
      <orig>5762 редких и старых иероглифа, добавленных в 2015.</orig>
+     <transl>5762 rare and old ideographs added in 2015.</transl>
     </text>
    </group>
    <group id="2CEB0">
     <text id="Name">
      <orig>ККЯ иероглифы расширение F</orig>
+     <transl>CJK unified ideographs extension F</transl>
     </text>
     <text id="Text">
      <orig>7473 иероглифа, добавленных в 2017. Включают редкие, старые, а также больше тысячи чжуанских (один из языков Китая).</orig>
@@ -3007,6 +3237,7 @@
     </text>
     <text id="Text">
      <orig>Никакого отношения к балканской Албании страна не{{_}}имеет, и вообще самоназвание неизвестно: ''Албания''{{-}}название греческое, ''Агванк''{{-}}современное армянское. Заселена людьми, говорившими на лезгинских языках. С I{{_}}века{{bc}} имела сильное царство. В 461 завоёвана персами, в VII{{_}}веке ненадолго подчинилась хазарам и снова получила свободу. С X{{_}}века часть Албании тюркизировалась и преобразовалась в Ширван (современный Азербайджан) и Карабах. Другие части участвовали в этногенезе армян, грузин Кахетии, дагестанцев. Алфавит, возможно, использовался и в XII{{_}}веке в языках-потомках. Поскольку страна захватывает современную Россию и Грузию, условно отнесена к Европе.&lt;p&gt;Считается, что письменность создал Месроп Маштоц, создатель [[ps:Armn|армянского]] алфавита{{-}}впрочем, это не{{_}}так: Маштоц жил 362–440, и непонятно, какова была его роль. Письменность с XV{{_}}века несколько раз открывали и забывали. В 1937 году советские арменоведы нашли полный алфавит. В 1948 при строительстве ГЭС раскопали раннехристианский храм VI{{_}}века с аутентичными надписями. Первая расшифровка вышла в 2009.</orig>
+     <transl>The country has no relation to Balkan Albania, and autonym is uknown: ''Albania'' is a Greek name, ''Aghwank'' is a modern Armenian. From 1st century BC had a strong kingdom. In 461 conquered by Persians, in 7th century submitted to Khazars for a short time and got liberty again. From 10th century part of Albania was turkified and transformed to Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in ethnogenesis of Armenians, Georgians of Kakheti, Dagestanians. Possibly the alphabet was used up to 12th century by descendant languages. The country spans modern Russia and Georgia, and thus conventinally classified as Europe.<br /><br />It is believed that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}though it’s false: Mashtots lived 362–440, and it’s unknown what was he actually did. The script was rediscovered and forgotten several times from 15th century. In 1937 Soviet Armenologists found full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. The first decipherment came in 2008.</transl>
     </text>
    </group>
    <group id="Ahom">
@@ -3104,9 +3335,11 @@
    <group id="Bass">
     <text id="Name">
      <orig>Басса (вах)</orig>
+     <transl>Bassa Vah</transl>
     </text>
     <text id="Lang">
      <orig>басса ''(Либерия, 400 тыс. на 2006)''</orig>
+     <transl>Bassa ''(Liberia, 400k as of 2006)''</transl>
     </text>
     <text id="Text">
      <orig>Басса по имени Томас Льюис открыл, что бывшие рабы басса из Америки используют необычное письмо. По другим данным, он создал письмо сам. Сами басса называют письмо ''вах''{{-}}«ставить знак». Самобытное письмо было распространено в XX{{_}}веке, но в XXI всё больше заменяется [[ps:Latn|латиницей]].</orig>
@@ -3115,9 +3348,11 @@
    <group id="Batk">
     <text id="Name">
      <orig>Батакская</orig>
+     <transl>Batak</transl>
     </text>
     <text id="Lang">
      <orig>батакские ''(Суматра)''</orig>
+     <transl>Batak family ''(Sumatra)''</transl>
     </text>
     <text id="Text">
      <orig>Немцы, а потом и голландцы, стали обучать островитян как батакской грамоте, так и [[ps:Latn|латинице]]. Незадолго до Первой мировой войны от батакского алфавита отказались, и он окончательно уступил латинице, основной письменности индонезийского языка.&lt;p&gt;Гласная по умолчанию «а». В разных языках (каро, мандайлинг, пакпак, тоба, сималунгун) буквы имеют несколько разный вид. [[pt:virama|Вирам]] тоже две штуки: горизонтальная используется в каро и сималунгуне, косая{{-}}в остальных.&lt;br&gt;{{__}}ба {{sm|ᯅ}} + вирама {{sm|◌᯳}} = б {{sm|ᯅ᯳}}&lt;br&gt;{{__}}ба {{sm|ᯅ}} + и {{sm|◌ᯪ}} + нг {{sm|◌ᯰ}} = бинг {{sm|ᯅᯪᯰ}}</orig>
@@ -3126,9 +3361,11 @@
    <group id="Beng">
     <text id="Name">
      <orig>Бенгальская</orig>
+     <transl>Bengali</transl>
     </text>
     <text id="Lang">
      <orig>бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''</orig>
+     <transl>Bengali, Assamese, Sanskrit ''(Bangladesh, India)''</transl>
     </text>
     <text id="Note">
      <orig>XI век (отделилась от гауди), XV век (в современном виде)</orig>
@@ -3140,9 +3377,11 @@
    <group id="Bhks">
     <text id="Name">
      <orig>Бхаикшуки (стрелоглавое письмо)</orig>
+     <transl>Bhailsuki (arrowhead script)</transl>
     </text>
     <text id="Lang">
      <orig>санскрит</orig>
+     <transl>Sanskrit</transl>
     </text>
     <text id="Text">
      <orig>Было в ходу в Восточной Индии в XI–XII{{_}}веках, его упоминал хорезмский (современные Туркмения/Узбекистан) учёный Бируни́. Первый источник был открыт в Катманду в 1884, предположили, что это и есть «бхаикшуки» Бируни. Существует 4 рукописи и 11 надписей; все{{-}}буддийские тексты. Цифры 0 и 3 неизвестны и взяты из похожих письменностей. Начальная буква для длинного слогового L также неизвестна.&lt;p&gt;Гласная по умолчанию «а», другие приделываются огласовками, в простую согласную превращается [[pt:virama|вирамой]]. Из-за развитой системы [[pt:ligature|лигатур]] «согласный-согласный» вирама в явном виде встречается только в конце слов.&lt;br&gt;{{__}}ка {{sm|𑰎}} + и {{sm|◌𑰰}} = ки {{sm|𑰎𑰰}}&lt;br&gt;{{__}}ка {{sm|𑰎}} + вирама {{sm|◌𑰿}} = к {{sm|𑰎𑰿}}&lt;br&gt;{{__}}ка {{sm|𑰎}} + вирама {{sm|◌𑰿}} + та {{sm|𑰝}} = кта {{sm|𑰎𑰿𑰝}}</orig>
@@ -3151,9 +3390,11 @@
    <group id="Bopo">
     <text id="Name">
      <orig>Бопомофо (чжуинь)</orig>
+     <transl>Bopomofo (Zhuin)</transl>
     </text>
     <text id="Lang">
      <orig>китайский</orig>
+     <transl>Chinese</transl>
     </text>
     <text id="Text">
      <orig>Бопомофо (по первым четырём буквам), или чжуинь фухао{{-}}китайская фонетическая система, придуманная У Чжихуэем в 1912–13 и принятая в 1918. &lt;p&gt;Автор добился высокого положения в Гоминьдане, что и предопределило судьбу системы: после прихода к власти Мао Цзэдуна (1949) используется только на Тайване. Но и там потихоньку уступает привычному пиньиню (латинской записи китайских слогов) и применяется в первую очередь для начального обучения детей, ввода в мобильный телефон, поиска иероглифов в словарях по произношению.&lt;p&gt;В 2007 на Тайване поступила в продажу модель смартфона BlackBerry, поддерживавшая ввод только через пиньинь, она оказалась маловостребованной. В последующих версиях пообещали и чжуинь.</orig>
@@ -3176,20 +3417,26 @@
    <group id="Brai">
     <text id="Name">
      <orig>Шрифт Брайля</orig>
+     <transl>Braille</transl>
     </text>
     <text id="Lang">
      <orig>крупные языки мира, включая латинские, кириллические, брахмийские, арабские, китайские иероглифы</orig>
+     <transl>large languages of the world, incl. Latin, Cyrillic, Brahmic, Arabic, Chinese</transl>
     </text>
     <text id="Text">
      <orig>Шрифт Брайля{{-}}точечный шрифт для слепых. В нём используются группы 2×3 точки с двоичным кодированием; иногда добавляется и четвёртая строка. Кодирование различается даже для британского и американского Брайля. Имеет несколько «регистров» (буквы, цифры, выделение), «переключающихся» специальными символами.&lt;p&gt;Луи Брайль, сын шорника, в возрасте 3 лет поранился ножом и потерял зрение. Брайль сумел попасть в школу для слепых Валентина Гаюи́ и пользовался там рельефно-линейным шрифтом. Другой прообраз шрифта Брайля{{-}}ночная азбука Шарля Барбье. В этой азбуке матрица имела размер 6×6 ячеек, что подходит для зрячего военного, изредка читающего ощупью, и совершенно непригодно для слепого, читающего много. Брайль сократил матрицу, воспользовавшись двоичным кодом.&lt;p&gt;Шрифт Брайля поставил реабилитацию слепых на промышленные рельсы: легко сделать устройство для тиснения Брайлем, он не{{_}}бросается в глаза, будучи выдавлен вместе с обычным текстом для зрячих или даже поверх него.</orig>
+     <transl>Braille is a dot writing system for blind people. It uses groups 2×3 dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.<br /><br />Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing”. Barbier used 6×6 matrix, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code.<br /><br />Braille industrialized assistive technologies for blind: easy to emboss, does not come to sight when embossed next to normal text for sighted people or even over it.</transl>
+     <tr-cmt>Test</tr-cmt>
     </text>
    </group>
    <group id="Bugi">
     <text id="Name">
      <orig>Бугийская (лонтара)</orig>
+     <transl>Buginese (Lontara)</transl>
     </text>
     <text id="Lang">
      <orig>бугийский ''(4 млн)'' и другие языки о. Сулавеси</orig>
+     <transl>Buginese ''(4M)'' and other languages of Sulavesi island</transl>
     </text>
     <text id="Text">
      <orig>Бугийская письменность, или лонтара{{-}}потомок [[ps:Brah|брахми]] и работает по тому же принципу. Со времён голландской колонизации заменяется [[ps:Latn|латиницей]]. Название «лонтара» означает местную пальму, на чьих листьях и писали бугийцы.&lt;p&gt;Гласная по умолчанию «а»: {{sm|ᨀ}}=ка, {{sm|ᨀᨚ}}=ко. Одинокие гласные устанавливаются на букву {{sm|ᨕ}}: {{sm|ᨕᨚ}}=о. [[pt:virama|Вирамы]] нет: основные стечения согласных{{-}}отдельные буквы, остальные просто не{{_}}записываются. Этот дефект лонтары даже используют как загадку: правильно прочитай каламбур и найди скрытый смысл. Некоторые специалисты по старому письму пользуются вирамой.</orig>
@@ -3198,9 +3445,11 @@
    <group id="Buhd">
     <text id="Name">
      <orig>Бухид</orig>
+     <transl>Buhid</transl>
     </text>
     <text id="Lang">
      <orig>бухидский ''(Филиппины)''</orig>
+     <transl>Buhid ''(Philippines)''</transl>
     </text>
     <text id="Text">
      <orig>Используется мангиан{{-}}небольшой филиппинской народностью (8000 на 1991{{_}}год). Восходит к [[ps:Brah|брахми]] и родственный с [[ps:Tglg|тагальским]].&lt;p&gt;В языке всего 15 согласных и три гласных: «а» по умолчанию, «и» и «у» задаются огласовками. Начальные гласные{{-}}отдельные буквы. На стыках слогов могут появляться дополнительные согласные, они не{{_}}записываются: {{sm|ᝐᝒᝑᝋᝓ}} означает ''sihamu'', но читается ''singhanmu''.</orig>
@@ -3209,9 +3458,11 @@
    <group id="Cakm">
     <text id="Name">
      <orig>Чакма</orig>
+     <transl>Chakma</transl>
     </text>
     <text id="Lang">
      <orig>чакма ''(Индия, Бангладеш, Мьянма, 500 тыс. на 2011)''</orig>
+     <transl>Chakma ''(India, Bangladesh, Myanmar, 500k as of 2011)''</transl>
     </text>
     <text id="Text">
      <orig>Говорящих на языке чакма немало и язык в списках исчезающих не{{_}}числится, но письменность вытесняется [[ps:Beng|бенгальской]]. Точную датировку автору «Юникодии» найти не{{_}}удалось, но если это потомок [[ps:Mymr|бирманского]]{{-}}то точно после XI{{_}}века.&lt;p&gt;Брахмийская абугида с гласной по умолчанию «а:» (длинное «а») и часто употребляемой [[pt:virama|вирамой]] ''(maayaa)''. Вторая вирама служит для сборки [[pt:ligature|лигатур]], многие из них упразднены реформой 2001.&lt;br&gt;{{__}}ка: {{sm|𑄇}} + и {{sm|◌𑄨}} = ки {{sm|𑄇𑄨}}&lt;br&gt;{{__}}ка: {{sm|𑄇}} + maayaa {{sm|◌𑄴}} = к {{sm|𑄇𑄴}}&lt;br&gt;{{__}}ка: {{sm|𑄇}} + virama {{sm|◌𑄳}} + та: {{sm|𑄖}} = кта: {{sm|𑄇𑄳𑄖}}&lt;br&gt;</orig>
@@ -3220,31 +3471,39 @@
    <group id="Cari">
     <text id="Name">
      <orig>Карийская</orig>
+     <transl>Carian</transl>
     </text>
     <text id="Lang">
      <orig>карийский ''(Малая Азия)''</orig>
+     <transl>Carian ''(Anatolia)''</transl>
     </text>
     <text id="Text">
      <orig>Использовался с VII до I веков{{bc}} Существовало множество вариантов алфавита. В Малой Азии писали слева направо, наёмники в Египте{{-}}справа налево.&lt;p&gt;Советский (тогда ещё) учёный Виталий Шеворошкин в 1960 показал, что письменность не{{_}}слоговая, а алфавитная. Ключевая книга по расшифровке (Игнасий-Хавьер Адьего) вышла в 1993. Найденная в 1996 билингва с [[ps:Grek|греческим]] подтвердила его правоту. Некоторые символы всё ещё не{{_}}известны.</orig>
+     <transl>Was used from 7th to 1st century{{_}}BC. Many variants of alphabet existed. In Anatolia left-to-right writing prevailed, mercenaries in Egypt wrote right-to-left.<br /><br />Soviet (then) scientist Vitaly Shevoroshkin in 1960 showed that the script is alphabetic, not{{_}}syllabic. Key book on deciphering (Ignasi-Xavier Adiego) came in 1993. Bilingual inscription with [[ps:Grek|Greek]] found in 1996 confirmed that he was right. Some characters are still unknown.</transl>
     </text>
    </group>
    <group id="Cans">
     <text id="Name">
      <orig>Канадская слоговая</orig>
+     <transl>Canadian Aboriginal syllabics</transl>
     </text>
     <text id="Lang">
      <orig>языки канадских аборигенов: кри, оджибве ''(алгонкинский)'', наскапи, инуктитут ''(эскимосский)''…</orig>
+     <transl>languages of Canadian aborigins: Cree, Ojibwe ''(Algonquin)'', Naskapi, Inuiktut ''(Eskimo)''…</transl>
     </text>
     <text id="Text">
      <orig>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}. Простая согласная{{-}}уменьшенная буква: к={{sm|ᒃ}}.</orig>
+     <transl>Invented by missionaire James Evans in 1833. Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</transl>
     </text>
    </group>
    <group id="Cham">
     <text id="Name">
      <orig>Чамская</orig>
+     <transl>Cham</transl>
     </text>
     <text id="Lang">
      <orig>чамский ''(Вьетнам, Камбоджа, 320 тыс. на 2008)''</orig>
+     <transl>Cham ''(Vietnam, Cambodia, 320k as of 2008)''</transl>
     </text>
     <text id="Text">
      <orig>Чамская письменность произошла из паллавы (ранней [[ps:Gran|грантхи]]), и слоги по умолчанию заканчиваются гласной «а». Чтобы добавить другую гласную, дописывается огласовка. Знака «[[pt:virama|вирама]]» (убрать гласную) нет, вместо этого конечные согласные: {{sm|ꨆ}}=ка, {{sm|ꨆꨯ}}=ко, {{sm|ꨆꨯꩃ}}=конг.&lt;p&gt;Большинство чамов исповедуют ислам и пишут [[ps:Arab|арабицей]], лишь некоторые чамы Вьетнама используют чамское письмо.</orig>
