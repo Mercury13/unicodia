@@ -4785,12 +4785,15 @@
    <group id="Takr">
     <text id="Name">
      <orig>Такри</orig>
+     <transl>Takri</transl>
     </text>
     <text id="Lang">
      <orig>малые языки Северной Индии и Пакистана</orig>
+     <transl>Small ganguages of North India and Pakistan</transl>
     </text>
     <text id="Text">
      <orig>Происходит из [[ps:Shrd|шарады]]. Ранее такри широко применялся в делопроизводстве, но с послевоенным освобождением Индии стал быстро заменяться [[ps:Deva|деванагари]]. Есть попытки возродить письменность.&lt;p&gt;В каждом штате свой стиль такри. Иногда [[ps:Dogr|догра]] считается одним из таких стилей, но [[pt:unification|разунифицирована]] с такри как по политическим, так и по техническим причинам. [[pt:virama|Вирамы]] нет ни в одном из местных языков, это видно по самоназванию {{sm|𑚔𑚭𑚊𑚤𑚯}} «тта:‑кᵊ‑ри:». Но она употребляется для древних языков{{-}}пали и санскрита. Только три буквы могут входить в [[pt:ligature|лигатуры]] вторым знаком, «йа», «ра» и «ха»: {{sm|𑚞𑚶𑚤}} прᵊ.</orig>
+     <transl>Comes from [[ps:Shrd|Sharada]]. Earlier Takri was used in business documentation, but post-war liberation of India quickly replaced it with [[ps:Deva|Devanagari]].<br /><br />Every state has own style of Takri. Sometimes [[ps:Dogr|Dogra]] is considered one of these styles, but [[pt:unification|disunified]] with Takri for both political and technical reasons. [[pt:virama|Virama]] is absent in all local languages, it’s noticeable by autonym {{sm|𑚔𑚭𑚊𑚤𑚯}} “tta:‑kᵊ‑ri:”. But virama is used for ancient languages{{-}}Pali and Sanskrit. Only three letters can come into consonant [[pt:ligature|ligature]] as a sevond sign, “ya”, “ra” and “ha”: {{sm|𑚞𑚶𑚤}} prᵊ.</transl>
     </text>
    </group>
    <group id="Tale">
@@ -5088,7 +5091,7 @@
     </text>
     <text id="Text">
      <orig>Первый известный экземпляр старого (иероглифического) письма '''и''' датируется ≈1500, но письмо наверняка намного старше. Предания говорят, что оно существовало ещё в династию Тан (618—907). Письмо состоит из 8000…10000 иероглифов.&lt;p&gt;Современный слоговой '''и''' придуман правительством Китая в 1974. В языке 43 согласных, 8 гласных и 4 тона (простой, p, t и x), но не{{_}}все комбинации возможны, и письмом '''и''' можно записать 1165 слогов.</orig>
-     <transl>The first sample of old (ideographic) Yi script is dated ≈1500, but the script id definitely older. Legends say that it existed in Tang dynasty (618—907). Script consists of 8000 to 10000 ideographs.&lt;p&gt;Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not all combinations are possible, and Yi script can write 1165 syllables.</transl>
+     <transl>The first sample of old (ideographic) Yi script is dated ≈1500, but the script id definitely older. Legends say that it existed in Tang dynasty (618—907). Script consists of 8000 to 10000 ideographs.<br /><br />Modern syllabic Yi was invented by Chinese government in 1974. The language has 43 consonants, 8 vowels and 4 tones (simple, p, t and x), but not all combinations are possible, and Yi script can write 1165 syllables.</transl>
     </text>
    </group>
    <group id="Zanb">
