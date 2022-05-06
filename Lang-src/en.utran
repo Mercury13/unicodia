@@ -870,6 +870,7 @@
     </text>
     <text id="Text">
      <orig>[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.&lt;p&gt;[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.</orig>
+     <transl>[[ps:Grek|Greek]] is the first real alphabet, ancestor of all European alphabets.<br /><br />[[ps:Copt|Coptic]] is a language of Egyptian Christians. Its alphabet is based on Greek.</transl>
     </text>
    </group>
    <group id="0400">
@@ -1287,6 +1288,7 @@
     </text>
     <text id="Text">
      <orig>Символы Уральского фонетического алфавита, фонетики древнеирландских языков, Оксфордского словаря английского языка, фонетики индейских и русского.</orig>
+     <transl>Characters from Uralic Phonetic Alphabet, Old Irish phonetic notation, the Oxford English Dictionary, Americanist and Russianist phonetic notations.</transl>
     </text>
    </group>
    <group id="1D80">
