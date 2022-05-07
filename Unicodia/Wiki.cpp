@@ -180,10 +180,10 @@ void wiki::run(Engine& engine, const char* start, const char* end)
             engine.appendTemplate(x.params, (x.posNext != end));
             break;
         case Type::PARAGRAPH:
-            engine.appendParagraph(x.feature);
+            engine.appendBreak(Strength::PARAGRAPH, x.feature);
             break;
         case Type::LINEBREAK:
-            engine.appendLineBreak(x.feature);
+            engine.appendBreak(Strength::BREAK, x.feature);
             break;
         }
         start = x.posNext;

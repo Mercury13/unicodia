@@ -219,8 +219,7 @@ namespace {
         void appendLink(const SafeVector<std::string_view>& x, bool) override;
         void appendTemplate(const SafeVector<std::string_view>& x, bool) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
-        void appendParagraph(wiki::Feature feature) override;
-        void appendLineBreak(wiki::Feature feature) override;
+        void appendBreak(wiki::Strength strength, wiki::Feature feature) override;
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -266,9 +265,17 @@ namespace {
         s.append("\n");
     }
 
-    void Eng::appendParagraph(wiki::Feature feature)
+    void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature)
     {
-        s.append("Paragraph");
+        switch (strength) {
+        case wiki::Strength::BREAK:
+            s.append("Break");
+            break;
+        case wiki::Strength::PARAGRAPH:
+            s.append("Paragraph");
+            break;
+        }
+
         switch (feature) {
         case wiki::Feature::NONE:
             break;
@@ -276,22 +283,9 @@ namespace {
             s.append("[ind]");
             break;
         }
+
         s.append("!\n");
     }
-
-    void Eng::appendLineBreak(wiki::Feature feature)
-    {
-        s.append("Break");
-        switch (feature) {
-        case wiki::Feature::NONE:
-            break;
-        case wiki::Feature::INDENT:
-            s.append("[ind]");
-            break;
-        }
-        s.append("!\n");
-    }
-
 
 }   // anon namespace
 
