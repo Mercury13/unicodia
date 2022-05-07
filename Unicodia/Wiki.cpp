@@ -90,7 +90,7 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                                         sMain = "???";
                                     params.emplace_back(sMain);
                                 }
-                                return { type, pos, param.posNext, std::move(params) };
+                                return { type, Feature::NONE, pos, param.posNext, std::move(params) };
                             } break;
                         }
                     }   // loop
@@ -106,7 +106,7 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                 auto type = (nQuotes % 2 == 0)
                         ? ((nQuotes == 2) ? Type::ITALIC : Type::EMPTY)
                         : ((nQuotes == 5) ? Type::BOLD_ITALIC : Type::BOLD);
-                return { type, pos, q, {} };
+                return { type, Feature::NONE, pos, q, {} };
             }
             break;
         case '\n': {
@@ -117,13 +117,13 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                 }
                 auto n = q - pos;
                 if (n > 1) {
-                    return { Type::PARAGRAPH, pos, q, {} };
+                    return { Type::PARAGRAPH, Feature::NONE, pos, q, {} };
                 }
             } break;
         default: ;
         }   // switch (c)
     }
-    return { Type::STRING_END, end, end, {} };
+    return { Type::STRING_END, Feature::NONE, end, end, {} };
 }
 
 
@@ -180,7 +180,11 @@ void wiki::run(Engine& engine, const char* start, const char* end)
             engine.appendTemplate(x.params, (x.posNext != end));
             break;
         case Type::PARAGRAPH:
-            engine.appendParagraph();
+            engine.appendParagraph(x.feature);
+            break;
+        case Type::LINEBREAK:
+            engine.appendLineBreak(x.feature);
+            break;
         }
         start = x.posNext;
     }

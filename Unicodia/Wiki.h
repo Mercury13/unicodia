@@ -35,9 +35,13 @@ namespace wiki {
 
     enum class Type {
             EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE,
-            PARAGRAPH };
+            LINEBREAK, PARAGRAPH };
+    enum class Feature {
+            NONE, INDENT };
+
     struct Thing {
         Type type;
+        Feature feature;
         const char* posStart;
         const char* posNext;
         SafeVector<std::string_view> params;
@@ -77,7 +81,8 @@ namespace wiki {
         virtual void appendTemplate(
                     const SafeVector<std::string_view>& x,
                     bool hasRemainder) = 0;
-        virtual void appendParagraph() = 0;
+        virtual void appendParagraph(Feature feature) = 0;
+        virtual void appendLineBreak(Feature feature) = 0;
 
         /// Called after wiki parsing.
         /// Closes weight tags that are not open.
