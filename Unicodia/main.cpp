@@ -12,14 +12,14 @@
 // Qt forms
 #include "FmMain.h"
 
-void doTranslate()
+void doTranslate(QObject* parent)
 {
     auto dir = QApplication::applicationDirPath();
 
     // Install standard Qt translation
-    QTranslator tr;
-    if (tr.load("qtbase_ru", dir))
-        QApplication::installTranslator(&tr);
+    QTranslator* tr = new QTranslator(parent);
+    if (tr->load("qtbase_ru", dir))
+        QApplication::installTranslator(tr);
 
     std::filesystem::path pDir = dir.toStdWString();
     pDir /= "lang.ini";
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    doTranslate();
+    doTranslate(&a);
 
     uc::completeData();
     FmMain w;
