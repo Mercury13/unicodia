@@ -282,6 +282,9 @@ namespace {
         case wiki::Feature::INDENT:
             s.append("[ind]");
             break;
+        case wiki::Feature::BULLET:
+            s.append("[bul]");
+            break;
         }
 
         s.append("!\n");
@@ -320,6 +323,47 @@ TEST (Run, Simple)
             "Plain:.\n"
             "Paragraph!\n"
             "Plain:Some more text\n";
+    EXPECT_EQ(expected, eng.s);
+}
+
+
+///
+///  Some features
+///  1. Cannot process initial :
+///  2. LF w/o features is eaten
+///  2. Some works on features
+///
+TEST (Run, Features)
+{
+    std::string_view s = ":alpha\nqqq\n: bravo\n\ncharlie\n\n:delta";
+    Eng eng;
+    wiki::run(eng, s);
+    std::string_view expected =
+            "Plain::alpha\nqqq\n"
+            "Break[ind]!\n"
+            "Plain:bravo\n"
+            "Paragraph!\n"
+            "Plain:charlie\n"
+            "Paragraph[ind]!\n"
+            "Plain:delta\n";
+    EXPECT_EQ(expected, eng.s);
+}
+
+
+///
+///  LF in feature WILL make a line break
+///
+TEST (Run, LfInFreature)
+{
+    std::string_view s = "alpha\n:bravo\ncharlie";
+    Eng eng;
+    wiki::run(eng, s);
+    std::string_view expected =
+            "Plain:alpha\n"
+            "Break[ind]!\n"
+            "Plain:bravo\n"
+            "Break!\n"
+            "Plain:charlie\n";
     EXPECT_EQ(expected, eng.s);
 }
 

@@ -37,7 +37,7 @@ namespace wiki {
             EMPTY, BOLD, ITALIC, BOLD_ITALIC, STRING_END, LINK, TEMPLATE,
             LINEBREAK, PARAGRAPH };
     enum class Strength { BREAK, PARAGRAPH };
-    enum class Feature { NONE, INDENT };
+    enum class Feature { NONE, INDENT, BULLET };
 
     struct Thing {
         Type type;
@@ -47,11 +47,11 @@ namespace wiki {
         SafeVector<std::string_view> params;
     };
 
-    Thing findThing(const char* pos, const char* end);
+    Thing findThing(const char* pos, const char* end, Feature currFeature);
 
     /// @warning DO NOT USE in production code, just for unit-testing
     inline Thing findThing(std::string_view x)
-        { return findThing(x.data(), x.data() + x.size()); }
+        { return findThing(x.data(), x.data() + x.size(), Feature::NONE); }
 
     enum class Weight { ITALIC = 1, BOLD = 2 };
     DEFINE_ENUM_OPS(wiki::Weight)

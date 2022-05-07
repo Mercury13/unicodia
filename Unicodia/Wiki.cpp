@@ -43,7 +43,7 @@ wiki::Param wiki::skipParam(const char* pos, const char* end, char cEnd)
 }
 
 
-wiki::Thing wiki::findThing(const char* pos, const char* end)
+wiki::Thing wiki::findThing(const char* pos, const char* end, Feature currFeature)
 {
     auto minus1 = end - 1;
 
@@ -115,9 +115,32 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
                 while (q != end && *q == '\n') {
                     ++q;
                 }
-                auto n = q - pos;
-                if (n > 1) {
-                    return { Type::PARAGRAPH, Feature::NONE, pos, q, {} };
+                auto nLfs = q - pos;
+                // Detect feature
+                auto feature = Feature::NONE;
+                if (q != end) {
+                    switch (*q) {
+                    case ':':
+                        feature = Feature::INDENT;
+                        ++q;
+                        break;
+                    case '*':
+                        feature = Feature::BULLET;
+                        ++q;
+                        break;
+                    default: ;
+                    }
+                }
+                // Skip spaces
+                if (feature != Feature::NONE) {
+                    while (q != end && *q == ' ')
+                        ++q;
+                }
+                if (nLfs > 1
+                        || currFeature != Feature::NONE     // Single LF in featured paragraph WORKS
+                        || feature != Feature::NONE) {      // Single LF making featured paragraph WORKS
+                    auto type = (nLfs == 1) ? Type::LINEBREAK : Type::PARAGRAPH;
+                    return { type, feature, pos, q, {} };
                 }
             } break;
         default: ;
@@ -155,8 +178,9 @@ wiki::Thing wiki::findThing(const char* pos, const char* end)
 
 void wiki::run(Engine& engine, const char* start, const char* end)
 {
+    auto paraFeature = Feature::NONE;
     while (true) {
-        auto x = findThing(start, end);
+        auto x = findThing(start, end, paraFeature);
         if (x.posStart != start)
             engine.appendPlain({ start, x.posStart });
         switch (x.type) {
@@ -181,9 +205,11 @@ void wiki::run(Engine& engine, const char* start, const char* end)
             break;
         case Type::PARAGRAPH:
             engine.appendBreak(Strength::PARAGRAPH, x.feature);
+            paraFeature = x.feature;
             break;
         case Type::LINEBREAK:
             engine.appendBreak(Strength::BREAK, x.feature);
+            paraFeature = x.feature;
             break;
         }
         start = x.posNext;

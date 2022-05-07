@@ -310,7 +310,7 @@ namespace {
     {
         switch (strength) {
         case wiki::Strength::BREAK:
-            s += "<br";
+            s += "<br>";
             break;
         case wiki::Strength::PARAGRAPH:
             s += "<p>";
@@ -322,6 +322,10 @@ namespace {
             break;
         case wiki::Feature::INDENT:
             s += NBSP NBSP NBSP;
+            break;
+        case wiki::Feature::BULLET:
+            s += u8"•" NBSP;
+            break;
         }
     }
 
@@ -404,6 +408,7 @@ namespace {
         } else if (name == "_"sv) {
             s.append(QChar(0x00A0));
         } else if (name == "__"sv) {
+            /// @todo [L10n] Punycode still needs this template, do not forget!
             s.append(QChar(0x00A0));
             s.append(QChar(0x00A0));
             s.append(QChar(0x00A0));
