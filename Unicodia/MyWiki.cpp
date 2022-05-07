@@ -263,7 +263,7 @@ namespace {
                 const SafeVector<std::string_view>& x,
                 bool hasRemainder) override;
         void toggleWeight(Flags<wiki::Weight> changed) override;
-        void appendParagraph() override;
+        void appendBreak(wiki::Strength strength, wiki::Feature feature) override;
         void finish() override;
     protected:
         wiki::HtWeight weight;
@@ -306,9 +306,23 @@ namespace {
         return false;
     }
 
-    void Eng::appendParagraph()
+    void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature)
     {
-        s += "<p>";
+        switch (strength) {
+        case wiki::Strength::BREAK:
+            s += "<br";
+            break;
+        case wiki::Strength::PARAGRAPH:
+            s += "<p>";
+            break;
+        }
+
+        switch (feature) {
+        case wiki::Feature::NONE:
+            break;
+        case wiki::Feature::INDENT:
+            s += NBSP NBSP NBSP;
+        }
     }
 
     void Eng::runRecursive(std::string_view text)
