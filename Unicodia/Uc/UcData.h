@@ -735,9 +735,18 @@ namespace uc {
         UpCategory upCat;
         std::string_view id;
         Graphical isGraphical;
-        std::u8string_view locName;
-        std::u8string_view locDescription;
         mutable unsigned nChars = 0;
+
+        struct Loc {
+            std::u8string_view name;
+            std::u8string_view description;
+        } mutable loc {};
+
+        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        template <size_t N>
+        void printfLocKey(char (&buf)[N], const char* suffix) const
+            { printfLocKey(buf, N, suffix); }
     };
 
     extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];

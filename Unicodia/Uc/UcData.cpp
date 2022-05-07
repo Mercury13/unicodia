@@ -472,86 +472,36 @@ constexpr std::u8string_view CT_LATIN1 =
 
 
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
-    { UpCategory::CONTROL,      "Cc",   Graphical::NO,  u8"Управляющий", CT_CONTROL },
-    { UpCategory::FORMAT,       "Cf",   Graphical::NO,  u8"Форматирующий", CT_FORMAT },
+    { UpCategory::CONTROL,      "Cc",   Graphical::NO  },
+    { UpCategory::FORMAT,       "Cf",   Graphical::NO  },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
     // SURROGATE,       -- unused as Unicodia has nothing to tell
-    { UpCategory::LETTER,       "Ll",   Graphical::YES, u8"Буква/строчная",
-            u8"Письмо «[[pt:minuscule|минускул]]», появившееся в раннее средневековье для экономии дорогого пергамента, "
-                "превратилось в строчные буквы и сделало латиницу очень выразительным алфавитом." },
-    { UpCategory::LETTER,       "Lm",   Graphical::YES, u8"Буква/модифицирующая",
-            u8"Такие «недобуквы», приделывающие к букве оттенки смысла, чаще всего встречаются в фонетике. "
-                u8"Так, модифицирующей буквой является штрих мягкости xʹ, в отличие от похожего математического штриха x′." },
-    { UpCategory::LETTER,       "Lo",   Graphical::YES, u8"Буква/другая",
-            u8"Символы различных письменностей, где нет деления на заглавные и строчные буквы. "
-                "Например, [[ps:Hebr|иврит]], [[ps:Arab|арабская вязь]] и [[ps:Hani|китайские иероглифы]]. Также особые символы вроде "
-                    "мужского/женского порядкового знака романских языков (1º{{-}}первый, 1ª{{-}}первая)." },
-    { UpCategory::LETTER,       "Lt",   Graphical::YES, u8"Буква/смешанный регистр",
-            u8"Символы-диграфы, состоящие из заглавной и строчной букв. "
-                    "Так, в хорватской латинице есть диграф ǈ. "
-                "Сербский аналог Љ не{{_}}является диграфом и потому смешанного регистра не{{_}}имеет." },
-    { UpCategory::LETTER,       "Lu",   Graphical::YES, u8"Буква/заглавная",
-            u8"Те письменности, которые приняли маленькие (строчные) буквы, буквы старой формы стали "
-                "называть большими, заглавными или прописными." },
-    { UpCategory::MARK,         "Mc",   Graphical::YES, u8"Метка/протяжённая",
-            u8"Протяжённые (обладающие шириной) комбинирующие метки встречаются в некоторых "
-                "языках Юго-Восточной Азии: деванагари, бенгальском, кáннаде, хангыле…" },
-    { UpCategory::MARK,         "Me",   Graphical::YES, u8"Метка/охватывающая",
-            u8"Охватывающие метки используются в древнерусских буквенных цифрах (А҈). "
-                "Также существуют охватывающие квадрат, круг и другие фигуры. "
-                "Ни один проверенный типографский движок на Windows 10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, "
-                    "но на хороших шрифтах вроде DejaVu результат очень неплох." },
-    { UpCategory::MARK,         "Mn",   Graphical::YES, u8"Метка/непротяжённая",
-            u8"Непротяжённые метки (например, знак ударе́ния) устроены как символы нулевой ширины, отсюда название. "
-                "В хороших шрифтах дизайнер вручную помещает метки на наиболее распространённые буквы. "
-                "Но если подобной комбинации не{{_}}предусмотрели (8́), символы накладываются как попало, и результат обычно плох." },
-    { UpCategory::NUMBER,       "Nd",   Graphical::YES, u8"Числовой/десятичный",
-            u8"Люди считают десятками, поскольку у них десять пальцев. Слова «цифра» и «палец» во многих языках близки. "
-                "Изобретённая в Индии позиционная система счисления используется всем миром, однако "
-                    "в языках Ближнего Востока и Юго-Восточной Азии цифры бывают причудливые." },
-    { UpCategory::NUMBER,       "Nl",   Graphical::YES, u8"Числовой/буквенный",
-            u8"Римские, китайские и другие цифры, основанные на буквах. Древнерусские также основаны на буквах, "
-                    "но в Юникоде для этого используются обычные А, Б, Г… с комбинирующими метками." },
-    { UpCategory::NUMBER,       "No",   Graphical::YES, u8"Числовой/другой",
-            u8"Архаичные системы счисления, [[pt:precomposed|монолитные]] дроби, верхние и нижние индексы, цифры в кругах, "
-                    "сокращения для больших чисел и другие цифровые символы." },
-    { UpCategory::PUNCTUATION,  "Pc",   Graphical::YES, u8"Знак препинания/соединитель",
-            u8"Небольшая группа символов. Наиболее известный из них{{-}}знак подчёркивания." },
-    { UpCategory::PUNCTUATION,  "Pd",   Graphical::YES, u8"Знак препинания/черта",
-            u8"Дефисы и тире. Минус также является чертой, но отнесён к математическим знакам." },
-    { UpCategory::PUNCTUATION,  "Pe",   Graphical::YES, u8"Знак препинания/закрывающая скобка",
-            u8"Скобки отнечены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме." },
-    { UpCategory::PUNCTUATION,  "Pf",   Graphical::YES, u8"Знак препинания/конечный",
-            u8"В основном кавычки." },
-    { UpCategory::PUNCTUATION,  "Pi",   Graphical::YES, u8"Знак препинания/начальный",
-            u8"В основном кавычки." },
-    { UpCategory::PUNCTUATION,  "Po",   Graphical::YES, u8"Знак препинания/другой",
-            u8"Точка, запятая, процент, маркер списка и многое что ещё." },
-    { UpCategory::PUNCTUATION,  "Ps",   Graphical::YES, u8"Знак препинания/открывающая скобка",
-            u8"Скобки отнечены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме." },
-    { UpCategory::SYMBOL,       "Sc",   Graphical::YES, u8"Символ/валютный",
-            u8"Валютный символ{{-}}важная часть имиджа страны, и даже у монголов есть тугрик <font size='+1'>₮</font>, "
-                    "напоминающий могильный крест. "
-                "Артемий Лебедев в конце 1990‑х говорил, что рублю не{{_}}нужен особый знак, "
-                    "но впоследствии именно его пиар сделал знак <font size='+1'>₽</font> официальным." },
-    { UpCategory::SYMBOL,       "Sk",   Graphical::YES, u8"Символ/модифицирующий",
-            u8"Символы вроде крышки ^, внешне совпадающие с [[pt:combining|комбинирующими]] метками, но лишённые особых свойств. "
-                    "А также некоторые другие символы."
-                "<p>Многие из таких символов родом с пишущих машинок: чтобы нарисовать, например, ударение, надо было "
-                        "вернуть каретку на шаг назад и выбить ударение в том же [[pt:mono|знакоместе]]. "
-                    "Литера рисовалась так, чтобы один символ годился на роль апострофа и ударения.", },
-    { UpCategory::SYMBOL,       "Sm",   Graphical::YES, u8"Символ/математический",
-            u8"Изначально для математики использовались несколько разных систем, наиболее известные из них{{-}}TᴇX (читается «тех») "
-            "и MathType (он же ''Microsoft Equation''). Юникод даёт надежду, что в компьютерной математике появится какая-то стандартизация{{-}}"
-            "а также ограниченная возможность писать формулы в системах общего назначения вроде интернет-форумов." },
-    { UpCategory::SYMBOL,       "So",   Graphical::YES, u8"Символ/другой",
-            u8"Юникод содержит множество разных символов, в том числе коммерческие, технические и [[pt:emoji|эмодзи]]." },
-    { UpCategory::SEPARATOR,    "Zl",   Graphical::NO,  u8"Разделитель/строк",
-            u8"Единственный символ 2028" },
-    { UpCategory::SEPARATOR,    "Zp",   Graphical::NO,  u8"Разделитель/абзацев",
-            u8"Единственный символ 2029" },
-    { UpCategory::SEPARATOR,    "Zs",   Graphical::YES, u8"Разделитель/пробел", CT_SPACE },
-    //{ u8"Ошибка"sv },     //check for equal number
+    { UpCategory::LETTER,       "Ll",   Graphical::YES },
+    { UpCategory::LETTER,       "Lm",   Graphical::YES },
+    { UpCategory::LETTER,       "Lo",   Graphical::YES },
+    { UpCategory::LETTER,       "Lt",   Graphical::YES },
+    { UpCategory::LETTER,       "Lu",   Graphical::YES },
+    { UpCategory::MARK,         "Mc",   Graphical::YES },
+    { UpCategory::MARK,         "Me",   Graphical::YES },
+    { UpCategory::MARK,         "Mn",   Graphical::YES },
+    { UpCategory::NUMBER,       "Nd",   Graphical::YES },
+    { UpCategory::NUMBER,       "Nl",   Graphical::YES },
+    { UpCategory::NUMBER,       "No",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Pc",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Pd",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Pe",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Pf",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Pi",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Po",   Graphical::YES },
+    { UpCategory::PUNCTUATION,  "Ps",   Graphical::YES },
+    { UpCategory::SYMBOL,       "Sc",   Graphical::YES },
+    { UpCategory::SYMBOL,       "Sk",   Graphical::YES },
+    { UpCategory::SYMBOL,       "Sm",   Graphical::YES },
+    { UpCategory::SYMBOL,       "So",   Graphical::YES },
+    { UpCategory::SEPARATOR,    "Zl",   Graphical::NO  },
+    { UpCategory::SEPARATOR,    "Zp",   Graphical::NO  },
+    { UpCategory::SEPARATOR,    "Zs",   Graphical::YES },
+    //{ u8"Error"sv },     //check for equal number
 };
 
 
@@ -567,7 +517,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::special(), EcFont::CAUCASIAN_ALBANIAN },
+        Dating::yapprox(400), EcFont::CAUCASIAN_ALBANIAN },
     // Ahom OK, installed Google Noto font
     { "Ahom", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -4529,6 +4479,10 @@ void uc::Script::printfLocKey(char* buf, size_t n, const char* suffix) const
 }
 
 
+void uc::Category::printfLocKey(char* buf, size_t n, const char* suffix) const
+{
+    snprintf(buf, n, "CharCat.%s.%s", id.data(), suffix);
+}
 
 const uc::Term* uc::findTerm(std::string_view id)
 {
@@ -4589,5 +4543,12 @@ void uc::finishTranslation()
             bidi.loc.shortName = loc::get(c);
         bidi.printfLocKey(c, "Text");
             bidi.loc.description = loc::get(c);
+    }
+
+    for (auto& cat : categoryInfo) {
+        cat.printfLocKey(c, "Name");
+            cat.loc.name = loc::get(c);
+        cat.printfLocKey(c, "Text");
+            cat.loc.description = loc::get(c);
     }
 }

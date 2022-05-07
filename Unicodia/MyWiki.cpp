@@ -570,7 +570,7 @@ QString mywiki::buildHtml(const uc::Category& x)
     appendStylesheet(text);
     appendHeader(text, x);
     str::append(text, "<p>");
-    appendNoFont(text, x.locDescription);
+    appendNoFont(text, x.loc.description);
     return text;
 }
 
@@ -1131,7 +1131,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             if (cp.ecCategory == uc::EcCategory::CONTROL) {
                 //  Control char description
                 appendSubhead(text, "Prop.Head.Control");
-                appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].locDescription);
+                appendWiki(text, blk, uc::categoryInfo[static_cast<int>(uc::EcCategory::CONTROL)].loc.description);
             } else if (auto& sc = cp.script(); &sc != uc::scriptInfo) {
                 // Script description
                 appendScriptSubhead(text);
