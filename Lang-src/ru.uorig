@@ -634,6 +634,7 @@
    <group id="Sutton">
     <text id="01">
      <orig>Заливка F2 с поворотами 0…R5 изображена на символе U+1D9FF «голова»: иначе не{{_}}складывается в лигатуру. Копироваться будет без него.</orig>
+     <au-cmt>Test: U+1DA5E (smth bad with font)</au-cmt>
     </text>
    </group>
   </group>
