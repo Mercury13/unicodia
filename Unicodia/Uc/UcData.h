@@ -830,8 +830,6 @@ namespace uc {
 
     const Term* findTerm(std::string_view id);
 
-    extern const std::u8string_view TX_NOCHAR;
-
     enum class OldComp {
         AMSTRAD     = 1 << 0,
         APPLE       = 1 << 1,

@@ -378,18 +378,6 @@ const uc::Version uc::versionInfo[] {
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
-
-constexpr std::u8string_view CT_NOCHAR =
-        u8"Выброшены (''non-characters'') 66 позиций: *FFFE и *FFFF во всех семнадцати плоскостях, "
-                "а также FDD0…FDEF. Их никогда не{{_}}будет в Юникоде."
-            "<p>Эти коды '''можно''' использовать как коды ошибок, знаки подстановки, «утяжелитель» при сортировке "
-                    "или что-то другое, внутреннее для программы, перекодировать в [[pt:utf8|UTF-8]] или [[pt:utf16|UTF-16]]. "
-                "Если программа никак не{{_}}использует данный код, она может обращаться с ним как с обычным неизвестным символом."
-            "<p>Их '''нельзя''' вводить с клавиатуры, использовать в межпрограммном обмене. "
-                "Благодаря тому, что символа FFFE нет в Юникоде, работает [[pt:bom|метка порядка байтов]].";
-
-constinit const std::u8string_view uc::TX_NOCHAR = CT_NOCHAR;
-
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      "Cc",   Graphical::NO  },
     { UpCategory::FORMAT,       "Cf",   Graphical::NO  },

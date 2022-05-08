@@ -1201,7 +1201,7 @@ QString mywiki::buildNonCharHtml(char32_t code)
     text += "</h1>";
     mywiki::appendMissingCharInfo(text, code);
     text += "<p>";
-    appendWiki(text, *uc::blockOf(code), uc::TX_NOCHAR);
+    appendWiki(text, *uc::blockOf(code), loc::get("Term.noncharacter.Text"));
     return text;
 }
 
