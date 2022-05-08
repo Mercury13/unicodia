@@ -1216,7 +1216,7 @@ QString mywiki::buildHtml(const uc::Term& x)
     QString text;
     appendStylesheet(text);
     str::append(text, "<p><b>");
-    str::append(text, x.locName);
+    str::append(text, x.loc.name);
     str::append(text, "</b>"sv);
     if (!x.engName.empty()) {
         str::append(text, u8"\u00A0/ "sv);
@@ -1224,7 +1224,7 @@ QString mywiki::buildHtml(const uc::Term& x)
     }
 
     str::append(text, "<p>");
-    appendWiki(text, x, x.locDesc);
+    appendWiki(text, x, x.loc.description);
     return text;
 }
 

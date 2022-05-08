@@ -809,11 +809,20 @@ namespace uc {
     {
         std::string_view key;
         EcTermCat cat;
-        std::u8string_view locName;
         std::u8string_view engName;
-        std::u8string_view locDesc;
+        std::string_view borrowedDesc {};
+        struct Loc {
+            std::u8string_view name;
+            std::u8string_view description;
+        } mutable loc {};
 
         const uc::Font& font() const { return fontInfo[0]; }
+
+        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        template <size_t N>
+        void printfLocKey(char (&buf)[N], const char* suffix) const
+            { printfLocKey(buf, N, suffix); }
     };
 
     extern const Term terms[];

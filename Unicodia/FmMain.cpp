@@ -1233,7 +1233,7 @@ void FmMain::initTerms()
         str::append(text, "<p><a href='pt:");
         str::append(text, term.key);
         str::append(text, "' class='popup'><b>");
-        str::append(text, term.locName);
+        str::append(text, term.loc.name);
         str::append(text, "</b></a>");
         if (!term.engName.empty()) {
             str::append(text, "&nbsp;/ ");
