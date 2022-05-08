@@ -631,6 +631,11 @@
      <au-cmt>Test: Sgnw</au-cmt>
     </text>
    </group>
+   <group id="Sutton">
+    <text id="01">
+     <orig>Заливка F2 с поворотами 0…R5 изображена на символе U+1D9FF «голова»: иначе не{{_}}складывается в лигатуру. Копироваться будет без него.</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
