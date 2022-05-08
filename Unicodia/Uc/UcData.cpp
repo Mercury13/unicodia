@@ -2198,6 +2198,7 @@ constinit const uc::Block uc::blocks[] {
 static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
               "Sorry, need to set block data manually");
 
+/// @todo [L10n] Localize them!
 constinit const uc::TermCat uc::termCats[] {
     { u8"Кодирование" },
     { u8"Сериализация" },
@@ -3094,6 +3095,7 @@ std::u8string_view uc::SwInfo::note() const
     if (!Flags<Sw>(flags).have(Sw::FINEGRAINED))
         return {};
     switch (fCp) {
+    /// @todo [L10n] localize this!
     case 0x1DA5E:
         return u8"Заливка F2 с поворотами 0…R5 изображена на символе "
                "U+1D9FF «голова»: иначе не{{_}}складывается в лигатуру. "
