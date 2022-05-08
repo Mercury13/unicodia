@@ -4014,17 +4014,12 @@ void uc::completeData()
         }
     }
 
-    // Save script INI
-//    std::ofstream os("script.ini");
-//    for (auto& v : scriptInfo) {
-//        os << "[Script." << v.id << "]\n";
+    // Save term INI
+//    std::ofstream os("term.ini");
+//    for (auto& v : terms) {
+//        os << "[Term." << v.key << "]\n";
 //        os << "Name=" << esc(v.locName) << '\n';
-//        if (!v.flags.have(Sfg::NO_LANGS))
-//            os << "Lang=" << esc(v.locLangs) << '\n';
-//        if (v.time.needsCustomNote())
-//            os << "Note=" << esc(v.locTimeComment) << '\n';
-//        os << "Text=" << esc(v.locDescription) << '\n';
-//        os << '\n';
+//        os << "Text=" << esc(v.locDesc) << '\n';
 //    }
 }
 
