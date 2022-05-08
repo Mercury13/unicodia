@@ -1235,7 +1235,8 @@ void FmMain::initTerms()
         str::append(text, "' class='popup'><b>");
         str::append(text, term.loc.name);
         str::append(text, "</b></a>");
-        if (!term.engName.empty()) {
+        /// @todo [L10n] There are locales that NEVER borrow English names
+        if (!term.engName.empty() && term.engName != term.loc.name) {
             str::append(text, "&nbsp;/ ");
             str::append(text, term.engName);
         }
