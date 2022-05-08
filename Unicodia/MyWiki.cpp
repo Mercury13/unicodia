@@ -248,6 +248,8 @@ void mywiki::go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view
 
 namespace {
 
+    constexpr std::u8string_view BULLET = u8"•\u00A0";
+
     class Eng : public wiki::Engine
     {
     public:
@@ -324,7 +326,7 @@ namespace {
             s += NBSP NBSP NBSP;
             break;
         case wiki::Feature::BULLET:
-            s += u8"•" NBSP;
+            str::append(s, BULLET);
             break;
         }
     }
@@ -523,7 +525,6 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
 }
 
 namespace {
-    constexpr std::u8string_view BULLET = u8"•\u00A0";
 
     void appendSomeBullet(QString& text,
                     std::u8string_view bullet,
@@ -587,7 +588,6 @@ QString mywiki::buildHtml(const uc::Category& x)
     appendNoFont(text, x.loc.description);
     return text;
 }
-
 
 QString mywiki::buildFontsHtml(
         const char32_t cp, QFontDatabase::WritingSystem ws,
