@@ -800,7 +800,7 @@ namespace uc {
 
     struct TermCat
     {
-        std::u8string_view locName;
+        std::string_view locKey;
     };
 
     extern const TermCat termCats[];

@@ -1227,7 +1227,7 @@ void FmMain::initTerms()
             lastCat = term.cat;
             auto& cat = uc::termCats[static_cast<int>(lastCat)];
             str::append(text, "<h1>");
-            str::append(text, cat.locName);
+            str::append(text, loc::get(cat.locKey));
             str::append(text, "</h1>");
         }
         str::append(text, "<p><a href='pt:");

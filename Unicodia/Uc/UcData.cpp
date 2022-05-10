@@ -2198,17 +2198,16 @@ constinit const uc::Block uc::blocks[] {
 static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
               "Sorry, need to set block data manually");
 
-/// @todo [L10n] Localize them!
 constinit const uc::TermCat uc::termCats[] {
-    { u8"Кодирование" },
-    { u8"Сериализация" },
-    { u8"Классификация письменностей" },
-    { u8"Классификация символов" },
-    { u8"Алгоритмы Юникода" },
-    { u8"Общие принципы Юникода" },
-    { u8"Стили письма" },
-    { u8"Ввод" },
-    { u8"Прочие" },
+    { "TermCat.Encoding" },
+    { "TermCat.Serialization" },
+    { "TermCat.Scripts" },
+    { "TermCat.Chars" },
+    { "TermCat.Algos" },
+    { "TermCat.General" },
+    { "TermCat.Styles" },
+    { "TermCat.Input" },
+    { "TermCat.Misc" },
 };
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 

@@ -5246,6 +5246,35 @@
     </text>
    </group>
   </group>
+  <group id="TermCat">
+   <text id="Encoding">
+    <orig>Кодирование</orig>
+   </text>
+   <text id="Serialization">
+    <orig>Сериализация</orig>
+   </text>
+   <text id="Scripts">
+    <orig>Классификация письменностей</orig>
+   </text>
+   <text id="Chars">
+    <orig>Классификация символов</orig>
+   </text>
+   <text id="Algos">
+    <orig>Алгоритмы Юникода</orig>
+   </text>
+   <text id="General">
+    <orig>Общие принципы Юникода</orig>
+   </text>
+   <text id="Styles">
+    <orig>Стили письма</orig>
+   </text>
+   <text id="Input">
+    <orig>Ввод</orig>
+   </text>
+   <text id="Misc">
+    <orig>Прочие</orig>
+   </text>
+  </group>
   <group id="Search">
    <au-cmt>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF<br />Not FFFF!</au-cmt>
    <text id="NonChar">
