@@ -127,6 +127,7 @@
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
+@%SEVENZIP% x MiscFiles\QtcW7Compat.7z -o%DEPLOY%
 
 @echo.
 @echo ===== Building L10n =====
