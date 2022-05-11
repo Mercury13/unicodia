@@ -56,3 +56,4 @@ https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — 
 https://dev.w3.org/html5/html-author/charref — список именованных символов
 https://docs.microsoft.com/en-us/typography/fonts/windows_7_font_list — список шрифтов W7/10
 http://www.kreativekorp.com/ucsur/ — реестр искусственных письменностей
+https://github.com/cristianadam/api-ms-win-core-synch-Win7 — Win7 support for QtC
