@@ -241,7 +241,7 @@
                               </font>
                              </property>
                              <property name="text">
-                              <string>%</string>
+                              <string notr="true">%</string>
                              </property>
                              <property name="textFormat">
                               <enum>Qt::PlainText</enum>
@@ -269,7 +269,7 @@
                     <item>
                      <widget class="QLabel" name="lbOsTitle">
                       <property name="text">
-                       <string>[OS Style]</string>
+                       <string notr="true">[OS Style]</string>
                       </property>
                      </widget>
                     </item>
@@ -300,7 +300,7 @@
                           </size>
                          </property>
                          <property name="text">
-                          <string>%</string>
+                          <string notr="true">%</string>
                          </property>
                          <property name="alignment">
                           <set>Qt::AlignCenter</set>
@@ -351,7 +351,7 @@
 padding-bottom: 1px;</string>
                          </property>
                          <property name="text">
-                          <string>[lbCharCode]</string>
+                          <string notr="true">[lbCharCode]</string>
                          </property>
                          <property name="textInteractionFlags">
                           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
@@ -404,7 +404,7 @@ padding-bottom: 1px;</string>
                           </sizepolicy>
                          </property>
                          <property name="text">
-                          <string>[+25CC]</string>
+                          <string notr="true">[+25CC]</string>
                          </property>
                         </widget>
                        </item>
@@ -443,14 +443,14 @@ padding-bottom: 1px;</string>
                    <item>
                     <widget class="QLabel" name="lbCollapse">
                      <property name="text">
-                      <string>lbCollapse</string>
+                      <string notr="true">lbCollapse</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QPushButton" name="btCollapse">
                      <property name="text">
-                      <string>btCollapse</string>
+                      <string notr="true">btCollapse</string>
                      </property>
                     </widget>
                    </item>
@@ -568,7 +568,7 @@ padding-bottom: 1px;</string>
           <item>
            <widget class="QLabel" name="lbLogo">
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="pixmap">
              <pixmap resource="Resources/res.qrc">:/Misc/about.png</pixmap>
