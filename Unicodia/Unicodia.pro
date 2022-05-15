@@ -23,9 +23,12 @@ CONFIG(debug, debug|release) {
 
 SOURCES += \
     ../Libs/L10n/LocDic.cpp \
+    ../Libs/L10n/LocManager.cpp \
+    ../Libs/L10n/LocQt.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
+    LocList.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
@@ -48,6 +51,8 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
+    ../Libs/L10n/LocManager.h \
+    ../Libs/L10n/LocQt.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
@@ -69,6 +74,7 @@ HEADERS += \
     FmMessage.h \
     FmPopup.h \
     FmTofuStats.h \
+    LocList.h \
     MyWiki.h \
     Skin.h \
     Uc/FontDef.h \

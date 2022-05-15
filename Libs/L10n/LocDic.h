@@ -55,6 +55,7 @@ namespace loc {
         void add(std::string_view id, std::u8string translation);
         void dump(size_t maxSize = 0);
         const Text& get(std::string_view id);
+        const Text* getIf(std::string_view id) const;
     private:
         std::unordered_map<std::string, Text> fMap;
     };

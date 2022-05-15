@@ -73,6 +73,14 @@ const loc::Text& loc::Dic::get(std::string_view id)
 }
 
 
+const loc::Text* loc::Dic::getIf(std::string_view id) const
+{
+    auto it = fMap.find(std::string{id});
+    if (it == fMap.end())
+        return nullptr;
+    return &it->second;
+}
+
 
 ///// Misc loaders /////////////////////////////////////////////////////////////
 
