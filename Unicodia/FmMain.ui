@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Юникодия — энциклопедия символов</string>
+   <string>{Unicodia title}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -37,7 +37,7 @@
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
-        <string>Блоки</string>
+        <string>{Blocks}</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_4">
         <property name="leftMargin">
@@ -136,7 +136,7 @@
                  <item>
                   <widget class="SearchEdit" name="edSearch">
                    <property name="placeholderText">
-                    <string>Поиск</string>
+                    <string>[Search]</string>
                    </property>
                   </widget>
                  </item>
@@ -186,7 +186,7 @@
                     <item>
                      <widget class="QLabel" name="lbSampleTitle">
                       <property name="text">
-                       <string>Образец</string>
+                       <string>{Sample}</string>
                       </property>
                      </widget>
                     </item>
@@ -391,7 +391,7 @@ padding-bottom: 1px;</string>
                        <item>
                         <widget class="QPushButton" name="btCopy">
                          <property name="text">
-                          <string>Копировать</string>
+                          <string>{Copy}</string>
                          </property>
                         </widget>
                        </item>
@@ -505,7 +505,7 @@ padding-bottom: 1px;</string>
                    <item>
                     <widget class="QPushButton" name="btCloseSearch">
                      <property name="text">
-                      <string>Закрыть</string>
+                      <string>{Close}</string>
                      </property>
                     </widget>
                    </item>
@@ -531,7 +531,7 @@ padding-bottom: 1px;</string>
       </widget>
       <widget class="QWidget" name="tabTerms">
        <attribute name="title">
-        <string>Термины</string>
+        <string>{Terms}</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_7">
         <property name="leftMargin">
@@ -560,7 +560,7 @@ padding-bottom: 1px;</string>
       </widget>
       <widget class="QWidget" name="tabAbout">
        <attribute name="title">
-        <string>О программе</string>
+        <string>{About}</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,0">
         <item>
@@ -602,7 +602,7 @@ padding-bottom: 1px;</string>
              </font>
             </property>
             <property name="text">
-             <string>Юникодия</string>
+             <string>{Unicodia}</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -612,7 +612,7 @@ padding-bottom: 1px;</string>
           <item>
            <widget class="QLabel" name="lbAboutSubtitle">
             <property name="text">
-             <string>Энциклопедия символов Юникода</string>
+             <string>{Subtitle here}</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>

@@ -6195,5 +6195,60 @@
     <transl>and others</transl>
    </text>
   </group>
+  <group id="Main">
+   <sync text-owner="me" fname="..\Unicodia\FmMain.ui">
+    <format name="ui" />
+   </sync>
+   <text id=":windowTitle">
+    <orig>Юникодия — энциклопедия символов</orig>
+    <im-cmt>is a main window</im-cmt>
+    <transl>Unicodia — encyclopedia of characters</transl>
+   </text>
+   <text id="tabBlocks:at">
+    <orig>Блоки</orig>
+    <im-cmt>is a general widget (usually a tab)</im-cmt>
+    <transl>Blocks</transl>
+   </text>
+   <text id="edSearch:placeholderText">
+    <orig>Поиск</orig>
+    <im-cmt>is a single-line editor, promoted to SearchEdit</im-cmt>
+    <transl>Search</transl>
+   </text>
+   <text id="lbSampleTitle">
+    <orig>Образец</orig>
+    <im-cmt>is a static text</im-cmt>
+    <transl>Sample</transl>
+   </text>
+   <text id="btCopy">
+    <orig>Копировать</orig>
+    <im-cmt>is a button</im-cmt>
+    <transl>Copy</transl>
+   </text>
+   <text id="btCloseSearch">
+    <orig>Закрыть</orig>
+    <im-cmt>is a button</im-cmt>
+    <transl>Close</transl>
+   </text>
+   <text id="tabTerms:at">
+    <orig>Термины</orig>
+    <im-cmt>is a general widget (usually a tab)</im-cmt>
+    <transl>Terms</transl>
+   </text>
+   <text id="tabAbout:at">
+    <orig>О программе</orig>
+    <im-cmt>is a general widget (usually a tab)</im-cmt>
+    <transl>About</transl>
+   </text>
+   <text id="lbAboutTitle">
+    <orig>Юникодия</orig>
+    <im-cmt>is a static text</im-cmt>
+    <transl>Unicodia</transl>
+   </text>
+   <text id="lbAboutSubtitle">
+    <orig>Энциклопедия символов Юникода</orig>
+    <im-cmt>is a static text</im-cmt>
+    <transl>Encyclopedia of Unicode characters</transl>
+   </text>
+  </group>
  </file>
 </ut>
