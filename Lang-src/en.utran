@@ -802,6 +802,7 @@
     <text id="01">
      <orig>Заливка F2 с поворотами 0…R5 изображена на символе U+1D9FF «голова»: иначе не{{_}}складывается в лигатуру. Копироваться будет без него.</orig>
      <au-cmt>Test: U+1DA5E (smth bad with font)</au-cmt>
+     <transl>Fill F2 with turns 0…R5 is shown on character U+1D9FF head, otherwise ligature does not form. Head won’t be copied.</transl>
     </text>
    </group>
   </group>
