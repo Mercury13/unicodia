@@ -50,9 +50,7 @@ void uc::DatingLoc::appendCenturyText(std::u8string& r, int x) const
 namespace {
     void appendCustomNote(std::u8string& r, std::u8string_view note)
     {
-        r.append(u8" (");
-        r.append(note);
-        r.append(u8")");
+        str::append(r, u8" (", note, u8')');
     }
 }
 
@@ -135,18 +133,14 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc, std::u8string_view cust
             auto y2 = str::toCharsU8(buf2, std::abs(fValue2));
             if (fValue1 < 0) {
                 if (fValue2 < 0) {  // BC to BC
-                    t.append(y1);
-                    t.append(NDASH);
-                    t.append(y2);
+                    str::append(t, y1, NDASH, y2);
                     r = loc.yBc;
                     str::replace(r, BUCK, t);
                 } else {    // BC to CE
                     return u8"[Range BC…CE!!!!!!!!!!!!]";
                 }
             } else {    // CE to CE
-                r.append(y1);
-                r.append(NDASH);
-                r.append(y2);
+                str::append(r, y1, NDASH, y2);
             }
         } break;
     case Mode::YAPPROX: {
@@ -176,9 +170,7 @@ std::u8string uc::Dating::wikiText(const DatingLoc& loc, std::u8string_view cust
     case Mode::CRANGE: {
             auto c1 = loc.format1stCentury(fValue1, buf2);
             auto c2 = loc.formatCentury(fValue2);
-            t.append(c1);
-            t.append(NDASH);
-            t.append(c2);
+            str::append(t, c1, NDASH, c2);
             if (fValue1 < 0) {
                 if (fValue2 < 0) {  // BC to BC
                     r = loc.centuryBc;

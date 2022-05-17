@@ -8,6 +8,7 @@
 
 // L10n
 #include "LocDic.h"
+#include "LocQt.h"
 
 // Qt forms
 #include "FmMain.h"
@@ -37,6 +38,8 @@ int main(int argc, char *argv[])
 
     uc::completeData();
     FmMain w;
+    loc::translateForm(&w);
+
     w.installTempPrefix();
 
     w.show();

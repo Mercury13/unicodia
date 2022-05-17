@@ -214,6 +214,36 @@ namespace str {
         using Tr = std::char_traits<Ch>;
     };
 
+    template <>
+    struct string_traits<char> {
+        using Ch = char;
+        using Tr = std::char_traits<Ch>;
+    };
+
+    template <>
+    struct string_traits<wchar_t> {
+        using Ch = wchar_t;
+        using Tr = std::char_traits<Ch>;
+    };
+
+    template <>
+    struct string_traits<char8_t> {
+        using Ch = char8_t;
+        using Tr = std::char_traits<Ch>;
+    };
+
+    template <>
+    struct string_traits<char16_t> {
+        using Ch = char16_t;
+        using Tr = std::char_traits<Ch>;
+    };
+
+    template <>
+    struct string_traits<char32_t> {
+        using Ch = char32_t;
+        using Tr = std::char_traits<Ch>;
+    };
+
     namespace trait {
         template<class S>
         using Ch = typename string_traits<std::remove_cvref_t<S>>::Ch;
@@ -226,6 +256,9 @@ namespace str {
 
         template<class S, class A>
         using Str = std::basic_string<Ch<S>, Tr<S>, A>;
+
+        template<class S>
+        using DefStr = std::basic_string<Ch<S>, Tr<S>>;
     }
 
     namespace detail {
@@ -242,7 +275,7 @@ namespace str {
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
-        Sv remainderSv(Sv s, Sv prefix, Sv suffix)
+        Sv remainderSv(Sv s, Sv prefix, Sv suffix) noexcept
         {
             if (s.length() <= prefix.length() + suffix.length()
                     || !s.starts_with(prefix)
@@ -252,7 +285,7 @@ namespace str {
         }
 
         template <class Sv>
-        Sv remainderSv(Sv s, Sv prefix)
+        Sv remainderSv(Sv s, Sv prefix) noexcept
         {
             if (s.length() <= prefix.length()
                     || !s.starts_with(prefix))
@@ -311,7 +344,35 @@ namespace str {
                 start = pos + 1;
             }
         }
-    }
+
+        template <class S> consteval void checkSameSv() noexcept {}
+
+        template <class S1, class S2, class... Rest>
+        consteval void checkSameSv() noexcept
+        {
+            static_assert(std::is_same_v<typename trait::Sv<S1>, typename trait::Sv<S2>>,
+                    "All parameters should have same underlying string_view type");
+            checkSameSv<S1, Rest...>();
+        }
+
+        template <class C, class T, class A>
+        [[nodiscard]] constexpr auto length(
+                const std::basic_string<C, T, A>& x) { return x.length(); }
+
+        template <class C, class T>
+        [[nodiscard]] constexpr auto length(
+                const std::basic_string_view<C, T>& x) { return x.length(); }
+
+        template <class S>
+        [[nodiscard]] constexpr auto length(const S& x) { return toSv(x).length(); }
+
+        [[nodiscard]] constexpr size_t length(char) { return 1; }
+        [[nodiscard]] constexpr size_t length(wchar_t) { return 1; }
+        [[nodiscard]] constexpr size_t length(char8_t) { return 1; }
+        [[nodiscard]] constexpr size_t length(char16_t) { return 1; }
+        [[nodiscard]] constexpr size_t length(char32_t) { return 1; }
+
+    }   // namespace detail
 
     /// @brief remainderSv
     ///    Chops from s prefix and suffix, and returns what remains
@@ -319,13 +380,13 @@ namespace str {
     ///    No prefix and/or suffix → returns ⌀
     ///         remainderSv("string", "a", "g") = ""
     template <class S>
-    inline auto remainderSv(const S& s, trait::Sv<S> prefix, trait::Sv<S> suffix) -> trait::Sv<S>
+    inline auto remainderSv(const S& s, trait::Sv<S> prefix, trait::Sv<S> suffix) noexcept -> trait::Sv<S>
         { return detail::remainderSv<trait::Sv<S>>(s, prefix, suffix); }
 
     /// @brief remainderSv
     ///    Same for prefix only
     template <class S>
-    inline auto remainderSv(const S& s, trait::Sv<S> prefix) -> trait::Sv<S>
+    inline auto remainderSv(const S& s, trait::Sv<S> prefix) noexcept -> trait::Sv<S>
         { return detail::remainderSv<trait::Sv<S>>(s, prefix); }
 
     /// @return   haystack or cache
@@ -374,6 +435,47 @@ namespace str {
         } else {
             return detail::splitSv<Sv>(s, static_cast<Sv>(comma), skipEmpty);
         }
+    }
+
+    ///
+    ///  String concatenation
+    ///
+    template <class S, class... Rest>
+    [[nodiscard]] inline auto cat(const S& s, const Rest& ... rest)
+    {
+        detail::checkSameSv<S, Rest...>();
+        typename trait::DefStr<S> r;
+        auto newLength = detail::length(s) + (detail::length(rest) + ...);
+        r.reserve(newLength);
+        r += s;
+        ((r += rest), ...);
+        return r;
+    }
+
+    ///
+    ///  Concatenation in-place. More efficient than cat
+    ///  when object r is reused multiple times
+    ///
+    template <class C, class T, class A, class... Args>
+    inline void catIp(std::basic_string<C, T, A>& r, const Args& ... args)
+    {
+        detail::checkSameSv<std::basic_string<C, T, A>, Args...>();
+        auto newLength = (detail::length(args) + ...);
+        r.clear();
+        r.reserve(newLength);
+        ((r += args), ...);
+    }
+
+    ///
+    ///  Multiple append with a single reallocation
+    ///
+    template <class C, class T, class A, class... Args>
+    inline void append(std::basic_string<C, T, A>& r, const Args& ... args)
+    {
+        detail::checkSameSv<std::basic_string<C, T, A>, Args...>();
+        auto newLength = r.length() + (detail::length(args) + ...);
+        r.reserve(newLength);
+        ((r += args), ...);
     }
 
 }   // namespace str

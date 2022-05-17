@@ -63,10 +63,7 @@ const loc::Text& loc::Dic::get(std::string_view id)
 {
     auto& data = fMap[std::string{id}];
     if (!data.isFull()) {
-        std::u8string r;
-        r.push_back('[');
-        r.append(str::toU8(id));
-        r.push_back(']');
+        auto r = str::cat(u8'[', str::toU8(id), u8']');
         data = std::move(r);
     }
     return data;
@@ -119,8 +116,7 @@ void loc::loadIni(Dic& d, const std::filesystem::path& path)
                     continue;
 
                 // Get new ID
-                newId = head;
-                newId.append(key);
+                str::catIp(newId, head, key);
 
                 // Get value
                 std::string_view value = line.substr(pEq + 1);

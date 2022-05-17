@@ -3,19 +3,21 @@
 // Qt
 #include <QWidget>
 #include <QVariant>
-#include <QLineEdit>
-#include <QPlainTextEdit>
 #include <QDialogButtonBox>
 #include <QTabWidget>
+#include <QMetaProperty>
 
 // Libs
+#include "u_Strings.h"
 #include "u_Qstrings.h"
 
+using namespace std::string_view_literals;
 
-void loc::translateContainerWidget(QObject* widget, std::string_view prefix)
+
+void loc::translateContainerWidget(QObject* widget, QObject* mainForm, std::string_view prefix)
 {
     for (auto& child : widget->children()) {
-        translateWidget(child, prefix);
+        translateWidget(child, mainForm, prefix);
     }
 }
 
@@ -36,46 +38,80 @@ bool loc::translateProperty(
 }
 
 
-void loc::translateWidget(QObject* widget, std::string_view prefix)
+void loc::translateTabWidget(QTabWidget* widget, std::string_view prefix)
+{
+    std::string key;
+    for (int i = 0; i < widget->count(); ++i) {
+        QWidget* child = widget->widget(i);
+        QString name1 = child->objectName();
+        if (!name1.isEmpty()) {
+            str::catIp(key, prefix, name1.toStdString(), ":at" );
+            if (auto res = loc::dic.getIf(key)) {
+                widget->setTabText(i, res->q());
+            }
+        }
+    }
+}
+
+
+void loc::translateWidget(
+        QObject* widget, QObject* mainForm, std::string_view prefix)
 {
     QString name1 = widget->objectName();
     if (name1.isEmpty())
         return;
-    std::string name2 = name1.toStdString();
-    std::string key { prefix };
-        key += name2;
+    std::string key1 { prefix };
+    if (widget != mainForm) {
+        key1 += name1.toStdString();
+    }
 
-    /// @todo [urgent] getS — what it was?
-    auto res = loc::dic.getIf(key);
-    if (res) {
-        QVariant v = widget->property("text");
-        if (v.metaType().id() == QMetaType::QString) {
-            widget->setProperty("text", res->q());
-        } else {
-            v = widget->property("title");
-            if (v.metaType().id() == QMetaType::QString) {
-                widget->setProperty("title", res->q());
+    auto metaObj = widget->metaObject();
+    auto nProps = metaObj->propertyCount();
+    for (int i = 0; i < nProps; ++i) {
+        auto metaProp = metaObj->property(i);
+        if (metaProp.typeId() == QMetaType::QString) {
+            std::string_view propName = metaProp.name();    // const char*, so data() OK
+            std::string* pKey = &key1;
+            std::string tempKey;
+            if (propName == "text"sv || propName == "title"sv) {
+                // do nothing
+            } else {
+                pKey = &tempKey;
+                tempKey = str::cat(key1, ":", propName);
             }
-        }
-    } else {
-        if (auto lineEdit = qobject_cast<QLineEdit*>(widget)) {
-            translateProperty(lineEdit, prefix, name2, "placeholderText");
-        } else if (auto textEdit = qobject_cast<QPlainTextEdit*>(widget)) {
-            translateProperty(textEdit, prefix, name2, "placeholderText");
-        } else if (auto tabWidget = qobject_cast<QTabWidget*>(widget)) {
-            /// @todo [urgent] what to do?
-            //translateTabWidget(tabWidget, prefix);
-        } else if (auto buttonBox = qobject_cast<QDialogButtonBox*>(widget)) {
-            /// @todo [urgent] what to do?
-            //translateButtonBox(buttonBox);
+            if (auto res = loc::dic.getIf(*pKey)) {
+                widget->setProperty(propName.data(), res->q());
+            }
         }
     }
 
-    translateContainerWidget(widget, prefix);
+    if (auto tabWidget = qobject_cast<QTabWidget*>(widget)) {
+        translateTabWidget(tabWidget, prefix);
+    }
+
+//    else if (auto buttonBox = qobject_cast<QDialogButtonBox*>(widget)) {
+//        //translateButtonBox(buttonBox);
+//    }
+
+    translateContainerWidget(widget, mainForm, prefix);
 }
 
 
 void loc::translateForm(QWidget* form)
 {
-    /// @todo [L10n] translate form
+    std::string_view objName = form->metaObject()->className();
+
+    static constinit std::string_view standardNames[] { "Fm", "Wi" };
+
+    std::string_view formKey = objName;
+    for (auto v : standardNames) {
+        if (auto remder = str::remainderSv(objName, v);
+                !remder.empty()) {
+            formKey = remder;
+            break;
+        }
+    }
+
+    auto prefix = str::cat( formKey, '.' );
+    translateWidget(form, form, prefix);
 }

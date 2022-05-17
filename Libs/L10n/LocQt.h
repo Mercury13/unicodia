@@ -6,12 +6,14 @@
 
 class QObject;
 class QWidget;
+class QTabWidget;
 
 namespace loc {
 
     void translateForm(QWidget* form);
-    void translateContainerWidget(QObject* widget, std::string_view prefix);
-    void translateWidget(QObject* widget, std::string_view prefix);
+    void translateContainerWidget(QObject* widget, QObject* mainForm, std::string_view prefix);
+    void translateWidget(QObject* widget, QObject* mainForm, std::string_view prefix);
+    void translateTabWidget(QTabWidget* widget, std::string_view prefix);
     bool translateProperty(
             QObject* object, std::string_view prefix, std::string_view name,
             const char* property);
