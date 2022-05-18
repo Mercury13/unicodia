@@ -121,7 +121,6 @@
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Svg.dll %DEPLOY%
-@copy %QTDIR%\translations\qtbase_ru.qm %DEPLOY%
 @copy LICENSE %DEPLOY%
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
@@ -135,7 +134,13 @@
 
 @echo.
 @echo ===== Building L10n =====
-@%UTRANSL% lang-src\ru.uorig -build:%DEPLOY%
+@md %DEPLOY%\Languages
+@rem Russian
+@set DIR_RU=%DEPLOY%\Languages\Russian
+@md %DIR_RU%
+@copy lang-src\ru\locale.xml %DIR_RU%
+@%UTRANSL% lang-src\ru.uorig -build:%DIR_RU%
+@copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
 
 @echo.
 @echo ===== Archiving =====
