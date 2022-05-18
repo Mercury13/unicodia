@@ -63,7 +63,7 @@ const loc::Text& loc::Dic::get(std::string_view id)
 {
     auto& data = fMap[std::string{id}];
     if (!data.isFull()) {
-        auto r = str::cat(u8'[', str::toU8(id), u8']');
+        auto r = str::cat(u8'[', str::toU8sv(id), u8']');
         data = std::move(r);
     }
     return data;

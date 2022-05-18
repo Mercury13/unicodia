@@ -1,16 +1,20 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- term-suppress-en: [+] suppress English terms (mainly for English)
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- native: Chinese (simplified)
+     international: 简体中文
+	 iso: zh
+     eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
 -->
-<locale term-suppress-en="0">
-	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
+<locale native="Русский" international="Russian" iso="ru" eng-terms="1">
+	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. 
+	     NOT IMPLEMENTED FOR NOW -->
 	<wiki-templates>
-		<!-- №, narrow NBSP -->
+		<!-- {{№}}5  →  №, narrow NBSP -->
 		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
-		<!-- non-break BC -->
+		<!-- 300{{bc}}  →  non-break BC -->
 		<tmpl name="bc">&#xA0;до&#xA0;н.э.</tmpl>
-		<!-- typographic dash -->
+		<!-- first{{-}}second  →  typographic dash -->
 		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
-		<!-- typographic comma-dash -->
+		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
 </locale>

@@ -25,6 +25,7 @@ SOURCES += \
     ../Libs/L10n/LocDic.cpp \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
+    ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
@@ -53,6 +54,8 @@ HEADERS += \
     ../Libs/L10n/LocDic.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
+    ../Libs/PugiXml/pugiconfig.hpp \
+    ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
@@ -95,6 +98,7 @@ FORMS += \
 INCLUDEPATH += \
     ../Libs \
     ../Libs/L10n \
+    ../Libs/PugiXml \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \

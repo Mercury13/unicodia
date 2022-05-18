@@ -8,24 +8,23 @@
 
 // L10n
 #include "LocDic.h"
+#include "LocList.h"
 #include "LocQt.h"
 
 // Qt forms
 #include "FmMain.h"
 
-void doTranslate(QObject* parent)
+
+void initTranslation()
 {
     auto dir = QApplication::applicationDirPath();
-
-    // Install standard Qt translation
-    QTranslator* tr = new QTranslator(parent);
-    if (tr->load("qtbase_ru", dir))
-        QApplication::installTranslator(tr);
-
     std::filesystem::path pDir = dir.toStdWString();
-    pDir /= "lang.ini";
-    loc::loadIni(loc::dic, pDir);
 
+    loc::collectLangs(pDir);
+
+    loc::loadFirstLang();
+
+    /// @todo [L10n] They should be managed by loc::Manager
     uc::finishTranslation();
     mywiki::translateDatingLoc();
 }
@@ -34,7 +33,7 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-    doTranslate(&a);
+    initTranslation();
 
     uc::completeData();
     FmMain w;

@@ -179,6 +179,9 @@ namespace str {
     inline std::u8string toU8(std::string_view x)
         { return { reinterpret_cast<const char8_t*>(x.data()), x.length() }; }
 
+    inline std::u8string toU8(const char* x)
+        { return reinterpret_cast<const char8_t*>(x); }
+
     inline std::string toStr(std::u8string_view x)
         { return { reinterpret_cast<const char*>(x.data()), x.length() }; }
 
