@@ -28,7 +28,7 @@ void loc::Lang::load()
     if (currLang)
         currLang->unload();
     if (translator)
-        QApplication::removeTranslator(translator.get());
+        QApplication::installTranslator(translator.get());
     loc::loadIni(loc::dic, fnLang);
     currLang = this;
 }
