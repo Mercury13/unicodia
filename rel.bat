@@ -1,6 +1,6 @@
 @rem Settings
 @set VERSION=1.2.17
-@set QTDIR=c:\Qt\6.2.4\mingw_64
+@set QTDIR=c:\Qt\6.1.3\mingw81_64
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
 @set UTRANSL=UTransCon.exe
@@ -127,7 +127,8 @@
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
-@%SEVENZIP% x MiscFiles\QtcW7Compat.7z -o%DEPLOY%
+@rem Need only for Qt 6.2.x
+@rem %SEVENZIP% x MiscFiles\QtcW7Compat.7z -o%DEPLOY%
 
 @echo.
 @echo ===== Building L10n =====
