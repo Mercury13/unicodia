@@ -1,6 +1,8 @@
 @rem Settings
 @set VERSION=1.2.17
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
+@rem Workaround for that Qt, maybe QtcW7Compat.7z
+@set WORKAROUND=
 @set MINGW=c:\msys64\mingw64\bin
 @set SEVENZIP="c:\Program Files\7-zip\7z.exe"
 @set UTRANSL=UTransCon.exe
@@ -127,8 +129,9 @@
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
-@rem Need only for Qt 6.2.x
-@rem %SEVENZIP% x MiscFiles\QtcW7Compat.7z -o%DEPLOY%
+@if [%WORKAROUND%] == [] goto no_workaround
+@%SEVENZIP% x MiscFiles\%WORKAROUND% -o%DEPLOY%
+:no_workaround
 
 @echo.
 @echo ===== Building L10n =====
