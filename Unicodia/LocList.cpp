@@ -114,7 +114,7 @@ void loc::collectLangs(const std::filesystem::path& programPath)
             }
 
             // Parse it
-            if (parseLang(*tempLang, v.path())) {
+            if (parseLang(*tempLang, v.path())) {  // NOLINT(bugprone-use-after-move)
                 allLangs.push_back(std::move(tempLang));
             }
         }
