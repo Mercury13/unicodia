@@ -72,9 +72,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "FRAKTUR",        Dicf::TRIG_SCRIPT },
     { "GEORGIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
      { "MTAVRULI",      Dicf::TRIG_SCRIPT },
-    { "GUNJALA",        Dicf::TRIG_SCRIPT },
     { "GONDI",          Dicf::TRIG_SCRIPT },
-    { "MASARAM",        Dicf::TRIG_SCRIPT },
+      { "GUNJALA",      Dicf::TRIG_SCRIPT },
+      { "MASARAM",      Dicf::TRIG_SCRIPT },
     { "GOTHIC",         Dicf::TRIG_SCRIPT },
     { "GLAGOLITIC",     Dicf::TRIG_SCRIPT },
     { "GRANTHA",        Dicf::TRIG_SCRIPT },
@@ -393,6 +393,38 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "YIN",            Dicf::PART_NOUN },   // for Chinese tones, seems to be OK
     { "YUS",            Dicf::PART_NOUN },   // …but yus is big & little → do not cap
 
+    // Greek
+#define GREK(x) { x, Dicf::PART_NOUN | Dicf::CAP_TITLE },
+    GREK("ALPHA")
+    GREK("BETA")
+    GREK("GAMMA")
+    GREK("DELTA")
+    GREK("EPSILON")
+    GREK("ZETA")
+    GREK("ETA")
+    GREK("THETA")
+    GREK("IOTA")
+    { "KAI", Dicf::PART_NOUN | Dicf::CAP_TITLE | Dicf::IF_SCRIPT },
+    GREK("KAPPA")
+    GREK("LAMDA")
+    GREK("LAMBDA")
+    GREK("MU")
+    GREK("NU")
+    GREK("XI")
+    GREK("OMICRON")
+    GREK("PI")
+    GREK("RHO")
+    GREK("THETA")
+    GREK("SIGMA")
+    GREK("TAU")
+    GREK("UPSILON")
+    GREK("PHI")
+    GREK("CHI")
+    GREK("PSI")
+    GREK("OMEGA")
+    GREK("NABLA")
+#undef GREK
+
     // Tricky but work as noun
     { "PERCUSSIVE",     Dicf::PART_NOUN },
 
@@ -546,6 +578,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MIDDLE",         Dicf::PART_ADJECTIVE },
     { "MONOGRAPH",      Dicf::PART_ADJECTIVE },
     { "NASAL",          Dicf::PART_ADJECTIVE },
+    { "NEUTRAL",        Dicf::PART_ADJECTIVE },
     { "NEW",            Dicf::PART_ADJECTIVE },
     { "NORTH",          Dicf::PART_ADJECTIVE },
     { "NORTHERN",       Dicf::PART_ADJECTIVE },
@@ -590,6 +623,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "STRETCHED",      Dicf::PART_ADJECTIVE },
     { "SYLLABIC",       Dicf::PART_ADJECTIVE },
     { "TAILED",         Dicf::PART_ADJECTIVE },
+    { "TAILLESS",       Dicf::PART_ADJECTIVE },
     { "TALL",           Dicf::PART_ADJECTIVE },
     { "THREE-D",        { Dicf::PART_ADJECTIVE, "three-D" } },
     { "THREE-LEGGED",   Dicf::PART_ADJECTIVE },
@@ -726,6 +760,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "WAW",            Dicf::CAP_TITLE },
     { "X",              Dicf::CAP_TITLE },
     { "Y",              Dicf::CAP_TITLE },
+    { "YER",            Dicf::CAP_TITLE | Dicf::IF_SCRIPT | Dicf::PART_NOUN },
     { "YU",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "YEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "Z",              Dicf::CAP_TITLE },
@@ -1060,6 +1095,44 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Combining Cyrillic Ten millions sign")
     EX("Combining Cyrillic Hundred millions sign")
     EX("Combining Cyrillic Thousand millions sign")
+    EX("Rounded symbol for Fu")
+    EX("Rounded symbol for Lu")
+    EX("Rounded symbol for Shou")
+    EX("Rounded symbol for Xi")
+    EX("Rounded symbol for Shuangxi")
+    EX("Rounded symbol for Cai")
+    EX("Man with gua pi mao")           // Conflict with Greek Pi
+    EX("Thai character Ko kai")         // Conflict with Greek Kai
+    EX("Thai character No nu")          // Conflict with Greek Nu
+    EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
+    EX("Planck constant over two pi")   // pi is small here
+    EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
+    EX("Byzantine musical symbol Thes kai apothes")  // What to do with that Kai?
+    EX("Byzantine musical symbol Enarxis kai fthora vou") // Same
+
+#define MATH_SYM(x) \
+        EX("Greek " x " symbol") \
+        EX("Mathematical bold " x " symbol") \
+        EX("Mathematical italic " x " symbol") \
+        EX("Mathematical bold italic " x " symbol") \
+        EX("Mathematical sans-serif bold " x " symbol") \
+        EX("Mathematical sans-serif bold italic " x " symbol")
+
+    MATH_SYM ("epsilon")    // Small epsilon etc here
+    MATH_SYM ("theta")
+    MATH_SYM ("kappa")
+    MATH_SYM ("phi")
+    MATH_SYM ("rho")
+    MATH_SYM ("pi")
+#undef MATH_SYM
+
+    EX("Greek lunate epsilon symbol")   // Epsilon is small here
+    EX("Greek reversed lunate epsilon symbol") // Same
+    EX("Greek beta symbol")             // Beta is small here
+    EX("Greek kai symbol")              // Kai is small here
+    EX("Greek lunate sigma symbol")     // Sigma is small here
+    EX("Greek rho with stroke symbol")  // Rho is small here
+            // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -1164,7 +1237,7 @@ const std::map<char32_t, std::string_view> abbrevs {
 
 // Just capitalize them!
 const std::set<std::string_view> cuneiformSymbols {
-    "BAR", "LAM", "SA"
+    "BAR", "LAM", "MU", "NU", "PI", "SA"
 };
 
 const std::set<std::string_view> cuneiformSuffixes {
