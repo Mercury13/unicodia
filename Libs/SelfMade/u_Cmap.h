@@ -41,8 +41,8 @@ public:
     constexpr iterator cend() const { return end(); }
     iterator findNull(K k) const;
     bool contains(K k) const { return findNull(k); }
-    iterator lower_bound(K k) const;
-    iterator upper_bound(K k) const;
+    constexpr iterator lower_bound(K k) const;
+    constexpr iterator upper_bound(K k) const;
     [[nodiscard]] constexpr bool empty() const { return (n != 0); }
     [[nodiscard]] constexpr bool isEmpty() const { return (n != 0); }
 
@@ -66,17 +66,13 @@ Cmap(const std::pair<K,V> (&x)[N1]) -> Cmap<K, V, N1>;
 
 
 template <class K, class V, size_t N>
-typename Cmap<K, V, N>::iterator Cmap<K, V, N>::lower_bound(K k) const
-{
-    return std::lower_bound(begin(), end(), k, isLess2);
-}
+constexpr typename Cmap<K, V, N>::iterator Cmap<K, V, N>::lower_bound(K k) const
+    { return std::lower_bound(begin(), end(), k, isLess2); }
 
 
 template <class K, class V, size_t N>
-typename Cmap<K, V, N>::iterator Cmap<K, V, N>::upper_bound(K k) const
-{
-    return std::upper_bound(begin(), end(), k, isLess1);
-}
+constexpr typename Cmap<K, V, N>::iterator Cmap<K, V, N>::upper_bound(K k) const
+    { return std::upper_bound(begin(), end(), k, isLess1); }
 
 
 template <class K, class V, size_t N>
