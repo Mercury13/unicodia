@@ -10,7 +10,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 
 # How to build?
 * Download MSYS, slight C++20 and std::filesystem here.
-* Also need cURL (present in W10 18H2+) and 7-zip.
+* Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
 * Configure and run tape.bat file.
 * Configure and run rel.bat file.
 
@@ -45,4 +45,4 @@ It is a simple Unicode encyclopedia and replacement for Character Map.
 * AutoBuilder — build UcAuto.cpp from Unicode base.
   * **Warning**: transition to older/newer Unicode requires a bit of handwork.
 * PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
-* [UcTranslator](https://github.com/Mercury13/utranslator) — incomplete translation tool. Data is still hardcoded into Unicodia.exe, but someday I’ll globalize it.
+* [UTranslator](https://github.com/Mercury13/utranslator) — incomplete translation tool. Data is still hardcoded into Unicodia.exe, but someday I’ll globalize it.
