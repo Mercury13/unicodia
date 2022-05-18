@@ -400,6 +400,11 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "ABOVE",          Dicf::PART_NOUN },
     { "BELOW",          Dicf::PART_NOUN },
 
+    // Control abbreviations
+    { "(FF)",           Dicf::CAP_ALL },
+    { "(LF)",           Dicf::CAP_ALL },
+    { "(CR)",           Dicf::CAP_ALL },
+
     // Numerals
     { "ONE",            Dicf::PART_NUMERAL },
     { "TWO",            Dicf::PART_NUMERAL },
