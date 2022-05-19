@@ -39,6 +39,8 @@
 
 // L10n
 #include "LocDic.h"
+#include "LocList.h"
+
 
 template class LruCache<char32_t, QPixmap>;
 
@@ -1189,8 +1191,6 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
-    finishTranslation();
-
     // Set focus defered
         // Windows timer is low-priority, even after paint
     timerSetFocus = std::make_unique<QTimer>(this);
@@ -1206,12 +1206,12 @@ FmMain::FmMain(QWidget *parent)
 }
 
 
-void FmMain::finishTranslation()
+void FmMain::translateMe()
 {
+    Form::translateMe();
     initTerms();
     initAbout();
 }
-
 
 
 void FmMain::initTerms()
@@ -1235,8 +1235,8 @@ void FmMain::initTerms()
         str::append(text, "' class='popup'><b>");
         str::append(text, term.loc.name);
         str::append(text, "</b></a>");
-        /// @todo [L10n] There are locales that NEVER borrow English names
-        if (!term.engName.empty() && term.engName != term.loc.name) {
+        if (loc::currLang && loc::currLang->showEnglishTerms
+                && !term.engName.empty() && term.engName != term.loc.name) {
             str::append(text, "&nbsp;/ ");
             str::append(text, term.engName);
         }

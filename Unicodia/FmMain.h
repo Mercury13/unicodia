@@ -257,6 +257,7 @@ public:
     FmMain(QWidget *parent = nullptr);
     ~FmMain() override;
     void installTempPrefix();
+    void translateMe() override;
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -289,7 +290,6 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
-    void finishTranslation();
 
     // mywiki::Gui
     void popupAtAbs(
