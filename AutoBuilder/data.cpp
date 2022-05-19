@@ -1313,6 +1313,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x132B4 },
     { 0x13376, 0x1337B },   // only 3 are bad, the rest for uniformness
     { 0x13417 },
+    { 0x13420 },
 };
 
 const std::set<RangeByEnd> noAaRanges {
