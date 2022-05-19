@@ -19,7 +19,7 @@ What was done by authors of Unicodia:
 * Kannada, Modi, Syloti Nagri
   - Rehinted with hinting VM
 * Dives Akuru, Pahawh Hmong
-  - Rehinted w/TtfAutoHint, see settings PNG
+  - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
   - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.
     (note: scale new → old 194%)
@@ -57,8 +57,9 @@ What was done by authors of Unicodia:
   - Added kerning 25CC / gemination mark = −660
   - Rehinted
 * Sundanese:
-  - Enlarged 1BAB new virama for ligatures
+  - Enlarged 1BAB new virama for ligatures, moved to the bottom
   - Made KTA ligature in E000 private-use
+  - Rehinted with FontForge
 * Symbols2
   - Fixed rotated chess pawns, they were standing
 * Tagalog:
