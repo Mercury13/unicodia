@@ -152,7 +152,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
     { FNAME_FUNKY, Ffg::CELL_BIGGER | Ffg::FALL_TO_NEXT },                      // Egyptian
-      { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
+      { "NotoSansEgyptianHieroglyphs-Regular.otf",
+                Ffg::CELL_BIGGER | Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT },        // …1
+      { "NewGardinerSMP.ttf", Ffg::CELL_BIGGER },                               // …2
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic
     { "NotoSerifEthiopic-Regular.ttf", Ffg::DESC_BIGGER },                      // Ethiopic

@@ -1278,6 +1278,7 @@ const std::set<std::string_view> cuneiformKeywords {
 struct RangeByEnd {
     char32_t a = 0, b = 0;
     constexpr RangeByEnd() = default;
+    constexpr RangeByEnd(char32_t aa) : a(aa), b(aa) {}
     constexpr RangeByEnd(char32_t aa, char32_t bb) : a(aa), b(bb) {}
 };
 
@@ -1290,8 +1291,28 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
     { 0x22ACF, 0x22ACF },   // A single char redrawn in U15 and already present in Babel
-    { 0x0F77, 0x0F77 },     // Two badly-rendered chars of Tibetan
-    { 0x0F79, 0x0F79 },
+
+    // Egyptian while Noto is BAAD
+    { 0x1300A },
+    { 0x13017 },
+    { 0x13032 },
+    { 0x13034 },
+    { 0x13038, 0x1303D },
+    { 0x13057 },
+    { 0x13068 },
+    { 0x130D2 },
+    { 0x130D5 },
+    { 0x130FD, 0x130FE },
+    { 0x13108 },
+    { 0x1331F },
+    { 0x1325F },
+    { 0x13267 },
+    { 0x1326A },
+    { 0x13297 },
+    { 0x1329E, 0x1329F },
+    { 0x132B4 },
+    { 0x13376, 0x1337B },   // only 3 are bad, the rest for uniformness
+    { 0x13417 },
 };
 
 const std::set<RangeByEnd> noAaRanges {
