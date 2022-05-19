@@ -1,6 +1,7 @@
 #pragma once
 
-#include "u_Vector.h"
+#include <list>
+#include <unordered_map>
 
 namespace loc {
 
@@ -14,11 +15,28 @@ namespace loc {
     {
     public:
         void translateMe() override;
-        void add(Subject& x) { children.push_back(&x); }
+        void add(Subject& x);
+        bool erase(Subject* x);
+        bool erase(Subject& x) { return erase(&x); }
+        void stopErasing() noexcept { doesErase = false; }
     private:
-        SafeVector <Subject*> children;
+        using List = std::list<Subject*>;
+        List inOrder;
+        std::unordered_map<Subject*, List::iterator> bySubj;
+        bool wasEverTranslated = false;
+        bool doesErase = true;
     };
 
     extern Manager man;
 
+    class AutoStop
+    {
+    public:
+        AutoStop() = default;
+        ~AutoStop() { man.stopErasing(); }
+    };
+
 }   // namespace loc
+
+extern template class std::list<loc::Subject*>;
+extern template class std::unordered_map<loc::Subject*, loc::Manager::List::iterator>;

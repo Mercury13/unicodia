@@ -10,37 +10,58 @@
 #include "LocDic.h"
 #include "LocList.h"
 #include "LocQt.h"
+#include "LocManager.h"
 
 // Qt forms
 #include "FmMain.h"
 
+namespace {
+
+    ///
+    ///  L10n of static data: Unicode DB and some wiki table
+    ///
+    class LocData : public loc::Subject
+    {
+    public:
+        void translateMe() override;
+        static LocData INST;
+    };
+
+    LocData LocData::INST;
+
+    void LocData::translateMe()
+    {
+        uc::finishTranslation();
+        mywiki::translateDatingLoc();
+    }
+
+}   // anon namespace
+
 
 void initTranslation()
 {
+    loc::man.add(LocData::INST);
     auto dir = QApplication::applicationDirPath();
     std::filesystem::path pDir = dir.toStdWString();
 
     loc::collectLangs(pDir);
-
     loc::loadFirstLang();
-
-    /// @todo [L10n] They should be managed by loc::Manager
-    uc::finishTranslation();
-    mywiki::translateDatingLoc();
 }
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
+    uc::completeData();  // …runs once and should not depend on L10n
     initTranslation();
 
-    uc::completeData();
-    FmMain w;
-    loc::translateForm(&w);
-
+    FmMain w;    
     w.installTempPrefix();
+    loc::man.add(w);
 
     w.show();
-    return a.exec();
+
+    { loc::AutoStop autoStop;
+        return a.exec();
+    }   // manager will stop erasing here → speed up exit
 }

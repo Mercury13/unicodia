@@ -25,6 +25,9 @@
 #include "UcData.h"
 #include "UcSearch.h"
 
+// L10n
+#include "LocQt.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
 QT_END_NAMESPACE
@@ -242,6 +245,7 @@ enum class SelectMode { NONE, INSTANT, DEFERED };
 
 
 class FmMain : public QMainWindow,
+               public loc::Form<FmMain>,
                private mywiki::Gui
 {
     Q_OBJECT

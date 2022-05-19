@@ -18,7 +18,7 @@ namespace loc {
             QObject* object, std::string_view prefix, std::string_view name,
             const char* property);
 
-    template <class That> requires std::is_base_of_v<QWidget, That>
+    template <class That>   // CRTP → cannot write; waiting for C++23 this as param
     class Form : public Subject
     {
     public:
@@ -27,6 +27,11 @@ namespace loc {
             if (auto fm = dynamic_cast<That*>(this)) {
                 translateForm(fm);
             }
+        }
+
+        ~Form()
+        {
+            loc::man.erase(this);
         }
     };
 

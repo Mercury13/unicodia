@@ -13,6 +13,7 @@
 
 // L10n
 #include "LocDic.h"
+#include "LocManager.h"
 
 
 loc::LangList loc::allLangs;
@@ -31,6 +32,7 @@ void loc::Lang::load()
         QApplication::installTranslator(translator.get());
     loc::loadIni(loc::dic, fnLang);
     currLang = this;
+    loc::man.translateMe();
 }
 
 
