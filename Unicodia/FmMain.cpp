@@ -21,6 +21,8 @@
 #include <QUrl>
 #include <QTimer>
 #include <QSvgRenderer>
+#include <QKeySequence>
+#include <QShortcut>
 
 // Misc
 #include "u_Strings.h"
@@ -1191,6 +1193,10 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
+    // Change language
+    shcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
+    connect(shcut, &QShortcut::activated, this, &This::changeLanguage);
+
     // Set focus defered
         // Windows timer is low-priority, even after paint
     timerSetFocus = std::make_unique<QTimer>(this);
@@ -1824,7 +1830,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 }
 
 
-void FmMain::doSearch(QString what)
+void FmMain::doSearch(const QString& what)
 {
     auto r = uc::doSearch(what);
     showSearchResult(std::move(r));
@@ -1850,3 +1856,14 @@ void FmMain::searchEnterPressed(int index)
     }
 }
 
+
+void FmMain::changeLanguage()
+{
+    auto itX = std::find_if(loc::allLangs.begin(), loc::allLangs.end(),
+                [](auto& x){
+                    return x.get() == loc::currLang;
+                });
+    if (itX == loc::allLangs.end() || ++itX == loc::allLangs.end())
+        itX = loc::allLangs.begin();
+    (*itX)->load();
+}
