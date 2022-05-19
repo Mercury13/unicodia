@@ -284,6 +284,8 @@ namespace uc {
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
         GRANTHA,
+        GREEK,          // Several evil misrenders from normal font Cambria
+          Z_GRK_1,
         GUJARATI,
         GUNJALA_GONDI,
         GURMUKHI,

@@ -1284,6 +1284,7 @@ struct RangeByEnd {
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
 const std::set<RangeByEnd> alternateRanges {
+    { 0x03D2, 0x03D4 },     // Some Greek letters
     { 0x2010, 0x203B },     // Several chars from Punctuation…
     { 0x203D, 0x203E },     // …Skip emoji and go on
     { 0x2336, 0x237A },     // Technical — APL

@@ -162,6 +162,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Greek
+      { FNAME_DEJAVU },
     { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
@@ -593,7 +595,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Greek OK, W7 Cambria + Noto do the job
     { "Grek", QFontDatabase::Greek,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::crange_ins(-9, -8), EcFont::NORMAL },
+        Dating::crange_ins(-9, -8), EcFont::GREEK },
     // Gujarati OK, installed Google Noto: cannot find a good pair for W7/10, and Noto is REALLY nice.
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
