@@ -112,6 +112,6 @@ void loc::translateForm(QWidget* form)
         }
     }
 
-    auto prefix = str::cat( formKey, '.' );
+    auto prefix = str::cat( formKey, ".Ui." );
     translateWidget(form, form, prefix);
 }
