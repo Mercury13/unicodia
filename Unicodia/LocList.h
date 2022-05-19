@@ -29,10 +29,16 @@ namespace loc
         void unload();
     };
 
-    using LangList = SafeVector<std::unique_ptr<Lang>>;
-    void collectLangs(const std::filesystem::path& programPath);
-    void loadFirstLang();
-    void loadFirstLang();
+    using VLang = SafeVector<std::unique_ptr<Lang>>;
+
+    class LangList : public VLang
+    {
+    public:
+        void collect(const std::filesystem::path& programPath);
+        Lang* findFirst();
+        Lang* byIso(std::u8string_view x);
+        void loadFirst();
+    };
 
     extern LangList allLangs;
     extern loc::Lang* currLang;

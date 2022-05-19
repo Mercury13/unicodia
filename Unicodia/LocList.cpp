@@ -99,7 +99,7 @@ namespace {
 }
 
 
-void loc::collectLangs(const std::filesystem::path& programPath)
+void loc::LangList::collect(const std::filesystem::path& programPath)
 {
     auto dir = programPath / "Languages";
 
@@ -117,18 +117,40 @@ void loc::collectLangs(const std::filesystem::path& programPath)
 
             // Parse it
             if (parseLang(*tempLang, v.path())) {  // NOLINT(bugprone-use-after-move)
-                allLangs.push_back(std::move(tempLang));
+                push_back(std::move(tempLang));
             }
         }
     }
 }
 
 
-void loc::loadFirstLang()
+loc::Lang* loc::LangList::byIso(std::u8string_view x)
 {
-    if (allLangs.empty())
-        return;
+    auto it = std::find_if(begin(), end(),
+            [x](auto& p){ return (p->name.isoSmall == x); }
+        );
+    return (it == end()) ? nullptr : it->get();
+}
 
-    // LAST RESORT — load first available language
-    allLangs[0]->load();
+
+loc::Lang* loc::LangList::findFirst()
+{
+    if (empty())
+        return nullptr;
+
+    // Find Russian (for now)
+    if (auto p = byIso(u8"ru"))
+        return p;
+
+    // LAST RESORT — first available
+    return front().get();
+}
+
+
+void loc::LangList::loadFirst()
+{
+    if (auto pLang = findFirst()) {
+        pLang->load();
+    }
+
 }

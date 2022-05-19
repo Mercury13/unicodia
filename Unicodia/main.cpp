@@ -44,9 +44,10 @@ void initTranslation()
     auto dir = QApplication::applicationDirPath();
     std::filesystem::path pDir = dir.toStdWString();
 
-    loc::collectLangs(pDir);
-    loc::loadFirstLang();
+    loc::allLangs.collect(pDir);
+    loc::allLangs.loadFirst();
 }
+
 
 int main(int argc, char *argv[])
 {
