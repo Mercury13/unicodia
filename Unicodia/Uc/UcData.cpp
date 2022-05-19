@@ -230,7 +230,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSerifOldUyghur-Regular.ttf", Ffg::STUB_RTL },                        // Old Uyghur
     { "NotoSansOriyaUI-Regular.ttf", 120_pc },                                  // Oriya
-    { "NotoSansOldTurkic-Regular.ttf" },                                        // Orkhon
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Orkhon
+      { "NotoSansOldTurkic-Regular.ttf" },                                      // …1
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
