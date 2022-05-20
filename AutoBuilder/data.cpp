@@ -399,6 +399,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     GREK("ALPHA")
     GREK("BETA")
     GREK("GAMMA")
+      GREK("DIGAMMA")
     GREK("DELTA")
     GREK("EPSILON")
     GREK("ZETA")
@@ -1144,6 +1145,12 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Greek lunate sigma symbol")     // Sigma is small here
     EX("Greek rho with stroke symbol")  // Rho is small here
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
+    EX("Coptic symbol kai")             // Seemingly small
+    EX("Coptic symbol Mi Ro")
+    EX("Coptic symbol Pi Ro")
+    EX("Coptic symbol Tau Ro")
+    EX("Coptic symbol Khi Ro")
+    EX("Coptic symbol Shima Sima")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
