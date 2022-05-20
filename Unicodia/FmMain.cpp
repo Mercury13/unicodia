@@ -1198,6 +1198,10 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
     connect(shcut, &QShortcut::activated, this, &This::changeLanguage);
 
+    // Change language
+    shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
+    connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
+
     // Set focus defered
         // Windows timer is low-priority, even after paint
     timerSetFocus = std::make_unique<QTimer>(this);
@@ -1876,4 +1880,11 @@ void FmMain::changeLanguage()
     if (itX == loc::allLangs.end() || ++itX == loc::allLangs.end())
         itX = loc::allLangs.begin();
     (*itX)->load();
+}
+
+
+void FmMain::reloadLanguage()
+{
+    if (loc::currLang)
+        loc::currLang->forceLoad();
 }

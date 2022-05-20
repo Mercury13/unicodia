@@ -22,10 +22,8 @@ loc::Lang* loc::currLang = nullptr;
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
-void loc::Lang::load()
+void loc::Lang::forceLoad()
 {
-    if (currLang == this)
-        return;
     if (currLang)
         currLang->unload();
     if (translator)
@@ -33,6 +31,14 @@ void loc::Lang::load()
     loc::loadIni(loc::dic, fnLang);
     currLang = this;
     loc::man.translateMe();
+}
+
+
+void loc::Lang::load()
+{
+    if (currLang == this)
+        return;
+    forceLoad();
 }
 
 

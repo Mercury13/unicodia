@@ -26,6 +26,7 @@ namespace loc
         std::unique_ptr<QTranslator> translator;
 
         void load();
+        void forceLoad();
         void unload();
     };
 

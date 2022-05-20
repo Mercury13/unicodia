@@ -318,6 +318,7 @@ private slots:
     void focusSearch();
     void searchEnterPressed(int index);
     void changeLanguage();
+    void reloadLanguage();
     void on_comboBlock_currentIndexChanged(int index);
 };
 
