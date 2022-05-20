@@ -433,9 +433,9 @@ namespace uc {
         CELL_SMALLER    = 1<<11,    ///< Make cell text a bit smaller
         CELL_BIGGER     = 1<<12,    ///< Make cell text a bit smaller
         STUB_FINEGRAINED= 1<<13,    ///< Stub on/off is controlled on finer level
-        STUB_RTL        = 1<<13,    ///< Use “RtL isolate” char in stub
-        CUSTOM_AA       = 1<<14,    ///< Use custom antialiasing in table (unused right now)
-        STUB_INTERCHAR  = 1<<15,    ///< Debug: test inter-character interval
+        STUB_RTL        = 1<<14,    ///< Use “RtL isolate” char in stub
+        CUSTOM_AA       = 1<<15,    ///< Use custom antialiasing in table (unused right now)
+        STUB_INTERCHAR  = 1<<16,    ///< Debug: test inter-character interval
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
