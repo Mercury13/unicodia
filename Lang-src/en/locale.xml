@@ -7,7 +7,7 @@
 <locale native="English" international="English" iso="en" eng-terms="0">
 	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. 
 	     NOT IMPLEMENTED FOR NOW -->
-	<wiki-templates />
+	<wiki-templates>
 		<!-- first{{-}}second  →  typographic dash -->
 		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
 		<!-- first{{,-}}second  →  typographic comma-dash -->

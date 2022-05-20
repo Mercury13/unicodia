@@ -1930,6 +1930,7 @@
     </text>
     <text id="Text">
      <orig>Буквы и цифры для языков пали ''(литургический в буддизме)'' и красных тай ''(Мьянма, 100{{_}}тыс. на 2010)''.</orig>
+     <transl>Letters and digits for languages: Pali ''(liturgic in Buddhism)'' and Red Tai ''(Myanmar, 100k as of 2010)''.</transl>
     </text>
    </group>
    <group id="AA00">
@@ -1950,7 +1951,7 @@
    <group id="AA80">
     <text id="Name">
      <orig>Тай-вьет</orig>
-     <transl> Tai viet</transl>
+     <transl>Tai Viet</transl>
     </text>
    </group>
    <group id="AAE0">
@@ -1960,6 +1961,7 @@
     </text>
     <text id="Text">
      <orig>Устаревшие символы из языка манипури, в том числе [[pt:virama|вирама]] для сборки старых [[pt:ligature|лигатур]].</orig>
+     <transl>Obsolete characters from Meetei language, including [[pt:virama|virama]] for assembling old [[pt:ligature|ligatures]].</transl>
     </text>
    </group>
    <group id="AB00">
@@ -1969,6 +1971,7 @@
     </text>
     <text id="Text">
      <orig>Буквы для языков гамо-гофа-дауро (три народа, один язык), баскето и гумуз (с 2007 на [[ps:Latn|латинице]]).</orig>
+     <transl>Letters for languages: Gamo-Gofa-Dawro (three ethnic groups, one language), Basketo and Gumuz (in [[ps:Latn|Latin]] since 2007).</transl>
     </text>
    </group>
    <group id="AB30">
@@ -5264,24 +5267,29 @@
     <au-cmt>Test: any control char</au-cmt>
     <text id="Name">
      <orig>Управляющий</orig>
+     <transl>Coltrol</transl>
     </text>
     <text id="Text">
      <orig>В первые годы, когда часто требовалось повторить сессию обмена вручную (перфоратором или консолью), управляющие символы играли роль форматов данных и сетевых протоколов. Клавиша ''Ctrl'' изначально служила для ввода управляющих символов. В настоящее время используются немногие из них:<br /><br />* нулевой символ 00{{-}}конец строки в памяти;<br />* конец файла 04 (Unix) и 1A (DOS/Windows){{-}}вводятся в консоли как Ctrl+D/Ctrl+Z, чтобы закончить текст;<br />* звонок 07{{-}}терминал или принтер привлекает внимание оператора. Сейчас обычно через звуковую плату и без приостановки печати;<br />* шаг назад (забой) 08{{-}}перемещает каретку на шаг назад;<br />* табуляция 09{{-}}перемещает к позициям 9, 17, 25, 33… для набора таблиц;<br />* перевод строки 0A{{-}}конец строки в текстовом файле (Unix), проворот барабана на строку;<br />* прогон листа 0C{{-}}принтер выбрасывает лист;<br />* возврат каретки 0D. Отсюда конец строки в DOS/Windows 0D+0A{{-}}принтер возвращает каретку и проворачивает барабан;<br />* Escape 1B{{-}}исполнить команду принтера (шрифты, графика) или консоли (перемещение курсора, цвета).<br /><br />Другие интересные команды:<br /><br />* вертикальная табуляция 0B{{-}}прокрутить барабан к запрограммированной позиции. Делает быстрее и тише печать на готовых формулярах;<br />* вкл/выкл альтернативный регистр 0E/0F{{-}}другой цвет ленты, другой набор символов;<br />* экранирование управляющего 10{{-}}следующий символ [[pt:graphic|графический]], а не{{_}}управляющий;<br />* удаление 7F{{-}}исправление ошибки на перфоленте (пробивают все семь дорожек, такой символ не{{_}}подлежит считыванию). В некоторых терминалах эту же роль играл FF, из-за чего [[ps:Cyrl|русскую]] «я» заменяли заглавной на файл-серверах, в играх жанра MUD.<br /><br />Все 65 символов из категории «Управляющие» исторические. Символы, влияющие на отображение текста, называются [[pt:format|форматирующими]].</orig>
+     <transl>In first years, when it was often needed to repeat exchange session by hand (using punched tape or console), control characters were used instead of data formats ans network protocols. ''Ctrl'' key was initially used to enter control characters. Currently few of then are used:<br /><br />* null character 00{{-}}end of string in memory;<br />* end of file 04 (Unix) and 1A (DOS/Windows){{-}}entered from console as Ctrl+D/Ctrl+Z to finish text input;<br />* bell 07{{-}}terminal or printer draws operator’s attention. Currently usually via sound card and without pausing printing;<br />* backspace 08{{-}}moves carriage one step back;<br />* tabulation 09{{-}}moves to positions 9, 17, 25, 33… for table formatting;<br />* line feed 0A{{-}}end of line in text file (Unix), turns drum one line forward;<br />* form feed 0C{{-}}printer ejects the sheet;<br />* carriage return 0D. Thus end of line in DOS/Windows 0D+0A{{-}}printer returns carriage and turns drum;<br />* escape 1B{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).<br /><br />Other interesting commands:<br />* vertical tabulation 0B{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;<br />* shift out/in 0E/0F{{-}}other ribbon colour, other character set;<br />* data link escape 10{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;<br />* delete 7F{{-}}correcting mistakes on punched tapes (all seven tracks are punched, this character is skipped). In some terminals FF character plays this role, that’s why [[ps:Cyrl|Russian]] “я” was replaced with capital in file servers, in MUD games.<br /><br />All 65 characters from Control category are historical. Characters that actually affect text display are called [[pt:format|format]].</transl>
     </text>
    </group>
    <group id="Cf">
     <au-cmt>Test: any invisible format char</au-cmt>
     <text id="Name">
      <orig>Форматирующий</orig>
+     <transl>Format</transl>
     </text>
     <text id="Text">
      <orig>Невидимый символ, использующийся для управления различными алгоритмами обработки текста:<br /><br />* Разбивает текст на строки: 00AD{{-}}мягкий перенос.<br /><br />* Задаёт семантику текста: 2062{{-}}невидимый знак умножения в формуле, который можно перенести a×{{_}}//{{_}}×b, в отличие от невидимого вызова функции 2061.<br /><br />* Участвует в [[pt:ligature|лигатурах]] или, наоборот, разрывает их: 200D{{-}}нулевой соединитель.<br /><br />* Задаёт направление письма: 2066{{-}}изолировать участок, идущий слева направо.<br /><br />* Выполняет специфичные для письменности задачи, которые невозможно реализовать через шрифт: 1D173{{-}}начать группу из нескольких нот, соединённых ребром.</orig>
+     <transl>Invisible character that controls various text-processing algorithms:<br /><br />* Wrapping text into lines: 00AD{{-}}soft hyphen.<br /><br />* Adding semantics to text: 2062{{-}}invisible multiplication sign in equation, and it’s possible to break a line a{{_}}//{{_}}×b (a×{{_}}//{{_}}×b in Russia), unlike invisible function application 2061.<br /><br />* Builds/breaks [[pt:ligature|ligatures]]: 200D{{-}}zero-width joiner.<br /><br />* Specifies writing direction: 2066{{-}}isolate a span of text that goes left-to-right.<br /><br />* Does script-specific tasks that are impossible to implement using font: 1D173{{-}}start a group of musical notes connected with beam.</transl>
     </text>
    </group>
    <group id="Ll">
     <au-cmt>Test: abc</au-cmt>
     <text id="Name">
      <orig>Буква/строчная</orig>
+     <transl>Letter/lowercase</transl>
     </text>
     <text id="Text">
      <orig>Письмо «[[pt:minuscule|минускул]]», появившееся в раннее средневековье для экономии дорогого пергамента, превратилось в строчные буквы и сделало латиницу очень выразительным алфавитом.</orig>
@@ -5291,6 +5299,7 @@
     <au-cmt>Test: such phonetical letters</au-cmt>
     <text id="Name">
      <orig>Буква/модифицирующая</orig>
+     <transl>Letter/modifier</transl>
     </text>
     <text id="Text">
      <orig>Такие «недобуквы», приделывающие к букве оттенки смысла, чаще всего встречаются в фонетике. Так, модифицирующей буквой является штрих мягкости xʹ, в отличие от похожего математического штриха x′.</orig>
@@ -5300,6 +5309,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Буква/другая</orig>
+     <transl>Letter/other</transl>
     </text>
     <text id="Text">
      <orig>Символы различных письменностей, где нет деления на заглавные и строчные буквы. Например, [[ps:Hebr|иврит]], [[ps:Arab|арабская вязь]] и [[ps:Hani|китайские иероглифы]]. Также особые символы вроде мужского/женского порядкового знака романских языков (1º{{-}}первый, 1ª{{-}}первая).</orig>
@@ -5309,6 +5319,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Буква/смешанный регистр</orig>
+     <transl>Letter/mixed case</transl>
     </text>
     <text id="Text">
      <orig>Символы-диграфы, состоящие из заглавной и строчной букв. Так, в хорватской латинице есть диграф ǈ. Сербский аналог Љ не{{_}}является диграфом и потому смешанного регистра не{{_}}имеет.</orig>
@@ -5318,6 +5329,7 @@
     <au-cmt>Test: ABC…</au-cmt>
     <text id="Name">
      <orig>Буква/заглавная</orig>
+     <transl>Letter/uppercase</transl>
     </text>
     <text id="Text">
      <orig>Те письменности, которые приняли маленькие (строчные) буквы, буквы старой формы стали называть большими, заглавными или прописными.</orig>
@@ -5327,6 +5339,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Метка/протяжённая</orig>
+     <transl>Mark/spacing</transl>
     </text>
     <text id="Text">
      <orig>Протяжённые (обладающие шириной) комбинирующие метки встречаются в некоторых языках Юго-Восточной Азии: деванагари, бенгальском, кáннаде, хангыле…</orig>
@@ -5336,6 +5349,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Метка/охватывающая</orig>
+     <transl>Mark/enclosing</transl>
     </text>
     <text id="Text">
      <orig>Охватывающие метки используются в древнерусских буквенных цифрах (А҈). Также существуют охватывающие квадрат, круг и другие фигуры. Ни один проверенный типографский движок на Windows 10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, но на хороших шрифтах вроде DejaVu результат очень неплох.</orig>
@@ -5345,6 +5359,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Метка/непротяжённая</orig>
+     <transl>Mark/nonspacing</transl>
     </text>
     <text id="Text">
      <orig>Непротяжённые метки (например, знак ударе́ния) устроены как символы нулевой ширины, отсюда название. В хороших шрифтах дизайнер вручную помещает метки на наиболее распространённые буквы. Но если подобной комбинации не{{_}}предусмотрели (8́), символы накладываются как попало, и результат обычно плох.</orig>
@@ -5354,6 +5369,7 @@
     <au-cmt>Test: 123…</au-cmt>
     <text id="Name">
      <orig>Числовой/десятичный</orig>
+     <transl>Number/decimal</transl>
     </text>
     <text id="Text">
      <orig>Люди считают десятками, поскольку у них десять пальцев. Слова «цифра» и «палец» во многих языках близки. Изобретённая в Индии позиционная система счисления используется всем миром, однако в языках Ближнего Востока и Юго-Восточной Азии цифры бывают причудливые.</orig>
@@ -5363,6 +5379,7 @@
     <au-cmt>Test: precomposed Roman numerals</au-cmt>
     <text id="Name">
      <orig>Числовой/буквенный</orig>
+     <transl>Number/letter</transl>
     </text>
     <text id="Text">
      <orig>Римские, китайские и другие цифры, основанные на буквах. Древнерусские также основаны на буквах, но в Юникоде для этого используются обычные А, Б, Г… с комбинирующими метками.</orig>
@@ -5372,6 +5389,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Числовой/другой</orig>
+     <transl>Number/other</transl>
     </text>
     <text id="Text">
      <orig>Архаичные системы счисления, [[pt:precomposed|монолитные]] дроби, верхние и нижние индексы, цифры в кругах, сокращения для больших чисел и другие цифровые символы.</orig>
@@ -5381,6 +5399,7 @@
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Знак препинания/соединитель</orig>
+     <transl>Punctuation/connector</transl>
     </text>
     <text id="Text">
      <orig>Небольшая группа символов. Наиболее известный из них{{-}}знак подчёркивания.</orig>
@@ -5390,6 +5409,7 @@
     <au-cmt>Test: - —</au-cmt>
     <text id="Name">
      <orig>Знак препинания/черта</orig>
+     <transl>Punctuation/dash</transl>
     </text>
     <text id="Text">
      <orig>Дефисы и тире. Минус также является чертой, но отнесён к математическим знакам.</orig>
@@ -5399,60 +5419,73 @@
     <au-cmt>Test: )</au-cmt>
     <text id="Name">
      <orig>Знак препинания/закрывающая скобка</orig>
+     <transl>Punctuation/closing bracket</transl>
     </text>
     <text id="Text">
-     <orig>Скобки отнечены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме.</orig>
+     <orig>Скобки отнесены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме.</orig>
+     <transl>Brackets are allocated to a separate category because they play an important role in bidirectional writing.</transl>
     </text>
    </group>
    <group id="Pf">
     <au-cmt>Test: »</au-cmt>
     <text id="Name">
      <orig>Знак препинания/конечный</orig>
+     <transl>Punctuation/final</transl>
     </text>
     <text id="Text">
      <orig>В основном кавычки.</orig>
+     <transl>Mainly quotes.</transl>
     </text>
    </group>
    <group id="Pi">
     <au-cmt>Test: «</au-cmt>
     <text id="Name">
      <orig>Знак препинания/начальный</orig>
+     <transl>Punctuation/initial</transl>
     </text>
     <text id="Text">
      <orig>В основном кавычки.</orig>
+     <transl>Mainly quotes.</transl>
     </text>
    </group>
    <group id="Po">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Знак препинания/другой</orig>
+     <transl>Punctuation/other</transl>
     </text>
     <text id="Text">
      <orig>Точка, запятая, процент, маркер списка и многое что ещё.</orig>
+     <transl>Period, comma, percent, list bullet and many other characters.</transl>
     </text>
    </group>
    <group id="Ps">
     <au-cmt>Test: )</au-cmt>
     <text id="Name">
      <orig>Знак препинания/открывающая скобка</orig>
+     <transl>Punctuation/opening bracket</transl>
     </text>
     <text id="Text">
-     <orig>Скобки отнечены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме.</orig>
+     <orig>Скобки отнесены к отдельной категории, потому что играют важную роль в двунаправленном алгоритме.</orig>
+     <transl>Brackets are allocated to a separate category because they play an important role in bidirectional writing.</transl>
     </text>
    </group>
    <group id="Sc">
     <au-cmt>Test: $??</au-cmt>
     <text id="Name">
      <orig>Символ/валютный</orig>
+     <transl>Symbol/currency</transl>
     </text>
     <text id="Text">
      <orig>Валютный символ{{-}}важная часть имиджа страны, и даже у монголов есть тугрик &lt;font size='+1'&gt;₮&lt;/font&gt;, напоминающий могильный крест. Артемий Лебедев в конце 1990‑х говорил, что рублю не{{_}}нужен особый знак, но впоследствии именно его пиар сделал знак &lt;font size='+1'&gt;₽&lt;/font&gt; официальным.</orig>
+     <transl>Currency character is an imp[ortant part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does not need a special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</transl>
     </text>
    </group>
    <group id="Sk">
     <au-cmt>Test: seen from desc</au-cmt>
     <text id="Name">
      <orig>Символ/модифицирующий</orig>
+     <transl>Symbol/modifier</transl>
     </text>
     <text id="Text">
      <orig>Символы вроде крышки ^, внешне совпадающие с [[pt:combining|комбинирующими]] метками, но лишённые особых свойств. А также некоторые другие символы.&lt;p&gt;Многие из таких символов родом с пишущих машинок: чтобы нарисовать, например, ударение, надо было вернуть каретку на шаг назад и выбить ударение в том же [[pt:mono|знакоместе]]. Литера рисовалась так, чтобы один символ годился на роль апострофа и ударения.</orig>
