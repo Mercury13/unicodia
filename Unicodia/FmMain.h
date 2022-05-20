@@ -34,9 +34,6 @@ QT_END_NAMESPACE
 
 
 constexpr int NCOLS = 8;
-constexpr int FSZ_TABLE = 15;
-constexpr int FSZ_BIG = 50;
-constexpr int FSZ_BIG_CONTROL = 45;
 
 class FmPopup2;
 class FmMessage;
@@ -48,6 +45,8 @@ struct MaybeChar {
     explicit operator bool() const { return cp; }
     const uc::Cp& operator * () const { return *cp; }
     const uc::Cp* operator ->() const { return  cp; }
+    MaybeChar& operator = (const uc::Cp& x)
+        { code = x.subj; cp = &x; return *this; }
     bool hasCp() const { return cp; }
 };
 
@@ -272,10 +271,11 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     std::unique_ptr<QTimer> timerSetFocus;
     QFont fontBig, fontTofu;
-    char32_t shownCp = uc::NO_CHAR;
+    MaybeChar shownCp;
 
     void initAbout();
     void showCp(MaybeChar ch);
+    void forceShowCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <SelectMode mode> void selectChar(char32_t code);
     void drawSampleWithQt(const uc::Cp& cp);

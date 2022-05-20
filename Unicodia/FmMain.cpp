@@ -48,6 +48,10 @@ template class LruCache<char32_t, QPixmap>;
 
 using namespace std::string_view_literals;
 
+constexpr int FSZ_TABLE = 15;
+constexpr int FSZ_BIG = 50;
+constexpr int FSZ_BIG_CONTROL = 45;
+
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
@@ -1208,7 +1212,7 @@ FmMain::FmMain(QWidget *parent)
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
     ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
-    charChanged(index);
+    shownCp = uc::cpInfo[0];
 }
 
 
@@ -1217,6 +1221,9 @@ void FmMain::translateMe()
     Form::translateMe();
     initTerms();
     initAbout();
+
+    // Main tab
+    forceShowCp(shownCp);
 }
 
 
@@ -1443,11 +1450,9 @@ void FmMain::clearSample()
 }
 
 
-void FmMain::showCp(MaybeChar ch)
+void FmMain::forceShowCp(MaybeChar ch)
 {
-    if (ch.code == shownCp)
-        return;
-    shownCp = ch.code;
+    shownCp = ch;
 
     // Code
     char buf[300];
@@ -1567,6 +1572,14 @@ void FmMain::showCp(MaybeChar ch)
             ui->vwInfo->setText(text);
         }
     }
+}
+
+
+void FmMain::showCp(MaybeChar ch)
+{
+    if (ch.code == shownCp.code)
+        return;
+    forceShowCp(ch);
 }
 
 
