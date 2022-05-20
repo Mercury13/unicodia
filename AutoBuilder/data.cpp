@@ -405,7 +405,6 @@ const std::map<std::string_view, DicEntry> dictionary {
     GREK("ETA")
     GREK("THETA")
     GREK("IOTA")
-    { "KAI", Dicf::PART_NOUN | Dicf::CAP_TITLE | Dicf::IF_SCRIPT },
     GREK("KAPPA")
     GREK("LAMDA")
     GREK("LAMBDA")
@@ -1116,13 +1115,10 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Rounded symbol for Shuangxi")
     EX("Rounded symbol for Cai")
     EX("Man with gua pi mao")           // Conflict with Greek Pi
-    EX("Thai character Ko kai")         // Conflict with Greek Kai
     EX("Thai character No nu")          // Conflict with Greek Nu
     EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
     EX("Planck constant over two pi")   // pi is small here
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
-    EX("Byzantine musical symbol Thes kai apothes")  // What to do with that Kai?
-    EX("Byzantine musical symbol Enarxis kai fthora vou") // Same
 
 #define MATH_SYM(x) \
         EX("Greek " x " symbol") \
@@ -1143,6 +1139,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Greek lunate epsilon symbol")   // Epsilon is small here
     EX("Greek reversed lunate epsilon symbol") // Same
     EX("Greek beta symbol")             // Beta is small here
+    EX("Greek capital Kai symbol")      // Kai is capital here
     EX("Greek kai symbol")              // Kai is small here
     EX("Greek lunate sigma symbol")     // Sigma is small here
     EX("Greek rho with stroke symbol")  // Rho is small here
