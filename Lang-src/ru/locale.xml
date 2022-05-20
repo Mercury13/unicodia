@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- native: Chinese (simplified)
      international: 简体中文
-	 iso: zh
+     iso: zh
      eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
 -->
 <locale native="Русский" international="Russian" iso="ru" eng-terms="1">
-	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. 
-	     NOT IMPLEMENTED FOR NOW -->
+	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
 		<!-- {{№}}5  →  №, narrow NBSP -->
 		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
