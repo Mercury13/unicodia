@@ -373,6 +373,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SHELF",          Dicf::PART_NOUN },
     { "SHOE",           Dicf::PART_NOUN },  // For APL not really, but OK
     { "SPIRANT",        Dicf::PART_NOUN },  // One time, probably OK
+    { "STEM",           Dicf::PART_NOUN },
     { "STOP",           Dicf::PART_NOUN },
     { "STROKE",         Dicf::PART_NOUN },
     { "STROKES",        Dicf::PART_NOUN },
@@ -487,6 +488,11 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BARLINE",        Dicf::PART_NOUN },
     { "BOW",            Dicf::PART_NOUN },
     { "DOIT",           Dicf::PART_NOUN },
+    { "FLAG-1",         Dicf::PART_NOUN },
+    { "FLAG-2",         Dicf::PART_NOUN },
+    { "FLAG-3",         Dicf::PART_NOUN },
+    { "FLAG-4",         Dicf::PART_NOUN },
+    { "FLAG-5",         Dicf::PART_NOUN },
     { "FLIP",           Dicf::PART_NOUN },
     { "HARMONIC",       Dicf::PART_NOUN },      // OK, music only
     { "LOURE",          Dicf::PART_NOUN },
@@ -500,6 +506,11 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "STACCATO",       Dicf::PART_NOUN },
     { "TENUTO",         Dicf::PART_NOUN },
     { "TONGUE",         Dicf::PART_NOUN },      // OK, never used as adjective
+    { "TREMOLO-1",      Dicf::PART_NOUN },
+    { "TREMOLO-2",      Dicf::PART_NOUN },
+    { "TREMOLO-3",      Dicf::PART_NOUN },
+    { "TREMOLO-4",      Dicf::PART_NOUN },
+    { "TREMOLO-5",      Dicf::PART_NOUN },
     { "TURN",           Dicf::PART_NOUN },
 
     // Adjectives
@@ -537,6 +548,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "DIALECT-P",      { Dicf::PART_ADJECTIVE, "dialect-P" } },
     { "EGYPTOLOGICAL",  Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "EXCLAMATION",    Dicf::PART_ADJECTIVE },
+    { "FINGERED",       Dicf::PART_ADJECTIVE },
     { "FIXED-FORM",     Dicf::PART_ADJECTIVE },
     { "FINAL",          Dicf::PART_ADJECTIVE },
     { "FLAT",           Dicf::PART_ADJECTIVE },
@@ -619,6 +631,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SOFT",           Dicf::PART_ADJECTIVE },
     { "SOUTH",          Dicf::PART_ADJECTIVE },
     { "SOUTHERN",       Dicf::PART_ADJECTIVE },
+    { "SPRECHGESANG",   Dicf::PART_ADJECTIVE },
     { "STRAIGHT",       Dicf::PART_ADJECTIVE },
     { "STRETCHED",      Dicf::PART_ADJECTIVE },
     { "SYLLABIC",       Dicf::PART_ADJECTIVE },
@@ -803,6 +816,7 @@ const std::map<std::string_view, std::string_view> exceptions{
     EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
     EX("Musical symbol Right repeat sign")      // The same
     EX("Musical symbol Half pedal mark")        // The same
+    EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
     EX("Square hPa")                            // A whole cohort of Chinese units
     EX("Square IU")
     EX("Square da")
