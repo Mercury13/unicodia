@@ -1,6 +1,7 @@
 #pragma once
 
 // C++
+#include <set>
 #include <filesystem>
 
 // Qt
@@ -24,6 +25,7 @@ namespace loc
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
         bool showEnglishTerms = true;
         std::unique_ptr<QTranslator> translator;
+        std::map<std::string, std::string, std::less<>> wikiTemplates;
 
         void load();
         void forceLoad();

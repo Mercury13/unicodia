@@ -85,6 +85,15 @@ namespace {
         r.name.isoSmall = str::toU8(hLocale.attribute("iso").as_string());
         r.showEnglishTerms = hLocale.attribute("eng-terms").as_bool(true);
 
+        r.wikiTemplates.clear();
+        auto hTemplates = hLocale.child("wiki-templates");
+        for (auto& v : hTemplates.children("tmpl")) {
+            if (std::string_view name = v.attribute("name").as_string(); !name.empty()) {
+                auto text = v.text().as_string();
+                r.wikiTemplates[std::string{name}] = text;
+            }
+        }
+
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
         for (auto& v : di) {

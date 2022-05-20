@@ -13,6 +13,7 @@
 
 // L10n
 #include "LocDic.h"
+#include "LocList.h"
 
 // Wiki
 #include "Wiki.h"
@@ -391,6 +392,13 @@ namespace {
     void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
     {
         auto name = x[0];
+        if (loc::currLang) {
+            auto& wt = loc::currLang->wikiTemplates;
+            if (auto it = wt.find(name); it != wt.end()) {
+                str::append(s, it->second);
+                return;
+            }
+        }
         if (name == "sm"sv) {
             bool useCustom = !font.flags.have(uc::Ffg::DESC_STD);
             auto fontSize =
@@ -409,10 +417,6 @@ namespace {
             str::append(s, "</font>");
         } else if (name == "_"sv) {
             s.append(QChar(0x00A0));
-        } else if (name == "-"sv) {
-            str::append(s, "<span style='font-size:4pt'>\u00A0</span>—<span style='font-size:4pt'> </span>"sv);
-        } else if (name == ",-"sv) {
-            str::append(s, ",—<span style='font-size:4pt'> </span>"sv);
         } else if (name == "%"sv) {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
@@ -420,12 +424,6 @@ namespace {
             str::append(s, "<font size='+2' face='Segoe UI Emoji,Noto Sans Symbols,Noto Sans Symbols2'>"sv);
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
-        } else if (name == "№"sv) {
-            /// @todo [L10n] Check all them, move to lang resource some
-            str::append(s, u8"№<span style='font-size:3pt'>\u00A0</span>"sv);
-            str::append(s, x.safeGetV(1, {}));
-        } else if (name == "bc"sv) {
-            str::append(s, u8"" NBSP "до" NBSP "н.э."sv );
         } else if (name == "fontface"sv) {
             s += font.familiesComma(0);
         } else if (name == "nchars"sv) {
