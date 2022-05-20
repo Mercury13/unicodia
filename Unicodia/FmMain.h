@@ -1,4 +1,7 @@
-#pragma once
+#ifndef FMMAIN_H
+#define FMMAIN_H
+// −warn: this include guard somehow works better than pragma once
+// when promoting widgets
 
 // C++
 #include <unordered_set>
@@ -329,3 +332,5 @@ public:
 };
 
 extern template class LruCache<char32_t, QPixmap>;
+
+#endif

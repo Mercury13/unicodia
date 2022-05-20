@@ -21,8 +21,6 @@
 #include <QUrl>
 #include <QTimer>
 #include <QSvgRenderer>
-#include <QKeySequence>
-#include <QShortcut>
 
 // Misc
 #include "u_Strings.h"
@@ -50,7 +48,6 @@ using namespace std::string_view_literals;
 
 constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
-constexpr int FSZ_BIG_CONTROL = 45;
 
 namespace {
     // No need custom drawing — solves nothing
