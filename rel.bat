@@ -141,6 +141,12 @@
 @copy lang-src\ru\locale.xml %DIR_RU%
 @%UTRANSL% lang-src\ru.uorig -build:%DIR_RU%
 @copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
+@rem English
+@set DIR_EN=%DEPLOY%\Languages\English
+@md %DIR_EN%
+@copy lang-src\en\locale.xml %DIR_EN%
+@%UTRANSL% lang-src\en.utran -build:%DIR_EN%
+@rem no QM for English
 
 @echo.
 @echo ===== Archiving =====
