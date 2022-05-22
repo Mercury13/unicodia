@@ -508,7 +508,7 @@ void mywiki::appendNoFont(QString& text, std::u8string_view wiki)
 }
 
 
-void mywiki::append(QString& text, const std::u8string_view wiki, const uc::Font& font)
+void mywiki::append(QString& text, std::u8string_view wiki, const uc::Font& font)
 {
     Eng eng(text, font);
     wiki::run(eng, wiki);
@@ -588,7 +588,7 @@ QString mywiki::buildHtml(const uc::Category& x)
 }
 
 QString mywiki::buildFontsHtml(
-        const char32_t cp, QFontDatabase::WritingSystem ws,
+        char32_t cp, QFontDatabase::WritingSystem ws,
         Gui& gui)
 {
     if (cp >= uc::CAPACITY || ws >= QFontDatabase::WritingSystemsCount)
@@ -1204,6 +1204,15 @@ QString mywiki::buildNonCharHtml(char32_t code)
 }
 
 
+bool mywiki::isEngTermShown(const uc::Term& term)
+{
+    return loc::currLang                            // language is present…
+            && loc::currLang->showEnglishTerms      // and explicitly permits
+            && !term.engName.empty()                // and English name present
+            && (term.engName != term.loc.name);     // and different from L10n name
+}
+
+
 QString mywiki::buildHtml(const uc::Term& x)
 {
     QString text;
@@ -1211,7 +1220,7 @@ QString mywiki::buildHtml(const uc::Term& x)
     str::append(text, "<p><b>");
     str::append(text, x.loc.name);
     str::append(text, "</b>"sv);
-    if (!x.engName.empty()) {
+    if (isEngTermShown(x)) {
         str::append(text, u8"\u00A0/ "sv);
         str::append(text, x.engName);
     }

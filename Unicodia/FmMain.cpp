@@ -1249,8 +1249,7 @@ void FmMain::initTerms()
         str::append(text, "' class='popup'><b>");
         str::append(text, term.loc.name);
         str::append(text, "</b></a>");
-        if (loc::currLang && loc::currLang->showEnglishTerms
-                && !term.engName.empty() && term.engName != term.loc.name) {
+        if (mywiki::isEngTermShown(term)) {
             str::append(text, "&nbsp;/ ");
             str::append(text, term.engName);
         }
