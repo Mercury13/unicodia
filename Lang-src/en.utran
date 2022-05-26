@@ -2094,7 +2094,7 @@
     </text>
     <text id="Text">
      <orig>Блок предназначен для [[pt:convertibility|совместимости]] со старыми кодировками, где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.<br /><br />Содержит символ FEFF «[[pt:bom|метка порядка байтов]]».<br /><br />В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</orig>
-     <known-orig>Блок предназначен для [[pt:convertibility|совместимости]] со старыми кодировками, где из-за [[pt:dynamic|ограниченности]] типографских движков приходилось использовать разные коды для обособленных, начальных, средних и конечных букв.&lt;p&gt;Содержит символ FEFF «[[pt:bom|метка порядка байтов]]».&lt;p&gt;В обычном письме эти символы лучше не{{_}}использовать. Единственное законное применение{{-}}учебные материалы, и потому символам дан класс «арабская буква» (во многих тогдашних кодировках текст записывался слева направо).</known-orig>
+     <transl>The block is intended for [[pt:convertibility|compatibility]] with old encodings. Because of [[pt:dynamic|limited]] typography engines they had different codes for isolated, initial, medial and final letters.<br /><br />Contains character FEFF [[pt:bom|Byte Order Mark]].<br /><br />These characters are not recommended in ordinary text. The only legitimate use is educational materials, thus these characters got Arabic Letter class (many of old encodings wrote text left-to-right).</transl>
     </text>
    </group>
    <group id="FF00">
@@ -2104,7 +2104,7 @@
     </text>
     <text id="Text">
      <orig>В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}половину клетки. Отсюда необычное начертание текста на китайских товарах с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм».<br /><br />В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.</orig>
-     <known-orig>В ККЯ иероглиф традиционно занимает одну клетку сетки, а европейская буква{{-}}половину клетки. Отсюда необычное начертание текста на китайских товарах с плохо подобранными шрифтами: так, в интернете нашумели стельки «Атлетизм».&lt;p&gt;В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.</known-orig>
+     <transl>In CJK an ideograph traditionally takes the entire cell of grid, and a European letter takes a half of cell. Hence funny style of text on cheap Chinese goods with badly picked fonts: in Russian internet “Athletism” insoles became famous.</transl>
     </text>
    </group>
    <group id="FFF0">
@@ -2114,8 +2114,7 @@
     </text>
     <text id="Text">
      <orig>Короткий блок в конце [[pt:bmp|базовой плоскости]]. Из 14 символов (два [[pt:noncharacter|выброшены]]) назначены только пять: три символа межстрочных помет, символ подстановки в составном документе («здесь должна быть картинка») и знак неудачного считывания.<br /><br />С последним, {{sm|�}}, мы чаще всего и сталкиваемся{{-}}он означает, что «крокозябра» появилась не из-за отсутствия символа в шрифте, а из-за неудачной раскодировки. Обычно{{-}}текст в однобайтовой кодировке попыталось прочитать как [[pt:utf8|UTF-8]].</orig>
-     <known-orig>Короткий блок в конце [[pt:bmp|базовой плоскости]]. Из 14 символов (два [[pt:noncharacter|выброшены]]) назначены только пять: три символа межстрочных помет, символ подстановки в составном документе («здесь должна быть картинка») и знак неудачного считывания.&lt;p&gt;С последним, {{sm|�}}, мы чаще всего и сталкиваемся{{-}}он означает, что «крокозябра» появилась не из-за отсутствия символа в шрифте, а из-за неудачной раскодировки. Обычно{{-}}текст в однобайтовой кодировке попыталось прочитать как [[pt:utf8|UTF-8]].</known-orig>
-     <transl>A short block in the end of [[pt:bmp|Base Plane]]. From 14 characters (two are [[pt|noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in composite document (“picture here”) and sign of failed reading.<br /><br />The latter, {{sm|�}}, we see most of all, it means that “mojibake” appeared not because of missing glyph in font, but ecause of failed decoding. Usually{{-}}someone attempted to read text in single-byte encoding as [[pt:utf8|UTF-8]].</transl>
+     <transl>A short block in the end of [[pt:bmp|Base Plane]]. From 14 characters (two are [[pt:noncharacter|non-characters]]) only five are assigned: three characters of interlinear marks, substitution character in composite document (“picture here”) and sign of failed reading.<br /><br />The latter, {{sm|�}}, we see most of all, it means that “mojibake” appeared not because of missing glyph in font, but ecause of failed decoding. Usually{{-}}someone attempted to read text in single-byte encoding as [[pt:utf8|UTF-8]].</transl>
     </text>
    </group>
    <group id="10000">
@@ -2137,6 +2136,7 @@
     </text>
     <text id="Text">
      <orig>Очень простая десятичная система счисления, использовавшаяся минойской и крито-микенской цивилизациями. Замечена в линейном письме [[ps:Lina|А]] и [[ps:Linb|Б]]. В [[ps:Cprt|кипрском]] письме была обнаружена единственная табличка с числом «100».</orig>
+     <transl>Very simple decimal numeral system used by Minoan and Crete-Mycenaean civilizations. Found in Linear [[ps:Lina|A]] and [[ps:Linb|B]] scripts. In [[ps:Cprt|Cypriot]] syllabary one tablet with 100 number was found.</transl>
     </text>
    </group>
    <group id="10140">
@@ -2146,7 +2146,7 @@
     </text>
     <text id="Text">
      <orig>Аттическая система счисления была [[pt:acrophonic|акрофонической]], то есть цифрами служили первые буквы слов:<br />* Ι = 1, ἴος<br />* обрезанное Π = 5, πέντε<br />* Δ = 10, δέκα<br />* Η = 100, ηἑκατόν<br />* Χ = 1000, χίλιοι<br />* Μ = 10{{_}}000, μύριοι<br /><br />Для цифр 50, 500 и{{_}}т.д. существовали символы, состоящие из Π и 10/100/1000…<br /><br />Впоследствии аттическая система уступила место [[ps:Grek|ионийской]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), но взаимообмен культур повлиял на этрусков, что и привело к появлению римских цифр.<br /><br />Также в этом блоке находятся символы древнегреческих единиц измерения.<br /><br />Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. В древней Греции ''литра''{{-}}мера массы и монета. Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.</orig>
-     <known-orig>Аттическая система счисления была [[pt:acrophonic|акрофонической]], то есть цифрами служили первые буквы слов:&lt;br&gt;• Ι = 1, ἴος&lt;br&gt;• обрезанное Π = 5, πέντε&lt;br&gt;• Δ = 10, δέκα&lt;br&gt;• Η = 100, ηἑκατόν&lt;br/&gt;• Χ = 1000, χίλιοι&lt;br/&gt;• Μ = 10{{_}}000, μύριοι&lt;p&gt;Для цифр 50, 500 и{{_}}т.д. существовали символы, состоящие из Π и 10/100/1000…&lt;p&gt;Впоследствии аттическая система уступила место [[ps:Grek|ионийской]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), но взаимообмен культур повлиял на этрусков, что и привело к появлению римских цифр.&lt;p&gt;Также в этом блоке находятся символы древнегреческих единиц измерения.&lt;p&gt;Слово ''литра'', так греющее душу русским алкоголикам, действительно родственное ''литру''. В древней Греции ''литра''{{-}}мера массы и монета. Во Франции ''литрóн''{{-}}мера объёма сыпучих веществ, отсюда ''литр''.</known-orig>
+     <transl>Attic numeral system was [[pt:acrophonic|acrophonic]]{{-}}first letters of words were used for digits:<br />* I = 1, ἴος<br />* trimmed Π = 5, πέντε<br />* Δ = 10, δέκα<br />* Η = 100, ηἑκατόν<br />* Χ = 1000, χίλιοι<br />* Μ = 10,000, μύριοι<br /><br />Characters consisting of Π and 10/100/1000… were used for 50, 500 etc.<br /><br />Later Attic system was supplanted with [[ps:Grek|Ionian]] (Α=1, Β=2, …, Ι=10, Κ=20, …, Ρ=100, Σ=200…), but cultural interchange influenced Etruscans, and that led to Roman numerals.<br /><br />This block also contains symbols of Ancient Greek measuring units.<br /><br />Funny word ''Litra'' (used by Russian alcoholics for one-litre bottle) is actually related to litre. In Ancient Greece ''litra'' was a coin and unit of weight. In France ''litron'' was a measure of dry volume, hence ''litre''.</transl>
     </text>
    </group>
    <group id="10190">
@@ -2156,6 +2156,7 @@
     </text>
     <text id="Text">
      <orig>Римские символы для денег, мер и весов. Также греческое библейское сокращение «крест» (реже «Христос»).</orig>
+     <transl>Roman symbols for money, weights and measures. Also Greek abbreviation “cross” (less often “Christ”).</transl>
     </text>
    </group>
    <group id="101D0">
@@ -2165,7 +2166,7 @@
     </text>
     <text id="Text">
      <orig>Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины без гончарного круга, найден в 1908 на Крите, имеет диаметр 160{{_}}мм и толщину 20{{_}}мм. Датируется 2100–1100{{bc}}, и содержит две надписи, сделанных по спирали неизвестной письменностью с помощью штампов. Выставлен в Археологическом музее Ираклиона (Крит).<br /><br />Общепринята гипотеза, что текст читается от края к центру (справа налево). Для написания слева направо многие из символов отражены: так, в оригинале ПЕШЕХОД идёт направо. Никто не{{_}}знает, критская ли это письменность и к какому типу относится. В числе необычных гипотез{{-}}подделка работавшего на раскопках художника, список владений критского царя и игра-ходилка.<br /><br />В 2006 Фестский диск предложен в [[pt:private|Реестр искусственных письменностей]] на место E6D0–E6FF; порядок символов тот же (по Артуру Эвансу, 1905, по убыванию частоты). С появлением Фестского диска в настоящем Юникоде диапазон расформирован. Два символа из Реестра в Юникод не{{_}}вошли и берутся из латиницы: | и ¦. Названия символов{{-}}по Луи Годáру (1995).</orig>
-     <known-orig>Фестский диск{{-}}артефакт крито-минойской (прото-греческой) культуры. Диск, сделанный из глины без гончарного круга, найден в 1908 на Крите, имеет диаметр 160{{_}}мм и толщину 20{{_}}мм. Датируется 2100–1100{{bc}}, и содержит две надписи, сделанных по спирали неизвестной письменностью с помощью штампов. Выставлен в Археологическом музее Ираклиона (Крит).&lt;p&gt;Общепринята гипотеза, что текст читается от края к центру (справа налево). Для написания слева направо многие из символов отражены: так, в оригинале ПЕШЕХОД идёт направо. Никто не{{_}}знает, критская ли это письменность и к какому типу относится. В числе необычных гипотез{{-}}подделка работавшего на раскопках художника, список владений критского царя и игра-ходилка.&lt;p&gt;В 2006 Фестский диск предложен в [[pt:private|Реестр искусственных письменностей]] на место E6D0–E6FF; порядок символов тот же (по Артуру Эвансу, 1905, по убыванию частоты). С появлением Фестского диска в настоящем Юникоде диапазон расформирован. Два символа из Реестра в Юникод не{{_}}вошли и берутся из латиницы: | и ¦. Названия символов{{-}}по Луи Годáру (1995).</known-orig>
+     <transl>Phaistos Disc is an atrifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).<br /><br />Hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, in original PEDESTRIAN walks to the right. Nobody knows, whether it is Crete script and what type it belongs to. Among unusual hypotheses: forgery done by artist that worked at excavations, list of Cretan king’s territories and race game.<br /><br />In 2006 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did not come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</transl>
     </text>
    </group>
    <group id="10280">
@@ -2187,7 +2188,7 @@
     </text>
     <text id="Text">
      <orig>Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не{{_}}«епакта» (формулы для перевода из солнечного календаря в лунный) или «пасхалия» (формулы для расчёта пасхи). И действительно, эти цифры, будучи потомками обычной [[ps:Copt|коптской]] записи (которая, в свою очередь, позаимствована из [[ps:Grek|греческого]]), широко использовались в копто-арабском мире с X по XIX век; в частности, в астрономических таблицах ≈1800. Запись слева направо.<br /><br />Из-за такого необычного использования эти цифры закодированы отдельным блоком, а не{{_}}как вариант коптского.<br /><br />В изображениях символов вы увидите серьёзное расхождение с таблицами Юникода: специалист по древним письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект ''Google Noto'' попытался повторить росчерки постоянной шириной.</orig>
-     <known-orig>Здесь слово ''epact'' (греч. ἐπακτός) означает «заимствованные», а не{{_}}«епакта» (формулы для перевода из солнечного календаря в лунный) или «пасхалия» (формулы для расчёта пасхи). И действительно, эти цифры, будучи потомками обычной [[ps:Copt|коптской]] записи (которая, в свою очередь, позаимствована из [[ps:Grek|греческого]]), широко использовались в копто-арабском мире с X по XIX век; в частности, в астрономических таблицах ≈1800. Запись слева направо.&lt;p&gt;Из-за такого необычного использования эти цифры закодированы отдельным блоком, а не{{_}}как вариант коптского.&lt;p&gt;В изображениях символов вы увидите серьёзное расхождение с таблицами Юникода: специалист по древним письменностям ''Anshuman Pandey'' обвёл старые чернильные символы, а проект ''Google Noto'' попытался повторить росчерки постоянной шириной.</known-orig>
+     <transl>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not equations for conversions from solar calendar to lunar or for determining date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.<br /><br />Because of such non-standard use, these numbers are encoded as separate block, not as a variant of Coptic.<br /><br />In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</transl>
     </text>
    </group>
    <group id="10300">
@@ -2275,6 +2276,7 @@
     </text>
     <text id="Text">
      <orig>Модификатор AA используется в нотации расстройств речи (VoQS). Остальные{{-}}в фонетике и означают звуки, проговариваемые не{{_}}полностью.</orig>
+     <transl>Modifier AA is from Voice Quality Symbols used to transcribe speech disorders. The rest are from phonetics, and mean phonemes pronounced incompletely.</transl>
     </text>
    </group>
    <group id="10800">
@@ -2545,6 +2547,7 @@
     <text id="Text">
      <orig>Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. Поскольку монгольский пишется сверху вниз, а тибетский{{-}}слева направо, тибетские ''yig-mgo'' использовать нельзя.<br /><br />Юникод расщедрился не{{_}}на варианты написания, а на настоящие кодовые позиции{{-}}правда, не{{_}}в [[pt:bmp|базовой плоскости]], а в дополнительной.<br /><br />Иконка соответствует написанию сверху вниз{{-}}а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.</orig>
      <known-orig>Символ «бирга», проникший в монгольский из [[ps:Tibt|тибетского]] и играющий роль буквицы. Поскольку монгольский пишется сверху вниз, а тибетский{{-}}слева направо, тибетские ''yig-mgo'' использовать нельзя.&lt;p&gt;Юникод расщедрился не{{_}}на варианты написания, а на настоящие кодовые позиции{{-}}правда, не{{_}}в [[pt:bmp|базовой плоскости]], а в дополнительной.&lt;p&gt;Иконка соответствует написанию сверху вниз{{-}}а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.</known-orig>
+     <transl>Birga character that leaked to Mongolian from [[ps:Tibt|Tibetan]] and used as initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.<br /><br />Unicode was generous to give real code points, not variants of writing{{-}}but in ancillary plane, not [[pt:bmp|Base]].<br /><br />Icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</transl>
     </text>
    </group>
    <group id="11680">
@@ -5079,19 +5082,21 @@
     </text>
     <text id="Text">
      <orig>Произошла из [[ps:Khmr|старокхмерского]], который, в свою очередь, произошёл из [[ps:Brah|брахми]]. Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.<br /><br />Гласная по умолчанию «а» в открытых слогах и «о» в закрытых: {{sm|ถนน}}=тханон (дорога). Но буквы называются по словам: так, буква {{sm|ช}} называется «чо-чан» (слон). Между словами не{{_}}ставятся пробелы.</orig>
-     <known-orig>Произошла из [[ps:Khmr|старокхмерского]], который, в свою очередь, произошёл из [[ps:Brah|брахми]]. Алфавит упорядочил и утвердил король Рамакхамхаенг Великий в 1283 году.&lt;p&gt;Гласная по умолчанию «а» в открытых слогах и «о» в закрытых: {{sm|ถนน}}=тханон (дорога). Но буквы называются по словам: так, буква {{sm|ช}} называется «чо-чан» (слон). Между словами не{{_}}ставятся пробелы.</known-orig>
-     <transl>Comes from [[ps:Khmr|Old Khmer]], that in turn comes from [[ps:Brah|Brahmi]]. The alphabet was arranged and approved by King Ramkhamhaeng the Great in 1283.&lt;p&gt;Inherent vowel is “a” in open syllables and “o” in closed ones: {{sm|ถนน}}=thanon (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</transl>
+     <transl>Comes from [[ps:Khmr|Old Khmer]], that in turn comes from [[ps:Brah|Brahmi]]. The alphabet was arranged and approved by King Ramkhamhaeng the Great in 1283.<br /><br />Inherent vowel is “a” in open syllables and “o” in closed ones: {{sm|ถนน}}=thanon (road). Letters are [[pt:acrophonic|acrophonic]]: for example, letter {{sm|ช}} is named “cho chang” (elephant). There are no spaces between words.</transl>
     </text>
    </group>
    <group id="Tibt">
     <text id="Name">
      <orig>Тибетская</orig>
+     <transl>Tibetan</transl>
     </text>
     <text id="Lang">
      <orig>тибетские, дзонг-кэ ''(Бутан)'', шерпский…</orig>
+     <transl>Tibetan, Dzongkha ''(Bhutan)'', Sherpan…</transl>
     </text>
     <text id="Text">
      <orig>Как и большинство других письменностей Юго-Восточной Азии, произошла из брахми, гласная по умолчанию «а».<br /><br />Считается, что письменность изобрёл Тхонми Самбхота, съездивший в Индию и заложивший основы тибетского буддизма. За это время орфография мало менялась, а язык изменился, потому произношение сильно расходится с написанием.</orig>
+     <transl>Like most script of South-East Asia, came from Brahmi, inherent vowel is “a”.<br /><br />It’s commonly accepted that the script was invented by Thonmi Sambhota who traveled to India and laid the foundation of Tibetan Buddhism. From that time orthography did not change much, and language changed, so writing greatly differs from pronunciation.</transl>
     </text>
    </group>
    <group id="Tirh">
@@ -5112,12 +5117,15 @@
    <group id="Tnsa">
     <text id="Name">
      <orig>Тангса</orig>
+     <transl>Tangsa</transl>
     </text>
     <text id="Lang">
      <orig>языки тангса ''(=тасе-нага, Северо-Восточная Индия, Мьянма, 100 тыс. на 2010)''</orig>
+     <transl>Tangsa languages ''(=Tase-Naga, North-East India, Myanmar, 100k as of 2010)''</transl>
     </text>
     <text id="Text">
      <orig>Небольшое семейство сино-тибетских языков; письменность{{-}}различные виды [[ps:Latn|латиницы]]. В 1990 индиец Лакхум Моссанг создал алфавит и до смерти в 2020 обучил ему около 100 человек.<br /><br />Названия гласных{{-}}звук + обозначение одного из четырёх тонов (так, в хмонгской латинице тоны тоже обозначаются буквами).</orig>
+     <transl>A small family of Sino-Tibetan languages written in different types of [[ps:Latn|Latin]]. In 1990 Lakhum Mossang from India created the alphabet and teached about 100 people until his death in 2020.<br /><br />Vowel names are phoneme + one of four tones. In comparison, in Hmong Latin tones are also written with letters.</transl>
     </text>
    </group>
    <group id="Toto">
