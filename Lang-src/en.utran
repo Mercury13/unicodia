@@ -6120,6 +6120,7 @@
     </text>
     <text id="Text">
      <orig>Стиль письма с низкой строкой и обилием выносных элементов. Использовался в средние века для экономии пергамента, распространён в [[ps:Latn|латинице]], [[ps:Geor|грузинском]], [[ps:Grek|греческом]]. В латинице он превратился в строчные буквы{{-}}а грузиница является регистровой лишь формально.<br /><br />Если у письменности в принципе большие выносные элементы ([[ps:Lana|ланна]]), минускулом это называть не{{_}}принято.</orig>
+     <transl>Writing style with low line and plenty of ascenders and descenders. Was used in Middle Ages for economy of parchment, widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.<br /><br />If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is not accepted as minuscule.</transl>
     </text>
    </group>
    <group id="abc">
@@ -6138,6 +6139,7 @@
     </text>
     <text id="Text">
      <orig>Воображаемая клетка, на которые разбивается моноширинный текст. <br /><br />Текст на «знакоместа» делится и в [[pt:cjk|ККЯ]], но в первую очередь термин относится к пишущим машинкам, текстовым режимам компьютеров, алфавитно-цифровым принтерам.</orig>
+     <transl>Imaginable cell monospace text is divided to.<br /><br />[[pt:cjk|CJK]] also divides text into “character cells”, but the term first of all is used for typewriters, text modes of computers, alphanumeric printers.</transl>
     </text>
    </group>
    <group id="inclusion">
