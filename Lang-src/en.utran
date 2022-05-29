@@ -5172,8 +5172,7 @@
     </text>
     <text id="Text">
      <orig>Письмо появилось около 1833. Разработал его Момолу Дувалу Букеле, полагают, что под влиянием [[ps:Cher|письма чероки]] (вместе с неграми в Либерию эмигрировали и индейцы, один стал даже вождём ваи).<br /><br />Одна из причин выживания ваи{{-}}удачные знаки, применявшиеся и до этого в негритянской культуре. Другая{{-}}он использовался для торговли с голландцами и португальцами. В 1962 Университет Либерии добавил знаки для недостающих слогов.</orig>
-     <known-orig>Письмо появилось около 1833. Разработал его Момолу Дувалу Букеле, полагают, что под влиянием [[ps:Cher|письма чероки]] (вместе с неграми в Либерию эмигрировали и индейцы, один стал даже вождём ваи).&lt;p&gt;Одна из причин выживания ваи{{-}}удачные знаки, применявшиеся и до этого в негритянской культуре. Другая{{-}}он использовался для торговли с голландцами и португальцами. В 1962 Университет Либерии добавил знаки для недостающих слогов.</known-orig>
-     <transl>Script appeared about 1833. It was invented by Momolu Duwalu Bukele, probably under influence of [[ps:Cher|Cherokee]] (along with Africans several Native Americans migrated to Liberia, one even became a Vai chief).&lt;p&gt;One of causes of Vai survival is good characters borrowed from African culture. The other is because it was used in trade with Dutch and Portuguese. In 1962 University of Liberia added characters for missing syllables.</transl>
+     <transl>Script appeared about 1833. It was invented by Momolu Duwalu Bukele, probably under influence of [[ps:Cher|Cherokee]] (along with Africans several Native Americans migrated to Liberia, one even became a Vai chief).<br /><br />One of causes of Vai survival is good character set borrowed from African culture. The other is because it was used in trade with Dutch and Portuguese. In 1962 University of Liberia added characters for missing syllables.</transl>
     </text>
    </group>
    <group id="Vith">
@@ -5206,7 +5205,7 @@
    <group id="Wara">
     <text id="Name">
      <orig>Варанг-кшити</orig>
-     <transl>Warand City</transl>
+     <transl>Warang Citi</transl>
     </text>
     <text id="Lang">
      <orig>хо ''(Восточная Индия, &gt;1{{_}}млн)''</orig>
