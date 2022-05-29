@@ -4180,13 +4180,15 @@
    <group id="Lana">
     <text id="Name">
      <orig>Ланна (тай-тхам)</orig>
+     <transl>Tai Tham (Lanna)</transl>
     </text>
     <text id="Lang">
      <orig>юан (=северотайский, =ланна), лы (=тай-лы), кхынский; все{{-}}Таиланд</orig>
+     <transl>Yuan (=Northern Tai, =Lanna), Tai Lü, Khün, all{{-}}Thailand</transl>
     </text>
     <text id="Text">
      <orig>Происходит из северотайского государства Ланна или Ланнатай (1296—1558).<br /><br />Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях (прямая черта прорежет лист по жилкам). Гласная по умолчанию «а». Между словами не{{_}}ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. [[pt:virama|Вирамы]] нет, взамен есть похожий спецсимвол для сборки слогов:<br />: высокое ха {{sm|ᩉ}} + и {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + на {{sm|ᨶ}} = хин {{sm|ᩉᩥ᩠ᨶ}}<br /><br />Имеет два набора цифр: хора (повседневные) и тхам (священные).<br /><br />Говорящих на языке юан несколько миллионов, но с XX века не{{_}}многие грамотны в ланне, чаще пишут [[ps:Thai|тайским]] письмом.</orig>
-     <known-orig>Происходит из северотайского государства Ланна или Ланнатай (1296—1558).&lt;p&gt;Как и в других подобных письменностях, круглые очертания букв произошли из-за письма на пальмовых листьях (прямая черта прорежет лист по жилкам). Гласная по умолчанию «а». Между словами не{{_}}ставятся пробелы. Гласные буквы бывают двух видов: независимые (в начале слова) и огласовки. [[pt:virama|Вирамы]] нет, взамен есть похожий спецсимвол для сборки слогов:&lt;br&gt;{{__}}высокое ха {{sm|ᩉ}} + и {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + на {{sm|ᨶ}} = хин {{sm|ᩉᩥ᩠ᨶ}}&lt;p&gt;Имеет два набора цифр: хора (повседневные) и тхам (священные).&lt;p&gt;Говорящих на языке юан несколько миллионов, но с XX века не{{_}}многие грамотны в ланне, чаще пишут [[ps:Thai|тайским]] письмом.</known-orig>
+     <transl>Comes from Nothern Thai kingdom of Lanna or Lannatai (1296–1558).<br /><br />Like in other similar scripts, round letters come from writing on palm leaves (straight line will cut the leaf by veins). Inherent vowel is “a”. There are no spaces between words. There are two types of vowels: independent and vowel marks. No [[pt:virama|virama], there is a similar character for assembling syllabes instead:<br />: high ha {{sm|ᩉ}} + i {{sm|◌ᩥ}} + sakot {{sm|◌᩠}} + na {{sm|ᨶ}} = hin {{sm|ᩉᩥ᩠ᨶ}}<br /><br />Has two sets of digits: Hora (daily) and Tham (sacred).<br /><br />There are several million people speaking in Yuan, but since 20th century few are literate in Lanna, [[ps:Thai|Thai]] is used more often.</transl>
     </text>
    </group>
    <group id="Laoo">
