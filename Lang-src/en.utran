@@ -5698,17 +5698,21 @@
    <group id="arguable">
     <text id="Name">
      <orig>письменность спорного типа</orig>
+     <transl>script of arguable type</transl>
     </text>
     <text id="Text">
      <orig>Для пяти письменностей источники не{{_}}договорились, что они собой представляют.<br /><br />[[ps:Hang|Хангыль]] ''(корейский)''{{-}}[[pt:syllabic|слоговая]] ''(Юникод)'' или [[pt:alphabet|алфавитная]] ''(Omniglot, английская Википедия)''.<br /><br />[[ps:Thaa|Тана]] ''(мальдивский)''{{-}}[[pt:abjad|консонантная]] ''(Omniglot)'', [[pt:abugida|абугида]] ''(английская Википедия)'' или алфавитная ''(Юникод)''.<br /><br />[[ps:Wara|Варанг-кшити]] и [[ps:Sora|соранг-сомпенг]]{{-}}алфавит ''(английская Википедия, Юникод)'' или абугида ''(Omniglot)''. Обе индийские, отошли от многих черт [[pt:brahmic|брахмийских абугид]], но оставили гласную «а» по умолчанию.<br /><br />[[ps:Phag|Монгольское квадратное]] (письмо Пагба-ламы){{-}}абугида ''(Юникод, Omniglot)'' или алфавит ''(английская Википедия)''. Из признаков абугиды осталась буква по умолчанию и соединение букв в слоги.</orig>
+     <transl>For five characters sources do not agree what they are.<br /><br />[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.<br /><br />[[ps:Thaa|Thaana]] ''(Maldivian)''{{-}}[[pt:abjad|consonant]] ''(Omniglot)'', [[pt:abugida|abugida]] ''(English Wikipedia)'' or alphabet ''(Unicode)''.<br /><br />[[ps:Wara|Warang Citi]] and [[ps:Sora|Sora Sompeng]]{{-}}alphabet ''(English Wikipedia, Unicode)'' or abugida ''(Omniglot)''. Both are Indian, dropped most features of [[pt:brahmic|Brahmic abugidas]], but left inherent vowel “a”.<br /><br />[[ps:Phag|Phags-Pa]] (Mongolian square)){{-}}abugida ''(Unicode, Omniglot)'' or alphabet ''(English Wikipedia)''. The only remaining signs of abugida are inherent vowel and joining of letters into syllables.</transl>
     </text>
    </group>
    <group id="cjk">
     <text id="Name">
      <orig>ККЯ = китайский, корейский, японский</orig>
+     <transl>CJK = Chinese, Japanese, Korean</transl>
     </text>
     <text id="Text">
      <orig>Группа письменностей, близких к [[ps:Hani|китайским иероглифам]]. К ним относятся также слоговые [[ps:Kana|катакана]] и [[ps:Hira|хирагана]], и [[ps:Hang|хангыль]] [[pt:arguable|спорного типа]]. Из исторических{{-}}[[ps:Tang|тангутский]], [[ps:Kits|киданьский]], [[ps:Nshu|нюй-шу]].<br /><br />Особенности ККЯ:<br />* размашистое письмо кистью и тушью (за исключением нюй-шу);<br />* символы моноширинные{{-}}независимо от количества черт, выровнены по невидимой сетке. Заимствованные буквы часто полуширинные{{-}}занимают половину клетки;<br />* письмо изначально справа налево по столбцам; сейчас ''обычно'' слева направо по строкам. И поныне японские комиксы ''манга'' читаются справа налево;<br />* иероглифы несколько отличаются от страны к стране, Юникод оставляет эти тонкости за шрифтами;<br />* поскольку символы не{{_}}вписываются в 256 [[pt:codepoint|позиций]], существовали специфичные кодировки для иероглифов.</orig>
+     <transl>Group of scripts close to [[ps:Hani|Chinese ideographs]]. It contains syllabic [[ps:Kana|Katakana]] and [[ps:Hira|Hiragana]], and [[ps:Hang|Hangul]] of [[pt:arguable|arguable]] type. Among historical{{-}}[[ps:Tang|Tangut]], [[ps:Kits|Khitan]], [[ps:Nshu|Nüshu]].<br /><br />Features of CJK:<br />* sweeping writing with brush and ink (except Nüshu);<br />* characters are monospace{{-}}aligned by invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;<br />* writing initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;<br />* as characters did not fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</transl>
     </text>
    </group>
    <group id="code">
