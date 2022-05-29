@@ -3818,13 +3818,15 @@
    <group id="Geor">
     <text id="Name">
      <orig>Грузинская</orig>
+     <transl>Georgian</transl>
     </text>
     <text id="Lang">
      <orig>грузинский, мегрельский и другие картвельские</orig>
+     <transl>Geogian, Megrelian and other Kartvelian languages</transl>
     </text>
     <text id="Text">
      <orig>Достоверно неизвестно, когда создана грузиница и что было прототипом. Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, отметается учёными. Алфавитный порядок [[ps:Grek|греческий]].<br /><br />Грузинский язык безрегистровый, однако в Юникоде исторически существуют четыре стиля письма, по порядку кодов:<br />* асомтаврули{{-}}устаревшие заглавные буквы. Из-за неудачных образцовых [[pt:character|глифов]] этот диапазон закрепился именно за ними;<br />* мхедрули{{-}}обычный грузинский с развитыми над- и подстрочными элементами;<br />* [[pk:1C90|мтаврули]]{{-}}«заглавная» форма обычного грузинского без выносных элементов;<br />* [[pk:2D00|нусхури]]{{-}}курсивный церковный [[pt:minuscule|минускул]].</orig>
-     <known-orig>Достоверно неизвестно, когда создана грузиница и что было прототипом. Распространённая версия, что грузинский алфавит создан создателем [[ps:Armn|армянского]] Месропом Маштоцем, отметается учёными. Алфавитный порядок [[ps:Grek|греческий]].&lt;p&gt;Грузинский язык безрегистровый, однако в Юникоде исторически существуют четыре стиля письма, по порядку кодов:&lt;br&gt;• асомтаврули{{-}}устаревшие заглавные буквы. Из-за неудачных образцовых [[pt:character|глифов]] этот диапазон закрепился именно за ними;&lt;br /&gt;• мхедрули{{-}}обычный грузинский с развитыми над- и подстрочными элементами;&lt;br /&gt;• [[pk:1C90|мтаврули]]{{-}}«заглавная» форма обычного грузинского без выносных элементов;&lt;br /&gt;• [[pk:2D00|нусхури]]{{-}}курсивный церковный [[pt:minuscule|минускул]].</known-orig>
+     <transl>No one knows when Georgian was created and whas was a prototype. Widespread version that Georgian alphabet was made by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet, is rejected by scientists. Aphabetical order is [[ps:Grek|Greek]].<br /><br />Georgian language is unicameral, but historically Unicode has four styles of writing, in order of codes:<br />* Asomtavruli{{-}}obsolete capital letters. Because of poor sample [[pt:character|glyphs]], this range affixed to Asomtavruli style;<br />* Mkhedruli{{-}}ordinary Georgian with many ascenders and descenders;<br />* [[pk:1C90|Mtavruli]]{{-}}“capital” form of ordinary Georgian without ascenders and descenders;<br />* [[pk:2D00|Nuskhuri]]{{-}}italic church [[pt:minuscule|minuscule]].</transl>
     </text>
    </group>
    <group id="Glag">
