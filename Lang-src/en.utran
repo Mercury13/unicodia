@@ -6100,6 +6100,7 @@
     </text>
     <text id="Text">
      <orig>Символ U+FEFF. Его можно (не обязательно) ставить в начале юникодного текстового файла, чтобы указать формат [[pt:serialization|сериализации]]. Закодированной метка порядка байтов будет выглядеть так:<br />* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];<br />* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (начиная со старшего байта);<br />* FF{{_}}FE, дальше что угодно, кроме 00{{_}}00{{-}}UTF-16LE (начиная с младшего байта);<br />* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];<br />* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.<br /><br />[[pt:utf7|UTF-7]] и [[pt:punycode|Punycode]] не{{_}}встречаются как формат текстовых файлов. UTF-32 встречается крайне редко.<br /><br />В двоичных файлах формат сериализации жёстко зафиксирован, и метка порядка байтов не{{_}}нужна.</orig>
+     <transl>Character U+FEFF. It may (not must) be put in the beginning of Unicode text file to indicate [[pt:serialization|serialization]] format. Encoded byte order mark looks this way:<br />* EF{{_}}BB{{_}}BF{{-}}[[pt:utf8|UTF-8]];<br />* FE{{_}}FF{{-}}[[pt:utf16|UTF-16BE]] (most significant byte first);<br />* FF{{_}}FE, then everything except 00{{_}}00{{-}}UTF-16LE (least significant byte first);<br />* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];<br />* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.<br /><br />[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do not occur as a format of text files. UTF-32 is extremely rare.</transl>
     </text>
    </group>
    <group id="cursive">
