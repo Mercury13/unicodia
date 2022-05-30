@@ -1104,7 +1104,6 @@ FmMain::FmMain(QWidget *parent)
                 "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
     connect(ui->btCollapse, &QPushButton::clicked,
             this, &This::cjkExpandCollapse);
-    cjkReflectCollapseState();
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
@@ -1222,6 +1221,7 @@ void FmMain::translateMe()
     Form::translateMe();
     initTerms();
     initAbout();
+    cjkReflectCollapseState();
 
     // Main tab
     forceShowCp(shownCp);
