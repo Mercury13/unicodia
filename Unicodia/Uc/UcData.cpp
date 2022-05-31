@@ -524,7 +524,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
-        Dating::yapprox(-1550, StdNote::CUSTOM), EcFont::FUNKY },
+        Dating::yapprox(-1550, StdNote::FIRST_KNOWN), EcFont::FUNKY },
     // Cypriot OK, W10 Segoe Historic
     { "Cprt", QFontDatabase::Any,
         EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
