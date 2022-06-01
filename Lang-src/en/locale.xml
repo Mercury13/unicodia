@@ -5,6 +5,11 @@
      eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
 -->
 <locale native="English" international="English" iso="en" eng-terms="0">
+	<!-- Alphabetical sorting, right now very simple and locale-independent -->
+	<alpha-sort>
+		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>abcdefghijklmnopqrstuvwxyz</alp>
+	</alpha-sort>
 	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
 		<!-- first{{-}}second  →  typographic dash -->
