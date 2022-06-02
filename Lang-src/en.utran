@@ -6019,6 +6019,7 @@
     </text>
     <text id="Text">
      <orig>[[pt:plane|Плоскость]] Юникода с номером 0, содержащая символы 0000…FFFD. В базовой плоскости закодированы наиболее ходовые символы живых языков, что позволяет обрабатывать эти языки прямо в [[pt:utf16|UTF-16]]. <br /><br />До 1996 Юникод был двухбайтовым. Но к тому времени несколько прогрессивных языков и библиотек (Java, Windows{{_}}NT) успели перейти на Юникод, что и привело к компромиссу в виде базовой плоскости и UTF-16.<br /><br />В Юникоде 14.0 нераспределёнными остались 16 позиций, 2FE0…2FEF.<br /><br />Базовая плоскость содержит [[pt:ascii|ASCII]], [[pt:latin1|латиницу-1]] и 6400 [[pt:private|личных]] символов.</orig>
+     <transl>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of alive languages are encoded in Base Plane, allowing processing of these languages right in [[pt:utf16|UTF-16]].<br /><br />Unicode has beed two-byte encoding until 1996. By that time ceveral progressive panguages and libraries (Java, Windows{{_}}NT) managed to switch to Unicode, and that led to compromise in the form of Base Plane and UTF-16.<br /><br />In Unicode{{_}}14.0 (and upcoming 15.0) only 16 positions are unallocated, 2FE0…2FEF.<br /><br />Base Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and 6400 [[pt:private|private-use]] characters.</transl>
     </text>
    </group>
    <group id="noncharacter">
