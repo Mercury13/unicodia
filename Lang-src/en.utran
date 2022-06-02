@@ -5475,7 +5475,7 @@
     </text>
     <text id="Text">
      <orig>Римские, китайские и другие цифры, основанные на буквах. Древнерусские также основаны на буквах, но в Юникоде для этого используются обычные А, Б, Г… с комбинирующими метками.</orig>
-     <transl>Roman, Chinese and other numerals based on letters. Ancient Russian are also based on letters, but Unicode uses for them ordinary А, Б, Г… with combining marks.</transl>
+     <transl>Roman, Chinese and other numerals based on letters. Ancient Slavic numerals are also based on letters, but Unicode uses for them ordinary А, Б, Г… with combining marks.</transl>
     </text>
    </group>
    <group id="No">
