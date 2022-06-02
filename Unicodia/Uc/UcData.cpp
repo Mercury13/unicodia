@@ -164,7 +164,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
-    { "NotoSerifGujarati-Regular.ttf", 110_pc },                                // Gujarati
+    { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
