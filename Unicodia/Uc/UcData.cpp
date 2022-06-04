@@ -3673,7 +3673,7 @@ namespace {
     void sortTerms(const uc::Term** beg, const uc::Term** end)
     {
         if ((*beg)->cat().sort != uc::SortTerms::NO) {
-            std::sort(beg, end, isTermLess);
+            std::stable_sort(beg, end, isTermLess);
         }
     }
 
