@@ -5,7 +5,13 @@
      eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
 -->
 <locale native="English" international="English" iso="en" eng-terms="0">
-	<!-- Alphabetical sorting, right now very simple and locale-independent -->
+	<!-- Alphabetical sorting, right now very simple and locale-independent
+		 non-meaning stub of alphabet = underscore _
+		 Limitations:
+		 • Difference within first 32 MEANING chars of TERM, otherwise they are deemed equal
+		 • 32-bit chars ALLOWED
+		 • Max alphabet 32K
+		 • # if alphabets unlimited -->
 	<alpha-sort>
 		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>abcdefghijklmnopqrstuvwxyz</alp>

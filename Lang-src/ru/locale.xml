@@ -1,16 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<!-- native: Chinese (simplified)
-     international: 简体中文
-     iso: zh
-     eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
--->
 <locale native="Русский" international="Russian" iso="ru" eng-terms="1">
-	<!-- Alphabetical sorting, right now very simple and locale-independent -->
 	<alpha-sort>
 		<alp>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
 	</alpha-sort>
-	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
 		<!-- {{№}}5  →  №, narrow NBSP -->
 		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>

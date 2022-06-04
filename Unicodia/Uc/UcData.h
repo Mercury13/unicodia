@@ -816,6 +816,8 @@ namespace uc {
         struct Loc {
             std::u8string_view name;
             std::u8string_view description;
+            // Such a limitation: sort by first 32 meaning chars
+            signed short sortKey[32];
         } mutable loc {};
 
         const uc::Font& font() const { return fontInfo[0]; }
