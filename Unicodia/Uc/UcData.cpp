@@ -2205,7 +2205,7 @@ static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
 constinit const uc::TermCat uc::termCats[] {
     { "TermCat.Encoding",      SortTerms::YES, },
     { "TermCat.Serialization", SortTerms::NO   },
-    { "TermCat.Scripts",       SortTerms::NO   },
+    { "TermCat.Scripts",       SortTerms::YES  },
     { "TermCat.Chars",         SortTerms::YES  },
     { "TermCat.Algos",         SortTerms::YES  },
     { "TermCat.General",       SortTerms::YES  },
