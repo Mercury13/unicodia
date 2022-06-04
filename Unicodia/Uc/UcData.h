@@ -813,7 +813,7 @@ namespace uc {
     struct Term
     {
         std::string_view key;
-        EcTermCat cat;
+        EcTermCat ecCat;
         std::u8string_view engName;
         std::string_view borrowedDesc {};
         struct Loc {
@@ -822,6 +822,8 @@ namespace uc {
             // Such a limitation: sort by first 32 meaning chars
             signed short sortKey[32];
         } mutable loc {};
+
+        const TermCat& cat() const { return termCats[static_cast<int>(ecCat)]; }
 
         const uc::Font& font() const { return fontInfo[0]; }
 
@@ -833,6 +835,7 @@ namespace uc {
     };
 
     extern const Term terms[];
+    extern const Term* sortedTerms[];
     size_t nTerms();
 
     const Term* findTerm(std::string_view id);
@@ -927,7 +930,7 @@ namespace uc {
         char32_t fCp = 0;
     };
 
-    void finishTranslation();
+    void finishTranslation(const std::unordered_map<char32_t, int>& sortOrder);
 
 
     inline std::strong_ordering operator <=> (char32_t x, const Cp& y)

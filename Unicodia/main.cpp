@@ -31,7 +31,7 @@ namespace {
 
     void LocData::translateMe()
     {
-        uc::finishTranslation();
+        uc::finishTranslation(loc::currLang->sortOrder);
         mywiki::translateDatingLoc();
     }
 

@@ -1236,12 +1236,11 @@ void FmMain::initTerms()
     const size_t n = uc::nTerms();
     auto lastCat = uc::EcTermCat::NN;
     for (size_t i = 0; i < n; ++i) {
-        const uc::Term& term = uc::terms[i];
-        if (term.cat != lastCat) {
-            lastCat = term.cat;
-            auto& cat = uc::termCats[static_cast<int>(lastCat)];
+        const uc::Term& term = *uc::sortedTerms[i];
+        if (term.ecCat != lastCat) {
+            lastCat = term.ecCat;
             str::append(text, "<h1>");
-            str::append(text, loc::get(cat.locKey));
+            str::append(text, loc::get(term.cat().locKey));
             str::append(text, "</h1>");
         }
         str::append(text, "<p><a href='pt:");

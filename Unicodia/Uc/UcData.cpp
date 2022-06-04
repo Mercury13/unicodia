@@ -11,6 +11,7 @@
 #include "u_Qstrings.h"
 #include "u_Iterator.h"
 #include "u_Cmap.h"
+#include "mojibake.h"
 
 // Project-local
 #include "Skin.h"
@@ -2209,7 +2210,7 @@ constinit const uc::TermCat uc::termCats[] {
     { "TermCat.Algos",         SortTerms::YES  },
     { "TermCat.General",       SortTerms::YES  },
     { "TermCat.Styles",        SortTerms::YES  },
-    { "TermCat.Input",         SortTerms::YES  },
+    { "TermCat.Input",         SortTerms::NO   },
     { "TermCat.Misc",          SortTerms::YES  },
 };
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
@@ -2289,6 +2290,7 @@ constinit const uc::Term uc::terms[] {
     { "tofu", EcTermCat::OTHER, u8"tofu" },
 };
 
+constinit const uc::Term* uc::sortedTerms[std::size(terms)] { nullptr };
 
 size_t uc::nTerms() { return std::size(terms); }
 
@@ -3659,7 +3661,26 @@ QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
 }
 
 
-void uc::finishTranslation()
+namespace {
+
+    bool isTermLess(const uc::Term* x, const uc::Term* y)
+    {
+        return std::lexicographical_compare(
+                    std::begin(x->loc.sortKey), std::end(x->loc.sortKey),
+                    std::begin(y->loc.sortKey), std::end(y->loc.sortKey));
+    }
+
+    void sortTerms(const uc::Term** beg, const uc::Term** end)
+    {
+        if ((*beg)->cat().sort != uc::SortTerms::NO) {
+            std::sort(beg, end, isTermLess);
+        }
+    }
+
+}   // anon namespace
+
+
+void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
 {
     char c[40];
     for (auto& blk : blocks) {
@@ -3710,14 +3731,46 @@ void uc::finishTranslation()
             cat.loc.description = loc::get(c);
     }
 
+    auto pSorted = std::begin(sortedTerms);
     for (auto& term : terms) {
+        // Get name
         term.printfLocKey(c, "Name");
-            term.loc.name = loc::get(c);
+        term.loc.name = loc::get(c);
+
+        // Build sort key
+        auto name32 = mojibake::toS<std::u32string>(term.loc.name);
+        std::fill(std::begin(term.loc.sortKey), std::end(term.loc.sortKey), -1);
+        size_t len = 0;
+        for (auto v : name32) {
+            auto it = sortOrder.find(v);
+            if (it != sortOrder.end()) {
+                term.loc.sortKey[len] = it->second;
+                if ((++len) >= std::size(term.loc.sortKey))
+                    break;
+            }
+        }
+
+        // Get desc
         if (term.borrowedDesc.empty()) {
             term.printfLocKey(c, "Text");
             term.loc.description = loc::get(c);
         } else {
             term.loc.description = loc::get(term.borrowedDesc);
         }
+
+        // Add to sorted
+        *(pSorted++) = &term;
     }
+
+    auto pBeg = std::begin(sortedTerms);
+    auto oldCat = (*pBeg)->ecCat;
+    for (auto& pt : sortedTerms) {
+        auto newCat = pt->ecCat;
+        if (newCat != oldCat) {
+            sortTerms(pBeg, &pt);
+            pBeg = &pt;
+            oldCat = newCat;
+        }
+    }
+    sortTerms(pBeg, std::end(sortedTerms));
 }
