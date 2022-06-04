@@ -56,6 +56,7 @@ HEADERS += \
     ../Libs/L10n/LocQt.h \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
@@ -100,6 +101,7 @@ INCLUDEPATH += \
     ../Libs/L10n \
     ../Libs/PugiXml \
     ../Libs/SelfMade \
+    ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
     Uc

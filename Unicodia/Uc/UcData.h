@@ -800,9 +800,12 @@ namespace uc {
         PRINCIPLES, WRITING_STYLE, INPUT, OTHER, NN
     };
 
+    enum class SortTerms { NO, YES };
+
     struct TermCat
     {
         std::string_view locKey;
+        SortTerms sort;
     };
 
     extern const TermCat termCats[];

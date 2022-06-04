@@ -2202,15 +2202,15 @@ static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
               "Sorry, need to set block data manually");
 
 constinit const uc::TermCat uc::termCats[] {
-    { "TermCat.Encoding" },
-    { "TermCat.Serialization" },
-    { "TermCat.Scripts" },
-    { "TermCat.Chars" },
-    { "TermCat.Algos" },
-    { "TermCat.General" },
-    { "TermCat.Styles" },
-    { "TermCat.Input" },
-    { "TermCat.Misc" },
+    { "TermCat.Encoding",      SortTerms::YES, },
+    { "TermCat.Serialization", SortTerms::NO   },
+    { "TermCat.Scripts",       SortTerms::NO   },
+    { "TermCat.Chars",         SortTerms::YES  },
+    { "TermCat.Algos",         SortTerms::YES  },
+    { "TermCat.General",       SortTerms::YES  },
+    { "TermCat.Styles",        SortTerms::YES  },
+    { "TermCat.Input",         SortTerms::YES  },
+    { "TermCat.Misc",          SortTerms::YES  },
 };
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 

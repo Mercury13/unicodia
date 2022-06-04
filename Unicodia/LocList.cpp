@@ -10,6 +10,7 @@
 // Libs
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+#include "mojibake.h"
 
 // L10n
 #include "LocDic.h"
@@ -84,6 +85,16 @@ namespace {
         r.name.international = str::toU8(hLocale.attribute("international").as_string());
         r.name.isoSmall = str::toU8(hLocale.attribute("iso").as_string());
         r.showEnglishTerms = hLocale.attribute("eng-terms").as_bool(true);
+
+        r.sortOrder.clear();
+        auto hAlphaSort = hLocale.child("alpha-sort");
+        for (auto& v : hAlphaSort.children("alp")) {
+            auto alph = mojibake::toS<std::u32string>(v.text().as_string());
+            for (size_t i = 0; i < alph.length(); ++i) {
+                if (auto c = alph[i]; c != '_')
+                    r.sortOrder[c] = i;
+            }
+        }
 
         r.wikiTemplates.clear();
         auto hTemplates = hLocale.child("wiki-templates");

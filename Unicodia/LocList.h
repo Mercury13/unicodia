@@ -26,6 +26,7 @@ namespace loc
         bool showEnglishTerms = true;
         std::unique_ptr<QTranslator> translator;
         std::map<std::string, std::string, std::less<>> wikiTemplates;
+        std::unordered_map<char32_t, int> sortOrder;
 
         void load();
         void forceLoad();
