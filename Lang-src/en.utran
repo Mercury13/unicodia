@@ -4031,36 +4031,45 @@
    <group id="Hebr">
     <text id="Name">
      <orig>Иврит</orig>
+     <transl>Hebrew</transl>
     </text>
     <text id="Lang">
      <orig>иврит, ладино, идиш, караимский, крымчакский</orig>
+     <transl>Hebrew, Ladino, Yiddish, Karaim, Krymchak</transl>
     </text>
     <text id="Text">
      <orig>Иврит развился из [[ps:Armi|арамейской]] письменности через палеоеврейскую. В еврейском мистицизме алфавит является едва ли не{{_}}элементом мироздания, и 22 арамейских буквы дожили до наших дней, ко II{{_}}в.{{bc}} приобретя почти современный вид.<br /><br />Записывает только согласные буквы, но четыре буквы {{sm|אהוי}} могут означать гласные, такие буквы называются [[pt:abjad|матрес лекционис]]. В VI–VIII{{_}}веке придумали огласовки{{-}}точки над буквами, важные для точной передачи текстов Торы.<br /><br />К X{{_}}веку иврит уходит из разговорной практики, оставшись только книжным языком, однако еврейскими буквами писали и на разговорных еврейских языках: идише, ладино и других. С появлением государства Израиль иврит снова сделали языком повседневного общения.</orig>
+     <transl>Hebrew evolved from [[ps:Armi|Aramaic]] script through Paleo-Hebrew. The alphabet is almost a pillar of the universe in Jewish mysticism, and 22 Aramaic letters survived until today, having obtained modern form by 2nd century BC.<br /><br />Only consonant phonemes are written, but four letters {{sm|אהוי}} can mean vowels, such letters are named [[pt:abjad|matres lectionis]]. In 6–8th centuries vowel marks were invented{{-}}dots above letters that are important for exact reading of Torah.<br /><br />By 10th century Hebrew had gone from conversation and stayed only as a book language, but Hebrew letters were also used for conversational Jewish languages: Yiddish, Ladino and others. With advent of state of Israel, Hebrew was revived as a language of everyday conversation.</transl>
     </text>
    </group>
    <group id="Hent">
     <text id="Name">
      <orig>Хэнтайгана</orig>
+     <transl>Hentaigana</transl>
     </text>
     <text id="Lang">
      <orig>японский</orig>
+     <transl>Japanese</transl>
     </text>
     <text id="Text">
      <orig>Хэнтáйгана{{-}}общее название устаревших знаков [[ps:Hira|хирáганы]], записанных крайне небрежно.<br /><br />Из [[ps:Hani|иероглифов]] произошла вспомогательная азбука манъёгана{{-}}роль играло не{{_}}изображение на иероглифе, а прочтение. К X{{_}}веку манъёгана уступила хирагане и [[ps:Kana|катакане]]. Какой-то системы не{{_}}было, потому существовали разные знаки для одного слога. <br /><br />В 1900{{_}}хирагану стандартизировали, за каждым слогом оставили один символ. А хэнтайгана стала чем-то вроде западного готического шрифта или кириллического устава{{-}}применяется в открытках, религиозных документах, дипломах школ боевых искусств и… на вывесках ресторанов.<br /><br />«Китайские порномультики» хентай{{-}}омофон: они происходят от {{sm|変態}} «хэнтай»{{-}}извращённый, а хэнтайгана от {{sm|変体}} «хэнтай»{{-}}необычный.</orig>
      <au-cmt>For translators: устав = uncial, «китайские порномультики» = Japornimation</au-cmt>
+     <transl>Hentaigana is a general name of obsolete Hiragana letters written in extremely sloppy manner.<br /><br />Auxiliary ayllabary of Man’yōgana emerged from [[ps:Hani|Chinese ideographs]]{{-}}reading of ideograph rather than image mattered. By 10th century Man’yōgana had been supplanted with Hiragana and [[ps:Kana|Katakana]]. There was no system, so different signs for a single syllable existed.<br /><br />Hiragana had been standardized by 1900, exactly one character was left for every syllable. And Hentaigana became something like Western Gothic font or Cyrillic uncial{{-}}it was used in postcards, religious documents, diplomas of martial arts schools, and… in signs of restaurants.<br /><br />“Japornimation” hentai is a homophone: it comes from {{sm|変態}} “hentai” ''perverted'', and Hentaigana from {{sm|変体}} “hentai” ''weird''.</transl>
     </text>
    </group>
    <group id="Hira">
     <text id="Name">
      <orig>Хирагана</orig>
+     <transl>Hiragana</transl>
     </text>
     <text id="Lang">
      <orig>японский</orig>
+     <transl>Japanese</transl>
     </text>
     <text id="Text">
      <orig>Около III{{_}}века японцы стали писать [[ps:Hani|китайскими иероглифами]]. Из них произошла вспомогательная азбука манъёгана{{-}}роль играло не{{_}}изображение на иероглифе, а прочтение. Хирáгана{{-}}не что иное, как очень небрежно записанная манъёгана.<br /><br />Женщины, которым не{{_}}было доступно образование, писали слоговой азбукой, и предпочитали не{{_}}рубленую [[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</orig>
      <au-cmt>For translator: окончание = suffix</au-cmt>
+     <transl>About 3rd century Japanese started to write with [[ps:Hani|Chinese ideographs]]. Auxiliary syllabary of Man’yōgana emerged from ideographs, pronunciation rather than image mattered. Hiragana is just an extremely cursive writing of Man’yōgana.<br /><br />Women could not get education, they wrote with syllabary, and preferred smooth Hiragana to sloppy [[ps:Kana|Katakana]]. Nowadays Hiragana is used for words that do not have an ideograph or it is unknown to writer/reader (except loanwords, they are written with Katakana), word endings, teaching children, pronunciation aids for ideographs.</transl>
     </text>
    </group>
    <group id="Hluw">
