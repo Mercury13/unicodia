@@ -1,67 +1,56 @@
-===== НЕГОТОВЫЕ =====
-
-Egyptian Hieroglyphs
-* Куча перерисовок иероглифов. Простейшая — 13032 женщине убрали бороду
-* Noto не готов
-
-
-===== ЗАТКНУТЫЕ =====
+===== GAGGED =====
 
 Ahom
-* Новые символы 11740…46
-* Noto не готов
-* Нарисовал сам в FunkySample
-
-Arabic
-* +1 символ 061D основной блок
-* +12 символов блок A: 08B5, 08D0 и др. (заполнился до конца)
-* Новый блок B: 0870..9F, назначен 41 символ
-* Pres-A: добавились FBC2, FD40…4F, FDCF, FDFE, FDFF
-* Noto Naskh НЕ готов.
-* Scheherazade ГОТОВА, но в ней нет FBC2.
-* Выдрал из Noto Naskh в FunkySample.
+* New chars 11740…46
+* Noto not ready
+* Drew in FunkySample
 
 Balinese
-* 3 символа 1B4C, 1B7D, 1B7E
-* Noto не готов
-* Нарисовал сам в FunkySample
+* 3 chars 1B4C, 1B7D, 1B7E
+* Noto NOT ready
+* Drew in FunkySample
 
 Brahmi
-* Новые символы 11070…75
-* Noto не готов
-* Нарисовал сам в FunkySample
+* New chars 11070…75
+* Noto NOT ready
+* Drew in FunkySample
 
 CJK
-* 9FFD…FF (иероглифы) Babelstone ПОДДЕРЖИВАЕТ.
-* 1AFF0+ (доп. кана) Babelstone НЕ поддерживает. Хотя хэнтайгану, например, он более чем поддерживает.
-* 1B11F…22 (архаичная катакана) Babelstone НЕ поддерживает.
-* 2A6DE,DF (иероглифы B) Babelstone ПОДДЕРЖИВАЕТ.
-* 2B735…38 (иероглифы C) Babelstone ПОДДЕРЖИВАЕТ.
-* Сумел найти какую-то комбинацию чужих шрифтов.
+* 9FFD…FF (ideographs) SUPPORTED by Babelstone.
+* 1AFF0+ (kana supp) NOT supported by Babelstone. Though it more that supports hentaigana.
+* 1B11F…22 (archaic katakana) NOT supported by Babelstone.
+* 2A6DE,DF (ideographs B) SUPPORTED by Babelstone.
+* 2B735…38 (ideographs C) SUPPORTED by babelStone.
+* Found some combination of other’s fonts, but current chain is not sustainable, need new.
 
 Combining diacritical marks ex
-* Добавились символы 1AC1…CE (МФА)
-* Noto Serif не готов
-* Нарисовал сам в FunkySample
+* Added chars 1AC1…CE (IPA)
+* Noto Serif is NOT ready
+* Drew in FunkySample
 
 Combining diacritical marks supplement
-* Добавился 1DFA (сирийский)
-* На Noto Serif забил, Syriac не готов
-* Нарисовал сам в FunkySample
+* Added 1DFA (Syriac)
+* Both Noto fonts NOT ready
+* Drew in FunkySample
+
+Egyptian Hieroglyphs
+* Lots of redraws. Simplest: 13032 removed woman’s beard
+* Noto is not ready
+* Gagged with NewGardiner
 
 Glagolitic
-* Добавились 2C2F, 2C5F
-* Noto не готов
-* Нарисовал сам в FunkySample
+* Added 2C2F, 2C5F
+* Noto NOT ready
+* Drew in FunkySample
 
 Kaithi
-* Новый символ 110C2
-* Noto не готов
-* Нарисовал сам в FunkySample
+* New char 110C2
+* Noto NOT ready
+* Drew in FunkySample
 
 Kannada
-* +1 символ 0CDD
-* Нарисовал в Kannada
+* +1 char 0CDD
+* Drew in Kannada
 
 Latin
 * Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
@@ -71,81 +60,84 @@ Latin
 * Noto Serif NOT READY
 
 Oriya
-* Noto UI не готов даже к U13, ищи Combining overline 0B55
-* Нарисовал сам в OriyaUi
+* Noto UI NOT ready even to U13, find Combining overline 0B55
+* Drew in OriyaUi
 
 Supplemental punctuation
-* Добавились 2E53…2E5D.
-* На Noto Serif забил
-* Нарисовал сам в FunkySample
+* Added 2E53…2E5D.
+* Noto Serif is NOT ready
+* Drew in FunkySample
 
 Syriac
-* Syriac Malayalam не готов, что уж говорить про 1DFA
+* Syriac Malayalam not ready, not saying about 1DFA
 
 Tagalog
-* +3 символа 170D, 1715 (разунифицировали с хануноо?), 171F
-* Noto не готов
-* Нарисовал в Tagalog
+* +3 chars 170D, 1715 (disunified with Hano?), 171F
+* Noto NOT ready
+* drew in Tagalog
 
 Takri
-* Новый символ 116B9, очень простой
-* Noto не готов
-* Нарисовал сам в FunkySample
+* New char 116B9, very simple
+* Noto NOT ready
+* Drew in FunkySample
 
 Telugu
-* +2 символа 0C3C, 0C5D
-* Noto UI не готов
-* Нарисовал в FunkySample
+* +2 chars 0C3C, 0C5D
+* Noto UI NOT ready
+* Drew in FunkySample
 
-Валютные символы
-* Добавился 20C0 киргизский сом
-* Нарисовал в Noto Sans
+===== READY =====
 
-Музыка
-* Два новых символа 1D1E9,EA
-* Noto не готов
-* Нарисовал сам в FunkySample
-
-Эмодзи
-* Transport: 1F6DD детская горка, 1F6DE колесо, 1F6DF спасательный круг
-* GeometricEx: 1F7F0 большое = (знак равенства)
-* Supp: 1F979 смайл, сдерживающий слёзы, 1F9CC тролль
-* ExA: 1FA7B рентген, 7C костыль, A9 дискотечный шар, AA карточка-удостоверение, AB севшая батарейка, AC хамза, B7 лотос, B8 коралл, B9 пустое гнездо, BA гнездо с яйцами, С3 беременный мужик, C4 беременный человек, C5 человек в короне, D7 льющаяся жидкость, D8 бобы, D9 стеклянная банка, E0 плавящийся смайл, E1 смайл, отдающий честь, E2 смайл закрывает рот рукой, E3 закрывает глаза и смотрит сквозь пальцы, E4 с диагональным ртом, E5 смайл с пунктирным контуром, E6 кусание губы, E7 пузыри, F0 скрещенные большой и указательный, F1 рука вправо, F2 рука влево, F3 ладонь вниз, F4 ладонь вверх, F5 плакат с пальцем, F6 руки сердечком
-* На Sym2 забил, раз уж он не сподобился исправить пешку
-* Вышел Noto Emoji, он и стал основой для самых сложных символов
-* Нарисовал в FunkySample
-
-
-===== ГОТОВЫЕ =====
+Arabic OK
+* +1 char 061D main block
+* +12 chars block A: 08B5, 08D0 etc (filled to brim)
+* New block B: 0870..9F, 41 char assigned
+* Pres-A: added FBC2, FD40…4F, FDCF, FDFE, FDFF
+* Noto Naskh NOT ready
+* Scheherazade READY, but FBC2 is absent
+* Use combination of and Sheherazade
 
 Canadian aboriginal OK
-* Новые символы 11AB0…BF
-* Noto ГОТОВ
+* New characters 11AB0…BF
+* Noto READY
 
-* Cypro-Minoan OK
+Currency chars OK
+* Added 20C0 Kyrghyz Som
+* Drew in FunkySample (that’s OK for an isolated char)
+
+Cypro-Minoan OK
 * New script
 * Noto CAME, but my version is more stylish :)
 
+Emoji OK
+* Noto graphic emoji CAME
+* Poor visibility on white BG
+
 Ethiopic OK
-* Новый блок 1E7E0+
-* Noto ГОТОВ
+* New 1E7E0+
+* Noto READY (though funked up someday and does not want to fix)
 
 Mongol OK
-* Добавился спецсимвол 180F, шрифты трогать не надо
+* Added character 180F, no changes in fonts
+
+Music
+* Two new chars in 1D1E9,EA
+* Noto CAME
 
 Old Uyghur OK
-* Новая письменность
-* Noto ВЫШЕЛ
+* New script
+* Noto CAME
 
 Tangsa OK
-* Связался с автором, лицензии пока нет
+* Contacted author, no license by now
 
 Toto OK
-* По интернету ходит открытый шрифт неизвестного авторства
+* Font of unknown authorship (SIL) comes across Internet
+* Copied to FunkySample
 
 Vithkuqi OK
-* Новая письменность
-* Noto ВЫШЕЛ
+* New script
+* Noto CAME
 
-Знаменное пение OK
-* Вышел высококачественный открытый шрифт, большего и не нужно
+Znamenny OK
+* High-quality open font came, that’s OK
