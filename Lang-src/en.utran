@@ -5940,7 +5940,7 @@
     </text>
     <text id="Text">
      <orig>Такой высокой цели, как [[pt:universality|универсальность]], Юникод добивается с помощью динамической компоновки{{-}}изображение собирается на лету из частей. Иногда для удобства делают и [[pt:precomposed|монолитные символы]], но в целом &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.<br /><br />Чтобы проверять совпадение текстов с учётом разных вариантов кодирования, используется алгоритм [[pt:normalization|нормализации]].</orig>
-     <transl>Such ambitious goal as [[pt:universality|universality]] is achieved by Unicode using dynamic composition{{-}}character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.<br /><br />To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</transl>
+     <transl>Unicode achieves such an ambitious goal as [[pt:universality|universality]] by using dynamic composition{{-}}character’s image is constructed on-the-fly from parts. Sometimes [[pt:precomposed|precomposed]] characters are made for convenience, but generally &lt;nobr&gt;A + ¨ = Ä&lt;/nobr&gt;.<br /><br />To check text equality under different encoding variants, [[pt:normalization|normalization]] algorithms are used.</transl>
     </text>
    </group>
    <group id="logical">
