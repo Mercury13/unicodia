@@ -4165,12 +4165,15 @@
    <group id="Kali">
     <text id="Name">
      <orig>Кая-ли</orig>
+     <transl>Kayah Li</transl>
     </text>
     <text id="Lang">
      <orig>краснокаренский ''(Мьянма)''</orig>
+     <transl>Kayah ''(=Red Karen, Myanmar)''</transl>
     </text>
     <text id="Text">
      <orig>Кая-ли происходит из [[ps:Brah|брахми]], создана Хтаэ Бу Пхаэ в 1962 в ответ на распространение [[ps:Latn|латиницы]]{{-}}но буквы не{{_}}имеют гласной по умолчанию, и потому это не{{_}}[[pt:abugida|абугида]]. Четыре гласных пишутся отдельными буквами, остальные диакритикой над {{sm|ꤢ}}. Ещё несколько гласных из заимствованных слов пишутся диакритикой над {{sm|ꤣ}}.<br /><br />Кая-ли{{-}}во многом алфавит беженцев: {{%|90}} живущих в тайских лагерях беженцев{{-}}карены, сбежавшие от зверств бирманских военных, и в околотюремных условиях важно всё, что сплачивает. Карены{{-}}разнородная группа народов, среди них есть красные, чёрные, белые и другие, по цвету национального костюма. Помимо кая-ли, пишут [[ps:Thai|тайским]], латиницей и [[ps:Mymr|бирманским]].</orig>
+     <transl>Kayah Li comes from [[ps:Brah|Brahmi]], created by Htae Bu Phae in 1962 in response to spread of [[ps:Latn|Latin]]{{-}}but letters do not have inherent vowel, and this it is not an [[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.<br /><br />Kayah Li is an alphabet of refugees in many ways: in Thai refugee camps {{%|90}} of inhabitants are Karens that fled from atrociries of Myanmar military, and in near-prison conditions everything that unites is important. Karens are diverse group of peoples that includes Red, Black, White and others, by colour of national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Maynmar]].</transl>
     </text>
    </group>
    <group id="Kana">
@@ -4204,25 +4207,29 @@
    <group id="Khmr">
     <text id="Name">
      <orig>Кхмерская</orig>
+     <transl>Khmer</transl>
     </text>
     <text id="Lang">
-     <orig>кхмерский ''(Камбоджа)''</orig>
+     <orig>кхмерский ''(Камбоджа, 16 млн на 2007)''</orig>
+     <transl>Khmer ''(Cambodia, 16M as of 2007)''</transl>
     </text>
     <text id="Text">
-     <orig>Как и другие языки Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].<br /><br />Между словами не{{_}}ставятся пробелы. Гласная по умолчанию для одних согласных «а», для других «о». Огласовки на этих согласных также звучат по-разному. Те согласные, что на «о», заодно служат конечными. Существует две [[pt:virama|вирамы]]: одна видимая устаревшая, вторая виртуальная для сборки стечений согласных: под первой согласной записывается уменьшенная вторая. Например, самоназвание {{sm|ខ្មែរ}} записывается как<br />: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</orig>
-     <known-orig>Как и другие языки Юго-Восточной Азии, произошёл из [[ps:Brah|брахми]]. Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].&lt;p&gt;Между словами не{{_}}ставятся пробелы. Гласная по умолчанию для одних согласных «а», для других «о». Огласовки на этих согласных также звучат по-разному. Те согласные, что на «о», заодно служат конечными. Существует две [[pt:virama|вирамы]]: одна видимая устаревшая, вторая виртуальная для сборки стечений согласных: под первой согласной записывается уменьшенная вторая. Например, самоназвание {{sm|ខ្មែរ}} записывается как&lt;br&gt;{{__}}{{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</known-orig>
+     <orig>Как и другие языки Юго-Восточной Азии, произошёл из паллавы (ранней [[ps:Gran|грантхи]]). Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].<br /><br />Между словами не{{_}}ставятся пробелы. Гласная по умолчанию для одних согласных «а», для других «о». Огласовки на этих согласных также звучат по-разному. Те согласные, что на «о», заодно служат конечными. Существует две [[pt:virama|вирамы]]: одна видимая устаревшая, вторая виртуальная для сборки стечений согласных: под первой согласной записывается уменьшенная вторая. Например, самоназвание {{sm|ខ្មែរ}} записывается как<br />: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</orig>
+     <transl>As other languages of South-East Asia, comes from Pallava (early [[ps:Gran|Grantha]]). Became a base for [[ps:Thai|Thai]] and [[ps:Laoo|Lao]].<br /><br />There are no spaces between words. There are two sets of consonants: one has inherent vowel “a”, the other has “o”. Vowel marks on these consonants also sound differently. Consonants ending with “o” are also used as final. Two [[pt:virama|viramas]] exist: one visible obsolete, the other is virtual for assembling consonant conjuncts: small second consonant is written under the first one. For example, autonym {{sm|ខ្មែរ}} is made of<br />: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</transl>
     </text>
    </group>
    <group id="Khoj">
     <text id="Name">
      <orig>Ходжки</orig>
+     <transl>Khojki</transl>
     </text>
     <text id="Lang">
      <orig>качи, синдхи ''(Индия)''</orig>
+     <transl>Kutchi, Sindhi</transl>
     </text>
     <text id="Text">
      <orig>Традиционно считается, что ходжки придумал Пир Садардин (XIV{{_}}век), посланный в Индию проповедовать ислам. По более приземлённой версии, это выделившийся в XVI{{_}}веке вариант ланды{{-}}очень беглой [[ps:Shrd|шарады]]. Используется и изучается поныне индийскими шиитами.<br /><br />Брахмийская абугида с гласной по умолчанию «а», [[pt:virama|вирамой]] и четырьмя [[pt:ligature|лигатурами]] на стыках согласных, одна из которых за неимением согласной «ша» пишется через знак «нукта»:<br />: ка {{sm|𑈈}} + и {{sm|◌𑈭}} = ки {{sm|𑈈𑈭}}<br />: ка {{sm|𑈈}} + вирама {{sm|◌𑈵}} = к {{sm|𑈈𑈵}}<br />: та {{sm|𑈙}} + вирама {{sm|◌𑈵}} + ра {{sm|𑈦}} = тра {{sm|𑈙𑈵𑈦}}&amp;nbsp;&amp;nbsp; (также «джнья» и «дра»)<br />: ка {{sm|𑈈}} + вирама {{sm|◌𑈵}} + са {{sm|𑈩}} + нукта {{sm|◌𑈶}} = кша {{sm|𑈈𑈵𑈩𑈶}}<br /><br />Цифры очень похожи на [[ps:Gujr|гуджарати]] и [[pt:unification|унифицированы]] с ним.</orig>
-     <known-orig>Традиционно считается, что ходжки придумал Пир Садардин (XIV{{_}}век), посланный в Индию проповедовать ислам. По более приземлённой версии, это выделившийся в XVI{{_}}веке вариант ланды{{-}}очень беглой [[ps:Shrd|шарады]]. Используется и изучается поныне индийскими шиитами.&lt;p&gt;Брахмийская абугида с гласной по умолчанию «а», [[pt:virama|вирамой]] и четырьмя [[pt:ligature|лигатурами]] на стыках согласных, одна из которых за неимением согласной «ша» пишется через знак «нукта»:&lt;br&gt;{{__}}ка {{sm|𑈈}} + и {{sm|◌𑈭}} = ки {{sm|𑈈𑈭}}&lt;br&gt;{{__}}ка {{sm|𑈈}} + вирама {{sm|◌𑈵}} = к {{sm|𑈈𑈵}}&lt;br&gt;{{__}}та {{sm|𑈙}} + вирама {{sm|◌𑈵}} + ра {{sm|𑈦}} = тра {{sm|𑈙𑈵𑈦}}&lt;br&gt;(также «джнья» и «дра»)&lt;br&gt;{{__}}ка {{sm|𑈈}} + вирама {{sm|◌𑈵}} + са {{sm|𑈩}} + нукта {{sm|◌𑈶}} = кша {{sm|𑈈𑈵𑈩𑈶}}&lt;p&gt;Цифры очень похожи на [[ps:Gujr|гуджарати]] и [[pt:unification|унифицированы]] с ним.</known-orig>
+     <transl>Tradition states that Khojki was invented by Pir Sadardin (14th century) who was sent to India to spread Islam. By more down-to-earth version, it emerged in 16th century as a variant of Landa, very cursive [[ps:Shrd|Sharada]]. Used and studied even nowadays by Indian Shiites.<br /><br />Brahmic abugida with inherent vowel “a”, [[pt:virama|virama]] and four ligatures of consonant conjuncts, one of them for the lack of “ssa” letter is written through nukta sign:<br />: ka {{sm|𑈈}} + i {{sm|◌𑈭}} = ki {{sm|𑈈𑈭}}<br />: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} = k {{sm|𑈈𑈵}}<br />: ta {{sm|𑈙}} + virama {{sm|◌𑈵}} + ra {{sm|𑈦}} = tra {{sm|𑈙𑈵𑈦}}&amp;nbsp;&amp;nbsp; (also “jnya” and “dra”)<br />: ka {{sm|𑈈}} + virama {{sm|◌𑈵}} + sa {{sm|𑈩}} + nukta {{sm|◌𑈶}} = kssa {{sm|𑈈𑈵𑈩𑈶}}<br /><br />Digits resemble [[ps:Gujr|Gujarati]] and [[pt:unification|unified]] with it.</transl>
     </text>
    </group>
    <group id="Kits">
