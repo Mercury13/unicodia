@@ -510,7 +510,7 @@
     <text id="EngTech">
      <orig>Английское</orig>
      <au-cmt>English — maybe Technical<br />Test: block info</au-cmt>
-     <transl>Technical</transl>
+     <transl>Technical name</transl>
     </text>
     <text id="Range">
      <orig>Диапазон</orig>
