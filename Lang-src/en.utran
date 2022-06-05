@@ -10,6 +10,12 @@
    <text-escape line-break-mode="c-lf" space-escape="bare" />
    <multitier separator="." />
   </format>
+  <group id="Common">
+   <text id="Copied">
+    <orig>Скопировано</orig>
+    <transl>Copied</transl>
+   </text>
+  </group>
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>
    <group id="Century">
@@ -4235,12 +4241,15 @@
    <group id="Kits">
     <text id="Name">
      <orig>Малое киданьское письмо</orig>
+     <transl>Khitan small script</transl>
     </text>
     <text id="Lang">
      <orig>киданьский ''(северо-восточный Китай)''</orig>
+     <transl>Khitan ''(North-East China)''</transl>
     </text>
     <text id="Text">
-     <orig>Использовалось в государстве Ляо (северо-восточный Китай). Изобретено около 925 учёным по имени Елюй Дела на основе [[ps:Ougr|уйгурского]]. Слова записываются блоками до семи иероглифов. Из 378 известных на 1987{{_}}год символов 125{{-}}иероглифы, 115{{-}}фонетические, остальные не{{_}}расшифрованы.<br /><br />Большое и малое письмо использовались параллельно, малое проще (большое{{-}}чисто иероглифическое). Киданьских книг не{{_}}сохранилось, только предметы и надписи на захоронениях знатных граждан, последняя{{-}}около 1200. В 1216 киданей окончательно разбили монголы и корейцы.<br /><br />Многие шрифты кладут киданьский текст на 90°. Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''. Из-за вопросов с авторскими правами значок показывает один из символов с медного киданьского зеркала (прорисовал проф. Цзин Юнши), а шрифт{{-}}прямой современный, перерисованный Эндрю Уэстом.</orig>
+     <orig>Использовалось в государстве Ляо (северо-восточный Китай). Изобретено около 925 учёным по имени Елюй Дела на основе [[ps:Ougr|уйгурского]]. Слова записываются блоками до семи иероглифов. Из 378 известных на 1987{{_}}год символов 125{{-}}иероглифы, 115{{-}}фонетические, остальные не{{_}}расшифрованы.<br /><br />Большое и малое письмо использовались параллельно, малое проще (большое{{-}}чисто иероглифическое). Киданьских книг не{{_}}сохранилось, только предметы и надписи на захоронениях знатных граждан, последняя{{-}}около 1200. В 1216 киданей окончательно разбили монголы и корейцы.<br /><br />Многие шрифты кладут киданьский текст на 90°. Данный шрифт показывает иероглифы прямо{{-}}как в книге ''Daniel Kane. The Kitan Language and Script''. Из-за вопросов с авторскими правами значок показывает один из символов с бронзового киданьского зеркала (прорисовал проф. Цзин Юнши), а шрифт{{-}}прямой современный, перерисованный Эндрю Уэстом.</orig>
+     <transl>Was used in Liao empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on [[ps:Ougr|Uighur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters 125 are ideographs, 115 are phonetical, the rest are not deciphered.<br /><br />Large and small script were used in parallel, small is simpler (large is purely ideographic). Khitan books did not survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216 Khitans were finally defeated by Mongols and Chinese.<br /><br />Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, icon shows one of characters from Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern Roman, redrawn by Andrew West.</transl>
     </text>
    </group>
    <group id="Knda">
