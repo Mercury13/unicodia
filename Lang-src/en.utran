@@ -3996,30 +3996,36 @@
      <transl>Chinese, Japanese, historically Vietnamese and Korean</transl>
     </text>
     <text id="Text">
-     <orig>Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, впоследствии они видоизменились под письмо кистью и тушью. Уже в I{{_}}тысячелетии до н.э. люди стали отходить от иероглифов, но Китай законсервировал архаичную письменность, этому есть несколько причин:<br />* многонациональный народ{{-}}помимо государствообразующего народа хань, было ещё около десятка, и они понимали друг друга хоть на письме;<br />* культ традиции{{-}}даже сейчас китайцы довольно консервативны;<br />* неплохо действовавшая меритократия{{-}}тысячи знаков и умение их красиво писать выявляли обучаемых людей.<br /><br />В III{{_}}веке иероглифы проникли в Японию. У многих иероглифов есть как китайское, так и японское прочтение: например, {{sm|月}} (луна) имеет китайские прочтения «гэцу» и «гацу», и японское «цуки». Как читать{{-}}определяется контекстом: {{sm|月曜日}}=гэцуо:би (понедельник), {{sm|月見}}=цукими (любование луной).<br /><br />В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не{{_}}кодирует: тонкости написания передаются шрифтами, и даже если шрифт неверный, понятно, о чём речь.<br /><br />Вьетнам отказался от иероглифов в 1945. Северная Корея не{{_}}использует иероглифы, Южная использует крайне редко.<br /><br />Китайский язык всё ещё раздроблен на диалекты, и ввести фонетическое письмо невозможно.</orig>
-     <known-orig>Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, впоследствии они видоизменились под письмо кистью и тушью. Уже в I{{_}}тысячелетии до н.э. люди стали отходить от иероглифов, но Китай законсервировал архаичную письменность, этому есть несколько причин:&lt;br&gt;• многонациональный народ{{-}}помимо государствообразующего народа хань, было ещё около десятка, и они понимали друг друга хоть на письме;&lt;br&gt;• культ традиции{{-}}даже сейчас китайцы довольно консервативны;&lt;br&gt;• неплохо действовавшая меритократия{{-}}тысячи знаков и умение их красиво писать выявляли обучаемых людей.&lt;p&gt;&lt;p&gt;В III{{_}}веке иероглифы проникли в Японию. У многих иероглифов есть как китайское, так и японское прочтение: например, {{sm|月}} (луна) имеет китайские прочтения «гэцу» и «гацу», и японское «цуки». Как читать{{-}}определяется контекстом: {{sm|月曜日}}=гэцуо:би (понедельник), {{sm|月見}}=цукими (любование луной).&lt;p&gt;В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не{{_}}кодирует: тонкости написания передаются шрифтами, и даже если шрифт неверный, понятно, о чём речь.&lt;p&gt;Вьетнам отказался от иероглифов в 1945. Северная Корея не{{_}}использует иероглифы, Южная использует крайне редко.&lt;p&gt;Китайский язык всё ещё раздроблен на диалекты, и ввести фонетическое письмо невозможно.</known-orig>
+     <orig>Первые пиктограммы относятся к VI{{_}}тысячелетию до н.э., их выцарапывали или рисовали краской, впоследствии они видоизменились под письмо кистью и тушью. Уже в I{{_}}тысячелетии до н.э. люди стали отходить от иероглифов, но Китай законсервировал архаичную письменность, этому есть несколько причин:<br />* многонациональный народ{{-}}помимо государствообразующего народа хань, было ещё около десятка, и они понимали друг друга хоть на письме;<br />* культ традиции{{-}}даже сейчас китайцы довольно консервативны;<br />* неплохо действовавшая меритократия{{-}}тысячи знаков и умение их красиво писать выявляли обучаемых людей.<br /><br />В III{{_}}веке иероглифы проникли в Японию. У многих иероглифов есть как китайское, так и японское прочтение: например, {{sm|月}} (луна) имеет китайские прочтения «гэцу» и «гацу», и японское «цуки». Как читать{{-}}определяется контекстом: {{sm|月曜日}}=гэцуё:би (понедельник), {{sm|月見}}=цукими (любование луной).<br /><br />В Китае, Тайване, Японии и Корее иероглифы отличаются, Юникод эти различия не{{_}}кодирует: тонкости написания передаются шрифтами, и даже если шрифт неверный, понятно, о чём речь.<br /><br />Вьетнам отказался от иероглифов в 1945. Северная Корея не{{_}}использует иероглифы, Южная использует крайне редко.<br /><br />Китайский язык всё ещё раздроблен на диалекты, и ввести фонетическое письмо невозможно.</orig>
+     <transl>First pictographs are dated with 6th millennium BC, they were scratched or written with ink, later they modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:<br />* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing.<br />* cult of tradition{{-}}even today Chinese are rather conservative;<br />* meritocracy that worked somehow{{-}}thousands of signs and ability to write them nicely detected trainable people.<br /><br />In 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).<br /><br />Ideographs differ in China, Taiwan, Japan and Korea. Unicode does not encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.<br /><br />Vietnam dropped ideographs in 1945. North Korea does not use ideographs, South uses very seldom.<br /><br />Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</transl>
     </text>
    </group>
    <group id="Hano">
     <text id="Name">
      <orig>Хануноо</orig>
+     <transl>Hanunoo</transl>
     </text>
     <text id="Lang">
      <orig>филиппинские горные народы</orig>
+     <transl>highland peoples of Philippines</transl>
     </text>
     <text id="Text">
      <orig>Хануноо восходит к [[ps:Brah|брахми]] и похож на [[ps:Tglg|тагальский]].</orig>
+     <transl>Hanunoo derives from [[ps:Brah|Brahmi]] and is related to [[ps:Tglg|Tagalog]].</transl>
     </text>
    </group>
    <group id="Hatr">
     <text id="Name">
      <orig>Хатранская (ашшурская)</orig>
+     <transl>Hatran (Asurian)</transl>
     </text>
     <text id="Lang">
      <orig>хатранский (ашшурский) арамейский</orig>
+     <transl>Hatran (Ashurian) Aramaic</transl>
     </text>
     <text id="Text">
      <orig>Потомок [[ps:Armi|арамейского]]. Использовался в Хатре (современный Ирак) до III{{_}}века, когда Хатру разрушил Шапур{{_}}I Сасанид. Все известные надписи очень короткие, самая длинная{{-}}13 строк.</orig>
+     <transl>Descendant of [[ps:Armi|Aramaic]]. Had been used in Hatra (modern Iraq) before 3rd century, until Hatra was destroyed by Shapur{{_}}I Sasanid. All known inscriptions are short, the largest is just 13{{_}}lines long.</transl>
     </text>
    </group>
    <group id="Hebr">
@@ -5950,6 +5956,7 @@
     </text>
     <text id="Text">
      <orig>Юникод хранит символы в логическом порядке, который примерно соответствует порядку произношения или набора с клавиатуры. Этот порядок не{{_}}совпадает с порядком отображения текста на экране, и алгоритмы [[pt:bidi|двунаправленного текста]] призваны расставить символы в визуальном порядке.<br /><br />[[pt:combining|Комбинирующие метки]] хранятся после своих символов.<br /><br />Исключение: некоторые [[pt:brahmic|брахмийские]] абугиды ([[ps:Thai|тайский]], [[ps:Laoo|лаосский]]) традиционно хранят текст в визуальном порядке: некоторые гласные находятся перед согласной, даже если читаются после.</orig>
+     <transl>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put charcters in visual order.<br /><br />[[pt:combining|Combining marks]] are stored after their characters.<br /><br />Exception: some [[pt:brahmic|Brahmic]] abugidas ([[ps:Thai|Thai]], [[ps:Laoo|Lao]]) traditionally store text in visual order: some vowels are situated before consonant, even if read after.</transl>
     </text>
    </group>
    <group id="convertibility">
