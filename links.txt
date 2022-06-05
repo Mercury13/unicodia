@@ -1,12 +1,12 @@
-﻿СПЕЦИФИКАЦИИ ЮНИКОДА
+﻿UNICODE SPECS
 
-https://unicode.org/reports/tr42/ — информация о базе символов Юникода
-https://www.unicode.org/Public/13.0.0/ — собственно база
-https://commons.wikimedia.org/wiki/Emoji/Table — список эмодзи
-https://unicode.org/glossary/ — словарь
+https://unicode.org/reports/tr42/ — info in char base
+https://www.unicode.org/Public/13.0.0/ — base
+https://commons.wikimedia.org/wiki/Emoji/Table — emoji list
+https://unicode.org/glossary/ — glossary
 
 
-АЛЬТЕРНАТИВНЫЕ ЮНИКОДИИ
+ALTERNATE UNICODIAS
 
 https://www.compart.com/en/unicode/scripts
 https://unicode-table.com/ru/
@@ -15,48 +15,47 @@ https://babelstone.co.uk/Software/BabelMap.html
 https://r12a.github.io/scripts/oriya/block.html
 
 
-ШРИФТЫ
+FONTS
 
-https://github.com/googlefonts/noto-fonts — семейство шрифтов Noto от Гугла
-https://laoscript.net/download/ — лаосские шрифты
-http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html — индийский шрифт
-https://babelstone.co.uk/Fonts/index.html — разные шрифты
-https://www.jawish.org/blog/archives/429-Dhives-A-free-Dhives-Akuru-font.html — дивес акуру
-https://github.com/pandey/graphite-fonts — это работает Anshuman Pandey
-https://software.sil.org/scheherazade/download/ — «Шехерезада», открытый арабский шрифт, полное покрытие U13 в основных блоках
-https://www.amirifont.org/ — «Амири», открытый арабский шрифт, полное покрытие доп. блоков, кроме одного символа
-https://oldhungarian.eu/index_en.html — венгерские руны
-http://cheonhyeong.com/Simplified/download.html — Tshyn, странный шрифт U13
+https://github.com/googlefonts/noto-fonts — Google Noto family
+https://laoscript.net/download/ — Lao fonts
+http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html — Indian font
+https://babelstone.co.uk/Fonts/index.html — misc fonts, some used by Unicodia
+https://github.com/pandey/graphite-fonts — works by Anshuman Pandey
+https://software.sil.org/scheherazade/download/ — Scheherazade, open Arabic font, full U14 coverage in main blocks
+https://www.amirifont.org/ — Amiri, open Arabic font, full coverage of aux blocks except one char
+https://oldhungarian.eu/index_en.html — Hungarian runes
+http://cheonhyeong.com/Simplified/download.html — Tshyn, strange U13 font
 
 
-ИЗОБРАЖЕНИЯ СИМВОЛОВ
+CHAR IMAGES
 
-https://github.com/googlefonts/noto-emoji — эмодзи от Гугла
-https://github.com/twitter/twemoji — эмодзи от Твиттера и как их качать [CC-BY-SA 4.0]
-https://openmoji.org/library/ — эмодзи от любителей [UC13, CC-BY-SA 4.0]
+https://github.com/googlefonts/noto-emoji — Google Noto emoji
+https://github.com/twitter/twemoji — Twitter emoji [CC-BY-SA 4.0]
+https://openmoji.org/library/ — amateur emoji [UC13, CC-BY-SA 4.0]
 https://commons.wikimedia.org/wiki/Category:Unicode_BMP
-https://www.unicode.org/charts/lastresort.html — интересные изображения письменностей
-https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_Viewer.html — тест символов жестового письма Саттон
-https://commons.wikimedia.org/wiki/Category:Makasar_letters — макассарский шрифт
-http://en.glyphwiki.org — изображения китайских иероглифов
+https://www.unicode.org/charts/lastresort.html — interesting script images
+https://slevinski.github.io/SignWriting_Character_Viewer/SignWriting_Character_Viewer.html — Sutton test
+https://commons.wikimedia.org/wiki/Category:Makasar_letters — Makasar font
+http://en.glyphwiki.org — Hani images
 
 
-ПИСЬМЕННОСТИ
+SCRIPTS
 
-https://omniglot.com/ — плохо действующий, но классный сайт
-http://www.rbardalzo.narod.ru/vse_alf.html — интересная информация по алфавитам
-https://www.endangeredalphabets.net/alphabets/vai/ — информация по редким письменностям
+https://omniglot.com/ — cool site
+http://www.rbardalzo.narod.ru/vse_alf.html — nice alphabet info, mass-banned in Ukraine
+https://www.endangeredalphabets.net/alphabets/vai/ — info on rare scripts
 
 Дэвид Дирингер. Алфавит. // М.: Изд-во иностранной литературы. 1963. 656 с.
 Лоукотка Ч., Развитие письма, М., 1950
 
 
-ПРОЧИЕ
+OTHERS
 
-https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — базовое устройство TTF-файла
-https://dev.w3.org/html5/html-author/charref — список именованных символов
-https://docs.microsoft.com/en-us/typography/fonts/windows_7_font_list — список шрифтов W7/10
-http://www.kreativekorp.com/ucsur/ — реестр искусственных письменностей
+https://developer.apple.com/fonts/TrueType-Reference-Manual/RM06/Chap6.html — basic innards of TTF file
+https://dev.w3.org/html5/html-author/charref — names chars in HTML
+https://docs.microsoft.com/en-us/typography/fonts/windows_7_font_list — lists of fonts W7/10
+http://www.kreativekorp.com/ucsur/ — Unicode ConScript Registry
 
 
 LIBRARIES
