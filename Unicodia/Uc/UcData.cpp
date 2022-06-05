@@ -860,7 +860,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1372), EcFont::OLD_PERMIC },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag", QFontDatabase::Any,
-        EcScriptType::ARGUABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA,
+        EcScriptType::ARGUABLE, EcLangLife::SACRED, EcWritingDir::LTR_COL, EcContinent::ASIA,
         Dating::year(1269), EcFont::PHAGS_PA },
     // Inscriptional Pahlavi OK, W10 Historic
     { "Phli", QFontDatabase::Any,
