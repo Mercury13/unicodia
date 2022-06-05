@@ -4075,35 +4075,44 @@
    <group id="Hluw">
     <text id="Name">
      <orig>Анатолийские (лувийские, хеттские) иероглифы</orig>
+     <transl>Anatolian (Luwian, Hittite) hieroglyphs</transl>
     </text>
     <text id="Lang">
      <orig>лувийский</orig>
+     <transl>Luwian</transl>
     </text>
     <text id="Text">
      <orig>Называются иероглифы по месту, где они найдены ''(анатолийские, т.е. Малая Азия)'', или по языку ''(лувийские)''. А вот название «хеттские» некорректно, хеттский никогда не{{_}}писался этими иероглифами, хоть первые из них и разрабатывались в хетто-лувийском двуязычии (около 1240{{bc}} хетты были завоёваны ассирийцами). В XII и XI{{_}}веке{{bc}} была Катастрофа бронзового века с нехваткой материалов, с X{{_}}века{{bc}} надписи снова появляются. Около VII{{_}}века{{bc}} иероглифы заменили [[pt:alphabet|алфавитным]] письмом и забыли.<br /><br />Известно около 500 иероглифов. Отдельные иероглифы могут означать не{{_}}только понятие, но и слог, но таких мало.<br /><br />Внимание исследователей иероглифы привлекли около 1800, предположили, что они хеттские. В 1915 лувийский язык расшифровали через [[ps:Xsux|клинопись]], в 1930-е появились первые расшифровки. В 1973 расшифрованы окончательно.</orig>
+     <transl>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrent, Hittite language was never written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.<br /><br />About 500 hieroglyphs are known. Some hieroglyphs may mean not just concept but syllable, but they are few.<br /><br />About 1800 hieriglyphs drew scholars’ attention, it was hypothesized that they are Hittite. In 1915 Luwian language was finally deciphered via [[ps:Xsux|cuneiform]], in 1930s first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</transl>
     </text>
    </group>
    <group id="Hmng">
     <text id="Name">
      <orig>Пахау хмонг</orig>
+     <transl>Pahawh Hmong</transl>
     </text>
     <text id="Lang">
      <orig>языки белых и зелёных хмонгов</orig>
+     <transl>languages of White and Green Hmongs</transl>
     </text>
     <text id="Note">
      <orig>первая версия</orig>
+     <transl>stage one</transl>
     </text>
     <text id="Text">
      <orig>Автор письменности Шон-лы Я заявляет, что письмо дано ему богом. Название «пахау» означает «объединиться». Разработка шла с 1959 до 1971.<br /><br />Большинство абугид «согласно-центричные». Центральный компонент пахау{{-}}гласная буква, а начальные согласные стоят справа от неё. Например, слово «хмонг» {{sm|𖬌𖬣𖬵}} состоит из гласной «oob», согласной «qh» и тона-гвоздика.</orig>
      <au-cmt>For translator: тон-гвоздик = tack for tone, author = Shong Lue Yang, первая версия = stage 1</au-cmt>
+     <transl>Shong Lue Yang, inventor of script, said that the script was given to him by God. “Pahawh” name means “unite”. Development lasted 1959 to 1971.<br /><br />Most abugidas are “consonant-centric”. The central component of Pahawh is a vowel, and initial consonants are on the right of it. For example, word “hmong” {{sm|𖬌𖬣𖬵}} consists of vowel “oob”, consonant “qh” and a tack for tone.</transl>
     </text>
    </group>
    <group id="Hmnp">
     <text id="Name">
      <orig>Ньякэ пуацы хмонг (алфавит Черванга)</orig>
+     <transl>Nyiakeng Puachue Hmong (Chervang alphabet)</transl>
     </text>
     <text id="Lang">
      <orig>языки белых и зелёных хмонгов</orig>
+     <transl>languages of White and Green Hmongs</transl>
     </text>
     <text id="Text">
      <orig>В 1970‑е вьетнамские и лаосские хмонги разбежались по странам, в том числе осели в США. О судьбе американского хмонга есть великолепный фильм «Гран-Торино» (2008).<br /><br />Письменность придумал в 1980‑е Черванг Конг, священник одной из евангельских церквей Америки. Церковь активно проповедовала, и письменность распространилась по США. Ограниченно используется в Азии и Австралии. Для собственных имён вместо заглавных букв используются специальные знаки.</orig>
@@ -4157,12 +4166,15 @@
    <group id="Kana">
     <text id="Name">
      <orig>Катáкана</orig>
+     <transl>Katakana</transl>
     </text>
     <text id="Lang">
      <orig>японский</orig>
+     <transl>Japanese</transl>
     </text>
     <text id="Text">
      <orig>Около III{{_}}века японцы стали писать [[ps:Hani|китайскими иероглифами]]. Из них произошла вспомогательная азбука манъёгана{{-}}роль играло не{{_}}изображение на иероглифе, а его прочтение. Манъёгана упростилась до катáканы.<br /><br />Катáкану используют для записи заимствованных слов и начального обучения иностранцев. До 1946 использовали для записи окончаний слов (сейчас это делают [[ps:Hira|хирáганой]]).</orig>
+     <transl>About 3rd century Japanese started to write with [[ps:Hani|Chinese ideographs]]. Auxiliary syllabary of Man’yōgana emerged from ideographs, pronunciation rather than image mattered. Man’yōgana simplified to Katakana.<br /><br />Katakana is used for loanwords and initial teaching of foreigners. Before 1946 it had been used for writing word endings, nowadays it’s done with [[ps:Hira|Hiragana]].</transl>
     </text>
    </group>
    <group id="Khar">
