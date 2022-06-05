@@ -1350,7 +1350,7 @@ FmMain::~FmMain()
 void FmMain::showCopied(QWidget* widget, const QRect& absRect)
 {
     fmMessage.ensure(this)
-             .showAtAbs("Скопировано", widget, absRect);
+             .showAtAbs(loc::get("Common.Copied"), widget, absRect);
 }
 
 
