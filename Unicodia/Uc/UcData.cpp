@@ -670,7 +670,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U15] Kawi
     { "Kawi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
-        Dating::century(8), EcFont::NORMAL },
+        Dating::century(8, StdNote::FIRST_KNOWN), EcFont::NORMAL },
     // Kharoshthi OK, W10 tofu → installed Noto
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
