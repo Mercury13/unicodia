@@ -181,6 +181,7 @@ namespace uc {
         AFRICA,
         AMERICA,
         CJK,
+        MISSING,    ///< Red for MISSING
         NN
     };
 

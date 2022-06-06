@@ -81,6 +81,7 @@ namespace uc {
         Java,   // Javanese
         Kali,   // Kayah Li
         Kana,   // Katakana
+        Kawi,   // Kawi (proto-Javanese)
         Khar,   // Kharoshthi
         Khmr,   // Khmer
         Khoj,   // Khojki
@@ -113,6 +114,7 @@ namespace uc {
         Mtei,   // Meitei Mayek
         Mult,   // Multani
         Mymr,   // Myanmar
+        Nagm,   // Nag alphabet (Mundari)
         Nand,   // Nandinagari
         Narb,   // North Arabian
         Nbat,   // Nabataean
@@ -258,6 +260,7 @@ namespace uc {
         V_12_1,
         V_13_0,
         V_14_0,
+        V_15_0,
         NN,
         UNKNOWN = NN,
         FIRST = 0,

@@ -379,6 +379,7 @@ const uc::Version uc::versionInfo[] {
     { "12.1", 2019 },
     { "13.0", 2020 },
     { "14.0", 2021 },
+    { "15.0", 2022 },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
@@ -666,6 +667,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Kana", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::crange(8, 9), EcFont::KOREAN },
+    /// @todo [U15] Kawi
+    { "Kawi", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
+        Dating::century(8), EcFont::NORMAL },
     // Kharoshthi OK, W10 tofu → installed Noto
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
@@ -795,6 +800,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1035, StdNote::FIRST_KNOWN), EcFont::MYANMAR },
+    /// @todo [U15] Nag alphabet (Mundari)
+    { "Nagm", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::yrange(1949, 1982), EcFont::NORMAL },
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
@@ -1813,6 +1822,10 @@ constinit const uc::Block uc::blocks[] {
     // Yezidi OK
     { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA },
             "Yezidi", EcScript::Yezi },
+    /// @todo [U15] Arabic ex C
+    { 0x10EC0, 0x10EFF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Arabic Extended-C",
+            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Old Sogdian OK
     { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA },
             "Old Sogdian", EcScript::Sogo },
@@ -1910,6 +1923,10 @@ constinit const uc::Block uc::blocks[] {
     // Pau Cin Hau OK
     { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA },
             "Pau Cin Hau", EcScript::Pauc },
+    /// @todo [U15] Devadagari Ex A
+    { 0x11B00, 0x11B5F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Devanagari Extended-A",
+            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Bhaiksuki OK
     { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
             "Bhaiksuki", EcScript::Bhks },
@@ -1923,6 +1940,9 @@ constinit const uc::Block uc::blocks[] {
     // Makasar OK
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar", EcScript::Maka },
+    /// @todo [U15] Kawi
+    { 0x11F00, 0x11F5F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Kawi", EcScript::Kawi },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA },
             "Lisu Supplement",
@@ -1948,7 +1968,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs", EcScript::Egyp },
     // Egyptian hiero format OK
-    { 0x13430, 0x1343F, { 0x13434, EcContinent::AFRICA },
+    { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA },
             "Egyptian Hieroglyph Format Controls",
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Anatolian hiero OK
@@ -2041,6 +2061,9 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE },
             "Ancient Greek Musical Notation",
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
+    /// @todo [U15] Kaktovik numerals
+    { 0x1D2C0, 0x1D2DF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Kaktovik Numerals" },
     // Mayan numerals OK
     { 0x1D2E0, 0x1D2FF, { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Mayan Numerals",
@@ -2067,6 +2090,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE },
             "Glagolitic Supplement",
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+    /// @todo [U15] Cyr ex D
+    { 0x1E030, 0x1E08F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Cyrillic Extended-D",
+            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // NP Hmong OK
     { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA },
             "Nyiakeng Puachue Hmong", EcScript::Hmnp },
@@ -2076,6 +2103,9 @@ constinit const uc::Block uc::blocks[] {
     // Wancho OK
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho", EcScript::Wcho },
+    /// @todo [U15] Nag alphabet (Mundari)
+    { 0x1E4D0, 0x1E4FF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "Nag Mundari", EcScript::Nagm },
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA },
             "Ethiopic Extended-B",
@@ -2190,6 +2220,10 @@ constinit const uc::Block uc::blocks[] {
     // CJK G OK, found a HanaMin version supporting CJK G
     { 0x30000, 0x3134F, { 0x3000C, EcContinent::CJK },
             "CJK Unified Ideographs Extension G",
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+    /// @todo [U15] CJK H
+    { 0x31350, 0x323AF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+            "CJK Unified Ideographs Extension H",
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Tags OK
     { 0xE0000, 0xE007F, { 0xE0054, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
@@ -2310,6 +2344,8 @@ const uc::Continent uc::continentInfo[] {
     { { 0xffc8c8, 0xcc0000 } },
     // CJK
     { { 0xfff0f5, 0x5c3566 } },
+    // Missing
+    { { 0xa40000, 0xFFFFFF } },
 };
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
 
@@ -3161,7 +3197,8 @@ void uc::completeData()
             throw std::logic_error("Block w/o chars leaked into data!");
 
         // Check synthesized icon
-        if (v.synthIcon.subj < v.startingCp || v.synthIcon.subj > v.endingCp)
+        if (v.synthIcon.ecContinent != EcContinent::MISSING
+                && (v.synthIcon.subj < v.startingCp || v.synthIcon.subj > v.endingCp))
             throw std::logic_error(
                     "Synthesized icon is not within block " + std::string{v.name});
         if (!cpsByCode[v.synthIcon.subj])
