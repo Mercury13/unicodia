@@ -116,6 +116,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "KANNADA",        Dicf::TRIG_SCRIPT },
     { "KATAKANA",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KATAKANA-HIRAGANA", { Dicf::TRIG_SCRIPT, "Katakana-Hiragana"sv } },
+    { "KAWI",           Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KAYAH",          { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE, {}, "LI"sv } },
     { "KHAROSHTHI",     Dicf::TRIG_SCRIPT },
     { "KHMER",          Dicf::TRIG_SCRIPT },
@@ -155,6 +156,9 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "MULTANI",        Dicf::TRIG_SCRIPT },
     { "MYANMAR",        Dicf::TRIG_SCRIPT },
     { "NABATAEAN",      Dicf::TRIG_SCRIPT },
+    // There are several NAGs → it’s script only with Mundari
+    { "NAG",            { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
+                          {}, "MUNDARI" } },
     { "NANDINAGARI",    Dicf::TRIG_SCRIPT },
     { "NEWA",           Dicf::TRIG_SCRIPT },
     { "NKO",            { Dicf::TRIG_SCRIPT, "NKo" } },
