@@ -116,9 +116,9 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/14.0.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
+    constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/15.0.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
-    constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/14.0/emoji-test.txt", EMOJI_TEST };
+    constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/15.0/emoji-test.txt", EMOJI_TEST };
 
     constinit const LocalFile allLocalFiles[] {
         { MISCFILES ENTITIES_HTML },

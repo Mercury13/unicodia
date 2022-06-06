@@ -1189,6 +1189,7 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 9, "TAB" },       // TAB or HT
     { 10, "LF" },       // NL or LF
     { ' ', {} },        // SPACE has abbrev SP
+    { 0x0019, "EOM" },  // EOM is better than EM
     { 0x00A0, "!" },    // NBSP bas abbreviations, turn them to aliases
     { 0x115F, "HC F" }, // Hangul starting filler
     { 0x1160, "HJ F" }, // Hangul medial filler
