@@ -2432,6 +2432,16 @@
      <transl>Yezidi</transl>
     </text>
    </group>
+   <group id="10EC0">
+    <text id="Name">
+     <orig>Арабский расширенный C</orig>
+     <transl>Arabic extended C</transl>
+    </text>
+    <text id="Text">
+     <orig>Символы из турецкого Корана.</orig>
+     <transl>Characters from Turkish Quran.</transl>
+    </text>
+   </group>
    <group id="10F00">
     <text id="Name">
      <orig>Старосогдийский</orig>
@@ -2630,6 +2640,16 @@
      <transl>Pau Cin Hau</transl>
     </text>
    </group>
+   <group id="11B00">
+    <text id="Name">
+     <orig>Деванагари расширенный A</orig>
+     <transl>Devanagari extended A</transl>
+    </text>
+    <text id="Text">
+     <orig>Джайнские знаки препинания и [[pt:ligature|лигатуры]] для фраз вроде «да будет оно благословлено».</orig>
+     <transl>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</transl>
+    </text>
+   </group>
    <group id="11C00">
     <text id="Name">
      <orig>Бхаикшуки (стрелоглавое письмо)</orig>
@@ -2658,6 +2678,12 @@
     <text id="Name">
      <orig>Макасарский (птичье письмо)</orig>
      <transl>Makasar (bird script)</transl>
+    </text>
+   </group>
+   <group id="11F00">
+    <text id="Name">
+     <orig>Кави (старояванский)</orig>
+     <transl>Kawi (old Javanese)</transl>
     </text>
    </group>
    <group id="11FB0">
@@ -2914,6 +2940,16 @@
      <known-orig>Про древних греков известно мало. Изначально они имели пять нот на октаву, компенсируя такую нехватку разными методами настройки инструментов, но впоследствии добрались до полутонов, изредка используя четверть-тоны. Основными инструментами были авлос (две дудки, на которых играют одновременно) и лира.&lt;p&gt;Для музыкантов и певцов были разные нотации, это позволяло писать одновременно слова, музыку и подсказки для певцов. Ноты записывались старинными буквами, и те из них, что не{{_}}совпадают с греческими, приведены в этом блоке без всякой системы.</known-orig>
     </text>
    </group>
+   <group id="1D2C0">
+    <text id="Name">
+     <orig>Кактовикские цифры</orig>
+     <transl>Kaktovik numerals</transl>
+    </text>
+    <text id="Text">
+     <orig>Позиционные двадцатеричные цифры, придуманные в 1980-е инуитскими (эскимосскими) школьниками из городка Кактовик (Аляска). Инуиты считают двадцатками &lt;nobr&gt;(74 = 3·20 + 15 − 1)&lt;/nobr&gt;, и до введения новой системы они были в числе худших в математике по всем США, после{{-}}несколько лучше среднего, как двуязычный часто лучше ориентируется в лингвистике.</orig>
+     <transl>Positional 20-base numerals invented in 1980s by Inuit (Eskimo) schoolchildren from town of Kaktovik, Alaska. Inuits count in twenties &lt;nobr&gt;(74 = 3×20 + 15 − 1)&lt;/nobr&gt;, and before introduction of this system they were among the worst in mathematics across all USA, after{{-}}a little above average, like bilingual people are often better in linguistics.</transl>
+    </text>
+   </group>
    <group id="1D2E0">
     <text id="Name">
      <orig>Цифры майя</orig>
@@ -2978,6 +3014,16 @@
      <orig>Надстрочные буквы глаголицы, встречающиеся в различных источниках.</orig>
     </text>
    </group>
+   <group id="1E030">
+    <text id="Name">
+     <orig>Кириллица расширенная D</orig>
+     <transl>Cyrillic extended D</transl>
+    </text>
+    <text id="Text">
+     <orig>Буквы-модификаторы для кириллической записи транскрипции. Такая запись распространена в школах и институтах всего бывшего СССР.</orig>
+     <transl>Modifier letters for writing transcription with Cyrillic letters. Such notation is widespread in schools and institutes across all former USSR.</transl>
+    </text>
+   </group>
    <group id="1E100">
     <text id="Name">
      <orig>Ньякэ пуацы хмонг (алфавит Черванга)</orig>
@@ -2994,6 +3040,12 @@
     <text id="Name">
      <orig>Ванчо</orig>
      <transl>Wancho</transl>
+    </text>
+   </group>
+   <group id="1E4D0">
+    <text id="Name">
+     <orig>Мундари (алфавит Нага)</orig>
+     <transl>Mundari (Nag alphabet)</transl>
     </text>
    </group>
    <group id="1E7E0">
@@ -3275,6 +3327,16 @@
     <text id="Text">
      <orig>В 2020 Юникод перешагнул в [[pt:plane|плоскость]] номер 3, выделив там 4939 редких и старых иероглифов. Именно здесь находятся два знаменитых рекордных иероглифа:<br />* ''бян''{{-}}пишется дважды в названии китайской лапши ''бянбян'': U+30EDD упрощённый 42 черты, U+30EDE традиционный 58 черт;<br />* ''дайто'' или ''отодо''{{-}}иероглиф из 84 черт японского изобретения ''«вид дракона в полёте»'', U+3106C.</orig>
      <transl>In 2020 Unicode stepped into [[pt:plane|plane]] number 3, and allocated 4939 old and rare characters there. This block contains two record-beating ideographs:<br />* ''biang''{{-}}written twice in Chinese noodle ''biangbiang'': U+30EDD simplified 42 strokes, U+30EDE traditional 58 strokes;<br />* ''daito'' or ''otodo''{{-}}84-stroke ideograph of Japanese invention meaning ''appearance of a dragon in flight'', U+3106C.</transl>
+    </text>
+   </group>
+   <group id="31350">
+    <text id="Name">
+     <orig>ККЯ иероглифы расширение H</orig>
+     <transl>CJK unified ideographs extension H</transl>
+    </text>
+    <text id="Text">
+     <orig>Редкие иероглифы, в основном из старых китайских газет.</orig>
+     <transl>Rare ideographs, mainly from old Chinese newspapers.</transl>
     </text>
    </group>
    <group id="E0000">
@@ -4196,6 +4258,20 @@
      <transl>About 3rd century Japanese started to write with [[ps:Hani|Chinese ideographs]]. Auxiliary syllabary of Man’yōgana emerged from ideographs, pronunciation rather than image mattered. Man’yōgana simplified to Katakana.<br /><br />Katakana is used for loanwords and initial teaching of foreigners. Before 1946 it had been used for writing word endings, nowadays it’s done with [[ps:Hira|Hiragana]].</transl>
     </text>
    </group>
+   <group id="Kawi">
+    <text id="Name">
+     <orig>Кави (старояванская)</orig>
+     <transl>Kawi (old Javanese)</transl>
+    </text>
+    <text id="Lang">
+     <orig>санскрит, старые языки Явы: балийский, яванский, сунданский, малайский</orig>
+     <transl>Sanskrit, old languages of Java: Balinese, Javanese, Sundanese, Malay</transl>
+    </text>
+    <text id="Text">
+     <orig>Старая письменность [[ps:Brah|брахмийского]] происхождения, предок [[ps:Java|яванской]].</orig>
+     <transl>Old script of [[ps:Brah|Brahmic]] origin, ancestor of [[ps:Java|Javanese]].</transl>
+    </text>
+   </group>
    <group id="Khar">
     <text id="Name">
      <orig>Кхароштхи</orig>
@@ -4580,6 +4656,20 @@
      <orig>Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. Согласная буква означает слог с «ə». Чтобы поставить другую гласную, используются огласовки, чтобы убрать{{-}}знак «[[pt:virama|вирама]]», которая по-бирмански называется «а-сат». Вторая виртуальная вирама служит для сборки [[pt:ligature|лигатур]]{{-}}две буквы друг под другом.<br /><br />Раннебирманское письмо было квадратным; закруглилось оно около XVII{{_}}века, когда распространилось письмо на пальмовых листьях: прямая линия может разрезать лист по жилкам.</orig>
     </text>
    </group>
+   <group id="Nagm">
+    <text id="Name">
+     <orig>Мундари (алфавит Нага)</orig>
+     <transl>Mundari (Nag alphabet)</transl>
+    </text>
+    <text id="Lang">
+     <orig>мундари ''(Индия, Бангладеш, Непал, &amp;gt;1,1 млн в Индии на 2011)''</orig>
+     <transl>Mundari ''(India, Bangladesh, Nepal, &amp;lt;1.1M in India as of 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>Неписьменный австроазиатский (не индоевропейский) язык. По переписи 2011, в Индии 1,1{{_}}миллион человек говорят на мундари и ещё около 500{{_}}тыс. на некоем ''мунда''{{-}}неизвестно, тот же это язык или нет.<br /><br />Пишут [[ps:Orya|ори́ей]], [[ps:Deva|деванáгари]], [[ps:Beng|бенгальским]], [[ps:Latn|латиницей]]{{-}}но звуки экзотичны для латиницы, а абугида плохо подходит для австроазиатских языков. Так что в 1949 Рохидас Сингх Наг придумал новый алфавит, и он даже прижился. Около 1982 он сократил алфавит до 27 символов и показал местным властям, а в 2008 провёл реформу.<br /><br />Цифры собственные. Знаки препинания европейские.</orig>
+     <transl>Non-written Austro-Asian (not Indo-European) language. According to 2011 census, 1.1{{_}}million people in India speak Mundari and 500{{_}}thousand more in some ''Munda''{{-}}it’s unknown whether it is the same language.<br /><br />Writing systems are [[ps:Orya|Odia]], [[ps:Deva|Devanagari]], [[ps:Beng|Bengali]], [[ps:Latn|Latin]]{{-}}but phonemes are exotic for Latin, and abugidas badly suit Austro-Asian languages. No wonder Rohidas Singh Nag invented a new alphabet in 1949, and it even took root. About 1982 he shortened the alphabet to 27 characters and showed to local authorities, and reformed in 2008.<br /><br />Digits are own. Punctuation is European.</transl>
+    </text>
+   </group>
    <group id="Nand">
     <text id="Name">
      <orig>Нандинагари</orig>
@@ -4701,7 +4791,7 @@
     </text>
     <text id="Text">
      <orig>Ори́я (традиционно, но неверно считается однокоренным с ''арийцами'') развилась из [[ps:Sidd|сиддхаматрики]], письменности с разорванной верхней чертой.<br /><br />Есть мнение, что округлая форма букв сложилась, потому что писали на пальмовых листьях{{-}}чтобы не{{_}}разрезать лист по жилкам, верхняя линия стала дугой. Дуга гипертрофирована по сравнению с основными элементами букв, из-за чего их сложно различить. Самый ранний известный лист датируется XV{{_}}веком.<br /><br />Гласная по умолчанию «ɔ» (среднее между «a» и «о»), убирается знаком [[pt:virama|вирамы]]: {{sm|କ}}=кɔ, {{sm|କି}}=ки, {{sm|କ୍}}=к. В языке ория, в отличие от других индийских, этот звук никогда не{{_}}убирается сам по себе, без вирамы. Но вирама нечаста из-за большого количества лигатур: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}мбха.<br /><br />Знаки препинания{{-}}палка ''данда'' из блока [[ps:Deva|деванагари]], используемая как точка и отбиваемая пробелами, и обычные европейские.</orig>
-     <transl>Odia or oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line.<br /><br />By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent leaf from cutting by veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.<br /><br />Inherent vowel is “ɔ” (mid between “a” and “o”), removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbha.<br /><br />Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and durrounded with spaces, and ordinary European.</transl>
+     <transl>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line.<br /><br />By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent leaf from cutting by veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.<br /><br />Inherent vowel is “ɔ” (mid between “a” and “o”), removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbha.<br /><br />Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</transl>
     </text>
    </group>
    <group id="Osge">
