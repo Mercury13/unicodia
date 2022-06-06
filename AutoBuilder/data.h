@@ -31,6 +31,7 @@ enum class Dicf {
     TRIG_DIGIT_PROPAGATES_RIGHT = 1 << 13, // Digit propagates right “Mende Kikakui syllable M135 In”
     TRIG_THREE_WORD_SCRIPT  = 1 << 14,  // Script consisting of three words: Pau Cin Hau
     TRIG_SCRIPT_IF_FIRST    = 1 << 15,  // Script if 1st word (Yi)
+    TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  // OLD NORTH Arabian
 };
 
 DEFINE_ENUM_OPS(Dicf)

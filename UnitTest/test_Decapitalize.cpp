@@ -932,3 +932,35 @@ TEST (Decap, BugTagDigit)
     auto r = decapitalize("TAG DIGIT FIVE");
     EXPECT_EQ("Tag Digit Five", r);
 }
+
+
+///
+///  Bug: MODIFIER LETTER CYRILLIC SMALL BYELORUSSIAN-UKRAINIAN I
+///  U15: “SMALL” is capital somehow
+///
+TEST (Decap, BugByeloUkr)
+{
+    auto r = decapitalize("MODIFIER LETTER CYRILLIC SMALL BYELORUSSIAN-UKRAINIAN I");
+    EXPECT_EQ("Modifier letter Cyrillic small Byelorussian-Ukrainian I", r);
+}
+
+
+///
+///  Same as prev, “SMALL” used to be capital
+///  Actual bug that persisted in U14
+///
+TEST (Decap, BugTahBelow)
+{
+    auto r = decapitalize("ARABIC LETTER HAH WITH SMALL ARABIC LETTER TAH BELOW");
+    EXPECT_EQ("Arabic letter Hah with small Arabic letter Tah below", r);
+}
+
+
+///
+///  Old and South are script parts
+///
+TEST (Decap, ScriptParts)
+{
+    auto r = decapitalize("OLD SOUTH ARABIAN LETTER RESH");
+    EXPECT_EQ("Old South Arabian letter Resh", r);
+}

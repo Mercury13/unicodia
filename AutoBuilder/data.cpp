@@ -104,10 +104,14 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "HUNGARIAN",      Dicf::TRIG_SCRIPT },
     { "INDIC",          Dicf::TRIG_SCRIPT },
     { "INDUS",          Dicf::TRIG_SCRIPT },
-    { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT, {}, "ITALIC"sv } },
+    // Interesting case: ITALIC is script with OLD only
+    // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
+    { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
+                            {}, "ITALIC"sv } },
     { "JAMO",           Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
+    { "KAKTOVIK",       Dicf::TRIG_SCRIPT },
     { "KANGXI",         Dicf::TRIG_SCRIPT },
     { "KANNADA",        Dicf::TRIG_SCRIPT },
     { "KATAKANA",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
@@ -592,7 +596,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "NASAL",          Dicf::PART_ADJECTIVE },
     { "NEUTRAL",        Dicf::PART_ADJECTIVE },
     { "NEW",            Dicf::PART_ADJECTIVE },
-    { "NORTH",          Dicf::PART_ADJECTIVE },
+    // Old NORTH Arabian
+    { "NORTH",          Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "NORTHERN",       Dicf::PART_ADJECTIVE },
     { "OBLIQUE",        Dicf::PART_ADJECTIVE },
     { "OPEN",           Dicf::PART_ADJECTIVE },
@@ -629,7 +634,8 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
     { "SPACING",        Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
-    { "SOUTH",          Dicf::PART_ADJECTIVE },
+    // Old SOUTH Arabian
+    { "SOUTH",          Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE  },
     { "SOUTHERN",       Dicf::PART_ADJECTIVE },
     { "SPRECHGESANG",   Dicf::PART_ADJECTIVE },
     { "STRAIGHT",       Dicf::PART_ADJECTIVE },
@@ -1569,7 +1575,7 @@ namespace {
 
     constexpr auto TRIG_ANY_SCRIPT = Dicf::TRIG_SCRIPT | Dicf::TRIG_SCRIPT_IF_FIRST
             | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_THREE_WORD_SCRIPT
-            | Dicf::PART_ADJECTIVE;
+            | Dicf::TRIG_SCRIPT_ADJECTIVE;
 
     bool hasDigit(std::string_view x) {
         for (auto v : x) {
@@ -1795,11 +1801,17 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
                         nextNextWord->isCapital = true;
                         hasScript = true;
                     }
-                } else if (word.dicFlags.have(Dicf::PART_ADJECTIVE)) {
-                    // Adjective
-                    if (nextWord && nextWord->isCapital) {
-                        word.isCapital = true;
-                        hasScript = true;
+                } else if (word.dicFlags.have(Dicf::TRIG_SCRIPT_ADJECTIVE)) {
+                    // Propagate adjective that are script parts
+                    // OLD SOUTH Arabian
+                    if (nextWord) {
+                        // Cascade capitalization: OLD North Arabian
+                        if ((nextWord->isCapital && nextWord->dicFlags.have(Dicf::TRIG_SCRIPT_ADJECTIVE))
+                                    // First-party capitalization: NORTH Arabian
+                                 || (nextWord->dicFlags.have(Dicf::TRIG_SCRIPT))) {
+                            word.isCapital = true;
+                            hasScript = true;
+                        }
                     }
                 }
             }
