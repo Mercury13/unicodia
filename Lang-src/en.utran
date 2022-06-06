@@ -4255,27 +4255,33 @@
    <group id="Knda">
     <text id="Name">
      <orig>Кáннада</orig>
+     <transl>Kannada</transl>
     </text>
     <text id="Lang">
      <orig>кáннада ''(Юго-Западная Индия, 38 млн на 2001)''</orig>
+     <transl>Kannada ''(South-West India, 38M as of 2011)''</transl>
     </text>
     <text id="Note">
      <orig>отделилась от сестринской [[ps:Telu|телугу]]</orig>
+     <transl>separated from sister script [[ps:Telu|Telugu]]</transl>
     </text>
     <text id="Text">
      <orig>Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. Гласная по умолчанию «а», заменяется огласовками:<br />: ка {{sm|ಕ}} + и {{sm|◌ಿ}} = ки {{sm|ಕಿ}}<br />[[pt:virama|Вирама]] (знак «убрать гласную») появляется на письме только для передачи санскрита. На компьютерах вирама служит для набора [[pt:ligature|лигатур]] «согласная+согласная»:<br />: ка {{sm|ಕ}} + вирама {{sm|◌್}} + та {{sm|ತ}} = кта {{sm|ಕ್ತ}}<br />Часто применяется в смайликах: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</orig>
-     <known-orig>Как и большинство других письменностей Юго-Восточной Азии, произошла из [[ps:Brah|брахми]]. Гласная по умолчанию «а», заменяется огласовками:&lt;br&gt;{{__}}ка {{sm|ಕ}} + и {{sm|◌ಿ}} = ки {{sm|ಕಿ}}&lt;br&gt;[[pt:virama|Вирама]] (знак «убрать гласную») появляется на письме только для передачи санскрита. На компьютерах вирама служит для набора [[pt:ligature|лигатур]] «согласная+согласная»:&lt;br&gt;{{__}}ка {{sm|ಕ}} + вирама {{sm|◌್}} + та {{sm|ತ}} = кта {{sm|ಕ್ತ}}&lt;br&gt;Часто применяется в смайликах: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</known-orig>
+     <transl>As most scripts of South-East Asia, came from [[ps:Brah|Brahmi]]. Inherent vowel is “a”, changed with vowel marks:<br />: ka {{sm|ಕ}} + i {{sm|◌ಿ}} = ki {{sm|ಕಿ}}<br />[[pt:virama|Virama]] (“remove vowel” sign) appears in writing for Sanskrit only. In computers virama is used for typing consonant conjunct [[pt:ligature|ligatures]]:<br />: ka {{sm|ಕ}} + virama {{sm|◌್}} + ta {{sm|ತ}} = kta {{sm|ಕ್ತ}}<br />Often used in smilies: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</transl>
     </text>
    </group>
    <group id="Kthi">
     <text id="Name">
      <orig>Кайтхи</orig>
+     <transl>Kaithi</transl>
     </text>
     <text id="Lang">
      <orig>хинди, мелкие языки Индии</orig>
+     <transl>Hindi, small languages of India</transl>
     </text>
     <text id="Text">
      <orig>Название письменности происходит от касты «каястха» (конторщики). Является очень [[pt:cursive|беглым]] вариантом [[ps:Deva|деванагари]]. Использовалось с Империи великих моголов в северо-восточной Индии, разрешалось в судах, а с 1950 до 1954 было основной судебной письменностью. Рассчитывали расширить пользование кайтхи, но каста брахманов воспротивилась этому, и современные индийцы едва читают кайтхи.<br /><br />Цифры похожи на [[ps:Deva|деванагари]], кроме 5 и 9, и [[pt:unification|унифицированы]] с ним.</orig>
+     <transl>The name comes from Kayastha caste of office workers. It is in fact a very [[pt:cursive|cursive]] variant of [[ps:Deva|Devanagari]]. Kaithi was used in Mughal period in North-East India, was recognized in courts, and in 1950–1954 was the official legal script. Wider use was expected, but the script was opposed by Brahmins, and modern Hindus can barely read Kaithi.<br /><br />Digits look like Devanagari, except 5 and 9, and [[pt:unification|unified]] with it.</transl>
     </text>
    </group>
    <group id="Lana">
@@ -4701,12 +4707,15 @@
    <group id="Osge">
     <text id="Name">
      <orig>Осейдж</orig>
+     <transl>Osage</transl>
     </text>
     <text id="Lang">
-     <orig>осейдж ''(индейский язык группы сиу)''</orig>
+     <orig>осейдж ''(индейский язык семьи сиу)''</orig>
+     <transl>Osage ''(Native American language of Siouan family)''</transl>
     </text>
     <text id="Text">
-     <orig>Письменность придумал в 2006 Герман Монгрейн Лукаут для возрождаемого языка осейдж (последняя носительница умерла в 2005). Он выяснил, что ученики переносили английскую орфографию на индейский. За основу взята сильно изменённая [[ps:Latn|латиница]]. Используются европейские цифры и знаки препинания.<br /><br />С 2012, когда началась работа по внесению языка в Юникод, совершена реформа письма.</orig>
+     <orig>Письменность придумал в 2006 Герман Монгрейн Лукаут для возрождаемого языка осейдж (последняя носительница умерла в 2005, остались десятки изучивших). Он выяснил, что ученики переносили английскую орфографию на индейский. За основу взята сильно изменённая [[ps:Latn|латиница]]. Используются европейские цифры и знаки препинания.<br /><br />С 2012, когда началась работа по внесению языка в Юникод, совершена реформа письма.</orig>
+     <transl>The script was invented in 2006 by Herman Mongrain Lookout for Osage language (under revival, the last native speaker died in 2005, several dozens of second-language speakers remain). He discovered that students transferred English orthography to American language. [[ps:Latn|Latin]] was taken as a base, but greatly modified. European digits and punctuation are used.<br /><br />Since 2012, when work on bringing into Unicode commenced, the script was reformed.</transl>
     </text>
    </group>
    <group id="Osma">
