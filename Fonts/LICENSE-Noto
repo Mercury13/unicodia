@@ -57,8 +57,9 @@ What was done by authors of Unicodia:
   - Added kerning 25CC / gemination mark = −660
   - Rehinted
 * Sundanese:
-  - Enlarged 1BAB new virama for ligatures, moved to the bottom
+  - Enlarged 1BAB new virama for ligatures, moved to the bottom  
   - Made KTA ligature in E000 private-use
+  - Redrew 1BBF
   - Rehinted with FontForge
 * Symbols2
   - Fixed rotated chess pawns, they were standing

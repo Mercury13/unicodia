@@ -1,0 +1,134 @@
+﻿===== NOT READY =====
+
+Arabic ex C
+* New block 10EC0…FF, 3 chars
+
+CJK compatibility — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!
+* Changed 2F804, 2F805, 2F833, 2F835, 2F84C, 2F84F, 2F852, 2F855, 2F887, 2F88B, 2F899, 2F8A0, 2F8A6, 2F8A7, 2F8AD, 2F8B1, 2F8B4, 2F8B7, 2F8BA, 2F8D0, 2F8E0..2F8E2, 2F8E5, 2F8E6, 2F8FE, 2F900, 2F901, 2F907, 2F912, 2F922, 2F926, 2F936, 2F938, 2F94E, 2F959, 2F95F, 2F96C, 2F99F, 2F9B8, 2F9BA, 2F9D3, 2F9DB, 2F9DC, 2F9E8, 2F9EA, 2F9EE, 2FA00, 2FA0D, 2FA1B
+
+CJK A — BETA
+* Changed glyphs 34DC, 3BF6, 3C43, 48B4, 4DBE
+* Remaining: 3C43 (present in BS!!!!!!!!!!!!!!!!!!)
+
+CJK B — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* Changed 20048, 20A1C, 2143F, 21A5F, 21C08, 21FBA, 22ACF, 23392, 238A7, 23D8F, 23F4E, 25D20, 26E30, 27B48, 27C4F, 28633, 28B02, 28E9A, 29760, 2A60F
+
+CJK C — BETA
+* Added 2B739
+* Changed 2B249, obsolete (Korean?) version in BS, ask West
+
+CJK E — BETA
+* Changed glyph 2BB37, 2BD7D, 2C151, 2C1E0, 2C2D6, 2C5CA, 2C810, 2CD34
+* Checked BabelStone. Remaining: 2C151, 2C1E0 (both missing in BS)
+
+CJK F — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* Changed glyphs 2CF4E, 2D25D, 2D3EC, 2D6A7, 2D7BA, 2D979, 2DA74, 2DA97, 2DC13, 2DDC0, 2DF10, 2DF78, 2E05A, 2E0AE, 2E516, 2E640, 2E680, 2EA63
+
+CJK G — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+* Changed glyphs 302FC, 30723, 30A6D, 30CF7, 30DBF, 31006, 3105D
+
+CJK H
+* New block 31350, +4192
+
+Cyrillic ex D
+* New block 1E030…8F, +63
+
+Devanagari ex A
+* New block 11B00…09, +10
+
+Egyptian hiero — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!
+* Added 1342F
+* Lots of chars, still need to check all
+
+Egyptian hiero format
+* Added lots (+29), manual work when U15 comes
+
+Kaktovik numerals
+* New block 1D2C0…D3
+
+Kana/small
+* New chars 1B132, 1B155
+
+Kannada
+* New char 0CF3
+
+Kawi
+* New block 11F00…11F59, +86
+
+Khitan small
+* Changed glyph 18CCA
+
+Khojki
+* Added 1123F, 40, 41
+
+Lao
+* New char 0ECE
+
+Latin G
+* New chars 1DF25…1DF2A
+
+Nag alphabet (Mundari)
+* New block 1E4D0…1E4F9, +42
+
+Special/Alchemical
+* New chars 1F774…76, 1F77B…7F, +8
+
+Special/Geometric ex
+* New char 1F7D9
+
+Special/Emoji/A
+* +19 chars, let’s wait
+
+Special/Emoji/Transport
+* New char 1F6DC Wireless
+
+
+===== GAGGED =====
+
+Cyrillic ex B
+* Changed glyph A66E
+* Drew in Noto
+
+Old Turkic — BETA
+* Changed glyph 10C47
+* Drew in Funky
+
+Sundanese — BETA
+* Changed glyph 1BBF
+* Drew in Noto
+
+Special/OCR
+* Enlarged middle stem in 2447
+* Work is optional
+
+
+===== READY =====
+
+Canadian (probably Noto is sample!!)
+* Page 1 changed 2 glyphs, OK
+* Page 2 changed 1 glyph, OK
+* 15Cx changed 4 glyphs, OK
+* 15Ex changed 7 glyphs, OK
+* 160x changed 9 glyphs, OK
+* 161x changed 12 glyphs, OK
+* 162x changed 14 glyphs, OK
+* 163x changed all 16, OK
+* 164x changed 2 glyphs, OK
+* 165x changed 1 glyph, OK
+
+Canadian ex
+* Changed 5 glyphs 18DB, 18EC, 18F1, 18F2, 18F5
+* Probably Noto is sample, OK
+
+CJK main — BETA
+* Changed 585F, 5F50, 6BC0, 7BC9, 833E
+* Unicodia COINCIDES (preferred font is SimSun)
+* Insignificant difference in BabelStone 5F50, 7BC9
+
+Latin/IPA ex
+* Changed descriptions of 025E, 029A
+* No work needed
+
+Wancho
+* Changed sample font (seemingly to Noto)
+* No work needed
