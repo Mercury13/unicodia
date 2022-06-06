@@ -345,6 +345,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "BALUDA",         Dicf::PART_NOUN },
     { "BAR",            Dicf::PART_NOUN },
     { "BEAT",           Dicf::PART_NOUN },
+    { "BHALE",          Dicf::PART_NOUN },
     { "BIRD",           Dicf::PART_NOUN },  // For some CJK hiero
     { "BOX",            Dicf::PART_NOUN },
     { "BRDA",           Dicf::PART_NOUN },
@@ -557,6 +558,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "EGYPTOLOGICAL",  Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "EXCLAMATION",    Dicf::PART_ADJECTIVE },
     { "FINGERED",       Dicf::PART_ADJECTIVE },
+    { "FIVE-LIKE",      Dicf::PART_ADJECTIVE },
     { "FIXED-FORM",     Dicf::PART_ADJECTIVE },
     { "FINAL",          Dicf::PART_ADJECTIVE },
     { "FLAT",           Dicf::PART_ADJECTIVE },
@@ -600,6 +602,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "NASAL",          Dicf::PART_ADJECTIVE },
     { "NEUTRAL",        Dicf::PART_ADJECTIVE },
     { "NEW",            Dicf::PART_ADJECTIVE },
+    { "NINE-LIKE",      Dicf::PART_ADJECTIVE },
     // Old NORTH Arabian
     { "NORTH",          Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "NORTHERN",       Dicf::PART_ADJECTIVE },
