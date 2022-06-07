@@ -55,9 +55,6 @@ Kannada
 Kawi
 * New block 11F00…11F59, +86
 
-Khitan small
-* Changed glyph 18CCA
-
 Khojki
 * Added 1123F, 40, 41
 
@@ -124,6 +121,10 @@ CJK main — BETA
 * Changed 585F, 5F50, 6BC0, 7BC9, 833E
 * Unicodia COINCIDES (preferred font is SimSun)
 * Insignificant difference in BabelStone 5F50, 7BC9
+
+Khitan small
+* Changed glyph 18CCA
+* Modern glyph is not cool (right stem), but resembles modified glyph somehow.
 
 Latin/IPA ex
 * Changed descriptions of 025E, 029A
