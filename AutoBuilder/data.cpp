@@ -257,6 +257,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LOGICAL",        Dicf::TRIG_CAP_NEXT },
     { "LOGOGRAM",       Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "MARK",           Dicf::PART_NOUN | Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
+    { "MODIFIER",       Dicf::PART_NOUN | Dicf::CAP_SMALL },
     { "NEUME",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "NUMBER",         Dicf::PART_NOUN | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
     { "NUMERAL",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
