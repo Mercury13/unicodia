@@ -3,6 +3,7 @@
 #include <map>
 #include <string>
 #include <set>
+#include <unordered_set>
 
 #include "u_TypedFlags.h"
 #include "u_Array.h"
@@ -112,15 +113,16 @@ public:
 inline bool operator < (const PrefixEntry& x, const PrefixEntry& y) { return x.triggers[0] < y.triggers[0]; }
 
 
-extern const std::map<std::string_view, DicEntry> dictionary;
-extern const std::map<std::string_view, std::string_view> exceptions;
+extern const std::unordered_map<std::string_view, DicEntry> dictionary;
+extern const std::unordered_map<std::string_view, std::string_view> exceptions;
 extern const std::multiset<PrefixEntry> prefixes;
 extern const std::set<std::string_view> langNames;
-extern const std::map<char32_t, std::string_view> abbrevs;
-extern const std::set<std::string_view> cuneiformKeywords;
-extern const std::set<std::string_view> cuneiformSymbols;
-extern const std::set<char32_t> customDrawnControlChars;
-extern const std::set<char32_t> charsDrawnAsSpaces;
+extern const std::unordered_map<char32_t, std::string_view> abbrevs;
+extern const std::unordered_set<std::string_view> cuneiformKeywords;
+extern const std::unordered_set<std::string_view> cuneiformSymbols;
+extern const std::unordered_set<char32_t> customDrawnControlChars;
+extern const std::unordered_set<char32_t> charsDrawnAsSpaces;
+extern const std::unordered_set<char32_t> charsEgyptianHatch;
 
 enum class DecapDebug { NO, YES };
 

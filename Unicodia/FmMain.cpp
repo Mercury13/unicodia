@@ -689,7 +689,13 @@ namespace {
             QPainter* painter, const QRect& rect,
             const QFont& font, QColor color, char32_t subj)
     {
-        /// @todo [urgent] draw Egyptian hatch
+        painter->setFont(font);
+        painter->setBrush(color);
+        painter->setPen(color);
+        painter->drawText(rect,
+                          Qt::AlignCenter | Qt::TextSingleLine,
+                          str::toQ(subj));
+        /// @todo [urgent] draw Egyptian hatch!!
     }
 
     void drawSpace(

@@ -415,8 +415,9 @@ namespace uc {
         U_VS16_EMOJI = 64,      ///< [+] UC feature: to surely make this char graphic, use VS16
         M_SVG_EMOJI = 128,      ///< [+] SVG emoji
         M_SPACE = 256,          ///< [+] Method: draw as space, even if it is not space
-        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts                
-        M_ALL = M_ABBREVIATION | M_CUSTOM_CONTROL | M_SVG_EMOJI | M_SPACE
+        M_EGYPTIAN_HATCH = 512, ///< [+] Method: draw Egyptian hatch (not really a hatch, but OK)
+        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts
+        M_ALL = M_ABBREVIATION | M_CUSTOM_CONTROL | M_SVG_EMOJI | M_SPACE | M_EGYPTIAN_HATCH
     };
 
     using Cfgs = Flags<Cfg>;

@@ -3514,12 +3514,14 @@ uc::DrawMethod uc::Cp::drawMethod(int dpi) const
     if (flags.haveAny(Cfg::M_ALL)) [[unlikely]] {
         if (flags.have(Cfg::M_CUSTOM_CONTROL))
             return uc::DrawMethod::CUSTOM_CONTROL;
-        if (flags.have(Cfg::M_SPACE))
-            return uc::DrawMethod::SPACE;
         if (flags.have(Cfg::M_SVG_EMOJI))
             return (block().flags.have(Bfg::NO_EMOJI))
                     ? uc::DrawMethod::SAMPLE
                     : uc::DrawMethod::SVG_EMOJI;
+        if (flags.have(Cfg::M_SPACE))
+            return uc::DrawMethod::SPACE;
+        if (flags.have(Cfg::M_EGYPTIAN_HATCH))
+            return uc::DrawMethod::EGYPTIAN_HATCH;
         if (isAbbreviated())
             return uc::DrawMethod::ABBREVIATION;
     }

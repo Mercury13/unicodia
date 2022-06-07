@@ -10,7 +10,7 @@
 
 using namespace std::string_view_literals;
 
-const std::map<std::string_view, DicEntry> dictionary {
+const std::unordered_map<std::string_view, DicEntry> dictionary {
     // Language names
     { "ABKHASIAN",      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "ADLAM",          Dicf::TRIG_SCRIPT },
@@ -807,7 +807,7 @@ const std::map<std::string_view, DicEntry> dictionary {
 
 #define EX(x) { TOUPPER_SV(x), x },
 
-const std::map<std::string_view, std::string_view> exceptions{
+const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Commercial At")                         // At is not a preposition
     EX("Tag Commercial At")                     // Same
     EX("Fraction slash")                        // Fraction’s slash
@@ -1202,7 +1202,7 @@ const std::multiset<PrefixEntry> prefixes {
 };
 
 
-const std::map<char32_t, std::string_view> abbrevs {
+const std::unordered_map<char32_t, std::string_view> abbrevs {
     { 9, "TAB" },       // TAB or HT
     { 10, "LF" },       // NL or LF
     { ' ', {} },        // SPACE has abbrev SP
@@ -1272,21 +1272,21 @@ const std::map<char32_t, std::string_view> abbrevs {
     // Then Variation Selectors
 };
 
-const std::set<char32_t> charsDrawnAsSpaces {
+const std::unordered_set<char32_t> charsDrawnAsSpaces {
     0x13441,    // Egyptian hiero Full blank
     0x13442,    // Egyptian hiero Half blank
 };
 
 // Just capitalize them!
-const std::set<std::string_view> cuneiformSymbols {
+const std::unordered_set<std::string_view> cuneiformSymbols {
     "BAR", "LAM", "MU", "NU", "PI", "SA"
 };
 
-const std::set<std::string_view> cuneiformSuffixes {
+const std::unordered_set<std::string_view> cuneiformSuffixes {
     "TENU", "GUNU", "SHESHIG", "NUTILLU"
 };
 
-const std::set<std::string_view> cuneiformKeywords {
+const std::unordered_set<std::string_view> cuneiformKeywords {
     "CUNEIFORM",
     "SIGN",
     "TIMES",
@@ -1361,7 +1361,7 @@ const std::set<RangeByEnd> noAaRanges {
     { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
-const std::set<char32_t> customDrawnControlChars {
+const std::unordered_set<char32_t> customDrawnControlChars {
     0x11D45,    // Masaram Gondi virtual virama
     0x11D97,    // Gunjala Gondi virtual virama
     0x13431,    // Egyptian hiero horiz joiner
@@ -1971,7 +1971,7 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
             if (cuneiformSymbols.contains(word.original)) {
                 word.isAllCap = true;
             // 2. Script/noun/adjective — NO
-            } else if (q->second.flags.haveAny(TRIG_ANY_SCRIPT
+            } else if (q != dictionary.end() && q->second.flags.haveAny(TRIG_ANY_SCRIPT
                         | Dicf::PART_ADJECTIVE | Dicf::PART_NOUN | Dicf::PART_NUMERAL)) {
                 // do nothing
             // 3. Suffix — initial capital
