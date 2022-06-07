@@ -1235,6 +1235,8 @@ const std::map<char32_t, std::string_view> abbrevs {
     { 0x13436, "+" },   // Egyptian hiero overlay middle
     { 0x13437, "(" },   // Egyptian hiero begin segment
     { 0x13438, ")" },   // Egyptian hiero end segment
+    { 0x13441, "FB" },  // Egyptian hiero Full blank
+    { 0x13442, "HB" },  // Egyptian hiero Half blank
     { 0x16FE4, "KSS F" }, // Khitan small filler
     { 0x1BC9D, "DTLS" }, // Duployan thick letter selector
     { 0x1BCA2, "↓" },   // Shorthand format Down step
