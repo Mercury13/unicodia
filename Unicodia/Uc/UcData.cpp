@@ -278,7 +278,6 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …1
     { "MV Boli", 110_pc },                                                      // Thaana
     { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
-        // Tibetan chars are VERY high → 90%
     { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 120_pc },         // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
