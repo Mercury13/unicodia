@@ -638,7 +638,6 @@ int main()
         // Default-ignorable
         if (elChar.attribute("DI").as_string()[0] == 'Y') {
             flags |= 32;
-            ++nDeprecated;
         }
         // VS16
         if (emoji.vs16.contains(cp))
@@ -646,6 +645,9 @@ int main()
         // SVG emoji
         if (noto.singleChar.contains(cp))
             flags |= 128;
+        // Draw as space
+        if (charsDrawnAsSpaces.contains(cp))
+            flags |= 256;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

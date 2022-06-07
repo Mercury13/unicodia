@@ -120,6 +120,7 @@ extern const std::map<char32_t, std::string_view> abbrevs;
 extern const std::set<std::string_view> cuneiformKeywords;
 extern const std::set<std::string_view> cuneiformSymbols;
 extern const std::set<char32_t> customDrawnControlChars;
+extern const std::set<char32_t> charsDrawnAsSpaces;
 
 enum class DecapDebug { NO, YES };
 
