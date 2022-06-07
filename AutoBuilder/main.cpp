@@ -648,6 +648,9 @@ int main()
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
             flags |= 256;
+        // Draw as Egyptian hatch
+        if (charsEgyptianHatch.contains(cp))
+            flags |= 512;
 
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj

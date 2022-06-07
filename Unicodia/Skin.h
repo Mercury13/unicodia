@@ -55,3 +55,6 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 
 /// Alpha for space characters
 constexpr int ALPHA_SPACE = 70;
+
+/// Alpha for Egyptian hatch
+constexpr int ALPHA_EGYPTIAN_HATCH = 90;

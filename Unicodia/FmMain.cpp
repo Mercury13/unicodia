@@ -689,7 +689,19 @@ namespace {
             QPainter* painter, const QRect& rect,
             const QFont& font, QColor color, char32_t subj)
     {
-        painter->setFont(font);
+        QFont font1 = font;
+        font1.setPointSize(font.pointSize() * 16 / 10);
+        painter->setFont(font1);
+        painter->setBrush(color);
+        painter->setPen(color);
+        painter->drawText(rect,
+                          Qt::AlignCenter | Qt::TextSingleLine,
+                          uc::STUB_CIRCLE);
+
+        font1 = font;
+        font1.setStyleStrategy(QFont::NoAntialias);
+        painter->setFont(font1);
+        color.setAlpha(ALPHA_EGYPTIAN_HATCH);
         painter->setBrush(color);
         painter->setPen(color);
         painter->drawText(rect,
