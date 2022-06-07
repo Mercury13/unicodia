@@ -1971,7 +1971,7 @@ constinit const uc::Block uc::blocks[] {
     // Egyptian hiero format OK
     { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA },
             "Egyptian Hieroglyph Format Controls",
-            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Egyp, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs", EcScript::Hluw },
