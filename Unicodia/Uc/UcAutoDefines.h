@@ -406,15 +406,17 @@ namespace uc {
     };
 
     enum class Cfg : unsigned short {
-        HAS_ABBREVIATION = 1,   ///< [+] 1st synonym is abbreviation
-        DEPRECATED = 2,         ///< [+] UC feature: char is deprecated
+        M_ABBREVIATION = 1,     ///< [+] Method: 1st synonym is abbreviation
+        U_DEPRECATED = 2,       ///< [+] UC feature: char is deprecated
         RENDER_BUG = 4,         ///< [+] use font BUG_PREFER, or drop BUG_AVOID
-        CUSTOM_CONTROL = 8,     ///< [+] custom-drawn control char
-        NO_AA = 16,             ///< [+] Temporarily disable anti-aliasing for this char
-        DEFAULT_IGNORABLE = 32, ///< [+] UC feature: char is default-ignorable
-        VS16_EMOJI = 64,        ///< [+] UC feature: to surely make this char graphic, use VS16
-        SVG_EMOJI = 128,        ///< [+] SVG emoji
-        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts
+        M_CUSTOM_CONTROL = 8,   ///< [+] Method: custom-drawn control char
+        NO_AA = 16,             ///< [+] Submethod of SAMPLE: temporarily disable anti-aliasing
+        U_DEF_IGNORABLE = 32,   ///< [+] UC feature: default-ignorable
+        U_VS16_EMOJI = 64,      ///< [+] UC feature: to surely make this char graphic, use VS16
+        M_SVG_EMOJI = 128,      ///< [+] SVG emoji
+        M_SPACE = 256,          ///< [+] Method: draw as space, even if it is not space
+        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts                
+        M_ALL = M_ABBREVIATION | M_CUSTOM_CONTROL | M_SVG_EMOJI | M_SPACE
     };
 
     using Cfgs = Flags<Cfg>;
@@ -488,11 +490,11 @@ namespace uc {
         SafeVector<std::u8string_view> allRawNames() const;
         DrawMethod drawMethod(int dpi) const;
         TofuInfo tofuInfo() const;
-        constexpr bool isAbbreviated() const { return flags.have(Cfg::HAS_ABBREVIATION); }
+        constexpr bool isAbbreviated() const { return flags.have(Cfg::M_ABBREVIATION); }
         std::u8string_view abbrev() const;
-        constexpr bool isDeprecated() const { return flags.have(Cfg::DEPRECATED); }
-        constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::DEFAULT_IGNORABLE); }
-        constexpr bool isVs16Emoji() const { return flags.have(Cfg::VS16_EMOJI); }        
+        constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
+        constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
+        constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
     };
 
     // Check your calculations once again

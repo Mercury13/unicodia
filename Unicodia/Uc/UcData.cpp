@@ -2034,7 +2034,7 @@ constinit const uc::Block uc::blocks[] {
     // Small kana ex OK
     { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension",
-            EcScript::Kana, EcFont::KOREAN, Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Nushu OK
     { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
             "Nushu",
@@ -3511,14 +3511,18 @@ bool uc::Cp::isGraphical() const
 
 uc::DrawMethod uc::Cp::drawMethod(int dpi) const
 {
-    if (flags.have(Cfg::CUSTOM_CONTROL))
-        return uc::DrawMethod::CUSTOM_CONTROL;
-    if (flags.have(Cfg::SVG_EMOJI))
-        return (block().flags.have(Bfg::NO_EMOJI))
-                ? uc::DrawMethod::SAMPLE
-                : uc::DrawMethod::SVG_EMOJI;
-    if (isAbbreviated())
-        return uc::DrawMethod::ABBREVIATION;
+    if (flags.haveAny(Cfg::M_ALL)) [[unlikely]] {
+        if (flags.have(Cfg::M_CUSTOM_CONTROL))
+            return uc::DrawMethod::CUSTOM_CONTROL;
+        if (flags.have(Cfg::M_SPACE))
+            return uc::DrawMethod::SPACE;
+        if (flags.have(Cfg::M_SVG_EMOJI))
+            return (block().flags.have(Bfg::NO_EMOJI))
+                    ? uc::DrawMethod::SAMPLE
+                    : uc::DrawMethod::SVG_EMOJI;
+        if (isAbbreviated())
+            return uc::DrawMethod::ABBREVIATION;
+    }
     if (isTrueSpace())
         return uc::DrawMethod::SPACE;
     if (dpi < 130 && script().font().flags.have(Ffg::CUSTOM_AA))
