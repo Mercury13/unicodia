@@ -274,8 +274,8 @@ const std::map<std::string_view, DicEntry> dictionary {
 
     // Mixed
     { "TONE",           Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
-    { "WORD",           Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
     { "REPETITION",     Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
+    { "WORD",           Dicf::PART_MIXED | Dicf::TRIG_CAP_NEXT | Dicf::IF_SCRIPT | Dicf::IF_NEXT_NOT_NOUN },
 
     // American tribes
     { "AIVILIK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
@@ -591,6 +591,7 @@ const std::map<std::string_view, DicEntry> dictionary {
     { "LONG",           Dicf::PART_ADJECTIVE },
     { "LONG-LEGGED",    Dicf::PART_ADJECTIVE },
     { "LOOPED",         Dicf::PART_ADJECTIVE },
+    { "LOST",           Dicf::PART_ADJECTIVE },
     { "LOW",            Dicf::PART_ADJECTIVE },
     { "LUNATE",         Dicf::PART_ADJECTIVE },
     { "LITTLE",         Dicf::PART_ADJECTIVE },
