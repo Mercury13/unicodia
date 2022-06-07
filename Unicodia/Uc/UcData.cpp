@@ -350,6 +350,8 @@ constinit const uc::ScriptType uc::scriptTypeInfo[] {
 };
 static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
 
+// Usage: u8"15.0" VER_BETA
+#define VER_BETA "\u00A0" "β"
 
 const uc::Version uc::versionInfo[] {
     { {},     0    },
@@ -379,7 +381,7 @@ const uc::Version uc::versionInfo[] {
     { u8"12.1", 2019 },
     { u8"13.0", 2020 },
     { u8"14.0", 2021 },
-    { u8"15.0" "\u00A0" "β", 2022 },
+    { u8"15.0" VER_BETA, 2022 },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
