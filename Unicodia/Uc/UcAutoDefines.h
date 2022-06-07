@@ -425,11 +425,12 @@ namespace uc {
             SAMPLE,             ///< Take font and draw string
             CUSTOM_AA,          ///< Unused right now, no fonts have custom anti-aliasing right now
             SPACE,              ///< Take font, measure space width and draw 2 lines
+            EGYPTIAN_HATCH,     ///< Draw special big circle, then hatch
             // Char-based methods
             ABBREVIATION,       ///< Draw dotted square and abbreviation
             CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
             SVG_EMOJI,          ///< Draw SVG emoji
-            LAST_FONT = SPACE };            // Last using (loading, checking) font
+            LAST_FONT = EGYPTIAN_HATCH };            // Last using (loading, checking) font
 
     enum class TofuState {
         PRESENT,    ///< Not a tofu, have char

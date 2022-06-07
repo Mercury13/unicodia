@@ -211,17 +211,19 @@ public:
     void setSpace(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
     void setEmoji(char32_t aSubj);
+    void setEgyptianHatch(const QFont& font, char32_t aSubj);
     void setNormal();
     void init();
 protected:
     void paintEvent(QPaintEvent *event);
 private:
     QSize initialSize;
-    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI };
+    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI, EGYPTIAN_HATCH };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;
     char32_t subj = 0;
+    void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
 
 

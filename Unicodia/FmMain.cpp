@@ -685,6 +685,13 @@ namespace {
             metrics.height() * 4 / 5 };
     }
 
+    void drawEgyptianHatch(
+            QPainter* painter, const QRect& rect,
+            const QFont& font, QColor color, char32_t subj)
+    {
+        /// @todo [urgent] draw Egyptian hatch
+    }
+
     void drawSpace(
             QPainter* painter, const QRect& rect,
             const QFont& font, QColor color, char32_t subj)
@@ -730,6 +737,9 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         break;
     case uc::DrawMethod::ABBREVIATION:
         drawAbbreviation(painter, rect, cp.abbrev(), color);
+        break;
+    case uc::DrawMethod::EGYPTIAN_HATCH:
+        drawEgyptianHatch(painter, rect, *fontAt(cp), color, cp.subj);
         break;
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(cp), color, cp.subj);
@@ -1025,6 +1035,12 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                       palette().windowText().color(),
                       subj);
         } break;
+    case Mode::EGYPTIAN_HATCH: {
+            QPainter painter(this);
+            drawEgyptianHatch(&painter, geometry(), fontSpace,
+                      palette().windowText().color(),
+                      subj);
+        } break;
     case Mode::EMOJI: {
             QPainter painter(this);
             auto r = geometry();
@@ -1066,12 +1082,23 @@ void WiCustomDraw::setEmoji(char32_t aSubj)
 }
 
 
+void WiCustomDraw::setEgyptianHatch(const QFont& font, char32_t aSubj)
+{
+    setSpace1(font, aSubj, Mode::EGYPTIAN_HATCH);
+}
+
+
 void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
+{
+    setSpace1(font, aSubj, Mode::SPACE);
+}
+
+void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
 {
     static constexpr auto SPACE_PLUS = 30;
 
     fontSpace = font;
-    mode = Mode::SPACE;
+    mode = aMode;
     subj = aSubj;
 
     // Set appropriate size
@@ -1079,6 +1106,7 @@ void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
     setMinimumSize(QSize(
                 std::max(initialSize.width(), dim.width() + SPACE_PLUS),
                 std::max(initialSize.height(), dim.height())));
+    update();
 }
 
 
@@ -1513,6 +1541,12 @@ void FmMain::forceShowCp(MaybeChar ch)
         case uc::DrawMethod::CUSTOM_AA:
             drawSampleWithQt(*ch);
             break;
+        case uc::DrawMethod::EGYPTIAN_HATCH: {
+                ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+                auto font = ch->font(uc::MatchLast::NO);
+                auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
+                ui->pageSampleCustom->setEgyptianHatch(qfont, ch.code);
+            } break;
         case uc::DrawMethod::SVG_EMOJI:
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setEmoji(ch.code);
