@@ -212,7 +212,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
     { "NotoSansMro-Regular.ttf" },                                              // Mro
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
-    { "NotoSansMyanmar-Regular.ttf" },                                          // Myanmar
+    { "PadaukBook-Regular.ttf", 110_pc },                                       // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
     { "NotoSansNandinagari-Regular.ttf" },                                      // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
