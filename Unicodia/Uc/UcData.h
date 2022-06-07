@@ -557,7 +557,7 @@ namespace uc {
 
     struct Version
     {
-        std::string_view name;
+        std::u8string_view name;
         unsigned year;
 
         //unsigned nNewChars = 0;

@@ -1295,7 +1295,7 @@ void FmMain::initAbout()
     ui->lbAboutVersion->setText(str::toQ(
                 loc::get("About.Version")
                 .arg(str::toU8sv(version.toStdString()),
-                     str::toU8sv(uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name))));
+                     uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name)));
 
     // vwVersion
     QFile f(":/Texts/about.htm");
