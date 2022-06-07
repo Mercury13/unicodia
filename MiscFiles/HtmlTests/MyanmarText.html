@@ -2,8 +2,9 @@
  <head>
   <title>Myanmar script test</title>
   <style type="text/css">
-    .msmy { font-family: Myanmar Text; font-size:32pt; color:#060; }
-    .msmb { font-family: Myanmar Text; font-size:32pt; color:#700; }
+    .msm2 { font-family: Myanmar Text; font-size:32pt; color:#060; }
+    .msm1 { font-family: Myanmar Text; font-size:32pt; color:#008; }
+    .msm0 { font-family: Myanmar Text; font-size:32pt; color:#700; }
 	.test { font-family: Padauk Book; font-size:32pt; }
 	@font-face {
 	   font-family: "Padauk Book";
@@ -12,12 +13,14 @@
   </style>
  </head>
  <body>
-  RED = bad in M$ Myanmar Text; GREEN = good
+  <p>RED = bad in M$ Myanmar Text; BLUE = misrender but readable; GREEN = good</p>
   <table border='1' cellpadding='20'>
-    <tr><td class='msmy'>&#x1021;&#x102D;&#x1015;&#x103A;&#x1001;&#x1014;&#x103A;&#x1038;&#x1010;&#x1036;&#x2060;&#x1001;&#x102B;&#x1038;&#x1000;&#x102D;&#x102F;
+    <tr><td class='msm2'>&#x1021;&#x102D;&#x1015;&#x103A;&#x1001;&#x1014;&#x103A;&#x1038;&#x1010;&#x1036;&#x2060;&#x1001;&#x102B;&#x1038;&#x1000;&#x102D;&#x102F;
 	    <td class='test'>&#x1021;&#x102D;&#x1015;&#x103A;&#x1001;&#x1014;&#x103A;&#x1038;&#x1010;&#x1036;&#x2060;&#x1001;&#x102B;&#x1038;&#x1000;&#x102D;&#x102F;
-	<tr><td class='msmb'>&#x105A;&#x103A; &#x100A;&#x1039;&#x100A;
+	<tr><td class='msm0'>&#x105A;&#x103A; &#x100A;&#x1039;&#x100A;
 		<td class='test'>&#x105A;&#x103A; &#x100A;&#x1039;&#x100A;
+	<tr><td class='msm1'>&#x1007;&#x1039;&#x1009; &#x1012;&#x1039;&#x1009;
+		<td class='test'>&#x1007;&#x1039;&#x1009; &#x1012;&#x1039;&#x1009;
   </table>
  </body>
 </html>
