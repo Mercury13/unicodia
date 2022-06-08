@@ -58,9 +58,6 @@ Kawi
 Khojki
 * Added 1123F, 40, 41
 
-Lao
-* New char 0ECE
-
 Latin G
 * New chars 1DF25…1DF2A
 
@@ -125,6 +122,10 @@ CJK main — BETA
 Khitan small
 * Changed glyph 18CCA
 * Modern glyph is not cool (right stem), but resembles modified glyph somehow.
+
+Lao
+* New char 0ECE
+* Somehow present in font (how??)
 
 Latin/IPA ex
 * Changed descriptions of 025E, 029A
