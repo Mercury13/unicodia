@@ -14,7 +14,7 @@ CJK E — BETA
 * Changed glyph 2BB37, 2BD7D, 2C151, 2C1E0, 2C2D6, 2C5CA, 2C810, 2CD34
 * 2BB37, 2BD7D is non-G, U8. BS OK
 >> 2C151 is non-G, U8, absent in BS, same misrender in GW as 2B249 (++ vs horz ‡)
->> 2C1E0 is non-G, U8, absent in BS, minor misrender in GW
+* 2C1E0 is non-G, U8, absent in BS, GW states that such rendering is OK
 * 2C2D6 is G, U8. BS OK
 * 2C5CA, 2C810, 2CD34 are non-G, U8. BS OK
 
@@ -138,6 +138,7 @@ CJK B — BETA
 * 28E9A is G U3, U14→15 other version added, BS absent, SimSun OK
 * 29760 is G U3, U14→15 other version added, SimSun and BS OK
 * 2A60F is G U3, U14→15 other version added (no major diffs), SimSun and BS OK
+!! Ask West: 22877 is G, bad in SimSun
 
 CJK G — BETA
 * Changed glyphs 302FC, 30723, 30A6D, 30CF7, 30DBF, 31006, 3105D
