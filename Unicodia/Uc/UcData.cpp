@@ -2062,9 +2062,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE },
             "Ancient Greek Musical Notation",
             EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
-    /// @todo [U15] Kaktovik numerals
+    // Kaktovik numerals OK, implemented in Funky
     { 0x1D2C0, 0x1D2DF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
-            "Kaktovik Numerals" },
+            "Kaktovik Numerals",
+            EcScript::NONE, EcFont::FUNKY },
     // Mayan numerals OK
     { 0x1D2E0, 0x1D2FF, { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Mayan Numerals",
