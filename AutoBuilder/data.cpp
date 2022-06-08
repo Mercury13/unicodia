@@ -1331,8 +1331,12 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x203D, 0x203E },     // …Skip emoji and go on
     { 0x2336, 0x237A },     // Technical — APL
     { 0x23B7, 0x23BD },     // Technical — several chars missing in Noto’s
-    { 0x3C43, 0x3C43 },     // CJK A: a single char redrawn in U15 and already present in Babel
-    { 0x22ACF, 0x22ACF },   // A single char redrawn in U15 and already present in Babel
+         // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
+    { 0x3C43  },     // CJK A: a single char redrawn in U15 and already present in BS
+    { 0x20048 },   // CJK B, some diffs between versons, want G (BS)
+    { 0x22ACF },   // A single char redrawn in U15 and already present in BS
+    { 0x23F4E },   // 23F4E is G U3, SimSun shows T, BS OK
+    { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
 
     // Egyptian while Noto is BAAD
     { 0x1300A },

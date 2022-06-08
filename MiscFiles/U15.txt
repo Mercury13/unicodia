@@ -6,22 +6,20 @@ Arabic ex C
 CJK compatibility — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!
 * Changed 2F804, 2F805, 2F833, 2F835, 2F84C, 2F84F, 2F852, 2F855, 2F887, 2F88B, 2F899, 2F8A0, 2F8A6, 2F8A7, 2F8AD, 2F8B1, 2F8B4, 2F8B7, 2F8BA, 2F8D0, 2F8E0..2F8E2, 2F8E5, 2F8E6, 2F8FE, 2F900, 2F901, 2F907, 2F912, 2F922, 2F926, 2F936, 2F938, 2F94E, 2F959, 2F95F, 2F96C, 2F99F, 2F9B8, 2F9BA, 2F9D3, 2F9DB, 2F9DC, 2F9E8, 2F9EA, 2F9EE, 2FA00, 2FA0D, 2FA1B
 
-CJK B — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-* Changed 20048, 20A1C, 2143F, 21A5F, 21C08, 21FBA, 22ACF, 23392, 238A7, 23D8F, 23F4E, 25D20, 26E30, 27B48, 27C4F, 28633, 28B02, 28E9A, 29760, 2A60F
-
 CJK C — BETA
-* Added 2B739
-* Changed 2B249, obsolete (Korean?) version in BS, ask West
+>> Added 2B739
+>> Changed 2B249, no G-source, strange misrender (++ in U15, horz ‡ in West’s), same in SimSun, GW, ask West
 
 CJK E — BETA
 * Changed glyph 2BB37, 2BD7D, 2C151, 2C1E0, 2C2D6, 2C5CA, 2C810, 2CD34
-* Checked BabelStone. Remaining: 2C151, 2C1E0 (both missing in BS)
+* 2BB37, 2BD7D is non-G, U8. BS OK
+>> 2C151 is non-G, U8, absent in BS, same misrender in GW as 2B249 (++ vs horz ‡)
+>> 2C1E0 is non-G, U8, absent in BS, minor misrender in GW
+* 2C2D6 is G, U8. BS OK
+* 2C5CA, 2C810, 2CD34 are non-G, U8. BS OK
 
 CJK F — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 * Changed glyphs 2CF4E, 2D25D, 2D3EC, 2D6A7, 2D7BA, 2D979, 2DA74, 2DA97, 2DC13, 2DDC0, 2DF10, 2DF78, 2E05A, 2E0AE, 2E516, 2E640, 2E680, 2EA63
-
-CJK G — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-* Changed glyphs 302FC, 30723, 30A6D, 30CF7, 30DBF, 31006, 3105D
 
 CJK H
 * New block 31350, +4192
@@ -122,6 +120,32 @@ CJK A — BETA
 * 3C43 bad in Sim, OK in BS, fixup flag added
 * 48B4 is G, seen both in Sim and BS, already OK
 * 4DBE in non-G, U13 → taken from BS, already OK
+
+CJK B — BETA
+* Changed 20048, 20A1C, 2143F, 21A5F, 21C08, 21FBA, 22ACF, 23392, 238A7, 23D8F, 23F4E, 25D20, 26E30, 27B48, 27C4F, 28633, 28B02, 28E9A, 29760, 2A60F
+* 20048 is G, U3, GW shows major differences between versions, SimSun shows T, BS OK, fixup flag added
+* 20A1C, 2143F, 21A5F, 21C08, 21FBA are G, U3, both SimSun and BS is OK
+* 22ACF (Hong Kong?) was already fixed with flag while checked alpha, BS OK
+* 23392 is G, U3, absent in BS, SimSun OK
+* 238A7, 23D87 are G, U3, both SimSun and BS are OK
+* 23F4E is G U3, SimSun shows T, BS OK, fixup flag added
+* 25D20 is non-G U3, both SimSun and BS are OK
+* 26E30 is G U3, SimSun shows T, BS OK, fixup flag added
+* 27B48 is not marked in PDF, no major diffs between versions, SimSun OK (check what’s happening in release!!!!!!)
+* 27C4F is G U3, no major diffs between versions, everyone’s OK
+* 28633 is G U3, SimSun very minor misrender, BS absent, 14→15 other versions added → OK
+* 28B02 is G U3, U14→15 other version added, SimSun and BS OK
+* 28E9A is G U3, U14→15 other version added, BS absent, SimSun OK
+* 29760 is G U3, U14→15 other version added, SimSun and BS OK
+* 2A60F is G U3, U14→15 other version added (no major diffs), SimSun and BS OK
+
+CJK G — BETA
+* Changed glyphs 302FC, 30723, 30A6D, 30CF7, 30DBF, 31006, 3105D
+* 302FC, 30723 are non-G, U13. BS OK.
+* 30A6D is G, U13. BS OK.
+* 30CF7, 30DBF are non-G, U13. BS took a UK-xxx image, not KC-xxx, seemingly OK.
+* 31006 is non-G, U13. BS OK.
+* 3105D is G, U13. BS OK.
 
 Khitan small
 * Changed glyph 18CCA
