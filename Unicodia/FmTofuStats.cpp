@@ -177,6 +177,8 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
     ui(new Ui::FmTofuStats)
 {
     ui->setupUi(this);
+    connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &This::accept);
+    connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &This::reject);
     ui->tableStats->setModel(&model);
     buildModel();
 }

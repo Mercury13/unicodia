@@ -57,6 +57,7 @@ class FmTofuStats : public QDialog
 {
     Q_OBJECT
     using Super = QDialog;
+    using This = FmTofuStats;
 public:
     explicit FmTofuStats(QWidget *parent = nullptr);
     ~FmTofuStats() override;
