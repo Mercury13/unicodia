@@ -6,10 +6,6 @@ Arabic ex C
 CJK compatibility — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!
 * Changed 2F804, 2F805, 2F833, 2F835, 2F84C, 2F84F, 2F852, 2F855, 2F887, 2F88B, 2F899, 2F8A0, 2F8A6, 2F8A7, 2F8AD, 2F8B1, 2F8B4, 2F8B7, 2F8BA, 2F8D0, 2F8E0..2F8E2, 2F8E5, 2F8E6, 2F8FE, 2F900, 2F901, 2F907, 2F912, 2F922, 2F926, 2F936, 2F938, 2F94E, 2F959, 2F95F, 2F96C, 2F99F, 2F9B8, 2F9BA, 2F9D3, 2F9DB, 2F9DC, 2F9E8, 2F9EA, 2F9EE, 2FA00, 2FA0D, 2FA1B
 
-CJK A — BETA
-* Changed glyphs 34DC, 3BF6, 3C43, 48B4, 4DBE
-* Remaining: 3C43 (present in BS!!!!!!!!!!!!!!!!!!)
-
 CJK B — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 * Changed 20048, 20A1C, 2143F, 21A5F, 21C08, 21FBA, 22ACF, 23392, 238A7, 23D8F, 23F4E, 25D20, 26E30, 27B48, 27C4F, 28633, 28B02, 28E9A, 29760, 2A60F
 
@@ -118,6 +114,14 @@ CJK main — BETA
 * Changed 585F, 5F50, 6BC0, 7BC9, 833E
 * Unicodia COINCIDES (preferred font is SimSun)
 * Insignificant difference in BabelStone 5F50, 7BC9
+
+CJK A — BETA
+* Changed glyphs 34DC, 3BF6, 3C43, 48B4, 4DBE
+* 34DC is non-G, seen both in Sim and BS, already OK
+* 3BF6 is G, seen both in Sim and BS, already OK
+* 3C43 bad in Sim, OK in BS, fixup flag added
+* 48B4 is G, seen both in Sim and BS, already OK
+* 4DBE in non-G, U13 → taken from BS, already OK
 
 Khitan small
 * Changed glyph 18CCA
