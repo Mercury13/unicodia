@@ -689,16 +689,14 @@ namespace {
             QPainter* painter, const QRect& rect,
             const QFont& font, QColor color, char32_t subj)
     {
-        QFont font1 = font;
-        font1.setPointSize(font.pointSize() * 16 / 10);
-        painter->setFont(font1);
+        painter->setFont(font);
         painter->setBrush(color);
         painter->setPen(color);
         painter->drawText(rect,
                           Qt::AlignCenter | Qt::TextSingleLine,
-                          uc::STUB_CIRCLE);
+                          uc::STUB_PUA_BIG_CIRCLE);
 
-        font1 = font;
+        QFont font1 = font;
         font1.setStyleStrategy(QFont::NoAntialias);
         painter->setFont(font1);
         color.setAlpha(ALPHA_EGYPTIAN_HATCH);
@@ -707,7 +705,6 @@ namespace {
         painter->drawText(rect,
                           Qt::AlignCenter | Qt::TextSingleLine,
                           str::toQ(subj));
-        /// @todo [urgent] draw Egyptian hatch!!
     }
 
     void drawSpace(
