@@ -1248,7 +1248,7 @@ FmMain::FmMain(QWidget *parent)
         // Windows timer is low-priority, even after paint
     timerSetFocus = std::make_unique<QTimer>(this);
     timerSetFocus->setSingleShot(true);
-    timerSetFocus->setInterval(5);
+    timerSetFocus->setInterval(30);
     connect(timerSetFocus.get(), &QTimer::timeout, this, &This::slotSetFocusDefered);
 
     // Select index
@@ -1711,6 +1711,9 @@ void FmMain::labelLinkActivated(const QString& link)
 
 void FmMain::slotSetFocusDefered()
 {
+    if (ui->comboBlock->hasFocus()) {
+        setFocus();
+    }
     ui->tableChars->setFocus();
 }
 
