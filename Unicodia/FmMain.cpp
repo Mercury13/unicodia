@@ -498,6 +498,35 @@ namespace {
             { return QRect( QPoint{ x0, y0 + side }, QSize { side, side2 }); }
         QRect rect3() const
             { return QRect( QPoint{ x0 + side2, y0 + side2 }, QSize { side, side }); }
+        QRect rect5() const
+            { return QRect( QPoint{ x0 + side, y0 + side }, QSize { side, side }); }
+        QRect rect8() const
+            { return QRect( QPoint{ x0 + side, y0 }, QSize { side, side }); }
+        QRect rect2() const
+            { return QRect( QPoint{ x0 + side, y0 + side2 }, QSize { side, side }); }
+    };
+
+    struct Rc6Matrix : public Rc3Matrix {
+        int sideTwoThirds;
+        int sideOneAndHalf;
+
+        Rc6Matrix(const QRectF& rcFrame)
+            : Rc3Matrix(rcFrame),
+              sideTwoThirds(side2 / 3),
+              sideOneAndHalf(side3 / 2) {}
+
+        QRect topWall() const
+            { return QRect( QPoint{ x0, y0 }, QSize { side3, sideTwoThirds } ); }
+        QRect leftWall() const
+            { return QRect( QPoint{ x0, y0 }, QSize { sideTwoThirds, side3 } ); }
+        QRect bottomWall() const
+            { return QRect( QPoint{ x0, y0 + side3 - sideTwoThirds }, QSize { side3, sideTwoThirds } ); }
+        QRect rightWall() const
+            { return QRect( QPoint{ x0 + side3 - sideTwoThirds, y0 }, QSize { sideTwoThirds, side3 } ); }
+        QRect topHalf() const
+            { return QRect( QPoint{ x0, y0 }, QSize { side3, sideOneAndHalf } ); }
+        QRect bottomHalf() const
+            { return QRect( QPoint{ x0, y0 + side3 - sideOneAndHalf }, QSize { side3, sideOneAndHalf } ); }
     };
 
     void drawCustomAbbrText(QPainter* painter, const AbbrLines& sp,
@@ -641,6 +670,28 @@ namespace {
                 painter->fillRect(m.rect79(), color);
                 painter->fillRect(m.rect41(), color);
                 painter->fillRect(m.rect3(), color);
+            } break;
+        case 0x13439: {
+                Rc6Matrix m(rcFrame);
+                painter->fillRect(m.topWall(), color);
+                painter->fillRect(m.leftWall(), color);
+                painter->fillRect(m.rightWall(), color);
+                painter->fillRect(m.bottomWall(), color);
+                painter->fillRect(m.rect5(), color);
+            } break;
+        case 0x1343A: {
+                Rc6Matrix m(rcFrame);
+                painter->fillRect(m.rect8(), color);
+                painter->fillRect(m.leftWall(), color);
+                painter->fillRect(m.rightWall(), color);
+                painter->fillRect(m.bottomHalf(), color);
+            } break;
+        case 0x1343B: {
+                Rc6Matrix m(rcFrame);
+                painter->fillRect(m.rect2(), color);
+                painter->fillRect(m.leftWall(), color);
+                painter->fillRect(m.rightWall(), color);
+                painter->fillRect(m.topHalf(), color);
             } break;
         case 0xE0001:
                 // 00A0 = NBSP

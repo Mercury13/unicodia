@@ -1374,6 +1374,8 @@ const std::unordered_set<char32_t> customDrawnControlChars {
     0x13433,    // Egyptian hiero insert at bottom start
     0x13434,    // Egyptian hiero insert at top end
     0x13435,    // Egyptian hiero insert at bottom end
+    0x13439, 0x1343A, 0x1343B, 0x1343C,  // Egyptian hero formatters
+       0x1343D, 0x1343E, 0x1343F,
     0x16F8F,    // Miao tone right
     0x16F90,    // Miao tone top right
     0x16F91,    // Miao tone above
