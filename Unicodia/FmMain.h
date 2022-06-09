@@ -274,7 +274,6 @@ private:
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;
-    std::unique_ptr<QTimer> timerSetFocus;
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
 
@@ -295,6 +294,7 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
+    void setFocusDefered();
 
     // mywiki::Gui
     void popupAtAbs(
@@ -313,7 +313,6 @@ private slots:
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
     void showTofuStats();
-    void slotSetFocusDefered();
     void openSearch();
     void closeSearch();
     void startSearch();

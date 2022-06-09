@@ -49,6 +49,9 @@ using namespace std::string_view_literals;
 constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
 
+constexpr int TIME_SET_FOCUS = 30;
+constexpr int TIME_SET_FOCUS_2 = 5;
+
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
@@ -1244,13 +1247,6 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
-    // Set focus defered
-        // Windows timer is low-priority, even after paint
-    timerSetFocus = std::make_unique<QTimer>(this);
-    timerSetFocus->setSingleShot(true);
-    timerSetFocus->setInterval(30);
-    connect(timerSetFocus.get(), &QTimer::timeout, this, &This::slotSetFocusDefered);
-
     // Select index
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
@@ -1709,15 +1705,6 @@ void FmMain::labelLinkActivated(const QString& link)
 }
 
 
-void FmMain::slotSetFocusDefered()
-{
-    if (ui->comboBlock->hasFocus()) {
-        setFocus();
-    }
-    ui->tableChars->setFocus();
-}
-
-
 template<>
 void FmMain::selectChar<SelectMode::NONE>(char32_t code)
 {
@@ -1774,12 +1761,22 @@ void FmMain::preloadVisibleFonts()
 }
 
 
+void FmMain::setFocusDefered()
+{
+    setFocus();
+    QTimer::singleShot(TIME_SET_FOCUS_2,
+            [this]{ ui->tableChars->setFocus(); } );
+}
+
+
 template<>
 void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
 {
     selectChar<SelectMode::NONE>(code);
     preloadVisibleFonts();
-    timerSetFocus->start();
+    ui->tableChars->update();
+    QApplication::processEvents();
+    QTimer::singleShot(TIME_SET_FOCUS, [this]{ setFocusDefered(); } );
 }
 
 
@@ -1797,7 +1794,7 @@ void FmMain::on_comboBlock_currentIndexChanged(int index)
         return;
     auto oldChar = model.charAt(ui->tableChars->currentIndex());
     auto oldBlock = uc::blockOf(oldChar.code);
-    if (oldBlock->index() != static_cast<size_t>(index)) {
+    if (oldBlock->index() != static_cast<size_t>(index) && !ui->comboBlock->isDown()) {
         auto& newBlock = uc::blocks[index];
         selectChar<SelectMode::DEFERED>(newBlock.firstAllocated->subj);
     }

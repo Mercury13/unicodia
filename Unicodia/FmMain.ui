@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -125,6 +125,12 @@
                  </property>
                  <item>
                   <widget class="WideComboBox" name="comboBlock">
+                   <property name="mouseTracking">
+                    <bool>true</bool>
+                   </property>
+                   <property name="focusPolicy">
+                    <enum>Qt::StrongFocus</enum>
+                   </property>
                    <property name="maxVisibleItems">
                     <number>28</number>
                    </property>
