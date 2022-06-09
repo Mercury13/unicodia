@@ -693,6 +693,18 @@ namespace {
                 painter->fillRect(m.rightWall(), color);
                 painter->fillRect(m.topHalf(), color);
             } break;
+        case 0x1343C:
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_START);
+            break;
+        case 0x1343D:
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_END);
+            break;
+        case 0x1343E:
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_START);
+            break;
+        case 0x1343F:
+            drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_END);
+            break;
         case 0xE0001:
                 // 00A0 = NBSP
             drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness,

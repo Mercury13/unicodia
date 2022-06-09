@@ -78,6 +78,10 @@ namespace uc {
     constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };
     constexpr QChar STUB_PUA_TAG { 0xE009 };
     constexpr QChar STUB_PUA_BIG_CIRCLE { 0xE00A };
+    constexpr QChar STUB_PUA_ENCLOSURE_START { 0xE00B };
+    constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };
+    constexpr QChar STUB_PUA_WALL_START { 0xE00D };
+    constexpr QChar STUB_PUA_WALL_END { 0xE00E };
 
     enum class EcLangLife
     {
