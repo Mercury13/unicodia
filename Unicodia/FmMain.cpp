@@ -19,7 +19,6 @@
 #include <QFile>
 #include <QDesktopServices>
 #include <QUrl>
-#include <QTimer>
 #include <QSvgRenderer>
 
 // Misc
@@ -48,9 +47,6 @@ using namespace std::string_view_literals;
 
 constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
-
-constexpr int TIME_SET_FOCUS = 30;
-constexpr int TIME_SET_FOCUS_2 = 5;
 
 namespace {
     // No need custom drawing — solves nothing
@@ -1170,6 +1166,9 @@ FmMain::FmMain(QWidget *parent)
 
     // Combobox
     ui->comboBlock->setModel(&blocksModel);
+    connect(ui->comboBlock, &QComboBox::currentIndexChanged, this, &This::comboIndexChanged);
+    connect(ui->comboBlock, &WideComboBox::droppedDown, this, &This::comboDroppedDown);
+    connect(ui->comboBlock, &WideComboBox::pulledUp, this, &This::comboPulledUp);
 
     // Table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
@@ -1243,7 +1242,7 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
     connect(shcut, &QShortcut::activated, this, &This::changeLanguage);
 
-    // Change language
+    // Reload language
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
@@ -1761,23 +1760,26 @@ void FmMain::preloadVisibleFonts()
 }
 
 
-void FmMain::setFocusDefered()
-{
-    setFocus();
-    QTimer::singleShot(TIME_SET_FOCUS_2,
-            [this]{ ui->tableChars->setFocus(); } );
-}
+//void FmMain::setFocusDefered()
+//{
+//    constexpr int TIME_SET_FOCUS_2 = 5;
+//    setFocus();
+//    QTimer::singleShot(TIME_SET_FOCUS_2,
+//            [this]{ ui->tableChars->setFocus(); } );
+//}
 
 
-template<>
-void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
-{
-    selectChar<SelectMode::NONE>(code);
-    preloadVisibleFonts();
-    ui->tableChars->update();
-    QApplication::processEvents();
-    QTimer::singleShot(TIME_SET_FOCUS, [this]{ setFocusDefered(); } );
-}
+//template<>
+//void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
+//{
+//    constexpr int TIME_SET_FOCUS = 30;
+
+//    selectChar<SelectMode::NONE>(code);
+//    preloadVisibleFonts();
+//    ui->tableChars->update();
+//    QApplication::processEvents();
+//    QTimer::singleShot(TIME_SET_FOCUS, [this]{ setFocusDefered(); } );
+//}
 
 
 template<>
@@ -1788,15 +1790,38 @@ void FmMain::selectChar<SelectMode::INSTANT>(char32_t code)
 }
 
 
-void FmMain::on_comboBlock_currentIndexChanged(int index)
+void FmMain::comboDroppedDown()
+{
+    pullUpDetector.timer.invalidate();
+    pullUpDetector.isCocked = true;
+}
+
+
+void FmMain::comboPulledUp()
+{
+    if (pullUpDetector.isCocked) {
+        pullUpDetector.isCocked = false;
+        pullUpDetector.timer.start();
+    }
+}
+
+
+void FmMain::comboIndexChanged(int index)
 {
     if (index < 0)
         return;
     auto oldChar = model.charAt(ui->tableChars->currentIndex());
     auto oldBlock = uc::blockOf(oldChar.code);
-    if (oldBlock->index() != static_cast<size_t>(index) && !ui->comboBlock->isDown()) {
+    if (oldBlock->index() != static_cast<size_t>(index)) {
         auto& newBlock = uc::blocks[index];
-        selectChar<SelectMode::DEFERED>(newBlock.firstAllocated->subj);
+        bool detected = pullUpDetector.detect();
+        selectChar<SelectMode::NONE>(newBlock.firstAllocated->subj);
+        if (detected) {
+            ui->tableChars->setFocus();
+            // Unglitch combobox: lingering highlight was HOVER,
+            // not focus.
+            ui->comboBlock->setAttribute(Qt::WA_UnderMouse, false);
+        }
     }
 }
 

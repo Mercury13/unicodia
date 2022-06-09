@@ -25,6 +25,7 @@
 
 class WideComboBox : public QComboBox
 {
+    Q_OBJECT
 private:
     using Super = QComboBox;
     bool fIsDown = false;
@@ -32,6 +33,9 @@ protected:
     void resizeView();
     void resizeEvent(QResizeEvent* ev) override;
     void focusInEvent(QFocusEvent* ev) override;
+signals:
+    void droppedDown();
+    void pulledUp();
 public:
     explicit WideComboBox(QWidget* aParent) : Super(aParent) {}
 

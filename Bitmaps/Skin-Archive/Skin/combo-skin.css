@@ -1,0 +1,15 @@
+QComboBox {
+    border: 1px solid palette(dark);
+    background-color: palette(midlight);
+    border-radius: 1.5px;
+}
+QComboBox::drop-down {
+  border: 0;
+}
+QComboBox:down-arrow {
+    image: url(':/Skin/dropdown.png');
+}
+QComboBox:focus, QComboBox:on {
+  background-color: #CCE8FF;
+  border-color: RoyalBlue;
+}

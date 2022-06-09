@@ -10,6 +10,7 @@
 #include <QMainWindow>
 #include <QAbstractTableModel>
 #include <QStyledItemDelegate>
+#include <QElapsedTimer>
 
 // My libs
 #include "u_Vector.h"
@@ -276,6 +277,14 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
+    struct PullUpDetector {
+        bool isCocked = false;
+        QElapsedTimer timer;
+
+        bool detect() const
+            { return !isCocked && timer.isValid()
+                    && static_cast<quint64>(timer.elapsed()) <= 100; }
+    } pullUpDetector;
 
     void initAbout();
     void showCp(MaybeChar ch);
@@ -294,7 +303,6 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
-    void setFocusDefered();
 
     // mywiki::Gui
     void popupAtAbs(
@@ -320,7 +328,9 @@ private slots:
     void searchEnterPressed(int index);
     void changeLanguage();
     void reloadLanguage();
-    void on_comboBlock_currentIndexChanged(int index);
+    void comboIndexChanged(int index);
+    void comboDroppedDown();
+    void comboPulledUp();
 };
 
 

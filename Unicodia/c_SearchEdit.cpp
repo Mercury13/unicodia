@@ -24,6 +24,7 @@ void WideComboBox::showPopup()
     fIsDown = true;
     Super::showPopup();
     resizeView();
+    emit droppedDown();
 }
 
 
@@ -31,6 +32,7 @@ void WideComboBox::hidePopup()
 {
     Super::hidePopup();
     fIsDown = false;
+    emit pulledUp();
 }
 
 
