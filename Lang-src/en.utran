@@ -1251,7 +1251,7 @@
    <group id="1C00">
     <text id="Name">
      <orig>Лепча</orig>
-     <transl>Lepcha</transl>
+     <transl>Lepcha (Róng)</transl>
     </text>
    </group>
    <group id="1C50">
@@ -4378,34 +4378,43 @@
    <group id="Laoo">
     <text id="Name">
      <orig>Лаосская</orig>
+     <transl>Lao</transl>
     </text>
     <text id="Lang">
-     <orig>лаосский</orig>
+     <orig>лаосский ''(в Лаосе родной для 3{{_}}млн и второй{{-}}для 4{{_}}млн, ещё 23{{_}}млн в Таиланде пользуются [[ps:Thai|тайским письмом]])''</orig>
+     <transl>Lao ''(native for 3M and second for 4M in Laos, 23M more in Thailand use [[ps:Thai|Thai script]])''</transl>
     </text>
     <text id="Text">
      <orig>Лаосский алфавит стандартизирован в XIV веке. Как и [[ps:Thai|тайский]], происходит из [[ps:Khmr|кхмерского]]. После реформы, сделанной коммунистами в 1960‑е, исчезли гласная по умолчанию и знак [[pt:virama|вирамы]], и у лаосского остался последний признак абугиды{{-}}сложные правила записи гласных: {{sm|ເກົ້າ}} ''kao'' «девять». Лаосский язык тоновый, и в этом слове мы видим над согласной {{sm|ກ}} как огласовку из трёх (!) символов , так и тон. По историческим причинам многие огласовки{{-}}обычные [[pt:spacing|протяжённые]] символы.<br /><br />Между словами не{{_}}ставятся пробелы. Как и в тайском, буквы называются подходящими словами: {{sm|ບ}} называется «бо-бэ» или просто «бэ» (козёл). Буква {{sm|ຣ}} (r) стала немой или преобразовалась в «л», и потому исчезла из орфографии, оставшись только для записи иностранных имён.<br /><br />В буддизме используется язык пали как священный, для записи этого языка используются несколько дополнительных букв и та самая вирама.<br /><br />В Юникоде для пустого места над меткой принят пунктирный кружок; лаосцы традиционно используют косой крест, в Юникод не{{_}}попавший. Иногда для этого используют [[ps:Latn|латинскую]] «x».</orig>
+     <transl>Lao script was standardized in 14th century. Like [[ps:Thai|Thai]], originated from [[ps:Khmr|Khmer]]. After reform conducted by communists in 1960 inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules of writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. Lao language is tonal, and we see here both vowel mark of three (!) characters and tone above {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] charcters for historical reasons.<br /><br />There are no spaces between words. Like in Thai, letters are [[pt:acrophonic|acrophonic]], that is named with suitable words: {{sm|ບ}} is “bo-be” or just “be” (goat). Letter {{sm|ຣ}} (r) became silent or turned to “L” and disappeared from orthography, remaining for foreign names only.</transl>
     </text>
    </group>
    <group id="Latn">
     <text id="Name">
      <orig>Латиница</orig>
+     <transl>Latin</transl>
     </text>
     <text id="Lang">
      <orig>большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; вьетнамский, карельский, курдский, эсперанто</orig>
+     <transl>most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</transl>
     </text>
     <text id="Text">
      <orig>Латиница{{-}}[[ps:Grek|древнегреческое]] письмо, адаптированное около 700{{bc}} для записи [[ps:Ital|этрусских]] говоров, впоследствии ставших латинском языком.<br /><br />В средние века к латинице добавились буквы J, V и W. [[pt:minuscule|Минускульное]] письмо, изобретённое для экономии дорогого пергамента, превратилось в строчные буквы.<br /><br />Латинский язык давно мёртв, но широкая территория Римской империи, миссионерская деятельность Папского престола и Великие географические открытия, совершённые западным миром, сделали латиницу основным алфавитом мира. Латиница используется в математике, медицине, фонетике, программировании.<br /><br />С развалом СССР на латиницу перешли Азербайджан, Молдавия, Туркмения, Узбекистан.</orig>
+     <transl>Latin alphabet is [[ps:Grek|Ancient Greek]] script adapted about 700{{_}}BC for writing [[ps:Ital|Etruscan]] languages that later became Latin.<br /><br />In Middle Ages letters J, V and W were added to Latin. [[pt:minuscule|Minuscule]] writing invented for economy of expensive parchment turned to small letters.<br /><br />Latin language is dead long ago, but wide territory of Roman Empire, missionaire work of Vatican and Age of Discovery mostly done by Western world turned Latin to world’s alphabet #1. Latin is used in mathematics, medicine, phonetics, programming.<br /><br />Azerbaijan, Moldova, Turkmenistan and Uzbekistan adopted Latin with fall of the USSR.</transl>
     </text>
    </group>
    <group id="Lepc">
     <text id="Name">
      <orig>Лепча (ронг)</orig>
+     <transl>Lepcha (Róng)</transl>
     </text>
     <text id="Lang">
      <orig>лепча ''(Индия, Бутан, Непал, 65 тыс. на 2011)''</orig>
+     <transl>Lepcha ''(India, Bhutan, Nepal, 65k as of 2011)''</transl>
     </text>
     <text id="Text">
-     <orig>Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, потому буквы напоминают тибетские, повёрнутые на 90°. Традиционно считается, что разработали письмо буддийские проповедники около 1700, а внедрил Чакдор Намгьял, князь Сиккима (правил 1700–1717). Первый печатный текст{{-}}Евангелие от Матфея, 1845.<br /><br />Гласная по умолчанию «а».Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. [[pt:virama|Вирамы]] нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. Между словами нет пробелов.</orig>
+     <orig>Произошла из [[ps:Tibt|тибетского]], изначально писалась сверху вниз, но потом стали писать горизонтально, потому буквы напоминают тибетские, повёрнутые на 90°. Традиционно считается, что разработали письмо буддийские проповедники около 1700, а внедрил Чакдор Намгьял, князь Сиккима (правил 1700–1717). Первый печатный текст{{-}}Евангелие от Матфея, 1845.<br /><br />Гласная по умолчанию «а». Начальные гласные не{{_}}имеют особую форму, а пишутся с «нулевой» согласной буквой, похожей на амперсанд. [[pt:virama|Вирамы]] нет. Вместо этого, чтобы получить слог из трёх звуков, добавляют сначала огласовку, а затем конечный согласный. Между словами нет пробелов.</orig>
+     <transl>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaires, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.<br /><br />Inherent vowel is “a”. Initial vowels do not have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead, to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</transl>
     </text>
    </group>
    <group id="Limb">
