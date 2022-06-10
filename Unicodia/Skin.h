@@ -14,6 +14,7 @@
 #define CNAME_LINK_OUTSIDE "#1565C0"        // Google blue 800
 #define CNAME_U_COPY "#808080"
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
+#define CNAME_TRANSCRIPTION "Goldenrod"
 
 
 constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
@@ -42,7 +43,8 @@ constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
         ".popup { " STYLE_POPUP " } "                                           \
         ".deprecated { " STYLE_DEPRECATED " } "                                 \
         ".inet { " STYLE_INET " } "                                             \
-        ".missing { color: " CNAME_LINK_DEPRECATED "; } "
+        ".missing { color: " CNAME_LINK_DEPRECATED "; } "                       \
+        ".tr { color: " CNAME_TRANSCRIPTION "; }"
 
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"

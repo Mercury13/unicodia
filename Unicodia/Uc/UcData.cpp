@@ -192,7 +192,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
       { FNAME_FUNKY },                                                          // …2
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
-    { "NotoSansLimbu-Regular.ttf" },                                            // Limbu
+    { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
     { "NotoSansLinearB-Regular.ttf" },                                          // Linear B
     { "NotoSansLisu-Regular.ttf" },                                             // Lisu
