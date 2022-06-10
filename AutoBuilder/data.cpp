@@ -1199,6 +1199,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
     { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
     { { "TAG"sv }, PrefixAction::NEXT_CAP },      // Tags
+    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },      // Clock face XXX
 };
 
 
