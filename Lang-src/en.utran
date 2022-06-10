@@ -2877,7 +2877,8 @@
      <transl>Small kana extension</transl>
     </text>
     <text id="Text">
-     <orig>Маленькие символы катаканы используются для передачи звуков, отсутствующих в японском. Так, маленькое {{sm|ケヰ}} передаёт огублённое «кʷи». Также добавлены соответствующие символы хираганы.</orig>
+     <orig>Маленькие символы катаканы используются для передачи звуков, отсутствующих в японском. Так, маленькое {{sm|ケヰ}} передаёт огублённое {{t|кʷи}}. Также добавлены соответствующие символы хираганы.</orig>
+     <transl>Small Katakana characters convey phonemes missing in Japanese. For example, small {{sm|ケヰ}} is for labialized {{t|kʷi}}. Also corresponding characters of Hiragana are added.</transl>
     </text>
    </group>
    <group id="1B170">
