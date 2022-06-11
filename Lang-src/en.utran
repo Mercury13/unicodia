@@ -4825,7 +4825,7 @@
     </text>
     <text id="Lang">
      <orig>один из диалектов сянского ''(Хунань, Китай)''</orig>
-     <transl>One of Xiang dialects ''(Hunan, China)''</transl>
+     <transl>one of Xiang dialects ''(Hunan, China)''</transl>
     </text>
     <text id="Note">
      <orig>900 (предположительно), 1300 (доказано)</orig>
@@ -4839,12 +4839,15 @@
    <group id="Ogam">
     <text id="Name">
      <orig>Огамическая</orig>
+     <transl>Ogham</transl>
     </text>
     <text id="Lang">
      <orig>древнеирландский, пиктский</orig>
+     <transl>Old Irish, Pictish</transl>
     </text>
     <text id="Text">
      <orig>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X{{_}}века. Заодно в ходу была [[ps:Latn|латиница]], потому есть мнение, что это тайнопись. Письменность приспособлена под зарубки на палках и досках. Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</orig>
+     <transl>Ogham alphabet was used by ancient Celts and Picts of Ireland and Britain in 4–10th centuries. In parallel [[ps:Latn|Latin]] was in use, so there’s an opinion that it’s steganography (concealed writing). The script is designed for notches on planks and sticks. Inscriptions start with {{sm|᚛}} and end with {{sm|᚜}}.</transl>
     </text>
    </group>
    <group id="Olck">
