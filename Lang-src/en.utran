@@ -3472,7 +3472,7 @@
     </text>
     <text id="Text">
      <orig>Алфавит связан с зороастризмом и его священным текстом{{-}}Авестой. Около 400 в сасанидской Персии для кодификации Авесты создали специальный алфавит на основе книжного пехлеви (письма среднеперсидских рукописей). К тому времени зороастризму было много веков и язык был малопонятен, а для действенности молитв важно точное повторение{{-}}так что алфавит снабдили настоящими гласными, позаимствованными из других письменностей.<br /><br />При арабах зороастрийцы стали переселяться в Индию, а с XII{{_}}века писали на авестийском местным письмом, традиционно [[ps:Gujr|гуджарати]]. Самый известный из таких зороастрийцев{{-}}Фредди Меркьюри (правда, его родителей судьба занесла аж на Занзибар).<br /><br />В 2000 древние письменности разделили на пять категорий: A (используемые{{-}}[[ps:Copt|коптский]], [[ps:Runr|руны]]), B1 (изученные [[pt:character|кодируемые]]{{-}}[[ps:Xpeo|персидская клинопись]]), B2 (изученные некодируемые{{-}}[[ps:Egyp|египетские иероглифы]]), C1 (несистематизируемые, запросы от любителей{{-}}[[ps:Xsux|шумерская клинопись]]), и C2 (малоизученные, запросы от любителей{{-}}[[pk:101D0|Фестский диск]]). Авестийский попал в самую важную категорию A, что дало ему шанс на место в [[pt:bmp|базовой плоскости]]. Но победило другое мнение{{-}}закодировать авестийский и [[ps:Phlp|пехлеви]] рядом, в дополнительной. Для незакодированного книжного пехлеви в Юникоде оставлена дыра.</orig>
-     <transl>Aplhabet is related to Zoroastrianism and its holy text Avesta. About 400 in Sasanid Persia special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created for codifying of Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.<br /><br />Under Arabs Zoroastrians started to move to India, and since 12th century wrote in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar).<br /><br />In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for place in [[pt:bmp|Basic Plane]]. But other opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in supplementary plane. A hole was left for unencoded Book Pahlavi.</transl>
+     <transl>Aplhabet is related to Zoroastrianism and its holy text Avesta. About 400 special alphabet based on Book Pahlavi (script on Middle-Persian manuscripts) was created in Sasanid Persia for codifying of Avesta. By that time Zoroastrianism was many centuries old and language was little-understood, and prayers should be precisely repeated to be effective{{-}}so the alphabet was equipped with true vowels borrowed from neighbouring scripts.<br /><br />Under Arabs Zoroastrians started to move to India, and since 12th century wrote in Avestan with local abugidas, traditionally [[ps:Gujr|Gujarati]]. The most famous of those Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar).<br /><br />In 2000 ancient scripts were divided into five categories: A (in modern use{{-}}[[ps:Copt|Coptic]], [[ps:Runr|runes]]), B1 (studied [[pt:character|encodeable]]{{-}}[[ps:Xpeo|Persian cuneiform]]), B2 (studied unencodeable{{-}}[[ps:Egyp|Egyptian hierogyphs]]), C1 (non-systematic, requests from amateurs{{-}}[[ps:Xsux|Sumerian cuneiform]]), and C2 (unexplored, requests from amateurs{{-}}[[pk:101D0|Phaistos Dics]]). Avestan fell into the most important category A, and that gave it a chance for place in [[pt:bmp|Basic Plane]]. But other opinion prevailed: encode Avestan and [[ps:Phlp|Pahlavi]] next to each other, in supplementary plane. A hole was left for unencoded Book Pahlavi.</transl>
     </text>
    </group>
    <group id="Bali">
@@ -5004,8 +5004,8 @@
      <transl>Middle Iranian languages</transl>
     </text>
     <text id="Text">
-     <orig>Язык иранских надписей на глине, самый ранний вариант письма пехлеви. Использовался до V{{_}}века, начала Сасанидской империи.</orig>
-     <transl>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, dawn of Sasanid Empire.</transl>
+     <orig>Язык иранских надписей на глине, самый ранний вариант письма пехлеви. Использовался до V{{_}}века, расцвета Сасанидской империи.</orig>
+     <transl>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, heyday of Sasanid Empire.</transl>
     </text>
    </group>
    <group id="Phlp">
@@ -5043,21 +5043,25 @@
     </text>
     <text id="Lang">
      <orig>языки разноцветных и сычуаньских хмонгов (=мяо), лису, и</orig>
+     <transl>languages of Large Flowery and Szechuan Hmongs (=Miao), Lisu, Yi</transl>
     </text>
     <text id="Text">
      <orig>Придумана в 1936 проповедником методистской церкви Сэмюэлем Поллардом на основе [[ps:Cans|канадской слоговой]]. Первая попытка закодировать мяо была в 1997. Из-за сложной тоновой структуры хмонгских языков только в 2010 удалось довести мяо до кодировки.<br /><br />Схема кодирования такая:<br />: {{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</orig>
-     <known-orig>Придумана в 1936 проповедником методистской церкви Сэмюэлем Поллардом на основе [[ps:Cans|канадской слоговой]]. Первая попытка закодировать мяо была в 1997. Из-за сложной тоновой структуры хмонгских языков только в 2010 удалось довести мяо до кодировки.&lt;p&gt;Схема кодирования такая:&lt;br&gt;{{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</known-orig>
+     <transl>Invented in 1936 by Methodist missionary Samuel Pollard. Based on [[ps:Cans|Canadian syllabary]]. The first attempt to encode was in 1997. Because of complex tonal structure of Hmong languages, only in 2010 the encoding was ready.<br /><br />Encoding scheme is<br />: {{sm|𖼀}} + {{sm|◌𖽝}} +{{sm|&amp;nbsp;𖾑}} = {{sm|𖼀𖽝𖾑}}</transl>
     </text>
    </group>
    <group id="Prti">
     <text id="Name">
      <orig>Парфянские надписи</orig>
+     <transl>Inscriptional Parthian</transl>
     </text>
     <text id="Lang">
      <orig>парфянский</orig>
+     <transl>Parthian</transl>
     </text>
     <text id="Text">
      <orig>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому. Содержит семь [[pt:ligature|лигатур]], которые не{{_}}удалось извлечь из имеющегося шрифта.</orig>
+     <transl>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian. Contains seven ligatures missing in this font.</transl>
     </text>
    </group>
    <group id="Rjng">
