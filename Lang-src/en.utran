@@ -1769,7 +1769,7 @@
     </text>
     <text id="Text">
      <orig>[[ps:Kana|Катакана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах.<br /><br />Также несколько символов, которым место в других блоках: сокращения единиц измерения, цифры 21…50 в кругах, знаки ограничения скорости (10…80 в круге и квадрате).<br /><br />В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.</orig>
-     <known-orig>[[ps:Kana|Катакана]], [[ps:Hang|хангыль]] и [[ps:Hani|иероглифы]] в скобках и кругах.&lt;p&gt;Также несколько символов, которым место в других блоках: сокращения единиц измерения, цифры 21…50 в кругах, знаки ограничения скорости (10…80 в круге и квадрате).&lt;p&gt;В 2019 добавился знак ''Рэйва''{{-}}время правления нового японского императора Нарухито.</known-orig>
+     <transl>[[ps:Kana|Katakana]], [[ps:Hang|Hangul]] and [[ps:Hani|ideographs]] enclosed in brackets and circles.<br /><br />Also several characters that should have been in other blocks: abbreviations of measuring units, digits 21 to 50 in circles, speed limit signs (10…80 in circles and squares).<br /><br />In 2019 Reiwa sign was added{{-}}ideograph for reign of new Emperor Naruhito.</transl>
     </text>
    </group>
    <group id="3300">
@@ -1779,6 +1779,7 @@
     </text>
     <text id="Text">
      <orig>Символы для обеспечения совместимости с кодировками [[pt:cjk|ККЯ]]. Различные японские сокращения (квартира, альфа, ампер, ар…), телеграфные символы, эры правления японских императоров, вписывающиеся в квадраты ККЯ единицы измерения.</orig>
+     <transl>Characters for compatibility with [[pt:cjk|CJK]] encodings. Various Japanese abbreviations (apartment, alpha, ampere, are=100{{_}}m²…), telegraph symbols, eras of Japanese emperors’ reign, measurement units fitting into CJK squares.</transl>
     </text>
    </group>
    <group id="3400">
