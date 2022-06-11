@@ -4853,12 +4853,15 @@
    <group id="Olck">
     <text id="Name">
      <orig>Ол-чики</orig>
+     <transl>Ol Chiki</transl>
     </text>
     <text id="Lang">
-     <orig>сантальский ''(Индия)''</orig>
+     <orig>сантальский ''(Индия, 7,6 млн на 2011)''</orig>
+     <transl>Santali ''(India, 7.6M as of 2011)''</transl>
     </text>
     <text id="Text">
      <orig>Алфавит придумал в 1925 Рагхунатх Мурму. До этого пользовались [[ps:Beng|бенгальской]] письменностью, [[ps:Orya|орией]] или [[ps:Latn|латиницей]], хотя большинство населения было неграмотным. Сантальский язык австроазиатский, а не{{_}}индоевропейский, и алфавиты, основанные на брахми, подходили плохо. Так, у санталов звонкие и глухие чередуются при словоизменении, потому различать их бессмысленно.<br /><br />Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: {{sm|ᱚ}}{{_}}огонь, {{sm|ᱛ}}{{_}}земля, {{sm|ᱜ}}{{_}}отрыжка.</orig>
+     <transl>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.<br /><br />Ol Chiki consists of 30 letters, names correspond to look. First three: {{sm|ᱚ}}{{_}}fire, {{sm|ᱛ}}{{_}}earth, {{sm|ᱜ}}{{_}}vomit.</transl>
     </text>
    </group>
    <group id="Orkh">
@@ -4906,71 +4909,89 @@
    <group id="Osma">
     <text id="Name">
      <orig>Османья (сомалийская)</orig>
+     <transl>Osmanya (Somalian)</transl>
     </text>
     <text id="Lang">
      <orig>сомалийский</orig>
+     <transl>Somalian</transl>
     </text>
     <text id="Text">
      <orig>Придуман ≈1920 Османом Юсуфом Кенадидом, братом султана Али Юсуфа Кенадида. Письменность получила определённое распространение в Сомали, но конкуренция с новоприбывшей [[ps:Latn|латиницей]] и традиционным [[ps:Arab|арабским]] была серьёзной.<br /><br />В 1961 османья становится официальным письмом, наряду с латиницей. В 1972 диктатор Мохаммед Барре запретил османью, в первую очередь из-за распространившихся пишущих машинок.<br /><br />Из-за нестабильной обстановки в Сомали нет современных данных.</orig>
+     <transl>Invented about 1920 by Osman Yusuf Kenadid, brother of Sultan Ali Yusuf Kenadid. The script got some acceptance in Somalia, though competition with newly-imported [[ps:Latn|Latin]] and traditional [[ps:Arab|Arabic]] was great.<br /><br />In 1961 Osmanya became the official script together with Latin. In 1972 dictator Mohammed Barre banned Osmanya, firstly because of spread of typewriters.<br /><br />Because of unstable situation in Somalia, there is no modern data.</transl>
     </text>
    </group>
    <group id="Ougr">
     <text id="Name">
      <orig>Староуйгурская</orig>
+     <transl>Old Uyghur</transl>
     </text>
     <text id="Lang">
      <orig>староуйгурский, восточноуйгурский</orig>
+     <transl>Old Uyghur, East Uyghur</transl>
     </text>
     <text id="Text">
      <orig>Промежуточная стадия между [[ps:Sogd|согдийским]] и [[ps:Mong|монгольским]] письмом. Согдийцы писали справа налево, сильно заваливая текст влево{{-}}отсюда письмо слева направо по столбцам. Промежуточным оказалось и по типу{{-}}часть гласных получили свои буквы. Письмо использовалось в современном Синьцзян-Уйгурском округе до XVIII{{_}}века.<br /><br />Современные исследователи также часто пишут по-уйгурски справа налево{{-}}отсюда принцип кодирования Юникодом.</orig>
+     <transl>Intermediate stage between [[ps:Sogd|Sogdian]] and [[ps:Mong|Mongolian]] script. Sogdians wrote right to left greatly turning text to the left, hence writing left to right in columns. It also became intermediate in type, part of vowels got their letters. The script was used in Xinjiang until 18th century.<br /><br />Modern scholars alro write Uyghur right to left, hence encoding model.</transl>
     </text>
    </group>
    <group id="Palm">
     <text id="Name">
      <orig>Пальмирская</orig>
+     <transl>Palmyrene</transl>
     </text>
     <text id="Lang">
      <orig>пальмирский арамейский</orig>
+     <transl>Palmyrene Aramaic</transl>
     </text>
     <text id="Text">
      <orig>Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). Происходит из [[ps:Armi|арамейского]]. В алфавите 22 согласных буквы, одна в двух вариантах. Пробелов и знаков препинания нет. Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево. Расшифрована в 1754.</orig>
+     <transl>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left. Deciphered in 1974.</transl>
     </text>
    </group>
    <group id="Pauc">
     <text id="Name">
      <orig>Письмо По Чин Хо</orig>
+     <transl>Pau Cin Hau</transl>
     </text>
     <text id="Lang">
      <orig>тедим (=зоми) и другие северные куки-чинские языки ''(Мьянма)''</orig>
+     <transl>Tedim (=Zomi) and other northern Kuki-Chin languages ''(Myanmar)''</transl>
     </text>
     <text id="Note">
      <orig>1902 (первое иероглифическое), 1931 (алфавитное)</orig>
+     <transl>1902 (initial ideographic), 1931 (alphabetical)</transl>
     </text>
     <text id="Text">
      <orig>Письмо изобретено По Чин Хо (1859–1948), основателем новой религии из народа тедим. Религия называлась ''Laipian''{{-}}«религия письма». Сначала письмо было иероглифическим, потом алфавитным. В письме есть согласные R, F, Ch и несколько тонов, отсутствующие в тедиме{{-}}так что По Чин Хо намеревался сделать письмо для всех куки-чинских языков.<br /><br />Впоследствии письмо перехватили христиане, и оно поныне ограниченно используется народом тедим (340{{_}}тыс. на 1990) вместе с [[ps:Latn|латиницей]]. Родственные народы пишут только латиницей.</orig>
+     <transl>The script was invented by Tedim man Pau Cin Hau (1859–1948), founder of a new religion. The religion was called ''Laipian'', “script religion”. First the script was ideographic, then alphabetical. The script has consonants R, F, Ch and some tones missing in Tedim, so Pau Cin Hau intended to make a script for all Kuki-Chin languages.<br /><br />Later the script was retaken by Christians, and it is still in limited use by Tedim (340k as of 1990), together with [[ps:Latn|Latin]]. Related languages are written exclusively with Latin.</transl>
     </text>
    </group>
    <group id="Perm">
     <text id="Name">
      <orig>Древнепермская (коми-зырянская, анбур)</orig>
+     <transl>Old Permic (Komi Zyryan, Anbur)</transl>
     </text>
     <text id="Lang">
      <orig>коми-зырянский, коми-пермяцкий</orig>
+     <transl>Komi Zyryan, Komi Permyak</transl>
     </text>
     <text id="Text">
      <orig>Письменность предложена миссионером Стефаном Пермским в 1372 и представляет собой вариацию на тему [[ps:Cyrl|кириллицы]] с вкраплением [[ps:Grek|греческого]] и местных рун. Названа по первым двум буквам, «ан» и «бур». Иногда использовалась как тайнопись для тогдашнего русского. В XVII{{_}}веке окончательно вытеснена кириллицей.<br /><br />Анбур{{-}}важный источник по финно-угорским языкам. Древнее только [[ps:Hung|венгерские руны]].</orig>
+     <transl>The script was proposed in 1372 by missionaire Stephen of Perm, and is a variation of [[ps:Cyrl|Cyrillic]], with insertions of [[ps:Grek|Greek]] and local runes. Named for the first two letters, An and Bur. Sometimes it was used as a cipher for Russian. In 17th century was finally supplanted with Cyrillic.<br /><br />Anbur is an important source for Finno-Ugric languages. Only [[ps:Hung|Hungarian runes]] are more ancient.</transl>
     </text>
    </group>
    <group id="Phag">
     <text id="Name">
      <orig>Монгольское квадратное письмо (Пагба-ламы)</orig>
+     <transl>Phags Pa (Mongolian square)</transl>
     </text>
     <text id="Lang">
      <orig>китайский, монгольский, тибетский, санскрит, уйгурский</orig>
+     <transl>Chinese, Mongolian, Tibetan, Sanskrit, Uyghur</transl>
     </text>
     <text id="Text">
      <orig>[[ps:Mong|Монгольское]] письмо использовало [[ps:Ougr|уйгурский]] алфавит с минимальными изменениями. С захватом монголами Китая у императора Хубилая возникли проблемы с коммуникацией между двором и многонациональным народом, и эту задачу выполнил Пагба-лама (1235–1280), наставник Хубилая. Письмо внедрялось туго, уйгурский алфавит запрещали как минимум дважды. В 1368 году китайцы выбили монголов, письмо быстро забыли. Сейчас изредка употребляется в печатях монастырей Тибета и Бутана.<br /><br />В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам. Буквы пишутся одна за другой, как в обычной алфавитной записи. Буквы в слоге соединены, между слогами узкий пробел. Гласная {{t|а}} подразумевается по умолчанию и пишется, если она начальная.<br />: {{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol<br /><br />Существовали три стиля: книжный (основной), с печатей (имитировал старую китайскую каллиграфию, использовавшуюся в печатях) и тибетский (похож на [[ps:Marc|марчхен]]).</orig>
-     <known-orig>[[ps:Mong|Монгольское]] письмо использовало [[ps:Ougr|уйгурский]] алфавит с минимальными изменениями. С захватом монголами Китая у императора Хубилая возникли проблемы с коммуникацией между двором и многонациональным народом, и эту задачу выполнил Пагба-лама (1235–1280), наставник Хубилая. Письмо внедрялось туго, уйгурский алфавит запрещали как минимум дважды. В 1368 году китайцы выбили монголов, письмо быстро забыли. Сейчас изредка употребляется в печатях монастырей Тибета и Бутана.&lt;p&gt;В шрифтах письмо обычно рисуется повёрнутым на 90° влево, чтобы писать по строкам. Буквы пишутся одна за другой, как в обычной алфавитной записи. Буквы в слоге соединены, между слогами узкий пробел. Гласная «а» подразумевается по умолчанию и пишется, если она начальная.&lt;br&gt;{{__}}{{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol&lt;p&gt;Существовали три стиля: книжный (основной), с печатей (имитировал старую китайскую каллиграфию, использовавшуюся в печатях) и тибетский (похож на [[ps:Marc|марчхен]]).</known-orig>
+     <transl>[[ps:Mong|Mongolians]] used [[ps:Ougr|Uyghur]] alphabet with minor changes. When Mongols conquered China, Kublai Khan got a problem of communication between court and multinational people, and the task was solved by Phagpa (1235–1280), Kublai’s guru. The script was introduced with great efforts, Uyghur alphabet was banned at least twice. In 1368 Chinese overthrew Mongols, the script was quickly forgotten. Today it’s used sometimes in seals of monasteries of Tibet and Bhutan.<br /><br />In fonts it’s usually drawn turned 90° to the left to writi in lines. Letter are written one after other, like in usual alphabetical script. Letters in a syllable are joined together, there’s a narrow space between words. Vowel {{t|a}} is inherent and written only if it’s initial.<br />: {{sm|ꡏꡡꡃ ꡣꡡꡙ}} = mongxol<br /><br />Thee styles existed: book (main), seal (mimicked old Chinese calligraphy that was used in seals), and Tibetan (resembles [[ps:Marc|Marchen]]).</transl>
     </text>
    </group>
    <group id="Phli">
