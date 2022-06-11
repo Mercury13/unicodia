@@ -4997,40 +4997,49 @@
    <group id="Phli">
     <text id="Name">
      <orig>Пехлевийские надписи</orig>
+     <transl>Inscriptional Pahlavi</transl>
     </text>
     <text id="Lang">
      <orig>иранские языки</orig>
+     <transl>Middle Iranian languages</transl>
     </text>
     <text id="Text">
      <orig>Язык иранских надписей на глине, самый ранний вариант письма пехлеви. Использовался до V{{_}}века, начала Сасанидской империи.</orig>
+     <transl>Language of Iranian inscriptions in clay, the earliest variant of Pahlavi script. Was used until 5th century, dawn of Sasanid Empire.</transl>
     </text>
    </group>
    <group id="Phlp">
     <text id="Name">
      <orig>Псалтырское пехлеви</orig>
+     <transl>Psalter Pahlavi</transl>
     </text>
     <text id="Lang">
      <orig>среднеперсидский</orig>
+     <transl>Middle Persian</transl>
     </text>
     <text id="Text">
      <orig>Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. Есть лишь два источника: 12-страничный фрагмент Псалтыря VI в., найденный в Синцзян-Уйгурском округе, и крест из Афганистана. Знаки параграфов писались наполовину красным, наполовину чёрным.<br /><br />''Книжное пехлеви'', последняя форма письма, так и не{{_}}вошло в Юникод, для него оставлена дыра.</orig>
+     <transl>Very cursive script identified as intermediate form of Pahlavi. There are only two specimen: 12-page fragment of 6th century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.<br /><br />''Book Pahlavi'', the final form of script, still failed to enter Unicode, a hole was left for it.</transl>
     </text>
    </group>
    <group id="Phnx">
     <text id="Name">
      <orig>Финикийская</orig>
+     <transl>Phoenician</transl>
     </text>
     <text id="Lang">
      <orig>финикийский и другие семитские (моавитский, филистимский…), пунический</orig>
+     <transl>Phoenician and other Semitic (Moabite, Philistine…), Punic</transl>
     </text>
     <text id="Text">
      <orig>Названия букв [[pt:acrophonic|акрофонические]]: алеф=бык, бет=дом, гимел=верблюд…<br /><br />Хоть не{{_}}финикийский, а [[ps:Ugar|угаритский]] алфавит считается первым расшифрованным консонантным и первым известным алфавитным порядком, важность финикийского письма трудно переоценить: финикийцы были хорошими мореплавателями и разнесли азбуку по древнему миру.<br /><br />Из финикийской письменности развились:<br />* малоазийские алфавиты (например, [[ps:Lyci|ликийский]]{{-}}исчезли);<br />* древнеливийская (предок [[ps:Tfng|тифинага]]);<br />* палеоиспанская, или иберская (исчезла);<br />* [[ps:Armi|арамейская]] (предок [[ps:Syrc|сирийской]], [[ps:Arab|арабской]] и, по общепринятой гипотезе, [[ps:Brah|брахми]]);<br />* [[ps:Grek|греческая]] (предок [[ps:Latn|латиницы]] и [[ps:Cyrl|кириллицы]]).<br /><br />Таким образом, большая часть грамотного мира обязана финикийцам.<br /><br />Исчезла около 150{{bc}} с разрушением Карфагена; в самой Финикии уже давно ходили письменности-потомки.</orig>
-     <known-orig>Названия букв [[pt:acrophonic|акрофонические]]: алеф=бык, бет=дом, гимел=верблюд…&lt;p&gt;Хоть не{{_}}финикийский, а [[ps:Ugar|угаритский]] алфавит считается первым расшифрованным консонантным и первым известным алфавитным порядком, важность финикийского письма трудно переоценить: финикийцы были хорошими мореплавателями и разнесли азбуку по древнему миру.&lt;p&gt;Из финикийской письменности развились:&lt;br&gt;• малоазийские алфавиты (например, [[ps:Lyci|ликийский]]{{-}}исчезли);&lt;br&gt;• древнеливийская (предок [[ps:Tfng|тифинага]]);&lt;br&gt;• палеоиспанская, или иберская (исчезла);&lt;br&gt;• [[ps:Armi|арамейская]] (предок [[ps:Syrc|сирийской]], [[ps:Arab|арабской]] и, по общепринятой гипотезе, [[ps:Brah|брахми]]);&lt;br&gt;• [[ps:Grek|греческая]] (предок [[ps:Latn|латиницы]] и [[ps:Cyrl|кириллицы]]).&lt;p&gt;Таким образом, большая часть грамотного мира обязана финикийцам.&lt;p&gt;Исчезла около 150{{bc}} с разрушением Карфагена; в самой Финикии уже давно ходили письменности-потомки.</known-orig>
+     <transl>Letter names are [[pt:acrophonic|acrophonic]]: Alef=ox, Bet=house, Gaml=camel…<br /><br />Though [[ps:Ugar|Ugaritic]] rather than Phoenician is the first deciphered consonant script and the first well-known alphabetic order, importance of Phoenician script is hard to over-estimate: Phoenicians were good sailors and spread the script across all ancient world.<br /><br />Scripts emerged from Phoenician:<br />* Anatolian alphabets (for example, [[ps:Lyci|Lycian]]{{-}}died);<br />* Old Lybian (ancestor of [[ps:Tfng|Tifinagh]]);<br />* Paleohispanic, or Iberian (died);<br />* [[ps:Armi|Aramaic]] (ancestor of [[ps:Syrc|Syriac]], [[ps:Arab|Arabic]] and, by widespread hypothesis, [[ps:Brah|Brahmi]]);<br />* [[ps:Grek|Greek]] (ancestor of [[ps:Latn|Latin]] and [[ps:Cyrl|Cyrillic]]).<br /><br />So a large part of literate world is obliged to Phoenicians.<br /><br />Disappeared about 150{{_}}BC with destruction of Carthage; Phoenicia itself had been using daughter scripts for a long time.</transl>
     </text>
    </group>
    <group id="Plrd">
     <text id="Name">
      <orig>Мяо (письмо Полларда)</orig>
+     <transl>Miao (Pollard script)</transl>
     </text>
     <text id="Lang">
      <orig>языки разноцветных и сычуаньских хмонгов (=мяо), лису, и</orig>
