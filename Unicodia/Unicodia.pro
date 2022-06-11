@@ -126,6 +126,6 @@ win32|win64 {
     RC_ICONS = Unicodia-win.ico
     QMAKE_TARGET_COMPANY = Mikhail Merkuryev
     QMAKE_TARGET_PRODUCT = Unicodia
-    QMAKE_TARGET_DESCRIPTION = Unicodia: character encyclopedia
+    QMAKE_TARGET_DESCRIPTION = Unicodia: encyclopedia of characters
     QMAKE_TARGET_COPYRIGHT =  Mikhail Merkuryev
 }
