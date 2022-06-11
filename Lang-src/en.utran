@@ -1789,7 +1789,7 @@
     </text>
     <text id="Text">
      <orig>6582 редких [[ps:Hani|китайских иероглифа]]. В 2020 добавили ещё 10, заполнив блок до отказа.<br /><br />Так, первый из иероглифов означает «гора, холм, могила», и сейчас заменён символом {{sm|丘}}. Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», «бамбуковые ножны», «неосвещённый».</orig>
-     <known-orig>6582 редких [[ps:Hani|китайских иероглифа]]. В 2020 добавили ещё 10, заполнив блок до отказа.&lt;p&gt;Так, первый из иероглифов означает «гора, холм, могила», и сейчас заменён символом {{sm|丘}}. Второй{{-}}устаревший иероглиф, означающий в разных источниках «лизать», «циновка», «бамбуковые ножны», «неосвещённый».</known-orig>
+     <transl>6582 rare [[ps:Hani|Chinese ideographs]]. In 2020 ten more were added, filling the block completely.<br /><br />First of ideographs means “hill, mound, grave”, and currently replaced with {{sm|丘}} characters. The second is an obsolete ideograph that means in different sources “lick”, “woven mat”, “bamboo sheath”, “unilluminated”.</transl>
     </text>
    </group>
    <group id="4DC0">
@@ -1799,7 +1799,7 @@
     </text>
     <text id="Text">
      <orig>Книга перемен (И цзин){{-}}китайский эзотерический трактат, написанный разными поколениями людей. Наиболее старая его часть написана около 700{{bc}} и описывает знаменитую методику клеромантии (гадания на случайных числах). Нужно разыграть гексаграмму и прочитать её значение.<br /><br />Известно, что для гадания применялся пучок из 50 палочек, традиционно стеблей тысячелистника, но как именно{{-}}неизвестно. Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция.<br /><br />В Китае также был философ И Цзин, никак с книгой не{{_}}связанный.</orig>
-     <known-orig>Книга перемен (И цзин){{-}}китайский эзотерический трактат, написанный разными поколениями людей. Наиболее старая его часть написана около 700{{bc}} и описывает знаменитую методику клеромантии (гадания на случайных числах). Нужно разыграть гексаграмму и прочитать её значение.&lt;p&gt;Известно, что для гадания применялся пучок из 50 палочек, традиционно стеблей тысячелистника, но как именно{{-}}неизвестно. Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция.&lt;p&gt;В Китае также был философ И Цзин, никак с книгой не{{_}}связанный.</known-orig>
+     <transl>Book of Changes (Yi Jing or I Ching) is a Chinese esoterical text written with several generations of people. The oldest part is written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must random a hexagram and read its meaning.<br /><br />It is known that a bundle of 50 sticks was used for divinations, traditionally stalks of yarrow, but it’s unknown how exactly. Methods with coin flipping appeared later, and modern divination using sticks is a reconstruction.<br /><br />There was also a philosopher named Yijing in China, unrelated to the book.</transl>
     </text>
    </group>
    <group id="4E00">
@@ -1821,6 +1821,7 @@
     </text>
     <text id="Text">
      <orig>Ключи, используемые для «алфавитной сортировки» словарей языка '''[[ps:Yiii|и]]'''.</orig>
+     <transl>Radicals used for “alphabetical sorting” of Yi dictionaries.</transl>
     </text>
    </group>
    <group id="A4D0">
@@ -1842,7 +1843,7 @@
     </text>
     <text id="Text">
      <orig>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.<br /><br />Редкая [[pt:ligature|лигатура]] «мультиокулярная О» используется только в церковном эпитете «мног{{noto|ꙮ}}кий». В Юникоде{{_}}15 семь «глаз» заменены десятью{{-}}сложно посчитать, сколько их в исходных рукописях, но ближе к десяти.</orig>
-     <known-orig>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.&lt;p&gt;Редкая [[pt:ligature|лигатура]] «мультиокулярная О», используемая в церковном эпитете «мног{{noto|ꙮ}}кий», наперёд заменена на форму из десяти «глаз», которая ожидается в Юникоде 15.</known-orig>
+     <transl>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.<br /><br />Rare [[pt:ligature|ligature]] “multiocular O” is used only in church epithet “many-eyed” (мног{{noto|ꙮ}}кий). In Unicode{{_}}15 seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</transl>
     </text>
    </group>
    <group id="A6A0">
