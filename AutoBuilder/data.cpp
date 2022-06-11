@@ -832,6 +832,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Musical symbol Right repeat sign")      // The same
     EX("Musical symbol Half pedal mark")        // The same
     EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
+    EX("Square Corporation")                    // IDK what’s happening
     EX("Square hPa")                            // A whole cohort of Chinese units
     EX("Square IU")
     EX("Square da")
