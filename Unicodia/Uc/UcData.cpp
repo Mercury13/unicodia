@@ -1346,7 +1346,8 @@ constinit const uc::Block uc::blocks[] {
             "Vedic Extensions", EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
     { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
-            "Phonetic Extensions" },
+            "Phonetic Extensions",
+            EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
     // Phonetic ext supp OK
     { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE },
             "Phonetic Extensions Supplement", },
