@@ -58,8 +58,8 @@ constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
 constexpr auto SIZE_DEVA = 110_pc;
 
 constinit const uc::Font uc::fontInfo[] = {
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Normal
-      { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                      // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
