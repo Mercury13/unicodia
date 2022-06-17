@@ -4,6 +4,7 @@
      eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
      trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
          For example, we are Spanish in US, and are forced to use English.
+         What we save: language — English, stamp — greatest of all present langs
          When Spanish finally arrives, the program switches to Spanish automatically.
 -->
 <locale native="English" international="English" eng-terms="0" trigger-stamp="2022060">
