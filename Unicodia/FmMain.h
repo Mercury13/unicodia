@@ -242,6 +242,8 @@ public:
         return *v;
     }
 
+    ~Uptr() { delete v; }
+
     operator Pointer() const { return v; }
     Pointer operator->() const { return v; }
     explicit operator bool() const { return v; }
