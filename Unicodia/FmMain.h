@@ -279,7 +279,7 @@ public:
     ~FmMain() override;
     void installTempPrefix();
     void translateMe() override;
-    void chooseFirstLang();
+    void chooseFirstLanguage();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

@@ -2056,7 +2056,7 @@ void FmMain::reloadLanguage()
 }
 
 
-void FmMain::chooseFirstLang()
+void FmMain::chooseFirstLanguage()
 {
     loc::allLangs.loadStarting();
     auto index = loc::allLangs.byPtr(loc::currLang);

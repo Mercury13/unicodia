@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     w.installTempPrefix();
     loc::man.add(w);
 
-    w.chooseFirstLang();
+    w.chooseFirstLanguage();
 
     w.show();
 
