@@ -45,7 +45,6 @@ void initTranslation()
     std::filesystem::path pDir = dir.toStdWString();
 
     loc::allLangs.collect(pDir);
-    loc::allLangs.loadStarting();
 }
 
 
@@ -59,6 +58,8 @@ int main(int argc, char *argv[])
     FmMain w;    
     w.installTempPrefix();
     loc::man.add(w);
+
+    w.chooseFirstLang();
 
     w.show();
 

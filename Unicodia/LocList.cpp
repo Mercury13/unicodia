@@ -108,6 +108,10 @@ namespace {
                 r.triggerLangs.emplace_back(iso);
             }
         }
+        // Fallback: dir = Gibberish → let it be "!Gibberish",
+        // but not empty
+        if (r.triggerLangs.empty())
+            r.triggerLangs.emplace_back(str::toSv(u8"!" + r.name.tech));
 
         r.sortOrder.clear();
         auto hAlphaSort = hLocale.child("alpha-sort");

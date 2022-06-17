@@ -941,6 +941,36 @@ bool CharsModel::isCharCollapsed(char32_t code) const
 }
 
 
+///// LangModel ////////////////////////////////////////////////////////////////
+
+
+int LangModel::rowCount(const QModelIndex&) const
+    { return loc::allLangs.size(); }
+
+int LangModel::columnCount(const QModelIndex&) const
+    { return 1; }
+
+QVariant LangModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole: {
+            size_t i = index.row();
+            if (i > loc::allLangs.size())
+                return {};
+            auto& lang = *loc::allLangs[i];
+            if (lang.name.native == lang.name.international) {
+                return str::toQ(lang.name.native);
+            } else {
+                return str::toQ(lang.name.international + u8" / " + lang.name.native);
+            }
+        }
+    default:
+        return {};
+    }
+}
+
+
+
 ///// SearchModel //////////////////////////////////////////////////////////////
 
 
@@ -1302,6 +1332,7 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
     // Change language
+    ui->comboLang->setModel(&langModel);
     shcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
     connect(shcut, &QShortcut::activated, this, &This::changeLanguage);
 
@@ -2022,4 +2053,12 @@ void FmMain::reloadLanguage()
 {
     if (loc::currLang)
         loc::currLang->forceLoad();
+}
+
+
+void FmMain::chooseFirstLang()
+{
+    loc::allLangs.loadStarting();
+    auto index = loc::allLangs.byPtr(loc::currLang);
+    ui->comboLang->setCurrentIndex(index);
 }

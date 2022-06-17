@@ -174,6 +174,15 @@ private:
 };
 
 
+class LangModel : public QAbstractTableModel
+{
+public:
+    int rowCount(const QModelIndex&) const override;
+    int columnCount(const QModelIndex&) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
+};
+
+
 class BlocksModel : public QAbstractTableModel
 {
 public:
@@ -270,6 +279,7 @@ public:
     ~FmMain() override;
     void installTempPrefix();
     void translateMe() override;
+    void chooseFirstLang();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -279,6 +289,7 @@ private:
     CharsModel model;
     BlocksModel blocksModel;
     SearchModel searchModel;
+    LangModel langModel;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;
