@@ -6,7 +6,7 @@
          For example, we are Spanish in US, and are forced to use English.
          When Spanish finally arrives, the program switches to Spanish automatically.
 -->
-<locale native="English" international="English" eng-terms="0" trigger-stamp="20220618">
+<locale native="English" international="English" eng-terms="0" trigger-stamp="2022060">
 	<!-- If you find in the system some language from this list → you switch -->
 	<trigger-langs>
 		<lang iso="en" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Русский" international="Russian" trigger-stamp="20220101" eng-terms="1">
+<locale native="Русский" international="Russian" trigger-stamp="2022010" eng-terms="1">
 	<trigger-langs>
 		<lang iso="ru" /><!-- Russian -->
 		<lang iso="uk" /><!-- Ukrainian -->
