@@ -2278,7 +2278,7 @@ constinit const uc::Term uc::terms[] {
     { "combining", EcTermCat::CHAR_CLASS, u8"combining mark" },
     { "ligature", EcTermCat::CHAR_CLASS, u8"ligature" },
     { "precomposed", EcTermCat::CHAR_CLASS, u8"precomposed character" },
-    { "space", EcTermCat::CHAR_CLASS, u8"space character", { "CharCat.Zs.Text" } },
+    { "space", EcTermCat::CHAR_CLASS, u8"whitespace", { "CharCat.Zs.Text" } },
     { "spacing", EcTermCat::CHAR_CLASS, u8"spacing character" },
     { "pseudographics", EcTermCat::CHAR_CLASS, u8"pseudographics, semigraphics, box drawing" },
     { "control", EcTermCat::CHAR_CLASS, u8"control character", { "CharCat.Cc.Text" } },
