@@ -229,19 +229,24 @@ private:
 
 
 template <class T>
-class Uptr : public std::unique_ptr<T>
+class Uptr
 {
-    using Super = std::unique_ptr<T>;
 public:
-    using Super::operator =;
+    using Pointer = T *;
 
     template <class... UU>
     T& ensure(UU&&... u) {
         if (!*this) {
-            *this = std::make_unique<T>(std::forward<UU>(u)...);
+            v = new T(std::forward<UU>(u)...);
         }
-        return **this;
+        return *v;
     }
+
+    operator Pointer() const { return v; }
+    Pointer operator->() const { return v; }
+    explicit operator bool() const { return v; }
+private:
+    std::atomic<T*> v = nullptr;
 };
 
 

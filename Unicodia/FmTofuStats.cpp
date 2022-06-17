@@ -204,3 +204,11 @@ void FmTofuStats::buildModel()
     ui->tableStats->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableStats->resizeColumnsToContents();
 }
+
+
+int FmTofuStats::exec()
+{
+    if (isVisible())
+        return 0;
+    return Super::exec();
+}
