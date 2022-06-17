@@ -1,5 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<locale native="Русский" international="Russian" iso="ru" eng-terms="1">
+<locale native="Русский" international="Russian" eng-terms="1">
+	<trigger-langs>
+		<lang iso="ru" /><!-- Russian -->
+		<lang iso="uk" /><!-- Ukrainian -->
+		<lang iso="be" /><!-- Belarusian -->
+		<lang iso="mo" /><!-- Moldavian; some systems use ro-MD, but it’ll be English -->
+		<lang iso="ka" /><!-- Georgian -->
+		<lang iso="hy" /><!-- Armenian -->
+		<lang iso="az" /><!-- Azeri -->
+		<lang iso="kk" /><!-- Kazakh -->
+		<lang iso="ky" /><!-- Kyrghyz -->
+		<lang iso="uz" /><!-- Uzbek -->
+		<lang iso="tg" /><!-- Tajik -->
+		<lang iso="tk" /><!-- Turkmen -->
+		<lang iso="tt" /><!-- Tatar -->
+	</trigger-langs>
 	<alpha-sort>
 		<alp>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>

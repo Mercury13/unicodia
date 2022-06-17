@@ -45,7 +45,7 @@ void initTranslation()
     std::filesystem::path pDir = dir.toStdWString();
 
     loc::allLangs.collect(pDir);
-    loc::allLangs.loadFirst();
+    loc::allLangs.loadStarting();
 }
 
 

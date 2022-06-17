@@ -23,6 +23,13 @@ loc::Lang* loc::currLang = nullptr;
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
+bool loc::Lang::hasTriggerLang(std::string_view x) const
+{
+    return std::find(triggerLangs.begin(), triggerLangs.end(), x)
+            != triggerLangs.end();
+}
+
+
 void loc::Lang::forceLoad()
 {
     if (currLang)
@@ -83,8 +90,18 @@ namespace {
         auto hLocale = doc.child("locale");
         r.name.native = str::toU8(hLocale.attribute("native").as_string());
         r.name.international = str::toU8(hLocale.attribute("international").as_string());
-        r.name.isoSmall = str::toU8(hLocale.attribute("iso").as_string());
         r.showEnglishTerms = hLocale.attribute("eng-terms").as_bool(true);
+
+        mojibake::simpleCaseFold(r.name.international, r.name.sortKey);
+
+        r.triggerLangs.clear();
+        auto hTriggerLangs = hLocale.child("trigger-langs");
+        for (auto& v : hTriggerLangs.children("lang")) {
+            std::string_view iso = v.attribute("iso").as_string();
+            if (!iso.empty()) {
+                r.triggerLangs.emplace_back(iso);
+            }
+        }
 
         r.sortOrder.clear();
         auto hAlphaSort = hLocale.child("alpha-sort");
@@ -147,25 +164,31 @@ void loc::LangList::collect(const std::filesystem::path& programPath)
             }
         }
     }
+
+    // Sort languages
+    std::sort(begin(), end(),
+        [](const auto& x, const auto& y) {
+            return (x->name.sortKey < y->name.sortKey);
+        });
 }
 
 
-loc::Lang* loc::LangList::byIso(std::u8string_view x)
+loc::Lang* loc::LangList::byIso(std::string_view x)
 {
     auto it = std::find_if(begin(), end(),
-            [x](auto& p){ return (p->name.isoSmall == x); }
+            [x](auto& p){ return (p->hasTriggerLang(x)); }
         );
     return (it == end()) ? nullptr : it->get();
 }
 
 
-loc::Lang* loc::LangList::findFirst()
+loc::Lang* loc::LangList::findStarting()
 {
     if (empty())
         return nullptr;
 
-    // Find Russian (for now)
-    if (auto p = byIso(u8"ru"))
+    // Find English
+    if (auto p = byIso("en"))
         return p;
 
     // LAST RESORT — first available
@@ -173,9 +196,9 @@ loc::Lang* loc::LangList::findFirst()
 }
 
 
-void loc::LangList::loadFirst()
+void loc::LangList::loadStarting()
 {
-    if (auto pLang = findFirst()) {
+    if (auto pLang = findStarting()) {
         pLang->load();
     }
 

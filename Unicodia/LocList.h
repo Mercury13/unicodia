@@ -19,9 +19,10 @@ namespace loc
             std::u8string
                 tech,           ///< CHINESE
                 native,         ///< Chinese (simplified)
-                international,  ///< 简体中文
-                isoSmall;       ///< zh
+                international;  ///< 简体中文
+            std::u32string sortKey;  /// CHINESE (SIMPLIFIED)
         } name;
+        SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
         bool showEnglishTerms = true;
         std::unique_ptr<QTranslator> translator;
@@ -31,6 +32,7 @@ namespace loc
         void load();
         void forceLoad();
         void unload();
+        bool hasTriggerLang(std::string_view x) const;
     };
 
     using VLang = SafeVector<std::unique_ptr<Lang>>;
@@ -39,9 +41,9 @@ namespace loc
     {
     public:
         void collect(const std::filesystem::path& programPath);
-        Lang* findFirst();
-        Lang* byIso(std::u8string_view x);
-        void loadFirst();
+        Lang* findStarting();
+        Lang* byIso(std::string_view x);
+        void loadStarting();
     };
 
     extern LangList allLangs;

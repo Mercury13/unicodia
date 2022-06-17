@@ -26,6 +26,7 @@ SOURCES += \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
     ../Libs/PugiXml/pugixml.cpp \
+    ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \

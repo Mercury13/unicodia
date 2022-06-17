@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -571,7 +571,7 @@ padding-bottom: 1px;</string>
        <attribute name="title">
         <string>{About}</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,0">
+       <layout class="QHBoxLayout" name="horizontalLayout_7" stretch="0,1">
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_8">
           <item>
@@ -650,6 +650,29 @@ padding-bottom: 1px;</string>
              </size>
             </property>
            </spacer>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QComboBox" name="comboLang"/>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_4">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
           </item>
           <item>
            <widget class="QLabel" name="lbTofuStats">
