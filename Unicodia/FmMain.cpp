@@ -2032,7 +2032,7 @@ void FmMain::searchEnterPressed(int index)
     } else {
         auto relRect = ui->listSearch->visualRect(searchModel.index(index, 0));
         fmMessage.ensure(this)
-                 .showAtRel("Такого символа нет", ui->listSearch->viewport(), relRect);
+                 .showAtRel(loc::get("Search.NoSuch"), ui->listSearch->viewport(), relRect);
     }
 }
 

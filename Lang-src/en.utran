@@ -6721,6 +6721,10 @@
     <orig>Код символа слишком велик</orig>
     <transl>Characher code is too great</transl>
    </text>
+   <text id="NoSuch">
+    <orig>Такого символа нет</orig>
+    <transl>No such character</transl>
+   </text>
   </group>
   <group id="Expand">
    <au-cmt>Test: expand/collapse CJK</au-cmt>

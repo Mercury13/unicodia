@@ -5377,6 +5377,9 @@
    <text id="BigCode">
     <orig>Код символа слишком велик</orig>
    </text>
+   <text id="NoSuch">
+    <orig>Такого символа нет</orig>
+   </text>
   </group>
   <group id="Expand">
    <au-cmt>Test: expand/collapse CJK</au-cmt>
