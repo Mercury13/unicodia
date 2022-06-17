@@ -23,9 +23,15 @@ loc::Lang* loc::currLang = nullptr;
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
-bool loc::Lang::hasTriggerLang(std::string_view x) const
+bool loc::Lang::hasMainLang(std::string_view iso) const
 {
-    return std::find(triggerLangs.begin(), triggerLangs.end(), x)
+    return (!triggerLangs.empty() && triggerLangs[0] == iso);
+}
+
+
+bool loc::Lang::hasTriggerLang(std::string_view iso) const
+{
+    return std::find(triggerLangs.begin(), triggerLangs.end(), iso)
             != triggerLangs.end();
 }
 
@@ -175,10 +181,18 @@ void loc::LangList::collect(const std::filesystem::path& programPath)
 
 loc::Lang* loc::LangList::byIso(std::string_view x)
 {
+    // Main language
     auto it = std::find_if(begin(), end(),
+            [x](auto& p){ return (p->hasMainLang(x)); }
+        );
+    // Other languages
+    if (it != end()) return it->get();
+    it = std::find_if(begin(), end(),
             [x](auto& p){ return (p->hasTriggerLang(x)); }
         );
-    return (it == end()) ? nullptr : it->get();
+    if (it != end()) return it->get();
+    // Did not find
+    return nullptr;
 }
 
 
@@ -202,4 +216,16 @@ void loc::LangList::loadStarting()
         pLang->load();
     }
 
+}
+
+
+int loc::LangList::byPtr(const Lang* x)
+{
+    if (!x)
+        return -1;
+    auto it = std::find_if(begin(), end(),
+            [x](auto& p){ return (p.get() == x); }
+        );
+    if (it != end()) return it - begin();
+    return -1;
 }

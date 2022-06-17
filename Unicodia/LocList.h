@@ -32,7 +32,8 @@ namespace loc
         void load();
         void forceLoad();
         void unload();
-        bool hasTriggerLang(std::string_view x) const;
+        bool hasTriggerLang(std::string_view iso) const;
+        bool hasMainLang(std::string_view iso) const;
     };
 
     using VLang = SafeVector<std::unique_ptr<Lang>>;
@@ -44,6 +45,7 @@ namespace loc
         Lang* findStarting();
         Lang* byIso(std::string_view x);
         void loadStarting();
+        int byPtr(const Lang* x);
     };
 
     extern LangList allLangs;
