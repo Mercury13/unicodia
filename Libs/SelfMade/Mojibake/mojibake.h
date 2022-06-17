@@ -15,6 +15,8 @@
     #include <bit>
 #endif
 
+#include "internal/auto.hpp"
+
 namespace mojibake {
 
     constexpr char32_t SURROGATE_MIN = 0xD800;
@@ -276,31 +278,6 @@ namespace mojibake {
         return r;
     }
 
-#define MOJIBAKE_IMPLEMENT_TO_X_1(Name, Char, Encoding1) \
-        template <class To,   \
-                  class Enc = typename detail::ContUtfTraits<To>::Enc,  \
-                  class Enc1 = Encoding1> \
-        inline To Name(const Char* from) { \
-            std::basic_string_view from1{from};  \
-            return Name<To>(from1);  \
-        }
-
-#if __cplusplus >= 202002L
-    #define MOJIBAKE_IMPLEMENT_TO_X_ALL(Name) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char, Utf8) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char8_t, Utf8) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char16_t, Utf16) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, wchar_t, typename detail::UtfTraits<wchar_t>::Enc) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char32_t, Utf32)
-#else
-    #define MOJIBAKE_IMPLEMENT_TO_X_ALL(Name) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char, Utf8) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char16_t, Utf16) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, wchar_t, typename detail::UtfTraits<wchar_t>::Enc) \
-        MOJIBAKE_IMPLEMENT_TO_X_1(Name, char32_t, Utf32)
-#endif
-
-
     ///
     /// Same, mojibake just skipped
     ///
@@ -314,8 +291,15 @@ namespace mojibake {
         return to<To, From, Sk, Enc2, Enc1>(from);
     }
 
-    // Implement toS for char’s
-    MOJIBAKE_IMPLEMENT_TO_X_ALL(toS)
+    /// Implementation for const char*
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::UtfTraits<From>::Enc>   // Also a SFINAE
+    inline To toS(const From* from)
+    {
+        std::basic_string_view from1{from};  \
+        return toS<To, decltype(from1), Enc2, Enc1>(from1);
+    }
 
     ///
     /// Same, mojibake quietly displayed
@@ -330,8 +314,15 @@ namespace mojibake {
         return to<To, From, Mo, Enc2, Enc1>(from);
     }
 
-    // Implement toM for char’s
-    MOJIBAKE_IMPLEMENT_TO_X_ALL(toM)
+    /// Implementation for const char*
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::UtfTraits<From>::Enc>   // Also a SFINAE
+    inline To toM(const From* from)
+    {
+        std::basic_string_view from1{from};  \
+        return toM<To, decltype(from1), Enc2, Enc1>(from1);
+    }
 
     ///
     /// Check for string validity
@@ -370,6 +361,87 @@ namespace mojibake {
     {
         std::basic_string_view sv(x);
         return isValid<decltype(sv), Enc>(sv);
+    }
+
+#if __cplusplus >= 202002L
+    template <class Enc = Utf8>
+    inline bool isValid(const char8_t* x)
+    {
+        std::basic_string_view sv(x);
+        return isValid<decltype(sv), Enc>(sv);
+    }
+#endif
+
+    ///
+    /// Simple case fold
+    ///
+    inline char32_t simpleCaseFoldCp(char32_t x)
+    {
+        if (x >= detail::CF_MAXCP)
+            return x;
+        auto index = detail::simpleCfLookup[x >> detail::CF_BLOCKSHIFT];
+        if (index < 0)
+            return x;
+        return detail::simpleCfBlocks[index][x & detail::CF_BLOCKMASK];
+    }
+
+    inline char32_t simpleCaseFold(char32_t x) { return simpleCaseFoldCp(x); }
+
+    template <class To, class Func, class Enc>
+    class AppendFuncIterator
+    {
+    public:
+        AppendFuncIterator(To& r, const Func& aFunc) : it(r), func(aFunc) {}
+
+        using value_type = char32_t;
+        const AppendFuncIterator& operator ++() const noexcept { return *this; }
+        const AppendFuncIterator& operator * () const noexcept { return *this; }
+        const AppendFuncIterator* operator ->() const noexcept { return this; }
+        void operator = (value_type c) const { put<Enc>(it, func(c)); }
+    private:
+        mutable std::back_insert_iterator<To> it;
+        const Func& func;
+    };
+
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc>
+    To simpleCaseFold(const From& from)
+    {
+        To to;
+        AppendFuncIterator<To, decltype(simpleCaseFoldCp), Enc2> it(to, simpleCaseFoldCp);
+        // As case fold is just for comparison → skip bad!
+        using It = decltype(std::begin(from));
+        using Sk = mojibake::handler::Skip<It>;
+        mojibake::copy<It, decltype(it), Enc1, Utf32, Sk>(
+                    std::begin(from), std::end(from), it, Sk());
+        return to;
+    }
+
+    /// This function exploits a common feature of most STL implementations:
+    /// containers do not shrink, just expand
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc>
+    To& simpleCaseFold(const From& from, To& to)
+    {
+        to.clear();
+        AppendFuncIterator<To, decltype(simpleCaseFoldCp), Enc2> it(to, simpleCaseFoldCp);
+        // As case fold is just for comparison → skip bad!
+        using It = decltype(std::begin(from));
+        using Sk = mojibake::handler::Skip<It>;
+        mojibake::copy<It, decltype(it), Enc1, Utf32, Sk>(
+                    std::begin(from), std::end(from), it, Sk());
+        return to;
+    }
+
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::UtfTraits<From>::Enc>       // also a SFINAE
+    To simpleCaseFold(const From* from)
+    {
+        std::basic_string_view from1{from};
+        return simpleCaseFold<To, decltype(from1), Enc2, Enc1>(from1);
     }
 
     ///
@@ -426,6 +498,18 @@ namespace mojibake {
 
 
 namespace std {
+
+    template <class To, class From, class Enc>
+    class iterator_traits<mojibake::AppendFuncIterator<To, From, Enc>>
+    {
+    public:
+        using difference_type = int;
+        using AFI = typename mojibake::AppendFuncIterator<To, From, Enc>;
+        using value_type = typename AFI::value_type;
+        using pointer = AFI*;
+        using reference = AFI&;
+        using iterator_category = forward_iterator_tag;
+    };
 
     template <class Enc, class Func>
     class iterator_traits<mojibake::CallIterator<Enc, Func>>
