@@ -2,8 +2,11 @@
 <!-- native: Chinese (simplified)
      international: 简体中文
      eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
+     trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
+         For example, we are Spanish in US, and are forced to use English.
+         When Spanish finally arrives, the program switches to Spanish automatically.
 -->
-<locale native="English" international="English" eng-terms="0">
+<locale native="English" international="English" eng-terms="0" trigger-stamp="20220618">
 	<!-- If you find in the system some language from this list → you switch -->
 	<trigger-langs>
 		<lang iso="en" />

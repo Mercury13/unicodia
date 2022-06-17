@@ -2,6 +2,7 @@
 #include "LocList.h"
 
 // Qt
+#include <QLocale>
 #include <QApplication>
 
 // XML
@@ -204,6 +205,15 @@ loc::Lang* loc::LangList::findStarting()
 {
     if (empty())
         return nullptr;
+
+    // Find system language
+    auto sysLoc = QLocale::system();
+    auto locName = QLocale::c().toLower(sysLoc.name()).toStdString();
+    if (auto p = locName.find('_'); p != std::string::npos) {
+        locName = locName.substr(0, p);
+    }
+    if (auto p = byIso(locName))
+        return p;
 
     // Find English
     if (auto p = byIso("en"))
