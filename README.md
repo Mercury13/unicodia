@@ -1,8 +1,6 @@
 # What is Unicodia?
 
-It is a simple Unicode encyclopedia and replacement for Character Map.
-* Right now Russian only.
-* Right now Windows only.
+It is a simple Unicode encyclopedia and replacement for Character Map. Right now Windows only.
 
 **Lifecycle phase: 4** (beta). Usable but some problems with functionality/bugs.
 
