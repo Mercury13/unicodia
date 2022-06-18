@@ -47,6 +47,7 @@ SOURCES += \
     Uc/UcSearch.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
+    d_Config.cpp \
     main.cpp \
     FmMain.cpp \
     u_EmojiPainter.cpp
@@ -91,6 +92,7 @@ HEADERS += \
     Uc/UcSearch.h \
     Wiki.h \
     c_SearchEdit.h \
+    d_Config.h \
     u_EmojiPainter.h
 
 FORMS += \

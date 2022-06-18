@@ -6,6 +6,9 @@
 // Libs
 #include <i_TempFont.h>
 
+// Project-local
+#include "d_Config.h"
+
 // L10n
 #include "LocDic.h"
 #include "LocList.h"
@@ -59,11 +62,22 @@ int main(int argc, char *argv[])
     w.installTempPrefix();
     loc::man.add(w);
 
+    // Load config
+    {
+        auto rect = w.geometry();
+        config::init(rect);
+        /// @todo [config] We’ve got a bad position for window divider
+        //setGeometry(w, rect);
+        //if (config::window::isMaximized)
+        //    w.setWindowState(w.windowState() | Qt::WindowMaximized);
+    }
     w.chooseFirstLanguage();
 
     w.show();
 
     { loc::AutoStop autoStop;
-        return a.exec();
+        int r = a.exec();
+        config::save(w.normalGeometry(), w.isMaximized());
+        return r;
     }   // manager will stop erasing here → speed up exit
 }

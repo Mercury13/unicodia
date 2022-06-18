@@ -22,6 +22,7 @@ namespace loc
                 international;  ///< 简体中文
             std::u32string sortKey;  /// CHINESE (SIMPLIFIED)
         } name;
+        int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
         bool showEnglishTerms = true;
@@ -34,6 +35,7 @@ namespace loc
         void unload();
         bool hasTriggerLang(std::string_view iso) const;
         bool hasMainLang(std::string_view iso) const;
+        const std::string& mainLang() const { return triggerLangs.front(); }
     };
 
     using VLang = SafeVector<std::unique_ptr<Lang>>;
@@ -42,10 +44,14 @@ namespace loc
     {
     public:
         void collect(const std::filesystem::path& programPath);
-        Lang* findStarting();
-        Lang* byIso(std::string_view x);
-        void loadStarting();
+        Lang* findStarting(
+                std::string_view lastLang, int lastStamp);
+        Lang* byIso(std::string_view x,
+            int lastStamp = std::numeric_limits<int>::min());
+        void loadStarting(
+                std::string_view lastLang, int lastStamp);
         int byPtr(const Lang* x);
+        int lastStamp() const;
     };
 
     extern LangList allLangs;

@@ -30,6 +30,7 @@
 #include "Wiki.h"
 #include "MyWiki.h"
 #include "u_EmojiPainter.h"
+#include "d_Config.h"
 
 // Forms
 #include "FmPopup.h"
@@ -2058,7 +2059,8 @@ void FmMain::reloadLanguage()
 
 void FmMain::chooseFirstLanguage()
 {
-    loc::allLangs.loadStarting();
+    loc::allLangs.loadStarting(
+                config::lang::wanted, config::lang::savedStamp);
     auto index = loc::allLangs.byPtr(loc::currLang);
     ui->comboLang->setCurrentIndex(index);
 }

@@ -101,6 +101,8 @@ namespace {
 
         mojibake::simpleCaseFold(r.name.international, r.name.sortKey);
 
+        r.stamp = hLocale.attribute("trigger-stamp").as_int(0);
+
         r.triggerLangs.clear();
         auto hTriggerLangs = hLocale.child("trigger-langs");
         for (auto& v : hTriggerLangs.children("lang")) {
@@ -184,24 +186,27 @@ void loc::LangList::collect(const std::filesystem::path& programPath)
 }
 
 
-loc::Lang* loc::LangList::byIso(std::string_view x)
+loc::Lang* loc::LangList::byIso(std::string_view x, int lastStamp)
 {
     // Main language
     auto it = std::find_if(begin(), end(),
-            [x](auto& p){ return (p->hasMainLang(x)); }
-        );
+            [x, lastStamp](auto& p) {
+                return (p->stamp > lastStamp && p->hasMainLang(x));
+            });
     // Other languages
     if (it != end()) return it->get();
     it = std::find_if(begin(), end(),
-            [x](auto& p){ return (p->hasTriggerLang(x)); }
-        );
+            [x, lastStamp](auto& p){
+                return (p->stamp > lastStamp && p->hasTriggerLang(x));
+            });
     if (it != end()) return it->get();
     // Did not find
     return nullptr;
 }
 
 
-loc::Lang* loc::LangList::findStarting()
+loc::Lang* loc::LangList::findStarting(
+        std::string_view lastLang, int lastStamp)
 {
     if (empty())
         return nullptr;
@@ -212,6 +217,16 @@ loc::Lang* loc::LangList::findStarting()
     if (auto p = locName.find('_'); p != std::string::npos) {
         locName = locName.substr(0, p);
     }
+
+    // Override stamp if such language is present is system
+    if (auto p = byIso(locName, lastStamp))
+        return p;
+
+    // Find by locale
+    if (auto p = byIso(lastLang))
+        return p;
+
+    // Find by locale
     if (auto p = byIso(locName))
         return p;
 
@@ -224,9 +239,10 @@ loc::Lang* loc::LangList::findStarting()
 }
 
 
-void loc::LangList::loadStarting()
+void loc::LangList::loadStarting(
+        std::string_view lastLang, int lastStamp)
 {
-    if (auto pLang = findStarting()) {
+    if (auto pLang = findStarting(lastLang, lastStamp)) {
         pLang->load();
     }
 
@@ -242,4 +258,14 @@ int loc::LangList::byPtr(const Lang* x)
         );
     if (it != end()) return it - begin();
     return -1;
+}
+
+
+int loc::LangList::lastStamp() const
+{
+    int r = 0;
+    for (auto& v : *this) {
+        r = std::max(r, v->stamp);
+    }
+    return r;
 }
