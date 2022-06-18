@@ -1334,8 +1334,7 @@ FmMain::FmMain(QWidget *parent)
 
     // Change language
     ui->comboLang->setModel(&langModel);
-    shcut = new QShortcut(QKeySequence(Qt::Key_F11), this);
-    connect(shcut, &QShortcut::activated, this, &This::changeLanguage);
+    connect(ui->comboLang, &QComboBox::currentIndexChanged, this, &This::languageChanged);
 
     // Reload language
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
@@ -2038,15 +2037,12 @@ void FmMain::searchEnterPressed(int index)
 }
 
 
-void FmMain::changeLanguage()
+void FmMain::languageChanged(int index)
 {
-    auto itX = std::find_if(loc::allLangs.begin(), loc::allLangs.end(),
-                [](auto& x){
-                    return x.get() == loc::currLang;
-                });
-    if (itX == loc::allLangs.end() || ++itX == loc::allLangs.end())
-        itX = loc::allLangs.begin();
-    (*itX)->load();
+    size_t x = index;
+    if (x < loc::allLangs.size()) {
+        loc::allLangs[x]->load();
+    }
 }
 
 

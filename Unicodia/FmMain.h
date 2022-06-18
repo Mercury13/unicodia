@@ -344,7 +344,7 @@ private slots:
     void startSearch();
     void focusSearch();
     void searchEnterPressed(int index);
-    void changeLanguage();
+    void languageChanged(int index);
     void reloadLanguage();
     void comboIndexChanged(int index);
     void comboDroppedDown();
