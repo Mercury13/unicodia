@@ -121,6 +121,7 @@
 @copy %QTDIR%\bin\Qt6Gui.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Svg.dll %DEPLOY%
+@copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
