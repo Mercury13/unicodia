@@ -111,9 +111,6 @@ INCLUDEPATH += \
 
 LIBS += -lz
 
-TRANSLATIONS += \
-    Unicodia_en_001.ts
-
 VERSION = 1.4.0
 
 # Default rules for deployment.
