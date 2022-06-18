@@ -208,7 +208,7 @@ loc::Lang* loc::LangList::findStarting()
 
     // Find system language
     auto sysLoc = QLocale::system();
-    auto locName = QLocale::c().toLower(sysLoc.name()).toStdString();
+    auto locName = sysLoc.name().toLower().toStdString();
     if (auto p = locName.find('_'); p != std::string::npos) {
         locName = locName.substr(0, p);
     }
