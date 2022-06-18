@@ -5845,7 +5845,7 @@
     </text>
     <text id="Text">
      <orig>Непротяжённые метки (например, знак ударе́ния) устроены как символы нулевой ширины, отсюда название. В хороших шрифтах дизайнер вручную помещает метки на наиболее распространённые буквы. Но если подобной комбинации не{{_}}предусмотрели (8́), символы накладываются как попало, и результат обычно плох.</orig>
-     <transl>Non-spacing marks (for example, accent á) are designed as zero-width character, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</transl>
+     <transl>Non-spacing marks (for example, accent á) are designed as zero-width characters, hence the name. In good fonts designer manually puts marks on the most common letters. But if such combination is not{{_}}foreseen (8́), marks are laid randomly, and the result is far from nice.</transl>
     </text>
    </group>
    <group id="Nd">
