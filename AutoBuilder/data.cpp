@@ -580,6 +580,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "INSCRIPTIONAL",  Dicf::PART_ADJECTIVE },
     { "INSULAR",        Dicf::PART_ADJECTIVE },
     { "INVERTED",       Dicf::PART_ADJECTIVE },
+    { "KINNA",          Dicf::PART_ADJECTIVE },     // Rohg, kinna = small
     { "L-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "LARYNGEAL",      Dicf::PART_ADJECTIVE },
     { "LATERAL",        Dicf::PART_ADJECTIVE },
