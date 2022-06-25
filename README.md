@@ -43,4 +43,6 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * AutoBuilder — build UcAuto.cpp from Unicode base.
   * **Warning**: transition to older/newer Unicode requires a bit of handwork.
 * PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
-* [UTranslator](https://github.com/Mercury13/utranslator) — incomplete translation tool. Data is still hardcoded into Unicodia.exe, but someday I’ll globalize it.
+* SmartCopy — copies the file if it actually differs.
+* TapeMaker — creates a tape file for graphic emoji.
+* [UTranslator](https://github.com/Mercury13/utranslator) — translation tool.
