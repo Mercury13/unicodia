@@ -35,7 +35,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Future functionality
-* Translate into English.
+* Own GlyphWiki loader.
 * Emoji tools: ligatures, more comprehensive reference.
 * Better CJK reference.
 
