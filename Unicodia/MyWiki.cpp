@@ -3,6 +3,7 @@
 // Qt
 #include <QWidget>
 #include <QApplication>
+#include <QTextBlock>
 
 // Libs
 #include "u_Strings.h"
@@ -1292,4 +1293,35 @@ QString mywiki::buildHtml(const uc::Block& x)
         mywiki::appendHtml(text, x.script(), false);
     }
     return text;
+}
+
+
+void mywiki::hackDocument(QTextDocument* doc)
+{
+    auto block = doc->firstBlock();
+    while (block.isValid()) {
+        auto formats = block.textFormats();
+        for (auto& fmt : formats) {
+            if (fmt.format.isAnchor()) {
+                auto href = fmt.format.anchorHref();
+                if (href.startsWith("ps:") || href.startsWith("pt:")
+                        || href.startsWith("http:") || href.startsWith("https:")) {
+                    // Generate format
+                    auto newFmt = fmt.format;
+                    newFmt.setBackground({});
+                    auto color = newFmt.foreground().color();
+                    color.setAlpha(64);
+                    newFmt.setUnderlineStyle(QTextCharFormat::DashUnderline);
+                    newFmt.setUnderlineColor(color);
+                    // Mark it
+                    QTextCursor cur(doc);
+                    auto startPos = block.position() + fmt.start;
+                    cur.setPosition(startPos);
+                    cur.setPosition(startPos + fmt.length, QTextCursor::KeepAnchor);
+                    cur.setCharFormat(newFmt);
+                }
+            }
+        }
+        block = block.next();
+    }
 }

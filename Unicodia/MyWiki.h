@@ -6,6 +6,7 @@
 // Qt
 #include <QString>
 #include <QFontDatabase>
+#include <QTextDocument>
 
 // Common libs
 #include "u_TinyOpt.h"
@@ -94,5 +95,7 @@ namespace mywiki
     QString buildNonCharHtml(char32_t code);
     QString buildEmptyCpHtml(char32_t code, const QColor& color);
     bool isEngTermShown(const uc::Term& term);
+
+    void hackDocument(QTextDocument* doc);
 
 }   // namespace mywiki

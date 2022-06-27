@@ -1581,6 +1581,19 @@ void FmMain::clearSample()
 }
 
 
+namespace {
+
+    void setWiki(QTextBrowser* view, const QString& text)
+    {
+        view->setText(text);
+        // I won’t hack: my underline is lower, and it’s nice.
+        // What to do with that one — IDK.
+        //mywiki::hackDocument(view->document());
+    }
+
+}   // anon namespace
+
+
 void FmMain::forceShowCp(MaybeChar ch)
 {
     shownCp = ch;
@@ -1690,7 +1703,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         }
 
         QString text = mywiki::buildHtml(*ch);
-        ui->vwInfo->setText(text);
+        setWiki(ui->vwInfo, text);
     } else {
         // No character
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -1702,11 +1715,11 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
-            ui->vwInfo->setText(text);
+            setWiki(ui->vwInfo, text);
         } else {
             auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
             QString text = mywiki::buildEmptyCpHtml(ch.code, color);
-            ui->vwInfo->setText(text);
+            setWiki(ui->vwInfo, text);
         }
     }
 }
