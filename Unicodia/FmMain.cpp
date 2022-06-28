@@ -1350,14 +1350,14 @@ FmMain::FmMain(QWidget *parent)
     btSortAlpha = new QToolButton(sortBar);
     btSortAlpha->setCheckable(true);
         QIcon iconSortAlpha;
-        iconSortAlpha.addFile(":/Buttons/sort_AZ.png");
+        iconSortAlpha.addFile(":/Buttons/sort_AZ.png", { 16, 16 });
     btSortAlpha->setIcon(iconSortAlpha);
     sortBar->addWidget(btSortAlpha);
     grpSortBy->addButton(btSortAlpha);
     btSortCode = new QToolButton(sortBar);
     btSortCode->setCheckable(true);
         QIcon iconSortCode;
-        iconSortCode.addFile(":/Buttons/sort_0F.png");
+        iconSortCode.addFile(":/Buttons/sort_0F.png", { 16, 16 });
     btSortCode->setIcon(iconSortCode);
     sortBar->addWidget(btSortCode);
     grpSortBy->addButton(btSortCode);
