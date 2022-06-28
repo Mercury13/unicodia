@@ -1,6 +1,5 @@
 #include "c_SearchEdit.h"
 
-#include <QScrollBar>
 #include <QAbstractItemView>
 #include <QKeyEvent>
 #include <QApplication>
@@ -13,7 +12,9 @@ void WideComboBox::resizeView()
 {
     auto vw = view();
     int newWidth = vw->sizeHintForColumn(0);
-    newWidth += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    if (count() > maxVisibleItems()) {
+        newWidth += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    }
     //QScrollBar* sb = vw->verticalScrollBar();
     //if (sb && sb->isVisible())
     //    newWidth += sb->width();
