@@ -390,6 +390,11 @@ namespace {
         finishRecursion(hasRemainder, q);
     }
 
+    // Key: start/end
+    constinit const std::u8string_view KEY_START =
+            u8"<span style='background-color:palette(midlight);'>\u00A0";
+    constinit const std::u8string_view KEY_END = u8"\u00A0</span>";
+
     void Eng::appendTemplate(const SafeVector<std::string_view>& x, bool)
     {
         auto name = x[0];
@@ -421,6 +426,24 @@ namespace {
         } else if (name == "%"sv) {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "<span style='font-size:3pt'>\u00A0</span>%"sv);
+        } else if (name == "k"sv) {
+            for (size_t i = 1; i < x.size(); ++i) {
+                if (i != 1)
+                    s += '+';
+                str::append(s, KEY_START);
+                mywiki::append(s, str::toU8sv(x[i]), font);
+                str::append(s, KEY_END);
+            }
+        } else if (name == "kb"sv) {
+            for (size_t i = 1; i < x.size(); ++i) {
+                if (i != 1)
+                    s += '+';
+                str::append(s, KEY_START);
+                s += "<b>";
+                mywiki::append(s, str::toU8sv(x[i]), font);
+                s += "</b>";
+                str::append(s, KEY_END);
+            }
         } else if (name == "t"sv) {
             str::append(s, u8"<span class='tr'>⌈</span>");
             str::append(s, x.safeGetV(1, {}));
@@ -828,7 +851,7 @@ namespace {
 
     void appendKey(std::u8string& text, std::u8string_view header, char main)
     {
-        text += u8"<span style='background-color:palette(midlight);'>\u00A0";
+        text += KEY_START;
         text += header;
         if (main) {
             switch (main) {
@@ -839,7 +862,7 @@ namespace {
                 text += main;
             }
         }
-        text += u8"\u00A0</span>";
+        text += KEY_END;
     }
 
     void appendSgnwVariants(QString& text, const uc::Cp& cp, const uc::SwInfo& sw)
