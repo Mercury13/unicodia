@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
+        <file>Buttons/sort_0F.png</file>
+        <file>Buttons/sort_AZ.png</file>
         <file>Misc/about.png</file>
         <file>Texts/about.htm</file>
     </qresource>

@@ -20,6 +20,9 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include <QSvgRenderer>
+#include <QToolBar>
+#include <QToolButton>
+#include <QButtonGroup>
 
 // Misc
 #include "u_Strings.h"
@@ -1340,6 +1343,27 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
+    // Sort bar
+    QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
+    ui->laySortBar->addWidget(sortBar);
+    QButtonGroup* grpSortBy = new QButtonGroup(sortBar);
+    btSortAlpha = new QToolButton(sortBar);
+    btSortAlpha->setCheckable(true);
+        QIcon iconSortAlpha;
+        iconSortAlpha.addFile(":/Buttons/sort_AZ.png");
+    btSortAlpha->setIcon(iconSortAlpha);
+    sortBar->addWidget(btSortAlpha);
+    grpSortBy->addButton(btSortAlpha);
+    btSortCode = new QToolButton(sortBar);
+    btSortCode->setCheckable(true);
+        QIcon iconSortCode;
+        iconSortCode.addFile(":/Buttons/sort_0F.png");
+    btSortCode->setIcon(iconSortCode);
+    sortBar->addWidget(btSortCode);
+    grpSortBy->addButton(btSortCode);
+    // Check one button
+    btSortAlpha->setChecked(true);
+
     // Select index
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
@@ -1354,6 +1378,12 @@ void FmMain::translateMe()
     initTerms();
     initAbout();
     cjkReflectCollapseState();
+
+    ui->comboBlock->resizeView();
+
+    // Sort order
+    btSortAlpha->setToolTip(loc::get("Main.SortAlpha"));
+    btSortCode->setToolTip(loc::get("Main.SortCode"));
 
     // Main tab
     forceShowCp(shownCp);

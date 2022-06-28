@@ -39,6 +39,7 @@ QT_END_NAMESPACE
 
 constexpr int NCOLS = 8;
 
+class QToolButton;
 class FmPopup2;
 class FmMessage;
 class FmTofuStats;
@@ -185,10 +186,15 @@ public:
 
 class BlocksModel : public QAbstractTableModel
 {
+private:
+    using Super = QAbstractTableModel;
 public:
     int rowCount(const QModelIndex&) const override;
     int columnCount(const QModelIndex&) const override;
     QVariant data(const QModelIndex& index, int role) const override;
+
+    using Super::beginResetModel;
+    using Super::endResetModel;
 };
 
 
@@ -295,6 +301,8 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
+    QToolButton *btSortAlpha, *btSortCode;
+
     struct PullUpDetector {
         bool isCocked = false;
         QElapsedTimer timer;

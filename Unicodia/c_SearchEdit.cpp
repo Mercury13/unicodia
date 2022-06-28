@@ -3,6 +3,7 @@
 #include <QScrollBar>
 #include <QAbstractItemView>
 #include <QKeyEvent>
+#include <QApplication>
 
 
 ///// WideComboBox /////////////////////////////////////////////////////////////
@@ -12,9 +13,10 @@ void WideComboBox::resizeView()
 {
     auto vw = view();
     int newWidth = vw->sizeHintForColumn(0);
-    QScrollBar* sb = vw->verticalScrollBar();
-    if (sb && sb->isVisible())
-        newWidth += sb->width();
+    newWidth += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    //QScrollBar* sb = vw->verticalScrollBar();
+    //if (sb && sb->isVisible())
+    //    newWidth += sb->width();
     vw->setMinimumWidth(newWidth);
 }
 

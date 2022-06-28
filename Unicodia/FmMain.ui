@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -119,10 +119,17 @@
                 <number>0</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="layComboSearch" stretch="3,1">
+                <layout class="QHBoxLayout" name="layComboSearch" stretch="0,3,1">
                  <property name="spacing">
-                  <number>4</number>
+                  <number>3</number>
                  </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="laySortBar">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                  </layout>
+                 </item>
                  <item>
                   <widget class="WideComboBox" name="comboBlock">
                    <property name="focusPolicy">

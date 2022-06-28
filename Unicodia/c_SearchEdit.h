@@ -30,7 +30,6 @@ private:
     using Super = QComboBox;
     bool fIsDown = false;
 protected:
-    void resizeView();
     void resizeEvent(QResizeEvent* ev) override;
     void focusInEvent(QFocusEvent* ev) override;
 signals:
@@ -42,6 +41,7 @@ public:
     void showPopup() override;
     void hidePopup() override;
     bool isDown() const noexcept { return fIsDown; }
+    void resizeView();
 };
 
 
