@@ -1274,9 +1274,12 @@ FmMain::FmMain(QWidget *parent)
     ui->tableChars->setModel(&model);
 
     // Divider
-    auto w = width();
-    /// @todo [sizes] Not really a cool size
-    QList<int> sizes { w * 45 / 100, w * 55 / 100 };
+    auto wTotal = width();
+    auto tw = ui->tableChars->verticalHeader()->width();
+    tw += ui->tableChars->horizontalHeader()->defaultSectionSize() * NCOLS;
+    tw += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
+    tw += 8;    // This computation is very precise, let it be 8px
+    QList<int> sizes { tw, wTotal - ui->splitBlocks->handleWidth() - tw };
     ui->splitBlocks->setStretchFactor(0, 0);
     ui->splitBlocks->setStretchFactor(1, 1);
     ui->splitBlocks->setSizes(sizes);
