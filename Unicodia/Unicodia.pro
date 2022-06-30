@@ -29,6 +29,7 @@ SOURCES += \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
+    FmSortOrder.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
     Uc/UcAuto.cpp \
@@ -79,6 +80,7 @@ HEADERS += \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
+    FmSortOrder.h \
     FmTofuStats.h \
     LocList.h \
     MyWiki.h \
@@ -97,6 +99,7 @@ HEADERS += \
 
 FORMS += \
     FmMain.ui \
+    FmSortOrder.ui \
     FmTofuStats.ui
 
 INCLUDEPATH += \

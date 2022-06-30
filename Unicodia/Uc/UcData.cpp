@@ -448,7 +448,7 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(405), EcFont::ARMENIAN },
     // Avestan OK, installed Google Noto
-    /// @todo [future, link] wait for book Pahlavi
+    /// @todo [future, link] wait for book Pahlavi (sorry, cannot put todo at lockit)
     { "Avst", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yapprox(400), EcFont::AVESTAN },
