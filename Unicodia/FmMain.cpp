@@ -143,6 +143,28 @@ CacheCoords RowCache::findCode(char32_t code) const
 ///// BlocksModel //////////////////////////////////////////////////////////////
 
 
+const uc::Block& BlocksModel::at(size_t i) const noexcept
+{
+    if (i >= uc::N_BLOCKS)
+        return uc::blocks[0];
+    if (auto r = a[i])
+        return *r;
+    return uc::blocks[0];
+}
+
+
+size_t BlocksModel::build(size_t iOld)
+{
+    auto& block = at(iOld);
+    for (size_t i = 0; i < uc::N_BLOCKS; ++i)
+        a[i] = &uc::blocks[i];
+    /// @todo [urgent] BlocksModel.build: sort somehow
+    for (size_t i = 0; i < uc::N_BLOCKS; ++i)
+        a[i]->cachedIndex = i;
+    return block.cachedIndex;
+}
+
+
 int BlocksModel::rowCount(const QModelIndex&) const { return uc::N_BLOCKS; }
 
 int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
@@ -153,22 +175,24 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             size_t i = index.row();         \
             if (i >= uc::N_BLOCKS)          \
                 return {};                  \
-            auto& block = uc::blocks[i];
+            auto block = a[i];              \
+            if (!block)                     \
+                return {};                  \
 
     switch (role) {
     case Qt::DisplayRole: {
             GET_BLOCK
-            return str::toQ(block.loc.name);
+            return str::toQ(block->loc.name);
         }
     case Qt::DecorationRole: {
             GET_BLOCK
-            if (!block.icon) {
+            if (!block->icon) {
                 char buf[48];
-                snprintf(buf, std::size(buf), ":/Scripts/%04X.png", static_cast<int>(block.startingCp));
-                block.icon = new QPixmap();
-                block.icon->load(buf);
+                snprintf(buf, std::size(buf), ":/Scripts/%04X.png", static_cast<int>(block->startingCp));
+                block->icon = new QPixmap();
+                block->icon->load(buf);
             }
-            return *block.icon;
+            return *(block->icon);
         }
     default:
         return {};
@@ -1373,6 +1397,14 @@ FmMain::FmMain(QWidget *parent)
 }
 
 
+void FmMain::rebuildBlocks()
+{
+    auto index = ui->comboBlock->currentIndex();
+    auto index2 = blocksModel.build(index);
+    ui->comboBlock->setCurrentIndex(index2);
+}
+
+
 void FmMain::translateMe()
 {
     Form::translateMe();
@@ -1385,6 +1417,7 @@ void FmMain::translateMe()
     // Sort order
     //btSortAlpha->setToolTip(loc::get("Main.SortAlpha"));
     //btSortCode->setToolTip(loc::get("Main.SortCode"));
+    rebuildBlocks();
 
     // Main tab
     forceShowCp(shownCp);
@@ -1640,7 +1673,7 @@ void FmMain::forceShowCp(MaybeChar ch)
     // Block
     int iBlock = ui->comboBlock->currentIndex();
     auto block = uc::blockOf(ch.code);
-    int newIBlock = block->index();
+    int newIBlock = block->cachedIndex;
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
@@ -1950,7 +1983,7 @@ void FmMain::comboIndexChanged(int index)
         return;
     auto oldChar = model.charAt(ui->tableChars->currentIndex());
     auto oldBlock = uc::blockOf(oldChar.code);
-    if (oldBlock->index() != static_cast<size_t>(index)) {
+    if (oldBlock->cachedIndex != static_cast<size_t>(index)) {
         auto& newBlock = uc::blocks[index];
         bool detected = pullUpDetector.detect();
         selectChar<SelectMode::NONE>(newBlock.firstAllocated->subj);

@@ -725,6 +725,7 @@ namespace uc {
         mutable const Cp* firstAllocated = nullptr;
         mutable const Cp* lastAllocated = nullptr;
         mutable int nChars = 0;
+        mutable unsigned cachedIndex = 0;
         mutable EcVersion ecVersion = EcVersion::NN;
         mutable EcVersion ecLastVersion = EcVersion::FIRST;
 
@@ -733,7 +734,7 @@ namespace uc {
             std::u8string_view description {};
         } loc {};
 
-        size_t index() const;
+        size_t permanentIndex() const;
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
         const Version& lastVersion() const { return versionInfo[static_cast<int>(ecLastVersion)]; }
         const Script& script() const { return scriptInfo[static_cast<int>(ecScript)]; }

@@ -193,8 +193,15 @@ public:
     int columnCount(const QModelIndex&) const override;
     QVariant data(const QModelIndex& index, int role) const override;
 
+    const uc::Block& at(size_t i) const noexcept;
+    const uc::Block& operator [] (size_t i) const noexcept { return at(i); }
+
+    size_t build(size_t iOld);
+
     using Super::beginResetModel;
     using Super::endResetModel;
+private:
+    Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };
 };
 
 
@@ -329,6 +336,7 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
+    void rebuildBlocks();
 
     // mywiki::Gui
     void popupAtAbs(

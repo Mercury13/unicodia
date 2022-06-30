@@ -131,7 +131,7 @@ SafeVector<int> tofu::Model::build()
 
         all.reg(code, tofuInfo.state);
         byPlane[cp.plane()].reg(code, tofuInfo.state);
-        auto iBlock = tofuInfo.block->index();
+        auto iBlock = tofuInfo.block->permanentIndex();
         byBlock[iBlock].reg(code, tofuInfo.state);
 
         if (tofuInfo.place == uc::TofuPlace::CJK) {

@@ -3746,7 +3746,7 @@ const uc::Block* uc::blockOf(char32_t subj)
 }
 
 
-size_t uc::Block::index() const
+size_t uc::Block::permanentIndex() const
 {
     return this - std::begin(blocks);
 }
