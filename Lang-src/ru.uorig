@@ -5480,13 +5480,15 @@
      <orig>Энциклопедия символов Юникода</orig>
      <im-cmt>is a static text</im-cmt>
     </text>
+    <group id="actions">
+     <text id="acSortByAlpha">
+      <orig>По алфавиту А→Я</orig>
+     </text>
+     <text id="acSortByCode">
+      <orig>По коду 00→FF</orig>
+     </text>
+    </group>
    </group>
-   <text id="SortAlpha">
-    <orig>По алфавиту А→Я</orig>
-   </text>
-   <text id="SortCode">
-    <orig>По коду 00→FF</orig>
-   </text>
   </group>
  </file>
 </ut>

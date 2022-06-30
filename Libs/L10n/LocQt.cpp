@@ -6,6 +6,7 @@
 #include <QDialogButtonBox>
 #include <QTabWidget>
 #include <QMetaProperty>
+#include <QAction>
 
 // Libs
 #include "u_Strings.h"
@@ -14,10 +15,12 @@
 using namespace std::string_view_literals;
 
 
-void loc::translateContainerWidget(QObject* widget, QObject* mainForm, std::string_view prefix)
+void loc::translateContainerWidget(
+        QObject* widget, QObject* mainForm,
+        std::string_view prefix, std::string_view actionPrefix)
 {
     for (auto& child : widget->children()) {
-        translateWidget(child, mainForm, prefix);
+        translateWidget(child, mainForm, prefix, actionPrefix);
     }
 }
 
@@ -54,7 +57,7 @@ void loc::translateTabWidget(QTabWidget* widget, std::string_view prefix)
 }
 
 
-void loc::translateWidget(
+void loc::translateBareObj(
         QObject* widget, QObject* mainForm, std::string_view prefix)
 {
     QString name1 = widget->objectName();
@@ -84,6 +87,15 @@ void loc::translateWidget(
             }
         }
     }
+}
+
+void loc::translateWidget(
+        QObject* widget, QObject* mainForm,
+        std::string_view prefix, std::string_view actionPrefix)
+{
+    bool isAction = qobject_cast<QAction*>(widget);
+    auto prefix1 = isAction ? actionPrefix : prefix;
+    translateBareObj(widget, mainForm, prefix1);
 
     if (auto tabWidget = qobject_cast<QTabWidget*>(widget)) {
         translateTabWidget(tabWidget, prefix);
@@ -93,7 +105,7 @@ void loc::translateWidget(
 //        //translateButtonBox(buttonBox);
 //    }
 
-    translateContainerWidget(widget, mainForm, prefix);
+    translateContainerWidget(widget, mainForm, prefix, actionPrefix);
 }
 
 
@@ -113,5 +125,6 @@ void loc::translateForm(QWidget* form)
     }
 
     auto prefix = str::cat( formKey, ".Ui." );
-    translateWidget(form, form, prefix);
+    auto actionPrefix = str::cat( prefix, "actions." );
+    translateWidget(form, form, prefix, actionPrefix);
 }

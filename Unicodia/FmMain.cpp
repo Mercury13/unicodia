@@ -22,7 +22,7 @@
 #include <QSvgRenderer>
 #include <QToolBar>
 #include <QToolButton>
-#include <QButtonGroup>
+#include <QActionGroup>
 
 // Misc
 #include "u_Strings.h"
@@ -1346,26 +1346,24 @@ FmMain::FmMain(QWidget *parent)
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
+    // Sort menu
+    QActionGroup* grpSortBy = new QActionGroup(this);
+    grpSortBy->addAction(ui->acSortByAlpha);
+    grpSortBy->addAction(ui->acSortByCode);
+    QMenu* menuSort = new QMenu(this);
+    menuSort->addAction(ui->acSortByAlpha);
+    menuSort->addAction(ui->acSortByCode);
+
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
     ui->laySortBar->addWidget(sortBar);
-    QButtonGroup* grpSortBy = new QButtonGroup(sortBar);
-    btSortAlpha = new QToolButton(sortBar);
-    btSortAlpha->setCheckable(true);
+    btSort = new QToolButton(sortBar);
         QIcon iconSortAlpha;
         iconSortAlpha.addFile(":/Buttons/sort_AZ.png", { 16, 16 });
-    btSortAlpha->setIcon(iconSortAlpha);
-    sortBar->addWidget(btSortAlpha);
-    grpSortBy->addButton(btSortAlpha);
-    btSortCode = new QToolButton(sortBar);
-    btSortCode->setCheckable(true);
-        QIcon iconSortCode;
-        iconSortCode.addFile(":/Buttons/sort_0F.png", { 16, 16 });
-    btSortCode->setIcon(iconSortCode);
-    sortBar->addWidget(btSortCode);
-    grpSortBy->addButton(btSortCode);
-    // Check one button
-    btSortAlpha->setChecked(true);
+    btSort->setIcon(iconSortAlpha);
+    btSort->setMenu(menuSort);
+    btSort->setPopupMode(QToolButton::InstantPopup);
+    sortBar->addWidget(btSort);
 
     // Select index
     ui->tableChars->setFocus();
@@ -1385,8 +1383,8 @@ void FmMain::translateMe()
     ui->comboBlock->resizeView();
 
     // Sort order
-    btSortAlpha->setToolTip(loc::get("Main.SortAlpha"));
-    btSortCode->setToolTip(loc::get("Main.SortCode"));
+    //btSortAlpha->setToolTip(loc::get("Main.SortAlpha"));
+    //btSortCode->setToolTip(loc::get("Main.SortCode"));
 
     // Main tab
     forceShowCp(shownCp);

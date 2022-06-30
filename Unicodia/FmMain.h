@@ -301,7 +301,7 @@ private:
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
-    QToolButton *btSortAlpha, *btSortCode;
+    QToolButton* btSort;
 
     struct PullUpDetector {
         bool isCocked = false;

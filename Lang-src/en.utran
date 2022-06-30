@@ -6849,15 +6849,17 @@
      <im-cmt>is a static text</im-cmt>
      <transl>Encyclopedia of Unicode characters</transl>
     </text>
+    <group id="actions">
+     <text id="acSortByAlpha">
+      <orig>По алфавиту А→Я</orig>
+      <transl>Alphabetically A→Z</transl>
+     </text>
+     <text id="acSortByCode">
+      <orig>По коду 00→FF</orig>
+      <transl>By code 00→FF</transl>
+     </text>
+    </group>
    </group>
-   <text id="SortAlpha">
-    <orig>По алфавиту А→Я</orig>
-    <transl>Alphabetically A→Z</transl>
-   </text>
-   <text id="SortCode">
-    <orig>По коду 00→FF</orig>
-    <transl>By code 00→FF</transl>
-   </text>
   </group>
  </file>
 </ut>

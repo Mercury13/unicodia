@@ -713,6 +713,25 @@ padding-bottom: 1px;</string>
     </rect>
    </property>
   </widget>
+  <action name="acSortByAlpha">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>[acSortByAlpha]</string>
+   </property>
+  </action>
+  <action name="acSortByCode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>[acSortByCode]</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
