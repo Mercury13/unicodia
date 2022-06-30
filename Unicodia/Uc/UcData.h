@@ -692,11 +692,30 @@ namespace uc {
             { return continentInfo[static_cast<int>(ecContinent)]; }
     };
 
+    enum class MyName { INST };
+
+    ///
+    /// \brief The BlockAlpha struct
+    ///
+    struct AlphaKey {
+        EcScript ecScript = EcScript::NONE;
+        char subKey = 0;
+
+        const Script& script() const
+            { return scriptInfo[static_cast<int>(ecScript)]; }
+
+        /// Use block’s name as alphabetic key
+        constexpr AlphaKey(MyName) {}
+        /// Use (pseudo)script’s name
+        constexpr AlphaKey(EcScript sc, char sk) : ecScript(sc), subKey(sk) {}
+    };
+
     struct Block
     {
         char32_t startingCp, endingCp;
         SynthIcon synthIcon;
         std::string_view name;
+        AlphaKey alphaKey;
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
