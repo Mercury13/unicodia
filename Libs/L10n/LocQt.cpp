@@ -101,6 +101,7 @@ void loc::translateWidget(
         translateTabWidget(tabWidget, prefix);
     }
 
+    // No button boxes right now
 //    else if (auto buttonBox = qobject_cast<QDialogButtonBox*>(widget)) {
 //        //translateButtonBox(buttonBox);
 //    }
