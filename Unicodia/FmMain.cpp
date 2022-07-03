@@ -153,12 +153,33 @@ const uc::Block& BlocksModel::at(size_t i) const noexcept
 }
 
 
-size_t BlocksModel::build(size_t iOld)
+namespace {
+
+    bool isAlphaLess(const uc::Block* x, const uc::Block* y)
+    {
+        /// @todo [urgent] We compare tech.names here
+        return x->name < y->name;
+    }
+
+}   // anon namespace
+
+
+size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
 {
     auto& block = at(iOld);
     for (size_t i = 0; i < uc::N_BLOCKS; ++i)
         a[i] = &uc::blocks[i];
-    /// @todo [urgent] BlocksModel.build: sort somehow
+
+    // Primary sorting
+    switch (order.primary) {
+    case BlockPrimary::CODE: break; // do nothing
+    case BlockPrimary::ALPHA:
+        std::stable_sort(a.begin(), a.end(), isAlphaLess);
+        break;
+    }
+
+    /// @todo [urgent] grouping
+
     for (size_t i = 0; i < uc::N_BLOCKS; ++i)
         a[i]->cachedIndex = i;
     return block.cachedIndex;
@@ -1372,11 +1393,15 @@ FmMain::FmMain(QWidget *parent)
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
+    radioSortOrder.setRadio(BlockPrimary::ALPHA, ui->acSortByAlpha);
+    radioSortOrder.setRadio(BlockPrimary::CODE,  ui->acSortByCode);
     grpSortBy->addAction(ui->acSortByAlpha);
     grpSortBy->addAction(ui->acSortByCode);
     QMenu* menuSort = new QMenu(this);
     menuSort->addAction(ui->acSortByAlpha);
     menuSort->addAction(ui->acSortByCode);
+    connect(ui->acSortByAlpha, &QAction::triggered, this, &This::blockOrderChanged);
+    connect(ui->acSortByCode, &QAction::triggered, this, &This::blockOrderChanged);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -1397,10 +1422,18 @@ FmMain::FmMain(QWidget *parent)
 }
 
 
+BlockOrder FmMain::blockOrder() const
+{
+    return BlockOrder {
+        .primary = radioSortOrder.get(),
+    };
+}
+
+
 void FmMain::rebuildBlocks()
 {
     auto index = ui->comboBlock->currentIndex();
-    auto index2 = blocksModel.build(index);
+    auto index2 = blocksModel.build(blockOrder(), index);
     ui->comboBlock->setCurrentIndex(index2);
 }
 
@@ -1984,7 +2017,7 @@ void FmMain::comboIndexChanged(int index)
     auto oldChar = model.charAt(ui->tableChars->currentIndex());
     auto oldBlock = uc::blockOf(oldChar.code);
     if (oldBlock->cachedIndex != static_cast<size_t>(index)) {
-        auto& newBlock = uc::blocks[index];
+        auto& newBlock = blocksModel.at(index);
         bool detected = pullUpDetector.detect();
         selectChar<SelectMode::NONE>(newBlock.firstAllocated->subj);
         if (detected) {
@@ -2136,4 +2169,10 @@ void FmMain::chooseFirstLanguage()
                 config::lang::wanted, config::lang::savedStamp);
     auto index = loc::allLangs.byPtr(loc::currLang);
     ui->comboLang->setCurrentIndex(index);
+}
+
+
+void FmMain::blockOrderChanged()
+{
+    rebuildBlocks();
 }

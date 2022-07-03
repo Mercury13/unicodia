@@ -17,6 +17,7 @@
 #include "u_TinyOpt.h"
 #include "c_TableCache.h"
 #include "u_LruCache.h"
+#include "QtMultiRadio.h"
 
 // Project-local
 #include "FontMatch.h"
@@ -184,6 +185,22 @@ public:
 };
 
 
+enum class BlockPrimary {
+    ALPHA,      ///< Alphabetical
+    CODE        ///< By code
+};
+
+struct BlockOrder
+{
+    /// Primary order
+    BlockPrimary primary = BlockPrimary::ALPHA;
+    /// Grouping
+    struct Grouping {
+        bool continent = false;     ///< group by continent: intl → Europe → Asia…
+    } grouping {};
+};
+
+
 class BlocksModel : public QAbstractTableModel
 {
 private:
@@ -196,7 +213,7 @@ public:
     const uc::Block& at(size_t i) const noexcept;
     const uc::Block& operator [] (size_t i) const noexcept { return at(i); }
 
-    size_t build(size_t iOld);
+    size_t build(const BlockOrder& order, size_t iOld);
 
     using Super::beginResetModel;
     using Super::endResetModel;
@@ -275,7 +292,7 @@ private:
 
 
 enum class CurrThing { CHAR, SAMPLE };
-enum class SelectMode { NONE, INSTANT, DEFERED };
+enum class SelectMode { NONE, INSTANT };
 
 
 class FmMain : public QMainWindow,
@@ -309,6 +326,7 @@ private:
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
     QToolButton* btSort;
+    EcRadio<BlockPrimary, QAction> radioSortOrder;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -337,6 +355,7 @@ private:
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
     void rebuildBlocks();
+    BlockOrder blockOrder() const;
 
     // mywiki::Gui
     void popupAtAbs(
@@ -365,6 +384,7 @@ private slots:
     void comboIndexChanged(int index);
     void comboDroppedDown();
     void comboPulledUp();
+    void blockOrderChanged();
 };
 
 

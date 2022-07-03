@@ -27,6 +27,7 @@ SOURCES += \
     ../Libs/L10n/LocQt.cpp \
     ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
+    ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
@@ -59,6 +60,7 @@ HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Mojibake/mojibake.h \
+    ../Libs/SelfMade/Qt/QtMultiRadio.h \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
@@ -105,6 +107,7 @@ INCLUDEPATH += \
     ../Libs/PugiXml \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Mojibake \
+    ../Libs/SelfMade/Qt \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
     Uc
