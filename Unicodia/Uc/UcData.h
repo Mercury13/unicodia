@@ -836,6 +836,9 @@ namespace uc {
 
     extern const TermCat termCats[];
 
+    // Such a limitation: sort by first N meaning chars
+    using LocSortKey = signed short[40];
+
     struct Term
     {
         std::string_view key;
@@ -845,8 +848,7 @@ namespace uc {
         struct Loc {
             std::u8string_view name;
             std::u8string_view description;
-            // Such a limitation: sort by first 32 meaning chars
-            signed short sortKey[32];
+            LocSortKey sortKey;
         } mutable loc {};
 
         const TermCat& cat() const { return termCats[static_cast<int>(ecCat)]; }

@@ -15,7 +15,7 @@
 	<!-- Alphabetical sorting, right now very simple and locale-independent
 		 non-meaning stub of alphabet = underscore _
 		 Limitations:
-		 • Difference within first 32 MEANING chars of TERM, otherwise they are deemed equal
+		 • Difference within first 40 MEANING chars of TERM, otherwise they are deemed equal
 		 • 32-bit chars ALLOWED
 		 • Max alphabet 32K
 		 • # if alphabets unlimited -->
