@@ -423,6 +423,21 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+    // Arrows pseudo-script
+    { "ZARR", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+    // Mathematical pseudo-script
+    { "ZMAT", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+    // Symbols and pictographs pseudo-script
+    { "ZSYM", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -1273,7 +1288,6 @@ constinit const uc::Block uc::blocks[] {
     { 0x13A0, 0x13FF, { 0x13B6, EcContinent::AMERICA },
             "Cherokee", { EcScript::Cher, 0 }, EcScript::Cher },
     // Canadian aboriginal OK
-    /// @todo [urgent] Pseudo-script for Cans?
     { 0x1400, 0x167F, { 0x140E, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics", { EcScript::Cans, 0 }, EcScript::Cans },
     // Ogham OK
@@ -1301,7 +1315,6 @@ constinit const uc::Block uc::blocks[] {
     { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Mongolian", { EcScript::Mong, 0 }, EcScript::Mong },
     // Canadian extended OK
-    /// @todo [urgent] Pseudo-script for Cans?
     { 0x18B0, 0x18FF, { 0x18E5, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended",
             { EcScript::Cans, 1 },
@@ -1373,7 +1386,7 @@ constinit const uc::Block uc::blocks[] {
     // Phonetic ext supp OK
     { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE },
             "Phonetic Extensions Supplement", MyName::INST },
-    /// @todo [urgent] Pseudo-script for discritic marks?
+    /// @todo [urgent] Pseudo-script for diacritic marks?
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
@@ -1412,10 +1425,10 @@ constinit const uc::Block uc::blocks[] {
     // Arrows OK
     { 0x2190, 0x21FF, { L'↑', EcContinent::NONE },
             "Arrows",
-            MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
+            { EcScript::ZARR, 0 }, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK
     { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
-            "Mathematical Operators", MyName::INST },
+            "Mathematical Operators", { EcScript::ZMAT, 0 } },
     // Misc tech OK
     { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical",
@@ -1452,29 +1465,26 @@ constinit const uc::Block uc::blocks[] {
             "Dingbats",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT2 },
     // Misc math A OK
-    /// @todo [urgent] Special pseudo-script for math?
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",
-            MyName::INST, EcScript::NONE, EcFont::MATH },
+            { EcScript::ZMAT, 'A' }, EcScript::NONE, EcFont::MATH },
     // Arrows A OK
-    /// @todo [urgent] Special pseudo-script for arrows?
     { 0x27F0, 0x27FF, { L'⟳', EcContinent::NONE },
-            "Supplemental Arrows-A", MyName::INST },
+            "Supplemental Arrows-A", { EcScript::ZARR, 'A' } },
     // Braille OK
     { 0x2800, 0x28FF, { L'⠝', EcContinent::NONE },
             "Braille Patterns", { EcScript::Brai, 0 }, EcScript::Brai },
     // Arrows B OK
-    /// @todo [urgent] Special pseudo-script for arrows?
     { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
-            "Supplemental Arrows-B", MyName::INST },
+            "Supplemental Arrows-B", { EcScript::ZARR, 'B' } },
     // Misc math B OK
     { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
-            MyName::INST, EcScript::NONE, EcFont::MATH },
+            { EcScript::ZMAT, 'B' }, EcScript::NONE, EcFont::MATH },
     // Supp math ops OK
     { 0x2A00, 0x2AFF, { L'⨔', EcContinent::NONE },
             "Supplemental Mathematical Operators",
-            MyName::INST, EcScript::NONE, EcFont::MATH },
+            { EcScript::ZMAT, 1 }, EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
     { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
             "Miscellaneous Symbols and Arrows", MyName::INST },
@@ -1883,7 +1893,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA },
             "Yezidi", { EcScript::Yezi, 0 }, EcScript::Yezi },
     /// @todo [U15] Arabic ex C
-    { 0x10EC0, 0x10EFF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x10EC0, 0x10EFF, { '?', EcContinent::ASIA, Ifg::MISSING },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' },
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1980,7 +1990,6 @@ constinit const uc::Block uc::blocks[] {
     { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA },
             "Soyombo", { EcScript::Soyo, 0 }, EcScript::Soyo },
     // Canadian A OK
-    /// @todo [urgent] Special psedo-script for Cans?
     { 0x11AB0, 0x11ABF, { 0x11AB0, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended-A",
             { EcScript::Cans, 'A' },
@@ -1989,7 +1998,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA },
             "Pau Cin Hau", { EcScript::Pauc, '0' }, EcScript::Pauc },
     /// @todo [U15] Devadagari Ex A
-    { 0x11B00, 0x11B5F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x11B00, 0x11B5F, { '?', EcContinent::ASIA, Ifg::MISSING },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' },
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -2000,14 +2009,14 @@ constinit const uc::Block uc::blocks[] {
     { 0x11C70, 0x11CBF, { 0x11C74, EcContinent::ASIA },
             "Marchen", { EcScript::Marc, 0 }, EcScript::Marc },
     { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA },
-            "Masaram Gondi", { EcScript::Gonm, 0 }, EcScript::Gonm },
+            "Masaram Gondi", MyName::INST, EcScript::Gonm },
     { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA },
-            "Gunjala Gondi", { EcScript::Gong, 0 }, EcScript::Gong },
+            "Gunjala Gondi", MyName::INST, EcScript::Gong },
     // Makasar OK
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar", { EcScript::Maka, 0 }, EcScript::Maka },
     /// @todo [U15] Kawi
-    { 0x11F00, 0x11F5F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x11F00, 0x11F5F, { '?', EcContinent::OCEAN, Ifg::MISSING },
             "Kawi", { EcScript::Kawi, 0 }, EcScript::Kawi },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA },
@@ -2094,7 +2103,6 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Tang, 1 },
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
-    /// @todo [urgent] Kana — what pseudoscript?
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
             { EcScript::Kana, 'B' },
@@ -2144,7 +2152,7 @@ constinit const uc::Block uc::blocks[] {
             "Ancient Greek Musical Notation",
             MyName::INST, EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
     // Kaktovik numerals OK, implemented in Funky
-    { 0x1D2C0, 0x1D2DF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Kaktovik Numerals",
             MyName::INST, EcScript::NONE, EcFont::FUNKY },
     // Mayan numerals OK
@@ -2161,7 +2169,7 @@ constinit const uc::Block uc::blocks[] {
     // Math alnum OK
     { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE },
             "Mathematical Alphanumeric Symbols",
-            MyName::INST, EcScript::NONE, EcFont::MATH_CAMBRIA },
+            { EcScript::ZMAT, 'a' }, EcScript::NONE, EcFont::MATH_CAMBRIA },
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting", { EcScript::Sgnw, 0}, EcScript::Sgnw },
@@ -2176,7 +2184,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Glag, 1},
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     /// @todo [U15] Cyr ex D
-    { 0x1E030, 0x1E08F, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x1E030, 0x1E08F, { '?', EcContinent::EUROPE, Ifg::MISSING },
             "Cyrillic Extended-D",
             { EcScript::Cyrl, 'D'},
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -2190,7 +2198,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho", { EcScript::Wcho, 0}, EcScript::Wcho },
     /// @todo [U15] Nag alphabet (Mundari)
-    { 0x1E4D0, 0x1E4FF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x1E4D0, 0x1E4FF, { '?', EcContinent::ASIA, Ifg::MISSING },
             "Nag Mundari", { EcScript::Nagm, 0}, EcScript::Nagm },
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA },
@@ -2241,7 +2249,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Misc OK
     { 0x1F300, 0x1F5FF, { 0x1F52B, EcContinent::NONE },
-            "Miscellaneous Symbols and Pictographs", MyName::INST },
+            "Miscellaneous Symbols and Pictographs", { EcScript::ZSYM, 0 } },
     // Emoticons OK
     { 0x1F600, 0x1F64F, { 0x1F60D, EcContinent::NONE },
             "Emoticons",
@@ -2262,21 +2270,19 @@ constinit const uc::Block uc::blocks[] {
             "Geometric Shapes Extended",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Arrows C OK
-    /// @todo [urgent] Special pseudo-script for arrows?
     { 0x1F800, 0x1F8FF, { 0x1F882, EcContinent::NONE },
-            "Supplemental Arrows-C", MyName::INST },
+            "Supplemental Arrows-C", { EcScript::ZARR, 'C' } },
     // Supp sym/picto OK
-   /// @todo [urgent] What to do with these?
     { 0x1F900, 0x1F9FF, { 0x1F98A, EcContinent::NONE },
             "Supplemental Symbols and Pictographs",
-            MyName::INST, EcScript::NONE, EcFont::DINGBAT },
+            { EcScript::ZSYM, 1 }, EcScript::NONE, EcFont::DINGBAT },
     // Chess OK, turned bad pawn
     { 0x1FA00, 0x1FA6F, { 0x1FA10, EcContinent::NONE },
             "Chess Symbols", MyName::INST, },
     // Sym and picto ext A OK
     { 0x1FA70, 0x1FAFF, { 0x1FA82, EcContinent::NONE },
             "Symbols and Pictographs Extended-A",
-            MyName::INST, EcScript::NONE, EcFont::DINGBAT },
+            { EcScript::ZSYM, 'A' }, EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
     { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS },
             "Symbols for Legacy Computing",
@@ -2319,7 +2325,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'G' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     /// @todo [U15] CJK H
-    { 0x31350, 0x323AF, { '?', EcContinent::MISSING, Ifg::CONTINENT_OK },
+    { 0x31350, 0x323AF, { '?', EcContinent::CJK, Ifg::MISSING },
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -2434,17 +2440,20 @@ const uc::Continent uc::continentInfo[] {
     { { 0x7fffff, 0x204a87 } },
     // Asia
     { { 0xffff83, 0xf57900 } },
+    // CJK
+    { { 0xfff0f5, 0x5c3566 } },
     // Ocean
     { { 0xc8ffc8, 0x006400 } },
     // Africa
     { { 0xf5deb3, 0x8f5902 } },
     // America
     { { 0xffc8c8, 0xcc0000 } },
-    // CJK
-    { { 0xfff0f5, 0x5c3566 } },
-    // Missing
-    { { 0xa40000, 0xFFFFFF } },
 };
+
+// Missing
+const uc::Continent MISSING_CONTINENT { 0xa40000, 0xFFFFFF };
+
+
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
 
 constinit const uc::OldCompInfo uc::oldCompInfo[] {
@@ -3240,6 +3249,17 @@ std::u8string_view uc::SwInfo::note() const
 }
 
 
+///// Continent ////////////////////////////////////////////////////////////////
+
+
+const uc::Continent& uc::SynthIcon::continent() const
+{
+    if (flags.have(Ifg::MISSING))
+        return MISSING_CONTINENT;
+    return continentInfo[static_cast<int>(ecContinent)];
+}
+
+
 ///// UC misc //////////////////////////////////////////////////////////////////
 
 namespace {
@@ -3295,7 +3315,7 @@ void uc::completeData()
             throw std::logic_error("Block w/o chars leaked into data!");
 
         // Check synthesized icon
-        if (v.synthIcon.ecContinent != EcContinent::MISSING
+        if (!v.synthIcon.flags.have(Ifg::MISSING)
                 && (v.synthIcon.subj < v.startingCp || v.synthIcon.subj > v.endingCp))
             throw std::logic_error(
                     "Synthesized icon is not within block " + std::string{v.name});
@@ -3818,21 +3838,29 @@ namespace {
         }
     }
 
+    void buildSortKey(std::u8string_view x,
+                      const std::unordered_map<char32_t, int>& sortOrder,
+                      uc::LocSortKey& r)
+    {
+        auto name32 = mojibake::toS<std::u32string>(x);
+        std::fill(std::begin(r), std::end(r), -1);
+        size_t len = 0;
+        for (auto v : name32) {
+            auto it = sortOrder.find(v);
+            if (it != sortOrder.end()) {
+                r[len] = it->second;
+                if ((++len) >= std::size(r))
+                    break;
+            }
+        }
+    }
+
 }   // anon namespace
 
 
 void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
 {
     char c[40];
-    for (auto& blk : blocks) {
-        blk.printfLocKey(c, "Name");
-        blk.loc.name = loc::get(c);
-
-        if (blk.hasDescription()) {
-            blk.printfLocKey(c, "Text");
-            blk.loc.description = loc::get(c);
-        }
-    }
 
     for (auto& sc : scriptInfo) {
         sc.printfLocKey(c, "Name");
@@ -3855,6 +3883,21 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         }
     }
 
+    for (auto& blk : blocks) {
+        blk.printfLocKey(c, "Name");
+        blk.loc.name = loc::get(c);
+
+        if (blk.hasDescription()) {
+            blk.printfLocKey(c, "Text");
+            blk.loc.description = loc::get(c);
+        }
+
+        // Sorting key
+        std::u8string_view keyName = blk.loc.name;
+        if (blk.alphaKey.ecScript != EcScript::NONE)
+            keyName = scriptInfo[static_cast<int>(blk.alphaKey.ecScript)].loc.name;
+        buildSortKey(keyName, sortOrder, blk.loc.sortKey);
+    }
 
     for (auto& bidi : bidiClassInfo) {
         bidi.printfLocKey(c, "Name");
@@ -3879,17 +3922,7 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         term.loc.name = loc::get(c);
 
         // Build sort key
-        auto name32 = mojibake::toS<std::u32string>(term.loc.name);
-        std::fill(std::begin(term.loc.sortKey), std::end(term.loc.sortKey), -1);
-        size_t len = 0;
-        for (auto v : name32) {
-            auto it = sortOrder.find(v);
-            if (it != sortOrder.end()) {
-                term.loc.sortKey[len] = it->second;
-                if ((++len) >= std::size(term.loc.sortKey))
-                    break;
-            }
-        }
+        buildSortKey(term.loc.name, sortOrder, term.loc.sortKey);
 
         // Get desc
         if (term.borrowedDesc.empty()) {

@@ -157,8 +157,12 @@ namespace {
 
     bool isAlphaLess(const uc::Block* x, const uc::Block* y)
     {
-        /// @todo [urgent] We compare tech.names here
-        return x->name < y->name;
+        auto cmp = std::lexicographical_compare_three_way(
+                    std::begin(x->loc.sortKey), std::end(x->loc.sortKey),
+                    std::begin(y->loc.sortKey), std::end(y->loc.sortKey));
+        if (cmp != 0)
+            return (cmp < 0);
+        return (x->alphaKey.subKey < y->alphaKey.subKey);
     }
 
 }   // anon namespace

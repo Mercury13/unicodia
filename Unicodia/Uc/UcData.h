@@ -182,11 +182,10 @@ namespace uc {
         NONE,
         EUROPE,     ///< Europe, incl. Georgia and Mediterranean
         ASIA,       ///< Mainland Asia
-        OCEAN,      ///< Indian and Pacific Ocean, incl. Japan
+        CJK,        ///< Hani and derived scripts
+        OCEAN,      ///< Indian and Pacific Ocean
         AFRICA,
         AMERICA,
-        CJK,
-        MISSING,    ///< Red for MISSING
         NN
     };
 
@@ -662,6 +661,7 @@ namespace uc {
 
     enum class Ifg {
         CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
+        MISSING           = 1<<1,   ///< [+] Red icon, missing block
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
         APPROX_2_CHARS    = 0,      ///< [+] 2 chars on icon:
@@ -688,8 +688,7 @@ namespace uc {
         Flags<Ifg> flags {};
 
         inline const Cp& cp() const;
-        const Continent& continent() const
-            { return continentInfo[static_cast<int>(ecContinent)]; }
+        const Continent& continent() const;
     };
 
     enum class MyName { INST };
@@ -709,6 +708,9 @@ namespace uc {
         /// Use (pseudo)script’s name
         constexpr AlphaKey(EcScript sc, char sk) : ecScript(sc), subKey(sk) {}
     };
+
+    // Such a limitation: sort by first N meaning chars
+    using LocSortKey = signed short[40];
 
     struct Block
     {
@@ -732,6 +734,7 @@ namespace uc {
         mutable struct Loc {
             std::u8string_view name {};
             std::u8string_view description {};
+            LocSortKey sortKey {};
         } loc {};
 
         size_t permanentIndex() const;
@@ -835,9 +838,6 @@ namespace uc {
     };
 
     extern const TermCat termCats[];
-
-    // Such a limitation: sort by first N meaning chars
-    using LocSortKey = signed short[40];
 
     struct Term
     {

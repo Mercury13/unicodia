@@ -5,7 +5,10 @@
      trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
          For example, we are Spanish in US, and are forced to use English.
          What we save: language — English, stamp — greatest of all present langs
-         When Spanish finally arrives, the program switches to Spanish automatically.
+         When Spanish finally arrives, its trigger-script will be greater,
+           and the program will switch to Spanish automatically.
+         When the user says, “No, I want English,” max stamp will be new,
+           and auto-switch no more happens.
 -->
 <locale native="English" international="English" eng-terms="0" trigger-stamp="2022060">
 	<!-- If you find in the system some language from this list → you switch -->
@@ -15,13 +18,15 @@
 	<!-- Alphabetical sorting, right now very simple and locale-independent
 		 non-meaning stub of alphabet = underscore _
 		 Limitations:
-		 • Difference within first 40 MEANING chars of TERM, otherwise they are deemed equal
+		 • Difference within first 40 MEANING chars of term/block, otherwise they are deemed equal
 		 • 32-bit chars ALLOWED
 		 • Max alphabet 32K
 		 • # if alphabets unlimited -->
 	<alpha-sort>
 		<alp>ABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>abcdefghijklmnopqrstuvwxyz</alp>
+		<alp>____________________Ü_____</alp>
+		<alp>____________________ü_____</alp>
 	</alpha-sort>
 	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
