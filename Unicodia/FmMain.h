@@ -14,6 +14,7 @@
 
 // My libs
 #include "u_Vector.h"
+#include "u_EcArray.h"
 #include "u_TinyOpt.h"
 #include "c_TableCache.h"
 #include "u_LruCache.h"
@@ -318,6 +319,7 @@ private:
     MaybeChar shownCp;
     QToolButton* btSort;
     EcRadio<BlockOrder, QAction> radioSortOrder;
+    ec::Array<QIcon, BlockOrder> sortIcons;
 
     struct PullUpDetector {
         bool isCocked = false;

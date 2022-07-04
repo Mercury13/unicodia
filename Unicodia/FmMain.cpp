@@ -1423,9 +1423,9 @@ FmMain::FmMain(QWidget *parent)
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
     ui->laySortBar->addWidget(sortBar);
     btSort = new QToolButton(sortBar);
-        QIcon iconSortAlpha;
-        iconSortAlpha.addFile(":/Buttons/sort_AZ.png", { 16, 16 });
-    btSort->setIcon(iconSortAlpha);
+    sortIcons[BlockOrder::ALPHA    ].addFile(":/Buttons/sort_AZ.png", { 16, 16 });
+    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/sort_AZ.png", { 16, 16 });
+    sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.png", { 16, 16 });
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
     sortBar->addWidget(btSort);
@@ -1444,8 +1444,10 @@ BlockOrder FmMain::blockOrder() const
 
 void FmMain::rebuildBlocks()
 {
+    auto order = blockOrder();
+    btSort->setIcon(sortIcons[order]);
     auto index = ui->comboBlock->currentIndex();
-    auto index2 = blocksModel.build(blockOrder(), index);
+    auto index2 = blocksModel.build(order, index);
     ui->comboBlock->setCurrentIndex(index2);
 }
 

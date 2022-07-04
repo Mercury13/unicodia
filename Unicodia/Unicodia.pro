@@ -57,6 +57,7 @@ HEADERS += \
     ../Libs/L10n/LocDic.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
+    ../Libs/MagicEnum/magic_enum.hpp \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Mojibake/mojibake.h \
@@ -67,6 +68,7 @@ HEADERS += \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Cmap.h \
+    ../Libs/SelfMade/u_EcArray.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_LruCache.h \
@@ -104,6 +106,7 @@ FORMS += \
 INCLUDEPATH += \
     ../Libs \
     ../Libs/L10n \
+    ../Libs/MagicEnum \
     ../Libs/PugiXml \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Mojibake \
