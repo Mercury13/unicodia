@@ -52,6 +52,13 @@ namespace uc {
         char32_t code = 0;                  ///< char code
         CpType type = CpType::NONCHARACTER; ///< what found
         const uc::Cp* cp = nullptr;         ///< code point
+
+        constexpr MiniLine() = default;
+        // Clazy’s −warn
+        constexpr MiniLine(char32_t aCode,
+                 CpType aType = CpType::NONCHARACTER,
+                 const uc::Cp* aCp = nullptr)
+            : code(aCode), type(aType), cp(aCp) {}
     };
 
     struct SearchLine : public MiniLine {
@@ -82,7 +89,7 @@ namespace uc {
         SingleResult(const uc::Cp& cp)
             : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
         SingleResult(const MiniLine& line) : MiniLine(line) {}
-        SingleResult(SearchError aErr) : err(aErr) {}
+        SingleResult(SearchError aErr) : MiniLine{ 0 }, err(aErr) {}
     };
 
     struct MultiResult {
@@ -109,5 +116,5 @@ namespace uc {
     bool isNameChar(QStringView x);
     bool isMnemoChar(char32_t cp);
     bool isMnemoChar(QStringView x);
-    std::u8string toMnemo(QString x);
+    std::u8string toMnemo(const QString& x);
 }

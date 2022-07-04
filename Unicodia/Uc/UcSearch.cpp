@@ -149,7 +149,7 @@ namespace {
 }   // anon namespace
 
 
-std::u8string uc::toMnemo(QString x)
+std::u8string uc::toMnemo(const QString& x)
 {
     // Check for &
     if (!x.startsWith('&'))
@@ -228,9 +228,11 @@ uc::MultiResult uc::doSearch(QString what)
 
         return r;
     } else if (isNameChar(what)) {
+        const bool isLongEnoughNumber = (what.size() >= 2);
+
         // Try find hex
         const uc::Cp* hex = nullptr;
-        if (what.size() >= 2) {
+        if (isLongEnoughNumber) {
             if (auto q = uc::findStrCode(what, 16); q.err == SearchError::OK) {
                 auto& bk = r.emplace_back(q);
                 bk.prio.high = uc::HIPRIO_HEX;
@@ -239,13 +241,15 @@ uc::MultiResult uc::doSearch(QString what)
 
         // Try find dec
         const uc::Cp* dec = nullptr;
-        if (what.size() >= 2) {
+        if (isLongEnoughNumber) {
             if (auto q = uc::findStrCode(what, 10);
                     q.err == SearchError::OK && q.code >= 10) {       // if you find 08 → do not dupe
                 auto& bk = r.emplace_back(q);
                 bk.prio.high = uc::HIPRIO_DEC;
             }
         }
+
+        /// @todo [urgent, #140] find by numeric value
 
         // SEARCH BY KEYWORD/mnemonic
         auto u8Name = what.toStdString();
