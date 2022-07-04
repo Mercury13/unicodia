@@ -7,6 +7,14 @@
 #include "QRect"
 
 
+enum class BlockOrder {
+    ALPHA,      ///< Alphabetical
+    CONTINENT,  ///< By continent, then alphabetically
+    CODE,       ///< By code
+    DEFAULT = CONTINENT
+};
+
+
 namespace progsets {
     enum class DirMode { INSTALLED, PORTABLE };
     extern DirMode dirMode;
@@ -36,6 +44,9 @@ namespace config {
         extern int savedStamp;
     }
 
-    void init(QRect& winRect);
-    void save(const QRect& winRect, bool isMaximized);
+    /// All params should be initialized!
+    void init(QRect& winRect, BlockOrder& blockOrder);
+
+    void save(const QRect& winRect, bool isMaximized,
+              BlockOrder blockOrder);
 }

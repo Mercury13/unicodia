@@ -8,7 +8,10 @@
 // XML
 #include "pugixml.hpp"
 
-// Root
+// Misc
+#include "u_EcArray.h"
+
+// L10n
 #include "LocList.h"
 
 
@@ -38,6 +41,10 @@ constexpr std::string_view CONFIG_NAME = "config.xml";
 
 namespace {
 
+    ec::Array<std::string_view, BlockOrder> orderNames {
+        "alpha", "continent", "code"
+    };
+
     void loadProgSets()
     {
         progsets::dirMode = progsets::DirMode::INSTALLED;
@@ -52,7 +59,7 @@ namespace {
             progsets::dirMode = progsets::DirMode::PORTABLE;
     }
 
-    void loadConfig([[maybe_unused]] QRect& winRect)
+    void loadConfig([[maybe_unused]] QRect& winRect, BlockOrder& blockOrder)
     {
         if (fname::config.empty() || !std::filesystem::exists(fname::config))
             return;
@@ -74,12 +81,16 @@ namespace {
             auto hLang = root.child("lang");
             config::lang::wanted = hLang.attribute("v").as_string();
             config::lang::savedStamp = hLang.attribute("stamp").as_int();
+
+            auto hView = root.child("view");
+            auto sortName = hView.attribute("sort").as_string();
+            blockOrder = orderNames.findDef(sortName, blockOrder);
         }
     }
 
 }   // anon namespace
 
-void config::init(QRect& winRect)
+void config::init(QRect& winRect, BlockOrder& blockOrder)
 {
     path::exeBundled = QCoreApplication::applicationFilePath().toStdWString();
 #ifdef _WIN32
@@ -103,13 +114,14 @@ void config::init(QRect& winRect)
         break;
     }
     fname::config = path::config / CONFIG_NAME;
-    loadConfig(winRect);
+    loadConfig(winRect, blockOrder);
 }
 
 
 void config::save(
         [[maybe_unused]] const QRect& winRect,
-        [[maybe_unused]] bool isMaximized)
+        [[maybe_unused]] bool isMaximized,
+        BlockOrder blockOrder)
 {
     std::filesystem::create_directories(path::config);
     pugi::xml_document doc;
@@ -128,6 +140,9 @@ void config::save(
 //        hWin.append_attribute("w") = winRect.width();
 //        hWin.append_attribute("h") = winRect.height();
 //        hWin.append_attribute("max") = isMaximized;
+
+    auto hView = root.append_child("view");
+    hView.append_attribute("sort") = orderNames[blockOrder].data();   // OK, const s_v have trailing 0
 
     doc.save_file(fname::config.c_str());
 }

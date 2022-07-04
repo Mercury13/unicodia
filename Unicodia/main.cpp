@@ -65,7 +65,10 @@ int main(int argc, char *argv[])
     // Load config
     {
         auto rect = w.geometry();
-        config::init(rect);
+        auto order = BlockOrder::DEFAULT;
+        config::init(rect, order);
+        w.setBlockOrder(order);
+
         /// @todo [config] We’ve got a bad position for window divider
         //setGeometry(w, rect);
         //if (config::window::isMaximized)
@@ -77,7 +80,7 @@ int main(int argc, char *argv[])
 
     { loc::AutoStop autoStop;
         int r = a.exec();
-        config::save(w.normalGeometry(), w.isMaximized());
+        config::save(w.normalGeometry(), w.isMaximized(), w.blockOrder());
         return r;
     }   // manager will stop erasing here → speed up exit
 }

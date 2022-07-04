@@ -33,7 +33,6 @@
 #include "Wiki.h"
 #include "MyWiki.h"
 #include "u_EmojiPainter.h"
-#include "d_Config.h"
 
 // Forms
 #include "FmPopup.h"
@@ -1424,7 +1423,7 @@ FmMain::FmMain(QWidget *parent)
     ui->laySortBar->addWidget(sortBar);
     btSort = new QToolButton(sortBar);
     sortIcons[BlockOrder::ALPHA    ].addFile(":/Buttons/sort_AZ.png", { 16, 16 });
-    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/sort_AZ.png", { 16, 16 });
+    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.png",   { 16, 16 });
     sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.png", { 16, 16 });
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
@@ -1442,8 +1441,20 @@ BlockOrder FmMain::blockOrder() const
     { return radioSortOrder.get(); }
 
 
+void FmMain::setBlockOrder(BlockOrder x)
+{
+    radioSortOrder.set(x);
+    rebuildBlocks();
+}
+
+
 void FmMain::rebuildBlocks()
 {
+    // Do nothing if no lang loaded
+    // (specifically for loading settings)
+    if (!loc::currLang)
+        return;
+
     auto order = blockOrder();
     btSort->setIcon(sortIcons[order]);
     auto index = ui->comboBlock->currentIndex();

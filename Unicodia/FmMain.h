@@ -23,6 +23,7 @@
 // Project-local
 #include "FontMatch.h"
 #include "MyWiki.h"
+#include "d_Config.h"
 
 // Forms
 #include "FmPopup.h"
@@ -186,13 +187,6 @@ public:
 };
 
 
-enum class BlockOrder {
-    ALPHA,      ///< Alphabetical
-    CONTINENT,  ///< By continent, then alphabetically
-    CODE,       ///< By code
-};
-
-
 class BlocksModel : public QAbstractTableModel
 {
 private:
@@ -302,6 +296,8 @@ public:
     void installTempPrefix();
     void translateMe() override;
     void chooseFirstLanguage();
+    BlockOrder blockOrder() const;
+    void setBlockOrder(BlockOrder x);
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;
@@ -348,7 +344,6 @@ private:
     void cjkReflectCollapseState();
     void preloadVisibleFonts();
     void rebuildBlocks();
-    BlockOrder blockOrder() const;
 
     // mywiki::Gui
     void popupAtAbs(
