@@ -165,6 +165,13 @@ namespace {
         return (x->alphaKey.subKey < y->alphaKey.subKey);
     }
 
+    bool isContinentLess(const uc::Block* x, const uc::Block* y)
+    {
+        if (x->synthIcon.ecContinent != y->synthIcon.ecContinent)
+            return (x->synthIcon.ecContinent < y->synthIcon.ecContinent);
+        return isAlphaLess(x, y);
+    }
+
 }   // anon namespace
 
 
@@ -175,14 +182,15 @@ size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
         a[i] = &uc::blocks[i];
 
     // Primary sorting
-    switch (order.primary) {
-    case BlockPrimary::CODE: break; // do nothing
-    case BlockPrimary::ALPHA:
+    switch (order) {
+    case BlockOrder::CODE: break; // do nothing
+    case BlockOrder::ALPHA:
         std::stable_sort(a.begin(), a.end(), isAlphaLess);
         break;
+    case BlockOrder::CONTINENT:
+        std::stable_sort(a.begin(), a.end(), isContinentLess);
+        break;
     }
-
-    /// @todo [urgent] grouping
 
     for (size_t i = 0; i < uc::N_BLOCKS; ++i)
         a[i]->cachedIndex = i;
@@ -1397,15 +1405,19 @@ FmMain::FmMain(QWidget *parent)
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
-    radioSortOrder.setRadio(BlockPrimary::ALPHA, ui->acSortByAlpha);
-    radioSortOrder.setRadio(BlockPrimary::CODE,  ui->acSortByCode);
+    radioSortOrder.setRadio(BlockOrder::ALPHA,     ui->acSortByAlpha);
+    radioSortOrder.setRadio(BlockOrder::CONTINENT, ui->acSortByContinent);
+    radioSortOrder.setRadio(BlockOrder::CODE,      ui->acSortByCode);
     grpSortBy->addAction(ui->acSortByAlpha);
+    grpSortBy->addAction(ui->acSortByContinent);
     grpSortBy->addAction(ui->acSortByCode);
     QMenu* menuSort = new QMenu(this);
     menuSort->addAction(ui->acSortByAlpha);
+    menuSort->addAction(ui->acSortByContinent);
     menuSort->addAction(ui->acSortByCode);
     connect(ui->acSortByAlpha, &QAction::triggered, this, &This::blockOrderChanged);
     connect(ui->acSortByCode, &QAction::triggered, this, &This::blockOrderChanged);
+    connect(ui->acSortByContinent, &QAction::triggered, this, &This::blockOrderChanged);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -1427,11 +1439,7 @@ FmMain::FmMain(QWidget *parent)
 
 
 BlockOrder FmMain::blockOrder() const
-{
-    return BlockOrder {
-        .primary = radioSortOrder.get(),
-    };
-}
+    { return radioSortOrder.get(); }
 
 
 void FmMain::rebuildBlocks()

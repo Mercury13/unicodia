@@ -6872,12 +6872,16 @@
     </text>
     <group id="actions">
      <text id="acSortByAlpha">
-      <orig>По алфавиту А→Я</orig>
-      <transl>Alphabetically A→Z</transl>
+      <orig>По алфавиту: А → Я</orig>
+      <transl>Alphabetically: A → Z</transl>
      </text>
      <text id="acSortByCode">
-      <orig>По коду 00→FF</orig>
-      <transl>By code 00→FF</transl>
+      <orig>По коду: 00 → FF</orig>
+      <transl>By code: 00 → FF</transl>
+     </text>
+     <text id="acSortByContinent">
+      <orig>По континенту: международные → Америка</orig>
+      <transl>By continent: international → America</transl>
      </text>
     </group>
    </group>

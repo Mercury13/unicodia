@@ -1378,15 +1378,12 @@ constinit const uc::Block uc::blocks[] {
             "Vedic Extensions",
             MyName::INST, EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
-    /// @todo [urgent] Pseudo-script for phonetic ext?
     { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
             "Phonetic Extensions",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
-    /// @todo [urgent] Pseudo-script for phonetic ext?
     // Phonetic ext supp OK
     { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE },
             "Phonetic Extensions Supplement", MyName::INST },
-    /// @todo [urgent] Pseudo-script for diacritic marks?
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
@@ -1579,7 +1576,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",
             MyName::INST, EcScript::Hani, EcFont::CJK_COMPAT, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
-    /// @todo [urgent] special pseudo-script for Hani?
+    // CJK A OK
     { 0x3400, 0x4DBF, { L'㐾', EcContinent::CJK },
             "CJK Unified Ideographs Extension A",
             { EcScript::Hani, 'A' },
@@ -1874,6 +1871,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA },
             "Inscriptional Pahlavi", { EcScript::Phli, 0 }, EcScript::Phli },
     // Psalter Pahlavi OK
+    /// @todo [alphasort] What to do? — At least one block should have Pahlavi in front
     { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::APPROX_COLOR },
             "Psalter Pahlavi", { EcScript::Phlp, 0 }, EcScript::Phlp },
     // Turkic runes OK
@@ -2263,7 +2261,7 @@ constinit const uc::Block uc::blocks[] {
             "Transport and Map Symbols",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Alchem OK
-    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
+    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::EUROPE },
             "Alchemical Symbols", MyName::INST },
     // Geo shapes ex OK
     { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE },

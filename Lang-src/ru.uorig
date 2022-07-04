@@ -5500,10 +5500,13 @@
     </text>
     <group id="actions">
      <text id="acSortByAlpha">
-      <orig>По алфавиту А→Я</orig>
+      <orig>По алфавиту: А → Я</orig>
      </text>
      <text id="acSortByCode">
-      <orig>По коду 00→FF</orig>
+      <orig>По коду: 00 → FF</orig>
+     </text>
+     <text id="acSortByContinent">
+      <orig>По континенту: международные → Америка</orig>
      </text>
     </group>
    </group>

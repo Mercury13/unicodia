@@ -185,19 +185,10 @@ public:
 };
 
 
-enum class BlockPrimary {
+enum class BlockOrder {
     ALPHA,      ///< Alphabetical
-    CODE        ///< By code
-};
-
-struct BlockOrder
-{
-    /// Primary order
-    BlockPrimary primary = BlockPrimary::ALPHA;
-    /// Grouping
-    struct Grouping {
-        bool continent = false;     ///< group by continent: intl → Europe → Asia…
-    } grouping {};
+    CONTINENT,  ///< By continent, then alphabetically
+    CODE,       ///< By code
 };
 
 
@@ -326,7 +317,7 @@ private:
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
     QToolButton* btSort;
-    EcRadio<BlockPrimary, QAction> radioSortOrder;
+    EcRadio<BlockOrder, QAction> radioSortOrder;
 
     struct PullUpDetector {
         bool isCocked = false;
