@@ -1,4 +1,4 @@
-Copyright 2018 The Noto Project Authors (github.com/googlei18n/noto-fonts)
+﻿Copyright 2018 The Noto Project Authors (github.com/googlei18n/noto-fonts)
 
 This Font Software is licensed under the SIL Open Font License,
 Version 1.1.
@@ -28,8 +28,10 @@ What was done by authors of Unicodia:
     (umlauts are just for showcasing and actually unusable!)
   - Rehinted
 * Glagolitic
-  - Copied 25CC dotted circle from Devanagari
-  - Made Caudate Chrivi 2C2F and 5F
+  - Copied 25CC dotted circle from Devanagari; created anchors lower than on actual letters
+  - Made Caudate Chrivi 2C2F and 5F; created anchors on the same height
+  - Copied anchors to all umlauts where they are missing
+  - Rehinted with TtfAutoHint; settings default
 * Hebrew
   - Made 05EF yod triangle
 * Khudawadi
