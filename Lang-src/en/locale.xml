@@ -35,4 +35,6 @@
 		<!-- first{{,-}}second  →  typographic comma-dash -->
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
+	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
+	<icons sort-az="sort_AZ" />
 </locale>

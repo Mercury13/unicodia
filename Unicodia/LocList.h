@@ -22,6 +22,9 @@ namespace loc
                 international;  ///< 简体中文
             std::u32string sortKey;  /// CHINESE (SIMPLIFIED)
         } name;
+        struct Icons {
+            std::string sortAZ;
+        } icons;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini

@@ -135,6 +135,9 @@ namespace {
             }
         }
 
+        auto hIcons =  hLocale.child("icons");
+        r.icons.sortAZ = hIcons.attribute("sort-az").as_string();
+
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);
         for (auto& v : di) {

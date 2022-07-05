@@ -2654,7 +2654,7 @@
    </group>
    <group id="11B00">
     <text id="Name">
-     <orig>Деванагари расширенный A</orig>
+     <orig>Деванáгари расширенный A</orig>
      <transl>Devanagari extended A</transl>
     </text>
     <text id="Text">
@@ -6885,6 +6885,10 @@
      </text>
     </group>
    </group>
+   <text id="Sort">
+    <orig>Порядок блоков</orig>
+    <transl>Order blocks by</transl>
+   </text>
   </group>
  </file>
 </ut>

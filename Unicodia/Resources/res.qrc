@@ -2,6 +2,7 @@
     <qresource prefix="/">
         <file>Buttons/sort_0F.png</file>
         <file>Buttons/sort_AZ.png</file>
+        <file>Buttons/sort_AYa.png</file>
         <file>Buttons/globe.png</file>
         <file>Misc/about.png</file>
         <file>Texts/about.htm</file>

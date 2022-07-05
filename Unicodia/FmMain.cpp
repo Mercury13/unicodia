@@ -1422,7 +1422,8 @@ FmMain::FmMain(QWidget *parent)
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
     ui->laySortBar->addWidget(sortBar);
     btSort = new QToolButton(sortBar);
-    sortIcons[BlockOrder::ALPHA    ].addFile(":/Buttons/sort_AZ.png", { 16, 16 });
+
+    // ALPHA is localized!!
     sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.png",   { 16, 16 });
     sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.png", { 16, 16 });
     btSort->setMenu(menuSort);
@@ -1462,6 +1463,17 @@ void FmMain::rebuildBlocks()
     ui->comboBlock->setCurrentIndex(index2);
 }
 
+namespace {
+
+    void loadIcon(QIcon& r, std::string_view name)
+    {
+        r = QIcon{};
+        auto fullName = str::cat(":/Buttons/", name, ".png");
+        r.addFile(QString::fromStdString(fullName), {16, 16});
+    }
+
+}
+
 
 void FmMain::translateMe()
 {
@@ -1472,9 +1484,11 @@ void FmMain::translateMe()
 
     ui->comboBlock->resizeView();
 
+    // International icons
+    loadIcon(sortIcons[BlockOrder::ALPHA], loc::currLang->icons.sortAZ);
+
     // Sort order
-    //btSortAlpha->setToolTip(loc::get("Main.SortAlpha"));
-    //btSortCode->setToolTip(loc::get("Main.SortCode"));
+    btSort->setToolTip(loc::get("Main.Sort"));
     rebuildBlocks();
 
     // Main tab

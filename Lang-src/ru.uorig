@@ -5510,6 +5510,9 @@
      </text>
     </group>
    </group>
+   <text id="Sort">
+    <orig>Порядок блоков</orig>
+   </text>
   </group>
  </file>
 </ut>
