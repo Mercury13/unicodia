@@ -557,6 +557,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DIAGONAL",       Dicf::PART_ADJECTIVE },
     { "DIALECT-P",      { Dicf::PART_ADJECTIVE, "dialect-P" } },
     { "EGYPTOLOGICAL",  Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "EPENTHETIC",     Dicf::PART_ADJECTIVE },
     { "EXCLAMATION",    Dicf::PART_ADJECTIVE },
     { "FINGERED",       Dicf::PART_ADJECTIVE },
     { "FIVE-LIKE",      Dicf::PART_ADJECTIVE },

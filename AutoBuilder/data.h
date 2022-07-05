@@ -18,8 +18,7 @@ enum class Dicf {
     IF_NEXT_NOT_NOUN        = 1 << 4,   // Capitalize if next is not noun
 
     // Parts of speech
-    PART_ADJECTIVE          = 1 << 5,   // “letter Long A” → “long” propagates capitalization to the left
-                                        // “Old Permic” → propagate script to the left
+    PART_ADJECTIVE          = 1 << 5,   // “letter Long A” → “long” propagates capitalization to the right
     PART_NOUN               = 1 << 6,   // Noun: stop propagation
     PART_MIXED              = 1 << 7,   // Noun / adjective
     PART_MAYBE_LETTER       = 1 << 8,   // Probably letter: adjectives → capitalize
@@ -32,7 +31,7 @@ enum class Dicf {
     TRIG_DIGIT_PROPAGATES_RIGHT = 1 << 13, // Digit propagates right “Mende Kikakui syllable M135 In”
     TRIG_THREE_WORD_SCRIPT  = 1 << 14,  // Script consisting of three words: Pau Cin Hau
     TRIG_SCRIPT_IF_FIRST    = 1 << 15,  // Script if 1st word (Yi)
-    TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  // OLD NORTH Arabian
+    TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  // OLD NORTH Arabian → propagate script to the left
 };
 
 DEFINE_ENUM_OPS(Dicf)
