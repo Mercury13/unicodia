@@ -27,9 +27,9 @@
      inkscape:document-units="px"
      showgrid="true"
      units="px"
-     inkscape:zoom="46.75"
-     inkscape:cx="7.9893048"
-     inkscape:cy="6.7165775"
+     inkscape:zoom="23.375"
+     inkscape:cx="-1.0481283"
+     inkscape:cy="7.7005348"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -63,14 +63,14 @@
          sodipodi:role="line">A</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:3.05435px;line-height:1.25;font-family:Tahoma;-inkscape-font-specification:Tahoma;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3465a4;stroke-width:0.264583"
-       x="3.4254563"
+       style="font-size:3.40179px;line-height:1.25;font-family:Tahoma;-inkscape-font-specification:Tahoma;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3465a4;stroke-width:0.264583"
+       x="3.3964956"
        y="4.2333331"
        id="text6627"><tspan
          sodipodi:role="line"
          id="tspan6625"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.05435px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';fill:#3465a4;stroke-width:0.264583"
-         x="3.4254563"
+         style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:3.40179px;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Medium';fill:#3465a4;stroke-width:0.264583"
+         x="3.3964956"
          y="4.2333331">Я</tspan></text>
   </g>
 </svg>
