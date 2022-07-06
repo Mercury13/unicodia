@@ -21,6 +21,10 @@
 loc::LangList loc::allLangs;
 loc::Lang* loc::currLang = nullptr;
 
+loc::Lang::Icons loc::active::icons;
+loc::Lang::Numfmt loc::active::numfmt;
+bool loc::active::showEnglishTerms = false;
+
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
@@ -45,6 +49,12 @@ void loc::Lang::forceLoad()
         QApplication::installTranslator(translator.get());
     loc::loadIni(loc::dic, fnLang);
     currLang = this;
+
+    // Active
+    active::icons = icons;
+    active::numfmt = numfmt;
+    active::showEnglishTerms = showEnglishTerms;
+
     loc::man.translateMe();
 }
 
@@ -137,6 +147,14 @@ namespace {
 
         auto hIcons =  hLocale.child("icons");
         r.icons.sortAZ = hIcons.attribute("sort-az").as_string();
+
+        r.numfmt.decimalPoint = '.';
+        auto hNumFormat = hLocale.child("num-format");
+        auto dp = mojibake::toS<std::u32string>(
+                    hNumFormat.attribute("dec-point").as_string());
+        if (!dp.empty() && dp[0] < 65536) {
+            r.numfmt.decimalPoint = dp[0];
+        }
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

@@ -6,13 +6,13 @@
 
 // Qt
 #include <QTranslator>
+#include <QLocale>
 
 // Libs
 #include "u_Vector.h"
 
 namespace loc
 {
-
     struct Lang
     {
         struct Name {
@@ -25,6 +25,9 @@ namespace loc
         struct Icons {
             std::string sortAZ;
         } icons;
+        struct Numfmt {
+            char16_t decimalPoint = '.';
+        } numfmt;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini
@@ -40,6 +43,12 @@ namespace loc
         bool hasMainLang(std::string_view iso) const;
         const std::string& mainLang() const { return triggerLangs.front(); }
     };
+
+    namespace active {
+        extern Lang::Icons icons;
+        extern Lang::Numfmt numfmt;
+        extern bool showEnglishTerms;
+    }
 
     using VLang = SafeVector<std::unique_ptr<Lang>>;
 

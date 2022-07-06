@@ -1485,7 +1485,7 @@ void FmMain::translateMe()
     ui->comboBlock->resizeView();
 
     // International icons
-    loadIcon(sortIcons[BlockOrder::ALPHA], loc::currLang->icons.sortAZ);
+    loadIcon(sortIcons[BlockOrder::ALPHA], loc::active::icons.sortAZ);
 
     // Sort order
     btSort->setToolTip(loc::get("Main.Sort"));

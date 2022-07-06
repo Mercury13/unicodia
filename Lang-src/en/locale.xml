@@ -37,4 +37,6 @@
 	</wiki-templates>
 	<!-- Localized icons. Fixed set: if you want a new one, ask programmer -->
 	<icons sort-az="sort_AZ" />
+	<!-- Numeric format. Decimal point → only BMP char, test in Tibetan fractions -->
+	<num-format dec-point="." />
 </locale>

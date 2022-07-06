@@ -1044,10 +1044,22 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             sp.sep();
             appendNonBullet(text, numc.type().locKey,
                     "<a href='pt:number' class='popup'>", "</a>");
-            str::append(text, numc.num);
-            if (numc.denom != 1) {
+            switch (numc.fracType()) {
+            case uc::FracType::NONE:        // should not happen
+            case uc::FracType::INTEGER:     // should not happen
+                str::append(text, numc.num);
+                break;
+            case uc::FracType::VULGAR:
+                str::append(text, numc.num);
                 str::append(text, "/");
                 str::append(text, numc.denom);
+                break;
+            case uc::FracType::DECIMAL: {
+                    auto val = static_cast<double>(numc.num) / numc.denom;
+                    QString s = QString::number(val);
+                    s.replace('.', QChar{loc::active::numfmt.decimalPoint});
+                    text += s;
+                } break;
             }
         }
 
@@ -1234,10 +1246,9 @@ QString mywiki::buildNonCharHtml(char32_t code)
 
 bool mywiki::isEngTermShown(const uc::Term& term)
 {
-    return loc::currLang                            // language is present…
-            && loc::currLang->showEnglishTerms      // and explicitly permits
-            && !term.engName.empty()                // and English name present
-            && (term.engName != term.loc.name);     // and different from L10n name
+    return loc::active::showEnglishTerms        // language explicitly permits
+        && !term.engName.empty()                // and English name present
+        && (term.engName != term.loc.name);     // and different from L10n name
 }
 
 

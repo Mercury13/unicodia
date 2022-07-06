@@ -34,6 +34,7 @@ namespace {
 
     void LocData::translateMe()
     {
+        // OK: translateMe requires currLang
         uc::finishTranslation(loc::currLang->sortOrder);
         mywiki::translateDatingLoc();
     }

@@ -31,4 +31,5 @@
 		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
 	</wiki-templates>
 	<icons sort-az="sort_AYa" />
+	<num-format dec-point="," />
 </locale>
