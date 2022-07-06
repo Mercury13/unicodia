@@ -352,9 +352,9 @@ namespace uc {
     enum class FracType {
         NONE,       ///< Not a number
         INTEGER,    ///< Integer
-        PROPER,     ///< <1, e.g. 1/5
-        MIXED       ///< aka “top-heavy” — non-integer and >1
-                    ///< present in Tibetan, non-searchable
+        VULGAR,     ///< Vulgar fraction
+        DECIMAL,    ///< Top-heavy (>1) convertible to decimal
+                    ///< present in Tibetan
     };
 
     /// @warning  All fractions are reduced!

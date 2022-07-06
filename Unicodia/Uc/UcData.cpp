@@ -3955,5 +3955,8 @@ uc::FracType uc::Numeric::fracType() const
     if (denom == 1)
         return FracType::INTEGER;
     // Only 1/2 among negative!
-    return (num < denom) ? FracType::PROPER : FracType::MIXED;
+    // Only 2 is known among top-heavy fractions
+    if (num > denom && denom == 2)
+        return FracType::DECIMAL;
+    return FracType::VULGAR;
 }
