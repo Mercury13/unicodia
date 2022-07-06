@@ -178,12 +178,13 @@ std::u8string uc::toMnemo(const QString& x)
 
 namespace {
 
-    std::unordered_set<unsigned char> findIntNumerics(long long x)
+    std::unordered_set<unsigned char> findNumerics(
+            long long aNum, long long aDenom)
     {
         std::unordered_set<unsigned char> r;
         for (int i = 0; i < uc::N_NUMERICS; ++i) {
             auto& num = uc::allNumerics[i];
-            if (num.num == x && num.denom == 1) {
+            if (num.num == aNum && num.denom == aDenom) {
                 r.insert(i);
             }
         }
@@ -274,9 +275,28 @@ uc::MultiResult uc::doSearch(QString what)
         // Find integer
         std::unordered_set<unsigned char> numerics;
         if (code != NO_CODE) {
-            numerics = findIntNumerics(code);
+            numerics = findNumerics(code, 1);
         } else {
-            /// @todo [urgent, #140] find fraction
+            auto things = what.split('/');
+            if (things.size() == 2) {
+                bool isOk1, isOk2;
+                auto num   = things[0].trimmed().toInt(&isOk1);
+                auto denom = things[1].trimmed().toInt(&isOk2);
+                if (isOk1 && isOk2) {
+                    if (num == 0 && denom == 3) {
+                        // Zero thirds — special case (used in baseball, numeric value is 0)
+                        r.emplace_back(*cpsByCode[0x2189]);
+                        return r;
+                    }
+                    if (denom >= 1 && num != 0) {
+                        auto absNum = std::abs(num);
+                        auto reduceValue = std::gcd(absNum, denom);
+                        num /= reduceValue;
+                        denom /= reduceValue;
+                        numerics = findNumerics(num, denom);
+                    }
+                }
+            }
         }
 
         // SEARCH BY KEYWORD/mnemonic
