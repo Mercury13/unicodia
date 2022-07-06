@@ -39,8 +39,9 @@ namespace uc {
 
     enum {
         // LOWEST
-        HIPRIO_TEXTUAL = 0,     ///< simple textual search, unused as constant
+        NO_HIPRIO = 0,          ///< simple textual search, normal priority
         HIPRIO_NUMERIC,         ///< search by numeric value
+        HIPRIO_NUMERIC_HI,      ///< same but stronger
         HIPRIO_MNEMONIC_CASE,   ///< search by HTML mnemonic — wrong case
         HIPRIO_MNEMONIC_EXACT,  ///< search by HTML mnemonic — exact case match
         HIPRIO_DEC,             ///< decimal value matches

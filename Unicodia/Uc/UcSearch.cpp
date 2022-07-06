@@ -211,6 +211,21 @@ namespace {
         return r;
     }
 
+    bool has(std::u8string_view haystack, std::u8string_view needle)
+    {
+        return (haystack.find(needle) != std::u8string_view::npos);
+    }
+
+    bool isHiprioNumber(const uc::Cp& cp)
+    {
+        if (cp.block().flags.have(uc::Bfg::HIPRIO_NUMBERS)) {
+            std::basic_string_view name { cp.name.tech() };
+            return (!has(name, u8"ideograph"));
+        } else {
+            return false;
+        }
+    }
+
 }   // anon namespace
 
 
@@ -325,8 +340,8 @@ uc::MultiResult uc::doSearch(QString what)
                 auto val = q.toDouble(&isOk);
                 if (isOk) {
                     // Decimal fraction
-                    // Need one digit after point; two and more → stop
-                    int denom = 10;
+                    // Need two digits after point; three and more → stop
+                    int denom = 100;
                     auto val1 = val * denom;
                     auto val2 = std::round(val1);
                     if (std::abs(val1 - val2) < 1e-5) {
@@ -351,7 +366,8 @@ uc::MultiResult uc::doSearch(QString what)
                 // Numeric search
                 if (numerics.contains(cp.iNumeric)) {
                     auto& bk = r.emplace_back(cp);
-                    bk.prio.high = HIPRIO_NUMERIC;
+                    bk.prio.high = isHiprioNumber(cp)
+                            ? HIPRIO_NUMERIC_HI : HIPRIO_NUMERIC;
                 } else {
                     // Textual search
                     auto names = cp.allRawNames();

@@ -630,6 +630,7 @@ namespace uc {
         CJK             = 1<<5,     ///< [+] CJK for tofu counting (see remark below)
         NO_EMOJI        = 1<<6,     ///< [+] No graphic emoji
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
+        HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
     ///< @warning  Bfg::CJK ≠ SynthIcon.continent

@@ -1143,12 +1143,14 @@ constinit const uc::Block uc::blocks[] {
     { 0x0000, 0x007F, { 'L', EcContinent::EUROPE },
             "Basic Latin",
             { EcScript::Latn, 0 },
-            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Latn, EcFont::NORMAL,
+            Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin-1 OK
     { 0x0080, 0x00FF, { 0xE4, EcContinent::EUROPE },
             "Latin-1 Supplement",
             { EcScript::Latn, 1 },
-            EcScript::Latn, EcFont::NORMAL, Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION },
+            EcScript::Latn, EcFont::NORMAL,
+            Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin extended A OK
     { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE },
             "Latin Extended-A",
@@ -1404,7 +1406,8 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
     { 0x2070, 0x209F, { 0x2074, EcContinent::NONE, Ifg::APPROX_2_CHARS },
-            "Superscripts and Subscripts", MyName::INST },
+            "Superscripts and Subscripts",
+            MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Curr symbols OK
     { 0x20A0, 0x20CF, { 0x20AC, EcContinent::NONE },
             "Currency Symbols", MyName::INST },
@@ -1418,7 +1421,8 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Number forms OK
     { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
-            "Number Forms", MyName::INST, },
+            "Number Forms",
+            MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
     { 0x2190, 0x21FF, { L'↑', EcContinent::NONE },
             "Arrows",
@@ -1442,7 +1446,8 @@ constinit const uc::Block uc::blocks[] {
     // Enclosed alnum OK, need ordinary Cambria
     { 0x2460, 0x24FF, { L'①', EcContinent::NONE },
             "Enclosed Alphanumerics",
-            MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
+            MyName::INST, EcScript::NONE, EcFont::NORMAL,
+            Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS },
     // Box drawing OK
     { 0x2500, 0x257F, { L'╢', EcContinent::NONE },
             "Box Drawing",
@@ -1460,7 +1465,7 @@ constinit const uc::Block uc::blocks[] {
     // Dingbats OK, need Cambria here!
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats",
-            MyName::INST, EcScript::NONE, EcFont::DINGBAT2 },
+            MyName::INST, EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS },
     // Misc math A OK
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",
@@ -1571,7 +1576,8 @@ constinit const uc::Block uc::blocks[] {
     // Enclosed CJK letters and months OK
     { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK },
             "Enclosed CJK Letters and Months",
-            MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            MyName::INST, EcScript::Hani, EcFont::NORMAL,
+            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",
@@ -1739,7 +1745,8 @@ constinit const uc::Block uc::blocks[] {
     // Half/full OK
     { 0xFF00, 0xFFEF, { L'５', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Halfwidth and Fullwidth Forms",
-            MyName::INST, EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            MyName::INST, EcScript::NONE, EcFont::CJK,
+            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::NONE },
             "Specials", MyName::INST },
@@ -2167,7 +2174,8 @@ constinit const uc::Block uc::blocks[] {
     // Math alnum OK
     { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE },
             "Mathematical Alphanumeric Symbols",
-            { EcScript::ZMAT, 'a' }, EcScript::NONE, EcFont::MATH_CAMBRIA },
+            { EcScript::ZMAT, 'a' }, EcScript::NONE, EcFont::MATH_CAMBRIA,
+            Bfg::HIPRIO_NUMBERS },
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting", { EcScript::Sgnw, 0}, EcScript::Sgnw },
@@ -2284,7 +2292,8 @@ constinit const uc::Block uc::blocks[] {
     // Legacy OK
     { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS },
             "Symbols for Legacy Computing",
-            MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER },
+            MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER,
+            Bfg::HIPRIO_NUMBERS },
     // CJK B OK
     { 0x20000, 0x2A6DF, { 0x20024, EcContinent::CJK },
             "CJK Unified Ideographs Extension B",
