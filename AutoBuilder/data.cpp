@@ -183,6 +183,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MIAO",           Dicf::TRIG_SCRIPT },
     { "PARTHIAN",       Dicf::TRIG_SCRIPT },
     { "REJANG",         Dicf::TRIG_SCRIPT },
+    { "ROMAN",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "RONGORONGO",     Dicf::TRIG_SCRIPT },
     { "RUNIC",          Dicf::TRIG_SCRIPT },
     { "SAMARITAN",      Dicf::TRIG_SCRIPT },
@@ -1201,8 +1202,10 @@ const std::multiset<PrefixEntry> prefixes {
     { { "ZNAMENNY"sv, "PRIZNAK"sv, "MODIFIER"sv }, PrefixAction::NEXT_CAP },
     { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
     { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
-    { { "TAG"sv }, PrefixAction::NEXT_CAP },      // Tags
-    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },      // Clock face XXX
+    { { "TAG"sv }, PrefixAction::NEXT_CAP },                    // Tags
+    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },        // Clock face XXX
+    { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Circled ideograph XXX
+    { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Parenthesized ideograph XXX
 };
 
 
