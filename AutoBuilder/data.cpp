@@ -1172,6 +1172,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Coptic symbol Shima Sima")
     EX("Modifier breve with inverted breve")    // Modifier
     EX("Miao sign Consonant modifier bar")      // Same
+    EX("Medefaidrin exclamation Oh")            // Checked Exclamation, no more
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
