@@ -39,13 +39,13 @@ namespace uc {
 
     enum {
         // LOWEST
-        HIPRIO_KEYWORD = 0,
-        HIPRIO_MNEMONIC_CASE,
-        HIPRIO_MNEMONIC_EXACT,
-        HIPRIO_DEC,
-        HIPRIO_HEX,
+        HIPRIO_TEXTUAL = 0,     ///< simple textual search, unused as constant
+        HIPRIO_NUMERIC,         ///< search by numeric value
+        HIPRIO_MNEMONIC_CASE,   ///< search by HTML mnemonic — wrong case
+        HIPRIO_MNEMONIC_EXACT,  ///< search by HTML mnemonic — exact case match
+        HIPRIO_DEC,             ///< decimal value matches
+        HIPRIO_HEX,             ///< hex value matches
         // HIGHEST
-        HIPRIO_FIRST_ONE = HIPRIO_MNEMONIC_EXACT  // [>=] can convert multiple to one
     };
 
     struct MiniLine {
@@ -109,8 +109,9 @@ namespace uc {
             || (cp >= 0xFDD0 && cp <= 0xFDEF);
     }
 
-    SingleResult findCode(char32_t code);
-    SingleResult findStrCode(QStringView what, int base);
+    constexpr long long NO_CODE = -1;
+    SingleResult findCode(unsigned long long ull);
+    SingleResult findStrCode(QStringView what, int base, long long& code);
     MultiResult doSearch(QString what);
     bool isNameChar(char32_t cp);
     bool isNameChar(QStringView x);

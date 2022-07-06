@@ -349,6 +349,15 @@ namespace uc {
 
     struct NumType;
 
+    enum class FracType {
+        NONE,       ///< Not a number
+        INTEGER,    ///< Integer
+        PROPER,     ///< <1, e.g. 1/5
+        MIXED       ///< aka “top-heavy” — non-integer and >1
+                    ///< present in Tibetan, non-searchable
+    };
+
+    /// @warning  All fractions are reduced!
     struct Numeric
     {
         long long num = 0, denom = 0;
@@ -356,6 +365,7 @@ namespace uc {
 
         bool isPresent() const { return (ecType != EcNumType::NONE); }
         const NumType& type() const;
+        FracType fracType() const;
     };
 
     enum class EcCategory : unsigned char

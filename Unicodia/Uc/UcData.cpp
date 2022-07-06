@@ -3946,3 +3946,14 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
     }
     sortTerms(pBeg, std::end(sortedTerms));
 }
+
+
+uc::FracType uc::Numeric::fracType() const
+{
+    if (!isPresent())
+        return FracType::NONE;
+    if (denom == 1)
+        return FracType::INTEGER;
+    // Only 1/2 among negative!
+    return (num < denom) ? FracType::PROPER : FracType::MIXED;
+}

@@ -53,11 +53,13 @@ const uc::Cp* uc::MultiResult::one() const
 ///// Search functions /////////////////////////////////////////////////////////
 
 
-uc::SingleResult uc::findCode(char32_t code)
+uc::SingleResult uc::findCode(unsigned long long ull)
 {
     // Too big?
-    if (code >= uc::CAPACITY)
+    if (ull >= uc::CAPACITY)
         return { SearchError::TOO_BIG };
+
+    char32_t code = ull;
 
     // Have that character?
     auto pCp = uc::cpsByCode[code];
@@ -89,13 +91,13 @@ uc::SingleResult uc::findCode(char32_t code)
 }
 
 
-uc::SingleResult uc::findStrCode(QStringView what, int base)
+uc::SingleResult uc::findStrCode(QStringView what, int base, long long& code)
 {
-    uint code = 0;
     bool isOk = false;
-    if (code = what.toUInt(&isOk, base); isOk) {
+    if (code = what.toLongLong(&isOk, base); isOk) {
         return findCode(code);
     } else {
+        code = NO_CODE;
         return { SearchError::CONVERT_ERROR };
     }
 }
@@ -106,6 +108,7 @@ bool uc::isNameChar(char32_t cp)
     return (cp >= 'A' && cp <= 'Z')
         || (cp >= 'a' && cp <= 'z')
         || (cp >= '0' && cp <= '9')
+        || (cp == '/')   // Not really a name char, but need for search by fraction
         || (cp == '-')
         || (cp == ' ');
 }
@@ -173,6 +176,23 @@ std::u8string uc::toMnemo(const QString& x)
 }
 
 
+namespace {
+
+    std::unordered_set<unsigned char> findIntNumerics(long long x)
+    {
+        std::unordered_set<unsigned char> r;
+        for (int i = 0; i < uc::N_NUMERICS; ++i) {
+            auto& num = uc::allNumerics[i];
+            if (num.num == x && num.denom == 1) {
+                r.insert(i);
+            }
+        }
+        return r;
+    }
+
+}   // anon namespace
+
+
 uc::MultiResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -196,10 +216,11 @@ uc::MultiResult uc::doSearch(QString what)
     if (what.isEmpty())
         return { SearchError::NO_SEARCH };
 
+    long long code;
     if (what.startsWith("U+", Qt::CaseInsensitive)) {
         // U+:
         auto sHex = QStringView(what).mid(2);
-        auto codeResult = uc::findStrCode(sHex, 16);
+        auto codeResult = uc::findStrCode(sHex, 16, code);
         return codeResult;
     }
 
@@ -233,71 +254,85 @@ uc::MultiResult uc::doSearch(QString what)
         // Try find hex
         const uc::Cp* hex = nullptr;
         if (isLongEnoughNumber) {
-            if (auto q = uc::findStrCode(what, 16); q.err == SearchError::OK) {
+            if (auto q = uc::findStrCode(what, 16, code);
+                    q.err == SearchError::OK) {
                 auto& bk = r.emplace_back(q);
                 bk.prio.high = uc::HIPRIO_HEX;
+                hex = q.cp;
             }
         }
 
         // Try find dec
         const uc::Cp* dec = nullptr;
-        if (isLongEnoughNumber) {
-            if (auto q = uc::findStrCode(what, 10);
-                    q.err == SearchError::OK && q.code >= 10) {       // if you find 08 → do not dupe
-                auto& bk = r.emplace_back(q);
-                bk.prio.high = uc::HIPRIO_DEC;
-            }
+        if (auto q = uc::findStrCode(what, 10, code);
+                q.err == SearchError::OK && q.code >= 10 && isLongEnoughNumber) {       // if you find 08 → do not dupe
+            auto& bk = r.emplace_back(q);
+            bk.prio.high = uc::HIPRIO_DEC;
+            dec = q.cp;
         }
 
-        /// @todo [urgent, #140] find by numeric value
+        // Find integer
+        std::unordered_set<unsigned char> numerics;
+        if (code != NO_CODE) {
+            numerics = findIntNumerics(code);
+        } else {
+            /// @todo [urgent, #140] find fraction
+        }
 
         // SEARCH BY KEYWORD/mnemonic
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
         for (auto& cp : uc::cpInfo) {
-            if (&cp != hex && &cp != dec) {   // Do not check hex/dec once again
-                auto names = cp.allRawNames();
-                struct {
-                    srh::Prio prio;
-                    std::u8string_view name;
-                } best;
-                auto& cat = cp.category();
-                auto block = blockOf(cp.subj);
-                bool isNonScript =
-                        (cp.ecCategory != EcCategory::SYMBOL_MODIFIER
-                        && cat.upCat != UpCategory::LETTER
-                        && cat.upCat != UpCategory::MARK
-                        && !block->flags.have(Bfg::SCRIPTLIKE)
-                        && cp.script().flags.have(Sfg::NONSCRIPT));
-                for (auto& nm : names) {
-                    if (nm.starts_with('&')) {
-                        // Search by HTML mnemonic
-                        if (nm.size() == sv.size() + 2) {
-                            auto mnemo = nm.substr(1, sv.size());
-                            if (sv == mnemo) {
-                                auto& bk = r.emplace_back(cp, nm);
-                                bk.prio.high = HIPRIO_MNEMONIC_EXACT;
-                                goto brk;
-                            } else if (srh::stringsCiEq(sv, mnemo)) {
-                                auto& bk = r.emplace_back(cp, nm);
-                                bk.prio.high = HIPRIO_MNEMONIC_CASE;
-                                goto brk;
+            if (&cp != hex && &cp != dec) {  // Do not check what we found once again
+                // Numeric search
+                if (numerics.contains(cp.iNumeric)) {
+                    auto& bk = r.emplace_back(cp);
+                    bk.prio.high = HIPRIO_NUMERIC;
+                } else {
+                    // Textual search
+                    auto names = cp.allRawNames();
+                    struct {
+                        srh::Prio prio;
+                        std::u8string_view name;
+                    } best;
+                    auto& cat = cp.category();
+                    auto block = blockOf(cp.subj);
+                    bool isNonScript =
+                            (cp.ecCategory != EcCategory::SYMBOL_MODIFIER
+                            && cat.upCat != UpCategory::LETTER
+                            && cat.upCat != UpCategory::MARK
+                            && !block->flags.have(Bfg::SCRIPTLIKE)
+                            && cp.script().flags.have(Sfg::NONSCRIPT));
+                    for (auto& nm : names) {
+                        if (nm.starts_with('&')) {
+                            // Search by HTML mnemonic
+                            if (nm.size() == sv.size() + 2) {
+                                auto mnemo = nm.substr(1, sv.size());
+                                if (sv == mnemo) {
+                                    auto& bk = r.emplace_back(cp, nm);
+                                    bk.prio.high = HIPRIO_MNEMONIC_EXACT;
+                                    goto brk;
+                                } else if (srh::stringsCiEq(sv, mnemo)) {
+                                    auto& bk = r.emplace_back(cp, nm);
+                                    bk.prio.high = HIPRIO_MNEMONIC_CASE;
+                                    goto brk;
+                                }
+                            }
+                        } if (nm.find('#') == std::u8string_view::npos) {
+                            // Search by keyword
+                            if (auto pr = srh::findNeedle(nm, needle, isNonScript);
+                                    pr > best.prio) {
+                                best.prio = pr;
+                                best.name = nm;
                             }
                         }
-                    } if (nm.find('#') == std::u8string_view::npos) {
-                        // Search by keyword
-                        if (auto pr = srh::findNeedle(nm, needle, isNonScript);
-                                pr > best.prio) {
-                            best.prio = pr;
-                            best.name = nm;
-                        }
                     }
-                }
-                if (best.prio > srh::Prio::EMPTY) {
-                    if (best.name == names[0])
-                        best.name = std::u8string();
-                    r.emplace_back(cp, best.name, best.prio);
+                    if (best.prio > srh::Prio::EMPTY) {
+                        if (best.name == names[0])
+                            best.name = std::u8string();
+                        r.emplace_back(cp, best.name, best.prio);
+                    }
                 }
             brk:;
             }
