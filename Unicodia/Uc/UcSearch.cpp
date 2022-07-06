@@ -103,19 +103,39 @@ uc::SingleResult uc::findStrCode(QStringView what, int base, long long& code)
 }
 
 
+namespace {
+
+    bool isAlnum(char32_t cp)
+    {
+        return (cp >= 'A' && cp <= 'Z')
+            || (cp >= 'a' && cp <= 'z')
+            || (cp >= '0' && cp <= '9');
+    }
+
+}
+
+
 bool uc::isNameChar(char32_t cp)
 {
-    return (cp >= 'A' && cp <= 'Z')
-        || (cp >= 'a' && cp <= 'z')
-        || (cp >= '0' && cp <= '9')
-        || (cp == '/')   // Not really a name char, but need for search by fraction
-        || (cp == '-')
-        || (cp == ' ');
+    switch (cp) {
+    case '/':   // Not really a name char, but need for search by fraction
+    case '.':   // Same
+    case ',':   // Same
+    case '-':
+    case ' ':
+        return true;
+    default:
+        return isAlnum(cp);
+    }
 }
 
 
 bool uc::isNameChar(QStringView x)
 {
+    // Special for 1-char
+    if (x.length() == 1) {
+        return (isAlnum(x[0].unicode()));
+    }
     for (auto v : x) {
         if (!isNameChar(v.unicode()))
             return false;
@@ -272,13 +292,15 @@ uc::MultiResult uc::doSearch(QString what)
             dec = q.cp;
         }
 
-        // Find integer
+        // Find number
         std::unordered_set<unsigned char> numerics;
         if (code != NO_CODE) {
+            // Integer
             numerics = findNumerics(code, 1);
         } else {
             auto things = what.split('/');
             if (things.size() == 2) {
+                // Vulgar fraction
                 bool isOk1, isOk2;
                 auto num   = things[0].trimmed().toInt(&isOk1);
                 auto denom = things[1].trimmed().toInt(&isOk2);
@@ -294,6 +316,27 @@ uc::MultiResult uc::doSearch(QString what)
                         num /= reduceValue;
                         denom /= reduceValue;
                         numerics = findNumerics(num, denom);
+                    }
+                }
+            } else {
+                QString q = what;
+                q.replace(',', '.');
+                bool isOk;
+                auto val = q.toDouble(&isOk);
+                if (isOk) {
+                    // Decimal fraction
+                    // Need one digit after point; two and more → stop
+                    int denom = 10;
+                    auto val1 = val * denom;
+                    auto val2 = std::round(val1);
+                    if (std::abs(val1 - val2) < 1e-5) {
+                        int num = val2;
+                        if (num != 0) {
+                            auto reduceValue = std::gcd(num, denom);
+                            num /= reduceValue;
+                            denom /= reduceValue;
+                            numerics = findNumerics(num, denom);
+                        }
                     }
                 }
             }
