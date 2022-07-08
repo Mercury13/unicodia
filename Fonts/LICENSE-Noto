@@ -18,7 +18,7 @@ What was done by authors of Unicodia:
   - Copied 25CC dotted circle from Devanagari
 * Kannada, Modi, Syloti Nagri
   - Rehinted with hinting VM
-* Dives Akuru, Pahawh Hmong
+* Dives Akuru, Gurmukhi, Pahawh Hmong
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
   - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.

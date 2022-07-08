@@ -167,7 +167,7 @@ constinit const uc::Font uc::fontInfo[] = {
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
-    { "NotoSansGurmukhiUI-Regular.ttf", 110_pc },                               // Gurmukhi
+    { "NotoSerifGurmukhi-Regular.ttf" },                                        // Gurmukhi
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
