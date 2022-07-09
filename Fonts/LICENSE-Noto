@@ -26,7 +26,7 @@ What was done by authors of Unicodia:
   - Added anchors candrabindu 0900 → Vedic umlauts 1CD0…D2, F4
   - Added same anchors to upper umlauts A8E0…F1
   - Added upper anchors KA 0915 → dotted circle 25CC
-  - Dereferenced 0934
+  - Dereferenced 0934, 0958…5F
   - Rehinted with TtfAutoHint, see settings PNG
 * Glagolitic
   - Copied 25CC dotted circle from Devanagari; created anchors lower than on actual letters
