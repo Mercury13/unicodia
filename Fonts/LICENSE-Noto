@@ -21,12 +21,13 @@ What was done by authors of Unicodia:
 * Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
-  - Copied 4 chars A8FC..FF (Devanagari Extended) from newer version.
-    (note: scale new → old 194%)
-  - Made 1CF8..FA (Vedic Extensions).
-  - Copied 2 chars 1CF5, F6 (Vedic Extensions) from newer version.
-    (umlauts are just for showcasing and actually unusable!)
-  - Rehinted
+  - Set Asc/desc to 1280/525
+  - Set Typo asc/desc to 1180/-525
+  - Added anchors candrabindu 0900 → Vedic umlauts 1CD0…D2, F4
+  - Added same anchors to upper umlauts A8E0…F1
+  - Added upper anchors KA 0915 → dotted circle 25CC
+  - Dereferenced 0934
+  - Rehinted with TtfAutoHint, see settings PNG
 * Glagolitic
   - Copied 25CC dotted circle from Devanagari; created anchors lower than on actual letters
   - Made Caudate Chrivi 2C2F and 5F; created anchors on the same height

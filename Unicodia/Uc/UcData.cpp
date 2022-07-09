@@ -53,9 +53,11 @@ constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
 
-constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari.ttf";
+constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
 constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
 constexpr auto SIZE_DEVA = 110_pc;
+
+constexpr std::string_view FNAME_NAND = "NotoSansNandinagari-Regular.ttf";
 
 constinit const uc::Font uc::fontInfo[] = {
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal
@@ -104,7 +106,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBamum-Regular.ttf", 110_pc },                                    // Bamum
     { "NotoSansBassaVah-Regular.ttf" },                                         // Bassa Vah
     { "NotoSansBatak-Regular.ttf", Ffg::DESC_BADLY_HINTED },                    // Batak
-    { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                   // Vedic = Devanagari → Bengali
+    { FNAME_DEVA, Ffg::FALL_TO_NEXT, STYLE_DEVA, SIZE_DEVA },                   // Vedic = Deva → Nand → Beng
+      { FNAME_NAND, Ffg::FALL_TO_NEXT },                                        // …1
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
     { "NotoSansBrahmi-Regular.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },     // Brahmi
@@ -135,7 +138,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "SimSun,Microsoft YaHei" },                                               // CJK structure
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
-    { FNAME_DEVA, STYLE_DEVA, SIZE_DEVA },                                      // Devanagari
+    { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
     { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                      // Dingbat
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …1
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …2
@@ -214,7 +217,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
     { "NotoSansNabataean-Regular.ttf" },                                        // Nabataean
-    { "NotoSansNandinagari-Regular.ttf" },                                      // Nandinagari
+    { FNAME_NAND },                                                             // Nandinagari
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian

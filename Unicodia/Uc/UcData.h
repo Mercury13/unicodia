@@ -235,7 +235,8 @@ namespace uc {
         BAMUM,
         BASSA_VAH,
         BATAK,
-        VEDIC,      // Devanagari → Bengali
+        VEDIC,      // Devanagari → Nadinagari → Bengali
+          Z_VED_1,
         BENGALI,
         BHAIKSUKI,
         BRAHMI,
