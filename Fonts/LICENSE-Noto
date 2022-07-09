@@ -16,7 +16,7 @@ What was done by authors of Unicodia:
   - Turned in advance Multiocular O to U15 version
 * Bamum, NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
-* Kannada, Modi, Syloti Nagri
+* Modi, Syloti Nagri
   - Rehinted with hinting VM
 * Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong
   - Rehinted with TtfAutoHint, see settings PNG
@@ -35,6 +35,9 @@ What was done by authors of Unicodia:
   - Rehinted with TtfAutoHint; settings default
 * Hebrew
   - Made 05EF yod triangle
+* Kannada
+  - Added two new chars
+  - Rehinted with FontForge
 * Khudawadi
   - Made default anchoring of umlauts
   - Rehinted
