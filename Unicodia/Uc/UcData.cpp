@@ -3908,6 +3908,8 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
 
         // ZSUX: copy from Cuneiform block
         if (blk.startingCp == 0x12000) {    // Cuneiform
+            if (blk.alphaKey.ecScript != EcScript::ZSUX)
+                throw std::logic_error("Need pseudo-script ZSUX");
             script.loc.name = blk.loc.name;
         }
 
