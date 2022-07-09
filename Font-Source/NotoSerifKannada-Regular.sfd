@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1506051623
-ModificationTime: 1657407132
+ModificationTime: 1657407935
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -11585,6 +11585,7 @@ SplineSet
  340 49 340 49 301 19 c 128,-1,81
  262 -11 262 -11 205 -11 c 0,0,1
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 42 subtable" nna_kannada zerowidthjoiner
 Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 9 subtable" nna_kannada.base
 EndChar
@@ -14609,6 +14610,7 @@ SplineSet
  228 356 228 356 262 356 c 0,46,47
 EndSplineSet
 Kerns2: 408 -24 "'kern' Horizontal Kerning lookup 51 per glyph data 0" 373 -24 "'kern' Horizontal Kerning lookup 51 per glyph data 0" 371 -10 "'kern' Horizontal Kerning lookup 51 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 42 subtable" la_kannada zerowidthjoiner
 Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 9 subtable" la_kannada.base
 EndChar
@@ -26869,6 +26871,7 @@ SplineSet
  396 -196 396 -196 373 -196 c 0,110,111
 EndSplineSet
 Kerns2: 408 -58 "'kern' Horizontal Kerning lookup 51 per glyph data 0" 373 -58 "'kern' Horizontal Kerning lookup 51 per glyph data 0" 371 -58 "'kern' Horizontal Kerning lookup 51 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 46 subtable" gha_kannada iMatra_kannada
 EndChar
 
@@ -27960,6 +27963,7 @@ SplineSet
  458 -174 458 -174 445.5 -183.5 c 128,-1,106
  433 -193 433 -193 410 -193 c 0,92,93
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 46 subtable" cha_kannada iMatra_kannada
 EndChar
 
@@ -34693,6 +34697,7 @@ SplineSet
  235 525 235 525 270 525 c 0,65,66
 EndSplineSet
 Kerns2: 371 14 "'kern' Horizontal Kerning lookup 51 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 46 subtable" va_kannada iMatra_kannada
 EndChar
 
@@ -46850,6 +46855,7 @@ SplineSet
  397 -193 397 -193 374 -193 c 0,84,85
 EndSplineSet
 Kerns2: 371 10 "'kern' Horizontal Kerning lookup 51 per glyph data 0"
+LCarets2: 1 0
 Ligature2: "'psts' Post Base Substitutions lookup 46 subtable" dha_kannada eMatra_kannada
 EndChar
 
