@@ -3907,6 +3907,8 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         auto& script = scriptInfo[static_cast<int>(blk.alphaKey.ecScript)];
 
         // ZSUX: copy from Cuneiform block
+        // By my rule “Once laid, still a maid”, I do not make special rule
+        // in database
         if (blk.startingCp == 0x12000) {    // Cuneiform
             if (blk.alphaKey.ecScript != EcScript::ZSUX)
                 throw std::logic_error("Need pseudo-script ZSUX");
