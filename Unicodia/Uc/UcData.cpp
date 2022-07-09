@@ -54,7 +54,7 @@ constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
 
 constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
-constexpr auto STYLE_DEVA = "padding-top:10%"_sty;
+constexpr auto STYLE_DEVA = ""_sty;
 constexpr auto SIZE_DEVA = 110_pc;
 
 constexpr std::string_view FNAME_NAND = "NotoSansNandinagari-Regular.ttf";
@@ -1776,7 +1776,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Ancient symbols OK
     { 0x10190, 0x101CF, { 0x10192, EcContinent::EUROPE, Ifg::CONTINENT_OK },
-            "Ancient Symbols",        
+            "Ancient Symbols",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Phaistos Disc OK
     { 0x101D0, 0x101FF, { 0x101D1, EcContinent::EUROPE, Ifg::CONTINENT_OK },
@@ -2726,7 +2726,7 @@ namespace {
         altgr ( u'–', '_' ),
         altgr ( u'≠', '=' ),
         altgr ( u'±', '+' ),
-        altgruml ( u'̆', 'Q' ),             
+        altgruml ( u'̆', 'Q' ),
             { u'ĕ', { 'Q', 'e' } },
             { u'ŭ', { 'Q', 'u' } },
             { u'ĭ', { 'Q', 'i' } },
