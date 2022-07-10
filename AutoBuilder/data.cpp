@@ -1173,6 +1173,10 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Modifier breve with inverted breve")    // Modifier
     EX("Miao sign Consonant modifier bar")      // Same
     EX("Medefaidrin exclamation Oh")            // Checked Exclamation, no more
+    EX("Gurmukhi Iri")                          // Same as Gurmukhi letter Uu
+    EX("Gurmukhi Ura")                          // Same
+    EX("Gurmukhi Ek Onkar")                     // Ligature of phrase
+    EX("Bengali letter Khanda Ta")              // Sword-like; because of Sikh character it’s tricky
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
