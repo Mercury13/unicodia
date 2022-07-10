@@ -26,6 +26,7 @@ https://software.sil.org/scheherazade/download/ — Scheherazade, open Arabic fo
 https://www.amirifont.org/ — Amiri, open Arabic font, full coverage of aux blocks except one char
 https://oldhungarian.eu/index_en.html — Hungarian runes
 http://cheonhyeong.com/Simplified/download.html — Tshyn, strange U13 font
+https://github.com/TiroTypeworks/Indigo — Indic fonts
 
 
 CHAR IMAGES
