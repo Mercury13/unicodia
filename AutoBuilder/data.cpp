@@ -339,9 +339,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
+    { "APOSTROPHE",     Dicf::PART_NOUN },
     { "ARDHAVISARGA",   Dicf::PART_NOUN },
     { "ASPIRATION",     Dicf::PART_NOUN },
-    { "APOSTROPHE",     Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
     { "ARROW",          Dicf::PART_NOUN },
     { "ARROWHEAD",      Dicf::PART_NOUN },
