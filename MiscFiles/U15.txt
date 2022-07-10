@@ -43,9 +43,6 @@ Kaktovik numerals
 Kana/small
 * New chars 1B132, 1B155
 
-Kannada
-* New char 0CF3
-
 Kawi
 * New block 11F00…11F59, +86
 
@@ -75,6 +72,10 @@ Special/Emoji/Transport
 
 Cyrillic ex B
 * Changed glyph A66E
+* Drew in Noto
+
+Kannada
+* New char 0CF3
 * Drew in Noto
 
 Old Turkic — BETA
