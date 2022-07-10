@@ -466,7 +466,7 @@ TEST (Decap, ToneArabicA)
 TEST (Decap, ToneLao)
 {
     auto r = decapitalize("LAO TONE MAI TI");
-    EXPECT_EQ("Lao tone Mai Ti", r);
+    EXPECT_EQ("Lao tone Mai ti", r);
 }
 
 
@@ -626,7 +626,7 @@ TEST (Decap, ToneMyanmar3)
 TEST (Decap, ToneMai)
 {
     auto r = decapitalize("TAI VIET TONE MAI NUENG");
-    EXPECT_EQ("Tai Viet tone Mai Nueng", r);
+    EXPECT_EQ("Tai Viet tone Mai nueng", r);
 }
 
 

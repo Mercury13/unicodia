@@ -339,6 +339,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
+    { "ARDHAVISARGA",   Dicf::PART_NOUN },
     { "ASPIRATION",     Dicf::PART_NOUN },
     { "APOSTROPHE",     Dicf::PART_NOUN },
     { "AXE",            Dicf::PART_NOUN },  // For Phaistos Disc
@@ -374,6 +375,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LINE",           Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
     { "PLUS",           Dicf::PART_NOUN },
+    { "RANA",           Dicf::PART_NOUN },
     { "REDUPLICATION",  Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
     { "RING",           Dicf::PART_NOUN },
@@ -598,7 +600,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LOW",            Dicf::PART_ADJECTIVE },
     { "LUNATE",         Dicf::PART_ADJECTIVE },
     { "LITTLE",         Dicf::PART_ADJECTIVE },
-    { "MAI",            Dicf::PART_ADJECTIVE },
     { "MARWARI",        Dicf::PART_ADJECTIVE },
     { "MEDIAL",         Dicf::PART_ADJECTIVE },
     { "MID",            Dicf::PART_ADJECTIVE },
@@ -632,6 +633,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "RIGHT",          Dicf::PART_ADJECTIVE },
     { "RIGHT-STEM",     Dicf::PART_ADJECTIVE },
     { "ROMANIAN",       Dicf::PART_ADJECTIVE },
+    { "ROTATED",        Dicf::PART_ADJECTIVE },
     { "ROUNDED",        Dicf::PART_ADJECTIVE },
     { "SARA",           Dicf::PART_ADJECTIVE }, // Used for Thai
     { "SCRIPT",         Dicf::PART_MIXED },
