@@ -827,16 +827,297 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Manichaean abbreviation mark above")    // Abbreviation’s mark
     EX("Manichaean abbreviation mark below")    // The same
     EX("Kaithi number sign above")              // The same
+    EX("Earth globe Europe-Africa")     // Rare names
+    EX("Earth globe Americas")
+    EX("Earth globe Asia-Australia")
+    EX("Milky Way")                     // Special proper name
+    EX("Tokyo Tower")                   // Special proper name
+    EX("Statue of Liberty")             // Special proper name
+    EX("Face with No good gesture")     // Complex rules, better manually
+    EX("Face with OK gesture")          // Complex rules, better manually
+    EX("Squared OK")                    // OK is both a syllable and an emoji
+    EX("Squared SOS")                   // The same
+    EX("Squared CL")                    // Squared is a tricky word
+    EX("Squared Cool")
+    EX("Squared New")
+    EX("Squared No good")
+    EX("Squared Up with exclamation mark")
+    EX("Squared Three D")
+    EX("Squared Second screen")
+    EX("Squared Two K")
+    EX("Squared Four K")
+    EX("Squared Eight K")
+    EX("Squared Five point one")
+    EX("Squared Seven point one")
+    EX("Squared Twenty-two point two")
+    EX("Squared Sixty P")
+    EX("Squared One hundred twenty P")
+    EX("Squared HC")
+    EX("Squared Vs")
+    EX("Squared New")
+    EX("Squared NG")
+    EX("Squared Free")
+    EX("Squared ID")
+    EX("Squared Hi-res")
+    EX("Squared HDR")
+    EX("Squared SHV")
+    EX("Squared VOD")
+    EX("Squared UHD")
+    EX("Squared Lossless")
+    EX("Negative squared IC")
+    EX("Negative squared PA")
+    EX("Negative squared SA")
+    EX("Negative squared AB")
+    EX("Negative squared WC")
+    EX("OK hand sign")                  // OK is both a syllable and an emoji
+    EX("Turned OK hand sign")           // The same
+    EX("Sloping large Or")              // Or is a tricky word
+    EX("Sloping large And")             // And is a tricky word
+    EX("Runic letter Dotted-N")         // Tricky
+    EX("Runic letter Dotted-L")         // The same
+    EX("Runic letter Long-branch-Yr")   // Really tricky
+    EX("Runic letter Short-twig-Yr")    // The same
+    EX("Runic letter Icelandic-Yr")
+    EX("Runic letter Dotted-P")
+    EX("Runic letter Open-P")
+    EX("Runic letter Sigel Long-branch-Sol S")
+    EX("Runic letter Short-twig-Sol S")
+    EX("Runic letter Long-branch-Ar Ae")
+    EX("Runic letter Short-twig-Ar A")
+    EX("Runic letter Long-branch-Hagall H")
+    EX("Runic letter Short-twig-Hagall H")
+    EX("Runic letter Short-twig-Bjarkan B")
+    EX("Runic letter Long-branch-Oss O")
+    EX("Runic letter Short-twig-Oss O")
+    EX("Runic letter Short-twig-Naud N")
+    EX("Runic letter Long-branch-Madr M")
+    EX("Runic letter Short-twig-Madr M")
+    EX("Runic letter Short-twig-Tyr T")
+    EX("Yi syllable iteration mark")    // Maybe so
+    EX("Symbol for type A electronics") // A is tricky
+    EX("Arabic letter Lam with small Arabic letter Tah above")  // Some bug
+    EX("Arabic letter Teh with small Teh above")    // Tricky
+    EX("Arabic letter Reh with small Noon above")   // Same
+    EX("Arabic letter Yeh with two dots below and small Noon above")
+    EX("Arabic letter Peh with small Meem above")
+    EX("Arabic letter Beh with small Meem above")
+    EX("Arabic-Indic Per mille sign")               // Tricky
+    EX("Arabic-Indic Per ten thousand sign")        // Tricky
+    EX("Arabic mathematical Sad")                   // Ambiguous
+    EX("Arabic mathematical Sheen")                 // Ambiguous
+    EX("Hangul choseong filler")                    // Simpler to add exception
+    EX("Hangul jungseong filler")                   // Same
+    EX("Circled CC")                                // Would be Cc
+    EX("Raised MC sign")                            // Same
+    EX("Raised MD sign")
+    EX("Raised MR sign")
+    EX("Square Hiragana Hoka")                      // Better exception
+    EX("Squared Katakana Koko")
+    EX("Squared Katakana Sa")
+    // U14
+    EX("Angle with S inside")                       // Because of Znamenny, S is tricky
+    EX("Perpendicular with S")                      // Same
+    EX("Miao tone right")                           // A clear miss of my algorithm, actually a semi-format tone combiner
+    EX("Miao tone top right")                       // Same
+    EX("Miao tone above")                           // Same
+    EX("Miao tone below")                           // Same
+    EX("Shorthand format Letter overlap")           // Letter is not low-case!
+    EX("Znamenny neume Dva v chelnu")               // Better not to make exception from V
+    // Ligature word: all I see
+    EX("Combining ligature left half")      // Other meaning of ligature — horz parenthesis
+    EX("Combining ligature right half")     // Same
+    EX("Combining ligature left half below")
+    EX("Combining ligature right half below")
+    EX("Planck constant over two pi")   // pi is small here
+
+    EX("Modifier breve with inverted breve")    // Modifier
+
+    // EUROPEAN SCRIPTS
+        // Cyrl
+    EX("Cyrillic capital ligature En Ghe")   // All “ligature” are hand-checked
+    EX("Cyrillic small ligature En Ghe")
+    EX("Cyrillic capital ligature Te Tse")
+    EX("Cyrillic small ligature Te Tse")
+    EX("Cyrillic capital ligature A Ie")
+    EX("Cyrillic small ligature A Ie")
+    EX("Combining Cyrillic Hundred thousands sign")     // Who knows, maybe so
+    EX("Combining Cyrillic Millions sign")
+    EX("Combining Cyrillic Ten millions sign")
+    EX("Combining Cyrillic Hundred millions sign")
+    EX("Combining Cyrillic Thousand millions sign")
+        // Dupl
+    EX("Duployan letter D S")                       // Same
+    EX("Duployan letter R S")                       // Same
+    EX("Duployan letter M S")                       // Same
+    EX("Duployan letter N S")                       // Same
+    EX("Duployan letter J S")                       // Same
+    EX("Duployan letter S S")                       // Same
+    EX("Duployan letter M N S")                     // Same
+    EX("Duployan letter N M S")                     // Same
+    EX("Duployan letter J M S")                     // Same
+    EX("Duployan letter S J S")                     // Same
+    EX("Duployan letter J S with dot")              // Same
+    EX("Duployan letter J N S")                     // Same
+    EX("Duployan letter T S")                       // Same
+    EX("Duployan letter T R S")                     // Same
+    EX("Duployan letter K R S")                     // Same
+    EX("Duployan letter G R S")                     // Same
+    EX("Duployan affix Attached I hook")            // Same
+    EX("Duployan thick letter selector")            // A clear miss of my algo, IDK what to do
+        // Glag
+    EX("Glagolitic capital letter Caudate Chrivi")  // Don’t want to encode Chrivi
+    EX("Glagolitic small letter Caudate Chrivi")    // Same
+        // Grek
+    EX("Greek lunate epsilon symbol")   // Epsilon is small here
+    EX("Greek reversed lunate epsilon symbol") // Same
+    EX("Greek beta symbol")             // Beta is small here
+    EX("Greek capital Kai symbol")      // Kai is capital here
+    EX("Greek kai symbol")              // Kai is small here
+    EX("Greek lunate sigma symbol")     // Sigma is small here
+    EX("Greek rho with stroke symbol")  // Rho is small here
+            // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
+        // Runr
+    EX("Runic Arlaug symbol")    // IDK
+    EX("Runic Tvimadur symbol")  // Same
+    EX("Runic Belgthor symbol")
+
+    // BRAHMIC SCRIPTS
+        // Beng
+    EX("Bengali letter Khanda Ta")  // Sword-like; because of Sikh character it’s tricky
+        // Diak
+    EX("Dives Akuru medial Ya")             // The same
+    EX("Dives Akuru initial Ra")
+    EX("Dives Akuru medial Ra")
+        // Guru
+    EX("Gurmukhi Iri")      // Same as Gurmukhi letter Uu
+    EX("Gurmukhi Ura")      // Same
+    EX("Gurmukhi Ek Onkar") // Ligature of phrase
+        // Orya
+    EX("Oriya Ai length mark")
+        // Thai
+    EX("Thai character No nu")          // Conflict with Greek Nu
+
+    // NON-BRAHMIC ASIAN AND OCEAN SCRIPTS
+        // Arab
+    EX("Arabic small low Waw")          // IDK what to do
+    EX("Arabic small high Sad")
+    EX("Arabic small high Ain")
+    EX("Arabic small high Qaf")
+    EX("Arabic small high Noon with kasra")
+    EX("Arabic small low Noon with kasra")
+    EX("Arabic small high Waw")
+    EX("Arabic small high word Ar-rub") // “Word” is a tricky word
+    EX("Arabic small high word Ath-thalatha")
+    EX("Arabic small high word As-sajda")
+    EX("Arabic small high word An-nisf")
+    EX("Arabic small high word Sakta")
+    EX("Arabic small high word Qif")
+    EX("Arabic small high word Waqfa")
+    EX("Arabic pound mark above")    // Mark is not special word here. You may call “above” an adverb, but no
+    EX("Arabic piastre mark above")
+        // Armn
+    EX("Armenian small ligature Ech Yiwn")  // All “ligature” are manually checked
+    EX("Armenian small ligature Men Now")
+    EX("Armenian small ligature Men Ech")
+    EX("Armenian small ligature Men Ini")
+    EX("Armenian small ligature Vew Now")
+    EX("Armenian small ligature Men Xeh")
+        // Hebr
+    EX("Hebrew Yod triangle")                       // IDK what to do
+    EX("Hebrew ligature Yiddish Vav Yod")           // Same
+    EX("Hebrew ligature Yiddish double Yod")
+    EX("Hebrew ligature Yiddish double Vav")
+    EX("Hebrew ligature Yiddish Yod Yod Patah")
+    EX("Hebrew ligature Alef Lamed")
+        // Sogd
+    EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
+        // Thaa
+    EX("Thaana Abafili")  // I think they should be capitalized
+    EX("Thaana Aabaafili")
+    EX("Thaana Ibifili")
+    EX("Thaana Eebeefili")
+    EX("Thaana Ubufili")
+    EX("Thaana Ooboofili")
+    EX("Thaana Ebefili")
+    EX("Thaana Eybeyfili")
+    EX("Thaana Obofili")
+    EX("Thaana Oaboafili")
+
+    // MODERN ASIAN SCRIPTS
+        // Hmnp
+    EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
+    EX("Nyiakeng Puachue Hmong syllable lengthener")  // Syllable is not special here
+        // Olck
+    EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
+        // Plrd
+    EX("Miao sign Consonant modifier bar")  // Modifier is not special here
+        // Hmng
+    EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
+
+    // AFRICAN SCRIPTS
+        // Bamu
+    EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
+        // Copt
+    EX("Coptic combining Ni above") // Ni is widely used in cuneiform, and IDK what to do
+    EX("Coptic symbol kai")             // Seemingly small
+    EX("Coptic symbol Mi Ro")
+    EX("Coptic symbol Pi Ro")
+    EX("Coptic symbol Tau Ro")
+    EX("Coptic symbol Khi Ro")
+    EX("Coptic symbol Shima Sima")
+        // Ethi
+    EX("Ethiopic combining gemination and vowel length mark") // Vowel is not special here
+    EX("Ethiopic combining vowel length mark")                // Same
+        // Medf
+    EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
+
+    // CJK
+        // Decorations etc
+    EX("Rounded symbol for Fu")
+    EX("Rounded symbol for Lu")
+    EX("Rounded symbol for Shou")
+    EX("Rounded symbol for Xi")
+    EX("Rounded symbol for Shuangxi")
+    EX("Rounded symbol for Cai")
+
+    // SPECIALS
+        // Emoji
+    EX("Man with gua pi mao")           // Conflict with Greek Pi
+        // Formatting
+    EX("National digit shapes")   // Digit is not special here
+    EX("Nominal digit shapes")    // Same
+        // Music
+    EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
+    EX("Musical symbol Right repeat sign")      // The same
+    EX("Musical symbol Half pedal mark")        // The same
+    EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
+
+    // B-I-G  S-E-T-S
+
+    // Mathematical alphabets
+#define MATH_SYM(x) \
+        EX("Greek " x " symbol") \
+        EX("Mathematical bold " x " symbol") \
+        EX("Mathematical italic " x " symbol") \
+        EX("Mathematical bold italic " x " symbol") \
+        EX("Mathematical sans-serif bold " x " symbol") \
+        EX("Mathematical sans-serif bold italic " x " symbol")
+
+    MATH_SYM ("epsilon")    // Small epsilon etc here
+    MATH_SYM ("theta")
+    MATH_SYM ("kappa")
+    MATH_SYM ("phi")
+    MATH_SYM ("rho")
+    MATH_SYM ("pi")
+#undef MATH_SYM
+
+    // Hand-checked CJK Latin
     EX("Squared HV")                            // Just manually, small block
     EX("Squared MV")
     EX("Squared SD")
     EX("Squared SS")
     EX("Squared PPV")
     EX("Squared WC")
-    EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
-    EX("Musical symbol Right repeat sign")      // The same
-    EX("Musical symbol Half pedal mark")        // The same
-    EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
     EX("Square Corporation")                    // IDK what’s happening
     EX("Square hPa")                            // A whole cohort of Chinese units
     EX("Square IU")
@@ -939,247 +1220,13 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Square sr")
     EX("Square Sv")
     EX("Square Wb")
-    EX("Square v over m")
-    EX("Square a over m")
+    EX("Square V over m")   // Volt/metre
+    EX("Square A over m")   // Ampere/metre
     EX("Square gal")
     EX("Square Hg")
     EX("Square erg")
     EX("Square eV")
     EX("Square DJ")
-    EX("Earth globe Europe-Africa")     // Rare names
-    EX("Earth globe Americas")
-    EX("Earth globe Asia-Australia")
-    EX("Milky Way")                     // Special proper name
-    EX("Tokyo Tower")                   // Special proper name
-    EX("Statue of Liberty")             // Special proper name
-    EX("Face with No good gesture")     // Complex rules, better manually
-    EX("Face with OK gesture")          // Complex rules, better manually
-    EX("Squared OK")                    // OK is both a syllable and an emoji
-    EX("Squared SOS")                   // The same
-    EX("Squared CL")                    // Squared is a tricky word
-    EX("Squared Cool")
-    EX("Squared New")
-    EX("Squared No good")
-    EX("Squared Up with exclamation mark")
-    EX("Squared Three D")
-    EX("Squared Second screen")
-    EX("Squared Two K")
-    EX("Squared Four K")
-    EX("Squared Eight K")
-    EX("Squared Five point one")
-    EX("Squared Seven point one")
-    EX("Squared Twenty-two point two")
-    EX("Squared Sixty P")
-    EX("Squared One hundred twenty P")
-    EX("Squared HC")
-    EX("Squared Vs")
-    EX("Squared New")
-    EX("Squared NG")
-    EX("Squared Free")
-    EX("Squared ID")
-    EX("Squared Hi-res")
-    EX("Squared HDR")
-    EX("Squared SHV")
-    EX("Squared VOD")
-    EX("Squared UHD")
-    EX("Squared Lossless")
-    EX("Negative squared IC")
-    EX("Negative squared PA")
-    EX("Negative squared SA")
-    EX("Negative squared AB")
-    EX("Negative squared WC")
-    EX("OK hand sign")                  // OK is both a syllable and an emoji
-    EX("Turned OK hand sign")           // The same
-    EX("Sloping large Or")              // Or is a tricky word
-    EX("Sloping large And")             // And is a tricky word
-    EX("Arabic small low Waw")          // IDK what to do
-    EX("Arabic small high Sad")
-    EX("Arabic small high Ain")
-    EX("Arabic small high Qaf")
-    EX("Arabic small high Noon with kasra")
-    EX("Arabic small low Noon with kasra")
-    EX("Arabic small high Waw")
-    EX("Arabic small high word Ar-rub") // “Word” is a tricky word
-    EX("Arabic small high word Ath-thalatha")
-    EX("Arabic small high word As-sajda")
-    EX("Arabic small high word An-nisf")
-    EX("Arabic small high word Sakta")
-    EX("Arabic small high word Qif")
-    EX("Arabic small high word Waqfa")
-    EX("Runic letter Dotted-N")         // Tricky
-    EX("Runic letter Dotted-L")         // The same
-    EX("Runic letter Long-branch-Yr")   // Really tricky
-    EX("Runic letter Short-twig-Yr")    // The same
-    EX("Runic letter Icelandic-Yr")
-    EX("Runic letter Dotted-P")
-    EX("Runic letter Open-P")
-    EX("Runic letter Sigel Long-branch-Sol S")
-    EX("Runic letter Short-twig-Sol S")
-    EX("Runic letter Long-branch-Ar Ae")
-    EX("Runic letter Short-twig-Ar A")
-    EX("Runic letter Long-branch-Hagall H")
-    EX("Runic letter Short-twig-Hagall H")
-    EX("Runic letter Short-twig-Bjarkan B")
-    EX("Runic letter Long-branch-Oss O")
-    EX("Runic letter Short-twig-Oss O")
-    EX("Runic letter Short-twig-Naud N")
-    EX("Runic letter Long-branch-Madr M")
-    EX("Runic letter Short-twig-Madr M")
-    EX("Runic letter Short-twig-Tyr T")
-    EX("Yi syllable iteration mark")    // Maybe so
-    EX("Symbol for type A electronics") // A is tricky
-    EX("Coptic combining Ni above") // Ni is widely used in cuneiform, and IDK what to do
-    EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
-    EX("Dives Akuru medial Ya")             // The same
-    EX("Dives Akuru initial Ra")
-    EX("Dives Akuru medial Ra")
-    EX("Arabic letter Lam with small Arabic letter Tah above")  // Some bug
-    EX("Arabic letter Teh with small Teh above")    // Tricky
-    EX("Arabic letter Reh with small Noon above")   // Same
-    EX("Arabic letter Yeh with two dots below and small Noon above")
-    EX("Arabic letter Peh with small Meem above")
-    EX("Arabic letter Beh with small Meem above")
-    EX("Arabic-Indic Per mille sign")               // Tricky
-    EX("Arabic-Indic Per ten thousand sign")        // Tricky
-    EX("Arabic mathematical Sad")                   // Ambiguous
-    EX("Arabic mathematical Sheen")                 // Ambiguous
-    EX("Hangul choseong filler")                    // Simpler to add exception
-    EX("Hangul jungseong filler")                   // Same
-    EX("Circled CC")                                // Would be Cc
-    EX("Raised MC sign")                            // Same
-    EX("Raised MD sign")
-    EX("Raised MR sign")
-    EX("Square Hiragana Hoka")                      // Better exception
-    EX("Squared Katakana Koko")
-    EX("Squared Katakana Sa")
-    // U14
-    EX("Arabic pound mark above")                   // No adverbs here in data
-    EX("Arabic piastre mark above")                 // Same
-    EX("Glagolitic capital letter Caudate Chrivi")  // Don’t want to encode Chrivi
-    EX("Glagolitic small letter Caudate Chrivi")    // Same
-    EX("Angle with S inside")                       // Because of Znamennoye, S is tricky
-    EX("Perpendicular with S")                      // Same
-    EX("Duployan letter D S")                       // Same
-    EX("Duployan letter R S")                       // Same
-    EX("Duployan letter M S")                       // Same
-    EX("Duployan letter N S")                       // Same
-    EX("Duployan letter J S")                       // Same
-    EX("Duployan letter S S")                       // Same
-    EX("Duployan letter M N S")                     // Same
-    EX("Duployan letter N M S")                     // Same
-    EX("Duployan letter J M S")                     // Same
-    EX("Duployan letter S J S")                     // Same
-    EX("Duployan letter J S with dot")              // Same
-    EX("Duployan letter J N S")                     // Same
-    EX("Duployan letter T S")                       // Same
-    EX("Duployan letter T R S")                     // Same
-    EX("Duployan letter K R S")                     // Same
-    EX("Duployan letter G R S")                     // Same
-    EX("Duployan affix Attached I hook")            // Same
-    EX("Duployan thick letter selector")            // A clear miss of my algo, IDK what to do
-    EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
-    EX("Miao tone right")                           // A clear miss of my algorithm, actually a semi-format tone combiner
-    EX("Miao tone top right")                       // Same
-    EX("Miao tone above")                           // Same
-    EX("Miao tone below")                           // Same
-    EX("Shorthand format Letter overlap")           // Letter is not low-case!
-    EX("Znamenny neume Dva v chelnu")               // Better not to make exception from V
-    EX("Hebrew Yod triangle")                       // IDK what to do
-    EX("Hebrew ligature Yiddish Vav Yod")           // Same
-    EX("Hebrew ligature Yiddish double Yod")
-    EX("Hebrew ligature Yiddish double Vav")
-    // Ligature word: all I see
-    EX("Cyrillic capital ligature En Ghe")
-    EX("Cyrillic small ligature En Ghe")
-    EX("Cyrillic capital ligature Te Tse")
-    EX("Cyrillic small ligature Te Tse")
-    EX("Cyrillic capital ligature A Ie")
-    EX("Cyrillic small ligature A Ie")
-    EX("Armenian small ligature Ech Yiwn")
-    EX("Armenian small ligature Men Now")
-    EX("Armenian small ligature Men Ech")
-    EX("Armenian small ligature Men Ini")
-    EX("Armenian small ligature Vew Now")
-    EX("Armenian small ligature Men Xeh")
-    EX("Hebrew ligature Yiddish Yod Yod Patah")
-    EX("Hebrew ligature Alef Lamed")
-    EX("Combining ligature left half")      // Other meaning of ligature — horz parenthesis
-    EX("Combining ligature right half")     // Same
-    EX("Combining ligature left half below")
-    EX("Combining ligature right half below")
-    EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
-    EX("Runic Arlaug symbol")               // IDK
-    EX("Runic Tvimadur symbol")             // Same
-    EX("Runic Belgthor symbol")
-    EX("Ethiopic combining gemination and vowel length mark")   // False alarm here
-    EX("Ethiopic combining vowel length mark")                  // Same
-    EX("National digit shapes")
-    EX("Nominal digit shapes")
-    EX("Thaana Abafili")        // Thaana: I think they should be capitalized
-    EX("Thaana Aabaafili")
-    EX("Thaana Ibifili")
-    EX("Thaana Eebeefili")
-    EX("Thaana Ubufili")
-    EX("Thaana Ooboofili")
-    EX("Thaana Ebefili")
-    EX("Thaana Eybeyfili")
-    EX("Thaana Obofili")
-    EX("Thaana Oaboafili")
-    EX("Combining Cyrillic Hundred thousands sign")     // Who knows, maybe so
-    EX("Combining Cyrillic Millions sign")
-    EX("Combining Cyrillic Ten millions sign")
-    EX("Combining Cyrillic Hundred millions sign")
-    EX("Combining Cyrillic Thousand millions sign")
-    EX("Rounded symbol for Fu")
-    EX("Rounded symbol for Lu")
-    EX("Rounded symbol for Shou")
-    EX("Rounded symbol for Xi")
-    EX("Rounded symbol for Shuangxi")
-    EX("Rounded symbol for Cai")
-    EX("Man with gua pi mao")           // Conflict with Greek Pi
-    EX("Thai character No nu")          // Conflict with Greek Nu
-    EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
-    EX("Planck constant over two pi")   // pi is small here
-    EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
-
-#define MATH_SYM(x) \
-        EX("Greek " x " symbol") \
-        EX("Mathematical bold " x " symbol") \
-        EX("Mathematical italic " x " symbol") \
-        EX("Mathematical bold italic " x " symbol") \
-        EX("Mathematical sans-serif bold " x " symbol") \
-        EX("Mathematical sans-serif bold italic " x " symbol")
-
-    MATH_SYM ("epsilon")    // Small epsilon etc here
-    MATH_SYM ("theta")
-    MATH_SYM ("kappa")
-    MATH_SYM ("phi")
-    MATH_SYM ("rho")
-    MATH_SYM ("pi")
-#undef MATH_SYM
-
-    EX("Greek lunate epsilon symbol")   // Epsilon is small here
-    EX("Greek reversed lunate epsilon symbol") // Same
-    EX("Greek beta symbol")             // Beta is small here
-    EX("Greek capital Kai symbol")      // Kai is capital here
-    EX("Greek kai symbol")              // Kai is small here
-    EX("Greek lunate sigma symbol")     // Sigma is small here
-    EX("Greek rho with stroke symbol")  // Rho is small here
-            // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
-    EX("Coptic symbol kai")             // Seemingly small
-    EX("Coptic symbol Mi Ro")
-    EX("Coptic symbol Pi Ro")
-    EX("Coptic symbol Tau Ro")
-    EX("Coptic symbol Khi Ro")
-    EX("Coptic symbol Shima Sima")
-    EX("Modifier breve with inverted breve")    // Modifier
-    EX("Miao sign Consonant modifier bar")      // Same
-    EX("Medefaidrin exclamation Oh")            // Checked Exclamation, no more
-    EX("Gurmukhi Iri")                          // Same as Gurmukhi letter Uu
-    EX("Gurmukhi Ura")                          // Same
-    EX("Gurmukhi Ek Onkar")                     // Ligature of phrase
-    EX("Bengali letter Khanda Ta")              // Sword-like; because of Sikh character it’s tricky
-    EX("Oriya Ai length mark")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
