@@ -165,7 +165,7 @@ Latin/IPA ex
 
 Special/Geometric ex
 * New char 1F7D9
-* Drew in Funky, it’ll probably come late, and OK for a single character
+* Drew in Funky, it’ll probably come late, and OK for an isolated character
 
 Wancho
 * Changed sample font (seemingly to Noto)
