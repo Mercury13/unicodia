@@ -41,7 +41,7 @@ Egyptian Hieroglyphs
 Glagolitic
 * Added 2C2F, 2C5F
 * Noto NOT ready
-* Drew in FunkySample
+* Drew in Noto
 
 Kaithi
 * New char 110C2

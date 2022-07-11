@@ -8,7 +8,7 @@ CJK compatibility — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!!
 
 CJK C — BETA
 >> Added 2B739
->> Changed 2B249, no G-source, strange misrender (++ in U15, horz ‡ in West’s), same in SimSun, GW, ask West
+* Changed 2B249, no G-source, (++ in U15, horz ‡ in West’s), same in SimSun, GW. West says it’s hypothetical Chinese version → OK
 
 CJK E — BETA
 * Changed glyph 2BB37, 2BD7D, 2C151, 2C1E0, 2C2D6, 2C5CA, 2C810, 2CD34
@@ -34,12 +34,6 @@ Egyptian hiero — BETA, CHECK ASAP!!!!!!!!!!!!!!!!!!!!!!
 * Added 1342F
 * Lots of chars, still need to check all
 
-Egyptian hiero format
-* Added lots (+29), manual work when U15 comes
-
-Kaktovik numerals
-* New block 1D2C0…D3
-
 Kana/small
 * New chars 1B132, 1B155
 
@@ -58,14 +52,9 @@ Nag alphabet (Mundari)
 Special/Alchemical
 * New chars 1F774…76, 1F77B…7F, +8
 
-Special/Geometric ex
-* New char 1F7D9
-
 Special/Emoji/A
 * +19 chars, let’s wait
-
-Special/Emoji/Transport
-* New char 1F6DC Wireless
+* Drew a few in SVG
 
 
 ===== GAGGED =====
@@ -74,7 +63,15 @@ Cyrillic ex B
 * Changed glyph A66E
 * Drew in Noto
 
-Kannada
+Egyptian hiero format
+* Added lots (+29), manual work when U15 comes
+* Drew either in Noto or programmatically
+
+Kaktovik numerals — BETA
+* New block 1D2C0…D3
+* Drew in Funky
+
+Kannada — BETA
 * New char 0CF3
 * Drew in Noto
 
@@ -85,6 +82,10 @@ Old Turkic — BETA
 Sundanese — BETA
 * Changed glyph 1BBF
 * Drew in Noto
+
+Special/Emoji/Transport
+* New char 1F6DC Wireless
+* Drew in SVG
 
 Special/OCR
 * Enlarged middle stem in 2447
@@ -152,6 +153,7 @@ CJK G — BETA
 Khitan small
 * Changed glyph 18CCA
 * Modern glyph is not cool (right stem), but resembles modified glyph somehow.
+* Andrew West explained his decision — so READY
 
 Lao
 * New char 0ECE
@@ -160,6 +162,10 @@ Lao
 Latin/IPA ex
 * Changed descriptions of 025E, 029A
 * No work needed
+
+Special/Geometric ex
+* New char 1F7D9
+* Drew in Funky, it’ll probably come late, and OK for a single character
 
 Wancho
 * Changed sample font (seemingly to Noto)
