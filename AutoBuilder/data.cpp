@@ -722,7 +722,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "NOVEMBER",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "DECEMBER",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
-    // Znamennoye
+    // Znamenny
     { "CHELYUSTKA",     Dicf::PART_NOUN },
     { "ZAPYATAYA",      Dicf::PART_NOUN },
 
@@ -813,125 +813,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 #define EX(x) { TOUPPER_SV(x), x },
 
 const std::unordered_map<std::string_view, std::string_view> exceptions{
-    EX("Commercial At")                         // At is not a preposition
-    EX("Tag Commercial At")                     // Same
-    EX("Fraction slash")                        // Fraction’s slash
-    EX("Musical symbol With fingernails")       // With is not a preposition
-    EX("Devanagari letter Candra A")            // Both Candra and A are tricky, better to make an exception
-    EX("Vedic tone Dot below")                  // Not tone’s dot
-    EX("Vedic tone Ring above")                 // Not tone’s ring
-    EX("Zanabazar square final consonant mark") // Some bugs
-    EX("Musical symbol Quarter rest")           // Quarter is a tricky word
-    EX("Musical symbol Quarter note")           // The same
-    EX("Arabic number mark above")              // Number’s mark
-    EX("Manichaean abbreviation mark above")    // Abbreviation’s mark
-    EX("Manichaean abbreviation mark below")    // The same
-    EX("Kaithi number sign above")              // The same
-    EX("Earth globe Europe-Africa")     // Rare names
-    EX("Earth globe Americas")
-    EX("Earth globe Asia-Australia")
-    EX("Milky Way")                     // Special proper name
-    EX("Tokyo Tower")                   // Special proper name
-    EX("Statue of Liberty")             // Special proper name
-    EX("Face with No good gesture")     // Complex rules, better manually
-    EX("Face with OK gesture")          // Complex rules, better manually
-    EX("Squared OK")                    // OK is both a syllable and an emoji
-    EX("Squared SOS")                   // The same
-    EX("Squared CL")                    // Squared is a tricky word
-    EX("Squared Cool")
-    EX("Squared New")
-    EX("Squared No good")
-    EX("Squared Up with exclamation mark")
-    EX("Squared Three D")
-    EX("Squared Second screen")
-    EX("Squared Two K")
-    EX("Squared Four K")
-    EX("Squared Eight K")
-    EX("Squared Five point one")
-    EX("Squared Seven point one")
-    EX("Squared Twenty-two point two")
-    EX("Squared Sixty P")
-    EX("Squared One hundred twenty P")
-    EX("Squared HC")
-    EX("Squared Vs")
-    EX("Squared New")
-    EX("Squared NG")
-    EX("Squared Free")
-    EX("Squared ID")
-    EX("Squared Hi-res")
-    EX("Squared HDR")
-    EX("Squared SHV")
-    EX("Squared VOD")
-    EX("Squared UHD")
-    EX("Squared Lossless")
-    EX("Negative squared IC")
-    EX("Negative squared PA")
-    EX("Negative squared SA")
-    EX("Negative squared AB")
-    EX("Negative squared WC")
-    EX("OK hand sign")                  // OK is both a syllable and an emoji
-    EX("Turned OK hand sign")           // The same
-    EX("Sloping large Or")              // Or is a tricky word
-    EX("Sloping large And")             // And is a tricky word
-    EX("Runic letter Dotted-N")         // Tricky
-    EX("Runic letter Dotted-L")         // The same
-    EX("Runic letter Long-branch-Yr")   // Really tricky
-    EX("Runic letter Short-twig-Yr")    // The same
-    EX("Runic letter Icelandic-Yr")
-    EX("Runic letter Dotted-P")
-    EX("Runic letter Open-P")
-    EX("Runic letter Sigel Long-branch-Sol S")
-    EX("Runic letter Short-twig-Sol S")
-    EX("Runic letter Long-branch-Ar Ae")
-    EX("Runic letter Short-twig-Ar A")
-    EX("Runic letter Long-branch-Hagall H")
-    EX("Runic letter Short-twig-Hagall H")
-    EX("Runic letter Short-twig-Bjarkan B")
-    EX("Runic letter Long-branch-Oss O")
-    EX("Runic letter Short-twig-Oss O")
-    EX("Runic letter Short-twig-Naud N")
-    EX("Runic letter Long-branch-Madr M")
-    EX("Runic letter Short-twig-Madr M")
-    EX("Runic letter Short-twig-Tyr T")
-    EX("Yi syllable iteration mark")    // Maybe so
-    EX("Symbol for type A electronics") // A is tricky
-    EX("Arabic letter Lam with small Arabic letter Tah above")  // Some bug
-    EX("Arabic letter Teh with small Teh above")    // Tricky
-    EX("Arabic letter Reh with small Noon above")   // Same
-    EX("Arabic letter Yeh with two dots below and small Noon above")
-    EX("Arabic letter Peh with small Meem above")
-    EX("Arabic letter Beh with small Meem above")
-    EX("Arabic-Indic Per mille sign")               // Tricky
-    EX("Arabic-Indic Per ten thousand sign")        // Tricky
-    EX("Arabic mathematical Sad")                   // Ambiguous
-    EX("Arabic mathematical Sheen")                 // Ambiguous
-    EX("Hangul choseong filler")                    // Simpler to add exception
-    EX("Hangul jungseong filler")                   // Same
-    EX("Circled CC")                                // Would be Cc
-    EX("Raised MC sign")                            // Same
-    EX("Raised MD sign")
-    EX("Raised MR sign")
-    EX("Square Hiragana Hoka")                      // Better exception
-    EX("Squared Katakana Koko")
-    EX("Squared Katakana Sa")
-    // U14
-    EX("Angle with S inside")                       // Because of Znamenny, S is tricky
-    EX("Perpendicular with S")                      // Same
-    EX("Miao tone right")                           // A clear miss of my algorithm, actually a semi-format tone combiner
-    EX("Miao tone top right")                       // Same
-    EX("Miao tone above")                           // Same
-    EX("Miao tone below")                           // Same
-    EX("Shorthand format Letter overlap")           // Letter is not low-case!
-    EX("Znamenny neume Dva v chelnu")               // Better not to make exception from V
-    // Ligature word: all I see
-    EX("Combining ligature left half")      // Other meaning of ligature — horz parenthesis
-    EX("Combining ligature right half")     // Same
-    EX("Combining ligature left half below")
-    EX("Combining ligature right half below")
-    EX("Planck constant over two pi")   // pi is small here
-
-    EX("Modifier breve with inverted breve")    // Modifier
-
     // EUROPEAN SCRIPTS
         // Cyrl
     EX("Cyrillic capital ligature En Ghe")   // All “ligature” are hand-checked
@@ -964,6 +845,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Duployan letter G R S")                     // Same
     EX("Duployan affix Attached I hook")            // Same
     EX("Duployan thick letter selector")            // A clear miss of my algo, IDK what to do
+    EX("Shorthand format Letter overlap")           // Letter is not keyword
         // Glag
     EX("Glagolitic capital letter Caudate Chrivi")  // Don’t want to encode Chrivi
     EX("Glagolitic small letter Caudate Chrivi")    // Same
@@ -977,13 +859,38 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Greek rho with stroke symbol")  // Rho is small here
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Runr
-    EX("Runic Arlaug symbol")    // IDK
+    EX("Runic letter Dotted-N") // All are really tricky!!
+    EX("Runic letter Dotted-L")
+    EX("Runic letter Long-branch-Yr")
+    EX("Runic letter Short-twig-Yr")
+    EX("Runic letter Icelandic-Yr")
+    EX("Runic letter Dotted-P")
+    EX("Runic letter Open-P")
+    EX("Runic letter Sigel Long-branch-Sol S")
+    EX("Runic letter Short-twig-Sol S")
+    EX("Runic letter Long-branch-Ar Ae")
+    EX("Runic letter Short-twig-Ar A")
+    EX("Runic letter Long-branch-Hagall H")
+    EX("Runic letter Short-twig-Hagall H")
+    EX("Runic letter Short-twig-Bjarkan B")
+    EX("Runic letter Long-branch-Oss O")
+    EX("Runic letter Short-twig-Oss O")
+    EX("Runic letter Short-twig-Naud N")
+    EX("Runic letter Long-branch-Madr M")
+    EX("Runic letter Short-twig-Madr M")
+    EX("Runic letter Short-twig-Tyr T")
+    EX("Runic Arlaug symbol")
     EX("Runic Tvimadur symbol")  // Same
     EX("Runic Belgthor symbol")
 
     // BRAHMIC SCRIPTS
+        // Common-Indic
+    EX("Vedic tone Dot below")                  // Not tone’s dot
+    EX("Vedic tone Ring above")                 // Not tone’s ring
         // Beng
     EX("Bengali letter Khanda Ta")  // Sword-like; because of Sikh character it’s tricky
+        // Deva
+    EX("Devanagari letter Candra A") // Both Candra and A are tricky, better to make an exception
         // Diak
     EX("Dives Akuru medial Ya")             // The same
     EX("Dives Akuru initial Ra")
@@ -992,10 +899,14 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Gurmukhi Iri")      // Same as Gurmukhi letter Uu
     EX("Gurmukhi Ura")      // Same
     EX("Gurmukhi Ek Onkar") // Ligature of phrase
+        // Kthi
+    EX("Kaithi number sign above")  // Number’s mark → number is not keyword
         // Orya
-    EX("Oriya Ai length mark")
+    EX("Oriya Ai length mark")  // IDK how to make rule
         // Thai
     EX("Thai character No nu")          // Conflict with Greek Nu
+        // Zanb
+    EX("Zanabazar square final consonant mark") // Some bugs
 
     // NON-BRAHMIC ASIAN AND OCEAN SCRIPTS
         // Arab
@@ -1015,6 +926,15 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Arabic small high word Waqfa")
     EX("Arabic pound mark above")    // Mark is not special word here. You may call “above” an adverb, but no
     EX("Arabic piastre mark above")
+    EX("Arabic letter Lam with small Arabic letter Tah above")  // Some bug
+    EX("Arabic letter Teh with small Teh above")    // Tricky
+    EX("Arabic letter Reh with small Noon above")   // Same
+    EX("Arabic letter Yeh with two dots below and small Noon above")
+    EX("Arabic letter Peh with small Meem above")
+    EX("Arabic letter Beh with small Meem above")
+    EX("Arabic-Indic Per mille sign")               // Tricky
+    EX("Arabic-Indic Per ten thousand sign")        // Tricky
+    EX("Arabic number mark above")              // Number’s mark
         // Armn
     EX("Armenian small ligature Ech Yiwn")  // All “ligature” are manually checked
     EX("Armenian small ligature Men Now")
@@ -1029,6 +949,9 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Hebrew ligature Yiddish double Vav")
     EX("Hebrew ligature Yiddish Yod Yod Patah")
     EX("Hebrew ligature Alef Lamed")
+        // Mani
+    EX("Manichaean abbreviation mark above")    // Abbreviation’s mark → abbreviation/mark are not keywords
+    EX("Manichaean abbreviation mark below")    // The same
         // Sogd
     EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
         // Thaa
@@ -1046,11 +969,15 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     // MODERN ASIAN SCRIPTS
         // Hmnp
     EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
-    EX("Nyiakeng Puachue Hmong syllable lengthener")  // Syllable is not special here
+    EX("Nyiakeng Puachue Hmong syllable lengthener")  // Syllable is not keyword here
         // Olck
     EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
         // Plrd
-    EX("Miao sign Consonant modifier bar")  // Modifier is not special here
+    EX("Miao sign Consonant modifier bar")  // Modifier is not keyword here
+    EX("Miao tone right")     // Tone is not special here
+    EX("Miao tone top right")
+    EX("Miao tone above")
+    EX("Miao tone below")
         // Hmng
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
 
@@ -1066,12 +993,15 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Coptic symbol Khi Ro")
     EX("Coptic symbol Shima Sima")
         // Ethi
-    EX("Ethiopic combining gemination and vowel length mark") // Vowel is not special here
+    EX("Ethiopic combining gemination and vowel length mark") // Vowel is not keyword here
     EX("Ethiopic combining vowel length mark")                // Same
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
 
     // CJK
+        // Hang
+    EX("Hangul choseong filler")    // Simpler to add exception
+    EX("Hangul jungseong filler")   // Same
         // Decorations etc
     EX("Rounded symbol for Fu")
     EX("Rounded symbol for Lu")
@@ -1079,18 +1009,52 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Rounded symbol for Xi")
     EX("Rounded symbol for Shuangxi")
     EX("Rounded symbol for Cai")
+    EX("Square Hiragana Hoka")  // Better exception?
+    EX("Squared Katakana Koko")
+    EX("Squared Katakana Sa")
 
     // SPECIALS
+        // Misc
+    EX("Commercial At")                 // At is not a preposition
+    EX("Tag Commercial At")             // Same
+    EX("Fraction slash")                // Fraction’s slash
+    EX("Sloping large Or")              // Or is a tricky word
+    EX("Sloping large And")             // And is a tricky word
+    EX("Yi syllable iteration mark")    // Maybe so
+    EX("Symbol for type A electronics") // A is tricky
+    EX("Angle with S inside")           // Because of Znamenny, S is tricky
+    EX("Perpendicular with S")          // Same
+    EX("Combining ligature left half")  // Other meaning of ligature — horz parenthesis
+    EX("Combining ligature right half") // Same
+    EX("Combining ligature left half below")
+    EX("Combining ligature right half below")
+    EX("Planck constant over two pi")   // pi is small here
+    EX("Modifier breve with inverted breve")    // Modifier
         // Emoji
+    EX("Earth globe Europe-Africa")     // Special proper name
+    EX("Earth globe Americas")          // Special proper name
+    EX("Earth globe Asia-Australia")    // Special proper name
+    EX("Milky Way")                     // Special proper name
+    EX("Tokyo Tower")                   // Special proper name
+    EX("Statue of Liberty")             // Special proper name
     EX("Man with gua pi mao")           // Conflict with Greek Pi
+    EX("Face with No good gesture")     // Complex rules, better manually
+    EX("Face with OK gesture")          // Complex rules, better manually
+    EX("OK hand sign")                  // OK is both a syllable and an emoji
+    EX("Turned OK hand sign")           // The same
         // Formatting
     EX("National digit shapes")   // Digit is not special here
     EX("Nominal digit shapes")    // Same
         // Music
+    EX("Musical symbol With fingernails")       // With is not a preposition
+    EX("Musical symbol Quarter rest")           // Quarter is a tricky word
+    EX("Musical symbol Quarter note")           // The same
     EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
     EX("Musical symbol Right repeat sign")      // The same
     EX("Musical symbol Half pedal mark")        // The same
     EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
+        // Music/Znamenny
+    EX("Znamenny neume Dva v chelnu")  // Better not to make exception from V
 
     // B-I-G  S-E-T-S
 
@@ -1110,6 +1074,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     MATH_SYM ("rho")
     MATH_SYM ("pi")
 #undef MATH_SYM
+    EX("Arabic mathematical Sad")    // Ambiguous
+    EX("Arabic mathematical Sheen")  // Ambiguous
 
     // Hand-checked CJK Latin
     EX("Squared HV")                            // Just manually, small block
@@ -1227,6 +1193,46 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Square erg")
     EX("Square eV")
     EX("Square DJ")
+
+        // Enclosed Latin
+    EX("Circled CC")            // Closed Captions, hand-checked
+    EX("Negative squared IC")   // Hand-checked
+    EX("Negative squared PA")
+    EX("Negative squared SA")
+    EX("Negative squared AB")
+    EX("Negative squared WC")
+    EX("Raised MC sign")        // Hand-checked
+    EX("Raised MD sign")
+    EX("Raised MR sign")
+    EX("Squared OK")            // OK is both a syllable and an emoji
+    EX("Squared SOS")           // The same
+    EX("Squared CL")            // Squared is a tricky word
+    EX("Squared Cool")
+    EX("Squared New")
+    EX("Squared No good")
+    EX("Squared Up with exclamation mark")
+    EX("Squared Three D")
+    EX("Squared Second screen")
+    EX("Squared Two K")
+    EX("Squared Four K")
+    EX("Squared Eight K")
+    EX("Squared Five point one")
+    EX("Squared Seven point one")
+    EX("Squared Twenty-two point two")
+    EX("Squared Sixty P")
+    EX("Squared One hundred twenty P")
+    EX("Squared HC")
+    EX("Squared Vs")
+    EX("Squared New")
+    EX("Squared NG")
+    EX("Squared Free")
+    EX("Squared ID")
+    EX("Squared Hi-res")
+    EX("Squared HDR")
+    EX("Squared SHV")
+    EX("Squared VOD")
+    EX("Squared UHD")
+    EX("Squared Lossless")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
