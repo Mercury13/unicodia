@@ -427,6 +427,9 @@ EmojiData loadEmoji()
 
 int main()
 {
+    std::cout << "Have " << dictionary.size() << " words in dictionary, "
+              << exceptions.size() << " exceptions." << std::endl;
+
     ///// Loader ///////////////////////////////////////////////////////////////
     ///
     std::cout << "Checking for loader..." << std::flush;
