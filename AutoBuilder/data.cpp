@@ -1179,6 +1179,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Gurmukhi Ura")                          // Same
     EX("Gurmukhi Ek Onkar")                     // Ligature of phrase
     EX("Bengali letter Khanda Ta")              // Sword-like; because of Sikh character it’s tricky
+    EX("Oriya Ai length mark")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
