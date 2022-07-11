@@ -1267,6 +1267,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },        // Clock face XXX
     { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Circled ideograph XXX
     { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Parenthesized ideograph XXX
+    { { "BALINESE"sv, "MUSICAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
 };
 
 
