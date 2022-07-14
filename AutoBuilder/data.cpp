@@ -982,8 +982,10 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
 
     // AFRICAN SCRIPTS
+        // Adlm
+    EX("Adlam vowel lengthener")    // Vowel is not keyword
         // Bamu
-    EX("Bamum letter Phase-A Mon nggeuaet")         // Mon is also Myanmar nation
+    EX("Bamum letter Phase-A Mon nggeuaet")     // Mon is also Myanmar nation
         // Copt
     EX("Coptic combining Ni above") // Ni is widely used in cuneiform, and IDK what to do
     EX("Coptic symbol kai")             // Seemingly small
