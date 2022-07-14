@@ -983,6 +983,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
 
     // AFRICAN SCRIPTS
         // Adlm
+    EX("Adlam Alif lengthener")     // Alif is a letter
     EX("Adlam vowel lengthener")    // Vowel is not keyword
         // Bamu
     EX("Bamum letter Phase-A Mon nggeuaet")     // Mon is also Myanmar nation
