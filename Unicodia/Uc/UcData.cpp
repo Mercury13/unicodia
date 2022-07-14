@@ -3853,11 +3853,22 @@ namespace {
         }
     }
 
+    // opening parenthesis
+    // en dash
+    constexpr std::u32string_view STOP_CHARS = U"(—";
+
     void buildSortKey(std::u8string_view x,
                       const std::unordered_map<char32_t, int>& sortOrder,
                       uc::LocSortKey& r)
     {
+        // Get name
         auto name32 = mojibake::toS<std::u32string>(x);
+
+        // Trim by special shars
+        auto index = name32.find_first_of(STOP_CHARS);
+        if (index != std::u32string::npos)
+            name32 = name32.substr(0, index);
+
         std::fill(std::begin(r), std::end(r), -1);
         size_t len = 0;
         for (auto v : name32) {
