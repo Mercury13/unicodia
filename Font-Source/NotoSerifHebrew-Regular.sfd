@@ -3,26 +3,26 @@ FontName: NotoSerifHebrew-Regular
 FullName: Noto Serif Hebrew Regular
 FamilyName: Noto Serif Hebrew
 Weight: Book
-Copyright: Copyright 2016 Google LLC. All Rights Reserved.
-Version: 2.000; ttfautohint (v1.8.3) -l 8 -r 50 -G 200 -x 14 -D hebr -f none -a qsq -X ""
+Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/hebrew)
+Version: 2.003; ttfautohint (v1.8.4.7-5d5b)
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020000
+sfntRevision: 0x000200c5
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 1882]
+XUID: [1021 59 1751208496 18353]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
-OS2_WeightWidthSlopeOnly: 1
-OS2_UseTypoMetrics: 0
-CreationTime: 1466678972
-ModificationTime: 1631607936
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
+CreationTime: 1640122932
+ModificationTime: 1657792727
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -60,10 +60,19 @@ OS2UnicodeRanges: 80000803.40002002.00000000.00000000
 Lookup: 4 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in +BBgEMgRABDgEQgAA lookup 0" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in +BBgEMgRABDgEQgAA lookup 0 subtable"  } ['ccmp' ('hebr' <'dflt' > ) ]
 Lookup: 4 1 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in +BBgEMgRABDgEQgAA lookup 1" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in +BBgEMgRABDgEQgAA lookup 1 subtable"  } ['ccmp' ('hebr' <'dflt' > ) ]
 Lookup: 4 0 0 "'dlig' Discretionary Ligatures in +BBgEMgRABDgEQgAA lookup 2" { "'dlig' Discretionary Ligatures in +BBgEMgRABDgEQgAA lookup 2 subtable"  } ['dlig' ('DFLT' <'dflt' > 'hebr' <'dflt' > ) ]
+Lookup: 6 0 0 "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in +BBgEMgRABDgEQgAA lookup 3" { "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in +BBgEMgRABDgEQgAA lookup 3 subtable"  } ['calt' ('DFLT' <'dflt' > 'hebr' <'dflt' > ) ]
+Lookup: 4 0 0 "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 4" { "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 4 subtable"  } []
 Lookup: 258 8 0 "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0" { "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable"  } ['kern' ('DFLT' <'dflt' > 'hebr' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1" { "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable"  } ['mark' ('DFLT' <'dflt' > 'hebr' <'dflt' > ) ]
 Lookup: 261 0 0 "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2" { "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable"  } ['mark' ('DFLT' <'dflt' > 'hebr' <'dflt' > ) ]
 DEI: 91125
+ChainSub2: glyph "'calt' +BBoEPgQ9BEIENQQ6BEEEQgQ9BEsENQAA +BDAEOwRMBEIENQRABD0EMARCBDgEMgRL in +BBgEMgRABDgEQgAA lookup 3 subtable" 0 0 0 1
+ String: 15 uni05B4 uni05DD
+ BString: 15 uni05B8 uni05DC
+ FString: 0 
+ 1
+  SeqLookup: 0 "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 4"
+EndFPST
 TtTable: prep
 SVTCA[y-axis]
 MPPEM
@@ -3817,22 +3826,22 @@ EndShort
 ShortTable: maxp 16
   1
   0
-  150
+  152
   128
   16
-  109
+  110
   3
   2
   64
   120
   141
   0
-  172
+  256
   3596
   3
-  2
+  1
 EndShort
-LangName: 1033 "" "" "" "2.000;GOOG;NotoSerifHebrew-Regular" "" "Version 2.000; ttfautohint (v1.8.3) -l 8 -r 50 -G 200 -x 14 -D hebr -f none -a qsq -X +ACIAIgAA" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "2.003;GOOG;NotoSerifHebrew-Regular" "" "Version 2.003; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeBmp
 UnicodeInterp: none
@@ -3840,13 +3849,14 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 1254 33 14
-AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable"
-BeginChars: 65541 151
+WinInfo: 1363 29 13
+AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" "'mark' Mark Positioning in +BBgEMgRABDgEQgAA lookup 2 subtable"
+BeginChars: 65543 153
 
 StartChar: .notdef
 Encoding: 65536 -1 0
 Width: 600
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -3909,9 +3919,9 @@ EndSplineSet
 EndChar
 
 StartChar: NULL
-Encoding: 0 -1 1
-AltUni2: 000000.ffffffff.0
+Encoding: 0 0 1
 Width: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -3919,6 +3929,7 @@ EndChar
 StartChar: CR
 Encoding: 13 13 2
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -3926,6 +3937,7 @@ EndChar
 StartChar: space
 Encoding: 32 32 3
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -3933,6 +3945,7 @@ EndChar
 StartChar: uni20AA
 Encoding: 8362 8362 4
 Width: 790
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4120,6 +4133,7 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 5
 Width: 594
+GlyphClass: 2
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4278,6 +4292,13 @@ NPUSHB
  31
 CALL
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 586 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 618 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 381 14 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 353 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 323 297 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 66 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -4367,6 +4388,7 @@ EndChar
 StartChar: uni200C
 Encoding: 8204 8204 6
 Width: 0
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4407,6 +4429,7 @@ EndChar
 StartChar: uni200D
 Encoding: 8205 8205 7
 Width: 0
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4462,6 +4485,7 @@ EndChar
 StartChar: uni200E
 Encoding: 8206 8206 8
 Width: 0
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4528,6 +4552,7 @@ EndChar
 StartChar: uni200F
 Encoding: 8207 8207 9
 Width: 0
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -4721,7 +4746,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 328 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 276 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 269 136 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 83 0 basechar 0
 LayerCount: 2
@@ -4756,8 +4781,8 @@ SplineSet
  373 618 373 618 386 647 c 1,34,-1
  413 647 l 1,35,-1
  413 641 l 2,36,37
- 413 618 413 618 424 607.5 c 128,-1,38
- 435 597 435 597 455 593 c 2,39,-1
+ 413 618 413 618 424 607 c 128,-1,38
+ 435 596 435 596 455 593 c 2,39,-1
  510 584 l 2,40,41
  549 578 549 578 549 530 c 0,42,43
  549 520 549 520 547.5 507.5 c 128,-1,44
@@ -4807,7 +4832,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 328 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 276 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 269 136 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 83 0 basechar 0
 LayerCount: 2
@@ -4963,13 +4988,13 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 328 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 276 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 269 136 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 83 0 basechar 0
 LayerCount: 2
 Fore
 Refer: 10 1488 N 1 0 0 1 0 0 3
-Refer: 80 1463 N 1 0 0 1 189 0 2
+Refer: 82 1463 N 1 0 0 1 189 0 2
 EndChar
 
 StartChar: uniFB2F
@@ -4979,18 +5004,19 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 328 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 276 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 269 136 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 83 0 basechar 0
 LayerCount: 2
 Fore
 Refer: 10 1488 N 1 0 0 1 0 0 3
-Refer: 86 1464 N 1 0 0 1 189 0 2
+Refer: 88 1464 N 1 0 0 1 209 0 2
 EndChar
 
 StartChar: uniFB29
 Encoding: 64297 64297 15
 Width: 559
+GlyphClass: 1
 Flags: W
 TtInstrs:
 MPPEM
@@ -5128,7 +5154,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 138 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 138 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 138 0 mark 0
 LayerCount: 2
 Fore
@@ -5205,7 +5231,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 266 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 266 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 31 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -9 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 289 366 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -1 0 basechar 0
 LayerCount: 2
@@ -5226,7 +5252,7 @@ SplineSet
  81 643 l 2,15,16
  81 599 81 599 123 593 c 2,17,-1
  193 584 l 2,18,19
- 232 578 232 578 232 530 c 0,20,21
+ 232 580 232 580 232 530 c 0,20,21
  232 520 232 520 230.5 508 c 128,-1,22
  229 496 229 496 224 469 c 1,23,-1
  152 479 l 1,24,25
@@ -5463,7 +5489,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 264 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 235 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 15 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -3 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 237 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 24 0 basechar 0
 LayerCount: 2
@@ -5510,7 +5536,7 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 264 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 235 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 15 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -3 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 237 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 24 0 basechar 0
 LayerCount: 2
@@ -5526,13 +5552,13 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 264 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 235 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 15 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -3 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 237 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 24 0 basechar 0
 LayerCount: 2
 Fore
 Refer: 19 1489 N 1 0 0 1 0 0 3
-Refer: 92 1471 N 1 0 0 1 86 0 2
+Refer: 94 1471 N 1 0 0 1 86 0 2
 EndChar
 
 StartChar: uni05BC
@@ -5574,7 +5600,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 84 300 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 84 300 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 84 300 mark 0
 LayerCount: 2
 Fore
@@ -5679,7 +5705,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 365 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 254 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -24 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 191 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 172 0 basechar 0
 LayerCount: 2
@@ -5723,7 +5749,7 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 365 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 254 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -24 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 191 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 172 0 basechar 0
 LayerCount: 2
@@ -5745,7 +5771,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 182 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 182 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 182 0 mark 0
 LayerCount: 2
 Fore
@@ -5792,7 +5818,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 75 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 75 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 75 0 mark 0
 LayerCount: 2
 Fore
@@ -5864,7 +5890,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 137 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 137 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 137 0 mark 0
 LayerCount: 2
 Fore
@@ -5986,7 +6012,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 205 409 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 230 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 14 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -33 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 201 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 25 0 basechar 0
 LayerCount: 2
@@ -6025,7 +6051,7 @@ GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 205 409 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 230 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 14 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -33 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 201 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 25 0 basechar 0
 LayerCount: 2
@@ -6094,9 +6120,10 @@ NPUSHB
  22
 CALL
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 470 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 279 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 285 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 70 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 279 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 70 0 basechar 0
 LayerCount: 2
@@ -6140,8 +6167,26 @@ SplineSet
 EndSplineSet
 EndChar
 
+StartChar: uni05DD05B4.alt
+Encoding: 65537 -1 31
+Width: 582
+GlyphClass: 2
+Flags: W
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 470 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 279 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 285 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 279 300 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 70 0 basechar 0
+LayerCount: 2
+Fore
+Refer: 30 1501 N 1 0 0 1 0 0 3
+Refer: 54 -1 N 1 0 0 1 386 0 2
+Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 4 subtable" uni05B4 uni05DD
+EndChar
+
 StartChar: uni05DF
-Encoding: 1503 1503 31
+Encoding: 1503 1503 32
 Width: 280
 GlyphClass: 2
 Flags: W
@@ -6231,7 +6276,7 @@ NPUSHB
 CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 117 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 20 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -24 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 62 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 20 0 basechar 0
 LayerCount: 2
@@ -6266,7 +6311,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E3
-Encoding: 1507 1507 32
+Encoding: 1507 1507 33
 Width: 552
 GlyphClass: 2
 Flags: W
@@ -6394,7 +6439,7 @@ NPUSHB
 CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 262 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -21 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 327 278 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 10 0 basechar 0
 LayerCount: 2
@@ -6442,7 +6487,7 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB43
-Encoding: 64323 64323 33
+Encoding: 64323 64323 34
 Width: 552
 GlyphClass: 2
 Flags: W
@@ -6457,17 +6502,17 @@ PUSHB_1
 CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 262 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -21 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 327 278 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 10 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 32 1507 N 1 0 0 1 0 0 3
+Refer: 33 1507 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 243 -22 2
 EndChar
 
 StartChar: uni05E5
-Encoding: 1509 1509 34
+Encoding: 1509 1509 35
 Width: 491
 GlyphClass: 2
 Flags: W
@@ -6514,7 +6559,7 @@ NPUSHB
 CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 261 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 1 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 7 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 210 399 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -11 0 basechar 0
 LayerCount: 2
@@ -6571,8 +6616,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB26
-Encoding: 64294 64294 35
+Encoding: 64294 64294 36
 Width: 882
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -6671,8 +6717,9 @@ EndSplineSet
 EndChar
 
 StartChar: uni05F3
-Encoding: 1523 1523 36
+Encoding: 1523 1523 37
 Width: 228
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -6713,7 +6760,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni059C
-Encoding: 1436 1436 37
+Encoding: 1436 1436 38
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -6742,7 +6789,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 75 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 75 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 75 536 mark 0
 LayerCount: 2
 Fore
@@ -6761,7 +6808,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni059D
-Encoding: 1437 1437 38
+Encoding: 1437 1437 39
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -6790,7 +6837,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 150 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 150 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 150 536 mark 0
 LayerCount: 2
 Fore
@@ -6809,8 +6856,9 @@ EndSplineSet
 EndChar
 
 StartChar: uni05F4
-Encoding: 1524 1524 39
+Encoding: 1524 1524 40
 Width: 428
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -6870,7 +6918,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni059E
-Encoding: 1438 1438 40
+Encoding: 1438 1438 41
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -6902,7 +6950,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 151 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 151 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 151 536 mark 0
 LayerCount: 2
 Fore
@@ -6931,7 +6979,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05D2
-Encoding: 1490 1490 41
+Encoding: 1490 1490 42
 Width: 377
 GlyphClass: 2
 Flags: W
@@ -6942,7 +6990,7 @@ NPUSHB
  1
  1
  2
- 39
+ 40
  1
  0
  1
@@ -7062,14 +7110,14 @@ NPUSHB
  0
  0
  0
- 42
+ 43
  0
- 42
+ 43
  51
  21
  54
  33
- 37
+ 38
  7
  7
  27
@@ -7077,7 +7125,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 241 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 175 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 53 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 32 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 132 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 15 0 basechar 0
 LayerCount: 2
@@ -7087,35 +7135,36 @@ SplineSet
  285 35 285 35 272 60.5 c 128,-1,2
  259 86 259 86 244 111 c 1,3,-1
  216 41 l 2,4,5
- 200 0 200 0 164 0 c 2,6,-1
- 12 0 l 1,7,-1
- 39 109 l 1,8,-1
- 142 109 l 2,9,10
- 161 109 161 109 181 116 c 128,-1,11
- 201 123 201 123 215 136.5 c 128,-1,12
- 229 150 229 150 229 167 c 2,13,-1
- 229 447 l 2,14,15
- 229 467 229 467 224 475 c 128,-1,16
- 219 483 219 483 202 483 c 2,17,-1
- 136 483 l 2,18,19
- 112 483 112 483 99.5 499.5 c 128,-1,20
- 87 516 87 516 87 555 c 0,21,22
- 87 572 87 572 90 591 c 128,-1,23
- 93 610 93 610 101 647 c 1,24,-1
- 128 647 l 1,25,-1
- 128 644 l 2,26,27
- 128 620 128 620 141.5 606 c 128,-1,28
- 155 592 155 592 181 592 c 2,29,-1
- 236 592 l 2,30,31
- 262 592 262 592 272.5 579.5 c 128,-1,32
- 283 567 283 567 283 535 c 2,33,-1
- 283 231 l 2,34,35
- 283 207 283 207 286.5 190 c 128,-1,36
- 290 173 290 173 297 155.5 c 128,-1,37
- 304 138 304 138 315 113 c 2,38,-1
- 357 16 l 1,39,40
- 351 6 351 6 336.5 -1 c 128,-1,41
- 322 -8 322 -8 313 -9 c 2,42,-1
+ 207 19 207 19 195.5 9.5 c 128,-1,6
+ 184 0 184 0 164 0 c 2,7,-1
+ 12 0 l 1,8,-1
+ 39 109 l 1,9,-1
+ 142 109 l 2,10,11
+ 161 109 161 109 181 116 c 128,-1,12
+ 201 123 201 123 215 136.5 c 128,-1,13
+ 229 150 229 150 229 167 c 2,14,-1
+ 229 447 l 2,15,16
+ 229 467 229 467 224 475 c 128,-1,17
+ 219 483 219 483 202 483 c 2,18,-1
+ 136 483 l 2,19,20
+ 112 483 112 483 99.5 499.5 c 128,-1,21
+ 87 516 87 516 87 555 c 0,22,23
+ 87 572 87 572 90 591 c 128,-1,24
+ 93 610 93 610 101 647 c 1,25,-1
+ 128 647 l 1,26,-1
+ 128 644 l 2,27,28
+ 128 620 128 620 141.5 606 c 128,-1,29
+ 155 592 155 592 181 592 c 2,30,-1
+ 236 592 l 2,31,32
+ 262 592 262 592 272.5 579.5 c 128,-1,33
+ 283 567 283 567 283 535 c 2,34,-1
+ 283 231 l 2,35,36
+ 283 207 283 207 286.5 190 c 128,-1,37
+ 290 173 290 173 297 155.5 c 128,-1,38
+ 304 138 304 138 315 113 c 2,39,-1
+ 357 16 l 1,40,41
+ 351 6 351 6 336.5 -1 c 128,-1,42
+ 322 -8 322 -8 313 -9 c 2,43,-1
  304 -9 l 1,0,1
 EndSplineSet
 PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni05D8 dx=-30 dy=0 dh=-30 dv=0 dx=0 dy=0 dh=0 dv=0
@@ -7127,23 +7176,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB32
-Encoding: 64306 64306 42
+Encoding: 64306 64306 43
 Width: 377
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 241 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 175 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 53 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 32 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 132 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 15 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 41 1490 N 1 0 0 1 0 0 3
+Refer: 42 1490 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 48 0 2
 EndChar
 
 StartChar: uni05B2
-Encoding: 1458 1458 43
+Encoding: 1458 1458 44
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -7262,7 +7311,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 189 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 189 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 189 0 mark 0
 LayerCount: 2
 Fore
@@ -7294,7 +7343,7 @@ EndSplineSet
 EndChar
 
 StartChar: hatafpatah_zerowidthjoiner_siluqlefthb
-Encoding: 65537 -1 44
+Encoding: 65538 -1 45
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -7464,7 +7513,7 @@ NPUSHB
  23
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 226 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 226 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 226 0 mark 0
 LayerCount: 2
 Fore
@@ -7502,7 +7551,7 @@ Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEO
 EndChar
 
 StartChar: uni05B3
-Encoding: 1459 1459 45
+Encoding: 1459 1459 46
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -7683,7 +7732,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 189 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 189 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 189 0 mark 0
 LayerCount: 2
 Fore
@@ -7719,7 +7768,7 @@ EndSplineSet
 EndChar
 
 StartChar: hatafqamats_zerowidthjoiner_siluqlefthb
-Encoding: 65538 -1 46
+Encoding: 65539 -1 47
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -7995,7 +8044,7 @@ NPUSHB
  23
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 226 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 226 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 226 0 mark 0
 LayerCount: 2
 Fore
@@ -8037,7 +8086,7 @@ Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEO
 EndChar
 
 StartChar: uni05B1
-Encoding: 1457 1457 47
+Encoding: 1457 1457 48
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8133,7 +8182,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 193 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 193 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 193 0 mark 0
 LayerCount: 2
 Fore
@@ -8187,7 +8236,7 @@ EndSplineSet
 EndChar
 
 StartChar: hatafsegol_zerowidthjoiner_siluqlefthb
-Encoding: 65539 -1 48
+Encoding: 65540 -1 49
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8285,7 +8334,7 @@ NPUSHB
  23
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 232 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 232 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 232 0 mark 0
 LayerCount: 2
 Fore
@@ -8345,7 +8394,7 @@ Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEO
 EndChar
 
 StartChar: uni05D4
-Encoding: 1492 1492 49
+Encoding: 1492 1492 50
 Width: 605
 GlyphClass: 2
 Flags: W
@@ -8450,7 +8499,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 298 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 301 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 71 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -9 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 297 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 85 0 basechar 0
 LayerCount: 2
@@ -8492,23 +8541,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB34
-Encoding: 64308 64308 50
+Encoding: 64308 64308 51
 Width: 605
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 298 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 301 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 71 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -9 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 297 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 85 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 49 1492 N 1 0 0 1 0 0 3
+Refer: 50 1492 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 213 0 2
 EndChar
 
 StartChar: uni05D7
-Encoding: 1495 1495 51
+Encoding: 1495 1495 52
 Width: 630
 GlyphClass: 2
 Flags: W
@@ -8575,7 +8624,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 337 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 339 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 85 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 7 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 337 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 85 0 basechar 0
 LayerCount: 2
@@ -8617,7 +8666,7 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uni05B4
-Encoding: 1460 1460 52
+Encoding: 1460 1460 53
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8662,7 +8711,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 84 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 84 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 84 0 mark 0
 LayerCount: 2
 Fore
@@ -8677,8 +8726,60 @@ SplineSet
 EndSplineSet
 EndChar
 
+StartChar: uni05B4.alt
+Encoding: 65541 -1 54
+Width: 0
+GlyphClass: 4
+Flags: W
+TtInstrs:
+NPUSHB
+ 28
+ 0
+ 1
+ 0
+ 0
+ 1
+ 89
+ 0
+ 1
+ 1
+ 0
+ 97
+ 2
+ 1
+ 0
+ 1
+ 0
+ 81
+ 1
+ 0
+ 5
+ 3
+ 0
+ 9
+ 1
+ 9
+ 3
+ 7
+ 22
+CALL
+EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 84 0 mark 0
+LayerCount: 2
+Fore
+SplineSet
+83 -155 m 0,0,1
+ 46 -155 46 -155 46 -112 c 0,2,3
+ 46 -70 46 -70 83 -70 c 0,4,5
+ 100 -70 100 -70 110.5 -80.5 c 128,-1,6
+ 121 -91 121 -91 121 -112 c 0,7,8
+ 121 -134 121 -134 110.5 -144.5 c 128,-1,9
+ 100 -155 100 -155 83 -155 c 0,0,1
+EndSplineSet
+EndChar
+
 StartChar: uni05B9
-Encoding: 1465 1465 53
+Encoding: 1465 1465 55
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8708,12 +8809,12 @@ NPUSHB
  81
  1
  0
- 6
- 4
+ 7
+ 5
  0
- 10
+ 11
  1
- 10
+ 11
  3
  7
  22
@@ -8723,24 +8824,25 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 84 536 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 0 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 mark 0
 LayerCount: 2
 Fore
 SplineSet
-83 670 m 256,0,1
- 66 670 66 670 56 680 c 128,-1,2
- 46 690 46 690 46 713 c 0,3,4
- 46 755 46 755 83 755 c 0,5,6
- 100 755 100 755 110.5 744.5 c 128,-1,7
- 121 734 121 734 121 713 c 0,8,9
- 121 691 121 691 110.5 680.5 c 128,-1,10
- 100 670 100 670 83 670 c 256,0,1
+0 670 m 256,0,1
+ -17 670 -17 670 -27.5 680 c 128,-1,2
+ -38 690 -38 690 -38 713 c 0,3,4
+ -38 734 -38 734 -27.5 744.5 c 128,-1,5
+ -17 755 -17 755 0 755 c 256,6,7
+ 17 755 17 755 27.5 744.5 c 128,-1,8
+ 38 734 38 734 38 713 c 0,9,10
+ 38 691 38 691 27.5 680.5 c 128,-1,11
+ 17 670 17 670 0 670 c 256,0,1
 EndSplineSet
 EndChar
 
 StartChar: uni05BA
-Encoding: 1466 1466 54
+Encoding: 1466 1466 56
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8770,12 +8872,12 @@ NPUSHB
  81
  1
  0
- 6
- 4
+ 7
+ 5
  0
- 10
+ 11
  1
- 10
+ 11
  3
  7
  22
@@ -8785,25 +8887,27 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 84 536 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 0 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 mark 0
 LayerCount: 2
 Fore
 SplineSet
-83 670 m 256,0,1
- 66 670 66 670 56 680 c 128,-1,2
- 46 690 46 690 46 713 c 0,3,4
- 46 755 46 755 83 755 c 0,5,6
- 100 755 100 755 110.5 744.5 c 128,-1,7
- 121 734 121 734 121 713 c 0,8,9
- 121 691 121 691 110.5 680.5 c 128,-1,10
- 100 670 100 670 83 670 c 256,0,1
+-134 670 m 256,0,1
+ -151 670 -151 670 -161.5 680 c 128,-1,2
+ -172 690 -172 690 -172 713 c 0,3,4
+ -172 734 -172 734 -161.5 744.5 c 128,-1,5
+ -151 755 -151 755 -134 755 c 256,6,7
+ -117 755 -117 755 -106.5 744.5 c 128,-1,8
+ -96 734 -96 734 -96 713 c 0,9,10
+ -96 691 -96 691 -106.5 680.5 c 128,-1,11
+ -117 670 -117 670 -134 670 c 256,0,1
 EndSplineSet
 EndChar
 
 StartChar: hyphen
-Encoding: 45 45 55
+Encoding: 45 45 57
 Width: 310
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -8849,8 +8953,9 @@ EndSplineSet
 EndChar
 
 StartChar: uni2010
-Encoding: 8208 8208 56
+Encoding: 8208 8208 58
 Width: 310
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -8896,7 +9001,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05AC
-Encoding: 1452 1452 57
+Encoding: 1452 1452 59
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -8980,7 +9085,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 125 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 125 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 125 536 mark 0
 LayerCount: 2
 Fore
@@ -8996,7 +9101,7 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB1E
-Encoding: 64286 64286 58
+Encoding: 64286 64286 60
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9048,7 +9153,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 155 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 155 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 155 536 mark 0
 LayerCount: 2
 Fore
@@ -9067,7 +9172,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05DB
-Encoding: 1499 1499 59
+Encoding: 1499 1499 61
 Width: 550
 GlyphClass: 2
 Flags: W
@@ -9157,7 +9262,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 274 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 236 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 44 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 255 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 43 0 basechar 0
 LayerCount: 2
@@ -9197,39 +9302,39 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB3B
-Encoding: 64315 64315 60
+Encoding: 64315 64315 62
 Width: 550
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 274 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 236 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 44 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 255 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 43 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 59 1499 N 1 0 0 1 0 0 3
+Refer: 61 1499 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 171 0 2
 EndChar
 
 StartChar: uniFB4D
-Encoding: 64333 64333 61
+Encoding: 64333 64333 63
 Width: 550
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 274 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 236 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 44 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 255 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 43 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 59 1499 N 1 0 0 1 0 0 3
-Refer: 92 1471 N 1 0 0 1 87 0 2
+Refer: 61 1499 N 1 0 0 1 0 0 3
+Refer: 94 1471 N 1 0 0 1 87 0 2
 EndChar
 
 StartChar: uni05DC
-Encoding: 1500 1500 62
+Encoding: 1500 1500 64
 Width: 503
 GlyphClass: 2
 Flags: W
@@ -9277,7 +9382,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 214 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 252 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -57 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -47 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 188 325 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 215 0 basechar 0
 LayerCount: 2
@@ -9323,7 +9428,7 @@ SplineSet
  446 340 446 340 439.5 321.5 c 128,-1,51
  433 303 433 303 413 281 c 2,52,-1
  271 125 l 2,53,54
- 259 113 259 113 255 100 c 128,-1,55
+ 260 112 260 112 255.5 99.5 c 128,-1,55
  251 87 251 87 251 67 c 2,56,-1
  251 41 l 2,57,58
  251 -7 251 -7 215 -7 c 0,0,1
@@ -9336,7 +9441,7 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB3C
-Encoding: 64316 64316 63
+Encoding: 64316 64316 65
 Width: 503
 GlyphClass: 2
 Flags: W
@@ -9352,17 +9457,17 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 214 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 252 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -57 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -47 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 188 325 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 215 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 62 1500 N 1 0 0 1 0 0 3
+Refer: 64 1500 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 104 25 2
 EndChar
 
 StartChar: uni05C5
-Encoding: 1477 1477 64
+Encoding: 1477 1477 66
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9407,7 +9512,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 84 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 84 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 84 0 mark 0
 LayerCount: 2
 Fore
@@ -9423,7 +9528,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05A4
-Encoding: 1444 1444 65
+Encoding: 1444 1444 67
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9435,7 +9540,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 167 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 167 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 167 0 mark 0
 LayerCount: 2
 Fore
@@ -9451,8 +9556,9 @@ EndSplineSet
 EndChar
 
 StartChar: uni05BE
-Encoding: 1470 1470 66
+Encoding: 1470 1470 68
 Width: 312
+GlyphClass: 1
 Flags: W
 TtInstrs:
 PUSHB_2
@@ -9506,7 +9612,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05AF
-Encoding: 1455 1455 67
+Encoding: 1455 1455 69
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9569,7 +9675,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 142 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 142 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 142 536 mark 0
 LayerCount: 2
 Fore
@@ -9596,7 +9702,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05DE
-Encoding: 1502 1502 68
+Encoding: 1502 1502 70
 Width: 629
 GlyphClass: 2
 Flags: W
@@ -9751,7 +9857,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 329 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 346 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 50 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -4 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 346 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 95 0 basechar 0
 LayerCount: 2
@@ -9806,23 +9912,23 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB3E
-Encoding: 64318 64318 69
+Encoding: 64318 64318 71
 Width: 629
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 329 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 346 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 50 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -4 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 346 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 95 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 68 1502 N 1 0 0 1 0 0 3
+Refer: 70 1502 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 262 0 2
 EndChar
 
 StartChar: uni05A6
-Encoding: 1446 1446 70
+Encoding: 1446 1446 72
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9856,7 +9962,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 251 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 251 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 251 0 mark 0
 LayerCount: 2
 Fore
@@ -9885,7 +9991,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05A5
-Encoding: 1445 1445 71
+Encoding: 1445 1445 73
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -9915,7 +10021,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 200 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 200 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 200 0 mark 0
 LayerCount: 2
 Fore
@@ -9934,7 +10040,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05A3
-Encoding: 1443 1443 72
+Encoding: 1443 1443 74
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10018,7 +10124,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 200 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 200 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 200 0 mark 0
 LayerCount: 2
 Fore
@@ -10034,14 +10140,15 @@ EndSplineSet
 EndChar
 
 StartChar: uni00A0
-Encoding: 160 160 73
+Encoding: 160 160 75
 Width: 260
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
 
 StartChar: uni05E0
-Encoding: 1504 1504 74
+Encoding: 1504 1504 76
 Width: 367
 GlyphClass: 2
 Flags: W
@@ -10131,7 +10238,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 160 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 197 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 72 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 42 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 130 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 7 0 basechar 0
 LayerCount: 2
@@ -10176,24 +10283,25 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB40
-Encoding: 64320 64320 75
+Encoding: 64320 64320 77
 Width: 367
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 160 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 197 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 72 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 42 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 130 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 7 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 74 1504 N 1 0 0 1 0 0 3
+Refer: 76 1504 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 46 0 2
 EndChar
 
 StartChar: uni05C6
-Encoding: 1478 1478 76
+Encoding: 1478 1478 78
 Width: 367
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -10274,7 +10382,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05AB
-Encoding: 1451 1451 77
+Encoding: 1451 1451 79
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10286,7 +10394,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 125 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 125 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 125 536 mark 0
 LayerCount: 2
 Fore
@@ -10302,8 +10410,9 @@ EndSplineSet
 EndChar
 
 StartChar: uni05C0
-Encoding: 1472 1472 78
+Encoding: 1472 1472 80
 Width: 300
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -10343,7 +10452,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0599
-Encoding: 1433 1433 79
+Encoding: 1433 1433 81
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10372,7 +10481,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 200 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 200 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 200 536 mark 0
 LayerCount: 2
 Fore
@@ -10391,7 +10500,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05B7
-Encoding: 1463 1463 80
+Encoding: 1463 1463 82
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10435,7 +10544,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 139 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 139 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 139 0 mark 0
 LayerCount: 2
 Fore
@@ -10449,7 +10558,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05A1
-Encoding: 1441 1441 81
+Encoding: 1441 1441 83
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10516,7 +10625,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 126 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 126 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 126 536 mark 0
 LayerCount: 2
 Fore
@@ -10540,7 +10649,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E4
-Encoding: 1508 1508 82
+Encoding: 1508 1508 84
 Width: 570
 GlyphClass: 2
 Flags: W
@@ -10710,7 +10819,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 265 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 266 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 7 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 358 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 8 0 basechar 0
 LayerCount: 2
@@ -10766,39 +10875,39 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB44
-Encoding: 64324 64324 83
+Encoding: 64324 64324 85
 Width: 570
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 265 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 266 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 7 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 358 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 8 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 82 1508 N 1 0 0 1 0 0 3
+Refer: 84 1508 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 274 0 2
 EndChar
 
 StartChar: uniFB4E
-Encoding: 64334 64334 84
+Encoding: 64334 64334 86
 Width: 570
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 265 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 266 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 7 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 358 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 8 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 82 1508 N 1 0 0 1 0 0 3
-Refer: 92 1471 N 1 0 0 1 117 0 2
+Refer: 84 1508 N 1 0 0 1 0 0 3
+Refer: 94 1471 N 1 0 0 1 117 0 2
 EndChar
 
 StartChar: uni05A8
-Encoding: 1448 1448 85
+Encoding: 1448 1448 87
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -10827,7 +10936,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 175 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 175 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 175 536 mark 0
 LayerCount: 2
 Fore
@@ -10846,112 +10955,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05B8
-Encoding: 1464 1464 86
-Width: 0
-GlyphClass: 4
-Flags: W
-TtInstrs:
-PUSHB_2
- 6
- 100
-WCVTP
-MPPEM
-PUSHB_1
- 14
-LT
-IF
-NPUSHB
- 24
- 4
- 1
- 3
- 0
- 0
- 3
- 113
- 0
- 1
- 0
- 0
- 1
- 87
- 0
- 1
- 1
- 0
- 95
- 2
- 1
- 0
- 1
- 0
- 79
-ELSE
-NPUSHB
- 23
- 4
- 1
- 3
- 0
- 3
- 134
- 0
- 1
- 0
- 0
- 1
- 87
- 0
- 1
- 1
- 0
- 95
- 2
- 1
- 0
- 1
- 0
- 79
-EIF
-NPUSHB
- 12
- 0
- 0
- 0
- 7
- 0
- 7
- 17
- 17
- 17
- 5
- 7
- 25
-CALL
-PUSHB_2
- 6
- 0
-WCVTP
-EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 139 0 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 139 0 mark 0
-LayerCount: 2
-Fore
-SplineSet
-112 -231 m 1,0,-1
- 119 -137 l 1,1,-1
- 58 -137 l 1,2,-1
- 61 -84 l 1,3,-1
- 220 -84 l 1,4,-1
- 217 -137 l 1,5,-1
- 160 -137 l 1,6,-1
- 166 -231 l 1,7,-1
- 112 -231 l 1,0,-1
-EndSplineSet
-EndChar
-
-StartChar: uni05C7
-Encoding: 1479 1479 87
+Encoding: 1464 1464 88
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11038,25 +11042,130 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 119 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 119 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 119 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
-92 -208 m 1,0,-1
+92 -209 m 1,0,-1
  99 -137 l 1,1,-1
  41 -137 l 1,2,-1
  44 -84 l 1,3,-1
  197 -84 l 1,4,-1
  194 -137 l 1,5,-1
  140 -137 l 1,6,-1
- 146 -208 l 1,7,-1
- 92 -208 l 1,0,-1
+ 146 -206 l 1,7,-1
+ 92 -209 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uni05C7
+Encoding: 1479 1479 89
+Width: 0
+GlyphClass: 4
+Flags: W
+TtInstrs:
+PUSHB_2
+ 6
+ 100
+WCVTP
+MPPEM
+PUSHB_1
+ 14
+LT
+IF
+NPUSHB
+ 24
+ 4
+ 1
+ 3
+ 0
+ 0
+ 3
+ 113
+ 0
+ 1
+ 0
+ 0
+ 1
+ 87
+ 0
+ 1
+ 1
+ 0
+ 95
+ 2
+ 1
+ 0
+ 1
+ 0
+ 79
+ELSE
+NPUSHB
+ 23
+ 4
+ 1
+ 3
+ 0
+ 3
+ 134
+ 0
+ 1
+ 0
+ 0
+ 1
+ 87
+ 0
+ 1
+ 1
+ 0
+ 95
+ 2
+ 1
+ 0
+ 1
+ 0
+ 79
+EIF
+NPUSHB
+ 12
+ 0
+ 0
+ 0
+ 7
+ 0
+ 7
+ 17
+ 17
+ 17
+ 5
+ 7
+ 25
+CALL
+PUSHB_2
+ 6
+ 0
+WCVTP
+EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 139 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 139 0 mark 0
+LayerCount: 2
+Fore
+SplineSet
+112 -232 m 1,0,-1
+ 119 -137 l 1,1,-1
+ 58 -137 l 1,2,-1
+ 61 -84 l 1,3,-1
+ 220 -84 l 1,4,-1
+ 217 -137 l 1,5,-1
+ 160 -137 l 1,6,-1
+ 166 -229 l 1,7,-1
+ 112 -232 l 1,0,-1
 EndSplineSet
 EndChar
 
 StartChar: uni059F
-Encoding: 1439 1439 88
+Encoding: 1439 1439 90
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11143,7 +11252,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 277 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 277 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 277 536 mark 0
 LayerCount: 2
 Fore
@@ -11194,7 +11303,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E7
-Encoding: 1511 1511 89
+Encoding: 1511 1511 91
 Width: 569
 GlyphClass: 2
 Flags: W
@@ -11307,7 +11416,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 320 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 304 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 35 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 25 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 290 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 13 0 basechar 0
 LayerCount: 2
@@ -11359,23 +11468,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB47
-Encoding: 64327 64327 90
+Encoding: 64327 64327 92
 Width: 569
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 320 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 304 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 35 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 25 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 290 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 13 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 89 1511 N 1 0 0 1 0 0 3
+Refer: 91 1511 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 206 0 2
 EndChar
 
 StartChar: uni05BB
-Encoding: 1467 1467 91
+Encoding: 1467 1467 93
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11454,7 +11563,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 165 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 165 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 165 0 mark 0
 LayerCount: 2
 Fore
@@ -11490,7 +11599,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05BF
-Encoding: 1471 1471 92
+Encoding: 1471 1471 94
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11534,7 +11643,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 149 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 149 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 149 536 mark 0
 LayerCount: 2
 Fore
@@ -11548,7 +11657,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E8
-Encoding: 1512 1512 93
+Encoding: 1512 1512 95
 Width: 484
 GlyphClass: 2
 Flags: W
@@ -11634,7 +11743,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 391 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 195 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -16 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 181 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 194 0 basechar 0
 LayerCount: 2
@@ -11668,23 +11777,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB48
-Encoding: 64328 64328 94
+Encoding: 64328 64328 96
 Width: 484
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 391 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 195 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -16 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 181 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 194 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 93 1512 N 1 0 0 1 0 0 3
+Refer: 95 1512 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 97 0 2
 EndChar
 
 StartChar: uni0597
-Encoding: 1431 1431 95
+Encoding: 1431 1431 97
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11696,7 +11805,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 155 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 155 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 155 536 mark 0
 LayerCount: 2
 Fore
@@ -11710,7 +11819,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E1
-Encoding: 1505 1505 96
+Encoding: 1505 1505 98
 Width: 583
 GlyphClass: 2
 Flags: W
@@ -11775,7 +11884,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 285 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 282 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 41 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 285 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 79 0 basechar 0
 LayerCount: 2
@@ -11825,23 +11934,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB41
-Encoding: 64321 64321 97
+Encoding: 64321 64321 99
 Width: 583
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 285 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 282 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 41 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 10 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 285 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 79 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 96 1505 N 1 0 0 1 0 0 3
+Refer: 98 1505 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 201 0 2
 EndChar
 
 StartChar: uni05B6
-Encoding: 1462 1462 98
+Encoding: 1462 1462 100
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -11914,7 +12023,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 145 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 145 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 145 0 mark 0
 LayerCount: 2
 Fore
@@ -11946,7 +12055,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0592
-Encoding: 1426 1426 99
+Encoding: 1426 1426 101
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12020,7 +12129,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 206 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 206 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 206 536 mark 0
 LayerCount: 2
 Fore
@@ -12054,7 +12163,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0593
-Encoding: 1427 1427 100
+Encoding: 1427 1427 102
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12104,7 +12213,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 122 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 122 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 122 536 mark 0
 LayerCount: 2
 Fore
@@ -12126,7 +12235,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05B0
-Encoding: 1456 1456 101
+Encoding: 1456 1456 103
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12174,7 +12283,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 86 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 86 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 86 0 mark 0
 LayerCount: 2
 Fore
@@ -12199,7 +12308,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E9
-Encoding: 1513 1513 102
+Encoding: 1513 1513 104
 Width: 727
 GlyphClass: 2
 Flags: W
@@ -12257,10 +12366,10 @@ NPUSHB
  23
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
@@ -12278,8 +12387,8 @@ SplineSet
  61 613 61 613 74 647 c 1,13,-1
  101 647 l 1,14,-1
  101 644 l 2,15,16
- 101 620 101 620 111.5 609.5 c 128,-1,17
- 122 599 122 599 143 595 c 2,18,-1
+ 101 620 101 620 111.5 609 c 128,-1,17
+ 122 598 122 598 143 595 c 2,18,-1
  187 588 l 2,19,20
  216 584 216 584 221 571.5 c 128,-1,21
  226 559 226 559 226 550 c 0,22,23
@@ -12299,8 +12408,8 @@ SplineSet
  300 616 300 616 312 647 c 1,41,-1
  339 647 l 1,42,-1
  339 644 l 2,43,44
- 339 620 339 620 349.5 609.5 c 128,-1,45
- 360 599 360 599 381 595 c 2,46,-1
+ 339 620 339 620 349.5 609 c 128,-1,45
+ 360 598 360 598 381 595 c 2,46,-1
  425 588 l 2,47,48
  454 584 454 584 459 571.5 c 128,-1,49
  464 559 464 559 464 550 c 0,50,51
@@ -12340,7 +12449,7 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB49
-Encoding: 64329 64329 103
+Encoding: 64329 64329 105
 Width: 727
 GlyphClass: 2
 Flags: W
@@ -12354,20 +12463,20 @@ PUSHB_1
  53
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 102 1513 N 1 0 0 1 0 0 3
+Refer: 104 1513 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 405 12 2
 EndChar
 
 StartChar: uniFB2C
-Encoding: 64300 64300 104
+Encoding: 64300 64300 106
 Width: 727
 GlyphClass: 2
 Flags: W
@@ -12381,21 +12490,21 @@ PUSHB_1
  53
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 102 1513 N 1 0 0 1 0 0 3
+Refer: 104 1513 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 405 12 2
-Refer: 106 1473 N 1 0 0 1 544 0 2
+Refer: 108 1473 N 1 0 0 1 544 0 2
 EndChar
 
 StartChar: uniFB2D
-Encoding: 64301 64301 105
+Encoding: 64301 64301 107
 Width: 727
 GlyphClass: 2
 Flags: W
@@ -12409,21 +12518,21 @@ PUSHB_1
  53
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 102 1513 N 1 0 0 1 0 0 3
+Refer: 104 1513 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 405 12 2
-Refer: 110 1474 N 1 0 0 1 79 0 2
+Refer: 112 1474 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: uni05C1
-Encoding: 1473 1473 106
+Encoding: 1473 1473 108
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12468,7 +12577,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 84 536 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12484,41 +12593,41 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB2A
-Encoding: 64298 64298 107
+Encoding: 64298 64298 109
 Width: 727
 GlyphClass: 2
 Flags: W
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 102 1513 N 1 0 0 1 0 0 3
-Refer: 106 1473 N 1 0 0 1 544 0 2
+Refer: 104 1513 N 1 0 0 1 0 0 3
+Refer: 108 1473 N 1 0 0 1 544 0 2
 EndChar
 
 StartChar: uniFB2B
-Encoding: 64299 64299 108
+Encoding: 64299 64299 110
 Width: 727
 GlyphClass: 2
 Flags: W
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 628 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 628 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 163 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 4 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 381 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 489 312 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 78 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 102 1513 N 1 0 0 1 0 0 3
-Refer: 110 1474 N 1 0 0 1 79 0 2
+Refer: 104 1513 N 1 0 0 1 0 0 3
+Refer: 112 1474 N 1 0 0 1 0 0 2
 EndChar
 
 StartChar: uni05BD
-Encoding: 1469 1469 109
+Encoding: 1469 1469 111
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12562,8 +12671,8 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 74 0 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 74 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 74 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 74 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -12576,7 +12685,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05C2
-Encoding: 1474 1474 110
+Encoding: 1474 1474 112
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12606,12 +12715,12 @@ NPUSHB
  81
  1
  0
- 6
- 4
+ 7
+ 5
  0
- 10
+ 11
  1
- 10
+ 11
  3
  7
  22
@@ -12621,25 +12730,27 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 84 536 mark 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 0 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 0 536 mark 0
 LayerCount: 2
 Fore
 SplineSet
-83 670 m 256,0,1
- 66 670 66 670 56 680 c 128,-1,2
- 46 690 46 690 46 713 c 0,3,4
- 46 755 46 755 83 755 c 0,5,6
- 100 755 100 755 110.5 744.5 c 128,-1,7
- 121 734 121 734 121 713 c 0,8,9
- 121 691 121 691 110.5 680.5 c 128,-1,10
- 100 670 100 670 83 670 c 256,0,1
+169 670 m 256,0,1
+ 152 670 152 670 141.5 680 c 128,-1,2
+ 131 690 131 690 131 713 c 0,3,4
+ 131 734 131 734 141.5 744.5 c 128,-1,5
+ 152 755 152 755 169 755 c 256,6,7
+ 186 755 186 755 196.5 744.5 c 128,-1,8
+ 207 734 207 734 207 713 c 0,9,10
+ 207 691 207 691 196.5 680.5 c 128,-1,11
+ 186 670 186 670 169 670 c 256,0,1
 EndSplineSet
 EndChar
 
 StartChar: uni05C3
-Encoding: 1475 1475 111
+Encoding: 1475 1475 113
 Width: 286
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -12711,7 +12822,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05EA
-Encoding: 1514 1514 112
+Encoding: 1514 1514 114
 Width: 606
 GlyphClass: 2
 Flags: W
@@ -12831,7 +12942,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 335 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 307 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 39 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 322 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 35 0 basechar 0
 LayerCount: 2
@@ -12881,23 +12992,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB4A
-Encoding: 64330 64330 113
+Encoding: 64330 64330 115
 Width: 606
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 335 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 307 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 39 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 19 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 322 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 35 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 112 1514 N 1 0 0 1 0 0 3
+Refer: 114 1514 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 238 0 2
 EndChar
 
 StartChar: uni05A0
-Encoding: 1440 1440 114
+Encoding: 1440 1440 116
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -12964,7 +13075,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 157 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 157 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 157 536 mark 0
 LayerCount: 2
 Fore
@@ -12994,7 +13105,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05A9
-Encoding: 1449 1449 115
+Encoding: 1449 1449 117
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -13061,7 +13172,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 144 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 144 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 144 536 mark 0
 LayerCount: 2
 Fore
@@ -13091,7 +13202,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05D8
-Encoding: 1496 1496 116
+Encoding: 1496 1496 118
 Width: 637
 GlyphClass: 2
 Flags: W
@@ -13208,7 +13319,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 321 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 369 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 22 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -8 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 343 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 107 0 basechar 0
 LayerCount: 2
@@ -13228,7 +13339,7 @@ SplineSet
  104 642 l 2,15,16
  104 599 104 599 143 593 c 2,17,-1
  213 584 l 2,18,19
- 252 578 252 578 252 530 c 0,20,21
+ 252 580 252 580 252 530 c 0,20,21
  252 520 252 520 250.5 507 c 128,-1,22
  249 494 249 494 244 469 c 1,23,-1
  178 479 l 1,24,25
@@ -13262,23 +13373,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB38
-Encoding: 64312 64312 117
+Encoding: 64312 64312 119
 Width: 637
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 321 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 369 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 22 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -8 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 343 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 107 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 116 1496 N 1 0 0 1 0 0 3
+Refer: 118 1496 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 259 0 2
 EndChar
 
 StartChar: uni059B
-Encoding: 1435 1435 118
+Encoding: 1435 1435 120
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -13332,7 +13443,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 193 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 193 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 193 0 mark 0
 LayerCount: 2
 Fore
@@ -13360,7 +13471,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0596
-Encoding: 1430 1430 119
+Encoding: 1430 1430 121
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -13389,7 +13500,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 75 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 75 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 75 0 mark 0
 LayerCount: 2
 Fore
@@ -13408,7 +13519,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05E6
-Encoding: 1510 1510 120
+Encoding: 1510 1510 122
 Width: 531
 GlyphClass: 2
 Flags: W
@@ -13516,7 +13627,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 225 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 271 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 30 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 3 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 139 243 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 10 0 basechar 0
 LayerCount: 2
@@ -13594,7 +13705,7 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB46
-Encoding: 64326 64326 121
+Encoding: 64326 64326 123
 Width: 531
 GlyphClass: 2
 Flags: W
@@ -13610,17 +13721,17 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 225 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 271 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 30 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 3 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 139 243 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 10 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 120 1510 N 1 0 0 1 0 0 3
+Refer: 122 1510 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 55 -57 2
 EndChar
 
 StartChar: uni05B5
-Encoding: 1461 1461 122
+Encoding: 1461 1461 124
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -13677,7 +13788,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 145 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 145 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 145 0 mark 0
 LayerCount: 2
 Fore
@@ -13700,7 +13811,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05C4
-Encoding: 1476 1476 123
+Encoding: 1476 1476 125
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -13745,7 +13856,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 84 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 84 536 mark 0
 LayerCount: 2
 Fore
@@ -13762,7 +13873,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05D5
-Encoding: 1493 1493 124
+Encoding: 1493 1493 126
 Width: 326
 GlyphClass: 2
 Flags: W
@@ -13847,8 +13958,8 @@ NPUSHB
 CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 215 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 153 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 134 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 134 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 103 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 14 0 basechar 0
 LayerCount: 2
@@ -13886,56 +13997,56 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: vav_shindothb
-Encoding: 65540 -1 125
+Encoding: 65542 -1 127
 Width: 326
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 215 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 153 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 134 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 134 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 103 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 14 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 124 1493 N 1 0 0 1 0 0 3
-Refer: 106 1473 N 1 0 0 1 -87 0 2
+Refer: 126 1493 N 1 0 0 1 0 0 3
+Refer: 108 1473 N 1 0 0 1 -87 0 2
 Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in +BBgEMgRABDgEQgAA lookup 0 subtable" uni05D5 uni05C1
 EndChar
 
 StartChar: uniFB35
-Encoding: 64309 64309 126
+Encoding: 64309 64309 128
 Width: 326
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 215 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 153 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 134 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 134 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 103 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 14 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 124 1493 N 1 0 0 1 0 0 3
+Refer: 126 1493 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 19 0 2
 EndChar
 
 StartChar: uniFB4B
-Encoding: 64331 64331 127
+Encoding: 64331 64331 129
 Width: 326
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 215 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 153 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -1 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 134 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 134 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 103 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 14 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 124 1493 N 1 0 0 1 0 0 3
-Refer: 53 1465 N 1 0 0 1 48 0 2
+Refer: 126 1493 N 1 0 0 1 0 0 3
+Refer: 55 1465 N 1 0 0 1 48 0 2
 EndChar
 
 StartChar: uni05F0
-Encoding: 1520 1520 128
+Encoding: 1520 1520 130
 Width: 652
 GlyphClass: 3
 LigCaretCntFixed: 1
@@ -14092,32 +14203,33 @@ LCarets2: 1 326
 EndChar
 
 StartChar: uni05F1
-Encoding: 1521 1521 129
+Encoding: 1521 1521 131
 Width: 650
 GlyphClass: 3
 LigCaretCntFixed: 1
 Flags: W
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 539 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 477 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 323 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 427 300 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 338 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 165 0 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 161 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 75 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 102 408 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -11 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 539 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 458 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 458 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 427 300 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 338 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 165 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 161 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -10 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 102 408 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -11 0 baselig 1
 LayerCount: 2
 Fore
-Refer: 124 1493 N 1 0 0 1 324 0 2
-Refer: 139 1497 N 1 0 0 1 0 0 2
-Ligature2: "'dlig' Discretionary Ligatures in +BBgEMgRABDgEQgAA lookup 2 subtable" uni05D9 uni05D5
+Refer: 126 1493 N 1 0 0 1 324 0 2
+Refer: 141 1497 N 1 0 0 1 0 0 2
+Ligature2: "'dlig' Discretionary Ligatures in +BBgEMgRABDgEQgAA lookup 2 subtable" uni05D5 uni05D9
 LCarets2: 1 265
 EndChar
 
 StartChar: uniFB21
-Encoding: 64289 64289 130
+Encoding: 64289 64289 132
 Width: 890
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -14296,8 +14408,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB22
-Encoding: 64290 64290 131
+Encoding: 64290 64290 133
 Width: 792
+GlyphClass: 1
 Flags: W
 TtInstrs:
 PUSHB_6
@@ -14411,8 +14524,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB23
-Encoding: 64291 64291 132
+Encoding: 64291 64291 134
 Width: 905
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -14552,8 +14666,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB24
-Encoding: 64292 64292 133
+Encoding: 64292 64292 135
 Width: 850
+GlyphClass: 1
 Flags: W
 TtInstrs:
 MPPEM
@@ -14673,8 +14788,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB25
-Encoding: 64293 64293 134
+Encoding: 64293 64293 136
 Width: 803
+GlyphClass: 1
 Flags: W
 TtInstrs:
 NPUSHB
@@ -14770,8 +14886,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB27
-Encoding: 64295 64295 135
+Encoding: 64295 64295 137
 Width: 784
+GlyphClass: 1
 Flags: W
 TtInstrs:
 PUSHB_6
@@ -14880,8 +14997,9 @@ EndSplineSet
 EndChar
 
 StartChar: uniFB28
-Encoding: 64296 64296 136
+Encoding: 64296 64296 138
 Width: 906
+GlyphClass: 1
 Flags: W
 TtInstrs:
 MPPEM
@@ -15042,7 +15160,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05AA
-Encoding: 1450 1450 137
+Encoding: 1450 1450 139
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15095,7 +15213,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 138 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 138 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 138 0 mark 0
 LayerCount: 2
 Fore
@@ -15126,7 +15244,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni059A
-Encoding: 1434 1434 138
+Encoding: 1434 1434 140
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15138,7 +15256,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 166 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 166 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 166 0 mark 0
 LayerCount: 2
 Fore
@@ -15154,7 +15272,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05D9
-Encoding: 1497 1497 139
+Encoding: 1497 1497 141
 Width: 324
 GlyphClass: 2
 Flags: W
@@ -15219,7 +15337,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 165 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 161 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 75 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -10 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 102 408 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -11 0 basechar 0
 LayerCount: 2
@@ -15254,7 +15372,7 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB39
-Encoding: 64313 64313 140
+Encoding: 64313 64313 142
 Width: 324
 GlyphClass: 2
 Flags: W
@@ -15270,70 +15388,89 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 165 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 161 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 75 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -10 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 102 408 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -11 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 139 1497 N 1 0 0 1 0 0 3
+Refer: 141 1497 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 18 108 2
 EndChar
 
 StartChar: uniFB1D
-Encoding: 64285 64285 141
+Encoding: 64285 64285 143
 Width: 324
 GlyphClass: 2
 Flags: W
+TtInstrs:
+PUSHB_2
+ 1
+ 1
+PUSHW_1
+ 265
+PUSHB_1
+ 53
+CALL
+EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 165 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 161 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 75 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -10 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 102 408 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -11 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 139 1497 N 1 0 0 1 0 0 3
-Refer: 52 1460 N 1 0 0 1 81 0 2
+Refer: 141 1497 N 1 0 0 1 0 0 3
+Refer: 53 1460 N 1 0 0 1 64 265 2
 EndChar
 
 StartChar: uni05F2
-Encoding: 1522 1522 142
+Encoding: 1522 1522 144
 Width: 648
 GlyphClass: 3
 LigCaretCntFixed: 1
 Flags: W
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 489 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 485 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 399 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 426 408 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 313 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 165 0 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 161 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 75 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 102 408 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -11 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 489 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 485 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 314 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 426 408 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 313 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 165 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 161 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -10 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 102 408 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -11 0 baselig 1
 LayerCount: 2
 Fore
-Refer: 139 1497 N 1 0 0 1 324 0 2
-Refer: 139 1497 N 1 0 0 1 0 0 2
+Refer: 141 1497 N 1 0 0 1 324 0 2
+Refer: 141 1497 N 1 0 0 1 0 0 2
 Ligature2: "'dlig' Discretionary Ligatures in +BBgEMgRABDgEQgAA lookup 2 subtable" uni05D9 uni05D9
 LCarets2: 1 250
 EndChar
 
 StartChar: uniFB1F
-Encoding: 64287 64287 143
+Encoding: 64287 64287 145
 Width: 648
 GlyphClass: 2
-LigCaretCntFixed: 1
 Flags: W
+TtInstrs:
+PUSHB_2
+ 2
+ 1
+PUSHW_1
+ 277
+PUSHB_1
+ 53
+CALL
+EndTTInstrs
 LayerCount: 2
 Fore
-Refer: 142 1522 N 1 0 0 1 0 0 3
-Refer: 80 1463 N 1 0 0 1 26 0 2
-LCarets2: 1 250
+Refer: 141 1497 N 1 0 0 1 324 0 2
+Refer: 141 1497 N 1 0 0 1 0 0 2
+Refer: 82 1463 N 1 0 0 1 168 277 2
 EndChar
 
 StartChar: uni0595
-Encoding: 1429 1429 144
+Encoding: 1429 1429 146
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15405,7 +15542,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 129 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 129 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 129 536 mark 0
 LayerCount: 2
 Fore
@@ -15435,7 +15572,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0594
-Encoding: 1428 1428 145
+Encoding: 1428 1428 147
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15497,7 +15634,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 84 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 84 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 84 536 mark 0
 LayerCount: 2
 Fore
@@ -15522,7 +15659,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni0598
-Encoding: 1432 1432 146
+Encoding: 1432 1432 148
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15585,7 +15722,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 188 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 188 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 188 536 mark 0
 LayerCount: 2
 Fore
@@ -15617,7 +15754,7 @@ EndSplineSet
 EndChar
 
 StartChar: uni05D6
-Encoding: 1494 1494 147
+Encoding: 1494 1494 149
 Width: 302
 GlyphClass: 2
 Flags: W
@@ -15659,7 +15796,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 185 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 174 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 16 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 34 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -21 0 basechar 0
 LayerCount: 2
@@ -15698,23 +15835,23 @@ PairPos2: "'kern' Horizontal Kerning in +BBgEMgRABDgEQgAA lookup 0 subtable" uni
 EndChar
 
 StartChar: uniFB36
-Encoding: 64310 64310 148
+Encoding: 64310 64310 150
 Width: 302
 GlyphClass: 2
 Flags: W
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 185 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 174 536 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 16 536 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 1 536 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 34 300 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -21 0 basechar 0
 LayerCount: 2
 Fore
-Refer: 147 1494 N 1 0 0 1 0 0 3
+Refer: 149 1494 N 1 0 0 1 0 0 3
 Refer: 22 1468 N 1 0 0 1 -50 0 2
 EndChar
 
 StartChar: uni05AE
-Encoding: 1454 1454 149
+Encoding: 1454 1454 151
 Width: 0
 GlyphClass: 4
 Flags: W
@@ -15777,7 +15914,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 188 536 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 188 536 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 188 536 mark 0
 LayerCount: 2
 Fore
@@ -15809,24 +15946,24 @@ EndSplineSet
 EndChar
 
 StartChar: uni05EF
-Encoding: 1519 1519 150
+Encoding: 1519 1519 152
 Width: 648
 Flags: WO
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 489 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 485 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 399 536 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 426 408 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 313 0 baselig 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 165 0 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 161 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 75 536 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 102 408 baselig 1
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -11 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 489 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 485 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" 314 536 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 426 408 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 313 0 baselig 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" 165 0 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" 161 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" -10 536 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" 102 408 baselig 1
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -11 0 baselig 1
 LayerCount: 2
 Fore
-Refer: 139 1497 S 1 0 0 1 139 301 2
-Refer: 139 1497 N 1 0 0 1 324 0 2
-Refer: 139 1497 N 1 0 0 1 0 0 2
+Refer: 141 1497 S 1 0 0 1 142 230 2
+Refer: 141 1497 S 1 0 0 1 324 -104 2
+Refer: 141 1497 S 1 0 0 1 0 -104 2
 EndChar
 EndChars
 EndSplineFont
