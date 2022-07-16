@@ -46,3 +46,22 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * SmartCopy — copies the file if it actually differs.
 * TapeMaker — creates a tape file for graphic emoji.
 * [UTranslator](https://github.com/Mercury13/utranslator) — translation tool.
+
+# Unicodia emoji style guide
+Right now Unicodia emoji library is very small, but…
+
+I discovered that most of professional emoji… do not work! Do not work because they have too much detail and too little contrast. The last professional emoji that really worked is… 2018 Microsoft!
+
+**High priority:** emoji that are really badly grasped.
+
+**Canvas size:** 64×64. For oblong/round object: leave 2px from edge. For square object: leave 6px from edge. For faces: leave 7px from edge.
+
+**Colour scheme:** GNOME Human Interface Guidelines unless REALLY needed (e.g. military helmet). Use plain colours.
+
+**Projection:** frontal unless the object is better identified in other projection.
+
+**Style:** avoid toyish look. Machinery should be based on real-life models.
+
+**Outline:** 2px, the darkest colour of palette (unless outlining grey/white/luminous thing). Interruptions and partial omissions are possible. Inner edges are outlined optionally.
+
+**Grid:** 1px; extremum nodes are snapped.
