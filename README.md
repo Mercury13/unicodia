@@ -62,6 +62,6 @@ I discovered that most of professional emoji… do not work! Do not work because
 
 **Style:** avoid toyish look. Machinery should be based on real-life models.
 
-**Outline:** 2px, the darkest colour of palette (unless outlining grey/white/luminous thing). Interruptions and partial omissions are possible. Inner edges are outlined optionally.
+**Outline:** 2px, the darkest colour of palette (unless outlining grey/white/luminous thing). The outline may be partly omitted to gain more dynamic look; the object should continue from the OUTER edge of outline (like in OpenMoji). Inner lines are outlined optionally. Truncation lines are never outlined.
 
 **Grid:** 1px; extremum nodes are snapped.
