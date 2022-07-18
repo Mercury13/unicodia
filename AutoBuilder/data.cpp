@@ -1019,6 +1019,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
 
     // SPECIALS
         // Misc
+    EX("Next line (NEL)")               // Nel is ambiguous
     EX("Commercial At")                 // At is not a preposition
     EX("Tag Commercial At")             // Same
     EX("Fraction slash")                // Fraction’s slash
