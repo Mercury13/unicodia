@@ -3,13 +3,13 @@
 // C++
 #include <set>
 #include <filesystem>
-
-// Qt
-#include <QTranslator>
-#include <QLocale>
+#include <map>
+#include <unordered_map>
 
 // Libs
 #include "u_Vector.h"
+
+class QTranslator;
 
 namespace loc
 {

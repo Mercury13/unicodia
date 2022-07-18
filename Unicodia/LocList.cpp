@@ -2,8 +2,17 @@
 #include "LocList.h"
 
 // Qt
-#include <QLocale>
+#ifdef __GNUC__
+    #pragma GCC diagnostic push
+    #pragma GCC diagnostic ignored "-Wattributes"
+#endif
+    #include <QLocale>
+#ifdef __GNUC__
+    #pragma GCC diagnostic pop
+#endif
+
 #include <QApplication>
+#include <QTranslator>
 
 // XML
 #include "pugixml.hpp"
