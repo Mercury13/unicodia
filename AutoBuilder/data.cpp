@@ -801,6 +801,13 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ZAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ZAIN",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "J-SIMPLIFIED",   Dicf::CAP_TITLE },
+    { "WAW-AYIN-RESH",  { Dicf::PART_NOUN, "Waw-Ayin-Resh" } },
+    { "RESH-AYIN-DALETH", { Dicf::PART_NOUN, "Resh-Ayin-Daleth" } },
+    { "AYIN-DALETH",    { Dicf::PART_NOUN, "Ayin-Daleth" } },
+    { "RESH-AYIN",      { Dicf::PART_NOUN, "Resh-Ayin" } },
+    { "ZAYIN-YODH",     { Dicf::PART_NOUN, "Zayin-Yodh" } },
+    { "GIMEL-HETH",     { Dicf::PART_NOUN, "Gimel-Heth" } },
+    { "MEM-QOPH",       { Dicf::PART_NOUN, "Mem-Qoph" } },
 
     // Some prepositions
     { "WITH",           Dicf::CAP_SMALL },
