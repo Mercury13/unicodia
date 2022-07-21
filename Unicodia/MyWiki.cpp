@@ -390,6 +390,18 @@ namespace {
         finishRecursion(hasRemainder, q);
     }
 
+    void appendFont(QString& s, uc::EcFont fontId,
+                    const SafeVector<std::string_view>& x)
+    {
+        s += "<font face='";
+        auto& fnNoto = uc::fontInfo[static_cast<int>(fontId)];
+        fnNoto.load(NO_TRIGGER);
+        s += fnNoto.familiesComma(NO_TRIGGER);
+        s += "'>";
+        str::append(s, x.safeGetV(1, {}));
+        str::append(s, "</font>");
+    }
+
     // Key: start/end
     constinit const std::u8string_view KEY_START =
             u8"<span style='background-color:palette(midlight);'>\u00A0";
@@ -458,14 +470,10 @@ namespace {
             s += QString::number(uc::N_CPS);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
+        } else if (name == "funky"sv) {
+            appendFont(s, uc::EcFont::FUNKY, x);
         } else if (name == "noto"sv) {
-            s += "<font face='";
-            auto& fnNoto = uc::fontInfo[static_cast<int>(uc::EcFont::NOTO)];
-            fnNoto.load(NO_TRIGGER);
-            s += fnNoto.familiesComma(NO_TRIGGER);
-            s += "'>";
-            str::append(s, x.safeGetV(1, {}));
-            str::append(s, "</font>");
+            appendFont(s, uc::EcFont::NOTO, x);
         } else {
             wiki::appendHtml(s, x[0]);
         }
