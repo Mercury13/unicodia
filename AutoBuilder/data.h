@@ -4,6 +4,7 @@
 #include <string>
 #include <set>
 #include <unordered_set>
+#include <unordered_map>
 
 #include "u_TypedFlags.h"
 #include "u_Array.h"
