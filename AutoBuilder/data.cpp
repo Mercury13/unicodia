@@ -607,6 +607,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MIDDLE",         Dicf::PART_ADJECTIVE },
     { "MONOGRAPH",      Dicf::PART_ADJECTIVE },
     { "NASAL",          Dicf::PART_ADJECTIVE },
+    { "NDOLE",          Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },   // Vai
     { "NEUTRAL",        Dicf::PART_ADJECTIVE },
     { "NEW",            Dicf::PART_ADJECTIVE },
     { "NINE-LIKE",      Dicf::PART_ADJECTIVE },
@@ -1008,6 +1009,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Ethiopic combining vowel length mark")                // Same
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
+        // Vaii
+    EX("Vai syllable lengthener")   // Syllable is not keyword
 
     // CJK
         // Hang
