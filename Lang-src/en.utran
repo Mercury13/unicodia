@@ -1843,7 +1843,6 @@
     </text>
     <text id="Text">
      <orig>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.<br /><br />Редкая [[pt:ligature|лигатура]] «мультиокулярная О» используется только в церковном эпитете «мног{{funky|ꙮ}}кий». В Юникоде{{_}}15 семь «глаз» заменены десятью{{-}}сложно посчитать, сколько их в исходных рукописях, но ближе к десяти.</orig>
-     <known-orig>Старо- и церковнославянский, дореволюционный абхазский (кириллица Услара, 1862), знаки интонации для литовской диалектологии.<br /><br />Редкая [[pt:ligature|лигатура]] «мультиокулярная О» используется только в церковном эпитете «мног{{noto|ꙮ}}кий». В Юникоде{{_}}15 семь «глаз» заменены десятью{{-}}сложно посчитать, сколько их в исходных рукописях, но ближе к десяти.</known-orig>
      <transl>Old and Church Slavonic, pre-1917 Abkhazian (Uslar Cyrillic, 1862), intonation sign for Lithuanian dialectology.<br /><br />Rare [[pt:ligature|ligature]] “multiocular O” is used only in church epithet “many-eyed” (мног{{funky|ꙮ}}кий). In Unicode{{_}}15 seven eyes were replaced with ten{{-}}it’s hard to count how many are in initial manuscripts, but closer to ten.</transl>
     </text>
    </group>
@@ -6850,6 +6849,11 @@
      <orig>Закрыть</orig>
      <im-cmt>is a button</im-cmt>
      <transl>Close</transl>
+    </text>
+    <text id="tabLibrary:at">
+     <orig>Подборки</orig>
+     <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Library</transl>
     </text>
     <text id="tabTerms:at">
      <orig>Термины</orig>
