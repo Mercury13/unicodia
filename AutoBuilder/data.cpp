@@ -605,7 +605,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MEDIAL",         Dicf::PART_ADJECTIVE },
     { "MID",            Dicf::PART_ADJECTIVE },
     { "MIDDLE",         Dicf::PART_ADJECTIVE },
+    { "MONOCULAR",      Dicf::PART_ADJECTIVE },     // Cyrl
     { "MONOGRAPH",      Dicf::PART_ADJECTIVE },
+    { "MULTIOCULAR",    Dicf::PART_ADJECTIVE },     // Cyrl
     { "NASAL",          Dicf::PART_ADJECTIVE },
     { "NDOLE",          Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },   // Vai
     { "NEUTRAL",        Dicf::PART_ADJECTIVE },
