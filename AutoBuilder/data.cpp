@@ -620,7 +620,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "OPEN",           Dicf::PART_ADJECTIVE },
     { "OVERLONG",       Dicf::PART_ADJECTIVE },
     { "PALATAL",        Dicf::PART_ADJECTIVE },
-    { "PERNIN",         Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "PHARYNGEAL",     Dicf::PART_ADJECTIVE },
     { "PHASE-A",        { Dicf::PART_ADJECTIVE, "phase-A" } },
     { "PHASE-B",        { Dicf::PART_ADJECTIVE, "phase-B" } },
@@ -707,6 +706,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LORRAINE",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
     { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
@@ -832,11 +832,6 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Cyrillic small ligature Te Tse")
     EX("Cyrillic capital ligature A Ie")
     EX("Cyrillic small ligature A Ie")
-    EX("Combining Cyrillic Hundred thousands sign")     // Who knows, maybe so
-    EX("Combining Cyrillic Millions sign")
-    EX("Combining Cyrillic Ten millions sign")
-    EX("Combining Cyrillic Hundred millions sign")
-    EX("Combining Cyrillic Thousand millions sign")
         // Dupl
     EX("Duployan letter D S")                       // Same
     EX("Duployan letter R S")                       // Same
@@ -1047,6 +1042,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Combining ligature right half below")
     EX("Planck constant over two pi")   // pi is small here
     EX("Modifier breve with inverted breve")    // Modifier
+    EX("Modifier letter Low circumflex accent") // What to do with circumflex?
+    EX("Modifier letter Short equals sign")     // What to do with equals?
         // Emoji
     EX("Earth globe Europe-Africa")     // Special proper name
     EX("Earth globe Americas")          // Special proper name
