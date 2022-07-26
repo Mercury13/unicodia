@@ -489,14 +489,14 @@ int main()
 
     ///// Noto emoji ///////////////////////////////////////////////////////////
 
-    std::cout << "Loading Noto emoji directory..." << std::flush;
+    std::cout << "Loading Noto emoji list..." << std::flush;
     NotoData noto = loadNotoEmoji();
     std::cout << "OK" << std::endl;
     std::cout << "  Found " << noto.singleChar.size() << " single-char emoji." << std::endl;
 
     ///// Emoji ////////////////////////////////////////////////////////////////
 
-    std::cout << "Loading emoji..." << std::flush;
+    std::cout << "Loading Unicode emoji table..." << std::flush;
     EmojiData emoji = loadEmoji();
     std::cout << "OK" << std::endl;
     std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
