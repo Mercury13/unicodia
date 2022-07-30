@@ -639,7 +639,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ROTATED",        Dicf::PART_ADJECTIVE },
     { "ROUNDED",        Dicf::PART_ADJECTIVE },
     { "SARA",           Dicf::PART_ADJECTIVE }, // Used for Thai
-    { "SCRIPT",         Dicf::PART_MIXED },
+    { "SCRIPT",         Dicf::PART_ADJECTIVE }, // “Khitan small script” OK
     { "SEMISOFT",       Dicf::PART_ADJECTIVE },
     { "SHARP",          Dicf::PART_ADJECTIVE },
     { "SHORT",          Dicf::PART_ADJECTIVE },
