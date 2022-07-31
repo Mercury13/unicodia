@@ -908,9 +908,9 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
         // Kthi
     EX("Kaithi number sign above")  // Number’s mark → number is not keyword
         // Orya
-    EX("Oriya Ai length mark")  // IDK how to make rule
+    EX("Oriya Ai length mark")      // IDK how to make rule
         // Thai
-    EX("Thai character No nu")          // Conflict with Greek Nu
+    EX("Thai character No nu")      // Conflict with Greek Nu
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
 
