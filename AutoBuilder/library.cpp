@@ -118,6 +118,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
             // Normal line
             auto [spannedCodes, qualType, comment] = splitLineSv(mainLine, ';', '#');
             if (qualType == "fully-qualified"sv) {
+                // Only fully-qualified emoji are added
                 auto hexCodes = str::splitSv(spannedCodes, ' ');
                 auto nCodes = hexCodes.size();
                 for (size_t i = 0; i < nCodes; ++i) {
