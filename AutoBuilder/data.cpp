@@ -905,14 +905,21 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Gurmukhi Iri")      // Same as Gurmukhi letter Uu
     EX("Gurmukhi Ura")      // Same
     EX("Gurmukhi Ek Onkar") // Ligature of phrase
+        // Knda
+    EX("Kannada Ai length mark")    // IDK how to make rule, hand-checked Length
         // Kthi
     EX("Kaithi number sign above")  // Number’s mark → number is not keyword
         // Orya
-    EX("Oriya Ai length mark")      // IDK how to make rule
+    EX("Oriya Ai length mark")      // IDK how to make rule, hand-checked Length
+        // Soyo
+    EX("Soyombo vowel length mark") // IDK how to make rule, hand-checked Length
+        // Telu
+    EX("Telugu Ai length mark")     // IDK how to make rule, hand-checked Length
         // Thai
     EX("Thai character No nu")      // Conflict with Greek Nu
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
+    EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
 
     // NON-BRAHMIC ASIAN AND OCEAN SCRIPTS
         // Arab
@@ -955,6 +962,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Hebrew ligature Yiddish double Vav")
     EX("Hebrew ligature Yiddish Yod Yod Patah")
     EX("Hebrew ligature Alef Lamed")
+        // Khar
+    EX("Kharoshthi vowel length mark")      // IDK how to make rule, hand-checked Length
         // Mani
     EX("Manichaean abbreviation mark above")    // Abbreviation’s mark → abbreviation/mark are not keywords
     EX("Manichaean abbreviation mark below")    // The same
