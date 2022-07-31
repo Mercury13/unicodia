@@ -699,9 +699,19 @@ int main()
     }
     os << "};\n";
 
-    ///// Close main file, write UcAutoCount ///////////////////////////////////
+    ///// Close main file //////////////////////////////////////////////////////
 
     os.close();
+
+    ///// Write UcAutoLib.cpp //////////////////////////////////////////////////
+
+    lib::Node root;
+    // Node 1: emoji
+    root.children.emplace_back() = std::move(emoji.root);
+    // Write!
+    auto libInfo = lib::write(root, "UcAutoLib.cpp");
+
+    ///// Write UcAutoCount ////////////////////////////////////////////////////
     os.open("UcAutoCount.h");
     os << "#pragma once\n";
     os << '\n';
@@ -711,6 +721,7 @@ int main()
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
+    os << "constexpr int N_LIBNODES = " << std::dec << libInfo.nNodes << ";\n";
     os << "}\n";
 
     ///// Done !! //////////////////////////////////////////////////////////////

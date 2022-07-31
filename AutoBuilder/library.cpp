@@ -161,6 +161,70 @@ namespace {
         return counter;
     }
 
+    void writeU32sv(std::ostream& os, std::u32string_view s)
+    {
+        if (s.empty()) {
+            os << "{}";
+        } else {
+            os << "U\"";
+            char buf[16];
+            for (auto c : s) {
+                if (c <= 0xFFFF) {
+                    snprintf(buf, std::size(buf), "\\u%04X", static_cast<unsigned>(c));
+                } else {
+                    snprintf(buf, std::size(buf), "\\U%08X", static_cast<unsigned>(c));
+                }
+                os << buf;
+            }
+            os << '"';
+        }
+    }
+
+    void writeU8sv(std::ostream& os, std::u8string_view s)
+    {
+        if (s.empty()) {
+            os << "{}";
+        } else {
+            os << "u8\"" << str::toSv(s) << '"';
+        }
+    }
+
+    void writeNode(std::ostream& os, const lib::Node& node, int iParent)
+    {
+        // opening brace
+        os << "{ ";
+        // value
+        writeU32sv(os, node.value);
+        os << ", ";
+        // text
+        writeU8sv(os, node.name);
+        os << ", ";
+        // parent
+        os << iParent << ", ";
+        // childred.count
+        os << node.children.size() << ", ";
+        // children.index
+        if (node.children.empty()) {
+            os << "-1";
+        } else {
+            os << node.children[0].cache.index;
+        }
+        // closing brace
+        os << " }   // " << node.cache.index << "\n";
+    }
+
+    void recurseWrite(
+            std::ostream& os,
+            const lib::Node& node)
+    {
+        for (auto& v : node.children) {
+            writeNode(os, v, node.cache.index);
+        }
+        for (auto& v : node.children) {
+            recurseWrite(os, v);
+        }
+    }
+
 }   // anon namespace
 
 
@@ -171,12 +235,15 @@ lib::Result lib::write(const Node& root, const char* fname)
 
     std::ofstream os(fname);
 
-    os << "// Automatically generated, do not edit!" << '\n';
+    os << "// Automatically generated, do not edit!"  "\n";
     os << '\n';
-    os << R"(#include "UcAutoDefines.h")" << '\n';
+    os << R"(#include "UcAutoDefines.h")"  "\n";
     os << '\n';
-    os << R"(using namespace std::string_view_literals;)" << '\n';
-    os << '\n';
+
+    os << "constinit const uc::LibNode uc::libNodes[" << r.nNodes << "] {"  "\n";
+    writeNode(os, root, -1);
+    recurseWrite(os, root);
+    os << "};"  "\n";
 
     return r;
 }
