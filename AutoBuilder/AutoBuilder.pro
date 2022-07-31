@@ -15,6 +15,7 @@ SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         data.cpp \
+        library.cpp \
         loader.cpp \
         main.cpp
 
@@ -26,6 +27,7 @@ HEADERS += \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
     data.h \
+    library.h \
     loader.h
 
 

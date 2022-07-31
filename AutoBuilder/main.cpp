@@ -14,6 +14,7 @@
 // Project-local
 #include "data.h"
 #include "loader.h"
+#include "library.h"
 
 using namespace std::string_view_literals;
 
@@ -41,20 +42,6 @@ long long fromChars(std::string_view x, std::string_view numType)
         errm.append(x);
         errm.append(", numType = ");
         errm.append(numType);
-        throw std::invalid_argument(errm);
-    }
-    return r;
-}
-
-unsigned fromHex(std::string_view x)
-{
-    long long r;
-    auto beg = x.data();
-    auto end = beg + x.length();
-    auto res = std::from_chars(beg, end, r, 16);
-    if (res.ec != std::errc() || res.ptr != end) {
-        std::string errm = "[fromChars] Cannot parse hex ";
-        errm.append(x);
         throw std::invalid_argument(errm);
     }
     return r;
@@ -385,46 +372,6 @@ NotoData loadNotoEmoji()
 }
 
 
-struct EmojiData {
-    std::unordered_set<char32_t> vs16;
-};
-
-
-EmojiData loadEmoji()
-{
-    std::ifstream is("emoji-test.txt");
-    if (!is.is_open())
-        throw std::logic_error("Cannot open emoji-test.txt");
-
-    Fix1d<char32_t, 20> codes;
-
-    EmojiData r;
-    std::string s;
-    while (std::getline(is, s)) {
-        std::string_view mainLine{str::trimSv(s)}, qualType{}, comment{};
-        if (auto pPound = mainLine.find('#');
-                pPound != std::string_view::npos) {
-            comment = str::trimSv(mainLine.substr(pPound + 1));
-            mainLine = str::trimSv(mainLine.substr(0, pPound));
-        }
-        if (auto pColon = mainLine.find(';');
-                pColon != std::string_view::npos) {
-            qualType = str::trimSv(mainLine.substr(pColon + 1));
-            mainLine = str::trimSv(mainLine.substr(0, pColon));
-        }
-        auto hexCodes = str::splitSv(mainLine, ' ');
-        auto nCodes = hexCodes.size();
-        for (size_t i = 0; i < nCodes; ++i) {
-            codes[i] = fromHex(hexCodes[i]);
-        }
-        if (nCodes == 2 && qualType == "fully-qualified"sv && codes[1] == 0xFE0F) {
-            r.vs16.insert(codes[0]);
-        }
-    }
-    return r;
-}
-
-
 int main()
 {
     std::cout << "Have " << dictionary.size() << " words in dictionary, "
@@ -497,7 +444,7 @@ int main()
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
-    EmojiData emoji = loadEmoji();
+    auto emoji = lib::loadEmoji(EMOJI_TEST);
     std::cout << "OK" << std::endl;
     std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
 
