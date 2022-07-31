@@ -18,8 +18,11 @@ namespace lib {
 
     struct Node {
         std::u8string name;
-        size_t index = 0;
+        std::u32string value;
         SafeVector<Node> children;
+        struct Cache {
+            size_t index = 0;
+        } cache;
     };
 
 
