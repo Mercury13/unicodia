@@ -917,6 +917,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Telugu Ai length mark")     // IDK how to make rule, hand-checked Length
         // Thai
     EX("Thai character No nu")      // Conflict with Greek Nu
+        // Tibt
+    EX("Tibetan astrological sign -Khyud pa")   // Because of hyphen (=apostrophe)
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
     EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
