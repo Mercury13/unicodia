@@ -81,7 +81,7 @@ namespace {
 
 constexpr std::string_view S_GROUP = "group: ";
 constexpr std::string_view S_SUBGROUP = "subgroup: ";
-
+constexpr char32_t VS16 = 0xFE0F;
 
 
 lib::EmojiData lib::loadEmoji(const char* fname)
@@ -124,7 +124,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 for (size_t i = 0; i < nCodes; ++i) {
                     codes[i] = fromHex(hexCodes[i]);
                 }
-                if (nCodes == 2 && codes[1] == 0xFE0F) {
+                if (nCodes == 2 && codes[1] == VS16) {
                     r.vs16.insert(codes[0]);
                 }
             }
