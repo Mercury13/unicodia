@@ -20,8 +20,8 @@ namespace lib {
         std::u8string name;
         std::u32string value;
         SafeVector<Node> children;
-        struct Cache {
-            size_t index = 0;
+        mutable struct Cache {
+            int index = 0;
         } cache;
     };
 
@@ -35,5 +35,11 @@ namespace lib {
 
 
     EmojiData loadEmoji(const char* fname);
+
+    struct Result {
+        int nNodes = 0;
+    };
+
+    Result write(const Node& root, const char* fname);
 
 }   // namespace lib

@@ -455,8 +455,6 @@ int main()
     os << '\n';
     os << R"(#include "UcAutoDefines.h")" << '\n';
     os << '\n';
-    os << R"(using namespace std::string_view_literals;)" << '\n';
-    os << '\n';
 
     pugi::xml_document doc;
 

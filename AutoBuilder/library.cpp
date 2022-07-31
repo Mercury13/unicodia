@@ -2,6 +2,7 @@
 
 // STL
 #include <stack>
+#include <fstream>
 
 // Libs
 #include "u_Strings.h"
@@ -124,11 +125,58 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 for (size_t i = 0; i < nCodes; ++i) {
                     codes[i] = fromHex(hexCodes[i]);
                 }
+                // #### + VS16 → that code requires VS16
                 if (nCodes == 2 && codes[1] == VS16) {
                     r.vs16.insert(codes[0]);
                 }
+                // Add to tree
+                auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
+                auto& newItem = treePath.top()->children.emplace_back();
+                newItem.name = str::toU8sv(name);
+                newItem.value.assign(codes.buffer(), nCodes);
             }
         }
     }
+    return r;
+}
+
+
+namespace {
+
+    void recurseEnum(const lib::Node& node, int& counter)
+    {
+        for (auto& v : node.children) {
+            v.cache.index = counter++;
+        }
+        for (auto& v : node.children) {
+            recurseEnum(v, counter);
+        }
+    }
+
+    int enumNodes(const lib::Node& root)
+    {
+        int counter = 0;
+        root.cache.index = counter++;
+        recurseEnum(root, counter);
+        return counter;
+    }
+
+}   // anon namespace
+
+
+lib::Result lib::write(const Node& root, const char* fname)
+{
+    lib::Result r;
+    r.nNodes = enumNodes(root);
+
+    std::ofstream os(fname);
+
+    os << "// Automatically generated, do not edit!" << '\n';
+    os << '\n';
+    os << R"(#include "UcAutoDefines.h")" << '\n';
+    os << '\n';
+    os << R"(using namespace std::string_view_literals;)" << '\n';
+    os << '\n';
+
     return r;
 }
