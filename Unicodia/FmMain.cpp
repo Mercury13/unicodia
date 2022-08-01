@@ -30,7 +30,7 @@
 
 // Project-local
 #include "Skin.h"
-#include "Wiki.h"
+#include "Wiki.h"   // used!
 #include "MyWiki.h"
 #include "u_EmojiPainter.h"
 
@@ -1171,6 +1171,62 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 }
 
 
+///// LibModel /////////////////////////////////////////////////////////////////
+
+#define GETNODE(parent, fallback) \
+    auto ii = parent.internalId(); \
+    if (ii >= uc::N_LIBNODES) \
+        fallback; \
+    auto& node = uc::libNodes[ii];
+
+QModelIndex LibModel::index(int row, int, const QModelIndex &parent) const
+{
+    GETNODE(parent, return {})
+    if (row >= node.nChildren)
+        return {};
+    auto newIndex = node.iFirstChild + row;
+    return createIndex(row, COL0, newIndex);
+}
+
+
+QModelIndex LibModel::parent(const QModelIndex &child) const
+{
+    GETNODE(child, return {})
+    auto iParent = node.iParent;
+    if (iParent == 0)
+        return {};
+    auto& parent = uc::libNodes[iParent];
+    auto iParent2 = parent.iParent;
+    auto& parent2 = uc::libNodes[iParent2];
+    return createIndex(iParent - parent2.iFirstChild, COL0, iParent);
+}
+
+
+int LibModel::rowCount(const QModelIndex &parent) const
+{
+    GETNODE(parent, return 0)
+    return node.nChildren;
+}
+
+
+int LibModel::columnCount(const QModelIndex &) const
+    { return 1; }
+
+
+QVariant LibModel::data(const QModelIndex &index, int role) const
+{
+    GETNODE(index, return {})
+    switch (role) {
+    case Qt::DisplayRole:
+        return str::toQ(node.text);
+    default:
+        return {};
+    }
+}
+
+#undef GETNODE
+
+
 ///// WiCustomDraw /////////////////////////////////////////////////////////////
 
 
@@ -1340,6 +1396,7 @@ FmMain::FmMain(QWidget *parent)
     ui->splitBlocks->setSizes(sizes);
 
     // Library / tree
+    ui->treeLibrary->setModel(&libModel);
 
     // Library / divider
     ui->splitLibrary->setStretchFactor(0, 0);

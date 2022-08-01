@@ -107,7 +107,7 @@ protected:
 enum class TableColors { NO, YES };
 enum class TableDraw { INTERNAL, CUSTOM };
 
-class CharsModel
+class CharsModel final
         : public QAbstractTableModel,
           public QStyledItemDelegate,
           protected ItemPainter
@@ -178,7 +178,7 @@ private:
 };
 
 
-class LangModel : public QAbstractTableModel
+class LangModel final : public QAbstractTableModel
 {
 public:
     int rowCount(const QModelIndex&) const override;
@@ -187,7 +187,7 @@ public:
 };
 
 
-class BlocksModel : public QAbstractTableModel
+class BlocksModel final : public QAbstractTableModel
 {
 private:
     using Super = QAbstractTableModel;
@@ -208,7 +208,7 @@ private:
 };
 
 
-class SearchModel : public QAbstractTableModel
+class SearchModel final : public QAbstractTableModel
 {
 public:
     SearchModel(QWidget* aSample) : sample(aSample) {}
@@ -225,6 +225,21 @@ private:
     QWidget* const sample;
     SafeVector<uc::SearchLine> v;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
+};
+
+
+class LibModel final : public QAbstractItemModel
+{
+public:
+    QModelIndex index(
+            int row, int column,
+            const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex &child) const override;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+private:
+    static constexpr auto COL0 = 0;
 };
 
 
@@ -308,6 +323,7 @@ private:
     BlocksModel blocksModel;
     SearchModel searchModel;
     LangModel langModel;
+    LibModel libModel;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;

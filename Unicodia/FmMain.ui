@@ -574,6 +574,9 @@ padding-bottom: 1px;</string>
            <property name="frameShape">
             <enum>QFrame::NoFrame</enum>
            </property>
+           <attribute name="headerVisible">
+            <bool>false</bool>
+           </attribute>
           </widget>
           <widget class="QWidget" name="widget_3" native="true"/>
          </widget>

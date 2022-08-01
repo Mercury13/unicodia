@@ -118,7 +118,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
         } else {
             // Normal line
             auto [spannedCodes, qualType, comment] = splitLineSv(mainLine, ';', '#');
-            if (qualType == "fully-qualified"sv) {
+            if (qualType == "fully-qualified"sv
+                    || qualType == "component"sv) {
                 // Only fully-qualified emoji are added
                 auto hexCodes = str::splitSv(spannedCodes, ' ');
                 auto nCodes = hexCodes.size();
@@ -189,6 +190,8 @@ namespace {
         }
     }
 
+    constexpr int ROOTS_PARENT = 0;     // index of root’s parent
+
     void writeNode(std::ostream& os, const lib::Node& node, int iParent)
     {
         // opening brace
@@ -241,7 +244,7 @@ lib::Result lib::write(const Node& root, const char* fname)
     os << '\n';
 
     os << "constinit const uc::LibNode uc::libNodes[" << r.nNodes << "] {"  "\n";
-    writeNode(os, root, -1);
+    writeNode(os, root, ROOTS_PARENT);
     recurseWrite(os, root);
     os << "};"  "\n";
 
