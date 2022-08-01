@@ -45,6 +45,7 @@ SOURCES += \
     FmPopup.cpp \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
+    Uc/UcAutoLib.cpp \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcSearch.cpp \

@@ -520,4 +520,12 @@ namespace uc {
     extern const char8_t allStrings[];
     extern const Numeric allNumerics[N_NUMERICS];
 
+    struct LibNode {
+        std::u32string_view value;
+        std::u8string_view text;
+        short iParent, nChildren, iFirstChild;
+    };
+
+    extern const LibNode libNodes[N_LIBNODES];
+
 }   // namespace uc
