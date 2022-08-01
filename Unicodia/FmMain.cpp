@@ -707,31 +707,31 @@ namespace {
         case 0x13431:   // Egyptian hiero horz joiner
             drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_BIG_STAR);
             break;
-        case 0x13432: {
+        case 0x13432: { // Egyptian hieroglyph Insert at top start
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect7(), color);
                 painter->fillRect(m.rect96(), color);
                 painter->fillRect(m.rect13(), color);
             } break;
-        case 0x13433: {
+        case 0x13433: { // Egyptian hieroglyph Insert at bottom start
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect79(), color);
                 painter->fillRect(m.rect63(), color);
                 painter->fillRect(m.rect1(), color);
             } break;
-        case 0x13434: {
+        case 0x13434: { // Egyptian hieroglyph Insert at top end
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect74(), color);
                 painter->fillRect(m.rect9(), color);
                 painter->fillRect(m.rect13(), color);
             } break;
-        case 0x13435: {
+        case 0x13435: { // Egyptian hieroglyph Insert at bottom end
                 Rc3Matrix m(rcFrame);
                 painter->fillRect(m.rect79(), color);
                 painter->fillRect(m.rect41(), color);
                 painter->fillRect(m.rect3(), color);
             } break;
-        case 0x13439: {
+        case 0x13439: { // Egyptian hieroglyph Insert at middle
                 Rc6Matrix m(rcFrame);
                 painter->fillRect(m.topWall(), color);
                 painter->fillRect(m.leftWall(), color);
@@ -739,42 +739,41 @@ namespace {
                 painter->fillRect(m.bottomWall(), color);
                 painter->fillRect(m.rect5(), color);
             } break;
-        case 0x1343A: {
+        case 0x1343A: { // Egyptian hieroglyph Insert at top
                 Rc6Matrix m(rcFrame);
                 painter->fillRect(m.rect8(), color);
                 painter->fillRect(m.leftWall(), color);
                 painter->fillRect(m.rightWall(), color);
                 painter->fillRect(m.bottomHalf(), color);
             } break;
-        case 0x1343B: {
+        case 0x1343B: { // Egyptian hieroglyph Insert at bottom
                 Rc6Matrix m(rcFrame);
                 painter->fillRect(m.rect2(), color);
                 painter->fillRect(m.leftWall(), color);
                 painter->fillRect(m.rightWall(), color);
                 painter->fillRect(m.topHalf(), color);
             } break;
-        case 0x1343C:
+        case 0x1343C:   // Egyptian hieroglyph Begin enclosure
             drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_START);
             break;
-        case 0x1343D:
+        case 0x1343D:   // Egyptian hieroglyph End enclosure
             drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_END);
             break;
-        case 0x1343E:
+        case 0x1343E:   // Egyptian hieroglyph Begin walled enclosure
             drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_START);
             break;
-        case 0x1343F:
+        case 0x1343F:   // Egyptian hieroglyph End walled enclosure
             drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_END);
             break;
-        case 0xE0001:
-                // 00A0 = NBSP
+        case 0xE0001:   // Language tag
             drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness,
                         place, subj);
             break;
-        case 0xE0020:
+        case 0xE0020:   // Tag Space
             drawTagText(painter, u8"SP"sv, color, rcFrame, thickness,
                         place, subj);
             break;
-        case 0xE007F:
+        case 0xE007F:   // Cancel tag
             drawTagText(painter, u8"END"sv, color, rcFrame, thickness,
                         place, subj);
             break;
@@ -1323,13 +1322,13 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->comboBlock, &WideComboBox::droppedDown, this, &This::comboDroppedDown);
     connect(ui->comboBlock, &WideComboBox::pulledUp, this, &This::comboPulledUp);
 
-    // Table
+    // Blocks / table
     ui->tableChars->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableChars->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableChars->setItemDelegate(&model);
     ui->tableChars->setModel(&model);
 
-    // Divider
+    // Blocks / divider
     auto wTotal = width();
     auto tw = ui->tableChars->verticalHeader()->width();
     tw += ui->tableChars->horizontalHeader()->defaultSectionSize() * NCOLS;
@@ -1339,6 +1338,13 @@ FmMain::FmMain(QWidget *parent)
     ui->splitBlocks->setStretchFactor(0, 0);
     ui->splitBlocks->setStretchFactor(1, 1);
     ui->splitBlocks->setSizes(sizes);
+
+    // Library / tree
+
+    // Library / divider
+    ui->splitLibrary->setStretchFactor(0, 0);
+    ui->splitLibrary->setStretchFactor(1, 1);
+    ui->splitLibrary->setSizes(sizes);
 
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
