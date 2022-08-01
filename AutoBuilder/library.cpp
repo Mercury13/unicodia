@@ -210,7 +210,7 @@ namespace {
             os << node.children[0].cache.index;
         }
         // closing brace
-        os << " }   // " << node.cache.index << "\n";
+        os << " },   // " << node.cache.index << "\n";
     }
 
     void recurseWrite(
