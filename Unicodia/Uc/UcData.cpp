@@ -2369,7 +2369,6 @@ constinit const uc::TermCat uc::termCats[] {
 static_assert (std::size(uc::termCats) == static_cast<size_t>(uc::EcTermCat::NN));
 
 constinit const uc::Term uc::terms[] {
-    /// @todo [windows] draw buttons
     { "winemoji", EcTermCat::INPUT, {} },
     { "altcode", EcTermCat::INPUT, u8"Alt codes" },
     { "appentry", EcTermCat::INPUT, {} },
