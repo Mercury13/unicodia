@@ -109,8 +109,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
                             {}, "ITALIC"sv } },
     { "JAMO",           Dicf::TRIG_SCRIPT },
-    { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
+    { "JAVANESE",       Dicf::TRIG_SCRIPT },
+    { "JUDEO-SPANISH",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Judeo-Spanish" } },
     { "KAKTOVIK",       Dicf::TRIG_SCRIPT },
     { "KANGXI",         Dicf::TRIG_SCRIPT },
     { "KANNADA",        Dicf::TRIG_SCRIPT },
@@ -396,6 +397,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "TSHEG",          Dicf::PART_NOUN },
     { "UBADAMA",        Dicf::PART_NOUN },
     { "UNDERBAR",       Dicf::PART_NOUN },
+    { "VARIKA",         Dicf::PART_NOUN },
     { "VIRAMA",         Dicf::PART_NOUN },
     { "VISARGA",        Dicf::PART_NOUN },
     { "VOICING",        Dicf::PART_NOUN },
@@ -529,6 +531,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     // Adjectives
     { "ACUTE",          Dicf::PART_ADJECTIVE },
     { "ALTERNATE",      Dicf::PART_ADJECTIVE },
+    { "ALTERNATIVE",    Dicf::PART_ADJECTIVE },
     { "ALVEOLAR",       Dicf::PART_ADJECTIVE },
     { "ARCHAIC",        Dicf::PART_ADJECTIVE },
     { "ASPIRATED",      Dicf::PART_ADJECTIVE },
@@ -586,7 +589,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "INVERTED",       Dicf::PART_ADJECTIVE },
     { "JONA",           Dicf::PART_ADJECTIVE },     // Nkoo, probably small
     { "KINNA",          Dicf::PART_ADJECTIVE },     // Rohg, kinna = small
-    { "L-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "LARYNGEAL",      Dicf::PART_ADJECTIVE },
     { "LATERAL",        Dicf::PART_ADJECTIVE },
     { "LATINATE",       Dicf::PART_ADJECTIVE },
@@ -679,6 +681,11 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "VOICELESS",      Dicf::PART_ADJECTIVE },
     { "WESTERN",        Dicf::PART_ADJECTIVE },
     { "WIDE",           Dicf::PART_ADJECTIVE },
+
+    // Shaped
+    { "L-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "S-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "U-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
