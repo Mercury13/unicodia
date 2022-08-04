@@ -7,14 +7,14 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
 # How to build?
-* Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11
+* Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
 * Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
 * Configure and run tape.bat file.
 * Configure and run rel.bat file.
 
 # How to develop?
 * Download/find all tools mentioned above.
-* Ensure that your Qt has MinGW 11. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2, 6.1.3, 6.2.0, 6.2.4
+* Ensure that your Qt has MinGW 11/12. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2, 6.1.3, 6.2.0, 6.2.4
 * Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.

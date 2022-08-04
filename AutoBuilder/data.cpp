@@ -375,6 +375,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HOOK",           Dicf::PART_NOUN },
     { "LINE",           Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
+    { "NUKTA",          Dicf::PART_NOUN },
     { "PLUS",           Dicf::PART_NOUN },
     { "RANA",           Dicf::PART_NOUN },
     { "REDUPLICATION",  Dicf::PART_NOUN },
@@ -673,6 +674,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "TRADITIONAL",    Dicf::PART_ADJECTIVE },
     { "TRUNCATED",      Dicf::PART_ADJECTIVE },
     { "TURNED",         Dicf::PART_ADJECTIVE },
+    { "TWO-CIRCLE",     Dicf::PART_ADJECTIVE },
     { "UNBLENDED",      Dicf::PART_ADJECTIVE },
     { "UP",             Dicf::PART_ADJECTIVE },
     { "VERTICAL",       Dicf::PART_ADJECTIVE },
@@ -786,6 +788,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "QAF",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "R",              Dicf::CAP_TITLE },
     { "REH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "RESH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "S",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
     { "SA",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SAD",            Dicf::PART_MAYBE_LETTER },
@@ -977,6 +980,18 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
         // Mani
     EX("Manichaean abbreviation mark above")    // Abbreviation’s mark → abbreviation/mark are not keywords
     EX("Manichaean abbreviation mark below")    // The same
+        // Pauc
+    EX("Pau Cin Hau rising tone long")          // Tone is not keyword
+    EX("Pau Cin Hau rising tone long final")    // Same
+    EX("Pau Cin Hau rising tone final")
+    EX("Pau Cin Hau sandhi tone long")
+    EX("Pau Cin Hau sandhi tone long final")
+    EX("Pau Cin Hau sandhi tone final")
+    EX("Pau Cin Hau mid-level tone long final")
+    EX("Pau Cin Hau mid-level tone final")
+    EX("Pau Cin Hau low-falling tone long")
+    EX("Pau Cin Hau low-falling tone long final")
+    EX("Pau Cin Hau low-falling tone final")
         // Sogd
     EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
         // Thaa
