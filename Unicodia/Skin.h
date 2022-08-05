@@ -7,6 +7,10 @@
 
 // Colors, sizes etc that are NOT derived from system
 
+constexpr int FSZ_TABLE = 15;
+constexpr int FSZ_BIG = 50;
+
+
 // Color names
 #define CNAME_BG_POPUP "LightYellow"
 #define CNAME_LINK_POPUP "ForestGreen"

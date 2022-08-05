@@ -41,6 +41,20 @@ void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font, QColor color, char32_t subj);
 
+enum class TableDraw {
+    INTERNAL,   // Normal chars are drawn internally
+    CUSTOM      // Normal chars are drawn in custom way
+};
+
+std::optional<QFont> fontAt(const uc::Cp& cp);
+
+inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
+    { return cp.sampleProxy(dpi).text; }
+
+
+void drawChar(QPainter* painter, const QRect& rect,
+        const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi);
+
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
 class WiCustomDraw : public QWidget

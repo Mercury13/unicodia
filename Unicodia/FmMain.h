@@ -105,7 +105,6 @@ protected:
 
 
 enum class TableColors { NO, YES };
-enum class TableDraw { INTERNAL, CUSTOM };
 
 class CharsModel final
         : public QAbstractTableModel,
@@ -129,11 +128,9 @@ public:
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
     std::optional<QFont> fontAt(const QModelIndex& index) const;
-    static std::optional<QFont> fontAt(const uc::Cp& cp);
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index, int aDpi = uc::DPI_ALL_CHARS) const;
-    static QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS);
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -153,8 +150,6 @@ public:
     // Delegate
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
-    static void drawChar(QPainter* painter, const QRect& rect,
-                const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi);
 protected:
     // Delegate
     void initStyleOption(QStyleOptionViewItem *option,

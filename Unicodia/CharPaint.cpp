@@ -559,3 +559,61 @@ void drawSpace(
     x += dim.width();
     painter->fillRect(x, y, lineW, dim.height(), brush);
 }
+
+
+std::optional<QFont> fontAt(const uc::Cp& cp)
+{
+    static constexpr int DUMMY_DPI = 96;
+    if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
+        return {};
+    auto font = cp.font(uc::MatchLast::NO);
+    return font->get(uc::FontPlace::CELL, FSZ_TABLE,
+                    cp.flags.have(uc::Cfg::NO_AA), cp.subj);
+}
+
+
+void drawChar(QPainter* painter, const QRect& rect,
+            const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi)
+{
+    switch (cp.drawMethod(dpi)) {
+    case uc::DrawMethod::CUSTOM_CONTROL:
+        drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
+        break;
+    case uc::DrawMethod::ABBREVIATION:
+        drawAbbreviation(painter, rect, cp.abbrev(), color);
+        break;
+    case uc::DrawMethod::EGYPTIAN_HATCH:
+        drawEgyptianHatch(painter, rect, *fontAt(cp), color, cp.subj);
+        break;
+    case uc::DrawMethod::SPACE:
+        drawSpace(painter, rect, *fontAt(cp), color, cp.subj);
+        break;
+    case uc::DrawMethod::CUSTOM_AA: {
+            auto font = *fontAt(cp);
+            font.setStyleStrategy(fst::CUSTOM_AA);
+            painter->setFont(font);
+            painter->setBrush(color);
+            painter->setPen(color);
+            auto text = textAt(cp);
+            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
+        } break;
+    case uc::DrawMethod::SAMPLE:
+        if (mode == TableDraw::CUSTOM) {
+            // Char
+            painter->setFont(*fontAt(cp));
+            painter->setBrush(color);
+            painter->setPen(color);
+            painter->drawText(rect,
+                              Qt::AlignCenter | Qt::TextSingleLine,
+                              textAt(cp));
+        } break;
+    case uc::DrawMethod::SVG_EMOJI: {
+            auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
+            QFontMetrics m(*font);
+            auto h = rect.height() * 8 / 10;
+            emp.draw(painter, rect, cp.subj.ch32(), h);
+        } break;
+    }
+    if (cp.isDeprecated())
+        drawDeprecated(painter, rect);
+}

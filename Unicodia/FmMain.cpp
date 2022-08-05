@@ -48,9 +48,6 @@ template class LruCache<char32_t, QPixmap>;
 
 using namespace std::string_view_literals;
 
-constexpr int FSZ_TABLE = 15;
-constexpr int FSZ_BIG = 50;
-
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
@@ -258,19 +255,8 @@ int CharsModel::columnCount(const QModelIndex&) const
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return fontAt(*cp);
+        return ::fontAt(*cp);
     return {};
-}
-
-
-std::optional<QFont> CharsModel::fontAt(const uc::Cp& cp)
-{
-    static constexpr int DUMMY_DPI = 96;
-    if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
-        return {};
-    auto font = cp.font(uc::MatchLast::NO);
-    return font->get(uc::FontPlace::CELL, FSZ_TABLE,
-                    cp.flags.have(uc::Cfg::NO_AA), cp.subj);
 }
 
 
@@ -301,12 +287,8 @@ QString CharsModel::textAt(const QModelIndex& index, int aDpi) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return textAt(*cp, aDpi);
+    return ::textAt(*cp, aDpi);
 }
-
-
-QString CharsModel::textAt(const uc::Cp& cp, int dpi)
-    { return cp.sampleProxy(dpi).text; }
 
 
 QVariant CharsModel::data(const QModelIndex& index, int role) const
@@ -427,53 +409,6 @@ void CharsModel::build()
     endResetModel();
 }
 
-
-void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi)
-{
-    switch (cp.drawMethod(dpi)) {
-    case uc::DrawMethod::CUSTOM_CONTROL:
-        drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
-        break;
-    case uc::DrawMethod::ABBREVIATION:
-        drawAbbreviation(painter, rect, cp.abbrev(), color);
-        break;
-    case uc::DrawMethod::EGYPTIAN_HATCH:
-        drawEgyptianHatch(painter, rect, *fontAt(cp), color, cp.subj);
-        break;
-    case uc::DrawMethod::SPACE:
-        drawSpace(painter, rect, *fontAt(cp), color, cp.subj);
-        break;
-    case uc::DrawMethod::CUSTOM_AA: {
-            auto font = *fontAt(cp);
-            font.setStyleStrategy(fst::CUSTOM_AA);
-            painter->setFont(font);
-            painter->setBrush(color);
-            painter->setPen(color);
-            auto text = textAt(cp);
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
-        } break;
-    case uc::DrawMethod::SAMPLE:
-        if (mode == TableDraw::CUSTOM) {
-            // Char
-            painter->setFont(*fontAt(cp));
-            painter->setBrush(color);
-            painter->setPen(color);
-            painter->drawText(rect,
-                              Qt::AlignCenter | Qt::TextSingleLine,
-                              textAt(cp));
-        } break;
-    case uc::DrawMethod::SVG_EMOJI: {
-            auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
-            QFontMetrics m(*font);
-            auto h = rect.height() * 8 / 10;
-            emp.draw(painter, rect, cp.subj.ch32(), h);
-        } break;
-    }
-    if (cp.isDeprecated())
-        drawDeprecated(painter, rect);
-}
-
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
             const QModelIndex& index, const QColor& color, int dpi) const
 {
@@ -482,10 +417,9 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        drawChar(painter, rect, *ch, color1, TABLE_DRAW, dpi);
+        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW, dpi);
     }
 }
-
 
 void CharsModel::initStyleOption(QStyleOptionViewItem *option,
                      const QModelIndex &index) const
@@ -713,7 +647,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                         }
                         painter.fillRect(bounds, clBg);
                         painter.drawRect(bounds1);
-                        CharsModel::drawChar(&painter, bounds, si.cp(),
+                        drawChar(&painter, bounds, si.cp(),
                                              clFg, TableDraw::CUSTOM, DPI_STUB);
                     } break;
                 case uc::CpType::NN:
@@ -726,7 +660,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     painter.drawRect(bounds1);
                     // OK w/o size, as 39 ≈ 40
                     if (cp)
-                        CharsModel::drawChar(&painter, bounds, *cp, clFg, TableDraw::CUSTOM, DPI_STUB);
+                        drawChar(&painter, bounds, *cp, clFg, TableDraw::CUSTOM, DPI_STUB);
                 }
             });
     default:
