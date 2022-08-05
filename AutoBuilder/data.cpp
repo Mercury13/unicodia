@@ -1097,6 +1097,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Modifier breve with inverted breve")    // Modifier
     EX("Modifier letter Low circumflex accent") // What to do with circumflex?
     EX("Modifier letter Short equals sign")     // What to do with equals?
+    EX("Direct current symbol form two") // Symbol is not a keyword
         // Emoji
     EX("Earth globe Europe-Africa")     // Special proper name
     EX("Earth globe Americas")          // Special proper name
