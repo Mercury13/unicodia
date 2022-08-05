@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CHARPAINT_H_
+#define CHARPAINT_H_    // need normal include guard — so needs custom widget
 
 #include <QRect>
 #include <QWidget>
@@ -14,35 +15,15 @@ extern EmojiPainter emp;
 
 void drawDeprecated(QPainter* painter, const QRect& r);
 
-struct AbbrTable {
-    qreal quos[10];     // 0 = 1-character
-};
-
-struct AbbrLines {
-    std::u8string_view line1, line2, line3;
-
-    unsigned nLines() const { return line2.empty() ? 1 : line3.empty() ? 2 : 3; }
-    bool wasSplit() const { return !line2.empty(); }
-    unsigned length() const {
-        return std::max(std::max(line1.length(), line2.length()), line3.length()); }
-    qreal sizeQuo(const AbbrTable& table) const;
-};
-
 struct RcPair {
     QRectF rc1, rc2;
     RcPair(const QRectF& rcFrame, qreal quo);
 };
 
-void drawCustomAbbrText(QPainter* painter, const AbbrLines& sp,
-        const QColor& color, QRectF rcFrame, qreal thickness,
-        const AbbrTable& table);
-
 void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
         const QColor& color, QRectF rcFrame, qreal thickness);
 
 enum class SplitMode { NORMAL, FIXED };
-
-AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode);
 
 void drawCustomControl(
         QPainter* painter, const QRect& rect, const QColor& color,
@@ -85,3 +66,5 @@ private:
     char32_t subj = 0;
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
+
+#endif

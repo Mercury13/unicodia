@@ -32,7 +32,6 @@
 #include "Skin.h"
 #include "Wiki.h"   // used! — we specialize its template
 #include "MyWiki.h"
-#include "u_EmojiPainter.h"
 #include "CharPaint.h"
 
 // Forms
@@ -144,11 +143,8 @@ CacheCoords RowCache::findCode(char32_t code) const
 
 const uc::Block& BlocksModel::at(size_t i) const noexcept
 {
-    if (i >= uc::N_BLOCKS)
-        return uc::blocks[0];
-    if (auto r = a[i])
-        return *r;
-    return uc::blocks[0];
+    auto r = a.safeGetC(i, &uc::blocks[0]);
+    return r ? *r : uc::blocks[0];
 }
 
 

@@ -15,9 +15,22 @@ using namespace std::string_view_literals;
 EmojiPainter emp;
 
 
-///// Vars /////////////////////////////////////////////////////////////////////
-
 namespace {
+    struct AbbrTable {
+        qreal quos[10];     // 0 = 1-character
+    };
+
+    struct AbbrLines {
+
+        std::u8string_view line1, line2, line3;
+
+        unsigned nLines() const { return line2.empty() ? 1 : line3.empty() ? 2 : 3; }
+        bool wasSplit() const { return !line2.empty(); }
+        unsigned length() const {
+            return std::max(std::max(line1.length(), line2.length()), line3.length()); }
+        qreal sizeQuo(const AbbrTable& table) const;
+        };
+
     // Table for normal abbreviations
     constexpr qreal Q1 = 1.5;
     constexpr qreal Q3 = 2.5;
@@ -30,6 +43,68 @@ namespace {
     constexpr qreal T3 = 2.1;
                     //   0   1   2   3   4   5   6   7   8   9
     AbbrTable atTags { { Q1, T3, T3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
+
+    AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode)
+    {
+        if (mode == SplitMode::FIXED)
+            return { abbr, {}, {} };
+        if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos) {
+            auto line1 = abbr.substr(0, pSpace), line23 = abbr.substr(pSpace + 1);
+            if (auto pSpace2 = line23.find(' '); pSpace2 != std::u8string_view::npos) {
+                auto line2 = line23.substr(0, pSpace2);
+                auto line3 = line23.substr(pSpace + 1);
+                return { line1, line2, line3 };
+            } else {
+                return { line1, line23, {} };
+            }
+        }
+        switch (abbr.size()) {
+        case 4:
+        case 6: {
+                auto split = abbr.size() / 2;
+                return { abbr.substr(0, split), abbr.substr(split), {} };
+            }
+        case 5: {
+                auto split = 3;
+                if (isdigit(abbr[2]) && isdigit(abbr[3]))
+                    split = 2;
+                return { abbr.substr(0, split), abbr.substr(split), {} };
+            }
+        default:
+            return { abbr, {}, {} };
+        }
+    }
+
+    void drawCustomAbbrText(QPainter* painter, const AbbrLines& sp,
+            const QColor& color, QRectF rcFrame, qreal thickness,
+            const AbbrTable& table)
+    {
+        // Draw text
+        auto availSize = rcFrame.width();
+        auto sz = availSize / sp.sizeQuo(table);
+        QFont font { str::toQ(FAM_CONDENSED) };
+            font.setStyleStrategy(QFont::PreferAntialias);
+            font.setPixelSize(sz);
+        painter->setFont(font);
+        painter->setBrush(QBrush(color, Qt::SolidPattern));
+        rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
+        switch (sp.nLines()) {
+        case 1:
+            painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
+            break;
+        case 2: {
+                RcPair p(rcFrame, 2.5);
+                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
+            } break;
+        default: { // case 3
+                RcPair p(rcFrame, 1.8);
+                painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
+                painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line2));
+                painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line3));
+            }
+        }
+    }
 
 }   // anon namespace
 
@@ -189,69 +264,6 @@ void drawDeprecated(QPainter* painter, const QRect& r)
     painter->setPen(FG_DEPRECATED);
     painter->drawLine(x0, y0, x1, y1);
     painter->drawLine(x0, y1, x1, y0);
-}
-
-
-void drawCustomAbbrText(QPainter* painter, const AbbrLines& sp,
-        const QColor& color, QRectF rcFrame, qreal thickness,
-        const AbbrTable& table)
-{
-    // Draw text
-    auto availSize = rcFrame.width();
-    auto sz = availSize / sp.sizeQuo(table);
-    QFont font { str::toQ(FAM_CONDENSED) };
-        font.setStyleStrategy(QFont::PreferAntialias);
-        font.setPixelSize(sz);
-    painter->setFont(font);
-    painter->setBrush(QBrush(color, Qt::SolidPattern));
-    rcFrame.setLeft(rcFrame.left() + std::max(thickness, 1.0));
-    switch (sp.nLines()) {
-    case 1:
-        painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line1));
-        break;
-    case 2: {
-            RcPair p(rcFrame, 2.5);
-            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
-            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line2));
-        } break;
-    default: { // case 3
-            RcPair p(rcFrame, 1.8);
-            painter->drawText(p.rc1, Qt::AlignCenter, str::toQ(sp.line1));
-            painter->drawText(rcFrame, Qt::AlignCenter, str::toQ(sp.line2));
-            painter->drawText(p.rc2, Qt::AlignCenter, str::toQ(sp.line3));
-        }
-    }
-}
-
-AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode)
-{
-    if (mode == SplitMode::FIXED)
-        return { abbr, {}, {} };
-    if (auto pSpace = abbr.find(' '); pSpace != std::u8string_view::npos) {
-        auto line1 = abbr.substr(0, pSpace), line23 = abbr.substr(pSpace + 1);
-        if (auto pSpace2 = line23.find(' '); pSpace2 != std::u8string_view::npos) {
-            auto line2 = line23.substr(0, pSpace2);
-            auto line3 = line23.substr(pSpace + 1);
-            return { line1, line2, line3 };
-        } else {
-            return { line1, line23, {} };
-        }
-    }
-    switch (abbr.size()) {
-    case 4:
-    case 6: {
-            auto split = abbr.size() / 2;
-            return { abbr.substr(0, split), abbr.substr(split), {} };
-        }
-    case 5: {
-            auto split = 3;
-            if (isdigit(abbr[2]) && isdigit(abbr[3]))
-                split = 2;
-            return { abbr.substr(0, split), abbr.substr(split), {} };
-        }
-    default:
-        return { abbr, {}, {} };
-    }
 }
 
 void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
