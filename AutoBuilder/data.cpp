@@ -535,6 +535,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ALTERNATIVE",    Dicf::PART_ADJECTIVE },
     { "ALVEOLAR",       Dicf::PART_ADJECTIVE },
     { "ARCHAIC",        Dicf::PART_ADJECTIVE },
+    { "ARKTIKO",        Dicf::PART_ADJECTIVE },
     { "ASPIRATED",      Dicf::PART_ADJECTIVE },
     { "ATACHED",        Dicf::PART_ADJECTIVE },
     { "BARRED",         Dicf::PART_ADJECTIVE },
@@ -555,6 +556,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "CRYPTOGRAMMIC",  Dicf::PART_ADJECTIVE },
     { "CURLED",         Dicf::PART_ADJECTIVE },
     { "DENTAL",         Dicf::PART_ADJECTIVE },
+    { "DIGRAMMA",       Dicf::PART_ADJECTIVE }, // Not really an adj, but works so
     { "DOUBLE",         Dicf::PART_ADJECTIVE },
     { "DOUBLE-STRUCK",  Dicf::PART_ADJECTIVE },
     { "DOTTED",         Dicf::PART_ADJECTIVE },
@@ -664,6 +666,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "TAILED",         Dicf::PART_ADJECTIVE },
     { "TAILLESS",       Dicf::PART_ADJECTIVE },
     { "TALL",           Dicf::PART_ADJECTIVE },
+    { "THAM",           Dicf::PART_ADJECTIVE }, // not really correct, but let’s leave hora/tham lowcase
     { "THREE-D",        { Dicf::PART_ADJECTIVE, "three-D" } },
     { "THREE-LEGGED",   Dicf::PART_ADJECTIVE },
     { "TIGHT",          Dicf::PART_ADJECTIVE },
@@ -823,6 +826,15 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MEM-QOPH",       { Dicf::PART_NOUN, "Mem-Qoph" } },
     { "DALETH-RESH",    { Dicf::PART_NOUN, "Daleth-Resh" } },
 
+    // Byzantine notes
+    //{ "PA",             Dicf::CAP_TITLE }, intersects
+    { "NANA",           Dicf::CAP_TITLE },
+    { "DI",             Dicf::CAP_TITLE },
+    { "KE",             Dicf::CAP_TITLE },
+    { "ZO",             Dicf::CAP_TITLE },
+    { "VOU",            Dicf::CAP_TITLE },
+    { "NI",             Dicf::CAP_TITLE },
+
     // Some prepositions
     { "WITH",           Dicf::CAP_SMALL },
     //{ "AND",            Dicf::CAP_SMALL },    // Tricky word, all And’s are tested manually
@@ -899,6 +911,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Runic Arlaug symbol")
     EX("Runic Tvimadur symbol")  // Same
     EX("Runic Belgthor symbol")
+        // Byzantine notes
+    EX("Byzantine musical symbol Fthora diatoniki Pa")  // Pa is not just note
 
     // BRAHMIC SCRIPTS
         // Common-Indic
@@ -909,7 +923,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
         // Deva
     EX("Devanagari letter Candra A") // Both Candra and A are tricky, better to make an exception
         // Diak
-    EX("Dives Akuru medial Ya")             // The same
+    EX("Dives Akuru medial Ya")
     EX("Dives Akuru initial Ra")
     EX("Dives Akuru medial Ra")
         // Guru
@@ -920,6 +934,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Kannada Ai length mark")    // IDK how to make rule, hand-checked Length
         // Kthi
     EX("Kaithi number sign above")  // Number’s mark → number is not keyword
+        // Lana
+    EX("Tai Tham consonant sign High Ratha or low Pa")
         // Orya
     EX("Oriya Ai length mark")      // IDK how to make rule, hand-checked Length
         // Soyo
