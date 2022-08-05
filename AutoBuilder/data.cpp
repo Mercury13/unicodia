@@ -687,10 +687,13 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "WESTERN",        Dicf::PART_ADJECTIVE },
     { "WIDE",           Dicf::PART_ADJECTIVE },
 
-    // Shaped
+    // Starting with letter: sort by main word, then by letter
+    { "N-ARY",          Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "L-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "S-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "U-SHAPED",       Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "H-TYPE",         Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "L-TYPE",         Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
