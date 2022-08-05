@@ -1,8 +1,5 @@
 #include "u_EmojiPainter.h"
 
-// C++
-#include "charconv"
-
 // Qt
 #include <QSvgRenderer>
 
