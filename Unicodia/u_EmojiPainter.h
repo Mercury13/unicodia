@@ -16,8 +16,8 @@ class QPainter;
 class EmojiPainter
 {
 public:
-    EmojiPainter();
-    ~EmojiPainter();
+    EmojiPainter();     // forward decls → need in CPP
+    ~EmojiPainter();    // same
     QSvgRenderer* getRenderer(char32_t cp);
     std::string_view getSvg(char32_t cp);
     void draw(QPainter* painter, QRect rect, char32_t cp, int height);
