@@ -31,6 +31,7 @@ SOURCES += \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
+    CharPaint.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
@@ -83,6 +84,7 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/Zippy/Zippy.hpp \
+    CharPaint.h \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \

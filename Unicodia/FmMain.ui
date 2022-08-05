@@ -786,7 +786,7 @@ padding-bottom: 1px;</string>
   <customwidget>
    <class>WiCustomDraw</class>
    <extends>QWidget</extends>
-   <header>FmMain.h</header>
+   <header>CharPaint.h</header>
    <container>1</container>
   </customwidget>
   <customwidget>
