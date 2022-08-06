@@ -575,7 +575,7 @@ std::optional<QFont> fontAt(const uc::Cp& cp)
 void drawChar(QPainter* painter, const QRect& rect,
             const uc::Cp& cp, const QColor& color, TableDraw mode)
 {
-    /// @todo [future] DPI unused right now
+    /// @todo [future] DPI unused right now, as CUSTOM_AA unused
     auto dpi = 96;  //painter->device()->physicalDpiX();
     switch (cp.drawMethod(dpi)) {
     case uc::DrawMethod::CUSTOM_CONTROL:
