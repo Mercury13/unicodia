@@ -10,6 +10,12 @@
 constexpr int FSZ_TABLE = 15;
 constexpr int FSZ_BIG = 50;
 
+// alpha of search/emoji border
+/// @todo [hidpi] When DPI is really high, make it more opaque
+constexpr int ALPHA_BORDER = 40;
+// Alpha of international char’s BG
+constexpr int ALPHA_INTERNATIONAL = 25;
+
 
 // Color names
 #define CNAME_BG_POPUP "LightYellow"

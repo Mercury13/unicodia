@@ -608,57 +608,45 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 QPainter painter(&pix);
                 auto bounds = pix.rect();
 
-                // Create transparent color
-                QColor clTrans(clFg);
-                clTrans.setAlpha(30);
-
-                // Draw bounds
-                auto bounds1 = bounds;
-                bounds1.adjust(0, 0, -1, -1);
-                painter.setBrush(Qt::NoBrush);
-                painter.setPen(clTrans);
-                painter.drawRect(bounds1);
-
                 /// @todo [future] default DPI here, DPI is unused right now
                 enum { DPI_STUB = 96 };
 
                 switch (type) {
                 case uc::CpType::NONCHARACTER: {
-                        painter.drawRect(bounds1);
+                        drawCharBorder(&painter, bounds, clFg);
                         QBrush brush (clFg, Qt::DiagCrossPattern);
                         painter.fillRect(bounds, brush);
                     } break;
                 case uc::CpType::PRIVATE_USE:
-                    painter.drawRect(bounds1);
+                    drawCharBorder(&painter, bounds, clFg);
                     drawAbbreviation(&painter, bounds, u8"PUA", clFg);
                     break;
                 case uc::CpType::SURROGATE:
-                    painter.drawRect(bounds1);
+                    drawCharBorder(&painter, bounds, clFg);
                     drawAbbreviation(&painter, bounds, u8"SUR", clFg);
                     break;
                 case uc::CpType::RESERVED: {
                         auto& si = cp->block().synthIcon;
-                        auto clBg = clTrans;
                         // No continent → draw murky, otherwise use icon colours
-                        if (si.ecContinent != uc::EcContinent::NONE) {
+                        if (si.ecContinent == uc::EcContinent::NONE) {
+                            drawMurkyRect(&painter, bounds, clFg);
+                        } else {
                             auto cont = si.continent();
-                            clBg = cont.icon.bgColor;
+                            painter.fillRect(bounds, cont.icon.bgColor);
+                            drawCharBorder(&painter, bounds, clFg);
                             clFg = cont.icon.fgColor;
                         }
-                        painter.fillRect(bounds, clBg);
-                        painter.drawRect(bounds1);
                         drawChar(&painter, bounds, si.cp(),
                                              clFg, TableDraw::CUSTOM, DPI_STUB);
                     } break;
                 case uc::CpType::NN:
                 case uc::CpType::UNALLOCATED:
                     // Just draw murky w/o foreground
-                    painter.drawRect(bounds1);
-                    painter.fillRect(bounds, clTrans);
+                    drawMurkyRect(&painter, bounds, clFg);
                     break;
                 case uc::CpType::EXISTING:
-                    painter.drawRect(bounds1);
                     // OK w/o size, as 39 ≈ 40
+                    drawCharBorder(&painter, bounds, clFg);
                     if (cp)
                         drawChar(&painter, bounds, *cp, clFg, TableDraw::CUSTOM, DPI_STUB);
                 }
@@ -672,7 +660,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 ///// LibModel /////////////////////////////////////////////////////////////////
 
 #define GETNODE(parent, fallback) \
-    auto ii = parent.internalId(); \
+    auto ii = (parent).internalId(); \
     if (ii >= uc::N_LIBNODES) \
         fallback; \
     auto& node = uc::libNodes[ii];
@@ -984,11 +972,6 @@ void FmMain::initTerms()
 
 
 namespace {
-
-//    QString qEpaulets(
-//            std::string_view locKey,
-//            const char* left, const char* right)
-//        { return left + loc::get(locKey).q() + right; }
 
     QString qPopupLink(
             std::string_view locKey, const char* target)

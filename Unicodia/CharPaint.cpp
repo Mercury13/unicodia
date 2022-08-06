@@ -616,3 +616,28 @@ void drawChar(QPainter* painter, const QRect& rect,
     if (cp.isDeprecated())
         drawDeprecated(painter, rect);
 }
+
+
+void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color)
+{
+    // Create transparent color
+    QColor clTrans(color);
+    clTrans.setAlpha(ALPHA_BORDER);
+
+    // Draw bounds
+    auto bounds1 = rect;
+    bounds1.adjust(0, 0, -1, -1);
+    painter->setBrush(Qt::NoBrush);
+    painter->setPen(clTrans);
+    painter->drawRect(bounds1);
+}
+
+
+void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
+{
+    // Create transparent color
+    QColor clTrans(color);
+    clTrans.setAlpha(ALPHA_INTERNATIONAL);
+    painter->fillRect(rect, clTrans);
+    drawCharBorder(painter, rect, color);
+}

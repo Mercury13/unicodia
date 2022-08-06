@@ -51,6 +51,11 @@ std::optional<QFont> fontAt(const uc::Cp& cp);
 inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
     { return cp.sampleProxy(dpi).text; }
 
+/// Draws border of search/emoji
+void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
+
+/// Draws murky border of PUA/
+void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
 void drawChar(QPainter* painter, const QRect& rect,
         const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi);
