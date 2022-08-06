@@ -609,7 +609,6 @@ void drawChar(QPainter* painter, const QRect& rect,
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
             auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
-            QFontMetrics m(*font);
             auto h = rect.height() * 8 / 10;
             emp.draw(painter, rect, cp.subj.ch32(), h);
         } break;
