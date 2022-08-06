@@ -2,6 +2,8 @@
 
 #include "u_Array.h"
 
+#include <unordered_map>
+
 //
 //  Simple least-recently-used cache
 //
