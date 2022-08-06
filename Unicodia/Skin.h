@@ -14,7 +14,7 @@ constexpr int FSZ_BIG = 50;
 /// @todo [hidpi] When DPI is really high, make it more opaque
 constexpr int ALPHA_BORDER = 40;
 // Alpha of international char’s BG
-constexpr int ALPHA_INTERNATIONAL = 25;
+constexpr int ALPHA_INTERNATIONAL = 20;
 
 
 // Color names
