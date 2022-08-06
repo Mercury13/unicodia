@@ -573,8 +573,10 @@ std::optional<QFont> fontAt(const uc::Cp& cp)
 
 
 void drawChar(QPainter* painter, const QRect& rect,
-            const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi)
+            const uc::Cp& cp, const QColor& color, TableDraw mode)
 {
+    /// @todo [future] DPI unused right now
+    auto dpi = 96;  //painter->device()->physicalDpiX();
     switch (cp.drawMethod(dpi)) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
@@ -640,4 +642,14 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
     clTrans.setAlpha(ALPHA_INTERNATIONAL);
     painter->fillRect(rect, clTrans);
     drawCharBorder(painter, rect, color);
+}
+
+
+void drawSearchChar(
+        QPainter* painter, const QRect& rect, const uc::Cp* cp,
+        const QColor& color)
+{
+    drawCharBorder(painter, rect, color);
+    if (cp)
+        drawChar(painter, rect, *cp, color, TableDraw::CUSTOM);
 }

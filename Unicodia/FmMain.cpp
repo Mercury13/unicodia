@@ -410,14 +410,14 @@ void CharsModel::build()
 }
 
 void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const QModelIndex& index, const QColor& color, int dpi) const
+            const QModelIndex& index, const QColor& color) const
 {
     auto ch = charAt(index);
     if (ch) {
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW, dpi);
+        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW);
     }
 }
 
@@ -451,7 +451,7 @@ void CharsModel::paintItem1(
     auto dpi = painter->device()->physicalDpiX();
     hasText = !(ch && ch->drawMethod(dpi) == uc::DrawMethod::CUSTOM_AA);
     SuperD::paint(painter, option, index);
-    drawChar(painter, option.rect, index, color, dpi);
+    drawChar(painter, option.rect, index, color);
 }
 
 void CharsModel::paintItem(
@@ -608,9 +608,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 QPainter painter(&pix);
                 auto bounds = pix.rect();
 
-                /// @todo [future] default DPI here, DPI is unused right now
-                enum { DPI_STUB = 96 };
-
                 switch (type) {
                 case uc::CpType::NONCHARACTER: {
                         drawCharBorder(&painter, bounds, clFg);
@@ -636,8 +633,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                             drawCharBorder(&painter, bounds, clFg);
                             clFg = cont.icon.fgColor;
                         }
-                        drawChar(&painter, bounds, si.cp(),
-                                             clFg, TableDraw::CUSTOM, DPI_STUB);
+                        drawChar(&painter, bounds, si.cp(), clFg, TableDraw::CUSTOM);
                     } break;
                 case uc::CpType::NN:
                 case uc::CpType::UNALLOCATED:
@@ -646,9 +642,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     break;
                 case uc::CpType::EXISTING:
                     // OK w/o size, as 39 ≈ 40
-                    drawCharBorder(&painter, bounds, clFg);
-                    if (cp)
-                        drawChar(&painter, bounds, *cp, clFg, TableDraw::CUSTOM, DPI_STUB);
+                    drawSearchChar(&painter, bounds, cp, clFg);
                 }
             });
     default:

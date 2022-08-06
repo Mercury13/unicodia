@@ -54,11 +54,15 @@ inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
 
-/// Draws murky border of PUA/
+/// Draws murky rect with border of unallocated / reserved international
 void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
 void drawChar(QPainter* painter, const QRect& rect,
-        const uc::Cp& cp, const QColor& color, TableDraw mode, int dpi);
+        const uc::Cp& cp, const QColor& color, TableDraw mode);
+
+void drawSearchChar(
+        QPainter* painter, const QRect& rect, const uc::Cp* cp,
+        const QColor& color);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 

@@ -164,7 +164,7 @@ protected:
             const QModelIndex& index,
             const QColor& color) const;
     void drawChar(QPainter* painter, const QRect& rect,
-                const QModelIndex& index, const QColor& color, int dpi) const;
+                const QModelIndex& index, const QColor& color) const;
 private:
     RowCache rows;
     mutable bool hasText = true;
