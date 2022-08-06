@@ -120,7 +120,7 @@ protected:
     using Super::prepend;
     using Super::bump;
 private:
-    UoMap<K, typename Super::Entry*> ndx;
+    Ndx<K, typename Super::Entry*> ndx;
 };
 
 
