@@ -107,7 +107,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     // Interesting case: ITALIC is script with OLD only
     // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
     { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
-                            {}, "ITALIC"sv } },
+                            {}, "ITALIC", "PERMIC" } },
     { "JAMO",           Dicf::TRIG_SCRIPT },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
@@ -174,7 +174,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "PALI",           Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "PALMYRENE",      Dicf::TRIG_SCRIPT },
     { "PAU",            { Dicf::TRIG_THREE_WORD_SCRIPT, {}, "CIN"sv, "HAU"sv } },
-    { "PERMIC",         Dicf::TRIG_SCRIPT },
     { "PERSIAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "PHAISTOS",       { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "DISC" } },
     { "PHAGS-PA",       Dicf::TRIG_SCRIPT },
