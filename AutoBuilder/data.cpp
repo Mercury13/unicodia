@@ -373,9 +373,11 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HASANTA",        Dicf::PART_NOUN },
     { "HOOK",           Dicf::PART_NOUN },
     { "LINE",           Dicf::PART_NOUN },
+    { "MACRON",         Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
     { "NUKTA",          Dicf::PART_NOUN },
     { "PLUS",           Dicf::PART_NOUN },
+    { "PRIME",          Dicf::PART_NOUN },
     { "RANA",           Dicf::PART_NOUN },
     { "REDUPLICATION",  Dicf::PART_NOUN },
     { "RIKRIK",         Dicf::PART_NOUN },
@@ -661,6 +663,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SPRECHGESANG",   Dicf::PART_ADJECTIVE },
     { "STRAIGHT",       Dicf::PART_ADJECTIVE },
     { "STRETCHED",      Dicf::PART_ADJECTIVE },
+    { "SUPERSCRIPT",    Dicf::PART_ADJECTIVE },
     { "SYLLABIC",       Dicf::PART_ADJECTIVE },
     { "TAILED",         Dicf::PART_ADJECTIVE },
     { "TAILLESS",       Dicf::PART_ADJECTIVE },
@@ -707,6 +710,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "FITZPATRICK",    Dicf::CAP_TITLE },
     { "FRANKS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    // { "GARSHUNI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE }, not really correct, but small is nicer
     { "HERMES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HYGIEIA",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JAPAN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -768,6 +772,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "GHAIN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "H",              Dicf::CAP_TITLE },
     { "HAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "I",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
     { "J",              Dicf::CAP_TITLE },
@@ -794,6 +799,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "R",              Dicf::CAP_TITLE },
     { "REH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "RESH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "RISH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "S",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
     { "SA",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SAD",            Dicf::PART_MAYBE_LETTER },
