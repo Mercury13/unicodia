@@ -60,6 +60,7 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 void drawChar(QPainter* painter, const QRect& rect,
         const uc::Cp& cp, const QColor& color, TableDraw mode);
 
+/// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
         const QColor& color);
