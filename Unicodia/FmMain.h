@@ -203,10 +203,19 @@ private:
 };
 
 
+class PixSource // interface
+{
+public:
+    virtual int pixSize() const = 0;
+    virtual QColor winColor() const = 0;
+    virtual ~PixSource() = default;
+};
+
+
 class SearchModel final : public QAbstractTableModel
 {
 public:
-    SearchModel(QWidget* aSample) : sample(aSample) {}
+    SearchModel(const PixSource* aSample) : sample(aSample) {}
     int size() const { return v.size(); }
     int rowCount(const QModelIndex&) const override { return v.size(); }
     int columnCount(const QModelIndex&) const override { return 1; }
@@ -215,9 +224,8 @@ public:
     void clear();
     bool hasData() const { return !v.empty(); }
     const uc::SearchLine& lineAt(size_t index) const;
-    int pixSize() const;
 private:
-    QWidget* const sample;
+    const PixSource* const sample;
     SafeVector<uc::SearchLine> v;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
 };
@@ -235,6 +243,7 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 private:
     static constexpr auto COL0 = 0;
+    mutable LruCache<char32_t, QPixmap> cache { 400 };
 };
 
 
@@ -268,7 +277,8 @@ enum class SelectMode { NONE, INSTANT };
 
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
-               private mywiki::Gui
+               private mywiki::Gui,
+               private PixSource
 {
     Q_OBJECT
     using Super = QMainWindow;
@@ -339,6 +349,10 @@ private:
     void copyTextAbs(
             QWidget* widget, const QRect& absRect, const QString& text) override;    
     void followUrl(const QString& x) override;    
+
+    // PixSource
+    int pixSize() const override;
+    QColor winColor() const override { return palette().windowText().color(); }
 private slots:
     void charChanged(const QModelIndex& current);
     void copyCurrentChar();

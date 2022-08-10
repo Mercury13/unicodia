@@ -555,14 +555,6 @@ void SearchModel::set(SafeVector<uc::SearchLine>&& x)
 }
 
 
-int SearchModel::pixSize() const
-{
-    auto& font = sample->font();
-    QFontMetrics metrics{font};
-    return (metrics.ascent() + metrics.descent()) * 3;
-}
-
-
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
     auto& line = lineAt(index.row());
@@ -597,14 +589,14 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole:
         return cache.getT(line.code,
             [cp = line.cp, type = line.type, this](QPixmap& pix) {
-                auto size = pixSize();
+                auto size = sample->pixSize();
                 if (pix.size() != QSize{size, size}) {
                     pix = QPixmap{size, size};
                 }
                 pix.fill(Qt::transparent);
 
                 // Create painter
-                QColor clFg = sample->palette().windowText().color();
+                QColor clFg = sample->winColor();
                 QPainter painter(&pix);
                 auto bounds = pix.rect();
 
@@ -1647,4 +1639,12 @@ void FmMain::chooseFirstLanguage()
 void FmMain::blockOrderChanged()
 {
     rebuildBlocks();
+}
+
+
+int FmMain::pixSize() const
+{
+    auto& fn = font();
+    QFontMetrics metrics{fn};
+    return (metrics.ascent() + metrics.descent()) * 3;
 }
