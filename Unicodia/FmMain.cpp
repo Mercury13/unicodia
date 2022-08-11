@@ -43,6 +43,7 @@
 #include "LocDic.h"
 #include "LocList.h"
 
+constexpr char32_t VS16 = 0xFE0F;
 
 template class LruCache<char32_t, QPixmap>;
 
@@ -685,12 +686,49 @@ int LibModel::columnCount(const QModelIndex &) const
     { return 1; }
 
 
+QPixmap& LibModel::pixOfSingleChar(char32_t c) const
+{
+    return cache.getT(c,
+        [c, this](QPixmap& pix) {
+            auto size = sample->pixSize();
+            if (pix.size() != QSize{size, size}) {
+                pix = QPixmap{size, size};
+            }
+            pix.fill(Qt::transparent);
+
+            // Create painter
+            QColor clFg = sample->winColor();
+            QPainter painter(&pix);
+            auto bounds = pix.rect();
+
+            // draw char
+            drawSearchChar(&painter, bounds, uc::cpsByCode[c], clFg);
+        });
+}
+
+
 QVariant LibModel::data(const QModelIndex &index, int role) const
 {
     GETNODE(index, return {})
     switch (role) {
     case Qt::DisplayRole:
         return str::toQ(node.text);
+    case Qt::DecorationRole:
+        switch (node.value.length()) {
+        case 0:
+            /// @todo [urgent] draw folder
+            return {};
+        case 1:
+            return pixOfSingleChar(node.value[0]);
+        case 2:
+            if (node.value[1] == VS16)
+                return pixOfSingleChar(node.value[0]);
+            [[fallthrough]];
+        default:
+            /// @todo [urgent] draw big emoji
+            return {};
+        }
+
     default:
         return {};
     }
@@ -707,6 +745,7 @@ FmMain::FmMain(QWidget *parent)
       ui(new Ui::FmMain),
       model(this),
       searchModel(this),
+      libModel(this),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       fontTofu(str::toQ(FAM_TOFU), FSZ_BIG)
 {
@@ -1085,7 +1124,7 @@ void FmMain::copyCurrentThing(CurrThing thing)
         if (ch->category().upCat == uc::UpCategory::MARK) {
             q = uc::STUB_CIRCLE + q;
         } else if (ch->isVs16Emoji()) {
-            q += QChar(0xFE0F);
+            q += QChar(VS16);
         }
     }
     QApplication::clipboard()->setText(q);

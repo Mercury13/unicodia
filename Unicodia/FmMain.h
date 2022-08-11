@@ -234,6 +234,7 @@ private:
 class LibModel final : public QAbstractItemModel
 {
 public:
+    LibModel(const PixSource* aSample) : sample(aSample) {}
     QModelIndex index(
             int row, int column,
             const QModelIndex &parent = QModelIndex()) const override;
@@ -242,8 +243,11 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 private:
+    const PixSource* const sample;
     static constexpr auto COL0 = 0;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
+
+    QPixmap& pixOfSingleChar(char32_t c) const;
 };
 
 
