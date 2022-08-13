@@ -46,7 +46,7 @@ enum class TableDraw {
     CUSTOM      // Normal chars are drawn in custom way
 };
 
-std::optional<QFont> fontAt(EmojiDraw emojiMode, const uc::Cp& cp);
+std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp);
 std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp);
 
 inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
@@ -60,16 +60,16 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
 void drawChar(
         QPainter* painter, const QRect& rect, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, EmojiDraw emojiMode);
+        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode);
 
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color, EmojiDraw emojiMode);
+        const QColor& color, uc::EmojiDraw emojiMode);
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, EmojiDraw emojiMode);
+        const QColor& color, uc::EmojiDraw emojiMode);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 

@@ -14,11 +14,6 @@
 // Project-local
 #include "UcAutoCount.h"
 
-enum class EmojiDraw {
-    CONSERVATIVE,   // Table: emoji are mostly drawn as text
-    GRAPHIC         // Library: emoji are mostly drawn as graphic
-};
-
 namespace uc {
 
     constexpr int N_PLANES = 17;
@@ -451,6 +446,11 @@ namespace uc {
             CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
             SVG_EMOJI,          ///< Draw SVG emoji
             LAST_FONT = EGYPTIAN_HATCH };            // Last using (loading, checking) font
+
+    enum class EmojiDraw {
+        CONSERVATIVE,   // Table: emoji are mostly drawn as text
+        GRAPHIC         // Library: emoji are mostly drawn as graphic
+    };
 
     enum class TofuState {
         PRESENT,    ///< Not a tofu, have char

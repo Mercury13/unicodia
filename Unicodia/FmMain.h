@@ -170,6 +170,7 @@ private:
     mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
 };
 
 
@@ -228,6 +229,7 @@ private:
     const PixSource* const sample;
     SafeVector<uc::SearchLine> v;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
 };
 
 
@@ -248,6 +250,7 @@ private:
     mutable LruCache<std::u32string_view, QPixmap> cache { 400 };
 
     QPixmap& pixOfMultiChar(std::u32string_view c) const;
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::GRAPHIC;
 };
 
 

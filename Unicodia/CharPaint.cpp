@@ -571,7 +571,7 @@ std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp)
 }
 
 
-std::optional<QFont> fontAt(EmojiDraw emojiMode, const uc::Cp& cp)
+std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp)
 {
     static constexpr int DUMMY_DPI = 96;
     auto method = cp.drawMethod(emojiMode, DUMMY_DPI);
@@ -585,7 +585,7 @@ constexpr int EMOJI_DEN = 5;
 
 void drawChar(
         QPainter* painter, const QRect& rect, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, EmojiDraw emojiMode)
+        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode)
 {
     /// @todo [future] DPI unused right now, as CUSTOM_AA unused
     auto dpi = 96;  //painter->device()->physicalDpiX();
@@ -660,7 +660,7 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
 
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color, EmojiDraw emojiMode)
+        const QColor& color, uc::EmojiDraw emojiMode)
 {
     drawCharBorder(painter, rect, color);
     if (cp)
@@ -670,7 +670,7 @@ void drawSearchChar(
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, EmojiDraw emojiMode)
+        const QColor& color, uc::EmojiDraw emojiMode)
 {
     drawCharBorder(painter, rect, color);
     if (auto c1 = EmojiPainter::getCp(text)) {
