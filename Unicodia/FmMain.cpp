@@ -649,7 +649,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
     auto ii = (parent).internalId(); \
     if (ii >= uc::N_LIBNODES) \
         fallback; \
-    auto& node = uc::libNodes[ii];
+    auto& node = uc::libNodes[ii];  // NOLINT(bugprone-macro-parentheses)
 
 QModelIndex LibModel::index(int row, int, const QModelIndex &parent) const
 {
