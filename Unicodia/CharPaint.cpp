@@ -561,10 +561,9 @@ void drawSpace(
 }
 
 
-std::optional<QFont> fontAt(const uc::Cp& cp)
+std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp)
 {
-    static constexpr int DUMMY_DPI = 96;
-    if (cp.drawMethod(DUMMY_DPI) > uc::DrawMethod::LAST_FONT)
+    if (drawMethod > uc::DrawMethod::LAST_FONT)
         return {};
     auto font = cp.font(uc::MatchLast::NO);
     return font->get(uc::FontPlace::CELL, FSZ_TABLE,
@@ -572,16 +571,26 @@ std::optional<QFont> fontAt(const uc::Cp& cp)
 }
 
 
+std::optional<QFont> fontAt(EmojiDraw emojiMode, const uc::Cp& cp)
+{
+    static constexpr int DUMMY_DPI = 96;
+    auto method = cp.drawMethod(emojiMode, DUMMY_DPI);
+    return fontAt(method, cp);
+}
+
+
 constexpr int EMOJI_NUM = 4;
 constexpr int EMOJI_DEN = 5;
 
 
-void drawChar(QPainter* painter, const QRect& rect,
-            const uc::Cp& cp, const QColor& color, TableDraw mode)
+void drawChar(
+        QPainter* painter, const QRect& rect, const uc::Cp& cp,
+        const QColor& color, TableDraw tableMode, EmojiDraw emojiMode)
 {
     /// @todo [future] DPI unused right now, as CUSTOM_AA unused
     auto dpi = 96;  //painter->device()->physicalDpiX();
-    switch (cp.drawMethod(dpi)) {
+    auto method = cp.drawMethod(emojiMode, dpi);
+    switch (method) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
         break;
@@ -589,13 +598,13 @@ void drawChar(QPainter* painter, const QRect& rect,
         drawAbbreviation(painter, rect, cp.abbrev(), color);
         break;
     case uc::DrawMethod::EGYPTIAN_HATCH:
-        drawEgyptianHatch(painter, rect, *fontAt(cp), color, cp.subj);
+        drawEgyptianHatch(painter, rect, *fontAt(method, cp), color, cp.subj);
         break;
     case uc::DrawMethod::SPACE:
-        drawSpace(painter, rect, *fontAt(cp), color, cp.subj);
+        drawSpace(painter, rect, *fontAt(method, cp), color, cp.subj);
         break;
     case uc::DrawMethod::CUSTOM_AA: {
-            auto font = *fontAt(cp);
+            auto font = *fontAt(emojiMode, cp);
             font.setStyleStrategy(fst::CUSTOM_AA);
             painter->setFont(font);
             painter->setBrush(color);
@@ -604,9 +613,9 @@ void drawChar(QPainter* painter, const QRect& rect,
             painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
         } break;
     case uc::DrawMethod::SAMPLE:
-        if (mode == TableDraw::CUSTOM) {
+        if (tableMode == TableDraw::CUSTOM) {
             // Char
-            painter->setFont(*fontAt(cp));
+            painter->setFont(*fontAt(method, cp));
             painter->setBrush(color);
             painter->setPen(color);
             painter->drawText(rect,
@@ -651,23 +660,23 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
 
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color)
+        const QColor& color, EmojiDraw emojiMode)
 {
     drawCharBorder(painter, rect, color);
     if (cp)
-        drawChar(painter, rect, *cp, color, TableDraw::CUSTOM);
+        drawChar(painter, rect, *cp, color, TableDraw::CUSTOM, emojiMode);
 }
 
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color)
+        const QColor& color, EmojiDraw emojiMode)
 {
     drawCharBorder(painter, rect, color);
     if (auto c1 = EmojiPainter::getCp(text)) {
         // Single-char
         if (auto cp = uc::cpsByCode[c1])
-            drawChar(painter, rect, *cp, color, TableDraw::CUSTOM);
+            drawChar(painter, rect, *cp, color, TableDraw::CUSTOM, emojiMode);
     } else {
         // Multi-char
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;

@@ -14,6 +14,11 @@
 // Project-local
 #include "UcAutoCount.h"
 
+enum class EmojiDraw {
+    CONSERVATIVE,   // Table: emoji are mostly drawn as text
+    GRAPHIC         // Library: emoji are mostly drawn as graphic
+};
+
 namespace uc {
 
     constexpr int N_PLANES = 17;
@@ -504,7 +509,7 @@ namespace uc {
 
         QString viewableName() const;
         SafeVector<std::u8string_view> allRawNames() const;
-        DrawMethod drawMethod(int dpi) const;
+        DrawMethod drawMethod(EmojiDraw emojiMode, int dpi) const;
         TofuInfo tofuInfo() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::M_ABBREVIATION); }
         std::u8string_view abbrev() const;

@@ -254,7 +254,7 @@ int CharsModel::columnCount(const QModelIndex&) const
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(*cp);
+        return ::fontAt(EmojiDraw::CONSERVATIVE, *cp);
     return {};
 }
 
@@ -416,7 +416,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW);
+        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW, EmojiDraw::CONSERVATIVE);
     }
 }
 
@@ -448,7 +448,7 @@ void CharsModel::paintItem1(
 {
     auto ch = charAt(index);
     auto dpi = painter->device()->physicalDpiX();
-    hasText = !(ch && ch->drawMethod(dpi) == uc::DrawMethod::CUSTOM_AA);
+    hasText = !(ch && ch->drawMethod(EmojiDraw::CONSERVATIVE, dpi) == uc::DrawMethod::CUSTOM_AA);
     SuperD::paint(painter, option, index);
     drawChar(painter, option.rect, index, color);
 }
@@ -624,7 +624,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                             drawCharBorder(&painter, bounds, clFg);
                             clFg = cont.icon.fgColor;
                         }
-                        drawChar(&painter, bounds, si.cp(), clFg, TableDraw::CUSTOM);
+                        drawChar(&painter, bounds, si.cp(), clFg,
+                                 TableDraw::CUSTOM, EmojiDraw::CONSERVATIVE);
                     } break;
                 case uc::CpType::NN:
                 case uc::CpType::UNALLOCATED:
@@ -633,7 +634,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     break;
                 case uc::CpType::EXISTING:
                     // OK w/o size, as 39 ≈ 40
-                    drawSearchChar(&painter, bounds, cp, clFg);
+                    drawSearchChar(&painter, bounds, cp, clFg, EmojiDraw::CONSERVATIVE);
                 }
             });
     default:
@@ -700,7 +701,7 @@ QPixmap& LibModel::pixOfMultiChar(std::u32string_view c) const
             auto bounds = pix.rect();
 
             // draw char
-            drawSearchChars(&painter, bounds, c, clFg);
+            drawSearchChars(&painter, bounds, c, clFg, EmojiDraw::GRAPHIC);
         });
 }
 
@@ -1227,7 +1228,7 @@ void FmMain::forceShowCp(MaybeChar ch)
 
         // Sample char
         const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
-        switch (ch->drawMethod(uc::DPI_ALL_CHARS)) {
+        switch (ch->drawMethod(EmojiDraw::CONSERVATIVE, uc::DPI_ALL_CHARS)) {
         case uc::DrawMethod::CUSTOM_CONTROL:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);

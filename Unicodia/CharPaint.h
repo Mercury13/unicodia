@@ -46,7 +46,8 @@ enum class TableDraw {
     CUSTOM      // Normal chars are drawn in custom way
 };
 
-std::optional<QFont> fontAt(const uc::Cp& cp);
+std::optional<QFont> fontAt(EmojiDraw emojiMode, const uc::Cp& cp);
+std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp);
 
 inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
     { return cp.sampleProxy(dpi).text; }
@@ -57,17 +58,18 @@ void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
 /// Draws murky rect with border of unallocated / reserved international
 void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
-void drawChar(QPainter* painter, const QRect& rect,
-        const uc::Cp& cp, const QColor& color, TableDraw mode);
+void drawChar(
+        QPainter* painter, const QRect& rect, const uc::Cp& cp,
+        const QColor& color, TableDraw tableMode, EmojiDraw emojiMode);
 
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color);
+        const QColor& color, EmojiDraw emojiMode);
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color);
+        const QColor& color, EmojiDraw emojiMode);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
