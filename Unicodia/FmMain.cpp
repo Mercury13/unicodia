@@ -43,8 +43,6 @@
 #include "LocDic.h"
 #include "LocList.h"
 
-constexpr char32_t VS16 = 0xFE0F;
-
 template class LruCache<char32_t, QPixmap>;
 
 using namespace std::string_view_literals;
@@ -686,7 +684,7 @@ int LibModel::columnCount(const QModelIndex &) const
     { return 1; }
 
 
-QPixmap& LibModel::pixOfSingleChar(char32_t c) const
+QPixmap& LibModel::pixOfMultiChar(std::u32string_view c) const
 {
     return cache.getT(c,
         [c, this](QPixmap& pix) {
@@ -702,7 +700,7 @@ QPixmap& LibModel::pixOfSingleChar(char32_t c) const
             auto bounds = pix.rect();
 
             // draw char
-            drawSearchChar(&painter, bounds, uc::cpsByCode[c], clFg);
+            drawSearchChars(&painter, bounds, c, clFg);
         });
 }
 
@@ -718,15 +716,8 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
         case 0:
             /// @todo [urgent] draw folder
             return {};
-        case 1:
-            return pixOfSingleChar(node.value[0]);
-        case 2:
-            if (node.value[1] == VS16)
-                return pixOfSingleChar(node.value[0]);
-            [[fallthrough]];
         default:
-            /// @todo [urgent] draw big emoji
-            return {};
+            return pixOfMultiChar(node.value);
         }
 
     default:

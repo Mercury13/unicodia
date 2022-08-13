@@ -65,6 +65,10 @@ void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
         const QColor& color);
 
+void drawSearchChars(
+        QPainter* painter, const QRect& rect, std::u32string_view text,
+        const QColor& color);
+
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
 class WiCustomDraw : public QWidget

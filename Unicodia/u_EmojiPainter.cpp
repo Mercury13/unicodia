@@ -6,7 +6,7 @@
 // Libs
 #include "i_TempFont.h"
 #include "i_ByteSwap.h"
-#include "Zippy.hpp"
+#include "Zippy.hpp"    // used!
 
 
 namespace {
@@ -89,12 +89,39 @@ std::string_view EmojiPainter::getSubtape(unsigned index)
 
 std::string_view EmojiPainter::getSvg(char32_t cp)
 {
+    return getSvg(std::u32string_view{ &cp, 1 });
+}
+
+
+std::string_view EmojiPainter::getSvg(std::u32string_view text)
+{
     // Load tape
     ensureTape();
 
+    // Get text
+    char fname[80];
+    char* p = std::begin(fname);
+    const char* end = std::end(fname);
+    for (auto v : text) {
+        if (v != VS16) {
+            if (p != std::begin(fname)) {
+                *(p++) = '-';
+            }
+            auto sz = end - p;
+            auto n = snprintf(p, sz, "%x", static_cast<int>(v));
+            if (n < 0) {
+                throw std::logic_error("[getSvg] Cannot print");
+            }
+            p += n;
+        }
+    }
+    constexpr std::string_view SUFFIX = ".svg";
+    auto remder = end - p;
+    if (remder < static_cast<ptrdiff_t>(SUFFIX.size() + 1))
+        throw std::logic_error("[getSvg] Buffer overrun");
+    strncpy(p, SUFFIX.data(), remder);
+
     // Find in directory
-    char fname[40];
-    snprintf(fname, std::size(fname), "%x.svg", static_cast<int>(cp));
     auto it = directory.find(fname);
     if (it == directory.end())
         return {};
@@ -108,35 +135,87 @@ std::string_view EmojiPainter::getSvg(char32_t cp)
 }
 
 
-QSvgRenderer* EmojiPainter::getRenderer(char32_t cp)
+char32_t EmojiPainter::getCp(std::u32string_view text)
 {
-    auto it = renderers.find(cp);
-    if (it != renderers.end())
+    switch (text.length()) {
+    case 1:
+        return text[0];
+    case 2:
+        if (text[1] == VS16)
+            return text[0];
+        [[fallthrough]];
+    default:
+        return 0;
+    }
+}
+
+
+QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
+{
+    // Check for more performance-y single-char
+    if (auto c = getCp(text))
+        return getRenderer(c);
+
+    auto it = multiCharRenderers.find(text);
+    if (it != multiCharRenderers.end())
         return it->second.get();
 
     // No cached renderer!
-    auto svg = getSvg(cp);
+    auto svg = getSvg(text);
     if (svg.empty())
         return nullptr;
 
     QByteArray bytes(svg.data(), svg.length());
     auto rend = std::make_unique<QSvgRenderer>(bytes);
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
-    auto [it2, wasIns] = renderers.emplace(cp, std::move(rend));
+    auto [it2,wasIns] = multiCharRenderers.emplace(std::u32string_view{text}, std::move(rend));
     return it2->second.get();
 }
 
 
+QSvgRenderer* EmojiPainter::getRenderer(char32_t cp)
+{
+    auto [it,wasIns] = singleCharRenderers.insert({ cp, nullptr });
+    if (!wasIns)
+        return it->second.get();
+
+    // No cached renderer!
+    auto svg = getSvg(cp);
+    if (svg.empty())
+        return nullptr; // If we go this way, nullptr is cached, and that’s OK
+
+    QByteArray bytes(svg.data(), svg.length());
+    auto rend = std::make_unique<QSvgRenderer>(bytes);
+    rend->setAspectRatioMode(Qt::KeepAspectRatio);
+    it->second = std::move(rend);
+    return it->second.get();
+}
+
+
+void EmojiPainter::draw1(QPainter* painter, QRect rect, QSvgRenderer& rend, int height)
+{
+    if (rect.height() > height) {
+        auto delta = (rect.height() - height) / 2;
+        rect.moveTop(rect.top() + delta);
+        rect.setHeight(height);
+    }
+    rend.render(painter, rect);
+}
+
+
 void EmojiPainter::draw(
-            QPainter* painter, QRect rect,
-            char32_t cp, int height)
+            QPainter* painter, const QRect& rect, char32_t cp, int height)
 {
     if (auto* rend = getRenderer(cp)) {
-        if (rect.height() > height) {
-            auto delta = (rect.height() - height) / 2;
-            rect.moveTop(rect.top() + delta);
-            rect.setHeight(height);
-        }
-        rend->render(painter, rect);
+        draw1(painter, rect, *rend, height);
+    }
+}
+
+
+void EmojiPainter::draw(
+            QPainter* painter, const QRect& rect, std::u32string_view cp, int height)
+{
+    if (auto* rend = getRenderer(cp)) {
+        draw1(painter, rect, *rend, height);
     }
 }

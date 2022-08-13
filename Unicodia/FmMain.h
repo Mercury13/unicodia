@@ -245,9 +245,9 @@ public:
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
-    mutable LruCache<char32_t, QPixmap> cache { 400 };
+    mutable LruCache<std::u32string_view, QPixmap> cache { 400 };
 
-    QPixmap& pixOfSingleChar(char32_t c) const;
+    QPixmap& pixOfMultiChar(std::u32string_view c) const;
 };
 
 

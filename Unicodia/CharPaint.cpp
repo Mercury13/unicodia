@@ -572,6 +572,10 @@ std::optional<QFont> fontAt(const uc::Cp& cp)
 }
 
 
+constexpr int EMOJI_NUM = 4;
+constexpr int EMOJI_DEN = 5;
+
+
 void drawChar(QPainter* painter, const QRect& rect,
             const uc::Cp& cp, const QColor& color, TableDraw mode)
 {
@@ -610,8 +614,8 @@ void drawChar(QPainter* painter, const QRect& rect,
                               textAt(cp));
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
-            auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
-            auto h = rect.height() * 8 / 10;
+            //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
+            auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
             emp.draw(painter, rect, cp.subj.ch32(), h);
         } break;
     }
@@ -652,4 +656,21 @@ void drawSearchChar(
     drawCharBorder(painter, rect, color);
     if (cp)
         drawChar(painter, rect, *cp, color, TableDraw::CUSTOM);
+}
+
+
+void drawSearchChars(
+        QPainter* painter, const QRect& rect, std::u32string_view text,
+        const QColor& color)
+{
+    drawCharBorder(painter, rect, color);
+    if (auto c1 = EmojiPainter::getCp(text)) {
+        // Single-char
+        if (auto cp = uc::cpsByCode[c1])
+            drawChar(painter, rect, *cp, color, TableDraw::CUSTOM);
+    } else {
+        // Multi-char
+        auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
+        emp.draw(painter, rect, text, h);
+    }
 }
