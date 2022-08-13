@@ -656,6 +656,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SMALL",          Dicf::PART_ADJECTIVE },
     { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
     { "SPACING",        Dicf::PART_ADJECTIVE },
+    { "SQUAT",          Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
     // Old SOUTH Arabian
     { "SOUTH",          Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE  },
@@ -718,6 +719,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "JOVE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "KASHMIRI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KAZAKH",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KHAKASSIAN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KIRGHIZ",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KORANIC",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -725,6 +727,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
+    { "SAKHA",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
@@ -765,6 +768,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "E",              Dicf::CAP_TITLE },
     { "EE",             Dicf::CAP_TITLE },
     { "EH",             Dicf::CAP_TITLE },
+    { "ESH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "EU",             Dicf::CAP_TITLE },
     { "F",              Dicf::CAP_TITLE },
     { "FEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -799,6 +803,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "R",              Dicf::CAP_TITLE },
     { "REH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "RESH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "REVERSED-SCHWA", { Dicf::PART_NOUN, "reversed-Schwa" } },
     { "RISH",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "S",              Dicf::PART_MAYBE_LETTER },  // Because of Znamenny
     { "SA",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -814,6 +819,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "U",              Dicf::CAP_TITLE },
     { "UE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "V",              Dicf::CAP_TITLE },
+    { "VAV",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "W",              Dicf::CAP_TITLE },
     { "WAW",            Dicf::CAP_TITLE },
     { "X",              Dicf::CAP_TITLE },
@@ -985,6 +991,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Arabic-Indic Per mille sign")               // Tricky
     EX("Arabic-Indic Per ten thousand sign")        // Tricky
     EX("Arabic number mark above")              // Number’s mark
+    EX("Arabic ligature Salla used as Koranic stop sign isolated form") // Sign is not a keyword
+    EX("Arabic ligature Qala used as Koranic stop sign isolated form")  // Sign is not a keyword
         // Armn
     EX("Armenian small ligature Ech Yiwn")  // All “ligature” are manually checked
     EX("Armenian small ligature Men Now")
@@ -1087,6 +1095,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Next line (NEL)")               // Nel is ambiguous
     EX("Commercial At")                 // At is not a preposition
     EX("Tag Commercial At")             // Same
+    EX("Fullwidth commercial At")       // Same
+    EX("Small commercial At")           // Same
     EX("Fraction slash")                // Fraction’s slash
     EX("Sloping large Or")              // Or is a tricky word
     EX("Sloping large And")             // And is a tricky word
