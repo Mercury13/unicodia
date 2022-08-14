@@ -6,7 +6,7 @@
 // Libs
 #include "i_TempFont.h"
 #include "i_ByteSwap.h"
-#include "Zippy.hpp"    // used!
+#include "Zippy/ZipArchive.hpp"
 
 
 namespace {
