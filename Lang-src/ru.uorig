@@ -5470,10 +5470,6 @@
      <orig>Поиск</orig>
      <im-cmt>is a single-line editor, promoted to SearchEdit</im-cmt>
     </text>
-    <text id="lbSampleTitle">
-     <orig>Образец</orig>
-     <im-cmt>is a static text</im-cmt>
-    </text>
     <text id="btCopy">
      <orig>Копировать</orig>
      <im-cmt>is a button</im-cmt>
@@ -5517,6 +5513,17 @@
    <text id="Sort">
     <orig>Порядок блоков</orig>
    </text>
+  </group>
+  <group id="Sample">
+   <group id="Ui">
+    <sync text-owner="me" fname="..\Unicodia\WiSample.ui">
+     <format name="ui" />
+    </sync>
+    <text id="lbSampleTitle">
+     <orig>Образец</orig>
+     <im-cmt>is a static text</im-cmt>
+    </text>
+   </group>
   </group>
  </file>
 </ut>
