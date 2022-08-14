@@ -50,6 +50,8 @@ class FmTofuStats;
 struct MaybeChar {
     char32_t code = 0;
     const uc::Cp* cp = nullptr;
+
+    // Funcs
     explicit operator bool() const { return cp; }
     const uc::Cp& operator * () const { return *cp; }
     const uc::Cp* operator ->() const { return  cp; }
