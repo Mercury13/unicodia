@@ -335,7 +335,6 @@ private:
     void forceShowCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <SelectMode mode> void selectChar(char32_t code);
-    void drawSampleWithQt(const uc::Cp& cp);
     void initTerms();
     void copyCurrentThing(CurrThing thing);
     void showCopied(QAbstractItemView* table);

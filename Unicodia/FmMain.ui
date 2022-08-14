@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -195,87 +195,7 @@
                    <number>4</number>
                   </property>
                   <item>
-                   <layout class="QVBoxLayout" name="laySample" stretch="0,1">
-                    <property name="spacing">
-                     <number>1</number>
-                    </property>
-                    <item>
-                     <widget class="QLabel" name="lbSampleTitle">
-                      <property name="text">
-                       <string>{Sample}</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QGroupBox" name="grpSample">
-                      <layout class="QHBoxLayout" name="horizontalLayout_2">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>2</number>
-                       </property>
-                       <item>
-                        <widget class="QStackedWidget" name="stackSample">
-                         <property name="currentIndex">
-                          <number>0</number>
-                         </property>
-                         <widget class="QWidget" name="pageSampleQt">
-                          <layout class="QVBoxLayout" name="verticalLayout_6">
-                           <property name="leftMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="topMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="rightMargin">
-                            <number>0</number>
-                           </property>
-                           <property name="bottomMargin">
-                            <number>0</number>
-                           </property>
-                           <item>
-                            <widget class="QLabel" name="lbSample">
-                             <property name="minimumSize">
-                              <size>
-                               <width>120</width>
-                               <height>108</height>
-                              </size>
-                             </property>
-                             <property name="font">
-                              <font>
-                               <stylestrategy>PreferAntialias</stylestrategy>
-                              </font>
-                             </property>
-                             <property name="text">
-                              <string notr="true">%</string>
-                             </property>
-                             <property name="textFormat">
-                              <enum>Qt::PlainText</enum>
-                             </property>
-                             <property name="alignment">
-                              <set>Qt::AlignCenter</set>
-                             </property>
-                            </widget>
-                           </item>
-                          </layout>
-                         </widget>
-                         <widget class="WiCustomDraw" name="pageSampleCustom"/>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
+                   <widget class="WiSample" name="wiSample" native="true"/>
                   </item>
                   <item>
                    <layout class="QVBoxLayout" name="layOs" stretch="0,1">
@@ -784,12 +704,6 @@ padding-bottom: 1px;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>WiCustomDraw</class>
-   <extends>QWidget</extends>
-   <header>CharPaint.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>WideComboBox</class>
    <extends>QComboBox</extends>
    <header>c_SearchEdit.h</header>
@@ -808,6 +722,12 @@ padding-bottom: 1px;</string>
    <class>SearchList</class>
    <extends>QListView</extends>
    <header>c_SearchEdit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>WiSample</class>
+   <extends>QWidget</extends>
+   <header>WiSample.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources>

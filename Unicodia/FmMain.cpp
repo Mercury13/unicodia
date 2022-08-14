@@ -800,9 +800,6 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
-    // Sample
-    ui->pageSampleCustom->init();
-
     // OS style    
     fontTofu.setStyleStrategy(fst::TOFU);
     auto& font = uc::fontInfo[0];
@@ -1131,42 +1128,11 @@ void FmMain::copyCurrentSample()
 }
 
 
-void FmMain::drawSampleWithQt(const uc::Cp& ch)
-{
-    ui->pageSampleCustom->setNormal();
-
-    // Font
-    auto font = ch.font(uc::MatchLast::NO);
-    ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
-
-    // Sample char
-    ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy();
-    // Color
-    if (ch.isTrueSpace()) {
-        auto c = palette().text().color();
-        c.setAlpha(ALPHA_SPACE);
-        QString css = "color: " + c.name(QColor::HexArgb) + ';';
-        ui->lbSample->setStyleSheet(css);
-    } else {
-        ui->lbSample->setStyleSheet(str::toQ(proxy.styleSheet));
-    }
-    ui->lbSample->setText(proxy.text);
-}
-
-
 template<>
 void wiki::append(QString& s, const char* start, const char* end)
 {
     s.append(QByteArray::fromRawData(start, end - start));
 }
-
-void FmMain::clearSample()
-{
-    ui->lbSample->clear();
-    ui->lbSample->setFont(QFont());
-}
-
 
 namespace {
 
@@ -1202,15 +1168,6 @@ void FmMain::forceShowCp(MaybeChar ch)
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
 
     if (ch) {
-        if (ch->isTrueSpace()) {
-                auto palette = this->palette();
-                auto color = palette.windowText().color();
-                color.setAlpha(ALPHA_SPACE);
-                palette.setColor(QPalette::WindowText, color);
-                ui->lbSample->setPalette(palette);
-        } else {
-            ui->lbSample->setPalette(this->palette());
-        }
         if (ch->category().upCat == uc::UpCategory::MARK) {
             ui->btCopyEx->setText("+25CC");
             ui->btCopyEx->show();
@@ -1220,41 +1177,10 @@ void FmMain::forceShowCp(MaybeChar ch)
         } else {
             ui->btCopyEx->hide();
         }
+        const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
 
         // Sample char
-        const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
-        switch (ch->drawMethod(uc::EmojiDraw::CONSERVATIVE)) {
-        case uc::DrawMethod::CUSTOM_CONTROL:
-            clearSample();
-            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setCustomControl(ch.code);
-            break;
-        case uc::DrawMethod::ABBREVIATION:
-            clearSample();
-            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setAbbreviation(ch->abbrev());
-            break;
-        case uc::DrawMethod::SPACE: {
-                clearSample();
-                ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-                auto font = ch->font(uc::MatchLast::NO);
-                auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
-                ui->pageSampleCustom->setSpace(qfont, ch.code);
-            } break;
-        case uc::DrawMethod::SAMPLE:
-            drawSampleWithQt(*ch);
-            break;
-        case uc::DrawMethod::EGYPTIAN_HATCH: {
-                ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-                auto font = ch->font(uc::MatchLast::NO);
-                auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.code);
-                ui->pageSampleCustom->setEgyptianHatch(qfont, ch.code);
-            } break;
-        case uc::DrawMethod::SVG_EMOJI:
-            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setEmoji(ch.code);
-            break;
-        }
+        ui->wiSample->showCp(*ch);
 
         // OS char
         std::optional<QFont> font = std::nullopt;
@@ -1292,8 +1218,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         setWiki(ui->vwInfo, text);
     } else {
         // No character
-        ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-        ui->lbSample->setText({});
+        ui->wiSample->showNothing();
         ui->lbOs->setText({});
         const auto& osTitle = loc::get(
                 uc::isNonChar(ch.code) ? "Prop.Os.NonChar" : "Prop.Os.Empty");
