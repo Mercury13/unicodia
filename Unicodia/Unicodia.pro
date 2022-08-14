@@ -50,6 +50,7 @@ SOURCES += \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcSearch.cpp \
+    WiSample.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
     d_Config.cpp \
@@ -99,6 +100,7 @@ HEADERS += \
     Uc/UcData.h \
     Uc/UcDating.h \
     Uc/UcSearch.h \
+    WiSample.h \
     Wiki.h \
     c_SearchEdit.h \
     d_Config.h \
@@ -106,7 +108,8 @@ HEADERS += \
 
 FORMS += \
     FmMain.ui \
-    FmTofuStats.ui
+    FmTofuStats.ui \
+    WiSample.ui
 
 INCLUDEPATH += \
     ../Libs \
