@@ -132,7 +132,7 @@ public:
     std::optional<QFont> fontAt(const QModelIndex& index) const;
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
-    QString textAt(const QModelIndex& index, int aDpi = uc::DPI_ALL_CHARS) const;
+    QString textAt(const QModelIndex& index) const;
     void addCp(const uc::Cp& aCp);
     MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
@@ -169,7 +169,6 @@ protected:
                 const QModelIndex& index, const QColor& color) const;
 private:
     RowCache rows;
-    mutable bool hasText = true;
     static constexpr auto SHRINK_Q = 4;
     static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
     static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;

@@ -573,8 +573,7 @@ std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp)
 
 std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp)
 {
-    static constexpr int DUMMY_DPI = 96;
-    auto method = cp.drawMethod(emojiMode, DUMMY_DPI);
+    auto method = cp.drawMethod(emojiMode);
     return fontAt(method, cp);
 }
 
@@ -587,9 +586,7 @@ void drawChar(
         QPainter* painter, const QRect& rect, const uc::Cp& cp,
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode)
 {
-    /// @todo [future] DPI unused right now, as CUSTOM_AA unused
-    auto dpi = 96;  //painter->device()->physicalDpiX();
-    auto method = cp.drawMethod(emojiMode, dpi);
+    auto method = cp.drawMethod(emojiMode);
     switch (method) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
@@ -603,15 +600,6 @@ void drawChar(
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(method, cp), color, cp.subj);
         break;
-    case uc::DrawMethod::CUSTOM_AA: {
-            auto font = *fontAt(emojiMode, cp);
-            font.setStyleStrategy(fst::CUSTOM_AA);
-            painter->setFont(font);
-            painter->setBrush(color);
-            painter->setPen(color);
-            auto text = textAt(cp);
-            painter->drawText(rect, Qt::AlignCenter | Qt::TextSingleLine, text);
-        } break;
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             // Char

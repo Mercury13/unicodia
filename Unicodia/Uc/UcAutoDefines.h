@@ -438,7 +438,6 @@ namespace uc {
     enum class DrawMethod {
             // Font-based methods
             SAMPLE,             ///< Take font and draw string
-            CUSTOM_AA,          ///< Unused right now, no fonts have custom anti-aliasing right now
             SPACE,              ///< Take font, measure space width and draw 2 lines
             EGYPTIAN_HATCH,     ///< Draw special big circle, then hatch
             // Char-based methods
@@ -502,7 +501,7 @@ namespace uc {
         /// @param [in] matchLast  [+] match last font, can return null
         ///                        [-] take last font, never null
         const Font* font(MatchLast matchLast) const;
-        SampleProxy sampleProxy(int dpi) const;
+        SampleProxy sampleProxy() const;
         QString osProxy() const;
         inline const Block& block() const;
 
@@ -514,7 +513,7 @@ namespace uc {
 
         QString viewableName() const;
         SafeVector<std::u8string_view> allRawNames() const;
-        DrawMethod drawMethod(EmojiDraw emojiMode, int dpi) const;
+        DrawMethod drawMethod(EmojiDraw emojiMode) const;
         TofuInfo tofuInfo() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::M_ABBREVIATION); }
         std::u8string_view abbrev() const;

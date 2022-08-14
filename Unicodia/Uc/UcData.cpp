@@ -3575,15 +3575,11 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-uc::SampleProxy uc::Cp::sampleProxy(int dpi) const
+uc::SampleProxy uc::Cp::sampleProxy() const
 {
-    switch (drawMethod(EmojiDraw::CONSERVATIVE, dpi)) {
+    switch (drawMethod(EmojiDraw::CONSERVATIVE)) {
     case DrawMethod::SAMPLE:
         break;  // go through
-    case DrawMethod::CUSTOM_AA:
-        if (dpi == DPI_ALL_CHARS)
-            break;
-        [[fallthrough]];
     default:
         return {};
     }
@@ -3640,7 +3636,7 @@ bool uc::Cp::isGraphical() const
 }
 
 
-uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode, int dpi) const
+uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode) const
 {
     if (flags.haveAny(Cfg::M_ALL)) [[unlikely]] {
         if (flags.have(Cfg::M_CUSTOM_CONTROL))
@@ -3658,8 +3654,6 @@ uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode, int dpi) const
     }
     if (isTrueSpace())
         return uc::DrawMethod::SPACE;
-    if (dpi < 130 && script().font().flags.have(Ffg::CUSTOM_AA))
-        return uc::DrawMethod::CUSTOM_AA;
     return uc::DrawMethod::SAMPLE;
 }
 
@@ -3746,8 +3740,7 @@ uc::TofuInfo uc::Cp::tofuInfo() const
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 
-    static constexpr auto DPI_DUMMY = 96;
-    if (drawMethod(EmojiDraw::CONSERVATIVE, DPI_DUMMY) > uc::DrawMethod::LAST_FONT) {
+    if (drawMethod(EmojiDraw::CONSERVATIVE) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
         r.state = font(MatchLast::YES) ? TofuState::PRESENT : TofuState::TOFU;

@@ -49,8 +49,7 @@ enum class TableDraw {
 std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp);
 std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp);
 
-inline QString textAt(const uc::Cp& cp, int dpi = uc::DPI_ALL_CHARS)
-    { return cp.sampleProxy(dpi).text; }
+inline QString textAt(const uc::Cp& cp) { return cp.sampleProxy().text; }
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);

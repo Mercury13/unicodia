@@ -281,12 +281,12 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
 }
 
 
-QString CharsModel::textAt(const QModelIndex& index, int aDpi) const
+QString CharsModel::textAt(const QModelIndex& index) const
 {
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return ::textAt(*cp, aDpi);
+    return ::textAt(*cp);
 }
 
 
@@ -295,7 +295,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
-            if (auto q = textAt(index, uc::DPI_ALL_CHARS); !q.isEmpty())
+            if (auto q = textAt(index); !q.isEmpty())
                 return q;
         }
         return {};
@@ -435,8 +435,6 @@ void CharsModel::initStyleOption(QStyleOptionViewItem *option,
             }
         }
     }
-    if (!hasText)
-        option->text.clear();
 }
 
 
@@ -446,9 +444,6 @@ void CharsModel::paintItem1(
         const QModelIndex& index,
         const QColor& color) const
 {
-    auto ch = charAt(index);
-    auto dpi = painter->device()->physicalDpiX();
-    hasText = !(ch && ch->drawMethod(EMOJI_DRAW, dpi) == uc::DrawMethod::CUSTOM_AA);
     SuperD::paint(painter, option, index);
     drawChar(painter, option.rect, index, color);
 }
@@ -1146,7 +1141,7 @@ void FmMain::drawSampleWithQt(const uc::Cp& ch)
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(uc::DPI_ALL_CHARS);
+    auto proxy = ch.sampleProxy();
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -1228,7 +1223,7 @@ void FmMain::forceShowCp(MaybeChar ch)
 
         // Sample char
         const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
-        switch (ch->drawMethod(uc::EmojiDraw::CONSERVATIVE, uc::DPI_ALL_CHARS)) {
+        switch (ch->drawMethod(uc::EmojiDraw::CONSERVATIVE)) {
         case uc::DrawMethod::CUSTOM_CONTROL:
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
@@ -1247,7 +1242,6 @@ void FmMain::forceShowCp(MaybeChar ch)
                 ui->pageSampleCustom->setSpace(qfont, ch.code);
             } break;
         case uc::DrawMethod::SAMPLE:
-        case uc::DrawMethod::CUSTOM_AA:
             drawSampleWithQt(*ch);
             break;
         case uc::DrawMethod::EGYPTIAN_HATCH: {

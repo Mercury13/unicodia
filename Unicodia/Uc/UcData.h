@@ -43,9 +43,6 @@ namespace fst {
     constexpr auto NO_AA = static_cast<QFont::StyleStrategy>(
                 QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
                 | QFont::PreferFullHinting);
-    constexpr auto CUSTOM_AA = static_cast<QFont::StyleStrategy>(
-                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
-                | QFont::PreferFullHinting);
 }
 
 class Percent
@@ -440,8 +437,7 @@ namespace uc {
         CELL_BIGGER     = 1<<12,    ///< Make cell text a bit smaller
         STUB_FINEGRAINED= 1<<13,    ///< Stub on/off is controlled on finer level
         STUB_RTL        = 1<<14,    ///< Use “RtL isolate” char in stub
-        CUSTOM_AA       = 1<<15,    ///< Use custom antialiasing in table (unused right now)
-        STUB_INTERCHAR  = 1<<16,    ///< Debug: test inter-character interval
+        STUB_INTERCHAR  = 1<<15,    ///< Debug: test inter-character interval
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -458,9 +454,6 @@ namespace uc {
     };
 
     enum class FontPlace { CELL, SAMPLE, PROBE };
-
-    /// used as a sign for “Draw all chars”
-    constexpr int DPI_ALL_CHARS = 0;
 
     enum class Fafg {
         RAW_FONT = 1<<0,    ///< [+] use RawFont structure, not QFont
