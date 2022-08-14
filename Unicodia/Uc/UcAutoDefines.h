@@ -447,9 +447,14 @@ namespace uc {
             SVG_EMOJI,          ///< Draw SVG emoji
             LAST_FONT = EGYPTIAN_HATCH };            // Last using (loading, checking) font
 
+    ///
+    ///   There are some chars that dub as typographic and emoji.
+    ///   E.g. arrows, ‼
+    ///   How to write them?
+    ///
     enum class EmojiDraw {
-        CONSERVATIVE,   // Table: emoji are mostly drawn as text
-        GRAPHIC         // Library: emoji are mostly drawn as graphic
+        CONSERVATIVE,   ///< Table: those chars are drawn as text
+        GRAPHIC         ///< Library: all emoji are drawn as graphic
     };
 
     enum class TofuState {
