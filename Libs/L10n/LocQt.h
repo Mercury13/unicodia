@@ -1,7 +1,8 @@
 #pragma once
 
+#include <string_view>
+
 // L10n
-#include "LocDic.h"
 #include "LocManager.h"
 
 class QObject;

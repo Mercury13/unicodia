@@ -931,6 +931,10 @@ namespace {
 void FmMain::translateMe()
 {
     Form::translateMe();
+
+    // Misc. widgets loaded from UI files
+    loc::translateForm(ui->wiSample);
+
     initTerms();
     initAbout();
     cjkReflectCollapseState();

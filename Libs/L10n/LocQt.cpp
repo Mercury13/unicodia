@@ -10,7 +10,9 @@
 
 // Libs
 #include "u_Strings.h"
-#include "u_Qstrings.h"
+
+// L10n
+#include "LocDic.h"
 
 using namespace std::string_view_literals;
 
