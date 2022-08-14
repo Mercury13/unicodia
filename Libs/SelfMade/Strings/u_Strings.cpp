@@ -38,6 +38,14 @@ void str::toUpperInPlace(std::u8string& x)
 }
 
 
+void str::toLowerInPlace(std::string& x)
+{
+    for (auto& v : x) {
+        v = tolower(v);
+    }
+}
+
+
 namespace {
 
     int CHAR_END = -1;

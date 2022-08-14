@@ -6,10 +6,71 @@
 // Libs
 #include "i_TempFont.h"
 #include "i_ByteSwap.h"
+#include "u_Strings.h"
 #include "Zippy/ZipArchive.hpp"
+
+struct RecolorLib {
+    std::string_view fill1;
+    std::string_view fill2;
+    std::string_view fill3;
+    std::string_view fill4;
+    std::string_view fill5;
+    std::string_view outline1;
+
+    void runOn(QByteArray& bytes) const;
+};
+
+namespace {
+
+    void repl(QByteArray& bytes, std::string_view what, std::string_view byWhat)
+    {
+        if (byWhat.empty())
+            return;
+        bytes.replace(what.data(), what.size(), byWhat.data(), byWhat.size());
+        auto whatLow = str::toLower(what);
+        bytes.replace(whatLow.data(), whatLow.size(), byWhat.data(), byWhat.size());
+    }
+
+}
+
+void RecolorLib::runOn(QByteArray& bytes) const
+{
+    repl(bytes, "#FFB300", fill1);
+    repl(bytes, "#FFCA28", fill2);
+    repl(bytes, "#FFC41E", fill3);
+    repl(bytes, "#FFBB0D", fill4);
+    repl(bytes, "#FFB503", fill5);
+    repl(bytes, "#EDA600", outline1);
+}
+
+void RecolorInfo::runOn(QByteArray& bytes) const
+{
+    if (recolor)
+        recolor->runOn(bytes);
+}
 
 
 namespace {
+
+    RecolorLib allRecolors[5] {
+
+        { // White
+            .fill1 = "#FFD29C",
+            .fill2 = "#F9DDBD",
+            .fill3 = "#F8DBBA",
+            .fill4 = "#F5D5AF",
+            .fill5 = "#F0CB9E",
+            .outline1 = "#E6B77E",
+        },
+        // Light
+        {},
+        // Medium
+        {},
+        // Dark
+        {},
+        // Black
+        {},
+    };
 
     ///  Read Intel word
     [[maybe_unused]] uint16_t readIW(std::istream& is)
@@ -160,12 +221,19 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
     if (it != multiCharRenderers.end())
         return it->second.get();
 
+    auto recolor = checkForRecolor(text);
+    if (!recolor) {
+        recolor.baseText = text;
+    }
+
     // No cached renderer!
-    auto svg = getSvg(text);
+    auto svg = getSvg(recolor.baseText);
     if (svg.empty())
         return nullptr;
 
     QByteArray bytes(svg.data(), svg.length());
+    recolor.runOn(bytes);
+
     auto rend = std::make_unique<QSvgRenderer>(bytes);
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
     auto [it2,wasIns] = multiCharRenderers.emplace(std::u32string_view{text}, std::move(rend));
@@ -218,4 +286,30 @@ void EmojiPainter::draw(
     if (auto* rend = getRenderer(cp)) {
         draw1(painter, rect, *rend, height);
     }
+}
+
+
+namespace {
+    inline bool isSkin(char32_t c)
+        { return (c >= SKIN1 && c <= SKIN5); }
+}   // anon namespace
+
+
+RecolorInfo EmojiPainter::checkForRecolor(std::u32string_view text)
+{
+    // 0 or 1 — cannot recolor
+    if (text.length() < 2)
+        return {};
+    auto lastChar = text.back();
+    // Last is skin
+    if (!isSkin(lastChar))
+        return {};
+    // No more skins
+    auto end1 = text.end() - 1;
+    if (std::find_if(text.begin(), end1, isSkin) != end1)
+        return {};
+    return {
+        .baseText { text.begin(), end1 },
+        .recolor = &allRecolors[lastChar - SKIN1],
+    };
 }

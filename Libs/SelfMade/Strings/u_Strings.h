@@ -163,6 +163,13 @@ namespace str {
         return r;
     }
 
+    void toLowerInPlace(std::string& x);
+    inline std::string toLower(std::string_view x) {
+        std::string r{x};
+        toLowerInPlace(r);
+        return r;
+    }
+
     inline std::string_view toSv(std::u8string_view x)
         { return { reinterpret_cast<const char*>(x.data()), x.length() }; }
 

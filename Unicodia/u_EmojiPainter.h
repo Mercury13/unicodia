@@ -4,15 +4,34 @@
 #include <unordered_map>
 #include <vector>
 
+#include <QByteArray>
+
 namespace Zippy {
     class ZipArchive;
 }
 
 constexpr char32_t VS16 = 0xFE0F;
+constexpr char32_t SKIN1 = 0x1F3FB;
+constexpr char32_t SKIN2 = 0x1F3FC;
+constexpr char32_t SKIN3 = 0x1F3FD;
+constexpr char32_t SKIN4 = 0x1F3FE;
+constexpr char32_t SKIN5 = 0x1F3FF;
 
 class QSvgRenderer;
 class QRect;
 class QPainter;
+
+
+struct RecolorLib;  // forward
+
+
+struct RecolorInfo {
+    std::u32string_view baseText;
+    const RecolorLib* recolor;
+
+    operator bool() const { return recolor; }
+    void runOn(QByteArray& bytes) const;
+};
 
 
 class EmojiPainter
@@ -56,4 +75,5 @@ private:
     void ensureTape();
     std::string_view getSubtape(unsigned index);    
     void draw1(QPainter* painter, QRect rect, QSvgRenderer& rend, int height);
+    static RecolorInfo checkForRecolor(std::u32string_view text);
 };
