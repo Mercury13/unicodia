@@ -62,8 +62,14 @@ namespace {
             .fill5 = "#F0CB9E",
             .outline1 = "#E6B77E",
         },
-        // Light
-        {},
+        { // Light
+            .fill1 = "#E0BB95",
+            .fill2 = "#DEB892",
+            .fill3 = "#D6B088",
+            .fill4 = "#D1AA81",
+            .fill5 = "#CCA47A",
+            .outline1 = "#BA8F63",
+        },
         // Medium
         {},
         // Dark
