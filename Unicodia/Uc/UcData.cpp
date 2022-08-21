@@ -2163,7 +2163,7 @@ constinit const uc::Block uc::blocks[] {
     // Greek music OK
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE },
             "Ancient Greek Musical Notation",
-            MyName::INST, EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
+            { EcScript::Grek, 3 }, EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
     // Kaktovik numerals OK, implemented in Funky
     { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Kaktovik Numerals",
