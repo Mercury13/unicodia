@@ -31,7 +31,7 @@ namespace {
         bytes.replace(whatLow.data(), whatLow.size(), byWhat.data(), byWhat.size());
     }
 
-}
+}   // anon namespace
 
 void RecolorLib::runOn(QByteArray& bytes) const
 {
