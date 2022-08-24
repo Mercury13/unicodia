@@ -16,6 +16,8 @@ struct RecolorLib {
     std::string_view fill4;
     std::string_view fill5;
     std::string_view outline1;
+    std::string_view hair1;
+    std::string_view hair2;
 
     void runOn(QByteArray& bytes) const;
 };
@@ -48,6 +50,11 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#D48322", outline1);
     repl(bytes, "#E6A100", outline1);
     repl(bytes, "#F5AC00", fill1);
+    repl(bytes, "#543930", hair1);
+    repl(bytes, "#6D4C41", hair2);
+    // Unicodia emoji
+    repl(bytes, "#F6D32D", fill2);
+    repl(bytes, "#E5A50A", outline1);
 }
 
 void RecolorInfo::runOn(QByteArray& bytes) const
@@ -68,6 +75,8 @@ namespace {
             .fill4 = "#F5D5AF",
             .fill5 = "#F0CB9E",
             .outline1 = "#E6B77E",
+            .hair1 = "#312D2D",
+            .hair2 = "#454140",
         },
         { // Light
             .fill1 = "#CCA47A",
@@ -76,6 +85,8 @@ namespace {
             .fill4 = "#D1AA81",
             .fill5 = "#D6B088",
             .outline1 = "#BA8F63",
+            .hair1 = "#AB872F",
+            .hair2 = "#BFA055",
         },
         { // Medium
             .fill1 = "#A47B62",
@@ -84,6 +95,8 @@ namespace {
             .fill4 = "#B78A67",
             .fill5 = "#AD8264",
             .outline1 = "#91674D",
+            .hair1 = "#543930",
+            .hair2 = "#6D4C41",
         },
         { // Dark
             .fill1 = "#8D5738",
@@ -92,6 +105,8 @@ namespace {
             .fill4 = "#A26942",
             .fill5 = "#98603D",
             .outline1 = "#875334",
+            .hair1 = "#3C2C23",
+            .hair2 = "#554138",
         },
         { // Black
             .fill1 = "#5C4037",
@@ -100,6 +115,8 @@ namespace {
             .fill4 = "#6D5047",
             .fill5 = "#63463D",
             .outline1 = "#4A2F27",
+            .hair1 = "#232020",
+            .hair2 = "#444140",
         },
     };
 
