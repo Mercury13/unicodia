@@ -15,7 +15,6 @@ struct RecolorLib {
     std::string_view fill3;
     std::string_view fill4;
     std::string_view fill5;
-    std::string_view fill6;
     std::string_view outline1;
 
     void runOn(QByteArray& bytes) const;
@@ -88,8 +87,7 @@ namespace {
             .fill5 = "#98603D",
             .outline1 = "#875334",
         },
-        // Black
-        { // Dark
+        { // Black
             .fill1 = "#5C4037",
             .fill2 = "#70534A",
             .fill3 = "#6F5249",
