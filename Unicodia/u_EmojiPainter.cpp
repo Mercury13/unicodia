@@ -15,6 +15,7 @@ struct RecolorLib {
     std::string_view fill3;
     std::string_view fill4;
     std::string_view fill5;
+    std::string_view fill6;
     std::string_view outline1;
 
     void runOn(QByteArray& bytes) const;
@@ -40,6 +41,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FFC41E", fill3);
     repl(bytes, "#FFBB0D", fill4);
     repl(bytes, "#FFB503", fill5);
+    repl(bytes, "#FBC02D", fill2);
     repl(bytes, "#EDA600", outline1);
 }
 
@@ -63,19 +65,38 @@ namespace {
             .outline1 = "#E6B77E",
         },
         { // Light
-            .fill1 = "#E0BB95",
+            .fill1 = "#CCA47A",
             .fill2 = "#DEB892",
             .fill3 = "#D6B088",
             .fill4 = "#D1AA81",
-            .fill5 = "#CCA47A",
+            .fill5 = "#D6B088",
             .outline1 = "#BA8F63",
         },
-        // Medium
-        {},
-        // Dark
-        {},
+        { // Medium
+            .fill1 = "#A47B62",
+            .fill2 = "#BA8D68",
+            .fill3 = "#B88B67",
+            .fill4 = "#B78A67",
+            .fill5 = "#AD8264",
+            .outline1 = "#91674D",
+        },
+        { // Dark
+            .fill1 = "#8D5738",
+            .fill2 = "#A56C43",
+            .fill3 = "#A36B43",
+            .fill4 = "#A26942",
+            .fill5 = "#98603D",
+            .outline1 = "#875334",
+        },
         // Black
-        {},
+        { // Dark
+            .fill1 = "#5C4037",
+            .fill2 = "#70534A",
+            .fill3 = "#6F5249",
+            .fill4 = "#6D5047",
+            .fill5 = "#63463D",
+            .outline1 = "#4A2F27",
+        },
     };
 
     ///  Read Intel word
@@ -227,15 +248,19 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
     if (it != multiCharRenderers.end())
         return it->second.get();
 
-    auto recolor = checkForRecolor(text);
-    if (!recolor) {
-        recolor.baseText = text;
-    }
+    RecolorInfo recolor;
 
     // No cached renderer!
-    auto svg = getSvg(recolor.baseText);
-    if (svg.empty())
-        return nullptr;
+    auto svg = getSvg(text);
+    if (svg.empty()) {
+        recolor = checkForRecolor(text);
+        if (!recolor)
+            return nullptr;
+
+        svg = getSvg(recolor.baseText);
+        if (svg.empty())
+            return nullptr;
+    }
 
     QByteArray bytes(svg.data(), svg.length());
     recolor.runOn(bytes);
