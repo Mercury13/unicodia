@@ -43,6 +43,9 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FBC02D", fill2);
     repl(bytes, "#EDA600", outline1);
     repl(bytes, "#FA0",    fill1);
+    repl(bytes, "#FFD54F", fill2);
+    repl(bytes, "#FFC107", fill1);
+    repl(bytes, "#D48322", outline1);
 }
 
 void RecolorInfo::runOn(QByteArray& bytes) const
@@ -62,7 +65,7 @@ namespace {
             .fill3 = "#F8DBBA",
             .fill4 = "#F5D5AF",
             .fill5 = "#F0CB9E",
-            .outline1 = "#E6B77E",                    
+            .outline1 = "#E6B77E",
         },
         { // Light
             .fill1 = "#CCA47A",
