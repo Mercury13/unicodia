@@ -46,6 +46,8 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FFD54F", fill2);
     repl(bytes, "#FFC107", fill1);
     repl(bytes, "#D48322", outline1);
+    repl(bytes, "#E6A100", outline1);
+    repl(bytes, "#F5AC00", fill1);
 }
 
 void RecolorInfo::runOn(QByteArray& bytes) const
