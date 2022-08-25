@@ -350,11 +350,23 @@ namespace {
 bool EmojiPainter::hasSkinGender(std::u32string_view x)
 {
     static constinit char32_t ALL_CHARS_AR[] {
-        SKIN1, SKIN2, SKIN3, SKIN4, SKIN5, MALE, FEMALE, MAN, WOMAN,
+        // Allowed when used alone
+        SKIN1, SKIN2, SKIN3, SKIN4, SKIN5,   // 5
+        MALE, FEMALE, MAN, WOMAN,            // 9
+        // The rest
         MAN_AND_WOMAN, TWO_MEN, TWO_WOMEN, SANTA_CLAUS, MRS_CLAUS };
+    constexpr size_t OFS_1 = 9;
     static constinit std::u32string_view ALL_CHARS { ALL_CHARS_AR, std::size(ALL_CHARS_AR) };
+    static constinit std::u32string_view SPEC_CHARS { ALL_CHARS_AR + OFS_1, std::end(ALL_CHARS_AR) };
 
-    return (x.find_first_of(ALL_CHARS) != std::u32string::npos);
+    switch (x.size()) {
+    case 0:
+        return false;
+    case 1:
+        return (x.find_first_of(SPEC_CHARS) != std::u32string::npos);
+    default:
+        return (x.find_first_of(ALL_CHARS) != std::u32string::npos);
+    }
 }
 
 
