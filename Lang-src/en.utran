@@ -6850,6 +6850,11 @@
      <im-cmt>is a general widget (usually a tab)</im-cmt>
      <transl>Library</transl>
     </text>
+    <text id="btLibCopy">
+     <orig>Копировать</orig>
+     <im-cmt>is a button</im-cmt>
+     <transl>Copy</transl>
+    </text>
     <text id="tabTerms:at">
      <orig>Термины</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
