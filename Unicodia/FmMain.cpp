@@ -640,11 +640,13 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
 ///// LibModel /////////////////////////////////////////////////////////////////
 
+#define STMT(x) x;    // NOLINT(bugprone-macro-parentheses)
+
 #define GETNODE(parent, fallback) \
     auto ii = (parent).internalId(); \
     if (ii >= uc::N_LIBNODES) \
-        fallback; \
-    auto& node = uc::libNodes[ii];  // NOLINT(bugprone-macro-parentheses)
+        { STMT(fallback) } \
+    auto& node = uc::libNodes[ii];
 
 QModelIndex LibModel::index(int row, int, const QModelIndex &parent) const
 {
@@ -722,6 +724,7 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
 }
 
 #undef GETNODE
+#undef STMT
 
 
 ///// FmMain ///////////////////////////////////////////////////////////////////
