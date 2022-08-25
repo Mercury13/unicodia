@@ -251,8 +251,6 @@ private:
     mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
 
     QPixmap& pixOf(const uc::LibNode& node) const;
-    /// @todo [future] Drawing mode is always GRAPHIC, generally it is not the case
-    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::GRAPHIC;
     static void drawFolderTile(
             QPainter* painter, const QRect& bounds,
             const uc::LibNode& node, const QColor& color);

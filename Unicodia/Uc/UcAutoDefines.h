@@ -529,10 +529,20 @@ namespace uc {
     extern const char8_t allStrings[];
     extern const Numeric allNumerics[N_NUMERICS];
 
+    enum class Lfg : unsigned char {
+        GRAPHIC_EMOJI = 1 << 0,     ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE
+        NO_TILE       = 1 << 1,     ///< [+] do not draw tile (Component right now)
+    };
+    using Lfgs = Flags<Lfg>;
+
     struct LibNode {
         std::u32string_view value;
         std::u8string_view text;
         short iParent, nChildren, iFirstChild;
+        Lfgs flags;
+
+        EmojiDraw emojiDraw() const
+            { return flags.toCustomBool<EmojiDraw, Lfg::GRAPHIC_EMOJI>(); }
     };
 
     extern const LibNode libNodes[N_LIBNODES];

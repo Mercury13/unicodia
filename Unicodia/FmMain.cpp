@@ -684,6 +684,8 @@ int LibModel::columnCount(const QModelIndex &) const
 
 const uc::LibNode* LibModel::goToText(const uc::LibNode& x)
 {
+    if (x.flags.have(uc::Lfg::NO_TILE))
+        return nullptr;
     if (!x.value.empty() && EmojiPainter::hasSkinGender(x.value))
         return nullptr;
     const uc::LibNode* p = &x;
@@ -707,6 +709,7 @@ void LibModel::drawFolderTile(
         if (textNode) {
             auto& tile = tiles[iTile];
             tile.text = textNode->value;
+            tile.emojiDraw = textNode->emojiDraw();
             if (++iTile >= std::size(tiles))
                 break;
         }
@@ -736,7 +739,7 @@ QPixmap& LibModel::pixOf(const uc::LibNode& node) const
                 drawFolderTile(&painter, bounds, node, clFg);
                 break;
             default:
-                drawSearchChars(&painter, bounds, node.value, clFg, EMOJI_DRAW);
+                drawSearchChars(&painter, bounds, node.value, clFg, node.emojiDraw());
                 break;
             }
         });

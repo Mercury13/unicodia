@@ -20,6 +20,7 @@ namespace lib {
         std::u8string name;
         std::u32string value;
         SafeVector<Node> children;
+        unsigned flags = 0;
         mutable struct Cache {
             int index = 0;
         } cache;

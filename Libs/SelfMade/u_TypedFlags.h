@@ -49,7 +49,33 @@ public:
     static constexpr Flags<En> valueOf() noexcept
         { return Flags<En>(First) | valueOf<Second, Rest...>(); }
 
+    static constexpr int shiftOf(En x)
+    {
+        auto t = static_cast<Storage>(x);
+        if (t == 0)
+            return 0;
+        int r = -1;
+        while (t != 0) {
+            ++r;
+            t >>= 1;
+        }
+        return r;
+    }
+
     void setNumeric(Storage x) noexcept { fValue = x; }
+
+    ///  Converts flag Flag to custom enum-class boolean (0/1)
+    template <class En2, En Flag>
+    constexpr En2 toCustomBool() const
+    {
+        static_assert (static_cast<Storage>(Flag) != 0);
+        constexpr auto SHIFT = shiftOf(Flag);
+        if constexpr (SHIFT == 0) {
+            return static_cast<En2>(fValue & static_cast<Storage>(Flag));
+        } else {
+            return static_cast<En2>((fValue & static_cast<Storage>(Flag)) >> SHIFT);
+        }
+    }
 
     // bool
     constexpr operator bool() const { return fValue; }

@@ -10,6 +10,15 @@
 using namespace std::string_view_literals;
 
 
+namespace {
+
+    const std::unordered_set<std::u8string_view> NO_TILE {
+        u8"Component"
+    };
+
+}   // anon namespace
+
+
 unsigned fromHex(std::string_view x)
 {
     long long r;
@@ -74,6 +83,8 @@ namespace {
         auto top = crop(x, size);
         auto& newItem = top->children.emplace_back();
         newItem.name = str::toU8sv(name);
+        if (NO_TILE.contains(newItem.name))
+            newItem.flags |= 2;
         x.push(&newItem);
     }
 
@@ -134,6 +145,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
                 auto& newItem = treePath.top()->children.emplace_back();
                 newItem.name = str::toU8sv(name);
+                newItem.flags = 1;
                 newItem.value.assign(codes.buffer(), nCodes);
             }
         }
@@ -211,6 +223,13 @@ namespace {
             os << "-1";
         } else {
             os << node.children[0].cache.index;
+        }
+        os << ", ";
+        // flags
+        if (node.flags == 0) {
+            os << "{}";
+        } else {
+            os << "Lfg(" << node.flags << ")";
         }
         // closing brace
         os << " },   // " << node.cache.index << "\n";
