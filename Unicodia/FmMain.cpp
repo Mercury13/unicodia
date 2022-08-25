@@ -741,6 +741,27 @@ FmMain::FmMain(QWidget *parent)
     // Tabs to 0
     ui->tabsMain->setCurrentIndex(0);
 
+    auto ib = initBlocks();
+    initLibrary(ib);
+
+    // Tofu stats
+    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
+    connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
+
+    // Change language
+    ui->comboLang->setModel(&langModel);
+    connect(ui->comboLang, &QComboBox::currentIndexChanged, this, &This::languageChanged);
+
+    // Reload language
+    shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
+    connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
+}
+
+
+FmMain::InitBlocks FmMain::initBlocks()
+{
+    InitBlocks r;
+
     // Collapse bar
     ui->wiCollapse->hide();
     ui->wiCollapse->setStyleSheet(
@@ -751,9 +772,11 @@ FmMain::FmMain(QWidget *parent)
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
     const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
-    ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + color.name() + " }");
-    ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + color.name() + " }");
-    ui->pageSearch->setStyleSheet("#pageSearch { background-color: " + color.name() + " }");
+    r.buttonColor = color.name();
+
+    ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + r.buttonColor + " }");
+    ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + r.buttonColor + " }");
+    ui->pageSearch->setStyleSheet("#pageSearch { background-color: " + r.buttonColor + " }");
 
     { // Copy ex
         auto font = ui->btCopyEx->font();
@@ -783,24 +806,16 @@ FmMain::FmMain(QWidget *parent)
     tw += ui->tableChars->horizontalHeader()->defaultSectionSize() * NCOLS;
     tw += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
     tw += 8;    // This computation is very precise, let it be 8px
-    QList<int> sizes { tw, wTotal - ui->splitBlocks->handleWidth() - tw };
+    r.sizes = { tw, wTotal - ui->splitBlocks->handleWidth() - tw };
     ui->splitBlocks->setStretchFactor(0, 0);
     ui->splitBlocks->setStretchFactor(1, 1);
-    ui->splitBlocks->setSizes(sizes);
-
-    // Library / tree
-    ui->treeLibrary->setModel(&libModel);
-
-    // Library / divider
-    ui->splitLibrary->setStretchFactor(0, 0);
-    ui->splitLibrary->setStretchFactor(1, 1);
-    ui->splitLibrary->setSizes(sizes);
+    ui->splitBlocks->setSizes(r.sizes);
 
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
-    // OS style    
+    // OS style
     fontTofu.setStyleStrategy(fst::TOFU);
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
@@ -828,10 +843,6 @@ FmMain::FmMain(QWidget *parent)
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
     connect(ui->btCopyEx, &QPushButton::clicked, this, &This::copyCurrentSample);
 
-    // Tofu stats
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
-    connect(shcut, &QShortcut::activated, this, &This::showTofuStats);
-
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
@@ -840,20 +851,12 @@ FmMain::FmMain(QWidget *parent)
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
     connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
-    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);    
+    connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
     ui->listSearch->setUniformItemSizes(true);
     ui->listSearch->setModel(&searchModel);
     connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
     connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
-
-    // Change language
-    ui->comboLang->setModel(&langModel);
-    connect(ui->comboLang, &QComboBox::currentIndexChanged, this, &This::languageChanged);
-
-    // Reload language
-    shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
-    connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
@@ -888,6 +891,20 @@ FmMain::FmMain(QWidget *parent)
     auto index = model.index(0, 0);
     ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
     shownCp = uc::cpInfo[0];
+
+    return r;
+}
+
+
+void FmMain::initLibrary(const InitBlocks& ib)
+{
+    // Library / tree
+    ui->treeLibrary->setModel(&libModel);
+
+    // Library / divider
+    ui->splitLibrary->setStretchFactor(0, 0);
+    ui->splitLibrary->setStretchFactor(1, 1);
+    ui->splitLibrary->setSizes(ib.sizes);
 }
 
 

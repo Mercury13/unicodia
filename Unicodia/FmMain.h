@@ -330,6 +330,13 @@ private:
                     && static_cast<quint64>(timer.elapsed()) <= 100; }
     } pullUpDetector;
 
+    struct InitBlocks {
+        QString buttonColor;
+        QList<int> sizes;
+    };
+
+    InitBlocks initBlocks();
+    void initLibrary(const InitBlocks& ib);
     void initAbout();
     void showCp(MaybeChar ch);
     void forceShowCp(MaybeChar ch);
