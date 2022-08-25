@@ -758,6 +758,16 @@ FmMain::FmMain(QWidget *parent)
 }
 
 
+namespace {
+
+    void paintTo(QWidget* widget, const QString& color)
+    {
+        widget->setStyleSheet("#" + widget->objectName() + " { background-color: " + color + "; }");
+    }
+
+}   // anon namespace
+
+
 FmMain::InitBlocks FmMain::initBlocks()
 {
     InitBlocks r;
@@ -774,9 +784,9 @@ FmMain::InitBlocks FmMain::initBlocks()
     const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
     r.buttonColor = color.name();
 
-    ui->wiCharBar->setStyleSheet("#wiCharBar { background-color: " + r.buttonColor + " }");
-    ui->pageInfo->setStyleSheet("#pageInfo { background-color: " + r.buttonColor + " }");
-    ui->pageSearch->setStyleSheet("#pageSearch { background-color: " + r.buttonColor + " }");
+    paintTo(ui->wiCharBar, r.buttonColor);
+    paintTo(ui->pageInfo, r.buttonColor);
+    paintTo(ui->pageSearch, r.buttonColor);
 
     { // Copy ex
         auto font = ui->btCopyEx->font();
@@ -898,6 +908,8 @@ FmMain::InitBlocks FmMain::initBlocks()
 
 void FmMain::initLibrary(const InitBlocks& ib)
 {
+    paintTo(ui->wiLibInfo, ib.buttonColor);
+
     // Library / tree
     ui->treeLibrary->setModel(&libModel);
 
@@ -1397,28 +1409,6 @@ void FmMain::preloadVisibleFonts()
         }
     }
 }
-
-
-//void FmMain::setFocusDefered()
-//{
-//    constexpr int TIME_SET_FOCUS_2 = 5;
-//    setFocus();
-//    QTimer::singleShot(TIME_SET_FOCUS_2,
-//            [this]{ ui->tableChars->setFocus(); } );
-//}
-
-
-//template<>
-//void FmMain::selectChar<SelectMode::DEFERED>(char32_t code)
-//{
-//    constexpr int TIME_SET_FOCUS = 30;
-
-//    selectChar<SelectMode::NONE>(code);
-//    preloadVisibleFonts();
-//    ui->tableChars->update();
-//    QApplication::processEvents();
-//    QTimer::singleShot(TIME_SET_FOCUS, [this]{ setFocusDefered(); } );
-//}
 
 
 template<>
