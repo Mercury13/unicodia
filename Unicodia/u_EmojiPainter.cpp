@@ -385,6 +385,10 @@ bool EmojiPainter::hasSkinGender(std::u32string_view x)
         return false;
     case 1:
         return (x.find_first_of(SPEC_CHARS) != std::u32string::npos);
+    case 2: {
+            auto sv = (x[1] == VS16) ? SPEC_CHARS : ALL_CHARS;
+            return (x.find_first_of(sv) != std::u32string::npos);
+        }
     default:
         return (x.find_first_of(ALL_CHARS) != std::u32string::npos);
     }
