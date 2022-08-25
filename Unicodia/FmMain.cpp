@@ -682,10 +682,43 @@ int LibModel::columnCount(const QModelIndex &) const
     { return 1; }
 
 
-QPixmap& LibModel::pixOfMultiChar(std::u32string_view c) const
+const uc::LibNode* LibModel::goToText(const uc::LibNode& x)
 {
-    return cache.getT(c,
-        [c, this](QPixmap& pix) {
+    if (!x.value.empty() && EmojiPainter::hasSkinGender(x.value))
+        return nullptr;
+    const uc::LibNode* p = &x;
+    while (true) {
+        if (!p->value.empty())
+            return p;
+        if (p->nChildren == 0)
+            return nullptr;
+        p = &uc::libNodes[p->iFirstChild];
+    }
+}
+
+void LibModel::drawFolderTile(
+        QPainter* painter, const QRect& bounds,
+        const uc::LibNode& node, const QColor& color)
+{
+    CharTiles tiles;
+    size_t iTile = 0;
+    for (int iChild = 0; iChild < node.nChildren; ++iChild) {
+        auto textNode = goToText(uc::libNodes[node.iFirstChild + iChild]);
+        if (textNode) {
+            auto& tile = tiles[iTile];
+            tile.text = textNode->value;
+            if (++iTile >= std::size(tiles))
+                break;
+        }
+    }
+    drawCharTiles(painter, bounds, tiles, color);
+}
+
+
+QPixmap& LibModel::pixOf(const uc::LibNode& node) const
+{
+    return cache.getT(&node,
+        [&node, this](QPixmap& pix) {
             auto size = sample->pixSize();
             if (pix.size() != QSize{size, size}) {
                 pix = QPixmap{size, size};
@@ -698,7 +731,14 @@ QPixmap& LibModel::pixOfMultiChar(std::u32string_view c) const
             auto bounds = pix.rect();
 
             // draw char
-            drawSearchChars(&painter, bounds, c, clFg, EMOJI_DRAW);
+            switch (node.value.length()) {
+            case 0:
+                drawFolderTile(&painter, bounds, node, clFg);
+                break;
+            default:
+                drawSearchChars(&painter, bounds, node.value, clFg, EMOJI_DRAW);
+                break;
+            }
         });
 }
 
@@ -710,13 +750,7 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return str::toQ(node.text);
     case Qt::DecorationRole:
-        switch (node.value.length()) {
-        case 0:
-            /// @todo [urgent] draw folder
-            return {};
-        default:
-            return pixOfMultiChar(node.value);
-        }
+        return pixOf(node);
 
     default:
         return {};
@@ -966,6 +1000,7 @@ void FmMain::translateMe()
 
     // Misc. widgets loaded from UI files
     loc::translateForm(ui->wiSample);
+    loc::translateForm(ui->wiLibSample);
 
     initTerms();
     initAbout();

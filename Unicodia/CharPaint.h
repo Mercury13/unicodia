@@ -57,9 +57,12 @@ void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
 /// Draws murky rect with border of unallocated / reserved international
 void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 
+enum class UseMargins { NO, YES };
+
 void drawChar(
         QPainter* painter, const QRect& rect, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode);
+        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
+        UseMargins useMargins = UseMargins::YES);
 
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
@@ -69,6 +72,16 @@ void drawSearchChar(
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
         const QColor& color, uc::EmojiDraw emojiMode);
+
+struct CharTile {
+    std::u32string_view text {};
+    uc::EmojiDraw emojiDraw = uc::EmojiDraw::GRAPHIC;
+};
+using CharTiles = CharTile[4];
+
+void drawCharTiles(
+        QPainter* painter, const QRect& rect,
+        const CharTiles& tiles, const QColor& color);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 

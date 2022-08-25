@@ -248,10 +248,15 @@ public:
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
-    mutable LruCache<std::u32string_view, QPixmap> cache { 400 };
+    mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
 
-    QPixmap& pixOfMultiChar(std::u32string_view c) const;
+    QPixmap& pixOf(const uc::LibNode& node) const;
+    /// @todo [future] Drawing mode is always GRAPHIC, generally it is not the case
     static constexpr auto EMOJI_DRAW = uc::EmojiDraw::GRAPHIC;
+    static void drawFolderTile(
+            QPainter* painter, const QRect& bounds,
+            const uc::LibNode& node, const QColor& color);
+    static const uc::LibNode* goToText(const uc::LibNode& x);
 };
 
 

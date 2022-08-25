@@ -347,6 +347,17 @@ namespace {
 }   // anon namespace
 
 
+bool EmojiPainter::hasSkinGender(std::u32string_view x)
+{
+    static constinit char32_t ALL_CHARS_AR[] {
+        SKIN1, SKIN2, SKIN3, SKIN4, SKIN5, MALE, FEMALE, MAN, WOMAN,
+        MAN_AND_WOMAN, TWO_MEN, TWO_WOMEN, SANTA_CLAUS, MRS_CLAUS };
+    static constinit std::u32string_view ALL_CHARS { ALL_CHARS_AR, std::size(ALL_CHARS_AR) };
+
+    return (x.find_first_of(ALL_CHARS) != std::u32string::npos);
+}
+
+
 RecolorInfo EmojiPainter::checkForRecolor(std::u32string_view text)
 {
     // 0 or 1 — cannot recolor

@@ -584,7 +584,8 @@ constexpr int EMOJI_DEN = 5;
 
 void drawChar(
         QPainter* painter, const QRect& rect, const uc::Cp& cp,
-        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode)
+        const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
+        UseMargins useMargins)
 {
     auto method = cp.drawMethod(emojiMode);
     switch (method) {
@@ -612,7 +613,10 @@ void drawChar(
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
             //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
-            auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
+            auto h = rect.height();
+            if (useMargins != UseMargins::NO) {
+                h = h * EMOJI_NUM / EMOJI_DEN;
+            }
             emp.draw(painter, rect, cp.subj.ch32(), h);
         } break;
     }
@@ -669,5 +673,41 @@ void drawSearchChars(
         // Multi-char
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
         emp.draw(painter, rect, text, h);
+    }
+}
+
+
+void drawCharTiles(
+        QPainter* painter, const QRect& rect,
+        const CharTiles& tiles, const QColor& color)
+{
+    static constexpr int SIDE_GAP = 2;
+    static constexpr int INNER_GAP = 1;
+    static constexpr int SUBDIV = 2;
+    drawCharBorder(painter, rect, color);
+    QMargins m;  m += SIDE_GAP;
+    QRect r1 = rect.marginsRemoved(m);
+    auto sz = std::min(r1.width(), r1.height());
+    sz -= INNER_GAP;
+    sz /= SUBDIV;
+    auto step = sz + INNER_GAP;
+    for (unsigned iTile = 0; iTile < std::size(tiles); ++iTile) {
+        auto& tile = tiles[iTile];
+        if (tile.text.empty())
+            break;
+        int iX = iTile % SUBDIV;
+        int iY = iTile / SUBDIV;
+        QRect r2 { r1.left() + iX * step,
+                   r1.top() + iY * step,
+                   sz, sz };
+        if (auto c1 = EmojiPainter::getCp(tile.text)) {
+            // Single-char
+            if (auto cp = uc::cpsByCode[c1])
+                drawChar(painter, r2, *cp, color, TableDraw::CUSTOM,
+                         tile.emojiDraw, UseMargins::NO);
+        } else {
+            // Multi-char
+            emp.draw(painter, r2, tile.text, sz);
+        }
     }
 }
