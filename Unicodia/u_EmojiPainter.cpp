@@ -18,6 +18,9 @@ struct RecolorLib {
     std::string_view outline1;
     std::string_view hair1;
     std::string_view hair2;
+    std::string_view ears1;     ///< used in firefighter emoji
+    std::string_view mouth1;    ///< used at least in firefighter emoji
+    std::string_view eyes1;     ///< used at least in firefighter emoji
 
     void runOn(QByteArray& bytes) const;
 };
@@ -52,6 +55,9 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#F5AC00", fill1);
     repl(bytes, "#543930", hair1);
     repl(bytes, "#6D4C41", hair2);
+    repl(bytes, "#E59600", ears1);
+    repl(bytes, "#795548", mouth1);
+    repl(bytes, "#404040", eyes1);
     // Unicodia emoji
     repl(bytes, "#F6D32D", fill2);
     repl(bytes, "#E5A50A", outline1);
@@ -77,6 +83,9 @@ namespace {
             .outline1 = "#E6B77E",
             .hair1 = "#312D2D",
             .hair2 = "#454140",
+            .ears1 = "#EDC391",
+            .mouth1 = "#444444",
+            .eyes1 = "#312D2D",
         },
         { // Light
             .fill1 = "#CCA47A",
@@ -87,6 +96,9 @@ namespace {
             .outline1 = "#BA8F63",
             .hair1 = "#AB872F",
             .hair2 = "#BFA055",
+            .ears1 = "#C48E6A",
+            .mouth1 = "#6D4C41",
+            .eyes1 = "#5D4037",
         },
         { // Medium
             .fill1 = "#A47B62",
@@ -97,6 +109,9 @@ namespace {
             .outline1 = "#91674D",
             .hair1 = "#543930",
             .hair2 = "#6D4C41",
+            .ears1 = "#99674F",
+            .mouth1 = "#5D4037",
+            .eyes1 = "#49362E",
         },
         { // Dark
             .fill1 = "#8D5738",
@@ -107,6 +122,9 @@ namespace {
             .outline1 = "#875334",
             .hair1 = "#3C2C23",
             .hair2 = "#554138",
+            .ears1 = "#7A4C32",
+            .mouth1 = "#473530",
+            .eyes1 = "#42312C",
         },
         { // Black
             .fill1 = "#5C4037",
@@ -117,6 +135,9 @@ namespace {
             .outline1 = "#4A2F27",
             .hair1 = "#232020",
             .hair2 = "#444140",
+            .ears1 = "#3C2B24",
+            .mouth1 = "#1A1717",
+            .eyes1 = "#1A1717",
         },
     };
 
@@ -372,19 +393,29 @@ bool EmojiPainter::hasSkinGender(std::u32string_view x)
 
 RecolorInfo EmojiPainter::checkForRecolor(std::u32string_view text)
 {
+    // Debug
+//    if (text.find(0x1F692) != std::u32string_view::npos) {
+//        std::cout << "Recolor fireman" << std::endl;
+//    }
     // 0 or 1 — cannot recolor
     if (text.length() < 2)
         return {};
-    auto lastChar = text.back();
-    // Last is skin
-    if (!isSkin(lastChar))
+
+    // Has skin tone
+    auto firstIt = std::find_if(text.begin(), text.end(), isSkin);
+    if (firstIt == text.end())
         return {};
-    // No more skins
-    auto end1 = text.end() - 1;
-    if (std::find_if(text.begin(), end1, isSkin) != end1)
+    auto firstPos = firstIt - text.begin();
+
+    // Has no more skin tones
+    if (auto nextIt = std::find_if(firstIt + 1, text.end(), isSkin);
+            nextIt != text.end())
         return {};
-    return {
-        .baseText { text.begin(), end1 },
-        .recolor = &allRecolors[lastChar - SKIN1],
+
+    RecolorInfo ri {
+        .baseText = std::u32string{ text },
+        .recolor = &allRecolors[*firstIt - SKIN1],
     };
+    ri.baseText.erase(firstPos, 1);
+    return ri;
 }

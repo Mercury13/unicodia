@@ -35,7 +35,7 @@ struct RecolorLib;  // forward
 
 
 struct RecolorInfo {
-    std::u32string_view baseText;
+    std::u32string baseText;
     const RecolorLib* recolor = nullptr;
 
     operator bool() const { return recolor; }
