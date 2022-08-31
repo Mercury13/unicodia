@@ -345,7 +345,7 @@ constinit const uc::LibNode uc::libNodes[3777] {
 { U"\U0001F449\U0001F3FD", u8"backhand index pointing right: medium skin tone", 196, 0, -1, Lfg(1) },   // 339
 { U"\U0001F449\U0001F3FE", u8"backhand index pointing right: medium-dark skin tone", 196, 0, -1, Lfg(1) },   // 340
 { U"\U0001F449\U0001F3FF", u8"backhand index pointing right: dark skin tone", 196, 0, -1, Lfg(1) },   // 341
-{ U"\U0001F446", u8"backhand index pointing up", 196, 0, -1, Lfg(1) },   // 342
+{ U"\U0001F446", u8"backhand index pointing up", 196, 0, -1, Lfg(3) },   // 342
 { U"\U0001F446\U0001F3FB", u8"backhand index pointing up: light skin tone", 196, 0, -1, Lfg(1) },   // 343
 { U"\U0001F446\U0001F3FC", u8"backhand index pointing up: medium-light skin tone", 196, 0, -1, Lfg(1) },   // 344
 { U"\U0001F446\U0001F3FD", u8"backhand index pointing up: medium skin tone", 196, 0, -1, Lfg(1) },   // 345
@@ -357,13 +357,13 @@ constinit const uc::LibNode uc::libNodes[3777] {
 { U"\U0001F595\U0001F3FD", u8"middle finger: medium skin tone", 196, 0, -1, Lfg(1) },   // 351
 { U"\U0001F595\U0001F3FE", u8"middle finger: medium-dark skin tone", 196, 0, -1, Lfg(1) },   // 352
 { U"\U0001F595\U0001F3FF", u8"middle finger: dark skin tone", 196, 0, -1, Lfg(1) },   // 353
-{ U"\U0001F447", u8"backhand index pointing down", 196, 0, -1, Lfg(1) },   // 354
+{ U"\U0001F447", u8"backhand index pointing down", 196, 0, -1, Lfg(3) },   // 354
 { U"\U0001F447\U0001F3FB", u8"backhand index pointing down: light skin tone", 196, 0, -1, Lfg(1) },   // 355
 { U"\U0001F447\U0001F3FC", u8"backhand index pointing down: medium-light skin tone", 196, 0, -1, Lfg(1) },   // 356
 { U"\U0001F447\U0001F3FD", u8"backhand index pointing down: medium skin tone", 196, 0, -1, Lfg(1) },   // 357
 { U"\U0001F447\U0001F3FE", u8"backhand index pointing down: medium-dark skin tone", 196, 0, -1, Lfg(1) },   // 358
 { U"\U0001F447\U0001F3FF", u8"backhand index pointing down: dark skin tone", 196, 0, -1, Lfg(1) },   // 359
-{ U"\u261D\uFE0F", u8"index pointing up", 196, 0, -1, Lfg(1) },   // 360
+{ U"\u261D\uFE0F", u8"index pointing up", 196, 0, -1, Lfg(3) },   // 360
 { U"\u261D\U0001F3FB", u8"index pointing up: light skin tone", 196, 0, -1, Lfg(1) },   // 361
 { U"\u261D\U0001F3FC", u8"index pointing up: medium-light skin tone", 196, 0, -1, Lfg(1) },   // 362
 { U"\u261D\U0001F3FD", u8"index pointing up: medium skin tone", 196, 0, -1, Lfg(1) },   // 363
@@ -2374,7 +2374,7 @@ constinit const uc::LibNode uc::libNodes[3777] {
 { U"\U0001F9B2", u8"bald", 2359, 0, -1, Lfg(1) },   // 2368
 { {}, u8"animal-mammal", 5, 66, 2377, {} },   // 2369
 { {}, u8"animal-bird", 5, 21, 2443, {} },   // 2370
-{ {}, u8"animal-amphibian", 5, 1, 2464, {} },   // 2371
+{ {}, u8"animal-amphibian", 5, 1, 2464, Lfg(2) },   // 2371
 { {}, u8"animal-reptile", 5, 8, 2465, {} },   // 2372
 { {}, u8"animal-marine", 5, 12, 2473, {} },   // 2373
 { {}, u8"animal-bug", 5, 16, 2485, {} },   // 2374

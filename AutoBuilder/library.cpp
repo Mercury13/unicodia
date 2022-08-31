@@ -12,8 +12,13 @@ using namespace std::string_view_literals;
 
 namespace {
 
+    /// Library items that do not make tiles
     const std::unordered_set<std::u8string_view> NO_TILE {
-        u8"Component"
+        u8"Component",  // Really ugly, scrap for the sake of nicer ones
+        u8"backhand index pointing up",     // Scrapped for the sake of “placard with finger”
+        u8"backhand index pointing down",   // Same
+        u8"index pointing up",              // Same
+        u8"animal-amphibian",   // Big library, scrap for the sake of spouting whale
     };
 
 }   // anon namespace
@@ -146,6 +151,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 auto& newItem = treePath.top()->children.emplace_back();
                 newItem.name = str::toU8sv(name);
                 newItem.flags = 1;
+                if (NO_TILE.contains(newItem.name))
+                    newItem.flags |= 2;
                 newItem.value.assign(codes.buffer(), nCodes);
             }
         }
