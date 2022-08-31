@@ -220,6 +220,37 @@ FontMatch::Ws& FontMatch::loadWs(QFontDatabase::WritingSystem x)
 }
 
 
+std::optional<QFont> FontMatch::sysFontFor(char32_t cp, int size)
+{
+    auto& ws = loadWs(QFontDatabase::Any);
+    if (!ws.isSupported)
+        return std::nullopt;
+
+    for (auto& fn : ws.fonts) {
+        if (fn->doesSupport(cp)) {
+            return getFont(fn->family, size);
+        }
+    }
+    return std::nullopt;
+}
+
+
+std::optional<QFont> FontMatch::sysFontForTwo(
+        char32_t cp1, char32_t cp2, int size)
+{
+    auto& ws = loadWs(QFontDatabase::Any);
+    if (!ws.isSupported)
+        return std::nullopt;
+
+    for (auto& fn : ws.fonts) {
+        if (fn->doesSupport(cp1) && fn->doesSupport(cp2)) {
+            return getFont(fn->family, size);
+        }
+    }
+    return std::nullopt;
+}
+
+
 std::optional<QFont> FontMatch::sysFontFor(
         const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size)
 {

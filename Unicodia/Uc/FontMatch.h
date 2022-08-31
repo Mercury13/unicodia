@@ -41,6 +41,8 @@ public:
     /// @return [+] have font [-] draw tofu instead
     std::optional<QFont> sysFontFor(
             const uc::Cp& cp, QFontDatabase::WritingSystem writingSystem, int size);
+    std::optional<QFont> sysFontFor(char32_t cp, int size);
+    std::optional<QFont> sysFontForTwo(char32_t cp1, char32_t cp2, int size);
     [[nodiscard]] FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem writingSystem,
             size_t maxCount = std::numeric_limits<size_t>::max());

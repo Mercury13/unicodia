@@ -648,6 +648,12 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
         { STMT(fallback) } \
     auto& node = uc::libNodes[ii];
 
+const uc::LibNode& LibModel::nodeAt(const QModelIndex& index) const
+{
+    GETNODE(index, return uc::libNodes[0])
+    return node;
+}
+
 QModelIndex LibModel::index(int row, int, const QModelIndex &parent) const
 {
     GETNODE(parent, return {})
@@ -950,13 +956,21 @@ void FmMain::initLibrary(const InitBlocks& ib)
 {
     paintTo(ui->wiLibInfo, ib.buttonColor);
 
-    // Library / tree
+    // Tree
     ui->treeLibrary->setModel(&libModel);
 
-    // Library / divider
+    // Divider
     ui->splitLibrary->setStretchFactor(0, 0);
     ui->splitLibrary->setStretchFactor(1, 1);
     ui->splitLibrary->setSizes(ib.sizes);
+
+    // OS style
+    auto& font = uc::fontInfo[0];
+    ui->lbLibOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
+
+    // Connect events
+    connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &This::libChanged);
 }
 
 
@@ -1321,6 +1335,43 @@ void FmMain::showCp(MaybeChar ch)
 void FmMain::charChanged(const QModelIndex& current)
 {
     showCp(model.charAt(current));
+}
+
+
+void FmMain::libChanged(const QModelIndex& current)
+{
+    auto& node = libModel.nodeAt(current);
+    if (node.value.empty()) {
+        // Folder
+        ui->wiLibSample->showNothing();
+        ui->lbLibCharCode->clear();
+        ui->btLibCopy->setEnabled(false);
+        ui->lbLibOs->clear();
+    } else {
+        // Actual node
+        /// @todo [future] not necessarily emoji
+        ui->wiLibSample->showEmoji(node.value);
+        auto osText = str::toQ(node.value);
+        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
+            // 0x1F300 = very old emoji from Webdings
+            constexpr char32_t SOME_EMOJI = 0x1F300;
+            auto char0 = node.value[0];
+            std::optional<QFont> font;
+            if (char0 <= 0xFFFF) {
+                // BMP emoji, really old
+                font = model.match.sysFontFor(SOME_EMOJI, FSZ_BIG);
+            } else {
+                // SMP emoji
+                font = model.match.sysFontFor(char0, FSZ_BIG);
+            }
+            ui->lbLibOs->setFont(font.value_or(fontBig));
+        } else {
+            ui->lbLibOs->setFont(fontBig);
+        }
+        ui->lbLibOs->setText(osText);
+        ui->lbLibCharCode->setText("TEST");
+        ui->btLibCopy->setEnabled(true);
+    }
 }
 
 

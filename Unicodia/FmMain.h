@@ -245,6 +245,7 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    const uc::LibNode& nodeAt(const QModelIndex& index) const;
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
@@ -372,6 +373,7 @@ private:
     QColor winColor() const override { return palette().windowText().color(); }
 private slots:
     void charChanged(const QModelIndex& current);
+    void libChanged(const QModelIndex& current);
     void copyCurrentChar();
     void copyCurrentSample();
     void popupLinkActivated(const QString& link);
