@@ -94,6 +94,7 @@ public:
     void setSpace(const QFont& font, char32_t aSubj);
     void setCustomControl(char32_t aSubj);
     void setEmoji(char32_t aSubj);
+    void setEmoji(std::u32string_view aText);
     void setEgyptianHatch(const QFont& font, char32_t aSubj);
     void setNormal();
     void init();
@@ -101,11 +102,14 @@ protected:
     void paintEvent(QPaintEvent *event);
 private:
     QSize initialSize;
-    enum class Mode { NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI, EGYPTIAN_HATCH };
+    enum class Mode {
+        NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
+        EMOJI_TEXT, EGYPTIAN_HATCH };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;
     char32_t subj = 0;
+    std::u32string_view text;
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
 

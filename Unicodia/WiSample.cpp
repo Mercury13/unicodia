@@ -109,3 +109,10 @@ void WiSample::showNothing()
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
     ui->lbSample->setText({});
 }
+
+
+void WiSample::showEmoji(std::u32string_view text)
+{
+    ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+    ui->pageSampleCustom->setEmoji(text);
+}

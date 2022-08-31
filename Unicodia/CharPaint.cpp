@@ -153,6 +153,15 @@ void WiCustomDraw::init()
     initialSize = minimumSize();
 }
 
+namespace {
+
+    inline int emojiHeight(const QRect& r)
+    {
+        return r.height() * 17 / 20;
+    }
+
+}
+
 
 void WiCustomDraw::paintEvent(QPaintEvent *event)
 {
@@ -181,10 +190,15 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                       palette().windowText().color(),
                       subj);
         } break;
-    case Mode::EMOJI: {
+    case Mode::EMOJI_CHAR: {
             QPainter painter(this);
             auto r = geometry();
-            emp.draw(&painter, geometry(), subj, r.height() * 17 / 20);
+            emp.draw(&painter, r, subj, emojiHeight(r));
+        } break;
+    case Mode::EMOJI_TEXT: {
+            QPainter painter(this);
+            auto r = geometry();
+            emp.draw(&painter, r, text, emojiHeight(r));
         } break;
     }
 }
@@ -216,8 +230,17 @@ void WiCustomDraw::setCustomControl(char32_t aSubj)
 void WiCustomDraw::setEmoji(char32_t aSubj)
 {
     setNormal();
-    mode = Mode::EMOJI;
+    mode = Mode::EMOJI_CHAR;
     subj = aSubj;
+    update();
+}
+
+
+void WiCustomDraw::setEmoji(std::u32string_view aText)
+{
+    setNormal();
+    mode = Mode::EMOJI_TEXT;
+    text = aText;
     update();
 }
 

@@ -20,6 +20,7 @@ public:
     ~WiSample() override;
 
     void showCp(const uc::Cp& ch);
+    void showEmoji(std::u32string_view text);
     void showNothing();
 
 private:
