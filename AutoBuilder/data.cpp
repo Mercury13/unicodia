@@ -57,7 +57,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
       { "KOMI"sv,       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
       { "UKRAINIAN",    Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
       { "BYELORUSSIAN-UKRAINIAN", { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Byelorussian-Ukrainian"sv } },
-      { "BASHKIR",      Dicf::TRIG_SCRIPT },
+      { "BASHKIR",      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "DEVANAGARI",     Dicf::TRIG_SCRIPT },
     { "DOGRA",          Dicf::TRIG_SCRIPT },
     { "DESERET",        Dicf::TRIG_SCRIPT },
