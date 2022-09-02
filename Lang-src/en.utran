@@ -647,6 +647,10 @@
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
      <transl>Fonts for U+%04X</transl>
     </text>
+    <text id="Style">
+     <orig>(Стиль ОС)</orig>
+     <transl>(OS style)</transl>
+    </text>
    </group>
    <group id="Life">
     <text id="Alive">

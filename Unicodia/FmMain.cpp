@@ -971,6 +971,10 @@ void FmMain::initLibrary(const InitBlocks& ib)
     // Connect events
     connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::libChanged);
+
+    // Select index
+    auto index = libModel.index(0, 0);
+    ui->treeLibrary->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
 }
 
 
@@ -1347,6 +1351,7 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->lbLibCharCode->clear();
         ui->btLibCopy->setEnabled(false);
         ui->lbLibOs->clear();
+        ui->lbLibOsTitle->setText(loc::get("Prop.Os.Style"));
     } else {
         // Actual node
         /// @todo [future] not necessarily emoji
@@ -1364,9 +1369,17 @@ void FmMain::libChanged(const QModelIndex& current)
                 // SMP emoji
                 font = model.match.sysFontFor(char0, FSZ_BIG);
             }
-            ui->lbLibOs->setFont(font.value_or(fontBig));
+            if (font) {
+                ui->lbLibOs->setFont(*font);
+                ui->lbLibOsTitle->setText(font->family());
+            } else {
+                ui->lbLibOs->setFont(fontBig);
+                ui->lbLibOsTitle->setText(loc::get("Prop.Os.Tofu"));
+            }
         } else {
+            /// @todo [future] not necessarily emoji
             ui->lbLibOs->setFont(fontBig);
+            ui->lbLibOsTitle->setText(fontBig.family());
         }
         ui->lbLibOs->setText(osText);
         ui->lbLibCharCode->setText("TEST");

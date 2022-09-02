@@ -517,6 +517,9 @@
      <orig>Шрифты для U+%04X</orig>
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
     </text>
+    <text id="Style">
+     <orig>(Стиль ОС)</orig>
+    </text>
    </group>
    <group id="Life">
     <text id="Alive">
