@@ -926,6 +926,14 @@ namespace uc {
     inline size_t sprintUPLUS(char (&buf)[N], char32_t code)
         { return sprintUPLUS(buf, N, code); }
 
+    /// @return new n1
+    size_t appendUPLUS(char* buf, size_t n, size_t n1, char32_t code);
+
+    /// @return new n1
+    template<size_t N>
+    inline size_t appendUPLUS(char (&buf)[N], size_t n1, char32_t code)
+        { return appendUPLUS(buf, N, n1, code); }
+
     QFont funkyFont(FontPlace place, int size, char32_t trigger);
 
     // Opaque structure that holds Sutton SignWriting character info.

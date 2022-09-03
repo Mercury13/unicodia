@@ -972,6 +972,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
     connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::libChanged);
 
+    // Clicked
+    connect(ui->lbLibCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
+
     // Select index
     auto index = libModel.index(0, 0);
     ui->treeLibrary->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
@@ -1382,7 +1385,26 @@ void FmMain::libChanged(const QModelIndex& current)
             ui->lbLibOsTitle->setText(fontBig.family());
         }
         ui->lbLibOs->setText(osText);
-        ui->lbLibCharCode->setText("TEST");
+
+        // Codes
+        char buf[150], shortBuf[50];
+        size_t pos = 0;
+        for (auto c : node.value) {
+            pos = uc::appendUPLUS(buf, pos, c);
+        }
+        switch (node.value.length()) {
+        case 0:     // never happens
+        case 1:
+        case 2:
+            strcpy_s(shortBuf, buf);
+            break;
+        default:
+            uc::sprintUPLUS(shortBuf, node.value[0]);
+            strcat_s(shortBuf, "+…");
+        }
+        QString ucText;
+        mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
+        ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
     }
 }

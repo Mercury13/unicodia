@@ -810,6 +810,19 @@ void mywiki::appendCopyable(QString& text, const QString& x, std::string_view cl
 }
 
 
+void mywiki::appendCopyable2(
+        QString& text, const QString& full,
+        const QString& shrt, std::string_view clazz)
+{
+    str::append(text, "<a href='c:"sv);
+        text += full;
+        str::append(text, "' class='"sv);
+        str::append(text, clazz);
+        str::append(text, "' >"sv);
+    text += shrt.toHtmlEscaped();
+    str::append(text, "</a>"sv);
+}
+
 
 void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
 {

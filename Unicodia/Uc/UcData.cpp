@@ -3991,3 +3991,20 @@ uc::FracType uc::Numeric::fracType() const
         return FracType::DECIMAL;
     return FracType::VULGAR;
 }
+
+
+size_t uc::appendUPLUS(char* buf, size_t n, size_t n1, char32_t code)
+{
+    if (n1 == 0)
+        return sprintUPLUS(buf, n, code);
+
+    if (n1 + 1 >= n)
+        return n1;
+
+    size_t nPrinted = snprintf(
+                buf + n1,   // buffer
+                n - n1,     // size
+                "+%04X",    // fmt
+                static_cast<unsigned>(code));   // params
+    return n1 + nPrinted;
+}
