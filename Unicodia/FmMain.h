@@ -376,6 +376,7 @@ private slots:
     void libChanged(const QModelIndex& current);
     void copyCurrentChar();
     void copyCurrentSample();
+    void copyCurrentLib();
     void popupLinkActivated(const QString& link);
     void labelLinkActivated(const QString& link);
     void anchorClicked(const QUrl &arg1);

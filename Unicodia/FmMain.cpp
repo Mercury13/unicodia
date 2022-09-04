@@ -975,6 +975,20 @@ void FmMain::initLibrary(const InitBlocks& ib)
     // Clicked
     connect(ui->lbLibCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
+    // Copy
+        // Ctrl+C
+    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->treeLibrary,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentLib);
+        // Ctrl+Ins
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->treeLibrary,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentLib);
+        // Button
+    connect(ui->btLibCopy, &QPushButton::clicked, this, &This::copyCurrentLib);
+        // 2click
+    ui->treeLibrary->viewport()->installEventFilter(this);
+
     // Select index
     auto index = libModel.index(0, 0);
     ui->treeLibrary->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
@@ -1140,10 +1154,17 @@ bool FmMain::eventFilter(QObject *obj, QEvent *event)
     switch (event->type()) {
     case QEvent::MouseButtonDblClick: {
             auto mouseEvent = static_cast<QMouseEvent*>(event);
-            if (obj == ui->tableChars->viewport()
-                    && mouseEvent->button() == Qt::LeftButton) {
-                copyCurrentChar();
-                return true;
+            if (mouseEvent->button() == Qt::LeftButton) {
+                if (obj == ui->tableChars->viewport()) {
+                    copyCurrentChar();
+                    return true;
+                } else if (obj == ui->treeLibrary->viewport()) {
+                    auto index = ui->treeLibrary->currentIndex();
+                    if (libModel.rowCount(index) == 0) {
+                        copyCurrentLib();
+                        return true;
+                    }
+                }
             }
         }
     default:;
@@ -1220,6 +1241,20 @@ void FmMain::copyCurrentChar()
 void FmMain::copyCurrentSample()
 {
     copyCurrentThing(CurrThing::SAMPLE);
+}
+
+
+void FmMain::copyCurrentLib()
+{
+    auto index = ui->treeLibrary->currentIndex();
+    if (!index.isValid())
+        return;
+    auto& node = libModel.nodeAt(index);
+    if (node.value.empty())
+        return;
+    auto q = str::toQ(node.value);
+    QApplication::clipboard()->setText(q);
+    showCopied(ui->treeLibrary);
 }
 
 
