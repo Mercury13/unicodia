@@ -257,7 +257,9 @@ namespace uc {
         V_6_3,
         V_7_0,
         V_8_0,
+        E2_0,
         V_9_0,
+        E4_0,
         V_10_0,
         V_11_0,
         V_12_0,
@@ -269,6 +271,16 @@ namespace uc {
         UNKNOWN = NN,
         FIRST = 0,
         LAST = NN - 1,
+        E0_6 = V_6_0,
+        E0_7 = V_7_0,
+        E1_0 = V_8_0,
+        E3_0 = V_9_0,
+        E5_0 = V_10_0,
+        E11_0 = V_11_0,
+        E12_0 = V_12_0,
+        E13_0 = V_13_0,
+        E14_0 = V_14_0,
+        E15_0 = V_15_0,
     };
 
     enum class EcBidiStrength

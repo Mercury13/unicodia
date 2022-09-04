@@ -9,7 +9,6 @@
 #include "i_TempFont.h"
 #include "u_Strings.h"
 #include "u_Qstrings.h"
-#include "u_Iterator.h"
 #include "u_Cmap.h"
 #include "mojibake.h"
 
@@ -376,7 +375,9 @@ const uc::Version uc::versionInfo[] {
     { u8"6.3",  2013 },
     { u8"7.0",  2014 },
     { u8"8.0",  2015 },
+    { u8"Emoji 2.0", 2015 },
     { u8"9.0",  2016 },
+    { u8"Emoji 4.0", 2016 },
     { u8"10.0", 2017 },
     { u8"11.0", 2018 },
     { u8"12.0", 2019 },

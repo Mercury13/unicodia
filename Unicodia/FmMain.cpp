@@ -1029,7 +1029,7 @@ namespace {
         r.addFile(QString::fromStdString(fullName), {16, 16});
     }
 
-}
+}   // anon namespace
 
 
 void FmMain::translateMe()
@@ -1390,6 +1390,7 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->btLibCopy->setEnabled(false);
         ui->lbLibOs->clear();
         ui->lbLibOsTitle->setText(loc::get("Prop.Os.Style"));
+        /// @todo [urgent] show folder
     } else {
         // Actual node
         /// @todo [future] not necessarily emoji
@@ -1441,6 +1442,8 @@ void FmMain::libChanged(const QModelIndex& current)
         mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
         ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
+
+        /// @todo [urgent] show emoji
     }
 }
 
