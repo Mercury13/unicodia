@@ -552,9 +552,11 @@ namespace uc {
         std::u8string_view text;
         short iParent, nChildren, iFirstChild;
         Lfgs flags;
+        uc::EcVersion ecEmojiVersion = uc::EcVersion::NONE;
 
         EmojiDraw emojiDraw() const
             { return flags.toCustomBool<EmojiDraw, Lfg::GRAPHIC_EMOJI>(); }
+        inline const uc::Version& emojiVersion() const;
     };
 
     extern const LibNode libNodes[N_LIBNODES];

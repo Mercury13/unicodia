@@ -618,10 +618,22 @@
      <au-cmt>Test: any char</au-cmt>
      <transl>UTF-16</transl>
     </text>
+    <text id="Utf32">
+     <orig>UTF-32</orig>
+     <transl>UTF-32</transl>
+    </text>
     <text id="Html">
      <orig>HTML</orig>
      <au-cmt>Test: any char</au-cmt>
      <transl>HTML</transl>
+    </text>
+    <text id="AllVer">
+     <orig>Все символы в версии Юникода</orig>
+     <transl>All characters are in Unicode version</transl>
+    </text>
+    <text id="EmojiVer">
+     <orig>Эмодзи в версии Юникода</orig>
+     <transl>Emoji is in Unicode version</transl>
     </text>
    </group>
    <group id="Os">

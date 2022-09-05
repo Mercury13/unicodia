@@ -28,7 +28,10 @@ namespace uc {
     class Cp;
     class Block;
     class Term;
+    class LibNode;
 }
+
+enum class Want32 { NO, YES };
 
 namespace mywiki
 {
@@ -82,6 +85,8 @@ namespace mywiki
     QString buildHtml(const uc::Block& x);
     QString buildFontsHtml(char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
     QString buildHtml(const uc::Cp& cp);
+    QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
+    QString buildHtml(const uc::LibNode& node);
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
@@ -94,7 +99,8 @@ namespace mywiki
     void append(QString& x, std::u8string_view wiki, const uc::Font& font);
     void appendVersionValue(QString& text, const uc::Version& version);
     void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
-    void appendUtf(QString& text, str::QSep& sp, char32_t code);
+    void appendUtf(QString& text, Want32 want32, str::QSep& sp, char32_t code);
+    void appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32string_view value);
     void appendMissingCharInfo(QString& text, char32_t code);
     QString buildNonCharHtml(char32_t code);
     QString buildEmptyCpHtml(char32_t code, const QColor& color);

@@ -824,12 +824,19 @@ void mywiki::appendCopyable2(
 }
 
 
-void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
+void mywiki::appendUtf(QString& text, Want32 want32, str::QSep& sp, char32_t code)
+{
+    std::u32string_view sv(&code, 1);
+    appendUtf(text, want32, sp, sv);
+}
+
+
+void mywiki::appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32string_view value)
 {
     char buf[30];
 
     // UTF-8
-    auto sChar = str::toQ(code);
+    auto sChar = str::toQ(value);
     auto u8 = sChar.toUtf8();
     QString u8Hex;
     { str::QSep spU8(u8Hex, " ");
@@ -859,6 +866,22 @@ void mywiki::appendUtf(QString& text, str::QSep& sp, char32_t code)
     appendNonBullet(text, "Prop.Bullet.Utf16",
                     "<a href='pt:utf16' class='popup'>", "</a>");
     appendCopyable(text, u16Hex);
+
+    // UTF-32
+    if (want32 != Want32::NO) {
+        QString u32Hex;
+        { str::QSep spU32(u32Hex, " ");
+            for (auto v : value) {
+                spU32.sep();
+                snprintf(buf, std::size(buf), "%04X", static_cast<int>(v));
+                str::append(u32Hex, buf);
+            }
+        }
+        sp.sep();
+        appendNonBullet(text, "Prop.Bullet.Utf32",
+                        "<a href='pt:utf32' class='popup'>", "</a>");
+        appendCopyable(text, u32Hex);
+    }
 }
 
 
@@ -1192,7 +1215,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             }
         }
 
-        appendUtf(text, sp, cp.subj);
+        appendUtf(text, Want32::NO, sp, cp.subj);
 
         text.append("</p>");
 
@@ -1235,7 +1258,7 @@ void mywiki::appendMissingCharInfo(QString& text, char32_t code)
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
     appendBlock(text, *uc::blockOf(code), sp);
-    mywiki::appendUtf(text, sp, code);
+    mywiki::appendUtf(text, Want32::NO, sp, code);
 }
 
 
@@ -1379,4 +1402,49 @@ void mywiki::hackDocument(QTextDocument* doc)
         }
         block = block.next();
     }
+}
+
+
+QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
+{
+    QString text;
+    appendStylesheet(text);
+    text += "<h1 style='color:" + color.name() + "'>";
+    str::append(text, node.text);
+    text += "</h1>";
+    return text;
+}
+
+
+QString mywiki::buildHtml(const uc::LibNode& node)
+{
+    QString text;
+    appendStylesheet(text);
+    text += "<h1>";
+    str::append(text, node.text);
+    text += "</h1>";
+
+    str::append(text, "<p>");
+    str::QSep sp(text, "<br>");
+
+    appendUtf(text, Want32::YES, sp, node.value);
+
+    auto ver = uc::EcVersion::FIRST;
+    for (auto c : node.value) {
+        auto cp = uc::cpsByCode[c];
+        if (cp) {
+            ver = std::max(ver, cp->ecVersion);
+        }
+    }
+
+    sp.sep();
+    appendNonBullet(text, "Prop.Bullet.AllVer");
+    appendVersionValue(text, uc::versionInfo[static_cast<int>(ver)]);
+
+    if (node.ecEmojiVersion != uc::EcVersion::NONE) {
+        appendNonBullet(text, "Prop.Bullet.EmojiVer");
+        appendVersionValue(text, node.emojiVersion());
+    }
+
+    return text;
 }

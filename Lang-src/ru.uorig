@@ -494,9 +494,18 @@
      <orig>UTF-16</orig>
      <au-cmt>Test: any char</au-cmt>
     </text>
+    <text id="Utf32">
+     <orig>UTF-32</orig>
+    </text>
     <text id="Html">
      <orig>HTML</orig>
      <au-cmt>Test: any char</au-cmt>
+    </text>
+    <text id="AllVer">
+     <orig>Все символы в версии Юникода</orig>
+    </text>
+    <text id="EmojiVer">
+     <orig>Эмодзи в версии Юникода</orig>
     </text>
    </group>
    <group id="Os">

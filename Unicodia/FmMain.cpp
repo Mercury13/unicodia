@@ -973,6 +973,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
             this, &This::libChanged);
 
     // Clicked
+    connect(ui->vwLibInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbLibCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
     // Copy
@@ -1390,7 +1391,10 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->btLibCopy->setEnabled(false);
         ui->lbLibOs->clear();
         ui->lbLibOsTitle->setText(loc::get("Prop.Os.Style"));
-        /// @todo [urgent] show folder
+
+        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+        QString s = mywiki::buildLibFolderHtml(node, color);
+        setWiki(ui->vwLibInfo, s);
     } else {
         // Actual node
         /// @todo [future] not necessarily emoji
@@ -1443,7 +1447,10 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
 
-        /// @todo [urgent] show emoji
+        /// @todo [urgent] show CPs
+
+        QString s = mywiki::buildHtml(node);
+        setWiki(ui->vwLibInfo, s);
     }
 }
 

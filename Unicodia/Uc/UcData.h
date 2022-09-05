@@ -997,3 +997,6 @@ inline bool uc::Cp::isTrueSpace() const
 
 // SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
+
+// LibNode
+inline const uc::Version& uc::LibNode::emojiVersion() const { return versionInfo[static_cast<int>(ecEmojiVersion)]; }
