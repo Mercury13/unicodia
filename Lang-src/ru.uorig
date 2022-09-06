@@ -165,6 +165,9 @@
      <orig>без &lt;a {1} &gt;хэнтайганы&lt;/a&gt;</orig>
      <au-cmt>Test: Hiragana</au-cmt>
     </text>
+    <text id="Comp">
+     <orig>Состав строки</orig>
+    </text>
    </group>
    <group id="Bidi">
     <group id="DIR">

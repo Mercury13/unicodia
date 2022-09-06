@@ -21,6 +21,7 @@ namespace lib {
         std::u32string value;
         SafeVector<Node> children;
         unsigned flags = 0;
+        std::string emojiVersion;
         mutable struct Cache {
             int index = 0;
         } cache;

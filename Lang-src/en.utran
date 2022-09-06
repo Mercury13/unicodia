@@ -209,6 +209,10 @@
      <au-cmt>Test: Hiragana</au-cmt>
      <transl>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</transl>
     </text>
+    <text id="Comp">
+     <orig>Состав строки</orig>
+     <transl>String content</transl>
+    </text>
    </group>
    <group id="Bidi">
     <group id="DIR">

@@ -1424,7 +1424,7 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     str::append(text, node.text);
     text += "</h1>";
 
-    str::append(text, "<p>");
+    text += "<p>";
     str::QSep sp(text, "<br>");
 
     appendUtf(text, Want32::YES, sp, node.value);
@@ -1442,8 +1442,23 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     appendVersionValue(text, uc::versionInfo[static_cast<int>(ver)]);
 
     if (node.ecEmojiVersion != uc::EcVersion::NONE) {
+        sp.sep();
         appendNonBullet(text, "Prop.Bullet.EmojiVer");
         appendVersionValue(text, node.emojiVersion());
+    }
+
+    appendSubhead(text, "Prop.Head.Comp");
+    text += "<p>";
+    str::QSep sp2(text, "<br>");
+    char buf[40];
+    for (auto c : node.value) {
+        sp2.sep();
+        snprintf(buf, std::size(buf), "%04X ", static_cast<int>(c));
+        text += buf;
+        auto cp = uc::cpsByCode[c];
+        if (cp) {
+            str::append(text, cp->name.tech());
+        }
     }
 
     return text;

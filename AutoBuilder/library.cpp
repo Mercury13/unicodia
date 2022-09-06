@@ -150,6 +150,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
                 auto& newItem = treePath.top()->children.emplace_back();
                 newItem.name = str::toU8sv(name);
+                newItem.emojiVersion = emVersion;
                 newItem.flags = 1;
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= 2;
@@ -237,6 +238,16 @@ namespace {
             os << "{}";
         } else {
             os << "Lfg(" << node.flags << ")";
+        }
+        os << ", "
+        // version
+              "EcVersion::";
+        if (node.emojiVersion.empty()) {
+            os << "NONE";
+        } else {
+            std::string newVer = node.emojiVersion;
+            str::replace(newVer, '.', '_');
+            os << newVer;
         }
         // closing brace
         os << " },   // " << node.cache.index << "\n";
