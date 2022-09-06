@@ -13,6 +13,44 @@
    <text id="Copied">
     <orig>Скопировано</orig>
    </text>
+   <group id="Mon">
+    <text id="1">
+     <orig>январь {1}</orig>
+    </text>
+    <text id="2">
+     <orig>февраль {1}</orig>
+    </text>
+    <text id="3">
+     <orig>март {1}</orig>
+    </text>
+    <text id="4">
+     <orig>апрель {1}</orig>
+    </text>
+    <text id="5">
+     <orig>май {1}</orig>
+    </text>
+    <text id="6">
+     <orig>июнь {1}</orig>
+    </text>
+    <text id="7">
+     <orig>июль {1}</orig>
+    </text>
+    <text id="8">
+     <orig>август {1}</orig>
+    </text>
+    <text id="9">
+     <orig>сентябрь {1}</orig>
+    </text>
+    <text id="10">
+     <orig>октябрь {1}</orig>
+    </text>
+    <text id="11">
+     <orig>ноябрь {1}</orig>
+    </text>
+    <text id="12">
+     <orig>декабрь {1}</orig>
+    </text>
+   </group>
   </group>
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>

@@ -554,8 +554,15 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
 {
     str::append(text, version.name);
     str::append(text, " (");
-    /// @todo [urgent] month/year
-    str::append(text, version.date.year);
+
+    // Get text
+    char buf[30];
+    snprintf(buf, std::size(buf), "Common.Mon.%d",
+             static_cast<int>(version.date.month));
+    auto& monTemplate = loc::get(buf);
+    auto s = monTemplate.arg(version.date.year);
+
+    str::append(text, s);
     str::append(text, ")");
 }
 
