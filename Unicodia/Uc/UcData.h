@@ -553,10 +553,15 @@ namespace uc {
     };
     extern const WritingDir writingDirInfo[static_cast<int>(EcWritingDir::NN)];
 
+    struct CoarseDate {
+        short year;
+        Month month;
+    };
+
     struct Version
     {
         std::u8string_view name;
-        unsigned year;
+        CoarseDate date;
 
         //unsigned nNewChars = 0;
     };

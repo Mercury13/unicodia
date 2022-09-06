@@ -554,7 +554,8 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
 {
     str::append(text, version.name);
     str::append(text, " (");
-    str::append(text, version.year);
+    /// @todo [urgent] month/year
+    str::append(text, version.date.year);
     str::append(text, ")");
 }
 
