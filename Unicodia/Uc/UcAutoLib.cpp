@@ -442,11 +442,11 @@ constinit const uc::LibNode uc::libNodes[3777] {
 { U"\U0001F932\U0001F3FE", u8"palms up together: medium-dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E5_0 },   // 436
 { U"\U0001F932\U0001F3FF", u8"palms up together: dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E5_0 },   // 437
 { U"\U0001F91D", u8"handshake", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 438
-{ U"\U0001F91D\U0001F3FB", u8"handshake: light skin tone", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 439
-{ U"\U0001F91D\U0001F3FC", u8"handshake: medium-light skin tone", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 440
-{ U"\U0001F91D\U0001F3FD", u8"handshake: medium skin tone", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 441
-{ U"\U0001F91D\U0001F3FE", u8"handshake: medium-dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 442
-{ U"\U0001F91D\U0001F3FF", u8"handshake: dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E3_0 },   // 443
+{ U"\U0001F91D\U0001F3FB", u8"handshake: light skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 439
+{ U"\U0001F91D\U0001F3FC", u8"handshake: medium-light skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 440
+{ U"\U0001F91D\U0001F3FD", u8"handshake: medium skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 441
+{ U"\U0001F91D\U0001F3FE", u8"handshake: medium-dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 442
+{ U"\U0001F91D\U0001F3FF", u8"handshake: dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 443
 { U"\U0001FAF1\U0001F3FB\u200D\U0001FAF2\U0001F3FC", u8"handshake: light skin tone, medium-light skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 444
 { U"\U0001FAF1\U0001F3FB\u200D\U0001FAF2\U0001F3FD", u8"handshake: light skin tone, medium skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 445
 { U"\U0001FAF1\U0001F3FB\u200D\U0001FAF2\U0001F3FE", u8"handshake: light skin tone, medium-dark skin tone", 198, 0, -1, Lfg(1), EcVersion::E14_0 },   // 446
