@@ -705,7 +705,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DIGA",           Dicf::PART_ADJECTIVE },
     { "GAETTA-PILLA",   Dicf::PART_NOUN },
     { "GAYANUKITTA",    Dicf::PART_NOUN },
-    { "HAA",            Dicf::PART_ADJECTIVE },
     { "KANTAJA",        Dicf::PART_ADJECTIVE },
     { "KETTI",          Dicf::PART_ADJECTIVE },
     { "KOMBUVA",        Dicf::PART_ADJECTIVE },
@@ -970,6 +969,10 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Tai Tham consonant sign High Ratha or low Pa")
         // Orya
     EX("Oriya Ai length mark")      // IDK how to make rule, hand-checked Length
+        // Sinh
+    EX("Sinhala vowel sign Kombuva haa Aela-pilla")     // Haa is also a letter
+    EX("Sinhala vowel sign Kombuva haa diga Aela-pilla")
+    EX("Sinhala vowel sign Kombuva haa gayanukitta")
         // Soyo
     EX("Soyombo vowel length mark") // IDK how to make rule, hand-checked Length
         // Telu
