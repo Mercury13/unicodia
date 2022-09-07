@@ -20,8 +20,10 @@
 @set DEPLOY1=~Deployed
 @set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
+@set UCAUTOLIB=UcAutoLib.cpp
 @set UCCOUNT=UcAutoCount.h
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
+@set AB_UCAUTOLIB=%BUILD_AB%/%UCAUTOLIB%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
 
 @path %MINGW%;%PATH%
@@ -96,10 +98,12 @@
 @echo.
 @echo ===== Checking for file existence =====
 @if not exist %AB_UCAUTO% goto end
+@if not exist %AB_UCAUTOLIB% goto end
 
 @echo.
 @echo ===== Running SmartCopy =====
 @%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
+@%SMARTCOPY% %AB_UCAUTOLIB% Unicodia\Uc\%UCAUTOLIB%
 @if errorlevel 1 goto end
 
 @echo.
