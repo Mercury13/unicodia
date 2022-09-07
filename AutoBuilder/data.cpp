@@ -698,6 +698,24 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "H-TYPE",         Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
     { "L-TYPE",         Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
 
+    // Sinhala
+    { "ALPAPRAANA",     Dicf::PART_ADJECTIVE },
+    { "AMBA",           Dicf::PART_ADJECTIVE },
+    { "DANTAJA",        Dicf::PART_ADJECTIVE },
+    { "DIGA",           Dicf::PART_ADJECTIVE },
+    { "GAETTA-PILLA",   Dicf::PART_NOUN },
+    { "GAYANUKITTA",    Dicf::PART_NOUN },
+    { "HAA",            Dicf::PART_ADJECTIVE },
+    { "KANTAJA",        Dicf::PART_ADJECTIVE },
+    { "KETTI",          Dicf::PART_ADJECTIVE },
+    { "KOMBUVA",        Dicf::PART_ADJECTIVE },
+    { "LITH",           Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
+    { "MAHAAPRAANA",    Dicf::PART_ADJECTIVE },
+    { "MUURDHAJA",      Dicf::PART_ADJECTIVE },
+    { "SANYAKA",        Dicf::PART_ADJECTIVE },
+    { "SANYOOGA",       Dicf::PART_ADJECTIVE },
+    { "TAALUJA",        Dicf::PART_ADJECTIVE },
+
     // Names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "AFRICAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
