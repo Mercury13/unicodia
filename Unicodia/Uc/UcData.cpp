@@ -2343,7 +2343,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'G' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     /// @todo [U15] CJK H
-    { 0x31350, 0x323AF, { '?', EcContinent::CJK, Ifg::MISSING },
+    { 0x31350, 0x323AF, { 0x31378, EcContinent::CJK },
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
