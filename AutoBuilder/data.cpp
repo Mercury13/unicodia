@@ -1300,6 +1300,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
 
         // Enclosed Latin
     EX("Circled CC")            // Closed Captions, hand-checked
+    EX("Circled CD")            // Compact disc? hand-checked
+    EX("Circled Wz")            // German Warenzeichen
     EX("Negative squared IC")   // Hand-checked
     EX("Negative squared PA")
     EX("Negative squared SA")
