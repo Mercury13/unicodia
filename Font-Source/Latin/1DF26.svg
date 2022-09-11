@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 320 1000"
+   id="svg4"
+   sodipodi:docname="1DF26.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.944"
+     inkscape:cx="224.04661"
+     inkscape:cy="372.88136"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     id="path2"
+     d="M 13 40 L 13 82 L 26 82 C 47.999978 82 67.166683 86.000008 83.5 94 C 99.833317 101.99999 108 120.6667 108 150 L 108 360.7832 C 99.611948 341.65892 90.622658 324.03777 81 308 C 71.00001 291.33335 57.666653 278.16666 41 268.5 C 24.333347 258.83334 1.3333007 254 -28 254 C -64.666633 254 -91.833348 260.33334 -109.5 273 C -127.16665 285.66666 -136 303.66669 -136 327 C -136 347.66665 -128.83332 364.66668 -114.5 378 C -100.16668 391.33332 -76.333297 398 -43 398 C -43 370.6667 -38.999992 350.83332 -31 338.5 C -23.000008 326.16668 -9.3333107 320 10 320 C 28.666651 320 44.333343 327.33334 57 342 C 69.666657 356.66666 79.666677 375.33335 87 398 C 94.333323 420.66665 99.666673 444.16669 103 468.5 C 106.33333 492.83331 108 514.66669 108 534 L 108 686 C 108 717.3333 99.999984 737.16667 84 745.5 C 68.000016 753.83332 48.666644 758 26 758 L 13 758 L 13 800 L 297 800 L 297 758 L 284 758 C 261.33336 758 241.99998 753.83333 226 745.5 C 210.00002 737.16668 202 717.3333 202 686 L 202 40 L 13 40 z " />
+</svg>
