@@ -386,7 +386,7 @@ const uc::Version uc::versionInfo[] {
     { u8"13.0", { 2020, Month::MAR } },
     { u8"Emoji 13.1", { 2020, Month::SEP } },
     { u8"14.0", { 2021, Month::SEP } },
-    { u8"15.0" VER_BETA, { 2022, Month::SEP } },
+    { u8"15.0", { 2022, Month::SEP } },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
