@@ -1,0 +1,5 @@
+Transformation matrix GlyphWiki → FunkySample
+
+Origin: Glyph’s origin
+Move: 0, −625
+Scale proportionally: 500%
