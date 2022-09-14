@@ -1407,7 +1407,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 2 },
             EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek ex OK, though DejaVu is a big gun
-    { 0x1F00, 0x1FFF, { 0x1F6A, EcContinent::EUROPE },
+    { 0x1F00, 0x1FFF, { 0x1F6B, EcContinent::EUROPE },
             "Greek Extended",
             { EcScript::Grek, 1 },
             EcScript::Grek, EcFont::DEJAVU, Bfg::HAS_DESCRIPTION },
