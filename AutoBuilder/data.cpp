@@ -1033,6 +1033,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
         // Mani
     EX("Manichaean abbreviation mark above")    // Abbreviation’s mark → abbreviation/mark are not keywords
     EX("Manichaean abbreviation mark below")    // The same
+        // Mong
+    EX("Mongolian Sibe syllable boundary marker")   // Syllable is not keyword
         // Pauc
     EX("Pau Cin Hau rising tone long")          // Tone is not keyword
     EX("Pau Cin Hau rising tone long final")    // Same
