@@ -1377,7 +1377,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 'C' },
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Geor ex OK
-    { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_LINES },
+    { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_OTHER_LINES },
             "Georgian Extended",
             { EcScript::Geor, 2 },
             EcScript::Geor, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1836,7 +1836,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE },
             "Linear A", { EcScript::Lina, 0 }, EcScript::Lina },
     // Latin ex F OK, drew in FunkySample
-    { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_LINES },
+    { 0x10780, 0x107BF, { 0x107BA, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
             "Latin Extended-F",
             { EcScript::Latn, 'F' },
             EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
@@ -2200,11 +2200,11 @@ constinit const uc::Block uc::blocks[] {
             "Glagolitic Supplement",
             { EcScript::Glag, 1},
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
-    /// @todo [U15] Cyr ex D
-    { 0x1E030, 0x1E08F, { '?', EcContinent::EUROPE, Ifg::MISSING },
+    // Cyr ex D OK, really nice implementation in Funky
+    { 0x1E030, 0x1E08F, { 0x1E047, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
             "Cyrillic Extended-D",
             { EcScript::Cyrl, 'D'},
-            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // NP Hmong OK
     { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA },
             "Nyiakeng Puachue Hmong", { EcScript::Hmnp, 0}, EcScript::Hmnp },

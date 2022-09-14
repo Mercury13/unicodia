@@ -668,8 +668,9 @@ namespace uc {
                                     ///<      sub/super, legacy computers, Kali…
         APPROX_ROTATED    = 0,      ///< [+] rotated text on icon:
                                     ///<      Mong, Phag
-        APPROX_LINES      = 0,      ///< [+] lines on icon:
-                                    ///<      Georian Mtavruli, Latin ex F
+        APPROX_SQUARE     = 0,      ///< [+] square of main char on icon:
+                                    ///<      Latin ex F, Cyr ex D
+        APPROX_OTHER_LINES = 0,     ///< [+] other lines on icon: Georian Mtavruli
         APPROX_COLLECTIVE = 0,      ///< [+] graphic icon contains collective image, not specific char:
                                     ///<      variation selectors, tags
         APPROX_COLOR      = 0,      ///< [+] graphic icon is coloured/colourless:

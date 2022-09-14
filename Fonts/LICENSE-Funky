@@ -5,8 +5,9 @@ Except some glyphs:
 
 © Google Noto, SIL Open Font License
 
-All characters of Latin and Balinese
-(Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+287)
+All characters of Latin, Cyrillic and Balinese
+(Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+287.
+Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.)
 
 
 Unknown origin (probably someone from SIL International), SIL Open Font License
