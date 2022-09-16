@@ -215,6 +215,7 @@ namespace uc {
          GADUGI,
          DEJAVU,
          FUNKY,
+         FUNKY_RTL,
         ADLAM,
         AHOM,
           Z_AHO_1,

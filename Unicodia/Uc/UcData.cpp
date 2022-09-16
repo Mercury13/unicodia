@@ -86,6 +86,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
     { FNAME_FUNKY },                                                            // Funky
+    { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
@@ -1908,11 +1909,11 @@ constinit const uc::Block uc::blocks[] {
     // Yezidi OK
     { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA },
             "Yezidi", { EcScript::Yezi, 0 }, EcScript::Yezi },
-    /// @todo [U15] Arabic ex C
-    { 0x10EC0, 0x10EFF, { '?', EcContinent::ASIA, Ifg::MISSING },
+    /// @todo [future] Arab ex C temporarily in Funky
+    { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' },
-            EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Arab, EcFont::FUNKY_RTL, Bfg::HAS_DESCRIPTION },
     // Old Sogdian OK
     { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA },
             "Old Sogdian", { EcScript::Sogd, 0 }, EcScript::Sogo },
