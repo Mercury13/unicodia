@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -859,6 +859,12 @@ padding-bottom: 1px;</string>
           </item>
           <item>
            <widget class="QLabel" name="lbTofuStats">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
             <property name="text">
              <string notr="true">[Tofu stats]</string>
             </property>

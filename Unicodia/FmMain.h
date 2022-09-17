@@ -341,12 +341,14 @@ private:
 
     InitBlocks initBlocks();
     void initLibrary(const InitBlocks& ib);
+    void translateAbout();
     void initAbout();
     void showCp(MaybeChar ch);
     void forceShowCp(MaybeChar ch);
     void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
     template <SelectMode mode> void selectChar(char32_t code);
     void initTerms();
+    void translateTerms();
     void copyCurrentThing(CurrThing thing);
     void showCopied(QAbstractItemView* table);
     void showCopied(QWidget* widget, const QRect& absRect);

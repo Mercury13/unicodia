@@ -789,6 +789,8 @@ FmMain::FmMain(QWidget *parent)
 
     auto ib = initBlocks();
     initLibrary(ib);
+    initTerms();
+    initAbout();
 
     // Tofu stats
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
@@ -1041,8 +1043,8 @@ void FmMain::translateMe()
     loc::translateForm(ui->wiSample);
     loc::translateForm(ui->wiLibSample);
 
-    initTerms();
-    initAbout();
+    translateTerms();
+    translateAbout();
     cjkReflectCollapseState();
 
     ui->comboBlock->resizeView();
@@ -1059,7 +1061,7 @@ void FmMain::translateMe()
 }
 
 
-void FmMain::initTerms()
+void FmMain::translateTerms()
 {
     QString text;
     mywiki::appendStylesheet(text);
@@ -1086,6 +1088,11 @@ void FmMain::initTerms()
     }
 
     ui->vwTerms->setText(text);
+}
+
+
+void FmMain::initTerms()
+{
     connect(ui->vwTerms, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
 }
 
@@ -1102,7 +1109,7 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::initAbout()
+void FmMain::translateAbout()
 {
     // Get version
     auto version = QApplication::applicationVersion();
@@ -1146,6 +1153,11 @@ void FmMain::initAbout()
 
     // lbTofuStats
     ui->lbTofuStats->setText(qPopupLink("About.TofuStats", "ac:tofustats"));
+}
+
+
+void FmMain::initAbout()
+{
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
 }
 
