@@ -58,7 +58,7 @@ I discovered that most of professional emoji… do not work! Do not work because
 
 **Colour scheme:** GNOME Human Interface Guidelines unless REALLY needed (e.g. military helmet). Use plain colours.
 
-**Projection:** frontal unless the object is better identified in other projection.
+**Projection:** frontal unless the object is better identified in other projection. Bilateral animals and people look to the left.
 
 **Style:** avoid toyish look. Machinery should be based on real-life models.
 
