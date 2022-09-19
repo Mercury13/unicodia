@@ -956,8 +956,8 @@
      <transl>Greek and Coptic</transl>
     </text>
     <text id="Text">
-     <orig>[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.<br /><br />[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.</orig>
-     <transl>[[ps:Grek|Greek]] is the first real alphabet, ancestor of all European alphabets.<br /><br />[[ps:Copt|Coptic]] is a language of Egyptian Christians. Its alphabet is based on Greek.</transl>
+     <orig>[[ps:Grek|Греческий]]{{-}}первый настоящий алфавит, предок всех европейских алфавитов.<br /><br />[[ps:Copt|Коптский]]{{-}}язык египетских христиан. Его алфавит основан на греческом.<br /><br />Изначально были закодированы в [[pt:unification|унификации]]. С Юникода 4.1 (2005) разунифицированы.</orig>
+     <transl>[[ps:Grek|Greek]] is the first real alphabet, ancestor of all European alphabets.<br /><br />[[ps:Copt|Coptic]] is a language of Egyptian Christians. Its alphabet is based on Greek.<br /><br />Initially they were encoded in [[pt:unification|unification]]. Since Unicode 4.1 (2005) they are disunified.</transl>
     </text>
    </group>
    <group id="0400">
