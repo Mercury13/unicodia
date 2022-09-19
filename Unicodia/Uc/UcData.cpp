@@ -994,8 +994,8 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(15), EcFont::SYLOTI_NAGRI },
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc", QFontDatabase::Syriac,
-        EcScriptType::CONSONANT, EcLangLife::ENDANGERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(1), EcFont::SYRIAC },
+        EcScriptType::CONSONANT, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
+        Dating::century(1, StdNote::FIRST_KNOWN), EcFont::SYRIAC },
     // Tagbanwa OK, W10 off → installed Google Noto
     { "Tagb", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::OCEAN,
