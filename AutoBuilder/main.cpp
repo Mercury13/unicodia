@@ -358,6 +358,28 @@ struct NotoData {
 //}
 
 
+struct StrangeCatInfo {
+    char key;
+    std::u8string_view name;
+};
+
+
+constinit const StrangeCatInfo strangeCats[] = {
+    { 'A', u8"Asymmetric" },
+    { 'B', u8"Bopomofo-like" },
+    { 'C', u8"Cursive" },
+    { 'F', u8"Fully reflective" },
+    { 'H', u8"Contain Hangul" },
+    { 'I', u8"Look incomplete" },
+    { 'K', u8"Katakana-like" },
+    { 'M', u8"Mirrored" },
+    { 'O', u8"Odd component" },
+    { 'R', u8"Rotated" },
+    { 'S', u8"Stroke-heavy" },
+    { 'U', u8"Unusual structure" },
+};
+
+
 NotoData loadNotoEmoji()
 {
     NotoData r;
@@ -447,6 +469,13 @@ int main()
     auto emoji = lib::loadEmoji(EMOJI_TEST);
     std::cout << "OK" << std::endl;
     std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
+
+    lib::Node strangeHiero;
+    strangeHiero.name = u8"Strange CJK ideographs";
+    for (auto& v : strangeCats) {
+        auto& cat = strangeHiero.children.emplace_back();
+        cat.name = v.name;
+    }
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -600,6 +629,27 @@ int main()
         if (charsEgyptianHatch.contains(cp))
             flags |= 512;
 
+        // CJK strange
+        std::string_view sStrange = elChar.attribute("kStrange").as_string();
+        if (!sStrange.empty()) {
+            auto q = str::splitSv(sStrange, ' ');
+            for (auto& v : q) {
+                auto type = v[0];
+                auto whatFound = std::lower_bound(
+                            std::begin(strangeCats), std::end(strangeCats), type,
+                            [](const StrangeCatInfo& x, char y) {
+                                return (x.key < y);
+                            });
+                if (whatFound == std::end(strangeCats) || whatFound->key != type)
+                    throw std::logic_error("Unknown strange category");
+                auto iCat = whatFound - std::begin(strangeCats);
+                auto& child = strangeHiero.children[iCat].children.emplace_back();
+                child.value.assign(1, cp);
+                child.flags |= (1 << 2);    // flag for CJK hiero
+            }
+        }
+
+        // OUTPUT
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
            << "{ "                              // name
@@ -707,7 +757,9 @@ int main()
 
     lib::Node root;
     // Node 1: emoji
-    root.children.emplace_back() = std::move(emoji.root);
+    root.children.emplace_back(std::move(emoji.root));
+    // Node 2: strange hiero
+    root.children.emplace_back(std::move(strangeHiero));
     // Write!
     auto libInfo = lib::write(root, "UcAutoLib.cpp");
 

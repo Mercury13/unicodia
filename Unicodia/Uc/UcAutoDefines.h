@@ -552,6 +552,7 @@ namespace uc {
     enum class Lfg : unsigned char {
         GRAPHIC_EMOJI = 1 << 0,     ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE
         NO_TILE       = 1 << 1,     ///< [+] do not draw tile (Component right now)
+        CODE_AS_NAME  = 1 << 2,     ///< [+] use code as name (strange CJK right now)
     };
     using Lfgs = Flags<Lfg>;
 
