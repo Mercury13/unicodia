@@ -758,6 +758,11 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
     GETNODE(index, return {})
     switch (role) {
     case Qt::DisplayRole:
+        if (node.flags.have(uc::Lfg::CODE_AS_NAME)) {
+            char data[50];
+            node.sprintUPLUS(data);
+            return data;
+        }
         return str::toQ(node.text);
     case Qt::DecorationRole:
         return pixOf(node);
@@ -1448,10 +1453,7 @@ void FmMain::libChanged(const QModelIndex& current)
 
         // Codes
         char buf[150], shortBuf[50];
-        size_t pos = 0;
-        for (auto c : node.value) {
-            pos = uc::appendUPLUS(buf, pos, c);
-        }
+        node.sprintUPLUS(buf);
         switch (node.value.length()) {
         case 0:     // never happens
         case 1:

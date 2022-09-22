@@ -543,6 +543,13 @@ namespace uc {
         EmojiDraw emojiDraw() const
             { return flags.toCustomBool<EmojiDraw, Lfg::GRAPHIC_EMOJI>(); }
         inline const uc::Version& emojiVersion() const;
+
+        /// @return new pos
+        size_t sprintUPLUS(char* data, size_t n) const;
+
+        /// @return new pos
+        template<size_t N>
+        size_t sprintUPLUS(char (&data)[N]) const { return sprintUPLUS(data, N); }
     };
 
     extern const LibNode libNodes[N_LIBNODES];

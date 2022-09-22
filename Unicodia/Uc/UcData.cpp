@@ -4007,3 +4007,14 @@ size_t uc::appendUPLUS(char* buf, size_t n, size_t n1, char32_t code)
                 static_cast<unsigned>(code));   // params
     return n1 + nPrinted;
 }
+
+
+size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const
+{
+    *data = 0;
+    size_t pos = 0;
+    for (auto c : value) {
+        pos = uc::appendUPLUS(data, n, pos, c);
+    }
+    return pos;
+}
