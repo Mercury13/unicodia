@@ -416,7 +416,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, *ch, color1, TABLE_DRAW, EMOJI_DRAW);
+        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, EMOJI_DRAW);
     }
 }
 
@@ -619,7 +619,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                             drawCharBorder(&painter, bounds, clFg);
                             clFg = cont.icon.fgColor;
                         }
-                        drawChar(&painter, bounds, si.cp(), clFg,
+                        // Draw icon a bit larger — 120%
+                        drawChar(&painter, bounds, 120, si.cp(), clFg,
                                  TableDraw::CUSTOM, EMOJI_DRAW);
                     } break;
                 case uc::CpType::NN:

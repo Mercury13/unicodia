@@ -3609,11 +3609,6 @@ uc::SampleProxy uc::Cp::sampleProxy() const
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
     case EcCategory::MARK_NONSPACING:
-        // Stub vice versa?
-        if (fn->flags.have(Ffg::STUB_VICEVERSA)) {
-            return { ZWSP + str::toQ(code) + STUB_CIRCLE, style };
-        }
-        [[fallthrough]];
     case EcCategory::MARK_SPACING:
         // Stub off?
         if (fn->flags.have(Ffg::STUB_OFF))

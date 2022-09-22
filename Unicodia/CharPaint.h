@@ -47,7 +47,9 @@ enum class TableDraw {
 };
 
 std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp);
-std::optional<QFont> fontAt(uc::DrawMethod drawMethod, const uc::Cp& cp);
+std::optional<QFont> fontAt(
+        uc::DrawMethod drawMethod, int sizePc,
+        const uc::Cp& cp);
 
 inline QString textAt(const uc::Cp& cp) { return cp.sampleProxy().text; }
 
@@ -60,7 +62,7 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color);
 enum class UseMargins { NO, YES };
 
 void drawChar(
-        QPainter* painter, const QRect& rect, const uc::Cp& cp,
+        QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
         UseMargins useMargins = UseMargins::YES);
 
