@@ -592,8 +592,11 @@ std::optional<QFont> fontAt(
     if (drawMethod > uc::DrawMethod::LAST_FONT)
         return {};
     auto font = cp.font(uc::MatchLast::NO);
-    return font->get(uc::FontPlace::CELL, FSZ_TABLE * sizePc / 100,
+    auto r = font->get(uc::FontPlace::CELL, FSZ_TABLE * sizePc / 100,
                     cp.flags.have(uc::Cfg::NO_AA), cp.subj);
+    if (sizePc <= 80 && font->flags.have(uc::Ffg::NOHINT_TINY))
+        r.setHintingPreference(QFont::PreferNoHinting);
+    return r;
 }
 
 

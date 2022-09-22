@@ -1410,8 +1410,15 @@ void FmMain::libChanged(const QModelIndex& current)
         setWiki(ui->vwLibInfo, s);
     } else {
         // Actual node
-        /// @todo [future] not necessarily emoji
-        ui->wiLibSample->showEmoji(node.value);
+        // Show sample
+        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || node.value.length() > 1) {
+            ui->wiLibSample->showEmoji(node.value);
+        } else if (auto cp = uc::cpsByCode[node.value[0]]) {
+            ui->wiLibSample->showCp(*cp);
+        } else  {
+            ui->wiLibSample->showNothing();
+        }
+
         auto osText = str::toQ(node.value);
         if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
             // 0x1F300 = very old emoji from Webdings

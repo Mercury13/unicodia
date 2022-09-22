@@ -36,13 +36,11 @@ concept Locable = requires(const T& x) { x.loc; };
 namespace fst {
     constexpr auto TOFU = static_cast<QFont::StyleStrategy>(
                 QFont::PreferAntialias | QFont::ForceOutline | QFont::NoFontMerging
-                | QFont::PreferQuality | QFont::PreferFullHinting);
+                | QFont::PreferQuality);
     constexpr auto COMPAT = static_cast<QFont::StyleStrategy>(
-                QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch
-                | QFont::PreferFullHinting);
+                QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch);
     constexpr auto NO_AA = static_cast<QFont::StyleStrategy>(
-                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch
-                | QFont::PreferFullHinting);
+                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch);
 }
 
 class Percent
@@ -438,6 +436,7 @@ namespace uc {
         STUB_FINEGRAINED= 1<<12,    ///< Stub on/off is controlled on finer level
         STUB_RTL        = 1<<13,    ///< Use “RtL isolate” char in stub
         STUB_INTERCHAR  = 1<<14,    ///< Debug: test inter-character interval
+        NOHINT_TINY     = 1<<15,    ///< Unglitch: no anti-aliasing in tiny sizes
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 

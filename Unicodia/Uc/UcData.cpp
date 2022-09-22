@@ -122,9 +122,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
-    { "SimSun", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },                   // CJK
-      { "SimSun-ExtB", Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },            // …1
-      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
+    { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },// CJK
+      { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …1
+      { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …2
       { "Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                         // …3
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …5 Japanese

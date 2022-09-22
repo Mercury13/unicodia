@@ -1465,7 +1465,7 @@ QString mywiki::buildHtml(const uc::LibNode& node)
         text += buf;
         auto cp = uc::cpsByCode[c];
         if (cp) {
-            str::append(text, cp->name.tech());
+            text += cp->viewableName();
         }
     }
 
