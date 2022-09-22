@@ -10,6 +10,9 @@
 // Lib
 #include "u_Vector.h"
 
+// Unicodia
+#include "UcFlags.h"
+
 // Utils
 unsigned fromHex(std::string_view x);
 
@@ -20,7 +23,7 @@ namespace lib {
         std::u8string name;
         std::u32string value;
         SafeVector<Node> children;
-        unsigned flags = 0;
+        uc::Lfgs flags {};
         std::string emojiVersion;
         mutable struct Cache {
             int index = 0;

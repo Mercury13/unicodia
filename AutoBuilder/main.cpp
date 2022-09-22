@@ -645,7 +645,7 @@ int main()
                 auto iCat = whatFound - std::begin(strangeCats);
                 auto& child = strangeHiero.children[iCat].children.emplace_back();
                 child.value.assign(1, cp);
-                child.flags |= (1 << 2);    // flag for CJK hiero
+                child.flags |= uc::Lfg::CODE_AS_NAME;
             }
         }
 

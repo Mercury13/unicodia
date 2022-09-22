@@ -26,6 +26,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_TypedFlags.h \
     ../Libs/SelfMade/u_Vector.h \
+    ../Unicodia/Uc/UcFlags.h \
     data.h \
     library.h \
     loader.h
@@ -35,4 +36,5 @@ INCLUDEPATH += \
     ../Libs/PugiXml \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings \
-    ../Libs/Zippy
+    ../Libs/Zippy \
+    ../Unicodia/Uc

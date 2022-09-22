@@ -89,7 +89,7 @@ namespace {
         auto& newItem = top->children.emplace_back();
         newItem.name = str::toU8sv(name);
         if (NO_TILE.contains(newItem.name))
-            newItem.flags |= 2;
+            newItem.flags |= uc::Lfg::NO_TILE;
         x.push(&newItem);
     }
 
@@ -151,9 +151,9 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 auto& newItem = treePath.top()->children.emplace_back();
                 newItem.name = str::toU8sv(name);
                 newItem.emojiVersion = emVersion;
-                newItem.flags = 1;
+                newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
                 if (NO_TILE.contains(newItem.name))
-                    newItem.flags |= 2;
+                    newItem.flags |= uc::Lfg::NO_TILE;
                 newItem.value.assign(codes.buffer(), nCodes);
             }
         }
@@ -234,10 +234,10 @@ namespace {
         }
         os << ", ";
         // flags
-        if (node.flags == 0) {
+        if (node.flags.empty()) {
             os << "{}";
         } else {
-            os << "Lfg(" << node.flags << ")";
+            os << "Lfg(" << static_cast<int>(node.flags.numeric()) << ")";
         }
         os << ", "
         // version

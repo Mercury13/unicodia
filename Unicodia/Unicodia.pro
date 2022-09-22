@@ -99,6 +99,7 @@ HEADERS += \
     Uc/UcAutoDefines.h \
     Uc/UcData.h \
     Uc/UcDating.h \
+    Uc/UcFlags.h \
     Uc/UcSearch.h \
     WiSample.h \
     Wiki.h \
