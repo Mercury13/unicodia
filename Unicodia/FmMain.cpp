@@ -1467,8 +1467,6 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
 
-        /// @todo [urgent] show CPs
-
         QString s = mywiki::buildHtml(node);
         setWiki(ui->vwLibInfo, s);
     }
