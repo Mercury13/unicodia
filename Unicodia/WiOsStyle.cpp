@@ -33,6 +33,9 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
 
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
+
+    /// @todo [urgent, #154] wrong sender, what to do?
+    connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::linkActivated);
 }
 
 WiOsStyle::~WiOsStyle()

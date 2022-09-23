@@ -16,7 +16,7 @@ class WiOsStyle;
 class WiOsStyle : public QWidget
 {
     Q_OBJECT
-
+    using This = WiOsStyle;
 public:
     explicit WiOsStyle(QWidget *parent = nullptr);
     ~WiOsStyle();
