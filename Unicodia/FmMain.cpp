@@ -758,7 +758,10 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
     GETNODE(index, return {})
     switch (role) {
     case Qt::DisplayRole:
-        if (node.flags.have(uc::Lfg::CODE_AS_NAME)) {
+        if (node.flags.have(uc::Lfg::TRANSLATE)) {
+            auto key = str::cat("Lib.Group.", str::toSv(node.text));
+            return loc::get(key).q();
+        } else if (node.flags.have(uc::Lfg::CODE_AS_NAME)) {
             char data[50];
             node.sprintUPLUS(data);
             return data;

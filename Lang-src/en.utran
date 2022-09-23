@@ -6977,5 +6977,61 @@
     </text>
    </group>
   </group>
+  <group id="Lib">
+   <group id="Group">
+    <text id="Strange">
+     <orig>Необычные ККЯ-иероглифы</orig>
+     <transl>Unusual CJK ideographs</transl>
+    </text>
+    <text id="A">
+     <orig>A: асимметричные</orig>
+     <transl>A: asymmetric</transl>
+    </text>
+    <text id="B">
+     <orig>B: похожи на бопомофо</orig>
+     <transl>B: Bopomofo-like</transl>
+    </text>
+    <text id="C">
+     <orig>C: скорописные</orig>
+     <transl>C: cursive</transl>
+    </text>
+    <text id="F">
+     <orig>F: симметричные</orig>
+     <transl>F: fully-reflective</transl>
+    </text>
+    <text id="H">
+     <orig>H: содержат хангыль</orig>
+     <transl>H: contain Hangul</transl>
+    </text>
+    <text id="I">
+     <orig>I: неполный вид</orig>
+     <transl>I: incomplete look</transl>
+    </text>
+    <text id="K">
+     <orig>K: похожи на катакану</orig>
+     <transl>K: Katakana-like</transl>
+    </text>
+    <text id="M">
+     <orig>M: зеркальные отражения</orig>
+     <transl>M: mirrored</transl>
+    </text>
+    <text id="O">
+     <orig>O: необычный компонент</orig>
+     <transl>O: odd component</transl>
+    </text>
+    <text id="R">
+     <orig>R: повёрнутые</orig>
+     <transl>R: rotated</transl>
+    </text>
+    <text id="S">
+     <orig>S: много черт</orig>
+     <transl>S: stroke-heavy</transl>
+    </text>
+    <text id="U">
+     <orig>U: необычная структура</orig>
+     <transl>U: unusual structure</transl>
+    </text>
+   </group>
+  </group>
  </file>
 </ut>

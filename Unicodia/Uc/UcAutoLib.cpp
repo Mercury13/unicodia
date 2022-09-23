@@ -5,7 +5,7 @@
 constinit const uc::LibNode uc::libNodes[4579] {
 { {}, {}, 0, 2, 1, {}, EcVersion::NONE },   // 0
 { {}, u8"Emoji", 0, 10, 3, {}, EcVersion::NONE },   // 1
-{ {}, u8"Strange CJK ideographs", 0, 12, 3778, {}, EcVersion::NONE },   // 2
+{ {}, u8"Strange", 0, 12, 3778, Lfg(8), EcVersion::NONE },   // 2
 { {}, u8"Smileys & Emotion", 1, 16, 13, {}, EcVersion::NONE },   // 3
 { {}, u8"People & Body", 1, 16, 195, {}, EcVersion::NONE },   // 4
 { {}, u8"Component", 1, 2, 2359, Lfg(2), EcVersion::NONE },   // 5
@@ -3781,18 +3781,18 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F", u8"flag: England", 3508, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3775
 { U"\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F", u8"flag: Scotland", 3508, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3776
 { U"\U0001F3F4\U000E0067\U000E0062\U000E0077\U000E006C\U000E0073\U000E007F", u8"flag: Wales", 3508, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3777
-{ {}, u8"Asymmetric", 2, 5, 3790, {}, EcVersion::NONE },   // 3778
-{ {}, u8"Bopomofo-like", 2, 42, 3795, {}, EcVersion::NONE },   // 3779
-{ {}, u8"Cursive", 2, 22, 3837, {}, EcVersion::NONE },   // 3780
-{ {}, u8"Fully reflective", 2, 51, 3859, {}, EcVersion::NONE },   // 3781
-{ {}, u8"Contain Hangul", 2, 26, 3910, {}, EcVersion::NONE },   // 3782
-{ {}, u8"Look incomplete", 2, 273, 3936, {}, EcVersion::NONE },   // 3783
-{ {}, u8"Katakana-like", 2, 33, 4209, {}, EcVersion::NONE },   // 3784
-{ {}, u8"Mirrored", 2, 24, 4249, {}, EcVersion::NONE },   // 3785
-{ {}, u8"Odd component", 2, 37, 4273, {}, EcVersion::NONE },   // 3786
-{ {}, u8"Rotated", 2, 30, 4310, {}, EcVersion::NONE },   // 3787
-{ {}, u8"Stroke-heavy", 2, 22, 4340, {}, EcVersion::NONE },   // 3788
-{ {}, u8"Unusual structure", 2, 217, 4362, {}, EcVersion::NONE },   // 3789
+{ {}, u8"A", 2, 5, 3790, Lfg(8), EcVersion::NONE },   // 3778
+{ {}, u8"B", 2, 42, 3795, Lfg(8), EcVersion::NONE },   // 3779
+{ {}, u8"C", 2, 22, 3837, Lfg(8), EcVersion::NONE },   // 3780
+{ {}, u8"F", 2, 51, 3859, Lfg(8), EcVersion::NONE },   // 3781
+{ {}, u8"H", 2, 26, 3910, Lfg(8), EcVersion::NONE },   // 3782
+{ {}, u8"I", 2, 273, 3936, Lfg(8), EcVersion::NONE },   // 3783
+{ {}, u8"K", 2, 33, 4209, Lfg(8), EcVersion::NONE },   // 3784
+{ {}, u8"M", 2, 24, 4249, Lfg(8), EcVersion::NONE },   // 3785
+{ {}, u8"O", 2, 37, 4273, Lfg(8), EcVersion::NONE },   // 3786
+{ {}, u8"R", 2, 30, 4310, Lfg(8), EcVersion::NONE },   // 3787
+{ {}, u8"S", 2, 22, 4340, Lfg(8), EcVersion::NONE },   // 3788
+{ {}, u8"U", 2, 217, 4362, Lfg(8), EcVersion::NONE },   // 3789
 { U"\U0002074E", {}, 3778, 0, -1, Lfg(4), EcVersion::NONE },   // 3790
 { U"\U00021CFF", {}, 3778, 0, -1, Lfg(4), EcVersion::NONE },   // 3791
 { U"\U00024C03", {}, 3778, 0, -1, Lfg(4), EcVersion::NONE },   // 3792

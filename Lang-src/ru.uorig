@@ -5582,5 +5582,48 @@
     </text>
    </group>
   </group>
+  <group id="Lib">
+   <group id="Group">
+    <text id="Strange">
+     <orig>Необычные ККЯ-иероглифы</orig>
+    </text>
+    <text id="A">
+     <orig>A: асимметричные</orig>
+    </text>
+    <text id="B">
+     <orig>B: похожи на бопомофо</orig>
+    </text>
+    <text id="C">
+     <orig>C: скорописные</orig>
+    </text>
+    <text id="F">
+     <orig>F: симметричные</orig>
+    </text>
+    <text id="H">
+     <orig>H: содержат хангыль</orig>
+    </text>
+    <text id="I">
+     <orig>I: неполный вид</orig>
+    </text>
+    <text id="K">
+     <orig>K: похожи на катакану</orig>
+    </text>
+    <text id="M">
+     <orig>M: зеркальные отражения</orig>
+    </text>
+    <text id="O">
+     <orig>O: необычный компонент</orig>
+    </text>
+    <text id="R">
+     <orig>R: повёрнутые</orig>
+    </text>
+    <text id="S">
+     <orig>S: много черт</orig>
+    </text>
+    <text id="U">
+     <orig>U: необычная структура</orig>
+    </text>
+   </group>
+  </group>
  </file>
 </ut>

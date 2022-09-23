@@ -363,25 +363,24 @@ enum class StrangeTarget { NONE, AFTER };
 
 struct StrangeCatInfo {
     char key;
-    std::u8string_view name;
     StrangeTarget target = StrangeTarget::NONE;
     uc::Lfgs targetFlags {};
 };
 
 
 constinit const StrangeCatInfo strangeCats[] = {
-    { 'A', u8"Asymmetric" },
-    { 'B', u8"Bopomofo-like", StrangeTarget::AFTER, uc::Lfg::NO_TILE },
-    { 'C', u8"Cursive" },
-    { 'F', u8"Fully reflective", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
-    { 'H', u8"Contain Hangul" },
-    { 'I', u8"Look incomplete" },
-    { 'K', u8"Katakana-like", StrangeTarget::AFTER, uc::Lfg::NO_TILE },
-    { 'M', u8"Mirrored", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
-    { 'O', u8"Odd component" },
-    { 'R', u8"Rotated", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
-    { 'S', u8"Stroke-heavy" },
-    { 'U', u8"Unusual structure" },
+    { 'A' },    // Asymmetric
+    { 'B', StrangeTarget::AFTER, uc::Lfg::NO_TILE },  // Bopomofo-like
+    { 'C' },    // Cursive
+    { 'F', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Fully-reflective
+    { 'H' },    // Contain Hangul
+    { 'I' },    // Look incomplete
+    { 'K', StrangeTarget::AFTER, uc::Lfg::NO_TILE },    // Katakana-like
+    { 'M', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Mirrored
+    { 'O' },    // Odd component
+    { 'R', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },    // Rotated
+    { 'S' },    // Stroke-heavy
+    { 'U' },    // Unusual structure
 };
 
 
@@ -476,10 +475,12 @@ int main()
     std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
 
     lib::Node strangeHiero;
-    strangeHiero.name = u8"Strange CJK ideographs";
+    strangeHiero.name = u8"Strange";
+    strangeHiero.flags |= uc::Lfg::TRANSLATE;
     for (auto& v : strangeCats) {
         auto& cat = strangeHiero.children.emplace_back();
-        cat.name = v.name;
+        cat.name.assign(1, v.key);
+        cat.flags |= uc::Lfg::TRANSLATE;
     }
 
     ///// Open output file /////////////////////////////////////////////////////
