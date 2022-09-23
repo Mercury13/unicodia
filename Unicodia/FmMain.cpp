@@ -38,6 +38,7 @@
 #include "FmPopup.h"
 #include "FmMessage.h"
 #include "FmTofuStats.h"
+#include "WiOsStyle.h"
 
 // L10n
 #include "LocDic.h"
@@ -50,7 +51,6 @@ using namespace std::string_view_literals;
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
-    const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
 
 ///// FmPopup2 /////////////////////////////////////////////////////////////////
@@ -876,8 +876,6 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // OS style
     fontTofu.setStyleStrategy(fst::TOFU);
-    auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
 
     // Copy
         // Ctrl+C
@@ -905,7 +903,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
-    connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::labelLinkActivated);
+    connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::labelLinkActivated);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1099,18 +1097,6 @@ void FmMain::initTerms()
 {
     connect(ui->vwTerms, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
 }
-
-
-namespace {
-
-    QString qPopupLink(
-            std::string_view locKey, const char* target)
-    {
-        return QString("<a href='") + target + "' style='" STYLE_POPUP "'>"
-                + loc::get(locKey) + "</a>";
-    }
-
-}   // anon namespace
 
 
 void FmMain::translateAbout()
@@ -1324,52 +1310,19 @@ void FmMain::forceShowCp(MaybeChar ch)
         } else {
             ui->btCopyEx->hide();
         }
-        const bool wantSysFont = !ch->isDefaultIgnorable() && ch->isGraphical();
 
         // Sample char
         ui->wiSample->showCp(*ch);
 
         // OS char
-        std::optional<QFont> font = std::nullopt;
-        QFontDatabase::WritingSystem ws = QFontDatabase::Any;
-        if (wantSysFont) {
-            QString osProxy = ch->osProxy();
-            if (osProxy.isEmpty()) {
-                ui->lbOs->setFont(fontBig);
-                ui->lbOs->setText({});
-                ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
-            } else {
-                ws = ch->scriptEx().qtCounterpart;
-                font = model.match.sysFontFor(*ch, ws, FSZ_BIG);
-                if (font) {
-                    ui->lbOs->setFont(*font);
-                    ui->lbOs->setText(osProxy);
-                    snprintf(buf, std::size(buf),
-                            "<a href='pf:%d/%d' style='" STYLE_POPUP "'>",
-                            ch->subj.val(), static_cast<int>(ws));
-                    ui->lbOsTitle->setText(
-                        buf + font->family().toHtmlEscaped() + "</a>");
-                } else {
-                    ui->lbOs->setFont(fontTofu);
-                    ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
-                    ui->lbOsTitle->setText(qPopupLink("Prop.Os.Tofu", "pt:tofu"));
-                }
-            }
-        } else {
-            ui->lbOs->setFont(fontBig);
-            ui->lbOs->setText({});
-            ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
-        }
+        ui->wiOsStyle->setCp(*ch, model.match);
 
         QString text = mywiki::buildHtml(*ch);
         setWiki(ui->vwInfo, text);
     } else {
         // No character
         ui->wiSample->showNothing();
-        ui->lbOs->setText({});
-        const auto& osTitle = loc::get(
-                uc::isNonChar(ch.code) ? "Prop.Os.NonChar" : "Prop.Os.Empty");
-        ui->lbOsTitle->setText(osTitle);
+        ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);

@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -205,55 +205,14 @@
                    </widget>
                   </item>
                   <item>
-                   <layout class="QVBoxLayout" name="layOs" stretch="0,1">
-                    <property name="spacing">
-                     <number>1</number>
+                   <widget class="WiOsStyle" name="wiOsStyle" native="true">
+                    <property name="minimumSize">
+                     <size>
+                      <width>20</width>
+                      <height>0</height>
+                     </size>
                     </property>
-                    <item>
-                     <widget class="QLabel" name="lbOsTitle">
-                      <property name="text">
-                       <string notr="true">[OS Style]</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <widget class="QGroupBox" name="grpOs">
-                      <layout class="QHBoxLayout" name="horizontalLayout_3">
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>2</number>
-                       </property>
-                       <item>
-                        <widget class="QLabel" name="lbOs">
-                         <property name="minimumSize">
-                          <size>
-                           <width>120</width>
-                           <height>108</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string notr="true">%</string>
-                         </property>
-                         <property name="alignment">
-                          <set>Qt::AlignCenter</set>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                   </layout>
+                   </widget>
                   </item>
                   <item>
                    <widget class="QWidget" name="widget_2" native="true">
@@ -951,6 +910,12 @@ padding-bottom: 1px;</string>
    <class>WiSample</class>
    <extends>QWidget</extends>
    <header>WiSample.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>WiOsStyle</class>
+   <extends>QWidget</extends>
+   <header>WiOsStyle.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
