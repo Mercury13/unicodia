@@ -28,6 +28,9 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    // OS style
+    fontTofu.setStyleStrategy(fst::TOFU);
+
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
 }

@@ -874,9 +874,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
 
-    // OS style
-    fontTofu.setStyleStrategy(fst::TOFU);
-
     // Copy
         // Ctrl+C
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->tableChars,
