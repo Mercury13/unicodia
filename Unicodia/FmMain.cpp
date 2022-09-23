@@ -762,8 +762,14 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
             char data[50];
             node.sprintUPLUS(data);
             return data;
+        } else if (!node.text.empty()) {
+            return str::toQ(node.text);
+        } else if (!node.value.empty()) {
+            if (auto cp = uc::cpsByCode[node.value[0]])
+                return cp->viewableName();
         }
-        return str::toQ(node.text);
+        // Should not happen
+        return {};
     case Qt::DecorationRole:
         return pixOf(node);
 

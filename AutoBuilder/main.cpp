@@ -358,23 +358,28 @@ struct NotoData {
 //}
 
 
+enum class StrangeTarget { NONE, AFTER };
+
+
 struct StrangeCatInfo {
     char key;
     std::u8string_view name;
+    StrangeTarget target = StrangeTarget::NONE;
+    uc::Lfgs targetFlags {};
 };
 
 
 constinit const StrangeCatInfo strangeCats[] = {
     { 'A', u8"Asymmetric" },
-    { 'B', u8"Bopomofo-like" },
+    { 'B', u8"Bopomofo-like", StrangeTarget::AFTER, uc::Lfg::NO_TILE },
     { 'C', u8"Cursive" },
-    { 'F', u8"Fully reflective" },
+    { 'F', u8"Fully reflective", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
     { 'H', u8"Contain Hangul" },
     { 'I', u8"Look incomplete" },
-    { 'K', u8"Katakana-like" },
-    { 'M', u8"Mirrored" },
+    { 'K', u8"Katakana-like", StrangeTarget::AFTER, uc::Lfg::NO_TILE },
+    { 'M', u8"Mirrored", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
     { 'O', u8"Odd component" },
-    { 'R', u8"Rotated" },
+    { 'R', u8"Rotated", StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },
     { 'S', u8"Stroke-heavy" },
     { 'U', u8"Unusual structure" },
 };
@@ -643,9 +648,23 @@ int main()
                 if (whatFound == std::end(strangeCats) || whatFound->key != type)
                     throw std::logic_error("Unknown strange category");
                 auto iCat = whatFound - std::begin(strangeCats);
-                auto& child = strangeHiero.children[iCat].children.emplace_back();
+                auto& subcat = strangeHiero.children[iCat];
+                auto& child = subcat.children.emplace_back();
                 child.value.assign(1, cp);
                 child.flags |= uc::Lfg::CODE_AS_NAME;
+
+                if (whatFound->target == StrangeTarget::AFTER) {
+                    auto cpNames = str::splitSv(v.substr(1), ':');
+                    for (auto cpName : cpNames) {
+                        if (cpName.starts_with("U+")) {
+                            auto sCode = cpName.substr(2);
+                            auto code = fromHex(sCode);
+                            auto& child2 = subcat.children.emplace_back();
+                            child2.value.assign(1, code);
+                            child2.flags = whatFound->targetFlags;
+                        }
+                    }
+                }
             }
         }
 
