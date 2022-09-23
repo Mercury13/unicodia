@@ -10,9 +10,7 @@
 #include "d_Config.h"
 
 // L10n
-#include "LocDic.h"
 #include "LocList.h"
-#include "LocQt.h"
 #include "LocManager.h"
 
 // Qt forms
