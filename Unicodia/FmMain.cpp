@@ -962,10 +962,6 @@ void FmMain::initLibrary(const InitBlocks& ib)
     ui->splitLibrary->setStretchFactor(1, 1);
     ui->splitLibrary->setSizes(ib.sizes);
 
-    // OS style
-    auto& font = uc::fontInfo[0];
-    ui->lbLibOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
-
     // Connect events
     connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::libChanged);
@@ -973,6 +969,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
     // Clicked
     connect(ui->vwLibInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbLibCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
+    connect(ui->wiLibOs, &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
 
     // Copy
         // Ctrl+C
@@ -1355,8 +1352,7 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->wiLibSample->showNothing();
         ui->lbLibCharCode->clear();
         ui->btLibCopy->setEnabled(false);
-        ui->lbLibOs->clear();
-        ui->lbLibOsTitle->setText(loc::get("Prop.Os.Style"));
+        ui->wiLibOs->setNothing();
 
         auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
         QString s = mywiki::buildLibFolderHtml(node, color);
@@ -1372,32 +1368,11 @@ void FmMain::libChanged(const QModelIndex& current)
             ui->wiLibSample->showNothing();
         }
 
-        auto osText = str::toQ(node.value);
         if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
-            // 0x1F300 = very old emoji from Webdings
-            constexpr char32_t SOME_EMOJI = 0x1F300;
-            auto char0 = node.value[0];
-            std::optional<QFont> font;
-            if (char0 <= 0xFFFF) {
-                // BMP emoji, really old
-                font = model.match.sysFontFor(SOME_EMOJI, FSZ_BIG);
-            } else {
-                // SMP emoji
-                font = model.match.sysFontFor(char0, FSZ_BIG);
-            }
-            if (font) {
-                ui->lbLibOs->setFont(*font);
-                ui->lbLibOsTitle->setText(font->family());
-            } else {
-                ui->lbLibOs->setFont(fontBig);
-                ui->lbLibOsTitle->setText(loc::get("Prop.Os.Tofu"));
-            }
+            ui->wiLibOs->setEmojiText(node.value, model.match);
         } else {
-            /// @todo [future] not necessarily emoji
-            ui->lbLibOs->setFont(fontBig);
-            ui->lbLibOsTitle->setText(fontBig.family());
+            ui->wiLibOs->setCustomText(node.value, model.match);
         }
-        ui->lbLibOs->setText(osText);
 
         // Codes
         char buf[150], shortBuf[50];

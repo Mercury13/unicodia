@@ -59,12 +59,19 @@ QString qPopupLink(
 }
 
 
-void WiOsStyle::setCp(const uc::Cp& ch, FontMatch& fontMatch)
+void WiOsStyle::setTofu()
+{
+    ui->lbOs->setFont(fontTofu);
+    ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
+    ui->lbOsTitle->setText(qPopupLink("Prop.Os.Tofu", "pt:tofu"));
+}
+
+
+void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fontMatch)
 {
     const bool wantSysFont = !ch.isDefaultIgnorable() && ch.isGraphical();
     if (wantSysFont) {
-        QString osProxy = ch.osProxy();
-        if (osProxy.isEmpty()) {
+        if (display.isEmpty()) {
             ui->lbOs->setFont(fontBig);
             ui->lbOs->setText({});
             ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
@@ -74,16 +81,14 @@ void WiOsStyle::setCp(const uc::Cp& ch, FontMatch& fontMatch)
             if (font) {
                 char buf[300];
                 ui->lbOs->setFont(*font);
-                ui->lbOs->setText(osProxy);
+                ui->lbOs->setText(display);
                 snprintf(buf, std::size(buf),
                         "<a href='pf:%d/%d' style='" STYLE_POPUP "'>",
                         ch.subj.val(), static_cast<int>(ws));
                 ui->lbOsTitle->setText(
                     buf + font->family().toHtmlEscaped() + "</a>");
             } else {
-                ui->lbOs->setFont(fontTofu);
-                ui->lbOs->setText(QString::fromUtf16(U16_TOFU));
-                ui->lbOsTitle->setText(qPopupLink("Prop.Os.Tofu", "pt:tofu"));
+                setTofu();
             }
         }
     } else {
@@ -94,10 +99,72 @@ void WiOsStyle::setCp(const uc::Cp& ch, FontMatch& fontMatch)
 }
 
 
+void WiOsStyle::setCp(const uc::Cp& ch, FontMatch& fontMatch)
+{
+    setCpEx(ch, ch.osProxy(), fontMatch);
+}
+
+
 void WiOsStyle::slotLinkActivated(const QString& url)
 {
     auto snd = qobject_cast<QWidget*>(sender());
     if (!snd)
         snd = this;
     emit linkActivated(snd, url);
+}
+
+
+void WiOsStyle::setNothing()
+{
+    ui->lbOs->clear();
+    ui->lbOsTitle->setText(loc::get("Prop.Os.Style"));
+}
+
+
+void WiOsStyle::setEmojiText(std::u32string_view text, FontMatch& fontMatch)
+{
+    if (text.empty()) {
+        setNothing();
+        return;
+    }
+
+    // 0x1F300 = very old emoji from Webdings
+    constexpr char32_t SOME_EMOJI = 0x1F300;
+    auto char0 = text[0];
+    std::optional<QFont> font;
+    if (char0 <= 0xFFFF) {
+        // BMP emoji, really old
+        font = fontMatch.sysFontFor(SOME_EMOJI, FSZ_BIG);
+    } else {
+        // SMP emoji
+        font = fontMatch.sysFontFor(char0, FSZ_BIG);
+    }
+    if (font) {
+        ui->lbOs->setFont(*font);
+        ui->lbOs->setText(str::toQ(text));
+        ui->lbOsTitle->setText(font->family());
+    } else {
+        setTofu();
+    }
+}
+
+
+void WiOsStyle::setCustomText(
+        std::u32string_view text, FontMatch& fontMatch)
+{
+    if (text.empty()) {
+        setNothing();
+    } else {
+        auto c0 = text[0];
+        auto cp = uc::cpsByCode[c0];
+        if (cp) {
+            if (text.length() == 1) {
+                setCp(*cp, fontMatch);
+            } else {
+                setCpEx(*cp, str::toQ(text), fontMatch);
+            }
+        } else {
+            setEmptyCode(c0);
+        }
+    }
 }
