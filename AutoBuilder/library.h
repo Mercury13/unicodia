@@ -47,4 +47,14 @@ namespace lib {
 
     Result write(const Node& root, const char* fname);
 
+    class StrangeCjk
+    {
+    public:
+        StrangeCjk();
+        void processCp(char32_t cp, std::string_view sStrange);
+        Node&& give() { return std::move(root); }
+    private:
+        Node root;
+    };
+
 }   // namespace lib

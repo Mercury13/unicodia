@@ -358,32 +358,6 @@ struct NotoData {
 //}
 
 
-enum class StrangeTarget { NONE, AFTER };
-
-
-struct StrangeCatInfo {
-    char key;
-    StrangeTarget target = StrangeTarget::NONE;
-    uc::Lfgs targetFlags {};
-};
-
-
-constinit const StrangeCatInfo strangeCats[] = {
-    { 'A' },    // Asymmetric
-    { 'B', StrangeTarget::AFTER, uc::Lfg::NO_TILE },  // Bopomofo-like
-    { 'C' },    // Cursive
-    { 'F', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Fully-reflective
-    { 'H' },    // Contain Hangul
-    { 'I' },    // Look incomplete
-    { 'K', StrangeTarget::AFTER, uc::Lfg::NO_TILE },    // Katakana-like
-    { 'M', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE }, // Mirrored
-    { 'O' },    // Odd component
-    { 'R', StrangeTarget::AFTER, uc::Lfg::CODE_AS_NAME | uc::Lfg::NO_TILE },    // Rotated
-    { 'S' },    // Stroke-heavy
-    { 'U' },    // Unusual structure
-};
-
-
 NotoData loadNotoEmoji()
 {
     NotoData r;
@@ -474,14 +448,7 @@ int main()
     std::cout << "OK" << std::endl;
     std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
 
-    lib::Node strangeHiero;
-    strangeHiero.name = u8"Strange";
-    strangeHiero.flags |= uc::Lfg::TRANSLATE;
-    for (auto& v : strangeCats) {
-        auto& cat = strangeHiero.children.emplace_back();
-        cat.name.assign(1, v.key);
-        cat.flags |= uc::Lfg::TRANSLATE;
-    }
+    lib::StrangeCjk strangeCjk;
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -636,39 +603,9 @@ int main()
             flags |= 512;
 
         // CJK strange
-        std::string_view sStrange = elChar.attribute("kStrange").as_string();
-        if (!sStrange.empty()) {
-            auto q = str::splitSv(sStrange, ' ');
-            for (auto& v : q) {
-                auto type = v[0];
-                auto whatFound = std::lower_bound(
-                            std::begin(strangeCats), std::end(strangeCats), type,
-                            [](const StrangeCatInfo& x, char y) {
-                                return (x.key < y);
-                            });
-                if (whatFound == std::end(strangeCats) || whatFound->key != type)
-                    throw std::logic_error("Unknown strange category");
-                auto iCat = whatFound - std::begin(strangeCats);
-                auto& subcat = strangeHiero.children[iCat];
-                auto& child = subcat.children.emplace_back();
-                child.value.assign(1, cp);
-                child.flags |= uc::Lfg::CODE_AS_NAME;
-
-                if (whatFound->target == StrangeTarget::AFTER) {
-                    auto cpNames = str::splitSv(v.substr(1), ':');
-                    auto& parent = (cpNames.size() > 1)
-                            ? child : subcat;
-                    for (auto cpName : cpNames) {
-                        if (cpName.starts_with("U+")) {
-                            auto sCode = cpName.substr(2);
-                            auto code = fromHex(sCode);
-                            auto& child2 = parent.children.emplace_back();
-                            child2.value.assign(1, code);
-                            child2.flags = whatFound->targetFlags;
-                        }
-                    }
-                }
-            }
+        if (std::string_view sStrange = elChar.attribute("kStrange").as_string();
+                !sStrange.empty()) {
+            strangeCjk.processCp(cp, sStrange);
         }
 
         // OUTPUT
@@ -781,7 +718,7 @@ int main()
     // Node 1: emoji
     root.children.emplace_back(std::move(emoji.root));
     // Node 2: strange hiero
-    root.children.emplace_back(std::move(strangeHiero));
+    root.children.emplace_back(strangeCjk.give());
     // Write!
     auto libInfo = lib::write(root, "UcAutoLib.cpp");
 
