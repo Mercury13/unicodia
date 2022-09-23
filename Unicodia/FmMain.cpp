@@ -1060,7 +1060,8 @@ void FmMain::translateMe()
     // Main tab
     forceShowCp(shownCp);
 
-    /// @todo [1.6] #157 translate lib
+    // Library tab
+    libChanged(ui->treeLibrary->currentIndex());
 }
 
 
