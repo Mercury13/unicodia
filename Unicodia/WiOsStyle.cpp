@@ -34,8 +34,7 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
     auto& font = uc::fontInfo[0];
     ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
 
-    /// @todo [urgent, #154] wrong sender, what to do?
-    connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::linkActivated);
+    connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::slotLinkActivated);
 }
 
 WiOsStyle::~WiOsStyle()
@@ -92,4 +91,13 @@ void WiOsStyle::setCp(const uc::Cp& ch, FontMatch& fontMatch)
         ui->lbOs->setText({});
         ui->lbOsTitle->setText(loc::get("Prop.Os.Invisible"));
     }
+}
+
+
+void WiOsStyle::slotLinkActivated(const QString& url)
+{
+    auto snd = qobject_cast<QWidget*>(sender());
+    if (!snd)
+        snd = this;
+    emit linkActivated(snd, url);
 }

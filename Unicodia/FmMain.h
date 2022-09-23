@@ -381,6 +381,7 @@ private slots:
     void copyCurrentLib();
     void popupLinkActivated(const QString& link);
     void labelLinkActivated(const QString& link);
+    void advancedLinkActivated(QWidget* widget, const QString& link);
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
     void showTofuStats();

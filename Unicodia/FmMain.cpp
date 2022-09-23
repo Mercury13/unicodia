@@ -900,7 +900,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
-    connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::labelLinkActivated);
+    connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1477,21 +1477,27 @@ void FmMain::popupLinkActivated(const QString& link)
 }
 
 
-void FmMain::labelLinkActivated(const QString& link)
+void FmMain::advancedLinkActivated(QWidget* widget, const QString& link)
 {
     QRect rect;
-    auto snd = qobject_cast<QWidget*>(sender());
-    if (snd) {
-        rect = snd->rect();
+    if (widget) {
+        rect = widget->rect();
     } else {
-        snd = this;
-        rect = QRect(snd->rect().center(), QSize{1, 1});
+        widget = this;
+        rect = QRect(widget->rect().center(), QSize{1, 1});
     }
-    mywiki::go(snd, rect, *this, link.toStdString());
+    mywiki::go(widget, rect, *this, link.toStdString());
     // Deselect, does not influence double and triple clicks
     if (auto label = qobject_cast<QLabel*>(sender())) {
         label->setSelection(0, 0);
     }
+}
+
+
+void FmMain::labelLinkActivated(const QString& link)
+{
+    advancedLinkActivated(
+                qobject_cast<QWidget*>(sender()), link);
 }
 
 

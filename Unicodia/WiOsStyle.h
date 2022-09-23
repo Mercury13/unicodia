@@ -29,7 +29,10 @@ private:
     QFont fontBig, fontTofu;
 
 signals:
-    void linkActivated(const QString& url);
+    void linkActivated(QWidget* widget, const QString& url);
+
+private slots:
+    void slotLinkActivated(const QString& url);
 };
 
 QString qPopupLink(
