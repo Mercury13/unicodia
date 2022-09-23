@@ -1418,7 +1418,7 @@ QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
     QString text;
     appendStylesheet(text);
     text += "<h1 style='color:" + color.name() + "'>";
-    str::append(text, node.text);
+    text += node.viewableTitle(uc::TitleMode::LONG).toHtmlEscaped();
     text += "</h1>";
     return text;
 }
@@ -1429,7 +1429,7 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     QString text;
     appendStylesheet(text);
     text += "<h1>";
-    str::append(text, node.text);
+    text += node.viewableTitle(uc::TitleMode::LONG).toHtmlEscaped();
     text += "</h1>";
 
     text += "<p>";

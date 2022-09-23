@@ -4018,3 +4018,23 @@ size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const
     }
     return pos;
 }
+
+
+QString uc::LibNode::viewableTitle(TitleMode mode) const
+{
+    if (flags.have(uc::Lfg::TRANSLATE)) {
+        auto key = str::cat("Lib.Group.", str::toSv(text));
+        return loc::get(key).q();
+    } else if (mode == TitleMode::SHORT && flags.have(uc::Lfg::CODE_AS_NAME)) {
+        char data[50];
+        sprintUPLUS(data);
+        return data;
+    } else if (!text.empty()) {
+        return str::toQ(text);
+    } else if (!value.empty()) {
+        if (auto cp = uc::cpsByCode[value[0]])
+            return cp->viewableName();
+    }
+    // Should not happen
+    return {};
+}

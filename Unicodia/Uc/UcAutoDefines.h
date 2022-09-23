@@ -533,6 +533,8 @@ namespace uc {
     extern const char8_t allStrings[];
     extern const Numeric allNumerics[N_NUMERICS];
 
+    enum class TitleMode { SHORT, LONG };
+
     struct LibNode {
         std::u32string_view value;
         std::u8string_view text;
@@ -543,6 +545,8 @@ namespace uc {
         EmojiDraw emojiDraw() const
             { return flags.toCustomBool<EmojiDraw, Lfg::GRAPHIC_EMOJI>(); }
         inline const uc::Version& emojiVersion() const;
+
+        QString viewableTitle(TitleMode mode) const;
 
         /// @return new pos
         size_t sprintUPLUS(char* data, size_t n) const;
