@@ -655,11 +655,13 @@ int main()
 
                 if (whatFound->target == StrangeTarget::AFTER) {
                     auto cpNames = str::splitSv(v.substr(1), ':');
+                    auto& parent = (cpNames.size() > 1)
+                            ? child : subcat;
                     for (auto cpName : cpNames) {
                         if (cpName.starts_with("U+")) {
                             auto sCode = cpName.substr(2);
                             auto code = fromHex(sCode);
-                            auto& child2 = subcat.children.emplace_back();
+                            auto& child2 = parent.children.emplace_back();
                             child2.value.assign(1, code);
                             child2.flags = whatFound->targetFlags;
                         }
