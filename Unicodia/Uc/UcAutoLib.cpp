@@ -4,34 +4,34 @@
 
 constinit const uc::LibNode uc::libNodes[4579] {
 { {}, {}, 0, 2, 1, {}, EcVersion::NONE },   // 0
-{ {}, u8"Emoji", 0, 10, 3, {}, EcVersion::NONE },   // 1
+{ {}, u8"Emoji", 0, 10, 3, Lfg(8), EcVersion::NONE },   // 1
 { {}, u8"Strange", 0, 12, 3778, Lfg(8), EcVersion::NONE },   // 2
-{ {}, u8"Smileys & Emotion", 1, 16, 13, {}, EcVersion::NONE },   // 3
-{ {}, u8"People & Body", 1, 16, 195, {}, EcVersion::NONE },   // 4
-{ {}, u8"Component", 1, 2, 2359, Lfg(2), EcVersion::NONE },   // 5
-{ {}, u8"Animals & Nature", 1, 8, 2370, {}, EcVersion::NONE },   // 6
-{ {}, u8"Food & Drink", 1, 8, 2530, {}, EcVersion::NONE },   // 7
-{ {}, u8"Travel & Places", 1, 11, 2671, {}, EcVersion::NONE },   // 8
-{ {}, u8"Activities", 1, 5, 2900, {}, EcVersion::NONE },   // 9
-{ {}, u8"Objects", 1, 18, 2990, {}, EcVersion::NONE },   // 10
-{ {}, u8"Symbols", 1, 14, 3269, {}, EcVersion::NONE },   // 11
-{ {}, u8"Flags", 1, 3, 3506, {}, EcVersion::NONE },   // 12
-{ {}, u8"face-smiling", 3, 14, 29, {}, EcVersion::NONE },   // 13
-{ {}, u8"face-affection", 3, 9, 43, {}, EcVersion::NONE },   // 14
-{ {}, u8"face-tongue", 3, 6, 52, {}, EcVersion::NONE },   // 15
-{ {}, u8"face-hand", 3, 7, 58, {}, EcVersion::NONE },   // 16
-{ {}, u8"face-neutral-skeptical", 3, 14, 65, {}, EcVersion::NONE },   // 17
-{ {}, u8"face-sleepy", 3, 5, 79, {}, EcVersion::NONE },   // 18
-{ {}, u8"face-unwell", 3, 12, 84, {}, EcVersion::NONE },   // 19
-{ {}, u8"face-hat", 3, 3, 96, {}, EcVersion::NONE },   // 20
-{ {}, u8"face-glasses", 3, 3, 99, {}, EcVersion::NONE },   // 21
-{ {}, u8"face-concerned", 3, 26, 102, {}, EcVersion::NONE },   // 22
-{ {}, u8"face-negative", 3, 8, 128, {}, EcVersion::NONE },   // 23
-{ {}, u8"face-costume", 3, 8, 136, {}, EcVersion::NONE },   // 24
-{ {}, u8"cat-face", 3, 9, 144, {}, EcVersion::NONE },   // 25
-{ {}, u8"monkey-face", 3, 3, 153, {}, EcVersion::NONE },   // 26
-{ {}, u8"heart", 3, 25, 156, {}, EcVersion::NONE },   // 27
-{ {}, u8"emotion", 3, 14, 181, {}, EcVersion::NONE },   // 28
+{ {}, u8"Smileys & Emotion", 1, 16, 13, Lfg(8), EcVersion::NONE },   // 3
+{ {}, u8"People & Body", 1, 16, 195, Lfg(8), EcVersion::NONE },   // 4
+{ {}, u8"Component", 1, 2, 2359, Lfg(10), EcVersion::NONE },   // 5
+{ {}, u8"Animals & Nature", 1, 8, 2370, Lfg(8), EcVersion::NONE },   // 6
+{ {}, u8"Food & Drink", 1, 8, 2530, Lfg(8), EcVersion::NONE },   // 7
+{ {}, u8"Travel & Places", 1, 11, 2671, Lfg(8), EcVersion::NONE },   // 8
+{ {}, u8"Activities", 1, 5, 2900, Lfg(8), EcVersion::NONE },   // 9
+{ {}, u8"Objects", 1, 18, 2990, Lfg(8), EcVersion::NONE },   // 10
+{ {}, u8"Symbols", 1, 14, 3269, Lfg(8), EcVersion::NONE },   // 11
+{ {}, u8"Flags", 1, 3, 3506, Lfg(8), EcVersion::NONE },   // 12
+{ {}, u8"face-smiling", 3, 14, 29, Lfg(8), EcVersion::NONE },   // 13
+{ {}, u8"face-affection", 3, 9, 43, Lfg(8), EcVersion::NONE },   // 14
+{ {}, u8"face-tongue", 3, 6, 52, Lfg(8), EcVersion::NONE },   // 15
+{ {}, u8"face-hand", 3, 7, 58, Lfg(8), EcVersion::NONE },   // 16
+{ {}, u8"face-neutral-skeptical", 3, 14, 65, Lfg(8), EcVersion::NONE },   // 17
+{ {}, u8"face-sleepy", 3, 5, 79, Lfg(8), EcVersion::NONE },   // 18
+{ {}, u8"face-unwell", 3, 12, 84, Lfg(8), EcVersion::NONE },   // 19
+{ {}, u8"face-hat", 3, 3, 96, Lfg(8), EcVersion::NONE },   // 20
+{ {}, u8"face-glasses", 3, 3, 99, Lfg(8), EcVersion::NONE },   // 21
+{ {}, u8"face-concerned", 3, 26, 102, Lfg(8), EcVersion::NONE },   // 22
+{ {}, u8"face-negative", 3, 8, 128, Lfg(8), EcVersion::NONE },   // 23
+{ {}, u8"face-costume", 3, 8, 136, Lfg(8), EcVersion::NONE },   // 24
+{ {}, u8"cat-face", 3, 9, 144, Lfg(8), EcVersion::NONE },   // 25
+{ {}, u8"monkey-face", 3, 3, 153, Lfg(8), EcVersion::NONE },   // 26
+{ {}, u8"heart", 3, 25, 156, Lfg(8), EcVersion::NONE },   // 27
+{ {}, u8"emotion", 3, 14, 181, Lfg(8), EcVersion::NONE },   // 28
 { U"\U0001F600", u8"grinning face", 13, 0, -1, Lfg(1), EcVersion::E1_0 },   // 29
 { U"\U0001F603", u8"grinning face with big eyes", 13, 0, -1, Lfg(1), EcVersion::E0_6 },   // 30
 { U"\U0001F604", u8"grinning face with smiling eyes", 13, 0, -1, Lfg(1), EcVersion::E0_6 },   // 31
@@ -198,22 +198,22 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F5EF\uFE0F", u8"right anger bubble", 28, 0, -1, Lfg(1), EcVersion::E0_7 },   // 192
 { U"\U0001F4AD", u8"thought balloon", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 193
 { U"\U0001F4A4", u8"ZZZ", 28, 0, -1, Lfg(1), EcVersion::E0_6 },   // 194
-{ {}, u8"hand-fingers-open", 4, 66, 211, {}, EcVersion::NONE },   // 195
-{ {}, u8"hand-fingers-partial", 4, 54, 277, {}, EcVersion::NONE },   // 196
-{ {}, u8"hand-single-finger", 4, 42, 331, {}, EcVersion::NONE },   // 197
-{ {}, u8"hand-fingers-closed", 4, 36, 373, {}, EcVersion::NONE },   // 198
-{ {}, u8"hands", 4, 62, 409, {}, EcVersion::NONE },   // 199
-{ {}, u8"hand-prop", 4, 18, 471, {}, EcVersion::NONE },   // 200
-{ {}, u8"body-parts", 4, 48, 489, {}, EcVersion::NONE },   // 201
-{ {}, u8"person", 4, 168, 537, {}, EcVersion::NONE },   // 202
-{ {}, u8"person-gesture", 4, 180, 705, {}, EcVersion::NONE },   // 203
-{ {}, u8"person-role", 4, 492, 885, {}, EcVersion::NONE },   // 204
-{ {}, u8"person-fantasy", 4, 157, 1377, {}, EcVersion::NONE },   // 205
-{ {}, u8"person-activity", 4, 219, 1534, {}, EcVersion::NONE },   // 206
-{ {}, u8"person-sport", 4, 233, 1753, {}, EcVersion::NONE },   // 207
-{ {}, u8"person-resting", 4, 30, 1986, {}, EcVersion::NONE },   // 208
-{ {}, u8"family", 4, 338, 2016, {}, EcVersion::NONE },   // 209
-{ {}, u8"person-symbol", 4, 5, 2354, {}, EcVersion::NONE },   // 210
+{ {}, u8"hand-fingers-open", 4, 66, 211, Lfg(8), EcVersion::NONE },   // 195
+{ {}, u8"hand-fingers-partial", 4, 54, 277, Lfg(8), EcVersion::NONE },   // 196
+{ {}, u8"hand-single-finger", 4, 42, 331, Lfg(8), EcVersion::NONE },   // 197
+{ {}, u8"hand-fingers-closed", 4, 36, 373, Lfg(8), EcVersion::NONE },   // 198
+{ {}, u8"hands", 4, 62, 409, Lfg(8), EcVersion::NONE },   // 199
+{ {}, u8"hand-prop", 4, 18, 471, Lfg(8), EcVersion::NONE },   // 200
+{ {}, u8"body-parts", 4, 48, 489, Lfg(8), EcVersion::NONE },   // 201
+{ {}, u8"person", 4, 168, 537, Lfg(8), EcVersion::NONE },   // 202
+{ {}, u8"person-gesture", 4, 180, 705, Lfg(8), EcVersion::NONE },   // 203
+{ {}, u8"person-role", 4, 492, 885, Lfg(8), EcVersion::NONE },   // 204
+{ {}, u8"person-fantasy", 4, 157, 1377, Lfg(8), EcVersion::NONE },   // 205
+{ {}, u8"person-activity", 4, 219, 1534, Lfg(8), EcVersion::NONE },   // 206
+{ {}, u8"person-sport", 4, 233, 1753, Lfg(8), EcVersion::NONE },   // 207
+{ {}, u8"person-resting", 4, 30, 1986, Lfg(8), EcVersion::NONE },   // 208
+{ {}, u8"family", 4, 338, 2016, Lfg(8), EcVersion::NONE },   // 209
+{ {}, u8"person-symbol", 4, 5, 2354, Lfg(8), EcVersion::NONE },   // 210
 { U"\U0001F44B", u8"waving hand", 195, 0, -1, Lfg(1), EcVersion::E0_6 },   // 211
 { U"\U0001F44B\U0001F3FB", u8"waving hand: light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 212
 { U"\U0001F44B\U0001F3FC", u8"waving hand: medium-light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 213
@@ -2362,8 +2362,8 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F465", u8"busts in silhouette", 210, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2356
 { U"\U0001FAC2", u8"people hugging", 210, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2357
 { U"\U0001F463", u8"footprints", 210, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2358
-{ {}, u8"skin-tone", 5, 5, 2361, {}, EcVersion::NONE },   // 2359
-{ {}, u8"hair-style", 5, 4, 2366, {}, EcVersion::NONE },   // 2360
+{ {}, u8"skin-tone", 5, 5, 2361, Lfg(8), EcVersion::NONE },   // 2359
+{ {}, u8"hair-style", 5, 4, 2366, Lfg(8), EcVersion::NONE },   // 2360
 { U"\U0001F3FB", u8"light skin tone", 2359, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2361
 { U"\U0001F3FC", u8"medium-light skin tone", 2359, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2362
 { U"\U0001F3FD", u8"medium skin tone", 2359, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2363
@@ -2373,14 +2373,14 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F9B1", u8"curly hair", 2360, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2367
 { U"\U0001F9B3", u8"white hair", 2360, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2368
 { U"\U0001F9B2", u8"bald", 2360, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2369
-{ {}, u8"animal-mammal", 6, 66, 2378, {}, EcVersion::NONE },   // 2370
-{ {}, u8"animal-bird", 6, 21, 2444, {}, EcVersion::NONE },   // 2371
-{ {}, u8"animal-amphibian", 6, 1, 2465, Lfg(2), EcVersion::NONE },   // 2372
-{ {}, u8"animal-reptile", 6, 8, 2466, {}, EcVersion::NONE },   // 2373
-{ {}, u8"animal-marine", 6, 12, 2474, {}, EcVersion::NONE },   // 2374
-{ {}, u8"animal-bug", 6, 16, 2486, {}, EcVersion::NONE },   // 2375
-{ {}, u8"plant-flower", 6, 12, 2502, {}, EcVersion::NONE },   // 2376
-{ {}, u8"plant-other", 6, 16, 2514, {}, EcVersion::NONE },   // 2377
+{ {}, u8"animal-mammal", 6, 66, 2378, Lfg(8), EcVersion::NONE },   // 2370
+{ {}, u8"animal-bird", 6, 21, 2444, Lfg(8), EcVersion::NONE },   // 2371
+{ {}, u8"animal-amphibian", 6, 1, 2465, Lfg(10), EcVersion::NONE },   // 2372
+{ {}, u8"animal-reptile", 6, 8, 2466, Lfg(8), EcVersion::NONE },   // 2373
+{ {}, u8"animal-marine", 6, 12, 2474, Lfg(8), EcVersion::NONE },   // 2374
+{ {}, u8"animal-bug", 6, 16, 2486, Lfg(8), EcVersion::NONE },   // 2375
+{ {}, u8"plant-flower", 6, 12, 2502, Lfg(8), EcVersion::NONE },   // 2376
+{ {}, u8"plant-other", 6, 16, 2514, Lfg(8), EcVersion::NONE },   // 2377
 { U"\U0001F435", u8"monkey face", 2370, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2378
 { U"\U0001F412", u8"monkey", 2370, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2379
 { U"\U0001F98D", u8"gorilla", 2370, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2380
@@ -2533,14 +2533,14 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001FAB9", u8"empty nest", 2377, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2527
 { U"\U0001FABA", u8"nest with eggs", 2377, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2528
 { U"\U0001F344", u8"mushroom", 2377, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2529
-{ {}, u8"food-fruit", 7, 19, 2538, {}, EcVersion::NONE },   // 2530
-{ {}, u8"food-vegetable", 7, 17, 2557, {}, EcVersion::NONE },   // 2531
-{ {}, u8"food-prepared", 7, 34, 2574, {}, EcVersion::NONE },   // 2532
-{ {}, u8"food-asian", 7, 17, 2608, {}, EcVersion::NONE },   // 2533
-{ {}, u8"food-marine", 7, 5, 2625, {}, EcVersion::NONE },   // 2534
-{ {}, u8"food-sweet", 7, 14, 2630, {}, EcVersion::NONE },   // 2535
-{ {}, u8"drink", 7, 20, 2644, {}, EcVersion::NONE },   // 2536
-{ {}, u8"dishware", 7, 7, 2664, {}, EcVersion::NONE },   // 2537
+{ {}, u8"food-fruit", 7, 19, 2538, Lfg(8), EcVersion::NONE },   // 2530
+{ {}, u8"food-vegetable", 7, 17, 2557, Lfg(8), EcVersion::NONE },   // 2531
+{ {}, u8"food-prepared", 7, 34, 2574, Lfg(8), EcVersion::NONE },   // 2532
+{ {}, u8"food-asian", 7, 17, 2608, Lfg(8), EcVersion::NONE },   // 2533
+{ {}, u8"food-marine", 7, 5, 2625, Lfg(8), EcVersion::NONE },   // 2534
+{ {}, u8"food-sweet", 7, 14, 2630, Lfg(8), EcVersion::NONE },   // 2535
+{ {}, u8"drink", 7, 20, 2644, Lfg(8), EcVersion::NONE },   // 2536
+{ {}, u8"dishware", 7, 7, 2664, Lfg(8), EcVersion::NONE },   // 2537
 { U"\U0001F347", u8"grapes", 2530, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2538
 { U"\U0001F348", u8"melon", 2530, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2539
 { U"\U0001F349", u8"watermelon", 2530, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2540
@@ -2674,17 +2674,17 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F52A", u8"kitchen knife", 2537, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2668
 { U"\U0001FAD9", u8"jar", 2537, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2669
 { U"\U0001F3FA", u8"amphora", 2537, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2670
-{ {}, u8"place-map", 8, 7, 2682, {}, EcVersion::NONE },   // 2671
-{ {}, u8"place-geographic", 8, 9, 2689, {}, EcVersion::NONE },   // 2672
-{ {}, u8"place-building", 8, 27, 2698, {}, EcVersion::NONE },   // 2673
-{ {}, u8"place-religious", 8, 6, 2725, {}, EcVersion::NONE },   // 2674
-{ {}, u8"place-other", 8, 17, 2731, {}, EcVersion::NONE },   // 2675
-{ {}, u8"transport-ground", 8, 50, 2748, {}, EcVersion::NONE },   // 2676
-{ {}, u8"transport-water", 8, 9, 2798, {}, EcVersion::NONE },   // 2677
-{ {}, u8"transport-air", 8, 13, 2807, {}, EcVersion::NONE },   // 2678
-{ {}, u8"hotel", 8, 2, 2820, {}, EcVersion::NONE },   // 2679
-{ {}, u8"time", 8, 31, 2822, {}, EcVersion::NONE },   // 2680
-{ {}, u8"sky & weather", 8, 47, 2853, {}, EcVersion::NONE },   // 2681
+{ {}, u8"place-map", 8, 7, 2682, Lfg(8), EcVersion::NONE },   // 2671
+{ {}, u8"place-geographic", 8, 9, 2689, Lfg(8), EcVersion::NONE },   // 2672
+{ {}, u8"place-building", 8, 27, 2698, Lfg(8), EcVersion::NONE },   // 2673
+{ {}, u8"place-religious", 8, 6, 2725, Lfg(8), EcVersion::NONE },   // 2674
+{ {}, u8"place-other", 8, 17, 2731, Lfg(8), EcVersion::NONE },   // 2675
+{ {}, u8"transport-ground", 8, 50, 2748, Lfg(8), EcVersion::NONE },   // 2676
+{ {}, u8"transport-water", 8, 9, 2798, Lfg(8), EcVersion::NONE },   // 2677
+{ {}, u8"transport-air", 8, 13, 2807, Lfg(8), EcVersion::NONE },   // 2678
+{ {}, u8"hotel", 8, 2, 2820, Lfg(8), EcVersion::NONE },   // 2679
+{ {}, u8"time", 8, 31, 2822, Lfg(8), EcVersion::NONE },   // 2680
+{ {}, u8"sky & weather", 8, 47, 2853, Lfg(8), EcVersion::NONE },   // 2681
 { U"\U0001F30D", u8"globe showing Europe-Africa", 2671, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2682
 { U"\U0001F30E", u8"globe showing Americas", 2671, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2683
 { U"\U0001F30F", u8"globe showing Asia-Australia", 2671, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2684
@@ -2903,11 +2903,11 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F525", u8"fire", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2897
 { U"\U0001F4A7", u8"droplet", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2898
 { U"\U0001F30A", u8"water wave", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2899
-{ {}, u8"event", 9, 21, 2905, {}, EcVersion::NONE },   // 2900
-{ {}, u8"award-medal", 9, 6, 2926, {}, EcVersion::NONE },   // 2901
-{ {}, u8"sport", 9, 27, 2932, {}, EcVersion::NONE },   // 2902
-{ {}, u8"game", 9, 24, 2959, {}, EcVersion::NONE },   // 2903
-{ {}, u8"arts & crafts", 9, 7, 2983, {}, EcVersion::NONE },   // 2904
+{ {}, u8"event", 9, 21, 2905, Lfg(8), EcVersion::NONE },   // 2900
+{ {}, u8"award-medal", 9, 6, 2926, Lfg(8), EcVersion::NONE },   // 2901
+{ {}, u8"sport", 9, 27, 2932, Lfg(8), EcVersion::NONE },   // 2902
+{ {}, u8"game", 9, 24, 2959, Lfg(8), EcVersion::NONE },   // 2903
+{ {}, u8"arts & crafts", 9, 7, 2983, Lfg(8), EcVersion::NONE },   // 2904
 { U"\U0001F383", u8"jack-o-lantern", 2900, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2905
 { U"\U0001F384", u8"Christmas tree", 2900, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2906
 { U"\U0001F386", u8"fireworks", 2900, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2907
@@ -2993,24 +2993,24 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001FAA1", u8"sewing needle", 2904, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2987
 { U"\U0001F9F6", u8"yarn", 2904, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2988
 { U"\U0001FAA2", u8"knot", 2904, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2989
-{ {}, u8"clothing", 10, 47, 3008, {}, EcVersion::NONE },   // 2990
-{ {}, u8"sound", 10, 9, 3055, {}, EcVersion::NONE },   // 2991
-{ {}, u8"music", 10, 9, 3064, {}, EcVersion::NONE },   // 2992
-{ {}, u8"musical-instrument", 10, 11, 3073, {}, EcVersion::NONE },   // 2993
-{ {}, u8"phone", 10, 6, 3084, {}, EcVersion::NONE },   // 2994
-{ {}, u8"computer", 10, 14, 3090, {}, EcVersion::NONE },   // 2995
-{ {}, u8"light & video", 10, 16, 3104, {}, EcVersion::NONE },   // 2996
-{ {}, u8"book-paper", 10, 17, 3120, {}, EcVersion::NONE },   // 2997
-{ {}, u8"money", 10, 10, 3137, {}, EcVersion::NONE },   // 2998
-{ {}, u8"mail", 10, 13, 3147, {}, EcVersion::NONE },   // 2999
-{ {}, u8"writing", 10, 7, 3160, {}, EcVersion::NONE },   // 3000
-{ {}, u8"office", 10, 23, 3167, {}, EcVersion::NONE },   // 3001
-{ {}, u8"lock", 10, 6, 3190, {}, EcVersion::NONE },   // 3002
-{ {}, u8"tool", 10, 25, 3196, {}, EcVersion::NONE },   // 3003
-{ {}, u8"science", 10, 7, 3221, {}, EcVersion::NONE },   // 3004
-{ {}, u8"medical", 10, 7, 3228, {}, EcVersion::NONE },   // 3005
-{ {}, u8"household", 10, 25, 3235, {}, EcVersion::NONE },   // 3006
-{ {}, u8"other-object", 10, 9, 3260, {}, EcVersion::NONE },   // 3007
+{ {}, u8"clothing", 10, 47, 3008, Lfg(8), EcVersion::NONE },   // 2990
+{ {}, u8"sound", 10, 9, 3055, Lfg(8), EcVersion::NONE },   // 2991
+{ {}, u8"music", 10, 9, 3064, Lfg(8), EcVersion::NONE },   // 2992
+{ {}, u8"musical-instrument", 10, 11, 3073, Lfg(8), EcVersion::NONE },   // 2993
+{ {}, u8"phone", 10, 6, 3084, Lfg(8), EcVersion::NONE },   // 2994
+{ {}, u8"computer", 10, 14, 3090, Lfg(8), EcVersion::NONE },   // 2995
+{ {}, u8"light & video", 10, 16, 3104, Lfg(8), EcVersion::NONE },   // 2996
+{ {}, u8"book-paper", 10, 17, 3120, Lfg(8), EcVersion::NONE },   // 2997
+{ {}, u8"money", 10, 10, 3137, Lfg(8), EcVersion::NONE },   // 2998
+{ {}, u8"mail", 10, 13, 3147, Lfg(8), EcVersion::NONE },   // 2999
+{ {}, u8"writing", 10, 7, 3160, Lfg(8), EcVersion::NONE },   // 3000
+{ {}, u8"office", 10, 23, 3167, Lfg(8), EcVersion::NONE },   // 3001
+{ {}, u8"lock", 10, 6, 3190, Lfg(8), EcVersion::NONE },   // 3002
+{ {}, u8"tool", 10, 25, 3196, Lfg(8), EcVersion::NONE },   // 3003
+{ {}, u8"science", 10, 7, 3221, Lfg(8), EcVersion::NONE },   // 3004
+{ {}, u8"medical", 10, 7, 3228, Lfg(8), EcVersion::NONE },   // 3005
+{ {}, u8"household", 10, 25, 3235, Lfg(8), EcVersion::NONE },   // 3006
+{ {}, u8"other-object", 10, 9, 3260, Lfg(8), EcVersion::NONE },   // 3007
 { U"\U0001F453", u8"glasses", 2990, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3008
 { U"\U0001F576\uFE0F", u8"sunglasses", 2990, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3009
 { U"\U0001F97D", u8"goggles", 2990, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3010
@@ -3272,20 +3272,20 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F5FF", u8"moai", 3007, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3266
 { U"\U0001FAA7", u8"placard", 3007, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3267
 { U"\U0001FAAA", u8"identification card", 3007, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3268
-{ {}, u8"transport-sign", 11, 13, 3283, {}, EcVersion::NONE },   // 3269
-{ {}, u8"warning", 11, 13, 3296, {}, EcVersion::NONE },   // 3270
-{ {}, u8"arrow", 11, 21, 3309, {}, EcVersion::NONE },   // 3271
-{ {}, u8"religion", 11, 13, 3330, {}, EcVersion::NONE },   // 3272
-{ {}, u8"zodiac", 11, 13, 3343, {}, EcVersion::NONE },   // 3273
-{ {}, u8"av-symbol", 11, 25, 3356, {}, EcVersion::NONE },   // 3274
-{ {}, u8"gender", 11, 3, 3381, {}, EcVersion::NONE },   // 3275
-{ {}, u8"math", 11, 6, 3384, {}, EcVersion::NONE },   // 3276
-{ {}, u8"punctuation", 11, 7, 3390, {}, EcVersion::NONE },   // 3277
-{ {}, u8"currency", 11, 2, 3397, {}, EcVersion::NONE },   // 3278
-{ {}, u8"other-symbol", 11, 21, 3399, {}, EcVersion::NONE },   // 3279
-{ {}, u8"keycap", 11, 13, 3420, {}, EcVersion::NONE },   // 3280
-{ {}, u8"alphanum", 11, 39, 3433, {}, EcVersion::NONE },   // 3281
-{ {}, u8"geometric", 11, 34, 3472, {}, EcVersion::NONE },   // 3282
+{ {}, u8"transport-sign", 11, 13, 3283, Lfg(8), EcVersion::NONE },   // 3269
+{ {}, u8"warning", 11, 13, 3296, Lfg(8), EcVersion::NONE },   // 3270
+{ {}, u8"arrow", 11, 21, 3309, Lfg(8), EcVersion::NONE },   // 3271
+{ {}, u8"religion", 11, 13, 3330, Lfg(8), EcVersion::NONE },   // 3272
+{ {}, u8"zodiac", 11, 13, 3343, Lfg(8), EcVersion::NONE },   // 3273
+{ {}, u8"av-symbol", 11, 25, 3356, Lfg(8), EcVersion::NONE },   // 3274
+{ {}, u8"gender", 11, 3, 3381, Lfg(8), EcVersion::NONE },   // 3275
+{ {}, u8"math", 11, 6, 3384, Lfg(8), EcVersion::NONE },   // 3276
+{ {}, u8"punctuation", 11, 7, 3390, Lfg(8), EcVersion::NONE },   // 3277
+{ {}, u8"currency", 11, 2, 3397, Lfg(8), EcVersion::NONE },   // 3278
+{ {}, u8"other-symbol", 11, 21, 3399, Lfg(8), EcVersion::NONE },   // 3279
+{ {}, u8"keycap", 11, 13, 3420, Lfg(8), EcVersion::NONE },   // 3280
+{ {}, u8"alphanum", 11, 39, 3433, Lfg(8), EcVersion::NONE },   // 3281
+{ {}, u8"geometric", 11, 34, 3472, Lfg(8), EcVersion::NONE },   // 3282
 { U"\U0001F3E7", u8"ATM sign", 3269, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3283
 { U"\U0001F6AE", u8"litter in bin sign", 3269, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3284
 { U"\U0001F6B0", u8"potable water", 3269, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3285
@@ -3509,9 +3509,9 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F518", u8"radio button", 3282, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3503
 { U"\U0001F533", u8"white square button", 3282, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3504
 { U"\U0001F532", u8"black square button", 3282, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3505
-{ {}, u8"flag", 12, 8, 3509, {}, EcVersion::NONE },   // 3506
-{ {}, u8"country-flag", 12, 258, 3517, {}, EcVersion::NONE },   // 3507
-{ {}, u8"subdivision-flag", 12, 3, 3775, {}, EcVersion::NONE },   // 3508
+{ {}, u8"flag", 12, 8, 3509, Lfg(8), EcVersion::NONE },   // 3506
+{ {}, u8"country-flag", 12, 258, 3517, Lfg(8), EcVersion::NONE },   // 3507
+{ {}, u8"subdivision-flag", 12, 3, 3775, Lfg(8), EcVersion::NONE },   // 3508
 { U"\U0001F3C1", u8"chequered flag", 3506, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3509
 { U"\U0001F6A9", u8"triangular flag", 3506, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3510
 { U"\U0001F38C", u8"crossed flags", 3506, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3511

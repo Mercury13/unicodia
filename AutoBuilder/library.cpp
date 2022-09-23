@@ -88,6 +88,7 @@ namespace {
         auto top = crop(x, size);
         auto& newItem = top->children.emplace_back();
         newItem.name = str::toU8sv(name);
+        newItem.flags |= uc::Lfg::TRANSLATE;
         if (NO_TILE.contains(newItem.name))
             newItem.flags |= uc::Lfg::NO_TILE;
         x.push(&newItem);
@@ -111,6 +112,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
 
     EmojiData r;
     r.root.name = u8"Emoji";
+    r.root.flags |= uc::Lfg::TRANSLATE;
 
     std::stack<Node*> treePath;
     treePath.push(&r.root);

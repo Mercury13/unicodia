@@ -7031,6 +7031,454 @@
      <orig>U: необычная структура</orig>
      <transl>U: unusual structure</transl>
     </text>
+    <text id="Emoji">
+     <orig>Эмодзи</orig>
+     <transl>Emoji</transl>
+    </text>
+    <text id="Smileys &amp; Emotion">
+     <orig>Смайлики и эмоции</orig>
+     <transl>Smileys and emotions</transl>
+    </text>
+    <text id="face-smiling">
+     <orig>Колобки / улыбающиеся</orig>
+     <transl>Face / smiling</transl>
+    </text>
+    <text id="face-affection">
+     <orig>Колобки / симпатия</orig>
+     <transl>Face / affection</transl>
+    </text>
+    <text id="face-tongue">
+     <orig>Колобки / язык</orig>
+     <transl>Face / tongue</transl>
+    </text>
+    <text id="face-hand">
+     <orig>Колобки / рука</orig>
+     <transl>Face / hand</transl>
+    </text>
+    <text id="face-neutral-skeptical">
+     <orig>Колобки / нейтральные и скептические</orig>
+     <transl>Face / neutral and skeptical</transl>
+    </text>
+    <text id="face-sleepy">
+     <orig>Колобки / сонные</orig>
+     <transl>Face / sleepy</transl>
+    </text>
+    <text id="face-unwell">
+     <orig>Колобки / нехорошо</orig>
+     <transl>Face / unwell</transl>
+    </text>
+    <text id="face-hat">
+     <orig>Колобки / шляпа</orig>
+     <transl>Face / hat</transl>
+    </text>
+    <text id="face-glasses">
+     <orig>Колобки / очки</orig>
+     <transl>Face / glasses</transl>
+    </text>
+    <text id="face-concerned">
+     <orig>Колобки / озабоченные</orig>
+     <transl>Face / concerned</transl>
+    </text>
+    <text id="face-negative">
+     <orig>Колобки / рассерженные</orig>
+     <transl>Face / negative</transl>
+    </text>
+    <text id="face-costume">
+     <orig>Маски</orig>
+     <transl>Masks</transl>
+    </text>
+    <text id="cat-face">
+     <orig>Коты</orig>
+     <transl>Cats</transl>
+    </text>
+    <text id="monkey-face">
+     <orig>Обезьяны</orig>
+     <transl>Monkeys</transl>
+    </text>
+    <text id="heart">
+     <orig>Сердца</orig>
+     <transl>Hearts</transl>
+    </text>
+    <text id="emotion">
+     <orig>Символы эмоций</orig>
+     <transl>Emotion symbols</transl>
+    </text>
+    <text id="People &amp; Body">
+     <orig>Люди и тело</orig>
+     <transl>People and body</transl>
+    </text>
+    <text id="hand-fingers-open">
+     <orig>Рука / раскрытая</orig>
+     <transl>Hand / open</transl>
+    </text>
+    <text id="hand-fingers-partial">
+     <orig>Рука / полураскрытая</orig>
+     <transl>Hand / partly open</transl>
+    </text>
+    <text id="hand-single-finger">
+     <orig>Рука / один палец</orig>
+     <transl>Hand / single finger</transl>
+    </text>
+    <text id="hand-fingers-closed">
+     <orig>Рука / сжатая</orig>
+     <transl>Hand / closed</transl>
+    </text>
+    <text id="hands">
+     <orig>Две руки</orig>
+     <transl>Both hands</transl>
+    </text>
+    <text id="hand-prop">
+     <orig>Рука с предметами</orig>
+     <transl>Hand with props</transl>
+    </text>
+    <text id="body-parts">
+     <orig>Части тела</orig>
+     <transl>Body parts</transl>
+    </text>
+    <text id="person">
+     <orig>Человек</orig>
+     <transl>Person</transl>
+    </text>
+    <text id="person-gesture">
+     <orig>Человек / жест</orig>
+     <transl>Person / gesture</transl>
+    </text>
+    <text id="person-role">
+     <orig>Человек / профессии и роли</orig>
+     <transl>Person / professions and roles</transl>
+    </text>
+    <text id="person-fantasy">
+     <orig>Человек / фантастические</orig>
+     <transl>Person / fantasy</transl>
+    </text>
+    <text id="person-activity">
+     <orig>Человек / деятельность</orig>
+     <transl>Person / activity</transl>
+    </text>
+    <text id="person-sport">
+     <orig>Человек / спорт</orig>
+     <transl>Person / sport</transl>
+    </text>
+    <text id="person-resting">
+     <orig>Человек / отдых</orig>
+     <transl>Person / resting</transl>
+    </text>
+    <text id="family">
+     <orig>Семья</orig>
+     <transl>Family</transl>
+    </text>
+    <text id="person-symbol">
+     <orig>Человек / силуэты</orig>
+     <transl>Person / silhouettes</transl>
+    </text>
+    <text id="Component">
+     <orig>Компоненты</orig>
+     <transl>Components</transl>
+    </text>
+    <text id="skin-tone">
+     <orig>Цвет кожи</orig>
+     <transl>Skin tone</transl>
+    </text>
+    <text id="hair-style">
+     <orig>Причёска</orig>
+     <transl>Hair style</transl>
+    </text>
+    <text id="Animals &amp; Nature">
+     <orig>Животные и природа</orig>
+     <transl>Animals and nature</transl>
+    </text>
+    <text id="animal-mammal">
+     <orig>Млекопитающие</orig>
+     <transl>Mammals</transl>
+    </text>
+    <text id="animal-bird">
+     <orig>Птицы</orig>
+     <transl>Birds</transl>
+    </text>
+    <text id="animal-amphibian">
+     <orig>Земноводные</orig>
+     <transl>Amphibians</transl>
+    </text>
+    <text id="animal-reptile">
+     <orig>Пресмыкающиеся</orig>
+     <transl>Reptiles</transl>
+    </text>
+    <text id="animal-marine">
+     <orig>Морские животные</orig>
+     <transl>Marine animals</transl>
+    </text>
+    <text id="animal-bug">
+     <orig>Насекомые</orig>
+     <transl>Bugs</transl>
+    </text>
+    <text id="plant-flower">
+     <orig>Цветы</orig>
+     <transl>Flowers</transl>
+    </text>
+    <text id="plant-other">
+     <orig>Прочие растения</orig>
+     <transl>Other plants</transl>
+    </text>
+    <text id="Food &amp; Drink">
+     <orig>Еда и напитки</orig>
+     <transl>Food and drinks</transl>
+    </text>
+    <text id="food-fruit">
+     <orig>Фрукты</orig>
+     <transl>Fruit</transl>
+    </text>
+    <text id="food-vegetable">
+     <orig>Овощи</orig>
+     <transl>Vegetable</transl>
+    </text>
+    <text id="food-prepared">
+     <orig>Приготовленная еда</orig>
+     <transl>Prepared food</transl>
+    </text>
+    <text id="food-asian">
+     <orig>Восточная кухня</orig>
+     <transl>Asian food</transl>
+    </text>
+    <text id="food-marine">
+     <orig>Морепродукты</orig>
+     <transl>Marine food</transl>
+    </text>
+    <text id="food-sweet">
+     <orig>Сладости</orig>
+     <transl>Sweets</transl>
+    </text>
+    <text id="drink">
+     <orig>Напитки</orig>
+     <transl>Drints</transl>
+    </text>
+    <text id="dishware">
+     <orig>Посуда</orig>
+     <transl>Dishware</transl>
+    </text>
+    <text id="Travel &amp; Places">
+     <orig>Места и путешествия</orig>
+     <transl>Travel and places</transl>
+    </text>
+    <text id="place-map">
+     <orig>Места / карты</orig>
+     <transl>Place / maps</transl>
+    </text>
+    <text id="place-geographic">
+     <orig>Места / географические зоны</orig>
+     <transl>Place / geographic zones</transl>
+    </text>
+    <text id="place-building">
+     <orig>Места / постройки</orig>
+     <transl>Place / buildings</transl>
+    </text>
+    <text id="place-religious">
+     <orig>Места / религиозные</orig>
+     <transl>Place / religious</transl>
+    </text>
+    <text id="place-other">
+     <orig>Места / прочие</orig>
+     <transl>Place / other</transl>
+    </text>
+    <text id="transport-ground">
+     <orig>Транспорт / наземный</orig>
+     <transl>Transport / ground</transl>
+    </text>
+    <text id="transport-water">
+     <orig>Транспорт / водный</orig>
+     <transl>Transport / water</transl>
+    </text>
+    <text id="transport-air">
+     <orig>Транспорт / воздушный</orig>
+     <transl>Transport / air</transl>
+    </text>
+    <text id="hotel">
+     <orig>Гостиница</orig>
+     <transl>Hotel</transl>
+    </text>
+    <text id="time">
+     <orig>Время</orig>
+     <transl>Time</transl>
+    </text>
+    <text id="sky &amp; weather">
+     <orig>Небо и погода</orig>
+     <transl>Sky and weather</transl>
+    </text>
+    <text id="Activities">
+     <orig>Деятельность</orig>
+     <transl>Activities</transl>
+    </text>
+    <text id="event">
+     <orig>Праздники и мероприятия</orig>
+     <transl>Holidays and events</transl>
+    </text>
+    <text id="award-medal">
+     <orig>Награды</orig>
+     <transl>Awards</transl>
+    </text>
+    <text id="sport">
+     <orig>Спорт</orig>
+     <transl>Sport</transl>
+    </text>
+    <text id="game">
+     <orig>Игры</orig>
+     <transl>Games</transl>
+    </text>
+    <text id="arts &amp; crafts">
+     <orig>Искусство и хобби</orig>
+     <transl>Arts and crafts</transl>
+    </text>
+    <text id="Objects">
+     <orig>Предметы</orig>
+     <transl>Objects</transl>
+    </text>
+    <text id="clothing">
+     <orig>Одежда</orig>
+     <transl>Clothing</transl>
+    </text>
+    <text id="sound">
+     <orig>Звук</orig>
+     <transl>Sound</transl>
+    </text>
+    <text id="music">
+     <orig>Музыка</orig>
+     <transl>Music</transl>
+    </text>
+    <text id="musical-instrument">
+     <orig>Музыкальные инструменты</orig>
+     <transl>Musical instruments</transl>
+    </text>
+    <text id="phone">
+     <orig>Телефон</orig>
+     <transl>Phone</transl>
+    </text>
+    <text id="computer">
+     <orig>Компьютер</orig>
+     <transl>Computer</transl>
+    </text>
+    <text id="light &amp; video">
+     <orig>Освещение, фото и видео</orig>
+     <transl>Lights, photo and video</transl>
+    </text>
+    <text id="book-paper">
+     <orig>Книги и бумаги</orig>
+     <transl>Books and papers</transl>
+    </text>
+    <text id="money">
+     <orig>Деньги</orig>
+     <transl>Money</transl>
+    </text>
+    <text id="mail">
+     <orig>Почта</orig>
+     <transl>Mail</transl>
+    </text>
+    <text id="writing">
+     <orig>Письменные принадлежности</orig>
+     <transl>Writing appliances</transl>
+    </text>
+    <text id="office">
+     <orig>Канцелярские товары</orig>
+     <transl>Office</transl>
+    </text>
+    <text id="lock">
+     <orig>Замки и ключи</orig>
+     <transl>Locks and keys</transl>
+    </text>
+    <text id="tool">
+     <orig>Инструменты</orig>
+     <transl>Tools</transl>
+    </text>
+    <text id="science">
+     <orig>Научная аппаратура</orig>
+     <transl>Science instruments</transl>
+    </text>
+    <text id="medical">
+     <orig>Медицина</orig>
+     <transl>Medical</transl>
+    </text>
+    <text id="household">
+     <orig>Хозяйство</orig>
+     <transl>Household</transl>
+    </text>
+    <text id="other-object">
+     <orig>Прочие предметы</orig>
+     <transl>Other objects</transl>
+    </text>
+    <text id="Symbols">
+     <orig>Символы</orig>
+     <transl>Symbols</transl>
+    </text>
+    <text id="transport-sign">
+     <orig>Пешеходная навигация</orig>
+     <transl>Pedestrian navigation</transl>
+    </text>
+    <text id="warning">
+     <orig>Предупреждающие знаки</orig>
+     <transl>Warning signs</transl>
+    </text>
+    <text id="arrow">
+     <orig>Стрелки</orig>
+     <transl>Arrows</transl>
+    </text>
+    <text id="religion">
+     <orig>Религиозные</orig>
+     <transl>Religion</transl>
+    </text>
+    <text id="zodiac">
+     <orig>Зодиак</orig>
+     <transl>Zodiac</transl>
+    </text>
+    <text id="av-symbol">
+     <orig>Плеер, телефон, компьютер</orig>
+     <transl>Player, phone, computer</transl>
+    </text>
+    <text id="gender">
+     <orig>Пол</orig>
+     <transl>Gender</transl>
+    </text>
+    <text id="math">
+     <orig>Математика</orig>
+     <transl>Mathematical</transl>
+    </text>
+    <text id="punctuation">
+     <orig>Знаки препинания</orig>
+     <transl>Punctuation</transl>
+    </text>
+    <text id="currency">
+     <orig>Валютные</orig>
+     <transl>Currency</transl>
+    </text>
+    <text id="other-symbol">
+     <orig>Прочие символы</orig>
+     <transl>Other symbols</transl>
+    </text>
+    <text id="keycap">
+     <orig>Кнопки</orig>
+     <transl>Keycaps</transl>
+    </text>
+    <text id="alphanum">
+     <orig>Надписи</orig>
+     <transl>Alphanumeric</transl>
+    </text>
+    <text id="geometric">
+     <orig>Геометрические фигуры</orig>
+     <transl>Geometric figures</transl>
+    </text>
+    <text id="Flags">
+     <orig>Флаги</orig>
+     <transl>Flags</transl>
+    </text>
+    <text id="flag">
+     <orig>Разные флаги</orig>
+     <transl>Misc. flags</transl>
+    </text>
+    <text id="country-flag">
+     <orig>Флаги стран</orig>
+     <transl>Country flags</transl>
+    </text>
+    <text id="subdivision-flag">
+     <orig>Флаги субъектов</orig>
+     <transl>Subdivision flags</transl>
+    </text>
    </group>
   </group>
  </file>
