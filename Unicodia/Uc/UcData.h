@@ -132,29 +132,6 @@ namespace uc {
         SEPARATOR
     };
 
-    enum class EcIndustry
-    {
-        NONE,
-        APPLIANCES,             ///< power, play, volume…
-        ASTROLOGY,
-        ASTRONOMY,
-        BUSINESS,               ///< @, telephone, fax…
-        CHEMISTRY,              ///< incl. alchemy
-        COMPUTING,              ///< incl. \, box-drawing
-        ELECTRIC,
-        MACHINEBUILDING,
-        MATHS,
-        MATHS_MULTILINE,        ///< multiline formulae and so on
-        MEDICINE,               ///< incl. dentistry
-        MUSIC,
-        NAVIGATION_TRAFFIC,     ///< traffic sings, detours…
-        NAVIGATION_PEDESTRIAN,  ///< navigation in airports, tourist maps…
-        POETRY,
-        RELIGION,
-        SPORT,
-        NN
-    };
-
     enum class EcWritingDir
     {
         NOMATTER,
@@ -303,6 +280,7 @@ namespace uc {
         KHITAN_SMALL,
         KHMER,
         KHOJKI,
+          Z_KHO_1,
         KHUDAWADI,
         KOREAN,
           Z_KOR_1,
