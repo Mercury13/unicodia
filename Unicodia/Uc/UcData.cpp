@@ -2019,7 +2019,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11B00, 0x11B5F, { '?', EcContinent::ASIA, Ifg::MISSING },
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' },
-            EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Deva, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Bhaiksuki OK
     { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
             "Bhaiksuki", { EcScript::Bhks, 0 }, EcScript::Bhks },
