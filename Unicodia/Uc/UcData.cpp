@@ -2281,7 +2281,7 @@ constinit const uc::Block uc::blocks[] {
             "Transport and Map Symbols",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Alchem OK
-    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::EUROPE },
+    { 0x1F700, 0x1F77F, { 0x1F708, EcContinent::NONE },
             "Alchemical Symbols", MyName::INST },
     // Geo shapes ex OK
     { 0x1F780, 0x1F7FF, { 0x1F7B0, EcContinent::NONE },
