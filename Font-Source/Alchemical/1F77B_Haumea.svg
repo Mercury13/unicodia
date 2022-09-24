@@ -3,8 +3,8 @@
 
 <svg
    width="1080"
-   height="1005.2683"
-   viewBox="0 0 1080 1005.2683"
+   height="1000"
+   viewBox="0 0 1080 999.99999"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
@@ -26,8 +26,8 @@
      showgrid="true"
      showguides="true"
      inkscape:zoom="0.754"
-     inkscape:cx="388.59416"
-     inkscape:cy="639.25729"
+     inkscape:cx="710.87533"
+     inkscape:cy="718.83289"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -37,12 +37,12 @@
        type="xygrid"
        id="grid184"
        originx="20"
-       originy="4.9999999" /><sodipodi:guide
-       position="60,480.26831"
+       originy="-9.9999999e-08" /><sodipodi:guide
+       position="60,1155.2683"
        orientation="1,0"
        id="guide2194"
        inkscape:locked="false" /><sodipodi:guide
-       position="540,880.26831"
+       position="540,1555.2683"
        orientation="-1,0"
        id="guide11167"
        inkscape:locked="false"
@@ -52,14 +52,14 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(20,5)"><path
+     transform="translate(20)"><path
        style="fill:none;stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 40.000002,399.35183 H 1000"
        id="path3841" /><circle
        style="opacity:1;fill:none;stroke:#000000;stroke-width:70;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
        id="path11169"
        cx="520"
-       cy="160"
+       cy="165"
        r="130" /><path
        style="fill:none;stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 285.4632,400.26788 c 0,270.2176 -73.63811,565.00044 -245.460338,565.00044"
@@ -70,5 +70,5 @@
        cy="670"
        r="130" /><path
        style="fill:none;stroke:#000000;stroke-width:70;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 754.99823,400.05213 c 0,270.31803 73.4996,565.21042 244.99865,565.21042"
+       d="m 754.99842,400.04857 c 0,270.32122 73.50047,565.21709 245.00157,565.21709"
        id="path16431" /></g></svg>
