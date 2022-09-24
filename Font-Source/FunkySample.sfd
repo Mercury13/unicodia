@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1664015737
+ModificationTime: 1664017486
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -71322,7 +71322,7 @@ EndChar
 StartChar: u1F77F
 Encoding: 128895 128895 601
 Width: 1080
-Flags: WO
+Flags: W
 HStem: -200 70<399.873 670.178> 105 70<558.223 610.545 689.354 923.109> 425 70<469.702 610.298> 730 70<404.338 675.662>
 VStem: 40 70<164.338 435.662> 345 70<229.485 370.265> 665 70<230.028 370.961> 970 70<176.698 440.473>
 TtInstrs:
@@ -71744,7 +71744,8 @@ EndChar
 
 StartChar: u1F776
 Encoding: 128886 128886 604
-Width: 1000
+Width: 1080
+Flags: WO
 HStem: -200 420<155.677 344.323> 380 420<735.677 924.323>
 VStem: 40 420<-84.3228 104.323> 620 420<495.677 684.323>
 TtInstrs:
