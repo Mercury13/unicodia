@@ -31,8 +31,6 @@ short uc::blocksByCode16[CAPACITY >> 4];
 const QString uc::Font::qempty;
 constinit const uc::InputMethods uc::InputMethods::NONE;
 
-constexpr QChar ZWSP(0x200B);
-
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
 
@@ -2425,6 +2423,7 @@ constinit const uc::Term uc::terms[] {
     { "latin1", EcTermCat::ENCODING, u8"Latin-1", { "Block.0080.Text" } },
     { "plane", EcTermCat::ENCODING, u8"plane" },
     { "private", EcTermCat::ENCODING, u8"private-use character" },
+    { "reject", EcTermCat::ENCODING, {} },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
