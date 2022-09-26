@@ -5,6 +5,7 @@
 #include <QRegularExpression>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
+#include <QFile>
 
 FmMain::FmMain(QWidget *parent)
     : QMainWindow(parent)
@@ -18,7 +19,7 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->btStop, &QPushButton::clicked, this, &This::stop);
     connect(netMan.get(), &QNetworkAccessManager::finished, this, &This::requestFinished);
 
-    stop();
+    stopUi();
 }
 
 FmMain::~FmMain()
@@ -45,9 +46,18 @@ void FmMain::prepareTasks()
 }
 
 
+void FmMain::initPaths()
+{
+    QDir currentDir = QDir::current();
+    work.path = currentDir.filePath(ui->edDirectory->text());
+    work.path.mkpath(work.path.absolutePath());
+}
+
+
 void FmMain::start()
 {
     clearConsole();
+    initPaths();
     prepareTasks();
     ui->btStart->setEnabled(false);
     ui->btStop->setEnabled(true);
@@ -76,7 +86,9 @@ bool FmMain::isTaskOk(Task* task)
     if (!task)
         return false;
 
-    /// @todo [urgent] Check for file existence
+    if (work.path.exists(task->fname()))
+        return false;
+
     return true;
 }
 
@@ -100,8 +112,17 @@ void FmMain::tryEnqueueReply()
 
 void FmMain::processReply(const PTask& task, QNetworkReply* reply)
 {
-    if (!work.isOn)
+    if (!work.isOn || !task)
         return;
+
+    int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    if (statusCode != 200) {
+        /// @todo [urgent] print to console
+        return;
+    }
+
+    QFile file(work.path.filePath(task->fname()));
+    file.open(QFile::ReadWrite);
 }
 
 

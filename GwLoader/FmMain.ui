@@ -18,6 +18,24 @@
     <item>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>Directory</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="edDirectory">
+          <property name="text">
+           <string notr="true">GlyphWikiRaw</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QLabel" name="label">
         <property name="text">
          <string>Glyphs to load</string>

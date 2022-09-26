@@ -5,6 +5,7 @@
 
 // Qt
 #include <QMainWindow>
+#include <QDir>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class FmMain; }
@@ -17,6 +18,7 @@ struct Task {
     QString code;
 
     Task(const QString& aCode) : code(aCode) {}
+    QString fname() const { return code + ".svg"; }
 };
 
 using PTask = std::shared_ptr<Task>;
@@ -39,12 +41,14 @@ private:
     struct Work {
         std::atomic<PTask> task;
         std::atomic<bool> isOn = false;
+        QDir path;
     } work;
 
     void prepareTasks();
     void clearConsole();
     void tryEnqueueReply();
     void stopUi();
+    void initPaths();
     void processReply(const PTask& task, QNetworkReply* reply);
     bool isTaskOk(Task* task);
 
