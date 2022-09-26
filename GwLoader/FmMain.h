@@ -51,6 +51,7 @@ private:
     void initPaths();
     void processReply(const PTask& task, QNetworkReply* reply);
     bool isTaskOk(Task* task);
+    void conPrint(const QString& text);
 
 private slots:
     void start();

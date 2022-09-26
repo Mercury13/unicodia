@@ -93,16 +93,30 @@ bool FmMain::isTaskOk(Task* task)
 }
 
 
+void FmMain::conPrint(const QString& text)
+{
+    ui->memoConsole->moveCursor(QTextCursor::End);
+    ui->memoConsole->appendPlainText(text);
+}
+
+
 void FmMain::tryEnqueueReply()
 {
     while (!tasks.empty()) {
         auto task = std::move(tasks.front());
         tasks.pop_front();
         if (isTaskOk(task.get())) {
-            work.task = std::move(task);
+            work.task = task;
+            QNetworkRequest rq("http://en.glyphwiki.org/glyph/u" + task->code.toLower() + ".svg");
+            netMan->get(rq);
+            conPrint(QString("Requesting %1").arg(task->code));
             return;
         } else {
-            /// @todo [urgent] print to console
+            if (!task) {
+                conPrint("Somehow got empty task");
+            } else {
+                conPrint(QString("Skipped %1").arg(task->code));
+            }
         }
     }
     stop();
@@ -115,14 +129,23 @@ void FmMain::processReply(const PTask& task, QNetworkReply* reply)
     if (!work.isOn || !task)
         return;
 
-    int statusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute).toInt();
+    if (!reply->isFinished()) {
+        conPrint("Reply is not finished");
+    }
+
+    auto vStatusCode = reply->attribute(QNetworkRequest::HttpStatusCodeAttribute);
+    int statusCode = vStatusCode.toInt();
     if (statusCode != 200) {
-        /// @todo [urgent] print to console
+        conPrint(QString("Got code %1 on task %2").arg(statusCode).arg(task->code));
         return;
     }
 
+    auto bytes = reply->readAll();
+
     QFile file(work.path.filePath(task->fname()));
     file.open(QFile::ReadWrite);
+    file.write(bytes);
+    conPrint(QString("Wrote %1").arg(task->code));
 }
 
 
@@ -132,4 +155,5 @@ void FmMain::requestFinished(QNetworkReply* reply)
         processReply(task, reply);
     }
     tryEnqueueReply();
+    reply->deleteLater();
 }
