@@ -631,26 +631,6 @@ TEST (Decap, ToneMai)
 
 
 ///
-///  Bug: Tone 24
-///
-TEST (Decap, ToneLong)
-{
-    auto r = decapitalize("PAU CIN HAU RISING TONE LONG");
-    EXPECT_EQ("Pau Cin Hau rising tone Long", r);
-}
-
-
-///
-///  Bug: Tone 25
-///
-TEST (Decap, ToneLongFinal)
-{
-    auto r = decapitalize("PAU CIN HAU MID-LEVEL TONE LONG FINAL");
-    EXPECT_EQ("Pau Cin Hau mid-level tone Long final", r);
-}
-
-
-///
 ///  Bug: Tone 26
 ///
 TEST (Decap, ToneBassa)
