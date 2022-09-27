@@ -1,17 +1,1 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve">
-<g>
-	<polygon style="fill:#FFA000;stroke:#F44336;stroke-width:3;stroke-miterlimit:10;" points="68.27,8.51 84.11,41.67 119.44,9.79 
-		101.38,55.43 121.05,50.12 102.4,76.63 119.43,82.5 102.03,90.77 118.96,119.8 86.77,99.89 79.87,121.43 69.65,98.4 40.65,120.18 
-		49.47,95.33 9.5,103.37 39.42,81.1 7.89,58.4 43.85,61.51 10.6,10.52 64,45.51 	"/>
-	<radialGradient id="SVGID_1_" cx="77.5873" cy="75.7353" r="26.3653" gradientUnits="userSpaceOnUse">
-		<stop  offset="0" style="stop-color:#FFFDE7"/>
-		<stop  offset="1" style="stop-color:#FFF176"/>
-	</radialGradient>
-	<polygon style="fill:url(#SVGID_1_);stroke:#FFEB3B;stroke-width:2;stroke-miterlimit:10;" points="72.63,34.77 82.17,59.48 
-		101.05,38.17 86.86,67.91 104.07,62.74 88.12,78.59 101.48,82.98 88.68,84.87 98.87,99.31 82.31,88.73 78.5,101.05 72.63,86.96 
-		57.98,98.12 64,84.45 41,89.47 57.95,79.19 35.84,68.56 60.33,70.84 40.22,39.29 71.1,60.17 	"/>
-</g>
-</svg>
+<svg enable-background="new 0 0 128 128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><radialGradient id="a" cx="77.5873" cy="75.7353" gradientUnits="userSpaceOnUse" r="26.3653"><stop offset="0" stop-color="#fffde7"/><stop offset="1" stop-color="#fff176"/></radialGradient><g stroke-miterlimit="10"><path d="m68.27 8.51 15.84 33.16 35.33-31.88-18.06 45.64 19.67-5.31-18.65 26.51 17.03 5.87-17.4 8.27 16.93 29.03-32.19-19.91-6.9 21.54-10.22-23.03-29 21.78 8.82-24.85-39.97 8.04 29.92-22.27-31.53-22.7 35.96 3.11-33.25-50.99 53.4 34.99z" fill="#ffa000" stroke="#f44336" stroke-width="3"/><path d="m72.63 34.77 9.54 24.71 18.88-21.31-14.19 29.74 17.21-5.17-15.95 15.85 13.36 4.39-12.8 1.89 10.19 14.44-16.56-10.58-3.81 12.32-5.87-14.09-14.65 11.16 6.02-13.67-23 5.02 16.95-10.28-22.11-10.63 24.49 2.28-20.11-31.55 30.88 20.88z" fill="url(#a)" stroke="#ffeb3b" stroke-width="2"/></g></svg>

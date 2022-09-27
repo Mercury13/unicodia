@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg version="1.1" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-<rect y="5" width="36" height="26" ry="4" fill="#ed2939"/>
-<rect x=".3" y="13" width="35.4" height="10" fill="#fff"/>
-</svg>
+<svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg"><rect fill="#ed2939" height="26" ry="4" width="36" y="5"/><path d="m.3 13h35.4v10h-35.4z" fill="#fff"/></svg>
