@@ -3,9 +3,8 @@ import fontforge
 font=fontforge.activeFont()
 
 file = open('hani-tofu.txt', 'r')
-lines = file.readlines()
 
-for line0 in lines:
+for line0 in file:
     line = line0.strip()
     code = int(line, base=16)
     svgName = "Raw/{}.svg".format(line)
