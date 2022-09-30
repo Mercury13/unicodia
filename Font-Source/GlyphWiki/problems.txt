@@ -1,0 +1,5 @@
+Problems I found at GlyphWiki:
+
+1. Touching curves → MANUAL FIX
+2. Duplicated points → auto fix
+3. The same segment traversed back and forth → auto fix
