@@ -237,6 +237,8 @@ namespace uc {
            Z_CJC_2,
          CJK_KANBUN,
          CJK_STRUCTURE,
+         CJK_NEWHAN,
+           Z_HNA_1,
         COPTIC,
         CUNEIFORM,
         DEVANAGARI,
