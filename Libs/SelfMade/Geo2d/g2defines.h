@@ -18,6 +18,8 @@ namespace g2 {
     struct Point {
         static_assert(std::is_arithmetic_v<T>);
         T x = 0, y = 0;
+        using Type = T;
+
         constexpr Point() noexcept = default;
         constexpr Point(Origin) noexcept {}
         constexpr Point(T aX, T aY) noexcept : x(aX), y(aY) {}
@@ -27,10 +29,23 @@ namespace g2 {
             { return x*x + y*y; }
         // |a|, length
         template <class U>
-        constexpr float radius() const noexcept
+        constexpr U radius() const noexcept
             { return std::sqrt(static_cast<U>(radius2())); }
         constexpr float radiusF() const noexcept { return radius<float>(); }
         constexpr float radiusD() const noexcept { return radius<double>(); }
+
+        // squared distance
+        constexpr T dist2from(const Point<T>& b) const noexcept
+        {
+            auto dx = x - b.x;
+            auto dy = x - b.y;
+            return dx*dx + dy * dy;
+        }
+        template <class U>
+        constexpr U distFrom(const Point<T>& b) const noexcept
+            { return std::sqrt(static_cast<U>(dist2from(b))); }
+        constexpr float distFromF(const Point<T>& b) const noexcept { return distFrom<float>(b); }
+        constexpr float distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
 
         // Point == point
         constexpr bool operator == (const Point<T>& b) const { return (x == b.x && y == b.y); }
@@ -46,6 +61,7 @@ namespace g2 {
     struct Vec {
         static_assert(std::is_arithmetic_v<T>);
         T x = 0, y = 0;
+        using Type = T;
 
         constexpr Vec() noexcept = default;
         constexpr Vec(T aX, T aY) noexcept : x(aX), y(aY) {}
