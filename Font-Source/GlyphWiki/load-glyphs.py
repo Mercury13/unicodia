@@ -4,7 +4,7 @@ import psMat
 # get transformation matrix
 mat1 = psMat.translate(0, -600)
 mat2 = psMat.scale(5)
-mat3 = psMat.translate(0, -200)
+mat3 = psMat.translate(0, -100)
 mat = psMat.compose(mat1, mat2)
 mat = psMat.compose(mat, mat3)
 
