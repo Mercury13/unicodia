@@ -9,4 +9,12 @@ win32-g++ {
 }
 
 SOURCES += \
+        ../Libs/PugiXml/pugixml.cpp \
         main.cpp
+
+HEADERS += \
+    ../Libs/PugiXml/pugiconfig.hpp \
+    ../Libs/PugiXml/pugixml.hpp
+
+INCLUDEPATH += \
+    ../Libs/PugiXml

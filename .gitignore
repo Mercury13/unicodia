@@ -63,3 +63,6 @@ Hana*.sfd
 
 # Temporarily removed emoji.zip
 emoji.zip
+
+# Temporary files of GlyphWiki
+Font-source/GlyphWiki/AutoRemade/*.svg
