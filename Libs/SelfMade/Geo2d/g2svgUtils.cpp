@@ -144,12 +144,23 @@ bool g2sv::Polyline::removeRepeating()
         return false;
 
     auto itEnd = std::unique(pts.begin(), pts.end());
-    if (itEnd != pts.begin()) {
-        pts.erase(itEnd, pts.end());
+    auto newSize = itEnd - pts.begin();
+    // Closed line → check for first/last point
+    if (isClosed && newSize > 1 && pts.front() == pts.back()) {
+        --newSize;
+    }
+    if (static_cast<size_t>(newSize) != pts.size()) {
+        pts.resize(newSize);
         return true;
     } else {
         return false;
     }
+}
+
+
+bool g2sv::Polyline::removeBackForth()
+{
+    return false;
 }
 
 
@@ -280,12 +291,15 @@ std::string g2sv::Polypath::svgData(int scale) const
     std::string r;
     for (auto& v : curves) {
         if (!v.pts.empty()) {
-            bool isFirst = true;
+            char command = 'M';
             for (auto& pt : v.pts) {
-                appendCommand(r, isFirst ? 'M' : 'L');
+                if (&pt - v.pts.data() == 45) {
+                    command = 'L';
+                }
+                appendCommand(r, command);
                 appendNumber(r, pt.x, scale);
                 appendNumber(r, pt.y, scale);
-                isFirst = false;
+                command = 'L';
             }
             if (v.isClosed)
                 appendCommand(r, 'Z');

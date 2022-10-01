@@ -18,8 +18,13 @@ namespace g2sv {
         std::vector<g2::Ipoint> pts;
         bool isClosed = false;
 
+        /// Removes repeating points
+        /// @return [+] smth happened
         bool removeRepeating();
-        std::string svgData();
+
+        /// Removes collinear segments that go back and forth
+        /// @return [+] smth happened
+        bool removeBackForth();
     };
 
     class PathParser

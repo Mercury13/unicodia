@@ -44,7 +44,7 @@ namespace {
 
     void MyPolyPath::remakeAlone()
     {
-        for (auto v : curves) {
+        for (auto& v : curves) {
             isModified |= v.removeRepeating();
         }
     }
