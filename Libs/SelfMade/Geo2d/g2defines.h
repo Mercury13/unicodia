@@ -96,8 +96,12 @@ namespace g2 {
         constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
 
         template <class U>
-        static Vec<T> fromPt(const Point<U>& a)
+        constexpr static Vec<T> fromPt(const Point<U>& a)
             { return { static_cast<T>(a.x), static_cast<T>(a.y) }; }
+
+        template <class U>
+        constexpr Point<U> toPt() const
+            { return { static_cast<U>(x), static_cast<U>(y) }; }
     };
 
     using Ipoint = Point<int>;

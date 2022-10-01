@@ -282,7 +282,14 @@ namespace {
     }
     */
 
-    void generateBezier(
+    struct Curve {
+        g2::Ipoint a;
+        g2::Dpoint ah;
+        g2::Dpoint bh;
+        g2::Ipoint b;
+    };
+
+    Curve generateBezier(
             const std::vector<g2::Ipoint>& points,
             size_t first, size_t last,
             const std::vector<double>& uPrime,
@@ -367,7 +374,8 @@ namespace {
         if (!handle2)
             handle2 = tan2.normalized(alpha1);
 
-        return [pt1, pt1._add(handle1 || tan1._normalize(alpha1)), pt2._add(handle2 || tan2._normalize(alpha2)), pt2]
+        return { pt1I, (pt1 + *handle1).toPt<double>(),
+                       (pt2 + *handle2).toPt<double>(), pt2I };
     }
 
 }   // anon namespace
