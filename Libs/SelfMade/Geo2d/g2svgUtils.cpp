@@ -196,6 +196,182 @@ bool g2sv::Polyline::removeBackForth()
     }
 }
 
+namespace {
+    constexpr double EPSILON = 1e-12;
+    constexpr double MACHINE_EPSILON = 1.12e-16;
+
+    /*
+    const generateBezier = (points: readonly Point[], first: number, last: number, uPrime: readonly number[], tan1: Point, tan2: Point) => {
+      const epsilon = EPSILON,
+        abs = Math.abs,
+        pt1 = points[first],
+        pt2 = points[last],
+        // Create the C and X matrices
+        C = [
+          [0, 0],
+          [0, 0],
+        ],
+        X = [0, 0]
+
+      for (let i = 0, l = last - first + 1; i < l; i++) {
+        const u = uPrime[i],
+          t = 1 - u,
+          b = 3 * u * t,
+          b0 = t * t * t,
+          b1 = b * t,
+          b2 = b * u,
+          b3 = u * u * u,
+          a1 = tan1._normalize(b1),
+          a2 = tan2._normalize(b2),
+          tmp = points[first + i]._subtract(pt1._multiply(b0 + b1))._subtract(pt2._multiply(b2 + b3))
+        C[0][0] += a1._dot(a1)
+        C[0][1] += a1._dot(a2)
+        // C[1][0] += a1.dot(a2);
+        C[1][0] = C[0][1]
+        C[1][1] += a2._dot(a2)
+        X[0] += a1._dot(tmp)
+        X[1] += a2._dot(tmp)
+      }
+
+      // Compute the determinants of C and X
+      const detC0C1 = C[0][0] * C[1][1] - C[1][0] * C[0][1]
+      let alpha1
+      let alpha2
+      if (abs(detC0C1) > epsilon) {
+        // Kramer's rule
+        const detC0X = C[0][0] * X[1] - C[1][0] * X[0],
+          detXC1 = X[0] * C[1][1] - X[1] * C[0][1]
+        // Derive alpha values
+        alpha1 = detXC1 / detC0C1
+        alpha2 = detC0X / detC0C1
+      } else {
+        // Matrix is under-determined, try assuming alpha1 == alpha2
+        const c0 = C[0][0] + C[0][1],
+          c1 = C[1][0] + C[1][1]
+        alpha1 = alpha2 = abs(c0) > epsilon ? X[0] / c0 : abs(c1) > epsilon ? X[1] / c1 : 0
+      }
+
+      // If alpha negative, use the Wu/Barsky heuristic (see text)
+      // (if alpha is 0, you get coincident control points that lead to
+      // divide by zero in any subsequent NewtonRaphsonRootFind() call.
+      const segLength = pt2._getDistance(pt1),
+        eps = epsilon * segLength
+      let handle1, handle2
+      if (alpha1 < eps || alpha2 < eps) {
+        // fall back on standard (probably inaccurate) formula,
+        // and subdivide further if needed.
+        alpha1 = alpha2 = segLength / 3
+      } else {
+        // Check if the found control points are in the right order when
+        // projected onto the line through pt1 and pt2.
+        const line = pt2._subtract(pt1)
+        // Control points 1 and 2 are positioned an alpha distance out
+        // on the tangent vectors, left and right, respectively
+        handle1 = tan1._normalize(alpha1)
+        handle2 = tan2._normalize(alpha2)
+        if (handle1._dot(line) - handle2._dot(line) > segLength * segLength) {
+          // Fall back to the Wu/Barsky heuristic above.
+          alpha1 = alpha2 = segLength / 3
+          handle1 = handle2 = null // Force recalculation
+        }
+      }
+
+      // First and last control points of the Bezier curve are
+      // positioned exactly at the first and last data points
+      return [pt1, pt1._add(handle1 || tan1._normalize(alpha1)), pt2._add(handle2 || tan2._normalize(alpha2)), pt2]
+    }
+    */
+
+    void generateBezier(
+            const std::vector<g2::Ipoint>& points,
+            size_t first, size_t last,
+            const std::vector<double>& uPrime,
+            const g2::Ivec& tan1, const g2::Ivec& tan2)
+    {
+        static constexpr double epsilon = EPSILON;
+        auto pt1 = points[first].cast<double>();
+        auto pt2 = points[last].cast<double>();
+        double C[2][2] = { { 0, 0 }, { 0, 0 } };
+        double X[2] = { 0, 0 };
+
+        for (size_t i = 0, l = last - first + 1; i < l; i++) {
+            const double u = uPrime[i],
+                t = 1 - u,
+                b = 3 * u * t,
+                b0 = t * t * t,
+                b1 = b * t,
+                b2 = b * u,
+                b3 = u * u * u;
+            g2::Dvec a1 = tan1.normalized<double>(b1);
+            g2::Dvec a2 = tan2.normalized<double>(b2);
+            /// @todo [urgent] multiply??
+            auto tmp = points[first + i].sub(pt1._multiply(b0 + b1))._subtract(pt2._multiply(b2 + b3))
+          C[0][0] += a1._dot(a1)
+          C[0][1] += a1._dot(a2)
+          // C[1][0] += a1.dot(a2);
+          C[1][0] = C[0][1]
+          C[1][1] += a2._dot(a2)
+          X[0] += a1._dot(tmp)
+          X[1] += a2._dot(tmp)
+        }
+    }
+
+}   // anon namespace
+
+
+/*
+const fit = (points: Point[], closed: unknown, error: number) => {
+  // We need to duplicate the first and last segment when simplifying a
+  // closed path.
+  if (closed) {
+    points.unshift(points[points.length - 1])
+    points.push(points[1]) // The point previously at index 0 is now 1.
+  }
+  const length = points.length
+  if (length === 0) {
+    return []
+  }
+  // To support reducing paths with multiple points in the same place
+  // to one segment:
+  const segments = [new Segment(points[0])]
+  fitCubic(
+    points,
+    segments,
+    error,
+    0,
+    length - 1,
+    // Left Tangent
+    points[1]._subtract(points[0]),
+    // Right Tangent
+    points[length - 2]._subtract(points[length - 1]),
+  )
+  // Remove the duplicated segments for closed paths again.
+  if (closed) {
+    segments.shift()
+    segments.pop()
+  }
+  return segments
+}
+*/
+
+void g2sv::Polyline::fit(double error) const
+{
+    if (pts.size() < 3)
+        return;
+
+    std::vector<g2::Ipoint> newPoints;
+    const std::vector<g2::Ipoint>* wk = &this->pts;     // working set
+    if (isClosed) {
+        // We need to duplicate the first and last segment when simplifying a
+        // closed path.
+        newPoints.reserve(pts.size() + 2);
+        newPoints.push_back(pts.back());
+        newPoints.insert(newPoints.end(), pts.begin(), pts.end());
+        newPoints.push_back(pts.front());
+    }
+}
+
+
 
 ///// Polypath /////////////////////////////////////////////////////////////////
 
@@ -340,3 +516,6 @@ std::string g2sv::Polypath::svgData(int scale) const
     }
     return r;
 }
+
+
+///// SVG simplify /////////////////////////////////////////////////////////////

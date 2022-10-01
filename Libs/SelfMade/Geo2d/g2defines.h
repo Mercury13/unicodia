@@ -52,6 +52,10 @@ namespace g2 {
 
         // Point != point
         constexpr bool operator != (const Point<T>& b) const { return (x != b.x || y != b.y); }
+
+        template <class U>
+        constexpr Point<U> cast() const noexcept
+            { return { static_cast<U>(x), static_cast<U>(y) }; }
     };
 
     ///
@@ -83,14 +87,19 @@ namespace g2 {
         constexpr float lenD() const noexcept { return len<double>(); }
 
         // Vec == vec
-        constexpr bool operator == (const Vec<T>& b) const { return (x == b.x && y == b.y); }
+        constexpr bool operator == (const Vec<T>& b) const noexcept { return (x == b.x && y == b.y); }
 
         // Vec != vec
-        constexpr bool operator != (const Vec<T>& b) const { return (x != b.x || y != b.y); }
+        constexpr bool operator != (const Vec<T>& b) const noexcept { return (x != b.x || y != b.y); }
+
+        template <class U>
+        constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
     };
 
     using Ipoint = Point<int>;
     using Ivec = Vec<int>;
+    using Dpoint = Point<double>;
+    using Dvec = Vec<double>;
 }
 
 // Point + point → cannot
@@ -99,29 +108,29 @@ constexpr g2::Vec<T> operator + (const g2::Point<T>& a, const g2::Point<T>& b) =
 
 // Point − point → vec
 template <class T>
-constexpr g2::Vec<T> operator - (const g2::Point<T>& a, const g2::Point<T>& b)
+constexpr g2::Vec<T> operator - (const g2::Point<T>& a, const g2::Point<T>& b) noexcept
     { return { a.x - b.x, a.y - b.y }; }
 
 // Point − point0 → vec
 template <class T>
-constexpr g2::Vec<T> operator - (const g2::Point<T>& a, g2::Origin)
+constexpr g2::Vec<T> operator - (const g2::Point<T>& a, g2::Origin) noexcept
     { return { a.x, a.y }; }
 
 // Point ± vec → point
 template <class T>
-constexpr g2::Point<T> operator + (const g2::Point<T>& a, const g2::Vec<T>& b)
+constexpr g2::Point<T> operator + (const g2::Point<T>& a, const g2::Vec<T>& b) noexcept
     { return { a.x + b.x, a.y + b.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator + (const g2::Vec<T>& a, const g2::Point<T>& b)
+constexpr g2::Point<T> operator + (const g2::Vec<T>& a, const g2::Point<T>& b) noexcept
     { return { a.x + b.x, a.y + b.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator - (const g2::Point<T>& a, const g2::Vec<T>& b)
+constexpr g2::Point<T> operator - (const g2::Point<T>& a, const g2::Vec<T>& b) noexcept
     { return { a.x - b.x, a.y - b.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator - (const g2::Vec<T>& a, const g2::Point<T>& b)
+constexpr g2::Point<T> operator - (const g2::Vec<T>& a, const g2::Point<T>& b) noexcept
     { return { a.x - b.x, a.y - b.y }; }
 
 // Point0 ± vec → point
@@ -130,15 +139,15 @@ constexpr g2::Point<T> operator + (g2::Origin, const g2::Vec<T>& b)
     { return { b.x, b.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator + (const g2::Vec<T>& a, g2::Origin)
+constexpr g2::Point<T> operator + (const g2::Vec<T>& a, g2::Origin) noexcept
     { return { a.x, a.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator - (g2::Origin, const g2::Vec<T>& b)
+constexpr g2::Point<T> operator - (g2::Origin, const g2::Vec<T>& b) noexcept
     { return { - b.x, - b.y }; }
 
 template <class T>
-constexpr g2::Point<T> operator - (const g2::Vec<T>& a, g2::Origin)
+constexpr g2::Point<T> operator - (const g2::Vec<T>& a, g2::Origin) noexcept
     { return { a.x, a.y }; }
 
 // Vec ± vec → vec
@@ -152,23 +161,35 @@ constexpr g2::Vec<T> operator - (const g2::Vec<T>& a, const g2::Vec<T>& b)
 
 // ±vec → vec
 template <class T>
-constexpr g2::Vec<T> operator + (const g2::Vec<T>& a)
+constexpr g2::Vec<T> operator + (const g2::Vec<T>& a) noexcept
     { return a; }
 
 template <class T>
-constexpr g2::Vec<T> operator - (const g2::Vec<T>& a)
+constexpr g2::Vec<T> operator - (const g2::Vec<T>& a) noexcept
     { return { -a.x, -a.y }; }
 
 // Vec * num → vec
 template <class T>
-constexpr g2::Vec<T> operator * (const g2::Vec<T>& a, T b)
+constexpr g2::Vec<T> operator * (const g2::Vec<T>& a, T b) noexcept
     { return { a.x * b, a.y * b }; }
 
 template <class T>
-constexpr g2::Vec<T> operator - (T a, const g2::Vec<T>& b)
+constexpr g2::Vec<T> operator - (T a, const g2::Vec<T>& b) noexcept
     { return { b.x * a, b.y * a }; }
 
 // Vec / num → vec
 template <class T>
-constexpr g2::Vec<T> operator / (const g2::Vec<T>& a, T b)
+constexpr g2::Vec<T> operator / (const g2::Vec<T>& a, T b) noexcept
     { return { a.x / b, a.y / b }; }
+
+template <class T> template <class U>
+constexpr g2::Vec<U> g2::Vec<T>::normalized(U wantedLength) const noexcept
+{
+    auto myLen = len<U>();
+    if (myLen <= 0) {
+        return { 0, 0 };
+    } else {
+        auto q = wantedLength / myLen;
+        return Vec<U>{ static_cast<U>(x * q), static_cast<U>(y * q) };
+    }
+}
