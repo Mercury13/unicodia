@@ -5,6 +5,10 @@
 #include <cmath>
 #include <charconv>
 
+// STL
+#include <algorithm>
+//#include <iostream>
+
 
 ///// PathParser ///////////////////////////////////////////////////////////////
 
@@ -131,11 +135,32 @@ int g2sv::PathParser::getInum(char command, int scale)
 }
 
 
+///// Polyline /////////////////////////////////////////////////////////////////
+
+
+bool g2sv::Polyline::removeRepeating()
+{
+    if (pts.size() < 2)
+        return false;
+
+    auto itEnd = std::unique(pts.begin(), pts.end());
+    if (itEnd != pts.begin()) {
+        pts.erase(itEnd, pts.end());
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
 ///// Polypath /////////////////////////////////////////////////////////////////
 
 
 void g2sv::Polypath::parse(std::string_view text, int scale)
 {
+    dataOverride.clear();
+    curves.clear();
+
     g2::Ipoint turtle;
     Polyline* path = nullptr;
 
@@ -224,4 +249,47 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
             throw std::logic_error("Unknown turtle graphics command");
         }
     }
+}
+
+
+namespace {
+
+    void appendCommand(std::string& s, char cmd)
+    {
+        if (!s.empty())
+            s += ' ';
+        s += cmd;
+    }
+
+    void appendNumber(std::string& s, int num, int scale)
+    {
+        auto raw = static_cast<double>(num) / scale;
+        char buf[30];
+        snprintf(buf, std::size(buf), " %.5g", raw);
+        s += buf;
+    }
+
+}   // anon namespace
+
+
+std::string g2sv::Polypath::svgData(int scale) const
+{
+    if (!dataOverride.empty())
+        return dataOverride;
+
+    std::string r;
+    for (auto& v : curves) {
+        if (!v.pts.empty()) {
+            bool isFirst = true;
+            for (auto& pt : v.pts) {
+                appendCommand(r, isFirst ? 'M' : 'L');
+                appendNumber(r, pt.x, scale);
+                appendNumber(r, pt.y, scale);
+                isFirst = false;
+            }
+            if (v.isClosed)
+                appendCommand(r, 'Z');
+        }
+    }
+    return r;
 }

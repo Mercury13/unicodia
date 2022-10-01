@@ -17,6 +17,9 @@ namespace g2sv {
     struct Polyline {
         std::vector<g2::Ipoint> pts;
         bool isClosed = false;
+
+        bool removeRepeating();
+        std::string svgData();
     };
 
     class PathParser
@@ -36,7 +39,10 @@ namespace g2sv {
 
     struct Polypath {
         std::vector<Polyline> curves;
+        std::string dataOverride;
+
         void parse(std::string_view text, int scale);
+        std::string svgData(int scale) const;
     };
 
     class ESvg : public std::logic_error

@@ -32,12 +32,11 @@ namespace g2 {
         constexpr float radiusF() const noexcept { return radius<float>(); }
         constexpr float radiusD() const noexcept { return radius<double>(); }
 
-        constexpr void inc2(T aX, T aY) { x += aX; y += aY; }
-        constexpr void incH(T aX) { x += aX; }
-        constexpr void incV(T aY) { y += aY; }
-        constexpr void dec2(T aX, T aY) { x -= aX; y -= aY; }
-        constexpr void decH(T aX) { x -= aX; }
-        constexpr void decV(T aY) { y -= aY; }
+        // Point == point
+        constexpr bool operator == (const Point<T>& b) const { return (x == b.x && y == b.y); }
+
+        // Point != point
+        constexpr bool operator != (const Point<T>& b) const { return (x != b.x || y != b.y); }
     };
 
     ///
@@ -67,12 +66,11 @@ namespace g2 {
         constexpr float lenF() const noexcept { return len<float>(); }
         constexpr float lenD() const noexcept { return len<double>(); }
 
-        constexpr void inc2(T aX, T aY) { x += aX; y += aY; }
-        constexpr void incH(T aX) { x += aX; }
-        constexpr void incV(T aY) { y += aY; }
-        constexpr void dec2(T aX, T aY) { x -= aX; y -= aY; }
-        constexpr void decH(T aX) { x -= aX; }
-        constexpr void decV(T aY) { y -= aY; }
+        // Vec == vec
+        constexpr bool operator == (const Vec<T>& b) const { return (x == b.x && y == b.y); }
+
+        // Vec != vec
+        constexpr bool operator != (const Vec<T>& b) const { return (x != b.x || y != b.y); }
     };
 
     using Ipoint = Point<int>;
@@ -158,23 +156,3 @@ constexpr g2::Vec<T> operator - (T a, const g2::Vec<T>& b)
 template <class T>
 constexpr g2::Vec<T> operator / (const g2::Vec<T>& a, T b)
     { return { a.x / b, a.y / b }; }
-
-// Vec == vec
-template <class T>
-constexpr bool operator == (const g2::Vec<T>& a, const g2::Vec<T>& b)
-    { return (a.x == b.x && a.y == b.y); }
-
-// Vec != vec
-template <class T>
-constexpr bool operator != (const g2::Vec<T>& a, const g2::Vec<T>& b)
-    { return (a.x != b.x || a.y != b.y); }
-
-// Point == point
-template <class T>
-constexpr bool operator == (const g2::Point<T>& a, const g2::Point<T>& b)
-    { return (a.x == b.x && a.y == b.y); }
-
-// Point != point
-template <class T>
-constexpr bool operator != (const g2::Point<T>& a, const g2::Point<T>& b)
-    { return (a.x != b.x || a.y != b.y); }

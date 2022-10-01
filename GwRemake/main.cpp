@@ -33,28 +33,39 @@ void printBaddies(const std::vector<Baddy>& x)
 
 namespace {
 
-    struct MyPolyCurve : public g2sv::Polypath
+    struct MyPolyPath : public g2sv::Polypath
     {
     public:
         pugi::xml_node node;
         bool isModified = false;
+
+        void remakeAlone();
     };
+
+    void MyPolyPath::remakeAlone()
+    {
+        for (auto v : curves) {
+            isModified |= v.removeRepeating();
+        }
+    }
 
     struct Svg
     {
     public:
-        std::vector<MyPolyCurve> curves;
+        std::vector<MyPolyPath> paths;
 
         void clear();
         void loadFrom(pugi::xml_document& document);
+        void remake();
         void write();
     private:
         void loadFromRec(pugi::xml_node node);
+        static constexpr int SCALE = 1;
     };
 
     void Svg::clear()
     {
-        curves.clear();
+        paths.clear();
     }
 
     void Svg::loadFromRec(pugi::xml_node node) {
@@ -67,9 +78,9 @@ namespace {
         }
         if (node.name() == "path"sv) {
             auto data = node.attribute("d").as_string();
-            auto& curve = curves.emplace_back();
+            auto& curve = paths.emplace_back();
             curve.node = node;
-            curve.parse(data, 10);
+            curve.parse(data, SCALE);
         } else {
             for (auto v : node.children()) {
                 loadFromRec(v);
@@ -83,6 +94,20 @@ namespace {
         auto node = document.root();
         loadFromRec(node);
     }
+
+    void Svg::remake()
+    {
+        for (auto& v : paths) {
+            v.remakeAlone();
+        }
+    }
+
+    void Svg::write()
+    {
+        for (auto& v : paths) {
+            v.node.attribute("d") = v.svgData(SCALE).c_str();
+        }
+    }
 }
 
 void remakeSvg(
@@ -94,6 +119,8 @@ void remakeSvg(
 
     Svg svg;
     svg.loadFrom(doc);
+    svg.remake();
+    svg.write();
 
     doc.save_file(fnOut.c_str());
 }
