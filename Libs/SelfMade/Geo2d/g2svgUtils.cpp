@@ -7,7 +7,7 @@
 
 // STL
 #include <algorithm>
-//#include <iostream>
+#include <optional>
 
 
 ///// PathParser ///////////////////////////////////////////////////////////////
@@ -289,8 +289,10 @@ namespace {
             const g2::Ivec& tan1, const g2::Ivec& tan2)
     {
         static constexpr double epsilon = EPSILON;
-        auto pt1 = points[first].cast<double>();
-        auto pt2 = points[last].cast<double>();
+        auto& pt1I = points[first];
+        auto& pt2I = points[last];
+        auto pt1 = g2::Dvec::fromPt(pt1I);
+        auto pt2 = g2::Dvec::fromPt(pt2I);
         double C[2][2] = { { 0, 0 }, { 0, 0 } };
         double X[2] = { 0, 0 };
 
@@ -304,16 +306,68 @@ namespace {
                 b3 = u * u * u;
             g2::Dvec a1 = tan1.normalized<double>(b1);
             g2::Dvec a2 = tan2.normalized<double>(b2);
-            /// @todo [urgent] multiply??
-            auto tmp = points[first + i].sub(pt1._multiply(b0 + b1))._subtract(pt2._multiply(b2 + b3))
-          C[0][0] += a1._dot(a1)
-          C[0][1] += a1._dot(a2)
-          // C[1][0] += a1.dot(a2);
-          C[1][0] = C[0][1]
-          C[1][1] += a2._dot(a2)
-          X[0] += a1._dot(tmp)
-          X[1] += a2._dot(tmp)
+            auto tmp = g2::Dvec::fromPt(points[first + i]) - (pt1*(b0 + b1)) - (pt2*(b2 + b3));
+            C[0][0] += a1.dot(a1);
+            C[0][1] += a1.dot(a2);
+            // C[1][0] += a1.dot(a2);
+            C[1][0] = C[0][1];
+            C[1][1] += a2.dot(a2);
+            X[0] += a1.dot(tmp);
+            X[1] += a2.dot(tmp);
         }
+
+        // Compute the determinants of C and X
+        const auto detC0C1 = C[0][0] * C[1][1] - C[1][0] * C[0][1];
+        double alpha1, alpha2;
+        if (std::abs(detC0C1) > epsilon) {
+            // Kramer's rule
+            const auto detC0X = C[0][0] * X[1] - C[1][0] * X[0],
+                       detXC1 = X[0] * C[1][1] - X[1] * C[0][1];
+          // Derive alpha values
+            alpha1 = detXC1 / detC0C1;
+            alpha2 = detC0X / detC0C1;
+        } else {
+            // Matrix is under-determined, try assuming alpha1 == alpha2
+            const auto c0 = C[0][0] + C[0][1],
+                       c1 = C[1][0] + C[1][1];
+            alpha1 = alpha2 = std::abs(c0) > epsilon ? X[0] / c0 : std::abs(c1) > epsilon ? X[1] / c1 : 0;
+        }
+
+        // If alpha negative, use the Wu/Barsky heuristic (see text)
+        // (if alpha is 0, you get coincident control points that lead to
+        // divide by zero in any subsequent NewtonRaphsonRootFind() call.
+        const auto segLength = (pt2 - pt1).lenD(),
+                   eps = epsilon * segLength;
+
+        std::optional<g2::Dvec> handle1, handle2;
+        if (alpha1 < eps || alpha2 < eps) {
+            // fall back on standard (probably inaccurate) formula,
+            // and subdivide further if needed.
+            alpha1 = alpha2 = segLength / 3;
+        } else {
+            // Check if the found control points are in the right order when
+            // projected onto the line through pt1 and pt2.
+            const auto line = pt2 - pt1;
+            // Control points 1 and 2 are positioned an alpha distance out
+            // on the tangent vectors, left and right, respectively
+            handle1 = tan1.normalized(alpha1);
+            handle2 = tan2.normalized(alpha2);
+            if (handle1->dot(line) - handle2->dot(line) > segLength * segLength) {
+                // Fall back to the Wu/Barsky heuristic above.
+                alpha1 = alpha2 = segLength / 3;
+                handle1.reset();
+                handle2.reset();
+            }
+        }
+
+        // First and last control points of the Bezier curve are
+        // positioned exactly at the first and last data points
+        if (!handle1)
+            handle1 = tan1.normalized(alpha1);
+        if (!handle2)
+            handle2 = tan2.normalized(alpha1);
+
+        return [pt1, pt1._add(handle1 || tan1._normalize(alpha1)), pt2._add(handle2 || tan2._normalize(alpha2)), pt2]
     }
 
 }   // anon namespace

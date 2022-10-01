@@ -84,7 +84,7 @@ namespace g2 {
         constexpr float len() const noexcept
             { return std::sqrt(static_cast<U>(len2())); }
         constexpr float lenF() const noexcept { return len<float>(); }
-        constexpr float lenD() const noexcept { return len<double>(); }
+        constexpr double lenD() const noexcept { return len<double>(); }
 
         // Vec == vec
         constexpr bool operator == (const Vec<T>& b) const noexcept { return (x == b.x && y == b.y); }
@@ -94,6 +94,10 @@ namespace g2 {
 
         template <class U>
         constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
+
+        template <class U>
+        static Vec<T> fromPt(const Point<U>& a)
+            { return { static_cast<T>(a.x), static_cast<T>(a.y) }; }
     };
 
     using Ipoint = Point<int>;
