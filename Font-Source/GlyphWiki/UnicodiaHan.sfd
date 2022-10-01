@@ -13,15 +13,15 @@ Ascent: 800
 Descent: 200
 InvalidEm: 0
 LayerCount: 2
-Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
-Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
+Layer: 0 0 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
+Layer: 1 0 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
 XUID: [1021 59 1751208496 28364]
 FSType: 0
 OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1664568655
-ModificationTime: 1664653659
+ModificationTime: 1664654971
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -44,14 +44,16 @@ OS2Vendor: 'PfEd'
 OS2UnicodeRanges: 00000000.2a000000.00000000.00000000
 MarkAttachClasses: 1
 DEI: 91125
+LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 54 27 13
+WinInfo: 0 27 13
 OnlyBitmaps: 1
 BeginPrivate: 0
 EndPrivate

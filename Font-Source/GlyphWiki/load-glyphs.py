@@ -8,10 +8,13 @@ mat3 = psMat.translate(-30, -150)
 mat = psMat.compose(mat1, mat2)
 mat = psMat.compose(mat, mat3)
 
-# get hieroglyphs
 font = fontforge.activeFont()
-file = open('hani-tofu.txt', 'r')
 
+# Convert layers to cubic
+font.is_quadratic = False
+
+# import hieroglyphs
+file = open('hani-tofu.txt', 'r')
 for line0 in file:
     line = line0.strip()
     code = int(line, base=16)
@@ -20,7 +23,13 @@ for line0 in file:
     glyph.importOutlines(svgName, scale=False)
     glyph.transform(mat, ("round"))
     glyph.width = 1000
-    glyph.autoHint()
-    glyph.autoInstr()
+
+# Convert layers to quadratic
+font.is_quadratic = True
+
+# Hint glyphs
+font.selection.all()
+font.autoHint()
+font.autoInstr()
 
 font.generate('UnicodiaHan.ttf')

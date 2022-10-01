@@ -61,7 +61,7 @@ namespace {
         void write();
     private:
         void loadFromRec(pugi::xml_node node);
-        static constexpr int SCALE = 1;
+        static constexpr int SCALE = 5;
     };
 
     void Svg::clear()
