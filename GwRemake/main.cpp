@@ -46,6 +46,7 @@ namespace {
     {
         for (auto& v : curves) {
             isModified |= v.removeRepeating();
+            isModified |= v.removeBackForth();
         }
     }
 

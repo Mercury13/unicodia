@@ -160,7 +160,40 @@ bool g2sv::Polyline::removeRepeating()
 
 bool g2sv::Polyline::removeBackForth()
 {
-    return false;
+    static constexpr int NO_COORD = std::numeric_limits<int>::min();
+    static constinit const g2::Ipoint BAD_VERTEX { NO_COORD, NO_COORD };
+    auto n = pts.size();
+    if (n < 4)
+        return false;
+
+    auto pPrev = &pts[0];
+    auto pCurr = &pts[1];
+    bool foundSmth = false;
+    for (size_t i = 2; i < n; ++i) {
+        auto pNext = &pts[i];
+        auto vPrev = *pPrev - *pCurr;
+        auto vNext = *pNext - *pCurr;
+        // Erase collinear — both unneeded vertices in the middle of line,
+        // and those horrible back-forth
+        auto crossValue = vNext.cross(vPrev);
+        if (crossValue == 0) {
+            // Found!
+            *pCurr = BAD_VERTEX;
+            foundSmth = true;
+        } else {    // Not found
+            pPrev = pCurr;
+        }
+        pCurr = pNext;
+    }
+
+    if (foundSmth) {
+        auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
+        pts.erase(itEnd, pts.end());
+        // We do not check 1st and last, probably OK
+        return true;
+    } else {
+        return false;
+    }
 }
 
 
