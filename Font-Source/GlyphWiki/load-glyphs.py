@@ -20,6 +20,7 @@ for line0 in file:
     code = int(line, base=16)
     svgName = "AutoRemade/{}.svg".format(line)
     glyph = font.createChar(code)
+    glyph.glyphname = "u" + line.upper()
     glyph.importOutlines(svgName, scale=False)
     glyph.transform(mat, ("round"))
     glyph.width = 1000
