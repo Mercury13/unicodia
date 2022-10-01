@@ -19,6 +19,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
 
+## If you want to rebuild GlyphWiki font
+(This section is being written)
+
 # Compatibility and policies
 
 ## Platforms
@@ -42,6 +45,8 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
   * **Warning**: transition to older/newer Unicode requires a bit of handwork.
+* GwLoader — loads glyphs from GlyphWiki
+* GwRemake — does an auto-remake of GlyphWiki
 * PanoseTool — early tool that used to remove fonts’ declared script support. Left for history. Current Unicodia uses custom font loading code based on PanoseTool + font matching flags.
 * SmartCopy — copies the file if it actually differs.
 * TapeMaker — creates a tape file for graphic emoji.
