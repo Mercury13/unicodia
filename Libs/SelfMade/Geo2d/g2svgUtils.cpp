@@ -346,7 +346,7 @@ namespace {
         const auto segLength = (pt2 - pt1).lenD(),
                    eps = epsilon * segLength;
 
-        std::optional<g2::Dvec> handle1, handle2;
+        std::optional<g2::Dvec> handle1 = std::nullopt, handle2 = std::nullopt;
         if (alpha1 < eps || alpha2 < eps) {
             // fall back on standard (probably inaccurate) formula,
             // and subdivide further if needed.
@@ -372,7 +372,7 @@ namespace {
         if (!handle1)
             handle1 = tan1.normalized(alpha1);
         if (!handle2)
-            handle2 = tan2.normalized(alpha1);
+            handle2 = tan2.normalized(alpha2);
 
         return { pt1I, (pt1 + *handle1).toPt<double>(),
                        (pt2 + *handle2).toPt<double>(), pt2I };
