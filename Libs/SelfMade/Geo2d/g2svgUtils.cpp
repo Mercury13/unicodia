@@ -282,18 +282,43 @@ namespace {
     }
     */
 
+    struct Segment {
+        g2::Ipoint a;
+        g2::Dvec ah;
+        Segment() noexcept = default;
+        Segment(const g2::Ipoint& b) noexcept : a(b) {}
+        Segment(const g2::Ipoint& b, const g2::Dvec& bh) noexcept : a(b), ah(bh) {}
+    };
+
+    struct Pt4 {
+        g2::Dvec v[4];
+    };
+
     struct Curve {
         g2::Ipoint a;
-        g2::Dpoint ah;
-        g2::Dpoint bh;
+        g2::Dvec ah;
+        g2::Dvec bh;
         g2::Ipoint b;
+
+        Pt4 toPoints() const;
     };
+
+    Pt4 Curve::toPoints() const
+    {
+        Pt4 r;
+        r.v[0] = g2::Dvec::fromPt(a);
+        r.v[1] = r.v[0] + ah;
+        r.v[3] = g2::Dvec::fromPt(b);
+        r.v[2] = r.v[3] + bh;
+        return r;
+    }
+
 
     Curve generateBezier(
             const std::vector<g2::Ipoint>& points,
             size_t first, size_t last,
             const std::vector<double>& uPrime,
-            const g2::Ivec& tan1, const g2::Ivec& tan2)
+            const g2::Dvec& tan1, const g2::Dvec& tan2)
     {
         static constexpr double epsilon = EPSILON;
         auto& pt1I = points[first];
@@ -374,65 +399,361 @@ namespace {
         if (!handle2)
             handle2 = tan2.normalized(alpha2);
 
-        return { pt1I, (pt1 + *handle1).toPt<double>(),
-                       (pt2 + *handle2).toPt<double>(), pt2I };
+        return { pt1I, *handle1, *handle2, pt2I };
     }
+
+    /*
+    const addCurve = (segments: Segment[], curve: readonly Point[]) => {
+      const prev = segments[segments.length - 1]
+      prev._handleOut = curve[1]._subtract(curve[0])
+      segments.push(new Segment(curve[3], curve[2]._subtract(curve[3])))
+    }
+    */
+
+    void addCurve(std::vector<Segment>& segments, const Curve& curve)
+    {
+        auto& prev = segments.back();
+        prev.ah = curve.ah;
+        segments.emplace_back(curve.b, curve.bh);
+    }
+
+    /*
+    // Assign parameter values to digitized points
+    // using relative distances between points.
+    const chordLengthParameterize = (points: readonly Point[], first: number, last: number) => {
+      const u = [0]
+      for (let i = first + 1; i <= last; i++) {
+        u[i - first] = u[i - first - 1] + points[i]._getDistance(points[i - 1])
+      }
+      for (let i = 1, m = last - first; i <= m; i++) {
+        u[i] /= u[m]
+      }
+      return u
+    }
+    */
+
+    std::vector<double> chordLengthParameterize(
+            const std::vector<g2::Ipoint>& points,
+            size_t first, size_t last)
+    {
+        std::vector<double> u;
+        u.push_back(0);
+        for (auto i = first + 1; i <= last; ++i) {
+            auto v = u.back() + points[i].distFromD(points[i - 1]);
+            u.push_back(v);
+        }
+        for (size_t i = 1, m = last - first; i <= m; ++i) {
+            u[i] /= u[m];
+        }
+        return u;
+    }
+
+    /*// Evaluate a bezier curve at a particular parameter value
+    const evaluate = (degree: number, curve: readonly Point[], t: number) => {
+      // Copy array
+      const tmp = curve.slice()
+      // Triangle computation
+      for (let i = 1; i <= degree; i++) {
+        for (let j = 0; j <= degree - i; j++) {
+          tmp[j] = tmp[j]._multiply(1 - t)._add(tmp[j + 1]._multiply(t))
+        }
+      }
+      return tmp[0]
+    }*/
+    g2::Dvec evaluate(int degree, const g2::Dvec* curve, double t)
+    {
+        // Copy array
+        g2::Dvec tmp[5];
+        for (int i = 0; i <= degree; ++i)
+            tmp[i] = curve[i];
+        double ttt = 1 - t;
+        // Triangle computation
+        for (int i = 1; i <= degree; ++i) {
+            for (int j = 0; j <= degree - i; ++j) {
+                tmp[j] = tmp[j] * ttt + tmp[j + 1] * t;
+            }
+        }
+        return tmp[0];
+    }
+
+    /*
+    // Find the maximum squared distance of digitized points to fitted curve.
+    const findMaxError = (points: readonly Point[], first: number, last: number, curve: Point[], u: number[]) => {
+      let index = Math.floor((last - first + 1) / 2),
+        maxDist = 0
+      for (let i = first + 1; i < last; i++) {
+        const P = evaluate(3, curve, u[i - first])
+        const v = P._subtract(points[i])
+        const dist = v.x * v.x + v.y * v.y // squared
+        if (dist >= maxDist) {
+          maxDist = dist
+          index = i
+        }
+      }
+      return {
+        error: maxDist,
+        index: index,
+      }
+    }*/
+
+    struct Error {
+        double error;
+        size_t index;
+    };
+
+    Error findMaxError(
+            const std::vector<g2::Ipoint>& points, size_t first, size_t last,
+            const Curve& curve, const std::vector<double>& u)
+    {
+        Error r = {
+            .error = 0,
+            .index = (last - first + 1) / 2
+        };
+        auto pts = curve.toPoints();
+        for (size_t i = first + 1; i < last; ++i) {
+            auto P = evaluate(3, pts.v, u[i - first]);
+            auto v = P - g2::Dvec::fromPt(points[i]);
+            auto dist = v.len2(); // squared
+            if (dist >= r.error) {
+                r.error = dist;
+                r.index = i;
+            }
+        }
+        return r;
+    }
+
+    inline bool isMachineZero(double val)
+        { return (val >= -MACHINE_EPSILON && val <= MACHINE_EPSILON); }
+
+    /*// Use Newton-Raphson iteration to find better root.
+    const findRoot = (curve: readonly Point[], point: Point, u: number) => {
+      const curve1 = [],
+        curve2 = []
+      // Generate control vertices for Q'
+      for (let i = 0; i <= 2; i++) {
+        curve1[i] = curve[i + 1]._subtract(curve[i])._multiply(3)
+      }
+      // Generate control vertices for Q''
+      for (let i = 0; i <= 1; i++) {
+        curve2[i] = curve1[i + 1]._subtract(curve1[i])._multiply(2)
+      }
+      // Compute Q(u), Q'(u) and Q''(u)
+      const pt = evaluate(3, curve, u),
+        pt1 = evaluate(2, curve1, u),
+        pt2 = evaluate(1, curve2, u),
+        diff = pt._subtract(point),
+        df = pt1._dot(pt1) + diff._dot(pt2)
+      // u = u - f(u) / f'(u)
+      return isMachineZero(df) ? u : u - diff._dot(pt1) / df
+    }*/
+
+    double findRoot(const Pt4& curve, const g2::Ipoint& point, double u)
+    {
+        Pt4 curve1, curve2;
+        // Generate control vertices for Q'
+        for (int i = 0; i <= 2; i++) {
+            curve1.v[i] = curve.v[i + 1] - curve.v[i] * 3.0;
+        }
+        // Generate control vertices for Q''
+        for (int i = 0; i <= 1; i++) {
+            curve2.v[i] = curve1.v[i + 1] - curve1.v[i] * 2.0;
+        }
+        // Compute Q(u), Q'(u) and Q''(u)
+        auto pt = evaluate(3, curve.v, u),
+            pt1 = evaluate(2, curve1.v, u),
+            pt2 = evaluate(1, curve2.v, u);
+        auto diff = pt - g2::Dvec::fromPt(point);
+        auto df = pt1.dot(pt1) + diff.dot(pt2);
+        // u = u - f(u) / f'(u)
+        return isMachineZero(df) ? u : u - diff.dot(pt1) / df;
+    }
+
+    /*// Given set of points and their parameterization, try to find
+    // a better parameterization.
+    const reparameterize = (points: readonly Point[], first: number, last: number, u: number[], curve: Point[]) => {
+      for (let i = first; i <= last; i++) {
+        u[i - first] = findRoot(curve, points[i], u[i - first])
+      }
+      // Detect if the new parameterization has reordered the points.
+      // In that case, we would fit the points of the path in the wrong order.
+      for (let i = 1, l = u.length; i < l; i++) {
+        if (u[i] <= u[i - 1]) return false
+      }
+      return true
+    }*/
+
+    bool reparameterize(
+            const std::vector<g2::Ipoint>& points, size_t first, size_t last,
+            std::vector<double>& u, const Curve& curve)
+    {
+        for (size_t i = first; i <= last; ++i) {
+            u[i - first] = findRoot(curve.toPoints(), points[i], u[i - first]);
+        }
+        // Detect if the new parameterization has reordered the points.
+        // In that case, we would fit the points of the path in the wrong order.
+        for (size_t i = 1, l = u.size(); i < l; ++i) {
+            if (u[i] <= u[i - 1]) return false;
+        }
+        return true;
+    }
+
+    /*
+    // Fit a Bezier curve to a (sub)set of digitized points
+    const fitCubic = (points: readonly Point[], segments: Segment[], error: number, first: number, last: number, tan1: Point, tan2: Point) => {
+      //  Use heuristic if region only has two points in it
+      if (last - first === 1) {
+        const pt1 = points[first],
+          pt2 = points[last],
+          dist = pt1._getDistance(pt2) / 3
+        addCurve(segments, [pt1, pt1._add(tan1._normalize(dist)), pt2._add(tan2._normalize(dist)), pt2])
+        return
+      }
+      // Parameterize points, and attempt to fit curve
+      const uPrime = chordLengthParameterize(points, first, last)
+      let maxError = Math.max(error, error * error),
+        split: number,
+        parametersInOrder = true
+      // Try not 4 but 5 iterations
+      for (let i = 0; i <= 4; i++) {
+        const curve = generateBezier(points, first, last, uPrime, tan1, tan2)
+        //  Find max deviation of points to fitted curve
+        const max = findMaxError(points, first, last, curve, uPrime)
+        if (max.error < error && parametersInOrder) {
+          addCurve(segments, curve)
+          return
+        }
+        split = max.index
+        // If error not too large, try reparameterization and iteration
+        if (max.error >= maxError) break
+        parametersInOrder = reparameterize(points, first, last, uPrime, curve)
+        maxError = max.error
+      }
+      // Fitting failed -- split at max error point and fit recursively
+      const tanCenter = points[split! - 1]._subtract(points[split! + 1])
+      fitCubic(points, segments, error, first, split!, tan1, tanCenter)
+      fitCubic(points, segments, error, split!, last, tanCenter._negate(), tan2)
+    }
+    */
+
+    void fitCubic(
+            const std::vector<g2::Ipoint> points,
+            std::vector<Segment>& segments,
+            double error,
+            size_t first, size_t last,
+            const g2::Dvec& tan1, const g2::Dvec& tan2)
+    {
+        if (last - first == 1) {
+            const auto& pt1 = points[first],
+                        pt2 = points[last];
+            const auto dist = pt1.distFromD(pt2) / 3;
+            addCurve(segments,
+                Curve{ pt1, tan1.normalized(dist), tan2.normalized(dist), pt2 });
+            return;
+
+            // Parameterize points, and attempt to fit curve
+            auto uPrime = chordLengthParameterize(points, first, last);
+            auto maxError = std::max(error, error * error);
+            size_t split;
+            bool parametersInOrder = true;
+
+            // Try not 4 but 5 iterations
+            for (int i = 0; i <= 4; ++i) {
+                auto curve = generateBezier(points, first, last, uPrime, tan1, tan2);
+                //  Find max deviation of points to fitted curve
+                auto max = findMaxError(points, first, last, curve, uPrime);
+                if (max.error < error && parametersInOrder) {
+                    addCurve(segments, curve);
+                    return;
+                }
+                split = max.index;
+                // If error not too large, try reparameterization and iteration
+                if (max.error >= maxError) break;
+                parametersInOrder = reparameterize(points, first, last, uPrime, curve);
+                maxError = max.error;
+            }
+            // Fitting failed -- split at max error point and fit recursively
+            auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
+            fitCubic(points, segments, error, first, split, tan1, tanCenter);
+            fitCubic(points, segments, error, split, last, -tanCenter, tan2);
+        }
+    }
+
+    /*
+    const fit = (points: Point[], closed: unknown, error: number) => {
+      // We need to duplicate the first and last segment when simplifying a
+      // closed path.
+      if (closed) {
+        points.unshift(points[points.length - 1])
+        points.push(points[1]) // The point previously at index 0 is now 1.
+      }
+      const length = points.length
+      if (length === 0) {
+        return []
+      }
+      // To support reducing paths with multiple points in the same place
+      // to one segment:
+      const segments = [new Segment(points[0])]
+      fitCubic(
+        points,
+        segments,
+        error,
+        0,
+        length - 1,
+        // Left Tangent
+        points[1]._subtract(points[0]),
+        // Right Tangent
+        points[length - 2]._subtract(points[length - 1]),
+      )
+      // Remove the duplicated segments for closed paths again.
+      if (closed) {
+        segments.shift()
+        segments.pop()
+      }
+      return segments
+    }*/
+
+    std::vector<Segment> fit(const g2sv::Polyline& pl, double error)
+    {
+        if (pl.pts.size() < 3)
+            return {};
+
+        std::vector<g2::Ipoint> newPoints;
+        const std::vector<g2::Ipoint>* wk = &pl.pts;     // working set
+        if (pl.isClosed) {
+            // We need to duplicate the first and last segment when simplifying a
+            // closed path.
+            newPoints.reserve(pl.pts.size() + 2);
+            newPoints.push_back(pl.pts.back());
+            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
+            newPoints.push_back(pl.pts.front());
+            wk = &newPoints;
+        }
+        // To support reducing paths with multiple points in the same place
+        // to one segment:
+        std::vector<Segment> segments;
+        auto length = wk->size();
+        segments.emplace_back((*wk)[0]);
+        fitCubic(
+          *wk,
+          segments,
+          error,
+          0,
+          length - 1,
+          // Left Tangent
+          ((*wk)[1] - (*wk)[0]).cast<double>(),
+          // Right Tangent
+          ((*wk)[length - 2] - (*wk)[length - 1]).cast<double>()
+        );
+        // Remove the duplicated segments for closed paths again.
+        if (pl.isClosed) {
+            segments.erase(segments.begin());
+            segments.pop_back();
+        }
+        return segments;
+    }
+
 
 }   // anon namespace
-
-
-/*
-const fit = (points: Point[], closed: unknown, error: number) => {
-  // We need to duplicate the first and last segment when simplifying a
-  // closed path.
-  if (closed) {
-    points.unshift(points[points.length - 1])
-    points.push(points[1]) // The point previously at index 0 is now 1.
-  }
-  const length = points.length
-  if (length === 0) {
-    return []
-  }
-  // To support reducing paths with multiple points in the same place
-  // to one segment:
-  const segments = [new Segment(points[0])]
-  fitCubic(
-    points,
-    segments,
-    error,
-    0,
-    length - 1,
-    // Left Tangent
-    points[1]._subtract(points[0]),
-    // Right Tangent
-    points[length - 2]._subtract(points[length - 1]),
-  )
-  // Remove the duplicated segments for closed paths again.
-  if (closed) {
-    segments.shift()
-    segments.pop()
-  }
-  return segments
-}
-*/
-
-void g2sv::Polyline::fit(double error) const
-{
-    if (pts.size() < 3)
-        return;
-
-    std::vector<g2::Ipoint> newPoints;
-    const std::vector<g2::Ipoint>* wk = &this->pts;     // working set
-    if (isClosed) {
-        // We need to duplicate the first and last segment when simplifying a
-        // closed path.
-        newPoints.reserve(pts.size() + 2);
-        newPoints.push_back(pts.back());
-        newPoints.insert(newPoints.end(), pts.begin(), pts.end());
-        newPoints.push_back(pts.front());
-    }
-}
-
 
 
 ///// Polypath /////////////////////////////////////////////////////////////////

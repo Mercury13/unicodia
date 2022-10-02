@@ -45,7 +45,7 @@ namespace g2 {
         constexpr U distFrom(const Point<T>& b) const noexcept
             { return std::sqrt(static_cast<U>(dist2from(b))); }
         constexpr float distFromF(const Point<T>& b) const noexcept { return distFrom<float>(b); }
-        constexpr float distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
+        constexpr double distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
 
         // Point == point
         constexpr bool operator == (const Point<T>& b) const { return (x == b.x && y == b.y); }
@@ -101,6 +101,10 @@ namespace g2 {
 
         template <class U>
         constexpr Point<U> toPt() const
+            { return { static_cast<U>(x), static_cast<U>(y) }; }
+
+        template <class U>
+        constexpr Vec<U> cast() const noexcept
             { return { static_cast<U>(x), static_cast<U>(y) }; }
     };
 

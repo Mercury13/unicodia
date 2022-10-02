@@ -25,8 +25,6 @@ namespace g2sv {
         /// Removes collinear segments that go back and forth
         /// @return [+] smth happened
         bool removeBackForth();
-
-        void fit(double error) const;
     };
 
     class PathParser
