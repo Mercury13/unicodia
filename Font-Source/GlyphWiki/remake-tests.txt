@@ -1,7 +1,5 @@
-UNPROCESSED
-!31F78.svg: somehow the tangent is zero vector, why?
-
 PROCESSED
 !simplify.svg: Just a small test
 !ink_extreme_opt.svg: Inkscape’s extreme optimization that mixes absolute and relative turtle mode
 !very_close_tangent.svg: some point is so close to corner that its position is white noise
+!lost_handle.svg: in closed cornered curve 1st point has hOut only, and last has hIn only, and this is the same point → unite properly

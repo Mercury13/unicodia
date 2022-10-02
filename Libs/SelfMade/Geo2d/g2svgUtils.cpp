@@ -968,6 +968,15 @@ namespace {
             isCompletelySmooth = false;
         }
 
+        {   // Debug
+            g2::Ipoint ptDebug { 733, 619 };
+            auto it = std::find(pl.pts.begin(), pl.pts.end(), ptDebug);
+            if (it != pl.pts.end()) {
+                auto index = it - pl.pts.begin();
+                ++index;
+            }
+        }
+
         std::vector<g2::Ipoint> newPoints;
         const std::vector<g2::Ipoint>* wk = &pl.pts;    // work set
         if (isCompletelySmooth) {
@@ -999,6 +1008,11 @@ namespace {
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
             auto last = (*corners)[i + 1];
+
+            // Debug
+            if (i+1 == lastCorner) {
+                ++i;
+            }
             fitCubic(
                 Initial::YES,
                 *wk,
@@ -1023,6 +1037,8 @@ namespace {
             if (segments.size() <= 1) {
                 segments.clear();
             } else {
+                // 1st point has hOut only, and last has hIn only, and this is the same point → unite properly
+                segments[0].hIn = segments.back().hIn;
                 segments.pop_back();
             }
         }
