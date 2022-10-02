@@ -74,7 +74,8 @@ namespace {
         .scale = MY_SCALE,
         .corner = {
             .minCosine = -0.64,  // <130°
-            .maxSide = 13 * MY_SCALE
+            .maxSide = 13 * MY_SCALE,
+            .smoothCosine = -0.9   // ≈154°
         }
     };
 

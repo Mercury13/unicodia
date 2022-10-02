@@ -22,7 +22,7 @@ for line0 in file:
     glyph = font.createChar(code)
     glyph.glyphname = "u" + line.upper()
     glyph.importOutlines(svgName, scale=False)
-    glyph.transform(mat, ("round"))
+    glyph.transform(mat)
     glyph.width = 1000
 
 # Convert layers to quadratic
@@ -30,6 +30,7 @@ font.is_quadratic = True
 
 # Hint glyphs
 font.selection.all()
+font.round()
 font.autoHint()
 font.autoInstr()
 

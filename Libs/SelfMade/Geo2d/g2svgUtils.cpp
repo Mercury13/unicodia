@@ -240,9 +240,14 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
         if (cs >= opt.minCosine) {  // Smooth angle detected — always real corner
             r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
         } else {
+            bool notCorner = false;
             if (len1 >= opt.maxSide) {  // Len1 BIG
-                if (len2 >= opt.maxSide) {  // BIG-BIG — real corner
-                    r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+                if (len2 >= opt.maxSide) {  // BIG-BIG — real corner unless smooth
+                    if (cs < opt.smoothCosine) {
+                        notCorner = true;
+                    } else {
+                        r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+                    }
                 } else {    // BIG-SMALL — start smooth thing
                     r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_START });
                 }
@@ -250,11 +255,15 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
                 if (len2 >= opt.maxSide) {  // SMALL-BIG → end smooth thing
                     r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_END });
                 } else {
-                    if ((v1.y > 0 && v2.y > 0) || (v1.y < 0 && v2.y < 0)) {
-                        r.push_back(Corner{ .index = iB, .type = CornerType::HORZ_EXTREMITY });
-                    } else if ((v1.x > 0 && v2.x > 0) || (v1.x < 0 && v2.x < 0)) {
-                        r.push_back(Corner{ .index = iB, .type = CornerType::VERT_EXTREMITY });
-                    }
+                    notCorner = true;
+                }
+            }
+            // If not a corner → check once again for extremities
+            if (notCorner) {
+                if (v1.y * v2.y > 0) {  // both >0 or <0
+                    r.push_back(Corner{ .index = iB, .type = CornerType::HORZ_EXTREMITY });
+                } else if (v1.x * v2.x > 0) {
+                    r.push_back(Corner{ .index = iB, .type = CornerType::VERT_EXTREMITY });
                 }
             }
         }
@@ -1122,13 +1131,16 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
 
     g2::Ipoint turtle;
     Polyline* path = nullptr;
+    auto turtleMode = TurtleMode::WAIT;
 
     PathParser parser(text);
-    auto moveTurtleAbs = [&turtle,&parser, scale](char command) {
+    auto moveTurtleAbs = [&](char command) {
+        turtleMode = TurtleMode::ABS;
         turtle.x = parser.getInum(command, AllowComma::NO,  scale);
         turtle.y = parser.getInum(command, AllowComma::YES, scale);
     };
-    auto moveTurtleRel = [&turtle,&parser, scale](char command) {
+    auto moveTurtleRel = [&](char command) {
+        turtleMode = TurtleMode::REL;
         turtle.x += parser.getInum(command, AllowComma::NO,  scale);
         turtle.y += parser.getInum(command, AllowComma::YES, scale);
     };
@@ -1137,7 +1149,6 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
             throw ESvg(x);
     };
 
-    auto turtleMode = TurtleMode::WAIT;
     while (true) {
         auto command = parser.getCommand(turtleMode);
         if (command == 0)
@@ -1159,13 +1170,11 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
         case 't':
             throw ESvg("Tied curve commands are unsupported");
         case 'M':
-            turtleMode = TurtleMode::ABS;
             moveTurtleAbs(command);
             path = &curves.emplace_back();
             path->pts.push_back(turtle);
             break;
         case 'm':
-            turtleMode = TurtleMode::REL;
             moveTurtleRel(command);
             path = &curves.emplace_back();
             path->pts.push_back(turtle);
@@ -1182,21 +1191,25 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
             break;
         case 'H':
             rqPath("L (abs horz) command: no path to move turtle");
+            turtleMode = TurtleMode::ABS;
             turtle.x = parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'h':
             rqPath("h (rel horz) command: no path to move turtle");
+            turtleMode = TurtleMode::REL;
             turtle.x += parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'V':
             rqPath("V (abs vert) command: no path to move turtle");
+            turtleMode = TurtleMode::ABS;
             turtle.y = parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'v':
             rqPath("h (rel vert) command: no path to move turtle");
+            turtleMode = TurtleMode::REL;
             turtle.y += parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
@@ -1204,7 +1217,9 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
         case 'z':
             turtleMode = TurtleMode::WAIT;
             rqPath("Z (close curve) command: no path to close curve");
-            turtle = path->pts[0];  // where does turtle go?
+            if (path->pts.size() > 1 && path->pts.front() == path->pts.back())
+                path->pts.pop_back();
+            turtle = path->pts.front();  // where does turtle go?
             path->isClosed = true;
             path = nullptr;
             break;

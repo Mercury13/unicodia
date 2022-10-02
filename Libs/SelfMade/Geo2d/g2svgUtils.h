@@ -24,6 +24,9 @@ namespace g2sv {
             double minCosine = -0.7;
             /// Side longer than this are considered straight
             double maxSide = 100000;
+            /// This cosine is considered corner regardless of length,
+            /// always < minCosine
+            double smoothCosine = -0.9;
         } corner;
     };
 
