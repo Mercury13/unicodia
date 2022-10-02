@@ -297,13 +297,15 @@ namespace {
     }
     */
 
+    /// Actually a curve point, but let it be…
     struct Segment {
+        size_t index;
         g2::Ipoint a;
-        g2::Dvec ah;
-        g2::Dvec bh;
-        Segment() noexcept = default;
-        Segment(const g2::Ipoint& b) noexcept : a(b) {}
-        Segment(const g2::Ipoint& b, const g2::Dvec& bh) noexcept : a(b), ah(bh) {}
+        g2::Dvec hIn;
+        g2::Dvec hOut;
+
+        constexpr static Segment fromPt(size_t index, const g2::Ipoint& pt)
+            { return { .index = index, .a = pt, .hIn = g2::ZEROVEC, .hOut = g2::ZEROVEC }; }
     };
 
     struct Pt4 {
@@ -426,11 +428,13 @@ namespace {
     }
     */
 
-    void addCurve(std::vector<Segment>& segments, const Curve& curve)
+    void addCurve(std::vector<Segment>& segments, size_t index, const Curve& curve)
     {
         auto& prev = segments.back();
-        prev.bh = curve.ah;
-        segments.emplace_back(curve.b, curve.bh);
+        prev.hOut = curve.ah;
+        segments.push_back(Segment{
+                .index = index, .a = curve.b,
+                .hIn = curve.bh, .hOut = g2::ZEROVEC });
     }
 
     /*
@@ -651,7 +655,16 @@ namespace {
     }
     */
 
+    enum class Initial { NO, YES };
+
+    template <class En>
+    constexpr bool isTrue(En x) noexcept {
+        static_assert(std::is_enum_v<En>);
+        return (x != En::NO);
+    }
+
     void fitCubic(
+            Initial isInitial,
             const std::vector<g2::Ipoint>& points,
             std::vector<Segment>& segments,
             double error,
@@ -659,11 +672,18 @@ namespace {
             const g2::Dvec& tan1, const g2::Dvec& tan2)
     {
         if (last - first == 1) {
-            const auto& pt1 = points[first],
-                        pt2 = points[last];
-            const auto dist = pt1.distFromD(pt2) / 3;
-            addCurve(segments,
-                Curve{ pt1, tan1.normalized(dist), tan2.normalized(dist), pt2 });
+            const auto &pt1 = points[first],
+                       &pt2 = points[last];
+            if (isTrue(isInitial)) {
+                // Add it as a straight segment
+                addCurve(segments, last,
+                    Curve{ pt1, g2::ZEROVEC, g2::ZEROVEC, pt2 });
+            } else {
+                // Add it as smth nice
+                const auto dist = pt1.distFromD(pt2) / 3;
+                addCurve(segments, last,
+                    Curve{ pt1, tan1.normalized(dist), tan2.normalized(dist), pt2 });
+            }
             return;
         }
 
@@ -679,7 +699,7 @@ namespace {
             //  Find max deviation of points to fitted curve
             auto max = findMaxError(points, first, last, curve, uPrime);
             if (max.error < error && parametersInOrder) {
-                addCurve(segments, curve);
+                addCurve(segments, last, curve);
                 return;
             }
             split = max.index;
@@ -690,8 +710,8 @@ namespace {
         }
         // Fitting failed -- split at max error point and fit recursively
         auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
-        fitCubic(points, segments, error, first, split, tan1, tanCenter);
-        fitCubic(points, segments, error, split, last, -tanCenter, tan2);
+        fitCubic(Initial::NO, points, segments, error, first, split, tan1, tanCenter);
+        fitCubic(Initial::NO, points, segments, error, split, last, -tanCenter, tan2);
     }
 
     /*
@@ -728,7 +748,9 @@ namespace {
       return segments
     }*/
 
-    std::vector<Segment> fit(const g2sv::Polyline& pl, double error)
+    std::vector<Segment> fit(
+            const g2sv::Polyline& pl,
+            const g2sv::SimplifyOpt& opt)
     {
         if (pl.pts.size() < 3)
             return {};
@@ -748,11 +770,12 @@ namespace {
         // to one segment:
         std::vector<Segment> segments;
         auto length = wk->size();
-        segments.emplace_back((*wk)[0]);
+        segments.push_back(Segment::fromPt(0, (*wk)[0]));
         fitCubic(
+          Initial::YES,
           *wk,
           segments,
-          error,
+          opt.tolerance,
           0,
           length - 1,
           // Left Tangent
@@ -869,40 +892,30 @@ namespace {
                 appendNumber(r, curY, scale);
                 first = false;
             } else {
-              auto inX = curX + segment.ah.x;
-              auto inY = curY + segment.ah.y;
+              auto inX = curX + segment.hIn.x;
+              auto inY = curY + segment.hIn.y;
               if (inX == curX && inY == curY && outX == prevX && outY == prevY) {
-                // l = relative lineto:
+                // L = absolute lineto:
                     if (!skipLine) {
-                        auto dx = lround(curX - prevX);
-                        auto dy = lround(curY - prevY);
-                        if (dx == 0) {
-                            appendCommand(r, 'v');
-                            appendNumber(r, dy, scale);
-                        } else if (dy == 0) {
-                            appendCommand(r, 'h');
-                            appendNumber(r, dx, scale);
-                        } else {
-                            appendCommand(r, 'l');
-                            appendNumber(r, dx, scale);
-                            appendNumber(r, dy, scale);
-                        }
+                        appendCommand(r, 'L');
+                        appendNumber(r, curX, scale);
+                        appendNumber(r, curY, scale);
                     }
                 } else {
-                    // c = relative curveto:
-                    appendCommand(r, 'c');
-                    appendNumber(r, outX - prevX, scale);
-                    appendNumber(r, outY - prevY, scale);
-                    appendNumber(r, inX - prevX,  scale);
-                    appendNumber(r, inY - prevY,  scale);
-                    appendNumber(r, curX - prevX, scale);
-                    appendNumber(r, curY - prevY, scale);
+                    // c = absolute curveto:
+                    appendCommand(r, 'C');
+                    appendNumber(r, outX, scale);
+                    appendNumber(r, outY, scale);
+                    appendNumber(r, inX,  scale);
+                    appendNumber(r, inY,  scale);
+                    appendNumber(r, curX, scale);
+                    appendNumber(r, curY, scale);
                 }
             }
             prevX = curX;
             prevY = curY;
-            outX = curX + segment.bh.x;
-            outY = curY + segment.bh.y;
+            outX = curX + segment.hOut.x;
+            outY = curY + segment.hOut.y;
         };
 
         for (size_t i = 0; i < length; ++i)
@@ -910,7 +923,7 @@ namespace {
         // Close path by drawing first segment again
         if (closed && length > 0) {
             addSegment(segments[0], true);
-            appendCommand(r, 'z');
+            appendCommand(r, 'Z');
         }
 
         return r;
@@ -1032,9 +1045,6 @@ std::string g2sv::Polypath::svgData(int scale) const
         if (!v.pts.empty()) {
             char command = 'M';
             for (auto& pt : v.pts) {
-                if (&pt - v.pts.data() == 45) {
-                    command = 'L';
-                }
                 appendCommand(r, command);
                 appendNumber(r, pt.x, scale);
                 appendNumber(r, pt.y, scale);
@@ -1048,12 +1058,12 @@ std::string g2sv::Polypath::svgData(int scale) const
 }
 
 
-void g2sv::Polypath::simplify(int scale, double tolerance)
+void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
     dataOverride.clear();
     for (auto& curve : curves) {
-        auto segs = fit(curve, tolerance);
-        auto pathData = getSegmentsPathData(segs, curve.isClosed, scale);
+        auto segs = fit(curve, opt);
+        auto pathData = getSegmentsPathData(segs, curve.isClosed, opt.scale);
         if (!pathData.empty()) {
             if (!dataOverride.empty())
                 dataOverride += ' ';

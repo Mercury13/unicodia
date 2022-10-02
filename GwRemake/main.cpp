@@ -38,16 +38,16 @@ namespace {
     public:
         pugi::xml_node node;
 
-        void remakeAlone(int scale);
+        void remakeAlone(const g2sv::SimplifyOpt& simopt);
     };
 
-    void MyPolyPath::remakeAlone([[maybe_unused]] int scale)
+    void MyPolyPath::remakeAlone([[maybe_unused]] const g2sv::SimplifyOpt& simopt)
     {
         for (auto& v : curves) {
             v.removeRepeating();
             v.removeBackForth();
         }
-        simplify(scale, 3.0);
+        simplify(simopt);
     }
 
     struct Svg
@@ -61,13 +61,18 @@ namespace {
         void write();
     private:
         void loadFromRec(pugi::xml_node node);
-        static constexpr int SCALE = 5;
     };
 
     void Svg::clear()
     {
         paths.clear();
     }
+
+    constinit const g2sv::SimplifyOpt simopt {
+        .tolerance = 8,
+        .smoothCosine = -0.94,  // ≈ cos 160°
+        .scale = 5
+    };
 
     void Svg::loadFromRec(pugi::xml_node node) {
         switch (node.type()) {
@@ -81,7 +86,7 @@ namespace {
             auto data = node.attribute("d").as_string();
             auto& curve = paths.emplace_back();
             curve.node = node;
-            curve.parse(data, SCALE);
+            curve.parse(data, simopt.scale);
         } else {
             for (auto v : node.children()) {
                 loadFromRec(v);
@@ -99,14 +104,14 @@ namespace {
     void Svg::remake()
     {
         for (auto& v : paths) {
-            v.remakeAlone(SCALE);
+            v.remakeAlone(simopt);
         }
     }
 
     void Svg::write()
     {
         for (auto& v : paths) {
-            v.node.attribute("d") = v.svgData(SCALE).c_str();
+            v.node.attribute("d") = v.svgData(simopt.scale).c_str();
         }
     }
 }

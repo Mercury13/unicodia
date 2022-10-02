@@ -11,6 +11,9 @@ namespace g2 {
     enum class Origin { INST };
     constexpr Origin ORIGIN = Origin::INST;
 
+    enum class ZeroVec { INST };
+    constexpr ZeroVec ZEROVEC = ZeroVec::INST;
+
     ///
     ///  Point in 2D space
     ///
@@ -37,9 +40,9 @@ namespace g2 {
         // squared distance
         constexpr T dist2from(const Point<T>& b) const noexcept
         {
-            auto dx = x - b.x;
-            auto dy = x - b.y;
-            return dx*dx + dy * dy;
+            const auto dx = x - b.x;
+            const auto dy = y - b.y;
+            return dx*dx + dy*dy;
         }
         template <class U>
         constexpr U distFrom(const Point<T>& b) const noexcept
@@ -68,6 +71,7 @@ namespace g2 {
         using Type = T;
 
         constexpr Vec() noexcept = default;
+        constexpr Vec(ZeroVec) noexcept {}
         constexpr Vec(T aX, T aY) noexcept : x(aX), y(aY) {}
 
         // 2D cross product = oriented parallelogram area = |a|·|b|·sin α
@@ -81,7 +85,7 @@ namespace g2 {
             { return x*x + y*y; }
         // |a|, length
         template <class U>
-        constexpr float len() const noexcept
+        constexpr U len() const noexcept
             { return std::sqrt(static_cast<U>(len2())); }
         constexpr float lenF() const noexcept { return len<float>(); }
         constexpr double lenD() const noexcept { return len<double>(); }

@@ -14,6 +14,14 @@
 
 namespace g2sv {
 
+    struct SimplifyOpt {
+        double tolerance = 2.5;
+        /// Always (-1…0), max. cosine of vertices considered smooth
+        double smoothCosine = -0.7;
+        /// Scaling double → int (we mostly work in fixed point)
+        int scale = 1;
+    };
+
     struct Polyline {
         std::vector<g2::Ipoint> pts;
         bool isClosed = false;
@@ -25,6 +33,8 @@ namespace g2sv {
         /// Removes collinear segments that go back and forth
         /// @return [+] smth happened
         bool removeBackForth();
+
+        std::vector<size_t> detectCorners(double maxCosine) const;
     };
 
     enum class AllowComma { NO, YES };
@@ -50,7 +60,7 @@ namespace g2sv {
         std::string dataOverride;
 
         void parse(std::string_view text, int scale);
-        void simplify(int scale, double tolerance = 2.5);
+        void simplify(const SimplifyOpt& opt);
         std::string svgData(int scale) const;
     };
 
