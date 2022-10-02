@@ -68,10 +68,14 @@ namespace {
         paths.clear();
     }
 
+    constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
-        .tolerance = 8,
-        .smoothCosine = -0.83,  // > cos 145°
-        .scale = 5
+        .tolerance = 2 * MY_SCALE,
+        .scale = MY_SCALE,
+        .corner = {
+            .minCosine = -0.64,  // <130°
+            .maxSide = 13 * MY_SCALE
+        }
     };
 
     void Svg::loadFromRec(pugi::xml_node node) {

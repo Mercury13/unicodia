@@ -211,25 +211,60 @@ bool g2sv::Polyline::removeBackForth()
 }
 
 
-std::optional<std::vector<size_t>> g2sv::Polyline::detectCorners(double maxCosine) const
+std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
+        const SimplifyOpt::Corner& opt) const
 {
     if (pts.size() <= 2)
         return std::nullopt;
-    std::vector<size_t> r;
+    std::vector<Corner> r;
 
-    auto checkCosine = [this, &r, maxCosine](size_t iA, size_t iB, size_t iC) {
-        auto cs = g2::cosABC(pts[iA], pts[iB], pts[iC]);
+    auto checkCosine = [this, &r, &opt](size_t iA, size_t iB, size_t iC) {
+        auto& a = pts[iA];
+        auto& b = pts[iB];
+        auto& c = pts[iC];
+        auto v1 = a - b;
+        auto v2 = c - b;
+
+        auto len1 = v1.lenD();
+        if (len1 <= 1e-6)
+            throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
+
+        auto len2 = v2.lenD();
+        if (len2 <= 1e-6)
+            throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
+
+        auto cs = v1.dotD(v2) / (len1 * len2);
         if (!std::isfinite(cs))
-            throw ESvg("[SVG] Cannot calculate angle, duplicate deletion failed");
-        if (cs >= maxCosine)
-            r.push_back(iB);
+            throw ESvg("[SVG] Cannot calculate angle, something really bad");
+
+        if (cs >= opt.minCosine) {  // Smooth angle detected — always real corner
+            r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+        } else {
+            if (len1 >= opt.maxSide) {  // Len1 BIG
+                if (len2 >= opt.maxSide) {  // BIG-BIG — real corner
+                    r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+                } else {    // BIG-SMALL — start smooth thing
+                    r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_START });
+                }
+            } else {    // Len1 SMALL
+                if (len2 >= opt.maxSide) {  // SMALL-BIG → end smooth thing
+                    r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_END });
+                } else {
+                    if ((v1.y > 0 && v2.y > 0) || (v1.y < 0 && v2.y < 0)) {
+                        r.push_back(Corner{ .index = iB, .type = CornerType::HORZ_EXTREMITY });
+                    } else if ((v1.x > 0 && v2.x > 0) || (v1.x < 0 && v2.x < 0)) {
+                        r.push_back(Corner{ .index = iB, .type = CornerType::VERT_EXTREMITY });
+                    }
+                }
+            }
+        }
     };
 
     auto last = pts.size() - 1;
     if (isClosed) {
         checkCosine(last, 0, 1);
     } else {
-        r.push_back(0);
+        r.push_back(Corner{ .index = 0, .type = CornerType::REAL_CORNER });
     }
 
     for (size_t i = 1; i < last; ++i) {
@@ -239,7 +274,7 @@ std::optional<std::vector<size_t>> g2sv::Polyline::detectCorners(double maxCosin
     if (isClosed) {
         checkCosine(last - 1, last, 0);
     } else {
-        r.push_back(last);
+        r.push_back(Corner{ .index = last, .type = CornerType::REAL_CORNER });
     }
 
     return r;
@@ -834,6 +869,49 @@ namespace {
       return segments
     }*/
 
+    g2::Dvec makeLeftTangent(
+            const std::vector<g2::Ipoint>& wk,
+            const g2sv::Corner& first)
+    {
+        auto& ptPrev = (first.index == 0) ? wk.back() : wk[first.index - 1];
+        auto& pt0 = wk[first.index];
+        auto& pt1 = wk[first.index + 1];
+        switch (first.type) {
+        case g2sv::CornerType::SMOOTH_START:
+            return (pt0 - ptPrev).cast<double>();
+        case g2sv::CornerType::SMOOTH_END:
+        case g2sv::CornerType::REAL_CORNER:
+            return (pt1 - pt0).cast<double>();
+        case g2sv::CornerType::HORZ_EXTREMITY:
+            return { static_cast<double>(pt1.x - ptPrev.x), 0 };
+        case g2sv::CornerType::VERT_EXTREMITY:
+            return { 0, static_cast<double>(pt1.y - ptPrev.y) };
+        }
+        __builtin_unreachable();
+    }
+
+    g2::Dvec makeRightTangent(
+            const std::vector<g2::Ipoint>& wk,
+            const g2sv::Corner& last)
+    {
+        auto i1 = last.index + 1;
+        auto& ptNext = (i1 >= wk.size()) ? wk.front() : wk[i1];
+        auto& pt10 = wk[last.index];
+        auto& pt9 = wk[last.index - 1];
+        switch (last.type) {
+        case g2sv::CornerType::SMOOTH_END:
+            return (pt10 - ptNext).cast<double>();
+        case g2sv::CornerType::SMOOTH_START:
+        case g2sv::CornerType::REAL_CORNER:
+            return (pt9 - pt10).cast<double>();
+        case g2sv::CornerType::HORZ_EXTREMITY:
+            return { static_cast<double>(pt9.x - ptNext.x), 0 };
+        case g2sv::CornerType::VERT_EXTREMITY:
+            return { 0, static_cast<double>(pt9.y - ptNext.y) };
+        }
+        __builtin_unreachable();
+    }
+
     std::vector<Segment> fit(
             g2sv::Polyline& pl,
             const g2sv::SimplifyOpt& opt)
@@ -841,60 +919,83 @@ namespace {
         if (pl.pts.size() < 3)
             return {};
 
-        auto corners = pl.detectCorners(opt.smoothCosine);
+        auto corners = pl.detectCorners(opt.corner);
         if (!corners)
             return {};
 
         bool isCompletelySmooth = true;
         if (!corners->empty()) {
-            auto corner0 = (*corners)[0];
+            auto corner0 = (*corners)[0].index;
             if (corner0 != 0) { // always when path closed
                 pl.rotateIndexes(corner0);
-            }
-            for (auto& v : *corners) {
-                v -= corner0;
+                for (auto& v : *corners) {
+                    v.index -= corner0;
+                }
             }
             isCompletelySmooth = false;
         }
 
+        std::vector<g2::Ipoint> newPoints;
+        const std::vector<g2::Ipoint>* wk = &pl.pts;    // work set
         if (isCompletelySmooth) {
-            std::vector<g2::Ipoint> newPoints;
-            if (pl.isClosed) {
-                // We need to duplicate the first and last segment when simplifying a
-                // closed path.
-                newPoints.reserve(pl.pts.size() + 2);
-                newPoints.push_back(pl.pts.back());
-                newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
-                newPoints.push_back(pl.pts.front());
-            }
-            // To support reducing paths with multiple points in the same place
-            // to one segment:
-            std::vector<Segment> segments;
-            auto last = newPoints.size() - 1;
-            segments.push_back(Segment::fromPt(0, newPoints[0]));
+            // Completely smooth path: make copies of one segment
+            newPoints.reserve(pl.pts.size() + 2);
+            newPoints.push_back(pl.pts.back());
+            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
+            newPoints.push_back(pl.pts.front());
+            wk = &newPoints;
+            corners = std::vector<g2sv::Corner>{
+                        { { .index = 0, .type = g2sv::CornerType::REAL_CORNER },
+                          { .index = newPoints.size() - 1, .type = g2sv::CornerType::REAL_CORNER } } };
+        } else if (pl.isClosed) {
+            // Closed path: make copy of a point
+            newPoints.reserve(pl.pts.size() + 1);
+            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
+            newPoints.push_back(pl.pts.front());
+            wk = &newPoints;
+            corners->emplace_back(g2sv::Corner{
+                    .index = newPoints.size() - 1, .type = g2sv::CornerType::REAL_CORNER });
+        }
+
+        // To support reducing paths with multiple points in the same place
+        // to one segment:
+        std::vector<Segment> segments;
+        segments.push_back(Segment::fromPt(0, (*wk)[0]));
+        size_t lastCorner = corners->size() - 1;
+
+        for (size_t i = 0; i < lastCorner; ++i) {
+            auto first = (*corners)[i];
+            auto last = (*corners)[i + 1];
             fitCubic(
-              Initial::YES,
-              newPoints,
-              segments,
-              opt.tolerance,
-              0,
-              last,
-              // Left Tangent
-              (newPoints[1] - newPoints[0]).cast<double>(),
-              // Right Tangent
-              (newPoints[last - 1] - newPoints[last]).cast<double>()
+                Initial::YES,
+                *wk,
+                segments,
+                opt.tolerance,
+                first.index,
+                last.index,
+                // Left Tangent
+                makeLeftTangent(*wk, first),
+                // Right Tangent
+                makeRightTangent(*wk, last)
             );
-            // Remove the duplicated segments for closed paths again.
+        }
+
+        // Un-preprocess path
+        if (isCompletelySmooth) {
             if (segments.size() <= 2) {
                 segments.clear();
             } else {
                 segments.pop_back();
                 segments.erase(segments.begin());
             }
-            return segments;
-        } else {
-
+        } else if (pl.isClosed) {
+            if (segments.size() <= 1) {
+                segments.clear();
+            } else {
+                segments.pop_back();
+            }
         }
+        return segments;
     }
 
 

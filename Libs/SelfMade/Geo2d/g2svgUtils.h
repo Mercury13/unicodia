@@ -17,10 +17,27 @@ namespace g2sv {
 
     struct SimplifyOpt {
         double tolerance = 2.5;
-        /// Always (-1…0), max. cosine of vertices considered smooth
-        double smoothCosine = -0.7;
         /// Scaling double → int (we mostly work in fixed point)
         int scale = 1;
+        struct Corner {
+            /// Always (-1…0), min cosine of vertices considered corner
+            double minCosine = -0.7;
+            /// Side longer than this are considered straight
+            double maxSide = 100000;
+        } corner;
+    };
+
+    enum class CornerType {
+        REAL_CORNER,    // real corner — make tangents as you want
+        SMOOTH_START,   // start of smooth conjugation — tangent is PREV point
+        SMOOTH_END,     // end of smooth conjugation — tangent is NEXT point
+        HORZ_EXTREMITY, // Horizontal extremity of smooth sequence
+        VERT_EXTREMITY  // Vertical extremity of smooth sequence
+    };
+
+    struct Corner {
+        size_t index;
+        CornerType type;
     };
 
     struct Polyline {
@@ -42,7 +59,8 @@ namespace g2sv {
 
         /// @return [-] smth bad [0] really no corners in closed polyline
         ///             (non-closed polyline gives at least its ends)
-        std::optional<std::vector<size_t>> detectCorners(double maxCosine) const;
+        std::optional<std::vector<Corner>> detectCorners(
+                const SimplifyOpt::Corner& opt) const;
 
         void appendSvgData(std::string& r, int scale) const;
     };
