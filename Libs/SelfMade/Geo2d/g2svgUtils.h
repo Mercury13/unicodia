@@ -27,6 +27,11 @@ namespace g2sv {
         std::vector<g2::Ipoint> pts;
         bool isClosed = false;
 
+        /// Moves point i to position 0
+        /// @warning  It is NOT physical rotation, it’s just reenumeration
+        ///           of closed path, and has no sense when the path is not closed.
+        void rotateIndexes(size_t i);
+
         /// Removes repeating points
         /// @return [+] smth happened
         bool removeRepeating();

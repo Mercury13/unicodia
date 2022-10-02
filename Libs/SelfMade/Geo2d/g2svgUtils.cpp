@@ -218,8 +218,11 @@ std::optional<std::vector<size_t>> g2sv::Polyline::detectCorners(double maxCosin
     std::vector<size_t> r;
 
     auto checkCosine = [this, &r, maxCosine](size_t iA, size_t iB, size_t iC) {
-        if (g2::cosABC(pts[iA], pts[iB], pts[iC]) < maxCosine)
-            r.push_back(iA);
+        auto cs = g2::cosABC(pts[iA], pts[iB], pts[iC]);
+        if (!std::isfinite(cs))
+            throw ESvg("[SVG] Cannot calculate angle, duplicate deletion failed");
+        if (cs >= maxCosine)
+            r.push_back(iB);
     };
 
     auto last = pts.size() - 1;
@@ -285,6 +288,13 @@ void g2sv::Polyline::appendSvgData(std::string& r, int scale) const
     }
 }
 
+
+void g2sv::Polyline::rotateIndexes(size_t i)
+{
+    if (i == 0 || i >= pts.size())
+        return;
+    std::rotate(pts.begin(), pts.begin() + i, pts.end());
+}
 
 
 namespace {
@@ -835,44 +845,56 @@ namespace {
         if (!corners)
             return {};
 
-        std::vector<g2::Ipoint> newPoints;
-        const std::vector<g2::Ipoint>* wk = &pl.pts;     // working set
-        if (pl.isClosed) {
-            // We need to duplicate the first and last segment when simplifying a
-            // closed path.
-            newPoints.reserve(pl.pts.size() + 2);
-            newPoints.push_back(pl.pts.back());
-            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
-            newPoints.push_back(pl.pts.front());
-            wk = &newPoints;
+        bool isCompletelySmooth = true;
+        if (!corners->empty()) {
+            auto corner0 = (*corners)[0];
+            if (corner0 != 0) { // always when path closed
+                pl.rotateIndexes(corner0);
+            }
+            for (auto& v : *corners) {
+                v -= corner0;
+            }
+            isCompletelySmooth = false;
         }
-        // To support reducing paths with multiple points in the same place
-        // to one segment:
-        std::vector<Segment> segments;
-        auto length = wk->size();
-        segments.push_back(Segment::fromPt(0, (*wk)[0]));
-        fitCubic(
-          Initial::YES,
-          *wk,
-          segments,
-          opt.tolerance,
-          0,
-          length - 1,
-          // Left Tangent
-          ((*wk)[1] - (*wk)[0]).cast<double>(),
-          // Right Tangent
-          ((*wk)[length - 2] - (*wk)[length - 1]).cast<double>()
-        );
-        // Remove the duplicated segments for closed paths again.
-        if (pl.isClosed) {
+
+        if (isCompletelySmooth) {
+            std::vector<g2::Ipoint> newPoints;
+            if (pl.isClosed) {
+                // We need to duplicate the first and last segment when simplifying a
+                // closed path.
+                newPoints.reserve(pl.pts.size() + 2);
+                newPoints.push_back(pl.pts.back());
+                newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
+                newPoints.push_back(pl.pts.front());
+            }
+            // To support reducing paths with multiple points in the same place
+            // to one segment:
+            std::vector<Segment> segments;
+            auto last = newPoints.size() - 1;
+            segments.push_back(Segment::fromPt(0, newPoints[0]));
+            fitCubic(
+              Initial::YES,
+              newPoints,
+              segments,
+              opt.tolerance,
+              0,
+              last,
+              // Left Tangent
+              (newPoints[1] - newPoints[0]).cast<double>(),
+              // Right Tangent
+              (newPoints[last - 1] - newPoints[last]).cast<double>()
+            );
+            // Remove the duplicated segments for closed paths again.
             if (segments.size() <= 2) {
                 segments.clear();
             } else {
                 segments.pop_back();
                 segments.erase(segments.begin());
             }
+            return segments;
+        } else {
+
         }
-        return segments;
     }
 
 

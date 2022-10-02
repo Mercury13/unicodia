@@ -70,7 +70,7 @@ namespace {
 
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 8,
-        .smoothCosine = -0.94,  // ≈ cos 160°
+        .smoothCosine = -0.83,  // > cos 145°
         .scale = 5
     };
 
