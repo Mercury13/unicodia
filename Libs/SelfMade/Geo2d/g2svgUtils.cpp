@@ -211,6 +211,29 @@ bool g2sv::Polyline::removeBackForth()
     }
 }
 
+
+std::vector<size_t> g2sv::Polyline::detectCorners(double maxCosine) const
+{
+    if (pts.size() <= 2)
+        return {};
+    std::vector<size_t> r;
+
+    auto checkCosine = [this, &r, maxCosine](size_t iA, size_t iB, size_t iC) {
+        if (g2::cosABC(pts[iA], pts[iB], pts[iC]) < maxCosine)
+            r.push_back(iA);
+    };
+
+    /// @todo [urgent] detectCorners
+    auto last = pts.size() - 1;
+    if (isClosed) {
+        checkCosine(last, 0, 1);
+    } else {
+        r.push_back(0);
+    }
+    return r;
+}
+
+
 namespace {
     constexpr double EPSILON = 1e-12;
     constexpr double MACHINE_EPSILON = 1.12e-16;
@@ -749,11 +772,13 @@ namespace {
     }*/
 
     std::vector<Segment> fit(
-            const g2sv::Polyline& pl,
+            g2sv::Polyline& pl,
             const g2sv::SimplifyOpt& opt)
     {
         if (pl.pts.size() < 3)
             return {};
+
+        auto corners = pl.detectCorners(opt.smoothCosine);
 
         std::vector<g2::Ipoint> newPoints;
         const std::vector<g2::Ipoint>* wk = &pl.pts;     // working set

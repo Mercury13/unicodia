@@ -61,6 +61,9 @@ namespace g2 {
             { return { static_cast<U>(x), static_cast<U>(y) }; }
     };
 
+    template <class T>
+    constexpr T sqr(T x) noexcept { return x * x; }
+
     ///
     ///  Vector in 2D space
     ///
@@ -69,24 +72,42 @@ namespace g2 {
         static_assert(std::is_arithmetic_v<T>);
         T x = 0, y = 0;
         using Type = T;
+        template <class U>
+        using CommonType = std::common_type_t<T, U>;
 
         constexpr Vec() noexcept = default;
         constexpr Vec(ZeroVec) noexcept {}
         constexpr Vec(T aX, T aY) noexcept : x(aX), y(aY) {}
 
         // 2D cross product = oriented parallelogram area = |a|·|b|·sin α
-        constexpr T cross(const Vec& b) const noexcept
+        constexpr T cross(const Vec<T>& b) const noexcept
             { return (x * b.y) - (y * b.x); }
+        template <class U> constexpr U crossT(const Vec<T>& b) const noexcept
+            { return (CommonType<U>(x) * b.y) - (CommonType<U>(y) * b.x); }
+        constexpr long long crossL(const Vec<T>& b) const noexcept { return crossT<long long>(b); }
+        constexpr float crossF(const Vec<T>& b) const noexcept { return crossT<float>(b); }
+        constexpr double crossD(const Vec<T>& b) const noexcept { return crossT<double>(b); }
+
         // Dot product = |a|·|b|·cos α
-        constexpr T dot(const Vec& b) const noexcept
+        constexpr T dot(const Vec<T>& b) const noexcept
             { return (x * b.x) + (y * b.y); }
+        template <class U> constexpr U dotT(const Vec<T>& b) const noexcept
+            { return (CommonType<U>(x) * b.x) + (CommonType<U>(y) * b.y); }
+        constexpr long long dotL(const Vec<T>& b) const noexcept { return dotT<long long>(b); }
+        constexpr float dotF(const Vec<T>& b) const noexcept { return dotT<float>(b); }
+        constexpr double dotD(const Vec<T>& b) const noexcept { return dotT<double>(b); }
+
         // |a|², squared length
-        constexpr T len2() const noexcept
-            { return x*x + y*y; }
+        constexpr T len2() const noexcept { return x*x + y*y; }
+        template <class U>
+        constexpr U len2T() const noexcept
+            { return sqr<CommonType<U>>(x) + sqr<CommonType<U>>(y); }
+        constexpr long long len2L() const noexcept { return len2T<long long>(); }
+        constexpr float len2F() const noexcept { return len2T<float>(); }
+        constexpr double len2D() const noexcept { return len2T<double>(); }
         // |a|, length
         template <class U>
-        constexpr U len() const noexcept
-            { return std::sqrt(static_cast<U>(len2())); }
+        constexpr U len() const noexcept { return std::sqrt(len2T<U>()); }
         constexpr float lenF() const noexcept { return len<float>(); }
         constexpr double lenD() const noexcept { return len<double>(); }
 
@@ -119,7 +140,12 @@ namespace g2 {
     using Ivec = Vec<int>;
     using Dpoint = Point<double>;
     using Dvec = Vec<double>;
-}
+
+    /// @return cosine of angle A-B-C, or NaN if cannot compute
+    template <class T>
+    constexpr double cosABC(
+            const Point<T>& a, const Point<T>& b, const Point<T>& c) noexcept;
+}   // namespace g2
 
 // Point + point → cannot
 template <class T>
@@ -211,4 +237,12 @@ constexpr g2::Vec<U> g2::Vec<T>::normalized(U wantedLength) const noexcept
         auto q = wantedLength / myLen;
         return Vec<U>{ static_cast<U>(x * q), static_cast<U>(y * q) };
     }
+}
+
+
+template <class T>
+constexpr double g2::cosABC(const Point<T>& a, const Point<T>& b, const Point<T>& c) noexcept {
+    auto v1 = a - b;
+    auto v2 = c - b;
+    return v1.dotD(v2) / sqrt(v1.len2D() * v2.len2D());
 }
