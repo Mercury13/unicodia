@@ -1,5 +1,10 @@
 import fontforge
 import psMat
+import os
+
+TEMPFILENAME = 'UnicodiaHan1.ttf'
+OUTFILENAME = 'UnicodiaHan.ttf'
+HINTER = 'd:/Soft/FontEditing/ttfautohint.exe'
 
 # get transformation matrix
 mat1 = psMat.translate(0, -600)
@@ -37,7 +42,9 @@ for glyph in font.glyphs():
     # Hint
     glyph.round(1)
     glyph.addExtrema()
-    glyph.autoHint()
-    glyph.autoInstr()
 
-font.generate('UnicodiaHan.ttf')
+font.generate(TEMPFILENAME)
+
+# Run external hinter
+CMDLINE = '{} --windows-compatibility --stem-width-mode=sss --symbol {} {}'
+os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))

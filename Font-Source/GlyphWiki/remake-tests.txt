@@ -1,0 +1,7 @@
+UNPROCESSED
+!31F78.svg: somehow the tangent is zero vector, why?
+
+PROCESSED
+!simplify.svg: Just a small test
+!ink_extreme_opt.svg: Inkscape’s extreme optimization that mixes absolute and relative turtle mode
+!very_close_tangent.svg: some point is so close to corner that its position is white noise
