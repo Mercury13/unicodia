@@ -237,9 +237,9 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
         if (!std::isfinite(cs))
             throw ESvg("[SVG] Cannot calculate angle, something really bad");
 
-        if (b.x == 685 && b.y == 719) {  // Debug
-            --iB;
-        }
+        //if (b.x == 685 && b.y == 719) {  // Debug
+        //    --iB;
+        //}
 
         if (cs >= opt.corner.minCosine) {  // Smooth angle detected — always real corner
             r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
@@ -968,14 +968,14 @@ namespace {
             isCompletelySmooth = false;
         }
 
-        {   // Debug
-            g2::Ipoint ptDebug { 733, 619 };
-            auto it = std::find(pl.pts.begin(), pl.pts.end(), ptDebug);
-            if (it != pl.pts.end()) {
-                auto index = it - pl.pts.begin();
-                ++index;
-            }
-        }
+        //{   // Debug
+        //    g2::Ipoint ptDebug { 733, 619 };
+        //    auto it = std::find(pl.pts.begin(), pl.pts.end(), ptDebug);
+        //    if (it != pl.pts.end()) {
+        //        auto index = it - pl.pts.begin();
+        //        ++index;
+        //    }
+        //}
 
         std::vector<g2::Ipoint> newPoints;
         const std::vector<g2::Ipoint>* wk = &pl.pts;    // work set
@@ -1010,9 +1010,9 @@ namespace {
             auto last = (*corners)[i + 1];
 
             // Debug
-            if (i+1 == lastCorner) {
-                ++i;
-            }
+            //if (i+1 == lastCorner) {
+            //    ++i;
+            //}
             fitCubic(
                 Initial::YES,
                 *wk,
