@@ -37,17 +37,17 @@ namespace {
     {
     public:
         pugi::xml_node node;
-        bool isModified = false;
 
-        void remakeAlone();
+        void remakeAlone(int scale);
     };
 
-    void MyPolyPath::remakeAlone()
+    void MyPolyPath::remakeAlone([[maybe_unused]] int scale)
     {
         for (auto& v : curves) {
-            isModified |= v.removeRepeating();
-            isModified |= v.removeBackForth();
+            v.removeRepeating();
+            v.removeBackForth();
         }
+        simplify(scale, 3.0);
     }
 
     struct Svg
@@ -99,7 +99,7 @@ namespace {
     void Svg::remake()
     {
         for (auto& v : paths) {
-            v.remakeAlone();
+            v.remakeAlone(SCALE);
         }
     }
 

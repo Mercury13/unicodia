@@ -17,11 +17,15 @@ g2sv::PathParser::PathParser(std::string_view data) noexcept
     : p(data.data()), end(data.data() + data.length()) {}
 
 
-bool g2sv::PathParser::skipSpaces() noexcept
+bool g2sv::PathParser::skipSpaces(AllowComma allowComma) noexcept
 {
     while (p != end) {
-        if (static_cast<unsigned char>(*p) > ' ')
-            return true;
+        auto c = static_cast<unsigned char>(*p);
+        if (static_cast<unsigned char>(*p) > ' ') {
+            if (allowComma == AllowComma::NO || c != ',') {
+                return true;
+            }
+        }
         ++p;
     }
     return false;
@@ -46,6 +50,7 @@ namespace {
         case '7':
         case '8':
         case '9':
+        case '+':
         case '-':
         case '.':
             return true;
@@ -80,13 +85,23 @@ namespace {
 }
 
 
-char g2sv::PathParser::getCommand()
+char g2sv::PathParser::getCommand(TurtleMode turtleMode)
 {
     char buf[64];
-    if (!skipSpaces())
+    if (!skipSpaces(AllowComma::NO))
         return 0;
     auto v = *p;
     if (!latIsLetter(v)) {
+        if (isNumChar(v)) {
+            switch (turtleMode) {
+            case TurtleMode::ABS:
+                return 'L';
+            case TurtleMode::REL:
+                return 'l';
+            case TurtleMode::WAIT:
+                throw ESvg("[SVG] Turtle is waiting and does not allow implicit lines");
+            }
+        }
         snprintf(buf, std::size(buf),
                  "[SVG] Command expected (%c)", v);
         throw ESvg(buf);
@@ -96,10 +111,10 @@ char g2sv::PathParser::getCommand()
 }
 
 
-double g2sv::PathParser::getNum(char command)
+double g2sv::PathParser::getNum(char command, AllowComma allowComma)
 {
     char buf[64];
-    if (!skipSpaces()) {
+    if (!skipSpaces(allowComma)) {
         snprintf(buf, std::size(buf),
                  "[SVG cmd %c] Number expected, end found", command);
         throw ESvg(buf);
@@ -129,9 +144,9 @@ double g2sv::PathParser::getNum(char command)
 }
 
 
-int g2sv::PathParser::getInum(char command, int scale)
+int g2sv::PathParser::getInum(char command, AllowComma allowComma, int scale)
 {
-    return std::round(getNum(command) * scale);
+    return std::round(getNum(command, allowComma) * scale);
 }
 
 
@@ -285,6 +300,7 @@ namespace {
     struct Segment {
         g2::Ipoint a;
         g2::Dvec ah;
+        g2::Dvec bh;
         Segment() noexcept = default;
         Segment(const g2::Ipoint& b) noexcept : a(b) {}
         Segment(const g2::Ipoint& b, const g2::Dvec& bh) noexcept : a(b), ah(bh) {}
@@ -413,7 +429,7 @@ namespace {
     void addCurve(std::vector<Segment>& segments, const Curve& curve)
     {
         auto& prev = segments.back();
-        prev.ah = curve.ah;
+        prev.bh = curve.ah;
         segments.emplace_back(curve.b, curve.bh);
     }
 
@@ -636,7 +652,7 @@ namespace {
     */
 
     void fitCubic(
-            const std::vector<g2::Ipoint> points,
+            const std::vector<g2::Ipoint>& points,
             std::vector<Segment>& segments,
             double error,
             size_t first, size_t last,
@@ -649,33 +665,33 @@ namespace {
             addCurve(segments,
                 Curve{ pt1, tan1.normalized(dist), tan2.normalized(dist), pt2 });
             return;
-
-            // Parameterize points, and attempt to fit curve
-            auto uPrime = chordLengthParameterize(points, first, last);
-            auto maxError = std::max(error, error * error);
-            size_t split;
-            bool parametersInOrder = true;
-
-            // Try not 4 but 5 iterations
-            for (int i = 0; i <= 4; ++i) {
-                auto curve = generateBezier(points, first, last, uPrime, tan1, tan2);
-                //  Find max deviation of points to fitted curve
-                auto max = findMaxError(points, first, last, curve, uPrime);
-                if (max.error < error && parametersInOrder) {
-                    addCurve(segments, curve);
-                    return;
-                }
-                split = max.index;
-                // If error not too large, try reparameterization and iteration
-                if (max.error >= maxError) break;
-                parametersInOrder = reparameterize(points, first, last, uPrime, curve);
-                maxError = max.error;
-            }
-            // Fitting failed -- split at max error point and fit recursively
-            auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
-            fitCubic(points, segments, error, first, split, tan1, tanCenter);
-            fitCubic(points, segments, error, split, last, -tanCenter, tan2);
         }
+
+        // Parameterize points, and attempt to fit curve
+        auto uPrime = chordLengthParameterize(points, first, last);
+        auto maxError = std::max(error, error * error);
+        size_t split;
+        bool parametersInOrder = true;
+
+        // Try not 4 but 5 iterations
+        for (int i = 0; i <= 4; ++i) {
+            auto curve = generateBezier(points, first, last, uPrime, tan1, tan2);
+            //  Find max deviation of points to fitted curve
+            auto max = findMaxError(points, first, last, curve, uPrime);
+            if (max.error < error && parametersInOrder) {
+                addCurve(segments, curve);
+                return;
+            }
+            split = max.index;
+            // If error not too large, try reparameterization and iteration
+            if (max.error >= maxError) break;
+            parametersInOrder = reparameterize(points, first, last, uPrime, curve);
+            maxError = max.error;
+        }
+        // Fitting failed -- split at max error point and fit recursively
+        auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
+        fitCubic(points, segments, error, first, split, tan1, tanCenter);
+        fitCubic(points, segments, error, split, last, -tanCenter, tan2);
     }
 
     /*
@@ -746,12 +762,159 @@ namespace {
         );
         // Remove the duplicated segments for closed paths again.
         if (pl.isClosed) {
-            segments.erase(segments.begin());
-            segments.pop_back();
+            if (segments.size() <= 2) {
+                segments.clear();
+            } else {
+                segments.pop_back();
+                segments.erase(segments.begin());
+            }
         }
         return segments;
     }
 
+
+    /*const getSegmentsPathData = (segments: Segment[], closed: unknown, precision: number) => {
+      const length = segments.length
+      const precisionMultiplier = 10 ** precision
+      const round = precision < 16 ? (n: number) => Math.round(n * precisionMultiplier) / precisionMultiplier : (n: number) => n
+      const formatPair = (x: number, y: number) => round(x) + ',' + round(y)
+      let first = true
+      let prevX: number, prevY: number, outX: number, outY: number
+      const parts: string[] = []
+
+      const addSegment = (segment: Segment, skipLine?: boolean) => {
+        const curX = segment._point.x
+        const curY = segment._point.y
+        if (first) {
+          parts.push('M' + formatPair(curX, curY))
+          first = false
+        } else {
+          const inX = curX + (segment._handleIn?.x ?? 0)
+          const inY = curY + (segment._handleIn?.y ?? 0)
+          if (inX === curX && inY === curY && outX === prevX && outY === prevY) {
+            // l = relative lineto:
+            if (!skipLine) {
+              const dx = curX - prevX
+              const dy = curY - prevY
+              parts.push(dx === 0 ? 'v' + round(dy) : dy === 0 ? 'h' + round(dx) : 'l' + formatPair(dx, dy))
+            }
+          } else {
+            // c = relative curveto:
+            parts.push(
+              'c' +
+                formatPair(outX - prevX, outY - prevY) +
+                ' ' +
+                formatPair(inX - prevX, inY - prevY) +
+                ' ' +
+                formatPair(curX - prevX, curY - prevY),
+            )
+          }
+        }
+        prevX = curX
+        prevY = curY
+        outX = curX + (segment._handleOut?.x ?? 0)
+        outY = curY + (segment._handleOut?.y ?? 0)
+      }
+
+      if (!length) return ''
+
+      for (let i = 0; i < length; i++) addSegment(segments[i])
+      // Close path by drawing first segment again
+      if (closed && length > 0) {
+        addSegment(segments[0], true)
+        parts.push('z')
+      }
+      return parts.join('')
+    }*/
+
+    void appendCommand(std::string& s, char cmd)
+    {
+        if (!s.empty())
+            s += ' ';
+        s += cmd;
+    }
+
+    void appendCommand(std::string& s, double cmd) = delete;
+
+    void appendNumber(std::string& s, long num, int scale)
+    {
+        auto raw = static_cast<double>(num) / scale;
+        char buf[30];
+        snprintf(buf, std::size(buf), " %.5g", raw);
+        s += buf;
+    }
+
+    inline void appendNumber(std::string& s, int num, int scale)
+        { appendNumber(s, static_cast<long>(num), scale); }
+
+    [[maybe_unused]] void appendNumber(std::string& s, double num, int scale)
+        { appendNumber(s, lround(num), scale); }
+
+    std::string getSegmentsPathData(
+            const std::vector<Segment>& segments,
+            bool closed,
+            int scale)
+    {
+        auto length = segments.size();
+        double prevX, prevY, outX, outY;
+        bool first = true;
+        std::string r;
+
+        auto addSegment = [&](const Segment& segment, bool skipLine = false) {
+            auto curX = segment.a.x;
+            auto curY = segment.a.y;
+            if (first) {
+                appendCommand(r, 'M');
+                appendNumber(r, curX, scale);
+                appendNumber(r, curY, scale);
+                first = false;
+            } else {
+              auto inX = curX + segment.ah.x;
+              auto inY = curY + segment.ah.y;
+              if (inX == curX && inY == curY && outX == prevX && outY == prevY) {
+                // l = relative lineto:
+                    if (!skipLine) {
+                        auto dx = lround(curX - prevX);
+                        auto dy = lround(curY - prevY);
+                        if (dx == 0) {
+                            appendCommand(r, 'v');
+                            appendNumber(r, dy, scale);
+                        } else if (dy == 0) {
+                            appendCommand(r, 'h');
+                            appendNumber(r, dx, scale);
+                        } else {
+                            appendCommand(r, 'l');
+                            appendNumber(r, dx, scale);
+                            appendNumber(r, dy, scale);
+                        }
+                    }
+                } else {
+                    // c = relative curveto:
+                    appendCommand(r, 'c');
+                    appendNumber(r, outX - prevX, scale);
+                    appendNumber(r, outY - prevY, scale);
+                    appendNumber(r, inX - prevX,  scale);
+                    appendNumber(r, inY - prevY,  scale);
+                    appendNumber(r, curX - prevX, scale);
+                    appendNumber(r, curY - prevY, scale);
+                }
+            }
+            prevX = curX;
+            prevY = curY;
+            outX = curX + segment.bh.x;
+            outY = curY + segment.bh.y;
+        };
+
+        for (size_t i = 0; i < length; ++i)
+            addSegment(segments[i]);
+        // Close path by drawing first segment again
+        if (closed && length > 0) {
+            addSegment(segments[0], true);
+            appendCommand(r, 'z');
+        }
+
+        return r;
+    }
 
 }   // anon namespace
 
@@ -769,20 +932,21 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
 
     PathParser parser(text);
     auto moveTurtleAbs = [&turtle,&parser, scale](char command) {
-        turtle.x = parser.getInum(command, scale);
-        turtle.y = parser.getInum(command, scale);
+        turtle.x = parser.getInum(command, AllowComma::NO,  scale);
+        turtle.y = parser.getInum(command, AllowComma::YES, scale);
     };
     auto moveTurtleRel = [&turtle,&parser, scale](char command) {
-        turtle.x += parser.getInum(command, scale);
-        turtle.y += parser.getInum(command, scale);
+        turtle.x += parser.getInum(command, AllowComma::NO,  scale);
+        turtle.y += parser.getInum(command, AllowComma::YES, scale);
     };
     auto rqPath = [&path](const char* x) {
         if (!path)
             throw ESvg(x);
     };
 
+    auto turtleMode = TurtleMode::WAIT;
     while (true) {
-        auto command = parser.getCommand();
+        auto command = parser.getCommand(turtleMode);
         if (command == 0)
             break;
         switch (command) {
@@ -802,11 +966,13 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
         case 't':
             throw ESvg("Tied curve commands are unsupported");
         case 'M':
+            turtleMode = TurtleMode::ABS;
             moveTurtleAbs(command);
             path = &curves.emplace_back();
             path->pts.push_back(turtle);
             break;
         case 'm':
+            turtleMode = TurtleMode::REL;
             moveTurtleRel(command);
             path = &curves.emplace_back();
             path->pts.push_back(turtle);
@@ -823,26 +989,27 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
             break;
         case 'H':
             rqPath("L (abs horz) command: no path to move turtle");
-            turtle.x = parser.getInum(command, scale);
+            turtle.x = parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'h':
             rqPath("h (rel horz) command: no path to move turtle");
-            turtle.x += parser.getInum(command, scale);
+            turtle.x += parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'V':
             rqPath("V (abs vert) command: no path to move turtle");
-            turtle.y = parser.getInum(command, scale);
+            turtle.y = parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'v':
             rqPath("h (rel vert) command: no path to move turtle");
-            turtle.y += parser.getInum(command, scale);
+            turtle.y += parser.getInum(command, AllowComma::NO, scale);
             path->pts.push_back(turtle);
             break;
         case 'Z':
         case 'z':
+            turtleMode = TurtleMode::WAIT;
             rqPath("Z (close curve) command: no path to close curve");
             turtle = path->pts[0];  // where does turtle go?
             path->isClosed = true;
@@ -853,26 +1020,6 @@ void g2sv::Polypath::parse(std::string_view text, int scale)
         }
     }
 }
-
-
-namespace {
-
-    void appendCommand(std::string& s, char cmd)
-    {
-        if (!s.empty())
-            s += ' ';
-        s += cmd;
-    }
-
-    void appendNumber(std::string& s, int num, int scale)
-    {
-        auto raw = static_cast<double>(num) / scale;
-        char buf[30];
-        snprintf(buf, std::size(buf), " %.5g", raw);
-        s += buf;
-    }
-
-}   // anon namespace
 
 
 std::string g2sv::Polypath::svgData(int scale) const
@@ -901,4 +1048,16 @@ std::string g2sv::Polypath::svgData(int scale) const
 }
 
 
-///// SVG simplify /////////////////////////////////////////////////////////////
+void g2sv::Polypath::simplify(int scale, double tolerance)
+{
+    dataOverride.clear();
+    for (auto& curve : curves) {
+        auto segs = fit(curve, tolerance);
+        auto pathData = getSegmentsPathData(segs, curve.isClosed, scale);
+        if (!pathData.empty()) {
+            if (!dataOverride.empty())
+                dataOverride += ' ';
+            dataOverride += pathData;
+        }
+    }
+}

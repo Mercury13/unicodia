@@ -27,19 +27,22 @@ namespace g2sv {
         bool removeBackForth();
     };
 
+    enum class AllowComma { NO, YES };
+    enum class TurtleMode { WAIT, ABS, REL };
+
     class PathParser
     {
     public:
         PathParser(const char* aP, const char* aEnd) noexcept : p(aP), end(aEnd) {}
         PathParser(std::string_view data) noexcept;
-        char getCommand();
-        double getNum(char command);
-        int getInum(char command, int scale);
+        char getCommand(TurtleMode turtleMode);
+        double getNum(char command, AllowComma allowComma);
+        int getInum(char command, AllowComma allowComma, int scale);
     private:
         const char* p;
         const char* end;
-        /// @return [+] OK [-] end
-        bool skipSpaces() noexcept;
+        /// @return [+] OK [-] end        
+        bool skipSpaces(AllowComma allowComma) noexcept;
     };
 
     struct Polypath {
@@ -47,6 +50,7 @@ namespace g2sv {
         std::string dataOverride;
 
         void parse(std::string_view text, int scale);
+        void simplify(int scale, double tolerance = 2.5);
         std::string svgData(int scale) const;
     };
 
