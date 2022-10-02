@@ -28,10 +28,16 @@ for line0 in file:
 # Convert layers to quadratic
 font.is_quadratic = True
 
-# Hint glyphs
-font.selection.all()
-font.round()
-font.autoHint()
-font.autoInstr()
+# Work glyph-by glyph
+# (Somehow it’s quicker and works better)
+for glyph in font.glyphs():
+    # Simplify a few times
+    for i in range(7):
+        glyph.simplify(2)
+    # Hint
+    glyph.round(1)
+    glyph.addExtrema()
+    glyph.autoHint()
+    glyph.autoInstr()
 
 font.generate('UnicodiaHan.ttf')

@@ -212,7 +212,7 @@ bool g2sv::Polyline::removeBackForth()
 
 
 std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
-        const SimplifyOpt::Corner& opt) const
+        const SimplifyOpt& opt) const
 {
     if (pts.size() <= 2)
         return std::nullopt;
@@ -237,24 +237,28 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
         if (!std::isfinite(cs))
             throw ESvg("[SVG] Cannot calculate angle, something really bad");
 
-        if (cs >= opt.minCosine) {  // Smooth angle detected — always real corner
+        if (b.x == 685 && b.y == 719) {  // Debug
+            --iB;
+        }
+
+        if (cs >= opt.corner.minCosine) {  // Smooth angle detected — always real corner
             r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
         } else {
-            bool notCorner = false;
-            if (len1 >= opt.maxSide) {  // Len1 BIG
-                if (len2 >= opt.maxSide) {  // BIG-BIG — real corner unless smooth
-                    if (cs < opt.smoothCosine) {
-                        notCorner = true;
+            bool notCorner = true;
+            if (len1 >= opt.corner.maxSide) {  // Len1 BIG
+                if (len2 >= opt.corner.maxSide) {  // BIG-BIG — real corner unless smooth
+                    if (cs < opt.corner.smoothCosine) {
                     } else {
                         r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+                        notCorner = false;
                     }
                 } else {    // BIG-SMALL — start smooth thing
                     r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_START });
+                    notCorner = false;
                 }
             } else {    // Len1 SMALL
-                if (len2 >= opt.maxSide) {  // SMALL-BIG → end smooth thing
+                if (len2 >= opt.corner.maxSide) {  // SMALL-BIG → end smooth thing
                     r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_END });
-                } else {
                     notCorner = true;
                 }
             }
@@ -880,11 +884,21 @@ namespace {
 
     g2::Dvec makeLeftTangent(
             const std::vector<g2::Ipoint>& wk,
-            const g2sv::Corner& first)
+            const g2sv::Corner& first,
+            const g2sv::Corner& last,
+            double tolerance)
     {
         auto& ptPrev = (first.index == 0) ? wk.back() : wk[first.index - 1];
         auto& pt0 = wk[first.index];
-        auto& pt1 = wk[first.index + 1];
+
+        // Get 1st point by tolerance
+        auto i1 = first.index;
+        g2::Ipoint pt1;
+        do {
+            ++i1;
+            pt1 = wk[i1];
+        } while (i1 < last.index && pt1.distFromD(pt0) < tolerance);
+
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
             return (pt0 - ptPrev).cast<double>();
@@ -901,12 +915,22 @@ namespace {
 
     g2::Dvec makeRightTangent(
             const std::vector<g2::Ipoint>& wk,
-            const g2sv::Corner& last)
+            const g2sv::Corner& first,
+            const g2sv::Corner& last,
+            double tolerance)
     {
-        auto i1 = last.index + 1;
-        auto& ptNext = (i1 >= wk.size()) ? wk.front() : wk[i1];
+        auto iNext = last.index + 1;
+        auto& ptNext = (iNext >= wk.size()) ? wk.front() : wk[iNext];
         auto& pt10 = wk[last.index];
-        auto& pt9 = wk[last.index - 1];
+
+        // Get 9th (penultimate) point by tolerance
+        auto i9 = last.index;
+        g2::Ipoint pt9;
+        do {
+            --i9;
+            pt9 = wk[i9];
+        } while (i9 > first.index && pt9.distFromD(pt10) < tolerance);
+
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
             return (pt10 - ptNext).cast<double>();
@@ -928,7 +952,7 @@ namespace {
         if (pl.pts.size() < 3)
             return {};
 
-        auto corners = pl.detectCorners(opt.corner);
+        auto corners = pl.detectCorners(opt);
         if (!corners)
             return {};
 
@@ -982,10 +1006,8 @@ namespace {
                 opt.tolerance,
                 first.index,
                 last.index,
-                // Left Tangent
-                makeLeftTangent(*wk, first),
-                // Right Tangent
-                makeRightTangent(*wk, last)
+                makeLeftTangent(*wk, first, last, opt.tangentTolerance),
+                makeRightTangent(*wk, first, last, opt.tangentTolerance)
             );
         }
 

@@ -16,7 +16,10 @@
 namespace g2sv {
 
     struct SimplifyOpt {
+        /// Fitting tolerance
         double tolerance = 2.5;
+        /// Tangent tolerance: close point → make tangent from next
+        double tangentTolerance = 1;
         /// Scaling double → int (we mostly work in fixed point)
         int scale = 1;
         struct Corner {
@@ -63,7 +66,7 @@ namespace g2sv {
         /// @return [-] smth bad [0] really no corners in closed polyline
         ///             (non-closed polyline gives at least its ends)
         std::optional<std::vector<Corner>> detectCorners(
-                const SimplifyOpt::Corner& opt) const;
+                const SimplifyOpt& opt) const;
 
         void appendSvgData(std::string& r, int scale) const;
     };
