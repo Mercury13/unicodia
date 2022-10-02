@@ -8,6 +8,7 @@
 #include <vector>
 #include <string_view>
 #include <stdexcept>
+#include <optional>
 
 // Geo2d
 #include "g2defines.h"
@@ -34,7 +35,11 @@ namespace g2sv {
         /// @return [+] smth happened
         bool removeBackForth();
 
-        std::vector<size_t> detectCorners(double maxCosine) const;
+        /// @return [-] smth bad [0] really no corners in closed polyline
+        ///             (non-closed polyline gives at least its ends)
+        std::optional<std::vector<size_t>> detectCorners(double maxCosine) const;
+
+        void appendSvgData(std::string& r, int scale) const;
     };
 
     enum class AllowComma { NO, YES };

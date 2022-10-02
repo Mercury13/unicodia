@@ -7,7 +7,6 @@
 
 // STL
 #include <algorithm>
-#include <optional>
 
 
 ///// PathParser ///////////////////////////////////////////////////////////////
@@ -212,10 +211,10 @@ bool g2sv::Polyline::removeBackForth()
 }
 
 
-std::vector<size_t> g2sv::Polyline::detectCorners(double maxCosine) const
+std::optional<std::vector<size_t>> g2sv::Polyline::detectCorners(double maxCosine) const
 {
     if (pts.size() <= 2)
-        return {};
+        return std::nullopt;
     std::vector<size_t> r;
 
     auto checkCosine = [this, &r, maxCosine](size_t iA, size_t iB, size_t iC) {
@@ -223,15 +222,69 @@ std::vector<size_t> g2sv::Polyline::detectCorners(double maxCosine) const
             r.push_back(iA);
     };
 
-    /// @todo [urgent] detectCorners
     auto last = pts.size() - 1;
     if (isClosed) {
         checkCosine(last, 0, 1);
     } else {
         r.push_back(0);
     }
+
+    for (size_t i = 1; i < last; ++i) {
+        checkCosine(i - 1, i, i + 1);
+    }
+
+    if (isClosed) {
+        checkCosine(last - 1, last, 0);
+    } else {
+        r.push_back(last);
+    }
+
     return r;
 }
+
+namespace {
+
+    void appendCommand(std::string& s, char cmd)
+    {
+        if (!s.empty())
+            s += ' ';
+        s += cmd;
+    }
+
+    void appendCommand(std::string& s, double cmd) = delete;
+
+    void appendNumber(std::string& s, long num, int scale)
+    {
+        auto raw = static_cast<double>(num) / scale;
+        char buf[30];
+        snprintf(buf, std::size(buf), " %.5g", raw);
+        s += buf;
+    }
+
+    inline void appendNumber(std::string& s, int num, int scale)
+        { appendNumber(s, static_cast<long>(num), scale); }
+
+    [[maybe_unused]] void appendNumber(std::string& s, double num, int scale)
+        { appendNumber(s, lround(num), scale); }
+
+}   // anon namespace
+
+
+void g2sv::Polyline::appendSvgData(std::string& r, int scale) const
+{
+    if (!pts.empty()) {
+        char command = 'M';
+        for (auto& pt : pts) {
+            appendCommand(r, command);
+            appendNumber(r, pt.x, scale);
+            appendNumber(r, pt.y, scale);
+            command = 'L';
+        }
+        if (isClosed)
+            appendCommand(r, 'Z');
+    }
+}
+
 
 
 namespace {
@@ -779,6 +832,8 @@ namespace {
             return {};
 
         auto corners = pl.detectCorners(opt.smoothCosine);
+        if (!corners)
+            return {};
 
         std::vector<g2::Ipoint> newPoints;
         const std::vector<g2::Ipoint>* wk = &pl.pts;     // working set
@@ -874,29 +929,6 @@ namespace {
       }
       return parts.join('')
     }*/
-
-    void appendCommand(std::string& s, char cmd)
-    {
-        if (!s.empty())
-            s += ' ';
-        s += cmd;
-    }
-
-    void appendCommand(std::string& s, double cmd) = delete;
-
-    void appendNumber(std::string& s, long num, int scale)
-    {
-        auto raw = static_cast<double>(num) / scale;
-        char buf[30];
-        snprintf(buf, std::size(buf), " %.5g", raw);
-        s += buf;
-    }
-
-    inline void appendNumber(std::string& s, int num, int scale)
-        { appendNumber(s, static_cast<long>(num), scale); }
-
-    [[maybe_unused]] void appendNumber(std::string& s, double num, int scale)
-        { appendNumber(s, lround(num), scale); }
 
     std::string getSegmentsPathData(
             const std::vector<Segment>& segments,
@@ -1067,17 +1099,7 @@ std::string g2sv::Polypath::svgData(int scale) const
 
     std::string r;
     for (auto& v : curves) {
-        if (!v.pts.empty()) {
-            char command = 'M';
-            for (auto& pt : v.pts) {
-                appendCommand(r, command);
-                appendNumber(r, pt.x, scale);
-                appendNumber(r, pt.y, scale);
-                command = 'L';
-            }
-            if (v.isClosed)
-                appendCommand(r, 'Z');
-        }
+        v.appendSvgData(r, scale);
     }
     return r;
 }
@@ -1088,11 +1110,15 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
     dataOverride.clear();
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);
-        auto pathData = getSegmentsPathData(segs, curve.isClosed, opt.scale);
-        if (!pathData.empty()) {
-            if (!dataOverride.empty())
-                dataOverride += ' ';
-            dataOverride += pathData;
+        if (segs.empty()) {
+            curve.appendSvgData(dataOverride, opt.scale);
+        } else {
+            auto pathData = getSegmentsPathData(segs, curve.isClosed, opt.scale);
+            if (!pathData.empty()) {
+                if (!dataOverride.empty())
+                    dataOverride += ' ';
+                dataOverride += pathData;
+            }
         }
     }
 }
