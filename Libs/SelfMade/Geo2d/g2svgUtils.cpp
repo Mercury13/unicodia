@@ -980,15 +980,16 @@ namespace {
         std::vector<g2::Ipoint> newPoints;
         const std::vector<g2::Ipoint>* wk = &pl.pts;    // work set
         if (isCompletelySmooth) {
+            throw std::logic_error("As we make extrema, no more completely smooth curves!");
             // Completely smooth path: make copies of one segment
-            newPoints.reserve(pl.pts.size() + 2);
-            newPoints.push_back(pl.pts.back());
-            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
-            newPoints.push_back(pl.pts.front());
-            wk = &newPoints;
-            corners = std::vector<g2sv::Corner>{
-                        { { .index = 0, .type = g2sv::CornerType::REAL_CORNER },
-                          { .index = newPoints.size() - 1, .type = g2sv::CornerType::REAL_CORNER } } };
+//            newPoints.reserve(pl.pts.size() + 2);
+//            newPoints.push_back(pl.pts.back());
+//            newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
+//            newPoints.push_back(pl.pts.front());
+//            wk = &newPoints;
+//            corners = std::vector<g2sv::Corner>{
+//                        { { .index = 0, .type = g2sv::CornerType::REAL_CORNER },
+//                          { .index = newPoints.size() - 1, .type = g2sv::CornerType::REAL_CORNER } } };
         } else if (pl.isClosed) {
             // Closed path: make copy of a point
             newPoints.reserve(pl.pts.size() + 1);
@@ -1027,12 +1028,12 @@ namespace {
 
         // Un-preprocess path
         if (isCompletelySmooth) {
-            if (segments.size() <= 2) {
-                segments.clear();
-            } else {
-                segments.pop_back();
-                segments.erase(segments.begin());
-            }
+//            if (segments.size() <= 2) {
+//                segments.clear();
+//            } else {
+//                segments.pop_back();
+//                segments.erase(segments.begin());
+//            }
         } else if (pl.isClosed) {
             if (segments.size() <= 1) {
                 segments.clear();
