@@ -277,6 +277,7 @@ namespace uc {
         KAITHI,
           Z_KAI_1,
         KANNADA,
+        KAWI,
         KAYAH_LI,
         KHAROSHTHI,
         KHITAN_SMALL,
@@ -435,19 +436,24 @@ namespace uc {
     enum class FontPlace { CELL, SAMPLE, PROBE };
 
     enum class Fafg {
-        RAW_FONT = 1<<0,    ///< [+] use RawFont structure, not QFont
+        RAW_FONT = 1<<0, ///< [+] use RawFont structure, not QFont for checking coverage
     };
+
+    using EvRecode = char32_t (*)(char32_t unicode);
 
     struct Family
     {
         std::string_view text;
         Flags<Fafg> flags {};
+        EvRecode recode = nullptr;
 
         constexpr Family(std::string_view aText) : text(aText) {}
         constexpr Family(std::string_view aText, Fafg aFlag)
             : text(aText), flags(aFlag) {}
         constexpr Family(std::string_view aText, Flags<Fafg> aFlags)
             : text(aText), flags(aFlags) {}
+        constexpr Family(std::string_view aText, EvRecode aRecode)
+            : text(aText), recode(aRecode) {}
     };
 
     struct Font
@@ -496,6 +502,10 @@ namespace uc {
                 Flags<Ffg> aFlags,
                 Percent aSizeAdjust)
             : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                const Family& aFamily,
+                Percent aSizeAdjust)
+            : family(aFamily), sizeAdjust(aSizeAdjust) {}
         consteval Font(
                 std::string_view aFamily,
                 Percent aSizeAdjust)
