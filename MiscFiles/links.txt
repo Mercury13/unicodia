@@ -17,7 +17,8 @@ https://r12a.github.io/scripts/oriya/block.html
 
 FONTS
 
-https://github.com/googlefonts/noto-fonts — Google Noto family
+https://github.com/notofonts/notofonts.github.io — Google Noto family
+https://github.com/googlefonts/noto-fonts — their old site
 https://laoscript.net/download/ — Lao fonts
 http://svayambhava.blogspot.com/p/siddhanta-devanagariunicode-open-type.html — Indian font
 https://babelstone.co.uk/Fonts/index.html — misc fonts, some used by Unicodia
@@ -28,6 +29,7 @@ https://oldhungarian.eu/index_en.html — Hungarian runes
 http://cheonhyeong.com/Simplified/download.html — Tshyn, strange U13 font
 https://github.com/TiroTypeworks/Indigo — Indic fonts
 https://catrinity-font.de/ — Catrinity, big Unicode font
+https://github.com/longnow/bali-fonts — Balinese fonts
 
 
 CHAR IMAGES
