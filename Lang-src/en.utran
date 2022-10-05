@@ -6879,7 +6879,7 @@
     <transl>Font designers, alphabetically</transl>
    </text>
    <text id="NonComm">
-    <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!) </orig>
+    <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!)</orig>
     <transl>(CC&amp;nbsp;BY-NC-SA, talk to them about commercial distribution!)</transl>
    </text>
    <text id="License">
@@ -6893,6 +6893,10 @@
    <text id="Etc">
     <orig>и другие</orig>
     <transl>and others</transl>
+   </text>
+   <text id="NonComm2">
+    <orig>(CC&amp;nbsp;BY-NC-ND, автор Юникодии получил разрешение, договаривайтесь о коммерческом распространении!)</orig>
+    <transl>(CC&amp;nbsp;BY-NC-ND, author of Unicodia got permission, talk about commercial distribution!)</transl>
    </text>
   </group>
   <group id="Main">

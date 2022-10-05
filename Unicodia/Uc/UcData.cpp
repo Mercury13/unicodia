@@ -181,7 +181,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKaithi-Regular.ttf", Ffg::FALL_TO_NEXT },                        // Kaithi
       { FNAME_FUNKY },                                                          // …1
     { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },  // Kannada
-    { { "KawiMastuti.ttf", recodeKawi }, 120_pc },                              // Kawi
+    { { "KawiMastuti.ttf", recodeKawi }, Ffg::FALL_TO_NEXT, 120_pc },           // Kawi
+      { "UnicodiaKawiPatch.ttf", 120_pc },                                      // …1
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small

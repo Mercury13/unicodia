@@ -5502,7 +5502,7 @@
     <orig>Разработчики шрифтов, по алфавиту</orig>
    </text>
    <text id="NonComm">
-    <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!) </orig>
+    <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!)</orig>
    </text>
    <text id="License">
     <orig>Распространяется под лицензией &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</orig>
@@ -5512,6 +5512,9 @@
    </text>
    <text id="Etc">
     <orig>и другие</orig>
+   </text>
+   <text id="NonComm2">
+    <orig>(CC&amp;nbsp;BY-NC-ND, автор Юникодии получил разрешение, договаривайтесь о коммерческом распространении!)</orig>
    </text>
   </group>
   <group id="Main">

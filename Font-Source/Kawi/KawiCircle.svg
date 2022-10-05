@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 1400 2048"
+   id="svg4"
+   sodipodi:docname="KawiCircle.svg"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   width="1400"
+   height="2048"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.32593203"
+     inkscape:cx="408.06054"
+     inkscape:cy="871.34731"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     style="fill:none;stroke:#000000;stroke-width:99.9994;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+     d="m 156.57175,846.71015 c 62.09439,-183.17251 283.98862,-245.79059 458.79826,-233.15453 170.08246,19.22222 311.804,171.47867 308.10653,344.5603 15.90421,191.37138 -112.00202,405.99458 -316.68579,421.88548 -222.13232,35.1652 -490.71848,-121.4466 -490.0791,-363.9526 3.27424,-58.42076 25.42449,-113.243 39.8601,-169.33865 z"
+     id="path415"
+     sodipodi:nodetypes="ssssssss" />
+</svg>

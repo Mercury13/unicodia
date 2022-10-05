@@ -278,6 +278,7 @@ namespace uc {
           Z_KAI_1,
         KANNADA,
         KAWI,
+          Z_KAW_1,
         KAYAH_LI,
         KHAROSHTHI,
         KHITAN_SMALL,
