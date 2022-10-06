@@ -13,7 +13,7 @@ What was done by authors of Unicodia:
   - Copied 25CC dotted circle from Devanagari
 * Modi, Syloti Nagri
   - Rehinted with hinting VM
-* Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong
+* Buhid, Dives Akuru, Gurmukhi, Siddham, Pahawh Hmong
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
   - Set Asc/desc to 1280/525
@@ -49,9 +49,6 @@ What was done by authors of Unicodia:
   - Made ligature 25CC dotted circle + 03BC nukta,
     mostly because of bad default anchoring of nukta
   - Implemented 0B55 combining overline, possibly unusable
-* Siddham
-  - Made ligatures 25CC dotted circle + some umlauts
-  - Rehinted
 * Soyombo
   - Deleted tables 25CC + umlaut → umlaut
   - Moved anchors on 25CC and virtual virama
