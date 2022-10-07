@@ -700,7 +700,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Kana", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::crange(8, 9), EcFont::KOREAN },
-    /// @todo [U15] Kawi
+    // Kawi OK
     { "Kawi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(8, StdNote::FIRST_KNOWN), EcFont::KAWI },
@@ -2037,7 +2037,7 @@ constinit const uc::Block uc::blocks[] {
     // Makasar OK
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar", { EcScript::Maka, 0 }, EcScript::Maka },
-    /// @todo [U15] Kawi
+    // Kawi OK
     { 0x11F00, 0x11F5F, { '?', EcContinent::OCEAN, Ifg::MISSING },
             "Kawi", { EcScript::Kawi, 0 }, EcScript::Kawi },
     // Lisu supplement OK, new font engine works
@@ -2348,7 +2348,7 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension G",
             { EcScript::Hani, 'G' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
-    /// @todo [U15] CJK H
+    // CJK H OK, UnicodiaHan
     { 0x31350, 0x323AF, { 0x31378, EcContinent::CJK },
             "CJK Unified Ideographs Extension H",
             { EcScript::Hani, 'H' },
