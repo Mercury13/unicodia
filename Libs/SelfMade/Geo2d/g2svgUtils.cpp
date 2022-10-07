@@ -345,6 +345,47 @@ void g2sv::Polyline::rotateIndexes(size_t i)
 }
 
 
+std::optional<g2::Ipoint> g2sv::Polyline::doesSelfIntersect() const
+{
+    // Performance O(n²), but OK for my tasks
+    auto sz = pts.size();
+    switch (sz) {
+    case 0:
+    case 1:
+        return std::nullopt;
+    case 2:
+        return isClosed ? std::optional<g2::Ipoint>{pts[0]} : std::nullopt;
+    case 3:
+        return (g2::crossOAB(pts[0], pts[1], pts[2]) == 0)
+                ? std::optional<g2::Ipoint>{pts[0]} : std::nullopt;
+    default: ;
+    }
+
+    auto sz1 = isClosed ? sz : sz - 1;
+    for (size_t i = 0; i < sz1; ++i) {
+        auto& a = pts[i];
+        auto& b = pts[wrapIndex(i + 1)];
+        if (i >= 2) {
+            size_t i0 = i - 2;
+            for (size_t j = 0; i <= i0; ++j) {
+                auto& c = pts[j];
+                auto& d = pts[j + 1];
+                if (g2::doSegsStrictlyIntersect(a, b, c, d))
+                    return a;
+            }
+        }
+        auto nn = (i == 0) ? sz - 1 : sz1;
+        for (size_t j = i + 2; j < nn; ++j) {
+            auto &c = pts[j];
+            auto &d = pts[wrapIndex(j + 1)];
+            if (g2::doSegsStrictlyIntersect(a, b, c, d))
+                return a;
+        }
+    }
+    return std::nullopt;
+}
+
+
 namespace {
     constexpr double EPSILON = 1e-12;
     constexpr double MACHINE_EPSILON = 1.12e-16;
@@ -1284,6 +1325,8 @@ std::string g2sv::Polypath::svgData(int scale) const
 
 void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
+    /// @todo [urgent] Remove bad nearby points, and reenable again
+    //checkForIntersection(opt.scale);
     dataOverride.clear();
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);
@@ -1296,6 +1339,20 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
                     dataOverride += ' ';
                 dataOverride += pathData;
             }
+        }
+    }
+}
+
+
+void g2sv::Polypath::checkForIntersection(int scale) const
+{
+    for (auto& c : curves) {
+        if (auto pt = c.doesSelfIntersect()) {
+            char buf[64];
+            auto x = static_cast<double>(pt->x) / scale;
+            auto y = static_cast<double>(pt->y) / scale;
+            snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g)", x, y);
+            throw ESvg(buf);
         }
     }
 }

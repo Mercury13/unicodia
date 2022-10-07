@@ -69,6 +69,11 @@ namespace g2sv {
                 const SimplifyOpt& opt) const;
 
         void appendSvgData(std::string& r, int scale) const;
+
+        /// @return [+] the polyline self-intersects [0] no intersections found
+        std::optional<g2::Ipoint> doesSelfIntersect() const;
+
+        inline size_t wrapIndex(size_t i) const { return (i >= pts.size() ? 0 : i); }
     };
 
     enum class AllowComma { NO, YES };
@@ -96,6 +101,7 @@ namespace g2sv {
         void parse(std::string_view text, int scale);
         void simplify(const SimplifyOpt& opt);
         std::string svgData(int scale) const;
+        void checkForIntersection(int scale) const;
     };
 
     class ESvg : public std::logic_error

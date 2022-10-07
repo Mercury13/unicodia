@@ -227,11 +227,21 @@ namespace g2 {
     constexpr double cosABC(
             const Point<T>& a, const Point<T>& b, const Point<T>& c) noexcept;
 
+    /// @return cross product of oa×ob
     template <class U, class T>
     constexpr U crossOAB(const Point<T>& o, const Point<T>& a, const Point<T>& b) noexcept;
 
+    /// @return cross product of oa×ob
     template <class T>
     constexpr inline T crossOAB(const Point<T>& o, const Point<T>& a, const Point<T>& b) noexcept;
+
+    /// @return [+] seg AB intersects seg CD
+    template <class T>
+    bool doSegsIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
+
+    /// @return [+] seg AB strictly intersects seg CD (does not touch)
+    template <class T>
+    bool doSegsStrictlyIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
 }   // namespace g2
 
 // Point + point → cannot
@@ -341,7 +351,45 @@ template <class T>
 constexpr inline T g2::crossOAB(const g2::Point<T>& o, const g2::Point<T>& a, const g2::Point<T>& b) noexcept
     { return crossOAB<T, T>(o, a, b); }
 
+// Simple unit tests
 static_assert(g2::crossOAB(g2::Ipoint{0,0}, g2::Ipoint{1,0}, g2::Ipoint{1,1}) == 1);
 static_assert(g2::crossOAB(g2::Ipoint{0,0}, g2::Ipoint{1,1}, g2::Ipoint{1,0}) == -1);
 static_assert(g2::crossOAB<long>(g2::Ipoint{0,0}, g2::Ipoint{1,0}, g2::Ipoint{1,1}) == 1);
 static_assert(g2::crossOAB<long>(g2::Ipoint{0,0}, g2::Ipoint{1,1}, g2::Ipoint{1,0}) == -1);
+
+namespace g2::detail {
+    template <class T>
+    bool on_segment(const g2::Point<T>&p1, const g2::Point<T>&p2, const g2::Point<T>&p)
+    {
+        return std::min(p1.x, p2.x) <= p.x
+            && p.x <= std::max(p1.x, p2.x)
+            && std::min(p1.y, p2.y) <= p.y
+            && p.y <= std::max(p1.y, p2.y);
+    }
+}
+
+template <class T>
+bool g2::doSegsIntersect(const g2::Point<T>& a, const g2::Point<T>& b, const g2::Point<T>& c, const g2::Point<T>& d) noexcept
+{
+    auto d1 = crossOAB(c, d, a);
+    auto d2 = crossOAB(c, d, b);
+    auto d3 = crossOAB(a, b, c);
+    auto d4 = crossOAB(a, b, d);
+
+    return (((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0)))
+        || (d1 == 0 && detail::on_segment(c, d, a))
+        || (d2 == 0 && detail::on_segment(c, d, b))
+        || (d3 == 0 && detail::on_segment(a, b, c))
+        || (d3 == 0 && detail::on_segment(a, b, d));
+}
+
+template <class T>
+bool g2::doSegsStrictlyIntersect(const g2::Point<T>& a, const g2::Point<T>& b, const g2::Point<T>& c, const g2::Point<T>& d) noexcept
+{
+    auto d1 = crossOAB(c, d, a);
+    auto d2 = crossOAB(c, d, b);
+    auto d3 = crossOAB(a, b, c);
+    auto d4 = crossOAB(a, b, d);
+
+    return (((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0)));
+}

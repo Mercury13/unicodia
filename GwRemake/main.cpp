@@ -68,10 +68,17 @@ namespace {
         paths.clear();
     }
 
+    /// @todo [urgent] 31643: There are two nearby close points, corner and smooth.
+    ///        They round in such a fashion…
+    ///       ____ c               c
+    /// --- s     /    =>   ------+s
+    ///          /               /
+    ///        What to do?
+    ///
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 3 * MY_SCALE,
-        .tangentTolerance = 2,
+        .tangentTolerance = MY_SCALE * 0.4,
         .scale = MY_SCALE,
         .corner = {
             .minCosine = -0.64,  // <130°
