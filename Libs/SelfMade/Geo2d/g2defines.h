@@ -8,6 +8,87 @@
 
 namespace g2 {
 
+    namespace detail {
+        template <class To, class From>
+        constexpr inline To cast_int(From x) {
+            static_assert(std::is_integral_v<From>);
+            if constexpr (std::is_integral_v<To>) {
+                if constexpr (std::numeric_limits<From>::min() < std::numeric_limits<To>::min()) {
+                    if (x < std::numeric_limits<To>::min())
+                        return std::numeric_limits<To>::min();
+                }
+                if constexpr (std::numeric_limits<From>::max() > std::numeric_limits<To>::max()) {
+                    if (x > std::numeric_limits<To>::max())
+                        return std::numeric_limits<To>::max();
+                }
+            }
+            return static_cast<To>(x);
+        }
+    }   // namespace detail
+
+    template <class To> constexpr inline To cast(char x)              { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(signed char x)       { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(unsigned char x)     { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(signed short x)      { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(unsigned short x)    { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(signed int x)        { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(unsigned int x)      { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(signed long x)       { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(unsigned long x)     { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(signed long long x)  { return detail::cast_int<To, decltype(x)>(x); }
+    template <class To> constexpr inline To cast(unsigned long long x){ return detail::cast_int<To, decltype(x)>(x); }
+
+    template <class To>
+    constexpr To cast(float x) {
+        if constexpr (std::is_integral_v<To>) {
+            if (x > std::numeric_limits<To>::max())
+                return std::numeric_limits<To>::max();
+            if (x < std::numeric_limits<To>::min())
+                return std::numeric_limits<To>::min();
+            if constexpr (sizeof(To) > sizeof(long)) {
+                return std::llroundf(x);
+            } else {
+                return std::lroundf(x);
+            }
+        } else {
+            return static_cast<To>(x);
+        }
+    }
+
+    template <class To>
+    constexpr inline To cast(double x) {
+        if constexpr (std::is_integral_v<To>) {
+            if (x > std::numeric_limits<To>::max())
+                return std::numeric_limits<To>::max();
+            if (x < std::numeric_limits<To>::min())
+                return std::numeric_limits<To>::min();
+            if constexpr (sizeof(To) > sizeof(long)) {
+                return std::llround(x);
+            } else {
+                return std::lround(x);
+            }
+        } else {
+            return static_cast<To>(x);
+        }
+    }
+
+    template <class To>
+    constexpr inline To cast(long double x) {
+        if constexpr (std::is_integral_v<To>) {
+            if (x > std::numeric_limits<To>::max())
+                return std::numeric_limits<To>::max();
+            if (x < std::numeric_limits<To>::min())
+                return std::numeric_limits<To>::min();
+            if constexpr (sizeof(To) > sizeof(long)) {
+                return std::llroundl(x);
+            } else {
+                return std::lroundl(x);
+            }
+        } else {
+            return static_cast<To>(x);
+        }
+    }
+
     enum class Origin { INST };
     constexpr Origin ORIGIN = Origin::INST;
 
@@ -33,7 +114,7 @@ namespace g2 {
         // |a|, length
         template <class U>
         constexpr U radius() const noexcept
-            { return std::sqrt(static_cast<U>(radius2())); }
+            { return std::sqrt(cast<U>(radius2())); }
         constexpr float radiusF() const noexcept { return radius<float>(); }
         constexpr float radiusD() const noexcept { return radius<double>(); }
 
@@ -46,7 +127,7 @@ namespace g2 {
         }
         template <class U>
         constexpr U distFrom(const Point<T>& b) const noexcept
-            { return std::sqrt(static_cast<U>(dist2from(b))); }
+            { return std::sqrt(g2::cast<U>(dist2from(b))); }
         constexpr float distFromF(const Point<T>& b) const noexcept { return distFrom<float>(b); }
         constexpr double distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
 
@@ -58,7 +139,7 @@ namespace g2 {
 
         template <class U>
         constexpr Point<U> cast() const noexcept
-            { return { static_cast<U>(x), static_cast<U>(y) }; }
+            { return { cast<U>(x), cast<U>(y) }; }
     };
 
     template <class T>
@@ -122,15 +203,15 @@ namespace g2 {
 
         template <class U>
         constexpr static Vec<T> fromPt(const Point<U>& a) noexcept
-            { return { static_cast<T>(a.x), static_cast<T>(a.y) }; }
+            { return { g2::cast<T>(a.x), g2::cast<T>(a.y) }; }
 
         template <class U>
         constexpr Point<U> toPt() const noexcept
-            { return { static_cast<U>(x), static_cast<U>(y) }; }
+            { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         template <class U>
         constexpr Vec<U> cast() const noexcept
-            { return { static_cast<U>(x), static_cast<U>(y) }; }
+            { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
@@ -145,6 +226,12 @@ namespace g2 {
     template <class T>
     constexpr double cosABC(
             const Point<T>& a, const Point<T>& b, const Point<T>& c) noexcept;
+
+    template <class U, class T>
+    constexpr U crossOAB(const Point<T>& o, const Point<T>& a, const Point<T>& b) noexcept;
+
+    template <class T>
+    constexpr inline T crossOAB(const Point<T>& o, const Point<T>& a, const Point<T>& b) noexcept;
 }   // namespace g2
 
 // Point + point → cannot
@@ -235,10 +322,9 @@ constexpr g2::Vec<U> g2::Vec<T>::normalized(U wantedLength) const noexcept
         return { 0, 0 };
     } else {
         auto q = wantedLength / myLen;
-        return Vec<U>{ static_cast<U>(x * q), static_cast<U>(y * q) };
+        return Vec<U>{ g2::cast<U>(x * q), g2::cast<U>(y * q) };
     }
 }
-
 
 template <class T>
 constexpr double g2::cosABC(const Point<T>& a, const Point<T>& b, const Point<T>& c) noexcept {
@@ -246,3 +332,16 @@ constexpr double g2::cosABC(const Point<T>& a, const Point<T>& b, const Point<T>
     auto v2 = c - b;
     return v1.dotD(v2) / sqrt(v1.len2D() * v2.len2D());
 }
+
+template <class U, class T>
+constexpr U g2::crossOAB(const g2::Point<T>& o, const g2::Point<T>& a, const g2::Point<T>& b) noexcept
+    { return (a - o).template crossT<U>(b - o); }
+
+template <class T>
+constexpr inline T g2::crossOAB(const g2::Point<T>& o, const g2::Point<T>& a, const g2::Point<T>& b) noexcept
+    { return crossOAB<T, T>(o, a, b); }
+
+static_assert(g2::crossOAB(g2::Ipoint{0,0}, g2::Ipoint{1,0}, g2::Ipoint{1,1}) == 1);
+static_assert(g2::crossOAB(g2::Ipoint{0,0}, g2::Ipoint{1,1}, g2::Ipoint{1,0}) == -1);
+static_assert(g2::crossOAB<long>(g2::Ipoint{0,0}, g2::Ipoint{1,0}, g2::Ipoint{1,1}) == 1);
+static_assert(g2::crossOAB<long>(g2::Ipoint{0,0}, g2::Ipoint{1,1}, g2::Ipoint{1,0}) == -1);
