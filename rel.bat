@@ -49,7 +49,7 @@
 @echo MinGW OK
 
 @if exist %UTRANSL% goto utransl_ok
-@echo BAD: UTranslCon not found.
+@echo BAD: UTransCon not found.
 @echo Build it manually from https://github.com/Mercury13/utranslator
 @goto end
 :utransl_ok
