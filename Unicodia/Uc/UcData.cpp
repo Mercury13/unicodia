@@ -2038,7 +2038,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar", { EcScript::Maka, 0 }, EcScript::Maka },
     // Kawi OK
-    { 0x11F00, 0x11F5F, { '?', EcContinent::OCEAN, Ifg::MISSING },
+    { 0x11F00, 0x11F5F, { 0x11F14, EcContinent::OCEAN },
             "Kawi", { EcScript::Kawi, 0 }, EcScript::Kawi },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA },
