@@ -16,7 +16,7 @@ namespace uc {
         NO_AA = 16,             ///< [+] Submethod of SAMPLE: temporarily disable anti-aliasing
         U_DEF_IGNORABLE = 32,   ///< [+] UC feature: default-ignorable
         U_VS16_EMOJI = 64,      ///< [+] UC feature: to surely make this char graphic, use VS16
-        M_SVG_EMOJI = 128,      ///< [+] SVG emoji
+        M_SVG_EMOJI = 128,      ///< [+] Method: SVG emoji
         M_SPACE = 256,          ///< [+] Method: draw as space, even if it is not space
         M_EGYPTIAN_HATCH = 512, ///< [+] Method: draw Egyptian hatch (not really a hatch, but OK)
         DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts
@@ -33,5 +33,12 @@ namespace uc {
     using Lfgs = Flags<Lfg>;
 
     DEFINE_ENUM_OPS(Lfg)
+
+    /// @todo [textRoles] finish?
+    enum class TextRole : unsigned char {
+        NAME = 0,       // Character name, first is the main
+        ABBREV = 1,     // Abbreviation
+        HTML = 2        // HTML mnemonic, NO ampersand & and semicolon ;
+    };
 
 }   // namespace uc
