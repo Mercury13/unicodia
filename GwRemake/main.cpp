@@ -10,6 +10,9 @@
 // Geo2d
 #include "g2svgUtils.h"
 
+// Current
+#include "FixupList.h"
+
 using namespace std::string_view_literals;
 
 #define PATH_WORK "../Font-Source/GlyphWiki/"
@@ -34,20 +37,42 @@ void printBaddies(const std::vector<Baddy>& x)
 
 namespace {
 
+    void doFixup(g2sv::Polyline& v, fix::Glyph& fixup)
+    {
+        // Check for single-point fixups
+        for (auto& pt : v.pts) {
+            auto [beg, end] = fixup.points.equal_range(pt.x);
+            for (auto p = beg; p != end; ++p) {
+                if (p->second.before.y == pt.y) {
+                    pt = p->second.after;
+                    p->second.wasUsed = true;
+                    break;
+                }
+            }
+        }
+    }
+
+
     struct MyPolyPath : public g2sv::Polypath
     {
     public:
         pugi::xml_node node;
 
-        void remakeAlone(const g2sv::SimplifyOpt& simopt);
+        void remakeAlone(
+                const g2sv::SimplifyOpt& simopt,
+                fix::Glyph* glyph);
     };
 
-    void MyPolyPath::remakeAlone([[maybe_unused]] const g2sv::SimplifyOpt& simopt)
+    void MyPolyPath::remakeAlone(
+            [[maybe_unused]] const g2sv::SimplifyOpt& simopt,
+            fix::Glyph* glyph)
     {
         removeByDiameter(simopt.minDiameter);
         for (auto& v : curves) {
             v.removeRepeating();
             v.removeBackForth(simopt.sharpCos);
+            if (glyph)
+                doFixup(v, *glyph);
             v.removeShortSegments(simopt);
             v.removeRepeating();    // short segments can make repeats, so do once again
             v.removeBackForth(simopt.sharpCos);
@@ -62,7 +87,7 @@ namespace {
 
         void clear();
         void loadFrom(pugi::xml_document& document);
-        void remake();
+        void remake(fix::Glyph* glyph);
         void write();
     private:
         void loadFromRec(pugi::xml_node node);
@@ -121,10 +146,10 @@ namespace {
         loadFromRec(node);
     }
 
-    void Svg::remake()
+    void Svg::remake(fix::Glyph* glyph)
     {
         for (auto& v : paths) {
-            v.remakeAlone(simopt);
+            v.remakeAlone(simopt, glyph);
         }
     }
 
@@ -138,14 +163,15 @@ namespace {
 
 void remakeSvg(
         const std::filesystem::path& fnIn,
-        const std::filesystem::path& fnOut)
+        const std::filesystem::path& fnOut,
+        fix::Glyph* glyph)
 {
     pugi::xml_document doc;
     doc.load_file(fnIn.c_str());
 
     Svg svg;
     svg.loadFrom(doc);
-    svg.remake();
+    svg.remake(glyph);
     svg.write();
 
     doc.save_file(fnOut.c_str());
@@ -153,6 +179,11 @@ void remakeSvg(
 
 int main()
 {
+    std::filesystem::path pathWork(PATH_WORK);
+    auto fnFixup = pathWork / "fixup.xml";
+    fix::List fixups;
+    fixups.load(fnFixup, simopt.scale);
+
     std::filesystem::directory_iterator itIn(DIR_IN);
     std::filesystem::path pathOut(DIR_OUT);
     std::vector<Baddy> baddies;
@@ -167,7 +198,7 @@ int main()
                 std::cout << "#" << nFiles << ": " << fnFile.generic_string() << std::endl;
                 auto fnOut = pathOut / fnFile;
                 try {
-                    remakeSvg(fnIn, fnOut);
+                    remakeSvg(fnIn, fnOut, fixups.find(fnFile.generic_string()));
                 } catch (const g2sv::ESvg& e) {
                     baddies.emplace_back(fnFile.generic_string(), e.what());
                 } catch (...) {

@@ -137,6 +137,12 @@ namespace g2 {
         // Point != point
         constexpr bool operator != (const Point<T>& b) const { return (x != b.x || y != b.y); }
 
+        // Point == origin
+        constexpr bool operator == (Origin) const { return (x == 0 && y == 0); }
+
+        // Point != origin
+        constexpr bool operator != (const Origin) const { return (x != 0 || y != 0); }
+
         template <class U>
         constexpr Point<U> cast() const noexcept
             { return { cast<U>(x), cast<U>(y) }; }
@@ -197,6 +203,12 @@ namespace g2 {
 
         // Vec != vec
         constexpr bool operator != (const Vec<T>& b) const noexcept { return (x != b.x || y != b.y); }
+
+        // Vec == vec
+        constexpr bool operator == (ZeroVec) const noexcept { return (x == 0 && y == 0); }
+
+        // Vec != vec
+        constexpr bool operator != (ZeroVec) const noexcept { return (x != 0 || y != 0); }
 
         template <class U>
         constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;

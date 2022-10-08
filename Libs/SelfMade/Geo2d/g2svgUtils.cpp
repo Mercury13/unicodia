@@ -305,7 +305,8 @@ size_t g2sv::Polyline::removeShortSegments(
         nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
         pts.erase(itEnd, pts.end());
     }
-    checkForSelfIntersection(opt.scale);
+    // Just a debug
+    //checkForSelfIntersection(opt.scale);
     return nFound;
 }
 
