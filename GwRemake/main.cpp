@@ -49,6 +49,8 @@ namespace {
             v.removeRepeating();
             v.removeBackForth(simopt.sharpCos);
             v.removeShortSegments(simopt);
+            v.removeRepeating();    // short segments can make repeats, so do once again
+            v.removeBackForth(simopt.sharpCos);
         }
         simplify(simopt);
     }

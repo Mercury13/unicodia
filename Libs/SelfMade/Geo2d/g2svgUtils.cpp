@@ -271,9 +271,15 @@ size_t g2sv::Polyline::removeShortSegments(
                 auto cos1 = g2::cosABC(pt0, pt1, pt2);
                 // Whose angle is bigger?
                 if (cos0 < cos1) {
+                    // Delete pt0
+                    if (pt_1->x == pt0.x) pt1.x = pt0.x;  // keep horz/vert lines
+                    if (pt_1->y == pt0.y) pt1.y = pt0.y;
                     pt0 = BAD_VERTEX;
                     pt_1 = &pt1;
                 } else {
+                    // Delete pt1
+                    if (pt1.x == pt2.x) pt0.x = pt1.x;   // keep horz/vert lines
+                    if (pt1.y == pt2.y) pt0.y = pt1.y;
                     pt1 = BAD_VERTEX;
                     pt_1 = &pt0;
                 }
