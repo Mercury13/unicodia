@@ -18,6 +18,8 @@ namespace g2sv {
     struct SimplifyOpt {
         /// Fitting tolerance
         double tolerance = 2.5;
+        /// Min. diameter — delete smaller curves
+        double minDiameter = 2.5;
         /// Tangent tolerance: close point → make tangent from next
         double tangentTolerance = 1;
         /// Scaling double → int (we mostly work in fixed point)
@@ -79,7 +81,7 @@ namespace g2sv {
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points
-        size_t removeShortSegments(const SimplifyOpt& opt) noexcept;
+        size_t removeShortSegments(const SimplifyOpt& opt);
 
         /// @return [-] smth bad [0] really no corners in closed polyline
         ///             (non-closed polyline gives at least its ends)
@@ -91,6 +93,12 @@ namespace g2sv {
         /// @return [+] one of points adjacent to lines involved
         ///         [-] no intersections found
         Intersection doesSelfIntersect() const;
+
+        /// @throw  if some polyline self-intersects
+        void checkForSelfIntersection(int scale) const;
+
+        /// @return [+] is smaller
+        bool checkDiameter(double r) const;
 
         inline size_t wrapIndexFwd(size_t i) const { return (i >= pts.size() ? 0 : i); }
         inline size_t wrapIndexBack(size_t i) const { return (i >= pts.size() ? pts.size() - 1 : i); }
@@ -126,6 +134,8 @@ namespace g2sv {
 
         /// @throw  if some polyline self-intersects
         void checkForIntersection(int scale) const;
+
+        size_t removeByDiameter(double diam);
     };
 
     class ESvg : public std::logic_error

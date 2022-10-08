@@ -205,8 +205,26 @@ size_t g2sv::Polyline::removeBackForth()
 }
 
 
+bool g2sv::Polyline::checkDiameter(double r) const
+{
+    if (pts.empty())
+        return true;
+    Type xLo = std::numeric_limits<Type>::max();
+    Type xHi = std::numeric_limits<Type>::min();
+    Type yLo = std::numeric_limits<Type>::max();
+    Type yHi = std::numeric_limits<Type>::min();
+    for (auto& pt : pts) {
+        xLo = std::min(xLo, pt.x);
+        xHi = std::max(xHi, pt.x);
+        yLo = std::min(yLo, pt.y);
+        yHi = std::max(yHi, pt.y);
+    }
+    return (xHi - xLo < r) && (yHi - yLo < r);
+}
+
+
 size_t g2sv::Polyline::removeShortSegments(
-        const SimplifyOpt& opt) noexcept
+        const SimplifyOpt& opt)
 {
     if (pts.size() <= 3)
         return 0;
@@ -271,6 +289,7 @@ size_t g2sv::Polyline::removeShortSegments(
         nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
         pts.erase(itEnd, pts.end());
     }
+    checkForSelfIntersection(opt.scale);
     return nFound;
 }
 
@@ -448,6 +467,29 @@ g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
     }
     return {};
 }
+
+
+void g2sv::Polyline::checkForSelfIntersection(int scale) const
+{
+    if (auto pt = doesSelfIntersect()) {
+        char buf[100];
+        // Get shorter segment
+        auto len1 = pt.a->dist2from(*pt.b);
+        auto len2 = pt.c->dist2from(*pt.d);
+        if (len2 < len1) {
+            pt.a = pt.c;
+            pt.b = pt.d;
+            len1 = len2;
+        }
+        auto x1 = static_cast<double>(pt.a->x) / scale;
+        auto y1 = static_cast<double>(pt.a->y) / scale;
+        auto x2 = static_cast<double>(pt.b->x) / scale;
+        auto y2 = static_cast<double>(pt.b->y) / scale;
+        snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g) - (%g, %g), L=%.3g", x1, y1, x2, y2, sqrt(len1) / scale);
+        throw ESvg(buf);
+    }
+}
+
 
 
 namespace {
@@ -1411,22 +1453,21 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 void g2sv::Polypath::checkForIntersection(int scale) const
 {
     for (auto& c : curves) {
-        if (auto pt = c.doesSelfIntersect()) {
-            char buf[100];
-            // Get shorter segment
-            auto len1 = pt.a->dist2from(*pt.b);
-            auto len2 = pt.c->dist2from(*pt.d);
-            if (len2 < len1) {
-                pt.a = pt.c;
-                pt.b = pt.d;
-                len1 = len2;
-            }
-            auto x1 = static_cast<double>(pt.a->x) / scale;
-            auto y1 = static_cast<double>(pt.a->y) / scale;
-            auto x2 = static_cast<double>(pt.b->x) / scale;
-            auto y2 = static_cast<double>(pt.b->y) / scale;
-            snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g) - (%g, %g), L=%.3g", x1, y1, x2, y2, sqrt(len1) / scale);
-            throw ESvg(buf);
+        c.checkForSelfIntersection(scale);
+    }
+}
+
+
+size_t g2sv::Polypath::removeByDiameter(double diam)
+{
+    for (auto& v : curves) {
+        if (v.checkDiameter(diam)) {
+            v.pts.clear();
         }
     }
+    auto ee = std::remove_if(curves.begin(), curves.end(),
+                [](const g2sv::Polyline& x) { return x.pts.size() == 0; });
+    auto r = curves.end() - ee;
+    curves.erase(ee, curves.end());
+    return r;
 }

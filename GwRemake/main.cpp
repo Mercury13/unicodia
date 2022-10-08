@@ -2,6 +2,7 @@
 #include <iostream>
 #include <filesystem>
 #include <vector>
+#include <algorithm>
 
 // XML
 #include "pugixml.hpp"
@@ -43,6 +44,7 @@ namespace {
 
     void MyPolyPath::remakeAlone([[maybe_unused]] const g2sv::SimplifyOpt& simopt)
     {
+        removeByDiameter(simopt.minDiameter);
         for (auto& v : curves) {
             v.removeRepeating();
             v.removeBackForth();
@@ -79,6 +81,7 @@ namespace {
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 3 * MY_SCALE,
+        .minDiameter = 3 * MY_SCALE,
         .tangentTolerance = 2.1,    // 1 smallest unit diagonally, 2 horizontally
         .scale = MY_SCALE,
         .corner = {
@@ -162,8 +165,10 @@ int main()
                 auto fnOut = pathOut / fnFile;
                 try {
                     remakeSvg(fnIn, fnOut);
-                } catch (const std::logic_error& e) {
+                } catch (const g2sv::ESvg& e) {
                     baddies.emplace_back(fnFile.generic_string(), e.what());
+                } catch (...) {
+                    throw;
                 }
             }
         }
