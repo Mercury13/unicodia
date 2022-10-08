@@ -82,7 +82,7 @@ namespace {
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 3 * MY_SCALE,
         .minDiameter = 3 * MY_SCALE,
-        .tangentTolerance = 2.1,    // 1 smallest unit diagonally, 2 horizontally
+        .tangentTolerance = 1.7,    // 1 smallest unit horz/diag
         .sharpCos = 0.997,          // <5°
         .scale = MY_SCALE,
         .corner = {

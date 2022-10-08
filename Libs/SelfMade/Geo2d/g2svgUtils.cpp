@@ -487,15 +487,21 @@ void g2sv::Polyline::checkForSelfIntersection(int scale) const
         auto len1 = pt.a->dist2from(*pt.b);
         auto len2 = pt.c->dist2from(*pt.d);
         if (len2 < len1) {
-            pt.a = pt.c;
-            pt.b = pt.d;
+            std::swap(pt.a, pt.c);
+            std::swap(pt.b, pt.d);
             len1 = len2;
         }
         auto x1 = static_cast<double>(pt.a->x) / scale;
         auto y1 = static_cast<double>(pt.a->y) / scale;
         auto x2 = static_cast<double>(pt.b->x) / scale;
         auto y2 = static_cast<double>(pt.b->y) / scale;
-        snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g) - (%g, %g), L=%.3g", x1, y1, x2, y2, sqrt(len1) / scale);
+        auto x3 = static_cast<double>(pt.c->x) / scale;
+        auto y3 = static_cast<double>(pt.c->y) / scale;
+        auto x4 = static_cast<double>(pt.d->x) / scale;
+        auto y4 = static_cast<double>(pt.d->y) / scale;
+        snprintf(buf, std::size(buf), "Curve self-intersects: (%g %g) - (%g %g), L=%.3g with (%g %g) - (%g %g)",
+                 x1, y1, x2, y2, sqrt(len1) / scale,
+                 x3, y3, x4, y4);
         throw ESvg(buf);
     }
 }
