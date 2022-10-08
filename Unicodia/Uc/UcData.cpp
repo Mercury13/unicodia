@@ -836,7 +836,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U15] Nag alphabet (Mundari)
     { "Nagm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::yrange(1949, 1982), EcFont::NORMAL },
+        Dating::yrange(1949, 1982), EcFont::FUNKY },
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
