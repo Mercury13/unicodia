@@ -170,7 +170,7 @@ size_t g2sv::Polyline::removeRepeating()
 }
 
 
-size_t g2sv::Polyline::removeBackForth()
+size_t g2sv::Polyline::removeBackForth(double sharpCos)
 {
     auto n = pts.size();
     if (n < 4)
@@ -186,11 +186,21 @@ size_t g2sv::Polyline::removeBackForth()
         // Erase collinear — both unneeded vertices in the middle of line,
         // and those horrible back-forth
         auto crossValue = vNext.cross(vPrev);
+        bool wasFound = false;
         if (crossValue == 0) {
             // Found!
+            wasFound = true;
+        } else if (crossValue > 0) {    // Not found
+            auto cs = g2::cosABC(*pPrev, *pCurr, *pNext);
+            if (cs > sharpCos) {
+                wasFound = true;
+            }
+        }
+        // Check
+        if (wasFound) {
             *pCurr = BAD_VERTEX;
             ++nFound;
-        } else {    // Not found
+        } else {
             pPrev = pCurr;
         }
         pCurr = pNext;

@@ -22,10 +22,12 @@ namespace g2sv {
         double minDiameter = 2.5;
         /// Tangent tolerance: close point → make tangent from next
         double tangentTolerance = 1;
+        /// Cosine of an angle that’s considered glitch, always (0..1)
+        double sharpCos = 0.98;
         /// Scaling double → int (we mostly work in fixed point)
         int scale = 1;
         struct Corner {
-            /// Always (-1…0), min cosine of vertices considered corner
+            /// Always (-1..0), min cosine of vertices considered corner
             double minCosine = -0.7;
             /// Side longer than this are considered straight
             double maxSide = 100000;
@@ -77,7 +79,7 @@ namespace g2sv {
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points
-        size_t removeBackForth();
+        size_t removeBackForth(double sharpCos);
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points

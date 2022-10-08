@@ -47,7 +47,7 @@ namespace {
         removeByDiameter(simopt.minDiameter);
         for (auto& v : curves) {
             v.removeRepeating();
-            v.removeBackForth();
+            v.removeBackForth(simopt.sharpCos);
             v.removeShortSegments(simopt);
         }
         simplify(simopt);
@@ -83,6 +83,7 @@ namespace {
         .tolerance = 3 * MY_SCALE,
         .minDiameter = 3 * MY_SCALE,
         .tangentTolerance = 2.1,    // 1 smallest unit diagonally, 2 horizontally
+        .sharpCos = 0.997,          // <5°
         .scale = MY_SCALE,
         .corner = {
             .minCosine = -0.64,  // <130°
