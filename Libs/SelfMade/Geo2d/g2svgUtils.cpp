@@ -8,6 +8,7 @@
 // STL
 #include <algorithm>
 
+extern const g2sv::Point g2sv::BAD_VERTEX { NO_COORD, NO_COORD };
 
 ///// PathParser ///////////////////////////////////////////////////////////////
 
@@ -171,8 +172,6 @@ size_t g2sv::Polyline::removeRepeating()
 
 size_t g2sv::Polyline::removeBackForth()
 {
-    static constexpr int NO_COORD = std::numeric_limits<int>::min();
-    static constinit const g2::Ipoint BAD_VERTEX { NO_COORD, NO_COORD };
     auto n = pts.size();
     if (n < 4)
         return false;
@@ -199,17 +198,80 @@ size_t g2sv::Polyline::removeBackForth()
 
     if (nFound != 0) {
         auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
+        nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
         pts.erase(itEnd, pts.end());
     }
     return nFound;
 }
 
 
-size_t g2sv::Polyline::removeShortSegments(double tolerance)
+size_t g2sv::Polyline::removeShortSegments(
+        const SimplifyOpt& opt) noexcept
 {
-    double tol2 = tolerance * tolerance;
+    if (pts.size() <= 3)
+        return 0;
 
-    return 0;
+    const double tol2 = g2::sqr(opt.tangentTolerance);
+
+    auto n = pts.size();
+    size_t nFound = 0;
+    auto* pt_1 = &pts.back();   // minus 1
+    for (size_t i = 0; i < n; ++i) {
+        auto& pt0 = pts[i];
+        size_t i1 = nextIndex(i);
+        auto& pt1 = pts[i1];
+        if (pt0.dist2from(pt1) <= tol2) {
+            // Find point that’s far enough from pt0
+            size_t j = i1;
+            if (i1 > i) {   // do a work only if did not wrap
+                while (true) {
+                    size_t j1 = j + 1;
+                    if (j1 >= n)
+                        break;
+                    auto& ptJ1 = pts[j1];
+                    if (pt0.dist2from(ptJ1) > tol2)
+                        break;
+                    j = j1;
+                }
+            }
+            // <s>Duke Nukem</s> [i1..j] must die!
+            if (i1 == j) {
+                // 1 point: maybe kill i instead of i1?
+                size_t i2 = nextIndex(i1);
+                auto& pt2 = pts[i2];
+                auto cos0 = g2::cosABC(*pt_1, pt0, pt1);
+                auto cos1 = g2::cosABC(pt0, pt1, pt2);
+                // Whose angle is bigger?
+                if (cos0 < cos1) {
+                    pt0 = BAD_VERTEX;
+                    pt_1 = &pt1;
+                } else {
+                    pt1 = BAD_VERTEX;
+                    pt_1 = &pt0;
+                }
+                ++nFound;
+                i = i1;
+                continue;
+            } else {
+                // Several consecutive — kill them all!
+                for (size_t k = i1; k <= j; ++k) {
+                    pts[k] = BAD_VERTEX;
+                    ++nFound;
+                }
+                i = j;
+                continue;
+            }
+        }
+        // Step which is not done when making continue
+        pt_1 = &pt0;
+    }
+
+    if (nFound != 0) {
+        auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
+        nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
+        pts.erase(itEnd, pts.end());
+    }
+    return nFound;
 }
 
 
@@ -366,7 +428,7 @@ g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
     auto sz1 = isClosed ? sz : sz - 1;
     for (size_t i = 0; i < sz1; ++i) {
         auto& a = pts[i];
-        auto& b = pts[wrapIndex(i + 1)];
+        auto& b = pts[wrapIndexFwd(i + 1)];
         if (i >= 2) {
             size_t i0 = i - 2;
             for (size_t j = 0; i <= i0; ++j) {
@@ -379,7 +441,7 @@ g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
         auto nn = (i == 0) ? sz - 1 : sz1;
         for (size_t j = i + 2; j < nn; ++j) {
             auto &c = pts[j];
-            auto &d = pts[wrapIndex(j + 1)];
+            auto &d = pts[wrapIndexFwd(j + 1)];
             if (g2::doSegsStrictlyIntersect(a, b, c, d))
                 return { a, b, c, d };
         }
@@ -1328,7 +1390,7 @@ std::string g2sv::Polypath::svgData(int scale) const
 void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
     /// @todo [urgent] Remove bad nearby points, and reenable again
-    //checkForIntersection(opt.scale);
+    checkForIntersection(opt.scale);
     dataOverride.clear();
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);

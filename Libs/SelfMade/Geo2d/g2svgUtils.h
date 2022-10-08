@@ -46,6 +46,11 @@ namespace g2sv {
         CornerType type;
     };
 
+    using Type = int;
+    using Point = g2::Point<Type>;
+    constexpr Type NO_COORD = std::numeric_limits<int>::min();
+    extern const Point BAD_VERTEX;
+
     struct Intersection {
         const g2::Ipoint *a = nullptr, *b = nullptr, *c = nullptr, *d = nullptr;
         Intersection() noexcept = default;
@@ -55,7 +60,8 @@ namespace g2sv {
     };
 
     struct Polyline {
-        std::vector<g2::Ipoint> pts;
+        // Fields
+        std::vector<Point> pts;
         bool isClosed = false;
 
         /// Moves point i to position 0
@@ -73,7 +79,7 @@ namespace g2sv {
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points
-        size_t removeShortSegments(double tolerance);
+        size_t removeShortSegments(const SimplifyOpt& opt) noexcept;
 
         /// @return [-] smth bad [0] really no corners in closed polyline
         ///             (non-closed polyline gives at least its ends)
@@ -86,7 +92,10 @@ namespace g2sv {
         ///         [-] no intersections found
         Intersection doesSelfIntersect() const;
 
-        inline size_t wrapIndex(size_t i) const { return (i >= pts.size() ? 0 : i); }
+        inline size_t wrapIndexFwd(size_t i) const { return (i >= pts.size() ? 0 : i); }
+        inline size_t wrapIndexBack(size_t i) const { return (i >= pts.size() ? pts.size() - 1 : i); }
+        inline size_t nextIndex(size_t i) const { return wrapIndexFwd(i + 1); }
+        inline size_t prevIndex(size_t i) const { return wrapIndexBack(i - 1); }
     };
 
     enum class AllowComma { NO, YES };

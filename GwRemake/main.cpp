@@ -46,7 +46,7 @@ namespace {
         for (auto& v : curves) {
             v.removeRepeating();
             v.removeBackForth();
-            v.removeShortSegments(simopt.tangentTolerance);
+            v.removeShortSegments(simopt);
         }
         simplify(simopt);
     }
@@ -79,7 +79,7 @@ namespace {
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 3 * MY_SCALE,
-        .tangentTolerance = MY_SCALE * 0.4,
+        .tangentTolerance = 2.1,    // 1 smallest unit diagonally, 2 horizontally
         .scale = MY_SCALE,
         .corner = {
             .minCosine = -0.64,  // <130°
