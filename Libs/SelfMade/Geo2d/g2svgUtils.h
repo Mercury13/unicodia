@@ -46,6 +46,14 @@ namespace g2sv {
         CornerType type;
     };
 
+    struct Intersection {
+        const g2::Ipoint *a = nullptr, *b = nullptr, *c = nullptr, *d = nullptr;
+        Intersection() noexcept = default;
+        Intersection(const g2::Ipoint& aa, const g2::Ipoint& bb, const g2::Ipoint& cc, const g2::Ipoint& dd)
+            : a(&aa), b(&bb), c(&cc), d(&dd) {}
+        explicit operator bool() const noexcept { return a; }
+    };
+
     struct Polyline {
         std::vector<g2::Ipoint> pts;
         bool isClosed = false;
@@ -56,12 +64,16 @@ namespace g2sv {
         void rotateIndexes(size_t i);
 
         /// Removes repeating points
-        /// @return [+] smth happened
-        bool removeRepeating();
+        /// @return  # of removed points
+        size_t removeRepeating();
 
         /// Removes collinear segments that go back and forth
-        /// @return [+] smth happened
-        bool removeBackForth();
+        /// @return  # of removed points
+        size_t removeBackForth();
+
+        /// Removes collinear segments that go back and forth
+        /// @return  # of removed points
+        size_t removeShortSegments(double tolerance);
 
         /// @return [-] smth bad [0] really no corners in closed polyline
         ///             (non-closed polyline gives at least its ends)
@@ -70,8 +82,9 @@ namespace g2sv {
 
         void appendSvgData(std::string& r, int scale) const;
 
-        /// @return [+] the polyline self-intersects [0] no intersections found
-        std::optional<g2::Ipoint> doesSelfIntersect() const;
+        /// @return [+] one of points adjacent to lines involved
+        ///         [-] no intersections found
+        Intersection doesSelfIntersect() const;
 
         inline size_t wrapIndex(size_t i) const { return (i >= pts.size() ? 0 : i); }
     };
@@ -101,6 +114,8 @@ namespace g2sv {
         void parse(std::string_view text, int scale);
         void simplify(const SimplifyOpt& opt);
         std::string svgData(int scale) const;
+
+        /// @throw  if some polyline self-intersects
         void checkForIntersection(int scale) const;
     };
 

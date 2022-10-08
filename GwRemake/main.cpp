@@ -46,6 +46,7 @@ namespace {
         for (auto& v : curves) {
             v.removeRepeating();
             v.removeBackForth();
+            v.removeShortSegments(simopt.tangentTolerance);
         }
         simplify(simopt);
     }

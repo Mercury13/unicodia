@@ -152,27 +152,24 @@ int g2sv::PathParser::getInum(char command, AllowComma allowComma, int scale)
 ///// Polyline /////////////////////////////////////////////////////////////////
 
 
-bool g2sv::Polyline::removeRepeating()
+size_t g2sv::Polyline::removeRepeating()
 {
     if (pts.size() < 2)
-        return false;
+        return 0;
 
     auto itEnd = std::unique(pts.begin(), pts.end());
     auto newSize = itEnd - pts.begin();
+    auto r = pts.size() - newSize;
     // Closed line → check for first/last point
     if (isClosed && newSize > 1 && pts.front() == pts.back()) {
         --newSize;
     }
-    if (static_cast<size_t>(newSize) != pts.size()) {
-        pts.resize(newSize);
-        return true;
-    } else {
-        return false;
-    }
+    pts.resize(newSize);
+    return r;
 }
 
 
-bool g2sv::Polyline::removeBackForth()
+size_t g2sv::Polyline::removeBackForth()
 {
     static constexpr int NO_COORD = std::numeric_limits<int>::min();
     static constinit const g2::Ipoint BAD_VERTEX { NO_COORD, NO_COORD };
@@ -182,7 +179,7 @@ bool g2sv::Polyline::removeBackForth()
 
     auto pPrev = &pts[0];
     auto pCurr = &pts[1];
-    bool foundSmth = false;
+    size_t nFound = 0;
     for (size_t i = 2; i < n; ++i) {
         auto pNext = &pts[i];
         auto vPrev = *pPrev - *pCurr;
@@ -193,21 +190,26 @@ bool g2sv::Polyline::removeBackForth()
         if (crossValue == 0) {
             // Found!
             *pCurr = BAD_VERTEX;
-            foundSmth = true;
+            ++nFound;
         } else {    // Not found
             pPrev = pCurr;
         }
         pCurr = pNext;
     }
 
-    if (foundSmth) {
+    if (nFound != 0) {
         auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
         pts.erase(itEnd, pts.end());
-        // We do not check 1st and last, probably OK
-        return true;
-    } else {
-        return false;
     }
+    return nFound;
+}
+
+
+size_t g2sv::Polyline::removeShortSegments(double tolerance)
+{
+    double tol2 = tolerance * tolerance;
+
+    return 0;
 }
 
 
@@ -345,19 +347,19 @@ void g2sv::Polyline::rotateIndexes(size_t i)
 }
 
 
-std::optional<g2::Ipoint> g2sv::Polyline::doesSelfIntersect() const
+g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
 {
     // Performance O(n²), but OK for my tasks
     auto sz = pts.size();
     switch (sz) {
     case 0:
     case 1:
-        return std::nullopt;
+        return {};
     case 2:
-        return isClosed ? std::optional<g2::Ipoint>{pts[0]} : std::nullopt;
+        return isClosed ? Intersection{ pts[0], pts[1], pts[0], pts[1] } : Intersection{};
     case 3:
         return (g2::crossOAB(pts[0], pts[1], pts[2]) == 0)
-                ? std::optional<g2::Ipoint>{pts[0]} : std::nullopt;
+                ? Intersection{ pts[0], pts[1], pts[0], pts[2] } : Intersection{};
     default: ;
     }
 
@@ -371,7 +373,7 @@ std::optional<g2::Ipoint> g2sv::Polyline::doesSelfIntersect() const
                 auto& c = pts[j];
                 auto& d = pts[j + 1];
                 if (g2::doSegsStrictlyIntersect(a, b, c, d))
-                    return a;
+                    return { a, b, c, d };
             }
         }
         auto nn = (i == 0) ? sz - 1 : sz1;
@@ -379,10 +381,10 @@ std::optional<g2::Ipoint> g2sv::Polyline::doesSelfIntersect() const
             auto &c = pts[j];
             auto &d = pts[wrapIndex(j + 1)];
             if (g2::doSegsStrictlyIntersect(a, b, c, d))
-                return a;
+                return { a, b, c, d };
         }
     }
-    return std::nullopt;
+    return {};
 }
 
 
@@ -1348,10 +1350,20 @@ void g2sv::Polypath::checkForIntersection(int scale) const
 {
     for (auto& c : curves) {
         if (auto pt = c.doesSelfIntersect()) {
-            char buf[64];
-            auto x = static_cast<double>(pt->x) / scale;
-            auto y = static_cast<double>(pt->y) / scale;
-            snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g)", x, y);
+            char buf[100];
+            // Get shorter segment
+            auto len1 = pt.a->dist2from(*pt.b);
+            auto len2 = pt.c->dist2from(*pt.d);
+            if (len2 < len1) {
+                pt.a = pt.c;
+                pt.b = pt.d;
+                len1 = len2;
+            }
+            auto x1 = static_cast<double>(pt.a->x) / scale;
+            auto y1 = static_cast<double>(pt.a->y) / scale;
+            auto x2 = static_cast<double>(pt.b->x) / scale;
+            auto y2 = static_cast<double>(pt.b->y) / scale;
+            snprintf(buf, std::size(buf), "Curve self-intersects: (%g, %g) - (%g, %g), L=%.3g", x1, y1, x2, y2, sqrt(len1) / scale);
             throw ESvg(buf);
         }
     }
