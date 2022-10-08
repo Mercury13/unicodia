@@ -13,6 +13,7 @@ mat3 = psMat.translate(-30, -150)
 mat = psMat.compose(mat1, mat2)
 mat = psMat.compose(mat, mat3)
 
+fontforge.runInitScripts()
 font = fontforge.activeFont()
 
 # Convert layers to cubic
@@ -37,11 +38,20 @@ font.is_quadratic = True
 # (Somehow it’s quicker and works better)
 for glyph in font.glyphs():
     # Simplify a few times
-    for i in range(7):
-        glyph.simplify(2)
+    fg = glyph.layers[1]
+    fg.round()
+    fg.addExtrema()
+    fg.round()
+    for i in range(3):
+        fg.simplify(4)
+    fg.round()
+    fg.addExtrema()
+    fg.round()
     # Hint
-    glyph.round(1)
-    glyph.addExtrema()
+    glyph.foreground = fg
+    # Correct direction
+    if not glyph.selfIntersects():
+        glyph.correctDirection()
 
 font.generate(TEMPFILENAME)
 
