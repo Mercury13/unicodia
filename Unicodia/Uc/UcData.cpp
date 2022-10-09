@@ -833,7 +833,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Mymr", QFontDatabase::Myanmar,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1035, StdNote::FIRST_KNOWN), EcFont::MYANMAR },
-    /// @todo [U15] Nag alphabet (Mundari)
+    // Nag OK, done in FunkySample
     { "Nagm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yrange(1949, 1982), EcFont::FUNKY },
@@ -2220,7 +2220,7 @@ constinit const uc::Block uc::blocks[] {
     // Wancho OK
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho", { EcScript::Wcho, 0}, EcScript::Wcho },
-    /// @todo [U15] Nag alphabet (Mundari)
+    // Nag OK, done in FunkySample
     { 0x1E4D0, 0x1E4FF, { '?', EcContinent::ASIA, Ifg::MISSING },
             "Nag Mundari", { EcScript::Nagm, 0}, EcScript::Nagm },
     // Ethiopic ex B OK, Noto quickly arrived
