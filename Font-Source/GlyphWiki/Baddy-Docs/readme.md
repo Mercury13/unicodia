@@ -4,7 +4,7 @@
 
 * Sample: 3162C
 * Frequency: 40/1937 = 2.1%
-* Cause: mechanical uniting strokes [00.png]
+* Cause: mechanical uniting strokes [00.png](00.png)
 
 ## Repeating points
 
@@ -16,7 +16,7 @@ Never seen real repeating points in the field. Probably all repeating points fal
 * Frequency: extremely common, >75%
 * Cause 1: mechanical uniting strokes
 * Cause 2: designer erases a part of glyph and draws it from scratch.
-* Regardless of cause, illustration is [01.png]
+* Regardless of cause, illustration is [01.png](01.png)
 
 I’ve seen points 0.001 units apart.
 
@@ -36,7 +36,7 @@ I’ve seen points 0.001 units apart.
 
 * Sample: 31BC9
 * Frequency: 2/1937 = 0.1%
-* Cause: poor grafting of glyph parts [02.png]
+* Cause: poor grafting of glyph parts [02.png](02.png)
 
 ## Angle exactly 180°
 
