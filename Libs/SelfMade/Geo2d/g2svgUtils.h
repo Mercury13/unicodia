@@ -64,7 +64,7 @@ namespace g2sv {
     };
 
     struct RemoveBackForth {
-        size_t n0 = 0, nNear0 = 0, n180 = 0;
+        size_t n0 = 0, nNear0Short = 0, nNear0Long = 0, n180 = 0;
     };
 
     struct Polyline {

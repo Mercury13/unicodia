@@ -26,12 +26,17 @@ I’ve seen points 0.001 units apart.
 * Frequency: 129/1937 = 5.6%
 * Cause: sharp corner + point close to corner’s apex + rounding
 
-## Extremely sharp corner (<5°)
+## Extremely sharp corner (<5°) short (one side up to 2 smallest units)
 
 * Sample: 31418
-* Frequency: 22/1937 = 1.1%
-* Cause 1: tiny step on an almost vertical line when X coordinates are same for some reason, and Y are not!
-* Cause 2: poor grafting of glyph parts
+* Frequency: 20/1937 = 1.1%
+* Known cause: tiny step on an almost vertical line when X coordinates are same for some reason, and Y are not!
+
+## Extremely sharp corner (<5°) long (both sides > 2 smallest units)
+
+* Sample: 31BC9
+* Frequency: 2/1937 = 0.1%
+* Cause: poor grafting of glyph parts [02.png]
 
 ## Angle exactly 180°
 

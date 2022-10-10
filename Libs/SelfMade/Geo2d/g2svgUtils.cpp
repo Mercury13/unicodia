@@ -199,7 +199,11 @@ g2sv::RemoveBackForth g2sv::Polyline::removeBackForth(double sharpCos)
             auto cs = g2::cosABC(*pPrev, *pCurr, pNext);
             if (cs > sharpCos) {
                 wasFound = true;
-                ++r.nNear0;
+                if (vNext.len2() > 4 && vPrev.len2() > 4) {
+                    ++r.nNear0Long;
+                } else {
+                    ++r.nNear0Short;
+                }
             }
         }
         // Check
@@ -216,7 +220,8 @@ g2sv::RemoveBackForth g2sv::Polyline::removeBackForth(double sharpCos)
         auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
         r.n0 = pts.end() - itEnd;     // maybe BAD_VERTEX somewhere else? :)
         r.n0 -= r.n180;
-        r.n0 -= r.nNear0;
+        r.n0 -= r.nNear0Short;
+        r.n0 -= r.nNear0Long;
         pts.erase(itEnd, pts.end());
     }
     return r;

@@ -54,7 +54,7 @@ void Stat::print(std::string_view name)
 }
 
 struct Stats {
-    Stat diameter, repeat, backForth, sharp, angle180;
+    Stat diameter, repeat, backForth, sharpShort, sharpLong, angle180;
 };
 
 void printBaddies(const std::vector<Baddy>& x)
@@ -104,13 +104,15 @@ namespace {
         bool wasRemovedByDiameter = removeByDiameter(simopt.minDiameter);
         bool wasRemovedRepeating = false;
         bool wasRemovedBackForth = false;
-        bool wasRemovedSharp = false;
+        bool wasRemovedSharpShort = false;
+        bool wasRemovedSharpLong = false;
         bool wasRemoved180 = false;
         for (auto& v : curves) {
             wasRemovedRepeating |= v.removeRepeating();
             auto r = v.removeBackForth(simopt.sharpCos);
             wasRemovedBackForth |= (r.n0 != 0);
-            wasRemovedSharp |= (r.nNear0 != 0);
+            wasRemovedSharpShort |= (r.nNear0Short != 0);
+            wasRemovedSharpLong |= (r.nNear0Long != 0);
             wasRemoved180 |= (r.n180 != 0);
             if (glyph)
                 doFixup(v, *glyph);
@@ -127,8 +129,10 @@ namespace {
                 stats->repeat.reg(charName);
             if (wasRemovedBackForth)
                 stats->backForth.reg(charName);
-            if (wasRemovedSharp)
-                stats->sharp.reg(charName);
+            if (wasRemovedSharpShort)
+                stats->sharpShort.reg(charName);
+            if (wasRemovedSharpLong)
+                stats->sharpLong.reg(charName);
             if (wasRemoved180)
                 stats->angle180.reg(charName);
         }
@@ -271,7 +275,8 @@ int main()
     printBaddies(baddies);
     stats.diameter.print("Small diameter");
     stats.repeat.print("Repeating points");
-    stats.sharp.print("Sharp corners");
+    stats.sharpShort.print("Short sharp corners");
+    stats.sharpLong.print("Long sharp corners");
     stats.backForth.print("Back-forth strokes");
     stats.angle180.print("Angle 180 deg");
 
