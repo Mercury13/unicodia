@@ -34,7 +34,7 @@ I’ve seen points 0.001 units apart.
 
 * Sample: 31418
 * Frequency: 20/1937 = 1.1%
-* Known cause: tiny step on an almost vertical line when X coordinates are same for some reason, and Y are not!
+* Known cause: tiny step on an almost vertical line when X coordinates are same for some reason, and Y are not! [03.png](03.png)
 * Danger: false corners, sometimes false self-intersection
 * Workaround: delete them
 
