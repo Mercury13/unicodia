@@ -38,9 +38,9 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
 ## Future functionality
-* Own GlyphWiki loader.
-* Emoji tools: ligatures, more comprehensive reference.
+* Finish GlyphWiki loader.
 * Better CJK reference.
+* Egyptian hieroglyph reference.
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
