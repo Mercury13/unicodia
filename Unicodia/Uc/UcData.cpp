@@ -2221,7 +2221,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E2C0, 0x1E2FF, { 0x1E2C0, EcContinent::ASIA },
             "Wancho", { EcScript::Wcho, 0}, EcScript::Wcho },
     // Nag OK, done in FunkySample
-    { 0x1E4D0, 0x1E4FF, { '?', EcContinent::ASIA, Ifg::MISSING },
+    { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari", { EcScript::Nagm, 0}, EcScript::Nagm },
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA },
