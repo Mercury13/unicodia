@@ -16,6 +16,7 @@ Never seen real repeating points in the field. Probably all repeating points fal
 * Frequency: extremely common, >75%
 * Cause 1: mechanical uniting strokes
 * Cause 2: designer erases a part of glyph and draws it from scratch.
+* Regardless of cause, illustration is [01.png]
 
 I’ve seen points 0.001 units apart.
 
