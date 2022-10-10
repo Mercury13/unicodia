@@ -27,6 +27,36 @@ struct Baddy {
         : fname(std::move(aFname)), problem(std::move(aProblem)) {}
 };
 
+struct Stat {
+    std::string first;
+    size_t count = 0;
+
+    void reg(std::string_view charName);
+    void print(std::string_view name);
+};
+
+void Stat::reg(std::string_view charName)
+{
+    if (count == 0)
+        first = charName;
+    ++count;
+}
+
+void Stat::print(std::string_view name)
+{
+    std::cout << name << ": ";
+    if (count == 0) {
+        std::cout << "none found";
+    } else {
+        std::cout << "found " << count << ", first " << first;
+    }
+    std::cout << std::endl;
+}
+
+struct Stats {
+    Stat diameter, repeat, backForth, sharp, angle180;
+};
+
 void printBaddies(const std::vector<Baddy>& x)
 {
     std::cout << "GOT " << x.size() << " BADDIES" << std::endl;
@@ -60,17 +90,28 @@ namespace {
 
         void remakeAlone(
                 const g2sv::SimplifyOpt& simopt,
-                fix::Glyph* glyph);
+                fix::Glyph* glyph,
+                std::string_view charName,
+                Stats* stats);
     };
 
     void MyPolyPath::remakeAlone(
             [[maybe_unused]] const g2sv::SimplifyOpt& simopt,
-            fix::Glyph* glyph)
+            fix::Glyph* glyph,
+            std::string_view charName,
+            Stats* stats)
     {
-        removeByDiameter(simopt.minDiameter);
+        bool wasRemovedByDiameter = removeByDiameter(simopt.minDiameter);
+        bool wasRemovedRepeating = false;
+        bool wasRemovedBackForth = false;
+        bool wasRemovedSharp = false;
+        bool wasRemoved180 = false;
         for (auto& v : curves) {
-            v.removeRepeating();
-            v.removeBackForth(simopt.sharpCos);
+            wasRemovedRepeating |= v.removeRepeating();
+            auto r = v.removeBackForth(simopt.sharpCos);
+            wasRemovedBackForth |= (r.n0 != 0);
+            wasRemovedSharp |= (r.nNear0 != 0);
+            wasRemoved180 |= (r.n180 != 0);
             if (glyph)
                 doFixup(v, *glyph);
             v.removeShortSegments(simopt);
@@ -78,6 +119,19 @@ namespace {
             v.removeBackForth(simopt.sharpCos);
         }
         simplify(simopt);
+
+        if (stats) {
+            if (wasRemovedByDiameter)
+                stats->diameter.reg(charName);
+            if (wasRemovedRepeating)
+                stats->repeat.reg(charName);
+            if (wasRemovedBackForth)
+                stats->backForth.reg(charName);
+            if (wasRemovedSharp)
+                stats->sharp.reg(charName);
+            if (wasRemoved180)
+                stats->angle180.reg(charName);
+        }
     }
 
     struct Svg
@@ -87,7 +141,7 @@ namespace {
 
         void clear();
         void loadFrom(pugi::xml_document& document);
-        void remake(fix::Glyph* glyph);
+        void remake(fix::Glyph* glyph, std::string_view charName, Stats* stats);
         void write();
     private:
         void loadFromRec(pugi::xml_node node);
@@ -146,10 +200,10 @@ namespace {
         loadFromRec(node);
     }
 
-    void Svg::remake(fix::Glyph* glyph)
+    void Svg::remake(fix::Glyph* glyph, std::string_view charName, Stats* stats)
     {
         for (auto& v : paths) {
-            v.remakeAlone(simopt, glyph);
+            v.remakeAlone(simopt, glyph, charName, stats);
         }
     }
 
@@ -164,14 +218,16 @@ namespace {
 void remakeSvg(
         const std::filesystem::path& fnIn,
         const std::filesystem::path& fnOut,
-        fix::Glyph* glyph)
+        fix::Glyph* glyph,
+        std::string_view charName,
+        Stats* stats)
 {
     pugi::xml_document doc;
     doc.load_file(fnIn.c_str());
 
     Svg svg;
     svg.loadFrom(doc);
-    svg.remake(glyph);
+    svg.remake(glyph, charName, stats);
     svg.write();
 
     doc.save_file(fnOut.c_str());
@@ -187,6 +243,7 @@ int main()
     std::filesystem::directory_iterator itIn(DIR_IN);
     std::filesystem::path pathOut(DIR_OUT);
     std::vector<Baddy> baddies;
+    Stats stats;
     try {
         int nFiles = 0;
         for (auto& entryIn : itIn) {
@@ -195,10 +252,12 @@ int main()
             auto extFile = fnFile.extension();
             if (extFile == ".svg") {
                 ++nFiles;
-                std::cout << "#" << nFiles << ": " << fnFile.generic_string() << std::endl;
+                auto charName = fnFile.generic_string();
+                std::cout << "#" << nFiles << ": " << charName << std::endl;
                 auto fnOut = pathOut / fnFile;
+                auto pStats = (!charName.starts_with('!')) ? &stats : nullptr;
                 try {
-                    remakeSvg(fnIn, fnOut, fixups.find(fnFile.generic_string()));
+                    remakeSvg(fnIn, fnOut, fixups.find(charName), charName, pStats);
                 } catch (const g2sv::ESvg& e) {
                     baddies.emplace_back(fnFile.generic_string(), e.what());
                 } catch (...) {
@@ -210,6 +269,11 @@ int main()
         std::cout << "GOT ERROR: " << e.what() << std::endl;
     }
     printBaddies(baddies);
+    stats.diameter.print("Small diameter");
+    stats.repeat.print("Repeating points");
+    stats.sharp.print("Sharp corners");
+    stats.backForth.print("Back-forth strokes");
+    stats.angle180.print("Angle 180 deg");
 
     return 0;
 }

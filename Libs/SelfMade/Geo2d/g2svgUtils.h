@@ -63,6 +63,10 @@ namespace g2sv {
         explicit operator bool() const noexcept { return a; }
     };
 
+    struct RemoveBackForth {
+        size_t n0 = 0, nNear0 = 0, n180 = 0;
+    };
+
     struct Polyline {
         // Fields
         std::vector<Point> pts;
@@ -79,7 +83,7 @@ namespace g2sv {
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points
-        size_t removeBackForth(double sharpCos);
+        RemoveBackForth removeBackForth(double sharpCos);
 
         /// Removes collinear segments that go back and forth
         /// @return  # of removed points

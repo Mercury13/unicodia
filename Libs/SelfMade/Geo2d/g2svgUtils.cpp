@@ -170,19 +170,20 @@ size_t g2sv::Polyline::removeRepeating()
 }
 
 
-size_t g2sv::Polyline::removeBackForth(double sharpCos)
+g2sv::RemoveBackForth g2sv::Polyline::removeBackForth(double sharpCos)
 {
+    g2sv::RemoveBackForth r;
     auto n = pts.size();
     if (n < 4)
-        return false;
+        return r;
 
-    auto pPrev = &pts[0];
-    auto pCurr = &pts[1];
+    const Point* pPrev = &pts[0];
+    Point* pCurr = &pts[1];
     size_t nFound = 0;
     for (size_t i = 2; i < n; ++i) {
-        auto pNext = &pts[i];
+        auto& pNext = pts[i];
         auto vPrev = *pPrev - *pCurr;
-        auto vNext = *pNext - *pCurr;
+        auto vNext = pNext - *pCurr;
         // Erase collinear — both unneeded vertices in the middle of line,
         // and those horrible back-forth
         auto crossValue = vNext.cross(vPrev);
@@ -190,10 +191,15 @@ size_t g2sv::Polyline::removeBackForth(double sharpCos)
         if (crossValue == 0) {
             // Found!
             wasFound = true;
+            // Check for 180° angles
+            auto dotValue = vNext.dot(vPrev);
+            if (dotValue <= 0)
+                ++r.n180;
         } else if (crossValue > 0) {    // Not found
-            auto cs = g2::cosABC(*pPrev, *pCurr, *pNext);
+            auto cs = g2::cosABC(*pPrev, *pCurr, pNext);
             if (cs > sharpCos) {
                 wasFound = true;
+                ++r.nNear0;
             }
         }
         // Check
@@ -203,15 +209,17 @@ size_t g2sv::Polyline::removeBackForth(double sharpCos)
         } else {
             pPrev = pCurr;
         }
-        pCurr = pNext;
+        pCurr = &pNext;
     }
 
     if (nFound != 0) {
         auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
-        nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
+        r.n0 = pts.end() - itEnd;     // maybe BAD_VERTEX somewhere else? :)
+        r.n0 -= r.n180;
+        r.n0 -= r.nNear0;
         pts.erase(itEnd, pts.end());
     }
-    return nFound;
+    return r;
 }
 
 
@@ -302,7 +310,7 @@ size_t g2sv::Polyline::removeShortSegments(
 
     if (nFound != 0) {
         auto itEnd = std::remove(pts.begin(), pts.end(), BAD_VERTEX);
-        nFound = itEnd - pts.end();     // maybe BAD_VERTEX somewhere else? :)
+        nFound = pts.end() - itEnd;     // maybe BAD_VERTEX somewhere else? :)
         pts.erase(itEnd, pts.end());
     }
     // Just a debug
