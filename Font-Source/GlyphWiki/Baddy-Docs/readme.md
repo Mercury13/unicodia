@@ -37,6 +37,7 @@ I’ve seen points 0.001 units apart.
 * Sample: 31BC9
 * Frequency: 2/1937 = 0.1%
 * Cause: poor grafting of glyph parts [02.png](02.png)
+* Danger: rounding may lead to self-intersection
 
 ## Angle exactly 180°
 
