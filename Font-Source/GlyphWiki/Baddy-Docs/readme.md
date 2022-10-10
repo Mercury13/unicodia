@@ -4,7 +4,7 @@
 
 * Sample: 3162C
 * Frequency: 40/1937 = 2.1%
-* Cause: mechanical uniting strokes
+* Cause: mechanical uniting strokes [00.png]
 
 ## Repeating points
 
