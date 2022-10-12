@@ -447,7 +447,7 @@ constinit const uc::Script uc::scriptInfo[] {
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
     // Cuneiform pseudo-script (no translation!!)
     { "ZSUX", QFontDatabase::Any,
-        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::ASIA,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
     // Symbols and pictographs pseudo-script
@@ -2153,7 +2153,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1BC00, 0x1BC9F, { 0x1BC22, EcContinent::EUROPE },
             "Duployan", { EcScript::Dupl, 0}, EcScript::Dupl },
     // Shorthand format controls OK
-    { 0x1BCA0, 0x1BCAF, { 0x1BCA3, EcContinent::EUROPE },
+    { 0x1BCA0, 0x1BCAF, { 0x1BCA3, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Shorthand Format Controls",
             { EcScript::Dupl, 1},
             EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
