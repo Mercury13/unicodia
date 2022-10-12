@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1665600485
+ModificationTime: 1665601686
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -74083,7 +74083,7 @@ EndChar
 StartChar: u1E4D5
 Encoding: 527 124117 623
 Width: 707
-Flags: W
+Flags: WO
 HStem: -15 80<159.851 362.103> 0 21G<546.763 626.763> 213.616 80<152.008 407.765 499.078 546.763> 366.849 80<251.006 360.369> 635.004 80<205.822 412.735>
 VStem: 52.0479 80<91.0821 192.886> 64.7393 79.1895<535.791 580.839> 419.111 80<122.599 213.616> 461.232 80<500.856 596.043> 546.763 80<0 213.616>
 TtInstrs:
@@ -74265,6 +74265,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm TR dot" 520 680 basechar 0
 AnchorPoint: "Nagm low" 282 0 basechar 0
 LayerCount: 2
 Fore
@@ -74746,6 +74747,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm TR dot" 458 700 basechar 0
 AnchorPoint: "Nagm low" 270 25 basechar 0
 LayerCount: 2
 Fore
@@ -75625,6 +75627,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm TR dot" 504 680 basechar 0
 AnchorPoint: "Nagm low" 326 0 basechar 0
 LayerCount: 2
 Fore
@@ -75736,7 +75739,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Nagm TR dot" 465 700 basechar 0
+AnchorPoint: "Nagm TR dot" 465 710 basechar 0
 AnchorPoint: "Nagm low" 277 0 basechar 0
 LayerCount: 2
 Fore
@@ -76332,6 +76335,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm TR dot" 481 680 basechar 0
 AnchorPoint: "Nagm low" 316 0 basechar 0
 LayerCount: 2
 Fore
