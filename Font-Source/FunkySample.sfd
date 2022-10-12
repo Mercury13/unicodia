@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1665601686
+ModificationTime: 1665601821
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -74265,7 +74265,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "Nagm TR dot" 520 680 basechar 0
+AnchorPoint: "Nagm TR dot" 480 700 basechar 0
 AnchorPoint: "Nagm low" 282 0 basechar 0
 LayerCount: 2
 Fore
