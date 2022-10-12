@@ -91,35 +91,35 @@
        id="path99038"
        sodipodi:type="arc"
        sodipodi:cx="160.76437"
-       sodipodi:cy="198.40422"
+       sodipodi:cy="168.67647"
        sodipodi:rx="73.43821"
        sodipodi:ry="73.43821"
        sodipodi:start="1.5707963"
        sodipodi:end="0"
        sodipodi:open="true"
        sodipodi:arc-type="arc"
-       d="m 160.76437,271.84243 a 73.43821,73.43821 0 0 1 -67.848054,-45.33462 73.43821,73.43821 0 0 1 15.919404,-80.03224 73.43821,73.43821 0 0 1 80.03224,-15.91941 73.43821,73.43821 0 0 1 45.33462,67.84806" />
+       d="m 160.76437,242.11468 a 73.43821,73.43821 0 0 1 -67.848054,-45.33462 73.43821,73.43821 0 0 1 15.919404,-80.03225 73.43821,73.43821 0 0 1 80.03224,-15.9194 73.43821,73.43821 0 0 1 45.33462,67.84806" />
     <path
        style="fill:none;stroke:#000000;stroke-width:80;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 234.20258,198.40422 V 800"
+       d="M 234.20258,168.67647 V 814.99999"
        id="path99766" />
     <path
        style="fill:none;stroke:#000000;stroke-width:80;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 160.76437,271.84243 H 557.47094"
+       d="M 160.76437,242.11468 H 557.47094"
        id="path100494"
        sodipodi:nodetypes="cc" />
     <path
        style="fill:none;stroke:#000000;stroke-width:79.9999;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stop-color:#000000"
        id="path102674"
        sodipodi:type="arc"
-       sodipodi:cx="557.51593"
-       sodipodi:cy="523.41956"
-       sodipodi:rx="184.06152"
-       sodipodi:ry="251.57713"
+       sodipodi:cx="569.22595"
+       sodipodi:cy="508.70743"
+       sodipodi:rx="195.71005"
+       sodipodi:ry="266.54349"
        sodipodi:start="0.52359878"
        sodipodi:end="4.712389"
        sodipodi:open="true"
        sodipodi:arc-type="arc"
-       d="M 716.91788,649.20812 A 184.06152,251.57713 0 0 1 494.56318,759.82473 184.06152,251.57713 0 0 1 376.25071,479.73364 184.06152,251.57713 0 0 1 557.51593,271.84242" />
+       d="M 738.71583,641.97917 A 195.71005,266.54349 0 0 1 502.28917,759.17638 195.71005,266.54349 0 0 1 376.48918,462.42263 195.71005,266.54349 0 0 1 569.22595,242.16394" />
   </g>
 </svg>
