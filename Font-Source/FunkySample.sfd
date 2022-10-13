@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1631732133
-ModificationTime: 1665618736
+ModificationTime: 1665620097
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -45,6 +45,7 @@ OS2CodePages: 00000007.00000000
 OS2UnicodeRanges: a8200241.9200a086.01000008.00000000
 Lookup: 4 0 1 "Nagm RLIG" { "Nagm RLIG-1"  } ['rlig' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 4 0 1 "Umlaut RLIG" { "Umlaut RLIG-1"  "GothRLIG"  } ['rlig' ('DFLT' <'dflt' > 'GOTH' <'goth' > ) ]
+Lookup: 260 0 0 "Nagm tilde" { "Nagm tilde-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm below" { "Nagm below-1"  } ['blwm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
@@ -772,7 +773,7 @@ Grid
  2000 700 l 1024
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low" "Arab Mark GPOS-1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
+AnchorClass2: "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low" "Arab Mark GPOS-1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
 BeginChars: 667 666
 
 StartChar: SmallCircle
@@ -69807,7 +69808,7 @@ EndChar
 StartChar: u1F77D
 Encoding: 633 128893 599
 Width: 1080
-Flags: WO
+Flags: W
 HStem: -200.022 69.9995<178.01 340.412 765.263 900.683> 105.017 70.2977<182.612 245 748.747 900.812> 285 70<60 345 415 645 715 1020> 525 70<60 345 415 645 715 1020>
 VStem: 59.9795 70<-81.584 53.1072> 345 70<355 525 595 800> 645 70<-80.2383 27.0935 145 285 355 525 595 800> 949.966 70.0342<-80.5846 55.5013>
 TtInstrs:
@@ -72393,6 +72394,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 294 700 basechar 0
 AnchorPoint: "Nagm low" 301 0 basechar 0
 LayerCount: 2
 Fore
@@ -72434,7 +72436,6 @@ SplineSet
  45 92 45 92 33 148 c 1,64,65
  33 148 33 148 111 166 c 1,0,1
 EndSplineSet
-Validated: 19457
 Kerns2: 647 -34 "Nagm KERN-1"
 EndChar
 
@@ -72545,6 +72546,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 391 700 basechar 0
 AnchorPoint: "Nagm TR dot" 555 700 basechar 0
 AnchorPoint: "Nagm low" 372 25 basechar 0
 LayerCount: 2
@@ -72571,7 +72573,6 @@ SplineSet
  139 310 l 1,17,-1
  173 262 l 1,15,-1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u1E4D2
@@ -72640,6 +72641,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 338 700 basechar 0
 AnchorPoint: "Nagm low" 340 25 basechar 0
 LayerCount: 2
 Fore
@@ -72818,6 +72820,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 338 700 basechar 0
 AnchorPoint: "Nagm low" 344 0 basechar 0
 LayerCount: 2
 Fore
@@ -72873,7 +72876,6 @@ SplineSet
  185 715 185 715 228 715 c 0,63,64
  296 715 296 715 341 659 c 1,0,1
 EndSplineSet
-Validated: 19457
 Kerns2: 619 -71 "Nagm KERN-1" 631 -71 "Nagm KERN-1" 637 -44 "Nagm KERN-1" 642 -47 "Nagm KERN-1" 647 -38 "Nagm KERN-1" 661 -71 "Nagm KERN-1" 663 -44 "Nagm KERN-1"
 EndChar
 
@@ -72941,6 +72943,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 345 700 basechar 0
 AnchorPoint: "Nagm low" 348 0 basechar 0
 LayerCount: 2
 Fore
@@ -72973,7 +72976,6 @@ SplineSet
  293 65 293 65 342 65 c 0,36,37
  487 65 487 65 540 187 c 1,9,10
 EndSplineSet
-Validated: 19457
 Kerns2: 634 -42 "Nagm KERN-1" 637 -47 "Nagm KERN-1" 640 -90 "Nagm KERN-1" 642 -82 "Nagm KERN-1" 647 -80 "Nagm KERN-1" 660 -42 "Nagm KERN-1" 663 -47 "Nagm KERN-1"
 EndChar
 
@@ -73157,6 +73159,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 298 700 basechar 0
 AnchorPoint: "Nagm TR dot" 480 700 basechar 0
 AnchorPoint: "Nagm low" 282 0 basechar 0
 LayerCount: 2
@@ -73204,7 +73207,6 @@ SplineSet
  394 337 394 337 361.5 352 c 128,-1,65
  329 367 329 367 254 367 c 2,14,15
 EndSplineSet
-Validated: 19457
 Kerns2: 624 -56 "Nagm KERN-1" 626 -41 "Nagm KERN-1" 631 -60 "Nagm KERN-1" 634 -110 "Nagm KERN-1" 642 -119 "Nagm KERN-1" 643 -79 "Nagm KERN-1" 647 -84 "Nagm KERN-1" 660 -110 "Nagm KERN-1" 661 -60 "Nagm KERN-1"
 EndChar
 
@@ -73306,6 +73308,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 330 700 basechar 0
 AnchorPoint: "Nagm TR dot" 571 700 basechar 0
 AnchorPoint: "Nagm low" 374 25 basechar 0
 LayerCount: 2
@@ -73339,124 +73342,15 @@ SplineSet
  495 310 495 310 451 310 c 0,37,38
  379 311 379 311 331 373 c 1,0,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u1E4D7
 Encoding: 529 124119 625
 Width: 704
 Flags: W
-HStem: -15 80<304.457 410.836> 635 80<226.171 453.948>
+HStem: -15 80<304.457 410.836> 635 80<226.171 453.553>
 VStem: 49 80<443.511 558.065> 433.5 79.5<87.3242 191.796> 550 80<401 558.043>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 48
-MDAP[rnd]
-PUSHB_1
- 60
-MDRP[min,rnd,black]
-PUSHB_1
- 26
-MDAP[rnd]
-PUSHB_1
- 12
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 65
-MDAP[rnd]
-PUSHB_1
- 8
-MDRP[rp0,rnd,white]
-PUSHB_1
- 29
-MDRP[min,rnd,black]
-PUSHB_1
- 29
-SRP0
-PUSHB_2
- 63
- 1
-CALL
-PUSHB_1
- 44
-MDRP[min,rnd,black]
-PUSHB_1
- 44
-SRP0
-PUSHB_2
- 21
- 1
-CALL
-PUSHB_1
- 20
-MDRP[min,rnd,black]
-PUSHB_2
- 66
- 1
-CALL
-PUSHB_2
- 29
- 8
-SRP1
-SRP2
-PUSHB_2
- 0
- 52
-IP
-IP
-PUSHB_1
- 63
-SRP1
-NPUSHB
- 10
- 4
- 12
- 25
- 2
- 38
- 40
- 47
- 50
- 57
- 60
-DEPTH
-SLOOP
-IP
-PUSHB_1
- 44
-SRP2
-PUSHB_1
- 39
-IP
-SVTCA[y-axis]
-PUSHB_2
- 60
- 48
-SRP1
-SRP2
-PUSHB_2
- 0
- 52
-IP
-IP
-PUSHB_1
- 26
-SRP1
-PUSHB_6
- 8
- 18
- 20
- 40
- 50
- 53
-DEPTH
-SLOOP
-IP
-IUP[y]
-IUP[x]
-EndTTInstrs
+AnchorPoint: "Nagm tilde" 340 700 basechar 0
 AnchorPoint: "Nagm low" 360 0 basechar 0
 LayerCount: 2
 Fore
@@ -73468,46 +73362,44 @@ SplineSet
  221 303 221 303 199 313 c 0,5,6
  133 340 133 340 91 389 c 128,-1,7
  49 438 49 438 49 501 c 0,8,9
- 49 606 49 606 169 675 c 0,10,11
+ 49 607 49 607 169 675 c 0,10,11
  240 715 240 715 340 715 c 0,12,13
- 364 715 364 715 388 712 c 0,14,15
- 527 695 527 695 596 602 c 0,16,17
- 630 556 630 556 630 501 c 2,18,19
- 630 501 630 501 630 401 c 1,20,-1
- 550 401 l 1,21,-1
- 550 501 l 2,22,23
- 550 564 550 564 461 610 c 0,24,25
- 412 635 412 635 336.5 635 c 128,-1,26
- 261 635 261 635 201 601 c 0,27,28
- 129 560 129 560 129 495 c 0,29,30
- 129 469 129 469 155 438 c 128,-1,31
- 181 407 181 407 229 387 c 0,32,33
- 230 387 230 387 241.5 382 c 128,-1,34
- 253 377 253 377 284 363 c 128,-1,35
- 315 349 315 349 336 340 c 1,36,37
- 336 340 336 340 433 437 c 1,38,-1
- 490 381 l 1,39,-1
- 409 300 l 1,40,41
- 438 280 438 280 468 251 c 0,42,43
- 514 205 514 205 513 141 c 0,44,45
- 513 110 513 110 498.5 74 c 128,-1,46
- 484 38 484 38 444.5 11.5 c 128,-1,47
- 405 -15 405 -15 357 -15 c 128,-1,48
- 309 -15 309 -15 266 14.5 c 128,-1,49
- 223 44 223 44 207 98 c 1,50,51
- 207 98 207 98 118 9 c 1,52,-1
+ 510 715 510 715 594 602 c 4,14,15
+ 630 554 630 554 630 501 c 2,16,17
+ 630 501 630 501 630 401 c 1,18,-1
+ 550 401 l 1,19,-1
+ 550 501 l 2,20,21
+ 550 564 550 564 461 610 c 0,22,23
+ 412 635 412 635 336.5 635 c 128,-1,24
+ 261 635 261 635 201 601 c 0,25,26
+ 129 560 129 560 129 495 c 0,27,28
+ 129 469 129 469 155 438 c 0,29,30
+ 198 387 198 387 229 387 c 0,31,32
+ 230 387 230 387 241.5 382 c 128,-1,33
+ 253 377 253 377 284 363 c 128,-1,34
+ 315 349 315 349 336 340 c 1,35,36
+ 336 340 336 340 433 437 c 1,37,-1
+ 490 381 l 1,38,-1
+ 409 300 l 1,39,40
+ 438 280 438 280 468 251 c 0,41,42
+ 514 205 514 205 513 141 c 0,43,44
+ 513 110 513 110 498.5 74 c 128,-1,45
+ 484 38 484 38 444.5 11.5 c 128,-1,46
+ 405 -15 405 -15 357 -15 c 128,-1,47
+ 309 -15 309 -15 266 14.5 c 128,-1,48
+ 223 44 223 44 207 98 c 1,49,50
+ 207 98 207 98 118 9 c 1,51,-1
  61 65 l 1,0,-1
-351 242 m 1,53,54
- 351 242 351 242 304 195 c 2,55,56
- 282 173 282 173 281.5 137 c 128,-1,57
- 281 101 281 101 315 78 c 0,58,59
- 334 65 334 65 357.5 65 c 128,-1,60
- 381 65 381 65 400 78 c 0,61,62
- 434 101 434 101 433.5 136.5 c 128,-1,63
- 433 172 433 172 406 199 c 128,-1,64
- 379 226 379 226 351 242 c 1,53,54
+351 242 m 1,52,53
+ 351 242 351 242 304 195 c 2,54,55
+ 282 173 282 173 281.5 137 c 128,-1,56
+ 281 101 281 101 315 78 c 0,57,58
+ 334 65 334 65 357.5 65 c 128,-1,59
+ 381 65 381 65 400 78 c 0,60,61
+ 434 101 434 101 433.5 136.5 c 128,-1,62
+ 433 172 433 172 406 199 c 128,-1,63
+ 379 226 379 226 351 242 c 1,52,53
 EndSplineSet
-Validated: 19489
 Kerns2: 619 -80 "Nagm KERN-1" 627 -69 "Nagm KERN-1" 631 -62 "Nagm KERN-1" 632 -50 "Nagm KERN-1" 636 -92 "Nagm KERN-1" 637 -88 "Nagm KERN-1" 640 -144 "Nagm KERN-1" 642 -57 "Nagm KERN-1" 645 -64 "Nagm KERN-1" 647 -60 "Nagm KERN-1" 661 -62 "Nagm KERN-1" 662 -92 "Nagm KERN-1" 663 -88 "Nagm KERN-1"
 EndChar
 
@@ -73622,6 +73514,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 270 700 basechar 0
 AnchorPoint: "Nagm TR dot" 458 700 basechar 0
 AnchorPoint: "Nagm low" 270 25 basechar 0
 LayerCount: 2
@@ -73660,7 +73553,6 @@ SplineSet
  167 589 167 589 146 548 c 128,-1,24
  125 507 125 507 125 457 c 128,-1,25
 EndSplineSet
-Validated: 19489
 Kerns2: 618 -31 "Nagm KERN-1" 624 -63 "Nagm KERN-1" 625 -54 "Nagm KERN-1" 626 -38 "Nagm KERN-1" 631 -55 "Nagm KERN-1" 633 -68 "Nagm KERN-1" 634 -65 "Nagm KERN-1" 642 -111 "Nagm KERN-1" 643 -64 "Nagm KERN-1" 644 -33 "Nagm KERN-1" 647 -70 "Nagm KERN-1" 660 -65 "Nagm KERN-1" 661 -55 "Nagm KERN-1" 665 -68 "Nagm KERN-1"
 EndChar
 
@@ -73770,6 +73662,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 397 700 basechar 0
 AnchorPoint: "Nagm low" 395 0 basechar 0
 LayerCount: 2
 Fore
@@ -73810,7 +73703,6 @@ SplineSet
  322 433 322 433 403 414 c 0,56,57
  489 394 489 394 598 391 c 1,43,44
 EndSplineSet
-Validated: 19457
 Kerns2: 633 -59 "Nagm KERN-1" 634 -49 "Nagm KERN-1" 642 -83 "Nagm KERN-1" 647 -80 "Nagm KERN-1" 660 -49 "Nagm KERN-1" 665 -59 "Nagm KERN-1"
 EndChar
 
@@ -74001,6 +73893,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 332 700 basechar 0
 AnchorPoint: "Nagm TR dot" 560 699 basechar 0
 AnchorPoint: "Nagm low" 306 0 basechar 0
 LayerCount: 2
@@ -74054,7 +73947,6 @@ SplineSet
  536 111 536 111 536 117 c 0,70,71
  536 141 536 141 519 159 c 1,64,65
 EndSplineSet
-Validated: 19489
 EndChar
 
 StartChar: u1E4DB
@@ -74197,6 +74089,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 338 700 basechar 0
 AnchorPoint: "Nagm TR dot" 542 700 basechar 0
 AnchorPoint: "Nagm low" 304 25 basechar 0
 LayerCount: 2
@@ -74240,7 +74133,6 @@ SplineSet
  141 131 141 131 125.5 159 c 128,-1,43
  110 187 110 187 110 230 c 0,0,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u1E4DC
@@ -74342,6 +74234,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 338 700 basechar 0
 AnchorPoint: "Nagm low" 345 0 basechar 0
 LayerCount: 2
 Fore
@@ -74375,7 +74268,6 @@ SplineSet
  266 65 266 65 345 65 c 0,38,39
  442 65 442 65 492 151 c 1,12,13
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: Nagm.Theta
@@ -74506,6 +74398,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 328 700 basechar 0
 AnchorPoint: "Nagm TR dot" 504 680 basechar 0
 AnchorPoint: "Nagm low" 326 0 basechar 0
 LayerCount: 2
@@ -74547,7 +74440,6 @@ SplineSet
  216 459 216 459 212 390 c 1,52,53
  212 390 212 390 441 390 c 1,41,42
 EndSplineSet
-Validated: 19457
 Kerns2: 618 -81 "Nagm KERN-1" 623 -65 "Nagm KERN-1" 627 -92 "Nagm KERN-1" 628 -59 "Nagm KERN-1" 633 -110 "Nagm KERN-1" 634 -70 "Nagm KERN-1" 636 -53 "Nagm KERN-1" 640 -48 "Nagm KERN-1" 642 -108 "Nagm KERN-1" 644 -91 "Nagm KERN-1" 647 -80 "Nagm KERN-1" 660 -70 "Nagm KERN-1" 662 -53 "Nagm KERN-1" 664 -65 "Nagm KERN-1" 665 -110 "Nagm KERN-1"
 EndChar
 
@@ -74619,6 +74511,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 271 700 basechar 0
 AnchorPoint: "Nagm TR dot" 465 710 basechar 0
 AnchorPoint: "Nagm low" 277 0 basechar 0
 LayerCount: 2
@@ -74650,7 +74543,6 @@ SplineSet
  187 -15 187 -15 130 47.5 c 128,-1,36
  73 110 73 110 73 191 c 2,13,14
 EndSplineSet
-Validated: 19457
 Kerns2: 647 45 "Nagm KERN-1"
 EndChar
 
@@ -74707,6 +74599,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 266 700 basechar 0
 AnchorPoint: "Nagm low" 266 0 basechar 0
 LayerCount: 2
 Fore
@@ -74733,7 +74626,6 @@ SplineSet
  201 715 201 715 145 685.5 c 128,-1,27
  89 656 89 656 47 605 c 1,0,-1
 EndSplineSet
-Validated: 19465
 Kerns2: 633 -55 "Nagm KERN-1" 634 -70 "Nagm KERN-1" 642 -86 "Nagm KERN-1" 647 -90 "Nagm KERN-1" 660 -70 "Nagm KERN-1" 665 -55 "Nagm KERN-1"
 EndChar
 
@@ -74883,6 +74775,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 380 700 basechar 0
 AnchorPoint: "Nagm TR dot" 550 597 basechar 0
 AnchorPoint: "Nagm low" 402 0 basechar 0
 LayerCount: 2
@@ -74926,7 +74819,6 @@ SplineSet
  144 598 144 598 166 598 c 2,53,54
  166 598 166 598 199 598 c 1,43,-1
 EndSplineSet
-Validated: 19489
 Kerns2: 619 -87 "Nagm KERN-1" 622 -40 "Nagm KERN-1" 624 -118 "Nagm KERN-1" 626 -81 "Nagm KERN-1" 629 -53 "Nagm KERN-1" 631 -66 "Nagm KERN-1" 634 -107 "Nagm KERN-1" 637 -50 "Nagm KERN-1" 640 -39 "Nagm KERN-1" 642 -146 "Nagm KERN-1" 643 -119 "Nagm KERN-1" 647 -102 "Nagm KERN-1" 660 -107 "Nagm KERN-1" 661 -66 "Nagm KERN-1" 663 -50 "Nagm KERN-1"
 EndChar
 
@@ -75097,6 +74989,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 289 700 basechar 0
 AnchorPoint: "Nagm low" 281 0 basechar 0
 LayerCount: 2
 Fore
@@ -75144,7 +75037,6 @@ SplineSet
  226 547 226 547 244 528 c 2,55,56
  244 528 244 528 288 484 c 1,47,-1
 EndSplineSet
-Validated: 19457
 Kerns2: 637 -41 "Nagm KERN-1" 640 -43 "Nagm KERN-1" 642 -65 "Nagm KERN-1" 647 -68 "Nagm KERN-1" 663 -41 "Nagm KERN-1"
 EndChar
 
@@ -75192,6 +75084,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 318 700 basechar 0
 AnchorPoint: "Nagm TR dot" 481 680 basechar 0
 AnchorPoint: "Nagm low" 316 0 basechar 0
 LayerCount: 2
@@ -75219,7 +75112,6 @@ SplineSet
  440 88 440 88 488 82 c 1,23,-1
  406 317 l 1,19,20
 EndSplineSet
-Validated: 19457
 Kerns2: 619 -58 "Nagm KERN-1" 631 -58 "Nagm KERN-1" 637 -44 "Nagm KERN-1" 640 -43 "Nagm KERN-1" 642 -85 "Nagm KERN-1" 643 -49 "Nagm KERN-1" 661 -58 "Nagm KERN-1" 663 -44 "Nagm KERN-1"
 EndChar
 
@@ -75344,6 +75236,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 340 700 basechar 0
 AnchorPoint: "Nagm low" 339 0 basechar 0
 LayerCount: 2
 Fore
@@ -75397,7 +75290,6 @@ SplineSet
  239 546 239 546 260 516.5 c 128,-1,69
  281 487 281 487 339 439 c 1,60,61
 EndSplineSet
-Validated: 19489
 Kerns2: 618 -37 "Nagm KERN-1" 624 -35 "Nagm KERN-1" 625 -44 "Nagm KERN-1" 627 -42 "Nagm KERN-1" 629 -33 "Nagm KERN-1" 633 -69 "Nagm KERN-1" 634 -81 "Nagm KERN-1" 636 -36 "Nagm KERN-1" 642 -116 "Nagm KERN-1" 643 -30 "Nagm KERN-1" 644 -50 "Nagm KERN-1" 647 -137 "Nagm KERN-1" 660 -81 "Nagm KERN-1" 662 -36 "Nagm KERN-1" 665 -69 "Nagm KERN-1"
 EndChar
 
@@ -75405,155 +75297,46 @@ StartChar: u1E4E4
 Encoding: 542 124132 638
 Width: 629
 Flags: W
-HStem: -15 80<200.163 418.04> 331 80<243.848 363> 635 80<207.376 403.969>
-VStem: 55 80<124.663 260.301> 73 80<478.555 588.833> 489 78<122.849 149.615>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 6
-MDAP[rnd]
-PUSHB_1
- 63
-MDRP[min,rnd,black]
-PUSHB_1
- 51
-MDAP[rnd]
-PUSHB_1
- 49
-MDRP[min,rnd,black]
-PUSHB_1
- 38
-MDAP[rnd]
-PUSHB_1
- 28
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 66
-MDAP[rnd]
-PUSHB_1
- 12
-MDRP[rp0,rnd,white]
-PUSHB_1
- 57
-MDRP[min,rnd,black]
-PUSHB_1
- 22
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 44
-MDRP[min,rnd,black]
-PUSHB_1
- 57
-SRP0
-PUSHB_2
- 0
- 1
-CALL
-PUSHB_1
- 2
-MDRP[min,rnd,black]
-PUSHB_2
- 67
- 1
-CALL
-PUSHB_2
- 0
- 44
-SRP1
-SRP2
-PUSHB_8
- 6
- 16
- 18
- 28
- 34
- 49
- 51
- 63
-DEPTH
-SLOOP
-IP
-PUSHB_1
- 2
-SRP1
-PUSHB_1
- 32
-IP
-SVTCA[y-axis]
-PUSHB_2
- 51
- 63
-SRP1
-SRP2
-PUSHB_2
- 2
- 0
-IP
-IP
-PUSHB_1
- 49
-SRP1
-PUSHB_2
- 18
- 16
-IP
-IP
-PUSHB_1
- 38
-SRP2
-PUSHB_2
- 22
- 34
-IP
-IP
-IUP[y]
-IUP[x]
-EndTTInstrs
+HStem: -15 80<200.033 418.859> 331.21 80<242.866 363.345> 635.004 80<207.31 404.192>
+VStem: 54.6543 80<124.738 260.199> 73.0723 80<478.619 588.338> 470.376 79.1895<529.064 574.51> 488.575 78.0752<122.626 149.68>
+AnchorPoint: "Nagm tilde" 309 700 basechar 0
 AnchorPoint: "Nagm low" 301 0 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-489 166 m 1,0,1
- 567 148 567 148 567 148 c 1,2,3
- 554 91 554 91 512 53.5 c 128,-1,4
- 470 16 470 16 416.5 0.5 c 128,-1,5
- 363 -15 363 -15 300 -15 c 0,6,7
- 210 -15 210 -15 146 26 c 0,8,9
- 98 57 98 57 74 106 c 0,10,11
- 54 147 54 147 55 197 c 0,12,13
- 55 244 55 244 77 284 c 0,14,15
- 108 341 108 341 178 374 c 0,16,17
- 179 374 179 374 179 375 c 1,18,19
- 141 396 141 396 115 425 c 0,20,21
- 73 473 73 473 73 532 c 0,22,23
- 73 595 73 595 114 641 c 0,24,25
- 144 675 144 675 193 694 c 0,26,27
- 245 715 245 715 308 715 c 0,28,29
- 395 715 395 715 456 676 c 0,30,31
- 536 625 536 625 550 530 c 0,32,33
- 471 519 471 519 470 519 c 1,34,35
- 462 578 462 578 413 608 c 0,36,37
- 371 635 371 635 308 635 c 0,38,39
- 260 635 260 635 222 620 c 0,40,41
- 192 608 192 608 174 588 c 0,42,43
- 153 564 153 564 153 532 c 0,44,45
- 153 504 153 504 175 478 c 0,46,47
- 200 449 200 449 250 430 c 128,-1,48
- 300 411 300 411 363 411 c 1,49,50
- 363 331 363 331 363 331 c 1,51,52
- 274 331 274 331 212 302 c 0,53,54
- 165 280 165 280 147 246 c 0,55,56
- 135 224 135 224 135 197 c 0,57,58
- 135 165 135 165 147 141 c 0,59,60
- 161 112 161 112 189 93 c 0,61,62
- 233 65 233 65 300 65 c 0,63,64
- 380 65 380 65 429 92 c 128,-1,65
- 478 119 478 119 489 166 c 1,0,1
+488.575195312 165.618164062 m 1,0,1
+ 566.650390625 148.110351562 566.650390625 148.110351562 566.650390625 148.110351562 c 1,2,3
+ 553.967773438 91.5517578125 553.967773438 91.5517578125 512.029296875 53.6943359375 c 128,-1,4
+ 470.090820312 15.837890625 470.090820312 15.837890625 416.697265625 0.4189453125 c 128,-1,5
+ 363.3046875 -15 363.3046875 -15 299.7109375 -15 c 0,6,7
+ 209.986328125 -15 209.986328125 -15 146.177734375 26.0185546875 c 0,8,9
+ 97.8916015625 57.060546875 97.8916015625 57.060546875 74.326171875 106.412109375 c 0,10,11
+ 54.654296875 147.607421875 54.654296875 147.607421875 54.654296875 197.481445312 c 0,12,13
+ 54.654296875 244.586914062 54.654296875 244.586914062 76.6279296875 284.331054688 c 0,14,15
+ 107.913085938 340.922851562 107.913085938 340.922851562 177.750976562 374.068359375 c 0,16,17
+ 178.251953125 374.305664062 178.251953125 374.305664062 178.75390625 374.541992188 c 1,18,19
+ 141 395.629882812 141 395.629882812 115.243164062 425.073242188 c 0,20,21
+ 73.072265625 473.280273438 73.072265625 473.280273438 73.072265625 531.528320312 c 0,22,23
+ 73.072265625 594.081054688 73.072265625 594.081054688 114.31640625 640.70703125 c 0,24,25
+ 144.638671875 674.987304688 144.638671875 674.987304688 192.510742188 694.225585938 c 0,26,27
+ 244.21875 715.00390625 244.21875 715.00390625 308.119140625 715.00390625 c 0,28,29
+ 394.676757812 715.00390625 394.676757812 715.00390625 456.35546875 675.732421875 c 0,30,31
+ 535.9609375 625.047851562 535.9609375 625.047851562 549.565429688 530.07421875 c 0,32,33
+ 470.375976562 518.650390625 470.375976562 518.650390625 470.375976562 518.650390625 c 1,34,35
+ 461.97265625 577.321289062 461.97265625 577.321289062 413.473632812 608.200195312 c 0,36,37
+ 371.375 635.00390625 371.375 635.00390625 308.119140625 635.00390625 c 0,38,39
+ 236.669786072 635.00390625 236.669786072 635.00390625 193 604.357090718 c 0,40,41
+ 153.072265625 576.336392197 153.072265625 576.336392197 153.072265625 531.528320312 c 0,42,43
+ 153.072265625 488.491901645 153.072265625 488.491901645 201 455.230790121 c 0,44,45
+ 264.43199344 411.209960938 264.43199344 411.209960938 363.344726562 411.209960938 c 1,46,47
+ 363.344726562 331.209960938 363.344726562 331.209960938 363.344726562 331.209960938 c 1,48,49
+ 231.571462286 331.209960938 231.571462286 331.209960938 169 273.681167773 c 0,50,51
+ 134.654296875 242.103404061 134.654296875 242.103404061 134.654296875 197.481445312 c 0,52,53
+ 134.654296875 145.070700291 134.654296875 145.070700291 165.566534009 113 c 0,54,55
+ 211 65 211 65 300 65 c 4,56,57
+ 380 65 380 65 428.834960938 91.623046875 c 0,58,59
+ 477.952148438 118.247070312 477.952148438 118.247070312 488.575195312 165.618164062 c 1,0,1
 EndSplineSet
-Validated: 19489
 Kerns2: 619 -53 "Nagm KERN-1" 631 -70 "Nagm KERN-1" 637 -54 "Nagm KERN-1" 640 -45 "Nagm KERN-1" 647 -46 "Nagm KERN-1" 661 -70 "Nagm KERN-1" 663 -54 "Nagm KERN-1"
 EndChar
 
@@ -75672,6 +75455,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 377 700 basechar 0
 AnchorPoint: "Nagm low" 372 0 basechar 0
 LayerCount: 2
 Fore
@@ -75706,7 +75490,6 @@ SplineSet
  160 700 l 1,35,-1
  160 146 l 2,0,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: Nagm.Wloop
@@ -75843,6 +75626,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 431 700 basechar 0
 AnchorPoint: "Nagm low" 415 -1 basechar 0
 LayerCount: 2
 Fore
@@ -76030,6 +75814,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 415 700 basechar 0
 AnchorPoint: "Nagm low" 391 0 basechar 0
 LayerCount: 2
 Fore
@@ -76064,7 +75849,6 @@ SplineSet
  496 635 496 635 427 635 c 0,43,44
  330 635 330 635 265 579 c 1,12,13
 EndSplineSet
-Validated: 19489
 Kerns2: 642 -66 "Nagm KERN-1" 647 -70 "Nagm KERN-1"
 EndChar
 
@@ -76194,6 +75978,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 348 700 basechar 0
 AnchorPoint: "Nagm low" 343 0 basechar 0
 LayerCount: 2
 Fore
@@ -76225,7 +76010,6 @@ SplineSet
  213 643 213 643 219 621 c 2,38,39
  219 622 219 622 344 155 c 1,0,-1
 EndSplineSet
-Validated: 19489
 Kerns2: 618 -36 "Nagm KERN-1" 619 -89 "Nagm KERN-1" 620 -31 "Nagm KERN-1" 622 -75 "Nagm KERN-1" 623 -43 "Nagm KERN-1" 625 -39 "Nagm KERN-1" 627 -131 "Nagm KERN-1" 631 -105 "Nagm KERN-1" 635 -89 "Nagm KERN-1" 636 -128 "Nagm KERN-1" 637 -111 "Nagm KERN-1" 638 -39 "Nagm KERN-1" 640 -149 "Nagm KERN-1" 644 -84 "Nagm KERN-1" 645 -94 "Nagm KERN-1" 661 -105 "Nagm KERN-1" 662 -128 "Nagm KERN-1" 663 -111 "Nagm KERN-1" 664 -43 "Nagm KERN-1"
 EndChar
 
@@ -76334,6 +76118,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 352 700 basechar 0
 AnchorPoint: "Nagm low" 402 25 basechar 0
 LayerCount: 2
 Fore
@@ -76524,6 +76309,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 366 700 basechar 0
 AnchorPoint: "Nagm TR dot" 688 700 basechar 0
 AnchorPoint: "Nagm low" 430 0 basechar 0
 LayerCount: 2
@@ -76563,13 +76349,12 @@ SplineSet
  648 1 l 5,46,47
  548 71 548 71 423 115 c 5,9,10
 EndSplineSet
-Validated: 19489
 EndChar
 
 StartChar: u1E4EB
 Encoding: 549 124139 645
 Width: 587
-Flags: W
+Flags: WO
 HStem: -16 80<215.934 375.901> 428 80<309.947 344.811 425 518> 635 80<249.195 343.872>
 VStem: 58 80<141.727 300.882> 153 80<525.536 618.969> 360 80<523.758 612.793>
 TtInstrs:
@@ -76699,6 +76484,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" 301 700 basechar 0
 AnchorPoint: "Nagm low" 296 0 basechar 0
 LayerCount: 2
 Fore
@@ -76742,7 +76528,6 @@ SplineSet
  274 508 274 508 296 508 c 2,48,-1
  319 508 l 1,36,37
 EndSplineSet
-Validated: 19489
 Kerns2: 619 -44 "Nagm KERN-1" 631 -56 "Nagm KERN-1" 637 -53 "Nagm KERN-1" 640 -53 "Nagm KERN-1" 642 -84 "Nagm KERN-1" 647 -80 "Nagm KERN-1" 661 -56 "Nagm KERN-1" 663 -53 "Nagm KERN-1"
 EndChar
 
@@ -76785,15 +76570,15 @@ AnchorPoint: "Nagm TR dot" -145 700 mark 0
 LayerCount: 2
 Fore
 SplineSet
--205 836 m 132,-1,1
- -205 861 -205 861 -187.5 878.5 c 132,-1,2
- -170 896 -170 896 -145 896 c 132,-1,3
- -120 896 -120 896 -102.5 878.5 c 132,-1,4
- -85 861 -85 861 -85 836 c 132,-1,5
- -85 811 -85 811 -102.5 793.5 c 132,-1,6
- -120 776 -120 776 -145 776 c 132,-1,7
- -170 776 -170 776 -187.5 793.5 c 132,-1,0
- -205 811 -205 811 -205 836 c 132,-1,1
+-205 836 m 128,-1,1
+ -205 861 -205 861 -187.5 878.5 c 128,-1,2
+ -170 896 -170 896 -145 896 c 128,-1,3
+ -120 896 -120 896 -102.5 878.5 c 128,-1,4
+ -85 861 -85 861 -85 836 c 128,-1,5
+ -85 811 -85 811 -102.5 793.5 c 128,-1,6
+ -120 776 -120 776 -145 776 c 128,-1,7
+ -170 776 -170 776 -187.5 793.5 c 128,-1,0
+ -205 811 -205 811 -205 836 c 128,-1,1
 EndSplineSet
 Validated: 19457
 EndChar
@@ -76847,6 +76632,7 @@ EndChar
 StartChar: u1E4EE
 Encoding: 552 124142 648
 Width: 0
+GlyphClass: 4
 Flags: W
 HStem: -174 120<-336.951 -253.049>
 VStem: -355 120<-155.951 -72.0487>
@@ -76861,117 +76647,87 @@ StartChar: u1E4EF
 Encoding: 553 124143 649
 Width: 0
 Flags: W
-HStem: 725 65<-264.846 -173.438> 788 65<-419.049 -327.194>
-VStem: -474 45<735 770.984> -163 45<807.016 843>
+HStem: 802 70<-276.596 -180.159> 859 70<-412.169 -315.142>
+VStem: -480 51<801 844.043> -163 50<886.957 930>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
- 6
+ 17
 MDAP[rnd]
 PUSHB_1
- 13
+ 3
 MDRP[min,rnd,black]
-PUSHB_3
- 6
- 13
- 10
-CALL
-PUSHB_4
- 64
- 6
+PUSHB_1
  9
- 9
-CALL
+SHP[rp2]
 PUSHB_4
+ 7
+ 3
  17
- 13
- 6
  8
 CALL
 PUSHB_1
- 2
+ 13
 MDRP[min,rnd,black]
-PUSHB_3
- 17
- 2
- 10
-CALL
-PUSHB_4
- 64
- 17
- 19
- 9
-CALL
+PUSHB_1
+ 0
+SHP[rp2]
 SVTCA[x-axis]
 PUSHB_1
- 22
+ 20
 MDAP[rnd]
 PUSHB_1
- 9
+ 0
 MDRP[rp0,rnd,white]
 PUSHB_1
- 8
+ 19
 MDRP[min,rnd,black]
 PUSHB_1
- 8
+ 19
 SRP0
 PUSHB_2
- 19
+ 9
  1
 CALL
 PUSHB_1
- 20
+ 10
 MDRP[min,rnd,black]
 PUSHB_2
- 8
  9
-SRP1
-SRP2
-PUSHB_1
- 10
-IP
-PUSHB_1
  19
 SRP1
-PUSHB_2
- 1
- 12
-IP
-IP
-PUSHB_1
- 20
 SRP2
-PUSHB_1
- 21
+PUSHB_2
+ 3
+ 13
+IP
 IP
 SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Nagm tilde" -302 700 mark 0
 LayerCount: 2
 Fore
 SplineSet
--165 742 m 0,0,1
- -187 725 -187 725 -218.5 725 c 128,-1,2
- -250 725 -250 725 -272 734.5 c 128,-1,3
- -294 744 -294 744 -312.5 756.5 c 128,-1,4
- -331 769 -331 769 -347.5 778.5 c 128,-1,5
- -364 788 -364 788 -387 788 c 128,-1,6
- -410 788 -410 788 -418 771.5 c 128,-1,7
- -426 755 -426 755 -429 735 c 1,8,-1
- -474 735 l 1,9,10
- -470 803 -470 803 -426 836 c 0,11,12
- -404 853 -404 853 -372.5 853 c 128,-1,13
- -341 853 -341 853 -319.5 843.5 c 128,-1,14
- -298 834 -298 834 -279.5 821.5 c 128,-1,15
- -261 809 -261 809 -244.5 799.5 c 128,-1,16
- -228 790 -228 790 -205.5 790 c 128,-1,17
- -183 790 -183 790 -174.5 806.5 c 128,-1,18
- -166 823 -166 823 -163 843 c 1,19,-1
- -118 843 l 1,20,21
- -123 775 -123 775 -165 742 c 0,0,1
+-480 801 m 5,0,1
+ -474 860 -474 860 -445.5 894.5 c 132,-1,2
+ -417 929 -417 929 -370 929 c 4,3,4
+ -340 929 -340 929 -313.5 914.5 c 132,-1,5
+ -287 900 -287 900 -263 886 c 132,-1,6
+ -239 872 -239 872 -217 872 c 132,-1,7
+ -195 872 -195 872 -182.5 886.5 c 132,-1,8
+ -170 901 -170 901 -163 930 c 5,9,-1
+ -113 930 l 5,10,11
+ -119 872 -119 872 -147 837 c 132,-1,12
+ -175 802 -175 802 -222 802 c 4,13,14
+ -250 802 -250 802 -276.5 816 c 132,-1,15
+ -303 830 -303 830 -327.5 844.5 c 132,-1,16
+ -352 859 -352 859 -375 859 c 132,-1,17
+ -398 859 -398 859 -410 844.5 c 132,-1,18
+ -422 830 -422 830 -429 801 c 5,19,-1
+ -480 801 l 5,0,1
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: u1E4F0
@@ -77700,7 +77456,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 N 1 0 0 1 586 -30 2
 Refer: 634 124128 N 1 0 0 1 0 0 2
-Validated: 98305
 Ligature2: "Nagm RLIG-1" Nagm.curvN Nagm.Prime
 LCarets2: 1 0
 EndChar
@@ -77715,7 +77470,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 N 1 0 0 1 536 0 2
 Refer: 631 124125 S 1 0 0 1 0 0 2
-Validated: 98305
 Ligature2: "Nagm RLIG-1" Nagm.Theta Nagm.Prime
 EndChar
 
@@ -77729,7 +77483,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 S 1 0 0 1 496 -1.13687e-13 2
 Refer: 636 124130 N 1 0 0 1 0 0 2
-Validated: 98305
 LCarets2: 1 0
 Ligature2: "Nagm RLIG-1" Nagm.Acurl Nagm.Prime
 EndChar
@@ -77744,7 +77497,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 N 1 0 0 1 566 0 2
 Refer: 637 124131 N 1 0 0 1 0 0 2
-Validated: 98305
 Ligature2: "Nagm RLIG-1" Nagm.8belt Nagm.Prime
 EndChar
 
@@ -77758,7 +77510,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 S 1 0 0 1 578 0 2
 Refer: 623 124117 N 1 0 0 1 0 0 2
-Validated: 98305
 LCarets2: 1 0
 Ligature2: "Nagm RLIG-1" Nagm.3curl Nagm.Prime
 EndChar
@@ -77771,7 +77522,6 @@ LayerCount: 2
 Fore
 Refer: 647 124141 S 1 0 0 1 522 0 2
 Refer: 633 124127 N 1 0 0 1 0 0 2
-Validated: 98313
 Ligature2: "Nagm RLIG-1" Nagm.Crev Nagm.Prime
 EndChar
 EndChars
