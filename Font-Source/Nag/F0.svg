@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="800"
+   width="650"
    height="1000"
-   viewBox="0 0 800 1000.0001"
+   viewBox="0 0 650 1000.0001"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
@@ -26,8 +26,8 @@
      showgrid="false"
      showguides="true"
      inkscape:zoom="0.5946522"
-     inkscape:cx="499.45161"
-     inkscape:cy="536.44803"
+     inkscape:cx="169.00635"
+     inkscape:cy="443.95699"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -80,10 +80,47 @@
        id="guide119613"
        inkscape:locked="false" />
     <sodipodi:guide
-       position="311.10622,572.85962"
-       orientation="1,0"
+       position="325.00002,572.85962"
+       orientation="-1,0"
        id="guide119615"
-       inkscape:locked="false" />
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="85.000004,550.00006"
+       orientation="-1,0"
+       id="guide200438"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="565.00003,653.57908"
+       orientation="-1,0"
+       id="guide201166"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="65.000003,653.57908"
+       orientation="-1,0"
+       id="guide377"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="565.00003,808.29138"
+       orientation="-1,0"
+       id="guide379"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="585.00003,846.96946"
+       orientation="-1,0"
+       id="guide381"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -94,9 +131,9 @@
     <ellipse
        style="fill:none;stroke:#000000;stroke-width:80;stroke-linecap:round;stroke-linejoin:bevel;stroke-dasharray:none;stop-color:#000000"
        id="path192330"
-       cx="311.1062"
+       cx="325"
        cy="450"
-       rx="221.13766"
+       rx="219.99998"
        ry="325" />
   </g>
 </svg>
