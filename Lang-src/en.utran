@@ -4935,8 +4935,8 @@
      <transl>Old Irish, Pictish</transl>
     </text>
     <text id="Text">
-     <orig>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X{{_}}века. Заодно в ходу была [[ps:Latn|латиница]], потому есть мнение, что это тайнопись. Письменность приспособлена под зарубки на палках и досках. Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.</orig>
-     <transl>Ogham alphabet was used by ancient Celts and Picts of Ireland and Britain in 4–10th centuries. In parallel [[ps:Latn|Latin]] was in use, so there’s an opinion that it’s steganography (concealed writing). The script is designed for notches on planks and sticks. Inscriptions start with {{sm|᚛}} and end with {{sm|᚜}}.</transl>
+     <orig>Огамической письменностью пользовались древние кельты и пикты, жившие в Ирландии и Британии, с IV до X{{_}}века. Заодно в ходу была [[ps:Latn|латиница]], потому есть мнение, что это тайнопись. Письменность приспособлена под зарубки на палках и досках. Надпись начинается с {{sm|᚛}} и заканчивается {{sm|᚜}}.<br /><br />Огамический пробел{{-}}единственный пробел в Юникоде, рисующий что-то. В остальном это обычный пробел, и по нему можно переносить.</orig>
+     <transl>Ogham alphabet was used by ancient Celts and Picts of Ireland and Britain in 4–10th centuries. In parallel [[ps:Latn|Latin]] was in use, so there’s an opinion that it’s steganography (concealed writing). The script is designed for notches on planks and sticks. Inscriptions start with {{sm|᚛}} and end with {{sm|᚜}}.<br /><br />Ogham space is the only space in Unicode that draws something. Otherwise it’s a normal space, and you can wrap along it.</transl>
     </text>
    </group>
    <group id="Olck">
