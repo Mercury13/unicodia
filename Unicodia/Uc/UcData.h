@@ -968,6 +968,25 @@ namespace uc {
     inline bool operator < (const Cp& x, char32_t y)
         { return x.subj.ch32() < y; }
 
+    template <class Body>
+    class TextSinkT final : public TextSink {
+    public:
+        TextSinkT(const Body& aBody) noexcept : body(aBody) {}
+        Action onText(TextRole role, std::u8string_view text) const override {
+            using Result = std::invoke_result_t<Body, TextRole, std::u8string_view>;
+            if constexpr (std::is_same_v<void, Result>) {
+                body(role, text);
+                return Action::CONTINUE;
+            } else {
+                return body(role, text);
+            }
+        }
+    private:
+        const Body& body;
+    };
+
+    inline Action stopIf(bool x) noexcept { return static_cast<Action>(x); }
+
 }   // namespace uc
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
@@ -979,7 +998,6 @@ consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
 inline const uc::NumType& uc::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
 
 // …Cp
-inline const char8_t* uc::Cp::Name::tech() const { return allStrings + iTech.val(); }
 inline const uc::Numeric& uc::Cp::numeric() const { return allNumerics[iNumeric]; }
 inline const uc::Version& uc::Cp::version() const { return versionInfo[static_cast<int>(ecVersion)]; }
 inline const uc::Category& uc::Cp::category() const { return categoryInfo[static_cast<int>(ecCategory)]; }
@@ -990,6 +1008,13 @@ inline const uc::Script& uc::Cp::scriptEx() const
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+
+// Name
+template <class Body>
+inline std::u8string_view uc::Cp::Name::traverseAllT(const Body& body) const {
+    TextSinkT sink(body);
+    return traverseAll(sink);
+}
 
 // SynthIcon
 inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }

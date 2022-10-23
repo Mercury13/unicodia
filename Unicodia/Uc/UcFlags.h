@@ -36,9 +36,11 @@ namespace uc {
 
     /// @todo [textRoles] finish?
     enum class TextRole : unsigned char {
-        NAME = 0,       // Character name, first is the main
-        ABBREV = 1,     // Abbreviation
-        HTML = 2        // HTML mnemonic, NO ampersand & and semicolon ;
+        CMD_END = 0,    // Command: text end
+        MAIN_NAME = 1,  // Character’s name, should exist
+        ALT_NAME = 2,   // Alternate names, always unique (non-template)
+        ABBREV = 3,     // Abbreviation, always unique (non-template)
+        HTML = 4        // HTML mnemonic, NO ampersand & and semicolon ;
     };
 
 }   // namespace uc

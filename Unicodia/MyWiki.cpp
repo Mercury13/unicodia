@@ -1210,18 +1210,12 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         appendNonBullet(text, "Prop.Bullet.Html");
         snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
         appendCopyable(text, buf);
-        if (cp.name.alts != 0) {
-            int nNames = cp.name.alts;
-            std::u8string_view currName = cp.name.tech();
-            for (; nNames != 0; --nNames) {
-                currName = std::to_address(currName.end()) + 1;
-                if (currName.size() >= 3 && currName.starts_with('&')
-                       && currName.ends_with(';')) {
-                    text += ' ';
-                    appendCopyable(text, str::toQ(currName));
-                }
+        cp.name.traverseAllT([&text](uc::TextRole role, std::u8string_view s) {
+            if (role == uc::TextRole::HTML) {
+                text += ' ';
+                appendCopyable(text, str::toQ(s));
             }
-        }
+        });
 
         appendUtf(text, Want32::NO, sp, cp.subj);
 

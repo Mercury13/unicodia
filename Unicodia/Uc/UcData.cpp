@@ -78,7 +78,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Math Cambria (fall to next)
-    { FNAME_NOTOMATH },                                                         // Math
+    { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                       // Math
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
@@ -1446,7 +1446,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZARR, 0 }, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK
     { 0x2200, 0x22FF, { L'√', EcContinent::NONE },
-            "Mathematical Operators", { EcScript::ZMAT, 0 } },
+            "Mathematical Operators", { EcScript::ZMAT, 0 },
+            EcScript::NONE, EcFont::MATH },
     // Misc tech OK
     { 0x2300, 0x23FF, { L'⏻', EcContinent::NONE },
             "Miscellaneous Technical",
@@ -3632,9 +3633,43 @@ int uc::Font::computeSize(FontPlace place, int size) const
 }
 
 
+std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
+{
+    auto p = allStrings + iTech.val();
+    while (true) {
+        auto role = static_cast<TextRole>(*(p++));
+        switch (role) {
+        // Commands
+        case TextRole::CMD_END: goto brk;
+        // Actual texts
+        case TextRole::MAIN_NAME:
+        case TextRole::ALT_NAME:
+        case TextRole::HTML:
+        case TextRole::ABBREV: {
+                auto length = static_cast<unsigned char>(*(p++));
+                std::u8string_view text {p, length};
+                auto action = sink.onText(role, text);
+                if (action == Action::STOP)
+                    return text;
+                p += length;
+            }
+        }
+    }
+brk:
+    return {};
+}
+
+
+const std::u8string_view uc::Cp::Name::tech() const
+{
+    return traverseAllT([](TextRole role, std::u8string_view)
+                          { return stopIf(role == TextRole::MAIN_NAME); } );
+}
+
+
 QString uc::Cp::viewableName() const
 {
-    QString r = name.tech();
+    QString r = str::toQ(name.tech());
     if (auto pos = r.indexOf('#'); pos >= 0) {
         char buf[30];
         snprintf(buf, std::size(buf), "%04X", static_cast<unsigned>(subj.uval()));
@@ -3644,16 +3679,12 @@ QString uc::Cp::viewableName() const
 }
 
 
-
 std::u8string_view uc::Cp::abbrev() const
 {
     if (!isAbbreviated())
         return {};
-    const char8_t* x = name.tech();
-    // +1
-    std::u8string_view sv = x;
-    x += (sv.length());  ++ x;
-    return x;
+    return name.traverseAllT([](TextRole role, std::u8string_view)
+                               { return stopIf(role == TextRole::ABBREV); } );
 }
 
 
@@ -3833,13 +3864,12 @@ uc::TofuInfo uc::Cp::tofuInfo() const
 SafeVector<std::u8string_view> uc::Cp::allRawNames() const
 {
     SafeVector<std::u8string_view> r;
-    r.reserve(name.alts + 1);
     std::u8string_view it = name.tech();
     r.emplace_back(it);
-    for (auto n = name.alts; n != 0; --n) {
-        it = std::to_address(it.end()) + 1;
-        r.emplace_back(it);
-    }
+    name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
+        if (role != TextRole::MAIN_NAME)
+            r.push_back(text);
+    });
     return r;
 }
 

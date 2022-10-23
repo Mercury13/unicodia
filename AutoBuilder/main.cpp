@@ -160,8 +160,10 @@ enum class AbbrevState { NORMAL, ALIAS, DISABLE };
 
 struct StringPayload
 {
-    char32_t subj = 0;
-    int offset = -1;
+    char32_t subj;
+    int offset;
+    uc::TextRole role;
+    bool isLast;
 };
 
 struct RememberResult
@@ -174,39 +176,64 @@ class StringLib
 {
 public:
     /// @return offset
-    RememberResult remember(const std::string& s, char32_t subj);
-    RememberResult forceRemember(const std::string& s, char32_t subj);
+    RememberResult remember(
+            char32_t subj,
+            uc::TextRole role,
+            const std::string& s);
+    RememberResult forceRemember(
+            char32_t subj,
+            uc::TextRole role,
+            const std::string& s);
+    void finishCp();
     auto& inOrder() const { return fInOrder; }
 private:
     using M = std::unordered_map<std::string, StringPayload>;
     M fData;
     std::deque<M::value_type> fRepeats;     // need ptrs → deque
-    std::vector<const M::value_type*> fInOrder;
+    std::vector<M::value_type*> fInOrder;
     size_t fLength = 0;
 };
 
-RememberResult StringLib::forceRemember(const std::string& s, char32_t subj)
+RememberResult StringLib::forceRemember(
+        char32_t subj, uc::TextRole role, const std::string& s)
 {
-    auto res = remember(s, subj);
+    auto res = remember(subj, role, s);
     if (!res.wasIns) {
-        auto& v = fRepeats.emplace_back(s, StringPayload{subj, static_cast<int>(fLength)});
+        auto& v = fRepeats.emplace_back(s,
+            StringPayload{.subj = subj,
+                          .offset = static_cast<int>(fLength),
+                          .role = role,
+                          .isLast = false });
         res.offset = fLength;
-        fLength += (s.length() + 1);
+        fLength += (s.length() + 2);
         fInOrder.push_back(&v);
     }
     return res;
 }
 
-RememberResult StringLib::remember(const std::string& s, char32_t subj)
+RememberResult StringLib::remember(
+        char32_t subj, uc::TextRole role, const std::string& s)
 {
     auto [it, wasIns] = fData.try_emplace(s, StringPayload());
     if (wasIns) {   // Was inserted
         it->second.subj = subj;
         it->second.offset = fLength;
-        fLength += (s.length() + 1);
+        it->second.role = role;
+        // role 1 byte, length 1 byte
+        fLength += (s.length() + 2);
         fInOrder.push_back(&*it);
     } else {}    // was found — do nothing
-    return { it->second.offset, wasIns };
+    return { .offset = it->second.offset, .wasIns = wasIns };
+}
+
+
+void StringLib::finishCp()
+{
+    if (!fInOrder.empty()) {
+        fInOrder.back()->second.isLast = true;
+        // +1: command CMD_END
+        ++fLength;
+    }
 }
 
 
@@ -549,58 +576,61 @@ int main()
         }
         bool hasAbbrev = !allAbbrevs.empty();
         std::string sLowerName = decapitalize(sName, cp);
-        auto [iTech, wasIns] = strings.remember(sLowerName, cp);
+        auto [iTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
         if (!allAbbrevs.empty() && !wasIns) {
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
         }
 
+        for (auto& v : allAbbrevs) {
+            strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
+        }
+
         // HTML
         auto v = htmlEntities.find(cp);
         if (v != htmlEntities.end()) {
+            if (!wasIns) {
+                nl.trigger();
+                std::cout << "WARNING: char " << std::hex << cp << " has HTML and a repeating name." << std::endl;
+            }
             for (auto &w : v->second)
-                allAbbrevs.emplace_back(w);
+                strings.forceRemember(cp, uc::TextRole::HTML, w);
         }
 
-        for (auto& v : allAbbrevs) {
-            strings.forceRemember(std::string{v}, cp);
-        }
-
-        auto nAliases = allAbbrevs.size();
-        int flags = 0;
+        Flags<uc::Cfg> flags;
         if (hasAbbrev)
-            flags |= 1;
+            flags |= uc::Cfg::M_ABBREVIATION;
         // Deprecated
         if (elChar.attribute("Dep").as_string()[0] == 'Y') {
-            flags |= 2;
+            flags |= uc::Cfg::U_DEPRECATED;
             ++nDeprecated;
         }
         // Alternate
         if (isAlternate(cp))
-            flags |= 4;
+            flags |= uc::Cfg::RENDER_BUG;
         // Virtual virama
         if (customDrawnControlChars.contains(cp)
                 || (cp >= 0xE0000 && cp <= 0xE007F))
-            flags |= 8;
+            flags |= uc::Cfg::M_CUSTOM_CONTROL;
         // No anti-aliasing
         if (isNoAa(cp))
-            flags |= 16;
+            flags |= uc::Cfg::NO_AA;
         // Default-ignorable
         if (elChar.attribute("DI").as_string()[0] == 'Y') {
-            flags |= 32;
+            flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
         // VS16
         if (emoji.vs16.contains(cp))
-            flags |= 64;
+            flags |= uc::Cfg::U_VS16_EMOJI;
         // SVG emoji
         if (noto.singleChar.contains(cp))
-            flags |= 128;
+            flags |= uc::Cfg::M_SVG_EMOJI;
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
-            flags |= 256;
+            flags |= uc::Cfg::M_SPACE;
         // Draw as Egyptian hatch
         if (charsEgyptianHatch.contains(cp))
-            flags |= 512;
+            flags |= uc::Cfg::M_EGYPTIAN_HATCH;
 
         // CJK strange
         if (std::string_view sStrange = elChar.attribute("kStrange").as_string();
@@ -612,8 +642,7 @@ int main()
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
            << "{ "                              // name
-                << std::dec << iTech << ", "      // name.tech,
-                << nAliases << " "                // name.alt
+                << std::dec << iTech            // name.tech,
            << " }, ";                           // /name
 
         // Char’s type
@@ -658,13 +687,15 @@ int main()
         os << numPlace.index << ", ";
 
         if (flags) {
-            os << "Cfgs{" << flags << "}";
+            os << "Cfgs{" << flags.numeric() << "}";
         } else {
             os << "{}";
         }
 
         os << "}," << '\n';
         ++nChars;
+
+        strings.finishCp();
     }
 
     os << "};" << '\n';
@@ -675,8 +706,16 @@ int main()
               << nSpecialRanges << " special ranges." << std::endl;
 
     os << "const char8_t uc::allStrings[] = \n";
+    char text[40];
     for (auto& v : strings.inOrder()) {
-        os << R"(u8")" << v->first << R"("   "\0"   // )" << std::hex << static_cast<int>(v->second.subj) << '\n';
+        std::string_view sv = v->first;
+        snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
+                 static_cast<unsigned>(v->second.role),
+                 static_cast<unsigned>(sv.length()));
+        os << text << v->first << "\"  ";
+        if (v->second.isLast)
+            os << R"("\0")";
+        os << "  // " << std::hex << static_cast<int>(v->second.subj) << '\n';
     }
     os << ";\n";
 

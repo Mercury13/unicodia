@@ -3,6 +3,7 @@
 // C++
 #include <cstdint>
 #include <string_view>
+#include <type_traits>
 
 // Qt
 #include <QString>
@@ -476,6 +477,15 @@ namespace uc {
         const uc::Block* block = nullptr;
     };
 
+    enum class Action { CONTINUE = 0, STOP = 1 };
+
+    class TextSink {
+    public:
+        virtual ~TextSink() = default;
+        /// @warning  Those s_v’s are NOT null-terminated!
+        virtual Action onText(TextRole role, std::u8string_view text) const = 0;
+    };
+
     enum class MatchLast { NO, YES };
 
     struct Cp   // code point
@@ -483,8 +493,13 @@ namespace uc {
         Int3 subj = 0;              // 3
         struct Name {
             Int3 iTech;                 // +3 = 6
-            uint8_t alts;               // +1 = 7
-            const char8_t* tech() const;
+
+            /// @warning  This s_v is NOT null-terminated!
+            const std::u8string_view tech() const;
+
+            /// @return  the very text we called STOP on
+            std::u8string_view traverseAll(const TextSink& sink) const;
+            template <class Body> inline std::u8string_view traverseAllT(const Body& body) const;
         } name;
         EcCategory ecCategory;          // +1 = 8
         EcVersion ecVersion;            // +1 = 9
