@@ -1049,6 +1049,31 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     appendCopyable(text, name, "bigcopy");
     str::append(text, "</h1>");
 
+    // Alt. names
+    bool isInitial = true;
+    cp.name.traverseAllT([&text,&isInitial]
+                         (uc::TextRole role, std::u8string_view s) {
+        switch (role) {
+        case uc::TextRole::ALT_NAME:
+        case uc::TextRole::ABBREV:
+            if (isInitial) {
+                isInitial = false;
+                text += "<p style='" CNAME_ALTNAME "'>";
+            } else {
+                text += "; ";
+            }
+            appendCopyable(text, str::toQ(s), "altname");
+            break;
+        case uc::TextRole::MAIN_NAME:
+        case uc::TextRole::HTML:
+        case uc::TextRole::CMD_END:
+            break;
+        }
+    });
+    if (!isInitial) {
+        text += "</b>";
+    }
+
     // Deprecated
     if (cp.isDeprecated()) {
         text += "<h3><a href='pt:deprecated' class='deprecated'>";
