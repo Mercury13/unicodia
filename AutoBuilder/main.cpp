@@ -532,6 +532,7 @@ int main()
         std::string_view defaultAbbrev {};      // empty
         std::vector<std::string_view> allAbbrevs;
         std::vector<std::string> restAliases;
+        std::vector<std::string> aliasAbbrevs;
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
@@ -550,7 +551,9 @@ int main()
         // Aliases?
         for (auto elAlias : elChar.children("name-alias")) {
             std::string_view sType = elAlias.attribute("type").as_string();
-            if (sType == "alternate"sv || sType == "control"sv || sType == "figment") {
+            if (sType == "alternate"sv) {
+                restAliases.emplace_back(elAlias.attribute("alias").as_string());
+            } else if (sType == "control"sv || sType == "figment") {
                 if (sName.empty())
                     sName = elAlias.attribute("alias").as_string();
             } else if (sType == "correction") {
@@ -567,7 +570,7 @@ int main()
                     }
                     break;
                 case AbbrevState::ALIAS:
-                    restAliases.emplace_back(elAlias.attribute("alias").as_string());
+                    aliasAbbrevs.emplace_back(elAlias.attribute("alias").as_string());
                     break;
                 }
             }
@@ -587,6 +590,18 @@ int main()
 
         for (auto& v : allAbbrevs) {
             strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
+        }
+
+        for (auto& v : aliasAbbrevs) {
+            strings.forceRemember(cp, uc::TextRole::ALT_NAME, std::string{v});
+        }
+
+        for (auto& v : restAliases) {
+            auto it = std::find(allAbbrevs.begin(), allAbbrevs.end(), v);
+            if (it == allAbbrevs.end()) {
+                sLowerName = decapitalize(v, cp);
+                strings.forceRemember(cp, uc::TextRole::ALT_NAME, sLowerName);
+            }
         }
 
         // HTML
