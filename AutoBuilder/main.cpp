@@ -230,9 +230,12 @@ RememberResult StringLib::remember(
 void StringLib::finishCp()
 {
     if (!fInOrder.empty()) {
-        fInOrder.back()->second.isLast = true;
-        // +1: command CMD_END
-        ++fLength;
+        auto bk = fInOrder.back();
+        if (bk && !bk->second.isLast) {
+            bk->second.isLast = true;
+            // +1: command CMD_END
+            ++fLength;
+        }
     }
 }
 
