@@ -11,9 +11,11 @@ What was done by authors of Unicodia:
   - Rehinted with TtfAutoHint, default settings + strong/strong/strong.
 * NP Hmong, Samaritan
   - Copied 25CC dotted circle from Devanagari
-* Modi, Syloti Nagri
+* Modi, Zanabazar Square
+  - Rehinted with TtfAutoHint, see settings-STRONG
+* Syloti Nagri
   - Rehinted with hinting VM
-* Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong, Siddham, Zanabazar Square
+* Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong, Siddham
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
   - Set Asc/desc to 1280/525
