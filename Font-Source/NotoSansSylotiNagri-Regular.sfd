@@ -3,31 +3,32 @@ FontName: NotoSansSylotiNagri-Regular
 FullName: Noto Sans Syloti Nagri Regular
 FamilyName: Noto Sans Syloti Nagri
 Weight: Book
-Copyright: Copyright 2017 Google Inc. All Rights Reserved.
-Version: 2.001
+Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/syloti-nagri)
+Version: 2.003
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020042
+sfntRevision: 0x000200c5
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 30067]
+HasVMetrics: 1
+XUID: [1021 59 1751208496 32008]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
-OS2_WeightWidthSlopeOnly: 1
-OS2_UseTypoMetrics: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
 CreationTime: 1494962206
-ModificationTime: 1631958506
+ModificationTime: 1667078414
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
 LineGap: 0
-VLineGap: 0
+VLineGap: 1000
 Panose: 2 11 5 2 4 5 4 2 2 4
 OS2TypoAscent: 1069
 OS2TypoAOffset: 0
@@ -57,29 +58,15 @@ OS2XHeight: 536
 OS2Vendor: 'GOOG'
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 80018003.00002000.00000000.00000010
-Lookup: 4 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning lookup 0" { "'mark' Mark Positioning lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
-Lookup: 262 0 0 "'mkmk' Mark to Mark lookup 1" { "'mkmk' Mark to Mark lookup 1 subtable"  } ['mkmk' ('DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable"  } ['ccmp' ('DFLT' <'dflt' > 'sylo' <'dflt' > ) ]
+Lookup: 260 0 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 0" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 0 subtable"  } ['abvm' ('DFLT' <'dflt' > 'sylo' <'dflt' > ) ]
+Lookup: 262 16 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 1" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 1 subtable"  } ['abvm' ('DFLT' <'dflt' > 'sylo' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Syloti Nagri lookup 2" { "'mark' Mark Positioning in Syloti Nagri lookup 2 subtable"  } ['mark' ('DFLT' <'dflt' > 'sylo' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Syloti Nagri lookup 3" { "'mark' Mark Positioning in Syloti Nagri lookup 3 subtable"  } ['mark' ('DFLT' <'dflt' > 'sylo' <'dflt' > ) ]
 MarkAttachClasses: 1
+MarkAttachSets: 1
+"MarkSet-0" 15 uniA80B uniA826
 DEI: 91125
-ShortTable: maxp 16
-  0
-  0
-  0
-  0
-  0
-  0
-  0
-  2
-  1
-  2
-  22
-  0
-  256
-  0
-  0
-  0
-EndShort
 TtTable: prep
 PUSHW_1
  511
@@ -747,7 +734,25 @@ ShortTable: cvt  5
   69
   65
 EndShort
-LangName: 1033 "" "" "" "2.001;GOOG;NotoSansSylotiNagri-Regular" "" "Version 2.001" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
+ShortTable: maxp 16
+  1
+  0
+  87
+  177
+  16
+  0
+  0
+  2
+  1
+  2
+  22
+  0
+  256
+  0
+  0
+  0
+EndShort
+LangName: 1033 "" "" "" "2.003;GOOG;NotoSansSylotiNagri-Regular" "" "Version 2.003" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeBmp
 Compacted: 1
@@ -756,15 +761,17 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 33 14
+WinInfo: 0 32 14
 BeginPrivate: 0
 EndPrivate
-AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mkmk' Mark to Mark lookup 1 subtable"
+AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Syloti Nagri lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in Syloti Nagri lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning in Syloti Nagri lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mark' Mark Positioning in Syloti Nagri lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mark' Mark Positioning in Syloti Nagri lookup 3 subtable"
 BeginChars: 65555 87
 
 StartChar: .notdef
 Encoding: 65536 -1 0
 Width: 600
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 51<145 454> 663 51<145 454>
 VStem: 94 51<51 663> 454 51<51 663>
@@ -829,9 +836,10 @@ EndSplineSet
 EndChar
 
 StartChar: NULL
-Encoding: 0 -1 1
-AltUni2: 000000.ffffffff.0
+Encoding: 0 0 1
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -839,6 +847,8 @@ EndChar
 StartChar: CR
 Encoding: 13 13 2
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -846,6 +856,8 @@ EndChar
 StartChar: space
 Encoding: 32 32 3
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -853,6 +865,8 @@ EndChar
 StartChar: uni00A0
 Encoding: 160 160 4
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -860,7 +874,8 @@ EndChar
 StartChar: uni0964
 Encoding: 2404 2404 5
 Width: 379
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 21G<194 275>
 VStem: 194 81<0 622>
@@ -904,7 +919,8 @@ EndChar
 StartChar: uni0965
 Encoding: 2405 2405 6
 Width: 599
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 21G<194 275 414 495>
 VStem: 194 81<0 622> 414 81<0 622>
@@ -963,7 +979,8 @@ EndChar
 StartChar: uni09E6
 Encoding: 2534 2534 7
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 91 71<208.548 372.299> 473 71<220.385 384.651>
 VStem: 72 80<221.12 402.561> 439 81<231.901 416.48>
@@ -1058,7 +1075,8 @@ EndChar
 StartChar: uni09E7
 Encoding: 2535 2535 8
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 75<220.589 369.523>
 VStem: 123 82<87.0526 151.423 486.245 583.019> 415 80<118.11 252.104>
@@ -1171,7 +1189,8 @@ EndChar
 StartChar: uni09E8
 Encoding: 2536 2536 9
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 VStem: 127 84<522.165 598.216> 419 81<276.158 385.735>
 TtInstrs:
@@ -1263,7 +1282,8 @@ EndChar
 StartChar: uni09E9
 Encoding: 2537 2537 10
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 39 75<261.965 415.576> 509 70<298.851 404.179>
 VStem: 207 85<385.632 501.943> 473 80<177.911 415.622>
@@ -1483,7 +1503,8 @@ EndChar
 StartChar: uni09EA
 Encoding: 2538 2538 11
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 71<193.094 403.292> 551 71<193.673 400.829>
 VStem: 63 80<113.995 226.287> 74 80<418.59 516.225> 438 81<423.642 518.115> 450 80<113.687 226.803>
@@ -1629,7 +1650,8 @@ EndChar
 StartChar: uni09EB
 Encoding: 2539 2539 12
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 71<214.98 453.814>
 VStem: 49 81<149.781 331.903> 316 76<167.279 284.989> 367 67<474.005 524.816>
@@ -1753,7 +1775,8 @@ EndChar
 StartChar: uni09EC
 Encoding: 2540 2540 13
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 39 75<258.927 423.799> 257 71<316.731 395.457> 517 76<175 221.071>
 VStem: 21 75<385.862 454.147> 235 77<331.305 503.133> 483 76<175.611 348.416>
@@ -1906,7 +1929,8 @@ EndChar
 StartChar: uni09ED
 Encoding: 2541 2541 14
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 77<472.929 520> 248 74<179.545 377.377> 551 71<223.848 363.277>
 VStem: 70 81<349.516 478.949> 383 76<91.3813 266 337.844 530.041>
@@ -2031,7 +2055,8 @@ EndChar
 StartChar: uni09EE
 Encoding: 2542 2542 15
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 71<183.178 310.251> 292 68<430.094 485.649> 304 71<169.817 340.796> 547 77<31 77.0712>
 VStem: 91 76<87.875 289.395 355 533.133> 368 80<131.103 276.941>
@@ -2193,7 +2218,8 @@ EndChar
 StartChar: uni09EF
 Encoding: 2543 2543 16
 Width: 592
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 68<183 207.406> 245 70<115.607 235.497>
 VStem: 27 81<148.766 235.229> 35 83<507.519 588.925> 257 76<113.214 224.086> 476 82<145.475 285.995>
@@ -2475,6 +2501,7 @@ EndChar
 StartChar: uniA800
 Encoding: 43008 43008 17
 Width: 808
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 4 77<125.949 216.647> 611 68<-17 662 743 816>
@@ -2597,6 +2624,7 @@ EndChar
 StartChar: uniA801
 Encoding: 43009 43009 18
 Width: 514
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 205 74<76.9595 136.04> 221 53<189 275.508> 467 66<242.522 351.522> 611 68<-17 122 200 526>
@@ -2782,6 +2810,7 @@ EndChar
 StartChar: uniA802
 Encoding: 43010 43010 19
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: 726 249
@@ -2828,6 +2857,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -167 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -167 725 mark 0
 LayerCount: 2
 Fore
@@ -2848,6 +2878,7 @@ EndChar
 StartChar: uniA803
 Encoding: 43011 43011 20
 Width: 726
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 74<266.349 506.545> 278 71<414.831 456.23> 295 52<527 560.834> 493 67<394.644 487.087> 611 68<-7 192 270.969 737>
@@ -3086,6 +3117,7 @@ EndChar
 StartChar: uniA804
 Encoding: 43012 43012 21
 Width: 567
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -8 70<199.867 343.472> 237 69<166 291.392> 611 68<-17 90 166 407 483 578> 868 64<154.578 253.625>
@@ -3263,6 +3295,7 @@ EndChar
 StartChar: uniA805
 Encoding: 43013 43013 22
 Width: 597
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -9 114<91.9874 177.497> 0 21G<438 514> 136 72<191.947 381.762> 459 71<193.634 389.379> 611 68<-17 438 514 610>
@@ -3475,6 +3508,7 @@ EndChar
 StartChar: uniA806
 Encoding: 43014 43014 23
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: 755 212
@@ -3512,6 +3546,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" -206 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -206 725 mark 0
 LayerCount: 2
 Fore
@@ -3529,11 +3564,11 @@ EndChar
 StartChar: uniA807
 Encoding: 43015 43015 24
 Width: 896
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<405 480 751 827> 611 68<-17 87 164 405 480 753 827 902>
 VStem: 87 77<190 611> 405 75<0 307 456 611> 751 76<0 522>
-CounterMasks: 1 38
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -3687,6 +3722,7 @@ EndChar
 StartChar: uniA808
 Encoding: 43016 43016 25
 Width: 962
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<810 886> 611 68<-17 68 144 400 507 762 886 971>
@@ -3842,6 +3878,7 @@ EndChar
 StartChar: uniA809
 Encoding: 43017 43017 26
 Width: 660
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<503 579> 128 68<155.861 263.785> 611 68<-17 182.694 252 503 579 673>
@@ -4000,6 +4037,7 @@ EndChar
 StartChar: uniA80A
 Encoding: 43018 43018 27
 Width: 613
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<450 526> 57 71<242.911 450> 272 71<257.012 449.593> 486 69<245.781 450> 611 68<-17 450 526 623>
@@ -4159,6 +4197,7 @@ EndChar
 StartChar: uniA80B
 Encoding: 43019 43019 28
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: 747 61<-196.022 -115.507> 902 61<-192.455 -114.862>
@@ -4221,6 +4260,8 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -157 725 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -154 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -352 725 basemark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -157 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -154 725 mark 0
@@ -4251,6 +4292,7 @@ EndChar
 StartChar: uniA80C
 Encoding: 43020 43020 29
 Width: 603
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<440 516> 158 75<291.588 440> 444 71<267.552 440> 611 68<-17 440 516 613>
@@ -4377,6 +4419,7 @@ EndChar
 StartChar: uniA80D
 Encoding: 43021 43021 30
 Width: 735
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -82 70<504.819 586.094> 126 62<500 547.25> 133 62<500.578 603.466> 611 68<-17 87 164 747>
@@ -4599,6 +4642,7 @@ EndChar
 StartChar: uniA80E
 Encoding: 43022 43022 31
 Width: 749
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<596 672> 81 66<191.09 349.841> 348 69<304 365.939> 611 68<-13 165 239.395 596 672 760>
@@ -4828,6 +4872,7 @@ EndChar
 StartChar: uniA80F
 Encoding: 43023 43023 32
 Width: 937
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 611 68<-17 87 164 943>
@@ -5010,6 +5055,7 @@ EndChar
 StartChar: uniA810
 Encoding: 43024 43024 33
 Width: 543
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -6 67<183.218 332.214> 602 77<200.992 341.305> 611 68<-17 137 401 557>
@@ -5216,6 +5262,7 @@ EndChar
 StartChar: uniA811
 Encoding: 43025 43025 34
 Width: 526
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 408 70<260.061 375.537> 611 68<-17 68 144 536>
@@ -5349,6 +5396,7 @@ EndChar
 StartChar: uniA812
 Encoding: 43026 43026 35
 Width: 769
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -8 76<265.591 507.233> 611 68<-7 346 423 776>
@@ -5524,6 +5572,7 @@ EndChar
 StartChar: uniA813
 Encoding: 43027 43027 36
 Width: 551
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<73 135> 397 68<297.441 398.367> 611 68<-17 73 149 567>
@@ -5694,6 +5743,7 @@ EndChar
 StartChar: uniA814
 Encoding: 43028 43028 37
 Width: 572
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<434 509> 300 70<156.437 360.657> 611 68<-17 434 509 577>
@@ -5859,6 +5909,7 @@ EndChar
 StartChar: uniA815
 Encoding: 43029 43029 38
 Width: 925
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<772 847> 142 79<106.181 185.51> 611 68<-17 726 847 932>
@@ -6017,6 +6068,7 @@ EndChar
 StartChar: uniA816
 Encoding: 43030 43030 39
 Width: 674
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -164 75<508.723 619.777> 611 68<-17 87 164 687>
@@ -6158,6 +6210,7 @@ EndChar
 StartChar: uniA817
 Encoding: 43031 43031 40
 Width: 806
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<648 724> 393 69<156.421 289.5> 611 68<-17 38 112 649 724 809>
@@ -6346,6 +6399,7 @@ EndChar
 StartChar: uniA818
 Encoding: 43032 43032 41
 Width: 630
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<466 541> 83 70<149.356 252.017> 593 86<365.588 465.875> 611 68<-17 306 541 637>
@@ -6517,6 +6571,7 @@ EndChar
 StartChar: uniA819
 Encoding: 43033 43033 42
 Width: 750
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<608 684> 611 68<-17 68 144 610 684 769>
@@ -6642,6 +6697,7 @@ EndChar
 StartChar: uniA81A
 Encoding: 43034 43034 43
 Width: 908
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<608 684> 64 71<802.531 879.085> 217 53<716 789.902> 386 61<684.938 809.686> 611 68<-17 68 144 610 684 920>
@@ -6878,6 +6934,7 @@ EndChar
 StartChar: uniA81B
 Encoding: 43035 43035 44
 Width: 593
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<438 514> 122 74<189.39 374.941> 447 72<193.282 389.489> 611 68<-17 438 514 610>
@@ -7031,6 +7088,7 @@ EndChar
 StartChar: uniA81C
 Encoding: 43036 43036 45
 Width: 716
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<552 628> 83 70<236.065 339.017> 390 70<43.2059 163.313> 593 86<449.561 551.875> 611 68<-17 393 628 724>
@@ -7245,6 +7303,7 @@ EndChar
 StartChar: uniA81D
 Encoding: 43037 43037 46
 Width: 662
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<509 585> 103 69<159.703 255.789> 611 68<-17 54.1105 135 490 585 670>
@@ -7425,6 +7484,7 @@ EndChar
 StartChar: uniA81E
 Encoding: 43038 43038 47
 Width: 652
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<499 575> 217 82<118.101 211.183> 611 68<-17 456 575 660>
@@ -7542,6 +7602,7 @@ EndChar
 StartChar: uniA81F
 Encoding: 43039 43039 48
 Width: 652
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<499 575> 231 79<107.049 198.093> 611 68<-17 453 575 660>
@@ -7715,6 +7776,7 @@ EndChar
 StartChar: uniA820
 Encoding: 43040 43040 49
 Width: 609
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 611 68<-17 87 164 624>
@@ -7843,6 +7905,7 @@ EndChar
 StartChar: uniA821
 Encoding: 43041 43041 50
 Width: 762
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<608 684> 493 69<132.429 270.915> 611 68<-17 610 684 769>
@@ -7985,6 +8048,7 @@ EndChar
 StartChar: uniA822
 Encoding: 43042 43042 51
 Width: 787
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<638 714> 611 68<-17 68 144 640 714 799>
@@ -8158,6 +8222,7 @@ EndChar
 StartChar: uniA823
 Encoding: 43043 43043 52
 Width: 281
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<121 197> 611 68<-17 121 197 291>
@@ -8237,6 +8302,7 @@ EndChar
 StartChar: uniA824
 Encoding: 43044 43044 53
 Width: 254
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<100 176> 611 68<-17 100 176 270> 888 70<-17.102 87.8846>
@@ -8356,6 +8422,7 @@ EndChar
 StartChar: uniA825
 Encoding: 43045 43045 54
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: -270 68<-369.876 -103.994> -64 71<-177.564 -79.2586>
@@ -8526,6 +8593,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -113 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -113 0 mark 0
 LayerCount: 2
 Fore
@@ -8554,6 +8622,7 @@ EndChar
 StartChar: uniA826
 Encoding: 43046 43046 55
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: 719 231
@@ -8580,6 +8649,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" -157 725 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -98 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 48 725 basemark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -157 725 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -98 725 mark 0
@@ -8602,6 +8673,7 @@ EndChar
 StartChar: uniA827
 Encoding: 43047 43047 56
 Width: 262
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<100 176> 611 68<-17 91 176 270>
@@ -8698,7 +8770,8 @@ EndChar
 StartChar: uniA828
 Encoding: 43048 43048 57
 Width: 381
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 264 60<153.13 229.452> 416 62<152.171 229.452>
 VStem: 80 65<332.684 407.848> 240 71<334.91 405.732>
@@ -8791,7 +8864,8 @@ EndChar
 StartChar: uniA829
 Encoding: 43049 43049 58
 Width: 331
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 72 60<123.111 199.413> 224 62<126.045 199.851> 344 61<122.426 199.413> 497 62<126.678 199.452>
 VStem: 49 66<140.052 213.111 413.12 485.686> 210 71<142.943 213.654 415.713 486.316>
@@ -8943,7 +9017,8 @@ EndChar
 StartChar: uniA82A
 Encoding: 43050 43050 59
 Width: 628
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 102 61<266.34 342.452> 255 61<266.501 342.452> 344 61<122.426 199.413 415.426 492.413> 497 62<126.678 199.452 419.678 492.452>
 VStem: 49 66<413.12 485.686> 193 66<170.861 246.807> 210 71<415.713 486.316> 342 66<413.12 485.686> 353 71<173.41 244.268> 503 71<415.713 486.316>
@@ -9178,7 +9253,8 @@ EndChar
 StartChar: uniA82B
 Encoding: 43051 43051 60
 Width: 646
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 84 60<143.301 219.413 425.111 501.413> 236 62<142.171 219.452 428.045 501.452> 351 61<143.13 219.413 424.587 501.413> 504 62<142.171 219.851 428.045 501.851>
 VStem: 70 65<152.837 228.136 420.636 495.848> 230 71<154.943 226.026 422.685 493.654> 351 66<152.052 225.4 420.096 493.111> 512 71<154.943 226.026 422.685 493.654>
@@ -9444,6 +9520,7 @@ EndChar
 StartChar: uniA82C
 Encoding: 43052 43052 61
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: -268 191
@@ -9470,6 +9547,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" -113 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -113 0 mark 0
 LayerCount: 2
 Fore
@@ -9485,6 +9563,7 @@ EndChar
 StartChar: uniA807uniA807
 Encoding: 65537 -1 62
 Width: 1200
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 611 68<-17 87 164 395 470 713 786 1212>
@@ -9681,13 +9760,13 @@ SplineSet
  470 71 l 1,51,-1
  474 70 l 1,42,43
 EndSplineSet
-LCarets2: 2 0 0
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA807 uniA806 uniA807
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA807 uniA806 uniA807
 EndChar
 
 StartChar: uniA807uniA814
 Encoding: 65538 -1 63
 Width: 915
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -13 71<419.753 666.76> 611 68<-17 87 164 395 470 743 817 922>
@@ -9937,12 +10016,13 @@ SplineSet
  470 611 l 1,60,-1
  470 479 l 1,56,57
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA807 uniA806 uniA814
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA807 uniA806 uniA814
 EndChar
 
 StartChar: uniA80CuniA80C
 Encoding: 65539 -1 64
 Width: 979
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<440 516 814 890> 158 75<293.906 440 663.648 814> 444 71<265.513 440 640.679 814> 611 68<-17 440 516 814 890 987>
@@ -10129,12 +10209,13 @@ SplineSet
  562 290 562 290 635 261.5 c 128,-1,54
  708 233 708 233 798 233 c 2,43,-1
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA80C uniA806 uniA80C
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA80C uniA806 uniA80C
 EndChar
 
 StartChar: uniA80CuniA80D
 Encoding: 65540 -1 65
 Width: 1062
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -82 70<827.819 909.094> 126 62<823 871.219> 133 62<823.578 926.025> 240 74<255.192 411> 485 68<237.271 411> 611 68<-17 411 487 1071>
@@ -10395,12 +10476,13 @@ SplineSet
  823 16 823 16 828.5 2 c 128,-1,77
  834 -12 834 -12 856 -12 c 0,65,66
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA80C uniA806 uniA80D
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA80C uniA806 uniA80D
 EndChar
 
 StartChar: uniA80EuniA80E
 Encoding: 65541 -1 66
 Width: 775
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -98 67<195.669 378.359> 225 67<195.61 378.359> 611 68<-13 141 214.175 610 686 781>
@@ -10715,12 +10797,13 @@ SplineSet
  138 51 138 51 173 10 c 128,-1,70
  208 -31 208 -31 284 -31 c 0,44,45
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA80E uniA806 uniA80E
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA80E uniA806 uniA80E
 EndChar
 
 StartChar: uniA814uniA814
 Encoding: 65542 -1 67
 Width: 610
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 149 71<274.563 461> 386 74<172.382 408.358> 611 68<-17 464 539 617>
@@ -10962,12 +11045,13 @@ SplineSet
  307 19 307 19 288 -21 c 128,-1,62
  269 -61 269 -61 235 -99 c 1,0,-1
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA814 uniA806 uniA814
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA814 uniA806 uniA814
 EndChar
 
 StartChar: uniA818uniA814
 Encoding: 65543 -1 68
 Width: 619
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 88 67<222.785 415.377> 220 66<129.92 234.426> 611 68<-17 158 240.056 465.218 541 627>
@@ -11216,12 +11300,13 @@ SplineSet
  106 342 106 342 125 314 c 128,-1,64
  144 286 144 286 185 286 c 0,53,54
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA818 uniA806 uniA814
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA818 uniA806 uniA814
 EndChar
 
 StartChar: uniA818uniA816
 Encoding: 65544 -1 69
 Width: 1050
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -164 75<875.481 986.729> 93 70<158.356 261.017> 593 86<347.711 452.906> 611 68<-17 289 530 1063>
@@ -11455,12 +11540,13 @@ SplineSet
  131 216 131 216 154 189.5 c 128,-1,66
  177 163 177 163 209 163 c 0,56,57
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA818 uniA806 uniA816
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA818 uniA806 uniA816
 EndChar
 
 StartChar: uniA818uniA818
 Encoding: 65545 -1 70
 Width: 679
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -197 72<208.659 305.654> 212 66<378.067 526> 229 72<127.659 224.654> 611 68<-16 167 248.395 525.031 602 688>
@@ -11728,12 +11814,13 @@ SplineSet
  189 -74 189 -74 206 -99.5 c 128,-1,70
  223 -125 223 -125 260 -125 c 0,60,61
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA818 uniA806 uniA818
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA818 uniA806 uniA818
 EndChar
 
 StartChar: uniA81BuniA81B
 Encoding: 65546 -1 71
 Width: 521
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -96 68<149.919 327.175> 150 65<147.805 333.14> 251 71<136.584 329.531> 500 70<138.561 336.851> 611 68<-17 370 445 531>
@@ -11976,12 +12063,13 @@ SplineSet
  156 -15 156 -15 183.5 -21.5 c 128,-1,67
  211 -28 211 -28 236 -28 c 0,53,54
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA81B uniA806 uniA81B
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA81B uniA806 uniA81B
 EndChar
 
 StartChar: uniA81DuniA81B
 Encoding: 65547 -1 72
 Width: 737
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -100 66<375.392 548.886> 144 64<375.371 552.377> 182 62<178.448 277.759> 611 68<-17 58.6465 136 356 436.676 582 658 743>
@@ -12260,12 +12348,13 @@ SplineSet
  378 -19 378 -19 404 -26.5 c 128,-1,74
  430 -34 430 -34 458 -34 c 0,60,61
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA81D uniA806 uniA81B
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA81D uniA806 uniA81B
 EndChar
 
 StartChar: uniA81DuniA81D
 Encoding: 65548 -1 73
 Width: 788
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -91 63<373.946 473.451> 182 62<159.948 259.446> 611 68<-5 45.4487 118 338 417.454 634 710 796>
@@ -12537,12 +12626,13 @@ SplineSet
  357 17 357 17 373 -5.5 c 128,-1,80
  389 -28 389 -28 423 -28 c 0,70,71
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA81D uniA806 uniA81D
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA81D uniA806 uniA81D
 EndChar
 
 StartChar: uniA81EuniA81F
 Encoding: 65549 -1 74
 Width: 663
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 80 79<117.049 209.095> 290 79<96.0294 189.637> 611 68<-17 439 585 670>
@@ -12761,12 +12851,13 @@ SplineSet
  382 -117 382 -117 411 -135 c 1,63,-1
  367 -191 l 1,49,50
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA81E uniA806 uniA81F
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA81E uniA806 uniA81F
 EndChar
 
 StartChar: uniA821uniA807
 Encoding: 65550 -1 75
 Width: 1321
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<829 904 1176 1251> 493 69<132.429 270.849> 611 68<-7 511 588 829 904 1178 1251 1326>
@@ -12977,12 +13068,13 @@ SplineSet
  904 611 l 1,71,-1
  904 456 l 1,67,68
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA821 uniA806 uniA807
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA821 uniA806 uniA807
 EndChar
 
 StartChar: uniA821uniA80C
 Encoding: 65551 -1 76
 Width: 851
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<699 775> 72 72<554.347 699> 291 70<529.034 699> 493 69<132.429 271.026> 611 68<-17 701 775 860>
@@ -13180,12 +13272,13 @@ SplineSet
  497 178 497 178 546.5 161 c 128,-1,72
  596 144 596 144 664 144 c 0,60,61
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA821 uniA806 uniA80C
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA821 uniA806 uniA80C
 EndChar
 
 StartChar: uniA821uniA80D
 Encoding: 65552 -1 77
 Width: 1165
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -82 70<928.819 1010.09> 126 62<924 972.219> 133 62<924.578 1027.02> 493 69<132.429 270.849> 611 68<-8 511 588 1172>
@@ -13462,12 +13555,13 @@ SplineSet
  924 16 924 16 929.5 2 c 128,-1,98
  935 -12 935 -12 957 -12 c 0,86,87
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA821 uniA806 uniA80D
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA821 uniA806 uniA80D
 EndChar
 
 StartChar: uniA821uniA814
 Encoding: 65553 -1 78
 Width: 851
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<699 775> 199 67<65 120.917 525.785 698.093> 493 69<132.429 271.026> 611 68<-17 701 775 860>
@@ -13693,12 +13787,13 @@ SplineSet
  560 70 560 70 539.5 24.5 c 128,-1,74
  519 -21 519 -21 486 -59 c 1,0,-1
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA821 uniA806 uniA814
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA821 uniA806 uniA814
 EndChar
 
 StartChar: uniA821uniA81B
 Encoding: 65554 -1 79
 Width: 851
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<699 775> 35 67<496.874 666.929> 282 64<494.441 670.86> 493 69<132.429 271.026> 611 68<-17 701 775 860>
@@ -13936,12 +14031,14 @@ SplineSet
  500 117 500 117 525.5 109.5 c 128,-1,80
  551 102 551 102 576 102 c 0,66,67
 EndSplineSet
-Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA lookup 0 subtable" uniA821 uniA806 uniA81B
+Ligature2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Syloti Nagri lookup 0 subtable" uniA821 uniA806 uniA81B
 EndChar
 
 StartChar: uni200B
 Encoding: 8203 8203 80
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -13949,6 +14046,8 @@ EndChar
 StartChar: uni200C
 Encoding: 8204 8204 81
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -13956,6 +14055,8 @@ EndChar
 StartChar: uni200D
 Encoding: 8205 8205 82
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -13963,6 +14064,8 @@ EndChar
 StartChar: uni2010
 Encoding: 8208 8208 83
 Width: 322
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 229 78<40 282>
 VStem: 40 242<229 307>
@@ -14012,6 +14115,8 @@ EndChar
 StartChar: uni2011
 Encoding: 8209 8209 84
 Width: 322
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 229 78<40 282>
 VStem: 40 242<229 307>
@@ -14061,7 +14166,8 @@ EndChar
 StartChar: uni2055
 Encoding: 8277 8277 85
 Width: 639
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 59 56<294.614 332.081> 167 65<91.3605 168.356 458.583 532.785> 228 58<295.563 326.875> 404 59<297.649 326.232> 485 64<94.1101 160.292 465.977 529.976> 589 56<294.614 332.081>
 VStem: 31 60<232.105 275.732 442.687 484.797> 229 62<126.86 228.499 474.523 582.946> 336 62<126.86 228.499 474.574 577.14> 536 60<234.598 276.333 441.981 482.22>
@@ -14469,6 +14575,7 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 86
 Width: 594
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 42 53<271.311 322.689> 60 52<186.311 238.677 355.335 407.701> 107 53<114.311 166.677 428.323 479.701> 180 53<65.323 117.689 476.311 528.677> 265 52<48.2373 100.771 494.237 545.78> 349 53<65.335 117.689 476.323 528.677> 422 53<114.406 166.677 428.323 479.701> 470 53<186.311 238.677 355.335 407.701> 487 53<271.311 322.689>
@@ -14846,9 +14953,10 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 380 0 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 295 580 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 400 590 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" 314 647 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" 380 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 314 650 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 317 641 basechar 0
 LayerCount: 2
 Fore
 SplineSet
