@@ -67,11 +67,6 @@ What was done by authors of Unicodia:
   - Enlarged virama
   - Implemented three U14 chars, hope usable
   - Rehinted
-* Yezidi
-  - Copied 25CC dotted circle from Devanagari
-  - Moved umlaut 10EAC to the right for default anchoring
-    (default anchoring is somehow the safest way to plant umlauts!)
-  - Rehinted
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
