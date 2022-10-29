@@ -14,7 +14,7 @@ What was done by authors of Unicodia:
 * Modi, Zanabazar Square
   - Rehinted with TtfAutoHint, see settings-STRONG
 * Syloti Nagri
-  - Rehinted with hinting VM
+  - Rehinted with FontForge
 * Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong, Siddham
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
