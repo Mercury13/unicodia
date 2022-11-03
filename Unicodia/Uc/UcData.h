@@ -284,7 +284,6 @@ namespace uc {
         KHITAN_SMALL,
         KHMER,
         KHOJKI,
-          Z_KHO_1,
         KHUDAWADI,
         KOREAN,
           Z_KOR_1,

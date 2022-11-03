@@ -35,9 +35,13 @@ What was done by authors of Unicodia:
 * Kannada
   - Added two new chars
   - Rehinted with FontForge
+* Khojki
+  - Added +1 anchor on 25CC
+  - Found and named 1123F
+  - Made somehow 11240
 * Khudawadi
   - Made default anchoring of umlauts
-  - Rehinted
+  - Rehinted with FontForge
   - Made ligature 25CC dotted circle + 112E1 umlaut I
 * Mongol
   - Made ligature 25CC dotted circle + 18A9 some umlaut,
