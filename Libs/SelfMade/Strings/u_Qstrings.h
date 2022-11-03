@@ -11,6 +11,9 @@ namespace str {
     inline QString toQ(std::string_view x)
         { return QString::fromUtf8(x.data(), x.size()); }
 
+    inline QString toQ(std::wstring_view x)
+        { return QString::fromWCharArray(x.data(), x.size()); }
+
     inline QString toQ(std::u8string_view x)
         { return QString::fromUtf8(x.data(), x.size()); }
 

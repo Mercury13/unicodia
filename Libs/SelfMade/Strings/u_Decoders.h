@@ -183,7 +183,7 @@ namespace decode {
     /// Converts <p> → <LF><LF>
     std::wstring htmlP(std::wstring_view x);
 
-    // Both p and br
-    std::wstring htmlPBr(std::wstring_view x);
+    inline std::wstring htmlBrP(std::wstring_view x)
+        { return htmlBr(htmlP(x)); }
 
 }   // namespace decode
