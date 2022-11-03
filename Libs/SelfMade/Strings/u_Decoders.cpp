@@ -601,6 +601,25 @@ std::wstring decode::htmlBr(std::wstring_view x)
 }
 
 
+std::wstring decode::htmlP(std::wstring_view x)
+{
+    std::wstring cache;
+    x = normalizeEolSv(x, cache);
+
+    if (x.empty())
+        return std::wstring{x};
+
+    std::wregex rex(LR"(<p[ ]*[/]?>[\n]*)");
+    std::wstring r;
+    std::regex_replace(
+            std::back_inserter(r),
+            x.begin(), x.end(),
+            rex,
+            L"\n\n");
+    return r;
+}
+
+
 std::u8string_view escape::cppSv(
         std::u8string_view x,
         std::u8string& cache,
