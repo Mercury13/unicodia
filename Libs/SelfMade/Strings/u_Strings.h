@@ -423,6 +423,12 @@ namespace str {
     [[nodiscard]] inline trait::Sv<S> trimSv(const S& s)
         { return detail::trimSv<trait::Sv<S>>(s); }
 
+    /// @return  the same string, all isBlank’s on the left and right are removed
+    template <class S>
+    [[nodiscard]] inline trait::DefStr<S> trim(const S& s)
+        { return trait::DefStr<S>(trimSv(s));
+ }
+
     /// @return  the same string, all isBlank’s on the left are removed
     template <class S>
     [[nodiscard]] inline trait::Sv<S> trimLeftSv(const S& s)

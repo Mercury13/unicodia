@@ -15,6 +15,7 @@
 #include "data.h"
 #include "loader.h"
 #include "library.h"
+#include "egyptian.h"
 
 using namespace std::string_view_literals;
 
@@ -480,6 +481,13 @@ int main()
 
     lib::StrangeCjk strangeCjk;
 
+    ///// Egyptian /////////////////////////////////////////////////////////////
+
+    std::cout << "Loading Egyptian base..." << std::flush;
+    auto egypBase = egyp::loadBase();
+    std::cout << "OK" << std::endl;
+    std::cout << "  Loaded " << egypBase.size() << " Egyptian hieros." << std::endl;
+
     ///// Open output file /////////////////////////////////////////////////////
 
     std::ofstream os("UcAuto.cpp");
@@ -593,7 +601,11 @@ int main()
         }
 
         for (auto& v : aliasAbbrevs) {
-            strings.forceRemember(cp, uc::TextRole::ALT_NAME, std::string{v});
+            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
+        }
+
+        if (auto v = egypBase.find(cp); v != egypBase.end()) {
+            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v->second);
         }
 
         for (auto& v : restAliases) {

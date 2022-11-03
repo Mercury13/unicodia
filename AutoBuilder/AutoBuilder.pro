@@ -15,6 +15,7 @@ SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         data.cpp \
+        egyptian.cpp \
         library.cpp \
         loader.cpp \
         main.cpp
@@ -28,6 +29,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Vector.h \
     ../Unicodia/Uc/UcFlags.h \
     data.h \
+    egyptian.h \
     library.h \
     loader.h
 
