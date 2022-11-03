@@ -119,6 +119,8 @@ namespace {
     constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/15.0.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
     constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/15.0/emoji-test.txt", EMOJI_TEST };
+    constinit const CurlAction AC_EGYP_UNICODE { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml", EGYP_UNICODE };
+    constinit const CurlAction AC_EGYP_DESC { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml", EGYP_DESCRIPTION };
 
     constinit const LocalFile allLocalFiles[] {
         { MISCFILES ENTITIES_HTML },
@@ -129,6 +131,8 @@ namespace {
         { "Load UCD XML database", AC_UCD_ZIP, UCD_ZIP, NO_FLAGS },
         { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
         { "Load emoji test", AC_EMOJI, EMOJI_TEST, Stfg::FINAL },
+        { "Load Egyptian Unicode", AC_EGYP_UNICODE, EGYP_UNICODE, Stfg::FINAL },
+        { "Load Egyptian descriptions", AC_EGYP_DESC, EGYP_DESCRIPTION, Stfg::FINAL },
     };
 
 }

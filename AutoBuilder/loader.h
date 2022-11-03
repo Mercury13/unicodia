@@ -6,7 +6,8 @@
 #define ENTITIES_HTML "entities.htm"
 #define SINGLEEMOJI_TXT "single-char-emoji.txt"
 #define MISCFILES "MiscFiles\\"
-#define UC_VERSION "14.0"
+#define EGYP_UNICODE "signunicode.xml"
+#define EGYP_DESCRIPTION "signdescriptioneng.xml"
 
 bool checkLoader();
 void runLoader();
