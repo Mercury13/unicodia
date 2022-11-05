@@ -18,7 +18,8 @@ SOURCES += \
         egyptian.cpp \
         library.cpp \
         loader.cpp \
-        main.cpp
+        main.cpp \
+        textbase.cpp
 
 HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
@@ -31,7 +32,8 @@ HEADERS += \
     data.h \
     egyptian.h \
     library.h \
-    loader.h
+    loader.h \
+    textbase.h
 
 
 INCLUDEPATH += \
