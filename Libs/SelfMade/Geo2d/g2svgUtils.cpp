@@ -4,6 +4,7 @@
 // C++
 #include <cmath>
 #include <charconv>
+#include <map>
 
 // STL
 #include <algorithm>
@@ -324,63 +325,87 @@ size_t g2sv::Polyline::removeShortSegments(
 }
 
 
+namespace {
+
+    constinit const g2sv::Corner CORNER1;
+
+    void setCorner(std::map<size_t, g2sv::Corner>& r,
+                   size_t index,
+                   g2sv::CornerType type)
+    {
+        auto it = r.emplace_hint(r.end(), index, CORNER1);
+        it->second.index = index;
+        it->second.type = std::max(it->second.type, type);
+    }
+
+}
+
+
 std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
         const SimplifyOpt& opt) const
 {
     if (pts.size() <= 2)
         return std::nullopt;
-    std::vector<Corner> r;
+    std::map<size_t, Corner> r;
 
     auto checkCosine = [this, &r, &opt](size_t iA, size_t iB, size_t iC) {
         auto& a = pts[iA];
         auto& b = pts[iB];
         auto& c = pts[iC];
-        auto v1 = a - b;
-        auto v2 = c - b;
 
-        auto len1 = v1.lenD();
-        if (len1 <= 1e-6)
-            throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
-
-        auto len2 = v2.lenD();
-        if (len2 <= 1e-6)
-            throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
-
-        auto cs = v1.dotD(v2) / (len1 * len2);
-        if (!std::isfinite(cs))
-            throw ESvg("[SVG] Cannot calculate angle, something really bad");
-
-        //if (b.x == 685 && b.y == 719) {  // Debug
-        //    --iB;
-        //}
-
-        if (cs >= opt.corner.minCosine) {  // Smooth angle detected — always real corner
-            r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+        if ((a.x == b.x && b.y == c.y) || (a.y == b.y && b.x == c.x)) {
+            // Right corner
+            setCorner(r, iA, g2sv::CornerType::AVOID_SMOOTH);
+            setCorner(r, iB, g2sv::CornerType::REAL_CORNER);
+            setCorner(r, iC, g2sv::CornerType::AVOID_SMOOTH);
         } else {
-            bool notCorner = true;
-            if (len1 >= opt.corner.maxSide) {  // Len1 BIG
-                if (len2 >= opt.corner.maxSide) {  // BIG-BIG — real corner unless smooth
-                    if (cs < opt.corner.smoothCosine) {
-                    } else {
-                        r.push_back(Corner{ .index = iB, .type = CornerType::REAL_CORNER });
+            auto v1 = a - b;
+            auto v2 = c - b;
+
+            auto len1 = v1.lenD();
+            if (len1 <= 1e-6)
+                throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
+
+            auto len2 = v2.lenD();
+            if (len2 <= 1e-6)
+                throw ESvg("[SVG] Points duplicate, duplicate deletion failed");
+
+            auto cs = v1.dotD(v2) / (len1 * len2);
+            if (!std::isfinite(cs))
+                throw ESvg("[SVG] Cannot calculate angle, something really bad");
+
+            //if (b.x == 685 && b.y == 719) {  // Debug
+            //    --iB;
+            //}
+
+            if (cs >= opt.corner.minCosine) {  // Smooth angle detected — always real corner
+                setCorner(r, iB, CornerType::REAL_CORNER);
+            } else {
+                bool notCorner = true;
+                if (len1 >= opt.corner.maxSide) {  // Len1 BIG
+                    if (len2 >= opt.corner.maxSide) {  // BIG-BIG — real corner unless smooth
+                        if (cs < opt.corner.smoothCosine) {
+                        } else {
+                            setCorner(r, iB, CornerType::REAL_CORNER );
+                            notCorner = false;
+                        }
+                    } else {    // BIG-SMALL — start smooth thing
+                        setCorner(r, iB, CornerType::SMOOTH_START);
                         notCorner = false;
                     }
-                } else {    // BIG-SMALL — start smooth thing
-                    r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_START });
-                    notCorner = false;
+                } else {    // Len1 SMALL
+                    if (len2 >= opt.corner.maxSide) {  // SMALL-BIG → end smooth thing
+                        setCorner(r, iB, CornerType::SMOOTH_END);
+                        notCorner = true;
+                    }
                 }
-            } else {    // Len1 SMALL
-                if (len2 >= opt.corner.maxSide) {  // SMALL-BIG → end smooth thing
-                    r.push_back(Corner{ .index = iB, .type = CornerType::SMOOTH_END });
-                    notCorner = true;
-                }
-            }
-            // If not a corner → check once again for extremities
-            if (notCorner) {
-                if (v1.y * v2.y > 0) {  // both >0 or <0
-                    r.push_back(Corner{ .index = iB, .type = CornerType::HORZ_EXTREMITY });
-                } else if (v1.x * v2.x > 0) {
-                    r.push_back(Corner{ .index = iB, .type = CornerType::VERT_EXTREMITY });
+                // If not a corner → check once again for extremities
+                if (notCorner) {
+                    if (v1.y * v2.y > 0) {  // both >0 or <0
+                        setCorner(r, iB, CornerType::HORZ_EXTREMITY);
+                    } else if (v1.x * v2.x > 0) {
+                        setCorner(r, iB, CornerType::VERT_EXTREMITY);
+                    }
                 }
             }
         }
@@ -390,7 +415,7 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
     if (isClosed) {
         checkCosine(last, 0, 1);
     } else {
-        r.push_back(Corner{ .index = 0, .type = CornerType::REAL_CORNER });
+        setCorner(r, 0, CornerType::REAL_CORNER);
     }
 
     for (size_t i = 1; i < last; ++i) {
@@ -400,10 +425,15 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
     if (isClosed) {
         checkCosine(last - 1, last, 0);
     } else {
-        r.push_back(Corner{ .index = last, .type = CornerType::REAL_CORNER });
+        setCorner(r, last, CornerType::REAL_CORNER);
     }
 
-    return r;
+    std::vector<g2sv::Corner> r1;
+    r1.reserve(r.size());
+    for (auto v : r) {
+        r1.emplace_back(v.second);
+    }
+    return r1;
 }
 
 namespace {
@@ -1087,6 +1117,7 @@ namespace {
             return (pt0 - ptPrev).cast<double>();
         case g2sv::CornerType::SMOOTH_END:
         case g2sv::CornerType::REAL_CORNER:
+        case g2sv::CornerType::AVOID_SMOOTH:
             return (pt1 - pt0).cast<double>();
         case g2sv::CornerType::HORZ_EXTREMITY:
             return { static_cast<double>(pt1.x - ptPrev.x), 0 };
@@ -1119,6 +1150,7 @@ namespace {
             return (pt10 - ptNext).cast<double>();
         case g2sv::CornerType::SMOOTH_START:
         case g2sv::CornerType::REAL_CORNER:
+        case g2sv::CornerType::AVOID_SMOOTH:
             return (pt9 - pt10).cast<double>();
         case g2sv::CornerType::HORZ_EXTREMITY:
             return { static_cast<double>(pt9.x - ptNext.x), 0 };

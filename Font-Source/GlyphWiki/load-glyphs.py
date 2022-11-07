@@ -56,5 +56,5 @@ for glyph in font.glyphs():
 font.generate(TEMPFILENAME)
 
 # Run external hinter
-CMDLINE = '{} --windows-compatibility --stem-width-mode=sss --symbol {} {}'
+CMDLINE = '{} --stem-width-mode=sss --symbol {} {}'
 os.system(CMDLINE.format(HINTER, TEMPFILENAME, OUTFILENAME))

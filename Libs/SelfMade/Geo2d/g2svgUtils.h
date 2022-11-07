@@ -37,17 +37,19 @@ namespace g2sv {
         } corner;
     };
 
+    /// Order matters: the bigger, the heavier
     enum class CornerType {
-        REAL_CORNER,    // real corner — make tangents as you want
+        AVOID_SMOOTH,   // Somehow avoiding smooth
+        HORZ_EXTREMITY, // Horizontal extremity of smooth sequence
+        VERT_EXTREMITY, // Vertical extremity of smooth sequence
         SMOOTH_START,   // start of smooth conjugation — tangent is PREV point
         SMOOTH_END,     // end of smooth conjugation — tangent is NEXT point
-        HORZ_EXTREMITY, // Horizontal extremity of smooth sequence
-        VERT_EXTREMITY  // Vertical extremity of smooth sequence
+        REAL_CORNER,    // real corner — make tangents as you want
     };
 
     struct Corner {
-        size_t index;
-        CornerType type;
+        size_t index = std::numeric_limits<size_t>::max() / 2;
+        CornerType type = CornerType::AVOID_SMOOTH;
     };
 
     using Type = int;
