@@ -26,7 +26,8 @@ std::string seqStem(std::u32string_view seq)
 
 struct TapeEntry
 {
-    unsigned offset,
+    unsigned iSubtape,
+             offset,
              length;
     std::u32string seq;
     std::filesystem::path fnIn;
@@ -43,17 +44,20 @@ public:
     void write();
 private:
     static constexpr int SUBTAPE_SIZE = 1'000'000;
-    unsigned biggestSubtape = 0;
-    unsigned nEntries = 0;
     struct Subtape {
         unsigned iSubtape;
         unsigned size = 0;
-        std::vector<TapeEntry> entries {};
+        std::vector<const TapeEntry*> entries {};
     };
-    std::vector<Subtape> subtapes;
-    bool wantNewSubtape = true;
+    std::vector<TapeEntry> allEntries;
     void writeDirectory() const;
     void writeList() const;
+
+    struct DivideIntoSubtapes {
+        std::vector<Subtape> subtapes;
+        unsigned biggestSubtape = 0;
+    };
+    DivideIntoSubtapes divideIntoSubtapes();
 };
 
 bool isBlacklistedPart(std::string_view s)
@@ -95,33 +99,16 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
     if (seq.empty())
         return nullptr;
 
-    Subtape* subtape;
-    if (wantNewSubtape) {
-        unsigned iSubtape = subtapes.size();
-        subtape = &subtapes.emplace_back(
-                    Subtape { .iSubtape = iSubtape });
-        wantNewSubtape = false;
-    } else [[likely]] {
-        subtape = &subtapes.back();
-    }
-
     auto stemOut = seqStem(seq);
-    auto& entry = subtape->entries.emplace_back(TapeEntry {
-                    .offset = subtape->size,
+    auto& entry = allEntries.emplace_back(TapeEntry {
+                    .iSubtape = 100000,
+                    .offset = SUBTAPE_SIZE * 100,
                     .length = fsize,
                     .seq = seq,
                     .fnIn = p,
                     .stemOut = stemOut,
                     .isQuickAccess = false,
                 });
-    ++nEntries;
-
-    // Add to subtape
-    subtape->size += fsize;
-    biggestSubtape = std::max(biggestSubtape, subtape->size);
-    if (subtape->size > SUBTAPE_SIZE) {
-        wantNewSubtape = true;
-    }
 
     return &entry;
 }
@@ -157,6 +144,43 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
 //    subtapeSize = 0;
 //}
 
+
+TapeWriter::DivideIntoSubtapes TapeWriter::divideIntoSubtapes()
+{
+    DivideIntoSubtapes r;
+
+    bool wantNewSubtape = true;
+
+    for (auto& entry : allEntries) {
+        Subtape* subtape;
+
+        // Get subtape
+        unsigned iSubtape = r.subtapes.size();
+        if (wantNewSubtape) {
+            subtape = &r.subtapes.emplace_back(
+                        Subtape { .iSubtape = iSubtape });
+            wantNewSubtape = false;
+        } else [[likely]] {
+            subtape = &r.subtapes.back();
+            --iSubtape;
+        }
+
+        // Add to subtape
+        entry.offset = subtape->size;
+        entry.iSubtape = iSubtape;
+        subtape->entries.push_back(&entry);
+
+        // Add size
+        subtape->size += entry.length;
+        r.biggestSubtape = std::max(r.biggestSubtape, subtape->size);
+        if (subtape->size > SUBTAPE_SIZE) {
+            wantNewSubtape = true;
+        }
+    }
+
+    return r;
+}
+
 namespace {
 
     [[maybe_unused]] void writeIW(std::ostream& os, uint16_t x)
@@ -178,44 +202,44 @@ namespace {
 void TapeWriter::writeDirectory() const
 {
     std::ofstream os("tape.bin", std::ios::binary);
-    writeID(os, nEntries);
-    for (auto& subtape : subtapes) {
-        for (auto& entry : subtape.entries) {
-            writeIW(os, subtape.iSubtape);
-            writeID(os, entry.offset);
-            writeID(os, entry.length);
-            auto fname = entry.stemOut + ".svg";
-            writeIW(os, fname.length());
-            os.write(fname.data(), fname.length());
-        }
+    writeID(os, allEntries.size());
+    for (auto& entry : allEntries) {
+        writeIW(os, entry.iSubtape);
+        writeID(os, entry.offset);
+        writeID(os, entry.length);
+        auto fname = entry.stemOut + ".svg";
+        writeIW(os, fname.length());
+        os.write(fname.data(), fname.length());
     }
 }
 
 void TapeWriter::writeList() const
 {
     std::ofstream os("single-char-emoji.txt");
-    for (auto& subtape : subtapes) {
-        for (auto& entry : subtape.entries) {
-            if (entry.seq.size() == 1)
-                os << entry.stemOut << '\n';
-        }
+    for (auto& entry : allEntries) {
+        if (entry.seq.size() == 1)
+            os << entry.stemOut << '\n';
     }
 }
 
 
 void TapeWriter::write()
 {
-    std::string tapeBuf;
-    tapeBuf.resize(biggestSubtape + 10000);
+    /// @todo [urgent] reorder subtapes
 
-    for (auto& subtape : subtapes) {
+    auto div = divideIntoSubtapes();
+
+    std::string tapeBuf;
+    tapeBuf.resize(div.biggestSubtape + 10000);
+
+    for (auto& subtape : div.subtapes) {
         // Build contents
         tapeBuf.clear();
-        for (auto& entry : subtape.entries) {
-            std::ifstream is(entry.fnIn, std::ios::binary);
-            if (!is.read(tapeBuf.data() + entry.offset, entry.length))
+        for (auto& pEntry : subtape.entries) {
+            std::ifstream is(pEntry->fnIn, std::ios::binary);
+            if (!is.read(tapeBuf.data() + pEntry->offset, pEntry->length))
                 throw std::logic_error("Strange file size");
-            std::cout << entry.stemOut << std::endl;
+            std::cout << pEntry->stemOut << std::endl;
         }
 
         // Generate subtape name
