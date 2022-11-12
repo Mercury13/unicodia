@@ -247,6 +247,7 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     const uc::LibNode& nodeAt(const QModelIndex& index) const;
+    static CharTiles getCharTiles(const uc::LibNode& node);
 private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
@@ -257,7 +258,6 @@ private:
             QPainter* painter, const QRect& bounds,
             const uc::LibNode& node, const QColor& color);
     static const uc::LibNode* goToText(const uc::LibNode& x);
-    static CharTiles getCharTiles(const uc::LibNode& node);
 };
 
 

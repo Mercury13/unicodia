@@ -121,6 +121,24 @@ RcPair::RcPair(const QRectF& rcFrame, qreal quo)
 }
 
 
+///// CharTile /////////////////////////////////////////////////////////////////
+
+
+bool CharTile::isEmoji() const
+{
+    if (text.empty())
+        return false;
+
+    auto ch = EmojiPainter::getCp(text);
+    if (ch) {
+        auto cp = uc::cpsByCode[ch];
+        return (cp && cp->drawMethod(emojiDraw) == uc::DrawMethod::SVG_EMOJI);
+    } else {
+        return (emojiDraw == uc::EmojiDraw::GRAPHIC);
+    }
+}
+
+
 ///// AbbrLines ////////////////////////////////////////////////////////////////
 
 

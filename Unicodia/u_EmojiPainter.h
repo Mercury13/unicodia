@@ -3,6 +3,7 @@
 #include <memory>
 #include <unordered_map>
 #include <vector>
+#include <span>
 
 #include <QByteArray>
 
@@ -56,6 +57,10 @@ public:
     void draw(QPainter* painter, const QRect& rect, char32_t cp, int height);
     void draw(QPainter* painter, const QRect& rect, std::u32string_view cp, int height);
     static bool hasSkinGender(std::u32string_view x);
+    static void getFileName(
+            std::span<char> rBuf,
+            std::u32string_view text,
+            std::string_view extension);
 private:
     // Types
     struct TapeEntry {

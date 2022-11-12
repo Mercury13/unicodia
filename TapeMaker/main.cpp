@@ -9,18 +9,8 @@
 
 using namespace std::string_view_literals;
 
-struct TapeEntry
-{
-    unsigned subtape,
-             offset,
-             length;
-    std::u32string seq;
 
-    std::string toName(std::string_view extension) const;
-};
-
-
-std::string TapeEntry::toName(std::string_view extension) const
+std::string seqStem(std::u32string_view seq)
 {
     std::string r;
     char buf[20];
@@ -30,24 +20,38 @@ std::string TapeEntry::toName(std::string_view extension) const
         snprintf(buf, std::size(buf), "%x", v);
         r += buf;
     }
-    r += extension;
     return r;
 }
+
+
+struct TapeEntry
+{
+    unsigned offset,
+             length;
+    std::u32string seq;
+    std::filesystem::path fnIn;
+    std::string stemOut;
+    bool isQuickAccess;
+};
 
 
 class TapeWriter
 {
 public:
     /// @return [0] not added [+] its filename
-    std::string addFile(const std::filesystem::path& p, size_t fsize);
-    void finish();
+    TapeEntry* addFile(const std::filesystem::path& p, unsigned fsize);
+    void write();
 private:
     static constexpr int SUBTAPE_SIZE = 1'000'000;
-    int iSubTape = 0;
-    size_t subtapeSize = 0;
-    std::string readySubtape;
-    std::vector<TapeEntry> entries;
-    void nextSubtape();
+    unsigned biggestSubtape = 0;
+    unsigned nEntries = 0;
+    struct Subtape {
+        unsigned iSubtape;
+        unsigned size = 0;
+        std::vector<TapeEntry> entries {};
+    };
+    std::vector<Subtape> subtapes;
+    bool wantNewSubtape = true;
     void writeDirectory() const;
     void writeList() const;
 };
@@ -70,58 +74,88 @@ std::u32string parseSeq(std::string s)
         int value = -1;
         std::from_chars(
             std::to_address(v.begin()), std::to_address(v.end()), value, 16);
-        if (value >= 0)
+        if (value >= 0) {
             r += char32_t(value);
+        } else {
+            return {};
+        }
     }
     return r;
 }
 
-std::string TapeWriter::addFile(const std::filesystem::path& p, size_t fsize)
+TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
 {
     // Tape will not
     if (fsize == 0)
-        return {};
+        return nullptr;
 
     // Create entry
     auto fname = p.filename().generic_string();
     auto seq = parseSeq(fname);
-    auto& entry = entries.emplace_back(
-            iSubTape, subtapeSize, fsize, seq );
+    if (seq.empty())
+        return nullptr;
+
+    Subtape* subtape;
+    if (wantNewSubtape) {
+        unsigned iSubtape = subtapes.size();
+        subtape = &subtapes.emplace_back(
+                    Subtape { .iSubtape = iSubtape });
+        wantNewSubtape = false;
+    } else [[likely]] {
+        subtape = &subtapes.back();
+    }
+
+    auto stemOut = seqStem(seq);
+    auto& entry = subtape->entries.emplace_back(TapeEntry {
+                    .offset = subtape->size,
+                    .length = fsize,
+                    .seq = seq,
+                    .fnIn = p,
+                    .stemOut = stemOut,
+                    .isQuickAccess = false,
+                });
+    ++nEntries;
 
     // Add to subtape
-    auto newSize = subtapeSize + fsize;
-    if (newSize > readySubtape.size()) {
-        auto allocSize = std::max<size_t>(newSize * 3 / 2, 2000);
-        readySubtape.resize(allocSize);
+    subtape->size += fsize;
+    biggestSubtape = std::max(biggestSubtape, subtape->size);
+    if (subtape->size > SUBTAPE_SIZE) {
+        wantNewSubtape = true;
     }
-    std::ifstream is(p, std::ios::binary);
-    is.read(readySubtape.data() + subtapeSize, fsize);
-    subtapeSize = newSize;
 
-    // Next??
-    if (subtapeSize >= SUBTAPE_SIZE)
-        nextSubtape();
-
-    return entry.toName(".svg");
+    return &entry;
 }
 
-void TapeWriter::nextSubtape()
-{
-    if (subtapeSize == 0)
-        return;
 
-    // Generate subtape name
-    char buf[20];
-    snprintf(buf, sizeof(buf), "%d.bin", iSubTape);
+//    auto newSize = subtapeSize + fsize;
+//    std::ifstream is(p, std::ios::binary);
+//    is.read(readySubtape.data() + subtapeSize, fsize);
+//    subtapeSize = newSize;
 
-    // Write subtape
-    std::ofstream os(buf, std::ios::binary);
-    os.write(readySubtape.data(), subtapeSize);
+//    // Next??
+//    if (subtapeSize >= SUBTAPE_SIZE)
+//        nextSubtape();
 
-    // ++
-    ++iSubTape;
-    subtapeSize = 0;
-}
+//    return entry.toName(".svg");
+//}
+
+//void TapeWriter::nextSubtape()
+//{
+//    if (subtapeSize == 0)
+//        return;
+
+//    // Generate subtape name
+//    char buf[20];
+//    snprintf(buf, sizeof(buf), "%d.bin", iSubTape);
+
+//    // Write subtape
+//    std::ofstream os(buf, std::ios::binary);
+//    os.write(readySubtape.data(), subtapeSize);
+
+//    // ++
+//    ++iSubTape;
+//    subtapeSize = 0;
+//}
 
 namespace {
 
@@ -144,30 +178,54 @@ namespace {
 void TapeWriter::writeDirectory() const
 {
     std::ofstream os("tape.bin", std::ios::binary);
-    writeID(os, entries.size());
-    for (auto& entry : entries) {
-        writeIW(os, entry.subtape);
-        writeID(os, entry.offset);
-        writeID(os, entry.length);
-        auto fname = entry.toName(".svg");
-        writeIW(os, fname.length());
-        os.write(fname.data(), fname.length());
+    writeID(os, nEntries);
+    for (auto& subtape : subtapes) {
+        for (auto& entry : subtape.entries) {
+            writeIW(os, subtape.iSubtape);
+            writeID(os, entry.offset);
+            writeID(os, entry.length);
+            auto fname = entry.stemOut + ".svg";
+            writeIW(os, fname.length());
+            os.write(fname.data(), fname.length());
+        }
     }
 }
 
 void TapeWriter::writeList() const
 {
     std::ofstream os("single-char-emoji.txt");
-    for (auto& entry : entries) {
-        if (entry.seq.size() == 1)
-            os << entry.toName({}) << '\n';
+    for (auto& subtape : subtapes) {
+        for (auto& entry : subtape.entries) {
+            if (entry.seq.size() == 1)
+                os << entry.stemOut << '\n';
+        }
     }
 }
 
 
-void TapeWriter::finish()
+void TapeWriter::write()
 {
-    nextSubtape();
+    std::string tapeBuf;
+    tapeBuf.resize(biggestSubtape + 10000);
+
+    for (auto& subtape : subtapes) {
+        // Build contents
+        tapeBuf.clear();
+        for (auto& entry : subtape.entries) {
+            std::ifstream is(entry.fnIn, std::ios::binary);
+            if (!is.read(tapeBuf.data() + entry.offset, entry.length))
+                throw std::logic_error("Strange file size");
+            std::cout << entry.stemOut << std::endl;
+        }
+
+        // Generate subtape name
+        char nameBuf[20];
+        snprintf(nameBuf, sizeof(nameBuf), "%u.bin", subtape.iSubtape);
+
+        // Write subtape
+        std::ofstream os(nameBuf, std::ios::binary);
+        os.write(tapeBuf.data(), subtape.size);
+    }
     writeDirectory();
     writeList();
 }
@@ -191,13 +249,11 @@ int main()
     std::filesystem::directory_iterator di(".");
     for (const auto& entry: di) {
         if (entry.is_regular_file() && entry.path().extension() == pExt) {
-            auto name = tw.addFile(entry.path(), entry.file_size());
-            if (name.empty()) {
+            auto q = tw.addFile(entry.path(), entry.file_size());
+            if (!q) {
                 std::cout << "NOT ADDED: " << entry.path().filename().generic_string() << std::endl;
-            } else {
-                std::cout << name << std::endl;
             }
         }
     }
-    tw.finish();
+    tw.write();
 }

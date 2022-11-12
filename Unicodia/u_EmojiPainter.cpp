@@ -223,6 +223,34 @@ std::string_view EmojiPainter::getSvg(char32_t cp)
 }
 
 
+void EmojiPainter::getFileName(
+        std::span<char> rBuf,
+        std::u32string_view text,
+        std::string_view extension)
+{
+    auto p = rBuf.begin();
+    auto end = rBuf.end();
+    for (auto v : text) {
+        if (v != VS16) {
+            if (p != std::begin(rBuf)) {
+                *(p++) = '-';
+            }
+            auto sz = end - p;
+            auto n = snprintf(std::to_address(p), sz, "%x", static_cast<int>(v));
+            if (n < 0) {
+                throw std::logic_error("[getSvg] Cannot print");
+            }
+            p += n;
+        }
+    }
+    auto remder = end - p;
+    if (remder < static_cast<ptrdiff_t>(extension.size() + 1))
+        throw std::logic_error("[getSvg] Buffer overrun");
+    p = std::copy(extension.begin(), extension.end(), p);
+    *p = 0;
+}
+
+
 std::string_view EmojiPainter::getSvg(std::u32string_view text)
 {
     // Load tape
@@ -230,26 +258,7 @@ std::string_view EmojiPainter::getSvg(std::u32string_view text)
 
     // Get text
     char fname[80];
-    char* p = std::begin(fname);
-    const char* end = std::end(fname);
-    for (auto v : text) {
-        if (v != VS16) {
-            if (p != std::begin(fname)) {
-                *(p++) = '-';
-            }
-            auto sz = end - p;
-            auto n = snprintf(p, sz, "%x", static_cast<int>(v));
-            if (n < 0) {
-                throw std::logic_error("[getSvg] Cannot print");
-            }
-            p += n;
-        }
-    }
-    constexpr std::string_view SUFFIX = ".svg";
-    auto remder = end - p;
-    if (remder < static_cast<ptrdiff_t>(SUFFIX.size() + 1))
-        throw std::logic_error("[getSvg] Buffer overrun");
-    strncpy(p, SUFFIX.data(), remder);
+    getFileName(fname, text, ".svg");
 
     // Find in directory
     auto it = directory.find(fname);

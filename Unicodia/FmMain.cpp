@@ -1745,5 +1745,15 @@ int FmMain::pixSize() const
 
 void FmMain::dumpTiles()
 {
-    /// @todo [urgent] #148 dump tiles
+    std::ofstream os("tiles.txt");
+    for (auto& v : uc::libNodes) {
+        auto tiles = LibModel::getCharTiles(v);
+        for (auto& tile : tiles) {
+            if (tile.isEmoji()) {
+                char buf[80];
+                EmojiPainter::getFileName(buf, tile.text, {});
+                os << buf << '\n';
+            }
+        }
+    }
 }
