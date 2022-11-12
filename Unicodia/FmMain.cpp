@@ -32,7 +32,6 @@
 #include "Skin.h"
 #include "Wiki.h"   // used! — we specialize its template
 #include "MyWiki.h"
-#include "CharPaint.h"
 
 // Forms
 #include "FmPopup.h"
@@ -705,22 +704,30 @@ const uc::LibNode* LibModel::goToText(const uc::LibNode& x)
     }
 }
 
+CharTiles LibModel::getCharTiles(const uc::LibNode& node)
+{
+    CharTiles tiles;
+    if (node.value.empty()) {
+        size_t iTile = 0;
+        for (int iChild = 0; iChild < node.nChildren; ++iChild) {
+            auto textNode = goToText(uc::libNodes[node.iFirstChild + iChild]);
+            if (textNode) {
+                auto& tile = tiles[iTile];
+                tile.text = textNode->value;
+                tile.emojiDraw = textNode->emojiDraw();
+                if (++iTile >= std::size(tiles))
+                    break;
+            }
+        }
+    }
+    return tiles;
+}
+
 void LibModel::drawFolderTile(
         QPainter* painter, const QRect& bounds,
         const uc::LibNode& node, const QColor& color)
 {
-    CharTiles tiles;
-    size_t iTile = 0;
-    for (int iChild = 0; iChild < node.nChildren; ++iChild) {
-        auto textNode = goToText(uc::libNodes[node.iFirstChild + iChild]);
-        if (textNode) {
-            auto& tile = tiles[iTile];
-            tile.text = textNode->value;
-            tile.emojiDraw = textNode->emojiDraw();
-            if (++iTile >= std::size(tiles))
-                break;
-        }
-    }
+    CharTiles tiles = getCharTiles(node);
     drawCharTiles(painter, bounds, tiles, color);
 }
 
@@ -804,6 +811,10 @@ FmMain::FmMain(QWidget *parent)
     // Reload language
     shcut = new QShortcut(QKeySequence(Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::reloadLanguage);
+
+    // Write tiles
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F12), this);
+    connect(shcut, &QShortcut::activated, this, &This::dumpTiles);
 }
 
 
@@ -1729,4 +1740,10 @@ int FmMain::pixSize() const
     auto& fn = font();
     QFontMetrics metrics{fn};
     return (metrics.ascent() + metrics.descent()) * 3;
+}
+
+
+void FmMain::dumpTiles()
+{
+    /// @todo [urgent] #148 dump tiles
 }

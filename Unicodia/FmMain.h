@@ -24,6 +24,7 @@
 #include "FontMatch.h"
 #include "MyWiki.h"
 #include "d_Config.h"
+#include "CharPaint.h"
 
 // Forms
 #include "FmPopup.h"
@@ -256,6 +257,7 @@ private:
             QPainter* painter, const QRect& bounds,
             const uc::LibNode& node, const QColor& color);
     static const uc::LibNode* goToText(const uc::LibNode& x);
+    static CharTiles getCharTiles(const uc::LibNode& node);
 };
 
 
@@ -385,6 +387,7 @@ private slots:
     void anchorClicked(const QUrl &arg1);
     void cjkExpandCollapse();
     void showTofuStats();
+    void dumpTiles();
     void openSearch();
     void closeSearch();
     void startSearch();
