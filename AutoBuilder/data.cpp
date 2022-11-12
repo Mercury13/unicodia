@@ -1517,6 +1517,14 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x23F4E },   // 23F4E is G U3, SimSun shows T, BS OK
     { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
 
+    // Mathematical: Cambria → Noto
+    { 0x2201 },
+    { 0x22DA, 0x22DB },
+    { 0x27EC, 0x27ED },
+    { 0x298B, 0x298C },
+    { 0x2997, 0x2998 },
+    { 0x2A79, 0x2AAD },  // greater-less
+
     // Egyptian while Noto is BAAD
     { 0x1300A },
     { 0x13017 },

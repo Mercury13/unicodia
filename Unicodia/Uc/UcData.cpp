@@ -77,8 +77,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Math Cambria (fall to next)
-    { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                       // Math
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math
+      { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …1
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
@@ -2191,7 +2191,7 @@ constinit const uc::Block uc::blocks[] {
     // Math alnum OK
     { 0x1D400, 0x1D7FF, { 0x1D4E0, EcContinent::NONE },
             "Mathematical Alphanumeric Symbols",
-            { EcScript::ZMAT, 'a' }, EcScript::NONE, EcFont::MATH_CAMBRIA,
+            { EcScript::ZMAT, 'a' }, EcScript::NONE, EcFont::MATH,
             Bfg::HIPRIO_NUMBERS },
     // Sutton SignWriting OK
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },

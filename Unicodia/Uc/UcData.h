@@ -181,8 +181,8 @@ namespace uc {
            Z_PUN_1,
            Z_PUN_2,
            Z_PUN_3,
-         MATH_CAMBRIA,  // fall through
          MATH,
+           Z_MAT_1,
          MUSIC,
            Z_MUS_1,
          MUSIC_BIGGER,
