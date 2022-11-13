@@ -534,8 +534,13 @@ int main()
         /// @todo [future] Sometimes we have fixups, what to take?
         /// @todo [future] Sometimes we have abbreviations, take them
         std::string_view sName = elChar.attribute("na").as_string();
-        if (sName.empty())
+        if (sName.empty()) {
             sName = elChar.attribute("na1").as_string();
+            // Remove abbreviation in brackets
+            if (auto pos = sName.find(" ("sv); pos != std::string_view::npos) {
+                sName = sName.substr(0, pos);
+            }
+        }
 
         std::string_view defaultAbbrev {};      // empty
         std::vector<std::string_view> allAbbrevs;
@@ -559,26 +564,32 @@ int main()
         // Aliases?
         for (auto elAlias : elChar.children("name-alias")) {
             std::string_view sType = elAlias.attribute("type").as_string();
+            std::string_view newName =  elAlias.attribute("alias").as_string();
             if (sType == "alternate"sv) {
-                restAliases.emplace_back(elAlias.attribute("alias").as_string());
-            } else if (sType == "control"sv || sType == "figment") {
-                if (sName.empty())
-                    sName = elAlias.attribute("alias").as_string();
-            } else if (sType == "correction") {
+                restAliases.emplace_back(newName);
+            } else if (sType == "control"sv || sType == "figment"sv) {
+                if (sName.empty()) {
+                    sName = newName;
+                } else {
+                    // Find everywhere
+                    if (sName != newName
+                        && std::find(restAliases.begin(), restAliases.end(), newName) == restAliases.end()) {
+                        restAliases.emplace_back(newName);
+                    }
+                }
+            } else if (sType == "correction"sv) {
                 // Checked known chars, and corrections ARE BETTER than originals
-                sName = elAlias.attribute("alias").as_string();
+                sName = newName;
             } else if (sType == "abbreviation") {
                 // Abbreviations
                 switch (abbrevState) {
                 case AbbrevState::DISABLE: break;
-                case AbbrevState::NORMAL: {
-                        auto abbr = elAlias.attribute("alias").as_string();
-                        if (abbr != defaultAbbrev)      // do not dupe defaultAbbrev
-                            allAbbrevs.push_back(abbr);
-                    }
+                case AbbrevState::NORMAL:
+                    if (newName != defaultAbbrev)      // do not dupe defaultAbbrev
+                        allAbbrevs.push_back(newName);
                     break;
                 case AbbrevState::ALIAS:
-                    aliasAbbrevs.emplace_back(elAlias.attribute("alias").as_string());
+                    aliasAbbrevs.emplace_back(newName);
                     break;
                 }
             }
