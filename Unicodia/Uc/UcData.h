@@ -214,6 +214,7 @@ namespace uc {
         BHAIKSUKI,
         BRAHMI,
           Z_BRA_1,
+          Z_BRA_2,
         BUGINESE,   // Here we use Lelewadee UI → specialized W7 font
           Z_BUG_1,
         BUHID,
@@ -402,22 +403,24 @@ namespace uc {
     ///            Better use STUB_VICEVERSA with temporary font (loaded from file, not system)
     ///
     enum class Ffg {
-        BOLD            = 1<<0,     ///< Weight: bold
-        SEMIBOLD        = 1<<1,     ///< Weight: semibold
-        LIGHT           = 1<<2,     ///< Weight: light
-        STUB_OFF        = 1<<3,     ///< Disable circle stub
-        DESC_STD        = 1<<4,     ///< Use standard font in descriptions, not this
-        DESC_BIGGER     = 1<<5,     ///< Use bigger font in descriptions
-        DESC_SMALLER    = 1<<6,     ///< Use smaller font in descriptions
-        FALL_TO_NEXT    = 1<<7,     ///< Also use the next font if failed to find
-        BUG_FIXUP       = 1<<8,     ///< Use only for chars flagged as “render bug”
-        BUG_AVOID       = 1<<9,     ///< Avoid for chars flagged as “render bug”
-        CELL_SMALLER    = 1<<10,    ///< Make cell text a bit smaller
-        CELL_BIGGER     = 1<<11,    ///< Make cell text a bit smaller
-        STUB_FINEGRAINED= 1<<12,    ///< Stub on/off is controlled on finer level
-        STUB_RTL        = 1<<13,    ///< Use “RtL isolate” char in stub
-        STUB_INTERCHAR  = 1<<14,    ///< Debug: test inter-character interval
-        NOHINT_TINY     = 1<<15,    ///< Unglitch: no anti-aliasing in tiny sizes
+        BOLD              = 1<<0,   ///< Weight: bold
+        SEMIBOLD          = 1<<1,   ///< Weight: semibold
+        LIGHT             = 1<<2,   ///< Weight: light
+        STUB_OFF          = 1<<3,   ///< Disable circle stub
+        DESC_STD          = 1<<4,   ///< Use standard font in descriptions, not this
+        DESC_BIGGER       = 1<<5,   ///< Use bigger font in descriptions
+        DESC_SMALLER      = 1<<6,   ///< Use smaller font in descriptions
+        FALL_TO_NEXT      = 1<<7,   ///< Also use the next font if failed to find
+        BUG_FIXUP         = 1<<8,   ///< Use only for chars flagged as “render bug”
+        BUG_AVOID         = 1<<9,   ///< Avoid for chars flagged as “render bug”
+        CELL_SMALLER      = 1<<10,  ///< Make cell text a bit smaller
+        CELL_BIGGER       = 1<<11,  ///< Make cell text a bit smaller
+        STUB_FINEGRAINED  = 1<<12,  ///< Stub on/off is controlled on finer level
+        STUB_RTL          = 1<<13,  ///< Use “RtL isolate” char in stub
+        STUB_INTERCHAR    = 1<<14,  ///< Debug: test inter-character interval
+        NOHINT_TINY       = 1<<15,  ///< Unglitch: no anti-aliasing in tiny sizes
+        FALL2_IF_ACCEPTED = 1<<16,  ///< Fall over one font if not rejected;
+                                    ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -456,6 +459,13 @@ namespace uc {
             : text(aText), recode(aRecode) {}
     };
 
+    struct ProbeChar {
+        char32_t value = 0;
+        constexpr ProbeChar() noexcept = default;
+        explicit constexpr ProbeChar(char32_t x) noexcept : value(x) {}
+        explicit operator bool() const noexcept { return value; }
+    };
+
     struct Font
     {
         static const QString qempty;
@@ -464,10 +474,11 @@ namespace uc {
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
+        ProbeChar probeChar {};
 
         mutable struct Q {
             std::shared_ptr<LoadedFont> loaded {};
-            TempFont tempFont;
+            bool isRejected = false;
             consteval Q() = default;
             consteval Q(const Q&) {};
         } q {};
@@ -485,6 +496,11 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                Flags<Ffg> aFlags,
+                ProbeChar aProbeChar)
+            : family(aFamily), flags(aFlags), probeChar(aProbeChar) {}
         consteval Font(
                 const Family& aFamily,
                 Flags<Ffg> aFlags = {},
