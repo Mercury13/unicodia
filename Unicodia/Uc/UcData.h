@@ -10,7 +10,6 @@
 
 // Misc
 #include "u_TypedFlags.h"
-#include "i_TempFont.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
@@ -478,6 +477,9 @@ namespace uc {
 
         mutable struct Q {
             std::shared_ptr<LoadedFont> loaded {};
+            /// Currently have one reason for rejection: probed and failed
+            /// (Brahmi only)
+            /// Dubbed as “fall to next” for description font
             bool isRejected = false;
             consteval Q() = default;
             consteval Q(const Q&) {};
@@ -487,7 +489,7 @@ namespace uc {
         int computeSize(FontPlace place, int size) const;
         QFont get(FontPlace place, int size, bool noAa, char32_t trigger) const;
         bool doesSupportChar(char32_t x) const;
-        const QString& familiesComma(char32_t trigger) const;
+        const QString& familiesComma() const;
 
         consteval Font(
                 std::string_view aFamily,

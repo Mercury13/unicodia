@@ -394,9 +394,9 @@ namespace {
                     const SafeVector<std::string_view>& x)
     {
         s += "<font face='";
-        auto& fnNoto = uc::fontInfo[static_cast<int>(fontId)];
-        fnNoto.load(NO_TRIGGER);
-        s += fnNoto.familiesComma(NO_TRIGGER);
+        auto& font = uc::fontInfo[static_cast<int>(fontId)];
+        font.load(NO_TRIGGER);
+        s += font.familiesComma();
         s += "'>";
         str::append(s, x.safeGetV(1, {}));
         str::append(s, "</font>");
@@ -427,7 +427,7 @@ namespace {
             str::append(s, '\'');
             if (useCustom) {
                 str::append(s, " face='"sv);
-                s += font.familiesComma(NO_TRIGGER);
+                s += font.familiesComma();
                 str::append(s, '\'');
             }
             str::append(s, '>');
@@ -465,7 +465,7 @@ namespace {
             str::append(s, x.safeGetV(1, {}));
             str::append(s, "</font>");
         } else if (name == "fontface"sv) {
-            s += font.familiesComma(0);
+            s += font.familiesComma();
         } else if (name == "nchars"sv) {
             s += QString::number(uc::N_CPS);
         } else if (name == "version"sv) {
@@ -1008,7 +1008,7 @@ void mywiki::appendStylesheet(QString& text, bool hasSignWriting)
                 ".swt td { border:1px solid ";
             text += color.name(QColor::HexArgb);
             text += "; padding:0 2px; font-family:";
-            text += font.familiesComma(NO_TRIGGER);
+            text += font.familiesComma();
             text += "; } ";
         text += ".swt a { text-decoration:none; color:palette(window-text); font-size:26pt; } "
                 ".swt th { vertical-align:middle; } ";

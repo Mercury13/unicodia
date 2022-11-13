@@ -3594,10 +3594,18 @@ QFont uc::Font::get(FontPlace place, int size, bool noAa, char32_t trigger) cons
 }
 
 
-const QString& uc::Font::familiesComma(char32_t trigger) const
+const QString& uc::Font::familiesComma() const
 {
-    load(trigger);
-    return q.loaded->familiesComma;
+    load(NO_TRIGGER);
+    if (q.isRejected) {
+        // FONT REJECTED
+        auto that = this;
+        ++that;
+        return that->familiesComma();
+    } else {
+        // Font normal
+        return q.loaded->familiesComma;
+    }
 }
 
 

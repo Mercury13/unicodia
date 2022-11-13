@@ -30,6 +30,7 @@
 // Misc
 #include "u_Strings.h"
 #include "u_Qstrings.h"
+#include "i_TempFont.h"
 
 // Project-local
 #include "Skin.h"
