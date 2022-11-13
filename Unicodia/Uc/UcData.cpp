@@ -3850,8 +3850,13 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
                 return v;
         }
         // Once again if accepted and that flag is present
-        if (!v->q.isRejected && v->flags.have(Ffg::FALL2_IF_ACCEPTED))
+        if (!v->q.isRejected && v->flags.have(Ffg::FALL2_IF_ACCEPTED)) {
             ++v;
+            // Check for that font’s flag: none → STOP
+            // (“system → backup” pair, currently unused, maybe Lontara?)
+            if (!v->flags.have(Ffg::FALL_TO_NEXT))
+                return nullptr;
+        }
         ++v;
     }
     if (matchLast != MatchLast::NO) {
