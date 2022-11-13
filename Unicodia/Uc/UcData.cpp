@@ -3849,10 +3849,10 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
             if (v->doesSupportChar(sb))
                 return v;
         }
-        ++v;
         // Once again if accepted and that flag is present
         if (!v->q.isRejected && v->flags.have(Ffg::FALL2_IF_ACCEPTED))
             ++v;
+        ++v;
     }
     if (matchLast != MatchLast::NO) {
         if (!v->doesSupportChar(sb))
