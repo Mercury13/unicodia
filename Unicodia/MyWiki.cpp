@@ -1173,7 +1173,8 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             str::QSep sp1(text, ";&nbsp; ");
             if (!im.sometimesKey.empty()) {
                 sp1.sep();
-                str::append(text, loc::get("Prop.Input.Sometimes")
+                mywiki::appendNoFont(
+                            text, loc::get("Prop.Input.Sometimes")
                                   .arg(im.sometimesKey));
             }
             if (im.hasAltCode()) {

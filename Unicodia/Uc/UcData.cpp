@@ -2938,10 +2938,10 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         switch (cp) {
         case 13:
         case 10:
-            r.sometimesKey = u8"Enter, Shift/Ctrl/Alt+Enter";
+            r.sometimesKey = u8"{{k|Enter}}, {{k|Shift/Ctrl/Alt|Enter}}";
             break;
         case 9:
-            r.sometimesKey = u8"Tab";
+            r.sometimesKey = u8"{{k|Tab}}";
             break;
         default:;
         }
