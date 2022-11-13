@@ -308,7 +308,7 @@ PriorityMap loadPrioMap(const char* fname)
         // 1. Previews (=priority 0)
         // 2. Single-char, in code order
         // 3. Others
-        if (prio == 0) {
+        if (prio != 0) {
             prio += 200'000;
             if (name.find('-') == std::string_view::npos) {    // single-char
                 // Did not find → leave as is
