@@ -38,7 +38,7 @@ struct TapeEntry
     std::u32string seq;
     std::filesystem::path fnIn;
     std::string stemOut;
-    unsigned priority = 1'000'000'000;
+    unsigned priority;
 };
 
 
@@ -110,6 +110,7 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
         return nullptr;
 
     auto stemOut = seqStem(seq);
+    unsigned prio = (seq.length() == 1) ? seq[0] : 1'000'000'000;
     auto& entry = allEntries.emplace_back(TapeEntry {
                     .iSubtape = 100000,
                     .offset = SUBTAPE_SIZE * 100,
@@ -117,6 +118,7 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
                     .seq = seq,
                     .fnIn = p,
                     .stemOut = stemOut,
+                    .priority = prio
                 });
 
     return &entry;
@@ -269,7 +271,9 @@ void TapeWriter::write()
             std::ifstream is(pEntry->fnIn, std::ios::binary);
             if (!is.read(tapeBuf.data() + pEntry->offset, pEntry->length))
                 throw std::logic_error("Strange file size");
-            std::cout << pEntry->stemOut << std::endl;
+            std::cout << pEntry->stemOut
+                      << "     prio=" << pEntry->priority
+                      << std::endl;
         }
 
         // Generate subtape name
@@ -302,24 +306,19 @@ PriorityMap loadPrioMap(const char* fname)
     doc.load_file(fname);
     auto hRoot = doc.root().child("opt");
     for (auto child : hRoot.children("file")) {
-        std::string_view name = child.attribute("name").as_string();
+        auto name = child.attribute("name").as_string();
         auto prio = child.attribute("prio").as_int(999'999);
         // Priority is…
         // 1. Previews (=priority 0)
-        // 2. Single-char, in code order
+        // 2. Single-char, in code order (not here and just omitted)
         // 3. Others
         if (prio != 0) {
-            prio += 200'000;
-            if (name.find('-') == std::string_view::npos) {    // single-char
-                // Did not find → leave as is
-                std::from_chars(
-                            std::to_address(name.begin()),
-                            std::to_address(name.end()),
-                            prio, 16);
+            prio += 300'000;
+            if (strchr(name, '-') == nullptr) {
+                continue;
             }
         }
-        // name is zeroed
-        r[name.data()] = prio;
+        r[name] = prio;
     }
     return r;
 }
