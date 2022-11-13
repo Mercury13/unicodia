@@ -34,7 +34,6 @@ namespace uc {
 
     DEFINE_ENUM_OPS(Lfg)
 
-    /// @todo [textRoles] finish?
     enum class TextRole : unsigned char {
         CMD_END = 0,    // Command: text end
         MAIN_NAME = 1,  // Character’s name, should exist
