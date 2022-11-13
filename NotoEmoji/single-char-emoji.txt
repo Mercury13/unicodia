@@ -1,6 +1,3 @@
-1f6de
-a9
-ae
 1f004
 1f0cf
 1f170
@@ -859,6 +856,7 @@ ae
 1f6d7
 1f6dc
 1f6dd
+1f6de
 1f6df
 1f6e0
 1f6e1
@@ -1180,6 +1178,7 @@ ae
 1faa4
 1faa5
 1faa6
+1faa7
 1faa8
 1faa9
 1faaa
@@ -1239,6 +1238,8 @@ ae
 1faf4
 1faf5
 1faf6
+1faf7
+1faf8
 203c
 2049
 2122
@@ -1407,6 +1408,5 @@ ae
 303d
 3297
 3299
-1faa7
-1faf7
-1faf8
+a9
+ae

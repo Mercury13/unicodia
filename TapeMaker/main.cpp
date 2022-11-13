@@ -1,7 +1,13 @@
+// STL
 #include <iostream>
 #include <fstream>
 #include <filesystem>
 #include <bit>
+#include <set>
+#include <unordered_map>
+
+// XML
+#include "pugixml.hpp"
 
 // Libs
 #include "i_ByteSwap.h"
@@ -32,8 +38,11 @@ struct TapeEntry
     std::u32string seq;
     std::filesystem::path fnIn;
     std::string stemOut;
-    bool isQuickAccess;
+    unsigned priority = 1'000'000;
 };
+
+
+using PriorityMap = std::unordered_map<std::string, int>;
 
 
 class TapeWriter
@@ -41,6 +50,7 @@ class TapeWriter
 public:
     /// @return [0] not added [+] its filename
     TapeEntry* addFile(const std::filesystem::path& p, unsigned fsize);
+    void sortBy(const PriorityMap& prioMap);
     void write();
 private:
     static constexpr int SUBTAPE_SIZE = 1'000'000;
@@ -107,7 +117,6 @@ TapeEntry* TapeWriter::addFile(const std::filesystem::path& p, unsigned fsize)
                     .seq = seq,
                     .fnIn = p,
                     .stemOut = stemOut,
-                    .isQuickAccess = false,
                 });
 
     return &entry;
@@ -215,11 +224,32 @@ void TapeWriter::writeDirectory() const
 
 void TapeWriter::writeList() const
 {
-    std::ofstream os("single-char-emoji.txt");
+    std::vector<std::string_view> tmp;
     for (auto& entry : allEntries) {
         if (entry.seq.size() == 1)
-            os << entry.stemOut << '\n';
+            tmp.push_back(entry.stemOut);
     }
+
+    std::sort(tmp.begin(), tmp.end());
+
+    std::ofstream os("single-char-emoji.txt");
+    for (auto& x : tmp) {
+        os << x << '\n';
+    }
+}
+
+
+void TapeWriter::sortBy(const PriorityMap& prioMap)
+{
+    for (auto& entry : allEntries) {
+        if (auto it = prioMap.find(entry.stemOut); it != prioMap.end()) {
+            entry.priority = it->second;
+        }
+    }
+    std::stable_sort(allEntries.begin(), allEntries.end(),
+                    +[](const TapeEntry& x, const TapeEntry& y) {
+                        return (x.priority < y.priority);
+                    });
 }
 
 
@@ -265,8 +295,24 @@ void deleteBinaries()
     }
 }
 
+PriorityMap loadPrioMap(const char* fname)
+{
+    PriorityMap r;
+    pugi::xml_document doc;
+    doc.load_file(fname);
+    auto hRoot = doc.root().child("opt");
+    for (auto child : hRoot.children("file")) {
+        auto name = child.attribute("name").as_string();
+        auto prio = child.attribute("prio").as_int(999'999);
+        r[name] = prio;
+    }
+    return r;
+}
+
 int main()
 {
+    auto prioMap = loadPrioMap("opt.xml");
+
     deleteBinaries();
     TapeWriter tw;
     std::filesystem::path pExt(".svg");
@@ -279,5 +325,6 @@ int main()
             }
         }
     }
+    tw.sortBy(prioMap);
     tw.write();
 }
