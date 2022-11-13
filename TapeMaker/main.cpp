@@ -304,7 +304,11 @@ PriorityMap loadPrioMap(const char* fname)
     for (auto child : hRoot.children("file")) {
         std::string_view name = child.attribute("name").as_string();
         auto prio = child.attribute("prio").as_int(999'999);
-        if (prio != 0) {    // prio == 0 — ALWAYS FIRST
+        // Priority is…
+        // 1. Previews (=priority 0)
+        // 2. Single-char, in code order
+        // 3. Others
+        if (prio == 0) {
             prio += 200'000;
             if (name.find('-') == std::string_view::npos) {    // single-char
                 // Did not find → leave as is
