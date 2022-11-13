@@ -8,6 +8,9 @@
 #include <bit>
 #include <filesystem>
 
+// XML
+#include "pugixml.hpp"
+
 // Qt
 #include <QTableView>
 #include <QTextFrame>
@@ -1743,17 +1746,40 @@ int FmMain::pixSize() const
 }
 
 
+namespace {
+
+    void addPriority(pugi::xml_node node, std::u32string_view text, int priority)
+    {
+        char buf[80];
+        EmojiPainter::getFileName(buf, text, {});
+        auto h = node.append_child("file");
+        h.append_attribute("name") = buf;
+        h.append_attribute("prio") = priority;
+    }
+
+}
+
+
 void FmMain::dumpTiles()
 {
-    std::ofstream os("tiles.txt");
+    std::unordered_set<std::u32string_view> prio0;
+    pugi::xml_document doc;
+    auto hRoot = doc.root().append_child("opt");
+    // Priority 0
     for (auto& v : uc::libNodes) {
         auto tiles = LibModel::getCharTiles(v);
         for (auto& tile : tiles) {
             if (tile.isEmoji()) {
-                char buf[80];
-                EmojiPainter::getFileName(buf, tile.text, {});
-                os << buf << '\n';
+                addPriority(hRoot, tile.text, 0);
+                prio0.insert(tile.text);
             }
         }
     }
+    // Other priority
+    for (auto& v : uc::libNodes) {
+        if (!v.value.empty() && !prio0.contains(v.value)) {
+            addPriority(hRoot, v.value, v.iParent);
+        }
+    }
+    doc.save_file("opt.xml");
 }
