@@ -48,7 +48,7 @@ namespace str {
             const size_t szNeedle = needle.length();
             const size_t szByWhat = byWhat.length();
             size_t p = 0, r = 0;
-            while ((p = haystack.find(needle.data(), p, needle.size())) != Str::npos) {
+            while ((p = haystack.find(needle.data(), p, szNeedle)) != Str::npos) {
                 haystack.replace(p, szNeedle, byWhat);
                 p += szByWhat;
                 ++r;
