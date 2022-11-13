@@ -3862,8 +3862,12 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
             ++v;
             // Check for that font’s flag: none → STOP
             // (“system → backup” pair, currently unused, maybe Lontara?)
-            if (!v->flags.have(Ffg::FALL_TO_NEXT))
+            if (!v->flags.have(Ffg::FALL_TO_NEXT)) {
+                // what the frag to do?
+                if (matchLast == MatchLast::NO)
+                    return v;
                 return nullptr;
+            }
         }
         ++v;
     }
