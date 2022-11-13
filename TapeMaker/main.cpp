@@ -38,7 +38,7 @@ struct TapeEntry
     std::u32string seq;
     std::filesystem::path fnIn;
     std::string stemOut;
-    unsigned priority = 1'000'000;
+    unsigned priority = 1'000'000'000;
 };
 
 
@@ -302,9 +302,20 @@ PriorityMap loadPrioMap(const char* fname)
     doc.load_file(fname);
     auto hRoot = doc.root().child("opt");
     for (auto child : hRoot.children("file")) {
-        auto name = child.attribute("name").as_string();
+        std::string_view name = child.attribute("name").as_string();
         auto prio = child.attribute("prio").as_int(999'999);
-        r[name] = prio;
+        if (prio != 0) {    // prio == 0 — ALWAYS FIRST
+            prio += 200'000;
+            if (name.find('-') == std::string_view::npos) {    // single-char
+                // Did not find → leave as is
+                std::from_chars(
+                            std::to_address(name.begin()),
+                            std::to_address(name.end()),
+                            prio, 16);
+            }
+        }
+        // name is zeroed
+        r[name.data()] = prio;
     }
     return r;
 }
