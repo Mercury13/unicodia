@@ -1748,13 +1748,17 @@ int FmMain::pixSize() const
 
 namespace {
 
-    void addPriority(pugi::xml_node node, std::u32string_view text, int priority)
+    void addPriority(
+            pugi::xml_node node, std::u32string_view text, int priority,
+            bool allowSingleChar)
     {
         char buf[80];
         EmojiPainter::getFileName(buf, text, {});
-        auto h = node.append_child("file");
-        h.append_attribute("name") = buf;
-        h.append_attribute("prio") = priority;
+        if (allowSingleChar || strchr(buf, '-') != nullptr) {
+            auto h = node.append_child("file");
+            h.append_attribute("name") = buf;
+            h.append_attribute("prio") = priority;
+        }
     }
 
 }
@@ -1770,7 +1774,7 @@ void FmMain::dumpTiles()
         auto tiles = LibModel::getCharTiles(v);
         for (auto& tile : tiles) {
             if (tile.isEmoji()) {
-                addPriority(hRoot, tile.text, 0);
+                addPriority(hRoot, tile.text, 0, true);
                 prio0.insert(tile.text);
             }
         }
@@ -1778,7 +1782,7 @@ void FmMain::dumpTiles()
     // Other priority
     for (auto& v : uc::libNodes) {
         if (!v.value.empty() && !prio0.contains(v.value)) {
-            addPriority(hRoot, v.value, v.iParent);
+            addPriority(hRoot, v.value, v.iParent, false);
         }
     }
     doc.save_file("opt.xml");
