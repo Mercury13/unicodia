@@ -395,7 +395,6 @@ namespace {
     {
         s += "<font face='";
         auto& font = uc::fontInfo[static_cast<int>(fontId)];
-        font.load(NO_TRIGGER);
         s += font.familiesComma();
         s += "'>";
         str::append(s, x.safeGetV(1, {}));
