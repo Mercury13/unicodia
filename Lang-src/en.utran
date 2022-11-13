@@ -4797,7 +4797,7 @@
       <p />
       <p>Письменности брахмийского происхождения сильно меняют графику символов и звук по умолчанию, но сохраняют все эти особенности и называются «брахмийские абугиды».</p>
       <p />
-      <p>Часто стечения согласных записываются столбиком из букв, в шрифте ''Noto'' это не реализовано (braahmii={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}}), но есть в шрифте ''Segoe UI Historic'', появившемся в Windows 10: braahmii=&lt;font face='Segoe UI Historic' size='+3'&gt;𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻&lt;/font&gt;.</p>
+      <p>Часто стечения согласных записываются столбиком из букв: braahmii={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (неверно отображается в Windows 7/8).</p>
       <p />
       <p>Юникод не{{_}}различает брахми по времени и месту; большинство шрифтов близки к геометричным надписям Ашоки. К V{{_}}веку брахми трансформировалось в две крупных ветви:</p>
       <p>* северная (=гупта, позднее брахми, северное брахми) → [[ps:Shrd|шарада]], [[ps:Sidd|сиддхаматрика]], [[ps:Deva|нагари]], [[ps:Tibt|тибетский]], [[ps:Bhks|бхайкшуки]];</p>
@@ -4810,7 +4810,7 @@
       <p />
       <p>Scripts of Brahmic origin greaty change graphics of characters and inherent phoneme, but conserve these features and are named “Brahmic abugidas”.</p>
       <p />
-      <p>Consonant conjuncts are often written with a stack of letters, in ''Noto'' font it’s not implemented (braahmii={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}}), but is present in ''Segoe UI Historic'' font introduced in Windows 10: braahmii=&lt;font face='Segoe UI Historic' size='+3'&gt;𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻&lt;/font&gt;.</p>
+      <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (not rendered properly in Windows 7/8).</p>
       <p />
       <p>Unicode does not distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
       <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
