@@ -47,6 +47,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "CHAM",           Dicf::TRIG_SCRIPT },
     { "CHEROKEE",       Dicf::TRIG_SCRIPT },
     { "CHINESE",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "CHORASMIAN",     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "CIRTH",          Dicf::TRIG_SCRIPT },
     { "CJK",            Dicf::CAP_ALL | Dicf::TRIG_SCRIPT },
     { "COPTIC",         Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
@@ -66,6 +67,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
      { "AKURU",         Dicf::TRIG_SCRIPT },
     { "EGYPTIAN",       Dicf::TRIG_SCRIPT },
     { "ELBASAN",        Dicf::TRIG_SCRIPT },
+    { "ELYMAIC",        Dicf::TRIG_SCRIPT },
     { "ETHIOPIC",       Dicf::TRIG_SCRIPT },
       { "GURAGE",       Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KHUTSURI",       Dicf::TRIG_SCRIPT },    // Unused, but…
@@ -97,17 +99,13 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HEBREW",         Dicf::TRIG_SCRIPT },
     { "HIRAGANA",       Dicf::TRIG_SCRIPT },
     { "HENTAIGANA",     Dicf::TRIG_SCRIPT },
-    { "PAHAWH",         Dicf::TRIG_SCRIPT },
-    { "HMONG",          Dicf::TRIG_SCRIPT },
-     { "NYIAKENG",      Dicf::TRIG_SCRIPT },
-     { "PUACHUE",       Dicf::TRIG_SCRIPT },
     { "HUNGARIAN",      Dicf::TRIG_SCRIPT },
     { "INDIC",          Dicf::TRIG_SCRIPT },
     { "INDUS",          Dicf::TRIG_SCRIPT },
     // Interesting case: ITALIC is script with OLD only
     // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
     { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
-                            {}, "ITALIC", "PERMIC" } },
+                            {}, "ITALIC", "PERMIC", "PERSIAN" } },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JUDEO-SPANISH",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Judeo-Spanish" } },
@@ -123,6 +121,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "KHOJKI",         Dicf::TRIG_SCRIPT },
     { "KHITAN",         Dicf::TRIG_SCRIPT },
     { "KHUDAWADI",      Dicf::TRIG_SCRIPT },
+    { "KLINGON",        Dicf::TRIG_SCRIPT },
     { "KOREAN",         Dicf::TRIG_SCRIPT },
     { "KPELLE",         Dicf::TRIG_SCRIPT },
     { "KAITHI",         Dicf::TRIG_SCRIPT },
@@ -143,12 +142,14 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MANDAEAN",       Dicf::TRIG_SCRIPT },
     { "MANICHAEAN",     Dicf::TRIG_SCRIPT },
     { "MARCHEN",        Dicf::TRIG_SCRIPT },
+    { "MAYAN",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "MEDEFAIDRIN",    Dicf::TRIG_SCRIPT },
     { "MEETEI",         Dicf::TRIG_SCRIPT },
       { "MAYEK",        Dicf::TRIG_SCRIPT },
     { "MENDE",          Dicf::TRIG_SCRIPT | Dicf::TRIG_DIGIT_PROPAGATES_RIGHT },
       { "KIKAKUI",      Dicf::TRIG_SCRIPT | Dicf::TRIG_DIGIT_PROPAGATES_RIGHT },
     { "MEROITIC",       Dicf::TRIG_SCRIPT },
+    { "MIAO",           Dicf::TRIG_SCRIPT },
     { "MIDDLE-WELSH",   { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Middle-Welsh" } },
     { "MODI",           Dicf::TRIG_SCRIPT },
     { "MONGOLIAN",      Dicf::TRIG_SCRIPT },
@@ -166,21 +167,25 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "NUSHU",          Dicf::TRIG_SCRIPT },
     { "OGHAM",          Dicf::TRIG_SCRIPT },
     { "OL",             { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv } },
+    { "OTTOMAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "TURKIC",         Dicf::TRIG_SCRIPT },
     { "ORIYA",          Dicf::TRIG_SCRIPT },
     { "OSAGE",          Dicf::TRIG_SCRIPT },
     { "OSMANYA",        Dicf::TRIG_SCRIPT },
+    { "PAHAWH",         Dicf::TRIG_SCRIPT },
+      { "HMONG",          Dicf::TRIG_SCRIPT },
+      { "NYIAKENG",      Dicf::TRIG_SCRIPT },
+      { "PUACHUE",       Dicf::TRIG_SCRIPT },
+    { "PAHLAVI",        Dicf::TRIG_SCRIPT },
     { "PALI",           Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "PALMYRENE",      Dicf::TRIG_SCRIPT },
+    { "PARTHIAN",       Dicf::TRIG_SCRIPT },
     { "PAU",            { Dicf::TRIG_THREE_WORD_SCRIPT, {}, "CIN"sv, "HAU"sv } },
     { "PERSIAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "PHAISTOS",       { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "DISC" } },
     { "PHAGS-PA",       Dicf::TRIG_SCRIPT },
-    { "PAHLAVI",        Dicf::TRIG_SCRIPT },
     { "PHOENICIAN",     Dicf::TRIG_SCRIPT },
-    { "KLINGON",        Dicf::TRIG_SCRIPT },
-    { "MIAO",           Dicf::TRIG_SCRIPT },
-    { "PARTHIAN",       Dicf::TRIG_SCRIPT },
+    { "PHILIPPINE",     Dicf::TRIG_SCRIPT },
     { "REJANG",         Dicf::TRIG_SCRIPT },
     { "ROMAN",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "RONGORONGO",     Dicf::TRIG_SCRIPT },
@@ -196,7 +201,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SIDDHAM",        Dicf::TRIG_SCRIPT },
     { "SIGNWRITING",    { Dicf::PART_NOUN | Dicf::TRIG_SCRIPT, "SignWriting" } },
     { "SINHALA",        Dicf::TRIG_SCRIPT },
-    { "SIYAQ",          Dicf::TRIG_SCRIPT },
+    { "SIYAQ",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "SORA",           { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "SOMPENG"sv } },
     { "SOYOMBO",        Dicf::TRIG_SCRIPT },
     { "SUNDANESE",      Dicf::TRIG_SCRIPT },
@@ -206,7 +211,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SYRIAC",         Dicf::TRIG_SCRIPT },
     { "TAGBANWA",       Dicf::TRIG_SCRIPT },
     { "TAKRI",          Dicf::TRIG_SCRIPT },
-    { "TAI",            { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LE"sv, "LUE"sv, "VIET"sv, "THAM"sv, "LAING"sv } },
+    { "TAI",            { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LE"sv, "VIET"sv, "THAM"sv, "LAING"sv } },
       { "LAING",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::IF_NEXT_NOT_NOUN },
     { "TAMIL",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "TANGSA",         Dicf::TRIG_SCRIPT },
@@ -232,6 +237,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "VITHKUQI",       Dicf::TRIG_SCRIPT },
     { "WARANG",         { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CITI"sv } },
     { "WANCHO",         Dicf::TRIG_SCRIPT },
+    { "YEZIDI"sv,       Dicf::TRIG_SCRIPT },
     { "YI"sv,           Dicf::TRIG_SCRIPT_IF_FIRST },
     { "ZANABAZAR",      Dicf::TRIG_SCRIPT },
     { "ZNAMENNY",       Dicf::TRIG_SCRIPT },
@@ -328,17 +334,32 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SIMALUNGUN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Other nations
+    { "AEGEAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "AFRICAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "AKHMIMIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "AMERICAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ASSYRIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "BOHAIRIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "BYZANTINE",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "CORNISH",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ELAMITE",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "EUROPEAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FRENCH",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "GERMAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "HARKLEAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "INDIAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "JAIN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KASHMIRI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KAZAKH",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KHAKASSIAN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KIRGHIZ",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "NORDIC",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "RUSSIAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SAKHA",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-
-    // Peoples’ names
-    { "CELSIUS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "FAHRENHEIT",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SLAVONIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "TURKISH",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
@@ -399,6 +420,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "STROKE",         Dicf::PART_NOUN },
     { "STROKES",        Dicf::PART_NOUN },
     { "SVARITA",        Dicf::PART_NOUN },
+    { "T-REX",          Dicf::PART_NOUN | Dicf::CAP_TITLE },
+    { "T-SHIRT",        Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "TACK",           Dicf::PART_NOUN },
     { "TREE",           Dicf::PART_NOUN },
     { "TSHEG",          Dicf::PART_NOUN },
@@ -409,6 +432,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "VISARGA",        Dicf::PART_NOUN },
     { "VOICING",        Dicf::PART_NOUN },
     { "WAVE",           Dicf::PART_NOUN },
+    { "X-RAY",          Dicf::PART_NOUN | Dicf::CAP_TITLE },
     { "X-X",            Dicf::PART_NOUN | Dicf::CAP_ALL },
     { "YANG",           Dicf::PART_MIXED },  // for Chinese tones, need more things
     //{ "YAT",            Dicf::PART_NOUN }, // Yat is normal (Capitalized)…
@@ -593,7 +617,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "IOTIFIED",       Dicf::PART_ADJECTIVE },
     { "INHERENT",       Dicf::PART_ADJECTIVE },
     { "INITIAL",        Dicf::PART_ADJECTIVE },
-    { "INSCRIPTIONAL",  Dicf::PART_ADJECTIVE },
+    { "INSCRIPTIONAL",  Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "INSULAR",        Dicf::PART_ADJECTIVE },
     { "INVERTED",       Dicf::PART_ADJECTIVE },
     { "JONA",           Dicf::PART_ADJECTIVE },     // Nkoo, probably small
@@ -622,7 +646,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "NASAL",          Dicf::PART_ADJECTIVE },
     { "NDOLE",          Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },   // Vai
     { "NEUTRAL",        Dicf::PART_ADJECTIVE },
-    { "NEW",            Dicf::PART_ADJECTIVE },
+    { "NEW",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_THREE_WORD_SCRIPT, {}, "TAI"sv, "LUE"sv, }},
     { "NINE-LIKE",      Dicf::PART_ADJECTIVE },
     // Old NORTH Arabian
     { "NORTH",          Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
@@ -638,7 +662,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "PHASE-D",        { Dicf::PART_ADJECTIVE, "phase-D" } },
     { "PHASE-E",        { Dicf::PART_ADJECTIVE, "phase-E" } },
     { "PHASE-F",        { Dicf::PART_ADJECTIVE, "phase-F" } },
-    { "PSALTER",        Dicf::PART_ADJECTIVE },
+    { "PSALTER",        Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT_ADJECTIVE },
     { "QUARTER",        Dicf::PART_ADJECTIVE }, // Not really OK, but works somehow
     { "REFORMED",       Dicf::PART_ADJECTIVE },
     { "REVERSE",        Dicf::PART_ADJECTIVE },
@@ -720,38 +744,93 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SANYOOGA",       Dicf::PART_ADJECTIVE },
     { "TAALUJA",        Dicf::PART_ADJECTIVE },
 
-    // Names
+    // People’s names
+    { "CELSIUS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "EULER",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FAHRENHEIT",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FRANKS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FITZPATRICK",    Dicf::CAP_TITLE },
+    { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
+    { "PETRI",          Dicf::CAP_TITLE },
+    { "PLANCK",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "TIRONIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "WEIERSTRASS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
+    // Myth/religion characters’ names
     { "AESCULAPIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "AFRICAN",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "ALLAAH",         Dicf::CAP_TITLE },
     { "ALLAAHU",        Dicf::CAP_TITLE },
     { "ALLAHOU",        Dicf::CAP_TITLE },
-    { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "CHRISTMAS",      Dicf::CAP_TITLE },
-    { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "FARSI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "FITZPATRICK",    Dicf::CAP_TITLE },
-    { "FRANKS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    // { "GARSHUNI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE }, not really correct, but small is nicer
     { "HERMES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HYGIEIA",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JOVE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
+    // Astronomy — 8 planets of Sol
+    { "JUPITER",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SATURN",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "NEPTUNE",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
+    // Astronomy — zodiac
+    { "ARIES",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "TAURUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "GEMINI",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LEO",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "VIRGO",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LIBRA",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SCORPIUS",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SAGITTARIUS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CAPRICORN",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "AQUARIUS",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PISCES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
+    // Astronomy — rest
+    { "ADMETOS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "APOLLON",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ASTRAEA",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CERES",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CHIRON",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CUPIDO",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ERIS",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "GONGGONG",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HADES",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HAUMEA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HYGIEA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "JUNO",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "KRONOS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "MAKEMAKE",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "NESSUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ORCUS",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PALLAS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PHOLUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PLUTO",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "POSEIDON",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PROSERPINA",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "QUAOAR",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "SEDNA",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "TRANSPLUTO",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "VESTA",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "VULCANUS",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ZEUS",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
+    // Other names
+    { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CHRISTMAS",      Dicf::CAP_TITLE },
+    { "FARSI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    // { "GARSHUNI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE }, not really correct, but small is nicer
+    { "HELLSCHREIBER",  Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JAPAN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JERUSALEM",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "JOVE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "KASHMIRI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "KAZAKH",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "KHAKASSIAN",     Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "KIRGHIZ",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "KAABA",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "KORANIC",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "LILITH",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "LORRAINE",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "ORKHON",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
-    { "SAKHA",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "ORTHODOX",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "RUMI",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
     { "YENISEI",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
 
@@ -782,11 +861,13 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "AIN",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "AU",             Dicf::CAP_TITLE },
     { "BEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "BET",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "B",              Dicf::CAP_TITLE },
     { "C",              Dicf::CAP_TITLE },
     { "D",              Dicf::CAP_TITLE },
     { "DAD",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "DAL",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "DALET",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "E",              Dicf::CAP_TITLE },
     { "EE",             Dicf::CAP_TITLE },
     { "EH",             Dicf::CAP_TITLE },
@@ -796,6 +877,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "FEH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "G",              Dicf::CAP_TITLE },
     { "GHAIN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "GIMEL",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "H",              Dicf::CAP_TITLE },
     { "HAH",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -1102,45 +1184,60 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
         // Vaii
     EX("Vai syllable lengthener")   // Syllable is not keyword
+        // Yiii
+    EX("Yi syllable iteration mark")
 
     // CJK
         // Hang
     EX("Hangul choseong filler")    // Simpler to add exception
     EX("Hangul jungseong filler")   // Same
         // Decorations etc
-    EX("Rounded symbol for Fu")
-    EX("Rounded symbol for Lu")
-    EX("Rounded symbol for Shou")
-    EX("Rounded symbol for Xi")
-    EX("Rounded symbol for Shuangxi")
-    EX("Rounded symbol for Cai")
-    EX("Square Hiragana Hoka")  // Better exception?
-    EX("Squared Katakana Koko")
-    EX("Squared Katakana Sa")
+    EX("rounded symbol for Fu")
+    EX("rounded symbol for Lu")
+    EX("rounded symbol for Shou")
+    EX("rounded symbol for Xi")
+    EX("rounded symbol for Shuangxi")
+    EX("rounded symbol for Cai")
+    EX("square Hiragana Hoka")  // Better exception?
+    EX("squared Katakana Koko")
+    EX("squared Katakana Sa")
 
     // SPECIALS
         // Misc
-    EX("Next line (NEL)")               // Nel is ambiguous
-    EX("Commercial At")                 // At is not a preposition
-    EX("Tag Commercial At")             // Same
-    EX("Fullwidth commercial At")       // Same
-    EX("Small commercial At")           // Same
-    EX("Fraction slash")                // Fraction’s slash
-    EX("Sloping large Or")              // Or is a tricky word
-    EX("Sloping large And")             // And is a tricky word
-    EX("Yi syllable iteration mark")    // Maybe so
-    EX("Symbol for type A electronics") // A is tricky
-    EX("Angle with S inside")           // Because of Znamenny, S is tricky
-    EX("Perpendicular with S")          // Same
-    EX("Combining ligature left half")  // Other meaning of ligature — horz parenthesis
-    EX("Combining ligature right half") // Same
-    EX("Combining ligature left half below")
-    EX("Combining ligature right half below")
+    EX("commercial At")                 // At is not a preposition
+    EX("tag Commercial At")             // Same
+    EX("fullwidth commercial At")       // Same
+    EX("small commercial At")           // Same
+    EX("symbol for type A electronics") // A is tricky
+    EX("combining ligature left half")  // Other meaning of ligature — horz parenthesis
+    EX("combining ligature right half") // Same
+    EX("combining ligature left half below")
+    EX("combining ligature right half below")
+    EX("modifier breve with inverted breve")    // Modifier
+    EX("modifier letter Low circumflex accent") // What to do with circumflex?
+    EX("modifier letter Short equals sign")     // What to do with equals?
+    EX("direct current symbol form two") // Symbol is not a keyword
+    EX("Tironian sign Capital Et")      // Does not trigger “sign”, what to do with Et
+        // Math
+    EX("small Element of")              // small sign “Element of”
+    EX("small Contains as member")      // Same
+    EX("small Element of with vertical bar at end of horizontal stroke")
+    EX("small Element of with overbar")
+    EX("small Contains with vertical bar at end of horizontal stroke")
+    EX("small Contains with overbar")
+    EX("Or with dot inside")            // Still same
+    EX("And with dot")
+    EX("angle with S inside")           // Because of Znamenny, S is tricky
+    EX("perpendicular with S")          // Same
+    EX("fraction slash")                // Fraction’s slash
+    EX("sloping large Or")              // Or is a tricky word
+    EX("sloping large And")             // And is a tricky word
     EX("Planck constant over two pi")   // pi is small here
-    EX("Modifier breve with inverted breve")    // Modifier
-    EX("Modifier letter Low circumflex accent") // What to do with circumflex?
-    EX("Modifier letter Short equals sign")     // What to do with equals?
-    EX("Direct current symbol form two") // Symbol is not a keyword
+        // Astronomy
+    EX("Earth")                         // Element of earth is small-case
+    EX("Sun")                           // Symbol of sun is small-case
+    EX("Mercury")                       // Metal of mercury is small-case
+    EX("Cancer")                        // Disease is small-case
         // Emoji
     EX("Earth globe Europe-Africa")     // Special proper name
     EX("Earth globe Americas")          // Special proper name
@@ -1148,22 +1245,24 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Milky Way")                     // Special proper name
     EX("Tokyo Tower")                   // Special proper name
     EX("Statue of Liberty")             // Special proper name
-    EX("Man with gua pi mao")           // Conflict with Greek Pi
-    EX("Face with No good gesture")     // Complex rules, better manually
-    EX("Face with OK gesture")          // Complex rules, better manually
+    EX("man with gua pi mao")           // Conflict with Greek Pi
+    EX("face with No good gesture")     // Complex rules, better manually
+    EX("face with OK gesture")          // Complex rules, better manually
     EX("OK hand sign")                  // OK is both a syllable and an emoji
-    EX("Turned OK hand sign")           // The same
+    EX("turned OK hand sign")           // The same
+    EX("Call me hand")                  // “Call me” hand
+    EX("I love you hand sign")          // same + I
         // Formatting
-    EX("National digit shapes")   // Digit is not special here
-    EX("Nominal digit shapes")    // Same
+    EX("national digit shapes")   // Digit is not special here
+    EX("nominal digit shapes")    // Same
         // Music
-    EX("Musical symbol With fingernails")       // With is not a preposition
-    EX("Musical symbol Quarter rest")           // Quarter is a tricky word
-    EX("Musical symbol Quarter note")           // The same
-    EX("Musical symbol Left repeat sign")       // Just manually, 3 chars
-    EX("Musical symbol Right repeat sign")      // The same
-    EX("Musical symbol Half pedal mark")        // The same
-    EX("Musical symbol Combining augmentation dot")  // Augmentation is a future landmine
+    EX("musical symbol With fingernails")       // With is not a preposition
+    EX("musical symbol Quarter rest")           // Quarter is a tricky word
+    EX("musical symbol Quarter note")           // The same
+    EX("musical symbol Left repeat sign")       // Just manually, 3 chars
+    EX("musical symbol Right repeat sign")      // The same
+    EX("musical symbol Half pedal mark")        // The same
+    EX("musical symbol Combining augmentation dot")  // Augmentation is a future landmine
         // Music/Znamenny
     EX("Znamenny neume Dva v chelnu")  // Better not to make exception from V
 
@@ -1172,11 +1271,11 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     // Mathematical alphabets
 #define MATH_SYM(x) \
         EX("Greek " x " symbol") \
-        EX("Mathematical bold " x " symbol") \
-        EX("Mathematical italic " x " symbol") \
-        EX("Mathematical bold italic " x " symbol") \
-        EX("Mathematical sans-serif bold " x " symbol") \
-        EX("Mathematical sans-serif bold italic " x " symbol")
+        EX("mathematical bold " x " symbol") \
+        EX("mathematical italic " x " symbol") \
+        EX("mathematical bold italic " x " symbol") \
+        EX("mathematical sans-serif bold " x " symbol") \
+        EX("mathematical sans-serif bold italic " x " symbol")
 
     MATH_SYM ("epsilon")    // Small epsilon etc here
     MATH_SYM ("theta")
@@ -1189,163 +1288,169 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Arabic mathematical Sheen")  // Ambiguous
 
     // Hand-checked CJK Latin
-    EX("Squared HV")                            // Just manually, small block
-    EX("Squared MV")
-    EX("Squared SD")
-    EX("Squared SS")
-    EX("Squared PPV")
-    EX("Squared WC")
-    EX("Square Corporation")                    // IDK what’s happening
-    EX("Square hPa")                            // A whole cohort of Chinese units
-    EX("Square IU")
-    EX("Square da")
-    EX("Square AU")
-    EX("Square bar")
-    EX("Square oV")
-    EX("Square pc")
-    EX("Square dm squared")
-    EX("Square pA amps")
-    EX("Square nA")
-    EX("Square mu A")
-    EX("Square mA")
-    EX("Square kA")
-    EX("Square KB")
-    EX("Square MB")
-    EX("Square GB")
-    EX("Square cal")
-    EX("Square kcal")
-    EX("Square pF")
-    EX("Square nF")
-    EX("Square mu F")
-    EX("Square mu G")
-    EX("Square mg")
-    EX("Square kg")
-    EX("Square Hz")
-    EX("Square kHz")
-    EX("Square MHz")
-    EX("Square GHz")
-    EX("Square THz")
-    EX("Square mu l")
-    EX("Square ml")
-    EX("Square dl")
-    EX("Square kl")
-    EX("Square fm")
-    EX("Square nm")
-    EX("Square mu m")
-    EX("Square mm")
-    EX("Square cm")
-    EX("Square km")
-    EX("Square mm squared")
-    EX("Square cm squared")
-    EX("Square m squared")
-    EX("Square km squared")
-    EX("Square mm cubed")
-    EX("Square m cubed")
-    EX("Square km cubed")
-    EX("Square m over s")
-    EX("Square m over s squared")
-    EX("Square Pa")
-    EX("Square kPa")
-    EX("Square MPa")
-    EX("Square GPa")
-    EX("Square rad")
-    EX("Square rad over s")
-    EX("Square rad over s squared")
-    EX("Square ps")
-    EX("Square ns")
-    EX("Square mu s")
-    EX("Square ms")
-    EX("Square pV")
-    EX("Square nV")
-    EX("Square mu V")
-    EX("Square mV")
-    EX("Square kV")
-    EX("Square MV mega")
-    EX("Square pW")
-    EX("Square nW")
-    EX("Square mu W")
-    EX("Square mW")
-    EX("Square kW")
-    EX("Square MW mega")
-    EX("Square k Ohm")
-    EX("Square M Ohm")
-    EX("Square am")
-    EX("Square Bq")
-    EX("Square cc")
-    EX("Square cd")
-    EX("Square C over kg")
-    EX("Square Co")
-    EX("Square dB")
-    EX("Square Gy")
-    EX("Square ha")
-    EX("Square HP")
-    EX("Square in")
-    EX("Square KK")
-    EX("Square KM capital")
-    EX("Square kt")
-    EX("Square lm")
-    EX("Square ln")
-    EX("Square log")
-    EX("Square lx")
-    EX("Square mb small")
-    EX("Square mil")
-    EX("Square mol")
-    EX("Square pH")
-    EX("Square pm")
-    EX("Square PPM")
-    EX("Square PR")
-    EX("Square sr")
-    EX("Square Sv")
-    EX("Square Wb")
-    EX("Square V over m")   // Volt/metre
-    EX("Square A over m")   // Ampere/metre
-    EX("Square gal")
-    EX("Square Hg")
-    EX("Square erg")
-    EX("Square eV")
-    EX("Square DJ")
+    EX("squared HV")                            // Just manually, small block
+    EX("squared MV")
+    EX("squared SD")
+    EX("squared SS")
+    EX("squared PPV")
+    EX("squared WC")
+    EX("square Corporation")                    // IDK what’s happening
+    EX("square hPa")                            // A whole cohort of Chinese units
+    EX("square IU")
+    EX("square da")
+    EX("square AU")
+    EX("square bar")
+    EX("square oV")
+    EX("square pc")
+    EX("square dm squared")
+    EX("square pA amps")
+    EX("square nA")
+    EX("square mu A")
+    EX("square mA")
+    EX("square kA")
+    EX("square KB")
+    EX("square MB")
+    EX("square GB")
+    EX("square cal")
+    EX("square kcal")
+    EX("square pF")
+    EX("square nF")
+    EX("square mu F")
+    EX("square mu G")
+    EX("square mg")
+    EX("square kg")
+    EX("square Hz")
+    EX("square kHz")
+    EX("square MHz")
+    EX("square GHz")
+    EX("square THz")
+    EX("square mu l")
+    EX("square ml")
+    EX("square dl")
+    EX("square kl")
+    EX("square fm")
+    EX("square nm")
+    EX("square mu m")
+    EX("square mm")
+    EX("square cm")
+    EX("square km")
+    EX("square mm squared")
+    EX("square cm squared")
+    EX("square m squared")
+    EX("square km squared")
+    EX("square mm cubed")
+    EX("square m cubed")
+    EX("square km cubed")
+    EX("square m over s")
+    EX("square m over s squared")
+    EX("square Pa")
+    EX("square kPa")
+    EX("square MPa")
+    EX("square GPa")
+    EX("square rad")
+    EX("square rad over s")
+    EX("square rad over s squared")
+    EX("square ps")
+    EX("square ns")
+    EX("square mu s")
+    EX("square ms")
+    EX("square pV")
+    EX("square nV")
+    EX("square mu V")
+    EX("square mV")
+    EX("square kV")
+    EX("square MV mega")
+    EX("square pW")
+    EX("square nW")
+    EX("square mu W")
+    EX("square mW")
+    EX("square kW")
+    EX("square MW mega")
+    EX("square k Ohm")
+    EX("square M Ohm")
+    EX("square am")
+    EX("square Bq")
+    EX("square cc")
+    EX("square cd")
+    EX("square C over kg")
+    EX("square Co")
+    EX("square dB")
+    EX("square Gy")
+    EX("square ha")
+    EX("square HP")
+    EX("square in")
+    EX("square KK")
+    EX("square KM capital")
+    EX("square kt")
+    EX("square lm")
+    EX("square ln")
+    EX("square log")
+    EX("square lx")
+    EX("square mb small")
+    EX("square mil")
+    EX("square mol")
+    EX("square pH")
+    EX("square pm")
+    EX("square PPM")
+    EX("square PR")
+    EX("square sr")
+    EX("square Sv")
+    EX("square Wb")
+    EX("square V over m")   // Volt/metre
+    EX("square A over m")   // Ampere/metre
+    EX("square gal")
+    EX("square Hg")
+    EX("square erg")
+    EX("square eV")
+    EX("square DJ")
 
         // Enclosed Latin
-    EX("Circled CC")            // Closed Captions, hand-checked
-    EX("Circled CD")            // Compact disc? hand-checked
-    EX("Circled Wz")            // German Warenzeichen
-    EX("Negative squared IC")   // Hand-checked
-    EX("Negative squared PA")
-    EX("Negative squared SA")
-    EX("Negative squared AB")
-    EX("Negative squared WC")
-    EX("Raised MC sign")        // Hand-checked
-    EX("Raised MD sign")
-    EX("Raised MR sign")
-    EX("Squared OK")            // OK is both a syllable and an emoji
-    EX("Squared SOS")           // The same
-    EX("Squared CL")            // Squared is a tricky word
-    EX("Squared Cool")
-    EX("Squared New")
-    EX("Squared No good")
-    EX("Squared Up with exclamation mark")
-    EX("Squared Three D")
-    EX("Squared Second screen")
-    EX("Squared Two K")
-    EX("Squared Four K")
-    EX("Squared Eight K")
-    EX("Squared Five point one")
-    EX("Squared Seven point one")
-    EX("Squared Twenty-two point two")
-    EX("Squared Sixty P")
-    EX("Squared One hundred twenty P")
-    EX("Squared HC")
-    EX("Squared Vs")
-    EX("Squared New")
-    EX("Squared NG")
-    EX("Squared Free")
-    EX("Squared ID")
-    EX("Squared Hi-res")
-    EX("Squared HDR")
-    EX("Squared SHV")
-    EX("Squared VOD")
-    EX("Squared UHD")
-    EX("Squared Lossless")
+    EX("circled CC")            // Closed Captions, hand-checked
+    EX("circled CD")            // Compact disc? hand-checked
+    EX("circled Wz")            // German Warenzeichen
+    EX("negative squared IC")   // Hand-checked
+    EX("negative squared PA")
+    EX("negative squared SA")
+    EX("negative squared AB")
+    EX("negative squared WC")
+    EX("raised MC sign")        // Hand-checked
+    EX("raised MD sign")
+    EX("raised MR sign")
+    EX("squared OK")            // OK is both a syllable and an emoji
+    EX("squared SOS")           // The same
+    EX("squared CL")            // Squared is a tricky word
+    EX("squared Cool")
+    EX("squared New")
+    EX("squared No good")
+    EX("squared Up with exclamation mark")
+    EX("squared Three D")
+    EX("squared Second screen")
+    EX("squared Two K")
+    EX("squared Four K")
+    EX("squared Eight K")
+    EX("squared Five point one")
+    EX("squared Seven point one")
+    EX("squared Twenty-two point two")
+    EX("squared Sixty P")
+    EX("squared One hundred twenty P")
+    EX("squared HC")
+    EX("squared Vs")
+    EX("squared New")
+    EX("squared NG")
+    EX("squared Free")
+    EX("squared ID")
+    EX("squared Hi-res")
+    EX("squared HDR")
+    EX("squared SHV")
+    EX("squared VOD")
+    EX("squared UHD")
+    EX("squared Lossless")
+    EX("Back with leftwards arrow above")
+    EX("End with leftwards arrow above")
+    EX("On with exclamation mark with left right arrow above")
+    EX("Soon with rightwards arrow above")
+    EX("Top with upwards arrow above")
+    EX("keycap Ten")
 };
 
 /// @warning DO NOT REMOVE sv, w/o does not work and IDK how to ban
@@ -1381,6 +1486,9 @@ const std::multiset<PrefixEntry> prefixes {
     { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Circled ideograph XXX
     { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Parenthesized ideograph XXX
     { { "BALINESE"sv, "MUSICAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
+    { { "IDEOGRAPHIC"sv, "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },   // ideographic tally mark One
+    { { "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },
+    { { "EMOJI"sv, "COMPONENT"sv }, PrefixAction::NEXT_CAP },
 };
 
 
@@ -2024,7 +2132,9 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
                         nextNextWord->isCapital = true;
                         hasScript = true;
                     }
-                } else if (word.dicFlags.have(Dicf::TRIG_SCRIPT_ADJECTIVE)) {
+                }
+                // Works together with other flags
+                if (word.dicFlags.have(Dicf::TRIG_SCRIPT_ADJECTIVE)) {
                     // Propagate adjective that are script parts
                     // OLD SOUTH Arabian
                     if (nextWord) {
@@ -2193,12 +2303,11 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
     // Compose
     std::string r;
     r.reserve(newLen);
-    for (size_t iWord = 0; iWord < words.size(); ++iWord) {
+    for (auto& word : words) {
         if (!r.empty())
             r.append(" "sv);
 
-        WordState state = WordState::SMALL;
-        auto& word = words[iWord];
+        WordState state = WordState::SMALL;        
         if (word.isAllCap) {
             state = WordState::ALL_CAP;
         } else if (word.dicFlags.have(Dicf::CAP_SMALL)) {
@@ -2211,16 +2320,6 @@ std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
             state = word.isCapital ? WordState::CUSTOM_TITLE : WordState::CUSTOM;
         } else if (word.isCapital) {
             state = WordState::TITLE;
-        }
-
-        if (iWord == 0) {
-            switch (state) {
-            case WordState::SMALL: state = WordState::TITLE; break;
-            case WordState::CUSTOM: state = WordState::CUSTOM_TITLE; break;
-            case WordState::TITLE:
-            case WordState::CUSTOM_TITLE:
-            case WordState::ALL_CAP:;
-            }
         }
 
         switch (state) {
