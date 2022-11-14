@@ -108,7 +108,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
     { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
                             {}, "ITALIC", "PERMIC" } },
-    { "JAMO",           Dicf::TRIG_SCRIPT },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JUDEO-SPANISH",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Judeo-Spanish" } },
@@ -337,6 +336,10 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "JAIN",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
+    // Peoples’ names
+    { "CELSIUS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FAHRENHEIT",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
     { "APOSTROPHE",     Dicf::PART_NOUN },
@@ -347,6 +350,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ARROWHEAD",      Dicf::PART_NOUN },
     { "BALUDA",         Dicf::PART_NOUN },
     { "BAR",            Dicf::PART_NOUN },
+    { "BARB",           Dicf::PART_NOUN },
     { "BEAT",           Dicf::PART_NOUN },
     { "BHALE",          Dicf::PART_NOUN },
     { "BIRD",           Dicf::PART_NOUN },  // For some CJK hiero
