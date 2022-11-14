@@ -1523,6 +1523,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x27EC, 0x27ED },
     { 0x298B, 0x298C },
     { 0x2997, 0x2998 },
+    { 0x2A1B, 0x2A1C },  // upper-lower integral
     { 0x2A79, 0x2AAD },  // greater-less
 
     // Egyptian while Noto is BAAD
