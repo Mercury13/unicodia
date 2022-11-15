@@ -755,7 +755,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
     { "PETRI",          Dicf::CAP_TITLE },
     { "PLANCK",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "TIRONIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "TIRONIAN",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE | Dicf::TRIG_SCRIPT },
     { "WEIERSTRASS",    Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
     // Myth/religion characters’ names
@@ -1217,7 +1217,6 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("modifier letter Low circumflex accent") // What to do with circumflex?
     EX("modifier letter Short equals sign")     // What to do with equals?
     EX("direct current symbol form two") // Symbol is not a keyword
-    EX("Tironian sign Capital Et")      // Does not trigger “sign”, what to do with Et
         // Math
     EX("small Element of")              // small sign “Element of”
     EX("small Contains as member")      // Same
