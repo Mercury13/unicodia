@@ -30,7 +30,7 @@ TEST (Decap, A1)
 TEST (Decap, CommercialAt)
 {
     auto r = decapitalize("COMMERCIAL AT");
-    EXPECT_EQ ("Commercial At", r);
+    EXPECT_EQ ("commercial At", r);
 }
 
 
@@ -40,7 +40,7 @@ TEST (Decap, CommercialAt)
 TEST (Decap, FractionNumeral)
 {
     auto r = decapitalize("VULGAR FRACTION ONE QUARTER");
-    EXPECT_EQ ("Vulgar fraction One quarter", r);
+    EXPECT_EQ ("vulgar fraction One quarter", r);
 }
 
 
@@ -214,7 +214,7 @@ TEST (Decap, SynthMultiAdj2)
 TEST (Decap, FractionSlash)
 {
     auto r = decapitalize("FRACTION SLASH");
-    EXPECT_EQ("Fraction slash", r);
+    EXPECT_EQ("fraction slash", r);
 }
 
 
@@ -224,7 +224,7 @@ TEST (Decap, FractionSlash)
 TEST (Decap, FractionNumerator)
 {
     auto r = decapitalize("FRACTION NUMERATOR ONE");
-    EXPECT_EQ("Fraction numerator One", r);
+    EXPECT_EQ("fraction numerator One", r);
 }
 
 
@@ -264,7 +264,7 @@ TEST (Decap, Siyaq)
 TEST (Decap, CircledKatakana)
 {
     auto r = decapitalize("CIRCLED KATAKANA ALPHA BRAVO ALEF CHARLIE");
-    EXPECT_EQ("Circled Katakana Alpha bravo Alef charlie", r);
+    EXPECT_EQ("circled Katakana Alpha bravo Alef charlie", r);
 }
 
 
@@ -274,7 +274,7 @@ TEST (Decap, CircledKatakana)
 TEST (Decap, MathA)
 {
     auto r = decapitalize("MATHEMATICAL BOLD CAPITAL A");
-    EXPECT_EQ("Mathematical bold capital A", r);
+    EXPECT_EQ("mathematical bold capital A", r);
 }
 
 
@@ -284,7 +284,7 @@ TEST (Decap, MathA)
 TEST (Decap, MathA1)
 {
     auto r = decapitalize("MATHEMATICAL BOLD SMALL A");
-    EXPECT_EQ("Mathematical bold small A", r);
+    EXPECT_EQ("mathematical bold small A", r);
 }
 
 
@@ -294,7 +294,7 @@ TEST (Decap, MathA1)
 TEST (Decap, Fraktur)
 {
     auto r = decapitalize("MATHEMATICAL FRAKTUR CAPITAL A");
-    EXPECT_EQ("Mathematical Fraktur capital A", r);
+    EXPECT_EQ("mathematical Fraktur capital A", r);
 }
 
 
@@ -305,7 +305,7 @@ TEST (Decap, Fraktur)
 TEST (Decap, OpenA)
 {
     auto r = decapitalize("COMBINING LATIN SMALL LETTER FLATTENED OPEN A ABOVE");
-    EXPECT_EQ("Combining Latin small letter Flattened open A above", r);
+    EXPECT_EQ("combining Latin small letter Flattened open A above", r);
 }
 
 
@@ -325,7 +325,7 @@ TEST (Decap, Turned)
 TEST (Decap, Inverted)
 {
     auto r = decapitalize("MODIFIER LETTER SMALL CAPITAL INVERTED R");
-    EXPECT_EQ("Modifier letter Small capital inverted R", r);
+    EXPECT_EQ("modifier letter Small capital inverted R", r);
 }
 
 
@@ -335,7 +335,7 @@ TEST (Decap, Inverted)
 TEST (Decap, Stop)
 {
     auto r = decapitalize("MODIFIER LETTER REVERSED GLOTTAL STOP");
-    EXPECT_EQ("Modifier letter Reversed glottal stop", r);
+    EXPECT_EQ("modifier letter Reversed glottal stop", r);
 }
 
 
@@ -416,7 +416,7 @@ TEST (Decap, ToneSix)
 TEST (Decap, ToneExtraHigh)
 {
     auto r = decapitalize("MODIFIER LETTER EXTRA-HIGH TONE BAR");
-    EXPECT_EQ("Modifier letter Extra-high tone bar", r);
+    EXPECT_EQ("modifier letter Extra-high tone bar", r);
 }
 
 
@@ -426,7 +426,7 @@ TEST (Decap, ToneExtraHigh)
 TEST (Decap, ToneGrave)
 {
     auto r = decapitalize("COMBINING GRAVE TONE MARK");
-    EXPECT_EQ("Combining grave tone mark", r);
+    EXPECT_EQ("combining grave tone mark", r);
 }
 
 
@@ -536,7 +536,7 @@ TEST (Decap, ToneVedic3)
 TEST (Decap, ToneIdeo)
 {
     auto r = decapitalize("IDEOGRAPHIC LEVEL TONE MARK");
-    EXPECT_EQ("Ideographic level tone mark", r);
+    EXPECT_EQ("ideographic level tone mark", r);
 }
 
 
@@ -566,7 +566,7 @@ TEST (Decap, ToneLisyu)
 TEST (Decap, ToneModChinese)
 {
     auto r = decapitalize("MODIFIER LETTER CHINESE TONE YIN PING");
-    EXPECT_EQ("Modifier letter Chinese tone Yin ping", r);
+    EXPECT_EQ("modifier letter Chinese tone Yin ping", r);
 }
 
 
@@ -576,7 +576,7 @@ TEST (Decap, ToneModChinese)
 TEST (Decap, ToneBar)
 {
     auto r = decapitalize("MODIFIER LETTER MID DOTTED TONE BAR");
-    EXPECT_EQ("Modifier letter Mid dotted tone bar", r);
+    EXPECT_EQ("modifier letter Mid dotted tone bar", r);
 }
 
 
@@ -586,7 +586,7 @@ TEST (Decap, ToneBar)
 TEST (Decap, ToneStress)
 {
     auto r = decapitalize("MODIFIER LETTER STRESS AND LOW TONE");
-    EXPECT_EQ("Modifier letter Stress and low tone", r);
+    EXPECT_EQ("modifier letter Stress and low tone", r);
 }
 
 
@@ -650,7 +650,7 @@ TEST (Decap, ToneBassa)
 TEST (Decap, ToneMusic1)
 {
     auto r = decapitalize("MUSICAL SYMBOL QUARTER TONE SHARP");
-    EXPECT_EQ("Musical symbol Quarter tone sharp", r);
+    EXPECT_EQ("musical symbol Quarter tone sharp", r);
 }
 
 
@@ -845,7 +845,7 @@ TEST (Decap, CuneiPrereq)
 TEST (Decap, Cunei1)
 {
     auto r = decapitalize("CUNEIFORM SIGN ASSYRIAN WORD DIVIDER OVER ASH TENU TIMES LAK-123");
-    EXPECT_EQ("Cuneiform sign Assyrian word divider over ASH Tenu times LAK-123", r);
+    EXPECT_EQ("cuneiform sign Assyrian word divider over ASH Tenu times LAK-123", r);
 }
 
 
@@ -865,7 +865,7 @@ TEST (Decap, ArabicBug)
 TEST (Decap, BugCuneiTimesArabic)
 {
     auto r = decapitalize("CUNEIFORM SIGN LAM TIMES KUR PLUS RU");
-    EXPECT_EQ("Cuneiform sign LAM times KUR plus RU", r);
+    EXPECT_EQ("cuneiform sign LAM times KUR plus RU", r);
 }
 
 
@@ -875,7 +875,7 @@ TEST (Decap, BugCuneiTimesArabic)
 TEST (Decap, BugGreekCross)
 {
     auto r = decapitalize("VERY HEAVY GREEK CROSS");
-    EXPECT_EQ("Very heavy Greek cross", r);
+    EXPECT_EQ("very heavy Greek cross", r);
 }
 
 
@@ -910,7 +910,7 @@ TEST (Decap, BugMiaoTone)
 TEST (Decap, BugTagDigit)
 {
     auto r = decapitalize("TAG DIGIT FIVE");
-    EXPECT_EQ("Tag Digit Five", r);
+    EXPECT_EQ("tag Digit Five", r);
 }
 
 
@@ -921,7 +921,7 @@ TEST (Decap, BugTagDigit)
 TEST (Decap, BugByeloUkr)
 {
     auto r = decapitalize("MODIFIER LETTER CYRILLIC SMALL BYELORUSSIAN-UKRAINIAN I");
-    EXPECT_EQ("Modifier letter Cyrillic small Byelorussian-Ukrainian I", r);
+    EXPECT_EQ("modifier letter Cyrillic small Byelorussian-Ukrainian I", r);
 }
 
 
