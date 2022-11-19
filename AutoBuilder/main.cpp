@@ -159,8 +159,9 @@ StrMap smCharCat[] {
 enum class AbbrevState { NORMAL, ALIAS, DISABLE };
 
 
-struct StringPayload
+struct StringData
 {
+    std::string s;
     char32_t subj;
     int offset;
     uc::TextRole role;
@@ -169,71 +170,68 @@ struct StringPayload
 
 struct RememberResult
 {
-    int offset;
-    bool wasIns;
+    StringData* data;
+    bool wasIns;    
 };
 
 class StringLib
 {
 public:
-    /// @return offset
     RememberResult remember(
             char32_t subj,
             uc::TextRole role,
-            const std::string& s);
+            std::string_view s);
     RememberResult forceRemember(
             char32_t subj,
             uc::TextRole role,
-            const std::string& s);
+            std::string_view s);
     void finishCp();
     auto& inOrder() const { return fInOrder; }
 private:
-    using M = std::unordered_map<std::string, StringPayload>;
-    M fData;
-    std::deque<M::value_type> fRepeats;     // need ptrs → deque
-    std::vector<M::value_type*> fInOrder;
+    using M = std::unordered_map<std::string_view, StringData*>;
+    M fNdx;
+    std::deque<StringData> fInOrder;
     size_t fLength = 0;
 };
 
 RememberResult StringLib::forceRemember(
-        char32_t subj, uc::TextRole role, const std::string& s)
+        char32_t subj, uc::TextRole role, std::string_view aS)
 {
-    auto res = remember(subj, role, s);
-    if (!res.wasIns) {
-        auto& v = fRepeats.emplace_back(s,
-            StringPayload{.subj = subj,
-                          .offset = static_cast<int>(fLength),
-                          .role = role,
-                          .isLast = false });
-        res.offset = fLength;
-        fLength += (s.length() + 2);
-        fInOrder.push_back(&v);
-    }
-    return res;
+    auto& v = fInOrder.emplace_back(StringData{
+                    .s = std::string { aS },
+                    .subj = subj,
+                    .offset = static_cast<int>(fLength),
+                    .role = role,
+                    .isLast = false });
+    fLength += (aS.length() + 2);
+    return { .data =&v, .wasIns = true };
 }
 
 RememberResult StringLib::remember(
-        char32_t subj, uc::TextRole role, const std::string& s)
+        char32_t subj, uc::TextRole role, std::string_view s)
 {
-    auto [it, wasIns] = fData.try_emplace(s, StringPayload());
-    if (wasIns) {   // Was inserted
-        it->second.subj = subj;
-        it->second.offset = fLength;
-        it->second.role = role;
-        // role 1 byte, length 1 byte
-        fLength += (s.length() + 2);
-        fInOrder.push_back(&*it);
-    } else {}    // was found — do nothing
-    return { .offset = it->second.offset, .wasIns = wasIns };
+    if (role != uc::TextRole::MAIN_NAME)
+        return forceRemember(subj, role, s);
+    auto it = fNdx.find(s);
+    if (it == fNdx.end()) {   // Was inserted
+        auto r = forceRemember(subj, role, s);
+        fNdx[r.data->s] = r.data;
+        return r;
+    } else {
+        return {
+            .data = it->second,
+            .wasIns = false
+        };
+    }
 }
 
 
 void StringLib::finishCp()
 {
     if (!fInOrder.empty()) {
-        auto bk = fInOrder.back();
-        if (bk && !bk->second.isLast) {
-            bk->second.isLast = true;
+        auto& bk = fInOrder.back();
+        if (!bk.isLast) {
+            bk.isLast = true;
             // +1: command CMD_END
             ++fLength;
         }
@@ -601,7 +599,7 @@ int main()
         }
         bool hasAbbrev = !allAbbrevs.empty();
         std::string sLowerName = decapitalize(sName, cp);
-        auto [iTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
+        auto [pTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
         if (!allAbbrevs.empty() && !wasIns) {
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
@@ -683,7 +681,7 @@ int main()
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
            << "{ "                              // name
-                << std::dec << iTech            // name.tech,
+                << std::dec << pTech->offset    // name.tech,
            << " }, ";                           // /name
 
         // Char’s type
@@ -749,14 +747,13 @@ int main()
     os << "const char8_t uc::allStrings[] = \n";
     char text[40];
     for (auto& v : strings.inOrder()) {
-        std::string_view sv = v->first;
         snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
-                 static_cast<unsigned>(v->second.role),
-                 static_cast<unsigned>(sv.length()));
-        os << text << v->first << "\"  ";
-        if (v->second.isLast)
+                 static_cast<unsigned>(v.role),
+                 static_cast<unsigned>(v.s.length()));
+        os << text << v.s << "\"  ";
+        if (v.isLast)
             os << R"("\0")";
-        os << "  // " << std::hex << static_cast<int>(v->second.subj) << '\n';
+        os << "  // " << std::hex << static_cast<int>(v.subj) << '\n';
     }
     os << ";\n";
 

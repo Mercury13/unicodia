@@ -138,6 +138,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MAHAJANI",       Dicf::TRIG_SCRIPT },
     { "MAKASAR",        Dicf::TRIG_SCRIPT },
     { "MALAYALAM",      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "MALTESE",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "MANDAIC",        Dicf::TRIG_SCRIPT },
     { "MANDAEAN",       Dicf::TRIG_SCRIPT },
     { "MANICHAEAN",     Dicf::TRIG_SCRIPT },
@@ -163,7 +164,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "NANDINAGARI",    Dicf::TRIG_SCRIPT },
     { "NEWA",           Dicf::TRIG_SCRIPT },
     { "NKO",            { Dicf::TRIG_SCRIPT, "NKo" } },
-    { "NUBIAN",         Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "NUBIAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "NUSHU",          Dicf::TRIG_SCRIPT },
     { "OGHAM",          Dicf::TRIG_SCRIPT },
     { "OL",             { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv } },
@@ -749,8 +750,10 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "EULER",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "FAHRENHEIT",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "FERRIS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "FRANKS",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "FITZPATRICK",    Dicf::CAP_TITLE },
+    { "HERMITIAN",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
     { "PETRI",          Dicf::CAP_TITLE },
@@ -768,11 +771,12 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "JOVE",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SELENA",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
-    // Astronomy — 8 planets of Sol
+    // Astronomy — 8 planets of Sol and Pluto
     { "JUPITER",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "SATURN",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "URANUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "NEPTUNE",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "PLUTO",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
     // Astronomy — zodiac
     { "ARIES",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -786,6 +790,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "CAPRICORN",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "AQUARIUS",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PISCES",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "OPHIUCHUS",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
 
     // Astronomy — rest
     { "ADMETOS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -807,7 +812,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ORCUS",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PALLAS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PHOLUS",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
-    { "PLUTO",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "POSEIDON",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PROSERPINA",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "QUAOAR",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -824,6 +828,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     // { "GARSHUNI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE }, not really correct, but small is nicer
     { "HELLSCHREIBER",  Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "HINDU",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "JAPAN",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "JERUSALEM",      Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "KAABA",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -831,6 +836,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LORRAINE",       Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "ORTHODOX",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "RUMI",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "SHINTO",         Dicf::CAP_TITLE | Dicf::PART_MIXED },
     { "VOLAPUK",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
     { "YENISEI",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // OK here
 
@@ -1217,6 +1223,10 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("modifier letter Low circumflex accent") // What to do with circumflex?
     EX("modifier letter Short equals sign")     // What to do with equals?
     EX("direct current symbol form two") // Symbol is not a keyword
+        // Religion
+    EX("Adi Shakti")
+    EX("West Syriac cross")
+    EX("East Syriac cross")
         // Math
     EX("small Element of")              // small sign “Element of”
     EX("small Contains as member")      // Same
@@ -1232,6 +1242,8 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("sloping large Or")              // Or is a tricky word
     EX("sloping large And")             // And is a tricky word
     EX("Planck constant over two pi")   // pi is small here
+    EX("invisible Times")               // ???
+    EX("S in triangle")                 // Because of Znamenny, S is tricky
         // Astronomy
     EX("Earth")                         // Element of earth is small-case
     EX("Sun")                           // Symbol of sun is small-case
