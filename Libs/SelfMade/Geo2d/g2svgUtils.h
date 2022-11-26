@@ -35,6 +35,13 @@ namespace g2sv {
             /// always < minCosine
             double smoothCosine = -0.9;
         } corner;
+        struct Guide {
+            /// Long horz/vert segments are considered “guidelines”
+            int triggerLength = 40;
+            /// distance guideline → horz node
+            /// and short nearby segments are also straight.
+            int nearbyDist = 10;
+        } guide;
     };
 
     /// Order matters: the bigger, the heavier

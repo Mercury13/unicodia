@@ -5,6 +5,8 @@
 #include <cmath>
 #include <charconv>
 #include <map>
+#include <utility>
+#include <unordered_map>
 
 // STL
 #include <algorithm>
@@ -338,7 +340,39 @@ namespace {
         it->second.type = std::max(it->second.type, type);
     }
 
-}
+    struct Guide {
+        int min = std::numeric_limits<int>::max();
+        int max = std::numeric_limits<int>::min();
+
+        void reg(int a, int b) noexcept;
+        bool isWithin(int a, int b, int dist) const noexcept;
+    };
+
+    void Guide::reg(int a, int b) noexcept
+    {
+        min = std::min(min, a);
+        min = std::min(min, b);
+        max = std::max(max, a);
+        max = std::max(max, b);
+    }
+
+    bool Guide::isWithin(int a, int b, int dist) const noexcept
+    {
+        if (a > b)
+            std::swap(a, b);
+        return (b + dist >= min || a - dist <= max);
+    }
+
+    template<class Cnt, class Key>
+    auto* myFind(Cnt& cnt, const Key& key)
+    {
+        auto it = cnt.find(key);
+        if (it != cnt.end())
+            return &it->second;
+        return static_cast<decltype(&it->second)>(nullptr);
+    }
+
+}   // anon namespace
 
 
 std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
@@ -347,6 +381,67 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
     if (pts.size() <= 2)
         return std::nullopt;
     std::map<size_t, Corner> r;
+    auto last = pts.size() - 1;
+
+    // Detect guidelines
+    if (std::isfinite(opt.guide.triggerLength) && opt.guide.triggerLength > 0) {
+        std::unordered_map<int, Guide> horzGuides, vertGuides;
+        auto checkGuide = [this, triggerLength = opt.guide.triggerLength, &horzGuides, &vertGuides]
+                (size_t iA, size_t iB) {
+            auto& a = pts[iA];
+            auto& b = pts[iB];
+            if (a.x == b.x) {
+                // vert guide
+                auto len = std::abs(a.y - b.y);
+                if (len >= triggerLength) {
+                    vertGuides[a.x].reg(a.y, b.y);
+                }
+            } else if (a.y == b.y) {
+                // horz guide
+                auto len = std::abs(a.x - b.x);
+                if (len >= triggerLength) {
+                    horzGuides[a.y].reg(a.x, b.x);
+                }
+            }
+        };
+        for (size_t i = 0; i < last; ++i) {
+            checkGuide(i, i + 1);
+        }
+        if (isClosed) {
+            checkGuide(last, 0);
+        }
+        if (!horzGuides.empty() || !vertGuides.empty()) {
+            auto checkGuide2 = [this, &hg = std::as_const(horzGuides), &vg = std::as_const(vertGuides),
+                                &r, nd = opt.guide.nearbyDist]
+                    (size_t iA, size_t iB) {
+                auto& a = pts[iA];
+                auto& b = pts[iB];
+                if (a.x == b.x) {
+                    // vert guide
+                    if (auto sec = myFind(vg, a.x)) {
+                        if (sec->isWithin(a.y, b.y, nd)) {
+                            setCorner(r, iA, g2sv::CornerType::AVOID_SMOOTH);
+                            setCorner(r, iB, g2sv::CornerType::AVOID_SMOOTH);
+                        }
+                    }
+                } else if (a.y == b.y) {
+                    // horz guide
+                    if (auto sec = myFind(hg, a.y)) {
+                        if (sec->isWithin(a.x, b.x, nd)) {
+                            setCorner(r, iA, g2sv::CornerType::AVOID_SMOOTH);
+                            setCorner(r, iB, g2sv::CornerType::AVOID_SMOOTH);
+                        }
+                    }
+                }
+            };
+            for (size_t i = 0; i < last; ++i) {
+                checkGuide2(i, i + 1);
+            }
+            if (isClosed) {
+                checkGuide2(last, 0);
+            }
+        }
+    }
 
     auto checkCosine = [this, &r, &opt](size_t iA, size_t iB, size_t iC) {
         auto& a = pts[iA];
@@ -411,7 +506,6 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
         }
     };
 
-    auto last = pts.size() - 1;
     if (isClosed) {
         checkCosine(last, 0, 1);
     } else {

@@ -174,7 +174,11 @@ namespace {
             .minCosine = -0.64,  // <130°
             .maxSide = 13 * MY_SCALE,
             .smoothCosine = -0.9   // ≈154°
-        }
+        },
+        .guide = {
+            .triggerLength = 20 * MY_SCALE,
+            .nearbyDist = 15 * MY_SCALE,
+        },
     };
 
     void Svg::loadFromRec(pugi::xml_node node) {
