@@ -344,16 +344,21 @@ namespace {
         int min = std::numeric_limits<int>::max();
         int max = std::numeric_limits<int>::min();
 
+        inline void reg(int a) noexcept;
         void reg(int a, int b) noexcept;
         bool isWithin(int a, int b, int dist) const noexcept;
     };
 
-    void Guide::reg(int a, int b) noexcept
+    inline void Guide::reg(int a) noexcept
     {
         min = std::min(min, a);
-        min = std::min(min, b);
         max = std::max(max, a);
-        max = std::max(max, b);
+    }
+
+    void Guide::reg(int a, int b) noexcept
+    {
+        reg(a);
+        reg(b);
     }
 
     bool Guide::isWithin(int a, int b, int dist) const noexcept
