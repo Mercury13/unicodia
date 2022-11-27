@@ -1436,9 +1436,9 @@ namespace {
                 appendNumber(r, curY, scale);
                 first = false;
             } else {
-              auto inX = curX + segment.hIn.x;
-              auto inY = curY + segment.hIn.y;
-              if (inX == curX && inY == curY && outX == prevX && outY == prevY) {
+                auto inX = curX + segment.hIn.x;
+                auto inY = curY + segment.hIn.y;
+                if (inX == curX && inY == curY && outX == prevX && outY == prevY) {
                 // L = absolute lineto:
                     if (!skipLine) {
                         appendCommand(r, 'L');
