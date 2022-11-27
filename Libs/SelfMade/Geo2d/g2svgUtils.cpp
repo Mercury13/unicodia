@@ -745,11 +745,13 @@ namespace {
     */
 
     /// Actually a curve point, but let it be…
+    enum class SegShape { LINE, QUAD, CUBIC };
     struct Segment {
         size_t index;
         g2::Ipoint a;
         g2::Dvec hIn;
         g2::Dvec hOut;
+        SegShape inShape = SegShape::LINE;
 
         constexpr static Segment fromPt(size_t index, const g2::Ipoint& pt)
             { return { .index = index, .a = pt, .hIn = g2::ZEROVEC, .hOut = g2::ZEROVEC }; }
@@ -764,6 +766,7 @@ namespace {
         g2::Dvec ah;
         g2::Dvec bh;
         g2::Ipoint b;
+        SegShape shape;
 
         Pt4 toPoints() const;
     };
@@ -864,7 +867,10 @@ namespace {
         if (!handle2)
             handle2 = tan2.normalized(alpha2);
 
-        return { pt1I, *handle1, *handle2, pt2I };
+        SegShape sh = SegShape::CUBIC;
+        if (handle1 == g2::ZEROVEC && handle2 == g2::ZEROVEC)
+            sh = SegShape::LINE;
+        return { .a = pt1I, .ah = *handle1, .bh = *handle2, .b = pt2I, .shape = sh };
     }
 
     /*
@@ -881,7 +887,8 @@ namespace {
         prev.hOut = curve.ah;
         segments.push_back(Segment{
                 .index = index, .a = curve.b,
-                .hIn = curve.bh, .hOut = g2::ZEROVEC });
+                .hIn = curve.bh, .hOut = g2::ZEROVEC,
+                .inShape = curve.shape });
     }
 
     /*
@@ -1124,12 +1131,16 @@ namespace {
             if (isTrue(isInitial)) {
                 // Add it as a straight segment
                 addCurve(segments, last,
-                    Curve{ pt1, g2::ZEROVEC, g2::ZEROVEC, pt2 });
+                    Curve{ .a = pt1, .ah = g2::ZEROVEC,
+                           .bh = g2::ZEROVEC, .b = pt2,
+                           .shape = SegShape::LINE });
             } else {
                 // Add it as smth nice
                 const auto dist = pt1.distFromD(pt2) / 3;
                 addCurve(segments, last,
-                    Curve{ pt1, tan1.normalized(dist), tan2.normalized(dist), pt2 });
+                    Curve{ .a = pt1, .ah = tan1.normalized(dist),
+                           .bh = tan2.normalized(dist), .b = pt2,
+                           .shape = SegShape::CUBIC });
             }
             return;
         }
@@ -1354,7 +1365,10 @@ namespace {
                 segments.clear();
             } else {
                 // 1st point has hOut only, and last has hIn only, and this is the same point → unite properly
-                segments[0].hIn = segments.back().hIn;
+                auto& seg0 = segments[0];
+                auto& seg10 = segments.back();
+                seg0.hIn = seg10.hIn;
+                seg0.inShape = seg10.inShape;
                 segments.pop_back();
             }
         }
@@ -1438,15 +1452,25 @@ namespace {
             } else {
                 auto inX = curX + segment.hIn.x;
                 auto inY = curY + segment.hIn.y;
-                if (inX == curX && inY == curY && outX == prevX && outY == prevY) {
-                // L = absolute lineto:
+                switch (segment.inShape) {
+                case SegShape::LINE:
                     if (!skipLine) {
+                        // L = absolute lineto
                         appendCommand(r, 'L');
                         appendNumber(r, curX, scale);
                         appendNumber(r, curY, scale);
                     }
-                } else {
-                    // C = absolute curveto:
+                    break;
+                case SegShape::QUAD:
+                    // Q = absolute quad curveto
+                    appendCommand(r, 'Q');
+                    appendNumber(r, inX,  scale);
+                    appendNumber(r, inY,  scale);
+                    appendNumber(r, curX, scale);
+                    appendNumber(r, curY, scale);
+                    break;
+                case SegShape::CUBIC:
+                    // C = absolute cubic curveto
                     appendCommand(r, 'C');
                     appendNumber(r, outX, scale);
                     appendNumber(r, outY, scale);
@@ -1454,6 +1478,7 @@ namespace {
                     appendNumber(r, inY,  scale);
                     appendNumber(r, curX, scale);
                     appendNumber(r, curY, scale);
+                    break;
                 }
             }
             prevX = curX;
