@@ -1601,7 +1601,6 @@ std::string g2sv::Polypath::svgData(int scale) const
 
 void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
-    /// @todo [urgent] Remove bad nearby points, and reenable again
     checkForIntersection(opt.scale);
     dataOverride.clear();
     for (auto& curve : curves) {
