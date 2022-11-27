@@ -1430,6 +1430,7 @@ namespace {
             auto curX = segment.a.x;
             auto curY = segment.a.y;
             if (first) {
+                // M = absolute moveto
                 appendCommand(r, 'M');
                 appendNumber(r, curX, scale);
                 appendNumber(r, curY, scale);
@@ -1445,7 +1446,7 @@ namespace {
                         appendNumber(r, curY, scale);
                     }
                 } else {
-                    // c = absolute curveto:
+                    // C = absolute curveto:
                     appendCommand(r, 'C');
                     appendNumber(r, outX, scale);
                     appendNumber(r, outY, scale);
@@ -1466,6 +1467,7 @@ namespace {
         // Close path by drawing first segment again
         if (closed && length > 0) {
             addSegment(segments[0], true);
+            // Z = close path
             appendCommand(r, 'Z');
         }
 
