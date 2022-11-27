@@ -7,6 +7,7 @@
 #include <map>
 #include <utility>
 #include <unordered_map>
+#include <span>
 
 // STL
 #include <algorithm>
@@ -779,7 +780,7 @@ namespace {
 
 
     Curve generateBezier(
-            const std::vector<g2::Ipoint>& points,
+            const std::vector<g2sv::Point>& points,
             size_t first, size_t last,
             const std::vector<double>& uPrime,
             const g2::Dvec& tan1, const g2::Dvec& tan2)
@@ -899,7 +900,7 @@ namespace {
     */
 
     std::vector<double> chordLengthParameterize(
-            const std::vector<g2::Ipoint>& points,
+            const std::vector<g2sv::Point>& points,
             size_t first, size_t last)
     {
         std::vector<double> u;
@@ -968,7 +969,7 @@ namespace {
     };
 
     Error findMaxError(
-            const std::vector<g2::Ipoint>& points, size_t first, size_t last,
+            const std::vector<g2sv::Point>& points, size_t first, size_t last,
             const Curve& curve, const std::vector<double>& u)
     {
         Error r = {
@@ -1049,7 +1050,7 @@ namespace {
     }*/
 
     bool reparameterize(
-            const std::vector<g2::Ipoint>& points, size_t first, size_t last,
+            const std::vector<g2sv::Point>& points, size_t first, size_t last,
             std::vector<double>& u, const Curve& curve)
     {
         for (size_t i = first; i <= last; ++i) {
@@ -1111,7 +1112,7 @@ namespace {
 
     void fitCubic(
             Initial isInitial,
-            const std::vector<g2::Ipoint>& points,
+            const std::vector<g2sv::Point>& points,
             std::vector<Segment>& segments,
             double error,
             size_t first, size_t last,
@@ -1195,7 +1196,7 @@ namespace {
     }*/
 
     g2::Dvec makeLeftTangent(
-            const std::vector<g2::Ipoint>& wk,
+            std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
             double tolerance)
@@ -1214,6 +1215,7 @@ namespace {
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
             return (pt0 - ptPrev).cast<double>();
+        case g2sv::CornerType::UNKNOWN:     /// @todo [urgent] UNKNOWN: what to do?
         case g2sv::CornerType::SMOOTH_END:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
@@ -1227,7 +1229,7 @@ namespace {
     }
 
     g2::Dvec makeRightTangent(
-            const std::vector<g2::Ipoint>& wk,
+            const std::vector<g2sv::Point>& wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
             double tolerance)
@@ -1247,6 +1249,7 @@ namespace {
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
             return (pt10 - ptNext).cast<double>();
+        case g2sv::CornerType::UNKNOWN:     /// @todo [urgent] UNKNOWN: what to do?
         case g2sv::CornerType::SMOOTH_START:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
@@ -1291,8 +1294,8 @@ namespace {
         //    }
         //}
 
-        std::vector<g2::Ipoint> newPoints;
-        const std::vector<g2::Ipoint>* wk = &pl.pts;    // work set
+        std::vector<g2sv::Point> newPoints;
+        const std::vector<g2sv::Point>* wk = &pl.pts;    // work set
         if (isCompletelySmooth) {
             throw std::logic_error("As we make extrema, no more completely smooth curves!");
             // Completely smooth path: make copies of one segment
