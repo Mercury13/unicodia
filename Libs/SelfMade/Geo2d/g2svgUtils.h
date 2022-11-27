@@ -46,7 +46,6 @@ namespace g2sv {
 
     /// Order matters: the bigger, the heavier
     enum class CornerType {
-        UNKNOWN,
         AVOID_SMOOTH,   // Somehow avoiding smooth
         HORZ_EXTREMITY, // Horizontal extremity of smooth sequence
         VERT_EXTREMITY, // Vertical extremity of smooth sequence
@@ -61,11 +60,8 @@ namespace g2sv {
     };
 
     using Type = int;
-    struct Point : public g2::Point<Type> {
-        CornerType type = CornerType::UNKNOWN;
-        using g2::Point<Type>::Point;
-        constexpr Point(const g2::Point<Type>& x) noexcept : g2::Point<Type>(x) {}
-    };
+    using Point = g2::Point<Type>;
+
     constexpr Type NO_COORD = std::numeric_limits<int>::min();
     extern const Point BAD_VERTEX;
 

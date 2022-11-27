@@ -1215,7 +1215,6 @@ namespace {
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
             return (pt0 - ptPrev).cast<double>();
-        case g2sv::CornerType::UNKNOWN:     /// @todo [urgent] UNKNOWN: what to do?
         case g2sv::CornerType::SMOOTH_END:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
@@ -1249,7 +1248,6 @@ namespace {
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
             return (pt10 - ptNext).cast<double>();
-        case g2sv::CornerType::UNKNOWN:     /// @todo [urgent] UNKNOWN: what to do?
         case g2sv::CornerType::SMOOTH_START:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
