@@ -783,7 +783,7 @@ namespace {
 
 
     Curve generateBezier(
-            const std::vector<g2sv::Point>& points,
+            std::span<const g2sv::Point> points,
             size_t first, size_t last,
             const std::vector<double>& uPrime,
             const g2::Dvec& tan1, const g2::Dvec& tan2)
@@ -907,7 +907,7 @@ namespace {
     */
 
     std::vector<double> chordLengthParameterize(
-            const std::vector<g2sv::Point>& points,
+            std::span<const g2sv::Point> points,
             size_t first, size_t last)
     {
         std::vector<double> u;
@@ -976,7 +976,7 @@ namespace {
     };
 
     Error findMaxError(
-            const std::vector<g2sv::Point>& points, size_t first, size_t last,
+            std::span<const g2sv::Point>& points, size_t first, size_t last,
             const Curve& curve, const std::vector<double>& u)
     {
         Error r = {
@@ -1057,7 +1057,7 @@ namespace {
     }*/
 
     bool reparameterize(
-            const std::vector<g2sv::Point>& points, size_t first, size_t last,
+            std::span<const g2sv::Point> points, size_t first, size_t last,
             std::vector<double>& u, const Curve& curve)
     {
         for (size_t i = first; i <= last; ++i) {
@@ -1123,31 +1123,41 @@ namespace {
         bool isStraight;    ///< [+] points along 1st/last segment
     };
 
+    void fitSingleSeg(
+            Initial isInitial,
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2)
+    {
+        const auto &pt1 = points[first],
+                   &pt2 = points[last];
+        if (isTrue(isInitial) || (tan1.isStraight && tan2.isStraight)) {
+            // Add it as a straight segment
+            addCurve(segments, last,
+                Curve{ .a = pt1, .ah = g2::ZEROVEC,
+                       .bh = g2::ZEROVEC, .b = pt2,
+                       .shape = SegShape::LINE });
+        } else {
+            // Add it as smth nice
+            const auto dist = pt1.distFromD(pt2) / 3;
+            addCurve(segments, last,
+                Curve{ .a = pt1, .ah = tan1.vec.normalized(dist),
+                       .bh = tan2.vec.normalized(dist), .b = pt2,
+                       .shape = SegShape::CUBIC });
+        }
+    }
+
     void fitCubic(
             Initial isInitial,
-            const std::vector<g2sv::Point>& points,
+            std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
             double error,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
         if (last - first == 1) {
-            const auto &pt1 = points[first],
-                       &pt2 = points[last];
-            if (isTrue(isInitial) || (tan1.isStraight && tan2.isStraight)) {
-                // Add it as a straight segment
-                addCurve(segments, last,
-                    Curve{ .a = pt1, .ah = g2::ZEROVEC,
-                           .bh = g2::ZEROVEC, .b = pt2,
-                           .shape = SegShape::LINE });
-            } else {
-                // Add it as smth nice
-                const auto dist = pt1.distFromD(pt2) / 3;
-                addCurve(segments, last,
-                    Curve{ .a = pt1, .ah = tan1.vec.normalized(dist),
-                           .bh = tan2.vec.normalized(dist), .b = pt2,
-                           .shape = SegShape::CUBIC });
-            }
+            fitSingleSeg(isInitial, points, segments, first, last, tan1, tan2);
             return;
         }
 
