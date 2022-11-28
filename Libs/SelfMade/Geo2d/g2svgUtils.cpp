@@ -1112,10 +1112,16 @@ namespace {
     enum class Initial { NO, YES };
 
     template <class En>
-    constexpr bool isTrue(En x) noexcept {
+    constexpr bool isTrue(En x) noexcept
+    {
         static_assert(std::is_enum_v<En>);
         return (x != En::NO);
     }
+
+    struct Tangent {
+        g2::Dvec vec;
+        bool isStraight;
+    };
 
     void fitCubic(
             Initial isInitial,
@@ -1123,12 +1129,12 @@ namespace {
             std::vector<Segment>& segments,
             double error,
             size_t first, size_t last,
-            const g2::Dvec& tan1, const g2::Dvec& tan2)
+            const Tangent& tan1, const Tangent& tan2)
     {
         if (last - first == 1) {
             const auto &pt1 = points[first],
                        &pt2 = points[last];
-            if (isTrue(isInitial)) {
+            if (isTrue(isInitial) || (tan1.isStraight && tan2.isStraight)) {
                 // Add it as a straight segment
                 addCurve(segments, last,
                     Curve{ .a = pt1, .ah = g2::ZEROVEC,
@@ -1138,8 +1144,8 @@ namespace {
                 // Add it as smth nice
                 const auto dist = pt1.distFromD(pt2) / 3;
                 addCurve(segments, last,
-                    Curve{ .a = pt1, .ah = tan1.normalized(dist),
-                           .bh = tan2.normalized(dist), .b = pt2,
+                    Curve{ .a = pt1, .ah = tan1.vec.normalized(dist),
+                           .bh = tan2.vec.normalized(dist), .b = pt2,
                            .shape = SegShape::CUBIC });
             }
             return;
@@ -1153,7 +1159,7 @@ namespace {
 
         // Try not 4 but 5 iterations
         for (int i = 0; i <= 4; ++i) {
-            auto curve = generateBezier(points, first, last, uPrime, tan1, tan2);
+            auto curve = generateBezier(points, first, last, uPrime, tan1.vec, tan2.vec);
             //  Find max deviation of points to fitted curve
             auto max = findMaxError(points, first, last, curve, uPrime);
             if (max.error < error && parametersInOrder) {
@@ -1168,8 +1174,10 @@ namespace {
         }
         // Fitting failed -- split at max error point and fit recursively
         auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
-        fitCubic(Initial::NO, points, segments, error, first, split, tan1, tanCenter);
-        fitCubic(Initial::NO, points, segments, error, split, last, -tanCenter, tan2);
+        fitCubic(Initial::NO, points, segments, error, first, split,
+                 tan1, Tangent{ .vec = tanCenter, .isStraight = false } );
+        fitCubic(Initial::NO, points, segments, error, split, last,
+                 Tangent{ .vec = -tanCenter, .isStraight = false }, tan2);
     }
 
     /*
@@ -1206,7 +1214,7 @@ namespace {
       return segments
     }*/
 
-    g2::Dvec makeLeftTangent(
+    Tangent makeLeftTangent(
             std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
@@ -1225,20 +1233,20 @@ namespace {
 
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
-            return (pt0 - ptPrev).cast<double>();
+            return { .vec = (pt0 - ptPrev).cast<double>(), .isStraight = false };
         case g2sv::CornerType::SMOOTH_END:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
-            return (pt1 - pt0).cast<double>();
+            return { .vec = (pt1 - pt0).cast<double>(), .isStraight = true };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { static_cast<double>(pt1.x - ptPrev.x), 0 };
+            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .isStraight = false };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { 0, static_cast<double>(pt1.y - ptPrev.y) };
+            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .isStraight = false };
         }
         __builtin_unreachable();
     }
 
-    g2::Dvec makeRightTangent(
+    Tangent makeRightTangent(
             const std::vector<g2sv::Point>& wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
@@ -1258,15 +1266,15 @@ namespace {
 
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
-            return (pt10 - ptNext).cast<double>();
+            return { .vec = (pt10 - ptNext).cast<double>(), .isStraight = false };
         case g2sv::CornerType::SMOOTH_START:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
-            return (pt9 - pt10).cast<double>();
+            return { .vec = (pt9 - pt10).cast<double>(), .isStraight = true };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { static_cast<double>(pt9.x - ptNext.x), 0 };
+            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .isStraight = false };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { 0, static_cast<double>(pt9.y - ptNext.y) };
+            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .isStraight = false };
         }
         __builtin_unreachable();
     }
