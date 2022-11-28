@@ -1120,7 +1120,7 @@ namespace {
 
     struct Tangent {
         g2::Dvec vec;
-        bool isStraight;
+        bool isStraight;    ///< [+] points along 1st/last segment
     };
 
     void fitCubic(
