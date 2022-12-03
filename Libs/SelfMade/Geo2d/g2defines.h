@@ -146,6 +146,10 @@ namespace g2 {
         template <class U>
         constexpr Point<U> cast() const noexcept
             { return { cast<U>(x), cast<U>(y) }; }
+
+        /// Multiplies both coords by a.
+        /// @warning  Use with care, thus not op*
+        Point<T> mul(T a) const { return { x * a, y * a }; }
     };
 
     template <class T>
@@ -328,7 +332,7 @@ constexpr g2::Vec<T> operator * (const g2::Vec<T>& a, T b) noexcept
     { return { a.x * b, a.y * b }; }
 
 template <class T>
-constexpr g2::Vec<T> operator - (T a, const g2::Vec<T>& b) noexcept
+constexpr g2::Vec<T> operator * (T a, const g2::Vec<T>& b) noexcept
     { return { b.x * a, b.y * a }; }
 
 // Vec / num → vec

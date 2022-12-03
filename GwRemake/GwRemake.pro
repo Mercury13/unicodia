@@ -10,6 +10,7 @@ win32-g++ {
 
 SOURCES += \
         ../Libs/PugiXml/pugixml.cpp \
+        ../Libs/SelfMade/Geo2d/g2bezier.cpp \
         ../Libs/SelfMade/Geo2d/g2svgUtils.cpp \
         FixupList.cpp \
         main.cpp
@@ -17,6 +18,7 @@ SOURCES += \
 HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/Geo2d/g2bezier.h \
     ../Libs/SelfMade/Geo2d/g2defines.h \
     ../Libs/SelfMade/Geo2d/g2svgUtils.h \
     FixupList.h
