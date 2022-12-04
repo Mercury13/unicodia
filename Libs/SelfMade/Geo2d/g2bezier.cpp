@@ -65,7 +65,8 @@ std::optional<g2bz::Quad> g2bz::Quad::by2tan(
         const g2::Dpoint& a, const g2::Dvec& ah,
         const g2::Dvec& bh, const g2::Dpoint& b)
 {
-    // Check for side (+simple sanity: a=b, ah=0, bh=0)
+    // Check for side: both ah and bh should be on one side of AB
+    // +simple sanity: A=B, ah=0, bh=0
     auto mainLine = b - a;
     auto crossA = mainLine.cross(ah);
     if (crossA == 0)
