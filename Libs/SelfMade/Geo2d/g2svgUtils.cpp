@@ -1259,6 +1259,26 @@ namespace {
       return segments
     }*/
 
+    std::optional<Tangent> modifyQuadTangent(
+            const g2::Dvec& told,
+            g2::Dvec tnew)
+    {
+        // Arm changed quadrant while approximating?
+        auto source = TanSource::QUAD;
+        if ((told.x < 0) ^ (tnew.x < 0)) {
+            tnew.x = 0;
+            source = TanSource::OTHER;
+        }
+        if ((told.y < 0) ^ (tnew.y < 0)) {
+            tnew.y = 0;
+            source = TanSource::OTHER;
+        }
+        if (tnew) {
+            return Tangent { .vec = tnew, .source = source };
+        }
+        return std::nullopt;
+    }
+
     Tangent makeLeftTangent(
             std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
@@ -1286,21 +1306,8 @@ namespace {
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
                 auto quad = g2bz::Quad::by3q(d0, d1, d2);
-                auto told = d1 - d0;
-                auto tnew = quad.armA();
-                // Arm changed quadrant while approximating?
-                auto source = TanSource::QUAD;
-                if ((told.x < 0) ^ (tnew.x < 0)) {
-                    tnew.x = 0;
-                    source = TanSource::OTHER;
-                }
-                if ((told.y < 0) ^ (tnew.y < 0)) {
-                    tnew.y = 0;
-                    source = TanSource::OTHER;
-                }
-                if (tnew) {
-                    return { .vec = tnew, .source = source };
-                }
+                if (auto t = modifyQuadTangent(d1 - d0, quad.armA()))
+                    return *t;
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_END:
@@ -1341,20 +1348,8 @@ namespace {
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
                 auto quad = g2bz::Quad::by3q(d8, d9, d10);
-                auto told = d9 - d10;
-                auto tnew = quad.armB();
-                auto source = TanSource::QUAD;
-                if ((told.x < 0) ^ (tnew.x < 0)) {
-                    tnew.x = 0;
-                    source = TanSource::OTHER;
-                }
-                if ((told.y < 0) ^ (tnew.y < 0)) {
-                    tnew.y = 0;
-                    source = TanSource::OTHER;
-                }
-                if (tnew) {
-                    return { .vec = tnew, .source = source };
-                }
+                if (auto t = modifyQuadTangent(d9 - d10, quad.armB()))
+                    return *t;
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_START:
