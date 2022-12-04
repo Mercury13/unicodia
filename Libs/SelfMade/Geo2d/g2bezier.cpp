@@ -1,11 +1,30 @@
 #include "g2bezier.h"
 
+#include <algorithm>
+
 ///// Quad /////////////////////////////////////////////////////////////////////
 
-double g2bz::Quad::distFrom(const g2::Dpoint& p) const
+double g2bz::Quad::fastDistFrom(const g2::Dpoint& p) const
 {
-    /// @todo [quad, urgent] g2bz::distFrom
-    return 0;
+    auto i = a - b;
+    auto j = b - m;
+    auto k = m - a;
+    auto w = j - k;
+
+    auto v0 = a - p;
+    auto v1 = m - p;
+    auto v2 = b - p;
+
+    auto x = v0.cross(v2);
+    auto y = v1.cross(v0);
+    auto z = v2.cross(v1);
+
+    auto s = 2.0*(y*j+z*k) - x*i;
+
+    double r = (y*z-x*x*0.25)/s.len2();
+    double t = std::clamp(0.5*x+y+r*(s.dot(w))/(x+y+z), 0.0, 1.0);
+
+    return (v0+t*(k+k+t*w)).lenD();
 }
 
 

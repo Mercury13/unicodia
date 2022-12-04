@@ -1165,7 +1165,8 @@ namespace {
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
             size_t first, size_t last,
-            const Tangent& tan1, const Tangent& tan2)
+            const Tangent& tan1, const Tangent& tan2,
+            double error)
     {
         const auto &pA = points[first],
                    &pM = points[first + 1],
@@ -1181,14 +1182,32 @@ namespace {
             auto dM = pM.cast<double>();
             auto dB = pB.cast<double>();
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
-                /// @todo [urgent] actually build quad curve and check for error
-                addCurve(segments, last,
-                         Curve{ .a = pA, .ah = quad->armA(),
-                         .bh = quad->armB(), .b = pB,
-                         .shape = SegShape::QUAD });
-                return;
+                if (auto qe = quad->fastDistFrom(dM); qe < error) {
+                    addCurve(segments, last,
+                             Curve{ .a = pA, .ah = quad->armA(),
+                             .bh = quad->armB(), .b = pB,
+                             .shape = SegShape::QUAD });
+                    return;
+                }
             }
-            /// @todo [urgent] if failed → then build two curves!
+
+            // Distance bad → build two curves
+            auto tanCenter = dB - dA;
+            if (auto quad1 = g2bz::Quad::by2tan(dA, tan1.vec, -tanCenter, dM)) {
+                if (auto quad2 = g2bz::Quad::by2tan(dM, tanCenter, tan2.vec, dB)) {
+                    addCurve(segments, first + 1,
+                             Curve{ .a = pA, .ah = quad1->armA(),
+                             .bh = quad1->armB(), .b = pM,
+                             .shape = SegShape::QUAD });
+                    addCurve(segments, last,
+                             Curve{ .a = pM, .ah = quad2->armA(),
+                             .bh = quad2->armB(), .b = pB,
+                             .shape = SegShape::QUAD });
+                    return;
+                }
+            }
+
+            // Something’s REALLY bad → build two lines
             addCurve(segments, first + 1,
                      Curve{ .a = pA, .ah {}, .bh{}, .b = pM, .shape = SegShape::LINE } );
             addCurve(segments, last,
@@ -1209,7 +1228,7 @@ namespace {
             fitSingleSeg(isInitial, points, segments, first, last, tan1, tan2);
             return;
         case 2:
-            fitSingleQuad(points, segments, first, last, tan1, tan2);
+            fitSingleQuad(points, segments, first, last, tan1, tan2, error);
             return;
         default: ;
         }
