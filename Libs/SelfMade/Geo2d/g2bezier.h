@@ -23,9 +23,14 @@ namespace g2bz {
         /// @return  arm/handle vector of equivalent cubic curve pointing from B
         g2::Dvec cubicArmB() const noexcept { return armB() * (2.0/3.0); }
 
-        /// @return fast approximated (Nehab-Hoppe) distance from curve to point
+        /// @return fast approximated (Nehab-Hoppe) squared distance from curve to point
         /// @see https://hhoppe.com/ravg.pdf
-        double fastDistFrom(const g2::Dpoint& p) const;
+        /// @see https://www.shadertoy.com/view/MlKcDD
+        double fastDistFrom2(const g2::Dpoint& p) const;
+
+        /// @return fast approximated (Nehab-Hoppe) distance from curve to point
+        double fastDistFrom(const g2::Dpoint& p) const
+            { return std::sqrt(fastDistFrom2(p)); }
 
         /// Makes a quad Bezier curve through three points and time
         /// @param [in] t   so-called “time”, (0..1)

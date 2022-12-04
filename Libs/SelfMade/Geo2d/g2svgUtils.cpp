@@ -1224,7 +1224,7 @@ namespace {
             std::vector<Segment>& segments,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2,
-            double error)
+            double error2)
     {
         const auto &pA = points[first],
                    &pM = points[first + 1],
@@ -1241,7 +1241,8 @@ namespace {
             auto dB = pB.cast<double>();
             // Build quad curve, check distance from midpoint
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
-                if (auto qe = quad->fastDistFrom(dM); qe < error) {
+                auto qe = quad->fastDistFrom2(dM);
+                if (qe < error2) {
                     addCurve(segments, last,
                              Curve{ .a = pA, .ah = quad->armA(),
                              .bh = quad->armB(), .b = pB,
@@ -1309,25 +1310,55 @@ namespace {
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error,
+            double error2,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2);
 
-    void fitQuad1(
+    /// @return [+] OK  [-] use alternate ways
+    bool fitQuadSpan(
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error,
+            double error2,
             size_t first, size_t last,
-            const g2bz::Quad& quad)
+            const Tangent& tan1, const Tangent tan2)
     {
+        auto quad = g2bz::Quad::by2tan(
+                points[first].cast<double>(), tan1.vec, tan2.vec, points[last].cast<double>());
+        if (!quad)
+            return false;
 
+        size_t iWorst = first + 1;
+        double eWorst = -1;
+        for (size_t i = first + 1; i < last; ++i) {
+            auto e = quad->fastDistFrom2(points[i].cast<double>());
+            if (e > eWorst) {
+                iWorst = i;
+                eWorst = e;
+            }
+        }
+        if (eWorst <= error2) {
+            // Within error → add curve
+            addCurve(segments, last,
+                     Curve{ .a = points[first], .ah = quad->armA(),
+                     .bh = quad->armB(), .b = points[last],
+                     .shape = SegShape::QUAD });
+        } else {
+            // Take greatest error and set it as a new point
+            Tangent tanCenter {
+                .vec = (points[iWorst - 1] - points[iWorst + 1]).cast<double>(),
+                .source = TanSource::OTHER };
+            fitQuad(Initial::NO, points, segments, error2, first, iWorst, tan1, tanCenter);
+            tanCenter.vec.reverse();
+            fitQuad(Initial::NO, points, segments, error2, iWorst, last, tanCenter, tan2);
+        }
+        return true;
     }
 
     void fitQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error,
+            double error2,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
@@ -1336,37 +1367,28 @@ namespace {
             fitSingleQuad(isInitial, points, segments, first, last, tan1, tan2);
             return;
         case 2:
-            fitTwinQuad(points, segments, first, last, tan1, tan2, error);
+            fitTwinQuad(points, segments, first, last, tan1, tan2, error2);
             return;
         default: ;
         }
 
-        // Is it possible to approximate?
-        auto dFirst = points[first].cast<double>();
-        if (auto quad = g2bz::Quad::by2tan(
-                    dFirst, tan1.vec, tan2.vec, points[last].cast<double>())) {
-            fitQuad1(points, segments, error, first, last, *quad);
-        } else {
+        if (!fitQuadSpan(points, segments, error2, first, last, tan1, tan2)) {
+            // Reduce quad until quadratic curve starts to make sense
             Tangent tanCenter { .vec{}, .source = TanSource::OTHER };
             for (auto split = last - 1; split > first; --split) {
                 // Minus by now! — normal for 1st part, reversed for 2nd part
                 tanCenter.vec = (points[split - 1] - points[split + 1]).cast<double>();
-                if (auto quadSplit = g2bz::Quad::by2tan(
-                        dFirst, tan1.vec, tanCenter.vec, points[split].cast<double>())) {
-                    fitQuad1(points, segments, error, first, last, *quad);
+                if (fitQuadSpan(points, segments, error2, first, split, tan1, tanCenter)) {
                     tanCenter.vec.reverse();
-                    fitQuad(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
-                    goto ok;
+                    fitQuad(Initial::NO, points, segments, error2, split, last, tanCenter, tan2);
+                    return;
                 }
             }
             // Add cubic, then go quad again!
-            {
-                auto newSplit = first + 1;
-                addSingleCubic(segments, newSplit, points[first], tan1.vec, tanCenter.vec, points[newSplit]);
-                tanCenter.vec.reverse();
-                fitQuad(Initial::NO, points, segments, error, newSplit, last, tanCenter, tan2);
-            }
-        ok: ;
+            auto newSplit = first + 1;
+            addSingleCubic(segments, newSplit, points[first], tan1.vec, tanCenter.vec, points[newSplit]);
+            tanCenter.vec.reverse();
+            fitQuad(Initial::NO, points, segments, error2, newSplit, last, tanCenter, tan2);
         }
     }
 
@@ -1568,6 +1590,8 @@ namespace {
         segments.push_back(Segment::fromPt(0, wk[0]));
         size_t lastCorner = corners->size() - 1;
 
+        // Use squared tolerance
+        auto e2 = opt.tolerance * opt.tolerance;
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
             auto last = (*corners)[i + 1];
@@ -1580,7 +1604,7 @@ namespace {
                 Initial::YES,
                 wk,
                 segments,
-                opt.tolerance,
+                e2,
                 first.index,
                 last.index,
                 makeLeftTangent(wk, first, last, opt.tangentTolerance),

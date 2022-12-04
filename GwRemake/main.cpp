@@ -165,7 +165,7 @@ namespace {
     ///
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
-        .tolerance = 3 * MY_SCALE,
+        .tolerance = 8 * MY_SCALE,
         .minDiameter = 3 * MY_SCALE,
         .tangentTolerance = 1.7,    // 1 smallest unit horz/diag
         .sharpCos = 0.997,          // <5°

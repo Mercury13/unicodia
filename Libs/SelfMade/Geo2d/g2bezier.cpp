@@ -4,27 +4,27 @@
 
 ///// Quad /////////////////////////////////////////////////////////////////////
 
-double g2bz::Quad::fastDistFrom(const g2::Dpoint& p) const
+double g2bz::Quad::fastDistFrom2(const g2::Dpoint& p) const
 {
-    auto i = a - b;
-    auto j = b - m;
-    auto k = m - a;
-    auto w = j - k;
-
     auto v0 = a - p;
     auto v1 = m - p;
     auto v2 = b - p;
 
-    auto x = v0.cross(v2);
-    auto y = v1.cross(v0);
-    auto z = v2.cross(v1);
+    auto i = v0 - v2;
+    auto j = v2 - v1;
+    auto k = v1 - v0;
+    auto w = j - k;
 
-    auto s = 2.0*(y*j+z*k) - x*i;
+    double x = v0.cross(v2);
+    double y = v1.cross(v0);
+    double z = v2.cross(v1);
 
-    double r = (y*z-x*x*0.25)/s.len2();
-    double t = std::clamp(0.5*x+y+r*(s.dot(w))/(x+y+z), 0.0, 1.0);
+    auto s = 2.0*(y*j + z*k) - x*i;
 
-    return (v0+t*(k+k+t*w)).lenD();
+    double r = (y*z - x*x*0.25)/s.len2();
+    double t = std::clamp(0.5*x + y + r*(s.dot(w))/(x+y+z), 0.0, 1.0);
+
+    return (v0+t*(k+k+t*w)).len2();
 }
 
 
