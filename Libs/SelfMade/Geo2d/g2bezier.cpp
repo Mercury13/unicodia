@@ -65,6 +65,9 @@ std::optional<g2bz::Quad> g2bz::Quad::by2tan(
         const g2::Dpoint& a, const g2::Dvec& ah,
         const g2::Dvec& bh, const g2::Dpoint& b)
 {
+    // Simple sanity-check
+    if (!ah || !bh || (a == b))
+        return std::nullopt;
     /// @todo [urgent] by two tangents?
     return std::nullopt;
 }
