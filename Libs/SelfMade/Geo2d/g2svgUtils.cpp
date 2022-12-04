@@ -1253,10 +1253,10 @@ namespace {
                 auto d0 = pt0.cast<double>();
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
-                auto ctl = g2bz::quadBy3q(d0, d1, d2);
+                auto quad = g2bz::Quad::by3q(d0, d1, d2);
                 auto told = d1 - d0;
-                auto tnew = ctl - d0;
-                // Changed quadrant somehow?
+                auto tnew = quad.armA();
+                // Arm changed quadrant while approximating?
                 if ((told.x < 0) ^ (tnew.x < 0))
                     tnew.x = 0;
                 if ((told.y < 0) ^ (tnew.y < 0))
@@ -1303,10 +1303,10 @@ namespace {
                 auto d8 = wk[i9 - 1].cast<double>();
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
-                auto ctl = g2bz::quadBy3q(d8, d9, d10);
+                auto quad = g2bz::Quad::by3q(d8, d9, d10);
                 auto told = d9 - d10;
-                auto tnew = ctl - d10;
-                // Changed quadrant somehow?
+                auto tnew = quad.armB();
+                // Arm changed quadrant while approximating?
                 if ((told.x < 0) ^ (tnew.x < 0))
                     tnew.x = 0;
                 if ((told.y < 0) ^ (tnew.y < 0))

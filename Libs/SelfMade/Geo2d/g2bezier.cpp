@@ -1,5 +1,14 @@
 #include "g2bezier.h"
 
+///// Quad /////////////////////////////////////////////////////////////////////
+
+double g2bz::Quad::distFrom(const g2::Dpoint& p) const
+{
+    /// @todo [quad, urgent] g2bz::distFrom
+    return 0;
+}
+
+
 namespace {
 
     double calcMiddleTime(
@@ -24,26 +33,30 @@ namespace {
 
 }   // anon namespace
 
-g2::Dpoint g2bz::quadBy3time(
+g2bz::Quad g2bz::Quad::by3time(
         const g2::Dpoint& start, const g2::Dpoint& mid,
         const g2::Dpoint& end, double t)
 {
     double rt = 1.0 - t;
-    return (mid - start.mul(rt*rt) - end.mul(t*t)).mul(0.5/(t*rt));
+    return {
+        .a = start,
+        .m = (mid - start.mul(rt*rt) - end.mul(t*t)).mul(0.5/(t*rt)),
+        .b = end
+    };
 }
 
-g2::Dpoint g2bz::quadBy3(
+g2bz::Quad g2bz::Quad::by3(
         const g2::Dpoint& start, const g2::Dpoint& mid,
         const g2::Dpoint& end)
 {
     auto time = calcMiddleTime(start, mid, end);
-    return quadBy3time(start, mid, end, time);
+    return by3time(start, mid, end, time);
 }
 
-g2::Dpoint g2bz::quadBy3q(
+g2bz::Quad g2bz::Quad::by3q(
         const g2::Dpoint& start, const g2::Dpoint& mid,
         const g2::Dpoint& end)
 {
     auto time = calcMiddleTimeQ(start, mid, end);
-    return quadBy3time(start, mid, end, time);
+    return by3time(start, mid, end, time);
 }
