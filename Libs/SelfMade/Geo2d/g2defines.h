@@ -145,7 +145,7 @@ namespace g2 {
 
         template <class U>
         constexpr Point<U> cast() const noexcept
-            { return { cast<U>(x), cast<U>(y) }; }
+            { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         /// Multiplies both coords by a.
         /// @warning  Use with care, thus not op*

@@ -11,6 +11,17 @@ namespace {
         return a / (a + b);
     }
 
+    double calcMiddleTimeQ(
+            const g2::Dpoint& start, const g2::Dpoint& mid,
+            const g2::Dpoint& end)
+    {
+        auto a = mid.distFromD(start);
+        auto b = mid.distFromD(end);
+        auto aa = sqrt(a);
+        auto bb = sqrt(b);
+        return aa / (aa + bb);
+    }
+
 }   // anon namespace
 
 g2::Dpoint g2bz::quadBy3time(
@@ -26,5 +37,13 @@ g2::Dpoint g2bz::quadBy3(
         const g2::Dpoint& end)
 {
     auto time = calcMiddleTime(start, mid, end);
+    return quadBy3time(start, mid, end, time);
+}
+
+g2::Dpoint g2bz::quadBy3q(
+        const g2::Dpoint& start, const g2::Dpoint& mid,
+        const g2::Dpoint& end)
+{
+    auto time = calcMiddleTimeQ(start, mid, end);
     return quadBy3time(start, mid, end, time);
 }

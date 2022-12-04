@@ -12,6 +12,9 @@
 // STL
 #include <algorithm>
 
+// Geo2d
+#include "g2bezier.h"
+
 extern const g2sv::Point g2sv::BAD_VERTEX { NO_COORD, NO_COORD };
 
 ///// PathParser ///////////////////////////////////////////////////////////////
@@ -1244,9 +1247,17 @@ namespace {
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt0 - ptPrev).cast<double>(), .isStraight = false };
-        case g2sv::CornerType::SMOOTH_END:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
+            if (i1 < last.index) {
+                auto d0 = pt0.cast<double>();
+                auto d1 = pt1.cast<double>();
+                auto d2 = wk[i1 + 1].cast<double>();
+                auto ctl = g2bz::quadBy3q(d0, d1, d2);
+                return { .vec = ctl - d0, .isStraight = false };
+            }
+            [[fallthrough]];
+        case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt1 - pt0).cast<double>(), .isStraight = true };
         case g2sv::CornerType::HORZ_EXTREMITY:
             return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .isStraight = false };
@@ -1277,9 +1288,17 @@ namespace {
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt10 - ptNext).cast<double>(), .isStraight = false };
-        case g2sv::CornerType::SMOOTH_START:
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
+            if (i9 > first.index) {
+                auto d8 = wk[i9 - 1].cast<double>();
+                auto d9 = pt9.cast<double>();
+                auto d10 = pt10.cast<double>();
+                auto ctl = g2bz::quadBy3q(d8, d9, d10);
+                return { .vec = ctl - d10, .isStraight = false };
+            }
+            [[fallthrough]];
+        case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt9 - pt10).cast<double>(), .isStraight = true };
         case g2sv::CornerType::HORZ_EXTREMITY:
             return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .isStraight = false };
