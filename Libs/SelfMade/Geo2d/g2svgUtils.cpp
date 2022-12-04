@@ -1121,9 +1121,18 @@ namespace {
         return (x != En::NO);
     }
 
+    enum class TanSource {
+        STRAIGHT,       ///< Collinear with straight segment
+        QUAD,           ///< Taken from approximating two lines with quad Bezier
+        NEARBY_LINE,    ///< Taken from prev/next straight segment
+        OTHER           ///< Taken from other source
+    };
+
     struct Tangent {
         g2::Dvec vec;
-        bool isStraight;    ///< [+] the vector points along 1st/last segment
+        TanSource source;
+
+        bool isStraight() const noexcept { return (source == TanSource::STRAIGHT); }
     };
 
     void fitSingleSeg(
@@ -1135,7 +1144,7 @@ namespace {
     {
         const auto &pt1 = points[first],
                    &pt2 = points[last];
-        if (isTrue(isInitial) || (tan1.isStraight && tan2.isStraight)) {
+        if (isTrue(isInitial) || (tan1.isStraight() && tan2.isStraight())) {
             // Add it as a straight segment
             addCurve(segments, last,
                 Curve{ .a = pt1, .ah = g2::ZEROVEC,
@@ -1151,6 +1160,24 @@ namespace {
         }
     }
 
+    void fitSingleQuad(
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2)
+    {
+        /// @todo [urgent] check for point types!
+        /// @todo [urgent] intersect those tangents!
+        const auto &pA = points[first],
+                   &pM = points[first + 1],
+                   &pB = points[last];
+        auto quad = g2bz::Quad::by3q(pA.cast<double>(), pM.cast<double>(), pB.cast<double>());
+        addCurve(segments, last,
+                 Curve{ .a = pA, .ah = quad.armA(),
+                 .bh = quad.armB(), .b = pB,
+                 .shape = SegShape::QUAD });
+    }
+
     void fitCubic(
             Initial isInitial,
             std::span<const g2sv::Point> points,
@@ -1159,9 +1186,14 @@ namespace {
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
-        if (last - first == 1) {
+        switch (last - first) {
+        case 1:
             fitSingleSeg(isInitial, points, segments, first, last, tan1, tan2);
             return;
+        case 2:
+            fitSingleQuad(points, segments, first, last, tan1, tan2);
+            return;
+        default: ;
         }
 
         // Parameterize points, and attempt to fit curve
@@ -1188,9 +1220,9 @@ namespace {
         // Fitting failed -- split at max error point and fit recursively
         auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
         fitCubic(Initial::NO, points, segments, error, first, split,
-                 tan1, Tangent{ .vec = tanCenter, .isStraight = false } );
+                 tan1, Tangent{ .vec = tanCenter, .source = TanSource::OTHER } );
         fitCubic(Initial::NO, points, segments, error, split, last,
-                 Tangent{ .vec = -tanCenter, .isStraight = false }, tan2);
+                 Tangent{ .vec = -tanCenter, .source = TanSource::OTHER }, tan2);
     }
 
     /*
@@ -1246,7 +1278,7 @@ namespace {
 
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
-            return { .vec = (pt0 - ptPrev).cast<double>(), .isStraight = false };
+            return { .vec = (pt0 - ptPrev).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
             if (i1 < last.index) {
@@ -1257,21 +1289,26 @@ namespace {
                 auto told = d1 - d0;
                 auto tnew = quad.armA();
                 // Arm changed quadrant while approximating?
-                if ((told.x < 0) ^ (tnew.x < 0))
+                auto source = TanSource::QUAD;
+                if ((told.x < 0) ^ (tnew.x < 0)) {
                     tnew.x = 0;
-                if ((told.y < 0) ^ (tnew.y < 0))
+                    source = TanSource::OTHER;
+                }
+                if ((told.y < 0) ^ (tnew.y < 0)) {
                     tnew.y = 0;
+                    source = TanSource::OTHER;
+                }
                 if (tnew) {
-                    return { .vec = tnew, .isStraight = false };
+                    return { .vec = tnew, .source = source };
                 }
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_END:
-            return { .vec = (pt1 - pt0).cast<double>(), .isStraight = true };
+            return { .vec = (pt1 - pt0).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .isStraight = false };
+            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .source = TanSource::OTHER };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .isStraight = false };
+            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .source = TanSource::OTHER };
         }
         __builtin_unreachable();
     }
@@ -1296,7 +1333,7 @@ namespace {
 
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
-            return { .vec = (pt10 - ptNext).cast<double>(), .isStraight = false };
+            return { .vec = (pt10 - ptNext).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
             if (i9 > first.index) {
@@ -1306,22 +1343,26 @@ namespace {
                 auto quad = g2bz::Quad::by3q(d8, d9, d10);
                 auto told = d9 - d10;
                 auto tnew = quad.armB();
-                // Arm changed quadrant while approximating?
-                if ((told.x < 0) ^ (tnew.x < 0))
+                auto source = TanSource::QUAD;
+                if ((told.x < 0) ^ (tnew.x < 0)) {
                     tnew.x = 0;
-                if ((told.y < 0) ^ (tnew.y < 0))
+                    source = TanSource::OTHER;
+                }
+                if ((told.y < 0) ^ (tnew.y < 0)) {
                     tnew.y = 0;
+                    source = TanSource::OTHER;
+                }
                 if (tnew) {
-                    return { .vec = tnew, .isStraight = false };
+                    return { .vec = tnew, .source = source };
                 }
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_START:
-            return { .vec = (pt9 - pt10).cast<double>(), .isStraight = true };
+            return { .vec = (pt9 - pt10).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .isStraight = false };
+            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .source = TanSource::OTHER };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .isStraight = false };
+            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .source = TanSource::OTHER };
         }
         __builtin_unreachable();
     }
