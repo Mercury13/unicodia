@@ -1171,17 +1171,28 @@ namespace {
                    &pM = points[first + 1],
                    &pB = points[last];
         if (tan1.isQuad() && tan2.isQuad()) {
+            // Do not build curve, it already exists!
             addCurve(segments, last,
                      Curve{ .a = pA, .ah = tan1.vec,
                      .bh = tan2.vec, .b = pB,
                      .shape = SegShape::QUAD });
         } else {
-            /// @todo [urgent] intersect those tangents and try to approximate
-            auto quad = g2bz::Quad::by3q(pA.cast<double>(), pM.cast<double>(), pB.cast<double>());
+            auto dA = pA.cast<double>();
+            auto dM = pM.cast<double>();
+            auto dB = pB.cast<double>();
+            if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
+                /// @todo [urgent] actually build quad curve and check for error
+                addCurve(segments, last,
+                         Curve{ .a = pA, .ah = tan1.vec,
+                         .bh = tan2.vec, .b = pB,
+                         .shape = SegShape::QUAD });
+                return;
+            }
+            /// @todo [urgent] if failed → then build two curves!
+            addCurve(segments, first + 1,
+                     Curve{ .a = pA, .ah {}, .bh{}, .b = pM, .shape = SegShape::LINE } );
             addCurve(segments, last,
-                     Curve{ .a = pA, .ah = quad.armA(),
-                     .bh = quad.armB(), .b = pB,
-                     .shape = SegShape::QUAD });
+                     Curve{ .a = pM, .ah {}, .bh{}, .b = pB, .shape = SegShape::LINE } );
         }
     }
 

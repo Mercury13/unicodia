@@ -60,3 +60,11 @@ g2bz::Quad g2bz::Quad::by3q(
     auto time = calcMiddleTimeQ(start, mid, end);
     return by3time(start, mid, end, time);
 }
+
+std::optional<g2bz::Quad> g2bz::Quad::by2tan(
+        const g2::Dpoint& a, const g2::Dvec& ah,
+        const g2::Dvec& bh, const g2::Dpoint& b)
+{
+    /// @todo [urgent] by two tangents?
+    return std::nullopt;
+}

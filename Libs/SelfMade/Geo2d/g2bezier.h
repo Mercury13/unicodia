@@ -1,5 +1,9 @@
 #pragma once
 
+// STL
+#include <optional>
+
+// Geo2d
 #include "g2defines.h"
 
 namespace g2bz {
@@ -30,6 +34,10 @@ namespace g2bz {
         static Quad by3q(
                 const g2::Dpoint& start, const g2::Dpoint& mid,
                 const g2::Dpoint& end);
+
+        static std::optional<Quad> by2tan(
+                const g2::Dpoint& a, const g2::Dvec& ah,
+                const g2::Dvec& bh, const g2::Dpoint& b);
 
     };
 
