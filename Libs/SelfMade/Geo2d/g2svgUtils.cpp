@@ -1161,7 +1161,7 @@ namespace {
         }
     }
 
-    void fitSingleQuad(
+    void fitTwinQuad(
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
             size_t first, size_t last,
@@ -1181,6 +1181,7 @@ namespace {
             auto dA = pA.cast<double>();
             auto dM = pM.cast<double>();
             auto dB = pB.cast<double>();
+            // Build quad curve, check distance from midpoint
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
                 if (auto qe = quad->fastDistFrom(dM); qe < error) {
                     addCurve(segments, last,
@@ -1228,7 +1229,7 @@ namespace {
             fitSingleSeg(isInitial, points, segments, first, last, tan1, tan2);
             return;
         case 2:
-            fitSingleQuad(points, segments, first, last, tan1, tan2, error);
+            fitTwinQuad(points, segments, first, last, tan1, tan2, error);
             return;
         default: ;
         }
