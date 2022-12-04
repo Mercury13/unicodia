@@ -1183,8 +1183,8 @@ namespace {
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
                 /// @todo [urgent] actually build quad curve and check for error
                 addCurve(segments, last,
-                         Curve{ .a = pA, .ah = tan1.vec,
-                         .bh = tan2.vec, .b = pB,
+                         Curve{ .a = pA, .ah = quad->armA(),
+                         .bh = quad->armB(), .b = pB,
                          .shape = SegShape::QUAD });
                 return;
             }
