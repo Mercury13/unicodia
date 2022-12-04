@@ -1254,7 +1254,16 @@ namespace {
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
                 auto ctl = g2bz::quadBy3q(d0, d1, d2);
-                return { .vec = ctl - d0, .isStraight = false };
+                auto told = d1 - d0;
+                auto tnew = ctl - d0;
+                // Changed quadrant somehow?
+                if ((told.x < 0) ^ (tnew.x < 0))
+                    tnew.x = 0;
+                if ((told.y < 0) ^ (tnew.y < 0))
+                    tnew.y = 0;
+                if (tnew) {
+                    return { .vec = tnew, .isStraight = false };
+                }
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_END:
@@ -1295,7 +1304,16 @@ namespace {
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
                 auto ctl = g2bz::quadBy3q(d8, d9, d10);
-                return { .vec = ctl - d10, .isStraight = false };
+                auto told = d9 - d10;
+                auto tnew = ctl - d10;
+                // Changed quadrant somehow?
+                if ((told.x < 0) ^ (tnew.x < 0))
+                    tnew.x = 0;
+                if ((told.y < 0) ^ (tnew.y < 0))
+                    tnew.y = 0;
+                if (tnew) {
+                    return { .vec = tnew, .isStraight = false };
+                }
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_START:

@@ -149,7 +149,10 @@ namespace g2 {
 
         /// Multiplies both coords by a.
         /// @warning  Use with care, thus not op*
-        Point<T> mul(T a) const { return { x * a, y * a }; }
+        constexpr Point<T> mul(T a) const noexcept { return { x * a, y * a }; }
+
+        constexpr explicit operator bool() const noexcept
+            { return x != 0 || y != 0; }
     };
 
     template <class T>
