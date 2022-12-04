@@ -234,6 +234,8 @@ namespace g2 {
 
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
+
+        void reverse() noexcept { x = -x; y = -y; }
     };
 
     using Ipoint = Point<int>;

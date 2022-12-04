@@ -1161,6 +1161,37 @@ namespace {
         }
     }
 
+    inline void addSingleCubic(
+            std::vector<Segment>& segments, size_t last,
+            const g2sv::Point& pA, const g2::Dvec& tanA,
+            const g2::Dvec& tanB, const g2sv::Point& pB)
+    {
+        // What to do, add cubic!
+        const auto dist = pA.distFromD(pB) / 3;
+        addCurve(segments, last,
+            Curve{ .a = pA, .ah = tanA.normalized(dist),
+                   .bh = tanB.normalized(dist), .b = pB,
+                   .shape = SegShape::CUBIC });
+    }
+
+    void addSingleQuadOrCubic(
+            std::vector<Segment>& segments, size_t last,
+            const g2sv::Point& pA, const g2::Dvec& tanA,
+            const g2::Dvec& tanB, const g2sv::Point& pB)
+    {
+        auto dA = pA.cast<double>();
+        auto dB = pB.cast<double>();
+        if (auto quad = g2bz::Quad::by2tan(dA, tanA, tanB, dB)) {
+            // Add normal quad curve
+            addCurve(segments, last,
+                     Curve{ .a = pA, .ah = quad->armA(),
+                     .bh = quad->armB(), .b = pB,
+                     .shape = SegShape::QUAD });
+        } else {
+            addSingleCubic(segments, last, pA, tanA, tanB, pB);
+        }
+    }
+
     void fitSingleQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
@@ -1183,22 +1214,8 @@ namespace {
                      .bh = tan2.vec, .b = pB,
                      .shape = SegShape::QUAD });
         } else {
-            auto dA = pA.cast<double>();
-            auto dB = pB.cast<double>();
-            if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
-                // Add normal quad curve
-                addCurve(segments, last,
-                         Curve{ .a = pA, .ah = quad->armA(),
-                         .bh = quad->armB(), .b = pB,
-                         .shape = SegShape::QUAD });
-            } else {
-                // What to do, add cubic!
-                const auto dist = pA.distFromD(pB) / 3;
-                addCurve(segments, last,
-                    Curve{ .a = pA, .ah = tan1.vec.normalized(dist),
-                           .bh = tan2.vec.normalized(dist), .b = pB,
-                           .shape = SegShape::CUBIC });
-            }
+            addSingleQuadOrCubic(
+                        segments, last, pA, tan1.vec, tan2.vec, pB);
         }
     }
 
@@ -1235,25 +1252,8 @@ namespace {
 
             // Distance bad → build two curves
             auto tanCenter = dB - dA;
-            if (auto quad1 = g2bz::Quad::by2tan(dA, tan1.vec, -tanCenter, dM)) {
-                if (auto quad2 = g2bz::Quad::by2tan(dM, tanCenter, tan2.vec, dB)) {
-                    addCurve(segments, first + 1,
-                             Curve{ .a = pA, .ah = quad1->armA(),
-                             .bh = quad1->armB(), .b = pM,
-                             .shape = SegShape::QUAD });
-                    addCurve(segments, last,
-                             Curve{ .a = pM, .ah = quad2->armA(),
-                             .bh = quad2->armB(), .b = pB,
-                             .shape = SegShape::QUAD });
-                    return;
-                }
-            }
-
-            // Something’s REALLY bad → build two lines
-            addCurve(segments, first + 1,
-                     Curve{ .a = pA, .ah {}, .bh{}, .b = pM, .shape = SegShape::LINE } );
-            addCurve(segments, last,
-                     Curve{ .a = pM, .ah {}, .bh{}, .b = pB, .shape = SegShape::LINE } );
+            addSingleQuadOrCubic(segments, first + 1, pA, tan1.vec, -tanCenter, pM);
+            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2.vec,  pB);
         }
     }
 
@@ -1323,8 +1323,6 @@ namespace {
 
     }
 
-    constexpr size_t NO_INDEX = std::numeric_limits<size_t>::max();
-
     void fitQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
@@ -1349,14 +1347,24 @@ namespace {
                     dFirst, tan1.vec, tan2.vec, points[last].cast<double>())) {
             fitQuad1(points, segments, error, first, last, *quad);
         } else {
-            auto split = last - 1;
-            for (; split > first; --split) {
-                auto tanMinusCenter = (points[split - 1] - points[split + 1]).cast<double>();
+            Tangent tanCenter { .vec{}, .source = TanSource::OTHER };
+            for (auto split = last - 1; split > first; --split) {
+                // Minus by now! — normal for 1st part, reversed for 2nd part
+                tanCenter.vec = (points[split - 1] - points[split + 1]).cast<double>();
                 if (auto quadSplit = g2bz::Quad::by2tan(
-                        dFirst, tan1.vec, tanMinusCenter, points[split].cast<double>())) {
+                        dFirst, tan1.vec, tanCenter.vec, points[split].cast<double>())) {
                     fitQuad1(points, segments, error, first, last, *quad);
+                    tanCenter.vec.reverse();
+                    fitQuad(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
                     goto ok;
                 }
+            }
+            // Add cubic, then go quad again!
+            {
+                auto newSplit = first + 1;
+                addSingleCubic(segments, newSplit, points[first], tan1.vec, tanCenter.vec, points[newSplit]);
+                tanCenter.vec.reverse();
+                fitQuad(Initial::NO, points, segments, error, newSplit, last, tanCenter, tan2);
             }
         ok: ;
         }
