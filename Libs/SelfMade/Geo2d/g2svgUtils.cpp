@@ -1133,6 +1133,7 @@ namespace {
         TanSource source;
 
         bool isStraight() const noexcept { return (source == TanSource::STRAIGHT); }
+        bool isQuad() const noexcept { return (source == TanSource::QUAD); }
     };
 
     void fitSingleSeg(
@@ -1166,16 +1167,22 @@ namespace {
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
-        /// @todo [urgent] check for point types!
-        /// @todo [urgent] intersect those tangents!
         const auto &pA = points[first],
                    &pM = points[first + 1],
                    &pB = points[last];
-        auto quad = g2bz::Quad::by3q(pA.cast<double>(), pM.cast<double>(), pB.cast<double>());
-        addCurve(segments, last,
-                 Curve{ .a = pA, .ah = quad.armA(),
-                 .bh = quad.armB(), .b = pB,
-                 .shape = SegShape::QUAD });
+        if (tan1.isQuad() && tan2.isQuad()) {
+            addCurve(segments, last,
+                     Curve{ .a = pA, .ah = tan1.vec,
+                     .bh = tan2.vec, .b = pB,
+                     .shape = SegShape::QUAD });
+        } else {
+            /// @todo [urgent] intersect those tangents and try to approximate
+            auto quad = g2bz::Quad::by3q(pA.cast<double>(), pM.cast<double>(), pB.cast<double>());
+            addCurve(segments, last,
+                     Curve{ .a = pA, .ah = quad.armA(),
+                     .bh = quad.armB(), .b = pB,
+                     .shape = SegShape::QUAD });
+        }
     }
 
     void fitCubic(
