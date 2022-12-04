@@ -1136,7 +1136,7 @@ namespace {
         bool isQuad() const noexcept { return (source == TanSource::QUAD); }
     };
 
-    void fitSingleSeg(
+    void fitSingleCubic(
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
@@ -1158,6 +1158,47 @@ namespace {
                 Curve{ .a = pt1, .ah = tan1.vec.normalized(dist),
                        .bh = tan2.vec.normalized(dist), .b = pt2,
                        .shape = SegShape::CUBIC });
+        }
+    }
+
+    void fitSingleQuad(
+            Initial isInitial,
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2)
+    {
+        const auto &pA = points[first],
+                   &pB = points[last];
+        if (isTrue(isInitial) || (tan1.isStraight() && tan2.isStraight())) {
+            // Add it as a straight segment
+            addCurve(segments, last,
+                Curve{ .a = pA, .ah = g2::ZEROVEC,
+                       .bh = g2::ZEROVEC, .b = pB,
+                       .shape = SegShape::LINE });
+        } else if (tan1.isQuad() && tan2.isQuad()) {
+            // Do not build curve, it already exists!
+            addCurve(segments, last,
+                     Curve{ .a = pA, .ah = tan1.vec,
+                     .bh = tan2.vec, .b = pB,
+                     .shape = SegShape::QUAD });
+        } else {
+            auto dA = pA.cast<double>();
+            auto dB = pB.cast<double>();
+            if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
+                // Add normal quad curve
+                addCurve(segments, last,
+                         Curve{ .a = pA, .ah = quad->armA(),
+                         .bh = quad->armB(), .b = pB,
+                         .shape = SegShape::QUAD });
+            } else {
+                // What to do, add cubic!
+                const auto dist = pA.distFromD(pB) / 3;
+                addCurve(segments, last,
+                    Curve{ .a = pA, .ah = tan1.vec.normalized(dist),
+                           .bh = tan2.vec.normalized(dist), .b = pB,
+                           .shape = SegShape::CUBIC });
+            }
         }
     }
 
@@ -1216,7 +1257,7 @@ namespace {
         }
     }
 
-    void fitCubic(
+    [[maybe_unused]] void fitCubic(
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
@@ -1226,7 +1267,7 @@ namespace {
     {
         switch (last - first) {
         case 1:
-            fitSingleSeg(isInitial, points, segments, first, last, tan1, tan2);
+            fitSingleCubic(isInitial, points, segments, first, last, tan1, tan2);
             return;
         case 2:
             fitTwinQuad(points, segments, first, last, tan1, tan2, error);
@@ -1261,6 +1302,64 @@ namespace {
                  tan1, Tangent{ .vec = tanCenter, .source = TanSource::OTHER } );
         fitCubic(Initial::NO, points, segments, error, split, last,
                  Tangent{ .vec = -tanCenter, .source = TanSource::OTHER }, tan2);
+    }
+
+    // forward
+    void fitQuad(
+            Initial isInitial,
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            double error,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2);
+
+    void fitQuad1(
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            double error,
+            size_t first, size_t last,
+            const g2bz::Quad& quad)
+    {
+
+    }
+
+    constexpr size_t NO_INDEX = std::numeric_limits<size_t>::max();
+
+    void fitQuad(
+            Initial isInitial,
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            double error,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2)
+    {
+        switch (last - first) {
+        case 1:
+            fitSingleQuad(isInitial, points, segments, first, last, tan1, tan2);
+            return;
+        case 2:
+            fitTwinQuad(points, segments, first, last, tan1, tan2, error);
+            return;
+        default: ;
+        }
+
+        // Is it possible to approximate?
+        auto dFirst = points[first].cast<double>();
+        if (auto quad = g2bz::Quad::by2tan(
+                    dFirst, tan1.vec, tan2.vec, points[last].cast<double>())) {
+            fitQuad1(points, segments, error, first, last, *quad);
+        } else {
+            auto split = last - 1;
+            for (; split > first; --split) {
+                auto tanMinusCenter = (points[split - 1] - points[split + 1]).cast<double>();
+                if (auto quadSplit = g2bz::Quad::by2tan(
+                        dFirst, tan1.vec, tanMinusCenter, points[split].cast<double>())) {
+                    fitQuad1(points, segments, error, first, last, *quad);
+                    goto ok;
+                }
+            }
+        ok: ;
+        }
     }
 
     /*
@@ -1359,7 +1458,7 @@ namespace {
     }
 
     Tangent makeRightTangent(
-            const std::vector<g2sv::Point>& wk,
+            std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
             double tolerance)
@@ -1433,7 +1532,7 @@ namespace {
         //}
 
         std::vector<g2sv::Point> newPoints;
-        const std::vector<g2sv::Point>* wk = &pl.pts;    // work set
+        std::span<const g2sv::Point> wk = pl.pts;    // work set
         if (isCompletelySmooth) {
             throw std::logic_error("As we make extrema, no more completely smooth curves!");
             // Completely smooth path: make copies of one segment
@@ -1450,7 +1549,7 @@ namespace {
             newPoints.reserve(pl.pts.size() + 1);
             newPoints.insert(newPoints.end(), pl.pts.begin(), pl.pts.end());
             newPoints.push_back(pl.pts.front());
-            wk = &newPoints;
+            wk = newPoints;
             corners->emplace_back(g2sv::Corner{
                     .index = newPoints.size() - 1, .type = g2sv::CornerType::REAL_CORNER });
         }
@@ -1458,7 +1557,7 @@ namespace {
         // To support reducing paths with multiple points in the same place
         // to one segment:
         std::vector<Segment> segments;
-        segments.push_back(Segment::fromPt(0, (*wk)[0]));
+        segments.push_back(Segment::fromPt(0, wk[0]));
         size_t lastCorner = corners->size() - 1;
 
         for (size_t i = 0; i < lastCorner; ++i) {
@@ -1469,15 +1568,15 @@ namespace {
             //if (i+1 == lastCorner) {
             //    ++i;
             //}
-            fitCubic(
+            fitQuad(
                 Initial::YES,
-                *wk,
+                wk,
                 segments,
                 opt.tolerance,
                 first.index,
                 last.index,
-                makeLeftTangent(*wk, first, last, opt.tangentTolerance),
-                makeRightTangent(*wk, first, last, opt.tangentTolerance)
+                makeLeftTangent(wk, first, last, opt.tangentTolerance),
+                makeRightTangent(wk, first, last, opt.tangentTolerance)
             );
         }
 
