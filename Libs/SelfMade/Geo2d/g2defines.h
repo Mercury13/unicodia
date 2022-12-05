@@ -242,6 +242,7 @@ namespace g2 {
     using Ivec = Vec<int>;
     using Dpoint = Point<double>;
     using Dvec = Vec<double>;
+    using Fvec = Vec<float>;
 
     /// @return cosine of angle A-B-C, or NaN if cannot compute
     template <class T>
@@ -263,6 +264,9 @@ namespace g2 {
     /// @return [+] seg AB strictly intersects seg CD (does not touch)
     template <class T>
     bool doSegsStrictlyIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
+
+    constexpr Dvec lerp(const Dvec& x, const Dvec& y, double t);
+    constexpr Fvec lerp(const Fvec& x, const Fvec& y, float t);
 }   // namespace g2
 
 // Point + point → cannot
@@ -414,3 +418,9 @@ bool g2::doSegsStrictlyIntersect(const g2::Point<T>& a, const g2::Point<T>& b, c
 
     return (((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0)));
 }
+
+constexpr g2::Dvec g2::lerp(const Dvec& x, const Dvec& y, double t)
+    { return x + (y - x) * t; }
+
+constexpr g2::Fvec g2::lerp(const Fvec& x, const Fvec& y, float t)
+    { return x + (y - x) * t; }

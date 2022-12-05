@@ -6,27 +6,26 @@
 
 double g2bz::Quad::fastDistFrom2(const g2::Dpoint& p) const
 {
-    auto v0 = a - p;
-    auto v1 = m - p;
-    auto v2 = b - p;
-
-    auto i = v0 - v2;
-    auto j = v2 - v1;
-    auto k = v1 - v0;
-    auto w = j - k;
-
-    double x = v0.cross(v2);
-    double y = v1.cross(v0);
-    double z = v2.cross(v1);
-
-    auto s = 2.0*(y*j + z*k) - x*i;
-
-    double r = (y*z - x*x*0.25)/s.len2();
-    double t = std::clamp(0.5*x + y + r*(s.dot(w))/(x+y+z), 0.0, 1.0);
-
-    return (v0+t*(k+k+t*w)).len2();
+    g2::Dvec b0 = a - p;
+    g2::Dvec b1 = m - p;
+    g2::Dvec b2 = b - p;
+    double a = b0.cross(b2),
+           b = 2 * b1.cross(b0),
+           d = 2 * b2.cross(b1);            // 𝛼,𝛽,𝛿(𝑝)
+    double f = b*d - a*a;                   // 𝑓(𝑝)
+    g2::Dvec d21 = b2 - b1, d10 = b1-b0, d20 = b2-b0;
+    g2::Dvec gf = 2.0*(b*d21 + d*d10 + a*d20);
+    gf = g2::Dvec(gf.y,-gf.x);              // ∇𝑓(𝑝)
+    g2::Dvec pp = -f*gf / gf.len2();        // 𝑝′
+    g2::Dvec d0p = b0-pp;                   // 𝑝′ to origin
+    double ap = d0p.cross(d20),
+           bp = 2*d10.cross(d0p);           // 𝛼,𝛽(𝑝′)
+    // (note that 2*ap+bp+dp=2*a+b+d=4*area(b0,b1,b2))
+    double tt = (ap+bp)/(2*a+b+d);
+    double t = std::clamp(tt, 0.0, 1.0); // 𝑡̅
+    g2::Dvec v = g2::lerp(g2::lerp(b0,b1,t), g2::lerp(b1,b2,t), t); // 𝑣𝑖 = 𝑏(𝑡̅ )}
+    return v.len2D();
 }
-
 
 namespace {
 
