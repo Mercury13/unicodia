@@ -1125,7 +1125,8 @@ namespace {
         STRAIGHT,       ///< Collinear with straight segment
         QUAD,           ///< Taken from approximating two lines with quad Bezier
         NEARBY_LINE,    ///< Taken from prev/next straight segment
-        OTHER           ///< Taken from other source
+        GUESS,          ///< Plain guess
+        SYNCED,         ///< Still plain guess, but synced with other line
     };
 
     struct Tangent {
@@ -1134,7 +1135,24 @@ namespace {
 
         bool isStraight() const noexcept { return (source == TanSource::STRAIGHT); }
         bool isQuad() const noexcept { return (source == TanSource::QUAD); }
+        /// @return [+] we can change the tangent if it fits better
+        bool isChangeable() const noexcept;
     };
+
+    /// @todo [urgent] if one or both lines are changeable → try to approximate
+    bool Tangent::isChangeable() const noexcept
+    {
+        switch (source) {
+        case TanSource::STRAIGHT:
+        case TanSource::QUAD:
+        case TanSource::GUESS:
+            return true;
+        case TanSource::NEARBY_LINE:
+        case TanSource::SYNCED:
+            return false;
+        }
+        __builtin_unreachable();
+    }
 
     void fitSingleCubic(
             Initial isInitial,
@@ -1298,11 +1316,13 @@ namespace {
             maxError = max.error;
         }
         // Fitting failed -- split at max error point and fit recursively
-        auto tanCenter = (points[split - 1] - points[split + 1]).cast<double>();
-        fitCubic(Initial::NO, points, segments, error, first, split,
-                 tan1, Tangent{ .vec = tanCenter, .source = TanSource::OTHER } );
-        fitCubic(Initial::NO, points, segments, error, split, last,
-                 Tangent{ .vec = -tanCenter, .source = TanSource::OTHER }, tan2);
+        Tangent tanCenter {
+            .vec = (points[split - 1] - points[split + 1]).cast<double>(),
+            .source = TanSource::SYNCED
+        };
+        fitCubic(Initial::NO, points, segments, error, first, split, tan1, tanCenter );
+        tanCenter.vec.reverse();
+        fitCubic(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
     }
 
     // forward
@@ -1346,7 +1366,7 @@ namespace {
             // Take greatest error and set it as a new point
             Tangent tanCenter {
                 .vec = (points[iWorst - 1] - points[iWorst + 1]).cast<double>(),
-                .source = TanSource::OTHER };
+                .source = TanSource::SYNCED };
             fitQuad(Initial::NO, points, segments, error2, first, iWorst, tan1, tanCenter);
             tanCenter.vec.reverse();
             fitQuad(Initial::NO, points, segments, error2, iWorst, last, tanCenter, tan2);
@@ -1374,7 +1394,7 @@ namespace {
 
         if (!fitQuadSpan(points, segments, error2, first, last, tan1, tan2)) {
             // Reduce quad until quadratic curve starts to make sense
-            Tangent tanCenter { .vec{}, .source = TanSource::OTHER };
+            Tangent tanCenter { .vec{}, .source = TanSource::SYNCED };
             for (auto split = last - 1; split > first; --split) {
                 // Minus by now! — normal for 1st part, reversed for 2nd part
                 tanCenter.vec = (points[split - 1] - points[split + 1]).cast<double>();
@@ -1434,11 +1454,11 @@ namespace {
         auto source = TanSource::QUAD;
         if ((told.x < 0) ^ (tnew.x < 0)) {
             tnew.x = 0;
-            source = TanSource::OTHER;
+            source = TanSource::GUESS;
         }
         if ((told.y < 0) ^ (tnew.y < 0)) {
             tnew.y = 0;
-            source = TanSource::OTHER;
+            source = TanSource::GUESS;
         }
         if (tnew) {
             return Tangent { .vec = tnew, .source = source };
@@ -1480,9 +1500,9 @@ namespace {
         case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt1 - pt0).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .source = TanSource::OTHER };
+            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .source = TanSource::OTHER };
+            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
     }
@@ -1522,9 +1542,9 @@ namespace {
         case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt9 - pt10).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .source = TanSource::OTHER };
+            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .source = TanSource::OTHER };
+            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
     }
