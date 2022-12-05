@@ -1447,9 +1447,11 @@ namespace {
     }*/
 
     std::optional<Tangent> modifyQuadTangent(
-            const g2::Dvec& told,
+            const g2sv::Vec& told,
             g2::Dvec tnew)
     {
+        /// @todo [urgent] U+3165E (80.0 150.6): actual tangent is vertical,
+        ///         so how to know what’s happening around?
         // Arm changed quadrant while approximating?
         auto source = TanSource::QUAD;
         if ((told.x < 0) ^ (tnew.x < 0)) {
@@ -1493,7 +1495,7 @@ namespace {
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
                 auto quad = g2bz::Quad::by3q(d0, d1, d2);
-                if (auto t = modifyQuadTangent(d1 - d0, quad.armA()))
+                if (auto t = modifyQuadTangent(pt1 - pt0, quad.armA()))
                     return *t;
             }
             [[fallthrough]];
@@ -1535,7 +1537,7 @@ namespace {
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
                 auto quad = g2bz::Quad::by3q(d8, d9, d10);
-                if (auto t = modifyQuadTangent(d9 - d10, quad.armB()))
+                if (auto t = modifyQuadTangent(pt9 - pt10, quad.armB()))
                     return *t;
             }
             [[fallthrough]];

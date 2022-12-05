@@ -61,6 +61,7 @@ namespace g2sv {
 
     using Type = int;
     using Point = g2::Point<Type>;
+    using Vec = g2::Vec<Type>;
 
     constexpr Type NO_COORD = std::numeric_limits<int>::min();
     extern const Point BAD_VERTEX;
