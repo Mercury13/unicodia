@@ -1534,6 +1534,8 @@ namespace {
 
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
+            if (!ptPrev)
+                throw std::logic_error("[makeLeftTangent] SMOOTH_START needs previous point");
             return { .vec = (pt0 - *ptPrev).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
@@ -1549,8 +1551,12 @@ namespace {
         case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt1 - pt0).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
+            if (!ptPrev)
+                throw std::logic_error("[makeLeftTangent] HORZ_EXTREMITY needs previous point");
             return { .vec = { static_cast<double>(pt1.x - ptPrev->x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
+            if (!ptPrev)
+                throw std::logic_error("[makeLeftTangent] VERT_EXTREMITY needs previous point");
             return { .vec = { 0, static_cast<double>(pt1.y - ptPrev->y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
@@ -1578,6 +1584,8 @@ namespace {
 
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
+            if (!ptNext)
+                throw std::logic_error("[makeRightTangent] SMOOTH_END needs next point");
             return { .vec = (pt10 - *ptNext).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
@@ -1593,8 +1601,12 @@ namespace {
         case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt9 - pt10).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
+            if (!ptNext)
+                throw std::logic_error("[makeRightTangent] HORZ_EXTREMITY needs next point");
             return { .vec = { static_cast<double>(pt9.x - ptNext->x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
+            if (!ptNext)
+                throw std::logic_error("[makeRightTangent] VERT_EXTREMITY needs next point");
             return { .vec = { 0, static_cast<double>(pt9.y - ptNext->y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
