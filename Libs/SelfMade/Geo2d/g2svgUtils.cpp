@@ -1449,6 +1449,9 @@ namespace {
       return segments
     }*/
 
+    template <class T>
+    double fastSgn(T x) { return (x < 0) ? -1 : 1; }
+
     struct CachedTangent : public g2sv::SimplifyOpt::Tangent {
         double tolerance2;
         bool isClosed;
@@ -1491,7 +1494,7 @@ namespace {
             tanNew.y = 0;
         }
 
-        if (pOut) {
+        if (pOut) { // “Outer” point is present → check for “outer” vector
             // Check for tangent “jumping” over Out vector
             auto vOut = *pOut - pMain;
                 auto dvOut = vOut.cast<double>();
@@ -1499,14 +1502,20 @@ namespace {
             if (xOld == 0)
                 throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
 
-            // Get angle for nudging out
+            // Angular nudge
+            // We need tanOld and rotate(vOut) on the same side of vOut
+            // i.e. sign(tanOld×vOut) = sign(rotate(vOut)×vOut)
+            //      vOut×rotate(vOut) =  sin(alpha)·|vOut|²
+            //      rotate(vOut)×vOut = -sin(alpha)·|vOut|²
+            //      sign(rotate(vOut)×vOut) = -sign(sin(alpha)) = -sign(alpha)
+            // thus sign(alpha) = -sign(tanOld×vOut) = -sign(xOld)
+            dvOut = dvOut.scaledRotated({1.0, -fastSgn(xOld) * opt.nudgeAngle});
 
             auto xNew = tanNew.cross(dvOut);
             if (xOld * xNew <= 0) {
                 tanNew = dvOut;
                 if (source == TanSource::QUAD_PRECISE)
                     source = TanSource::QUAD_APPROX;
-                /// @todo [urgent] maybe rotate a bit, ≈2°?
             }
         }
         return Tangent { .vec = tanNew, .source = source };
