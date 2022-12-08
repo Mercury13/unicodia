@@ -8,6 +8,12 @@
 
 namespace g2bz {
 
+    struct Seg {
+        g2::Dpoint a, b;
+
+        double distFrom2(const g2::Dpoint& p);
+    };
+
     struct Quad {
         g2::Dpoint a, m, b;
 
