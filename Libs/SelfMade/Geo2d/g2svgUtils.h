@@ -38,6 +38,8 @@ namespace g2sv {
             double tolerance = 1;
             /// Angle close to right → snap to right!
             double snapAngle = 0.05;
+            /// Made tangent collinear with nearby line → nudge out!
+            double nudgeAngle = 0.03;
         } tangent;
         struct Guide {
             /// Long horz/vert segments are considered “guidelines”

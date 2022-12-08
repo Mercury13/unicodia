@@ -1482,6 +1482,9 @@ namespace {
         auto xOld = tanOld.crossD(vOut);
         if (xOld == 0)
             throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
+
+        // Get angle for nudging out
+
         auto xNew = tanNew.cross(dvOut);
         if (xOld * xNew <= 0) {
             tanNew = dvOut;

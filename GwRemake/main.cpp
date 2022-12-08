@@ -175,8 +175,9 @@ namespace {
             .smoothCosine = -0.9   // ≈154°
         },
         .tangent {
-            .tolerance = 1.7,   // 1 smallest unit horz/diag
-            .snapAngle = 0.07,  // ≈4°
+            .tolerance = 1.7,       // 1 smallest unit horz/diag
+            .snapAngle = 0.07,      // ≈4°
+            .nudgeAngle = 0.055,    // ≈3°
         },
         .guide {
             .triggerLength = 20 * MY_SCALE,

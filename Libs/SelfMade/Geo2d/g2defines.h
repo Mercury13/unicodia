@@ -235,7 +235,13 @@ namespace g2 {
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
 
-        void reverse() noexcept { x = -x; y = -y; }
+        constexpr void reverse() noexcept { x = -x; y = -y; }
+
+        /// Scales and rotates vector, maintaining coords’ chirality
+        ///   (1, 0) → a
+        ///   (0, 1) → (-a.y, a.x)
+        constexpr Vec<T> scaledRotated(const Vec<T>& a) const noexcept
+            { return { x * a.x - y * a.y, x * a.y + y * a.x }; }
     };
 
     using Ipoint = Point<int>;
