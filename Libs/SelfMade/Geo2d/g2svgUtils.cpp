@@ -1472,8 +1472,10 @@ namespace {
         auto vOut = pOut - pMain;
             auto dvOut = vOut.cast<double>();
         auto xOld = told.crossD(vOut);
+        if (xOld == 0)
+            throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
         auto xNew = tnew.cross(dvOut);
-        if (xOld * xNew < 0) {
+        if (xOld * xNew <= 0) {
             tnew = dvOut;
             /// @todo [urgent] maybe rotate a bit, ≈2°?
         }
