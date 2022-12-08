@@ -20,8 +20,6 @@ namespace g2sv {
         double tolerance = 2.5;
         /// Min. diameter — delete smaller curves
         double minDiameter = 2.5;
-        /// Tangent tolerance: close point → make tangent from next
-        double tangentTolerance = 1;
         /// Cosine of an angle that’s considered glitch, always (0..1)
         double sharpCos = 0.98;
         /// Scaling double → int (we mostly work in fixed point)
@@ -35,6 +33,12 @@ namespace g2sv {
             /// always < minCosine
             double smoothCosine = -0.9;
         } corner;
+        struct Tangent {
+            /// Tangent tolerance: close point → make tangent from next
+            double tolerance = 1;
+            /// Angle close to right → snap to right!
+            double snapAngle = 0.05;
+        } tangent;
         struct Guide {
             /// Long horz/vert segments are considered “guidelines”
             int triggerLength = 40;

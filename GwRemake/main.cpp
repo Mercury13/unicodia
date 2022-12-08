@@ -167,15 +167,18 @@ namespace {
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 2.5 * MY_SCALE,
         .minDiameter = 3 * MY_SCALE,
-        .tangentTolerance = 1.7,    // 1 smallest unit horz/diag
         .sharpCos = 0.997,          // <5°
         .scale = MY_SCALE,
-        .corner = {
+        .corner {
             .minCosine = -0.64,  // <130°
             .maxSide = 13 * MY_SCALE,
             .smoothCosine = -0.9   // ≈154°
         },
-        .guide = {
+        .tangent {
+            .tolerance = 1.7,   // 1 smallest unit horz/diag
+            .snapAngle = 0.07,  // ≈4°
+        },
+        .guide {
             .triggerLength = 20 * MY_SCALE,
             .nearbyDist = 15 * MY_SCALE,
         },

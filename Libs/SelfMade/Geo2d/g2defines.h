@@ -217,7 +217,7 @@ namespace g2 {
         // Vec != vec
         constexpr bool operator != (ZeroVec) const noexcept { return (x != 0 || y != 0); }
 
-        template <class U>
+        template <class U = T>
         constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
 
         template <class U>

@@ -35,6 +35,7 @@ for glyph in font.glyphs():
     fg = glyph.layers[1]
     fg.round()
     fg.addExtrema()
+    fg.round()
     # Hint
     glyph.foreground = fg
     # Correct direction

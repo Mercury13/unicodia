@@ -259,7 +259,7 @@ size_t g2sv::Polyline::removeShortSegments(
     if (pts.size() <= 3)
         return 0;
 
-    const double tol2 = g2::sqr(opt.tangentTolerance);
+    const double tol2 = g2::sqr(opt.tangent.tolerance);
 
     auto n = pts.size();
     size_t nFound = 0;
@@ -1449,46 +1449,62 @@ namespace {
 
     std::optional<Tangent> modifyQuadTangent(
             const g2sv::Point& pOut, const g2sv::Point& pMain, const g2sv::Point& pIn,
-            g2::Dvec tnew)
+            g2::Dvec tanNew, double snapToRight)
     {
-        /// @todo [urgent] U+3165E (80.0 150.6): actual tangent is vertical,
-        ///         so how to know what’s happening around?
-        const g2sv::Vec told = pIn - pMain;
+        const g2sv::Vec tanOld = pIn - pMain;
         // Arm changed quadrant while approximating?
         auto source = TanSource::QUAD;
-        if ((told.x < 0) ^ (tnew.x < 0)) {
-            tnew.x = 0;
+        if ((tanOld.x < 0) ^ (tanNew.x < 0)) {
+            tanNew.x = 0;
             source = TanSource::GUESS;
         }
-        if ((told.y < 0) ^ (tnew.y < 0)) {
-            tnew.y = 0;
+        if ((tanOld.y < 0) ^ (tanNew.y < 0)) {
+            tanNew.y = 0;
             source = TanSource::GUESS;
         }
         // “Managed” to change quadrant to opposite one? (i.e. both coords are 0)
-        if (!tnew)
+        if (!tanNew)
             return std::nullopt;
+
+        // Snap to right angle
+        auto tanRight = tanNew.normalized();
+        if (std::abs(tanRight.x) < snapToRight) {
+            source = TanSource::GUESS;
+            tanNew.x = 0;
+        } else if (std::abs(tanRight.y) < snapToRight) {
+            source = TanSource::GUESS;
+            tanNew.y = 0;
+        }
 
         // Check for tangent “jumping” over Out vector
         auto vOut = pOut - pMain;
             auto dvOut = vOut.cast<double>();
-        auto xOld = told.crossD(vOut);
+        auto xOld = tanOld.crossD(vOut);
         if (xOld == 0)
             throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
-        auto xNew = tnew.cross(dvOut);
+        auto xNew = tanNew.cross(dvOut);
         if (xOld * xNew <= 0) {
-            tnew = dvOut;
+            tanNew = dvOut;
+            source = TanSource::GUESS;
             /// @todo [urgent] maybe rotate a bit, ≈2°?
         }
-        return Tangent { .vec = tnew, .source = source };
+        return Tangent { .vec = tanNew, .source = source };
     }
+
+    struct CachedTangent : public g2sv::SimplifyOpt::Tangent {
+        double tolerance2;
+
+        explicit CachedTangent(const g2sv::SimplifyOpt::Tangent& x)
+            : Tangent(x), tolerance2(tolerance * tolerance) {}
+    };
 
     Tangent makeLeftTangent(
             std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
-            double tolerance)
+            const CachedTangent& opt)
     {
-        auto& ptPrev = (first.index == 0) ? wk.back() : wk[first.index - 1];
+        auto& ptPrev = (first.index == 0) ? wk[wk.size() - 2] : wk[first.index - 1];
         auto& pt0 = wk[first.index];
 
         // Get 1st point by tolerance
@@ -1497,7 +1513,7 @@ namespace {
         do {
             ++i1;
             pt1 = wk[i1];
-        } while (i1 < last.index && pt1.distFromD(pt0) < tolerance);
+        } while (i1 < last.index && pt1.dist2from(pt0) < opt.tolerance2);
 
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
@@ -1509,7 +1525,7 @@ namespace {
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
                 auto quad = g2bz::Quad::by3q(d0, d1, d2);
-                if (auto t = modifyQuadTangent(ptPrev, pt0, pt1, quad.armA()))
+                if (auto t = modifyQuadTangent(ptPrev, pt0, pt1, quad.armA(), opt.snapAngle))
                     return *t;
             }
             [[fallthrough]];
@@ -1527,10 +1543,10 @@ namespace {
             std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
             const g2sv::Corner& last,
-            double tolerance)
+            const CachedTangent& opt)
     {
         auto iNext = last.index + 1;
-        auto& ptNext = (iNext >= wk.size()) ? wk.front() : wk[iNext];
+        auto& ptNext = (iNext >= wk.size()) ? wk[1] : wk[iNext];
         auto& pt10 = wk[last.index];
 
         // Get 9th (penultimate) point by tolerance
@@ -1539,7 +1555,7 @@ namespace {
         do {
             --i9;
             pt9 = wk[i9];
-        } while (i9 > first.index && pt9.distFromD(pt10) < tolerance);
+        } while (i9 > first.index && pt9.dist2from(pt10) < opt.tolerance2);
 
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
@@ -1551,7 +1567,7 @@ namespace {
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
                 auto quad = g2bz::Quad::by3q(d8, d9, d10);
-                if (auto t = modifyQuadTangent(ptNext, pt10, pt9, quad.armB()))
+                if (auto t = modifyQuadTangent(ptNext, pt10, pt9, quad.armB(), opt.snapAngle))
                     return *t;
             }
             [[fallthrough]];
@@ -1628,6 +1644,7 @@ namespace {
 
         // Use squared tolerance
         auto e2 = opt.tolerance * opt.tolerance;
+        CachedTangent cachedTangent(opt.tangent);
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
             auto last = (*corners)[i + 1];
@@ -1643,8 +1660,8 @@ namespace {
                 e2,
                 first.index,
                 last.index,
-                makeLeftTangent(wk, first, last, opt.tangentTolerance),
-                makeRightTangent(wk, first, last, opt.tangentTolerance)
+                makeLeftTangent(wk, first, last, cachedTangent),
+                makeRightTangent(wk, first, last, cachedTangent)
             );
         }
 
