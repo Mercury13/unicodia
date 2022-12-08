@@ -1115,12 +1115,13 @@ namespace {
     enum class Initial { NO, YES };
 
     template <class En>
-    constexpr bool isTrue(En x) noexcept
+    [[nodiscard]] constexpr bool isTrue(En x) noexcept
     {
         static_assert(std::is_enum_v<En>);
         return (x != En::NO);
     }
 
+    /// Where the tangent was taken from
     enum class TanSource {
         STRAIGHT,       ///< Collinear with straight segment
         QUAD,           ///< Taken from approximating two lines with quad Bezier
@@ -1463,10 +1464,20 @@ namespace {
             tnew.y = 0;
             source = TanSource::GUESS;
         }
-        if (tnew) {
-            return Tangent { .vec = tnew, .source = source };
+        // “Managed” to change quadrant to opposite one? (i.e. both coords are 0)
+        if (!tnew)
+            return std::nullopt;
+
+        // Check for tangent “jumping” over Out vector
+        auto vOut = pOut - pMain;
+            auto dvOut = vOut.cast<double>();
+        auto xOld = told.crossD(vOut);
+        auto xNew = tnew.cross(dvOut);
+        if (xOld * xNew < 0) {
+            tnew = dvOut;
+            /// @todo [urgent] maybe rotate a bit, ≈2°?
         }
-        return std::nullopt;
+        return Tangent { .vec = tnew, .source = source };
     }
 
     Tangent makeLeftTangent(
