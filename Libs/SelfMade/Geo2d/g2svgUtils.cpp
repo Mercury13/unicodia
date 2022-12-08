@@ -1385,14 +1385,19 @@ namespace {
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
-        switch (last - first) {
-        case 1:
+        auto nSegs = last - first;
+        if (nSegs == 1) {
             fitSingleQuad(isInitial, points, segments, first, last, tan1, tan2);
             return;
-        case 2:
+        }
+
+        if (isTrue(isInitial) && tan1.isChangeable() && tan2.isChangeable()) {
+            /// @todo [urgent] Is approximation with just a line good enough?
+        }
+
+        if (nSegs == 2) {
             fitTwinQuad(points, segments, first, last, tan1, tan2, error2);
             return;
-        default: ;
         }
 
         if (!fitQuadSpan(points, segments, error2, first, last, tan1, tan2)) {
