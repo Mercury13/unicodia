@@ -1124,7 +1124,8 @@ namespace {
     /// Where the tangent was taken from
     enum class TanSource {
         STRAIGHT,       ///< Collinear with straight segment
-        QUAD,           ///< Taken from approximating two lines with quad Bezier
+        QUAD_PRECISE,   ///< Taken from approximating two lines with quad Bezier
+        QUAD_APPROX,    ///< Same, but approximate
         NEARBY_LINE,    ///< Taken from prev/next straight segment
         GUESS,          ///< Plain guess
         SYNCED,         ///< Still plain guess, but synced with other line
@@ -1135,7 +1136,7 @@ namespace {
         TanSource source;
 
         bool isStraight() const noexcept { return (source == TanSource::STRAIGHT); }
-        bool isQuad() const noexcept { return (source == TanSource::QUAD); }
+        bool isPreciseQuad() const noexcept { return (source == TanSource::QUAD_PRECISE); }
         /// @return [+] we can change the tangent if it fits better
         bool isChangeable() const noexcept;
     };
@@ -1145,7 +1146,8 @@ namespace {
     {
         switch (source) {
         case TanSource::STRAIGHT:
-        case TanSource::QUAD:
+        case TanSource::QUAD_PRECISE:
+        case TanSource::QUAD_APPROX:
         case TanSource::GUESS:
             return true;
         case TanSource::NEARBY_LINE:
@@ -1226,7 +1228,7 @@ namespace {
                 Curve{ .a = pA, .ah = g2::ZEROVEC,
                        .bh = g2::ZEROVEC, .b = pB,
                        .shape = SegShape::LINE });
-        } else if (tan1.isQuad() && tan2.isQuad()) {
+        } else if (tan1.isPreciseQuad() && tan2.isPreciseQuad()) {
             // Do not build curve, it already exists!
             addCurve(segments, last,
                      Curve{ .a = pA, .ah = tan1.vec,
@@ -1248,7 +1250,7 @@ namespace {
         const auto &pA = points[first],
                    &pM = points[first + 1],
                    &pB = points[last];
-        if (tan1.isQuad() && tan2.isQuad()) {
+        if (tan1.isPreciseQuad() && tan2.isPreciseQuad()) {
             // Do not build curve, it already exists!
             addCurve(segments, last,
                      Curve{ .a = pA, .ah = tan1.vec,
@@ -1447,13 +1449,24 @@ namespace {
       return segments
     }*/
 
+    struct CachedTangent : public g2sv::SimplifyOpt::Tangent {
+        double tolerance2;
+        bool isClosed;
+
+        CachedTangent(
+                const g2sv::SimplifyOpt::Tangent& x,
+                bool aIsClosed)
+            : Tangent(x), tolerance2(tolerance * tolerance),
+              isClosed(aIsClosed) {}
+    };
+
     std::optional<Tangent> modifyQuadTangent(
-            const g2sv::Point& pOut, const g2sv::Point& pMain, const g2sv::Point& pIn,
-            g2::Dvec tanNew, double snapToRight)
+            const g2sv::Point* pOut, const g2sv::Point& pMain, const g2sv::Point& pIn,
+            g2::Dvec tanNew, const CachedTangent& opt)
     {
         const g2sv::Vec tanOld = pIn - pMain;
         // Arm changed quadrant while approximating?
-        auto source = TanSource::QUAD;
+        auto source = TanSource::QUAD_PRECISE;
         if ((tanOld.x < 0) ^ (tanNew.x < 0)) {
             tanNew.x = 0;
             source = TanSource::GUESS;
@@ -1468,38 +1481,36 @@ namespace {
 
         // Snap to right angle
         auto tanRight = tanNew.normalized();
-        if (std::abs(tanRight.x) < snapToRight) {
-            // Tangent still remains QUAD!!
+        if (std::abs(tanRight.x) < opt.snapAngle) {
+            if (source == TanSource::QUAD_PRECISE)
+                source = TanSource::QUAD_APPROX;
             tanNew.x = 0;
-        } else if (std::abs(tanRight.y) < snapToRight) {
-            // Tangent still remains QUAD!!
+        } else if (std::abs(tanRight.y) < opt.snapAngle) {
+            if (source == TanSource::QUAD_PRECISE)
+                source = TanSource::QUAD_APPROX;
             tanNew.y = 0;
         }
 
-        // Check for tangent “jumping” over Out vector
-        auto vOut = pOut - pMain;
-            auto dvOut = vOut.cast<double>();
-        auto xOld = tanOld.crossD(vOut);
-        if (xOld == 0)
-            throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
+        if (pOut) {
+            // Check for tangent “jumping” over Out vector
+            auto vOut = *pOut - pMain;
+                auto dvOut = vOut.cast<double>();
+            auto xOld = tanOld.crossD(vOut);
+            if (xOld == 0)
+                throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
 
-        // Get angle for nudging out
+            // Get angle for nudging out
 
-        auto xNew = tanNew.cross(dvOut);
-        if (xOld * xNew <= 0) {
-            tanNew = dvOut;
-            // Tangent still remains QUAD!!
-            /// @todo [urgent] maybe rotate a bit, ≈2°?
+            auto xNew = tanNew.cross(dvOut);
+            if (xOld * xNew <= 0) {
+                tanNew = dvOut;
+                if (source == TanSource::QUAD_PRECISE)
+                    source = TanSource::QUAD_APPROX;
+                /// @todo [urgent] maybe rotate a bit, ≈2°?
+            }
         }
         return Tangent { .vec = tanNew, .source = source };
     }
-
-    struct CachedTangent : public g2sv::SimplifyOpt::Tangent {
-        double tolerance2;
-
-        explicit CachedTangent(const g2sv::SimplifyOpt::Tangent& x)
-            : Tangent(x), tolerance2(tolerance * tolerance) {}
-    };
 
     Tangent makeLeftTangent(
             std::span<const g2sv::Point> wk,
@@ -1508,7 +1519,9 @@ namespace {
             const CachedTangent& opt)
     {
         /// @todo [urgent] Is this curve closed?
-        auto& ptPrev = (first.index == 0) ? wk[wk.size() - 2] : wk[first.index - 1];
+        auto* ptPrev = (first.index == 0)
+                    ? (opt.isClosed ? &wk[wk.size() - 2] : nullptr)
+                    : &wk[first.index - 1];
         auto& pt0 = wk[first.index];
 
         // Get 1st point by tolerance
@@ -1521,7 +1534,7 @@ namespace {
 
         switch (first.type) {
         case g2sv::CornerType::SMOOTH_START:
-            return { .vec = (pt0 - ptPrev).cast<double>(), .source = TanSource::NEARBY_LINE };
+            return { .vec = (pt0 - *ptPrev).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
             if (i1 < last.index) {
@@ -1529,16 +1542,16 @@ namespace {
                 auto d1 = pt1.cast<double>();
                 auto d2 = wk[i1 + 1].cast<double>();
                 auto quad = g2bz::Quad::by3q(d0, d1, d2);
-                if (auto t = modifyQuadTangent(ptPrev, pt0, pt1, quad.armA(), opt.snapAngle))
+                if (auto t = modifyQuadTangent(ptPrev, pt0, pt1, quad.armA(), opt))
                     return *t;
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt1 - pt0).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt1.x - ptPrev.x), 0 }, .source = TanSource::SYNCED };
+            return { .vec = { static_cast<double>(pt1.x - ptPrev->x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev.y) }, .source = TanSource::SYNCED };
+            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev->y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
     }
@@ -1550,7 +1563,9 @@ namespace {
             const CachedTangent& opt)
     {
         auto iNext = last.index + 1;
-        auto& ptNext = (iNext >= wk.size()) ? wk[1] : wk[iNext];
+        auto* ptNext = (iNext >= wk.size())
+                ? (opt.isClosed ? &wk[1] : nullptr)
+                : &wk[iNext];
         auto& pt10 = wk[last.index];
 
         // Get 9th (penultimate) point by tolerance
@@ -1563,7 +1578,7 @@ namespace {
 
         switch (last.type) {
         case g2sv::CornerType::SMOOTH_END:
-            return { .vec = (pt10 - ptNext).cast<double>(), .source = TanSource::NEARBY_LINE };
+            return { .vec = (pt10 - *ptNext).cast<double>(), .source = TanSource::NEARBY_LINE };
         case g2sv::CornerType::REAL_CORNER:
         case g2sv::CornerType::AVOID_SMOOTH:
             if (i9 > first.index) {
@@ -1571,16 +1586,16 @@ namespace {
                 auto d9 = pt9.cast<double>();
                 auto d10 = pt10.cast<double>();
                 auto quad = g2bz::Quad::by3q(d8, d9, d10);
-                if (auto t = modifyQuadTangent(ptNext, pt10, pt9, quad.armB(), opt.snapAngle))
+                if (auto t = modifyQuadTangent(ptNext, pt10, pt9, quad.armB(), opt))
                     return *t;
             }
             [[fallthrough]];
         case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt9 - pt10).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            return { .vec = { static_cast<double>(pt9.x - ptNext.x), 0 }, .source = TanSource::SYNCED };
+            return { .vec = { static_cast<double>(pt9.x - ptNext->x), 0 }, .source = TanSource::SYNCED };
         case g2sv::CornerType::VERT_EXTREMITY:
-            return { .vec = { 0, static_cast<double>(pt9.y - ptNext.y) }, .source = TanSource::SYNCED };
+            return { .vec = { 0, static_cast<double>(pt9.y - ptNext->y) }, .source = TanSource::SYNCED };
         }
         __builtin_unreachable();
     }
@@ -1648,7 +1663,7 @@ namespace {
 
         // Use squared tolerance
         auto e2 = opt.tolerance * opt.tolerance;
-        CachedTangent cachedTangent(opt.tangent);
+        CachedTangent cachedTangent(opt.tangent, pl.isClosed);
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
             auto last = (*corners)[i + 1];
