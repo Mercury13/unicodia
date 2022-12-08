@@ -65,4 +65,6 @@ Hana*.sfd
 emoji.zip
 
 # Temporary files of GlyphWiki
-Font-source/GlyphWiki/AutoRemade/*.svg
+Font-Source/GlyphWiki/AutoRemade/*.svg
+Font-Source/GlyphWiki/UnicodiaHan1.ttf
+Font-Source/GlyphWiki/UnicodiaHan.ttf

@@ -1469,10 +1469,10 @@ namespace {
         // Snap to right angle
         auto tanRight = tanNew.normalized();
         if (std::abs(tanRight.x) < snapToRight) {
-            source = TanSource::GUESS;
+            // Tangent still remains QUAD!!
             tanNew.x = 0;
         } else if (std::abs(tanRight.y) < snapToRight) {
-            source = TanSource::GUESS;
+            // Tangent still remains QUAD!!
             tanNew.y = 0;
         }
 
@@ -1485,7 +1485,7 @@ namespace {
         auto xNew = tanNew.cross(dvOut);
         if (xOld * xNew <= 0) {
             tanNew = dvOut;
-            source = TanSource::GUESS;
+            // Tangent still remains QUAD!!
             /// @todo [urgent] maybe rotate a bit, ≈2°?
         }
         return Tangent { .vec = tanNew, .source = source };
@@ -1504,6 +1504,7 @@ namespace {
             const g2sv::Corner& last,
             const CachedTangent& opt)
     {
+        /// @todo [urgent] Is this curve closed?
         auto& ptPrev = (first.index == 0) ? wk[wk.size() - 2] : wk[first.index - 1];
         auto& pt0 = wk[first.index];
 

@@ -31,10 +31,13 @@ for line0 in file:
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
 for glyph in font.glyphs():
-    # Simplify a few times
+    # Round and add extrema
     fg = glyph.layers[1]
     fg.round()
     fg.addExtrema()
+    fg.round()
+    # Simplify to get rid of poor extrema
+    fg.simplify(0.3)
     fg.round()
     # Hint
     glyph.foreground = fg
