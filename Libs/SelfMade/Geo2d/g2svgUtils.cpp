@@ -1413,7 +1413,8 @@ namespace {
         // Is approximation with just a line good enough?
         // (Make linear approximation more precise!)
         if (isTrue(isInitial) && tan1.isChangeable() && tan2.isChangeable()) {
-            if (fitLine(points, segments, error2 * (1.0/4.0), first, last))
+            auto preciseError2 = error2 * (1.0/4.0);
+            if (fitLine(points, segments, preciseError2, first, last))
                 return;
         }
 
