@@ -1738,7 +1738,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'a' },
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
-    { 0xFE00, 0xFE0F, { 0xFE00, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
+    { 0xFE00, 0xFE0F, { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
             "Variation Selectors", MyName::INST },
     // Vertical forms OK, not collapsible: small
     { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
@@ -2360,7 +2360,7 @@ constinit const uc::Block uc::blocks[] {
             "Tags",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
-    { 0xE0100, 0xE01EF, { 0xE0100, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
+    { 0xE0100, 0xE01EF, { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
             "Variation Selectors Supplement", MyName::INST },
 };
 static_assert(std::size(uc::blocks) == uc::N_BLOCKS,
@@ -2463,7 +2463,7 @@ const uc::Continent uc::continentInfo[] {
     // None
     { { Qt::white, Qt::black } },
     // Tech
-    { { Qt::black, 0x00FF00 } },
+    { { Qt::black, 0x8ae234 } },
     // Europe
     { { 0x7fffff, 0x204a87 } },
     // Asia
