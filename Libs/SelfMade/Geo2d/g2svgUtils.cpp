@@ -1377,6 +1377,25 @@ namespace {
         return true;
     }
 
+    bool fitLine(
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            double error2,
+            size_t first, size_t last)
+    {
+        auto& pA = points[first];
+        auto& pB = points[last];
+        g2bz::Seg seg { .a = pA.cast<double>(), .b = pB.cast<double>() };
+        for (size_t i = first + 1; i <= last; ++i) {
+            if (seg.dist2from(points[i].cast<double>()) > error2)
+                return false;
+        }
+        addCurve(segments, last,
+            Curve{ .a = pA, .ah {}, .bh {}, .b = pB,
+                   .shape = SegShape::LINE });
+        return true;
+    }
+
     void fitQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
@@ -1391,8 +1410,11 @@ namespace {
             return;
         }
 
+        // Is approximation with just a line good enough?
+        // (Make linear approximation more precise!)
         if (isTrue(isInitial) && tan1.isChangeable() && tan2.isChangeable()) {
-            /// @todo [urgent] Is approximation with just a line good enough?
+            if (fitLine(points, segments, error2 * (1.0/4.0), first, last))
+                return;
         }
 
         if (nSegs == 2) {
