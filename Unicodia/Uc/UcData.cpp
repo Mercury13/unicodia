@@ -29,7 +29,7 @@ using namespace std::string_view_literals;
 const uc::Cp* uc::cpsByCode[CAPACITY];
 short uc::blocksByCode16[CAPACITY >> 4];
 const QString uc::Font::qempty;
-constinit const uc::InputMethods uc::InputMethods::NONE;
+constinit const uc::InputMethods uc::InputMethods::NONE {};
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
@@ -197,9 +197,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …3 Old Katakana/Hiragana
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "SengBuhan-Regular.ttf", 115_pc },                                        // Lao
-    { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Latin
-      { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …1
-      { FNAME_FUNKY },                                                          // …2
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
+      { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                       // …1
+      { FNAME_NOTO },                                                           // …2
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
     { "NotoSansLinearA-Regular.ttf" },                                          // Linear A
@@ -1705,7 +1705,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xAB30, 0xAB6F, { 0xAB66, EcContinent::EUROPE },
             "Latin Extended-E",
             { EcScript::Latn, 'E' },
-            EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Cherokee supp OK
     { 0xAB70, 0xABBF, { L'ꮆ', EcContinent::AMERICA },
             "Cherokee Supplement",
