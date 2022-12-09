@@ -151,6 +151,7 @@ namespace uc {
 
     enum class EcContinent {
         NONE,
+        TECH,       ///< For Unicode’s own needs
         EUROPE,     ///< Europe, incl. Georgia and Mediterranean
         ASIA,       ///< Mainland Asia
         CJK,        ///< Hani and derived scripts

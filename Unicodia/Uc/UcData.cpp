@@ -1767,8 +1767,8 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, EcScript::NONE, EcFont::CJK,
             Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Specials OK
-    { 0xFFF0, 0xFFFF, { L'�', EcContinent::NONE },
-            "Specials", MyName::INST },
+    { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },
+            "Specials", MyName::INST, },
     // Linear B syll OK
     { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE },
             "Linear B Syllabary", { EcScript::Linb, 0 }, EcScript::Linb },
@@ -2462,6 +2462,8 @@ size_t uc::nTerms() { return std::size(terms); }
 const uc::Continent uc::continentInfo[] {
     // None
     { { Qt::white, Qt::black } },
+    // Tech
+    { { Qt::black, 0x00FF00 } },
     // Europe
     { { 0x7fffff, 0x204a87 } },
     // Asia
