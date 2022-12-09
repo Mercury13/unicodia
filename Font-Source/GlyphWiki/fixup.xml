@@ -1,4 +1,12 @@
 <fixup>
+ <glyph name="31454.svg">
+  <point x="113.1" y="35.9" dir="s" />
+  <point x="114.3" y="34.6" dir="s" />
+ </glyph>
+ <glyph name="3146D.svg">
+  <point x="135.0" y="106.1" dir="w" />
+  <point x="135.5" y="107.8" dir="w" />
+ </glyph>
  <glyph name="31F98.svg">
   <point x="155.300" y="111.300" dir="sw" />
   <point x="166.300" y="120.300" dir="sw" />
