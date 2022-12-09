@@ -166,6 +166,7 @@ namespace {
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
         .tolerance = 2.5 * MY_SCALE,
+        .qLine = 0.4,
         .minDiameter = 3 * MY_SCALE,
         .sharpCos = 0.997,          // <5°
         .scale = MY_SCALE,

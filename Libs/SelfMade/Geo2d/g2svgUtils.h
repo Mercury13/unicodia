@@ -18,6 +18,8 @@ namespace g2sv {
     struct SimplifyOpt {
         /// Fitting tolerance
         double tolerance = 2.5;
+        /// Quotient: fitting tolerance for straight lines
+        double qLine = 0.5;
         /// Min. diameter — delete smaller curves
         double minDiameter = 2.5;
         /// Cosine of an angle that’s considered glitch, always (0..1)

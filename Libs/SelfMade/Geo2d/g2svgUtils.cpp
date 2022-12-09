@@ -1328,12 +1328,19 @@ namespace {
         fitCubic(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
     }
 
+    struct Errors {
+        double main2, line2;
+
+        constexpr Errors(double main, double qLine) noexcept
+            : main2(main * main), line2(main2 * qLine * qLine) {}
+    };
+
     // forward
     void fitQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error2,
+            const Errors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2);
 
@@ -1341,7 +1348,7 @@ namespace {
     bool fitQuadSpan(
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error2,
+            const Errors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent tan2)
     {
@@ -1359,7 +1366,7 @@ namespace {
                 eWorst = e;
             }
         }
-        if (eWorst <= error2) {
+        if (eWorst <= errors.main2) {
             // Within error → add curve
             addCurve(segments, last,
                      Curve{ .a = points[first], .ah = quad->armA(),
@@ -1370,9 +1377,9 @@ namespace {
             Tangent tanCenter {
                 .vec = (points[iWorst - 1] - points[iWorst + 1]).cast<double>(),
                 .source = TanSource::SYNCED };
-            fitQuad(Initial::NO, points, segments, error2, first, iWorst, tan1, tanCenter);
+            fitQuad(Initial::NO, points, segments, errors, first, iWorst, tan1, tanCenter);
             tanCenter.vec.reverse();
-            fitQuad(Initial::NO, points, segments, error2, iWorst, last, tanCenter, tan2);
+            fitQuad(Initial::NO, points, segments, errors, iWorst, last, tanCenter, tan2);
         }
         return true;
     }
@@ -1400,7 +1407,7 @@ namespace {
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error2,
+            const Errors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
@@ -1413,25 +1420,24 @@ namespace {
         // Is approximation with just a line good enough?
         // (Make linear approximation more precise!)
         if (isTrue(isInitial) && tan1.isChangeable() && tan2.isChangeable()) {
-            auto preciseError2 = error2 * (1.0/4.0);
-            if (fitLine(points, segments, preciseError2, first, last))
+            if (fitLine(points, segments, errors.line2, first, last))
                 return;
         }
 
         if (nSegs == 2) {
-            fitTwinQuad(points, segments, first, last, tan1, tan2, error2);
+            fitTwinQuad(points, segments, first, last, tan1, tan2, errors.main2);
             return;
         }
 
-        if (!fitQuadSpan(points, segments, error2, first, last, tan1, tan2)) {
+        if (!fitQuadSpan(points, segments, errors, first, last, tan1, tan2)) {
             // Reduce quad until quadratic curve starts to make sense
             Tangent tanCenter { .vec{}, .source = TanSource::SYNCED };
             for (auto split = last - 1; split > first; --split) {
                 // Minus by now! — normal for 1st part, reversed for 2nd part
                 tanCenter.vec = (points[split - 1] - points[split + 1]).cast<double>();
-                if (fitQuadSpan(points, segments, error2, first, split, tan1, tanCenter)) {
+                if (fitQuadSpan(points, segments, errors, first, split, tan1, tanCenter)) {
                     tanCenter.vec.reverse();
-                    fitQuad(Initial::NO, points, segments, error2, split, last, tanCenter, tan2);
+                    fitQuad(Initial::NO, points, segments, errors, split, last, tanCenter, tan2);
                     return;
                 }
             }
@@ -1439,7 +1445,7 @@ namespace {
             auto newSplit = first + 1;
             addSingleCubic(segments, newSplit, points[first], tan1.vec, tanCenter.vec, points[newSplit]);
             tanCenter.vec.reverse();
-            fitQuad(Initial::NO, points, segments, error2, newSplit, last, tanCenter, tan2);
+            fitQuad(Initial::NO, points, segments, errors, newSplit, last, tanCenter, tan2);
         }
     }
 
@@ -1711,7 +1717,7 @@ namespace {
         size_t lastCorner = corners->size() - 1;
 
         // Use squared tolerance
-        auto e2 = opt.tolerance * opt.tolerance;
+        Errors errors { opt.tolerance, opt.qLine };
         CachedTangent cachedTangent(opt.tangent, pl.isClosed);
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
@@ -1725,7 +1731,7 @@ namespace {
                 Initial::YES,
                 wk,
                 segments,
-                e2,
+                errors,
                 first.index,
                 last.index,
                 makeLeftTangent(wk, first, last, cachedTangent),
