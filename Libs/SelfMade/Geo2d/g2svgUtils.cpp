@@ -1386,7 +1386,7 @@ namespace {
         auto& pA = points[first];
         auto& pB = points[last];
         g2bz::Seg seg { .a = pA.cast<double>(), .b = pB.cast<double>() };
-        for (size_t i = first + 1; i <= last; ++i) {
+        for (size_t i = first + 1; i < last; ++i) {
             if (seg.dist2from(points[i].cast<double>()) > error2)
                 return false;
         }
