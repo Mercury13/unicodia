@@ -1262,7 +1262,7 @@ namespace {
             auto dB = pB.cast<double>();
             // Build quad curve, check distance from midpoint
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
-                auto qe = quad->fastDistFrom2(dM);
+                auto qe = quad->fastDist2from(dM);
                 if (qe < error2) {
                     addCurve(segments, last,
                              Curve{ .a = pA, .ah = quad->armA(),
@@ -1353,7 +1353,7 @@ namespace {
         size_t iWorst = first + 1;
         double eWorst = -1;
         for (size_t i = first + 1; i < last; ++i) {
-            auto e = quad->fastDistFrom2(points[i].cast<double>());
+            auto e = quad->fastDist2from(points[i].cast<double>());
             if (e > eWorst) {
                 iWorst = i;
                 eWorst = e;

@@ -11,7 +11,12 @@ namespace g2bz {
     struct Seg {
         g2::Dpoint a, b;
 
-        double distFrom2(const g2::Dpoint& p);
+        /// @return  squared distance from line segment to point
+        double dist2from(const g2::Dpoint& p);
+
+        /// @return  distance from line segment to point
+        double distFrom(const g2::Dpoint& p)
+            { return std::sqrt(dist2from(p)); }
     };
 
     struct Quad {
@@ -32,11 +37,11 @@ namespace g2bz {
         /// @return fast approximated (Nehab-Hoppe) squared distance from curve to point
         /// @see https://hhoppe.com/ravg.pdf
         /// @see https://www.shadertoy.com/view/MlKcDD
-        double fastDistFrom2(const g2::Dpoint& p) const;
+        double fastDist2from(const g2::Dpoint& p) const;
 
         /// @return fast approximated (Nehab-Hoppe) distance from curve to point
         double fastDistFrom(const g2::Dpoint& p) const
-            { return std::sqrt(fastDistFrom2(p)); }
+            { return std::sqrt(fastDist2from(p)); }
 
         /// Makes a quad Bezier curve through three points and time
         /// @param [in] t   so-called “time”, (0..1)

@@ -2,9 +2,26 @@
 
 #include <algorithm>
 
+///// Seg //////////////////////////////////////////////////////////////////////
+
+double g2bz::Seg::dist2from(const g2::Dpoint& p)
+{
+    auto myVec = b - a;
+    auto l2 = myVec.len2();
+    if (l2 == 0)
+        return p.dist2from(b);
+    auto t = ((p.x - a.x) * myVec.x + (p.y - a.y) * myVec.y) / l2;
+    if (t <= 0)
+        return p.dist2from(a);
+    if (t >= 1)
+        return p.dist2from(b);
+    auto q = a + myVec * t;
+    return p.dist2from(q);
+}
+
 ///// Quad /////////////////////////////////////////////////////////////////////
 
-double g2bz::Quad::fastDistFrom2(const g2::Dpoint& p) const
+double g2bz::Quad::fastDist2from(const g2::Dpoint& p) const
 {
     g2::Dvec b0 = a - p;
     g2::Dvec b1 = m - p;
