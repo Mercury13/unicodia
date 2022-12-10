@@ -2356,7 +2356,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'H' },
             EcScript::Hani, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Tags OK
-    { 0xE0000, 0xE007F, { 0xE0054, EcContinent::NONE, Ifg::APPROX_COLLECTIVE },
+    { 0xE0000, 0xE007F, { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
             "Tags",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
