@@ -2463,7 +2463,7 @@ const uc::Continent uc::continentInfo[] {
     // None
     { { Qt::white, Qt::black } },
     // Tech
-    { { Qt::black, 0x8ae234 } },
+    { { 0x225500, 0x7FFF2A } },
     // Europe
     { { 0x7fffff, 0x204a87 } },
     // Asia
