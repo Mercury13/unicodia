@@ -1440,13 +1440,13 @@ namespace {
             std::span<const g2sv::Point> points,
             size_t first, size_t last,
             g2bz::Quad& quad,
-            TanSource srcA, TanSource srcB)
+            bool isChangeableA, bool isChangeableB)
     {
         auto r = worstError2(points, first, last, quad);
         auto tmp = quad;
 
-        if (Tangent::isChangeable(srcA)) {
-            if (Tangent::isChangeable(srcB)) {
+        if (isChangeableA) {
+            if (isChangeableB) {
                 // A and B changeable
                 for (int i = 0; i < 2; ++i) {
                     auto q = tryImproveQuadA(points, first, last, tmp);
@@ -1454,9 +1454,9 @@ namespace {
                         if (i != 0) {
                             break;
                         } else {
+                            // i == 0 and failed → also try nudging B
                             tmp = quad;
                         }
-                        // i == 0 → also try nudging B
                     } else {
                         quad = tmp;
                         r = q;
@@ -1476,7 +1476,7 @@ namespace {
                 }
             }
         } else {
-            if (Tangent::isChangeable(srcB)) {
+            if (isChangeableB) {
                 // B changeable
                 auto q = tryImproveQuadB(points, first, last, tmp);
                 if (q.value2 < r.value2) {
@@ -1504,7 +1504,7 @@ namespace {
         if (!quad)
             return false;
 
-        auto worst = tryImproveQuad(points, first, last, *quad, tan1.source, tan2.source);
+        auto worst = tryImproveQuad(points, first, last, *quad, tan1.isChangeable(), tan2.isChangeable());
 
         if (worst.value2 <= errors.fit2) {
             // Within error → add curve
