@@ -109,14 +109,14 @@ namespace g2 {
         constexpr Point(T aX, T aY) noexcept : x(aX), y(aY) {}
 
         // squared radius
-        constexpr T radius2() const noexcept
+        [[nodiscard]] constexpr T radius2() const noexcept
             { return x*x + y*y; }
         // |a|, length
         template <class U>
-        constexpr U radius() const noexcept
+        [[nodiscard]] constexpr U radius() const noexcept
             { return std::sqrt(cast<U>(radius2())); }
-        constexpr float radiusF() const noexcept { return radius<float>(); }
-        constexpr float radiusD() const noexcept { return radius<double>(); }
+        [[nodiscard]] constexpr float radiusF() const noexcept { return radius<float>(); }
+        [[nodiscard]] constexpr float radiusD() const noexcept { return radius<double>(); }
 
         // squared distance
         constexpr T dist2from(const Point<T>& b) const noexcept
@@ -126,10 +126,10 @@ namespace g2 {
             return dx*dx + dy*dy;
         }
         template <class U>
-        constexpr U distFrom(const Point<T>& b) const noexcept
+        [[nodiscard]] constexpr U distFrom(const Point<T>& b) const noexcept
             { return std::sqrt(g2::cast<U>(dist2from(b))); }
-        constexpr float distFromF(const Point<T>& b) const noexcept { return distFrom<float>(b); }
-        constexpr double distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
+        [[nodiscard]] constexpr float distFromF(const Point<T>& b) const noexcept { return distFrom<float>(b); }
+        [[nodiscard]] constexpr double distFromD(const Point<T>& b) const noexcept { return distFrom<double>(b); }
 
         // Point == point
         constexpr bool operator == (const Point<T>& b) const { return (x == b.x && y == b.y); }
@@ -144,29 +144,29 @@ namespace g2 {
         constexpr bool operator != (const Origin) const { return (x != 0 || y != 0); }
 
         template <class U>
-        constexpr Point<U> cast() const noexcept
+        [[nodiscard]] constexpr Point<U> cast() const noexcept
             { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         /// Multiplies both coords by a.
         /// @warning  Use with care, thus not op*
-        constexpr Point<T> mul(T a) const noexcept { return { x * a, y * a }; }
+        [[nodiscard]] constexpr Point<T> mul(T a) const noexcept { return { x * a, y * a }; }
 
-        /// Multiplies both coords by a.
+        /// Adds two points
         /// @warning  Use with care, thus not op+
-        constexpr Point<T> add(const Point<T>& a) const noexcept { return { x + a.x, y + a.y }; }
+        [[nodiscard]] constexpr Point<T> sum(const Point<T>& a) const noexcept { return { x + a.x, y + a.y }; }
 
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
 
         /// @see template version of linearCombi
-        static constexpr Point<T> linearCombi(double c1, const Point<T>& p1)
+        [[nodiscard]] static constexpr Point<T> linearCombi(double c1, const Point<T>& p1)
             { return p1.mul(c1); }
 
         /// Linear combination of N points
         template <class... Args>
-        static constexpr Point<T> linearCombi(
+        [[nodiscard]] static constexpr Point<T> linearCombi(
                 double c1, const Point<T>& p1, double c2, const Point<T>& p2, const Args&... args)
-            { return p1.mul(c1).add(linearCombi(c2, p2, args...)); }
+            { return p1.mul(c1).sum(linearCombi(c2, p2, args...)); }
     };
 
     template <class T>
@@ -188,36 +188,36 @@ namespace g2 {
         constexpr Vec(T aX, T aY) noexcept : x(aX), y(aY) {}
 
         // 2D cross product = oriented parallelogram area = |a|·|b|·sin α
-        constexpr T cross(const Vec<T>& b) const noexcept
+        [[nodiscard]] constexpr T cross(const Vec<T>& b) const noexcept
             { return (x * b.y) - (y * b.x); }
-        template <class U> constexpr U crossT(const Vec<T>& b) const noexcept
+        template <class U> [[nodiscard]] constexpr U crossT(const Vec<T>& b) const noexcept
             { return (CommonType<U>(x) * b.y) - (CommonType<U>(y) * b.x); }
-        constexpr long long crossL(const Vec<T>& b) const noexcept { return crossT<long long>(b); }
-        constexpr float crossF(const Vec<T>& b) const noexcept { return crossT<float>(b); }
-        constexpr double crossD(const Vec<T>& b) const noexcept { return crossT<double>(b); }
+        [[nodiscard]] constexpr long long crossL(const Vec<T>& b) const noexcept { return crossT<long long>(b); }
+        [[nodiscard]] constexpr float crossF(const Vec<T>& b) const noexcept { return crossT<float>(b); }
+        [[nodiscard]] constexpr double crossD(const Vec<T>& b) const noexcept { return crossT<double>(b); }
 
         // Dot product = |a|·|b|·cos α
-        constexpr T dot(const Vec<T>& b) const noexcept
+        [[nodiscard]] constexpr T dot(const Vec<T>& b) const noexcept
             { return (x * b.x) + (y * b.y); }
-        template <class U> constexpr U dotT(const Vec<T>& b) const noexcept
+        template <class U> [[nodiscard]] constexpr U dotT(const Vec<T>& b) const noexcept
             { return (CommonType<U>(x) * b.x) + (CommonType<U>(y) * b.y); }
-        constexpr long long dotL(const Vec<T>& b) const noexcept { return dotT<long long>(b); }
-        constexpr float dotF(const Vec<T>& b) const noexcept { return dotT<float>(b); }
-        constexpr double dotD(const Vec<T>& b) const noexcept { return dotT<double>(b); }
+        [[nodiscard]] constexpr long long dotL(const Vec<T>& b) const noexcept { return dotT<long long>(b); }
+        [[nodiscard]] constexpr float dotF(const Vec<T>& b) const noexcept { return dotT<float>(b); }
+        [[nodiscard]] constexpr double dotD(const Vec<T>& b) const noexcept { return dotT<double>(b); }
 
         // |a|², squared length
-        constexpr T len2() const noexcept { return x*x + y*y; }
+        [[nodiscard]] constexpr T len2() const noexcept { return x*x + y*y; }
         template <class U>
-        constexpr U len2T() const noexcept
+          [[nodiscard]] constexpr U len2T() const noexcept
             { return sqr<CommonType<U>>(x) + sqr<CommonType<U>>(y); }
-        constexpr long long len2L() const noexcept { return len2T<long long>(); }
-        constexpr float len2F() const noexcept { return len2T<float>(); }
-        constexpr double len2D() const noexcept { return len2T<double>(); }
+        [[nodiscard]] constexpr long long len2L() const noexcept { return len2T<long long>(); }
+        [[nodiscard]] constexpr float len2F() const noexcept { return len2T<float>(); }
+        [[nodiscard]] constexpr double len2D() const noexcept { return len2T<double>(); }
         // |a|, length
         template <class U>
-        constexpr U len() const noexcept { return std::sqrt(len2T<U>()); }
-        constexpr float lenF() const noexcept { return len<float>(); }
-        constexpr double lenD() const noexcept { return len<double>(); }
+          [[nodiscard]] constexpr U len() const noexcept { return std::sqrt(len2T<U>()); }
+        [[nodiscard]] constexpr float lenF() const noexcept { return len<float>(); }
+        [[nodiscard]] constexpr double lenD() const noexcept { return len<double>(); }
 
         // Vec == vec
         constexpr bool operator == (const Vec<T>& b) const noexcept { return (x == b.x && y == b.y); }
@@ -232,18 +232,18 @@ namespace g2 {
         constexpr bool operator != (ZeroVec) const noexcept { return (x != 0 || y != 0); }
 
         template <class U = T>
-        constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
+        [[nodiscard]] constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
 
         template <class U>
-        constexpr static Vec<T> fromPt(const Point<U>& a) noexcept
+        [[nodiscard]] constexpr static Vec<T> fromPt(const Point<U>& a) noexcept
             { return { g2::cast<T>(a.x), g2::cast<T>(a.y) }; }
 
         template <class U>
-        constexpr Point<U> toPt() const noexcept
+        [[nodiscard]] constexpr Point<U> toPt() const noexcept
             { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         template <class U>
-        constexpr Vec<U> cast() const noexcept
+        [[nodiscard]] constexpr Vec<U> cast() const noexcept
             { return { g2::cast<U>(x), g2::cast<U>(y) }; }
 
         constexpr explicit operator bool() const noexcept
@@ -254,7 +254,7 @@ namespace g2 {
         /// Scales and rotates vector, maintaining coords’ chirality
         ///   (1, 0) → a
         ///   (0, 1) → (-a.y, a.x)
-        constexpr Vec<T> scaledRotated(const Vec<T>& a) const noexcept
+        [[nodiscard]] constexpr Vec<T> scaledRotated(const Vec<T>& a) const noexcept
             { return { x * a.x - y * a.y, x * a.y + y * a.x }; }
     };
 
