@@ -218,6 +218,8 @@ namespace g2 {
           [[nodiscard]] constexpr U len() const noexcept { return std::sqrt(len2T<U>()); }
         [[nodiscard]] constexpr float lenF() const noexcept { return len<float>(); }
         [[nodiscard]] constexpr double lenD() const noexcept { return len<double>(); }
+        // |a|∞, length in infinity metric
+        constexpr T lenInf() const noexcept { return std::max(std::abs(x), std::abs(y)); }
 
         // Vec == vec
         constexpr bool operator == (const Vec<T>& b) const noexcept { return (x == b.x && y == b.y); }
@@ -231,8 +233,20 @@ namespace g2 {
         // Vec != vec
         constexpr bool operator != (ZeroVec) const noexcept { return (x != 0 || y != 0); }
 
+        /// Normalization in Euclidean ℓ² (circular) metric
         template <class U = T>
         [[nodiscard]] constexpr Vec<U> normalized(U wantedLength = 1) const noexcept;
+
+        /// Normalization in infinity ℓ∞ (square, max) metric
+        /// Faster than normalized
+        template <class U = T>
+        [[nodiscard]] constexpr Vec<U> normalizedInf(U wantedLength = 1) const noexcept;
+
+        /// Normalization in infinity ℓ∞ (square, max) metric;
+        ///   both coords turn to absolute values
+        /// Faster than normalized and normalizedInf
+        template <class U = T>
+        [[nodiscard]] constexpr Vec<U> normalizedInfAbs(U wantedLength = 1) const noexcept;
 
         template <class U>
         [[nodiscard]] constexpr static Vec<T> fromPt(const Point<U>& a) noexcept
@@ -381,6 +395,34 @@ constexpr g2::Vec<U> g2::Vec<T>::normalized(U wantedLength) const noexcept
     } else {
         auto q = wantedLength / myLen;
         return Vec<U>{ g2::cast<U>(x * q), g2::cast<U>(y * q) };
+    }
+}
+
+template <class T> template <class U>
+constexpr g2::Vec<U> g2::Vec<T>::normalizedInf(U wantedLength) const noexcept
+{
+    auto dx = std::abs(x);
+    auto dy = std::abs(y);
+    if (dx >= dy) {
+        if (dx == 0)
+            return *this;
+        return { ((x > 0) ? wantedLength : -wantedLength), y * wantedLength / dx };
+    } else {
+        return { x * wantedLength / dy, ((y > 0) ? wantedLength : -wantedLength) };
+    }
+}
+
+template <class T> template <class U>
+constexpr g2::Vec<U> g2::Vec<T>::normalizedInfAbs(U wantedLength) const noexcept
+{
+    auto dx = std::abs(x);
+    auto dy = std::abs(y);
+    if (dx >= dy) {
+        if (dx == 0)
+            return *this;
+        return { wantedLength, dy * wantedLength / dx };
+    } else {
+        return { dx * wantedLength / dy, wantedLength };
     }
 }
 

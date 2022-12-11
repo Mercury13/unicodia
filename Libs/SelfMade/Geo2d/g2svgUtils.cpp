@@ -505,9 +505,9 @@ std::optional<std::vector<g2sv::Corner>> g2sv::Polyline::detectCorners(
                 }
                 // If not a corner → check once again for extremities
                 if (notCorner) {
-                    if (v1.y * v2.y > 0) {  // both >0 or <0
+                    if (v1.y * v2.y > 0 || v1.y == 0) {  // both >0 or <0
                         setCorner(r, iB, CornerType::HORZ_EXTREMITY);
-                    } else if (v1.x * v2.x > 0) {
+                    } else if (v1.x * v2.x > 0 || v1.x == 0) {
                         setCorner(r, iB, CornerType::VERT_EXTREMITY);
                     }
                 }
@@ -1747,6 +1747,42 @@ namespace {
         return Tangent { .vec = tanNew, .source = source };
     }
 
+    Tangent getHorzExtremity(
+            const g2sv::Point* pOut, const g2sv::Point& pMain, const g2sv::Point& pIn,
+            const CachedTangent& opt)
+    {
+        if (!pOut)
+            throw std::logic_error("[getHorzExtremity] HORZ_EXTREMITY needs outside point");
+        Tangent r {
+            .vec = (pIn - *pOut).cast<double>(),
+            .source = TanSource::SYNCED
+        };
+        if (pOut->y != pMain.y && pIn.y != pMain.y) {  // Double extremity → do not snap!
+            auto norm = r.vec.normalizedInfAbs(1.0);
+            if (norm.y < opt.extremitySnapAngle)
+                r.vec.y = 0;
+        }
+        return r;
+    }
+
+    Tangent getVertExtremity(
+            const g2sv::Point* pOut, const g2sv::Point& pMain, const g2sv::Point& pIn,
+            const CachedTangent& opt)
+    {
+        if (!pOut)
+            throw std::logic_error("[getVertExtremity] VERT_EXTREMITY needs outside point");
+        Tangent r {
+            .vec = (pIn - *pOut).cast<double>(),
+            .source = TanSource::SYNCED
+        };
+        if (pOut->x != pMain.x && pIn.x != pMain.x) {  // Double extremity → do not snap!
+            auto norm = r.vec.normalizedInfAbs(1.0);
+            if (norm.x < opt.extremitySnapAngle)
+                r.vec.x = 0;
+        }
+        return r;
+    }
+
     Tangent makeLeftTangent(
             std::span<const g2sv::Point> wk,
             const g2sv::Corner& first,
@@ -1785,13 +1821,9 @@ namespace {
         case g2sv::CornerType::SMOOTH_END:
             return { .vec = (pt1 - pt0).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            if (!ptPrev)
-                throw std::logic_error("[makeLeftTangent] HORZ_EXTREMITY needs previous point");
-            return { .vec = { static_cast<double>(pt1.x - ptPrev->x), 0 }, .source = TanSource::SYNCED };
+            return getHorzExtremity(ptPrev, pt0, pt1, opt);
         case g2sv::CornerType::VERT_EXTREMITY:
-            if (!ptPrev)
-                throw std::logic_error("[makeLeftTangent] VERT_EXTREMITY needs previous point");
-            return { .vec = { 0, static_cast<double>(pt1.y - ptPrev->y) }, .source = TanSource::SYNCED };
+            return getVertExtremity(ptPrev, pt0, pt1, opt);
         }
         __builtin_unreachable();
     }
@@ -1835,13 +1867,9 @@ namespace {
         case g2sv::CornerType::SMOOTH_START:
             return { .vec = (pt9 - pt10).cast<double>(), .source = TanSource::STRAIGHT };
         case g2sv::CornerType::HORZ_EXTREMITY:
-            if (!ptNext)
-                throw std::logic_error("[makeRightTangent] HORZ_EXTREMITY needs next point");
-            return { .vec = { static_cast<double>(pt9.x - ptNext->x), 0 }, .source = TanSource::SYNCED };
+            return getHorzExtremity(ptNext, pt10, pt9, opt);
         case g2sv::CornerType::VERT_EXTREMITY:
-            if (!ptNext)
-                throw std::logic_error("[makeRightTangent] VERT_EXTREMITY needs next point");
-            return { .vec = { 0, static_cast<double>(pt9.y - ptNext->y) }, .source = TanSource::SYNCED };
+            return getVertExtremity(ptNext, pt10, pt9, opt);
         }
         __builtin_unreachable();
     }
