@@ -1199,8 +1199,12 @@ namespace {
     /// @warning We destroy that quad (and that’s probably good)
     void addQuadDestructive(
             std::vector<Segment>& segments, size_t last, g2bz::Quad& quad,
-            TanSource srcA, TanSource srcB)
+            TanSource srcA, TanSource srcB,
+            double extremumError2)
     {
+        if (quad.a.x != quad.b.x) {
+            // a.x = b.x — IDK what to do, and sources probably disallow
+        }
         addCurve(segments, last,
                  Curve{ .a = quad.a.cast<int>(), .ah = quad.armA(),
                  .bh = quad.armB(), .b = quad.b.cast<int>(),
@@ -1210,24 +1214,34 @@ namespace {
     void addSingleQuadOrCubic(
             std::vector<Segment>& segments, size_t last,
             const g2sv::Point& pA, const Tangent& tanA,
-            const Tangent& tanB, const g2sv::Point& pB)
+            const Tangent& tanB, const g2sv::Point& pB,
+            double extremumError2)
     {
         auto dA = pA.cast<double>();
         auto dB = pB.cast<double>();
         if (auto quad = g2bz::Quad::by2tan(dA, tanA.vec, tanB.vec, dB)) {
             // Add normal quad curve
-            addQuadDestructive(segments, last, *quad, tanA.source, tanB.source);
+            addQuadDestructive(segments, last, *quad, tanA.source, tanB.source, extremumError2);
         } else {
             addSingleCubic(segments, last, pA, tanA.vec, tanB.vec, pB);
         }
     }
+
+    struct CachedErrors {
+        double fit, fit2, line2, extr2;
+
+        constexpr CachedErrors(const g2sv::SimplifyOpt::Error& x) noexcept
+            : fit(x.fit), fit2(x.fit * x.fit), line2(fit2 * x.qLine * x.qLine),
+              extr2(x.distToExtremum * x.distToExtremum) {}
+    };
 
     void fitSingleQuad(
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
             size_t first, size_t last,
-            const Tangent& tan1, const Tangent& tan2)
+            const Tangent& tan1, const Tangent& tan2,
+            const CachedErrors& error)
     {
         const auto &pA = points[first],
                    &pB = points[last];
@@ -1241,10 +1255,11 @@ namespace {
             // Do not build curve, it already exists!
             auto ad = pA.cast<double>();
             g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
-            addQuadDestructive(segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE);
+            addQuadDestructive(segments, last, quad,
+                    TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE, error.extr2);
         } else {
             addSingleQuadOrCubic(
-                        segments, last, pA, tan1, tan2, pB);
+                        segments, last, pA, tan1, tan2, pB, error.extr2);
         }
     }
 
@@ -1253,7 +1268,7 @@ namespace {
             std::vector<Segment>& segments,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2,
-            double error2)
+            const CachedErrors& error)
     {
         const auto &pA = points[first],
                    &pM = points[first + 1],
@@ -1262,7 +1277,9 @@ namespace {
             // Do not build curve, it already exists!
             auto ad = pA.cast<double>();
             g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
-            addQuadDestructive(segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE);
+            addQuadDestructive(
+                        segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE,
+                        error.extr2);
         } else {
             auto dA = pA.cast<double>();
             auto dM = pM.cast<double>();
@@ -1270,17 +1287,17 @@ namespace {
             // Build quad curve, check distance from midpoint
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
                 auto qe = quad->fastDist2from(dM);
-                if (qe < error2) {
-                    addQuadDestructive(segments, last, *quad, tan1.source, tan2.source);
+                if (qe < error.fit2) {
+                    addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, error.extr2);
                     return;
                 }
             }
 
             // Distance bad → build two curves
             Tangent tanCenter = { .vec = dA - dB, .source = TanSource::SYNCED };
-            addSingleQuadOrCubic(segments, first + 1, pA, tan1, tanCenter, pM);
+            addSingleQuadOrCubic(segments, first + 1, pA, tan1, tanCenter, pM, error.extr2);
             tanCenter.vec.reverse();
-            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2,  pB);
+            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2,  pB, error.extr2);
         }
     }
 
@@ -1288,7 +1305,7 @@ namespace {
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            double error,
+            const CachedErrors& error,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
@@ -1304,7 +1321,7 @@ namespace {
 
         // Parameterize points, and attempt to fit curve
         auto uPrime = chordLengthParameterize(points, first, last);
-        auto maxError = std::max(error, error * error);
+        auto maxError = std::max(error.fit, error.fit2);
         size_t split;
         bool parametersInOrder = true;
 
@@ -1313,7 +1330,7 @@ namespace {
             auto curve = generateBezier(points, first, last, uPrime, tan1.vec, tan2.vec);
             //  Find max deviation of points to fitted curve
             auto max = findMaxError(points, first, last, curve, uPrime);
-            if (max.error < error && parametersInOrder) {
+            if (max.error < error.fit && parametersInOrder) {
                 addCurve(segments, last, curve);
                 return;
             }
@@ -1332,14 +1349,6 @@ namespace {
         tanCenter.vec.reverse();
         fitCubic(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
     }
-
-    struct CachedErrors {
-        double main2, line2, extr2;
-
-        constexpr CachedErrors(const g2sv::SimplifyOpt::Error& x) noexcept
-            : main2(x.fit * x.fit), line2(main2 * x.qLine * x.qLine),
-              extr2(x.distToExtremum * x.distToExtremum) {}
-    };
 
     // forward
     void fitQuad(
@@ -1372,9 +1381,9 @@ namespace {
                 eWorst = e;
             }
         }
-        if (eWorst <= errors.main2) {
+        if (eWorst <= errors.fit2) {
             // Within error → add curve
-            addQuadDestructive(segments, last, *quad, tan1.source, tan2.source);
+            addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, errors.extr2);
         } else {
             // Take greatest error and set it as a new point
             Tangent tanCenter {
@@ -1416,7 +1425,7 @@ namespace {
     {
         auto nSegs = last - first;
         if (nSegs == 1) {
-            fitSingleQuad(isInitial, points, segments, first, last, tan1, tan2);
+            fitSingleQuad(isInitial, points, segments, first, last, tan1, tan2, errors);
             return;
         }
 
@@ -1428,7 +1437,7 @@ namespace {
         }
 
         if (nSegs == 2) {
-            fitTwinQuad(points, segments, first, last, tan1, tan2, errors.main2);
+            fitTwinQuad(points, segments, first, last, tan1, tan2, errors);
             return;
         }
 
