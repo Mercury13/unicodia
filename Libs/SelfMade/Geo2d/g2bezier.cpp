@@ -24,9 +24,7 @@ double g2bz::Seg::dist2from(const g2::Dpoint& p)
 g2::Dpoint g2bz::Quad::posOf(double t) const noexcept
 {
     double ct = 1.0 - t;
-    return a.mul(ct*ct)
-            .add(m.mul(2*t*ct))
-            .add(b.mul(t*t));
+    return g2::Dpoint::linearCombi(ct*ct, a, 2*t*ct, m, t*t, b);
 }
 
 double g2bz::Quad::fastDist2from(const g2::Dpoint& p) const
