@@ -189,7 +189,7 @@ void g2bz::Quad::straightenBX() noexcept
 
 void g2bz::Quad::straightenBY() noexcept
 {
-    auto k = (a.y - b.y) / (m.x - b.y);
+    auto k = (a.y - b.y) / (m.y - b.y);
     if (std::isfinite(k)) {
         m.y = b.y;
         m.x = std::lerp(b.x, m.x, k);

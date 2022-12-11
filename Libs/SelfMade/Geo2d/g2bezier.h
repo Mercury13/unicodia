@@ -83,8 +83,11 @@ namespace g2bz {
 
         /// Makes a.x = m.x
         void straightenAX() noexcept;
+        /// Makes a.y = m.y
         void straightenAY() noexcept;
+        /// Makes b.x = m.x
         void straightenBX() noexcept;
+        /// Makes b.y = m.y
         void straightenBY() noexcept;
     };
 
