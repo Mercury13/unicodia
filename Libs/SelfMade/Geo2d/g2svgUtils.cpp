@@ -1138,13 +1138,14 @@ namespace {
         bool isStraight() const noexcept { return (source == TanSource::STRAIGHT); }
         bool isPreciseQuad() const noexcept { return (source == TanSource::QUAD_PRECISE); }
         /// @return [+] we can change the tangent if it fits better
-        bool isChangeable() const noexcept;
+        static bool isChangeable(TanSource src) noexcept;
+        bool isChangeable() const noexcept { return isChangeable(source); }
     };
 
     /// @todo [urgent] if one or both tangents are changeable → try to approximate
-    bool Tangent::isChangeable() const noexcept
+    bool Tangent::isChangeable(TanSource src) noexcept
     {
-        switch (source) {
+        switch (src) {
         case TanSource::STRAIGHT:
         case TanSource::QUAD_PRECISE:
         case TanSource::QUAD_APPROX:
@@ -1195,21 +1196,29 @@ namespace {
                    .shape = SegShape::CUBIC });
     }
 
+    /// @warning We destroy that quad (and that’s probably good)
+    void addQuadDestructive(
+            std::vector<Segment>& segments, size_t last, g2bz::Quad& quad,
+            TanSource srcA, TanSource srcB)
+    {
+        addCurve(segments, last,
+                 Curve{ .a = quad.a.cast<int>(), .ah = quad.armA(),
+                 .bh = quad.armB(), .b = quad.b.cast<int>(),
+                 .shape = SegShape::QUAD });
+    }
+
     void addSingleQuadOrCubic(
             std::vector<Segment>& segments, size_t last,
-            const g2sv::Point& pA, const g2::Dvec& tanA,
-            const g2::Dvec& tanB, const g2sv::Point& pB)
+            const g2sv::Point& pA, const Tangent& tanA,
+            const Tangent& tanB, const g2sv::Point& pB)
     {
         auto dA = pA.cast<double>();
         auto dB = pB.cast<double>();
-        if (auto quad = g2bz::Quad::by2tan(dA, tanA, tanB, dB)) {
+        if (auto quad = g2bz::Quad::by2tan(dA, tanA.vec, tanB.vec, dB)) {
             // Add normal quad curve
-            addCurve(segments, last,
-                     Curve{ .a = pA, .ah = quad->armA(),
-                     .bh = quad->armB(), .b = pB,
-                     .shape = SegShape::QUAD });
+            addQuadDestructive(segments, last, *quad, tanA.source, tanB.source);
         } else {
-            addSingleCubic(segments, last, pA, tanA, tanB, pB);
+            addSingleCubic(segments, last, pA, tanA.vec, tanB.vec, pB);
         }
     }
 
@@ -1230,13 +1239,12 @@ namespace {
                        .shape = SegShape::LINE });
         } else if (tan1.isPreciseQuad() && tan2.isPreciseQuad()) {
             // Do not build curve, it already exists!
-            addCurve(segments, last,
-                     Curve{ .a = pA, .ah = tan1.vec,
-                     .bh = tan2.vec, .b = pB,
-                     .shape = SegShape::QUAD });
+            auto ad = pA.cast<double>();
+            g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
+            addQuadDestructive(segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE);
         } else {
             addSingleQuadOrCubic(
-                        segments, last, pA, tan1.vec, tan2.vec, pB);
+                        segments, last, pA, tan1, tan2, pB);
         }
     }
 
@@ -1252,10 +1260,9 @@ namespace {
                    &pB = points[last];
         if (tan1.isPreciseQuad() && tan2.isPreciseQuad()) {
             // Do not build curve, it already exists!
-            addCurve(segments, last,
-                     Curve{ .a = pA, .ah = tan1.vec,
-                     .bh = tan2.vec, .b = pB,
-                     .shape = SegShape::QUAD });
+            auto ad = pA.cast<double>();
+            g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
+            addQuadDestructive(segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE);
         } else {
             auto dA = pA.cast<double>();
             auto dM = pM.cast<double>();
@@ -1264,18 +1271,16 @@ namespace {
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
                 auto qe = quad->fastDist2from(dM);
                 if (qe < error2) {
-                    addCurve(segments, last,
-                             Curve{ .a = pA, .ah = quad->armA(),
-                             .bh = quad->armB(), .b = pB,
-                             .shape = SegShape::QUAD });
+                    addQuadDestructive(segments, last, *quad, tan1.source, tan2.source);
                     return;
                 }
             }
 
             // Distance bad → build two curves
-            auto tanCenter = dB - dA;
-            addSingleQuadOrCubic(segments, first + 1, pA, tan1.vec, -tanCenter, pM);
-            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2.vec,  pB);
+            Tangent tanCenter = { .vec = dA - dB, .source = TanSource::SYNCED };
+            addSingleQuadOrCubic(segments, first + 1, pA, tan1, tanCenter, pM);
+            tanCenter.vec.reverse();
+            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2,  pB);
         }
     }
 
@@ -1368,10 +1373,7 @@ namespace {
         }
         if (eWorst <= errors.main2) {
             // Within error → add curve
-            addCurve(segments, last,
-                     Curve{ .a = points[first], .ah = quad->armA(),
-                     .bh = quad->armB(), .b = points[last],
-                     .shape = SegShape::QUAD });
+            addQuadDestructive(segments, last, *quad, tan1.source, tan2.source);
         } else {
             // Take greatest error and set it as a new point
             Tangent tanCenter {
