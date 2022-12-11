@@ -37,7 +37,7 @@ for glyph in font.glyphs():
     fg.addExtrema()
     fg.round()
     # Simplify to get rid of poor extrema
-    fg.simplify(0.3)
+    fg.simplify(0.1)
     fg.round()
     # Hint
     glyph.foreground = fg
