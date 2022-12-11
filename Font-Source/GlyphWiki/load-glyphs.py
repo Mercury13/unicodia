@@ -34,7 +34,7 @@ for glyph in font.glyphs():
     # Round and add extrema
     fg = glyph.layers[1]
     fg.round()
-    fg.addExtrema()
+    fg.addExtrema("all")
     fg.round()
     # Simplify to get rid of poor extrema
     fg.simplify(0.1)
