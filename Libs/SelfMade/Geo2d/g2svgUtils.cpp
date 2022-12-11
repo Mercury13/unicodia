@@ -1417,6 +1417,80 @@ namespace {
         return r;
     }
 
+    WorstError2 tryImproveQuadA(
+            std::span<const g2sv::Point> points,
+            size_t first, size_t last,
+            g2bz::Quad& quad)
+    {
+        return {.index = 0, .value2 = 100000000 };
+    }
+
+    WorstError2 tryImproveQuadB(
+            std::span<const g2sv::Point> points,
+            size_t first, size_t last,
+            g2bz::Quad& quad)
+    {
+        quad.reverse();
+        auto r = tryImproveQuadA(points, first, last, quad);
+        quad.reverse();
+        return r;
+    }
+
+    WorstError2 tryImproveQuad(
+            std::span<const g2sv::Point> points,
+            size_t first, size_t last,
+            g2bz::Quad& quad,
+            TanSource srcA, TanSource srcB)
+    {
+        auto r = worstError2(points, first, last, quad);
+        auto tmp = quad;
+
+        if (Tangent::isChangeable(srcA)) {
+            if (Tangent::isChangeable(srcB)) {
+                // A and B changeable
+                for (int i = 0; i < 2; ++i) {
+                    auto q = tryImproveQuadA(points, first, last, tmp);
+                    if (q.value2 >= r.value2) {
+                        if (i != 0) {
+                            break;
+                        } else {
+                            tmp = quad;
+                        }
+                        // i == 0 → also try nudging B
+                    } else {
+                        quad = tmp;
+                        r = q;
+                    }
+                    q = tryImproveQuadB(points, first, last, tmp);
+                    if (q.value2 >= r.value2)
+                        break;
+                    quad = tmp;
+                    r = q;
+                }
+            } else {
+                // A changeable
+                auto q = tryImproveQuadA(points, first, last, tmp);
+                if (q.value2 < r.value2) {
+                    quad = tmp;
+                    r = q;
+                }
+            }
+        } else {
+            if (Tangent::isChangeable(srcB)) {
+                // B changeable
+                auto q = tryImproveQuadB(points, first, last, tmp);
+                if (q.value2 < r.value2) {
+                    quad = tmp;
+                    r = q;
+                }
+            } else {
+                // Just fixed
+            }
+        }
+
+        return r;
+    }
+
     /// @return [+] OK  [-] use alternate ways
     bool fitQuadSpan(
             std::span<const g2sv::Point> points,
@@ -1430,7 +1504,7 @@ namespace {
         if (!quad)
             return false;
 
-        auto worst = worstError2(points, first, last, *quad);
+        auto worst = tryImproveQuad(points, first, last, *quad, tan1.source, tan2.source);
 
         if (worst.value2 <= errors.fit2) {
             // Within error → add curve
