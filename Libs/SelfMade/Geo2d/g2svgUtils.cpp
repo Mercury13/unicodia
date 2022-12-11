@@ -1720,7 +1720,7 @@ namespace {
         size_t lastCorner = corners->size() - 1;
 
         // Use squared tolerance
-        CachedErrors errors { opt.error };
+        CachedErrors cachedErrors { opt.error };
         CachedTangent cachedTangent(opt.tangent, pl.isClosed);
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];
@@ -1734,7 +1734,7 @@ namespace {
                 Initial::YES,
                 wk,
                 segments,
-                errors,
+                cachedErrors,
                 first.index,
                 last.index,
                 makeLeftTangent(wk, first, last, cachedTangent),
