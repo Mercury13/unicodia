@@ -91,6 +91,4 @@ namespace g2bz {
         void straightenBY() noexcept;
     };
 
-
-
 }   // namespace g2bz
