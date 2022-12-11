@@ -158,9 +158,11 @@ namespace g2 {
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
 
+        /// @see template version of linearCombi
         static constexpr Point<T> linearCombi(double c1, const Point<T>& p1)
             { return p1.mul(c1); }
 
+        /// Linear combination of N points
         template <class... Args>
         static constexpr Point<T> linearCombi(
                 double c1, const Point<T>& p1, double c2, const Point<T>& p2, const Args&... args)

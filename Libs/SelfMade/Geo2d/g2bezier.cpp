@@ -4,7 +4,12 @@
 
 ///// Seg //////////////////////////////////////////////////////////////////////
 
-double g2bz::Seg::dist2from(const g2::Dpoint& p)
+g2::Dpoint g2bz::Seg::posOf(double t) const noexcept
+{
+    return g2::Dpoint::linearCombi(1.0 - t, a, t, b);
+}
+
+double g2bz::Seg::dist2from(const g2::Dpoint& p) const noexcept
 {
     auto myVec = b - a;
     auto l2 = myVec.len2();

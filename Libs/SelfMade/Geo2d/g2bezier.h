@@ -12,11 +12,13 @@ namespace g2bz {
         g2::Dpoint a, b;
 
         /// @return  squared distance from line segment to point
-        double dist2from(const g2::Dpoint& p);
+        double dist2from(const g2::Dpoint& p) const noexcept;
 
         /// @return  distance from line segment to point
-        double distFrom(const g2::Dpoint& p)
+        double distFrom(const g2::Dpoint& p) const noexcept
             { return std::sqrt(dist2from(p)); }
+
+        g2::Dpoint posOf(double t) const noexcept;
     };
 
     struct Quad {
