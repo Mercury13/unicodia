@@ -1448,6 +1448,7 @@ namespace {
         double maxLength = quad.armA().lenD() * 2;
         auto loState = solverStateA(points, first, last, quad, maxLength * PHI_TINY);
         auto hiState = solverStateA(points, first, last, quad, maxLength * PHI_SMALL);
+        // Use golden ratio method
         while (maxLength - minLength > FORK) {
             if (loState.error.value2 <= hiState.error.value2) {
                 // Before:  min     lo   hi      max
