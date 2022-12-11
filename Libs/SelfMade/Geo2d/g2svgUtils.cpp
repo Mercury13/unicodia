@@ -1333,11 +1333,12 @@ namespace {
         fitCubic(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
     }
 
-    struct Errors {
-        double main2, line2;
+    struct CachedErrors {
+        double main2, line2, extr2;
 
-        constexpr Errors(double main, double qLine) noexcept
-            : main2(main * main), line2(main2 * qLine * qLine) {}
+        constexpr CachedErrors(const g2sv::SimplifyOpt::Error& x) noexcept
+            : main2(x.fit * x.fit), line2(main2 * x.qLine * x.qLine),
+              extr2(x.distToExtremum * x.distToExtremum) {}
     };
 
     // forward
@@ -1345,7 +1346,7 @@ namespace {
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            const Errors& errors,
+            const CachedErrors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2);
 
@@ -1353,7 +1354,7 @@ namespace {
     bool fitQuadSpan(
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            const Errors& errors,
+            const CachedErrors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent tan2)
     {
@@ -1409,7 +1410,7 @@ namespace {
             Initial isInitial,
             std::span<const g2sv::Point> points,
             std::vector<Segment>& segments,
-            const Errors& errors,
+            const CachedErrors& errors,
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2)
     {
@@ -1719,7 +1720,7 @@ namespace {
         size_t lastCorner = corners->size() - 1;
 
         // Use squared tolerance
-        Errors errors { opt.tolerance, opt.qLine };
+        CachedErrors errors { opt.error };
         CachedTangent cachedTangent(opt.tangent, pl.isClosed);
         for (size_t i = 0; i < lastCorner; ++i) {
             auto first = (*corners)[i];

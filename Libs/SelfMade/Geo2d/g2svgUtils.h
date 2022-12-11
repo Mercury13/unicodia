@@ -16,16 +16,21 @@
 namespace g2sv {
 
     struct SimplifyOpt {
-        /// Fitting tolerance
-        double tolerance = 2.5;
-        /// Quotient: fitting tolerance for straight lines
-        double qLine = 0.5;
-        /// Min. diameter — delete smaller curves
-        double minDiameter = 2.5;
         /// Cosine of an angle that’s considered glitch, always (0..1)
         double sharpCos = 0.98;
         /// Scaling double → int (we mostly work in fixed point)
         int scale = 1;
+        struct Error {
+            /// Fitting tolerance
+            double fit = 2.5;
+            /// Quotient: fitting tolerance for straight lines
+            double qLine = 0.5;
+            /// Min. diameter — delete smaller curves
+            double minDiameter = 2.5;
+            /// Allowed distance from point to extremum
+            ///    (>king’s move, <2 cells)
+            double distToExtremum = 1.9;
+        } error;
         struct Corner {
             /// Always (-1..0), min cosine of vertices considered corner
             double minCosine = -0.7;

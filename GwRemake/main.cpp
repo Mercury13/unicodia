@@ -101,7 +101,7 @@ namespace {
             std::string_view charName,
             Stats* stats)
     {
-        bool wasRemovedByDiameter = removeByDiameter(simopt.minDiameter);
+        bool wasRemovedByDiameter = removeByDiameter(simopt.error.minDiameter);
         bool wasRemovedRepeating = false;
         bool wasRemovedBackForth = false;
         bool wasRemovedSharpShort = false;
@@ -165,11 +165,14 @@ namespace {
     ///
     constexpr int MY_SCALE = 5;
     constinit const g2sv::SimplifyOpt simopt {
-        .tolerance = 2.5 * MY_SCALE,
-        .qLine = 0.4,
-        .minDiameter = 3 * MY_SCALE,
         .sharpCos = 0.997,          // <5°
         .scale = MY_SCALE,
+        .error {
+            .fit = 2.5 * MY_SCALE,
+            .qLine = 0.4,
+            .minDiameter = 3 * MY_SCALE,
+            // extremum — default
+        },
         .corner {
             .minCosine = -0.64,  // <130°
             .maxSide = 13 * MY_SCALE,
