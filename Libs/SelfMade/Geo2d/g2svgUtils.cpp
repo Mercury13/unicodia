@@ -1573,7 +1573,6 @@ namespace {
             const g2sv::Corner& last,
             const CachedTangent& opt)
     {
-        /// @todo [urgent] Is this curve closed?
         auto* ptPrev = (first.index == 0)
                     ? (opt.isClosed ? &wk[wk.size() - 2] : nullptr)
                     : &wk[first.index - 1];
