@@ -78,6 +78,14 @@ namespace g2bz {
                 const g2::Dpoint& a, const g2::Dvec& ah,
                 const g2::Dvec& bh, const g2::Dpoint& b);
 
+        std::optional<g2::Dpoint> extremumX() const noexcept;
+        std::optional<g2::Dpoint> extremumY() const noexcept;
+
+        /// Makes a.x = m.x
+        void straightenAX() noexcept;
+        void straightenAY() noexcept;
+        void straightenBX() noexcept;
+        void straightenBY() noexcept;
     };
 
 

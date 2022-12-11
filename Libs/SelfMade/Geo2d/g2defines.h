@@ -261,6 +261,7 @@ namespace g2 {
     using Ipoint = Point<int>;
     using Ivec = Vec<int>;
     using Dpoint = Point<double>;
+    using Fpoint = Point<float>;
     using Dvec = Vec<double>;
     using Fvec = Vec<float>;
 
@@ -285,8 +286,10 @@ namespace g2 {
     template <class T>
     bool doSegsStrictlyIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
 
-    constexpr Dvec lerp(const Dvec& x, const Dvec& y, double t);
-    constexpr Fvec lerp(const Fvec& x, const Fvec& y, float t);
+    constexpr Dpoint lerp(const Dpoint& x, const Dpoint& y, double t) noexcept;
+    constexpr Fpoint lerp(const Fpoint& x, const Fpoint& y, float t) noexcept;
+    constexpr Dvec lerp(const Dvec& x, const Dvec& y, double t) noexcept;
+    constexpr Fvec lerp(const Fvec& x, const Fvec& y, float t) noexcept;
 }   // namespace g2
 
 // Point + point → cannot
@@ -439,8 +442,14 @@ bool g2::doSegsStrictlyIntersect(const g2::Point<T>& a, const g2::Point<T>& b, c
     return (((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0)));
 }
 
-constexpr g2::Dvec g2::lerp(const Dvec& x, const Dvec& y, double t)
+constexpr g2::Dpoint g2::lerp(const Dpoint& x, const Dpoint& y, double t) noexcept
     { return x + (y - x) * t; }
 
-constexpr g2::Fvec g2::lerp(const Fvec& x, const Fvec& y, float t)
+constexpr g2::Fpoint g2::lerp(const Fpoint& x, const Fpoint& y, float t) noexcept
+    { return x + (y - x) * t; }
+
+constexpr g2::Dvec g2::lerp(const Dvec& x, const Dvec& y, double t) noexcept
+    { return x + (y - x) * t; }
+
+constexpr g2::Fvec g2::lerp(const Fvec& x, const Fvec& y, float t) noexcept
     { return x + (y - x) * t; }

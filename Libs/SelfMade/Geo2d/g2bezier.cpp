@@ -141,3 +141,57 @@ std::optional<g2bz::Quad> g2bz::Quad::by2tan(
 
     return Quad { .a = a, .m = mA, .b = b };
 }
+
+std::optional<g2::Dpoint> g2bz::Quad::extremumX() const noexcept
+{
+    auto t = (a.x - m.x) / (a.x - 2*m.x + b.x);
+    if (std::isfinite(t) && t > 0 && t < 1) {
+        return posOf(t);
+    }
+    return std::nullopt;
+}
+
+std::optional<g2::Dpoint> g2bz::Quad::extremumY() const noexcept
+{
+    auto t = (a.y - m.y) / (a.y - 2*m.y + b.y);
+    if (std::isfinite(t) && t > 0 && t < 1) {
+        return posOf(t);
+    }
+    return std::nullopt;
+}
+
+void g2bz::Quad::straightenAX() noexcept
+{
+    auto k = (b.x - a.x) / (m.x - a.x);
+    if (std::isfinite(k)) {
+        m.x = a.x;
+        m.y = std::lerp(a.y, m.y, k);
+    }
+}
+
+void g2bz::Quad::straightenAY() noexcept
+{
+    auto k = (b.y - a.y) / (m.y - a.y);
+    if (std::isfinite(k)) {
+        m.y = a.y;
+        m.x = std::lerp(a.x, m.x, k);
+    }
+}
+
+void g2bz::Quad::straightenBX() noexcept
+{
+    auto k = (a.x - b.x) / (m.x - b.x);
+    if (std::isfinite(k)) {
+        m.x = b.x;
+        m.y = std::lerp(b.y, m.y, k);
+    }
+}
+
+void g2bz::Quad::straightenBY() noexcept
+{
+    auto k = (a.y - b.y) / (m.x - b.y);
+    if (std::isfinite(k)) {
+        m.y = b.y;
+        m.x = std::lerp(b.x, m.x, k);
+    }
+}
