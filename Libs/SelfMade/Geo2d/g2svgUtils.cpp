@@ -1242,10 +1242,17 @@ namespace {
                 }
             }
         }
-        addCurve(segments, last,
-                 Curve{ .a = quad.a.cast<int>(), .ah = quad.armA(),
-                 .bh = quad.armB(), .b = quad.b.cast<int>(),
-                 .shape = SegShape::QUAD });
+        if (quad.armA().len2() < 1 && quad.armB().len2() < 1) {
+            addCurve(segments, last,
+                     Curve{ .a = quad.a.cast<int>(), .ah = {},
+                     .bh = {}, .b = quad.b.cast<int>(),
+                     .shape = SegShape::LINE });
+        } else {
+            addCurve(segments, last,
+                     Curve{ .a = quad.a.cast<int>(), .ah = quad.armA(),
+                     .bh = quad.armB(), .b = quad.b.cast<int>(),
+                     .shape = SegShape::QUAD });
+        }
     }
 
     void addSingleQuadOrCubic(
@@ -1387,15 +1394,6 @@ namespace {
         fitCubic(Initial::NO, points, segments, error, split, last, tanCenter, tan2);
     }
 
-    // forward
-    void fitQuad(
-            Initial isInitial,
-            std::span<const g2sv::Point> points,
-            std::vector<Segment>& segments,
-            const CachedErrors& errors,
-            size_t first, size_t last,
-            const Tangent& tan1, const Tangent& tan2);
-
     struct WorstError2 {
         size_t index;   ///< index where shit happened
         double value2;  ///< value squared
@@ -1440,12 +1438,14 @@ namespace {
             size_t first, size_t last,
             g2bz::Quad& quad)
     {
+        /// @todo [urgent] Solver did bad thing, what to do?
         static constexpr double PHI_SMALL = 0.618033988749894848205;
         static constexpr double PHI_TINY = 1.0 - PHI_SMALL;
         // Min.error
         static constexpr double FORK = PHI_SMALL;
+        const double hiLimit = std::max(quad.armA().lenD() * 1.05, quad.baseLen() * 0.95);
         double minLength = 0;
-        double maxLength = quad.armA().lenD() * 2;
+        double maxLength = hiLimit;
         auto loState = solverStateA(points, first, last, quad, maxLength * PHI_TINY);
         auto hiState = solverStateA(points, first, last, quad, maxLength * PHI_SMALL);
         // Use golden ratio method
@@ -1514,8 +1514,8 @@ namespace {
                     r = q;
                 }
             } else {
-                // A changeable
-                auto q = tryImproveQuadA(points, first, last, tmp);
+                // A changeable → experiment with B
+                auto q = tryImproveQuadB(points, first, last, tmp);
                 if (q.value2 < r.value2) {
                     quad = tmp;
                     r = q;
@@ -1523,8 +1523,8 @@ namespace {
             }
         } else {
             if (isChangeableB) {
-                // B changeable
-                auto q = tryImproveQuadB(points, first, last, tmp);
+                // B changeable → experiment with A
+                auto q = tryImproveQuadA(points, first, last, tmp);
                 if (q.value2 < r.value2) {
                     quad = tmp;
                     r = q;
@@ -1536,6 +1536,15 @@ namespace {
 
         return r;
     }
+
+    // forward
+    void fitQuad(
+            Initial isInitial,
+            std::span<const g2sv::Point> points,
+            std::vector<Segment>& segments,
+            const CachedErrors& errors,
+            size_t first, size_t last,
+            const Tangent& tan1, const Tangent& tan2);
 
     /// @return [+] OK  [-] use alternate ways
     bool fitQuadSpan(

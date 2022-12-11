@@ -22,10 +22,15 @@ namespace g2bz {
 
         /// Swaps a ↔ b, making posOf′(t) = posOf(1-t)
         void reverse() noexcept { std::swap(a, b); }
+
+        double len() const noexcept { return a.distFromD(b); }
     };
 
     struct Quad {
         g2::Dpoint a, m, b;
+
+        /// @return length of quad’s base
+        double baseLen() const noexcept { return a.distFromD(b); }
 
         /// @return  arm/handle vector pointing from A
         g2::Dvec armA() const noexcept { return m - a; }
