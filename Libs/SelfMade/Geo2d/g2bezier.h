@@ -19,6 +19,9 @@ namespace g2bz {
             { return std::sqrt(dist2from(p)); }
 
         g2::Dpoint posOf(double t) const noexcept;
+
+        /// Swaps a ↔ b, making posOf′(t) = posOf(1-t)
+        void reverse() noexcept { std::swap(a, b); }
     };
 
     struct Quad {
@@ -77,6 +80,9 @@ namespace g2bz {
         static std::optional<Quad> by2tan(
                 const g2::Dpoint& a, const g2::Dvec& ah,
                 const g2::Dvec& bh, const g2::Dpoint& b);
+
+        /// Swaps a ↔ b, making posOf′(t) = posOf(1-t)
+        void reverse() noexcept { std::swap(a, b); }
 
         std::optional<g2::Dpoint> extremumX() const noexcept;
         std::optional<g2::Dpoint> extremumY() const noexcept;
