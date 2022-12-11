@@ -1451,12 +1451,10 @@ namespace {
                 for (int i = 0; i < 2; ++i) {
                     auto q = tryImproveQuadA(points, first, last, tmp);
                     if (q.value2 >= r.value2) {
-                        if (i != 0) {
+                        if (i != 0)
                             break;
-                        } else {
-                            // i == 0 and failed → also try nudging B
-                            tmp = quad;
-                        }
+                        // i == 0 and failed → also try nudging B
+                        tmp = quad;
                     } else {
                         quad = tmp;
                         r = q;
