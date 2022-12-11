@@ -151,6 +151,10 @@ namespace g2 {
         /// @warning  Use with care, thus not op*
         constexpr Point<T> mul(T a) const noexcept { return { x * a, y * a }; }
 
+        /// Multiplies both coords by a.
+        /// @warning  Use with care, thus not op+
+        constexpr Point<T> add(const Point<T>& a) const noexcept { return { x + a.x, y + a.y }; }
+
         constexpr explicit operator bool() const noexcept
             { return x != 0 || y != 0; }
     };

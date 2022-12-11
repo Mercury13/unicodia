@@ -34,6 +34,8 @@ namespace g2bz {
         /// @return  arm/handle vector of equivalent cubic curve pointing from B
         g2::Dvec cubicArmB() const noexcept { return armB() * (2.0/3.0); }
 
+        g2::Dpoint posOf(double t) const noexcept;
+
         /// @return fast approximated (Nehab-Hoppe) squared distance from curve to point
         /// @see https://hhoppe.com/ravg.pdf
         /// @see https://www.shadertoy.com/view/MlKcDD
