@@ -165,7 +165,7 @@ void g2bz::Quad::straightenAX() noexcept
     auto k = (a.x - b.x) / (m.x - b.x);
     if (std::isfinite(k)) {
         m.x = a.x;
-        m.y = std::lerp(a.y, m.y, k);
+        m.y = math::lerp(a.y, m.y, k);
     }
 }
 
@@ -174,7 +174,7 @@ void g2bz::Quad::straightenAY() noexcept
     auto k = (a.y - b.y) / (m.y - b.y);
     if (std::isfinite(k)) {
         m.y = a.y;
-        m.x = std::lerp(a.x, m.x, k);
+        m.x = math::lerp(a.x, m.x, k);
     }
 }
 
@@ -183,7 +183,7 @@ void g2bz::Quad::straightenBX() noexcept
     auto k = (b.x - a.x) / (m.x - a.x);
     if (std::isfinite(k)) {
         m.x = b.x;
-        m.y = std::lerp(b.y, m.y, k);
+        m.y = math::lerp(b.y, m.y, k);
     }
 }
 
@@ -192,7 +192,7 @@ void g2bz::Quad::straightenBY() noexcept
     auto k = (b.y - a.y) / (m.y - a.y);
     if (std::isfinite(k)) {
         m.y = b.y;
-        m.x = std::lerp(b.x, m.x, k);
+        m.x = math::lerp(b.x, m.x, k);
     }
 }
 

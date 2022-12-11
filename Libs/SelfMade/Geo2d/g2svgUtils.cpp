@@ -1417,19 +1417,66 @@ namespace {
         return r;
     }
 
+    struct SolverState {
+        double length;
+        WorstError2 error;
+    };
+
+    SolverState solverStateA(
+            std::span<const g2sv::Point> points,
+            size_t first, size_t last,
+            g2bz::Quad quad,
+            double length)
+    {
+        quad.scaleArmAToLength(length);
+        return {
+            .length = length,
+            .error = worstError2(points, first, last, quad)
+        };
+    }
+
     WorstError2 tryImproveQuadA(
             std::span<const g2sv::Point> points,
             size_t first, size_t last,
             g2bz::Quad& quad)
     {
-        return {.index = 0, .value2 = 100000000 };
+        static constexpr double PHI_SMALL = 0.618033988749894848205;
+        static constexpr double PHI_TINY = 1.0 - PHI_SMALL;
+        // Min.error
+        static constexpr double FORK = PHI_SMALL;
+        double minLength = 0;
+        double maxLength = quad.armA().lenD() * 2;
+        auto loState = solverStateA(points, first, last, quad, maxLength * PHI_TINY);
+        auto hiState = solverStateA(points, first, last, quad, maxLength * PHI_SMALL);
+        while (maxLength - minLength > FORK) {
+            if (loState.error.value2 <= hiState.error.value2) {
+                // Before:  min     lo   hi      max
+                // After:   min  lo hi   max
+                maxLength = hiState.length;
+                hiState = loState;
+                loState = solverStateA(points, first, last, quad, math::lerp(minLength, maxLength, PHI_TINY));
+            } else {
+                // Before:  min     lo   hi      max
+                // After:          min   lo hi   max
+                minLength = loState.length;
+                loState = hiState;
+                hiState = solverStateA(points, first, last, quad, math::lerp(minLength, maxLength, PHI_SMALL));
+            }
+        }
+        if (loState.error.value2 <= hiState.error.value2) {
+            quad.scaleArmAToLength(loState.length);
+            return loState.error;
+        } else {
+            quad.scaleArmAToLength(hiState.length);
+            return hiState.error;
+        }
     }
 
     WorstError2 tryImproveQuadB(
             std::span<const g2sv::Point> points,
             size_t first, size_t last,
             g2bz::Quad& quad)
-    {
+    {   // Reverse and do the same with arm A
         quad.reverse();
         auto r = tryImproveQuadA(points, first, last, quad);
         quad.reverse();
@@ -1482,7 +1529,7 @@ namespace {
                     r = q;
                 }
             } else {
-                // Just fixed
+                // Both are unchangeable, do nothing
             }
         }
 

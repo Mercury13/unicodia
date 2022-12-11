@@ -453,3 +453,11 @@ constexpr g2::Dvec g2::lerp(const Dvec& x, const Dvec& y, double t) noexcept
 
 constexpr g2::Fvec g2::lerp(const Fvec& x, const Fvec& y, float t) noexcept
     { return x + (y - x) * t; }
+
+namespace math {
+
+    // Do not want C++20 here!
+    constexpr double lerp(double a, double b, double t)
+        { return a + (b - a) * t; }
+
+}
