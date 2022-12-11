@@ -162,7 +162,7 @@ std::optional<g2::Dpoint> g2bz::Quad::extremumY() const noexcept
 
 void g2bz::Quad::straightenAX() noexcept
 {
-    auto k = (b.x - a.x) / (m.x - a.x);
+    auto k = (a.x - b.x) / (m.x - b.x);
     if (std::isfinite(k)) {
         m.x = a.x;
         m.y = std::lerp(a.y, m.y, k);
@@ -171,7 +171,7 @@ void g2bz::Quad::straightenAX() noexcept
 
 void g2bz::Quad::straightenAY() noexcept
 {
-    auto k = (b.y - a.y) / (m.y - a.y);
+    auto k = (a.y - b.y) / (m.y - b.y);
     if (std::isfinite(k)) {
         m.y = a.y;
         m.x = std::lerp(a.x, m.x, k);
@@ -180,7 +180,7 @@ void g2bz::Quad::straightenAY() noexcept
 
 void g2bz::Quad::straightenBX() noexcept
 {
-    auto k = (a.x - b.x) / (m.x - b.x);
+    auto k = (b.x - a.x) / (m.x - a.x);
     if (std::isfinite(k)) {
         m.x = b.x;
         m.y = std::lerp(b.y, m.y, k);
@@ -189,7 +189,7 @@ void g2bz::Quad::straightenBX() noexcept
 
 void g2bz::Quad::straightenBY() noexcept
 {
-    auto k = (a.y - b.y) / (m.y - b.y);
+    auto k = (b.y - a.y) / (m.y - a.y);
     if (std::isfinite(k)) {
         m.y = b.y;
         m.x = std::lerp(b.x, m.x, k);

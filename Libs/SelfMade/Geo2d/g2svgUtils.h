@@ -27,9 +27,8 @@ namespace g2sv {
             double qLine = 0.5;
             /// Min. diameter — delete smaller curves
             double minDiameter = 2.5;
-            /// Allowed distance from point to extremum
-            ///    (>king’s move, <2 cells)
-            double distToExtremum = 1.9;
+            /// Allowed distance from point to extremum (in X units, <1 cell)
+            double extremumConvex = 0.99;
         } error;
         struct Corner {
             /// Always (-1..0), min cosine of vertices considered corner

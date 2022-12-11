@@ -1200,7 +1200,7 @@ namespace {
     void addQuadDestructive(
             std::vector<Segment>& segments, size_t last, g2bz::Quad& quad,
             TanSource srcA, TanSource srcB,
-            double extremumError2)
+            double extremumError)
     {
         bool ca = Tangent::isChangeable(srcA);
         bool cb = Tangent::isChangeable(srcB);
@@ -1208,14 +1208,16 @@ namespace {
             if (quad.a.x != quad.b.x) {
                 // a.x = b.x — IDK what to do, and sources probably disallow
                 if (auto ex = quad.extremumX()) {
-                    if (std::abs(ex->x - quad.a.x) < std::abs(ex->x - quad.b.x)) {
+                    auto dxa = std::abs(ex->x - quad.a.x);
+                    auto dxb = std::abs(ex->x - quad.b.x);
+                    if (dxa < dxb) {
                         // A is closer
-                        if (ca && ex->dist2from(quad.a) < extremumError2) {
+                        if (ca && dxa < extremumError) {
                             quad.straightenAX();
                         }
                     } else {
                         // B is closer
-                        if (cb && ex->dist2from(quad.b) < extremumError2) {
+                        if (cb && dxb < extremumError) {
                             quad.straightenBX();
                         }
                     }
@@ -1224,14 +1226,16 @@ namespace {
             if (quad.a.y != quad.b.y) {
                 // a.y = b.y — IDK what to do, and sources probably disallow
                 if (auto ex = quad.extremumY()) {
-                    if (std::abs(ex->y - quad.a.y) < std::abs(ex->y - quad.b.y)) {
+                    auto dya = std::abs(ex->y - quad.a.y);
+                    auto dyb = std::abs(ex->y - quad.b.y);
+                    if (dya < dyb) {
                         // A is closer
-                        if (ca && ex->dist2from(quad.a) < extremumError2) {
+                        if (ca && dya < extremumError) {
                             quad.straightenAY();
                         }
                     } else {
                         // B is closer
-                        if (cb && ex->dist2from(quad.b) < extremumError2) {
+                        if (cb && dyb < extremumError) {
                             quad.straightenBY();
                         }
                     }
@@ -1248,24 +1252,24 @@ namespace {
             std::vector<Segment>& segments, size_t last,
             const g2sv::Point& pA, const Tangent& tanA,
             const Tangent& tanB, const g2sv::Point& pB,
-            double extremumError2)
+            double extremumError)
     {
         auto dA = pA.cast<double>();
         auto dB = pB.cast<double>();
         if (auto quad = g2bz::Quad::by2tan(dA, tanA.vec, tanB.vec, dB)) {
             // Add normal quad curve
-            addQuadDestructive(segments, last, *quad, tanA.source, tanB.source, extremumError2);
+            addQuadDestructive(segments, last, *quad, tanA.source, tanB.source, extremumError);
         } else {
             addSingleCubic(segments, last, pA, tanA.vec, tanB.vec, pB);
         }
     }
 
     struct CachedErrors {
-        double fit, fit2, line2, extr2;
+        double fit, fit2, line2, extr;
 
         constexpr CachedErrors(const g2sv::SimplifyOpt::Error& x) noexcept
             : fit(x.fit), fit2(x.fit * x.fit), line2(fit2 * x.qLine * x.qLine),
-              extr2(x.distToExtremum * x.distToExtremum) {}
+              extr(x.extremumConvex) {}
     };
 
     void fitSingleQuad(
@@ -1289,10 +1293,10 @@ namespace {
             auto ad = pA.cast<double>();
             g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
             addQuadDestructive(segments, last, quad,
-                    TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE, error.extr2);
+                    TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE, error.extr);
         } else {
             addSingleQuadOrCubic(
-                        segments, last, pA, tan1, tan2, pB, error.extr2);
+                        segments, last, pA, tan1, tan2, pB, error.extr);
         }
     }
 
@@ -1312,7 +1316,7 @@ namespace {
             g2bz::Quad quad { .a = ad, .m = ad + tan1.vec, .b = pB.cast<double>() };
             addQuadDestructive(
                         segments, last, quad, TanSource::QUAD_PRECISE, TanSource::QUAD_PRECISE,
-                        error.extr2);
+                        error.extr);
         } else {
             auto dA = pA.cast<double>();
             auto dM = pM.cast<double>();
@@ -1321,16 +1325,16 @@ namespace {
             if (auto quad = g2bz::Quad::by2tan(dA, tan1.vec, tan2.vec, dB)) {
                 auto qe = quad->fastDist2from(dM);
                 if (qe < error.fit2) {
-                    addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, error.extr2);
+                    addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, error.extr);
                     return;
                 }
             }
 
             // Distance bad → build two curves
             Tangent tanCenter = { .vec = dA - dB, .source = TanSource::SYNCED };
-            addSingleQuadOrCubic(segments, first + 1, pA, tan1, tanCenter, pM, error.extr2);
+            addSingleQuadOrCubic(segments, first + 1, pA, tan1, tanCenter, pM, error.extr);
             tanCenter.vec.reverse();
-            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2,  pB, error.extr2);
+            addSingleQuadOrCubic(segments, last,      pM, tanCenter, tan2,  pB, error.extr);
         }
     }
 
@@ -1416,7 +1420,7 @@ namespace {
         }
         if (eWorst <= errors.fit2) {
             // Within error → add curve
-            addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, errors.extr2);
+            addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, errors.extr);
         } else {
             // Take greatest error and set it as a new point
             Tangent tanCenter {
