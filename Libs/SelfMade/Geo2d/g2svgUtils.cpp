@@ -1559,7 +1559,7 @@ namespace {
         if (!quad)
             return false;
 
-        auto worst = tryImproveQuad(points, first, last, *quad, false, false); //tan1.isChangeable(), tan2.isChangeable());
+        auto worst = tryImproveQuad(points, first, last, *quad, tan1.isChangeable(), tan2.isChangeable());
 
         if (worst.value2 <= errors.fit2) {
             // Within error → add curve
@@ -1725,23 +1725,22 @@ namespace {
             auto vOut = *pOut - pMain;
                 auto dvOut = vOut.cast<double>();
             auto xOld = tanOld.crossD(vOut);
-            if (xOld == 0)
-                throw std::logic_error("[modifyQuadTangent] Still 0/180deg corner!");
+            if (xOld != 0) {
+                // Angular nudge
+                // We need tanOld and rotate(vOut) on the same side of vOut
+                // i.e. sign(tanOld×vOut) = sign(rotate(vOut)×vOut)
+                //      vOut×rotate(vOut) =  sin(alpha)·|vOut|²
+                //      rotate(vOut)×vOut = -sin(alpha)·|vOut|²
+                //      sign(rotate(vOut)×vOut) = -sign(sin(alpha)) = -sign(alpha)
+                // thus sign(alpha) = -sign(tanOld×vOut) = -sign(xOld)
+                dvOut = dvOut.scaledRotated({1.0, -fastSgn(xOld) * opt.nudgeAngle});
 
-            // Angular nudge
-            // We need tanOld and rotate(vOut) on the same side of vOut
-            // i.e. sign(tanOld×vOut) = sign(rotate(vOut)×vOut)
-            //      vOut×rotate(vOut) =  sin(alpha)·|vOut|²
-            //      rotate(vOut)×vOut = -sin(alpha)·|vOut|²
-            //      sign(rotate(vOut)×vOut) = -sign(sin(alpha)) = -sign(alpha)
-            // thus sign(alpha) = -sign(tanOld×vOut) = -sign(xOld)
-            dvOut = dvOut.scaledRotated({1.0, -fastSgn(xOld) * opt.nudgeAngle});
-
-            auto xNew = tanNew.cross(dvOut);
-            if (xOld * xNew <= 0) {
-                tanNew = dvOut;
-                if (source == TanSource::QUAD_PRECISE)
-                    source = TanSource::QUAD_APPROX;
+                auto xNew = tanNew.cross(dvOut);
+                if (xOld * xNew <= 0) {
+                    tanNew = dvOut;
+                    if (source == TanSource::QUAD_PRECISE)
+                        source = TanSource::QUAD_APPROX;
+                }
             }
         }
         return Tangent { .vec = tanNew, .source = source };
