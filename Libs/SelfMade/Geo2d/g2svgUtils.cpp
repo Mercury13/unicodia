@@ -1559,7 +1559,7 @@ namespace {
         if (!quad)
             return false;
 
-        auto worst = tryImproveQuad(points, first, last, *quad, tan1.isChangeable(), tan2.isChangeable());
+        auto worst = tryImproveQuad(points, first, last, *quad, false, false); //tan1.isChangeable(), tan2.isChangeable());
 
         if (worst.value2 <= errors.fit2) {
             // Within error → add curve
