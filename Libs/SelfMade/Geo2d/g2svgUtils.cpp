@@ -1396,6 +1396,27 @@ namespace {
             size_t first, size_t last,
             const Tangent& tan1, const Tangent& tan2);
 
+    struct WorstError2 {
+        size_t index;   ///< index where shit happened
+        double value2;  ///< value squared
+    };
+
+    WorstError2 worstError2(
+            std::span<const g2sv::Point> points,
+            size_t first, size_t last,
+            const g2bz::Quad& quad)
+    {
+        WorstError2 r { .index = first + 1, .value2 = -1 };
+        for (size_t i = first + 1; i < last; ++i) {
+            auto e = quad.fastDist2from(points[i].cast<double>());
+            if (e > r.value2) {
+                r.index = i;
+                r.value2 = e;
+            }
+        }
+        return r;
+    }
+
     /// @return [+] OK  [-] use alternate ways
     bool fitQuadSpan(
             std::span<const g2sv::Point> points,
@@ -1409,26 +1430,19 @@ namespace {
         if (!quad)
             return false;
 
-        size_t iWorst = first + 1;
-        double eWorst = -1;
-        for (size_t i = first + 1; i < last; ++i) {
-            auto e = quad->fastDist2from(points[i].cast<double>());
-            if (e > eWorst) {
-                iWorst = i;
-                eWorst = e;
-            }
-        }
-        if (eWorst <= errors.fit2) {
+        auto worst = worstError2(points, first, last, *quad);
+
+        if (worst.value2 <= errors.fit2) {
             // Within error → add curve
             addQuadDestructive(segments, last, *quad, tan1.source, tan2.source, errors.extr);
         } else {
             // Take greatest error and set it as a new point
             Tangent tanCenter {
-                .vec = (points[iWorst - 1] - points[iWorst + 1]).cast<double>(),
+                .vec = (points[worst.index - 1] - points[worst.index + 1]).cast<double>(),
                 .source = TanSource::SYNCED };
-            fitQuad(Initial::NO, points, segments, errors, first, iWorst, tan1, tanCenter);
+            fitQuad(Initial::NO, points, segments, errors, first, worst.index, tan1, tanCenter);
             tanCenter.vec.reverse();
-            fitQuad(Initial::NO, points, segments, errors, iWorst, last, tanCenter, tan2);
+            fitQuad(Initial::NO, points, segments, errors, worst.index, last, tanCenter, tan2);
         }
         return true;
     }
