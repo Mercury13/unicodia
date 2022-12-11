@@ -89,6 +89,11 @@ namespace g2bz {
         void straightenBX() noexcept;
         /// Makes b.y = m.y
         void straightenBY() noexcept;
+
+        /// Makes |armA| = newL
+        void scaleArmAToLength(double newL) noexcept;
+        /// Makes |armB| = newL
+        void scaleArmBToLength(double newL) noexcept;
     };
 
 }   // namespace g2bz

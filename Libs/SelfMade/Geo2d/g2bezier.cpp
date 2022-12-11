@@ -195,3 +195,19 @@ void g2bz::Quad::straightenBY() noexcept
         m.x = std::lerp(b.x, m.x, k);
     }
 }
+
+void g2bz::Quad::scaleArmAToLength(double newL) noexcept
+{
+    auto oldL = m.distFromD(a);
+    if (auto k = newL / oldL; std::isfinite(k)) {
+        m = g2::lerp(a, m, k);
+    }
+}
+
+void g2bz::Quad::scaleArmBToLength(double newL) noexcept
+{
+    auto oldL = m.distFromD(b);
+    if (auto k = newL / oldL; std::isfinite(k)) {
+        m = g2::lerp(b, m, k);
+    }
+}
