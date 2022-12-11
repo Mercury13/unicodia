@@ -1202,8 +1202,41 @@ namespace {
             TanSource srcA, TanSource srcB,
             double extremumError2)
     {
-        if (quad.a.x != quad.b.x) {
-            // a.x = b.x — IDK what to do, and sources probably disallow
+        bool ca = Tangent::isChangeable(srcA);
+        bool cb = Tangent::isChangeable(srcB);
+        if (ca || cb) {
+            if (quad.a.x != quad.b.x) {
+                // a.x = b.x — IDK what to do, and sources probably disallow
+                if (auto ex = quad.extremumX()) {
+                    if (std::abs(ex->x - quad.a.x) < std::abs(ex->x - quad.b.x)) {
+                        // A is closer
+                        if (ca && ex->dist2from(quad.a) < extremumError2) {
+                            quad.straightenAX();
+                        }
+                    } else {
+                        // B is closer
+                        if (cb && ex->dist2from(quad.b) < extremumError2) {
+                            quad.straightenBX();
+                        }
+                    }
+                }
+            }
+            if (quad.a.y != quad.b.y) {
+                // a.y = b.y — IDK what to do, and sources probably disallow
+                if (auto ex = quad.extremumY()) {
+                    if (std::abs(ex->y - quad.a.y) < std::abs(ex->y - quad.b.y)) {
+                        // A is closer
+                        if (ca && ex->dist2from(quad.a) < extremumError2) {
+                            quad.straightenAY();
+                        }
+                    } else {
+                        // B is closer
+                        if (cb && ex->dist2from(quad.b) < extremumError2) {
+                            quad.straightenBY();
+                        }
+                    }
+                }
+            }
         }
         addCurve(segments, last,
                  Curve{ .a = quad.a.cast<int>(), .ah = quad.armA(),
