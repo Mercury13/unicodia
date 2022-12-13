@@ -3995,19 +3995,23 @@ namespace {
 
     // opening parenthesis
     // en dash
+    enum class SpecialSort { NO, YES };
+
     constexpr std::u32string_view STOP_CHARS = U"(—";
 
-    void buildSortKey(std::u8string_view x,
+    void buildSortKey(std::u8string_view x, SpecialSort specialSort,
                       const std::unordered_map<char32_t, int>& sortOrder,
                       uc::LocSortKey& r)
     {
         // Get name
         auto name32 = mojibake::toS<std::u32string>(x);
 
-        // Trim by special shars
-        auto index = name32.find_first_of(STOP_CHARS);
-        if (index != std::u32string::npos)
-            name32 = name32.substr(0, index);
+        // Trim by special shars — only if subkey is set (manual sorting)
+        if (specialSort != SpecialSort::NO) {
+            auto index = name32.find_first_of(STOP_CHARS);
+            if (index != std::u32string::npos)
+                name32 = name32.substr(0, index);
+        }
 
         std::fill(std::begin(r), std::end(r), -1);
         size_t len = 0;
@@ -4071,9 +4075,12 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
 
         // Sorting key
         std::u8string_view keyName = blk.loc.name;
-        if (blk.alphaKey.ecScript != EcScript::NONE)
+        auto specialSort = SpecialSort::NO;
+        if (blk.alphaKey.ecScript != EcScript::NONE) {
             keyName = script.loc.name;
-        buildSortKey(keyName, sortOrder, blk.loc.sortKey);
+            specialSort = SpecialSort::YES;
+        }
+        buildSortKey(keyName, specialSort, sortOrder, blk.loc.sortKey);
     }
 
     for (auto& bidi : bidiClassInfo) {
@@ -4099,7 +4106,7 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         term.loc.name = loc::get(c);
 
         // Build sort key
-        buildSortKey(term.loc.name, sortOrder, term.loc.sortKey);
+        buildSortKey(term.loc.name, SpecialSort::YES, sortOrder, term.loc.sortKey);
 
         // Get desc
         if (term.borrowedDesc.empty()) {
