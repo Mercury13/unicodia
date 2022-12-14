@@ -1,8 +1,17 @@
 // My header
 #include "c_TableCache.h"
 
+// C++
+#include <cmath>
+
 // Qt
+#include <QScreen>
 #include <QPainter>
+#include <QMessageBox>
+
+
+bool TableCache::wantDebug = false;
+
 
 ///// ExclusiveHost ////////////////////////////////////////////////////////////
 
@@ -142,6 +151,7 @@ void TableCache::paint(
         drop();
         fWidget = w;
     }
+
     dropExceptMe();
 
     // Partial drop
@@ -219,19 +229,35 @@ void TableCache::paint(
 
     // Get cache cell
     Cell& cell = cells[{ ir, ic }];
-    const int cw = option.rect.width();
-    const int ch = option.rect.height();
-    if (cell.state != option.state || cell.pix.width() != cw || cell.pix.height() != ch) {
+    auto dpr = painter->device()->devicePixelRatioF();
+    const int smallWidth = option.rect.width();
+    const int smallHeight = option.rect.height();
+    const int bigWidth = std::lround(smallWidth * dpr);
+    const int bigHeight = std::lround(smallWidth * dpr);
+    if (cell.state != option.state || cell.pix.width() != bigWidth || cell.pix.height() != bigHeight) {
         QStyleOptionViewItem option2 = option;
-        option2.rect = QRect{ 0, 0, cw, ch };
+        option2.rect = QRect{ 0, 0, smallWidth, smallHeight };
         cell.state = option.state;
-        cell.pix = QPixmap { cw, ch };
+        cell.pix = QPixmap { bigWidth, bigHeight };
         if (option.backgroundBrush.style() != Qt::SolidPattern)
-            cell.pix.fill( option.widget->palette().base().color() );
-        QPainter painter2 { &cell.pix };
+            cell.pix.fill( option.widget->palette().base().color() );        
 
+        cell.pix.setDevicePixelRatio(dpr);
+
+        // Paint with new pixel ratio
+        QPainter painter2 { &cell.pix };
         aPainter.paintItem( &painter2, option2, index );
+
         log("Cached cell");
+        if (wantDebug) {
+            wantDebug = false;
+            char buf[1000];
+            snprintf(buf, std::size(buf),
+                     "orig rect=[%d*%d], new rect=[%d*%d], dpr=%g",
+                     smallWidth, smallHeight, bigWidth, bigHeight, dpr);
+            QMessageBox::information(
+                        const_cast<QTableView*>(fWidget), QString{"CellCache debug"}, QString{buf});
+        }
     } else {
         log("Cell in cache!");
     }

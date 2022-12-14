@@ -103,6 +103,7 @@ public:
             const Body& aBody)
         { paint(painter, option, index, ItemPainterT<Body>(aBody) ); }
     void drop() override;
+    static bool wantDebug;
 private:
     using IntPair = std::pair<int, int>;
     struct Cell {

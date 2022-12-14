@@ -819,6 +819,10 @@ FmMain::FmMain(QWidget *parent)
     // Write tiles
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::dumpTiles);
+
+    // Debug painter
+    //shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F11), this);
+    //connect(shcut, &QShortcut::activated, []{ TableCache::wantDebug = true; });
 }
 
 
