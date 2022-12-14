@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>1</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -676,15 +676,18 @@ padding-bottom: 1px;</string>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_8">
           <item>
-           <widget class="QLabel" name="lbLogo">
-            <property name="text">
-             <string notr="true"/>
+           <widget class="QSvgWidget" name="wiLogo" native="true">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
-            <property name="pixmap">
-             <pixmap resource="Resources/res.qrc">:/Misc/about.png</pixmap>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+            <property name="minimumSize">
+             <size>
+              <width>270</width>
+              <height>270</height>
+             </size>
             </property>
            </widget>
           </item>
@@ -877,9 +880,13 @@ padding-bottom: 1px;</string>
    <header>WiOsStyle.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>QSvgWidget</class>
+   <extends>QWidget</extends>
+   <header>QSvgWidget</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
- <resources>
-  <include location="Resources/res.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

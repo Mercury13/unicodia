@@ -1163,6 +1163,7 @@ void FmMain::translateAbout()
 
 void FmMain::initAbout()
 {
+    ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
 }
 
