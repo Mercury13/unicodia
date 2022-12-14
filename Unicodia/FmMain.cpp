@@ -216,8 +216,10 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             if (!block->icon) {
                 char buf[48];
                 snprintf(buf, std::size(buf), ":/Scripts/%04X.png", static_cast<int>(block->startingCp));
-                block->icon = new QPixmap();
-                block->icon->load(buf);
+                auto pix = new QPixmap();
+                    pix->load(buf);
+                    pix->setDevicePixelRatio(1.0);
+                block->icon = pix;
             }
             return *(block->icon);
         }
