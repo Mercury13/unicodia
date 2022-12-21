@@ -82,6 +82,18 @@ void ExclusiveClient::dropExceptMe()
 }
 
 
+///// SizeAssortment ///////////////////////////////////////////////////////////
+
+
+TableCache::SizeAssortment::SizeAssortment(QPainter* painter, const QRect& rect)
+    : dpr(painter->device()->devicePixelRatioF()),
+      smallWidth(rect.width()),
+      smallHeight(rect.height()),
+      bigWidth(std::lround(smallWidth * dpr)),
+      bigHeight(std::lround(smallHeight * dpr)) {}
+
+
+
 ///// TableCache ///////////////////////////////////////////////////////////////
 
 
@@ -111,9 +123,38 @@ namespace {
     inline void log(const char*) {}
 #endif
 
-
 }   // anon namespace
 
+void TableCache::drawAtPix(
+        const SizeAssortment& sa,
+        QPixmap& pix,
+        const QStyleOptionViewItem& option,
+        const QModelIndex& index,
+        const ItemPainter& aPainter)
+{
+    QStyleOptionViewItem option2 = option;
+    option2.rect = sa.smallRect();
+    if (option.backgroundBrush.style() != Qt::SolidPattern)
+        pix.fill( option.widget->palette().base().color() );
+
+    pix.setDevicePixelRatio(sa.dpr);
+
+    // Paint with new pixel ratio
+    QPainter painter2 { &pix };
+    aPainter.paintItem( &painter2, option2, index );
+}
+
+void TableCache::nonCachingPaint(
+        QPainter* painter,
+        const QStyleOptionViewItem& option,
+        const QModelIndex& index,
+        const ItemPainter& aPainter)
+{
+    SizeAssortment sa(painter, option.rect);
+    QPixmap eqPix(sa.bigWidth, sa.bigHeight);   // equalizing pixmap
+    drawAtPix(sa, eqPix, option, index, aPainter);
+    painter->drawPixmap(option.rect.topLeft(), eqPix, sa.bigRect());
+}
 
 void TableCache::paint(
         QPainter* painter,
@@ -128,7 +169,7 @@ void TableCache::paint(
     if (!option.widget      // unreal
             || ir < 0       // unreal
             || ic < 0       // unreal
-                // Selected/focused — just handpaint, less glitches
+                // Selected/focused — just handpaint, fewer glitches
             || (option.state & (QStyle::State_Selected | QStyle::State_HasFocus))
                 ) {
             //   Used to be (the trouble is typography engine → do not cache empty strings)
@@ -136,7 +177,7 @@ void TableCache::paint(
             //   (initStyleOption is inside paint) it effectively disables cache.
             //|| option.text.isEmpty()) {
         log("Std drawing!!!!");
-        aPainter.paintItem(painter, option, index);
+        nonCachingPaint(painter, option, index, aPainter);
         return;
     }
 
@@ -145,7 +186,7 @@ void TableCache::paint(
         auto w = qobject_cast<const QTableView*>(option.widget);
         if (!w) {
             log("[TableCache:paint] Widget of unknown type!");
-            aPainter.paintItem(painter, option, index);
+            nonCachingPaint(painter, option, index, aPainter);
             return;
         }
         drop();
@@ -229,32 +270,22 @@ void TableCache::paint(
 
     // Get cache cell
     Cell& cell = cells[{ ir, ic }];
-    auto dpr = painter->device()->devicePixelRatioF();
-    const int smallWidth = option.rect.width();
-    const int smallHeight = option.rect.height();
-    const int bigWidth = std::lround(smallWidth * dpr);
-    const int bigHeight = std::lround(smallWidth * dpr);
-    if (cell.state != option.state || cell.pix.width() != bigWidth || cell.pix.height() != bigHeight) {
-        QStyleOptionViewItem option2 = option;
-        option2.rect = QRect{ 0, 0, smallWidth, smallHeight };
+    SizeAssortment sa(painter, option.rect);
+    if (cell.state != option.state
+            || cell.pix.width() != sa.bigWidth
+            || cell.pix.height() != sa.bigHeight
+            || cell.pix.devicePixelRatio() != sa.dpr) {
         cell.state = option.state;
-        cell.pix = QPixmap { bigWidth, bigHeight };
-        if (option.backgroundBrush.style() != Qt::SolidPattern)
-            cell.pix.fill( option.widget->palette().base().color() );        
+        cell.pix = QPixmap { sa.bigSize() };
 
-        cell.pix.setDevicePixelRatio(dpr);
-
-        // Paint with new pixel ratio
-        QPainter painter2 { &cell.pix };
-        aPainter.paintItem( &painter2, option2, index );
-
+        drawAtPix(sa, cell.pix, option, index, aPainter);
         log("Cached cell");
         if (wantDebug) {
             wantDebug = false;
             char buf[1000];
             snprintf(buf, std::size(buf),
                      "orig rect=[%d*%d], new rect=[%d*%d], dpr=%g",
-                     smallWidth, smallHeight, bigWidth, bigHeight, dpr);
+                     sa.smallWidth, sa.smallHeight, sa.bigWidth, sa.bigHeight, sa.dpr);
             QMessageBox::information(
                         const_cast<QTableView*>(fWidget), QString{"CellCache debug"}, QString{buf});
         }

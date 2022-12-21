@@ -89,6 +89,11 @@ public:
     /// @return  widget we cached data for
     const QTableView* widget() { return fWidget; }
 
+    void nonCachingPaint(
+            QPainter* painter,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index,
+            const ItemPainter& aPainter);
     void paint(
             QPainter* painter,
             const QStyleOptionViewItem& option,
@@ -118,4 +123,21 @@ private:
         fFirstCol = std::numeric_limits<int>::max(),
         fLastColPlus = 0;
     const QTableView* fWidget = nullptr;
+
+    struct SizeAssortment {
+        const qreal dpr;
+        const int smallWidth, smallHeight, bigWidth, bigHeight;
+
+        SizeAssortment(QPainter* painter, const QRect& rect);
+        QRect smallRect() const { return { 0, 0, smallWidth, smallHeight }; }
+        QRect bigRect() const { return { 0, 0, bigWidth, bigHeight }; }
+        QSize bigSize() const { return { bigWidth, bigHeight}; }
+    };
+
+    void drawAtPix(
+            const SizeAssortment& sa,
+            QPixmap& pix,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index,
+            const ItemPainter& aPainter);
 };
