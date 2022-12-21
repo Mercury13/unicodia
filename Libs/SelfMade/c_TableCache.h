@@ -123,6 +123,7 @@ private:
         fFirstCol = std::numeric_limits<int>::max(),
         fLastColPlus = 0;
     const QTableView* fWidget = nullptr;
+    QPixmap eqPix;  // equalizing pixmap, for painting w/o caching in consistent manner
 
     struct SizeAssortment {
         const qreal dpr;

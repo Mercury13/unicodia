@@ -134,7 +134,7 @@ void TableCache::drawAtPix(
 {
     QStyleOptionViewItem option2 = option;
     option2.rect = sa.smallRect();
-    if (option.backgroundBrush.style() != Qt::SolidPattern)
+    if (option.widget && option.backgroundBrush.style() != Qt::SolidPattern)
         pix.fill( option.widget->palette().base().color() );
 
     pix.setDevicePixelRatio(sa.dpr);
@@ -151,7 +151,11 @@ void TableCache::nonCachingPaint(
         const ItemPainter& aPainter)
 {
     SizeAssortment sa(painter, option.rect);
-    QPixmap eqPix(sa.bigWidth, sa.bigHeight);   // equalizing pixmap
+    if (eqPix.width() < sa.bigWidth || eqPix.height() < sa.bigHeight) {
+        eqPix = QPixmap{
+                std::max(eqPix.width(), sa.bigWidth),
+                std::max(eqPix.height(), sa.bigHeight) };
+    }
     drawAtPix(sa, eqPix, option, index, aPainter);
     painter->drawPixmap(option.rect.topLeft(), eqPix, sa.bigRect());
 }
@@ -272,11 +276,11 @@ void TableCache::paint(
     Cell& cell = cells[{ ir, ic }];
     SizeAssortment sa(painter, option.rect);
     if (cell.state != option.state
-            || cell.pix.width() != sa.bigWidth
-            || cell.pix.height() != sa.bigHeight
+            || cell.pix.size() != sa.bigSize()
             || cell.pix.devicePixelRatio() != sa.dpr) {
         cell.state = option.state;
-        cell.pix = QPixmap { sa.bigSize() };
+        if (cell.pix.size() != sa.bigSize())
+            cell.pix = QPixmap { sa.bigSize() };
 
         drawAtPix(sa, cell.pix, option, index, aPainter);
         log("Cached cell");
