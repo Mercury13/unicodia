@@ -944,3 +944,13 @@ TEST (Decap, ScriptParts)
     auto r = decapitalize("OLD SOUTH ARABIAN LETTER RESH");
     EXPECT_EQ("Old South Arabian letter Resh", r);
 }
+
+
+///
+///  We rely here on engine’s ignorance rather than special rules
+///
+TEST (Decap, Attic)
+{
+    auto r = decapitalize("GREEK ACROPHONIC ATTIC ONE QUARTER");
+    EXPECT_EQ("Greek acrophonic Attic one quarter", r);
+}
