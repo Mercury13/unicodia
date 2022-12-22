@@ -81,13 +81,19 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "GLAGOLITIC",     Dicf::TRIG_SCRIPT },
     { "GRANTHA",        Dicf::TRIG_SCRIPT },
     { "GREEK",          Dicf::TRIG_SCRIPT_IF_FIRST | Dicf::PART_ADJECTIVE | Dicf::CAP_TITLE },
-      { "ATTIC",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "EPIDAUREAN",     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "HERAEUM",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "HERMIONIAN",     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "PAMPHYLIAN",     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "THESPIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
-      { "TROEZENIAN",     Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+      { "ATTIC",          Dicf::TRIG_SCRIPT },  // NOT adjective → we use treasure of ignorance here
+      { "CARYSTIAN",      Dicf::TRIG_SCRIPT },
+      { "CYRENAIC",       Dicf::TRIG_SCRIPT },
+      { "DEPLHIC",        Dicf::TRIG_SCRIPT },
+      { "EPIDAUREAN",     Dicf::TRIG_SCRIPT },
+      { "HERAEUM",        Dicf::TRIG_SCRIPT },
+      { "HERMIONIAN",     Dicf::TRIG_SCRIPT },
+      { "MESSENIAN",      Dicf::TRIG_SCRIPT },
+      { "NAXIAN",         Dicf::TRIG_SCRIPT },
+      { "PAMPHYLIAN",     Dicf::TRIG_SCRIPT },
+      { "STRATIAN",       Dicf::TRIG_SCRIPT },
+      { "THESPIAN",       Dicf::TRIG_SCRIPT },
+      { "TROEZENIAN",     Dicf::TRIG_SCRIPT },
     { "GUJARATI",       Dicf::TRIG_SCRIPT },
     { "GURMUKHI",       Dicf::TRIG_SCRIPT },
     { "HANGUL",         Dicf::TRIG_SCRIPT },
@@ -1010,6 +1016,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Greek kai symbol")              // Kai is small here
     EX("Greek lunate sigma symbol")     // Sigma is small here
     EX("Greek rho with stroke symbol")  // Rho is small here
+    EX("Greek one half sign alternate form")    // sign, alternate form
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Runr
     EX("Runic letter Dotted-N") // All are really tricky!!
