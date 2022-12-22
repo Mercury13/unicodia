@@ -128,8 +128,8 @@
 @copy %QTDIR%\bin\Qt6SvgWidgets.dll %DEPLOY%
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
-@md %DEPLOY%\imageformats
-@copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
+@md %DEPLOY%\iconengines
+@copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
