@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="sort_AYa_padded.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Buttons\sort_AYa.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="23.375"
+     inkscape:cx="-1.0481283"
+     inkscape:cy="11.122995"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="0"
+       originy="0" />
+    <sodipodi:guide
+       position="0,5.2916665"
+       orientation="0,-1"
+       id="guide10494"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1.0583333"
+       orientation="0,-1"
+       id="guide10496"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1.0583333,6.3499998"
+       orientation="1,0"
+       id="guide10498"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.2916665,6.3499998"
+       orientation="1,0"
+       id="guide10500"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 12.704187,15.149733 c -0.361287,-0.940845 -0.675035,-1.898747 -1.013612,-2.847766 -1.683989,0 -3.3679783,0 -5.0519676,0 -0.3378709,0.949255 -0.675741,1.89851 -1.0136115,2.847766 -0.5416653,0 -1.083331,0 -1.6249963,0 1.3746018,-3.763376 2.7536868,-7.5338687 4.488851,-11.1497266 0.477309,0 0.9546184,0 1.4319273,0 1.7274221,3.6187803 3.1110361,7.3878676 4.4888511,11.1497266 -0.568481,0 -1.136961,0 -1.705442,0 z M 11.240081,11.014841 C 10.579863,9.2598349 9.9346227,7.4966063 9.1645916,5.7858934 8.3642248,7.4838224 7.7217599,9.2493864 7.0891014,11.014841 c 1.3836601,0 2.7673199,0 4.1509796,0 z"
+       style="font-size:4.2569px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#cc0000;stroke-width:0.999999"
+       id="path10502" />
+    <path
+       d="m 17.544283,10.999989 c 0.821526,0.01512 1.649605,0.04744 2.455717,0.21857 0,2.927147 0,5.854294 0,8.781441 -0.540001,0 -1.080001,0 -1.620002,0 0,-1.114287 0,-2.228574 0,-3.342861 -0.539888,-0.01414 -1.0837,0.03458 -1.620003,-0.03857 -0.82023,1.028695 -1.405248,2.21765 -2.005716,3.381431 -0.574286,0 -1.148573,0 -1.722859,0 0.603036,-1.261454 1.258113,-2.510929 2.108574,-3.625719 -0.742127,-0.246734 -1.38784,-0.832869 -1.581029,-1.607032 -0.262118,-0.966278 -0.115813,-2.131811 0.682733,-2.811461 0.901477,-0.776496 2.15469,-0.94722 3.302585,-0.955799 z m -0.115714,1.40143 c -0.704124,0.02109 -1.520264,0.05907 -2.023396,0.624376 -0.340505,0.429113 -0.341095,1.0733 -0.09804,1.548484 0.418804,0.635403 1.248708,0.69915 1.938418,0.736675 0.377959,0.01497 0.756291,0.007 1.134443,0.009 0,-0.960001 0,-1.920003 0,-2.880004 -0.316362,-0.0271 -0.633952,-0.03854 -0.95143,-0.03857 z"
+       style="font-size:3.40179px;font-family:Tahoma;-inkscape-font-specification:'Ubuntu Medium';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#3465a4;stroke-width:0.999999"
+       id="path10505" />
+  </g>
+</svg>

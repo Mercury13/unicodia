@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="sort_0F_v2_padded.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Buttons\sort_0F.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="23.375"
+     inkscape:cx="12.406417"
+     inkscape:cy="13.090909"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="0"
+       originy="0" />
+    <sodipodi:guide
+       position="1.0583333,6.3499998"
+       orientation="1,0"
+       id="guide6623"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.2916665,6.3499998"
+       orientation="1,0"
+       id="guide6625"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,5.2916665"
+       orientation="0,-1"
+       id="guide6627"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1.0583333"
+       orientation="0,-1"
+       id="guide6629"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="20,13"
+       orientation="0,-1"
+       id="guide10805"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="14,6"
+       orientation="0,-1"
+       id="guide10822"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="M 4,11.000837 C 4.0150159,9.1446968 4.2247438,7.1583302 5.3316872,5.6036073 6.1060267,4.4702805 7.5138471,3.8706293 8.8685394,4.0235356 c 1.3454806,0.069028 2.5062566,0.9856131 3.1115076,2.1540395 0.963676,1.8071731 1.047431,3.9303009 0.94831,5.9330889 -0.122607,1.811472 -0.572203,3.773019 -1.989428,5.025124 C 9.3873889,18.465961 6.7469162,18.239067 5.492045,16.603777 4.2416723,15.045353 4.0180297,12.928594 4,11.000837 Z m 7.070536,0 C 11.037221,9.5404788 10.98716,7.9960374 10.263087,6.6880033 9.8681212,5.9636745 9.0516795,5.4666837 8.214732,5.6073047 7.128396,5.7333437 6.4842675,6.811447 6.2385198,7.7810026 5.8149164,9.4275031 5.8455887,11.156359 5.9819473,12.839104 c 0.1432152,1.189685 0.4178543,2.552719 1.4600487,3.290316 0.863694,0.53833 2.1331962,0.296195 2.675071,-0.588683 0.863456,-1.311197 0.907672,-2.951985 0.953337,-4.471191 z"
+       style="font-size:5.12412px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#f57900;stroke-width:0.999033"
+       id="path10339" />
+    <path
+       d="m 14,20 v -9 h 6.025974 v 1.701298 h -4 v 1.883117 h 3.558442 v 1.701299 H 16.025974 V 20 Z"
+       style="font-weight:bold;font-size:3.43244px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:'Ubuntu Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#75507b;stroke-width:1.00433"
+       id="path10342" />
+    <path
+       style="fill:none;stroke:#f57900;stroke-width:1.29894;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 6.9975647,12.966932 9.9951325,8.9701727"
+       id="path20572" />
+  </g>
+</svg>

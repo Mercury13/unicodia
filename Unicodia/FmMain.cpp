@@ -951,15 +951,16 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
+    //sortBar->setIconSize({ 22, 22 });
     ui->laySortBar->addWidget(sortBar);
     btSort = new QToolButton(sortBar);
 
     // ALPHA is localized!!
-    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.png",   { 16, 16 });
-    sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.png", { 16, 16 });
+    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.svg",   { 24, 24 });
+    sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.svg", { 24, 24 });
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
-    sortBar->addWidget(btSort);
+    sortBar->addWidget(btSort);    
 
     auto icos = QApplication::style()->pixelMetric(QStyle::PM_ToolBarIconSize);
     std::cout << "Icon size: " << icos << std::endl;
@@ -1045,8 +1046,8 @@ namespace {
     void loadIcon(QIcon& r, std::string_view name)
     {
         r = QIcon{};
-        auto fullName = str::cat(":/Buttons/", name, ".png");
-        r.addFile(QString::fromStdString(fullName), {16, 16});
+        auto fullName = str::cat(":/Buttons/", name, ".svg");
+        r.addFile(QString::fromStdString(fullName), {24, 24});
     }
 
 }   // anon namespace

@@ -1,9 +1,9 @@
 <RCC>
     <qresource prefix="/">
-        <file>Buttons/sort_0F.png</file>
-        <file>Buttons/sort_AZ.png</file>
-        <file>Buttons/sort_AYa.png</file>
-        <file>Buttons/globe.png</file>
+        <file>Buttons/sort_0F.svg</file>
+        <file>Buttons/sort_AZ.svg</file>
+        <file>Buttons/sort_AYa.svg</file>
+        <file>Buttons/globe.svg</file>
         <file>Misc/about.svg</file>
         <file>Texts/about.htm</file>
     </qresource>
