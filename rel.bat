@@ -129,7 +129,7 @@
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
 @md %DEPLOY%\imageformats
-@copy %QTDIR%\plugins\imageformars\qsvg.dll %DEPLOY%\imageformats
+@copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
