@@ -961,6 +961,9 @@ FmMain::InitBlocks FmMain::initBlocks()
     btSort->setPopupMode(QToolButton::InstantPopup);
     sortBar->addWidget(btSort);
 
+    auto icos = QApplication::style()->pixelMetric(QStyle::PM_ToolBarIconSize);
+    std::cout << "Icon size: " << icos << std::endl;
+
     // Select index
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
