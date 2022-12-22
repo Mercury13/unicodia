@@ -585,6 +585,7 @@ void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font, QColor color, char32_t subj)
 {
+    painter->setRenderHint(QPainter::Antialiasing, painter->device()->devicePixelRatio() != 1.0);
     // Quotient to convert space height to line thickness
     constexpr auto Q_H2THICK = 1.0 / 25.0;
 
@@ -595,10 +596,10 @@ void drawSpace(
     auto x = rect.left() - lineW + (rect.width() - dim.width()) / 2;
     auto y = rect.top() + (rect.height() - dim.height()) / 2;
     QBrush brush(color);
-    painter->fillRect(x, y, lineW, dim.height(), brush);
+    painter->fillRect(QRectF(x, y, lineW, dim.height()), brush);
     x += lineW;
     x += dim.width();
-    painter->fillRect(x, y, lineW, dim.height(), brush);
+    painter->fillRect(QRectF(x, y, lineW, dim.height()), brush);
 }
 
 
