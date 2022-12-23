@@ -19,12 +19,21 @@ QPixmap ie::Veng::scaledPixmap(
         QIcon::State state, qreal scale)
 {
     QSize bigSz { lround(size.width() * scale), lround(size.height() * scale) };
-    QPixmap pix { bigSz };
-    pix.fill(Qt::transparent);
-    QPainter ptr(&pix);
+    QPixmap localPix;
+    auto workingPix = cache(mode, state, scale);
+    if (workingPix) {
+        if (workingPix->size() == bigSz)
+            return *workingPix;      // we rely on pixmap’s data sharing here
+    } else {
+        localPix = QPixmap{ bigSz };
+        workingPix = &localPix;
+    }
+    workingPix->setDevicePixelRatio(1.0);
+    workingPix->fill(Qt::transparent);
+    QPainter ptr(workingPix);
     paint1(&ptr, QRect{ QPoint(0, 0), bigSz }, scale);
-    pix.setDevicePixelRatio(scale);
-    return pix;
+    workingPix->setDevicePixelRatio(scale);
+    return *workingPix;
 }
 
 

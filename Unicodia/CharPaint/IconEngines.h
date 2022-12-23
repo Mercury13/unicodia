@@ -25,6 +25,9 @@ namespace ie {
     protected:
         // paint at 100% scale
         virtual void paint1(QPainter *painter, const QRect &rect, qreal scale) = 0;
+        virtual QPixmap* cache(
+                QIcon::Mode, QIcon::State,
+                [[maybe_unused]] qreal scale) { return nullptr; }
     };
 
     class Cp : public Veng
