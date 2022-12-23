@@ -19,7 +19,7 @@ QPixmap ie::Veng::scaledPixmap(
 {
     QSize bigSz { lround(size.width() * scale), lround(size.height() * scale) };
     QPixmap localPix;
-    auto workingPix = cache(scale);
+    auto* workingPix = cache(scale);
     if (workingPix) {
         if (workingPix->size() == bigSz)
             return *workingPix;      // we rely on pixmap’s data sharing here
