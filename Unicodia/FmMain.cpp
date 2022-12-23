@@ -26,6 +26,7 @@
 #include <QToolBar>
 #include <QToolButton>
 #include <QActionGroup>
+#include <QIconEngine>
 
 // Misc
 #include "u_Strings.h"
@@ -553,6 +554,22 @@ void SearchModel::set(SafeVector<uc::SearchLine>&& x)
     endResetModel();
 }
 
+namespace {
+
+    class IE : public QIconEngine {
+    public:
+        IE* clone() const override { return new IE(*this); }
+        void paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) override;
+    private:
+    };
+
+    void IE::paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State)
+    {
+        painter->fillRect(rect, Qt::blue);
+    }
+
+}
+
 
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
@@ -585,59 +602,65 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             }
         }
 
-    case Qt::DecorationRole:
-        return cache.getT(line.code,
-            [cp = line.cp, type = line.type, this](QPixmap& pix) {
-                auto size = sample->pixSize();
-                if (pix.size() != QSize{size, size}) {
-                    pix = QPixmap{size, size};
-                }
-                pix.fill(Qt::transparent);
+    case Qt::DecorationRole: {
+            auto ie = new IE();
+            QIcon icon(ie);
+            return icon;
+        }
+        /// @todo [urgent] DecorationRole: test IconEngine’s
 
-                // Create painter
-                QColor clFg = sample->winColor();
-                QPainter painter(&pix);
-                auto bounds = pix.rect();
+//        return cache.getT(line.code,
+//            [cp = line.cp, type = line.type, this](QPixmap& pix) {
+//                auto size = sample->pixSize();
+//                if (pix.size() != QSize{size, size}) {
+//                    pix = QPixmap{size, size};
+//                }
+//                pix.fill(Qt::transparent);
 
-                switch (type) {
-                case uc::CpType::NONCHARACTER: {
-                        drawCharBorder(&painter, bounds, clFg);
-                        QBrush brush (clFg, Qt::DiagCrossPattern);
-                        painter.fillRect(bounds, brush);
-                    } break;
-                case uc::CpType::PRIVATE_USE:
-                    drawCharBorder(&painter, bounds, clFg);
-                    drawAbbreviation(&painter, bounds, u8"PUA", clFg);
-                    break;
-                case uc::CpType::SURROGATE:
-                    drawCharBorder(&painter, bounds, clFg);
-                    drawAbbreviation(&painter, bounds, u8"SUR", clFg);
-                    break;
-                case uc::CpType::RESERVED: {
-                        auto& si = cp->block().synthIcon;
-                        // No continent → draw murky, otherwise use icon colours
-                        if (si.ecContinent == uc::EcContinent::NONE) {
-                            drawMurkyRect(&painter, bounds, clFg);
-                        } else {
-                            auto cont = si.continent();
-                            painter.fillRect(bounds, cont.icon.bgColor);
-                            drawCharBorder(&painter, bounds, clFg);
-                            clFg = cont.icon.fgColor;
-                        }
-                        // Draw icon a bit larger — 120%
-                        drawChar(&painter, bounds, 120, si.cp(), clFg,
-                                 TableDraw::CUSTOM, EMOJI_DRAW);
-                    } break;
-                case uc::CpType::NN:
-                case uc::CpType::UNALLOCATED:
-                    // Just draw murky w/o foreground
-                    drawMurkyRect(&painter, bounds, clFg);
-                    break;
-                case uc::CpType::EXISTING:
-                    // OK w/o size, as 39 ≈ 40
-                    drawSearchChar(&painter, bounds, cp, clFg, EMOJI_DRAW);
-                }
-            });
+//                // Create painter
+//                QColor clFg = sample->winColor();
+//                QPainter painter(&pix);
+//                auto bounds = pix.rect();
+
+//                switch (type) {
+//                case uc::CpType::NONCHARACTER: {
+//                        drawCharBorder(&painter, bounds, clFg);
+//                        QBrush brush (clFg, Qt::DiagCrossPattern);
+//                        painter.fillRect(bounds, brush);
+//                    } break;
+//                case uc::CpType::PRIVATE_USE:
+//                    drawCharBorder(&painter, bounds, clFg);
+//                    drawAbbreviation(&painter, bounds, u8"PUA", clFg);
+//                    break;
+//                case uc::CpType::SURROGATE:
+//                    drawCharBorder(&painter, bounds, clFg);
+//                    drawAbbreviation(&painter, bounds, u8"SUR", clFg);
+//                    break;
+//                case uc::CpType::RESERVED: {
+//                        auto& si = cp->block().synthIcon;
+//                        // No continent → draw murky, otherwise use icon colours
+//                        if (si.ecContinent == uc::EcContinent::NONE) {
+//                            drawMurkyRect(&painter, bounds, clFg);
+//                        } else {
+//                            auto cont = si.continent();
+//                            painter.fillRect(bounds, cont.icon.bgColor);
+//                            drawCharBorder(&painter, bounds, clFg);
+//                            clFg = cont.icon.fgColor;
+//                        }
+//                        // Draw icon a bit larger — 120%
+//                        drawChar(&painter, bounds, 120, si.cp(), clFg,
+//                                 TableDraw::CUSTOM, EMOJI_DRAW);
+//                    } break;
+//                case uc::CpType::NN:
+//                case uc::CpType::UNALLOCATED:
+//                    // Just draw murky w/o foreground
+//                    drawMurkyRect(&painter, bounds, clFg);
+//                    break;
+//                case uc::CpType::EXISTING:
+//                    // OK w/o size, as 39 ≈ 40
+//                    drawSearchChar(&painter, bounds, cp, clFg, EMOJI_DRAW);
+//                }
+//            });
     default:
         return {};
     }
@@ -805,6 +828,10 @@ FmMain::FmMain(QWidget *parent)
     initLibrary(ib);
     initTerms();
     initAbout();
+
+    // Search
+    auto psz = pixSize();
+    ui->listSearch->setIconSize({psz, psz});
 
     // Tofu stats
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
