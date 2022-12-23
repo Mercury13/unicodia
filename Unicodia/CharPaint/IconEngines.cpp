@@ -15,12 +15,11 @@ QPixmap ie::Veng::pixmap(
 }
 
 QPixmap ie::Veng::scaledPixmap(
-        const QSize &size, QIcon::Mode mode,
-        QIcon::State state, qreal scale)
+        const QSize &size, QIcon::Mode, QIcon::State, qreal scale)
 {
     QSize bigSz { lround(size.width() * scale), lround(size.height() * scale) };
     QPixmap localPix;
-    auto workingPix = cache(mode, state, scale);
+    auto workingPix = cache(scale);
     if (workingPix) {
         if (workingPix->size() == bigSz)
             return *workingPix;      // we rely on pixmap’s data sharing here
