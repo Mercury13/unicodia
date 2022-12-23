@@ -6,18 +6,25 @@
 // Char paint
 #include "global.h"
 
+namespace uc {
+    struct SynthIcon;
+}
+
 namespace ie {
 
     /// Virtual engine
     class Veng : public QIconEngine
     {
     public:
+        QPixmap pixmap(
+                const QSize &size, QIcon::Mode mode, QIcon::State state) override;
         QPixmap scaledPixmap(
                 const QSize &size, QIcon::Mode mode,
                 QIcon::State state, qreal scale) override;
         void paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) override;
     protected:
-        virtual void vpaint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) = 0;
+        // paint at 100% scale
+        virtual void paint1(QPainter *painter, const QRect &rect, qreal scale) = 0;
     };
 
     class Cp : public Veng
@@ -26,11 +33,57 @@ namespace ie {
         Cp(const PixSource& aSource, uc::EmojiDraw aEmojiDraw, const uc::Cp* aCp);
         Cp* clone() const override { return new Cp(*this); }
     protected:
-        void vpaint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) override;
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         const PixSource& source;
         const uc::EmojiDraw emojiDraw;
         const uc::Cp* const cp;
+    };
+
+    class Nonchar : public Veng
+    {
+    public:
+        Nonchar(const PixSource& aSource) : source(aSource) {}
+        Nonchar* clone() const override { return new Nonchar(*this); }
+    protected:
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const PixSource& source;
+    };
+
+    class CustomAbbr : public Veng
+    {
+    public:
+        CustomAbbr(const PixSource& aSource, const char8_t* aText);
+        CustomAbbr* clone() const override { return new CustomAbbr(*this); }
+    protected:
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const PixSource& source;
+        const char8_t* const text;
+    };
+
+    class Murky : public Veng
+    {
+    public:
+        Murky(const PixSource& aSource) : source(aSource) {}
+        Murky* clone() const override { return new Murky(*this); }
+    protected:
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const PixSource& source;
+    };
+
+    class Synth : public Veng
+    {
+    public:
+        Synth(const PixSource& aSource, const uc::SynthIcon& aSi);
+        Synth* clone() const override { return new Synth(*this); }
+    protected:
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const PixSource& source;
+        const uc::SynthIcon& si;
     };
 
 }   // namespace ie

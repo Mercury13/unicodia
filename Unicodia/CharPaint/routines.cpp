@@ -652,8 +652,8 @@ void drawChar(
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             // Char
-            auto font = *fontAt(method, sizePc, cp);
-            painter->setFont(*fontAt(method, sizePc, cp));
+            if (auto font = fontAt(method, sizePc, cp))
+                painter->setFont(*font);
             painter->setBrush(color);
             painter->setPen(color);
             painter->drawText(rect,
@@ -701,11 +701,11 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
 
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color, uc::EmojiDraw emojiMode)
+        const QColor& color, uc::EmojiDraw emojiMode, qreal scale)
 {
     drawCharBorder(painter, rect, color);
     if (cp)
-        drawChar(painter, rect, 100, *cp, color, TableDraw::CUSTOM, emojiMode);
+        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode);
 }
 
 

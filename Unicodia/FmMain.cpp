@@ -596,75 +596,29 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::EXISTING:
                 ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp);
                 break;
-            case uc::CpType::NONCHARACTER:
-            case uc::CpType::PRIVATE_USE:
-            case uc::CpType::SURROGATE:
-            case uc::CpType::UNALLOCATED:
-            case uc::CpType::RESERVED:
             case uc::CpType::NN:
-                return {};
+            case uc::CpType::NONCHARACTER:
+                ie = new ie::Nonchar(*sample);
+                break;
+            case uc::CpType::PRIVATE_USE:
+                ie = new ie::CustomAbbr(*sample, u8"PUA");
+                break;
+            case uc::CpType::SURROGATE:
+                ie = new ie::CustomAbbr(*sample, u8"SUR");
+                break;
+            case uc::CpType::UNALLOCATED:
+                ie = new ie::Murky(*sample);
+                break;
+            case uc::CpType::RESERVED:
+                ie = new ie::Synth(*sample, line.cp->block().synthIcon);
             }
             QIcon icon(ie);
             return icon;
         }
-
-        /// @todo [urgent] DecorationRole: test IconEngine’s
-        ///
-
-//        return cache.getT(line.code,
-//            [cp = line.cp, type = line.type, this](QPixmap& pix) {
-//                auto size = sample->pixSize();
-//                if (pix.size() != QSize{size, size}) {
-//                    pix = QPixmap{size, size};
-//                }
-//                pix.fill(Qt::transparent);
-
-//                // Create painter
-//                QColor clFg = sample->winColor();
-//                QPainter painter(&pix);
-//                auto bounds = pix.rect();
-
-//                switch (type) {
-//                case uc::CpType::NONCHARACTER: {
-//                        drawCharBorder(&painter, bounds, clFg);
-//                        QBrush brush (clFg, Qt::DiagCrossPattern);
-//                        painter.fillRect(bounds, brush);
-//                    } break;
-//                case uc::CpType::PRIVATE_USE:
-//                    drawCharBorder(&painter, bounds, clFg);
-//                    drawAbbreviation(&painter, bounds, u8"PUA", clFg);
-//                    break;
-//                case uc::CpType::SURROGATE:
-//                    drawCharBorder(&painter, bounds, clFg);
-//                    drawAbbreviation(&painter, bounds, u8"SUR", clFg);
-//                    break;
-//                case uc::CpType::RESERVED: {
-//                        auto& si = cp->block().synthIcon;
-//                        // No continent → draw murky, otherwise use icon colours
-//                        if (si.ecContinent == uc::EcContinent::NONE) {
-//                            drawMurkyRect(&painter, bounds, clFg);
-//                        } else {
-//                            auto cont = si.continent();
-//                            painter.fillRect(bounds, cont.icon.bgColor);
-//                            drawCharBorder(&painter, bounds, clFg);
-//                            clFg = cont.icon.fgColor;
-//                        }
-//                        // Draw icon a bit larger — 120%
-//                        drawChar(&painter, bounds, 120, si.cp(), clFg,
-//                                 TableDraw::CUSTOM, EMOJI_DRAW);
-//                    } break;
-//                case uc::CpType::NN:
-//                case uc::CpType::UNALLOCATED:
-//                    // Just draw murky w/o foreground
-//                    drawMurkyRect(&painter, bounds, clFg);
-//                    break;
-//                }
-//            });
     default:
         return {};
     }
 }
-
 
 ///// LibModel /////////////////////////////////////////////////////////////////
 

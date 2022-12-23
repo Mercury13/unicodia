@@ -70,7 +70,8 @@ void drawChar(
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color, uc::EmojiDraw emojiMode);
+        const QColor& color, uc::EmojiDraw emojiMode,
+        qreal scale);
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
