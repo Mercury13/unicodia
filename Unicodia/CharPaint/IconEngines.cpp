@@ -30,8 +30,10 @@ QPixmap ie::Veng::scaledPixmap(
     workingPix->setDevicePixelRatio(1.0);
     workingPix->fill(Qt::transparent);
     QPainter ptr(workingPix);
+    // Paint in 100% here
     paint1(&ptr, QRect{ QPoint(0, 0), bigSz }, scale);
     workingPix->setDevicePixelRatio(scale);
+    // Paint in dipels here (none currently)
     return *workingPix;
 }
 
