@@ -33,6 +33,10 @@
 #include "u_Qstrings.h"
 #include "i_TempFont.h"
 
+// Char drawing
+#include "CharPaint/routines.h"
+#include "CharPaint/IconEngines.h"
+
 // Project-local
 #include "Skin.h"
 #include "Wiki.h"   // used! — we specialize its template
@@ -554,22 +558,6 @@ void SearchModel::set(SafeVector<uc::SearchLine>&& x)
     endResetModel();
 }
 
-namespace {
-
-    class IE : public QIconEngine {
-    public:
-        IE* clone() const override { return new IE(*this); }
-        void paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) override;
-    private:
-    };
-
-    void IE::paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State)
-    {
-        painter->fillRect(rect, Qt::blue);
-    }
-
-}
-
 
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
@@ -603,11 +591,25 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
         }
 
     case Qt::DecorationRole: {
-            auto ie = new IE();
+            QIconEngine* ie;
+            switch (line.type) {
+            case uc::CpType::EXISTING:
+                ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp);
+                break;
+            case uc::CpType::NONCHARACTER:
+            case uc::CpType::PRIVATE_USE:
+            case uc::CpType::SURROGATE:
+            case uc::CpType::UNALLOCATED:
+            case uc::CpType::RESERVED:
+            case uc::CpType::NN:
+                return {};
+            }
             QIcon icon(ie);
             return icon;
         }
+
         /// @todo [urgent] DecorationRole: test IconEngine’s
+        ///
 
 //        return cache.getT(line.code,
 //            [cp = line.cp, type = line.type, this](QPixmap& pix) {
@@ -656,9 +658,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 //                    // Just draw murky w/o foreground
 //                    drawMurkyRect(&painter, bounds, clFg);
 //                    break;
-//                case uc::CpType::EXISTING:
-//                    // OK w/o size, as 39 ≈ 40
-//                    drawSearchChar(&painter, bounds, cp, clFg, EMOJI_DRAW);
 //                }
 //            });
     default:
@@ -978,7 +977,6 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
-    //sortBar->setIconSize({ 22, 22 });
     ui->laySortBar->addWidget(sortBar);
     btSort = new QToolButton(sortBar);
 
@@ -988,9 +986,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
     sortBar->addWidget(btSort);    
-
-    auto icos = QApplication::style()->pixelMetric(QStyle::PM_ToolBarIconSize);
-    std::cout << "Icon size: " << icos << std::endl;
 
     // Select index
     ui->tableChars->setFocus();

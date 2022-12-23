@@ -20,11 +20,13 @@
 #include "u_LruCache.h"
 #include "QtMultiRadio.h"
 
+// CharPaint
+#include "CharPaint/global.h"
+
 // Project-local
 #include "FontMatch.h"
 #include "MyWiki.h"
 #include "d_Config.h"
-#include "CharPaint.h"
 
 // Forms
 #include "FmPopup.h"
@@ -203,15 +205,6 @@ public:
     using Super::endResetModel;
 private:
     Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };
-};
-
-
-class PixSource // interface
-{
-public:
-    virtual int pixSize() const = 0;
-    virtual QColor winColor() const = 0;
-    virtual ~PixSource() = default;
 };
 
 

@@ -6,6 +6,7 @@
 
 #include "UcData.h"
 #include "u_EmojiPainter.h"
+#include "global.h"
 
 class QPainter;
 class QColor;
@@ -74,13 +75,6 @@ void drawSearchChar(
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
         const QColor& color, uc::EmojiDraw emojiMode);
-
-struct CharTile {
-    std::u32string_view text {};
-    uc::EmojiDraw emojiDraw = uc::EmojiDraw::GRAPHIC;
-    bool isEmoji() const;
-};
-using CharTiles = std::array<CharTile, 4>;
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
