@@ -23,8 +23,9 @@ namespace ie {
                 QIcon::State state, qreal scale) override;
         void paint(QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State) override;
     protected:
-        // paint at 100% scale
+        /// paint at 100% scale
         virtual void paint1(QPainter *painter, const QRect &rect, qreal scale) = 0;
+        /// @return [+] a cell in cache  [-] cannot cache
         virtual QPixmap* cache(
                 QIcon::Mode, QIcon::State,
                 [[maybe_unused]] qreal scale) { return nullptr; }
