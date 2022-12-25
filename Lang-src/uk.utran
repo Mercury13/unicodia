@@ -13,43 +13,56 @@
   <group id="Common">
    <text id="Copied">
     <orig>Скопировано</orig>
+    <transl>Скопійовано</transl>
    </text>
    <group id="Mon">
     <text id="1">
      <orig>январь {1}</orig>
+     <transl>січень {1}</transl>
     </text>
     <text id="2">
      <orig>февраль {1}</orig>
+     <transl>лютий {1}</transl>
     </text>
     <text id="3">
      <orig>март {1}</orig>
+     <transl>березень {1}</transl>
     </text>
     <text id="4">
      <orig>апрель {1}</orig>
+     <transl>квітень {1}</transl>
     </text>
     <text id="5">
      <orig>май {1}</orig>
+     <transl>травень {1}</transl>
     </text>
     <text id="6">
      <orig>июнь {1}</orig>
+     <transl>червень {1}</transl>
     </text>
     <text id="7">
      <orig>июль {1}</orig>
+     <transl>липень {1}</transl>
     </text>
     <text id="8">
      <orig>август {1}</orig>
+     <transl>серпень {1}</transl>
     </text>
     <text id="9">
      <orig>сентябрь {1}</orig>
+     <transl>вересень {1}</transl>
     </text>
     <text id="10">
      <orig>октябрь {1}</orig>
+     <transl>жовтень {1}</transl>
     </text>
     <text id="11">
      <orig>ноябрь {1}</orig>
+     <transl>листопад {1}</transl>
     </text>
     <text id="12">
      <orig>декабрь {1}</orig>
+     <transl>грудень {1}</transl>
     </text>
    </group>
   </group>
@@ -59,63 +72,83 @@
     <au-cmt>Strings for centuries from 1st to 20th.</au-cmt>
     <text id="1">
      <orig>I</orig>
+     <transl>I</transl>
     </text>
     <text id="2">
      <orig>II</orig>
+     <transl>II</transl>
     </text>
     <text id="3">
      <orig>III</orig>
+     <transl>III</transl>
     </text>
     <text id="4">
      <orig>IV</orig>
+     <transl>IV</transl>
     </text>
     <text id="5">
      <orig>V</orig>
+     <transl>V</transl>
     </text>
     <text id="6">
      <orig>VI</orig>
+     <transl>VI</transl>
     </text>
     <text id="7">
      <orig>VII</orig>
+     <transl>VII</transl>
     </text>
     <text id="8">
      <orig>VIII</orig>
+     <transl>VIII</transl>
     </text>
     <text id="9">
      <orig>IX</orig>
+     <transl>IX</transl>
     </text>
     <text id="10">
      <orig>X</orig>
+     <transl>X</transl>
     </text>
     <text id="11">
      <orig>XI</orig>
+     <transl>XI</transl>
     </text>
     <text id="12">
      <orig>XII</orig>
+     <transl>XII</transl>
     </text>
     <text id="13">
      <orig>XIII</orig>
+     <transl>XIII</transl>
     </text>
     <text id="14">
      <orig>XIV</orig>
+     <transl>XIV</transl>
     </text>
     <text id="15">
      <orig>XV</orig>
+     <transl>XV</transl>
     </text>
     <text id="16">
      <orig>XVI</orig>
+     <transl>XVI</transl>
     </text>
     <text id="17">
      <orig>XVII</orig>
+     <transl>XVII</transl>
     </text>
     <text id="18">
      <orig>XVIII</orig>
+     <transl>XVIII</transl>
     </text>
     <text id="19">
      <orig>XIX</orig>
+     <transl>XIX</transl>
     </text>
     <text id="20">
      <orig>XX</orig>
+     <transl>XX</transl>
     </text>
    </group>
    <group id="Name">
@@ -126,28 +159,36 @@
     </au-cmt>
     <text id="YBc">
      <orig>$ до н.э.</orig>
+     <transl>$ до н.е.</transl>
     </text>
     <text id="YBefore">
      <orig>до $</orig>
      <au-cmt>Years BC are unsupported</au-cmt>
+     <transl>до $</transl>
     </text>
     <text id="YApprox">
      <orig>≈$</orig>
+     <transl>≈$</transl>
     </text>
     <text id="YApproxBc">
      <orig>≈$ до н.э.</orig>
+     <transl>≈$ до н.е.</transl>
     </text>
     <text id="Decade">
      <orig>$-е</orig>
+     <transl>$-і</transl>
     </text>
     <text id="Century">
      <orig>$ век</orig>
+     <transl>$ ст.</transl>
     </text>
     <text id="CenturyBc">
      <orig>$ век до н.э.</orig>
+     <transl>$ ст. до н.е.</transl>
     </text>
     <text id="Unknown">
      <orig>неизвестно</orig>
+     <transl>невідомо</transl>
     </text>
    </group>
    <group id="StdComment">
@@ -157,12 +198,15 @@
     </au-cmt>
     <text id="FirstInsc">
      <orig>первая известная надпись</orig>
+     <transl>перший відомий напис</transl>
     </text>
     <text id="ModernForm">
      <orig>в современном виде</orig>
+     <transl>в сучасному вигляді</transl>
     </text>
     <text id="MaybeEarlier">
      <orig>возможно, раньше</orig>
+     <transl>можливо, раніше</transl>
     </text>
    </group>
   </group>
@@ -171,30 +215,37 @@
     <text id="NonChar">
      <orig>Выброшенная позиция</orig>
      <au-cmt>Test: FFFF (go to FFFD, then manually)</au-cmt>
+     <transl>Викинута позиція</transl>
     </text>
     <text id="Empty">
      <orig>Свободное место</orig>
      <au-cmt>Test: 1st empty is in Greek+Coptic</au-cmt>
+     <transl>Вільне місце</transl>
     </text>
     <text id="Block">
      <orig>О блоке</orig>
      <au-cmt>Test: any special block (e.g. Latin 1)</au-cmt>
+     <transl>Про блок</transl>
     </text>
     <text id="Script">
      <orig>О письменности</orig>
      <au-cmt>Test: any normal block (e.g. Deva, Hebr…)</au-cmt>
+     <transl>Про писемність</transl>
     </text>
     <text id="Control">
      <orig>Об управляющих символах</orig>
      <au-cmt>Test: control chars are above fold</au-cmt>
+     <transl>Про керуючі символи</transl>
     </text>
     <text id="Deprec">
      <orig>Запрещённый символ</orig>
      <au-cmt>Test: the 1st is U+0149</au-cmt>
+     <transl>Заборонений символ</transl>
     </text>
     <text id="DefIgn">
      <orig>Игнорируемый символ</orig>
      <au-cmt>Test: CGJ, Tags…</au-cmt>
+     <transl>Ігнорований символ</transl>
     </text>
     <text id="Emoji16">
      <orig>Графическое &lt;a {1}&gt;эмодзи&lt;/a&gt; требует U+FE0F (=VS16)</orig>
@@ -202,20 +253,25 @@
       <p>{1}=misc props of &lt;a&gt;, do not forget</p>
       <p>Test: Misc symbols (U+2600)</p>
      </au-cmt>
+     <transl>Графічне &lt;a {1}&gt;емодзі&lt;/a&gt; потребує U+FE0F (=VS16)</transl>
     </text>
     <text id="SuttonNoFill">
      <orig>Заливок и поворотов нет</orig>
      <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
+     <transl>Заповнень та поворотів немає</transl>
     </text>
     <text id="NChars">
      <orig>{1} симв.</orig>
+     <transl>{1} симв.</transl>
     </text>
     <text id="NoHent">
      <orig>без &lt;a {1} &gt;хэнтайганы&lt;/a&gt;</orig>
      <au-cmt>Test: Hiragana</au-cmt>
+     <transl>без &lt;a {1} &gt;хентайгани&lt;/a&gt;</transl>
     </text>
     <text id="Comp">
      <orig>Состав строки</orig>
+     <transl>Склад рядка</transl>
     </text>
    </group>
    <group id="Bidi">
@@ -223,9 +279,11 @@
      <au-cmt>Test: Explicit chars in GenPunct</au-cmt>
      <text id="Name">
       <orig>Тэг направления</orig>
+      <transl>Тег напрямку</transl>
      </text>
      <text id="Short">
       <orig>Тэг направления</orig>
+      <transl>Тег напрямку</transl>
      </text>
      <text id="Text">
       <orig>
@@ -233,18 +291,26 @@
        <p />
        <p>Строго говоря, каждый из этих символов{{-}}это отдельный класс в двунаправленном алгоритме, но если вы не{{_}}программист, вам достаточно знать: это тэги направления.</p>
       </orig>
+      <transl>
+       <p>Форматуючі символи, що корегують роботу двонапрямленого алгоритма Юнікоду.</p>
+       <p />
+       <p>Строго кажучи, кожен з цих символів{{-}}це окремий клас у двонапрямленому алгоритмі. Але якщо ви не{{_}}програміст, вам досить знати: це теги напрямку.</p>
+      </transl>
      </text>
     </group>
     <group id="AL">
      <au-cmt>Test: Any Arabic letter</au-cmt>
      <text id="Name">
       <orig>Арабская буква</orig>
+      <transl>Арабська буква</transl>
      </text>
      <text id="Short">
       <orig>Арабская буква</orig>
+      <transl>Арабська буква</transl>
      </text>
      <text id="Text">
       <orig>Пишутся справа налево. Есть тонкие правила, связанные с европейскими цифрами.</orig>
+      <transl>Пишуться справа наліво. Є тонкі правила, пов’язані з європейськими цифрами.</transl>
      </text>
     </group>
     <group id="AN">
@@ -254,12 +320,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Арабская цифра</orig>
+      <transl>Арабська цифра</transl>
      </text>
      <text id="Short">
       <orig>Арабская цифра</orig>
+      <transl>Арабська цифра</transl>
      </text>
      <text id="Text">
       <orig>Пишутся справа налево. Есть тонкие правила, связанные с уровнями вложенности.</orig>
+      <transl>Пишуться справа наліво. Є тонкі правила, пов’язані з рівнями вкладеності.</transl>
      </text>
     </group>
     <group id="B">
@@ -269,12 +338,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Разделитель абзацев</orig>
+      <transl>Роздільник абзаців</transl>
      </text>
      <text id="Short">
       <orig>Разделитель абзацев</orig>
+      <transl>Роздільник абзаців</transl>
      </text>
      <text id="Text">
       <orig>Каждый абзац обрабатывается двунаправленным алгоритмом по отдельности.</orig>
+      <transl>Кожний абзац обробляється двонапрямленим алгоритмом окремо.</transl>
      </text>
     </group>
     <group id="BN">
@@ -284,9 +356,11 @@
      </au-cmt>
      <text id="Name">
       <orig>Неграфический</orig>
+      <transl>Неграфічний</transl>
      </text>
      <text id="Short">
       <orig>Неграфический</orig>
+      <transl>Неграфічний</transl>
      </text>
      <text id="Text">
       <orig>
@@ -294,6 +368,11 @@
        <p />
        <p>См. [[pt:graphic|графический символ]].</p>
       </orig>
+      <transl>
+       <p>[[pt:control|Керуючі]], з’єднувачі та [[pk:E0000|теги]], що не мають власного написання.</p>
+       <p />
+       <p>Див. [[pt:graphic|графічній символ]].</p>
+      </transl>
      </text>
     </group>
     <group id="CS">
@@ -303,12 +382,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Цифровой разделитель</orig>
+      <transl>Цифровий роздільник</transl>
      </text>
      <text id="Short">
       <orig>Цифровой разделитель</orig>
+      <transl>Цифровий роздільник</transl>
      </text>
      <text id="Text">
       <orig>Оказавшись в арабском или европейском числе, эти символы становятся его частью.</orig>
+      <transl>Опинившись у врабському або європейському числі, ці символи стають його частиною.</transl>
      </text>
     </group>
     <group id="EN">
@@ -318,12 +400,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Европейская цифра</orig>
+      <transl>Європейська цифра</transl>
      </text>
      <text id="Short">
       <orig>Европейская цифра</orig>
+      <transl>Європейська цифра</transl>
      </text>
      <text id="Text">
       <orig>Пишутся слева направо. Есть тонкие правила, связанные с арабским текстом.</orig>
+      <transl>Пишуться справа наліво. Є тонкі правила, пов’язані з арабським текстом.</transl>
      </text>
     </group>
     <group id="ES">
@@ -333,12 +418,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Европейский ±</orig>
+      <transl>Європейський ±</transl>
      </text>
      <text id="Short">
       <orig>Европейский ±</orig>
+      <transl>Європейський ±</transl>
      </text>
      <text id="Text">
       <orig>Символы + и − внутри европейского [[pt:number|числа]] становятся его частью. Символ ± к этому классу не{{_}}относится.</orig>
+      <transl>Символи + та − всередині європейського числа стають його частиною. Символ ± до цього класу не{{_}}відноситься.</transl>
      </text>
     </group>
     <group id="ET">
@@ -348,24 +436,30 @@
      </au-cmt>
      <text id="Name">
       <orig>Европейская единица измерения</orig>
+      <transl>Європейська одиниця виміру</transl>
      </text>
      <text id="Short">
       <orig>Европейская единица измерения</orig>
+      <transl>Європейська одиниця виміру</transl>
      </text>
      <text id="Text">
       <orig>Валютные и прочие символы, встречающиеся рядом с числами. Оказавшись рядом с европейским числом, они становятся частью числа.</orig>
+      <transl>Валютні та інші символи, що зустрічаються разом з числами. Опинившись поруч з європейським числом, вони стають частиною числа.</transl>
      </text>
     </group>
     <group id="L">
      <au-cmt>Test: ABC…</au-cmt>
      <text id="Name">
       <orig>Слева направо</orig>
+      <transl>Зліва направо</transl>
      </text>
      <text id="Short">
       <orig>→</orig>
+      <transl>→</transl>
      </text>
      <text id="Text">
       <orig>Латиница, кириллица и прочие алфавиты с написанием слева направо. Поскольку подавляющая доля Юникода{{-}}[[ps:Hani|китайские иероглифы]], это самый многочисленный класс.</orig>
+      <transl>Латиниця, кирилиця та інші алфавіти з написанням зліва направо. Оскільки значна частка Юнікоду{{-}}[[ps:Hani|китайські ієрогліфи]], це найбільш численний клас.</transl>
      </text>
     </group>
     <group id="NSM">
@@ -375,45 +469,56 @@
      </au-cmt>
      <text id="Name">
       <orig>Непротяжённая метка</orig>
+      <transl>Непротяжна мітка</transl>
      </text>
      <text id="Short">
       <orig>Непротяжённая метка</orig>
+      <transl>Непротяжна мітка</transl>
      </text>
      <text id="Text">
       <orig>Непротяжённые и охватывающие комбинирующие метки. Направление написания{{-}}как у основного символа.</orig>
+      <transl>Непротяжні та охоплюючі комбінуючі мітки. Напрямок написання{{-}}як у основного символа.</transl>
      </text>
     </group>
     <group id="ON">
      <au-cmt>Test: !"…</au-cmt>
      <text id="Name">
       <orig>Прочий нейтральный</orig>
+      <transl>Інший нейтральний</transl>
      </text>
      <text id="Short">
       <orig>Прочий нейтральный</orig>
+      <transl>Інший нейтральний</transl>
      </text>
      <text id="Text">
       <orig>Приспосабливается к направлению окружающего текста.</orig>
+      <transl>Пристосовується до напрямку оточуючого тексту.</transl>
      </text>
     </group>
     <group id="NM">
      <au-cmt>Test: most braces, e.g. ()</au-cmt>
      <text id="Name">
       <orig>Нейтральный отзеркаливающийся</orig>
+      <transl>Нейтральний віддзеркалюючийся</transl>
      </text>
      <text id="Short">
       <orig>Отзеркаливающийся</orig>
+      <transl>Віддзеркалюючийся</transl>
      </text>
      <text id="Text">
       <orig>Скобки и похожие символы при написании справа налево отзеркаливаются. Все такие символы являются нейтральными: приспосабливаются к направлению окружающего текста.</orig>
+      <transl>Дужки та інші символи при написанні справа наліво віддзеркалюються. Усі такі символи є нейтральними: пристосовуються до напрямку оточуючого тексту.</transl>
      </text>
     </group>
     <group id="R">
      <au-cmt>Test: Hebrew</au-cmt>
      <text id="Name">
       <orig>Справа налево</orig>
+      <transl>Справа наліво</transl>
      </text>
      <text id="Short">
       <orig>←</orig>
+      <transl>←</transl>
      </text>
      <text id="Text">
       <orig>
@@ -421,6 +526,11 @@
        <p />
        <p>[[pb:AL|Арабские буквы]] по-особому ведут себя с европейскими цифрами и попадают в отдельную категорию.</p>
       </orig>
+      <transl>
+       <p>[[ps:Hebr|Іврит]], а також історичні писемності Ближнього Сходу.</p>
+       <p />
+       <p>[[pb:AL|Арабські букви]] по-особливому поводяться з європейськими цифрами и потрапляють до окремої категорії.</p>
+      </transl>
      </text>
     </group>
     <group id="S">
@@ -430,12 +540,15 @@
      </au-cmt>
      <text id="Name">
       <orig>Разделитель участков</orig>
+      <transl>Роздільник відрізків</transl>
      </text>
      <text id="Short">
       <orig>Разделитель участков</orig>
+      <transl>Роздільник відрізків</transl>
      </text>
      <text id="Text">
       <orig>Три управляющих символа: 09 (табуляция), 0B (вертикальная табуляция), 1F (разделитель 1).</orig>
+      <transl>Три керуючих символа: 09 (табуляція), 0B (вертикальна табуляція), 1F (роздільник 1)</transl>
      </text>
     </group>
     <group id="WS">
@@ -445,9 +558,11 @@
      </au-cmt>
      <text id="Name">
       <orig>Пробел</orig>
+      <transl>Пропуск</transl>
      </text>
      <text id="Short">
       <orig>Пробел</orig>
+      <transl>Пропуск</transl>
      </text>
      <text id="Text">
       <orig>
@@ -455,6 +570,11 @@
        <p />
        <p>См. термин [[pt:space|пробел]].</p>
       </orig>
+      <transl>
+       <p>Нейтральні. Є тонкі правила, що стосуються форматування пропусками.</p>
+       <p />
+       <p>Див. термін [[pt:space|пропуск]].</p>
+      </transl>
      </text>
     </group>
    </group>
@@ -462,29 +582,35 @@
     <au-cmt>Test in Symbols for legacy computing</au-cmt>
     <text id="Teletext">
      <orig>телетекст</orig>
+     <transl>телетекст</transl>
     </text>
     <text id="Korvet">
      <orig>Корвет</orig>
+     <transl>Корвет</transl>
     </text>
    </group>
    <group id="Num">
     <text id="Digit">
      <orig>Цифра</orig>
      <au-cmt>Test: 0…9</au-cmt>
+     <transl>Цифра</transl>
     </text>
     <text id="SpecDigit">
      <orig>Особая цифра</orig>
      <au-cmt>Test: ¹²³</au-cmt>
+     <transl>Особлива цифра</transl>
     </text>
     <text id="Number">
      <orig>Число</orig>
      <au-cmt>Test: ½⅓¼</au-cmt>
+     <transl>Число</transl>
     </text>
    </group>
    <group id="Input">
     <text id="Bullet">
      <orig>Ввод</orig>
      <au-cmt>Test: any char with alt input</au-cmt>
+     <transl>Введення</transl>
     </text>
     <text id="Birman">
      <orig>Бирман</orig>
@@ -492,22 +618,27 @@
       <p>Means Ilya Birman’s typography layout</p>
       <p>Test: U+011B both Alt code and Birman</p>
      </au-cmt>
+     <transl>Бірман</transl>
     </text>
     <text id="AltCode">
      <orig>Alt-код</orig>
      <au-cmt>Test: U+011B both Alt code and Birman</au-cmt>
+     <transl>Alt-код</transl>
     </text>
     <text id="Sometimes">
      <orig>иногда {1}</orig>
      <au-cmt>Test: Tab U+09</au-cmt>
+     <transl>іноді {1}</transl>
     </text>
     <text id="Twice">
      <orig>дважды {1}</orig>
      <au-cmt>Test: combining acute</au-cmt>
+     <transl>двічі {1}</transl>
     </text>
     <text id="Space">
      <orig>Пробел</orig>
      <au-cmt>Test: NBSP U+00A0</au-cmt>
+     <transl>Пропуск</transl>
     </text>
    </group>
    <group id="Bullet">
@@ -517,66 +648,82 @@
       <p>English — maybe Technical</p>
       <p>Test: block info</p>
      </au-cmt>
+     <transl>Англійська</transl>
     </text>
     <text id="Range">
      <orig>Диапазон</orig>
      <au-cmt>test: block info</au-cmt>
+     <transl>Діапазон</transl>
     </text>
     <text id="VerAppear">
      <orig>Появился в версии</orig>
      <au-cmt>Test: block info</au-cmt>
+     <transl>З’явився у версії</transl>
     </text>
     <text id="NonChars">
      <orig>Выброшенных позиций</orig>
      <au-cmt>Test: any block with nonchars (e.g. Specials)</au-cmt>
+     <transl>Викинутих позицій</transl>
     </text>
     <text id="Empty">
      <orig>Пустых мест</orig>
      <au-cmt>Test: Any block with empty places: Specials, Greek/Coptic…</au-cmt>
+     <transl>Вільних місць</transl>
     </text>
     <text id="VerFilled">
      <orig>Заполнен в версии</orig>
      <au-cmt>Test: Any full block (e.g. ASCII)</au-cmt>
+     <transl>Заповнений у версії</transl>
     </text>
     <text id="Version">
      <orig>Версия Юникода</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>Версія Юнікода</transl>
     </text>
     <text id="InTech">
      <orig>В техдокументации</orig>
      <au-cmt>Test: bidi info</au-cmt>
+     <transl>В техдокументації</transl>
     </text>
     <text id="Block">
      <orig>Блок</orig>
      <au-cmt>Any char</au-cmt>
+     <transl>Блок</transl>
     </text>
     <text id="Script">
      <orig>Письменность</orig>
      <au-cmt>Test: Any char w/script (e.g. A)</au-cmt>
+     <transl>Писемність</transl>
     </text>
     <text id="Type">
      <orig>Тип</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>Тип</transl>
     </text>
     <text id="Bidi">
      <orig>В двунаправленном письме</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>У двонапрямленому письмі</transl>
     </text>
     <text id="Computers">
      <orig>Компьютеры</orig>
      <au-cmt>Test: any char from Legacy computing</au-cmt>
+     <transl>Комп’ютери</transl>
     </text>
     <text id="Dir">
      <orig>Направление</orig>
      <au-cmt>Test: Any script except Braille and technical</au-cmt>
+     <transl>Напрямок</transl>
     </text>
     <text id="Langs">
      <orig>Языки</orig>
      <au-cmt>Test: Any script except few technical</au-cmt>
+     <transl>Мови</transl>
     </text>
     <text id="Appear">
      <orig>Появилась</orig>
      <au-cmt>Test: Any script except few technical</au-cmt>
+     <transl>З’явилася</transl>
     </text>
     <text id="Condition">
      <orig>Состояние</orig>
@@ -584,181 +731,231 @@
       <p>Maybe status</p>
       <p>Test: any live (or prevly live) script</p>
      </au-cmt>
+     <transl>Стан</transl>
     </text>
     <text id="Plane">
      <orig>Плоскость</orig>
      <au-cmt>Test: any script</au-cmt>
+     <transl>Площина</transl>
     </text>
     <text id="base">
      <orig>базовая</orig>
      <au-cmt>Test: props of any base plane script</au-cmt>
+     <transl>базова</transl>
     </text>
     <text id="Utf8">
      <orig>UTF-8</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-8</transl>
     </text>
     <text id="Utf16">
      <orig>UTF-16</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>UTF-16</transl>
     </text>
     <text id="Utf32">
      <orig>UTF-32</orig>
+     <transl>UTF-32</transl>
     </text>
     <text id="Html">
      <orig>HTML</orig>
      <au-cmt>Test: any char</au-cmt>
+     <transl>HTML</transl>
     </text>
     <text id="AllVer">
      <orig>Все символы в версии Юникода</orig>
+     <transl>Усі символи в версії Юнікоду</transl>
     </text>
     <text id="EmojiVer">
      <orig>Эмодзи в версии Юникода</orig>
+     <transl>Емодзі в версії Юнікоду</transl>
     </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
     <text id="Invisible">
      <orig>(Невидимый)</orig>
+     <transl>(Невидимий)</transl>
     </text>
     <text id="Tofu">
      <orig>(В системе нет)</orig>
+     <transl>(В системі немає)</transl>
     </text>
     <text id="NonChar">
      <orig>(Выброшен)</orig>
+     <transl>(Викинутий)</transl>
     </text>
     <text id="Empty">
      <orig>(Свободное место)</orig>
+     <transl>Вільне місце</transl>
     </text>
     <text id="FontsFor">
      <orig>Шрифты для U+%04X</orig>
      <au-cmt>Test: some char (better Latin), click font name (=OS style)</au-cmt>
+     <transl>Шрифти для U+%04X</transl>
     </text>
     <text id="Style">
      <orig>(Стиль ОС)</orig>
+     <transl>(Стиль ОС)</transl>
     </text>
    </group>
    <group id="Life">
     <text id="Alive">
      <orig>живая ''(основным языкам ничего не угрожает, как кириллица)''</orig>
+     <transl>Жива ''(основним мовам нічого не загрожує, як кирилиця)''</transl>
     </text>
     <text id="Danger">
      <orig>в опасности{{-}}из-за языка ''(как чероки)''</orig>
+     <transl>в небезпеці{{-}}через мову ''(як черокі)''</transl>
     </text>
     <text id="Competing">
      <orig>в опасности{{-}}из-за конкуренции письменностей ''(как ланна)''</orig>
+     <transl>в небезпеці{{-}}через конкуренцію писемностей ''(як ланна)''</transl>
     </text>
     <text id="Dead">
-     <orig>мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)</orig>
+     <orig>мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)''</orig>
+     <known-orig>мёртвая ''(скоро потеряет/недавно потеряла носителей, как нюй-шу)</known-orig>
+     <transl>метрва ''(скоро втратить/недавно втратила носіїв, як нюй-шу)''</transl>
     </text>
     <text id="Hist">
      <orig>историческая ''(давно мертва, как глаголица)''</orig>
+     <transl>історична ''(давно мертва, як глаголиця)''</transl>
     </text>
     <text id="Sacred">
      <orig>религиозная ''(мертва в светском обороте, как коптская)''</orig>
+     <transl>релігійна ''(мертва у світському вжитку, як коптська)''</transl>
     </text>
     <text id="New">
      <orig>новая ''(появилась в новейшее время, как нко)''</orig>
+     <transl>нова ''(з’явилася у новітній час, як нко)''</transl>
     </text>
     <text id="Reborn">
      <orig>возрождённая ''(как ахом)''</orig>
+     <transl>відроджена ''(як ахом)''</transl>
     </text>
     <text id="Exp">
      <orig>экспериментальная ''(попытка придумать имеющемуся языку новую письменность, как мормонская)''</orig>
+     <transl>експериментальна ''(спроба придумати наявній мові нову писемність, як мормонська)''</transl>
     </text>
    </group>
    <group id="Dir">
     <text id="L">
      <orig>→</orig>
      <au-cmt>Test: any LTR script, e.g. Latin</au-cmt>
+     <transl>→</transl>
     </text>
     <text id="R">
      <orig>←</orig>
      <au-cmt>Test: any RTL script, eg Arabic, Hebrew</au-cmt>
+     <transl>←</transl>
     </text>
     <text id="L_cjk">
      <orig>→ ''(исторически ←↓↓ по столбцам)''</orig>
      <au-cmt>Test: any CJK script: Hani, Nshu</au-cmt>
+     <transl>→ ''(історично ←↓↓ стовпцями)''</transl>
     </text>
     <text id="L_cunei">
      <orig>←↓↓ по столбцам, затем →</orig>
      <au-cmt>Test: cuneiform</au-cmt>
+     <transl>←↓↓ стовпцями, потім →</transl>
     </text>
     <text id="L_ogam">
      <orig>→, ↑</orig>
      <au-cmt>Test: Ogam</au-cmt>
+     <transl>→, ↑</transl>
     </text>
     <text id="L_col">
      <orig>↓↓→ по столбцам</orig>
      <au-cmt>Test: Mong, Ougr, Phag</au-cmt>
+     <transl>↓↓→ стовпцями</transl>
     </text>
     <text id="TD">
      <orig>↓</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>↓</transl>
     </text>
     <text id="Both">
      <orig>писали и ←, и →</orig>
      <au-cmt>Test: Cari, Egyp, Ital</au-cmt>
+     <transl>писали і ←, і →</transl>
     </text>
     <text id="Tang">
      <orig>писали ←↓↓ по столбцам и →</orig>
      <au-cmt>test: Tang</au-cmt>
+     <transl>писали ←↓↓ стовпцями та →</transl>
     </text>
     <text id="R_col">
      <orig>←↓↓ по столбцам</orig>
      <au-cmt>Test: Kits, Mero</au-cmt>
+     <transl>←↓↓ стовпцями</transl>
     </text>
     <text id="R_most">
      <orig>преимущественно ←</orig>
      <au-cmt>Test: Cprt, Lydi, Sarb</au-cmt>
+     <transl>переважно ←</transl>
     </text>
     <text id="Sogd">
      <orig>↓↓→ по столбцам; ←</orig>
      <au-cmt>Test: Sogd (new!), Chrs</au-cmt>
+     <transl>↓↓→ стовпцями; ←</transl>
     </text>
    </group>
    <group id="Type">
     <text id="Alph">
      <orig>[[pt:alphabet|алфавитная]]{{-}}''как кириллица''</orig>
+     <transl>[[pt:alphabet|алфавітна]]{{-}}''як кирилиця''</transl>
     </text>
     <text id="Argu">
      <orig>[[pt:arguable|спорный]]{{-}}''как тана''</orig>
+     <transl>[[pt:arguable|спірний]]{{-}}''як тана''</transl>
     </text>
     <text id="Cons">
      <orig>[[pt:abjad|консонантная]]{{-}}''как иврит''</orig>
+     <transl>[[pt:abjad|консонантна]]{{-}}''як іврит''</transl>
     </text>
     <text id="Syll">
      <orig>[[pt:syllabic|слоговая]]{{-}}''как японские катакана/хирагана''</orig>
+     <transl>[[pt:syllabic|складова]]{{-}}''як японські катакана/хірагана''</transl>
     </text>
     <text id="Asyl">
      <orig>алфавитно-слоговая{{-}}''как персидская клинопись''</orig>
+     <transl>алфавітно-складова{{-}}''як персидский клинопис''</transl>
     </text>
     <text id="Abug">
      <orig>[[pt:abugida|абугида]]{{-}}''как эфиопская''</orig>
+     <transl>[[pt:abugida|абугіда]]{{-}}''як ефіопська''</transl>
     </text>
     <text id="Brah">
      <orig>[[pt:brahmic|брахмийская абугида]]{{-}}''как деванагари''</orig>
+     <transl>[[pt:brahmic|брахмійська абугіда]]{{-}}''як деванагарі''</transl>
     </text>
     <text id="Hier">
      <orig>[[pt:hiero|иероглифическая]]{{-}}''как китайские иероглифы''</orig>
+     <transl>[[pt:hiero|ієрогліфічна]]{{-}}''як китайські ієрогліфи''</transl>
     </text>
     <text id="Syhi">
      <orig>слогоиероглифическая{{-}}''как линейное письмо Б''</orig>
+     <transl>складоієроглффічна{{-}}''як лінійне письмо Б''</transl>
     </text>
     <text id="Cohi">
      <orig>консонантно-иероглифическое{{-}}''как египетские иероглифы''</orig>
+     <transl>консонантно-ієрогліфічна{{-}}''як єгипетські ієрогліфи''</transl>
     </text>
     <text id="Code">
      <orig>[[pt:code|коды и стенография]]{{-}}''как шрифт Брайля''</orig>
+     <transl>[[pt:code|коди і стенографія]]{{-}}''як шрифт Брайля''</transl>
     </text>
     <text id="Nota">
      <orig>[[pt:nontext|нетекстовая]]{{-}}''как ноты''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
+     <transl>[[pt:nontext|нетекстова]]{{-}}''як ноти''</transl>
     </text>
    </group>
    <group id="Sutton">
     <text id="01">
      <orig>Заливка F2 с поворотами 0…R5 изображена на символе U+1D9FF «голова»: иначе не{{_}}складывается в лигатуру. Копироваться будет без него.</orig>
      <au-cmt>Test: U+1DA5E (smth bad with font)</au-cmt>
+     <transl>Заповнення F2 з поворотами 0…R5 зображено на символі U+1D9FF «голова»: інакше не{{_}}складається у лігатуру. Копіюватися буде без нього.</transl>
     </text>
    </group>
   </group>
@@ -766,6 +963,7 @@
    <group id="0000">
     <text id="Name">
      <orig>Латиница базовая (ASCII)</orig>
+     <transl>Латинка базова (ASCII)</transl>
     </text>
     <text id="Text">
      <orig>
@@ -777,11 +975,21 @@
       <p />
       <p>Оставшиеся 128 символов могли заполняться чем угодно. Одна из таких 8-битных кодировок, [[pt:latin1|латиница-1]], также вошла в Юникод.</p>
      </orig>
+     <transl>
+      <p>'''American Standard Code for Information Interchange (ASCII)'''{{-}}розроблене в США у 1963 семибітне кодування символів. Ширину 7 біт обрали як компроміс для передачі даних телеграфом, до того ж ASCII легко обрізати до 6 біт, залишивши символи 04…5F та 20…3F. '''Базова латинка''' Юнікоду співпадає з ASCII{{-}}так що англійський юнікодний текст читається, навіть якщо кодування збито.</p>
+      <p />
+      <p>Перші 32 символи, 00…1F, [[pt:control|керуючі]], і сьогодні не багато з них дійсно використовуються. Потім йдуть 95 друкованих символів. Багато з них з друкарських машинок: наприклад, щоб надрукувати À, потрібно надрукувати A, повернути каретку і надрукувати зворотний апостроф. Останній символ, 7F=DEL, також керуючий, родом з перфострічок{{-}}отвори, пробиті в усіх доріжках, кажуть, що символ вибитий помилково і не підлягає зчитуванню.</p>
+      <p />
+      <p>Існувало багато національних варіантів ASCII: британці заміняли решітку # на фунт £, СРСР долар $ на монету ¤, німці [\]{|} на умляути ÄÖÜäöü, японці зворотну косу риску \ на єну ¥…</p>
+      <p />
+      <p>128 символів, що залишаються, могли заповнюватися чим завгодно. Одне з таких 8-бітних кодувань, [[pt:latin1|латинка-1]], також увійшла до Юнікоду.</p>
+     </transl>
     </text>
    </group>
    <group id="0080">
     <text id="Name">
      <orig>Латиница-1</orig>
+     <transl>Латинка-1</transl>
     </text>
     <text id="Text">
      <orig>
@@ -792,27 +1000,39 @@
       <p>Среди букв видны символы × и ÷. Изначально там должен быть Œœ, но французский делегат настаивал, что хватает OE.</p>
      </orig>
      <au-cmt>French delegate refused: https://elementy.ru/problems/2689/Yunikod_na_Novyy_god</au-cmt>
+     <transl>
+      <p>Латинка-1{{-}}інша назва 8-бітного кодування '''ISO{{_}}8859-1''', що з’явилось в 1987 році та розширює [[pt:ASCII|ASCII]] до європейських мов.</p>
+      <p />
+      <p>Перші 32 символи, 80…9F, [[pt:control|керуючі]] для сумісності з 7-бітними кодуваннями: поштові програми іноді губили верхній біт, і не{{_}}хотілося б і цих позиціях ставити друковані символи. Зараз ці символи не{{_}}застосовуються за призначенням і слугують [[pt:private|особистими]]. Так, кодування Windows-1252{{-}}це та ж латинка-1, але замість керуючих символів типографські. Дійшло до того, що у стандартах Всесвітньої павутини написано: якщо сторінка просить кодування ISO{{_}}8859-1, відобразити сайт у Windows-1252.</p>
+      <p />
+      <p>Серед букв видно символи × та ÷. Початково там повинні бути Œœ, але французький делегат наполягав, що вистачає OE.</p>
+     </transl>
     </text>
    </group>
    <group id="0100">
     <text id="Name">
      <orig>Латиница расширенная A</orig>
+     <transl>Латинка розширена A</transl>
     </text>
     <text id="Text">
      <orig>Содержит символы языков Центральной и Восточной Европы, Прибалтики, кельтских, а также саамского, мальтийского, турецкого, эсперанто и некоторых других.</orig>
+     <transl>Містить символи мов Центральної та Східної Європи, Прибалтики, кельтських, а також саамської, мальтійської, турецької, есперанто та деяких інших.</transl>
     </text>
    </group>
    <group id="0180">
     <text id="Name">
      <orig>Латиница расширенная B</orig>
+     <transl>Латинка розширена B</transl>
     </text>
     <text id="Text">
      <orig>Содержит символы словенского, хорватского, румынского, ливского, чжуанского, пиньиня (латинизации китайского), африканских, индейских языков, а также старой (до 1930) латиницы языков бывшего СССР.</orig>
+     <transl>Містить символи словенської, хорватської, румунської, лівської, чжуанської, піньїню (латинізації китайської), африканських, індіанських мов, а також старої (до 1930) латинки мов колишнього СРСР.</transl>
     </text>
    </group>
    <group id="0250">
     <text id="Name">
      <orig>Расширения МФА</orig>
+     <transl>Розширення МФА</transl>
     </text>
     <text id="Text">
      <orig>
@@ -824,11 +1044,21 @@
       <p />
       <p>А ещё символы МФА позволяют перевернуть текст шутки ради.</p>
      </orig>
+     <transl>
+      <p>Міжнародний фонетичний алфавіт на основі латинки вікиристовується мовознавцями, логопедами, співаками та акторами, щоб передавати промову мов. Для передачі додаткових особливостей мовлення{{-}}шепелявості, рипіння зубів та іншого{{-}}використовуються розширення МФА.</p>
+      <p />
+      <p>Насправді більша частина цього блока{{-}}не розширення, а звичайний МФА: так, {{sm|ɦ}} є в українському «гривня», російському «ага» та чеському «hrad».</p>
+      <p />
+      <p>Оперні співаки часто співають чужою мовою, і їх здатність читати знаки транскрипції часто використовують складачі звукових словників. Зокрема, відомий звук «Янні чи Лорел» початково читав співак Джей Обрі Джонс{{-}}низький чоловічий голос, что пройшов через неякісний динамік і настільки ж неякісний мікрофон, став сприйматися як «Янні».</p>
+      <p />
+      <p>А ще символи МФА дозволяють заради жарту перевернути текст.</p>
+     </transl>
     </text>
    </group>
    <group id="02B0">
     <text id="Name">
      <orig>Протяжённые модификаторы букв</orig>
+     <transl>Протяжні модифікатори букв</transl>
     </text>
     <text id="Text">
      <orig>
@@ -836,11 +1066,17 @@
       <p />
       <p>Также в этом блоке есть [[pt:spacing|протяжённые]] копии диакритических меток.</p>
      </orig>
+     <transl>
+      <p>Модифікатори букв використовують у фонетиці і мовознавстві, щоб передати тони, довжину, м’якість, не повністю вимовлені та умовні звуки: так, англійське ''car'' (легковий автомобіль, вагон, кабіна ліфта) записується як {{sm|[kɑːʳ]}}, і останні два символи{{-}}модифікатори, що означають довжину та умовне {{t|r}}.</p>
+      <p />
+      <p>Також в цьому блоці є [[pt:spacing|протяжні]] копії діакритичніх міток.</p>
+     </transl>
     </text>
    </group>
    <group id="0300">
     <text id="Name">
      <orig>Диакритические метки</orig>
+     <transl>Діакритичні мітки</transl>
     </text>
     <text id="Text">
      <orig>
@@ -853,11 +1089,21 @@
       <p>Символ 0310 чандрабинду нужен для записи индийских языков латиницей и кириллицей. В каждой [[pt:brahmic|индийской]] письменности есть свой чандрабинду.</p>
      </orig>
      <au-cmt> </au-cmt>
+     <transl>
+      <p>Діакритичні знаки{{-}}надрядкові, подрядкові та внутрішньорядкові знаки, що прикріплюються до букви і змінюють або уточнюють її значення. Наприклад, крапки над Ї або нáголос.</p>
+      <p />
+      <p>У Юнікоді є два способи передати діакритику: [[pt:precomposed|монолітні]] символи і комбинації «основний символ +{{_}}'''[[pt:combining|комбінуюча]] мітка'''». Щоб спростити пошук у такому «зоопарку», в Юнікоді є алгоритм [[pt:normalization|нормалізації]].</p>
+      <p />
+      <p>Символ 034F CGJ є не з’єднувачем, а ''роз’єднувачем'' диграфів. Використовується у чеській (ch читається як {{t|x}}, і алфавітний порядок ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), угорській, івриті та деяких інших мовах.</p>
+      <p />
+      <p>Символ 0310 чандрабінду потрібен для запису індийських мов латинкою і кирилицею. В кожній [[pt:brahmic|індійській]] писемності є свій чандрабінду.</p>
+     </transl>
     </text>
    </group>
    <group id="0370">
     <text id="Name">
      <orig>Греческий и коптский</orig>
+     <transl>Грецька і коптська</transl>
     </text>
     <text id="Text">
      <orig>
@@ -867,16 +1113,25 @@
       <p />
       <p>Изначально были закодированы в [[pt:unification|унификации]]. С Юникода 4.1 (2005) разунифицированы.</p>
      </orig>
+     <transl>
+      <p>[[ps:Grek|Грецька]]{{-}}перший справжній алфавіт, попередник усіх європейських алфавітів.</p>
+      <p />
+      <p>[[ps:Copt|Коптська]]{{-}}мова єгипетських християн. Її алфавіт базується на грецькій.</p>
+      <p />
+      <p>Початково були закодовані в [[pt:unification|уніфікації]]. З Юнікода 4.1 (2005) розуніфіковані.</p>
+     </transl>
     </text>
    </group>
    <group id="0400">
     <text id="Name">
      <orig>Кириллица</orig>
+     <transl>Кирилиця</transl>
     </text>
    </group>
    <group id="0500">
     <text id="Name">
      <orig>Кириллица дополнительная</orig>
+     <transl>Кирилиця додаткова</transl>
     </text>
     <text id="Text">
      <orig>
@@ -884,158 +1139,195 @@
       <p />
       <p>Содержит смешную букву {{sm|Ԥ}}. Её «изобрёл» писатель Леонид Каганов{{-}}как оказалось, не{{_}}первым: ещё за три года до его заметки (2008) майки с этой буквой продавались в России. И независимо от них в абхазском вместо крюка {{sm|Ҧ}} (читается «пх») стали использовать лапку, что и дало букве {{sm|Ԥ}} место в Юникоде.</p>
      </orig>
+     <transl>
+      <p>Букви кількох малих кириличних мов: абхазької, курдської ''(як нацменшини СРСР)'', комі, мордовської, алеутської, азербайджанської ''(зараз [[ps:Latn|латинкою)'' та чуваської в алфавіті Яковлева ''(використовувався 1873–1938)''.</p>
+      <p />
+      <p>Містить смішну букву {{sm|Ԥ}}. Її винайшов письменник Леонід Каганов{{-}}як виявилося, не{{_}}першим: ще за три роки до його дописа (2008) майки з цією буквою продавалися у Росії. І незалежно від нього в абхазькій замість гака {{sm|Ҧ}} (читаэться «пх») стали використовували лапку, що й дало букві {{sm|Ԥ}} місце в Юнікоді.</p>
+     </transl>
     </text>
    </group>
    <group id="0530">
     <text id="Name">
      <orig>Армянский</orig>
+     <transl>Вірменська</transl>
     </text>
    </group>
    <group id="0590">
     <text id="Name">
      <orig>Иврит</orig>
+     <transl>Іврит</transl>
     </text>
    </group>
    <group id="0600">
     <text id="Name">
      <orig>Арабский</orig>
+     <transl>Арабська</transl>
     </text>
    </group>
    <group id="0700">
     <text id="Name">
      <orig>Сирийский</orig>
+     <transl>Сирійська</transl>
     </text>
    </group>
    <group id="0750">
     <text id="Name">
      <orig>Арабский дополнительный</orig>
+     <transl>Арабська додаткова</transl>
     </text>
     <text id="Text">
      <orig>Буквы для языков Африки, Пакистана и раннего персидского.</orig>
+     <transl>Букви для мов Африки, Пакістану та ранньої перської.</transl>
     </text>
    </group>
    <group id="0780">
     <text id="Name">
      <orig>Тана</orig>
+     <transl>Тана</transl>
     </text>
    </group>
    <group id="07C0">
     <text id="Name">
      <orig>Нко</orig>
+     <transl>Нко</transl>
     </text>
    </group>
    <group id="0800">
     <text id="Name">
      <orig>Самаритянский</orig>
+     <transl>Самаритянська</transl>
     </text>
    </group>
    <group id="0840">
     <text id="Name">
      <orig>Мандейский</orig>
+     <transl>Мандейська</transl>
     </text>
    </group>
    <group id="0860">
     <text id="Name">
      <orig>Сирийский дополнительный</orig>
+     <transl>Сирійська додаткова</transl>
     </text>
     <text id="Text">
      <orig>Необычная запись языка [[ps:Mlym|малая́лам]] сирийскими буквами, именуемая '''суриани''' или '''каршони'''. Использовалась индийскими христианами до XIX{{_}}века.</orig>
+     <transl>Незвичайний запис мови [[ps:Mlym|малая́лам]] сирійськими буквами, що зветься '''суріані''' або '''каршоні'''. Використовувалась індійськими християнами до XIX{{_}}століття.</transl>
     </text>
    </group>
    <group id="0870">
     <text id="Name">
      <orig>Арабский расширенный B</orig>
+     <transl>Арабська розширена B</transl>
     </text>
     <text id="Text">
      <orig>Символы из комментариев к Корану. Также бошняцкий (запись сербохорватского арабскими буквами), пегон (запись индонезийских языков арабскими буквами), египетский пиастр (валюта до 1834) и египетский фунт (современная валюта).</orig>
+     <transl>Символи з коментарів до Корану. Також боснійська (запис сербохорватської арабськими буквами), пегон (запис індонезійських мов арабськими буквами), єгипетський піастр (валюта до 1834) і єгипетський фунт (суфасна валюта).</transl>
     </text>
    </group>
    <group id="08A0">
     <text id="Name">
      <orig>Арабский расширенный A</orig>
+     <transl>Арабська розширена A</transl>
     </text>
     <text id="Text">
-     <orig>Дополнительные арабские буквы для [[ps:Rohg|рохинджа]] ''(Мьянма)'', белорусского, татарского, башкирского, арви ''(Индия, Шри-Ланка''), шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' и африканских языков (в частности, берберского). Также знаки комментариев к Корану.</orig>
+     <orig>Дополнительные арабские буквы для [[ps:Rohg|рохинджа]] ''(Мьянма)'', белорусского, татарского, башкирского, арви ''(Индия, Шри-Ланка)'', шахмукхи ''([[ps:Guru|пенджабского]])'', хиндко ''(Пакистан)'' и африканских языков (в частности, берберского). Также знаки комментариев к Корану.</orig>
+     <transl>Додаткові арабські букви для [[ps:Rohg|рохінджа]] ''(М’янма)'', білоруської, татарської, башкірської, арві ''(Індія, Шрі-Ланка)'', шахмукхі ''([[ps:Guru|пенджабської]])'', хіндко ''(Пакістан)'' та африканських мов (зокрема, берберської). Також знаки коментарів до Корану.</transl>
     </text>
    </group>
    <group id="0900">
     <text id="Name">
      <orig>Деванáгари</orig>
+     <transl>Деванáгарі</transl>
     </text>
    </group>
    <group id="0980">
     <text id="Name">
      <orig>Бенгальский</orig>
+     <transl>Бенгальська</transl>
     </text>
    </group>
    <group id="0A00">
     <text id="Name">
      <orig>Гурмукхи</orig>
+     <transl>Гурмукхі</transl>
     </text>
    </group>
    <group id="0A80">
     <text id="Name">
      <orig>Гуджарати</orig>
+     <transl>Гуджараті</transl>
     </text>
    </group>
    <group id="0B00">
     <text id="Name">
      <orig>Ория</orig>
+     <transl>Орія</transl>
     </text>
    </group>
    <group id="0B80">
     <text id="Name">
      <orig>Тамильский</orig>
+     <transl>Тамільська</transl>
     </text>
    </group>
    <group id="0C00">
     <text id="Name">
      <orig>Телугу</orig>
+     <transl>Телугу</transl>
     </text>
    </group>
    <group id="0C80">
     <text id="Name">
      <orig>Кáннада</orig>
+     <transl>Кáннада</transl>
     </text>
    </group>
    <group id="0D00">
     <text id="Name">
      <orig>Малая́лам</orig>
+     <transl>Малая́лам</transl>
     </text>
    </group>
    <group id="0D80">
     <text id="Name">
      <orig>Сингальский</orig>
+     <transl>Сингальська</transl>
     </text>
    </group>
    <group id="0E00">
     <text id="Name">
      <orig>Тайский</orig>
+     <transl>Тайська</transl>
     </text>
    </group>
    <group id="0E80">
     <text id="Name">
      <orig>Лаосский</orig>
+     <transl>Лаоська</transl>
     </text>
    </group>
    <group id="0F00">
     <text id="Name">
      <orig>Тибетский</orig>
+     <transl>Тибетська</transl>
     </text>
    </group>
    <group id="1000">
     <text id="Name">
      <orig>Бирманский</orig>
+     <transl>Бірманська</transl>
     </text>
    </group>
    <group id="10A0">
     <text id="Name">
      <orig>Грузинский</orig>
+     <transl>Грузинська</transl>
     </text>
    </group>
    <group id="1100">
     <text id="Name">
      <orig>Хангыль — чамо</orig>
+     <transl>Хангиль — чамо</transl>
     </text>
     <text id="Text">
      <orig>
@@ -1043,97 +1335,121 @@
       <p />
       <p>Чхосон{{-}}начальные буквы, чунсон{{-}}средние, чонсон{{-}}конечные. Блок устроен очень просто: между первой и средней буквой, а также между средней и конечной отрицательное расстояние, и две-три буквы, написанные вместе, автоматически складываются в слог.</p>
      </orig>
+     <transl>
+      <p>В хангилі (корейському алфавіті) всього 51 буква ''(чамо)''. Блок набагато більше: одна й та ж буква на початку і кінці складу кодується різними символами, до того ж у блоці багато застарілих чамо.</p>
+      <p />
+      <p>Чхосон{{-}}початкові букви, чунсон{{-}}середні, чонсон{{-}}кінцеві. Блок влаштований дуже просто: між першою і  середньою буквою, а також між середньою і кінцевою від’ємні відстань, і дві-три букви, написані разом, автоматично перетворюються на склад.</p>
+     </transl>
     </text>
    </group>
    <group id="1200">
     <text id="Name">
      <orig>Эфиопская (гéэз)</orig>
+     <transl>Ефіопська (гéез).</transl>
     </text>
    </group>
    <group id="1380">
     <text id="Name">
      <orig>Эфиопская дополнительная</orig>
+     <transl>Ефіопська додаткова</transl>
     </text>
     <text id="Text">
      <orig>Буквы языка себат-бет (Эфиопия, 1,5{{_}}млн на 2018, ''Ethnologue'' статус 5: развивающийся), а также метки тонов.</orig>
+     <transl>Букви мови себат-бет (Ефіопія, 1,5{{_}}млн на 2018, ''Ethnologue'' статус 5: розвивається), а також мітки тонів.</transl>
     </text>
    </group>
    <group id="13A0">
     <text id="Name">
      <orig>Чероки</orig>
+     <transl>Черокі</transl>
     </text>
    </group>
    <group id="1400">
     <text id="Name">
      <orig>Канадская слоговая</orig>
+     <transl>Канадська складова</transl>
     </text>
    </group>
    <group id="1680">
     <text id="Name">
      <orig>Огамическая</orig>
+     <transl>Огамічна</transl>
     </text>
    </group>
    <group id="16A0">
     <text id="Name">
      <orig>Руны</orig>
+     <transl>Руни</transl>
     </text>
    </group>
    <group id="1700">
     <text id="Name">
      <orig>Тагальский (байбайин)</orig>
+     <transl>Тагальська (байбаїн)</transl>
     </text>
    </group>
    <group id="1720">
     <text id="Name">
      <orig>Хануноо</orig>
+     <transl>Хануноо</transl>
     </text>
    </group>
    <group id="1740">
     <text id="Name">
      <orig>Бухид</orig>
+     <transl>Бухід</transl>
     </text>
    </group>
    <group id="1760">
     <text id="Name">
      <orig>Тагбанва</orig>
+     <transl>Тагбанва</transl>
     </text>
    </group>
    <group id="1780">
     <text id="Name">
      <orig>Кхмерский</orig>
+     <transl>Кхмерська</transl>
     </text>
    </group>
    <group id="1800">
     <text id="Name">
      <orig>Монгольский</orig>
+     <transl>Монгольска</transl>
     </text>
    </group>
    <group id="18B0">
     <text id="Name">
      <orig>Канадская слоговая расширенная</orig>
+     <transl>Канадська складова розширена</transl>
     </text>
     <text id="Text">
      <orig>Буквы для кри, оджибве ''(алгонкинского)'', кэрриер, дене ''(атабаскских)''.</orig>
+     <transl>Літери для крі, оджибве ''(алгонкінської)'', керієр, дене ''(атабаскських)''.</transl>
     </text>
    </group>
    <group id="1900">
     <text id="Name">
      <orig>Лимбу</orig>
+     <transl>Лімбу</transl>
     </text>
    </group>
    <group id="1950">
     <text id="Name">
      <orig>Лы (тайлэ)</orig>
+     <transl>Ли (тайле)</transl>
     </text>
    </group>
    <group id="1980">
     <text id="Name">
      <orig>Новое письмо лы</orig>
+     <transl>Нове письмо ли</transl>
     </text>
    </group>
    <group id="19E0">
     <text id="Name">
      <orig>Кхмерские символы</orig>
+     <transl>Кхмерські символи</transl>
     </text>
     <text id="Text">
      <orig>
