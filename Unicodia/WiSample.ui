@@ -111,7 +111,7 @@
   <customwidget>
    <class>WiCustomDraw</class>
    <extends>QWidget</extends>
-   <header>CharPaint.h</header>
+   <header>CharPaint/routines.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
