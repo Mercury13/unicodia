@@ -732,7 +732,7 @@ namespace uc {
         Flags<Bfg> flags {};
 
         /// @warning We do not delete that icon, strange constinit problems, but OK
-        mutable QPixmap* icon = nullptr;
+        mutable QIcon* icon = nullptr;
         mutable const Cp* firstAllocated = nullptr;
         mutable const Cp* lastAllocated = nullptr;
         mutable int nChars = 0;
@@ -1039,3 +1039,5 @@ inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
 
 // LibNode
 inline const uc::Version& uc::LibNode::emojiVersion() const { return versionInfo[static_cast<int>(ecEmojiVersion)]; }
+
+constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = -1;

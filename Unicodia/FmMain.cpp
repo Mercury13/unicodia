@@ -220,11 +220,15 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             GET_BLOCK
             if (!block->icon) {
                 char buf[48];
-                snprintf(buf, std::size(buf), ":/Scripts/%04X.png", static_cast<int>(block->startingCp));
-                auto pix = new QPixmap();
-                    pix->load(buf);
-                    pix->setDevicePixelRatio(1.0);
-                block->icon = pix;
+                int cp1 = block->startingCp;
+                // Get extension: SVG for first blocks, PNG for the rest
+                const char* extension = (cp1 <= STARTING_CP_OF_MAX_SVG_BLOCK)
+                        ? "svg" : "png";
+                snprintf(buf, std::size(buf), ":/Scripts/%04X.%s",
+                         cp1, extension);
+                auto ico = new QIcon();
+                    ico->addFile(buf);
+                block->icon = ico;
             }
             return *(block->icon);
         }
