@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<locale native="Українська" international="Ukrainian" trigger-stamp="2022120" eng-terms="1">
+	<trigger-langs>
+		<lang iso="uk" /><!-- Ukrainian -->
+	</trigger-langs>
+	<alpha-sort>
+		<alp>АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>абвгґдеєжзиіїйклмнопрстуфхцчшщьюяabcdefghijklmnopqrstuvwxyz</alp>
+		<alp>á__________________________________________________________</alp>
+	</alpha-sort>
+	<wiki-templates>
+		<!-- {{№}}5  →  №, narrow NBSP -->
+		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
+		<!-- 300{{bc}}  →  non-break BC -->
+		<tmpl name="bc">&#xA0;до&#xA0;н.е.</tmpl>
+		<!-- first{{-}}second  →  typographic dash -->
+		<tmpl name="-"><![CDATA[<span style='font-size:4pt'>&#xA0;</span>—<span style='font-size:4pt'> </span>]]></tmpl>
+		<!-- first{{,-}}second  →  typographic comma-dash -->
+		<tmpl name=",-"><![CDATA[,—<span style='font-size:4pt'> </span>]]></tmpl>
+	</wiki-templates>
+	<icons sort-az="sort_AYa" />
+	<num-format dec-point="," />
+</locale>
