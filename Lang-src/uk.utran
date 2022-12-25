@@ -7790,30 +7790,39 @@
    </au-cmt>
    <text id="NonChar">
     <orig>Выброшенная позиция</orig>
+    <transl>Викинута позиція</transl>
    </text>
    <text id="Private">
     <orig>Символ для личного пользования</orig>
+    <transl>Символ для особистого користування</transl>
    </text>
    <text id="Surrogate">
     <orig>Код из суррогатной пары</orig>
+    <transl>Код з сурогатної пари</transl>
    </text>
    <text id="Unassigned">
     <orig>Нераспределённый код</orig>
+    <transl>Нерозподілений код</transl>
    </text>
    <text id="Empty">
     <orig>Свободное место</orig>
+    <transl>Вільне місце</transl>
    </text>
    <text id="NotFound">
     <orig>Не найдено</orig>
+    <transl>Не знайдено</transl>
    </text>
    <text id="BadCode">
     <orig>Код символа не распознан</orig>
+    <transl>Код символа не розпізнаний</transl>
    </text>
    <text id="BigCode">
     <orig>Код символа слишком велик</orig>
+    <transl>Код символа занадто великий</transl>
    </text>
    <text id="NoSuch">
     <orig>Такого символа нет</orig>
+    <transl>Такого символа немає</transl>
    </text>
   </group>
   <group id="Expand">
@@ -7821,17 +7830,21 @@
    <group id="0">
     <text id="Label">
      <orig>ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков).</orig>
+     <transl>ККЯ згорнуті (окрім складових абеток і маленьких блоків)</transl>
     </text>
     <text id="Button">
      <orig>Развернуть</orig>
+     <transl>Розгорнути</transl>
     </text>
    </group>
    <group id="1">
     <text id="Label">
      <orig>ККЯ развёрнуты.</orig>
+     <transl>ККЯ розгорнуті</transl>
     </text>
     <text id="Button">
      <orig>Свернуть</orig>
+     <transl>Згорнути</transl>
     </text>
    </group>
   </group>
@@ -7839,37 +7852,48 @@
    <au-cmt>About tab</au-cmt>
    <text id="TofuStats">
     <orig>Статистика тофу</orig>
+    <transl>Статистика тофу</transl>
    </text>
    <text id="Version">
     <orig>Версия &lt;b&gt;{1}&lt;/b&gt; (Юникод {2})</orig>
+    <transl>Версія &lt;b&gt;{1}&lt;/b&gt; (Юнікод {2})</transl>
    </text>
    <text id="MyName">
     <orig>Михаил Меркурьев</orig>
     <au-cmt>Михайло Меркур’єв, Mikhail Merkuryev</au-cmt>
+    <transl>Михайло Меркур’єв</transl>
    </text>
    <text id="HomePage">
     <orig>Домашняя страница</orig>
+    <transl>Домашня сторінка</transl>
    </text>
    <text id="NoUnicode">
     <orig>Программа не имеет отношения к Консорциуму Юникода</orig>
+    <transl>Програма не має відношення до Консорціуму Юнікоду</transl>
    </text>
    <text id="FontDevs">
     <orig>Разработчики шрифтов, по алфавиту</orig>
+    <transl>Розробники шрифтів, за алфавітом</transl>
    </text>
    <text id="NonComm">
     <orig>(CC&amp;nbsp;BY-NC-SA, договаривайтесь с ними о коммерческом распространении!)</orig>
+    <transl>(CC&amp;nbsp;BY-NC-SA, домовляйтесь з ним про комерційне розповсюдження!)</transl>
    </text>
    <text id="License">
     <orig>Распространяется под лицензией &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</orig>
+    <transl>Розповсюджується під ліцензією &lt;a href='https://www.gnu.org/licenses/gpl-3.0.ru.html'&gt;GPL 3.0&lt;/a&gt;</transl>
    </text>
    <text id="And">
     <orig>и</orig>
+    <transl>і</transl>
    </text>
    <text id="Etc">
     <orig>и другие</orig>
+    <transl>та інші</transl>
    </text>
    <text id="NonComm2">
     <orig>(CC&amp;nbsp;BY-NC-ND, автор Юникодии получил разрешение, договаривайтесь о коммерческом распространении!)</orig>
+    <transl>(CC&amp;nbsp;BY-NC-ND, автор Юнікодії одержав дозвіл, домовляйтесь про комерційне розповсюдження!)</transl>
    </text>
   </group>
   <group id="Main">
@@ -7880,61 +7904,76 @@
     <text id=":windowTitle">
      <orig>Юникодия — энциклопедия символов</orig>
      <im-cmt>is a main window</im-cmt>
+     <transl>Юнікодія — енциклопедія символів</transl>
     </text>
     <text id="tabBlocks:at">
      <orig>Блоки</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Блоки</transl>
     </text>
     <text id="edSearch:placeholderText">
      <orig>Поиск</orig>
      <im-cmt>is a single-line editor, promoted to SearchEdit</im-cmt>
+     <transl>Пошук</transl>
     </text>
     <text id="btCopy">
      <orig>Копировать</orig>
      <im-cmt>is a button</im-cmt>
+     <transl>Копіювати</transl>
     </text>
     <text id="btCloseSearch">
      <orig>Закрыть</orig>
      <im-cmt>is a button</im-cmt>
+     <transl>Закрити</transl>
     </text>
     <text id="tabLibrary:at">
      <orig>Подборки</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Підбірки</transl>
     </text>
     <text id="btLibCopy">
      <orig>Копировать</orig>
      <im-cmt>is a button</im-cmt>
+     <transl>Копіювати</transl>
     </text>
     <text id="tabTerms:at">
      <orig>Термины</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Терміни</transl>
     </text>
     <text id="tabAbout:at">
      <orig>О программе</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
+     <transl>Про програму</transl>
     </text>
     <text id="lbAboutTitle">
      <orig>Юникодия</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>Юнікодія</transl>
     </text>
     <text id="lbAboutSubtitle">
      <orig>Энциклопедия символов Юникода</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>Енциклопедія символів Юнікоду</transl>
     </text>
     <group id="actions">
      <text id="acSortByAlpha">
       <orig>По алфавиту: А → Я</orig>
+      <transl>За алфавітом: A → Я</transl>
      </text>
      <text id="acSortByCode">
       <orig>По коду: 00 → FF</orig>
+      <transl>За кодом: 00 → FF</transl>
      </text>
      <text id="acSortByContinent">
       <orig>По континенту: международные → Америка</orig>
+      <transl>За континентом: міжнародні → Америка</transl>
      </text>
     </group>
    </group>
    <text id="Sort">
     <orig>Порядок блоков</orig>
+    <transl>Порядок блоків</transl>
    </text>
   </group>
   <group id="Sample">
@@ -7945,6 +7984,7 @@
     <text id="lbSampleTitle">
      <orig>Образец</orig>
      <im-cmt>is a static text</im-cmt>
+     <transl>Зразок</transl>
     </text>
    </group>
   </group>
