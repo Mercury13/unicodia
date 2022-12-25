@@ -4,7 +4,7 @@
 <svg
    width="16"
    height="16"
-   viewBox="0 0 4.2333332 4.2333332"
+   viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
@@ -18,18 +18,18 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#7fffff"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="true"
      width="16mm"
      units="px"
      inkscape:zoom="33.322407"
-     inkscape:cx="7.3824199"
+     inkscape:cx="7.4274346"
      inkscape:cy="7.0523117"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -44,7 +44,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#7fffff">
+     inkscape:deskcolor="#ffffff">
     <inkscape:grid
        type="xygrid"
        id="grid828"
@@ -67,16 +67,21 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-size:4.71462px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;fill-opacity:1;stroke-width:0.264582"
-       x="2.125258"
-       y="3.4068937"
-       id="text977"><tspan
-         sodipodi:role="line"
-         id="tspan975"
-         style="fill:#204a87;fill-opacity:1;stroke-width:0.264582"
-         x="2.125258"
-         y="3.4068937">Ԥ</tspan></text>
+    <rect
+       style="font-size:19.9754px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stop-color:#000000"
+       id="rect691"
+       width="16"
+       height="16"
+       x="0"
+       y="0" />
+    <g
+       aria-label="Ԥ"
+       id="text977"
+       style="font-size:17.819px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.999994"
+       transform="translate(0.2633349)">
+      <path
+         d="m 11.610784,12.162994 h 1.670531 v 3.837002 h -0.89617 q -0.08701,-0.904871 -0.339327,-1.714035 -0.243619,-0.809163 -0.556844,-1.113687 -0.295823,-0.278422 -0.852667,-0.295823 H 8.965776 v -0.426334 q 0.4785376,-0.12181 0.6699527,-0.269721 0.191415,-0.147912 0.2610205,-0.452436 0.078306,-0.304524 0.078306,-1.02668 V 1.8004802 H 5.363693 V 10.70128 q 0,0.582945 0.034803,0.852667 0.043503,0.269721 0.1305103,0.426333 0.095708,0.156612 0.2697212,0.261021 0.1827143,0.104408 0.5829458,0.208816 v 0.426334 H 2.7186851 V 12.450117 Q 3.2581275,12.310906 3.4408419,12.145593 3.6235562,11.971579 3.6757603,11.658355 3.7366651,11.34513 3.7366651,10.70128 V 3.1751882 q 0,-0.6003472 -0.043503,-0.8700684 Q 3.6496583,2.0266979 3.5452501,1.8787863 3.4495426,1.722174 3.2842296,1.6351672 3.1189166,1.5394597 2.7186851,1.4263508 V 1.0000173 h 9.9013779 v 0.4263335 q -0.487238,0.1218095 -0.678653,0.2784219 -0.191415,0.1479116 -0.261021,0.4524355 -0.0696,0.3045239 -0.0696,1.01798 z"
+         id="path10889" />
+    </g>
   </g>
 </svg>

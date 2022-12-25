@@ -18,19 +18,19 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#7fffff"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="94.25"
-     inkscape:cx="10.397878"
-     inkscape:cy="3.4907162"
+     inkscape:zoom="23.5625"
+     inkscape:cx="8.2970822"
+     inkscape:cy="4.795756"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,7 +44,7 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#7fffff">
+     inkscape:deskcolor="#ffffff">
     <inkscape:grid
        type="xygrid"
        id="grid828"
@@ -67,6 +67,13 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
+    <rect
+       style="font-size:19.9754px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:1.17412;stroke-linejoin:bevel;stop-color:#000000"
+       id="rect691"
+       width="4.2333331"
+       height="4.2333331"
+       x="0"
+       y="0" />
     <g
        aria-label="ξ"
        id="text1300"
