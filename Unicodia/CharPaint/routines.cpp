@@ -389,6 +389,8 @@ struct ControlFrame {
 ControlFrame drawControlFrame(
         QPainter* painter, const QRect& rect, const QColor& color)
 {
+    painter->setRenderHint(QPainter::Antialiasing,
+                           painter->device()->devicePixelRatio() != 1.0);
     const auto availW = rect.width() * 5 / 6;
     const auto availH = rect.height() * 7 / 10;
     const auto availSize = std::min(availW, availH);
