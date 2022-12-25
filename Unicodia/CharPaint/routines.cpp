@@ -738,6 +738,9 @@ void drawCharTiles(
     QMargins m;  m += SIDE_GAP;
     QRect r1 = rect.marginsRemoved(m);
     auto sz = std::min(r1.width(), r1.height());
+    // adjust to square
+    r1.setLeft(r1.left() + (r1.width() - sz) / 2);
+    r1.setTop(r1.top() + (r1.height() - sz) / 2);
     sz -= INNER_GAP;
     sz /= SUBDIV;
     auto step = sz + INNER_GAP;
