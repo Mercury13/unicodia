@@ -245,12 +245,6 @@ private:
     const PixSource* const sample;
     static constexpr auto COL0 = 0;
     mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
-
-    QPixmap& pixOf(const uc::LibNode& node) const;
-    static void drawFolderTile(
-            QPainter* painter, const QRect& bounds,
-            const uc::LibNode& node, const QColor& color);
-    static const uc::LibNode* goToText(const uc::LibNode& x);
 };
 
 

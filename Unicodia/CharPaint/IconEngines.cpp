@@ -113,3 +113,23 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     drawChar(painter, rect, lround(120 * scale), si.cp(), clFg,
              TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE);
 }
+
+///// Node /////////////////////////////////////////////////////////////////////
+
+ie::Node::Node(const PixSource& aSource, const uc::LibNode& aNode)
+    : source(aSource), node(aNode) {}
+
+void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    auto clFg = source.winColor();
+    drawCharBorder(painter, rect, clFg);
+    // draw char
+    switch (node.value.length()) {
+    case 0:
+        drawFolderTile(painter, rect, node, clFg);
+        break;
+    default:
+        drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(), scale);
+        break;
+    }
+}

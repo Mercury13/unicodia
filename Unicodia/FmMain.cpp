@@ -670,86 +670,16 @@ int LibModel::columnCount(const QModelIndex &) const
     { return 1; }
 
 
-const uc::LibNode* LibModel::goToText(const uc::LibNode& x)
-{
-    if (x.flags.have(uc::Lfg::NO_TILE))
-        return nullptr;
-    if (!x.value.empty() && EmojiPainter::hasSkinGender(x.value))
-        return nullptr;
-    const uc::LibNode* p = &x;
-    while (true) {
-        if (!p->value.empty())
-            return p;
-        if (p->nChildren == 0)
-            return nullptr;
-        p = &uc::libNodes[p->iFirstChild];
-    }
-}
-
-CharTiles LibModel::getCharTiles(const uc::LibNode& node)
-{
-    CharTiles tiles;
-    if (node.value.empty()) {
-        size_t iTile = 0;
-        for (int iChild = 0; iChild < node.nChildren; ++iChild) {
-            auto textNode = goToText(uc::libNodes[node.iFirstChild + iChild]);
-            if (textNode) {
-                auto& tile = tiles[iTile];
-                tile.text = textNode->value;
-                tile.emojiDraw = textNode->emojiDraw();
-                if (++iTile >= std::size(tiles))
-                    break;
-            }
-        }
-    }
-    return tiles;
-}
-
-void LibModel::drawFolderTile(
-        QPainter* painter, const QRect& bounds,
-        const uc::LibNode& node, const QColor& color)
-{
-    CharTiles tiles = getCharTiles(node);
-    drawCharTiles(painter, bounds, tiles, color);
-}
-
-
-QPixmap& LibModel::pixOf(const uc::LibNode& node) const
-{
-    return cache.getT(&node,
-        [&node, this](QPixmap& pix) {
-            auto size = sample->pixSize();
-            if (pix.size() != QSize{size, size}) {
-                pix = QPixmap{size, size};
-            }
-            pix.fill(Qt::transparent);
-
-            // Create painter
-            QColor clFg = sample->winColor();
-            QPainter painter(&pix);
-            auto bounds = pix.rect();
-
-            // draw char
-            switch (node.value.length()) {
-            case 0:
-                drawFolderTile(&painter, bounds, node, clFg);
-                break;
-            default:
-                drawSearchChars(&painter, bounds, node.value, clFg, node.emojiDraw());
-                break;
-            }
-        });
-}
-
-
 QVariant LibModel::data(const QModelIndex &index, int role) const
 {
     GETNODE(index, return {})
     switch (role) {
     case Qt::DisplayRole:
         return node.viewableTitle(uc::TitleMode::SHORT);
-    case Qt::DecorationRole:
-        return pixOf(node);
+    case Qt::DecorationRole: {
+            QIconEngine* ie = new ie::Node(*sample, node);
+            return QIcon(ie);
+        }
 
     default:
         return {};
@@ -783,8 +713,7 @@ FmMain::FmMain(QWidget *parent)
     initAbout();
 
     // Search
-    auto psz = pixSize();
-    ui->listSearch->setIconSize({psz, psz});
+    ui->listSearch->setIconSize(pixQsize());
 
     // Tofu stats
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
@@ -957,6 +886,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
+    ui->treeLibrary->setIconSize(pixQsize());
 
     // Divider
     ui->splitLibrary->setStretchFactor(0, 0);
@@ -1759,7 +1689,7 @@ void FmMain::dumpTiles()
     auto hRoot = doc.root().append_child("opt");
     // Priority 0
     for (auto& v : uc::libNodes) {
-        auto tiles = LibModel::getCharTiles(v);
+        auto tiles = getCharTiles(v);
         for (auto& tile : tiles) {
             if (tile.isEmoji()) {
                 addPriority(hRoot, tile.text, 0, true);

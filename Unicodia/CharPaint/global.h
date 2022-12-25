@@ -2,6 +2,7 @@
 
 // Qt
 #include <QColor>
+#include <QSize>
 
 // Uc
 #include "UcAutoDefines.h"
@@ -12,6 +13,12 @@ public:
     virtual int pixSize() const = 0;
     virtual QColor winColor() const = 0;
     virtual ~PixSource() = default;
+
+    QSize pixQsize() const
+    {
+        auto sz = pixSize();
+        return { sz, sz };
+    }
 };
 
 struct CharTile {

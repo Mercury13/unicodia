@@ -88,4 +88,16 @@ namespace ie {
         const uc::SynthIcon& si;
     };
 
+    class Node : public Veng
+    {
+    public:
+        Node(const PixSource& aSource, const uc::LibNode& aNode);
+        Node* clone() const override { return new Node(*this); }
+    protected:
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        const PixSource& source;
+        const uc::LibNode& node;
+    };
+
 }   // namespace ie

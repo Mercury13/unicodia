@@ -711,13 +711,13 @@ void drawSearchChar(
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode)
+        const QColor& color, uc::EmojiDraw emojiMode, qreal scale)
 {
     drawCharBorder(painter, rect, color);
     if (auto c1 = EmojiPainter::getCp(text)) {
         // Single-char
         if (auto cp = uc::cpsByCode[c1])
-            drawChar(painter, rect, 100, *cp, color, TableDraw::CUSTOM, emojiMode);
+            drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode);
     } else {
         // Multi-char
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
@@ -760,4 +760,52 @@ void drawCharTiles(
             emp.draw(painter, r2, tile.text, sz);
         }
     }
+}
+
+namespace {
+
+    const uc::LibNode* goToText(const uc::LibNode& x)
+    {
+        if (x.flags.have(uc::Lfg::NO_TILE))
+            return nullptr;
+        if (!x.value.empty() && EmojiPainter::hasSkinGender(x.value))
+            return nullptr;
+        const uc::LibNode* p = &x;
+        while (true) {
+            if (!p->value.empty())
+                return p;
+            if (p->nChildren == 0)
+                return nullptr;
+            p = &uc::libNodes[p->iFirstChild];
+        }
+    }
+
+}   // anon namespace
+
+
+CharTiles getCharTiles(const uc::LibNode& node)
+{
+    CharTiles tiles;
+    if (node.value.empty()) {
+        size_t iTile = 0;
+        for (int iChild = 0; iChild < node.nChildren; ++iChild) {
+            if (auto textNode = goToText(uc::libNodes[node.iFirstChild + iChild])) {
+                auto& tile = tiles[iTile];
+                tile.text = textNode->value;
+                tile.emojiDraw = textNode->emojiDraw();
+                if (++iTile >= std::size(tiles))
+                    break;
+            }
+        }
+    }
+    return tiles;
+}
+
+
+void drawFolderTile(
+        QPainter* painter, const QRect& bounds,
+        const uc::LibNode& node, const QColor& color)
+{
+    CharTiles tiles = getCharTiles(node);
+    drawCharTiles(painter, bounds, tiles, color);
 }

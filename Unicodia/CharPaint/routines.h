@@ -75,11 +75,15 @@ void drawSearchChar(
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode);
+        const QColor& color, uc::EmojiDraw emojiMode, qreal scale);
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
         const CharTiles& tiles, const QColor& color);
+CharTiles getCharTiles(const uc::LibNode& node);
+void drawFolderTile(
+        QPainter* painter, const QRect& bounds,
+        const uc::LibNode& node, const QColor& color);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
