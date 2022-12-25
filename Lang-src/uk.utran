@@ -7858,30 +7858,39 @@
   <group id="TermCat">
    <text id="Encoding">
     <orig>Кодирование</orig>
+    <transl>Кодування</transl>
    </text>
    <text id="Serialization">
     <orig>Сериализация</orig>
+    <transl>Серіалізація</transl>
    </text>
    <text id="Scripts">
     <orig>Классификация письменностей</orig>
+    <transl>Класифікація писемностей</transl>
    </text>
    <text id="Chars">
     <orig>Классификация символов</orig>
+    <transl>Класифікація символів</transl>
    </text>
    <text id="Algos">
     <orig>Алгоритмы Юникода</orig>
+    <transl>Алгоритми Юнікоду</transl>
    </text>
    <text id="General">
     <orig>Общие принципы Юникода</orig>
+    <transl>Загальні принципи Юнікоду</transl>
    </text>
    <text id="Styles">
     <orig>Стили письма</orig>
+    <transl>Стилі письма</transl>
    </text>
    <text id="Input">
     <orig>Ввод</orig>
+    <transl>Введення</transl>
    </text>
    <text id="Misc">
     <orig>Прочие</orig>
+    <transl>Інші</transl>
    </text>
   </group>
   <group id="Search">
