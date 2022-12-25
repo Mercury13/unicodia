@@ -1040,4 +1040,5 @@ inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
 // LibNode
 inline const uc::Version& uc::LibNode::emojiVersion() const { return versionInfo[static_cast<int>(ecEmojiVersion)]; }
 
-constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x0500;
+/// @todo [hidpi] Delete this when done!
+constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x0590;

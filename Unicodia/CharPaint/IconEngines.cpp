@@ -61,7 +61,7 @@ void ie::Cp::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// Nonchar //////////////////////////////////////////////////////////////////
 
-void ie::Nonchar::paint1(QPainter *painter, const QRect &rect, qreal scale)
+void ie::Nonchar::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     auto clFg = source.winColor();
     drawCharBorder(painter, rect, clFg);
