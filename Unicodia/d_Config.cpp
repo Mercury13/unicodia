@@ -106,7 +106,7 @@ void config::init(QRect& winRect, BlockOrder& blockOrder)
     switch (progsets::dirMode) {
     case progsets::DirMode::INSTALLED: {
             std::filesystem::path localDir {
-                QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation).toStdWString() };
+                QStandardPaths::writableLocation(QStandardPaths::AppDataLocation).toStdWString() };
             path::config = localDir / APP_NAME;
         } break;
     case progsets::DirMode::PORTABLE:
