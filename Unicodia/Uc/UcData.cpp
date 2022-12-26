@@ -1208,7 +1208,7 @@ constinit const uc::Block uc::blocks[] {
             "Armenian", { EcScript::Armn, 0 }, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
     { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA },
-            "Hebrew", { EcScript::Hebr, 0 }, EcScript::Hebr },
+            "Hebrew", MyName::INST, EcScript::Hebr },
     // Arabic OK
     { 0x0600, 0x06FF, { 0x636, EcContinent::ASIA },
             "Arabic", { EcScript::Arab, 0 }, EcScript::Arab },
