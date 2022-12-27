@@ -1251,7 +1251,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0900, 0x097F, { 0x915, EcContinent::ASIA },
             "Devanagari", { EcScript::Deva, 0 }, EcScript::Deva },
     // Bengali OK
-    { 0x0980, 0x09FF, { 0x98B, EcContinent::ASIA },
+    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA },
             "Bengali", { EcScript::Beng, 0 }, EcScript::Beng },
     // Gurmukhi OK
     { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA },
