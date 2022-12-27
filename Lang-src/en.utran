@@ -4698,8 +4698,8 @@
      <transl>Bengali</transl>
     </text>
     <text id="Lang">
-     <orig>бенгальский, ассамский, санскрит ''(Бангладеш, Индия)''</orig>
-     <transl>Bengali, Assamese, Sanskrit ''(Bangladesh, India)''</transl>
+     <orig>бенгальский ''(300{{_}}млн на 2011)'', ассамский ''(15{{_}}млн на 2011)'', санскрит ''(Бангладеш, Индия)''</orig>
+     <transl>Bengali ''(300M as of 2011)'', Assamese ''(15M as of 2011)'', Sanskrit ''(Bangladesh, India)''</transl>
     </text>
     <text id="Note">
      <orig>XI век (отделилась от гауди), XV век (в современном виде)</orig>
@@ -5121,8 +5121,8 @@
      <transl>Devanagari</transl>
     </text>
     <text id="Lang">
-     <orig>хинди, санскрит и другие языки Индии</orig>
-     <transl>Hindi, Sanskrit and other languages of India</transl>
+     <orig>хинди ''(&gt;300{{_}}млн как родной)'', санскрит и другие языки Индии</orig>
+     <transl>Hindi ''(&gt;300M as native)'', Sanskrit and other languages of India</transl>
     </text>
     <text id="Text">
      <orig>
@@ -5424,14 +5424,14 @@
      <orig>
       <p>Глаголица была составлена около 863 византийцами Кириллом и Мефодием для решения политической задачи{{-}}выгнать западных священников из Моравии и наладить автономную церковь, чтобы не{{_}}оказаться под франками. Миссия провалилась, Кирилл вскоре умер, западная церковь сама выгнала византийцев, и беглецы из Моравии крестили Болгарию и изобрели [[ps:Cyrl|кириллицу]].</p>
       <p />
-      <p>В XX{{_}}веке окончательно установили, что глаголица старее кириллицы: дорогой пергамент старались повторно использовать, и сохранились палимпсесты (пергаменты, где стёрли одно и написали другое), где глаголицу заменили кириллицей. Есть и лингвистические доказательства. Тем не менее, глаголица сосуществовала с кириллицей до XIX{{_}}века и брала от неё формы букв, что и вызвало вопрос.</p>
+      <p>В XX{{_}}веке окончательно установили, что глаголица старее кириллицы: дорогой пергамент старались повторно использовать, и сохранились палимпсесты (пергаменты, где стёрли одно и написали другое), где глаголицу заменили кириллицей. Есть и лингвистические доказательства. Тем не менее, глаголица сосуществовала с кириллицей до XIX{{_}}века и брала от неё формы букв, что и вызвало вопрос. Возможно даже, название «кириллица» изначально относилось к глаголице.</p>
       <p />
       <p>На Руси глаголица встречалась редко, больше применялась в Болгарии и Хорватии.</p>
      </orig>
      <transl>
       <p>Glagolitic was invented about 863 by Byzantians Cyril and Methodius for a political mission{{-}}drive away Western priests from Moravia and establish an autonomous church to prevent from being conquered by Franks. Mission failed, Cyril died soon, Byzantians were driven away by Western church, and fugitives from Moravia christianized Bulgaria and invented [[ps:Cyrl|Cyrillic]].</p>
       <p />
-      <p>In 20th century it was finally proved that Glagolitic is older than Cyrillic: expensive parchment was often reused, and palimpsests (parchments with one text erased and other written) survived where Glagolitic was rewritten with Cyrillic. Linguistic arguments also exist. Nevertheless, Glagolitic co-existed with Cyrillic until 19th century and took letter forms from it, and that caused controversy.</p>
+      <p>In 20th century it was finally proved that Glagolitic is older than Cyrillic: expensive parchment was often reused, and palimpsests (parchments with one text erased and other written) survived where Glagolitic was rewritten with Cyrillic. Linguistic arguments also exist. Nevertheless, Glagolitic co-existed with Cyrillic until 19th century and took letter forms from it, and that caused controversy. Possibly, name ''Cyrillic'' initially meant Glagolitic script.</p>
       <p />
       <p>Glagolitic seldom appeared in Rus, more often it was used in Bulgaria and Croatia.</p>
      </transl>
@@ -6245,8 +6245,8 @@
      <transl>Latin</transl>
     </text>
     <text id="Lang">
-     <orig>большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; вьетнамский, карельский, курдский, эсперанто</orig>
-     <transl>most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</transl>
+     <orig>испанский ''(500{{_}}млн на 2021 как родной)'', английский ''(&gt;350{{_}}млн на 2011 как родной)''; большинство языков западного и тюркского мира (включая Восточную Европу, Прибалтику, Молдавию), Чёрной Африки, Океании; вьетнамский, карельский, курдский, эсперанто</orig>
+     <transl>Spanish ''(500M as of 2021 as native)'', English ''(&gt;350M as of 2011 as native)''; most languages of Western and Turkic world (including East Europe, Baltic, Moldova), Sub-Saharan Africa, Oceania; Vietnamese, Karelian, Kurdish, Esperanto</transl>
     </text>
     <text id="Text">
      <orig>
