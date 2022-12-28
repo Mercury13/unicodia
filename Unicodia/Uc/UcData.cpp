@@ -1266,7 +1266,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA },
             "Tamil", { EcScript::Taml, 0 }, EcScript::Taml },
     // Telugu OK
-    { 0x0C00, 0x0C7F, { 0xC1C, EcContinent::ASIA },
+    { 0x0C00, 0x0C7F, { 0xC35, EcContinent::ASIA },
             "Telugu", { EcScript::Telu, 0 }, EcScript::Telu },
     // Kannada OK
     { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA },
