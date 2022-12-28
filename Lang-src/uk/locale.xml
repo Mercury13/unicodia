@@ -6,7 +6,7 @@
 	<alpha-sort>
 		<alp>АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>абвгґдеєжзиіїйклмнопрстуфхцчшщьюяabcdefghijklmnopqrstuvwxyz</alp>
-		<alp>á__________í_______________________________________________</alp>
+		<alp>á_____é____í_______________________________________________</alp>
 	</alpha-sort>
 	<wiki-templates>
 		<!-- {{№}}5  →  №, narrow NBSP -->

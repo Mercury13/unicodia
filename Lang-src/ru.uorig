@@ -989,7 +989,7 @@
    </group>
    <group id="0C00">
     <text id="Name">
-     <orig>Телугу</orig>
+     <orig>Тéлугу</orig>
     </text>
    </group>
    <group id="0C80">
@@ -5723,10 +5723,10 @@
    </group>
    <group id="Telu">
     <text id="Name">
-     <orig>Телугу</orig>
+     <orig>Тéлугу</orig>
     </text>
     <text id="Lang">
-     <orig>телугу ''(Юго-Восточная Индия, 83 млн на 2011)''</orig>
+     <orig>тéлугу ''(Юго-Восточная Индия, 83 млн на 2011)''</orig>
     </text>
     <text id="Note">
      <orig>отделилась от [[ps:Knda|каннады]]</orig>

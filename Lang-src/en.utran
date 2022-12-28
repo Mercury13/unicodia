@@ -1271,7 +1271,7 @@
    </group>
    <group id="0C00">
     <text id="Name">
-     <orig>Телугу</orig>
+     <orig>Тéлугу</orig>
      <transl>Telugu</transl>
     </text>
    </group>
@@ -8075,11 +8075,11 @@
    </group>
    <group id="Telu">
     <text id="Name">
-     <orig>Телугу</orig>
+     <orig>Тéлугу</orig>
      <transl>Telugu</transl>
     </text>
     <text id="Lang">
-     <orig>телугу ''(Юго-Восточная Индия, 83 млн на 2011)''</orig>
+     <orig>тéлугу ''(Юго-Восточная Индия, 83 млн на 2011)''</orig>
      <transl>Telugu ''(South-East India, 83M as of 2011)''</transl>
     </text>
     <text id="Note">
