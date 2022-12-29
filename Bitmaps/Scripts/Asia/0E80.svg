@@ -77,10 +77,10 @@
        rx="0.98332036"
        ry="0.93912619" />
     <circle
-       style="fill:none;stroke:#f57900;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
+       style="fill:none;stroke:#f57900;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
        id="path11753"
-       cx="4.4857087"
+       cx="4.6403885"
        cy="6.0325046"
-       r="1.25" />
+       r="1.35" />
   </g>
 </svg>
