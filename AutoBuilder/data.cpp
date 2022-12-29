@@ -1685,6 +1685,7 @@ const std::set<RangeByEnd> noAaRanges {
 };
 
 const std::unordered_set<char32_t> customDrawnControlChars {
+    0x1039,     // Mymr virtual virama
     0x11D45,    // Masaram Gondi virtual virama
     0x11D97,    // Gunjala Gondi virtual virama
     0x13431,    // Egyptian hiero horiz joiner
