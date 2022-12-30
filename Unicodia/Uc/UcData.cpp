@@ -1040,7 +1040,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::TIFINAGH },
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::yrange(1300, 1500), EcFont::TAGALOG },
     // Thaana OK, Monotype/M$ “MV Boli” font
     { "Thaa", QFontDatabase::Thaana,
