@@ -114,7 +114,6 @@ inline bool operator < (const PrefixEntry& x, const PrefixEntry& y) { return x.t
 
 
 extern const std::unordered_map<std::string_view, DicEntry> dictionary;
-extern const std::unordered_map<std::string_view, std::string_view> exceptions;
 extern const std::multiset<PrefixEntry> prefixes;
 extern const std::set<std::string_view> langNames;
 extern const std::unordered_map<char32_t, std::string_view> abbrevs;
@@ -130,5 +129,12 @@ std::string decapitalize(
         std::string_view x,
         char32_t cp = 0,
         DecapDebug debug = DecapDebug::NO);
+std::string decapitalizeEmoji(
+        std::string_view x,
+        DecapDebug debug = DecapDebug::NO);
 bool isAlternate(char32_t x);
 bool isNoAa(char32_t x);
+
+bool hasLatUpper(std::string_view x);
+
+size_t nExceptions();

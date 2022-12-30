@@ -954,3 +954,33 @@ TEST (Decap, Attic)
     auto r = decapitalize("GREEK ACROPHONIC ATTIC ONE QUARTER");
     EXPECT_EQ("Greek acrophonic Attic one quarter", r);
 }
+
+
+///
+///  Is Vulcan uppercase?
+///
+TEST (Decap, Vulcan)
+{
+    auto r = decapitalize("vulcan salute");
+    EXPECT_EQ("Vulcan salute", r);
+}
+
+
+///
+///  Emoji sun: weather
+///
+TEST (Decap, Sun1)
+{
+    auto r = decapitalize("SUN", 0);
+    EXPECT_EQ("sun", r);
+}
+
+
+///
+///  CP sun: star
+///
+TEST (Decap, Sun2)
+{
+    auto r = decapitalize("SUN", 42);
+    EXPECT_EQ("Sun", r);
+}

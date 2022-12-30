@@ -404,7 +404,7 @@ NotoData loadNotoEmoji()
 int main()
 {
     std::cout << "Have " << dictionary.size() << " words in dictionary, "
-              << exceptions.size() << " exceptions." << std::endl;
+              << nExceptions() << " exceptions." << std::endl;
 
     ///// Loader ///////////////////////////////////////////////////////////////
     ///

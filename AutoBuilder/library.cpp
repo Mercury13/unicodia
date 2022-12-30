@@ -7,6 +7,9 @@
 // Libs
 #include "u_Strings.h"
 
+// Project-local
+#include "data.h"
+
 using namespace std::string_view_literals;
 
 
@@ -151,7 +154,11 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 // Add to tree
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
                 auto& newItem = treePath.top()->children.emplace_back();
-                newItem.name = str::toU8sv(name);
+                if (hasLatUpper(name)) { // has uppercase letter → pre-decapped
+                    newItem.name = str::toU8sv(name);
+                } else { // otherwise decapitalize
+                    newItem.name = str::toU8sv(decapitalizeEmoji(name));
+                }
                 newItem.emojiVersion = emVersion;
                 newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
                 if (NO_TILE.contains(newItem.name))

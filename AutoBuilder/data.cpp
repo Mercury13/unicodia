@@ -367,6 +367,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SEBATBEIT",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SLAVONIC",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "TURKISH",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "VULCAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
 
     // Nouns
     { "ANUSVARA",       Dicf::PART_NOUN },
@@ -753,6 +754,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 
     // People’s names
     { "CELSIUS",        Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "CLAUS",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "DAVID",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "EULER",          Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "FAHRENHEIT",     Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -761,6 +763,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "FITZPATRICK",    Dicf::CAP_TITLE },
     { "HERMITIAN",      Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "MARY",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
+    { "MX",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "PERNIN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },   // Helen Pernin, author of shorthand
     { "PETRI",          Dicf::CAP_TITLE },
     { "PLANCK",         Dicf::CAP_TITLE | Dicf::PART_NOUN },
@@ -974,9 +977,19 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 };
 
 
-#define EX(x) { TOUPPER_SV(x), x },
+enum class Exf {
+    CPONLY = 1,
+};
 
-const std::unordered_map<std::string_view, std::string_view> exceptions{
+struct Exception {
+    std::string_view r;
+    Flags<Exf> flags;
+};
+
+#define EX(x) { TOUPPER_SV(x), Exception{ .r = x, .flags {} } },
+#define EX2(x, fgs) { TOUPPER_SV(x), Exception{ .r = x, .flags = fgs } },
+
+const std::unordered_map<std::string_view, Exception> exceptions{
     // EUROPEAN SCRIPTS
         // Cyrl
     EX("Cyrillic capital ligature En Ghe")   // All “ligature” are hand-checked
@@ -1253,10 +1266,10 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("invisible Times")               // ???
     EX("S in triangle")                 // Because of Znamenny, S is tricky
         // Astronomy
-    EX("Earth")                         // Element of earth is small-case
-    EX("Sun")                           // Symbol of sun is small-case
-    EX("Mercury")                       // Metal of mercury is small-case
-    EX("Cancer")                        // Disease is small-case
+    EX("Earth")                         // Planet, not element
+    EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
+    EX("Mercury")                       // Planet, not metal
+    EX("Cancer")                        // Constellation, not disease
         // Emoji
     EX("Earth globe Europe-Africa")     // Special proper name
     EX("Earth globe Americas")          // Special proper name
@@ -2085,13 +2098,18 @@ namespace {
 }   // anon namespace
 
 
+size_t nExceptions() { return exceptions.size(); }
+
+
 std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
 {
     // Tetect exceptions
     std::string upper = toUpper(x);
     auto itEx = exceptions.find(upper);
-    if (itEx != exceptions.end())
-        return std::string(itEx->second);
+    if (itEx != exceptions.end()) {
+        if (cp || !itEx->second.flags.have(Exf::CPONLY) )
+            return std::string(itEx->second.r);
+    }
 
     // Get words
     auto rawWords = str::splitSv(upper, ' ');
@@ -2384,4 +2402,32 @@ bool isNoAa(char32_t x)
     // so x <= it->b
     // upper_bound gives x < it->b
     return (it->a <= x);
+}
+
+
+bool hasLatUpper(std::string_view x)
+{
+    for (auto c : x)
+        if (c >= 'A' && c <= 'Z')
+            return true;
+    return false;
+}
+
+
+std::string decapitalizeEmoji(
+        std::string_view x,
+        DecapDebug debug)
+{
+    auto list = str::splitSv(x, ": ", false);
+    if (list.size() == 1) {
+        return decapitalize(x, 0, debug);
+    }
+    std::string r;
+    for (auto v : list) {
+        if (!r.empty())
+            r += ": ";
+        auto decap = decapitalize(v, 0, debug);
+        r += decap;
+    }
+    return r;
 }
