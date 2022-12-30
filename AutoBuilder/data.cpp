@@ -1226,6 +1226,7 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("combining ligature right half") // Same
     EX("combining ligature left half below")
     EX("combining ligature right half below")
+    EX("combining Almost equal to below") // Tricky
     EX("modifier breve with inverted breve")    // Modifier
     EX("modifier letter Low circumflex accent") // What to do with circumflex?
     EX("modifier letter Short equals sign")     // What to do with equals?
