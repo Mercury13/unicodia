@@ -132,7 +132,7 @@ INCLUDEPATH += \
 
 LIBS += -lz
 
-VERSION = 1.7.8
+VERSION = 1.7.9
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
