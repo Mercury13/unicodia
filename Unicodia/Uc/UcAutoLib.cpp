@@ -238,12 +238,12 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\u270B\U0001F3FD", u8"raised hand: medium skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 232
 { U"\u270B\U0001F3FE", u8"raised hand: medium-dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 233
 { U"\u270B\U0001F3FF", u8"raised hand: dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 234
-{ U"\U0001F596", u8"vulcan salute", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 235
-{ U"\U0001F596\U0001F3FB", u8"vulcan salute: light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 236
-{ U"\U0001F596\U0001F3FC", u8"vulcan salute: medium-light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 237
-{ U"\U0001F596\U0001F3FD", u8"vulcan salute: medium skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 238
-{ U"\U0001F596\U0001F3FE", u8"vulcan salute: medium-dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 239
-{ U"\U0001F596\U0001F3FF", u8"vulcan salute: dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 240
+{ U"\U0001F596", u8"Vulcan salute", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 235
+{ U"\U0001F596\U0001F3FB", u8"Vulcan salute: light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 236
+{ U"\U0001F596\U0001F3FC", u8"Vulcan salute: medium-light skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 237
+{ U"\U0001F596\U0001F3FD", u8"Vulcan salute: medium skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 238
+{ U"\U0001F596\U0001F3FE", u8"Vulcan salute: medium-dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 239
+{ U"\U0001F596\U0001F3FF", u8"Vulcan salute: dark skin tone", 195, 0, -1, Lfg(1), EcVersion::E1_0 },   // 240
 { U"\U0001FAF1", u8"rightwards hand", 195, 0, -1, Lfg(1), EcVersion::E14_0 },   // 241
 { U"\U0001FAF1\U0001F3FB", u8"rightwards hand: light skin tone", 195, 0, -1, Lfg(1), EcVersion::E14_0 },   // 242
 { U"\U0001FAF1\U0001F3FC", u8"rightwards hand: medium-light skin tone", 195, 0, -1, Lfg(1), EcVersion::E14_0 },   // 243
@@ -328,12 +328,12 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F918\U0001F3FD", u8"sign of the horns: medium skin tone", 196, 0, -1, Lfg(1), EcVersion::E1_0 },   // 322
 { U"\U0001F918\U0001F3FE", u8"sign of the horns: medium-dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E1_0 },   // 323
 { U"\U0001F918\U0001F3FF", u8"sign of the horns: dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E1_0 },   // 324
-{ U"\U0001F919", u8"call me hand", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 325
-{ U"\U0001F919\U0001F3FB", u8"call me hand: light skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 326
-{ U"\U0001F919\U0001F3FC", u8"call me hand: medium-light skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 327
-{ U"\U0001F919\U0001F3FD", u8"call me hand: medium skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 328
-{ U"\U0001F919\U0001F3FE", u8"call me hand: medium-dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 329
-{ U"\U0001F919\U0001F3FF", u8"call me hand: dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 330
+{ U"\U0001F919", u8"Call me hand", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 325
+{ U"\U0001F919\U0001F3FB", u8"Call me hand: light skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 326
+{ U"\U0001F919\U0001F3FC", u8"Call me hand: medium-light skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 327
+{ U"\U0001F919\U0001F3FD", u8"Call me hand: medium skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 328
+{ U"\U0001F919\U0001F3FE", u8"Call me hand: medium-dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 329
+{ U"\U0001F919\U0001F3FF", u8"Call me hand: dark skin tone", 196, 0, -1, Lfg(1), EcVersion::E3_0 },   // 330
 { U"\U0001F448", u8"backhand index pointing left", 197, 0, -1, Lfg(1), EcVersion::E0_6 },   // 331
 { U"\U0001F448\U0001F3FB", u8"backhand index pointing left: light skin tone", 197, 0, -1, Lfg(1), EcVersion::E1_0 },   // 332
 { U"\U0001F448\U0001F3FC", u8"backhand index pointing left: medium-light skin tone", 197, 0, -1, Lfg(1), EcVersion::E1_0 },   // 333
@@ -1398,12 +1398,12 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F936\U0001F3FD", u8"Mrs. Claus: medium skin tone", 205, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1392
 { U"\U0001F936\U0001F3FE", u8"Mrs. Claus: medium-dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1393
 { U"\U0001F936\U0001F3FF", u8"Mrs. Claus: dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1394
-{ U"\U0001F9D1\u200D\U0001F384", u8"mx claus", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1395
-{ U"\U0001F9D1\U0001F3FB\u200D\U0001F384", u8"mx claus: light skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1396
-{ U"\U0001F9D1\U0001F3FC\u200D\U0001F384", u8"mx claus: medium-light skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1397
-{ U"\U0001F9D1\U0001F3FD\u200D\U0001F384", u8"mx claus: medium skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1398
-{ U"\U0001F9D1\U0001F3FE\u200D\U0001F384", u8"mx claus: medium-dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1399
-{ U"\U0001F9D1\U0001F3FF\u200D\U0001F384", u8"mx claus: dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1400
+{ U"\U0001F9D1\u200D\U0001F384", u8"Mx Claus", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1395
+{ U"\U0001F9D1\U0001F3FB\u200D\U0001F384", u8"Mx Claus: light skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1396
+{ U"\U0001F9D1\U0001F3FC\u200D\U0001F384", u8"Mx Claus: medium-light skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1397
+{ U"\U0001F9D1\U0001F3FD\u200D\U0001F384", u8"Mx Claus: medium skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1398
+{ U"\U0001F9D1\U0001F3FE\u200D\U0001F384", u8"Mx Claus: medium-dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1399
+{ U"\U0001F9D1\U0001F3FF\u200D\U0001F384", u8"Mx Claus: dark skin tone", 205, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1400
 { U"\U0001F9B8", u8"superhero", 205, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1401
 { U"\U0001F9B8\U0001F3FB", u8"superhero: light skin tone", 205, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1402
 { U"\U0001F9B8\U0001F3FC", u8"superhero: medium-light skin tone", 205, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1403
@@ -2591,7 +2591,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F969", u8"cut of meat", 2532, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2585
 { U"\U0001F953", u8"bacon", 2532, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2586
 { U"\U0001F354", u8"hamburger", 2532, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2587
-{ U"\U0001F35F", u8"french fries", 2532, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2588
+{ U"\U0001F35F", u8"French fries", 2532, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2588
 { U"\U0001F355", u8"pizza", 2532, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2589
 { U"\U0001F32D", u8"hot dog", 2532, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2590
 { U"\U0001F96A", u8"sandwich", 2532, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2591
@@ -2695,7 +2695,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F3D4\uFE0F", u8"snow-capped mountain", 2672, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2689
 { U"\u26F0\uFE0F", u8"mountain", 2672, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2690
 { U"\U0001F30B", u8"volcano", 2672, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2691
-{ U"\U0001F5FB", u8"mount fuji", 2672, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2692
+{ U"\U0001F5FB", u8"mount Fuji", 2672, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2692
 { U"\U0001F3D5\uFE0F", u8"camping", 2672, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2693
 { U"\U0001F3D6\uFE0F", u8"beach with umbrella", 2672, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2694
 { U"\U0001F3DC\uFE0F", u8"desert", 2672, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2695
@@ -2730,10 +2730,10 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F5FD", u8"Statue of Liberty", 2673, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2724
 { U"\u26EA", u8"church", 2674, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2725
 { U"\U0001F54C", u8"mosque", 2674, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2726
-{ U"\U0001F6D5", u8"hindu temple", 2674, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2727
+{ U"\U0001F6D5", u8"Hindu temple", 2674, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2727
 { U"\U0001F54D", u8"synagogue", 2674, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2728
-{ U"\u26E9\uFE0F", u8"shinto shrine", 2674, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2729
-{ U"\U0001F54B", u8"kaaba", 2674, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2730
+{ U"\u26E9\uFE0F", u8"Shinto shrine", 2674, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2729
+{ U"\U0001F54B", u8"Kaaba", 2674, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2730
 { U"\u26F2", u8"fountain", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2731
 { U"\u26FA", u8"tent", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2732
 { U"\U0001F301", u8"foggy", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2733
@@ -2747,7 +2747,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\u2668\uFE0F", u8"hot springs", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2741
 { U"\U0001F3A0", u8"carousel horse", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2742
 { U"\U0001F6DD", u8"playground slide", 2675, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2743
-{ U"\U0001F3A1", u8"ferris wheel", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2744
+{ U"\U0001F3A1", u8"Ferris wheel", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2744
 { U"\U0001F3A2", u8"roller coaster", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2745
 { U"\U0001F488", u8"barber pole", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2746
 { U"\U0001F3AA", u8"circus tent", 2675, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2747
@@ -2876,7 +2876,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\u2B50", u8"star", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2870
 { U"\U0001F31F", u8"glowing star", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2871
 { U"\U0001F320", u8"shooting star", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2872
-{ U"\U0001F30C", u8"milky way", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2873
+{ U"\U0001F30C", u8"Milky Way", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2873
 { U"\u2601\uFE0F", u8"cloud", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2874
 { U"\u26C5", u8"sun behind cloud", 2681, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2875
 { U"\u26C8\uFE0F", u8"cloud with lightning and rain", 2681, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2876
@@ -2940,7 +2940,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F94E", u8"softball", 2902, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2934
 { U"\U0001F3C0", u8"basketball", 2902, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2935
 { U"\U0001F3D0", u8"volleyball", 2902, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2936
-{ U"\U0001F3C8", u8"american football", 2902, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2937
+{ U"\U0001F3C8", u8"American football", 2902, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2937
 { U"\U0001F3C9", u8"rugby football", 2902, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2938
 { U"\U0001F3BE", u8"tennis", 2902, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2939
 { U"\U0001F94F", u8"flying disc", 2902, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2940
@@ -3017,7 +3017,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F97C", u8"lab coat", 2990, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3011
 { U"\U0001F9BA", u8"safety vest", 2990, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3012
 { U"\U0001F454", u8"necktie", 2990, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3013
-{ U"\U0001F455", u8"t-shirt", 2990, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3014
+{ U"\U0001F455", u8"T-shirt", 2990, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3014
 { U"\U0001F456", u8"jeans", 2990, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3015
 { U"\U0001F9E3", u8"scarf", 2990, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3016
 { U"\U0001F9E4", u8"gloves", 2990, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3017
@@ -3105,7 +3105,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F4BD", u8"computer disk", 2995, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3099
 { U"\U0001F4BE", u8"floppy disk", 2995, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3100
 { U"\U0001F4BF", u8"optical disk", 2995, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3101
-{ U"\U0001F4C0", u8"dvd", 2995, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3102
+{ U"\U0001F4C0", u8"DVD", 2995, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3102
 { U"\U0001F9EE", u8"abacus", 2995, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3103
 { U"\U0001F3A5", u8"movie camera", 2996, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3104
 { U"\U0001F39E\uFE0F", u8"film frames", 2996, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3105
@@ -3226,8 +3226,8 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001FA9C", u8"ladder", 3003, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3220
 { U"\u2697\uFE0F", u8"alembic", 3004, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3221
 { U"\U0001F9EA", u8"test tube", 3004, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3222
-{ U"\U0001F9EB", u8"petri dish", 3004, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3223
-{ U"\U0001F9EC", u8"dna", 3004, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3224
+{ U"\U0001F9EB", u8"Petri dish", 3004, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3223
+{ U"\U0001F9EC", u8"DNA", 3004, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3224
 { U"\U0001F52C", u8"microscope", 3004, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3225
 { U"\U0001F52D", u8"telescope", 3004, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3226
 { U"\U0001F4E1", u8"satellite antenna", 3004, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3227
@@ -3237,7 +3237,7 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001FA79", u8"adhesive bandage", 3005, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3231
 { U"\U0001FA7C", u8"crutch", 3005, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3232
 { U"\U0001FA7A", u8"stethoscope", 3005, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3233
-{ U"\U0001FA7B", u8"x-ray", 3005, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3234
+{ U"\U0001FA7B", u8"X-ray", 3005, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3234
 { U"\U0001F6AA", u8"door", 3006, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3235
 { U"\U0001F6D7", u8"elevator", 3006, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3236
 { U"\U0001FA9E", u8"mirror", 3006, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3237
@@ -3335,12 +3335,12 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\U0001F51D", u8"TOP arrow", 3271, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3329
 { U"\U0001F6D0", u8"place of worship", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3330
 { U"\u269B\uFE0F", u8"atom symbol", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3331
-{ U"\U0001F549\uFE0F", u8"om", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3332
+{ U"\U0001F549\uFE0F", u8"Om", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3332
 { U"\u2721\uFE0F", u8"star of David", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3333
 { U"\u2638\uFE0F", u8"wheel of dharma", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3334
 { U"\u262F\uFE0F", u8"yin yang", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3335
-{ U"\u271D\uFE0F", u8"latin cross", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3336
-{ U"\u2626\uFE0F", u8"orthodox cross", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3337
+{ U"\u271D\uFE0F", u8"Latin cross", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3336
+{ U"\u2626\uFE0F", u8"Orthodox cross", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3337
 { U"\u262A\uFE0F", u8"star and crescent", 3272, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3338
 { U"\u262E\uFE0F", u8"peace symbol", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3339
 { U"\U0001F54E", u8"menorah", 3272, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3340
@@ -3436,11 +3436,11 @@ constinit const uc::LibNode uc::libNodes[4579] {
 { U"\u0038\uFE0F\u20E3", u8"keycap: 8", 3280, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3430
 { U"\u0039\uFE0F\u20E3", u8"keycap: 9", 3280, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3431
 { U"\U0001F51F", u8"keycap: 10", 3280, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3432
-{ U"\U0001F520", u8"input latin uppercase", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3433
-{ U"\U0001F521", u8"input latin lowercase", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3434
+{ U"\U0001F520", u8"input Latin uppercase", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3433
+{ U"\U0001F521", u8"input Latin lowercase", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3434
 { U"\U0001F522", u8"input numbers", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3435
 { U"\U0001F523", u8"input symbols", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3436
-{ U"\U0001F524", u8"input latin letters", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
+{ U"\U0001F524", u8"input Latin letters", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
 { U"\U0001F170\uFE0F", u8"A button (blood type)", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3438
 { U"\U0001F18E", u8"AB button (blood type)", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3439
 { U"\U0001F171\uFE0F", u8"B button (blood type)", 3281, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3440
