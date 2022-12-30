@@ -4,9 +4,10 @@
 		<lang iso="uk" /><!-- Ukrainian -->
 	</trigger-langs>
 	<alpha-sort>
-		<alp>АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
-		<alp>абвгґдеєжзиіїйклмнопрстуфхцчшщьюяabcdefghijklmnopqrstuvwxyz</alp>
-		<alp>á_____é____í_______________________________________________</alp>
+		<alp>АБВГДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>абвгдеєжзиіїйклмнопрстуфхцчшщьюяabcdefghijklmnopqrstuvwxyz</alp>
+		<alp>á__ґ_é____í_______________________________________________</alp>
+		<alp>___Ґ______________________________________________________</alp>
 	</alpha-sort>
 	<wiki-templates>
 		<!-- {{№}}5  →  №, narrow NBSP -->
