@@ -37,7 +37,7 @@
      inkscape:snap-page="true"
      inkscape:snap-nodes="true"
      inkscape:zoom="1.8116735"
-     inkscape:cx="54.093632"
+     inkscape:cx="54.921596"
      inkscape:cy="107.63529"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -105,7 +105,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#f5deb3;fill-opacity:1;stroke:#8f5902;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       style="fill:#f5deb3;fill-opacity:1;stroke:#784421;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
        id="rect1003"
        width="86"
        height="86"
@@ -154,7 +154,7 @@
        rx="33"
        ry="33" />
     <circle
-       style="fill:#ffffff;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
+       style="fill:#fff6d5;stroke:#000000;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stop-color:#000000"
        id="path1749"
        cx="186.5"
        cy="41.5"
@@ -212,12 +212,12 @@
     <g
        aria-label="ኮ"
        id="text3006"
-       style="font-size:17.9691px;line-height:1.25;font-family:'Noto Serif Ethiopic';-inkscape-font-specification:'Noto Serif Ethiopic';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#8f5902;stroke-width:0.254333"
+       style="font-size:17.9691px;line-height:1.25;font-family:'Noto Serif Ethiopic';-inkscape-font-specification:'Noto Serif Ethiopic';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#784421;stroke-width:0.254333"
        transform="matrix(3.9318485,0,0,3.9318485,-4.2503109,-10.476313)">
       <path
          d="m 20.799448,66.825539 q -0.251567,-0.269537 -0.359382,-0.736734 -0.107814,-0.467196 -0.107814,-1.024238 v -4.132894 q 0,-0.952362 0.19766,-1.743002 0.19766,-0.790641 0.575011,-1.383621 -0.467196,0.07188 -0.808609,0.07188 -0.539073,0 -0.754703,-0.287505 -0.215629,-0.305475 -0.215629,-0.862517 v -1.904725 q 0,-0.970331 -0.79064,-0.970331 v -0.754703 l 2.030508,-0.143752 q 0.19766,0.179691 0.323444,0.485165 0.125784,0.305475 0.125784,0.934394 v 1.473466 q 0,0.449227 0.179691,0.718764 0.179691,0.251567 0.700795,0.287505 1.239868,-1.114084 3.180531,-1.114084 1.239867,0 1.958632,0.449228 0.718764,0.449227 1.024238,1.18596 0.323444,0.736734 0.323444,1.59925 0,0.251568 -0.01797,0.664857 -0.01797,0.39532 -0.01797,0.61095 0,0.79064 0.251567,1.060177 0.251568,0.251567 0.80861,0.251567 v 0.754702 l -2.389891,0.161722 q -0.467196,-0.485166 -0.467196,-1.760972 0,-0.19766 0,-0.682826 0.01797,-0.485165 0.01797,-0.808609 0,-1.185961 -0.377351,-1.904725 -0.377351,-0.718764 -1.383621,-0.718764 -1.257837,0 -1.976601,1.096115 -0.700795,1.096115 -0.700795,3.683666 v 3.216469 q 0,0.79064 0.251567,1.060177 0.251568,0.251567 0.80861,0.251567 v 0.754703 z"
          id="path6934"
-         style="stroke-width:0.254333" />
+         style="stroke-width:0.254333;fill:#784421" />
     </g>
     <g
        aria-label="ᨊᨗ"
