@@ -196,7 +196,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "REJANG",         Dicf::TRIG_SCRIPT },
     { "ROMAN",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "RONGORONGO",     Dicf::TRIG_SCRIPT },
-    { "RUNIC",          Dicf::TRIG_SCRIPT },
+    { "RUNIC",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::CAP_SMALL },
     { "SAMARITAN",      Dicf::TRIG_SCRIPT },
     { "SANSKRIT",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "SARATI",         Dicf::TRIG_SCRIPT },
@@ -1019,29 +1019,29 @@ const std::unordered_map<std::string_view, std::string_view> exceptions{
     EX("Greek one half sign alternate form")    // sign, alternate form
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Runr
-    EX("Runic letter Dotted-N") // All are really tricky!!
-    EX("Runic letter Dotted-L")
-    EX("Runic letter Long-branch-Yr")
-    EX("Runic letter Short-twig-Yr")
-    EX("Runic letter Icelandic-Yr")
-    EX("Runic letter Dotted-P")
-    EX("Runic letter Open-P")
-    EX("Runic letter Sigel Long-branch-Sol S")
-    EX("Runic letter Short-twig-Sol S")
-    EX("Runic letter Long-branch-Ar Ae")
-    EX("Runic letter Short-twig-Ar A")
-    EX("Runic letter Long-branch-Hagall H")
-    EX("Runic letter Short-twig-Hagall H")
-    EX("Runic letter Short-twig-Bjarkan B")
-    EX("Runic letter Long-branch-Oss O")
-    EX("Runic letter Short-twig-Oss O")
-    EX("Runic letter Short-twig-Naud N")
-    EX("Runic letter Long-branch-Madr M")
-    EX("Runic letter Short-twig-Madr M")
-    EX("Runic letter Short-twig-Tyr T")
-    EX("Runic Arlaug symbol")
-    EX("Runic Tvimadur symbol")  // Same
-    EX("Runic Belgthor symbol")
+    EX("runic letter Dotted-N") // All are really tricky!!
+    EX("runic letter Dotted-L")
+    EX("runic letter Long-branch-Yr")
+    EX("runic letter Short-twig-Yr")
+    EX("runic letter Icelandic-Yr")
+    EX("runic letter Dotted-P")
+    EX("runic letter Open-P")
+    EX("runic letter Sigel Long-branch-Sol S")
+    EX("runic letter Short-twig-Sol S")
+    EX("runic letter Long-branch-Ar Ae")
+    EX("runic letter Short-twig-Ar A")
+    EX("runic letter Long-branch-Hagall H")
+    EX("runic letter Short-twig-Hagall H")
+    EX("runic letter Short-twig-Bjarkan B")
+    EX("runic letter Long-branch-Oss O")
+    EX("runic letter Short-twig-Oss O")
+    EX("runic letter Short-twig-Naud N")
+    EX("runic letter Long-branch-Madr M")
+    EX("runic letter Short-twig-Madr M")
+    EX("runic letter Short-twig-Tyr T")
+    EX("runic Arlaug symbol")
+    EX("runic Tvimadur symbol")  // Same
+    EX("runic Belgthor symbol")
         // Byzantine notes
     EX("Byzantine musical symbol Fthora diatoniki Pa")  // Pa is not just note
 
