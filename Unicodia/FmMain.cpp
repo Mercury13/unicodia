@@ -595,7 +595,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
         }
 
     case Qt::DecorationRole: {
-            QIconEngine* ie;
+            QIconEngine* ie = nullptr;
             switch (line.type) {
             case uc::CpType::EXISTING:
                 ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp);
