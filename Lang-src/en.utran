@@ -2100,7 +2100,6 @@
     </text>
     <text id="Text">
      <orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (устава православной службы XV{{_}}века) и многое другое.</orig>
-     <known-orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) и многое другое.</known-orig>
      <transl>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</transl>
     </text>
    </group>
@@ -6061,13 +6060,13 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Как и другие языки Юго-Восточной Азии, произошёл из паллавы (ранней [[ps:Gran|грантхи]]). Стал основой для [[ps:Thai|тайского]] и [[ps:Laoo|лаосского]].</p>
+      <p>Как и другие письменности Юго-Восточной Азии, произошла из паллавы (ранней [[ps:Gran|грантхи]]). Стала основой для [[ps:Thai|тайской]] и [[ps:Laoo|лаосской]].</p>
       <p />
       <p>Между словами не{{_}}ставятся пробелы. Гласная по умолчанию для одних согласных {{t|а}}, для других {{t|о}}. Огласовки на этих согласных также звучат по-разному. Те согласные, что на {{t|о}}, заодно служат конечными. Существует две [[pt:virama|вирамы]]: одна видимая устаревшая, вторая виртуальная для сборки стечений согласных: под первой согласной записывается уменьшенная вторая. Например, самоназвание {{sm|ខ្មែរ}} записывается как</p>
       <p>: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</p>
      </orig>
      <transl>
-      <p>As other languages of South-East Asia, comes from Pallava (early [[ps:Gran|Grantha]]). Became a base for [[ps:Thai|Thai]] and [[ps:Laoo|Lao]].</p>
+      <p>As other scripts of South-East Asia, comes from Pallava (early [[ps:Gran|Grantha]]). Became a base for [[ps:Thai|Thai]] and [[ps:Laoo|Lao]].</p>
       <p />
       <p>There are no spaces between words. There are two sets of consonants: one has inherent vowel {{t|a}}, the other has {{t|o}}. Vowel marks on these consonants also sound differently. Consonants ending with {{t|o}} are also used as final. Two [[pt:virama|viramas]] exist: one visible obsolete, the other is virtual for assembling consonant conjuncts: small second consonant is written under the first one. For example, autonym {{sm|ខ្មែរ}} is made of</p>
       <p>: {{sm|ខ}} {{sm|◌្}} {{sm|ម}} {{sm|◌ែ}} {{sm|រ}}</p>
