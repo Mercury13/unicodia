@@ -4740,12 +4740,15 @@
    <group id="Hano">
     <text id="Name">
      <orig>Хануноо</orig>
+     <transl>Хануноо</transl>
     </text>
     <text id="Lang">
      <orig>филиппинские горные народы</orig>
+     <transl>філіпінські гірські народи</transl>
     </text>
     <text id="Text">
      <orig>Хануноо восходит к [[ps:Brah|брахми]] и похож на [[ps:Tglg|тагальский]].</orig>
+     <transl>Хануноо походить з [[ps:Brah|брахмі]] та схожий на [[ps:Tglg|тагальську]].</transl>
     </text>
    </group>
    <group id="Hatr">
