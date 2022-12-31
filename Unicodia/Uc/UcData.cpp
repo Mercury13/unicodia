@@ -188,7 +188,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
-    { "NotoSansKhmerUI-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                // Khmer — initial Noto loses umlauts
+    { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },                // Korean: managed to auto-rename OTF
