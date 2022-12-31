@@ -2004,7 +2004,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Стрелки разного назначения, геометрические фигуры, символы из шрифтов ''Wingdigs'' и ''Webdings'', японские телевизионные символы, астрологические символы, звёзды оценок.</p>
+      <p>Стрелки разного назначения, геометрические фигуры, символы из шрифтов ''Wingdings'' и ''Webdings'', японские телевизионные символы, астрологические символы, звёзды оценок.</p>
       <p />
       <p>''Hellschreiber pause symbol'' использовался в немецких телеграфных аппаратах.</p>
      </orig>
@@ -2099,8 +2099,9 @@
      <transl>Supplemental punctuation</transl>
     </text>
     <text id="Text">
-     <orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) и многое другое.</orig>
-     <transl>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (Russian monks’ statute of 15th century) and more.</transl>
+     <orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (устава православной службы XV{{_}}века) и многое другое.</orig>
+     <known-orig>Специализированные знаки препинания: текстология Нового Завета, символы с древнегреческих папирусов, старинная пунктуация, немецкие словарные пометки, символы из Типикона (русского монашеского устава XV{{_}}века) и многое другое.</known-orig>
+     <transl>Special punctuation marks: textology of New Testament, characters from ancient Greek papyri, German dictinary marks, characters from Typicon (statute of Orthodox worship of 15th century) and more.</transl>
     </text>
    </group>
    <group id="2E80">
