@@ -9,7 +9,7 @@
    id="svg5"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    sodipodi:docname="1C80.svg"
-   inkscape:export-filename="..\1C80.png"
+   inkscape:export-filename="..\0370.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -18,19 +18,19 @@
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
      id="namedview7"
-     pagecolor="#7fffff"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
      inkscape:document-units="px"
      showgrid="true"
      width="16mm"
      units="px"
      inkscape:zoom="47.125"
-     inkscape:cx="3.7771883"
-     inkscape:cy="9.1246685"
+     inkscape:cx="12.721485"
+     inkscape:cy="8.8063661"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,22 +44,12 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#7fffff">
+     inkscape:deskcolor="#ffffff">
     <inkscape:grid
        type="xygrid"
        id="grid828"
        originx="0"
        originy="0" />
-    <sodipodi:guide
-       position="2.1166666,4.4979165"
-       orientation="1,0"
-       id="guide835"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="3.7041665,2.1166666"
-       orientation="0,-1"
-       id="guide837"
-       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
@@ -67,16 +57,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-size:4.8106px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;fill-opacity:1;stroke-width:0.264583"
-       x="2.1166656"
-       y="3.9206438"
-       id="text1300"><tspan
-         sodipodi:role="line"
-         id="tspan1298"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';fill:#204a87;fill-opacity:1;stroke-width:0.264583"
-         x="2.1166656"
-         y="3.9206438">ᲈ</tspan></text>
+    <rect
+       style="font-size:19.9754px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:1.17412;stroke-linejoin:bevel;stop-color:#000000"
+       id="rect691"
+       width="4.2333331"
+       height="4.2333331"
+       x="0"
+       y="0" />
+    <path
+       d="m 2.1094501,3.9687498 q -0.5387877,0 -0.8274241,-0.3030684 -0.28863627,-0.303068 -0.28863627,-0.7985604 0,-0.4089016 0.19482937,-0.6855115 Q 1.3830485,1.9049997 1.7630865,1.8135982 L 1.147329,0.72159079 Q 1.0703593,0.58208324 1.0054168,0.52435594 0.94047435,0.46662864 0.78653427,0.46662864 V 0.26458328 H 1.9843753 v 0.20204536 h -0.062537 q -0.2982577,0 -0.2982577,0.22128779 0,0.0689502 0.06735,0.19242434 L 2.1816095,1.7751134 2.6819124,0.90920442 q 0.07697,-0.12095043 0.07697,-0.21647728 0,-0.2260985 -0.3175002,-0.2260985 H 2.4077082 V 0.26458328 h 1.0390907 v 0.20204536 h -0.028863 q -0.1250768,0 -0.1996395,0.0769697 -0.074565,0.0769697 -0.2044506,0.29825753 L 2.4461945,1.8087877 q 0.3752271,0.08659 0.5844886,0.3656061 0.2092613,0.2790151 0.2092613,0.6927272 0,0.4954924 -0.286231,0.7985604 -0.2862329,0.3030684 -0.8442633,0.3030684 z m 0.00961,-0.2501516 q 0.6542423,0 0.6542423,-0.8514772 0,-0.8370455 -0.6590528,-0.8370455 -0.6542428,0 -0.6542428,0.8370455 0,0.8514772 0.6590533,0.8514772 z"
+       id="path1208"
+       style="fill:#204a87;stroke-width:0.264584" />
   </g>
 </svg>
