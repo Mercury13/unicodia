@@ -7820,15 +7820,15 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Язык сундов (38{{_}}млн на 2007), распространённый на западе Явы. Брахмийская абугида с гласной по умолчанию {{t|а}}. Для других гласных используются огласовки, для голой согласной{{-}}знак «[[pt:virama|вирама]]» ''(pamaaeh)'': {{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Начальные гласные{{-}}отдельные буквы.</p>
+      <p>Язык сундов (42{{_}}млн на 2016), распространённый на западе Явы. Письменность происходит из [[ps:Kawi|кави]], гласная по умолчанию {{t|а}}. Для других гласных используются огласовки, для голой согласной{{-}}знак «[[pt:virama|вирама]]» ''(pamaaeh)'': {{sm|ᮞ}}=са, {{sm|ᮞᮥ}}=су, {{sm|ᮞ᮪}}=с. Начальные гласные{{-}}отдельные буквы.</p>
       <p />
-      <p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[ps:Java|яванскую]] и пегон (местный вариант [[ps:Arab|арабского]]); с XX века{{-}}[[ps:Latn|латиницу]]. В 1997 году власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>
+      <p>Письменность использовалась до XVIII{{_}}века, после этого стали использовать [[ps:Java|яванскую]] и пегон (местный вариант [[ps:Arab|арабского]]); с XX века{{-}}[[ps:Latn|латиницу]]. В 1997 власти Индонезии решили дать сундам собственную письменность, сделав её из старосунданского.</p>
       <p />
       <p>Вторая виртуальная вирама служит исключительно для набора исторических [[pt:ligature|лигатур]]. В имеющемся шрифте лигатур нет, но автор «Юникодии» нарисовал одну в [[pt:private|личной]] позиции:</p>
       <p>: ка {{sm|ᮊ}} + вирама {{sm|◌᮫}} + та {{sm|ᮒ}} = кта {{sm|&amp;#xE000;}}</p>
      </orig>
      <transl>
-      <p>Language of Sunda (38M as of 2007), widespread in Northern Java. Brahmic abugida with inherent vowel {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
+      <p>Language of Sunda (42M as of 2016), widespread in Western Java. Script of [[ps:Kawi|Kawi]] origin, inherent vowel is {{t|a}}. Vowel marks are added for other vowels, and [[pt:virama|virama]] sign ''(pamaaeh)'' for “naked” consonants: {{sm|ᮞ}}=sa, {{sm|ᮞᮥ}}=su, {{sm|ᮞ᮪}}=s. Initial vowels are separate letters.</p>
       <p />
       <p>The script was used until 18th century, after that [[ps:Java|Javanese]] and Pegon (local variant of [[ps:Arab|Arabic]]) were used, in 20th century [[ps:Latn|Latin]] was introduced. In 1997 authorities of Indonesia decide to give Sunda their own script, making it from Old Sundanese.</p>
       <p />
