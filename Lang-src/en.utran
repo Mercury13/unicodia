@@ -1973,7 +1973,7 @@
      <transl>Supplemental arrows B</transl>
     </text>
     <text id="Text">
-     <orig>Пересекающиеся стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы.</orig>
+     <orig>Скрещённые стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы.</orig>
      <transl>Intersecting arrows from theory of knots, harpoons, curved arrows and other symbols.</transl>
     </text>
    </group>
@@ -7055,6 +7055,7 @@
       <p />
       <p>Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: {{sm|ᱚ}}{{_}}огонь, {{sm|ᱛ}}{{_}}земля, {{sm|ᱜ}}{{_}}отрыжка.</p>
      </orig>
+     <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal]</au-cmt>
      <transl>
       <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
       <p />
