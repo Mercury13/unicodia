@@ -1472,6 +1472,7 @@ constinit const uc::Block uc::blocks[] {
             "Box Drawing",
             MyName::INST, EcScript::NONE, EcFont::DEJAVU },
     // Block elements OK
+    /// @todo [hidpi] test Ifg::CUSTOM_ENGINE on real hidpi, simulation does smth with resolution
     { 0x2580, 0x259F, { L'░', EcContinent::NONE },
             "Block Elements",
             MyName::INST, EcScript::NONE, EcFont::DEJAVU },
