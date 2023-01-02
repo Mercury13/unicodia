@@ -133,3 +133,16 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
         break;
     }
 }
+
+///// BlockElem ////////////////////////////////////////////////////////////////
+
+ie::BlockElem::BlockElem()
+{
+    texture.load(":Misc/blockelem.png");
+}
+
+void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    QBrush brush(texture);
+    painter->fillRect(rect, brush);
+}

@@ -1470,7 +1470,7 @@ constinit const uc::Block uc::blocks[] {
     // Box drawing OK
     { 0x2500, 0x257F, { L'╢', EcContinent::NONE },
             "Box Drawing",
-            MyName::INST, EcScript::NONE, EcFont::DEJAVU },    // Block elements OK
+            MyName::INST, EcScript::NONE, EcFont::DEJAVU },
     // Block elements OK
     { 0x2580, 0x259F, { L'░', EcContinent::NONE },
             "Block Elements",

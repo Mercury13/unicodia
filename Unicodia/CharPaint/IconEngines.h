@@ -100,4 +100,14 @@ namespace ie {
         const uc::LibNode& node;
     };
 
+    class BlockElem : public Veng
+    {
+    public:
+        BlockElem();
+        BlockElem* clone() const override { return new BlockElem(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        QPixmap texture;
+    };
+
 }   // namespace ie

@@ -670,6 +670,7 @@ namespace uc {
     enum class Ifg {
         CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
         MISSING           = 1<<1,   ///< [+] Red icon, missing block
+        CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
         APPROX_2_CHARS    = 0,      ///< [+] 2 chars on icon:

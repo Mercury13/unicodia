@@ -205,6 +205,21 @@ int BlocksModel::rowCount(const QModelIndex&) const { return uc::N_BLOCKS; }
 
 int BlocksModel::columnCount(const QModelIndex&) const { return 1; }
 
+namespace {
+
+    QIconEngine* getCustomEngine(char32_t startingCp)
+    {
+        switch (startingCp) {
+        case 0x2580:    // Block elements
+            return new ie::BlockElem;
+        default:
+            throw std::logic_error("No custom engine right now");
+        }
+    }
+
+
+}
+
 QVariant BlocksModel::data(const QModelIndex& index, int role) const
 {
     #define GET_BLOCK \
@@ -223,16 +238,20 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole: {
             GET_BLOCK
             if (!block->icon) {
-                char buf[48];
-                int cp1 = block->startingCp;
-                // Get extension: SVG for first blocks, PNG for the rest
-                const char* extension = (cp1 <= STARTING_CP_OF_MAX_SVG_BLOCK)
-                        ? "svg" : "png";
-                snprintf(buf, std::size(buf), ":/Scripts/%04X.%s",
-                         cp1, extension);
-                auto ico = new QIcon();
-                    ico->addFile(buf);
-                block->icon = ico;
+                if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
+                    block->icon = new QIcon(getCustomEngine(block->startingCp));
+                } else {
+                    char buf[48];
+                    int cp1 = block->startingCp;
+                    // Get extension: SVG for first blocks, PNG for the rest
+                    const char* extension = (cp1 <= STARTING_CP_OF_MAX_SVG_BLOCK)
+                            ? "svg" : "png";
+                    snprintf(buf, std::size(buf), ":/Scripts/%04X.%s",
+                             cp1, extension);
+                    auto ico = new QIcon();
+                        ico->addFile(buf);
+                    block->icon = ico;
+                }
             }
             return *(block->icon);
         }
