@@ -53,7 +53,7 @@
 #include "LocList.h"
 
 /// @todo [hidpi] Delete this when done!
-constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x2700;
+constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x27C0;
 
 
 template class LruCache<char32_t, QPixmap>;
