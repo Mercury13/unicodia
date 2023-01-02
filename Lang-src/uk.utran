@@ -8745,7 +8745,7 @@
    <group id="0">
     <text id="Label">
      <orig>ККЯ свёрнуты (кроме слоговых азбук и маленьких блоков).</orig>
-     <transl>ККЯ згорнуті (окрім складових абеток і маленьких блоків)</transl>
+     <transl>ККЯ згорнуті (окрім складових абеток і маленьких блоків).</transl>
     </text>
     <text id="Button">
      <orig>Развернуть</orig>
@@ -8755,7 +8755,7 @@
    <group id="1">
     <text id="Label">
      <orig>ККЯ развёрнуты.</orig>
-     <transl>ККЯ розгорнуті</transl>
+     <transl>ККЯ розгорнуті.</transl>
     </text>
     <text id="Button">
      <orig>Свернуть</orig>
