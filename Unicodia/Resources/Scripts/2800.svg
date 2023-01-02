@@ -1,0 +1,1 @@
+<svg height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="m0 0h16v16h-16z" fill="#fff"/><circle id="a" cx="5.5" cy="3.5" r="1.5"/><use transform="translate(5)" xlink:href="#a"/><use transform="translate(5 5)" xlink:href="#a"/><use transform="translate(0 10)" xlink:href="#a"/></svg>
