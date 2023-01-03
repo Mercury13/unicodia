@@ -405,6 +405,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HAMZA",          Dicf::PART_NOUN },  // Arabic, not really letter
     { "HASANTA",        Dicf::PART_NOUN },
     { "HOOK",           Dicf::PART_NOUN },
+    { "HYPHEN",         Dicf::PART_NOUN },
     { "LINE",           Dicf::PART_NOUN },
     { "MACRON",         Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
@@ -1188,6 +1189,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Miao tone below")
         // Hmng
     EX("Pahawh Hmong sign Xyeem rho")   // Conflict with Greek Rho
+
+    // AMERICAN SCRIPTS
+    EX("Canadian syllabics hyphen")     // What to do?
 
     // AFRICAN SCRIPTS
         // Adlm
