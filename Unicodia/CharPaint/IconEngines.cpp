@@ -41,9 +41,8 @@ void ie::Veng::paint(
         QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state)
 {
     auto scale = painter->device()->devicePixelRatio();
-    QPoint p1 {  lround(rect.left()  * scale), lround(rect.top()    * scale) };
-    QPoint p2 {  lround(rect.right() * scale), lround(rect.bottom() * scale) };
-    auto pix = scaledPixmap({ p2.x() - p1.x(), p2.y() - p1.y() }, mode, state, scale);
+    QSize sz { lround(rect.width() * scale), lround(rect.height() * scale) };
+    auto pix = scaledPixmap(sz, mode, state, scale);
     painter->drawPixmap(rect.topLeft(), pix);
 }
 
