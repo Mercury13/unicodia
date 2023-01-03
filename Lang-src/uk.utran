@@ -267,7 +267,7 @@
     <text id="NoHent">
      <orig>без &lt;a {1} &gt;хэнтайганы&lt;/a&gt;</orig>
      <au-cmt>Test: Hiragana</au-cmt>
-     <transl>без &lt;a {1} &gt;хентайгани&lt;/a&gt;</transl>
+     <transl>без &lt;a {1} &gt;хентайґани&lt;/a&gt;</transl>
     </text>
     <text id="Comp">
      <orig>Состав строки</orig>
