@@ -3290,123 +3290,155 @@
       <p />
       <p>Иконка соответствует написанию сверху вниз{{-}}а [[pt:character|глифы]] в шрифтах повёрнуты на 90° против часовой стрелки.</p>
      </orig>
+     <transl>
+      <p>Символ «бірга», що проник у монгольську з [[ps:Tibt|тибетської]] та грає роль буквиці. Оскільки монгольська пишеться зверху вниз, а тибетська{{-}}зліва направо, тибетські ''yig-mgo'' використовувати не можна.</p>
+      <p />
+      <p>Юнікод розщедрився не{{_}}на варіанти написання, а на справжні кодові позиції{{-}}правда, не{{_}}в [[pt:bmp|базовій площині]], а в додатковій.</p>
+      <p />
+      <p>Іконка відповідає написанню зверху донизу{{-}}а [[pt:character|гліфи]] у шрифтах повернуті на 90° проти годинникової стрілки.</p>
+     </transl>
     </text>
    </group>
    <group id="11680">
     <text id="Name">
      <orig>Такри</orig>
+     <transl>Такрі</transl>
     </text>
    </group>
    <group id="11700">
     <text id="Name">
      <orig>Ахом</orig>
+     <transl>Ахом</transl>
     </text>
    </group>
    <group id="11800">
     <text id="Name">
      <orig>Догра</orig>
+     <transl>Доґра</transl>
     </text>
    </group>
    <group id="118A0">
     <text id="Name">
      <orig>Варанг-кшити</orig>
+     <transl>Варанг-кшиті</transl>
     </text>
    </group>
    <group id="11900">
     <text id="Name">
      <orig>Дивес-акуру (древнемальдивский)</orig>
+     <transl>Дивес-акуру (давньомальдивська)</transl>
     </text>
    </group>
    <group id="119A0">
     <text id="Name">
      <orig>Нандинагари</orig>
+     <transl>Нандінаґарі</transl>
     </text>
    </group>
    <group id="11A00">
     <text id="Name">
      <orig>Монгольское горизонтально-квадратное (Дзанабáдзара)</orig>
+     <transl>Монгольське горизонтально-квадратне (Дзанабáдзара)</transl>
     </text>
    </group>
    <group id="11A50">
     <text id="Name">
      <orig>Соёмбо</orig>
+     <transl>Сойомбо</transl>
     </text>
    </group>
    <group id="11AB0">
     <text id="Name">
      <orig>Канадская слоговая расширенная A</orig>
+     <transl>Канадська складова розширена A</transl>
     </text>
     <text id="Text">
      <orig>Двенадцать слогов инуитского (эскимосского) народа наттилик (буквально ''«люди тюленя»''), и четыре исторических слога индейцев кри и оджибве.</orig>
+     <transl>Дванадцять складів інуїтського (ескімоського) народу наттілік (буквально ''«люди тюленя»''), і чотити історичних склади індіанців крі та оджибве.</transl>
     </text>
    </group>
    <group id="11AC0">
     <text id="Name">
      <orig>Письмо По Чин Хо</orig>
+     <transl>Письмо По Чін Хо</transl>
     </text>
    </group>
    <group id="11B00">
     <text id="Name">
      <orig>Деванáгари расширенный A</orig>
+     <transl>Деванáґарі розширений A</transl>
     </text>
     <text id="Text">
      <orig>Джайнские знаки препинания и [[pt:ligature|лигатуры]] для фраз вроде «да будет оно благословлено».</orig>
+     <transl>Джайнські розділові знаки і [[pt:ligature|лігатури]] для фраз на кшталт «да буде воно благословенно».</transl>
     </text>
    </group>
    <group id="11C00">
     <text id="Name">
      <orig>Бхаикшуки (стрелоглавое письмо)</orig>
+     <transl>Бхаїкшукі (стрілоголове письмо)</transl>
     </text>
    </group>
    <group id="11C70">
     <text id="Name">
      <orig>Марчхен</orig>
+     <transl>Марчхен</transl>
     </text>
    </group>
    <group id="11D00">
     <text id="Name">
      <orig>Гонди — письмо Масарама</orig>
+     <transl>Гонді — письмо Масарама</transl>
     </text>
    </group>
    <group id="11D60">
     <text id="Name">
      <orig>Гонди — гунджала</orig>
+     <transl>Гонді — гунджала</transl>
     </text>
    </group>
    <group id="11EE0">
     <text id="Name">
      <orig>Макасарский (птичье письмо)</orig>
+     <transl>Макасарська (пташине письмо)</transl>
     </text>
    </group>
    <group id="11F00">
     <text id="Name">
      <orig>Кави (старояванский)</orig>
+     <transl>Каві (старояванська)</transl>
     </text>
    </group>
    <group id="11FB0">
     <text id="Name">
      <orig>Лису дополнительный</orig>
+     <transl>Лісу додатковий</transl>
     </text>
     <text id="Text">
      <orig>Один символ из языка наси (юго-западный Китай, 300{{_}}тыс., в безопасности).</orig>
+     <transl>Один символ з мови насі (південно-західний Китай, 300{{_}}тис., у безпеці).</transl>
     </text>
    </group>
    <group id="11FC0">
     <text id="Name">
      <orig>Тамильский дополнительный</orig>
+     <transl>Тамільська додаткова</transl>
     </text>
     <text id="Text">
      <orig>Старинные тамильские дроби и другие символы: для валют, сельского хозяйства, бухгалтерии.</orig>
+     <transl>Старовинні тамільські дроби та інші символи: для валют, сільського господарства, бухгалтерії.</transl>
     </text>
    </group>
    <group id="12000">
     <text id="Name">
      <orig>Клинопись</orig>
+     <transl>Клинопис</transl>
     </text>
    </group>
    <group id="12400">
     <text id="Name">
      <orig>Клинописные цифры и знаки препинания</orig>
+     <transl>Клинописні цифри та розділові знаки</transl>
     </text>
     <text id="Text">
      <orig>
