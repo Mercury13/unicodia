@@ -17,21 +17,20 @@ QPixmap ie::Veng::pixmap(
 QPixmap ie::Veng::scaledPixmap(
         const QSize &size, QIcon::Mode, QIcon::State, qreal scale)
 {
-    QSize bigSz { lround(size.width() * scale), lround(size.height() * scale) };
     QPixmap localPix;
     auto* workingPix = cache(scale);
     if (workingPix) {
-        if (workingPix->size() == bigSz)
+        if (workingPix->size() == size)
             return *workingPix;      // we rely on pixmap’s data sharing here
     } else {
-        localPix = QPixmap{ bigSz };
+        localPix = QPixmap{ size };
         workingPix = &localPix;
     }
     workingPix->setDevicePixelRatio(1.0);
     workingPix->fill(Qt::transparent);
     QPainter ptr(workingPix);
     // Paint in 100% (in pixels) here
-    paint1(&ptr, QRect{ QPoint(0, 0), bigSz }, scale);
+    paint1(&ptr, QRect{ QPoint(0, 0), size }, scale);
     workingPix->setDevicePixelRatio(scale);
     // Paint in dipels here (none currently)
     return *workingPix;
@@ -41,8 +40,10 @@ QPixmap ie::Veng::scaledPixmap(
 void ie::Veng::paint(
         QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state)
 {
-    auto pix = scaledPixmap(rect.size(), mode, state,
-                            painter->device()->devicePixelRatio());
+    auto scale = painter->device()->devicePixelRatio();
+    QPoint p1 {  lround(rect.left()  * scale), lround(rect.top()    * scale) };
+    QPoint p2 {  lround(rect.right() * scale), lround(rect.bottom() * scale) };
+    auto pix = scaledPixmap({ p2.x() - p1.x(), p2.y() - p1.y() }, mode, state, scale);
     painter->drawPixmap(rect.topLeft(), pix);
 }
 
