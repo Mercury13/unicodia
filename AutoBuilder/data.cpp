@@ -1525,6 +1525,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "IDEOGRAPHIC"sv, "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },   // ideographic tally mark One
     { { "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },
     { { "EMOJI"sv, "COMPONENT"sv }, PrefixAction::NEXT_CAP },
+    { { "IDEOGRAPHIC"sv, "DESCRIPTION"sv, "CHARACTER"sv }, PrefixAction::NEXT_CAP },
 };
 
 
