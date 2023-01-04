@@ -14,35 +14,40 @@ QPixmap ie::Veng::pixmap(
     return scaledPixmap(size, mode, state, 1.0);
 }
 
-QPixmap ie::Veng::scaledPixmap(
-        const QSize &size, QIcon::Mode, QIcon::State, qreal scale)
+QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, qreal scale)
 {
     QPixmap localPix;
     auto* workingPix = cache(scale);
     if (workingPix) {
-        if (workingPix->size() == size)
+        if (workingPix->size() == bigSize)
             return *workingPix;      // we rely on pixmap’s data sharing here
     } else {
-        localPix = QPixmap{ size };
+        localPix = QPixmap{ bigSize };
         workingPix = &localPix;
     }
     workingPix->setDevicePixelRatio(1.0);
     workingPix->fill(Qt::transparent);
     QPainter ptr(workingPix);
     // Paint in 100% (in pixels) here
-    paint1(&ptr, QRect{ QPoint(0, 0), size }, scale);
+    paint1(&ptr, QRect{ QPoint(0, 0), bigSize }, scale);
     workingPix->setDevicePixelRatio(scale);
     // Paint in dipels here (none currently)
     return *workingPix;
 }
 
+QPixmap ie::Veng::scaledPixmap(
+        const QSize &size, QIcon::Mode, QIcon::State, qreal scale)
+{
+    return myScaledPixmap(size, scale);
+}
+
 
 void ie::Veng::paint(
-        QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state)
+        QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State)
 {
     auto scale = painter->device()->devicePixelRatio();
     QSize sz { lround(rect.width() * scale), lround(rect.height() * scale) };
-    auto pix = scaledPixmap(sz, mode, state, scale);
+    auto pix = myScaledPixmap(sz, scale);
     painter->drawPixmap(rect.topLeft(), pix);
 }
 
@@ -143,6 +148,20 @@ ie::BlockElem::BlockElem()
 
 void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
 {
+    // White BG
+    painter->fillRect(rect, Qt::white);
+
+    // Get width
+    auto width = rect.height() * 3 / 5;
+    if (width % 2 != 0)
+        ++width;
+    width = std::min(width, rect.width());
+    // Get starting X
+    auto dx = (rect.width() - width) / 2;
+    auto x0 = rect.left() + dx;
+    // Get rect
+    QRect newRect { x0, rect.top(), width, rect.height() };
     QBrush brush(texture);
-    painter->fillRect(rect, brush);
+    //brush.setTransform(QTransform::fromTranslate(1, 0));
+    painter->fillRect(newRect, brush);
 }
