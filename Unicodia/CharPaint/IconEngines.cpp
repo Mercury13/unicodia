@@ -21,6 +21,7 @@ QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, qreal scale)
     if (workingPix) {
         if (workingPix->size() == bigSize)
             return *workingPix;      // we rely on pixmap’s data sharing here
+        // otherwise mutate existing pixmap
     } else {
         localPix = QPixmap{ bigSize };
         workingPix = &localPix;
@@ -162,6 +163,5 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
     // Get rect
     QRect newRect { x0, rect.top(), width, rect.height() };
     QBrush brush(texture);
-    //brush.setTransform(QTransform::fromTranslate(1, 0));
     painter->fillRect(newRect, brush);
 }
