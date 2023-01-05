@@ -228,7 +228,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
-    { "NotoSansNushu-Regular.ttf" },                                            // Nushu
+    { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
     { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki
     { "OldHungarian.ttf" },                                                     // Old Hungarian runes
@@ -511,7 +511,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(11), EcFont::BHAIKSUKI },
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
-        EcScriptType::ALPHASYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::CJK,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::COMPETING, EcWritingDir::LTR, EcContinent::CJK,
         Dating::year(1913), EcFont::CJK },
     // Brahmi OK, because of sheer importance installed Google Noto
     { "Brah", QFontDatabase::Any,
