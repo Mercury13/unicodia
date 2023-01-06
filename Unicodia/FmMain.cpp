@@ -213,7 +213,7 @@ namespace {
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x4DC0:    // Yijing
-            return new ie::CoarseImage(BG_CJK, ":Misc/yijing.png");
+            return new ie::CoarseImage(BG_CJK, { 1,1 }, ":Misc/yijing.png");
         default:
             throw std::logic_error("No custom engine right now");
         }

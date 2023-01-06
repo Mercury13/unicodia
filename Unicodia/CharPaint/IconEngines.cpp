@@ -170,20 +170,35 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
 ///// CoarseImage //////////////////////////////////////////////////////////////
 
 
-ie::CoarseImage::CoarseImage(const QColor& aBg, const char* fname)
-    : bg(aBg)
+ie::CoarseImage::CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname)
+    : bg(aBg), margins(aMargins)
 {
     texture.load(fname);
 }
 
 
-void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal)
+unsigned ie::CoarseImage::getMargin(unsigned side, unsigned value) noexcept
+{
+    if (value == 0)
+        return 0;
+    auto r = (side * value) / 24u;
+    if (r == 0)
+        r = 1;
+    return r << 1;
+}
+
+
+void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     // Fill BG
     painter->fillRect(rect, bg);
 
     // Get rect
-    int times = std::min(rect.width() / texture.width(), rect.height() / texture.height());
+    unsigned side = std::lround(16.0 * scale - 1.1);  // 1 / 1.5px — sometimes we request a bit smaller icon
+    auto mx = getMargin(side, margins.width());
+    auto my = getMargin(side, margins.height());
+    int times = std::min((side - mx) / texture.width(),
+                         (side - my) / texture.height());
     if (times < 1)
         times = 1;
     int ww = texture.width() * times;

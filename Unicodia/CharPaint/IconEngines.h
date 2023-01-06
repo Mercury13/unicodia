@@ -116,12 +116,14 @@ namespace ie {
     class CoarseImage : public Veng
     {
     public:
-        CoarseImage(const QColor& aBg, const char* fname);
+        CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname);
         CoarseImage* clone() const override { return new CoarseImage(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         QColor bg;
+        QSize margins;
         QPixmap texture;
+        static unsigned getMargin(unsigned side, unsigned value) noexcept;
     };
 
 }   // namespace ie
