@@ -2185,7 +2185,7 @@ constinit const uc::Block uc::blocks[] {
             "Mayan Numerals",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Tai Xuan Jing OK
-    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0x1D300, 0x1D35F, { 0x1D329, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
             "Tai Xuan Jing Symbols", MyName::INST },
     // Counting rods OK
     { 0x1D360, 0x1D37F, { 0x1D378, EcContinent::NONE },

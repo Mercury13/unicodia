@@ -126,4 +126,13 @@ namespace ie {
         static unsigned getMargin(unsigned side, unsigned value) noexcept;
     };
 
+    // Programmatic drawing of Tai Xuan Jing icons
+    class Taixu : public Veng
+    {
+    public:
+        Taixu* clone() const override { return new Taixu(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+    };
+
 }   // namespace ie

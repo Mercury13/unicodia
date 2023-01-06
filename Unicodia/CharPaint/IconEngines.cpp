@@ -5,6 +5,7 @@
 
 // Char paint
 #include "routines.h"
+#include "Skin.h"
 
 ///// Veng /////////////////////////////////////////////////////////////////////
 
@@ -203,10 +204,50 @@ void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
         times = 1;
     int ww = texture.width() * times;
     int hh = texture.height() * times;
-    int x0 = (rect.width() - ww) >> 1;
-    int y0 = (rect.height() - hh) >> 1;
+    int x0 = rect.left() + (rect.width() - ww) >> 1;
+    int y0 = rect.top() + (rect.height() - hh) >> 1;
 
     QRect rcDest { x0, y0, ww, hh };
     painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
     painter->drawPixmap(rcDest, texture);
+}
+
+
+///// Taixu ////////////////////////////////////////////////////////////////////
+
+void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, BG_CJK);
+
+    unsigned side = std::lround(16.0 * scale - 2.1);
+    auto hunit = std::max(1u, side / 7u);
+    auto hh = hunit * 7;
+    auto ww = hh;
+    // Need remainder 0 or 2, bigger unit is a SPACE for dotted
+    switch (ww % 5) {
+    case 1:
+    case 3: --ww; break;
+    case 4: ww -= 2; break;
+    default: ;  // 0,2
+    }
+    auto wSmallUnit = ww / 5;
+    auto wBigUnit = wSmallUnit;
+    if (ww % 5 != 0)
+        ++wBigUnit;
+    int x0 = rect.left() + (rect.width() - ww) >> 1;
+    int y0 = rect.top()  + (rect.height() - hh) >> 1;
+    int x1 = x0 + wSmallUnit;
+    int x2 = x1 + wBigUnit;
+    int x3 = x2 + wSmallUnit;
+    int x4 = x3 + wBigUnit;
+    int x5 = x4 + wSmallUnit;
+    auto drawL = [&](int x1, int x2, int y) {
+        int ystart = y0 + y * hunit;
+        QRect r { x1, ystart, x2 - x1, hunit };
+        painter->fillRect(r, FG_CJK);
+    };
+    drawL(x0, x2, 0);                     drawL(x3, x5, 0);
+                       drawL(x0, x5, 2);
+    drawL(x0, x1, 4);  drawL(x2, x3, 4);  drawL(x4, x5, 4);
+    drawL(x0, x1, 6);  drawL(x2, x3, 6);  drawL(x4, x5, 6);
 }

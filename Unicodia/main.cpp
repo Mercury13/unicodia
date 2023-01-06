@@ -52,7 +52,7 @@ void initTranslation()
 
 int main(int argc, char *argv[])
 {
-    qputenv("QT_SCALE_FACTOR", "1.25");
+    qputenv("QT_SCALE_FACTOR", "1.5");
     QApplication a(argc, argv);
 
     uc::completeData();  // …runs once and should not depend on L10n

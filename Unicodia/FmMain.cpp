@@ -214,6 +214,8 @@ namespace {
             return new ie::BlockElem;
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,1 }, ":Misc/yijing.png");
+        case 0x1D300:   // Tai Xuan
+            return new ie::Taixu;
         default:
             throw std::logic_error("No custom engine right now");
         }
