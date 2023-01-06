@@ -1608,7 +1608,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'A' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Yijing OK
-    { 0x4DC0, 0x4DFF, { L'䷜', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0x4DC0, 0x4DFF, { L'䷜', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
             "Yijing Hexagram Symbols", MyName::INST },
     // CJK hieroglyphs OK
     { 0x4E00, 0x9FFF, { L'丈', EcContinent::CJK },

@@ -158,10 +158,40 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
         ++width;
     width = std::min(width, rect.width());
     // Get starting X
-    auto dx = (rect.width() - width) / 2;
+    auto dx = (rect.width() - width) >> 1;
     auto x0 = rect.left() + dx;
     // Get rect
     QRect newRect { x0, rect.top(), width, rect.height() };
     QBrush brush(texture);
     painter->fillRect(newRect, brush);
+}
+
+
+///// CoarseImage //////////////////////////////////////////////////////////////
+
+
+ie::CoarseImage::CoarseImage(const QColor& aBg, const char* fname)
+    : bg(aBg)
+{
+    texture.load(fname);
+}
+
+
+void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    // Fill BG
+    painter->fillRect(rect, bg);
+
+    // Get rect
+    int times = std::min(rect.width() / texture.width(), rect.height() / texture.height());
+    if (times < 1)
+        times = 1;
+    int ww = texture.width() * times;
+    int hh = texture.height() * times;
+    int x0 = (rect.width() - ww) >> 1;
+    int y0 = (rect.height() - hh) >> 1;
+
+    QRect rcDest { x0, y0, ww, hh };
+    painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
+    painter->drawPixmap(rcDest, texture);
 }

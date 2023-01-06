@@ -53,7 +53,7 @@
 #include "LocList.h"
 
 /// @todo [hidpi] Delete this when done!
-constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x3300;
+constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x4DC0;
 
 
 template class LruCache<char32_t, QPixmap>;
@@ -212,6 +212,8 @@ namespace {
         switch (startingCp) {
         case 0x2580:    // Block elements
             return new ie::BlockElem;
+        case 0x4DC0:    // Yijing
+            return new ie::CoarseImage(BG_CJK, ":Misc/yijing.png");
         default:
             throw std::logic_error("No custom engine right now");
         }

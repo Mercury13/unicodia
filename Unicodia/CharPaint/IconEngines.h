@@ -101,6 +101,7 @@ namespace ie {
         const uc::LibNode& node;
     };
 
+    // Programmatic drawing of Block Elements icon
     class BlockElem : public Veng
     {
     public:
@@ -108,6 +109,18 @@ namespace ie {
         BlockElem* clone() const override { return new BlockElem(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
+        QPixmap texture;
+    };
+
+    // Programmatic drawing of Yijing icon
+    class CoarseImage : public Veng
+    {
+    public:
+        CoarseImage(const QColor& aBg, const char* fname);
+        CoarseImage* clone() const override { return new CoarseImage(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        QColor bg;
         QPixmap texture;
     };
 

@@ -6,6 +6,7 @@
         <file>Buttons/globe.svg</file>
         <file>Misc/about.svg</file>
         <file>Misc/blockelem.png</file>
+        <file>Misc/yijing.png</file>
         <file>Texts/about.htm</file>
     </qresource>
 </RCC>
