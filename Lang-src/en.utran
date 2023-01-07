@@ -2568,8 +2568,18 @@
      <transl>Ethiopic extended A</transl>
     </text>
     <text id="Text">
-     <orig>Буквы для языков гамо-гофа-дауро ''(три народа, один язык, 2{{_}}млн на всех на 2007)'', баскето ''(93{{_}}тыс. на 2007)'' и гумуз ''(250{{_}}тыс. на 2007–2017, с 2007 на [[ps:Latn|латинице]])''.</orig>
-     <transl>Letters for languages: Gamo-Gofa-Dawro ''(three ethnic groups, one language, total 2M as of 2007)'', Basketo ''(93k as of 2007)'' and Gumuz ''(250k as of 2007–2017, in [[ps:Latn|Latin]] since 2007)''.</transl>
+     <orig>
+      <p>Буквы для языков:</p>
+      <p>* гамо-гофа-дауро: три народа, один язык, 2{{_}}млн на всех на 2007;</p>
+      <p>* баскето: 93{{_}}тыс. на 2007;</p>
+      <p>* гумуз: 250{{_}}тыс. на 2007–2017, с 2007 на [[ps:Latn|латинице]].</p>
+     </orig>
+     <transl>
+      <p>Letters for languages:</p>
+      <p>* Gamo-Gofa-Dawro: three ethnic groups, one language, total 2M as of 2007;</p>
+      <p>* Basketo: 93k as of 2007;</p>
+      <p>* Gumuz: 250k as of 2007–2017, in [[ps:Latn|Latin]] since 2007.</p>
+     </transl>
     </text>
    </group>
    <group id="AB30">
