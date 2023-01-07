@@ -204,8 +204,8 @@ void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
         times = 1;
     int ww = texture.width() * times;
     int hh = texture.height() * times;
-    int x0 = rect.left() + (rect.width() - ww) >> 1;
-    int y0 = rect.top() + (rect.height() - hh) >> 1;
+    int x0 = rect.left() + ((rect.width() - ww) >> 1);
+    int y0 = rect.top() + ((rect.height() - hh) >> 1);
 
     QRect rcDest { x0, y0, ww, hh };
     painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
@@ -234,8 +234,8 @@ void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
     auto wBigUnit = wSmallUnit;
     if (ww % 5 != 0)
         ++wBigUnit;
-    int x0 = rect.left() + (rect.width() - ww) >> 1;
-    int y0 = rect.top()  + (rect.height() - hh) >> 1;
+    int x0 = rect.left() + ((rect.width() - ww) >> 1);
+    int y0 = rect.top()  + ((rect.height() - hh) >> 1);
     int x1 = x0 + wSmallUnit;
     int x2 = x1 + wBigUnit;
     int x3 = x2 + wSmallUnit;
@@ -243,7 +243,7 @@ void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
     int x5 = x4 + wSmallUnit;
     auto drawL = [&](int x1, int x2, int y) {
         int ystart = y0 + y * hunit;
-        QRect r { x1, ystart, x2 - x1, hunit };
+        QRect r { x1, ystart, x2 - x1, static_cast<int>(hunit) };
         painter->fillRect(r, FG_CJK);
     };
     drawL(x0, x2, 0);                     drawL(x3, x5, 0);
