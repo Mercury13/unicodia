@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="0500.svg"
    inkscape:export-filename="..\0500.png"
    inkscape:export-xdpi="96"
@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="33.322407"
-     inkscape:cx="7.4274346"
+     inkscape:cx="7.4574445"
      inkscape:cy="7.0523117"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -50,16 +50,6 @@
        id="grid828"
        originx="0"
        originy="0" />
-    <sodipodi:guide
-       position="2.1166666,4.4979165"
-       orientation="1,0"
-       id="guide835"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="3.7041665,2.1166666"
-       orientation="0,-1"
-       id="guide837"
-       inkscape:locked="false" />
   </sodipodi:namedview>
   <defs
      id="defs2" />
