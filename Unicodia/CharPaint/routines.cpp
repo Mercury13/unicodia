@@ -731,12 +731,14 @@ void drawSearchChars(
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
-        const CharTiles& tiles, const QColor& color)
+        const CharTiles& tiles, const QColor& color,
+        qreal scale)
 {
     static constexpr int SIZE_PC = 70;  /// size percentage
     static constexpr int SIDE_GAP = 2;
     static constexpr int INNER_GAP = 1;
     static constexpr int SUBDIV = 2;
+    const auto percent = llround(SIZE_PC * scale);
     drawCharBorder(painter, rect, color);
     QMargins m;  m += SIDE_GAP;
     QRect r1 = rect.marginsRemoved(m);
@@ -759,7 +761,7 @@ void drawCharTiles(
         if (auto c1 = EmojiPainter::getCp(tile.text)) {
             // Single-char
             if (auto cp = uc::cpsByCode[c1])
-                drawChar(painter, r2, SIZE_PC, *cp, color, TableDraw::CUSTOM,
+                drawChar(painter, r2, percent, *cp, color, TableDraw::CUSTOM,
                          tile.emojiDraw, UseMargins::NO);
         } else {
             // Multi-char
@@ -810,8 +812,9 @@ CharTiles getCharTiles(const uc::LibNode& node)
 
 void drawFolderTile(
         QPainter* painter, const QRect& bounds,
-        const uc::LibNode& node, const QColor& color)
+        const uc::LibNode& node, const QColor& color,
+        qreal scale)
 {
     CharTiles tiles = getCharTiles(node);
-    drawCharTiles(painter, bounds, tiles, color);
+    drawCharTiles(painter, bounds, tiles, color, scale);
 }

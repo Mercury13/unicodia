@@ -133,7 +133,7 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
     // draw char
     switch (node.value.length()) {
     case 0:
-        drawFolderTile(painter, rect, node, clFg);
+        drawFolderTile(painter, rect, node, clFg, scale);
         break;
     default:
         drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(), scale);

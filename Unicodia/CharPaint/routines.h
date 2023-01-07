@@ -79,11 +79,13 @@ void drawSearchChars(
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
-        const CharTiles& tiles, const QColor& color);
+        const CharTiles& tiles, const QColor& color,
+        qreal scale);
 CharTiles getCharTiles(const uc::LibNode& node);
 void drawFolderTile(
         QPainter* painter, const QRect& bounds,
-        const uc::LibNode& node, const QColor& color);
+        const uc::LibNode& node, const QColor& color,
+        qreal scale);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
