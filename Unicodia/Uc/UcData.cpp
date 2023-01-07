@@ -996,7 +996,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(14), EcFont::SUNDANESE },
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(15), EcFont::SYLOTI_NAGRI },
     // Syriac OK, W10 has no Malayalam extensions → Beth Mardutho made a nice font.
     { "Syrc", QFontDatabase::Syriac,
