@@ -23,7 +23,6 @@ namespace uc {
         Zyyy,
         ZARR,   // Pseudo-script: Arrows
         ZMAT,   // Pseudo-script: Mathemetical
-        ZSUX,   // Pseudo-script: Cuneiform
         ZSYM,   // Pseudo-script: Symbols and pictographs
         Adlm,   // Adlam
         Aghb,   // Caucasian Albanian

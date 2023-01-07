@@ -446,11 +446,6 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
-    // Cuneiform pseudo-script (no translation!!)
-    { "ZSUX", QFontDatabase::Any,
-        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::ASIA,
-            Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
     // Symbols and pictographs pseudo-script
     { "ZSYM", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
@@ -2055,15 +2050,15 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Taml, EcFont::TAMIL_SUPPLEMENT, Bfg::HAS_DESCRIPTION },
     // Cuneiform OK
     { 0x12000, 0x123FF, { 0x1202D, EcContinent::ASIA },
-            "Cuneiform", { EcScript::ZSUX, 0 }, EcScript::Xsux },
+            "Cuneiform", { EcScript::Xsux, 0 }, EcScript::Xsux },
     // Cuneiform nembers and punct OK
     { 0x12400, 0x1247F, { 0x1240A, EcContinent::ASIA },
             "Cuneiform Numbers and Punctuation",
-            { EcScript::ZSUX, 1 },
-            EcScript::ZSUX, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            { EcScript::Xsux, 1 },
+            EcScript::Xsux, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Early cuneiform OK
     { 0x12480, 0x1254F, { 0x12525, EcContinent::ASIA },
-            "Early Dynastic Cuneiform", { EcScript::ZSUX, 2 }, EcScript::Xsux },
+            "Early Dynastic Cuneiform", { EcScript::Xsux, 2 }, EcScript::Xsux },
     // Cypro-Minoan OK
     { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::APPROX_HISTORICAL },
             "Cypro-Minoan", { EcScript::Cpmn, 0 }, EcScript::Cpmn },
@@ -3422,6 +3417,11 @@ void uc::completeData()
                 std::cout << "Continent mismatch: " << v.name << std::endl;
             }
         }
+        if (v.ecScript != EcScript::NONE
+                && v.alphaKey.ecScript == v.ecScript
+                && v.alphaKey.subKey == 0) {
+            v.script().mainBlock = &v;
+        }
     }
 
     // Save term INI
@@ -4054,6 +4054,7 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         }
     }
 
+    // Blocks, pass 1 (retrieve keys)
     for (auto& blk : blocks) {
         blk.printfLocKey(c, "Name");
         blk.loc.name = loc::get(c);
@@ -4062,17 +4063,11 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
             blk.printfLocKey(c, "Text");
             blk.loc.description = loc::get(c);
         }
+    }
 
+    // Blocks, pass 2 (build sort order)
+    for (auto& blk : blocks) {
         auto& script = scriptInfo[static_cast<int>(blk.alphaKey.ecScript)];
-
-        // ZSUX: copy from Cuneiform block
-        // By my rule “Once laid, still a maid”, I do not make special rule
-        // in database
-        if (blk.startingCp == 0x12000) {    // Cuneiform
-            if (blk.alphaKey.ecScript != EcScript::ZSUX)
-                throw std::logic_error("Need pseudo-script ZSUX");
-            script.loc.name = blk.loc.name;
-        }
 
         // Sorting key
         std::u8string_view keyName = blk.loc.name;
@@ -4080,6 +4075,8 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
         if (blk.alphaKey.ecScript != EcScript::NONE) {
             keyName = script.loc.name;
             specialSort = SpecialSort::YES;
+            if (script.mainBlock)
+                keyName = script.mainBlock->loc.name;
         }
         buildSortKey(keyName, specialSort, sortOrder, blk.loc.sortKey);
     }

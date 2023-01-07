@@ -600,6 +600,7 @@ namespace uc {
         mutable unsigned nChars = 0;
         mutable int plane = -1;
         mutable EcVersion ecVersion = EcVersion::UNKNOWN;
+        mutable const Block* mainBlock = nullptr;
         struct Loc {
             std::u8string_view name, timeComment, langs, description;
         } mutable loc {};
