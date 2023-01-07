@@ -4643,12 +4643,12 @@
      <orig>
       <p>Письменность придумал Ибрагим Нджойя, султан Бамума (запад Камеруна). Было выпущено семь версий (A…G), начиная от иероглифов и заканчивая слоговой. Правда, алфавит Нджойи передавал не все тоны, и возникло много омографов. Пришедшие в 1918 французы выгнали Нджойю и перевели язык на [[ps:Latn|латиницу]], но письмо продолжало ограниченно работать до смерти Нджойи в 1930-х. В 2007 начат проект по возрождению, прогресс незначителен. Более ранние художества Нджойи [[pk:16800|можно увидеть]] в дополнительных плоскостях Юникода.</p>
       <p />
-      <p>Изначально согласные глухие, добавление той же гласной делает согласную звонкой: {{sm|ꚫ}} па + {{sm|ꚠ}} а = ба. Гласная после слога ставит другую гласную: {{sm|ꚫ}} па + {{sm|ꚧ}} о = по. Крышка над символом как-то изменяет слог{{-}}ставит гортанную смычку, убирает носовую согласную, меняет гласную… Верхняя черта играет роль [[pt:virama|вирамы]], убирающей гласную из слога.</p>
+      <p>Изначально согласные глухие, добавление той же гласной делает согласную звонкой: {{sm|ꚫ}} па + {{sm|ꚠ}} а = ба. Гласная после слога ставит другую гласную: {{sm|ꚫ}} па + {{sm|ꚧ}} о = по. Крышка над символом как-то изменяет слог{{-}}ставит гортанную смычку, убирает носовую согласную, меняет гласную… Верхняя черта играет роль [[pt:virama|вирамы]], убирающей гласную из слога, и замечена всего с 13-ю знаками.</p>
      </orig>
      <transl>
       <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did not convey al tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but script continued to work in limited volume up to Njoya’s death in 1930s. In 2007 revival project started, the progress in insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
       <p />
-      <p>Consonants are initially voiceless, addind the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… Top line works as [[pt:virama|virama]] removing vowel from syllable.</p>
+      <p>Consonants are initially voiceless, addind the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… Top line works as [[pt:virama|virama]] removing vowel from syllable, and is attested above just 13 signs.</p>
      </transl>
     </text>
    </group>
