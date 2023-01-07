@@ -1518,9 +1518,11 @@ const std::multiset<PrefixEntry> prefixes {
     { { "HEBREW"sv, "ACCENT"sv }, PrefixAction::NEXT_CAP },     // Accent is tricky, though seemingly good
     { { "HEBREW"sv, "POINT"sv }, PrefixAction::NEXT_CAP },      // Point is really tricky
     { { "TAG"sv }, PrefixAction::NEXT_CAP },                    // Tags
-    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },        // Clock face XXX
-    { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Circled ideograph XXX
-    { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // Parenthesized ideograph XXX
+    { { "CLOCK"sv, "FACE"sv }, PrefixAction::NEXT_CAP },        // clock face XXX
+    { { "CIRCLED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // circled ideograph XXX
+    { { "PARENTHESIZED"sv, "IDEOGRAPH"sv }, PrefixAction::NEXT_CAP }, // parenthesized ideograph XXX
+    { { "CIRCLED"sv, "HANGUL"sv }, PrefixAction::REST_CAP },        // circled Hangul Xxx
+    { { "PARENTHESIZED"sv, "HANGUL"sv }, PrefixAction::REST_CAP },  // parenthesized Hangul Xxx
     { { "BALINESE"sv, "MUSICAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
     { { "IDEOGRAPHIC"sv, "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },   // ideographic tally mark One
     { { "TALLY"sv, "MARK"sv }, PrefixAction::NEXT_CAP },
