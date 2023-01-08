@@ -18,7 +18,7 @@ QPixmap ie::Veng::pixmap(
 }
 
 QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, QIcon::Mode mode, qreal scale)
-{
+{    
     QPixmap localPix;
     auto* workingPix = cache(scale);
     if (workingPix) {
@@ -62,10 +62,17 @@ QPixmap ie::Veng::scaledPixmap(
 void ie::Veng::paint(
         QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State)
 {
-    auto scale = painter->device()->devicePixelRatio();
+    qreal scale = 1.0;
+    if (painter->device())
+        scale = painter->device()->devicePixelRatio();
     QSize sz { lround(rect.width() * scale), lround(rect.height() * scale) };
+    int dw = 0;
+    if (sz.width() > sz.height()) {
+        sz.setWidth(sz.height());
+        dw = (rect.width() - rect.height()) >> 1;
+    }
     auto pix = myScaledPixmap(sz, mode, scale);
-    painter->drawPixmap(rect.topLeft(), pix);
+    painter->drawPixmap(rect.left() + dw, rect.top(), pix);
 }
 
 
