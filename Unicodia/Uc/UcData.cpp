@@ -1711,7 +1711,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA },
             "Meetei Mayek", { EcScript::Mtei, 0 }, EcScript::Mtei },
     // Hangul syllables OK
-    { 0xAC00, 0xD7AF, { L'괏', EcContinent::CJK },
+    { 0xAC00, 0xD7AF, { 0xAC13, EcContinent::CJK },
             "Hangul Syllables",
             { EcScript::Hang, 'Z' },
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
