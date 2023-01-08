@@ -389,6 +389,7 @@ namespace {
         result.name = str::toU8(tag.attribute("name").as_string());
         if (result.name.empty())
             throw std::logic_error("Need folder name");
+        result.flags |= uc::Lfg::TRANSLATE;
     }
 
     void appendDump(lib::Node& result, pugi::xml_node tag)

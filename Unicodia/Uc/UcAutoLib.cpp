@@ -6,7 +6,7 @@ constinit const uc::LibNode uc::libNodes[4639] {
 { {}, {}, 0, 3, 1, {}, EcVersion::NONE },   // 0
 { {}, u8"Emoji", 0, 10, 4, Lfg(8), EcVersion::NONE },   // 1
 { {}, u8"Strange", 0, 12, 3779, Lfg(8), EcVersion::NONE },   // 2
-{ {}, u8"Numbers", 0, 3, 4580, {}, EcVersion::NONE },   // 3
+{ {}, u8"Numbers", 0, 3, 4580, Lfg(8), EcVersion::NONE },   // 3
 { {}, u8"Smileys & Emotion", 1, 16, 14, Lfg(8), EcVersion::NONE },   // 4
 { {}, u8"People & Body", 1, 16, 196, Lfg(8), EcVersion::NONE },   // 5
 { {}, u8"Component", 1, 2, 2360, Lfg(10), EcVersion::NONE },   // 6
@@ -4583,9 +4583,9 @@ constinit const uc::LibNode uc::libNodes[4639] {
 { U"\U00030F54", {}, 3790, 0, -1, Lfg(4), EcVersion::NONE },   // 4577
 { U"\U0003106A", {}, 3790, 0, -1, Lfg(4), EcVersion::NONE },   // 4578
 { U"\U00031152", {}, 3790, 0, -1, Lfg(4), EcVersion::NONE },   // 4579
-{ {}, u8"Vulgar fractions", 3, 21, 4583, {}, EcVersion::NONE },   // 4580
-{ {}, u8"Superscripts", 3, 18, 4604, {}, EcVersion::NONE },   // 4581
-{ {}, u8"Subscripts", 3, 17, 4622, {}, EcVersion::NONE },   // 4582
+{ {}, u8"Vulgar fractions", 3, 21, 4583, Lfg(8), EcVersion::NONE },   // 4580
+{ {}, u8"Superscripts", 3, 18, 4604, Lfg(8), EcVersion::NONE },   // 4581
+{ {}, u8"Subscripts", 3, 17, 4622, Lfg(8), EcVersion::NONE },   // 4582
 { U"\u215F", {}, 4580, 0, -1, {}, EcVersion::NONE },   // 4583
 { U"\u2044", {}, 4580, 0, -1, {}, EcVersion::NONE },   // 4584
 { U"\u00BD", {}, 4580, 0, -1, {}, EcVersion::NONE },   // 4585
