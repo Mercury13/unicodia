@@ -161,8 +161,9 @@ void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
     // Get starting X
     auto dx = (rect.width() - width) >> 1;
     auto x0 = rect.left() + dx;
-    // Get rect
-    QRect newRect { x0, rect.top(), width, rect.height() };
+    // Top margin: top line of texture is empty, this precise 1
+    // Bottom: 0/1 is somehow nicer than 1/2, let it be
+    QRect newRect { x0, rect.top(), width, rect.height()};
     QBrush brush(texture);
     painter->fillRect(newRect, brush);
 }
