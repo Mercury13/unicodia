@@ -2,6 +2,8 @@
 
 // Qt
 #include <QPainter>
+#include <QGuiApplication>
+#include <private/qguiapplication_p.h>
 
 // Char paint
 #include "routines.h"
@@ -15,7 +17,7 @@ QPixmap ie::Veng::pixmap(
     return scaledPixmap(size, mode, state, 1.0);
 }
 
-QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, qreal scale)
+QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, QIcon::Mode mode, qreal scale)
 {
     QPixmap localPix;
     auto* workingPix = cache(scale);
@@ -29,27 +31,40 @@ QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, qreal scale)
     }
     workingPix->setDevicePixelRatio(1.0);
     workingPix->fill(Qt::transparent);
-    QPainter ptr(workingPix);
-    // Paint in 100% (in pixels) here
-    paint1(&ptr, QRect{ QPoint(0, 0), bigSize }, scale);
+    { QPainter ptr(workingPix);
+        // Paint in 100% (in pixels) here
+        paint1(&ptr, QRect{ QPoint(0, 0), bigSize }, scale);
+        // Paint in dipels here (none currently)
+        //workingPix->setDevicePixelRatio(scale);
+        //workingPix->setDevicePixelRatio(1.0);
+    }
+
+    if (qobject_cast<QGuiApplication*>(QCoreApplication::instance())) {
+        if (mode != QIcon::Normal) {
+            const QPixmap generated = QGuiApplicationPrivate::instance()->applyQIconStyleHelper(mode, *workingPix);
+            if (!generated.isNull()) {
+                *workingPix = generated;
+            }
+        }
+    }
+
     workingPix->setDevicePixelRatio(scale);
-    // Paint in dipels here (none currently)
     return *workingPix;
 }
 
 QPixmap ie::Veng::scaledPixmap(
-        const QSize &size, QIcon::Mode, QIcon::State, qreal scale)
+        const QSize &size, QIcon::Mode mode, QIcon::State, qreal scale)
 {
-    return myScaledPixmap(size, scale);
+    return myScaledPixmap(size, mode, scale);
 }
 
 
 void ie::Veng::paint(
-        QPainter *painter, const QRect &rect, QIcon::Mode, QIcon::State)
+        QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State)
 {
     auto scale = painter->device()->devicePixelRatio();
     QSize sz { lround(rect.width() * scale), lround(rect.height() * scale) };
-    auto pix = myScaledPixmap(sz, scale);
+    auto pix = myScaledPixmap(sz, mode, scale);
     painter->drawPixmap(rect.topLeft(), pix);
 }
 
