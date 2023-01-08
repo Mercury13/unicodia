@@ -216,6 +216,8 @@ namespace {
             return new ie::CoarseImage(BG_CJK, { 1,1 }, ":Misc/yijing.png");
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
+        case 0x1FB00:   // Legacy computing
+            return new ie::CoarseImage(Qt::white, { 1,1 }, ":Misc/legacy.png");
         default:
             throw std::logic_error("No custom engine right now");
         }

@@ -2304,7 +2304,7 @@ constinit const uc::Block uc::blocks[] {
             "Symbols and Pictographs Extended-A",
             { EcScript::ZSYM, 'A' }, EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
-    { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS },
+    { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS | Ifg::CUSTOM_ENGINE },
             "Symbols for Legacy Computing",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER,
             Bfg::HIPRIO_NUMBERS },
