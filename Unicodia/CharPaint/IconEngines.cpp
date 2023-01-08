@@ -196,7 +196,7 @@ void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->fillRect(rect, bg);
 
     // Get rect
-    unsigned side = std::lround(16.0 * scale - 1.1);  // 1 / 1.5px — sometimes we request a bit smaller icon
+    unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
     auto mx = getMargin(side, margins.width());
     auto my = getMargin(side, margins.height());
     int times = std::min((side - mx) / texture.width(),
