@@ -24,6 +24,7 @@ SOURCES += \
 HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Array.h \
     ../Libs/SelfMade/u_TypedFlags.h \
@@ -39,6 +40,7 @@ HEADERS += \
 INCLUDEPATH += \
     ../Libs/PugiXml \
     ../Libs/SelfMade \
+    ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Strings \
     ../Libs/Zippy \
     ../Unicodia/Uc

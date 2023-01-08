@@ -40,7 +40,7 @@ namespace lib {
 
 
     EmojiData loadEmoji(const char* fname);
-    SafeVector<Node> loadManual(const char* fname);
+    Node loadManual(const char* fname);
 
     struct Result {
         int nNodes = 0;

@@ -9,6 +9,7 @@
 
 // Libs
 #include "u_Strings.h"
+#include "mojibake.h"
 
 // Project-local
 #include "data.h"
@@ -381,13 +382,58 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
 }
 
 
-SafeVector<lib::Node> lib::loadManual(const char* fname)
+namespace {
+
+    void loadFolderInfo(lib::Node& result, pugi::xml_node tag)
+    {
+        result.name = str::toU8(tag.attribute("name").as_string());
+        if (result.name.empty())
+            throw std::logic_error("Need folder name");
+    }
+
+    void appendDump(lib::Node& result, pugi::xml_node tag)
+    {
+        std::string_view text8 = tag.text().get();
+        auto text32 = mojibake::toS<std::u32string>(text8);
+        auto sub32 = str::splitSv(text32, ' ');
+        result.children.reserve(result.children.size() + sub32.size());
+        for (auto v : sub32) {
+            auto& node = result.children.emplace_back();
+            node.value = v;
+        }
+    }
+
+    void loadRecurse(lib::Node& result, pugi::xml_node tag)
+    {
+        for (auto v : tag.children()) {
+            if (v.name() == "f"sv) {
+                // Folder
+                auto& newFolder = result.children.emplace_back();
+                loadFolderInfo(newFolder, v);
+                loadRecurse(newFolder, v);
+            } else if (v.name() == "d"sv) {
+                // Dump
+                appendDump(result, v);
+            }
+        }
+    }
+
+}   // anon namespace
+
+
+lib::Node lib::loadManual(const char* fname)
 {
     pugi::xml_document doc;
     if (auto parseRes = doc.load_file(fname); !parseRes)
         throw std::logic_error(str::cat("Cannot open ", fname));
 
-    SafeVector<lib::Node> r;
+    lib::Node r;
+
+    auto root = doc.root().child("library");
+    if (!root)
+        throw std::logic_error("No root");
+
+    loadRecurse(r, root);
 
     /// @todo [urgent] loadManual
 

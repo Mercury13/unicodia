@@ -125,6 +125,7 @@ namespace {
 
     constinit const LocalFile allLocalFiles[] {
         { MISCFILES ENTITIES_HTML },
+        { MISCFILES LIBRARY_XML },
         { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 

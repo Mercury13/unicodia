@@ -9892,6 +9892,22 @@
      <orig>Флаги субъектов</orig>
      <transl>Прапори суб’єктів</transl>
     </text>
+    <text id="Numbers">
+     <orig>Числа</orig>
+     <transl>Числа</transl>
+    </text>
+    <text id="Vulgar fractions">
+     <orig>Обыкновенные дроби</orig>
+     <transl>Звичайні дроби</transl>
+    </text>
+    <text id="Superscripts">
+     <orig>Верхние индексы</orig>
+     <transl>Верхні індекси</transl>
+    </text>
+    <text id="Subscripts">
+     <orig>Нижние индексы</orig>
+     <transl>Нижні індекси</transl>
+    </text>
    </group>
   </group>
  </file>

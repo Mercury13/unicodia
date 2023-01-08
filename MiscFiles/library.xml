@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <library>
-	<f name="numbers">
-		<f name="vulgarfractions">
+	<f name="Numbers">
+		<f name="Vulgar fractions">
 			<d>⅟ ⁄ ½ ↉ ⅓ ⅔ ¼ ¾ ⅕ ⅖ ⅗ ⅘ ⅙ ⅚ ⅐ ⅛ ⅜ ⅝ ⅞ ⅑ ⅒</d>
 		</f>
-		<f name="superscripts">
+		<f name="Superscripts">
 			<d>⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁼ ⁽ ⁾ ⁱ ⁿ ᵀ</d>
 		</f>
-		<f name="subscripts">
+		<f name="Subscripts">
 			<d>₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₊ ₋ ₌ ₍ ₎ ᵢ ₙ</d>
 		</f>
 	</f>

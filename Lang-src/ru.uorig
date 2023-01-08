@@ -8018,6 +8018,18 @@
     <text id="subdivision-flag">
      <orig>Флаги субъектов</orig>
     </text>
+    <text id="Numbers">
+     <orig>Числа</orig>
+    </text>
+    <text id="Vulgar fractions">
+     <orig>Обыкновенные дроби</orig>
+    </text>
+    <text id="Superscripts">
+     <orig>Верхние индексы</orig>
+    </text>
+    <text id="Subscripts">
+     <orig>Нижние индексы</orig>
+    </text>
    </group>
   </group>
  </file>

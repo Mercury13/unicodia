@@ -8343,7 +8343,6 @@
     </text>
     <text id="Lang">
      <orig>ваи ''(Либерия, 100…200{{_}}тыс. по разным источникам)''</orig>
-     <known-orig>ваи ''(Либерия)''</known-orig>
      <transl>Vai ''(Liberia, 100…200k according to different sources)''</transl>
     </text>
     <text id="Text">
@@ -11511,6 +11510,22 @@
     <text id="subdivision-flag">
      <orig>Флаги субъектов</orig>
      <transl>Subdivision flags</transl>
+    </text>
+    <text id="Numbers">
+     <orig>Числа</orig>
+     <transl>Numbers</transl>
+    </text>
+    <text id="Vulgar fractions">
+     <orig>Обыкновенные дроби</orig>
+     <transl>Vulgar fractions</transl>
+    </text>
+    <text id="Superscripts">
+     <orig>Верхние индексы</orig>
+     <transl>Superscripts</transl>
+    </text>
+    <text id="Subscripts">
+     <orig>Нижние индексы</orig>
+     <transl>Subscripts</transl>
     </text>
    </group>
   </group>

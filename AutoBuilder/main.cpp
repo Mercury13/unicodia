@@ -486,6 +486,12 @@ int main()
     std::cout << "OK" << std::endl;
     std::cout << "  Loaded " << egypBase.size() << " Egyptian hieros." << std::endl;
 
+    ///// Library //////////////////////////////////////////////////////////////
+
+    std::cout << "Loading manual library..." << std::flush;
+    auto manualLib = lib::loadManual(LIBRARY_XML);
+    std::cout << "OK" << std::endl;
+
     ///// Open output file /////////////////////////////////////////////////////
 
     std::ofstream os("UcAuto.cpp");
@@ -796,6 +802,10 @@ int main()
     root.children.emplace_back(std::move(emoji.root));
     // Node 2: strange hiero
     root.children.emplace_back(strangeCjk.give());
+    // Node 3+: manual library
+    for (auto& v : manualLib.children) {
+        root.children.emplace_back(std::move(v));
+    }
     // Write!
     auto libInfo = lib::write(root, "UcAutoLib.cpp");
 
