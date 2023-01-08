@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <library>
 	<f name="Numbers">
 		<f name="Vulgar fractions">
@@ -8,7 +8,35 @@
 			<d>⁰ ¹ ² ³ ⁴ ⁵ ⁶ ⁷ ⁸ ⁹ ⁺ ⁻ ⁼ ⁽ ⁾ ⁱ ⁿ ᵀ</d>
 		</f>
 		<f name="Subscripts">
-			<d>₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ₊ ₋ ₌ ₍ ₎ ᵢ ₙ</d>
+			<d>₀ ₁ ₂ ₃ ₄ ₅ ₆ ₇ ₈ ₉ ⏨ ₊ ₋ ₌ ₍ ₎ ᵢ ₙ</d>
+		</f>
+		<f name="Circled numbers">
+			<d>⓪</d>
+			<range start="2460" end="2473" />
+			<range start="3251" end="325F" />
+			<range start="32B1" end="32BF" />
+		</f>
+		<f name="Circled dingbat-numbers">
+			<d>🄋</d>
+			<range start="2780" end="2789" />
+		</f>
+		<f name="Double circled numbers">
+			<range start="24F5" end="24FE" />
+		</f>
+		<f name="Negative circled numbers">
+			<d>⓿</d>
+			<range start="2776" end="277F" />
+			<range start="24EB" end="24F4" />
+		</f>
+		<f name="Negative circled dingbat-numbers">
+			<d>🄌</d>
+			<range start="278A" end="2793" />
+		</f>
+		<f name="Parenthesized dingbat-numbers">
+			<range start="2474" end="2487" />
+		</f>
+		<f name="Dingbat-numbers with full stop">
+			<range start="2474" end="2487" />
 		</f>
 	</f>
 </library>

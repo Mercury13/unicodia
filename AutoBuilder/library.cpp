@@ -404,6 +404,21 @@ namespace {
         }
     }
 
+    void appendRange(lib::Node& result, pugi::xml_node tag)
+    {
+        auto startCode = fromHex(tag.attribute("start").as_string());
+        auto endCode = fromHex(tag.attribute("end").as_string());
+        if (startCode >= endCode) {
+            throw std::logic_error("Bad char codes");
+        }
+        auto nCodes = endCode - startCode + 1;
+        result.children.reserve(result.children.size() + nCodes);
+        for (auto i = startCode; i <= endCode; ++i) {
+            auto& node = result.children.emplace_back();
+            node.value = std::u32string{char32_t(i)};
+        }
+    }
+
     void loadRecurse(lib::Node& result, pugi::xml_node tag)
     {
         for (auto v : tag.children()) {
@@ -415,6 +430,8 @@ namespace {
             } else if (v.name() == "d"sv) {
                 // Dump
                 appendDump(result, v);
+            } else if (v.name() == "range"sv) {
+                appendRange(result, v);
             }
         }
     }

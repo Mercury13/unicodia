@@ -11527,6 +11527,34 @@
      <orig>Нижние индексы</orig>
      <transl>Subscripts</transl>
     </text>
+    <text id="Circled numbers">
+     <orig>Числа в кругах</orig>
+     <transl>Circled numbers</transl>
+    </text>
+    <text id="Circled dingbat-numbers">
+     <orig>Числа-маркеры в кругах</orig>
+     <transl>Circled dingbat-numbers</transl>
+    </text>
+    <text id="Double circled numbers">
+     <orig>Числа в двойных кругах</orig>
+     <transl>Double circled numbers</transl>
+    </text>
+    <text id="Negative circled numbers">
+     <orig>Числа в чёрных кругах</orig>
+     <transl>Negative circled numbers</transl>
+    </text>
+    <text id="Negative circled dingbat-numbers">
+     <orig>Числа-маркеры в чёрных кругах</orig>
+     <transl>Negative circled dingbat-numbers</transl>
+    </text>
+    <text id="Parenthesized dingbat-numbers">
+     <orig>Числа-маркеры в скобках</orig>
+     <transl>Parenthesized dingbat-numbers</transl>
+    </text>
+    <text id="Dingbat-numbers with full stop">
+     <orig>Числа-маркеры с точкой</orig>
+     <transl>Dingbat-numbers with full stop</transl>
+    </text>
    </group>
   </group>
  </file>

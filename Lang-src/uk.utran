@@ -9908,6 +9908,34 @@
      <orig>Нижние индексы</orig>
      <transl>Нижні індекси</transl>
     </text>
+    <text id="Circled numbers">
+     <orig>Числа в кругах</orig>
+     <transl>Числа у колах</transl>
+    </text>
+    <text id="Circled dingbat-numbers">
+     <orig>Числа-маркеры в кругах</orig>
+     <transl>Числа-маркери у колах</transl>
+    </text>
+    <text id="Double circled numbers">
+     <orig>Числа в двойных кругах</orig>
+     <transl>Числа у подвійних колах</transl>
+    </text>
+    <text id="Negative circled numbers">
+     <orig>Числа в чёрных кругах</orig>
+     <transl>Числа у чорних кругах</transl>
+    </text>
+    <text id="Negative circled dingbat-numbers">
+     <orig>Числа-маркеры в чёрных кругах</orig>
+     <transl>Числа-маркери у чорних кругах</transl>
+    </text>
+    <text id="Parenthesized dingbat-numbers">
+     <orig>Числа-маркеры в скобках</orig>
+     <transl>Числа-маркери у дужках</transl>
+    </text>
+    <text id="Dingbat-numbers with full stop">
+     <orig>Числа-маркеры с точкой</orig>
+     <transl>Числа-маркери з крапкою</transl>
+    </text>
    </group>
   </group>
  </file>

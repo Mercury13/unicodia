@@ -8030,6 +8030,27 @@
     <text id="Subscripts">
      <orig>Нижние индексы</orig>
     </text>
+    <text id="Circled numbers">
+     <orig>Числа в кругах</orig>
+    </text>
+    <text id="Circled dingbat-numbers">
+     <orig>Числа-маркеры в кругах</orig>
+    </text>
+    <text id="Double circled numbers">
+     <orig>Числа в двойных кругах</orig>
+    </text>
+    <text id="Negative circled numbers">
+     <orig>Числа в чёрных кругах</orig>
+    </text>
+    <text id="Negative circled dingbat-numbers">
+     <orig>Числа-маркеры в чёрных кругах</orig>
+    </text>
+    <text id="Parenthesized dingbat-numbers">
+     <orig>Числа-маркеры в скобках</orig>
+    </text>
+    <text id="Dingbat-numbers with full stop">
+     <orig>Числа-маркеры с точкой</orig>
+    </text>
    </group>
   </group>
  </file>
