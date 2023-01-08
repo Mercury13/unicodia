@@ -4,6 +4,9 @@
 #include <stack>
 #include <fstream>
 
+// XML
+#include "pugixml.hpp"
+
 // Libs
 #include "u_Strings.h"
 
@@ -109,7 +112,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
 {
     std::ifstream is(fname);
     if (!is.is_open())
-        throw std::logic_error(std::string("Cannot open ") + fname);
+        throw std::logic_error(str::cat("Cannot open ", fname));
 
     Fix1d<char32_t, 20> codes;
 
@@ -375,4 +378,18 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
             }
         }
     }
+}
+
+
+SafeVector<lib::Node> lib::loadManual(const char* fname)
+{
+    pugi::xml_document doc;
+    if (auto parseRes = doc.load_file(fname); !parseRes)
+        throw std::logic_error(str::cat("Cannot open ", fname));
+
+    SafeVector<lib::Node> r;
+
+    /// @todo [urgent] loadManual
+
+    return r;
 }
