@@ -386,26 +386,49 @@ struct ControlFrame {
     qreal thickness;
 };
 
+namespace {
+
+    QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame)
+    {
+        auto x0 = std::round((rect.left()   - frame) * scale);
+        auto y0 = std::round((rect.top()    - frame) * scale);
+        auto x1 = std::round((rect.right()  + frame) * scale);
+        auto y1 = std::round((rect.bottom() + frame) * scale);
+        auto recipScale = 1.0 / scale;
+        return { QPointF { x0 * recipScale + frame, y0 * recipScale + frame },
+                 QPointF { x1 * recipScale - frame, y1 * recipScale - frame } };
+    }
+
+}
+
 ControlFrame drawControlFrame(
         QPainter* painter, const QRect& rect, const QColor& color)
 {
-    painter->setRenderHint(QPainter::Antialiasing,
-                           painter->device()->devicePixelRatio() != 1.0);
-    const auto availW = rect.width() * 5 / 6;
-    const auto availH = rect.height() * 7 / 10;
+    // Get painter info
+    auto dpr = painter->device()->devicePixelRatio();
+
+    const auto availW = rect.width() * (5.0 / 6.0);
+    const auto availH = rect.height() * (7.0 / 10.0);
     const auto availSize = std::min(availW, availH);
     // Now we draw availSize×availSize, shrink rect
     auto ofsX = (rect.width() - availSize) / 2;
     auto ofsY = (rect.height() - availSize) / 2;
-    auto rcFrame = QRectF(QPoint(rect.left() + ofsX, rect.top() + ofsY),
-                          QSize(availSize, availSize));
+    QRectF rcFrame { QPointF(rect.left() + ofsX, rect.top() + ofsY),
+                     QSizeF(availSize, availSize) };
     // Draw frame
-    auto thickness = availSize / 60.0f;
-    painter->setPen(QPen(color, thickness, Qt::DashLine));
+    static constexpr qreal Q_THICKNESS = 1.0 / 60.0;
+    auto loThickness = availSize * Q_THICKNESS;
+    auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
+    bool isAa = (dpr != 1.0 && hiThickness * dpr > 1);
+    painter->setRenderHint(QPainter::Antialiasing, isAa);
+    if (isAa) {
+        rcFrame = adjustedToPhysicalPixels(rcFrame, dpr, hiThickness * 0.5);
+    }
+    painter->setPen(QPen(color, hiThickness, Qt::DashLine));
     painter->setBrush(Qt::NoBrush);
     painter->drawRect(rcFrame);
 
-    return { rcFrame, thickness };
+    return { rcFrame, loThickness };
 }
 
 void drawFunkySample(
