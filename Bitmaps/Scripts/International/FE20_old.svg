@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="FE20_old.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\FE20.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="46.75"
+     inkscape:cx="7.8395722"
+     inkscape:cy="8.5989305"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:bbox-nodes="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:none;stroke:#000000;stroke-width:0.171979;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:0.171979, 0.343958;stop-color:#000000"
+       id="path931"
+       cx="1.1885489"
+       cy="2.5115392"
+       rx="0.83804286"
+       ry="0.84254837" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path931"
+       id="use1085"
+       transform="translate(1.8519636,0.0048511)"
+       width="100%"
+       height="100%" />
+    <path
+       style="fill:#000000;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 0.26458337,1.3229166 c 0,0 0.52916667,-0.79374993 1.58749993,-0.79374993 V 0.79375 c -1.05833326,1e-8 -1.58749993,0.5291666 -1.58749993,0.5291666 z"
+       id="path857"
+       sodipodi:nodetypes="cccc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path857"
+       id="use1278"
+       transform="matrix(-1,0,0,1,4.2333334,0)"
+       width="100%"
+       height="100%" />
+  </g>
+</svg>
