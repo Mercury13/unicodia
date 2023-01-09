@@ -1,0 +1,12 @@
+﻿How to count HD icons
+
+−2 QRC header: 2 lines
++4 custom engines
+	Block elements: programmatic
+	Yijing: coarse image
+	……stopped here by Jan 9……
+	Tai Xuan: programmatic
+	Legacy computing: coarse image
+
+TOTAL: +2
+CONTIGUOUS SPAN: +0

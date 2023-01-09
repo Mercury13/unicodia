@@ -1744,7 +1744,7 @@ constinit const uc::Block uc::blocks[] {
             "Combining Half Marks",
             MyName::INST, EcScript::NONE, EcFont::NOTO },
     // CJK compat forms OK
-    { 0xFE30, 0xFE4F, { L'﹃', EcContinent::CJK },
+    { 0xFE30, 0xFE4F, { 0xFE3D, EcContinent::CJK },
             "CJK Compatibility Forms",
             MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small variants OK

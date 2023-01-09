@@ -1,72 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   version="1.1"
-   viewBox="-10 0 16 16"
-   id="svg4"
-   sodipodi:docname="FE50.svg"
    width="16"
    height="16"
-   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
-   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\FE50.png"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="FE50.svg"
+   inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
-  <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#fff0f5"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
      showgrid="true"
-     inkscape:snap-global="true"
-     inkscape:zoom="23.53125"
-     inkscape:cx="11.814077"
-     inkscape:cy="15.213811"
+     width="16mm"
+     units="px"
+     inkscape:zoom="23.5625"
+     inkscape:cx="-2.7798408"
+     inkscape:cy="7.0026525"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4"
-     inkscape:snap-smooth-nodes="true">
-    <inkscape:grid
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#ffffff"><inkscape:grid
        type="xygrid"
-       id="grid2045" />
-  </sodipodi:namedview>
-  <text
-     xml:space="preserve"
-     style="font-weight:bold;font-size:10px;line-height:1.25;font-family:'MS Gothic';-inkscape-font-specification:'MS Gothic Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
-     x="-1.9681273"
-     y="19.505976"
-     id="text16431"><tspan
-       sodipodi:role="line"
-       id="tspan16429" /></text>
-  <text
-     xml:space="preserve"
-     style="font-weight:bold;font-size:10px;line-height:1.25;font-family:'Noto Serif CJK SC';-inkscape-font-specification:'Noto Serif CJK SC Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle"
-     x="-2.7330675"
-     y="20.86587"
-     id="text19867"><tspan
-       sodipodi:role="line"
-       id="tspan19865"
-       x="-2.7330675"
-       y="20.86587" /></text>
-  <text
-     xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:20.577px;line-height:1.25;font-family:SimSun;-inkscape-font-specification:'SimSun Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#5c3566;fill-opacity:1;stroke-width:1"
-     x="-2.0396926"
-     y="17.261766"
-     id="text2979"><tspan
-       sodipodi:role="line"
-       id="tspan2977"
-       x="-2.0396926"
-       y="17.261766"
-       style="stroke-width:1">﹖</tspan></text>
-</svg>
+       id="grid828"
+       originx="0"
+       originy="0" /></sodipodi:namedview><defs
+     id="defs2" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><rect
+       style="fill:#fff0f5"
+       id="rect691"
+       width="16"
+       height="16"
+       x="0"
+       y="0" /><g
+       aria-label="ힽ"
+       id="text17446"
+       style="font-weight:bold;font-size:16.637px;line-height:1.25;font-family:'Noto Sans KR';-inkscape-font-specification:'Noto Sans KR Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#5c3566"
+       transform="translate(10)" /><path
+       fill="currentColor"
+       d="M 8.0980183,11.880482 H 7.5859039 c 0,-1.844714 1.7187154,-2.5542127 1.8777531,-4.1193627 C 9.6354456,6.0705968 8.1690315,5.2866619 6.8604086,6.0413853 6.7233779,6.1204356 5.759414,6.7052667 6.5616753,7.0812245 6.982436,7.3769608 7.1444716,8.4425741 6.0068847,8.560996 5.0319982,8.6625423 4.4356154,7.1539497 5.7935037,5.88141 7.143053,4.6166855 9.1493379,4.7869711 10.359857,5.921404 10.786619,6.3213422 11,6.9212495 11,7.7211262 11,8.5210022 10.530562,9.2408909 9.591685,9.8807917 8.6528089,10.520692 8.1549484,11.18723 8.0980183,11.880482 Z m 0.8535239,2.239654 C 8.9515422,14.709186 8.6072154,15 7.9273134,15 6.4423953,15 6.5835938,13.500072 7.4151991,13.240272 c 0.5926325,-0.185128 1.5363431,0.0432 1.5363431,0.879864 z"
+       id="path1748"
+       style="fill:#5c3566;stroke-width:0.999997" /></g></svg>
