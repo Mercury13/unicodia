@@ -1248,6 +1248,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("modifier letter Low circumflex accent") // What to do with circumflex?
     EX("modifier letter Short equals sign")     // What to do with equals?
     EX("direct current symbol form two") // Symbol is not a keyword
+    EX("Roman numeral Reversed one hundred") // IDK what happens with numerals
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
