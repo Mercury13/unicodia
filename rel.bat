@@ -130,6 +130,8 @@
 @copy LICENSE %DEPLOY%
 @md %DEPLOY%\iconengines
 @copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
+@md %DEPLOY%\imageformats
+@copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles

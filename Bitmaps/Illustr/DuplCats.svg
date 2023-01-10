@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="100"
+   height="100"
+   viewBox="0 0 100 100"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="DuplCats.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="2.7577164"
+     inkscape:cx="180.76551"
+     inkscape:cy="92.105193"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="path416"
+       style="font-size:144px;line-height:1.25;font-family:'Noto Sans Duployan';-inkscape-font-specification:'Noto Sans Duployan';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:1"
+       d="m 27.239387,47.494069 c 0,2.293359 2.081937,4.224614 4.554224,4.224614 26.284424,0 47.494123,19.674633 47.494123,44.056702 0,2.29336 2.081931,4.224614 4.554231,4.224614 2.472299,0 4.554231,-1.931254 4.554231,-4.224614 0,-28.968787 -25.373573,-52.505931 -56.602585,-52.505931 -2.472287,0 -4.554224,1.931254 -4.554224,4.224615 z m 12.355512,15.93297 c -2.08193,3.258985 -6.375917,4.828129 -10.279549,3.500392 -8.587974,-2.776172 -6.636168,-15.208613 2.862656,-15.208613 2.472301,0 4.554237,-1.931249 4.554237,-4.224612 0,-2.293362 -2.081936,-4.224613 -4.554237,-4.224613 -8.457848,0 -15.744624,5.55235 -17.306068,13.518767 -1.431337,7.845712 3.253018,15.329311 11.320507,18.105488 8.067499,2.655474 16.915717,-0.36211 21.209704,-7.242196 2.862662,-4.707426 -4.944587,-8.811341 -7.80725,-4.224613 z M 77.711653,2.030905 40.236842,62.382543 c -2.992781,4.586728 4.814474,8.932043 7.807255,4.224618 L 85.518908,6.2555194 C 88.38157,1.6687948 80.704432,-2.6765229 77.711653,2.030905 Z" />
+  </g>
+</svg>
