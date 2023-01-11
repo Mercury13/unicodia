@@ -135,7 +135,7 @@ namespace ie {
     private:
     };
 
-    // Programmatic drawing of Tai Xuan Jing icons
+    // Programmatic drawing of Symbols for legacy computing
     class Legacy : public Veng
     {
     public:
