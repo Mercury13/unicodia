@@ -187,7 +187,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "UnicodiaKawiPatch.ttf", 120_pc },                                      // …1
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
-    { "BabelStoneKhitanSmallLinear.ttf", 115_pc },                              // Khitan small
+    { "NotoFangsongKSSVertical-Regular.ttf", 115_pc },                          // Khitan small
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
