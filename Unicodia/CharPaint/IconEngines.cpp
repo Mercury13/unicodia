@@ -274,3 +274,36 @@ void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
     drawL(x0, x1, 4);  drawL(x2, x3, 4);  drawL(x4, x5, 4);
     drawL(x0, x1, 6);  drawL(x2, x3, 6);  drawL(x4, x5, 6);
 }
+
+
+///// Legacy ///////////////////////////////////////////////////////////////////
+
+ie::Legacy::Legacy()
+{
+    texture.load(":Misc/legacy.png");
+}
+
+
+void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    // Fill BG
+    painter->fillRect(rect, Qt::white);
+
+    static constexpr unsigned MIN_WIDTH = 11;
+
+    // Get rect
+    unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
+    int times = (side - 1) / MIN_WIDTH;
+    if (times < 1)
+        times = 1;
+    int ww = texture.width() * times;
+    int hh = texture.height() * times;
+    int x0 = rect.left() + ((rect.width() - ww) >> 1);
+    if (x0 < 1)
+        x0 = 1;
+    int y0 = rect.top() + ((rect.height() - hh) >> 1);
+
+    QRect rcDest { x0, y0, ww, hh };
+    painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
+    painter->drawPixmap(rcDest, texture);
+}

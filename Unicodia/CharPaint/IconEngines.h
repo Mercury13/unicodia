@@ -135,4 +135,15 @@ namespace ie {
     private:
     };
 
+    // Programmatic drawing of Tai Xuan Jing icons
+    class Legacy : public Veng
+    {
+    public:
+        Legacy();
+        Legacy* clone() const override { return new Legacy(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        QPixmap texture;
+    };
+
 }   // namespace ie

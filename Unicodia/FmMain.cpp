@@ -217,7 +217,7 @@ namespace {
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
         case 0x1FB00:   // Legacy computing
-            return new ie::CoarseImage(Qt::white, { 0,1 }, ":Misc/legacy.png");
+            return new ie::Legacy;
         default:
             throw std::logic_error("No custom engine right now");
         }
