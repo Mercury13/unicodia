@@ -2460,7 +2460,7 @@ const uc::Continent uc::continentInfo[] {
     // Tech
     { { 0x225500, 0x7FFF2A } },
     // Europe
-    { { 0x7fffff, 0x204a87 } },
+    { { 0x7fffff, 0x3465a4 } },
     // Asia
     { { 0xffff83, 0xf57900 } },
     // CJK

@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="0180.svg"
    inkscape:export-filename="..\0180.png"
    inkscape:export-xdpi="96"
@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="32"
-     inkscape:cx="9.1875"
+     inkscape:cx="9.234375"
      inkscape:cy="6.125"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -80,14 +80,14 @@
          y="0" />
       <text
          xml:space="preserve"
-         style="font-size:22.2211px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.263495"
+         style="font-size:22.2211px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.263495;fill:#3465a4"
          x="7.7484717"
          y="14.764701"
          id="text1001"
          transform="scale(0.99588687,1.0041301)"><tspan
            sodipodi:role="line"
            id="tspan999"
-           style="stroke-width:0.263495"
+           style="stroke-width:0.263495;fill:#3465a4"
            x="7.7484717"
            y="14.764701">ƈ</tspan></text>
     </g>
