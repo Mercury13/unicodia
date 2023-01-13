@@ -1,0 +1,2 @@
+path c:\msys64\usr\bin;%PATH%
+grep -lUi '#3465A4' *.svg | xargs sed.exe -i 's/#3465a4/#2a5795/g'
