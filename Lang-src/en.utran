@@ -7217,8 +7217,16 @@
      <transl>Palmyrene Aramaic</transl>
     </text>
     <text id="Text">
-     <orig>Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). Происходит из [[ps:Armi|арамейского]]. В алфавите 22 согласных буквы, одна в двух вариантах. Пробелов и знаков препинания нет. Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево. Расшифрована в 1754.</orig>
-     <transl>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left. Deciphered in 1974.</transl>
+     <orig>
+      <p>Письменность применялась с 100{{bc}} до 300 в районе Пальмиры (современная Сирия). Происходит из [[ps:Armi|арамейского]]. В алфавите 22 согласных буквы, одна в двух вариантах. Пробелов и знаков препинания нет. Числа записывались непозиционной системой счисления, напоминающей римские цифры, справа налево.</p>
+      <p />
+      <p>Расшифрована в 1754 через билингву с [[ps:Grek|греческим]]{{-}}Жан-Жак Бартелеми́ был первым, кто расшифровал мёртвый алфавит. В 1758 он расшифрует [[ps:Phnx|финикийский]].</p>
+     </orig>
+     <transl>
+      <p>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left.</p>
+      <p />
+      <p>Deciphered in 1974 using bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
+     </transl>
     </text>
    </group>
    <group id="Pauc">
