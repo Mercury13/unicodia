@@ -12,11 +12,11 @@
    inkscape:export-filename="..\0080.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -28,15 +28,15 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="47.125"
-     inkscape:cx="3.1511936"
-     inkscape:cy="7.8514589"
+     inkscape:zoom="23.5625"
+     inkscape:cx="-3.3103448"
+     inkscape:cy="15.320955"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="text1300"
+     inkscape:current-layer="layer1"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:snap-bbox="true"
@@ -44,50 +44,31 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#ffffff">
-    <inkscape:grid
+     inkscape:deskcolor="#ffffff"><inkscape:grid
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
-    <sodipodi:guide
+       originy="0" /><sodipodi:guide
        position="2.1166666,4.4979165"
        orientation="1,0"
        id="guide835"
-       inkscape:locked="false" />
-    <sodipodi:guide
+       inkscape:locked="false" /><sodipodi:guide
        position="3.7041665,2.1166666"
        orientation="0,-1"
        id="guide837"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
-  <defs
-     id="defs2" />
-  <g
+       inkscape:locked="false" /></sodipodi:namedview><defs
+     id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <g
-       aria-label="ä"
-       id="text1300"
-       style="font-size:5.59863px;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.261459"
-       transform="matrix(3.8270571,0,0,3.8270571,0.29606611,-0.01255631)">
-      <rect
-         style="opacity:1;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:1.15953;stroke-linejoin:bevel;stop-color:#000000"
-         id="rect691"
-         width="4.180758"
-         height="4.180758"
-         x="-0.077361301"
-         y="0.00328096" />
-      <path
-         d="m 2.3759193,3.5340907 c -0.041245,-0.024721 -0.065507,0.01208 -0.092704,0.040586 C 2.1020822,3.7517594 1.8853568,3.9084775 1.6302316,3.9520568 1.4015742,3.9923016 1.1443914,3.9661046 0.96076463,3.8124615 0.78682877,3.6711947 0.72464709,3.4304084 0.7571489,3.2149646 0.78253869,3.0161926 0.91563867,2.8455682 1.0839122,2.7433736 1.3403516,2.5849785 1.6425234,2.5245143 1.9375119,2.4860795 2.0676518,2.4701201 2.1984817,2.4601893 2.3294463,2.4542768 2.3278939,2.2278864 2.3420385,1.9935006 2.2561516,1.7791369 2.208517,1.6580189 2.1027644,1.5615809 1.9749268,1.532751 1.8035867,1.4933803 1.6054983,1.4994285 1.4604482,1.6096578 1.3506544,1.6962156 1.2883031,1.8281043 1.2496325,1.959476 c -0.1193718,0 -0.2387437,0 -0.35811554,0 0,-0.1184606 0,-0.2369211 0,-0.3553817 C 1.2151213,1.4328195 1.5642793,1.2922613 1.9331497,1.268142 c 0.209577,-0.010615 0.4378539,0.00338 0.6126011,0.1326332 0.1438629,0.1055661 0.2124079,0.2818685 0.2331391,0.4539714 0.027608,0.2064618 0.015187,0.4151518 0.01802,0.6227818 0.00104,0.3072927 -0.0026,0.6146381 0.00311,0.9218849 0.00785,0.098448 0.010998,0.2097703 0.080987,0.2869111 0.061737,0.061209 0.1498546,0.08041 0.2302717,0.1047344 0,0.044651 0,0.089301 0,0.1339519 -0.2496771,0 -0.4993542,0 -0.7490313,0 0.00456,-0.1303067 0.00911,-0.2606133 0.013669,-0.39092 z m -0.046473,-0.85565 C 2.0639116,2.6833765 1.7908542,2.7004596 1.5432429,2.8046838 1.4001006,2.864229 1.2691791,2.9797764 1.2355074,3.1366061 1.2110394,3.2578884 1.2156846,3.3949149 1.2851704,3.5012862 1.346814,3.5977366 1.4589598,3.6459948 1.5698738,3.6544268 1.7414391,3.6762652 1.9221286,3.6387527 2.061874,3.5340693 2.2244496,3.4202444 2.3411711,3.2267936 2.3294462,3.0244028 c 0,-0.1153207 10e-8,-0.2306414 10e-8,-0.3459621 z"
-         id="path2501"
-         style="stroke-width:0.261459;fill:#2f5e9d" />
-      <path
-         d="M 2.5727461,0.26457831 V 0.74571057 H 2.1162172 V 0.26457831 Z m -0.9852462,0 V 0.74571057 H 1.130971 V 0.26457831 Z"
-         id="path2498"
-         sodipodi:nodetypes="cccccccccc"
-         style="stroke-width:0.261459;fill:#2f5e9d" />
-    </g>
-  </g>
-</svg>
+     id="layer1"><rect
+       style="font-size:5.59863px;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:4.43759;stroke-linejoin:bevel;stop-color:#000000"
+       id="rect691"
+       width="16"
+       height="16"
+       x="-4.6792157e-09"
+       y="1.1135238e-07" /><path
+       fill="currentColor"
+       d="M 9.9949398,0.99999999 V 2.8415489 H 8.2475606 V 0.99999999 Z m -3.2480815,0 V 2.8415489 H 4.9994795 V 0.99999999 Z M 10.999822,11.860954 c 0,2.069252 0.0077,2.310694 1.203285,2.636763 v 0.512704 H 9.3361502 l 0.052316,-1.496259 -0.1569491,-0.04185 c -1.046203,1.070245 -2.0528885,1.705528 -3.4110522,1.705528 -1.58188,0 -2.6576896,-0.950122 -2.6576896,-2.46935 0,-2.012678 1.9683437,-3.1438386 6.0478139,-3.3273444 V 8.7010232 c 0,-2.0239254 -0.5183948,-2.9297378 -2.0717421,-2.9297378 -0.8003242,0 -1.6441688,0.2908372 -2.0612798,1.7159889 H 3.7068694 V 6.1270395 C 4.7660321,5.5754048 6.3081198,4.8295848 8.0805482,4.8295848 c 2.5120718,0 2.9192738,1.4736156 2.9192738,3.3901243 z m -4.3108989,2.134522 c 1.5265603,0 2.5216663,-1.268869 2.5216663,-2.281009 v -1.475332 c -3.3192242,0.03268 -4.2376551,1.015465 -4.2376551,2.207766 0,1.330571 0.9419772,1.548575 1.7159888,1.548575 z"
+       id="path979"
+       style="font-size:5.59863px;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#2f5e9d;fill-opacity:1;"
+       sodipodi:nodetypes="ccccccccccscccccsscsscccssssscss" /></g></svg>
