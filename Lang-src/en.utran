@@ -7775,14 +7775,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Согдийская письменность происходит из [[ps:Syrc|сирийской]], появилась ≈100. Из согдийской пошла [[ps:Ougr|староуйгурская]], а из неё{{-}}[[ps:Mong|старомонгольская]]. Употреблялась до X{{_}}века, после чего Согдиана была окончательно исламизована и переведена на [[ps:Arab|арабицу]]. Последний источник{{-}}около 1200.</p>
+      <p>Согдийская письменность происходит из [[ps:Syrc|сирийской]], появилась ≈100. Из согдийской пошла [[ps:Ougr|староуйгурская]], а из неё{{-}}[[ps:Mong|старомонгольская]]. Употреблялась до X{{_}}века, после чего Согдиана была окончательно исламизована и переведена на [[ps:Arab|арабицу]]. Последний источник{{-}}около 1200. Буквы соединены.</p>
       <p />
       <p>В Юникоде закодированы два варианта согдийского: старый (по образцу ≈300) и новый (по образцу буддийских рукописей с VI{{_}}века).</p>
       <p />
       <p>Видно, как монгольское письмо стало вертикальным: согдийцы иногда заваливали текст на 90° влево, и именно такой вариант позаимствовали уйгуры.</p>
      </orig>
      <transl>
-      <p>Sogdian script came from [[ps:Syrc|Syriac]] about 100{{_}}CE. [[ps:Ougr|Old Uyghur]] script derives from Sogdian, and [[ps:Mong|Mongolian]] from Uyghur. The script was used until 10th century, after that Sogdiana was finally turned to Islam and switched to [[ps:Arab|Arabic]]. The last specimen is ≈1200.</p>
+      <p>Sogdian script came from [[ps:Syrc|Syriac]] about 100{{_}}CE. [[ps:Ougr|Old Uyghur]] script derives from Sogdian, and [[ps:Mong|Mongolian]] from Uyghur. The script was used until 10th century, after that Sogdiana was finally turned to Islam and switched to [[ps:Arab|Arabic]]. The last specimen is ≈1200. Letters are joined.</p>
       <p />
       <p>Unicode encodes two variants of Sogdian: old (≈300) and new (after Buddhist manuscripts since 6th century).</p>
       <p />
