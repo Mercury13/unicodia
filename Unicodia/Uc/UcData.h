@@ -336,6 +336,7 @@ namespace uc {
           Z_ORK_1,
         PAHAWH_HMONG,
         PALMYRENE,
+        PARTHIAN,
         PAU_CIN_HAU,
         PHAGS_PA,
         PHOENICIAN,

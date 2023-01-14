@@ -6542,11 +6542,6 @@
       <p />
       <p>Термин придумал немец Фридрих Мюллер, он же в 1903 прочитал письмо.</p>
      </orig>
-     <known-orig>
-      <p>Происходит из [[ps:Syrc|сирийского]] и связано с распространением религии манихейства. Когда сасанидская Персия около 300 изгнала манихеев, источники стали встречаться севернее, в Средней Азии. Последние источники датируются X{{_}}веком и найдены в современном Синцзян-Уйгурском округе.</p>
-      <p />
-      <p>Термин придумал немец Фридрих Мюллер, он же в 1903 прочитал письмо.</p>
-     </known-orig>
      <transl>
       <p>Comes from [[ps:Syrc|Syriac]] script and is closely related to religion of Manichaeism. When Sasanid Persia expelled Manichaeans about 300, the specimen started to appear to the north, in Middle Asia. Last inscriptions are dated 10th century and are found in modern Xinjian Region.</p>
       <p />
@@ -7436,8 +7431,14 @@
      <transl>Parthian</transl>
     </text>
     <text id="Text">
-     <orig>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому. Содержит семь [[pt:ligature|лигатур]], которые не{{_}}удалось извлечь из имеющегося шрифта.</orig>
-     <transl>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian. Contains seven ligatures missing in this font.</transl>
+     <orig>
+      <p>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому. Содержит девять [[pt:ligature|лигатур]]:</p>
+      <p>: гимел {{sm|&amp;#68418;}} + вав {{sm|&amp;#68421;}} = гв (справа налево!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
+     </orig>
+     <transl>
+      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian. Contains nine [[pt:ligature|ligatures]]:</p>
+      <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (right to left!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
+     </transl>
     </text>
    </group>
    <group id="Rjng">

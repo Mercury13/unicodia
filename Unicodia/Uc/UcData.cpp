@@ -242,6 +242,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "NotoSansOldTurkic-Regular.ttf" },                                      // …1
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
+    { "NotoSansInscriptionalParthian-Regular.ttf" },                            // Parthian
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
@@ -919,7 +920,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Inscriptional Parthian OK, W10 Historic
     { "Prti", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::yapprox(-250), EcFont::HISTORIC },
+        Dating::yapprox(-250), EcFont::PARTHIAN },
     // Rejang OK, installed Google Noto font
     { "Rjng", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::OCEAN,
