@@ -7432,12 +7432,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому. Содержит девять [[pt:ligature|лигатур]]:</p>
+      <p>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому с письмом [[ps:Phli|пехлеви]], но спорадически встречался. Содержит семь [[pt:ligature|лигатур]] и две хвостатые буквы:</p>
       <p>: гимел {{sm|&amp;#68418;}} + вав {{sm|&amp;#68421;}} = гв (справа налево!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
+      <p>: нун {{sm|&amp;#68429;}} + нун {{sm|&amp;#68429;}} = нн&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
      <transl>
-      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian. Contains nine [[pt:ligature|ligatures]]:</p>
+      <p>Used in inscriptions and coins before the dawn of Sasanid Empire (3rd century). Later was supplanted with Persian with [[ps:Phli|Pahlavi]] script but was used sporadically. Contains seven ligatures [[pt:ligature|ligatures]] and two letters with swash-tails:</p>
       <p>: gimel {{sm|&amp;#68418;}} + waw {{sm|&amp;#68421;}} = gw (right to left!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
+      <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </transl>
     </text>
    </group>

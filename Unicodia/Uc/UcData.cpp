@@ -242,7 +242,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "NotoSansOldTurkic-Regular.ttf" },                                      // …1
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong
     { "NotoSansPalmyrene-Regular.ttf" },                                        // Palmyrene
-    { "NotoSansInscriptionalParthian-Regular.ttf" },                            // Parthian
+    { "NotoSansInscriptionalParthian-Regular.ttf", Ffg::DESC_BIGGER },          // Parthian
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
