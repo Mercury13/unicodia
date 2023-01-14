@@ -7338,12 +7338,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. Есть лишь два источника: 12-страничный фрагмент Псалтыря VI в., найденный в Синцзян-Уйгурском округе, и крест из Афганистана. Знаки параграфов писались наполовину красным, наполовину чёрным.</p>
+      <p>Очень беглое письмо, опознанное как промежуточная фаза письма пехлеви. Есть лишь два источника: 12-страничный фрагмент Псалтыря VI{{_}}века, найденный в Синцзян-Уйгурском округе, и крест из Афганистана. Знаки параграфов писались наполовину красным, наполовину чёрным.</p>
       <p />
       <p>''Книжное пехлеви'', последняя форма письма, так и не{{_}}вошло в Юникод, для него оставлена дыра.</p>
      </orig>
      <transl>
-      <p>Very cursive script identified as intermediate form of Pahlavi. There are only two specimen: 12-page fragment of 6th century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.</p>
+      <p>Very cursive script identified as intermediate form of Pahlavi. There are only two specimen: 12-page fragment of 6th{{_}}century Psalter found in Xinjiang Region, and a cross from Afghanistan. Section marks were written half black, half red.</p>
       <p />
       <p>''Book Pahlavi'', the final form of script, still failed to enter Unicode, a hole was left for it.</p>
      </transl>
