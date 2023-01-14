@@ -6538,10 +6538,19 @@
      <orig>
       <p>Происходит из [[ps:Syrc|сирийского]] и связано с распространением религии манихейства. Когда сасанидская Персия около 300 изгнала манихеев, источники стали встречаться севернее, в Средней Азии. Последние источники датируются X{{_}}веком и найдены в современном Синцзян-Уйгурском округе.</p>
       <p />
+      <p>Буквы соединены, как и в сирийской.</p>
+      <p />
       <p>Термин придумал немец Фридрих Мюллер, он же в 1903 прочитал письмо.</p>
      </orig>
+     <known-orig>
+      <p>Происходит из [[ps:Syrc|сирийского]] и связано с распространением религии манихейства. Когда сасанидская Персия около 300 изгнала манихеев, источники стали встречаться севернее, в Средней Азии. Последние источники датируются X{{_}}веком и найдены в современном Синцзян-Уйгурском округе.</p>
+      <p />
+      <p>Термин придумал немец Фридрих Мюллер, он же в 1903 прочитал письмо.</p>
+     </known-orig>
      <transl>
       <p>Comes from [[ps:Syrc|Syriac]] script and is closely related to religion of Manichaeism. When Sasanid Persia expelled Manichaeans about 300, the specimen started to appear to the north, in Middle Asia. Last inscriptions are dated 10th century and are found in modern Xinjian Region.</p>
+      <p />
+      <p>Letters are joined, like in Syriac.</p>
       <p />
       <p>The term was introduced by Friedrich Müller, who read the script in 1903.</p>
      </transl>
@@ -7356,7 +7365,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Названия букв [[pt:acrophonic|акрофонические]]: алеф=бык, бет=дом, гимел=верблюд…</p>
+      <p>Происходит из малоизученного протосинайского письма. Названия букв [[pt:acrophonic|акрофонические]]: алеф=бык, бет=дом, гимел=верблюд…</p>
       <p />
       <p>Хоть не{{_}}финикийский, а [[ps:Ugar|угаритский]] алфавит считается древнейшим расшифрованным консонантным и первым известным алфавитным порядком, важность финикийского письма трудно переоценить: финикийцы были хорошими мореплавателями и разнесли азбуку по древнему миру.</p>
       <p />
@@ -7374,7 +7383,7 @@
       <p>Жан-Жак Бартелеми́ в 1754 расшифровывает [[ps:Palm|пальмирский алфавит]], а в 1758{{-}}финикийский, также через билингву с греческим.</p>
      </orig>
      <transl>
-      <p>Letter names are [[pt:acrophonic|acrophonic]]: Alef=ox, Bet=house, Gaml=camel…</p>
+      <p>Comes from poorly-explored Proto-Sinaitic script. Letter names are [[pt:acrophonic|acrophonic]]: Alef=ox, Bet=house, Gaml=camel…</p>
       <p />
       <p>Though [[ps:Ugar|Ugaritic]] rather than Phoenician is the most ancient deciphered consonant script and the first well-known alphabetic order, importance of Phoenician script is hard to over-estimate: Phoenicians were good sailors and spread the script across all ancient world.</p>
       <p />
@@ -7538,8 +7547,8 @@
      <transl>South Arabian lanuages ''(Sabaean, Qatabanic etc)'', Ge’ez</transl>
     </text>
     <text id="Text">
-     <orig>Предок [[ps:Ethi|эфиопского]] письма, происходит из протосинайской письменности. В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].</orig>
-     <transl>Ancestor of [[ps:Ethi|Ethiopic]] script, comes from Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</transl>
+     <orig>Предок [[ps:Ethi|эфиопского]] письма, происходит из малоизученной протосинайской письменности. В VII{{_}}веке с экспансией арабов вытеснено [[ps:Arab|арабицей]].</orig>
+     <transl>Ancestor of [[ps:Ethi|Ethiopic]] script, comes from poorly-explored Proto-Sinaic script. It was supplanted with [[ps:Arab|Arabic]] in 7th century with expansion of Arabs.</transl>
     </text>
    </group>
    <group id="Saur">
