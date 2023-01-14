@@ -52,9 +52,6 @@
 #include "LocDic.h"
 #include "LocList.h"
 
-/// @todo [hidpi] Delete this when done!
-constexpr int STARTING_CP_OF_MAX_SVG_BLOCK = 0x10D00;
-
 
 template class LruCache<char32_t, QPixmap>;
 
@@ -249,13 +246,15 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
                 } else {
                     char buf[48];
                     int cp1 = block->startingCp;
-                    // Get extension: SVG for first blocks, PNG for the rest
-                    const char* extension = (cp1 <= STARTING_CP_OF_MAX_SVG_BLOCK)
-                            ? "svg" : "png";
-                    snprintf(buf, std::size(buf), ":/Scripts/%04X.%s",
-                             cp1, extension);
                     auto ico = new QIcon();
+                        snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", cp1);
                         ico->addFile(buf);
+                        /// @todo [hidpi] Delete PNG branch when done
+                        if (ico->isNull()) {
+                            snprintf(buf, std::size(buf), ":/Scripts/%04X.png", cp1);
+                            ico->addFile(buf);
+                        }
+
                     block->icon = ico;
                 }
             }
