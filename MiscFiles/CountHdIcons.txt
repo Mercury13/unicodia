@@ -7,8 +7,10 @@
 	……stopped here by Jan 9……
 	Tai Xuan: programmatic
 	Legacy computing: coarse image
++1 duplicating icon
+	Var sel ex
 
-TOTAL: +2
+TOTAL: +3
 CONTIGUOUS SPAN: +0
 
 
