@@ -5267,15 +5267,20 @@
       <p>Система стенографии, придуманная французским священником Эмилем Дюплойе. По классификации стенографий{{-}}геометрическая (основы знаков{{-}}точки, линии, круги), алфавитная (отдаёт одинаковое внимание гласным и согласным).</p>
       <p />
       <p>Слова пишутся одним росчерком, при этом письмо может уходить далеко вверх или вниз. В «Юникодии» для наглядности используется старый шрифт ''Noto Sans Duployan{{_}}2'', просто дающий какие-то глифы символам Юникода. В 2023 вышел Noto{{_}}3, моделирующий сложное письмо{{-}}он размером в 2{{_}}мегабайта, содержит 10{{_}}тыс. глифов и 500 правил, и слово «cats» в системе Перро для английского языка (K+A+TS, 1BC05+1BC41+1BC36) выглядит как</p>
+      <p>:{{DuplCats}}</p>
+     </orig>
+     <known-orig>
+      <p>Система стенографии, придуманная французским священником Эмилем Дюплойе. По классификации стенографий{{-}}геометрическая (основы знаков{{-}}точки, линии, круги), алфавитная (отдаёт одинаковое внимание гласным и согласным).</p>
+      <p />
+      <p>Слова пишутся одним росчерком, при этом письмо может уходить далеко вверх или вниз. В «Юникодии» для наглядности используется старый шрифт ''Noto Sans Duployan{{_}}2'', просто дающий какие-то глифы символам Юникода. В 2023 вышел Noto{{_}}3, моделирующий сложное письмо{{-}}он размером в 2{{_}}мегабайта, содержит 10{{_}}тыс. глифов и 500 правил, и слово «cats» в системе Перро для английского языка (K+A+TS, 1BC05+1BC41+1BC36) выглядит как</p>
       <p />
       <p>&lt;img src=":/Misc/DuplCats.svg"&gt;</p>
-     </orig>
+     </known-orig>
      <transl>
       <p>Shorthand system invented by French priest Émile Duployé. Classified as geometric (characters are made from dots, lines, circles), alphabetic (pays equal attention to consonants and vowels).</p>
       <p />
       <p>Words are written with a single stroke, and writing may go far above or below the line. ''Unicodia'' uses old ''Noto Sans Duployan{{_}}2'' font for clarity, it just gives some glyphs to Unicode characters. In 2023 Noto{{_}}3 came that actually models complex writing{{-}}it’s 2{{_}}megabytes large, contains 10,000 glyphs and 500 rules, and the word “cats” in Perrault system for English (K+A+TS, 1BC05+1BC41+1BC36) looks like</p>
-      <p />
-      <p>&lt;img src=":/Misc/DuplCats.svg"&gt;</p>
+      <p>:{{DuplCats}}</p>
      </transl>
     </text>
    </group>

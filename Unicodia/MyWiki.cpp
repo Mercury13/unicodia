@@ -390,15 +390,20 @@ namespace {
         finishRecursion(hasRemainder, q);
     }
 
-    void appendFont(QString& s, uc::EcFont fontId,
-                    const SafeVector<std::string_view>& x)
+    void appendFont(QString& s, uc::EcFont fontId, std::string_view x)
     {
         s += "<font face='";
         auto& font = uc::fontInfo[static_cast<int>(fontId)];
         s += font.familiesComma();
         s += "'>";
-        str::append(s, x.safeGetV(1, {}));
+        str::append(s, x);
         str::append(s, "</font>");
+    }
+
+    void appendFont(QString& s, uc::EcFont fontId,
+                    const SafeVector<std::string_view>& x)
+    {
+        appendFont(s, fontId, x.safeGetV(1, {}));
     }
 
     // Key: start/end
@@ -473,6 +478,9 @@ namespace {
             appendFont(s, uc::EcFont::FUNKY, x);
         } else if (name == "noto"sv) {
             appendFont(s, uc::EcFont::NOTO, x);
+        } else if (name == "DuplCats") {
+            uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
+            appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>");
         } else {
             wiki::appendHtml(s, x[0]);
         }
