@@ -7,11 +7,12 @@
 	……stopped here by Jan 9……
 	Tai Xuan: programmatic
 	Legacy computing: coarse image	
-+2 icons done ahead
++3 icons done ahead
 	Water pistol
+	Car
 	Var sel ex
 
-TOTAL: +4
+TOTAL: +5
 CONTIGUOUS SPAN: +0
 
 
