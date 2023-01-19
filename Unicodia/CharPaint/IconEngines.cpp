@@ -307,3 +307,56 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->setRenderHint(QPainter::SmoothPixmapTransform, false);
     painter->drawPixmap(rcDest, texture);
 }
+
+
+///// PlayingCard //////////////////////////////////////////////////////////////
+
+ie::PlayingCard::PlayingCard()
+{
+
+}
+
+// -warn: complains for =default
+ie::PlayingCard::~PlayingCard() {}
+
+
+void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
+    auto margin = CoarseImage::getMargin(side, 1);
+    auto height = side - margin;
+    auto width = std::lround(height * (10.0 / 14.0));
+    auto indexSize = std::lround(height * (1.0 / 11.0));     // 1 at 1×, 2 at 1.25×
+    auto x0 = rect.left() + (rect.width() - width) / 2;
+    auto y0 = rect.top() + (rect.height() - height) / 2;
+    auto x1 = x0 + width;
+    auto y1 = y0 + height;
+    auto radius = height * 0.1;
+
+    static constexpr qreal THICK = 0.2;
+
+    // Frame
+    painter->setBrush(Qt::transparent);
+    painter->setPen(QPen{Qt::black, THICK});
+    painter->setRenderHint(QPainter::Antialiasing, true);
+    //QRect bigCardRect( x0, y0, width, height );
+    QRectF rcSmallCard( x0 + 0.5, y0 + 0.5, width - 1, height - 1 );
+    painter->drawRoundedRect(rcSmallCard, radius, radius);
+
+    // Top index
+    static constexpr QColor HEART_RED { 0xD4, 0x00, 0x00 };
+    auto indexDy = lround(height * (1.0 / 7.0));
+    auto xi1 = x0 + 1;
+    auto yi1 = y0 + indexDy;
+    painter->setRenderHint(QPainter::Antialiasing, false);
+    QRect rcTopIndex( xi1, yi1, indexSize, indexSize );
+    painter->fillRect(rcTopIndex, HEART_RED);
+
+    // Bottom index
+    auto xi2 = x1 - 1;
+    auto yi2 = y1 - indexDy;
+    QRect rcBottomIndex( xi2 - indexSize, yi2 - indexSize, indexSize, indexSize );
+    painter->fillRect(rcBottomIndex, HEART_RED);
+}

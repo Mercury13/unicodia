@@ -2255,7 +2255,7 @@ constinit const uc::Block uc::blocks[] {
             // Fonts coincide
             MyName::INST, EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Cards OK
-    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR },
+    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Playing Cards",
             // Font coincides with Phaistos Disc, with one difference:
             // One emoji here → colour emoji font

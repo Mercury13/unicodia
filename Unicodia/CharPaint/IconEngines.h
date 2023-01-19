@@ -1,5 +1,8 @@
 #pragma once
 
+// STL
+#include <memory>
+
 // Qt
 #include <QIconEngine>
 
@@ -9,6 +12,8 @@
 namespace uc {
     struct SynthIcon;
 }
+
+class QSvgRenderer;
 
 namespace ie {
 
@@ -119,11 +124,11 @@ namespace ie {
         CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname);
         CoarseImage* clone() const override { return new CoarseImage(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+        static unsigned getMargin(unsigned side, unsigned value) noexcept;
     private:
         QColor bg;
         QSize margins;
         QPixmap texture;
-        static unsigned getMargin(unsigned side, unsigned value) noexcept;
     };
 
     // Programmatic drawing of Tai Xuan Jing icons
@@ -144,6 +149,18 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         QPixmap texture;
+    };
+
+    // Programmatic drawing of Playing Cards
+    class PlayingCard : public Veng
+    {
+    public:
+        PlayingCard();
+        ~PlayingCard();
+        PlayingCard* clone() const override { return new PlayingCard(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        std::shared_ptr<QSvgRenderer> texture;
     };
 
 }   // namespace ie

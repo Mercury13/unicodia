@@ -117,4 +117,6 @@ private:
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
 
+QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame);
+
 #endif

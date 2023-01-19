@@ -211,6 +211,8 @@ namespace {
             return new ie::BlockElem;
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":Misc/yijing.png");
+        case 0x1F0A0:   // Playing cards
+            return new ie::PlayingCard;
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
         case 0x1FB00:   // Legacy computing

@@ -386,19 +386,15 @@ struct ControlFrame {
     qreal thickness;
 };
 
-namespace {
-
-    QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame)
-    {
-        auto x0 = std::round((rect.left()   - frame) * scale);
-        auto y0 = std::round((rect.top()    - frame) * scale);
-        auto x1 = std::round((rect.right()  + frame) * scale);
-        auto y1 = std::round((rect.bottom() + frame) * scale);
-        auto recipScale = 1.0 / scale;
-        return { QPointF { x0 * recipScale + frame, y0 * recipScale + frame },
-                 QPointF { x1 * recipScale - frame, y1 * recipScale - frame } };
-    }
-
+QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame)
+{
+    auto x0 = std::round((rect.left()   - frame) * scale);
+    auto y0 = std::round((rect.top()    - frame) * scale);
+    auto x1 = std::round((rect.right()  + frame) * scale);
+    auto y1 = std::round((rect.bottom() + frame) * scale);
+    auto recipScale = 1.0 / scale;
+    return { QPointF { x0 * recipScale + frame, y0 * recipScale + frame },
+             QPointF { x1 * recipScale - frame, y1 * recipScale - frame } };
 }
 
 ControlFrame drawControlFrame(
