@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333332 4.2333335"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
+   sodipodi:docname="1F000.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\1F000.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:snap-nodes="false"
+     inkscape:zoom="47.125"
+     inkscape:cx="8"
+     inkscape:cy="8"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824" />
+    <sodipodi:guide
+       position="2.6458333,2.1166667"
+       orientation="0,-1"
+       id="guide1351" />
+    <sodipodi:guide
+       position="2.1166667,1.5875"
+       orientation="1,0"
+       id="guide1353" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#f2f2f2;stroke:#cccccc;stroke-width:0.264583;stroke-linecap:round;stop-color:#000000"
+       id="rect887"
+       width="2.9104171"
+       height="3.9687505"
+       x="0.66145819"
+       y="0.1322915" />
+    <path
+       style="fill:#ffd5e5;stroke:#de87aa;stroke-width:0.999999;stroke-linecap:round;stop-color:#000000"
+       d="M 8,3.3710938 A 1.8011803,1.8011803 0 0 0 6.1992188,5.171875 1.8011803,1.8011803 0 0 0 6.2480469,5.5898438 1.8011803,1.8011803 0 0 0 5.8671875,5.4140625 1.8011803,1.8011803 0 0 0 3.5976562,6.5703125 1.8011803,1.8011803 0 0 0 4.7539062,8.8398438 1.8011803,1.8011803 0 0 0 5.1660156,8.9199219 1.8011803,1.8011803 0 0 0 4.8808594,9.2285156 1.8011803,1.8011803 0 0 0 5.2792969,11.744141 1.8011803,1.8011803 0 0 0 7.7949219,11.345703 1.8011803,1.8011803 0 0 0 8,10.982422 a 1.8011803,1.8011803 0 0 0 0.2050781,0.363281 1.8011803,1.8011803 0 0 0 2.5156249,0.398438 1.8011803,1.8011803 0 0 0 0.398438,-2.5156254 1.8011803,1.8011803 0 0 0 -0.285157,-0.3085937 1.8011803,1.8011803 0 0 0 0.41211,-0.080078 1.8011803,1.8011803 0 0 0 1.15625,-2.2695313 1.8011803,1.8011803 0 0 0 -2.269532,-1.15625 A 1.8011803,1.8011803 0 0 0 9.7519531,5.5898438 1.8011803,1.8011803 0 0 0 9.8007812,5.171875 1.8011803,1.8011803 0 0 0 8,3.3710938 Z"
+       id="path1615"
+       transform="scale(0.26458333)" />
+    <circle
+       style="fill:#ffffff;stroke:none;stroke-width:0.264584;stroke-linecap:round;stop-color:#000000"
+       id="path3370"
+       cx="2.1166668"
+       cy="2.1166668"
+       r="0.45056379" />
+  </g>
+</svg>

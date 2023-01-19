@@ -4,16 +4,17 @@
 +4 custom engines
 	Block elements: programmatic
 	Yijing: coarse image
-	……stopped here by Jan 9……
+	……stopped here by Jan 19……
 	Tai Xuan: programmatic
-	Legacy computing: coarse image	
-+4 icons done ahead
+	Legacy computing: strange sort of coarse image	
++5 icons done ahead
+	Mahjongg
 	Water pistol
 	Smile in love
 	Car
 	Var sel ex
 
-TOTAL: +6
+TOTAL: +7
 CONTIGUOUS SPAN: +0
 
 
