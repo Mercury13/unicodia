@@ -6,11 +6,12 @@
 	Yijing: coarse image
 	……stopped here by Jan 9……
 	Tai Xuan: programmatic
-	Legacy computing: coarse image
-+1 duplicating icon
+	Legacy computing: coarse image	
++2 icons done ahead
+	Water pistol
 	Var sel ex
 
-TOTAL: +3
+TOTAL: +4
 CONTIGUOUS SPAN: +0
 
 
