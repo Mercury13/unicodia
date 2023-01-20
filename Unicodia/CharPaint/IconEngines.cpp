@@ -3,6 +3,7 @@
 // Qt
 #include <QPainter>
 #include <QGuiApplication>
+#include <QSvgRenderer>
 #include <private/qguiapplication_p.h>
 
 // Char paint
@@ -205,7 +206,7 @@ unsigned ie::CoarseImage::getMargin(unsigned side, unsigned value) noexcept
 {
     if (value == 0)
         return 0;
-    auto r = (side * value) / 24u;
+    auto r = (side * value) / 14u;  // 2px at 1.75+ = 28px
     if (r == 0)
         r = 1;
     return r << 1;
@@ -312,11 +313,12 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// PlayingCard //////////////////////////////////////////////////////////////
 
 ie::PlayingCard::PlayingCard()
-{
-
+{    
+    texture = std::make_shared<QSvgRenderer>(QString{":Misc/playcard.svg"});
+    texture->setAspectRatioMode(Qt::KeepAspectRatio);
 }
 
-// -warn: complains for =default
+// -warn: complains about =default
 ie::PlayingCard::~PlayingCard() {}
 
 
@@ -335,19 +337,23 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     auto y1 = y0 + height;
     auto radius = height * 0.1;
 
-    static constexpr qreal THICK = 0.2;
+    static constexpr qreal THICK = 0.25;
+    static constexpr qreal MIN_THICK = THICK;
+    static constexpr qreal MAX_THICK = 0.6;
+        // Darker with scale in non-linear manner
+    auto actualThick = std::clamp(THICK * sqrt(scale), MIN_THICK, MAX_THICK);
 
     // Frame
     painter->setBrush(Qt::transparent);
-    painter->setPen(QPen{Qt::black, THICK});
+    painter->setPen(QPen{Qt::black, actualThick});
     painter->setRenderHint(QPainter::Antialiasing, true);
-    //QRect bigCardRect( x0, y0, width, height );
+    QRect rcBigCard( x0, y0, width, height );
     QRectF rcSmallCard( x0 + 0.5, y0 + 0.5, width - 1, height - 1 );
     painter->drawRoundedRect(rcSmallCard, radius, radius);
 
     // Top index
     static constexpr QColor HEART_RED { 0xD4, 0x00, 0x00 };
-    auto indexDy = lround(height * (1.0 / 7.0));
+    auto indexDy = lround(height * (1.0 / 9.0));
     auto xi1 = x0 + 1;
     auto yi1 = y0 + indexDy;
     painter->setRenderHint(QPainter::Antialiasing, false);
@@ -359,4 +365,8 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     auto yi2 = y1 - indexDy;
     QRect rcBottomIndex( xi2 - indexSize, yi2 - indexSize, indexSize, indexSize );
     painter->fillRect(rcBottomIndex, HEART_RED);
+
+    // Ace itself
+    painter->setRenderHint(QPainter::Antialiasing, true);
+    texture->render(painter, rcBigCard);
 }

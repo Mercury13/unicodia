@@ -160,6 +160,7 @@ namespace ie {
         PlayingCard* clone() const override { return new PlayingCard(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
+        // no implicit data sharing :)
         std::shared_ptr<QSvgRenderer> texture;
     };
 

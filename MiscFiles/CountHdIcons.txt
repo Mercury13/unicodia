@@ -1,29 +1,27 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+4 custom engines
-	Block elements: programmatic
-	Yijing: coarse image
-	……stopped here by Jan 19……
-	Tai Xuan: programmatic
-	Legacy computing: strange sort of coarse image	
-+7 icons done ahead
++5 custom engines
+	Block elements: programmatic (moire)
+	Yijing: coarse image (moire)
+	Tai Xuan: programmatic (threat of moire, IDK)
+	Playing cards: programmatic (cannot scale round corners properly)
+	Legacy computing: strange sort of coarse image (want pixels)
++6 icons done ahead
 	Mahjongg
 	Domino
-	Cards
 	Water pistol
 	Smile in love
 	Car
 	Var sel ex
 
 TOTAL: +9
-CONTIGUOUS SPAN: +0
 
 
 Files
 
 321 blocks
-−4 custom engines
+−5 custom engines
 +1 resource file
 
-TOTAL: 318
+TOTAL: 317
