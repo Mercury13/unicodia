@@ -33,11 +33,14 @@ namespace util {
         QRectF rcFrame;
     };
 
+    enum class BrightnessMode { EMPIRICAL, OPTICAL };
+    constexpr auto MODE = BrightnessMode::EMPIRICAL;
+
     //constexpr inline double whitesBrightness(double value, double gamma)
     //    { return std::pow(value, gamma);  }
 
-    //constexpr inline double blacksBrightness(double value, double gamma)
-    //    { return 1.0 - std::pow(1.0 - value, gamma);  }
+    constexpr inline double blacksBrightness(double value, double gamma)
+        { return 1.0 - std::pow(1.0 - value, gamma);  }
     // 1.0 - value = {value} of black, {1.0 - value} of white
     // pow(prev, gamma) = its optical brightness
     // 1.0 - prev = its optical content of black
@@ -60,18 +63,20 @@ namespace util {
         static constexpr qreal MAX_THICK = 0.9;
         auto actualThickness = baseThickness;
         if (scale > 1) {
-            // Simple empirical formula :)
-            actualThickness = std::min(baseThickness * sqrt(scale), MAX_THICK);
-
-            // This formula is based on optics, but dislike somehow
-//            auto linearBrightness = blacksBrightness(baseThickness, GAMMA);
-//            linearBrightness *= scale;
-//            if (linearBrightness >= 1) {
-//                actualThickness = MAX_THICK;
-//            } else {
-//                linearBrightness = blacksBrightness(linearBrightness, INVGAMMA);
-//                actualThickness = std::min(linearBrightness, MAX_THICK);
-//            }
+            if constexpr (MODE == BrightnessMode::EMPIRICAL) {
+                // Simple empirical formula :)
+                actualThickness = std::min(baseThickness * sqrt(scale), MAX_THICK);
+            } else {
+                // This formula is based on optics, but dislike somehow
+                auto linearBrightness = blacksBrightness(baseThickness, GAMMA);
+                linearBrightness *= scale;
+                if (linearBrightness >= 1) {
+                    actualThickness = MAX_THICK;
+                } else {
+                    linearBrightness = blacksBrightness(linearBrightness, INVGAMMA);
+                    actualThickness = std::min(linearBrightness, MAX_THICK);
+                }
+            }
         }
 
         return {
