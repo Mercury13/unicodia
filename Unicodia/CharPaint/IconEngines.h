@@ -124,7 +124,6 @@ namespace ie {
         CoarseImage(const QColor& aBg, const QSize& aMargins, const char* fname);
         CoarseImage* clone() const override { return new CoarseImage(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
-        static unsigned getMargin(unsigned side, unsigned value) noexcept;
     private:
         QColor bg;
         QSize margins;

@@ -10,6 +10,58 @@
 #include "routines.h"
 #include "Skin.h"
 
+///// Util /////////////////////////////////////////////////////////////////////
+
+namespace util {
+
+    unsigned getMargin(unsigned side, unsigned value) noexcept
+    {
+        if (value == 0)
+            return 0;
+        auto r = (side * value) / 14u;  // 2px at 1.75+ = 28px
+        if (r == 0)
+            r = 1;
+        return r << 1;
+    }
+
+    constexpr qreal GAMMA = 2.2;
+
+    struct CardDimensions {
+        qreal thickness;
+        QRect rcPixel;
+        QRectF rcFrame;
+    };
+
+    CardDimensions cardDimensions(
+            const QRect& rect,
+            qreal scale,
+            unsigned baseWidth,
+            qreal baseThickness)
+    {
+        // card height is always 14
+        unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
+        auto margin = util::getMargin(side, 1);
+        auto height = side - margin;
+        auto cardAspect = baseWidth / 14.0;     // base card height is always 14
+        auto width = std::lround(height * cardAspect);
+        auto x0 = rect.left() + (rect.width() - width) / 2;
+        auto y0 = rect.top() + (rect.height() - height) / 2;
+
+        static constexpr qreal THICK = 0.25;
+        static constexpr qreal MIN_THICK = THICK;
+        static constexpr qreal MAX_THICK = 0.6;
+            // Darker with scale in non-linear manner
+        auto actualThick = std::clamp(THICK * sqrt(scale), MIN_THICK, MAX_THICK);
+
+        return {
+            .thickness = actualThick,
+            .rcPixel = QRect( x0, y0, width, height ),
+            .rcFrame { x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 }
+        };
+    }
+
+}   // namespace util
+
 ///// Veng /////////////////////////////////////////////////////////////////////
 
 QPixmap ie::Veng::pixmap(
@@ -202,17 +254,6 @@ ie::CoarseImage::CoarseImage(const QColor& aBg, const QSize& aMargins, const cha
 }
 
 
-unsigned ie::CoarseImage::getMargin(unsigned side, unsigned value) noexcept
-{
-    if (value == 0)
-        return 0;
-    auto r = (side * value) / 14u;  // 2px at 1.75+ = 28px
-    if (r == 0)
-        r = 1;
-    return r << 1;
-}
-
-
 void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     // Fill BG
@@ -220,8 +261,8 @@ void ie::CoarseImage::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Get rect
     unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
-    auto mx = getMargin(side, margins.width());
-    auto my = getMargin(side, margins.height());
+    auto mx = util::getMargin(side, margins.width());
+    auto my = util::getMargin(side, margins.height());
     int times = std::min((side - mx) / texture.width(),
                          (side - my) / texture.height());
     if (times < 1)
@@ -326,47 +367,34 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     painter->fillRect(rect, Qt::white);
 
-    unsigned side = std::lround(16.0 * scale - 0.1);  // 0 / 0.5px — sometimes we request a bit smaller icon
-    auto margin = CoarseImage::getMargin(side, 1);
-    auto height = side - margin;
-    auto width = std::lround(height * (10.0 / 14.0));
-    auto indexSize = std::lround(height * (1.0 / 11.0));     // 1 at 1×, 2 at 1.25×
-    auto x0 = rect.left() + (rect.width() - width) / 2;
-    auto y0 = rect.top() + (rect.height() - height) / 2;
-    auto x1 = x0 + width;
-    auto y1 = y0 + height;
-    auto radius = height * 0.1;
-
-    static constexpr qreal THICK = 0.25;
-    static constexpr qreal MIN_THICK = THICK;
-    static constexpr qreal MAX_THICK = 0.6;
-        // Darker with scale in non-linear manner
-    auto actualThick = std::clamp(THICK * sqrt(scale), MIN_THICK, MAX_THICK);
+    // Get dimensions
+    // (point’s dimensions are baked into SVG)
+    auto dim = util::cardDimensions(rect, scale, 10, 0.25);
+    auto indexSize = std::lround(dim.rcPixel.height() * (1.0 / 11.0));     // 1 at 1×, 2 at 1.25×
+    auto radius = dim.rcPixel.height() * 0.1;
 
     // Frame
     painter->setBrush(Qt::transparent);
-    painter->setPen(QPen{Qt::black, actualThick});
+    painter->setPen(QPen{Qt::black, dim.thickness});
     painter->setRenderHint(QPainter::Antialiasing, true);
-    QRect rcBigCard( x0, y0, width, height );
-    QRectF rcSmallCard( x0 + 0.5, y0 + 0.5, width - 1, height - 1 );
-    painter->drawRoundedRect(rcSmallCard, radius, radius);
+    painter->drawRoundedRect(dim.rcFrame, radius, radius);
 
     // Top index
     static constexpr QColor HEART_RED { 0xD4, 0x00, 0x00 };
-    auto indexDy = lround(height * (1.0 / 9.0));
-    auto xi1 = x0 + 1;
-    auto yi1 = y0 + indexDy;
+    auto indexDy = lround(dim.rcPixel.height() * (1.0 / 9.0));
+    auto xi1 = dim.rcPixel.left() + 1;
+    auto yi1 = dim.rcPixel.top() + indexDy;
     painter->setRenderHint(QPainter::Antialiasing, false);
     QRect rcTopIndex( xi1, yi1, indexSize, indexSize );
     painter->fillRect(rcTopIndex, HEART_RED);
 
     // Bottom index
-    auto xi2 = x1 - 1;
-    auto yi2 = y1 - indexDy;
+    auto xi2 = dim.rcPixel.right() - 1;
+    auto yi2 = dim.rcPixel.bottom() - indexDy;
     QRect rcBottomIndex( xi2 - indexSize, yi2 - indexSize, indexSize, indexSize );
     painter->fillRect(rcBottomIndex, HEART_RED);
 
-    // Ace itself
+    // Point
     painter->setRenderHint(QPainter::Antialiasing, true);
-    texture->render(painter, rcBigCard);
+    texture->render(painter, dim.rcPixel);
 }
