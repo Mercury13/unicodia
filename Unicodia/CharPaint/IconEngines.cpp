@@ -25,12 +25,22 @@ namespace util {
     }
 
     constexpr qreal GAMMA = 2.2;
+    constexpr qreal INVGAMMA = 1.0 / GAMMA;
 
     struct CardDimensions {
         qreal thickness;
         QRect rcPixel;
         QRectF rcFrame;
     };
+
+    //constexpr inline double whitesBrightness(double value, double gamma)
+    //    { return std::pow(value, gamma);  }
+
+    //constexpr inline double blacksBrightness(double value, double gamma)
+    //    { return 1.0 - std::pow(1.0 - value, gamma);  }
+    // 1.0 - value = {value} of black, {1.0 - value} of white
+    // pow(prev, gamma) = its optical brightness
+    // 1.0 - prev = its optical content of black
 
     CardDimensions cardDimensions(
             const QRect& rect,
@@ -47,14 +57,25 @@ namespace util {
         auto x0 = rect.left() + (rect.width() - width) / 2;
         auto y0 = rect.top() + (rect.height() - height) / 2;
 
-        static constexpr qreal THICK = 0.25;
-        static constexpr qreal MIN_THICK = THICK;
-        static constexpr qreal MAX_THICK = 0.6;
-            // Darker with scale in non-linear manner
-        auto actualThick = std::clamp(THICK * sqrt(scale), MIN_THICK, MAX_THICK);
+        static constexpr qreal MAX_THICK = 0.9;
+        auto actualThickness = baseThickness;
+        if (scale > 1) {
+            // Simple empirical formula :)
+            actualThickness = std::min(baseThickness * sqrt(scale), MAX_THICK);
+
+            // This formula is based on optics, but dislike somehow
+//            auto linearBrightness = blacksBrightness(baseThickness, GAMMA);
+//            linearBrightness *= scale;
+//            if (linearBrightness >= 1) {
+//                actualThickness = MAX_THICK;
+//            } else {
+//                linearBrightness = blacksBrightness(linearBrightness, INVGAMMA);
+//                actualThickness = std::min(linearBrightness, MAX_THICK);
+//            }
+        }
 
         return {
-            .thickness = actualThick,
+            .thickness = actualThickness,
             .rcPixel = QRect( x0, y0, width, height ),
             .rcFrame { x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 }
         };
@@ -369,7 +390,7 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Get dimensions
     // (point’s dimensions are baked into SVG)
-    auto dim = util::cardDimensions(rect, scale, 10, 0.25);
+    auto dim = util::cardDimensions(rect, scale, 10, 0.3);
     auto indexSize = std::lround(dim.rcPixel.height() * (1.0 / 11.0));     // 1 at 1×, 2 at 1.25×
     auto radius = dim.rcPixel.height() * 0.1;
 
