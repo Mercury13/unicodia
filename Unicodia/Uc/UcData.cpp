@@ -247,6 +247,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
     { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Mahjong tiles
+    /// @todo [misrender] Want negative padding, but how??
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi

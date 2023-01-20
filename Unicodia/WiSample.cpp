@@ -52,6 +52,7 @@ void WiSample::drawWithQt(const uc::Cp& ch)
 void WiSample::clearSample()
 {
     ui->lbSample->clear();
+    ui->lbSample->setStyleSheet({});
     ui->lbSample->setFont(QFont());
 }
 
@@ -91,12 +92,14 @@ void WiSample::showCp(const uc::Cp& ch)
         drawWithQt(ch);
         break;
     case uc::DrawMethod::EGYPTIAN_HATCH: {
+            clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             auto font = ch.font(uc::MatchLast::NO);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
             ui->pageSampleCustom->setEgyptianHatch(qfont, ch.subj);
         } break;
     case uc::DrawMethod::SVG_EMOJI:
+        clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setEmoji(ch.subj);
         break;
