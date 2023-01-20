@@ -1954,7 +1954,7 @@
    <group id="27F0">
     <text id="Name">
      <orig>Стрелки дополнительные A</orig>
-     <transl>Supplemental arrows A</transl>
+     <transl>Arrows supplemental A</transl>
     </text>
     <text id="Text">
      <orig>Шестнадцать разных математических и технических стрелок, в основном круговые и удлинённые.</orig>
@@ -1970,7 +1970,7 @@
    <group id="2900">
     <text id="Name">
      <orig>Стрелки дополнительные B</orig>
-     <transl>Supplemental arrows B</transl>
+     <transl>Arrows supplemental B</transl>
     </text>
     <text id="Text">
      <orig>Скрещённые стрелки из теории узлов, гарпуны, искривлённые стрелки и другие символы.</orig>
@@ -4231,7 +4231,7 @@
    <group id="1F800">
     <text id="Name">
      <orig>Стрелки дополнительные C</orig>
-     <transl>Supplemental arrows C</transl>
+     <transl>Arrows supplemental C</transl>
     </text>
     <text id="Text">
      <orig>По состоянию на Юникод{{_}}13.0{{-}}148 стрелок из шрифтов ''Wingdings'' и ''Webdings'', и две стрелки со старых компьютеров. Юникод{{_}}14 не{{_}}принёс новых стрелок.</orig>
@@ -4241,7 +4241,7 @@
    <group id="1F900">
     <text id="Name">
      <orig>Символы и пиктограммы дополнительные</orig>
-     <transl>Supplemental symbols and pictographs</transl>
+     <transl>Symbols and pictographs supplemental</transl>
     </text>
     <text id="Text">
      <orig>Появившийся в 2015 блок символов разного назначения, в основном [[pt:emoji|эмодзи]]. Также несколько символов из Типикона{{-}}типового устава православного богослужения, кодифицированного около 1100, последние крупные правки 1695.</orig>
