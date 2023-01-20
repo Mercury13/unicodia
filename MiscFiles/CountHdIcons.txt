@@ -2,21 +2,22 @@
 
 −2 QRC header: 2 lines
 +5 custom engines
-	Block elements: programmatic (moire)
+	Block elements: special (moire)
 	Yijing: coarse image (moire)
-	Tai Xuan: programmatic (threat of moire, IDK)
-	Playing cards: programmatic (cannot scale round corners properly)
-	Legacy computing: strange sort of coarse image (want pixels)
-+7 icons done ahead
+	Tai Xuan: special (threat of moire, IDK)
+	Playing cards: special (cannot scale round corners properly)
+	Legacy computing: special, based on coarse image (want pixels)
++8 icons done ahead
 	Mahjongg
 	Domino
 	Water pistol
 	Smile in love
 	Car
 	Foxy
+	Parachute
 	Var sel ex
 
-TOTAL: +10
+TOTAL: +11
 
 
 Files
