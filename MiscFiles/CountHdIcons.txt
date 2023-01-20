@@ -7,15 +7,16 @@
 	Tai Xuan: programmatic (threat of moire, IDK)
 	Playing cards: programmatic (cannot scale round corners properly)
 	Legacy computing: strange sort of coarse image (want pixels)
-+6 icons done ahead
++7 icons done ahead
 	Mahjongg
 	Domino
 	Water pistol
 	Smile in love
 	Car
+	Foxy
 	Var sel ex
 
-TOTAL: +9
+TOTAL: +10
 
 
 Files
