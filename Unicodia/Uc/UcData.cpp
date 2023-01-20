@@ -246,7 +246,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Playing cards
+    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Mahjong tiles
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
     { "NotoSansPsalterPahlavi-Regular.ttf" },                                   // Psalter Pahlavi
@@ -2248,7 +2248,8 @@ constinit const uc::Block uc::blocks[] {
     // Mahjong tiles OK
     { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR },
             "Mahjong Tiles",
-            MyName::INST, EcScript::NONE, EcFont::PLAYING_CARDS },
+            // Use emoji, with fallback to Phaistos Disc
+            MyName::INST, EcScript::NONE, EcFont::MAHJONG_TILES },
     // Domino tiles OK
     { 0x1F030, 0x1F09F, { 0x1F043, EcContinent::NONE },
             "Domino Tiles",
@@ -2257,9 +2258,7 @@ constinit const uc::Block uc::blocks[] {
     // Cards OK
     { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Playing Cards",
-            // Font coincides with Phaistos Disc, with one difference:
-            // One emoji here → colour emoji font
-            MyName::INST, EcScript::NONE, EcFont::PLAYING_CARDS },
+            MyName::INST, EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK, added a few symbols to FunkySample
     { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE },
             "Enclosed Alphanumeric Supplement",

@@ -340,7 +340,7 @@ namespace uc {
         PAU_CIN_HAU,
         PHAGS_PA,
         PHOENICIAN,
-        PLAYING_CARDS,     // Fall down to Phaistos Disc
+        MAHJONG_TILES,      // Fall down to Phaistos Disc
          PHAISTOS_DISC,
         POLLARD,
         PSALTER_PAHLAVI,
