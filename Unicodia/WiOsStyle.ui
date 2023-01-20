@@ -62,6 +62,12 @@
           <height>108</height>
          </size>
         </property>
+        <property name="maximumSize">
+         <size>
+          <width>300</width>
+          <height>300</height>
+         </size>
+        </property>
         <property name="text">
          <string notr="true">%</string>
         </property>
