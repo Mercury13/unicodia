@@ -1,7 +1,8 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+5 custom engines
++6 custom engines
+	Arrows: v-hinter (prevailing vertical stem)
 	Block elements: special (moire)
 	Yijing: coarse image (moire)
 	Tai Xuan: special (threat of moire, IDK)
@@ -17,13 +18,13 @@
 	Parachute
 	Var sel ex
 
-TOTAL: +11
+TOTAL: +12
 
 
 Files
 
 321 blocks
-−5 custom engines
+−6 custom engines
 +1 resource file
 
-TOTAL: 317
+TOTAL: 316

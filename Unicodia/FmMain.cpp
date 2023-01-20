@@ -207,6 +207,8 @@ namespace {
     QIconEngine* getCustomEngine(char32_t startingCp)
     {
         switch (startingCp) {
+        case 0x2190:
+            return new ie::Vhint(":Misc/arrow.svg", 7);
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x4DC0:    // Yijing

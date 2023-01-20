@@ -163,4 +163,18 @@ namespace ie {
         std::shared_ptr<QSvgRenderer> texture;
     };
 
+    // Programmatic drawing of Arrows
+    class Vhint : public Veng
+    {
+    public:
+        Vhint(const char* fname, int aHintPos);
+        ~Vhint();
+        Vhint* clone() const override { return new Vhint(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        // no implicit data sharing :)
+        std::shared_ptr<QSvgRenderer> texture;
+        double hintPos;
+    };
+
 }   // namespace ie

@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="2190.svg"
+   sodipodi:docname="arrow.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="48.75"
-     inkscape:cx="7.9897436"
+     inkscape:cx="8.0512821"
      inkscape:cy="8"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -60,13 +60,7 @@
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" /><path
-       d="M 6.8360055,15 V 3.0855041 L 4.3203076,5.0681361 3.7685374,4.4789578 7.1726789,0.99999993 H 7.8179695 L 11.231463,4.4789578 10.679694,5.0681361 8.1639949,3.0855041 V 15 Z"
+     id="layer1"><path
+       d="M 7,15 V 3.0855041 L 4.4843021,5.0681361 3.9325319,4.4789578 7.3366734,0.99999993 H 7.981964 L 11.395457,4.4789578 10.843688,5.0681361 8.3279894,3.0855041 V 15 Z"
        style="stroke-width:0.999999"
        id="path411" /></g></svg>

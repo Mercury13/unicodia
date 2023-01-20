@@ -424,3 +424,30 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->setRenderHint(QPainter::Antialiasing, true);
     texture->render(painter, dim.rcPixel);
 }
+
+
+///// Vhint ////////////////////////////////////////////////////////////////////
+
+ie::Vhint::Vhint(const char* fname, int aHintPos)
+    : hintPos(aHintPos * (1.0 / 16.0))
+{
+    texture = std::make_shared<QSvgRenderer>(QString{fname});
+    texture->setAspectRatioMode(Qt::KeepAspectRatio);
+}
+
+// -warn: complains about =default
+ie::Vhint::~Vhint() {}
+
+
+void ie::Vhint::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    QRectF rect1 = rect;
+    const auto realPos = rect.width() * hintPos;
+    const auto wantedPos = std::lround(realPos);
+    const auto delta = wantedPos - realPos;
+    rect1.moveLeft(rect.left() + delta);
+
+    texture->render(painter, rect1);
+}

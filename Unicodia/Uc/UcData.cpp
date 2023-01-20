@@ -1439,7 +1439,7 @@ constinit const uc::Block uc::blocks[] {
             "Number Forms",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
-    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE },
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Arrows",
             { EcScript::ZARR, 0 }, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK
