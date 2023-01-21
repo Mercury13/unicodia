@@ -10,7 +10,7 @@ constexpr uc::SvgHint operator "" _hy (unsigned long long y)
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE },
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, {}, SvgHint { 5, 15 } },
             "Basic Latin",
             { EcScript::Latn, 0 },
             EcScript::Latn, EcFont::NORMAL,
@@ -46,7 +46,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
         "Greek and Coptic", { EcScript::Grek, 0 } },
     // Cyrillic OK
-    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE },
+    { 0x0400, 0x04FF, { 0x42F, EcContinent::EUROPE, {}, 12_hx },
             "Cyrillic",
             { EcScript::Cyrl, 0 },
             EcScript::Cyrl, EcFont::NORMAL, Bfg::UNGLITCH_MARKS },
@@ -100,7 +100,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'A' },
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Devanagari OK
-    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA },
+    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, {}, SvgHint { 9, 2 } },
             "Devanagari", { EcScript::Deva, 0 }, EcScript::Deva },
     // Bengali OK
     { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA },

@@ -578,8 +578,9 @@ namespace uc {
         using BiggerType = uint16_t;
         operator bool() const { return std::bit_cast<BiggerType>(*this); }
 
-        constexpr double qx() const noexcept { return x / 16.0; }
-        constexpr double qy() const noexcept { return y / 16.0; }
+        static constexpr unsigned SIDE = 16;
+        constexpr double qx() const noexcept { return static_cast<double>(x) / SIDE; }
+        constexpr double qy() const noexcept { return static_cast<double>(y) / SIDE; }
     };
     static_assert(sizeof(SvgHint::BiggerType) == sizeof(SvgHint), "BiggerType wrong");
 

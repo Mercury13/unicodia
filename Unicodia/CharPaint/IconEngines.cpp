@@ -86,25 +86,27 @@ namespace util {
         };
     }
 
-    /// @pre
-    ///   rect has same aspect ratio as texture (e.g. square)
-    ///
+    /// @pre rect is square too
     void drawHintedSvg(
             QPainter* painter, const QRect& rect,
             QSvgRenderer& texture, const uc::SvgHint& hint)
     {
         QRectF rect1 = rect;
-        if (hint.x != 0) {
-            const auto realPos = rect.width() * hint.qx();
-            const auto wantedPos = std::lround(realPos);
-            const auto delta = wantedPos - realPos;
-            rect1.moveLeft(rect.left() + delta);
-        }
-        if (hint.y != 0) {
-            const auto realPos = rect.height() * hint.qy();
-            const auto wantedPos = std::lround(realPos);
-            const auto delta = wantedPos - realPos;
-            rect1.moveTop(rect.top() + delta);
+        // Smaller → who knows
+        // Equal → no need to hint, both deltas are 0
+        if (rect.width() > uc::SvgHint::SIDE && rect.height() > uc::SvgHint::SIDE) {
+            if (hint.x != 0) {
+                const auto realPos = rect.width() * hint.qx();
+                const auto wantedPos = std::lround(realPos);
+                const auto delta = wantedPos - realPos;
+                rect1.moveLeft(rect.left() + delta);
+            }
+            if (hint.y != 0) {
+                const auto realPos = rect.height() * hint.qy();
+                const auto wantedPos = std::lround(realPos);
+                const auto delta = wantedPos - realPos;
+                rect1.moveTop(rect.top() + delta);
+            }
         }
 
         texture.render(painter, rect1);
