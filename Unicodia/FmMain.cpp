@@ -815,6 +815,10 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Combobox
     ui->comboBlock->setModel(&blocksModel);
+    if (auto view = qobject_cast<QListView*>(ui->comboBlock->view())) {
+        // true for Qt6, maybe I’ll add Qt5 x86?
+        view->setUniformItemSizes(true);
+    }
     connect(ui->comboBlock, &QComboBox::currentIndexChanged, this, &This::comboIndexChanged);
     connect(ui->comboBlock, &WideComboBox::droppedDown, this, &This::comboDroppedDown);
     connect(ui->comboBlock, &WideComboBox::pulledUp, this, &This::comboPulledUp);
