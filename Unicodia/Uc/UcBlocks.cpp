@@ -858,7 +858,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11900, 0x1195F, { 0x1190D, EcContinent::OCEAN },
             "Dives Akuru", { EcScript::Diak, 0 }, EcScript::Diak },
     // Nandi OK
-    { 0x119A0, 0x119FF, { 0x119B4, EcContinent::ASIA },
+    { 0x119A0, 0x119FF, { 0x119B4, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
             "Nandinagari", { EcScript::Nand, 0 }, EcScript::Nand },
     // Zanabazar square OK
     { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA },
