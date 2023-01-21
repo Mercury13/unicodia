@@ -490,7 +490,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xA6A0, 0xA6FF, { 0xA6AE, EcContinent::AFRICA },
             "Bamum", { EcScript::Bamu, 0 }, EcScript::Bamu },
     // Modifier tone OK
-    { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE },
+    { 0xA700, 0xA71F, { L'ꜛ', EcContinent::NONE, {}, 7_hx },
             "Modifier Tone Letters", MyName::INST },
     // Latin ex D OK, dereferenced bad chars of Google Noto, implemented U14 in Funky
     { 0xA720, 0xA7FF, { L'Ꝕ', EcContinent::EUROPE },
