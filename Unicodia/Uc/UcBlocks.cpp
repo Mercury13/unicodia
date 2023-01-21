@@ -623,7 +623,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },
             "Specials", MyName::INST, },
     // Linear B syll OK
-    { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE },
+    { 0x10000, 0x1007F, { 0x10002, EcContinent::EUROPE, {}, SvgHint { 7, 9 } },
             "Linear B Syllabary", { EcScript::Linb, 0 }, EcScript::Linb },
     // Linear B hier OK
     { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE },
@@ -658,7 +658,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Copt, 1 },
             EcScript::Copt, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
     // Old Italic OK
-    { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE },
+    { 0x10300, 0x1032F, { 0x10300, EcContinent::EUROPE, {}, 2_hx },
             "Old Italic", { EcScript::Ital, 0 }, EcScript::Ital },
     // Gothic OK
     { 0x10330, 0x1034F, { 0x10330, EcContinent::EUROPE },
