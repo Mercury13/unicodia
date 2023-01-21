@@ -163,6 +163,19 @@ namespace ie {
         std::shared_ptr<QSvgRenderer> texture;
     };
 
+    // Programmatic drawing of Mahjong Tiles
+    class Mahjong : public Veng
+    {
+    public:
+        Mahjong();
+        ~Mahjong();
+        Mahjong* clone() const override { return new Mahjong(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        // no implicit data sharing :)
+        std::shared_ptr<QSvgRenderer> texture;
+    };
+
     // Programmatic drawing of Arrows
     class Hint : public Veng
     {

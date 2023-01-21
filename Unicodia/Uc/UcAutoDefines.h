@@ -578,7 +578,7 @@ namespace uc {
         using BiggerType = uint16_t;
         operator bool() const { return std::bit_cast<BiggerType>(*this); }
 
-        static constexpr unsigned SIDE = 16;
+        static constexpr int SIDE = 16;
         constexpr double qx() const noexcept { return static_cast<double>(x) / SIDE; }
         constexpr double qy() const noexcept { return static_cast<double>(y) / SIDE; }
     };

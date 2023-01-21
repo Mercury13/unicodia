@@ -1,14 +1,14 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+5 custom engines
++6 custom engines
 	Block elements: special (moire)
 	Yijing: coarse image (moire)
 	Tai Xuan: special (threat of moire, IDK)
+	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+8 icons done ahead
-	Mahjongg
++7 icons done ahead
 	Domino
 	Water pistol
 	Smile in love

@@ -426,7 +426,7 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     auto radius = dim.rcPixel.height() * 0.1;
 
     // Frame
-    painter->setBrush(Qt::transparent);
+    painter->setBrush(Qt::NoBrush);
     painter->setPen(QPen{Qt::black, dim.thickness});
     painter->setRenderHint(QPainter::Antialiasing, true);
     painter->drawRoundedRect(dim.rcFrame, radius, radius);
@@ -448,6 +448,43 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Point
     painter->setRenderHint(QPainter::Antialiasing, true);
+    texture->render(painter, dim.rcPixel);
+}
+
+
+///// Mahjong //////////////////////////////////////////////////////////////////
+
+ie::Mahjong::Mahjong()
+{
+    texture = std::make_shared<QSvgRenderer>(QString{":Misc/mahjong.svg"});
+    texture->setAspectRatioMode(Qt::KeepAspectRatio);
+}
+
+// -warn: complains about =default
+ie::Mahjong::~Mahjong() {}
+
+
+void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    // Get dimensions
+    auto dim = util::cardDimensions(rect, scale, 10, 0.25);
+
+    static constexpr QColor CL_BG { 0xF6, 0xF2, 0xEE }; // ≈old F2F2F2, but a bit warmer
+    static constexpr QColor CL_FRAME { 0x30, 0, 0 };    // It’ll be brown
+
+    // Background
+    painter->setRenderHint(QPainter::Antialiasing, false);
+    painter->fillRect(dim.rcPixel, CL_BG);
+
+    // Frame
+    painter->setBrush(Qt::NoBrush);
+    painter->setPen(QPen{CL_FRAME, dim.thickness});
+    painter->setRenderHint(QPainter::Antialiasing, true);
+    painter->drawRect(dim.rcFrame);
+
+    // Flower
     texture->render(painter, dim.rcPixel);
 }
 

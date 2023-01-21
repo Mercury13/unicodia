@@ -1103,7 +1103,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'z'},
             EcScript::Arab, EcFont::MATH, Bfg::HAS_DESCRIPTION },
     // Mahjong tiles OK
-    { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR },
+    { 0x1F000, 0x1F02F, { 0x1F022, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Mahjong Tiles",
             // Use emoji, with fallback to Phaistos Disc
             MyName::INST, EcScript::NONE, EcFont::MAHJONG_TILES },
