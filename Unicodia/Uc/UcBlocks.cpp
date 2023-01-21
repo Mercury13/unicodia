@@ -100,10 +100,10 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'A' },
             EcScript::Arab, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Devanagari OK
-    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, {}, SvgHint { 9, 2 } },
+    { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
             "Devanagari", { EcScript::Deva, 0 }, EcScript::Deva },
     // Bengali OK
-    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA },
+    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA, {}, SvgHint{ 8, 2 } },
             "Bengali", { EcScript::Beng, 0 }, EcScript::Beng },
     // Gurmukhi OK
     { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA },
@@ -166,7 +166,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1680, 0x169F, { 0x168E, EcContinent::EUROPE },
             "Ogham", { EcScript::Ogam, 0 }, EcScript::Ogam },
     // Runic OK
-    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE },
+    { 0x16A0, 0x16FF, { 0x16A0, EcContinent::EUROPE, {}, 3_hx },
             "Runic", { EcScript::Runr, 0 }, EcScript::Runr },
     // Tagalog OK
     { 0x1700, 0x171F, { 0x1706, EcContinent::OCEAN },

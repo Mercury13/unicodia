@@ -12,11 +12,11 @@
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -28,9 +28,9 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="33.322407"
-     inkscape:cx="0.55518198"
-     inkscape:cy="10.173335"
+     inkscape:zoom="23.5625"
+     inkscape:cx="3.3740053"
+     inkscape:cy="10.482759"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,29 +44,16 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#ffffff">
-    <inkscape:grid
+     inkscape:deskcolor="#ffffff"><inkscape:grid
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
-  </sodipodi:namedview>
-  <defs
-     id="defs2" />
-  <g
+       originy="0" /></sodipodi:namedview><defs
+     id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <rect
-       style="opacity:1;fill:#7fffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
-    <path
-       d="M 3,15.000001 V 1 h 1.7398945 v 3.8039217 q 0.966608,0 1.6722319,-0.509804 Q 7.1177501,3.7843138 7.5043933,2.9607844 7.8910366,2.1372549 7.8910366,1.1960785 V 1 h 1.8365552 v 0.2156863 q 0,2.137255 -1.4885763,3.6470589 -1.4885763,1.509804 -3.499121,1.509804 v 2.1764705 q 3.1566711,0 5.2901105,-2.0196077 2.133438,-2.019608 2.133438,-5.3333335 V 1 H 14 v 0.2156863 q 0,4.0910982 -2.612781,6.4965297 -2.6127801,2.405432 -6.6473245,2.405432 v 4.882353 z"
-       id="path9399"
-       style="fill:#2f5e9d;stroke-width:0.999995" />
-  </g>
-</svg>
+     id="layer1"><path
+       fill="currentColor"
+       d="M 14,1.2156865 C 14,6.9454711 9.833049,10.117648 4.7398947,10.117648 v 4.882353 H 3 V 1 h 1.7398947 v 3.803922 c 2.0669365,0 3.1511423,-1.8830806 3.1511423,-3.6078436 V 1 h 1.8365553 v 0.2156865 c 0,2.9406276 -2.3812776,5.1568629 -4.9876976,5.1568629 v 2.1764712 c 4.0571442,0 7.4235503,-2.7740398 7.4235503,-7.3529422 V 1 H 14 Z"
+       id="path817"
+       style="fill:#2f5e9d;fill-opacity:1;stroke-width:1" /></g></svg>
