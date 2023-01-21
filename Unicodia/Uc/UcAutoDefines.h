@@ -582,14 +582,16 @@ namespace uc {
         struct Pos { uint8_t x = 0, y = 0; } pos;
 
         using BiggerType = uint16_t;
-        operator bool() const { return std::bit_cast<BiggerType>(*this); }
+        static_assert(sizeof(BiggerType) == sizeof(Pos), "BiggerType wrong");
 
+        constexpr SvgHint() = default;
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY) : pos{.x = aX, .y = aY } {}
+
+        operator bool() const { return std::bit_cast<BiggerType>(*this); }
 
         static constexpr int SIDE = 16;
         constexpr double qx() const noexcept { return static_cast<double>(pos.x) / SIDE; }
         constexpr double qy() const noexcept { return static_cast<double>(pos.y) / SIDE; }
     };
-    static_assert(sizeof(SvgHint::BiggerType) == sizeof(SvgHint), "BiggerType wrong");
 
 }   // namespace uc
