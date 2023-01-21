@@ -407,6 +407,7 @@ constinit const uc::Block uc::blocks[] {
             "Ideographic Description Characters",
             MyName::INST, EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
     // CJK sym/punct OK
+    // Cannot hint: near line is too bad on 1.25×
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
             MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
