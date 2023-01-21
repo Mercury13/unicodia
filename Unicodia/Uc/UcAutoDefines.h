@@ -572,15 +572,23 @@ namespace uc {
 
     extern const LibNode libNodes[N_LIBNODES];
 
+    enum class ImbaY : int8_t {
+        PERFECT = 0,
+        ABOVE_1 = -1, ABOVE_2 = -2, ABOVE_3 = -3, ABOVE_4 = -4,
+        BELOW_1 =  1, BELOW_2 =  2, BELOW_3 =  3, BELOW_4 =  4,
+    };
+
     struct SvgHint {
-        uint8_t x = 0, y = 0;
+        struct Pos { uint8_t x = 0, y = 0; } pos;
 
         using BiggerType = uint16_t;
         operator bool() const { return std::bit_cast<BiggerType>(*this); }
 
+        explicit constexpr SvgHint(uint8_t aX, uint8_t aY) : pos{.x = aX, .y = aY } {}
+
         static constexpr int SIDE = 16;
-        constexpr double qx() const noexcept { return static_cast<double>(x) / SIDE; }
-        constexpr double qy() const noexcept { return static_cast<double>(y) / SIDE; }
+        constexpr double qx() const noexcept { return static_cast<double>(pos.x) / SIDE; }
+        constexpr double qy() const noexcept { return static_cast<double>(pos.y) / SIDE; }
     };
     static_assert(sizeof(SvgHint::BiggerType) == sizeof(SvgHint), "BiggerType wrong");
 

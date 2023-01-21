@@ -3,10 +3,10 @@
 // Long and glitchy, that’s why I moved out from UcData
 
 constexpr uc::SvgHint operator "" _hx (unsigned long long x)
-    { return { .x = static_cast<uint8_t>(x), .y = 0 }; }
+    { return uc::SvgHint { static_cast<uint8_t>(x), 0 }; }
 
 constexpr uc::SvgHint operator "" _hy (unsigned long long y)
-    { return { .x = 0, .y = static_cast<uint8_t>(y) }; }
+    { return uc::SvgHint { 0, static_cast<uint8_t>(y) }; }
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
