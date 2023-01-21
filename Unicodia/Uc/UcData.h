@@ -642,7 +642,7 @@ namespace uc {
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
-    ///< @warning  Bfg::CJK ≠ SynthIcon.continent
+    ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
     ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
     ///     • Big (32+) hand-picked CJK blocks, incl. Tang, Nshu,
     ///       CJK punctuation and special chars
@@ -823,7 +823,7 @@ namespace uc {
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
 
     extern const Block blocks[];
-    constexpr int DEFAULT_BLOCK_HINT = N_BLOCKS / 2;
+    inline Buf1d<const Block> allBlocks() noexcept { return { N_BLOCKS, blocks }; }
 
     constexpr int CAPACITY = 65536 * N_PLANES;
     extern const Cp* cpsByCode[CAPACITY];

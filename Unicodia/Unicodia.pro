@@ -48,6 +48,7 @@ SOURCES += \
     MyWiki.cpp \
     Uc/FontMatch.cpp \
     Uc/UcAutoLib.cpp \
+    Uc/UcBlocks.cpp \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcSearch.cpp \
