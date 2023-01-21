@@ -673,7 +673,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x103A0, 0x103DF, { 0x103A2, EcContinent::ASIA },
             "Old Persian", { EcScript::Xpeo, 0 }, EcScript::Xpeo },
     // Deseret OK
-    { 0x10400, 0x1044F, { 0x10414, EcContinent::AMERICA },
+    { 0x10400, 0x1044F, { 0x10414, EcContinent::AMERICA, {}, 14_hx },
             "Deseret", { EcScript::Dsrt, 0 }, EcScript::Dsrt },
     // Shavian OK
     { 0x10450, 0x1047F, { 0x10459, EcContinent::EUROPE },
@@ -775,7 +775,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'C' },
             EcScript::Arab, EcFont::FUNKY_RTL, Bfg::HAS_DESCRIPTION },
     // Old Sogdian OK
-    { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA },
+    { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA, {}, 14_hy },
             "Old Sogdian", { EcScript::Sogd, 0 }, EcScript::Sogo },
     // Sogdian OK
     { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA },
@@ -784,7 +784,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
             "Old Uyghur", { EcScript::Ougr, 0 }, EcScript::Ougr },
     // Chorasmian OK
-    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA },
+    { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA, {}, SvgHint{ 15, 11 } },
             "Chorasmian", { EcScript::Chrs, 0 }, EcScript::Chrs },
     // Elymaic OK
     { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA },
