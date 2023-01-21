@@ -504,8 +504,8 @@ constinit const uc::Block uc::blocks[] {
     { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA },
             "Common Indic Number Forms",
             MyName::INST, EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
-    // Phang-pa OK
-    { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED },
+    // Phags-pa OK
+    { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3 } },
             "Phags-pa", { EcScript::Phag, 0 }, EcScript::Phag },
     // Saurashtra OK
     { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA },
