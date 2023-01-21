@@ -829,7 +829,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA },
             "Newa", { EcScript::Newa, 0 }, EcScript::Newa },
     // Tirhuta OK
-    { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA },
+    { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA, {}, SvgHint{ 8, 3 } },
             "Tirhuta", { EcScript::Tirh, 0 }, EcScript::Tirh },
     // Siddham OK
     { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA },
