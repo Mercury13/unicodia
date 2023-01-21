@@ -254,7 +254,7 @@ constinit const uc::Block uc::blocks[] {
             "Phonetic Extensions",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
     // Phonetic ext supp OK
-    { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE },
+    { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE, {}, SvgHint{ 12, 6 } },
             "Phonetic Extensions Supplement", MyName::INST },
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
