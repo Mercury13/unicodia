@@ -835,7 +835,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA },
             "Siddham", { EcScript::Sidd, 0 }, EcScript::Sidd },
     // Modi OK
-    { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA },
+    { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA, {}, 2_hy },
             "Modi", { EcScript::Modi, 0 }, EcScript::Modi },
     // Mongolian supp OK
     { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::APPROX_ROTATED },
