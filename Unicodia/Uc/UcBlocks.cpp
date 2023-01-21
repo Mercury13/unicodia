@@ -735,7 +735,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10A60, 0x10A7F, { 0x10A71, EcContinent::ASIA },
             "Old South Arabian", { EcScript::Sarb, 0 }, EcScript::Sarb },
     // Old North Arab OK
-    { 0x10A80, 0x10A9F, { 0x10A91, EcContinent::ASIA },
+    { 0x10A80, 0x10A9F, { 0x10A91, EcContinent::ASIA, {}, 3_hy },
             "Old North Arabian", { EcScript::Narb, 0 }, EcScript::Narb },
     // Manichaean OK
     { 0x10AC0, 0x10AFF, { 0x10AC0, EcContinent::ASIA },
@@ -744,7 +744,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10B00, 0x10B3F, { 0x10B00, EcContinent::ASIA },
             "Avestan", { EcScript::Avst, 0 }, EcScript::Avst },
     // Inscr Parthian OK
-    { 0x10B40, 0x10B5F, { 0x10B40, EcContinent::ASIA },
+    { 0x10B40, 0x10B5F, { 0x10B40, EcContinent::ASIA, {}, SvgHint{ 15, 13 } },
             "Inscriptional Parthian", { EcScript::Prti, 0 }, EcScript::Prti },
     // Inscr Pahlavi OK
     { 0x10B60, 0x10B7F, { 0x10B60, EcContinent::ASIA },
