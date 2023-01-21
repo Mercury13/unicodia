@@ -124,7 +124,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA },
             "Kannada", { EcScript::Knda, 0 }, EcScript::Knda },
     // Malayalam OK
-    { 0x0D00, 0x0D7F, { 0xD16, EcContinent::ASIA },
+    { 0x0D00, 0x0D7F, { 0xD16, EcContinent::ASIA, {}, SvgHint{ 15, 13 } },
             "Malayalam", { EcScript::Mlym, 0 }, EcScript::Mlym },
     // Sinhala OK
     { 0x0D80, 0x0DFF, { 0xD9A, EcContinent::OCEAN },
