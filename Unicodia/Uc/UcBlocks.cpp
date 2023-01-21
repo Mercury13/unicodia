@@ -192,7 +192,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 1 },
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Limbu OK
-    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA },
+    { 0x1900, 0x194F, { 0x1900, EcContinent::ASIA, {}, 15_hx },
             "Limbu", { EcScript::Limb, 0 }, EcScript::Limb },
     // Tai Le OK
     { 0x1950, 0x197F, { 0x195E, EcContinent::ASIA },
@@ -407,7 +407,7 @@ constinit const uc::Block uc::blocks[] {
             "Ideographic Description Characters",
             MyName::INST, EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
     // CJK sym/punct OK
-    // Cannot hint: near line is too bad on 1.25×
+    // Cannot hint: if hint line y=3, then y=5 is too bad on 1.25×
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
             MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
@@ -476,7 +476,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Yiii, 1 },
             EcScript::Yiii, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Lisu OK
-    { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA },
+    { 0xA4D0, 0xA4FF, { L'ꓤ', EcContinent::ASIA, {}, 13_hx },
             "Lisu", { EcScript::Lisu, 0 }, EcScript::Lisu },
     // Vai OK
     { 0xA500, 0xA63F, { L'ꔃ', EcContinent::AFRICA },
