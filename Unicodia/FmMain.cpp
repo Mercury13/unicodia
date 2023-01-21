@@ -207,8 +207,6 @@ namespace {
     QIconEngine* getCustomEngine(char32_t startingCp)
     {
         switch (startingCp) {
-        case 0x2190:
-            return new ie::Vhint(":Misc/arrow.svg", 7);
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x4DC0:    // Yijing
@@ -245,7 +243,9 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole: {
             GET_BLOCK
             if (!block->icon) {
-                if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
+                if (block->synthIcon.svgHint) {
+                    block->icon = new QIcon(new ie::Hint(*block));
+                } else if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
                     block->icon = new QIcon(getCustomEngine(block->startingCp));
                 } else {
                     char buf[48];

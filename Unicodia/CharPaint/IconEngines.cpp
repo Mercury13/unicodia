@@ -81,9 +81,33 @@ namespace util {
 
         return {
             .thickness = actualThickness,
-            .rcPixel = QRect( x0, y0, width, height ),
-            .rcFrame { x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 }
+            .rcPixel = QRect( x0, y0, width, height ) ,
+            .rcFrame { x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 },
         };
+    }
+
+    /// @pre
+    ///   rect has same aspect ratio as texture (e.g. square)
+    ///
+    void drawHintedSvg(
+            QPainter* painter, const QRect& rect,
+            QSvgRenderer& texture, const uc::SvgHint& hint)
+    {
+        QRectF rect1 = rect;
+        if (hint.x != 0) {
+            const auto realPos = rect.width() * hint.qx();
+            const auto wantedPos = std::lround(realPos);
+            const auto delta = wantedPos - realPos;
+            rect1.moveLeft(rect.left() + delta);
+        }
+        if (hint.y != 0) {
+            const auto realPos = rect.height() * hint.qy();
+            const auto wantedPos = std::lround(realPos);
+            const auto delta = wantedPos - realPos;
+            rect1.moveTop(rect.top() + delta);
+        }
+
+        texture.render(painter, rect1);
     }
 
 }   // namespace util
@@ -426,28 +450,23 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 }
 
 
-///// Vhint ////////////////////////////////////////////////////////////////////
+///// Hint /////////////////////////////////////////////////////////////////////
 
-ie::Vhint::Vhint(const char* fname, int aHintPos)
-    : hintPos(aHintPos * (1.0 / 16.0))
+ie::Hint::Hint(const uc::Block& blk)
+    : icon(blk.synthIcon)
 {
-    texture = std::make_shared<QSvgRenderer>(QString{fname});
+    char buf[48];
+    snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp);
+    texture = std::make_shared<QSvgRenderer>(QString{buf});
     texture->setAspectRatioMode(Qt::KeepAspectRatio);
 }
 
 // -warn: complains about =default
-ie::Vhint::~Vhint() {}
+ie::Hint::~Hint() {}
 
 
-void ie::Vhint::paint1(QPainter *painter, const QRect &rect, qreal scale)
+void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, Qt::white);
-
-    QRectF rect1 = rect;
-    const auto realPos = rect.width() * hintPos;
-    const auto wantedPos = std::lround(realPos);
-    const auto delta = wantedPos - realPos;
-    rect1.moveLeft(rect.left() + delta);
-
-    texture->render(painter, rect1);
+    painter->fillRect(rect, icon.continent().icon.bgColor);
+    util::drawHintedSvg(painter, rect, *texture, icon.svgHint);
 }

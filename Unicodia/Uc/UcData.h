@@ -693,11 +693,17 @@ namespace uc {
     };
     DEFINE_ENUM_OPS(Ifg)
 
+    ///
+    /// \brief The SynthIcon class
+    ///    Initially was a description of synthesized icon in Search.
+    ///    Currently it describes normal icon in Blocks too.
+    ///
     struct SynthIcon
     {
         char32_t subj;
         EcContinent ecContinent;
         Flags<Ifg> flags {};
+        SvgHint svgHint { 0, 0 };
 
         inline const Cp& cp() const;
         const Continent& continent() const;

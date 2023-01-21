@@ -1,5 +1,13 @@
 #include "UcData.h"
 
+// Long and glitchy, that’s why I moved out from UcData
+
+constexpr uc::SvgHint operator "" _hx (unsigned long long x)
+    { return { .x = static_cast<uint8_t>(x), .y = 0 }; }
+
+constexpr uc::SvgHint operator "" _hy (unsigned long long y)
+    { return { .x = 0, .y = static_cast<uint8_t>(y) }; }
+
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
     { 0x0000, 0x007F, { 'L', EcContinent::EUROPE },
@@ -286,7 +294,7 @@ constinit const uc::Block uc::blocks[] {
             "Number Forms",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
-    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, 7_hx },
             "Arrows",
             { EcScript::ZARR, 0 }, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK

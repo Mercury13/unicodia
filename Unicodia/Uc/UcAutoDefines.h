@@ -541,7 +541,7 @@ namespace uc {
     };
 
     // Check your calculations once again
-    static_assert(sizeof(Cp) == 14);
+    static_assert(sizeof(Cp) == 14, "Cp size wrong");
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
@@ -571,5 +571,16 @@ namespace uc {
     };
 
     extern const LibNode libNodes[N_LIBNODES];
+
+    struct SvgHint {
+        uint8_t x = 0, y = 0;
+
+        using BiggerType = uint16_t;
+        operator bool() const { return std::bit_cast<BiggerType>(*this); }
+
+        constexpr double qx() const noexcept { return x / 16.0; }
+        constexpr double qy() const noexcept { return y / 16.0; }
+    };
+    static_assert(sizeof(SvgHint::BiggerType) == sizeof(SvgHint), "BiggerType wrong");
 
 }   // namespace uc
