@@ -56,7 +56,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 1 },
             EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Armenian OK
-    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA },
+    { 0x0530, 0x058F, { 0x536, EcContinent::ASIA, {}, 14_hy },
             "Armenian", { EcScript::Armn, 0 }, EcScript::Armn },
     // Hebrew OK, managed to draw yod triangle
     { 0x0590, 0x05FF, { 0x5D0, EcContinent::ASIA },
