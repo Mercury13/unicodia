@@ -8,16 +8,17 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+7 icons done ahead
++8 icons done ahead
 	Domino
 	Water pistol
 	Smile in love
 	Car
 	Foxy
 	Parachute
+	Tags
 	Var sel ex
 
-TOTAL: +11
+TOTAL: +12
 
 
 Files

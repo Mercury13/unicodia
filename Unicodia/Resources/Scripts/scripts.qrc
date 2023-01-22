@@ -313,7 +313,7 @@
         <file>2F800.png</file>
         <file>30000.png</file>
         <file>31350.png</file>
-        <file>E0000.png</file>
+        <file>E0000.svg</file>
         <file>E0100.svg</file>
     </qresource>
 </RCC>
