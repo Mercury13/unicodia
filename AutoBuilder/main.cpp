@@ -800,12 +800,12 @@ int main()
     lib::Node root;
     // Node 1: emoji
     root.children.emplace_back(std::move(emoji.root));
-    // Node 2: strange hiero
-    root.children.emplace_back(strangeCjk.give());
-    // Node 3+: manual library
+    // Node 2+: manual library
     for (auto& v : manualLib.children) {
         root.children.emplace_back(std::move(v));
     }
+    // Node N: strange hiero
+    root.children.emplace_back(strangeCjk.give());
     // Write!
     auto libInfo = lib::write(root, "UcAutoLib.cpp");
 
