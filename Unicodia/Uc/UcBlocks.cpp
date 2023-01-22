@@ -103,7 +103,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0900, 0x097F, { 0x915, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
             "Devanagari", { EcScript::Deva, 0 }, EcScript::Deva },
     // Bengali OK
-    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA, {}, SvgHint{ 8, 2 } },
+    { 0x0980, 0x09FF, { 0x995, EcContinent::ASIA, {}, SvgHint{ 8, 2, ImbaY::BELOW_3 } },
             "Bengali", { EcScript::Beng, 0 }, EcScript::Beng },
     // Gurmukhi OK
     { 0x0A00, 0x0A7F, { 0xA15, EcContinent::ASIA },
@@ -294,7 +294,7 @@ constinit const uc::Block uc::blocks[] {
             "Number Forms",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
     // Arrows OK
-    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, 7_hx },
+    { 0x2190, 0x21FF, { L'↑', EcContinent::NONE, {}, SvgHint{ 7, ImbaX::LEFT_3 } },
             "Arrows",
             { EcScript::ZARR, 0 }, EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Math op OK
@@ -505,7 +505,8 @@ constinit const uc::Block uc::blocks[] {
             "Common Indic Number Forms",
             MyName::INST, EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Phags-pa OK
-    { 0xA840, 0xA87F, { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3 } },
+    { 0xA840, 0xA87F,
+            { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
             "Phags-pa", { EcScript::Phag, 0 }, EcScript::Phag },
     // Saurashtra OK
     { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA },

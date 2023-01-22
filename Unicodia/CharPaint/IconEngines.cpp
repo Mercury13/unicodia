@@ -96,14 +96,14 @@ namespace util {
         // Equal → no need to hint, both deltas are 0
         if (rect.width() > uc::SvgHint::SIDE && rect.height() > uc::SvgHint::SIDE) {
             if (hint.pos.x != 0) {
-                const auto realPos = rect.width() * hint.qx();
-                const auto wantedPos = std::lround(realPos);
+                const auto realPos = rect.width() * hint.bakedQX();
+                const auto wantedPos = std::lround(rect.width() * hint.balancedQX());
                 const auto delta = wantedPos - realPos;
                 rect1.moveLeft(rect.left() + delta);
             }
             if (hint.pos.y != 0) {
-                const auto realPos = rect.height() * hint.qy();
-                const auto wantedPos = std::lround(realPos);
+                const auto realPos = rect.height() * hint.bakedQY();
+                const auto wantedPos = std::lround(rect.height() * hint.balancedQY());
                 const auto delta = wantedPos - realPos;
                 rect1.moveTop(rect.top() + delta);
             }

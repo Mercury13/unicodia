@@ -572,6 +572,12 @@ namespace uc {
 
     extern const LibNode libNodes[N_LIBNODES];
 
+    enum class ImbaX : int8_t {
+        PERFECT = 0,
+        LEFT_1 = -1, LEFT_2 = -2, LEFT_3 = -3, LEFT_4 = -4,
+        RIGHT_1 = 1, RIGHT_2 = 2, RIGHT_3 = 3, RIGHT_4 = 4,
+    };
+
     enum class ImbaY : int8_t {
         PERFECT = 0,
         ABOVE_1 = -1, ABOVE_2 = -2, ABOVE_3 = -3, ABOVE_4 = -4,
@@ -579,19 +585,33 @@ namespace uc {
     };
 
     struct SvgHint {
-        struct Pos { uint8_t x = 0, y = 0; } pos;
+        // Hint’s position: y=0 → none; y=5 → align that line to pixels
+        struct Pos  { uint8_t x = 0, y = 0; } pos;
+        // Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
+        struct Imba {  int8_t x = 0, y = 0; } imba;
 
         using BiggerType = uint16_t;
         static_assert(sizeof(BiggerType) == sizeof(Pos), "BiggerType wrong");
 
         constexpr SvgHint() = default;
         explicit constexpr SvgHint(uint8_t aX, uint8_t aY) : pos{.x = aX, .y = aY } {}
+        explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaY imbaY)
+            : pos{.x = aX, .y = aY }, imba { .y = static_cast<int8_t>(imbaY) } {}
+        explicit constexpr SvgHint(uint8_t aX, uint8_t aY, ImbaX imbaX)
+            : pos{.x = aX, .y = aY }, imba { .x = static_cast<int8_t>(imbaX) } {}
+        explicit constexpr SvgHint(uint8_t aX, ImbaX imbaX)
+            : pos{.x = aX }, imba { .x = static_cast<int8_t>(imbaX) } {}
 
-        operator bool() const { return std::bit_cast<BiggerType>(*this); }
+        operator bool() const { return std::bit_cast<BiggerType>(pos); }
 
         static constexpr int SIDE = 16;
-        constexpr double qx() const noexcept { return static_cast<double>(pos.x) / SIDE; }
-        constexpr double qy() const noexcept { return static_cast<double>(pos.y) / SIDE; }
+        static constexpr double RECIPSIDE = 1.0 / SIDE;     // this is a precise float!
+        /// hint’s relative position (0..1) baked into picture
+        constexpr double bakedQX() const noexcept { return static_cast<double>(pos.x) * RECIPSIDE; }
+        constexpr double bakedQY() const noexcept { return static_cast<double>(pos.y) * RECIPSIDE; }
+        /// hint’s relative position (0..1) with balance fixup added
+        constexpr double balancedQX() const noexcept { return (pos.x - 0.1 * imba.x) * RECIPSIDE; }
+        constexpr double balancedQY() const noexcept { return (pos.y - 0.1 * imba.y) * RECIPSIDE; }
     };
 
 }   // namespace uc
