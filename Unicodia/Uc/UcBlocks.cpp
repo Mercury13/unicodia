@@ -767,7 +767,7 @@ constinit const uc::Block uc::blocks[] {
             "Rumi Numeral Symbols",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Yezidi OK
-    { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA },
+    { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA, {}, 11_hy },
             "Yezidi", { EcScript::Yezi, 0 }, EcScript::Yezi },
     /// @todo [future] Arab ex C temporarily in Funky
     { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA },
