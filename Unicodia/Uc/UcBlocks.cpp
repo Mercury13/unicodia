@@ -10,7 +10,7 @@ constexpr uc::SvgHint operator "" _hy (unsigned long long y)
 
 constinit const uc::Block uc::blocks[] {
     // Basic Latin OK
-    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, {}, SvgHint { 5, 15 } },
+    { 0x0000, 0x007F, { 'L', EcContinent::EUROPE, {}, SvgHint { 5, 15, ImbaX::RIGHT_3 } },
             "Basic Latin",
             { EcScript::Latn, 0 },
             EcScript::Latn, EcFont::NORMAL,
