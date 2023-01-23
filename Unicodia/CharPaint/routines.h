@@ -24,8 +24,6 @@ struct RcPair {
 void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
         const QColor& color, QRectF rcFrame, qreal thickness);
 
-enum class SplitMode { NORMAL, FIXED };
-
 void drawCustomControl(
         QPainter* painter, const QRect& rect, const QColor& color,
         uc::FontPlace place, char32_t subj);

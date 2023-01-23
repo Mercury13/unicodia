@@ -44,6 +44,8 @@ namespace {
                     //   0   1   2   3   4   5   6   7   8   9
     AbbrTable atTags { { Q1, T3, T3, Q3, Q4, Q5, Q5, Q5, Q5, Q5 } };
 
+    enum class SplitMode { NORMAL, FIXED };
+
     AbbrLines splitAbbr(std::u8string_view abbr, SplitMode mode)
     {
         if (mode == SplitMode::FIXED)
