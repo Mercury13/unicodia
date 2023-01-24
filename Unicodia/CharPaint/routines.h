@@ -5,13 +5,10 @@
 #include <QWidget>
 
 #include "UcData.h"
-#include "u_EmojiPainter.h"
 #include "global.h"
 
 class QPainter;
 class QColor;
-
-extern EmojiPainter emp;
 
 
 void drawDeprecated(QPainter* painter, const QRect& r);

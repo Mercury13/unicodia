@@ -33,6 +33,7 @@ SOURCES += \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
+    CharPaint/emoji.cpp \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
@@ -58,8 +59,7 @@ SOURCES += \
     c_SearchEdit.cpp \
     d_Config.cpp \
     main.cpp \
-    FmMain.cpp \
-    u_EmojiPainter.cpp
+    FmMain.cpp
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
@@ -91,6 +91,7 @@ HEADERS += \
     CharPaint/routines.h \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
+    CharPaint/emoji.h \
     FmMain.h \
     FmMessage.h \
     FmPopup.h \
@@ -110,8 +111,7 @@ HEADERS += \
     WiSample.h \
     Wiki.h \
     c_SearchEdit.h \
-    d_Config.h \
-    u_EmojiPainter.h
+    d_Config.h
 
 FORMS += \
     FmMain.ui \

@@ -9,6 +9,7 @@
 
 // Project-local
 #include "Skin.h"
+#include "emoji.h"
 
 using namespace std::string_view_literals;
 

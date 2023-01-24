@@ -1,4 +1,4 @@
-#include "u_EmojiPainter.h"
+#include "emoji.h"
 
 // Qt
 #include <QSvgRenderer>
