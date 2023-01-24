@@ -44,12 +44,21 @@ struct RecolorInfo {
 };
 
 
+struct GetCp {
+    char32_t cp = 0;
+    bool forceGraphic = false;
+
+    explicit operator bool() const noexcept { return cp; }
+    [[nodiscard]] bool isGraphic() const noexcept { return cp && !forceGraphic; }
+};
+
+
 class EmojiPainter
 {
 public:
     EmojiPainter();     // forward decls → need in CPP
     ~EmojiPainter();    // same
-    static char32_t getCp(std::u32string_view text);
+    static GetCp getCp(std::u32string_view text);
     QSvgRenderer* getRenderer(std::u32string_view text);
     QSvgRenderer* getRenderer(char32_t cp);
     std::string_view getSvg(std::u32string_view text);

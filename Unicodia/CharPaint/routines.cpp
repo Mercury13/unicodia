@@ -134,7 +134,9 @@ bool CharTile::isEmoji() const
 
     auto ch = EmojiPainter::getCp(text);
     if (ch) {
-        auto cp = uc::cpsByCode[ch];
+        if (ch.forceGraphic)
+            return true;
+        auto cp = uc::cpsByCode[ch.cp];
         return (cp && cp->drawMethod(emojiDraw) == uc::DrawMethod::SVG_EMOJI);
     } else {
         return (emojiDraw == uc::EmojiDraw::GRAPHIC);
@@ -739,12 +741,15 @@ void drawSearchChars(
         const QColor& color, uc::EmojiDraw emojiMode, qreal scale)
 {
     drawCharBorder(painter, rect, color);
-    if (auto c1 = EmojiPainter::getCp(text)) {
-        // Single-char
-        if (auto cp = uc::cpsByCode[c1])
+    if (text.empty())
+        return;
+
+    auto c1 = EmojiPainter::getCp(text);
+    if (c1 && !c1.forceGraphic) {
+        if (auto cp = uc::cpsByCode[c1.cp])
             drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode);
     } else {
-        // Multi-char
+        // Graphic
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
         emp.draw(painter, rect, text, h);
     }
@@ -782,7 +787,7 @@ void drawCharTiles(
                    sz, sz };
         if (auto c1 = EmojiPainter::getCp(tile.text)) {
             // Single-char
-            if (auto cp = uc::cpsByCode[c1])
+            if (auto cp = uc::cpsByCode[c1.cp])
                 drawChar(painter, r2, percent, *cp, color, TableDraw::CUSTOM,
                          tile.emojiDraw, UseMargins::NO);
         } else {

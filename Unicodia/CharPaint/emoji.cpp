@@ -274,17 +274,17 @@ std::string_view EmojiPainter::getSvg(std::u32string_view text)
 }
 
 
-char32_t EmojiPainter::getCp(std::u32string_view text)
+GetCp EmojiPainter::getCp(std::u32string_view text)
 {
     switch (text.length()) {
     case 1:
-        return text[0];
+        return { .cp = text[0], .forceGraphic = false };
     case 2:
         if (text[1] == VS16)
-            return text[0];
+            return { .cp = text[0], .forceGraphic = true };
         [[fallthrough]];
     default:
-        return 0;
+        return { .cp = 0, .forceGraphic = false };
     }
 }
 
@@ -293,7 +293,7 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
 {
     // Check for more performance-y single-char
     if (auto c = getCp(text))
-        return getRenderer(c);
+        return getRenderer(c.cp);
 
     auto it = multiCharRenderers.find(text);
     if (it != multiCharRenderers.end())
