@@ -3,8 +3,10 @@
 
 #include <QWidget>
 
+
 namespace uc {
     struct Cp;
+    enum class EmojiDraw;
 }
 
 namespace Ui {
@@ -19,14 +21,14 @@ public:
     explicit WiSample(QWidget *parent = nullptr);
     ~WiSample() override;
 
-    void showCp(const uc::Cp& ch);
+    void showCp(const uc::Cp& ch, uc::EmojiDraw emojiDraw);
     void showEmoji(std::u32string_view text);
     void showNothing();
 
 private:
     Ui::WiSample *ui;
     void clearSample();
-    void drawWithQt(const uc::Cp& cp);
+    void drawWithQt(const uc::Cp& cp, uc::EmojiDraw emojiDraw);
 };
 
 #endif // WISAMPLE_H

@@ -456,6 +456,7 @@ namespace uc {
     ///   How to write them?
     ///
     enum class EmojiDraw {
+        TEXT,           ///< Mostly library: draw emoji as text
         CONSERVATIVE,   ///< Table: those chars are drawn as text
         GRAPHIC         ///< Library: all emoji are drawn as graphic
     };
@@ -519,7 +520,7 @@ namespace uc {
         /// @param [in] matchLast  [+] match last font, can return null
         ///                        [-] take last font, never null
         const Font* font(MatchLast matchLast) const;
-        SampleProxy sampleProxy() const;
+        SampleProxy sampleProxy(EmojiDraw emojiDraw) const;
         QString osProxy() const;
         inline const Block& block() const;
 
@@ -556,8 +557,9 @@ namespace uc {
         Lfgs flags;
         uc::EcVersion ecEmojiVersion = uc::EcVersion::NONE;
 
-        EmojiDraw emojiDraw() const
-            { return flags.toCustomBool<EmojiDraw, Lfg::GRAPHIC_EMOJI>(); }
+        EmojiDraw emojiDraw() const {
+            return flags.have(Lfg::GRAPHIC_EMOJI) ? EmojiDraw::GRAPHIC : EmojiDraw::TEXT;
+        }
         inline const uc::Version& emojiVersion() const;
 
         QString viewableTitle(TitleMode mode) const;

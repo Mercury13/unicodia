@@ -682,7 +682,7 @@ void drawChar(
             painter->setPen(color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
-                              textAt(cp));
+                              textAt(cp, emojiMode));
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
             //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);

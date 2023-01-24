@@ -50,7 +50,7 @@ std::optional<QFont> fontAt(
         uc::DrawMethod drawMethod, int sizePc,
         const uc::Cp& cp);
 
-inline QString textAt(const uc::Cp& cp) { return cp.sampleProxy().text; }
+inline QString textAt(const uc::Cp& cp, uc::EmojiDraw emojiDraw) { return cp.sampleProxy(emojiDraw).text; }
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);

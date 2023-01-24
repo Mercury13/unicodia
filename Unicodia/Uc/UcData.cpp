@@ -2504,9 +2504,9 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-uc::SampleProxy uc::Cp::sampleProxy() const
+uc::SampleProxy uc::Cp::sampleProxy(EmojiDraw emojiDraw) const
 {
-    switch (drawMethod(EmojiDraw::CONSERVATIVE)) {
+    switch (drawMethod(emojiDraw)) {
     case DrawMethod::SAMPLE:
         break;  // go through
     default:
@@ -2569,10 +2569,20 @@ uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode) const
     if (flags.haveAny(Cfg::M_ALL)) [[unlikely]] {
         if (flags.have(Cfg::M_CUSTOM_CONTROL))
             return uc::DrawMethod::CUSTOM_CONTROL;
-        if (flags.have(Cfg::M_SVG_EMOJI))
-            return (emojiMode == EmojiDraw::CONSERVATIVE && block().flags.have(Bfg::NO_EMOJI))
-                    ? uc::DrawMethod::SAMPLE
-                    : uc::DrawMethod::SVG_EMOJI;
+        if (flags.have(Cfg::M_SVG_EMOJI)) {
+                bool isSvg = true;
+                switch (emojiMode) {
+                case EmojiDraw::TEXT:
+                    isSvg = !flags.have(Cfg::U_VS16_EMOJI);
+                    break;
+                case EmojiDraw::CONSERVATIVE:
+                    isSvg = !block().flags.have(Bfg::NO_EMOJI);
+                    break;
+                case EmojiDraw::GRAPHIC:
+                    break;
+                }
+                return isSvg ? uc::DrawMethod::SVG_EMOJI : uc::DrawMethod::SAMPLE;
+            }
         if (flags.have(Cfg::M_SPACE))
             return uc::DrawMethod::SPACE;
         if (flags.have(Cfg::M_EGYPTIAN_HATCH))

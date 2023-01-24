@@ -285,8 +285,8 @@ CharsModel::CharsModel(QWidget* aOwner) :
     tcache.connectSignals(this);
 }
 
-
-CharsModel::~CharsModel() = default;
+// -warn: strange with =default
+CharsModel::~CharsModel() {}
 
 
 int CharsModel::rowCount(const QModelIndex&) const
@@ -302,7 +302,7 @@ int CharsModel::columnCount(const QModelIndex&) const
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(uc::EmojiDraw::CONSERVATIVE, *cp);
+        return ::fontAt(EMOJI_DRAW, *cp);
     return {};
 }
 
@@ -334,7 +334,7 @@ QString CharsModel::textAt(const QModelIndex& index) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return ::textAt(*cp);
+    return ::textAt(*cp, EMOJI_DRAW);
 }
 
 
@@ -718,7 +718,6 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
             QIconEngine* ie = new ie::Node(*sample, node);
             return QIcon(ie);
         }
-
     default:
         return {};
     }
@@ -1280,7 +1279,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         }
 
         // Sample char
-        ui->wiSample->showCp(*ch);
+        ui->wiSample->showCp(*ch, CharsModel::EMOJI_DRAW);
 
         // OS char
         ui->wiOsStyle->setCp(*ch, model.match);
@@ -1337,7 +1336,7 @@ void FmMain::libChanged(const QModelIndex& current)
         if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || node.value.length() > 1) {
             ui->wiLibSample->showEmoji(node.value);
         } else if (auto cp = uc::cpsByCode[node.value[0]]) {
-            ui->wiLibSample->showCp(*cp);
+            ui->wiLibSample->showCp(*cp, node.emojiDraw());
         } else  {
             ui->wiLibSample->showNothing();
         }
