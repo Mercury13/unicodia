@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <locale native="Українська" international="Ukrainian" trigger-stamp="2022120" eng-terms="1">
 	<trigger-langs>
-		<lang iso="uk" /><!-- Ukrainian -->
+		<lang iso="uk" />
 	</trigger-langs>
 	<alpha-sort>
 		<alp>АБВГДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>

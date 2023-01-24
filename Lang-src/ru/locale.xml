@@ -2,7 +2,6 @@
 <locale native="Русский" international="Russian" trigger-stamp="2022010" eng-terms="1">
 	<trigger-langs>
 		<lang iso="ru" /><!-- Russian -->
-		<lang iso="uk" /><!-- Ukrainian -->
 		<lang iso="be" /><!-- Belarusian -->
 		<lang iso="mo" /><!-- Moldavian; some systems use ro-MD, but it’ll be English -->
 		<lang iso="ka" /><!-- Georgian -->

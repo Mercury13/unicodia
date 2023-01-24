@@ -157,6 +157,12 @@
 @copy lang-src\en\locale.xml %DIR_EN%
 @%UTRANSL% lang-src\en.utran -build:%DIR_EN%
 @rem no QM for English
+@rem Ukrainian
+@set DIR_UK=%DEPLOY%\Languages\Ukrainian
+@md %DIR_UK%
+@copy lang-src\uk\locale.xml %DIR_UK%
+@%UTRANSL% lang-src\uk.utran -build:%DIR_UK%
+@copy %QTDIR%\translations\qtbase_uk.qm %DIR_UK%
 
 @echo.
 @echo ===== Archiving =====
