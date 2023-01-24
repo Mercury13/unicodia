@@ -785,7 +785,7 @@ void drawCharTiles(
         QRect r2 { r1.left() + iX * step,
                    r1.top() + iY * step,
                    sz, sz };
-        if (auto c1 = EmojiPainter::getCp(tile.text)) {
+        if (auto c1 = EmojiPainter::getCp(tile.text); c1 && !c1.forceGraphic) {
             // Single-char
             if (auto cp = uc::cpsByCode[c1.cp])
                 drawChar(painter, r2, percent, *cp, color, TableDraw::CUSTOM,
