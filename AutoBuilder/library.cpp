@@ -384,12 +384,16 @@ void lib::StrangeCjk::processCp(char32_t cp, std::string_view sStrange)
 
 namespace {
 
-    void loadFolderInfo(lib::Node& result, pugi::xml_node tag)
+    void loadName(lib::Node& result, pugi::xml_node tag)
     {
+        result.name = str::toU8(tag.attribute("loc").as_string());
+        if (!result.name.empty()) {
+            result.flags |= uc::Lfg::TRANSLATE;
+            return;
+        }
         result.name = str::toU8(tag.attribute("name").as_string());
         if (result.name.empty())
-            throw std::logic_error("Need folder name");
-        result.flags |= uc::Lfg::TRANSLATE;
+            throw std::logic_error("Need sequence/folder name");
     }
 
     void appendDump(lib::Node& result, pugi::xml_node tag)
@@ -419,19 +423,34 @@ namespace {
         }
     }
 
+    void appendSequence(lib::Node& result, pugi::xml_node tag)
+    {
+        std::string_view value8 = tag.attribute("v").as_string();
+        if (value8.empty())
+            return;
+        auto value32 = mojibake::toS<std::u32string>(value8);
+        if (value32.empty())
+            return;
+        auto& node = result.children.emplace_back();
+        loadName(node, tag);
+        node.value = std::move(value32);
+    }
+
     void loadRecurse(lib::Node& result, pugi::xml_node tag)
     {
         for (auto v : tag.children()) {
             if (v.name() == "f"sv) {
                 // Folder
                 auto& newFolder = result.children.emplace_back();
-                loadFolderInfo(newFolder, v);
+                loadName(newFolder, v);
                 loadRecurse(newFolder, v);
             } else if (v.name() == "d"sv) {
                 // Dump
                 appendDump(result, v);
             } else if (v.name() == "range"sv) {
                 appendRange(result, v);
+            } else if (v.name() == "sq"sv) {
+                appendSequence(result, v);
             }
         }
     }

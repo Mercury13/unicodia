@@ -4036,9 +4036,9 @@ constinit const uc::LibNode uc::libNodes[4846] {
 { U"\u00A9", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4030
 { U"\u2122", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4031
 { U"\u00AE", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4032
-{ U"\u00A9\uFE0F", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4033
-{ U"\u2122\uFE0F", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4034
-{ U"\u00AE\uFE0F", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4035
+{ U"\u00A9\uFE0F", u8"copyright emoji", 3992, 0, -1, {}, EcVersion::NONE },   // 4033
+{ U"\u2122\uFE0F\uFE0F", u8"trademark emoji", 3992, 0, -1, {}, EcVersion::NONE },   // 4034
+{ U"\uFE0F\u00AE\uFE0F", u8"registered emoji", 3992, 0, -1, {}, EcVersion::NONE },   // 4035
 { U"\u2117", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4036
 { U"\U0001F1AD", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4037
 { U"\U0001F12F", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4038
