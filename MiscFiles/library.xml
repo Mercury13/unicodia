@@ -61,7 +61,10 @@
 			<!-- S --><d>₪ ⃀</d>
 			<!-- T --><d>₸ ₮</d>
 			<!-- W --><d>₩</d>
-			<!-- Y --><d>¥ 円 元 圆</d>
+			<!-- Y --><d>¥</d>
+				<sq v="円" name="yen sign 2" />
+				<sq v="元" name="yuan sign" />
+				<sq v="圆" name="yuan sign 2" />
 		</f>
 		<f loc="IntelProperty">
 			<d>© ™ ®</d>

@@ -4030,9 +4030,9 @@ constinit const uc::LibNode uc::libNodes[4846] {
 { U"\u20AE", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4024
 { U"\u20A9", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4025
 { U"\u00A5", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4026
-{ U"\u5186", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4027
-{ U"\u5143", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4028
-{ U"\u5706", {}, 3991, 0, -1, {}, EcVersion::NONE },   // 4029
+{ U"\u5186", u8"yen sign 2", 3991, 0, -1, {}, EcVersion::NONE },   // 4027
+{ U"\u5143", u8"yuan sign", 3991, 0, -1, {}, EcVersion::NONE },   // 4028
+{ U"\u5706", u8"yuan sign 2", 3991, 0, -1, {}, EcVersion::NONE },   // 4029
 { U"\u00A9", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4030
 { U"\u2122", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4031
 { U"\u00AE", {}, 3992, 0, -1, {}, EcVersion::NONE },   // 4032
