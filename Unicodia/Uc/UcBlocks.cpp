@@ -1034,7 +1034,8 @@ constinit const uc::Block uc::blocks[] {
             "Kaktovik Numerals",
             MyName::INST, EcScript::NONE, EcFont::FUNKY },
     // Mayan numerals OK
-    { 0x1D2E0, 0x1D2FF, { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK },
+    { 0x1D2E0, 0x1D2FF,
+            { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK, SvgHint{ 2, ImbaX::RIGHT_4 } },
             "Mayan Numerals",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Tai Xuan Jing OK
