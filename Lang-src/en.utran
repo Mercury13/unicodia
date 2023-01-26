@@ -6480,7 +6480,7 @@
       <p />
       <p>Script degraded almost to [[pt:abjad|consonant]]: consonant vowel means {{t|ka}}, and {{t|ki}}, and {{t|k}}. If vowel is important, there are special signs. No [[pt:virama|viramas]] and [[pt:ligature|ligatures]]. On other hand, there are many abbreviations and fractions importand for accounting books. Many of them are badly explored and aren’t yet encoded.</p>
       <p />
-      <p>Top line is seen in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with former.</p>
+      <p>Top line is attested in headings only. Digits looking like [[ps:Deva|Devanagari]] and [[ps:Gujr|Gujarati]] were sighted; in Unicode they are [[pt:unification|unified]] with former.</p>
      </transl>
     </text>
    </group>
@@ -6499,12 +6499,14 @@
       <p />
       <p>Брахмийская абугида из 18 букв без [[pt:virama|вирамы]]. Начальная гласная{{-}}буква {{sm|𑻱}} (возможно, с огласовками). Конечные согласные{{-}}''м'', ''нн'' и гортанная смычка{{-}}опускаются. Пробелов нет, между словами или фразами ставится вертикальное многоточие. С такой функциональностью письменность будет неполной{{-}}потому к XIX{{_}}веку была полностью заменена [[ps:Bugi|лонтарой]], которая считается сестринской.</p>
       <p />
-      <p>Цифры встречались как европейские, так и арабо-индийские. В одной из рукописей встречался знак препинания в виде пальмы, [[pt:unification|унифицированный]] с [[pt:emoji|эмодзи]] {{sm|🌴}}.</p>
+      <p>Цифры встречались как европейские, так и арабо-индийские. В одной из рукописей встречался знак препинания в виде пальмы, [[pt:unification|унифицированный]] с [[pt:emoji|эмодзи]] {{em|🌴}}.</p>
      </orig>
      <transl>
       <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s not ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
       <p />
       <p>Brahmic abugida consisting of 18 letters, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No spaces, words and phrases are divided with vertical ellipsis. With such functionality, script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
+      <p />
+      <p>Both European and Arabic-Indic digits are attested. In one of manuscripts there’s a punctuation mark resembling a palm-tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
      </transl>
     </text>
    </group>
