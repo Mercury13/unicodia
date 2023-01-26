@@ -1069,7 +1069,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cyrl, 'D'},
             EcScript::Cyrl, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // NP Hmong OK
-    { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA },
+    { 0x1E100, 0x1E14F, { 0x1E118, EcContinent::AMERICA, {}, 3_hx },
             "Nyiakeng Puachue Hmong", { EcScript::Hmnp, 0}, EcScript::Hmnp },
     // Toto OK
     { 0x1E290, 0x1E2BF, { 0x1E290, EcContinent::ASIA },
