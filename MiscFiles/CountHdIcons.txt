@@ -8,12 +8,13 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+13 icons done ahead
++14 icons done ahead
 	Canadian A
 	Kawi
 	Makasar
 	Kaktovik numerals
 	Mayan numerals
+	NP Hmong
 	Domino
 	Water pistol
 	Smile in love
@@ -23,7 +24,7 @@
 	Tags
 	Var sel ex
 
-TOTAL: +17
+TOTAL: +18
 
 
 Files
