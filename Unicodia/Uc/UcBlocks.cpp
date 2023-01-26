@@ -761,7 +761,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10C80, 0x10CFF, { 0x10CAF, EcContinent::EUROPE },
             "Old Hungarian", { EcScript::Hung, 0 }, EcScript::Hung },
     // Hanifi OK
-    { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA },
+    { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA, {}, SvgHint{ 4, 15 } },
             "Hanifi Rohingya", { EcScript::Rohg, 0 }, EcScript::Rohg },
     // Rumi OK
     { 0x10E60, 0x10E7F, { 0x10E77, EcContinent::AFRICA, Ifg::CONTINENT_OK },
