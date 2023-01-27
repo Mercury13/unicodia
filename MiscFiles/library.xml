@@ -45,10 +45,11 @@
 			<!-- A --><d>؋</d>
 			<!-- B --><d>฿ ₿</d>
 			<!-- C --><d>₵ ¢ ₡</d>
-			<!-- D --><d>₫ ֏</d>
+			<!-- D --><sq v="💲" name="dollar emoji" />
+				<d>₫ ֏</d>
 			<!-- E --><d>€</d>
-			<!-- F --><d>₣</d>
-			<!-- How to add Dutch florin? ƒ -->
+			<!-- F --><sq v="ƒ" name="florin/guilder sign" />
+				<d>₣</d>
 			<!-- G --><d>₲</d>
 			<!-- H --><d>₴</d>
 			<!-- K --><d>₭</d>
