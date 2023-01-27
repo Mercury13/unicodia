@@ -873,7 +873,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cans, 'A' },
             EcScript::Cans, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Pau Cin Hau OK
-    { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA },
+    { 0x11AC0, 0x11AFF, { 0x11AC0, EcContinent::ASIA, {}, 9_hx },
             "Pau Cin Hau", { EcScript::Pauc, '0' }, EcScript::Pauc },
     /// @todo [future] Deva ex A temporarily in Funky
     { 0x11B00, 0x11B5F, { 0x11B07, EcContinent::ASIA },
