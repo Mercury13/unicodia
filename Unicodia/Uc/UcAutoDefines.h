@@ -603,6 +603,8 @@ namespace uc {
             : pos{.x = aX, .y = aY }, imba { .x = static_cast<int8_t>(imbaX) } {}
         explicit constexpr SvgHint(uint8_t aX, ImbaX imbaX)
             : pos{.x = aX }, imba { .x = static_cast<int8_t>(imbaX) } {}
+        explicit constexpr SvgHint(uint8_t aY, ImbaY imbaY)
+            : pos{.y = aY }, imba { .y = static_cast<int8_t>(imbaY) } {}
 
         operator bool() const { return std::bit_cast<BiggerType>(pos); }
 
