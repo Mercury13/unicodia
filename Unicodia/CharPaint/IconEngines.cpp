@@ -441,8 +441,8 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->fillRect(rcTopIndex, HEART_RED);
 
     // Bottom index
-    auto xi2 = dim.rcPixel.right() - 1;
-    auto yi2 = dim.rcPixel.bottom() - indexDy;
+    auto xi2 = dim.rcPixel.right();
+    auto yi2 = dim.rcPixel.bottom() + 1 - indexDy;
     QRect rcBottomIndex( xi2 - indexSize, yi2 - indexSize, indexSize, indexSize );
     painter->fillRect(rcBottomIndex, HEART_RED);
 
