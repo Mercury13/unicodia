@@ -887,7 +887,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11C70, 0x11CBF,
             { 0x11C74, EcContinent::ASIA, {}, SvgHint{ 13, 1, ImbaY::ABOVE_1 } },
             "Marchen", { EcScript::Marc, 0 }, EcScript::Marc },
-    { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA },
+    { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA, {}, 7_hy },
             "Masaram Gondi", MyName::INST, EcScript::Gonm },
     { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA },
             "Gunjala Gondi", MyName::INST, EcScript::Gong },
