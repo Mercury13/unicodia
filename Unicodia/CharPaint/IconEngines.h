@@ -150,6 +150,8 @@ namespace ie {
         QPixmap texture;
     };
 
+    class LazySvg;
+
     // Programmatic drawing of Playing Cards
     class PlayingCard : public Veng
     {
@@ -160,7 +162,7 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         // no implicit data sharing :)
-        std::shared_ptr<QSvgRenderer> texture;
+        std::shared_ptr<LazySvg> texture;
     };
 
     // Programmatic drawing of Mahjong Tiles
@@ -173,7 +175,7 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         // no implicit data sharing :)
-        std::shared_ptr<QSvgRenderer> texture;
+        std::shared_ptr<LazySvg> texture;
     };
 
     // Programmatic drawing of Arrows
@@ -186,7 +188,7 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         // no implicit data sharing :)
-        std::shared_ptr<QSvgRenderer> texture;
+        std::shared_ptr<LazySvg> texture;
         const uc::SynthIcon& icon;
     };
 

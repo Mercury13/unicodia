@@ -865,7 +865,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11A00, 0x11A4F, { 0x11A0B, EcContinent::ASIA },
             "Zanabazar Square", { EcScript::Zanb, 0 }, EcScript::Zanb },
     // Soyombo OK
-    { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA },
+    { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, {}, SvgHint{ 13, 1 } },
             "Soyombo", { EcScript::Soyo, 0 }, EcScript::Soyo },
     // Canadian A OK
     { 0x11AB0, 0x11ABF, { 0x11AB0, EcContinent::AMERICA },

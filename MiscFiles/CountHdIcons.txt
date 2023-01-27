@@ -8,8 +8,7 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+14 icons done ahead
-	Canadian A
++13 icons done ahead
 	Kawi
 	Makasar
 	Kaktovik numerals
@@ -24,7 +23,7 @@
 	Tags
 	Var sel ex
 
-TOTAL: +18
+TOTAL: +17
 
 
 Files

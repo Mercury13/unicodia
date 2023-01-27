@@ -114,6 +114,7 @@ namespace util {
 
 }   // namespace util
 
+
 ///// Veng /////////////////////////////////////////////////////////////////////
 
 QPixmap ie::Veng::pixmap(
@@ -403,13 +404,38 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 }
 
 
+///// LazySvg //////////////////////////////////////////////////////////////////
+
+namespace ie {
+
+    class LazySvg {
+    public:
+        LazySvg(QString aFname) : fname(std::move(aFname)) {}
+        std::shared_ptr<QSvgRenderer> get();
+    private:
+        QString fname;
+        std::shared_ptr<QSvgRenderer> x;
+    };
+
+}
+
+
+std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
+{
+    if (auto r1 = x)
+        return r1;
+
+    auto r2 = std::make_shared<QSvgRenderer>(fname);
+    r2->setAspectRatioMode(Qt::KeepAspectRatio);
+    x = r2;
+    //std::cout << "Loaded lazy SVG " << fname.toStdString() << std::endl;
+    return r2;
+}
+
 ///// PlayingCard //////////////////////////////////////////////////////////////
 
 ie::PlayingCard::PlayingCard()
-{    
-    texture = std::make_shared<QSvgRenderer>(QString{":Misc/playcard.svg"});
-    texture->setAspectRatioMode(Qt::KeepAspectRatio);
-}
+    : texture(std::make_shared<LazySvg>(":Misc/playcard.svg")) {}
 
 // -warn: complains about =default
 ie::PlayingCard::~PlayingCard() {}
@@ -448,17 +474,14 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Point
     painter->setRenderHint(QPainter::Antialiasing, true);
-    texture->render(painter, dim.rcPixel);
+    texture->get()->render(painter, dim.rcPixel);
 }
 
 
 ///// Mahjong //////////////////////////////////////////////////////////////////
 
 ie::Mahjong::Mahjong()
-{
-    texture = std::make_shared<QSvgRenderer>(QString{":Misc/mahjong.svg"});
-    texture->setAspectRatioMode(Qt::KeepAspectRatio);
-}
+    : texture(std::make_shared<LazySvg>(":Misc/mahjong.svg")) {}
 
 // -warn: complains about =default
 ie::Mahjong::~Mahjong() {}
@@ -485,7 +508,7 @@ void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->drawRect(dim.rcFrame);
 
     // Flower
-    texture->render(painter, dim.rcPixel);
+    texture->get()->render(painter, dim.rcPixel);
 }
 
 
@@ -495,9 +518,8 @@ ie::Hint::Hint(const uc::Block& blk)
     : icon(blk.synthIcon)
 {
     char buf[48];
-    snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp);
-    texture = std::make_shared<QSvgRenderer>(QString{buf});
-    texture->setAspectRatioMode(Qt::KeepAspectRatio);
+    snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp);    
+    texture = std::make_shared<LazySvg>(buf);
 }
 
 // -warn: complains about =default
@@ -507,5 +529,5 @@ ie::Hint::~Hint() {}
 void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     painter->fillRect(rect, icon.continent().icon.bgColor);
-    util::drawHintedSvg(painter, rect, *texture, icon.svgHint);
+    util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
 }
