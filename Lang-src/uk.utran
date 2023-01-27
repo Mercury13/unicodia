@@ -8956,6 +8956,17 @@
       <p />
       <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Скачать тут]]</p>
      </orig>
+     <transl>
+      <p>'''Libre- та Microsoft Office'''</p>
+      <p />
+      <p>Наберіть шістнадцятковий код символа (наприклад, 262F) та натисніть {{kb|Alt|X}}. Код перетвориться на символ{{-}}у даному випадку {{em|☯}} U+262F «інь та ян».</p>
+      <p />
+      <p>'''UnicodeInput'''</p>
+      <p />
+      <p>Резидентна програма для Windows, що вирішує недоліки [[pt:altcode|Alt-кодів]]. Знаходиться в області повідомлень, спрацьовує при натисненні {{bc|Alt|Циф+}} та вводить будь-який символ Юнікода у будь-яку програму.</p>
+      <p />
+      <p>[[https://www.fileformat.info/tool/unicodeinput/index.htm|Скачати тут]]</p>
+     </transl>
     </text>
    </group>
    <group id="birman">
