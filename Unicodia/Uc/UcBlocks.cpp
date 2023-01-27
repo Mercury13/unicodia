@@ -889,7 +889,7 @@ constinit const uc::Block uc::blocks[] {
             "Marchen", { EcScript::Marc, 0 }, EcScript::Marc },
     { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA, {}, 7_hy },
             "Masaram Gondi", MyName::INST, EcScript::Gonm },
-    { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA },
+    { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_4 } },
             "Gunjala Gondi", MyName::INST, EcScript::Gong },
     // Makasar OK
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
