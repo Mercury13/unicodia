@@ -941,7 +941,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x16A40, 0x16A6F, { 0x16A52, EcContinent::ASIA },
             "Mro", { EcScript::Mroo, 0 }, EcScript::Mroo },
     // Tangsa OK, found the author
-    { 0x16A70, 0x16ACF, { 0x16A86, EcContinent::ASIA },
+    { 0x16A70, 0x16ACF, { 0x16A86, EcContinent::ASIA, {}, 2_hx },
             "Tangsa", { EcScript::Tnsa, 0 }, EcScript::Tnsa },
     // Bassa OK
     { 0x16AD0, 0x16AFF, { 0x16AD0, EcContinent::AFRICA },
