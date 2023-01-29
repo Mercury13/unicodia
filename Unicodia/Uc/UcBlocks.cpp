@@ -950,7 +950,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
             "Pahawh Hmong", { EcScript::Hmng, 0 }, EcScript::Hmng },
     // Medefaidrin OK
-    { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA },
+    { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin", { EcScript::Medf, 0 }, EcScript::Medf },
     // Miao OK
     { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA },
