@@ -953,7 +953,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin", { EcScript::Medf, 0 }, EcScript::Medf },
     // Miao OK
-    { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA },
+    { 0x16F00, 0x16F9F, { 0x16F03, EcContinent::ASIA, {}, SvgHint{ 12, 15, ImbaX::LEFT_4 } },
             "Miao", { EcScript::Plrd, 0 }, EcScript::Plrd },
     // Ideographic sym/punct OK
     { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK },
