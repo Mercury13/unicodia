@@ -592,7 +592,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Arab, 'a' },
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
-    { 0xFE00, 0xFE0F, { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
+    { 0xFE00, 0xFE0F,
+            { 0xFE00, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
             "Variation Selectors", MyName::INST },
     // Vertical forms OK, not collapsible: small
     { 0xFE10, 0xFE1F, { L'︗', EcContinent::CJK, Ifg::CONTINENT_OK },
@@ -1211,11 +1212,13 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hani, 'H' },
             EcScript::Hani, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Tags OK
-    { 0xE0000, 0xE007F, { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
+    { 0xE0000, 0xE007F,
+            { 0xE0054, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
             "Tags",
             MyName::INST, EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
     // Var sel supp OK
-    { 0xE0100, 0xE01EF, { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK },
+    { 0xE0100, 0xE01EF,
+            { 0xE0100, EcContinent::TECH, Ifg::APPROX_COLLECTIVE | Ifg::CONTINENT_OK | Ifg::FORMAT },
             "Variation Selectors Supplement", MyName::INST },
 };
 static_assert(std::size(uc::blocks) == uc::N_BLOCKS,

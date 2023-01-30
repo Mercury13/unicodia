@@ -664,15 +664,16 @@ namespace uc {
         // Colors used on 16×16 icons: BG and FG
         // We use the same colors for synthesized icons
         struct Icon {
-            QColor bgColor, fgColor;
+            QColor bgColor, fgColor, frameColor = fgColor;
         } icon;
     };
     extern const Continent continentInfo[];
 
     enum class Ifg {
         CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
-        MISSING           = 1<<1,   ///< [+] Red icon, missing block
+        MISSING           = 1<<1,   ///< [+] red icon, missing block
         CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
+        FORMAT            = 1<<3,   ///< [+] format char is on icon
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
         APPROX_2_CHARS    = 0,      ///< [+] 2 chars on icon:

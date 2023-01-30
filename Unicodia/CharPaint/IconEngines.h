@@ -161,7 +161,6 @@ namespace ie {
         PlayingCard* clone() const override { return new PlayingCard(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        // no implicit data sharing :)
         std::shared_ptr<LazySvg> texture;
     };
 
@@ -174,7 +173,6 @@ namespace ie {
         Mahjong* clone() const override { return new Mahjong(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        // no implicit data sharing :)
         std::shared_ptr<LazySvg> texture;
     };
 
@@ -187,7 +185,19 @@ namespace ie {
         Hint* clone() const override { return new Hint(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        // no implicit data sharing :)
+        std::shared_ptr<LazySvg> texture;
+        const uc::SynthIcon& icon;
+    };
+
+    // Programmatic drawing of format pictures
+    class Format : public Veng
+    {
+    public:
+        Format(const uc::Block& blk);
+        ~Format();
+        Format* clone() const override { return new Format(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
         std::shared_ptr<LazySvg> texture;
         const uc::SynthIcon& icon;
     };

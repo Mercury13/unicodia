@@ -82,7 +82,7 @@ namespace util {
         return {
             .thickness = actualThickness,
             .rcPixel = QRect( x0, y0, width, height ) ,
-            .rcFrame { x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 },
+            .rcFrame = QRectF{ x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 },
         };
     }
 
@@ -110,6 +110,62 @@ namespace util {
         }
 
         texture.render(painter, rect1);
+    }
+
+    inline void sprintfBlock(char (&buf)[48], const uc::Block& blk)
+        { snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp); }
+
+    // draw low-resolution format frame
+    void drawLoResFormat(
+            QPainter* painter, const QRect& rect, unsigned dotSize,
+            const QColor& color)
+    {
+        if (dotSize == 0)
+            dotSize = 1;
+
+        unsigned nHorzDots = rect.width() / dotSize;
+        unsigned nVertDots = nHorzDots;
+        unsigned halfDot = dotSize >> 1;
+        unsigned doubleDot = dotSize << 1;
+        if ((rect.width() % dotSize) < halfDot
+                && (nVertDots & 1u) != 0) {
+            --nVertDots;
+        }
+
+        QBrush brush { color };
+
+        QRect rcTopLeft(rect.top(), rect.left(), dotSize, dotSize);
+
+        // Draw top
+        QRect rc = rcTopLeft;
+        for (size_t i = 0; i < nHorzDots; i += 2) {
+            painter->fillRect(rc, brush);
+            rc.moveLeft(rc.left() + doubleDot);
+        }
+
+        // Draw left
+        rc = rcTopLeft;
+        for (size_t i = 2; i < nVertDots; i += 2) {
+            rc.moveTop(rc.top() + doubleDot);
+            painter->fillRect(rc, brush);
+        }
+
+        // Draw bottom
+        rc = rcTopLeft;
+        rc.moveBottomRight(rect.bottomRight());
+        for (size_t i = 0; i < nHorzDots; i += 2) {
+            painter->fillRect(rc, brush);
+            rc.moveLeft(rc.left() - doubleDot);
+        }
+
+        // Draw right
+        rc = rcTopLeft;
+        rc.moveBottomRight(rect.bottomRight());
+        for (size_t i = 2; i < nVertDots; i += 2) {
+            rc.moveTop(rc.top() - doubleDot);
+            painter->fillRect(rc, brush);
+        }
+
     }
 
 }   // namespace util
@@ -518,7 +574,7 @@ ie::Hint::Hint(const uc::Block& blk)
     : icon(blk.synthIcon)
 {
     char buf[48];
-    snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp);    
+    util::sprintfBlock(buf, blk);
     texture = std::make_shared<LazySvg>(buf);
 }
 
@@ -529,5 +585,35 @@ ie::Hint::~Hint() {}
 void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     painter->fillRect(rect, icon.continent().icon.bgColor);
+    util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
+}
+
+
+///// Format ///////////////////////////////////////////////////////////////////
+
+
+ie::Format::Format(const uc::Block& blk)
+    : icon(blk.synthIcon)
+{
+    char buf[48];
+    util::sprintfBlock(buf, blk);
+    texture = std::make_shared<LazySvg>(buf);
+}
+
+// -warn: complains about =default
+ie::Format::~Format() {}
+
+
+void ie::Format::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    auto& continent = icon.continent().icon;
+    painter->fillRect(rect, continent.bgColor);
+
+    // #.5 → big indent, small dash
+    unsigned dashSize = lround(scale - 0.001);
+    unsigned indent = lround(scale + 0.001);
+    QRect frameRect = rect.marginsRemoved({ indent, indent, indent, indent });
+    util::drawLoResFormat(painter, frameRect, dashSize, continent.frameColor);
+
     util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
 }
