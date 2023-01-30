@@ -115,7 +115,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x0B00, 0x0B7F, { 0xB1C, EcContinent::ASIA },
             "Oriya", { EcScript::Orya, 0 }, EcScript::Orya },
     // Tamil OK, font pair is good
-    { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA },
+    { 0x0B80, 0x0BFF, { 0xB95, EcContinent::ASIA, {}, SvgHint{ 8, 3, ImbaY::BELOW_4 } },
             "Tamil", { EcScript::Taml, 0 }, EcScript::Taml },
     // Telugu OK
     { 0x0C00, 0x0C7F, { 0xC35, EcContinent::ASIA },
