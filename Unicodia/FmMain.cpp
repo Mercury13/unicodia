@@ -248,12 +248,12 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     case Qt::DecorationRole: {
             GET_BLOCK
             if (!block->icon) {
-                if (block->synthIcon.svgHint) {
+                if (block->synthIcon.flags.have(uc::Ifg::FORMAT)) {
+                    block->icon = new QIcon(new ie::Format(*block));
+                } else if (block->synthIcon.svgHint) {
                     block->icon = new QIcon(new ie::Hint(*block));
                 } else if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
                     block->icon = new QIcon(getCustomEngine(block->startingCp));
-                } else if (block->synthIcon.flags.have(uc::Ifg::FORMAT)) {
-                    block->icon = new QIcon(new ie::Format(*block));
                 } else {
                     char buf[48];
                     int cp1 = block->startingCp;

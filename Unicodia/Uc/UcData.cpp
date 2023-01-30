@@ -1267,7 +1267,8 @@ constinit const uc::Continent uc::continentInfo[] {
 };
 
 // Missing
-const uc::Continent MISSING_CONTINENT { 0xa40000, 0xFFFFFF };
+constinit const uc::Continent MISSING_CONTINENT
+    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } } };
 
 
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));

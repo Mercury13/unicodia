@@ -664,7 +664,13 @@ namespace uc {
         // Colors used on 16×16 icons: BG and FG
         // We use the same colors for synthesized icons
         struct Icon {
-            QColor bgColor, fgColor, frameColor = fgColor;
+            QColor bgColor, fgColor, frameColor;
+
+            Icon() = delete;
+            consteval Icon(const QColor& aBg, const QColor& aFg) noexcept
+                : bgColor(aBg), fgColor(aFg), frameColor(aFg) {}
+            consteval Icon(const QColor& aBg, const QColor& aFg, const QColor& aFrame) noexcept
+                : bgColor(aBg), fgColor(aFg), frameColor(aFrame) {}
         } icon;
     };
     extern const Continent continentInfo[];
