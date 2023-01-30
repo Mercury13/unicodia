@@ -30,7 +30,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="32"
-     inkscape:cx="6.8125"
+     inkscape:cx="6.859375"
      inkscape:cy="10.5"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -70,10 +70,10 @@
        sodipodi:nodetypes="cccccsc" /><ellipse
        style="opacity:1;fill:#5c3566;stroke:none;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stop-color:#000000"
        id="path23880"
-       cx="4.6499996"
-       cy="10.9"
-       rx="0.64999998"
-       ry="0.89999998" /><use
+       cx="4.6999993"
+       cy="10.95"
+       rx="0.69999999"
+       ry="0.94999999" /><use
        x="0"
        y="0"
        xlink:href="#path23880"
