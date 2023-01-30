@@ -210,6 +210,8 @@ namespace {
         switch (startingCp) {
         case 0x2580:    // Block elements
             return new ie::BlockElem;
+        case 0x2FF0:    // Ideographic description
+            return new ie::CjkStructure;
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":Misc/yijing.png");
         case 0x1D300:   // Tai Xuan

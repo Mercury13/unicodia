@@ -1,8 +1,9 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+6 custom engines
++7 custom engines
 	Block elements: special (moire)
+	Ideographic description: special (together with format)
 	Yijing: coarse image (moire)
 	Tai Xuan: special (threat of moire, IDK)
 	Mahjongg: special (playing cards do well)
@@ -21,13 +22,11 @@
 	Tags
 	Var sel ex
 
-TOTAL: +15
+TOTAL: +16
 
 
-Files
-
-321 blocks
-−6 custom engines
-+1 resource file
-
-TOTAL: 316
+FILES:
+	321 blocks
+	−7 custom engines
+	+1 resource file
+TOTAL: 315

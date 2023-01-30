@@ -30,6 +30,7 @@ constexpr int ALPHA_INTERNATIONAL = 20;
 constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush
 constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
+constexpr QColor FRAME_CJK = TX_CJK;            // Format frame — same medium violet
 constexpr QColor FG_CJK { 0x5c, 0x35, 0x66 };   // Tango dark violet
 
 #define STYLE_LINK2(color1,color2,place) \

@@ -134,7 +134,7 @@ namespace ie {
     class Taixu : public Veng
     {
     public:
-        Taixu* clone() const override { return new Taixu(*this); }
+        Taixu* clone() const override { return new Taixu(); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
     };
@@ -200,6 +200,14 @@ namespace ie {
     private:
         std::shared_ptr<LazySvg> texture;
         const uc::SynthIcon& icon;
+    };
+
+    // Programmatic drawing of Ideographic descriptions
+    class CjkStructure : public Veng
+    {
+    public:
+        CjkStructure* clone() const override { return new CjkStructure; }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
 }   // namespace ie

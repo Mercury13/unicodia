@@ -403,7 +403,7 @@ constinit const uc::Block uc::blocks[] {
             "Kangxi Radicals",
             MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ideographic desc OK, not collapsible: small block
-    { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK },
+    { 0x2FF0, 0x2FFF, { L'⿺', EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::CUSTOM_ENGINE },
             "Ideographic Description Characters",
             MyName::INST, EcScript::NONE, EcFont::CJK_STRUCTURE, Bfg::CJK },
     // CJK sym/punct OK
