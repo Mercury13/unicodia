@@ -2267,8 +2267,7 @@
       <p>* upward horizontal line T;</p>
       <p>* clockwise curve W.</p>
       <p />
-      <p>Among supplementary elements: flat part B, circle Q, slant X, break Z.</p>
-      <p>For every stroke it’s codified in what direction it must be written.</p>
+      <p>Among supplementary elements: flat part B, circle Q, slant X, break Z. For every stroke it’s codified in what direction it must be written.</p>
       <p />
       <p>All name are Chinese: for example, B from ''biǎn'' “flat.”</p>
      </transl>
@@ -2781,7 +2780,11 @@
       <p />
       <p>В этом блоке собраны «неправильные» символы, занимающие половину клетки вместо целой и наоборот.</p>
      </orig>
-     <transl>In CJK an ideograph traditionally takes the entire cell of grid, and a European letter takes a half of cell. Hence funny style of text on cheap Chinese goods with badly picked fonts: in Russian internet “Athletism” insoles became famous.</transl>
+     <transl>
+      <p>In CJK an ideograph traditionally takes the entire cell of grid, and a European letter takes a half of cell. Hence funny style of text on cheap Chinese goods with badly picked fonts: in Russian internet “Athletism” insoles became famous.</p>
+      <p />
+      <p>This block contains “wrong” characters that take half of cell instead of full one, and vice-versa.</p>
+     </transl>
     </text>
    </group>
    <group id="FFF0">
@@ -6250,6 +6253,10 @@
       <p>Lao script was standardized in 14th century. Like [[ps:Thai|Thai]], originated from [[ps:Khmr|Khmer]]. After reform conducted by communists in 1960 inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules of writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. Lao language is tonal, and we see here both vowel mark of three (!) characters and tone above {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] charcters for historical reasons.</p>
       <p />
       <p>There are no spaces between words. Like in Thai, letters are [[pt:acrophonic|acrophonic]], that is named with suitable words: {{sm|ບ}} is “bo-be” or just “be” (goat). Letter {{sm|ຣ}} (r) became silent or turned to “L” and disappeared from orthography, remaining for foreign names only.</p>
+      <p />
+      <p>Buddhism uses Pali as religious language, several additional letters and virama are used to write that language.</p>
+      <p />
+      <p>Unicode uses a dotted circle for empty place under mark. Laos traditionally use X mark that’s absent in Unicode. Sometimes [[ps:Latn|Latin]] “x” is used instead.</p>
      </transl>
     </text>
    </group>
@@ -7845,6 +7852,8 @@
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and unusual design: the frame contains of vertical stem on the right and triangle above. This frame carries main consonant, vowel mark, final consonant, length mark and diphtong mark. [[pt:virama|Virama]] is purely virtual and is just for encoding nine of 14 standard ligatures:</p>
       <p>: ka {{sm|𑩜}} + subjoiner {{sm|◌𑪙}} + va {{sm|𑩾}} = kva {{sm|𑩜𑪙𑩾}}</p>
+      <p />
+      <p>Numbers aren’t attested in sources.</p>
      </transl>
     </text>
    </group>
@@ -8646,6 +8655,7 @@
       <p>* escape 1B{{-}}execute some command, either printer’s (fonts, graphics) or console’s (cursor movement, colours).</p>
       <p />
       <p>Other interesting commands:</p>
+      <p />
       <p>* vertical tabulation 0B{{-}}turn the drum to preprogrammed position. Makes printing on existing forms faster and quieter;</p>
       <p>* shift out/in 0E/0F{{-}}other ribbon colour, other character set;</p>
       <p>* data link escape 10{{-}}the next character is [[pt:graphic|graphic]], not{{_}}control;</p>
@@ -8983,6 +8993,10 @@
       <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do not stretch in justified text, do not wrap to next line.</p>
       <p />
       <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
+      <p />
+      <p>In ''Unicodia'' spaces are marked exactly by body’s size, so narrowness is deceptive. Hair space U+200A is often enough to leave a little space.</p>
+      <p />
+      <p>All spaces are [[pt:spacing|spacing]] characters. Zero-width spaces that do not{{_}}leave space are classified as [[pt:format|format]] characters rather than spaces.</p>
      </transl>
     </text>
    </group>
@@ -9398,6 +9412,7 @@
       <p>* sweeping writing with brush and ink (except Nüshu);</p>
       <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
       <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
+      <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
       <p>* as characters did not fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </transl>
     </text>
@@ -10101,6 +10116,7 @@
       <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
       <p>* Characters of one script are grouped together as far as practical.</p>
       <p>* Punctuation marks are common for all scripts.</p>
+      <p>* Format characters are described as much as possible.</p>
       <p>* [[pt:format|Format]] characters that change inner state are avoided. This is not{{_}}always possible, [[pt:bidi|bidirectinal writing]] is inherently complex.</p>
      </transl>
     </text>
@@ -10596,6 +10612,8 @@
       <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
       <p />
       <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do not occur as a format of text files. UTF-32 is extremely rare.</p>
+      <p />
+      <p>Binary files strictly specify serialization format, and do not need byte order mark.</p>
      </transl>
     </text>
    </group>
