@@ -926,7 +926,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs", { EcScript::Egyp, 0 }, EcScript::Egyp },
     // Egyptian hiero format OK
-    { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA },
+    { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::FORMAT },
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 1 },
             EcScript::Egyp, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
