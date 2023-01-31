@@ -214,6 +214,8 @@ namespace {
             return new ie::CjkStructure;
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":Misc/yijing.png");
+        case 0x10100:   // Aegeam numbers
+            return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":Misc/aegean.png");
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
         case 0x1D360:   // Counting rods

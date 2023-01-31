@@ -631,7 +631,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10080, 0x100FF, { 0x100E0, EcContinent::EUROPE },
             "Linear B Ideograms", { EcScript::Linb, 1 }, EcScript::Linb },
     // Aegean numbers OK
-    { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE },
+    { 0x10100, 0x1013F, { 0x1010D, EcContinent::EUROPE, Ifg::CUSTOM_ENGINE },
             "Aegean Numbers",
             { EcScript::Linb, 2 },
             EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },

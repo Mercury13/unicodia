@@ -32,6 +32,7 @@ constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush
 constexpr QColor TX_CJK { 0x75, 0x50, 0x7b };   // Tango medium violet
 constexpr QColor FRAME_CJK = TX_CJK;            // Format frame — same medium violet
 constexpr QColor FG_CJK { 0x5c, 0x35, 0x66 };   // Tango dark violet
+constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };// some cyan
 
 #define STYLE_LINK2(color1,color2,place) \
             "color:" color1 "; "   \
