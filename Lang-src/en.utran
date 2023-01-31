@@ -2344,12 +2344,16 @@
       <p />
       <p>Известно, что для гадания применялся пучок из 50 палочек, традиционно стеблей тысячелистника, но как именно{{-}}неизвестно. Методы с бросанием монет появились позднее, а современное гадание на палочках{{-}}реконструкция.</p>
       <p />
+      <p>Гексаграммы закодированы в том же порядке, что и в книге: прибавляем к номеру 1…64 смещение 4DBF₁₆=19903₁₀ и получаем её код в Юникоде.</p>
+      <p />
       <p>В Китае также был философ И Цзин, никак с книгой не{{_}}связанный.</p>
      </orig>
      <transl>
       <p>Book of Changes (Yi Jing or I Ching) is a Chinese esoterical text written with several generations of people. The oldest part is written about 700{{_}}BC and describes a well-known method of cleromancy, divination using random numbers. One must random a hexagram and read its meaning.</p>
       <p />
       <p>It is known that a bundle of 50 sticks was used for divinations, traditionally stalks of yarrow, but it’s unknown how exactly. Methods with coin flipping appeared later, and modern divination using sticks is a reconstruction.</p>
+      <p />
+      <p>Hexagrams are encoded in the same order as in the book: you take its number 1…64, add offset 4DBF₁₆=19903₁₀ and get its Unicode point.</p>
       <p />
       <p>There was also a philosopher named Yijing in China, unrelated to the book.</p>
      </transl>
