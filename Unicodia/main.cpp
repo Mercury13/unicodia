@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
     uc::completeData();  // …runs once and should not depend on L10n
     initTranslation();
 
-    FmMain w;    
+    FmMain w;
     w.installTempPrefix();
     loc::man.add(w);
 
