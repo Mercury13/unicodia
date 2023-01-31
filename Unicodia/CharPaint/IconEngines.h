@@ -210,4 +210,12 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
+    // Programmatic drawing of tally marks
+    class TallyMark : public Veng
+    {
+    public:
+        TallyMark* clone() const override { return new TallyMark; }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    };
+
 }   // namespace ie

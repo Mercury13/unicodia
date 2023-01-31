@@ -216,6 +216,8 @@ namespace {
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":Misc/yijing.png");
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
+        case 0x1D360:   // Counting rods
+            return new ie::TallyMark;
         case 0x1F000:   // Mahjong
             return new ie::Mahjong;
         case 0x1F0A0:   // Playing cards

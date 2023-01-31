@@ -126,7 +126,7 @@ namespace util {
         unsigned dashSize = lround(scale - 0.001);
         unsigned indent = lround(scale + 0.001);
         return {
-            .frameRect = rect.marginsRemoved({ indent, indent, indent, indent }),
+            .frameRect = rect.marginsRemoved(QMargins(indent, indent, indent, indent)),
             .dashSize = dashSize,
         };
     }
@@ -677,7 +677,48 @@ void ie::CjkStructure::paint1(QPainter *painter, const QRect &rect, qreal scale)
     util::drawLoResFormat(painter, fi.frameRect, fi.dashSize, FRAME_CJK);
 
     auto loSz = ((rect.width() - 2*fi.dashSize) * 2 / 3) + fi.dashSize;
-    QRect rc2 { 0, 0, loSz, loSz };
+    QRect rc2(0, 0, loSz, loSz);
     rc2.moveTopRight(fi.frameRect.topRight());
     util::drawFormatBottomLeft(painter, rc2, fi.dashSize, FRAME_CJK);
+}
+
+
+///// TallyMark ////////////////////////////////////////////////////////////////
+
+void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    // Sticks
+    static constexpr auto N_STICKS = 4;
+    auto stickHeight = rect.height() * 3 / 4;
+    // Equalize margins above and below
+    if ((rect.height() % 2) != (stickHeight % 2))
+        ++stickHeight;
+    auto stickY = rect.top() + (rect.height() - stickHeight) / 2;
+    auto stickStep = rect.width() * 3 / (4 * N_STICKS);
+    auto stickThickness = stickStep >> 1;
+    if (stickThickness <= 0)
+        stickThickness = 1;
+    auto stickTotalWidth = stickStep * (N_STICKS - 1) + stickThickness;
+    auto stickX0 = rect.left() + (rect.width() - stickTotalWidth) / 2;
+    auto x = stickX0;
+    for (int i = 0; i < N_STICKS; ++i) {
+        painter->fillRect(x, stickY, stickThickness, stickHeight, Qt::black);
+        x += stickStep;
+    }
+
+    // Slash
+    static constexpr auto SLASH_RELY = 0.78;
+    static constexpr auto SLASH_RELY2 = 1.0 - SLASH_RELY;
+    static constexpr auto MINUS_FOR_GAMMA = 0.3;    // reduce due to monitor’s gamma
+    auto slashHangout = (stickStep * 0.4) + 0.5;    // 0.5 is for monitor’s gamma
+    auto slashX1 = stickX0 - slashHangout;
+    auto slashX2 = stickX0 + stickTotalWidth + slashHangout;
+    auto slashY1 = stickY + stickHeight * SLASH_RELY;
+    auto slashY2 = stickY + stickHeight * SLASH_RELY2;
+    painter->setRenderHint(QPainter::Antialiasing);
+    QPen pen(Qt::black, stickThickness - MINUS_FOR_GAMMA);
+    painter->setPen(pen);
+    painter->drawLine(QPointF{slashX1, slashY1}, QPointF{slashX2, slashY2});
 }

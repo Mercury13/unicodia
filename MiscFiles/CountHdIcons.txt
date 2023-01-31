@@ -1,11 +1,12 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+7 custom engines
++8 custom engines
 	Block elements: special (moire)
 	Ideographic description: special (together with format)
 	Yijing: coarse image (moire)
 	Tai Xuan: special (threat of moire, IDK)
+	Counting rods: special (not really moire, but looks badly)
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
@@ -20,11 +21,11 @@
 	Tags
 	Var sel ex
 
-TOTAL: +14
+TOTAL: +15
 
 
 FILES:
 	321 blocks
-	−7 custom engines
+	−8 custom engines
 	+1 resource file
-TOTAL: 315
+TOTAL: 314
