@@ -1025,7 +1025,7 @@ constinit const uc::Block uc::blocks[] {
             "Byzantine Musical Symbols",
             MyName::INST, EcScript::NONE, EcFont::MUSIC_BIGGER  },
     // Music OK
-    { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE },
+    { 0x1D100, 0x1D1FF, { 0x1D161, EcContinent::NONE, {}, 8_hx },
             "Musical Symbols",
             MyName::INST, EcScript::NONE, EcFont::MUSIC },
     // Greek music OK
