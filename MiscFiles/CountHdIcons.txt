@@ -9,9 +9,7 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+11 icons done ahead
-	Kaktovik numerals
-	Mayan numerals
++9 icons done ahead
 	NP Hmong
 	Domino
 	Water pistol
@@ -22,7 +20,7 @@
 	Tags
 	Var sel ex
 
-TOTAL: +16
+TOTAL: +14
 
 
 FILES:
