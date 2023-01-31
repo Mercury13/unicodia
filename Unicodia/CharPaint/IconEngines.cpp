@@ -691,16 +691,16 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     // Sticks
     static constexpr auto N_STICKS = 4;
-    auto stickHeight = rect.height() * 3 / 4;
     // Equalize margins above and below
-    if ((rect.height() % 2) != (stickHeight % 2))
-        ++stickHeight;
-    auto stickY = rect.top() + (rect.height() - stickHeight) / 2;
     auto stickStep = rect.width() * 3 / (4 * N_STICKS);
     auto stickThickness = stickStep >> 1;
     if (stickThickness <= 0)
         stickThickness = 1;
     auto stickTotalWidth = stickStep * (N_STICKS - 1) + stickThickness;
+    unsigned stickHeight = stickStep * 4.5;
+    if ((rect.height() % 2) != (stickHeight % 2))
+        ++stickHeight;
+    auto stickY = rect.top() + (rect.height() - stickHeight) / 2;
     auto stickX0 = rect.left() + (rect.width() - stickTotalWidth) / 2;
     auto x = stickX0;
     for (int i = 0; i < N_STICKS; ++i) {
@@ -709,7 +709,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
     }
 
     // Slash
-    static constexpr auto SLASH_RELY = 0.78;
+    static constexpr auto SLASH_RELY = 0.8;
     static constexpr auto SLASH_RELY2 = 1.0 - SLASH_RELY;
     static constexpr auto MINUS_FOR_GAMMA = 0.3;    // reduce due to monitor’s gamma
     auto slashHangout = (stickStep * 0.4) + 0.5;    // 0.5 is for monitor’s gamma
