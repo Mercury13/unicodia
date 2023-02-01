@@ -1057,7 +1057,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D800, 0x1DAAF, { 0x1D8A0, EcContinent::NONE },
             "Sutton SignWriting", { EcScript::Sgnw, 0}, EcScript::Sgnw },
     // Latin ex G OK, drew in FunkySample
-    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE },
+    { 0x1DF00, 0x1DFFF, { 0x1DF04, EcContinent::EUROPE, {}, SvgHint{ 7, 15, ImbaX::LEFT_4 } },
             "Latin Extended-G",
             { EcScript::Latn, 'G'},
             EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
