@@ -721,7 +721,7 @@ void mywiki::appendHtml(QString& text, const uc::Script& x, bool isScript)
         }
         if (x.ecLife != uc::EcLangLife::NOMATTER) {
             sp.sep();
-            appendBullet(text, "Prop.Bullet.Condition");
+            appendBullet(text, "Prop.Bullet.Condition", "<a href='pt:status' class='popup'>", "</a>");
             append(text, loc::get(x.life().locKey), x.font());
         }
         if (isScript) {

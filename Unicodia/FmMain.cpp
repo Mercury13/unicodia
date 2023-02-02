@@ -1047,6 +1047,10 @@ void FmMain::translateTerms()
     auto lastCat = uc::EcTermCat::NN;
     for (size_t i = 0; i < n; ++i) {
         const uc::Term& term = *uc::sortedTerms[i];
+        // Term hidden?
+        if (term.ecCat == uc::EcTermCat::HIDDEN)
+            continue;
+        // Category changed?
         if (term.ecCat != lastCat) {
             lastCat = term.ecCat;
             str::append(text, "<h1>");

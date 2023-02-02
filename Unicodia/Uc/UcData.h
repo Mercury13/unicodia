@@ -854,7 +854,8 @@ namespace uc {
 
     enum class EcTermCat {
         ENCODING, SERIALIZATION, SCRIPT_CLASS, CHAR_CLASS, ALGORITHM,
-        PRINCIPLES, WRITING_STYLE, INPUT, OTHER, NN
+        PRINCIPLES, WRITING_STYLE, INPUT, OTHER, NN,
+        HIDDEN = NN
     };
 
     enum class SortTerms { NO, YES };

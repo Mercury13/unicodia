@@ -1242,6 +1242,8 @@ constinit const uc::Term uc::terms[] {
     { "mono", EcTermCat::OTHER, u8"character cell" },
     { "inclusion", EcTermCat::OTHER, u8"inclusion and diversity" },
     { "tofu", EcTermCat::OTHER, u8"tofu" },
+
+    { "status", EcTermCat::HIDDEN, u8"" },
 };
 
 constinit const uc::Term* uc::sortedTerms[std::size(terms)] { nullptr };
