@@ -1084,7 +1084,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari", { EcScript::Nagm, 0}, EcScript::Nagm },
     // Ethiopic ex B OK, Noto quickly arrived
-    { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA },
+    { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA, {}, 14_hy },
             "Ethiopic Extended-B",
             { EcScript::Ethi, 'B' },
             EcScript::Ethi, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
