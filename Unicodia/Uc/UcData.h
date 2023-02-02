@@ -87,7 +87,10 @@ namespace uc {
         COMPETING,      ///< Loses competition to another script
         DEAD,           ///< UNESCO elders only (Votic)
                         ///< UNESCO dead (Yugh)
-        HISTORICAL,     ///< Dead long ago (Egyptian hieroglyphs)
+        CONSERVED,      ///< Historical, writing tradition conserved (Glagolitic)
+        UNDECIPHERED,   ///< Was silent and still remains undeciphered (Linear A)
+        PARTLY_DECIPHERED, ///< Was silent, then partly deciphered (Carian)
+        DECIPHERED,     ///< Was silent, then deciphered ()
         SACRED,         ///< Used nowadays as sacred (Coptic, Avestan)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
@@ -546,7 +549,7 @@ namespace uc {
     {
         std::string_view locKey;
     };
-    extern const LangLife langLifeInfo[static_cast<int>(EcLangLife::NN)];
+    extern const LangLife langLifeInfo[];
 
 
     struct ScriptType

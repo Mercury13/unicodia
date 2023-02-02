@@ -307,21 +307,25 @@ constinit const uc::Font uc::fontInfo[] = {
     { "MezenetsUnicode.otf", Ffg::STUB_FINEGRAINED, 120_pc },                   // Znamenny
 };
 
-static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN));
+static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN), "fontInfo size?");
 
-constinit const uc::LangLife uc::langLifeInfo[static_cast<int>(EcLangLife::NN)] {
+constinit const uc::LangLife uc::langLifeInfo[] {
     { {} },
     { "Prop.Life.Alive" },
     { "Prop.Life.Danger" },
     { "Prop.Life.Competing" },
     { "Prop.Life.Dead" },
-    { "Prop.Life.Hist" },
+    { "Prop.Life.Conserved" },
+    { "Prop.Life.Undeciphered" },
+    { "Prop.Life.Partly" },
+    { "Prop.Life.Deciphered" },
     { "Prop.Life.Sacred" },
     { "Prop.Life.New"},
     { "Prop.Life.Reborn" },
     { "Prop.Life.Exp" },
     //{ "Error" },
 };
+static_assert (std::size(uc::langLifeInfo) == static_cast<size_t>(uc::EcLangLife::NN), "langLifeInfo size?");
 
 
 constinit const uc::WritingDir uc::writingDirInfo[static_cast<int>(EcWritingDir::NN)] {
@@ -459,7 +463,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::ADLAM },
     // Caucasian Albanian OK, W10 none, installed Google Noto
     { "Aghb", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(400), EcFont::CAUCASIAN_ALBANIAN },
     // Ahom OK, installed Google Noto font
     { "Ahom", QFontDatabase::Any,
@@ -471,7 +475,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::crange(-10, -9), EcFont::ARAMAIC },
     // Armenian OK, Cambria+Noto is more than nice!
     { "Armn", QFontDatabase::Armenian,
@@ -504,7 +508,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::BENGALI },
     // Bhaiksuki OK, installed Google Noto
     { "Bhks", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(11), EcFont::BHAIKSUKI },
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,
@@ -512,7 +516,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1913), EcFont::CJK },
     // Brahmi OK, because of sheer importance installed Google Noto
     { "Brah", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::special(), EcFont::BRAHMI },
     // Braille OK, “Segoe UI Symbol”
     { "Brai", QFontDatabase::Any,
@@ -533,7 +537,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Carian OK, W10 P1
     /// @todo [font???] Carian
     { "Cari", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
     // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
     { "Cans", QFontDatabase::Any,
@@ -548,7 +552,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1821), EcFont::CHEROKEE },
     // Chorasmian OK, installed Google Noto
     { "Chrs", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA,
         Dating::century(2, StdNote::FIRST_KNOWN), EcFont::CHORASMIAN },
     // Coptic OK, W7 problems → installed Google Noto font
     { "Copt", QFontDatabase::Any,
@@ -556,11 +560,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(2), EcFont::COPTIC },
     // Cypro-Minoan OK, made nice script at FunkySample
     { "Cpmn", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::SYLLABLE, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(-1550, StdNote::FIRST_KNOWN), EcFont::FUNKY },
     // Cypriot OK, W10 Segoe Historic
     { "Cprt", QFontDatabase::Any,
-        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
+        EcScriptType::SYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::EUROPE,
         Dating::century(-11), EcFont::HISTORIC },
     // Cyr OK except enclosing; managed to modify Noto
     { "Cyrl", QFontDatabase::Cyrillic,
@@ -572,7 +576,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(1, 7), EcFont::DEVANAGARI },
     // Diak OK, built some samples
     { "Diak", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::crange(9, 10, StdNote::FIRST_KNOWN), EcFont::DIVES_AKURU },
     // Dogri OK, W10 off → installed Google Noto
     { "Dogr", QFontDatabase::Any,
@@ -588,7 +592,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1860), EcFont::DUPLOYAN },
     // Egyptian hiero OK
     { "Egyp", QFontDatabase::Any,
-        EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::AFRICA,
+        EcScriptType::CONSONANTHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::BOTH, EcContinent::AFRICA,
         Dating::yapprox(-3200), EcFont::EGYPTIAN },
     // Elbasan OK, none in W10 → installed Google Noto
     { "Elba", QFontDatabase::Any,
@@ -596,7 +600,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(18), EcFont::ELBASAN },
     // Elymaic OK, W10 none → installed Google Noto
     { "Elym", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-2), EcFont::ELYMAIC },
     // Ethiopic OK, lots of tofu, espec. in W7 → installed Google Noto
     { "Ethi", QFontDatabase::Any,
@@ -608,7 +612,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(430, StdNote::FIRST_KNOWN), EcFont::GEORGIAN },
     // Glagolitic OK, installed Google Noto font
     { "Glag", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::century(9), EcFont::GLAGOLITIC },
     // Gondi/Gunjala OK, W10 none, installed Google Noto
     { "Gong", QFontDatabase::Any,
@@ -620,7 +624,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1918), EcFont::MASARAM_GONDI },
     // Gothic OK, took from Junicode and enlarged ×135%
     { "Goth", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::century(4), EcFont::FUNKY },
     // Grantha OK, W10 none → installed Google Noto
     { "Gran", QFontDatabase::Any,
@@ -652,7 +656,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yapprox(1300), EcFont::HANUNOO },
     // Hatran OK, W10 none, installed Google Noto
     { "Hatr", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yapprox(-100), EcFont::HATRAN },
     // Hebrew OK, installed very nice Noto, implemented yod triangle
     { "Hebr", QFontDatabase::Hebrew,
@@ -660,7 +664,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(-2, StdNote::MODERN_FORM), EcFont::HEBREW },
     // Hentaigana currently OK
     { "Hent", QFontDatabase::Japanese,
-        EcScriptType::SYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR_CJK, EcContinent::CJK,
+        EcScriptType::SYLLABLE, EcLangLife::CONSERVED, EcWritingDir::LTR_CJK, EcContinent::CJK,
         Dating::crange(8, 9), EcFont::HENTAIGANA },
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
@@ -668,7 +672,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(8, 9), EcFont::KOREAN },
     // Anatolian hiero OK, installed Google Noto
     { "Hluw", QFontDatabase::Any,
-        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::crange(-14, -13, StdNote::FIRST_KNOWN), EcFont::ANATOLIAN },
     // Pahawh Hmong OK, W10 none → installed Google Noto
     { "Hmng", QFontDatabase::Any,
@@ -680,11 +684,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::decade(1980), EcFont::NP_HMONG },
     // Hungarian runes OK, W10 none → installed some open-source font
     { "Hung", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::RTL, EcContinent::EUROPE,
         Dating::century(10, StdNote::MAYBE_EARLIER), EcFont::OLD_HUNGARIAN },
     // Old Italic OK, installed Google Noto (Segoe has no newer chars od 2014+)
     { "Ital", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::BOTH, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::BOTH, EcContinent::EUROPE,
         Dating::yapprox(-700), EcFont::OLD_ITALIC },
     // Javanese OK, W10 has “Javanese Text”, W7 does not, installed Google Noto font
     { "Java", QFontDatabase::Any,
@@ -700,11 +704,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(8, 9), EcFont::KOREAN },
     // Kawi OK
     { "Kawi", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(8, StdNote::FIRST_KNOWN), EcFont::KAWI },
     // Kharoshthi OK, W10 tofu → installed Noto
     { "Khar", QFontDatabase::Any,
-        EcScriptType::ABUGIDA, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::ABUGIDA, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-4), EcFont::KHAROSHTHI },
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     { "Khmr", QFontDatabase::Khmer,
@@ -715,7 +719,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(14, 16), EcFont::KHOJKI },
     // Khitan small OK, installed a font
     { "Kits", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::CJK,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::RTL_COL, EcContinent::CJK,
         Dating::year(925), EcFont::KHITAN_SMALL },
     // Kannada OK, W7 has no recent extensions → installed Google Noto
     { "Knda", QFontDatabase::Kannada,
@@ -747,11 +751,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(18), EcFont::LIMBU },
     // Linear A OK, W10 none, installed Google Noto font
     { "Lina", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::UNDECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(-1800), EcFont::LINEAR_A },
     // Linear B OK, W10 none, installed Google Noto font
     { "Linb", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(-1450), EcFont::LINEAR_B },
     // W10 has, W7 none (though lots of software install) → installed Google Noto
     { "Lisu", QFontDatabase::Any,
@@ -760,12 +764,12 @@ constinit const uc::Script uc::scriptInfo[] {
     // Lycian OK, W10 P1 Segoe Historic
     /// @todo [font???] Lycian
     { "Lyci", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(-6), EcFont::HISTORIC },
     // Lydian OK, W10 P1 Segoe Historic
     /// @todo [font???] Lydian
     { "Lydi", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         Dating::crange(-8, -7), EcFont::HISTORIC },
     // Mahajani OK, W10 none, installed Google Noto
     { "Mahj", QFontDatabase::Any,
@@ -773,7 +777,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::unknown(), EcFont::MAHAJANI },
     // Makasar OK, installed strange font by Anshuman Pandey
     { "Maka", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::OCEAN,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::crange(16, 17), EcFont::MAKASAR },
     // Mandaic OK, W10 has not, installed Google Noto
     { "Mand", QFontDatabase::Any,
@@ -781,7 +785,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(2, 7), EcFont::MANDAIC },
     // Manichaean OK, W10 has not, installed Google Noto
     { "Mani", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(3), EcFont::MANICHAEAN },
     // Marchen OK, W10 none, installed Google Noto
     { "Marc", QFontDatabase::Any,
@@ -797,11 +801,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yapprox(1920), EcFont::MENDE_KIKAKUI },
     // Meroitic cursive OK, W10 has small part
     { "Merc", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::century(-3), EcFont::MEROITIC },
     // Meroitic OK, W10 none
     { "Mero", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::RTL_COL, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::RTL_COL, EcContinent::AFRICA,
         Dating::century(-3), EcFont::MEROITIC, Sfg::DESC_FROM_PREV },
     // Malayalam OK, W7 does not have 2014/17 extensions → installed Google Noto
     { "Mlym", QFontDatabase::Malayalam,
@@ -837,15 +841,15 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yrange(1949, 1982), EcFont::FUNKY },
     // Nandinagari OK, in Nov 2021 Google finally made Noto font
     { "Nand", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(8, StdNote::FIRST_KNOWN), EcFont::NANDINAGARI },
     // North Arabian OK, W10 none → installed Google Noto
     { "Narb", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-3, StdNote::FIRST_KNOWN), EcFont::NORTH_ARABIAN },
     // Nabataean OK, W10 none → installed Google Noto
     { "Nbat", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-2), EcFont::NABATAEAN },
     // Newa OK, W10 none → installed Google Noto
     { "Newa", QFontDatabase::Any,
@@ -861,14 +865,14 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::NUSHU },
     // Ogham OK, Windows font is differently named in W7 and W10 → installed Google Noto
     { "Ogam", QFontDatabase::Ogham,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_BU, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR_BU, EcContinent::EUROPE,
         Dating::century(4, StdNote::FIRST_KNOWN), EcFont::OGHAM },
     // Ol Chiki OK, W10 “Nirmala UI”, W7 none → installed Google Noto
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1925), EcFont::OLCHIKI },
     { "Orkh", QFontDatabase::Any,
-        EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(6), EcFont::ORKHON },
     // Oriya OK, took Noto + everything bad manually fixed
     { "Orya", QFontDatabase::Oriya,
@@ -884,11 +888,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::yapprox(1920), EcFont::VAI },
     // Old Uyghur OK, installed Noto font
     { "Ougr", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR_COL, EcContinent::ASIA,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR_COL, EcContinent::ASIA,
         Dating::century(8), EcFont::OLD_UYGHUR },
     // Plamyrene OK, W10 none, installed Google Noto
     { "Palm", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::year(-44, StdNote::FIRST_KNOWN), EcFont::PALMYRENE },
     // Pau Cin Hau OK, W10 none, installed Google Noto
     { "Pauc", QFontDatabase::Any,
@@ -896,7 +900,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::PAU_CIN_HAU},
     // Old Permic OK, W10 none, installed Google Noto
     { "Perm", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::year(1372), EcFont::OLD_PERMIC },
     // Phags-Pa OK, have “Microsoft PhagsPa” font
     { "Phag", QFontDatabase::Any,
@@ -904,15 +908,15 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1269), EcFont::PHAGS_PA },
     // Inscriptional Pahlavi OK, W10 Historic
     { "Phli", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-2), EcFont::HISTORIC },
     // Psalter Pahlavi OK, W10 none → installed Google Noto
     { "Phlp", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(6, StdNote::FIRST_KNOWN), EcFont::PSALTER_PAHLAVI },
     // Phoenician OK, because of importance installed Google Noto
     { "Phnx", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(-11), EcFont::PHOENICIAN },
     // Miao/Pollard OK, W10 none, installed Google Noto
     { "Plrd", QFontDatabase::Any,
@@ -920,7 +924,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1936), EcFont::POLLARD },
     // Inscriptional Parthian OK, W10 Historic
     { "Prti", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yapprox(-250), EcFont::PARTHIAN },
     // Rejang OK, installed Google Noto font
     { "Rjng", QFontDatabase::Any,
@@ -932,7 +936,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::decade(1980), EcFont::ROHINGYA },
     // Runes OK, several tofu → installed Google Noto font
     { "Runr", QFontDatabase::Runic,
-        EcScriptType::ALPHABET, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        EcScriptType::ALPHABET, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::century(2, StdNote::FIRST_KNOWN), EcFont::RUNIC },
     // Samaritan OK, installed Google Noto font, added dotted circle
     { "Samr", QFontDatabase::Any,
@@ -941,7 +945,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // South Arabian OK, W10 Segoe UI Historic
     /// @todo [font???] South Arabian
     { "Sarb", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL_MOSTLY, EcContinent::ASIA,
         Dating::century(-9, StdNote::FIRST_KNOWN), EcFont::HISTORIC },
     // Saurashtra OK, W10 none, installed Google Noto
     { "Saur", QFontDatabase::Any,
@@ -973,11 +977,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(13, StdNote::MODERN_FORM), EcFont::SINHALA },
     // Sogdian OK, W10 None → installed Google Noto
     { "Sogd", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::SOGDIAN, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::SOGDIAN, EcContinent::ASIA,
         Dating::yapprox(500), EcFont::SOGDIAN },
     // Old Sogdian OK, W10 None → installed Google Noto
     { "Sogo", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::RTL, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yapprox(100), EcFont::OLD_SOGDIAN, Sfg::DESC_FROM_PREV },
     // Sora Sompeng OK, W10 Nirmala UI
     { "Sora", QFontDatabase::Any,
@@ -1021,7 +1025,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::crange(6, 9), EcFont::TAMIL },
     // Tangut OK, installed Google Noto
     { "Tang", QFontDatabase::Any,
-        EcScriptType::HIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::TANGUT, EcContinent::CJK,
+        EcScriptType::HIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::TANGUT, EcContinent::CJK,
         Dating::year(1036), EcFont::TANGUT },
     // Tai Viet OK, installed Google Noto font
     { "Tavt", QFontDatabase::Any,
@@ -1033,7 +1037,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(14, StdNote::CUSTOM), EcFont::TELUGU },
     // Tifinagh OK, W7 “Ebrima” of course has no 2012 chars → installed Google Noto
     { "Tfng", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::AFRICA,
         Dating::special(), EcFont::TIFINAGH },
     // Tagalog OK, W10 off → installed Google Noto
     { "Tglg", QFontDatabase::Any,
@@ -1065,7 +1069,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(2015), EcFont::FUNKY },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
-        EcScriptType::CONSONANT, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(-1400), EcFont::HISTORIC },
     // Vai OK, have good M$ font Ebrima
     { "Vaii", QFontDatabase::Any,
@@ -1085,11 +1089,11 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::decade(1950), EcFont::WARANG_CITI },
     // Old Persian OK. Small font, let’s install!!
     { "Xpeo", QFontDatabase::Any,
-        EcScriptType::ALPHASYLLABLE, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(-520), EcFont::OLD_PERSIAN },
     /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
     { "Xsux", QFontDatabase::Any,
-        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::HISTORICAL, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
+        EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
         Dating::yapprox(-3200), EcFont::CUNEIFORM },
     // Yezidi OK, W10 none → installed Google Noto
     { "Yezi", QFontDatabase::Any,
@@ -1101,7 +1105,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::year(1974, StdNote::CUSTOM), EcFont::YI },
     // Zanabazar square OK, installed Google Noto
     { "Zanb", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::HISTORICAL, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::ybefore(1700), EcFont::ZANABAZAR },
     { "Zinh", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
@@ -1238,6 +1242,7 @@ constinit const uc::Term uc::terms[] {
     { "mono", EcTermCat::OTHER, u8"character cell" },
     { "inclusion", EcTermCat::OTHER, u8"inclusion and diversity" },
     { "tofu", EcTermCat::OTHER, u8"tofu" },
+    { "status", EcTermCat::OTHER, {} },
 };
 
 constinit const uc::Term* uc::sortedTerms[std::size(terms)] { nullptr };
