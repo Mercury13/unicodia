@@ -11,8 +11,7 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Legacy computing: special, based on coarse image (want pixels)
-+9 icons done ahead
-	NP Hmong
++8 icons done ahead
 	Domino
 	Water pistol
 	Smile in love
@@ -22,7 +21,7 @@
 	Tags
 	Var sel ex
 
-TOTAL: +16
+TOTAL: +15
 
 
 FILES:
