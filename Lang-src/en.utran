@@ -848,6 +848,50 @@
      <orig>расшифрованная ''(как клинопись)''</orig>
      <transl>deciphered ''(like cuneiform)''</transl>
     </text>
+    <text id="Info">
+     <orig>
+      <p>Живая{{-}}хотя бы у одного языка статус «В безопасности», а письменность единственная или не теряющая важности.</p>
+      <p />
+      <p>В опасности из-за языка{{-}}у всех языков нарушено использование и/или передача (статус от «Уязвимого» до «В серьёзной опасности»).</p>
+      <p />
+      <p>В опасности из-за конкуренции письменностей{{-}}у всех языков есть альтернативная письменность, более успешная или набирающая силу.</p>
+      <p />
+      <p>Мертва{{-}}у всех языков состояние «Только старики», «Возможно, мёртв» или «Мёртв», либо пользование письменностью крайне ограничено.</p>
+      <p />
+      <p>Религиозная{{-}}письменность мертва в светском обороте, но используется важной религией.</p>
+      <p />
+      <p>Историческая, не требует расшифровки{{-}}из-за сохранённой традиции ([[ps:Glag|глаголица]]), «прижизненного» описания ([[ps:Runr|руны]]) или близости к другим письменностям ([[ps:Bhks|бхайкшуки]]).</p>
+      <p />
+      <p>(Не)расшифрованная{{-}}историческую письменность не расшифровали (частично расшифровали, расшифровали).</p>
+      <p />
+      <p>Новая{{-}}разработана слишком недавно, чтобы достоверно сказать об её состоянии.</p>
+      <p />
+      <p>Возрождённая{{-}}возвращена в обиход после периода неиспользования. При возрождении может смениться тип и направление письма, как у [[ps:Tfng|тифинага]].</p>
+      <p />
+      <p>Экспериментальная{{-}}неудачная попытка сделать орфографическую реформу. Все имеющиеся в Юникоде примеры делятся на три категории: 1) английский: сложная историческая орфография; 2) албанский: около 1800 совпали конспирация от турок и желание культурной автономии; 3) попытка заменить письмо [[pt:brahmic|индийского]] происхождения.</p>
+     </orig>
+     <transl>
+      <p>Alive{{-}}at least one language has status “Safe”, the script is the only one or does not lose importance.</p>
+      <p />
+      <p>Endengered due to language{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
+      <p />
+      <p>Endangered due to script competition{{-}}all languages have alternate script, already stronger or gaining strength.</p>
+      <p />
+      <p>Dead{{-}}all languages have status “Elders only”, “Possibly extinct” or “Extinct”, or script use is highly limited.</p>
+      <p />
+      <p>Religious{{-}}the script is in use by important religion.</p>
+      <p />
+      <p>Historical, no decipherment needed{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
+      <p />
+      <p>(Un)deciphered{{-}}historical script is not yet deciphered (partly deciphered, deciphered).</p>
+      <p />
+      <p>New{{-}}invented too recently to tell exactly about its status.</p>
+      <p />
+      <p>Revived{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
+      <p />
+      <p>Experimental{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1) English: complicated historical orthography; 2) Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3) attempt to replace a script of [[pt:brahmic|Indic]] origin.</p>
+     </transl>
+    </text>
    </group>
    <group id="Dir">
     <text id="L">
@@ -10824,56 +10868,6 @@
       <p>[[pk:101D0|Phaistos Disc]] was encoded for some reason, but three other unexplored scripts got rejection. Undeciphered but well enough explored scripts like [[ps:Cpmn|Cypro-Minoan]] and Indus may be eventually encoded.</p>
       <p />
       <p>''Jindai'' was also rejected. Supposed pre-[[ps:Hani|Kanji]] script from Japan is considered a forgery of 17th century.</p>
-     </transl>
-    </text>
-   </group>
-   <group id="status">
-    <text id="Name">
-     <orig>состояние письменности</orig>
-     <transl>script status</transl>
-    </text>
-    <text id="Text">
-     <orig>
-      <p>Жива{{-}}хотя бы у одного языка статус «В безопасности», а письменность единственная или не теряющая важности.</p>
-      <p />
-      <p>В опасности из-за языка{{-}}у всех языков нарушено использование и/или передача (статус от «Уязвимого» до «В серьёзной опасности»).</p>
-      <p />
-      <p>В опасности из-за конкуренции письменностей{{-}}у всех языков есть альтернативная письменность, более успешная или набирающая силу.</p>
-      <p />
-      <p>Мертва{{-}}у всех языков состояние «Только старики», «Возможно, мёртв» или «Мёртв», либо пользование письменностью крайне ограничено.</p>
-      <p />
-      <p>Религиозная{{-}}письменность используется важной религией.</p>
-      <p />
-      <p>Историческая, не требует расшифровки{{-}}из-за сохранённой традиции ([[ps:Glag|глаголица]]), «прижизненного» описания ([[ps:Runr|руны]]) или близости к другим письменностям ([[ps:Bhks|бхайкшуки]]).</p>
-      <p />
-      <p>(Не)расшифрованная{{-}}«немую» письменность не расшифровали (частично расшифровали, расшифровали).</p>
-      <p />
-      <p>Новая{{-}}разработана слишком недавно, чтобы достоверно сказать об её состоянии.</p>
-      <p />
-      <p>Возрождённая{{-}}возвращена в обиход после периода неиспользования. При возрождении может смениться тип и направление письма, как у [[ps:Tfng|тифинага]].</p>
-      <p />
-      <p>Экспериментальная{{-}}неудачная попытка сделать орфографическую реформу. Все имеющиеся в Юникоде примеры делятся на три категории: 1) английский: сложная историческая орфография; 2) албанский: около 1800 совпали конспирация от турок и желание культурной автономии; 3) попытка заменить письмо [[pt:brahmic|индийского]] происхождения.</p>
-     </orig>
-     <transl>
-      <p>Alive{{-}}at least one language has status “Safe”, the script is the only one or does not lose importance.</p>
-      <p />
-      <p>Endengered due to language{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
-      <p />
-      <p>Endangered due to script competition{{-}}all languages have alternate script, already stronger or gaining strength.</p>
-      <p />
-      <p>Dead{{-}}all languages have status “Elders only”, “Possibly extinct” or “Extinct”, or script use is highly limited.</p>
-      <p />
-      <p>Religious{{-}}the script is in use by important religion.</p>
-      <p />
-      <p>Historical, no decipherment required{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
-      <p />
-      <p>(Un)deciphered{{-}}silent script is not yet deciphered (partly deciphered, deciphered).</p>
-      <p />
-      <p>New{{-}}invented too recently to tell exactly about its status.</p>
-      <p />
-      <p>Revived{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
-      <p />
-      <p>Experimental{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1) English: complicated historical orthography; 2) Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3) attempt to replace a script of [[pt:brahmic|Indic]] origin.</p>
      </transl>
     </text>
    </group>
