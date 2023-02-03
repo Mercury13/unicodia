@@ -1138,7 +1138,7 @@ constinit const uc::Block uc::blocks[] {
             "Emoticons",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Orna dingbats OK
-    { 0x1F650, 0x1F67F, { 0x1F650, EcContinent::NONE },
+    { 0x1F650, 0x1F67F, { 0x1F656, EcContinent::NONE },
             "Ornamental Dingbats",
             MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Transport/map OK
