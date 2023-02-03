@@ -765,7 +765,7 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
 ie::SqIdeo::SqIdeo()
-    : texture(std::make_shared<LazySvg>(":ScSustom/sqideo.svg")) {}
+    : texture(std::make_shared<LazySvg>(":ScCustom/sqideo.svg")) {}
 
 ie::SqIdeo::~SqIdeo() {}
 
