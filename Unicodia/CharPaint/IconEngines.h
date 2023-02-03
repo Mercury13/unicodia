@@ -218,4 +218,16 @@ namespace ie {
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     };
 
+
+    // Programmatic drawing of enclosed alnum supp
+    class ThreeD : public Veng
+    {
+    public:
+        ThreeD();
+        ~ThreeD();
+        ThreeD* clone() const override { return new ThreeD(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        std::shared_ptr<LazySvg> texture;
+    };
 }   // namespace ie

@@ -1122,7 +1122,7 @@ constinit const uc::Block uc::blocks[] {
             "Playing Cards",
             MyName::INST, EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK, added a few symbols to FunkySample
-    { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE },
+    { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumeric Supplement",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE },
     // Enclosed hiero OK

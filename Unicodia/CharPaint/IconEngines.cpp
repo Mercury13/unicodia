@@ -116,7 +116,7 @@ namespace util {
         { snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp); }
 
     struct FormatInfo {
-        QRect frameRect;
+        QRect frameRect, contentRect;
         unsigned dashSize;
     };
 
@@ -125,10 +125,29 @@ namespace util {
         // #.5 → big indent, small dash
         unsigned dashSize = lround(scale - 0.001);
         unsigned indent = lround(scale + 0.001);
-        return {
+        unsigned contentIndent = scale + 0.79;     // 1.2 round DOWN, 1.25 UP
+        unsigned ind1 = indent + dashSize + contentIndent;
+        return {            
             .frameRect = rect.marginsRemoved(QMargins(indent, indent, indent, indent)),
+            .contentRect = rect.marginsRemoved(QMargins(ind1, ind1, ind1, ind1)),
             .dashSize = dashSize,
         };
+    }
+
+    void drawPixelBorder(
+            QPainter* painter, const QRect& rect, unsigned thickness,
+            const QColor& color)
+    {
+        auto rt1 = rect.right() + 1 - thickness;
+        auto bt1 = rect.bottom() + 1 - thickness;
+        // Top
+        painter->fillRect(rect.left(), rect.top(), rect.width(), thickness, color);
+        // Left
+        painter->fillRect(rect.left(), rect.top(), thickness, rect.height(), color);
+        // Bottom
+        painter->fillRect(rect.left(), bt1, rect.width(), thickness, color);
+        // Right
+        painter->fillRect(rt1, rect.top(), thickness, rect.height(), color);
     }
 
     // draw low-resolution format frame
@@ -721,4 +740,23 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
     QPen pen(Qt::black, stickThickness - MINUS_FOR_GAMMA);
     painter->setPen(pen);
     painter->drawLine(QPointF{slashX1, slashY1}, QPointF{slashX2, slashY2});
+}
+
+
+///// ThreeD ///////////////////////////////////////////////////////////////////
+
+
+ie::ThreeD::ThreeD()
+    : texture(std::make_shared<LazySvg>(":Misc/3D.svg")) {}
+
+ie::ThreeD::~ThreeD() {}
+
+void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    auto fi = util::getFormatInfo(rect, scale);
+    util::drawPixelBorder(painter, fi.frameRect, fi.dashSize, Qt::black);
+
+    util::drawHintedSvg(painter, fi.contentRect, *texture->get(), {});
 }

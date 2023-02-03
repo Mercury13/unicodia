@@ -224,6 +224,8 @@ namespace {
             return new ie::Mahjong;
         case 0x1F0A0:   // Playing cards
             return new ie::PlayingCard;
+        case 0x1F100:   // Enclosed alnum supp
+            return new ie::ThreeD;
         case 0x1FB00:   // Legacy computing
             return new ie::Legacy;
         default:

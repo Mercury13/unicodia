@@ -1,7 +1,7 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+9 custom engines
++10 custom engines
 	Block elements: special (moire)
 	Ideographic description: special (together with format)
 	Yijing: coarse image (moire)
@@ -10,6 +10,7 @@
 	Counting rods: special (not really moire, but looks badly)
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
+	Enclosed alnum supp: special (want more precise frame)
 	Legacy computing: special, based on coarse image (want pixels)
 +7 icons done ahead
 	Water pistol
@@ -20,11 +21,11 @@
 	Tags
 	Var sel ex
 
-TOTAL: +14
+TOTAL: +15
 
 
 FILES:
 	321 blocks
-	−9 custom engines
+	−10 custom engines
 	+1 resource file
-TOTAL: 313
+TOTAL: 312
