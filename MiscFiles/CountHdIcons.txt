@@ -14,11 +14,10 @@
 	Enclosed ideo supp: same
 	Legacy computing: special, based on coarse image (want pixels)
 +3 icons done ahead
-	Parachute
 	Tags
 	Var sel ex
 
-TOTAL: +12
+TOTAL: +11
 
 
 FILES:

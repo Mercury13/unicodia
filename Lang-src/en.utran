@@ -10114,7 +10114,7 @@
      <orig>
       <p>Юникод старается, чтобы эффективные реализации были осуществимы. В частности:</p>
       <p />
-      <p>* В Юникоде нет переключаемых регистров. Это упрощает доступ и поиск.</p>
+      <p>* В Юникоде нет переключаемых регистров. Это упрощает доступ и поиск. В противовес, в телеграфе код 1 означает E в буквенном регистре и 3 в цифровом.</p>
       <p>* Основные формы [[pt:serialization|сериализации]]{{-}}[[pt:utf8|UTF-8]] и [[pt:utf16|UTF-16]]{{-}}самосинхронизирующиеся. Это упрощает доступ и поиск.</p>
       <p>* Коды символов{{-}}числа от 0 до 10FFFF₁₆. Даже если не{{_}}получается работать прямо в UTF-8/16, таблицы поиска всё равно действуют.</p>
       <p>* Обработка [[pt:ascii|ASCII]] возможна в UTF-8 без раскодировки. Обработка [[pt:bmp|большинства языков]] возможна в UTF-16 без раскодировки.</p>
@@ -10126,7 +10126,7 @@
      <transl>
       <p>Unicode strives to make efficient implementations possible. Particularly:</p>
       <p />
-      <p>* Unicode does not have shiftable states. This simplifies access and search.</p>
+      <p>* Unicode does not have shiftable states. This simplifies access and search. Contrary, in telegraph code 1 means E in letter page and 3 in figure page.</p>
       <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
       <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if work right in UTF-8/16 is impossible, lookup tables still work.</p>
       <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
