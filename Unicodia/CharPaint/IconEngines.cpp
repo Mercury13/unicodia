@@ -400,7 +400,7 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ie::BlockElem::BlockElem()
 {
-    texture.load(":Misc/blockelem.png");
+    texture.load(":ScCustom/blockelem.png");
 }
 
 void ie::BlockElem::paint1(QPainter *painter, const QRect &rect, qreal)
@@ -502,7 +502,7 @@ void ie::Taixu::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ie::Legacy::Legacy()
 {
-    texture.load(":Misc/legacy.png");
+    texture.load(":ScCustom/legacy.png");
 }
 
 
@@ -562,7 +562,7 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
 ///// PlayingCard //////////////////////////////////////////////////////////////
 
 ie::PlayingCard::PlayingCard()
-    : texture(std::make_shared<LazySvg>(":Misc/playcard.svg")) {}
+    : texture(std::make_shared<LazySvg>(":ScCustom/playcard.svg")) {}
 
 // -warn: complains about =default
 ie::PlayingCard::~PlayingCard() {}
@@ -608,7 +608,7 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// Mahjong //////////////////////////////////////////////////////////////////
 
 ie::Mahjong::Mahjong()
-    : texture(std::make_shared<LazySvg>(":Misc/mahjong.svg")) {}
+    : texture(std::make_shared<LazySvg>(":ScCustom/mahjong.svg")) {}
 
 // -warn: complains about =default
 ie::Mahjong::~Mahjong() {}
@@ -747,7 +747,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 
 ie::ThreeD::ThreeD()
-    : texture(std::make_shared<LazySvg>(":Misc/3D.svg")) {}
+    : texture(std::make_shared<LazySvg>(":ScCustom/3D.svg")) {}
 
 ie::ThreeD::~ThreeD() {}
 
@@ -765,7 +765,7 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
 ie::SqIdeo::SqIdeo()
-    : texture(std::make_shared<LazySvg>(":Misc/sqideo.svg")) {}
+    : texture(std::make_shared<LazySvg>(":ScSustom/sqideo.svg")) {}
 
 ie::SqIdeo::~SqIdeo() {}
 

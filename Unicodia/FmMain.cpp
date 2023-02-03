@@ -213,9 +213,9 @@ namespace {
         case 0x2FF0:    // Ideographic description
             return new ie::CjkStructure;
         case 0x4DC0:    // Yijing
-            return new ie::CoarseImage(BG_CJK, { 1,0 }, ":Misc/yijing.png");
+            return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
         case 0x10100:   // Aegeam numbers
-            return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":Misc/aegean.png");
+            return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
         case 0x1D360:   // Counting rods
