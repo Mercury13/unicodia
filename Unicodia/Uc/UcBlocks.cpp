@@ -1153,7 +1153,7 @@ constinit const uc::Block uc::blocks[] {
             "Geometric Shapes Extended",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Arrows C OK
-    { 0x1F800, 0x1F8FF, { 0x1F882, EcContinent::NONE },
+    { 0x1F800, 0x1F8FF, { 0x1F87A, EcContinent::NONE },
             "Supplemental Arrows-C", { EcScript::ZARR, 'C' } },
     // Supp sym/picto OK
     { 0x1F900, 0x1F9FF, { 0x1F98A, EcContinent::NONE },
