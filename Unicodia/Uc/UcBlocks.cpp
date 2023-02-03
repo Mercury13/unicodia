@@ -1103,7 +1103,7 @@ constinit const uc::Block uc::blocks[] {
             "Ottoman Siyaq Numbers",
             MyName::INST, EcScript::NONE, EcFont::FUNKY },
     // Arab mathematical OK, currently we use Noto Math
-    { 0x1EE00, 0x1EEFF, { 0x1EEA5, EcContinent::ASIA },
+    { 0x1EE00, 0x1EEFF, { 0x1EEA2, EcContinent::ASIA },
             "Arabic Mathematical Alphabetic Symbols",
             { EcScript::Arab, 'z'},
             EcScript::Arab, EcFont::MATH, Bfg::HAS_DESCRIPTION },
