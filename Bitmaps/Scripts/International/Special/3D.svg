@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="33.322407"
-     inkscape:cx="12.679156"
+     inkscape:cx="12.709166"
      inkscape:cy="9.393079"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -60,5 +60,5 @@
        style="font-weight:600;font-stretch:condensed;font-size:3.57281px;line-height:1.25;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Semi-Bold Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.999999" /><path
        id="path6748"
        style="font-weight:600;font-stretch:condensed;font-size:3.57281px;line-height:1.25;font-family:Bahnschrift;-inkscape-font-specification:'Bahnschrift Semi-Bold Condensed';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.999999"
-       d="M 5.0000034,1e-7 V 10 h 2.716797 C 9.0064164,10 10.000003,9.3727881 10.000003,7.8339841 V 2.1660158 C 10.000003,0.8552756 8.9772594,1e-7 7.7226594,1e-7 Z m 1.5703125,1.4375 h 1.0800785 c 0.452849,0 0.763672,0.1840214 0.763672,0.8046875 v 5.5156255 c 0,0.464954 -0.138872,0.804687 -0.763672,0.804687 H 6.5703159 Z"
+       d="M 5.0000034,1e-7 V 10 H 7.3866922 C 8.6763082,10 10.000003,8.9768895 10.000003,7.4380855 V 2.5619141 C 10.000003,1.2511739 8.6471512,1e-7 7.3925512,1e-7 Z m 1.5703125,1.4375 h 0.7499703 c 0.452849,0 1.0937802,0.5799197 1.0937802,1.2005858 v 4.7238286 c 0,0.464954 -0.4689802,1.2005856 -1.0937802,1.2005856 H 6.5703159 Z"
        sodipodi:nodetypes="cccsscccsssscc" /></g></svg>
