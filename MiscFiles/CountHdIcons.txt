@@ -13,7 +13,7 @@
 	Enclosed alnum supp: special (want more precise frame)
 	Enclosed ideo supp: same
 	Legacy computing: special, based on coarse image (want pixels)
-+3 icons done ahead
++2 icons done ahead
 	Tags
 	Var sel ex
 
