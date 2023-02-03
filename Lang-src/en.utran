@@ -10152,7 +10152,7 @@
      <orig>
       <p>[[pt:plane|Плоскость]] Юникода с номером 0, содержащая символы 0000…FFFD. В базовой плоскости закодированы наиболее ходовые символы живых языков, что позволяет обрабатывать эти языки прямо в [[pt:utf16|UTF-16]]. </p>
       <p />
-      <p>До 1996 Юникод был двухбайтовым. Но к тому времени несколько прогрессивных языков и библиотек (Java, Windows{{_}}NT) успели перейти на Юникод, что и привело к компромиссу в виде базовой плоскости и UTF-16.</p>
+      <p>До 1996 Юникод был двухбайтовым, что давало ёмкость 65{{.}}536 символов. Когда назрел вопрос расширения, несколько прогрессивных языков и библиотек (Java, Windows{{_}}NT) успели перейти на Юникод, что и привело к компромиссу в виде базовой плоскости и UTF-16.</p>
       <p />
       <p>В Юникоде 15.0 нераспределёнными остались 16 позиций, 2FE0…2FEF.</p>
       <p />
@@ -10161,7 +10161,7 @@
      <transl>
       <p>Unicode [[pt:plane|plane]] #0 containing characters 0000…FFFD. The most frequent characters of alive languages are encoded in Basic Plane, allowing processing of these languages right in [[pt:utf16|UTF-16]].</p>
       <p />
-      <p>Unicode had beed two-byte encoding until 1996. By that time several progressive languages and libraries (Java, Windows{{_}}NT) managed to adopt Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
+      <p>Unicode had beed two-byte encoding until 1996, that gave capacity of 65,536 characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
       <p />
       <p>In Unicode{{_}}15.0 only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
@@ -10260,7 +10260,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>На собственные нужды всех заинтересованных отведены 6400 символов E000…F8FF из [[pt:bmp|базовой плоскости]], а также 131068 символов в двух [[pt:plane|плоскостях]] 0F и 10, кроме *FFFE и *FFFF, которые [[pt:noncharacter|выброшены]].</p>
+      <p>На собственные нужды всех заинтересованных отведены 6400 символов E000…F8FF из [[pt:bmp|базовой плоскости]], а также 131{{.}}068 символов в двух [[pt:plane|плоскостях]] 0F и 10, кроме *FFFE и *FFFF, которые [[pt:noncharacter|выброшены]].</p>
       <p />
       <p>Договорившись, люди могут закодировать в этих диапазонах всё, что хотят, в том числе символы, не{{_}}подлежащие внесению в Юникод: товарные знаки, вымышленные алфавиты, редкие символы и письменности, тэги оформления, знаки подстановки. Консорциум Юникода никак не{{_}}отвечает за это. Приведём лишь четыре распространённых применения личных символов:</p>
       <p />

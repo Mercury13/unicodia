@@ -1,53 +1,78 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
-   version="1.1"
-   viewBox="-10 0 16 16"
-   id="svg4"
-   sodipodi:docname="20000.svg"
    width="16"
    height="16"
-   inkscape:version="1.2-dev (581924a2, 2021-09-04)"
-   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Scripts\20000.png"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="20000.svg"
+   inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <defs
-     id="defs8" />
   <sodipodi:namedview
-     id="namedview6"
-     pagecolor="#fff0f5"
+     id="namedview7"
+     pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
      inkscape:pageshadow="2"
-     inkscape:pageopacity="1"
+     inkscape:pageopacity="0"
      inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
      showgrid="true"
-     inkscape:snap-global="false"
-     inkscape:zoom="23.53125"
-     inkscape:cx="11.814077"
-     inkscape:cy="11.431607"
+     width="16mm"
+     units="px"
+     inkscape:zoom="66.644814"
+     inkscape:cx="6.8047305"
+     inkscape:cy="10.863561"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg4">
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#ffffff">
     <inkscape:grid
        type="xygrid"
-       id="grid2045" />
+       id="grid828"
+       originx="0"
+       originy="0" />
   </sodipodi:namedview>
-  <text
-     xml:space="preserve"
-     style="font-weight:bold;font-size:15.9126px;line-height:1.25;font-family:'BabelStone Han';-inkscape-font-specification:'BabelStone Han Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#5c3566;fill-opacity:1;stroke-width:0.2;stroke:#5c3566;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
-     x="-2.333045"
-     y="13.790174"
-     id="text16105"><tspan
-       sodipodi:role="line"
-       id="tspan16103"
-       x="-2.333045"
-       y="13.790174"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:SimSun-ExtB;-inkscape-font-specification:'SimSun-ExtB Bold';fill:#5c3566;fill-opacity:1;stroke-width:0.2;stroke:#5c3566;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none">𠀤</tspan></text>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:1;fill:#fff0f5;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
+       id="rect691"
+       width="16"
+       height="16"
+       x="0"
+       y="0" />
+    <g
+       aria-label="𠀤"
+       id="text16105"
+       style="font-weight:bold;font-size:15.9126px;line-height:1.25;font-family:'BabelStone Han';-inkscape-font-specification:'BabelStone Han Bold';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#5c3566;stroke:#5c3566;stroke-width:0.2">
+      <path
+         d="M 11.396471,1.4206137 10.96136,1.8557239 v 3.4208614 h 1.740441 l 0.808062,-0.6837445 1.056696,1.1788744 H 10.96136 c 0.08288,1.2431718 0.497269,2.5899413 1.243172,4.0403084 0.787342,1.4503674 1.699001,2.4241844 2.734978,2.9214534 v 0.248635 c -0.580147,-0.04144 -0.994537,0.124317 -1.243172,0.497269 C 12.991874,12.774917 12.391008,11.904697 11.893739,10.86872 11.39647,9.7913042 11.023519,8.5066932 10.774885,7.014887 10.52625,8.7967667 10.008262,10.226414 9.2209198,11.30383 8.4750167,12.339807 7.6255159,13.147868 6.6724175,13.728015 L 6.5481003,13.479381 C 7.4183206,12.733478 8.1642238,11.780379 8.7858097,10.620085 9.4488346,9.4183525 9.8839447,7.8022292 10.09114,5.7717152 H 9.2209198 c -0.4143906,0 -0.8080617,0.041439 -1.1810133,0.1243171 L 7.4804792,5.2765853 H 10.09114 V 3.2232129 c 0,-0.7873422 -0.02072,-1.5539648 -0.06216,-2.29986792 z M 4.7455012,7.9472659 C 5.988673,8.7760471 6.7967347,9.4390721 7.1696863,9.9363408 7.5426378,10.43361 7.6255159,10.930878 7.4183206,11.428147 7.2111253,11.883977 6.9417714,11.73894 6.6102589,10.993037 6.2787464,10.205695 5.636441,9.2940353 4.6833426,8.2580588 4.3932691,9.5012309 3.9167199,10.557927 3.253695,11.428147 2.59067,12.298367 1.7826083,13.06499 0.82950987,13.728015 L 0.70519269,13.479381 C 1.8240474,12.484843 2.6528286,11.386708 3.1915364,10.184975 3.7302442,8.9832423 4.0410371,7.5871803 4.1239152,5.8467398 h -1.367489 c -0.4143906,0 -0.8080617,0.041439 -1.1810132,0.1243171 L 1.0159856,5.336605 H 4.1239152 V 2.9745785 c 0,-0.5801469 -0.020719,-1.2431718 -0.062158,-1.98907493 L 5.4292457,1.5449309 4.9941355,1.980041 V 5.336605 H 5.8021972 L 6.5481003,4.6528605 7.5426378,5.8467398 H 4.9941355 c -0.041439,0.704464 -0.1243174,1.354623 -0.2486343,2.1005261 z m 9.0129958,5.5942731 1.118855,1.148865 H 2.632109 c -0.5387078,0 -0.9945375,0.06216 -1.367489,0.186476 L 0.64303409,14.225284 H 13.012594 Z"
+         style="font-family:SimSun-ExtB;-inkscape-font-specification:'SimSun-ExtB Bold'"
+         id="path2000"
+         sodipodi:nodetypes="ccccccccccccccccccscccscccscccsccscscccscccccccccccscccc" />
+    </g>
+  </g>
 </svg>

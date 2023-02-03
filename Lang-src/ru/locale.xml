@@ -20,6 +20,8 @@
 		<alp>á____é_____________________________________________________</alp>
 	</alpha-sort>
 	<wiki-templates>
+		<!-- 12{{.}}345 → 12, narrow NBSP, 345 -->
+		<tmpl name="."><![CDATA[<font size='-3'>&#xA0;</font>]]></tmpl>
 		<!-- {{№}}5  →  №, narrow NBSP -->
 		<tmpl name="№"><![CDATA[№<span style='font-size:3pt'>&#xA0;</span>]]></tmpl>
 		<!-- 300{{bc}}  →  non-break BC -->
