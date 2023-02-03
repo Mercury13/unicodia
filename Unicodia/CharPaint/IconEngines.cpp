@@ -760,3 +760,21 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
     util::drawHintedSvg(painter, fi.contentRect, *texture->get(), {});
 }
+
+
+///// SqIdeo ///////////////////////////////////////////////////////////////////
+
+ie::SqIdeo::SqIdeo()
+    : texture(std::make_shared<LazySvg>(":Misc/sqideo.svg")) {}
+
+ie::SqIdeo::~SqIdeo() {}
+
+void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, BG_CJK);
+
+    auto fi = util::getFormatInfo(rect, scale);
+    painter->fillRect(fi.frameRect, FRAME_CJK);
+
+    util::drawHintedSvg(painter, rect, *texture->get(), {});
+}

@@ -1,7 +1,7 @@
 ﻿How to count HD icons
 
 −2 QRC header: 2 lines
-+10 custom engines
++11 custom engines
 	Block elements: special (moire)
 	Ideographic description: special (together with format)
 	Yijing: coarse image (moire)
@@ -12,16 +12,14 @@
 	Playing cards: special (cannot scale round corners properly)
 	Enclosed alnum supp: special (want more precise frame)
 	Legacy computing: special, based on coarse image (want pixels)
-+7 icons done ahead
-	Water pistol
-	Smile in love
++5 icons done ahead
 	Car
 	Foxy
 	Parachute
 	Tags
 	Var sel ex
 
-TOTAL: +15
+TOTAL: +14
 
 
 FILES:

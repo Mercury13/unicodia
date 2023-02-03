@@ -1126,7 +1126,8 @@ constinit const uc::Block uc::blocks[] {
             "Enclosed Alphanumeric Supplement",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE },
     // Enclosed hiero OK
-    { 0x1F200, 0x1F2FF, { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR },
+    { 0x1F200, 0x1F2FF,
+            { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Enclosed Ideographic Supplement",
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Misc OK

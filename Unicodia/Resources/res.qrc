@@ -11,6 +11,7 @@
         <file>Misc/legacy.png</file>
         <file>Misc/mahjong.svg</file>
         <file>Misc/playcard.svg</file>
+        <file>Misc/sqideo.svg</file>
         <file>Misc/yijing.png</file>
         <file>Texts/about.htm</file>
     </qresource>
