@@ -13,13 +13,12 @@
 	Enclosed alnum supp: special (want more precise frame)
 	Enclosed ideo supp: same
 	Legacy computing: special, based on coarse image (want pixels)
-+4 icons done ahead
-	Foxy
++3 icons done ahead
 	Parachute
 	Tags
 	Var sel ex
 
-TOTAL: +13
+TOTAL: +12
 
 
 FILES:
