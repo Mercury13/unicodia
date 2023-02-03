@@ -11,6 +11,7 @@
 	Mahjongg: special (playing cards do well)
 	Playing cards: special (cannot scale round corners properly)
 	Enclosed alnum supp: special (want more precise frame)
+	Enclosed ideo supp: same
 	Legacy computing: special, based on coarse image (want pixels)
 +5 icons done ahead
 	Car
