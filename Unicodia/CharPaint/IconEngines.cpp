@@ -45,6 +45,26 @@ namespace util {
     // pow(prev, gamma) = its optical brightness
     // 1.0 - prev = its optical content of black
 
+    qreal scaledThickness(qreal base, qreal scale, qreal max)
+    {
+        if (scale <= 1)
+            return base;
+        if constexpr (MODE == BrightnessMode::EMPIRICAL) {
+            // Simple empirical formula :)
+            return std::min(base * sqrt(scale), max);
+        } else {
+            // This formula is based on optics, but dislike somehow
+            auto linearBrightness = blacksBrightness(base, GAMMA);
+            linearBrightness *= scale;
+            if (linearBrightness >= 1) {
+                return max;
+            } else {
+                linearBrightness = blacksBrightness(linearBrightness, INVGAMMA);
+                return std::min(linearBrightness, max);
+            }
+        }
+    }
+
     CardDimensions cardDimensions(
             const QRect& rect,
             qreal scale,
@@ -61,26 +81,9 @@ namespace util {
         auto y0 = rect.top() + (rect.height() - height) / 2;
 
         static constexpr qreal MAX_THICK = 0.9;
-        auto actualThickness = baseThickness;
-        if (scale > 1) {
-            if constexpr (MODE == BrightnessMode::EMPIRICAL) {
-                // Simple empirical formula :)
-                actualThickness = std::min(baseThickness * sqrt(scale), MAX_THICK);
-            } else {
-                // This formula is based on optics, but dislike somehow
-                auto linearBrightness = blacksBrightness(baseThickness, GAMMA);
-                linearBrightness *= scale;
-                if (linearBrightness >= 1) {
-                    actualThickness = MAX_THICK;
-                } else {
-                    linearBrightness = blacksBrightness(linearBrightness, INVGAMMA);
-                    actualThickness = std::min(linearBrightness, MAX_THICK);
-                }
-            }
-        }
 
         return {
-            .thickness = actualThickness,
+            .thickness = scaledThickness(baseThickness, scale, MAX_THICK),
             .rcPixel = QRect( x0, y0, width, height ) ,
             .rcFrame = QRectF{ x0 + 0.5, y0 + 0.5, width - 1.0, height - 1.0 },
         };
@@ -704,7 +707,7 @@ void ie::CjkStructure::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// TallyMark ////////////////////////////////////////////////////////////////
 
-void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal scale)
+void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 {
     painter->fillRect(rect, Qt::white);
 
@@ -777,4 +780,34 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->fillRect(fi.frameRect, FRAME_CJK);
 
     util::drawHintedSvg(painter, rect, *texture->get(), {});
+}
+
+
+///// OneCircleIdeo ////////////////////////////////////////////////////////////
+
+ie::OneCircle::OneCircle()
+    : texture(std::make_shared<LazySvg>(":ScCustom/1circ.svg")) {}
+
+ie::OneCircle::~OneCircle() {}
+
+void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
+{
+    painter->fillRect(rect, Qt::white);
+
+    // Frame rect
+    unsigned margin = (rect.width() + 9) / 16;    // 2 at 1.5×
+    QRect rcFrame = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
+
+    // Thickness
+    auto thick = 0.7 * scale;
+    auto th2 = thick * 0.5;
+    QRectF rcEllipse = rcFrame;
+    rcEllipse = rcEllipse.marginsRemoved({th2, th2, th2, th2});
+
+    painter->setRenderHint(QPainter::Antialiasing);
+    painter->setPen(QPen(Qt::black, thick));
+    painter->setBrush(Qt::NoBrush);
+    painter->drawEllipse(rcEllipse);
+
+    texture->get()->render(painter, rect);
 }

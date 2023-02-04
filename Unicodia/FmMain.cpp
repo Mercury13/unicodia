@@ -208,6 +208,8 @@ namespace {
     QIconEngine* getCustomEngine(char32_t startingCp)
     {
         switch (startingCp) {
+        case 0x2460:    // Enclosed alnum
+            return new ie::OneCircle;
         case 0x2580:    // Block elements
             return new ie::BlockElem;
         case 0x2FF0:    // Ideographic description

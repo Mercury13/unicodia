@@ -315,7 +315,7 @@ constinit const uc::Block uc::blocks[] {
             // Fonts coincide
             MyName::INST, EcScript::NONE, EcFont::PHAISTOS_DISC },
     // Enclosed alnum OK, need ordinary Cambria
-    { 0x2460, 0x24FF, { L'①', EcContinent::NONE },
+    { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumerics",
             MyName::INST, EcScript::NONE, EcFont::NORMAL,
             Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS },

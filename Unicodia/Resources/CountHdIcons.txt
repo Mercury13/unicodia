@@ -1,6 +1,7 @@
 ﻿How to count HD icons
 
-+11 custom engines
++12 custom engines
+	Enclosed alnum: special (want more precise circle)
 	Block elements: special (moire)
 	Ideographic description: special (together with format)
 	Yijing: coarse image (moire)
@@ -15,9 +16,9 @@
 
 FILES:
 	321 blocks
-	−11 custom engines
+	−12 custom engines
 	+1 resource file
-TOTAL: 311
+TOTAL: 310
 
 
 PECULIARITIES IN BLOCK ICONS

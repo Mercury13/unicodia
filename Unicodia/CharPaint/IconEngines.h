@@ -241,4 +241,16 @@ namespace ie {
     private:
         std::shared_ptr<LazySvg> texture;
     };
+
+    // Programmatic drawing of enclosed alnum ①
+    class OneCircle : public Veng
+    {
+    public:
+        OneCircle();
+        ~OneCircle();
+        OneCircle* clone() const override { return new OneCircle(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        std::shared_ptr<LazySvg> texture;
+    };
 }   // namespace ie
