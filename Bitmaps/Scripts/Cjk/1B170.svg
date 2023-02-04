@@ -30,7 +30,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="32"
-     inkscape:cx="6.859375"
+     inkscape:cx="6.890625"
      inkscape:cy="10.5"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -57,13 +57,7 @@
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="fill:#fff0f5"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" /><path
+     id="layer1"><path
        id="path13451"
        style="fill:none;stroke:#5c3566;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 7.7061153,9.1806751 C 9.6061202,8.272856 10.7437,7.247147 11.5,5.5 M 7.3005916,6.995258 C 9.3205106,5.3834803 9.5,3.7939942 9.5,1.5 m -4,2 c 1.5093748,2.4865161 2.0096767,4.5189077 2,7 -0.00517,1.325252 -0.3394989,2.693679 -1,4"
