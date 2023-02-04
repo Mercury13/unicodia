@@ -30,7 +30,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="33.322407"
-     inkscape:cx="2.5358312"
+     inkscape:cx="2.2957525"
      inkscape:cy="11.583797"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -79,57 +79,42 @@
        d="M 5.9687131,6.5937451 Q 6.6562215,5.687484 7.437481,4.3749681 8.1874901,3.0624522 8.6874961,1.9999393 H 12.031287 V 2.3124431 Q 11.656283,2.8436995 10.812522,3.7499605 9.9687616,4.6562215 8.9999999,5.5624825 7.9999877,6.4374931 7.1562275,7 H 5.9687131 Z"
        id="path7358"
        style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:2.84094" />
-    <path
-       style="font-size:31.5935px;line-height:1.25;font-family:'Noto Serif';-inkscape-font-specification:'Noto Serif';text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:2.85578"
-       d="M 1.5602099,15 C 1.3507859,15 1.1623042,14.91623 0.99476487,14.748691 0.82722561,14.581152 0.74345598,14.39267 0.74345598,14.183246 c 0,-0.230367 0.0837696,-0.418848 0.25130889,-0.565445 0.16753933,-0.167539 0.35602103,-0.251309 0.56544503,-0.251309 0.2303665,0 0.4188482,0.08377 0.565445,0.251309 0.1675393,0.146597 0.2513089,0.335078 0.2513089,0.565445 0,0.209424 -0.083769,0.397906 -0.2513089,0.565445 C 1.9790581,14.916231 1.7905764,15 1.5602099,15 Z"
-       id="path7388" />
+    <ellipse
+       style="fill:#000000;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="path353"
+       cx="1.5602099"
+       cy="14.183246"
+       rx="0.81675392"
+       ry="0.81675398" />
     <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13388"
-       transform="translate(6.4397901,-4.366492)" />
+       x="6.4397901"
+       y="-4.3664917"
+       xlink:href="#path353"
+       id="use420" />
     <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13394"
-       transform="translate(11.403141,-2.324607)" />
+       x="11.403141"
+       y="-2.3246067"
+       xlink:href="#path353"
+       id="use428" />
     <use
-       x="0"
+       x="12.87958"
        y="0"
-       xlink:href="#path7388"
-       id="use13398"
-       transform="translate(12.87958)" />
+       xlink:href="#path353"
+       id="use426" />
     <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13384"
-       transform="translate(1.4764397,-2.324607)" />
+       x="1.4764398"
+       y="-2.3246066"
+       xlink:href="#path353"
+       id="use416" />
     <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13396"
-       transform="translate(11.403141,-2.324607)" />
+       x="9.0785342"
+       y="-3.8010467"
+       xlink:href="#path353"
+       id="use422" />
     <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13392"
-       transform="translate(9.0785341,-3.801047)" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13386"
-       transform="translate(3.801047,-3.801047)" />
-    <use
-       x="0"
-       y="0"
-       xlink:href="#path7388"
-       id="use13390"
-       transform="translate(6.4397901,-4.366492)" />
+       x="3.8010471"
+       y="-3.8010466"
+       xlink:href="#path353"
+       id="use418" />
   </g>
 </svg>
