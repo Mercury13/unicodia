@@ -1,6 +1,5 @@
 ﻿How to count HD icons
 
-−2 QRC header: 2 lines
 +11 custom engines
 	Block elements: special (moire)
 	Ideographic description: special (together with format)
@@ -13,12 +12,6 @@
 	Enclosed alnum supp: special (want more precise frame)
 	Enclosed ideo supp: same
 	Legacy computing: special, based on coarse image (want pixels)
-+2 icons done ahead
-	Tags
-	Var sel ex
-
-TOTAL: +11
-
 
 FILES:
 	321 blocks
