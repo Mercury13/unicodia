@@ -10562,7 +10562,7 @@
       <p />
       <p>Свойства UTF-16:</p>
       <p>* Накладывает ограничения на ёмкость Юникода{{-}}2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1{{.}}112{{.}}064 символа.</p>
-      <p>* Обратная совместимость: текст в [[pt:bmp|базовой плоскости]] без пользовательских символов неотличим от UCS-2. Если рабочий язык лежит в базовой плоскости, а символы за её пределами не{{_}}обрабатываются (остаются или удаляются), двухбайтовый символ вполне пригоден для обработки текста.</p>
+      <p>* Обратная совместимость: текст в [[pt:bmp|базовой плоскости]] неотличим от UCS-2. Если рабочий язык лежит в базовой плоскости, а символы за её пределами не{{_}}обрабатываются (остаются или удаляются), двухбайтовый символ вполне пригоден для обработки текста.</p>
       <p>* Самосинхронизирующийся: если добавить любые ошибочные '''слова''' (не байты), сохранившийся текст останется читаемым. Поиск в UTF-16 даже одного символа не{{_}}даст ложных срабатываний.</p>
       <p>* Ненадёжное опознание: без [[pt:bom|метки порядка байтов]] формат UTF-16 и порядок байтов определяется по косвенным признакам{{-}}по статистике или суррогатным парам;</p>
       <p>* Немонотонный: программа, понимающая UCS-2, отсортирует тексты не{{_}}в порядке кодов.</p>
@@ -10580,7 +10580,7 @@
       <p />
       <p>Properties of UTF-16:</p>
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 characters.</p>
-      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] without private-use characters is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are not processed (left intact or deleted), two-byte character is suitable for text processing.</p>
+      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are not processed (left intact or deleted), two-byte character is suitable for text processing.</p>
       <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will not make false positives.</p>
       <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
