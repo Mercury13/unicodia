@@ -18,3 +18,10 @@ FILES:
 	−11 custom engines
 	+1 resource file
 TOTAL: 311
+
+
+PECULIARITIES IN BLOCK ICONS
+
+TECHNICAL
+
+FFF0: curve as hole, circle as circle — that makes the smallest SVG
