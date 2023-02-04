@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <!-- native: Chinese (simplified)
-     international: 简体中文
-     eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
-     trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
-         For example, we are Spanish in US, and are forced to use English.
-         What we save: language — English, stamp — greatest of all present langs
-         When Spanish finally arrives, its trigger-script will be greater,
-           and the program will switch to Spanish automatically.
-         When the user says, “No, I want English,” max stamp will be new,
-           and auto-switch no more happens.
+	 international: 简体中文
+	 eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
+	 trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
+		For example, we are Spanish in US, and are forced to use English.
+		What we save: language — English, stamp — greatest of all present langs
+		When Spanish finally arrives, its trigger-script will be greater,
+			and the program will switch to Spanish automatically.
+		When the user says, “No, I want English,” max stamp will be new,
+			and auto-switch no more happens.
 -->
 <locale native="English" international="English" eng-terms="0" trigger-stamp="2022060">
 	<!-- If you find in the system some language from this list → you switch -->
