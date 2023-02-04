@@ -22,7 +22,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Latn, EcFont::NORMAL,
             Bfg::NO_EMOJI | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Latin extended A OK
-    { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE },
+    { 0x0100, 0x017F, { 0x153, EcContinent::EUROPE, {}, 8_hy },
             "Latin Extended-A",
             { EcScript::Latn, 'A' },
             EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
