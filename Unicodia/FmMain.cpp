@@ -258,23 +258,10 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
             if (!block->icon) {
                 if (block->synthIcon.flags.have(uc::Ifg::FORMAT)) {
                     block->icon = new QIcon(new ie::Format(*block));
-                } else if (block->synthIcon.svgHint) {
-                    block->icon = new QIcon(new ie::Hint(*block));
                 } else if (block->synthIcon.flags.have(uc::Ifg::CUSTOM_ENGINE)) {
                     block->icon = new QIcon(getCustomEngine(block->startingCp));
                 } else {
-                    char buf[48];
-                    int cp1 = block->startingCp;
-                    auto ico = new QIcon();
-                        snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", cp1);
-                        ico->addFile(buf);
-                        /// @todo [hidpi] Delete PNG branch when done
-                        if (ico->isNull()) {
-                            snprintf(buf, std::size(buf), ":/Scripts/%04X.png", cp1);
-                            ico->addFile(buf);
-                        }
-
-                    block->icon = ico;
+                    block->icon = new QIcon(new ie::Hint(*block));
                 }
             }
             return *(block->icon);
