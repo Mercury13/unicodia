@@ -12,11 +12,11 @@
    inkscape:export-filename="..\0180.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview7"
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -28,9 +28,9 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="32"
-     inkscape:cx="9.234375"
-     inkscape:cy="6.125"
+     inkscape:zoom="45.254834"
+     inkscape:cx="8.4742328"
+     inkscape:cy="7.9770484"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,52 +44,19 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#ffffff">
-    <inkscape:grid
+     inkscape:deskcolor="#ffffff"><inkscape:grid
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
-    <sodipodi:guide
-       position="2.1166666,4.4979165"
-       orientation="1,0"
-       id="guide835"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="3.7041665,2.1166666"
-       orientation="0,-1"
-       id="guide837"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
-  <defs
-     id="defs2" />
-  <g
+       originy="0" /></sodipodi:namedview><defs
+     id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <g
+     id="layer1"><g
        aria-label="Ừ"
        id="text556"
-       style="font-size:4.517px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.264583">
-      <rect
-         style="font-size:19.9754px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#7fffff;fill-opacity:1;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000"
-         id="rect691"
-         width="16"
-         height="16"
-         x="0"
-         y="0" />
-      <text
-         xml:space="preserve"
-         style="font-size:22.2211px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.263495;fill:#2f5e9d"
-         x="7.7484717"
-         y="14.764701"
-         id="text1001"
-         transform="scale(0.99588687,1.0041301)"><tspan
-           sodipodi:role="line"
-           id="tspan999"
-           style="stroke-width:0.263495;fill:#2f5e9d"
-           x="7.7484717"
-           y="14.764701">ƈ</tspan></text>
-    </g>
-  </g>
-</svg>
+       style="font-size:4.517px;line-height:1.25;font-family:Cambria;-inkscape-font-specification:Cambria;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#204a87;stroke-width:0.264583"><path
+         d="M 12.141452,2.2637932 C 11.568148,2.2637932 11,2.4439365 11,4.6101178 V 6.7128447 H 9.6276991 C 9.2645119,5.2251818 8.5404623,4.8607018 7.6464007,4.8607018 c -0.5582671,0 -2.6257762,0.375476 -2.6257762,4.5265509 0,2.2095083 0.5795357,4.2944563 2.7785116,4.2944563 1.2356108,0 2.1364341,-0.582454 2.8334769,-1.329184 l 0.615914,0.719067 c -0.709882,0.785926 -1.9296268,1.928407 -3.9572503,1.928407 -0.8708048,0 -4.2912842,-0.230053 -4.2912842,-5.449322 C 2.9999925,6.3684124 4.8665514,4 7.8409001,4 8.5108422,4 9.3143392,4.058103 9.897837,4.1743195 c 0.24168,-2.8023346 1.558956,-3.17434143 2.654225,-3.17434143 0.511456,0 0.994106,0.0726363 1.447938,0.21789923 V 3.2334445 H 13.005893 C 12.957331,2.8906684 12.830989,2.2637932 12.141452,2.2637932 Z"
+         id="path1160"
+         style="fill:#2f5e9d;fill-opacity:1;stroke-width:0.264582"
+         sodipodi:nodetypes="ssccsssccssscscccs" /></g></g></svg>

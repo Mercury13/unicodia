@@ -667,7 +667,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10330, 0x1034F, { 0x10330, EcContinent::EUROPE },
             "Gothic", { EcScript::Goth, 0 }, EcScript::Goth },
     // Old Permic OK
-    { 0x10350, 0x1037F, { 0x10350, EcContinent::EUROPE },
+    { 0x10350, 0x1037F, { 0x10350, EcContinent::EUROPE, {}, SvgHint{ 3, 1 } },
             "Old Permic", { EcScript::Perm, 0 }, EcScript::Perm },
     // Ugaritic OK
     { 0x10380, 0x1039F, { 0x10380, EcContinent::ASIA },

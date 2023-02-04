@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="33.322407"
-     inkscape:cx="13.249343"
+     inkscape:cx="13.279353"
      inkscape:cy="9.0929806"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -57,13 +57,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="opacity:1;fill:#7fffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
     <path
        d="M 1.675096,14 3.228555,7.7698107 H 1.4298131 V 7.2301887 H 3.3593727 L 4.9291839,1 H 6.1228945 L 4.5530833,7.2301887 H 5.7140897 L 7.2839008,1 H 8.4776119 L 6.9078001,7.2301887 H 8.0688057 L 9.6386181,1 H 10.832328 L 9.2625172,7.2301887 H 10.423522 L 11.993334,1 h 1.19371 l -1.569811,6.2301887 h 2.354719 v 0.539622 H 11.486416 L 9.9329561,14 H 8.7392459 L 10.292705,7.7698107 H 9.1316982 L 7.5782404,14 H 6.3845297 L 7.9379882,7.7698107 H 6.7769824 L 5.2235238,14 H 4.029813 L 5.583272,7.7698107 H 4.4222657 L 2.8688067,14 Z"
        id="path9237"
