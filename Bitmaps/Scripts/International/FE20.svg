@@ -29,9 +29,9 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="66.644814"
-     inkscape:cx="5.4092731"
-     inkscape:cy="9.1379953"
+     inkscape:zoom="47.125"
+     inkscape:cx="4.530504"
+     inkscape:cy="10.228117"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -63,13 +63,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
     <path
        style="fill:#000000;stroke:none;stroke-width:0.999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 1.0000001,5.9999997 c 0,0 2,-2.9999997 5.9999997,-2.9999997 V 4.5 C 3.1195707,4.5 1,7.0136636 1,7 Z"

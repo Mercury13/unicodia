@@ -7,16 +7,16 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="0250.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
+   xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
      id="namedview7"
      pagecolor="#cccccc"
      bordercolor="#8d8d8d"
@@ -28,9 +28,9 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="33.322407"
-     inkscape:cx="10.548458"
-     inkscape:cy="6.5421444"
+     inkscape:zoom="38.941569"
+     inkscape:cx="12.005166"
+     inkscape:cy="9.2959788"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -44,42 +44,20 @@
      inkscape:bbox-nodes="true"
      inkscape:snap-global="true"
      inkscape:showpageshadow="2"
-     inkscape:deskcolor="#cccccc">
-    <inkscape:grid
+     inkscape:deskcolor="#cccccc"><inkscape:grid
        type="xygrid"
        id="grid828"
        originx="0"
-       originy="0" />
-    <sodipodi:guide
+       originy="0" /><sodipodi:guide
        position="8,10"
        orientation="1,0"
        id="guide4878"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
-  <defs
-     id="defs2" />
-  <g
+       inkscape:locked="false" /></sodipodi:namedview><defs
+     id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
-    <rect
-       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:24.3932px;line-height:1.25;font-family:Amiri;-inkscape-font-specification:Amiri;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:1.74237"
-       x="8.209136"
-       y="13.552454"
-       id="text4826"
-       transform="scale(0.98164542,1.0186978)"><tspan
-         sodipodi:role="line"
-         id="tspan4824"
-         x="8.209136"
-         y="13.552454"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:24.3932px;font-family:Cambria;-inkscape-font-specification:Cambria;stroke-width:1.74237">ə</tspan></text>
-  </g>
-</svg>
+     id="layer1"><path
+       d="M 3.2296129,8.4125372 C 3.2296129,8.2432732 3.2413049,8.1692641 3.2413049,8 H 10.64242 v -0.060667 c 0,-1.8415175 -0.370482,-4.9807791 -2.9113388,-4.9807791 -0.751744,0 -2.1585184,0.2602175 -2.8294944,2.0748193 H 3.7791426 V 2.776552 C 4.4295745,2.5588136 6.2604691,2.0000113 7.9064632,2.0000113 c 2.8364628,0 4.8639238,1.5161463 4.8639238,5.9029211 0,3.6987726 -2.065051,6.0970576 -4.9574608,6.0970576 -0.951013,0 -4.5833134,-0.103541 -4.5833133,-5.5874528 z M 5.4277326,9.007076 c 0.071785,3.110191 1.1061967,4.034372 2.4787307,4.034372 1.7972785,0 2.5487547,-1.666372 2.7008807,-4.034372 z"
+       id="path3313"
+       style="stroke-width:0.999997"
+       sodipodi:nodetypes="sccsscccsssscscc" /></g></svg>

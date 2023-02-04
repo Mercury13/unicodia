@@ -29,9 +29,9 @@
      showgrid="true"
      width="16mm"
      units="px"
-     inkscape:zoom="90.567091"
-     inkscape:cx="10.0478"
-     inkscape:cy="5.763683"
+     inkscape:zoom="32.020302"
+     inkscape:cx="1.9518866"
+     inkscape:cy="11.992392"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -92,13 +92,7 @@
          id="stop408" /></radialGradient></defs><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="opacity:1;fill:#ffffff;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" /><path
+     id="layer1"><path
        d="M 8.0000003,14.743104 C 4.6327585,14.743104 1,12.631035 1,7.9965519 1,3.3620693 4.6327585,1.25 8.0000003,1.25 9.8706897,1.25 11.596552,1.8655175 12.875862,2.9879316 14.263793,4.218966 15,5.9568971 15,7.9965519 c 0,2.0396551 -0.736206,3.7655171 -2.124137,4.9965521 -1.279311,1.122414 -3.0172417,1.75 -4.8758627,1.75 z"
        fill="url(#a)"
        id="path418"
