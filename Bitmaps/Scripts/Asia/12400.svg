@@ -53,13 +53,7 @@
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="opacity:1;fill:#ffff83;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" /><path
+     id="layer1"><path
        style="fill:#f57900;stroke-width:0.999998"
        d="M 5.5,1 C 4.8728217,2.1100054 3.8,6.0193615 3.8,8 H 3.2 C 3.2,6.0419227 2.1383151,2.1297112 1.5,1 c 1.3334121,0.2356783 2.6816273,0.1995121 4,0 z"
        id="use419"

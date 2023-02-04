@@ -7,7 +7,7 @@
    viewBox="0 0 16 16"
    version="1.1"
    id="svg5"
-   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
    sodipodi:docname="0E80.svg"
    inkscape:export-filename="..\0000.png"
    inkscape:export-xdpi="96"
@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="45.254834"
-     inkscape:cx="8.639961"
+     inkscape:cx="8.6731066"
      inkscape:cy="8.7283493"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -57,13 +57,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <rect
-       style="opacity:1;fill:#ffff83;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" />
     <path
        style="fill:none;stroke:#f57900;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        d="M 3.4969287,5.7602958 C 2.7966831,7.4148832 2.7500001,8.5318989 2.7500001,9.9767493 2.7500001,11.4216 3.5227271,14.25 5.25,14.25 c 1.7272726,0 2.2499968,-1.6865 2.2499968,-3.399348 m 0,0 c 0,1.712847 1.0362457,3.399348 2.2500032,3.399348 1.21376,0 2.5,-0.987337 2.5,-4.4596404 0,-3.472304 -1,-4.2167328 -1,-5.7903596 0,-1.5736268 0.225997,-2.0961067 0.571142,-2.8185322"

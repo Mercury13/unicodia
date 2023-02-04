@@ -29,7 +29,7 @@
      width="16mm"
      units="px"
      inkscape:zoom="64"
-     inkscape:cx="5.2734375"
+     inkscape:cx="5.2890625"
      inkscape:cy="9.328125"
      inkscape:window-width="1680"
      inkscape:window-height="998"
@@ -52,13 +52,7 @@
      id="defs2" /><g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1"><rect
-       style="opacity:1;fill:#ffff83;stroke:none;stroke-width:4.4376;stroke-linejoin:bevel;stop-color:#000000;fill-opacity:1"
-       id="rect691"
-       width="16"
-       height="16"
-       x="0"
-       y="0" /><path
+     id="layer1"><path
        id="path4654"
        style="fill:none;stroke:#f57900;stroke-width:1.49999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="M 14.249255,8.4662268 C 13.593343,8.8122087 12.903722,9.0910198 12.223064,9.3838887 10.63525,10.067082 9.0883052,11.029624 7.3572509,11.234831 5.2523638,11.484354 4.335212,9.3616128 5.6268552,7.8434613 4.7776504,8.7608628 2.917053,8.8814035 1.750103,8.7200119 M 13.936822,5.2192663 C 12.856694,4.3792394 11.217841,4.7520603 10.706907,5.8053453 9.9730056,7.318278 10.454423,8.8542941 12.064353,9.310747" /></g></svg>

@@ -184,7 +184,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1780, 0x17FF, { 0x178D, EcContinent::ASIA },
             "Khmer", { EcScript::Khmr, 0 }, EcScript::Khmr },
     // Mongol OK, implemented ligature
-    { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED },
+    { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED, 11_hx },
             "Mongolian", { EcScript::Mong, 0 }, EcScript::Mong },
     // Canadian extended OK
     { 0x18B0, 0x18FF, { 0x18E5, EcContinent::AMERICA },
@@ -498,7 +498,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'D' },
             EcScript::Latn, EcFont::LATIN, Bfg::HAS_DESCRIPTION },
     // Syloti OK
-    { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA },
+    // Do not hint by X: we don’t want to grow a tree while the forest is dying
+    { 0xA800, 0xA82F, { 0xA808, EcContinent::ASIA, {}, 3_hy },
             "Syloti Nagri", { EcScript::Sylo, 0 }, EcScript::Sylo },
     // Common Indic OK
     { 0xA830, 0xA83F, { 0xA835, EcContinent::ASIA },
@@ -509,10 +510,10 @@ constinit const uc::Block uc::blocks[] {
             { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
             "Phags-pa", { EcScript::Phag, 0 }, EcScript::Phag },
     // Saurashtra OK
-    { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA },
+    { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA, {}, 10_hx },
             "Saurashtra", { EcScript::Saur, 0 }, EcScript::Saur },
     // Devanagari ex OK, drew 4 chars
-    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA },
+    { 0xA8E0, 0xA8FF, { 0xA8EC, EcContinent::ASIA, {}, SvgHint{ 11, 1 } },
             "Devanagari Extended",
             { EcScript::Deva, 1 }, EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Kayah Li OK
@@ -538,7 +539,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xAA00, 0xAA5F, { 0xAA0C, EcContinent::ASIA },
             "Cham", { EcScript::Cham, 0 }, EcScript::Cham },
     // Myanmar ex A OK
-    { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA },
+    { 0xAA60, 0xAA7F, { L'ꩴ', EcContinent::ASIA, {}, 12_hx },
             "Myanmar Extended-A",
             { EcScript::Mymr, 'A' },
             EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -566,7 +567,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Cher, 1 },
             EcScript::Cher, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Meetei OK
-    { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA },
+    { 0xABC0, 0xABFF, { 0xABC4, EcContinent::ASIA, {}, 3_hy },
             "Meetei Mayek", { EcScript::Mtei, 0 }, EcScript::Mtei },
     // Hangul syllables OK
     { 0xAC00, 0xD7AF, { 0xAC13, EcContinent::CJK },
@@ -789,13 +790,13 @@ constinit const uc::Block uc::blocks[] {
     { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA, {}, SvgHint{ 15, 11 } },
             "Chorasmian", { EcScript::Chrs, 0 }, EcScript::Chrs },
     // Elymaic OK
-    { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA },
+    { 0x10FE0, 0x10FFF, { 0x10FE0, EcContinent::ASIA, {}, 13_hy },
             "Elymaic", { EcScript::Elym, 0 }, EcScript::Elym },
     // Brahmi OK
-    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA },
+    { 0x11000, 0x1107F, { 0x1101C, EcContinent::ASIA, {}, SvgHint{ 6, 1 } },
             "Brahmi", { EcScript::Brah, 0 }, EcScript::Brah },
     // Kaithi OK
-    { 0x11080, 0x110CF, { 0x1108D, EcContinent::ASIA },
+    { 0x11080, 0x110CF, { 0x1108D, EcContinent::ASIA, {}, 7_hx },
             "Kaithi", { EcScript::Kthi, 0 }, EcScript::Kthi },
     // Sora OK
     { 0x110D0, 0x110FF, { 0x110D0, EcContinent::ASIA },
@@ -807,7 +808,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11150, 0x1117F, { 0x11158, EcContinent::ASIA },
             "Mahajani", { EcScript::Mahj, 0 }, EcScript::Mahj },
     // Sharada OK
-    { 0x11180, 0x111DF, { 0x11191, EcContinent::ASIA },
+    { 0x11180, 0x111DF, { 0x11191, EcContinent::ASIA, {}, SvgHint{ 7, 2 } },
             "Sharada", { EcScript::Shrd, 0 }, EcScript::Shrd },
     // Sinhala archaic OK
     // Noto Sinhala is light but archaic numbers are bold!
@@ -828,13 +829,13 @@ constinit const uc::Block uc::blocks[] {
     { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA },
             "Grantha", { EcScript::Gran, 0 }, EcScript::Gran },
     // Newa OK
-    { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA },
+    { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, {}, 2_hy },
             "Newa", { EcScript::Newa, 0 }, EcScript::Newa },
     // Tirhuta OK
     { 0x11480, 0x114DF, { 0x1148F, EcContinent::ASIA, {}, SvgHint{ 8, 3 } },
             "Tirhuta", { EcScript::Tirh, 0 }, EcScript::Tirh },
     // Siddham OK
-    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA },
+    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA, {}, 9_hx },
             "Siddham", { EcScript::Sidd, 0 }, EcScript::Sidd },
     // Modi OK
     { 0x11600, 0x1165F, { 0x1160E, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_3 } },
@@ -851,7 +852,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom", { EcScript::Ahom, 0 }, EcScript::Ahom },
     // Dogra OK
-    { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA },
+    { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA, {}, 1_hy },
             "Dogra", { EcScript::Dogr, 0 }, EcScript::Dogr },
     // Warang OK
     { 0x118A0, 0x118FF, { 0x118FF, EcContinent::ASIA },
