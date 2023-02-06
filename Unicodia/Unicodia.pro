@@ -76,6 +76,7 @@ HEADERS += \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Cmap.h \
+    ../Libs/SelfMade/u_DumbSp.h \
     ../Libs/SelfMade/u_EcArray.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_Array.h \
