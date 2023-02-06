@@ -5,7 +5,7 @@
 
 namespace dumb {
 
-    template <class Target> void addRef(Target& x) noexcept;
+    template <class Target> ptrdiff_t addRef(Target& x) noexcept;
     template <class Target> ptrdiff_t subRef(Target& x) noexcept;
     template <class Target> ptrdiff_t refCount(const Target& x) noexcept;
 
@@ -18,12 +18,12 @@ namespace dumb {
     protected:
         std::atomic<ptrdiff_t> fRefCount = 0;
 
-        friend void addRef<SpTarget>(SpTarget& x) noexcept;
+        friend ptrdiff_t addRef<SpTarget>(SpTarget& x) noexcept;
         friend ptrdiff_t subRef<SpTarget>(SpTarget& x) noexcept;
         friend ptrdiff_t refCount<SpTarget>(const SpTarget& x) noexcept;
     };
 
-    template <> inline void addRef<SpTarget>(SpTarget& x) noexcept { ++x.fRefCount; }
+    template <> inline ptrdiff_t addRef<SpTarget>(SpTarget& x) noexcept { return ++x.fRefCount; }
     template <> inline ptrdiff_t subRef<SpTarget>(SpTarget& x) noexcept { return --x.fRefCount; }
     template <> inline ptrdiff_t refCount<SpTarget>(const SpTarget& x) noexcept { return x.fRefCount; }
 
@@ -47,9 +47,12 @@ namespace dumb {
         Target* get() const noexcept { return x.load(); }
         Target& operator * () const noexcept { return *x.load(); }
         Target* operator -> () const noexcept { return x.load(); }
+        explicit operator bool() const noexcept { return x; }
+        size_t refCount() const noexcept;
     private:
         std::atomic<Target*> x = nullptr;
         void assignRelease(Target* newX) noexcept;
+        void add(Target* aX) noexcept;
     };  // Sp
 
 }   // namespace dumb
@@ -58,20 +61,27 @@ namespace dumb {
 ///// Sp’s implementation //////////////////////////////////////////////////////
 
 template <class Target>
-dumb::Sp<Target>::Sp(Target* aX) noexcept : x(aX)
+void dumb::Sp<Target>::add(Target* aX) noexcept
 {
     if(aX) {
-        addRef(*aX);
+        if (addRef(*aX) <= 0) {
+            // Should not happen
+            std::terminate();
+        }
     }
 }
+
+
+template <class Target>
+dumb::Sp<Target>::Sp(Target* aX) noexcept : x(aX)
+    { add(aX); }
+
 
 template <class Target>
 auto dumb::Sp<Target>::operator = (const Sp& other) noexcept -> Sp&
 {
     auto xnew = other.get();
-    if (xnew) {
-        addRef(*xnew);
-    }
+    add(xnew);
     assignRelease(xnew);
     return *this;
 }
@@ -79,8 +89,7 @@ auto dumb::Sp<Target>::operator = (const Sp& other) noexcept -> Sp&
 template <class Target>
 auto dumb::Sp<Target>::operator = (Sp&& other) noexcept -> Sp&
 {
-    auto xnew = other.x.exchange(nullptr);
-    assignRelease(xnew);
+    assignRelease(other.x.exchange(nullptr));
     return *this;
 }
 
@@ -88,8 +97,27 @@ template <class Target>
 void dumb::Sp<Target>::assignRelease(Target* newX) noexcept
 {
     if (auto xcopy = x.exchange(newX)) {
-        if (subRef(*xcopy) <= 0) {
+        auto v = subRef(*xcopy);
+        if (v == 0) {
             delete xcopy;
+        } else if (v < 0) {
+            // Should not happen!
+            std::terminate();
         }
+    }
+}
+
+template <class Target>
+size_t dumb::Sp<Target>::refCount() const noexcept
+{
+    if (auto xcopy = x.load()) {
+        auto q = refCount(xcopy);
+        if (q <= 0) {
+            // Should not happen!
+            std::terminate();
+        }
+        return q;
+    } else {
+        return 0;
     }
 }
