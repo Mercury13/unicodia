@@ -34,11 +34,15 @@ namespace dumb {
     public:
         constexpr Sp() noexcept = default;
         constexpr Sp(std::nullptr_t) noexcept {}
-        explicit Sp(Target* aX) noexcept;
+        explicit Sp(Target* aX) noexcept : x(aX)
+            { add(aX); }
         Sp(const Sp& other) noexcept : Sp(other.x) {}
         constexpr Sp(Sp&& other) noexcept : x(other.x.exchange(nullptr)) {}
         Sp& operator = (const Sp& other) noexcept;
-        Sp& operator = (Sp&& other) noexcept;
+        Sp& operator = (Sp&& other) noexcept {
+            assignRelease(other.x.exchange(nullptr));
+            return *this;
+        }
         ~Sp() noexcept { assignRelease(nullptr); }
         void reset() noexcept { assignRelease(nullptr); }
         Target* get() const noexcept { return x.load(); }
@@ -77,25 +81,11 @@ void dumb::Sp<Target>::add(Target* aX) noexcept
 
 
 template <class Target>
-dumb::Sp<Target>::Sp(Target* aX) noexcept : x(aX)
-{
-    add(aX);
-}
-
-
-template <class Target>
 auto dumb::Sp<Target>::operator = (const Sp& other) noexcept -> Sp&
 {
     auto xnew = other.get();
     add(xnew);
     assignRelease(xnew);
-    return *this;
-}
-
-template <class Target>
-auto dumb::Sp<Target>::operator = (Sp&& other) noexcept -> Sp&
-{
-    assignRelease(other.x.exchange(nullptr));
     return *this;
 }
 
