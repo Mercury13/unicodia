@@ -719,7 +719,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
         stickThickness = 1;
     auto stickTotalWidth = stickStep * (N_STICKS - 1) + stickThickness;
     unsigned stickHeight = stickStep * 4.5;
-    if ((rect.height() % 2) != (stickHeight % 2))
+    if ((rect.height() % 2) != static_cast<int>(stickHeight % 2))
         ++stickHeight;
     auto stickY = rect.top() + (rect.height() - stickHeight) / 2;
     auto stickX0 = rect.left() + (rect.width() - stickTotalWidth) / 2;
