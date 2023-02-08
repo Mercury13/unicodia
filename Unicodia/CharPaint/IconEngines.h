@@ -1,10 +1,10 @@
 #pragma once
 
-// STL
-#include <memory>
-
 // Qt
 #include <QIconEngine>
+
+// Ly lib
+#include "u_DumbSp.h"
 
 // Char paint
 #include "global.h"
@@ -14,6 +14,13 @@ namespace uc {
 }
 
 class QSvgRenderer;
+
+namespace ie {
+    class LazySvg;
+}
+
+extern template class dumb::Sp<ie::LazySvg>;
+
 
 namespace ie {
 
@@ -150,8 +157,6 @@ namespace ie {
         QPixmap texture;
     };
 
-    class LazySvg;
-
     // Programmatic drawing of Playing Cards
     class PlayingCard : public Veng
     {
@@ -161,7 +166,7 @@ namespace ie {
         PlayingCard* clone() const override { return new PlayingCard(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
     };
 
     // Programmatic drawing of Mahjong Tiles
@@ -173,7 +178,7 @@ namespace ie {
         Mahjong* clone() const override { return new Mahjong(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
     };
 
     // Programmatic drawing of Arrows
@@ -185,7 +190,7 @@ namespace ie {
         Hint* clone() const override { return new Hint(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
         const uc::SynthIcon& icon;
     };
 
@@ -198,7 +203,7 @@ namespace ie {
         Format* clone() const override { return new Format(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
         const uc::SynthIcon& icon;
     };
 
@@ -227,7 +232,7 @@ namespace ie {
         ThreeD* clone() const override { return new ThreeD(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
     };
 
     // Programmatic drawing of enclosed ideographic supp
@@ -239,7 +244,7 @@ namespace ie {
         SqIdeo* clone() const override { return new SqIdeo(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
     };
 
     // Programmatic drawing of enclosed alnum ①
@@ -251,6 +256,6 @@ namespace ie {
         OneCircle* clone() const override { return new OneCircle(*this); }
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
-        std::shared_ptr<LazySvg> texture;
+        dumb::Sp<LazySvg> texture;
     };
 }   // namespace ie

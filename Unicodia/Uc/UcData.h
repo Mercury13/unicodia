@@ -10,6 +10,7 @@
 
 // Misc
 #include "u_TypedFlags.h"
+#include "u_DumbSp.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
@@ -431,7 +432,11 @@ namespace uc {
     DEFINE_ENUM_OPS(Ffg)
 
     struct LoadedFont;
+}
 
+extern template class dumb::Sp<uc::LoadedFont>;
+
+namespace uc {
     struct StyleSheet {
         std::string_view v;
         constexpr operator const std::string_view& () const { return v; }
@@ -481,7 +486,7 @@ namespace uc {
         ProbeChar probeChar {};
 
         mutable struct Q {
-            std::shared_ptr<LoadedFont> loaded {};
+            dumb::Sp<LoadedFont> loaded {};
             /// Currently have one reason for rejection: probed and failed
             /// (Brahmi only)
             /// Dubbed as “fall to next” for description font

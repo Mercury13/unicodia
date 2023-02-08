@@ -2233,7 +2233,7 @@ void uc::completeData()
 }
 
 
-struct uc::LoadedFont
+struct uc::LoadedFont : public dumb::SpTarget
 {
     QList<QString> families;
     QString familiesComma;
@@ -2248,6 +2248,8 @@ struct uc::LoadedFont
             QFont::StyleStrategy strategy,
             Flags<uc::Ffg> flags) const;
 };
+
+template class dumb::Sp<uc::LoadedFont>;
 
 
 const QString& uc::LoadedFont::onlyFamily() const
@@ -2293,7 +2295,7 @@ namespace {
         return r;
     }
 
-    std::unordered_map<std::string_view, std::shared_ptr<uc::LoadedFont>> loadedFonts;
+    std::unordered_map<std::string_view, dumb::Sp<uc::LoadedFont>> loadedFonts;
 
     bool isFontFname(std::string_view name)
     {
@@ -2332,7 +2334,7 @@ namespace {
 
 void uc::Font::newLoadedStruc() const
 {
-    auto newLoaded = std::make_shared<LoadedFont>();
+    auto newLoaded = dumb::makeSp<LoadedFont>();
     loadedFonts[family.text] = newLoaded;
     q.loaded = newLoaded;
 }

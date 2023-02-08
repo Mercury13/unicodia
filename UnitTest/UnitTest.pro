@@ -17,6 +17,7 @@ SOURCES += \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
+    test_DumbSp.cpp \
     test_Iterator.cpp \
     test_Search.cpp \
     test_Strings.cpp \

@@ -2,7 +2,6 @@
 
 // STL
 #include <optional>
-#include <memory>
 
 // Qt
 #include <QFont>
@@ -11,6 +10,7 @@
 
 // My libs
 #include "u_Vector.h"
+#include "u_DumbSp.h"
 
 // Unicode
 #include "UcAutoDefines.h"
@@ -68,7 +68,7 @@ private:
 
     static QFont getFont(const QString& family, int size);
 
-    class Fn
+    class Fn : public dumb::SpTarget
     {
     public:     // Internal class, do not encapsulate
         QString family;
@@ -91,7 +91,7 @@ private:
         constexpr bool doesIntersect(QFontDatabase::WritingSystem x) = delete;
         void checkSupport(QFontDatabase::WritingSystem x, Cjkp p);
     };
-    using PFn = std::shared_ptr<Fn>;
+    using PFn = dumb::Sp<Fn>;
     using VFn = SafeVector<PFn>;
     struct Ws {
         bool isSupported = false;

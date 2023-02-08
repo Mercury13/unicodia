@@ -536,18 +536,17 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
 
 ///// LazySvg //////////////////////////////////////////////////////////////////
 
-namespace ie {
+class ie::LazySvg : public dumb::SpTarget
+{
+public:
+    LazySvg(QString aFname) : fname(std::move(aFname)) {}
+    std::shared_ptr<QSvgRenderer> get();
+private:
+    QString fname;
+    std::shared_ptr<QSvgRenderer> x;
+};
 
-    class LazySvg {
-    public:
-        LazySvg(QString aFname) : fname(std::move(aFname)) {}
-        std::shared_ptr<QSvgRenderer> get();
-    private:
-        QString fname;
-        std::shared_ptr<QSvgRenderer> x;
-    };
-
-}
+template class dumb::Sp<ie::LazySvg>;
 
 
 std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
@@ -565,7 +564,7 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
 ///// PlayingCard //////////////////////////////////////////////////////////////
 
 ie::PlayingCard::PlayingCard()
-    : texture(std::make_shared<LazySvg>(":ScCustom/playcard.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/playcard.svg")) {}
 
 // -warn: complains about =default
 ie::PlayingCard::~PlayingCard() {}
@@ -611,7 +610,7 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// Mahjong //////////////////////////////////////////////////////////////////
 
 ie::Mahjong::Mahjong()
-    : texture(std::make_shared<LazySvg>(":ScCustom/mahjong.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/mahjong.svg")) {}
 
 // -warn: complains about =default
 ie::Mahjong::~Mahjong() {}
@@ -649,7 +648,7 @@ ie::Hint::Hint(const uc::Block& blk)
 {
     char buf[48];
     util::sprintfBlock(buf, blk);
-    texture = std::make_shared<LazySvg>(buf);
+    texture = dumb::makeSp<LazySvg>(buf);
 }
 
 // -warn: complains about =default
@@ -671,7 +670,7 @@ ie::Format::Format(const uc::Block& blk)
 {
     char buf[48];
     util::sprintfBlock(buf, blk);
-    texture = std::make_shared<LazySvg>(buf);
+    texture = dumb::makeSp<LazySvg>(buf);
 }
 
 // -warn: complains about =default
@@ -750,7 +749,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 
 
 ie::ThreeD::ThreeD()
-    : texture(std::make_shared<LazySvg>(":ScCustom/3D.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg")) {}
 
 ie::ThreeD::~ThreeD() {}
 
@@ -768,7 +767,7 @@ void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// SqIdeo ///////////////////////////////////////////////////////////////////
 
 ie::SqIdeo::SqIdeo()
-    : texture(std::make_shared<LazySvg>(":ScCustom/sqideo.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/sqideo.svg")) {}
 
 ie::SqIdeo::~SqIdeo() {}
 
@@ -786,7 +785,7 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ///// OneCircleIdeo ////////////////////////////////////////////////////////////
 
 ie::OneCircle::OneCircle()
-    : texture(std::make_shared<LazySvg>(":ScCustom/1circ.svg")) {}
+    : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg")) {}
 
 ie::OneCircle::~OneCircle() {}
 
