@@ -7,7 +7,7 @@ namespace dumb {
 
     ///
     /// @brief The SpTarget class
-    ///    Sample target dor dumb::Sp
+    ///    Sample target for dumb::Sp
     ///
     class SpTarget
     {
