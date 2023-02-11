@@ -168,6 +168,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= uc::Lfg::NO_TILE;
                 newItem.value.assign(codes.buffer(), nCodes);
+                ++r.count;
             }
         }
     }

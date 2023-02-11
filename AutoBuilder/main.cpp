@@ -475,7 +475,7 @@ int main()
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
     std::cout << "OK" << std::endl;
-    std::cout << "  Found " << emoji.vs16.size() << " VS16 emoji." << std::endl;
+    std::cout << "  Found " << emoji.count << " emoji, " << emoji.vs16.size() << " of them are VS16." << std::endl;
 
     lib::StrangeCjk strangeCjk;
 
@@ -819,6 +819,7 @@ int main()
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
+    os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "}\n";
 
     ///// Done !! //////////////////////////////////////////////////////////////
