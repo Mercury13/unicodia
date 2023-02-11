@@ -75,4 +75,42 @@
 			<d>℗ 🆭 🄯 🅭 🅮 🄍 🅯 🄏 🄎</d>
 		</f>
 	</f>
+	<f loc="Science">
+		<f loc="Astro">
+			<f loc="SolMain">
+				<d>☉ ☿</d>
+				<sq v="♀" name="Venus" />
+				<d>♁ ☽ ☾</d>
+				<sq v="♂" name="Mars" />
+				<d>♃ ♄ ⛢ ♅ ♆</d>
+			</f>
+			<f loc="SolAster">
+				<!-- A --><d>⯙</d>
+				<!-- C --><d>⚳</d>
+				<!-- H --><d>⯚</d>
+				<!-- J --><d>⚴</d>
+				<!-- P --><d>⚴</d>
+				<!-- V --><d>⚶</d>
+			</f>
+			<f loc="SolCent">
+				<d>⚷ ⯜ ⯛</d>
+			</f>
+			<f loc="SolPlut">
+				<!-- Pluto --><d>♇ ⯓ ⯔ ⯕ ⯖</d>
+				<!-- E --><d>⯰ ⯱</d>
+				<!-- G --><d>🝽</d>
+				<!-- H --><d>🝻</d>		
+				<!-- M --><d>🝼</d>
+				<!-- O --><d>🝿</d>
+				<!-- Q --><d>🝾</d>
+				<!-- S --><d>⯲</d>
+			</f>
+			<f loc="AstroQuasi">
+				<d>⚸ ⯝ ⯟ ⯗ ⯘ ⯠ ⯡ ⯢ ⯣ ⯤ ⯥ ⯦ ⯧</d>
+			</f>
+			<f loc="Celestial">
+				<d>☊ ☋ ☌ ☍ 🝵 🝶</d>
+			</f>
+		</f>
+	</f>
 </library>
