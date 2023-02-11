@@ -666,7 +666,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
 #define GETNODE(parent, fallback) \
     auto ii = (parent).internalId(); \
-    if (ii >= uc::N_LIBNODES) \
+    if (ii >= uc::nLibNodes()) \
         { STMT(fallback) } \
     auto& node = uc::libNodes[ii];
 
@@ -1735,7 +1735,7 @@ void FmMain::dumpTiles()
     pugi::xml_document doc;
     auto hRoot = doc.root().append_child("opt");
     // Priority 0
-    for (auto& v : uc::libNodes) {
+    for (auto& v : uc::allLibNodes()) {
         auto tiles = getCharTiles(v);
         for (auto& tile : tiles) {
             if (tile.isEmoji()) {
@@ -1745,7 +1745,7 @@ void FmMain::dumpTiles()
         }
     }
     // Other priority
-    for (auto& v : uc::libNodes) {
+    for (auto& v : uc::allLibNodes()) {
         if (!v.value.empty() && !prio0.contains(v.value)) {
             addPriority(hRoot, v.value, v.iParent, false);
         }

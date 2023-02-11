@@ -4852,3 +4852,5 @@ constinit const uc::LibNode uc::libNodes[4848] {
 { U"\U0003106A", {}, 4058, 0, -1, Lfg(4), EcVersion::NONE },   // 4846
 { U"\U00031152", {}, 4058, 0, -1, Lfg(4), EcVersion::NONE },   // 4847
 };
+size_t uc::nLibNodes() { return std::size(libNodes); }
+std::span<const uc::LibNode> uc::allLibNodes() { return libNodes; }

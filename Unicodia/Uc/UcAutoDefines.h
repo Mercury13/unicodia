@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <string_view>
 #include <type_traits>
+#include <span>
 
 // Qt
 #include <QString>
@@ -572,7 +573,9 @@ namespace uc {
         size_t sprintUPLUS(char (&data)[N]) const { return sprintUPLUS(data, N); }
     };
 
-    extern const LibNode libNodes[N_LIBNODES];
+    extern const LibNode libNodes[];
+    size_t nLibNodes();
+    std::span<const LibNode> allLibNodes();
 
     enum class ImbaX : int8_t {
         PERFECT = 0,

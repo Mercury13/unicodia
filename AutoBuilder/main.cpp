@@ -819,7 +819,6 @@ int main()
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
-    os << "constexpr int N_LIBNODES = " << std::dec << libInfo.nNodes << ";\n";
     os << "}\n";
 
     ///// Done !! //////////////////////////////////////////////////////////////

@@ -296,7 +296,9 @@ lib::Result lib::write(const Node& root, const char* fname)
     os << "constinit const uc::LibNode uc::libNodes[" << r.nNodes << "] {"  "\n";
     writeNode(os, root, ROOTS_PARENT);
     recurseWrite(os, root);
-    os << "};"  "\n";
+    os << "};"  "\n"
+          "size_t uc::nLibNodes() { return std::size(libNodes); }" "\n"
+          "std::span<const uc::LibNode> uc::allLibNodes() { return libNodes; }" "\n";
 
     return r;
 }
