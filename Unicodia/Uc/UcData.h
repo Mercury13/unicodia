@@ -77,6 +77,7 @@ namespace uc {
     constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };
     constexpr QChar STUB_PUA_WALL_START { 0xE00D };
     constexpr QChar STUB_PUA_WALL_END { 0xE00E };
+    constexpr QChar STUB_PUA_DUPLOYAN { 0xE00F };
 
     enum class EcLangLife
     {
