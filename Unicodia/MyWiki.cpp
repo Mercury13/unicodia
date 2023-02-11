@@ -472,6 +472,8 @@ namespace {
             s += font.familiesComma();
         } else if (name == "nchars"sv) {
             s += QString::number(uc::N_CPS);
+        } else if (name == "nemoji"sv) {
+            s += QString::number(uc::N_EMOJI);
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
         } else if (name == "funky"sv) {
