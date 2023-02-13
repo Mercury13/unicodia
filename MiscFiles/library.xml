@@ -111,6 +111,8 @@
 			<f loc="Celestial">
 				<d>☊ ☋ ☌ ☍ 🝵 🝶</d>
 			</f>
+			<f loc="AstroAspect">
+			</f>
 		</f>
 	</f>
 </library>
