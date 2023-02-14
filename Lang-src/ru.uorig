@@ -8126,6 +8126,33 @@
     <text id="IntelProperty">
      <orig>Интеллектуальная собственность</orig>
     </text>
+    <text id="Science">
+     <orig>Наука</orig>
+    </text>
+    <text id="Astro">
+     <orig>Астрономия (и астрология)</orig>
+    </text>
+    <text id="SolMain">
+     <orig>Солнечная система / основные</orig>
+    </text>
+    <text id="SolAster">
+     <orig>Солнечная система / пояс астероидов</orig>
+    </text>
+    <text id="SolCent">
+     <orig>Солнечная система / кентавры</orig>
+    </text>
+    <text id="SolPlut">
+     <orig>Солнечная система / плутоиды</orig>
+    </text>
+    <text id="AstroQuasi">
+     <orig>Астрологические квазипланеты</orig>
+    </text>
+    <text id="Celestial">
+     <orig>Небесная механика</orig>
+    </text>
+    <text id="AstroAspect">
+     <orig>Астрологические аспекты</orig>
+    </text>
    </group>
   </group>
  </file>

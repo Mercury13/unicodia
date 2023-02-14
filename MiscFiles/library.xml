@@ -109,9 +109,23 @@
 				<d>⚸ ⯝ ⯟ ⯗ ⯘ ⯠ ⯡ ⯢ ⯣ ⯤ ⯥ ⯦ ⯧</d>
 			</f>
 			<f loc="Celestial">
-				<d>☊ ☋ ☌ ☍ 🝵 🝶</d>
+				<d>☊ ☋</d>
 			</f>
 			<f loc="AstroAspect">
+				<sq v="☌" name="conjunction (0°)" />
+				<sq v="⚺" name="semisextile (30°)" />
+				<sq v="⊥" name="decile (36°)" />
+				<sq v="∠" name="semi-square (45°)" />
+				<sq v="⚹" name="sextile (60°)" />
+				<sq v="⬠" name="quintile (72°)" />
+				<sq v="□" name="square (90°)" />
+				<sq v="∓" name="tredecile (108°)" />
+				<sq v="△" name="trine (120°)" />
+				<sq v="⚼" name="sesquiquadrate (135°)" />
+				<sq v="±" name="biquintile (145°)" />
+				<sq v="⚻" name="quincunx (150°)" />
+				<sq v="☍" name="opposition (180°)" />
+				<d>🝵 🝶 ⯳ ⯴ ⯵ ⯶ ⯷ ⯸</d>
 			</f>
 		</f>
 	</f>
