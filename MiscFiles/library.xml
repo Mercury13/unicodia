@@ -88,7 +88,7 @@
 				<!-- A --><d>⯙</d>
 				<!-- C --><d>⚳</d>
 				<!-- H --><d>⯚</d>
-				<!-- J --><d>⚴</d>
+				<!-- J --><d>⚵</d>
 				<!-- P --><d>⚴</d>
 				<!-- V --><d>⚶</d>
 			</f>
@@ -106,7 +106,7 @@
 				<!-- S --><d>⯲</d>
 			</f>
 			<f loc="AstroQuasi">
-				<d>⚸ ⯝ ⯟ ⯗ ⯘ ⯠ ⯡ ⯢ ⯣ ⯤ ⯥ ⯦ ⯧</d>
+				<d>⚸ ⯞ ⯝ ⯟ ⯗ ⯘ ⯠ ⯡ ⯢ ⯣ ⯤ ⯥ ⯦ ⯧</d>
 			</f>
 			<f loc="Celestial">
 				<d>☊ ☋</d>
@@ -122,7 +122,7 @@
 				<sq v="∓" name="tredecile (108°)" />
 				<sq v="△" name="trine (120°)" />
 				<sq v="⚼" name="sesquiquadrate (135°)" />
-				<sq v="±" name="biquintile (145°)" />
+				<sq v="±" name="biquintile (144°)" />
 				<sq v="⚻" name="quincunx (150°)" />
 				<sq v="☍" name="opposition (180°)" />
 				<d>🝵 🝶 ⯳ ⯴ ⯵ ⯶ ⯷ ⯸</d>
