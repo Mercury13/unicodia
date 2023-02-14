@@ -6687,22 +6687,36 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Происходит из [[ps:Gran|грантхи]]. Гласная по умолчанию {{t|а}}. [[pt:virama|Вирама]] редка и обычно встречается в конце слов: [[pt:ligature|лигатуры]] на стыках согласных собраны из букв, записанных слева направо, а не{{_}}сверху вниз, как в похожих письменностях. Но всё-таки стыки с вирамой есть.</p>
+      <p>Происходит из [[ps:Gran|грантхи]]. Гласная по умолчанию {{t|а}}. Витиеватые буквы служат, чтобы не{{_}}разрезать пальмовый лист по жилкам.</p>
+      <p />
+      <p>Первая печатная книга (Рим, 1772) имела около 1000 разных глифов. В 1971 произошла реформа графики, превратившая их в 250 на печати и 90 на машинке{{-}}огласовки и {{t|r}} оторвались от букв, частые стыки согласных из сверху вниз стали слева направо, редкие просто через [[pt:virama|вираму]].</p>
       <p>: ка {{sm|ക}} + и {{sm|◌ി}}{{_}}{{_}}= ки {{sm|കി}}</p>
       <p>: ка {{sm|ക}} + вирама {{sm|◌്}} = к {{sm|ക്}}</p>
       <p>: та {{sm|ത}} + вирама {{sm|◌്}} + ка {{sm|ക}} = тка {{sm|ത്ക}}</p>
       <p>: ка {{sm|ക}} + вирама {{sm|◌്}} + ка {{sm|ക}} = кка {{sm|ക്ക}}</p>
+      <p>: ка {{sm|ക}} + вирама {{sm|◌്}} + ра {{sm|ക}} = кра {{sm|ക്ര}}</p>
       <p />
       <p>Буквы ''chillu'' содержат встроенную вираму, при этом некоторые из них происходят из другой буквы: например, L{{-}}от буквы «та».</p>
+      <p />
+      <p>Орфографические реформы мало кто любит; бытовое письмо и афиши фильмов продолжали делать в старой орфографии. Доюникодные шрифты распространили новую орфографию. Microsoft, Apple и Google сделали юникодные шрифты в новой орфографии{{-}}однако местные производители делают и в старой. «Юникодия» использует шрифт Google.</p>
      </orig>
+     <au-cmt>
+      <p>https://thottingal.in/documents/Malayalam%20Orthographic%20Reforms_%20Impact%20on%20Language%20and%20Popular%20Culture.pdf</p>
+      <p>https://elementy.ru/problems/2892/Mashinka_s_indiyskim_aktsentom</p>
+     </au-cmt>
      <transl>
-      <p>Comes from [[ps:Gran|Grantha]]. Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is rare and is usually seen in the end of words: [[pt:ligature|ligatures]] of consonant conjuncts are made of letters written left-to-right, rather than top-down like in similar scripts. But some conjunctions still use virama.</p>
+      <p>Comes from [[ps:Gran|Grantha]]. Inherent vowel is {{t|a}}. Curly letters prevent palm leaf from cutting along veins.</p>
+      <p />
+      <p>The first printed book (Rome, 1772) had about 1000 different glyphs. In 1971 a spelling reform was conducted that turned them into 250 in print and 90 on typewriter{{-}}vowel marks and {{t|r}} were detached from letters, frequent consonant conjuncts became left-to-right rather than top-down, rare ones were written just using [[pt:virama|virama]].</p>
       <p>: ka {{sm|ക}} + i {{sm|◌ി}}{{_}}{{_}}= ki {{sm|കി}}</p>
       <p>: ka {{sm|ക}} + virama {{sm|◌്}} = k {{sm|ക്}}</p>
       <p>: ta {{sm|ത}} + virama {{sm|◌്}} + ka {{sm|ക}} = tka {{sm|ത്ക}}</p>
       <p>: ka {{sm|ക}} + virama {{sm|◌്}} + ka {{sm|ക}} = kka {{sm|ക്ക}}</p>
+      <p>: kа {{sm|ക}} + virama {{sm|◌്}} + rа {{sm|ക}} = kra {{sm|ക്ര}}</p>
       <p />
       <p>''Chillu'' letters carry built-in virama, some of them originate from different letters: for emample, L{{-}}from letter “ta”.</p>
+      <p />
+      <p>Spelling reforms are rarely embraced; everyday writing and film posters were still done in old orthography. Pre-Unicode fonts further spread new orthography. Microsoft, Apple and Google made Unicode fonts in new orthography, but local vendors do in old one as well. ''Unicodia'' uses Google’s font.</p>
      </transl>
     </text>
    </group>
