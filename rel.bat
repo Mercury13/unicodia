@@ -1,5 +1,5 @@
 @rem Settings
-@set VERSION=1.9.0
+@set VERSION=1.9.1
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
@@ -128,10 +128,12 @@
 @copy %QTDIR%\bin\Qt6SvgWidgets.dll %DEPLOY%
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
-@md %DEPLOY%\iconengines
-@copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
-@md %DEPLOY%\imageformats
-@copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
+@rem Unused right now, all SVG icons use our lazy engine
+@rem md %DEPLOY%\iconengines
+@rem copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
+@rem Unused right now, plain SVG loading does not need this
+@rem md %DEPLOY%\imageformats
+@rem copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
 @md %DEPLOY%\platforms
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
