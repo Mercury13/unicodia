@@ -1099,10 +1099,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1EC70, 0x1ECBF, { 0x1EC77, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Indic Siyaq Numbers",
             MyName::INST, EcScript::NONE, EcFont::SIYAQ_INDIC },
-    // Ottoman Siyaq OK, drew in FunkySample
+    // Ottoman Siyaq OK, Noto drew though it’s beta
     { 0x1ED00, 0x1ED4F, { 0x1ED0A, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Ottoman Siyaq Numbers",
-            MyName::INST, EcScript::NONE, EcFont::FUNKY },
+            MyName::INST, EcScript::NONE, EcFont::SIYAQ_OTTOMAN },
     // Arab mathematical OK, currently we use Noto Math
     { 0x1EE00, 0x1EEFF, { 0x1EEA2, EcContinent::ASIA },
             "Arabic Mathematical Alphabetic Symbols",

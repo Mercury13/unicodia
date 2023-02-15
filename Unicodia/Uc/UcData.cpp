@@ -40,9 +40,9 @@ namespace fst {
 
 // File names
 constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
-constexpr std::string_view FNAME_NOTOMATH = "NotoSansMath-Regular.ttf";
+constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
-constexpr std::string_view FNAME_NOTOSYM2 = "NotoSansSymbols2-Regular.ttf";
+constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "FunkySample.ttf", uc::Fafg::RAW_FONT };
@@ -261,6 +261,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Sinhala
     { "NotoSansIndicSiyaqNumbers-Regular.ttf" },                                // Siyaq Indic
+    { "NotoOttomanSiyaq-Regular.ttf" },                                         // Siyaq Ottoman
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSoyombo-Regular.ttf", 115_pc },                                  // Soyombo
     { "NotoSansSundanese-Regular.ttf" },                                        // Sundanese
@@ -2323,8 +2324,8 @@ namespace {
         if (r) {
             // Prevent from triggering again…
             wantPreloadFonts = false;
-            // …and recursively preload, here are fonts
-            preloadFont(uc::EcFont::NOTO_SYMBOL2);
+            // …and preload, here are fonts
+            preloadFont(uc::EcFont::BRAHMI);
         }
         return r;
     }
