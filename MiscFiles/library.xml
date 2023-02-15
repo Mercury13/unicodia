@@ -110,6 +110,7 @@
 			</f>
 			<f loc="Celestial">
 				<d>☊ ☋</d>
+				<sq v="℞" name="retrograde motion" />
 			</f>
 			<f loc="AstroAspect">
 				<sq v="☌" name="conjunction (0°)" />
@@ -125,7 +126,29 @@
 				<sq v="±" name="biquintile (144°)" />
 				<sq v="⚻" name="quincunx (150°)" />
 				<sq v="☍" name="opposition (180°)" />
-				<d>🝵 🝶 ⯳ ⯴ ⯵ ⯶ ⯷ ⯸</d>
+				<sq v="🝵" name="occultation (0°)" />
+				<sq v="🝶" name="lunar eclipse (180°)" />
+				<sq v="⯳" name="Russian symbol for vigintile (18°)" />
+				<sq v="⯴" name="Russian symbol for novile (40°)" />
+				<sq v="⯵" name="Russian symbol for quintile (72°)" />
+				<sq v="⯶" name="Russian symbol for binovile (80°)" />
+				<sq v="⯷" name="Russian symbol for centile (100°)" />
+				<sq v="⯸" name="Russian symbol for tredecile (108°)" />
+			</f>
+			<f loc="AstroMisc">
+				<sq v="🜊" name="vertex" />
+				<sq v="🜍" name="cardinal sign" />
+				<sq v="🜔" name="fixed sign" />
+				<sq v="☿" name="mutable sign" />
+				<sq v="🜨" name="four quadrants of Earth" />
+				<sq v="🝴" name="lot of fortune" />
+			</f>
+			<f loc="BabZodc">
+				<d>♈ ♉ ♊ ♋ ♌ ♍ ♎ ♏ ♐ ♑ ♒ ♓ ⛎ 🐏 🐂 👬 🦀 🦞 🦁 👩 💃 ⚖️ 🦂 🏹 🐐 💧 🌊 🐟 🐍</d>
+			</f>
+			<f loc="ChinZodc">
+				<f name="1"><d>🐀 🐁 🐭 🐫</d></f>
+				<f name="2"><d>🐂 🐃 🐄 🐮</d></f>
 			</f>
 		</f>
 	</f>

@@ -8153,6 +8153,15 @@
     <text id="AstroAspect">
      <orig>Астрологические аспекты</orig>
     </text>
+    <text id="AstroMisc">
+     <orig>Астрологические разные</orig>
+    </text>
+    <text id="BabZodc">
+     <orig>Вавилонский зодиак</orig>
+    </text>
+    <text id="ChinZodc">
+     <orig>Китайский зодиак</orig>
+    </text>
    </group>
   </group>
  </file>
