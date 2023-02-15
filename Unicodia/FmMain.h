@@ -348,7 +348,6 @@ private:
     void showSearchError(const QString& text);
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
-    void preloadVisibleFonts();
     void rebuildBlocks();
 
     // mywiki::Gui
