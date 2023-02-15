@@ -11704,39 +11704,51 @@
     </text>
     <text id="Science">
      <orig>Наука</orig>
+     <transl>Science</transl>
     </text>
     <text id="Astro">
      <orig>Астрономия (и астрология)</orig>
+     <transl>Astronomy (and astrology)</transl>
     </text>
     <text id="SolMain">
      <orig>Солнечная система / основные</orig>
+     <transl>Sol / main</transl>
     </text>
     <text id="SolAster">
      <orig>Солнечная система / пояс астероидов</orig>
+     <transl>Sol / asteroid belt</transl>
     </text>
     <text id="SolCent">
      <orig>Солнечная система / кентавры</orig>
+     <transl>Sol / centaurs</transl>
     </text>
     <text id="SolPlut">
      <orig>Солнечная система / плутоиды</orig>
+     <transl>Sol / plutoids</transl>
     </text>
     <text id="AstroQuasi">
      <orig>Астрологические квазипланеты</orig>
+     <transl>Astrological quasi-planets</transl>
     </text>
     <text id="Celestial">
      <orig>Небесная механика</orig>
+     <transl>Celestial mechanics</transl>
     </text>
     <text id="AstroAspect">
      <orig>Астрологические аспекты</orig>
+     <transl>Astrological aspects</transl>
     </text>
     <text id="AstroMisc">
      <orig>Астрологические разные</orig>
+     <transl>Astrological miscellaneous</transl>
     </text>
     <text id="BabZodc">
      <orig>Вавилонский зодиак</orig>
+     <transl>Babylonian zodiac</transl>
     </text>
     <text id="ChinZodc">
      <orig>Китайский зодиак</orig>
+     <transl>Chinese zodiac</transl>
     </text>
    </group>
   </group>
