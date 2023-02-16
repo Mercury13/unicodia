@@ -1,5 +1,5 @@
 @rem Settings
-@set VERSION=1.9.2
+@set VERSION=1.9.3
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
