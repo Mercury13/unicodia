@@ -128,9 +128,9 @@
 @copy %QTDIR%\bin\Qt6SvgWidgets.dll %DEPLOY%
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
-@rem Unused right now, all SVG icons use our lazy engine
-@rem md %DEPLOY%\iconengines
-@rem copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
+@rem Used! — need for toolbar icons
+@md %DEPLOY%\iconengines
+@copy %QTDIR%\plugins\iconengines\qsvgicon.dll %DEPLOY%\iconengines
 @rem Unused right now, plain SVG loading does not need this
 @rem md %DEPLOY%\imageformats
 @rem copy %QTDIR%\plugins\imageformats\qsvg.dll %DEPLOY%\imageformats
