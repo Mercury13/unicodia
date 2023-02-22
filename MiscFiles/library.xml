@@ -72,7 +72,14 @@
 			<sq v="©️" name="copyright emoji" />
 			<sq v="™️️" name="trademark emoji" />
 			<sq v="️®️" name="registered emoji" />
-			<d>℗ 🆭 🄯 🅭 🅮 🄍 🅯 🄏 🄎</d>
+			<d>℗ 🆭 🄯</d>
+			<sq v="🅭" name="Creative Commons" />
+			<sq v="🅮" name="public domain" />
+			<sq v="🄍" name="no rights reserved" />
+			<sq v="🅯" name="attribution" />
+			<sq v="🄏" name="non-commercial" />
+			<sq v="🄎" name="share-alike" />
+			<sq v="⊜" name="no derivatives" />
 		</f>
 	</f>
 	<f loc="Science">
