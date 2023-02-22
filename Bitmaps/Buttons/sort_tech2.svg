@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 6.3499998 6.3499998"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="sort_tech2.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Buttons\sort_AZ.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="16.528621"
+     inkscape:cx="4.2048275"
+     inkscape:cy="9.1356684"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="0"
+       originy="0"
+       spacingx="0.26458332"
+       spacingy="0.26458332"
+       empspacing="4" />
+    <sodipodi:guide
+       position="0,5.2916665"
+       orientation="0,-1"
+       id="guide10649"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1.0583333"
+       orientation="0,-1"
+       id="guide10651"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1.0583333,6.3499998"
+       orientation="1,0"
+       id="guide10653"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.2916665,6.3499998"
+       orientation="1,0"
+       id="guide10655"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ef2929;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1.0583333,1.5875 H 1.5875 v 1.0583332 l 1.0583332,-1e-7 V 1.5874999 H 1.5874999 V 1.0583333 h 1.5874999 l 0,3.1749997 H 2.6458332 V 3.1749999 L 1.5875,3.175 V 4.2333331 H 1.0583333 Z"
+       id="path751"
+       sodipodi:nodetypes="ccccccccccccccc" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 5.2916666,5.2916666 V 4.7624999 l -1.5875001,-2e-7 V 4.2333331 H 3.1749998 v 1.0583333 l 2.1166668,2e-7"
+       id="path755"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 3.7041665,4.2333331 H 4.2333331 V 3.7041665 H 3.7041665 v 0.5291666"
+       id="path757" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 4.7624998,3.1749998 H 5.2916665 V 2.1166664 H 3.1749998 v 0.5291668 h 1.5875 z"
+       id="path759"
+       sodipodi:nodetypes="ccccccc" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 4.2333332,3.7041665 H 4.7624998 V 3.1749999 H 4.2333332 v 0.5291666"
+       id="path775" />
+  </g>
+</svg>
