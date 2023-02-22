@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 6.3499998 6.3499998"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="sort_tech.svg"
+   inkscape:export-filename="D:\Projects\Unicodia\Bitmaps\Buttons\sort_AZ.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="true"
+     units="px"
+     inkscape:zoom="8.2643105"
+     inkscape:cx="8.5306572"
+     inkscape:cy="1.573029"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-global="true"
+     inkscape:showpageshadow="2"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid824"
+       originx="0"
+       originy="0"
+       spacingx="0.26458332"
+       spacingy="0.26458332"
+       empspacing="4" />
+    <sodipodi:guide
+       position="0,5.2916665"
+       orientation="0,-1"
+       id="guide10649"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,1.0583333"
+       orientation="0,-1"
+       id="guide10651"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1.0583333,6.3499998"
+       orientation="1,0"
+       id="guide10653"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="5.2916665,6.3499998"
+       orientation="1,0"
+       id="guide10655"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#ef2929;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1.4552083,1.7197916 0,0.7937499 -0.396875,0.3968751 v -1.5875 z"
+       id="path368"
+       sodipodi:nodetypes="ccccc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path368"
+       id="use466"
+       transform="rotate(90,2.1166666,2.1166666)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path368"
+       id="use468"
+       transform="matrix(-1,0,0,1,4.2333332,5e-8)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path368"
+       id="use470"
+       transform="translate(-5e-8,1.5875)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path368"
+       id="use472"
+       transform="matrix(-1,0,0,1,4.2333332,1.5875)" />
+    <rect
+       style="fill:#ef2929;stroke:none;stroke-width:0.105833;stroke-linecap:round;stroke-linejoin:round;stop-color:#000000"
+       id="rect526"
+       width="1.0583333"
+       height="0.52916676"
+       x="1.5875"
+       y="2.6458333" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use466"
+       id="use528" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 4.8947914,1.9843749 H 4.1010415 L 3.7041664,1.5874999 h 1.5875 z"
+       id="use536"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#4e9a06;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 5.0270832,2.1166666 -0.2645834,1.0583332 -0.3968749,10e-8 0.2645832,-1.0583333 z"
+       id="path540"
+       sodipodi:nodetypes="ccccc" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#path540"
+       id="use542"
+       transform="translate(-0.3968751,1.5874999)" />
+    <use
+       x="0"
+       y="0"
+       xlink:href="#use536"
+       id="use550"
+       transform="matrix(1,0,0,-1,7.9999997e-8,6.8791664)" />
+  </g>
+</svg>

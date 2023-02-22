@@ -11115,15 +11115,19 @@
     <group id="actions">
      <text id="acSortByAlpha">
       <orig>По алфавиту: А → Я</orig>
-      <transl>За алфавітом: A → Я</transl>
+      <transl>За алфавітом: A → Я</transl>
      </text>
      <text id="acSortByCode">
       <orig>По коду: 00 → FF</orig>
-      <transl>За кодом: 00 → FF</transl>
+      <transl>За кодом: 00 → FF</transl>
      </text>
      <text id="acSortByContinent">
       <orig>По континенту: международные → Америка</orig>
-      <transl>За континентом: міжнародні → Америка</transl>
+      <transl>За континентом: міжнародні → Америка</transl>
+     </text>
+     <text id="acSortByTech">
+      <orig>По техническому имени: A → Z</orig>
+      <transl>За технічним ім’ям: A → Z</transl>
      </text>
     </group>
    </group>

@@ -11125,6 +11125,10 @@
       <orig>По континенту: международные → Америка</orig>
       <transl>By continent: international → America</transl>
      </text>
+     <text id="acSortByTech">
+      <orig>По техническому имени: A → Z</orig>
+      <transl>By technical name: A → Z</transl>
+     </text>
     </group>
    </group>
    <text id="Sort">

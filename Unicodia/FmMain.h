@@ -205,7 +205,9 @@ public:
     using Super::beginResetModel;
     using Super::endResetModel;
 private:
-    Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };
+    enum class Channel { LOC, TECH };
+    Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };    
+    Channel channel = Channel::LOC;
 };
 
 

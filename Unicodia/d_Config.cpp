@@ -42,7 +42,7 @@ constexpr std::string_view CONFIG_NAME = "config.xml";
 namespace {
 
     ec::Array<std::string_view, BlockOrder> orderNames {
-        "alpha", "continent", "code"
+        "alpha", "continent", "code", "tech"
     };
 
     void loadProgSets()

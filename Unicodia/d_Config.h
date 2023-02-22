@@ -11,6 +11,7 @@ enum class BlockOrder {
     ALPHA,      ///< Alphabetical
     CONTINENT,  ///< By continent, then alphabetically
     CODE,       ///< By code
+    TECH,       ///< By technical name
     DEFAULT = CONTINENT
 };
 

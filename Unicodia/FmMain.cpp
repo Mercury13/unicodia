@@ -173,11 +173,17 @@ namespace {
         return isAlphaLess(x, y);
     }
 
+    bool isTechLess(const uc::Block* x, const uc::Block* y)
+    {
+        return strncasecmp(x->name.data(), y->name.data(), 100) < 0;
+    }
+
 }   // anon namespace
 
 
 size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
 {
+    channel = Channel::LOC;
     auto& block = at(iOld);
     for (size_t i = 0; i < uc::N_BLOCKS; ++i)
         a[i] = &uc::blocks[i];
@@ -190,6 +196,10 @@ size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
         break;
     case BlockOrder::CONTINENT:
         std::stable_sort(a.begin(), a.end(), isContinentLess);
+        break;
+    case BlockOrder::TECH:
+        channel = Channel::TECH;
+        std::stable_sort(a.begin(), a.end(), isTechLess);
         break;
     }
 
@@ -253,7 +263,12 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
             GET_BLOCK
-            return str::toQ(block->loc.name);
+            switch (channel) {
+            case Channel::LOC:
+                return str::toQ(block->loc.name);
+            case Channel::TECH:
+                return str::toQ(block->name);
+            }
         }
     case Qt::DecorationRole: {
             GET_BLOCK
@@ -887,19 +902,17 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
-    radioSortOrder.setRadio(BlockOrder::ALPHA,     ui->acSortByAlpha);
-    radioSortOrder.setRadio(BlockOrder::CONTINENT, ui->acSortByContinent);
-    radioSortOrder.setRadio(BlockOrder::CODE,      ui->acSortByCode);
-    grpSortBy->addAction(ui->acSortByAlpha);
-    grpSortBy->addAction(ui->acSortByContinent);
-    grpSortBy->addAction(ui->acSortByCode);
     QMenu* menuSort = new QMenu(this);
-    menuSort->addAction(ui->acSortByAlpha);
-    menuSort->addAction(ui->acSortByContinent);
-    menuSort->addAction(ui->acSortByCode);
-    connect(ui->acSortByAlpha, &QAction::triggered, this, &This::blockOrderChanged);
-    connect(ui->acSortByCode, &QAction::triggered, this, &This::blockOrderChanged);
-    connect(ui->acSortByContinent, &QAction::triggered, this, &This::blockOrderChanged);
+    auto addAc = [this, grpSortBy, menuSort](BlockOrder order, QAction* action) {
+        radioSortOrder.setRadio(order, action);
+        grpSortBy->addAction(action);
+        menuSort->addAction(action);
+        connect(action, &QAction::triggered, this, &This::blockOrderChanged);
+    };
+    addAc(BlockOrder::ALPHA,     ui->acSortByAlpha);
+    addAc(BlockOrder::CONTINENT, ui->acSortByContinent);
+    addAc(BlockOrder::CODE,      ui->acSortByCode);
+    addAc(BlockOrder::TECH,      ui->acSortByTech);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -907,8 +920,9 @@ FmMain::InitBlocks FmMain::initBlocks()
     btSort = new QToolButton(sortBar);
 
     // ALPHA is localized!!
-    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.svg",   { 24, 24 });
-    sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.svg", { 24, 24 });
+    sortIcons[BlockOrder::CONTINENT].addFile(":/Buttons/globe.svg",     { 24, 24 });
+    sortIcons[BlockOrder::CODE     ].addFile(":/Buttons/sort_0F.svg",   { 24, 24 });
+    sortIcons[BlockOrder::TECH     ].addFile(":/Buttons/sort_tech.svg", { 24, 24 });
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
     sortBar->addWidget(btSort);    

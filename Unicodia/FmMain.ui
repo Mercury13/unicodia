@@ -846,6 +846,17 @@ padding-bottom: 1px;</string>
     <string>[aSortByContinent]</string>
    </property>
   </action>
+  <action name="acSortByTech">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>[aSortByTech]</string>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
