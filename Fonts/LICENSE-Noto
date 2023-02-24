@@ -64,8 +64,6 @@ What was done by authors of Unicodia:
   - Made KTA ligature in E000 private-use
   - Redrew 1BBF
   - Rehinted with FontForge
-* Symbols2
-  - Fixed rotated chess pawns, they were standing
 * Tagalog:
   - Enlarged virama
   - Implemented three U14 chars, hope usable
