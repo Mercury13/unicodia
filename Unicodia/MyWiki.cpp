@@ -1470,7 +1470,8 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     QString text;
     appendStylesheet(text);
     text += "<h1>";
-    text += node.viewableTitle(uc::TitleMode::LONG).toHtmlEscaped();
+        auto title = node.viewableTitle(uc::TitleMode::LONG);
+    appendCopyable(text, title, "bigcopy");
     text += "</h1>";
 
     text += "<p>";
