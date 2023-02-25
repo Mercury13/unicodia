@@ -1033,10 +1033,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D200, 0x1D24F, { 0x1D200, EcContinent::EUROPE, {}, 1_hx },
             "Ancient Greek Musical Notation",
             { EcScript::Grek, 3 }, EcScript::Grek, EcFont::MUSIC_NORMAL, Bfg::HAS_DESCRIPTION },
-    // Kaktovik numerals OK, implemented in Funky
+    // Kaktovik numerals OK
     { 0x1D2C0, 0x1D2DF, { 0x1D2CD, EcContinent::AMERICA, Ifg::CONTINENT_OK },
             "Kaktovik Numerals",
-            MyName::INST, EcScript::NONE, EcFont::FUNKY },
+            MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Mayan numerals OK
     { 0x1D2E0, 0x1D2FF,
             { 0x1D2ED, EcContinent::AMERICA, Ifg::CONTINENT_OK, SvgHint{ 2, ImbaX::RIGHT_4 } },
