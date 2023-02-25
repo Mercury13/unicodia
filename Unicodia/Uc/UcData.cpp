@@ -2841,7 +2841,9 @@ namespace {
 }   // anon namespace
 
 
-void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
+void uc::finishTranslation(
+        const std::unordered_map<char32_t, int>& sortOrder,
+        std::u32string_view ellipsisBlocks)
 {
     char c[40];
 
@@ -2870,6 +2872,8 @@ void uc::finishTranslation(const std::unordered_map<char32_t, int>& sortOrder)
     for (auto& blk : allBlocks()) {
         blk.printfLocKey(c, "Name");
         blk.loc.name = loc::get(c);
+        blk.loc.hasEllipsis = std::binary_search(
+                    ellipsisBlocks.begin(), ellipsisBlocks.end(), blk.startingCp);
 
         if (blk.hasDescription()) {
             blk.printfLocKey(c, "Text");

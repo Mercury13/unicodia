@@ -28,6 +28,15 @@
 		<alp>____________________Ü_____</alp>
 		<alp>____________________ü_____</alp>
 	</alpha-sort>
+	<!-- For discoverability some auxiliary blocks are placed next to “parent” ones,
+		 breaking alphabet order and referenceability.
+		 These blocks are marked with ellipsis. -->
+	<ellipsis text="…">
+		<blk start="10100" /><!-- Aegean numbers -->
+		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="1D200" /><!-- Ancient Greek music notation -->
+	</ellipsis>
 	<!-- You can make any wiki templates (w/o params) you want. Maybe you’d like to enclose them in CDATA. -->
 	<wiki-templates>
 		<!-- first{{-}}second  →  typographic dash -->

@@ -1,7 +1,6 @@
 #pragma once
 
 // C++
-#include <set>
 #include <filesystem>
 #include <map>
 #include <unordered_map>
@@ -28,6 +27,10 @@ namespace loc
         struct Numfmt {
             char16_t decimalPoint = '.';
         } numfmt;
+        struct Ellipsis {
+            std::u8string text;
+            std::u32string blocks;  // just string, sorted asc
+        } ellipsis;
         int stamp = 0;
         SafeVector<std::string> triggerLangs; ///< ISO codes, e.g. zh
         std::filesystem::path fnLang;   ///< c:\full\path\to\lang.ini

@@ -181,15 +181,15 @@ namespace {
 }   // anon namespace
 
 
-size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
+size_t BlocksModel::build(BlockOrder aOrder, size_t iOld)
 {
-    channel = Channel::LOC;
+    order = aOrder;
     auto& block = at(iOld);
     for (size_t i = 0; i < uc::N_BLOCKS; ++i)
         a[i] = &uc::blocks[i];
 
     // Primary sorting
-    switch (order) {
+    switch (aOrder) {
     case BlockOrder::CODE: break; // do nothing
     case BlockOrder::ALPHA:
         std::stable_sort(a.begin(), a.end(), isAlphaLess);
@@ -198,7 +198,6 @@ size_t BlocksModel::build(const BlockOrder& order, size_t iOld)
         std::stable_sort(a.begin(), a.end(), isContinentLess);
         break;
     case BlockOrder::TECH:
-        channel = Channel::TECH;
         std::stable_sort(a.begin(), a.end(), isTechLess);
         break;
     }
@@ -263,12 +262,20 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
             GET_BLOCK
-            switch (channel) {
-            case Channel::LOC:
+            switch (order) {
+            case BlockOrder::ALPHA:
+            case BlockOrder::CONTINENT:
+                if (block->loc.hasEllipsis) {
+                    return str::toQ(str::cat(
+                            loc::currLang->ellipsis.text, block->loc.name));
+                }
+                [[fallthrough]];
+            case BlockOrder::CODE:
                 return str::toQ(block->loc.name);
-            case Channel::TECH:
+            case BlockOrder::TECH:
                 return str::toQ(block->name);
             }
+            __builtin_unreachable();
         }
     case Qt::DecorationRole: {
             GET_BLOCK

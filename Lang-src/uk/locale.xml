@@ -9,6 +9,14 @@
 		<alp>á__ґ_é____í_______________________________________________</alp>
 		<alp>___Ґ______________________________________________________</alp>
 	</alpha-sort>
+	<ellipsis text="…">
+		<blk start="10100" /><!-- Aegean numbers -->
+		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="13430" /><!-- Egyptian hieroglyph format controls -->
+		<blk start="18800" /><!-- Tangut components -->
+		<blk start="1D200" /><!-- Ancient Greek music notation -->
+	</ellipsis>
 	<wiki-templates>
 		<!-- 12{{.}}345 → 12, narrow NBSP, 345 -->
 		<tmpl name="."><![CDATA[<font size='-3'>&#xA0;</font>]]></tmpl>

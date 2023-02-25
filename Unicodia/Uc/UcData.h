@@ -770,6 +770,7 @@ namespace uc {
             std::u8string_view name {};
             std::u8string_view description {};
             LocSortKey sortKey {};
+            bool hasEllipsis = false;
         } loc {};
 
         size_t permanentIndex() const;
@@ -1002,7 +1003,9 @@ namespace uc {
         char32_t fCp = 0;
     };
 
-    void finishTranslation(const std::unordered_map<char32_t, int>& sortOrder);
+    void finishTranslation(
+            const std::unordered_map<char32_t, int>& sortOrder,
+            std::u32string_view ellipsisBlocks);
 
 
     inline std::strong_ordering operator <=> (char32_t x, const Cp& y)

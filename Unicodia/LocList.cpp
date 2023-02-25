@@ -1,6 +1,9 @@
 // My header
 #include "LocList.h"
 
+// C++
+#include <charconv>
+
 // Qt
 #ifdef __GNUC__
     #pragma GCC diagnostic push
@@ -144,6 +147,22 @@ namespace {
                     r.sortOrder[c] = i;
             }
         }
+
+        r.ellipsis.blocks.clear();
+        auto hEllipsis = hLocale.child("ellipsis");
+        r.ellipsis.text = str::toU8(hEllipsis.attribute("text").as_string("..."));
+        for (auto& v : hEllipsis.children("blk")) {
+            std::string_view hex = v.attribute("start").as_string(0);
+            uint32_t code;
+            auto [ptr, ec] = std::from_chars(
+                        std::to_address(hex.begin()),
+                        std::to_address(hex.end()),
+                        code, 16);
+            if (ec == std::errc()) {
+                r.ellipsis.blocks.push_back(code);
+            }
+        }
+        std::sort(r.ellipsis.blocks.begin(), r.ellipsis.blocks.end());
 
         r.wikiTemplates.clear();
         auto hTemplates = hLocale.child("wiki-templates");

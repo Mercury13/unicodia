@@ -200,14 +200,13 @@ public:
     const uc::Block& at(size_t i) const noexcept;
     const uc::Block& operator [] (size_t i) const noexcept { return at(i); }
 
-    size_t build(const BlockOrder& order, size_t iOld);
+    size_t build(BlockOrder aOrder, size_t iOld);
 
     using Super::beginResetModel;
     using Super::endResetModel;
-private:
-    enum class Channel { LOC, TECH };
+private:    
     Fix1d<const uc::Block*, uc::N_BLOCKS> a { nullptr };    
-    Channel channel = Channel::LOC;
+    BlockOrder order = BlockOrder::DEFAULT;
 };
 
 
