@@ -335,8 +335,8 @@ constinit const uc::Block uc::blocks[] {
             "Miscellaneous Symbols", MyName::INST },
     // Dingbats OK, need Cambria here!
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
-            "Dingbats",
-            MyName::INST, EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS },
+            "Dingbats",  { EcScript::ZDIN, 0 },
+            EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS },
     // Misc math A OK
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",
@@ -1140,8 +1140,8 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, EcScript::NONE, EcFont::DINGBAT },
     // Orna dingbats OK
     { 0x1F650, 0x1F67F, { 0x1F656, EcContinent::NONE },
-            "Ornamental Dingbats",
-            MyName::INST, EcScript::NONE, EcFont::NOTO_SYMBOL2 },
+            "Ornamental Dingbats", { EcScript::ZDIN, 1 },
+            EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Transport/map OK
     { 0x1F680, 0x1F6FF, { 0x1F697, EcContinent::NONE },
             "Transport and Map Symbols",

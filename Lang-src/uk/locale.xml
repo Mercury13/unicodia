@@ -16,6 +16,7 @@
 		<blk start="13430" /><!-- Egyptian hieroglyph format controls -->
 		<blk start="18800" /><!-- Tangut components -->
 		<blk start="1D200" /><!-- Ancient Greek music notation -->
+		<blk start="1F650" /><!-- Ornamental dingbats -->
 	</ellipsis>
 	<wiki-templates>
 		<!-- 12{{.}}345 → 12, narrow NBSP, 345 -->

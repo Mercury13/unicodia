@@ -1945,12 +1945,20 @@
    </group>
    <group id="2700">
     <text id="Name">
-     <orig>Украшения</orig>
+     <orig>Узоры</orig>
      <transl>Dingbats</transl>
     </text>
     <text id="Text">
-     <orig>Символы, чаще всего используемые для украшения печатного текста. Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, а печатник оформит публикацию чёрно-белым шрифтом.</orig>
-     <transl>Symbols that are mainly used for decorating printed text. Block contains several [[pt:emoji|emoji]], and that’s justified: in Internet they will be colour pictures, and typesetter will set the document in monochrome font.</transl>
+     <orig>
+      <p>Знаменитая докомпьютерная библиотека печатных узоров{{-}}''узоры Германа Цапфа'' (''Zapf dingbats'', 1977). Широко распространялась в виде PostScript-шрифтов, гарантированно существует в любом просмотрщике PDF. Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, а печатник оформит публикацию чёрно-белым шрифтом.</p>
+      <p />
+      <p>Только петля 27B0 и двойная петля 27BF не{{_}}входят в эту библиотеку.</p>
+     </orig>
+     <transl>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several [[pt:emoji|emoji]], and that’s justified: in Internet they will be colour pictures, and typesetter will set the document in monochrome font.</p>
+      <p />
+      <p>Only loop 27B0 and double loop 27BF aren’t from that library.</p>
+     </transl>
     </text>
    </group>
    <group id="27C0">
@@ -8617,27 +8625,6 @@
     <text id="Text">
      <orig>Комбинирующая метка используется в нескольких разных письменностях.</orig>
      <transl>Combining mark is used in several scripts.</transl>
-    </text>
-   </group>
-   <group id="ZARR">
-    <text id="Name">
-     <orig>Стрелки</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
-     <transl>Arrows</transl>
-    </text>
-   </group>
-   <group id="ZMAT">
-    <text id="Name">
-     <orig>Математические</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
-     <transl>Mathematical</transl>
-    </text>
-   </group>
-   <group id="ZSYM">
-    <text id="Name">
-     <orig>Символы и пиктограммы</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
-     <transl>Symbols and pictographs</transl>
     </text>
    </group>
   </group>

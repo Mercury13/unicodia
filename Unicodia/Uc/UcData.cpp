@@ -447,17 +447,22 @@ constinit const uc::Script uc::scriptInfo[] {
     { "ZARR", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
     // Mathematical pseudo-script
     { "ZMAT", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
     // Symbols and pictographs pseudo-script
     { "ZSYM", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+    // Dingbats pseudo-script
+    { "ZDIN", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -2217,10 +2222,14 @@ void uc::completeData()
                 std::cout << "Continent mismatch: " << v.name << std::endl;
             }
         }
-        if (v.ecScript != EcScript::NONE
-                && v.alphaKey.ecScript == v.ecScript
-                && v.alphaKey.subKey == 0) {
-            v.script().mainBlock = &v;
+
+        if (v.alphaKey.subKey == 0) {
+            if (v.ecScript != EcScript::NONE
+                    && v.alphaKey.ecScript == v.ecScript) { // Actual script
+                v.script().mainBlock = &v;
+            } else if (v.alphaKey.script().flags.have(Sfg::SORT_KEY)) { // Pseudo-script for sorting
+                v.alphaKey.script().mainBlock = &v;
+            }
         }
     }
 
@@ -2848,15 +2857,17 @@ void uc::finishTranslation(
     char c[40];
 
     for (auto& sc : scriptInfo) {
-        sc.printfLocKey(c, "Name");
+        if (!sc.flags.have(Sfg::SORT_KEY)) {
+            sc.printfLocKey(c, "Name");
             sc.loc.name = loc::get(c);
+        }
         if (!sc.flags.have(Sfg::NO_LANGS)) {
             sc.printfLocKey(c, "Lang");
-                sc.loc.langs = loc::get(c);
+            sc.loc.langs = loc::get(c);
         }
         if (sc.time.needsCustomNote()) {
             sc.printfLocKey(c, "Note");
-                sc.loc.timeComment = loc::get(c);
+            sc.loc.timeComment = loc::get(c);
         }
         if (sc.flags.have(Sfg::DESC_FROM_PREV)) {
             auto p = &sc;
@@ -2864,7 +2875,7 @@ void uc::finishTranslation(
             sc.loc.description = p->loc.description;
         } else {
             sc.printfLocKey(c, "Text");
-                sc.loc.description = loc::get(c);
+            sc.loc.description = loc::get(c);
         }
     }
 

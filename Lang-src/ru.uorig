@@ -1479,10 +1479,14 @@
    </group>
    <group id="2700">
     <text id="Name">
-     <orig>Украшения</orig>
+     <orig>Узоры</orig>
     </text>
     <text id="Text">
-     <orig>Символы, чаще всего используемые для украшения печатного текста. Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, а печатник оформит публикацию чёрно-белым шрифтом.</orig>
+     <orig>
+      <p>Знаменитая докомпьютерная библиотека печатных узоров{{-}}''узоры Германа Цапфа'' (''Zapf dingbats'', 1977). Широко распространялась в виде PostScript-шрифтов, гарантированно существует в любом просмотрщике PDF. Блок содержат несколько [[pt:emoji|эмодзи]], что вполне оправдано: в интернете это будут цветные картинки, а печатник оформит публикацию чёрно-белым шрифтом.</p>
+      <p />
+      <p>Только петля 27B0 и двойная петля 27BF не{{_}}входят в эту библиотеку.</p>
+     </orig>
     </text>
    </group>
    <group id="27C0">
@@ -6075,24 +6079,6 @@
     </text>
     <text id="Text">
      <orig>Комбинирующая метка используется в нескольких разных письменностях.</orig>
-    </text>
-   </group>
-   <group id="ZARR">
-    <text id="Name">
-     <orig>Стрелки</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
-    </text>
-   </group>
-   <group id="ZMAT">
-    <text id="Name">
-     <orig>Математические</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
-    </text>
-   </group>
-   <group id="ZSYM">
-    <text id="Name">
-     <orig>Символы и пиктограммы</orig>
-     <au-cmt>Key for alpha sorting, you won’t see it in UI</au-cmt>
     </text>
    </group>
   </group>

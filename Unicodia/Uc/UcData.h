@@ -593,6 +593,7 @@ namespace uc {
         NONSCRIPT = 1,
         NO_LANGS = 2,
         DESC_FROM_PREV = 4,
+        SORT_KEY = 8,       ///< [+] Pseudo-script made specially for sorting
     };
     DEFINE_ENUM_OPS(Sfg)
 

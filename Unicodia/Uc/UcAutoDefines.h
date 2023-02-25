@@ -25,6 +25,7 @@ namespace uc {
         ZARR,   // Pseudo-script: Arrows
         ZMAT,   // Pseudo-script: Mathemetical
         ZSYM,   // Pseudo-script: Symbols and pictographs
+        ZDIN,   // Pseudo-script: Dingbats
         Adlm,   // Adlam
         Aghb,   // Caucasian Albanian
         Ahom,   // Ahom
