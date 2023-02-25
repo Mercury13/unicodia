@@ -6706,11 +6706,12 @@
       <p />
       <p>Буквы ''chillu'' содержат встроенную вираму, при этом некоторые из них происходят из другой буквы: например, L{{-}}от буквы «та».</p>
       <p />
-      <p>Орфографические реформы мало кто любит; бытовое письмо и афиши фильмов продолжали делать в старой орфографии. Доюникодные шрифты распространили новую орфографию. Microsoft, Apple и Google сделали юникодные шрифты в новой орфографии{{-}}однако местные производители делают и в старой. С конца 2010-х наметился отход к старой орфографии. «Юникодия» использует шрифт Google.</p>
+      <p>Орфографические реформы мало кто любит; бытовое письмо и афиши фильмов продолжали делать в старой орфографии. Доюникодные шрифты распространили новую орфографию. Microsoft, Apple и Google сделали юникодные шрифты в новой орфографии{{-}}однако местные производители делают и в старой. С конца 2010-х наметился отход к старой орфографии. В 2022 реформу частично откатили, добавив больше подстрочных знаков. «Юникодия» использует шрифт Google.</p>
      </orig>
      <au-cmt>
       <p>https://thottingal.in/documents/Malayalam%20Orthographic%20Reforms_%20Impact%20on%20Language%20and%20Popular%20Culture.pdf</p>
       <p>https://elementy.ru/problems/2892/Mashinka_s_indiyskim_aktsentom</p>
+      <p>https://github.com/NDISCOVER/Arima-Font/issues/36</p>
      </au-cmt>
      <transl>
       <p>Comes from [[ps:Gran|Grantha]]. Inherent vowel is {{t|a}}. Curly letters prevent palm leaf from cutting along veins.</p>
@@ -6724,7 +6725,7 @@
       <p />
       <p>''Chillu'' letters carry built-in virama, some of them originate from different letters: for emample, L{{-}}from letter “ta”.</p>
       <p />
-      <p>Spelling reforms are seldom embraced; everyday writing and film posters continued to use old orthography. Pre-Unicode fonts further spread new orthography. Microsoft, Apple and Google made Unicode fonts in new orthography, but local vendors do in old one as well. Since late 2010s printed media started to return to old orthography. ''Unicodia'' uses Google’s font.</p>
+      <p>Spelling reforms are seldom embraced; everyday writing and film posters continued to use old orthography. Pre-Unicode fonts further spread new orthography. Microsoft, Apple and Google made Unicode fonts in new orthography, but local vendors do in old one as well. Since late 2010s printed media started to return to old orthography. In 2022 the reform was partly reverted, more subscripts were added. ''Unicodia'' uses Google’s font.</p>
      </transl>
     </text>
    </group>
