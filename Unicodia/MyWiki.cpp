@@ -272,10 +272,12 @@ namespace {
     protected:
         wiki::HtWeight weight;
         bool isSuppressed = false;
+        bool isDiv = false;
 
         [[nodiscard]] bool prepareRecursion(std::string_view text);
         void runRecursive(std::string_view text);
         void finishRecursion(bool hasRemainder, bool prepareResult);
+        void finishDiv();
     };
 
     void Eng::toggleWeight(Flags<wiki::Weight> changed)
@@ -310,11 +312,21 @@ namespace {
         return false;
     }
 
+    void Eng::finishDiv()
+    {
+        if (isDiv) {
+            s += "</div>";
+            isDiv = false;
+        }
+    }
+
     void Eng::appendBreak(wiki::Strength strength, wiki::Feature feature)
     {
+        finishDiv();
         switch (strength) {
         case wiki::Strength::BREAK:
-            s += "<br>";
+            s += "<div>";
+            isDiv = true;
             break;
         case wiki::Strength::PARAGRAPH:
             s += "<p>";
