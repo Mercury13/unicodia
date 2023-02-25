@@ -2,9 +2,10 @@
 
 // Qt
 #include <QPainter>
-#include <QGuiApplication>
+#include <QApplication>
+#include <QStyle>
+#include <QStyleOption>
 #include <QSvgRenderer>
-#include <private/qguiapplication_p.h>
 
 // Char paint
 #include "routines.h"
@@ -275,12 +276,12 @@ QPixmap ie::Veng::myScaledPixmap(const QSize &bigSize, QIcon::Mode mode, qreal s
         //workingPix->setDevicePixelRatio(1.0);
     }
 
-    if (qobject_cast<QGuiApplication*>(QCoreApplication::instance())) {
-        if (mode != QIcon::Normal) {
-            const QPixmap generated = QGuiApplicationPrivate::instance()->applyQIconStyleHelper(mode, *workingPix);
-            if (!generated.isNull()) {
-                *workingPix = generated;
-            }
+    if (mode != QIcon::Normal) {
+        QStyleOption option(0);
+        option.palette = QGuiApplication::palette();
+        const QPixmap generated = QApplication::style()->generatedIconPixmap(mode, *workingPix, &option);
+        if (!generated.isNull()) {
+            *workingPix = generated;
         }
     }
 

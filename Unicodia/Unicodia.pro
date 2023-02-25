@@ -1,4 +1,4 @@
-QT += core gui widgets svg svgwidgets widgets-private
+QT += core gui widgets svg svgwidgets
 CONFIG += c++2a
 
 win32-g++ {
