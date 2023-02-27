@@ -8117,7 +8117,7 @@
      <orig>Интеллектуальная собственность</orig>
     </text>
     <text id="Science">
-     <orig>Наука</orig>
+     <orig>Наука и техника</orig>
     </text>
     <text id="Astro">
      <orig>Астрономия (и астрология)</orig>
@@ -8151,6 +8151,12 @@
     </text>
     <text id="ChinZodc">
      <orig>Китайский зодиак</orig>
+    </text>
+    <text id="TechDraw">
+     <orig>Черчение</orig>
+    </text>
+    <text id="Electro">
+     <orig>Электричество</orig>
     </text>
    </group>
   </group>

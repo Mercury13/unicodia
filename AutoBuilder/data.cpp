@@ -1249,6 +1249,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("modifier letter Short equals sign")     // What to do with equals?
     EX("direct current symbol form two") // Symbol is not a keyword
     EX("Roman numeral Reversed one hundred") // IDK what happens with numerals
+    EX("AC current")                    // Alternating current current :)
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
@@ -1270,6 +1271,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Planck constant over two pi")   // pi is small here
     EX("invisible Times")               // ???
     EX("S in triangle")                 // Because of Znamenny, S is tricky
+    EX("radical symbol bottom")         // symbol’s bottom
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather

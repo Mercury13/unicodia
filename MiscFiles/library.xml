@@ -168,5 +168,11 @@
 				<f name="12"><d>🐖 🐷 🐽 🐗 🐘 🐢</d></f>
 			</f>
 		</f>
+		<f loc="TechDraw">
+			<d>℄ ⌭ ⌮ ⌯ ⌰ ⌱ ⌲ ⌳ ⌴ ⌵ ⏤ ⏥</d>
+		</f>
+		<f loc="Electro">
+			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ⏦ ⏧ ⏚ ⏛</d>
+		</f>
 	</f>
 </library>

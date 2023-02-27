@@ -11695,8 +11695,8 @@
      <transl>Intellectual property</transl>
     </text>
     <text id="Science">
-     <orig>Наука</orig>
-     <transl>Science</transl>
+     <orig>Наука и техника</orig>
+     <transl>Science and technology</transl>
     </text>
     <text id="Astro">
      <orig>Астрономия (и астрология)</orig>
@@ -11741,6 +11741,14 @@
     <text id="ChinZodc">
      <orig>Китайский зодиак</orig>
      <transl>Chinese zodiac</transl>
+    </text>
+    <text id="TechDraw">
+     <orig>Черчение</orig>
+     <transl>Technical drawing</transl>
+    </text>
+    <text id="Electro">
+     <orig>Электричество</orig>
+     <transl>Electricity</transl>
     </text>
    </group>
   </group>
