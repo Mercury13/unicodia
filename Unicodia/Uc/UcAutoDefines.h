@@ -26,6 +26,7 @@ namespace uc {
         ZMAT,   // Pseudo-script: Mathemetical
         ZSYM,   // Pseudo-script: Symbols and pictographs
         ZDIN,   // Pseudo-script: Dingbats
+        ZDIA,   // Pseudo-script: Diacritical marks
         Adlm,   // Adlam
         Aghb,   // Caucasian Albanian
         Ahom,   // Ahom

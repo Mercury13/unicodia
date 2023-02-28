@@ -41,7 +41,7 @@ constinit const uc::Block uc::blocks[] {
             Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F, { 0x301, EcContinent::NONE },
-            "Combining Diacritical Marks", MyName::INST },
+            "Combining Diacritical Marks", { EcScript::ZDIA, 0 } },
     // Greek and Coptic OK
     { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
         "Greek and Coptic", { EcScript::Grek, 0 } },
@@ -214,7 +214,7 @@ constinit const uc::Block uc::blocks[] {
     // Diacritical ex OK
     { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE },
             "Combining Diacritical Marks Extended",
-            MyName::INST, EcScript::NONE, EcFont::NOTO },
+            { EcScript::ZDIA, 2 }, EcScript::NONE, EcFont::NOTO },
     // Balinese OK
     { 0x1B00, 0x1B7F, { 0x1B11, EcContinent::OCEAN },
             "Balinese", { EcScript::Bali, 0 }, EcScript::Bali },
@@ -259,7 +259,7 @@ constinit const uc::Block uc::blocks[] {
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
-            MyName::INST, EcScript::NONE, EcFont::NOTO },
+            { EcScript::ZDIA, 1, }, EcScript::NONE, EcFont::NOTO },
     // Lat ex OK
     { 0x1E00, 0x1EFF, { 0x1EEA, EcContinent::EUROPE },
             "Latin Extended Additional",
@@ -284,7 +284,7 @@ constinit const uc::Block uc::blocks[] {
     // Marks for symbols OK, made optimized versions in Noto
     { 0x20D0, 0x20FF, { 0x20E0, EcContinent::NONE },
             "Combining Diacritical Marks for Symbols",
-            MyName::INST, EcScript::NONE, EcFont::UMLAUT_SYMBOL },
+            { EcScript::ZDIA, 'z' }, EcScript::NONE, EcFont::UMLAUT_SYMBOL },
     // Letterlike OK
     { 0x2100, 0x214F, { 0x211D, EcContinent::NONE },
             "Letterlike Symbols",

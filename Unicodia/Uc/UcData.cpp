@@ -463,6 +463,11 @@ constinit const uc::Script uc::scriptInfo[] {
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
             EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+    // Diacritical pseudo-script
+    { "ZDIA", QFontDatabase::Any,
+        EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
+            Dating::none(),
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
