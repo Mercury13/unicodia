@@ -147,18 +147,18 @@
 @echo.
 @echo ===== Building L10n =====
 @md %DEPLOY%\Languages
-@rem Russian
-@set DIR_RU=%DEPLOY%\Languages\Russian
-@md %DIR_RU%
-@copy lang-src\ru\locale.xml %DIR_RU%
-@%UTRANSL% lang-src\ru.uorig -build:%DIR_RU%
-@copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
 @rem English
 @set DIR_EN=%DEPLOY%\Languages\English
 @md %DIR_EN%
 @copy lang-src\en\locale.xml %DIR_EN%
-@%UTRANSL% lang-src\en.utran -build:%DIR_EN%
+@%UTRANSL% lang-src\en.uorig -build:%DIR_EN%
 @rem no QM for English
+@rem Russian
+@set DIR_RU=%DEPLOY%\Languages\Russian
+@md %DIR_RU%
+@copy lang-src\ru\locale.xml %DIR_RU%
+@%UTRANSL% lang-src\ru.utran -build:%DIR_RU%
+@copy %QTDIR%\translations\qtbase_ru.qm %DIR_RU%
 @rem Ukrainian
 @set DIR_UK=%DEPLOY%\Languages\Ukrainian
 @md %DIR_UK%
