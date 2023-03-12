@@ -266,7 +266,10 @@
     </text>
     <text id="NoHent">
      <orig>без &lt;a {1} &gt;хэнтáйганы&lt;/a&gt;</orig>
-     <au-cmt>Test: Hiragana</au-cmt>
+     <au-cmt>
+      <p>{1} = additional technical tags (e.g. href, style)</p>
+      <p>Test: Hiragana</p>
+     </au-cmt>
      <transl>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</transl>
     </text>
     <text id="Comp">
@@ -645,7 +648,8 @@
     <text id="EngTech">
      <orig>Английское</orig>
      <au-cmt>
-      <p>English — maybe Technical</p>
+      <p>English — Technical</p>
+      <p>Other languages — maybe English</p>
       <p>Test: block info</p>
      </au-cmt>
      <transl>Technical name</transl>
@@ -729,7 +733,7 @@
      <orig>Состояние</orig>
      <au-cmt>
       <p>Maybe status</p>
-      <p>Test: any live (or prevly live) script</p>
+      <p>Test: any live (or previously live) script</p>
      </au-cmt>
      <transl>Status</transl>
     </text>
@@ -1099,7 +1103,6 @@
       <p />
       <p>Символ 0310 чандрабинду нужен для записи индийских языков латиницей и кириллицей. В каждой [[pt:brahmic|индийской]] письменности есть свой чандрабинду.</p>
      </orig>
-     <au-cmt> </au-cmt>
      <transl>
       <p>Diacritical marks are above-line, below-line and inline characters affixed to letters, and modifying or clarifying their meanings. For example, accent like in ''résumé''.</p>
       <p />
@@ -4879,7 +4882,6 @@
       <p />
       <p>Braille industrialized assistive technologies for blind: easy to emboss, does not come to sight when embossed next to normal text for sighted people or even over it.</p>
      </transl>
-     <tr-cmt>Test</tr-cmt>
     </text>
    </group>
    <group id="Bugi">
@@ -5813,7 +5815,7 @@
       <p />
       <p>«Китайские порномультики» хентай{{-}}омофон: они происходят от {{sm|変態}} «хэнтай»{{-}}извращённый, а хэнтайгана от {{sm|変体}} «хэнтай»{{-}}необычный.</p>
      </orig>
-     <au-cmt>For translators: устав = uncial, «китайские порномультики» = Japornimation</au-cmt>
+     <au-cmt>In Russian: uncial = устав, Japornimation = китайские порномультики</au-cmt>
      <transl>
       <p>Hentaigana is a general name of obsolete Hiragana letters written in extremely sloppy manner.</p>
       <p />
@@ -5840,7 +5842,7 @@
       <p />
       <p>Женщины, которым не{{_}}было доступно образование, писали слоговой азбукой, и предпочитали не{{_}}рубленую [[ps:Kana|катáкану]], а плавную хирáгану. Сейчас хираганой пишут слова, у которых иероглифа нет или неизвестен пишущему/читающему (кроме заимствованных, для них катакана), окончания слов, учат детей, подписывают прочтение иероглифов.</p>
      </orig>
-     <au-cmt>For translator: окончание = suffix</au-cmt>
+     <au-cmt>in Russian: suffix = (maybe) окончание</au-cmt>
      <transl>
       <p>About 3rd century Japanese started to write with [[ps:Hani|Chinese ideographs]]. Auxiliary syllabary of Man’yōgana emerged from ideographs, pronunciation rather than image mattered. Hiragana is just an extremely cursive writing of Man’yōgana.</p>
       <p />
@@ -5893,7 +5895,7 @@
       <p />
       <p>Большинство абугид «согласно-центричные». Центральный компонент пахау{{-}}гласная буква, а начальные согласные стоят справа от неё. Например, слово «хмонг» {{sm|𖬌𖬣𖬵}} состоит из гласной «oob», согласной «qh» и тона-гвоздика.</p>
      </orig>
-     <au-cmt>For translator: тон-гвоздик = tack for tone, author = Shong Lue Yang, первая версия = stage 1</au-cmt>
+     <au-cmt>In Russian: tack for tone = тон-гвоздик, Shong Lue Yang = Шон-лы Я, stage 1 = первая версия</au-cmt>
      <transl>
       <p>Shong Lue Yang, inventor of script, said that the script was given to him by God. “Pahawh” name means “unite”. Development lasted 1959 to 1971. Vietnam war was going on, Shong’s group was under suspicion by both communist and pro-American forces, and soon after script creation Shong was assassinated by pro-Americans.</p>
       <p />
@@ -5940,7 +5942,6 @@
       <p />
       <p>С XVII{{_}}века началось изучение, около 1900 проведена основная работа и даже придумали руны для недостающих звуков венгерского. Венгры гордятся рунами и иногда дублируют ими надписи. Но мало кто умеет читать руны: в 2017 шутники заменили знак города Эрд (Érd) на «Szia» (''привет'', оба слова длиной 3 руны), и заметили это через месяц.</p>
      </orig>
-     <au-cmt>For translator: Hi, not Hello</au-cmt>
      <transl>
       <p>It’s unknown how Hungarian runes are related to [[ps:Orkh|Turkic]]: either originated from them, or sister scripts.</p>
       <p />
@@ -6425,7 +6426,7 @@
       <p />
       <p>Были и другие попытки научить лису писать: слоговое письмо, напоминающее [[ps:Hani|китайские иероглифы]] (≈1925), основанная на пиньине (латинской записи китайского) латиница (1957), [[ps:Plrd|алфавит Полларда]] (мяо) и письменность на [[ps:Mymr|бирманской]] основе.</p>
      </orig>
-     <au-cmt>For translator: Sara Ba Thaw</au-cmt>
+     <au-cmt>In Russian: Sara Ba Thaw = Сара Ба Тау</au-cmt>
      <transl>
       <p>Alphabet was invented by Myanmar preacher Sara Ba Thaw and British missionaire James Fraser. Consists of capital [[ps:Latn|Latin]] letters, both upright and turned. There are no small letters. Due to missionaires’ efforts {{%|40}} of Lisu are protestants. China recognized the script in 1992.</p>
       <p />
@@ -6552,7 +6553,7 @@
     </text>
     <text id="Text">
      <orig>Произошла из [[ps:Armi|арамейского]] или [[ps:Prti|парфянского]] письма. Используется так называемыми «болотными арабами», живущими у слияния рек Тигр и Евфрат и исповедующими мандеизм, необычную гностическую религию. Их количество в Ираке быстро уменьшается с 45&amp;nbsp;000 (1996) до 5000 (2007), около 60&amp;nbsp;тыс. разбросаны по миру, и, вероятно, на правах беженцев они быстро исчезнут.</orig>
-     <au-cmt>For translator: Marsh Arabs</au-cmt>
+     <au-cmt>In Russian: Marsh Arabs = болотные арабы</au-cmt>
      <transl>Came from [[ps:Armi|Aramaic]] or [[ps:Prti|Parthian]] script. Used by so-called “marsh Arabs” that live near confluence of Tigris and Euphrates and profess Mandaeism, unusual Gnostic religion. Their number in Iraq is greatly reducing from 45,000 (1996) to 5000 (2007), 60,000 more are spread across the world, and probably as refugees they will quickly disappear.</transl>
     </text>
    </group>
@@ -6709,6 +6710,7 @@
       <p>Орфографические реформы мало кто любит; бытовое письмо и афиши фильмов продолжали делать в старой орфографии. Доюникодные шрифты распространили новую орфографию. Microsoft, Apple и Google сделали юникодные шрифты в новой орфографии{{-}}однако местные производители делают и в старой. С конца 2010-х наметился отход к старой орфографии. В 2022 реформу частично откатили, добавив больше подстрочных знаков. «Юникодия» использует шрифт Google.</p>
      </orig>
      <au-cmt>
+      <p>About reforms and their consequences:</p>
       <p>https://thottingal.in/documents/Malayalam%20Orthographic%20Reforms_%20Impact%20on%20Language%20and%20Popular%20Culture.pdf</p>
       <p>https://elementy.ru/problems/2892/Mashinka_s_indiyskim_aktsentom</p>
       <p>https://github.com/NDISCOVER/Arima-Font/issues/36</p>
@@ -6786,8 +6788,8 @@
       <p>В этот блок также входит письменность тодо-бичиг ''(«ясное письмо»)'', изобретённая в 1648 и использовавшаяся западными народами, в том числе калмыками, вплоть до их кириллизации в 1924. Она до наших дней ходит в Синцзяне ''(Китай)''.</p>
      </orig>
      <au-cmt>
-      <p>Break here, not paragraph because of high font sample</p>
-      <p>No feature → line break does nothing</p>
+      <p>&lt;br&gt;, not paragraph break because of high font sample</p>
+      <p>No feature → ordinary line break ⤶  does nothing</p>
      </au-cmt>
      <transl>
       <p>In 1204 Mongols conquered Uyghurs and took [[ps:Ougr|alphabet]] originating from [[ps:Syrc|Syriac]]. The only actual script written left-to-right in columns, so computers support it reluctantly, turning columns 90° counter-clockwise.</p>
@@ -7119,7 +7121,7 @@
       <p />
       <p>Ол-чики состоит из 30 букв, названия соответствуют внешнему виду. Первые три: {{sm|ᱚ}}{{_}}огонь, {{sm|ᱛ}}{{_}}земля, {{sm|ᱜ}}{{_}}отрыжка.</p>
      </orig>
-     <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal]</au-cmt>
+     <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal to encode]</au-cmt>
      <transl>
       <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
       <p />
@@ -8782,7 +8784,6 @@
     <text id="Text">
      <orig>Протяжённые (обладающие шириной) комбинирующие метки встречаются в некоторых языках Юго-Восточной Азии: деванáгари, бенгальском, кáннаде, хангыле…</orig>
      <transl>Spacing (having their own width) combining marks are present in some scripts of South-East Asia: Devanagari, Bengali, Kannada, Hangul…</transl>
-     <tr-cmt>Hangul: U+302E</tr-cmt>
     </text>
    </group>
    <group id="Me">
@@ -9332,7 +9333,7 @@
       <p>* Неполная, плохо передающая сложные слоги (ба-ка){{-}}[[ps:Bugi|лонтара]]. Отдельные образцы выродились до консонантных.</p>
       <p>* Потерявшая гласную по умолчанию (ба-нᵊ-ка){{-}}реформой ([[ps:Laoo|лаосский]]) или естественным развитием ([[ps:Guru|гурмукхи]]). Во втором случае может не{{_}}всегда отличать «на» от «н» и пользоваться вирамой в словарях.</p>
      </orig>
-     <au-cmt>кша = kssa</au-cmt>
+     <au-cmt>Russian: kssa = кша</au-cmt>
      <transl>
       <p>Scholars disagree in definition of [[pt:abugida|abugida]]. But they are unanimous in one thing: '''group of scripts that came from [[ps:Brah|Brahmi]]''' are definitely abugidas.</p>
       <p />
@@ -11004,7 +11005,7 @@
    </text>
    <text id="MyName">
     <orig>Михаил Меркурьев</orig>
-    <au-cmt>Михайло Меркур’єв, Mikhail Merkuryev</au-cmt>
+    <au-cmt>Mikhail Merkuryev, Михаил Меркурьев, Михайло Меркур’єв</au-cmt>
     <transl>Mikhail Merkuryev</transl>
    </text>
    <text id="HomePage">
