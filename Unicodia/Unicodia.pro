@@ -1,6 +1,8 @@
 QT += core gui widgets svg svgwidgets
 CONFIG += c++2a
 
+VERSION = 1.9.4
+
 win32-g++ {
     # To simplify debugging, we statically link these libraries
     QMAKE_CXXFLAGS_DEBUG += -static-libgcc -static-libstdc++
@@ -133,8 +135,6 @@ INCLUDEPATH += \
     Uc
 
 LIBS += -lz
-
-VERSION = 1.9.4
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
