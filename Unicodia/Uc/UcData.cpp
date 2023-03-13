@@ -519,7 +519,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::special(), EcFont::BENGALI },
     // Bhaiksuki OK, installed Google Noto
     { "Bhks", QFontDatabase::Any,
-        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::CONSERVED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(11), EcFont::BHAIKSUKI },
     // Bopomofo OK
     { "Bopo", QFontDatabase::Any,

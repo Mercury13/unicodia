@@ -92,7 +92,7 @@ namespace uc {
         CONSERVED,      ///< Historical, writing tradition conserved (Glagolitic)
         UNDECIPHERED,   ///< Was silent and still remains undeciphered (Linear A)
         PARTLY_DECIPHERED, ///< Was silent, then partly deciphered (Carian)
-        DECIPHERED,     ///< Was silent, then deciphered ()
+        DECIPHERED,     ///< Was silent, then deciphered (cuneiform)
         SACRED,         ///< Used nowadays as sacred (Coptic, Avestan)
         NEW,            ///< Newly-created (Adlam)
         REVIVED,        ///< Revived (Ahom)
