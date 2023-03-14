@@ -2164,8 +2164,16 @@
      <transl>Символы структуры иероглифов</transl>
     </text>
     <text id="Text">
-     <orig>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</orig>
-     <transl>В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. А для этого важно указать, на какие части он разбит и что в каждой. Для первого и предназначен данный блок.</transl>
+     <orig>
+      <p>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</p>
+      <p />
+      <p>All characters are visible, renderers usually do not recreate ideograph’s look. Zhuang character U+2DA21 {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
+     </orig>
+     <transl>
+      <p>В Юникоде есть механизм описания незакодированного [[ps:Hani|иероглифа ККЯ]]. А для этого важно указать, на какие части он разбит и что в каждой. Для первого и предназначен данный блок.</p>
+      <p />
+      <p>Все символы видимые, рендереры обычно не воссоздают вид иероглифа. Чжуанский символ U+2DA21 {{smb|𭨡}} можно описать как {{sm|⿰書史}}. В Юникоде{{_}}15.1 блок заполнен, и один символ даже выделен в [[pk:31C0|чертах ККЯ]].</p>
+     </transl>
     </text>
    </group>
    <group id="3000">
@@ -2798,7 +2806,8 @@
    </group>
    <group id="FF00">
     <text id="Name">
-     <orig> Halfwidth and fullwidth forms</orig>
+     <orig>Halfwidth and fullwidth forms</orig>
+     <known-orig> Halfwidth and fullwidth forms</known-orig>
      <transl>Полуширинные и полноширинные формы</transl>
     </text>
     <text id="Text">

@@ -1641,7 +1641,11 @@
      <orig>Ideographic description characters</orig>
     </text>
     <text id="Text">
-     <orig>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</orig>
+     <orig>
+      <p>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</p>
+      <p />
+      <p>All characters are visible, renderers usually do not recreate ideograph’s look. Zhuang character U+2DA21 {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
+     </orig>
     </text>
    </group>
    <group id="3000">
@@ -2096,7 +2100,7 @@
    </group>
    <group id="FF00">
     <text id="Name">
-     <orig> Halfwidth and fullwidth forms</orig>
+     <orig>Halfwidth and fullwidth forms</orig>
     </text>
     <text id="Text">
      <orig>

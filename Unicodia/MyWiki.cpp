@@ -402,20 +402,47 @@ namespace {
         finishRecursion(hasRemainder, q);
     }
 
-    void appendFont(QString& s, uc::EcFont fontId, std::string_view x)
+    constexpr int SIZE_SAMPLE = -1;
+
+    void appendFont(QString& s, const uc::Font& font, std::string_view x, int size)
     {
-        s += "<font face='";
-        auto& font = uc::fontInfo[static_cast<int>(fontId)];
-        s += font.familiesComma();
-        s += "'>";
-        str::append(s, x);
-        str::append(s, "</font>");
+        bool hasFace = !font.flags.have(uc::Ffg::DESC_STD);
+        bool hasSize = (size != 0);
+        if (hasFace || hasSize) {
+            s += "<font";
+            if (hasFace) {
+                s += " face='";
+                s += font.familiesComma();
+                s += '\'';
+            }
+            if (hasSize) {
+                if (size < 0) {
+                    size =  font.flags.have(uc::Ffg::DESC_BIGGER) ? 3
+                          : font.flags.have(uc::Ffg::DESC_SMALLER) ? 1 : 2;
+                }
+                s += " size='+";
+                s += QChar(size + '0');
+                s += '\'';
+            }
+            s += ">";
+            str::append(s, x);
+            str::append(s, "</font>");
+        } else {
+            str::append(s, x);
+        }
     }
 
-    void appendFont(QString& s, uc::EcFont fontId,
-                    const SafeVector<std::string_view>& x)
+    void appendFont(QString& s, uc::EcFont fontId, std::string_view x, int size)
     {
-        appendFont(s, fontId, x.safeGetV(1, {}));
+        auto& font = uc::fontInfo[static_cast<int>(fontId)];
+        appendFont(s, font, x, size);
+    }
+
+    template <class Font>
+    inline void appendFont(QString& s, Font&& fontId,
+                    const SafeVector<std::string_view>& x, int size)
+    {
+        appendFont(s, std::forward<Font>(fontId), x.safeGetV(1, {}), size);
     }
 
     // Key: start/end
@@ -434,21 +461,9 @@ namespace {
             }
         }
         if (name == "sm"sv) {
-            bool useCustom = !font.flags.have(uc::Ffg::DESC_STD);
-            auto fontSize =
-                    font.flags.have(uc::Ffg::DESC_BIGGER) ? '3'
-                  : font.flags.have(uc::Ffg::DESC_SMALLER) ? '1' : '2';
-            str::append(s, "<font size='+"sv);
-            str::append(s, fontSize);
-            str::append(s, '\'');
-            if (useCustom) {
-                str::append(s, " face='"sv);
-                s += font.familiesComma();
-                str::append(s, '\'');
-            }
-            str::append(s, '>');
-            str::append(s, x.safeGetV(1, {}));
-            str::append(s, "</font>");
+            appendFont(s, font, x, SIZE_SAMPLE);
+        } else if (name == "smb"sv) {
+            appendFont(s, uc::EcFont::CJK_NEWHAN, x, 3);
         } else if (name == "_"sv) {
             s.append(QChar(0x00A0));
         } else if (name == "%"sv) {
@@ -489,12 +504,12 @@ namespace {
         } else if (name == "version"sv) {
             str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
         } else if (name == "funky"sv) {
-            appendFont(s, uc::EcFont::FUNKY, x);
+            appendFont(s, uc::EcFont::FUNKY, x, 0);
         } else if (name == "noto"sv) {
-            appendFont(s, uc::EcFont::NOTO, x);
+            appendFont(s, uc::EcFont::NOTO, x, 0);
         } else if (name == "DuplCats") {
             uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
-            appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>");
+            appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
         } else {
             wiki::appendHtml(s, x[0]);
         }
