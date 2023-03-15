@@ -261,7 +261,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSignWriting-Regular.ttf", Ffg::STUB_OFF | Ffg::DESC_BIGGER, 145_pc }, // SignWriting
     { "NotoSansSinhala-Regular.ttf", Ffg::DESC_BADLY_HINTED },                  // Sinhala
     { "NotoSansIndicSiyaqNumbers-Regular.ttf" },                                // Siyaq Indic
-    { "NotoOttomanSiyaq-Regular.ttf" },                                         // Siyaq Ottoman
+    { "NotoSerifOttomanSiyaq-Regular.ttf" },                                    // Siyaq Ottoman
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSoyombo-Regular.ttf", 115_pc },                                  // Soyombo
     { "NotoSansSundanese-Regular.ttf" },                                        // Sundanese
