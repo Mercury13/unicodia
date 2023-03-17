@@ -4,7 +4,7 @@
   <orig lang="en" fname="en.uorig" />
   <transl lang="uk" pseudoloc="false" />
  </info>
- <file name="lang.ini" idless="false" orig-path="1212.ini">
+ <file name="lang.ini" idless="false">
   <format name="ini">
    <text-format bom="false" line-break="crlf" />
    <text-escape line-break-mode="c-lf" space-escape="bare" />
@@ -1542,7 +1542,7 @@
    </group>
    <group id="1C90">
     <text id="Name">
-     <orig>Georian extended</orig>
+     <orig>Georgian extended</orig>
      <transl>Грузинська розширена</transl>
     </text>
     <text id="Text">
@@ -7280,7 +7280,7 @@
      <orig>
       <p>The script was used since 100{{_}}BC until 300{{_}}CE around Palmyra (modern Syria). Comes from [[ps:Armi|Aramaic]]. The alphabet has 22 consonants, one of them has two variants. There are no spaces and punctuation. Numbers were written with non-positional system resembling Roman numerals, right to left.</p>
       <p />
-      <p>Deciphered in 1974 using bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
+      <p>Deciphered in 1754 using a bilingual with [[ps:Grek|Greek]], Jean-Jacques Barthélemy was the first person to decipher an extinct alphabet. In 1758 he deciphers [[ps:Phnx|Phoenician]].</p>
      </orig>
      <transl>
       <p>Писемність вживалася з 100{{bc}} до 300 в районі Пальміри (сучасна Сирія). Походить з [[ps:Armi|арамейської]]. В алфавіті 22 приголосних літери, одна в двох варіантах. Пропусків та розділових знаків нема. Числа записувались непозиційною системою числення, що нагадувала римські цифри, справа наліво.</p>
@@ -7431,7 +7431,7 @@
       <p />
       <p>Disappeared about 150{{_}}BC with destruction of Carthage; Phoenicia itself had been using daughter scripts for a long time.</p>
       <p />
-      <p>Jean-Jacques Barthélemy deciphered [[ps:Palm|Palmyrene]] in 1754, and Phoenician in 1758, also using bilingual with Greek.</p>
+      <p>Jean-Jacques Barthélemy deciphered [[ps:Palm|Palmyrene]] in 1754, and Phoenician in 1758, also using a bilingual with Greek.</p>
      </orig>
      <transl>
       <p>Походить с маловивченого протосинайського письма. Назви літер [[pt:acrophonic|акрофонічні]]: алеф=бик, бет=дім, гімел=верблюд…</p>
