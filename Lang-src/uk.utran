@@ -2,6 +2,7 @@
 <ut type="full-transl">
  <info>
   <orig lang="en" fname="en.uorig" />
+  <ref fname="ru.utran" />
   <transl lang="uk" pseudoloc="false" />
  </info>
  <file name="lang.ini" idless="false">
