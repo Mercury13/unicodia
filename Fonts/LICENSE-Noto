@@ -15,7 +15,7 @@ What was done by authors of Unicodia:
   - Rehinted with TtfAutoHint, see settings-STRONG
 * Syloti Nagri
   - Rehinted with FontForge
-* Buhid, Dives Akuru, Gurmukhi, Pahawh Hmong, Siddham
+* Buhid, Dives Akuru, Pahawh Hmong, Siddham
   - Rehinted with TtfAutoHint, see settings PNG
 * Devanagari
   - Set Asc/desc to 1280/525
