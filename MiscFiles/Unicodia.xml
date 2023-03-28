@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
   Portable: the config is stored in program’s directory, not in AppData
-    Use if you program sits on flash drive
+    Use if your program sits on flash drive
 -->
 <program portable="0" />
