@@ -5473,9 +5473,9 @@
       <p>Currently it is used by Kashmiri Pandits (Hindu minority in Islamic Kashmir) and Indian Buddhists writing in Sanskrit.</p>
       <p />
       <p>Bhahmic abugida with inherent vowel {{t|a}}. [[pt:virama|Virama]], unusual for Indic scripts, is situated on the right and used frequently. There are many [[pt:ligature|ligatures]] “consonant-virama-consonant”.</p>
-      <p>: ka {{sm|𑆑}} + i {{sm|◌𑆴}} = ki {{sm|𑆑𑆴}}</p>
-      <p>: ka {{sm|𑆑}} + virama {{sm|◌𑇀}} = k {{sm|𑆑𑇀}}</p>
-      <p>: ka {{sm|𑆑}} + virama {{sm|◌𑇀}} + ta {{sm|𑆠}} = kta {{sm|𑆑𑇀𑆠}}</p>
+      <p>{{smtable|ka|*𑆑|+ i|**◌𑆴|= ki|*𑆑𑆴}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|= k|*𑆑𑇀}}</p>
+      <p>{{smtable|ka|*𑆑|+ virama|*◌𑇀|+ ta|*𑆠|= kta|*𑆑𑇀𑆠}}</p>
       <p>Top line may be solid, broken or have arbitrary breaks.</p>
      </orig>
     </text>
