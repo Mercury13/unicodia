@@ -1,0 +1,66 @@
+﻿#
+
+{{%}} :: Typographic percentage :: 1 parameter
+Prints parameter 1, synthesized thin non-break space, percent sign %.
+
+{{_}} :: Non-break space :: No parameters
+Just inserts a non-break space 00A0.
+
+D
+{{DuplCats}} :: Sample of Duployan shorthand reading “Cats” :: No parameters
+As a workaround, this sample is coded to FunkySample’s private-use codepoint.
+
+E
+
+{{em|}} :: Emoji sample :: 1 parameter
+That parameter is displayed with known emoji fonts, size +2.
+
+F
+
+{{fontface}} :: Comma-separated families of current font :: No parameters
+As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
+
+{{funky}} :: Text drawn with FunkSample font :: 1 parameter
+As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
+
+K
+
+{{k}} :: Key combination :: ∞ parameters
+Writes [param1]+[param2]+[param]3+… where […] = crude keycap
+
+{{kb}} :: Key combination in bold :: ∞ parameters
+Same as {{k}}, just bold
+
+N
+
+{{nchars}} :: # of chars in latest Unicode :: No parameters
+Prints number of characters in the latest Unicode.
+
+{{nemoji}} :: # of emoji in latest Unicode :: No parameters
+Prints number of emoji in the latest Unicode.
+
+{{noto}} :: Text drawn with Noto Serif font :: 1 parameter
+Same as {{funky}}, just another font.
+
+S
+
+{{sm}} :: Sample :: 1 parameter
+Difference from {{noto}}, {{funky}}, etc: the text is drawn in object’s font, in size +1, +2 or +3 (coded in font flags).
+
+{{smb}} :: Sample in Babelstone Han font :: 1 parameter
+Same as {{sm}} but displayed in Babelstone Han font.
+
+{{smtable}} :: Sample with workaround via <table> :: ∞ parameters
+Used when text + sample + text glitches and physical barrier is needed.
+Parameter prepended with * = sample.
+Parameter prepended with ** = glitchy sample.
+
+T
+
+{{t}} :: Transcription :: 1 parameter
+Just a transcription with nice brackets.
+
+V
+
+{{version}} :: Latest version of Unicode :: No parameters
+Prints the latest version of Unicode (15.0 etc)
