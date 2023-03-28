@@ -4105,8 +4105,8 @@
     <text id="Text">
      <orig>
       <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost distinctive top line. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entring a ligature, a consonant loses right stem if present.</p>
-      <p>: kə {{sm|ક}} + i {{sm|◌િ}} = ki {{sm|કિ}}</p>
-      <p>: dhə {{sm|ધ}} + virama {{sm|◌્}} + kə {{sm|ક}} = dhkə {{sm|ધ્ક}}</p>
+      <p>{{smtable|kə|*ક|+ i|**◌િ|= ki|*કિ}}</p>
+      <p>{{smtable|dhə|*ધ|+ virama|**◌્|+ kə|*ક|= dhkə|*ધ્ક}}</p>
       <p />
       <p>Zoroastrians fled from Muslims to India and started to write [[ps:Avst|Avesta]] with local scripts, traditionally Gujarati. The most famous of these Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar). Letter {{t|z}} is missing in Gujarati, and it’s written as “j” with nukta (dot below).</p>
      </orig>
@@ -5514,8 +5514,8 @@
       <p>The script was named after city of Khudabad, Pakistan. In 1868 Khudawadi was declared the main script of Sindhi by British administration. By 20th century Sindhi, mainly Muslims, moved to [[ps:Arab|Arabic]], but the script is still alive.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used, historically [[ps:Khoj|Khojki]] was in use.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
-      <p>{{smtable|ka|*𑊺|+ i|*◌𑋡|= ki|*𑊺𑋡}}</p>
-      <p>{{smtable|ka|*𑊺|+ virama|*◌𑋪|= k|*𑊺𑋪}}</p>
+      <p>{{smtable|ka|*𑊺|+ i|**◌𑋡|= ki|*𑊺𑋡}}</p>
+      <p>{{smtable|ka|*𑊺|+ virama|**◌𑋪|= k|*𑊺𑋪}}</p>
       <p />
       <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </orig>
@@ -5889,8 +5889,8 @@
       <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible bacause of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
       <p />
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent in the end of words.</p>
-      <p>: ka {{sm|𑒏}} + i {{sm|◌𑒱}} = ki {{sm|𑒏𑒱}}</p>
-      <p>: ka {{sm|𑒏}} + virama {{sm|◌𑓂}} + ta {{sm|𑒞}} = kta {{sm|𑒏𑓂𑒞}}</p>
+      <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
+      <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </orig>
     </text>
    </group>

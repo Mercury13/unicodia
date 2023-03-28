@@ -5649,15 +5649,15 @@
     <text id="Text">
      <orig>
       <p>Emerged from [[ps:Deva|Devanagari]] and looks like it, but even old Gujarati lost distinctive top line. Inherent vowel is {{t|ə}}. [[pt:virama|Virama]] is absent in title language of Gujarati, and is used in computer typesetting just for [[pt:ligature|ligatures]] of consonant conjuncts, but is present in small languages served with script. When entring a ligature, a consonant loses right stem if present.</p>
-      <p>: kə {{sm|ક}} + i {{sm|◌િ}} = ki {{sm|કિ}}</p>
-      <p>: dhə {{sm|ધ}} + virama {{sm|◌્}} + kə {{sm|ક}} = dhkə {{sm|ધ્ક}}</p>
+      <p>{{smtable|kə|*ક|+ i|**◌િ|= ki|*કિ}}</p>
+      <p>{{smtable|dhə|*ધ|+ virama|**◌્|+ kə|*ક|= dhkə|*ધ્ક}}</p>
       <p />
       <p>Zoroastrians fled from Muslims to India and started to write [[ps:Avst|Avesta]] with local scripts, traditionally Gujarati. The most famous of these Zoroastrians is Freddie Mercury (but his parents moved as far as to Zanzibar). Letter {{t|z}} is missing in Gujarati, and it’s written as “j” with nukta (dot below).</p>
      </orig>
      <transl>
       <p>З’явився з [[ps:Deva|деванáґарі]] і дуже схожий на нього, але вже старий гуджараті втратив характерну лінію зверху. Голосна по замовчанню {{t|ə}}. [[pt:virama|Вірама]] у гуджаратському відсутня і в комп’ютерах використовується тільки для набору [[pt:ligature|лігатур]], але зустрічається в малих мовах, що обслуговуються письмом. Заходячи у лігатуру, приголосна втрачає праву паличку, якщо є.</p>
-      <p>: кə {{sm|ક}} + і {{sm|◌િ}} = кі {{sm|કિ}}</p>
-      <p>: дхə {{sm|ધ}} + вірама {{sm|◌્}} + кə {{sm|ક}} = дхкə {{sm|ધ્ક}}</p>
+      <p>{{smtable|кə|*ક|+ і|**◌િ|= кі|*કિ}}</p>
+      <p>{{smtable|дхə|*ધ|+ вірама|**◌્|+ кə|*ક|= дхкə|*ધ્ક}}</p>
       <p />
       <p>Зороастрійці збігли від мусульман до Індії і стали писати [[ps:Avst|Авесту]] місцевим письмом, традиційно гуджараті. Найвідоміший з таких зороастрійців{{-}}Фредді Мерк’юрі (правда, цого батьків доля занесла аж до Занзибару). Літери «з» в гуджараті нема, і вона записується як «дж» з нуктою (крапкою знизу).</p>
      </transl>
@@ -7773,8 +7773,8 @@
       <p>The script was named after city of Khudabad, Pakistan. In 1868 Khudawadi was declared the main script of Sindhi by British administration. By 20th century Sindhi, mainly Muslims, moved to [[ps:Arab|Arabic]], but the script is still alive.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used, historically [[ps:Khoj|Khojki]] was in use.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
-      <p>: ka {{sm|𑊺}} + i {{sm|◌𑋡}} = ki {{sm|𑊺𑋡}}</p>
-      <p>: ka {{sm|𑊺}} + virama {{sm|◌𑋪}} = k {{sm|𑊺𑋪}}</p>
+      <p>{{smtable|ka|*𑊺|+ i|**◌𑋡|= ki|*𑊺𑋡}}</p>
+      <p>{{smtable|ka|*𑊺|+ virama|**◌𑋪|= k|*𑊺𑋪}}</p>
       <p />
       <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </orig>
@@ -7782,8 +7782,8 @@
       <p>Письмо назване на честь пакістанського міста Кхудабад. У 1868 оголошене британською адміністрацією основним письмом синдхів. До XX{{_}}століття синдхи, переважно мусульмани, перебралися на [[ps:Arab|арабицю]], але письмо живе і понині. Також користуються [[ps:Deva|деванáґарі]] та [[ps:Guru|ґурмукхі]], історично вживали [[ps:Khoj|ходжкі]].</p>
       <p />
       <p>Брахмійська абуґіда з голосною по замовчанню {{t|а}} і часто вживаною [[pt:virama|вірамою]]:</p>
-      <p>: ка {{sm|𑊺}} + і {{sm|◌𑋡}} = кі {{sm|𑊺𑋡}}</p>
-      <p>: ка {{sm|𑊺}} + вірама {{sm|◌𑋪}} = к {{sm|𑊺𑋪}}</p>
+      <p>{{smtable|ка|*𑊺|+ і|**◌𑋡|= кі|*𑊺𑋡}}</p>
+      <p>{{smtable|ка|*𑊺|+ вірама|**◌𑋪|= к|*𑊺𑋪}}</p>
       <p />
       <p>Спробуйте прочитати самоназву: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </transl>
@@ -8345,15 +8345,15 @@
       <p>The script is close to [[ps:Beng|Bengali]], most characters are similar, but [[pt:unification|unification]] is impossible bacause of other [[pt:ligature|ligatures]]. The first metal type was made in 1920s, the first digital font in 1990s. Most speakers (34{{_}}million as of 2000) switched to [[ps:Deva|Devanagari]] in 20th century, and the script is used mainly in Hinduism. For a long time Maithili was considered a dialect of Hindi or Bengali, but in 2003 it was proclaimed a separate language, Devanagari was left as main script.</p>
       <p />
       <p>Inherent vowel is {{t|a}}. [[pt:virama|Virama]] is used for Sanskrit only: consonant conjuncts are written as ligatures, and the vowel becomes silent in the end of words.</p>
-      <p>: ka {{sm|𑒏}} + i {{sm|◌𑒱}} = ki {{sm|𑒏𑒱}}</p>
-      <p>: ka {{sm|𑒏}} + virama {{sm|◌𑓂}} + ta {{sm|𑒞}} = kta {{sm|𑒏𑓂𑒞}}</p>
+      <p>{{smtable|ka|*𑒏|+ i|**◌𑒱|= ki|*𑒏𑒱}}</p>
+      <p>{{smtable|ka|*𑒏|+ virama|**◌𑓂|+ ta|*𑒞|= kta|*𑒏𑓂𑒞}}</p>
      </orig>
      <transl>
       <p>Письмо близьке до [[ps:Beng|бенгальського]], багато символів схожі, але [[pt:unification|уніфікація]] неможлива через інші [[pt:ligature|лігатури]]. Перший металевий шрифт зроблений у 1920-і роки, перший цифровий у 1990-і. Більшість носіїв, котрих 34{{_}}млн на 2020, у XX{{_}}столітті перейшли на [[ps:Deva|деванáґарі]], і письмо вживається здебільшого в індуїзмі. Довго майтхілі вважався діалектом хінді чи бенгальської, але у 2003 його оголосили окремою мовою, основною писемністю залишили деванаґарі.</p>
       <p />
       <p>Голосна по замовчанню {{t|а}}. [[pt:virama|Вірама]] вживається тільки для санскриту: стики приголосних записуються лігатурами, а в кінці слова голосна німіє.</p>
-      <p>: ка {{sm|𑒏}} + і {{sm|◌𑒱}} = кі {{sm|𑒏𑒱}}</p>
-      <p>: ка {{sm|𑒏}} + вірама {{sm|◌𑓂}} + та {{sm|𑒞}} = кта {{sm|𑒏𑓂𑒞}}</p>
+      <p>{{smtable|ка|*𑒏|+ і|**◌𑒱|= кі|*𑒏𑒱}}</p>
+      <p>{{smtable|ка|*𑒏|+ вірама|**◌𑓂|+ та|*𑒞|= кта|*𑒏𑓂𑒞}}</p>
      </transl>
     </text>
    </group>

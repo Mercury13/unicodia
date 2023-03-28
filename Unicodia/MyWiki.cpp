@@ -450,16 +450,25 @@ namespace {
             const uc::Font& font,
             const SafeVector<std::string_view>& x)
     {
-        s += "<table cellspacing=0 cellpadding=0><tr valign='middle'><td>&nbsp;&nbsp;";
+        s += "<table cellspacing=0 cellpadding=0><tr valign='middle'><td>&nbsp;&nbsp;&nbsp;";
         auto n = x.size();
         for (size_t i = 1; i < n; ++i) {
             auto v = x[i];
-            s += "<td>&nbsp;";
             if (v.starts_with('*')) {
-                auto w = v.substr(1);
-                appendFont(s, font, w, SIZE_SAMPLE);
+                if (v.starts_with("**")) {  // Glitching sample
+                    s += "<td>";
+                    auto w = v.substr(2);
+                    appendFont(s, font, w, SIZE_SAMPLE);
+                } else {    // Normal sample
+                    auto w = v.substr(1);
+                    appendFont(s, font, w, SIZE_SAMPLE);
+                }
             } else {
+                if (i > 1)
+                    s += "&nbsp;";
                 str::append(s, v);
+                if (i + 1 < n)
+                    s += "&nbsp;";
             }
         }
         s += "</table>";
