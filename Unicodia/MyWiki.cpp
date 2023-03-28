@@ -445,6 +445,26 @@ namespace {
         appendFont(s, std::forward<Font>(fontId), x.safeGetV(1, {}), size);
     }
 
+    void appendSmTable(
+            QString& s,
+            const uc::Font& font,
+            const SafeVector<std::string_view>& x)
+    {
+        s += "<table cellspacing=0 cellpadding=0><tr valign='middle'><td>&nbsp;&nbsp;";
+        auto n = x.size();
+        for (size_t i = 1; i < n; ++i) {
+            auto v = x[i];
+            s += "<td>&nbsp;";
+            if (v.starts_with('*')) {
+                auto w = v.substr(1);
+                appendFont(s, font, w, SIZE_SAMPLE);
+            } else {
+                str::append(s, v);
+            }
+        }
+        s += "</table>";
+    }
+
     // Key: start/end
     constinit const std::u8string_view KEY_START =
             u8"<span style='background-color:palette(midlight);'>\u00A0";
@@ -464,6 +484,8 @@ namespace {
             appendFont(s, font, x, SIZE_SAMPLE);
         } else if (name == "smb"sv) {
             appendFont(s, uc::EcFont::CJK_NEWHAN, x, 3);
+        } else if (name == "smtable"sv) {
+            appendSmTable(s, font, x);
         } else if (name == "_"sv) {
             s.append(QChar(0x00A0));
         } else if (name == "%"sv) {

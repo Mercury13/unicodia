@@ -5514,8 +5514,8 @@
       <p>The script was named after city of Khudabad, Pakistan. In 1868 Khudawadi was declared the main script of Sindhi by British administration. By 20th century Sindhi, mainly Muslims, moved to [[ps:Arab|Arabic]], but the script is still alive.  [[ps:Deva|Devanagari]] and [[ps:Guru|Gurmukhi]] are also used, historically [[ps:Khoj|Khojki]] was in use.</p>
       <p />
       <p>Brahmic abugida with inherent vowel {{t|a}} and a frequent [[pt:virama|virama]]:</p>
-      <p>: ka {{sm|𑊺}} + i {{sm|◌𑋡}} = ki {{sm|𑊺𑋡}}</p>
-      <p>: ka {{sm|𑊺}} + virama {{sm|◌𑋪}} = k {{sm|𑊺𑋪}}</p>
+      <p>{{smtable|ka|*𑊺|+ i|*◌𑋡|= ki|*𑊺𑋡}}</p>
+      <p>{{smtable|ka|*𑊺|+ virama|*◌𑋪|= k|*𑊺𑋪}}</p>
       <p />
       <p>Try to read autonym: {{sm|𑋝𑋡𑋟𑋐𑋢}}</p>
      </orig>
