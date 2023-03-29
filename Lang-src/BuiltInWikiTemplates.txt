@@ -17,16 +17,17 @@ That parameter is displayed with known emoji fonts, size +2.
 
 F
 
-{{fontface}} :: Comma-separated families of current font :: No parameters
+{{fontface}} :: Comma-separated families of object’s (block’s, script’s…) font :: No parameters
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
+Example: Noto Serif Devanag000,Times New Roman
 
-{{funky}} :: Text drawn with FunkSample font :: 1 parameter
+{{funky}} :: Text drawn with FunkySample font :: 1 parameter
 As we load font under temporary name, we should retrieve it programmatically rather than hard-code. Thus template.
 
 K
 
 {{k}} :: Key combination :: ∞ parameters
-Writes [param1]+[param2]+[param]3+… where […] = crude keycap
+Writes [param1]+[param2]+[param3]+… where […] = crude keycap
 
 {{kb}} :: Key combination in bold :: ∞ parameters
 Same as {{k}}, just bold
@@ -63,4 +64,4 @@ Just a transcription with nice brackets.
 V
 
 {{version}} :: Latest version of Unicode :: No parameters
-Prints the latest version of Unicode (15.0 etc)
+Prints the latest version of Unicode (15.0, 15.1β etc)
