@@ -15,6 +15,10 @@ void WideComboBox::resizeView()
     if (count() > maxVisibleItems()) {
         newWidth += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
     }
+    auto myWidth = std::max(width(), fMaxWidth);
+    if (newWidth > myWidth) {
+        newWidth = myWidth;
+    }
     //QScrollBar* sb = vw->verticalScrollBar();
     //if (sb && sb->isVisible())
     //    newWidth += sb->width();
@@ -87,6 +91,55 @@ void SearchEdit::keyPressEvent(QKeyEvent* ev)
     default:
         Super::keyPressEvent(ev);
     }
+}
+
+
+///// SearchCombo ///////////////////////////////////////////////////////////////
+
+SearchCombo::SearchCombo(QWidget *parent) : Super(parent)
+{
+    setEditable(true);
+    setInsertPolicy(QComboBox::NoInsert);
+    setDuplicatesEnabled(true);
+    auto lineEdit = new SearchEdit;
+    setLineEdit(lineEdit);
+    setCompleter(nullptr);
+    setMaxWidth(400);
+    connect(lineEdit, &SearchEdit::searchPressed, this, &This::searchPressed);
+    addItem({});
+}
+
+
+void SearchCombo::focusInEvent(QFocusEvent* ev)
+{
+    Super::focusInEvent(ev);
+    emit focusIn();
+}
+
+
+void SearchCombo::focusOutEvent(QFocusEvent* ev)
+{
+    Super::focusOutEvent(ev);
+    emit focusOut();
+}
+
+
+void SearchCombo::addToHistory(const QString& x)
+{
+    // Remove coinciding
+    for (auto i = count(); i > 0; ) { --i;
+        auto q = itemText(i);
+        if (q.isEmpty() || itemText(i) == x) {
+            removeItem(i);
+        }
+    }
+    // Remove extra
+    size_t qq = maxVisibleItems();
+    for (auto i = count(); i >= qq; ) { --i;
+        removeItem(i);
+    }
+    // Add
+    insertItem(0, x);
 }
 
 

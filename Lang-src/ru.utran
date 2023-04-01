@@ -11064,11 +11064,6 @@
      <im-cmt>is a general widget (usually a tab)</im-cmt>
      <transl>Блоки</transl>
     </text>
-    <text id="edSearch:placeholderText">
-     <orig>Search</orig>
-     <im-cmt>is a single-line editor, promoted to SearchEdit</im-cmt>
-     <transl>Поиск</transl>
-    </text>
     <text id="btCopy">
      <orig>Copy</orig>
      <im-cmt>is a button</im-cmt>
@@ -11131,6 +11126,10 @@
    <text id="Sort">
     <orig>Order blocks by</orig>
     <transl>Порядок блоков</transl>
+   </text>
+   <text id="Search">
+    <orig>Search</orig>
+    <transl>Поиск</transl>
    </text>
   </group>
   <group id="Sample">

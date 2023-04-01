@@ -344,7 +344,7 @@ private:
     void showCopied(QAbstractItemView* table);
     void showCopied(QWidget* widget, const QRect& absRect);
     void clearSample();
-    void doSearch(const QString& what);
+    bool doSearch(const QString& what);
     void showSearchResult(uc::MultiResult&& x);
     void showSearchError(const QString& text);
     void cjkSetCollapseState(bool x);

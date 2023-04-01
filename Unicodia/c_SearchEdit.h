@@ -29,6 +29,7 @@ class WideComboBox : public QComboBox
 private:
     using Super = QComboBox;
     bool fIsDown = false;
+    int fMaxWidth = 999'999'999;
 protected:
     void resizeEvent(QResizeEvent* ev) override;
     void focusInEvent(QFocusEvent* ev) override;
@@ -42,6 +43,7 @@ public:
     void hidePopup() override;
     bool isDown() const noexcept { return fIsDown; }
     void resizeView();
+    void setMaxWidth(int x) noexcept { fMaxWidth = x; }
 };
 
 
@@ -55,6 +57,24 @@ protected:
     void focusInEvent(QFocusEvent* ev) override;
     void focusOutEvent(QFocusEvent* ev) override;
     void keyPressEvent(QKeyEvent* ev) override;
+signals:
+    void focusIn();
+    void focusOut();
+    void searchPressed();
+};
+
+
+class SearchCombo : public WideComboBox
+{
+    Q_OBJECT
+    using Super = WideComboBox;
+    using This = SearchCombo;
+public:
+    SearchCombo(QWidget *parent = nullptr);
+    void addToHistory(const QString& x);
+protected:
+    void focusInEvent(QFocusEvent* ev) override;
+    void focusOutEvent(QFocusEvent* ev) override;
 signals:
     void focusIn();
     void focusOut();

@@ -775,6 +775,7 @@ FmMain::FmMain(QWidget *parent)
 
     // Search
     ui->listSearch->setIconSize(pixQsize());
+    ui->edSearch->lineEdit()->setPlaceholderText("[Search]");
 
     // Tofu stats
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
@@ -903,8 +904,8 @@ FmMain::InitBlocks FmMain::initBlocks()
     connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
     ui->listSearch->setUniformItemSizes(true);
     ui->listSearch->setModel(&searchModel);
-    connect(ui->edSearch, &SearchEdit::searchPressed, this, &This::startSearch);
-    connect(ui->edSearch, &SearchEdit::focusIn, this, &This::focusSearch);
+    connect(ui->edSearch, &SearchCombo::searchPressed, this, &This::startSearch);
+    connect(ui->edSearch, &SearchCombo::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
 
     // Sort menu
@@ -1039,6 +1040,9 @@ void FmMain::translateMe()
 
     // International icons
     loadIcon(sortIcons[BlockOrder::ALPHA], loc::active::icons.sortAZ);
+
+    // Search
+    ui->edSearch->lineEdit()->setPlaceholderText(loc::get("Main.Search"));
 
     // Sort order
     btSort->setToolTip(loc::get("Main.Sort"));
@@ -1610,7 +1614,10 @@ void FmMain::closeSearch()
 
 void FmMain::startSearch()
 {
-    doSearch(ui->edSearch->text());
+    QString s = ui->edSearch->currentText();
+    if (doSearch(s)) {
+        ui->edSearch->addToHistory(s);
+    }
 }
 
 
@@ -1648,10 +1655,12 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 }
 
 
-void FmMain::doSearch(const QString& what)
+bool FmMain::doSearch(const QString& what)
 {
-    auto r = uc::doSearch(what);
-    showSearchResult(std::move(r));
+    auto results = uc::doSearch(what);
+    auto retValue = !results.v.empty();
+    showSearchResult(std::move(results));
+    return retValue;
 }
 
 

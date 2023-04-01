@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -150,9 +150,18 @@
                   </widget>
                  </item>
                  <item>
-                  <widget class="SearchEdit" name="edSearch">
-                   <property name="placeholderText">
-                    <string>[Search]</string>
+                  <widget class="SearchCombo" name="edSearch">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="currentIndex">
+                    <number>-1</number>
+                   </property>
+                   <property name="maxVisibleItems">
+                    <number>12</number>
                    </property>
                   </widget>
                  </item>
@@ -865,11 +874,6 @@ padding-bottom: 1px;</string>
    <header>c_SearchEdit.h</header>
   </customwidget>
   <customwidget>
-   <class>SearchEdit</class>
-   <extends>QLineEdit</extends>
-   <header>c_SearchEdit.h</header>
-  </customwidget>
-  <customwidget>
    <class>CharsTable</class>
    <extends>QTableView</extends>
    <header>c_SearchEdit.h</header>
@@ -896,6 +900,11 @@ padding-bottom: 1px;</string>
    <extends>QWidget</extends>
    <header>QSvgWidget</header>
    <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SearchCombo</class>
+   <extends>QComboBox</extends>
+   <header>c_SearchEdit.h</header>
   </customwidget>
  </customwidgets>
  <resources/>
