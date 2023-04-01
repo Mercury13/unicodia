@@ -123,6 +123,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },               // CJK months
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },// CJK
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …1
       { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …2
