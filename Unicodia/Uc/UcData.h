@@ -228,7 +228,6 @@ namespace uc {
         CHAM,
         CHEROKEE,
         CHORASMIAN,
-        CJK_MONTHS, // Fall to CJK
         CJK,
           Z_CJK_1,
           Z_CJK_2,

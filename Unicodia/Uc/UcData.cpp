@@ -46,7 +46,7 @@ constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "FunkySample.ttf", uc::Fafg::RAW_FONT };
-constexpr std::string_view FNAME_HANA_C = "HanaMinLiteCSC.ttf";
+constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
 
@@ -123,7 +123,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
-    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },               // CJK months
     { "SimSun", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc },// CJK
       { "SimSun-ExtB", Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID, 120_pc }, // …1
       { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …2
