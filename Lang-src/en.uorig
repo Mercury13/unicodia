@@ -8162,6 +8162,21 @@
     <text id="Electro">
      <orig>Electricity</orig>
     </text>
+    <text id="Math">
+     <orig>Mathematics</orig>
+    </text>
+    <text id="Equality">
+     <orig>Equality</orig>
+    </text>
+    <text id="Inequality">
+     <orig>Inequality</orig>
+    </text>
+    <text id="GreaterLess">
+     <orig>Greater-less</orig>
+    </text>
+    <text id="GreaterLessBidi">
+     <orig>Greater and less</orig>
+    </text>
    </group>
   </group>
  </file>

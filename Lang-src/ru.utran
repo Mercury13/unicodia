@@ -11758,6 +11758,26 @@
      <orig>Electricity</orig>
      <transl>Электричество</transl>
     </text>
+    <text id="Math">
+     <orig>Mathematics</orig>
+     <transl>Математика</transl>
+    </text>
+    <text id="Equality">
+     <orig>Equality</orig>
+     <transl>Равенство</transl>
+    </text>
+    <text id="Inequality">
+     <orig>Inequality</orig>
+     <transl>Неравенство</transl>
+    </text>
+    <text id="GreaterLess">
+     <orig>Greater-less</orig>
+     <transl>Больше-меньше</transl>
+    </text>
+    <text id="GreaterLessBidi">
+     <orig>Greater and less</orig>
+     <transl>Больше и меньше</transl>
+    </text>
    </group>
   </group>
  </file>

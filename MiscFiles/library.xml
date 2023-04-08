@@ -83,6 +83,20 @@
 		</f>
 	</f>
 	<f loc="Science">
+		<f loc="Math">
+			<f loc="Equality">
+				<d>≈ 🟰 ∻ ∼ ∽ ∾ ≂ ≃ ≅ ≊ ≋ ≌ ≍ ≎ ≏ ≐ ≑ ≒ ≓ ≔ ≕ ≖ ≗ ≘ ≙ ≚ ≛ ≜ ≝ ≞ ≟ ≡ ≣ ⩦ ⩧ ⩪ ⩫ ⩬ ⩭ ⩮ ⩯ ⩰ ⩳ ⩴ ⩵ ⩶ ⩷ ⩸ ⪮</d>
+			</f>
+			<f loc="Inequality">
+				<d>≠ ≁ ≄ ≆ ≇ ≉ ≢ ≭ </d>
+			</f>
+			<f loc="GreaterLess">
+				<d>≤ ≥ ⩽ ⩾ ≦ ≧ ≨ ≩ ≪ ≫ ≮ ≯ ≰ ≱ ≲ ≳ ≴ ≵ ⋖ ⋗ ⋘ ⋙ ⋜ ⋝ ⋦ ⋧ ⩹ ⩺ ⩻ ⩼ ⩿ ⪀ ⪁ ⪂ ⪃ ⪄ ⪅ ⪆ ⪇ ⪈ ⪉ ⪊ ⪍ ⪎ ⪕ ⪖ ⪗ ⪘ ⪙ ⪚ ⪛ ⪜ ⪝ ⪞ ⪟ ⪠ ⪡ ⪢ ⪣ ⫷ ⫸ ⫹ ⫺</d>
+			</f>
+			<f loc="GreaterLessBidi">
+				<d>≶ ≷ ≸ ≹ ⋚ ⋛ ⪋ ⪌ ⪏ ⪐ ⪑ ⪒ ⪓ ⪔ ⪤ ⪥</d>
+			</f>
+		</f>
 		<f loc="Astro">
 			<f loc="SolMain">
 				<d>☉ ☿</d>
