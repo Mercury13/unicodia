@@ -591,7 +591,7 @@ void g2sv::Polyline::rotateIndexes(size_t i)
 }
 
 
-g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
+g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
 {
     // Performance O(n²), but OK for my tasks
     auto sz = pts.size();
@@ -634,7 +634,7 @@ g2sv::Intersection g2sv::Polyline::doesSelfIntersect() const
 
 void g2sv::Polyline::checkForSelfIntersection(int scale) const
 {
-    if (auto pt = doesSelfIntersect()) {
+    if (auto pt = getSelfIntersection()) {
         char buf[100];
         // Get shorter segment
         auto len1 = pt.a->dist2from(*pt.b);

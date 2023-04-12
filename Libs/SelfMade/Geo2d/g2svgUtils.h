@@ -123,7 +123,7 @@ namespace g2sv {
 
         /// @return [+] one of points adjacent to lines involved
         ///         [-] no intersections found
-        Intersection doesSelfIntersect() const;
+        Intersection getSelfIntersection() const;
 
         /// @throw  if some polyline self-intersects
         void checkForSelfIntersection(int scale) const;
