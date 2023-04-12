@@ -119,7 +119,7 @@ namespace g2sv {
         std::optional<std::vector<Corner>> detectCorners(
                 const SimplifyOpt& opt) const;
 
-        void appendSvgData(std::string& r, int scale) const;
+        void appendSvgDataTo(std::string& r, int scale) const;
 
         /// @return [+] one of points adjacent to lines involved
         ///         [-] no intersections found
@@ -131,7 +131,9 @@ namespace g2sv {
         /// @return [+] is smaller
         bool checkDiameter(double r) const;
 
+        /// @return  0 if we got greater i
         inline size_t wrapIndexFwd(size_t i) const { return (i >= pts.size() ? 0 : i); }
+        /// @return  size - 1 if we got smaller i
         inline size_t wrapIndexBack(size_t i) const { return (i >= pts.size() ? pts.size() - 1 : i); }
         inline size_t nextIndex(size_t i) const { return wrapIndexFwd(i + 1); }
         inline size_t prevIndex(size_t i) const { return wrapIndexBack(i - 1); }

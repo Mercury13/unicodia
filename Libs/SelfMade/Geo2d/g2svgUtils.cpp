@@ -567,7 +567,7 @@ namespace {
 }   // anon namespace
 
 
-void g2sv::Polyline::appendSvgData(std::string& r, int scale) const
+void g2sv::Polyline::appendSvgDataTo(std::string& r, int scale) const
 {
     if (!pts.empty()) {
         char command = 'M';
@@ -2225,7 +2225,7 @@ std::string g2sv::Polypath::svgData(int scale) const
 
     std::string r;
     for (auto& v : curves) {
-        v.appendSvgData(r, scale);
+        v.appendSvgDataTo(r, scale);
     }
     return r;
 }
@@ -2238,7 +2238,7 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);
         if (segs.empty()) {
-            curve.appendSvgData(dataOverride, opt.scale);
+            curve.appendSvgDataTo(dataOverride, opt.scale);
         } else {
             auto pathData = getSegmentsPathData(segs, curve.isClosed, opt.scale);
             if (!pathData.empty()) {
