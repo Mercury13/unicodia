@@ -607,6 +607,12 @@ g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
     default: ;
     }
 
+    std::vector<Touch> touches;
+    auto addTouch = [&touches](const g2::SegIntersection<int>& x) {
+        if (touches.empty() || touches.back().bad != x.touchingPoint)
+            touches.emplace_back(x.touchingPoint, x.otherSeg);
+    };
+
     auto sz1 = isClosed ? sz : sz - 1;
     for (size_t i = 0; i < sz1; ++i) {
         auto& a = pts[i];
@@ -616,19 +622,39 @@ g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
             for (size_t j = 0; i <= i0; ++j) {
                 auto& c = pts[j];
                 auto& d = pts[j + 1];
-                if (g2::doSegsStrictlyIntersect(a, b, c, d))
+                auto q = g2::segIntersectionType(a, b, c, d);
+                switch (q.type) {
+                case g2::IntersectionType::NONE:
+                case g2::IntersectionType::ENDTOUCH:
+                    break;
+                case g2::IntersectionType::TOUCH:
+                    addTouch(q);
+                    break;
+                case g2::IntersectionType::DEGENERATE:
+                case g2::IntersectionType::INTERSECT:
                     return { a, b, c, d };
+                }
             }
         }
         auto nn = (i == 0) ? sz - 1 : sz1;
         for (size_t j = i + 2; j < nn; ++j) {
             auto &c = pts[j];
             auto &d = pts[wrapIndexFwd(j + 1)];
-            if (g2::doSegsStrictlyIntersect(a, b, c, d))
+            auto q = g2::segIntersectionType(a, b, c, d);
+            switch (q.type) {
+            case g2::IntersectionType::NONE:
+            case g2::IntersectionType::ENDTOUCH: // end touch really breaks here
+                break;
+            case g2::IntersectionType::TOUCH:
+                addTouch(q);
+                break;
+            case g2::IntersectionType::DEGENERATE:
+            case g2::IntersectionType::INTERSECT:
                 return { a, b, c, d };
+            }
         }
     }
-    return {};
+    return touches;
 }
 
 

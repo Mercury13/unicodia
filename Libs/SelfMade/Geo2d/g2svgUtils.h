@@ -80,11 +80,16 @@ namespace g2sv {
     constexpr Type NO_COORD = std::numeric_limits<int>::min();
     extern const Point BAD_VERTEX;
 
+    struct Touch {
+        const g2::Ipoint *bad = nullptr, *segStart = nullptr;
+    };
     struct Intersection {
         const g2::Ipoint *a = nullptr, *b = nullptr, *c = nullptr, *d = nullptr;
+        std::vector<Touch> touches;
         Intersection() noexcept = default;
         Intersection(const g2::Ipoint& aa, const g2::Ipoint& bb, const g2::Ipoint& cc, const g2::Ipoint& dd)
             : a(&aa), b(&bb), c(&cc), d(&dd) {}
+        Intersection(std::vector<Touch>&& x) : touches(std::move(x)) {}
         explicit operator bool() const noexcept { return a; }
     };
 

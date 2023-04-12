@@ -296,6 +296,23 @@ namespace g2 {
     template <class T>
     bool doSegsIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
 
+    enum class IntersectionType {
+        NONE,
+        TOUCH,
+        ENDTOUCH,
+        INTERSECT,
+        DEGENERATE  ///< Collinear, or a=c → bad rare cases
+    };
+    template <class T>
+    struct SegIntersection {
+        IntersectionType type;
+            const Point<T> *touchingPoint, *otherSeg;
+    };
+
+    /// @return [+] seg AB intersects seg CD
+    template <class T>
+    SegIntersection<T> segIntersectionType(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
+
     /// @return [+] seg AB strictly intersects seg CD (does not touch)
     template <class T>
     bool doSegsStrictlyIntersect(const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept;
@@ -451,15 +468,33 @@ namespace g2::detail {
     template <class T>
     bool on_segment(const g2::Point<T>&p1, const g2::Point<T>&p2, const g2::Point<T>&p)
     {
-        return std::min(p1.x, p2.x) <= p.x
-            && p.x <= std::max(p1.x, p2.x)
-            && std::min(p1.y, p2.y) <= p.y
-            && p.y <= std::max(p1.y, p2.y);
+    return std::min(p1.x, p2.x) <= p.x
+           && p.x <= std::max(p1.x, p2.x)
+           && std::min(p1.y, p2.y) <= p.y
+           && p.y <= std::max(p1.y, p2.y);
+    }
+
+    template <class T>
+    bool on_segment_ex(const g2::Point<T>&p1, const g2::Point<T>&p2, const g2::Point<T>&p)
+    {
+        auto minX = std::min(p1.x, p2.x);
+        auto maxX = std::max(p1.x, p2.x);
+        auto minY = std::min(p1.y, p2.y);
+        auto maxY = std::max(p1.y, p2.y);
+        if (minX == maxX) {
+            return (p.y >= minY && p.y <= maxY);
+        }
+        if (minY == maxY) {
+            return (p.x >= minX && p.x <= maxX);
+        }
+        return minX <= p.x && p.x <= maxX
+            && minY <= p.y && p.y <= maxY;
     }
 }
 
 template <class T>
-bool g2::doSegsIntersect(const g2::Point<T>& a, const g2::Point<T>& b, const g2::Point<T>& c, const g2::Point<T>& d) noexcept
+bool g2::doSegsIntersect(
+        const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept
 {
     auto d1 = crossOAB(c, d, a);
     auto d2 = crossOAB(c, d, b);
@@ -470,7 +505,92 @@ bool g2::doSegsIntersect(const g2::Point<T>& a, const g2::Point<T>& b, const g2:
         || (d1 == 0 && detail::on_segment(c, d, a))
         || (d2 == 0 && detail::on_segment(c, d, b))
         || (d3 == 0 && detail::on_segment(a, b, c))
-        || (d3 == 0 && detail::on_segment(a, b, d));
+        || (d4 == 0 && detail::on_segment(a, b, d));
+}
+
+template <class T>
+g2::SegIntersection<T> g2::segIntersectionType(
+        const Point<T>& a, const Point<T>& b, const Point<T>& c, const Point<T>& d) noexcept
+{
+    auto d1 = crossOAB(c, d, a);
+    auto d2 = crossOAB(c, d, b);
+    auto d3 = crossOAB(a, b, c);
+    auto d4 = crossOAB(a, b, d);
+
+    if (((d1 > 0 && d2 < 0) || (d1 < 0 && d2 > 0)) && ((d3 > 0 && d4 < 0) || (d3 < 0 && d4 > 0)))
+        return { g2::IntersectionType::INTERSECT, nullptr, nullptr };
+
+
+    g2::SegIntersection<T> r { g2::IntersectionType::TOUCH, nullptr, nullptr };
+    // Check a
+    if (d1 == 0 && detail::on_segment(c, d, a)) {
+        r.touchingPoint = &a;
+        r.otherSeg = &c;
+    }
+    // Check b
+    if (d2 == 0 && detail::on_segment(c, d, b)) {
+        if (r.touchingPoint) {
+            return { g2::IntersectionType::DEGENERATE, nullptr, nullptr };
+        } else {
+            r.touchingPoint = &b;
+            r.otherSeg = &c;
+        }
+    }
+    // Check c
+    if (d3 == 0 && detail::on_segment(a, b, c)) {
+        if (r.touchingPoint) {
+            if (d != c) {
+                if (c == a) {
+                    r.type = g2::IntersectionType::ENDTOUCH;
+                    r.touchingPoint = &a;
+                    r.otherSeg = &c;
+                    goto test4;
+                } else if (c == b) {
+                    r.type = g2::IntersectionType::ENDTOUCH;
+                    r.touchingPoint = &b;
+                    r.otherSeg = &c;
+                    goto test4;
+                }
+            }
+            return { g2::IntersectionType::DEGENERATE, nullptr, nullptr };
+        } else {
+            r.touchingPoint = &c;
+            r.otherSeg = &a;
+        }
+    }
+test4:
+    // Check d
+    if (d4 == 0 && detail::on_segment(a, b, d)) {
+        if (r.touchingPoint) {
+            if (d != c) {
+                if (r.type == g2::IntersectionType::TOUCH) {
+                    if (d == a) {
+                        r.type = g2::IntersectionType::ENDTOUCH;
+                        r.touchingPoint = &a;
+                        r.otherSeg = &d;
+                        return r;
+                    } else if (d == b) {
+                        r.type = g2::IntersectionType::ENDTOUCH;
+                        r.touchingPoint = &b;
+                        r.otherSeg = &d;
+                        return r;
+                    }
+                } else {
+                    // ENDTOUCH here
+                }
+            }
+            return { g2::IntersectionType::DEGENERATE, nullptr, nullptr };
+        } else {
+            r.touchingPoint = &d;
+            r.otherSeg = &a;
+        }
+    }
+    // Check rest
+    if (r.touchingPoint) {
+        return r;
+    } else {
+        return { g2::IntersectionType::NONE, nullptr, nullptr };
+    }
 }
 
 template <class T>
