@@ -3,6 +3,26 @@
 // XML
 #include "pugixml.hpp"
 
+///// Glyph ////////////////////////////////////////////////////////////////////
+
+
+void fix::Glyph::checkUsage(const std::string& name, int scale)
+{
+    for (auto& [key, value] : points) {
+        if (!value.wasUsed) {
+            auto xBefore = static_cast<double>(value.before.x) / scale;
+            auto yBefore = static_cast<double>(value.before.y) / scale;
+            char buf[100];
+            snprintf(buf, std::size(buf),
+                     "Glyph '%s' point (%g %g) unused",
+                     name.c_str(), xBefore, yBefore);
+            throw std::logic_error(buf);
+        }
+    }
+}
+
+
+///// List /////////////////////////////////////////////////////////////////////
 
 void fix::List::clear()
 {
@@ -76,4 +96,12 @@ fix::Glyph* fix::List::find(std::string_view x)
     if (it == glyphs.end())
         return nullptr;
     return &it->second;
+}
+
+
+void fix::List::checkUsage(int scale)
+{
+    for (auto& [name, glyph] : glyphs) {
+        glyph.checkUsage(name, scale);
+    }
 }

@@ -25,6 +25,7 @@ namespace fix {
         std::multimap<int, Point> points;
         Glyph() noexcept = default;
         Glyph(std::in_place_t) noexcept {}
+        void checkUsage(const std::string& name, int scale);
     };
 
     struct CmpBySv {
@@ -39,6 +40,7 @@ namespace fix {
         void load(const std::filesystem::path& fname, int scale);
         void clear();
         Glyph* find(std::string_view x);
+        void checkUsage(int scale);
     };
 
 }

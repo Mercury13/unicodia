@@ -281,6 +281,7 @@ int main()
                 }
             }
         }
+        fixups.checkUsage(simopt.scale);
     } catch (const std::exception& e) {
         std::cout << "GOT ERROR: " << e.what() << std::endl;
     }
