@@ -562,21 +562,17 @@ test4:
     // Check d
     if (d4 == 0 && detail::on_segment(a, b, d)) {
         if (r.touchingPoint) {
-            if (d != c) {
-                if (r.type == g2::IntersectionType::TOUCH) {
-                    if (d == a) {
-                        r.type = g2::IntersectionType::ENDTOUCH;
-                        r.touchingPoint = &a;
-                        r.otherSeg = &d;
-                        return r;
-                    } else if (d == b) {
-                        r.type = g2::IntersectionType::ENDTOUCH;
-                        r.touchingPoint = &b;
-                        r.otherSeg = &d;
-                        return r;
-                    }
-                } else {
-                    // ENDTOUCH here
+            if (d != c && r.type == g2::IntersectionType::TOUCH) {
+                if (d == a) {
+                    r.type = g2::IntersectionType::ENDTOUCH;
+                    r.touchingPoint = &a;
+                    r.otherSeg = &d;
+                    return r;
+                } else if (d == b) {
+                    r.type = g2::IntersectionType::ENDTOUCH;
+                    r.touchingPoint = &b;
+                    r.otherSeg = &d;
+                    return r;
                 }
             }
             return { g2::IntersectionType::DEGENERATE, nullptr, nullptr };
