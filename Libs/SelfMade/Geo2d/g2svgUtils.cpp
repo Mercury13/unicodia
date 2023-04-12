@@ -616,16 +616,16 @@ g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
     auto sz1 = isClosed ? sz : sz - 1;
     for (size_t i = 0; i < sz1; ++i) {
         auto& a = pts[i];
-        auto& b = pts[wrapIndexFwd(i + 1)];
+        auto& b = pts[nextIndex(i)];
         if (i >= 2) {
             size_t i0 = i - 2;
-            for (size_t j = 0; i <= i0; ++j) {
+            for (size_t j = 0; j <= i0; ++j) {
                 auto& c = pts[j];
                 auto& d = pts[j + 1];
                 auto q = g2::segIntersectionType(a, b, c, d);
                 switch (q.type) {
                 case g2::IntersectionType::NONE:
-                case g2::IntersectionType::ENDTOUCH:
+                case g2::IntersectionType::ENDTOUCH: // should not handle ENDTOUCH here
                     break;
                 case g2::IntersectionType::TOUCH:
                     addTouch(q);
@@ -639,14 +639,15 @@ g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
         auto nn = (i == 0) ? sz - 1 : sz1;
         for (size_t j = i + 2; j < nn; ++j) {
             auto &c = pts[j];
-            auto &d = pts[wrapIndexFwd(j + 1)];
+            auto &d = pts[nextIndex(j)];
             auto q = g2::segIntersectionType(a, b, c, d);
             switch (q.type) {
             case g2::IntersectionType::NONE:
-            case g2::IntersectionType::ENDTOUCH: // end touch really breaks here
                 break;
             case g2::IntersectionType::TOUCH:
                 addTouch(q);
+                break;
+            case g2::IntersectionType::ENDTOUCH: // end touch really breaks here
                 break;
             case g2::IntersectionType::DEGENERATE:
             case g2::IntersectionType::INTERSECT:
