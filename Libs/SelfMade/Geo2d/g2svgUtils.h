@@ -83,13 +83,15 @@ namespace g2sv {
     struct Touch {
         const g2::Ipoint *bad = nullptr, *segStart = nullptr;
     };
-    struct Intersection {
-        const g2::Ipoint *a = nullptr, *b = nullptr, *c = nullptr, *d = nullptr;
+    struct PoorData {
         std::vector<Touch> touches;
+    };
+    struct Intersection : public PoorData {
+        const g2::Ipoint *a = nullptr, *b = nullptr, *c = nullptr, *d = nullptr;
         Intersection() noexcept = default;
         Intersection(const g2::Ipoint& aa, const g2::Ipoint& bb, const g2::Ipoint& cc, const g2::Ipoint& dd)
             : a(&aa), b(&bb), c(&cc), d(&dd) {}
-        Intersection(std::vector<Touch>&& x) : touches(std::move(x)) {}
+        Intersection(std::vector<Touch>&& x) : PoorData { std::move(x) } {}
         explicit operator bool() const noexcept { return a; }
     };
 
@@ -131,7 +133,9 @@ namespace g2sv {
         Intersection getSelfIntersection() const;
 
         /// @throw  if some polyline self-intersects
-        void checkForSelfIntersection(int scale) const;
+        PoorData checkForSelfIntersection(int scale) const;
+
+        void autoNudge(Polyline& toucher, const PoorData& x);
 
         /// @return [+] is smaller
         bool checkDiameter(double r) const;
@@ -169,9 +173,6 @@ namespace g2sv {
         void parse(std::string_view text, int scale);
         void simplify(const SimplifyOpt& opt);
         std::string svgData(int scale) const;
-
-        /// @throw  if some polyline self-intersects
-        void checkForIntersection(int scale) const;
 
         size_t removeByDiameter(double diam);
     };

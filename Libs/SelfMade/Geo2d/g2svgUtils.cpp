@@ -8,6 +8,7 @@
 #include <utility>
 #include <unordered_map>
 #include <span>
+#include <iostream>
 
 // STL
 #include <algorithm>
@@ -659,9 +660,10 @@ g2sv::Intersection g2sv::Polyline::getSelfIntersection() const
 }
 
 
-void g2sv::Polyline::checkForSelfIntersection(int scale) const
+g2sv::PoorData g2sv::Polyline::checkForSelfIntersection(int scale) const
 {
-    if (auto pt = getSelfIntersection()) {
+    auto pt = getSelfIntersection();
+    if (pt) {
         char buf[100];
         // Get shorter segment
         auto len1 = pt.a->dist2from(*pt.b);
@@ -686,8 +688,53 @@ void g2sv::Polyline::checkForSelfIntersection(int scale) const
                  i2, x3, y3, x4, y4);
         throw ESvg(buf);
     }
+    return pt;
 }
 
+
+void g2sv::Polyline::autoNudge(Polyline& toucher, const PoorData& x)
+{
+    for (auto& v : x.touches) {
+        // start / end
+        auto iStart = v.segStart - toucher.pts.data();
+        auto& segEnd = toucher.pts[toucher.nextIndex(iStart)];
+        // bad / before bad / after bad
+        auto iBad = v.bad - pts.data();
+        auto& bad = pts[iBad];
+        auto& beforeBad = pts[prevIndex(iBad)];
+        auto& afterBad = pts[nextIndex(iBad)];
+
+        if (bad.x == v.segStart->x) {
+            if (bad.x == segEnd.x) {
+                auto lessX = bad.x - 1;
+                if (beforeBad.x < lessX && afterBad.x < lessX) {
+                    bad.x = lessX;
+                    goto ok1;
+                }
+                auto moreX = bad.x + 1;
+                if (beforeBad.x > moreX && afterBad.x > moreX) {
+                    bad.x = moreX;
+                    goto ok1;
+                }
+            }
+        ok1:;
+        } else if (v.bad->y == v.segStart->y) {
+            if (bad.y == segEnd.y) {
+                auto lessY = bad.y - 1;
+                if (beforeBad.y < lessY && afterBad.y < lessY) {
+                    bad.y = lessY;
+                    goto ok2;
+                }
+                auto moreY = bad.y + 1;
+                if (beforeBad.y > moreY && afterBad.y > moreY) {
+                    bad.y = moreY;
+                    goto ok2;
+                }
+            }
+        ok2:;
+        }
+    }
+}
 
 
 namespace {
@@ -2260,7 +2307,10 @@ std::string g2sv::Polypath::svgData(int scale) const
 
 void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
-    checkForIntersection(opt.scale);
+    for (auto& curve : curves) {
+        auto poorData = curve.checkForSelfIntersection(opt.scale);
+        curve.autoNudge(curve, poorData);
+    }
     dataOverride.clear();
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);
@@ -2274,14 +2324,6 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
                 dataOverride += pathData;
             }
         }
-    }
-}
-
-
-void g2sv::Polypath::checkForIntersection(int scale) const
-{
-    for (auto& c : curves) {
-        c.checkForSelfIntersection(scale);
     }
 }
 
