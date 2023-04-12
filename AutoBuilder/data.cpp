@@ -28,6 +28,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
     { "ARMENIAN",       Dicf::TRIG_SCRIPT },
     { "AVESTAN",        Dicf::TRIG_SCRIPT },
+    { "BACTRIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "BALINESE",       Dicf::TRIG_SCRIPT },
     { "BAMUM",          Dicf::TRIG_SCRIPT },
     { "BASSA",          Dicf::TRIG_SCRIPT_IF_FIRST }, // Music: bassa = low
