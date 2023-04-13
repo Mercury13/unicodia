@@ -2353,6 +2353,7 @@ void g2sv::Polypath::simplify(const SimplifyOpt& opt)
         auto poorData = curve.checkForSelfIntersection(opt.scale);
         curve.autoNudge(curve, poorData);
     }
+    /// @todo [urgent] Nudge A-B and B-A together
     // Pair instersection
     for (auto& cPoint : curves) {
         for (auto& cLine : curves) {
