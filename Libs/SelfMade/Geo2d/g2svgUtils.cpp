@@ -692,12 +692,53 @@ g2sv::PoorData g2sv::Polyline::checkForSelfIntersection(int scale) const
 }
 
 
-void g2sv::Polyline::autoNudge(Polyline& toucher, const PoorData& x)
+g2sv::PoorData g2sv::Polyline::checkForPairIntersection(const Polyline& line) const
+{
+    /// @todo [urgent] Before O(mn) check for bounding boxes
+
+    PoorData r;
+    auto addTouch = [&r](const g2::SegIntersection<int>& x) {
+        if (r.touches.empty() || r.touches.back().bad != x.touchingPoint)
+            r.touches.emplace_back(x.touchingPoint, x.otherSeg);
+    };
+
+    auto pointSz = pts.size();
+    if (!isClosed) --pointSz;
+
+    auto lineSz = line.pts.size();
+    if (!line.isClosed) --lineSz;
+
+    for (size_t iPoint = 0; iPoint < pointSz; ++iPoint) {
+        auto& a = pts[iPoint];
+        auto& b = pts[nextIndex(iPoint)];
+
+        for (size_t iLine = 0; iLine < lineSz; ++iLine) {
+            auto& c = line.pts[iLine];
+            auto& d = line.pts[line.nextIndex(iLine)];
+            auto q = g2::segIntersectionType(a, b, c, d);
+            switch (q.type) {
+            case g2::IntersectionType::TOUCH:
+                if (q.otherSeg == &c)
+                    addTouch(q);
+                break;
+            case g2::IntersectionType::NONE:
+            case g2::IntersectionType::ENDTOUCH:
+            case g2::IntersectionType::DEGENERATE:
+            case g2::IntersectionType::INTERSECT:
+                break;
+            }
+        }
+    }
+    return r;
+}
+
+
+void g2sv::Polyline::autoNudge(const Polyline& line, const PoorData& x)
 {
     for (auto& v : x.touches) {
         // start / end
-        auto iStart = v.segStart - toucher.pts.data();
-        auto& segEnd = toucher.pts[toucher.nextIndex(iStart)];
+        auto iStart = v.segStart - line.pts.data();
+        auto& segEnd = line.pts[line.nextIndex(iStart)];
         // bad / before bad / after bad
         auto iBad = v.bad - pts.data();
         auto& bad = pts[iBad];
@@ -2307,10 +2348,21 @@ std::string g2sv::Polypath::svgData(int scale) const
 
 void g2sv::Polypath::simplify(const SimplifyOpt& opt)
 {
+    // Simple self-intersection
     for (auto& curve : curves) {
         auto poorData = curve.checkForSelfIntersection(opt.scale);
         curve.autoNudge(curve, poorData);
     }
+    // Pair instersection
+    for (auto& cPoint : curves) {
+        for (auto& cLine : curves) {
+            if (&cPoint != &cLine) {
+                auto poorData = cPoint.checkForPairIntersection(cLine);
+                cPoint.autoNudge(cLine, poorData);
+            }
+        }
+    }
+    // Simplification
     dataOverride.clear();
     for (auto& curve : curves) {
         auto segs = fit(curve, opt);

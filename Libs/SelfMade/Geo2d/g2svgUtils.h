@@ -135,7 +135,11 @@ namespace g2sv {
         /// @throw  if some polyline self-intersects
         PoorData checkForSelfIntersection(int scale) const;
 
-        void autoNudge(Polyline& toucher, const PoorData& x);
+        /// @warning  me = who owns points; line = who owns lines
+        PoorData checkForPairIntersection(const Polyline& line) const;
+
+        /// @warning  me = who owns points; line = who owns lines
+        void autoNudge(const Polyline& line, const PoorData& x);
 
         /// @return [+] is smaller
         bool checkDiameter(double r) const;
