@@ -12,6 +12,7 @@
 	<ellipsis text="…">
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
+		<blk start="111E0" /><!-- Sinhala archaic numbers -->
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
 		<blk start="13430" /><!-- Egyptian hieroglyph format controls -->
 		<blk start="18800" /><!-- Tangut components -->
