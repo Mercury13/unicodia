@@ -376,7 +376,6 @@ namespace uc {
         TANGUT,
         TECHNICAL,
          Z_TEC_1,
-         Z_TEC_2,
          Z_TEC_3,
          Z_TEC_4,
          Z_TEC_5,
