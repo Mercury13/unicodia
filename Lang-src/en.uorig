@@ -8174,6 +8174,9 @@
     <text id="GreaterLessBidi">
      <orig>Greater and less</orig>
     </text>
+    <text id="SetTheory">
+     <orig>Set theory</orig>
+    </text>
    </group>
   </group>
  </file>

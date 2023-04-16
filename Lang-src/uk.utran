@@ -11775,6 +11775,10 @@
      <orig>Greater and less</orig>
      <transl>Більше та менше</transl>
     </text>
+    <text id="SetTheory">
+     <orig>Set theory</orig>
+     <transl>Теорія множин</transl>
+    </text>
    </group>
   </group>
  </file>

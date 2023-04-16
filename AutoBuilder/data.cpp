@@ -1273,6 +1273,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("invisible Times")               // ???
     EX("S in triangle")                 // Because of Znamenny, S is tricky
     EX("radical symbol bottom")         // symbol’s bottom
+    EX("XOR")
+    EX("NAND")
+    EX("NOR")
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
@@ -1673,7 +1676,8 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x26E30 },   // 26E30 is G U3, SimSun shows T, BS OK
 
     // Mathematical: Cambria → Noto
-    { 0x2201 },
+    { 0x2201 },         // set C
+    { 0x2205 },         // empty set
     { 0x22DA, 0x22DB },
     { 0x27EC, 0x27ED },
     { 0x298B, 0x298C },
