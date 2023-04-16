@@ -1,5 +1,10 @@
 #include "u_Strings.h"
 
+// Check for ASCII machine
+static_assert('9' - '0' == 9,  "Strange machine: 0-9");
+static_assert('Z' - 'A' == 25, "Strange machine: A-Z");
+static_assert('z' - 'a' == 25, "Strange machine: a-z");
+
 template void str::trim<char>(const char*&, const char*&);
 template void str::trim<wchar_t>(const wchar_t*&, const wchar_t*&);
 template void str::trim<char8_t>(const char8_t*&, const char8_t*&);

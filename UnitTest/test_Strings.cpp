@@ -347,3 +347,42 @@ TEST (PrefixSv, NotFound)
     auto r = str::prefixSv("alpha", '#');
     EXPECT_EQ("alpha", r);
 }
+
+
+///// str::latIsUpper //////////////////////////////////////////////////////////
+
+TEST (IsUpper, Test)
+{
+    EXPECT_TRUE (str::latIsUpper(""));
+    EXPECT_TRUE (str::latIsUpper("ALPHA"));
+    EXPECT_TRUE (str::latIsUpper(" ALPHA 12 "));
+    EXPECT_FALSE(str::latIsUpper("alpha"));
+    EXPECT_FALSE(str::latIsUpper(" alpha 12 "));
+    EXPECT_FALSE(str::latIsUpper(" ALPHA 12 bravo "));
+}
+
+
+///// str::latIsLower //////////////////////////////////////////////////////////
+
+TEST (IsLower, Test)
+{
+    EXPECT_TRUE (str::latIsLower(""));
+    EXPECT_FALSE(str::latIsLower("ALPHA"));
+    EXPECT_FALSE(str::latIsLower(" ALPHA 12 "));
+    EXPECT_TRUE (str::latIsLower("alpha"));
+    EXPECT_TRUE (str::latIsLower(" alpha 12 "));
+    EXPECT_FALSE(str::latIsLower(" ALPHA 12 bravo "));
+}
+
+
+///// str::latIsSingleCase /////////////////////////////////////////////////////
+
+TEST (IsSingleCase, Test)
+{
+    EXPECT_TRUE (str::latIsSingleCase(""));
+    EXPECT_TRUE (str::latIsSingleCase("ALPHA"));
+    EXPECT_TRUE (str::latIsSingleCase(" ALPHA 12 "));
+    EXPECT_TRUE (str::latIsSingleCase("alpha"));
+    EXPECT_TRUE (str::latIsSingleCase(" alpha 12 "));
+    EXPECT_FALSE(str::latIsSingleCase(" ALPHA 12 bravo "));
+}

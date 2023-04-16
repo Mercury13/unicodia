@@ -302,6 +302,27 @@ namespace str {
             return s.substr(0, p);
         }
 
+        template <class Sv> bool latIsUpper(Sv s) noexcept
+        {
+            for (auto c : s) {
+                if (c >= 'a' && c <= 'z')
+                    return false;
+            }
+            return true;
+        }
+
+        template <class Sv> bool latIsLower(Sv s) noexcept
+        {
+            for (auto c : s) {
+                if (c >= 'A' && c <= 'Z')
+                    return false;
+            }
+            return true;
+        }
+
+        template <class Sv> bool latIsSingleCase(Sv s) noexcept
+            { return latIsUpper(s) || latIsLower(s); }
+
         template <class Sv>
         Sv remainderSv(Sv s, Sv prefix, Sv suffix) noexcept
         {
@@ -485,6 +506,36 @@ namespace str {
         } else {
             return detail::prefixSv<Sv>(s, static_cast<Sv>(comma));
         }
+    }
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are capital
+    ///
+    template <class S>
+    [[nodiscard]] inline bool latIsUpper(const S& s) noexcept
+    {
+        using Sv = trait::Sv<S>;
+        return detail::latIsUpper<Sv>(s);
+    }
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are small
+    ///
+    template <class S>
+    [[nodiscard]] inline bool latIsLower(const S& s) noexcept
+    {
+        using Sv = trait::Sv<S>;
+        return detail::latIsLower<Sv>(s);
+    }
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are all capital or all small
+    ///
+    template <class S>
+    [[nodiscard]] inline bool latIsSingleCase(const S& s) noexcept
+    {
+        using Sv = trait::Sv<S>;
+        return detail::latIsSingleCase<Sv>(s);
     }
 
     ///
