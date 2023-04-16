@@ -11779,6 +11779,10 @@
      <orig>Set theory</orig>
      <transl>Теорія множин</transl>
     </text>
+    <text id="MultiStorey">
+     <orig>Multi-storey equations</orig>
+     <transl>Багатоповерхові формули</transl>
+    </text>
    </group>
   </group>
  </file>

@@ -11778,6 +11778,10 @@
      <orig>Set theory</orig>
      <transl>Теория множеств</transl>
     </text>
+    <text id="MultiStorey">
+     <orig>Multi-storey equations</orig>
+     <transl>Многоэтажные формулы</transl>
+    </text>
    </group>
   </group>
  </file>
