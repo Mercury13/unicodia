@@ -285,6 +285,24 @@ namespace str {
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
+        Sv prefixSv(Sv s, trait::Ch<Sv> comma) noexcept
+        {
+            auto p = s.find(comma);
+            if (p == Sv::npos)
+                return s;
+            return s.substr(0, p);
+        }
+
+        template <class Sv>
+        Sv prefixSv(Sv s, Sv comma) noexcept
+        {
+            auto p = s.find(comma);
+            if (p == Sv::npos)
+                return s;
+            return s.substr(0, p);
+        }
+
+        template <class Sv>
         Sv remainderSv(Sv s, Sv prefix, Sv suffix) noexcept
         {
             if (s.length() <= prefix.length() + suffix.length()
@@ -355,7 +373,10 @@ namespace str {
             }
         }
 
-        template <class S> consteval void checkSameSv() noexcept {}
+        /// This template checks parameters for “sameness”
+        /// e.g. const char*, string, string_view OK
+        ///      const wchar_t, string, u16string_view BAD
+        template <class S> consteval void checkSameSv() noexcept {}        
 
         template <class S1, class S2, class... Rest>
         consteval void checkSameSv() noexcept
@@ -450,6 +471,19 @@ namespace str {
             return detail::splitSv<Sv>(s, static_cast<Ch>(comma), skipEmpty);
         } else {
             return detail::splitSv<Sv>(s, static_cast<Sv>(comma), skipEmpty);
+        }
+    }
+
+    template <class S, class Co>
+    [[nodiscard]] inline trait::Sv<S> prefixSv(const S& s, const Co& comma) noexcept
+    {
+        using Sv = trait::Sv<S>;
+        using Ch = trait::Ch<S>;
+        static_assert(!std::is_same_v<bool, Co>, "Cannot use bool as comma!");
+        if constexpr (std::is_convertible_v<Co, Ch>) {
+            return detail::prefixSv<Sv>(s, static_cast<Ch>(comma));
+        } else {
+            return detail::prefixSv<Sv>(s, static_cast<Sv>(comma));
         }
     }
 

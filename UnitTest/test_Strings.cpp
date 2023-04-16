@@ -309,3 +309,41 @@ TEST (SplitSv, EmptyComma)
     std::vector<std::string_view> ex { "alpha" };
     EXPECT_EQ(ex, r);
 }
+
+
+///// str::prefixSv ////////////////////////////////////////////////////////////
+
+
+TEST (PrefixSv, Empty)
+{
+    auto r = str::prefixSv("", "");
+    EXPECT_EQ("", r);
+}
+
+
+TEST (PrefixSv, EmptyComma)
+{
+    auto r = str::prefixSv("alpha", "");
+    EXPECT_EQ("", r);
+}
+
+
+TEST (PrefixSv, Normal)
+{
+    auto r = str::prefixSv(" alpha @ bravo @ charlie", '@');
+    EXPECT_EQ(" alpha ", r);
+}
+
+
+TEST (PrefixSv, Double)
+{
+    auto r = str::prefixSv(" alpha @ bravo@@charlie", "@@");
+    EXPECT_EQ(" alpha @ bravo", r);
+}
+
+
+TEST (PrefixSv, NotFound)
+{
+    auto r = str::prefixSv("alpha", '#');
+    EXPECT_EQ("alpha", r);
+}
