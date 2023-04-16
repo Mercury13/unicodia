@@ -446,7 +446,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Kana, 1 },
             EcScript::Kana, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Enclosed CJK letters and months OK
-    { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK },
+        { 0x3200, 0x32FF, { L'㋀', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Enclosed CJK Letters and Months",
             MyName::INST, EcScript::NONE, EcFont::CJK_COMPAT,
             Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
