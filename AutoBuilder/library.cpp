@@ -475,7 +475,5 @@ lib::Node lib::loadManual(const char* fname)
 
     loadRecurse(r, root);
 
-    /// @todo [urgent] loadManual
-
     return r;
 }

@@ -163,6 +163,13 @@ namespace str {
         return r;
     }
 
+    void toUpperInPlace(std::string& x);
+    inline std::string toUpper(std::string_view x) {
+        std::string r{x};
+        toUpperInPlace(r);
+        return r;
+    }
+
     void toLowerInPlace(std::string& x);
     inline std::string toLower(std::string_view x) {
         std::string r{x};
@@ -321,7 +328,7 @@ namespace str {
         }
 
         template <class Sv> bool latIsSingleCase(Sv s) noexcept
-            { return latIsUpper(s) || latIsLower(s); }
+        { return latIsUpper<Sv>(s) || latIsLower<Sv>(s); }
 
         template <class Sv>
         Sv remainderSv(Sv s, Sv prefix, Sv suffix) noexcept
@@ -807,3 +814,21 @@ extern template SafeVector<std::wstring_view> str::detail::splitSv<std::wstring_
 extern template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>(std::u8string_view, std::u8string_view, bool);
 extern template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
 extern template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
+
+extern template bool str::detail::latIsUpper<std::string_view>(std::string_view);
+extern template bool str::detail::latIsUpper<std::wstring_view>(std::wstring_view);
+extern template bool str::detail::latIsUpper<std::u8string_view>(std::u8string_view);
+extern template bool str::detail::latIsUpper<std::u16string_view>(std::u16string_view);
+extern template bool str::detail::latIsUpper<std::u32string_view>(std::u32string_view);
+
+extern template bool str::detail::latIsLower<std::string_view>(std::string_view);
+extern template bool str::detail::latIsLower<std::wstring_view>(std::wstring_view);
+extern template bool str::detail::latIsLower<std::u8string_view>(std::u8string_view);
+extern template bool str::detail::latIsLower<std::u16string_view>(std::u16string_view);
+extern template bool str::detail::latIsLower<std::u32string_view>(std::u32string_view);
+
+extern template bool str::detail::latIsSingleCase<std::string_view>(std::string_view);
+extern template bool str::detail::latIsSingleCase<std::wstring_view>(std::wstring_view);
+extern template bool str::detail::latIsSingleCase<std::u8string_view>(std::u8string_view);
+extern template bool str::detail::latIsSingleCase<std::u16string_view>(std::u16string_view);
+extern template bool str::detail::latIsSingleCase<std::u32string_view>(std::u32string_view);

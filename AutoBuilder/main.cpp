@@ -16,6 +16,7 @@
 #include "loader.h"
 #include "library.h"
 #include "egyptian.h"
+#include "textbase.h"
 
 using namespace std::string_view_literals;
 
@@ -401,6 +402,11 @@ NotoData loadNotoEmoji()
 }
 
 
+namespace {
+    tx::Cp DUMMY_CP;
+}   // anon namespace
+
+
 int main()
 {
     std::cout << "Have " << dictionary.size() << " words in dictionary, "
@@ -492,6 +498,13 @@ int main()
     auto manualLib = lib::loadManual(LIBRARY_XML);
     std::cout << "OK" << std::endl;
 
+    ///// text base ////////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode text base..." << std::flush;
+    auto textBase = tx::loadBase();
+    std::cout << "OK" << std::endl;
+    std::cout << "  Loaded " << textBase.size() << " text objects." << std::endl;
+
     ///// Open output file /////////////////////////////////////////////////////
 
     std::ofstream os("UcAuto.cpp");
@@ -502,7 +515,7 @@ int main()
 
     pugi::xml_document doc;
 
-    std::cout << "Loading Unicode base..." << std::flush;
+    std::cout << "Loading Unicode XML base..." << std::flush;
     doc.load_file(UCD_XML);
     std::cout << "OK" << std::endl;
 
@@ -599,12 +612,33 @@ int main()
             }
         }
 
+        std::string sLowerName = decapitalize(sName, cp);
+
+        auto itCp = textBase.find(cp);
+        tx::Cp* textCp = &DUMMY_CP;
+        if (itCp != textBase.end()) {
+            textCp = &itCp->second;
+
+            // Name
+            textCp->eraseName(sLowerName);
+
+            for (auto& v : allAbbrevs) {
+                textCp->eraseName(v);
+                textCp->eraseName(decapitalize(v, cp));
+            }
+            for (auto& v : aliasAbbrevs) {
+                textCp->eraseName(v);
+            }
+            for (auto& v : restAliases) {
+                textCp->eraseName(v);
+            }
+        }
+
         if (allAbbrevs.size() > 1 && defaultAbbrev.empty()) {
             nl.trigger();
             std::cout << "WARNING: char " << std::hex << cp << " has no default abbreviation." << std::endl;
         }
         bool hasAbbrev = !allAbbrevs.empty();
-        std::string sLowerName = decapitalize(sName, cp);
         auto [pTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
         if (!allAbbrevs.empty() && !wasIns) {
             nl.trigger();
@@ -627,8 +661,14 @@ int main()
             auto it = std::find(allAbbrevs.begin(), allAbbrevs.end(), v);
             if (it == allAbbrevs.end()) {
                 sLowerName = decapitalize(v, cp);
+                textCp->eraseName(sLowerName);
                 strings.forceRemember(cp, uc::TextRole::ALT_NAME, sLowerName);
             }
+        }
+
+        // text CP
+        for (auto& name : textCp->names) {
+            strings.forceRemember(cp, uc::TextRole::ALT_NAME, name);
         }
 
         // HTML
@@ -807,7 +847,7 @@ int main()
     // Node N: strange hiero
     root.children.emplace_back(strangeCjk.give());
     // Write!
-    auto libInfo = lib::write(root, "UcAutoLib.cpp");
+    lib::write(root, "UcAutoLib.cpp");
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
     os.open("UcAutoCount.h");

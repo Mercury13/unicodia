@@ -15,15 +15,17 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ABKHASIAN",      Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "ADLAM",          Dicf::TRIG_SCRIPT },
     { "AFAKA",          Dicf::TRIG_SCRIPT },
-    { "ANATOLIAN",      Dicf::TRIG_SCRIPT },
-    { "ALEUT"sv,        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "AHOM",           Dicf::TRIG_SCRIPT },
     { "ALBANIAN",       Dicf::TRIG_SCRIPT },
       { "CAUCASIAN",    Dicf::TRIG_SCRIPT },
-    { "AHOM",           Dicf::TRIG_SCRIPT },
+    { "ALEUT"sv,        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "ANATOLIAN",      Dicf::TRIG_SCRIPT },
     { "APL",            Dicf::CAP_ALL | Dicf::TRIG_SCRIPT },
     { "ARABIC",         Dicf::TRIG_SCRIPT },
     { "ARABIAN",        Dicf::TRIG_SCRIPT },
     { "ARABIC-INDIC",   { Dicf::TRIG_SCRIPT, "Arabic-Indic"sv } },
+        /// @todo [textbase] “Assamese letter ra” etc in mixed case
+    { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "IMPERIAL",       Dicf::TRIG_SCRIPT },
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
     { "ARMENIAN",       Dicf::TRIG_SCRIPT },
@@ -252,6 +254,13 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 
     { "OCR",            Dicf::CAP_ALL },
     { "MICR",           Dicf::CAP_ALL },
+    { "ARIB",           Dicf::CAP_ALL },
+    { "STD",            Dicf::CAP_ALL },
+    { "B24",            Dicf::CAP_ALL },
+    { "MIDI",           Dicf::CAP_ALL },
+    { "ATM",            Dicf::CAP_ALL },
+    { "ROFL",           Dicf::CAP_ALL },
+    { "ROTFL",          Dicf::CAP_ALL },
 
     // Capitalize next
     { "AFFIX",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -1000,6 +1009,12 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Cyrillic small ligature Te Tse")
     EX("Cyrillic capital ligature A Ie")
     EX("Cyrillic small ligature A Ie")
+    /// @todo [textbase] Escape quotes somehow, see 47c
+    EX("Cyrillic \"beautiful Omega\"")  // Letter is BIG
+    EX("voiceless l")               // letter is SMALL
+    EX("voiceless r")               // letter is SMALL
+    EX("palatalized l")             // letter is SMALL
+    EX("palatalized n")             // letter is SMALL
         // Dupl
     EX("Duployan letter D S")                       // Same
     EX("Duployan letter R S")                       // Same
@@ -1032,7 +1047,40 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Greek lunate sigma symbol")     // Sigma is small here
     EX("Greek rho with stroke symbol")  // Rho is small here
     EX("Greek one half sign alternate form")    // sign, alternate form
+    EX("Greek non-spacing iota below")  // This letter is SMALL
+    EX("iota subscript")                // This letter is SMALL
+    EX("gamma function")                // Letter is big, function is small
+    EX("Iota adscript")                 // Letter is BIG
+    EX("lambda")                        // Letter is SMALL
+    EX("curled beta")                   // Letter is SMALL
+    EX("script theta")                  // Letter is SMALL
+    EX("omega pi")                      // Letter is SMALL
+    EX("script kappa")                  // Letter is SMALL
+    EX("tailed rho")                    // Letter is SMALL
+    EX("straight epsilon")              // Letter is SMALL
+    EX("reversed straight epsilon")     // Letter is SMALL
+    EX("Antisigma")                     // Letter is BIG
+    EX("antisigma periestigmenon")      // Letter is BIG
+        /// @todo [textbase] “Epidaurean acrophonic symbol three”, mixed case
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
+        // Latn
+    EX("I dot")                 // Turkic dotted I, this is its decapitalization
+        /// @todo [textbase] Both big and small
+    EX("I bar")
+            /// @todo [textbase] “O bar”: both big and small
+    EX("lambda bar")            // This letter is SMALL
+    EX("barred lambda")         // This letter is SMALL
+    EX("z bar")                 // This letter is SMALL
+    EX("barred z")              // This letter is SMALL
+    EX("script f")              // This letter is SMALL
+    EX("reversed Polish-hook o")    // This letter is SMALL
+        /// @todo [textbase] Both big and small
+    EX("o slash")
+    EX("barred l")              // This letter is SMALL
+    EX("d retroflex hook")      // This letter is SMALL
+        /// @todo [textbase] Just “epsilon”: both big and small
+    EX("closed reversed epsilon")   // This letter is SMALL
+    EX("closed epsilon")        // This letter is SMALL
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
@@ -1064,10 +1112,18 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Common-Indic
     EX("Vedic tone Dot below")                  // Not tone’s dot
     EX("Vedic tone Ring above")                 // Not tone’s ring
+    EX("siddham")                               // siddham sign
+        // Bali
+        /// @todo [textbase] Bali “uu”, “vocalic r”
+        /// @todo [textbase] just “cha” — what to do?
         // Beng
     EX("Bengali letter Khanda Ta")  // Sword-like; because of Sikh character it’s tricky
+    EX("Bengali Va")
         // Deva
     EX("Devanagari letter Candra A") // Both Candra and A are tricky, better to make an exception
+        /// @todo [textbase] Thiese two tones are already mixed-case, what to do?
+    EX("Vedic tone Svarita")        // IDK
+    EX("Vedic tone Anudatta")
         // Diak
     EX("Dives Akuru medial Ya")
     EX("Dives Akuru initial Ra")
@@ -1092,10 +1148,15 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Soyombo vowel length mark") // IDK how to make rule, hand-checked Length
         // Telu
     EX("Telugu Ai length mark")     // IDK how to make rule, hand-checked Length
+        // Tglg
+        /// @todo [textbase] “Zambales ra” mixed case
+    EX("Zambales Ra")
         // Thai
     EX("Thai character No nu")      // Conflict with Greek Nu
         // Tibt
     EX("Tibetan astrological sign -Khyud pa")   // Because of hyphen (=apostrophe)
+    EX("reversed Sha")
+    EX("reversed subjoined Sha")
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
     EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
@@ -1129,6 +1190,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Arabic number mark above")              // Number’s mark
     EX("Arabic ligature Salla used as Koranic stop sign isolated form") // Sign is not a keyword
     EX("Arabic ligature Qala used as Koranic stop sign isolated form")  // Sign is not a keyword
+    EX("Arabic letter Hamzah on Ha")        // Shall we make Ha a keyword?
         // Armn
     EX("Armenian small ligature Ech Yiwn")  // All “ligature” are manually checked
     EX("Armenian small ligature Men Now")
@@ -1143,8 +1205,12 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Hebrew ligature Yiddish double Vav")
     EX("Hebrew ligature Yiddish Yod Yod Patah")
     EX("Hebrew ligature Alef Lamed")
+        /// @todo [textbase] Smth like “zinorit; tsinor” in base, check original
         // Khar
     EX("Kharoshthi vowel length mark")      // IDK how to make rule, hand-checked Length
+        // Mand
+    EX("pharyngeal Hu")
+    EX("I")
         // Mani
     EX("Manichaean abbreviation mark above")    // Abbreviation’s mark → abbreviation/mark are not keywords
     EX("Manichaean abbreviation mark below")    // The same
@@ -1213,6 +1279,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Ethiopic combining vowel length mark")                // Same
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
+        // Tfng
+    EX("harpoon Yaz")
         // Vaii
     EX("Vai syllable lengthener")   // Syllable is not keyword
         // Yiii
@@ -1222,6 +1290,18 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Hang
     EX("Hangul choseong filler")    // Simpler to add exception
     EX("Hangul jungseong filler")   // Same
+    /// @todo [textbase] Maybe they should be small? And make automation?
+    EX("Bb")
+    EX("Dd")
+    EX("Gg")
+    EX("Gs")
+    EX("Jj")
+    EX("Nj")
+    EX("S")
+    EX("Ss")
+    /// @todo [textbase] These just repeat main name → maybe drop?
+    EX("A")
+    EX("Ya")
         // Decorations etc
     EX("rounded symbol for Fu")
     EX("rounded symbol for Lu")
@@ -1232,8 +1312,12 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("square Hiragana Hoka")  // Better exception?
     EX("squared Katakana Koko")
     EX("squared Katakana Sa")
+    EX("kaeriten Re")
+    EX("symbol of unification")
 
     // SPECIALS
+        /// @todo [textbase] “= lines (old measure, 1/12 of an inch)” — what to do?
+        /// @todo [textbase] “piska (Swedish, "whip")”
         // Misc
     EX("commercial At")                 // At is not a preposition
     EX("tag Commercial At")             // Same
@@ -1251,6 +1335,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("direct current symbol form two") // Symbol is not a keyword
     EX("Roman numeral Reversed one hundred") // IDK what happens with numerals
     EX("AC current")                    // Alternating current current :)
+    EX("ligature tie below")            // ligature tie = smile
+    EX("ligature tie")                  // Same
+    EX("symbol of Iran")                // Just glitch
         // Religion
     EX("Adi Shakti")
     EX("West Syriac cross")
@@ -1276,6 +1363,14 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("XOR")
     EX("NAND")
     EX("NOR")
+        /// @todo [textbase] “Riemann Integral”
+    EX("Riemann integral")
+        /// @todo [textbase] in Unicode base Z is lower — what to do?
+    EX("Z notation Cartesian product")  // Z???
+    EX("EMF (electromotive force)")
+        /// @todo [textbase] “n-ary Dijkstra choice”, what to do?
+    EX("N-ary Dijkstra choice")
+        /// @todo [textbase] “German Mark currency symbol, before WWII”
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
@@ -1295,6 +1390,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("turned OK hand sign")           // The same
     EX("Call me hand")                  // “Call me” hand
     EX("I love you hand sign")          // same + I
+    EX("letter box")                    // Letter is a paper
+    EX("ID")                            // Just two letters
         // Formatting
     EX("national digit shapes")   // Digit is not special here
     EX("nominal digit shapes")    // Same

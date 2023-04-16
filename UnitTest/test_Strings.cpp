@@ -4,6 +4,8 @@
 // Google test
 #include "gtest/gtest.h"
 
+using namespace std::string_view_literals;
+
 
 ///
 ///  Any string does not contain empty word
@@ -359,6 +361,7 @@ TEST (IsUpper, Test)
     EXPECT_FALSE(str::latIsUpper("alpha"));
     EXPECT_FALSE(str::latIsUpper(" alpha 12 "));
     EXPECT_FALSE(str::latIsUpper(" ALPHA 12 bravo "));
+    EXPECT_TRUE (str::latIsUpper("START OF HEADING"sv));
 }
 
 
@@ -372,6 +375,7 @@ TEST (IsLower, Test)
     EXPECT_TRUE (str::latIsLower("alpha"));
     EXPECT_TRUE (str::latIsLower(" alpha 12 "));
     EXPECT_FALSE(str::latIsLower(" ALPHA 12 bravo "));
+    EXPECT_FALSE(str::latIsLower("START OF HEADING"sv));
 }
 
 
@@ -385,4 +389,5 @@ TEST (IsSingleCase, Test)
     EXPECT_TRUE (str::latIsSingleCase("alpha"));
     EXPECT_TRUE (str::latIsSingleCase(" alpha 12 "));
     EXPECT_FALSE(str::latIsSingleCase(" ALPHA 12 bravo "));
+    EXPECT_TRUE (str::latIsSingleCase("START OF HEADING"sv));
 }

@@ -35,6 +35,24 @@ template SafeVector<std::u8string_view> str::detail::splitSv<std::u8string_view>
 template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
 template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
 
+template bool str::detail::latIsUpper<std::string_view>(std::string_view);
+template bool str::detail::latIsUpper<std::wstring_view>(std::wstring_view);
+template bool str::detail::latIsUpper<std::u8string_view>(std::u8string_view);
+template bool str::detail::latIsUpper<std::u16string_view>(std::u16string_view);
+template bool str::detail::latIsUpper<std::u32string_view>(std::u32string_view);
+
+template bool str::detail::latIsLower<std::string_view>(std::string_view);
+template bool str::detail::latIsLower<std::wstring_view>(std::wstring_view);
+template bool str::detail::latIsLower<std::u8string_view>(std::u8string_view);
+template bool str::detail::latIsLower<std::u16string_view>(std::u16string_view);
+template bool str::detail::latIsLower<std::u32string_view>(std::u32string_view);
+
+template bool str::detail::latIsSingleCase<std::string_view>(std::string_view);
+template bool str::detail::latIsSingleCase<std::wstring_view>(std::wstring_view);
+template bool str::detail::latIsSingleCase<std::u8string_view>(std::u8string_view);
+template bool str::detail::latIsSingleCase<std::u16string_view>(std::u16string_view);
+template bool str::detail::latIsSingleCase<std::u32string_view>(std::u32string_view);
+
 void str::toUpperInPlace(std::u8string& x)
 {
     for (auto& v : x) {
@@ -42,6 +60,12 @@ void str::toUpperInPlace(std::u8string& x)
     }
 }
 
+void str::toUpperInPlace(std::string& x)
+{
+    for (auto& v : x) {
+        v = toupper(v);
+    }
+}
 
 void str::toLowerInPlace(std::string& x)
 {
