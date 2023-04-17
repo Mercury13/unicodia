@@ -1299,6 +1299,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Ss")
     /// @todo [textbase] These just repeat main name → maybe drop?
     EX("A")
+    /// @todo [textbase] Oriya letter Yya → have “Ya” here, just check
     EX("Ya")
         // Decorations etc
     EX("rounded symbol for Fu")
