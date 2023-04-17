@@ -25,7 +25,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ARABIAN",        Dicf::TRIG_SCRIPT },
     { "ARABIC-INDIC",   { Dicf::TRIG_SCRIPT, "Arabic-Indic"sv } },
         /// @todo [textbase] “Assamese letter ra” etc in mixed case
-    { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+    { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::TRIG_FORCE_FULL_DECAP },
     { "IMPERIAL",       Dicf::TRIG_SCRIPT },
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
     { "ARMENIAN",       Dicf::TRIG_SCRIPT },
@@ -1061,7 +1061,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("reversed straight epsilon")     // Letter is SMALL
     EX("Antisigma")                     // Letter is BIG
     EX("antisigma periestigmenon")      // Letter is BIG
-        /// @todo [textbase] “Epidaurean acrophonic symbol three”, mixed case
+    EX("Epidaurean acrophonic symbol Three")    // Vertical ellipsis
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Latn
     EX("I dot")                 // Turkic dotted I, this is its decapitalization
@@ -1121,7 +1121,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Bengali Va")
         // Deva
     EX("Devanagari letter Candra A") // Both Candra and A are tricky, better to make an exception
-        /// @todo [textbase] Thiese two tones are already mixed-case, what to do?
     EX("Vedic tone Svarita")        // IDK
     EX("Vedic tone Anudatta")
         // Diak
@@ -1149,7 +1148,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Telu
     EX("Telugu Ai length mark")     // IDK how to make rule, hand-checked Length
         // Tglg
-        /// @todo [textbase] “Zambales ra” mixed case
     EX("Zambales Ra")
         // Thai
     EX("Thai character No nu")      // Conflict with Greek Nu
@@ -1363,12 +1361,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("XOR")
     EX("NAND")
     EX("NOR")
-        /// @todo [textbase] “Riemann Integral”
     EX("Riemann integral")
-        /// @todo [textbase] in Unicode base Z is lower — what to do?
     EX("Z notation Cartesian product")  // Z???
     EX("EMF (electromotive force)")
-        /// @todo [textbase] “n-ary Dijkstra choice”, what to do?
     EX("N-ary Dijkstra choice")
         /// @todo [textbase] “German Mark currency symbol, before WWII”
         // Astronomy
@@ -2542,4 +2537,14 @@ std::string decapitalizeEmoji(
         r += decap;
     }
     return r;
+}
+
+
+std::string decapitalizeByTable(std::string_view x)
+{
+    std::string upper = toUpper(x);
+    auto itEx = exceptions.find(upper);
+    if (itEx != exceptions.end())
+        return std::string(itEx->second.r);
+    return std::string{x};
 }

@@ -45,7 +45,7 @@ namespace {
             if (str::latIsSingleCase(name)) {
                 decap = decapitalize(name, currChar);
             } else {
-                decap = name;
+                decap = decapitalizeByTable(name);
             }
             cp.names.emplace(std::move(decap));
         }

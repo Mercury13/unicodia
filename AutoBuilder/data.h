@@ -33,6 +33,7 @@ enum class Dicf {
     TRIG_THREE_WORD_SCRIPT  = 1 << 14,  // Script consisting of three words: Pau Cin Hau
     TRIG_SCRIPT_IF_FIRST    = 1 << 15,  // Script if 1st word (Yi)
     TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  // OLD NORTH Arabian → propagate script to the left
+    TRIG_FORCE_FULL_DECAP   = 1 << 17,  // Force full decap if we are requesting just dictionary
 };
 
 DEFINE_ENUM_OPS(Dicf)
@@ -132,6 +133,7 @@ std::string decapitalize(
 std::string decapitalizeEmoji(
         std::string_view x,
         DecapDebug debug = DecapDebug::NO);
+std::string decapitalizeByTable(std::string_view x);
 bool isAlternate(char32_t x);
 bool isNoAa(char32_t x);
 
