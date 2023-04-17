@@ -40,10 +40,18 @@ namespace {
         }
     #endif
 
+        switch (currChar) {
+            // Do not collect synonyms
+        case 0xFEFF:    // those abbreviations are just repeated
+            return;
+        default:
+            break;
+        }
+
         // Is synonym extraneous?
         line = str::trimSv(line);
         auto up = str::toUpper(line);
-        if (mainName.find(up) != std::string_view::npos)
+        if (str::containsWord(mainName, up))
             return;
 
         Flags<Dcfg> flags;
@@ -53,10 +61,6 @@ namespace {
             flags |= Dcfg::LOCASE;
         }
 
-        // Convert to upper one by one, then stick together
-        auto names = str::splitByAnySv(line, ",;", true);
-        if (names.empty())
-            return;
         auto convertName = [currChar, flags](std::string_view name) -> std::string
         {
             // We do not check for abbreviation
@@ -76,18 +80,27 @@ namespace {
             }
         };
 
-        std::string r;
-        for (auto name : names) {
-            auto conv = convertName(name);
-            if (!conv.empty()) {
-                if (!r.empty())
-                    r += ", ";
-                r += conv;
-            }
-        }
-
         auto& cp = base[currChar];
-        cp.names.insert(r);
+        if (line.ends_with(';')) {  // “ISOtech entity &iinfin;”
+            // The entire line
+            cp.names.insert(std::string{line});
+        } else {
+            // Convert to upper one by one, then stick together
+            auto names = str::splitByAnySv(line, ",;", true);
+            if (names.empty())
+                return;
+            std::string r;
+            for (auto name : names) {
+                auto conv = convertName(name);
+                if (!conv.empty()) {
+                    if (!r.empty())
+                        r += ", ";
+                    r += conv;
+                }
+            }
+
+            cp.names.insert(r);
+        }
     }
 
 }   // anon namespace
@@ -116,6 +129,9 @@ tx::Base tx::loadBase()
         } else {
             // Its info
             switch (trimmed[0]) {
+            case '%':   // character correction
+                mainName = str::trim(trimmed.substr(1));
+                break;
             case '=':
                 extractSynonym(r, currChar, mainName, trimmed.substr(1));
                 break;

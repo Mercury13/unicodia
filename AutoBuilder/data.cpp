@@ -261,6 +261,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ATM",            Dicf::CAP_ALL },
     { "ROFL",           Dicf::CAP_ALL },
     { "ROTFL",          Dicf::CAP_ALL },
+    { "HDTV",           Dicf::CAP_ALL },
+    { "SDTV",           Dicf::CAP_ALL },
+    { "UFO",            Dicf::CAP_ALL },
 
     // Capitalize next
     { "AFFIX",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
@@ -1074,7 +1077,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX2("barred Z", Exf::MIXCASE)
     EX("script f")              // This letter is SMALL
     EX("reversed Polish-hook o")    // This letter is SMALL
-        /// @todo [textbase] Both big and small
     EX2("O slash", Exf::MIXCASE)
     EX2("barred L", Exf::MIXCASE)
     EX2("D retroflex hook", Exf::MIXCASE)
@@ -1113,9 +1115,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Vedic tone Dot below")                  // Not tone’s dot
     EX("Vedic tone Ring above")                 // Not tone’s ring
     EX("siddham")                               // siddham sign
-        // Bali
-        /// @todo [textbase] Bali “uu”, “vocalic r”
-        /// @todo [textbase] just “cha” — what to do?
+    EX("vowel half-U")
         // Beng
     EX("Bengali letter Khanda Ta")  // Sword-like; because of Sikh character it’s tricky
     EX("Bengali Va")
@@ -1151,10 +1151,14 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Zambales Ra")
         // Thai
     EX("Thai character No nu")      // Conflict with Greek Nu
+    EX("mai may")                   // IDK what triggers May
         // Tibt
     EX("Tibetan astrological sign -Khyud pa")   // Because of hyphen (=apostrophe)
     EX("reversed Sha")
     EX("reversed subjoined Sha")
+    EX("A-chung")
+    EX("Ya-btags (Ya ta)")
+    EX("Ra-btags (Ra ta)")
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
     EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
@@ -1203,7 +1207,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Hebrew ligature Yiddish double Vav")
     EX("Hebrew ligature Yiddish Yod Yod Patah")
     EX("Hebrew ligature Alef Lamed")
-        /// @todo [textbase] Smth like “zinorit; tsinor” in base, check original
         // Khar
     EX("Kharoshthi vowel length mark")      // IDK how to make rule, hand-checked Length
         // Mand
@@ -1279,28 +1282,145 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
         // Tfng
     EX("harpoon Yaz")
+    EX("Tuareg Yab")
+    EX("Tuareg Yaw")
         // Vaii
     EX("Vai syllable lengthener")   // Syllable is not keyword
         // Yiii
     EX("Yi syllable iteration mark")
 
+    /// @todo [textbase] A9BC is “ĕ”
+    // Misc letters
+    EX2("A", Exf::MIXCASE)
+    EX2("B", Exf::MIXCASE)
+    EX("Ai")
+    EX("Bb")
+    EX("Bha")
+    EX("Bs")
+    EX2("C", Exf::MIXCASE)
+    EX("Ca")
+    EX("Cha")
+    /// @todo [textbase] “Chi”, “Pi” in Kana upper, in Newa lower
+    EX("Chha")
+    EX("soft Da")
+    EX("soft Dda")
+    EX("hard Da")
+    EX("hard Dda")
+    EX2("D", Exf::MIXCASE)
+    EX("Dd")
+    EX("Dda")
+    EX("Ddha")
+    EX("Dha")
+    EX("Ei")
+    EX2("F", Exf::MIXCASE)
+    EX("Fu")
+    EX2("G", Exf::MIXCASE)
+    EX("Gg")
+    EX("Gha")
+    EX("Gs")
+    EX2("H", Exf::MIXCASE)
+    EX("Ha")
+    EX("Ii")
+    EX2("J", Exf::MIXCASE)
+    EX("Ja")
+    EX("Jha")
+    EX("Ji (not unique)")
+    EX("Jj")
+    EX("Jnya")
+    EX2("K", Exf::MIXCASE)
+    EX("Ka")
+    EX("Kaam")
+    EX("Kai")
+    EX("Kaim")
+    EX("Kam")
+    EX("Kau")
+    EX("Kaum")
+    EX("Kaw")
+    EX("Kee")
+    EX("Kem")
+    EX("Keem")
+    EX("Kha")
+    EX("Kia")
+    EX("Kim")
+    EX("Ki")
+    EX("Kog")
+    EX("Kom")
+    EX("Kua")
+    EX("Kuam")
+    EX("Kum")
+    EX("Kwm")
+    EX2("L", Exf::MIXCASE)
+    EX("La")
+    EX("Lb")
+    EX("Lg")
+    EX("Lha")
+    EX("Lm")
+    EX("Ls")
+    EX("Lt")
+    EX("Lp")
+    EX("Lh")
+    EX("vocalic L")
+    EX("vocalic Ll")
+    EX2("M", Exf::MIXCASE)
+    EX("Ma")
+    EX("subjoined Ma")
+    /// @todo [textbase] in Indics “Maa” is upper, in Taml supp lower
+    EX("Maa")
+    EX("logosyllabic Muwa")
+    EX2("N", Exf::MIXCASE)
+    EX("hard Na")
+    EX("Ng")
+    EX("Nga")
+    EX("Nh")
+    EX("Nha")
+    EX("Nj")
+    EX("Nna")
+    EX2("P", Exf::MIXCASE)
+    EX("Pha")
+    EX2("Q", Exf::MIXCASE)
+    EX("Qa")
+    EX2("R", Exf::MIXCASE)
+    EX("vocalic R")
+    EX("Ra")
+    EX("medial Ra")
+    EX("vocalic Rr")
+    EX2("S", Exf::MIXCASE)
+    EX("Sad")
+    EX("Sha")
+    EX("Sheen")
+    EX("Shi")
+    EX("Ssa")
+    EX("Ss")
+    EX("soft Sha")
+    EX2("T", Exf::MIXCASE)
+    EX("Ta")
+    EX("Tha")
+    EX("syllabic Ti")
+    EX("Tra")
+    EX("Tta")
+    EX("Ttha")
+    EX("Tsu")
+    EX("small Tsu")
+    EX("syllabic Tu")
+    EX2("V", Exf::MIXCASE)
+    EX("Uu")
+    EX("Wa")
+    EX("subjoined Wa")
+    EX("syllabic Wi(ya)")
+    EX("Ya")
+    EX("medial Ya")
+    EX2("Z", Exf::MIXCASE)
+    EX("Zha")
+    EX("Zu (not unique)")
+    /// @todo [textbase] Anatolian hiero “syllabic nì” → upper?
+    /// @todo [textbase] Same for “syllabic ká”, “syllabic a+tá”, “syllabic rú”,
+    ///      “syllabic sà”, “syllabic wà/ì”, “syllabic wá/í”,
+    ///      “syllabic la”, “syllabic la+la” etc
+
     // CJK
         // Hang
     EX("Hangul choseong filler")    // Simpler to add exception
     EX("Hangul jungseong filler")   // Same
-    /// @todo [textbase] Maybe they should be small? And make automation?
-    EX("Bb")
-    EX("Dd")
-    EX("Gg")
-    EX("Gs")
-    EX("Jj")
-    EX("Nj")
-    EX("S")
-    EX("Ss")
-    /// @todo [textbase] These just repeat main name → maybe drop?
-    EX("A")
-    /// @todo [textbase] Oriya letter Yya → have “Ya” here, just check
-    EX("Ya")
         // Decorations etc
     EX("rounded symbol for Fu")
     EX("rounded symbol for Lu")
@@ -1313,10 +1433,10 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("squared Katakana Sa")
     EX("kaeriten Re")
     EX("symbol of unification")
+    EX("di ren")
+    EX("ren di")
 
     // SPECIALS
-        /// @todo [textbase] “= lines (old measure, 1/12 of an inch)” — what to do?
-        /// @todo [textbase] “piska (Swedish, "whip")”
         // Misc
     EX("commercial At")                 // At is not a preposition
     EX("tag Commercial At")             // Same
@@ -2203,6 +2323,18 @@ namespace {
         return true;
     }
 
+    bool isFullDecap(const SafeVector<std::string_view> words)
+    {
+        for (auto& word : words) {
+            auto itWord = dictionary.find(word);
+            if (itWord != dictionary.end()) {
+                if (itWord->second.flags.have(Dicf::TRIG_FORCE_FULL_DECAP))
+                    return true;
+            }
+        }
+        return false;
+    }
+
 }   // anon namespace
 
 
@@ -2233,8 +2365,8 @@ std::string decapitalize(
 
     // Check: do we need to trigger normal decapitalization?
     if (flags.have(Dcfg::SHORTCUT)) {
-        /// @todo [urgent] check for triggers
-        return std::string{x};
+        if (!isFullDecap(rawWords))
+            return std::string{x};
     }
 
     SafeVector<Word> words;
