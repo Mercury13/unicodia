@@ -989,7 +989,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 
 
 enum class Exf {
-    CPONLY = 1,
+    CPONLY = 1,     ///< Works if codepoint is present (Sun=star, sun=weather)
+    MIXCASE = 2,    ///< Mixed case: for lowercase letter convert to small
 };
 
 struct Exception {
@@ -1051,7 +1052,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("iota subscript")                // This letter is SMALL
     EX("gamma function")                // Letter is big, function is small
     EX("Iota adscript")                 // Letter is BIG
-    EX("lambda")                        // Letter is SMALL
+    EX2("Lambda", Exf::MIXCASE)
     EX("curled beta")                   // Letter is SMALL
     EX("script theta")                  // Letter is SMALL
     EX("omega pi")                      // Letter is SMALL
@@ -1064,23 +1065,22 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Epidaurean acrophonic symbol Three")    // Vertical ellipsis
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Latn
-    EX("I dot")                 // Turkic dotted I, this is its decapitalization
-        /// @todo [textbase] Both big and small
-    EX("I bar")
-            /// @todo [textbase] “O bar”: both big and small
-    EX("lambda bar")            // This letter is SMALL
-    EX("barred lambda")         // This letter is SMALL
-    EX("z bar")                 // This letter is SMALL
-    EX("barred z")              // This letter is SMALL
+    EX2("I dot", Exf::MIXCASE)
+    EX2("I bar", Exf::MIXCASE)
+    EX2("O bar", Exf::MIXCASE)
+    EX2("Lambda bar", Exf::MIXCASE)
+    EX2("barred Lambda", Exf::MIXCASE)
+    EX2("Z bar", Exf::MIXCASE)
+    EX2("barred Z", Exf::MIXCASE)
     EX("script f")              // This letter is SMALL
     EX("reversed Polish-hook o")    // This letter is SMALL
         /// @todo [textbase] Both big and small
-    EX("o slash")
-    EX("barred l")              // This letter is SMALL
-    EX("d retroflex hook")      // This letter is SMALL
-        /// @todo [textbase] Just “epsilon”: both big and small
-    EX("closed reversed epsilon")   // This letter is SMALL
-    EX("closed epsilon")        // This letter is SMALL
+    EX2("O slash", Exf::MIXCASE)
+    EX2("barred L", Exf::MIXCASE)
+    EX2("D retroflex hook", Exf::MIXCASE)
+    EX2("Epsilon", Exf::MIXCASE)
+    EX2("closed reversed Epsilon", Exf::MIXCASE)
+    EX2("closed Epsilon", Exf::MIXCASE)
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
@@ -2209,20 +2209,34 @@ namespace {
 size_t nExceptions() { return exceptions.size(); }
 
 
-std::string decapitalize(std::string_view x, char32_t cp, DecapDebug debug)
+std::string decapitalize(
+        std::string_view x, char32_t cp,
+        Flags<Dcfg> flags, DecapDebug debug)
 {
-    // Tetect exceptions
+    // Detect exceptions
     std::string upper = toUpper(x);
     auto itEx = exceptions.find(upper);
     if (itEx != exceptions.end()) {
-        if (cp || !itEx->second.flags.have(Exf::CPONLY) )
+        if (cp || !itEx->second.flags.have(Exf::CPONLY) ) {
+            // Mixcase flag: in upcase mode leave, in locase mode to lower
+            if (itEx->second.flags.have(Exf::MIXCASE) && flags.have(Dcfg::LOCASE)) {
+                return str::toLower(itEx->second.r);
+            }
             return std::string(itEx->second.r);
+        }
     }
 
     // Get words
     auto rawWords = str::splitSv(upper, ' ');
     if (rawWords.empty())
         return {};
+
+    // Check: do we need to trigger normal decapitalization?
+    if (flags.have(Dcfg::SHORTCUT)) {
+        /// @todo [urgent] check for triggers
+        return std::string{x};
+    }
+
     SafeVector<Word> words;
     words.resize(rawWords.size());
     for (size_t iWord = 0; iWord < words.size(); ++iWord) {

@@ -29,7 +29,10 @@ namespace {
     std::ofstream osEqual("!equal.log");
 #endif
 
-    void extractSynonym(tx::Base& base, char32_t currChar, std::string_view line)
+    void extractSynonym(
+            tx::Base& base, char32_t currChar,
+            std::string_view mainName,
+            std::string_view line)
     {
     #ifdef DUMP_EQUALS
         if (line.find(',') != std::string_view::npos) {
@@ -37,30 +40,54 @@ namespace {
         }
     #endif
 
+        // Is synonym extraneous?
+        line = str::trimSv(line);
+        auto up = str::toUpper(line);
+        if (mainName.find(up) != std::string_view::npos)
+            return;
+
+        Flags<Dcfg> flags;
+        if (str::containsWord(mainName, "CAPITAL")) {
+            flags |= Dcfg::UPCASE;
+        } else if (str::containsWord(mainName, "SMALL")) {
+            flags |= Dcfg::LOCASE;
+        }
+
+        // Convert to upper one by one, then stick together
         auto names = str::splitByAnySv(line, ",;", true);
         if (names.empty())
             return;
-        auto& cp = base[currChar];
-        for (auto name : names) {
+        auto convertName = [currChar, flags](std::string_view name) -> std::string
+        {
             // We do not check for abbreviation
             if (currChar <= ' '             // control/space
-                    || (currChar >= 0x7F && currChar <= 0x9F)   // another control range
-                    || name.ends_with("(1.0)")
-                    || name.ends_with("(1.1)")) {
+                || (currChar >= 0x7F && currChar <= 0x9F)   // another control range
+                || name.ends_with("(1.0)")
+                || name.ends_with("(1.1)")) {
                 name = str::prefixSv(name, '(');
             }
             name = str::trimSv(name);
-            if (name == "etc."sv
-                    || name == "..."sv)
-                continue;
-            std::string decap;
+            if (name == "etc."sv || name == "..."sv)
+                return {};
             if (str::latIsSingleCase(name)) {
-                decap = decapitalize(name, currChar);
+                return decapitalize(name, currChar, flags);
             } else {
-                decap = decapitalizeByTable(name);
+                return decapitalize(name, currChar, flags | Dcfg::SHORTCUT);
             }
-            cp.names.emplace(std::move(decap));
+        };
+
+        std::string r;
+        for (auto name : names) {
+            auto conv = convertName(name);
+            if (!conv.empty()) {
+                if (!r.empty())
+                    r += ", ";
+                r += conv;
+            }
         }
+
+        auto& cp = base[currChar];
+        cp.names.insert(r);
     }
 
 }   // anon namespace
@@ -70,7 +97,7 @@ tx::Base tx::loadBase()
     tx::Base r;
 
     std::ifstream is(UCD_NAMES);
-    std::string line;
+    std::string mainName, line;
     char32_t currChar = 0;
     while (std::getline(is, line)) {
         std::string_view trimmed = str::trimSv(line);
@@ -81,14 +108,16 @@ tx::Base tx::loadBase()
             if (trimmed.starts_with('@')) {
                 // Subtitle, do nothing
             } else {
-                std::string_view sCode = str::prefixSv(trimmed, '\t');
+                auto names = str::splitSv(trimmed, '\t');
+                std::string_view sCode = names.safeGetV(0, "");
                 currChar = fromHex(sCode);
+                mainName = names.safeGetV(1, "");
             }
         } else {
             // Its info
             switch (trimmed[0]) {
             case '=':
-                extractSynonym(r, currChar, trimmed.substr(1));
+                extractSynonym(r, currChar, mainName, trimmed.substr(1));
                 break;
             default: ;
             }

@@ -126,10 +126,23 @@ extern const std::unordered_set<char32_t> charsEgyptianHatch;
 
 enum class DecapDebug { NO, YES };
 
+enum class Dcfg {
+    SHORTCUT = 1,   ///< Force shortcut decapitalization (by dictionary unless special keywords)
+    LOCASE = 2,     ///< Letter is lowercase
+    UPCASE = 0,     ///< Letter is uppercase, Right now does nothing
+};
+
 std::string decapitalize(
         std::string_view x,
         char32_t cp = 0,
+        Flags<Dcfg> flags = {},
         DecapDebug debug = DecapDebug::NO);
+inline std::string decapitalize(
+        std::string_view x,
+        char32_t cp,
+        DecapDebug debug)
+    { return decapitalize(x, cp, Flags<Dcfg>{}, debug); }
+
 std::string decapitalizeEmoji(
         std::string_view x,
         DecapDebug debug = DecapDebug::NO);
