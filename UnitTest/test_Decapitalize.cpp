@@ -984,3 +984,33 @@ TEST (Decap, Sun2)
     auto r = decapitalize("SUN", 42);
     EXPECT_EQ("Sun", r);
 }
+
+
+///
+///  Short decapitalization: found in table
+///
+TEST (ShortDecap, InTable)
+{
+    auto r = decapitalizeByTable("Epidaurean acrophonic symbol three");
+    EXPECT_EQ("Epidaurean acrophonic symbol Three", r);
+}
+
+
+///
+///  Short decapitalization prerequisite: correct work of normal algo
+///
+TEST (ShortDecap, NormalPrereq)
+{
+    auto r = decapitalize("cyrillic capital letter ks");
+    EXPECT_EQ("Cyrillic capital letter Ks", r);
+}
+
+
+///
+///  Short decapitalization: normal algo should not work here
+///
+TEST (ShortDecap, Normal)
+{
+    auto r = decapitalizeByTable("cyrillic capital letter ks");
+    EXPECT_EQ("cyrillic capital letter ks", r);
+}
