@@ -12,6 +12,8 @@
 #include "library.h"    // for fromHex
 #include "data.h"
 
+//#define DUMP_EQUALS
+
 using namespace std::string_view_literals;
 
 void tx::Cp::eraseName(std::string_view x)
@@ -23,9 +25,19 @@ void tx::Cp::eraseName(std::string_view x)
 
 namespace {
 
+#ifdef DUMP_EQUALS
+    std::ofstream osEqual("!equal.log");
+#endif
+
     void extractSynonym(tx::Base& base, char32_t currChar, std::string_view line)
     {
-        auto names = str::splitSv(line, ',', true);
+    #ifdef DUMP_EQUALS
+        if (line.find(',') != std::string_view::npos) {
+            osEqual << line << std::endl;
+        }
+    #endif
+
+        auto names = str::splitByAnySv(line, ",;", true);
         if (names.empty())
             return;
         auto& cp = base[currChar];

@@ -292,6 +292,10 @@ namespace str {
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
+        [[nodiscard]] SafeVector<Sv> splitByAnySv(
+                Sv s, Sv comma, bool skipEmpty = true);
+
+        template <class Sv>
         Sv prefixSv(Sv s, trait::Ch<Sv> comma) noexcept
         {
             auto p = s.find(comma);
@@ -500,6 +504,15 @@ namespace str {
         } else {
             return detail::splitSv<Sv>(s, static_cast<Sv>(comma), skipEmpty);
         }
+    }
+
+    /// All characters of ‘comma’ are treated as commas
+    template <class S, class Co>
+    [[nodiscard]] inline SafeVector<trait::Sv<S>> splitByAnySv(
+        const S& s, const Co& comma, bool skipEmpty = true)
+    {
+        using Sv = trait::Sv<S>;
+        return detail::splitByAnySv<Sv>(s, comma, skipEmpty);
     }
 
     template <class S, class Co>
@@ -751,6 +764,36 @@ template <class Sv>
     for (const Ch* p = start; p != end; ++p)
     {
         if (*p != comma) continue;
+        const Ch* send = p;
+        str::trim(sstart, send);
+        if (p != sstart || !skipEmpty)
+            r.emplace_back(sstart, send-sstart);
+        sstart = p + 1;
+    }
+    str::trim(sstart, end);
+    if (sstart != end || !skipEmpty)
+        r.emplace_back(sstart, end-sstart);
+    return r;
+}
+
+
+template <class Sv>
+[[nodiscard]] SafeVector<Sv> str::detail::splitByAnySv(
+        Sv s, Sv comma, bool skipEmpty)
+{
+    SafeVector<Sv> r;
+    using Ch = str::trait::Ch<Sv>;
+
+    const Ch* start = s.data();
+    const Ch* end = start + s.length();
+    str::trim(start, end);
+    if (start == end)
+        return r;
+
+    const Ch* sstart = start;
+    for (const Ch* p = start; p != end; ++p)
+    {
+        if (comma.find(*p) == Sv::npos) continue;
         const Ch* send = p;
         str::trim(sstart, send);
         if (p != sstart || !skipEmpty)

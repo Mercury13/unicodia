@@ -313,6 +313,27 @@ TEST (SplitSv, EmptyComma)
 }
 
 
+///// str::splitByAnySv ////////////////////////////////////////////////////////
+
+
+TEST (SplitByAnySv, One)
+{
+    std::string_view s = "  alpha  , Bravo , @ charlie";
+    auto r = str::splitByAnySv(s, ",@", true);
+    std::vector<std::string_view> ex { "alpha", "Bravo", "charlie" };
+    EXPECT_EQ(ex, r);
+}
+
+
+TEST (SplitByAnySv, Two)
+{
+    std::string_view s = "  alpha  , Bravo , @ charlie";
+    auto r = str::splitByAnySv(s, ",@", false);
+    std::vector<std::string_view> ex { "alpha", "Bravo", "", "charlie" };
+    EXPECT_EQ(ex, r);
+}
+
+
 ///// str::prefixSv ////////////////////////////////////////////////////////////
 
 
