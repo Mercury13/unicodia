@@ -223,7 +223,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansNewa-Regular.ttf", Ffg::DESC_BADLY_HINTED },                     // Newa
     { "NotoSansNKo-Regular.ttf" },                                              // N’Ko
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
-    { "NotoSerifHmongNyiakeng-Regular.ttf" },                                   // NP Hmong
+    { "NotoSerifNPHmong-Regular.ttf" },                                         // NP Hmong
     { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
     { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki

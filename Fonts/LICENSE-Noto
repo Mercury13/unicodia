@@ -9,8 +9,6 @@ http://scripts.sil.org/OFL
 What was done by authors of Unicodia:
 * Latin/Greek/Cyrillic:
   - Rehinted with TtfAutoHint, default settings + strong/strong/strong.
-* NP Hmong
-  - Copied 25CC dotted circle from Devanagari
 * Modi, Zanabazar Square
   - Rehinted with TtfAutoHint, see settings-STRONG
 * Syloti Nagri
