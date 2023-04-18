@@ -387,6 +387,8 @@ namespace uc {
         TIBETAN,
         TIFINAGH,
         TIRHUTA,
+        UMLAUT,
+          Z_UML_1,
         UMLAUT_SYMBOL,
           Z_USY_1,
           Z_USY_2,

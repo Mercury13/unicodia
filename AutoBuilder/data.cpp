@@ -1012,7 +1012,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Cyrillic small ligature Te Tse")
     EX("Cyrillic capital ligature A Ie")
     EX("Cyrillic small ligature A Ie")
-    /// @todo [textbase] Escape quotes somehow, see 47c
     EX("Cyrillic \"beautiful Omega\"")  // Letter is BIG
     EX("voiceless l")               // letter is SMALL
     EX("voiceless r")               // letter is SMALL
@@ -1411,10 +1410,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX2("Z", Exf::MIXCASE)
     EX("Zha")
     EX("Zu (not unique)")
-    /// @todo [textbase] Anatolian hiero “syllabic nì” → upper?
-    /// @todo [textbase] Same for “syllabic ká”, “syllabic a+tá”, “syllabic rú”,
-    ///      “syllabic sà”, “syllabic wà/ì”, “syllabic wá/í”,
-    ///      “syllabic la”, “syllabic la+la” etc
 
     // CJK
         // Hang
@@ -1875,6 +1870,7 @@ constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x
 
 const std::set<RangeByEnd> alternateRanges {
     { 0x02CE, 0x02CF },     // Misrender in Cambria
+    { 0x0333 },             // Basic umlauts: misrenders in Cambria
     { 0x2010, 0x203B },     // Several chars from Punctuation…
     { 0x203D, 0x203E },     // …Skip emoji and go on
     { 0x23B4, 0x23B6 },     // Technical — horz brackets, misrender in Cambria

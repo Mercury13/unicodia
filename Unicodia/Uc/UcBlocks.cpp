@@ -41,7 +41,8 @@ constinit const uc::Block uc::blocks[] {
             Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
     /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
     { 0x0300, 0x036F, { 0x301, EcContinent::NONE },
-            "Combining Diacritical Marks", { EcScript::ZDIA, 0 } },
+            "Combining Diacritical Marks", { EcScript::ZDIA, 0 },
+            EcScript::NONE, EcFont::UMLAUT },
     // Greek and Coptic OK
     { 0x0370, 0x03FF, { L'ξ', EcContinent::EUROPE, Ifg::CONTINENT_OK },
         "Greek and Coptic", { EcScript::Grek, 0 } },
