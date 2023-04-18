@@ -24,7 +24,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ARABIC",         Dicf::TRIG_SCRIPT },
     { "ARABIAN",        Dicf::TRIG_SCRIPT },
     { "ARABIC-INDIC",   { Dicf::TRIG_SCRIPT, "Arabic-Indic"sv } },
-        /// @todo [textbase] “Assamese letter ra” etc in mixed case
     { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::TRIG_FORCE_FULL_DECAP },
     { "IMPERIAL",       Dicf::TRIG_SCRIPT },
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
@@ -1486,7 +1485,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Z notation Cartesian product")  // Z???
     EX("EMF (electromotive force)")
     EX("N-ary Dijkstra choice")
-        /// @todo [textbase] “German Mark currency symbol, before WWII”
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
