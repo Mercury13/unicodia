@@ -407,6 +407,27 @@ namespace {
 }   // anon namespace
 
 
+std::string encodeC(std::string_view x)
+{
+    std::string r;
+    r.reserve(x.size());
+    for (auto c : x) {
+        switch (c) {
+        case '"':
+            r += R"(\")";
+            break;
+        case '\\':
+            r += R"(\\)";
+            break;
+        default:
+            r += c;
+            break;
+        }
+    }
+    return r;
+}
+
+
 int main()
 {
     std::cout << "Have " << dictionary.size() << " words in dictionary, "
@@ -796,7 +817,7 @@ int main()
         snprintf(text, std::size(text), R"(u8"\x%02X\x%02X" ")",
                  static_cast<unsigned>(v.role),
                  static_cast<unsigned>(v.s.length()));
-        os << text << v.s << "\"  ";
+        os << text << encodeC(v.s) << R"("  )";
         if (v.isLast)
             os << R"("\0")";
         os << "  // " << std::hex << static_cast<int>(v.subj) << '\n';

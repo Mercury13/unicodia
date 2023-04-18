@@ -134,7 +134,7 @@ void SearchCombo::addToHistory(const QString& x)
         }
     }
     // Remove extra
-    size_t qq = maxVisibleItems();
+    int qq = maxVisibleItems();
     for (auto i = count(); i >= qq; ) { --i;
         removeItem(i);
     }
