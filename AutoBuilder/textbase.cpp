@@ -81,7 +81,8 @@ namespace {
         };
 
         auto& cp = base[currChar];
-        if (line.ends_with(';')) {  // “ISOtech entity &iinfin;”
+        if (line.ends_with(';')   // “ISOtech entity &iinfin;”
+                || str::containsWord(mainName, "ANATOLIAN")) {
             // The entire line
             cp.names.insert(std::string{line});
         } else {

@@ -1000,8 +1000,8 @@ struct Exception {
     Flags<Exf> flags;
 };
 
-#define EX(x) { TOUPPER_SV(x), Exception{ .r = x, .flags {} } },
-#define EX2(x, fgs) { TOUPPER_SV(x), Exception{ .r = x, .flags = fgs } },
+#define EX(x) { TOUPPER_SV(x), Exception{ .r{x}, .flags {} } },
+#define EX2(x, fgs) { TOUPPER_SV(x), Exception{ .r{x}, .flags{fgs} } },
 
 const std::unordered_map<std::string_view, Exception> exceptions{
     // EUROPEAN SCRIPTS
