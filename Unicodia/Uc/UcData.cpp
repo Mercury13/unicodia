@@ -288,7 +288,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 120_pc },         // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
-    { FAM_DEFAULT, Ffg::BUG_AVOID | Ffg::FALL_TO_NEXT, },                       // Umlauts
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, },                                        // Umlauts
       { FNAME_NOTO },                                                           // …1
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts for symbols
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
