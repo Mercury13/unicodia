@@ -83,7 +83,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
     { FNAME_DEJAVU },                                                           // DejaVu
-    { FNAME_FUNKY },                                                            // Funky
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
+      { FNAME_NOTO },                                                           // …1
     { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
@@ -288,8 +289,6 @@ constinit const uc::Font uc::fontInfo[] = {
     { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 120_pc },         // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
-    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, },                                        // Umlauts
-      { FNAME_NOTO },                                                           // …1
     { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                      // Umlauts for symbols
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
