@@ -7429,7 +7429,7 @@
      <orig>
       <p>One of [[pt:emoji|emoji]] principles which, however, did not exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion. For example, families of different racial composition are possible but not{{_}}standardized{{-}}that’s 4225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
-      <p>Initially people are displayed with unrealistic skin tone{{-}}usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
+      <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
       <p />
       <p>Most emoji are genderless; if you want you may add gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emoji: {{em|🤱}}{{_}}breast feeding and {{em|🧕}}{{_}}woman in headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
       <p />
