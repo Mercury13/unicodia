@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1681973436
+ModificationTime: 1682154444
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -855,342 +855,254 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 1
 Width: 594
-Flags: W
+Flags: WO
 HStem: 42 52<271.383 315.265> 60 52<187.383 231.265 355.383 399.265> 107 52<113.383 157.265 429.383 473.265> 181 52<66.3828 110.265 476.383 520.265> 265 52<48.3828 92.2648 494.383 538.265> 349 52<66.3828 110.265 476.383 520.265> 423 52<113.383 157.265 429.383 473.265> 470 52<187.383 231.265 355.383 399.265> 488 52<271.383 315.265>
 VStem: 48 52<265.383 309.265> 66 52<181.383 225.265 349.383 393.265> 113 52<107.383 151.265 423.383 467.265> 187 52<60.3828 104.265 470.383 514.265> 271 52<42.3828 86.2648 488.383 532.265> 355 52<60.3828 104.265 470.383 514.265> 429 52<107.383 151.265 423.383 467.265> 476 52<181.383 225.265 349.383 393.265> 494 52<265.383 309.265>
 TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 156
-MDAP[rnd]
-PUSHB_1
- 168
-SHP[rp1]
-PUSHB_1
- 162
-MDRP[min,rnd,black]
-PUSHB_1
- 174
-SHP[rp2]
-PUSHB_1
- 180
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 186
-MDRP[min,rnd,black]
-PUSHB_4
- 132
- 162
- 156
- 8
-CALL
-PUSHB_1
- 144
-SHP[rp1]
-PUSHB_1
- 138
-MDRP[min,rnd,black]
-PUSHB_1
- 150
-SHP[rp2]
-PUSHB_1
- 108
-MDAP[rnd]
-PUSHB_1
- 120
-SHP[rp1]
-PUSHB_1
- 114
-MDRP[min,rnd,black]
-PUSHB_1
- 126
-SHP[rp2]
-PUSHB_1
- 84
-MDAP[rnd]
-PUSHB_1
- 96
-SHP[rp1]
-PUSHB_1
- 90
-MDRP[min,rnd,black]
-PUSHB_1
- 102
-SHP[rp2]
-PUSHB_1
- 60
-MDAP[rnd]
-PUSHB_1
- 72
-SHP[rp1]
-PUSHB_1
- 66
-MDRP[min,rnd,black]
-PUSHB_1
- 78
-SHP[rp2]
-PUSHB_1
- 12
-MDAP[rnd]
-PUSHB_1
- 24
-SHP[rp1]
-PUSHB_1
- 18
-MDRP[min,rnd,black]
-PUSHB_1
- 30
-SHP[rp2]
-PUSHB_4
- 54
- 18
- 12
- 8
-CALL
-PUSHB_1
- 42
-SHP[rp1]
-PUSHB_1
- 48
-MDRP[min,rnd,black]
-PUSHB_1
- 36
-SHP[rp2]
-PUSHB_1
- 12
-SRP0
-PUSHB_1
+NPUSHB
+ 241
  0
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 6
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 192
-MDAP[rnd]
-PUSHB_1
- 111
-MDRP[rp0,rnd,white]
-PUSHB_1
- 63
-SHP[rp2]
-PUSHB_1
- 117
-MDRP[min,rnd,black]
-PUSHB_1
- 69
-SHP[rp2]
-PUSHB_1
- 87
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 93
-MDRP[min,rnd,black]
-PUSHB_4
- 135
- 117
- 111
- 8
-CALL
-PUSHB_1
- 51
-SHP[rp1]
-PUSHB_1
- 141
-MDRP[min,rnd,black]
-PUSHB_1
- 57
-SHP[rp2]
-PUSHB_1
- 117
-SRP0
-PUSHB_2
- 159
  1
-CALL
-PUSHB_1
- 15
-SHP[rp2]
-PUSHB_1
- 165
-MDRP[min,rnd,black]
-PUSHB_1
- 21
-SHP[rp2]
-PUSHB_1
- 165
-SRP0
-PUSHB_2
- 183
+ 32
  1
-CALL
-PUSHB_1
- 3
-SHP[rp2]
-PUSHB_1
- 189
-MDRP[min,rnd,black]
-PUSHB_1
- 9
-SHP[rp2]
-PUSHB_1
- 189
-SRP0
-PUSHB_2
- 171
+ 0
+ 7
  1
-CALL
-PUSHB_1
- 27
-SHP[rp2]
-PUSHB_1
- 177
-MDRP[min,rnd,black]
-PUSHB_1
- 33
-SHP[rp2]
-PUSHB_1
- 177
-SRP0
-PUSHB_2
- 123
- 1
-CALL
-PUSHB_1
- 75
-SHP[rp2]
-PUSHB_1
- 129
-MDRP[min,rnd,black]
-PUSHB_1
- 81
-SHP[rp2]
-PUSHB_4
- 153
- 129
- 123
- 8
-CALL
-PUSHB_1
- 147
-MDRP[min,rnd,black]
-PUSHB_1
- 147
-MDAP[rnd]
-PUSHB_1
- 39
-SHP[rp1]
-PUSHB_1
- 153
-MDRP[min,rnd,black]
-PUSHB_1
- 45
-SHP[rp2]
-PUSHB_1
- 123
-SRP0
-PUSHB_1
- 99
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
+ 0
  105
-MDRP[min,rnd,black]
-PUSHB_2
- 193
+ 5
  1
-CALL
-PUSHB_2
- 93
- 87
-SRP1
-SRP2
-PUSHB_2
- 66
- 114
-IP
-IP
-PUSHB_2
- 117
- 111
-SRP1
-SRP2
-PUSHB_1
- 90
-IP
-PUSHB_2
- 123
- 147
-SRP1
-SRP2
-PUSHB_2
- 42
- 150
-IP
-IP
-PUSHB_2
- 129
- 99
-SRP1
-SRP2
-PUSHB_3
- 78
- 102
- 126
-IP
-IP
-IP
-SVTCA[y-axis]
-PUSHB_2
- 186
- 180
-SRP1
-SRP2
-PUSHB_2
- 165
- 177
-IP
-IP
-PUSHB_2
- 162
- 156
-SRP1
-SRP2
-PUSHB_1
- 189
-IP
-PUSHB_2
- 12
- 48
-SRP1
-SRP2
-PUSHB_2
- 45
- 57
-IP
-IP
-PUSHB_2
- 18
- 0
-SRP1
-SRP2
-PUSHB_3
- 9
- 21
+ 3
+ 34
+ 4
  33
-IP
-IP
-IP
-IUP[y]
-IUP[x]
+ 3
+ 2
+ 6
+ 3
+ 2
+ 105
+ 9
+ 1
+ 7
+ 36
+ 8
+ 35
+ 3
+ 6
+ 11
+ 7
+ 6
+ 105
+ 13
+ 1
+ 11
+ 38
+ 12
+ 37
+ 3
+ 10
+ 15
+ 11
+ 10
+ 105
+ 17
+ 1
+ 15
+ 40
+ 16
+ 39
+ 3
+ 14
+ 19
+ 15
+ 14
+ 105
+ 21
+ 1
+ 19
+ 42
+ 20
+ 41
+ 3
+ 18
+ 23
+ 19
+ 18
+ 105
+ 25
+ 1
+ 23
+ 44
+ 24
+ 43
+ 3
+ 22
+ 31
+ 23
+ 22
+ 105
+ 0
+ 31
+ 26
+ 30
+ 31
+ 89
+ 29
+ 1
+ 27
+ 46
+ 28
+ 45
+ 3
+ 26
+ 30
+ 27
+ 26
+ 105
+ 0
+ 31
+ 31
+ 30
+ 97
+ 47
+ 1
+ 30
+ 31
+ 30
+ 81
+ 181
+ 180
+ 169
+ 168
+ 157
+ 156
+ 145
+ 144
+ 133
+ 132
+ 121
+ 120
+ 109
+ 108
+ 97
+ 96
+ 85
+ 84
+ 73
+ 72
+ 61
+ 60
+ 49
+ 48
+ 37
+ 36
+ 25
+ 24
+ 13
+ 12
+ 1
+ 0
+ 187
+ 185
+ 180
+ 191
+ 181
+ 191
+ 175
+ 173
+ 168
+ 179
+ 169
+ 179
+ 163
+ 161
+ 156
+ 167
+ 157
+ 167
+ 151
+ 149
+ 144
+ 155
+ 145
+ 155
+ 139
+ 137
+ 132
+ 143
+ 133
+ 143
+ 127
+ 125
+ 120
+ 131
+ 121
+ 131
+ 115
+ 113
+ 108
+ 119
+ 109
+ 119
+ 103
+ 101
+ 96
+ 107
+ 97
+ 107
+ 91
+ 89
+ 84
+ 95
+ 85
+ 95
+ 79
+ 77
+ 72
+ 83
+ 73
+ 83
+ 67
+ 65
+ 60
+ 71
+ 61
+ 71
+ 55
+ 53
+ 48
+ 59
+ 49
+ 59
+ 43
+ 41
+ 36
+ 47
+ 37
+ 47
+ 31
+ 29
+ 24
+ 35
+ 25
+ 35
+ 19
+ 17
+ 12
+ 23
+ 13
+ 23
+ 7
+ 5
+ 0
+ 11
+ 1
+ 11
+ 48
+ 6
+ 22
+CALL
 EndTTInstrs
 AnchorPoint: "Arab Low" 297 0 basechar 0
 LayerCount: 2
@@ -1261,7 +1173,7 @@ SplineSet
  513 349.0005 513 349.0005 502 349 c 0,72,73
 74 265 m 0,84,85
  63.99995 265 63.99995 265 56 273 c 128,-1,86
- 48.00005 280.9995 48.00005 280.9995 48 291 c 4,87,88
+ 48.00005 280.9995 48.00005 280.9995 48 291 c 0,87,88
  48 301.9995 48 301.9995 56 309.5 c 128,-1,89
  63.99995 317 63.99995 317 74 317 c 0,90,91
  84.99995 317 84.99995 317 92.5 309.5 c 128,-1,92
