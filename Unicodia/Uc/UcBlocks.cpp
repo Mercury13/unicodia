@@ -39,7 +39,7 @@ constinit const uc::Block uc::blocks[] {
             "Spacing Modifier Letters",
             MyName::INST, EcScript::NONE, EcFont::NORMAL,
             Bfg::FORCE_FONT | Bfg::SCRIPTLIKE },
-    /// @todo [semi-tofu, BMP] Diacritical marks work somehow, though circle from 6 circles is too rough
+    // Basic umlauts OK
     { 0x0300, 0x036F, { 0x301, EcContinent::NONE },
             "Combining Diacritical Marks", { EcScript::ZDIA, 0 },
             EcScript::NONE, EcFont::FUNKY },
