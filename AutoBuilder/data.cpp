@@ -993,6 +993,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
 enum class Exf {
     CPONLY = 1,     ///< Works if codepoint is present (Sun=star, sun=weather)
     MIXCASE = 2,    ///< Mixed case: for lowercase letter convert to small
+    LEAVE_BY_CONDITION = 4,  ///< Leave as is special condition (see charsConditionalLeave)
 };
 
 struct Exception {
@@ -1287,7 +1288,6 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Yiii
     EX("Yi syllable iteration mark")
 
-    /// @todo [textbase] A9BC is “ĕ”
     // Misc letters
     EX2("A", Exf::MIXCASE)
     EX2("B", Exf::MIXCASE)
@@ -1298,7 +1298,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX2("C", Exf::MIXCASE)
     EX("Ca")
     EX("Cha")
-    /// @todo [textbase] “Chi”, “Pi” in Kana upper, in Newa lower
+    EX2("Chi", Exf::LEAVE_BY_CONDITION)
     EX("Chha")
     EX("soft Da")
     EX("soft Dda")
@@ -1309,6 +1309,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Dda")
     EX("Ddha")
     EX("Dha")
+    { "ĕ", Exception{ "Ĕ", {} } },  // A9BC
     EX("Ei")
     EX2("F", Exf::MIXCASE)
     EX("Fu")
@@ -1362,8 +1363,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX2("M", Exf::MIXCASE)
     EX("Ma")
     EX("subjoined Ma")
-    /// @todo [textbase] in Indics “Maa” is upper, in Taml supp lower
-    EX("Maa")
+    EX2("Maa", Exf::LEAVE_BY_CONDITION)
     EX("logosyllabic Muwa")
     EX2("N", Exf::MIXCASE)
     EX("hard Na")
@@ -1375,6 +1375,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Nna")
     EX2("P", Exf::MIXCASE)
     EX("Pha")
+    EX2("Pi", Exf::LEAVE_BY_CONDITION)
     EX2("Q", Exf::MIXCASE)
     EX("Qa")
     EX2("R", Exf::MIXCASE)
@@ -1948,6 +1949,14 @@ const std::unordered_set<char32_t> charsEgyptianHatch {
 };
 
 
+/// One method of homonym disambig: these chars are left as-are
+/// while the rest are decapped by dictionary under Exf::LEAVE_BY_CONDITION
+const std::unordered_set<char32_t> charsConditionalLeave {
+    0x11451,    // Newa digit One = chi
+    0x11454,    // Newa digit Four = pi
+    0x11fc8,    // Tamil fraction One twentieth = maa
+};
+
 /// @todo [langs] Stopped at Canadian syllabics
 const std::set<std::string_view> langNames {
     "also Cornish",     // корнский (Великобритания)
@@ -2347,6 +2356,10 @@ std::string decapitalize(
             // Mixcase flag: in upcase mode leave, in locase mode to lower
             if (itEx->second.flags.have(Exf::MIXCASE) && flags.have(Dcfg::LOCASE)) {
                 return str::toLower(itEx->second.r);
+            }
+            if (itEx->second.flags.have(Exf::LEAVE_BY_CONDITION)
+                    && charsConditionalLeave.contains(cp)) {
+                return std::string{x};
             }
             return std::string(itEx->second.r);
         }
