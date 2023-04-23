@@ -215,7 +215,7 @@ constinit const uc::Block uc::blocks[] {
     // Diacritical ex OK
     { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE },
             "Combining Diacritical Marks Extended",
-            { EcScript::ZDIA, 2 }, EcScript::NONE, EcFont::NOTO },
+            { EcScript::ZDIA, 2 }, EcScript::NONE, EcFont::FUNKY },
     // Balinese OK
     { 0x1B00, 0x1B7F, { 0x1B11, EcContinent::OCEAN },
             "Balinese", { EcScript::Bali, 0 }, EcScript::Bali },
