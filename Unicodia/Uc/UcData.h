@@ -194,7 +194,11 @@ namespace uc {
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
+         NORMAL_THEN_DEJAVU,
+          Z_NTD_1,  // Fall to next
          DEJAVU,
+          Z_DEJ_1,
+          Z_DEJ_2,
          FUNKY,
           Z_FUN_1,
          FUNKY_RTL,

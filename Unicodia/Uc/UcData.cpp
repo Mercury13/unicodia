@@ -82,7 +82,11 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
     { FNAME_NOTOMUSIC },                                                        // Music normal
     { "Gadugi" },                                                               // Gadugi
-    { FNAME_DEJAVU },                                                           // DejaVu
+    { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Normal → DejaVu
+      { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                   // …1
+    { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
+      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …1
+      { FNAME_NOTOSYM2 },                                                       // …2
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
       { FNAME_NOTO },                                                           // …1
     { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL
