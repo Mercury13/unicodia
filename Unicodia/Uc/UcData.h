@@ -197,7 +197,7 @@ namespace uc {
          NORMAL_THEN_DEJAVU,
           Z_NTD_1,  // Fall to next
          DEJAVU,
-          Z_DEJ_1,
+          Z_DEJ_1,  // Used for NORMAL_THEN_DEJAVU
           Z_DEJ_2,
          FUNKY,
           Z_FUN_1,
