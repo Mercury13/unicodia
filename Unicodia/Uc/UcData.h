@@ -195,10 +195,11 @@ namespace uc {
          MUSIC_NORMAL,
          GADUGI,
          NORMAL_THEN_DEJAVU,
-          Z_NTD_1,  // Fall to next
+          Z_NTD_1,
+          Z_NTD_2,
+          Z_NTD_3,
+          Z_DEJ_4,
          DEJAVU,
-          Z_DEJ_1,  // Used for NORMAL_THEN_DEJAVU
-          Z_DEJ_2,
          FUNKY,
           Z_FUN_1,
          FUNKY_RTL,
