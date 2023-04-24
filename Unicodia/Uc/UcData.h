@@ -62,6 +62,7 @@ namespace uc {
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };
     constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";
+    constexpr std::u8string_view STUB_ALM_CIRCLE  = u8"\u061C\u25CC";
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
     constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
     constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };
@@ -422,9 +423,10 @@ namespace uc {
         CELL_BIGGER       = 1<<11,  ///< Make cell text a bit smaller
         STUB_FINEGRAINED  = 1<<12,  ///< Stub on/off is controlled on finer level
         STUB_RTL          = 1<<13,  ///< Use “RtL isolate” char in stub
-        STUB_INTERCHAR    = 1<<14,  ///< Debug: test inter-character interval
-        NOHINT_TINY       = 1<<15,  ///< Unglitch: no anti-aliasing in tiny sizes
-        FALL2_IF_ACCEPTED = 1<<16,  ///< Fall over one font if not rejected;
+        STUB_ALM          = 1<<14,  ///< Use “RtL isolate” char in stub
+        STUB_INTERCHAR    = 1<<15,  ///< Debug: test inter-character interval
+        NOHINT_TINY       = 1<<16,  ///< Unglitch: no anti-aliasing in tiny sizes
+        FALL2_IF_ACCEPTED = 1<<17,  ///< Fall over one font if not rejected;
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };

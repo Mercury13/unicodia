@@ -773,11 +773,11 @@ constinit const uc::Block uc::blocks[] {
     // Yezidi OK
     { 0x10E80, 0x10EBF, { 0x10E91, EcContinent::ASIA, {}, 11_hy },
             "Yezidi", { EcScript::Yezi, 0 }, EcScript::Yezi },
-    /// @todo [future] Arab ex C temporarily in Funky
+    // Arabic C OK
     { 0x10EC0, 0x10EFF, { 0x10EFF, EcContinent::ASIA },
             "Arabic Extended-C",
             { EcScript::Arab, 'C' },
-            EcScript::Arab, EcFont::FUNKY_RTL, Bfg::HAS_DESCRIPTION },
+            EcScript::Arab, EcFont::ARABIC, Bfg::HAS_DESCRIPTION },
     // Old Sogdian OK
     { 0x10F00, 0x10F2F, { 0x10F00, EcContinent::ASIA, {}, 14_hy },
             "Old Sogdian", { EcScript::Sogd, 0 }, EcScript::Sogo },

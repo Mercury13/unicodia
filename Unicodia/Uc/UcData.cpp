@@ -90,8 +90,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
-    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_RTL },                           // Arabic
-    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_RTL | Ffg::FALL_TO_NEXT },       // Arabic Noto — Scheh has a few nice chars!
+    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM },                           // Arabic
+    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },       // Arabic Noto — Scheh has a few nice chars!
       { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, main font
       { FNAME_FUNKY },                                                          // …2, fallback font for Presentation-A
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
@@ -2500,6 +2500,8 @@ uc::SampleProxy uc::Cp::sampleProxy(EmojiDraw emojiDraw) const
             break;
         if (fn->flags.have(Ffg::STUB_RTL))
             return { str::toQ(STUB_RTL_CIRCLE) + str::toQ(code), style };
+        if (fn->flags.have(Ffg::STUB_ALM))
+            return { str::toQ(STUB_ALM_CIRCLE) + str::toQ(code), style };
         return { STUB_CIRCLE + str::toQ(code), style };
     case EcCategory::SEPARATOR_SPACE:
         if (isTrueSpace()) {
