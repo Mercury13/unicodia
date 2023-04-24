@@ -325,9 +325,16 @@ namespace {
         finishDiv();
         switch (strength) {
         case wiki::Strength::BREAK:
-            s += "<div>";
-            isDiv = true;
-            break;
+            switch (feature) {
+            case wiki::Feature::BULLET:
+                s += "<br>";
+                break;
+            case wiki::Feature::NONE:
+            case wiki::Feature::INDENT:
+                s += "<div>";
+                isDiv = true;
+                break;
+            } break;
         case wiki::Strength::PARAGRAPH:
             s += "<p>";
             break;
