@@ -410,9 +410,6 @@ namespace uc {
         NN
     };
 
-    ///
-    ///  @warning  Use several fonts → be sure to have STUB_xxx working for ALL
-    ///
     enum class Ffg {
         BOLD              = 1<<0,   ///< Weight: bold
         SEMIBOLD          = 1<<1,   ///< Weight: semibold
