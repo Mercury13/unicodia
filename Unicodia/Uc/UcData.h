@@ -428,8 +428,8 @@ namespace uc {
         CELL_SMALLER      = 1<<10,  ///< Make cell text a bit smaller
         CELL_BIGGER       = 1<<11,  ///< Make cell text a bit smaller
         STUB_FINEGRAINED  = 1<<12,  ///< Stub on/off is controlled on finer level
-        STUB_RTL          = 1<<13,  ///< Use “RtL isolate” char in stub
-        STUB_ALM          = 1<<14,  ///< Use “RtL isolate” char in stub
+        STUB_RTL          = 1<<13,  ///< Use “RtL mark” char in stub
+        STUB_ALM          = 1<<14,  ///< Use “Arabic letter mark” char in stub
         STUB_INTERCHAR    = 1<<15,  ///< Debug: test inter-character interval
         NOHINT_TINY       = 1<<16,  ///< Unglitch: no anti-aliasing in tiny sizes
         FALL2_IF_ACCEPTED = 1<<17,  ///< Fall over one font if not rejected;
