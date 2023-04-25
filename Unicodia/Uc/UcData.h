@@ -61,8 +61,8 @@ namespace uc {
     constexpr unsigned NO_CHAR = std::numeric_limits<unsigned>::max();
     //const QString STUB_CIRCLE = "A \u25CC";
     constexpr QChar STUB_CIRCLE { 0x25CC };
-    constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";
-    constexpr std::u8string_view STUB_ALM_CIRCLE  = u8"\u061C\u25CC";
+    constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";   // 200F RLM  25CC dotted circle
+    constexpr std::u8string_view STUB_ALM_CIRCLE  = u8"\u061C\u25CC";   // 061C ALM  25CC dotted circle
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
     constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
     constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };
