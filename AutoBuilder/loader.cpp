@@ -97,6 +97,10 @@ namespace {
                     std::filesystem::remove(destPath);
                 // Will throw if problems, that’s OK
                 std::filesystem::copy(srcPath, destPath);
+                // Check once again for existence
+                if (!std::filesystem::exists(destPath)) {
+                    throw std::runtime_error("Copied " + rqPath.generic_string() + ", still not found");
+                }
                 return;
             }
             testPath = "../" + testPath;
@@ -126,6 +130,7 @@ namespace {
     constinit const LocalFile allLocalFiles[] {
         { MISCFILES ENTITIES_HTML },
         { MISCFILES LIBRARY_XML },
+        { MISCFILES SUTTON_TXT },
         { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 

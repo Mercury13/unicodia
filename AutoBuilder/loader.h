@@ -10,6 +10,7 @@
 #define MISCFILES "MiscFiles\\"
 #define EGYP_UNICODE "signunicode.xml"
 #define EGYP_DESCRIPTION "signdescriptioneng.xml"
+#define SUTTON_TXT "signwritingsequences.txt"
 
 bool checkLoader();
 void runLoader();

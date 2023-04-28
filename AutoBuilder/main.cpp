@@ -17,6 +17,7 @@
 #include "library.h"
 #include "egyptian.h"
 #include "textbase.h"
+#include "sutton.h"
 
 using namespace std::string_view_literals;
 
@@ -494,15 +495,13 @@ int main()
 
     std::cout << "Loading Noto emoji list..." << std::flush;
     NotoData noto = loadNotoEmoji();
-    std::cout << "OK" << std::endl;
-    std::cout << "  Found " << noto.singleChar.size() << " single-char emoji." << std::endl;
+    std::cout << "OK, " << noto.singleChar.size() << " single-char emoji." << std::endl;
 
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
-    std::cout << "OK" << std::endl;
-    std::cout << "  Found " << emoji.count << " emoji, " << emoji.vs16.size() << " of them are VS16." << std::endl;
+    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << std::endl;
 
     lib::StrangeCjk strangeCjk;
 
@@ -510,8 +509,7 @@ int main()
 
     std::cout << "Loading Egyptian base..." << std::flush;
     auto egypBase = egyp::loadBase();
-    std::cout << "OK" << std::endl;
-    std::cout << "  Loaded " << egypBase.size() << " Egyptian hieros." << std::endl;
+    std::cout << "OK, " << egypBase.size() << " hieros." << std::endl;
 
     ///// Library //////////////////////////////////////////////////////////////
 
@@ -523,8 +521,7 @@ int main()
 
     std::cout << "Loading Unicode text base..." << std::flush;
     auto textBase = tx::loadBase();
-    std::cout << "OK" << std::endl;
-    std::cout << "  Loaded " << textBase.size() << " text objects." << std::endl;
+    std::cout << "OK, " << textBase.size() << " text objects." << std::endl;
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -807,7 +804,7 @@ int main()
     os << "};" << '\n';
 
     std::cout << "OK" << std::endl;
-    std::cout << "Found " << std::dec << nChars << " chars, "
+    std::cout << "  Found " << std::dec << nChars << " chars, "
               << nDeprecated << " deprecated, "
               << nSpecialRanges << " special ranges." << std::endl;
 
@@ -839,11 +836,11 @@ int main()
 
         ++nBlocks;
     }
-    std::cout << "Found " << std::dec << nBlocks << " blocks." << std::endl;
+    std::cout << "  Found " << std::dec << nBlocks << " blocks." << std::endl;
 
     ///// Numerics /////////////////////////////////////////////////////////////
 
-    std::cout << "Stockpiled " << nums.size() << " numerics." << std::endl;
+    std::cout << "  Stockpiled " << nums.size() << " numerics." << std::endl;
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
         os << "{ " << std::dec << v.num << ", " << v.denom
@@ -858,6 +855,7 @@ int main()
 
     ///// Write UcAutoLib.cpp //////////////////////////////////////////////////
 
+    std::cout << "Saving library..." << std::flush;
     lib::Node root;
     // Node 1: emoji
     root.children.emplace_back(std::move(emoji.root));
@@ -868,9 +866,11 @@ int main()
     // Node N: strange hiero
     root.children.emplace_back(strangeCjk.give());
     // Write!
-    lib::write(root, "UcAutoLib.cpp");
+    auto libr = lib::write(root, "UcAutoLib.cpp");
+    std::cout << "OK, " << libr.nNodes << " nodes" << std::endl;
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
+
     os.open("UcAutoCount.h");
     os << "#pragma once\n";
     os << '\n';
@@ -882,6 +882,12 @@ int main()
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "}\n";
+
+    ///// Sutton SignWriting ///////////////////////////////////////////////////
+
+    std::cout << "Processing Sutton base..." << std::flush;
+    auto nLines = sw::process();
+    std::cout << "OK, " << nLines << " lines" << std::endl;
 
     ///// Done !! //////////////////////////////////////////////////////////////
 

@@ -19,6 +19,7 @@ SOURCES += \
         library.cpp \
         loader.cpp \
         main.cpp \
+        sutton.cpp \
         textbase.cpp
 
 HEADERS += \
@@ -34,6 +35,7 @@ HEADERS += \
     egyptian.h \
     library.h \
     loader.h \
+    sutton.h \
     textbase.h
 
 

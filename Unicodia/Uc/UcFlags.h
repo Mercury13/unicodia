@@ -43,3 +43,24 @@ namespace uc {
     };
 
 }   // namespace uc
+
+namespace sw {  // Sutton SignWriting
+
+    constexpr char32_t CMIN = 0x1D800;
+    constexpr char32_t CMAX = 0x1DA8B;
+    constexpr int CLEN = CMAX - CMIN + 1;
+    constexpr char32_t F2  = 0x1DA9B;
+    constexpr char32_t F6  = 0x1DA9F;
+    constexpr char32_t R2  = 0x1DAA1;
+    constexpr char32_t R16 = 0x1DAAF;
+    constexpr char32_t VIRTUAL_F1  = F2 - 1;
+    constexpr char32_t VIRTUAL_R1  = R2 - 1;
+
+    constexpr int N_FILL = 6;
+    constexpr int N_ROT = 16;
+
+    struct Char {
+        uint16_t fills[N_FILL] { 0, 0, 0, 0, 0, 0 };
+    };
+
+}   // namespace sw
