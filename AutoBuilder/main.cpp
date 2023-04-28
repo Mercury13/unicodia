@@ -886,8 +886,9 @@ int main()
     ///// Sutton SignWriting ///////////////////////////////////////////////////
 
     std::cout << "Processing Sutton base..." << std::flush;
-    auto nLines = sw::process();
-    std::cout << "OK, " << nLines << " lines" << std::endl;
+    auto swr = sw::process();
+    std::cout << "OK, " << swr.nLines << " lines, first inequal "
+              << std::hex << static_cast<uint32_t>(swr.firstInequal) << std::endl;
 
     ///// Done !! //////////////////////////////////////////////////////////////
 

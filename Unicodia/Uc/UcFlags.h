@@ -49,6 +49,7 @@ namespace sw {  // Sutton SignWriting
     constexpr char32_t CMIN = 0x1D800;
     constexpr char32_t CMAX = 0x1DA8B;
     constexpr int CLEN = CMAX - CMIN + 1;
+    constexpr int NGOODCPS = CLEN;
     constexpr char32_t F2  = 0x1DA9B;
     constexpr char32_t F6  = 0x1DA9F;
     constexpr char32_t R2  = 0x1DAA1;
@@ -60,7 +61,8 @@ namespace sw {  // Sutton SignWriting
     constexpr int N_ROT = 16;
 
     struct Char {
-        uint16_t fills[N_FILL] { 0, 0, 0, 0, 0, 0 };
+        uint16_t fills[N_FILL] { 1, 0, 0, 0, 0, 0 };
     };
 
+    extern const sw::Char data[sw::CLEN];
 }   // namespace sw
