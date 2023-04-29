@@ -4,6 +4,10 @@
 //  Flags are common for AutoBuilder and Unicodia
 //
 
+// C++
+#include <cassert>
+
+// What else used
 #include "u_TypedFlags.h"
 
 namespace uc {
@@ -62,6 +66,21 @@ namespace sw {  // Sutton SignWriting
 
     struct Char {
         uint16_t fills[N_FILL] { 1, 0, 0, 0, 0, 0 };
+
+        constexpr bool operator == (const Char& x) const noexcept = default;
+        constexpr bool hasFill(unsigned i) const {
+            assert(i < N_FILL);
+            return fills[i];
+        }
+        constexpr bool hasRotation(unsigned i) const {
+            assert(i < N_ROT);
+            const uint16_t flag = 1 << i;
+            for (auto& v : fills) {
+                if (v & flag)
+                    return true;
+            }
+            return false;
+        }
     };
 
     extern const sw::Char data[sw::CLEN];

@@ -1785,9 +1785,9 @@ Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
 namespace {
 
     constexpr int SHIFT_FILL = 0;
-    constexpr int SHIFT_FILLPLUS = SHIFT_FILL + uc::SwInfo::N_FILL;
+    constexpr int SHIFT_FILLPLUS = SHIFT_FILL + sw::N_FILL;
     constexpr int SHIFT_ROT = SHIFT_FILLPLUS;
-    constexpr int SHIFT_ROTPLUS = SHIFT_ROT + uc::SwInfo::N_ROT;
+    constexpr int SHIFT_ROTPLUS = SHIFT_ROT + sw::N_ROT;
     constexpr int SHIFT_MISC = SHIFT_ROTPLUS;
     enum class Sw {
         F1  = 1 << (SHIFT_FILL + 0),
@@ -1822,7 +1822,7 @@ namespace {
         R_TO_6 = R1 | R2 | R3 | R4 | R5 | R6,
         R_TO_8 = R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8,
         R_TO_9 = R1 | R2 | R3 | R4 | R5 | R6 | R7 | R8 | R9,
-        R_ALL = ((1 << uc::SwInfo::N_ROT) - 1) << SHIFT_ROT,
+        R_ALL = ((1 << sw::N_ROT) - 1) << SHIFT_ROT,
         R_124568 = R1 | R2 | R4 | R5 | R6 | R8,
         R_XC_3_7_11_15 = R_ALL & ~(R3 | R7 | R11 | R15),
         ALL = F_ALL | R_ALL,
@@ -2023,46 +2023,43 @@ namespace {
 }   // anon namespace
 
 
-uc::SwInfo uc::SwInfo::get(char32_t cp)
+sw::Info::Info(const uc::Cp& aCp) : fCp(aCp)
 {
-    auto index = cp - 0x1D800;
-    uc::SwInfo r;
+    auto index = fCp.subj.ch32() - 0x1D800;
     if (index < std::size(signWritingData)) {
         // OK, we are here!
-        r.flags = signWritingData[index].numeric();
-        r.fCp = cp;
+        flags = signWritingData[index].numeric();
     }
-    return r;
 }
 
 
-bool uc::SwInfo::hasFill0(int i) const
+bool sw::Info::hasFill0(int i) const
 {
-    if (i >= uc::SwInfo::N_FILL)
+    if (i >= N_FILL)
         return false;
     return flags & (static_cast<int>(Sw::F1) << i);
 }
 
 
-bool uc::SwInfo::hasRot0(int i) const
+bool sw::Info::hasRot0(int i) const
 {
-    if (i >= uc::SwInfo::N_ROT)
+    if (i >= N_ROT)
         return false;
     return flags & (static_cast<int>(Sw::R1) << i);
 }
 
 
-bool uc::SwInfo::isSimple() const
+bool sw::Info::isSimple() const
 {
     return Flags<Sw>(flags).have(Sw::NO_TRANS);
 }
 
 
-char32_t uc::SwInfo::baseChar(int fill, int rot) const
+char32_t sw::Info::baseChar(int fill, int rot) const
 {
     if (!Flags<Sw>(flags).have(Sw::FINEGRAINED))
         return 0;
-    switch (fCp) {
+    switch (subj()) {
     case 0x1DA5E:
         if (fill == 1 && rot < 5)
             return 0x1D9FF;     // head
@@ -2072,11 +2069,11 @@ char32_t uc::SwInfo::baseChar(int fill, int rot) const
 }
 
 
-std::u8string_view uc::SwInfo::note() const
+std::u8string_view sw::Info::note() const
 {
     if (!Flags<Sw>(flags).have(Sw::FINEGRAINED))
         return {};
-    switch (fCp) {
+    switch (subj()) {
     case 0x1DA5E:
         return loc::get("Prop.Sutton.01");
     default: return {};

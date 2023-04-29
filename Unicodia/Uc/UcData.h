@@ -981,31 +981,6 @@ namespace uc {
 
     QFont funkyFont(FontPlace place, int size, char32_t trigger);
 
-    // Opaque structure that holds Sutton SignWriting character info.
-    class SwInfo {
-    public:
-        static constexpr int N_FILL = 6;
-        static constexpr int N_ROT = 16;
-
-        /// Pseudo-ctor
-        static SwInfo get(char32_t cp);
-
-        char32_t cp() const { return fCp; }
-        /// @return [+] It is actually a SignWriting character, but has no variations
-        bool isSimple() const;
-        bool hasSmth() const { return flags; }
-        /// @return [+] has at least one char of fill, 0-based
-        bool hasFill0(int i) const;
-        /// @return [+] has at least one char of rotation, 0-based
-        bool hasRot0(int i) const;
-        operator bool() const { return hasSmth(); }
-        char32_t baseChar(int fill, int rot) const;
-        std::u8string_view note() const;
-    private:
-        uint32_t flags = 0;
-        char32_t fCp = 0;
-    };
-
     void finishTranslation(
             const std::unordered_map<char32_t, int>& sortOrder,
             std::u32string_view ellipsisBlocks);
@@ -1039,6 +1014,34 @@ namespace uc {
     inline Action stopIf(bool x) noexcept { return static_cast<Action>(x); }
 
 }   // namespace uc
+
+namespace sw {
+
+    // Opaque structure that holds Sutton SignWriting character info.
+    class Info {
+    public:
+        /// Pseudo-ctor
+        explicit Info(const uc::Cp& cp);
+
+        const uc::Cp& cp() const { return fCp; }
+        char32_t subj() const { return fCp.subj; }
+        /// @return [+] It is actually a SignWriting character, but has no variations
+        bool isSimple() const;
+        bool hasSmth() const { return flags; }
+        /// @return [+] has at least one char of fill, 0-based
+        bool hasFill0(int i) const;
+        /// @return [+] has at least one char of rotation, 0-based
+        bool hasRot0(int i) const;
+        operator bool() const { return hasSmth(); }
+        char32_t baseChar(int fill, int rot) const;
+        std::u8string_view note() const;
+    private:
+        const uc::Cp& fCp;
+        uint32_t flags = 0;
+    };
+
+}   // sw
+
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
     { return uc::StyleSheet{std::string_view { data, n }}; }

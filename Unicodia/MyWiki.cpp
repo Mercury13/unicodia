@@ -991,7 +991,7 @@ namespace {
         text += KEY_END;
     }
 
-    void appendSgnwVariants(QString& text, const uc::Cp& cp, const uc::SwInfo& sw)
+    void appendSgnwVariants(QString& text, const uc::Cp& cp, const sw::Info& sw)
     {
         if (!sw)
             return;
@@ -1007,7 +1007,7 @@ namespace {
         text += "<table class='swt'>";
         // Draw head
         text += "<tr><th>&nbsp;</th>";
-        for (int col = 0; col < uc::SwInfo::N_FILL; ++col) {
+        for (int col = 0; col < sw::N_FILL; ++col) {
             if (sw.hasFill0(col)) {
                 text += "<th>";
                 if (col == 0) {
@@ -1019,7 +1019,7 @@ namespace {
                 text += "</th>";
             }
         }
-        for (int row = 0; row < uc::SwInfo::N_ROT; ++row) {
+        for (int row = 0; row < sw::N_ROT; ++row) {
             if (sw.hasRot0(row)) {
                 // Draw vert header
                 text += "<tr><th>";
@@ -1031,9 +1031,9 @@ namespace {
                 }
                 text += "</th>";
                 // Draw cell
-                for (int col = 0; col < uc::SwInfo::N_FILL; ++col) {
+                for (int col = 0; col < sw::N_FILL; ++col) {
                     if (sw.hasFill0(col)) {
-                        char32_t cp = sw.cp();
+                        char32_t cp = sw.subj();
                         auto copyable = QString::fromUcs4(&cp, 1);
                         if (col != 0)
                             str::append(copyable, static_cast<char32_t>(0x1DA9A + col));
@@ -1115,7 +1115,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     char buf[30];
     QString text;
 
-    auto sw = uc::SwInfo::get(cp.subj);
+    sw::Info sw(cp);
 
     appendStylesheet(text, sw);
     str::append(text, "<h1>");
