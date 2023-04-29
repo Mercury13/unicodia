@@ -77,12 +77,30 @@ namespace {
         return r;
     }
 
+    void removeLoner(sw::Char& c)
+    {
+        // Loner is a surely unused bit (0,0)
+        if (c.fills[0] != 1)
+            return;
+        for (auto v : c.fills) {
+            if (v > 1) {    // 0 and 1 do not make a loner
+                c.fills[0] = 0;
+                return;
+            }
+        }
+    }
+
     bool isEqual(const sw::Char& x)
     {
-        auto q = x.fills[0];
+        uint16_t sample = 0;
         for (auto& v : x.fills) {
-            if (v != 0 && v != q)
-                return false;
+            if (v != 0) {
+                if (sample == 0) {
+                    sample = v;
+                } else if (v != sample) {
+                    return false;
+                }
+            }
         }
         return true;
     }
@@ -126,9 +144,17 @@ sw::Result sw::process()
             ++r.nLines;
         }
     }
+
     // Check data
     if (usedCps.size() != sw::NGOODCPS)
         throw std::logic_error("Not all CPs are touched");
+
+    // Remove loners
+    for (auto& v : swdata) {
+        removeLoner(v);
+    }
+
+    // Check again
     r.firstInequal = checkForEquality(swdata);
 
     // Write data

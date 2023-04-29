@@ -65,7 +65,7 @@ namespace sw {  // Sutton SignWriting
     constexpr int N_ROT = 16;
 
     struct Char {
-        uint16_t fills[N_FILL] { 1, 0, 0, 0, 0, 0 };
+        uint16_t fills[N_FILL] { 0, 0, 0, 0, 0, 0 };
 
         constexpr bool operator == (const Char& x) const noexcept = default;
         constexpr bool hasFill(unsigned i) const {
