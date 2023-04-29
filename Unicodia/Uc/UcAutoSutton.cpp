@@ -1,6 +1,6 @@
 // Automatically generated, do not edit!
 #include "UcFlags.h"
-const sw::Char sw::data[sw::CLEN] = {
+constinit const sw::Char sw::data[sw::CLEN] = {
 {{65535,65535,65535,65535,65535,65535,}},  // 1d800
 {{65535,65535,65535,65535,65535,65535,}},  // 1d801
 {{65535,65535,65535,65535,65535,65535,}},  // 1d802

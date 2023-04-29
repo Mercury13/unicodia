@@ -135,7 +135,7 @@ sw::Result sw::process()
     std::ofstream os("UcAutoSutton.cpp");
     os << "// Automatically generated, do not edit!" "\n";
     os << R"(#include "UcFlags.h")" "\n";
-    os << "const sw::Char sw::data[sw::CLEN] = {" "\n";
+    os << "constinit const sw::Char sw::data[sw::CLEN] = {" "\n";
 
     for (int i = 0; i < sw::CLEN; ++i) {
         os << "{{";
