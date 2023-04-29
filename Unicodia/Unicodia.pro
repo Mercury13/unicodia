@@ -55,6 +55,7 @@ SOURCES += \
     Uc/UcBlocks.cpp \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
+    Uc/UcFonts.cpp \
     Uc/UcSearch.cpp \
     WiOsStyle.cpp \
     WiSample.cpp \

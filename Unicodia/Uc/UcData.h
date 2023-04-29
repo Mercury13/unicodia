@@ -1017,6 +1017,8 @@ namespace uc {
 
 namespace sw {
 
+    extern const sw::Char SIMPLE_CHAR, EMPTY_CHAR;
+
     // Opaque structure that holds Sutton SignWriting character info.
     class Info {
     public:
@@ -1026,8 +1028,8 @@ namespace sw {
         const uc::Cp& cp() const { return fCp; }
         char32_t subj() const { return fCp.subj; }
         /// @return [+] It is actually a SignWriting character, but has no variations
-        bool isSimple() const;
-        bool hasSmth() const { return flags; }
+        bool isSimple() const { return (*fData == SIMPLE_CHAR); }
+        bool hasSmth() const { return (fData != &EMPTY_CHAR); }
         /// @return [+] has at least one char of fill, 0-based
         bool hasFill0(int i) const;
         /// @return [+] has at least one char of rotation, 0-based
@@ -1037,10 +1039,10 @@ namespace sw {
         std::u8string_view note() const;
     private:
         const uc::Cp& fCp;
-        uint32_t flags = 0;
+        const sw::Char* fData;
     };
 
-}   // sw
+}   // namespace sw
 
 
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
