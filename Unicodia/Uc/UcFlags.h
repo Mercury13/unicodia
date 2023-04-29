@@ -65,22 +65,20 @@ namespace sw {  // Sutton SignWriting
     constexpr int N_ROT = 16;
 
     struct Char {
-        uint16_t fills[N_FILL] { 0, 0, 0, 0, 0, 0 };
+        uint16_t rot;
+        uint8_t fill;
+
+        constexpr bool hasFill(unsigned i) const {
+            assert(i < sw::N_FILL);
+            return fill & (1 << i);
+        }
+
+        constexpr bool hasRotation(unsigned i) const {
+            assert(i < sw::N_ROT);
+            return rot & (1 << i);
+        }
 
         constexpr bool operator == (const Char& x) const noexcept = default;
-        constexpr bool hasFill(unsigned i) const {
-            assert(i < N_FILL);
-            return fills[i];
-        }
-        constexpr bool hasRotation(unsigned i) const {
-            assert(i < N_ROT);
-            const uint16_t flag = 1 << i;
-            for (auto& v : fills) {
-                if (v & flag)
-                    return true;
-            }
-            return false;
-        }
     };
 
     extern const sw::Char data[sw::CLEN];

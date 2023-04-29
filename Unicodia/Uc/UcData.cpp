@@ -32,8 +32,8 @@ constinit const uc::InputMethods uc::InputMethods::NONE {};
 constexpr bool FORCE_TOFU = false;
 
 constinit const sw::Char
-    sw::EMPTY_CHAR    { .fills { 0,0,0,0,0,0 }},
-    sw::SIMPLE_CHAR   { .fills { 1,0,0,0,0,0 }};
+    sw::EMPTY_CHAR    { .rot=0, .fill=0 },
+    sw::SIMPLE_CHAR   { .rot=1, .fill=1 };
 
 namespace fst {
     constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;

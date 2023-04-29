@@ -17,6 +17,93 @@
 
 namespace {
 
+    struct BigChar {
+        uint16_t fills[sw::N_FILL] { 0, 0, 0, 0, 0, 0 };
+
+        constexpr bool operator == (const BigChar& x) const noexcept = default;
+        [[maybe_unused]] bool hasFill(unsigned i) const;
+        [[maybe_unused]] bool hasRotation(unsigned i) const;
+
+        /// @return  mask of used rotations: 5 = used rotations ⌀ and R3
+        uint16_t usedRotations() const;
+        /// @return  mask of used fills: 5 = used fills ⌀ and F3
+        uint8_t usedFills() const;
+
+        /// Removes a loner (char w/o fill)
+        /// if other rotations are larger
+        void removeLoner();
+
+        /// @return [+] all used fills have equal set of rotations
+        ///         (=all used rotations have equal set of fills)
+        ///      e.g. 0, 5, 0, 5, 0, 0 → true
+        ///      e.g. 0, 5, 0, 6, 0, 0 → false
+        bool isEqual() const;
+    };
+
+    bool BigChar::hasFill(unsigned i) const
+    {
+        assert(i < sw::N_FILL);
+        return fills[i];
+    }
+
+    bool BigChar::hasRotation(unsigned i) const
+    {
+        assert(i < sw::N_ROT);
+        const uint16_t flag = 1 << i;
+        for (auto& v : fills) {
+            if (v & flag)
+                return true;
+        }
+        return false;
+    }
+
+    uint16_t BigChar::usedRotations() const
+    {
+        uint16_t r = 0;
+        for (auto& v : fills)
+            r |= v;
+        return r;
+    }
+
+    uint8_t BigChar::usedFills() const
+    {
+        uint8_t r = 0;
+        for (int i = 0; i < sw::N_FILL; ++i) {
+            if (fills[i] != 0) {
+                r |= (1 << i);
+            }
+        }
+        return r;
+    }
+
+    void BigChar::removeLoner()
+    {
+        // Loner is a surely unused bit (0,0)
+        if (fills[0] != 1)
+            return;
+        for (auto v : fills) {
+            if (v > 1) {    // 0 and 1 do not make a loner
+                fills[0] = 0;
+                return;
+            }
+        }
+    }
+
+    bool BigChar::isEqual() const
+    {
+        uint16_t sample = 0;
+        for (auto& v : fills) {
+            if (v != 0) {
+                if (sample == 0) {
+                    sample = v;
+                } else if (v != sample) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
     SafeVector<char32_t> decodeCps(std::string_view line)
     {
         auto s1 = str::trimSv(line);
@@ -77,39 +164,11 @@ namespace {
         return r;
     }
 
-    void removeLoner(sw::Char& c)
-    {
-        // Loner is a surely unused bit (0,0)
-        if (c.fills[0] != 1)
-            return;
-        for (auto v : c.fills) {
-            if (v > 1) {    // 0 and 1 do not make a loner
-                c.fills[0] = 0;
-                return;
-            }
-        }
-    }
-
-    bool isEqual(const sw::Char& x)
-    {
-        uint16_t sample = 0;
-        for (auto& v : x.fills) {
-            if (v != 0) {
-                if (sample == 0) {
-                    sample = v;
-                } else if (v != sample) {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
-    char32_t checkForEquality(const sw::Char (&swdata)[sw::CLEN])
+    char32_t checkForEquality(const BigChar (&swdata)[sw::CLEN])
     {
         for (int i = 0; i < sw::CLEN; ++i) {
             auto& d = swdata[i];
-            if (!isEqual(d)) {
+            if (!d.isEqual()) {
                 return i + sw::CMIN;
             }
         }
@@ -120,7 +179,7 @@ namespace {
 
 sw::Result sw::process()
 {
-    sw::Char swdata[sw::CLEN];
+    BigChar swdata[sw::CLEN];
     std::unordered_set<char32_t> usedCps;
     Result r;
 
@@ -151,7 +210,7 @@ sw::Result sw::process()
 
     // Remove loners
     for (auto& v : swdata) {
-        removeLoner(v);
+        v.removeLoner();
     }
 
     // Check again
@@ -164,12 +223,9 @@ sw::Result sw::process()
     os << "constinit const sw::Char sw::data[sw::CLEN] = {" "\n";
 
     for (int i = 0; i < sw::CLEN; ++i) {
-        os << "{{";
         auto& d = swdata[i];
-        for (auto& v : d.fills) {
-            os << v << ",";
-        }
-        os << "}},  // " << std::hex << (i + sw::CMIN) << std::dec << '\n';
+        os << "{.rot=" << d.usedRotations() << ",.fill=" << int(d.usedFills())
+           << "},  // " << std::hex << (i + sw::CMIN) << std::dec << '\n';
     }
 
     os << "};" "\n";
