@@ -199,7 +199,7 @@ namespace uc {
           Z_NTD_1,
           Z_NTD_2,
           Z_NTD_3,
-          Z_DEJ_4,
+          Z_NTD_4,
          DEJAVU,
          FUNKY,
           Z_FUN_1,
