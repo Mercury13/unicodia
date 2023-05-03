@@ -1543,7 +1543,10 @@ char32_t sw::Info::baseChar(int fill, int rot) const
         if (fill == 1 && rot < 5)
             return 0x1D9FF;     // head
         return 0;
-    default: return 0;
+    default:
+        //if (cp().category().upCat == uc::UpCategory::MARK)
+        //    return 0x25CC;
+        return 0;
     }
 }
 
