@@ -194,12 +194,6 @@ namespace uc {
          MUSIC_BIGGER,
          MUSIC_NORMAL,
          GADUGI,
-        /// @todo [semi-tofu] Check Noto Math 2B18/19. If OK, font to NORMAL, remove 2B16…19 in AutoBuilder
-         NORMAL_THEN_DEJAVU,
-          Z_NTD_1,
-          Z_NTD_2,
-          Z_NTD_3,
-          Z_NTD_4,
          DEJAVU,
          FUNKY,
           Z_FUN_1,

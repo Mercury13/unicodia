@@ -361,8 +361,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZMAT, 1 }, EcScript::NONE, EcFont::MATH },
     // Misc syms & arrows OK
     { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
-            "Miscellaneous Symbols and Arrows", MyName::INST,
-            EcScript::NONE, EcFont::NORMAL_THEN_DEJAVU },
+            "Miscellaneous Symbols and Arrows", MyName::INST },
     // Glagolitic OK
     { 0x2C00, 0x2C5F, { 0x2C19, EcContinent::EUROPE },
             "Glagolitic", { EcScript::Glag, 0 }, EcScript::Glag },
