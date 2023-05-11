@@ -41,7 +41,7 @@ constexpr std::string_view CONFIG_NAME = "config.xml";
 
 namespace {
 
-    ec::Array<std::string_view, BlockOrder> orderNames {
+    constinit const ec::Array<std::string_view, BlockOrder> orderNames {
         "alpha", "continent", "code", "tech"
     };
 
