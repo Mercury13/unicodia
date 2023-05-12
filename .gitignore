@@ -68,3 +68,6 @@ emoji.zip
 Font-Source/GlyphWiki/AutoRemade/*.svg
 Font-Source/GlyphWiki/UnicodiaHan1.ttf
 Font-Source/GlyphWiki/UnicodiaHan.ttf
+
+# Misc files
+*.log
