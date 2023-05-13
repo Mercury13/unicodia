@@ -1542,7 +1542,7 @@ char32_t sw::Info::baseChar(int fill, int rot) const
     case 0x1DA5E:
         if (fill == 1 && rot < 5)
             return 0x1D9FF;     // head
-        return 0;
+        [[fallthrough]];
     default:
         if (cp().category().upCat == uc::UpCategory::MARK) {
             return (fill < fData->minSpecialFill) ? 0x25CC : 0;
