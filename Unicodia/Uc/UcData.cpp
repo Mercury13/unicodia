@@ -32,8 +32,8 @@ constinit const uc::InputMethods uc::InputMethods::NONE {};
 constexpr bool FORCE_TOFU = false;
 
 constinit const sw::Char
-    sw::EMPTY_CHAR    { .rot=0, .fill=0 },
-    sw::SIMPLE_CHAR   { .rot=1, .fill=1 };
+    sw::EMPTY_CHAR    { .rot=0, .fill=0, .minSpecialFill=9 },
+    sw::SIMPLE_CHAR   { .rot=1, .fill=1, .minSpecialFill=9 };
 
 namespace fst {
     constexpr auto DEFAULT = FORCE_TOFU ? TOFU : COMPAT;
@@ -1544,8 +1544,9 @@ char32_t sw::Info::baseChar(int fill, int rot) const
             return 0x1D9FF;     // head
         return 0;
     default:
-        if (cp().category().upCat == uc::UpCategory::MARK)
-            return 0x25CC;
+        if (cp().category().upCat == uc::UpCategory::MARK) {
+            return (fill < fData->minSpecialFill) ? 0x25CC : 0;
+        }
         return 0;
     }
 }

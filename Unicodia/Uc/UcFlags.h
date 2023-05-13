@@ -67,6 +67,7 @@ namespace sw {  // Sutton SignWriting
     struct Char {
         uint16_t rot;
         uint8_t fill;
+        uint8_t minSpecialFill;
 
         constexpr bool hasFill(unsigned i) const {
             assert(i < sw::N_FILL);
