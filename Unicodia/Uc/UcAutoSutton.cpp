@@ -645,7 +645,7 @@ constinit const sw::Char sw::data[sw::CLEN] = {
 {.rot=255,.fill=3,.minSpecialFill=9},  // 1da81
 {.rot=511,.fill=1,.minSpecialFill=9},  // 1da82
 {.rot=255,.fill=1,.minSpecialFill=9},  // 1da83
-{.rot=255,.fill=63,.minSpecialFill=9},  // 1da84
+{.rot=255,.fill=63,.minSpecialFill=1},  // 1da84
 {.rot=255,.fill=31,.minSpecialFill=9},  // 1da85
 {.rot=65535,.fill=63,.minSpecialFill=9},  // 1da86
 {.rot=255,.fill=15,.minSpecialFill=9},  // 1da87

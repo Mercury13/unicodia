@@ -45,7 +45,8 @@ namespace {
         { 0x1DA60, 3 }, { 0x1DA61, 2 }, { 0x1DA62, 4 }, { 0x1DA63, 3 },
         { 0x1DA64, 4 }, { 0x1DA65, 3 }, { 0x1DA66, 4 }, { 0x1DA67, 4 },
         { 0x1DA68, 2 }, { 0x1DA69, 2 }, { 0x1DA6A, 2 }, { 0x1DA6B, 2 },
-        { 0x1DA6C, 2 }
+        { 0x1DA6C, 2 },
+        { 0x1DA84, 2 },
     };
 
     struct BigChar {
