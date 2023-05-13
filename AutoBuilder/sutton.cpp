@@ -15,7 +15,38 @@
 #include "library.h"
 #include "UcFlags.h"
 
+
 namespace {
+
+    const std::unordered_map<char32_t, int> minSpecialRotation {
+                        { 0x1DA01, 6 }, { 0x1DA02, 6 }, { 0x1DA03, 6 },
+        { 0x1DA04, 2 }, { 0x1DA05, 2 }, { 0x1DA06, 2 }, { 0x1DA07, 3 },
+        { 0x1DA08, 2 }, { 0x1DA09, 2 }, { 0x1DA0A, 4 }, { 0x1DA0B, 4 },
+        { 0x1DA0C, 4 }, { 0x1DA0D, 4 }, { 0x1DA0E, 4 }, { 0x1DA0F, 4 },
+        { 0x1DA10, 4 }, { 0x1DA11, 2 }, { 0x1DA12, 2 }, { 0x1DA13, 2 },
+        { 0x1DA14, 4 }, { 0x1DA15, 4 }, { 0x1DA16, 4 }, { 0x1DA17, 4 },
+        { 0x1DA18, 4 }, { 0x1DA19, 4 }, { 0x1DA1A, 4 }, { 0x1DA1B, 4 },
+        { 0x1DA1C, 4 }, { 0x1DA1D, 4 }, { 0x1DA1E, 4 }, { 0x1DA1F, 4 },
+        { 0x1DA20, 4 }, { 0x1DA21, 2 }, { 0x1DA22, 2 }, { 0x1DA23, 2 },
+        { 0x1DA24, 2 }, { 0x1DA25, 2 }, { 0x1DA26, 2 }, { 0x1DA27, 2 },
+        { 0x1DA28, 2 }, { 0x1DA29, 2 }, { 0x1DA2A, 4 }, { 0x1DA2B, 4 },
+        { 0x1DA2C, 4 }, { 0x1DA2D, 4 }, { 0x1DA2E, 4 }, { 0x1DA2F, 4 },
+        { 0x1DA30, 4 }, { 0x1DA31, 2 }, { 0x1DA32, 2 }, { 0x1DA33, 2 },
+        { 0x1DA34, 2 }, { 0x1DA35, 4 }, { 0x1DA36, 4 },         { 0x1DA3B, 2 },
+        { 0x1DA3C, 2 }, { 0x1DA3D, 2 }, { 0x1DA3E, 2 }, { 0x1DA3F, 2 },
+        { 0x1DA40, 2 }, { 0x1DA41, 2 }, { 0x1DA42, 2 }, { 0x1DA43, 2 },
+        { 0x1DA44, 2 }, { 0x1DA45, 2 }, { 0x1DA46, 2 }, { 0x1DA47, 2 },
+        { 0x1DA48, 2 }, { 0x1DA49, 2 }, { 0x1DA4A, 2 }, { 0x1DA4B, 2 },
+        { 0x1DA4C, 2 }, { 0x1DA4D, 2 }, { 0x1DA4E, 2 }, { 0x1DA4F, 2 },
+        { 0x1DA50, 2 }, { 0x1DA51, 2 }, { 0x1DA52, 2 }, { 0x1DA53, 2 },
+        { 0x1DA54, 2 }, { 0x1DA55, 2 }, { 0x1DA56, 4 }, { 0x1DA57, 4 },
+        { 0x1DA58, 4 }, { 0x1DA59, 2 }, { 0x1DA5A, 2 }, { 0x1DA5B, 2 },
+        { 0x1DA5C, 2 }, { 0x1DA5D, 2 }, { 0x1DA5E, 3 }, { 0x1DA5F, 4 },
+        { 0x1DA60, 3 }, { 0x1DA61, 2 }, { 0x1DA62, 4 }, { 0x1DA63, 3 },
+        { 0x1DA64, 4 }, { 0x1DA65, 3 }, { 0x1DA66, 4 }, { 0x1DA67, 4 },
+        { 0x1DA68, 2 }, { 0x1DA69, 2 }, { 0x1DA6A, 2 }, { 0x1DA6B, 2 },
+        { 0x1DA6C, 2 }
+    };
 
     struct BigChar {
         uint16_t fills[sw::N_FILL] { 0, 0, 0, 0, 0, 0 };
@@ -224,7 +255,15 @@ sw::Result sw::process()
 
     for (int i = 0; i < sw::CLEN; ++i) {
         auto& d = swdata[i];
-        os << "{.rot=" << d.usedRotations() << ",.fill=" << int(d.usedFills())
+        auto cp = i + sw::CMIN;
+        int minSpecFill = 9;
+        auto it = minSpecialRotation.find(cp);
+        if (it != minSpecialRotation.end()) {
+            minSpecFill = it->second - 1;
+        }
+        os << "{.rot=" << d.usedRotations()
+           << ",.fill=" << int(d.usedFills())
+           << ",.minSpecialFill=" << minSpecFill
            << "},  // " << std::hex << (i + sw::CMIN) << std::dec << '\n';
     }
 
