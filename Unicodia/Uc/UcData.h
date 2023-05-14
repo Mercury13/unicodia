@@ -1030,8 +1030,7 @@ namespace sw {
         /// @return [+] has at least one char of rotation, 0-based
         bool hasRot0(int i) const;
         operator bool() const { return hasSmth(); }
-        char32_t baseChar(int fill, int rot) const;
-        std::u8string_view note() const;
+        char32_t baseChar() const noexcept;
     private:
         const uc::Cp& fCp;
         const sw::Char* fData;

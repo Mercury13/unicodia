@@ -1536,28 +1536,22 @@ bool sw::Info::hasRot0(int i) const
 }
 
 
-char32_t sw::Info::baseChar(int fill, int rot) const
+char32_t sw::Info::baseChar() const noexcept
 {
-    switch (subj()) {
-    case 0x1DA5E:
-        if (fill == 1 && rot < 5)
-            return 0x1D9FF;     // head
-        [[fallthrough]];
-    default:
-        if (cp().category().upCat == uc::UpCategory::MARK) {
-            return (fill < fData->minSpecialFill) ? 0x25CC : 0;
-        }
-        return 0;
-    }
-}
+//    switch (subj()) {
+//    case 0x1DA5E:
+//        if (fill == 1 && rot < 5)
+//            return 0x1D9FF;     // head
+//        [[fallthrough]];
+//    default:
+//        if (cp().category().upCat == uc::UpCategory::MARK) {
+//            return 0x25CC;
+//        }
+//        return 0;
+//    }
 
-
-std::u8string_view sw::Info::note() const
-{
-    switch (subj()) {
-    case 0x1DA5E:
-        return loc::get("Prop.Sutton.01");
-    default: return {};
+    if (cp().category().upCat == uc::UpCategory::MARK) {
+        return 0x25CC;
     }
 }
 
