@@ -1042,7 +1042,7 @@ namespace {
                         text += "<td><a href='c:";
                             text += copyable;
                             text += "'>";
-                        if (auto bc = sw.baseChar(col, row))
+                        if (auto bc = sw.baseChar())
                             str::append(text, bc);
                         text += copyable;
                         text += "</a>";
@@ -1052,12 +1052,6 @@ namespace {
         }
         // Draw chars
         text += "</table>";
-
-        if (auto note = sw.note(); !note.empty()) {
-            text += "<h4>* ";
-            appendWiki(text, cp, note);
-            text += "</h4>";
-        }
     }
 
     template <auto... Params>

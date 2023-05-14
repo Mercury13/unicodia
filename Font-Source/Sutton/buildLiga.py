@@ -1,11 +1,22 @@
 # Build Sutton ligatures!
 
 import fontforge
+from enum import Enum
 
-def findExactByName(lookup, name):
+class CharType(Enum):
+  NORMAL = 0,
+  LIGATURE = 1
+
+class FindResult:
+  def __init__(self, glyph, type):
+    self.glyph = glyph
+    self.isFound = not(glyph is None)
+    self.type = type
+
+def findExactByName(lookup, name, isEx):
   if name in lookup:
-    return lookup[name]
-  return None
+    return FindResult(lookup[name], isEx)
+  return FindResult(None, False)
   
 def sgnwGlyphName(code, fill=1, rot=1, alt=''):
   name = "u{}{:X}".format(alt, code)
@@ -17,11 +28,11 @@ def sgnwGlyphName(code, fill=1, rot=1, alt=''):
 
 def findExactByCode(lookup, code, fill=1, rot=1):
   gname = sgnwGlyphName(code, fill, rot)
-  r1 = findExactByName(lookup, gname)
-  if not (r1 is None):
+  r1 = findExactByName(lookup, gname, CharType.NORMAL)
+  if r1.isFound:
     return r1
   gname = sgnwGlyphName(code, fill, rot, 'x')
-  r1 = findExactByName(lookup, gname)
+  r1 = findExactByName(lookup, gname, CharType.LIGATURE)
   return r1
 
 # Start scripting
@@ -40,8 +51,8 @@ for code in range(0x1D800, 0x1DA8B):
   subtableName = "{:X}".format(code)
   mainName = sgnwGlyphName(code)
   print(mainName, file=logFile, flush=True)
-  mainGlyph = findExactByName(lookup, mainName)
-  if not (mainGlyph is None):
+  mainRes = findExactByName(lookup, mainName, CharType.NORMAL)
+  if mainRes.isFound:
     for fill in range (1, 7):
       fillSuff = ""
       if fill > 1:
@@ -51,9 +62,13 @@ for code in range(0x1D800, 0x1DA8B):
           rotSuff = ""
           if rot > 1:
             rotSuff = " R{}".format(rot)
-          thatGlyph = findExactByCode(lookup, code, fill, rot)
-          if not (thatGlyph is None):
+          thatRes = findExactByCode(lookup, code, fill, rot)
+          if thatRes.isFound:
             if not wasSubtableAdded:
-              subtable = font.addLookupSubtable("Sgnw liga", subtableName)
+              font.addLookupSubtable("Sgnw liga", subtableName)
               wasSubtableAdded = True
-            thatGlyph.addPosSub(subtableName, mainName + fillSuff + rotSuff)
+            glyphComposition = mainName + fillSuff + rotSuff
+            if thatRes.type == CharType.LIGATURE:
+              thatRes.glyph.addPosSub(subtableName, 'uni25CC ' + glyphComposition)
+              thatRes.glyph.addPosSub(subtableName, 'u1D9FF ' + glyphComposition)
+            thatRes.glyph.addPosSub(subtableName, glyphComposition)
