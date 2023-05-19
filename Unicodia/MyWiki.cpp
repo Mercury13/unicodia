@@ -596,11 +596,6 @@ namespace {
     inline const uc::Font& getFont(const X& obj)
         { return obj.font(); }
 
-    template <>
-    inline const uc::Font& getFont(const uc::Cp& obj)
-        { return *obj.font(uc::MatchLast::NO); }
-
-
     template <class X>
     void appendWiki(QString& text, const X& obj, std::u8string_view x)
     {
@@ -991,7 +986,7 @@ namespace {
         text += KEY_END;
     }
 
-    void appendSgnwVariants(QString& text, const uc::Cp& cp, const sw::Info& sw)
+    void appendSgnwVariants(QString& text, const sw::Info& sw)
     {
         if (!sw)
             return;
@@ -1164,7 +1159,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         text += "</h4>";
     }
 
-    appendSgnwVariants(text, cp, sw);
+    appendSgnwVariants(text, sw);
 
     {   // Info box
         str::append(text, "<p>");
