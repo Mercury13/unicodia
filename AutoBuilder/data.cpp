@@ -1246,6 +1246,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Hmnp
     EX("Nyiakeng Puachue Hmong circled Ca") // IDK what to do
     EX("Nyiakeng Puachue Hmong syllable lengthener")  // Syllable is not keyword here
+        // Mong
+    EX("Mongolian vowel separator")     // Vowel is not keyword
         // Olck
     EX("Ol Chiki mu ttuddag")           // Conflict with Greek Mu
         // Plrd
