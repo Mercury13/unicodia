@@ -1753,6 +1753,8 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
     { 0x00A0, "!" },    // NBSP bas abbreviations, turn them to aliases
     { 0x115F, "HC F" }, // Hangul starting filler
     { 0x1160, "HJ F" }, // Hangul medial filler
+    { 0x17B4, "KIV AQ" }, // Khmer intependent vowel Aq
+    { 0x17B5, "KIV AA" }, // Khmer intependent vowel Aa
     { 0x2028, "LSEP" }, // Line separator, somehow has no abbrev
     { 0x2029, "PSEP" }, // Paragraph separator, same
     { 0x202F, "!" },    // Narrow NBSP has abbrevs, turn them to aliases
