@@ -1553,6 +1553,7 @@ char32_t sw::Info::baseChar() const noexcept
     if (cp().category().upCat == uc::UpCategory::MARK) {
         return 0x25CC;
     }
+    return 0;
 }
 
 
