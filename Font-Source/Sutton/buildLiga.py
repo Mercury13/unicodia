@@ -35,6 +35,11 @@ def findExactByCode(lookup, code, fill=1, rot=1):
   r1 = findExactByName(lookup, gname, CharType.LIGATURE)
   return r1
 
+# Table: upper umlauts
+upperUmlauts = set([0x1DA01, 0x1DA02, 0x1DA03, 0x1DA04, 0x1DA05, 0x1DA08, 0x1DA09, 0x1DA75])
+# These umlauts are PARTLY upper
+upperUmlautsAsText = 'u1DA07_F2 u1DA07_F2_R2'
+
 # Start scripting
 fontforge.runInitScripts()
 font = fontforge.activeFont()
@@ -46,6 +51,7 @@ for x in font.glyphs():
 
 logFile = open('x.log', 'w')
 
+# go through Sutton table
 for code in range(0x1D800, 0x1DA8B):
   wasSubtableAdded = False
   subtableName = "{:X}".format(code)
@@ -58,11 +64,11 @@ for code in range(0x1D800, 0x1DA8B):
       if fill > 1:
         fillSuff = " F{}".format(fill)
       for rot in range (1, 17):
+        thatRes = findExactByCode(lookup, code, fill, rot)
         if fill != 1 or rot != 1:
           rotSuff = ""
           if rot > 1:
             rotSuff = " R{}".format(rot)
-          thatRes = findExactByCode(lookup, code, fill, rot)
           if thatRes.isFound:
             if not wasSubtableAdded:
               font.addLookupSubtable("Sgnw liga", subtableName)
@@ -72,3 +78,10 @@ for code in range(0x1D800, 0x1DA8B):
               thatRes.glyph.addPosSub(subtableName, 'uni25CC ' + glyphComposition)
               thatRes.glyph.addPosSub(subtableName, 'u1D9FF ' + glyphComposition)
             thatRes.glyph.addPosSub(subtableName, glyphComposition)
+        if thatRes.isFound and thatRes.type == CharType.NORMAL:
+          if code in upperUmlauts:
+            upperUmlautsAsText = upperUmlautsAsText + ' ' + thatRes.glyph.glyphname
+
+# IDK how to modify upper umlaut lookup → do it manually
+print('>> UPPER UMLAUTS HERE', file=logFile)
+print(upperUmlautsAsText, file=logFile, flush=True)
