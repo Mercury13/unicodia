@@ -1535,23 +1535,13 @@ bool sw::Info::hasRot0(int i) const
     return fData->hasRotation(i);
 }
 
+constexpr char32_t DOTTED_CIRCLE = 0x25CC;
+constexpr char32_t SGNW_HEAD = 0x1D9FF;
 
 char32_t sw::Info::baseChar() const noexcept
 {
-//    switch (subj()) {
-//    case 0x1DA5E:
-//        if (fill == 1 && rot < 5)
-//            return 0x1D9FF;     // head
-//        [[fallthrough]];
-//    default:
-//        if (cp().category().upCat == uc::UpCategory::MARK) {
-//            return 0x25CC;
-//        }
-//        return 0;
-//    }
-
     if (cp().category().upCat == uc::UpCategory::MARK) {
-        return 0x25CC;
+        return DOTTED_CIRCLE;
     }
     return 0;
 }

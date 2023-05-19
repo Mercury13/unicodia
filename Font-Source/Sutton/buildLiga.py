@@ -77,6 +77,7 @@ for code in range(0x1D800, 0x1DA8B):
             if thatRes.type == CharType.LIGATURE:
               thatRes.glyph.addPosSub(subtableName, 'uni25CC ' + glyphComposition)
               thatRes.glyph.addPosSub(subtableName, 'u1D9FF ' + glyphComposition)
+              thatRes.glyph.addPosSub(subtableName, 'u1D9FF_F5 ' + glyphComposition)
             thatRes.glyph.addPosSub(subtableName, glyphComposition)
         if thatRes.isFound and thatRes.type == CharType.NORMAL:
           if code in upperUmlauts:
