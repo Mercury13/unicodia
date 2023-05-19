@@ -879,6 +879,7 @@ namespace uc {
         EcTermCat ecCat;
         std::u8string_view engName;
         std::string_view borrowedDesc {};
+        EcFont ecFont = EcFont::NORMAL;
         struct Loc {
             std::u8string_view name;
             std::u8string_view description;
@@ -887,7 +888,7 @@ namespace uc {
 
         const TermCat& cat() const { return termCats[static_cast<int>(ecCat)]; }
 
-        const uc::Font& font() const { return fontInfo[0]; }
+        const uc::Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
 
         void printfLocKey(char* buf, size_t n, const char* suffix) const;
 
