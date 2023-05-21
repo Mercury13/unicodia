@@ -43,7 +43,7 @@ namespace uc {
         MAIN_NAME = 1,  // Character’s name, should exist
         ALT_NAME = 2,   // Alternate names, always unique (non-template)
         ABBREV = 3,     // Abbreviation, always unique (non-template)
-        HTML = 4,       // HTML mnemonic, NO ampersand & and semicolon ;
+        HTML = 4,       // HTML mnemonic, WITH ampersand & and semicolon ;
         DEP_INSTEAD = 5, // For deprecated chars: what’s instead
     };
 

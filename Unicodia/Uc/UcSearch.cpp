@@ -198,6 +198,46 @@ std::u8string uc::toMnemo(const QString& x)
 
 namespace {
 
+    SafeVector<std::u8string_view> allSearchableNames(const uc::Cp& cp)
+    {
+        SafeVector<std::u8string_view> r;
+        std::u8string_view it = cp.name.tech();
+        r.emplace_back(it);
+        cp.name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
+            switch (role) {
+            case uc::TextRole::ALT_NAME:
+            case uc::TextRole::HTML:
+            case uc::TextRole::ABBREV:
+                r.push_back(text);
+                break;
+            case uc::TextRole::MAIN_NAME:
+            case uc::TextRole::DEP_INSTEAD:
+            case uc::TextRole::CMD_END:
+                break;
+            }
+        });
+        return r;
+    }
+
+    SafeVector<std::u8string_view> allHtmlNames(const uc::Cp& cp)
+    {
+        SafeVector<std::u8string_view> r;
+        cp.name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
+            switch (role) {
+            case uc::TextRole::HTML:
+                r.push_back(text);
+                break;
+            case uc::TextRole::ALT_NAME:
+            case uc::TextRole::ABBREV:
+            case uc::TextRole::MAIN_NAME:
+            case uc::TextRole::DEP_INSTEAD:
+            case uc::TextRole::CMD_END:
+                break;
+            }
+        });
+        return r;
+    }
+
     std::unordered_set<unsigned char> findNumerics(
             long long aNum, long long aDenom)
     {
@@ -266,15 +306,17 @@ uc::MultiResult uc::doSearch(QString what)
         // SEARCH BY HTML MNEMONIC
         // Search
         for (auto& cp : uc::cpInfo) {
-            auto names = cp.allSearchableNames();
+            auto names = allHtmlNames(cp);
             for (auto& nm : names) {
                 if (mnemo == nm) {
                     auto& v = r.emplace_back(cp);
                     v.prio.high = uc::HIPRIO_MNEMONIC_EXACT;
+                    v.triggerName = nm;
                     break;
                 } if (srh::stringsCiEq(mnemo, nm)) {
                     auto& v = r.emplace_back(cp);
                     v.prio.high = uc::HIPRIO_MNEMONIC_CASE;
+                    v.triggerName = nm;
                     break;
                 }
             }
@@ -370,7 +412,7 @@ uc::MultiResult uc::doSearch(QString what)
                             ? HIPRIO_NUMERIC_HI : HIPRIO_NUMERIC;
                 } else {
                     // Textual search
-                    auto names = cp.allSearchableNames();
+                    auto names = allSearchableNames(cp);
                     struct {
                         srh::Prio prio;
                         std::u8string_view name;

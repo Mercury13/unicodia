@@ -534,7 +534,6 @@ namespace uc {
         constexpr int plane() const { return subj.val() >> 16; }
 
         QString viewableName() const;
-        SafeVector<std::u8string_view> allSearchableNames() const;
         DrawMethod drawMethod(EmojiDraw emojiMode) const;
         TofuInfo tofuInfo() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::M_ABBREVIATION); }

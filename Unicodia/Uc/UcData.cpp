@@ -2126,28 +2126,6 @@ uc::TofuInfo uc::Cp::tofuInfo() const
 }
 
 
-SafeVector<std::u8string_view> uc::Cp::allSearchableNames() const
-{
-    SafeVector<std::u8string_view> r;
-    std::u8string_view it = name.tech();
-    r.emplace_back(it);
-    name.traverseAllT([&r](uc::TextRole role, std::u8string_view text) {
-        switch (role) {
-        case TextRole::ALT_NAME:
-        case TextRole::HTML:
-        case TextRole::ABBREV:
-            r.push_back(text);
-            break;
-        case TextRole::MAIN_NAME:
-        case TextRole::DEP_INSTEAD:
-        case TextRole::CMD_END:
-            break;
-        }
-    });
-    return r;
-}
-
-
 const uc::Block* uc::blockOf(char32_t subj)
 {
     unsigned index = subj >> 4;
