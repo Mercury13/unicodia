@@ -1885,16 +1885,14 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
                 if (action == Action::STOP)
                     return text;
                 p += length;
-            } break;
-        default: {
-                // Something’s really bad!
-                static char c[80];
-                snprintf(c, std::size(c), "[Wrong command %d]", int(role));
-                std::u8string_view sv = str::toU8sv(c);
-                sink.onText(TextRole::MAIN_NAME, sv);
-                return sv;
-            }
+            } continue;
         }
+        // Something’s really bad!
+        static char c[80];
+        snprintf(c, std::size(c), "[Wrong command %d]", int(role));
+        std::u8string_view sv = str::toU8sv(c);
+        sink.onText(TextRole::MAIN_NAME, sv);
+        return sv;
     }
 brk:
     return {};
