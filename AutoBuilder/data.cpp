@@ -1963,6 +1963,33 @@ const std::unordered_set<char32_t> charsConditionalLeave {
     0x11fc8,    // Tamil fraction One twentieth = maa
 };
 
+
+const std::unordered_map<char32_t, DepInfo> deprecatedInfo {
+    // Latin A
+    { 0x0149, { .whatsInstead = u8"\u02BC" "\u006E" } },
+    // Arabic
+    { 0x0673, { .whatsInstead = u8"\u0627" "\u065F" } },
+    // Tibetan
+    { 0x0F77, { .whatsInstead = u8"\u0FB2" "\u0F71" "\u0F80" } },
+    { 0x0F79, { .whatsInstead = u8"\u0FB3" "\u0F71" "\u0F80" } },
+    // Khmer
+    { 0x17A3, { .whatsInstead = u8"\u17A2" } },
+    { 0x17A4, { .whatsInstead = u8"\u17A2" "\u17B6" } },
+    // General punctuation
+    { 0x206A, { .whatsInstead = u8"2" } },
+    { 0x206B, { .whatsInstead = u8"1" } },
+    { 0x206C, { .whatsInstead = u8"1" } },
+    { 0x206D, { .whatsInstead = u8"3" } },
+    { 0x206E, { .whatsInstead = u8"4" } },
+    { 0x206F, { .whatsInstead = u8"1" } },
+    // Misc tech
+    { 0x2329, { .whatsInstead = u8"\u27E8" } },
+    { 0x232A, { .whatsInstead = u8"\u27E9" } },
+    // +1 tag → use high-level protocols
+    // -- total 15
+};
+
+
 /// @todo [langs] Stopped at Canadian syllabics
 const std::set<std::string_view> langNames {
     "also Cornish",     // корнский (Великобритания)
@@ -1999,15 +2026,15 @@ const std::set<std::string_view> langNames {
     "Azerbaijani",
     "Baluchi",          // белуджский (Пакистан)
     "Bashkir",
-    "Basketo"           // баскето (Эфиопия)
+    "Basketo",           // баскето (Эфиопия)
     "Berber",
-    "Belarusian"        ///< =Byelorussian
-    "Bihari languages"  // бихарские (Индия)
+    "Belarusian",       ///< =Byelorussian
+    "Bihari languages", // бихарские (Индия)
     "Bosnian",
     "Bulgarian",
     "Burushaski",       // бурушаски (Кашмир)
     "Byelorussian",
-    "Carrier"           ///< кэрриер (Канада), better stop?
+    "Carrier",          ///< кэрриер (Канада), better stop?
     "Crimean Tatar",
     "Chechen",
     "Chukchi",
@@ -2043,7 +2070,7 @@ const std::set<std::string_view> langNames {
     "Igbo",         // игбо (Нигерия)
     "Ingush",
     "Indic transliteration",    // транслитерация санскрита
-    "Inuktitut"     ///< better stop?
+    "Inuktitut",    ///< better stop?
     "Irish Gaelic (old orthography)",
     "Italian",
     "IPA",
@@ -2059,7 +2086,7 @@ const std::set<std::string_view> langNames {
     "Kikuyu",       // кикуйю (Кения)
     "Kildin Sami",  // кильдинский саамский
     "Kurdish",
-    "Kuvi"          // куви (Индия)
+    "Kuvi",         // куви (Индия)
     "Labrador Inuttut", // лабрадорский инуитский
     "Lahnda",   // лахнда (западнопенджабские)
     "Lak",      // лакский (Дагестан)
@@ -2128,7 +2155,7 @@ const std::set<std::string_view> langNames {
     "Semitic transliteration",  // транслитерация семитских языков
     "Serbian",
     "Serbian and Croatian phonetics",
-    "Shina"         // шина (Кашмир)
+    "Shina",        // шина (Кашмир)
     "Sindhi",       // синдхи (Пакистан)
     "Skolt Sami",   // колтта-саамский (Финляндия)
     "Slovak",
@@ -2313,7 +2340,7 @@ namespace {
         std::cout << "]";
     }
 
-    [[maybe_unused]] void dump(const SafeVector<Word> words)
+    [[maybe_unused]] void dump(const SafeVector<Word>& words)
     {
         for (auto& v : words) {
             std::cout << v.original << " ";
@@ -2332,7 +2359,7 @@ namespace {
         return true;
     }
 
-    bool isFullDecap(const SafeVector<std::string_view> words)
+    bool isFullDecap(const SafeVector<std::string_view>& words)
     {
         for (auto& word : words) {
             auto itWord = dictionary.find(word);

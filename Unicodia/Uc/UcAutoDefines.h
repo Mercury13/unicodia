@@ -503,6 +503,8 @@ namespace uc {
             /// @return  the very text we called STOP on
             std::u8string_view traverseAll(const TextSink& sink) const;
             template <class Body> inline std::u8string_view traverseAllT(const Body& body) const;
+
+            std::u8string_view getText(TextRole role) const;
         } name;
         EcCategory ecCategory;          // +1 = 8
         EcVersion ecVersion;            // +1 = 9

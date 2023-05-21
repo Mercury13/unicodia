@@ -47,6 +47,15 @@ namespace uc {
         DEP_INSTEAD = 5, // For deprecated chars: what’s instead
     };
 
+    enum {
+        INSTEAD_REVERT = '1',
+        INSTEAD_MIN = INSTEAD_REVERT,
+        INSTEAD_BIDI = '2',
+        INSTEAD_FORMS = '3',
+        INSTEAD_DIGITS = '4',
+        INSTEAD_MAX = INSTEAD_DIGITS,
+    };
+
 }   // namespace uc
 
 namespace sw {  // Sutton SignWriting

@@ -187,10 +187,6 @@
      <orig>About control characters</orig>
      <au-cmt>Test: control chars are above fold</au-cmt>
     </text>
-    <text id="Deprec">
-     <orig>Deprecated character</orig>
-     <au-cmt>Test: the 1st is U+0149</au-cmt>
-    </text>
     <text id="DefIgn">
      <orig>Default-ignorable character</orig>
      <au-cmt>Test: CGJ, Tags…</au-cmt>
@@ -218,6 +214,26 @@
     </text>
     <text id="Comp">
      <orig>String content</orig>
+    </text>
+   </group>
+   <group id="Deprec">
+    <text id="0">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;</orig>
+    </text>
+    <text id="1">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, used to revert to default state</orig>
+    </text>
+    <text id="Ins">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} instead</orig>
+    </text>
+    <text id="2">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use other bidirectional mechanisms instead</orig>
+    </text>
+    <text id="3">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use specific Arabic presentation forms instead</orig>
+    </text>
+    <text id="4">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
     </text>
    </group>
    <group id="Bidi">

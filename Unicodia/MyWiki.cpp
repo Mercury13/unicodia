@@ -20,6 +20,9 @@
 #include "Wiki.h"
 #include "Skin.h"
 
+// Mojibake
+#include "mojibake.h"
+
 using namespace std::string_view_literals;
 
 #define NBSP "\u00A0"
@@ -1140,8 +1143,38 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
     // Deprecated
     if (cp.isDeprecated()) {
-        text += "<h3><a href='pt:deprecated' class='deprecated'>";
-        str::append(text, loc::get("Prop.Head.Deprec"));
+        text += "<h3>";
+        static constexpr std::u8string_view HTPROPS = u8"href='pt:deprecated' class='deprecated'";
+        char buf[30] = {0};
+        std::string_view key = "0";
+        char cbuf = '0';
+
+        std::u8string_view instead = cp.name.getText(uc::TextRole::DEP_INSTEAD);
+        if (!instead.empty()) {
+            auto q = instead[0];
+            if (q >= uc::INSTEAD_MIN && q <= uc::INSTEAD_MAX) {
+                // Special instead
+                cbuf = q;
+                key = std::string_view{ &cbuf, 1 };
+            } else {
+                // Characters by code
+                key = "Ins";
+                auto chars = mojibake::toS<std::u32string>(instead);
+                char* p = buf;
+                char* end = std::end(buf);
+                for (auto ch : chars) {
+                    if (p != buf && p < end) {
+                        *(p++) = ' ';
+                    }
+                    auto nRem = end - p;
+                    auto nChars = snprintf(p, nRem, "%04X", static_cast<int>(ch));
+                    p += nChars;
+                }
+            }
+        }
+
+        auto q = loc::get(str::cat("Prop.Deprec.", key)).arg(HTPROPS, str::toU8sv(buf));
+        str::append(text, q);
         text += "</h3>";
     }
 

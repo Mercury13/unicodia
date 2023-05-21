@@ -700,11 +700,22 @@ int main()
                 strings.forceRemember(cp, uc::TextRole::HTML, w);
         }
 
+        // Deprecated
+        bool isDeprecated = (elChar.attribute("Dep").as_string()[0] == 'Y');
+        if (isDeprecated) {
+            auto itDep = deprecatedInfo.find(cp);
+            if (itDep != deprecatedInfo.end()) {
+                auto& q = itDep->second;
+                if (!q.whatsInstead.empty())
+                    strings.forceRemember(cp, uc::TextRole::DEP_INSTEAD, str::toSv(q.whatsInstead));
+            }
+        }
+
         Flags<uc::Cfg> flags;
         if (hasAbbrev)
             flags |= uc::Cfg::M_ABBREVIATION;
         // Deprecated
-        if (elChar.attribute("Dep").as_string()[0] == 'Y') {
+        if (isDeprecated) {
             flags |= uc::Cfg::U_DEPRECATED;
             ++nDeprecated;
         }

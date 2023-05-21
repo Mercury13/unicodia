@@ -1877,6 +1877,7 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         case TextRole::MAIN_NAME:
         case TextRole::ALT_NAME:
         case TextRole::HTML:
+        case TextRole::DEP_INSTEAD:
         case TextRole::ABBREV: {
                 auto length = static_cast<unsigned char>(*(p++));
                 std::u8string_view text {p, length};
@@ -1897,6 +1898,20 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
     }
 brk:
     return {};
+}
+
+
+std::u8string_view uc::Cp::Name::getText(TextRole role) const
+{
+    std::u8string_view r;
+    traverseAllT([&r, role](TextRole aRole, std::u8string_view aText) {
+        if (role == aRole) {
+            r = aText;
+            return Action::STOP;
+        }
+        return Action::CONTINUE;
+    });
+    return r;
 }
 
 
