@@ -266,7 +266,7 @@ uc::MultiResult uc::doSearch(QString what)
         // SEARCH BY HTML MNEMONIC
         // Search
         for (auto& cp : uc::cpInfo) {
-            auto names = cp.allRawNames();
+            auto names = cp.allSearchableNames();
             for (auto& nm : names) {
                 if (mnemo == nm) {
                     auto& v = r.emplace_back(cp);
@@ -370,7 +370,7 @@ uc::MultiResult uc::doSearch(QString what)
                             ? HIPRIO_NUMERIC_HI : HIPRIO_NUMERIC;
                 } else {
                     // Textual search
-                    auto names = cp.allRawNames();
+                    auto names = cp.allSearchableNames();
                     struct {
                         srh::Prio prio;
                         std::u8string_view name;

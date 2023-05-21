@@ -1129,6 +1129,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             break;
         case uc::TextRole::MAIN_NAME:
         case uc::TextRole::HTML:
+        case uc::TextRole::DEP_INSTEAD:
         case uc::TextRole::CMD_END:
             break;
         }
