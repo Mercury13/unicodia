@@ -26,6 +26,7 @@ constexpr int ALPHA_INTERNATIONAL = 20;
 #define CNAME_U_BIGCOPY "rgba(128,128,128,45%)"
 #define CNAME_TRANSCRIPTION "Goldenrod"
 #define CNAME_ALTNAME "palette(shadow)"
+#define CNAME_TEXT_DEPRECATED CNAME_ALTNAME
 
 constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 constexpr QColor BG_CJK { 0xFF, 0xF0, 0xF5 };   // lavenderblush
@@ -56,6 +57,7 @@ constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };// some cyan
         ".bigcopy { " STYLE_BIGCOPY " } "                                       \
         ".popup { " STYLE_POPUP " } "                                           \
         ".deprecated { " STYLE_DEPRECATED " } "                                 \
+        ".deph { color: " CNAME_TEXT_DEPRECATED "; } "                          \
         ".inet { " STYLE_INET " } "                                             \
         ".missing { color: " CNAME_LINK_DEPRECATED "; } "                       \
         ".tr { color: " CNAME_TRANSCRIPTION "; }"

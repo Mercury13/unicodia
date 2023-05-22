@@ -287,15 +287,19 @@
     </text>
     <text id="2">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use other bidirectional mechanisms instead</orig>
-     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, взамен используйте другие двунаправленные механизмы</transl>
+     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте другие двунаправленные механизмы</transl>
     </text>
     <text id="3">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use specific Arabic presentation forms instead</orig>
-     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, взамен используйте арабские формы начертания</transl>
+     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте арабские формы начертания</transl>
     </text>
     <text id="4">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте 0660…69 и другие национальные цифры</transl>
+    </text>
+    <text id="5">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use application-level protocols</orig>
+     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте прикладные протоколы</transl>
     </text>
    </group>
    <group id="Bidi">

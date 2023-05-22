@@ -1143,7 +1143,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
 
     // Deprecated
     if (cp.isDeprecated()) {
-        text += "<h3>";
+        text += "<h3 class='deph'>";
         static constexpr std::u8string_view HTPROPS = u8"href='pt:deprecated' class='deprecated'";
         char buf[30] = {0};
         std::string_view key = "0";

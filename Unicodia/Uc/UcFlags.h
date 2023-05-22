@@ -53,7 +53,8 @@ namespace uc {
         INSTEAD_BIDI = '2',
         INSTEAD_FORMS = '3',
         INSTEAD_DIGITS = '4',
-        INSTEAD_MAX = INSTEAD_DIGITS,
+        INSTEAD_APPLEVEL = '5',
+        INSTEAD_MAX = INSTEAD_APPLEVEL,
     };
 
 }   // namespace uc

@@ -1985,7 +1985,8 @@ const std::unordered_map<char32_t, DepInfo> deprecatedInfo {
     // Misc tech
     { 0x2329, { .whatsInstead = u8"\u27E8" } },
     { 0x232A, { .whatsInstead = u8"\u27E9" } },
-    // +1 tag → use high-level protocols
+    // Tags
+    { 0xE0001, { .whatsInstead = u8"5" } },
     // -- total 15
 };
 

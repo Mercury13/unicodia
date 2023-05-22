@@ -284,7 +284,7 @@
     </text>
     <text id="Ins">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} instead</orig>
-     <transl>&lt;a {1}&gt;Заборонений символ&lt;/a&gt;, замість нього використовуйте {2}</transl>
+     <transl>&lt;a {1}&gt;Заборонений символ&lt;/a&gt;, натомість використовуйте {2}</transl>
     </text>
     <text id="2">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use other bidirectional mechanisms instead</orig>
@@ -297,6 +297,10 @@
     <text id="4">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
      <transl>&lt;a {1}&gt;Заборонений символ&lt;/a&gt;, використовуйте 0660…69 та інші національні цифри</transl>
+    </text>
+    <text id="5">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use application-level protocols</orig>
+     <transl>&lt;a {1}&gt;Заборонений символ&lt;/a&gt;, використовуйте прикладні протоколи</transl>
     </text>
    </group>
    <group id="Bidi">

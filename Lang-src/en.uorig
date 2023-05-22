@@ -235,6 +235,9 @@
     <text id="4">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
     </text>
+    <text id="5">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use application-level protocols</orig>
+    </text>
    </group>
    <group id="Bidi">
     <group id="DIR">
