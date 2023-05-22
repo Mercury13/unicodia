@@ -1099,6 +1099,27 @@ namespace {
     void appendScriptSubhead(QString& text)
         { appendSubhead(text, "Prop.Head.Script"); }
 
+    struct DepBuf {
+        char d[30] = {0};
+        void build(std::u8string_view text);
+        std::u8string_view u8() const { return str::toU8sv(d); }
+    };
+
+    void DepBuf::build(std::u8string_view text)
+    {
+        auto chars = mojibake::toS<std::u32string>(text);
+        char* p = d;
+        char* end = std::end(d);
+        for (auto ch : chars) {
+            if (p != d && p < end) {
+                *(p++) = ' ';
+            }
+            auto nRem = end - p;
+            auto nChars = snprintf(p, nRem, "%04X", static_cast<int>(ch));
+            p += nChars;
+        }
+    }
+
 }   // anon namespace
 
 
@@ -1133,6 +1154,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         case uc::TextRole::MAIN_NAME:
         case uc::TextRole::HTML:
         case uc::TextRole::DEP_INSTEAD:
+        case uc::TextRole::DEP_INSTEAD2:
         case uc::TextRole::CMD_END:
             break;
         }
@@ -1145,7 +1167,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     if (cp.isDeprecated()) {
         text += "<h3 class='deph'>";
         static constexpr std::u8string_view HTPROPS = u8"href='pt:deprecated' class='deprecated'";
-        char buf[30] = {0};
+        DepBuf buf, buf2;
         std::string_view key = "0";
         char cbuf = '0';
 
@@ -1159,21 +1181,16 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             } else {
                 // Characters by code
                 key = "Ins";
-                auto chars = mojibake::toS<std::u32string>(instead);
-                char* p = buf;
-                char* end = std::end(buf);
-                for (auto ch : chars) {
-                    if (p != buf && p < end) {
-                        *(p++) = ' ';
-                    }
-                    auto nRem = end - p;
-                    auto nChars = snprintf(p, nRem, "%04X", static_cast<int>(ch));
-                    p += nChars;
+                buf.build(instead);
+                std::u8string_view instead2 = cp.name.getText(uc::TextRole::DEP_INSTEAD2);
+                if (!instead2.empty()) {
+                    key = "Ins2";
+                    buf2.build(instead2);
                 }
             }
         }
 
-        auto q = loc::get(str::cat("Prop.Deprec.", key)).arg(HTPROPS, str::toU8sv(buf));
+        auto q = loc::get(str::cat("Prop.Deprec.", key)).arg(HTPROPS, buf.u8(), buf2.u8());
         str::append(text, q);
         text += "</h3>";
     }

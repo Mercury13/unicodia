@@ -43,6 +43,7 @@ namespace loc {
         std::u8string arg(std::u8string_view x) const;
         std::u8string arg(int x) const;
         std::u8string arg(std::u8string_view x, std::u8string_view y) const;
+        std::u8string arg(std::u8string_view x, std::u8string_view y, std::u8string_view z) const;
     private:
         std::u8string fSrc;
         bool fIsFull = false;

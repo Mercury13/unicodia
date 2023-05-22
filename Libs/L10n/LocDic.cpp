@@ -40,6 +40,17 @@ std::u8string loc::Text::arg(
 }
 
 
+std::u8string loc::Text::arg(
+        std::u8string_view x, std::u8string_view y, std::u8string_view z) const
+{
+    std::u8string r = fSrc;
+    str::replace(r, u8"{1}", x);
+    str::replace(r, u8"{2}", y);
+    str::replace(r, u8"{3}", z);
+    return r;
+}
+
+
 ///// Dic //////////////////////////////////////////////////////////////////////
 
 

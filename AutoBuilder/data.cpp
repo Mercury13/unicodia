@@ -1983,8 +1983,8 @@ const std::unordered_map<char32_t, DepInfo> deprecatedInfo {
     { 0x206E, { .whatsInstead = u8"4" } },
     { 0x206F, { .whatsInstead = u8"1" } },
     // Misc tech
-    { 0x2329, { .whatsInstead = u8"\u27E8" } },
-    { 0x232A, { .whatsInstead = u8"\u27E9" } },
+    { 0x2329, { .whatsInstead = u8"\u27E8", .whatsInstead2 = u8"\u3008" } },
+    { 0x232A, { .whatsInstead = u8"\u27E9", .whatsInstead2 = u8"\u3009" } },
     // Tags
     { 0xE0001, { .whatsInstead = u8"5" } },
     // -- total 15

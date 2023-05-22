@@ -706,8 +706,12 @@ int main()
             auto itDep = deprecatedInfo.find(cp);
             if (itDep != deprecatedInfo.end()) {
                 auto& q = itDep->second;
-                if (!q.whatsInstead.empty())
+                if (!q.whatsInstead.empty()) {
                     strings.forceRemember(cp, uc::TextRole::DEP_INSTEAD, str::toSv(q.whatsInstead));
+                    if (!q.whatsInstead2.empty()) {
+                        strings.forceRemember(cp, uc::TextRole::DEP_INSTEAD2, str::toSv(q.whatsInstead2));
+                    }
+                }
             }
         }
 

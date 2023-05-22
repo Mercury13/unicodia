@@ -1536,7 +1536,7 @@ bool sw::Info::hasRot0(int i) const
 }
 
 constexpr char32_t DOTTED_CIRCLE = 0x25CC;
-constexpr char32_t SGNW_HEAD = 0x1D9FF;
+[[maybe_unused]] constexpr char32_t SGNW_HEAD = 0x1D9FF;
 
 char32_t sw::Info::baseChar() const noexcept
 {
@@ -1878,6 +1878,7 @@ std::u8string_view uc::Cp::Name::traverseAll(const TextSink& sink) const
         case TextRole::ALT_NAME:
         case TextRole::HTML:
         case TextRole::DEP_INSTEAD:
+        case TextRole::DEP_INSTEAD2:
         case TextRole::ABBREV: {
                 auto length = static_cast<unsigned char>(*(p++));
                 std::u8string_view text {p, length};

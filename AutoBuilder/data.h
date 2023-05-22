@@ -118,7 +118,7 @@ inline bool operator < (const PrefixEntry& x, const PrefixEntry& y) { return x.t
 ///
 struct DepInfo
 {
-    std::u8string_view whatsInstead {};
+    std::u8string_view whatsInstead {}, whatsInstead2 {};
 };
 
 extern const std::unordered_map<std::string_view, DicEntry> dictionary;

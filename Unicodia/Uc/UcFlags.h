@@ -45,6 +45,7 @@ namespace uc {
         ABBREV = 3,     // Abbreviation, always unique (non-template)
         HTML = 4,       // HTML mnemonic, WITH ampersand & and semicolon ;
         DEP_INSTEAD = 5, // For deprecated chars: what’s instead
+        DEP_INSTEAD2 = 6, // For deprecated chars: alternative instead
     };
 
     enum {

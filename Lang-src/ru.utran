@@ -275,30 +275,42 @@
    <group id="Deprec">
     <text id="0">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;</orig>
+     <au-cmt>Unused right now, but may appear in newer Unicode</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;</transl>
     </text>
     <text id="1">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, used to revert to default state</orig>
+     <au-cmt>Example: 206B</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, возвращал в исходное состояние</transl>
     </text>
     <text id="Ins">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} instead</orig>
+     <au-cmt>Example: 17A3</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, взамен используйте {2}</transl>
+    </text>
+    <text id="Ins2">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} or {3} instead</orig>
+     <au-cmt>Only 2329, 232A</au-cmt>
+     <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, взамен используйте {2} или {3}</transl>
     </text>
     <text id="2">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use other bidirectional mechanisms instead</orig>
+     <au-cmt>Only 206A</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте другие двунаправленные механизмы</transl>
     </text>
     <text id="3">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use specific Arabic presentation forms instead</orig>
+     <au-cmt>Only 206D</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте арабские формы начертания</transl>
     </text>
     <text id="4">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
+     <au-cmt>Only 206E</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте 0660…69 и другие национальные цифры</transl>
     </text>
     <text id="5">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use application-level protocols</orig>
+     <au-cmt>Only E0001</au-cmt>
      <transl>&lt;a {1}&gt;Запрещённый символ&lt;/a&gt;, используйте прикладные протоколы</transl>
     </text>
    </group>

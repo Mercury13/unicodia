@@ -219,24 +219,35 @@
    <group id="Deprec">
     <text id="0">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;</orig>
+     <au-cmt>Unused right now, but may appear in newer Unicode</au-cmt>
     </text>
     <text id="1">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, used to revert to default state</orig>
+     <au-cmt>Example: 206B</au-cmt>
     </text>
     <text id="Ins">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} instead</orig>
+     <au-cmt>Example: 17A3</au-cmt>
+    </text>
+    <text id="Ins2">
+     <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use {2} or {3} instead</orig>
+     <au-cmt>Only 2329, 232A</au-cmt>
     </text>
     <text id="2">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use other bidirectional mechanisms instead</orig>
+     <au-cmt>Only 206A</au-cmt>
     </text>
     <text id="3">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use specific Arabic presentation forms instead</orig>
+     <au-cmt>Only 206D</au-cmt>
     </text>
     <text id="4">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use 0660…69 and other national digits</orig>
+     <au-cmt>Only 206E</au-cmt>
     </text>
     <text id="5">
      <orig>&lt;a {1}&gt;Deprecated character&lt;/a&gt;, use application-level protocols</orig>
+     <au-cmt>Only E0001</au-cmt>
     </text>
    </group>
    <group id="Bidi">

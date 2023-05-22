@@ -212,6 +212,7 @@ namespace {
                 break;
             case uc::TextRole::MAIN_NAME:
             case uc::TextRole::DEP_INSTEAD:
+            case uc::TextRole::DEP_INSTEAD2:
             case uc::TextRole::CMD_END:
                 break;
             }
@@ -231,6 +232,7 @@ namespace {
             case uc::TextRole::ABBREV:
             case uc::TextRole::MAIN_NAME:
             case uc::TextRole::DEP_INSTEAD:
+            case uc::TextRole::DEP_INSTEAD2:
             case uc::TextRole::CMD_END:
                 break;
             }
