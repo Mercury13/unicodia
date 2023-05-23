@@ -1,7 +1,7 @@
 QT += core gui widgets svg svgwidgets
 CONFIG += c++2a
 
-VERSION = 1.11.0
+VERSION = 1.11.1
 
 win32-g++ {
     # To simplify debugging, we statically link these libraries
