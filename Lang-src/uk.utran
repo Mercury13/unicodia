@@ -11111,6 +11111,11 @@
      <im-cmt>is a button</im-cmt>
      <transl>Копіювати</transl>
     </text>
+    <text id="lbStyleSet">
+     <orig>Style</orig>
+     <im-cmt>is a static text</im-cmt>
+     <transl>Стиль</transl>
+    </text>
     <text id="btCloseSearch">
      <orig>Close</orig>
      <im-cmt>is a button</im-cmt>

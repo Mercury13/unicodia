@@ -167,6 +167,24 @@ namespace uc {
         NN
     };
 
+    enum class EcGlyphVariance {
+        NONE,
+        GLAGOLITIC,
+        NN,
+    };
+
+    struct GlyphVariance {
+        unsigned count;
+        std::string_view name;
+
+        constexpr operator bool() const noexcept { return count; }
+    };
+    extern const GlyphVariance glyphVarianceInfo[];
+
+    struct GlyphVarianceSets {
+        unsigned vals[static_cast<int>(EcGlyphVariance::NN)] { 0 };
+    };
+
     enum class EcFont
     {
         NORMAL,

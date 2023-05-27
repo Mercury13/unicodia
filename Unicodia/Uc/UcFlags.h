@@ -13,20 +13,30 @@
 namespace uc {
 
     enum class Cfg : unsigned short {
-        M_ABBREVIATION = 1,     ///< [+] Method: 1st synonym is abbreviation
-        U_DEPRECATED = 2,       ///< [+] UC feature: char is deprecated
-        RENDER_BUG = 4,         ///< [+] use font BUG_PREFER, or drop BUG_AVOID
-        M_CUSTOM_CONTROL = 8,   ///< [+] Method: custom-drawn control char
-        NO_AA = 16,             ///< [+] Submethod of SAMPLE: temporarily disable anti-aliasing
-        U_DEF_IGNORABLE = 32,   ///< [+] UC feature: default-ignorable
-        U_VS16_EMOJI = 64,      ///< [+] UC feature: to surely make this char graphic, use VS16
-        M_SVG_EMOJI = 128,      ///< [+] Method: SVG emoji
-        M_SPACE = 256,          ///< [+] Method: draw as space, even if it is not space
-        M_EGYPTIAN_HATCH = 512, ///< [+] Method: draw Egyptian hatch (not really a hatch, but OK)
-        DYN_SYSTEM_TOFU = 32768,///< cached in runtime; [+] the char is tofu in system fonts
-        M_ALL = M_ABBREVIATION | M_CUSTOM_CONTROL | M_SVG_EMOJI | M_SPACE | M_EGYPTIAN_HATCH
+        M_ABBREVIATION   = 1<<0, ///< [+] Method: 1st synonym is abbreviation
+        U_DEPRECATED     = 1<<1, ///< [+] UC feature: char is deprecated
+        RENDER_BUG       = 1<<2, ///< [+] use font BUG_PREFER, or drop BUG_AVOID
+        M_CUSTOM_CONTROL = 1<<3, ///< [+] Method: custom-drawn control char
+        NO_AA            = 1<<4, ///< [+] Submethod of SAMPLE: temporarily disable anti-aliasing
+        U_DEF_IGNORABLE  = 1<<5, ///< [+] UC feature: default-ignorable
+        U_VS16_EMOJI     = 1<<6, ///< [+] UC feature: to surely make this char graphic, use VS16
+        M_SVG_EMOJI      = 1<<7, ///< [+] Method: SVG emoji
+        M_SPACE          = 1<<8, ///< [+] Method: draw as space, even if it is not space
+        M_EGYPTIAN_HATCH = 1<<9, ///< [+] Method: draw Egyptian hatch (not really a hatch, but OK)
+        STYLE_0         = 1<<10, ///< [+] Has variable style 0
+        STYLE_1         = 1<<11, ///< [+] Has variable style 1
+        STYLE_2         = 1<<12, ///< [+] Has variable style 2
+        DYN_SYSTEM_TOFU = 1<<15, ///< cached in runtime; [+] the char is tofu in system fonts
     };
+    DEFINE_ENUM_OPS(Cfg)
     using Cfgs = Flags<Cfg>;
+
+    constexpr Cfgs STYLE_ALL = Cfg::STYLE_0 | Cfg::STYLE_1 | Cfg::STYLE_2;
+    // Methods
+    /// @todo [urgent] use 3 bits here: 0 = default, 1 = abbreviation, etc
+    namespace m {
+        constexpr Cfgs ALL = Cfg::M_ABBREVIATION | Cfg::M_CUSTOM_CONTROL | Cfg::M_SVG_EMOJI | Cfg::M_SPACE | Cfg::M_EGYPTIAN_HATCH;
+    }
 
     enum class Lfg : unsigned char {
         GRAPHIC_EMOJI = 1 << 0,     ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE

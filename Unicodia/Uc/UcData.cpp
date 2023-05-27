@@ -1470,6 +1470,13 @@ namespace {
 }   // anon namespace
 
 
+const uc::GlyphVariance uc::glyphVarianceInfo[] = {
+    { 0, {} },      // -warn in static analyzer: init [0] as normal, and everything’s OK
+    { .count = 2, .name = "Glag" },
+};
+static_assert(std::size(uc::glyphVarianceInfo) == static_cast<size_t>(uc::EcGlyphVariance::NN));
+
+
 uc::InputMethods uc::cpInputMethods(char32_t cp)
 {
     uc::InputMethods r;
@@ -2006,7 +2013,7 @@ bool uc::Cp::isGraphical() const
 
 uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode) const
 {
-    if (flags.haveAny(Cfg::M_ALL)) [[unlikely]] {
+    if (flags.haveAny(m::ALL)) [[unlikely]] {
         if (flags.have(Cfg::M_CUSTOM_CONTROL))
             return uc::DrawMethod::CUSTOM_CONTROL;
         if (flags.have(Cfg::M_SVG_EMOJI)) {

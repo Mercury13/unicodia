@@ -7671,6 +7671,10 @@
      <orig>Copy</orig>
      <im-cmt>is a button</im-cmt>
     </text>
+    <text id="lbStyleSet">
+     <orig>Style</orig>
+     <im-cmt>is a static text</im-cmt>
+    </text>
     <text id="btCloseSearch">
      <orig>Close</orig>
      <im-cmt>is a button</im-cmt>

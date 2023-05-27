@@ -10,7 +10,7 @@
 #include <QString>
 
 // Libs
-#include "u_Vector.h"
+#include "u_Array.h"
 
 // Project-local
 #include "UcFlags.h"
@@ -543,6 +543,7 @@ namespace uc {
         constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
         constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
+        constexpr bool hasVariations() const { return flags.haveAny(STYLE_ALL); }
     };
 
     // Check your calculations once again
