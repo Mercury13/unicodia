@@ -10982,6 +10982,18 @@
     <transl>Інші</transl>
    </text>
   </group>
+  <group id="GlyphVar">
+   <group id="Glag">
+    <text id="0">
+     <orig>Bulgaria</orig>
+     <transl>Болгарія</transl>
+    </text>
+    <text id="1">
+     <orig>Croatia</orig>
+     <transl>Хорватія</transl>
+    </text>
+   </group>
+  </group>
   <group id="Search">
    <au-cmt>
     <p>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF</p>

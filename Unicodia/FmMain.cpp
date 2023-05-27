@@ -922,6 +922,10 @@ FmMain::InitBlocks FmMain::initBlocks()
     addAc(BlockOrder::CODE,      ui->acSortByCode);
     addAc(BlockOrder::TECH,      ui->acSortByTech);
 
+    // Variations
+    radioGlyphVariant.setRadio(0, ui->radioVariation0);
+    radioGlyphVariant.setRadio(1, ui->radioVariation1);
+
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
     ui->laySortBar->addWidget(sortBar);
@@ -1308,6 +1312,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         } else {
             ui->btCopyEx->hide();
         }
+        ui->wiGlyphVariation->setVisible(ch->hasVariations());
 
         // Sample char
         ui->wiSample->showCp(*ch, CharsModel::EMOJI_DRAW);
@@ -1322,6 +1327,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->wiSample->showNothing();
         ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
+        ui->wiGlyphVariation->hide();
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             setWiki(ui->vwInfo, text);

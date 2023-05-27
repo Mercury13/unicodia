@@ -369,7 +369,7 @@ padding-bottom: 1px;</string>
                  </widget>
                 </item>
                 <item>
-                 <widget class="QWidget" name="wiStyleSet" native="true">
+                 <widget class="QWidget" name="wiGlyphVariation" native="true">
                   <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0,0,0">
                    <property name="spacing">
                     <number>9</number>
@@ -394,14 +394,14 @@ padding-bottom: 1px;</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="radioStyle0">
+                    <widget class="QRadioButton" name="radioVariation0">
                      <property name="text">
                       <string notr="true">[Style 0]</string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QRadioButton" name="radioStyle1">
+                    <widget class="QRadioButton" name="radioVariation1">
                      <property name="text">
                       <string notr="true">[Style 1]</string>
                      </property>

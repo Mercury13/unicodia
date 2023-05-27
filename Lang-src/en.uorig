@@ -7568,6 +7568,16 @@
     <orig>Miscellaneous</orig>
    </text>
   </group>
+  <group id="GlyphVar">
+   <group id="Glag">
+    <text id="0">
+     <orig>Bulgaria</orig>
+    </text>
+    <text id="1">
+     <orig>Croatia</orig>
+    </text>
+   </group>
+  </group>
   <group id="Search">
    <au-cmt>
     <p>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF</p>

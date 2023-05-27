@@ -11,6 +11,7 @@
 #include <QAbstractTableModel>
 #include <QStyledItemDelegate>
 #include <QElapsedTimer>
+#include <QRadioButton>
 
 // My libs
 #include "u_Vector.h"
@@ -315,6 +316,7 @@ private:
     QToolButton* btSort;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
+    UintRadio<QRadioButton> radioGlyphVariant;
 
     struct PullUpDetector {
         bool isCocked = false;
