@@ -2988,7 +2988,11 @@
      <orig>Glagolitic supplement</orig>
     </text>
     <text id="Text">
-     <orig>Superscript Glagolitic letters found in some sources.</orig>
+     <orig>
+      <p>Superscript Glagolitic letters found in some sources.</p>
+      <p />
+      <p>These letters are rarely attested in round Bulgarian-style Glagolitsa (less seldom than in [[ps:Cyrl|Cyrillic]]), and almost never in square Croatian-style.</p>
+     </orig>
     </text>
    </group>
    <group id="1E030">

@@ -3983,8 +3983,16 @@
      <transl>Глаголица дополнительная</transl>
     </text>
     <text id="Text">
-     <orig>Superscript Glagolitic letters found in some sources.</orig>
-     <transl>Надстрочные буквы глаголицы, встречающиеся в различных источниках.</transl>
+     <orig>
+      <p>Superscript Glagolitic letters found in some sources.</p>
+      <p />
+      <p>These letters are rarely attested in round Bulgarian-style Glagolitsa (less seldom than in [[ps:Cyrl|Cyrillic]]), and almost never in square Croatian-style.</p>
+     </orig>
+     <transl>
+      <p>Надстрочные буквы глаголицы, встречающиеся в различных источниках.</p>
+      <p />
+      <p>Такие буквы изредка встречаются в круглой глаголице болгарского стиля (значительно реже, чем в [[ps:Cyrl|кириллице]]), и почти никогда{{-}}в квадратной хорватской.</p>
+     </transl>
     </text>
    </group>
    <group id="1E030">
