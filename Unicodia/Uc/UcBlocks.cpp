@@ -1064,9 +1064,9 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Latn, 'G'},
             EcScript::Latn, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
     // Glagolitic supp OK
-    { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE },
+    { 0x1E000, 0x1E02F, { 0x1E000, EcContinent::EUROPE, {}, 5_hy },
             "Glagolitic Supplement",
-            { EcScript::Glag, 1},
+            { EcScript::Glag, 1 },
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Cyr ex D OK, really nice implementation in Funky
     { 0x1E030, 0x1E08F, { 0x1E047, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
