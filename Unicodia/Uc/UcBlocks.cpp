@@ -235,7 +235,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1C80, 0x1C8F, { 0x1C88, EcContinent::EUROPE },
             "Cyrillic Extended-C",
             { EcScript::Cyrl, 'C' },
-            EcScript::Cyrl, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Cyrl, EcFont::GLAGOLITIC, Bfg::HAS_DESCRIPTION },
     // Geor ex OK
     { 0x1C90, 0x1CBF, { 0x1C93, EcContinent::EUROPE, Ifg::APPROX_OTHER_LINES },
             "Georgian Extended",

@@ -131,7 +131,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
-    { "NotoSansGlagolitic-Regular.ttf" },                                       // Glagolitic
+    { "Shafarik-Regular.otf", 115_pc },                                         // Glagolitic
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
