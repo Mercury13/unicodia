@@ -706,6 +706,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SMALL",          Dicf::PART_ADJECTIVE },
     { "SNAP",           Dicf::PART_ADJECTIVE }, // OK, music only
     { "SPACING",        Dicf::PART_ADJECTIVE },
+    { "SPIDERY",        Dicf::PART_ADJECTIVE },
     { "SQUAT",          Dicf::PART_ADJECTIVE },
     { "SOFT",           Dicf::PART_ADJECTIVE },
     // Old SOUTH Arabian
