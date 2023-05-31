@@ -421,6 +421,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "LINE",           Dicf::PART_NOUN },
     { "MACRON",         Dicf::PART_NOUN },
     { "MCHU",           Dicf::PART_NOUN },
+    { "MUCAAD",         Dicf::PART_NOUN },
     { "NUKTA",          Dicf::PART_NOUN },
     { "PLUS",           Dicf::PART_NOUN },
     { "PRIME",          Dicf::PART_NOUN },
