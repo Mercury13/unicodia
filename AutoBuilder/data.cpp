@@ -1931,6 +1931,11 @@ const std::set<RangeByEnd> noAaRanges {
     { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
+const std::map<RangeByEnd, uc::Cfgs> styleRanges {
+    { { 0x2C00,  0x2C5F  }, uc::Cfg::STYLE_0 | uc::Cfg::STYLE_1 }, // Glag main
+    { { 0x1E000, 0x1E02F }, uc::Cfg::STYLE_0 },                    // Glag ex
+};
+
 const std::unordered_set<char32_t> customDrawnControlChars {
     0x1039,     // Mymr virtual virama
     0x11D45,    // Masaram Gondi virtual virama
@@ -2739,4 +2744,18 @@ std::string decapitalizeByTable(std::string_view x)
     if (itEx != exceptions.end())
         return std::string(itEx->second.r);
     return std::string{x};
+}
+
+
+Flags<uc::Cfg> styleFlags(char32_t x)
+{
+    auto it = styleRanges.lower_bound(RangeByEnd{x,x});
+    if (it != styleRanges.end()) {
+        // so x <= it->b
+        // upper_bound gives x < it->b
+        if (it->first.a <= x) {
+            return it->second;
+        }
+    }
+    return {};
 }

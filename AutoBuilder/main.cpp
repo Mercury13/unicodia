@@ -749,6 +749,7 @@ int main()
         // Draw as Egyptian hatch
         if (charsEgyptianHatch.contains(cp))
             flags |= uc::Cfg::M_EGYPTIAN_HATCH;
+        flags |= styleFlags(cp);
 
         // CJK strange
         if (std::string_view sStrange = elChar.attribute("kStrange").as_string();

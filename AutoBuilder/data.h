@@ -8,6 +8,7 @@
 
 #include "u_TypedFlags.h"
 #include "u_Array.h"
+#include "UcFlags.h"
 
 enum class Dicf {
     // Capitalization
@@ -157,6 +158,7 @@ std::string decapitalizeEmoji(
 std::string decapitalizeByTable(std::string_view x);
 bool isAlternate(char32_t x);
 bool isNoAa(char32_t x);
+Flags<uc::Cfg> styleFlags(char32_t x);
 
 bool hasLatUpper(std::string_view x);
 
