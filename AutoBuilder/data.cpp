@@ -1284,9 +1284,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
         // Tfng
-    EX("Tifinagh letter Berber academy Yaj")
     EX("Adrar Yaj")
     EX("harpoon Yaz")
+    EX("Tifinagh letter Berber Academy Yaj")
     EX("Tuareg Yab")
     EX("Tuareg Yaw")            
         // Vaii
