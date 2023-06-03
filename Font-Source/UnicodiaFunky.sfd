@@ -1,7 +1,7 @@
 SplineFontDB: 3.2
-FontName: FunkySample
-FullName: FunkySample
-FamilyName: FunkySample
+FontName: UnicodiaFunky
+FullName: UnicodiaFunky
+FamilyName: UnicodiaFunky
 Weight: Regular
 Copyright: Copyright (c) 2021 Mikhail Merkuryev\nYou just DO WHAT THE FUNK YOU WANT TO.
 UComments: "2021-9-15: Created with FontForge (http://fontforge.org)+AAoACgAA-Auto-kerning: separation 210, min.kerning 30"
@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1682365520
+ModificationTime: 1685829616
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -69171,7 +69171,7 @@ EndChar
 StartChar: uni23B1
 Encoding: 9137 9137 592
 Width: 438
-Flags: WO
+Flags: W
 HStem: -289.658 43<347.252 437.525> 1016 43<-0.474609 90.0438>
 VStem: 167.525 102<-172.316 941.367>
 TtInstrs:

@@ -9,7 +9,7 @@ constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
-constexpr uc::Family FNAME_FUNKY { "FunkySample.ttf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
 constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
