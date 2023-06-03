@@ -1324,7 +1324,8 @@ void FmMain::forceShowCp(MaybeChar ch)
                 auto flag = uc::Cfg::STYLE_0 << i;
                 button->setFont(ch->flags.have(flag) ? goodFont : badFont);
             }
-            radioGlyphVariant.set(glyphVars[ch->ecVariance()]);
+            glyphVar.curr = ch->ecVariance();
+            radioGlyphVariant.set(glyphVar.currSetting());
             ui->wiGlyphVariation->show();
         } else {
             ui->wiGlyphVariation->hide();
@@ -1344,6 +1345,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
         ui->wiGlyphVariation->hide();
+        glyphVar.curr = uc::EcGlyphVariance::NONE;
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             setWiki(ui->vwInfo, text);

@@ -317,7 +317,13 @@ private:
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     UintRadio<QRadioButton> radioGlyphVariant;
-    uc::GlyphVarianceSets glyphVars;
+
+    struct Variance {
+        uc::GlyphVarianceSets sets;
+        uc::EcGlyphVariance curr = uc::EcGlyphVariance::NONE;
+        constexpr unsigned currSetting() const { return sets[curr]; }
+        constexpr void setCurrSetting(unsigned x) { sets[curr] = x; }
+    } glyphVar;
 
     struct PullUpDetector {
         bool isCocked = false;
