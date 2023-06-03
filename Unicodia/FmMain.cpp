@@ -1312,7 +1312,23 @@ void FmMain::forceShowCp(MaybeChar ch)
         } else {
             ui->btCopyEx->hide();
         }
-        ui->wiGlyphVariation->setVisible(ch->hasVariations());
+        if (auto& var = ch->variance()) {
+            // We never have three things here
+            auto goodFont = ui->wiGlyphVariation->font();
+            auto badFont = goodFont;
+            badFont.setStrikeOut(true);
+            auto prefix = str::cat("GlyphVar.", var.name, '.');
+            for (unsigned i = 0; i < var.count; ++i) {
+                auto button = radioGlyphVariant.buttonAt(i);
+                button->setText(loc::get(str::cat(prefix, char('0' + i))));
+                auto flag = uc::Cfg::STYLE_0 << i;
+                button->setFont(ch->flags.have(flag) ? goodFont : badFont);
+            }
+            radioGlyphVariant.set(glyphVars[ch->ecVariance()]);
+            ui->wiGlyphVariation->show();
+        } else {
+            ui->wiGlyphVariation->hide();
+        }
 
         // Sample char
         ui->wiSample->showCp(*ch, CharsModel::EMOJI_DRAW);

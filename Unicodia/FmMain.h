@@ -317,6 +317,7 @@ private:
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     UintRadio<QRadioButton> radioGlyphVariant;
+    uc::GlyphVarianceSets glyphVars;
 
     struct PullUpDetector {
         bool isCocked = false;

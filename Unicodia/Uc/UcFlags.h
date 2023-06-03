@@ -29,6 +29,7 @@ namespace uc {
         DYN_SYSTEM_TOFU = 1<<15, ///< cached in runtime; [+] the char is tofu in system fonts
     };
     DEFINE_ENUM_OPS(Cfg)
+    DEFINE_ENUM_SHIFTS(Cfg)
     using Cfgs = Flags<Cfg>;
 
     constexpr Cfgs STYLE_ALL = Cfg::STYLE_0 | Cfg::STYLE_1 | Cfg::STYLE_2;

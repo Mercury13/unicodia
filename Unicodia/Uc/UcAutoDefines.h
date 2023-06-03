@@ -491,6 +491,13 @@ namespace uc {
 
     enum class MatchLast { NO, YES };
 
+    enum class EcGlyphVariance {
+        NONE,
+        GLAGOLITIC,
+        NN,
+    };
+    struct GlyphVariance;
+
     struct Cp   // code point
     {
         Int3 subj = 0;              // 3
@@ -543,7 +550,9 @@ namespace uc {
         constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
         constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
-        constexpr bool hasVariations() const { return flags.haveAny(STYLE_ALL); }
+        constexpr bool hasVariance() const { return flags.haveAny(STYLE_ALL); }
+        EcGlyphVariance ecVariance() const;
+        inline const GlyphVariance variance() const;
     };
 
     // Check your calculations once again

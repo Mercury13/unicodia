@@ -167,12 +167,6 @@ namespace uc {
         NN
     };
 
-    enum class EcGlyphVariance {
-        NONE,
-        GLAGOLITIC,
-        NN,
-    };
-
     struct GlyphVariance {
         unsigned count;
         std::string_view name;
@@ -183,6 +177,8 @@ namespace uc {
 
     struct GlyphVarianceSets {
         unsigned vals[static_cast<int>(EcGlyphVariance::NN)] { 0 };
+        constexpr unsigned& operator[](EcGlyphVariance i) { return vals[static_cast<int>(i)]; }
+        constexpr const unsigned& operator[](EcGlyphVariance i) const { return vals[static_cast<int>(i)]; }
     };
 
     enum class EcFont
@@ -645,12 +641,6 @@ namespace uc {
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);
 
-
-//    struct Category
-//    {
-//        std::string name;
-//    };
-
     struct Cp;
 
     ///  Flags of Unicode block
@@ -771,6 +761,7 @@ namespace uc {
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
+        EcGlyphVariance ecVariance = EcGlyphVariance::NONE;
 
         /// @warning We do not delete that icon, strange constinit problems, but OK
         mutable QIcon* icon = nullptr;
@@ -1076,6 +1067,8 @@ inline const uc::Script& uc::Cp::scriptEx() const
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
+inline const uc::GlyphVariance uc::Cp::variance() const
+    { return glyphVarianceInfo[static_cast<int>(ecVariance())]; }
 
 // Name
 template <class Body>

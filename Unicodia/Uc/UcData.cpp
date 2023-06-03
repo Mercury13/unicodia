@@ -2147,6 +2147,14 @@ uc::TofuInfo uc::Cp::tofuInfo() const
 }
 
 
+uc::EcGlyphVariance uc::Cp::ecVariance() const
+{
+    if (!hasVariance())
+        return uc::EcGlyphVariance::NONE;
+    return block().ecVariance;
+}
+
+
 const uc::Block* uc::blockOf(char32_t subj)
 {
     unsigned index = subj >> 4;

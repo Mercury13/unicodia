@@ -215,4 +215,8 @@ constexpr inline Flags<En> flagIf(bool x, En y)
     [[maybe_unused]] constexpr inline Flags<En> operator | (En x, En y) { return Flags<En>(x) | y; }  \
     [[maybe_unused]] constexpr inline Flags<En> operator ~ (En x) { return Flags<En>(~Flags<En>::toStorage(x)); }
 
+#define DEFINE_ENUM_SHIFTS(En)  \
+    [[maybe_unused]] constexpr inline En operator << (En x, int y) { return static_cast<En>(Flags<En>::toStorage(x) << y); }  \
+    [[maybe_unused]] constexpr inline En operator >> (En x, int y) { return static_cast<En>(Flags<En>::toStorage(x) >> y); }
+
 #endif // U_TYPEDFLAGS_H
