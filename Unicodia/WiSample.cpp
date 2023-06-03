@@ -25,7 +25,9 @@ WiSample::~WiSample()
 }
 
 
-void WiSample::drawWithQt(const uc::Cp& ch, uc::EmojiDraw emojiDraw)
+void WiSample::drawWithQt(
+        const uc::Cp& ch, uc::EmojiDraw emojiDraw,
+        const uc::GlyphStyleSets& glyphSets)
 {
     ui->pageSampleCustom->setNormal();
 
@@ -35,7 +37,7 @@ void WiSample::drawWithQt(const uc::Cp& ch, uc::EmojiDraw emojiDraw)
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(emojiDraw);
+    auto proxy = ch.sampleProxy(emojiDraw, glyphSets);
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -57,7 +59,9 @@ void WiSample::clearSample()
 }
 
 
-void WiSample::showCp(const uc::Cp& ch, uc::EmojiDraw emojiDraw)
+void WiSample::showCp(
+        const uc::Cp& ch, uc::EmojiDraw emojiDraw,
+        const uc::GlyphStyleSets& glyphSets)
 {
     if (ch.isTrueSpace()) {
             auto palette = this->palette();
@@ -89,7 +93,7 @@ void WiSample::showCp(const uc::Cp& ch, uc::EmojiDraw emojiDraw)
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
         } break;
     case uc::DrawMethod::SAMPLE:
-        drawWithQt(ch, emojiDraw);
+        drawWithQt(ch, emojiDraw, glyphSets);
         break;
     case uc::DrawMethod::EGYPTIAN_HATCH: {
             clearSample();

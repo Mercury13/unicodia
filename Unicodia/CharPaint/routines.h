@@ -47,7 +47,10 @@ std::optional<QFont> fontAt(
         uc::DrawMethod drawMethod, int sizePc,
         const uc::Cp& cp);
 
-inline QString textAt(const uc::Cp& cp, uc::EmojiDraw emojiDraw) { return cp.sampleProxy(emojiDraw).text; }
+inline QString textAt(
+        const uc::Cp& cp, uc::EmojiDraw emojiDraw,
+        const uc::GlyphStyleSets& glyphSets)
+    { return cp.sampleProxy(emojiDraw, glyphSets).text; }
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);
@@ -60,27 +63,29 @@ enum class UseMargins { NO, YES };
 void drawChar(
         QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
+        const uc::GlyphStyleSets& glyphSets,
         UseMargins useMargins = UseMargins::YES);
 
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
         const QColor& color, uc::EmojiDraw emojiMode,
-        qreal scale);
+        const uc::GlyphStyleSets& glyphSets, qreal scale);
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode, qreal scale);
+        const QColor& color, uc::EmojiDraw emojiMode,
+        const uc::GlyphStyleSets& glyphSets, qreal scale);
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
         const CharTiles& tiles, const QColor& color,
-        qreal scale);
+        const uc::GlyphStyleSets& glyphSets, qreal scale);
 CharTiles getCharTiles(const uc::LibNode& node);
 void drawFolderTile(
         QPainter* painter, const QRect& bounds,
         const uc::LibNode& node, const QColor& color,
-        qreal scale);
+        const uc::GlyphStyleSets& glyphSets, qreal scale);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
 

@@ -167,18 +167,20 @@ namespace uc {
         NN
     };
 
-    struct GlyphVariance {
+    struct GlyphStyleChannel {
         unsigned count;
         std::string_view name;
 
         constexpr operator bool() const noexcept { return count; }
     };
-    extern const GlyphVariance glyphVarianceInfo[];
+    extern const GlyphStyleChannel glyphStyleChannelInfo[];
 
-    struct GlyphVarianceSets {
-        unsigned vals[static_cast<int>(EcGlyphVariance::NN)] { 0 };
-        constexpr unsigned& operator[](EcGlyphVariance i) { return vals[static_cast<int>(i)]; }
-        constexpr const unsigned& operator[](EcGlyphVariance i) const { return vals[static_cast<int>(i)]; }
+    struct GlyphStyleSets {
+        unsigned vals[static_cast<int>(EcGlyphStyleChannel::NN)] { 0 };
+        constexpr unsigned& operator[](EcGlyphStyleChannel i) { return vals[static_cast<int>(i)]; }
+        constexpr const unsigned& operator[](EcGlyphStyleChannel i) const { return vals[static_cast<int>(i)]; }
+
+        static const GlyphStyleSets EMPTY;
     };
 
     enum class EcFont
@@ -487,6 +489,10 @@ namespace uc {
         explicit operator bool() const noexcept { return value; }
     };
 
+    struct StyleChange {
+        int delta = 0;
+    };
+
     struct Font
     {
         static const QString qempty;
@@ -496,6 +502,7 @@ namespace uc {
         std::string_view styleSheet {};
         Percent sizeAdjust {};
         ProbeChar probeChar {};
+        StyleChange styleChange {};
 
         mutable struct Q {
             dumb::Sp<LoadedFont> loaded {};
@@ -556,6 +563,11 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
+        consteval Font(
+                std::string_view aFamily,
+                Percent aSizeAdjust,
+                StyleChange aVariation)
+            : family(aFamily), sizeAdjust(aSizeAdjust), styleChange(aVariation) {}
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;
@@ -761,7 +773,7 @@ namespace uc {
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
-        EcGlyphVariance ecVariance = EcGlyphVariance::NONE;
+        EcGlyphStyleChannel ecStyleChannel = EcGlyphStyleChannel::NONE;
 
         /// @warning We do not delete that icon, strange constinit problems, but OK
         mutable QIcon* icon = nullptr;
@@ -1067,8 +1079,8 @@ inline const uc::Script& uc::Cp::scriptEx() const
 inline bool uc::Cp::isTrueSpace() const
         { return (ecCategory == EcCategory::SEPARATOR_SPACE &&
                   ecScript != EcScript::Ogam); }    // Ogham space is a continuing line (edge of stick)
-inline const uc::GlyphVariance uc::Cp::variance() const
-    { return glyphVarianceInfo[static_cast<int>(ecVariance())]; }
+inline const uc::GlyphStyleChannel uc::Cp::styleChannel() const
+    { return glyphStyleChannelInfo[static_cast<int>(ecStyleChannel())]; }
 
 // Name
 template <class Body>

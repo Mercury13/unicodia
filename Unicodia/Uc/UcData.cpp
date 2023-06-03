@@ -26,6 +26,7 @@ using namespace std::string_view_literals;
 const uc::Cp* uc::cpsByCode[CAPACITY];
 short uc::blocksByCode16[CAPACITY >> 4];
 const QString uc::Font::qempty;
+const uc::GlyphStyleSets uc::GlyphStyleSets::EMPTY;
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
@@ -1470,11 +1471,11 @@ namespace {
 }   // anon namespace
 
 
-const uc::GlyphVariance uc::glyphVarianceInfo[] = {
+const uc::GlyphStyleChannel uc::glyphStyleChannelInfo[] = {
     { 0, {} },      // -warn in static analyzer: init [0] as normal, and everything’s OK
     { .count = 2, .name = "Glag" },
 };
-static_assert(std::size(uc::glyphVarianceInfo) == static_cast<size_t>(uc::EcGlyphVariance::NN));
+static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::EcGlyphStyleChannel::NN));
 
 
 uc::InputMethods uc::cpInputMethods(char32_t cp)
@@ -1949,7 +1950,8 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
-uc::SampleProxy uc::Cp::sampleProxy(EmojiDraw emojiDraw) const
+uc::SampleProxy uc::Cp::sampleProxy(
+        EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets) const
 {
     switch (drawMethod(emojiDraw)) {
     case DrawMethod::SAMPLE:
@@ -1977,6 +1979,24 @@ uc::SampleProxy uc::Cp::sampleProxy(EmojiDraw emojiDraw) const
         case 0x1CF45:
         case 0x1CF46:
             return { str::toQ(code), style };
+        }
+    }
+
+    // Recode according to glyph style
+    // Assume style 0 always exists in fonts, even if it’s actually other style!
+    auto channel = ecStyleChannel();
+    // Have channel?
+    if (channel != EcGlyphStyleChannel::NONE) {
+        auto setting = glyphSets[channel];
+        // Setting OK?
+        if (setting < styleChannel().count) {
+            auto flag = uc::Cfg::STYLE_0 << setting;
+            // Have this style?
+            if (flags.have(flag)) {
+                // Code works for setting == 1 only
+                if (setting == 1)
+                    code += fn->styleChange.delta;
+            }
         }
     }
 
@@ -2147,11 +2167,11 @@ uc::TofuInfo uc::Cp::tofuInfo() const
 }
 
 
-uc::EcGlyphVariance uc::Cp::ecVariance() const
+uc::EcGlyphStyleChannel uc::Cp::ecStyleChannel() const
 {
-    if (!hasVariance())
-        return uc::EcGlyphVariance::NONE;
-    return block().ecVariance;
+    if (!hasStyle())
+        return uc::EcGlyphStyleChannel::NONE;
+    return block().ecStyleChannel;
 }
 
 

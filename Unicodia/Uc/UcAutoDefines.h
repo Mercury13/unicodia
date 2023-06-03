@@ -491,12 +491,13 @@ namespace uc {
 
     enum class MatchLast { NO, YES };
 
-    enum class EcGlyphVariance {
+    enum class EcGlyphStyleChannel {
         NONE,
         GLAGOLITIC,
         NN,
     };
-    struct GlyphVariance;
+    struct GlyphStyleChannel;
+    struct GlyphStyleSets;
 
     struct Cp   // code point
     {
@@ -532,7 +533,8 @@ namespace uc {
         /// @param [in] matchLast  [+] match last font, can return null
         ///                        [-] take last font, never null
         const Font* font(MatchLast matchLast) const;
-        SampleProxy sampleProxy(EmojiDraw emojiDraw) const;
+        SampleProxy sampleProxy(
+                EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets) const;
         QString osProxy() const;
         inline const Block& block() const;
 
@@ -550,9 +552,9 @@ namespace uc {
         constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
         constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
-        constexpr bool hasVariance() const { return flags.haveAny(STYLE_ALL); }
-        EcGlyphVariance ecVariance() const;
-        inline const GlyphVariance variance() const;
+        constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
+        EcGlyphStyleChannel ecStyleChannel() const;
+        inline const GlyphStyleChannel styleChannel() const;
     };
 
     // Check your calculations once again

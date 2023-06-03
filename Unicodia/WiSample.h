@@ -6,6 +6,7 @@
 
 namespace uc {
     struct Cp;
+    struct GlyphStyleSets;
     enum class EmojiDraw;
 }
 
@@ -21,14 +22,18 @@ public:
     explicit WiSample(QWidget *parent = nullptr);
     ~WiSample() override;
 
-    void showCp(const uc::Cp& ch, uc::EmojiDraw emojiDraw);
+    void showCp(
+            const uc::Cp& ch, uc::EmojiDraw emojiDraw,
+            const uc::GlyphStyleSets& sets);
     void showEmoji(std::u32string_view text);
     void showNothing();
 
 private:
     Ui::WiSample *ui;
     void clearSample();
-    void drawWithQt(const uc::Cp& cp, uc::EmojiDraw emojiDraw);
+    void drawWithQt(
+            const uc::Cp& cp, uc::EmojiDraw emojiDraw,
+            const uc::GlyphStyleSets& glyphSets);
 };
 
 #endif // WISAMPLE_H

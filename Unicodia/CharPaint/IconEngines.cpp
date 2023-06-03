@@ -315,13 +315,15 @@ void ie::Veng::paint(
 
 ///// Cp ///////////////////////////////////////////////////////////////////////
 
-ie::Cp::Cp(const PixSource& aSource, uc::EmojiDraw aEmojiDraw, const uc::Cp* aCp)
-    : source(aSource), emojiDraw(aEmojiDraw), cp(aCp) {}
+ie::Cp::Cp(
+        const PixSource& aSource, uc::EmojiDraw aEmojiDraw, const uc::Cp* aCp,
+        const uc::GlyphStyleSets& aGlyphSets)
+    : source(aSource), emojiDraw(aEmojiDraw), cp(aCp), glyphSets(aGlyphSets) {}
 
 void ie::Cp::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     auto clFg = source.winColor();
-    drawSearchChar(painter, rect, cp, clFg, emojiDraw, scale);
+    drawSearchChar(painter, rect, cp, clFg, emojiDraw, glyphSets, scale);
 }
 
 
@@ -376,8 +378,10 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         clFg = cont.icon.fgColor;
     }
     // Draw icon a bit larger — 120%
+    // Synth icon always draws in default settings
     drawChar(painter, rect, lround(120 * scale), si.cp(), clFg,
-             TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE);
+             TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE,
+             uc::GlyphStyleSets::EMPTY);
 }
 
 ///// Node /////////////////////////////////////////////////////////////////////
@@ -392,10 +396,12 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
     // draw char
     switch (node.value.length()) {
     case 0:
-        drawFolderTile(painter, rect, node, clFg, scale);
+        // Nodes always draw in default settings
+        drawFolderTile(painter, rect, node, clFg, uc::GlyphStyleSets::EMPTY, scale);
         break;
     default:
-        drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(), scale);
+        // Nodes always draw in default settings
+        drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(), uc::GlyphStyleSets::EMPTY, scale);
         break;
     }
 }

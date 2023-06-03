@@ -358,7 +358,7 @@ QString CharsModel::textAt(const QModelIndex& index) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return ::textAt(*cp, EMOJI_DRAW);
+    return ::textAt(*cp, EMOJI_DRAW, glyphStyle.sets);
 }
 
 
@@ -488,7 +488,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, EMOJI_DRAW);
+        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, EMOJI_DRAW, glyphStyle.sets);
     }
 }
 
@@ -656,7 +656,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             QIconEngine* ie = nullptr;
             switch (line.type) {
             case uc::CpType::EXISTING:
-                ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp);
+                ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp, glyphSets);
                 break;
             case uc::CpType::NN:
             case uc::CpType::NONCHARACTER:
@@ -758,7 +758,7 @@ FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain),
       model(this),
-      searchModel(this),
+      searchModel(this, model.glyphStyle.sets),
       libModel(this),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       fontTofu(str::toQ(FAM_TOFU), FSZ_BIG)
@@ -922,9 +922,11 @@ FmMain::InitBlocks FmMain::initBlocks()
     addAc(BlockOrder::CODE,      ui->acSortByCode);
     addAc(BlockOrder::TECH,      ui->acSortByTech);
 
-    // Variations
-    radioGlyphVariant.setRadio(0, ui->radioVariation0);
-    radioGlyphVariant.setRadio(1, ui->radioVariation1);
+    // Glyph styles
+    radioGlyphStyle.setRadio(0, ui->radioStyle0);
+    radioGlyphStyle.setRadio(1, ui->radioStyle1);
+    connect(ui->radioStyle0, &QRadioButton::clicked, this, &This::glyphStyleChanged);
+    connect(ui->radioStyle1, &QRadioButton::clicked, this, &This::glyphStyleChanged);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -1282,6 +1284,16 @@ namespace {
 }   // anon namespace
 
 
+void FmMain::redrawSampleChar()
+{
+    if (shownCp) {
+        ui->wiSample->showCp(*shownCp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
+    } else {
+        ui->wiSample->showNothing();
+    }
+}
+
+
 void FmMain::forceShowCp(MaybeChar ch)
 {
     shownCp = ch;
@@ -1302,6 +1314,8 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
 
+    redrawSampleChar();
+
     if (ch) {
         if (ch->category().upCat == uc::UpCategory::MARK) {
             ui->btCopyEx->setText("+25CC");
@@ -1312,27 +1326,24 @@ void FmMain::forceShowCp(MaybeChar ch)
         } else {
             ui->btCopyEx->hide();
         }
-        if (auto& var = ch->variance()) {
+        if (auto& var = ch->styleChannel()) {
             // We never have three things here
-            auto goodFont = ui->wiGlyphVariation->font();
+            auto goodFont = ui->wiGlyphStyle->font();
             auto badFont = goodFont;
             badFont.setStrikeOut(true);
             auto prefix = str::cat("GlyphVar.", var.name, '.');
             for (unsigned i = 0; i < var.count; ++i) {
-                auto button = radioGlyphVariant.buttonAt(i);
+                auto button = radioGlyphStyle.buttonAt(i);
                 button->setText(loc::get(str::cat(prefix, char('0' + i))));
                 auto flag = uc::Cfg::STYLE_0 << i;
                 button->setFont(ch->flags.have(flag) ? goodFont : badFont);
             }
-            glyphVar.curr = ch->ecVariance();
-            radioGlyphVariant.set(glyphVar.currSetting());
-            ui->wiGlyphVariation->show();
+            model.glyphStyle.currChannel = ch->ecStyleChannel();
+            radioGlyphStyle.set(model.glyphStyle.currSetting());
+            ui->wiGlyphStyle->show();
         } else {
-            ui->wiGlyphVariation->hide();
+            ui->wiGlyphStyle->hide();
         }
-
-        // Sample char
-        ui->wiSample->showCp(*ch, CharsModel::EMOJI_DRAW);
 
         // OS char
         ui->wiOsStyle->setCp(*ch, model.match);
@@ -1341,11 +1352,10 @@ void FmMain::forceShowCp(MaybeChar ch)
         setWiki(ui->vwInfo, text);
     } else {
         // No character
-        ui->wiSample->showNothing();
         ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
-        ui->wiGlyphVariation->hide();
-        glyphVar.curr = uc::EcGlyphVariance::NONE;
+        ui->wiGlyphStyle->hide();
+        model.glyphStyle.currChannel = uc::EcGlyphStyleChannel::NONE;
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             setWiki(ui->vwInfo, text);
@@ -1391,7 +1401,8 @@ void FmMain::libChanged(const QModelIndex& current)
         if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || node.value.length() > 1) {
             ui->wiLibSample->showEmoji(node.value);
         } else if (auto cp = uc::cpsByCode[node.value[0]]) {
-            ui->wiLibSample->showCp(*cp, node.emojiDraw());
+            // Library uses default/empty settings
+            ui->wiLibSample->showCp(*cp, node.emojiDraw(), uc::GlyphStyleSets::EMPTY);
         } else  {
             ui->wiLibSample->showNothing();
         }
@@ -1787,4 +1798,12 @@ void FmMain::dumpTiles()
         }
     }
     doc.save_file("opt.xml");
+}
+
+
+void FmMain::glyphStyleChanged()
+{
+    model.glyphStyle.setCurrSetting(radioGlyphStyle.get());
+    model.dataChanged({}, {});
+    redrawSampleChar();
 }

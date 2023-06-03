@@ -45,14 +45,16 @@ namespace ie {
     class Cp : public Veng
     {
     public:
-        Cp(const PixSource& aSource, uc::EmojiDraw aEmojiDraw, const uc::Cp* aCp);
+        Cp(const PixSource& aSource, uc::EmojiDraw aEmojiDraw, const uc::Cp* aCp,
+                    const uc::GlyphStyleSets& aGlyphSets);
         Cp* clone() const override { return new Cp(*this); }
     protected:
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         const PixSource& source;
-        const uc::EmojiDraw emojiDraw;
+        const uc::EmojiDraw emojiDraw;        
         const uc::Cp* const cp;
+        const uc::GlyphStyleSets& glyphSets;
     };
 
     class Nonchar : public Veng

@@ -660,7 +660,7 @@ constexpr int EMOJI_DEN = 5;
 void drawChar(
         QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
-        UseMargins useMargins)
+        const uc::GlyphStyleSets& glyphSets, UseMargins useMargins)
 {
     auto method = cp.drawMethod(emojiMode);
     switch (method) {
@@ -685,7 +685,7 @@ void drawChar(
             painter->setPen(color);
             painter->drawText(rect,
                               Qt::AlignCenter | Qt::TextSingleLine,
-                              textAt(cp, emojiMode));
+                              textAt(cp, emojiMode, glyphSets));
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
             //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
@@ -728,17 +728,19 @@ void drawMurkyRect(QPainter* painter, const QRect& rect, const QColor& color)
 
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,
-        const QColor& color, uc::EmojiDraw emojiMode, qreal scale)
+        const QColor& color, uc::EmojiDraw emojiMode,
+        const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
     drawCharBorder(painter, rect, color);
     if (cp)
-        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode);
+        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode, glyphSets);
 }
 
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode, qreal scale)
+        const QColor& color, uc::EmojiDraw emojiMode,
+        const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
     drawCharBorder(painter, rect, color);
     if (text.empty())
@@ -749,7 +751,7 @@ void drawSearchChars(
     ///    (all multi-chars are emoji)
     if (c1 && !c1.forceGraphic) {
         if (auto cp = uc::cpsByCode[c1.cp])
-            drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode);
+            drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode, glyphSets);
     } else {
         // Graphic
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
@@ -761,7 +763,7 @@ void drawSearchChars(
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
         const CharTiles& tiles, const QColor& color,
-        qreal scale)
+        const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
     static constexpr int SIZE_PC = 70;  /// size percentage
     static constexpr int SIDE_GAP = 2;
@@ -793,7 +795,7 @@ void drawCharTiles(
             // Single-char
             if (auto cp = uc::cpsByCode[c1.cp])
                 drawChar(painter, r2, percent, *cp, color, TableDraw::CUSTOM,
-                         tile.emojiDraw, UseMargins::NO);
+                         tile.emojiDraw, glyphSets, UseMargins::NO);
         } else {
             // Multi-char
             emp.draw(painter, r2, tile.text, sz);
@@ -844,8 +846,8 @@ CharTiles getCharTiles(const uc::LibNode& node)
 void drawFolderTile(
         QPainter* painter, const QRect& bounds,
         const uc::LibNode& node, const QColor& color,
-        qreal scale)
+        const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
     CharTiles tiles = getCharTiles(node);
-    drawCharTiles(painter, bounds, tiles, color, scale);
+    drawCharTiles(painter, bounds, tiles, color, glyphSets, scale);
 }

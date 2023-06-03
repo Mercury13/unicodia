@@ -127,6 +127,17 @@ public:
     bool isCjkCollapsed = true;
     mutable TableCache tcache;
 
+    struct Style {
+        uc::GlyphStyleSets sets;
+        uc::EcGlyphStyleChannel currChannel = uc::EcGlyphStyleChannel::NONE;
+        constexpr unsigned currSetting() const { return sets[currChannel]; }
+        constexpr void setCurrSetting(unsigned x)
+        {
+            if (currChannel != uc::EcGlyphStyleChannel::NONE)
+                sets[currChannel] = x;
+        }
+    } glyphStyle;
+
     CharsModel(QWidget* aOwner);
     ~CharsModel();  // forward-defined class here
 
@@ -214,7 +225,8 @@ private:
 class SearchModel final : public QAbstractTableModel
 {
 public:
-    SearchModel(const PixSource* aSample) : sample(aSample) {}
+    SearchModel(const PixSource* aSample, const uc::GlyphStyleSets& aGlyphSets) noexcept
+        : sample(aSample), glyphSets(aGlyphSets) {}
     int size() const { return v.size(); }
     int rowCount(const QModelIndex&) const override { return v.size(); }
     int columnCount(const QModelIndex&) const override { return 1; }
@@ -225,6 +237,7 @@ public:
     const uc::SearchLine& lineAt(size_t index) const;
 private:
     const PixSource* const sample;
+    const uc::GlyphStyleSets& glyphSets;
     SafeVector<uc::SearchLine> v;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
     static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
@@ -316,14 +329,7 @@ private:
     QToolButton* btSort;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
-    UintRadio<QRadioButton> radioGlyphVariant;
-
-    struct Variance {
-        uc::GlyphVarianceSets sets;
-        uc::EcGlyphVariance curr = uc::EcGlyphVariance::NONE;
-        constexpr unsigned currSetting() const { return sets[curr]; }
-        constexpr void setCurrSetting(unsigned x) { sets[curr] = x; }
-    } glyphVar;
+    UintRadio<QRadioButton> radioGlyphStyle;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -359,6 +365,7 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void rebuildBlocks();
+    void redrawSampleChar();
 
     // mywiki::Gui
     void popupAtAbs(
@@ -396,6 +403,7 @@ private slots:
     void comboDroppedDown();
     void comboPulledUp();
     void blockOrderChanged();
+    void glyphStyleChanged();
 };
 
 

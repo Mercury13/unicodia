@@ -365,7 +365,7 @@ constinit const uc::Block uc::blocks[] {
     // Glagolitic OK
     { 0x2C00, 0x2C5F, { 0x2C19, EcContinent::EUROPE },
             "Glagolitic", { EcScript::Glag, 0 },
-            EcScript::Glag, EcFont::NORMAL, {}, EcGlyphVariance::GLAGOLITIC },
+            EcScript::Glag, EcFont::NORMAL, {}, EcGlyphStyleChannel::GLAGOLITIC },
     // Latin C OK
     { 0x2C60, 0x2C7F, { L'Ɱ', EcContinent::EUROPE },
             "Latin Extended-C",
@@ -1069,7 +1069,7 @@ constinit const uc::Block uc::blocks[] {
             "Glagolitic Supplement",
             { EcScript::Glag, 1 },
             EcScript::Glag, EcFont::NORMAL, Bfg::HAS_DESCRIPTION,
-            EcGlyphVariance::GLAGOLITIC },
+            EcGlyphStyleChannel::GLAGOLITIC },
     // Cyr ex D OK, really nice implementation in Funky
     { 0x1E030, 0x1E08F, { 0x1E047, EcContinent::EUROPE, Ifg::APPROX_SQUARE },
             "Cyrillic Extended-D",
