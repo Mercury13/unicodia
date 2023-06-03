@@ -49,7 +49,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
       { FNAME_NOTO },                                                           // …1
-    { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL
+    { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL (unused but left)
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
