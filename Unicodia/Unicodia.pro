@@ -1,5 +1,5 @@
 QT += core gui widgets svg svgwidgets
-CONFIG += c++2a
+CONFIG += c++2a c++20
 
 VERSION = 1.11.1
 
