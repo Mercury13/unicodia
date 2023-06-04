@@ -124,8 +124,10 @@ void SearchCombo::focusOutEvent(QFocusEvent* ev)
 }
 
 
-void SearchCombo::addToHistory(const QString& x)
+void SearchCombo::addToHistory()
 {
+    auto x = currentText();
+
     // Remove coinciding
     for (auto i = count(); i > 0; ) { --i;
         auto q = itemText(i);
@@ -140,6 +142,7 @@ void SearchCombo::addToHistory(const QString& x)
     }
     // Add
     insertItem(0, x);
+    setCurrentIndex(0);
 }
 
 

@@ -71,7 +71,7 @@ class SearchCombo : public WideComboBox
     using This = SearchCombo;
 public:
     SearchCombo(QWidget *parent = nullptr);
-    void addToHistory(const QString& x);
+    void addToHistory();
 protected:
     void focusInEvent(QFocusEvent* ev) override;
     void focusOutEvent(QFocusEvent* ev) override;

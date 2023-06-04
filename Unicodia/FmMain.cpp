@@ -1651,7 +1651,7 @@ void FmMain::startSearch()
 {
     QString s = ui->edSearch->currentText();
     if (doSearch(s)) {
-        ui->edSearch->addToHistory(s);
+        ui->edSearch->addToHistory();
     }
 }
 
