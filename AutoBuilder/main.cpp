@@ -30,6 +30,7 @@ inline auto need(T&& val, const char* errmsg)
 
 struct Numeric {
     long long num, denom;
+    long long altInt = 0;
     std::string_view type, textValue;
     size_t index;
 };
@@ -53,17 +54,44 @@ long long fromChars(std::string_view x, std::string_view numType)
 Numeric parseNumeric(std::string_view numType, std::string_view x, size_t index)
 {
     if (x == "NaN"sv) {
-        return { 0, 0, numType, x, index };
+        return {
+            .num = 0,
+            .denom = 0,
+                    .altInt = 0,
+            .type = numType,
+            .textValue = x,
+            .index = index };
     }
+
+    long long altNum = 0;
+    auto pAlt = x.find(' ');
+    if (pAlt != std::string_view::npos) {
+        auto sAlt = str::trimSv(x.substr(pAlt + 1));
+        altNum = fromChars(sAlt, numType);
+        x = x.substr(0, pAlt);
+    }
+
     auto pSlash = x.find('/');
     if (pSlash == std::string_view::npos) {
         // Integer
-        return { fromChars(x, numType), 1, numType, x, index };
+        return {
+            .num = fromChars(x, numType),
+            .denom = 1,
+            .altInt = altNum,
+            .type = numType,
+            .textValue = x,
+            .index = index };
     } else {
         // Fraction
         auto num = x.substr(0, pSlash);
         auto den = x.substr(pSlash + 1);
-        return { fromChars(num, numType), fromChars(den, numType), numType, x, index };
+        return {
+            .num = fromChars(num, numType),
+            .denom = fromChars(den, numType),
+            .altInt = altNum,
+            .type = numType,
+            .textValue = x,
+            .index = index };
     }
 }
 
