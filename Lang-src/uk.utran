@@ -4470,6 +4470,16 @@
      <transl>7473 ієрогліфа, додані у 2017. Включають рідкі, старі, а також більше тисячі чжуанських (одна з мов Китаю).</transl>
     </text>
    </group>
+   <group id="2EBF0">
+    <text id="Name">
+     <orig>CJK unified ideographs extension I</orig>
+     <transl>ККЯ ієрогліфи розширення I</transl>
+    </text>
+    <text id="Text">
+     <orig>603 ideographs from mainland China.</orig>
+     <transl>603 ієрогліфи з континентального Китаю.</transl>
+    </text>
+   </group>
    <group id="2F800">
     <text id="Name">
      <orig>CJK compatibility ideographs supplement</orig>

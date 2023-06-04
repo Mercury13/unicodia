@@ -4469,6 +4469,16 @@
      <transl>7473 иероглифа, добавленных в 2017. Включают редкие, старые, а также больше тысячи чжуанских (один из языков Китая).</transl>
     </text>
    </group>
+   <group id="2EBF0">
+    <text id="Name">
+     <orig>CJK unified ideographs extension I</orig>
+     <transl>ККЯ иероглифы расширение I</transl>
+    </text>
+    <text id="Text">
+     <orig>603 ideographs from mainland China.</orig>
+     <transl>603 иероглифа из континентального Китая.</transl>
+    </text>
+   </group>
    <group id="2F800">
     <text id="Name">
      <orig>CJK compatibility ideographs supplement</orig>

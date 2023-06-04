@@ -278,6 +278,7 @@ namespace uc {
         E13_1,
         V_14_0,
         V_15_0,
+        V_15_1,
         NN,
         UNKNOWN = NN,
         FIRST = 0,
@@ -292,6 +293,7 @@ namespace uc {
         E13_0 = V_13_0,
         E14_0 = V_14_0,
         E15_0 = V_15_0,
+        E15_1 = V_15_1,
     };
 
     enum class EcBidiStrength
@@ -384,7 +386,7 @@ namespace uc {
     /// @warning  All fractions are reduced!
     struct Numeric
     {
-        long long num = 0, denom = 0;
+        long long num = 0, denom = 0, altInt = 0;
         EcNumType ecType = EcNumType::NONE;
 
         bool isPresent() const { return (ecType != EcNumType::NONE); }

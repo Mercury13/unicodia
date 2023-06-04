@@ -887,7 +887,7 @@ int main()
     std::cout << "  Stockpiled " << nums.size() << " numerics." << std::endl;
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
-        os << "{ " << std::dec << v.num << ", " << v.denom
+        os << "{ " << std::dec << v.num << ", " << v.denom << ", " << v.altInt
            << ", EcNumType::" << transform(v.type, smNumType)
            << " },  // " << v.index << " is " << v.textValue << '\n';
     }

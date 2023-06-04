@@ -3322,6 +3322,14 @@
      <orig>7473 ideographs added in 2017, Including rare, old and more than 1000 from Zhuang language.</orig>
     </text>
    </group>
+   <group id="2EBF0">
+    <text id="Name">
+     <orig>CJK unified ideographs extension I</orig>
+    </text>
+    <text id="Text">
+     <orig>603 ideographs from mainland China.</orig>
+    </text>
+   </group>
    <group id="2F800">
     <text id="Name">
      <orig>CJK compatibility ideographs supplement</orig>

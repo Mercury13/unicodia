@@ -123,7 +123,7 @@ namespace {
     constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/15.1.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
     constinit const CurlAction AC_UCD_NAMES { "https://www.unicode.org/Public/15.1.0/ucd/NamesList.txt", UCD_NAMES };
-    constinit const CurlAction AC_EMOJI { "https://unicode.org/Public/emoji/15.0/emoji-test.txt", EMOJI_TEST };
+    constinit const CurlAction AC_EMOJI { "https://www.unicode.org/Public/draft/emoji/emoji-test.txt", EMOJI_TEST };
     constinit const CurlAction AC_EGYP_UNICODE { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml", EGYP_UNICODE };
     constinit const CurlAction AC_EGYP_DESC { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml", EGYP_DESCRIPTION };
 

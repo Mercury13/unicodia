@@ -1202,6 +1202,11 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension F",
             { EcScript::Hani, 'F' },
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+    /// @todo [u15.1] CJK I
+    { 0x2EBF0, 0x2EE4F, { 0x2EBF0, EcContinent::CJK, Ifg::MISSING },
+            "CJK Unified Ideographs Extension I",
+            { EcScript::Hani, 'I' },
+            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK compat OK
     { 0x2F800, 0x2FA1F, { 0x2F81F, EcContinent::CJK },
             "CJK Compatibility Ideographs Supplement",
