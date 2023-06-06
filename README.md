@@ -74,10 +74,11 @@ I discovered that most of professional emoji… do not work! Do not work because
 **Grid:** 1px; extremum nodes are snapped.
 
 ## Flags
-* Joining fields to work around renderer deficiencies:
-  * Large fields (e.g. any bicolour): one field is a rectangle, the other is a hexagon, with two vertices under the rectangle.
-  * A small field and a large one (e.g. England): just draw red cross on white background
-  * Small fields: as emoji are intended to be drawn in small size, no special rules
+These rules are intended to work around renderer deficiencies. Emoji are intended to be drawn in small size, and rendering SVG leaves half-pixel lines. Also white and black are main colours everywhere.
+
+* Joining fields:
+  * Fields always overlap. Example (England): you just draw a white rectangle, and a cross overneath it.
+  * When fields are big, that overlap should shun the edge: Example (Ukraine, Poland and other bicolours): one half is a rectangle, the other is a hexagon, with two vertices making that overlap.
 * White fields adjacent to background:
   * Small (Norway, US): just white
   * Medium, both ends are of the same colour (Argentina, Oman): outline of that colour
