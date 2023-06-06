@@ -69,3 +69,9 @@ void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
     snprintf(q, std::size(q), "%04X", static_cast<int>(cp));
     ui->lbCode->setText(q);
 }
+
+void WiLibCp::removeCp()
+{
+    ui->wiImage->setCp(nullptr, uc::GlyphStyleSets::EMPTY);
+    ui->lbCode->setText("---");
+}

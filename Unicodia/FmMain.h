@@ -50,6 +50,7 @@ class QToolButton;
 class FmPopup2;
 class FmMessage;
 class FmTofuStats;
+class WiLibCp;
 
 struct MaybeChar {
     char32_t code = 0;
@@ -330,6 +331,7 @@ private:
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     UintRadio<QRadioButton> radioGlyphStyle;
+    WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
 
     struct PullUpDetector {
         bool isCocked = false;

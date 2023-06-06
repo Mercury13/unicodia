@@ -48,6 +48,7 @@
 #include "FmMessage.h"
 #include "FmTofuStats.h"
 #include "WiOsStyle.h"
+#include "WiLibCp.h"
 
 // L10n
 #include "LocDic.h"
@@ -822,7 +823,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 
     // Top bar
     QPalette pal = ui->wiCharBar->palette();
-    const QColor& color = pal.color(QPalette::Normal, QPalette::Button);
+    const QColor& color = pal.color(QPalette::Normal, QPalette::Window);
     r.buttonColor = color.name();
 
     paintTo(ui->wiCharBar, r.buttonColor);
@@ -954,6 +955,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 void FmMain::initLibrary(const InitBlocks& ib)
 {
     paintTo(ui->wiLibInfo, ib.buttonColor);
+    paintTo(ui->wiLibCps, ib.buttonColor);
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
@@ -963,6 +965,15 @@ void FmMain::initLibrary(const InitBlocks& ib)
     ui->splitLibrary->setStretchFactor(0, 0);
     ui->splitLibrary->setStretchFactor(1, 1);
     ui->splitLibrary->setSizes(ib.sizes);
+
+    // Codepoints
+    auto layout = qobject_cast<QBoxLayout*>(ui->wiLibCps->layout());
+    for (unsigned i = 0; i < uc::LONGEST_LIB; ++i) {
+        auto wi = new WiLibCp(ui->wiLibCps);
+        layout->addWidget(wi);
+        libCpWidgets[i] = wi;
+    }
+    layout->addStretch(1);
 
     // Connect events
     connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
@@ -1392,13 +1403,30 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->btLibCopy->setEnabled(false);
         ui->wiLibOs->setNothing();
 
+        libCpWidgets[0]->removeCp();
+        libCpWidgets[0]->show();
+        for (unsigned i = 1; i < uc::LONGEST_LIB; ++i) {
+            libCpWidgets[i]->hide();
+        }
+
         auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
         QString s = mywiki::buildLibFolderHtml(node, color);
         setWiki(ui->vwLibInfo, s);
     } else {
         // Actual node
+        // CPs
+        auto len = node.value.length();
+        for (unsigned i = 0; i < len; ++i) {
+            auto& wi = libCpWidgets[i];
+            wi->setCp(node.value[i], model.glyphStyle.sets);
+            wi->show();
+        }
+        for (unsigned i = len; i < uc::LONGEST_LIB; ++i) {
+            libCpWidgets[i]->hide();
+        }
+
         // Show sample
-        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || node.value.length() > 1) {
+        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || len > 1) {
             ui->wiLibSample->showEmoji(node.value);
         } else if (auto cp = uc::cpsByCode[node.value[0]]) {
             // Library uses default/empty settings

@@ -35,6 +35,7 @@ public:
     ~WiLibCp() override;
 
     void setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets);
+    void removeCp();
 
 private:
     Ui::WiLibCp *ui;
