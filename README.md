@@ -84,3 +84,4 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Medium, both ends are of the same colour (Argentina, Oman): outline of that colour
   * Medium, ends have different colour (France, Luxembourg): grey outline
   * Large (England, Slovakia): also grey outline
+  * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
