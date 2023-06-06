@@ -72,3 +72,14 @@ I discovered that most of professional emoji… do not work! Do not work because
 **Outline presence:** outer may be partly omitted to gain more dynamic look; the object should continue from the OUTER edge of outline (like in OpenMoji). Inner lines are mostly absent. Truncation lines are never outlined. You may omit outline of small outer details (e.g. hooves); but if they really define object’s shape, it’s better to outline them at least partly, at least with 1px. 
 
 **Grid:** 1px; extremum nodes are snapped.
+
+## Flags
+* Joining fields to work around renderer deficiencies:
+** Large fields (e.g. any bicolour): one field is a rectangle, the other is a hexagon, with two vertices under the rectangle.
+** A small field and a large one (e.g. England): just draw red cross on white background
+** Small fields: as emoji are intended to be drawn in small size, no special rules
+* White fields adjacent to background:
+** Small (Norway): just white
+** Medium, both ends are of the same colour (Argentina): outline of that colour
+** Medium, ends have different colour (France): grey outline
+** Large (England): also grey outline
