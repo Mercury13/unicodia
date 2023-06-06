@@ -28,7 +28,7 @@ namespace lib {
         mutable struct Cache {
             int index = 0;
         } cache;
-        unsigned longestValue() const;
+        unsigned maxValueLength() const;
     };
 
 

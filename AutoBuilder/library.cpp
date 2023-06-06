@@ -17,11 +17,11 @@
 using namespace std::string_view_literals;
 
 
-unsigned lib::Node::longestValue() const
+unsigned lib::Node::maxValueLength() const
 {
     unsigned r = value.length();
     for (auto& v : children) {
-        r = std::max(r, v.longestValue());
+        r = std::max(r, v.maxValueLength());
     }
     return r;
 }

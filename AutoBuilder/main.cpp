@@ -911,7 +911,7 @@ int main()
     root.children.emplace_back(strangeCjk.give());
     // Write!
     auto libr = lib::write(root, "UcAutoLib.cpp");
-    auto longest = root.longestValue();
+    auto longest = root.maxValueLength();
     std::cout << "OK, " << libr.nNodes << " nodes, longest is " << longest << '.' << std::endl;
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
