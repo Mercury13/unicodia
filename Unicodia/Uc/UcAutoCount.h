@@ -7,4 +7,5 @@ constexpr int N_CPS = 149859;
 constexpr int N_BLOCKS = 322;
 constexpr int N_NUMERICS = 173;
 constexpr int N_EMOJI = 3782;
+constexpr unsigned LONGEST_EMOJI = 10;  // in codepoints
 }

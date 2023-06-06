@@ -529,7 +529,7 @@ int main()
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
-    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << std::endl;
+    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16, longest is " << emoji.longest << '.' << std::endl;
 
     lib::StrangeCjk strangeCjk;
 
@@ -925,6 +925,7 @@ int main()
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
+    os << "constexpr unsigned LONGEST_EMOJI = " << std::dec << emoji.longest << ";  // in codepoints" "\n";
     os << "}\n";
 
     ///// Sutton SignWriting ///////////////////////////////////////////////////

@@ -151,6 +151,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 for (size_t i = 0; i < nCodes; ++i) {
                     codes[i] = fromHex(hexCodes[i]);
                 }
+                r.longest = std::max(r.longest, unsigned(nCodes));
                 // #### + VS16 → that code requires VS16
                 if (nCodes == 2 && codes[1] == VS16) {
                     r.vs16.insert(codes[0]);
