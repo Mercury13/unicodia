@@ -28,14 +28,13 @@ namespace lib {
         mutable struct Cache {
             int index = 0;
         } cache;
+        unsigned longestValue() const;
     };
 
 
     struct EmojiData {
         /// Total # of emoji
         size_t count = 0;
-        /// Longest emoji
-        unsigned longest = 0;
         /// List of single-char emoji that use VS16
         std::unordered_set<char32_t> vs16;
         /// Root of emoji branch

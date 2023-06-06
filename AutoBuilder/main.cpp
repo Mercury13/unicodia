@@ -529,7 +529,7 @@ int main()
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
-    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16, longest is " << emoji.longest << '.' << std::endl;
+    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << std::endl;
 
     lib::StrangeCjk strangeCjk;
 
@@ -911,7 +911,8 @@ int main()
     root.children.emplace_back(strangeCjk.give());
     // Write!
     auto libr = lib::write(root, "UcAutoLib.cpp");
-    std::cout << "OK, " << libr.nNodes << " nodes" << std::endl;
+    auto longest = root.longestValue();
+    std::cout << "OK, " << libr.nNodes << " nodes, longest is " << longest << '.' << std::endl;
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
 
@@ -925,7 +926,7 @@ int main()
     os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
-    os << "constexpr unsigned LONGEST_EMOJI = " << std::dec << emoji.longest << ";  // in codepoints" "\n";
+    os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";
     os << "}\n";
 
     ///// Sutton SignWriting ///////////////////////////////////////////////////
