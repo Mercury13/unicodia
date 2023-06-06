@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -529,7 +529,7 @@ padding-bottom: 1px;</string>
            </attribute>
           </widget>
           <widget class="QWidget" name="widget_3" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,2">
+           <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,0,2">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -684,6 +684,33 @@ padding-bottom: 1px;</string>
                  </layout>
                 </widget>
                </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="wiCps" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>10</height>
+               </size>
+              </property>
+              <layout class="QHBoxLayout" name="horizontalLayout_11">
+               <property name="spacing">
+                <number>0</number>
+               </property>
+               <property name="leftMargin">
+                <number>1</number>
+               </property>
+               <property name="topMargin">
+                <number>1</number>
+               </property>
+               <property name="rightMargin">
+                <number>1</number>
+               </property>
+               <property name="bottomMargin">
+                <number>1</number>
+               </property>
               </layout>
              </widget>
             </item>

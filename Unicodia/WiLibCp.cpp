@@ -39,10 +39,12 @@ void WiCpImage::setCp(const uc::Cp* x, const uc::GlyphStyleSets& y)
 void WiCpImage::setCp(char32_t x, const uc::GlyphStyleSets& y)
 {
     if (x < uc::CAPACITY) {
-        setCp(uc::cpsByCode[x], y);
-    } else {
-        setCp(nullptr, uc::GlyphStyleSets::EMPTY);
+        if (auto q = uc::cpsByCode[x]) {
+            setCp(q, y);
+            return;
+        }
     }
+    setCp(nullptr, uc::GlyphStyleSets::EMPTY);
 }
 
 
@@ -63,4 +65,7 @@ WiLibCp::~WiLibCp()
 void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
 {
     ui->wiImage->setCp(cp, glyphSets);
+    char q[20];
+    snprintf(q, std::size(q), "%04X", static_cast<int>(cp));
+    ui->lbCode->setText(q);
 }
