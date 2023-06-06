@@ -79,7 +79,7 @@ I discovered that most of professional emoji… do not work! Do not work because
   * A small field and a large one (e.g. England): just draw red cross on white background
   * Small fields: as emoji are intended to be drawn in small size, no special rules
 * White fields adjacent to background:
-  * Small (Norway): just white
-  * Medium, both ends are of the same colour (Argentina): outline of that colour
-  * Medium, ends have different colour (France): grey outline
-  * Large (England): also grey outline
+  * Small (Norway, US): just white
+  * Medium, both ends are of the same colour (Argentina, Oman): outline of that colour
+  * Medium, ends have different colour (France, Luxembourg): grey outline
+  * Large (England, Slovakia): also grey outline
