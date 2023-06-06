@@ -515,7 +515,7 @@ void CharsModel::paintItem1(
         const QStyleOptionViewItem& option,
         const QModelIndex& index,
         const QColor& color) const
-{
+{    
     SuperD::paint(painter, option, index);
     drawChar(painter, option.rect, index, color);
 }

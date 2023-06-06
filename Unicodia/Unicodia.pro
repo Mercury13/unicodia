@@ -57,6 +57,7 @@ SOURCES += \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
     Uc/UcSearch.cpp \
+    WiLibCp.cpp \
     WiOsStyle.cpp \
     WiSample.cpp \
     Wiki.cpp \
@@ -112,6 +113,7 @@ HEADERS += \
     Uc/UcDating.h \
     Uc/UcFlags.h \
     Uc/UcSearch.h \
+    WiLibCp.h \
     WiOsStyle.h \
     WiSample.h \
     Wiki.h \
@@ -121,6 +123,7 @@ HEADERS += \
 FORMS += \
     FmMain.ui \
     FmTofuStats.ui \
+    WiLibCp.ui \
     WiOsStyle.ui \
     WiSample.ui
 
