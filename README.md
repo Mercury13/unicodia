@@ -75,11 +75,11 @@ I discovered that most of professional emoji… do not work! Do not work because
 
 ## Flags
 * Joining fields to work around renderer deficiencies:
-** Large fields (e.g. any bicolour): one field is a rectangle, the other is a hexagon, with two vertices under the rectangle.
-** A small field and a large one (e.g. England): just draw red cross on white background
-** Small fields: as emoji are intended to be drawn in small size, no special rules
+ * Large fields (e.g. any bicolour): one field is a rectangle, the other is a hexagon, with two vertices under the rectangle.
+ * A small field and a large one (e.g. England): just draw red cross on white background
+ * Small fields: as emoji are intended to be drawn in small size, no special rules
 * White fields adjacent to background:
-** Small (Norway): just white
-** Medium, both ends are of the same colour (Argentina): outline of that colour
-** Medium, ends have different colour (France): grey outline
-** Large (England): also grey outline
+ * Small (Norway): just white
+ * Medium, both ends are of the same colour (Argentina): outline of that colour
+ * Medium, ends have different colour (France): grey outline
+ * Large (England): also grey outline
