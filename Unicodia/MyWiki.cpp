@@ -1235,23 +1235,27 @@ QString mywiki::buildHtml(const uc::Cp& cp)
             sp.sep();
             appendNonBullet(text, numc.type().locKey,
                     "<a href='pt:number' class='popup'>", "</a>");
+            QString buf;
             switch (numc.fracType()) {
             case uc::FracType::NONE:        // should not happen
-            case uc::FracType::INTEGER:     // should not happen
-                str::append(text, numc.num);
+            case uc::FracType::INTEGER:
+                str::append(buf, numc.num);
                 break;
             case uc::FracType::VULGAR:
-                str::append(text, numc.num);
-                str::append(text, "/");
-                str::append(text, numc.denom);
+                str::append(buf, numc.num);
+                str::append(buf, "/");
+                str::append(buf, numc.denom);
                 break;
             case uc::FracType::DECIMAL: {
                     auto val = static_cast<double>(numc.num) / numc.denom;
                     QString s = QString::number(val);
                     s.replace('.', QChar{loc::active::numfmt.decimalPoint});
-                    text += s;
                 } break;
             }
+            if (numc.altInt != 0) {
+                buf = str::toQ(loc::get("Prop.Num.Or").arg(buf.toStdString(), numc.altInt));
+            }
+            text += buf;
         }
 
         // Bidi writing

@@ -645,6 +645,11 @@
      <au-cmt>Test: ½⅓¼</au-cmt>
      <transl>Число</transl>
     </text>
+    <text id="Or">
+     <orig>{1} or {2}</orig>
+     <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
+     <transl>{1} или {2}</transl>
+    </text>
    </group>
    <group id="Input">
     <text id="Bullet">

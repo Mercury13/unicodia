@@ -12,42 +12,35 @@ loc::Dic loc::dic;
 ///// Text /////////////////////////////////////////////////////////////////////
 
 
-std::u8string loc::Text::arg(std::u8string_view x) const
+void loc::Text::aa(std::u8string& r, const char8_t* subst, std::u8string_view x)
 {
-    std::u8string r = fSrc;
-    str::replace(r, u8"{1}", x);
-    return r;
+    str::replace(r, subst, x);
 }
 
-
-std::u8string loc::Text::arg(int x) const
+void loc::Text::aa(std::u8string& r, const char8_t* subst, std::string_view x)
 {
-    std::u8string r = fSrc;
+    str::replace(r, subst, str::toU8sv(x));
+}
+
+void loc::Text::aa(std::u8string& r, const char8_t* subst, int x)
+{
     char c[30];
     auto u8 = str::toCharsU8(c, x);
-    str::replace(r, u8"{1}", u8);
-    return r;
+    str::replace(r, subst, u8);
 }
 
-
-std::u8string loc::Text::arg(
-        std::u8string_view x, std::u8string_view y) const
+void loc::Text::aa(std::u8string& r, const char8_t* subst, unsigned x)
 {
-    std::u8string r = fSrc;
-    str::replace(r, u8"{1}", x);
-    str::replace(r, u8"{2}", y);
-    return r;
+    char c[30];
+    auto u8 = str::toCharsU8(c, x);
+    str::replace(r, subst, u8);
 }
 
-
-std::u8string loc::Text::arg(
-        std::u8string_view x, std::u8string_view y, std::u8string_view z) const
+void loc::Text::aa(std::u8string& r, const char8_t* subst, long long x)
 {
-    std::u8string r = fSrc;
-    str::replace(r, u8"{1}", x);
-    str::replace(r, u8"{2}", y);
-    str::replace(r, u8"{3}", z);
-    return r;
+    char c[30];
+    auto u8 = str::toCharsU8(c, x);
+    str::replace(r, subst, u8);
 }
 
 

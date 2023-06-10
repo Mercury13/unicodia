@@ -512,6 +512,10 @@
      <orig>Number</orig>
      <au-cmt>Test: ½⅓¼</au-cmt>
     </text>
+    <text id="Or">
+     <orig>{1} or {2}</orig>
+     <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
+    </text>
    </group>
    <group id="Input">
     <text id="Bullet">
