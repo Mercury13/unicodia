@@ -244,9 +244,14 @@ namespace {
             long long aNum, long long aDenom)
     {
         std::unordered_set<unsigned char> r;
+        long long altInt = std::numeric_limits<long long>::min();   // never occurs
+        if (aDenom == 1 && aNum != 0) {
+            altInt = aNum;
+        }
         for (int i = 0; i < uc::N_NUMERICS; ++i) {
             auto& num = uc::allNumerics[i];
-            if (num.num == aNum && num.denom == aDenom) {
+            if ((num.num == aNum && num.denom == aDenom)
+                    || (num.altInt == altInt)) {
                 r.insert(i);
             }
         }
