@@ -8,6 +8,7 @@
 #include "UcData.h"
 
 // Char painting
+#include "Skin.h"
 #include "CharPaint/routines.h"
 
 ///// WiCpImage ////////////////////////////////////////////////////////////////
@@ -65,8 +66,10 @@ WiLibCp::~WiLibCp()
 void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
 {
     ui->wiImage->setCp(cp, glyphSets);
-    char q[20];
-    snprintf(q, std::size(q), "%04X", static_cast<int>(cp));
+    char q[200];
+    snprintf(q, std::size(q),
+             "<a href='g' style='" STYLE_CODE "'>" "%04X" "</a>",
+             static_cast<int>(cp));
     ui->lbCode->setText(q);
 }
 
