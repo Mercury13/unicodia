@@ -52,10 +52,11 @@ void WiCpImage::setCp(char32_t x, const uc::GlyphStyleSets& y)
 ///// WiLibCp //////////////////////////////////////////////////////////////////
 
 WiLibCp::WiLibCp(QWidget *parent) :
-    QWidget(parent),
+    Super(parent),
     ui(new Ui::WiLibCp)
 {
     ui->setupUi(this);
+    connect(ui->lbCode, &QLabel::linkActivated, this, &This::linkActivated);
 }
 
 WiLibCp::~WiLibCp()
@@ -71,10 +72,20 @@ void WiLibCp::setCp(char32_t cp, const uc::GlyphStyleSets& glyphSets)
              "<a href='g' style='" STYLE_CODE "'>" "%04X" "</a>",
              static_cast<int>(cp));
     ui->lbCode->setText(q);
+    currentCp = cp;
 }
 
 void WiLibCp::removeCp()
 {
     ui->wiImage->setCp(nullptr, uc::GlyphStyleSets::EMPTY);
     ui->lbCode->setText("---");
+    currentCp = NO_CP;
+}
+
+
+void WiLibCp::linkActivated()
+{
+    if (currentCp != NO_CP) {
+        emit goToCp(currentCp);
+    }
 }

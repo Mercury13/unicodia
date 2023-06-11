@@ -972,6 +972,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
         auto wi = new WiLibCp(ui->wiLibCps);
         layout->addWidget(wi);
         libCpWidgets[i] = wi;
+        connect(wi, &WiLibCp::goToCp, this, &This::goToCp);
     }
     layout->addStretch(1);
 
@@ -1832,6 +1833,13 @@ void FmMain::dumpTiles()
 void FmMain::glyphStyleChanged()
 {
     model.glyphStyle.setCurrSetting(radioGlyphStyle.get());
-    model.dataChanged({}, {});
+    emit model.dataChanged({}, {});
     redrawSampleChar();
+}
+
+
+void FmMain::goToCp(char32_t cp)
+{
+    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
+    selectChar<SelectMode::INSTANT>(cp);
 }

@@ -406,6 +406,7 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged();
+    void goToCp(char32_t cp);
 };
 
 

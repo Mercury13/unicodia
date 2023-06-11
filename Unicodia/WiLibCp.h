@@ -29,7 +29,8 @@ private:
 class WiLibCp : public QWidget
 {
     Q_OBJECT
-
+    using This = WiLibCp;
+    using Super = QWidget;
 public:
     explicit WiLibCp(QWidget *parent = nullptr);
     ~WiLibCp() override;
@@ -38,5 +39,14 @@ public:
     void removeCp();
 
 private:
+    static constexpr char32_t NO_CP = std::numeric_limits<char32_t>::max();
+
     Ui::WiLibCp *ui;
+    char32_t currentCp = NO_CP;
+
+private slots:
+    void linkActivated();
+
+signals:
+    void goToCp(char32_t cp);
 };
