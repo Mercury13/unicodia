@@ -4,6 +4,9 @@
 // Qt
 #include <QPainter>
 
+// Libs
+#include "u_Qstrings.h"
+
 // Unicode
 #include "UcData.h"
 
@@ -33,6 +36,13 @@ void WiCpImage::setCp(const uc::Cp* x, const uc::GlyphStyleSets& y)
     if (cp != x || glyphSets != &y) {
         cp = x;
         glyphSets = &y;
+        if (cp) {
+            setCursor(Qt::WhatsThisCursor);
+            setToolTip(str::toQ(cp->name.tech()));
+        } else {
+            setCursor(Qt::ArrowCursor);
+            setToolTip({});
+        }
         update();
     }
 }
