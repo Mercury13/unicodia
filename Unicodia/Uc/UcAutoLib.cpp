@@ -4158,8 +4158,8 @@ constinit const uc::LibNode uc::libNodes[5501] {
 { U"\u2122", {}, 4111, 0, -1, {}, EcVersion::NONE },   // 4152
 { U"\u00AE", {}, 4111, 0, -1, {}, EcVersion::NONE },   // 4153
 { U"\u00A9\uFE0F", u8"copyright emoji", 4111, 0, -1, {}, EcVersion::NONE },   // 4154
-{ U"\u2122\uFE0F\uFE0F", u8"trademark emoji", 4111, 0, -1, {}, EcVersion::NONE },   // 4155
-{ U"\uFE0F\u00AE\uFE0F", u8"registered emoji", 4111, 0, -1, {}, EcVersion::NONE },   // 4156
+{ U"\u2122\uFE0F", u8"trademark emoji", 4111, 0, -1, {}, EcVersion::NONE },   // 4155
+{ U"\u00AE\uFE0F", u8"registered emoji", 4111, 0, -1, {}, EcVersion::NONE },   // 4156
 { U"\u2117", {}, 4111, 0, -1, {}, EcVersion::NONE },   // 4157
 { U"\U0001F1AD", {}, 4111, 0, -1, {}, EcVersion::NONE },   // 4158
 { U"\U0001F12F", {}, 4111, 0, -1, {}, EcVersion::NONE },   // 4159

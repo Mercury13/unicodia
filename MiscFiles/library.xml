@@ -70,8 +70,8 @@
 		<f loc="IntelProperty">
 			<d>© ™ ®</d>
 			<sq v="©️" name="copyright emoji" />
-			<sq v="™️️" name="trademark emoji" />
-			<sq v="️®️" name="registered emoji" />
+			<sq v="™️" name="trademark emoji" />
+			<sq v="®️" name="registered emoji" />
 			<d>℗ 🆭 🄯</d>
 			<sq v="🅭" name="Creative Commons" />
 			<sq v="🅮" name="public domain" />
