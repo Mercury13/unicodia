@@ -72,15 +72,6 @@ inline SvgThing SvgThing::horzFlipped(bool x) const noexcept
     { return { .renderer = renderer, .isHorzFlipped = x }; }
 
 
-struct SvgStoringThing {
-    std::unique_ptr<QSvgRenderer> renderer;
-    bool isHorzFlipped = false;
-
-    operator SvgThing() const noexcept
-        { return { .renderer = renderer.get(), .isHorzFlipped = isHorzFlipped }; }
-};
-
-
 class EmojiPainter
 {
 public:
@@ -88,6 +79,7 @@ public:
     ~EmojiPainter();    // same
     static GetCp getCp(std::u32string_view text);
     SvgThing getRenderer(std::u32string_view text);
+    /// @post  horzFlipped is FALSE
     SvgThing getRenderer(char32_t cp);
     std::string_view getSvg(std::u32string_view text);
     std::string_view getSvg(char32_t cp);
