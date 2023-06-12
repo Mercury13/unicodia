@@ -17,6 +17,7 @@ constexpr char32_t SKIN2 = 0x1F3FC;
 constexpr char32_t SKIN3 = 0x1F3FD;
 constexpr char32_t SKIN4 = 0x1F3FE;
 constexpr char32_t SKIN5 = 0x1F3FF;
+constexpr char32_t RIGHT_ARROW = 0x27A1;
 constexpr char32_t MALE = 0x2642;
 constexpr char32_t FEMALE = 0x2640;
 constexpr char32_t MAN = 0x1F468;
@@ -59,7 +60,16 @@ struct SvgThing
     bool isHorzFlipped;
 
     operator bool() const noexcept { return renderer; }
+    inline SvgThing horzFlipped() const noexcept;
+    inline SvgThing horzFlipped(bool x) const noexcept;
 };
+
+
+inline SvgThing SvgThing::horzFlipped() const noexcept
+    { return { .renderer = renderer, .isHorzFlipped = !isHorzFlipped }; }
+
+inline SvgThing SvgThing::horzFlipped(bool x) const noexcept
+    { return { .renderer = renderer, .isHorzFlipped = x }; }
 
 
 struct SvgStoringThing {
@@ -111,7 +121,7 @@ private:
     std::vector<std::string> subtapes;
     std::unordered_map<std::string, TapeEntry> directory;
     std::unordered_map<char32_t, std::unique_ptr<QSvgRenderer>> singleCharRenderers;
-    std::unordered_map<std::u32string, SvgStoringThing, Hash, std::equal_to<>> multiCharRenderers;
+    std::unordered_map<std::u32string, std::unique_ptr<QSvgRenderer>, Hash, std::equal_to<>> multiCharRenderers;
 
     // Functions
     void ensureTape();

@@ -297,13 +297,23 @@ namespace {
 
 SvgThing EmojiPainter::getRenderer(std::u32string_view text)
 {
+    /// @todo [future] We never store flipped emoji, we flip them on-the-fly
+    bool isFlipped = false;
+    if (text.ends_with(U"\u200D\u27A1\uFE0F")) {
+        text = text.substr(0, text.length() - 3);
+        isFlipped = true;
+    }
+
+    if (text.empty())
+        return NO_THING;
+
     // Check for more performance-y single-char
     if (auto c = getCp(text))
-        return getRenderer(c.cp);
+        return getRenderer(c.cp).horzFlipped(isFlipped);
 
     auto it = multiCharRenderers.find(text);
     if (it != multiCharRenderers.end())
-        return it->second;
+        return { .renderer = it->second.get(), .isHorzFlipped = isFlipped };
 
     RecolorInfo recolor;
 
@@ -325,7 +335,7 @@ SvgThing EmojiPainter::getRenderer(std::u32string_view text)
     auto rend = std::make_unique<QSvgRenderer>(bytes);
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
     auto [it2,wasIns] = multiCharRenderers.emplace(std::u32string_view{text}, std::move(rend));
-    return it2->second;
+    return { .renderer = it2->second.get(), .isHorzFlipped = isFlipped };
 }
 
 
@@ -359,6 +369,14 @@ void EmojiPainter::draw1(QPainter* painter, QRect rect, const SvgThing& thing, i
     }
     if (thing.isHorzFlipped) {
         auto oldTransform = painter->transform();
+        //  What to do:
+        //        |
+        //     111|000     222
+        //     111|000     222
+        //  If we draw at 000, SVG will actually be drawn at 111,
+        //    and we need to translate x+w pixels aka right
+        //  Peculiarity of Qt’s right() → counts pixel centres
+        //    rather than grid nodes → use right+1
         painter->scale(-1, 1);
         painter->translate(-rect.right() - 1, 0);
         rect.moveLeft(0);
@@ -400,9 +418,10 @@ bool EmojiPainter::hasSkinGender(std::u32string_view x)
         // Allowed when used alone
         SKIN1, SKIN2, SKIN3, SKIN4, SKIN5,   // 5
         MALE, FEMALE, MAN, WOMAN,            // 9
+        RIGHT_ARROW,                         // 10
         // The rest
         MAN_AND_WOMAN, TWO_MEN, TWO_WOMEN, SANTA_CLAUS, MRS_CLAUS };
-    constexpr size_t OFS_1 = 9;
+    constexpr size_t OFS_1 = 10;
     static constinit std::u32string_view ALL_CHARS { ALL_CHARS_AR, std::size(ALL_CHARS_AR) };
     static constinit std::u32string_view SPEC_CHARS { ALL_CHARS_AR + OFS_1, std::end(ALL_CHARS_AR) };
 
