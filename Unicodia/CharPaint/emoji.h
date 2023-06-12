@@ -53,14 +53,32 @@ struct GetCp {
 };
 
 
+struct SvgThing
+{
+    QSvgRenderer* renderer;
+    bool isHorzFlipped;
+
+    operator bool() const noexcept { return renderer; }
+};
+
+
+struct SvgStoringThing {
+    std::unique_ptr<QSvgRenderer> renderer;
+    bool isHorzFlipped = false;
+
+    operator SvgThing() const noexcept
+        { return { .renderer = renderer.get(), .isHorzFlipped = isHorzFlipped }; }
+};
+
+
 class EmojiPainter
 {
 public:
     EmojiPainter();     // forward decls → need in CPP
     ~EmojiPainter();    // same
     static GetCp getCp(std::u32string_view text);
-    QSvgRenderer* getRenderer(std::u32string_view text);
-    QSvgRenderer* getRenderer(char32_t cp);
+    SvgThing getRenderer(std::u32string_view text);
+    SvgThing getRenderer(char32_t cp);
     std::string_view getSvg(std::u32string_view text);
     std::string_view getSvg(char32_t cp);
     void draw(QPainter* painter, const QRect& rect, char32_t cp, int height);
@@ -93,11 +111,11 @@ private:
     std::vector<std::string> subtapes;
     std::unordered_map<std::string, TapeEntry> directory;
     std::unordered_map<char32_t, std::unique_ptr<QSvgRenderer>> singleCharRenderers;
-    std::unordered_map<std::u32string, std::unique_ptr<QSvgRenderer>, Hash, std::equal_to<>> multiCharRenderers;
+    std::unordered_map<std::u32string, SvgStoringThing, Hash, std::equal_to<>> multiCharRenderers;
 
     // Functions
     void ensureTape();
     std::string_view getSubtape(unsigned index);    
-    void draw1(QPainter* painter, QRect rect, QSvgRenderer& rend, int height);
+    void draw1(QPainter* painter, QRect rect, const SvgThing& thing, int height);
     static RecolorInfo checkForRecolor(std::u32string_view text);
 };

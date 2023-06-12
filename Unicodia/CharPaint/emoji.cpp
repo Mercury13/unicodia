@@ -289,7 +289,12 @@ GetCp EmojiPainter::getCp(std::u32string_view text)
 }
 
 
-QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
+namespace {
+    constexpr SvgThing NO_THING { .renderer = nullptr, .isHorzFlipped = false };
+}
+
+
+SvgThing EmojiPainter::getRenderer(std::u32string_view text)
 {
     // Check for more performance-y single-char
     if (auto c = getCp(text))
@@ -297,7 +302,7 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
 
     auto it = multiCharRenderers.find(text);
     if (it != multiCharRenderers.end())
-        return it->second.get();
+        return it->second;
 
     RecolorInfo recolor;
 
@@ -306,11 +311,11 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
     if (svg.empty()) {
         recolor = checkForRecolor(text);
         if (!recolor)
-            return nullptr;
+            return NO_THING;
 
         svg = getSvg(recolor.baseText);
         if (svg.empty())
-            return nullptr;
+            return NO_THING;
     }
 
     QByteArray bytes(svg.data(), svg.length());
@@ -319,45 +324,47 @@ QSvgRenderer* EmojiPainter::getRenderer(std::u32string_view text)
     auto rend = std::make_unique<QSvgRenderer>(bytes);
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
     auto [it2,wasIns] = multiCharRenderers.emplace(std::u32string_view{text}, std::move(rend));
-    return it2->second.get();
+    return it2->second;
 }
 
 
-QSvgRenderer* EmojiPainter::getRenderer(char32_t cp)
+SvgThing EmojiPainter::getRenderer(char32_t cp)
 {
     auto [it,wasIns] = singleCharRenderers.insert({ cp, nullptr });
     if (!wasIns)
-        return it->second.get();
+        return { .renderer = it->second.get(), .isHorzFlipped = false };
 
     // No cached renderer!
     auto svg = getSvg(cp);
     if (svg.empty())
-        return nullptr; // If we go this way, nullptr is cached, and that’s OK
+        return NO_THING; // If we go this way, nullptr is cached, and that’s OK
 
     QByteArray bytes(svg.data(), svg.length());
     auto rend = std::make_unique<QSvgRenderer>(bytes);
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
     it->second = std::move(rend);
-    return it->second.get();
+    return { .renderer = it->second.get(), .isHorzFlipped = false };
 }
 
 
-void EmojiPainter::draw1(QPainter* painter, QRect rect, QSvgRenderer& rend, int height)
+void EmojiPainter::draw1(QPainter* painter, QRect rect, const SvgThing& thing, int height)
 {
+    if (!thing)
+        return;
     if (rect.height() > height) {
         auto delta = (rect.height() - height) / 2;
         rect.moveTop(rect.top() + delta);
         rect.setHeight(height);
     }
-    rend.render(painter, rect);
+    thing.renderer->render(painter, rect);
 }
 
 
 void EmojiPainter::draw(
             QPainter* painter, const QRect& rect, char32_t cp, int height)
 {
-    if (auto* rend = getRenderer(cp)) {
-        draw1(painter, rect, *rend, height);
+    if (auto rend = getRenderer(cp)) {
+        draw1(painter, rect, rend, height);
     }
 }
 
@@ -365,8 +372,8 @@ void EmojiPainter::draw(
 void EmojiPainter::draw(
             QPainter* painter, const QRect& rect, std::u32string_view cp, int height)
 {
-    if (auto* rend = getRenderer(cp)) {
-        draw1(painter, rect, *rend, height);
+    if (auto rend = getRenderer(cp)) {
+        draw1(painter, rect, rend, height);
     }
 }
 
