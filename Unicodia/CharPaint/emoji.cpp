@@ -2,6 +2,7 @@
 
 // Qt
 #include <QSvgRenderer>
+#include <QPainter>
 
 // Libs
 #include "i_TempFont.h"
@@ -356,7 +357,16 @@ void EmojiPainter::draw1(QPainter* painter, QRect rect, const SvgThing& thing, i
         rect.moveTop(rect.top() + delta);
         rect.setHeight(height);
     }
-    thing.renderer->render(painter, rect);
+    if (thing.isHorzFlipped) {
+        auto oldTransform = painter->transform();
+        painter->scale(-1, 1);
+        painter->translate(-rect.right() - 1, 0);
+        rect.moveLeft(0);
+        thing.renderer->render(painter, rect);
+        painter->setTransform(oldTransform);
+    } else {
+        thing.renderer->render(painter, rect);
+    }
 }
 
 
