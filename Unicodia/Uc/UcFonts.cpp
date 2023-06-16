@@ -99,7 +99,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, 120_pc },                                                 // …2
     { "Microsoft YaHei" },                                                      // CJK kanbun
-    { "SimSun,Microsoft YaHei" },                                               // CJK structure
+    { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
+      { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …1
+      { FNAME_FUNKY, 120_pc },                                                  // …2
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
       { "UnicodiaHan.ttf", 120_pc },                                            // …1
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic

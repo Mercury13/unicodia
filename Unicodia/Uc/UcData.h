@@ -260,6 +260,8 @@ namespace uc {
            Z_CJC_2,
          CJK_KANBUN,
          CJK_STRUCTURE,
+           Z_CJS_1,
+           Z_CJS_2,
          CJK_NEWHAN,
            Z_HNA_1,
         COPTIC,

@@ -441,7 +441,7 @@ constinit const uc::Block uc::blocks[] {
     // CJK strokes OK
     { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
             "CJK Strokes",
-            MyName::INST, EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            MyName::INST, EcScript::Hani, EcFont::CJK_STRUCTURE, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Katakana phon OK, not collapsible: small block
     { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
             "Katakana Phonetic Extensions",
