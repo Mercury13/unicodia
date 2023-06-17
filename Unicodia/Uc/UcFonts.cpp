@@ -12,7 +12,7 @@ constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
-constexpr std::string_view FNAME_KOREAN = "NotoSansKR-Regular.otf";
+constexpr uc::Family FNAME_KOREAN = { "NotoSansKR-Regular.otf", uc::Fafg::RAW_FONT };
 
 constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
 constexpr auto STYLE_DEVA = ""_sty;
@@ -155,7 +155,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::STUB_OFF, 110_pc },                // Korean: managed to auto-rename OTF
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                                // Korean
       { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2 U14
       { FNAME_FUNKY },                                                          // …3 Old Katakana/Hiragana
