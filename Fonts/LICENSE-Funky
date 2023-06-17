@@ -1,22 +1,22 @@
-﻿Copyright (c) 2021 Mikhail Merkuryev
+﻿Copyright (c) 2021-2023 Mikhail Merkuryev
 You just DO WHAT THE FUNK YOU WANT TO
 
 Except some glyphs:
 
-© Google Noto, SIL Open Font License
+== © Google Noto, SIL Open Font License ==
 
 All characters of Latin, Cyrillic and Balinese
 (Matrix for modifier chars is: W×65%, H×60% starting from char origin, and Y+287.
 Matrix for subscript chars is: W×65%, H×60% starting from char origin, and Y−96.)
 
 
-Unknown origin (probably someone from SIL International), SIL Open Font License
+== Unknown origin (probably someone from SIL International), SIL Open Font License ==
 
 Toto script, 1E290…1E2AF
 (probably fully working, I tried to copy all tables)
 
 
-Junicode © Peter Baker, SIL Open Font License
+== Junicode © Peter Baker, SIL Open Font License ==
 
 Gothic script, 10330…4A
 (Diaeresis works, numbers do not)
