@@ -35,6 +35,10 @@
 		<blk start="10100" /><!-- Aegean numbers -->
 		<blk start="10140" /><!-- Ancient Greek numbers -->
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
+		<blk start="1AFF0" /><!-- Kana extended-B -->
+		<blk start="1B000" /><!-- Kana supplement -->
+		<blk start="1B100" /><!-- Kana extended-A -->
+		<blk start="1B130" /><!-- Small kana extension -->
 		<blk start="1BCA0" /><!-- Shorthand format controls -->
 		<blk start="1D200" /><!-- Ancient Greek music notation -->
 		<blk start="1F650" /><!-- Ornamental dingbats -->

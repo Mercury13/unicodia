@@ -16,6 +16,10 @@
 		<blk start="12480" /><!-- Early dynastic cuneiform -->
 		<blk start="13430" /><!-- Egyptian hieroglyph format controls -->
 		<blk start="18800" /><!-- Tangut components -->
+		<blk start="1AFF0" /><!-- Kana extended-B -->
+		<blk start="1B000" /><!-- Kana supplement -->
+		<blk start="1B100" /><!-- Kana extended-A -->
+		<blk start="1B130" /><!-- Small kana extension -->
 		<blk start="1BCA0" /><!-- Shorthand format controls -->
 		<blk start="1D200" /><!-- Ancient Greek music notation -->
 		<blk start="1F650" /><!-- Ornamental dingbats -->
