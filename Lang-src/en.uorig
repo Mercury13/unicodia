@@ -1690,10 +1690,12 @@
      <orig>
       <p>Punctuation sings and other characters used in [[pt:cjk|CJK]]:</p>
       <p>* Ideograph-wide [[pt:space|space]].</p>
-      <p>* CJK does not write the same ideograph twice in a row, and if need so{{-}}write iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadaays repeat in printed text, but still use iteration mark in writing.)</p>
+      <p>* CJK does not write the same ideograph twice in a row, and if need so{{-}}write iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadays repeat in printed text, but still use iteration mark in writing.)</p>
       <p>* Some Japanese emblems.</p>
       <p>* Japanese brackets and quotes.</p>
       <p>* Ditto mark —//— widely used in our lists, just in ideographic form.</p>
+      <p />
+      <p>Ideographic variation indicator 303E has no special meaning in Unicode, and was encoded for compatibility with two-byte GBK encoding used in China.</p>
      </orig>
     </text>
    </group>
