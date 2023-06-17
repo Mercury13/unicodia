@@ -1777,6 +1777,7 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
     { 0x206F, "NODS" }, // Nominal digit shapes
     { 0x3164, "HF" },   // Hangul filler
     { 0xFEFF, "BOM" },  // BOM or ZWNBSP
+    { 0xFFA0, "HWHF" }, // Halfwidth Hangul filler
     { 0xFFF9, "IA A" }, // Interlinear annotation anchor
     { 0xFFFA, "IA S" }, // Interlinear annotation separator
     { 0xFFFB, "IA T" }, // Interlinear annotation terminator
@@ -1938,6 +1939,7 @@ const std::map<RangeByEnd, uc::Cfgs> styleRanges {
 
 const std::unordered_set<char32_t> customDrawnControlChars {
     0x1039,     // Mymr virtual virama
+    0x303E,     // ideographic variation indicator
     0x11D45,    // Masaram Gondi virtual virama
     0x11D97,    // Gunjala Gondi virtual virama
     0x13431,    // Egyptian hiero horiz joiner
@@ -1945,14 +1947,14 @@ const std::unordered_set<char32_t> customDrawnControlChars {
     0x13433,    // Egyptian hiero insert at bottom start
     0x13434,    // Egyptian hiero insert at top end
     0x13435,    // Egyptian hiero insert at bottom end
-    0x13439, 0x1343A, 0x1343B, 0x1343C,  // Egyptian hero formatters
+    0x13439, 0x1343A, 0x1343B, 0x1343C,  // Egyptian hiero formatters
        0x1343D, 0x1343E, 0x1343F,
     0x16F8F,    // Miao tone right
     0x16F90,    // Miao tone top right
     0x16F91,    // Miao tone above
     0x16F92,    // Miao tone below
-    0x1BCA0,    // Shorthand format Letter overlap
-    0x1BCA1,    // Shorthand format Continuing overlap
+    0x1BCA0,    // shorthand format Letter overlap
+    0x1BCA1,    // shorthand format Continuing overlap
 };
 
 

@@ -466,6 +466,9 @@ void drawCustomControl(
     case 0x11D97:   // Gunjala Gondi virama
         drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_VIRAMA);
         break;
+    case 0x303E:    // ideographic variation indicator
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_CJK_APPROX);
+        break;
     case 0x16F8F:   // Miao tone right
         drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_RIGHT);
         break;
