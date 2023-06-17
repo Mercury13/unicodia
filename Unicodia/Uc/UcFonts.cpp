@@ -155,10 +155,10 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
-    { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                                // Korean
-      { "Yu Gothic", Ffg::FALL_TO_NEXT, },                                      // …1 — for P1 Katakana
-      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2 U14
-      { FNAME_FUNKY },                                                          // …3 Old Katakana/Hiragana
+    { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
+      { FNAME_FUNKY, 120_pc },                                                  // …1 Old Katakana/Hiragana
+      { "Yu Gothic", Ffg::FALL_TO_NEXT },                                       // …2 — for P1 Katakana
+      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "SengBuhan-Regular.ttf", 115_pc },                                        // Lao
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin

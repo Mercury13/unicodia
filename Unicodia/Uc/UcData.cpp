@@ -2125,6 +2125,9 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
         auto wantSkip = isBuggy
                 ? v->flags.have(Ffg::BUG_AVOID)     // BUGGY: avoid flag → bad, it’s for normal only
                 : v->flags.have(Ffg::BUG_FIXUP);    // NORMAL: fixup flag → bad, it’s for buggy only
+        if (category().upCat == uc::UpCategory::MARK) {
+            wantSkip |= v->flags.have(Ffg::MARK_AVOID);
+        }
         if (!wantSkip) {
             if (v->doesSupportChar(sb))
                 return v;
