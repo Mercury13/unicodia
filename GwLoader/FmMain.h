@@ -42,13 +42,14 @@ private:
         std::atomic<PTask> task;
         std::atomic<bool> isOn = false;
         QDir path;
+        QString urlTemplate;
     } work;
 
     void prepareTasks();
     void clearConsole();
     void tryEnqueueReply();
     void stopUi();
-    void initPaths();
+    void initWork();
     void processReply(const PTask& task, QNetworkReply* reply);
     bool isTaskOk(Task* task);
     void conPrint(const QString& text);

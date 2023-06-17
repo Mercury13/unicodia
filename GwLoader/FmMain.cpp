@@ -41,23 +41,28 @@ void FmMain::prepareTasks()
 
     tasks.clear();
     for (auto& p : lines) {
-        tasks.push_back(std::make_shared<Task>(p));
+        auto q = p.trimmed();
+        if (!q.startsWith('#')) {
+            tasks.push_back(std::make_shared<Task>(q));
+        }
     }
 }
 
 
-void FmMain::initPaths()
+void FmMain::initWork()
 {
+    work.urlTemplate = ui->edDocTemplate->text();
     QDir currentDir = QDir::current();
     work.path = currentDir.filePath(ui->edDirectory->text());
     work.path.mkpath(work.path.absolutePath());
+    work.task.store(nullptr);
 }
 
 
 void FmMain::start()
 {
     clearConsole();
-    initPaths();
+    initWork();
     prepareTasks();
     ui->btStart->setEnabled(false);
     ui->btStop->setEnabled(true);
@@ -107,7 +112,9 @@ void FmMain::tryEnqueueReply()
         tasks.pop_front();
         if (isTaskOk(task.get())) {
             work.task = task;
-            QNetworkRequest rq("http://en.glyphwiki.org/glyph/u" + task->code.toLower() + ".svg");
+            QString url2 = work.urlTemplate;
+            url2.replace('*', task->code.toLower());
+            QNetworkRequest rq("http://en.glyphwiki.org/glyph/" + url2);
             netMan->get(rq);
             conPrint(QString("Requesting %1").arg(task->code));
             return;

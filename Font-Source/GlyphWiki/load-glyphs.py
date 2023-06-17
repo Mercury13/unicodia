@@ -20,13 +20,14 @@ font = fontforge.activeFont()
 file = open('hani-tofu.txt', 'r')
 for line0 in file:
     line = line0.strip()
-    code = int(line, base=16)
-    svgName = "AutoRemade/{}.svg".format(line)
-    glyph = font.createChar(code)
-    glyph.glyphname = "u" + line.upper()
-    glyph.importOutlines(svgName, scale=False)
-    glyph.transform(mat)
-    glyph.width = 1000
+    if (line != '') and (not line.startswith('#')):
+        code = int(line, base=16)
+        svgName = "AutoRemade/{}.svg".format(line)
+        glyph = font.createChar(code)
+        glyph.glyphname = "u" + line.upper()
+        glyph.importOutlines(svgName, scale=False)
+        glyph.transform(mat)
+        glyph.width = 1000
 
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)

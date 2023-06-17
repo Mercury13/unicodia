@@ -36,6 +36,24 @@
        </layout>
       </item>
       <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>Document template</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="edDocTemplate">
+          <property name="text">
+           <string notr="true">u*.svg</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
        <widget class="QLabel" name="label">
         <property name="text">
          <string>Glyphs to load</string>
@@ -109,6 +127,14 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>edDirectory</tabstop>
+  <tabstop>edDocTemplate</tabstop>
+  <tabstop>memoGlyphs</tabstop>
+  <tabstop>btStart</tabstop>
+  <tabstop>btStop</tabstop>
+  <tabstop>memoConsole</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
