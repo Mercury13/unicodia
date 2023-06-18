@@ -29,6 +29,7 @@ namespace loc {
         static const DefaultLocale INST;
     };
 
+    ///  Substitution, debugging only
     struct Zsubst {
         static constexpr size_t NO_LINK = std::numeric_limits<size_t>::max();
         size_t key;       ///< 0-based: {1} = 0
