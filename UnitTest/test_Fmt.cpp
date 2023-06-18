@@ -80,3 +80,61 @@ TEST (FmtCtor, EscapedSubsts)
     EXPECT_EQ(11u, s2.advance);
     EXPECT_EQ(loc::Zsubst::NO_LINK, s2.lnkNext);
 }
+
+
+///
+///  Default enumeration of substitutions
+///
+TEST (FmtCtor, DefaultSubsts)
+{
+    loc::Fmt fmt("alpha {} bravobravo {te{st{}te{st} char{{}lie {}");
+    EXPECT_EQ("alpha {} bravobravo {te{st{}te{st} char{}lie {}", fmt.str());
+    EXPECT_EQ(3u, fmt.nAllSubsts());
+
+    auto& s0 = fmt.allSubsts(0);
+    EXPECT_EQ(0u, s0.key);
+    EXPECT_EQ(2u, s0.length);
+    EXPECT_EQ(6u, s0.advance);
+    EXPECT_EQ(1u, s0.lnkNext);
+
+    auto& s1 = fmt.allSubsts(1);
+    EXPECT_EQ(1u, s1.key);
+    EXPECT_EQ(14u, s1.length);
+    EXPECT_EQ(12u, s1.advance);
+    EXPECT_EQ(2u, s1.lnkNext);
+
+    auto& s2 = fmt.allSubsts(2);
+    EXPECT_EQ(2u, s2.key);
+    EXPECT_EQ(2u, s2.length);
+    EXPECT_EQ(11u, s2.advance);
+    EXPECT_EQ(loc::Zsubst::NO_LINK, s2.lnkNext);
+}
+
+
+///
+///  Combination of explicit and default substitutions
+///
+TEST (FmtCtor, ExplicitDefaultCombo)
+{
+    loc::Fmt fmt("alpha {5} bravobravo {3|te{st{}te{st} char{{}lie {}");
+    EXPECT_EQ("alpha {5} bravobravo {3|te{st{}te{st} char{}lie {}", fmt.str());
+    EXPECT_EQ(3u, fmt.nAllSubsts());
+
+    auto& s0 = fmt.allSubsts(0);
+    EXPECT_EQ(4u, s0.key);
+    EXPECT_EQ(3u, s0.length);
+    EXPECT_EQ(6u, s0.advance);
+    EXPECT_EQ(1u, s0.lnkNext);
+
+    auto& s1 = fmt.allSubsts(1);
+    EXPECT_EQ(2u, s1.key);
+    EXPECT_EQ(16u, s1.length);
+    EXPECT_EQ(12u, s1.advance);
+    EXPECT_EQ(2u, s1.lnkNext);
+
+    auto& s2 = fmt.allSubsts(2);
+    EXPECT_EQ(3u, s2.key);
+    EXPECT_EQ(2u, s2.length);
+    EXPECT_EQ(11u, s2.advance);
+    EXPECT_EQ(loc::Zsubst::NO_LINK, s2.lnkNext);
+}
