@@ -13,11 +13,13 @@ SOURCES += \
     ../AutoBuilder/data.cpp \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
+    ../Libs/L10n/LocFmt.cpp \
     ../Libs/SelfMade/u_SearchEngine.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
     test_DumbSp.cpp \
+    test_Fmt.cpp \
     test_Iterator.cpp \
     test_Search.cpp \
     test_Strings.cpp \
@@ -25,6 +27,7 @@ SOURCES += \
 
 HEADERS += \
     ../AutoBuilder/data.h \
+    ../Libs/L10n/LocFmt.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_SearchEngine.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
@@ -34,6 +37,8 @@ INCLUDEPATH += \
     ../AutoBuilder \
     ../Libs/GoogleTest \
     ../Libs/GoogleTest/include \
+    ../Libs/L10n \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Strings \
-    ../Unicodia
+    ../Unicodia \
+    ../Unicodia/Uc

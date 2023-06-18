@@ -27,6 +27,7 @@ CONFIG(debug, debug|release) {
 
 SOURCES += \
     ../Libs/L10n/LocDic.cpp \
+    ../Libs/L10n/LocFmt.cpp \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
     ../Libs/PugiXml/pugixml.cpp \
@@ -68,6 +69,7 @@ SOURCES += \
 
 HEADERS += \
     ../Libs/L10n/LocDic.h \
+    ../Libs/L10n/LocFmt.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
     ../Libs/MagicEnum/magic_enum.hpp \
