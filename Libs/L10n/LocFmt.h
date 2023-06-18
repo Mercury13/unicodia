@@ -12,20 +12,31 @@ namespace loc {
     enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
 
+    class PluralRule {
+        virtual Plural ofUint(unsigned long long n) const = 0;
+        virtual Plural ofInt(long long n) const { return ofUint(std::abs(n)); }
+    };
+
     class Locale    // interface
     {
     public:
-        virtual Plural uintQtyRule(unsigned long long n) const = 0;
-        virtual Plural intQtyRule(long long n) const { return uintQtyRule(std::abs(n)); }
+        virtual const PluralRule& qtyRule() const = 0;
         virtual char unitSpaceC() const { return ' '; }
         virtual char32_t unitSpaceL() const { return U' '; }
         virtual ~Locale() = default;
     };
 
+    class DefaultQtyRule : public PluralRule
+    {
+    public:
+        Plural ofUint(unsigned long long n) const override;
+        static const DefaultQtyRule INST;
+    };
+
     class DefaultLocale : public Locale
     {
     public:
-        Plural uintQtyRule(unsigned long long n) const override;
+        const PluralRule& qtyRule() const override;
         static const DefaultLocale INST;
     };
 
