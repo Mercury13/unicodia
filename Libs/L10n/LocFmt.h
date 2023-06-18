@@ -189,6 +189,8 @@ void loc::Fmt<Ch>::init()
                     if (c >= '0' && c <= '9') {
                         unsigned digit = c - '0';
                         key = key * 10u + digit;
+                        static_assert((std::numeric_limits<uint32_t>::max() % 10) != 9,
+                                "Strange numeric system: uint32_t's base shouldn't be multiple of 10");
                         if (key % 10u != digit) { // overflow: base is never multiple of 10
                             key = 0;
                             goto brk2;
