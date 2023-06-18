@@ -64,12 +64,14 @@ namespace loc {
         /// @return  i’th substitution
         const Zsubst& allSubsts(size_t i) const { return substs.at(i); }
         size_t iFirstSubst() const noexcept { return lnkFirst; }
+        size_t nextKey() const noexcept { return fNextKey; }
     private:
         const Locale& loc;
         Str d;
 
         std::vector<Zsubst> substs;
         size_t lnkFirst;
+        size_t fNextKey;
 
         void init();
     };
@@ -166,7 +168,7 @@ void loc::Fmt<Ch>::init()
             // broke using goto brk1: found
             // Find key
             size_t p2 = p + 1;
-            size_t key = 0;
+            uint32_t key = 0;
             for (; p2 < p1; ++p2) {
                 auto c = d[p2];
                 switch (c) {
@@ -174,12 +176,11 @@ void loc::Fmt<Ch>::init()
                     goto brk2;
                 default:
                     if (c >= '0' && c <= '9') {
-                        auto key2 = key * 10 + (c - '0');
-                        if (key2 < key) {    // overflow
+                        unsigned digit = c - '0';
+                        key = key * 10u + digit;
+                        if (key % 10u != digit) { // overflow: base is never multiple of 10
                             key = 0;
                             goto brk2;
-                        } else {    // OK, go on
-                            key = key2;
                         }
                     } else {    // Bad character
                         key = 0;
@@ -216,4 +217,5 @@ void loc::Fmt<Ch>::init()
         lnkFirst = 0;
         substs.back().lnkNext = Zsubst::NO_LINK;
     }
+    fNextKey = 0;
 }   // init()

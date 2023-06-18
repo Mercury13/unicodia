@@ -138,3 +138,26 @@ TEST (FmtCtor, ExplicitDefaultCombo)
     EXPECT_EQ(11u, s2.advance);
     EXPECT_EQ(loc::Zsubst::NO_LINK, s2.lnkNext);
 }
+
+
+///
+///  Combination of explicit and default substitutions
+///
+TEST (FmtCtor, NumParse)
+{
+    loc::Fmt fmt("alpha {1234} bravo {12345678901} charlie");
+    EXPECT_EQ("alpha {1234} bravo {12345678901} charlie", fmt.str());
+    EXPECT_EQ(2u, fmt.nAllSubsts());
+
+    auto& s0 = fmt.allSubsts(0);
+    EXPECT_EQ(1233u, s0.key);
+    EXPECT_EQ(6u, s0.length);
+    EXPECT_EQ(6u, s0.advance);
+    EXPECT_EQ(1u, s0.lnkNext);
+
+    auto& s1 = fmt.allSubsts(1);
+    EXPECT_EQ(1234u, s1.key);
+    EXPECT_EQ(13u, s1.length);
+    EXPECT_EQ(7u, s1.advance);
+    EXPECT_EQ(loc::Zsubst::NO_LINK, s1.lnkNext);
+}
