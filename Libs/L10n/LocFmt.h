@@ -19,19 +19,23 @@ namespace loc {
         virtual Plural ofInt(long long n) const { return ofUint(std::abs(n)); }
     };
 
+    ///  Default rule for English cardinal plurals
+    ///  1 lap (one), 2+ laps (many)
+    ///  Dubbed as default rule for basic plural
+    ///
+    class DefaultQtyRule : public PluralRule
+    {
+    public:
+        Plural ofUint(unsigned long long n) const override;
+        static const DefaultQtyRule INST;
+    };
+
     class Locale {  // interface
     public:
         virtual const PluralRule& qtyRule() const = 0;
         virtual char unitSpaceC() const { return ' '; }
         virtual char32_t unitSpaceL() const { return U' '; }
         virtual ~Locale() = default;
-    };
-
-    class DefaultQtyRule : public PluralRule
-    {
-    public:
-        Plural ofUint(unsigned long long n) const override;
-        static const DefaultQtyRule INST;
     };
 
     class DefaultLocale : public Locale
@@ -104,15 +108,31 @@ namespace loc {
         size_t iFirstSubst() const noexcept { return lnkFirst; }
         size_t nextKey() const noexcept { return fNextKey; }
 
-        Fmt& n(signed char x)       { nn(static_cast<int>(x));          return *this; }
-        Fmt& n(unsigned char x)     { nn(static_cast<unsigned int>(x)); return *this; }
-        Fmt& n(short x)             { nn(static_cast<int>(x));          return *this; }
-        Fmt& n(unsigned short x)    { nn(static_cast<unsigned int>(x)); return *this; }
-        Fmt& n(int x)               { nn(x);                            return *this; }
-        Fmt& n(unsigned int x)      { nn(x);                            return *this; }
+        Fmt& n(signed char x)        { nn(static_cast<int>(x));          return *this; }
+        Fmt& n(unsigned char x)      { nn(static_cast<unsigned int>(x)); return *this; }
+        Fmt& n(short x)              { nn(static_cast<int>(x));          return *this; }
+        Fmt& n(unsigned short x)     { nn(static_cast<unsigned int>(x)); return *this; }
+        Fmt& n(int x)                { nn(x);                            return *this; }
+        Fmt& n(unsigned int x)       { nn(x);                            return *this; }
+        Fmt& n(long x)               { nn(x);                            return *this; }
+        Fmt& n(unsigned long x)      { nn(x);                            return *this; }
+        Fmt& n(long long x)          { nn(x);                            return *this; }
+        Fmt& n(unsigned long long x) { nn(x);                            return *this; }
     protected:
         void nn(int x);
         void nn(unsigned int x);
+        void nn(long x);
+        void nn(unsigned long x);
+        void nn(long long x);
+        void nn(unsigned long long x);
+        ///  Why such an architecture?
+        ///  There will be three modes:
+        ///  • cardinal (5 laps)
+        ///  • ordinal (5th lap)
+        ///  • basic plural (the laps)
+        ///  Currently cardinal only. All modes are stored in substitutions.
+        ///  Everything is parsed on substituting, just for simplicity.
+        ///  We see ordinal substitution → ask ordinal plural rule
         void nnn(std::string_view x, const Zchecker& chk);
     private:
         const Locale& loc;
@@ -121,6 +141,8 @@ namespace loc {
         std::vector<Zsubst> substs;
         size_t lnkFirst;
         size_t fNextKey;
+
+        static constexpr size_t NO_LINK = Zsubst::NO_LINK;
 
         void init();
     };
@@ -272,10 +294,10 @@ void loc::Fmt<Ch>::init()
     d.resize(outputPos);
 
     if (substs.empty()) {
-        lnkFirst = Zsubst::NO_LINK;
+        lnkFirst = NO_LINK;
     } else {
         lnkFirst = 0;
-        substs.back().lnkNext = Zsubst::NO_LINK;
+        substs.back().lnkNext = NO_LINK;
     }
     fNextKey = 0;
 }   // init()
@@ -284,7 +306,7 @@ void loc::Fmt<Ch>::init()
 template <class Ch>
 void loc::Fmt<Ch>::nn(int x)
 {
-    char buf[30];
+    char buf[std::numeric_limits<int>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
     nnn(sv, ZsgnChecker(x));
@@ -294,7 +316,47 @@ void loc::Fmt<Ch>::nn(int x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(unsigned int x)
 {
-    char buf[30];
+    char buf[std::numeric_limits<unsigned>::digits10 + 4];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZunsChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(long x)
+{
+    char buf[std::numeric_limits<long>::digits10 + 4];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZsgnChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(unsigned long x)
+{
+    char buf[std::numeric_limits<unsigned long>::digits10 + 4];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZunsChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(long long x)
+{
+    char buf[std::numeric_limits<long long>::digits10 + 4];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZsgnChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(unsigned long long x)
+{
+    char buf[std::numeric_limits<unsigned long long>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
     nnn(sv, ZunsChecker(x));
@@ -304,5 +366,34 @@ void loc::Fmt<Ch>::nn(unsigned int x)
 template <class Ch>
 void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
 {
-
+    size_t lnkPrev = NO_LINK;
+    size_t lnkCurr = lnkFirst;
+    auto pos = 0;
+    while (lnkCurr != NO_LINK) {
+        auto& currSub = substs[lnkCurr];
+        if (currSub.key == fNextKey) {
+            auto currPos = pos + currSub.advance;
+            // Do replacement
+            /// @todo [urgent] What to do with the key?
+            ///
+            auto lnkNext = currSub.lnkNext;
+            // Fix up prev
+            if (lnkPrev == NO_LINK) {
+                lnkFirst = lnkNext;
+            } else {
+                substs[lnkPrev].lnkNext = lnkNext;
+            }
+            // Fix up next
+            if (lnkNext != NO_LINK) {
+                auto& nextSub = substs[lnkNext];
+                /// @todo [urgent] Fix up advance
+            }
+        } else {
+            pos += currSub.advance;
+            pos += currSub.length;
+        }
+        lnkPrev = lnkCurr;
+        lnkCurr = currSub.lnkNext;
+    }
+    ++fNextKey;
 }
