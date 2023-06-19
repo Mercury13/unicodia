@@ -122,6 +122,8 @@ namespace loc {
         Fmt& n(long long x)          { nn(x);                            return *this; }
         Fmt& n(unsigned long long x) { nn(x);                            return *this; }
 
+        Fmt& s(Sv x)                 { ss(x); return *this; }
+
         Fmt& operator() (short x)              { nn(static_cast<int>(x));           return *this; }
         Fmt& operator() (unsigned short x)     { nn(static_cast<unsigned int>(x));  return *this; }
         Fmt& operator() (int x)                { nn(x);                             return *this; }
@@ -130,6 +132,8 @@ namespace loc {
         Fmt& operator() (unsigned long x)      { nn(x);                             return *this; }
         Fmt& operator() (long long x)          { nn(x);                             return *this; }
         Fmt& operator() (unsigned long long x) { nn(x);                             return *this; }
+        Fmt& operator() (Sv x)                 { ss(x); return *this; }
+        Fmt& operator() ()                     { ss(Sv{}); return *this; }
 
         template <class First, class Second, class... Rest>
         Fmt& operator()(First&& first, Second&& second, Rest&&... rest) {
@@ -147,6 +151,8 @@ namespace loc {
         void eat(unsigned long x)      { nn(x); }
         void eat(long long x)          { nn(x); }
         void eat(unsigned long long x) { nn(x); }
+        void eat(Sv x) { ss(x); }
+
         void nn(int x);
         void nn(unsigned int x);
         void nn(long x);
@@ -162,6 +168,7 @@ namespace loc {
         ///  Everything is parsed on substituting, just for simplicity.
         ///  We see ordinal substitution → ask ordinal plural rule
         void nnn(std::string_view x, const Zchecker& chk);
+        void ss(Sv x);
     private:
         struct Kv {
             Sv key;
@@ -541,4 +548,40 @@ size_t loc::Fmt<Ch>::dumbReplace(
     }
     std::copy(byWhat.begin(), byWhat.end(), d.data() + pos);
     return sub.advance + byWhat.length();
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::ss(Sv x)
+{
+    size_t lnkPrev = NO_LINK;
+    size_t lnkCurr = lnkFirst;
+    auto pos = 0;
+    while (lnkCurr != NO_LINK) {
+        auto& currSub = substs[lnkCurr];
+        if (currSub.key == fNextKey) {
+            // pos will stay!!
+            auto currPos = pos + currSub.advance;
+            size_t newAdvance = dumbReplace(currSub, currPos, x);
+            auto lnkNext = currSub.lnkNext;
+            // Fix up prev
+            if (lnkPrev == NO_LINK) {
+                lnkFirst = lnkNext;
+            } else {
+                substs[lnkPrev].lnkNext = lnkNext;
+            }
+            // Fix up next
+            if (lnkNext != NO_LINK) {
+                auto& nextSub = substs[lnkNext];
+                nextSub.lnkNext += newAdvance;
+            }
+            // leave pos as is, we’ll add newAdvance later
+        } else {    // Just skip
+            pos += currSub.advance;
+            pos += currSub.length;
+        }
+        lnkPrev = lnkCurr;
+        lnkCurr = currSub.lnkNext;
+    }
+    ++fNextKey;
 }

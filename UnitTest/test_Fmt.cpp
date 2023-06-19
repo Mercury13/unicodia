@@ -352,3 +352,92 @@ TEST (SimpleNum, MultiEat)
     EXPECT_EQ("438alpha -7 bravo 438438 charlie-7", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
 }
+
+
+///// Simple strings ///////////////////////////////////////////////////////////
+
+
+TEST (SimpleStr, BasicShorter)
+{
+    loc::Fmt fmt("alpha {1|qqq} bravo");
+    fmt("ab");
+    EXPECT_EQ("alpha ab bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, BasicEqual)
+{
+    loc::Fmt fmt("alpha {1} bravo");
+    std::string_view sv("cde");
+    fmt(sv);
+    EXPECT_EQ("alpha cde bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, BasicLonger)
+{
+    loc::Fmt fmt("alpha {1} bravo");
+    std::string s("qwertyiop");
+    fmt(s);
+    EXPECT_EQ("alpha qwertyuiop bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, Identical)
+{
+    loc::Fmt fmt("alpha {1} bravo {1}{1} charlie");
+    fmt("ghgh");
+    EXPECT_EQ("alpha ghgh bravo ghghghgh charlie", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, TwoDifferent)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt("ab")("cdef");
+    EXPECT_EQ("cdefalpha ab bravo cdefcdef charlieab", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, NumAndStr)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt(-123456789012LL)("cdef");
+    EXPECT_EQ("cdefalpha -123456789012 bravo cdefcdef charlie-123456789012", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, TwoDifferentSingleBracket)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt("ab", "cdef");
+    EXPECT_EQ("cdefalpha ab bravo cdefcdef charlieab", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleStr, NumAndStrSingleBracket)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt(-123456789012LL, "cdef");
+    EXPECT_EQ("cdefalpha -123456789012 bravo cdefcdef charlie-123456789012", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///// Simple empty /////////////////////////////////////////////////////////////
+
+
+TEST (SimpleEmpty, NumAndStr)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt(-123456789012LL)();
+    EXPECT_EQ("alpha -123456789012 bravo  charlie-123456789012", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
