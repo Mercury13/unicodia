@@ -379,7 +379,7 @@ TEST (SimpleStr, BasicEqual)
 TEST (SimpleStr, BasicLonger)
 {
     loc::Fmt fmt("alpha {1} bravo");
-    std::string s("qwertyiop");
+    std::string s("qwertyuiop");
     fmt(s);
     EXPECT_EQ("alpha qwertyuiop bravo", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
@@ -437,7 +437,7 @@ TEST (SimpleStr, NumAndStrSingleBracket)
 TEST (SimpleEmpty, NumAndStr)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
-    fmt(-123456789012LL)();
+    fmt(-123456789012LL).emptyStr();
     EXPECT_EQ("alpha -123456789012 bravo  charlie-123456789012", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
 }

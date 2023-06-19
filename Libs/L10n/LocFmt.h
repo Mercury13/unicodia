@@ -133,7 +133,9 @@ namespace loc {
         Fmt& operator() (long long x)          { nn(x);                             return *this; }
         Fmt& operator() (unsigned long long x) { nn(x);                             return *this; }
         Fmt& operator() (Sv x)                 { ss(x); return *this; }
-        Fmt& operator() ()                     { ss(Sv{}); return *this; }
+        Fmt& operator() ()                     { return *this; }
+
+        Fmt& emptyStr() { ss(Sv{}); return *this; }
 
         template <class First, class Second, class... Rest>
         Fmt& operator()(First&& first, Second&& second, Rest&&... rest) {
@@ -142,7 +144,8 @@ namespace loc {
             (eat(std::forward<Rest>(rest)), ...);
             return *this;
         }
-    protected:
+
+        /// Use this for variable templates, e.g. op()
         void eat(short x)              { nn(static_cast<int>(x)); }
         void eat(unsigned short x)     { nn(static_cast<unsigned int>(x)); }
         void eat(int x)                { nn(x); }
@@ -152,7 +155,8 @@ namespace loc {
         void eat(long long x)          { nn(x); }
         void eat(unsigned long long x) { nn(x); }
         void eat(Sv x) { ss(x); }
-
+        void eat() {}
+    protected:
         void nn(int x);
         void nn(unsigned int x);
         void nn(long x);
@@ -460,14 +464,15 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
             // Fix up next
             if (lnkNext != NO_LINK) {
                 auto& nextSub = substs[lnkNext];
-                nextSub.lnkNext += newAdvance;
+                nextSub.advance += newAdvance;
             }
             // leave pos as is, we’ll add newAdvance later
+            // leave lnkPrev as is
         } else {    // Just skip
             pos += currSub.advance;
             pos += currSub.length;
+            lnkPrev = lnkCurr;
         }
-        lnkPrev = lnkCurr;
         lnkCurr = currSub.lnkNext;
     }
     ++fNextKey;
@@ -573,14 +578,14 @@ void loc::Fmt<Ch>::ss(Sv x)
             // Fix up next
             if (lnkNext != NO_LINK) {
                 auto& nextSub = substs[lnkNext];
-                nextSub.lnkNext += newAdvance;
+                nextSub.advance += newAdvance;
             }
             // leave pos as is, we’ll add newAdvance later
         } else {    // Just skip
             pos += currSub.advance;
             pos += currSub.length;
+            lnkPrev = lnkCurr;
         }
-        lnkPrev = lnkCurr;
         lnkCurr = currSub.lnkNext;
     }
     ++fNextKey;
