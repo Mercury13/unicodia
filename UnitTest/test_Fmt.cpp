@@ -300,7 +300,7 @@ TEST (FmtCtor, NumParse)
 ///// Simple numbers ///////////////////////////////////////////////////////////
 
 
-TEST (SimpleNum, BasicShorter)
+TEST (FmtSimpleNum, BasicShorter)
 {
     loc::Fmt fmt("alpha {1} bravo");
     fmt(7);
@@ -309,7 +309,7 @@ TEST (SimpleNum, BasicShorter)
 }
 
 
-TEST (SimpleNum, BasicEqual)
+TEST (FmtSimpleNum, BasicEqual)
 {
     loc::Fmt fmt("alpha {1} bravo");
     fmt(345);
@@ -318,7 +318,7 @@ TEST (SimpleNum, BasicEqual)
 }
 
 
-TEST (SimpleNum, BasicLonger)
+TEST (FmtSimpleNum, BasicLonger)
 {
     loc::Fmt fmt("alpha {1} bravo");
     fmt(-24680);
@@ -327,7 +327,7 @@ TEST (SimpleNum, BasicLonger)
 }
 
 
-TEST (SimpleNum, Identical)
+TEST (FmtSimpleNum, Identical)
 {
     loc::Fmt fmt("alpha {1} bravo {1}{1} charlie");
     fmt(-6);
@@ -336,7 +336,7 @@ TEST (SimpleNum, Identical)
 }
 
 
-TEST (SimpleNum, TwoDifferent)
+TEST (FmtSimpleNum, TwoDifferent)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt(-7)(438);
@@ -345,7 +345,7 @@ TEST (SimpleNum, TwoDifferent)
 }
 
 
-TEST (SimpleNum, MultiEat)
+TEST (FmtSimpleNum, MultiEat)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt(-7, 438);
@@ -357,7 +357,7 @@ TEST (SimpleNum, MultiEat)
 ///// Simple strings ///////////////////////////////////////////////////////////
 
 
-TEST (SimpleStr, BasicShorter)
+TEST (FmtSimpleStr, BasicShorter)
 {
     loc::Fmt fmt("alpha {1|qqq} bravo");
     fmt("ab");
@@ -366,7 +366,7 @@ TEST (SimpleStr, BasicShorter)
 }
 
 
-TEST (SimpleStr, BasicEqual)
+TEST (FmtSimpleStr, BasicEqual)
 {
     loc::Fmt fmt("alpha {1} bravo");
     std::string_view sv("cde");
@@ -376,7 +376,7 @@ TEST (SimpleStr, BasicEqual)
 }
 
 
-TEST (SimpleStr, BasicLonger)
+TEST (FmtSimpleStr, BasicLonger)
 {
     loc::Fmt fmt("alpha {1} bravo");
     std::string s("qwertyuiop");
@@ -386,7 +386,7 @@ TEST (SimpleStr, BasicLonger)
 }
 
 
-TEST (SimpleStr, Identical)
+TEST (FmtSimpleStr, Identical)
 {
     loc::Fmt fmt("alpha {1} bravo {1}{1} charlie");
     fmt("ghgh");
@@ -395,7 +395,7 @@ TEST (SimpleStr, Identical)
 }
 
 
-TEST (SimpleStr, TwoDifferent)
+TEST (FmtSimpleStr, TwoDifferent)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt("ab")("cdef");
@@ -404,7 +404,7 @@ TEST (SimpleStr, TwoDifferent)
 }
 
 
-TEST (SimpleStr, NumAndStr)
+TEST (FmtSimpleStr, NumAndStr)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt(-123456789012LL)("cdef");
@@ -413,7 +413,7 @@ TEST (SimpleStr, NumAndStr)
 }
 
 
-TEST (SimpleStr, TwoDifferentSingleBracket)
+TEST (FmtSimpleStr, TwoDifferentSingleBracket)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt("ab", "cdef");
@@ -422,7 +422,7 @@ TEST (SimpleStr, TwoDifferentSingleBracket)
 }
 
 
-TEST (SimpleStr, NumAndStrSingleBracket)
+TEST (FmtSimpleStr, NumAndStrSingleBracket)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt(-123456789012LL, "cdef");
@@ -434,7 +434,7 @@ TEST (SimpleStr, NumAndStrSingleBracket)
 ///// Simple empty /////////////////////////////////////////////////////////////
 
 
-TEST (SimpleEmpty, NumAndStr)
+TEST (FmtSimpleEmpty, NumAndStr)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt(-123456789012LL).emptyStr();
@@ -443,10 +443,118 @@ TEST (SimpleEmpty, NumAndStr)
 }
 
 
-TEST (SimpleEmpty, EmptyBracketsDoNothing)
+TEST (FmtSimpleEmpty, EmptyBracketsDoNothing)
 {
     loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
     fmt()("A", "B");
     EXPECT_EQ("Balpha A bravo BB charlieA", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///// Advanced numbers /////////////////////////////////////////////////////////
+
+
+///
+///  Simple work: should use ONE
+///
+TEST (FmtAdvNum, Simple)
+{
+    loc::Fmt fmt("{1|one=? lap|many=? laps} completed{2}");
+    fmt(1)("!");
+    EXPECT_EQ("1 lap completed!", fmt.str());
+}
+
+
+///
+///  Simple work: should use MANY
+///
+TEST (FmtAdvNum, Simple2)
+{
+    loc::Fmt fmt("{1|one=? lap|many=? laps} completed{2}");
+    fmt(6, "!");
+    EXPECT_EQ("6 laps completed!", fmt.str());
+}
+
+
+///
+///  Repeating question mark → should work
+///
+TEST (FmtAdvNum, RepeatingQun)
+{
+    loc::Fmt fmt("{1|one=?? lap?|many=? laps} completed{2}");
+    fmt(1)("!");
+    EXPECT_EQ("11 lap1 completed!", fmt.str());
+}
+
+
+///
+///  Plural form missing → do dumb replace
+///
+TEST (FmtAdvNum, Missing)
+{
+    loc::Fmt fmt("{1|one=? lap|few=? laps} completed{2}");
+    fmt(6, "!");
+    EXPECT_EQ("6 completed!", fmt.str());
+}
+
+
+TEST (FmtAdvNum, NoQun)
+{
+    loc::Fmt fmt("{1|one=One lap|many=? laps} completed{2}");
+    fmt(1)("!");
+    EXPECT_EQ("One lap completed!", fmt.str());
+}
+
+
+///
+///  Escape some characters with {
+///
+TEST (FmtAdvNum, Escape)
+{
+    loc::Fmt fmt("{1|one={?? l{ap{{{|{}!?!|many=? laps} completed{2}");
+    fmt(1)("!");
+    EXPECT_EQ("?1 lap{|}!1! completed!", fmt.str());
+}
+
+
+/////  Give string /////////////////////////////////////////////////////////////
+
+
+///
+///  giveStr should stop substituting, all other calls do nothing
+///
+TEST (FmtGive, ShouldStop1)
+{
+    loc::Fmt fmt("{1} - {2}");
+    fmt(12);
+    fmt.giveStr();
+    fmt(34);
+    EXPECT_EQ("12 - {2}", fmt.str());
+}
+
+
+///
+///  The same
+///
+TEST (FmtGive, ShouldStop2)
+{
+    loc::Fmt fmt("{2} - {1}");
+    fmt(12);
+    fmt.giveStr();
+    fmt(34);
+    EXPECT_EQ("{2} - 12", fmt.str());
+}
+
+
+///
+///  giveStr should give string, fmt owns nothing
+///
+TEST (FmtGive, ShouldGive)
+{
+    loc::Fmt fmt("{2} - {1}");
+    fmt(12);
+    auto s = fmt.giveStr();
+    EXPECT_EQ("{2} - 12", s);
+    EXPECT_EQ("", fmt.str());
 }

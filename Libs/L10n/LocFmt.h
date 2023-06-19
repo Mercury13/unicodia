@@ -15,6 +15,7 @@ namespace loc {
 
     enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
+    extern const std::string_view pluralNames[Plural_N];
 
     class PluralRule {   // interface
     public:
@@ -35,7 +36,8 @@ namespace loc {
 
     class Locale {  // interface
     public:
-        virtual const PluralRule& qtyRule() const = 0;
+        /// Rule for cardinal numerals
+        virtual const PluralRule& cardinalRule() const = 0;
         virtual char unitSpaceC() const { return ' '; }
         virtual char32_t unitSpaceL() const { return U' '; }
         virtual ~Locale() = default;
@@ -44,7 +46,7 @@ namespace loc {
     class DefaultLocale : public Locale
     {
     public:
-        const PluralRule& qtyRule() const override;
+        const PluralRule& cardinalRule() const override;
         static const DefaultLocale INST;
     };
 
@@ -156,6 +158,10 @@ namespace loc {
         void eat(unsigned long long x) { nn(x); }
         void eat(Sv x) { ss(x); }
         void eat() {}
+
+        /// 1. Stops substituting.
+        /// 2. Returns temporary link to data.
+        Str&& giveStr() { lnkFirst = NO_LINK; return std::move(d); }
     protected:
         void nn(int x);
         void nn(unsigned int x);
@@ -178,6 +184,7 @@ namespace loc {
             Sv key;
             Ch *valStart, *valEnd;
             bool isKey(std::string_view x) const noexcept;
+            bool isValEmpty() const { return (valStart == valEnd); }
         };
 
         const Locale& loc;
@@ -185,6 +192,7 @@ namespace loc {
 
         std::vector<Zsubst> substs;
         std::vector<Kv> values;
+        std::vector<size_t> smartSpans;
         size_t lnkFirst;
         size_t fNextKey;
 
@@ -195,12 +203,24 @@ namespace loc {
         /// Parses substitution, using substs as cache
         void parseSubst(const Zsubst& sub, size_t pos);
 
-        /// @return advance addition
+        /// Dumbly replaces substitution with byWhat
+        /// @return addition to “advance” variable
         template <class Ch2>
         size_t dumbReplace(
                 const Zsubst& sub,
                 size_t pos,
                 std::basic_string_view<Ch2> byWhat);
+
+        /// Smartly replaces substitution with byWhat,
+        ///   unescaping data and replacing ? with value
+        /// @return addition to “advance” variable
+        size_t replaceQuestion(
+                const Zsubst& sub,
+                size_t pos,
+                const Kv& byWhat,
+                std::string_view value);
+
+        const Kv* findVal(std::string_view key) const noexcept;
     };
 
     extern const loc::Locale* activeLocale;
@@ -450,9 +470,17 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
                 // Basic replacement
                 newAdvance = dumbReplace(currSub, currPos, x);
             } else {
-                // Special replacement
-                newAdvance = dumbReplace(currSub, currPos, std::string_view{"[SPEC]"});
-                /// @todo [fmt, urgent] Advanced replacement?
+                /// @todo [future] modes other than cardinal (5 laps completed):
+                ///    ordinal (5th lap completed), simple plural (laps completed)
+                /// @todo [future] short cardinal {1|q=lap:s} completed
+                auto plural = chk.check(loc.cardinalRule());
+                auto kk = pluralNames[static_cast<int>(plural)];
+                const Kv* tmpl = findVal(kk);
+                if (tmpl) {
+                    newAdvance = replaceQuestion(currSub, currPos, *tmpl, x);
+                } else {
+                    newAdvance = dumbReplace(currSub, currPos, x);
+                }
             }
             auto lnkNext = currSub.lnkNext;
             // Fix up prev
@@ -513,7 +541,6 @@ void loc::Fmt<Ch>::parseSubst(const Zsubst& sub, size_t pos)
         case '{':   // Escape
             if ((++p) == end)
                 goto brk1;
-            ++p;
             break;
         case '|':   // Pair delimiter
             processPart(p);
@@ -589,4 +616,68 @@ void loc::Fmt<Ch>::ss(Sv x)
         lnkCurr = currSub.lnkNext;
     }
     ++fNextKey;
+}
+
+
+template <class Ch>
+auto loc::Fmt<Ch>::findVal(std::string_view key) const noexcept -> const Kv*
+{
+    for (const Kv& v : values) {
+        if (v.isKey(key)) {
+            return &v;
+        }
+    }
+    return nullptr;
+}
+
+
+template <class Ch>
+size_t loc::Fmt<Ch>::replaceQuestion(
+        const Zsubst& sub, size_t pos, const Kv& byWhat, std::string_view value)
+{
+    // byWhat is empty?
+    if (byWhat.isValEmpty()) {
+        d.erase(pos, sub.length);
+        return sub.advance;
+    }
+    // Escape string, count smartSpans
+    smartSpans.clear();
+    size_t pOut = pos;
+    for (auto ptrIn = byWhat.valStart; ptrIn != byWhat.valEnd; ++ptrIn) {
+        auto c = *ptrIn;
+        switch (c) {
+        case '{':   // Escape
+            if ((++ptrIn) == byWhat.valEnd)
+                goto brk;
+            d[pOut++] = *ptrIn;
+            break;
+        case '?':   // Replacement
+            smartSpans.push_back(pOut);
+            break;
+        default:
+            d[pOut++] = c;
+        }
+    }
+brk:
+    // Now pOutStart..pOus is our template
+    auto newLength = (pOut - pos) + value.length() * smartSpans.size();
+    auto delta = static_cast<ptrdiff_t>(newLength) - static_cast<ptrdiff_t>(sub.length);
+    if (delta < 0) {
+        d.erase(pOut, -delta);
+    } else if (delta > 0) {
+        d.insert(pOut, delta, 0);
+    }
+    if (!value.empty()) {   // Value is empty → already OK
+        // Go back
+        auto ptrDest = d.data() + pos + newLength;
+        for (auto q = smartSpans.end(); q != smartSpans.begin(); ) { --q;
+            // Static
+            ptrDest = std::copy_backward(d.data() + *q, d.data() + pOut, ptrDest);
+            // Value
+            ptrDest = std::copy_backward(value.begin(), value.end(), ptrDest);
+            // Reassign
+            pOut = *q;
+        }
+    }
+    return sub.advance + newLength;
 }

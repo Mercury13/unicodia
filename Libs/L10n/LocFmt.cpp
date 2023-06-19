@@ -12,6 +12,8 @@ const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
 const loc::DefaultLocale loc::DefaultLocale::INST;
 const loc::Locale* loc::activeLocale = &loc::DefaultLocale::INST;
 
+const std::string_view loc::pluralNames[loc::Plural_N] =
+    { "zero", "one", "two", "few", "many", "other" };
 
 ///// DefaultQtyRule ///////////////////////////////////////////////////////////
 
@@ -21,7 +23,7 @@ loc::Plural loc::DefaultQtyRule::ofUint(unsigned long long n) const
 
 ///// DefaultLocale ////////////////////////////////////////////////////////////
 
-const loc::PluralRule& loc::DefaultLocale::qtyRule() const
+const loc::PluralRule& loc::DefaultLocale::cardinalRule() const
     { return DefaultQtyRule::INST; }
 
 
