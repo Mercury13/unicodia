@@ -8,7 +8,7 @@
 ///// Prerequisites ////////////////////////////////////////////////////////////
 
 ///
-///  Vector’s prerequisites for Format
+///  Vector’s prerequisites for Format: it enlarges only
 ///
 TEST (FmtPrereq, VectorEnlargesOnly)
 {
