@@ -203,7 +203,7 @@
      <au-cmt>Test: some Sutton chars, eg U+1D916 or 17</au-cmt>
     </text>
     <text id="NChars">
-     <orig>{1} ch.</orig>
+     <orig>{1|one=? character|many=? characters}</orig>
     </text>
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>

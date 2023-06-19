@@ -1253,7 +1253,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
                 } break;
             }
             if (numc.altInt != 0) {
-                buf = str::toQ(loc::get("Prop.Num.Or").arg(buf.toStdString(), numc.altInt));
+                buf = str::toQ(loc::get("Prop.Num.Or").arg(str::toU8(buf), numc.altInt));
             }
             text += buf;
         }

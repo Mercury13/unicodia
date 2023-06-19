@@ -9,41 +9,6 @@
 loc::Dic loc::dic;
 
 
-///// Text /////////////////////////////////////////////////////////////////////
-
-
-void loc::Text::aa(std::u8string& r, const char8_t* subst, std::u8string_view x)
-{
-    str::replace(r, subst, x);
-}
-
-void loc::Text::aa(std::u8string& r, const char8_t* subst, std::string_view x)
-{
-    str::replace(r, subst, str::toU8sv(x));
-}
-
-void loc::Text::aa(std::u8string& r, const char8_t* subst, int x)
-{
-    char c[30];
-    auto u8 = str::toCharsU8(c, x);
-    str::replace(r, subst, u8);
-}
-
-void loc::Text::aa(std::u8string& r, const char8_t* subst, unsigned x)
-{
-    char c[30];
-    auto u8 = str::toCharsU8(c, x);
-    str::replace(r, subst, u8);
-}
-
-void loc::Text::aa(std::u8string& r, const char8_t* subst, long long x)
-{
-    char c[30];
-    auto u8 = str::toCharsU8(c, x);
-    str::replace(r, subst, u8);
-}
-
-
 ///// Dic //////////////////////////////////////////////////////////////////////
 
 

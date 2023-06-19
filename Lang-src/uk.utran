@@ -257,8 +257,8 @@
      <transl>Заповнень та поворотів немає</transl>
     </text>
     <text id="NChars">
-     <orig>{1} ch.</orig>
-     <transl>{1} симв.</transl>
+     <orig>{1|one=? character|many=? characters}</orig>
+     <transl>{1|one=? символ|few=? символи|many=? символів}</transl>
     </text>
     <text id="NoHent">
      <orig>without &lt;a {1} &gt;Hentaigana&lt;/a&gt;</orig>
