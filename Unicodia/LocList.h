@@ -7,12 +7,25 @@
 
 // Libs
 #include "u_Vector.h"
+#include "LocFmt.h"
 
 class QTranslator;
 
 namespace loc
 {
-    struct Lang
+    struct CustomRule final : public PluralRule
+    {
+        struct Line {
+            unsigned mod, min, max;
+            loc::Plural outcome;
+        };
+        SafeVector<Line> lines;
+        loc::Plural defaultOutcome = loc::Plural::OTHER;
+
+        Plural ofUint(unsigned long long n) const override;
+    };
+
+    struct Lang final : public loc::Locale
     {
         struct Name {
             std::u8string
@@ -38,6 +51,7 @@ namespace loc
         std::unique_ptr<QTranslator> translator;
         std::map<std::string, std::string, std::less<>> wikiTemplates;
         std::unordered_map<char32_t, int> sortOrder;
+        CustomRule cardRule;
 
         void load();
         void forceLoad();
@@ -45,6 +59,9 @@ namespace loc
         bool hasTriggerLang(std::string_view iso) const;
         bool hasMainLang(std::string_view iso) const;
         const std::string& mainLang() const { return triggerLangs.front(); }
+
+        // Locale
+        const PluralRule& cardinalRule() const override { return cardRule; }
     };
 
     namespace active {

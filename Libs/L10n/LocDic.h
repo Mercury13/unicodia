@@ -74,4 +74,8 @@ namespace loc {
 
 template <class... T>
 std::u8string loc::Text::arg(const T&... x) const
-    { return loc::Fmt(fSrc)(x...).giveStr(); }
+{
+    loc::FmtL<char8_t> fmt(fSrc);
+    (fmt.eat(x), ...);
+    return fmt.giveStr();
+}

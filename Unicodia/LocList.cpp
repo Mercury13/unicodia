@@ -37,6 +37,22 @@ loc::Lang::Icons loc::active::icons;
 loc::Lang::Numfmt loc::active::numfmt;
 bool loc::active::showEnglishTerms = false;
 
+
+///// CustomRule ///////////////////////////////////////////////////////////////
+
+
+loc::Plural loc::CustomRule::ofUint(unsigned long long n) const
+{
+    for (auto& v : lines) {
+        long long q = (v.mod == 0) ? n : n % v.mod;
+        if (q >= v.min && q <= v.max) {
+            return v.outcome;
+        }
+    }
+    return defaultOutcome;
+}
+
+
 ///// Lang /////////////////////////////////////////////////////////////////////
 
 
@@ -67,6 +83,9 @@ void loc::Lang::forceLoad()
     active::numfmt = numfmt;
     active::showEnglishTerms = showEnglishTerms;
 
+    // loc::FmtL locale
+    loc::activeLocale = currLang;
+
     loc::man.translateMe();
 }
 
@@ -95,6 +114,27 @@ namespace {
     constexpr auto MY_OPTS =
         std::filesystem::directory_options::follow_directory_symlink
         | std::filesystem::directory_options::skip_permission_denied;
+
+    loc::Plural parseOutcome(std::string_view value)
+    {
+        for (size_t i = 0; i < loc::Plural_N; ++i) {
+            if (loc::pluralNames[i] == value)
+                return static_cast<loc::Plural>(i);
+        }
+        return loc::Plural::OTHER;
+    }
+
+    void loadPluralRules(pugi::xml_node h, loc::CustomRule& r)
+    {
+        r.defaultOutcome = parseOutcome(h.attribute("default-outcome").as_string());
+        for (auto hLine : h.children("rule")) {
+            auto& line = r.lines.emplace_back();
+            line.mod = hLine.attribute("mod").as_uint();
+            line.min = hLine.attribute("min").as_uint();
+            line.max = hLine.attribute("max").as_uint();
+            line.outcome = parseOutcome(hLine.attribute("outcome").as_string());
+        }
+    }
 
     bool parseLang(loc::Lang& r, const std::filesystem::path& path)
     {
@@ -183,6 +223,9 @@ namespace {
         if (!dp.empty() && dp[0] < 65536) {
             r.numfmt.decimalPoint = dp[0];
         }
+
+        auto hCardinalRules = hLocale.child("cardinal-rules");
+        loadPluralRules(hCardinalRules, r.cardRule);
 
         // Find Qt translator
         std::filesystem::directory_iterator di(path, MY_OPTS);

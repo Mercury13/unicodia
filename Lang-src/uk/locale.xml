@@ -38,4 +38,9 @@
 	</wiki-templates>
 	<icons sort-az="sort_AYa" />
 	<num-format dec-point="," />
+	<cardinal-rules default-outcome="many">
+		<rule mod="100" min="5" max="20" outcome="many" /><!-- 5 кіл …20 кіл, 105 кіл … 120 кіл -->
+		<rule mod="10" min="1" max="1" outcome="one" /><!-- 1 коло, 21 коло, 101 коло -->
+		<rule mod="10" min="2" max="4" outcome="few" /><!-- 2 кола … 4 кола, 22 кола … 24 кола, 102 кола … 124 кола -->
+	</cardinal-rules>
 </locale>
