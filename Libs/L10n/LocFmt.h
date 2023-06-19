@@ -2,6 +2,7 @@
 
 // C++
 #include <cmath>
+#include <charconv>
 
 // STL
 #include <string>
@@ -12,13 +13,13 @@ namespace loc {
     enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
     constexpr unsigned Plural_N = static_cast<unsigned>(Plural::OTHER) + 1;
 
-    class PluralRule {
+    class PluralRule {   // interface
+    public:
         virtual Plural ofUint(unsigned long long n) const = 0;
         virtual Plural ofInt(long long n) const { return ofUint(std::abs(n)); }
     };
 
-    class Locale    // interface
-    {
+    class Locale {  // interface
     public:
         virtual const PluralRule& qtyRule() const = 0;
         virtual char unitSpaceC() const { return ' '; }
@@ -53,6 +54,28 @@ namespace loc {
         bool isLast() const noexcept { return (lnkNext == NO_LINK || advance == NO_LINK); }
     };
 
+    class Zchecker {  // interface
+    public:
+        virtual Plural check(const PluralRule& plu) const = 0;
+        virtual ~Zchecker() = default;
+    };
+
+    class ZsgnChecker : public Zchecker {
+    public:
+        explicit ZsgnChecker(long long x) noexcept : v(x) {}
+        Plural check(const PluralRule& plu) const override;
+    private:
+        long long v;
+    };
+
+    class ZunsChecker : public Zchecker {
+    public:
+        explicit ZunsChecker(unsigned long long x) noexcept : v(x) {}
+        Plural check(const PluralRule& plu) const override;
+    private:
+        unsigned long long v;
+    };
+
     template <class Ch>
     class Fmt
     {
@@ -80,6 +103,17 @@ namespace loc {
         /// @return  index of 1st working substitution, or Zsubst::NO_LINK
         size_t iFirstSubst() const noexcept { return lnkFirst; }
         size_t nextKey() const noexcept { return fNextKey; }
+
+        Fmt& n(signed char x)       { nn(static_cast<int>(x));          return *this; }
+        Fmt& n(unsigned char x)     { nn(static_cast<unsigned int>(x)); return *this; }
+        Fmt& n(short x)             { nn(static_cast<int>(x));          return *this; }
+        Fmt& n(unsigned short x)    { nn(static_cast<unsigned int>(x)); return *this; }
+        Fmt& n(int x)               { nn(x);                            return *this; }
+        Fmt& n(unsigned int x)      { nn(x);                            return *this; }
+    protected:
+        void nn(int x);
+        void nn(unsigned int x);
+        void nnn(std::string_view x, const Zchecker& chk);
     private:
         const Locale& loc;
         Str d;
@@ -245,3 +279,30 @@ void loc::Fmt<Ch>::init()
     }
     fNextKey = 0;
 }   // init()
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(int x)
+{
+    char buf[30];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZsgnChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nn(unsigned int x)
+{
+    char buf[30];
+    auto q = std::to_chars(buf, buf + std::size(buf), x);
+    std::string_view sv(buf, q.ptr);
+    nnn(sv, ZunsChecker(x));
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
+{
+
+}

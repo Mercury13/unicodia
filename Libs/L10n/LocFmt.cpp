@@ -23,3 +23,12 @@ loc::Plural loc::DefaultQtyRule::ofUint(unsigned long long n) const
 
 const loc::PluralRule& loc::DefaultLocale::qtyRule() const
     { return DefaultQtyRule::INST; }
+
+
+///// Checkers /////////////////////////////////////////////////////////////////
+
+loc::Plural loc::ZsgnChecker::check(const PluralRule& plu) const
+    { return plu.ofInt(v); }
+
+loc::Plural loc::ZunsChecker::check(const PluralRule& plu) const
+    { return plu.ofUint(v); }
