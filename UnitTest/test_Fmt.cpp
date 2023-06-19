@@ -13,6 +13,7 @@
 TEST (FmtPrereq, VectorEnlargesOnly)
 {
     std::vector<int> v;
+    v.reserve(500);
     for (int i = 0; i < 500; ++i)
         v.push_back(i);
     auto oldCap = v.capacity();
