@@ -9,7 +9,121 @@
 ///
 TEST (FmtCtor, Simple)
 {
-    loc::Fmt fmt("alpha bravo");
+    loc::Fmt<char> fmt("alpha bravo");
+
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide const char*
+///
+TEST (FmtCtor, DeductionGuideConstChar)
+{
+    loc::Fmt<char> fmt("alpha bravo");
+
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Test FmtL’s deduction guide
+///
+TEST (FmtCtor, LDeductionGuideConstChar)
+{
+    loc::FmtL fmt("alpha bravo");
+
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string
+///
+TEST (FmtCtor, DeductionGuideString)
+{
+    std::string s{"alpha bravo"};
+    loc::Fmt fmt(s);
+
+    EXPECT_EQ("alpha bravo", s);
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string
+///
+TEST (FmtCtor, LDeductionGuideString)
+{
+    std::string s{"alpha bravo"};
+    loc::FmtL fmt(s);
+
+    EXPECT_EQ("alpha bravo", s);
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string&&
+///
+TEST (FmtCtor, DeductionGuideTmpString)
+{
+    std::string s{"alpha bravo"};
+    loc::Fmt fmt(std::move(s));
+
+    EXPECT_TRUE(s.empty());
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string&&
+///
+TEST (FmtCtor, LDeductionGuideTmpString)
+{
+    std::string s{"alpha bravo"};
+    loc::FmtL fmt(std::move(s));
+
+    EXPECT_TRUE(s.empty());
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string&&
+///
+TEST (FmtCtor, DeductionGuideSv)
+{
+    std::string_view s{"alpha bravo"};
+    loc::Fmt fmt(s);
+
+    EXPECT_EQ("alpha bravo", fmt.str());
+    EXPECT_EQ(0u, fmt.nAllSubsts());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+///
+///  Deduction guide std::string&&
+///
+TEST (FmtCtor, LDeductionGuideSv)
+{
+    std::string_view s{"alpha bravo"};
+    loc::FmtL fmt(s);
 
     EXPECT_EQ("alpha bravo", fmt.str());
     EXPECT_EQ(0u, fmt.nAllSubsts());

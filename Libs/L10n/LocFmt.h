@@ -59,10 +59,10 @@ namespace loc {
     public:
         using Str = std::basic_string<Ch>;
         using Sv = std::basic_string_view<Ch>;
-        Fmt(Str&& x);
+        Fmt(Str x);
         Fmt(Sv x);
         Fmt(const Ch* x);
-        Fmt(const Locale& lc, Str&& x);
+        Fmt(const Locale& lc, Str x);
         Fmt(const Locale& lc, Sv x);
         Fmt(const Locale& lc, const Ch* x);
 
@@ -70,10 +70,14 @@ namespace loc {
         Str&& str() && noexcept { return std::move(d); }
         const Ch* c_str() const noexcept { return d.c_str(); }
 
+        /// @warning  Debug only
         /// @return  # of total substitutions
         size_t nAllSubsts() const noexcept { return substs.size(); }
+        /// @warning  debug only
         /// @return  i’th substitution
         const Zsubst& allSubsts(size_t i) const { return substs.at(i); }
+        /// @warning  debug only
+        /// @return  index of 1st working substitution, or Zsubst::NO_LINK
         size_t iFirstSubst() const noexcept { return lnkFirst; }
         size_t nextKey() const noexcept { return fNextKey; }
     private:
@@ -87,24 +91,33 @@ namespace loc {
         void init();
     };
 
+    extern const loc::Locale* activeLocale;
+
     template <class Ch>
     class FmtL : public Fmt<Ch>
     {
+    private:
+        using Super = Fmt<Ch>;
     public:
+        using typename Super::Str;
+        using typename Super::Sv;
+        FmtL(Str x) : Super(*activeLocale, std::move(x)) {}
+        FmtL(Sv x) : Super(*activeLocale, x) {}
+        FmtL(const Ch* x) : Super(*activeLocale, x) {}
     };
 
     // Deduction guides
-    template <class Ch>
-    Fmt(const loc::Locale&, std::basic_string_view<Ch>) -> Fmt<Ch>;
+    template <class Ch> Fmt(const loc::Locale&, std::basic_string<Ch>) -> Fmt<Ch>;
+    template <class Ch> Fmt(std::basic_string<Ch>) -> Fmt<Ch>;
+    template <class Ch> FmtL(std::basic_string<Ch>) -> FmtL<Ch>;
 
-    template <class Ch>
-    Fmt(std::basic_string_view<Ch>) -> Fmt<Ch>;
+    template <class Ch> Fmt(const loc::Locale&, std::basic_string_view<Ch>) -> Fmt<Ch>;
+    template <class Ch> Fmt(std::basic_string_view<Ch>) -> Fmt<Ch>;
+    template <class Ch> FmtL(std::basic_string_view<Ch>) -> FmtL<Ch>;
 
-    template <class Ch>
-    Fmt(const loc::Locale&, const Ch*) -> Fmt<Ch>;
-
-    template <class Ch>
-    Fmt(const Ch*) -> Fmt<Ch>;
+    template <class Ch> Fmt(const loc::Locale&, const Ch*) -> Fmt<Ch>;
+    template <class Ch> Fmt(const Ch*) -> Fmt<Ch>;
+    template <class Ch> FmtL(const Ch*) -> FmtL<Ch>;
 
 }   // namespace loc
 
@@ -116,19 +129,19 @@ extern template class loc::FmtL<wchar_t>;
 extern template class loc::FmtL<char8_t>;
 
 template <class Ch>
-loc::Fmt<Ch>::Fmt(Str&& x) : loc(DefaultLocale::INST), d(x) { init(); }
+loc::Fmt<Ch>::Fmt(Str x) : loc(DefaultLocale::INST), d(std::move(x)) { init(); }
+
+template <class Ch>
+loc::Fmt<Ch>::Fmt(const Locale& lc, Str x) : loc(lc), d(std::move(x)) { init(); }
 
 template <class Ch>
 loc::Fmt<Ch>::Fmt(Sv x) : loc(DefaultLocale::INST), d(x) { init(); }
 
 template <class Ch>
-loc::Fmt<Ch>::Fmt(const Ch* x) : loc(DefaultLocale::INST), d(x) { init(); }
-
-template <class Ch>
-loc::Fmt<Ch>::Fmt(const Locale& lc, Str&& x) : loc(lc), d(x) { init(); }
-
-template <class Ch>
 loc::Fmt<Ch>::Fmt(const Locale& lc, Sv x) : loc(lc), d(x) { init(); }
+
+template <class Ch>
+loc::Fmt<Ch>::Fmt(const Ch* x) : loc(DefaultLocale::INST), d(x) { init(); }
 
 template <class Ch>
 loc::Fmt<Ch>::Fmt(const Locale& lc, const Ch* x) : loc(lc), d(x) { init(); }

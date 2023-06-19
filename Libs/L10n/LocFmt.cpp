@@ -10,6 +10,7 @@ template class loc::FmtL<char8_t>;
 
 const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
 const loc::DefaultLocale loc::DefaultLocale::INST;
+const loc::Locale* loc::activeLocale = &loc::DefaultLocale::INST;
 
 
 ///// DefaultQtyRule ///////////////////////////////////////////////////////////
