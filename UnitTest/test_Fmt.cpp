@@ -4,6 +4,25 @@
 // Google test
 #include "gtest/gtest.h"
 
+
+///// Prerequisites ////////////////////////////////////////////////////////////
+
+///
+///  Vector’s prerequisites for Format
+///
+TEST (FmtPrereq, VectorEnlargesOnly)
+{
+    std::vector<int> v;
+    for (int i = 0; i < 500; ++i)
+        v.push_back(i);
+    auto oldCap = v.capacity();
+    v.clear();
+    EXPECT_EQ(oldCap, v.capacity());
+}
+
+
+///// Constructor //////////////////////////////////////////////////////////////
+
 ///
 ///  Simple creation w/o substitution
 ///
