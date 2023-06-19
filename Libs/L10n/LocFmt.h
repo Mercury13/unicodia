@@ -223,7 +223,7 @@ namespace loc {
         const Kv* findVal(std::string_view key) const noexcept;
     };
 
-    extern const loc::Locale* activeLocale;
+    extern const loc::Locale* activeFmtLocale;
 
     template <class Ch>
     class FmtL : public Fmt<Ch>
@@ -233,9 +233,9 @@ namespace loc {
     public:
         using typename Super::Str;
         using typename Super::Sv;
-        FmtL(Str x) : Super(*activeLocale, std::move(x)) {}
-        FmtL(Sv x) : Super(*activeLocale, x) {}
-        FmtL(const Ch* x) : Super(*activeLocale, x) {}
+        FmtL(Str x) : Super(*activeFmtLocale, std::move(x)) {}
+        FmtL(Sv x) : Super(*activeFmtLocale, x) {}
+        FmtL(const Ch* x) : Super(*activeFmtLocale, x) {}
     };
 
     // Deduction guides

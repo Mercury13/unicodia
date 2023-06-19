@@ -10,7 +10,7 @@ template class loc::FmtL<char8_t>;
 
 const loc::DefaultQtyRule loc::DefaultQtyRule::INST;
 const loc::DefaultLocale loc::DefaultLocale::INST;
-const loc::Locale* loc::activeLocale = &loc::DefaultLocale::INST;
+const loc::Locale* loc::activeFmtLocale = &loc::DefaultLocale::INST;
 
 const std::string_view loc::pluralNames[loc::Plural_N] =
     { "zero", "one", "two", "few", "many", "other" };

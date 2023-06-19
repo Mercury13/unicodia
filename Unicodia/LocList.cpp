@@ -84,7 +84,7 @@ void loc::Lang::forceLoad()
     active::showEnglishTerms = showEnglishTerms;
 
     // loc::FmtL locale
-    loc::activeLocale = currLang;
+    loc::activeFmtLocale = currLang;
 
     loc::man.translateMe();
 }
