@@ -130,7 +130,23 @@ namespace loc {
         Fmt& operator() (unsigned long x)      { nn(x);                             return *this; }
         Fmt& operator() (long long x)          { nn(x);                             return *this; }
         Fmt& operator() (unsigned long long x) { nn(x);                             return *this; }
+
+        template <class First, class Second, class... Rest>
+        Fmt& operator()(First&& first, Second&& second, Rest&&... rest) {
+            eat(std::forward<First>(first));
+            eat(std::forward<Second>(second));
+            (eat(std::forward<Rest>(rest)), ...);
+            return *this;
+        }
     protected:
+        void eat(short x)              { nn(static_cast<int>(x)); }
+        void eat(unsigned short x)     { nn(static_cast<unsigned int>(x)); }
+        void eat(int x)                { nn(x); }
+        void eat(unsigned int x)       { nn(x); }
+        void eat(long x)               { nn(x); }
+        void eat(unsigned long x)      { nn(x); }
+        void eat(long long x)          { nn(x); }
+        void eat(unsigned long long x) { nn(x); }
         void nn(int x);
         void nn(unsigned int x);
         void nn(long x);

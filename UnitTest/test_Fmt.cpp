@@ -343,3 +343,12 @@ TEST (SimpleNum, TwoDifferent)
     EXPECT_EQ("438alpha -7 bravo 438438 charlie-7", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
 }
+
+
+TEST (SimpleNum, MultiEat)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt(-7, 438);
+    EXPECT_EQ("438alpha -7 bravo 438438 charlie-7", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
