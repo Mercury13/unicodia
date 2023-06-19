@@ -441,3 +441,12 @@ TEST (SimpleEmpty, NumAndStr)
     EXPECT_EQ("alpha -123456789012 bravo  charlie-123456789012", fmt.str());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
 }
+
+
+TEST (SimpleEmpty, EmptyBracketsDoNothing)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt()("A", "B");
+    EXPECT_EQ("Balpha A bravo BB charlieA", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
