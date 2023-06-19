@@ -2189,6 +2189,23 @@ const uc::Block* uc::blockOf(char32_t subj)
 }
 
 
+bool uc::Category::isIndependent() const noexcept
+{
+    switch (upCat) {
+    case UpCategory::CONTROL:
+    case UpCategory::FORMAT:
+    case UpCategory::MARK:
+        return false;
+    case UpCategory::LETTER:
+    case UpCategory::PUNCTUATION:
+    case UpCategory::SEPARATOR:
+    case UpCategory::SYMBOL:
+    case UpCategory::NUMBER:;
+    }
+    return true;
+}
+
+
 size_t uc::Block::permanentIndex() const
 {
     return this - blocks;

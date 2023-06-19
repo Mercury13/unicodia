@@ -1414,12 +1414,26 @@ void FmMain::libChanged(const QModelIndex& current)
         QString s = mywiki::buildLibFolderHtml(node, color);
         setWiki(ui->vwLibInfo, s);
     } else {
+        // Count independent chars
+        size_t nIndependent = 0;
+        for (auto c : node.value) {
+            if (auto pCp = uc::cpsByCode[c]) {
+                if (pCp->category().isIndependent())
+                    ++nIndependent;
+            }
+        }
         // Actual node
         // CPs
         auto len = node.value.length();
         for (unsigned i = 0; i < len; ++i) {
+            auto emojiDraw = uc::EmojiDraw::CONSERVATIVE;
+            if (nIndependent > 1        // At least 2 independent
+                    && i + 1 < len      // Next is VS16
+                    && node.value[i+1] == VS16) {
+                emojiDraw = uc::EmojiDraw::GRAPHIC;
+            }
             auto& wi = libCpWidgets[i];
-            wi->setCp(node.value[i], model.glyphStyle.sets);
+            wi->setCp(node.value[i], emojiDraw, model.glyphStyle.sets);
             wi->show();
         }
         for (unsigned i = len; i < uc::LONGEST_LIB; ++i) {

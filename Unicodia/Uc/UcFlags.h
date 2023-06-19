@@ -12,6 +12,17 @@
 
 namespace uc {
 
+    ///
+    ///   There are some chars that dub as typographic and emoji.
+    ///   E.g. arrows, ‼
+    ///   How to write them?
+    ///
+    enum class EmojiDraw {
+        TEXT,           ///< Mostly library: draw emoji as text
+        CONSERVATIVE,   ///< Table: those chars are drawn as text
+        GRAPHIC         ///< Library: all emoji are drawn as graphic
+    };
+
     enum class Cfg : unsigned short {
         M_ABBREVIATION   = 1<<0, ///< [+] Method: 1st synonym is abbreviation
         U_DEPRECATED     = 1<<1, ///< [+] UC feature: char is deprecated

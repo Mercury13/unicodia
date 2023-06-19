@@ -836,6 +836,8 @@ namespace uc {
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKey(buf, N, suffix); }
+
+        bool isIndependent() const noexcept;
     };
 
     extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];
