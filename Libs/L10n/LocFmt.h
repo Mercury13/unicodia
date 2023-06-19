@@ -8,6 +8,9 @@
 #include <string>
 #include <vector>
 
+// Libs
+#include "u_Strings.h"
+
 namespace loc {
 
     enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
@@ -118,6 +121,15 @@ namespace loc {
         Fmt& n(unsigned long x)      { nn(x);                            return *this; }
         Fmt& n(long long x)          { nn(x);                            return *this; }
         Fmt& n(unsigned long long x) { nn(x);                            return *this; }
+
+        Fmt& operator() (short x)              { nn(static_cast<int>(x));           return *this; }
+        Fmt& operator() (unsigned short x)     { nn(static_cast<unsigned int>(x));  return *this; }
+        Fmt& operator() (int x)                { nn(x);                             return *this; }
+        Fmt& operator() (unsigned int x)       { nn(x);                             return *this; }
+        Fmt& operator() (long x)               { nn(x);                             return *this; }
+        Fmt& operator() (unsigned long x)      { nn(x);                             return *this; }
+        Fmt& operator() (long long x)          { nn(x);                             return *this; }
+        Fmt& operator() (unsigned long long x) { nn(x);                             return *this; }
     protected:
         void nn(int x);
         void nn(unsigned int x);
@@ -135,16 +147,33 @@ namespace loc {
         ///  We see ordinal substitution → ask ordinal plural rule
         void nnn(std::string_view x, const Zchecker& chk);
     private:
+        struct Kv {
+            Sv key;
+            Ch *valStart, *valEnd;
+            bool isKey(std::string_view x) const noexcept;
+        };
+
         const Locale& loc;
         Str d;
 
         std::vector<Zsubst> substs;
+        std::vector<Kv> values;
         size_t lnkFirst;
         size_t fNextKey;
 
         static constexpr size_t NO_LINK = Zsubst::NO_LINK;
 
         void init();
+
+        /// Parses substitution, using substs as cache
+        void parseSubst(const Zsubst& sub, size_t pos);
+
+        /// @return advance addition
+        template <class Ch2>
+        size_t dumbReplace(
+                const Zsubst& sub,
+                size_t pos,
+                std::basic_string_view<Ch2> byWhat);
     };
 
     extern const loc::Locale* activeLocale;
@@ -306,6 +335,8 @@ void loc::Fmt<Ch>::init()
 template <class Ch>
 void loc::Fmt<Ch>::nn(int x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<int>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -316,6 +347,8 @@ void loc::Fmt<Ch>::nn(int x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(unsigned int x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<unsigned>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -326,6 +359,8 @@ void loc::Fmt<Ch>::nn(unsigned int x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(long x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<long>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -336,6 +371,8 @@ void loc::Fmt<Ch>::nn(long x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(unsigned long x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<unsigned long>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -346,6 +383,8 @@ void loc::Fmt<Ch>::nn(unsigned long x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(long long x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<long long>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -356,6 +395,8 @@ void loc::Fmt<Ch>::nn(long long x)
 template <class Ch>
 void loc::Fmt<Ch>::nn(unsigned long long x)
 {
+    if (lnkFirst == NO_LINK)
+        return;
     char buf[std::numeric_limits<unsigned long long>::digits10 + 4];
     auto q = std::to_chars(buf, buf + std::size(buf), x);
     std::string_view sv(buf, q.ptr);
@@ -372,10 +413,20 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
     while (lnkCurr != NO_LINK) {
         auto& currSub = substs[lnkCurr];
         if (currSub.key == fNextKey) {
+            // pos will stay!!
             auto currPos = pos + currSub.advance;
+            // Parse substitution
+            parseSubst(currSub, currPos);
             // Do replacement
-            /// @todo [urgent] What to do with the key?
-            ///
+            size_t newAdvance;
+            if (values.empty()) {
+                // Basic replacement
+                newAdvance = dumbReplace(currSub, currPos, x);
+            } else {
+                // Special replacement
+                newAdvance = dumbReplace(currSub, currPos, std::string_view{"[SPEC]"});
+                /// @todo [fmt, urgent] Advanced replacement?
+            }
             auto lnkNext = currSub.lnkNext;
             // Fix up prev
             if (lnkPrev == NO_LINK) {
@@ -386,9 +437,10 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
             // Fix up next
             if (lnkNext != NO_LINK) {
                 auto& nextSub = substs[lnkNext];
-                /// @todo [urgent] Fix up advance
+                nextSub.lnkNext += newAdvance;
             }
-        } else {
+            // leave pos as is, we’ll add newAdvance later
+        } else {    // Just skip
             pos += currSub.advance;
             pos += currSub.length;
         }
@@ -396,4 +448,81 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
         lnkCurr = currSub.lnkNext;
     }
     ++fNextKey;
+}
+
+
+template <class Ch>
+void loc::Fmt<Ch>::parseSubst(const Zsubst& sub, size_t pos)
+{
+    values.clear();
+
+    Ch* p = d.data() + pos + 1;
+    Ch* end = p + sub.length - 2;
+    // We know that all right braces are escaped here
+    Ch* pStart = p;
+    Ch* pEqual = nullptr;
+    bool hasBadChars = false;
+
+    auto processPart = [this, &pStart, &pEqual, &hasBadChars](Ch* p) {
+        // Equal sign should exist
+        // Bad chars should not exist
+        if (!pEqual || hasBadChars)
+            return;
+        auto key =  str::trimSv(Sv{pStart, pEqual});
+        // Key should not be empty
+        if (key.empty())
+            return;
+        values.emplace_back(key, pEqual + 1, p);
+    };
+
+    for (; p != end; ++p) {
+        uint_fast32_t c = *p;
+        switch (c) {
+        case '=':   // Key-value delimiter
+            if (!pEqual)
+                pEqual = p;
+            break;
+        case '{':   // Escape
+            if ((++p) == end)
+                goto brk1;
+            ++p;
+            break;
+        case '|':   // Pair delimiter
+            processPart(p);
+            pStart = p + 1;
+            pEqual = nullptr;
+            hasBadChars = false;
+            break;
+        default:
+            if (!pEqual) {  // in key outside ASCII → bad chars
+                if (c < ' ' || c >= 127)
+                    hasBadChars = true;
+            }
+        }
+    }
+brk1:
+    processPart(end);
+}
+
+
+template <class Ch>
+bool loc::Fmt<Ch>::Kv::isKey(std::string_view x) const noexcept
+{
+    return (x.length() == key.length()
+            && std::equal(x.begin(), x.end(), key.begin()));
+}
+
+
+template <class Ch> template <class Ch2>
+size_t loc::Fmt<Ch>::dumbReplace(
+        const Zsubst& sub, size_t pos, std::basic_string_view<Ch2> byWhat)
+{
+    auto delta = static_cast<ptrdiff_t>(byWhat.length()) - static_cast<ptrdiff_t>(sub.length);
+    if (delta < 0) {
+        d.erase(pos, -delta);
+    } else if (delta > 0) {
+        d.insert(pos, delta, 0);
+    }
+    std::copy(byWhat.begin(), byWhat.end(), d.data() + pos);
+    return sub.advance + byWhat.length();
 }

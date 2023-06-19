@@ -295,3 +295,52 @@ TEST (FmtCtor, NumParse)
     EXPECT_EQ(7u, s1.advance);
     EXPECT_EQ(loc::Zsubst::NO_LINK, s1.lnkNext);
 }
+
+
+///// Simple numbers ///////////////////////////////////////////////////////////
+
+
+TEST (SimpleNum, BasicShorter)
+{
+    loc::Fmt fmt("alpha {1} bravo");
+    fmt(7);
+    EXPECT_EQ("alpha 7 bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleNum, BasicEqual)
+{
+    loc::Fmt fmt("alpha {1} bravo");
+    fmt(345);
+    EXPECT_EQ("alpha 345 bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleNum, BasicLonger)
+{
+    loc::Fmt fmt("alpha {1} bravo");
+    fmt(-24680);
+    EXPECT_EQ("alpha -24680 bravo", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleNum, Identical)
+{
+    loc::Fmt fmt("alpha {1} bravo {1}{1} charlie");
+    fmt(-6);
+    EXPECT_EQ("alpha -6 bravo -6-6 charlie", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
+
+
+TEST (SimpleNum, TwoDifferent)
+{
+    loc::Fmt fmt("{2}alpha {1} bravo {2}{2} charlie{1}");
+    fmt(-7);
+    fmt(438);
+    EXPECT_EQ("438alpha -7 bravo 438438 charlie-7", fmt.str());
+    EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
+}
