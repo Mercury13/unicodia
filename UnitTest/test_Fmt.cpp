@@ -81,7 +81,7 @@ TEST (FmtCtor, DeductionGuideTmpString)
     std::string s{"alpha bravo"};
     loc::Fmt fmt(std::move(s));
 
-    EXPECT_TRUE(s.empty());
+    EXPECT_TRUE(s.empty());     // OK, check that it was moved
     EXPECT_EQ("alpha bravo", fmt.str());
     EXPECT_EQ(0u, fmt.nAllSubsts());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
@@ -96,7 +96,7 @@ TEST (FmtCtor, LDeductionGuideTmpString)
     std::string s{"alpha bravo"};
     loc::FmtL fmt(std::move(s));
 
-    EXPECT_TRUE(s.empty());
+    EXPECT_TRUE(s.empty());     // OK, check that it was moved
     EXPECT_EQ("alpha bravo", fmt.str());
     EXPECT_EQ(0u, fmt.nAllSubsts());
     EXPECT_EQ(loc::Zsubst::NO_LINK, fmt.iFirstSubst());
