@@ -1025,12 +1025,15 @@ namespace uc {
             if constexpr (std::is_same_v<void, Result>) {
                 body(role, text);
                 return Action::CONTINUE;
-            } else {
+            } else if constexpr (std::is_nothrow_convertible_v<Result, Action>) {
                 return body(role, text);
+            } else {
+                static_assert(always_false_v<Result>, "Body should return void or Action");
             }
         }
     private:
         const Body& body;
+        template<class> inline static constexpr bool always_false_v = false;
     };
 
     inline Action stopIf(bool x) noexcept { return static_cast<Action>(x); }

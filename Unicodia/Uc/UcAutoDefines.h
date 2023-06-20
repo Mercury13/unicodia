@@ -499,10 +499,13 @@ namespace uc {
             /// @warning  This s_v is NOT null-terminated!
             const std::u8string_view tech() const;
 
-            /// @return  the very text we called STOP on
+            /// @return  [+] the very text we called STOP on
+            ///          [0] we traversed everything and did not stop
             std::u8string_view traverseAll(const TextSink& sink) const;
             template <class Body> inline std::u8string_view traverseAllT(const Body& body) const;
 
+            /// @return  [+] the 1st text if that role
+            ///          [0] no text of that role
             std::u8string_view getText(TextRole role) const;
         } name;
         EcCategory ecCategory;          // +1 = 8
