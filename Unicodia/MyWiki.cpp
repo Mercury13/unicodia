@@ -1120,17 +1120,82 @@ namespace {
         }
     }
 
-    void appendSingleCpHtml(QString& text, const uc::Cp& cp)
+    void appendDumbSingleCpHtml(QString& text, char32_t v)
     {
         char buf[30];
-        snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
+        snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(v));
         mywiki::appendCopyable(text, buf);
+    }
+
+    void appendSingleCpHtml(QString& text, const uc::Cp& cp)
+    {
+        appendDumbSingleCpHtml(text, cp.subj);
         cp.name.traverseAllT([&text](uc::TextRole role, std::u8string_view s) {
             if (role == uc::TextRole::HTML) {
                 text += ' ';
                 mywiki::appendCopyable(text, str::toQ(s));
             }
         });
+    }
+
+    struct HtInfo {
+        std::u8string_view mnemonic {};
+    };
+
+    void appendMultiCpHtml(QString& text, std::u32string_view v)
+    {
+        switch (v.length()) {
+        case 0: // No characters — do nothing
+            return;
+        case 1: // One character — treat as one character
+            if (auto cp = uc::cpsByCode[v[0]]) {
+                appendSingleCpHtml(text, *cp);
+            } else {
+                appendDumbSingleCpHtml(text, v[0]);
+            }
+            return;
+        default:;
+        }
+
+        // Go!
+        char buf[uc::LONGEST_LIB * 30];
+        char* p = buf;
+        char* end = p + std::size(buf);
+        bool haveMnemonic = false;
+        HtInfo htData[uc::LONGEST_LIB];
+
+        // Find simple data
+        for (size_t i = 0; i < v.length(); ++i) {
+            int c = v[i];
+            auto nWritten = snprintf(p, end - p, "&#%d;", c);
+            p += nWritten;
+            if (auto cp = uc::cpsByCode[c]) {
+                auto mnemonic = cp->name.getText(uc::TextRole::HTML);
+                if (!mnemonic.empty()) {
+                    haveMnemonic = true;
+                    htData[i].mnemonic = mnemonic;
+                }
+            }
+        }
+        mywiki::appendCopyable(text, str::toQ(std::string_view{buf, p}));
+
+        // If have any mnemonic → append it!
+        if (haveMnemonic) {
+            text += ' ';
+            p = buf;
+            for (size_t i = 0; i < v.length(); ++i) {
+                auto& q = htData[i];
+                auto remder = end - p;
+                if (!q.mnemonic.empty()) {  // Have mnemonic
+                    auto nCopy = std::min<ptrdiff_t>(remder, q.mnemonic.length());
+                    p = std::copy_n(q.mnemonic.data(), nCopy, p);
+                } else {    // Copy normal HTML
+                    auto nWritten = snprintf(p, end - p, "&#%d;", static_cast<int>(v[i]));
+                    p += nWritten;
+                }
+            }
+            mywiki::appendCopyable(text, str::toQ(std::string_view{buf, p}));
+        }
     }
 
 }   // anon namespace
@@ -1578,6 +1643,11 @@ QString mywiki::buildHtml(const uc::LibNode& node)
 
     text += "<p>";
     str::QSep sp(text, "<br>");
+
+    if (!node.value.empty()) {
+        appendNonBullet(text, "Prop.Bullet.Html");
+        appendMultiCpHtml(text, node.value);
+    }
 
     appendUtf(text, Want32::YES, sp, node.value);
 
