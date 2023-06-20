@@ -1189,7 +1189,7 @@ namespace {
                 if (!q.mnemonic.empty()) {  // Have mnemonic
                     auto nCopy = std::min<ptrdiff_t>(remder, q.mnemonic.length());
                     p = std::copy_n(q.mnemonic.data(), nCopy, p);
-                } else {    // Copy normal HTML
+                } else {    // Copy HTML decimal
                     auto nWritten = snprintf(p, end - p, "&#%d;", static_cast<int>(v[i]));
                     p += nWritten;
                 }
