@@ -1911,15 +1911,12 @@ brk:
 
 std::u8string_view uc::Cp::Name::getText(TextRole role) const
 {
-    std::u8string_view r;
-    traverseAllT([&r, role](TextRole aRole, std::u8string_view aText) {
+    return traverseAllT([role](TextRole aRole, std::u8string_view aText) {
         if (role == aRole) {
-            r = aText;
             return Action::STOP;
         }
         return Action::CONTINUE;
     });
-    return r;
 }
 
 
