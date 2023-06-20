@@ -1120,12 +1120,24 @@ namespace {
         }
     }
 
+    void appendSingleCpHtml(QString& text, const uc::Cp& cp)
+    {
+        char buf[30];
+        snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
+        mywiki::appendCopyable(text, buf);
+        cp.name.traverseAllT([&text](uc::TextRole role, std::u8string_view s) {
+            if (role == uc::TextRole::HTML) {
+                text += ' ';
+                mywiki::appendCopyable(text, str::toQ(s));
+            }
+        });
+    }
+
 }   // anon namespace
 
 
 QString mywiki::buildHtml(const uc::Cp& cp)
 {
-    char buf[30];
     QString text;
 
     sw::Info sw(cp);
@@ -1352,14 +1364,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         // HTML
         sp.sep();
         appendNonBullet(text, "Prop.Bullet.Html");
-        snprintf(buf, std::size(buf), "&#%d;", static_cast<int>(cp.subj));
-        appendCopyable(text, buf);
-        cp.name.traverseAllT([&text](uc::TextRole role, std::u8string_view s) {
-            if (role == uc::TextRole::HTML) {
-                text += ' ';
-                appendCopyable(text, str::toQ(s));
-            }
-        });
+        appendSingleCpHtml(text, cp);
 
         appendUtf(text, Want32::NO, sp, cp.subj);
 
