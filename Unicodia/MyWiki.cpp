@@ -1164,7 +1164,7 @@ namespace {
         bool haveMnemonic = false;
         HtInfo htData[uc::LONGEST_LIB];
 
-        // Find simple data
+        // Write simple data, check for mnemonics
         for (size_t i = 0; i < v.length(); ++i) {
             int c = v[i];
             auto nWritten = snprintf(p, end - p, "&#%d;", c);
