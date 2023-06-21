@@ -41,7 +41,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math
       { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …1
-    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 110_pc },                                 // Music
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, "padding-bottom:10%;"_sty, 120_pc },      // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
     { FNAME_NOTOMUSIC },                                                        // Music normal
