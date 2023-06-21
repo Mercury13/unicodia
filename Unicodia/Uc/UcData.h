@@ -299,6 +299,7 @@ namespace uc {
         HATRAN,
         HEBREW,
         HENTAIGANA,
+          Z_HEN_1,
         JAVANESE,
         KAITHI,
           Z_KAI_1,

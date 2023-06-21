@@ -989,22 +989,22 @@ constinit const uc::Block uc::blocks[] {
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
             { EcScript::Kana, 'B' },
-            EcScript::Kana, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::HENTAIGANA, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana supp OK
     { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
             "Kana Supplement",
             { EcScript::Kana, '@' },
-            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hent, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Kana ex A OK
     { 0x1B100, 0x1B12F, { 0x1B10E, EcContinent::CJK },
             "Kana Extended-A",
             { EcScript::Kana, 'A' },
-            EcScript::Hent, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hent, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Small kana ex OK
     { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension",
             { EcScript::Kana, 'Z' },
-            EcScript::Kana, EcFont::KOREAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Nushu OK
     { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
             "Nushu",

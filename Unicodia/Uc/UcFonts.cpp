@@ -8,10 +8,11 @@ constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf", uc::Fafg::RAW_
 constexpr std::string_view FNAME_NOTOSYM1 = "NotoSansSymbols-Regular.ttf";
 constexpr uc::Family FNAME_NOTOSYM2 { "NotoSansSymbols2-Regular.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_NOTOMUSIC = "NotoMusic-Regular.ttf";
+constexpr uc::Family FNAME_MUSIC_FIXUP { "UnicodiaMusicFixup.ttf", uc::Fafg::RAW_FONT };
 constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
-constexpr std::string_view FNAME_BABEL = "BabelStoneHan.ttf";
+constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_KOREAN = { "NotoSansKR-Regular.otf", uc::Fafg::RAW_FONT };
 
 constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
@@ -41,7 +42,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math
       { FNAME_NOTOMATH, Ffg::DESC_BIGGER },                                     // …1
-    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, "padding-bottom:10%;"_sty, 120_pc },      // Music
+    { FNAME_MUSIC_FIXUP, Ffg::FALL_TO_NEXT, 110_pc },                           // Music
       { FNAME_NOTOMUSIC, 110_pc },                                              // …1
     { FNAME_NOTOMUSIC, 150_pc },                                                // Music bigger
     { FNAME_NOTOMUSIC },                                                        // Music normal
@@ -143,7 +144,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansHanunoo-Regular.ttf" },                                          // Hanunoo
     { "NotoSansHatran-Regular.ttf" },                                           // Hatran
     { "NotoSerifHebrew-Regular.ttf" },                                          // Hebrew
-    { "HanaMinA.ttf", Ffg::DESC_STD, 110_pc },                                  // Hentaigana
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // Hentaigana
+      { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf", Ffg::FALL_TO_NEXT },                        // Kaithi
       { FNAME_FUNKY },                                                          // …1
