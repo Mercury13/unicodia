@@ -57,7 +57,7 @@ What was done by authors of Unicodia:
   - Enlarged 1BAB new virama for ligatures, moved to the bottom  
   - Made KTA ligature in E000 private-use
   - Redrew 1BBF
-  - Rehinted with FontForge
+  - Rehinted with FontForge (except dotted circle)
 * Tagalog:
   - Enlarged virama
   - Rehinted with FontForge (except dotted circle)
