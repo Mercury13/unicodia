@@ -8242,6 +8242,18 @@
     <text id="MultiStorey">
      <orig>Multi-storey equations</orig>
     </text>
+    <text id="Plus">
+     <orig>Plus</orig>
+    </text>
+    <text id="Minus">
+     <orig>Minus</orig>
+    </text>
+    <text id="Mul">
+     <orig>Multiplication</orig>
+    </text>
+    <text id="Div">
+     <orig>Division</orig>
+    </text>
    </group>
   </group>
  </file>

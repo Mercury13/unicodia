@@ -11863,6 +11863,22 @@
      <orig>Multi-storey equations</orig>
      <transl>Многоэтажные формулы</transl>
     </text>
+    <text id="Plus">
+     <orig>Plus</orig>
+     <transl>Плюс</transl>
+    </text>
+    <text id="Minus">
+     <orig>Minus</orig>
+     <transl>Минус</transl>
+    </text>
+    <text id="Mul">
+     <orig>Multiplication</orig>
+     <transl>Умножение</transl>
+    </text>
+    <text id="Div">
+     <orig>Division</orig>
+     <transl>Деление</transl>
+    </text>
    </group>
   </group>
  </file>

@@ -11864,6 +11864,22 @@
      <orig>Multi-storey equations</orig>
      <transl>Багатоповерхові формули</transl>
     </text>
+    <text id="Plus">
+     <orig>Plus</orig>
+     <transl>Плюс</transl>
+    </text>
+    <text id="Minus">
+     <orig>Minus</orig>
+     <transl>Мінус</transl>
+    </text>
+    <text id="Mul">
+     <orig>Multiplication</orig>
+     <transl>Множення</transl>
+    </text>
+    <text id="Div">
+     <orig>Division</orig>
+     <transl>Ділення</transl>
+    </text>
    </group>
   </group>
  </file>
