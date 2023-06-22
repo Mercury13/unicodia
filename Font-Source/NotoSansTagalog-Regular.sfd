@@ -3,31 +3,32 @@ FontName: NotoSansTagalog-Regular
 FullName: Noto Sans Tagalog Regular
 FamilyName: Noto Sans Tagalog
 Weight: Book
-Copyright: Copyright 2017 Google Inc. All Rights Reserved.
-Version: 2.000
+Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tagalog)
+Version: 2.002
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020000
+sfntRevision: 0x00020083
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 26748]
+HasVMetrics: 1
+XUID: [1021 59 1751208496 29700]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
-OS2_WeightWidthSlopeOnly: 1
-OS2_UseTypoMetrics: 0
+OS2_WeightWidthSlopeOnly: 0
+OS2_UseTypoMetrics: 1
 CreationTime: 1493842294
-ModificationTime: 1639128742
+ModificationTime: 1687397484
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
 LineGap: 0
-VLineGap: 0
+VLineGap: 1000
 Panose: 2 11 5 2 4 5 4 2 2 4
 OS2TypoAscent: 1069
 OS2TypoAOffset: 0
@@ -57,9 +58,13 @@ OS2XHeight: 536
 OS2Vendor: 'GOOG'
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 80000003.00002000.00100000.00000000
-Lookup: 260 0 0 "'mark' Mark Positioning lookup 0" { "'mark' Mark Positioning lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' Mark Positioning lookup 1" { "'mark' Mark Positioning lookup 1 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning in Latin lookup 0" { "'mark' Mark Positioning in Latin lookup 0 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 262 16 0 "'mkmk' Mark to Mark in Latin lookup 1" { "'mkmk' Mark to Mark in Latin lookup 1 subtable"  } ['mkmk' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
+Lookup: 262 65552 0 "'mkmk' Mark to Mark in Latin lookup 2" { "'mkmk' Mark to Mark in Latin lookup 2 subtable"  } ['mkmk' ('DFLT' <'dflt' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
+MarkAttachSets: 2
+"MarkSet-0" 7 uni1712
+"MarkSet-1" 15 uni1713 uni1714
 DEI: 91125
 TtTable: prep
 PUSHW_1
@@ -730,11 +735,11 @@ EndShort
 ShortTable: maxp 16
   1
   0
-  31
+  35
   128
   16
-  0
-  0
+  66
+  2
   2
   1
   2
@@ -742,10 +747,10 @@ ShortTable: maxp 16
   0
   256
   0
-  0
-  0
+  2
+  1
 EndShort
-LangName: 1033 "" "" "" "2.000;GOOG;NotoSansTagalog-Regular" "" "Version 2.000" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This Font Software is distributed on an +ACIA-AS IS+ACIA BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software." "http://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "2.002;GOOG;NotoSansTagalog-Regular" "" "Version 2.002" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeBmp
 Compacted: 1
@@ -757,12 +762,14 @@ FitToEm: 0
 WinInfo: 0 33 14
 BeginPrivate: 0
 EndPrivate
-AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning lookup 1 subtable"
-BeginChars: 65539 35
+AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Latin lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Latin lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mkmk' Mark to Mark in Latin lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mkmk' Mark to Mark in Latin lookup 2 subtable"
+BeginChars: 65538 35
 
 StartChar: .notdef
 Encoding: 65536 -1 0
 Width: 600
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 51<145 454> 663 51<145 454>
 VStem: 94 51<51 663> 454 51<51 663>
@@ -827,9 +834,10 @@ EndSplineSet
 EndChar
 
 StartChar: NULL
-Encoding: 0 -1 1
-AltUni2: 000000.ffffffff.0
+Encoding: 0 0 1
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -837,6 +845,8 @@ EndChar
 StartChar: CR
 Encoding: 13 13 2
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -844,6 +854,8 @@ EndChar
 StartChar: space
 Encoding: 32 32 3
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -851,6 +863,8 @@ EndChar
 StartChar: uni00A0
 Encoding: 160 160 4
 Width: 260
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -858,7 +872,8 @@ EndChar
 StartChar: uni1700
 Encoding: 5888 5888 5
 Width: 1014
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 68<285.209 386.836> 375 68<84 222> 518 68<84 230 313 453> 566 68<801.638 923.5>
 VStem: 190 77<84.4268 321.277> 236 77<443.594 518>
@@ -1059,7 +1074,8 @@ EndChar
 StartChar: uni1701
 Encoding: 5889 5889 6
 Width: 1011
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 78 68<69.917 259.784 729.781 886.67> 425 68<168.03 432.695> 511 68<589.303 839.278>
 TtInstrs:
@@ -1366,7 +1382,8 @@ EndChar
 StartChar: uni1702
 Encoding: 5890 5890 7
 Width: 535
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 HStem: 0 68<94.6917 340.964> 311 68<198 338.873> 566 68<159.698 361.68>
 VStem: 391 77<426.353 537.246> 411 76<133.403 268.472>
@@ -1505,6 +1522,7 @@ EndChar
 StartChar: uni1703
 Encoding: 5891 5891 8
 Width: 984
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 21 68<161.588 353.872> 181 68<644.389 856.443> 377 68<161.588 352.427> 537 68<644.389 856.443>
@@ -1665,6 +1683,7 @@ EndChar
 StartChar: uni1704
 Encoding: 5892 5892 9
 Width: 837
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<94.6917 340.964 729.335 811> 311 68<198 338.873> 537 68<465.438 572.92> 566 68<159.698 361.8>
@@ -1892,6 +1911,7 @@ EndChar
 StartChar: uni1705
 Encoding: 5893 5893 10
 Width: 1011
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<74 150> 57 64<743.141 788.41> 64 68<179.811 398.995> 85 68<150.799 326.188> 257 68<521.602 608.711> 380 68<732.372 854.848> 398 68<130.023 232.245> 443 68<250.293 405.835>
@@ -2171,6 +2191,7 @@ EndChar
 StartChar: uni1706
 Encoding: 5894 5894 11
 Width: 975
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<142 229.5> 273 68<137.147 241.135> 563 68<646.466 901.903>
@@ -2303,6 +2324,7 @@ EndChar
 StartChar: uni1707
 Encoding: 5895 5895 12
 Width: 1048
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 80 68<209.422 453.109> 164 68<607.495 858.278> 425 68<247.173 451.695> 511 68<608.303 858.278>
@@ -2778,6 +2800,7 @@ EndChar
 StartChar: uni1708
 Encoding: 5896 5896 13
 Width: 850
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 21G<96.5 186 664 753.5>
@@ -3030,6 +3053,7 @@ EndChar
 StartChar: uni1709
 Encoding: 5897 5897 14
 Width: 1070
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<287.108 410.412> 374 68<58 223.824> 566 68<846.102 968.214>
@@ -3350,6 +3374,7 @@ EndChar
 StartChar: uni170A
 Encoding: 5898 5898 15
 Width: 851
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<178.473 334.542 494.304 631.784> 566 68<366.043 561.217>
@@ -3478,6 +3503,7 @@ EndChar
 StartChar: uni170B
 Encoding: 5899 5899 16
 Width: 1030
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<292.559 387.222> 339 68<291.001 540.826> 434 68<58 216.635> 566 68<800.329 923.37>
@@ -3785,6 +3811,7 @@ EndChar
 StartChar: uni170C
 Encoding: 5900 5900 17
 Width: 1029
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<285.401 408.771> 359 68<820.377 948.947> 374 68<58 223.824> 566 68<841.82 955.264>
@@ -4154,6 +4181,7 @@ EndChar
 StartChar: uni170E
 Encoding: 5902 5902 18
 Width: 913
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 423 68<140.083 330.444> 568 68<572.689 800.443>
@@ -4310,6 +4338,7 @@ EndChar
 StartChar: uni170F
 Encoding: 5903 5903 19
 Width: 761
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 0 68<293.154 431.351> 374 68<58 223.824> 606 68<431.106 591.977>
@@ -4575,6 +4604,7 @@ EndChar
 StartChar: uni1710
 Encoding: 5904 5904 20
 Width: 922
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: -10 68<512 706.955> 0 21G<172.929 276.5> 292 68<585 725.229> 566 68<19 170.134 596.728 747.699>
@@ -4769,6 +4799,7 @@ EndChar
 StartChar: uni1711
 Encoding: 5905 5905 21
 Width: 1049
+VWidth: 0
 GlyphClass: 2
 Flags: W
 HStem: 236 68<188.03 452.695> 322 68<609.303 859.278>
@@ -5013,6 +5044,7 @@ EndChar
 StartChar: uni1712
 Encoding: 5906 5906 22
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: 703 112<-204.53 -132.985>
@@ -5045,6 +5077,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 27 693 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -171 693 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" -171 693 mark 0
 LayerCount: 2
 Fore
@@ -5064,6 +5098,7 @@ EndChar
 StartChar: uni1713
 Encoding: 5907 5907 23
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: -138 112<-134.53 -62.9855>
@@ -5096,6 +5131,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 97 0 basemark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -98 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -98 0 mark 0
 LayerCount: 2
 Fore
@@ -5115,6 +5152,7 @@ EndChar
 StartChar: uni1714
 Encoding: 5908 5908 24
 Width: 0
+VWidth: 0
 GlyphClass: 4
 Flags: W
 HStem: -153 50<-387 -288 -238 -136>
@@ -5197,6 +5235,7 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" -264 0 mark 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -264 0 mark 0
 LayerCount: 2
 Fore
@@ -5220,7 +5259,8 @@ EndChar
 StartChar: uni1735
 Encoding: 5941 5941 25
 Width: 329
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 VStem: 18 274
 TtInstrs:
@@ -5302,7 +5342,8 @@ EndChar
 StartChar: uni1736
 Encoding: 5942 5942 26
 Width: 488
-GlyphClass: 2
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 Fore
@@ -5323,6 +5364,8 @@ EndChar
 StartChar: uni200B
 Encoding: 8203 8203 27
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -5330,6 +5373,8 @@ EndChar
 StartChar: uni200C
 Encoding: 8204 8204 28
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -5337,6 +5382,8 @@ EndChar
 StartChar: uni200D
 Encoding: 8205 8205 29
 Width: 0
+VWidth: 0
+GlyphClass: 1
 Flags: W
 LayerCount: 2
 EndChar
@@ -5344,383 +5391,9 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 30
 Width: 594
+VWidth: 0
 GlyphClass: 2
-Flags: W
-HStem: 42 53<271.311 322.689> 60 52<186.311 238.677 355.335 407.701> 107 53<114.311 166.677 428.323 479.701> 180 53<65.323 117.689 476.311 528.677> 265 52<48.2373 100.771 494.237 545.78> 349 53<65.335 117.689 476.323 528.677> 422 53<114.406 166.677 428.323 479.701> 470 53<186.311 238.677 355.335 407.701> 487 53<271.311 322.689>
-VStem: 48 53<265.311 316.689> 65 53<180.311 232.677 349.422 401.689> 114 53<107.311 159.677 422.311 474.665> 186 53<60.323 111.701 470.311 522.677> 271 52<42.2373 94.7715 487.237 539.771> 355 53<60.3906 111.578 470.406 522.578> 428 52<107.311 159.677 422.311 474.677> 476 53<180.311 232.677 349.323 401.689> 494 52<265.311 316.689>
-TtInstrs:
-SVTCA[y-axis]
-PUSHB_1
- 114
-MDAP[rnd]
-PUSHB_1
- 106
-SHP[rp1]
-PUSHB_1
- 118
-MDRP[min,rnd,black]
-PUSHB_1
- 110
-SHP[rp2]
-PUSHB_1
- 118
-SRP0
-PUSHB_1
- 126
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 122
-MDRP[min,rnd,black]
-PUSHB_4
- 98
- 118
- 114
- 8
-CALL
-PUSHB_1
- 90
-SHP[rp1]
-PUSHB_1
- 102
-MDRP[min,rnd,black]
-PUSHB_1
- 94
-SHP[rp2]
-PUSHB_1
- 82
-MDAP[rnd]
-PUSHB_1
- 74
-SHP[rp1]
-PUSHB_1
- 86
-MDRP[min,rnd,black]
-PUSHB_1
- 78
-SHP[rp2]
-PUSHB_1
- 66
-MDAP[rnd]
-PUSHB_1
- 58
-SHP[rp1]
-PUSHB_1
- 70
-MDRP[min,rnd,black]
-PUSHB_1
- 62
-SHP[rp2]
-PUSHB_1
- 50
-MDAP[rnd]
-PUSHB_1
- 42
-SHP[rp1]
-PUSHB_1
- 54
-MDRP[min,rnd,black]
-PUSHB_1
- 46
-SHP[rp2]
-PUSHB_1
- 18
-MDAP[rnd]
-PUSHB_1
- 10
-SHP[rp1]
-PUSHB_1
- 22
-MDRP[min,rnd,black]
-PUSHB_1
- 14
-SHP[rp2]
-PUSHB_4
- 38
- 22
- 18
- 8
-CALL
-PUSHB_1
- 30
-SHP[rp1]
-PUSHB_1
- 34
-MDRP[min,rnd,black]
-PUSHB_1
- 26
-SHP[rp2]
-PUSHB_1
- 18
-SRP0
-PUSHB_1
- 2
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 6
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 128
-MDAP[rnd]
-PUSHB_1
- 68
-MDRP[rp0,rnd,white]
-PUSHB_1
- 64
-MDRP[min,rnd,black]
-PUSHB_1
- 64
-SRP0
-PUSHB_2
- 100
- 1
-CALL
-PUSHB_1
- 36
-SHP[rp2]
-PUSHB_1
- 96
-MDRP[min,rnd,black]
-PUSHB_1
- 32
-SHP[rp2]
-PUSHB_4
- 80
- 96
- 100
- 8
-CALL
-PUSHB_1
- 84
-MDRP[min,rnd,black]
-PUSHB_1
- 84
-MDAP[rnd]
-PUSHB_1
- 52
-SHP[rp1]
-PUSHB_1
- 80
-MDRP[min,rnd,black]
-PUSHB_1
- 48
-SHP[rp2]
-PUSHB_1
- 96
-SRP0
-PUSHB_2
- 116
- 1
-CALL
-PUSHB_1
- 20
-SHP[rp2]
-PUSHB_1
- 112
-MDRP[min,rnd,black]
-PUSHB_1
- 16
-SHP[rp2]
-PUSHB_1
- 112
-SRP0
-PUSHB_2
- 124
- 1
-CALL
-PUSHB_1
- 4
-SHP[rp2]
-PUSHB_1
- 120
-MDRP[min,rnd,black]
-PUSHB_1
- 0
-SHP[rp2]
-PUSHB_1
- 120
-SRP0
-PUSHB_2
- 108
- 1
-CALL
-PUSHB_1
- 12
-SHP[rp2]
-PUSHB_1
- 104
-MDRP[min,rnd,black]
-PUSHB_1
- 8
-SHP[rp2]
-PUSHB_1
- 104
-SRP0
-PUSHB_2
- 76
- 1
-CALL
-PUSHB_1
- 44
-SHP[rp2]
-PUSHB_1
- 72
-MDRP[min,rnd,black]
-PUSHB_1
- 40
-SHP[rp2]
-PUSHB_4
- 88
- 72
- 76
- 8
-CALL
-PUSHB_1
- 92
-MDRP[min,rnd,black]
-PUSHB_1
- 92
-MDAP[rnd]
-PUSHB_1
- 28
-SHP[rp1]
-PUSHB_1
- 88
-MDRP[min,rnd,black]
-PUSHB_1
- 24
-SHP[rp2]
-PUSHB_1
- 72
-SRP0
-PUSHB_1
- 56
-DUP
-MDRP[rp0,rnd,white]
-SRP1
-PUSHB_1
- 60
-MDRP[min,rnd,black]
-PUSHB_1
- 60
-MDAP[rnd]
-PUSHB_1
- 56
-MDRP[min,rnd,black]
-PUSHB_2
- 129
- 1
-CALL
-PUSHB_2
- 64
- 68
-SRP1
-SRP2
-PUSHB_4
- 50
- 54
- 82
- 86
-DEPTH
-SLOOP
-IP
-PUSHB_2
- 80
- 84
-SRP1
-SRP2
-PUSHB_2
- 66
- 70
-IP
-IP
-PUSHB_2
- 76
- 92
-SRP1
-SRP2
-PUSHB_4
- 26
- 30
- 90
- 94
-DEPTH
-SLOOP
-IP
-PUSHB_2
- 72
- 60
-SRP1
-SRP2
-PUSHB_6
- 42
- 46
- 58
- 62
- 74
- 78
-DEPTH
-SLOOP
-IP
-SVTCA[y-axis]
-PUSHB_2
- 126
- 122
-SRP1
-SRP2
-PUSHB_4
- 104
- 108
- 112
- 116
-DEPTH
-SLOOP
-IP
-PUSHB_2
- 118
- 114
-SRP1
-SRP2
-PUSHB_2
- 120
- 124
-IP
-IP
-PUSHB_2
- 18
- 34
-SRP1
-SRP2
-PUSHB_4
- 24
- 28
- 32
- 36
-DEPTH
-SLOOP
-IP
-PUSHB_2
- 22
- 2
-SRP1
-SRP2
-PUSHB_6
- 0
- 4
- 8
- 12
- 16
- 20
-DEPTH
-SLOOP
-IP
-IUP[y]
-IUP[x]
-EndTTInstrs
+Flags: MWO
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 295 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 300 590 basechar 0
 LayerCount: 2
@@ -5809,65 +5482,44 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: uni170D
-Encoding: 5901 5901 31
-Width: 1048
-Flags: WO
-HStem: 19.792 291.757 80 68<209.422 453.109> 164 68<607.495 858.278> 425 68<247.173 451.695> 511 68<608.303 858.278>
-VStem: 94 77<185.643 347.172> 519.522 140.251
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 527 693 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 552 0 basechar 0
-LayerCount: 2
-Fore
-Refer: 32 -1 N 1 0 0 1 0 0 2
-Refer: 12 5895 N 1 0 0 1 0 0 2
-EndChar
-
-StartChar: DBar
-Encoding: 65538 -1 32
-Width: 1048
-Flags: W
-HStem: 19.792 291.757
-VStem: 519.522 140.251
-LayerCount: 2
-Fore
-SplineSet
-516.307617188 306.047851562 m 5,0,-1
- 585 324 l 5,1,-1
- 661 32 l 1,2,-1
- 592.306640625 14.046875 l 1,3,-1
- 516.307617188 306.047851562 l 5,0,-1
-EndSplineSet
-EndChar
-
 StartChar: uni1715
-Encoding: 5909 5909 33
+Encoding: 5909 5909 31
 Width: 196
+VWidth: 1362
+GlyphClass: 1
 Flags: W
-HStem: -136.252 70<-136.22 -40.1234>
-VStem: 70.7852 69.9961<46.548 157.824>
+HStem: -136 70<-320 -40.0535>
+VStem: 71 70<46.4336 416>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
- 6
+ 8
 MDAP[rnd]
 PUSHB_1
- 5
+ 9
 MDRP[min,rnd,black]
 SVTCA[x-axis]
 PUSHB_1
  15
 MDAP[rnd]
 PUSHB_1
- 0
+ 14
 MDRP[rp0,rnd,white]
 PUSHB_1
- 12
+ 2
 MDRP[min,rnd,black]
 PUSHB_2
  16
  1
 CALL
+PUSHB_2
+ 2
+ 14
+SRP1
+SRP2
+PUSHB_1
+ 13
+IP
 SVTCA[y-axis]
 IUP[y]
 IUP[x]
@@ -5875,126 +5527,165 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
-70.78515625 157.056640625 m 6,0,1
- 72.0712890625 37.4072265625 72.0712890625 37.4072265625 -5.58984375 -23.357421875 c 4,2,3
- -60.4140625 -66.251953125 -60.4140625 -66.251953125 -136.219726562 -66.251953125 c 6,4,-1
- -319.807617188 -66.251953125 l 5,5,-1
- -319.807617188 -136.251953125 l 5,6,-1
- -136.219726562 -136.251953125 l 6,7,8
- -36.298828125 -136.251953125 -36.298828125 -136.251953125 37.4921875 -78.5166015625 c 4,9,10
- 86.7431640625 -39.9814453125 86.7431640625 -39.9814453125 114.177734375 20.2685546875 c 132,-1,11
- 141.612304688 80.517578125 141.612304688 80.517578125 140.78125 157.82421875 c 6,12,-1
- 138 416.516601562 l 5,13,-1
- 68.00390625 415.764648438 l 5,14,-1
- 70.78515625 157.056640625 l 6,0,1
+68 416 m 1,0,-1
+ 138 417 l 1,1,-1
+ 141 158 l 2,2,3
+ 142 81 142 81 114.5 20.5 c 128,-1,4
+ 87 -40 87 -40 37 -79 c 0,5,6
+ -36 -136 -36 -136 -136 -136 c 2,7,-1
+ -320 -136 l 1,8,-1
+ -320 -66 l 1,9,-1
+ -136 -66 l 2,10,11
+ -60 -66 -60 -66 -6 -23 c 0,12,13
+ 72 37 72 37 71 157 c 2,14,-1
+ 68 416 l 1,0,-1
 EndSplineSet
 EndChar
 
+StartChar: uni170D
+Encoding: 5901 5901 32
+Width: 1048
+VWidth: 1362
+GlyphClass: 2
+Flags: HW
+HStem: 14 310 80 68<209.422 453.109> 164 68<607.495 858.278> 425 68<247.173 451.695> 511 68<608.303 858.278>
+VStem: 94 77<185.643 347.172> 516 145
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 552 0 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 527 693 basechar 0
+LayerCount: 2
+Fore
+Refer: 34 -1 N 1 0 0 1 0 0 3
+Refer: 12 5895 N 1 0 0 1 0 0 2
+EndChar
+
 StartChar: uni171F
-Encoding: 5919 5919 34
+Encoding: 5919 5919 33
 Width: 666
+VWidth: 1362
+GlyphClass: 2
 Flags: W
-HStem: 6.4873 70<335.966 481.145> 104.36 70<127.357 204.802> 423.377 69.4814<448.729 500.412> 639.835 70.0244<424.953 531.439>
-VStem: 524.063 70<329.603 400.369> 550.059 70.084<522.14 618.936>
+HStem: 6 70<338.552 479.216> 104 70<134.227 204.812> 239 69<397 449.356> 423 70<449 505.117> 640 70<424.841 528.312>
+VStem: 524 70<331.477 403.066> 550 70<521.133 621.98>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
- 82
+ 11
 MDAP[rnd]
+PUSHB_1
+ 18
+MDRP[min,rnd,black]
+PUSHB_1
+ 52
+MDAP[rnd]
+PUSHB_1
+ 60
+MDRP[min,rnd,black]
+PUSHB_1
+ 24
+MDAP[rnd]
+PUSHB_1
+ 25
+MDRP[min,rnd,black]
+PUSHB_1
+ 34
+MDAP[rnd]
+PUSHB_1
+ 35
+MDRP[min,rnd,black]
+PUSHB_1
+ 41
+MDAP[rnd]
+PUSHB_1
+ 71
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 78
+MDAP[rnd]
+PUSHB_1
+ 38
+MDRP[rp0,rnd,white]
 PUSHB_1
  75
 MDRP[min,rnd,black]
 PUSHB_1
- 28
-MDAP[rnd]
-PUSHB_1
- 78
-SHP[rp1]
-PUSHB_1
- 17
-MDRP[min,rnd,black]
-PUSHB_1
- 48
-MDAP[rnd]
-PUSHB_1
- 47
-MDRP[min,rnd,black]
-PUSHB_1
- 39
-MDAP[rnd]
-PUSHB_1
- 6
-MDRP[min,rnd,black]
-SVTCA[x-axis]
-PUSHB_1
- 98
-MDAP[rnd]
-PUSHB_1
- 43
-MDRP[rp0,rnd,white]
-PUSHB_1
- 0
-SHP[rp2]
-PUSHB_1
- 2
-MDRP[min,rnd,black]
-PUSHB_1
- 52
+ 30
 DUP
 MDRP[rp0,rnd,white]
 SRP1
 PUSHB_1
- 96
+ 2
 MDRP[min,rnd,black]
 PUSHB_2
- 99
+ 79
  1
 CALL
 PUSHB_1
  54
 SMD
 PUSHW_3
- 15593
- -5028
+ 15567
+ -5110
  21
 CALL
 SPVFS
 SFVTPV
 PUSHB_1
- 13
+ 63
 SRP0
 PUSHB_1
- 10
+ 67
 MDRP[grey]
 PUSHB_2
- 32
- 2
+ 48
+ 1
 MIRP[rp0,min,black]
 PUSHB_1
- 35
+ 44
 MDRP[grey]
-PUSHB_1
- 13
-SRP0
 PUSHB_4
- 12
- 13
- 10
+ 45
+ 48
+ 44
+ 19
+CALL
+PUSHB_4
+ 46
+ 48
+ 44
+ 19
+CALL
+PUSHB_4
+ 47
+ 48
+ 44
  19
 CALL
 PUSHB_1
- 32
+ 63
 SRP0
 PUSHB_4
- 33
- 32
- 35
+ 64
+ 63
+ 67
+ 19
+CALL
+PUSHB_4
+ 65
+ 63
+ 67
+ 19
+CALL
+PUSHB_4
+ 66
+ 63
+ 67
  19
 CALL
 PUSHB_3
- 12
- 13
- 10
+ 64
+ 63
+ 67
 DUP
 ROLL
 DUP
@@ -6005,21 +5696,42 @@ SFVTPV
 SRP1
 SRP2
 IP
+PUSHB_1
+ 65
+IP
+PUSHB_1
+ 66
+IP
 PUSHB_3
- 33
- 32
- 35
+ 47
+ 48
+ 44
 SRP1
 SRP2
 IP
+PUSHB_1
+ 45
+IP
+PUSHB_1
+ 46
+IP
 SVTCA[y-axis]
-PUSHB_6
+NPUSHB
  10
- 12
- 13
- 32
- 33
- 35
+ 44
+ 47
+ 48
+ 63
+ 64
+ 67
+ 45
+ 46
+ 65
+ 66
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
 MDAP[no-rnd]
 MDAP[no-rnd]
 MDAP[no-rnd]
@@ -6027,13 +5739,22 @@ MDAP[no-rnd]
 MDAP[no-rnd]
 MDAP[no-rnd]
 SVTCA[x-axis]
-PUSHB_6
+NPUSHB
  10
- 12
- 13
- 32
- 33
- 35
+ 44
+ 47
+ 48
+ 63
+ 64
+ 67
+ 45
+ 46
+ 65
+ 66
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
+MDAP[no-rnd]
 MDAP[no-rnd]
 MDAP[no-rnd]
 MDAP[no-rnd]
@@ -6045,107 +5766,213 @@ PUSHB_1
 SMD
 SVTCA[x-axis]
 PUSHB_2
- 96
- 43
+ 2
+ 38
 SRP1
 SRP2
-PUSHB_1
- 89
+PUSHB_2
+ 0
+ 6
+IP
 IP
 SVTCA[y-axis]
 PUSHB_2
- 75
- 82
+ 18
+ 11
 SRP1
 SRP2
 PUSHB_1
- 79
+ 14
 IP
 PUSHB_2
- 48
- 17
+ 60
+ 52
 SRP1
 SRP2
-PUSHB_5
- 22
- 23
- 61
- 90
- 96
-DEPTH
-SLOOP
+PUSHB_1
+ 15
 IP
-PUSHB_2
- 39
- 47
+PUSHB_1
+ 24
 SRP1
+PUSHB_2
+ 56
+ 57
+IP
+IP
+PUSHB_1
+ 25
 SRP2
+PUSHB_1
+ 5
+IP
+PUSHB_1
+ 34
+SRP1
 PUSHB_1
  2
+IP
+PUSHB_1
+ 35
+SRP2
+PUSHB_1
+ 0
+IP
+PUSHB_1
+ 41
+SRP1
+PUSHB_1
+ 75
 IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 444 765 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 344 -31 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 444 765 basechar 0
 LayerCount: 2
 Fore
 SplineSet
-551.090820312 451.345703125 m 1,0,1
- 620.142578125 495.219603649 620.142578125 495.219603649 620.142578125 574.62109375 c 0,2,3
- 620.142578125 633.710627972 620.142578125 633.710627972 579.407226562 671.078125 c 0,4,5
- 537.135408398 709.859375 537.135408398 709.859375 480.478515625 709.859375 c 0,6,7
- 426.111658863 709.859375 426.111658863 709.859375 384.58203125 675.864257812 c 0,8,9
- 344.234283502 642.836671559 344.234283502 642.836671559 326.931640625 596.697265625 c 0,10,11
- 318.172627691 573.338209886 318.172627691 573.338209886 262.155273438 385.849609375 c 2,12,-1
- 203.90234375 191.504882812 l 2,13,14
- 201.238009668 183.373244452 201.238009668 183.373244452 192.69921875 179.510742188 c 0,15,16
- 181.308329795 174.360351562 181.308329795 174.360351562 160.829101562 174.360351562 c 0,17,18
- 152.19349486 174.360351562 152.19349486 174.360351562 139.51953125 181.896484375 c 0,19,20
- 130.089924678 187.503084522 130.089924678 187.503084522 127.4296875 195.8671875 c 2,21,-1
- 116.813476562 229.23046875 l 1,22,-1
- 50.095703125 208.000976562 l 1,23,-1
- 60.708984375 174.646484375 l 2,24,25
- 71.4343212219 140.937864625 71.4343212219 140.937864625 103.818359375 121.685546875 c 0,26,27
- 132.955456377 104.360351562 132.955456377 104.360351562 160.829101562 104.360351562 c 0,28,29
- 196.421739864 104.360351562 196.421739864 104.360351562 221.484375 115.693359375 c 0,30,31
- 258.930532033 132.627976361 258.930532033 132.627976361 270.856445312 171.033203125 c 2,32,-1
- 329.239257812 365.8046875 l 2,33,34
- 384.571272849 551.007527475 384.571272849 551.007527475 392.5 572.1484375 c 0,35,36
- 403.187319085 600.64795506 403.187319085 600.64795506 428.875 621.674804688 c 0,37,38
- 451.89529151 640.518449073 451.89529151 640.518449073 482.708984375 639.834960938 c 0,39,40
- 510.61017808 639.21585584 510.61017808 639.21585584 532.112304688 619.490234375 c 0,41,42
- 551.334958538 601.856095766 551.334958538 601.856095766 550.05859375 570.573242188 c 0,43,44
- 548.693160789 537.092325414 548.693160789 537.092325414 521.911132812 516.303710938 c 0,45,46
- 491.705787195 492.858398438 491.705787195 492.858398438 448.728515625 492.858398438 c 1,47,-1
- 442.69921875 423.376953125 l 1,48,49
- 483.874386483 416.215994132 483.874386483 416.215994132 508.515625 395.754882812 c 0,50,51
- 524.063476562 382.844909203 524.063476562 382.844909203 524.063476562 368.482421875 c 0,52,53
- 524.063476562 352.936751614 524.063476562 352.936751614 514.33984375 340.731445312 c 0,54,55
- 507.326027777 331.926082932 507.326027777 331.926082932 494.68359375 324.874023438 c 0,56,57
- 463.915568841 307.713867188 463.915568841 307.713867188 407.524414062 307.713867188 c 0,58,59
- 402.316894531 307.713867188 402.316894531 307.713867188 396.866210938 307.865234375 c 1,60,-1
- 385.760742188 239.366210938 l 1,61,62
- 417.17585671 229.882321034 417.17585671 229.882321034 438.743164062 220.9921875 c 0,63,64
- 459.196389048 212.560973293 459.196389048 212.560973293 481.01953125 198.966796875 c 0,65,66
- 497.284385539 188.834009869 497.284385539 188.834009869 504.099609375 176.004882812 c 0,67,68
- 510.279911214 164.372422414 510.279911214 164.372422414 508.528320312 148.897460938 c 0,69,70
- 505.541083599 122.515414145 505.541083599 122.515414145 486.700195312 103.239257812 c 0,71,72
- 467.437751988 83.5307821851 467.437751988 83.5307821851 433.1875 77.75 c 0,73,74
- 425.700880984 76.4873046875 425.700880984 76.4873046875 417.509765625 76.4873046875 c 0,75,76
- 387.041044303 76.4873046875 387.041044303 76.4873046875 347.077148438 93.650390625 c 2,77,-1
- 314.940429688 107.453125 l 1,78,-1
- 287.3125 43.1240234375 l 1,79,-1
- 319.504882812 29.298828125 l 2,80,81
- 372.616668677 6.4873046875 372.616668677 6.4873046875 417.509765625 6.4873046875 c 0,82,83
- 431.630489848 6.4873046875 431.630489848 6.4873046875 444.90234375 8.728515625 c 0,84,85
- 501.529423379 18.2845564458 501.529423379 18.2845564458 536.754882812 54.3251953125 c 0,86,87
- 572.403573919 90.7968817176 572.403573919 90.7968817176 578.081054688 140.950195312 c 0,88,89
- 586.527769112 215.573566585 586.527769112 215.573566585 518.16015625 258.298828125 c 1,90,91
- 550.050416339 273.231056618 550.050416339 273.231056618 569.1171875 297.165039062 c 0,92,93
- 589.552300956 322.817347745 589.552300956 322.817347745 593.37890625 356.516601562 c 0,94,95
- 594.063476562 362.554214079 594.063476562 362.554214079 594.063476562 368.482421875 c 0,96,97
- 594.063476562 416.806364997 594.063476562 416.806364997 551.090820312 451.345703125 c 1,0,1
+551 451 m 1,0,1
+ 594 417 594 417 594 368 c 0,2,3
+ 594 333 594 333 573.5 304 c 128,-1,4
+ 553 275 553 275 518 258 c 1,5,6
+ 587 216 587 216 578 141 c 0,7,8
+ 573 103 573 103 550.5 72 c 128,-1,9
+ 528 41 528 41 493.5 23.5 c 128,-1,10
+ 459 6 459 6 418 6 c 0,11,12
+ 375 6 375 6 320 29 c 2,13,-1
+ 287 43 l 1,14,-1
+ 315 107 l 1,15,-1
+ 347 94 l 2,16,17
+ 391 76 391 76 418 76 c 0,18,19
+ 452 75 452 75 479 97 c 128,-1,20
+ 506 119 506 119 509 149 c 0,21,22
+ 512 178 512 178 483.5 199 c 128,-1,23
+ 455 220 455 220 386 239 c 1,24,-1
+ 397 308 l 1,25,-1
+ 408 308 l 2,26,27
+ 438 308 438 308 464.5 315 c 128,-1,28
+ 491 322 491 322 507.5 335.5 c 128,-1,29
+ 524 349 524 349 524 368 c 256,30,31
+ 524 387 524 387 510 398 c 128,-1,32
+ 496 409 496 409 477.5 415 c 128,-1,33
+ 459 421 459 421 443 423 c 1,34,-1
+ 449 493 l 1,35,36
+ 487 493 487 493 518 513 c 128,-1,37
+ 549 533 549 533 550 571 c 0,38,39
+ 551 606 551 606 529 622.5 c 128,-1,40
+ 507 639 507 639 483 640 c 0,41,42
+ 449 642 449 642 425 619 c 128,-1,43
+ 401 596 401 596 392 572 c 0,44,45
+ 388 561 388 561 372.5 509.5 c 128,-1,46
+ 357 458 357 458 329 366 c 2,47,-1
+ 271 171 l 2,48,49
+ 264 148 264 148 245.5 133 c 128,-1,50
+ 227 118 227 118 204 111 c 128,-1,51
+ 181 104 181 104 161 104 c 0,52,53
+ 130 104 130 104 101.5 121.5 c 128,-1,54
+ 73 139 73 139 61 175 c 2,55,-1
+ 50 208 l 1,56,-1
+ 117 229 l 1,57,58
+ 127 196 127 196 137.5 185 c 128,-1,59
+ 148 174 148 174 161 174 c 0,60,61
+ 166 174 166 174 183 177 c 128,-1,62
+ 200 180 200 180 204 192 c 2,63,-1
+ 262 386 l 2,64,65
+ 290 480 290 480 306.5 532 c 128,-1,66
+ 323 584 323 584 327 597 c 0,67,68
+ 338 626 338 626 359.5 651.5 c 128,-1,69
+ 381 677 381 677 412 693.5 c 128,-1,70
+ 443 710 443 710 480 710 c 0,71,72
+ 518 710 518 710 549.5 694 c 128,-1,73
+ 581 678 581 678 600.5 647.5 c 128,-1,74
+ 620 617 620 617 620 575 c 0,75,76
+ 620 538 620 538 603 505.5 c 128,-1,77
+ 586 473 586 473 551 451 c 1,0,1
+EndSplineSet
+EndChar
+
+StartChar: DBar
+Encoding: 65537 -1 34
+Width: 1048
+VWidth: 1362
+GlyphClass: 1
+Flags: W
+HStem: 14 310
+VStem: 516 145
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 2
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 4
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_2
+ 5
+ 1
+CALL
+PUSHB_1
+ 54
+SMD
+PUSHB_1
+ 38
+SMD
+SVTCA[x-axis]
+PUSHB_2
+ 2
+ 1
+MDAP[no-rnd]
+MDRP[min,black]
+SVTCA[y-axis]
+PUSHB_2
+ 1
+ 2
+MDAP[no-rnd]
+MDRP[min,black]
+SVTCA[x-axis]
+PUSHB_2
+ 0
+ 3
+MDAP[no-rnd]
+MDRP[min,black]
+SVTCA[y-axis]
+PUSHB_2
+ 3
+ 0
+MDAP[no-rnd]
+MDRP[min,black]
+PUSHB_1
+ 54
+SMD
+SPVTCA[y-axis]
+SVTCA[x-axis]
+PUSHB_1
+ 64
+SMD
+SVTCA[x-axis]
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+592 14 m 1,0,-1
+ 516 306 l 1,1,-1
+ 585 324 l 1,2,-1
+ 661 32 l 1,3,-1
+ 592 14 l 1,0,-1
 EndSplineSet
 EndChar
 EndChars
