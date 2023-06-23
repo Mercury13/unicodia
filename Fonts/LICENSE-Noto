@@ -23,11 +23,6 @@ What was done by authors of Unicodia:
   - Added upper anchors KA 0915 → dotted circle 25CC
   - Dereferenced 0934, 0958…5F
   - Rehinted with TtfAutoHint, see settings PNG
-* Glagolitic
-  - Copied 25CC dotted circle from Devanagari; created anchors lower than on actual letters
-  - Made Caudate Chrivi 2C2F and 5F; created anchors on the same height
-  - Copied anchors to all umlauts where they are missing
-  - Rehinted with TtfAutoHint; settings default
 * Hebrew
   - Made 05EF yod triangle
 * Kannada
