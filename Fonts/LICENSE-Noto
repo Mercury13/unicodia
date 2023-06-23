@@ -11,8 +11,10 @@ What was done by authors of Unicodia:
   - Rehinted with TtfAutoHint, default settings + strong/strong/strong.
 * Modi, Zanabazar Square
   - Rehinted with TtfAutoHint, see settings-STRONG
-* Buhid, Dives Akuru, Pahawh Hmong, Siddham, Syloti Nagri
+* Buhid, Dives Akuru, Pahawh Hmong, Siddham
   - Rehinted with TtfAutoHint, see settings PNG
+* Syloti Nagri
+  - Rehinted with FontForge (except dotted circle)
 * Devanagari
   - Set Asc/desc to 1280/525
   - Set Typo asc/desc to 1180/-525
