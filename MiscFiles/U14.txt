@@ -1,10 +1,5 @@
 ===== GAGGED =====
 
-Ahom
-* New chars 11740…46
-* Noto not ready
-* Drew in FunkySample
-
 Balinese
 * 3 chars 1B4C, 1B7D, 1B7E
 * Noto NOT ready
@@ -17,7 +12,7 @@ Brahmi
 
 CJK
 * 9FFD…FF (ideographs) SUPPORTED by Babelstone.
-* 1AFF0+ (kana supp) NOT supported by Babelstone. Though it more that supports hentaigana.
+* 1AFF0+ (kana supp) NOT supported by Babelstone. Though it more than supports hentaigana.
 * 1B11F…22 (archaic katakana) NOT supported by Babelstone.
 * 2A6DE,DF (ideographs B) SUPPORTED by Babelstone.
 * 2B735…38 (ideographs C) SUPPORTED by babelStone.
@@ -38,11 +33,6 @@ Egyptian Hieroglyphs
 * Noto is not ready
 * Gagged with NewGardiner
 
-Glagolitic
-* Added 2C2F, 2C5F
-* Noto NOT ready
-* Drew in Noto
-
 Kaithi
 * New char 110C2
 * Noto NOT ready
@@ -53,33 +43,21 @@ Kannada
 * Drew in Kannada
 
 Latin
-* Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4
-* Block F: 57 chars
-* Block G: 31 chars
-* Drew for myself in FunkySample
-* Noto Serif NOT READY
+* Block D: A7C0, A7C1, A7D0, A7D1, A7D3, A7D5…D9, A7F2…F4, Noto CAME
+* Block F: 57 chars, Noto CAME, but I use Funky fix (bolder)
+* Block G: 31 chars, Noto PARTLY CAME, use own due to visible differences
 
 Oriya
 * Noto UI NOT ready even to U13, find Combining overline 0B55
 * Drew in OriyaUi
-
-Supplemental punctuation
-* Added 2E53…2E5D.
-* Noto Serif is NOT ready
-* Drew in FunkySample
 
 Syriac
 * Syriac Malayalam not ready, not saying about 1DFA
 
 Tagalog
 * +3 chars 170D, 1715 (disunified with Hano?), 171F
-* Noto NOT ready
-* drew in Tagalog
-
-Takri
-* New char 116B9, very simple
-* Noto NOT ready
-* Drew in FunkySample
+* Noto READY
+* Use own remake due to larger virama
 
 Telugu
 * +2 chars 0C3C, 0C5D
@@ -87,6 +65,10 @@ Telugu
 * Drew in FunkySample
 
 ===== READY =====
+
+Ahom OK
+* New chars 11740…46
+* Noto CAME
 
 Arabic OK
 * +1 char 061D main block
@@ -117,6 +99,10 @@ Ethiopic OK
 * New 1E7E0+
 * Noto READY (though funked up someday and does not want to fix)
 
+Glagolitic OK
+* Added 2C2F, 2C5F
+* Switched to Shafarik
+
 Mongol OK
 * Added character 180F, no changes in fonts
 
@@ -128,8 +114,17 @@ Old Uyghur OK
 * New script
 * Noto CAME
 
+Supplemental punctuation OK
+* Added 2E53…2E5D
+* Noto CAME
+
+Takri OK
+* New char 116B9, very simple
+* Noto CAME
+
 Tangsa OK
 * Contacted author, no license by now
+* Strange misrenders in Noto
 
 Toto OK
 * Font of unknown authorship (SIL) comes across Internet
