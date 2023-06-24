@@ -230,7 +230,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifOttomanSiyaq-Regular.ttf" },                                    // Siyaq Ottoman
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSoyombo-Regular.ttf", 115_pc },                                  // Soyombo
-    { "NotoSansSundanese-Regular.ttf" },                                        // Sundanese
+    { "UtoSansSundanese-Regular.ttf" },                                         // Sundanese
     { "NotoSansSylotiNagri-Regular.ttf" },                                      // Syloti Nagri
     { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
     { "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                        // Tagalog

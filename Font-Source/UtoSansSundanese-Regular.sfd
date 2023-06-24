@@ -1,8 +1,8 @@
 SplineFontDB: 3.2
-FontName: NotoSansSundanese-Regular
-FullName: Noto Sans Sundanese Regular
-FamilyName: Noto Sans Sundanese
-Weight: Book
+FontName: UtoSansSundanese-Regular
+FullName: Uto Sans Sundanese Regular
+FamilyName: Uto Sans Sundanese
+Weight: Regular
 Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sundanese)
 Version: 2.004; ttfautohint (v1.8.4.7-5d5b)
 ItalicAngle: 0
@@ -15,14 +15,14 @@ sfntRevision: 0x00020106
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 31699]
+XUID: [1021 59 1751208496 20590]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1593023580
-ModificationTime: 1687398214
+ModificationTime: 1687635281
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -68,6 +68,7 @@ Lookup: 260 0 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in
 Lookup: 262 16 0 "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Sundanese lookup 1" { "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Sundanese lookup 1 subtable"  } ['abvm' ('DFLT' <'dflt' > 'sund' <'dflt' > ) ]
 Lookup: 260 0 0 "'mark' Mark Positioning in Sundanese lookup 2" { "'mark' Mark Positioning in Sundanese lookup 2 subtable"  } ['mark' ('DFLT' <'dflt' > 'sund' <'dflt' > ) ]
 Lookup: 257 0 0 "'mark' Mark Positioning in Sundanese lookup 3" { "'mark' Mark Positioning in Sundanese lookup 3 subtable"  } ['mark' ('DFLT' <'dflt' > 'sund' <'dflt' > ) ]
+MarkAttachClasses: 1
 MarkAttachSets: 1
 "MarkSet-0" 39 uni1B80 uni1B81 uni1BA4 uni1BA8 uni1BA9
 DEI: 91125
@@ -3859,7 +3860,7 @@ ShortTable: maxp 16
   2
   1
 EndShort
-LangName: 1033 "" "" "" "2.004;GOOG;NotoSansSundanese-Regular" "" "Version 2.004; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team (Regular), S+AOkA-rgio L. Martins (other weights)" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "" "" "Version 2.004; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team (Regular), S+AOkA-rgio L. Martins (other weights)" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: Custom
 UnicodeInterp: none
@@ -3868,6 +3869,8 @@ DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
 WinInfo: 0 33 14
+BeginPrivate: 0
+EndPrivate
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Sundanese lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Sundanese lookup 0 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'abvm' +BB0EMAQ0 +BD4EQgQ8BDUEQgQ6BD4EOQAA +BD4EQQQ9BD4EMgRL in Sundanese lookup 1 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in Sundanese lookup 2 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in Sundanese lookup 2 subtable"
 BeginChars: 90 90
 
