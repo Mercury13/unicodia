@@ -162,7 +162,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Yu Gothic", Ffg::FALL_TO_NEXT },                                       // …2 — for P1 Katakana
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
-    { "SengBuhan-Regular.ttf", 115_pc },                                        // Lao
+    { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
       { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                       // …1
       { FNAME_NOTO },                                                           // …2
