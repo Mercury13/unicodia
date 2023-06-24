@@ -184,7 +184,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMendeKikakui-Regular.ttf" },                                     // Mende Kikakui
     { "NotoSansMeroitic-Regular.ttf" },                                         // Meroitic
     { "NotoSansModi-Regular.ttf", Ffg::DESC_BIGGER },                           // Modi
-    { "NotoSansMongolian-Regular.ttf" },                                        // Mongol
+    { "UtoSansMongolian-Regular.ttf" },                                         // Mongol
     { "NotoSansMro-Regular.ttf" },                                              // Mro
     { "NotoSansMultani-Regular.ttf" },                                          // Multani
     { "PadaukBook-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                     // Myanmar
