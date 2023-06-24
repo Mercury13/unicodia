@@ -233,7 +233,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UtoSansSundanese-Regular.ttf" },                                         // Sundanese
     { "NotoSansSylotiNagri-Regular.ttf" },                                      // Syloti Nagri
     { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
-    { "NotoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                        // Tagalog
+    { "UtoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                         // Tagalog
     { "NotoSansTagbanwa-Regular.ttf" },                                         // Tagbanwa
     { "NotoSansTakri-Regular.ttf", Ffg::DESC_BIGGER },                          // Takri
     { "Microsoft Tai Le" },                                                     // Tai Le

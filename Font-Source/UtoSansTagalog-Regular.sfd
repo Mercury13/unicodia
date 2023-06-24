@@ -1,8 +1,8 @@
 SplineFontDB: 3.2
-FontName: NotoSansTagalog-Regular
-FullName: Noto Sans Tagalog Regular
-FamilyName: Noto Sans Tagalog
-Weight: Book
+FontName: UtoSansTagalog-Regular
+FullName: Uto Sans Tagalog Regular
+FamilyName: Uto Sans Tagalog
+Weight: Regular
 Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/tagalog)
 Version: 2.002
 ItalicAngle: 0
@@ -16,14 +16,14 @@ LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
 HasVMetrics: 1
-XUID: [1021 59 1751208496 29700]
+XUID: [1021 59 1751208496 28072]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1493842294
-ModificationTime: 1687397484
+ModificationTime: 1687637565
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -750,7 +750,7 @@ ShortTable: maxp 16
   2
   1
 EndShort
-LangName: 1033 "" "" "" "2.002;GOOG;NotoSansTagalog-Regular" "" "Version 2.002" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "" "" "Version 2.002" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: UnicodeBmp
 Compacted: 1
@@ -5547,7 +5547,7 @@ Encoding: 5901 5901 32
 Width: 1048
 VWidth: 1362
 GlyphClass: 2
-Flags: HW
+Flags: W
 HStem: 14 310 80 68<209.422 453.109> 164 68<607.495 858.278> 425 68<247.173 451.695> 511 68<608.303 858.278>
 VStem: 94 77<185.643 347.172> 516 145
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 552 0 basechar 0
