@@ -11879,6 +11879,10 @@
      <orig>Division</orig>
      <transl>Деление</transl>
     </text>
+    <text id="CmpMisc">
+     <orig>Misc. inequality characters</orig>
+     <transl>Разные символы неравенства</transl>
+    </text>
    </group>
   </group>
  </file>

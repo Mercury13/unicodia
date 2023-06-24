@@ -8254,6 +8254,9 @@
     <text id="Div">
      <orig>Division</orig>
     </text>
+    <text id="CmpMisc">
+     <orig>Misc. inequality characters</orig>
+    </text>
    </group>
   </group>
  </file>

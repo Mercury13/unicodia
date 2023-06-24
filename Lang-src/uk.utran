@@ -11880,6 +11880,10 @@
      <orig>Division</orig>
      <transl>Ділення</transl>
     </text>
+    <text id="CmpMisc">
+     <orig>Misc. inequality characters</orig>
+     <transl>Різні символи нерівності</transl>
+    </text>
    </group>
   </group>
  </file>
