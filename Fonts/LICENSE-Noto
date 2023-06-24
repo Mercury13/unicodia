@@ -33,9 +33,8 @@ What was done by authors of Unicodia:
   - Made somehow 11240
   - Dehinted 25CC
 * Mongol
-  - Made ligature 25CC dotted circle + 18A9 some umlaut,
-    that umlaut mostly relies on ligatures and default anchoring
-    is really bad.
+  — Dehinted 25CC
+  — Made ahchor 25CC dotted circle + 18A9 some umlaut
 * OriyaUI
   - Rehinted; now the font is hinted in sample (up to 20 px) and unhinted in table
   - Added anchors to 25CC dotted circle
