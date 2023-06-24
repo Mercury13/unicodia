@@ -231,7 +231,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansSogdian-Regular.ttf" },                                          // Sogdian
     { "NotoSansSoyombo-Regular.ttf", 115_pc },                                  // Soyombo
     { "UtoSansSundanese-Regular.ttf" },                                         // Sundanese
-    { "NotoSansSylotiNagri-Regular.ttf" },                                      // Syloti Nagri
+    { "UtoSansSylotiNagri-Regular.ttf" },                                       // Syloti Nagri
     { "SertoAntochBible_2020_Release.ttf", 120_pc },                            // Syriac
     { "UtoSansTagalog-Regular.ttf", Ffg::DESC_BIGGER },                         // Tagalog
     { "NotoSansTagbanwa-Regular.ttf" },                                         // Tagbanwa
