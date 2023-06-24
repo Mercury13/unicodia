@@ -22,7 +22,7 @@ OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1638381350
-ModificationTime: 1687637074
+ModificationTime: 1687637290
 PfmFamily: 81
 TTFWeight: 400
 TTFWidth: 5
@@ -22192,7 +22192,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -597 1135 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -583 1135 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -22380,7 +22380,7 @@ StartChar: uni0EB7
 Encoding: 3767 3767 266
 Width: 0
 GlyphClass: 4
-Flags: W
+Flags: WO
 HStem: 1253 122<-879.394 -698.883 -471.261 -289.404> 1432 150<-639.31 -534.69> 1682 125<-838.338 -328.591>
 VStem: -1065 124<1432.96 1603.44> -662 150<1454.69 1559.31> -226 126<1434.08 1604.04>
 TtInstrs:
@@ -22515,7 +22515,7 @@ IP
 IUP[y]
 IUP[x]
 EndTTInstrs
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -597 1135 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" -583 1135 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -30511,7 +30511,7 @@ StartChar: uni25CC
 Encoding: 9676 9676 334
 Width: 1206
 GlyphClass: 1
-Flags: MWO
+Flags: MW
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" 604 4 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" 1206 0 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" 604 1135 basechar 0
