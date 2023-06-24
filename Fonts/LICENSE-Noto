@@ -35,12 +35,9 @@ What was done by authors of Unicodia:
 * Mongol
   — Dehinted 25CC
   — Made ahchor 25CC dotted circle + 18A9 some umlaut
-* OriyaUI
-  - Rehinted; now the font is hinted in sample (up to 20 px) and unhinted in table
-  - Added anchors to 25CC dotted circle
-  - Made ligature 25CC dotted circle + 03BC nukta,
-    mostly because of bad default anchoring of nukta
-  - Implemented 0B55 combining overline, possibly unusable
+* Oriya
+  - Implemented 0B55 combining overline
+  - 0B63 width → 0
 * Soyombo
   - Deleted tables 25CC + umlaut → umlaut
   - Moved anchors on 25CC and virtual virama
