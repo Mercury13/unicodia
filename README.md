@@ -2,7 +2,7 @@
 
 It is a simple Unicode encyclopedia and replacement for Character Map. Right now Windows only.
 
-**Lifecycle phase: 4** (beta). Usable but still problems with sustainability.
+**Lifecycle phase: 5** (production/stable). Minor problems with sustainability, but generally survived two releases of Unicode.
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
@@ -53,7 +53,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * [UTranslator](https://github.com/Mercury13/utranslator) — translation tool.
 
 # Unicodia emoji style guide
-Right now Unicodia emoji library is very small, but…
+If you decide to make a new character, there are two decisions available: 1) Mimic existing style; 2) Use new style. If you decide the latter (right now just three emoji have new style, placard and pushing hands)…
 
 I discovered that most of professional emoji… do not work! Do not work because they have too much detail and too little contrast. The last professional emoji that really worked is… 2018 Microsoft!
 
