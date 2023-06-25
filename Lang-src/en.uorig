@@ -7591,6 +7591,14 @@
      <orig>Croatia</orig>
     </text>
    </group>
+   <group id="Vert">
+    <text id="0">
+     <orig>Horizontal</orig>
+    </text>
+    <text id="1">
+     <orig>Vertical</orig>
+    </text>
+   </group>
   </group>
   <group id="Search">
    <au-cmt>

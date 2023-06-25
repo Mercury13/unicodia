@@ -482,11 +482,7 @@ namespace uc {
 
     enum class MatchLast { NO, YES };
 
-    enum class EcGlyphStyleChannel {
-        NONE,
-        GLAGOLITIC,
-        NN,
-    };
+    enum class EcGlyphStyleChannel;
     struct GlyphStyleChannel;
     struct GlyphStyleSets;
 
