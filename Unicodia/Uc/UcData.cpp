@@ -1070,7 +1070,7 @@ namespace {
 
     using OC = uc::OldComp;
 
-    constinit Flags<uc::OldComp> oldCompData[] {
+    constinit const Flags<uc::OldComp> primaryOldCompData[] {
         REP_60 (OC::AQUARIUS | OC::TANDY_COCO | OC::MINITEL | OC::ORIC | OC::TELETEXT | OC::TANDY_TRS80 | OC::KORVET ), // 00..3B 6block
         REP_48 (OC::TELETEXT ),                                                 // 3C..6B diagonals and braided flags
         REP_4  (OC::MSX | OC::TELETEXT ),                                       // 6C..6F triangles
@@ -1127,8 +1127,27 @@ namespace {
         REP_32 ({}),                                                            // D0..EF unused
         REP_10 (OC::ATARI_ST)                                                   // F0..F9 7seg digits
     };
+    static_assert(std::size(primaryOldCompData) == 0xFA);                       // FA first free
 
-    static_assert(std::size(oldCompData) == 0xFA);                              // FA first free
+    constinit const Flags<uc::OldComp> arrowOldCompData[] {
+        OC::ATARI_8BIT,
+        OC::TANDY_TRS80,
+    };
+    static_assert(std::size(arrowOldCompData) == 2);
+
+    struct OldCompSpan {
+        std::span<const Flags<uc::OldComp>> span;
+        char32_t firstCp;
+
+    };
+    inline bool operator < (const OldCompSpan& x, char32_t y) { return (x.firstCp < y); }
+    inline bool operator < (char32_t x, const OldCompSpan& y) { return (x < y.firstCp); }
+
+    constinit const OldCompSpan oldCompSpans[] { // Should go in increasing order
+        { .span = arrowOldCompData,   .firstCp = 0x1F8B0 },
+        { .span = primaryOldCompData, .firstCp = 0x1FB00 },
+    };
+    static_assert(std::size(oldCompSpans) == 2);
 
     #define REV_4(x, y) {(x),(y)}, {(x)+1,(y)+1}, {(x)+2,(y)+2}, {(x)+3,(y)+3}
     #define REV_8(x, y)  REV_4(x, y), REV_4((x)+4, (y)+4)
@@ -1512,10 +1531,14 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
 
 Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
 {
-    cp -= 0x1FB00;
-    if (cp >= std::size(oldCompData))
+    auto it = std::upper_bound(std::begin(oldCompSpans), std::end(oldCompSpans), cp);
+    if (it == std::begin(oldCompSpans))
         return {};
-    return oldCompData[cp];
+    --it;
+    cp -= it->firstCp;
+    if (cp < it->span.size())
+        return it->span[cp];
+    return {};
 }
 
 ///// Sutton SignWriting ///////////////////////////////////////////////////////
