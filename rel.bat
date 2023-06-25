@@ -20,11 +20,11 @@
 @set DEPLOY1=~Deployed
 @set SMARTCOPY=%BUILD_SC%\release\SmartCopy.exe
 @set UCAUTO=UcAuto.cpp
-@set UCAUTOLIB=UcAutoLib.cpp
+@set UCLIB=UcAutoLib.cpp
 @set UCCOUNT=UcAutoCount.h
 @set UCSUTTON=UcAutoSutton.cpp
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
-@set AB_UCAUTOLIB=%BUILD_AB%/%UCAUTOLIB%
+@set AB_UCLIB=%BUILD_AB%/%UCLIB%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
 @set AB_UCSUTTON=%BUILD_AB%/%UCSUTTON%
 
@@ -100,16 +100,16 @@
 @echo.
 @echo ===== Checking for file existence =====
 @if not exist %AB_UCAUTO% goto end
-@if not exist %AB_UCAUTOLIB% goto end
-@if not exist %AB_UCAUTOCOUNT% goto end
-@if not exist %AB_UCAUTOSUTTON% goto end
+@if not exist %AB_UCLIB% goto end
+@if not exist %AB_UCCOUNT% goto end
+@if not exist %AB_UCSUTTON% goto end
 
 @echo.
 @echo ===== Running SmartCopy =====
 @%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
-@%SMARTCOPY% %AB_UCAUTOLIB% Unicodia\Uc\%UCAUTOLIB%
-@%SMARTCOPY% %AB_UCAUTOCOUNT% Unicodia\Uc\%UCAUTOCOUNT%
-@%SMARTCOPY% %AB_UCAUTOSUTTON% Unicodia\Uc\%UCAUTOSUTTON%
+@%SMARTCOPY% %AB_UCLIB% Unicodia\Uc\%UCLIB%
+@%SMARTCOPY% %AB_UCCOUNT% Unicodia\Uc\%UCCOUNT%
+@%SMARTCOPY% %AB_UCSUTTON% Unicodia\Uc\%UCSUTTON%
 @if errorlevel 1 goto end
 
 @echo.
