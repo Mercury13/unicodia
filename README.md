@@ -2,7 +2,7 @@
 
 It is a simple Unicode encyclopedia and replacement for Character Map. Right now Windows only.
 
-**Lifecycle phase: 5** (production/stable). Minor problems with sustainability, but generally survived two releases of Unicode.
+**Lifecycle phase: 5** (production/stable). Minor troubles with sustainability, but generally survived two releases of Unicode.
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
