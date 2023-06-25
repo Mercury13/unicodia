@@ -1198,98 +1198,40 @@ namespace {
         }
     }
 
-}   // anon namespace
+    enum class CpSerializations { NO, YES };
 
-
-QString mywiki::buildHtml(const uc::Cp& cp)
-{
-    QString text;
-
-    sw::Info sw(cp);
-
-    appendStylesheet(text, sw);
-    str::append(text, "<h1>");
-    QString name = cp.viewableName();
-    appendCopyable(text, name, "bigcopy");
-    str::append(text, "</h1>");
-
-    // Alt. names
-    bool isInitial = true;
-    cp.name.traverseAllT([&text,&isInitial]
-                         (uc::TextRole role, std::u8string_view s) {
-        switch (role) {
-        case uc::TextRole::ALT_NAME:
-        case uc::TextRole::ABBREV:
-            if (isInitial) {
-                isInitial = false;
-                text += "<p style='" CNAME_ALTNAME "'>";
-            } else {
-                text += "; ";
-            }
-            appendCopyable(text, str::toQ(s), "altname");
-            break;
-        case uc::TextRole::MAIN_NAME:
-        case uc::TextRole::HTML:
-        case uc::TextRole::DEP_INSTEAD:
-        case uc::TextRole::DEP_INSTEAD2:
-        case uc::TextRole::CMD_END:
-            break;
-        }
-    });
-    if (!isInitial) {
-        text += "</b>";
-    }
-
-    // Deprecated
-    if (cp.isDeprecated()) {
-        text += "<h3 class='deph'>";
-        static constexpr std::u8string_view HTPROPS = u8"href='pt:deprecated' class='deprecated'";
-        DepBuf buf, buf2;
-        std::string_view key = "0";
-        char cbuf = '0';
-
-        std::u8string_view instead = cp.name.getText(uc::TextRole::DEP_INSTEAD);
-        if (!instead.empty()) {
-            auto q = instead[0];
-            if (q >= uc::INSTEAD_MIN && q <= uc::INSTEAD_MAX) {
-                // Special instead
-                cbuf = q;
-                key = std::string_view{ &cbuf, 1 };
-            } else {
-                // Characters by code
-                key = "Ins";
-                buf.build(instead);
-                std::u8string_view instead2 = cp.name.getText(uc::TextRole::DEP_INSTEAD2);
-                if (!instead2.empty()) {
-                    key = "Ins2";
-                    buf2.build(instead2);
+    void appendCpAltNames(QString& text, const uc::Cp& cp)
+    {
+        // Alt. names
+        bool isInitial = true;
+        cp.name.traverseAllT([&text,&isInitial]
+                             (uc::TextRole role, std::u8string_view s) {
+            switch (role) {
+            case uc::TextRole::ALT_NAME:
+            case uc::TextRole::ABBREV:
+                if (isInitial) {
+                    isInitial = false;
+                    text += "<p style='" CNAME_ALTNAME "'>";
+                } else {
+                    text += "; ";
                 }
+                mywiki::appendCopyable(text, str::toQ(s), "altname");
+                break;
+            case uc::TextRole::MAIN_NAME:
+            case uc::TextRole::HTML:
+            case uc::TextRole::DEP_INSTEAD:
+            case uc::TextRole::DEP_INSTEAD2:
+            case uc::TextRole::CMD_END:
+                break;
             }
+        });
+        if (!isInitial) {
+            text += "</b>";
         }
-
-        auto q = loc::get(str::cat("Prop.Deprec.", key)).arg(HTPROPS, buf.u8(), buf2.u8());
-        str::append(text, q);
-        text += "</h3>";
     }
 
-    // Default ignorable
-    if (cp.isDefaultIgnorable()) {
-        text += "<h4><a href='pt:ignorable' class='popup'>";
-        str::append(text, loc::get("Prop.Head.DefIgn"));
-        text += "</a></h4>";
-    }
-
-    // VS16 emoji
-    if (cp.isVs16Emoji()) {
-        text += "<h4>";
-        str::append(text, loc::get("Prop.Head.Emoji16")
-                          .arg(u8"href='pt:emoji' class='popup'"));
-        text += "</h4>";
-    }
-
-    appendSgnwVariants(text, sw);
-
-    {   // Info box
+    void appendCpBullets(QString& text, const uc::Cp& cp, CpSerializations serializations)
+    {
         str::append(text, "<p>");
         str::QSep sp(text, "<br>");
 
@@ -1361,81 +1303,154 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         }
 
         // Input
-        auto im = uc::cpInputMethods(cp.subj);
-        if (im.hasSmth()) {
+        if (serializations != CpSerializations::NO) {
+            auto im = uc::cpInputMethods(cp.subj);
+            if (im.hasSmth()) {
+                sp.sep();
+                appendNonBullet(text, "Prop.Input.Bullet");
+                str::QSep sp1(text, ";&nbsp; ");
+                if (!im.sometimesKey.empty()) {
+                    sp1.sep();
+                    mywiki::appendNoFont(
+                                text, loc::get("Prop.Input.Sometimes")
+                                      .arg(im.sometimesKey));
+                }
+                if (im.hasAltCode()) {
+                    sp1.sep();
+                    text += "<a href='pt:altcode' class='popup'>";
+                    str::append(text, loc::get("Prop.Input.AltCode"));
+                    text += "</a> ";
+                    str::QSep sp2(text, ", ");
+                    if (im.alt.dosCommon) {
+                        sp2.sep();
+                        str::append(text, static_cast<int>(im.alt.dosCommon));
+                    }
+                    if (im.alt.win) {
+                        sp2.sep();
+                        str::append(text, "0");
+                        str::append(text, static_cast<int>(im.alt.win));
+                    }
+                    if (!im.alt.hasLocaleIndependent()) {
+                        if (im.alt.dosEn) {
+                            sp2.sep();
+                            str::append(text, static_cast<int>(im.alt.dosEn));
+                            str::append(text, u8" (en)");
+                        }
+                        if (im.alt.dosRu) {
+                            sp2.sep();
+                            str::append(text, static_cast<int>(im.alt.dosRu));
+                            str::append(text, u8" (ru)");
+                        }
+                        if (im.alt.unicode) {
+                            sp2.sep();
+                            str::append(text, "+");
+                            str::appendHex(text, im.alt.unicode);
+                        }
+                    }
+                }
+                // Birman test
+                if (im.hasBirman()) {
+                    sp1.sep();
+                    text += "<a href='pt:birman' class='popup'>";
+                    str::append(text, loc::get("Prop.Input.Birman"));
+                    text += "</a> ";
+                    std::u8string sKey;
+                        appendKey(sKey, u8"AltGr+", im.birman.key);
+                        if (im.birman.letter != 0) {
+                            sKey += ' ';
+                            appendKey(sKey, {}, im.birman.letter);
+                        }
+                    if (im.birman.isTwice) {
+                        str::append(text, loc::get("Prop.Input.Twice")
+                                          .arg(sKey));
+                    } else {
+                        str::append(text, sKey);
+                    }
+                }
+            }
+
+            // HTML
             sp.sep();
-            appendNonBullet(text, "Prop.Input.Bullet");
-            str::QSep sp1(text, ";&nbsp; ");
-            if (!im.sometimesKey.empty()) {
-                sp1.sep();
-                mywiki::appendNoFont(
-                            text, loc::get("Prop.Input.Sometimes")
-                                  .arg(im.sometimesKey));
-            }
-            if (im.hasAltCode()) {
-                sp1.sep();
-                text += "<a href='pt:altcode' class='popup'>";
-                str::append(text, loc::get("Prop.Input.AltCode"));
-                text += "</a> ";
-                str::QSep sp2(text, ", ");
-                if (im.alt.dosCommon) {
-                    sp2.sep();
-                    str::append(text, static_cast<int>(im.alt.dosCommon));
-                }
-                if (im.alt.win) {
-                    sp2.sep();
-                    str::append(text, "0");
-                    str::append(text, static_cast<int>(im.alt.win));
-                }
-                if (!im.alt.hasLocaleIndependent()) {
-                    if (im.alt.dosEn) {
-                        sp2.sep();
-                        str::append(text, static_cast<int>(im.alt.dosEn));
-                        str::append(text, u8" (en)");
-                    }
-                    if (im.alt.dosRu) {
-                        sp2.sep();
-                        str::append(text, static_cast<int>(im.alt.dosRu));
-                        str::append(text, u8" (ru)");
-                    }
-                    if (im.alt.unicode) {
-                        sp2.sep();
-                        str::append(text, "+");
-                        str::appendHex(text, im.alt.unicode);
-                    }
-                }
-            }
-            // Birman test
-            if (im.hasBirman()) {
-                sp1.sep();
-                text += "<a href='pt:birman' class='popup'>";
-                str::append(text, loc::get("Prop.Input.Birman"));
-                text += "</a> ";
-                std::u8string sKey;
-                    appendKey(sKey, u8"AltGr+", im.birman.key);
-                    if (im.birman.letter != 0) {
-                        sKey += ' ';
-                        appendKey(sKey, {}, im.birman.letter);
-                    }
-                if (im.birman.isTwice) {
-                    str::append(text, loc::get("Prop.Input.Twice")
-                                      .arg(sKey));
-                } else {
-                    str::append(text, sKey);
+            appendNonBullet(text, "Prop.Bullet.Html");
+            appendSingleCpHtml(text, cp);
+
+            mywiki::appendUtf(text, Want32::NO, sp, cp.subj);
+        }   // serializations
+
+        text.append("</p>");
+    }
+
+}   // anon namespace
+
+
+QString mywiki::buildHtml(const uc::Cp& cp)
+{
+    QString text;
+
+    sw::Info sw(cp);
+
+    appendStylesheet(text, sw);
+    str::append(text, "<h1>");
+    QString name = cp.viewableName();
+    appendCopyable(text, name, "bigcopy");
+    str::append(text, "</h1>");
+
+    appendCpAltNames(text, cp);
+
+    // Deprecated
+    if (cp.isDeprecated()) {
+        text += "<h3 class='deph'>";
+        static constexpr std::u8string_view HTPROPS = u8"href='pt:deprecated' class='deprecated'";
+        DepBuf buf, buf2;
+        std::string_view key = "0";
+        char cbuf = '0';
+
+        std::u8string_view instead = cp.name.getText(uc::TextRole::DEP_INSTEAD);
+        if (!instead.empty()) {
+            auto q = instead[0];
+            if (q >= uc::INSTEAD_MIN && q <= uc::INSTEAD_MAX) {
+                // Special instead
+                cbuf = q;
+                key = std::string_view{ &cbuf, 1 };
+            } else {
+                // Characters by code
+                key = "Ins";
+                buf.build(instead);
+                std::u8string_view instead2 = cp.name.getText(uc::TextRole::DEP_INSTEAD2);
+                if (!instead2.empty()) {
+                    key = "Ins2";
+                    buf2.build(instead2);
                 }
             }
         }
 
-        // HTML
-        sp.sep();
-        appendNonBullet(text, "Prop.Bullet.Html");
-        appendSingleCpHtml(text, cp);
+        auto q = loc::get(str::cat("Prop.Deprec.", key)).arg(HTPROPS, buf.u8(), buf2.u8());
+        str::append(text, q);
+        text += "</h3>";
+    }
 
-        appendUtf(text, Want32::NO, sp, cp.subj);
+    // Default ignorable
+    if (cp.isDefaultIgnorable()) {
+        text += "<h4><a href='pt:ignorable' class='popup'>";
+        str::append(text, loc::get("Prop.Head.DefIgn"));
+        text += "</a></h4>";
+    }
 
-        text.append("</p>");
+    // VS16 emoji
+    if (cp.isVs16Emoji()) {
+        text += "<h4>";
+        str::append(text, loc::get("Prop.Head.Emoji16")
+                          .arg(u8"href='pt:emoji' class='popup'"));
+        text += "</h4>";
+    }
 
-        if (cp.block().startingCp == 0) {
+    appendSgnwVariants(text, sw);
+
+    {   // Info box
+        appendCpBullets(text, cp, CpSerializations::YES);
+
+        auto& blk = cp.block();
+        if (blk.startingCp == 0) {
             // Basic Latin:
             // Control → t:control (stored in catInfo)
             // Latn → s:Latn
@@ -1632,6 +1647,37 @@ QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
 }
 
 
+const uc::Cp* onlyIndependentCp(std::u32string_view x)
+{
+    switch (x.length()) {
+    case 0: return nullptr;
+    case 1:
+        if (x[0] < uc::CAPACITY) {
+            return uc::cpsByCode[x[0]];
+        } else {
+            return nullptr;
+        }
+    default:;
+    }
+    const uc::Cp* r = nullptr;
+    for (auto c : x) {
+        if (c < uc::CAPACITY) {
+            if (auto cp = uc::cpsByCode[c]) {
+                auto& cat = cp->category();
+                if (cat.isIndependent()) {
+                    if (r) {
+                        return nullptr;
+                    } else {
+                        r = cp;
+                    }
+                }
+            }
+        }
+    }
+    return r;
+}
+
+
 QString mywiki::buildHtml(const uc::LibNode& node)
 {
     QString text;
@@ -1653,9 +1699,11 @@ QString mywiki::buildHtml(const uc::LibNode& node)
 
     auto ver = uc::EcVersion::FIRST;
     for (auto c : node.value) {
-        auto cp = uc::cpsByCode[c];
-        if (cp) {
-            ver = std::max(ver, cp->ecVersion);
+        if (c < uc::CAPACITY) {
+            auto cp = uc::cpsByCode[c];
+            if (cp) {
+                ver = std::max(ver, cp->ecVersion);
+            }
         }
     }
 
@@ -1677,10 +1725,20 @@ QString mywiki::buildHtml(const uc::LibNode& node)
         sp2.sep();
         snprintf(buf, std::size(buf), "%04X ", static_cast<int>(c));
         text += buf;
-        auto cp = uc::cpsByCode[c];
-        if (cp) {
-            text += cp->viewableName();
+        if (c < uc::CAPACITY) {
+            auto cp = uc::cpsByCode[c];
+            if (cp) {
+                appendCopyable(text, cp->viewableName());
+            }
         }
+    }
+
+    if (auto cp = onlyIndependentCp(node.value)) {
+        snprintf(buf, std::size(buf), "<h2>%04X ", static_cast<int>(cp->subj));
+        text += buf;
+        appendCopyable(text, cp->viewableName());
+        text += "</h2>";
+        appendCpBullets(text, *cp, CpSerializations::NO);
     }
 
     return text;

@@ -837,6 +837,7 @@ namespace uc {
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKey(buf, N, suffix); }
 
+        /// @return [-] control, format, mark [+] rest
         bool isIndependent() const noexcept;
     };
 

@@ -2190,10 +2190,11 @@ bool uc::Category::isIndependent() const noexcept
     case UpCategory::FORMAT:
     case UpCategory::MARK:
         return false;
+    case UpCategory::SYMBOL:
+        return (id != "Sk");
     case UpCategory::LETTER:
     case UpCategory::PUNCTUATION:
     case UpCategory::SEPARATOR:
-    case UpCategory::SYMBOL:
     case UpCategory::NUMBER:;
     }
     return true;
