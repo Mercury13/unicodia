@@ -25,6 +25,7 @@
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
 @set AB_UCAUTOLIB=%BUILD_AB%/%UCAUTOLIB%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
+@set AB_UCSUTTON=%BUILD_AB%/%UCSUTTON%
 
 @path %MINGW%;%PATH%
 
@@ -99,11 +100,15 @@
 @echo ===== Checking for file existence =====
 @if not exist %AB_UCAUTO% goto end
 @if not exist %AB_UCAUTOLIB% goto end
+@if not exist %AB_UCAUTOCOUNT% goto end
+@if not exist %AB_UCAUTOSUTTON% goto end
 
 @echo.
 @echo ===== Running SmartCopy =====
 @%SMARTCOPY% %AB_UCAUTO% Unicodia\Uc\%UCAUTO%
 @%SMARTCOPY% %AB_UCAUTOLIB% Unicodia\Uc\%UCAUTOLIB%
+@%SMARTCOPY% %AB_UCAUTOCOUNT% Unicodia\Uc\%UCAUTOCOUNT%
+@%SMARTCOPY% %AB_UCAUTOSUTTON% Unicodia\Uc\%UCAUTOSUTTON%
 @if errorlevel 1 goto end
 
 @echo.
