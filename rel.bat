@@ -22,6 +22,7 @@
 @set UCAUTO=UcAuto.cpp
 @set UCAUTOLIB=UcAutoLib.cpp
 @set UCCOUNT=UcAutoCount.h
+@set UCSUTTON=UcAutoSutton.cpp
 @set AB_UCAUTO=%BUILD_AB%/%UCAUTO%
 @set AB_UCAUTOLIB=%BUILD_AB%/%UCAUTOLIB%
 @set AB_UCCOUNT=%BUILD_AB%/%UCCOUNT%
