@@ -614,6 +614,7 @@ namespace uc {
     {
         std::u8string_view name;
         CoarseDate date;
+        std::u8string_view emojiName {};
 
         //unsigned nNewChars = 0;
     };
