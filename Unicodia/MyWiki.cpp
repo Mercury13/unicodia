@@ -543,7 +543,7 @@ namespace {
         } else if (name == "nemoji"sv) {
             s += QString::number(uc::N_EMOJI);
         } else if (name == "version"sv) {
-            str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].name);
+            str::append(s, uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locName());
         } else if (name == "funky"sv) {
             appendFont(s, uc::EcFont::FUNKY, x, 0);
         } else if (name == "noto"sv) {
@@ -624,8 +624,33 @@ void mywiki::append(QString& text, std::u8string_view wiki, const uc::Font& font
 
 void mywiki::appendVersionValue(QString& text, const uc::Version& version)
 {
-    str::append(text, version.name);
+    str::append(text, version.locName());
     str::append(text, " (");
+
+    // Get text
+    char buf[30];
+    snprintf(buf, std::size(buf), "Common.Mon.%d",
+             static_cast<int>(version.date.month));
+    auto& monTemplate = loc::get(buf);
+    auto s = monTemplate.arg(version.date.year);
+
+    str::append(text, s);
+    str::append(text, ")");
+}
+
+void mywiki::appendEmojiValue(QString& text, const uc::Version& version)
+{
+    if (version.emojiName.empty()) {
+        appendVersionValue(text, version);
+        return;
+    }
+
+    str::append(text, version.emojiName);
+    str::append(text, " (");
+
+    if (!version.unicodeName.empty()) {
+        str::append(text, loc::get("Prop.Bullet.EmojiV2").arg(version.unicodeName));
+    }
 
     // Get text
     char buf[30];
@@ -1714,7 +1739,7 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     if (node.ecEmojiVersion != uc::EcVersion::NONE) {
         sp.sep();
         appendNonBullet(text, "Prop.Bullet.EmojiVer");
-        appendVersionValue(text, node.emojiVersion());
+        appendEmojiValue(text, node.emojiVersion());
     }
 
     appendSubhead(text, "Prop.Head.Comp");

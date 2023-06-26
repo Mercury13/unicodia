@@ -649,7 +649,15 @@
      <orig>All characters are in Unicode version</orig>
     </text>
     <text id="EmojiVer">
-     <orig>Emoji is in Unicode version</orig>
+     <orig>Became graphical in emoji version</orig>
+    </text>
+    <text id="EmojiV">
+     <orig>Emoji {1}</orig>
+     <au-cmt>See in old emoji of Library</au-cmt>
+    </text>
+    <text id="EmojiV2">
+     <orig>=Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
     </text>
    </group>
    <group id="Os">

@@ -612,11 +612,13 @@ namespace uc {
 
     struct Version
     {
-        std::u8string_view name;
+        std::u8string_view unicodeName;
         CoarseDate date;
         std::u8string_view emojiName {};
 
         //unsigned nNewChars = 0;
+        std::u8string locName() const;
+        std::u8string techName() const;
     };
     extern const Version versionInfo[];
 

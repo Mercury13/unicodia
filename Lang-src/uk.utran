@@ -811,11 +811,21 @@
     </text>
     <text id="AllVer">
      <orig>All characters are in Unicode version</orig>
-     <transl>Усі символи в версії Юнікоду</transl>
+     <transl>Усі символи у версії Юнікоду</transl>
     </text>
     <text id="EmojiVer">
-     <orig>Emoji is in Unicode version</orig>
-     <transl>Емодзі в версії Юнікоду</transl>
+     <orig>Became graphical in emoji version</orig>
+     <transl>Стала графічною у версії емодзі</transl>
+    </text>
+    <text id="EmojiV">
+     <orig>Emoji {1}</orig>
+     <au-cmt>See in old emoji of Library</au-cmt>
+     <transl>Емодзі {1}</transl>
+    </text>
+    <text id="EmojiV2">
+     <orig>=Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>=Юнікод {1}, </transl>
     </text>
    </group>
    <group id="Os">

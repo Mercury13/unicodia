@@ -813,8 +813,18 @@
      <transl>Все символы в версии Юникода</transl>
     </text>
     <text id="EmojiVer">
-     <orig>Emoji is in Unicode version</orig>
-     <transl>Эмодзи в версии Юникода</transl>
+     <orig>Became graphical in emoji version</orig>
+     <transl>Стала графической в верси эмодзи</transl>
+    </text>
+    <text id="EmojiV">
+     <orig>Emoji {1}</orig>
+     <au-cmt>See in old emoji of Library</au-cmt>
+     <transl>Эмодзи {1}</transl>
+    </text>
+    <text id="EmojiV2">
+     <orig>=Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>=Юникод {1}, </transl>
     </text>
    </group>
    <group id="Os">

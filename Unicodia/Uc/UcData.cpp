@@ -102,27 +102,27 @@ const uc::Version uc::versionInfo[] {
     { {},      { 0000, Month::NUL } },
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
-    { u8"1.1", { 1993, Month::JUN } },
-    { u8"2.0", { 1996, Month::JUL } },
-    { u8"2.1", { 1998, Month::MAY } },
-    { u8"3.0", { 1999, Month::SEP } },
-    { u8"3.1", { 2001, Month::MAR } },
-    { u8"3.2", { 2002, Month::MAR } },
-    { u8"4.0", { 2003, Month::APR } },
-    { u8"4.1", { 2005, Month::MAR } },
-    { u8"5.0", { 2006, Month::JUL } },
-    { u8"5.1", { 2008, Month::APR } },
-    { u8"5.2", { 2009, Month::OCT } },
-    { u8"6.0", { 2010, Month::OCT } },
-    { u8"6.1", { 2012, Month::JAN } },
-    { u8"6.2", { 2012, Month::SEP } },
-    { u8"6.3", { 2013, Month::SEP } },
-    { u8"7.0", { 2014, Month::JUN } },
-    { u8"8.0", { 2015, Month::JUN } },
-    { u8"Emoji 1.0", { 2015, Month::AUG } },
-    { u8"Emoji 2.0", { 2015, Month::NOV } },
-    { u8"9.0", { 2016, Month::JUN }, u8"3.0" },
-    { u8"Emoji 4.0", { 2016, Month::NOV } },
+    { u8"1.1",  { 1993, Month::JUN } },
+    { u8"2.0",  { 1996, Month::JUL } },
+    { u8"2.1",  { 1998, Month::MAY } },
+    { u8"3.0",  { 1999, Month::SEP } },
+    { u8"3.1",  { 2001, Month::MAR } },
+    { u8"3.2",  { 2002, Month::MAR } },
+    { u8"4.0",  { 2003, Month::APR } },
+    { u8"4.1",  { 2005, Month::MAR } },
+    { u8"5.0",  { 2006, Month::JUL } },
+    { u8"5.1",  { 2008, Month::APR } },
+    { u8"5.2",  { 2009, Month::OCT } },
+    { u8"6.0",  { 2010, Month::OCT }, u8"0.6" },
+    { u8"6.1",  { 2012, Month::JAN } },
+    { u8"6.2",  { 2012, Month::SEP } },
+    { u8"6.3",  { 2013, Month::SEP } },
+    { u8"7.0",  { 2014, Month::JUN }, u8"0.7" },
+    { u8"8.0",  { 2015, Month::JUN } },
+    { {},       { 2015, Month::AUG }, u8"1.0" },
+    { {},       { 2015, Month::NOV }, u8"2.0" },
+    { u8"9.0",  { 2016, Month::JUN }, u8"3.0" },
+    { {},       { 2016, Month::NOV }, u8"4.0" },
     { u8"10.0", { 2017, Month::JUN }, u8"5.0" },
     { u8"11.0", { 2018, Month::JUN } },
     { u8"12.0", { 2019, Month::MAR } },
@@ -2500,4 +2500,24 @@ QString uc::LibNode::viewableTitle(TitleMode mode) const
     }
     // Should not happen
     return {};
+}
+
+
+std::u8string uc::Version::locName() const
+{
+    if (!unicodeName.empty()) {
+        return std::u8string{unicodeName};
+    } else {
+        return loc::get("Prob.Bullet.EmojiV").arg(emojiName);
+    }
+}
+
+
+std::u8string uc::Version::techName() const
+{
+    if (!unicodeName.empty()) {
+        return str::cat(u8"v", unicodeName);
+    } else {
+        return str::cat(u8"e", emojiName);
+    }
 }

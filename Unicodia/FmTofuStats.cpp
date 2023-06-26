@@ -104,7 +104,7 @@ namespace {
         for (size_t iVer = 0; iVer < std::size(byVer); ++iVer) {
             auto& ctr = byVer[iVer];
             if (ctr.nTofu != 0) {
-                r.emplace_back("-- v" + str::toQ(uc::versionInfo[iVer].name), ctr);
+                r.emplace_back("-- " + str::toQ(uc::versionInfo[iVer].techName()), ctr);
             }
         }
     }
