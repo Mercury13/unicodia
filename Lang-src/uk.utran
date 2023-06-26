@@ -827,6 +827,10 @@
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
      <transl>=Юнікод {1}, </transl>
     </text>
+    <text id="CameAfter">
+     <orig>, after Unicode {1}</orig>
+     <transl>, після Юнікоду {1}</transl>
+    </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
@@ -1017,13 +1021,6 @@
      <orig>[[pt:nontext|non-text]]{{-}}''like musical notes''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
      <transl>[[pt:nontext|нетекстова]]{{-}}''як ноти''</transl>
-    </text>
-   </group>
-   <group id="Sutton">
-    <text id="01">
-     <orig>Fill F2 with turns 0…R5 is shown on character U+1D9FF head, otherwise ligature does not form. Head won’t be copied.</orig>
-     <au-cmt>Test: U+1DA5E (smth bad with font)</au-cmt>
-     <transl>Заповнення F2 з поворотами 0…R5 зображено на символі U+1D9FF «голова»: інакше не{{_}}складається у лігатуру. Копіюватися буде без нього.</transl>
     </text>
    </group>
   </group>

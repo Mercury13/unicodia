@@ -659,6 +659,9 @@
      <orig>=Unicode {1}, </orig>
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
     </text>
+    <text id="CameAfter">
+     <orig>, after Unicode {1}</orig>
+    </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
@@ -807,12 +810,6 @@
     <text id="Nota">
      <orig>[[pt:nontext|non-text]]{{-}}''like musical notes''</orig>
      <au-cmt>Test: Sgnw</au-cmt>
-    </text>
-   </group>
-   <group id="Sutton">
-    <text id="01">
-     <orig>Fill F2 with turns 0…R5 is shown on character U+1D9FF head, otherwise ligature does not form. Head won’t be copied.</orig>
-     <au-cmt>Test: U+1DA5E (smth bad with font)</au-cmt>
     </text>
    </group>
   </group>

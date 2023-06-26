@@ -2503,6 +2503,15 @@ QString uc::LibNode::viewableTitle(TitleMode mode) const
 }
 
 
+const uc::Version& uc::LibNode::emojiPrevVersion() const
+{
+    if (ecEmojiVersion <= uc::EcVersion::FIRST_MEANING) {
+        return versionInfo[0];
+    }
+    return versionInfo[static_cast<int>(ecEmojiVersion) - 1];
+}
+
+
 std::u8string uc::Version::locName() const
 {
     if (!unicodeName.empty()) {

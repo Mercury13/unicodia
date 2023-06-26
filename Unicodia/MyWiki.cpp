@@ -638,7 +638,8 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
     str::append(text, ")");
 }
 
-void mywiki::appendEmojiValue(QString& text, const uc::Version& version)
+void mywiki::appendEmojiValue(QString& text,
+        const uc::Version& version, const uc::Version& prevVersion)
 {
     if (version.emojiName.empty()) {
         appendVersionValue(text, version);
@@ -648,18 +649,24 @@ void mywiki::appendEmojiValue(QString& text, const uc::Version& version)
     str::append(text, version.emojiName);
     str::append(text, " (");
 
+    // Equiv. Unicode version
     if (!version.unicodeName.empty()) {
         str::append(text, loc::get("Prop.Bullet.EmojiV2").arg(version.unicodeName));
     }
 
-    // Get text
+    // Date
     char buf[30];
     snprintf(buf, std::size(buf), "Common.Mon.%d",
              static_cast<int>(version.date.month));
     auto& monTemplate = loc::get(buf);
     auto s = monTemplate.arg(version.date.year);
-
     str::append(text, s);
+
+    // Prev. Unicode version
+    if (version.unicodeName.empty() && !prevVersion.unicodeName.empty()) {
+        str::append(text, loc::get("Prop.Bullet.CameAfter").arg(prevVersion.unicodeName));
+    }
+
     str::append(text, ")");
 }
 
@@ -1739,7 +1746,7 @@ QString mywiki::buildHtml(const uc::LibNode& node)
     if (node.ecEmojiVersion != uc::EcVersion::NONE) {
         sp.sep();
         appendNonBullet(text, "Prop.Bullet.EmojiVer");
-        appendEmojiValue(text, node.emojiVersion());
+        appendEmojiValue(text, node.emojiVersion(), node.emojiPrevVersion());
     }
 
     appendSubhead(text, "Prop.Head.Comp");

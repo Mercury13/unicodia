@@ -98,7 +98,7 @@ namespace mywiki
     void appendNoFont(QString& x, std::u8string_view wiki);
     void append(QString& x, std::u8string_view wiki, const uc::Font& font);
     void appendVersionValue(QString& text, const uc::Version& version);
-    void appendEmojiValue(QString& text, const uc::Version& version);
+    void appendEmojiValue(QString& text, const uc::Version& version, const uc::Version& prevVersion);
     void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
     void appendUtf(QString& text, Want32 want32, str::QSep& sp, char32_t code);
     void appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32string_view value);

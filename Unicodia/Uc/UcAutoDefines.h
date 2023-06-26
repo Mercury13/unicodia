@@ -282,6 +282,7 @@ namespace uc {
         NN,
         UNKNOWN = NN,
         FIRST = 0,
+        FIRST_MEANING = V_1_1,
         LAST = NN - 1,
         E0_6 = V_6_0,
         E0_7 = V_7_0,
@@ -567,6 +568,7 @@ namespace uc {
             return flags.have(Lfg::GRAPHIC_EMOJI) ? EmojiDraw::GRAPHIC : EmojiDraw::TEXT;
         }
         inline const uc::Version& emojiVersion() const;
+        const uc::Version& emojiPrevVersion() const;
 
         QString viewableTitle(TitleMode mode) const;
 
