@@ -1932,9 +1932,18 @@ const std::set<RangeByEnd> noAaRanges {
     { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
+constexpr auto TWO_STYLES = uc::Cfg::STYLE_0 | uc::Cfg::STYLE_1;
+
 const std::map<RangeByEnd, uc::Cfgs> styleRanges {
-    { { 0x2C00,  0x2C5F  }, uc::Cfg::STYLE_0 | uc::Cfg::STYLE_1 }, // Glag main
-    { { 0x1E000, 0x1E02F }, uc::Cfg::STYLE_0 },                    // Glag ex
+    // Glagolitic: Bulgaria or Croatia
+    { { 0x2C00,  0x2C5F  }, TWO_STYLES },   // Glag main
+    { { 0x1E000, 0x1E02F }, uc::Cfg::STYLE_0 }, // Glag ex
+    // Sogdian etc: horizontal or vertical
+    { { 0x1800,  0x18AF  }, TWO_STYLES },   // Mong
+    { { 0x11660, 0x1167F }, TWO_STYLES },   // Mong ex
+    { { 0xA840,  0xA87F  }, TWO_STYLES },   // Phag
+    { { 0x10F30, 0x10F6F }, TWO_STYLES },   // Sogd
+    { { 0x10F70, 0x10FAF }, TWO_STYLES },   // Ougr
 };
 
 const std::unordered_set<char32_t> customDrawnControlChars {

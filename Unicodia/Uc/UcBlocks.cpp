@@ -186,7 +186,8 @@ constinit const uc::Block uc::blocks[] {
             "Khmer", { EcScript::Khmr, 0 }, EcScript::Khmr },
     // Mongol OK, implemented ligature
     { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED, 11_hx },
-            "Mongolian", { EcScript::Mong, 0 }, EcScript::Mong },
+            "Mongolian", { EcScript::Mong, 0 },
+            EcScript::Mong, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
     // Canadian extended OK
     { 0x18B0, 0x18FF, { 0x18E5, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended",
@@ -510,7 +511,8 @@ constinit const uc::Block uc::blocks[] {
     // Phags-pa OK
     { 0xA840, 0xA87F,
             { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
-            "Phags-pa", { EcScript::Phag, 0 }, EcScript::Phag },
+            "Phags-pa", { EcScript::Phag, 0 },
+            EcScript::Phag, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
     // Saurashtra OK
     { 0xA880, 0xA8DF, { 0xA8A5, EcContinent::ASIA, {}, 10_hx },
             "Saurashtra", { EcScript::Saur, 0 }, EcScript::Saur },
@@ -784,10 +786,12 @@ constinit const uc::Block uc::blocks[] {
             "Old Sogdian", { EcScript::Sogd, 0 }, EcScript::Sogo },
     // Sogdian OK
     { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA },
-            "Sogdian", { EcScript::Sogd, 1 }, EcScript::Sogd },
+            "Sogdian", { EcScript::Sogd, 1 },
+            EcScript::Sogd, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
     // Old Uyghur OK
     { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
-            "Old Uyghur", { EcScript::Ougr, 0 }, EcScript::Ougr },
+            "Old Uyghur", { EcScript::Ougr, 0 },
+            EcScript::Ougr, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
     // Chorasmian OK
     { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA, {}, SvgHint{ 15, 11 } },
             "Chorasmian", { EcScript::Chrs, 0 }, EcScript::Chrs },
@@ -846,7 +850,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::APPROX_ROTATED },
             "Mongolian Supplement",
             { EcScript::Mong, 1 },
-            EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION, EcGlyphStyleChannel::VERTICAL },
     // Takri OK
     { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri", { EcScript::Takr, 0 }, EcScript::Takr },
