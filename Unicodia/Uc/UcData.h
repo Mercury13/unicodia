@@ -779,12 +779,38 @@ namespace uc {
     // Such a limitation: sort by first N meaning chars
     using LocSortKey = signed short[40];
 
+    enum class MapType {
+        TECHNICAL,
+        MULTIPLE,
+        EU_LATIN,
+        EU_OTHER,
+        EU_OTHER_DEAD,
+        AS_BRAH,
+        AS_BRAH_DEAD,
+        AS_OTHER,
+        AS_OTHER_DEAD,
+        CJ_HANI,
+        CJ_OTHER,
+        CJ_OTHER_DEAD,
+        CJ_SYMBOL,
+        OC,
+        OC_DEAD,
+        AF,
+        AF_DEAD,
+        AM,
+        AM_DEAD,
+        SYM_CODE,   ///< codes, shorthand, non-text, incl. notes
+        SYM_PUNCT,  ///< punctuation
+        SYM_OTHER,
+    };
+
     struct Block
     {
         char32_t startingCp, endingCp;
         SynthIcon synthIcon;
         std::string_view name;
         AlphaKey alphaKey;
+        MapType mapType;
         EcScript ecScript = EcScript::NONE;
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
