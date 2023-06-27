@@ -1972,7 +1972,7 @@ std::u8string_view uc::Cp::abbrev() const
 uc::SampleProxy uc::Cp::sampleProxy(
         EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets) const
 {
-    switch (drawMethod(emojiDraw)) {
+    switch (drawMethod(emojiDraw, glyphSets)) {
     case DrawMethod::SAMPLE:
         break;  // go through
     default:
@@ -2050,7 +2050,8 @@ bool uc::Cp::isGraphical() const
 }
 
 
-uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode) const
+uc::DrawMethod uc::Cp::drawMethod(
+        EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const
 {
     if (flags.haveAny(m::ALL)) [[unlikely]] {
         if (flags.have(Cfg::M_CUSTOM_CONTROL))
@@ -2076,8 +2077,15 @@ uc::DrawMethod uc::Cp::drawMethod(EmojiDraw emojiMode) const
         if (isAbbreviated())
             return uc::DrawMethod::ABBREVIATION;
     }
-    if (isTrueSpace())
+    if (glyphSets[EcGlyphStyleChannel::VERTICAL] != 0
+            && block().ecStyleChannel == EcGlyphStyleChannel::VERTICAL) {
+        return block().flags.have(uc::Bfg::CCW)
+                ? uc::DrawMethod::VERTICAL_CCW : uc::DrawMethod::VERTICAL_CW;
+    }
+    // Vertical scripts do not have spaces
+    if (isTrueSpace()) {
         return uc::DrawMethod::SPACE;
+    }
     return uc::DrawMethod::SAMPLE;
 }
 
@@ -2180,7 +2188,7 @@ uc::TofuInfo uc::Cp::tofuInfo() const
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 
-    if (drawMethod(EmojiDraw::CONSERVATIVE) > uc::DrawMethod::LAST_FONT) {
+    if (drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
         r.state = font(MatchLast::YES) ? TofuState::PRESENT : TofuState::TOFU;

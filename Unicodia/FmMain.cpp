@@ -327,7 +327,7 @@ int CharsModel::columnCount(const QModelIndex&) const
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(EMOJI_DRAW, *cp);
+        return ::fontAt(EMOJI_DRAW, *cp, glyphStyle.sets);
     return {};
 }
 
@@ -1828,7 +1828,7 @@ void FmMain::dumpTiles()
     for (auto& v : uc::allLibNodes()) {
         auto tiles = getCharTiles(v);
         for (auto& tile : tiles) {
-            if (tile.isEmoji()) {
+            if (tile.isEmoji(model.glyphStyle.sets)) {
                 addPriority(hRoot, tile.text, 0, true);
                 prio0.insert(tile.text);
             }

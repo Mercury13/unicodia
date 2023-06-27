@@ -74,7 +74,8 @@ void WiSample::showCp(
     }
 
     // Sample char
-    switch (ch.drawMethod(emojiDraw)) {
+    auto method = ch.drawMethod(emojiDraw, glyphSets);
+    switch (method) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
@@ -91,6 +92,21 @@ void WiSample::showCp(
             auto font = ch.font(uc::MatchLast::NO);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
+        } break;
+    case uc::DrawMethod::VERTICAL_CW:
+    case uc::DrawMethod::VERTICAL_CCW: {
+            // set dummy font
+            auto font = ch.font(uc::MatchLast::NO);
+            ui->lbSample->setText(QString{});
+            QFont qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+            ui->lbSample->setFont(qfont);
+            // set vertical mode
+            auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
+            // EMPTY: we want text anyway
+            auto proxy = ch.sampleProxy(emojiDraw, uc::GlyphStyleSets::EMPTY);
+            // Vertical fonts do not have special stylesheets
+            ui->pageSampleCustom->setVertical(qfont, proxy.text, angle);
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         } break;
     case uc::DrawMethod::SAMPLE:
         drawWithQt(ch, emojiDraw, glyphSets);

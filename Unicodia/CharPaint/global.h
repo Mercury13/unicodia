@@ -24,7 +24,7 @@ public:
 struct CharTile {
     std::u32string_view text {};
     uc::EmojiDraw emojiDraw = uc::EmojiDraw::GRAPHIC;
-    bool isEmoji() const;
+    bool isEmoji(const uc::GlyphStyleSets& glyphSets) const;
 };
 using CharTiles = std::array<CharTile, 4>;
 

@@ -449,6 +449,8 @@ namespace uc {
             // Font-based methods
             SAMPLE,             ///< Take font and draw string
             SPACE,              ///< Take font, measure space width and draw 2 lines
+            VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
+            VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
             EGYPTIAN_HATCH,     ///< Draw special big circle, then hatch
             // Char-based methods
             ABBREVIATION,       ///< Draw dotted square and abbreviation
@@ -525,7 +527,8 @@ namespace uc {
         ///                        [-] take last font, never null
         const Font* font(MatchLast matchLast) const;
         SampleProxy sampleProxy(
-                EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets) const;
+                EmojiDraw emojiDraw,
+                const uc::GlyphStyleSets& glyphSets) const;
         QString osProxy() const;
         inline const Block& block() const;
 
@@ -536,7 +539,7 @@ namespace uc {
         constexpr int plane() const { return subj.val() >> 16; }
 
         QString viewableName() const;
-        DrawMethod drawMethod(EmojiDraw emojiMode) const;
+        DrawMethod drawMethod(EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const;
         TofuInfo tofuInfo() const;
         constexpr bool isAbbreviated() const { return flags.have(Cfg::M_ABBREVIATION); }
         std::u8string_view abbrev() const;

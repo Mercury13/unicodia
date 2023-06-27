@@ -37,12 +37,21 @@ void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font, QColor color, char32_t subj);
 
+constexpr int ROT_CW = 90;
+constexpr int ROT_CCW = -90;
+
+void drawVertical(
+        QPainter* painter, const QRect& rect,
+        const QFont& font, int rotation, QColor color, const QString& subj);
+
 enum class TableDraw {
     INTERNAL,   // Normal chars are drawn internally
     CUSTOM      // Normal chars are drawn in custom way
 };
 
-std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp);
+std::optional<QFont> fontAt(
+        uc::EmojiDraw emojiMode, const uc::Cp& cp,
+        const uc::GlyphStyleSets& glyphSets);
 std::optional<QFont> fontAt(
         uc::DrawMethod drawMethod, int sizePc,
         const uc::Cp& cp);
@@ -99,6 +108,7 @@ public:
     void setCustomControl(char32_t aSubj);
     void setEmoji(char32_t aSubj);
     void setEmoji(std::u32string_view aText);
+    void setVertical(const QFont& font, const QString& aSubj, int angle);
     void setEgyptianHatch(const QFont& font, char32_t aSubj);
     void setNormal();
     void init();
@@ -108,12 +118,14 @@ private:
     QSize initialSize;
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
-        EMOJI_TEXT, EGYPTIAN_HATCH };
+        EMOJI_TEXT, EGYPTIAN_HATCH, VERTICAL };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;
     char32_t subj = 0;
     std::u32string_view text;
+    int verticalAngle = 90;
+    QString qsubj;
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
 

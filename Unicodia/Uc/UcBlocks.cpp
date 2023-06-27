@@ -787,11 +787,11 @@ constinit const uc::Block uc::blocks[] {
     // Sogdian OK
     { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA },
             "Sogdian", { EcScript::Sogd, 1 },
-            EcScript::Sogd, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
+            EcScript::Sogd, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Old Uyghur OK
     { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
             "Old Uyghur", { EcScript::Ougr, 0 },
-            EcScript::Ougr, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
+            EcScript::Ougr, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Chorasmian OK
     { 0x10FB0, 0x10FDF, { 0x10FB0, EcContinent::ASIA, {}, SvgHint{ 15, 11 } },
             "Chorasmian", { EcScript::Chrs, 0 }, EcScript::Chrs },

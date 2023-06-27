@@ -127,7 +127,7 @@ RcPair::RcPair(const QRectF& rcFrame, qreal quo)
 ///// CharTile /////////////////////////////////////////////////////////////////
 
 
-bool CharTile::isEmoji() const
+bool CharTile::isEmoji(const uc::GlyphStyleSets& glyphSets) const
 {
     if (text.empty())
         return false;
@@ -137,7 +137,8 @@ bool CharTile::isEmoji() const
         if (ch.forceGraphic)
             return true;
         auto cp = uc::cpsByCode[ch.cp];
-        return (cp && cp->drawMethod(emojiDraw) == uc::DrawMethod::SVG_EMOJI);
+        // As of 2.0.1, glyphSets are unused, but may jump in
+        return (cp && cp->drawMethod(emojiDraw, glyphSets) == uc::DrawMethod::SVG_EMOJI);
     } else {
         return (emojiDraw == uc::EmojiDraw::GRAPHIC);
     }
@@ -223,6 +224,12 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             auto r = geometry();
             emp.draw(&painter, r, text, emojiHeight(r));
         } break;
+    case Mode::VERTICAL: {
+            QPainter painter(this);
+            drawVertical(&painter, geometry(), fontSpace,
+                      verticalAngle, palette().windowText().color(),
+                      qsubj);
+        } break;
     }
 }
 
@@ -264,6 +271,19 @@ void WiCustomDraw::setEmoji(std::u32string_view aText)
     setNormal();
     mode = Mode::EMOJI_TEXT;
     text = aText;
+    update();
+}
+
+
+void WiCustomDraw::setVertical(const QFont& font, const QString& aSubj, int angle)
+{
+    verticalAngle = angle;
+    qsubj = aSubj;
+    fontSpace = font;
+    mode = Mode::VERTICAL;
+    QFontMetrics metrics(font);
+    auto h = metrics.height();
+    setMinimumSize(QSize(h, h * 4 / 5));
     update();
 }
 
@@ -649,9 +669,11 @@ std::optional<QFont> fontAt(
 }
 
 
-std::optional<QFont> fontAt(uc::EmojiDraw emojiMode, const uc::Cp& cp)
+std::optional<QFont> fontAt(
+        uc::EmojiDraw emojiMode, const uc::Cp& cp,
+        const uc::GlyphStyleSets& glyphSets)
 {
-    auto method = cp.drawMethod(emojiMode);
+    auto method = cp.drawMethod(emojiMode, glyphSets);
     return fontAt(method, 100, cp);
 }
 
@@ -665,7 +687,7 @@ void drawChar(
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
         const uc::GlyphStyleSets& glyphSets, UseMargins useMargins)
 {
-    auto method = cp.drawMethod(emojiMode);
+    auto method = cp.drawMethod(emojiMode, glyphSets);
     switch (method) {
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
@@ -679,6 +701,13 @@ void drawChar(
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(method, sizePc, cp), color, cp.subj);
         break;
+    case uc::DrawMethod::VERTICAL_CW:
+    case uc::DrawMethod::VERTICAL_CCW: {
+            auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
+            auto proxy = cp.sampleProxy(uc::EmojiDraw::TEXT, uc::GlyphStyleSets::EMPTY);
+            drawVertical(painter, rect, *fontAt(method, sizePc, cp), angle, color,
+                         proxy.text);
+        } break;
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             // Char
@@ -687,7 +716,7 @@ void drawChar(
             painter->setBrush(color);
             painter->setPen(color);
             painter->drawText(rect,
-                              Qt::AlignCenter | Qt::TextSingleLine,
+                              Qt::AlignCenter | Qt::TextSingleLine | Qt::TextIncludeTrailingSpaces,
                               textAt(cp, emojiMode, glyphSets));
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
@@ -853,4 +882,20 @@ void drawFolderTile(
 {
     CharTiles tiles = getCharTiles(node);
     drawCharTiles(painter, bounds, tiles, color, glyphSets, scale);
+}
+
+
+void drawVertical(
+        QPainter* painter, const QRect& rect,
+        const QFont& font, int rotation, QColor color, const QString& subj)
+{
+    auto trans = painter->transform();
+    painter->rotate(rotation);
+    auto newTrans = painter->transform().inverted();
+    auto newRect = newTrans.mapRect(rect);
+    painter->setFont(font);
+    painter->setPen(color);
+    static constexpr auto flags = Qt::AlignCenter | Qt::TextSingleLine | Qt::TextIncludeTrailingSpaces;
+    painter->drawText(newRect, flags, subj);
+    painter->setTransform(trans);
 }
