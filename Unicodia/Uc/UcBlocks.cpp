@@ -295,7 +295,7 @@ constinit const uc::Block uc::blocks[] {
     // Vedic ex OK
     { 0x1CD0, 0x1CFF, { 0x1CEC, EcContinent::ASIA, Ifg::CONTINENT_OK },
             "Vedic Extensions",
-            MyName::INST, MapType::AS_BRAH_DEAD, EcScri`pt::NONE, EcFont::VEDIC },
+            MyName::INST, MapType::AS_BRAH_DEAD, EcScript::NONE, EcFont::VEDIC },
     // Phonetic ext OK
     { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
             "Phonetic Extensions",
