@@ -175,7 +175,8 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Ethiopic OK
     { 0x1200, 0x137F, { 0x12F1, EcContinent::AFRICA },
-            "Ethiopic", { EcScript::Ethi, 0 }, EcScript::Ethi },
+            "Ethiopic",
+            { EcScript::Ethi, 0 }, MapType::AF, EcScript::Ethi },
     // Ethiopic supplement OK
     { 0x1380, 0x139F, { 0x1382, EcContinent::AFRICA },
             "Ethiopic Supplement",
@@ -695,7 +696,7 @@ constinit const uc::Block uc::blocks[] {
     // Arabic presentation forms A OK
     { 0xFB50, 0xFDFF, { 0xFB6D, EcContinent::ASIA },
             "Arabic Presentation Forms-A",
-            { EcScript::Arab, 'a' }, MapType::AS_OTHER,
+            { EcScript::Arab, 'a' }, MapType::MULTIPLE,
             EcScript::Arab, EcFont::ARABIC_NOTO, Bfg::HAS_32_NONCHARS | Bfg::HAS_DESCRIPTION },
     // Variation selectors OK
     { 0xFE00, 0xFE0F,
