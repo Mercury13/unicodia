@@ -128,7 +128,7 @@ const uc::Version uc::versionInfo[] {
     { u8"12.0", { 2019, Month::MAR } },
     { u8"12.1", { 2019, Month::MAY } },
     { u8"13.0", { 2020, Month::MAR } },
-    { u8"Emoji 13.1", { 2020, Month::SEP } },
+    { {},       { 2020, Month::SEP }, u8"13.1" },
     { u8"14.0", { 2021, Month::SEP } },
     { u8"15.0", { 2022, Month::SEP } },
     { u8"15.1" VER_BETA, { 2023, Month::SEP } },

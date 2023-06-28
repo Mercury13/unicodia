@@ -1825,6 +1825,7 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
 };
 
 const std::unordered_set<char32_t> charsDrawnAsSpaces {
+    0x2800,     // Braille blank
     0x13441,    // Egyptian hiero Full blank
     0x13442,    // Egyptian hiero Half blank
 };
