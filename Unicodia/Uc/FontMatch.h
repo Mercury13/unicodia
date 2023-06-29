@@ -33,7 +33,7 @@ namespace mask {
     static_assert(QFontDatabase::WritingSystemsCount <= std::numeric_limits<T>::digits);
 }   // namespace mask
 
-class FontMatch
+class FontMatch : public FontSource
 {
 public:
     FontMatch(const QString& myName);
@@ -45,7 +45,7 @@ public:
     std::optional<QFont> sysFontForTwo(char32_t cp1, char32_t cp2, int size);
     [[nodiscard]] FontList allSysFonts(
             char32_t cp, QFontDatabase::WritingSystem writingSystem,
-            size_t maxCount = std::numeric_limits<size_t>::max());
+            size_t maxCount = std::numeric_limits<size_t>::max()) override;
     [[nodiscard]] std::string findPrefix() const;
 private:
     static constexpr auto TEST_POINT_SIZE = 50;     // point size for testing font

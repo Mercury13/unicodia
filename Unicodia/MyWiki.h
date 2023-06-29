@@ -33,19 +33,19 @@ namespace uc {
 
 enum class Want32 { NO, YES };
 
-namespace mywiki
-{
+namespace mywiki {
+
     class Gui    // interface
     {
     public:
         virtual void popupAtAbs(
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
-        virtual FontList allSysFonts(
-                char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) = 0;
         virtual void copyTextAbs(
                 QWidget* widget, const QRect& absRect, const QString& text) = 0;
-        virtual ~Gui() = default;
         virtual void followUrl(const QString& x) = 0;
+        virtual FontSource& fontSource() = 0;
+
+        virtual ~Gui() = default;
 
         // Utils
         void popupAtRel(

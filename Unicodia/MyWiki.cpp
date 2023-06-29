@@ -763,7 +763,7 @@ QString mywiki::buildFontsHtml(
     appendStylesheet(text);
     appendHeader(text, buf);
 
-    auto fonts = gui.allSysFonts(cp, ws, 20);
+    auto fonts = gui.fontSource().allSysFonts(cp, ws, 20);
     str::append(text, "<p>");
     str::QSep sp(text, "<br>");
     for (auto& v : fonts.lines) {

@@ -20,7 +20,6 @@
 #include <QPaintEngine>
 #include <QMessageBox>
 #include <QFile>
-#include <QDesktopServices>
 #include <QUrl>
 #include <QSvgRenderer>
 #include <QToolBar>
@@ -44,8 +43,6 @@
 #include "MyWiki.h"
 
 // Forms
-#include "FmPopup.h"
-#include "FmMessage.h"
 #include "FmTofuStats.h"
 #include "WiOsStyle.h"
 #include "WiLibCp.h"
@@ -63,17 +60,6 @@ namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 }
-
-///// FmPopup2 /////////////////////////////////////////////////////////////////
-
-
-FmPopup2::FmPopup2(FmMain* owner) : Super(owner, CNAME_BG_POPUP)
-{
-    auto vw = viewport();
-    vw->setTextInteractionFlags(Qt::LinksAccessibleByMouse | Qt::TextSelectableByMouse);
-    connect(vw, &QLabel::linkActivated, owner, &FmMain::popupLinkActivated);
-}
-
 
 ///// RowCache /////////////////////////////////////////////////////////////////
 
@@ -762,7 +748,8 @@ FmMain::FmMain(QWidget *parent)
       searchModel(this, model.glyphStyle.sets),
       libModel(this),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
-      fontTofu(str::toQ(FAM_TOFU), FSZ_BIG)
+      fontTofu(str::toQ(FAM_TOFU), FSZ_BIG),
+      mainGui(this, model.match)
 {
     ui->setupUi(this);
 
@@ -777,6 +764,9 @@ FmMain::FmMain(QWidget *parent)
     // Search
     ui->listSearch->setIconSize(pixQsize());
     ui->edSearch->lineEdit()->setPlaceholderText("[Search]");
+
+    // Popup link
+    connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
 
     // Tofu stats
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_T), this);
@@ -1198,14 +1188,13 @@ FmMain::~FmMain()
 }
 
 
-void FmMain::showCopied(QWidget* widget, const QRect& absRect)
+void FmMain::blinkCopied(QWidget* widget, const QRect& absRect)
 {
-    fmMessage.ensure(this)
-             .showAtAbs(loc::get("Common.Copied"), widget, absRect);
+    mainGui.blinkCopied(widget, absRect);
 }
 
 
-void FmMain::showCopied(QAbstractItemView* table)
+void FmMain::blinkCopied(QAbstractItemView* table)
 {
     auto widget = qobject_cast<QWidget*>(sender());
     QPoint corner { 0, 0 };
@@ -1231,7 +1220,7 @@ void FmMain::showCopied(QAbstractItemView* table)
     }
 
     corner = widget->mapToGlobal(corner);
-    showCopied(widget, QRect{ corner, size});
+    blinkCopied(widget, QRect{ corner, size});
 }
 
 
@@ -1247,7 +1236,7 @@ void FmMain::copyCurrentThing(CurrThing thing)
         }
     }
     QApplication::clipboard()->setText(q);
-    showCopied(ui->tableChars);
+    blinkCopied(ui->tableChars);
 }
 
 
@@ -1273,7 +1262,7 @@ void FmMain::copyCurrentLib()
         return;
     auto q = str::toQ(node.value);
     QApplication::clipboard()->setText(q);
-    showCopied(ui->treeLibrary);
+    blinkCopied(ui->treeLibrary);
 }
 
 
@@ -1480,32 +1469,6 @@ void FmMain::libChanged(const QModelIndex& current)
 }
 
 
-void FmMain::popupAtAbs(
-        QWidget* widget, const QRect& absRect, const QString& html)
-{
-    popup.ensure(this)
-         .setText(html)
-         .popupAtAbsBacked(widget, absRect);
-}
-
-void FmMain::copyTextAbs(
-        QWidget* widget, const QRect& absRect, const QString& text)
-{
-    QApplication::clipboard()->setText(text);
-    showCopied(widget, absRect);
-}
-
-void FmMain::followUrl(const QString& x)
-{
-    QDesktopServices::openUrl(x);
-}
-
-
-FontList FmMain::allSysFonts(
-        char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount)
-    { return model.match.allSysFonts(cp, ws, maxCount); }
-
-
 void FmMain::linkClicked(
         mywiki::Gui& gui, std::string_view link, QWidget* widget,
         TinyOpt<QRect> rect)
@@ -1525,15 +1488,15 @@ void FmMain::anchorClicked(const QUrl &arg)
     // so improvise somehow
     rect.setLeft(rect.left() - 80);
 
-    linkClicked(*this, str, snd, rect);
+    linkClicked(mainGui, str, snd, rect);
 }
 
 
-void FmMain::popupLinkActivated(const QString& link)
+void FmMain::popupLinkActivated(QWidget* widget, const QString& link)
 {
     /// @todo [urgent] Use other GUI object for popup
     // nullptr & TINY_NULL = last position
-    linkClicked(*this, link.toStdString(), nullptr, TINY_NULL);
+    linkClicked(mainGui, link.toStdString(), nullptr, TINY_NULL);
 }
 
 
@@ -1546,7 +1509,7 @@ void FmMain::advancedLinkActivated(QWidget* widget, const QString& link)
         widget = this;
         rect = QRect(widget->rect().center(), QSize{1, 1});
     }
-    mywiki::go(widget, rect, *this, link.toStdString());
+    mywiki::go(widget, rect, mainGui, link.toStdString());
     // Deselect, does not influence double and triple clicks
     if (auto label = qobject_cast<QLabel*>(sender())) {
         label->setSelection(0, 0);
@@ -1704,8 +1667,7 @@ void FmMain::startSearch()
 
 void FmMain::showSearchError(const QString& text)
 {
-    fmMessage.ensure(this)
-             .showAtWidget(text, ui->edSearch);
+    mainGui.blinkAtWidget(text, ui->edSearch);
 }
 
 
@@ -1759,8 +1721,7 @@ void FmMain::searchEnterPressed(int index)
         selectChar<SelectMode::INSTANT>(line.cp->subj);
     } else {
         auto relRect = ui->listSearch->visualRect(searchModel.index(index, 0));
-        fmMessage.ensure(this)
-                 .showAtRel(loc::get("Search.NoSuch"), ui->listSearch->viewport(), relRect);
+        mainGui.blinkAtRel(loc::get("Search.NoSuch"), ui->listSearch->viewport(), relRect);
     }
 }
 

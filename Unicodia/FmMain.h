@@ -27,10 +27,8 @@
 // Project-local
 #include "FontMatch.h"
 #include "MyWiki.h"
+#include "MainGui.h"
 #include "d_Config.h"
-
-// Forms
-#include "FmPopup.h"
 
 // Unicode data
 #include "UcData.h"
@@ -47,8 +45,6 @@ QT_END_NAMESPACE
 constexpr int NCOLS = 8;
 
 class QToolButton;
-class FmPopup2;
-class FmMessage;
 class FmTofuStats;
 class WiLibCp;
 
@@ -265,37 +261,12 @@ private:
 };
 
 
-template <class T>
-class Uptr
-{
-public:
-    using Pointer = T *;
-
-    template <class... UU>
-    T& ensure(UU&&... u) {
-        if (!*this) {
-            v = new T(std::forward<UU>(u)...);
-        }
-        return *v;
-    }
-
-    ~Uptr() { delete v; }
-
-    operator Pointer() const { return v; }
-    Pointer operator->() const { return v; }
-    explicit operator bool() const { return v; }
-private:
-    std::atomic<T*> v = nullptr;
-};
-
-
 enum class CurrThing { CHAR, SAMPLE };
 enum class SelectMode { NONE, INSTANT };
 
 
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
-               private mywiki::Gui,
                private PixSource
 {
     Q_OBJECT
@@ -322,8 +293,6 @@ private:
     SearchModel searchModel;
     LangModel langModel;
     LibModel libModel;
-    Uptr<FmPopup2> popup;
-    Uptr<FmMessage> fmMessage;
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
     MaybeChar shownCp;
@@ -332,6 +301,7 @@ private:
     ec::Array<QIcon, BlockOrder> sortIcons;
     UintRadio<QRadioButton> radioGlyphStyle;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
+    MyGui mainGui;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -362,8 +332,8 @@ private:
     void initTerms();
     void translateTerms();
     void copyCurrentThing(CurrThing thing);
-    void showCopied(QAbstractItemView* table);
-    void showCopied(QWidget* widget, const QRect& absRect);
+    void blinkCopied(QWidget* widget, const QRect& absRect);
+    void blinkCopied(QAbstractItemView* table);
     void clearSample();
     bool doSearch(const QString& what);
     void showSearchResult(uc::MultiResult&& x);
@@ -372,15 +342,6 @@ private:
     void cjkReflectCollapseState();
     void rebuildBlocks();
     void redrawSampleChar();
-
-    // mywiki::Gui
-    void popupAtAbs(
-            QWidget* widget, const QRect& absRect, const QString& html) override;
-    FontList allSysFonts(
-            char32_t cp, QFontDatabase::WritingSystem ws, size_t maxCount) override;
-    void copyTextAbs(
-            QWidget* widget, const QRect& absRect, const QString& text) override;    
-    void followUrl(const QString& x) override;    
 
     // PixSource
     int pixSize() const override;
@@ -391,7 +352,7 @@ private slots:
     void copyCurrentChar();
     void copyCurrentSample();
     void copyCurrentLib();
-    void popupLinkActivated(const QString& link);
+    void popupLinkActivated(QWidget* widget, const QString& link);
     void labelLinkActivated(const QString& link);
     void advancedLinkActivated(QWidget* widget, const QString& link);
     void anchorClicked(const QUrl &arg1);
@@ -413,15 +374,6 @@ private slots:
     void goToCp(char32_t cp);
 };
 
-
-class FmPopup2 : public FmPopup
-{
-    using Super = FmPopup;
-    using This = FmPopup2;
-public:
-    FmPopup2(FmMain* owner);
-    ~FmPopup2() override = default;
-};
 
 extern template class LruCache<char32_t, QPixmap>;
 

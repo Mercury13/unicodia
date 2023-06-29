@@ -40,6 +40,7 @@ SOURCES += \
     FmMessage.cpp \
     FmTofuStats.cpp \
     LocList.cpp \
+    MainGui.cpp \
     Uc/UcAuto.cpp \
     ../Libs/SelfMade/c_TableCache.cpp \
     ../Libs/SelfMade/i_MemStream.cpp \
@@ -105,6 +106,7 @@ HEADERS += \
     FmPopup.h \
     FmTofuStats.h \
     LocList.h \
+    MainGui.h \
     MyWiki.h \
     Skin.h \
     Uc/FontDef.h \
