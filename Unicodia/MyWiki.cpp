@@ -33,13 +33,9 @@ using namespace std::string_view_literals;
 void mywiki::Gui::popupAtRel(
         QWidget* widget, const QRect& relRect, const QString& html)
 {
-    if (!widget) {
-        popupAtAbs(widget, {}, html);
-    } else {
-        popupAtAbs(widget,
-                   QRect{ widget->mapToGlobal(relRect.topLeft()), relRect.size() },
-                   html);
-    }
+    popupAtAbs(widget,
+               QRect{ widget->mapToGlobal(relRect.topLeft()), relRect.size() },
+               html);
 }
 
 
@@ -65,9 +61,7 @@ void mywiki::Gui::popupAtWidget(
 void mywiki::Gui::popupAtRelMaybe(
         QWidget* widget, TinyOpt<QRect> relRect, const QString& html)
 {
-    if (!widget) {              // no widget
-        popupAtAbs(widget, {}, html);
-    } else if (!relRect) {      // have widget, no rect
+    if (!relRect) {      // have widget, no rect
         popupAtWidget(widget, html);
     } else {                    // have widget and rect
         popupAtRel(widget, *relRect, html);

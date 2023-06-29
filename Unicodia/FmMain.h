@@ -302,6 +302,7 @@ private:
     UintRadio<QRadioButton> radioGlyphStyle;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
+    PopupGui popupGui{mainGui};
 
     struct PullUpDetector {
         bool isCocked = false;

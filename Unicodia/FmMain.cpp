@@ -1494,9 +1494,8 @@ void FmMain::anchorClicked(const QUrl &arg)
 
 void FmMain::popupLinkActivated(QWidget* widget, const QString& link)
 {
-    /// @todo [urgent] Use other GUI object for popup
-    // nullptr & TINY_NULL = last position
-    linkClicked(mainGui, link.toStdString(), nullptr, TINY_NULL);
+    // How to get focus rect from QLabel?
+    linkClicked(popupGui, link.toStdString(), widget, TINY_NULL);
 }
 
 

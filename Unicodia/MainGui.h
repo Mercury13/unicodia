@@ -54,10 +54,26 @@ signals:
     void linkActivated(QWidget* thing, const QString& link);
 private:
     friend class FmPopup2;
+    friend class PopupGui;
     QWidget* wiMain;
     FontSource& fFontSource;
     Uptr<FmPopup2> popup;
     Uptr<FmMessage> fmMessage;
 private slots:
     void popupLinkActivated(const QString& link);
+};
+
+
+class PopupGui : public mywiki::Gui
+{
+public:
+    PopupGui(MyGui& aOwner) : owner(aOwner) {}
+    void popupAtAbs(
+            QWidget* widget, const QRect& absRect, const QString& html) override;
+    virtual FontSource& fontSource() override;
+    virtual void copyTextAbs(
+            QWidget* widget, const QRect& absRect, const QString& text) override;
+    virtual void followUrl(const QString& x) override;
+private:
+    MyGui& owner;
 };

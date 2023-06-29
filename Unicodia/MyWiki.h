@@ -38,6 +38,7 @@ namespace mywiki {
     class Gui    // interface
     {
     public:
+        /// @warning   Widgets are NEVER nullptr
         virtual void popupAtAbs(
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
         virtual void copyTextAbs(

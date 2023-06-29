@@ -472,7 +472,7 @@ void loc::Fmt<Ch>::nnn(std::string_view x, const Zchecker& chk)
             } else {
                 /// @todo [future] modes other than cardinal (5 laps completed):
                 ///    ordinal (5th lap completed), simple plural (laps completed)
-                /// @todo [future] short cardinal {1|q=lap:s} completed
+                /// @todo [future] short cardinal: {1|q=lap:s} completed
                 auto plural = chk.check(loc.cardinalRule());
                 auto kk = pluralNames[static_cast<int>(plural)];
                 const Kv* tmpl = findVal(kk);

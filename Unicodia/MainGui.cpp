@@ -95,3 +95,34 @@ void MyGui::followUrl(const QString& x)
 {
     QDesktopServices::openUrl(x);
 }
+
+
+///// PopupGui /////////////////////////////////////////////////////////////////
+
+
+void PopupGui::popupAtAbs(
+        QWidget* widget, const QRect& absRect, const QString& html)
+{
+    if (owner.popup) {
+        if (auto wi = owner.popup->lastWidget()) {
+            auto rect = owner.popup->lastAbsRect();
+            owner.popupAtAbs(wi, rect, html);
+            return;
+        }
+    }
+    // otherwise
+    owner.popupAtAbs(widget, absRect, html);
+}
+
+FontSource& PopupGui::fontSource() { return owner.fontSource(); }
+
+void PopupGui::copyTextAbs(
+        QWidget* widget, const QRect& absRect, const QString& text)
+{
+    owner.copyTextAbs(widget, absRect, text);
+}
+
+void PopupGui::followUrl(const QString& x)
+{
+    owner.followUrl(x);
+}
