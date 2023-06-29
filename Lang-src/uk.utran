@@ -272,6 +272,22 @@
      <orig>String content</orig>
      <transl>Склад рядка</transl>
     </text>
+    <text id="Uc">
+     <orig>Unicode {1}</orig>
+     <transl>Юнікод {1}</transl>
+    </text>
+    <text id="Em">
+     <orig>Emoji {1}</orig>
+     <transl>Емодзі {1}</transl>
+    </text>
+    <text id="EqEm">
+     <orig>=emoji {1}, </orig>
+     <transl>=емодзі {1}, </transl>
+    </text>
+    <text id="NewBlk">
+     <orig>New blocks</orig>
+     <transl>Нові блоки</transl>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -830,6 +846,18 @@
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
      <transl>, після Юнікоду {1}</transl>
+    </text>
+    <text id="NewChar">
+     <orig>New characters</orig>
+     <transl>Нових символів</transl>
+    </text>
+    <text id="Transient">
+     <orig>Characters that would be deleted later</orig>
+     <transl>Символів, які пізніше видалять</transl>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>Усього символів разом з [[pt:control|керуючими]]</transl>
     </text>
    </group>
    <group id="Os">
@@ -2960,7 +2988,7 @@
    </group>
    <group id="10190">
     <text id="Name">
-     <orig>Ancient Symbols</orig>
+     <orig>Ancient symbols</orig>
      <transl>Давні символи</transl>
     </text>
     <text id="Text">
@@ -11102,8 +11130,8 @@
     <transl>Статистика тофу</transl>
    </text>
    <text id="Version">
-    <orig>Version &lt;b&gt;{1}&lt;/b&gt; (Unicode {2})</orig>
-    <transl>Версія &lt;b&gt;{1}&lt;/b&gt; (Юнікод {2})</transl>
+    <orig>Version &lt;b&gt;{1}&lt;/b&gt; ({2})</orig>
+    <transl>Версія &lt;b&gt;{1}&lt;/b&gt; ({2})</transl>
    </text>
    <text id="MyName">
     <orig>Mikhail Merkuryev</orig>
@@ -11900,6 +11928,42 @@
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
      <transl>Різні символи нерівності</transl>
+    </text>
+   </group>
+  </group>
+  <group id="Version">
+   <group id="1.1">
+    <text id="Text">
+     <orig>
+      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
+      <p />
+      <p>Version 1.0 (October 1991, ≈7200 characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and 2350 [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Version 1.0.1 (June 1992, ≈28,300 characters) added 20,902 [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
+      <p />
+      <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
+     </orig>
+     <transl>
+      <p>Перша версія, що стала стандартом ISO, та перша, що існує у базах Юнікоду. Бази 1.0 та 1.0.1 реконструйовані.</p>
+      <p />
+      <p>Версія 1.0 (жовтень 1991, ≈7200 символів) додала більшість писемностей 1.1, включаючи [[ps:Tibt|тибетську]], видалену в 1.1, та 2350 складів [[ps:Hang|хангилю]], що видалять у [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Версія 1.0.1 (червень 1992, ≈28{{.}}300 символів) додала 20{{.}}902 [[ps:Hani|ієрогліфи ККЯ]], та видалила 6{{_}}символsв.</p>
+      <p />
+      <p>Версія 1.1 додала ще 4306 символів хангилю, та вилучила тибетську.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="12.1">
+    <text id="Text">
+     <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>Екстрений випуск Юнікоду, що містить лище один символ 32FF{{-}}еру Рейва японського традиційного календаря. Коли у 2016 старенький імператор Акіхіто вирішив зректися, за його наступником закріпили кодову позицію. Коли він остаточно зрікся 30 квітня 2019, символ швидко закодували.</transl>
+    </text>
+   </group>
+   <group id="15.1">
+    <text id="Text">
+     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
+     <transl>Консорціум Юнікоду мав проблеми з персоналом, менеджер з випуску пішов, а китаєзнавець вмер. Так що вони вирішили зробити невеликий випуск. Дуже великий випуск 16.0 намічається у 2024.</transl>
     </text>
    </group>
   </group>

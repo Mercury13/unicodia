@@ -271,6 +271,22 @@
      <orig>String content</orig>
      <transl>Состав строки</transl>
     </text>
+    <text id="Uc">
+     <orig>Unicode {1}</orig>
+     <transl>Юникод {1}</transl>
+    </text>
+    <text id="Em">
+     <orig>Emoji {1}</orig>
+     <transl>Эмодзи {1}</transl>
+    </text>
+    <text id="EqEm">
+     <orig>=emoji {1}, </orig>
+     <transl>=эмодзи {1}, </transl>
+    </text>
+    <text id="NewBlk">
+     <orig>New blocks</orig>
+     <transl>Новые блоки</transl>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -829,6 +845,18 @@
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
      <transl>, после Юникода {1}</transl>
+    </text>
+    <text id="NewChar">
+     <orig>New characters</orig>
+     <transl>Новых символов</transl>
+    </text>
+    <text id="Transient">
+     <orig>Characters that would be deleted later</orig>
+     <transl>Символов, которые позже удалят</transl>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
+     <transl>Всего символов, включая [[pt:control|управляющие]]</transl>
     </text>
    </group>
    <group id="Os">
@@ -2959,7 +2987,7 @@
    </group>
    <group id="10190">
     <text id="Name">
-     <orig>Ancient Symbols</orig>
+     <orig>Ancient symbols</orig>
      <transl>Древние символы</transl>
     </text>
     <text id="Text">
@@ -11101,8 +11129,8 @@
     <transl>Статистика тофу</transl>
    </text>
    <text id="Version">
-    <orig>Version &lt;b&gt;{1}&lt;/b&gt; (Unicode {2})</orig>
-    <transl>Версия &lt;b&gt;{1}&lt;/b&gt; (Юникод {2})</transl>
+    <orig>Version &lt;b&gt;{1}&lt;/b&gt; ({2})</orig>
+    <transl>Версия &lt;b&gt;{1}&lt;/b&gt; ({2})</transl>
    </text>
    <text id="MyName">
     <orig>Mikhail Merkuryev</orig>
@@ -11899,6 +11927,42 @@
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
      <transl>Разные символы неравенства</transl>
+    </text>
+   </group>
+  </group>
+  <group id="Version">
+   <group id="1.1">
+    <text id="Text">
+     <orig>
+      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
+      <p />
+      <p>Version 1.0 (October 1991, ≈7200 characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and 2350 [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Version 1.0.1 (June 1992, ≈28,300 characters) added 20,902 [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
+      <p />
+      <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
+     </orig>
+     <transl>
+      <p>Первая версия, ставшая стандартом ISO, и первая, существующая в базах Юникода. Базы 1.0 и 1.0.1 реконструированы.</p>
+      <p />
+      <p>Версия 1.0 (октябрь 1991, ≈7200 символов) добавила большинство письменностей 1.1, включая [[ps:Tibt|тибетскую]], удалённую в 1.1, и 2350 слогов [[ps:Hang|хангыля]], которые удалят в [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Версия 1.0.1 (июнь 1992, ≈28{{.}}300 символов) добавила 20{{.}}902 [[ps:Hani|иероглифа ККЯ]], и удалила 6 символов.</p>
+      <p />
+      <p>Версия 1.1 добавила ещё 4306 символов хангыля, и удалила тибетский.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="12.1">
+    <text id="Text">
+     <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+     <transl>Экстренный выпуск Юникода, содержащий ровно один символ 32FF{{-}}эра Рэйва японского традиционного календаря. Когда в 2016 престарелый император Акихито решил отречься, за его наследником застолбили кодовую позицию. Когда он окончательно отрёкся 30 апреля 2019, символ быстро закодировали.</transl>
+    </text>
+   </group>
+   <group id="15.1">
+    <text id="Text">
+     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
+     <transl>Консорциум Юникода испытывал проблемы с персоналом, менеджер по выпуску ушёл, а китаевед умер. Так что они решили сделать небольшой выпуск. Очень большой выпуск 16.0 ожидается в 2024.</transl>
     </text>
    </group>
   </group>

@@ -1799,11 +1799,7 @@ QString mywiki::buildHtml(const uc::Version& version)
     QString text;
     appendStylesheet(text);
     text += "<p><b>";
-    if (!version.unicodeName.empty()) {
-        str::append(text, loc::get("Prop.Head.Uc").arg(version.unicodeName));
-    } else {
-        str::append(text, loc::get("Prop.Head.Em").arg(version.emojiName));
-    }
+    str::append(text, version.locLongName());
     text += "</b> (";
     // Emoji version
     if (!version.unicodeName.empty() && !version.emojiName.empty()) {
@@ -1818,31 +1814,53 @@ QString mywiki::buildHtml(const uc::Version& version)
     str::append(text, s);
     text += ")";
 
-    text += "<p>";
-    // Transient
-    str::QSep sp(text, "<br>");
-    if (version.stats.chars.nTransient != 0) {
+    {
+        text += "<p>";
+        // Transient
+        str::QSep sp(text, "<br>");
+        if (version.stats.chars.nTransient != 0) {
+            sp.sep();
+            appendNonBullet(text, "Prop.Bullet.Transient");
+            appendCopyable(text, version.stats.chars.nTransient);
+        }
+        // New
+        if (!version.isFirst()) {
+            sp.sep();
+            appendNonBullet(text, "Prop.Bullet.NewChar");
+            appendCopyable(text, version.stats.chars.nNew);
+        }
+        // Total
         sp.sep();
-        appendNonBullet(text, "Prop.Bullet.Transient");
-        appendCopyable(text, version.stats.chars.nTransient);
+        mywiki::appendNoFont(text, loc::get("Prop.Bullet.TotalChar"));
+        str::append(text, ": ");
+        appendCopyable(text, version.stats.chars.nTotal);
     }
-    // New
-    if (!version.isFirst()) {
-        sp.sep();
-        appendNonBullet(text, "Prop.Bullet.NewChar");
-        appendCopyable(text, version.stats.chars.nNew);
-    }
-    // Total
-    sp.sep();
-    mywiki::appendNoFont(text, loc::get("Prop.Bullet.TotalChar"));
-    str::append(text, ": ");
-    appendCopyable(text, version.stats.chars.nTotal);
 
+    // Text
     if (version.flags.have(uc::Vfg::TEXT)) {
         str::append(text, "<p>");
         auto key = str::cat("Version.", str::toSv(version.link({})) , ".Text");
         mywiki::appendNoFont(text, loc::get(key));
 
     }
+
+    if (!version.isFirst() && version.stats.blocks.nNew != 0) {
+        text += "<p><b>";
+        str::append(text, loc::get("Prop.Head.NewBlk"));
+        text += "</b><p>";
+        str::QSep sp(text, "<br>");
+        for (auto& blk : uc::allBlocks()) {
+            if (&version == &blk.version()) {
+                sp.sep();
+                snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
+                text += "<a class='popup' href='";
+                text += buf;
+                text += "'>";
+                str::append(text, blk.loc.name);
+                text += "</a>";
+            }
+        }
+    }
+
     return text;
 }

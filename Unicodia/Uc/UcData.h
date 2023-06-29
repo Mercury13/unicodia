@@ -612,6 +612,7 @@ namespace uc {
 
     enum class Vfg {
         TEXT = 1,
+        BETA = 2,
     };
     DEFINE_ENUM_OPS(Vfg)
 
@@ -638,9 +639,13 @@ namespace uc {
                     unsigned nSequences = 0;
                 } nw;
             } emoji;
+            struct Blocks {
+                unsigned nNew = 0;
+            } blocks;
         } stats {};
 
         std::u8string locName() const;
+        std::u8string locLongName() const;
         std::u8string techName() const;
         std::u8string link(std::u8string_view prefix) const;
         bool isFirst() const { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }

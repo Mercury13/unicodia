@@ -95,9 +95,6 @@ constinit const uc::ScriptType uc::scriptTypeInfo[] {
 };
 static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
 
-// Usage: u8"15.0" VER_BETA
-#define VER_BETA "\u00A0" "β"
-
 const uc::Version uc::versionInfo[] {
     { {},       { 0000, Month::NUL }, NO_FLAGS },
     //{ "1.0",  1991 },
@@ -126,12 +123,12 @@ const uc::Version uc::versionInfo[] {
     { u8"10.0", { 2017, Month::JUN }, NO_FLAGS, u8"5.0" },
     { u8"11.0", { 2018, Month::JUN }, NO_FLAGS },
     { u8"12.0", { 2019, Month::MAR }, NO_FLAGS },
-    { u8"12.1", { 2019, Month::MAY }, NO_FLAGS },
+    { u8"12.1", { 2019, Month::MAY }, Vfg::TEXT },
     { u8"13.0", { 2020, Month::MAR }, NO_FLAGS },
     { {},       { 2020, Month::SEP }, NO_FLAGS, u8"13.1" },
     { u8"14.0", { 2021, Month::SEP }, NO_FLAGS },
     { u8"15.0", { 2022, Month::SEP }, NO_FLAGS },
-    { u8"15.1" VER_BETA, { 2023, Month::SEP }, NO_FLAGS },
+    { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT | Vfg::BETA },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
@@ -1661,6 +1658,7 @@ void uc::completeData()
             }
         }
 
+        // Check alphabetic key
         if (v.alphaKey.subKey == 0) {
             if (v.ecScript != EcScript::NONE
                     && v.alphaKey.ecScript == v.ecScript) { // Actual script
@@ -1669,6 +1667,9 @@ void uc::completeData()
                 v.alphaKey.script().mainBlock = &v;
             }
         }
+
+        // Check version
+        ++v.version().stats.blocks.nNew;
     }
 
     // Check versions
@@ -2555,13 +2556,22 @@ const uc::Version& uc::LibNode::emojiPrevVersion() const
 }
 
 
+#define TEXT_BETA u8"\u00A0" "β"
+
 std::u8string uc::Version::locName() const
 {
+    std::u8string r;
     if (!unicodeName.empty()) {
-        return std::u8string{unicodeName};
+        r = unicodeName;
+        if (flags.have(Vfg::BETA))
+            r += TEXT_BETA;
     } else {
-        return loc::get("Prob.Bullet.EmojiV").arg(emojiName);
+        r = emojiName;
+        if (flags.have(Vfg::BETA))
+            r += TEXT_BETA;
+        r = loc::get("Prob.Bullet.EmojiV").arg(r);
     }
+    return r;
 }
 
 
@@ -2581,4 +2591,22 @@ std::u8string uc::Version::link(std::u8string_view prefix) const
     } else {
         return str::cat(prefix, u8'e', emojiName);
     }
+}
+
+
+std::u8string uc::Version::locLongName() const
+{
+    std::u8string r;
+    const char* key;
+    if (!unicodeName.empty()) {
+        r = unicodeName;
+        key = "Prop.Head.Uc";
+    } else {
+        r = emojiName;
+        key = "Prop.Head.Em";
+    }
+    if (flags.have(Vfg::BETA))
+        r += TEXT_BETA;
+    r = loc::get(key).arg(r);
+    return r;
 }

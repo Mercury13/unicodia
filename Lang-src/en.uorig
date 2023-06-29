@@ -224,6 +224,9 @@
     <text id="EqEm">
      <orig>=emoji {1}, </orig>
     </text>
+    <text id="NewBlk">
+     <orig>New blocks</orig>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -2225,7 +2228,7 @@
    </group>
    <group id="10190">
     <text id="Name">
-     <orig>Ancient Symbols</orig>
+     <orig>Ancient symbols</orig>
     </text>
     <text id="Text">
      <orig>Roman symbols for money, weights and measures. Also Greek abbreviation “cross” (less often “Christ”).</orig>
@@ -7681,7 +7684,7 @@
     <orig>Tofu statistics</orig>
    </text>
    <text id="Version">
-    <orig>Version &lt;b&gt;{1}&lt;/b&gt; (Unicode {2})</orig>
+    <orig>Version &lt;b&gt;{1}&lt;/b&gt; ({2})</orig>
    </text>
    <text id="MyName">
     <orig>Mikhail Merkuryev</orig>
@@ -8302,6 +8305,16 @@
       <p />
       <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
      </orig>
+    </text>
+   </group>
+   <group id="12.1">
+    <text id="Text">
+     <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>
+    </text>
+   </group>
+   <group id="15.1">
+    <text id="Text">
+     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
     </text>
    </group>
   </group>
