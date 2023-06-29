@@ -80,7 +80,7 @@ namespace {
     class PopLink : public mywiki::Link
     {
     public:
-        static_assert(!std::is_pointer<Thing>::value);
+        static_assert(!std::is_pointer<Thing>::value, "Need object rather than pointer");
         const Thing& thing;
         PopLink(const Thing& aThing) : thing(aThing) {}
         void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
