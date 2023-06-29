@@ -675,7 +675,7 @@
      <orig>New characters</orig>
     </text>
     <text id="Transient">
-     <orig>Characters that existed in this version only</orig>
+     <orig>Characters that would be deleted later</orig>
     </text>
     <text id="TotalChar">
      <orig>Total characters, incl. [[pt:control|control]]</orig>

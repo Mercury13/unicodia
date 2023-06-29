@@ -1507,9 +1507,11 @@ FontList FmMain::allSysFonts(
 
 
 void FmMain::linkClicked(
-        std::string_view link, QWidget* widget, TinyOpt<QRect> rect)
+        mywiki::Gui& gui, std::string_view link, QWidget* widget,
+        TinyOpt<QRect> rect)
 {
-    mywiki::go(widget, rect, *this, link);
+    /// @todo [urgent] Reconstruct rel rectangle here
+    mywiki::go(widget, rect, gui, link);
 }
 
 
@@ -1523,14 +1525,15 @@ void FmMain::anchorClicked(const QUrl &arg)
     // so improvise somehow
     rect.setLeft(rect.left() - 80);
 
-    linkClicked(str, snd, rect);
+    linkClicked(*this, str, snd, rect);
 }
 
 
 void FmMain::popupLinkActivated(const QString& link)
 {
+    /// @todo [urgent] Use other GUI object for popup
     // nullptr & TINY_NULL = last position
-    linkClicked(link.toStdString(), nullptr, TINY_NULL);
+    linkClicked(*this, link.toStdString(), nullptr, TINY_NULL);
 }
 
 

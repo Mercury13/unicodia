@@ -354,6 +354,7 @@ private:
     void showCp(MaybeChar ch);
     void forceShowCp(MaybeChar ch);
     void linkClicked(
+            mywiki::Gui& gui,
             std::string_view link,
             QWidget* widget,
             TinyOpt<QRect> rect);
