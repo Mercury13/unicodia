@@ -215,6 +215,15 @@
     <text id="Comp">
      <orig>String content</orig>
     </text>
+    <text id="Uc">
+     <orig>Unicode {1}</orig>
+    </text>
+    <text id="Em">
+     <orig>Emoji {1}</orig>
+    </text>
+    <text id="EqEm">
+     <orig>=emoji {1}, </orig>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -661,6 +670,15 @@
     </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
+    </text>
+    <text id="NewChar">
+     <orig>New characters</orig>
+    </text>
+    <text id="Transient">
+     <orig>Characters that existed in this version only</orig>
+    </text>
+    <text id="TotalChar">
+     <orig>Total characters, incl. [[pt:control|control]]</orig>
     </text>
    </group>
    <group id="Os">
@@ -8269,6 +8287,21 @@
     </text>
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
+    </text>
+   </group>
+  </group>
+  <group id="Version">
+   <group id="1.1">
+    <text id="Text">
+     <orig>
+      <p>The first version that became ISO standard, and the first existing in Unicode bases. Bases of 1.0 and 1.0.1 are reconstructed.</p>
+      <p />
+      <p>Version 1.0 (October 1991, ≈7200 characters) added most scripts of 1.1, including [[ps:Tibt|Tibetan]] deleted in 1.1, and 2350 [[ps:Hang|Hangul]] syllables that would be deleted in [[pv:2.0|2.0]].</p>
+      <p />
+      <p>Version 1.0.1 (June 1992, ≈28,300 characters) added 20,902 [[ps:Hani|CJK ideographs]], and deleted 6 characters.</p>
+      <p />
+      <p>Version 1.1 added 4306 more Hangul characters, and deleted Tibetan.</p>
+     </orig>
     </text>
    </group>
   </group>

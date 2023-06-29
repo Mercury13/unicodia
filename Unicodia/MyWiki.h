@@ -78,6 +78,7 @@ namespace mywiki
     std::unique_ptr<Link> parsePopScriptLink(std::string_view target);
     std::unique_ptr<Link> parsePopTermLink(std::string_view target);
     std::unique_ptr<Link> parsePopIBlockLink(std::string_view target);
+    std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
@@ -87,9 +88,11 @@ namespace mywiki
     QString buildHtml(const uc::Cp& cp);
     QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
     QString buildHtml(const uc::LibNode& node);
+    QString buildHtml(const uc::Version& version);
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");
+    void appendCopyable(QString& text, unsigned x, std::string_view clazz="copy");
     void appendCopyable2(QString& text,
                          const QString& full,
                          const QString& shrt,

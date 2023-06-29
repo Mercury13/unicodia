@@ -610,17 +610,43 @@ namespace uc {
         Month month;
     };
 
+    enum class Vfg {
+        TEXT = 1,
+    };
+    DEFINE_ENUM_OPS(Vfg)
+
     struct Version
     {
         std::u8string_view unicodeName;
         CoarseDate date;
+        Flags<Vfg> flags;
         std::u8string_view emojiName {};
 
-        //unsigned nNewChars = 0;
+        mutable struct Stats {
+            struct Chars {
+                unsigned nNew = 0;
+                unsigned nTransient = 0;
+                unsigned nTotal = 0;
+
+            } chars;
+            struct Emoji {
+                unsigned nTotal = 0;
+                struct Nw {
+                    unsigned nThisUnicode = 0;
+                    unsigned nLastUnicode = 0;
+                    unsigned nOldUnicode = 0;
+                    unsigned nSequences = 0;
+                } nw;
+            } emoji;
+        } stats {};
+
         std::u8string locName() const;
         std::u8string techName() const;
+        std::u8string link(std::u8string_view prefix) const;
+        bool isFirst() const { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }
     };
     extern const Version versionInfo[];
+    const Version* findVersion(std::string_view id);
 
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;

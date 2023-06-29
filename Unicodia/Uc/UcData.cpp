@@ -99,39 +99,39 @@ static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptTyp
 #define VER_BETA "\u00A0" "β"
 
 const uc::Version uc::versionInfo[] {
-    { {},      { 0000, Month::NUL } },
+    { {},       { 0000, Month::NUL }, NO_FLAGS },
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
-    { u8"1.1",  { 1993, Month::JUN } },
-    { u8"2.0",  { 1996, Month::JUL } },
-    { u8"2.1",  { 1998, Month::MAY } },
-    { u8"3.0",  { 1999, Month::SEP } },
-    { u8"3.1",  { 2001, Month::MAR } },
-    { u8"3.2",  { 2002, Month::MAR } },
-    { u8"4.0",  { 2003, Month::APR } },
-    { u8"4.1",  { 2005, Month::MAR } },
-    { u8"5.0",  { 2006, Month::JUL } },
-    { u8"5.1",  { 2008, Month::APR } },
-    { u8"5.2",  { 2009, Month::OCT } },
-    { u8"6.0",  { 2010, Month::OCT }, u8"0.6" },
-    { u8"6.1",  { 2012, Month::JAN } },
-    { u8"6.2",  { 2012, Month::SEP } },
-    { u8"6.3",  { 2013, Month::SEP } },
-    { u8"7.0",  { 2014, Month::JUN }, u8"0.7" },
-    { u8"8.0",  { 2015, Month::JUN } },
-    { {},       { 2015, Month::AUG }, u8"1.0" },
-    { {},       { 2015, Month::NOV }, u8"2.0" },
-    { u8"9.0",  { 2016, Month::JUN }, u8"3.0" },
-    { {},       { 2016, Month::NOV }, u8"4.0" },
-    { u8"10.0", { 2017, Month::JUN }, u8"5.0" },
-    { u8"11.0", { 2018, Month::JUN } },
-    { u8"12.0", { 2019, Month::MAR } },
-    { u8"12.1", { 2019, Month::MAY } },
-    { u8"13.0", { 2020, Month::MAR } },
-    { {},       { 2020, Month::SEP }, u8"13.1" },
-    { u8"14.0", { 2021, Month::SEP } },
-    { u8"15.0", { 2022, Month::SEP } },
-    { u8"15.1" VER_BETA, { 2023, Month::SEP } },
+    { u8"1.1",  { 1993, Month::JUN }, Vfg::TEXT },
+    { u8"2.0",  { 1996, Month::JUL }, NO_FLAGS },
+    { u8"2.1",  { 1998, Month::MAY }, NO_FLAGS },
+    { u8"3.0",  { 1999, Month::SEP }, NO_FLAGS },
+    { u8"3.1",  { 2001, Month::MAR }, NO_FLAGS },
+    { u8"3.2",  { 2002, Month::MAR }, NO_FLAGS },
+    { u8"4.0",  { 2003, Month::APR }, NO_FLAGS },
+    { u8"4.1",  { 2005, Month::MAR }, NO_FLAGS },
+    { u8"5.0",  { 2006, Month::JUL }, NO_FLAGS },
+    { u8"5.1",  { 2008, Month::APR }, NO_FLAGS },
+    { u8"5.2",  { 2009, Month::OCT }, NO_FLAGS },
+    { u8"6.0",  { 2010, Month::OCT }, NO_FLAGS, u8"0.6" },
+    { u8"6.1",  { 2012, Month::JAN }, NO_FLAGS },
+    { u8"6.2",  { 2012, Month::SEP }, NO_FLAGS },
+    { u8"6.3",  { 2013, Month::SEP }, NO_FLAGS },
+    { u8"7.0",  { 2014, Month::JUN }, NO_FLAGS, u8"0.7" },
+    { u8"8.0",  { 2015, Month::JUN }, NO_FLAGS },
+    { {},       { 2015, Month::AUG }, NO_FLAGS, u8"1.0" },
+    { {},       { 2015, Month::NOV }, NO_FLAGS, u8"2.0" },
+    { u8"9.0",  { 2016, Month::JUN }, NO_FLAGS, u8"3.0" },
+    { {},       { 2016, Month::NOV }, NO_FLAGS, u8"4.0" },
+    { u8"10.0", { 2017, Month::JUN }, NO_FLAGS, u8"5.0" },
+    { u8"11.0", { 2018, Month::JUN }, NO_FLAGS },
+    { u8"12.0", { 2019, Month::MAR }, NO_FLAGS },
+    { u8"12.1", { 2019, Month::MAY }, NO_FLAGS },
+    { u8"13.0", { 2020, Month::MAR }, NO_FLAGS },
+    { {},       { 2020, Month::SEP }, NO_FLAGS, u8"13.1" },
+    { u8"14.0", { 2021, Month::SEP }, NO_FLAGS },
+    { u8"15.0", { 2022, Month::SEP }, NO_FLAGS },
+    { u8"15.1" VER_BETA, { 2023, Month::SEP }, NO_FLAGS },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 
@@ -1638,6 +1638,8 @@ void uc::completeData()
         block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
         // Lookup table
         cpsByCode[cp.subj.val()] = &cp;
+        // Version
+        ++cp.version().stats.chars.nNew;
     }
 
     // Check blocks — they should have at least one char
@@ -1667,6 +1669,14 @@ void uc::completeData()
                 v.alphaKey.script().mainBlock = &v;
             }
         }
+    }
+
+    // Check versions
+    unsigned nChars = 0;
+    uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)].stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
+    for (auto& v : versionInfo) {
+        nChars += v.stats.chars.nNew;
+        v.stats.chars.nTotal = nChars + v.stats.chars.nTransient;
     }
 
     // Save term INI
@@ -2282,6 +2292,31 @@ const uc::Term* uc::findTerm(std::string_view id)
 }
 
 
+const uc::Version* uc::findVersion(std::string_view id)
+{
+    auto id1 = str::toU8sv(id);
+    if (id1.length() < 2)
+        return nullptr;
+    if (id1.starts_with(u8'e')) {
+        // Find emoji
+        id1 = id1.substr(1);
+        for (auto& v : versionInfo) {
+            if (v.emojiName == id1) {
+                return &v;
+            }
+        }
+    } else {
+        // Find Unicode
+        for (auto& v : versionInfo) {
+            if (v.unicodeName == id1) {
+                return &v;
+            }
+        }
+    }
+    return nullptr;
+}
+
+
 QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
 {
     auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
@@ -2536,5 +2571,14 @@ std::u8string uc::Version::techName() const
         return str::cat(u8"v", unicodeName);
     } else {
         return str::cat(u8"e", emojiName);
+    }
+}
+
+std::u8string uc::Version::link(std::u8string_view prefix) const
+{
+    if (!unicodeName.empty()) {
+        return str::cat(prefix, unicodeName);
+    } else {
+        return str::cat(prefix, u8'e', emojiName);
     }
 }

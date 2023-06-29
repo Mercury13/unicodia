@@ -353,7 +353,10 @@ private:
     void initAbout();
     void showCp(MaybeChar ch);
     void forceShowCp(MaybeChar ch);
-    void linkClicked(std::string_view link, QWidget* widget, TinyOpt<QRect> rect);
+    void linkClicked(
+            std::string_view link,
+            QWidget* widget,
+            TinyOpt<QRect> rect);
     template <SelectMode mode> void selectChar(char32_t code);
     void initTerms();
     void translateTerms();

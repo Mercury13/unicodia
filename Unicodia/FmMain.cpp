@@ -1529,8 +1529,8 @@ void FmMain::anchorClicked(const QUrl &arg)
 
 void FmMain::popupLinkActivated(const QString& link)
 {
-    // nullptr & {} = last position
-    linkClicked(link.toStdString(), nullptr, {});
+    // nullptr & TINY_NULL = last position
+    linkClicked(link.toStdString(), nullptr, TINY_NULL);
 }
 
 
