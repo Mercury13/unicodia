@@ -1850,7 +1850,7 @@ QString mywiki::buildHtml(const uc::Version& version)
         text += "</b><p>";
         str::QSep sp(text, "<br>");
         for (auto& blk : uc::allBlocks()) {
-            if (&version == &blk.version()) {
+            if (version.stats.thisEcVersion == blk.ecVersion) {
                 sp.sep();
                 snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
                 text += "<a class='popup' href='";

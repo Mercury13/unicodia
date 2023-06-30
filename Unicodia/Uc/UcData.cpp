@@ -1671,6 +1671,20 @@ void uc::completeData()
         ++v.version().stats.blocks.nNew;
     }
 
+    // Find associated version for every version
+    EcVersion lastVersion = EcVersion::NONE;
+    for (EcVersion i = EcVersion::FIRST_MEANING; i < EcVersion::NN; ++i) {
+        auto& v = versionInfo[static_cast<int>(i)];
+        v.stats.thisEcVersion = i;
+        if (v.stats.chars.nNew != 0) {
+            lastVersion = i;
+        } else {
+            v.stats.assocEcVersion = lastVersion;
+        }
+    }
+
+    /// @todo [urgent] Check emoji
+
     // Check versions
     unsigned nChars = 0;
     uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)].stats.chars.nTransient = 4306 + 2350;  // Hangul syllables

@@ -683,6 +683,33 @@
     <text id="TotalChar">
      <orig>Total characters, incl. [[pt:control|control]]</orig>
     </text>
+    <text id="NewEm">
+     <orig>New emoji</orig>
+    </text>
+    <text id="NewEm1">
+     <orig>…Single-character and VS-16</orig>
+    </text>
+    <text id="NewEm1This">
+     <orig>……from this Unicode</orig>
+    </text>
+    <text id="NewEm1Last">
+     <orig>……from last Unicode</orig>
+    </text>
+    <text id="NewEm1Prev">
+     <orig>……From previous versions</orig>
+    </text>
+    <text id="NewEmSkin">
+     <orig>…Skintone sequences</orig>
+    </text>
+    <text id="NewEmMulti">
+     <orig>…Multiracial sequences</orig>
+    </text>
+    <text id="NewEmOther">
+     <orig>…Other sequences</orig>
+    </text>
+    <text id="TotalEm">
+     <orig>Total emoji</orig>
+    </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>

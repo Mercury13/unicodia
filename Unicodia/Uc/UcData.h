@@ -643,6 +643,9 @@ namespace uc {
             struct Blocks {
                 unsigned nNew = 0;
             } blocks;
+            /// [+] for emoji-only version — last version where characters were added
+            EcVersion thisEcVersion = EcVersion::NONE;
+            EcVersion assocEcVersion = EcVersion::NONE;
         } stats {};
 
         std::u8string locName() const;

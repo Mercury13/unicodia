@@ -293,6 +293,12 @@ namespace uc {
         E15_0 = V_15_0,
         E15_1 = V_15_1,
     };
+    inline EcVersion& operator ++ (EcVersion& x) noexcept
+    {
+        static_assert(sizeof(EcVersion) == sizeof(unsigned char), "Strange underlying type");
+        ++reinterpret_cast<unsigned char&>(x);
+        return x;
+    }
 
     enum class EcBidiStrength
     {
