@@ -11,6 +11,7 @@
 // Misc
 #include "u_TypedFlags.h"
 #include "u_DumbSp.h"
+#include "u_Array.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
