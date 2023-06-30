@@ -696,7 +696,7 @@
      <orig>……from last Unicode</orig>
     </text>
     <text id="NewEm1Prev">
-     <orig>……From previous versions</orig>
+     <orig>……from previous versions</orig>
     </text>
     <text id="NewEmSkin">
      <orig>…Skintone sequences</orig>
@@ -4622,7 +4622,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Lao script was standardized in 14th century. Like [[ps:Thai|Thai]], originated from [[ps:Khmr|Khmer]]. After reform conducted by communists in 1960 inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules of writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. Lao language is tonal, and we see here both vowel mark of three (!) characters and tone above {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] charcters for historical reasons.</p>
+      <p>Lao script was standardized in 14th century. Like [[ps:Thai|Thai]], originated from [[ps:Khmr|Khmer]]. After reform conducted by communists in 1960 inherent vowel and [[pt:virama|virama]] disappeared, and Lao retained the last sign of abugida{{-}}complex rules of writing vowels: {{sm|ເກົ້າ}} ''kao'' “nine”. Lao language is tonal, and we see here both vowel mark of three (!) characters and tone above {{sm|ກ}} consonant. Many vowel marks are ordinary [[pt:spacing|spacing]] characters for historical reasons.</p>
       <p />
       <p>There are no spaces between words. Like in Thai, letters are [[pt:acrophonic|acrophonic]], that is named with suitable words: {{sm|ບ}} is “bo-be” or just “be” (goat). Letter {{sm|ຣ}} (r) became silent or turned to “L” and disappeared from orthography, remaining for foreign names only.</p>
       <p />
@@ -6128,7 +6128,7 @@
       <p />
       <p>Tablets were preserved for several millennia in deserts of Persia and Iraq, and Persian cuneiform had been deciphered by mid 19th century. It became a key to Sumerian. All known languages had been deciphered by 1900.</p>
       <p />
-      <p>“Cuneiform” block approximately corresponds to cuneiform of Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier charcters ≈2900{{_}}BC.</p>
+      <p>“Cuneiform” block approximately corresponds to cuneiform of Third Dynasty of Ur (≈2100{{_}}BC), and later forms (Old and New Assyrian) are [[pt:unification|unified]] as variants. “Early dynastic cuneiform” block describes earlier characters ≈2900{{_}}BC.</p>
      </orig>
     </text>
    </group>
@@ -6421,7 +6421,7 @@
      <orig>
       <p>Character like circumfex ^ that look like [[pt:combining|combining]] marks, but have no their special properties. And some other characters.</p>
       <p />
-      <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type accent in the same [[pt:mono|charcter cell]]. The glyph was drawn in such a fashion that the same character is suitable for both apostrophe and accent.</p>
+      <p>Many of these characters originate from typewriters: to type Á, you move the carriage one step back and type accent in the same [[pt:mono|character cell]]. The glyph was drawn in such a fashion that the same character is suitable for both apostrophe and accent.</p>
      </orig>
     </text>
    </group>
@@ -7049,7 +7049,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put charcters in visual order.</p>
+      <p>Unicode stores characters in logical order that roughly corresponds to order of pronunciation or typing via keyboard. This order does not{{_}}correspond to on-screen progression order, and algorithms of [[pt:bidi|bi-direcitional text]] are designed to put characters in visual order.</p>
       <p />
       <p>[[pt:combining|Combining marks]] are stored after their characters.</p>
       <p />
