@@ -1137,7 +1137,6 @@ namespace {
         char32_t firstCp;
 
     };
-    inline bool operator < (const OldCompSpan& x, char32_t y) { return (x.firstCp < y); }
     inline bool operator < (char32_t x, const OldCompSpan& y) { return (x < y.firstCp); }
 
     constinit const OldCompSpan oldCompSpans[] { // Should go in increasing order
