@@ -1473,7 +1473,6 @@ void FmMain::linkClicked(
         mywiki::Gui& gui, std::string_view link, QWidget* widget,
         TinyOpt<QRect> rect)
 {
-    /// @todo [urgent] Reconstruct rel rectangle here
     mywiki::go(widget, rect, gui, link);
 }
 
