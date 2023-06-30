@@ -713,6 +713,7 @@ namespace uc {
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise rather than clockwise
+        HIDE_STYLE      = 1<<10,    ///< [+] Hide this block from style’s list
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
