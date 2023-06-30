@@ -9,9 +9,6 @@
 // Qt
 #include <QString>
 
-// Libs
-#include "u_Array.h"
-
 // Project-local
 #include "UcFlags.h"
 #include "UcAutoCount.h"
