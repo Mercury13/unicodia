@@ -12004,6 +12004,12 @@
      </transl>
     </text>
    </group>
+   <group id="2.1">
+    <text id="Text">
+     <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
+     <transl>Додані євро '''€''' та символ заміни ''крокозябри'' '''�'''.</transl>
+    </text>
+   </group>
    <group id="6.2">
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>

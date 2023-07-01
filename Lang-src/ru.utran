@@ -12003,6 +12003,13 @@
      </transl>
     </text>
    </group>
+   <group id="2.1">
+    <text id="Text">
+     <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
+     <known-orig>Added euro '''€''' and replacement character '''�'''.</known-orig>
+     <transl>Добавлены евро '''€''' и символ замены ''крокозябры'' '''�'''.</transl>
+    </text>
+   </group>
    <group id="6.2">
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>

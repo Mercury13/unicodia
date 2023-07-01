@@ -98,13 +98,13 @@ constinit const uc::ScriptType uc::scriptTypeInfo[] {
 };
 static_assert (std::size(uc::scriptTypeInfo) == static_cast<int>(uc::EcScriptType::NN));
 
-const uc::Version uc::versionInfo[] {
+constinit const uc::Version uc::versionInfo[] {
     { {},       { 0000, Month::NUL }, NO_FLAGS },
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
     { u8"1.1",  { 1993, Month::JUN }, Vfg::TEXT },
     { u8"2.0",  { 1996, Month::JUL }, NO_FLAGS },
-    { u8"2.1",  { 1998, Month::MAY }, NO_FLAGS },
+    { u8"2.1",  { 1998, Month::MAY }, Vfg::TEXT },
     { u8"3.0",  { 1999, Month::SEP }, NO_FLAGS },
     { u8"3.1",  { 2001, Month::MAR }, NO_FLAGS },
     { u8"3.2",  { 2002, Month::MAR }, NO_FLAGS },
