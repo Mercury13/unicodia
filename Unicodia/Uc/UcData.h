@@ -638,9 +638,8 @@ namespace uc {
                 struct Nw {
                     struct SingleChar {
                         unsigned nThisUnicode = 0;
-                        unsigned nLastUnicode = 0;
                         unsigned nOldUnicode = 0;
-                        unsigned nTotal() const noexcept { return nThisUnicode + nLastUnicode + nOldUnicode; }
+                        unsigned nTotal() const noexcept { return nThisUnicode + nOldUnicode; }
                     } singleChar;
                     struct Seq {
                         unsigned nRacial = 0;
@@ -657,8 +656,6 @@ namespace uc {
                 unsigned nNew = 0;
             } blocks;
             EcVersion thisEcVersion = EcVersion::NONE;
-            /// for emoji-only UC version — last version where characters were added
-            ///   otherwise NONE
             EcVersion assocEcVersion = EcVersion::NONE;
         } stats {};
 

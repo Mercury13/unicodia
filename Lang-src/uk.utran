@@ -876,10 +876,6 @@
      <orig>……from this Unicode</orig>
      <transl>……з цього Юнікоду</transl>
     </text>
-    <text id="NewEm1Last">
-     <orig>……from last Unicode</orig>
-     <transl>……з останнього Юнікоду</transl>
-    </text>
     <text id="NewEm1Prev">
      <orig>……from previous versions</orig>
      <transl>……з попередніх версій</transl>

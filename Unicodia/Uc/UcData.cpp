@@ -1640,7 +1640,7 @@ namespace {
         }
     }
 
-    enum class EmojiVersion { THIS, LAST, OLD };
+    enum class EmojiVersion { THIS, OLD };
 
     EmojiVersion classifyEmojiVersion(char32_t c, const uc::Version& v)
     {
@@ -1665,8 +1665,6 @@ namespace {
                 switch (classifyEmojiVersion(node.value[0], version)) {
                 case EmojiVersion::THIS:
                     ++version.stats.emoji.nw.singleChar.nThisUnicode; break;
-                case EmojiVersion::LAST:
-                    ++version.stats.emoji.nw.singleChar.nLastUnicode; break;
                 case EmojiVersion::OLD:
                     ++version.stats.emoji.nw.singleChar.nOldUnicode; break;
                 }

@@ -1874,7 +1874,6 @@ QString mywiki::buildHtml(const uc::Version& version)
                 // Single-char
                 if (appendValueIf(sp, "Prop.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
                     appendValueIf(sp, "Prop.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
-                    appendValueIf(sp, "Prop.Bullet.NewEm1Last", version.stats.emoji.nw.singleChar.nLastUnicode);
                     appendValueIf(sp, "Prop.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
                 }
                 appendValueIf(sp, "Prop.Bullet.NewEmSkin",  version.stats.emoji.nw.seq.nRacial);

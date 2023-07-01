@@ -875,10 +875,6 @@
      <orig>……from this Unicode</orig>
      <transl>……из этого Юникода</transl>
     </text>
-    <text id="NewEm1Last">
-     <orig>……from last Unicode</orig>
-     <transl>……из последнего Юникода</transl>
-    </text>
     <text id="NewEm1Prev">
      <orig>……from previous versions</orig>
      <transl>……из предыдущих версий</transl>
