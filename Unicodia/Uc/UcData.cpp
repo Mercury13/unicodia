@@ -133,6 +133,7 @@ const uc::Version uc::versionInfo[] {
     { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT | Vfg::BETA },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
+Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
 
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
     { UpCategory::CONTROL,      "Cc",   Graphical::NO  },
@@ -2675,6 +2676,23 @@ std::u8string uc::Version::locName() const
         if (flags.have(Vfg::BETA))
             r += TEXT_BETA;
         r = loc::get("Prob.Bullet.EmojiV").arg(r);
+    }
+    return r;
+}
+
+
+std::u8string uc::Version::termName() const
+{
+    std::u8string r;
+    if (!unicodeName.empty()) {
+        r = unicodeName;
+        if (flags.have(Vfg::BETA))
+            r += TEXT_BETA;
+    } else {
+        r = emojiName;
+        if (flags.have(Vfg::BETA))
+            r += TEXT_BETA;
+        r = loc::get("TermCat.Ev").arg(r);
     }
     return r;
 }

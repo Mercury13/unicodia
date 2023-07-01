@@ -1094,6 +1094,23 @@ void FmMain::translateTerms()
             str::append(text, term.engName);
         }
     }
+    // Versions
+    str::append(text, "<h1>");
+    str::append(text, loc::get("TermCat.Vers"));
+    str::append(text, "</h1><p>");
+    {
+        str::QSep sp(text, "&nbsp;· ");
+        for (auto& v : uc::allVersions()) {
+            if (v.date) {
+                sp.sep();
+                str::append(text, "<a class='popup' href='");
+                str::append(text, v.link(u8"pv:"));
+                str::append(text, "'>");
+                str::append(text, v.termName());
+                str::append(text, "</a>");
+            }
+        }
+    }
 
     ui->vwTerms->setText(text);
 }

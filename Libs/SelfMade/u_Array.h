@@ -250,13 +250,16 @@ struct Buf1d
     size_t _size;
     Elem* _ptr;
 
-    Elem* buffer() const { return _ptr; }
-    size_t size() const { return _size; }
+    Elem* buffer() const noexcept { return _ptr; }
+    size_t size() const noexcept { return _size; }
 
-    constexpr Buf1d() : _size(0), _ptr(NULL) {}
-    constexpr Buf1d(size_t aSize, Elem* aBuffer) : _size(aSize), _ptr(aBuffer) {}
-    void borrow(size_t aSize, Elem *aPtr)
+    constexpr Buf1d() noexcept : _size(0), _ptr(NULL) {}
+    constexpr Buf1d(size_t aSize, Elem* aBuffer) noexcept : _size(aSize), _ptr(aBuffer) {}
+    void borrow(size_t aSize, Elem *aPtr) noexcept
         { _size = aSize;  _ptr = aPtr;  }
+
+    template<size_t N>
+    constexpr Buf1d(Elem(&x)[N]) noexcept : _size(N), _ptr(x) {}
 
     //------------------------------------------------------------------------//
     ///  Index operator

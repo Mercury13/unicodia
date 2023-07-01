@@ -665,13 +665,16 @@ namespace uc {
         std::u8string locName() const;
         std::u8string locLongName() const;
         std::u8string techName() const;
+        /// @return  name in Terms
+        std::u8string termName() const;
         std::u8string link(std::u8string_view prefix) const;
         bool isFirst() const noexcept { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }
         const CoarseDate& emojiDate() const noexcept
             { return otherEmojiDate ? otherEmojiDate : date; }
     };
     extern const Version versionInfo[];
-    const Version* findVersion(std::string_view id);
+    Buf1d<const Version> allVersions();
+    const Version* findVersion(std::string_view id);    
 
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;

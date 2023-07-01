@@ -7641,6 +7641,13 @@
    <text id="Misc">
     <orig>Miscellaneous</orig>
    </text>
+   <text id="Vers">
+    <orig>Versions</orig>
+   </text>
+   <text id="Ev">
+    <orig>e{1}</orig>
+    <au-cmt>Emoji version</au-cmt>
+   </text>
   </group>
   <group id="GlyphVar">
    <group id="Glag">
