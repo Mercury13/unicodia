@@ -1647,8 +1647,6 @@ namespace {
         if (auto cp = uc::cpsByCode[c]) {
             if (cp->ecVersion == v.stats.thisEcVersion)
                 return EmojiVersion::THIS;
-            if (cp->ecVersion == v.stats.assocEcVersion)
-                return EmojiVersion::LAST;
         }
         return EmojiVersion::OLD;
     }
@@ -1758,18 +1756,6 @@ void uc::completeData()
 
         // Check version
         ++v.version().stats.blocks.nNew;
-    }
-
-    // Find associated version for every version
-    EcVersion lastVersion = EcVersion::NONE;
-    for (EcVersion i = EcVersion::FIRST_MEANING; i < EcVersion::NN; ++i) {
-        auto& v = versionInfo[static_cast<int>(i)];
-        v.stats.thisEcVersion = i;
-        if (v.stats.chars.nNew != 0) {
-            lastVersion = i;
-        } else {
-            v.stats.assocEcVersion = lastVersion;
-        }
     }
 
     completeEmojiData(1);

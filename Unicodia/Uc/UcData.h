@@ -656,7 +656,6 @@ namespace uc {
                 unsigned nNew = 0;
             } blocks;
             EcVersion thisEcVersion = EcVersion::NONE;
-            EcVersion assocEcVersion = EcVersion::NONE;
         } stats {};
 
         std::u8string locName() const;
