@@ -1758,6 +1758,11 @@ void uc::completeData()
         ++v.version().stats.blocks.nNew;
     }
 
+    // Find associated version for every version
+    for (EcVersion i = EcVersion::FIRST_MEANING; i < EcVersion::NN; ++i) {
+        v.stats.thisEcVersion = i;
+    }
+
     completeEmojiData(1);
 
     // Check versions
