@@ -8348,6 +8348,11 @@
      </orig>
     </text>
    </group>
+   <group id="6.2">
+    <text id="Text">
+     <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
+    </text>
+   </group>
    <group id="12.1">
     <text id="Text">
      <orig>Emergency release of Unicode containing one character 32FF, Reiwa era of Japanese traditional calendar. When in 2016 old Emperor Akihito decided to abdicate, a new code point was reserved for his heir. When he finally abdicated on 30 April 2019, the character was quickly encoded.</orig>

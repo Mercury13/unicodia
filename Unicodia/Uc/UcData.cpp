@@ -115,7 +115,7 @@ const uc::Version uc::versionInfo[] {
     { u8"5.2",  { 2009, Month::OCT }, NO_FLAGS },
     { u8"6.0",  { 2010, Month::OCT }, NO_FLAGS, u8"0.6" },
     { u8"6.1",  { 2012, Month::JAN }, NO_FLAGS },
-    { u8"6.2",  { 2012, Month::SEP }, NO_FLAGS },
+    { u8"6.2",  { 2012, Month::SEP }, Vfg::TEXT },
     { u8"6.3",  { 2013, Month::SEP }, NO_FLAGS },
     { u8"7.0",  { 2014, Month::JUN }, NO_FLAGS, u8"0.7" },
     { u8"8.0",  { 2015, Month::JUN }, NO_FLAGS, u8"1.0", { 2015, Month::AUG } },

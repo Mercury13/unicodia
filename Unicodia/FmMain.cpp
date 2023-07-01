@@ -1099,15 +1099,21 @@ void FmMain::translateTerms()
     str::append(text, loc::get("TermCat.Vers"));
     str::append(text, "</h1><p>");
     {
+        unsigned n = 0;
         str::QSep sp(text, "&nbsp;· ");
         for (auto& v : uc::allVersions()) {
             if (v.date) {
-                sp.sep();
-                str::append(text, "<a class='popup' href='");
+                if (n != 0 && n % 10 == 0) {
+                    text += "<p>";
+                } else {
+                    sp.sep();
+                }
+                str::append(text, "<b><a class='popup' href='");
                 str::append(text, v.link(u8"pv:"));
                 str::append(text, "'>");
                 str::append(text, v.termName());
-                str::append(text, "</a>");
+                str::append(text, "</a></b>");
+                ++n;
             }
         }
     }
