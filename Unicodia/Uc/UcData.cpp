@@ -1601,7 +1601,13 @@ namespace {
                         x, cache, 'n', escape::Spaces::YES, Enquote::NO));
     }
 
-    enum class EmojiClass { NONE, SINGLE_CHAR, SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_OTHER };
+    enum class EmojiClass {
+        NONE,
+        SINGLE_CHAR,    ///< incl. VS16
+        SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_RIGHT_RACIAL,
+        SEQ_OTHER_ZWJ,
+        SEQ_FLAG,   ///< National flags, like [U][A]
+        SEQ_OTHER_NONZWJ };
 
     EmojiClass classifyEmoji(std::u32string_view x)
     {
@@ -1613,13 +1619,16 @@ namespace {
         case 2:
             if (x[1] == VS16)
                 return EmojiClass::SINGLE_CHAR;
+            if (x[0] >= FLAG_A && x[0] <= FLAG_Z)
+                return EmojiClass::SEQ_FLAG;
             break;
         default: ;
         }
 
-        size_t nSkin = 0;
+        size_t nSkin = 0, nZwj = 0;
         for (auto c : x) {
             switch (c) {
+            case ZWJ:  ++nZwj; break;
             case SKIN1:
             case SKIN2:
             case SKIN3:
@@ -1630,10 +1639,12 @@ namespace {
         }
         switch (nSkin) {
         case 0:
-            if (x.length() > 3 && x.ends_with(U32_RIGHT_ARROW_VS16))
+            if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
                 return EmojiClass::SEQ_RIGHT;
-            return EmojiClass::SEQ_OTHER;
+            return (nZwj > 0) ? EmojiClass::SEQ_OTHER_ZWJ : EmojiClass::SEQ_OTHER_NONZWJ;
         case 1:
+            if (x.length() > 3 && x.ends_with(U32_ZWJ_RIGHT_ARROW_VS16))
+                return EmojiClass::SEQ_RIGHT_RACIAL;
             return EmojiClass::SEQ_RACIAL;
         default:
             return EmojiClass::SEQ_MULTIRACIAL;
@@ -1674,8 +1685,14 @@ namespace {
             ++version.stats.emoji.nw.seq.nMultiracial; break;
         case EmojiClass::SEQ_RIGHT:
             ++version.stats.emoji.nw.seq.nRightFacing; break;
-        case EmojiClass::SEQ_OTHER:
-            ++version.stats.emoji.nw.seq.nOther; break;
+        case EmojiClass::SEQ_RIGHT_RACIAL:
+            ++version.stats.emoji.nw.seq.nRightFacingRacial; break;
+        case EmojiClass::SEQ_FLAG:
+            ++version.stats.emoji.nw.seq.nFlags; break;
+        case EmojiClass::SEQ_OTHER_ZWJ:
+            ++version.stats.emoji.nw.seq.nOtherZwj; break;
+        case EmojiClass::SEQ_OTHER_NONZWJ:
+            ++version.stats.emoji.nw.seq.nOtherNonZwj; break;
         }
         const auto a = node.iFirstChild;
         const auto b = a + node.nChildren;
@@ -1721,8 +1738,24 @@ void uc::completeData()
         block->ecLastVersion = std::max(block->ecLastVersion, cp.ecVersion);
         // Lookup table
         cpsByCode[cp.subj.val()] = &cp;
+    }
+
+    for (auto& cp : cpInfo) {
         // Version
-        ++cp.version().stats.chars.nNew;
+        auto& ver = cp.version();
+        switch (cp.ecScript) {
+        case EcScript::Hani:
+            ++ver.stats.chars.nw.nHani; break;
+        case EcScript::NONE:
+        case EcScript::Zinh:
+            ++ver.stats.chars.nw.nSymbols; break;
+        default:
+            if (cp.script().ecVersion == cp.ecVersion) {
+                ++ver.stats.chars.nw.nNewScripts;
+            } else {
+                ++ver.stats.chars.nw.nExistingScripts;
+            }
+        }
     }
 
     // Check blocks — they should have at least one char
@@ -1770,7 +1803,7 @@ void uc::completeData()
     unsigned nChars = 0, nEmoji = 0;
     uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)].stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
     for (auto& v : versionInfo) {
-        nChars += v.stats.chars.nNew;
+        nChars += v.stats.chars.nw.nTotal();
         v.stats.chars.nTotal = nChars + v.stats.chars.nTransient;
         nEmoji += v.stats.emoji.nw.nTotal();
         v.stats.emoji.nTotal = nEmoji;

@@ -19,5 +19,7 @@ constexpr char32_t TWO_MEN = 0x1F46C;
 constexpr char32_t TWO_WOMEN = 0x1F46D;
 constexpr char32_t SANTA_CLAUS = 0x1F385;
 constexpr char32_t MRS_CLAUS = 0x1F936;
+constexpr char32_t FLAG_A = 0x1F1E6;
+constexpr char32_t FLAG_Z = 0x1F1FF;
 
-constexpr std::u32string_view U32_RIGHT_ARROW_VS16 = U"\u27A1" "\uFE0F";
+constexpr std::u32string_view U32_ZWJ_RIGHT_ARROW_VS16 = U"\u200D" "\u27A1" "\uFE0F";

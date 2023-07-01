@@ -855,6 +855,22 @@
      <orig>New characters</orig>
      <transl>Новых символов</transl>
     </text>
+    <text id="NewCjk">
+     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <transl>…[[ps:Hani|ККЯ-иероглифов]]</transl>
+    </text>
+    <text id="NewNew">
+     <orig>…from new scripts</orig>
+     <transl>…из новых письменностей</transl>
+    </text>
+    <text id="NewEx">
+     <orig>…from existing scripts</orig>
+     <transl>…из имеющихся письменностей</transl>
+    </text>
+    <text id="NewSym">
+     <orig>…misc. symbols</orig>
+     <transl>…разных знаков</transl>
+    </text>
     <text id="Transient">
      <orig>Characters that would be deleted later</orig>
      <transl>Символов, которые позже удалят</transl>
@@ -891,9 +907,21 @@
      <orig>…Right-facing sequences</orig>
      <transl>…Правосторонних последовательностей</transl>
     </text>
-    <text id="NewEmOther">
-     <orig>…Other sequences</orig>
-     <transl>…Прочих последовательностей</transl>
+    <text id="NewEmRightSkin">
+     <orig>…Right-facing skintone sequences</orig>
+     <transl>…Правосторонних расовых последовательностей</transl>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>…Other ZWJ sequences</orig>
+     <transl>…Других ZWJ-последовательностей</transl>
+    </text>
+    <text id="NewEmFlag">
+     <orig>…National flags</orig>
+     <transl>…Государственных флагов</transl>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>…Other non-ZWJ sequences</orig>
+     <transl>…Других не-ZWJ-последовательностей</transl>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
@@ -12006,7 +12034,6 @@
    <group id="2.1">
     <text id="Text">
      <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
-     <known-orig>Added euro '''€''' and replacement character '''�'''.</known-orig>
      <transl>Добавлены евро '''€''' и символ замены ''крокозябры'' '''�'''.</transl>
     </text>
    </group>

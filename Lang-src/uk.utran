@@ -856,6 +856,22 @@
      <orig>New characters</orig>
      <transl>Нових символів</transl>
     </text>
+    <text id="NewCjk">
+     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+     <transl>…[[ps:Hani|ККЯ-ієрогліфів]]</transl>
+    </text>
+    <text id="NewNew">
+     <orig>…from new scripts</orig>
+     <transl>…з нових писемностей</transl>
+    </text>
+    <text id="NewEx">
+     <orig>…from existing scripts</orig>
+     <transl>…з наявних писемностей</transl>
+    </text>
+    <text id="NewSym">
+     <orig>…misc. symbols</orig>
+     <transl>…різних знаків</transl>
+    </text>
     <text id="Transient">
      <orig>Characters that would be deleted later</orig>
      <transl>Символів, які пізніше видалять</transl>
@@ -892,9 +908,21 @@
      <orig>…Right-facing sequences</orig>
      <transl>…Правосторонніх послідовностей</transl>
     </text>
-    <text id="NewEmOther">
-     <orig>…Other sequences</orig>
-     <transl>…Інших послідовностей</transl>
+    <text id="NewEmRightSkin">
+     <orig>…Right-facing skintone sequences</orig>
+     <transl>…Правосторонніх расових послідовностей</transl>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>…Other ZWJ sequences</orig>
+     <transl>…Інших ZWJ-послідовностей</transl>
+    </text>
+    <text id="NewEmFlag">
+     <orig>…National flags</orig>
+     <transl>…Державних прапорів</transl>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>…Other non-ZWJ sequences</orig>
+     <transl>…Інших не-ZWJ-послідовностей</transl>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>

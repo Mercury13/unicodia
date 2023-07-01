@@ -1861,7 +1861,11 @@ QString mywiki::buildHtml(const uc::Version& version)
         appendValueIf(sp, "Prop.Bullet.Transient", version.stats.chars.nTransient);
         // New
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nNew);
+            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal());
+            appendValueIf(sp, "Prop.Bullet.NewCjk", version.stats.chars.nw.nHani);
+            appendValueIf(sp, "Prop.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
+            appendValueIf(sp, "Prop.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
+            appendValueIf(sp, "Prop.Bullet.NewSym", version.stats.chars.nw.nSymbols);
         }
         // Total
         appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal);
@@ -1879,7 +1883,10 @@ QString mywiki::buildHtml(const uc::Version& version)
                 appendValueIf(sp, "Prop.Bullet.NewEmSkin",  version.stats.emoji.nw.seq.nRacial);
                 appendValueIf(sp, "Prop.Bullet.NewEmMulti", version.stats.emoji.nw.seq.nMultiracial);
                 appendValueIf(sp, "Prop.Bullet.NewEmRight", version.stats.emoji.nw.seq.nRightFacing);
-                appendValueIf(sp, "Prop.Bullet.NewEmOther", version.stats.emoji.nw.seq.nOther);
+                appendValueIf(sp, "Prop.Bullet.NewEmRightSkin", version.stats.emoji.nw.seq.nRightFacingRacial);
+                appendValueIf(sp, "Prop.Bullet.NewEmOtherZwj", version.stats.emoji.nw.seq.nOtherZwj);
+                appendValueIf(sp, "Prop.Bullet.NewEmFlag", version.stats.emoji.nw.seq.nFlags);
+                appendValueIf(sp, "Prop.Bullet.NewEmOtherNonZwj", version.stats.emoji.nw.seq.nOtherNonZwj);
             }
             // Total emoji
             appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal);

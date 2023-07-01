@@ -628,10 +628,16 @@ namespace uc {
 
         mutable struct Stats {
             struct Chars {
-                unsigned nNew = 0;
-                unsigned nTransient = 0;
                 unsigned nTotal = 0;
-
+                unsigned nTransient = 0;
+                struct Nw {
+                    unsigned nHani = 0;
+                    unsigned nNewScripts = 0;
+                    unsigned nExistingScripts = 0;
+                    unsigned nSymbols = 0;
+                    unsigned nTotal() const noexcept
+                        { return nHani + nNewScripts + nExistingScripts + nSymbols; }
+                } nw;
             } chars;
             struct Emoji {
                 unsigned nTotal = 0;
@@ -645,9 +651,13 @@ namespace uc {
                         unsigned nRacial = 0;
                         unsigned nMultiracial = 0;
                         unsigned nRightFacing = 0;
-                        unsigned nOther = 0;
+                        unsigned nRightFacingRacial = 0;
+                        unsigned nOtherZwj = 0;
+                        unsigned nFlags = 0;
+                        unsigned nOtherNonZwj = 0;
                         unsigned nTotal() const noexcept
-                            { return nRacial + nMultiracial + nRightFacing + nOther; }
+                            { return nRacial + nMultiracial + nRightFacing + nRightFacingRacial
+                                   + nOtherZwj + nFlags + nOtherNonZwj; }
                     } seq;
                     unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
                 } nw;
@@ -664,7 +674,7 @@ namespace uc {
         /// @return  name in Terms
         std::u8string termName() const;
         std::u8string link(std::u8string_view prefix) const;
-        bool isFirst() const noexcept { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }
+        bool isFirst() const noexcept { return (stats.chars.nw.nTotal() + stats.chars.nTransient == stats.chars.nTotal); }
         const CoarseDate& emojiDate() const noexcept
             { return otherEmojiDate ? otherEmojiDate : date; }
     };

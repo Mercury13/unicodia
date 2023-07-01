@@ -681,6 +681,18 @@
     <text id="NewChar">
      <orig>New characters</orig>
     </text>
+    <text id="NewCjk">
+     <orig>…[[ps:Hani|CJK ideographs]]</orig>
+    </text>
+    <text id="NewNew">
+     <orig>…from new scripts</orig>
+    </text>
+    <text id="NewEx">
+     <orig>…from existing scripts</orig>
+    </text>
+    <text id="NewSym">
+     <orig>…misc. symbols</orig>
+    </text>
     <text id="Transient">
      <orig>Characters that would be deleted later</orig>
     </text>
@@ -708,8 +720,17 @@
     <text id="NewEmRight">
      <orig>…Right-facing sequences</orig>
     </text>
-    <text id="NewEmOther">
-     <orig>…Other sequences</orig>
+    <text id="NewEmRightSkin">
+     <orig>…Right-facing skintone sequences</orig>
+    </text>
+    <text id="NewEmOtherZwj">
+     <orig>…Other ZWJ sequences</orig>
+    </text>
+    <text id="NewEmFlag">
+     <orig>…National flags</orig>
+    </text>
+    <text id="NewEmOtherNonZwj">
+     <orig>…Other non-ZWJ sequences</orig>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
