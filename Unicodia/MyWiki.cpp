@@ -1896,21 +1896,38 @@ QString mywiki::buildHtml(const uc::Version& version)
     }
 
     char buf[30];
-    if (!version.isFirst() && version.stats.blocks.nNew != 0) {
+    if (!version.isFirst() && version.stats.blocks.nNew != 0) {        
         text += "<p><b>";
         str::append(text, loc::get("Prop.Head.NewBlk"));
         text += "</b><p>";
+        constexpr auto NO_BREAK = std::numeric_limits<unsigned>::max();
+        unsigned columnBreak = NO_BREAK;
+        if (version.stats.blocks.nNew > 19) {
+            columnBreak = (version.stats.blocks.nNew + 1) / 2;
+        }
+        if (columnBreak != NO_BREAK) {
+            text += "<table border=0><tr><td>";
+        }
         str::QSep sp(text, "<br>");
+        unsigned i = 0;
         for (auto& blk : uc::allBlocks()) {
             if (version.stats.thisEcVersion == blk.ecVersion) {
-                sp.sep();
+                if (i == columnBreak) {
+                    text += "<td>&nbsp;&nbsp;&nbsp;&nbsp;<td>";
+                } else {
+                    sp.sep();
+                }
                 snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
                 text += "<a class='popup' href='";
                 text += buf;
                 text += "'>";
                 str::append(text, blk.loc.name);
                 text += "</a>";
+                ++i;
             }
+        }
+        if (columnBreak != NO_BREAK) {
+            text += "</table>";
         }
     }
 
