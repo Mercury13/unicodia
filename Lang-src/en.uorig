@@ -7024,11 +7024,11 @@
       <p />
       <p>'''A character will not move or disappear''' (2.0+). Every new Unicode will be a superset of previous. Text is sorted using national sorting order.</p>
       <p />
-      <p>'''Character name will not change''' (2.0+). Though correction names exist, and '''they''' are shown by ''Unicodia''. Synonyms also won’t change, including corrections (5.0+).</p>
+      <p>'''Character’s name will not change''' (2.0+). Though correction names exist, and '''they''' are shown by ''Unicodia''. Synonyms also won’t change, including corrections (5.0+).</p>
       <p />
       <p>'''[[pt:normalization|Normalization]] of string will not change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other frequent scripts where normalization matters.</p>
       <p />
-      <p>'''Character properties may change, but not so much that its nature will change''' (1.1+). For example, capital letter will not turn to small, and [[pt:noncharacter|non-character]] will not return to use. In later versions of Unicode this rule was clarified.</p>
+      <p>'''Character’s properties may change, but not so much that its nature will change''' (1.1+). For example, capital letter will not turn to small, and [[pt:noncharacter|non-character]] will not return to use. In later versions of Unicode this rule was clarified.</p>
       <p />
       <p>'''Normative and informational properties of character will not disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
       <p />
