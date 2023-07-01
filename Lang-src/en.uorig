@@ -671,6 +671,10 @@
      <orig>=Unicode {1}, </orig>
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
     </text>
+    <text id="EmojiVA">
+     <orig>≈Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+    </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
     </text>
@@ -703,6 +707,9 @@
     </text>
     <text id="NewEmMulti">
      <orig>…Multiracial sequences</orig>
+    </text>
+    <text id="NewEmRight">
+     <orig>…Right-facing sequences</orig>
     </text>
     <text id="NewEmOther">
      <orig>…Other sequences</orig>
@@ -8341,7 +8348,11 @@
    </group>
    <group id="15.1">
     <text id="Text">
-     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
+     <orig>
+      <p>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
+      <p />
+      <p>A very big release 16.0 is expected in 2024.</p>
+     </orig>
     </text>
    </group>
   </group>

@@ -46,6 +46,9 @@
    </item>
    <item>
     <widget class="QLabel" name="lbCode">
+     <property name="mouseTracking">
+      <bool>true</bool>
+     </property>
      <property name="text">
       <string>222222</string>
      </property>

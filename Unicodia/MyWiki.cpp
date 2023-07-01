@@ -660,15 +660,16 @@ void mywiki::appendEmojiValue(QString& text,
 
     // Equiv. Unicode version
     if (!version.unicodeName.empty()) {
-        str::append(text, loc::get("Prop.Bullet.EmojiV2").arg(version.unicodeName));
+        auto key = version.otherEmojiDate ? "Prop.Bullet.EmojiVA" : "Prop.Bullet.EmojiV2";
+        str::append(text, loc::get(key).arg(version.unicodeName));
     }
 
     // Date
     char buf[30];
-    snprintf(buf, std::size(buf), "Common.Mon.%d",
-             static_cast<int>(version.date.month));
+    auto& date = version.emojiDate();
+    snprintf(buf, std::size(buf), "Common.Mon.%d", static_cast<int>(date.month));
     auto& monTemplate = loc::get(buf);
-    auto s = monTemplate.arg(version.date.year);
+    auto s = monTemplate.arg(date.year);
     str::append(text, s);
 
     // Prev. Unicode version
@@ -1794,46 +1795,96 @@ QString mywiki::buildHtml(const uc::LibNode& node)
 }
 
 
+namespace {
+
+    void appendValue(str::QSep& sp, const char* locKey, unsigned value)
+    {
+        sp.sep();
+        mywiki::appendNoFont(sp.target(), loc::get(locKey));
+        str::append(sp.target(), ": ");
+        mywiki::appendCopyable(sp.target(), value);
+    }
+
+    bool appendValueIf(str::QSep& sp, const char* locKey, unsigned value)
+    {
+        bool r = value != 0;
+        if (r) {
+            appendValue(sp, locKey, value);
+        }
+        return r;
+    }
+
+    void appendUnicodeName(
+            str::QSep& sp, std::u8string_view name,
+            const uc::CoarseDate& date,
+            std::u8string_view altName)
+    {
+        sp.sep();
+        sp.target() += "<b>";
+        str::append(sp.target(), name);
+        sp.target() += "</b> (";
+        if (!altName.empty() && name.find(altName) == std::string_view::npos) {
+            str::append(sp.target(), loc::get("Prop.Head.EqEm").arg(altName));
+        }
+        // Date
+        char buf[30];
+        snprintf(buf, std::size(buf), "Common.Mon.%d",
+                 static_cast<int>(date.month));
+        auto& monTemplate = loc::get(buf);
+        auto s = monTemplate.arg(date.year);
+        str::append(sp.target(), s);
+        sp.target() += ")";
+    }
+
+}   // anon namespace
+
 QString mywiki::buildHtml(const uc::Version& version)
 {
     QString text;
     appendStylesheet(text);
-    text += "<p><b>";
-    str::append(text, version.locLongName());
-    text += "</b> (";
-    // Emoji version
-    if (!version.unicodeName.empty() && !version.emojiName.empty()) {
-        str::append(text, loc::get("Prop.Head.EqEm").arg(version.emojiName));
+    text += "<p>";
+    { str::QSep sp(text, "<br>");
+        if (version.otherEmojiDate) {
+            appendUnicodeName(sp, version.locLongName(), version.date, {});
+            appendUnicodeName(sp,
+                    loc::get("Prop.Head.Em").arg(version.emojiName),
+                    version.otherEmojiDate, {});
+        } else {
+            appendUnicodeName(sp, version.locLongName(), version.date, version.emojiName);
+        }
     }
-    // Date
-    char buf[30];
-    snprintf(buf, std::size(buf), "Common.Mon.%d",
-             static_cast<int>(version.date.month));
-    auto& monTemplate = loc::get(buf);
-    auto s = monTemplate.arg(version.date.year);
-    str::append(text, s);
-    text += ")";
 
     {
         text += "<p>";
         // Transient
         str::QSep sp(text, "<br>");
-        if (version.stats.chars.nTransient != 0) {
-            sp.sep();
-            appendNonBullet(text, "Prop.Bullet.Transient");
-            appendCopyable(text, version.stats.chars.nTransient);
-        }
+        appendValueIf(sp, "Prop.Bullet.Transient", version.stats.chars.nTransient);
         // New
         if (!version.isFirst()) {
-            sp.sep();
-            appendNonBullet(text, "Prop.Bullet.NewChar");
-            appendCopyable(text, version.stats.chars.nNew);
+            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nNew);
         }
         // Total
-        sp.sep();
-        mywiki::appendNoFont(text, loc::get("Prop.Bullet.TotalChar"));
-        str::append(text, ": ");
-        appendCopyable(text, version.stats.chars.nTotal);
+        appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal);
+
+        if (version.stats.emoji.nTotal != 0) {
+            // New emoji
+            auto tot = version.stats.emoji.nw.nTotal();
+            appendValue(sp, "Prop.Bullet.NewEm", tot);
+            if (tot != 0) {
+                // Single-char
+                if (appendValueIf(sp, "Prop.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
+                    appendValueIf(sp, "Prop.Bullet.NewEm1This", version.stats.emoji.nw.singleChar.nThisUnicode);
+                    appendValueIf(sp, "Prop.Bullet.NewEm1Last", version.stats.emoji.nw.singleChar.nLastUnicode);
+                    appendValueIf(sp, "Prop.Bullet.NewEm1Prev", version.stats.emoji.nw.singleChar.nOldUnicode);
+                }
+                appendValueIf(sp, "Prop.Bullet.NewEmSkin",  version.stats.emoji.nw.seq.nRacial);
+                appendValueIf(sp, "Prop.Bullet.NewEmMulti", version.stats.emoji.nw.seq.nMultiracial);
+                appendValueIf(sp, "Prop.Bullet.NewEmRight", version.stats.emoji.nw.seq.nRightFacing);
+                appendValueIf(sp, "Prop.Bullet.NewEmOther", version.stats.emoji.nw.seq.nOther);
+            }
+            // Total emoji
+            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal);
+        }
     }
 
     // Text
@@ -1844,6 +1895,7 @@ QString mywiki::buildHtml(const uc::Version& version)
 
     }
 
+    char buf[30];
     if (!version.isFirst() && version.stats.blocks.nNew != 0) {
         text += "<p><b>";
         str::append(text, loc::get("Prop.Head.NewBlk"));

@@ -12,6 +12,9 @@
 #include "u_Cmap.h"
 #include "mojibake.h"
 
+// Painters
+#include "CharPaint/cp.h"
+
 // L10n
 #include "LocDic.h"
 #include "u_Decoders.h"
@@ -115,8 +118,7 @@ const uc::Version uc::versionInfo[] {
     { u8"6.2",  { 2012, Month::SEP }, NO_FLAGS },
     { u8"6.3",  { 2013, Month::SEP }, NO_FLAGS },
     { u8"7.0",  { 2014, Month::JUN }, NO_FLAGS, u8"0.7" },
-    { u8"8.0",  { 2015, Month::JUN }, NO_FLAGS },
-    { {},       { 2015, Month::AUG }, NO_FLAGS, u8"1.0" },
+    { u8"8.0",  { 2015, Month::JUN }, NO_FLAGS, u8"1.0", { 2015, Month::AUG } },
     { {},       { 2015, Month::NOV }, NO_FLAGS, u8"2.0" },
     { u8"9.0",  { 2016, Month::JUN }, NO_FLAGS, u8"3.0" },
     { {},       { 2016, Month::NOV }, NO_FLAGS, u8"4.0" },
@@ -1590,13 +1592,101 @@ const uc::Continent& uc::SynthIcon::continent() const
 ///// UC misc //////////////////////////////////////////////////////////////////
 
 namespace {
+    // Debug
     [[maybe_unused]] std::u8string cache;
     [[maybe_unused]] inline std::string_view esc(std::u8string_view x)
     {
         return str::toSv(escape::cppSv(
                         x, cache, 'n', escape::Spaces::YES, Enquote::NO));
     }
-}
+
+    enum class EmojiClass { NONE, SINGLE_CHAR, SEQ_RACIAL, SEQ_MULTIRACIAL, SEQ_RIGHT, SEQ_OTHER };
+
+    EmojiClass classifyEmoji(std::u32string_view x)
+    {
+        switch (x.length()) {
+        case 0:
+            return EmojiClass::NONE;
+        case 1:
+            return EmojiClass::SINGLE_CHAR;
+        case 2:
+            if (x[1] == VS16)
+                return EmojiClass::SINGLE_CHAR;
+            break;
+        default: ;
+        }
+
+        size_t nSkin = 0;
+        for (auto c : x) {
+            switch (c) {
+            case SKIN1:
+            case SKIN2:
+            case SKIN3:
+            case SKIN4:
+            case SKIN5: ++nSkin; break;
+            default: ;
+            }
+        }
+        switch (nSkin) {
+        case 0:
+            if (x.length() > 3 && x.ends_with(U32_RIGHT_ARROW_VS16))
+                return EmojiClass::SEQ_RIGHT;
+            return EmojiClass::SEQ_OTHER;
+        case 1:
+            return EmojiClass::SEQ_RACIAL;
+        default:
+            return EmojiClass::SEQ_MULTIRACIAL;
+        }
+    }
+
+    enum class EmojiVersion { THIS, LAST, OLD };
+
+    EmojiVersion classifyEmojiVersion(char32_t c, const uc::Version& v)
+    {
+        if (auto cp = uc::cpsByCode[c]) {
+            if (cp->ecVersion == v.stats.thisEcVersion)
+                return EmojiVersion::THIS;
+            if (cp->ecVersion == v.stats.assocEcVersion)
+                return EmojiVersion::LAST;
+        }
+        return EmojiVersion::OLD;
+    }
+
+    void completeEmojiData(size_t index)
+    {
+        auto& node = uc::libNodes[index];
+        auto& version = node.emojiVersion();
+        // Emoji type
+        auto clazz = classifyEmoji(node.value);
+        switch (clazz) {
+        case EmojiClass::NONE: break;
+        case EmojiClass::SINGLE_CHAR: {
+                switch (classifyEmojiVersion(node.value[0], version)) {
+                case EmojiVersion::THIS:
+                    ++version.stats.emoji.nw.singleChar.nThisUnicode; break;
+                case EmojiVersion::LAST:
+                    ++version.stats.emoji.nw.singleChar.nLastUnicode; break;
+                case EmojiVersion::OLD:
+                    ++version.stats.emoji.nw.singleChar.nOldUnicode; break;
+                }
+                break;
+            }
+        case EmojiClass::SEQ_RACIAL:
+            ++version.stats.emoji.nw.seq.nRacial; break;
+        case EmojiClass::SEQ_MULTIRACIAL:
+            ++version.stats.emoji.nw.seq.nMultiracial; break;
+        case EmojiClass::SEQ_RIGHT:
+            ++version.stats.emoji.nw.seq.nRightFacing; break;
+        case EmojiClass::SEQ_OTHER:
+            ++version.stats.emoji.nw.seq.nOther; break;
+        }
+        const auto a = node.iFirstChild;
+        const auto b = a + node.nChildren;
+        for (int i = a; i < b; ++i)
+            completeEmojiData(i);
+    }
+
+}   // anon namespace
 
 
 void uc::completeData()
@@ -1683,14 +1773,16 @@ void uc::completeData()
         }
     }
 
-    /// @todo [urgent] Check emoji
+    completeEmojiData(1);
 
     // Check versions
-    unsigned nChars = 0;
+    unsigned nChars = 0, nEmoji = 0;
     uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)].stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
     for (auto& v : versionInfo) {
         nChars += v.stats.chars.nNew;
         v.stats.chars.nTotal = nChars + v.stats.chars.nTransient;
+        nEmoji += v.stats.emoji.nw.nTotal();
+        v.stats.emoji.nTotal = nEmoji;
     }
 
     // Save term INI

@@ -36,6 +36,7 @@
 #include "CharPaint/routines.h"
 #include "CharPaint/IconEngines.h"
 #include "CharPaint/emoji.h"
+#include "CharPaint/cp.h"
 
 // Project-local
 #include "Skin.h"

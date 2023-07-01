@@ -843,6 +843,11 @@
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
      <transl>=Юнікод {1}, </transl>
     </text>
+    <text id="EmojiVA">
+     <orig>≈Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>≈Юнікод {1}, </transl>
+    </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
      <transl>, після Юнікоду {1}</transl>
@@ -886,6 +891,10 @@
     <text id="NewEmMulti">
      <orig>…Multiracial sequences</orig>
      <transl>…Багаторасових послідовностей</transl>
+    </text>
+    <text id="NewEmRight">
+     <orig>…Right-facing sequences</orig>
+     <transl>…Правосторонніх послідовностей</transl>
     </text>
     <text id="NewEmOther">
      <orig>…Other sequences</orig>
@@ -11998,8 +12007,16 @@
    </group>
    <group id="15.1">
     <text id="Text">
-     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
-     <transl>Консорціум Юнікоду мав проблеми з персоналом, менеджер з випуску пішов, а китаєзнавець вмер. Так що вони вирішили зробити невеликий випуск. Дуже великий випуск 16.0 намічається у 2024.</transl>
+     <orig>
+      <p>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
+      <p />
+      <p>A very big release 16.0 is expected in 2024.</p>
+     </orig>
+     <transl>
+      <p>Консорціум Юнікоду мав проблеми з персоналом, менеджер з випуску пішов, а китаєзнавець вмер. Так що вони вирішили зробити невеликий випуск: п’ять символів опису ієрогліфів, 18 правосторонніх емодзі та 10 емодзі-послідовностей, у тому числі лайм, фенікса та силуети сімей.</p>
+      <p />
+      <p>Дуже великий випуск 16.0 намічається у 2024.</p>
+     </transl>
     </text>
    </group>
   </group>

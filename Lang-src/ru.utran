@@ -842,6 +842,11 @@
      <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
      <transl>=Юникод {1}, </transl>
     </text>
+    <text id="EmojiVA">
+     <orig>≈Unicode {1}, </orig>
+     <au-cmt>See in old emoji of Library, space afterwards!</au-cmt>
+     <transl>≈Юникод {1}, </transl>
+    </text>
     <text id="CameAfter">
      <orig>, after Unicode {1}</orig>
      <transl>, после Юникода {1}</transl>
@@ -885,6 +890,10 @@
     <text id="NewEmMulti">
      <orig>…Multiracial sequences</orig>
      <transl>…Многорасовых последовательностей</transl>
+    </text>
+    <text id="NewEmRight">
+     <orig>…Right-facing sequences</orig>
+     <transl>…Правосторонних последовательностей</transl>
     </text>
     <text id="NewEmOther">
      <orig>…Other sequences</orig>
@@ -11997,8 +12006,16 @@
    </group>
    <group id="15.1">
     <text id="Text">
-     <orig>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release. A very big release 16.0 is expected in 2024.</orig>
-     <transl>Консорциум Юникода испытывал проблемы с персоналом, менеджер по выпуску ушёл, а китаевед умер. Так что они решили сделать небольшой выпуск. Очень большой выпуск 16.0 ожидается в 2024.</transl>
+     <orig>
+      <p>Unicode Consortium experienced staff problems, release manager had gone and Sinologist died. So they decided to make a minor release: five ideographic description characters, 18 right-facing emoji, and 10 emoji sequences including lime, phoenix, and silhouettes of families.</p>
+      <p />
+      <p>A very big release 16.0 is expected in 2024.</p>
+     </orig>
+     <transl>
+      <p>Консорциум Юникода испытывал проблемы с персоналом, менеджер по выпуску ушёл, а китаевед умер. Так что они решили сделать небольшой выпуск: пять символов описания иероглифов, 18 правосторонних эмодзи, и 10 эмодзи-последовательностей, включая лайм, феникса и силуэты семей.</p>
+      <p />
+      <p>Очень большой выпуск 16.0 ожидается в 2024.</p>
+     </transl>
     </text>
    </group>
   </group>

@@ -609,6 +609,7 @@ namespace uc {
     struct CoarseDate {
         short year;
         Month month;
+        explicit operator bool() const { return (year != 0); }
     };
 
     enum class Vfg {
@@ -623,6 +624,7 @@ namespace uc {
         CoarseDate date;
         Flags<Vfg> flags;
         std::u8string_view emojiName {};
+        CoarseDate otherEmojiDate { 0, Month::NUL };
 
         mutable struct Stats {
             struct Chars {
@@ -634,17 +636,29 @@ namespace uc {
             struct Emoji {
                 unsigned nTotal = 0;
                 struct Nw {
-                    unsigned nThisUnicode = 0;
-                    unsigned nLastUnicode = 0;
-                    unsigned nOldUnicode = 0;
-                    unsigned nSequences = 0;
+                    struct SingleChar {
+                        unsigned nThisUnicode = 0;
+                        unsigned nLastUnicode = 0;
+                        unsigned nOldUnicode = 0;
+                        unsigned nTotal() const noexcept { return nThisUnicode + nLastUnicode + nOldUnicode; }
+                    } singleChar;
+                    struct Seq {
+                        unsigned nRacial = 0;
+                        unsigned nMultiracial = 0;
+                        unsigned nRightFacing = 0;
+                        unsigned nOther = 0;
+                        unsigned nTotal() const noexcept
+                            { return nRacial + nMultiracial + nRightFacing + nOther; }
+                    } seq;
+                    unsigned nTotal() const noexcept { return singleChar.nTotal() + seq.nTotal(); }
                 } nw;
             } emoji;
             struct Blocks {
                 unsigned nNew = 0;
             } blocks;
-            /// [+] for emoji-only version — last version where characters were added
             EcVersion thisEcVersion = EcVersion::NONE;
+            /// for emoji-only UC version — last version where characters were added
+            ///   otherwise NONE
             EcVersion assocEcVersion = EcVersion::NONE;
         } stats {};
 
@@ -652,7 +666,9 @@ namespace uc {
         std::u8string locLongName() const;
         std::u8string techName() const;
         std::u8string link(std::u8string_view prefix) const;
-        bool isFirst() const { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }
+        bool isFirst() const noexcept { return (stats.chars.nNew + stats.chars.nTransient == stats.chars.nTotal); }
+        const CoarseDate& emojiDate() const noexcept
+            { return otherEmojiDate ? otherEmojiDate : date; }
     };
     extern const Version versionInfo[];
     const Version* findVersion(std::string_view id);

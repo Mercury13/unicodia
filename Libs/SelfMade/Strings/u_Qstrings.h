@@ -72,6 +72,7 @@ namespace str {
         QSep(QString& aS, const QString& aSep) : s(aS), len(aS.length()), fSep(aSep) {}
         QSep(const QSep&) = delete;
         void sep();
+        QString& target() { return s; }
     private:
         QString& s;
         int len;

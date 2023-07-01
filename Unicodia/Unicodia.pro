@@ -97,6 +97,7 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/Zippy/Zippy.hpp \
+    CharPaint/cp.h \
     CharPaint/routines.h \
     CharPaint/IconEngines.h \
     CharPaint/global.h \

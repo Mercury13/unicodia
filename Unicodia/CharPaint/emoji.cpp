@@ -10,6 +10,9 @@
 #include "u_Strings.h"
 #include "Zippy/ZipArchive.hpp"
 
+// Painters
+#include "cp.h"
+
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
