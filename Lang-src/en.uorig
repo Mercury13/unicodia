@@ -7030,7 +7030,7 @@
       <p />
       <p>'''Character properties may change, but not so much that its nature will change''' (1.1+). For example, capital letter will not turn to small, and [[pt:noncharacter|non-character]] will not return to use. In later versions of Unicode this rule was clarified.</p>
       <p />
-      <p>'''Normative and informational properties of character will not disappear for Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
+      <p>'''Normative and informational properties of character will not disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
       <p />
       <p>'''[[pt:casefolding|Case folding]] will not change''' (5.0+). Case folding is intended for locale-independent comparison of strings, and is generally (but not necessarily) conversion into lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
       <p />
