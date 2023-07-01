@@ -1760,6 +1760,7 @@ void uc::completeData()
 
     // Find associated version for every version
     for (EcVersion i = EcVersion::FIRST_MEANING; i < EcVersion::NN; ++i) {
+        auto& v = versionInfo[static_cast<int>(i)];
         v.stats.thisEcVersion = i;
     }
 
