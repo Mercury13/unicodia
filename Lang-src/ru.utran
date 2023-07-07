@@ -912,16 +912,16 @@
      <transl>…Правосторонних расовых последовательностей</transl>
     </text>
     <text id="NewEmOtherZwj">
-     <orig>…Other ZWJ sequences</orig>
-     <transl>…Других ZWJ-последовательностей</transl>
+     <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
+     <transl>…Других [[pt:zwj|ZWJ]]-последовательностей</transl>
     </text>
     <text id="NewEmFlag">
      <orig>…National flags</orig>
      <transl>…Государственных флагов</transl>
     </text>
     <text id="NewEmOtherNonZwj">
-     <orig>…Other non-ZWJ sequences</orig>
-     <transl>…Других не-ZWJ-последовательностей</transl>
+     <orig>…Other non-[[pt:zwj|ZWJ]] sequences</orig>
+     <transl>…Других не-[[pt:zwj|ZWJ]]-последовательностей</transl>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
@@ -4588,8 +4588,16 @@
      <transl>ККЯ иероглифы расширение I</transl>
     </text>
     <text id="Text">
-     <orig>603 ideographs from mainland China.</orig>
-     <transl>603 иероглифа из континентального Китая.</transl>
+     <orig>
+      <p>In 2023 mainland China decided to fork Unicode by mapping 614 unchecked ideographs to plane 0A. To prevent this, the ideographs were checked really fast, 603 of them were identified as original.</p>
+      <p />
+      <p>As of summer 2023, genuine chaos is going on in ideograph bases. These images are close to Unicode{{_}}15.1{{_}}beta.</p>
+     </orig>
+     <transl>
+      <p>В 2023 континентальный Китай решил ответвиться от Юникода, расположив 614 непроверенных иероглифов на плоскости 0A. Чтобы этого не было, иероглифы быстро проверили, 603 из них были опознаны как новые.</p>
+      <p />
+      <p>На лето 2023 в базах иероглифов творится форменный хаос. Данные изображения близки к Юникоду 15.1{{_}}бета.</p>
+     </transl>
     </text>
    </group>
    <group id="2F800">
@@ -9795,7 +9803,7 @@
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen 00AD, grapheme joiner 034F, [[pk:E0000|tags]]…</p>
       <p>* Writing [[pt:bidi|direction]] tags: marks LRM and RLM.</p>
-      <p>* Font mechanisms that are safe to skip silently: zero width joiner (ZWJ), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
+      <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
       <p>* Zero width space ZWSP; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner ZWNJ.</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
@@ -9814,7 +9822,7 @@
       <p />
       <p>* Символы, несущие дополнительную семантику{{-}}мягкий перенос 00AD, разъединитель графем 034F, [[pk:E0000|тэги]]…</p>
       <p>* Тэги [[pt:bidi|направления]] написания{{-}}например, метки LRM и RLM.</p>
-      <p>* Шрифтовые механизмы, которые допустимо пропускать{{-}}соединитель нулевой длины (ZWJ), селекторы начертания (VS), заполнители [[ps:Hang|корейских]] чамо. Пилот (человек+ZWJ+самолёт) при отсутствии [[pt:ligature|лигатуры]] отобразится как человек+самолёт {{em|🧑✈️}}{{-}}и не{{_}}важно, есть ли в шрифте ZWJ.</p>
+      <p>* Шрифтовые механизмы, которые допустимо пропускать{{-}}соединитель нулевой длины ([[pt:zwj|ZWJ]]), селекторы начертания (VS), заполнители [[ps:Hang|корейских]] чамо. Пилот (человек+ZWJ+самолёт) при отсутствии [[pt:ligature|лигатуры]] отобразится как человек+самолёт {{em|🧑✈️}}{{-}}и не{{_}}важно, есть ли в шрифте ZWJ.</p>
       <p>* Пробел нулевой длины ZWSP; [[pt:bom|метка порядка байтов]] BOM, также являющаяся пробелом нулевой длины; разъединитель нулевой длины ZWNJ.</p>
       <p>* Символы сложного форматирования{{-}}[[pk:1BCA0|стенографии]], [[pk:1D100|нот]].</p>
       <p />
@@ -11062,6 +11070,72 @@
       <p>'''Возрождённая'''{{-}}возвращена в обиход после периода неиспользования. При возрождении может смениться тип и направление письма, как у [[ps:Tfng|тифинага]].</p>
       <p />
       <p>'''Экспериментальная'''{{-}}неудачная попытка сделать орфографическую реформу. Все имеющиеся в Юникоде примеры делятся на три категории: 1){{_}}английский: сложная историческая орфография; 2){{_}}албанский: около 1800 совпали конспирация от турок и желание культурной автономии; 3){{_}}попытка заменить письмо [[pt:brahmic|индийского]] происхождения.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="zwj">
+    <text id="Name">
+     <orig>ZWJ = zero width joiner</orig>
+     <transl>нулевой соединитель</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[pt:format|Format]] character U+200D intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
+      <p />
+      <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]:</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWJ + {{sm|ष}} ša = {{sm|क्‍ष}} alternate kša</p>
+      <p />
+      <p>'''[[pt:emoji|Emoji]]'''</p>
+      <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
+      <p />
+      <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: vendor invents a sequence without anyone’s permission, and if it proves successful, Consortium encodes it.</p>
+      <p />
+      <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
+     </orig>
+     <transl>
+      <p>[[pt:format|Форматирующий]] символ U+200D, предназначенный для объединения символов в [[pt:ligature|лигатуру]]. Он [[pt:ignorable|игнорируемый]]: его можно спокойно пропускать.</p>
+      <p />
+      <p>'''[[pt:brahmic|Индийские]] письменности''', например [[ps:Deva|деванагари]]:</p>
+      <p>: {{sm|क}} ка + {{sm|◌्}} [[pt:virama|вирама]] + {{sm|ष}} ша = {{sm|क्ष}} кша</p>
+      <p>: {{sm|क}} ка + {{sm|◌्}} вирама + ZWJ + {{sm|ष}} ша = {{sm|क्‍ष}} другое кша</p>
+      <p />
+      <p>'''[[pt:emoji|Эмодзи]]'''</p>
+      <p>: {{em|👩}} женщина + ZWJ + {{em|✈️}} самолёт+VS16 = {{em|👩‍✈️}} женщина-пилот</p>
+      <p />
+      <p>Также пол, цвета, направления движения и другое. Этот метод открыл другой путь создания эмодзи-последовательностей: производитель изобретает без разрешения, и если она будет успешной, Консорциум кодирует её.</p>
+      <p />
+      <p>'''Не используют''' ZWJ: цвета кожи, кнопки, государственные и региональные флаги.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="zwnj">
+    <text id="Name">
+     <orig>ZWNJ = zero width non-joiner</orig>
+     <transl>нулевой разъединитель</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[pt:format|Format]] character U+200C intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does not have to be in the font.</p>
+      <p />
+      <p>'''[[ps:Latn|Latin]]'''</p>
+      <p>: In some fonts '''stop''' → '''ﬆop'''</p>
+      <p>: '''dys''' + ZWNJ + '''topia''' = '''dys&amp;zwnj;topia''' (no ligature between prefix and root)</p>
+      <p />
+      <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWNJ + {{sm|ष}} ša = {{sm|क्‌ष}} alternate kša, usually in compound words</p>
+     </orig>
+     <transl>
+      <p>[[pt:format|Форматирующий символ]] U+200C, призванный разорвать [[pt:ligature|лигатуру]]. Он [[pt:ignorable|игнорируемый]], то есть не{{_}}обязан иметься в шрифте.</p>
+      <p />
+      <p>'''[[ps:Latn|Латиница]]'''</p>
+      <p>: В некоторых шрифтах '''stop''' → '''ﬆop'''</p>
+      <p>: '''dys''' + ZWNJ + '''topia''' = '''dys&amp;zwnj;topia''' (между приставкой и корнем лигатура не{{_}}нужна)</p>
+      <p />
+      <p>'''[[pt:brahmic|Индийские]] письменности''', например [[ps:Deva|деванагари]]</p>
+      <p>: {{sm|क}} ка + {{sm|◌्}} [[pt:virama|вирама]] + {{sm|ष}} ша = {{sm|क्ष}} кша</p>
+      <p>: {{sm|क}} кa + {{sm|◌्}} вирама + ZWNJ + {{sm|ष}} ша = {{sm|क्‌ष}} другое кша, обычно в сложных словах</p>
      </transl>
     </text>
    </group>

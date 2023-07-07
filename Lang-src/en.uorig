@@ -724,13 +724,13 @@
      <orig>…Right-facing skintone sequences</orig>
     </text>
     <text id="NewEmOtherZwj">
-     <orig>…Other ZWJ sequences</orig>
+     <orig>…Other [[pt:zwj|ZWJ]] sequences</orig>
     </text>
     <text id="NewEmFlag">
      <orig>…National flags</orig>
     </text>
     <text id="NewEmOtherNonZwj">
-     <orig>…Other non-ZWJ sequences</orig>
+     <orig>…Other non-[[pt:zwj|ZWJ]] sequences</orig>
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
@@ -3411,7 +3411,11 @@
      <orig>CJK unified ideographs extension I</orig>
     </text>
     <text id="Text">
-     <orig>603 ideographs from mainland China.</orig>
+     <orig>
+      <p>In 2023 mainland China decided to fork Unicode by mapping 614 unchecked ideographs to plane 0A. To prevent this, the ideographs were checked really fast, 603 of them were identified as original.</p>
+      <p />
+      <p>As of summer 2023, genuine chaos is going on in ideograph bases. These images are close to Unicode{{_}}15.1{{_}}beta.</p>
+     </orig>
     </text>
    </group>
    <group id="2F800">
@@ -6865,7 +6869,7 @@
       <p />
       <p>* Characters that convey ancillary semantics: soft hyphen 00AD, grapheme joiner 034F, [[pk:E0000|tags]]…</p>
       <p>* Writing [[pt:bidi|direction]] tags: marks LRM and RLM.</p>
-      <p>* Font mechanisms that are safe to skip silently: zero width joiner (ZWJ), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
+      <p>* Font mechanisms that are safe to skip silently: zero width joiner ([[pt:zwj|ZWJ]]), variation selectors (VS), [[ps:Hang|Korean]] jamo fillers. Pilot (person+ZWJ+plane) will be displayed as person+plane {{em|🧑✈️}} when ligature is missing no matter if ZWJ is present in the font.</p>
       <p>* Zero width space ZWSP; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner ZWNJ.</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
@@ -7627,6 +7631,45 @@
       <p>'''Revived'''{{-}}returned to use after a period of silence. Revival may change its type and writing direction, like in [[ps:Tfng|Tifinagh]].</p>
       <p />
       <p>'''Experimental'''{{-}}failed attempt to make an orthographic reform. All examples present in Unicode fall into three categories: 1){{_}}English: complicated historical orthography; 2){{_}}Albanian: both secrecy from Turks and desire for cultural autonomy were present about 1800; 3){{_}}attempt to replace a script of [[pt:brahmic|Indic]] origin.</p>
+     </orig>
+    </text>
+   </group>
+   <group id="zwj">
+    <text id="Name">
+     <orig>ZWJ = zero width joiner</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[pt:format|Format]] character U+200D intended to combine characters into a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it’s perfectly safe to skip it silently.</p>
+      <p />
+      <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]:</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWJ + {{sm|ष}} ša = {{sm|क्‍ष}} alternate kša</p>
+      <p />
+      <p>'''[[pt:emoji|Emoji]]'''</p>
+      <p>: {{em|👩}} woman + ZWJ + {{em|✈️}} airplane+VS16 = {{em|👩‍✈️}} woman pilot</p>
+      <p />
+      <p>Also colours, genders, movement directions and others. This method opened another way of building emoji sequences: vendor invents a sequence without anyone’s permission, and if it proves successful, Consortium encodes it.</p>
+      <p />
+      <p>'''Do not''' use ZWJ: skin tones, keycaps, national and regional flags</p>
+     </orig>
+    </text>
+   </group>
+   <group id="zwnj">
+    <text id="Name">
+     <orig>ZWNJ = zero width non-joiner</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[pt:format|Format]] character U+200C intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does not have to be in the font.</p>
+      <p />
+      <p>'''[[ps:Latn|Latin]]'''</p>
+      <p>: In some fonts '''stop''' → '''ﬆop'''</p>
+      <p>: '''dys''' + ZWNJ + '''topia''' = '''dys&amp;zwnj;topia''' (no ligature between prefix and root)</p>
+      <p />
+      <p>'''[[pt:brahmic|Indic]] scripts''', e.g. [[ps:Deva|Devanagari]]</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} [[pt:virama|virama]] + {{sm|ष}} ša = {{sm|क्ष}} kša</p>
+      <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWNJ + {{sm|ष}} ša = {{sm|क्‌ष}} alternate kša, usually in compound words</p>
      </orig>
     </text>
    </group>

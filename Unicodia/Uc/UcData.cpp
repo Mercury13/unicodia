@@ -964,6 +964,8 @@ constinit const uc::Term uc::terms[] {
     { "plane", EcTermCat::ENCODING, u8"plane" },
     { "private", EcTermCat::ENCODING, u8"private-use character" },
     { "reject", EcTermCat::ENCODING, {} },
+    { "zwj", EcTermCat::ENCODING, u8"ZWJ = zero width joiner" },
+    { "zwnj", EcTermCat::ENCODING, u8"ZWNJ = zero width non-joiner" },
 
     { "bidi", EcTermCat::ALGORITHM, u8"bidirectional text" },
     { "normalization", EcTermCat::ALGORITHM, u8"normalization" },
