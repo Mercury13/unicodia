@@ -149,7 +149,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf", Ffg::FALL_TO_NEXT },                        // Kaithi
       { FNAME_FUNKY },                                                          // …1
-    { "NotoSerifKannada-Regular.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc },  // Kannada
+    { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                // Kannada
     { "NotoSansKawi-Regular.ttf" },                                             // Kawi
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
