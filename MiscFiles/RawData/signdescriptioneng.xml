@@ -1,0 +1,4241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<signlist
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="signdescription.xsd">
+
+<p>
+The descriptions of the signs mostly follow Gardiner's publications.
+However, an attempt was made to achieve a greater consistency. 
+</p>
+
+<sign id="A1">
+<descr>seated man</descr>
+</sign>
+
+<sign id="A2">
+<descr>seated man with hand to mouth</descr>
+</sign>
+
+<sign id="A3">
+<descr>man sitting on heel</descr>
+</sign>
+
+<sign id="A4">
+<descr>seated man with hands raised</descr>
+</sign>
+
+<sign id="A5">
+<descr>crouching man hiding behind wall</descr>
+</sign>
+
+<sign id="A5a">
+<descr>seated man hiding behind wall</descr>
+</sign>
+
+<sign id="A6">
+<descr>seated man under vase from which water flows</descr>
+</sign>
+
+<sign id="A6a">
+<descr>seated man reaching for libation stone, under vase from which water flows</descr>
+</sign>
+
+<sign id="A6b">
+<descr>seated man reaching down, under vase from which water flows</descr>
+</sign>
+
+<sign id="A7">
+<descr>fatigued man</descr>
+</sign>
+
+<sign id="A8">
+<descr>man performing <al>hnw</al>-rite</descr>
+</sign>
+
+<sign id="A9">
+<descr>seated man with <signref name="W10" /> on head</descr>
+</sign>
+
+<sign id="A10">
+<descr>seated man holding oar</descr>
+</sign>
+
+<sign id="A11">
+<descr>seated man holding <signref name="S42" /> and <signref name="S39" /></descr>
+</sign>
+
+<sign id="A12">
+<descr>soldier with bow and quiver</descr>
+</sign>
+
+<sign id="A13">
+<descr>man with arms tied behind his back</descr>
+</sign>
+
+<sign id="A14">
+<descr>falling man with blood streaming from his head</descr>
+</sign>
+
+<sign id="A14a">
+<descr>man whose head is hit with an axe</descr>
+</sign>
+
+<sign id="A15">
+<descr>man falling</descr>
+</sign>
+
+<sign id="A16">
+<descr>man bowing down</descr>
+</sign>
+
+<sign id="A17">
+<descr>child sitting with hand to mouth</descr>
+</sign>
+
+<sign id="A17a">
+<descr>child sitting with arms hanging down</descr>
+</sign>
+
+<sign id="A18">
+<descr>child wearing <signref name="S3" /></descr>
+</sign>
+
+<sign id="A19">
+<descr>bent man leaning on staff</descr>
+</sign>
+
+<sign id="A20">
+<descr>man leaning on forked staff</descr>
+</sign>
+
+<sign id="A21">
+<descr>man holding staff with handkerchief</descr>
+</sign>
+
+<sign id="A22">
+<descr>statue of man with staff and <signref name="S42" /></descr>
+</sign>
+
+<sign id="A23">
+<descr>king with staff and <signref name="T3" /></descr>
+</sign>
+
+<sign id="A24">
+<descr>man striking with both hands</descr>
+</sign>
+
+<sign id="A25">
+<descr>man striking, with left arm hanging behind back</descr>
+</sign>
+
+<sign id="A26">
+<descr>man with one arm pointing forward</descr>
+</sign>
+
+<sign id="A27">
+<descr>hastening man</descr>
+</sign>
+
+<sign id="A28">
+<descr>man with hands raised on either side</descr>
+</sign>
+
+<sign id="A29">
+<descr>man upside down</descr>
+</sign>
+
+<sign id="A30">
+<descr>man with hands raised in front</descr>
+</sign>
+
+<sign id="A31">
+<descr>man with hands raised behind him</descr>
+</sign>
+
+<sign id="A32">
+<descr>man dancing with arms to the back</descr>
+</sign>
+
+<sign id="A32a">
+<descr>man dancing with arms to the front</descr>
+</sign>
+
+<sign id="A33">
+<descr>man with stick and bundle on shoulder</descr>
+</sign>
+
+<sign id="A34">
+<descr>man pounding in a mortar</descr>
+</sign>
+
+<sign id="A35">
+<descr>man building wall</descr>
+</sign>
+
+<sign id="A36">
+<descr>man kneading into vessel</descr>
+</sign>
+
+<sign id="A37">
+<descr>man in vessel</descr>
+</sign>
+
+<sign id="A38">
+<descr>man holding necks of two emblematic animals with panther heads</descr>
+</sign>
+
+<sign id="A39">
+<descr>man on two giraffes</descr>
+</sign>
+
+<sign id="A40">
+<descr>seated god</descr>
+</sign>
+
+<sign id="A40a">
+<descr>seated god with <signref name="S40" /></descr>
+</sign>
+
+<sign id="A41">
+<descr>king with uraeus</descr>
+</sign>
+
+<sign id="A42">
+<descr>king with uraeus and <signref name="S45" /></descr>
+</sign>
+
+<sign id="A42a">
+<descr>king with uraeus and <signref name="S45" /></descr>
+</sign>
+
+<sign id="A43">
+<descr>king wearing <signref name="S1" /></descr>
+</sign>
+
+<sign id="A43a">
+<descr>king wearing <signref name="S1" /> with <signref name="S40" /></descr>
+</sign>
+
+<sign id="A44">
+<descr>king wearing <signref name="S1" /> with <signref name="S45" /></descr>
+</sign>
+
+<sign id="A45">
+<descr>king wearing <signref name="S3" /></descr>
+</sign>
+
+<sign id="A45a">
+<descr>king wearing <signref name="S3" /> with <signref name="S40" /></descr>
+</sign>
+
+<sign id="A46">
+<descr>king wearing <signref name="S3" /> with <signref name="S45" /></descr>
+</sign>
+
+<sign id="A47">
+<descr>shepherd seated and wrapped in mantle, holding stick</descr>
+</sign>
+
+<sign id="A48">
+<descr>beardless man seated and holding knife</descr>
+</sign>
+
+<sign id="A49">
+<descr>seated Syrian holding stick</descr>
+</sign>
+
+<sign id="A50">
+<descr>noble on chair</descr>
+</sign>
+
+<sign id="A51">
+<descr>noble on chair with <signref name="S45" /></descr>
+</sign>
+
+<sign id="A52">
+<descr>noble squatting with <signref name="S45" /></descr>
+</sign>
+
+<sign id="A53">
+<descr>standing mummy</descr>
+</sign>
+
+<sign id="A54">
+<descr>lying mummy</descr>
+</sign>
+
+<sign id="A55">
+<descr>mummy on bed</descr>
+</sign>
+
+<sign id="A56">
+<descr>seated man holding stick</descr>
+</sign>
+
+<sign id="A57">
+<descr>man holding <signref name="R4" /></descr>
+</sign>
+
+<sign id="A58">
+<descr>man applying hoe to ground</descr>
+</sign>
+
+<sign id="A59">
+<descr>man threatening with stick</descr>
+</sign>
+
+<sign id="A60">
+<descr>man sowing seeds</descr>
+</sign>
+
+<sign id="A61">
+<descr>man looking over his shoulder</descr>
+</sign>
+
+<sign id="A62">
+<descr>Asiatic</descr>
+</sign>
+
+<sign id="A63">
+<descr>king on throne holding staff</descr>
+</sign>
+
+<sign id="A64">
+<descr>man sitting on heels holding forward <signref name="W10" /></descr>
+</sign>
+
+<sign id="A65">
+<descr>man wearing tunic with fringes and holding mace</descr>
+</sign>
+
+<sign id="A66">
+<descr>man holding <signref name="Y8" /></descr>
+</sign>
+
+<sign id="A67">
+<descr>dwarf</descr>
+</sign>
+
+<sign id="A68">
+<descr>man holding up knife</descr>
+</sign>
+
+<sign id="A69">
+<descr>seated man with raised right arm and left arm hanging down</descr>
+</sign>
+
+<sign id="A70">
+<descr>seated man with raised arms</descr>
+</sign>
+
+<sign id="B1">
+<descr>seated woman</descr>
+</sign>
+
+<sign id="B2">
+<descr>pregnant woman</descr>
+</sign>
+
+<sign id="B3">
+<descr>woman giving birth</descr>
+</sign>
+
+<sign id="B4">
+<descr>combination of <signref name="B3" /> and <signref name="F31" /></descr>
+</sign>
+
+<sign id="B5">
+<descr>woman suckling child</descr>
+</sign>
+
+<sign id="B5a">
+<descr>woman suckling child (simplified)</descr>
+</sign>
+
+<sign id="B6">
+<descr>woman on chair with child on lap</descr>
+</sign>
+
+<sign id="B7">
+<descr>queen wearing diadem and holding flower</descr>
+</sign>
+
+<sign id="B8">
+<descr>woman holding <signref name="M9" /></descr>
+</sign>
+
+<sign id="B9">
+<descr>woman holding <signref name="Y8" /></descr>
+</sign>
+
+<sign id="C1">
+<descr>god with <signref name="N6" /></descr>
+</sign>
+
+<sign id="C2">
+<descr>god with head of falcon with sun on head and holding <signref name="S34" />
+</descr>
+</sign>
+
+<sign id="C2a">
+<descr>god with head of falcon with sun on head</descr>
+</sign>
+
+<sign id="C2b">
+<descr><signref name="C2a" /> reversed</descr>
+</sign>
+
+<sign id="C2c">
+<descr><signref name="C2" /> reversed</descr>
+</sign>
+
+<sign id="C3">
+<descr>god with head of ibis</descr>
+</sign>
+
+<sign id="C4">
+<descr>god with head of ram</descr>
+</sign>
+
+<sign id="C5">
+<descr>god with head of ram holding <signref name="S34" /></descr>
+</sign>
+
+<sign id="C6">
+<descr>god with head of jackal</descr>
+</sign>
+
+<sign id="C7">
+<descr>god with head of Seth-animal</descr>
+</sign>
+
+<sign id="C8">
+<descr>ithyphallic god with <signref name="S9" />, uplifted arm and <signref name="S45" /></descr>
+</sign>
+
+<sign id="C9">
+<descr>goddess with sun and horns</descr>
+</sign>
+
+<sign id="C10">
+<descr>goddess with feather on head</descr>
+</sign>
+
+<sign id="C10a">
+<descr>goddess with feather on head holding <signref name="S34" /></descr>
+</sign>
+
+<sign id="C11">
+<descr>god with arms supporting (the sky) and <signref name="M4" /> on head</descr>
+</sign>
+
+<sign id="C12">
+<descr>god with <signref name="S9" /> and <signref name="S40" /></descr>
+</sign>
+
+<sign id="C13">
+<descr><signref name="C12" /> reversed</descr>
+</sign>
+
+<sign id="C14">
+<descr>god with <signref name="S9" /> and <signref name="T16a" /></descr>
+</sign>
+
+<sign id="C15">
+<descr><signref name="C14" /> reversed</descr>
+</sign>
+
+<sign id="C16">
+<descr>god wearing <signref name="S3" /> with <signref name="S34" /></descr>
+</sign>
+
+<sign id="C17">
+<descr>god with head of falcon and <signref name="S9" /></descr>
+</sign>
+
+<sign id="C18">
+<descr>squatting god</descr>
+</sign>
+
+<sign id="C19">
+<descr>mummy-shaped god</descr>
+</sign>
+
+<sign id="C20">
+<descr>mummy-shaped god in shrine</descr>
+</sign>
+
+<sign id="C21">
+<descr>Bes</descr>
+</sign>
+
+<sign id="C22">
+<descr>god with head of falcon and moon disk</descr>
+</sign>
+
+<sign id="C23">
+<descr>goddess with head of feline and <signref name="N6" /></descr>
+</sign>
+
+<sign id="C24">
+<descr>god wearing <signref name="S3" /> with <signref name="S40" /></descr>
+</sign>
+
+<sign id="D1">
+<descr>head in profile</descr>
+</sign>
+
+<sign id="D2">
+<descr>face</descr>
+</sign>
+
+<sign id="D3">
+<descr>hair</descr>
+</sign>
+
+<sign id="D4">
+<descr>eye</descr>
+</sign>
+
+<sign id="D5">
+<descr>eye touched up with paint</descr>
+</sign>
+
+<sign id="D6">
+<descr>eye with painted upper lid</descr>
+</sign>
+
+<sign id="D7">
+<descr>eye with painted lower lid</descr>
+</sign>
+
+<sign id="D8">
+<descr>eye enclosed in <signref name="N18" /></descr>
+</sign>
+
+<sign id="D8a">
+<descr>eye with painted lower lid enclosed in <signref name="N18" /></descr>
+</sign>
+
+<sign id="D9">
+<descr>eye with flowing tears</descr>
+</sign>
+
+<sign id="D10">
+<descr><al>wDAt</al>-eye</descr>
+</sign>
+
+<sign id="D11">
+<descr>left part of white of <signref name="D10" /></descr>
+</sign>
+
+<sign id="D12">
+<descr>pupil of eye</descr>
+</sign>
+
+<sign id="D13">
+<descr>eye-brow</descr>
+</sign>
+
+<sign id="D14">
+<descr>right part of white of <signref name="D10" /></descr>
+</sign>
+
+<sign id="D15">
+<descr>diagonal marking of <signref name="D10" /></descr>
+</sign>
+
+<sign id="D16">
+<descr>vertical marking of <signref name="D10" /></descr>
+</sign>
+
+<sign id="D17">
+<descr>combination of <signref name="D16" /> and <signref name="D15" /></descr>
+</sign>
+
+<sign id="D18">
+<descr>ear</descr>
+</sign>
+
+<sign id="D19">
+<descr>nose, eye and cheek</descr>
+</sign>
+
+<sign id="D20">
+<descr>nose, eye and cheek in semi-cursive form</descr>
+</sign>
+
+<sign id="D21">
+<descr>mouth</descr>
+</sign>
+
+<sign id="D22">
+<descr>mouth with two strokes</descr>
+</sign>
+
+<sign id="D23">
+<descr>mouth with three strokes</descr>
+</sign>
+
+<sign id="D24">
+<descr>upper lip with teeth</descr>
+</sign>
+
+<sign id="D25">
+<descr>lips with teeth</descr>
+</sign>
+
+<sign id="D26">
+<descr>liquid issuing from lips</descr>
+</sign>
+
+<sign id="D27">
+<descr>small breast</descr>
+</sign>
+
+<sign id="D27a">
+<descr>large breast</descr>
+</sign>
+
+<sign id="D28">
+<descr>arms in <al>kA</al>-posture</descr>
+</sign>
+
+<sign id="D29">
+<descr>combination of <signref name="D28" /> and <signref name="R12" /></descr>
+</sign>
+
+<sign id="D30">
+<descr><signref name="D28" /> with tail</descr>
+</sign>
+
+<sign id="D31">
+<descr>combination of <signref name="D32" /> and <signref name="U36" /></descr>
+</sign>
+
+<sign id="D31a">
+<descr>combination of <signref name="D28" /> and <signref name="U36" /></descr>
+</sign>
+
+<sign id="D32">
+<descr>arms embracing</descr>
+</sign>
+
+<sign id="D33">
+<descr>arms rowing</descr>
+</sign>
+
+<sign id="D34">
+<descr>arms holding shield and battle-axe</descr>
+</sign>
+
+<sign id="D34a">
+<descr>arms holding shield and mace</descr>
+</sign>
+
+<sign id="D35">
+<descr>arms in gesture of negation</descr>
+</sign>
+
+<sign id="D36">
+<descr>forearm</descr>
+</sign>
+
+<sign id="D37">
+<descr>forearm with <signref name="X8" /></descr>
+</sign>
+
+<sign id="D38">
+<descr>forearm with rounded loaf</descr>
+</sign>
+
+<sign id="D39">
+<descr>forearm with <signref name="W24" /></descr>
+</sign>
+
+<sign id="D40">
+<descr>forearm with stick</descr>
+</sign>
+
+<sign id="D41">
+<descr>forearm with palm down and bent upper arm</descr>
+</sign>
+
+<sign id="D42">
+<descr>forearm with palm down and straight upper arm</descr>
+</sign>
+
+<sign id="D43">
+<descr>forearm with <signref name="S45" /></descr>
+</sign>
+
+<sign id="D44">
+<descr>forearm with <signref name="S42" /></descr>
+</sign>
+
+<sign id="D45">
+<descr>arm with <al>nHbt</al>-wand</descr>
+</sign>
+
+<sign id="D46">
+<descr>hand</descr>
+</sign>
+
+<sign id="D46a">
+<descr>liquid falling from hand</descr>
+</sign>
+
+<sign id="D47">
+<descr>hand with palm up</descr>
+</sign>
+
+<sign id="D48">
+<descr>hand without thumb</descr>
+</sign>
+
+<sign id="D48a">
+<descr>hand holding an egg</descr>
+</sign>
+
+<sign id="D49">
+<descr>fist</descr>
+</sign>
+
+<sign id="D50">
+<descr>finger vertically</descr>
+</sign>
+
+<sign id="D50a">
+</sign>
+
+<sign id="D50b">
+</sign>
+
+<sign id="D50c">
+</sign>
+
+<sign id="D50d">
+</sign>
+
+<sign id="D50e">
+</sign>
+
+<sign id="D50f">
+</sign>
+
+<sign id="D50g">
+</sign>
+
+<sign id="D50h">
+</sign>
+
+<sign id="D50i">
+</sign>
+
+<sign id="D51">
+<descr>finger horizontally</descr>
+</sign>
+
+<sign id="D52">
+<descr>phallus</descr>
+</sign>
+
+<sign id="D52a">
+<descr>combination of <signref name="D52" /> and <signref name="S29" /></descr>
+</sign>
+
+<sign id="D53">
+<descr>liquid issuing from phallus</descr>
+</sign>
+
+<sign id="D54">
+<descr>legs walking</descr>
+</sign>
+
+<sign id="D54a">
+<descr>hieratic legs walking</descr>
+</sign>
+
+<sign id="D55">
+<descr>legs walking backwards</descr>
+</sign>
+
+<sign id="D56">
+<descr>leg</descr>
+</sign>
+
+<sign id="D57">
+<descr>combination of <signref name="D56" /> and <signref name="T30" /></descr>
+</sign>
+
+<sign id="D58">
+<descr>foot</descr>
+</sign>
+
+<sign id="D59">
+<descr>combination of <signref name="D58" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="D60">
+<descr><signref name="D58" /> under vase from which water flows</descr>
+</sign>
+
+<sign id="D61">
+<descr>three toes oriented leftward</descr>
+</sign>
+
+<sign id="D62">
+<descr>three toes oriented rightward</descr>
+</sign>
+
+<sign id="D63">
+<descr>two toes oriented leftward</descr>
+</sign>
+
+<sign id="D64">
+<descr>hand with palm down</descr>
+</sign>
+
+<sign id="D65">
+<descr>lock of hair</descr>
+</sign>
+
+<sign id="D66">
+<descr>arm with reed pen</descr>
+</sign>
+
+<sign id="D67">
+<descr>dot</descr>
+</sign>
+
+<sign id="D67a">
+</sign>
+
+<sign id="D67b">
+</sign>
+
+<sign id="D67c">
+</sign>
+
+<sign id="D67d">
+</sign>
+
+<sign id="D67e">
+</sign>
+
+<sign id="D67f">
+</sign>
+
+<sign id="D67g">
+</sign>
+
+<sign id="D67h">
+</sign>
+
+<sign id="E1">
+<descr>bull</descr>
+</sign>
+
+<sign id="E2">
+<descr>bull charging</descr>
+</sign>
+
+<sign id="E3">
+<descr>calf</descr>
+</sign>
+
+<sign id="E4">
+<descr>sacred <al>HsAt</al>-cow</descr>
+</sign>
+
+<sign id="E5">
+<descr>cow suckling calf</descr>
+</sign>
+
+<sign id="E6">
+<descr>horse</descr>
+</sign>
+
+<sign id="E7">
+<descr>donkey</descr>
+</sign>
+
+<sign id="E8">
+<descr>kid</descr>
+</sign>
+
+<sign id="E8a">
+<descr>kid jumping</descr>
+</sign>
+
+<sign id="E9">
+<descr>newborn bubalis or hartebeest</descr>
+</sign>
+
+<sign id="E9a">
+<descr>mature bovine lying down</descr>
+</sign>
+
+<sign id="E10">
+<descr>ram</descr>
+</sign>
+
+<sign id="E11">
+<descr>ram</descr>
+</sign>
+
+<sign id="E12">
+<descr>pig</descr>
+</sign>
+
+<sign id="E13">
+<descr>cat</descr>
+</sign>
+
+<sign id="E14">
+<descr>dog (saluki)</descr>
+</sign>
+
+<sign id="E15">
+<descr>lying canine</descr>
+</sign>
+
+<sign id="E16">
+<descr>lying canine on shrine</descr>
+</sign>
+
+<sign id="E16a">
+<descr>lying canine on shrine with <signref name="S45" /></descr>
+</sign>
+
+<sign id="E17">
+<descr>jackal</descr>
+</sign>
+
+<sign id="E17a">
+<descr>jackal looking back</descr>
+</sign>
+
+<sign id="E18">
+<descr>wolf on <signref name="R12" /> with <al>SdSd</al></descr>
+</sign>
+
+<sign id="E19">
+<descr>combination of <signref name="E19" /> and <signref name="T3" /></descr>
+</sign>
+
+<sign id="E20">
+<descr>Seth-animal</descr>
+</sign>
+
+<sign id="E20a">
+<descr>combination of <signref name="E20" /> and <signref name="V30" /></descr>
+</sign>
+
+<sign id="E21">
+<descr>lying Seth-animal</descr>
+</sign>
+
+<sign id="E22">
+<descr>lion</descr>
+</sign>
+
+<sign id="E23">
+<descr>lying lion</descr>
+</sign>
+
+<sign id="E24">
+<descr>panther</descr>
+</sign>
+
+<sign id="E25">
+<descr>hippopotamus</descr>
+</sign>
+
+<sign id="E26">
+<descr>elephant</descr>
+</sign>
+
+<sign id="E27">
+<descr>giraffe</descr>
+</sign>
+
+<sign id="E28">
+<descr>oryx</descr>
+</sign>
+
+<sign id="E28a">
+<descr>combination of <signref name="E28" />, <signref name="N24" /> and some type of jar
+</descr>
+</sign>
+
+<sign id="E29">
+<descr>gazelle</descr>
+</sign>
+
+<sign id="E30">
+<descr>ibex</descr>
+</sign>
+
+<sign id="E31">
+<descr>goat with collar</descr>
+</sign>
+
+<sign id="E32">
+<descr>baboon</descr>
+</sign>
+
+<sign id="E33">
+<descr>monkey</descr>
+</sign>
+
+<sign id="E34">
+<descr>hare</descr>
+</sign>
+
+<sign id="E34a">
+<descr>hare (low)</descr>
+</sign>
+
+<sign id="E36">
+<descr>baboon</descr>
+</sign>
+
+<sign id="E37">
+<descr>combination of <signref name="E36" />, <signref name="V36" /> and <signref name="V30" />
+</descr>
+</sign>
+
+<sign id="E38">
+<descr>long-horned bull</descr>
+</sign>
+
+<sign id="F1">
+<descr>head of ox</descr>
+</sign>
+
+<sign id="F1a">
+<descr>head of bovine</descr>
+</sign>
+
+<sign id="F2">
+<descr>head of charging ox</descr>
+</sign>
+
+<sign id="F3">
+<descr>head of hippopotamus</descr>
+</sign>
+
+<sign id="F4">
+<descr>forepart of lion</descr>
+</sign>
+
+<sign id="F5">
+<descr>head of bubalis or hartebeest</descr>
+</sign>
+
+<sign id="F6">
+<descr>forepart of bubalis or hartebeest</descr>
+</sign>
+
+<sign id="F7">
+<descr>head of ram</descr>
+</sign>
+
+<sign id="F8">
+<descr>forepart of ram</descr>
+</sign>
+
+<sign id="F9">
+<descr>head of leopard</descr>
+</sign>
+
+<sign id="F10">
+<descr>head and neck of animal</descr>
+</sign>
+
+<sign id="F11">
+<descr>head and neck of animal</descr>
+</sign>
+
+<sign id="F12">
+<descr>head and neck of canine</descr>
+</sign>
+
+<sign id="F13">
+<descr>horns</descr>
+</sign>
+
+<sign id="F13a">
+<descr>horns (low)</descr>
+</sign>
+
+<sign id="F14">
+<descr>combination of <signref name="F13" /> and <signref name="M4" /></descr>
+</sign>
+
+<sign id="F15">
+<descr>combination of <signref name="F14" /> and <signref name="N5" /></descr>
+</sign>
+
+<sign id="F16">
+<descr>horn</descr>
+</sign>
+
+<sign id="F17">
+<descr>combination of <signref name="F16" /> with vase from which water flows</descr>
+</sign>
+
+<sign id="F18">
+<descr>tusk</descr>
+</sign>
+
+<sign id="F19">
+<descr>lower jaw-bone of ox</descr>
+</sign>
+
+<sign id="F20">
+<descr>tongue</descr>
+</sign>
+
+<sign id="F21">
+<descr>ear of bovine</descr>
+</sign>
+
+<sign id="F21a">
+<descr>hieratic ear of bovine</descr>
+</sign>
+
+<sign id="F22">
+<descr>hind-quarters of lion</descr>
+</sign>
+
+<sign id="F23">
+<descr>foreleg of ox</descr>
+</sign>
+
+<sign id="F24">
+<descr><signref name="F23" /> reversed</descr>
+</sign>
+
+<sign id="F25">
+<descr>leg of ox</descr>
+</sign>
+
+<sign id="F26">
+<descr>skin of goat</descr>
+</sign>
+
+<sign id="F27">
+<descr>skin of cow with bent tail</descr>
+</sign>
+
+<sign id="F28">
+<descr>skin of cow with straight tail</descr>
+</sign>
+
+<sign id="F29">
+<descr>cow's skin pierced by arrow</descr>
+</sign>
+
+<sign id="F30">
+<descr>water-skin</descr>
+</sign>
+
+<sign id="F31">
+<descr>three skins tied together</descr>
+</sign>
+
+<sign id="F31a">
+<descr>three skins tied together (simplified)</descr>
+</sign>
+
+<sign id="F32">
+<descr>animal's belly</descr>
+</sign>
+
+<sign id="F33">
+<descr>tail</descr>
+</sign>
+
+<sign id="F34">
+<descr>heart</descr>
+</sign>
+
+<sign id="F35">
+<descr>heart and windpipe</descr>
+</sign>
+
+<sign id="F36">
+<descr>lung and windpipe</descr>
+</sign>
+
+<sign id="F37">
+<descr>backbone and ribs and spinal cord</descr>
+</sign>
+
+<sign id="F37a">
+<descr>backbone and ribs</descr>
+</sign>
+
+<sign id="F38">
+<descr>backbone and ribs</descr>
+</sign>
+
+<sign id="F38a">
+<descr>backbone and ribs and spinal cord</descr>
+</sign>
+
+<sign id="F39">
+<descr>backbone and spinal cord</descr>
+</sign>
+
+<sign id="F40">
+<descr>backbone and spinal cords</descr>
+</sign>
+
+<sign id="F41">
+<descr>vertebrae</descr>
+</sign>
+
+<sign id="F42">
+<descr>rib</descr>
+</sign>
+
+<sign id="F43">
+<descr>ribs</descr>
+</sign>
+
+<sign id="F44">
+<descr>leg-bone with meat</descr>
+</sign>
+
+<sign id="F45">
+<descr>uterus</descr>
+</sign>
+
+<sign id="F45a">
+<descr>uterus (simplified)</descr>
+</sign>
+
+<sign id="F46">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F46a">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F47">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F47a">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F48">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F49">
+<descr>intestine</descr>
+</sign>
+
+<sign id="F50">
+<descr>combination of <signref name="F46" /> and <signref name="S29" /></descr>
+</sign>
+
+<sign id="F51">
+<descr>piece of flesh</descr>
+</sign>
+
+<sign id="F51a">
+<descr>three pieces of flesh horizontally</descr>
+</sign>
+
+<sign id="F51b">
+<descr>three pieces of flesh vertically</descr>
+</sign>
+
+<sign id="F51c">
+<descr><signref name="F51" /> reversed</descr>
+</sign>
+
+<sign id="F52">
+<descr>excrement</descr>
+</sign>
+
+<sign id="F53">
+<descr>divine rod with <signref name="F7" /></descr>
+</sign>
+
+<sign id="G1">
+<descr>Egyptian vulture</descr>
+</sign>
+
+<sign id="G2">
+<descr>two Egyptian vultures</descr>
+</sign>
+
+<sign id="G3">
+<descr>combination of <signref name="G1" /> and <signref name="U1" /></descr>
+</sign>
+
+<sign id="G4">
+<descr>buzzard</descr>
+</sign>
+
+<sign id="G5">
+<descr>falcon</descr>
+</sign>
+
+<sign id="G6">
+<descr>combination of <signref name="G5" /> and <signref name="S45" /></descr>
+</sign>
+
+<sign id="G6a">
+<descr>falcon on <signref name="V30" /></descr>
+</sign>
+
+<sign id="G7">
+<descr>falcon on <signref name="R12" /></descr>
+</sign>
+
+<sign id="G7a">
+<descr>falcon in boat</descr>
+</sign>
+
+<sign id="G7b">
+<descr>falcon in boat</descr>
+</sign>
+
+<sign id="G8">
+<descr>falcon on <signref name="S12" /></descr>
+</sign>
+
+<sign id="G9">
+<descr>falcon with <signref name="N5" /> on head</descr>
+</sign>
+
+<sign id="G10">
+<descr>falcon in Sokar barque</descr>
+</sign>
+
+<sign id="G11">
+<descr>image of falcon</descr>
+</sign>
+
+<sign id="G11a">
+<descr>image of falcon on <signref name="R12" /></descr>
+</sign>
+
+<sign id="G12">
+<descr>combination of <signref name="G11" /> and <signref name="S45" /></descr>
+</sign>
+
+<sign id="G13">
+<descr>image of falcon with <signref name="S9" /></descr>
+</sign>
+
+<sign id="G14">
+<descr>vulture</descr>
+</sign>
+
+<sign id="G15">
+<descr>combination of <signref name="G14" /> and <signref name="S45" /></descr>
+</sign>
+
+<sign id="G16">
+<descr>vulture and cobra each on <signref name="V30" /></descr>
+</sign>
+
+<sign id="G17">
+<descr>owl</descr>
+</sign>
+
+<sign id="G18">
+<descr>two owls</descr>
+</sign>
+
+<sign id="G19">
+<descr>combination of <signref name="G17" /> and <signref name="D37" /></descr>
+</sign>
+
+<sign id="G20">
+<descr>combination of <signref name="G17" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="G20a">
+<descr>combination of <signref name="G17" /> and <signref name="D21" /></descr>
+</sign>
+
+<sign id="G21">
+<descr>guinea-fowl</descr>
+</sign>
+
+<sign id="G22">
+<descr>hoopoe</descr>
+</sign>
+
+<sign id="G23">
+<descr>lawping</descr>
+</sign>
+
+<sign id="G24">
+<descr>lawping with twisted wings</descr>
+</sign>
+
+<sign id="G25">
+<descr>northern bald ibis</descr>
+</sign>
+
+<sign id="G26">
+<descr>sacred ibis on <signref name="R12" /></descr>
+</sign>
+
+<sign id="G26a">
+<descr>sacred ibis</descr>
+</sign>
+
+<sign id="G27">
+<descr>flamingo</descr>
+</sign>
+
+<sign id="G28">
+<descr>glossy ibis</descr>
+</sign>
+
+<sign id="G29">
+<descr>saddle-billed stork</descr>
+</sign>
+
+<sign id="G30">
+<descr>three saddle-billed storks</descr>
+</sign>
+
+<sign id="G31">
+<descr>heron</descr>
+</sign>
+
+<sign id="G32">
+<descr>heron on perch</descr>
+</sign>
+
+<sign id="G33">
+<descr>cattle egret</descr>
+</sign>
+
+<sign id="G34">
+<descr>ostrich</descr>
+</sign>
+
+<sign id="G35">
+<descr>cormorant</descr>
+</sign>
+
+<sign id="G36">
+<descr>swallow</descr>
+</sign>
+
+<sign id="G36a">
+<descr>swallow (low)</descr>
+</sign>
+
+<sign id="G37">
+<descr>sparrow</descr>
+</sign>
+
+<sign id="G37a">
+<descr>sparrow (low)</descr>
+</sign>
+
+<sign id="G38">
+<descr>white-fronted goose</descr>
+</sign>
+
+<sign id="G39">
+<descr>pintail</descr>
+</sign>
+
+<sign id="G40">
+<descr>pintail flying</descr>
+</sign>
+
+<sign id="G41">
+<descr>pintail alighting</descr>
+</sign>
+
+<sign id="G42">
+<descr>widgeon</descr>
+</sign>
+
+<sign id="G43">
+<descr>quail chick</descr>
+</sign>
+
+<sign id="G43a">
+<descr>combination of <signref name="G43" /> and <signref name="X1" /></descr>
+</sign>
+
+<sign id="G44">
+<descr>two quail chicks</descr>
+</sign>
+
+<sign id="G45">
+<descr>combination of <signref name="G43" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="G45a">
+<descr>combination of <signref name="G43" /> and <signref name="D37" /></descr>
+</sign>
+
+<sign id="G46">
+<descr>combination of <signref name="G43" /> and <signref name="U1" /></descr>
+</sign>
+
+<sign id="G47">
+<descr>duckling</descr>
+</sign>
+
+<sign id="G48">
+<descr>three ducklings in nest</descr>
+</sign>
+
+<sign id="G49">
+<descr>three ducklings in pool</descr>
+</sign>
+
+<sign id="G50">
+<descr>two plovers</descr>
+</sign>
+
+<sign id="G51">
+<descr>bird pecking at fish</descr>
+</sign>
+
+<sign id="G52">
+<descr>goose picking up grain</descr>
+</sign>
+
+<sign id="G53">
+<descr>human-headed bird with <signref name="R7" /></descr>
+</sign>
+
+<sign id="G54">
+<descr>plucked bird</descr>
+</sign>
+
+<sign id="H1">
+<descr>head of pintail</descr>
+</sign>
+
+<sign id="H2">
+<descr>head of crested bird</descr>
+</sign>
+
+<sign id="H3">
+<descr>head of spoonbill</descr>
+</sign>
+
+<sign id="H4">
+<descr>head of vulture</descr>
+</sign>
+
+<sign id="H5">
+<descr>wing</descr>
+</sign>
+
+<sign id="H6">
+<descr>feather</descr>
+</sign>
+
+<sign id="H6a">
+<descr>hieratic feather</descr>
+</sign>
+
+<sign id="H7">
+<descr>claw</descr>
+</sign>
+
+<sign id="H8">
+<descr>egg</descr>
+</sign>
+
+<sign id="I1">
+<descr>gecko</descr>
+</sign>
+
+<sign id="I2">
+<descr>turtle</descr>
+</sign>
+
+<sign id="I3">
+<descr>crocodile</descr>
+</sign>
+
+<sign id="I4">
+<descr>crocodile on shrine</descr>
+</sign>
+
+<sign id="I5">
+<descr>crocodile with curved tail</descr>
+</sign>
+
+<sign id="I5a">
+<descr>image of crocodile</descr>
+</sign>
+
+<sign id="I6">
+<descr>crocodile scales</descr>
+</sign>
+
+<sign id="I7">
+<descr>frog</descr>
+</sign>
+
+<sign id="I8">
+<descr>tadpole</descr>
+</sign>
+
+<sign id="I9">
+<descr>horned viper</descr>
+</sign>
+
+<sign id="I9a">
+<descr>horned viper crawling out of enclosure</descr>
+</sign>
+
+<sign id="I10">
+<descr>cobra</descr>
+</sign>
+
+<sign id="I10a">
+<descr>cobra with feather</descr>
+</sign>
+
+<sign id="I11">
+<descr>two cobras</descr>
+</sign>
+
+<sign id="I11a">
+<descr>combination of <signref name="I10" />, <signref name="X1" /> and <signref name="N18" /></descr>
+</sign>
+
+<sign id="I12">
+<descr>erect cobra</descr>
+</sign>
+
+<sign id="I13">
+<descr>erect cobra on <signref name="V30" /></descr>
+</sign>
+
+<sign id="I14">
+<descr>snake</descr>
+</sign>
+
+<sign id="I15">
+<descr>snake</descr>
+</sign>
+
+<sign id="K1">
+<descr>tilapia</descr>
+</sign>
+
+<sign id="K2">
+<descr>barbel</descr>
+</sign>
+
+<sign id="K3">
+<descr>mullet</descr>
+</sign>
+
+<sign id="K4">
+<descr>elephant-snout fish</descr>
+</sign>
+
+<sign id="K5">
+<descr>Petrocephalus bane</descr>
+</sign>
+
+<sign id="K6">
+<descr>fish scale</descr>
+</sign>
+
+<sign id="K7">
+<descr>puffer</descr>
+</sign>
+
+<sign id="K8">
+<descr>catfish</descr>
+</sign>
+
+<sign id="L1">
+<descr>dung beetle</descr>
+</sign>
+
+<sign id="L2">
+<descr>bee</descr>
+</sign>
+
+<sign id="L2a">
+<descr>combination of <signref name="M23" />, <signref name="L2" /> and two <signref name="X1" /></descr>
+</sign>
+
+<sign id="L3">
+<descr>fly</descr>
+</sign>
+
+<sign id="L4">
+<descr>locust</descr>
+</sign>
+
+<sign id="L5">
+<descr>centipede</descr>
+</sign>
+
+<sign id="L6">
+<descr>shell</descr>
+</sign>
+
+<sign id="L6a">
+<descr><signref name="L6" /> reversed</descr>
+</sign>
+
+<sign id="L7">
+<descr>scorpion</descr>
+</sign>
+
+<sign id="L8">
+<descr>beetle</descr>
+</sign>
+
+<sign id="M1">
+<descr>tree</descr>
+</sign>
+
+<sign id="M1a">
+<descr>combination of <signref name="M1" /> and <signref name="M3" /></descr>
+</sign>
+
+<sign id="M1b">
+<descr>combination of <signref name="M1" /> and <signref name="I9" /></descr>
+</sign>
+
+<sign id="M2">
+<descr>plant</descr>
+</sign>
+
+<sign id="M3">
+<descr>branch</descr>
+</sign>
+
+<sign id="M3a">
+<descr>combination of <signref name="G17" /> and <signref name="M3" /></descr>
+</sign>
+
+<sign id="M4">
+<descr>palm branch</descr>
+</sign>
+
+<sign id="M5">
+<descr>combination of <signref name="M4" /> and <signref name="X1" /></descr>
+</sign>
+
+<sign id="M6">
+<descr>combination of <signref name="M4" /> and <signref name="D21" /></descr>
+</sign>
+
+<sign id="M7">
+<descr>combination of <signref name="M4" /> and <signref name="Q3" /></descr>
+</sign>
+
+<sign id="M8">
+<descr>pool with lotus flowers</descr>
+</sign>
+
+<sign id="M9">
+<descr>lotus flower</descr>
+</sign>
+
+<sign id="M10">
+<descr>lotus bud with straight stem</descr>
+</sign>
+
+<sign id="M10a">
+<descr>lotus bud with winding stem</descr>
+</sign>
+
+<sign id="M11">
+<descr>flower on long twisted stalk</descr>
+</sign>
+
+<sign id="M12">
+<descr>lotus plant</descr>
+</sign>
+
+<sign id="M12a">
+</sign>
+
+<sign id="M12b">
+</sign>
+
+<sign id="M12c">
+</sign>
+
+<sign id="M12d">
+</sign>
+
+<sign id="M12e">
+</sign>
+
+<sign id="M12f">
+</sign>
+
+<sign id="M12g">
+</sign>
+
+<sign id="M12h">
+</sign>
+
+<sign id="M13">
+<descr>papyrus</descr>
+</sign>
+
+<sign id="M14">
+<descr>combination of <signref name="M13" /> and <signref name="I10" /></descr>
+</sign>
+
+<sign id="M15">
+<descr>clump of papyrus with buds</descr>
+</sign>
+
+<sign id="M15a">
+<descr>combination of <signref name="M15" /> and <signref name="O49" /></descr>
+</sign>
+
+<sign id="M16">
+<descr>clump of papyrus</descr>
+</sign>
+
+<sign id="M16a">
+<descr>combination of <signref name="M16" /> and <signref name="O49" /></descr>
+</sign>
+
+<sign id="M17">
+<descr>reed</descr>
+</sign>
+
+<sign id="M17a">
+<descr>two reeds</descr>
+</sign>
+
+<sign id="M18">
+<descr>combination of <signref name="M17" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="M19">
+<descr>heaped conical cakes between <signref name="M17" /> and <signref name="U36" /></descr>
+</sign>
+
+<sign id="M20">
+<descr>field of reeds</descr>
+</sign>
+
+<sign id="M21">
+<descr>reeds with root</descr>
+</sign>
+
+<sign id="M22">
+<descr>rush</descr>
+</sign>
+
+<sign id="M22a">
+<descr>two rushes</descr>
+</sign>
+
+<sign id="M23">
+<descr>sedge</descr>
+</sign>
+
+<sign id="M24">
+<descr>combination of <signref name="M23" /> and <signref name="D21" /></descr>
+</sign>
+
+<sign id="M24a">
+<descr>lily</descr>
+</sign>
+
+<sign id="M25">
+<descr>combination of <signref name="M26" /> and <signref name="D21" /></descr>
+</sign>
+
+<sign id="M26">
+<descr>flowering sedge</descr>
+</sign>
+
+<sign id="M27">
+<descr>combination of <signref name="M26" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="M28">
+<descr>combination of <signref name="M26" /> and <signref name="V20" /></descr>
+</sign>
+
+<sign id="M28a">
+<descr>three lilies on <signref name="O49" /></descr>
+</sign>
+
+<sign id="M29">
+<descr>pod</descr>
+</sign>
+
+<sign id="M30">
+<descr>root</descr>
+</sign>
+
+<sign id="M31">
+<descr>rhizome</descr>
+</sign>
+
+<sign id="M31a">
+<descr><signref name="M1" /> in vase</descr>
+</sign>
+
+<sign id="M32">
+<descr>rhizome</descr>
+</sign>
+
+<sign id="M33">
+<descr>3 grains horizontally</descr>
+</sign>
+
+<sign id="M33a">
+<descr>3 grains vertically</descr>
+</sign>
+
+<sign id="M33b">
+<descr>3 grains in triangular arrangement</descr>
+</sign>
+
+<sign id="M34">
+<descr>ear of emmer</descr>
+</sign>
+
+<sign id="M35">
+<descr>heap of grain</descr>
+</sign>
+
+<sign id="M36">
+<descr>bundle of flax showing bolls</descr>
+</sign>
+
+<sign id="M37">
+<descr>bundle of flax</descr>
+</sign>
+
+<sign id="M38">
+<descr>wide bundle of flax</descr>
+</sign>
+
+<sign id="M39">
+<descr>basket of fruit or grain</descr>
+</sign>
+
+<sign id="M40">
+<descr>bundle of reeds</descr>
+</sign>
+
+<sign id="M40a">
+<descr>bundle of reeds</descr>
+</sign>
+
+<sign id="M41">
+<descr>piece of wood</descr>
+</sign>
+
+<sign id="M42">
+<descr>flower</descr>
+</sign>
+
+<sign id="M43">
+<descr>vine on trellis</descr>
+</sign>
+
+<sign id="M44">
+<descr>thorn</descr>
+</sign>
+
+<sign id="N1">
+<descr>sky</descr>
+</sign>
+
+<sign id="N2">
+<descr>sky with sceptre</descr>
+</sign>
+
+<sign id="N3">
+<descr>sky with sceptre</descr>
+</sign>
+
+<sign id="N4">
+<descr>sky with rain</descr>
+</sign>
+
+<sign id="N5">
+<descr>sun</descr>
+</sign>
+
+<sign id="N6">
+<descr>sun with uraeus</descr>
+</sign>
+
+<sign id="N7">
+<descr>combination of <signref name="N5" /> and <signref name="T28" /></descr>
+</sign>
+
+<sign id="N8">
+<descr>sunshine</descr>
+</sign>
+
+<sign id="N9">
+<descr>moon with lower half obscured</descr>
+</sign>
+
+<sign id="N10">
+<descr>moon with lower section obscured</descr>
+</sign>
+
+<sign id="N11">
+<descr>crescent moon</descr>
+</sign>
+
+<sign id="N12">
+<descr>crescent moon</descr>
+</sign>
+
+<sign id="N13">
+<descr>combination of <signref name="N11" /> and <signref name="N14" /></descr>
+</sign>
+
+<sign id="N14">
+<descr>star</descr>
+</sign>
+
+<sign id="N15">
+<descr>star in circle</descr>
+</sign>
+
+<sign id="N16">
+<descr>land with grains</descr>
+</sign>
+
+<sign id="N17">
+<descr>land</descr>
+</sign>
+
+<sign id="N18">
+<descr>sandy tract</descr>
+</sign>
+
+<sign id="N18a">
+<descr>combination of <signref name="N18" /> and <signref name="N35" /></descr>
+</sign>
+
+<sign id="N18b">
+<descr>combination of <signref name="X4b" /> and <signref name="O34" /></descr>
+</sign>
+
+<sign id="N19">
+<descr>two sandy tracts</descr>
+</sign>
+
+<sign id="N20">
+<descr>tongue of land</descr>
+</sign>
+
+<sign id="N21">
+<descr>short tongue of land</descr>
+</sign>
+
+<sign id="N22">
+<descr>broad tongue of land</descr>
+</sign>
+
+<sign id="N23">
+<descr>irrigation canal</descr>
+</sign>
+
+<sign id="N24">
+<descr>irrigation canal system</descr>
+</sign>
+
+<sign id="N25">
+<descr>three hills</descr>
+</sign>
+
+<sign id="N25a">
+<descr>three hills (low)</descr>
+</sign>
+
+<sign id="N26">
+<descr>two hills</descr>
+</sign>
+
+<sign id="N27">
+<descr>sun over mountain</descr>
+</sign>
+
+<sign id="N28">
+<descr>rays of sun over hill</descr>
+</sign>
+
+<sign id="N29">
+<descr>slope of hill</descr>
+</sign>
+
+<sign id="N30">
+<descr>mound of earth</descr>
+</sign>
+
+<sign id="N31">
+<descr>road with shrubs</descr>
+</sign>
+
+<sign id="N32">
+<descr>lump of clay</descr>
+</sign>
+
+<sign id="N33">
+<descr>grain</descr>
+</sign>
+
+<sign id="N33a">
+<descr>three grains</descr>
+</sign>
+
+<sign id="N34">
+<descr>ingot of metal</descr>
+</sign>
+
+<sign id="N34a">
+<descr>ingot of metal</descr>
+</sign>
+
+<sign id="N35">
+<descr>ripple of water</descr>
+</sign>
+
+<sign id="N35a">
+<descr>three ripples of water</descr>
+</sign>
+
+<sign id="N36">
+<descr>canal</descr>
+</sign>
+
+<sign id="N37">
+<descr>pool</descr>
+</sign>
+
+<sign id="N37a">
+<descr>pool</descr>
+</sign>
+
+<sign id="N38">
+<descr>deep pool</descr>
+</sign>
+
+<sign id="N39">
+<descr>pool with water</descr>
+</sign>
+
+<sign id="N40">
+<descr>combination of <signref name="N37" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="N41">
+<descr>well with ripple of water</descr>
+</sign>
+
+<sign id="N42">
+<descr>well with line of water</descr>
+</sign>
+
+<sign id="NL1">
+<descr>sign of first nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL2">
+<descr>sign of second nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL3">
+<descr>sign of third nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL4">
+<descr>sign of fourth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL5">
+<descr>sign of fifth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL5a">
+<descr>sign of fifth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL6">
+<descr>sign of sixth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL7">
+<descr>sign of seventh nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL8">
+<descr>sign of eighth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL9">
+<descr>sign of ninth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL10">
+<descr>sign of tenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL11">
+<descr>sign of eleventh nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL12">
+<descr>sign of twelfth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL13">
+<descr>sign of thirteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL14">
+<descr>sign of fourteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL15">
+<descr>sign of fifteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL16">
+<descr>sign of sixteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL17">
+<descr>sign of seventeenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL17a">
+<descr>sign of seventeenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL18">
+<descr>sign of eighteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL19">
+<descr>sign of nineteenth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NL20">
+<descr>sign of twentieth nome of Lower Egypt</descr>
+</sign>
+
+<sign id="NU1">
+<descr>sign of first nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU2">
+<descr>sign of second nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU3">
+<descr>sign of third nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU4">
+<descr>sign of fourth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU5">
+<descr>sign of fifth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU6">
+<descr>sign of sixth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU7">
+<descr>sign of seventh nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU8">
+<descr>sign of eighth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU9">
+<descr>sign of ninth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU10">
+<descr>sign of tenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU10a">
+<descr>sign of tenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU11">
+<descr>sign of eleventh nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU11a">
+<descr>sign of eleventh nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU12">
+<descr>sign of twelfth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU13">
+<descr>sign of thirteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU14">
+<descr>sign of fourteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU15">
+<descr>sign of fifteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU16">
+<descr>sign of sixteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU17">
+<descr>sign of seventeenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU18">
+<descr>sign of eighteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU18a">
+<descr>sign of eighteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU19">
+<descr>sign of nineteenth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU20">
+<descr>sign of twentieth nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU21">
+<descr>sign of twenty-first nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU22">
+<descr>sign of twenty-second nome of Upper Egypt</descr>
+</sign>
+
+<sign id="NU22a">
+<descr>sign of second nome of Upper Egypt</descr>
+</sign>
+
+<sign id="O1">
+<descr>house</descr>
+</sign>
+
+<sign id="O1a">
+<descr>combination of <signref name="O1" /> and <signref name="S34" /></descr>
+</sign>
+
+<sign id="O2">
+<descr>combination of <signref name="O1" /> and <signref name="T3" /></descr>
+</sign>
+
+<sign id="O3">
+<descr>combination of <signref name="O1" />, <signref name="P8" />, <signref name="X3" />, and <signref name="W22" />
+</descr>
+</sign>
+
+<sign id="O4">
+<descr>shelter</descr>
+</sign>
+
+<sign id="O5">
+<descr>winding wall from upper-left corner</descr>
+</sign>
+
+<sign id="O5a">
+<descr>winding wall from lower-left corner</descr>
+</sign>
+
+<sign id="O6">
+<descr>enclosure</descr>
+</sign>
+
+<sign id="O6a">
+<descr>opening of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O6b">
+<descr>opening of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O6c">
+<descr>opening of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O6d">
+<descr>closing of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O6e">
+<descr>closing of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O6f">
+<descr>closing of <al>Hwt</al>-enclosure</descr>
+</sign>
+
+<sign id="O7">
+<descr>combination of <signref name="O6" /> and <signref name="X1" /></descr>
+</sign>
+
+<sign id="O8">
+<descr>combination of <signref name="O7" /> and <signref name="O29" /></descr>
+</sign>
+
+<sign id="O9">
+<descr>combination of <signref name="O7" /> and <signref name="V30" /></descr>
+</sign>
+
+<sign id="O10">
+<descr>combination of <signref name="O6" /> and <signref name="G5" /></descr>
+</sign>
+
+<sign id="O10a">
+<descr>combination of <signref name="O6" /> and <signref name="S34" /></descr>
+</sign>
+
+<sign id="O10b">
+<descr>combination of <signref name="O6" /> and <signref name="L2" /></descr>
+</sign>
+
+<sign id="O10c">
+<descr>combination of <signref name="O18" /> and <signref name="D2" /></descr>
+</sign>
+
+<sign id="O11">
+<descr>palace</descr>
+</sign>
+
+<sign id="O12">
+<descr>combination of <signref name="O11" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="O13">
+<descr>battlemented enclosure</descr>
+</sign>
+
+<sign id="O14">
+<descr>part of battlemented enclosure</descr>
+</sign>
+
+<sign id="O15">
+<descr>enclosure with <signref name="W10" /> and <signref name="X1" /></descr>
+</sign>
+
+<sign id="O16">
+<descr>gateway with serpents</descr>
+</sign>
+
+<sign id="O17">
+<descr>open gateway with serpents</descr>
+</sign>
+
+<sign id="O18">
+<descr>shrine in profile</descr>
+</sign>
+
+<sign id="O19">
+<descr>shrine with fence</descr>
+</sign>
+
+<sign id="O19a">
+<descr>shrine</descr>
+</sign>
+
+<sign id="O20">
+<descr>shrine</descr>
+</sign>
+
+<sign id="O20a">
+<descr>shrine</descr>
+</sign>
+
+<sign id="O21">
+<descr>façade of shrine</descr>
+</sign>
+
+<sign id="O22">
+<descr>booth with pole</descr>
+</sign>
+
+<sign id="O23">
+<descr>double platform</descr>
+</sign>
+
+<sign id="O24">
+<descr>pyramid</descr>
+</sign>
+
+<sign id="O24a">
+<descr>pedestal of sun temple</descr>
+</sign>
+
+<sign id="O25">
+<descr>obelisk</descr>
+</sign>
+
+<sign id="O25a">
+<descr>obelisk and pedestal of sun temple</descr>
+</sign>
+
+<sign id="O26">
+<descr>stela</descr>
+</sign>
+
+<sign id="O27">
+<descr>hall of columns</descr>
+</sign>
+
+<sign id="O28">
+<descr>column</descr>
+</sign>
+
+<sign id="O29">
+<descr>horizontal wooden column</descr>
+</sign>
+
+<sign id="O29a">
+<descr>vertical wooden column</descr>
+</sign>
+
+<sign id="O30">
+<descr>support</descr>
+</sign>
+
+<sign id="O30a">
+<descr>four supports</descr>
+</sign>
+
+<sign id="O31">
+<descr>door</descr>
+</sign>
+
+<sign id="O32">
+<descr>gateway</descr>
+</sign>
+
+<sign id="O33">
+<descr>façade of palace</descr>
+</sign>
+
+<sign id="O33a">
+<descr>closing of <al>srx</al>-enclosure</descr>
+</sign>
+
+<sign id="O34">
+<descr>bolt</descr>
+</sign>
+
+<sign id="O35">
+<descr>combination of <signref name="O34" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="O36">
+<descr>wall</descr>
+</sign>
+
+<sign id="O36a">
+<descr>opening of oval fortified wall enclosure</descr>
+</sign>
+
+<sign id="O36b">
+<descr>closing of oval fortified wall enclosure</descr>
+</sign>
+
+<sign id="O36c">
+<descr>opening of square fortified wall enclosure</descr>
+</sign>
+
+<sign id="O36d">
+<descr>closure of square fortified wall enclosure</descr>
+</sign>
+
+<sign id="O37">
+<descr>falling wall</descr>
+</sign>
+
+<sign id="O38">
+<descr>corner of wall</descr>
+</sign>
+
+<sign id="O39">
+<descr>stone</descr>
+</sign>
+
+<sign id="O40">
+<descr>stairway</descr>
+</sign>
+
+<sign id="O41">
+<descr>double stairway</descr>
+</sign>
+
+<sign id="O42">
+<descr>fence</descr>
+</sign>
+
+<sign id="O43">
+<descr>low fence</descr>
+</sign>
+
+<sign id="O44">
+<descr>emblem of Min</descr>
+</sign>
+
+<sign id="O45">
+<descr>domed building</descr>
+</sign>
+
+<sign id="O46">
+<descr>domed building</descr>
+</sign>
+
+<sign id="O47">
+<descr>enclosed mound</descr>
+</sign>
+
+<sign id="O48">
+<descr>enclosed mound</descr>
+</sign>
+
+<sign id="O49">
+<descr>village</descr>
+</sign>
+
+<sign id="O50">
+<descr>threshing floor</descr>
+</sign>
+
+<sign id="O50a">
+<descr>hieratic threshing floor</descr>
+</sign>
+
+<sign id="O50b">
+<descr><signref name="O50a" /> reversed</descr>
+</sign>
+
+<sign id="O51">
+<descr>pile of grain</descr>
+</sign>
+
+<sign id="P1">
+<descr>boat</descr>
+</sign>
+
+<sign id="P1a">
+<descr>boat upside down</descr>
+</sign>
+
+<sign id="P2">
+<descr>ship under sail</descr>
+</sign>
+
+<sign id="P3">
+<descr>sacred barque</descr>
+</sign>
+
+<sign id="P3a">
+<descr>sacred barque without steering oar</descr>
+</sign>
+
+<sign id="P4">
+<descr>boat with net</descr>
+</sign>
+
+<sign id="P5">
+<descr>sail</descr>
+</sign>
+
+<sign id="P6">
+<descr>mast</descr>
+</sign>
+
+<sign id="P7">
+<descr>combination of <signref name="P6" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="P8">
+<descr>oar</descr>
+</sign>
+
+<sign id="P9">
+<descr>combination of <signref name="P8" /> and <signref name="I9" /></descr>
+</sign>
+
+<sign id="P10">
+<descr>steering oar</descr>
+</sign>
+
+<sign id="P11">
+<descr>mooring post</descr>
+</sign>
+
+<sign id="Q1">
+<descr>seat</descr>
+</sign>
+
+<sign id="Q2">
+<descr>portable seat</descr>
+</sign>
+
+<sign id="Q3">
+<descr>stool</descr>
+</sign>
+
+<sign id="Q4">
+<descr>head-rest</descr>
+</sign>
+
+<sign id="Q5">
+<descr>chest</descr>
+</sign>
+
+<sign id="Q6">
+<descr>coffin</descr>
+</sign>
+
+<sign id="Q7">
+<descr>brazier</descr>
+</sign>
+
+<sign id="R1">
+<descr>high table with offerings</descr>
+</sign>
+
+<sign id="R2">
+<descr>table with slices of bread</descr>
+</sign>
+
+<sign id="R2a">
+<descr>high table with offerings</descr>
+</sign>
+
+<sign id="R3">
+<descr>low table with offerings</descr>
+</sign>
+
+<sign id="R3a">
+<descr>low table</descr>
+</sign>
+
+<sign id="R3b">
+<descr>low table with offerings (simplified)</descr>
+</sign>
+
+<sign id="R4">
+<descr>loaf on mat</descr>
+</sign>
+
+<sign id="R5">
+<descr>narrow censer</descr>
+</sign>
+
+<sign id="R6">
+<descr>broad censer</descr>
+</sign>
+
+<sign id="R7">
+<descr>bowl with smoke</descr>
+</sign>
+
+<sign id="R8">
+<descr>cloth on pole</descr>
+</sign>
+
+<sign id="R9">
+<descr>combination of <signref name="R8" /> and <signref name="V33" /></descr>
+</sign>
+
+<sign id="R10">
+<descr>combination of <signref name="R8" />, <signref name="T28" /> and <signref name="N29" /></descr>
+</sign>
+
+<sign id="R10a">
+<descr>combination of <signref name="R8" /> and <signref name="T28" /></descr>
+</sign>
+
+<sign id="R11">
+<descr>reed column</descr>
+</sign>
+
+<sign id="R12">
+<descr>standard</descr>
+</sign>
+
+<sign id="R13">
+<descr>falcon and feather on standard</descr>
+</sign>
+
+<sign id="R14">
+<descr>feather on standard</descr>
+</sign>
+
+<sign id="R15">
+<descr>spear emblem</descr>
+</sign>
+
+<sign id="R16">
+<descr>sceptre with feathers and string</descr>
+</sign>
+
+<sign id="R16a">
+<descr>sceptre with feathers</descr>
+</sign>
+
+<sign id="R17">
+<descr>wig on pole</descr>
+</sign>
+
+<sign id="R18">
+<descr>combination of <signref name="R17" /> and <signref name="N24" /></descr>
+</sign>
+
+<sign id="R19">
+<descr><signref name="S40" /> with feather</descr>
+</sign>
+
+<sign id="R20">
+<descr>flower with horns</descr>
+</sign>
+
+<sign id="R21">
+<descr>flower with horns</descr>
+</sign>
+
+<sign id="R22">
+<descr>two narrow belemnites</descr>
+</sign>
+
+<sign id="R23">
+<descr>two broad belemnites</descr>
+</sign>
+
+<sign id="R24">
+<descr>two bows tied horizontally</descr>
+</sign>
+
+<sign id="R25">
+<descr>two bows tied vertically</descr>
+</sign>
+
+<sign id="R26">
+<descr>combination of <signref name="N17" />,
+<signref name="F36" />,
+<signref name="M24a" /> and
+<signref name="M13" /></descr>
+</sign>
+
+<sign id="R27">
+<descr>two arrows crossed over a shield</descr>
+</sign>
+
+<sign id="R28">
+<descr>Bat</descr>
+</sign>
+
+<sign id="R29">
+<descr>niche with serpent</descr>
+</sign>
+
+<sign id="S1">
+<descr>white crown</descr>
+</sign>
+
+<sign id="S2">
+<descr>combination of <signref name="S1" /> and <signref name="V30" /></descr>
+</sign>
+
+<sign id="S2a">
+<descr>combination of <signref name="S1" /> and <signref name="O49" /></descr>
+</sign>
+
+<sign id="S3">
+<descr>red crown</descr>
+</sign>
+
+<sign id="S4">
+<descr>combination of <signref name="S3" /> and <signref name="V30" /></descr>
+</sign>
+
+<sign id="S5">
+<descr>double crown</descr>
+</sign>
+
+<sign id="S6">
+<descr>combination of <signref name="S5" /> and <signref name="V30" /></descr>
+</sign>
+
+<sign id="S6a">
+<descr>combination of <signref name="S3" /> and <signref name="O49" /></descr>
+</sign>
+
+<sign id="S7">
+<descr>blue crown</descr>
+</sign>
+
+<sign id="S8">
+<descr><al>Atf</al>-crown</descr>
+</sign>
+
+<sign id="S9">
+<descr>two plumes</descr>
+</sign>
+
+<sign id="S10">
+<descr>headband</descr>
+</sign>
+
+<sign id="S11">
+<descr>broad collar</descr>
+</sign>
+
+<sign id="S12">
+<descr>collar of beads</descr>
+</sign>
+
+<sign id="S13">
+<descr>combination of <signref name="S12" /> and <signref name="D58" /></descr>
+</sign>
+
+<sign id="S14">
+<descr>combination of <signref name="S12" /> and <signref name="T3" /></descr>
+</sign>
+
+<sign id="S14a">
+<descr>combination of <signref name="S12" /> and <signref name="S40" /></descr>
+</sign>
+
+<sign id="S14b">
+<descr>combination of <signref name="S12" /> and <signref name="S40" /></descr>
+</sign>
+
+<sign id="S15">
+<descr>pectoral</descr>
+</sign>
+
+<sign id="S16">
+<descr>pectoral</descr>
+</sign>
+
+<sign id="S17">
+<descr>pectoral</descr>
+</sign>
+
+<sign id="S17a">
+<descr>girdle</descr>
+</sign>
+
+<sign id="S18">
+<descr>necklace with counterpoise</descr>
+</sign>
+
+<sign id="S19">
+<descr>necklace with seal from side</descr>
+</sign>
+
+<sign id="S20">
+<descr>necklace with seal from front</descr>
+</sign>
+
+<sign id="S21">
+<descr>ring</descr>
+</sign>
+
+<sign id="S22">
+<descr>shoulder-knot</descr>
+</sign>
+
+<sign id="S23">
+<descr>knotted cloth</descr>
+</sign>
+
+<sign id="S24">
+<descr>girdle knot</descr>
+</sign>
+
+<sign id="S25">
+<descr>garment with ties</descr>
+</sign>
+
+<sign id="S26">
+<descr>apron</descr>
+</sign>
+
+<sign id="S26a">
+<descr>apron</descr>
+</sign>
+
+<sign id="S26b">
+<descr>apron</descr>
+</sign>
+
+<sign id="S27">
+<descr>cloth with two strands</descr>
+</sign>
+
+<sign id="S28">
+<descr>cloth with fringe on top and <signref name="S29" /></descr>
+</sign>
+
+<sign id="S29">
+<descr>folded cloth</descr>
+</sign>
+
+<sign id="S30">
+<descr>combination of <signref name="S29" /> and <signref name="I9" /></descr>
+</sign>
+
+<sign id="S31">
+<descr>combination of <signref name="S29" /> and <signref name="U1" /></descr>
+</sign>
+
+<sign id="S32">
+<descr>cloth with fringe on the side</descr>
+</sign>
+
+<sign id="S33">
+<descr>sandle</descr>
+</sign>
+
+<sign id="S34">
+<descr>sandle-strap</descr>
+</sign>
+
+<sign id="S35">
+<descr>sunshade</descr>
+</sign>
+
+<sign id="S35a">
+<descr>sunshade</descr>
+</sign>
+
+<sign id="S36">
+<descr>sunshade</descr>
+</sign>
+
+<sign id="S37">
+<descr>fan</descr>
+</sign>
+
+<sign id="S38">
+<descr>crook</descr>
+</sign>
+
+<sign id="S39">
+<descr>shepherd's crook</descr>
+</sign>
+
+<sign id="S40">
+<descr>sceptre</descr>
+</sign>
+
+<sign id="S41">
+<descr>sceptre with spiral shaft</descr>
+</sign>
+
+<sign id="S42">
+<descr>sceptre of authority</descr>
+</sign>
+
+<sign id="S43">
+<descr>walking stick</descr>
+</sign>
+
+<sign id="S44">
+<descr>walking stick with <signref name="S45" /></descr>
+</sign>
+
+<sign id="S45">
+<descr>flagellum</descr>
+</sign>
+
+<sign id="S46">
+<descr>covering for head and neck</descr>
+</sign>
+
+<sign id="T1">
+<descr>mace with flat head</descr>
+</sign>
+
+<sign id="T2">
+<descr>mace with round head diagonally</descr>
+</sign>
+
+<sign id="T3">
+<descr>mace with round head vertically</descr>
+</sign>
+
+<sign id="T3a">
+<descr>combination of <signref name="T3" /> and <signref name="N26" /></descr>
+</sign>
+
+<sign id="T4">
+<descr>mace with strap</descr>
+</sign>
+
+<sign id="T5">
+<descr>combination of <signref name="T3" /> and <signref name="I10" /></descr>
+</sign>
+
+<sign id="T6">
+<descr>combination of <signref name="T3" /> and two <signref name="I10" /></descr>
+</sign>
+
+<sign id="T7">
+<descr>axe</descr>
+</sign>
+
+<sign id="T7a">
+<descr>axe</descr>
+</sign>
+
+<sign id="T8">
+<descr>dagger</descr>
+</sign>
+
+<sign id="T8a">
+<descr>dagger</descr>
+</sign>
+
+<sign id="T9">
+<descr>bow</descr>
+</sign>
+
+<sign id="T9a">
+<descr>bow</descr>
+</sign>
+
+<sign id="T10">
+<descr>composite bow</descr>
+</sign>
+
+<sign id="T11">
+<descr>arrow</descr>
+</sign>
+
+<sign id="T11a">
+<descr>two crossed arrows</descr>
+</sign>
+
+<sign id="T12">
+<descr>bow-string</descr>
+</sign>
+
+<sign id="T13">
+<descr>joined pieces of wood</descr>
+</sign>
+
+<sign id="T14">
+<descr>throw stick vertically</descr>
+</sign>
+
+<sign id="T15">
+<descr>throw stick slanted</descr>
+</sign>
+
+<sign id="T16">
+<descr>scimitar</descr>
+</sign>
+
+<sign id="T16a">
+<descr>scimitar</descr>
+</sign>
+
+<sign id="T17">
+<descr>chariot</descr>
+</sign>
+
+<sign id="T18">
+<descr>crook with package attached</descr>
+</sign>
+
+<sign id="T19">
+<descr>harpoon head</descr>
+</sign>
+
+<sign id="T20">
+<descr>harpoon head</descr>
+</sign>
+
+<sign id="T21">
+<descr>harpoon</descr>
+</sign>
+
+<sign id="T22">
+<descr>arrowhead</descr>
+</sign>
+
+<sign id="T23">
+<descr>arrowhead</descr>
+</sign>
+
+<sign id="T24">
+<descr>fishing-net</descr>
+</sign>
+
+<sign id="T25">
+<descr>floats</descr>
+</sign>
+
+<sign id="T26">
+<descr>bird-trap</descr>
+</sign>
+
+<sign id="T27">
+<descr>bird-trap</descr>
+</sign>
+
+<sign id="T28">
+<descr>butcher's block</descr>
+</sign>
+
+<sign id="T29">
+<descr>combination of <signref name="T30" /> and <signref name="T28" /></descr>
+</sign>
+
+<sign id="T30">
+<descr>knife</descr>
+</sign>
+
+<sign id="T31">
+<descr>knife-sharpener</descr>
+</sign>
+
+<sign id="T32">
+<descr>combination of <signref name="T31" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="T32a">
+<descr>combination of <signref name="T31" /> and <signref name="S29" /></descr>
+</sign>
+
+<sign id="T33">
+<descr>knife-sharpener of butcher</descr>
+</sign>
+
+<sign id="T33a">
+<descr>combination of <signref name="T33" /> and <signref name="S29" /></descr>
+</sign>
+
+<sign id="T34">
+<descr>butcher's knife</descr>
+</sign>
+
+<sign id="T35">
+<descr>butcher's knife</descr>
+</sign>
+
+<sign id="T36">
+<descr>shield</descr>
+</sign>
+
+<sign id="U1">
+<descr>sickle</descr>
+</sign>
+
+<sign id="U2">
+<descr>sickle (low)</descr>
+</sign>
+
+<sign id="U3">
+<descr>combination of <signref name="U1" /> and <signref name="D4" /></descr>
+</sign>
+
+<sign id="U4">
+<descr>combination of <signref name="U1" /> and <signref name="Aa11" /></descr>
+</sign>
+
+<sign id="U5">
+<descr>combination of <signref name="U2" /> and <signref name="Aa11" /></descr>
+</sign>
+
+<sign id="U6">
+<descr>diagonal hoe</descr>
+</sign>
+
+<sign id="U6a">
+<descr>vertical hoe</descr>
+</sign>
+
+<sign id="U6b">
+<descr><signref name="U6a" /> reversed</descr>
+</sign>
+
+<sign id="U7">
+<descr>horizontal hoe</descr>
+</sign>
+
+<sign id="U8">
+<descr>hoe without connecting rope</descr>
+</sign>
+
+<sign id="U9">
+<descr>grain-measure with grain</descr>
+</sign>
+
+<sign id="U10">
+<descr><signref name="U9" /> beneath <signref name="M33" /></descr>
+</sign>
+
+<sign id="U11">
+<descr>combination of <signref name="S38" /> and <signref name="U9" /></descr>
+</sign>
+
+<sign id="U12">
+<descr>combination of <signref name="D50" /> and <signref name="U9" /></descr>
+</sign>
+
+<sign id="U13">
+<descr>plough</descr>
+</sign>
+
+<sign id="U14">
+<descr>two joined branches</descr>
+</sign>
+
+<sign id="U15">
+<descr>sledge</descr>
+</sign>
+
+<sign id="U16">
+<descr>sledge with head of jackal</descr>
+</sign>
+
+<sign id="U17">
+<descr>pick in ground</descr>
+</sign>
+
+<sign id="U18">
+<descr>pick in basin</descr>
+</sign>
+
+<sign id="U19">
+<descr>adze</descr>
+</sign>
+
+<sign id="U20">
+<descr>adze</descr>
+</sign>
+
+<sign id="U21">
+<descr>adze on wood</descr>
+</sign>
+
+<sign id="U22">
+<descr>chisel</descr>
+</sign>
+
+<sign id="U23">
+<descr>chisel</descr>
+</sign>
+
+<sign id="U23a">
+<descr>chisel</descr>
+</sign>
+
+<sign id="U24">
+<descr>drill for stone</descr>
+</sign>
+
+<sign id="U25">
+<descr>drill for stone</descr>
+</sign>
+
+<sign id="U26">
+<descr>drill for beads</descr>
+</sign>
+
+<sign id="U27">
+<descr>drill for beads</descr>
+</sign>
+
+<sign id="U28">
+<descr>fire-drill</descr>
+</sign>
+
+<sign id="U29">
+<descr>fire-drill</descr>
+</sign>
+
+<sign id="U29a">
+<descr>fire-drill with string</descr>
+</sign>
+
+<sign id="U30">
+<descr>kiln</descr>
+</sign>
+
+<sign id="U31">
+<descr>baker's rake</descr>
+</sign>
+
+<sign id="U32">
+<descr>pestle and mortar</descr>
+</sign>
+
+<sign id="U32a">
+<descr>hieratic pestle and mortar</descr>
+</sign>
+
+<sign id="U33">
+<descr>pestle</descr>
+</sign>
+
+<sign id="U34">
+<descr>spindle</descr>
+</sign>
+
+<sign id="U35">
+<descr>combination of <signref name="U34" /> and <signref name="I9" /></descr>
+</sign>
+
+<sign id="U36">
+<descr>club</descr>
+</sign>
+
+<sign id="U37">
+<descr>razor</descr>
+</sign>
+
+<sign id="U38">
+<descr>balance</descr>
+</sign>
+
+<sign id="U39">
+<descr>post of balance</descr>
+</sign>
+
+<sign id="U40">
+<descr>hieratic post of balance</descr>
+</sign>
+
+<sign id="U41">
+<descr>plummet</descr>
+</sign>
+
+<sign id="U42">
+<descr>pitchfork</descr>
+</sign>
+
+<sign id="V1">
+<descr>coil of rope</descr>
+</sign>
+
+<sign id="V1a">
+</sign>
+
+<sign id="V1b">
+</sign>
+
+<sign id="V1c">
+</sign>
+
+<sign id="V1d">
+</sign>
+
+<sign id="V1e">
+</sign>
+
+<sign id="V1f">
+</sign>
+
+<sign id="V1g">
+</sign>
+
+<sign id="V1h">
+</sign>
+
+<sign id="V1i">
+</sign>
+
+<sign id="V2">
+<descr>combination of <signref name="O34" /> and <signref name="V1" /></descr>
+</sign>
+
+<sign id="V2a">
+<descr>hieratic form of <signref name="V2" /></descr>
+</sign>
+
+<sign id="V3">
+<descr>combination of <signref name="O34" /> and three <signref name="V1" /></descr>
+</sign>
+
+<sign id="V4">
+<descr>lasso</descr>
+</sign>
+
+<sign id="V5">
+<descr>looped rope</descr>
+</sign>
+
+<sign id="V6">
+<descr>cord with ends upward</descr>
+</sign>
+
+<sign id="V7">
+<descr>cord with ends downward</descr>
+</sign>
+
+<sign id="V7a">
+<descr>cord with ends downward</descr>
+</sign>
+
+<sign id="V7b">
+<descr>hieratic cord with ends downward</descr>
+</sign>
+
+<sign id="V8">
+<descr>cord downward</descr>
+</sign>
+
+<sign id="V9">
+<descr>round cartouche</descr>
+</sign>
+
+<sign id="V10">
+<descr>oval cartouche</descr>
+</sign>
+
+<sign id="V11">
+<descr>end of cartouche</descr>
+</sign>
+
+<sign id="V11a">
+<descr>opening of cartouche</descr>
+</sign>
+
+<sign id="V11b">
+<descr>closing of cartouche</descr>
+</sign>
+
+<sign id="V11c">
+<descr>closing of knotless cartouche</descr>
+</sign>
+
+<sign id="V12">
+<descr>string</descr>
+</sign>
+
+<sign id="V12a">
+<descr>string</descr>
+</sign>
+
+<sign id="V12b">
+<descr>string</descr>
+</sign>
+
+<sign id="V13">
+<descr>rope</descr>
+</sign>
+
+<sign id="V14">
+<descr>rope with tick</descr>
+</sign>
+
+<sign id="V15">
+<descr>combination of <signref name="V13" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="V16">
+<descr>looped cord</descr>
+</sign>
+
+<sign id="V17">
+<descr>shelter of papyrus</descr>
+</sign>
+
+<sign id="V18">
+<descr>shelter of papyrus</descr>
+</sign>
+
+<sign id="V19">
+<descr>hobble with cross-bar</descr>
+</sign>
+
+<sign id="V20">
+<descr>hobble</descr>
+</sign>
+
+<sign id="V20a">
+</sign>
+
+<sign id="V20b">
+</sign>
+
+<sign id="V20c">
+</sign>
+
+<sign id="V20d">
+</sign>
+
+<sign id="V20e">
+</sign>
+
+<sign id="V20f">
+</sign>
+
+<sign id="V20g">
+</sign>
+
+<sign id="V20h">
+</sign>
+
+<sign id="V20i">
+</sign>
+
+<sign id="V20j">
+</sign>
+
+<sign id="V20k">
+</sign>
+
+<sign id="V20l">
+</sign>
+
+<sign id="V21">
+<descr>combination of <signref name="V20" /> and <signref name="I10" /></descr>
+</sign>
+
+<sign id="V22">
+<descr>whip</descr>
+</sign>
+
+<sign id="V23">
+<descr>whip</descr>
+</sign>
+
+<sign id="V23a">
+<descr>whip</descr>
+</sign>
+
+<sign id="V24">
+<descr>cord on stick</descr>
+</sign>
+
+<sign id="V25">
+<descr>cord on stick with tick</descr>
+</sign>
+
+<sign id="V26">
+<descr>netting needle</descr>
+</sign>
+
+<sign id="V27">
+<descr>netting needle</descr>
+</sign>
+
+<sign id="V28">
+<descr>wick</descr>
+</sign>
+
+<sign id="V28a">
+<descr>combination of <signref name="V28" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="V29">
+<descr>swab</descr>
+</sign>
+
+<sign id="V29a">
+<descr>combination of <signref name="V29" /> and <signref name="V31" /></descr>
+</sign>
+
+<sign id="V30">
+<descr>basket</descr>
+</sign>
+
+<sign id="V30a">
+<descr>basket (low)</descr>
+</sign>
+
+<sign id="V31">
+<descr>basket with right handle</descr>
+</sign>
+
+<sign id="V31a">
+<descr>basket with left handle</descr>
+</sign>
+
+<sign id="V32">
+<descr>frail</descr>
+</sign>
+
+<sign id="V33">
+<descr>bag</descr>
+</sign>
+
+<sign id="V33a">
+<descr>bundle</descr>
+</sign>
+
+<sign id="V34">
+<descr>bag</descr>
+</sign>
+
+<sign id="V35">
+<descr>bag</descr>
+</sign>
+
+<sign id="V36">
+<descr>receptacle</descr>
+</sign>
+
+<sign id="V37">
+<descr>bandage</descr>
+</sign>
+
+<sign id="V37a">
+<descr>bandage</descr>
+</sign>
+
+<sign id="V38">
+<descr>bandage</descr>
+</sign>
+
+<sign id="V39">
+<descr>knot-amulet</descr>
+</sign>
+
+<sign id="V40">
+<descr>hobble on its side</descr>
+</sign>
+
+<sign id="V40a">
+<descr>two hobbles on their side</descr>
+</sign>
+
+<sign id="W1">
+<descr>oil jar with ties</descr>
+</sign>
+
+<sign id="W2">
+<descr>oil jar</descr>
+</sign>
+
+<sign id="W3">
+<descr>alabaster basin</descr>
+</sign>
+
+<sign id="W3a">
+<descr>alabaster basin (low)</descr>
+</sign>
+
+<sign id="W4">
+<descr>combination of <signref name="O22" /> and <signref name="W3" /></descr>
+</sign>
+
+<sign id="W5">
+<descr>combination of <signref name="T28" /> and <signref name="W3" /></descr>
+</sign>
+
+<sign id="W6">
+<descr>metal vessel</descr>
+</sign>
+
+<sign id="W7">
+<descr>granite bowl</descr>
+</sign>
+
+<sign id="W8">
+<descr>deformed granite bowl</descr>
+</sign>
+
+<sign id="W9">
+<descr>jug with left handle</descr>
+</sign>
+
+<sign id="W9a">
+<descr>jug with right handle</descr>
+</sign>
+
+<sign id="W10">
+<descr>cup</descr>
+</sign>
+
+<sign id="W10a">
+<descr>pot with tick</descr>
+</sign>
+
+<sign id="W11">
+<descr>round ring stand</descr>
+</sign>
+
+<sign id="W12">
+<descr>square ring stand</descr>
+</sign>
+
+<sign id="W13">
+<descr>earthenware pot</descr>
+</sign>
+
+<sign id="W14">
+<descr>water jar</descr>
+</sign>
+
+<sign id="W14a">
+<descr>combination of <signref name="V28" />, <signref name="W14" /> and <signref name="O34" />
+</descr>
+</sign>
+
+<sign id="W15">
+<descr>water jar with water</descr>
+</sign>
+
+<sign id="W16">
+<descr>water jar with water in ring stand</descr>
+</sign>
+
+<sign id="W17">
+<descr>three water jars in rack</descr>
+</sign>
+
+<sign id="W17a">
+<descr>three water jars in rack (simplified)</descr>
+</sign>
+
+<sign id="W18">
+<descr>four water jars in rack</descr>
+</sign>
+
+<sign id="W18a">
+<descr>four water jars in rack (simplified)</descr>
+</sign>
+
+<sign id="W19">
+<descr>milk jug in net</descr>
+</sign>
+
+<sign id="W20">
+<descr>milk jug with leaf</descr>
+</sign>
+
+<sign id="W21">
+<descr>twin wine jars</descr>
+</sign>
+
+<sign id="W22">
+<descr>beer jug</descr>
+</sign>
+
+<sign id="W23">
+<descr>jar with handles</descr>
+</sign>
+
+<sign id="W24">
+<descr>bowl</descr>
+</sign>
+
+<sign id="W24a">
+<descr>three bowls</descr>
+</sign>
+
+<sign id="W25">
+<descr>combination of <signref name="W24" /> and <signref name="D54" /></descr>
+</sign>
+
+<sign id="X1">
+<descr>flat loaf</descr>
+</sign>
+
+<sign id="X2">
+<descr>tall loaf</descr>
+</sign>
+
+<sign id="X3">
+<descr>tall loaf</descr>
+</sign>
+
+<sign id="X4">
+<descr>roll of bread</descr>
+</sign>
+
+<sign id="X4a">
+<descr>roll of bread</descr>
+</sign>
+
+<sign id="X4b">
+<descr>roll of bread</descr>
+</sign>
+
+<sign id="X5">
+<descr>hieratic roll of bread</descr>
+</sign>
+
+<sign id="X6">
+<descr>round loaf</descr>
+</sign>
+
+<sign id="X6a">
+<descr>round loaf</descr>
+</sign>
+
+<sign id="X7">
+<descr>half-loaf</descr>
+</sign>
+
+<sign id="X8">
+<descr>conical loaf</descr>
+</sign>
+
+<sign id="X8a">
+<descr>hieratic conical loaf</descr>
+</sign>
+
+<sign id="Y1">
+<descr>scroll with ties</descr>
+</sign>
+
+<sign id="Y1a">
+<descr>vertical scroll with ties</descr>
+</sign>
+
+<sign id="Y2">
+<descr>scroll</descr>
+</sign>
+
+<sign id="Y3">
+<descr>scribe's outfit with palette on left</descr>
+</sign>
+
+<sign id="Y4">
+<descr>scribe's outfit with palette on right</descr>
+</sign>
+
+<sign id="Y5">
+<descr>game board</descr>
+</sign>
+
+<sign id="Y6">
+<descr>game piece</descr>
+</sign>
+
+<sign id="Y7">
+<descr>harp</descr>
+</sign>
+
+<sign id="Y8">
+<descr>sistrum</descr>
+</sign>
+
+<sign id="Z1">
+<descr>stroke</descr>
+</sign>
+
+<sign id="Z2">
+<descr>three <signref name="Z1" /> horizontally</descr>
+</sign>
+
+<sign id="Z2a">
+<descr>three <signref name="Z1" /> horizontally</descr>
+</sign>
+
+<sign id="Z2b">
+<descr>three <signref name="D67" /> horizontally</descr>
+</sign>
+
+<sign id="Z2c">
+<descr>three <signref name="Z1" /> in triangular arrangement</descr>
+</sign>
+
+<sign id="Z2d">
+<descr>three <signref name="Z1" /> in triangular arrangement</descr>
+</sign>
+
+<sign id="Z3">
+<descr>three <signref name="Z1" /> vertically</descr>
+</sign>
+
+<sign id="Z3a">
+<descr>three lying <signref name="Z1" /> vertically</descr>
+</sign>
+
+<sign id="Z3b">
+<descr>three <signref name="D67" /> vertically</descr>
+</sign>
+
+<sign id="Z4">
+<descr>two diagonal strokes</descr>
+</sign>
+
+<sign id="Z4a">
+<descr>two <signref name="Z1" /> horizontally</descr>
+</sign>
+
+<sign id="Z5">
+<descr>curved diagonal stroke</descr>
+</sign>
+
+<sign id="Z5a">
+<descr>diagonal stroke</descr>
+</sign>
+
+<sign id="Z6">
+<descr>hieratic substitute for <signref name="A13" /> or <signref name="A14" /></descr>
+</sign>
+
+<sign id="Z7">
+<descr>hieratic quail chick</descr>
+</sign>
+
+<sign id="Z8">
+<descr>oval</descr>
+</sign>
+
+<sign id="Z9">
+<descr>diagonal cross</descr>
+</sign>
+
+<sign id="Z10">
+<descr>wide diagonal cross</descr>
+</sign>
+
+<sign id="Z11">
+<descr>cross</descr>
+</sign>
+
+<sign id="Z12">
+<descr>hieratic striking man</descr>
+</sign>
+
+<sign id="Z13">
+<descr>circle</descr>
+</sign>
+
+<sign id="Z14">
+<descr>indeterminable hieratic tick</descr>
+</sign>
+
+<sign id="Z15">
+<descr>long vertical stroke</descr>
+</sign>
+
+<sign id="Z15a">
+</sign>
+
+<sign id="Z15b">
+</sign>
+
+<sign id="Z15c">
+</sign>
+
+<sign id="Z15d">
+</sign>
+
+<sign id="Z15e">
+</sign>
+
+<sign id="Z15f">
+</sign>
+
+<sign id="Z15g">
+</sign>
+
+<sign id="Z15h">
+</sign>
+
+<sign id="Z15i">
+</sign>
+
+<sign id="Z16">
+<descr>long horizontal stroke</descr>
+</sign>
+
+<sign id="Z16a">
+</sign>
+
+<sign id="Z16b">
+</sign>
+
+<sign id="Z16c">
+</sign>
+
+<sign id="Z16d">
+</sign>
+
+<sign id="Z16e">
+</sign>
+
+<sign id="Z16f">
+</sign>
+
+<sign id="Z16g">
+</sign>
+
+<sign id="Z16h">
+</sign>
+
+<sign id="Aa1">
+<descr>basket from above</descr>
+</sign>
+
+<sign id="Aa2">
+<descr>pustule</descr>
+</sign>
+
+<sign id="Aa3">
+<descr>pustule with liquid</descr>
+</sign>
+
+<sign id="Aa4">
+<descr>pot with two ticks</descr>
+</sign>
+
+<sign id="Aa5">
+<descr>navigation instrument</descr>
+</sign>
+
+<sign id="Aa6">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa7">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa7a">
+<descr><signref name="Aa7" /> reversed</descr>
+</sign>
+
+<sign id="Aa7b">
+<descr>later equivalent of <signref name="Aa7" /></descr>
+</sign>
+
+<sign id="Aa8">
+<descr>irrigation canal</descr>
+</sign>
+
+<sign id="Aa9">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa10">
+<descr>unknown</descr>
+</sign>
+
+<sign id="Aa11">
+<descr>platform</descr>
+</sign>
+
+<sign id="Aa12">
+<descr>platform</descr>
+</sign>
+
+<sign id="Aa13">
+<descr>sharp half</descr>
+</sign>
+
+<sign id="Aa14">
+<descr>bent half</descr>
+</sign>
+
+<sign id="Aa15">
+<descr>blunt half</descr>
+</sign>
+
+<sign id="Aa16">
+<descr>short half</descr>
+</sign>
+
+<sign id="Aa17">
+<descr>lid</descr>
+</sign>
+
+<sign id="Aa18">
+<descr>square lid</descr>
+</sign>
+
+<sign id="Aa19">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa20">
+<descr>bag</descr>
+</sign>
+
+<sign id="Aa21">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa22">
+<descr>combination of <signref name="Aa21" /> and <signref name="D36" /></descr>
+</sign>
+
+<sign id="Aa23">
+<descr>high warp between stakes</descr>
+</sign>
+
+<sign id="Aa24">
+<descr>low warp between stakes</descr>
+</sign>
+
+<sign id="Aa25">
+<descr>unknown</descr>
+</sign>
+
+<sign id="Aa26">
+<descr>unknown</descr>
+</sign>
+
+<sign id="Aa27">
+<descr>spindle</descr>
+</sign>
+
+<sign id="Aa28">
+<descr>level</descr>
+</sign>
+
+<sign id="Aa29">
+<descr>instrument</descr>
+</sign>
+
+<sign id="Aa30">
+<descr>frieze</descr>
+</sign>
+
+<sign id="Aa31">
+<descr>frieze</descr>
+</sign>
+
+<sign id="Aa32">
+<descr>archaic bow</descr>
+</sign>
+
+</signlist>

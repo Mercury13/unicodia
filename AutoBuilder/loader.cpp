@@ -31,16 +31,6 @@ namespace {
 
     //const NoAction NoAction::INST;
 
-    class CurlAction final : public Action
-    {
-    public:
-        constexpr CurlAction(std::string_view aUrl, std::string_view aFname)
-            : url(aUrl), fname(aFname) {}
-        void exec() const override;
-    private:
-        std::string_view url, fname;
-    };
-
     class SingleZip final : public Action
     {
     public:
@@ -62,15 +52,6 @@ namespace {
         std::ofstream os(std::filesystem::path(file), std::ios::binary);
         static_assert(sizeof(decltype(data)::value_type) == sizeof(char));
         os.write(reinterpret_cast<const char*>(data.data()), data.size());
-    }
-
-    void CurlAction::exec() const
-    {
-        std::string s = "curl -L --output ";
-        s.append(fname);
-        s.append(" ");
-        s.append(url);
-        system(s.c_str());
     }
 
     constexpr int N_UPDIRS = 4;
@@ -120,27 +101,22 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constinit const CurlAction AC_UCD_ZIP { "https://www.unicode.org/Public/15.1.0/ucdxml/ucd.all.flat.zip", UCD_ZIP };
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
-    constinit const CurlAction AC_UCD_NAMES { "https://www.unicode.org/Public/15.1.0/ucd/NamesList.txt", UCD_NAMES };
-    constinit const CurlAction AC_EMOJI { "https://www.unicode.org/Public/draft/emoji/emoji-test.txt", EMOJI_TEST };
-    constinit const CurlAction AC_EGYP_UNICODE { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml", EGYP_UNICODE };
-    constinit const CurlAction AC_EGYP_DESC { "https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml", EGYP_DESCRIPTION };
 
     constinit const LocalFile allLocalFiles[] {
-        { MISCFILES ENTITIES_HTML },
+        { RAWDATA ENTITIES_HTML },
+        { RAWDATA UCD_ZIP },
+        { RAWDATA UCD_NAMES },
+        { RAWDATA EMOJI_TEST },
+        { RAWDATA EGYP_UNICODE },
+        { RAWDATA EGYP_DESCRIPTION },
         { MISCFILES LIBRARY_XML },
         { MISCFILES SUTTON_TXT },
         { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 
     constinit const Step allSteps[] {
-        { "Load UCD XML database", AC_UCD_ZIP, UCD_ZIP, NO_FLAGS },
         { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
-        { "Load UCD names list", AC_UCD_NAMES, UCD_NAMES, Stfg::FINAL },
-        { "Load emoji test", AC_EMOJI, EMOJI_TEST, Stfg::FINAL },
-        { "Load Egyptian Unicode", AC_EGYP_UNICODE, EGYP_UNICODE, Stfg::FINAL },
-        { "Load Egyptian descriptions", AC_EGYP_DESC, EGYP_DESCRIPTION, Stfg::FINAL },
     };
 
 }
