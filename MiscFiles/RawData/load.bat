@@ -4,5 +4,6 @@ curl https://www.unicode.org/Public/15.1.0/ucd/NamesList.txt -L --output NamesLi
 curl https://www.unicode.org/Public/draft/emoji/emoji-test.txt -L --output emoji-test.txt
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml -L --output signunicode.xml
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml -L --output signdescriptioneng.xml
+curl https://html.spec.whatwg.org/entities.json -L --output entities.json
 rem Moved and changed structure, also JSON appeared → use it!
 rem curl https://dev.w3.org/html5/html-author/charref --output entities.htm

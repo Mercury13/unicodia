@@ -5,6 +5,7 @@
 #define UCD_NAMES "NamesList.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"
+#define ENTITIES_JSON "entities.json"
 #define LIBRARY_XML "library.xml"
 #define SINGLEEMOJI_TXT "single-char-emoji.txt"
 #define MISCFILES "MiscFiles/"

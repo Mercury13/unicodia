@@ -16,6 +16,7 @@ SOURCES += \
         ../Libs/SelfMade/Strings/u_Strings.cpp \
         data.cpp \
         egyptian.cpp \
+        entities.cpp \
         library.cpp \
         loader.cpp \
         main.cpp \
@@ -33,6 +34,7 @@ HEADERS += \
     ../Unicodia/Uc/UcFlags.h \
     data.h \
     egyptian.h \
+    entities.h \
     library.h \
     loader.h \
     sutton.h \
@@ -41,6 +43,7 @@ HEADERS += \
 
 INCLUDEPATH += \
     ../Libs/PugiXml \
+    ../Libs/RapidJson \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Strings \

@@ -13,11 +13,12 @@
 
 // Project-local
 #include "data.h"
-#include "loader.h"
-#include "library.h"
 #include "egyptian.h"
-#include "textbase.h"
+#include "entities.h"
+#include "library.h"
+#include "loader.h"
 #include "sutton.h"
+#include "textbase.h"
 
 using namespace std::string_view_literals;
 
@@ -294,102 +295,6 @@ void NewLine::trigger()
 }
 
 
-std::string_view findTag(
-        std::string_view haystack,
-        std::string_view open, std::string_view close)
-{
-    auto p = haystack.find(open);
-    if (p == std::string_view::npos)
-        return {};
-    // Skip what we found
-    p += open.size();
-    if (!close.empty()) {
-        // Special close tag
-        size_t p2 = haystack.find(close, p);
-        if (p2 == std::string_view::npos)
-            return {};
-        return haystack.substr(p, p2 - p);
-    } else {
-        // Close same as open; did not find → return entire tail
-        size_t p2 = haystack.find(open, p);
-        if (p2 == std::string_view::npos)
-            return haystack.substr(p);
-        return haystack.substr(p, p2 - p);
-    }
-}
-
-
-void tagMinus(std::string_view& haystack,
-              size_t lenClose,
-              std::string_view r)
-{
-    auto pBeg = std::to_address(r.end());
-    auto pEnd = std::to_address(haystack.end());
-    if (pBeg == pEnd) {
-        haystack = {};
-        return;
-    }
-
-    pBeg += lenClose;
-    size_t newLen = pEnd - pBeg;
-    if (newLen >= haystack.length())
-        throw std::logic_error("[tagMinus] Result is not within haystack's memory");
-
-    haystack = { pBeg, newLen };
-}
-
-
-/// \brief findTagMinus
-///    Finds tag (open..open) or (open..close), sets haystack to
-///        (close .. haystack.end)
-/// \param haystack   where we find///
-/// \param open       opening tag
-/// \param close      closing tag (⌀ to find from open to open)
-/// \return  IF FINDING OPEN..CLOSE:  [+] [open.end .. close.begin), haystack := [close.end .. )
-///          IF FINDING OPEN..OPEN: [+] [open.end .. open2.begin), haystack := [open2.begin .. )
-///          [-] not found (in both cases), haystack intact
-///
-std::string_view findTagMinus(
-        std::string_view& haystack,
-        std::string_view open, std::string_view close)
-{
-    auto r = findTag(haystack, open, close);
-    if (r.empty())
-        return {};
-
-    tagMinus(haystack, close.length(), r);
-    return r;
-}
-
-
-std::string_view rqTag(
-        std::string_view haystack,
-        std::string_view open, std::string_view close)
-{
-    auto r = findTag(haystack, open, close);
-    if (r.empty()) {
-        std::string data = "Cannot find tag ";
-        data.append(open);
-        throw std::logic_error(data);
-    }
-    return r;
-}
-
-
-///
-/// \brief rqTagMinus
-/// @see findTagMinus, but it REQUIRES that tag
-///
-std::string_view rqTagMinus(
-        std::string_view& haystack,
-        std::string_view open, std::string_view close)
-{
-    auto r = rqTag(haystack, open, close);
-    tagMinus(haystack, close.length(), r);
-    return r;
-}
-
-
 struct NotoData {
     std::unordered_set<char32_t> singleChar;
 };
@@ -480,44 +385,11 @@ int main()
     ///// HTML entities ////////////////////////////////////////////////////////
 
     std::cout << "Loading HTML entities..." << std::flush;
-    std::ifstream is(ENTITIES_HTML, std::ios::binary);
-    if (!is.is_open())
-        throw std::logic_error("Cannot open entities.htm");
-
-    is.seekg(0, std::ios::end);
-    auto fsize = is.tellg();
-    is.seekg(0, std::ios::beg);
-
-    std::string sEntities;
-    sEntities.resize(fsize);
-    is.read(sEntities.data(), fsize);
-
-    std::unordered_map<char32_t, std::vector<std::string>> htmlEntities;
-    auto tagTable = rqTag(sEntities, "<table", "</table");
-
-    size_t nEntities = 0;
-    while (true) {
-        auto tagTr = findTagMinus(tagTable, "<tr ", {});
-        if (tagTr.empty())
-            break;
-        auto hexCode = rqTagMinus(tagTr, "U+", " ");
-        char32_t charCode = fromHex(hexCode);
-        auto& second = htmlEntities[charCode];
-        if (!second.empty()) {
-            throw std::logic_error("Found the same char once again");
-        }
-        auto spanNames1 = rqTag(tagTr, "class=\"named\"", "</code>");
-        auto cleanNames = rqTag(spanNames1, "<code>", "");
-        std::string spanNames { cleanNames };
-        str::replace(spanNames, "&amp;"sv, "&"sv);
-        auto names = str::splitSv(spanNames, ' ', true);
-        second.assign(names.begin(), names.end());
-        nEntities += second.size();
-    }
-
-    std::cout << "OK" << std::endl;
-    std::cout << "  File size is " << std::dec << fsize << ", found " << htmlEntities.size() << " chars, "
-              << nEntities << " entities." << std::endl;
+    auto htmlEntities = readEntities(ENTITIES_JSON);
+    std::cout << "OK, " << htmlEntities.data.size() << " chars, "
+                        << htmlEntities.stats.entities.nGood << " good en's, "
+                        << htmlEntities.stats.entities.nTooLong << " too long en's, "
+                        << htmlEntities.stats.entities.nWrong << " wrong en's." << std::endl;
 
     ///// Noto emoji ///////////////////////////////////////////////////////////
 
@@ -718,8 +590,8 @@ int main()
         }
 
         // HTML
-        auto v = htmlEntities.find(cp);
-        if (v != htmlEntities.end()) {
+        auto v = htmlEntities.data.find(cp);
+        if (v != htmlEntities.data.end()) {
             if (!wasIns) {
                 nl.trigger();
                 std::cout << "WARNING: char " << std::hex << cp << " has HTML and a repeating name." << std::endl;

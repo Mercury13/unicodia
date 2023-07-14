@@ -104,7 +104,7 @@ namespace {
     constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
 
     constinit const LocalFile allLocalFiles[] {
-        { RAWDATA ENTITIES_HTML },
+        { RAWDATA ENTITIES_JSON },
         { RAWDATA UCD_ZIP },
         { RAWDATA UCD_NAMES },
         { RAWDATA EMOJI_TEST },
