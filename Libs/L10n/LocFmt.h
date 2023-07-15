@@ -11,6 +11,10 @@
 // Libs
 #include "u_Strings.h"
 
+#ifdef QT_STRINGS
+    #include <QString>
+#endif
+
 namespace loc {
 
     enum class Plural { ZERO, ONE, TWO, FEW, MANY, OTHER };
@@ -101,6 +105,10 @@ namespace loc {
         const Str& str() const& noexcept { return d; }
         Str&& str() && noexcept { return std::move(d); }
         const Ch* c_str() const noexcept { return d.c_str(); }
+
+    #ifdef QT_STRINGS
+        QString q() const;
+    #endif
 
         /// @warning  Debug only
         /// @return  # of total substitutions
@@ -251,6 +259,7 @@ namespace loc {
     template <class Ch> Fmt(const Ch*) -> Fmt<Ch>;
     template <class Ch> FmtL(const Ch*) -> FmtL<Ch>;
 
+    template <class Ch> constexpr bool alwaysFalse = false;
 }   // namespace loc
 
 extern template class loc::Fmt<char>;
@@ -681,3 +690,19 @@ brk:
     }
     return sub.advance + newLength;
 }
+
+#ifdef QT_STRINGS
+template <class Ch>
+QString loc::Fmt<Ch>::q() const
+{
+    if constexpr (sizeof(Ch) == sizeof(char)) {
+        return QString::fromUtf8(reinterpret_cast<const char*>(d.data()), d.length());
+    } else if constexpr (sizeof(Ch) == sizeof(char16_t)) {
+        return QString::fromUtf16(reinterpret_cast<const char16_t*>(d.data()), d.length());
+    } else if constexpr (sizeof(Ch) == sizeof(char32_t)) {
+        return QString::fromUcs4(reinterpret_cast<const char32_t*>(d.data()), d.length());
+    } else {
+        static_assert(alwaysFalse<Ch>, "Unknown conversion method for this type");
+    }
+}
+#endif

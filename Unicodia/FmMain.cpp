@@ -919,6 +919,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     radioGlyphStyle.setRadio(1, ui->radioStyle1);
     connect(ui->radioStyle0, &QRadioButton::clicked, this, &This::glyphStyleChanged);
     connect(ui->radioStyle1, &QRadioButton::clicked, this, &This::glyphStyleChanged);
+    connect(ui->lbStyleHelp, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -1365,6 +1366,8 @@ void FmMain::forceShowCp(MaybeChar ch)
             }
             model.glyphStyle.currChannel = ch->ecStyleChannel();
             radioGlyphStyle.set(model.glyphStyle.currSetting());
+            snprintf(buf, std::size(buf), "pgs:%d", static_cast<int>(ch->ecStyleChannel()));
+            ui->lbStyleHelp->setText(qPopupLinkNoLoc("&nbsp;?&nbsp;", buf));
             ui->wiGlyphStyle->show();
         } else {
             ui->wiGlyphStyle->hide();

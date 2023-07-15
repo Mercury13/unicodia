@@ -29,6 +29,7 @@ namespace uc {
     class Block;
     class Term;
     class LibNode;
+    class GlyphStyleChannel;
 }
 
 enum class Want32 { NO, YES };
@@ -80,6 +81,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopTermLink(std::string_view target);
     std::unique_ptr<Link> parsePopIBlockLink(std::string_view target);
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
+    std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
@@ -90,6 +92,7 @@ namespace mywiki {
     QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
     QString buildHtml(const uc::LibNode& node);
     QString buildHtml(const uc::Version& version);
+    QString buildHtml(const uc::GlyphStyleChannel& channel);
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");

@@ -196,6 +196,15 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopIBlockLink(std::string_view target
     return {};
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parsePopGlyphStyleLink(std::string_view target)
+{
+    int index = 0;
+    str::fromChars(target, index);
+    if (index == 0 || index >= static_cast<int>(uc::EcGlyphStyleChannel::NN))
+        return {};
+    return mu(uc::glyphStyleChannelInfo[index]);
+}
+
 std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
 {
     auto sv = str::splitSv(target, '/');
@@ -228,6 +237,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopTermLink(target);
     } else if (scheme == "pv"sv) {
         return parsePopVersionLink(target);
+    } else if (scheme == "pgs"sv) {
+        return parsePopGlyphStyleLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {
@@ -1934,6 +1945,46 @@ QString mywiki::buildHtml(const uc::Version& version)
         }
         if (columnBreak != NO_BREAK) {
             text += "</table>";
+        }
+    }
+
+    return text;
+}
+
+
+QString mywiki::buildHtml(const uc::GlyphStyleChannel& channel)
+{
+    char buf[40];
+
+    QString text;
+    appendStylesheet(text);
+
+    // Style names are always null-terminated
+    snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
+    text += "<p><nobr><b>";
+    mywiki::appendNoFont(text, loc::get(buf));
+    text += "</b></nobr>";
+
+    snprintf(buf, sizeof(buf), "GlyphVar.%s.Text", channel.name.data());
+    text += "<p>";
+    mywiki::appendNoFont(text, loc::get(buf));
+
+    snprintf(buf, sizeof(buf), "GlyphVar.%s.Name", channel.name.data());
+    text += "<p><b>";
+    str::append(text, loc::get("Prop.Head.AffBlk"));
+    text += "</b>";
+
+    text += "<p>";
+    str::QSep sp(text, "<br>");
+    for (auto& blk : uc::allBlocks()) {
+        if (blk.ecStyleChannel == channel.value) {
+            sp.sep();
+            snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
+            text += "<a class='popup' href='";
+            text += buf;
+            text += "'>";
+            str::append(text, blk.loc.name);
+            text += "</a>";
         }
     }
 

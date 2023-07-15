@@ -179,6 +179,7 @@ namespace uc {
     struct GlyphStyleChannel {
         unsigned count;
         std::string_view name;
+        EcGlyphStyleChannel value;
 
         constexpr operator bool() const noexcept { return count; }
     };

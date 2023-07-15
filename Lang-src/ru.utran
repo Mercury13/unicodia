@@ -287,6 +287,11 @@
      <orig>New blocks</orig>
      <transl>Новые блоки</transl>
     </text>
+    <text id="AffBlk">
+     <orig>Affects blocks</orig>
+     <au-cmt>Test: select Phags-Pa, click “?”</au-cmt>
+     <transl>Действует на блоки</transl>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -11197,6 +11202,14 @@
      <orig>Croatia</orig>
      <transl>Хорватия</transl>
     </text>
+    <text id="Name">
+     <orig>Style of Glagolitic</orig>
+     <transl>Стиль глаголицы</transl>
+    </text>
+    <text id="Text">
+     <orig>[[ps:Glag|Glagolitic]] has two styles, Bulgarian (round) and Croatian (square). Both are [[pt:unification|unified]].</orig>
+     <transl>У [[ps:Glag|глаголицы]] есть два стиля: болгарский (круглый) и хорватский (квадратный). Оба [[pt:unification|унифицированы]].</transl>
+    </text>
    </group>
    <group id="Vert">
     <text id="0">
@@ -11206,6 +11219,26 @@
     <text id="1">
      <orig>Vertical</orig>
      <transl>Вертикально</transl>
+    </text>
+    <text id="Name">
+     <orig>Direction of Sogdian and derivatives</orig>
+     <transl>Направление согдийского и производных</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally.</p>
+      <p />
+      <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
+      <p />
+      <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
+     </orig>
+     <transl>
+      <p>[[ps:Sogd|Согдийская]] и производные письменности пишутся слева направо по столбцам, сплошной вязью. Большинство компьютерных программ пишут только горизонтально.</p>
+      <p />
+      <p>[[ps:Mong|Монгольская]] и [[ps:Phag|Пагба-ламы]] по историческим причинам повёрнуты на 90° против часовой стрелки (слева направо).</p>
+      <p />
+      <p>Согдийская и [[ps:Ougr|староуйгурская]] повёрнуты на 90° по часовой стрелке (справа налево).</p>
+     </transl>
     </text>
    </group>
   </group>

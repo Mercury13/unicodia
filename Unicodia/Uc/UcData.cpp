@@ -1493,9 +1493,9 @@ namespace {
 
 
 const uc::GlyphStyleChannel uc::glyphStyleChannelInfo[] = {
-    { 0, {} },      // -warn in static analyzer: init [0] as normal, and everything’s OK
-    { .count = 2, .name = "Glag" },
-    { .count = 2, .name = "Vert" },
+    { 0, {}, uc::EcGlyphStyleChannel::NONE },      // -warn in static analyzer: init [0] as normal, and everything’s OK
+    { .count = 2, .name = "Glag", .value = uc::EcGlyphStyleChannel::GLAGOLITIC },
+    { .count = 2, .name = "Vert", .value = uc::EcGlyphStyleChannel::VERTICAL },
 };
 static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::EcGlyphStyleChannel::NN));
 

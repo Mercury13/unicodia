@@ -42,5 +42,7 @@ private slots:
 
 QString qPopupLink(
         std::string_view locKey, const char* target);
+QString qPopupLinkNoLoc(
+        const QString& text, const char* target);
 
 #endif // WIOSSTYLE_H

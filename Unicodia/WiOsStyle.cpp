@@ -51,11 +51,18 @@ void WiOsStyle::setEmptyCode(char32_t code)
 }
 
 
+QString qPopupLinkNoLoc(
+        const QString& text, const char* target)
+{
+    return QString("<a href='") + target + "' style='" STYLE_POPUP "'>"
+            + text + "</a>";
+}
+
+
 QString qPopupLink(
         std::string_view locKey, const char* target)
 {
-    return QString("<a href='") + target + "' style='" STYLE_POPUP "'>"
-            + loc::get(locKey) + "</a>";
+    return qPopupLinkNoLoc(loc::get(locKey), target);
 }
 
 

@@ -288,6 +288,11 @@
      <orig>New blocks</orig>
      <transl>Нові блоки</transl>
     </text>
+    <text id="AffBlk">
+     <orig>Affects blocks</orig>
+     <au-cmt>Test: select Phags-Pa, click “?”</au-cmt>
+     <transl>Діє на блоки</transl>
+    </text>
    </group>
    <group id="Deprec">
     <text id="0">
@@ -2658,7 +2663,7 @@
    <group id="A840">
     <text id="Name">
      <orig>Phags-Pa (Mongolian square)</orig>
-     <transl>Монгольське квадратне (Пагба-Лами)</transl>
+     <transl>Монгольське квадратне (Пагба-лами)</transl>
     </text>
    </group>
    <group id="A880">
@@ -11198,6 +11203,14 @@
      <orig>Croatia</orig>
      <transl>Хорватія</transl>
     </text>
+    <text id="Name">
+     <orig>Style of Glagolitic</orig>
+     <transl>Стиль глаголиці</transl>
+    </text>
+    <text id="Text">
+     <orig>[[ps:Glag|Glagolitic]] has two styles, Bulgarian (round) and Croatian (square). Both are [[pt:unification|unified]].</orig>
+     <transl>У [[ps:Glag|глаголиці]] є два стилі: болгарський (круглий) та хорватський (квадратний). Обидва [[pt:unification|уніфіковані]].</transl>
+    </text>
    </group>
    <group id="Vert">
     <text id="0">
@@ -11207,6 +11220,26 @@
     <text id="1">
      <orig>Vertical</orig>
      <transl>Вертикально</transl>
+    </text>
+    <text id="Name">
+     <orig>Direction of Sogdian and derivatives</orig>
+     <transl>Напрямок согдійської та похідних</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally.</p>
+      <p />
+      <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
+      <p />
+      <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
+     </orig>
+     <transl>
+      <p>[[ps:Sogd|Согдійська]] та похідні писемності пишуться зліва направо стовпцями, суцільною в’яззю. Більшість комп’ютерних програм пишуть тільки горизонтально.</p>
+      <p />
+      <p>[[ps:Mong|Монгольська]] та [[ps:Phag|Пагба-лами]] з історичних причин повернуті на 90° проти годинникової стрілки (зліва направо).</p>
+      <p />
+      <p>Согдійська та [[ps:Ougr|уйгурська]] повернуті на 90° за годинниковою стрілкою (справа наліво).</p>
+     </transl>
     </text>
    </group>
   </group>
