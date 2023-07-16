@@ -646,9 +646,6 @@ int main()
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
             flags |= uc::Cfg::M_SPACE;
-        // Draw as Egyptian hatch
-        if (charsEgyptianHatch.contains(cp))
-            flags |= uc::Cfg::M_EGYPTIAN_HATCH;
         flags |= styleFlags(cp);
 
         // CJK strange

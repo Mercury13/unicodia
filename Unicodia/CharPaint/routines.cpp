@@ -208,12 +208,6 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                       palette().windowText().color(),
                       subj);
         } break;
-    case Mode::EGYPTIAN_HATCH: {
-            QPainter painter(this);
-            drawEgyptianHatch(&painter, geometry(), fontSpace,
-                      palette().windowText().color(),
-                      subj);
-        } break;
     case Mode::EMOJI_CHAR: {
             QPainter painter(this);
             auto r = geometry();
@@ -285,12 +279,6 @@ void WiCustomDraw::setVertical(const QFont& font, const QString& aSubj, int angl
     auto h = metrics.height();
     setMinimumSize(QSize(h, h * 4 / 5));
     update();
-}
-
-
-void WiCustomDraw::setEgyptianHatch(const QFont& font, char32_t aSubj)
-{
-    setSpace1(font, aSubj, Mode::EGYPTIAN_HATCH);
 }
 
 
@@ -609,28 +597,6 @@ QSize spaceDimensions(const QFont& font, char32_t subj)
         metrics.height() * 4 / 5 };
 }
 
-void drawEgyptianHatch(
-        QPainter* painter, const QRect& rect,
-        const QFont& font, QColor color, char32_t subj)
-{
-    painter->setFont(font);
-    painter->setBrush(color);
-    painter->setPen(color);
-    painter->drawText(rect,
-                      Qt::AlignCenter | Qt::TextSingleLine,
-                      uc::STUB_PUA_BIG_CIRCLE);
-
-    QFont font1 = font;
-    font1.setStyleStrategy(QFont::NoAntialias);
-    painter->setFont(font1);
-    color.setAlpha(ALPHA_EGYPTIAN_HATCH);
-    painter->setBrush(color);
-    painter->setPen(color);
-    painter->drawText(rect,
-                      Qt::AlignCenter | Qt::TextSingleLine,
-                      str::toQ(subj));
-}
-
 void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font, QColor color, char32_t subj)
@@ -694,9 +660,6 @@ void drawChar(
         break;
     case uc::DrawMethod::ABBREVIATION:
         drawAbbreviation(painter, rect, cp.abbrev(), color);
-        break;
-    case uc::DrawMethod::EGYPTIAN_HATCH:
-        drawEgyptianHatch(painter, rect, *fontAt(method, sizePc, cp), color, cp.subj);
         break;
     case uc::DrawMethod::SPACE:
         drawSpace(painter, rect, *fontAt(method, sizePc, cp), color, cp.subj);

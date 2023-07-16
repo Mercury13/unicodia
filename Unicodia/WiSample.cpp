@@ -111,13 +111,6 @@ void WiSample::showCp(
     case uc::DrawMethod::SAMPLE:
         drawWithQt(ch, emojiDraw, glyphSets);
         break;
-    case uc::DrawMethod::EGYPTIAN_HATCH: {
-            clearSample();
-            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            auto font = ch.font(uc::MatchLast::NO);
-            auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            ui->pageSampleCustom->setEgyptianHatch(qfont, ch.subj);
-        } break;
     case uc::DrawMethod::SVG_EMOJI:
         clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);

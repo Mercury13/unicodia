@@ -454,12 +454,11 @@ namespace uc {
             SPACE,              ///< Take font, measure space width and draw 2 lines
             VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
             VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
-            EGYPTIAN_HATCH,     ///< Draw special big circle, then hatch
             // Char-based methods
             ABBREVIATION,       ///< Draw dotted square and abbreviation
             CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
             SVG_EMOJI,          ///< Draw SVG emoji
-            LAST_FONT = EGYPTIAN_HATCH };            // Last using (loading, checking) font
+            LAST_FONT = VERTICAL_CCW };            // Last using (loading, checking) font
 
     enum class TofuState {
         PRESENT,    ///< Not a tofu, have char

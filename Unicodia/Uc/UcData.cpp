@@ -2214,8 +2214,6 @@ uc::DrawMethod uc::Cp::drawMethod(
             }
         if (flags.have(Cfg::M_SPACE))
             return uc::DrawMethod::SPACE;
-        if (flags.have(Cfg::M_EGYPTIAN_HATCH))
-            return uc::DrawMethod::EGYPTIAN_HATCH;
         if (isAbbreviated())
             return uc::DrawMethod::ABBREVIATION;
     }

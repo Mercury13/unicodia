@@ -25,10 +25,6 @@ void drawCustomControl(
         QPainter* painter, const QRect& rect, const QColor& color,
         uc::FontPlace place, char32_t subj);
 
-void drawEgyptianHatch(
-        QPainter* painter, const QRect& rect,
-        const QFont& font, QColor color, char32_t subj);
-
 void drawAbbreviation(
         QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
         const QColor& color);
@@ -109,7 +105,6 @@ public:
     void setEmoji(char32_t aSubj);
     void setEmoji(std::u32string_view aText);
     void setVertical(const QFont& font, const QString& aSubj, int angle);
-    void setEgyptianHatch(const QFont& font, char32_t aSubj);
     void setNormal();
     void init();
 protected:
@@ -118,7 +113,7 @@ private:
     QSize initialSize;
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
-        EMOJI_TEXT, EGYPTIAN_HATCH, VERTICAL };
+        EMOJI_TEXT, VERTICAL };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;

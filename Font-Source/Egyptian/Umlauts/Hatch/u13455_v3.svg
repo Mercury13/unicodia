@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-10 0 1210 1000"
+   id="svg1"
+   sodipodi:docname="u13455_v3.svg"
+   inkscape:version="1.3-beta (cedbd6c6ff, 2023-05-28)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.236"
+     inkscape:cx="1275.4237"
+     inkscape:cy="-324.15254"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1"
+     showgrid="true">
+    <inkscape:grid
+       id="grid4"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+  </sodipodi:namedview>
+  <path
+     id="path14"
+     style="fill:#000000;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+     d="M 790 -1200 L 790 -800 L 814 -800 L -986 1000 L -944 1000 L 856 -800 L 919 -800 L -881 1000 L -839 1000 L 961 -800 L 1024 -800 L -776 1000 L -734 1000 L 1066 -800 L 1129 -800 L -671 1000 L -629 1000 L 1171 -800 L 1234 -800 L -566 1000 L -524 1000 L 1276 -800 L 1339 -800 L -461 1000 L -419 1000 L 1381 -800 L 1444 -800 L -356 1000 L -314 1000 L 1486 -800 L 1549 -800 L -251 1000 L -209 1000 L 1591 -800 L 1654 -800 L -146 1000 L -104 1000 L 1696 -800 L 1759 -800 L -41 1000 L 1 1000 L 1801 -800 L 1864 -800 L 64 1000 L 65 1000 L 106 1000 L 107 1000 L 1907 -800 L 1970 -800 L 170 1000 L 212 1000 L 2012 -800 L 2075 -800 L 275 1000 L 317 1000 L 2117 -800 L 2180 -800 L 380 1000 L 422 1000 L 2222 -800 L 2285 -800 L 485 1000 L 527 1000 L 2327 -800 L 2390 -800 L 590 1000 L 632 1000 L 2432 -800 L 2495 -800 L 695 1000 L 737 1000 L 2537 -800 L 2600 -800 L 800 1000 L 842 1000 L 2642 -800 L 2705 -800 L 905 1000 L 947 1000 L 2747 -800 L 2810 -800 L 1010 1000 L 1052 1000 L 2852 -800 L 2915 -800 L 1115 1000 L 1157 1000 L 2957 -800 L 3310 -800 L 3310 -1200 L 790 -1200 z " />
+</svg>

@@ -33,10 +33,9 @@ namespace uc {
         U_VS16_EMOJI     = 1<<6, ///< [+] UC feature: to surely make this char graphic, use VS16
         M_SVG_EMOJI      = 1<<7, ///< [+] Method: SVG emoji
         M_SPACE          = 1<<8, ///< [+] Method: draw as space, even if it is not space
-        M_EGYPTIAN_HATCH = 1<<9, ///< [+] Method: draw Egyptian hatch (not really a hatch, but OK)
-        STYLE_0         = 1<<10, ///< [+] Has variable style 0
-        STYLE_1         = 1<<11, ///< [+] Has variable style 1
-        STYLE_2         = 1<<12, ///< [+] Has variable style 2
+        STYLE_0         =  1<<9, ///< [+] Has variable style 0
+        STYLE_1         = 1<<10, ///< [+] Has variable style 1
+        STYLE_2         = 1<<11, ///< [+] Has variable style 2
         DYN_SYSTEM_TOFU = 1<<15, ///< cached in runtime; [+] the char is tofu in system fonts
     };
     DEFINE_ENUM_OPS(Cfg)
@@ -47,7 +46,7 @@ namespace uc {
     // Methods
     /// @todo [urgent] use 3 bits here: 0 = default, 1 = abbreviation, etc
     namespace m {
-        constexpr Cfgs ALL = Cfg::M_ABBREVIATION | Cfg::M_CUSTOM_CONTROL | Cfg::M_SVG_EMOJI | Cfg::M_SPACE | Cfg::M_EGYPTIAN_HATCH;
+        constexpr Cfgs ALL = Cfg::M_ABBREVIATION | Cfg::M_CUSTOM_CONTROL | Cfg::M_SVG_EMOJI | Cfg::M_SPACE;
     }
 
     enum class Lfg : unsigned char {

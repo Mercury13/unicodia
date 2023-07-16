@@ -75,6 +75,3 @@ constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };// some cyan
 
 /// Alpha for space characters
 constexpr int ALPHA_SPACE = 70;
-
-/// Alpha for Egyptian hatch
-constexpr int ALPHA_EGYPTIAN_HATCH = 90;

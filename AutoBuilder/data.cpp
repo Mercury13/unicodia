@@ -1970,14 +1970,6 @@ const std::unordered_set<char32_t> customDrawnControlChars {
 };
 
 
-const std::unordered_set<char32_t> charsEgyptianHatch {
-    0x13447, 0x13448, 0x13449, 0x1344A,
-    0x1344B, 0x1344C, 0x1344D, 0x1344E,
-    0x1344F, 0x13450, 0x13451, 0x13452,
-    0x13453, 0x13454, 0x13455
-};
-
-
 /// One method of homonym disambig: these chars are left as-are
 /// while the rest are decapped by dictionary under Exf::LEAVE_BY_CONDITION
 const std::unordered_set<char32_t> charsConditionalLeave {
