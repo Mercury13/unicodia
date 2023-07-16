@@ -1933,7 +1933,7 @@ void uc::Font::load(char32_t trigger) const
 {
 onceAgain:
     // Loaded?
-    if (q.loaded)
+    if (q.loaded || q.isRejected)
         return;
 
     // Find in cache
