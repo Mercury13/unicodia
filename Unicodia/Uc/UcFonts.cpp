@@ -111,6 +111,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { "UnicodiaHan.ttf", 120_pc },                                            // …1
     { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK strokes
       { FNAME_FUNKY, 120_pc },                                                  // …1
+    { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK symbols
+      { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                  // …1
+      { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
+      { FNAME_KOREAN, 120_pc},                                                  // …3
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari

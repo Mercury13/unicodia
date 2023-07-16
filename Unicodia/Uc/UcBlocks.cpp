@@ -491,7 +491,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_SYMBOLS, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F, { L'ぢ', EcContinent::CJK },
             "Hiragana",
