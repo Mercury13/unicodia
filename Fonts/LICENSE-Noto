@@ -31,8 +31,9 @@ What was done by authors of Unicodia:
   - Made somehow 11240
   - Dehinted 25CC
 * Korean
+  - Deleted ideographs main and A
   - Resaved with FontLab
-  - Rehinted with TtfAutoHint, default settings + font=none
+  - Rehinted with TtfAutoHint, default settings
 * Mongol
   — Dehinted 25CC
   — Made ahchor 25CC dotted circle + 18A9 some umlaut
