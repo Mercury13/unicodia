@@ -268,6 +268,7 @@ namespace uc {
          CJK_COMPAT,
            Z_CJC_1,
            Z_CJC_2,
+           Z_CJC_3,
          CJK_KANBUN,
          CJK_STRUCTURE,
            Z_CJS_1,

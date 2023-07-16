@@ -98,7 +98,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_KOREAN, 120_pc},                                                  // …8 for one W7 tofu FFA0
     { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
-      { FNAME_KOREAN, 120_pc },                                                 // …2
+      { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …2
+      { "MS Mincho", 120_pc },                                                  // …3
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
       { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …1
@@ -273,3 +274,4 @@ constinit const uc::Font uc::fontInfo[] = {
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN), "fontInfo size?");
+static_assert (std::size(uc::fontInfo) < 250);      // Just for caching
