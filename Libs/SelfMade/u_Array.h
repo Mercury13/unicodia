@@ -21,8 +21,6 @@
 #include <limits>
 #include <cstring>
 
-#include "Cpp03.h"
-
 #if __cplusplus >= 201103L
     #define AT_MULTI_MOVE(x,y,z) std::move((x),(y),(z))
     #define AT_MOVE_SEMANTIC
