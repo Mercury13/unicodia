@@ -194,7 +194,7 @@ void dumpV(std::ostream& aOs, Elem* x, size_t N)
     // -warn: new Elem[n] makes lots of warnings on GCC+LTO.
     template <class Elem>
     inline Elem* rawAlloc(size_t n) {
-        if (n < static_cast<size_t>(PTRDIFF_MAX))
+        if (n < static_cast<size_t>(std::numeric_limits<ptrdiff_t>::max()))
             return new Elem[n];
         else throw std::bad_alloc();
     }
