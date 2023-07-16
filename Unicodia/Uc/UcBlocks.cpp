@@ -519,12 +519,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x31A0, 0x31BF, { L'ㆮ', EcContinent::CJK },
             "Bopomofo Extended",
             { EcScript::Bopo, 1 }, MapType::CJ_OTHER,
-            EcScript::Bopo, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Bopo, EcFont::CJK_NEWHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // CJK strokes OK
     { 0x31C0, 0x31EF, { L'㇉', EcContinent::CJK },
             "CJK Strokes",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::Hani, EcFont::CJK_STRUCTURE, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_STROKES, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Katakana phon OK, not collapsible: small block
     { 0x31F0, 0x31FF, { L'ㇹ', EcContinent::CJK },
             "Katakana Phonetic Extensions",

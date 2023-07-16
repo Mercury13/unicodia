@@ -1970,14 +1970,18 @@ onceAgain:
         q.loaded->families = toQList(family.text);
     }
 
-    // Make probe font
-    q.loaded->get(q.loaded->probe,  fst::TOFU,   flags);
+    // Make probe font, force EXACT match
+    if (!q.loaded->rawFont) {
+        q.loaded->get(q.loaded->probe,  fst::TOFU,   flags);
+        q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
+        doesSupportChar(trigger);
+        if (family.probeChar && !doesSupportChar(family.probeChar.value)) {
+            q.loaded->isRejected = true;
+            q.isRejected = true;
+            return;
+        }
+    }
     q.loaded->get(q.loaded->normal, fst::DEFAULT, flags);
-        // force EXACT match
-    q.loaded->probeMetrics = std::make_unique<QFontMetrics>(*q.loaded->probe);
-    doesSupportChar(trigger);
-    if (probeChar && !doesSupportChar(probeChar.value))
-        q.isRejected = true;
 }
 
 

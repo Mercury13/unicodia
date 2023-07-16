@@ -30,6 +30,9 @@ What was done by authors of Unicodia:
 * Khojki
   - Made somehow 11240
   - Dehinted 25CC
+* Korean
+  - Resaved with FontLab
+  - Rehinted with TtfAutoHint, default settings + font=none
 * Mongol
   — Dehinted 25CC
   — Made ahchor 25CC dotted circle + 18A9 some umlaut

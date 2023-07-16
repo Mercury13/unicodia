@@ -275,6 +275,8 @@ namespace uc {
            Z_CJS_2,
          CJK_NEWHAN,
            Z_HNA_1,
+         CJK_STROKES,
+           Z_CJT_1,
         COPTIC,
         CUNEIFORM,
         DEVANAGARI,
@@ -476,16 +478,24 @@ namespace uc {
     enum class FontPlace { CELL, SAMPLE, PROBE };
 
     enum class Fafg {
-        RAW_FONT = 1<<0, ///< [+] use RawFont structure, not QFont for checking coverage
+        RAW_FONT      = 1<<0, ///< [+] use RawFont structure, not QFont for checking coverage
     };
 
     using EvRecode = char32_t (*)(char32_t unicode);
+
+    struct ProbeChar {
+        char32_t value = 0;
+        constexpr ProbeChar() noexcept = default;
+        explicit constexpr ProbeChar(char32_t x) noexcept : value(x) {}
+        explicit operator bool() const noexcept { return value; }
+    };
 
     struct Family
     {
         std::string_view text;
         Flags<Fafg> flags {};
         EvRecode recode = nullptr;
+        ProbeChar probeChar {};
 
         constexpr Family(std::string_view aText) : text(aText) {}
         constexpr Family(std::string_view aText, Fafg aFlag)
@@ -494,13 +504,10 @@ namespace uc {
             : text(aText), flags(aFlags) {}
         constexpr Family(std::string_view aText, EvRecode aRecode)
             : text(aText), recode(aRecode) {}
-    };
-
-    struct ProbeChar {
-        char32_t value = 0;
-        constexpr ProbeChar() noexcept = default;
-        explicit constexpr ProbeChar(char32_t x) noexcept : value(x) {}
-        explicit operator bool() const noexcept { return value; }
+        constexpr Family(std::string_view aText, ProbeChar aProbeChar)
+            : text(aText), probeChar(aProbeChar) {}
+        constexpr Family(std::string_view aText, Fafg aFlag, ProbeChar aProbeChar)
+            : text(aText), flags(aFlag), probeChar(aProbeChar) {}
     };
 
     struct StyleChange {
@@ -515,7 +522,6 @@ namespace uc {
         Flags<Ffg> flags {};
         std::string_view styleSheet {};
         Percent sizeAdjust {};
-        ProbeChar probeChar {};
         StyleChange styleChange {};
 
         mutable struct Q {
@@ -541,11 +547,6 @@ namespace uc {
                 Percent aSizeAdjust = Percent())
             : family(aFamily), flags(aFlags), styleSheet(aStylesheet),
               sizeAdjust(aSizeAdjust) {}
-        consteval Font(
-                std::string_view aFamily,
-                Flags<Ffg> aFlags,
-                ProbeChar aProbeChar)
-            : family(aFamily), flags(aFlags), probeChar(aProbeChar) {}
         consteval Font(
                 const Family& aFamily,
                 Flags<Ffg> aFlags = {},

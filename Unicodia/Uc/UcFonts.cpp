@@ -13,7 +13,11 @@ constexpr std::string_view FNAME_DEJAVU = "DejaVuSerif.ttf";
 constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf", uc::Fafg::RAW_FONT };
-constexpr uc::Family FNAME_KOREAN = { "NotoSansKR-Regular.otf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf", uc::Fafg::RAW_FONT };
+
+constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
+constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
+constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
 
 constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
 constexpr auto STYLE_DEVA = ""_sty;
@@ -29,13 +33,13 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …4
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
-      { "Segoe UI Historic" },                                                  // …7  Let it be, system font
+      { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
     { "Segoe UI Symbol" },                                                      // Symbol
-    { "Segoe UI Historic" },                                                    // Historic
+    { FAM_HISTORIC },                                                           // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
       { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
@@ -73,8 +77,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NAND, Ffg::FALL_TO_NEXT },                                        // …1
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
-    { "Segoe UI Historic", Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER | Ffg::FALL2_IF_ACCEPTED, // Brahmi
-                    ProbeChar{0x11013} },
+    { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER | Ffg::FALL2_IF_ACCEPTED }, // Brahmi
       { "NotoSansBrahmi-Regular.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },   // …1
       { FNAME_FUNKY },                                                          // …2
     { "Leelawadee UI", Ffg::FALL_TO_NEXT, 110_pc },                             // Buginese
@@ -94,9 +97,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …5 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …6 Korean
-      { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …7 Japanese
+      { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                    // …7 Japanese
       { FNAME_KOREAN, 120_pc},                                                  // …8 for one W7 tofu FFA0
-    { "Yu Gothic", Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK compat
+    { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …2
       { "MS Mincho", 120_pc },                                                  // …3
@@ -106,6 +109,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, 120_pc },                                                  // …2
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
       { "UnicodiaHan.ttf", 120_pc },                                            // …1
+    { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK strokes
+      { FNAME_FUNKY, 120_pc },                                                  // …1
     { "NotoSansCoptic-Regular.ttf" },                                           // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
@@ -160,7 +165,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
       { FNAME_FUNKY, 120_pc },                                                  // …1 Old Katakana/Hiragana
-      { "Yu Gothic", Ffg::FALL_TO_NEXT },                                       // …2 — for P1 Katakana
+      { FAM_YU, Ffg::FALL_TO_NEXT },                                            // …2 — for P1 Katakana
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
@@ -213,7 +218,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansPauCinHau-Regular.ttf" },                                        // Pau Cin Hau
     { "Microsoft PhagsPa", Ffg::DESC_BADLY_HINTED },                            // Phags-Pa
     { "NotoSansPhoenician-Regular.ttf" },                                       // Phoenician
-    { "Segoe UI Emoji", Ffg::FALL_TO_NEXT },                                    // Mahjong tiles
+    { FAM_SEMOJI, Ffg::FALL_TO_NEXT },                                          // Mahjong tiles
     /// @todo [misrender] Want negative padding, but how??
       { FNAME_NOTOSYM2, 150_pc },                                               // …1 = Phaistos disc
     { "NotoSansMiao-Regular.ttf", Ffg::DESC_BIGGER },                           // Pollard
@@ -274,4 +279,4 @@ constinit const uc::Font uc::fontInfo[] = {
 };
 
 static_assert (std::size(uc::fontInfo) == static_cast<size_t>(uc::EcFont::NN), "fontInfo size?");
-static_assert (std::size(uc::fontInfo) < 250);      // Just for caching
+static_assert (std::size(uc::fontInfo) < 250);      // Just for caching — unused for now
