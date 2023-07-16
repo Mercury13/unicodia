@@ -1829,6 +1829,7 @@ struct uc::LoadedFont : public dumb::SpTarget
     std::unique_ptr<QFont> probe {}, normal {};
     std::unique_ptr<QFontMetrics> probeMetrics;
     std::unique_ptr<QRawFont> rawFont;
+    bool isRejected = false;
 
     const QString& onlyFamily() const;
     const QFont& get(
@@ -1938,6 +1939,7 @@ onceAgain:
     // Find in cache
     if (auto it = loadedFonts.find(family.text); it != loadedFonts.end()) {
         q.loaded = it->second;
+        q.isRejected = q.loaded->isRejected;
         return;
     }
 
@@ -1952,6 +1954,11 @@ onceAgain:
         q.loaded->tempId = tempFont.id;
         q.loaded->familiesComma = tempFont.families.join(',');
         q.loaded->families = std::move(tempFont.families);
+        if (q.loaded->families.empty()) {
+            q.loaded->isRejected = true;
+            q.isRejected = true;
+            return;
+        }
 
         if (family.flags.have(Fafg::RAW_FONT) && tempFont.mems) {
             q.loaded->rawFont = std::make_unique<QRawFont>(tempFont.mems->qdata(), 50);
@@ -2016,10 +2023,16 @@ bool uc::Font::doesSupportChar(char32_t subj) const
     // Then load and check using one of methods:
     // rawFont or probeMetrics
     load(subj);
+    if (q.loaded->isRejected) {
+        q.isRejected = true;
+        return false;
+    }
     if (q.loaded->rawFont) {
         return q.loaded->rawFont->supportsCharacter(subj);
-    } else {
+    } else if (q.loaded->probeMetrics) {
         return q.loaded->probeMetrics->inFontUcs4(subj);
+    } else {
+        return false;
     }
 }
 
