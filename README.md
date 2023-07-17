@@ -88,7 +88,9 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
 
 # Policies
 ## Update Unicode
-While Ukraine is at war: as soon as beta version arrives.
+Wartime: as soon as beta version arrives.
+
+Peacetime (probably): as soon as some big font covering major non-Han set arrives.
 
 ## Fonts
 Update to beta: only if fixes major misrender and/or professionally implements new character.
