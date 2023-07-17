@@ -87,6 +87,7 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
 
 # Policies
+
 ## Update Unicode
 Wartime: as soon as beta version arrives.
 
