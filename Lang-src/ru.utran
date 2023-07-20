@@ -1618,12 +1618,12 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}15.0 is still not recommended.</p>
+      <p>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}15.1 is still not recommended.</p>
       <p />
       <p>The rest are names of days in lunar calendar from new moon to full and back.</p>
      </orig>
      <transl>
-      <p>Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре (по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). Чтобы не{{_}}отставать от смены времён года, этот месяц повторяется дважды каждые два-три года. Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, да и в Юникоде{{_}}15.0 всё еще не{{_}}рекомендуется.</p>
+      <p>Первый символ блока {{sm|᧠}}{{-}}название восьмого месяца в буддийском солнечно-лунном календаре (по-кхмерски ''asat'' или ''băthámsath'', санскрит ''ашадха'', приходится на июнь-июль). Чтобы не{{_}}отставать от смены времён года, этот месяц повторяется дважды каждые два-три года. Умляут 17D3 {{sm|◌៓}} некоторое время был [[pt:deprecated|запрещён]] в пользу данного символа, да и в Юникоде{{_}}15.1 всё еще не{{_}}рекомендуется.</p>
       <p />
       <p>Остальные{{-}}названия лунных дней от новолуния до полнолуния и обратно.</p>
      </transl>
@@ -9766,7 +9766,7 @@
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
-      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as of Unicode{{_}}15.0.</p>
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as of Unicode{{_}}15.1.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
@@ -9782,7 +9782,7 @@
       <p />
       <p>В Консорциуме Юникода сидят люди западной культуры, и они могут лишь ссылаться на исследования специалистов по редким языкам{{-}}так случилось для пяти символов [[ps:Arab|арабского]], [[ps:Tibt|тибетского]] и [[ps:Khmr|кхмерского]].</p>
       <p />
-      <p>Две технические угловые скобки запретили, чтобы не{{_}}путали с математическими. Также запрещены языковый [[pk:E0000|тэг]] (внёс больше неразберихи, чем решил проблем), шесть символов [[pt:bidi|двунаправленного письма]] (предложен другой механизм) и латинская [[pt:ligature|лигатура]] '''ŉ''' (в голландском и африкаанс есть много похожих сокращений, никак не{{_}}закодированных, проблемы с [[pt:normalization|нормализацией]], упразднили тип символов «буква со знаком»){{-}}итого 15 на Юникод{{_}}15.0.</p>
+      <p>Две технические угловые скобки запретили, чтобы не{{_}}путали с математическими. Также запрещены языковый [[pk:E0000|тэг]] (внёс больше неразберихи, чем решил проблем), шесть символов [[pt:bidi|двунаправленного письма]] (предложен другой механизм) и латинская [[pt:ligature|лигатура]] '''ŉ''' (в голландском и африкаанс есть много похожих сокращений, никак не{{_}}закодированных, проблемы с [[pt:normalization|нормализацией]], упразднили тип символов «буква со знаком»){{-}}итого 15 на Юникод{{_}}15.1.</p>
       <p />
       <p>Известны несколько случаев возврата символов в обиход.</p>
       <p>* Блок тэгов{{-}}использовался для указания языка. Вернули для [[pt:emoji|эмодзи]] флагов регионов (например, Шотландии), оставив под запретом один символ.</p>
@@ -10356,7 +10356,7 @@
       <p />
       <p>Unicode had beed two-byte encoding until 1996, that gave capacity of 65,536 characters. When the question of extension was overdue, several progressive languages and libraries (Java, Windows{{_}}NT) already adopted Unicode, and that led to compromise in the form of Basic Plane and UTF-16.</p>
       <p />
-      <p>In Unicode{{_}}15.0 only 16 positions are unallocated, 2FE0…2FEF.</p>
+      <p>In Unicode{{_}}15.1 only 16 positions are unallocated, 2FE0…2FEF.</p>
       <p />
       <p>Basic Plane contains [[pt:ascii|ASCII]], [[pt:latin1|Latin-1]] and 6400 [[pt:private|private-use]] characters.</p>
      </orig>
@@ -10365,7 +10365,7 @@
       <p />
       <p>До 1996 Юникод был двухбайтовым, что давало ёмкость 65{{.}}536 символов. Когда назрел вопрос расширения, несколько прогрессивных языков и библиотек (Java, Windows{{_}}NT) успели перейти на Юникод, что и привело к компромиссу в виде базовой плоскости и UTF-16.</p>
       <p />
-      <p>В Юникоде 15.0 нераспределёнными остались 16 позиций, 2FE0…2FEF.</p>
+      <p>В Юникоде 15.1 нераспределёнными остались 16 позиций, 2FE0…2FEF.</p>
       <p />
       <p>Базовая плоскость содержит [[pt:ascii|ASCII]], [[pt:latin1|латиницу-1]] и 6400 [[pt:private|личных]] символов.</p>
      </transl>
@@ -10440,7 +10440,7 @@
      <orig>
       <p>Character range from *0000 to *FFFD. The last two [[pt:codepoint|code points]] of each plane, *FFFE and *FFFF, are [[pt:noncharacter|non-characters]]. Due to [[pt:utf16|UTF-16]] limitations, Unicode has seventeen planes.</p>
       <p />
-      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}15.0.</p>
+      <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}15.1.</p>
       <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
       <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|90}} full.</p>
       <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|10}} full.</p>
@@ -10451,7 +10451,7 @@
      <transl>
       <p>Диапазон символов от *0000 до *FFFD. Последние две [[pt:codepoint|позиции]] каждой плоскости, *FFFE и *FFFF, [[pt:noncharacter|выброшены]]. Из-за ограничений [[pt:utf16|UTF-16]] в{{_}}Юникоде семнадцать плоскостей.</p>
       <p />
-      <p>* Плоскость {{№}}0 называется '''[[pt:bmp|базовой многоязычной]]''' и содержит большинство символов живых языков. В Юникоде{{_}}15.0 остаются 16{{_}}нераспределённых позиций.</p>
+      <p>* Плоскость {{№}}0 называется '''[[pt:bmp|базовой многоязычной]]''' и содержит большинство символов живых языков. В Юникоде{{_}}15.1 остаются 16{{_}}нераспределённых позиций.</p>
       <p>* Плоскость {{№}}1 называется '''дополнительной многоязычной''' и содержит символы редких и мёртвых языков, а также технические. Заполнена менее чем на {{%|50}}.</p>
       <p>* Плоскость {{№}}2 называется '''дополнительной иероглифической''' и содержит только [[ps:Hani|китайские иероглифы]]. Заполнена на {{%|90}}.</p>
       <p>* Плоскость {{№}}3 называется '''третичной иероглифической''', содержит только китайские иероглифы, и заполнена на {{%|10}}.</p>
@@ -10954,7 +10954,7 @@
       <p />
       <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
-      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}15.0, only two coloured emoji are standardized: black cat {{em|🐈}}+ZWJ+{{em|⬛}} and black bird (crow/raven) {{em|🐦‍}}+ZWJ+{{em|⬛}}.</p>
+      <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}15.1, four coloured emoji are standardized, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Faces {{em|😂}} are not inclusive and always yellow.</p>
      </orig>
@@ -10969,7 +10969,7 @@
       <p />
       <p>Если эмодзи захватывает несколько человек, механизмы установки пола и цвета кожи задаются отдельно для каждого случая. Так, в кормлении грудью {{em|🤱}} кожа младенца скрыта, поцелуй {{em|💏}} собирается с нуля как {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
-      <p>Порядок модификаторов в ZWJ-последовательностях: базовый символ, цвет кожи (без ZWJ), волосы, прочие цвета {{em|⬛}}, пол, направление движения {{em|⬅}}+VS16. На Юникод{{_}}15.0 стандартизированы только два эмодзи с цветом{{-}}чёрный кот {{em|🐈}}+ZWJ+{{em|⬛}} и чёрная птица (ворона/галка) {{em|🐦‍}}+ZWJ+{{em|⬛}}.</p>
+      <p>Порядок модификаторов в ZWJ-последовательностях: базовый символ, цвет кожи (без ZWJ), волосы, прочие цвета {{em|⬛}}, пол, направление движения {{em|⬅}}+VS16. На Юникод{{_}}15.1 стандартизированы четыре эмодзи с цветом{{-}}например, чёрный кот {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
       <p>Колобки {{em|😂}} не{{_}}инклюзивны и всегда жёлтые.</p>
      </transl>
