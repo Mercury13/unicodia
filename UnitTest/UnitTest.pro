@@ -16,6 +16,7 @@ SOURCES += \
     ../Libs/L10n/LocFmt.cpp \
     ../Libs/SelfMade/u_SearchEngine.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
+    ../Libs/SelfMade/u_Version.cpp \
     ../Unicodia/Wiki.cpp \
     test_Decapitalize.cpp \
     test_DumbSp.cpp \
@@ -23,6 +24,7 @@ SOURCES += \
     test_Iterator.cpp \
     test_Search.cpp \
     test_Strings.cpp \
+    test_Version.cpp \
     test_Wiki.cpp
 
 HEADERS += \
@@ -31,6 +33,7 @@ HEADERS += \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_SearchEngine.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
+    ../Libs/SelfMade/u_Version.h \
     ../Unicodia/Wiki.h
 
 INCLUDEPATH += \

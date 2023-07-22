@@ -3,6 +3,7 @@
 // C++
 #include <cmath>
 #include <charconv>
+#include <cstdint>
 
 // STL
 #include <string>

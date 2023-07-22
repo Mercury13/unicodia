@@ -34,6 +34,7 @@ SOURCES += \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
+    ../Libs/SelfMade/u_Version.cpp \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
@@ -96,6 +97,7 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Decoders.h \
     ../Libs/SelfMade/Strings/u_Qstrings.h \
     ../Libs/SelfMade/Strings/u_Strings.h \
+    ../Libs/SelfMade/u_Version.h \
     ../Libs/Zippy/Zippy.hpp \
     CharPaint/cp.h \
     CharPaint/routines.h \
