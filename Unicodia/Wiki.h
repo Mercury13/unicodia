@@ -171,9 +171,13 @@ namespace wiki {
         constexpr HtWeight() = default;
         constexpr void clear() { fState = State::z; }
         /// @return HTML tags, just append them to your HTML
+        /// Toggle those bits → what’s tag?
         [[nodiscard]] std::string_view toggle(Flags<Weight> changed);
-        [[nodiscard]] std::string_view finish() const;
-        [[nodiscard]] std::string_view restart() const;
+        /// Finish e.g. italic-bold → what’s tag?
+        [[nodiscard]] std::string_view finishingTag() const;
+        /// Restart e.g. italic-bold → what’s tag?
+        [[nodiscard]] std::string_view restartingTag() const;
+        /// What flags?  Both bold-italic and italic-bold are <b>
         [[nodiscard]] Flags<Weight> flags() const;
     private:
         enum class State { z, I, B, BI, IB, NN };

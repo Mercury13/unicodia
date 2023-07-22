@@ -307,7 +307,7 @@ namespace {
     void Eng::finish()
     {
         if (!isSuppressed) {
-            auto tag = weight.finish();
+            auto tag = weight.finishingTag();
             str::append(s, tag);
         }
     }
@@ -322,7 +322,7 @@ namespace {
         if (isSuppressed)
             return true;
         if (weight.flags() & wiki::probeWeights(text)) {
-            auto tag = weight.finish();
+            auto tag = weight.finishingTag();
             str::append(s, tag);
         } else {
             isSuppressed = true;
@@ -373,7 +373,7 @@ namespace {
     void Eng::runRecursive(std::string_view text)
     {
         if (!isSuppressed) {
-            auto tag = weight.restart();
+            auto tag = weight.restartingTag();
             str::append(s, tag);
         }
         wiki::run(*this, text);
@@ -383,7 +383,7 @@ namespace {
     {
         if (!isSuppressed) {
             if (hasRemainder) {
-                auto tag = weight.restart();
+                auto tag = weight.restartingTag();
                 str::append(s, tag);
             } else {
                 weight.clear();

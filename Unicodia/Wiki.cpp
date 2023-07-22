@@ -292,13 +292,13 @@ std::string_view wiki::HtWeight::toggle(Flags<Weight> changed)
 }
 
 
-std::string_view wiki::HtWeight::finish() const
+std::string_view wiki::HtWeight::finishingTag() const
 {
     return finishResult[static_cast<int>(fState)];
 }
 
 
-std::string_view wiki::HtWeight::restart() const
+std::string_view wiki::HtWeight::restartingTag() const
 {
     return restartResult[static_cast<int>(fState)];
 }
