@@ -171,7 +171,7 @@ namespace wiki {
         constexpr HtWeight() = default;
         constexpr void clear() { fState = State::z; }
         /// @return HTML tags, just append them to your HTML
-        /// Toggle those bits → what’s tag?
+        /// Toggle those bits → change internal state ang return tag
         [[nodiscard]] std::string_view toggle(Flags<Weight> changed);
         /// Finish e.g. italic-bold → what’s tag?
         [[nodiscard]] std::string_view finishingTag() const;
