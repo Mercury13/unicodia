@@ -176,15 +176,17 @@ namespace wiki {
         [[nodiscard]] std::string_view restart() const;
         [[nodiscard]] Flags<Weight> flags() const;
     private:
-        enum class State { z, I, B, BI, IB };
+        enum class State { z, I, B, BI, IB, NN };
+        static constexpr unsigned N_STATES = static_cast<unsigned>(State::NN);
+        static constexpr unsigned N_FLAGS = 4;   ///< 0 = none, 1=i, 2=b, 3=b+i
         struct ToggleResult { std::string_view result; State state; };
 
         // Simple FSM here
         State fState = State::z;
-        static const ToggleResult machine[5][4];
-        static const std::string_view finishResult[5];
-        static const std::string_view restartResult[5];
-        static const Flags<Weight> flagsResult[5];
+        static const ToggleResult machine[N_STATES][N_FLAGS];
+        static const std::string_view finishResult[N_STATES];
+        static const std::string_view restartResult[N_STATES];
+        static const Flags<Weight> flagsResult[N_STATES];
     };
 
 }   // namespace wiki

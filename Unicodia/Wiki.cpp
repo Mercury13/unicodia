@@ -239,7 +239,7 @@ Flags<wiki::Weight> wiki::probeWeights(const char* start, const char* end)
 ///// HtWeight /////////////////////////////////////////////////////////////////
 
 
-constinit const wiki::HtWeight::ToggleResult wiki::HtWeight::machine[5][4] {
+constinit const wiki::HtWeight::ToggleResult wiki::HtWeight::machine[N_STATES][N_FLAGS] {
         // NO TAGS
     {   { {},       State::z },     // ⌀ ^ ⌀ = ⌀
         { "<i>",    State::I },     // ⌀ ^ i = i
@@ -268,15 +268,15 @@ constinit const wiki::HtWeight::ToggleResult wiki::HtWeight::machine[5][4] {
 };
 
 
-constinit const std::string_view wiki::HtWeight::finishResult[5] {
+constinit const std::string_view wiki::HtWeight::finishResult[N_STATES] {
     // Bold-italic close as </i></b>, etc
     {}, "</i>", "</b>", "</i></b>", "</b></i>" };
 
-constinit const std::string_view wiki::HtWeight::restartResult[5] {
+constinit const std::string_view wiki::HtWeight::restartResult[N_STATES] {
     {}, "<i>", "<b>", "<b><i>", "<i><b>" };
 
-constinit const Flags<wiki::Weight> wiki::HtWeight::flagsResult[5] {
-    {},
+constinit const Flags<wiki::Weight> wiki::HtWeight::flagsResult[N_STATES] {
+    NO_FLAGS,
     Weight::ITALIC,
     Weight::BOLD,
     Weight::BOLD | Weight::ITALIC,
