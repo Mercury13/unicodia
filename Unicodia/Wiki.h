@@ -185,7 +185,7 @@ namespace wiki {
         static constexpr unsigned N_FLAGS = 4;   ///< 0 = none, 1=i, 2=b, 3=b+i
         struct ToggleResult { std::string_view result; State state; };
 
-        // Simple FSM here
+        // Simple Mealy FSM here
         State fState = State::z;
         static const ToggleResult machine[N_STATES][N_FLAGS];
         static const std::string_view finishResult[N_STATES];
