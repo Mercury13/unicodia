@@ -22,6 +22,9 @@ struct Version
 
     static_assert(sizeof(char) == sizeof(char8_t));
 
+    /// @warning  Works like snprintf
+    ///    1. data is always null-terminated.
+    ///    2. Returns data size as if there were enough buffer.
     size_t sprintf(char* data, size_t size) const;
     size_t sprintf(std::span<char> data) const { return sprintf(data.data(), data.size()); }
     size_t sprintf(char8_t* data, size_t size) const
