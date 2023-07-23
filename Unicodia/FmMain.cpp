@@ -11,6 +11,9 @@
 // XML
 #include "pugixml.hpp"
 
+// Json
+#include "rapidjson/document.h"
+
 // Qt
 #include <QTableView>
 #include <QTextFrame>
@@ -26,6 +29,13 @@
 #include <QToolButton>
 #include <QActionGroup>
 #include <QIconEngine>
+#include <QDesktopServices>
+
+// Qt net
+#include <QNetworkRequest>
+#include <QNetworkReply>
+#include <QNetworkAccessManager>
+#include <QUrl>
 
 // Misc
 #include "u_Strings.h"
@@ -60,6 +70,9 @@ using namespace std::string_view_literals;
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
+#define SUBURL_REPO "Mercury13/unicodia/releases"
+    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO;
+    constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
 }
 
 ///// RowCache /////////////////////////////////////////////////////////////////
@@ -1148,7 +1161,7 @@ void FmMain::translateAbout()
     char8_t buf[50];
     ui->lbAboutVersion->setText(str::toQ(
                 loc::get("About.Version")
-                .arg(myVersion.toSv(buf),
+                .arg(progsets::version.toSv(buf),
                      uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locLongName())));
 
     // vwVersion
@@ -1179,9 +1192,12 @@ void FmMain::translateAbout()
 
 void FmMain::initAbout()
 {
-    myVersion = Version::parsePermissive(QApplication::applicationVersion());
+    if (!progsets::version)
+        progsets::version = Version::parsePermissive(QApplication::applicationVersion());
+    setUpdating(false);
     ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
+    connect(ui->btCheckForUpdate, &QPushButton::clicked, this, &This::startUpdate);
 }
 
 
@@ -1847,4 +1863,113 @@ void FmMain::goToCp(char32_t cp)
 {
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
+}
+
+
+void FmMain::setUpdating(bool value)
+{
+    ui->btCheckForUpdate->setEnabled(!value);
+    ui->lbChecking->setVisible(value);
+}
+
+
+void FmMain::ensureNetMan()
+{
+    if (!netMan) {
+        netMan.reset(new QNetworkAccessManager);
+        connect(netMan.get(), &QNetworkAccessManager::finished, this, &This::updateFinished);
+    }
+}
+
+
+void FmMain::startUpdate()
+{
+    ensureNetMan();
+    QNetworkRequest rq(QUrl{URL_UPDATE});
+    netMan->get(rq);
+    setUpdating(true);
+}
+
+
+FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
+{
+    // OK
+    ParseReply r;
+    auto bytes = reply.readAll();
+    rapidjson::Document doc;
+    doc.Parse(bytes.data(), bytes.length());
+    if (!doc.IsArray() || doc.Size() == 0)
+        return r;
+    auto item = doc.GetArray().begin();
+    if (!item->IsObject())
+        return r;
+    auto data = item->FindMember("name");
+    if (!data->value.IsString())
+        return r;
+    r.versionText = data->value.GetString();
+    r.version = Version::parsePermissive(r.versionText);
+    if (!r.version) {
+        r.code = ParseReplyCode::BAD_VERSION;
+        return r;
+    }
+    auto q = (r.version <=> progsets::version);
+    if (q == std::strong_ordering::less) {
+        r.code = ParseReplyCode::FOUND_EARLIER;
+    } else if (q == std::strong_ordering::greater) {
+        r.code = ParseReplyCode::FOUND_LATER;
+    } else {
+        r.code = ParseReplyCode::COINCIDE;
+    }
+    return r;
+}
+
+
+void FmMain::updateFinished(QNetworkReply* reply)
+{
+    if (reply) {
+        auto err = reply->error();
+        auto head = loc::get("Update.Head").q();
+        char8_t buf[50], buf2[50];
+        if (err == QNetworkReply::NoError) {
+            auto res = parseReply(*reply);
+            switch (res.code) {
+            case ParseReplyCode::BAD_DOCUMENT:
+                QMessageBox::critical(this, head, loc::get("Update.Parse"));
+                break;
+            case ParseReplyCode::BAD_VERSION: {
+                    auto qtext = QString::fromStdString(res.versionText).toHtmlEscaped().toStdString();
+                    QMessageBox::critical(this, head,
+                            loc::get("Update.BadVer").argQ(str::toU8sv(qtext)));
+                } break;
+            case ParseReplyCode::COINCIDE:
+                QMessageBox::information(this, head,
+                        loc::get("Update.Ok").argQ(res.version.toSv(buf)));
+                break;
+            case ParseReplyCode::FOUND_EARLIER:
+                QMessageBox::warning(this, head,
+                        loc::get("Update.Earlier").argQ(
+                                    progsets::version.toSv(buf), res.version.toSv(buf2)));
+                break;
+            case ParseReplyCode::FOUND_LATER: {
+                    QMessageBox msg(QMessageBox::Question, head,
+                            loc::get("Update.Later").argQ(
+                                progsets::version.toSv(buf), res.version.toSv(buf2)),
+                            QMessageBox::Yes | QMessageBox::No, this);
+                    msg.setButtonText(QMessageBox::Yes, loc::get("Update.Go"));
+                    msg.setButtonText(QMessageBox::No,  loc::get("Update.Close"));
+                    if (msg.exec() == QMessageBox::Yes) {
+                        QDesktopServices::openUrl(QUrl{URL_REPO});
+                    }
+                } break;
+            }
+        } else if (err < 100) {
+            // System error
+            QMessageBox::warning(this, head, loc::get("Update.Connect"));
+        } else {
+            // HTTP error
+            QMessageBox::critical(this, head, loc::get("Update.Err").argQ(err));
+        }
+        reply->deleteLater();
+    }
+    setUpdating(false);
 }

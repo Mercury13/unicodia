@@ -1,5 +1,5 @@
 @rem Settings
-@set VERSION=2.0.3
+@set VERSION=2.0.4
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
@@ -132,6 +132,7 @@
 @copy %QTDIR%\bin\Qt6Widgets.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6Svg.dll %DEPLOY%
 @copy %QTDIR%\bin\Qt6SvgWidgets.dll %DEPLOY%
+@copy %QTDIR%\bin\Qt6Network.dll %DEPLOY%
 @copy MiscFiles\Unicodia.xml %DEPLOY%
 @copy LICENSE %DEPLOY%
 @rem Used! — need for toolbar icons

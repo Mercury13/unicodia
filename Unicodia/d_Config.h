@@ -6,6 +6,9 @@
 // Qt
 #include "QRect"
 
+// Libs
+#include "u_Version.h"
+
 
 enum class BlockOrder {
     ALPHA,      ///< Alphabetical
@@ -19,6 +22,7 @@ enum class BlockOrder {
 namespace progsets {
     enum class DirMode { INSTALLED, PORTABLE };
     extern DirMode dirMode;
+    extern Version version;
 }
 
 namespace fname {

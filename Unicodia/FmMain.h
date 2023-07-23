@@ -46,6 +46,8 @@ QT_END_NAMESPACE
 constexpr int NCOLS = 8;
 
 class QToolButton;
+class QNetworkAccessManager;
+class QNetworkReply;
 class FmTofuStats;
 class WiLibCp;
 
@@ -304,7 +306,7 @@ private:
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
     PopupGui popupGui{mainGui};
-    Version myVersion;
+    std::unique_ptr<QNetworkAccessManager> netMan;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -345,6 +347,15 @@ private:
     void cjkReflectCollapseState();
     void rebuildBlocks();
     void redrawSampleChar();
+    void setUpdating(bool value);
+    void ensureNetMan();
+    enum class ParseReplyCode { BAD_DOCUMENT, FOUND_EARLIER, COINCIDE, FOUND_LATER, BAD_VERSION };
+    struct ParseReply {
+        ParseReplyCode code = ParseReplyCode::BAD_DOCUMENT;
+        Version version;
+        std::string versionText;
+    };
+    ParseReply parseReply(QNetworkReply& reply);
 
     // PixSource
     int pixSize() const override;
@@ -375,6 +386,8 @@ private slots:
     void blockOrderChanged();
     void glyphStyleChanged();
     void goToCp(char32_t cp);
+    void startUpdate();
+    void updateFinished(QNetworkReply* reply);
 };
 
 

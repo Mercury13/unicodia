@@ -33,7 +33,7 @@
     <item>
      <widget class="QTabWidget" name="tabsMain">
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="tabBlocks">
        <attribute name="title">
@@ -899,6 +899,37 @@ padding-bottom: 1px;</string>
            </layout>
           </item>
           <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QPushButton" name="btCheckForUpdate">
+              <property name="text">
+               <string>Check for update</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="lbChecking">
+              <property name="text">
+               <string>Checking…</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item>
            <widget class="QLabel" name="lbTofuStats">
             <property name="cursor">
              <cursorShape>PointingHandCursor</cursorShape>
@@ -1018,6 +1049,27 @@ padding-bottom: 1px;</string>
    <header>c_SearchEdit.h</header>
   </customwidget>
  </customwidgets>
+ <tabstops>
+  <tabstop>tabsMain</tabstop>
+  <tabstop>tableChars</tabstop>
+  <tabstop>comboBlock</tabstop>
+  <tabstop>edSearch</tabstop>
+  <tabstop>btCopy</tabstop>
+  <tabstop>btCopyEx</tabstop>
+  <tabstop>btCollapse</tabstop>
+  <tabstop>radioStyle0</tabstop>
+  <tabstop>radioStyle1</tabstop>
+  <tabstop>vwInfo</tabstop>
+  <tabstop>btCloseSearch</tabstop>
+  <tabstop>listSearch</tabstop>
+  <tabstop>treeLibrary</tabstop>
+  <tabstop>btLibCopy</tabstop>
+  <tabstop>vwLibInfo</tabstop>
+  <tabstop>vwTerms</tabstop>
+  <tabstop>comboLang</tabstop>
+  <tabstop>btCheckForUpdate</tabstop>
+  <tabstop>vwAbout</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

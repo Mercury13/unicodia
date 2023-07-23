@@ -19,6 +19,7 @@
 
 // progsets
 progsets::DirMode progsets::dirMode = progsets::DirMode::INSTALLED;
+Version progsets::version;
 
 // fname
 std::filesystem::path fname::config;
@@ -57,6 +58,7 @@ namespace {
         auto root = doc.child("program");
         if (root.attribute("portable").as_bool(false))
             progsets::dirMode = progsets::DirMode::PORTABLE;
+        progsets::version = Version::parsePermissive(root.attribute("debugVersion").as_string());
     }
 
     void loadConfig([[maybe_unused]] QRect& winRect, BlockOrder& blockOrder)

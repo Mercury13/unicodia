@@ -41,12 +41,17 @@ namespace loc {
         const char* c_str() const { return str::toC(fSrc); }
         const std::u8string& str() const { return fSrc; }
         bool isFull() const { return fIsFull; }
+        template <class... T>
+            std::u8string arg(const T&... x) const;
+
     #ifdef QT_STRINGS
+        // QString functions
         QString q() const { return QString::fromUtf8(fSrc.data(), fSrc.size()); }
         operator QString() const { return q(); }
-    #endif
         template <class... T>
-        std::u8string arg(const T&... x) const;
+            QString argQ(const T&... x) const;
+    #endif
+
     private:
         std::u8string fSrc;
         bool fIsFull = false;
@@ -79,3 +84,14 @@ std::u8string loc::Text::arg(const T&... x) const
     (fmt.eat(x), ...);
     return fmt.giveStr();
 }
+
+
+#ifdef QT_STRINGS
+    template <class... T>
+    QString loc::Text::argQ(const T&... x) const
+    {
+        loc::FmtL<char8_t> fmt(fSrc);
+        (fmt.eat(x), ...);
+        return fmt.q();
+    }
+#endif

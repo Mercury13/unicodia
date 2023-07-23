@@ -1,7 +1,7 @@
-QT += core gui widgets svg svgwidgets
+QT += core gui widgets network svg svgwidgets
 CONFIG += c++2a c++20
 
-VERSION = 2.0.3
+VERSION = 2.0.4
 
 win32-g++ {
     # To simplify debugging, we statically link these libraries
@@ -139,6 +139,7 @@ INCLUDEPATH += \
     ../Libs/L10n \
     ../Libs/MagicEnum \
     ../Libs/PugiXml \
+    ../Libs/RapidJson \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Qt \

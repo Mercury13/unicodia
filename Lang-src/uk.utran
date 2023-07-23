@@ -11412,6 +11412,16 @@
      <im-cmt>is a static text</im-cmt>
      <transl>Енциклопедія символів Юнікоду</transl>
     </text>
+    <text id="btCheckForUpdate">
+     <orig>Check for update</orig>
+     <im-cmt>is a button</im-cmt>
+     <transl>Перевірити оновлення</transl>
+    </text>
+    <text id="lbChecking">
+     <orig>Checking…</orig>
+     <im-cmt>is a static text</im-cmt>
+     <transl>Перевірка…</transl>
+    </text>
     <group id="actions">
      <text id="acSortByAlpha">
       <orig>Alphabetically: A → Z</orig>
@@ -12171,6 +12181,57 @@
      </transl>
     </text>
    </group>
+  </group>
+  <group id="Update">
+   <text id="Head">
+    <orig>Check for update</orig>
+    <au-cmt>Dialog header</au-cmt>
+    <transl>Перевірка оновлень</transl>
+   </text>
+   <text id="Ok">
+    <orig>You are using the latest version {1}.</orig>
+    <transl>У вас остання версія {1}.</transl>
+   </text>
+   <text id="Earlier">
+    <orig>Strange: my version is {1}, the repository has {2}. Probably the repository has migrated, or you have a non-public development version.</orig>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=10.1.2</au-cmt>
+    <transl>Дивно: моя версія {1}, у репозиторії {2}. Можливо, репозиторій переїхав, або у вас непублічна розробницька версія.</transl>
+   </text>
+   <text id="Later">
+    <orig>My version is {1}, found update to {2}. Go to repository?</orig>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=1.2.3</au-cmt>
+    <transl>Моя версія {1}, знайдено оновлення до {2}. Пройти до репозиторію?</transl>
+   </text>
+   <text id="BadVer">
+    <orig>Strange: cannot parse version “{1}”.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+    <transl>Дивно: не можу розібрати версію «{1}».</transl>
+   </text>
+   <text id="Connect">
+    <orig>Cannot connect to repository. Check your internet connection.</orig>
+    <au-cmt>Test: pull off internet cable, or disconnect from WiFi</au-cmt>
+    <transl>Не можу під’єднатися до репозиторію. Перевірте інтернет-з’єднання.</transl>
+   </text>
+   <text id="Err">
+    <orig>Strange: got error code {1}. Something happened to repository.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+    <transl>Дивно: одержав код помилки {1}. З репозиторієм щось сталося.</transl>
+   </text>
+   <text id="Go">
+    <orig>&amp;Go</orig>
+    <au-cmt>Test: same as Later</au-cmt>
+    <transl>&amp;Пройти</transl>
+   </text>
+   <text id="Close">
+    <orig>&amp;Close</orig>
+    <au-cmt>Test: same as Later</au-cmt>
+    <transl>&amp;Закрити</transl>
+   </text>
+   <text id="Parse">
+    <orig>Strange: cannot parse server’s reply.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+    <transl>Дивно: не можу розібрати відповідь сервера.</transl>
+   </text>
   </group>
  </file>
 </ut>

@@ -45,6 +45,8 @@ struct Version
     /// Finds digit, then parses version within string
     ///   v.3.4alpha → (3,4,0)
     static Version parsePermissive(std::string_view text);
+    static Version parsePermissive(const char* text)
+        { return parsePermissive(std::string_view(text)); }
 
 #ifdef QT_STRINGS
     QString toQ() const;

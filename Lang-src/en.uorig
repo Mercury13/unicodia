@@ -7885,6 +7885,14 @@
      <orig>Encyclopedia of Unicode characters</orig>
      <im-cmt>is a static text</im-cmt>
     </text>
+    <text id="btCheckForUpdate">
+     <orig>Check for update</orig>
+     <im-cmt>is a button</im-cmt>
+    </text>
+    <text id="lbChecking">
+     <orig>Checking…</orig>
+     <im-cmt>is a static text</im-cmt>
+    </text>
     <group id="actions">
      <text id="acSortByAlpha">
       <orig>Alphabetically: A → Z</orig>
@@ -8455,6 +8463,47 @@
      </orig>
     </text>
    </group>
+  </group>
+  <group id="Update">
+   <text id="Head">
+    <orig>Check for update</orig>
+    <au-cmt>Dialog header</au-cmt>
+   </text>
+   <text id="Ok">
+    <orig>You are using the latest version {1}.</orig>
+   </text>
+   <text id="Earlier">
+    <orig>Strange: my version is {1}, the repository has {2}. Probably the repository has migrated, or you have a non-public development version.</orig>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=10.1.2</au-cmt>
+   </text>
+   <text id="Later">
+    <orig>My version is {1}, found update to {2}. Go to repository?</orig>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=1.2.3</au-cmt>
+   </text>
+   <text id="BadVer">
+    <orig>Strange: cannot parse version “{1}”.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+   </text>
+   <text id="Connect">
+    <orig>Cannot connect to repository. Check your internet connection.</orig>
+    <au-cmt>Test: pull off internet cable, or disconnect from WiFi</au-cmt>
+   </text>
+   <text id="Err">
+    <orig>Strange: got error code {1}. Something happened to repository.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+   </text>
+   <text id="Go">
+    <orig>&amp;Go</orig>
+    <au-cmt>Test: same as Later</au-cmt>
+   </text>
+   <text id="Close">
+    <orig>&amp;Close</orig>
+    <au-cmt>Test: same as Later</au-cmt>
+   </text>
+   <text id="Parse">
+    <orig>Strange: cannot parse server’s reply.</orig>
+    <au-cmt>Cannot test for now</au-cmt>
+   </text>
   </group>
  </file>
 </ut>
