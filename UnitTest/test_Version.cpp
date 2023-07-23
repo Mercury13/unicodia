@@ -280,3 +280,11 @@ TEST (Version, Parse10)
     Version expec { 23, 34, 35 };
     EXPECT_EQ(expec, v);
 }
+
+
+TEST (Version, Parse11)
+{
+    auto v = Version::parsePermissive("v.3.4alpha");
+    Version expec { 3, 4 };
+    EXPECT_EQ(expec, v);
+}
