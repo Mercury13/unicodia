@@ -1908,7 +1908,6 @@ FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
     if (progsets::version == VER_BAD_VERSION)
         r.versionText = "alpha<br>bravo";
 
-
     r.version = Version::parsePermissive(r.versionText);
     if (!r.version) {
         r.code = ParseReplyCode::BAD_VERSION;
