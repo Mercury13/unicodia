@@ -12124,6 +12124,10 @@
      <orig>Misc. inequality characters</orig>
      <transl>Різні символи нерівності</transl>
     </text>
+    <text id="Latin">
+     <orig>Latin</orig>
+     <transl>Латинка</transl>
+    </text>
    </group>
   </group>
   <group id="Version">

@@ -8423,6 +8423,9 @@
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
     </text>
+    <text id="Latin">
+     <orig>Latin</orig>
+    </text>
    </group>
   </group>
   <group id="Version">
