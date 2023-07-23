@@ -11,7 +11,8 @@
 
 struct Version
 {
-    unsigned part1 = 0, part2 = 0, part3 = 0;
+    using Num = unsigned;
+    Num part1 = 0, part2 = 0, part3 = 0;
 
     constexpr Version() = default;
     constexpr explicit Version(unsigned p1) : part1(p1) {}

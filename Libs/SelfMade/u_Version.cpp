@@ -21,7 +21,8 @@ Version Version::parsePermissive(std::string_view text)
         return r;
 
     // Read 1st data
-    auto q = std::from_chars(p, end, r.part1);
+    Num p1 = 0;
+    auto q = std::from_chars(p, end, p1);
     if ((q.ptr == nullptr || q.ptr == end) || *q.ptr != '.')
         return r;
 
@@ -29,6 +30,7 @@ Version Version::parsePermissive(std::string_view text)
     p = q.ptr + 1;
     if (p == end || !isDigit(*p))
         return r;
+    r.part1 = p1;
     q = std::from_chars(p, end, r.part2);
     if ((q.ptr == nullptr || q.ptr == end) || *q.ptr != '.')
         return r;

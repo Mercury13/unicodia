@@ -208,14 +208,13 @@ TEST (Version, ParseP1)
 TEST (Version, ParseP2)
 {
     auto v = Version::parsePermissive("23");
-    Version expec { 23 };
-    EXPECT_EQ(expec, v);
+    EXPECT_FALSE(v);
 }
 
 
 TEST (Version, ParseP3)
 {
-    auto v = Version::parsePermissive("a.a.a23");
+    auto v = Version::parsePermissive("a.a.a23.0");
     Version expec { 23 };
     EXPECT_EQ(expec, v);
 }
@@ -224,14 +223,20 @@ TEST (Version, ParseP3)
 TEST (Version, ParseP4)
 {
     auto v = Version::parsePermissive("23.");
-    Version expec { 23 };
-    EXPECT_EQ(expec, v);
+    EXPECT_FALSE(v);
 }
 
 
 TEST (Version, Parse5)
 {
     auto v = Version::parsePermissive("23.a34");
+    EXPECT_FALSE(v);
+}
+
+
+TEST (Version, Parse5a)
+{
+    auto v = Version::parsePermissive("23.0");
     Version expec { 23 };
     EXPECT_EQ(expec, v);
 }
