@@ -102,4 +102,6 @@ Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 ## Language
 
-War jargon is forbidden.
+English dialect is whatever better for international audience. British form is preferred if both are good.
+
+War jargon is forbidden, especially in Russian/Ukrainian.
