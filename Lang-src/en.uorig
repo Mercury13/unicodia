@@ -8424,10 +8424,19 @@
      <orig>Misc. inequality characters</orig>
     </text>
     <text id="Latin">
-     <orig>Latin</orig>
+     <orig>Latin / by letter</orig>
     </text>
     <text id="OldForms">
      <orig>Old forms</orig>
+    </text>
+    <text id="MiscForms">
+     <orig>Misc. forms</orig>
+    </text>
+    <text id="Latin2">
+     <orig>Latin / by nation</orig>
+    </text>
+    <text id="EnTran">
+     <orig>English transcription</orig>
     </text>
    </group>
   </group>

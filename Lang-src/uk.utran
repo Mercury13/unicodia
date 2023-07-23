@@ -12125,12 +12125,24 @@
      <transl>Різні символи нерівності</transl>
     </text>
     <text id="Latin">
-     <orig>Latin</orig>
-     <transl>Латинка</transl>
+     <orig>Latin / by letter</orig>
+     <transl>Латинка / по літерах</transl>
     </text>
     <text id="OldForms">
      <orig>Old forms</orig>
      <transl>Старі форми</transl>
+    </text>
+    <text id="MiscForms">
+     <orig>Misc. forms</orig>
+     <transl>Різні форми</transl>
+    </text>
+    <text id="Latin2">
+     <orig>Latin / by nation</orig>
+     <transl>Латинка / по країнах</transl>
+    </text>
+    <text id="EnTran">
+     <orig>English transcription</orig>
+     <transl>Англійська транскрипція</transl>
     </text>
    </group>
   </group>
