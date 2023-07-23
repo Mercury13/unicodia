@@ -12127,6 +12127,10 @@
      <orig>Latin</orig>
      <transl>Латиница</transl>
     </text>
+    <text id="OldForms">
+     <orig>Old forms</orig>
+     <transl>Старые формы</transl>
+    </text>
    </group>
   </group>
   <group id="Version">
