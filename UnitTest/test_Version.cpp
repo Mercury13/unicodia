@@ -149,8 +149,9 @@ TEST (Version, Sprintf5)
 {
     char c[7];
     Version v { 12, 34, 56 };
-    v.sprintf(c);
+    auto n = v.sprintf(c);
     EXPECT_STREQ("12.34.", c);
+    EXPECT_EQ(8, n);
 }
 
 
@@ -178,6 +179,15 @@ TEST (Version, ToSv2)
     Version v { 12, 34, 56 };
     auto sv = v.toSv(c);
     EXPECT_TRUE("12.34.56"sv == sv);
+}
+
+
+TEST (Version, ToSv3)
+{
+    char c[7];
+    Version v { 12, 34, 56 };
+    auto sv = v.toSv(c);
+    EXPECT_TRUE("12.34."sv == sv);
 }
 
 
