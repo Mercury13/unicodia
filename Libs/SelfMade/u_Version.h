@@ -27,6 +27,10 @@ struct Version
     size_t sprintf(char8_t* data, size_t size) const
         { return sprintf(reinterpret_cast<char*>(data), size); }
     size_t sprintf(std::span<char8_t> data) const { return sprintf(data.data(), data.size()); }
+
+    std::string_view toSv(std::span<char> data) const;
+    std::u8string_view toSv(std::span<char8_t> data) const;
+
     std::string toS() const;
 
     [[nodiscard]] bool hasSmth() const

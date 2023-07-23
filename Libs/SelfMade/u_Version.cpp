@@ -52,6 +52,20 @@ size_t Version::sprintf(char* data, size_t size) const
 }
 
 
+std::string_view Version::toSv(std::span<char> data) const
+{
+    auto n = sprintf(data);
+    return { data.data(), n };
+}
+
+
+std::u8string_view Version::toSv(std::span<char8_t> data) const
+{
+    auto n = sprintf(data);
+    return { data.data(), n };
+}
+
+
 std::string Version::toS() const
 {
     char q[50];

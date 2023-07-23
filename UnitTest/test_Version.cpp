@@ -163,6 +163,24 @@ TEST (Version, SprintfU8)
 }
 
 
+TEST (Version, ToSv1)
+{
+    char8_t c[30];
+    Version v { 12, 34, 56 };
+    auto sv = v.toSv(c);
+    EXPECT_TRUE(u8"12.34.56"sv == sv);
+}
+
+
+TEST (Version, ToSv2)
+{
+    char c[30];
+    Version v { 12, 34, 56 };
+    auto sv = v.toSv(c);
+    EXPECT_TRUE("12.34.56"sv == sv);
+}
+
+
 TEST (Version, ToS)
 {
     Version v { 12, 34, 56 };

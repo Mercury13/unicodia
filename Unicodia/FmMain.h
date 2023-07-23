@@ -19,6 +19,7 @@
 #include "u_TinyOpt.h"
 #include "c_TableCache.h"
 #include "u_LruCache.h"
+#include "u_Version.h"
 #include "QtMultiRadio.h"
 
 // CharPaint
@@ -303,6 +304,7 @@ private:
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
     PopupGui popupGui{mainGui};
+    Version myVersion;
 
     struct PullUpDetector {
         bool isCocked = false;

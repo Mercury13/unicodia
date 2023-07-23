@@ -1145,9 +1145,10 @@ void FmMain::translateAbout()
     }
 
     // lbVersion
+    char8_t buf[50];
     ui->lbAboutVersion->setText(str::toQ(
                 loc::get("About.Version")
-                .arg(str::toU8sv(version.toStdString()),
+                .arg(myVersion.toSv(buf),
                      uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locLongName())));
 
     // vwVersion
@@ -1178,6 +1179,7 @@ void FmMain::translateAbout()
 
 void FmMain::initAbout()
 {
+    myVersion = Version::parsePermissive(QApplication::applicationVersion());
     ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
 }
