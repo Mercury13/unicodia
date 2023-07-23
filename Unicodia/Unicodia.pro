@@ -31,6 +31,7 @@ SOURCES += \
     ../Libs/L10n/LocManager.cpp \
     ../Libs/L10n/LocQt.cpp \
     ../Libs/PugiXml/pugixml.cpp \
+    ../Libs/SelfMade/GitHub/parsers.cpp \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
@@ -77,6 +78,7 @@ HEADERS += \
     ../Libs/MagicEnum/magic_enum.hpp \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
+    ../Libs/SelfMade/GitHub/parsers.h \
     ../Libs/SelfMade/Mojibake/mojibake.h \
     ../Libs/SelfMade/Qt/QtMultiRadio.h \
     ../Libs/SelfMade/c_TableCache.h \

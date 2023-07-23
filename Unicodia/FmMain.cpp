@@ -11,9 +11,6 @@
 // XML
 #include "pugixml.hpp"
 
-// Json
-#include "rapidjson/document.h"
-
 // Qt
 #include <QTableView>
 #include <QTextFrame>
@@ -36,6 +33,9 @@
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
 #include <QUrl>
+
+// GitHub
+#include "GitHub/parsers.h"
 
 // Misc
 #include "u_Strings.h"
@@ -73,9 +73,6 @@ namespace {
 #define SUBURL_REPO "Mercury13/unicodia/releases"
     constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO;
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
-    constinit Version VER_BAD_REPLY { 0, 1 };
-    constinit Version VER_BAD_VERSION { 0, 2 };
-    constinit Version VER_BAD_REQUEST { 0, 3 };
 }
 
 ///// RowCache /////////////////////////////////////////////////////////////////
@@ -1884,78 +1881,39 @@ void FmMain::startUpdate()
 }
 
 
-FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
-{
-    // OK
-    ParseReply r;
-    auto bytes = reply.readAll();
-    // Debug
-    if (progsets::version == VER_BAD_REPLY)
-        bytes = "Something really bad";
-    rapidjson::Document doc;
-
-    doc.Parse(bytes.data(), bytes.length());
-    if (!doc.IsArray() || doc.Size() == 0)
-        return r;
-    auto item = doc.GetArray().begin();
-    if (!item->IsObject())
-        return r;
-    auto data = item->FindMember("name");
-    if (!data->value.IsString())
-        return r;
-    r.versionText = data->value.GetString();
-    // Debug
-    if (progsets::version == VER_BAD_VERSION)
-        r.versionText = "alpha<br>bravo";
-
-    r.version = Version::parsePermissive(r.versionText);
-    if (!r.version) {
-        r.code = ParseReplyCode::BAD_VERSION;
-        return r;
-    }
-    auto q = (r.version <=> progsets::version);
-    if (q == std::strong_ordering::less) {
-        r.code = ParseReplyCode::FOUND_EARLIER;
-    } else if (q == std::strong_ordering::greater) {
-        r.code = ParseReplyCode::FOUND_LATER;
-    } else {
-        r.code = ParseReplyCode::COINCIDE;
-    }
-    return r;
-}
-
-
 void FmMain::updateFinished(QNetworkReply* reply)
 {
     if (reply) {
         int err = reply->error();
         // Debug
-        if (progsets::version == VER_BAD_REQUEST)
+        if (progsets::version == github::VER_BAD_REQUEST)
             err = 418;  // I’m a teapot
 
         auto head = loc::get("Update.Head").q();
         char8_t buf[50], buf2[50];
         if (err == QNetworkReply::NoError) {
-            auto res = parseReply(*reply);
+            auto bytes = reply->readAll();
+            std::string_view sv(bytes.data(), bytes.length());
+            auto res = github::checkForUpdate(sv, progsets::version);
             switch (res.code) {
-            case ParseReplyCode::BAD_DOCUMENT:
+            case github::UpdateCode::BAD_DOCUMENT:
                 QMessageBox::critical(this, head, loc::get("Update.Parse"));
                 break;
-            case ParseReplyCode::BAD_VERSION: {
+            case github::UpdateCode::BAD_VERSION: {
                     auto qtext = QString::fromStdString(res.versionText).toHtmlEscaped().toStdString();
                     QMessageBox::critical(this, head,
                             loc::get("Update.BadVer").argQ(str::toU8sv(qtext)));
                 } break;
-            case ParseReplyCode::COINCIDE:
+            case github::UpdateCode::COINCIDE:
                 QMessageBox::information(this, head,
                         loc::get("Update.Ok").argQ(res.version.toSv(buf)));
                 break;
-            case ParseReplyCode::FOUND_EARLIER:
+            case github::UpdateCode::FOUND_EARLIER:
                 QMessageBox::warning(this, head,
                         loc::get("Update.Earlier").argQ(
                                     progsets::version.toSv(buf), res.version.toSv(buf2)));
                 break;
-            case ParseReplyCode::FOUND_LATER: {
+            case github::UpdateCode::FOUND_LATER: {
                     QMessageBox msg(QMessageBox::Question, head,
                             loc::get("Update.Later").argQ(
                                 progsets::version.toSv(buf), res.version.toSv(buf2)),

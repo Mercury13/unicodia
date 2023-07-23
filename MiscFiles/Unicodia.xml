@@ -6,9 +6,9 @@
     “Check for update”. Set…
     • something small (e.g. 1.2.3) = found update
     • something big (e.g. 10.10.10) = strange things with repo
-    • 0.1 = bad JSON
-    • 0.2 = bad version string in JSON
-    • 0.3 = bad HTTP code 418
+    • 0.0.1 = bad JSON
+    • 0.0.2 = bad version string in JSON
+    • 0.0.3 = bad HTTP code 418
     • Cannot connect — just disconnect wire/WiFi, no special code
 -->
 <program portable="0" debugVersion="" />

@@ -349,13 +349,6 @@ private:
     void redrawSampleChar();
     void setUpdating(bool value);
     void ensureNetMan();
-    enum class ParseReplyCode { BAD_DOCUMENT, FOUND_EARLIER, COINCIDE, FOUND_LATER, BAD_VERSION };
-    struct ParseReply {
-        ParseReplyCode code = ParseReplyCode::BAD_DOCUMENT;
-        Version version;
-        std::string versionText;
-    };
-    ParseReply parseReply(QNetworkReply& reply);
 
     // PixSource
     int pixSize() const override;

@@ -12207,7 +12207,7 @@
    </text>
    <text id="BadVer">
     <orig>Strange: cannot parse version “{1}”.</orig>
-    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.2" (exactly)</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.2" (exactly)</au-cmt>
     <transl>Странно: не могу разобрать версию «{1}».</transl>
    </text>
    <text id="Connect">
@@ -12217,7 +12217,7 @@
    </text>
    <text id="Err">
     <orig>Strange: got error code {1}. Something happened to repository.</orig>
-    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.3" (exactly)</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.3" (exactly)</au-cmt>
     <transl>Странно: получил код ошибки {1}. С репозиторием что-то случилось.</transl>
    </text>
    <text id="Go">
@@ -12232,7 +12232,7 @@
    </text>
    <text id="Parse">
     <orig>Strange: cannot parse server’s reply.</orig>
-    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.1" (exactly)</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.1" (exactly)</au-cmt>
     <transl>Странно: не могу разобрать ответ сервера.</transl>
    </text>
   </group>
