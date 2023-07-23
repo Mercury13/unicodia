@@ -99,3 +99,7 @@ Emergency releases of one or two characters (e.g. currency, Japanese era): insta
 Update to beta: only if fixes major misrender and/or professionally implements new character.
 
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
+
+## Language
+
+War jargon is forbidden.
