@@ -3,7 +3,12 @@
   portable: the config is stored in program’s directory, not in AppData
     Use if your program sits on flash drive
   debugVersion: change program’s version to test some strings from
-    “Check for update”. At least version is equal, greater, less
-    Special values: 0.1 = bad reply, 0.2 = bad version, 0.3 = bad HTTP code
+    “Check for update”. Set…
+    • something small (e.g. 1.2.3) = found update
+    • something big (e.g. 10.10.10) = strange things with repo
+    • 0.1 = bad JSON
+    • 0.2 = bad version string in JSON
+    • 0.3 = bad HTTP code 418
+    • Cannot connect — just disconnect wire/WiFi, no special code
 -->
 <program portable="0" debugVersion="" />
