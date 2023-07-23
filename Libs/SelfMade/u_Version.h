@@ -24,7 +24,8 @@ struct Version
 
     /// @warning  Works like snprintf
     ///    1. data is always null-terminated.
-    ///    2. Returns data size as if there were enough buffer. Actual buffer size is ret+1
+    ///    2. Returns data size as if there were enough buffer.
+    ///    3. Actually need ret+1 bytes to write data completely.
     size_t sprintf(char* data, size_t size) const;
     size_t sprintf(std::span<char> data) const { return sprintf(data.data(), data.size()); }
     size_t sprintf(char8_t* data, size_t size) const
