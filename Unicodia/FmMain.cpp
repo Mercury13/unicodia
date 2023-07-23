@@ -73,6 +73,9 @@ namespace {
 #define SUBURL_REPO "Mercury13/unicodia/releases"
     constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO;
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
+    constinit Version VER_BAD_REPLY { 0, 1 };
+    constinit Version VER_BAD_VERSION { 0, 2 };
+    constinit Version VER_BAD_REQUEST { 0, 3 };
 }
 
 ///// RowCache /////////////////////////////////////////////////////////////////
@@ -1144,30 +1147,20 @@ void FmMain::initTerms()
 
 void FmMain::translateAbout()
 {
-    // Get version
-    auto version = QApplication::applicationVersion();
-        // Count “.” chars
-    int nDots = 0;
-    for (auto c : version)
-        if (c == '.')
-            ++nDots;
-    // Remove '.0' if there will be dots remaining
-    while (nDots > 1 && version.endsWith(".0")) {
-        version.resize(version.length() - 2);
-        --nDots;
-    }
-
     // lbVersion
     char8_t buf[50];
-    ui->lbAboutVersion->setText(str::toQ(
-                loc::get("About.Version")
-                .arg(progsets::version.toSv(buf),
-                     uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locLongName())));
+    QString s = loc::get("About.Version")
+                .argQ(progsets::version.toSv(buf),
+                      uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locLongName());
+    if (progsets::isDebuggingVersion) {
+        s += " <b>[DEBUGGING]</b>";
+    }
+    ui->lbAboutVersion->setText(s);
 
     // vwVersion
     QFile f(":/Texts/about.htm");
     f.open(QIODevice::ReadOnly);
-    QString s = f.readAll();
+    s = f.readAll();
     while (true) {
         auto pos = s.indexOf("{#");
         if (pos < 0)
@@ -1896,7 +1889,11 @@ FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
     // OK
     ParseReply r;
     auto bytes = reply.readAll();
+    // Debug
+    if (progsets::version == VER_BAD_REPLY)
+        bytes = "Something really bad";
     rapidjson::Document doc;
+
     doc.Parse(bytes.data(), bytes.length());
     if (!doc.IsArray() || doc.Size() == 0)
         return r;
@@ -1907,6 +1904,11 @@ FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
     if (!data->value.IsString())
         return r;
     r.versionText = data->value.GetString();
+    // Debug
+    if (progsets::version == VER_BAD_VERSION)
+        r.versionText = "alpha<br>bravo";
+
+
     r.version = Version::parsePermissive(r.versionText);
     if (!r.version) {
         r.code = ParseReplyCode::BAD_VERSION;
@@ -1927,7 +1929,11 @@ FmMain::ParseReply FmMain::parseReply(QNetworkReply& reply)
 void FmMain::updateFinished(QNetworkReply* reply)
 {
     if (reply) {
-        auto err = reply->error();
+        int err = reply->error();
+        // Debug
+        if (progsets::version == VER_BAD_REQUEST)
+            err = 418;  // I’m a teapot
+
         auto head = loc::get("Update.Head").q();
         char8_t buf[50], buf2[50];
         if (err == QNetworkReply::NoError) {

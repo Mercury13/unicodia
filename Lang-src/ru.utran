@@ -12193,17 +12193,17 @@
    </text>
    <text id="Earlier">
     <orig>Strange: my version is {1}, the repository has {2}. Probably the repository has migrated, or you have a non-public development version.</orig>
-    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=10.1.2</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion="10.1.2"</au-cmt>
     <transl>Странно: моя версия {1}, в репозитории {2}. Возможно, репозиторий переехал, или у вас непубличная разработческая версия.</transl>
    </text>
    <text id="Later">
     <orig>My version is {1}, found update to {2}. Go to repository?</orig>
-    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion=1.2.3</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter like debugVersion="1.2.3"</au-cmt>
     <transl>Моя версия {1}, найдено обновление до {2}. Пройти в репозиторий?</transl>
    </text>
    <text id="BadVer">
     <orig>Strange: cannot parse version “{1}”.</orig>
-    <au-cmt>Cannot test for now</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.2" (exactly)</au-cmt>
     <transl>Странно: не могу разобрать версию «{1}».</transl>
    </text>
    <text id="Connect">
@@ -12213,7 +12213,7 @@
    </text>
    <text id="Err">
     <orig>Strange: got error code {1}. Something happened to repository.</orig>
-    <au-cmt>Cannot test for now</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.3" (exactly)</au-cmt>
     <transl>Странно: получил код ошибки {1}. С репозиторием что-то случилось.</transl>
    </text>
    <text id="Go">
@@ -12228,7 +12228,7 @@
    </text>
    <text id="Parse">
     <orig>Strange: cannot parse server’s reply.</orig>
-    <au-cmt>Cannot test for now</au-cmt>
+    <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.1" (exactly)</au-cmt>
     <transl>Странно: не могу разобрать ответ сервера.</transl>
    </text>
   </group>

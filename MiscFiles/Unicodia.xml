@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  Portable: the config is stored in program’s directory, not in AppData
+  portable: the config is stored in program’s directory, not in AppData
     Use if your program sits on flash drive
+  debugVersion: change program’s version to test some strings from
+    “Check for update”. At least version is equal, greater, less
+    Special values: 0.1 = bad reply, 0.2 = bad version, 0.3 = bad HTTP code
 -->
-<program portable="0" />
+<program portable="0" debugVersion="" />

@@ -23,6 +23,7 @@ namespace progsets {
     enum class DirMode { INSTALLED, PORTABLE };
     extern DirMode dirMode;
     extern Version version;
+    extern bool isDebuggingVersion;
 }
 
 namespace fname {
