@@ -13,12 +13,9 @@ github::UpdateReply github::checkForUpdate(std::string_view body, const Version&
 
     UpdateReply r;
     doc.Parse(body.data(), body.length());
-    if (!doc.IsArray() || doc.Size() == 0)
+    if (!doc.IsObject())
         return r;
-    auto item = doc.GetArray().begin();
-    if (!item->IsObject())
-        return r;
-    auto data = item->FindMember("name");
+    auto data = doc.FindMember("name");
     if (!data->value.IsString())
         return r;
     r.versionText = data->value.GetString();

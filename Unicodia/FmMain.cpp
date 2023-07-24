@@ -71,7 +71,7 @@ namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 #define SUBURL_REPO "Mercury13/unicodia/releases"
-    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO;
+    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "/latest";
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
 }
 
