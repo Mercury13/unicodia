@@ -164,7 +164,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "NotoFangsongKSSVertical-Regular.ttf", 115_pc },                          // Khitan small
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
-    { "UtoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                         // Khojki
+    { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
       { FNAME_FUNKY, 120_pc },                                                  // …1 Old Katakana/Hiragana
