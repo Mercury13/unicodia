@@ -1885,6 +1885,9 @@ struct RangeByEnd {
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
 const std::set<RangeByEnd> alternateRanges {
+    { 0x1E00, 0x1E01 },     // Clipped below in Cambria
+    { 0x1E5C, 0x1E5D },     // Misplaced umlaut in Cambria
+    { 0x1E68, 0x1E69 },     // Same
     { 0x02CE, 0x02CF },     // Misrender in Cambria
     { 0x0333 },             // Basic umlauts: misrenders in Cambria
     { 0x2010, 0x203B },     // Several chars from Punctuation…
@@ -1892,7 +1895,7 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x23B0, 0x23B1 },     // Technical — two-storey {}, misrender in Cambria
     { 0x23B4, 0x23B6 },     // Technical — horz brackets, misrender in Cambria
     { 0x23DC, 0x23E0 },     // Same
-    { 0x2B16, 0x2B19 },     // Diamond: black top, white bottom, misrender in Noto Math
+    { 0x2C7C },             // Clipped below in Cambria
     // BS = BabelStone, SimSun = built-in Windows font, G = mainland China, T = Taiwan?
     { 0x3C43  },   // CJK A: a single char redrawn in U15 and already present in BS
     { 0x20048 },   // CJK B, some diffs between versons, want G (BS)

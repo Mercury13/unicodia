@@ -173,7 +173,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
-      { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                       // …1
+      { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID },                     // …1
       { FNAME_NOTO },                                                           // …2
     { "NotoSansLepcha-Regular.ttf" },                                           // Lepcha
     { "NotoSansLimbu-Regular.ttf", Ffg::DESC_BIGGER },                          // Limbu
