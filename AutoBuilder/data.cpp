@@ -1488,6 +1488,10 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Z notation Cartesian product")  // Z???
     EX("EMF (electromotive force)")
     EX("N-ary Dijkstra choice")
+    EX("alef symbol")                   // ???
+    EX("bet symbol")
+    EX("gimel symbol")
+    EX("dalet symbol")
         // Astronomy
     EX("Earth")                         // Planet, not element
     EX2("Sun", Exf::CPONLY)             // CP: star; Emoji: weather
