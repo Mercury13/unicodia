@@ -8442,6 +8442,9 @@
      <orig>Not recommended</orig>
      <au-cmt>Test: Latin by country → Romanian</au-cmt>
     </text>
+    <text id="TwoDiac">
+     <orig>Two diacritical marks</orig>
+    </text>
    </group>
   </group>
   <group id="Version">

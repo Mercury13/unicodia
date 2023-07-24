@@ -12148,6 +12148,10 @@
      <au-cmt>Test: Latin by country → Romanian</au-cmt>
      <transl>Не рекомендуются</transl>
     </text>
+    <text id="TwoDiac">
+     <orig>Two diacritical marks</orig>
+     <transl>Два диакритических знака</transl>
+    </text>
    </group>
   </group>
   <group id="Version">

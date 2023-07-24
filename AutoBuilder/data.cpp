@@ -931,6 +931,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "OE",             Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "OM",             Dicf::CAP_TITLE },
     { "OU",             Dicf::CAP_TITLE },
+    { "OPEN-O",         { Dicf::PART_NOUN, "open-O" } },
     { "P",              Dicf::CAP_TITLE },
     { "Q",              Dicf::CAP_TITLE },
     { "QAF",            Dicf::CAP_TITLE | Dicf::PART_NOUN },
