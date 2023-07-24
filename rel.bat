@@ -145,6 +145,7 @@
 @copy %QTDIR%\plugins\platforms\qwindows.dll %DEPLOY%\platforms
 @md %DEPLOY%\styles
 @copy %QTDIR%\plugins\styles\qwindowsvistastyle.dll %DEPLOY%\styles
+@%SEVENZIP% x MiscFiles\OpenSsl_1.1.1u.zip -o%DEPLOY%
 @md %DEPLOY%\Fonts
 @copy Fonts\* %DEPLOY%\Fonts >nul
 @if [%WORKAROUND%] == [] goto no_workaround
