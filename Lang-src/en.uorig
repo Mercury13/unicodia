@@ -8438,6 +8438,10 @@
     <text id="EnTran">
      <orig>English transcription</orig>
     </text>
+    <text id="NotRec">
+     <orig>Not recommended</orig>
+     <au-cmt>Test: Latin by country → Romanian</au-cmt>
+    </text>
    </group>
   </group>
   <group id="Version">

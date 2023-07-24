@@ -87,6 +87,39 @@
 		<f loc="EnTran">
 			<d>æ ɑ ʌ ɛ ə ɚ ɪ ɔ ʊ ð θ ŋ ʃ ʒ ʧ ʤ ː</d>
 		</f>
+		<f name="Čeština / Czech">
+			<d>Á á Č č Ď ď É é Ě ě Í í Ň ň Ó ó Ř ř Š š Ť ť Ú ú Ů ů Ý ý Ž ž</d>
+		</f>
+		<f name="Deutsch / German">
+			<d>Ä ä Ö ö ẞ ß Ü ü</d>
+		</f>
+		<f name="Eesti / Estonian">
+			<d>Š š Ž ž Õ õ Ä ä Ö ö Ü ü</d>
+		</f>
+		<f name="Español / Spanish">
+			<d>Á á É é Í í Ñ ñ Ó ó Ú ú Ü ü</d>
+		</f>
+		<f name="Français / French">
+			<d>Â â À à Æ æ Ç ç É é Ê ê È è Ë ë Î î Ï ï Ô ô Œ œ Û û Ù ù Ü ü Ÿ ÿ</d>
+		</f>
+		<f name="Latviešu / Latvian">
+			<d>Ā ā Č č Ē ē Ģ ģ Ī ī Ķ ķ Ļ ļ Ņ ņ Š š Ū ū Ž ž</d>
+		</f>
+		<f name="Lietuvių / Lithuanian">
+			<d>Ą ą Č č Ę ę Ė ė Į į Š š Ų ų Ū ū Ž ž</d>
+		</f>
+		<f name="Polski / Polish">
+			<d>Ą ą Ć ć Ę ę Ł ł Ń ń Ó ó Ś ś Ź ź Ż ż</d>
+		</f>
+		<f name="Română / Romanian">
+			<d>Ă ă Â â Î î Ș ș Ț ț</d>
+			<f loc="NotRec">
+				<d>Ş ş Ţ ţ</d>
+			</f>
+		</f>
+		<f name="Slovenčina / Slovak">
+			<d>Á á Ä ä Č č Ď ď É é Í í Ĺ ĺ Ľ ľ Ň ň Ó ó Ô ô Ŕ ŕ Š š Ť ť Ú ú Ý ý Ž ž</d>
+		</f>
 	</f>
 	<f loc="Business">
 		<f loc="Currencies">

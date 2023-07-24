@@ -12143,6 +12143,11 @@
      <orig>English transcription</orig>
      <transl>Английская транскрипция</transl>
     </text>
+    <text id="NotRec">
+     <orig>Not recommended</orig>
+     <au-cmt>Test: Latin by country → Romanian</au-cmt>
+     <transl>Не рекомендуются</transl>
+    </text>
    </group>
   </group>
   <group id="Version">
