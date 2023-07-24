@@ -102,6 +102,12 @@
 		<f name="Français / French">
 			<d>Â â À à Æ æ Ç ç É é Ê ê È è Ë ë Î î Ï ï Ô ô Œ œ Û û Ù ù Ü ü Ÿ ÿ</d>
 		</f>
+		<f name="Hrvatski / Croatian">
+			<d>Č č Ć ć Ð đ Š š Ž ž</d>
+		</f>
+		<f name="Italiano / Italian">
+			<d>À à È è É é Ì ì Í í Î î Ò ò Ó ó Ù ù Ú ú</d>
+		</f>
 		<f name="Latviešu / Latvian">
 			<d>Ā ā Č č Ē ē Ģ ģ Ī ī Ķ ķ Ļ ļ Ņ ņ Š š Ū ū Ž ž</d>
 		</f>
@@ -119,6 +125,9 @@
 		</f>
 		<f name="Slovenčina / Slovak">
 			<d>Á á Ä ä Č č Ď ď É é Í í Ĺ ĺ Ľ ľ Ň ň Ó ó Ô ô Ŕ ŕ Š š Ť ť Ú ú Ý ý Ž ž</d>
+		</f>
+		<f name="Suomi / Finnish">
+			<d>Š š Ž ž Å å Ä ä Ö ö</d>
 		</f>
 	</f>
 	<f loc="Business">
