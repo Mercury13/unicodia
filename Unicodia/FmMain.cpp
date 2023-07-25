@@ -247,8 +247,7 @@ namespace {
         }
     }
 
-
-}
+}   // anon namespace
 
 QVariant BlocksModel::data(const QModelIndex& index, int role) const
 {
