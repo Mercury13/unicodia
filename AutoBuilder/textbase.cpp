@@ -9,7 +9,7 @@
 
 // Project-local
 #include "loader.h"
-#include "library.h"    // for fromHex
+#include "utils.h"
 #include "data.h"
 
 //#define DUMP_EQUALS

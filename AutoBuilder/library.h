@@ -13,9 +13,6 @@
 // Unicodia
 #include "UcFlags.h"
 
-// Utils
-unsigned fromHex(std::string_view x);
-
 
 namespace lib {
 

@@ -12,6 +12,7 @@
 #include "u_Strings.h"
 
 // Project-local
+#include "utils.h"
 #include "data.h"
 #include "egyptian.h"
 #include "entities.h"
