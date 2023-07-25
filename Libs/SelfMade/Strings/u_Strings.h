@@ -549,6 +549,16 @@ namespace str {
     }
 
     ///
+    ///  @return [+] Contains capital A…Z, ≡ !latIsLower(s)
+    ///
+    template <class S>
+    [[nodiscard]] inline bool latHasUpper(const S& s) noexcept
+    {
+        using Sv = trait::Sv<S>;
+        return !detail::latIsLower<Sv>(s);
+    }
+
+    ///
     ///  @return [+] All Latin letters (A…Z) are all capital or all small
     ///
     template <class S>

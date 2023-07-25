@@ -159,6 +159,4 @@ bool isAlternate(char32_t x);
 bool isNoAa(char32_t x);
 Flags<uc::Cfg> styleFlags(char32_t x);
 
-bool hasLatUpper(std::string_view x);
-
 size_t nExceptions();

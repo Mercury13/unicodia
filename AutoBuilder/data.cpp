@@ -2209,7 +2209,6 @@ const std::set<std::string_view> langNames {
     "Zulu",
 };
 
-
 namespace {
 
     enum class WordState { SMALL, TITLE, CUSTOM_TITLE, CUSTOM, ALL_CAP };
@@ -2245,14 +2244,6 @@ namespace {
     void appendUpper(std::string& r, std::string_view x) {
         for (auto v : x)
             r += char(std::toupper(v));
-    }
-
-    std::string toUpper(std::string_view x) {
-        std::string r;
-        r.reserve(x.size());
-        for (auto v : x)
-            r += char(std::toupper(v));
-        return r;
     }
 
     void appendTitle(std::string& r, std::string_view x) {
@@ -2406,7 +2397,7 @@ std::string decapitalize(
         Flags<Dcfg> flags, DecapDebug debug)
 {
     // Detect exceptions
-    std::string upper = toUpper(x);
+    std::string upper = str::toUpper(x);
     auto itEx = exceptions.find(upper);
     if (itEx != exceptions.end()) {
         if (cp || !itEx->second.flags.have(Exf::CPONLY) ) {
@@ -2723,15 +2714,6 @@ bool isNoAa(char32_t x)
 }
 
 
-bool hasLatUpper(std::string_view x)
-{
-    for (auto c : x)
-        if (c >= 'A' && c <= 'Z')
-            return true;
-    return false;
-}
-
-
 std::string decapitalizeEmoji(
         std::string_view x,
         DecapDebug debug)
@@ -2753,7 +2735,7 @@ std::string decapitalizeEmoji(
 
 std::string decapitalizeByTable(std::string_view x)
 {
-    std::string upper = toUpper(x);
+    std::string upper = str::toUpper(x);
     auto itEx = exceptions.find(upper);
     if (itEx != exceptions.end())
         return std::string(itEx->second.r);
