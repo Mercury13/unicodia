@@ -416,7 +416,7 @@ int main()
 
     std::cout << "Loading manual library..." << std::flush;
     auto manualLib = lib::loadManual(LIBRARY_XML);
-    std::cout << "OK" << std::endl;
+    std::cout << "OK, " << manualLib.forgetMap.size() << " CPs in forget checker." << std::endl;
 
     ///// text base ////////////////////////////////////////////////////////////
 
