@@ -37,10 +37,27 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Three scripts of plane 1 are considered “extremely important” and **will** be supported in W7: Phoenician, Aramaic, Brahmi. I’ll also support Gothic, just because its serif look is really “gothic”.
 * Small misrenderings in descriptions are tolerable, I’ll fix them only if samples are bad, or if the font has other problems.
 
+## Update Unicode
+Wartime: as soon as beta version arrives.
+
+Peacetime (probably): as soon as some big font covering major non-Han set arrives.
+
+Emergency releases of one or two characters (e.g. currency, Japanese era): instantly, then think about their images.
+
+## Fonts
+Update to beta: only if fixes major misrender and/or professionally implements new character.
+
+Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
+
+## Language
+
+English dialect is whatever better for international audience. British form is preferred if both are good.
+
+War jargon is forbidden, especially in Russian/Ukrainian.
+
 ## Future functionality
 * Finish GlyphWiki loader.
 * Better CJK reference.
-* Egyptian hieroglyph reference.
 
 # What do utilities do?
 * AutoBuilder — build UcAuto.cpp from Unicode base.
@@ -85,23 +102,3 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Medium, ends have different colour (France, Luxembourg): grey outline
   * Large (England, Slovakia): also grey outline
   * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
-
-# Policies
-
-## Update Unicode
-Wartime: as soon as beta version arrives.
-
-Peacetime (probably): as soon as some big font covering major non-Han set arrives.
-
-Emergency releases of one or two characters (e.g. currency, Japanese era): instantly, then think about their images.
-
-## Fonts
-Update to beta: only if fixes major misrender and/or professionally implements new character.
-
-Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
-
-## Language
-
-English dialect is whatever better for international audience. British form is preferred if both are good.
-
-War jargon is forbidden, especially in Russian/Ukrainian.
