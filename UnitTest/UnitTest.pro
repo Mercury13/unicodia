@@ -11,6 +11,7 @@ win32-g++: {
 
 SOURCES += \
     ../AutoBuilder/data.cpp \
+    ../AutoBuilder/forget.cpp \
     ../Libs/GoogleTest/src/gtest-all.cc \
     ../Libs/GoogleTest/src/gtest_main.cc \
     ../Libs/L10n/LocFmt.cpp \
@@ -21,6 +22,7 @@ SOURCES += \
     test_Decapitalize.cpp \
     test_DumbSp.cpp \
     test_Fmt.cpp \
+    test_Forget.cpp \
     test_Iterator.cpp \
     test_Search.cpp \
     test_Strings.cpp \
@@ -29,6 +31,7 @@ SOURCES += \
 
 HEADERS += \
     ../AutoBuilder/data.h \
+    ../AutoBuilder/forget.h \
     ../Libs/L10n/LocFmt.h \
     ../Libs/SelfMade/u_Iterator.h \
     ../Libs/SelfMade/u_SearchEngine.h \

@@ -1,6 +1,7 @@
 #include "forget.h"
 
 // STL
+#include <unordered_set>
 #include <unordered_map>
 #include <fstream>
 
@@ -18,26 +19,45 @@ namespace {
 
         // Letter channel
         { "A", ForgetChannel::LETTER },
+        { "AA", ForgetChannel::LETTER },
+        { "AE", ForgetChannel::LETTER },
+        { "ALPHA", ForgetChannel::LETTER },
         { "B", ForgetChannel::LETTER },
         { "C", ForgetChannel::LETTER },
         { "D", ForgetChannel::LETTER },
+        { "DZ", ForgetChannel::LETTER },
+        { "DEZH", ForgetChannel::LETTER },
         { "E", ForgetChannel::LETTER },
+        { "SCHWA", ForgetChannel::LETTER },
         { "F", ForgetChannel::LETTER },
+        { "FENG", ForgetChannel::LETTER },
         { "G", ForgetChannel::LETTER },
         { "H", ForgetChannel::LETTER },
         { "I", ForgetChannel::LETTER },
+        { "IJ", ForgetChannel::LETTER },
+        { "IOTA", ForgetChannel::LETTER },
         { "J", ForgetChannel::LETTER },
         { "K", ForgetChannel::LETTER },
         { "L", ForgetChannel::LETTER },
+        { "LJ", ForgetChannel::LETTER },
+        { "LEZH", ForgetChannel::LETTER },
         { "M", ForgetChannel::LETTER },
         { "N", ForgetChannel::LETTER },
+        { "NJ", ForgetChannel::LETTER },
         { "ENG", ForgetChannel::LETTER},
+        { "NUM", ForgetChannel::LETTER},
         { "O", ForgetChannel::LETTER },
+        { "OE", ForgetChannel::LETTER },
         { "P", ForgetChannel::LETTER },
         { "Q", ForgetChannel::LETTER },
         { "R", ForgetChannel::LETTER },
         { "S", ForgetChannel::LETTER },
+        { "ESH", ForgetChannel::LETTER },
         { "T", ForgetChannel::LETTER },
+        { "ETH", ForgetChannel::LETTER },
+        { "TESH", ForgetChannel::LETTER },
+        { "TS", ForgetChannel::LETTER },
+        { "TZ", ForgetChannel::LETTER },
         { "U", ForgetChannel::LETTER },
         { "V", ForgetChannel::LETTER },
         { "W", ForgetChannel::LETTER },
@@ -48,13 +68,25 @@ namespace {
 
         // Banned
         { "CYRILLIC", ForgetChannel::BAN },
+        { "SAMARITAN", ForgetChannel::BAN },
+        { "FULLWIDTH", ForgetChannel::BAN },
+    };
+
+    const std::unordered_set<char32_t> bannedCps {
+        0x0149,     // Actually banned from Unicode
     };
 
 }   // anon namespace
 
 
-bool forget::isIn(char32_t, std::string_view name)
+bool forget::isIn(char32_t cp, std::string_view name)
 {
+    // ASCII, plane 2+ → never in
+    if (cp <= 127 || cp >= 0x2'0000)
+        return false;
+    // Banned CP → never in
+    if (bannedCps.contains(cp))
+        return false;
     // Stock name → never in
     if (name.find('#') != std::string_view::npos)
         return false;
@@ -185,7 +217,7 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
     for (auto& q : map) {
         if (q.second.lib.count == 0 && q.second.computed.isIn) {
             print(q);
-            ++r.nForgotten;
+            ++r.nMissing;
         }
     }
 
@@ -200,4 +232,5 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
     if (!secMan.hasEverTriggered()) {
         os << "No forgotten codepoints." << '\n';
     }
+    return r;
 }

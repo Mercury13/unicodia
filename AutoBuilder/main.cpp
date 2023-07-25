@@ -564,6 +564,8 @@ int main()
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
         }
 
+        forget::processCp(manualLib.forgetMap, cp, sLowerName, 0);
+
         for (auto& v : allAbbrevs) {
             strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
         }
@@ -805,6 +807,15 @@ int main()
     auto swr = sw::process();
     std::cout << "OK, " << swr.nLines << " lines, first inequal "
               << std::hex << static_cast<uint32_t>(swr.firstInequal) << std::endl;
+
+    ///// Forgotten CPs ////////////////////////////////////////////////////////
+
+    static constinit const char* FNAME_FORGET = "forget.log";
+    auto forgetStats = forget::postprocess(manualLib.forgetMap, FNAME_FORGET);
+    std::cout << "Forgotten: " << std::dec
+              << forgetStats.nRepeat << " repeating, "
+              << forgetStats.nMissing << " missing, "
+              << forgetStats.nExtra << " extra, see " << FNAME_FORGET << "." << std::endl;
 
     ///// Done !! //////////////////////////////////////////////////////////////
 

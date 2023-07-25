@@ -39,7 +39,7 @@ namespace forget {
 
     struct Stats {
         unsigned nRepeat = 0;
-        unsigned nForgotten = 0;
+        unsigned nMissing = 0;
         unsigned nExtra = 0;
     };
 
