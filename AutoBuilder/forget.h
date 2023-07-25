@@ -37,4 +37,12 @@ namespace forget {
 
     void processCp(Map& map, char32_t cp, std::string_view name, char32_t capital);
 
+    struct Stats {
+        unsigned nRepeat = 0;
+        unsigned nForgotten = 0;
+        unsigned nExtra = 0;
+    };
+
+    Stats postprocess(const Map& map, const char* fname);
+
 }   // namespace forget
