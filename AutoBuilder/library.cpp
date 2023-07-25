@@ -396,15 +396,29 @@ namespace {
             throw std::logic_error("Need sequence/folder name");
     }
 
-    void appendDump(lib::Node& result, pugi::xml_node tag)
+    void appendDump(lib::Node& result, forget::Map& forgetMap,
+                    pugi::xml_node tag, bool isForgetTest)
     {
         std::string_view text8 = tag.text().get();
         auto text32 = mojibake::toS<std::u32string>(text8);
         auto sub32 = str::splitSv(text32, ' ');
         result.children.reserve(result.children.size() + sub32.size());
+        char32_t cap = 0;
         for (auto v : sub32) {
             auto& node = result.children.emplace_back();
             node.value = v;
+            if (v.length() == 1) {
+                auto cp = v[0];
+                if (isForgetTest) {
+                    auto& w = forgetMap[cp];
+                    if (w.manual.possibleCapital == 0)
+                        w.manual.possibleCapital = cap;
+                    ++w.manual.count;
+                }
+                cap = cp;
+            } else {
+                cap = 0;
+            }
         }
     }
 
@@ -436,17 +450,18 @@ namespace {
         node.value = std::move(value32);
     }
 
-    void loadRecurse(lib::Node& result, pugi::xml_node tag)
+    void loadRecurse(lib::Node& result, forget::Map& forgetMap, pugi::xml_node tag, bool isForgetTest)
     {
+        isForgetTest = tag.attribute("forgetTest").as_bool(isForgetTest);
         for (auto v : tag.children()) {
             if (v.name() == "f"sv) {
                 // Folder
                 auto& newFolder = result.children.emplace_back();
                 loadName(newFolder, v);
-                loadRecurse(newFolder, v);
+                loadRecurse(newFolder, forgetMap, v, isForgetTest);
             } else if (v.name() == "d"sv) {
                 // Dump
-                appendDump(result, v);
+                appendDump(result, forgetMap, v, isForgetTest);
             } else if (v.name() == "range"sv) {
                 appendRange(result, v);
             } else if (v.name() == "sq"sv) {
@@ -458,19 +473,19 @@ namespace {
 }   // anon namespace
 
 
-lib::Node lib::loadManual(const char* fname)
+lib::Manual lib::loadManual(const char* fname)
 {
     pugi::xml_document doc;
     if (auto parseRes = doc.load_file(fname); !parseRes)
         throw std::logic_error(str::cat("Cannot open ", fname));
 
-    lib::Node r;
+    lib::Manual r;
 
     auto root = doc.root().child("library");
     if (!root)
         throw std::logic_error("No root");
 
-    loadRecurse(r, root);
+    loadRecurse(r.root, r.forgetMap, root, false);
 
     return r;
 }

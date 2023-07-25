@@ -39,7 +39,7 @@
 			<range start="2488" end="249B" />
 		</f>
 	</f>
-	<f loc="Latin" missingTest="1">
+	<f loc="Latin" forgetTest="1">
 		<f name="A">
 			<f loc="MiscForms">
 				<d>Ɐ ɐ ᵄ ɑ ɒ ᵅ ᶛ</d>

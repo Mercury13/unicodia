@@ -13,6 +13,8 @@
 // Unicodia
 #include "UcFlags.h"
 
+// Project-local
+#include "forget.h"
 
 namespace lib {
 
@@ -40,7 +42,13 @@ namespace lib {
 
 
     EmojiData loadEmoji(const char* fname);
-    Node loadManual(const char* fname);
+
+    struct Manual {
+        Node root;
+        forget::Map forgetMap;
+    };
+
+    Manual loadManual(const char* fname);
 
     struct Result {
         int nNodes = 0;

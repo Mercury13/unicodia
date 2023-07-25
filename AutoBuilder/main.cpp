@@ -774,7 +774,7 @@ int main()
     // Node 1: emoji
     root.children.emplace_back(std::move(emoji.root));
     // Node 2+: manual library
-    for (auto& v : manualLib.children) {
+    for (auto& v : manualLib.root.children) {
         root.children.emplace_back(std::move(v));
     }
     // Node N: strange hiero
