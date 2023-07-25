@@ -16,6 +16,8 @@ namespace {
         // Script channel
         { "LATIN", ForgetChannel::SCRIPT },
         { "MODIFIER", ForgetChannel::SCRIPT },
+        { "SUPERSCRIPT", ForgetChannel::SCRIPT },
+        { "SUBSCRIPT", ForgetChannel::SCRIPT },
 
         // Letter channel
         { "A", ForgetChannel::LETTER },
@@ -70,6 +72,7 @@ namespace {
         { "CYRILLIC", ForgetChannel::BAN },
         { "SAMARITAN", ForgetChannel::BAN },
         { "FULLWIDTH", ForgetChannel::BAN },
+        { "COMBINING", ForgetChannel::BAN },
     };
 
     const std::unordered_set<char32_t> bannedCps {
