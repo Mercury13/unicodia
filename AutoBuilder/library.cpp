@@ -411,9 +411,9 @@ namespace {
                 auto cp = v[0];
                 if (isForgetTest) {
                     auto& w = forgetMap[cp];
-                    if (w.manual.possibleCapital == 0)
-                        w.manual.possibleCapital = cap;
-                    ++w.manual.count;
+                    if (w.lib.possibleCapital == 0)
+                        w.lib.possibleCapital = cap;
+                    ++w.lib.count;
                 }
                 cap = cp;
             } else {
