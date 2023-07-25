@@ -26,7 +26,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 
 ## Platforms
 **Win7/10/11 x64 only.** Rationale:
-* WXP, WVista and W8 are completely abandoned by all imaginable software.
+* WXP, WVista and W8 are completely abandoned by all imaginable software. Though I did some improvements specially for W8.
 * No obstacles for x86, just untested because no one compiled Qt for x86.
 * Recently checked Windows 11, and it works.
 
