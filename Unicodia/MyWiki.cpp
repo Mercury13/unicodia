@@ -1697,6 +1697,22 @@ void mywiki::hackDocument(QTextDocument* doc)
 }
 
 
+namespace {
+
+    void appendNodesTextIf(QString& text, const uc::LibNode& node)
+    {
+        if (node.flags.have(uc::Lfg::HAS_TEXT)) {
+            text += "<p>";
+            char buf[40];
+            snprintf(buf, std::size(buf), "Lib.Text.%s",
+                     reinterpret_cast<const char*>(node.text.data()));
+            mywiki::appendNoFont(text, loc::get(buf));
+        }
+    }
+
+}   // anon namespace
+
+
 QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
 {
     QString text;
@@ -1704,6 +1720,9 @@ QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
     text += "<h1 style='color:" + color.name() + "'>";
     text += node.viewableTitle(uc::TitleMode::LONG).toHtmlEscaped();
     text += "</h1>";
+
+    appendNodesTextIf(text, node);
+
     return text;
 }
 
@@ -1739,7 +1758,7 @@ const uc::Cp* onlyIndependentCp(std::u32string_view x)
 }
 
 
-QString mywiki::buildHtml(const uc::LibNode& node)
+QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 {
     QString text;
     appendStylesheet(text);
@@ -1777,6 +1796,8 @@ QString mywiki::buildHtml(const uc::LibNode& node)
         appendNonBullet(text, "Prop.Bullet.EmojiVer");
         appendEmojiValue(text, node.emojiVersion(), node.emojiPrevVersion());
     }
+
+    appendNodesTextIf(text, parent);
 
     appendSubhead(text, "Prop.Head.Comp");
     text += "<p>";

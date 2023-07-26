@@ -90,7 +90,7 @@ namespace mywiki {
     QString buildFontsHtml(char32_t cp, QFontDatabase::WritingSystem ws, Gui& gui);
     QString buildHtml(const uc::Cp& cp);
     QString buildLibFolderHtml(const uc::LibNode& node, const QColor& color);
-    QString buildHtml(const uc::LibNode& node);
+    QString buildHtml(const uc::LibNode& node, const uc::LibNode& parent);
     QString buildHtml(const uc::Version& version);
     QString buildHtml(const uc::GlyphStyleChannel& channel);
     void appendStylesheet(QString& text, bool hasSignWriting = false);

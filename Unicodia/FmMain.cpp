@@ -1497,7 +1497,8 @@ void FmMain::libChanged(const QModelIndex& current)
         ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
 
-        QString s = mywiki::buildHtml(node);
+        auto& parent = uc::libNodes[node.iParent];
+        QString s = mywiki::buildHtml(node, parent);
         setWiki(ui->vwLibInfo, s);
     }
 }
