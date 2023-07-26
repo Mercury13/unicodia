@@ -5775,7 +5775,7 @@ constinit const uc::LibNode uc::libNodes[8220] {
 { U"\u00E4", {}, 5421, 0, -1, {}, EcVersion::NONE },   // 5769
 { U"\u00D6", {}, 5421, 0, -1, {}, EcVersion::NONE },   // 5770
 { U"\u00F6", {}, 5421, 0, -1, {}, EcVersion::NONE },   // 5771
-{ {}, u8"SmallCap", 5, 25, 5807, Lfg(8), EcVersion::NONE },   // 5772
+{ {}, u8"SmallCap", 5, 25, 5807, Lfg(24), EcVersion::NONE },   // 5772
 { {}, u8"ParenCap", 5, 26, 5832, Lfg(8), EcVersion::NONE },   // 5773
 { {}, u8"ParenSmall", 5, 26, 5858, Lfg(8), EcVersion::NONE },   // 5774
 { {}, u8"CircCap", 5, 26, 5884, Lfg(8), EcVersion::NONE },   // 5775

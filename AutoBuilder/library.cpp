@@ -386,6 +386,8 @@ namespace {
 
     void loadName(lib::Node& result, pugi::xml_node tag)
     {
+        if (tag.attribute("hasText").as_bool())
+            result.flags |= uc::Lfg::HAS_TEXT;
         result.name = str::toU8(tag.attribute("loc").as_string());
         if (!result.name.empty()) {
             result.flags |= uc::Lfg::TRANSLATE;
