@@ -422,7 +422,8 @@ namespace {
         }
     }
 
-    void appendRange(lib::Node& result, pugi::xml_node tag)
+    void appendRange(lib::Node& result, forget::Map& forgetMap,
+                     pugi::xml_node tag, bool isForgetTest)
     {
         auto startCode = fromHex(tag.attribute("start").as_string());
         auto endCode = fromHex(tag.attribute("end").as_string());
@@ -432,8 +433,13 @@ namespace {
         auto nCodes = endCode - startCode + 1;
         result.children.reserve(result.children.size() + nCodes);
         for (auto i = startCode; i <= endCode; ++i) {
+            char32_t cp = i;
             auto& node = result.children.emplace_back();
-            node.value = std::u32string{char32_t(i)};
+            node.value = std::u32string{ cp };
+            if (isForgetTest) {
+                auto& w = forgetMap[cp];
+                ++w.lib.count;
+            }
         }
     }
 
@@ -463,7 +469,7 @@ namespace {
                 // Dump
                 appendDump(result, forgetMap, v, isForgetTest);
             } else if (v.name() == "range"sv) {
-                appendRange(result, v);
+                appendRange(result, forgetMap, v, isForgetTest);
             } else if (v.name() == "sq"sv) {
                 appendSequence(result, v);
             }

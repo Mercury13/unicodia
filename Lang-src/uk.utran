@@ -12153,13 +12153,9 @@
      <orig>Two diacritical marks</orig>
      <transl>Два діакритичних знаки</transl>
     </text>
-    <text id="TypoVar">
-     <orig>Typographic variations</orig>
-     <transl>Типографські варіанти</transl>
-    </text>
     <text id="DoubleStruck">
      <orig>Double-struck</orig>
-     <transl>Ажурний</transl>
+     <transl>Ажурні</transl>
     </text>
     <text id="SansSerif">
      <orig>Sans-serif</orig>
@@ -12167,15 +12163,165 @@
     </text>
     <text id="SsBold">
      <orig>Sans-serif bold</orig>
-     <transl>Без засічок жирний</transl>
+     <transl>Без засічок жирні</transl>
     </text>
     <text id="Monospace">
      <orig>Monospace</orig>
-     <transl>Моноширинний</transl>
+     <transl>Моноширинні</transl>
     </text>
     <text id="Bold">
      <orig>Bold</orig>
-     <transl>Жирний</transl>
+     <transl>Жирні</transl>
+    </text>
+    <text id="Latin3">
+     <orig>Latin / by font</orig>
+     <transl>Латинка / по шрифтах</transl>
+    </text>
+    <text id="ParenCap">
+     <orig>Parenthesized / capital</orig>
+     <transl>У дужках / великі</transl>
+    </text>
+    <text id="ParenSmall">
+     <orig>Parenthesized / small</orig>
+     <transl>У дужках / малі</transl>
+    </text>
+    <text id="CircCap">
+     <orig>Circled / capital</orig>
+     <transl>У колах / великі</transl>
+    </text>
+    <text id="CircSmall">
+     <orig>Circled / small</orig>
+     <transl>У колах / малі</transl>
+    </text>
+    <text id="NegCircCap">
+     <orig>Negative circled / capital</orig>
+     <transl>У негативних колах / великі</transl>
+    </text>
+    <text id="SquareCap">
+     <orig>Squared / capital</orig>
+     <transl>У квадратах / великі</transl>
+    </text>
+    <text id="NegSquareCap">
+     <orig>Negative squared / capital</orig>
+     <transl>У негативних квадратах / малі</transl>
+    </text>
+    <text id="BoldCap">
+     <orig>Bold / capital</orig>
+     <transl>Жирний / великі</transl>
+    </text>
+    <text id="BoldSmall">
+     <orig>Bold / small</orig>
+     <transl>Жирний / малі</transl>
+    </text>
+    <text id="ItalCap">
+     <orig>Italic / capital</orig>
+     <transl>Курсив / великі</transl>
+    </text>
+    <text id="ItalSmall">
+     <orig>Italic / small</orig>
+     <transl>Курсив / малі</transl>
+    </text>
+    <text id="BiCap">
+     <orig>Bold+italic / capital</orig>
+     <transl>Жирний курсив / великі</transl>
+    </text>
+    <text id="BiSmall">
+     <orig>Bold+italic / small</orig>
+     <transl>Жирний курсив / малі</transl>
+    </text>
+    <text id="ScrCap">
+     <orig>Script / capital</orig>
+     <transl>Рукописний / великі</transl>
+    </text>
+    <text id="ScrSmall">
+     <orig>Script / small</orig>
+     <transl>Рукописний / малі</transl>
+    </text>
+    <text id="ScrBoldCap">
+     <orig>Script bold / capital</orig>
+     <transl>Рукописний жирний / великі</transl>
+    </text>
+    <text id="ScrBoldSmall">
+     <orig>Script bold / small</orig>
+     <transl>Рукописний жирний / малі</transl>
+    </text>
+    <text id="DoubleCap">
+     <orig>Double-struck / capital</orig>
+     <transl>Ажурний / великі</transl>
+    </text>
+    <text id="DoubleSmall">
+     <orig>Double-struck / small</orig>
+     <transl>Ажурний / малі</transl>
+    </text>
+    <text id="DoubleMisc">
+     <orig>Double-struck / misc</orig>
+     <transl>Ажурний / різні</transl>
+    </text>
+    <text id="FrakCap">
+     <orig>Fraktur / capital</orig>
+     <transl>Готичний / великі</transl>
+    </text>
+    <text id="FrakSmall">
+     <orig>Fraktur / small</orig>
+     <transl>Готичний / малі</transl>
+    </text>
+    <text id="FrakBoldCap">
+     <orig>Fraktur bold / capital</orig>
+     <transl>Готичний жирний / великі</transl>
+    </text>
+    <text id="FrakBoldSmall">
+     <orig>Fraktur bold / small</orig>
+     <transl>Готичний жирний / малі</transl>
+    </text>
+    <text id="SansCap">
+     <orig>Sans-serif / capital</orig>
+     <transl>Без засічок / великі</transl>
+    </text>
+    <text id="SansSmall">
+     <orig>Sans-serif / small</orig>
+     <transl>Без засічок / малі</transl>
+    </text>
+    <text id="SansBoldCap">
+     <orig>Sans-serif bold / capital</orig>
+     <transl>Без засічок жирний / великі</transl>
+    </text>
+    <text id="SansBoldSmall">
+     <orig>Sans-serif bold / small</orig>
+     <transl>Без засічок жирний / малі</transl>
+    </text>
+    <text id="SansItalCap">
+     <orig>Sans-serif italic / capital</orig>
+     <transl>Без засічок курсив / великі</transl>
+    </text>
+    <text id="SansItalSmall">
+     <orig>Sans-serif italic / small</orig>
+     <transl>Без засічок курсив / малі</transl>
+    </text>
+    <text id="SansBiCap">
+     <orig>Sans-serif bold+italic / capital</orig>
+     <transl>Без засічок жирний курсив / великі</transl>
+    </text>
+    <text id="SansBiSmall">
+     <orig>Sans-serif bold+italic / small</orig>
+     <transl>Без засічок жирний курсив / малі</transl>
+    </text>
+    <text id="SmallCap">
+     <orig>Small capitals</orig>
+     <transl>Капітель (малі великі)</transl>
+    </text>
+    <text id="MonoCap">
+     <orig>Monospace / capital</orig>
+     <transl>Моноширинний / великі</transl>
+    </text>
+    <text id="MonoSmall">
+     <orig>Monospace / small</orig>
+     <transl>Моноширинний / малі</transl>
+    </text>
+   </group>
+   <group id="Text">
+    <text id="SmallCap">
+     <orig>Small-capital type is used in phonetics, so Unicode has small-capital style for all basic Latin except X.</orig>
+     <transl>Капітельні (малі великі) літери використовуються у фонетиці, так що Юнікод має капітель для усієї базової латинки, окрім X.</transl>
     </text>
    </group>
   </group>

@@ -19,6 +19,8 @@ namespace {
         { "SUBSCRIPT", ForgetChannel::SCRIPT },
         { "MATHEMATICAL", ForgetChannel::SCRIPT },
         { "DOUBLE-STRUCK", ForgetChannel::SCRIPT },
+        { "SCRIPT", ForgetChannel::SCRIPT },
+        { "BLACK-LETTER", ForgetChannel::SCRIPT },
 
         // Letter channel
         { "A", ForgetChannel::LETTER },
@@ -74,11 +76,26 @@ namespace {
         { "SAMARITAN", ForgetChannel::BAN },
         { "FULLWIDTH", ForgetChannel::BAN },
         { "COMBINING", ForgetChannel::BAN },
+        { "BALLOT", ForgetChannel::BAN },       // Some UI character
     };
 
     const std::unordered_map<char32_t, bool> specialCps {
+        { 0x00A9,  true  },  // ©
+        { 0x00AE,  true  },  // ®
         { 0x0149,  false },  // apos+n, banned from Unicode
+        { 0x210E,  true  },  // Planck constant, italic h
+        { 0x210F,  true  },  // Same with bar
         { 0x2183,  true  },  // Number form, also letter reversed C
+        { 0x1F1AD, true  },  // mask work symbol
+    };
+
+    const std::unordered_map<char32_t, unsigned> wantedRepeats {
+        { 0x2113, 2 },      // ell symbol
+        { 0x2145, 2 },      // double-struck italic
+        { 0x2146, 2 },      // same
+        { 0x2147, 2 },      // same
+        { 0x2148, 2 },      // same
+        { 0x2149, 2 },      // same
     };
 
 }   // anon namespace
@@ -207,24 +224,43 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
         os << q;
         // Print name
         if (!val.second.database.name.empty()) {
-            os << ' ' << val.second.database.name << '\n';
+            os << ' ' << val.second.database.name;
         }
+    };
+
+    auto println = [&os, &print](const Map::value_type& val) {
+        print(val);
+        os << '\n';
     };
 
     Stats r;
 
     secMan.arm("REPEATING");
     for (auto& q : map) {
-        if (q.second.lib.count > 1) {
-            print(q);
-            ++r.nRepeat;
+        if (wantedRepeats.find(q.first) == wantedRepeats.end()) {
+            if (q.second.lib.count > 1) {
+                println(q);
+                ++r.nRepeat;
+            }
+        }
+    }
+
+    secMan.arm("MISMATCHED REPEAT");
+    for (auto& q : map) {
+        auto it = wantedRepeats.find(q.first);
+        if (it != wantedRepeats.end()) {
+            if (q.second.lib.count != it->second) {
+                print(q);
+                os << ": wanted " << it->second << ", found " << q.second.lib.count << '\n';
+                ++r.nRepeat;
+            }
         }
     }
 
     secMan.arm("MISSING");
     for (auto& q : map) {
         if (q.second.lib.count == 0 && q.second.computed.isIn) {
-            print(q);
+            println(q);
             ++r.nMissing;
         }
     }
@@ -232,7 +268,7 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
     secMan.arm("EXTRANEOUS");
     for (auto& q : map) {
         if (q.second.lib.count > 0 && !q.second.computed.isIn) {
-            print(q);
+            println(q);
             ++r.nExtra;
         }
     }

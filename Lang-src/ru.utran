@@ -12152,13 +12152,9 @@
      <orig>Two diacritical marks</orig>
      <transl>Два диакритических знака</transl>
     </text>
-    <text id="TypoVar">
-     <orig>Typographic variations</orig>
-     <transl>Типографские варианты</transl>
-    </text>
     <text id="DoubleStruck">
      <orig>Double-struck</orig>
-     <transl>Ажурный</transl>
+     <transl>Ажурные</transl>
     </text>
     <text id="SansSerif">
      <orig>Sans-serif</orig>
@@ -12166,15 +12162,165 @@
     </text>
     <text id="SsBold">
      <orig>Sans-serif bold</orig>
-     <transl>Без засечек жирный</transl>
+     <transl>Без засечек жирные</transl>
     </text>
     <text id="Monospace">
      <orig>Monospace</orig>
-     <transl>Моноширинный</transl>
+     <transl>Моноширинные</transl>
     </text>
     <text id="Bold">
      <orig>Bold</orig>
-     <transl>Жирный</transl>
+     <transl>Жирные</transl>
+    </text>
+    <text id="Latin3">
+     <orig>Latin / by font</orig>
+     <transl>Латиница / по шрифтам</transl>
+    </text>
+    <text id="ParenCap">
+     <orig>Parenthesized / capital</orig>
+     <transl>В скобках / заглавные</transl>
+    </text>
+    <text id="ParenSmall">
+     <orig>Parenthesized / small</orig>
+     <transl>В скобках / строчные</transl>
+    </text>
+    <text id="CircCap">
+     <orig>Circled / capital</orig>
+     <transl>В кругах / заглавные</transl>
+    </text>
+    <text id="CircSmall">
+     <orig>Circled / small</orig>
+     <transl>В кругах / строчные</transl>
+    </text>
+    <text id="NegCircCap">
+     <orig>Negative circled / capital</orig>
+     <transl>В негативных кругах / заглавные</transl>
+    </text>
+    <text id="SquareCap">
+     <orig>Squared / capital</orig>
+     <transl>В квадратах / заглавные</transl>
+    </text>
+    <text id="NegSquareCap">
+     <orig>Negative squared / capital</orig>
+     <transl>В негативных квадратах / заглавные</transl>
+    </text>
+    <text id="BoldCap">
+     <orig>Bold / capital</orig>
+     <transl>Жирный / заглавные</transl>
+    </text>
+    <text id="BoldSmall">
+     <orig>Bold / small</orig>
+     <transl>Жирный / строчные</transl>
+    </text>
+    <text id="ItalCap">
+     <orig>Italic / capital</orig>
+     <transl>Курсив / заглавные</transl>
+    </text>
+    <text id="ItalSmall">
+     <orig>Italic / small</orig>
+     <transl>Курсив / строчные</transl>
+    </text>
+    <text id="BiCap">
+     <orig>Bold+italic / capital</orig>
+     <transl>Жирный курсив / заглавные</transl>
+    </text>
+    <text id="BiSmall">
+     <orig>Bold+italic / small</orig>
+     <transl>Жирный курсив / строчные</transl>
+    </text>
+    <text id="ScrCap">
+     <orig>Script / capital</orig>
+     <transl>Рукописный / заглавные</transl>
+    </text>
+    <text id="ScrSmall">
+     <orig>Script / small</orig>
+     <transl>Рукописный / строчные</transl>
+    </text>
+    <text id="ScrBoldCap">
+     <orig>Script bold / capital</orig>
+     <transl>Рукописный жирный / заглавные</transl>
+    </text>
+    <text id="ScrBoldSmall">
+     <orig>Script bold / small</orig>
+     <transl>Рукописный жирный / строчные</transl>
+    </text>
+    <text id="DoubleCap">
+     <orig>Double-struck / capital</orig>
+     <transl>Ажурный / заглавные</transl>
+    </text>
+    <text id="DoubleSmall">
+     <orig>Double-struck / small</orig>
+     <transl>Ажурный / строчные</transl>
+    </text>
+    <text id="DoubleMisc">
+     <orig>Double-struck / misc</orig>
+     <transl>Ажурный / разные</transl>
+    </text>
+    <text id="FrakCap">
+     <orig>Fraktur / capital</orig>
+     <transl>Готический / заглавные</transl>
+    </text>
+    <text id="FrakSmall">
+     <orig>Fraktur / small</orig>
+     <transl>Готический / строчные</transl>
+    </text>
+    <text id="FrakBoldCap">
+     <orig>Fraktur bold / capital</orig>
+     <transl>Готический жирный / заглавные</transl>
+    </text>
+    <text id="FrakBoldSmall">
+     <orig>Fraktur bold / small</orig>
+     <transl>Готический жирный / строчные</transl>
+    </text>
+    <text id="SansCap">
+     <orig>Sans-serif / capital</orig>
+     <transl>Без засечек / заглавные</transl>
+    </text>
+    <text id="SansSmall">
+     <orig>Sans-serif / small</orig>
+     <transl>Без засечек / строчные</transl>
+    </text>
+    <text id="SansBoldCap">
+     <orig>Sans-serif bold / capital</orig>
+     <transl>Без засечек жирный / заглавные</transl>
+    </text>
+    <text id="SansBoldSmall">
+     <orig>Sans-serif bold / small</orig>
+     <transl>Без засечек жирный / строчные</transl>
+    </text>
+    <text id="SansItalCap">
+     <orig>Sans-serif italic / capital</orig>
+     <transl>Без засечек курсив / заглавные</transl>
+    </text>
+    <text id="SansItalSmall">
+     <orig>Sans-serif italic / small</orig>
+     <transl>Без засечек курсив / строчные</transl>
+    </text>
+    <text id="SansBiCap">
+     <orig>Sans-serif bold+italic / capital</orig>
+     <transl>Без засечек жирный курсив / заглавные</transl>
+    </text>
+    <text id="SansBiSmall">
+     <orig>Sans-serif bold+italic / small</orig>
+     <transl>Без засечек жирный курсив / строчные</transl>
+    </text>
+    <text id="SmallCap">
+     <orig>Small capitals</orig>
+     <transl>Капитель (малые прописные)</transl>
+    </text>
+    <text id="MonoCap">
+     <orig>Monospace / capital</orig>
+     <transl>Моноширинный / заглавные</transl>
+    </text>
+    <text id="MonoSmall">
+     <orig>Monospace / small</orig>
+     <transl>Моноширинный / строчные</transl>
+    </text>
+   </group>
+   <group id="Text">
+    <text id="SmallCap">
+     <orig>Small-capital type is used in phonetics, so Unicode has small-capital style for all basic Latin except X.</orig>
+     <transl>Капительное (малое прописное) написание используется в фонетике, так что в Юникоде есть капитель для всей базовой латиницы, кроме X.</transl>
     </text>
    </group>
   </group>

@@ -8445,9 +8445,6 @@
     <text id="TwoDiac">
      <orig>Two diacritical marks</orig>
     </text>
-    <text id="TypoVar">
-     <orig>Typographic variations</orig>
-    </text>
     <text id="DoubleStruck">
      <orig>Double-struck</orig>
     </text>
@@ -8462,6 +8459,119 @@
     </text>
     <text id="Bold">
      <orig>Bold</orig>
+    </text>
+    <text id="Latin3">
+     <orig>Latin / by font</orig>
+    </text>
+    <text id="ParenCap">
+     <orig>Parenthesized / capital</orig>
+    </text>
+    <text id="ParenSmall">
+     <orig>Parenthesized / small</orig>
+    </text>
+    <text id="CircCap">
+     <orig>Circled / capital</orig>
+    </text>
+    <text id="CircSmall">
+     <orig>Circled / small</orig>
+    </text>
+    <text id="NegCircCap">
+     <orig>Negative circled / capital</orig>
+    </text>
+    <text id="SquareCap">
+     <orig>Squared / capital</orig>
+    </text>
+    <text id="NegSquareCap">
+     <orig>Negative squared / capital</orig>
+    </text>
+    <text id="BoldCap">
+     <orig>Bold / capital</orig>
+    </text>
+    <text id="BoldSmall">
+     <orig>Bold / small</orig>
+    </text>
+    <text id="ItalCap">
+     <orig>Italic / capital</orig>
+    </text>
+    <text id="ItalSmall">
+     <orig>Italic / small</orig>
+    </text>
+    <text id="BiCap">
+     <orig>Bold+italic / capital</orig>
+    </text>
+    <text id="BiSmall">
+     <orig>Bold+italic / small</orig>
+    </text>
+    <text id="ScrCap">
+     <orig>Script / capital</orig>
+    </text>
+    <text id="ScrSmall">
+     <orig>Script / small</orig>
+    </text>
+    <text id="ScrBoldCap">
+     <orig>Script bold / capital</orig>
+    </text>
+    <text id="ScrBoldSmall">
+     <orig>Script bold / small</orig>
+    </text>
+    <text id="DoubleCap">
+     <orig>Double-struck / capital</orig>
+    </text>
+    <text id="DoubleSmall">
+     <orig>Double-struck / small</orig>
+    </text>
+    <text id="DoubleMisc">
+     <orig>Double-struck / misc</orig>
+    </text>
+    <text id="FrakCap">
+     <orig>Fraktur / capital</orig>
+    </text>
+    <text id="FrakSmall">
+     <orig>Fraktur / small</orig>
+    </text>
+    <text id="FrakBoldCap">
+     <orig>Fraktur bold / capital</orig>
+    </text>
+    <text id="FrakBoldSmall">
+     <orig>Fraktur bold / small</orig>
+    </text>
+    <text id="SansCap">
+     <orig>Sans-serif / capital</orig>
+    </text>
+    <text id="SansSmall">
+     <orig>Sans-serif / small</orig>
+    </text>
+    <text id="SansBoldCap">
+     <orig>Sans-serif bold / capital</orig>
+    </text>
+    <text id="SansBoldSmall">
+     <orig>Sans-serif bold / small</orig>
+    </text>
+    <text id="SansItalCap">
+     <orig>Sans-serif italic / capital</orig>
+    </text>
+    <text id="SansItalSmall">
+     <orig>Sans-serif italic / small</orig>
+    </text>
+    <text id="SansBiCap">
+     <orig>Sans-serif bold+italic / capital</orig>
+    </text>
+    <text id="SansBiSmall">
+     <orig>Sans-serif bold+italic / small</orig>
+    </text>
+    <text id="SmallCap">
+     <orig>Small capitals</orig>
+    </text>
+    <text id="MonoCap">
+     <orig>Monospace / capital</orig>
+    </text>
+    <text id="MonoSmall">
+     <orig>Monospace / small</orig>
+    </text>
+   </group>
+   <group id="Text">
+    <text id="SmallCap">
+     <orig>Small-capital type is used in phonetics, so Unicode has small-capital style for all basic Latin except X.</orig>
     </text>
    </group>
   </group>

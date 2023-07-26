@@ -65,22 +65,13 @@
 			<f loc="TwoDiac">
 				<d>Ǡ ǡ Ǟ ǟ Ǻ ǻ Ấ ấ Ầ ầ Ẩ ẩ Ẫ ẫ Ắ ắ Ằ ằ Ẳ ẳ Ẵ ẵ Ậ ậ Ặ ặ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴀ 🄐 ⒜ Ⓐ ⓐ 🄰 🅐 🅰 𝔸 𝕒</d>
-			</f>
-			<d>À à Á á Â â Ã ã Ä ä Å å Ā ā Ă ă Ǎ ǎ Ȃ ȃ Ȁ ȁ Ȧ ȧ Ả ả ẚ Ꞻ ꞻ Ⱥ ⱥ Ą ą ᶏ Ḁ ḁ Ạ ạ ᴬ ᵃ ₐ</d>
+			<d>À à Á á Â â Ã ã Ä ä Å å Ā ā Ă ă Ǎ ǎ Ȃ ȃ Ȁ ȁ Ȧ ȧ Ả ả ẚ Ꞻ ꞻ Ⱥ ⱥ Ą ą ᶏ Ḁ ḁ Ạ ạ ᴬ ᵃ ₐ ᴀ</d>
 		</f>
 		<f name="B">
-			<f loc="TypoVar">
-				<d>ʙ ᴃ 𐞄 🄑 ⒝ Ⓑ ⓑ 🄱 🅑 🅱 𝔹 𝕓</d>
-			</f>
-			<d>Ḃ ḃ ƀ Ƀ Ɓ ɓ Ƃ ƃ Ꞗ ꞗ ᵬ Ḅ ḅ Ḇ ḇ ᶀ ᴮ ᵇ 𐞅 ᴯ</d>
+			<d>Ḃ ḃ ƀ Ƀ Ɓ ɓ Ƃ ƃ Ꞗ ꞗ ᵬ Ḅ ḅ Ḇ ḇ ᶀ ʙ ᴃ ᴮ ᵇ 𐞅 ᴯ 𐞄</d>
 		</f>
 		<f name="C">
-			<f loc="TypoVar">
-				<d>ᴄ 🄒 ⒞ Ⓒ ⓒ 🄫 🄲 🅒 🅲 ℂ 𝕔</d>
-			</f>
-			<d>Ć ć Ĉ ĉ Ċ ċ Č č Ƈ ƈ Ꞓ ꞓ Ç ç Ꞔ ꞔ 𝼝 Ȼ ȼ ɕ ʗ 𝼏 Ↄ ↄ Ꜿ ꜿ ꟲ ᶜ ᶝ Ḉ ḉ</d>
+			<d>Ć ć Ĉ ĉ Ċ ċ Č č Ƈ ƈ Ꞓ ꞓ Ç ç Ꞔ ꞔ 𝼝 Ȼ ȼ ɕ ʗ 𝼏 Ↄ ↄ Ꜿ ꜿ ᴄ © 🄫 ꟲ ᶜ ᶝ Ḉ ḉ</d>
 		</f>
 		<f name="D">
 			<f loc="OldForms">
@@ -89,92 +80,59 @@
 			<f name="Dz…">
 				<d>Ǳ ǲ ǳ Ǆ ǅ ǆ ʣ ʥ ꭦ 𐞇 𐞈 𐞉 ʤ 𐞊 𝼒 𝼙</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴅ 🄓 ⒟ Ⓓ ⓓ 🄳 🆥 🅓 🅳 𝔻 𝕕 ⅅ ⅆ</d>
-			</f>
-			<d>Ď ď Ḋ ḋ Đ đ Ɗ ɗ Ƌ ƌ ᵭ Ꟈ ꟈ 𝼥 Ɖ ɖ ȡ ᶁ Ḍ ḍ Ḏ ḏ Ḑ ḑ Ḓ ḓ ᴰ ᵈ 𐞌 𐞋 ᶑ 𐞍</d>
+			<d>Ď ď Ḋ ḋ Đ đ Ɗ ɗ Ƌ ƌ ᵭ Ꟈ ꟈ 𝼥 Ɖ ɖ ȡ ᶁ Ḍ ḍ Ḏ ḏ Ḑ ḑ Ḓ ḓ ᴅ ⅅ ⅆ ᴰ ᵈ 𐞌 𐞋 ᶑ 𐞍 🆥</d>
 		</f>
 		<f name="E">
 			<f loc="MiscForms">
-				<d>Ɛ ɛ ᶓ Ə ə ɚ ᶕ ǝ Ǝ ɘ Ɜ ɜ ɝ ᶔ ɞ ʚ ᴈ ꭡ ꬲ ⱻ ᵋ ᴲ ᵌ ᶟ 𐞎 𐞏 ᵊ ₔ</d>
+				<d>Ɛ ɛ ᶓ Ə ə ɚ ᶕ ǝ Ǝ ɘ Ɜ ɜ ɝ ᶔ ɞ ʚ ᴈ ꭡ ⱻ ᵋ ᴲ ᵌ ᶟ 𐞎 𐞏 ᵊ ₔ</d>
 			</f>
 			<f loc="TwoDiac">
 				<d>Ḕ ḕ Ḗ ḗ Ế ế Ề ề Ể ể Ễ ễ Ḝ ḝ Ệ ệ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴇ 🄔 ⒠ Ⓔ ⓔ 🄴 🅔 🅴 𝔼 𝕖 ⅇ</d>
-			</f>
-			<d>È è É é Ê ê Ë ë Ē ē Ĕ ĕ Ė ė Ě ě Ȇ ȇ Ẻ ẻ Ẽ ẽ Ȅ ȅ ꬳ ꬴ ⱸ Ę ę Ȩ ȩ ᶒ Ḙ ḙ Ḛ ḛ Ẹ ẹ Ɇ ɇ ᴱ ᵉ ₑ</d>
+			<d>È è É é Ê ê Ë ë Ē ē Ĕ ĕ Ė ė Ě ě Ȇ ȇ Ẻ ẻ Ẽ ẽ Ȅ ȅ ꬳ ꬴ ⱸ Ę ę Ȩ ȩ ᶒ Ḙ ḙ Ḛ ḛ Ẹ ẹ Ɇ ɇ ᴇ ꬲ ⅇ ᴱ ᵉ ₑ</d>
 		</f>
 		<f name="F">
-			<f loc="TypoVar">
-				<d>ꜰ 🄕 ⒡ Ⓕ ⓕ 🄵 🅕 🅵 𝔽 𝕗</d>
-			</f>
-			<d>Ḟ ḟ Ꞙ ꞙ ᵮ Ƒ ƒ ᶂ Ꝼ ꝼ ꟻ ꬵ ꟳ ᶠ ʩ 𝼀 𐞐</d>
+			<d>Ḟ ḟ Ꞙ ꞙ ᵮ Ƒ ƒ ᶂ Ꝼ ꝼ ꟻ ꬵ ꜰ ꟳ ᶠ ʩ 𝼀 𐞐</d>
 		</f>
 		<f name="G">
 			<f loc="MiscForms">
 				<d>ᵷ Ɡ ɡ ꬶ 𝼁 Ᵹ ᵹ Ꝿ ꝿ Ꟑ ꟑ ᶢ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ɢ ʛ 𝼂 𐞒 𐞔 🄖 ⒢ Ⓖ ⓖ 🄶 🅖 🅶 𝔾 𝕘</d>
-			</f>
-			<d>Ǵ ǵ Ĝ ĝ Ğ ğ Ġ ġ Ǧ ǧ Ḡ ḡ Ɠ ɠ Ꞡ ꞡ Ǥ ǥ ᶃ Ģ ģ 𐞓 ᴳ ᵍ</d>
+			<d>Ǵ ǵ Ĝ ĝ Ğ ğ Ġ ġ Ǧ ǧ Ḡ ḡ Ɠ ɠ Ꞡ ꞡ Ǥ ǥ ᶃ Ģ ģ ɢ ʛ 𝼂 𐞓 ᴳ ᵍ 𐞒 𐞔</d>
 		</f>
 		<f name="H">
 			<f loc="MiscForms">
 				<d>Ɥ ɥ ʮ ʯ Ⱶ ⱶ Ꟶ ꟶ ᶣ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ʜ 𐞖 🄗 ⒣ Ⓗ ⓗ 🄷 🅗 🅷 ℍ 𝕙</d>
-			</f>
-			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ Ɦ ɦ Ħ ħ Ḩ ḩ Ⱨ ⱨ ꞕ Ḥ ḥ Ḫ ḫ ẖ ᴴ ʰ ʱ ꟸ 𐞕 ₕ</d>
+			<d>Ĥ ĥ Ȟ ȟ Ḣ ḣ Ḧ ḧ Ɦ ɦ Ħ ħ Ḩ ḩ Ⱨ ⱨ ꞕ Ḥ ḥ Ḫ ḫ ẖ ʜ ᴴ ʰ ʱ ꟸ 𐞕 𐞖 ₕ</d>
 		</f>
 		<f name="I">
-			<f loc="TypoVar">
-				<d>Ɪ ɪ ᵻ ᶦ ᶧ 🄘 ⒤ Ⓘ ⓘ 🄸 🅘 🅸 𝕀 𝕚 ⅈ</d>
-			</f>
-			<d>Ì ì Í í Î î Ï ï Ĩ ĩ Ī ī Ĭ ĭ Ǐ ǐ Ȋ ȋ Ỉ ỉ Ȉ ȉ İ ı Ꞽ ꞽ Ɨ ɨ Į į ᶖ Ḭ ḭ Ị ị Ɩ ɩ ᵼ ᴉ ꟷ ꟾ Ĳ ĳ Ḯ ḯ 𝼚 ᴵ ⁱ ᶤ ᵎ ᶥ ᵢ</d>
+			<d>Ì ì Í í Î î Ï ï Ĩ ĩ Ī ī Ĭ ĭ Ǐ ǐ Ȋ ȋ Ỉ ỉ Ȉ ȉ İ ı Ꞽ ꞽ Ɨ ɨ Į į ᶖ Ḭ ḭ Ị ị Ɩ ɩ ᵼ ᴉ ꟷ ꟾ Ɪ ɪ ᵻ ⅈ Ĳ ĳ Ḯ ḯ 𝼚 ᴵ ⁱ ᶤ ᵎ ᶥ ᶦ ᶧ ᵢ</d>
 		</f>
 		<f name="J">
-			<f loc="TypoVar">
-				<d>ᴊ 🄙 ⒥ Ⓙ ⓙ 🄹 🅙 🅹 𝕁 𝕛 ⅉ</d>
-			</f>
-			<d>Ĵ ĵ ǰ Ɉ ɉ ȷ Ʝ ʝ ɟ ᴶ ʲ ᶡ ᶨ ʄ 𐞘 ⱼ</d>
+			<d>Ĵ ĵ ǰ Ɉ ɉ ȷ Ʝ ʝ ɟ ʄ ᴊ ⅉ ᴶ ʲ ᶡ ᶨ 𐞘 ⱼ</d>
 		</f>
 		<f name="K">
-			<f loc="TypoVar">
-				<d>ᴋ 𝼐 🄚 ⒦ Ⓚ ⓚ 🄺 🅚 🅺 𝕂 𝕜</d>
-			</f>
-			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ Ꝁ ꝁ Ꝃ ꝃ Ꞣ ꞣ Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴷ ᵏ ₖ</d>
+			<d>Ǩ ǩ Ḱ ḱ Ƙ ƙ Ꝁ ꝁ Ꝃ ꝃ Ꞣ ꞣ Ⱪ ⱪ Ķ ķ Ḳ ḳ Ḵ ḵ ᶄ Ʞ ʞ 𝼃 Ꝅ ꝅ ᴋ 𝼐 ᴷ ᵏ ₖ</d>
 		</f>
 		<f name="L">
 			<f name="Lj…">
 				<d>Ǉ ǈ ǉ ɮ 𝼅 𐞞 𐞟</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ʟ ᴌ 𝼄 ᶫ 𐞜 🄛 ⒧ Ⓛ ⓛ 🄻 🅛 🅻 𝕃 𝕝</d>
-			</f>
-			<d>Ĺ ĺ Ľ ľ Ꝉ ꝉ Ŀ ŀ Ł ł Ƚ ƚ Ɫ ɫ Ɬ ɬ ꬹ ꬷ Ꝇ ꝇ 𝼑 𝼦 ȴ ɭ ᶅ Ļ ļ Ḷ ḷ Ḻ ḻ Ḽ ḽ Ꞁ ꞁ Ḹ ḹ Ⱡ ⱡ ꞎ ꬸ 𝼓 𐞝 ᴸ ˡ ꭝ ꭞ 𐞛 ᶩ ᶪ ₗ</d>
+			<d>Ĺ ĺ Ľ ľ Ꝉ ꝉ Ŀ ŀ Ł ł Ƚ ƚ Ɫ ɫ Ɬ ɬ ꬹ ꬷ Ꝇ ꝇ 𝼑 𝼦 ȴ ɭ ᶅ Ļ ļ Ḷ ḷ Ḻ ḻ Ḽ ḽ Ꞁ ꞁ Ḹ ḹ Ⱡ ⱡ ꞎ ꬸ 𝼓 𐞝 ʟ ᴌ 𝼄 ℓ ᴸ ˡ ꭝ ꭞ 𐞛 ᶩ ᶪ ᶫ 𐞜 ₗ</d>
 		</f>
 		<f name="M">
-			<f loc="TypoVar">
-				<d>ᴍ 🄜 ⒨ Ⓜ ⓜ 🄼 🅜 🅼 𝕄 𝕞</d>
-			</f>
-			<d>Ḿ ḿ Ṁ ṁ ᵯ ꬺ Ɱ ᶆ Ṃ ṃ ꟽ ꟿ Ɯ ɯ ɰ ɱ ᴟ ꟺ ₘ ᴹ ᵐ ᶬ ᶭ ᵚ</d>
+			<d>Ḿ ḿ Ṁ ṁ ᵯ ꬺ Ɱ ᶆ Ṃ ṃ ꟽ ꟿ Ɯ ɯ ɰ ɱ ᴟ ꟺ ₘ ᴍ 🆭 ᴹ ᵐ ᶬ ᶭ ᵚ</d>
 		</f>
 		<f name="N">
 			<f name="ŋ">
 				<d>Ŋ ŋ ꬼ 𝼔 𝼇 ᵑ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ɴ ᴎ ᶰ 🄝 ⒩ Ⓝ ⓝ 🄽 🅝 🅽 ℕ 𝕟</d>
-			</f>
-			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ Ǌ ǋ ǌ ᴺ ᴻ ⁿ ᶮ ᶯ ₙ</d>
+			<d>Ń ń Ǹ ǹ Ñ ñ Ň ň Ṅ ṅ 𝼧 ᵰ Ꞥ ꞥ ꬻ Ɲ ɲ ȵ ɳ ᶇ ꝴ Ꞑ ꞑ Ƞ ƞ Ņ ņ Ṇ ṇ Ṉ ṉ Ṋ ṋ ɴ ᴎ Ǌ ǋ ǌ ᴺ ᴻ ⁿ ᶮ ᶯ ᶰ ₙ</d>
 		</f>
 		<f name="O">
 			<f loc="MiscForms">
-				<d>Ɔ ɔ Ɵ ɵ ᴐ ᴑ ᴒ ᴓ ꬿ ᴖ ᴗ ᶗ Ꟁ ꟁ ꬽ ꬾ Ꞝ ꞝ ᵓ ᵔ ᵕ ᶱ </d>
+				<d>Ɔ ɔ Ɵ ɵ ᴐ ᴑ ᴒ ᴓ ꬿ ᴖ ᴗ ᶗ Ꟁ ꟁ Ꞝ ꞝ ᵓ ᵔ ᵕ ᶱ</d>
 			</f>
 			<f loc="TwoDiac">
 				<d>Ȫ ȫ Ȭ ȭ Ȱ ȱ Ṍ ṍ Ṏ ṏ Ṑ ṑ Ṓ ṓ Ố ố Ồ ồ Ổ ổ Ỗ ỗ Ớ ớ Ờ ờ Ở ở Ỡ ỡ Ǿ ǿ Ộ ộ Ǭ ǭ Ợ ợ</d>
@@ -182,94 +140,58 @@
 			<f name="OE…">
 				<d>Œ œ ɶ ᴔ ꭀ ꭃ ꭄ ꭂ ꭢ ꭁ ꟹ 𐞣</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴏ 🄞 ⒪ Ⓞ ⓞ 🄾 🅞 🅾 𝕆 𝕠</d>
-			</f>
-			<d>Ò ò Ó ó Ô ô Õ õ Ö ö Ō ō Ŏ ŏ Ǒ ǒ Ȏ ȏ Ȯ ȯ Ỏ ỏ Ő ő Ȍ ȍ Ơ ơ Ꝍ ꝍ Ø ø Ꝋ ꝋ ⱺ Ǫ ǫ Ọ ọ 𝼛 ᴼ ᵒ 𐞢 ₒ</d>
+			<d>Ò ò Ó ó Ô ô Õ õ Ö ö Ō ō Ŏ ŏ Ǒ ǒ Ȏ ȏ Ȯ ȯ Ỏ ỏ Ő ő Ȍ ȍ Ơ ơ Ꝍ ꝍ Ø ø Ꝋ ꝋ ⱺ Ǫ ǫ 𝼛 Ọ ọ ᴏ ꬽ ꬾ ᴼ ᵒ 𐞢 ₒ</d>
 		</f>
 		<f name="P">
-			<f loc="TypoVar">
-				<d>ᴘ 🄟 ⒫ Ⓟ ⓟ 🄿 🅟 🅿 🆊 ℙ 𝕡</d>
-			</f>
-			<d>Ṕ ṕ Ṗ ṗ Ƥ ƥ Ꝕ ꝕ Ᵽ ᵽ Ꝓ ꝓ Ꝑ ꝑ ᵱ ᶈ ꟼ ᴾ ᵖ ₚ</d>
+			<d>Ṕ ṕ Ṗ ṗ Ƥ ƥ Ꝕ ꝕ Ᵽ ᵽ Ꝓ ꝓ Ꝑ ꝑ ᵱ ᶈ ꟼ ᴘ 🆊 ᴾ ᵖ ₚ</d>
 		</f>
 		<f name="Q">
-			<f loc="TypoVar">
-				<d>ꞯ 🄠 ⒬ Ⓠ ⓠ 🅀 🅠 🆀 ℚ 𝕢</d>
-			</f>
-			<d>ʠ Ꝙ ꝙ Ɋ ɋ Ꝗ ꝗ ꟴ 𐞥</d>
+			<d>ʠ Ꝙ ꝙ Ɋ ɋ Ꝗ ꝗ ꞯ ꟴ 𐞥</d>
 		</f>
 		<f name="R">
 			<f loc="MiscForms">
-				<d>ɹ ɺ ⱹ ɻ ɾ ɿ ᵳ Ꝛ ꝛ Ꞃ ꞃ ꭅ ꭇ ꭈ ꭊ ꭋ ꭌ ꭨ 𝼈 𝼕 𝼖 ʁ ᴙ ᴚ 𐞩 ʴ ʵ ʶ 𐞦 𐞧 </d>
+				<d>ɹ ɺ ⱹ ɻ ɾ ɿ ᵳ Ꝛ ꝛ Ꞃ ꞃ ꭅ ꭇ ꭈ ꭊ ꭋ ꭌ ꭨ 𝼈 𝼕 𝼖 ʁ ᴙ ᴚ ® 🄬 𐞩 ʴ ʵ ʶ 𐞦 𐞧 </d>
 			</f>
-			<f loc="TypoVar">
-				<d>ʀ ꭆ 𐞪 🄡 ⒭ Ⓡ ⓡ 🄬 🅁 🅡 🆁 ℝ 𝕣</d>
-			</f>
-			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ Ɍ Ꞧ ꞧ 𝼨 ɍ ᵲ Ɽ ɽ ɼ ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ Ṝ ṝ ᴿ ʳ 𐞨 ᵣ</d>
+			<d>Ŕ ŕ Ř ř Ȑ ȑ Ȓ ȓ Ṙ ṙ Ɍ Ꞧ ꞧ 𝼨 ɍ ᵲ Ɽ ɽ ɼ ᶉ ꭉ Ŗ ŗ Ṛ ṛ Ṟ ṟ Ṝ ṝ ʀ ꭆ ᴿ ʳ 𐞨 𐞪 ᵣ</d>
 		</f>
 		<f name="S">
 			<f loc="MiscForms">
 				<d>ẞ ß ſ ẛ ẝ ẜ Ꞅ ꞅ Ꟗ ꟗ Ꟙ ꟙ ﬅ Ʃ ʃ ƪ 𝼋 ʆ ᶋ ᶘ ꭍ ʅ ᶴ 𝼌</d>
 			</f>
 			<f loc="TwoDiac">
-				<d>Ṥ ṥ Ṧ ṧ Ṩ ṩ </d>
+				<d>Ṥ ṥ Ṧ ṧ Ṩ ṩ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ꜱ 🄢 ⒮ Ⓢ ⓢ 🄪 🅂 🅢 🆂 𝕊 𝕤</d>
-			</f>
-			<d>Ś ś Ŝ ŝ Š š Ṡ ṡ 𝼩 ᵴ Ꞩ ꞩ Ꟊ ꟊ 𝼞 Ʂ ʂ Ş ş Ȿ ȿ ᶊ Ș ș Ṣ ṣ ˢ 𐞺 ᶳ ₛ</d>
+			<d>Ś ś Ŝ ŝ Š š Ṡ ṡ 𝼩 ᵴ Ꞩ ꞩ Ꟊ ꟊ 𝼞 Ʂ ʂ Ş ş Ȿ ȿ ᶊ Ș ș Ṣ ṣ ꜱ 🄪 ˢ 𐞺 ᶳ ₛ</d>
 		</f>
 		<f name="T">
 			<f loc="MiscForms">
 				<d>Ʇ ʇ 𝼍 Ꞇ ꞇ ʦ ꭧ ʧ 𝼗 𝼜 Ꜩ ꜩ 𐞬 𐞭 𐞮</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴛ 🄣 ⒯ Ⓣ ⓣ 🅃 🅣 🆃 𝼉 𝕋 𝕥</d>
-			</f>
-			<d>Ť ť Ṫ ṫ ẗ Ƭ ƭ 𝼪 Ŧ ŧ ᵵ Ⱦ ⱦ ȶ Ţ ţ Ʈ ʈ ƫ Ț ț Ṭ ṭ Ṯ ṯ Ṱ ṱ ᵀ ᵗ 𐞯 ᶵ ₜ </d>
+			<d>Ť ť Ṫ ṫ ẗ Ƭ ƭ 𝼪 Ŧ ŧ ᵵ Ⱦ ⱦ ȶ Ţ ţ Ʈ ʈ ƫ Ț ț Ṭ ṭ Ṯ ṯ Ṱ ṱ 𝼉 ᴛ ᵀ ᵗ 𐞯 ᶵ ₜ </d>
 		</f>
 		<f name="U">
 			<f loc="TwoDiac">
-				<d> Ǖ ǖ Ǘ ǘ Ǚ ǚ Ǜ ǜ Ṹ ṹ Ṻ ṻ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự </d>
+				<d> Ǖ ǖ Ǘ ǘ Ǚ ǚ Ǜ ǜ Ṹ ṹ Ṻ ṻ Ứ ứ Ừ ừ Ử ử Ữ ữ Ự ự</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴜ ᵾ ᶸ 🄤 ⒰ Ⓤ ⓤ 🅄 🅤 🆄 𝕌 𝕦</d>
-			</f>
-			<d>Ù ù Ú ú Û û Ü ü Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ȕ ȕ Ǔ ǔ Ȗ ȗ Ủ ủ Ꞿ ꞿ ꭒ Ư ư Ʉ ʉ Ꞹ ꞹ Ų ų ᶙ Ṳ ṳ Ṵ ṵ Ṷ ṷ Ụ ụ ᴝ ᴞ ꭎ ꭏ ᵁ ᵘ ꭟ ᶶ ᵙ ᵤ</d>
+			<d>Ù ù Ú ú Û û Ü ü Ũ ũ Ū ū Ŭ ŭ Ů ů Ű ű Ȕ ȕ Ǔ ǔ Ȗ ȗ Ủ ủ Ꞿ ꞿ ꭒ Ư ư Ʉ ʉ Ꞹ ꞹ Ų ų ᶙ Ṳ ṳ Ṵ ṵ Ṷ ṷ Ụ ụ ᴝ ᴞ ꭎ ꭏ ᴜ ᵾ ᵁ ᵘ ꭟ ᶶ ᵙ  ᶸ ᵤ</d>
 		</f>
 		<f name="V">
-			<f loc="TypoVar">
-				<d>ᴠ 🄥 ⒱ Ⓥ ⓥ 🅅 🅥 🆅 𝕍 𝕧</d>
-			</f>
-			<d>Ṽ ṽ Ʋ ʋ ⱱ ⱴ Ꝟ ꝟ ᶌ Ṿ ṿ Ʌ ʌ Ỽ ỽ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
+			<d>Ṽ ṽ Ʋ ʋ ⱱ ⱴ Ꝟ ꝟ ᶌ Ṿ ṿ Ʌ ʌ Ỽ ỽ ᴠ ⱽ ᵛ ᶹ 𐞰 ᶺ ᵥ</d>
 		</f>
 		<f name="W">
-			<f loc="TypoVar">
-				<d>ᴡ 🄦 ⒲ Ⓦ ⓦ 🅆 🅦 🆆 𝕎 𝕨</d>
-			</f>
-			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ Ẉ ẉ Ꟃ ꟃ ʍ ᵂ ʷ ꭩ</d>
+			<d>Ẁ ẁ Ẃ ẃ Ŵ ŵ Ẅ ẅ Ẇ ẇ ẘ Ⱳ ⱳ Ẉ ẉ Ꟃ ꟃ ʍ ᴡ ᵂ ʷ ꭩ</d>
 		</f>
 		<f name="X">
-			<f loc="TypoVar">
-				<d>🄧 ⒳ Ⓧ ⓧ 🅇 🅧 🆇 𝕏 𝕩</d>
-			</f>
 			<d>Ẋ ẋ Ẍ ẍ ꭖ ꭗ ꭙ ᶍ ꭘ ˣ ₓ</d>
 		</f>
 		<f name="Y">
-			<f loc="TypoVar">
-				<d>ʏ 𐞲 🄨 ⒴ Ⓨ ⓨ 🅈 🅨 🆈 𝕐 𝕪</d>
-			</f>
-			<d>Ỳ ỳ Ý ý Ÿ ÿ Ŷ ŷ Ȳ ȳ Ẏ ẏ ẙ Ỷ ỷ Ỹ ỹ Ƴ ƴ Ɏ ɏ Ỿ ỿ Ỵ ỵ ʎ 𝼆 ꭚ ʸ 𐞠 𐞡</d>
+			<d>Ỳ ỳ Ý ý Ÿ ÿ Ŷ ŷ Ȳ ȳ Ẏ ẏ ẙ Ỷ ỷ Ỹ ỹ Ƴ ƴ Ɏ ɏ Ỿ ỿ Ỵ ỵ ʎ 𝼆 ꭚ ʏ ʸ 𐞠 𐞡 𐞲</d>
 		</f>
 		<f name="Z">
 			<f loc="MiscForms">
 				<d>Ʒ ʒ Ǯ ǯ ʓ ᶚ ƺ 𝼘 Ƹ ƹ ᴣ ᶾ Ꝣ ꝣ</d>
 			</f>
-			<f loc="TypoVar">
-				<d>ᴢ 🄩 ⒵ Ⓩ ⓩ 🅉 🅩 🆉 ℤ 𝕫</d>
-			</f>
-			<d>Ź ź Ż ż Ž ž Ẑ ẑ Ƶ ƶ ᵶ ʑ Ȥ ȥ Ⱬ ⱬ Ᶎ ᶎ Ɀ ɀ ʐ Ẓ ẓ Ẕ ẕ ᶻ ᶽ ᶼ</d>
+			<d>Ź ź Ż ż Ž ž Ẑ ẑ Ƶ ƶ ᵶ ʑ Ȥ ȥ Ⱬ ⱬ Ᶎ ᶎ Ɀ ɀ ʐ Ẓ ẓ Ẕ ẕ ᴢ ᶻ ᶽ ᶼ</d>
 		</f>
 	</f>
 	<f loc="Latin2">
@@ -338,6 +260,124 @@
 		</f>
 		<f name="Svenska / Swedish">
 			<d>Å å Ä ä Ö ö</d>
+		</f>
+	</f>
+	<f loc="Latin3" forgetTest="1">
+		<f loc="SmallCap" forgetTest="0" hasText="1">
+			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ʀ ꜱ ᴛ ᴜ ᴠ ᴡ ʏ ᴢ</d>
+		</f>
+		<f loc="ParenCap">
+			<range start="1F110" end="1F129" />
+		</f>
+		<f loc="ParenSmall">
+			<range start="249C" end="24B5" />
+		</f>
+		<f loc="CircCap">
+			<range start="24B6" end="24CF" />
+		</f>
+		<f loc="CircSmall">
+			<range start="24D0" end="24E9" />
+		</f>
+		<f loc="NegCircCap">
+			<range start="1F150" end="1F169" />
+		</f>
+		<f loc="SquareCap">
+			<range start="1F130" end="1F149" />
+		</f>
+		<f loc="NegSquareCap">
+			<range start="1F170" end="1F189" />
+		</f>
+		<f loc="BoldCap">
+			<range start="1D400" end="1D419" />
+		</f>
+		<f loc="BoldSmall">
+			<range start="1D41A" end="1D433" />
+		</f>
+		<f loc="ItalCap">
+			<range start="1D434" end="1D44D" />
+		</f>
+		<f loc="ItalSmall">
+			<range start="1D44E" end="1D454" />
+			<d>ℎ ℏ 𝑖 𝚤 𝑗 𝚥</d>
+			<range start="1D458" end="1D467" />
+		</f>
+		<f loc="BiCap">
+			<range start="1D468" end="1D481" />
+		</f>
+		<f loc="BiSmall">
+			<range start="1D482" end="1D49B" />
+		</f>
+		<f loc="ScrCap">
+			<d>𝒜 ℬ 𝒞 𝒟 ℰ ℱ 𝒢 ℋ ℐ 𝒥 𝒦 ℒ ℳ 𝒩 𝒪 𝒫 𝒬 ℛ</d>
+			<range start="1D4AE" end="1D4B5" />
+		</f>
+		<f loc="ScrSmall">
+			<range start="1D4B6" end="1D4B9" />
+			<d>ℯ 𝒻 ℊ</d>
+			<range start="1D4BD" end="1D4C1" />
+			<d>ℓ 𝓂 𝓃 ℴ</d>
+			<range start="1D4C5" end="1D4CF" />
+		</f>
+		<f loc="ScrBoldCap">
+			<range start="1D4D0" end="1D4E9" />
+		</f>
+		<f loc="ScrBoldSmall">
+			<range start="1D4EA" end="1D503" />
+		</f>
+		<f loc="DoubleCap">
+			<d>𝔸 𝔹 ℂ 𝔻 𝔼 𝔽 𝔾 ℍ 𝕀 𝕁 𝕂 𝕃 𝕄 ℕ 𝕆 ℙ ℚ ℝ 𝕊 𝕋 𝕌 𝕍 𝕎 𝕏 𝕐 ℤ</d>
+		</f>
+		<f loc="DoubleSmall">
+			<range start="1D552" end="1D56B" />
+		</f>
+		<f loc="DoubleMisc">
+			<d>ⅅ ⅆ ⅇ ⅈ ⅉ</d>
+		</f>
+		<f loc="FrakCap">
+			<d>𝔄 𝔅 ℭ 𝔇 𝔈 𝔉 𝔊 ℌ ℑ </d>
+			<range start="1D50D" end="1D514" />
+			<d>ℜ</d>
+			<range start="1D516" end="1D51C" />
+			<d>ℨ</d>
+		</f>
+		<f loc="FrakSmall">
+			<range start="1D51E" end="1D537" />
+		</f>
+		<f loc="FrakBoldCap">
+			<range start="1D56C" end="1D585" />
+		</f>
+		<f loc="FrakBoldSmall">
+			<range start="1D586" end="1D59F" />
+		</f>
+		<f loc="SansCap">
+			<range start="1D5A0" end="1D5B9" />
+		</f>
+		<f loc="SansSmall">
+			<range start="1D5BA" end="1D5D3" />
+		</f>
+		<f loc="SansBoldCap">
+			<range start="1D5D4" end="1D5ED" />
+		</f>
+		<f loc="SansBoldSmall">
+			<range start="1D5EE" end="1D607" />
+		</f>
+		<f loc="SansItalCap">
+			<range start="1D608" end="1D621" />
+		</f>
+		<f loc="SansItalSmall">
+			<range start="1D622" end="1D63B" />
+		</f>
+		<f loc="SansBiCap">
+			<range start="1D63C" end="1D655" />
+		</f>
+		<f loc="SansBiSmall">
+			<range start="1D656" end="1D66F" />
+		</f>
+		<f loc="MonoCap">
+			<range start="1D670" end="1D689" />
+		</f>
+		<f loc="MonoSmall">
+			<range start="1D68A" end="1D6A3" />
 		</f>
 	</f>
 	<f loc="Business">
