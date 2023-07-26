@@ -1,6 +1,7 @@
 #include "forget.h"
 
 // STL
+#include <unordered_set>
 #include <unordered_map>
 #include <fstream>
 
@@ -83,6 +84,7 @@ namespace {
         { 0x00A9,  true  },  // ©
         { 0x00AE,  true  },  // ®
         { 0x0149,  false },  // apos+n, banned from Unicode
+        { 0x01A6,  true  },  // Latin letter Yr, small is small-cap R
         { 0x210E,  true  },  // Planck constant, italic h
         { 0x210F,  true  },  // Same with bar
         { 0x2183,  true  },  // Number form, also letter reversed C
@@ -96,6 +98,16 @@ namespace {
         { 0x2147, 2 },      // same
         { 0x2148, 2 },      // same
         { 0x2149, 2 },      // same
+    };
+
+    const std::unordered_set<char32_t> caseOk {
+        0x0131,     // Dotless i, special Turkic rules
+        0x017F,     // Long s, upcases to normal S
+        0x01C6,     // Digraph dz with caron, cap→title→small
+        0x01C9,     // Digraph lj, same
+        0x01CC,     // Digraph nj, same
+        0x01F3,     // Digraph dz, same
+        0x1E9B,     // Long s with dot, upcases to normal S with dot
     };
 
 }   // anon namespace
@@ -270,6 +282,17 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
         if (q.second.lib.count > 0 && !q.second.computed.isIn) {
             println(q);
             ++r.nExtra;
+        }
+    }
+
+    secMan.arm("BAD CASE");
+    for (auto& q : map) {
+        if (q.second.lib.possibleCapital != 0
+                && q.second.database.capital != 0
+                && q.second.lib.possibleCapital != q.second.database.capital
+                && !caseOk.contains(q.first)) {
+            println(q);
+            ++r.nBadCase;
         }
     }
 

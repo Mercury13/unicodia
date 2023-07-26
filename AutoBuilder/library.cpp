@@ -405,7 +405,7 @@ namespace {
         auto text32 = mojibake::toS<std::u32string>(text8);
         auto sub32 = str::splitSv(text32, ' ');
         result.children.reserve(result.children.size() + sub32.size());
-        char32_t cap = 0;
+        char32_t cap = '!';     // something odd
         for (auto v : sub32) {
             auto& node = result.children.emplace_back();
             node.value = v;

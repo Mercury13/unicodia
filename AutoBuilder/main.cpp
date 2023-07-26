@@ -564,7 +564,14 @@ int main()
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
         }
 
-        forget::processCp(manualLib.forgetMap, cp, sLowerName, 0);
+        char32_t upCase = 0;
+        std::string_view upText = elChar.attribute("uc").as_string();
+        if (!upText.empty()             // Empty → no upper case
+                && upText[0] != '#'     // # → no upper case
+                && upText.find(' ') == std::string_view::npos) { // upcases to several chars like ẞ→SS → drop
+            upCase = fromHex(upText);
+        }
+        forget::processCp(manualLib.forgetMap, cp, sLowerName, upCase);
 
         for (auto& v : allAbbrevs) {
             strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
@@ -815,7 +822,8 @@ int main()
     std::cout << "Forgotten: " << std::dec
               << forgetStats.nRepeat << " repeating, "
               << forgetStats.nMissing << " missing, "
-              << forgetStats.nExtra << " extra, see " << FNAME_FORGET << "." << std::endl;
+              << forgetStats.nExtra << " extra, "
+              << forgetStats.nBadCase << " bad case, see " << FNAME_FORGET << "." << std::endl;
 
     ///// Done !! //////////////////////////////////////////////////////////////
 

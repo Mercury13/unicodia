@@ -45,6 +45,7 @@ namespace forget {
         unsigned nRepeat = 0;
         unsigned nMissing = 0;
         unsigned nExtra = 0;
+        unsigned nBadCase = 0;
     };
 
     Stats postprocess(const Map& map, const char* fname);
