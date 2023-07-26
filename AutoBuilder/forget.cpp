@@ -1,7 +1,6 @@
 #include "forget.h"
 
 // STL
-#include <unordered_set>
 #include <unordered_map>
 #include <fstream>
 
@@ -18,6 +17,8 @@ namespace {
         { "MODIFIER", ForgetChannel::SCRIPT },
         { "SUPERSCRIPT", ForgetChannel::SCRIPT },
         { "SUBSCRIPT", ForgetChannel::SCRIPT },
+        { "MATHEMATICAL", ForgetChannel::SCRIPT },
+        { "DOUBLE-STRUCK", ForgetChannel::SCRIPT },
 
         // Letter channel
         { "A", ForgetChannel::LETTER },
@@ -75,8 +76,9 @@ namespace {
         { "COMBINING", ForgetChannel::BAN },
     };
 
-    const std::unordered_set<char32_t> bannedCps {
-        0x0149,     // Actually banned from Unicode
+    const std::unordered_map<char32_t, bool> specialCps {
+        { 0x0149,  false },  // apos+n, banned from Unicode
+        { 0x2183,  true  },  // Number form, also letter reversed C
     };
 
 }   // anon namespace
@@ -84,12 +86,15 @@ namespace {
 
 bool forget::isIn(char32_t cp, std::string_view name)
 {
-    // ASCII, plane 2+ → never in
-    if (cp <= 127 || cp >= 0x2'0000)
+    // Ranges where never in
+    if ((cp <= 127)                             // ASCII
+            || (cp >= 0x1D6A8 && cp <= 0x1D7CB) // Math Greek
+            || (cp >= 0x2'0000))                // Plane 2+
         return false;
-    // Banned CP → never in
-    if (bannedCps.contains(cp))
-        return false;
+    // Special?
+    auto it = specialCps.find(cp);
+    if (it != specialCps.end())
+        return it->second;
     // Stock name → never in
     if (name.find('#') != std::string_view::npos)
         return false;
@@ -216,7 +221,7 @@ forget::Stats forget::postprocess(const Map& map, const char* fname)
         }
     }
 
-    secMan.arm("FORGOTTEN");
+    secMan.arm("MISSING");
     for (auto& q : map) {
         if (q.second.lib.count == 0 && q.second.computed.isIn) {
             print(q);

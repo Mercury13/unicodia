@@ -12152,6 +12152,30 @@
      <orig>Two diacritical marks</orig>
      <transl>Два диакритических знака</transl>
     </text>
+    <text id="TypoVar">
+     <orig>Typographic variations</orig>
+     <transl>Типографские варианты</transl>
+    </text>
+    <text id="DoubleStruck">
+     <orig>Double-struck</orig>
+     <transl>Ажурный</transl>
+    </text>
+    <text id="SansSerif">
+     <orig>Sans-serif</orig>
+     <transl>Без засечек</transl>
+    </text>
+    <text id="SsBold">
+     <orig>Sans-serif bold</orig>
+     <transl>Без засечек жирный</transl>
+    </text>
+    <text id="Monospace">
+     <orig>Monospace</orig>
+     <transl>Моноширинный</transl>
+    </text>
+    <text id="Bold">
+     <orig>Bold</orig>
+     <transl>Жирный</transl>
+    </text>
    </group>
   </group>
   <group id="Version">

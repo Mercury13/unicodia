@@ -1,5 +1,9 @@
 #pragma once
 
+///
+/// Checking for forgotten codepoints in Library/Latin
+///
+
 #include <string>
 #include <map>
 

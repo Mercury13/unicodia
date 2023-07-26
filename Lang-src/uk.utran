@@ -12153,6 +12153,30 @@
      <orig>Two diacritical marks</orig>
      <transl>Два діакритичних знаки</transl>
     </text>
+    <text id="TypoVar">
+     <orig>Typographic variations</orig>
+     <transl>Типографські варіанти</transl>
+    </text>
+    <text id="DoubleStruck">
+     <orig>Double-struck</orig>
+     <transl>Ажурний</transl>
+    </text>
+    <text id="SansSerif">
+     <orig>Sans-serif</orig>
+     <transl>Без засічок</transl>
+    </text>
+    <text id="SsBold">
+     <orig>Sans-serif bold</orig>
+     <transl>Без засічок жирний</transl>
+    </text>
+    <text id="Monospace">
+     <orig>Monospace</orig>
+     <transl>Моноширинний</transl>
+    </text>
+    <text id="Bold">
+     <orig>Bold</orig>
+     <transl>Жирний</transl>
+    </text>
    </group>
   </group>
   <group id="Version">

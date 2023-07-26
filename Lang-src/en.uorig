@@ -8445,6 +8445,24 @@
     <text id="TwoDiac">
      <orig>Two diacritical marks</orig>
     </text>
+    <text id="TypoVar">
+     <orig>Typographic variations</orig>
+    </text>
+    <text id="DoubleStruck">
+     <orig>Double-struck</orig>
+    </text>
+    <text id="SansSerif">
+     <orig>Sans-serif</orig>
+    </text>
+    <text id="SsBold">
+     <orig>Sans-serif bold</orig>
+    </text>
+    <text id="Monospace">
+     <orig>Monospace</orig>
+    </text>
+    <text id="Bold">
+     <orig>Bold</orig>
+    </text>
    </group>
   </group>
   <group id="Version">
