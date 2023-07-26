@@ -419,6 +419,9 @@ namespace {
                 }
                 cap = cp;
             } else {
+                if (isForgetTest) {
+                    throw std::logic_error("String of non-1 length under forget test");
+                }
                 cap = 0;
             }
         }
