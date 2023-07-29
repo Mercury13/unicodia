@@ -89,6 +89,8 @@ namespace {
         { 0x01A6,  true  },  // Latin letter Yr, small is small-cap R
         { 0x210E,  true  },  // Planck constant, italic h
         { 0x210F,  true  },  // Same with bar
+        { 0x212A,  false },  // kelvin sign
+        { 0x212B,  false },  // angstrom sign
         { 0x2183,  true  },  // Number form, also letter reversed C
         { 0x10781, false },  // modifier letter Superscript triangular colon
         { 0x10782, false },  // modifier letter Superscript half triangular colon
