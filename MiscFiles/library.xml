@@ -216,6 +216,12 @@
 		<f name="Español / Spanish">
 			<d>Á á É é Í í Ñ ñ Ó ó Ú ú Ü ü</d>
 		</f>
+		<f name="Esperanto">
+			<d>Ĉ ĉ Ĝ ĝ Ĥ ĥ Ĵ ĵ Ŝ ŝ Ŭ ŭ</d>
+		</f>
+		<f name="Føroyskt / Faroese">
+			<d>Á á Ð ð Í í Ó ó Ú ú Ý ý Æ æ Ø ø</d>
+		</f>
 		<f name="Français / French">
 			<d>Â â À à Æ æ Ç ç É é Ê ê È è Ë ë Î î Ï ï Ô ô Œ œ Û û Ù ù Ü ü Ÿ ÿ</d>
 		</f>
@@ -240,6 +246,9 @@
 		<f name="Polski / Polish">
 			<d>Ą ą Ć ć Ę ę Ł ł Ń ń Ó ó Ś ś Ź ź Ż ż</d>
 		</f>
+		<f name="Português / Portuguese">
+			<d>Á á Â â Ã ã À à Ç ç É é Ê ê Í í Ó ó Ô ô Õ õ Ú ú</d>
+		</f>
 		<f name="Qırımtatar / Crimean Tatar">
 			<d>Ç ç Ğ ğ İ ı Ñ ñ Ö ö Ş ş Ü ü</d>
 		</f>
@@ -249,17 +258,26 @@
 				<d>Ş ş Ţ ţ</d>
 			</f>
 		</f>
+		<f name="Shqip / Albanian">
+			<d>Ç ç Ë ë</d>
+		</f>
 		<f name="Slovenčina / Slovak">
 			<d>Á á Ä ä Č č Ď ď É é Í í Ĺ ĺ Ľ ľ Ň ň Ó ó Ô ô Ŕ ŕ Š š Ť ť Ú ú Ý ý Ž ž</d>
+		</f>
+		<f name="Slovenščina / Slovenian">
+			<d>Č č Š š Ž ž</d>
 		</f>
 		<f name="Suomi / Finnish">
 			<d>Š š Ž ž Å å Ä ä Ö ö</d>
 		</f>
+		<f name="Svenska / Swedish">
+			<d>Å å Ä ä Ö ö</d>
+		</f>
 		<f name="Türkçe / Turkish">
 			<d>Ç ç Ğ ğ İ ı Ö ö Ş ş Ü ü</d>
 		</f>
-		<f name="Svenska / Swedish">
-			<d>Å å Ä ä Ö ö</d>
+		<f name="Türkmen / Turkmen">
+			<d>Ç ç Ä ä Ž ž Ň ň Ö ö Ş ş Ü ü Ý ý</d>
 		</f>
 	</f>
 	<f loc="Latin3" forgetTest="1">
