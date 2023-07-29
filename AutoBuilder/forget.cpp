@@ -82,9 +82,7 @@ namespace {
 
     const std::unordered_map<char32_t, bool> specialCps {
         { 0x00A9,  true  },  // ©
-        { 0x00AA,  false },  // feminine ordinal indicator
         { 0x00AE,  true  },  // ®
-        { 0x00BA,  false },  // masculine ordinal indicator
         { 0x0149,  false },  // apos+n, banned from Unicode
         { 0x01A6,  true  },  // Latin letter Yr, small is small-cap R
         { 0x210E,  true  },  // Planck constant, italic h
@@ -92,6 +90,9 @@ namespace {
         { 0x212A,  false },  // kelvin sign
         { 0x212B,  false },  // angstrom sign
         { 0x2183,  true  },  // Number form, also letter reversed C
+        { 0x02C0,  true  },  // modifier letter Glottal stop
+        { 0x02C1,  true  },  // modifier letter Reversed glottal stop
+        { 0xA71D,  true  },  // modifier letter Raised exclamation mark
         { 0x10781, false },  // modifier letter Superscript triangular colon
         { 0x10782, false },  // modifier letter Superscript half triangular colon
         { 0x1F1AD, true  },  // mask work symbol
@@ -104,6 +105,7 @@ namespace {
         { 0x2147, 2 },      // same
         { 0x2148, 2 },      // same
         { 0x2149, 2 },      // same
+        { 0xA770, 2 },      // Scribal abbreviation, means -us, looks like smaller con-
     };
 
     const std::unordered_set<char32_t> caseOk {

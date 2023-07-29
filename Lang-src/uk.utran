@@ -12325,6 +12325,14 @@
      <orig>CJK fullwidth / small</orig>
      <transl>ККЯ повноширинні / малі</transl>
     </text>
+    <text id="MiscLat">
+     <orig>Latin letter of different origin</orig>
+     <transl>Латинські літери різного походження</transl>
+    </text>
+    <text id="Clicks">
+     <orig>Clicks</orig>
+     <transl>Клацальні</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

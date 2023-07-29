@@ -8574,6 +8574,12 @@
     <text id="CjkSmall">
      <orig>CJK fullwidth / small</orig>
     </text>
+    <text id="MiscLat">
+     <orig>Latin letter of different origin</orig>
+    </text>
+    <text id="Clicks">
+     <orig>Clicks</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
