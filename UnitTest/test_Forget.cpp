@@ -7,5 +7,5 @@
 
 TEST (Forget, Bug1)
 {
-    EXPECT_FALSE(forget::isIn(0x1E048, "modifier letter Cyrillic small E"));
+    EXPECT_FALSE(forget::isIn(0x1E048, "modifier letter Cyrillic small E", ""));
 }
