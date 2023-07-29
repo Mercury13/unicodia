@@ -8586,6 +8586,12 @@
     <text id="SuperSmall">
      <orig>Superscript / small</orig>
     </text>
+    <text id="InvSmall">
+     <orig>Turned-over / small</orig>
+    </text>
+    <text id="RevSmall">
+     <orig>Reversed / small</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

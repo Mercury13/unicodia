@@ -12341,6 +12341,10 @@
      <orig>Superscript / small</orig>
      <transl>Верхній індекс / малі</transl>
     </text>
+    <text id="InvSmall">
+     <orig>Turned-over / small</orig>
+     <transl>Перевернуті / малі</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
