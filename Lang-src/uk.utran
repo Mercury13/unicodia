@@ -12333,6 +12333,14 @@
      <orig>Clicks</orig>
      <transl>Клацальні</transl>
     </text>
+    <text id="SuperCap">
+     <orig>Superscript / capital</orig>
+     <transl>Верхній індекс / великі</transl>
+    </text>
+    <text id="SuperSmall">
+     <orig>Superscript / small</orig>
+     <transl>Верхній індекс / малі</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

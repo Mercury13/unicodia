@@ -12332,6 +12332,14 @@
      <orig>Clicks</orig>
      <transl>Щелчки</transl>
     </text>
+    <text id="SuperCap">
+     <orig>Superscript / capital</orig>
+     <transl>Верхний индекс / заглавные</transl>
+    </text>
+    <text id="SuperSmall">
+     <orig>Superscript / small</orig>
+     <transl>Верхний индекс / строчные</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

@@ -8580,6 +8580,12 @@
     <text id="Clicks">
      <orig>Clicks</orig>
     </text>
+    <text id="SuperCap">
+     <orig>Superscript / capital</orig>
+    </text>
+    <text id="SuperSmall">
+     <orig>Superscript / small</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
