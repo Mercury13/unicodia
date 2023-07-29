@@ -1885,6 +1885,7 @@ struct RangeByEnd {
 constexpr bool operator < (const RangeByEnd& x, const RangeByEnd& y) { return (x.b < y.b); }
 
 const std::set<RangeByEnd> alternateRanges {
+    { 0x1D66, 0x1D6A },     // Clipped below in Cambria
     { 0x1E00, 0x1E01 },     // Clipped below in Cambria
     { 0x1E5C, 0x1E5D },     // Misplaced umlaut in Cambria
     { 0x1E68, 0x1E69 },     // Same

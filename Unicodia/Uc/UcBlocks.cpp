@@ -301,11 +301,12 @@ constinit const uc::Block uc::blocks[] {
     { 0x1D00, 0x1D7F, { 0x1D6F, EcContinent::NONE },
             "Phonetic Extensions",
             MyName::INST, MapType::EU_LATIN,
-            EcScript::NONE, EcFont::NORMAL, Bfg::FORCE_FONT },
+            EcScript::NONE, EcFont::LATIN },
     // Phonetic ext supp OK
     { 0x1D80, 0x1DBF, { 0x1D95, EcContinent::NONE, {}, SvgHint{ 12, 6 } },
             "Phonetic Extensions Supplement",
-            MyName::INST, MapType::EU_LATIN, },
+            MyName::INST, MapType::EU_LATIN,
+            EcScript::NONE, EcFont::LATIN },
     // Combining supp OK, fixed manually in Noto
     { 0x1DC0, 0x1DFF, { 0x1DD4, EcContinent::NONE },
             "Combining Diacritical Marks Supplement",
