@@ -75,19 +75,23 @@ namespace {
         // Banned
         { "CYRILLIC", ForgetChannel::BAN },
         { "SAMARITAN", ForgetChannel::BAN },
-        { "FULLWIDTH", ForgetChannel::BAN },
         { "COMBINING", ForgetChannel::BAN },
         { "BALLOT", ForgetChannel::BAN },       // Some UI character
+        { "NUMERAL", ForgetChannel::BAN },      // Roman numerals
     };
 
     const std::unordered_map<char32_t, bool> specialCps {
         { 0x00A9,  true  },  // ©
+        { 0x00AA,  false },  // feminine ordinal indicator
         { 0x00AE,  true  },  // ®
+        { 0x00BA,  false },  // masculine ordinal indicator
         { 0x0149,  false },  // apos+n, banned from Unicode
         { 0x01A6,  true  },  // Latin letter Yr, small is small-cap R
         { 0x210E,  true  },  // Planck constant, italic h
         { 0x210F,  true  },  // Same with bar
         { 0x2183,  true  },  // Number form, also letter reversed C
+        { 0x10781, false },  // modifier letter Superscript triangular colon
+        { 0x10782, false },  // modifier letter Superscript half triangular colon
         { 0x1F1AD, true  },  // mask work symbol
     };
 
@@ -113,7 +117,7 @@ namespace {
 }   // anon namespace
 
 
-bool forget::isIn(char32_t cp, std::string_view name)
+bool forget::isIn(char32_t cp, std::string_view name, std::string_view script)
 {
     // Ranges where never in
     if ((cp <= 127)                             // ASCII
@@ -124,6 +128,7 @@ bool forget::isIn(char32_t cp, std::string_view name)
     auto it = specialCps.find(cp);
     if (it != specialCps.end())
         return it->second;
+    // Latin?
     // Stock name → never in
     if (name.find('#') != std::string_view::npos)
         return false;
@@ -145,7 +150,8 @@ bool forget::isIn(char32_t cp, std::string_view name)
             }
         }
     }
-    return hasScript && hasLetter;
+    return (hasScript && hasLetter) || (script == "Latn");
+;
 }
 
 
@@ -162,9 +168,10 @@ namespace {
 }   // anon namespace
 
 
-void forget::processCp(Map& map, char32_t cp, std::string_view name, char32_t capital)
+void forget::processCp(Map& map, char32_t cp, std::string_view name,
+                       std::string_view script, char32_t capital)
 {
-    if (isIn(cp, name)) {
+    if (isIn(cp, name, script)) {
         auto& q = map[cp];
         reg(q, name, capital, true);
     } else {

@@ -12316,6 +12316,14 @@
      <orig>Monospace / small</orig>
      <transl>Моноширинный / строчные</transl>
     </text>
+    <text id="CjkCap">
+     <orig>CJK fullwidth / capital</orig>
+     <transl>ККЯ полноширинные / заглавные</transl>
+    </text>
+    <text id="CjkSmall">
+     <orig>CJK fullwidth / small</orig>
+     <transl>ККЯ полноширинные / строчные</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

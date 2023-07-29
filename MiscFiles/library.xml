@@ -397,6 +397,12 @@
 		<f loc="MonoSmall">
 			<range start="1D68A" end="1D6A3" />
 		</f>
+		<f loc="CjkCap">
+			<range start="FF21" end="FF3A" />
+		</f>
+		<f loc="CjkSmall">
+			<range start="FF41" end="FF5A" />
+		</f>
 	</f>
 	<f loc="Business">
 		<f loc="Currencies">

@@ -37,9 +37,10 @@ namespace forget {
     using Map = std::map<char32_t, Cp>;
 
     ///  @return [+] the codepoint should be in library
-    bool isIn(char32_t cp, std::string_view name);
+    bool isIn(char32_t cp, std::string_view name, std::string_view script);
 
-    void processCp(Map& map, char32_t cp, std::string_view name, char32_t capital);
+    void processCp(Map& map, char32_t cp, std::string_view name,
+                   std::string_view script, char32_t capital);
 
     struct Stats {
         unsigned nRepeat = 0;

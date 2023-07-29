@@ -564,15 +564,6 @@ int main()
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
         }
 
-        char32_t upCase = 0;
-        std::string_view upText = elChar.attribute("uc").as_string();
-        if (!upText.empty()             // Empty → no upper case
-                && upText[0] != '#'     // # → no upper case
-                && upText.find(' ') == std::string_view::npos) { // upcases to several chars like ẞ→SS → drop
-            upCase = fromHex(upText);
-        }
-        forget::processCp(manualLib.forgetMap, cp, sLowerName, upCase);
-
         for (auto& v : allAbbrevs) {
             strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
         }
@@ -699,6 +690,15 @@ int main()
         //    std::cout << sCp << " has sc=" << sScript << ", scx=" << sScriptX << std::endl;
         //}
         os << "EcScript::" << sScript << ", ";
+
+        char32_t upCase = 0;
+        std::string_view upText = elChar.attribute("uc").as_string();
+        if (!upText.empty()             // Empty → no upper case
+                && upText[0] != '#'     // # → no upper case
+                && upText.find(' ') == std::string_view::npos) { // upcases to several chars like ẞ→SS → drop
+            upCase = fromHex(upText);
+        }
+        forget::processCp(manualLib.forgetMap, cp, sLowerName, sScript, upCase);
 
         // Char’s numeric values
         // nt = …

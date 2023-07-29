@@ -8568,6 +8568,12 @@
     <text id="MonoSmall">
      <orig>Monospace / small</orig>
     </text>
+    <text id="CjkCap">
+     <orig>CJK fullwidth / capital</orig>
+    </text>
+    <text id="CjkSmall">
+     <orig>CJK fullwidth / small</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
