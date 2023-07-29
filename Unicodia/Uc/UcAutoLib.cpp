@@ -7066,12 +7066,12 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u0070", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7060
 { U"\u01DD", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7061
 { U"\u025F", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7062
-{ U"\u0183", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7063
+{ U"\u1D77", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7063
 { U"\u0265", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7064
-{ U"\u0131", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7065
+{ U"\u1D09", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7065
 { U"\u027E", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7066
 { U"\u029E", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7067
-{ U"\u006C", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7068
+{ U"\uA781", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7068
 { U"\u026F", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7069
 { U"\u0075", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7070
 { U"\u006F", {}, 6064, 0, -1, {}, EcVersion::NONE },   // 7071
