@@ -24,11 +24,13 @@ std::string kage::BadSource::getKage(std::string_view) const
 ///// toSvg ////////////////////////////////////////////////////////////////////
 
 
+constexpr std::string_view SEPARATORS = "\r" "\n" "$";
+
+
 std::string kage::toSvg(std::string_view source, const SourceEngine&)
 {
     std::string r;
 
-    static constexpr std::string_view SEPARATORS = "\r" "\n" "$";
     auto lines = str::splitByAnySv(source, SEPARATORS);
 
     return r;
