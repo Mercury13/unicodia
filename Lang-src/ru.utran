@@ -11226,14 +11226,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally.</p>
+      <p>[[ps:Sogd|Sogdian]] and derivative scripts are written left to right in columns, with continuous line. Most computer programs only write horizontally, so the simplest solution is to turn the writing.</p>
       <p />
       <p>[[ps:Mong|Mongolian]] and [[ps:Phag|Phags-Pa]] are turned 90° anticlockwise (left to right) for historical reasons.</p>
       <p />
       <p>Sogdian and [[ps:Ougr|Uyghur]] are turned 90° clockwise (right to left).</p>
      </orig>
      <transl>
-      <p>[[ps:Sogd|Согдийская]] и производные письменности пишутся слева направо по столбцам, сплошной вязью. Большинство компьютерных программ пишут только горизонтально.</p>
+      <p>[[ps:Sogd|Согдийская]] и производные письменности пишутся слева направо по столбцам, сплошной вязью. Большинство компьютерных программ пишут только горизонтально, и проще всего повернуть надпись.</p>
       <p />
       <p>[[ps:Mong|Монгольская]] и [[ps:Phag|Пагба-ламы]] по историческим причинам повёрнуты на 90° против часовой стрелки (слева направо).</p>
       <p />
