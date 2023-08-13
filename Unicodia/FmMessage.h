@@ -24,14 +24,19 @@ public:
     void setPopupOpacity(float x);
 public slots:
     void setPopupText(const QString& text);
-    void moveTo(const QWidget* widget, const QRect& globalRect);
+    void moveNear(const QWidget* widget, const QRect& globalRect);
+    void moveOver(const QWidget* widget, const QRect& globalRect);
     void show();
-    void showAtAbs(const QString& text, const QWidget* widget, const QRect& globalRect);
-    void showAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
-    void showAtWidget(const QString& text, const QWidget* widget);
+    void showNearAbs(const QString& text, const QWidget* widget, const QRect& globalRect);
+    void showOverAbs(const QString& text, const QWidget* widget, const QRect& globalRect);
+    void showNearRel(const QString& text, const QWidget* widget, const QRect& relRect);
+    void showOverRel(const QString& text, const QWidget* widget, const QRect& relRect);
+    void showNearWidget(const QString& text, const QWidget* widget);
+    void showOverWidget(const QString& text, const QWidget* widget);
 protected:
     void paintEvent(QPaintEvent*) override;
 private:
+    enum class MoveMode { LEAVE, COVER };
     std::unique_ptr<QGridLayout> layout;
     std::unique_ptr<QLabel> label;
     std::unique_ptr<QPropertyAnimation> animation;
@@ -39,6 +44,7 @@ private:
     float fPopupOpacity;
 
     void setY(const QRect& globalRect, const QRect& screenRect, int y);
+    QRect screenRectAt(const QWidget* widget, const QRect& globalRect) const;
 private slots:
     void hideAnimation();
     void finalHide();

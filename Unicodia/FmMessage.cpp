@@ -137,7 +137,7 @@ void FmMessage::setY(const QRect& globalRect, const QRect& screenRect, int y)
 }
 
 
-void FmMessage::moveTo(const QWidget* widget, const QRect& globalRect)
+QRect FmMessage::screenRectAt(const QWidget* widget, const QRect& globalRect) const
 {
     auto screen = QApplication::screenAt(globalRect.center());
     if (!screen) {
@@ -145,8 +145,15 @@ void FmMessage::moveTo(const QWidget* widget, const QRect& globalRect)
         if (!screen)
             screen = QApplication::primaryScreen();
     }
+    return screen->availableGeometry();
+}
 
-    auto screenRect = screen->availableGeometry();
+
+void FmMessage::moveNear(
+        const QWidget* widget, const QRect& globalRect)
+{
+    auto screenRect = screenRectAt(widget, globalRect);
+
     auto myH = height();
     if (auto bottomRemainder = screenRect.bottom() - globalRect.bottom();
             bottomRemainder >= myH) {
@@ -163,22 +170,58 @@ void FmMessage::moveTo(const QWidget* widget, const QRect& globalRect)
 }
 
 
-void FmMessage::showAtAbs(const QString& text, const QWidget* widget, const QRect& globalRect)
+void FmMessage::moveOver(const QWidget* widget, const QRect& globalRect)
+{
+    auto screenRect = screenRectAt(widget, globalRect);
+
+    auto myH = height();
+    auto myY = globalRect.top() + (globalRect.height() - myH) / 2;
+    myY = std::min(myY, screenRect.bottom() + 1 - myH);
+    myY = std::max(myY, screenRect.top());
+    setY(globalRect, screenRect, myY);
+}
+
+
+void FmMessage::showNearAbs(const QString& text, const QWidget* widget, const QRect& globalRect)
 {
     setPopupText(text);
-    moveTo(widget, globalRect);
+    moveNear(widget, globalRect);
     show();
 }
 
 
-void FmMessage::showAtWidget(const QString& text, const QWidget* widget)
+void FmMessage::showOverAbs(const QString& text, const QWidget* widget, const QRect& globalRect)
 {
-    showAtAbs(text, widget,
+    setPopupText(text);
+    moveOver(widget, globalRect);
+    show();
+}
+
+
+void FmMessage::showNearWidget(const QString& text, const QWidget* widget)
+{
+    showNearAbs(text, widget,
               QRect { widget->mapToGlobal(QPoint{0, 0}), widget->size() });
 }
 
-void FmMessage::showAtRel(const QString& text, const QWidget* widget, const QRect& relRect)
+
+void FmMessage::showOverWidget(const QString& text, const QWidget* widget)
+{
+    showOverAbs(text, widget,
+              QRect { widget->mapToGlobal(QPoint{0, 0}), widget->size() });
+}
+
+
+
+void FmMessage::showNearRel(const QString& text, const QWidget* widget, const QRect& relRect)
 {
     QRect absRect { widget->mapToGlobal(relRect.topLeft()), relRect.size() };
-    showAtAbs(text, widget, absRect);
+    showNearAbs(text, widget, absRect);
+}
+
+
+void FmMessage::showOverRel(const QString& text, const QWidget* widget, const QRect& relRect)
+{
+    QRect absRect { widget->mapToGlobal(relRect.topLeft()), relRect.size() };
+    showOverAbs(text, widget, absRect);
 }

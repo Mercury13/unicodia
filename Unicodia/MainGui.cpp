@@ -57,21 +57,21 @@ void MyGui::popupLinkActivated(const QString& link)
 void MyGui::blinkCopied(QWidget* widget, const QRect& absRect)
 {
     fmMessage.ensure(wiMain)
-             .showAtAbs(loc::get("Common.Copied"), widget, absRect);
+             .showNearAbs(loc::get("Common.Copied"), widget, absRect);
 }
 
 
 void MyGui::blinkAtWidget(const QString& text, QWidget* widget)
 {
     fmMessage.ensure(wiMain)
-             .showAtWidget(text, widget);
+             .showNearWidget(text, widget);
 }
 
 
 void MyGui::blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect)
 {
     fmMessage.ensure(wiMain)
-             .showAtRel(text, widget, relRect);
+             .showNearRel(text, widget, relRect);
 }
 
 
