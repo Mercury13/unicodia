@@ -2,6 +2,9 @@
 
 #include <string>
 
+#include "u_Array.h"
+#include "u_Vector.h"
+
 namespace kage {
 
     class SourceEngine
@@ -25,6 +28,16 @@ namespace kage {
         static const BadSource INST;
     };
 
+    constexpr std::string_view SEPARATORS = "\r" "\n" "$";
+
+    SafeVector<std::string_view> splitIntoLinesSv(std::string_view source);
+
+    using Line = Fix1d<float, 11>;
+    struct Glyph {
+        SafeVector<Line> lines;
+    };
+
+    Glyph toGlyph(std::string_view source, const SourceEngine& engine);
     std::string toSvg(std::string_view source, const SourceEngine& engine);
 
 }   // namespace kage
