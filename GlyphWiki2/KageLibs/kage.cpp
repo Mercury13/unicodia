@@ -54,8 +54,20 @@ namespace {
         CONNECT_VERTICAL = 32,
     };
 
+}   // anon namespace
 
+
+std::string kage::Glyph::toSvg() const
+{
+    std::string r;
+
+    /// @todo [urgent] to Svg
+
+    return r;
 }
+
+
+///// Misc /////////////////////////////////////////////////////////////////////
 
 
 SafeVector<std::string_view> kage::splitIntoLinesSv(std::string_view source)
@@ -69,6 +81,7 @@ kage::Glyph kage::toGlyph(std::string_view source, const SourceEngine& engine)
     Glyph r;
     auto lines = splitIntoLinesSv(source);
     for (auto line : lines) {
+        auto& q = r.lines.emplace_back();
         /// @todo [urgent] what to do with lines?
     }
     return r;
@@ -76,8 +89,5 @@ kage::Glyph kage::toGlyph(std::string_view source, const SourceEngine& engine)
 
 std::string kage::toSvg(std::string_view source, const SourceEngine& engine)
 {
-    auto glyph = toGlyph(source, engine);
-    std::string r;
-
-    return r;
+    return toGlyph(source, engine).toSvg();
 }
