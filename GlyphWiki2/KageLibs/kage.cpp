@@ -81,7 +81,9 @@ kage::Glyph kage::toGlyph(std::string_view source, const SourceEngine& engine)
     Glyph r;
     auto lines = splitIntoLinesSv(source);
     for (auto line : lines) {
+        auto columns = str::splitSv(line, ':', false);
         auto& q = r.lines.emplace_back();
+
         /// @todo [urgent] what to do with lines?
     }
     return r;

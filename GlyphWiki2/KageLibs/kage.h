@@ -2,8 +2,10 @@
 
 #include <string>
 
+// Libs
 #include "u_Array.h"
 #include "u_Vector.h"
+#include "u_MaybeInt.h"
 
 namespace kage {
 
@@ -34,9 +36,8 @@ namespace kage {
     SafeVector<std::string_view> splitIntoLinesSv(std::string_view source);
 
     struct Line {
-        Fix1d<float, 11> d;
-        Line() noexcept
-            { std::fill(d.begin(), d.end(), std::numeric_limits<float>::quiet_NaN()); }
+        using T = MaybeInt<int>;
+        Fix1d<T, 11> d;
     };
 
     struct Glyph {

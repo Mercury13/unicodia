@@ -21,6 +21,7 @@ SOURCES += \
 HEADERS += \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../KageLibs/kage.h \
+    ../KageLibs/u_MaybeInt.h \
     FmMain.h
 
 FORMS += \
