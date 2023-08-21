@@ -35,9 +35,10 @@ namespace kage {
 
     SafeVector<std::string_view> splitIntoLinesSv(std::string_view source);
 
+    constexpr unsigned LINE_SIZE = 11;
     struct Line {
         using T = MaybeInt<int>;
-        Fix1d<T, 11> d;
+        Fix1d<T, LINE_SIZE> d;
     };
 
     struct Glyph {

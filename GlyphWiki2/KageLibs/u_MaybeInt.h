@@ -20,6 +20,7 @@ public:
     static constexpr T MAX_VALUE = IS_SIGNED ? std::numeric_limits<T>::max() : std::numeric_limits<T>::max() - 1;
 
     constexpr MaybeInt() noexcept = default;
+    constexpr MaybeInt(const MaybeInt&) noexcept = default;
     constexpr MaybeInt(T y) noexcept : x(y) {}
 
     constexpr MaybeInt& operator = (const This& y) noexcept = default;
@@ -58,7 +59,7 @@ auto MaybeInt<T>::fromStr(std::string_view y) -> This
                  std::to_address(y.end()),
                  r.x);
     if (q.ec != std::errc{}) {
-        q.x = NO_VALUE;
+        r.x = NO_VALUE;
     }
     return r;
 }
