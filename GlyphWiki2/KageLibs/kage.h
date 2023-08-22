@@ -31,7 +31,7 @@ namespace kage {
     };
 
     constexpr std::string_view SEPARATORS = "\r" "\n" "$";
-    constexpr int SIZE = 200;
+    constexpr int GLYPH_SIZE = 200;
 
     SafeVector<std::string_view> splitIntoLinesSv(std::string_view source);
 
