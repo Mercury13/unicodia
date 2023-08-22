@@ -41,12 +41,47 @@ namespace kage {
         Fix1d<T, LINE_SIZE> d;
     };
 
+    enum class Style { SANS, SERIF };
+    struct GlyphSets {
+        Style style = Style::SANS;
+        int kMinWidthY = 2;
+        int kMinWidthU = 2;
+        int kMinWidthT = 6;
+        int kWidth = 5;
+        int kKakato = 3;
+        float kL2RDfatten = 1.1;
+        int kMage = 10;
+        int kUseCurve = 0;
+
+        int kAdjustKakatoL[5] { 14, 9, 5, 2, 0 }; // for KAKATO adjustment 000,100,200,300,400
+        int kAdjustKakatoR[4] { 8, 6, 4, 2 }; // for KAKATO adjustment 000,100,200,300
+        int kAdjustKakatoRangeX = 20; // check area width
+        int kAdjustKakatoRangeY[10] { 1, 19, 24, 30 }; // 3 steps of checking
+        int kAdjustKakatoStep = 3; // number of steps
+
+        int kAdjustUrokoX[4] { 24, 20, 16, 12 }; // for UROKO adjustment 000,100,200,300
+        int kAdjustUrokoY[4] { 12, 11, 9, 8 }; // for UROKO adjustment 000,100,200,300
+        int kAdjustUrokoLength[10] { 22, 36, 50 }; // length for checking
+        int kAdjustUrokoLengthStep = 3; // number of steps
+        int kAdjustUrokoLine[10] { 22, 26, 30 }; // check for crossing. corresponds to length
+
+        int kAdjustUroko2Step = 3;
+        int kAdjustUroko2Length = 40;
+
+        int kAdjustTateStep = 4;
+
+        int kAdjustMageStep = 5;
+    };
+
     struct Glyph {
         SafeVector<Line> lines;
-        std::string toSvg() const;
+        std::string toSvg(const GlyphSets& sets) const;
     };
 
     Glyph toGlyph(std::string_view source, const SourceEngine& engine);
-    std::string toSvg(std::string_view source, const SourceEngine& engine);
+    std::string toSvg(
+            std::string_view source,
+            const SourceEngine& engine,
+            const GlyphSets& sets);
 
 }   // namespace kage

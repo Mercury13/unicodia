@@ -72,7 +72,7 @@ namespace {
 }   // anon namespace
 
 
-std::string kage::Glyph::toSvg() const
+std::string kage::Glyph::toSvg(const GlyphSets& sets) const
 {
     std::string r;
 
@@ -124,41 +124,49 @@ namespace {
         throw std::logic_error("[appendStrokesOfBuhin] Not implemented");
     }
 
+    void appendGlyph(kage::Glyph& r, std::string_view source, const kage::SourceEngine& engine)
+    {
+        auto lines = kage::splitIntoLinesSv(source);
+        for (auto line : lines) {
+            auto columns = str::splitSv(line, ':', false);
+            auto col0 = parseInt(columns, I_THING, "[toGlyph] Cannot parse column 0");
+            if (col0 == STROKE_LINK) {
+                auto target = columns.safeGetV(I_LINK_TARGET, "");
+                if (target.empty())
+                    throw std::logic_error("[toGlyph] No link found");
+                auto source = engine.getKage(target);
+                auto x1  = parseInt(columns, I_LINK_X1,  "[toGlyph] Cannot parse link x1 (=column 3)");
+                auto y1  = parseInt(columns, I_LINK_Y1,  "[toGlyph] Cannot parse link y1 (=column 4)");
+                auto x2  = parseInt(columns, I_LINK_X2,  "[toGlyph] Cannot parse link x2 (=column 5)");
+                auto y2  = parseInt(columns, I_LINK_Y2,  "[toGlyph] Cannot parse link y2 (=column 6)");
+                auto sx  = parseInt(columns, I_LINK_SX,  "[toGlyph] Cannot parse link sx (=column 1)");
+                auto sy  = parseInt(columns, I_LINK_SY,  "[toGlyph] Cannot parse link sy (=column 2)");
+                auto sx2 = parseInt(columns, I_LINK_SX2, "[toGlyph] Cannot parse link sx2 (=column 9)");
+                auto sy2 = parseInt(columns, I_LINK_SY2, "[toGlyph] Cannot parse link sy2 (=column 10)");
+                appendStrokesOfBuhin(r, source, x1, y1, x2, y2, sx, sy, sx2, sy2);
+            } else {
+                auto& newLine = r.lines.emplace_back();
+                auto sz = std::min<size_t>(columns.size(), kage::LINE_SIZE);
+                for (size_t j = 0; j < sz; ++j)
+                    newLine.d[j] = MaybeInt<int>::fromStr(columns[j]);
+            }
+        }
+    }
+
 }   // anon namespace
 
 
 kage::Glyph kage::toGlyph(std::string_view source, const SourceEngine& engine)
 {
     Glyph r;
-    auto lines = splitIntoLinesSv(source);
-    for (auto line : lines) {
-        auto columns = str::splitSv(line, ':', false);
-        auto col0 = parseInt(columns, I_THING, "[toGlyph] Cannot parse column 0");
-        if (col0 == STROKE_LINK) {
-            auto target = columns.safeGetV(I_LINK_TARGET, "");
-            if (target.empty())
-                throw std::logic_error("[toGlyph] No link found");
-            auto source = engine.getKage(target);
-            auto x1  = parseInt(columns, I_LINK_X1,  "[toGlyph] Cannot parse link x1 (=column 3)");
-            auto y1  = parseInt(columns, I_LINK_Y1,  "[toGlyph] Cannot parse link y1 (=column 4)");
-            auto x2  = parseInt(columns, I_LINK_X2,  "[toGlyph] Cannot parse link x2 (=column 5)");
-            auto y2  = parseInt(columns, I_LINK_Y2,  "[toGlyph] Cannot parse link y2 (=column 6)");
-            auto sx  = parseInt(columns, I_LINK_SX,  "[toGlyph] Cannot parse link sx (=column 1)");
-            auto sy  = parseInt(columns, I_LINK_SY,  "[toGlyph] Cannot parse link sy (=column 2)");
-            auto sx2 = parseInt(columns, I_LINK_SX2, "[toGlyph] Cannot parse link sx2 (=column 9)");
-            auto sy2 = parseInt(columns, I_LINK_SY2, "[toGlyph] Cannot parse link sy2 (=column 10)");
-            appendStrokesOfBuhin(r, source, x1, y1, x2, y2, sx, sy, sx2, sy2);
-        } else {
-            auto& newLine = r.lines.emplace_back();
-            auto sz = std::min<size_t>(columns.size(), LINE_SIZE);
-            for (size_t j = 0; j < sz; ++j)
-                newLine.d[j] = MaybeInt<int>::fromStr(columns[j]);
-        }
-    }
+    appendGlyph(r, source, engine);
     return r;
 }
 
-std::string kage::toSvg(std::string_view source, const SourceEngine& engine)
+std::string kage::toSvg(
+        std::string_view source,
+        const SourceEngine& engine,
+        const GlyphSets& sets)
 {
-    return toGlyph(source, engine).toSvg();
+    return toGlyph(source, engine).toSvg(sets);
 }
