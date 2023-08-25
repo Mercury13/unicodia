@@ -15,12 +15,14 @@ CONFIG(debug, debug|release) {
 SOURCES += \
     ../../Libs/SelfMade/Strings/u_Strings.cpp \
     ../KageLibs/kage.cpp \
+    ../KageLibs/kageQt.cpp \
     main.cpp \
     FmMain.cpp
 
 HEADERS += \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../KageLibs/kage.h \
+    ../KageLibs/kageQt.h \
     ../KageLibs/u_MaybeInt.h \
     FmMain.h
 

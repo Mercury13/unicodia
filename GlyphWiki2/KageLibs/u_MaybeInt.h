@@ -21,23 +21,30 @@ public:
 
     constexpr MaybeInt() noexcept = default;
     constexpr MaybeInt(const MaybeInt&) noexcept = default;
-    constexpr MaybeInt(T y) noexcept : x(y) {}
+    constexpr MaybeInt(T y) noexcept : v(y) {}
 
     constexpr MaybeInt& operator = (const This& y) noexcept = default;
-    constexpr MaybeInt& operator = (T y) noexcept { x = y; return *this; }
+    constexpr MaybeInt& operator = (T y) noexcept { v = y; return *this; }
 
-    constexpr T rawValue() const { return x; }
+    constexpr T rawValue() const { return v; }
     constexpr T operator * ();
 
-    constexpr bool hasValue() const { return (x != NO_VALUE); }
-    constexpr T valueOr(T y) const { return hasValue() ? x : y; }
+    constexpr bool hasValue() const { return (v != NO_VALUE); }
+    constexpr T valueOr(T y) const { return hasValue() ? v : y; }
     explicit operator bool() const { return hasValue(); }
 
     bool operator == (const This& y) const noexcept = default;
+    bool operator == (T y) const noexcept { return (hasValue() && (v == y)); }
+    std::partial_ordering operator <=> (const This& y) const noexcept;
+    std::partial_ordering operator <=> (T y) const noexcept;
+
+    This& operator += (T y);
+    This& operator += (const This& y);
+
     static This fromStr(std::string_view y);
 private:
     static constexpr T NO_VALUE = IS_SIGNED ? std::numeric_limits<T>::min() : std::numeric_limits<T>::max();
-    T x = NO_VALUE;
+    T v = NO_VALUE;
 };
 
 
@@ -46,7 +53,7 @@ constexpr T MaybeInt<T>::operator * ()
 {
     if (!hasValue())
         throw std::logic_error("[MaybeInt::op*] No value!");
-    return x;
+    return v;
 }
 
 
@@ -57,9 +64,49 @@ auto MaybeInt<T>::fromStr(std::string_view y) -> This
     auto q = std::from_chars(
                  std::to_address(y.begin()),
                  std::to_address(y.end()),
-                 r.x);
+                 r.v);
     if (q.ec != std::errc{}) {
-        r.x = NO_VALUE;
+        r.v = NO_VALUE;
     }
     return r;
+}
+
+
+template <class T>
+std::partial_ordering MaybeInt<T>::operator <=> (const This& y) const noexcept
+{
+    if (hasValue() && y.hasValue()) {
+        return (v <=> y.v);
+    } else {
+        return std::partial_ordering::unordered;
+    }
+}
+
+
+template <class T>
+std::partial_ordering MaybeInt<T>::operator <=> (T y) const noexcept
+{
+    if (hasValue()) {
+        return (v <=> y);
+    } else {
+        return std::partial_ordering::unordered;
+    }
+}
+
+
+template <class T>
+auto MaybeInt<T>::operator += (T y) -> This&
+{
+    if (hasValue())
+        v += y;
+    return *this;
+}
+
+
+template <class T>
+auto MaybeInt<T>::operator += (const This& y) -> This&
+{
+    if (hasValue() && y.hasValue())
+        v += y.v;
+    return *this;
 }

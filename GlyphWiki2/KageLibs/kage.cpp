@@ -72,13 +72,68 @@ namespace {
 }   // anon namespace
 
 
-std::string kage::Glyph::toSvg(const GlyphSets& sets) const
+///// Glyph ////////////////////////////////////////////////////////////////////
+
+
+void kage::Glyph::adjustStrokes(const GlyphSets& sets)
 {
-    std::string r;
+    if (sets.style == Style::SERIF) {
+        adjustHane();
+        //adjustMage(sets);
+        //adjustTate(sets);
+        //adjustKakato(sets);
+        //adjustUroko(sets);
+        //adjustUroko2(sets);
+        //adjustKirikuchi(sets);
+    }
+}
 
-    /// @todo [urgent] to Svg
 
-    return r;
+namespace {
+
+    template <auto... Vals>
+    bool isIn(auto x)
+    {
+        return ((x == Vals) || ...);
+    }
+
+}
+
+
+void kage::Glyph::adjustHane()
+{
+    for (auto& line : lines) {
+        if (isIn<1, 2, 6>(line.d[0]) && line.d[2] == 4) {
+            int lpx, lpy; // lastPointX/Y
+            if (line[0] == 1) {
+                lpx = *line.d[5];
+                lpy = *line.d[6];
+            } else if (line[0] == 2){
+                lpx = *line[7];
+                lpy = *line[8];
+            } else {
+                lpx = *line[9];
+                lpy = *line[10];
+            }
+            static constexpr auto TOO_BIG = std::numeric_limits<int>::max();
+            int mn = TOO_BIG; // mostNear
+            if (lpx + 18 < 100) {
+                mn = lpx + 18;
+            }
+            for (auto& lineJ : lines) {
+                if (&line != &lineJ
+                        && lineJ[0] == 1 && lineJ[3] == lineJ[5] && lineJ[3] < lpx
+                        && lineJ[4] <= lpy && lineJ[6] >= lpy) {
+                    if (lpx - *lineJ[3] < 100) {
+                        mn = std::min(mn, lpx - *lineJ[3]);
+                    }
+                }
+            }
+            if(mn != TOO_BIG){
+                line[2] += 700 - (mn / 15) * 100; // 0-99 -> 0-700
+            }
+        }
+    }
 }
 
 
@@ -156,17 +211,13 @@ namespace {
 }   // anon namespace
 
 
-kage::Glyph kage::toGlyph(std::string_view source, const SourceEngine& engine)
-{
-    Glyph r;
-    appendGlyph(r, source, engine);
-    return r;
-}
-
-std::string kage::toSvg(
+kage::Glyph kage::toGlyph(
         std::string_view source,
         const SourceEngine& engine,
         const GlyphSets& sets)
 {
-    return toGlyph(source, engine).toSvg(sets);
+    Glyph r;
+    appendGlyph(r, source, engine);
+    r.adjustStrokes(sets);
+    return r;
 }

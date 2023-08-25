@@ -39,6 +39,9 @@ namespace kage {
     struct Line {
         using T = MaybeInt<int>;
         Fix1d<T, LINE_SIZE> d;
+
+        auto& operator[](unsigned i) { return d[i]; }
+        auto& operator[](unsigned i) const { return d[i]; }
     };
 
     enum class Style { SANS, SERIF };
@@ -73,13 +76,16 @@ namespace kage {
         int kAdjustMageStep = 5;
     };
 
-    struct Glyph {
+    struct Glyph
+    {
+    public:
         SafeVector<Line> lines;
-        std::string toSvg(const GlyphSets& sets) const;
+        void adjustStrokes(const GlyphSets& sets);
+    private:
+        void adjustHane();
     };
 
-    Glyph toGlyph(std::string_view source, const SourceEngine& engine);
-    std::string toSvg(
+    Glyph toGlyph(
             std::string_view source,
             const SourceEngine& engine,
             const GlyphSets& sets);
