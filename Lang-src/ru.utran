@@ -4594,14 +4594,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In 2023 mainland China decided to fork Unicode by mapping 614 unchecked ideographs to plane 0A. To prevent this, the ideographs were checked really fast, 603 of them were identified as original.</p>
+      <p>In late 2022, mainland China decided to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>As of summer 2023, genuine chaos is going on in ideograph bases. These images are close to Unicode{{_}}15.1{{_}}beta.</p>
+      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was reencoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
      </orig>
      <transl>
-      <p>В 2023 континентальный Китай решил ответвиться от Юникода, расположив 614 непроверенных иероглифов на плоскости 0A. Чтобы этого не было, иероглифы быстро проверили, 603 из них были опознаны как новые.</p>
+      <p>В конце 2022 континентальный Китай решил ответвиться от Юникода, расположив 897 иероглифов из китайских имён на нераспределённой плоскости 0A. Чтобы этого не было, иероглифы быстро проверили специалисты, 622 из них были опознаны как годные к кодированию.</p>
       <p />
-      <p>На лето 2023 в базах иероглифов творится форменный хаос. Данные изображения близки к Юникоду 15.1{{_}}бета.</p>
+      <p>Обычно набор символов фиксируется задолго до бета-версии. Например, чёрная птица (ворона/галка) была перекодирована из 1FABE в {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, и 1FABE стал дырой. В этот раз таблицу зафиксировали всего за месяц до выпуска Юникода{{_}}15.1.</p>
      </transl>
     </text>
    </group>
