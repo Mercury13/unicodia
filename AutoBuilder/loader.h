@@ -1,5 +1,7 @@
 #pragma once
 
+#include <vector>
+
 #define UCD_ZIP "ucd.all.flat.zip"
 #define UCD_XML "ucd.all.flat.xml"
 #define UCD_NAMES "NamesList.txt"
@@ -14,5 +16,6 @@
 #define EGYP_DESCRIPTION "signdescriptioneng.xml"
 #define SUTTON_TXT "signwritingsequences.txt"
 
-bool checkLoader();
-void runLoader();
+extern std::vector<unsigned char> memXml;
+
+void checkLoader();

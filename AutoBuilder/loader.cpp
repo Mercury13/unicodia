@@ -13,6 +13,7 @@
 #include "u_TypedFlags.h"
 #include "Zippy.hpp"
 
+std::vector<unsigned char> memXml;
 
 namespace {
 
@@ -34,10 +35,13 @@ namespace {
     class SingleZip final : public Action
     {
     public:
-        constexpr SingleZip(std::string_view aArc, std::string_view aFile)
-            : arc(aArc), file(aFile) {}
+        constexpr SingleZip(
+                std::vector<unsigned char>& aDest,
+                std::string_view aArc, std::string_view aFile)
+            : dest(aDest), arc(aArc), file(aFile) {}
         void exec() const override;
     private:
+        std::vector<unsigned char>& dest;
         std::string_view arc, file;
     };
 
@@ -49,9 +53,7 @@ namespace {
         auto data = entry.GetData();
         if (data.empty())
             throw std::logic_error("File not found in archive");
-        std::ofstream os(std::filesystem::path(file), std::ios::binary);
-        static_assert(sizeof(decltype(data)::value_type) == sizeof(char));
-        os.write(reinterpret_cast<const char*>(data.data()), data.size());
+        dest = std::move(data);
     }
 
     constexpr int N_UPDIRS = 4;
@@ -101,7 +103,7 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constinit const SingleZip AC_UCD_XML { UCD_ZIP, UCD_XML };
+    constinit const SingleZip AC_UCD_XML { memXml, UCD_ZIP, UCD_XML };
 
     constinit const LocalFile allLocalFiles[] {
         { RAWDATA ENTITIES_JSON },
@@ -121,38 +123,12 @@ namespace {
 
 }
 
-
-bool checkLoader()
+void checkLoader()
 {
     for (auto& lf : allLocalFiles) {
         lf.preload();
     }
     for (auto& st : allSteps) {
-        if (st.flags.have(Stfg::FINAL)) {
-            if (!std::filesystem::exists(st.file))
-                return false;
-        }
-    }
-    return true;
-}
-
-
-void runLoader()
-{
-    for (auto& st : allSteps) {
-        // Make backup file: if e.g. no Internet, the file will be intact
-        std::string bakName { st.file };
-            bakName.append(".bak");
-        if (std::filesystem::exists(st.file)) {
-            std::filesystem::remove(bakName);
-            std::filesystem::rename(st.file, bakName);
-        }
-        std::cout << st.what << "..." << std::endl;
         st.action.exec();
-        if (!std::filesystem::exists(st.file))
-            throw std::logic_error("Step failed");
-        // Remove backup file
-        std::filesystem::remove(bakName);
     }
-    std::cout << "ALL STEPS DONE" << std::endl << std::endl;
 }

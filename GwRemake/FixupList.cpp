@@ -75,14 +75,24 @@ void fix::List::load(const std::filesystem::path& fname, int scale)
                 auto x = hPoint.attribute("x").as_double(NO_VALUE);
                 auto y = hPoint.attribute("y").as_double(NO_VALUE);
                 g2::Ivec vec = compassInfo(hPoint.attribute("dir").as_string());
-                if (x != NO_VALUE && y != NO_VALUE && vec != g2::ZEROVEC) {
+                std::string_view action = (hPoint.attribute("action").as_string());
+                if (x != NO_VALUE && y != NO_VALUE) {
                     auto xscaled = lround(x * scale);
                     auto yscaled = lround(y * scale);
-                    auto it2 = glyph.points.emplace(xscaled, std::in_place);
-                    auto& point = it2->second;
-                    point.before.x = xscaled;
-                    point.before.y = yscaled;
-                    point.after = point.before + vec;
+                    if (vec != g2::ZEROVEC) {
+                        auto it2 = glyph.points.emplace(xscaled, std::in_place);
+                        auto& point = it2->second;
+                        point.before.x = xscaled;
+                        point.before.y = yscaled;
+                        point.after = point.before + vec;
+                        point.action = Action::FIXUP;
+                    } else if (action == "del") {
+                        auto it2 = glyph.points.emplace(xscaled, std::in_place);
+                        auto& point = it2->second;
+                        point.before.x = xscaled;
+                        point.before.y = yscaled;
+                        point.action = Action::DELETE;
+                    }
                 }
             }
         }

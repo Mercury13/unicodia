@@ -70,13 +70,22 @@ namespace {
     void doFixup(g2sv::Polyline& v, fix::Glyph& fixup)
     {
         // Check for single-point fixups
-        for (auto& pt : v.pts) {
+        for (size_t i = v.pts.size(); i != 0; ) { --i;
+            auto& pt = v.pts[i];
             auto [beg, end] = fixup.points.equal_range(pt.x);
             for (auto p = beg; p != end; ++p) {
                 if (p->second.before.y == pt.y) {
-                    pt = p->second.after;
-                    p->second.wasUsed = true;
-                    break;
+                    switch (p->second.action) {
+                    case fix::Action::DUMMY: break;
+                    case fix::Action::FIXUP:
+                        pt = p->second.after;
+                        p->second.wasUsed = true;
+                        break;
+                    case fix::Action::DELETE:
+                        v.pts.erase(v.pts.begin() + i);
+                        p->second.wasUsed = true;
+                        break;
+                    }
                 }
             }
         }

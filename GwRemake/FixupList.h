@@ -10,8 +10,11 @@
 
 namespace fix {
 
+    enum class Action { DUMMY, FIXUP, DELETE };
+
     struct Point
     {
+        Action action = Action::DUMMY;
         g2::Ipoint before, after;
         bool wasUsed = false;
 

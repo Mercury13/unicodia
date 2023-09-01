@@ -372,12 +372,8 @@ int main()
     ///
     std::cout << "Checking for loader..." << std::flush;
     try {
-        if (checkLoader()) {
-            std::cout << "OK" << std::endl;
-        } else {
-            std::cout << "RE-RUN" << std::endl;
-            runLoader();
-        }
+        checkLoader();
+        std::cout << "OK" << std::endl;
     } catch (const std::exception& e) {
         std::cout << "ERROR: " << e.what() << std::endl;
         return 1;
@@ -435,7 +431,7 @@ int main()
     pugi::xml_document doc;
 
     std::cout << "Loading Unicode XML base..." << std::flush;
-    doc.load_file(UCD_XML);
+    doc.load_buffer(memXml.data(), memXml.size());
     std::cout << "OK" << std::endl;
 
     ///// CpInfo ///////////////////////////////////////////////////////////////
