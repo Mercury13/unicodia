@@ -3416,9 +3416,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In late 2022, mainland China decided to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
+      <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was reencoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p />
+      <p>All other ideographs were postponed to Unicode{{_}}16 for the sake of this urgent job.</p>
      </orig>
     </text>
    </group>

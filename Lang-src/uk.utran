@@ -4595,14 +4595,18 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In late 2022, mainland China decided to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
+      <p>In late 2022, mainland China attempted to fork Unicode by mapping 897 ideographs found in Chinese names to unallocated plane 0A. To prevent this, the ideographs were quickly vetted by experts, and 622 of them were identified as encodable.</p>
       <p />
-      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was reencoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p>Character repertoire is usually frozen long before beta version. For example, black bird (crow/raven) was recoded from 1FABE to {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, and 1FABE became a hole. This time characters were frozen just a month before Unicode{{_}}15.1 was released.</p>
+      <p />
+      <p>All other ideographs were postponed to Unicode{{_}}16 for the sake of this urgent job.</p>
      </orig>
      <transl>
-      <p>У кінці 2022 континентальний Китай вирішив відгалузитися від Юнікоду, розмістивши 897 ієрогліфів з китайських імен на нерозподіленій площині 0A. Щоб цього не сталось, ієрогліфи швидко перевірили фахівці, 622 з них були опізнані як придатні до кодування.</p>
+      <p>У кінці 2022 континентальний Китай спробував відгалузитися від Юнікоду, розмістивши 897 ієрогліфів з китайських імен на нерозподіленій площині 0A. Щоб цього не сталось, ієрогліфи швидко перевірили фахівці, 622 з них були опізнані як придатні до кодування.</p>
       <p />
       <p>Зазвичай набір символів фіксується задовго до бета-версії. Наприклад, чорний птах (ґава/галка) був перекодований з 1FABE на {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, і 1FABE став дірою. На цей раз таблицю зафіксували лише за місяць до випуску Юнікоду{{_}}15.1.</p>
+      <p />
+      <p>Інші ієрогліфи були відкладені до Юнікода{{_}}16 заради цієї термінової роботи.</p>
      </transl>
     </text>
    </group>
