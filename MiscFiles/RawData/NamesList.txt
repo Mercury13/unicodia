@@ -1,10 +1,7 @@
 ; charset=UTF-8
 @@@	The Unicode Standard 15.1.0
-@@@+	U15M230512.lst
-	Unicode 15.1.0 names list, seventh delta.
-	Repertoire synched with UnicodeData-15.1.0d2.txt.
-	Tweak use of notices to suppress year expansions.
-	Update annotations for 06F4..06F7.
+@@@+	U15M230728.lst
+	Unicode 15.1.0 final names list.
 	This file is semi-automatically derived from UnicodeData.txt and
 	a set of manually created annotations using a script to select
 	or suppress information from the data file. The rules used
@@ -2429,7 +2426,8 @@
 	= apostrophe
 	* glottal stop, glottalization, ejective
 	* many languages use this as a letter of their alphabets
-	* used as a tone marker in Bodo, Dogri, and Maithili
+	* used as a tone marker in Bodo and Dogri
+	* indicates vowel elongation, or various truncations and ellipsis in Maithili
 	* used as a modifier letter in the Lisu script
 	* 2019 is the preferred character for a punctuation apostrophe
 	x (apostrophe - 0027)
@@ -4456,7 +4454,8 @@
 	* Uyghur, Kazakh
 06CC	ARABIC LETTER FARSI YEH
 	* Arabic, Persian, Urdu, Kashmiri, ...
-	* initial and medial forms of this letter have dots
+	* initial and medial forms of this letter have two horizontal dots below
+	* retains its dots in initial and medial forms when used in combination with 0654
 	x (arabic letter alef maksura - 0649)
 	x (arabic letter yeh - 064A)
 06CD	ARABIC LETTER YEH WITH TAIL
@@ -19522,8 +19521,10 @@
 	* indicates pronunciation on one side of the mouth only
 	x (section sign - 00A7)
 @		Dashes
+@+		These long dashes are shown in the code charts inside dashed square boxes because of their width. In production fonts they would simply display as extra-wide dashes. 
 2E3A	TWO-EM DASH
 	= omission dash
+	* may be used in Chinese for abrupt change of thought, inserting new content, or continuation of tone or sound
 	x (em dash - 2014)
 2E3B	THREE-EM DASH
 @		Alternate forms of punctuation
@@ -26618,7 +26619,7 @@ D7FB	HANGUL JONGSEONG PHIEUPH-THIEUTH
 @@+
 @+		This block, despite its name, contains a number of unified CJK ideographs. Each is also individually identified by an annotation.
 @+		Subheaders identifying sources for subranges do not indicate required usage or preclude mappings to other sources. For example, many pronunciation variants from KS X 1001:1998 are also mapped to a J source.
-@		Pronunciation variants from KS X 1001:1998
+@		Pronunciation variants from KS X 1001:1998
 F900	CJK COMPATIBILITY IDEOGRAPH-F900
 	: 8C48
 F901	CJK COMPATIBILITY IDEOGRAPH-F901
@@ -44024,6 +44025,7 @@ FFFF	<not a character>
 1BC01	DUPLOYAN LETTER X
 	* Salishan
 @		Line consonants
+@+		Small arrows shown in the chart glyphs for some strokes and arcs indicate the handwriting direction of these characters, and are not visibly rendered.
 1BC02	DUPLOYAN LETTER P
 	* Chinook number 1
 1BC03	DUPLOYAN LETTER T
@@ -54200,9 +54202,9 @@ FFFF	<not a character>
 @@	2B740	CJK Unified Ideographs Extension D	2B81D
 @@	2B820	CJK Unified Ideographs Extension E	2CEA1
 @@	2CEB0	CJK Unified Ideographs Extension F	2EBE0
-@@	2EBF0	CJK Unified Ideographs Extension I	2EE4A
+@@	2EBF0	CJK Unified Ideographs Extension I	2EE5D
 @@	2F800	CJK Compatibility Ideographs Supplement	2FA1F
-@		Duplicate characters from CNS 11643-1992
+@		Duplicate characters from CNS 11643-1992
 2F800	CJK COMPATIBILITY IDEOGRAPH-2F800
 	: 4E3D
 2F801	CJK COMPATIBILITY IDEOGRAPH-2F801
