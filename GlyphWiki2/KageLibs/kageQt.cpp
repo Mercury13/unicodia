@@ -185,7 +185,7 @@ void kage::drawSans(QPaintEngine& target, const GlyphSets& sets,
         if(a3 % 100 == 4) {
             auto t1 = applyMage(p1, p2, 1.0f, sets);
             /// @todo [urgent] What to draw?
-            //cdDrawLine(kage, polygons, x1, y1, tx1, ty1, a2, 1);
+            drawSansLine(target, sets, p1, t1, a2, 1);
             //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, x2 - kage.kMage * 2, y2 - kage.kMage * 0.5, 1, 0);
         }
         else{
@@ -229,16 +229,17 @@ void kage::drawSans(QPaintEngine& target, const GlyphSets& sets,
                 auto t1 = applyMage(p1, p2, rate, sets);
                 auto t2 = applyMage(p3, p2, rate, sets);
                 auto [t3, t4] = applyMagePair(p3, sets);
-                //cdDrawLine(kage, polygons, x1, y1, tx1, ty1, a2, 1);
+                drawSansLine(target, sets, p1, t1, a2, 1);
                 //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, tx2, ty2, 1, 1);
+                drawSansLine(target, sets, t2, t3, 1, 1);
                 //cdDrawLine(kage, polygons, tx2, ty2, tx3, ty3, 1, 1);
                 //cdDrawCurve(kage, polygons, tx3, ty3, x3, y3, tx4, ty4, 1, 0);
             } else {
                 auto t1 = applyMage(p1, p2, rate, sets);
                 auto t2 = applyMage(p3, p2, rate, sets);
-                //cdDrawLine(kage, polygons, x1, y1, tx1, ty1, a2, 1);
+                drawSansLine(target, sets, p1, t1, a2, 1);
                 //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, tx2, ty2, 1, 1);
-                //cdDrawLine(kage, polygons, tx2, ty2, x3, y3, 1, a3);
+                drawSansLine(target, sets, t2, p3, 1, a3);
             }
         } break;
     case 6:
@@ -254,7 +255,7 @@ void kage::drawSans(QPaintEngine& target, const GlyphSets& sets,
             //cdDrawBezier(kage, polygons, x1, y1, x2, y2, x3, y3, x4, y4, a2, a3);
         } break;
     case 7:
-        //cdDrawLine(kage, polygons, x1, y1, x2, y2, a2, 1);
+        drawSansLine(target, sets, p1, p2, a2, 1);
         //cdDrawCurve(kage, polygons, x2, y2, x3, y3, x4, y4, 1, a3);
         break;
     case 9: // may not be exist
