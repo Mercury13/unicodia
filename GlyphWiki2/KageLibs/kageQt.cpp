@@ -71,7 +71,71 @@ namespace {
         return 6.0f;
     }
 
+    void stepBack(g2::Fpoint& p1, g2::Fpoint s1, float dist)
+    {
+        if (p1.x == s1.x) {
+            if (p1.y < s1.y) { p1.y -= dist; } else { p1.y += dist; }
+        } else if (p1.y == s1.y){
+            if (p1.x < s1.x) { p1.x -= dist; } else { p1.x += dist; }
+        } else {
+            auto normW = (s1 - p1).normalized(dist);
+            p1 -= normW;
+        }
+    }
+
+    void buildCurveEnd(g2::Fpoint& p1, g2::Fpoint s1, int ta1,
+                       const kage::GlyphSets& sets)
+    {
+        switch (ta1 % 10) {
+        case 2:
+            stepBack(p1, s1, sets.kWidth);
+            break;
+        case 3:
+            stepBack(p1, s1, sets.kWidth * sets.kKakato);
+            break;
+        default: ;
+        }
+    }
+
 }   // anon namespace
+
+
+void kage::drawSansBezier(
+        QPaintEngine& target, const kage::GlyphSets& sets,
+        g2::Fpoint p1, g2::Fpoint s1, g2::Fpoint s2, g2::Fpoint p2,
+        int ta1, int ta2)
+{
+    buildCurveEnd(p1, s1, ta1, sets);
+    buildCurveEnd(p2, s2, ta2, sets);
+
+    // Get initial arms
+    auto arm1 = s1 - p1;
+    auto arm2 = s2 - p2;
+    auto initialLength = p1.distFromF(p2);  // Not really good thing
+    // And now draw this Bezier somehow:
+    //  p1 → s1 → p2 → s2
+//    poly = new Polygon();
+//    poly2 = new Polygon();
+
+//    for(tt = 0; tt <= 1000; tt = tt + kage.kRate){
+//      t = tt / 1000;
+
+//      bezier = calculateBezier(x1, y1, sx1, sy1, sx2, sy2, x2, y2, t, kage.kWidth);
+//      x = bezier.x;
+//      y = bezier.y;
+//      ia = bezier.ia;
+//      ib = bezier.ib;
+
+//      //save to polygon
+//      poly.push(x - ia, y - ib);
+//      poly2.push(x + ia, y + ib);
+//    }
+
+//    poly2.reverse();
+//    poly.concat(poly2);
+//    polygons.push(poly);
+//  }
+}
 
 
 void kage::drawSansLine(QPaintEngine& target,
