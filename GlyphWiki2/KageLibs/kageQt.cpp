@@ -178,6 +178,7 @@ void kage::drawSans(QPaintEngine& target, const GlyphSets& sets,
 {
     switch(a1 % 100){
     case 0:
+        throw std::logic_error("0 appeared somehow!");
         /// @todo [urgent] What to do with dfTransform?
         //dfTransform(kage, polygons, x1, y1, x2, y2, a2, a3);
         break;
