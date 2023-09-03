@@ -44,7 +44,10 @@ namespace kage {
         auto& operator[](unsigned i) const { return d[i]; }
     };
 
-    enum class Style { SANS, SERIF };
+    enum class Style {
+        SANS, SERIF,
+        GOTHIC = SANS, MINCHO = SERIF
+    };
     struct GlyphSets {
         Style style = Style::SANS;
         int kMinWidthY = 2;
@@ -53,7 +56,7 @@ namespace kage {
         int kWidth = 5;
         int kKakato = 3;
         float kL2RDfatten = 1.1;
-        int kMage = 10;
+        float kMage = 10;
         int kUseCurve = 0;
 
         int kAdjustKakatoL[5] { 14, 9, 5, 2, 0 }; // for KAKATO adjustment 000,100,200,300,400

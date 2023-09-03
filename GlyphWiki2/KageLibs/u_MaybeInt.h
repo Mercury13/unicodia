@@ -27,7 +27,7 @@ public:
     constexpr MaybeInt& operator = (T y) noexcept { v = y; return *this; }
 
     constexpr T rawValue() const { return v; }
-    constexpr T operator * ();
+    constexpr T operator * () const;
 
     constexpr bool hasValue() const { return (v != NO_VALUE); }
     constexpr T valueOr(T y) const { return hasValue() ? v : y; }
@@ -49,7 +49,7 @@ private:
 
 
 template <class T>
-constexpr T MaybeInt<T>::operator * ()
+constexpr T MaybeInt<T>::operator * () const
 {
     if (!hasValue())
         throw std::logic_error("[MaybeInt::op*] No value!");

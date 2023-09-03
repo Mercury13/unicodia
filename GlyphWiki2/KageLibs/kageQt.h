@@ -5,12 +5,26 @@
 class QPaintDevice;
 
 namespace kage {
-    void draw(const GlyphSets& sets, QPaintDevice& target,
-              MaybeInt<int> a1, MaybeInt<int> a2, MaybeInt<int> a3,
-              MaybeInt<int> x1, MaybeInt<int> y1,
-              MaybeInt<int> x2, MaybeInt<int> y2,
-              MaybeInt<int> x3, MaybeInt<int> y3,
-              MaybeInt<int> x4, MaybeInt<int> y4);
+    struct Point {
+        int x, y;
+    };
+
+    struct Fpoint {
+        float x, y;
+    };
+
+    struct MaybePoint {
+        MaybeInt<int> x, y;
+
+        operator Point () const { return Point { *x, *y }; }
+    };
+
+    void drawSerif(const GlyphSets& sets, QPaintDevice& target,
+              int a1, int a2, int a3,
+              MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4);
+    void drawSans(const GlyphSets& sets, QPaintDevice& target,
+              int a1, int a2, int a3,
+              MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4);
     void draw(const Glyph& glyph, const GlyphSets& sets,
               QPaintDevice& target);
 
