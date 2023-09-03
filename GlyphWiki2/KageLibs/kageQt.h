@@ -2,30 +2,30 @@
 
 #include "kage.h"
 
-class QPaintDevice;
+// Libs
+#include "g2defines.h"
+
+class QPaintEngine;
 
 namespace kage {
-    struct Point {
-        int x, y;
-    };
-
-    struct Fpoint {
-        float x, y;
-    };
-
     struct MaybePoint {
         MaybeInt<int> x, y;
 
-        operator Point () const { return Point { *x, *y }; }
+        operator g2::Ipoint () const { return { *x, *y }; }
+        operator g2::Fpoint () const { return { float(*x), float(*y) }; }
+        g2::Ipoint p() const { return { *x, *y }; }
     };
 
-    void drawSerif(const GlyphSets& sets, QPaintDevice& target,
+    void drawSerif(QPaintEngine& target, const GlyphSets& sets,
               int a1, int a2, int a3,
               MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4);
-    void drawSans(const GlyphSets& sets, QPaintDevice& target,
+    void drawSansLine(QPaintEngine& target,
+                      const kage::GlyphSets& sets,
+                      g2::Fpoint tt1, const g2::Fpoint tt2,
+                      int ta1, int ta2);
+    void drawSans(QPaintEngine& target, const GlyphSets& sets,
               int a1, int a2, int a3,
               MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4);
-    void draw(const Glyph& glyph, const GlyphSets& sets,
-              QPaintDevice& target);
+    void draw(QPaintEngine& target, const GlyphSets& sets, const Glyph& glyph);
 
 }

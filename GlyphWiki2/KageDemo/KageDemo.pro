@@ -20,6 +20,7 @@ SOURCES += \
     FmMain.cpp
 
 HEADERS += \
+    ../../Libs/SelfMade/Geo2d/g2defines.h \
     ../../Libs/SelfMade/Strings/u_Strings.h \
     ../KageLibs/kage.h \
     ../KageLibs/kageQt.h \
@@ -31,6 +32,7 @@ FORMS += \
 
 INCLUDEPATH += \
     ../../Libs/SelfMade  \
+    ../../Libs/SelfMade/Geo2d  \
     ../../Libs/SelfMade/Strings  \
     ../KageLibs
 

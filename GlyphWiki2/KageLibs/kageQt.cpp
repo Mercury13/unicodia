@@ -1,9 +1,13 @@
 #include "kageQt.h"
 
+// C++
 #include <cmath>
 
+// Qt
+#include <QPaintEngine>
 
-void kage::drawSerif(const GlyphSets& sets, QPaintDevice& target,
+
+void kage::drawSerif(QPaintEngine& target, const GlyphSets& sets,
                 int a1, int a2, int a3,
                 MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4)
 {
@@ -12,71 +16,163 @@ void kage::drawSerif(const GlyphSets& sets, QPaintDevice& target,
 
 namespace {
 
-    kage::Fpoint applyMage(kage::Point p1, kage::Point p2, float rate, const kage::GlyphSets& sets)
+    g2::Fpoint applyMage(g2::Ipoint p1, g2::Ipoint p2, float rate, const kage::GlyphSets& sets)
     {
         if (p1.x == p2.x) {
             float v = (p1.y < p2.y) ? rate : -rate;
             return {
-                .x = float(p2.x),
-                .y = p2.y - sets.kMage * v };
+                float(p2.x),
+                p2.y - sets.kMage * v };
         } else if (p1.y == p2.y) {
             float v = (p1.x < p2.x) ? 1 : -1;
             return {
-                .x = p2.x - sets.kMage * v,
-                .y = float(p2.y) };
+                p2.x - sets.kMage * v,
+                float(p2.y) };
         } else {
-            /// @todo [urgent] Unneeded trigonometry here, use vectors
-            float rad = atan2f(p2.y - p1.y, p2.x - p1.x);
+            auto norm = (p2 - p1).normalized(sets.kMage * rate);
             return {
-                .x = p2.x - sets.kMage * cosf(rad) * rate,
-                .y = p2.y - sets.kMage * sinf(rad) * rate };
+                p2.x - norm.x,
+                p2.y - norm.y };
         }
     }
 
-    kage::Fpoint applyLiteMage(kage::Point p2, kage::Point p3, const kage::GlyphSets& sets)
+    g2::Fpoint applyLiteMage(g2::Ipoint p2, g2::Ipoint p3, const kage::GlyphSets& sets)
     {
         if(p2.x == p3.x) {
             return {
-                .x = float(p3.x),
-                .y = p3.y - sets.kMage };
+                float(p3.x),
+                p3.y - sets.kMage };
         } else if (p2.y == p3.y) {
             return {
-                .x = p3.x - sets.kMage,
-                .y = float(p3.y) };
+                p3.x - sets.kMage,
+                float(p3.y) };
         } else {
-            /// @todo [urgent] Unneeded trigonometry here, use vectors
-            float rad = atan2f(p3.y - p2.y, p3.x - p2.x);
+            auto norm = (p3 - p2).normalized(sets.kMage);
             return {
-                .x = p3.x - sets.kMage * cosf(rad),
-                .y = p3.y - sets.kMage * sinf(rad) };
+                p3.x - norm.x,
+                p3.y - norm.y };
         }
     }
 
-    std::pair<kage::Fpoint, kage::Fpoint> applyMagePair(kage::Point p, const kage::GlyphSets& sets)
+    std::pair<g2::Fpoint, g2::Fpoint> applyMagePair(g2::Ipoint p, const kage::GlyphSets& sets)
     {
-        kage::Fpoint t1 {
-            .x = p.x + sets.kMage,
-            .y = float(p.y) };
+        g2::Fpoint t1 { p.x + sets.kMage, float(p.y) };
         return { t1,
-            { .x = t1.x + sets.kMage * 0.5f,
-              .y = p.y - sets.kMage * 2.0f } };
+            { t1.x + sets.kMage * 0.5f,
+              p.y - sets.kMage * 2.0f } };
     };
 
-    float calcRate(kage::Point p2, kage::Point p3)
+    float calcRate(g2::Ipoint p2, g2::Ipoint p3)
     {
-        auto dx = p3.x - p2.x;
-        auto dy = p3.y - p2.y;
-        auto sqh = dx * dx - dy * dy;
+        auto sqh = (p3 - p2).len2();
         if (sqh < 14400) { // smaller than 120 x 120
             return sqrtf(sqh) * (6.0f / 120.0f);
         }
         return 6.0f;
     }
 
+}   // anon namespace
+
+
+void kage::drawSansLine(QPaintEngine& target,
+                  const kage::GlyphSets& sets,
+                  g2::Fpoint tt1, const g2::Fpoint tt2,
+                  int ta1, int ta2)
+{
+    if (tt1.x == tt2.x){ //if TATE stroke, use y-axis
+        g2::Fpoint p1, p2;
+        int a1, a2;
+
+        if (tt1.y  > tt2.y) {
+            p1 = tt2;
+            p2 = tt1;
+            a1 = ta2;
+            a2 = ta1;
+        } else  {
+            p1 = tt1;
+            p2 = tt2;
+            a1 = ta1;
+            a2 = ta2;
+        }
+
+        if (a1 % 10 == 2) { p1.y -= sets.kWidth; }
+        if (a2 % 10 == 2) { p2.y += sets.kWidth; }
+        if (a1 % 10 == 3) { p1.y -= sets.kWidth * sets.kKakato; }
+        if (a2 % 10 == 3) { p2.y += sets.kWidth * sets.kKakato; }
+
+        QPointF poly[4] {
+            { p1.x - sets.kWidth, p1.y },
+            { p2.x - sets.kWidth, p2.y },
+            { p2.x + sets.kWidth, p2.y },
+            { p1.x + sets.kWidth, p1.y },
+        };
+        target.drawPolygon(poly, 4, QPaintEngine::ConvexMode);
+    } else if(tt1.y == tt2.y) { //if YOKO stroke, use x-axis
+        g2::Fpoint p1, p2;
+        int a1, a2;
+
+        if(tt1.x > tt2.x) {
+            p1 = tt2;
+            p2 = tt1;
+            a1 = ta2;
+            a2 = ta1;
+        } else {
+            p1 = tt1;
+            p2 = tt2;
+            a1 = ta1;
+            a2 = ta2;
+        }
+        if (a1 % 10 == 2) { p1.x -= sets.kWidth; }
+        if (a2 % 10 == 2) { p2.x += sets.kWidth; }
+        if (a1 % 10 == 3) { p1.x -= sets.kWidth * sets.kKakato; }
+        if (a2 % 10 == 3) { p2.x += sets.kWidth * sets.kKakato; }
+
+        QPointF poly[4] {
+            { p1.x, p1.y - sets.kWidth },
+            { p2.x, p2.y - sets.kWidth },
+            { p2.x, p2.y + sets.kWidth },
+            { p1.x, p1.y + sets.kWidth },
+        };
+        target.drawPolygon(poly, 4, QPaintEngine::ConvexMode);
+    } else { //for others, use x-axis
+        g2::Fpoint p1, p2;
+        int a1, a2;
+
+        if(tt1.x > tt2.x) {
+            p1 = tt2;
+            p2 = tt1;
+            a1 = ta2;
+            a2 = ta1;
+        } else {
+            p1 = tt1;
+            p2 = tt2;
+            a1 = ta1;
+            a2 = ta2;
+        }
+        auto normW = (p2 - p1).normalized(sets.kWidth);
+        if(a1 % 10 == 2) { p1 -= normW; }
+        if(a2 % 10 == 2) { p2 += normW; }
+        if(a1 % 10 == 3) { p1 -= normW * sets.kKakato; }
+        if(a2 % 10 == 3) { p2 += normW * sets.kKakato; }
+
+        //SUICHOKU NO ICHI ZURASHI HA Math.sin TO Math.cos NO IREKAE + x-axis MAINASU KA
+        g2::Fvec normWrot { normW.y, -normW.x };
+        g2::Fpoint v1 = p1 + normWrot;
+        g2::Fpoint v2 = p2 + normWrot;
+        g2::Fpoint v3 = p2 - normWrot;
+        g2::Fpoint v4 = p1 - normWrot;
+        QPointF poly[4] {
+            { v1.x, v1.y },
+            { v2.x, v2.y },
+            { v3.x, v3.y },
+            { v4.x, v4.y },
+        };
+        target.drawPolygon(poly, 4, QPaintEngine::ConvexMode);
+    }
 }
 
 
-void kage::drawSans(const GlyphSets& sets, QPaintDevice& target,
+void kage::drawSans(QPaintEngine& target, const GlyphSets& sets,
                 int a1, int a2, int a3,
                 MaybePoint p1, MaybePoint p2, MaybePoint p3, MaybePoint p4)
 {
@@ -93,8 +189,7 @@ void kage::drawSans(const GlyphSets& sets, QPaintDevice& target,
             //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, x2 - kage.kMage * 2, y2 - kage.kMage * 0.5, 1, 0);
         }
         else{
-            /// @todo [urgent] What to draw?
-            //cdDrawLine(kage, polygons, x1, y1, x2, y2, a2, a3);
+            drawSansLine(target, sets, p1, p2, a2, a3);
         } break;
     case 2:
     case 12:
@@ -116,16 +211,16 @@ void kage::drawSans(const GlyphSets& sets, QPaintDevice& target,
             auto t1 = applyMage(p1, p2, 1.0f, sets);
             auto t2 = applyMage(p3, p2, 1.0f, sets);
             auto [t3, t4] = applyMagePair(p3, sets);
-            //cdDrawLine(kage, polygons, x1, y1, tx1, ty1, a2, 1);
+            drawSansLine(target, sets, p1, t1, a2, 1);
             //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, tx2, ty2, 1, 1);
-            //cdDrawLine(kage, polygons, tx2, ty2, tx3, ty3, 1, 1);
+            drawSansLine(target, sets, t2, t3, 1, 1);
             //cdDrawCurve(kage, polygons, tx3, ty3, x3, y3, tx4, ty4, 1, 0);
         } else {
             auto t1 = applyMage(p1, p2, 1.0f, sets);
             auto t2 = applyMage(p3, p2, 1.0f, sets);
-            //cdDrawLine(kage, polygons, x1, y1, tx1, ty1, a2, 1);
+            drawSansLine(target, sets, p1, t1, a2, 1);
             //cdDrawCurve(kage, polygons, tx1, ty1, x2, y2, tx2, ty2, 1, 1);
-            //cdDrawLine(kage, polygons, tx2, ty2, x3, y3, 1, a3);
+            drawSansLine(target, sets, t2, p3, 1, a3);
         }
         break;
     case 4: {
@@ -170,7 +265,7 @@ void kage::drawSans(const GlyphSets& sets, QPaintDevice& target,
 }
 
 
-void kage::draw(const Glyph& glyph, const GlyphSets& sets, QPaintDevice& target)
+void kage::draw(QPaintEngine& target, const GlyphSets& sets, const Glyph& glyph)
 {
     auto drawFunc = drawSans;
     switch (sets.style) {
@@ -181,7 +276,7 @@ void kage::draw(const Glyph& glyph, const GlyphSets& sets, QPaintDevice& target)
     }
 
     for (auto v : glyph.lines) {
-        drawFunc(sets, target,
+        drawFunc(target, sets,
              *v[0], *v[1], *v[2],
              { v[3], v[4] }, { v[5], v[6] },
              { v[7], v[8] }, { v[9], v[10] });

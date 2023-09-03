@@ -53,8 +53,8 @@ namespace kage {
         int kMinWidthY = 2;
         int kMinWidthU = 2;
         int kMinWidthT = 6;
-        int kWidth = 5;
-        int kKakato = 3;
+        float kWidth = 5;
+        float kKakato = 3;
         float kL2RDfatten = 1.1;
         float kMage = 10;
         int kUseCurve = 0;

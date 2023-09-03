@@ -354,6 +354,38 @@ template <class T>
 constexpr g2::Point<T> operator - (const g2::Vec<T>& a, const g2::Point<T>& b) noexcept
     { return { a.x - b.x, a.y - b.y }; }
 
+template <class T>
+constexpr g2::Point<T>& operator += (g2::Point<T>& a, const g2::Vec<T>& b) noexcept
+{
+    a.x += b.x;
+    a.y += b.y;
+    return a;
+}
+
+template <class T>
+constexpr g2::Point<T>& operator += (g2::Vec<T>& a, const g2::Point<T>& b) noexcept
+{
+    a.x += b.x;
+    a.y += b.y;
+    return a;
+}
+
+template <class T>
+constexpr g2::Point<T>& operator -= (g2::Point<T>& a, const g2::Vec<T>& b) noexcept
+{
+    a.x -= b.x;
+    a.y -= b.y;
+    return a;
+}
+
+template <class T>
+constexpr g2::Point<T>& operator -= (g2::Vec<T>& a, const g2::Point<T>& b) noexcept
+{
+    a.x -= b.x;
+    a.y -= b.y;
+    return a;
+}
+
 // Point0 ± vec → point
 template <class T>
 constexpr g2::Point<T> operator + (g2::Origin, const g2::Vec<T>& b)
