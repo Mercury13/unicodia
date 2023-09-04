@@ -16,7 +16,7 @@
 
 
 #ifdef _WIN64
-    constexpr std::string_view COINCIDING_PLATFORMS = "win64|w64";
+    constexpr std::string_view EQUIV_PLATFORMS = "win64|w64";
     //constexpr std::string_view COMPATIBLE_PLATFORMS = "w32|win32";
 #else
     #error Bad platform!
@@ -29,7 +29,7 @@ progsets::DirMode progsets::dirMode = progsets::DirMode::INSTALLED;
 
 Version updatever::version;
 bool updatever::isDebuggingVersion = false;
-std::string updatever::coincidingPlatforms { COINCIDING_PLATFORMS };
+std::string updatever::equivPlatforms { EQUIV_PLATFORMS };
 
 // fname
 std::filesystem::path fname::config;

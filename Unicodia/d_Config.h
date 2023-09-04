@@ -26,7 +26,7 @@ namespace progsets {
 
 namespace updatever {
     extern Version version;
-    extern std::string coincidingPlatforms;
+    extern std::string equivPlatforms;
     extern bool isDebuggingVersion;
 }
 
