@@ -1894,7 +1894,7 @@ void FmMain::updateFinished(QNetworkReply* reply)
         if (err == QNetworkReply::NoError) {
             auto bytes = reply->readAll();
             std::string_view sv(bytes.data(), bytes.length());
-            auto res = github::checkForUpdate(
+            auto res = github::checkVersionForUpdate(
                         sv, updatever::version, updatever::equivPlatforms);
             switch (res.code) {
             case github::UpdateCode::BAD_DOCUMENT:

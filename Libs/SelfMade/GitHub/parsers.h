@@ -14,7 +14,9 @@ namespace github {
 
     enum class UpdateCode { BAD_DOCUMENT, FOUND_EARLIER,
                             COINCIDE, FOUND_LATER, BAD_VERSION,
-                            ABANDONED };
+                            ABANDONED,
+                            PLATFORM_NOT_FOUND = ABANDONED
+                          };
     struct UpdateReply {
         UpdateCode code = UpdateCode::BAD_DOCUMENT;
         Version version;
@@ -22,9 +24,9 @@ namespace github {
         std::string myPlatform;
     };
 
-    UpdateReply checkForUpdate(
+    UpdateReply checkVersionForUpdate(
             std::string_view body,
             const Version& myVersion,
-            std::string_view coincidingPlatforms);
+            std::string_view equivPlatforms);
 
 }   // namespace github
