@@ -13,8 +13,9 @@
 
 namespace {
 
+    template <class Doc>
     void checkJsonVersionForUpdate(
-            const rapidjson::Document& doc,
+            const Doc& doc,
             const Version& myVersion,
             std::span<std::string_view> equivPlatforms,
             github::UpdateReply& r)
