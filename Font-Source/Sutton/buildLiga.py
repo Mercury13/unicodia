@@ -52,7 +52,7 @@ for x in font.glyphs():
 logFile = open('x.log', 'w')
 
 # go through Sutton table
-for code in range(0x1D800, 0x1DA8B):
+for code in range(0x1D800, 0x1DA8C):
   wasSubtableAdded = False
   subtableName = "{:X}".format(code)
   mainName = sgnwGlyphName(code)
