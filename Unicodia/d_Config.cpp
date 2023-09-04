@@ -15,12 +15,21 @@
 #include "LocList.h"
 
 
+#ifdef _WIN64
+    constexpr std::string_view COINCIDING_PLATFORMS = "win64|w64";
+    //constexpr std::string_view COMPATIBLE_PLATFORMS = "w32|win32";
+#else
+    #error Bad platform!
+#endif
+
 ///// Vars /////////////////////////////////////////////////////////////////////
 
 // progsets
 progsets::DirMode progsets::dirMode = progsets::DirMode::INSTALLED;
-Version progsets::version;
-bool progsets::isDebuggingVersion = false;
+
+Version updatever::version;
+bool updatever::isDebuggingVersion = false;
+std::string updatever::coincidingPlatforms { COINCIDING_PLATFORMS };
 
 // fname
 std::filesystem::path fname::config;
@@ -49,6 +58,8 @@ namespace {
 
     void loadProgSets()
     {
+        static std::string myCoincidingPlatforms;
+
         progsets::dirMode = progsets::DirMode::INSTALLED;
 
         if (fname::progsets.empty() || !std::filesystem::exists(fname::progsets))
@@ -60,8 +71,8 @@ namespace {
         if (root.attribute("portable").as_bool(false))
             progsets::dirMode = progsets::DirMode::PORTABLE;
         if (auto ver = Version::parsePermissive(root.attribute("debugVersion").as_string())) {
-            progsets::version = ver;
-            progsets::isDebuggingVersion = true;
+            updatever::version = ver;
+            updatever::isDebuggingVersion = true;
         }
     }
 

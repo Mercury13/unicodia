@@ -12467,6 +12467,10 @@
     <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.1" (exactly)</au-cmt>
     <transl>Дивно: не можу розібрати відповідь сервера.</transl>
    </text>
+   <text id="Abandon">
+    <orig>Your platform “{1}” seems to be abandoned.</orig>
+    <transl>Вашу платформу «{1}», напевне, кинуто.</transl>
+   </text>
   </group>
  </file>
 </ut>

@@ -8679,6 +8679,9 @@
     <orig>Strange: cannot parse server’s reply.</orig>
     <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.1" (exactly)</au-cmt>
    </text>
+   <text id="Abandon">
+    <orig>Your platform “{1}” seems to be abandoned.</orig>
+   </text>
   </group>
  </file>
 </ut>

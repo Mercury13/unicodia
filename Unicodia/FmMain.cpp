@@ -1146,9 +1146,9 @@ void FmMain::translateAbout()
     // lbVersion
     char8_t buf[50];
     QString s = loc::get("About.Version")
-                .argQ(progsets::version.toSv(buf),
+                .argQ(updatever::version.toSv(buf),
                       uc::versionInfo[static_cast<int>(uc::EcVersion::LAST)].locLongName());
-    if (progsets::isDebuggingVersion) {
+    if (updatever::isDebuggingVersion) {
         s += " <b>[DEBUGGING]</b>";
     }
     ui->lbAboutVersion->setText(s);
@@ -1181,8 +1181,8 @@ void FmMain::translateAbout()
 
 void FmMain::initAbout()
 {
-    if (!progsets::version)
-        progsets::version = Version::parsePermissive(QApplication::applicationVersion());
+    if (!updatever::version)
+        updatever::version = Version::parsePermissive(QApplication::applicationVersion());
     setUpdating(false);
     ui->wiLogo->load(QString{":/Misc/about.svg"});
     connect(ui->lbTofuStats, &QLabel::linkActivated, this, &This::showTofuStats);
@@ -1886,7 +1886,7 @@ void FmMain::updateFinished(QNetworkReply* reply)
     if (reply) {
         int err = reply->error();
         // Debug
-        if (progsets::version == github::VER_BAD_REQUEST)
+        if (updatever::version == github::VER_BAD_REQUEST)
             err = 418;  // I’m a teapot
 
         auto head = loc::get("Update.Head").q();
@@ -1894,7 +1894,8 @@ void FmMain::updateFinished(QNetworkReply* reply)
         if (err == QNetworkReply::NoError) {
             auto bytes = reply->readAll();
             std::string_view sv(bytes.data(), bytes.length());
-            auto res = github::checkForUpdate(sv, progsets::version);
+            auto res = github::checkForUpdate(sv,
+                        updatever::version, updatever::coincidingPlatforms);
             switch (res.code) {
             case github::UpdateCode::BAD_DOCUMENT:
                 QMessageBox::critical(this, head, loc::get("Update.Parse"));
@@ -1911,12 +1912,12 @@ void FmMain::updateFinished(QNetworkReply* reply)
             case github::UpdateCode::FOUND_EARLIER:
                 QMessageBox::warning(this, head,
                         loc::get("Update.Earlier").argQ(
-                                    progsets::version.toSv(buf), res.version.toSv(buf2)));
+                                    updatever::version.toSv(buf), res.version.toSv(buf2)));
                 break;
             case github::UpdateCode::FOUND_LATER: {
                     QMessageBox msg(QMessageBox::Question, head,
                             loc::get("Update.Later").argQ(
-                                progsets::version.toSv(buf), res.version.toSv(buf2)),
+                                updatever::version.toSv(buf), res.version.toSv(buf2)),
                             QMessageBox::Yes | QMessageBox::No, this);
                     msg.setButtonText(QMessageBox::Yes, loc::get("Update.Go"));
                     msg.setButtonText(QMessageBox::No,  loc::get("Update.Close"));
@@ -1924,6 +1925,11 @@ void FmMain::updateFinished(QNetworkReply* reply)
                         QDesktopServices::openUrl(QUrl{URL_REPO});
                     }
                 } break;
+            case github::UpdateCode::ABANDONED:
+                QMessageBox::warning(this, head,
+                        loc::get("Update.Abandon").argQ(
+                                str::toU8sv(res.myPlatform)));
+                break;
             }
         } else if (err < 100) {
             // System error

@@ -1,17 +1,27 @@
 // My header
 #include "parsers.h"
 
+// Libs
+#include "u_Strings.h"
+
 // Json
 #include "rapidjson/document.h"
 
 
-github::UpdateReply github::checkForUpdate(std::string_view body, const Version& myVersion)
+github::UpdateReply github::checkForUpdate(
+        std::string_view body,
+        const Version& myVersion,
+        std::string_view coincidingPlatforms)
 {
     if (myVersion == VER_BAD_REPLY)
         body = "Something really bad";
     rapidjson::Document doc;
 
     UpdateReply r;
+
+    auto plats = str::splitSv(coincidingPlatforms, '|');
+    r.myPlatform = plats.safeGetV(0, "");
+
     doc.Parse(body.data(), body.length());
     if (!doc.IsObject())
         return r;

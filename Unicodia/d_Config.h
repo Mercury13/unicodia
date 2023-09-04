@@ -22,7 +22,11 @@ enum class BlockOrder {
 namespace progsets {
     enum class DirMode { INSTALLED, PORTABLE };
     extern DirMode dirMode;
+}
+
+namespace updatever {
     extern Version version;
+    extern std::string coincidingPlatforms;
     extern bool isDebuggingVersion;
 }
 
