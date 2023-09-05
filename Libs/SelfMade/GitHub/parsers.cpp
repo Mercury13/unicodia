@@ -25,6 +25,7 @@ namespace {
         auto data = doc.FindMember("name");
         if (!data->value.IsString())
             return;
+        r.versionText = data->value.GetString();
 
         // Debug
         if (myVersion == github::VER_BAD_VERSION)
