@@ -20,10 +20,10 @@ github::UpdateReply::UpdateReply(std::span<std::string_view> aPlats)
 
 namespace {
 
-    enum class SmallRes { BAD_JSON, STOP, GO_NEXT };
+    enum class SmallRes { BAD_JSON, GO_NEXT, STOP_EXACT, STOP_OVERSHOOT };
 
     /// Checks whether documeht has one of equivPlatforms
-    /// @param [in] goodCode    what to return if GOOD (result always STOP)
+    /// @param [in] goodCode    what to return if GOOD (result always STOP_EXACT)
     /// @param [in] badResult   what to return if BAD (code always ABANDONED)
     SmallRes checkJsonPlatforms(
             const rapidjson::Value& doc,
@@ -54,7 +54,7 @@ namespace {
                 for (auto q : equivPlatforms) {
                     if (lat::areCaseEqual(p, q)) {
                         r.code = goodCode;
-                        return SmallRes::STOP;
+                        return SmallRes::STOP_EXACT;
                     }
                 }
             }
@@ -89,7 +89,7 @@ namespace {
         auto q = (r.version <=> myVersion);
         if (q == std::strong_ordering::less) {
             r.code = github::UpdateCode::FOUND_EARLIER;
-            return SmallRes::STOP;
+            return SmallRes::STOP_OVERSHOOT;
         } else if (q == std::strong_ordering::greater) {
             return checkJsonPlatforms(
                         doc, equivPlatforms, r,
@@ -97,7 +97,7 @@ namespace {
         } else {
             return checkJsonPlatforms(
                         doc, equivPlatforms, r,
-                        github::UpdateCode::COINCIDE, SmallRes::STOP);
+                        github::UpdateCode::COINCIDE, SmallRes::STOP_EXACT);
         }
     }
 
@@ -148,10 +148,12 @@ github::UpdateReply github::checkPageForUpdate(
     for (auto it = doc.Begin(); it != doc.End(); ++it) {
         auto q = checkJsonVersionForUpdate(*it, myVersion, plats, r);
         switch (q) {
-        case SmallRes::STOP:
+        case SmallRes::STOP_OVERSHOOT:
             // Stop means we found this/earlier version
             if (oldR)
                 r = std::move(*oldR);
+            [[fallthrough]];
+        case SmallRes::STOP_EXACT:
             if (r.code == UpdateCode::ABANDONED)
                 r.code = UpdateCode::COINCIDE;
             return r;
