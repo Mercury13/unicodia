@@ -23,6 +23,8 @@ namespace {
     enum class SmallRes { BAD_JSON, STOP, GO_NEXT };
 
     /// Checks whether documeht has one of equivPlatforms
+    /// @param [in] goodCode    what to return if GOOD (result always STOP)
+    /// @param [in] badResult   what to return if BAD (code always ABANDONED)
     SmallRes checkJsonPlatforms(
             const rapidjson::Value& doc,
             std::span<std::string_view> equivPlatforms,
