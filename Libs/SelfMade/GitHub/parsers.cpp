@@ -30,6 +30,8 @@ namespace {
         if (myVersion == github::VER_BAD_VERSION)
             r.versionText = "alpha<br>bravo";
 
+        /// @todo [urgent] Check for platform existence
+
         r.version = Version::parsePermissive(r.versionText);
         if (!r.version) {
             r.code = github::UpdateCode::BAD_VERSION;
