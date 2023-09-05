@@ -71,7 +71,7 @@ namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
 #define SUBURL_REPO "Mercury13/unicodia/releases"
-    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO;
+    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=10";
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
 }
 
@@ -1907,7 +1907,7 @@ void FmMain::updateFinished(QNetworkReply* reply)
                 } break;
             case github::UpdateCode::COINCIDE:
                 QMessageBox::information(this, head,
-                        loc::get("Update.Ok").argQ(res.version.toSv(buf)));
+                        loc::get("Update.Ok").argQ(updatever::version.toSv(buf)));
                 break;
             case github::UpdateCode::FOUND_EARLIER:
                 QMessageBox::warning(this, head,
