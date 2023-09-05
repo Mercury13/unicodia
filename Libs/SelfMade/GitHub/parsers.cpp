@@ -28,7 +28,7 @@ namespace {
             std::span<std::string_view> equivPlatforms,
             github::UpdateReply& r,
             github::UpdateCode goodCode,
-            SmallRes goodResult)
+            SmallRes badResult)
     {
         auto hAssets = doc.FindMember("assets");
         if (!hAssets->value.IsArray()) {
@@ -52,13 +52,13 @@ namespace {
                 for (auto q : equivPlatforms) {
                     if (lat::areCaseEqual(p, q)) {
                         r.code = goodCode;
-                        return goodResult;
+                        return SmallRes::STOP;
                     }
                 }
             }
         }
         r.code = github::UpdateCode::ABANDONED;
-        return SmallRes::GO_NEXT;
+        return badResult;
     }
 
     SmallRes checkJsonVersionForUpdate(
@@ -137,6 +137,7 @@ github::UpdateReply github::checkPageForUpdate(
 
     auto plats = unpackPlatforms(equivPlatforms);
     UpdateReply r(plats);
+    std::optional<UpdateReply> oldR;
 
     doc.Parse(body.data(), body.length());
     if (!doc.IsArray())
@@ -146,9 +147,16 @@ github::UpdateReply github::checkPageForUpdate(
         auto q = checkJsonVersionForUpdate(*it, myVersion, plats, r);
         switch (q) {
         case SmallRes::STOP:
+            // Stop means we found this/earlier version
+            if (oldR)
+                r = std::move(*oldR);
+            if (r.code == UpdateCode::ABANDONED)
+                r.code = UpdateCode::COINCIDE;
             return r;
         case SmallRes::BAD_JSON:
+            break;
         case SmallRes::GO_NEXT:
+            oldR = r;
             break;
         }
     }
