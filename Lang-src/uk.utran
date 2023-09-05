@@ -12468,8 +12468,8 @@
     <transl>Дивно: не можу розібрати відповідь сервера.</transl>
    </text>
    <text id="Abandon">
-    <orig>Your platform “{1}” seems to be abandoned.</orig>
-    <transl>Вашу платформу «{1}», напевне, кинуто.</transl>
+    <orig>Your platform “{1}” seems to be abandoned. You’ll have to go to home page for yourself and find a suitable platform.</orig>
+    <transl>Вашу платформу «{1}», напевне, кинуто. Вам самим прийдеться пройти на домашню сторінку та знайти придатну платформу.</transl>
    </text>
   </group>
  </file>

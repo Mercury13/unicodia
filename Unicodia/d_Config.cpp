@@ -72,7 +72,7 @@ namespace {
             progsets::dirMode = progsets::DirMode::PORTABLE;
         // debug-update
         auto hDebugUpdate = hRoot.child("debug-update");
-        if (auto ver = Version::parsePermissive(hDebugUpdate.attribute("debugVersion").as_string())) {
+        if (auto ver = Version::parsePermissive(hDebugUpdate.attribute("version").as_string())) {
             updatever::version = ver;
             updatever::isDebuggingVersion = true;
         }

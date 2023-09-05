@@ -12467,8 +12467,8 @@
     <transl>Странно: не могу разобрать ответ сервера.</transl>
    </text>
    <text id="Abandon">
-    <orig>Your platform “{1}” seems to be abandoned.</orig>
-    <transl>Ваша платформа «{1}», по-видимому, брошена.</transl>
+    <orig>Your platform “{1}” seems to be abandoned. You’ll have to go to home page for yourself and find a suitable platform.</orig>
+    <transl>Ваша платформа «{1}», по-видимому, брошена. Вам придётся самим пройти на домашнюю страницу и найти подходящую платформу.</transl>
    </text>
   </group>
  </file>

@@ -20,30 +20,20 @@ github::UpdateReply::UpdateReply(std::span<std::string_view> aPlats)
 
 namespace {
 
-    template <class Doc>
-    void checkJsonVersionForUpdate(
-            const Doc& doc,
-            const Version& myVersion,
+    enum class SmallRes { BAD_JSON, STOP, GO_NEXT };
+
+    /// Checks whether documeht has one of equivPlatforms
+    SmallRes checkJsonPlatforms(
+            const rapidjson::Value& doc,
             std::span<std::string_view> equivPlatforms,
-            github::UpdateReply& r)
+            github::UpdateReply& r,
+            github::UpdateCode goodCode,
+            SmallRes goodResult)
     {
-        if (!doc.IsObject())
-            return;
-        auto data = doc.FindMember("name");
-        if (!data->value.IsString())
-            return;
-        r.versionText = data->value.GetString();
-
-        // Debug
-        if (myVersion == github::VER_BAD_VERSION)
-            r.versionText = "alpha<br>bravo";
-
-        /// @todo [urgent] Check for platform existence
-
         auto hAssets = doc.FindMember("assets");
         if (!hAssets->value.IsArray()) {
             r.code = github::UpdateCode::ABANDONED;
-            return;
+            return SmallRes::GO_NEXT;
         }
         for (auto it = hAssets->value.Begin(); it != hAssets->value.End(); ++it) {
             if (!it->IsObject())
@@ -51,7 +41,7 @@ namespace {
             auto assetName = it->FindMember("name");
             if (!assetName->value.IsString())
                 continue;
-            std::string_view fileName = data->value.GetString();
+            std::string_view fileName = assetName->value.GetString();
             // Bite off extension
             auto pPoint = fileName.find_last_of('.');
             if (pPoint != std::string_view::npos)
@@ -60,26 +50,52 @@ namespace {
             auto parts = str::splitSv(fileName, '-');
             for (auto p : parts) {
                 for (auto q : equivPlatforms) {
-                    if (lat::areCaseEqual(p, q))
-                        goto found;
+                    if (lat::areCaseEqual(p, q)) {
+                        r.code = goodCode;
+                        return goodResult;
+                    }
                 }
             }
         }
         r.code = github::UpdateCode::ABANDONED;
-        return;
-    found:
+        return SmallRes::GO_NEXT;
+    }
+
+    SmallRes checkJsonVersionForUpdate(
+            const rapidjson::Value& doc,
+            const Version& myVersion,
+            std::span<std::string_view> equivPlatforms,
+            github::UpdateReply& r)
+    {
+        if (!doc.IsObject())
+            return SmallRes::BAD_JSON;
+        auto data = doc.FindMember("name");
+        if (!data->value.IsString())
+            return SmallRes::BAD_JSON;
+        r.versionText = data->value.GetString();
+
+        // Debug
+        if (myVersion == github::VER_BAD_VERSION)
+            r.versionText = "alpha<br>bravo";
+
+
         r.version = Version::parsePermissive(r.versionText);
         if (!r.version) {
             r.code = github::UpdateCode::BAD_VERSION;
-            return;
+            return SmallRes::BAD_JSON;
         }        
         auto q = (r.version <=> myVersion);
         if (q == std::strong_ordering::less) {
             r.code = github::UpdateCode::FOUND_EARLIER;
+            return SmallRes::STOP;
         } else if (q == std::strong_ordering::greater) {
-            r.code = github::UpdateCode::FOUND_LATER;
+            return checkJsonPlatforms(
+                        doc, equivPlatforms, r,
+                        github::UpdateCode::FOUND_LATER, SmallRes::GO_NEXT);
         } else {
-            r.code = github::UpdateCode::COINCIDE;
+            return checkJsonPlatforms(
+                        doc, equivPlatforms, r,
+                        github::UpdateCode::COINCIDE, SmallRes::STOP);
         }
     }
 
@@ -123,7 +139,18 @@ github::UpdateReply github::checkPageForUpdate(
     UpdateReply r(plats);
 
     doc.Parse(body.data(), body.length());
+    if (!doc.IsArray())
+        return r;
 
-    checkJsonVersionForUpdate(doc, myVersion, plats, r);
+    for (auto it = doc.Begin(); it != doc.End(); ++it) {
+        auto q = checkJsonVersionForUpdate(*it, myVersion, plats, r);
+        switch (q) {
+        case SmallRes::STOP:
+            return r;
+        case SmallRes::BAD_JSON:
+        case SmallRes::GO_NEXT:
+            break;
+        }
+    }
     return r;
 }

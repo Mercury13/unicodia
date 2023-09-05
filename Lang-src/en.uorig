@@ -8680,7 +8680,7 @@
     <au-cmt>Test: in Unicodia.xml add parameter debugVersion="0.0.1" (exactly)</au-cmt>
    </text>
    <text id="Abandon">
-    <orig>Your platform “{1}” seems to be abandoned.</orig>
+    <orig>Your platform “{1}” seems to be abandoned. You’ll have to go to home page for yourself and find a suitable platform.</orig>
    </text>
   </group>
  </file>
