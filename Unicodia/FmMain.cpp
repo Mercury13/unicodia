@@ -70,8 +70,9 @@ using namespace std::string_view_literals;
 namespace {
     // No need custom drawing — solves nothing
     constexpr TableDraw TABLE_DRAW = TableDraw::INTERNAL;
+#define N_CHECKED_VERSIONS "8"
 #define SUBURL_REPO "Mercury13/unicodia/releases"
-    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=10";
+    constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=" N_CHECKED_VERSIONS;
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
 }
 
