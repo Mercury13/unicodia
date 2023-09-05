@@ -155,7 +155,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 // Add to tree
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
                 auto& newItem = treePath.top()->children.emplace_back();
-                if (str::latHasUpper(name)) { // has uppercase letter → pre-decapped
+                if (lat::hasUpper(name)) { // has uppercase letter → pre-decapped
                     newItem.name = str::toU8sv(name);
                 } else { // otherwise decapitalize
                     newItem.name = str::toU8sv(decapitalizeEmoji(name));

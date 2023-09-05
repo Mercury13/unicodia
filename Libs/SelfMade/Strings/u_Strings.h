@@ -313,27 +313,6 @@ namespace str {
             return s.substr(0, p);
         }
 
-        template <class Sv> bool latIsUpper(Sv s) noexcept
-        {
-            for (auto c : s) {
-                if (c >= 'a' && c <= 'z')
-                    return false;
-            }
-            return true;
-        }
-
-        template <class Sv> bool latIsLower(Sv s) noexcept
-        {
-            for (auto c : s) {
-                if (c >= 'A' && c <= 'Z')
-                    return false;
-            }
-            return true;
-        }
-
-        template <class Sv> bool latIsSingleCase(Sv s) noexcept
-        { return latIsUpper<Sv>(s) || latIsLower<Sv>(s); }
-
         template <class Sv>
         Sv remainderSv(Sv s, Sv prefix, Sv suffix) noexcept
         {
@@ -529,46 +508,6 @@ namespace str {
     }
 
     ///
-    ///  @return [+] All Latin letters (A…Z) are capital
-    ///
-    template <class S>
-    [[nodiscard]] inline bool latIsUpper(const S& s) noexcept
-    {
-        using Sv = trait::Sv<S>;
-        return detail::latIsUpper<Sv>(s);
-    }
-
-    ///
-    ///  @return [+] All Latin letters (A…Z) are small
-    ///
-    template <class S>
-    [[nodiscard]] inline bool latIsLower(const S& s) noexcept
-    {
-        using Sv = trait::Sv<S>;
-        return detail::latIsLower<Sv>(s);
-    }
-
-    ///
-    ///  @return [+] Contains capital A…Z, ≡ !latIsLower(s)
-    ///
-    template <class S>
-    [[nodiscard]] inline bool latHasUpper(const S& s) noexcept
-    {
-        using Sv = trait::Sv<S>;
-        return !detail::latIsLower<Sv>(s);
-    }
-
-    ///
-    ///  @return [+] All Latin letters (A…Z) are all capital or all small
-    ///
-    template <class S>
-    [[nodiscard]] inline bool latIsSingleCase(const S& s) noexcept
-    {
-        using Sv = trait::Sv<S>;
-        return detail::latIsSingleCase<Sv>(s);
-    }
-
-    ///
     ///  String concatenation
     ///
     template <class S, class... Rest>
@@ -610,6 +549,107 @@ namespace str {
     }
 
 }   // namespace str
+
+
+namespace lat {
+
+    template <class Ch>
+    inline Ch toUpper(Ch x) {
+        static_assert(std::is_integral_v<Ch>);
+        if (x >= 'a' && x <= 'z')
+            return x - ('a' - 'A');
+        return x;
+    }
+
+    namespace detail {
+        template <class Sv> bool isUpper(Sv s) noexcept
+        {
+            for (auto c : s) {
+                if (c >= 'a' && c <= 'z')
+                    return false;
+            }
+            return true;
+        }
+
+        template <class Sv> bool isLower(Sv s) noexcept
+        {
+            for (auto c : s) {
+                if (c >= 'A' && c <= 'Z')
+                    return false;
+            }
+            return true;
+        }
+
+        template <class Sv> bool isSingleCase(Sv s) noexcept
+        { return isUpper<Sv>(s) || isLower<Sv>(s); }
+
+        template <class Sv> bool areCaseEqual(Sv x, Sv y) noexcept
+        {
+            if (x.length() != y.length())
+                return false;
+            for (auto it1 = x.begin(), it2 = y.begin();
+                      it1 != x.end();
+                      ++it1, ++it2) {
+                if (lat::toUpper(*it1) != lat::toUpper(*it2)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+    }   // namespace detail
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are capital
+    ///
+    template <class S>
+    [[nodiscard]] inline bool isUpper(const S& s) noexcept
+    {
+        using Sv = str::trait::Sv<S>;
+        return detail::isUpper<Sv>(s);
+    }
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are small
+    ///
+    template <class S>
+    [[nodiscard]] inline bool isLower(const S& s) noexcept
+    {
+        using Sv = str::trait::Sv<S>;
+        return detail::isLower<Sv>(s);
+    }
+
+    ///
+    ///  @return [+] Contains capital A…Z, ≡ !latIsLower(s)
+    ///
+    template <class S>
+    [[nodiscard]] inline bool hasUpper(const S& s) noexcept
+    {
+        using Sv = str::trait::Sv<S>;
+        return !detail::isLower<Sv>(s);
+    }
+
+    ///
+    ///  @return [+] All Latin letters (A…Z) are all capital or all small
+    ///
+    template <class S>
+    [[nodiscard]] inline bool isSingleCase(const S& s) noexcept
+    {
+        using Sv = str::trait::Sv<S>;
+        return detail::isSingleCase<Sv>(s);
+    }
+
+    ///
+    /// @return [+] strings are equal except Latin case
+    ///
+    template <class S>
+    [[nodiscard]] inline bool areCaseEqual(const S& x, const S& y) noexcept
+    {
+        using Sv = str::trait::Sv<S>;
+        return detail::areCaseEqual<Sv>(x, y);
+    }
+
+}   // namespace lat
 
 namespace detail {
     // A large part of the imlementation was taken from http://stackoverflow.com/a/15912824/3161376 which solved the problems that I had in the old implementation.
@@ -868,20 +908,26 @@ extern template SafeVector<std::u8string_view> str::detail::splitSv<std::u8strin
 extern template SafeVector<std::u16string_view> str::detail::splitSv<std::u16string_view>(std::u16string_view, std::u16string_view, bool);
 extern template SafeVector<std::u32string_view> str::detail::splitSv<std::u32string_view>(std::u32string_view, std::u32string_view, bool);
 
-extern template bool str::detail::latIsUpper<std::string_view>(std::string_view);
-extern template bool str::detail::latIsUpper<std::wstring_view>(std::wstring_view);
-extern template bool str::detail::latIsUpper<std::u8string_view>(std::u8string_view);
-extern template bool str::detail::latIsUpper<std::u16string_view>(std::u16string_view);
-extern template bool str::detail::latIsUpper<std::u32string_view>(std::u32string_view);
+extern template bool lat::detail::isUpper<std::string_view>(std::string_view);
+extern template bool lat::detail::isUpper<std::wstring_view>(std::wstring_view);
+extern template bool lat::detail::isUpper<std::u8string_view>(std::u8string_view);
+extern template bool lat::detail::isUpper<std::u16string_view>(std::u16string_view);
+extern template bool lat::detail::isUpper<std::u32string_view>(std::u32string_view);
 
-extern template bool str::detail::latIsLower<std::string_view>(std::string_view);
-extern template bool str::detail::latIsLower<std::wstring_view>(std::wstring_view);
-extern template bool str::detail::latIsLower<std::u8string_view>(std::u8string_view);
-extern template bool str::detail::latIsLower<std::u16string_view>(std::u16string_view);
-extern template bool str::detail::latIsLower<std::u32string_view>(std::u32string_view);
+extern template bool lat::detail::isLower<std::string_view>(std::string_view);
+extern template bool lat::detail::isLower<std::wstring_view>(std::wstring_view);
+extern template bool lat::detail::isLower<std::u8string_view>(std::u8string_view);
+extern template bool lat::detail::isLower<std::u16string_view>(std::u16string_view);
+extern template bool lat::detail::isLower<std::u32string_view>(std::u32string_view);
 
-extern template bool str::detail::latIsSingleCase<std::string_view>(std::string_view);
-extern template bool str::detail::latIsSingleCase<std::wstring_view>(std::wstring_view);
-extern template bool str::detail::latIsSingleCase<std::u8string_view>(std::u8string_view);
-extern template bool str::detail::latIsSingleCase<std::u16string_view>(std::u16string_view);
-extern template bool str::detail::latIsSingleCase<std::u32string_view>(std::u32string_view);
+extern template bool lat::detail::isSingleCase<std::string_view>(std::string_view);
+extern template bool lat::detail::isSingleCase<std::wstring_view>(std::wstring_view);
+extern template bool lat::detail::isSingleCase<std::u8string_view>(std::u8string_view);
+extern template bool lat::detail::isSingleCase<std::u16string_view>(std::u16string_view);
+extern template bool lat::detail::isSingleCase<std::u32string_view>(std::u32string_view);
+
+extern template bool lat::detail::areCaseEqual<std::string_view>(std::string_view, std::string_view);
+extern template bool lat::detail::areCaseEqual<std::wstring_view>(std::wstring_view, std::wstring_view);
+extern template bool lat::detail::areCaseEqual<std::u8string_view>(std::u8string_view, std::u8string_view);
+extern template bool lat::detail::areCaseEqual<std::u16string_view>(std::u16string_view, std::u16string_view);
+extern template bool lat::detail::areCaseEqual<std::u32string_view>(std::u32string_view, std::u32string_view);

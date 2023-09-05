@@ -67,11 +67,18 @@ namespace {
 
         pugi::xml_document doc;
         doc.load_file(fname::progsets.c_str());
-        auto root = doc.child("program");
-        if (root.attribute("portable").as_bool(false))
+        auto hRoot = doc.child("program");
+        if (hRoot.attribute("portable").as_bool(false))
             progsets::dirMode = progsets::DirMode::PORTABLE;
-        if (auto ver = Version::parsePermissive(root.attribute("debugVersion").as_string())) {
+        // debug-update
+        auto hDebugUpdate = hRoot.child("debug-update");
+        if (auto ver = Version::parsePermissive(hDebugUpdate.attribute("debugVersion").as_string())) {
             updatever::version = ver;
+            updatever::isDebuggingVersion = true;
+        }
+        std::string_view platforms = hDebugUpdate.attribute("platforms").as_string();
+        if (!platforms.empty()) {
+            updatever::equivPlatforms = platforms;
             updatever::isDebuggingVersion = true;
         }
     }

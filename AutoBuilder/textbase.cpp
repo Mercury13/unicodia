@@ -73,7 +73,7 @@ namespace {
             name = str::trimSv(name);
             if (name == "etc."sv || name == "..."sv)
                 return {};
-            if (str::latIsSingleCase(name)) {
+            if (lat::isSingleCase(name)) {
                 return decapitalize(name, currChar, flags);
             } else {
                 return decapitalize(name, currChar, flags | Dcfg::SHORTCUT);

@@ -22,9 +22,16 @@ namespace github {
         Version version;
         std::string versionText;
         std::string myPlatform;
+
+        UpdateReply() = default;
+        UpdateReply(std::span<std::string_view> aPlats);
     };
 
     UpdateReply checkVersionForUpdate(
+            std::string_view body,
+            const Version& myVersion,
+            std::string_view equivPlatforms);
+    UpdateReply checkPageForUpdate(
             std::string_view body,
             const Version& myVersion,
             std::string_view equivPlatforms);
