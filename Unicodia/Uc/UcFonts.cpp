@@ -105,8 +105,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Mincho", 120_pc },                                                  // …3
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
-      { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },            // …1
-      { FNAME_FUNKY, 120_pc },                                                  // …2
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1
+      { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …2
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
       { "UnicodiaHan.ttf", 120_pc },                                            // …1
     { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK strokes
