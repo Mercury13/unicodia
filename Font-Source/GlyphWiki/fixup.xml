@@ -1,7 +1,4 @@
 <fixup>
- <glyph name="2ECEF.svg">
-  <point x="166.2" y="124.8" action="del" />
- </glyph>
  <glyph name="31444.svg">
   <point x="85.1" y="57.1" dir="se" />
   <point x="86.3" y="55.7" dir="se" />
