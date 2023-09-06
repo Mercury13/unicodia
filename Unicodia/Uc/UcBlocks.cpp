@@ -1437,7 +1437,7 @@ constinit const uc::Block uc::blocks[] {
             "CJK Unified Ideographs Extension F",
             { EcScript::Hani, 'F' }, MapType::CJ_HANI,
             EcScript::Hani, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
-    // CJK I OK
+    // CJK I OK, BabelStone
     { 0x2EBF0, 0x2EE5F, { 0x2EBF5, EcContinent::CJK },
             "CJK Unified Ideographs Extension I",
             { EcScript::Hani, 'I' }, MapType::CJ_HANI,
