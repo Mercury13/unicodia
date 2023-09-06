@@ -271,12 +271,10 @@ namespace uc {
            Z_CJC_3,
          CJK_KANBUN,
          CJK_STRUCTURE,
-           Z_CJS_1,
+           CJK_STROKES,  // also dubbed as CJK strokes
            Z_CJS_2,
          CJK_NEWHAN,
            Z_HNA_1,
-         CJK_STROKES,
-           Z_CJT_1,
          CJK_SYMBOLS,
            Z_CJY_1,
            Z_CJY_2,
