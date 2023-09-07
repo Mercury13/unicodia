@@ -2571,14 +2571,12 @@ void uc::finishTranslation(
 
         // Sorting key
         std::u8string_view keyName = blk.loc.name;
-        auto specialSort = SpecialSort::NO;
         if (blk.alphaKey.ecScript != EcScript::NONE) {
             keyName = script.loc.name;
-            specialSort = SpecialSort::YES;
             if (script.mainBlock)
                 keyName = script.mainBlock->loc.name;
         }
-        buildSortKey(keyName, specialSort, sortOrder, blk.loc.sortKey);
+        buildSortKey(keyName, SpecialSort::NO, sortOrder, blk.loc.sortKey);
     }
 
     for (auto& bidi : bidiClassInfo) {

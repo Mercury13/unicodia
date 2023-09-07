@@ -3182,8 +3182,8 @@
    </group>
    <group id="10500">
     <text id="Name">
-     <orig>Elbasan Albanian</orig>
-     <transl>Ельбасанська албанська</transl>
+     <orig>Albanian — Elbasan</orig>
+     <transl>Албанська — ельбасанська</transl>
     </text>
    </group>
    <group id="10530">
@@ -3194,8 +3194,8 @@
    </group>
    <group id="10570">
     <text id="Name">
-     <orig>Vithkuqi Albanian</orig>
-     <transl>Віткутьська албанська</transl>
+     <orig>Albanian — Vithkuqi</orig>
+     <transl>Албанська — віткутьська</transl>
     </text>
    </group>
    <group id="10600">
@@ -5553,15 +5553,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</p>
+      <p>The only source is 59-page Elbasan Gospel of mid-18th century,  just 7×10{{_}}cm in size. The manuscript was confiscated in 1945 by socialist government from Lef Nosi, a pro-Nazi philologist and collector. Authorship is attributed to Gregory of Durrës, an Albanian monk.</p>
       <p />
-      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], Todhri, Veso-Bey, Vellara) were used as a cipher against Turks. By other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets. The only sources are 59-page Elbasan Gospel just 7×10{{_}}cm in size, and a few notes.</p>
+      <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], Todhri, Veso-Bey, Vellara) were used as a cipher against Turks. By other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets. </p>
+      <p />
+      <p>Do not confuse with Todhri alphabet, sometimes also named Elbasan!</p>
      </orig>
+     <au-cmt>Left for Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</au-cmt>
      <transl>
-      <p>Придумана у середині XVIII{{_}}століття і використовувалася біля міста Ельбасан (Албанія). Створення приписується вчителю Теодору Хаджі Філіпу (1730–1806), котрого вбили, коли він перевозив шрифт. Вживалась до XIX{{_}}століття.</p>
+      <p>Эдине джерело{{-}}59-сторінкове Ельбасанське Євангеліє середини XVIII{{_}}століття розміром всього 7×10{{_}}см. Рукопис конфіскував соціалістичний уряд у Лефа Носі, профашистського філолога та колекціонера. Авторство приписується Григорію Дурреському, албанському монаху.</p>
       <p />
-      <p>Вважають, що створення місцевих писемностей в Албанії (ельбасанської, [[ps:Vith|віткутьської]], Тодрі, Весо-Бея, Веллари) слугувало для конспірації від турків. За іншими даними, албанські освічені розуми дивились на слов’ян, греків та турків із власним алфавітом. Відомі рукописне 59-сторінкове Ельбасанське Євангеліє розміром всього 7×10{{_}}см та кілька записок.</p>
+      <p>Вважають, що створення місцевих писемностей в Албанії (ельбасанської, [[ps:Vith|віткутьської]], Тодрі, Весо-Бея, Веллари) слугувало для конспірації від турків. За іншими даними, албанські освічені розуми дивились на слов’ян, греків та турків із власним алфавітом.</p>
+      <p />
+      <p>Не плутати з алфавітом Тодрі, який також зовуть ельбасанським!</p>
      </transl>
+     <tr-cmt>Залишено на Тодрі: Придумана у середині XVIII{{_}}століття і використовувалася біля міста Ельбасан (Албанія). Створення приписується вчителю Теодору Хаджі Філіпу (1730–1806), котрого вбили, коли він перевозив шрифт. Вживалась до XIX{{_}}століття.</tr-cmt>
     </text>
    </group>
    <group id="Elym">
