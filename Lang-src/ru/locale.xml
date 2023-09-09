@@ -17,7 +17,7 @@
 	<alpha-sort>
 		<alp>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
-		<alp>á____é_____________________________________________________</alp>
+		<alp>á____é_________ó___________________________________________</alp>
 	</alpha-sort>
 	<ellipsis text="…">
 		<blk start="10100" /><!-- Aegean numbers -->
