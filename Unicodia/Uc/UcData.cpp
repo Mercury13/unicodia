@@ -130,7 +130,7 @@ constinit const uc::Version uc::versionInfo[] {
     { {},       { 2020, Month::SEP }, NO_FLAGS, u8"13.1" },
     { u8"14.0", { 2021, Month::SEP }, NO_FLAGS },
     { u8"15.0", { 2022, Month::SEP }, NO_FLAGS },
-    { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT | Vfg::BETA },
+    { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
