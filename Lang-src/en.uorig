@@ -5635,9 +5635,9 @@
       <p>There are no digits in Japanese ''Bonji'', and some room was left for old Indic digits. Many punctuation marks and decorations specific for religious texts are encoded.</p>
       <p />
       <p>[[pt:virama|Virama]] is extremely rare, and is found only in the end of words because of multiple [[pt:ligature|ligatures]]{{-}}letters are written top-down.</p>
-      <p>: ka {{sm|𑖎}} + i {{sm|𑖰◌}} = ki {{sm|𑖎𑖰}}</p>
-      <p>: ka {{sm|𑖎}} + virama {{sm|◌𑖿}} = k {{sm|𑖎𑖿}}</p>
-      <p>: ka {{sm|𑖎}} + virama {{sm|◌𑖿}} + ta {{sm|𑖝}} = kta {{sm|𑖎𑖿𑖝}}</p>
+      <p>{{smtable|ka|*𑖎|+ i|**◌𑖰|= ki|*𑖎𑖰}}</p>
+      <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|= k|*𑖎𑖿}}</p>
+      <p>{{smtable|ka|*𑖎|+ virama|*◌𑖿|+ ta|*𑖝|= kta|*𑖎𑖿𑖝}}</p>
      </orig>
     </text>
    </group>
