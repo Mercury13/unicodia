@@ -1205,7 +1205,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1B130, 0x1B16F, { 0x1B150, EcContinent::CJK },
             "Small Kana Extension",
             { EcScript::Kana, 'Z' }, MapType::CJ_OTHER_DEAD,
-            EcScript::Kana, EcFont::HENTAIGANA, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::CJK_UHAN, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Nushu OK
     { 0x1B170, 0x1B2FF, { 0x1B1E0, EcContinent::CJK },
             "Nushu",
