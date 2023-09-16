@@ -14,6 +14,7 @@ constexpr uc::Family FNAME_FUNKY { "UnicodiaFunky.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_HANA_C { "HanaMinLiteCSC.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_BABEL { "BabelStoneHan.ttf", uc::Fafg::RAW_FONT };
 constexpr uc::Family FNAME_KOREAN = { "UtoSansKR-Regular.ttf", uc::Fafg::RAW_FONT };
+constexpr uc::Family FNAME_UNIHAN { "UnicodiaHan.ttf" };
 
 constexpr uc::Family FAM_YU { "Yu Gothic", uc::ProbeChar { 0x3042 } };
 constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013 } };
@@ -108,7 +109,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 100_pc },                               // …1
       { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …2
     { FNAME_BABEL, Ffg::NOHINT_TINY | Ffg::FALL_TO_NEXT, 120_pc },              // CJK new Han
-      { "UnicodiaHan.ttf", 120_pc },                                            // …1
+      { FNAME_UNIHAN, 120_pc },                                                 // …1
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK symbols
       { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                  // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
@@ -165,8 +166,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
-      { FNAME_FUNKY, 120_pc },                                                  // …1 Old Katakana/Hiragana
-      { FAM_YU, Ffg::FALL_TO_NEXT },                                            // …2 — for P1 Katakana
+      { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1 for sone patches
+      { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
