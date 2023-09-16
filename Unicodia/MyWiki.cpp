@@ -475,6 +475,11 @@ namespace {
             const uc::Font& font,
             const SafeVector<std::string_view>& x)
     {
+        // How smtable works:
+        // • ∞ params
+        // • nbsp between params unless both are samples
+        // • *xxx = sample: draw in sample font
+        // • **xxx = glitching sample: start new cell, draw in sample font
         s += "<table cellspacing=0 cellpadding=0><tr valign='middle'><td>&nbsp;&nbsp;&nbsp;";
         auto n = x.size();
         for (size_t i = 1; i < n; ++i) {
