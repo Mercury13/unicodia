@@ -274,7 +274,7 @@ namespace uc {
            CJK_STROKES,  // also dubbed as CJK strokes
            Z_CJS_2,
          CJK_NEWHAN,
-           Z_HNA_1,
+           CJK_UHAN,    // Unicodia Han
          CJK_SYMBOLS,
            Z_CJY_1,
            Z_CJY_2,

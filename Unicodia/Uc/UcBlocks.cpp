@@ -1190,7 +1190,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
             { EcScript::Kana, 'B' }, MapType::CJ_OTHER_DEAD,
-            EcScript::Kana, EcFont::HENTAIGANA, Bfg::CJK | Bfg::HAS_DESCRIPTION },
+            EcScript::Kana, EcFont::CJK_UHAN, Bfg::CJK | Bfg::HAS_DESCRIPTION },
     // Kana supp OK
     { 0x1B000, 0x1B0FF, { 0x1B046, EcContinent::CJK },
             "Kana Supplement",

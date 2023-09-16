@@ -15,6 +15,7 @@ mat = psMat.compose(mat, mat3)
 
 fontforge.runInitScripts()
 font = fontforge.activeFont()
+nHandGlyphs = sum(1 for _ in font.glyphs())
 
 # import hieroglyphs
 file = open('hani-tofu.txt', 'r')
@@ -31,20 +32,23 @@ for line0 in file:
 
 # Work glyph-by glyph
 # (Somehow it’s quicker and works better)
+index = 0
 for glyph in font.glyphs():
-    # Round and add extrema
-    fg = glyph.layers[1]
-    fg.round()
-    fg.addExtrema("all")
-    fg.round()
-    # Simplify to get rid of poor extrema
-    fg.simplify(0.1)
-    fg.round()
-    # Hint
-    glyph.foreground = fg
-    # Correct direction
-    if not glyph.selfIntersects():
-        glyph.correctDirection()
+    if (index >= nHandGlyphs):    
+        # Round and add extrema
+        fg = glyph.layers[1]
+        fg.round()
+        fg.addExtrema("all")
+        fg.round()
+        # Simplify to get rid of poor extrema
+        fg.simplify(0.1)
+        fg.round()
+        # Hint
+        glyph.foreground = fg
+        # Correct direction
+        if not glyph.selfIntersects():
+            glyph.correctDirection()
+    ++index;
 
 font.generate(TEMPFILENAME)
 
