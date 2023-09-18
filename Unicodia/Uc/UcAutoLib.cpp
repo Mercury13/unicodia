@@ -3098,7 +3098,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3B2", u8"game die", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3092
 { U"\U0001F9E9", u8"puzzle piece", 3026, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3093
 { U"\U0001F9F8", u8"teddy bear", 3026, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3094
-{ U"\U0001FA85", u8"piñata", 3026, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3095
+{ U"\U0001FA85", u8"piñata", 3026, 0, -1, Lfg(33), EcVersion::E13_0 },   // 3095
 { U"\U0001FAA9", u8"mirror ball", 3026, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3096
 { U"\U0001FA86", u8"nesting dolls", 3026, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3097
 { U"\u2660\uFE0F", u8"spade suit", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3098
@@ -3647,7 +3647,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F1E6\U0001F1E8", u8"flag: Ascension Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3641
 { U"\U0001F1E6\U0001F1E9", u8"flag: Andorra", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3642
 { U"\U0001F1E6\U0001F1EA", u8"flag: United Arab Emirates", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3643
-{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3644
+{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3631, 0, -1, Lfg(33), EcVersion::E2_0 },   // 3644
 { U"\U0001F1E6\U0001F1EC", u8"flag: Antigua & Barbuda", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3645
 { U"\U0001F1E6\U0001F1EE", u8"flag: Anguilla", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3646
 { U"\U0001F1E6\U0001F1F1", u8"flag: Albania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3647
@@ -3799,7 +3799,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F1F2\U0001F1F3", u8"flag: Mongolia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3793
 { U"\U0001F1F2\U0001F1F4", u8"flag: Macao SAR China", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3794
 { U"\U0001F1F2\U0001F1F5", u8"flag: Northern Mariana Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3795
-{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3796
+{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3631, 0, -1, Lfg(33), EcVersion::E2_0 },   // 3796
 { U"\U0001F1F2\U0001F1F7", u8"flag: Mauritania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3797
 { U"\U0001F1F2\U0001F1F8", u8"flag: Montserrat", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3798
 { U"\U0001F1F2\U0001F1F9", u8"flag: Malta", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3799

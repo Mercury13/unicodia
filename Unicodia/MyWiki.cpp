@@ -571,6 +571,10 @@ namespace {
             appendFont(s, uc::EcFont::FUNKY, x, 0);
         } else if (name == "noto"sv) {
             appendFont(s, uc::EcFont::NOTO, x, 0);
+        } else if (name == "warn") {
+            s += "<b style='"  STYLE_MISRENDER "'>";
+            str::append(s, x.safeGetV(1, {}));
+            s += "</b>";
         } else if (name == "DuplCats") {
             uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)].load(NO_TRIGGER);
             appendFont(s, uc::EcFont::FUNKY, "<span style='font-size:40pt'>&#xE00F;</span>", 0);
@@ -1718,6 +1722,31 @@ namespace {
         }
     }
 
+    void appendMisrender(QString& text, std::u32string_view value)
+    {
+        if (value.empty())
+            return;
+
+        // Get L10n key
+        char buf[40];
+        auto end = buf + std::size(buf);
+        static constinit const std::string_view HEAD = "Lib.Misr.U";
+        auto p = std::copy(HEAD.begin(), HEAD.end(), buf);
+        for (auto v : value) {
+            ptrdiff_t remder = end - p;
+            if (remder > 1) {
+                auto nPrinted = snprintf(p, remder, "+%04X", static_cast<int>(v));
+                p += nPrinted;
+            }
+        }
+
+        auto& desc = loc::get(buf);
+        auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
+
+        text += "<p>";
+        mywiki::appendNoFont(text, paragraph);
+    }
+
 }   // anon namespace
 
 
@@ -1774,6 +1803,10 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         auto title = node.viewableTitle(uc::TitleMode::LONG);
     appendCopyable(text, title, "bigcopy");
     text += "</h1>";
+
+    if (node.flags.have(uc::Lfg::MISRENDER)) {
+        appendMisrender(text, node.value);
+    }
 
     text += "<p>";
     str::QSep sp(text, "<br>");

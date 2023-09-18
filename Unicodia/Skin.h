@@ -52,6 +52,7 @@ constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };// some cyan
 #define STYLE_ALTNAME      STYLE_LINK2(CNAME_ALTNAME, CNAME_U_COPY, "0.05") " font-weight:bold;"
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 #define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
+#define STYLE_MISRENDER    "color:" CNAME_LINK_DEPRECATED
 
 #define STYLES_WIKI \
         ".copy { " STYLE_COPY " } "                                             \

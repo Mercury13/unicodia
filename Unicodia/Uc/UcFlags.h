@@ -50,11 +50,12 @@ namespace uc {
     }
 
     enum class Lfg : unsigned char {
-        GRAPHIC_EMOJI = 1 << 0,     ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE
-        NO_TILE       = 1 << 1,     ///< [+] do not draw tile (Component right now)
-        CODE_AS_NAME  = 1 << 2,     ///< [+] use code as name (strange CJK right now)
-        TRANSLATE     = 1 << 3,     ///< [+] library line is localized using name as key
-        HAS_TEXT      = 1 << 4,     ///< [+] object has text
+        GRAPHIC_EMOJI = 1<<0,   ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE
+        NO_TILE       = 1<<1,   ///< [+] do not draw tile (Component right now)
+        CODE_AS_NAME  = 1<<2,   ///< [+] use code as name (strange CJK right now)
+        TRANSLATE     = 1<<3,   ///< [+] library line is localized using name as key
+        HAS_TEXT      = 1<<4,   ///< [+] object has text
+        MISRENDER     = 1<<5,   ///< [+] emoji misrenders are possible
     };
     using Lfgs = Flags<Lfg>;
 

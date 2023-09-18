@@ -12364,16 +12364,20 @@
    </group>
    <group id="Misr">
     <text id="Head">
-     <orig>{{warn|Other images are possible!}} {1}</orig>
-     <transl>{{warn|Можливі інші зображення!}} {1}</transl>
+     <orig>{{{{warn|Other images are possible!}} {1}</orig>
+     <transl>{{{{warn|Можливі інші зображення!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
-     <orig>Current (2023) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto.</orig>
-     <transl>Поточний (2023) уряд, Талібан, майже ніде не{{_}}признаний. Його прапор білий з чорною ''шахадóю'', мусульманським девізом.</transl>
+     <orig>Current (2023) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto. Meanwhile vendors use the old flag abandoned in 2021.</orig>
+     <transl>Поточний (2023) уряд, Талібан, майже ніде не{{_}}признаний. Його прапор білий з чорною ''шахадóю'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
      <orig>This flag is French naval ensign. As of 2023, there are two other flags, with shell (2019) and red-green-black (2023), neither is supported by major vendor.</orig>
      <transl>Цей прапор{{-}}французьский морський вимпел. На 2023 є два інших прапори, з мушлею (2019) та червоно-зелено-чорний (2023), жоден не підтримується великими виробниками.</transl>
+    </text>
+    <text id="U+1FA85">
+     <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
+     <transl>Google Noto малює піньяту у формі зірки, а Microsoft{{-}}у формі тварини.</transl>
     </text>
    </group>
   </group>

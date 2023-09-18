@@ -40,6 +40,12 @@ namespace {
         u8"animal-amphibian",   // Big library, scrap for the sake of spouting whale
     };
 
+    const std::unordered_set<std::u32string_view> MISRENDERS {
+        U"\U0001F1E6\U0001F1EB",    // Afghanistan
+        U"\U0001F1F2\U0001F1F6",    // Martinique
+        U"\U0001FA85",              // piñata
+    };
+
 }   // anon namespace
 
 
@@ -163,8 +169,10 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 newItem.emojiVersion = emVersion;
                 newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
                 if (NO_TILE.contains(newItem.name))
-                    newItem.flags |= uc::Lfg::NO_TILE;
+                    newItem.flags |= uc::Lfg::NO_TILE;                
                 newItem.value.assign(codes.buffer(), nCodes);
+                if (MISRENDERS.contains(newItem.value))
+                    newItem.flags |= uc::Lfg::MISRENDER;
                 ++r.count;
             }
         }
