@@ -12361,6 +12361,20 @@
      <transl>Капительное (малое прописное) написание используется в фонетике, так что в Юникоде есть капитель для всей базовой латиницы, кроме X.</transl>
     </text>
    </group>
+   <group id="Misr">
+    <text id="Head">
+     <orig>{{warn|Other images are possible!}} {1}</orig>
+     <transl>{{warn|Возможны другие изображения!}} {1}</transl>
+    </text>
+    <text id="U+1F1E6+1F1EB">
+     <orig>Current (2023) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto.</orig>
+     <transl>Текущее (2023) правительство, Талибан, почти нигде не{{_}}признано. Его флаг белый с чёрной ''шахадóй'', мусульманским девизом.</transl>
+    </text>
+    <text id="U+1F1F2+1F1F6">
+     <orig>This flag is French naval ensign. As of 2023, there are two other flags, with shell (2019) and red-green-black (2023), neither is supported by major vendor.</orig>
+     <transl>Этот флаг{{-}}французский морской вымпел. На 2023 есть два других флага, с ракушкой (2019) и красно-зелёно-чёрный (2023), ни один не поддерживается крупными производителями.</transl>
+    </text>
+   </group>
   </group>
   <group id="Version">
    <group id="1.1">
