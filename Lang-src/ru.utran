@@ -834,8 +834,8 @@
      <transl>Все символы в версии Юникода</transl>
     </text>
     <text id="EmojiVer">
-     <orig>Became graphical in emoji version</orig>
-     <transl>Стала графической в версии эмодзи</transl>
+     <orig>Approved in emoji version</orig>
+     <transl>Принята в версии эмодзи</transl>
     </text>
     <text id="EmojiV">
      <orig>Emoji {1}</orig>

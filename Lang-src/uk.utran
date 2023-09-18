@@ -835,8 +835,8 @@
      <transl>Усі символи у версії Юнікоду</transl>
     </text>
     <text id="EmojiVer">
-     <orig>Became graphical in emoji version</orig>
-     <transl>Стала графічною у версії емодзі</transl>
+     <orig>Approved in emoji version</orig>
+     <transl>Прийнято у версії емодзі</transl>
     </text>
     <text id="EmojiV">
      <orig>Emoji {1}</orig>
