@@ -2168,7 +2168,7 @@ uc::SampleProxy uc::Cp::sampleProxy(
         auto setting = glyphSets[channel];
         // Setting OK?
         if (setting < styleChannel().count) {
-            auto flag = uc::Cfg::STYLE_0 << setting;
+            auto flag = uc::Cfg::G_STYLE_0 << setting;
             // Have this style?
             if (flags.have(flag)) {
                 // Code works for setting == 1 only
@@ -2212,28 +2212,30 @@ bool uc::Cp::isGraphical() const
 uc::DrawMethod uc::Cp::drawMethod(
         EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const
 {
-    if (flags.haveAny(m::ALL)) [[unlikely]] {
-        if (flags.have(Cfg::M_CUSTOM_CONTROL))
-            return uc::DrawMethod::CUSTOM_CONTROL;
-        if (flags.have(Cfg::M_SVG_EMOJI)) {
-                bool isSvg = true;
-                switch (emojiMode) {
-                case EmojiDraw::TEXT:
-                    isSvg = !flags.have(Cfg::U_VS16_EMOJI);
-                    break;
-                case EmojiDraw::CONSERVATIVE:
-                    isSvg = !block().flags.have(Bfg::NO_EMOJI);
-                    break;
-                case EmojiDraw::GRAPHIC:
-                    break;
-                }
-                return isSvg ? uc::DrawMethod::SVG_EMOJI : uc::DrawMethod::SAMPLE;
+    switch ((flags & m::ALL).numeric()) {
+    case m::CUSTOM_CONTROL.numeric():
+        return uc::DrawMethod::CUSTOM_CONTROL;
+    case m::SVG_EMOJI.numeric(): {
+            bool isSvg = true;
+            switch (emojiMode) {
+            case EmojiDraw::TEXT:
+                isSvg = !flags.have(Cfg::U_VS16_EMOJI);
+                break;
+            case EmojiDraw::CONSERVATIVE:
+                isSvg = !block().flags.have(Bfg::NO_EMOJI);
+                break;
+            case EmojiDraw::GRAPHIC:
+                break;
             }
-        if (flags.have(Cfg::M_SPACE))
-            return uc::DrawMethod::SPACE;
-        if (isAbbreviated())
-            return uc::DrawMethod::ABBREVIATION;
+            return isSvg ? uc::DrawMethod::SVG_EMOJI : uc::DrawMethod::SAMPLE;
+        }
+    case m::SPACE.numeric():
+        return uc::DrawMethod::SPACE;
+    case m::ABBREVIATION.numeric():
+        return uc::DrawMethod::ABBREVIATION;
+    default:;
     }
+
     if (glyphSets[EcGlyphStyleChannel::VERTICAL] != 0
             && block().ecStyleChannel == EcGlyphStyleChannel::VERTICAL) {
         return block().flags.have(uc::Bfg::CCW)
@@ -2302,7 +2304,7 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
         std::cout << "Debug here!" << std::endl;
     }
     auto v = &firstFont();
-    bool isBuggy = flags.have(Cfg::RENDER_BUG);
+    bool isBuggy = flags.have(Cfg::G_RENDER_BUG);
     auto sb = subj.ch32();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         auto wantSkip = isBuggy

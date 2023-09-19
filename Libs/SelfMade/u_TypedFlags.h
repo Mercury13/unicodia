@@ -79,18 +79,18 @@ public:
 
     // bool
     constexpr operator bool() const { return fValue; }
-    operator char() const = delete;
-    operator unsigned char() const = delete;
-    operator short() const = delete;
-    operator unsigned short() const = delete;
-    operator int() const = delete;
-    operator unsigned int() const = delete;
-    operator long() const = delete;
-    operator unsigned long() const = delete;
-    operator long long() const = delete;
-    operator unsigned long long() const = delete;
-    operator float() const = delete;
-    operator double() const = delete;
+    explicit operator char() const = delete;
+    explicit operator unsigned char() const = delete;
+    explicit operator short() const = delete;
+    explicit operator unsigned short() const = delete;
+    explicit operator int() const = delete;
+    explicit operator unsigned int() const = delete;
+    explicit operator long() const = delete;
+    explicit operator unsigned long() const = delete;
+    explicit operator long long() const = delete;
+    explicit operator unsigned long long() const = delete;
+    explicit operator float() const = delete;
+    explicit operator double() const = delete;
     [[deprecated("Use numeric()")]] constexpr Storage value() const { return fValue; }
     constexpr Storage numeric() const { return fValue; }
 

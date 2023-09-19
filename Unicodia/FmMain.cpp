@@ -1369,7 +1369,7 @@ void FmMain::forceShowCp(MaybeChar ch)
             for (unsigned i = 0; i < var.count; ++i) {
                 auto button = radioGlyphStyle.buttonAt(i);
                 button->setText(loc::get(str::cat(prefix, char('0' + i))));
-                auto flag = uc::Cfg::STYLE_0 << i;
+                auto flag = uc::Cfg::G_STYLE_0 << i;
                 button->setFont(ch->flags.have(flag) ? goodFont : badFont);
             }
             model.glyphStyle.currChannel = ch->ecStyleChannel();

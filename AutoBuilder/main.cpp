@@ -614,7 +614,7 @@ int main()
 
         Flags<uc::Cfg> flags;
         if (hasAbbrev)
-            flags |= uc::Cfg::M_ABBREVIATION;
+            flags |= uc::m::ABBREVIATION;
         // Deprecated
         if (isDeprecated) {
             flags |= uc::Cfg::U_DEPRECATED;
@@ -622,14 +622,14 @@ int main()
         }
         // Alternate
         if (isAlternate(cp))
-            flags |= uc::Cfg::RENDER_BUG;
+            flags |= uc::Cfg::G_RENDER_BUG;
         // Virtual virama
         if (customDrawnControlChars.contains(cp)
                 || (cp >= 0xE0000 && cp <= 0xE007F))
-            flags |= uc::Cfg::M_CUSTOM_CONTROL;
+            flags |= uc::m::CUSTOM_CONTROL;
         // No anti-aliasing
         if (isNoAa(cp))
-            flags |= uc::Cfg::NO_AA;
+            flags |= uc::m::NO_AA;
         // Default-ignorable
         if (elChar.attribute("DI").as_string()[0] == 'Y') {
             flags |= uc::Cfg::U_DEF_IGNORABLE;
@@ -639,10 +639,10 @@ int main()
             flags |= uc::Cfg::U_VS16_EMOJI;
         // SVG emoji
         if (noto.singleChar.contains(cp))
-            flags |= uc::Cfg::M_SVG_EMOJI;
+            flags |= uc::m::SVG_EMOJI;
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
-            flags |= uc::Cfg::M_SPACE;
+            flags |= uc::m::SPACE;
         flags |= styleFlags(cp);
 
         // CJK strange

@@ -1942,15 +1942,15 @@ const std::set<RangeByEnd> noAaRanges {
     { 0x133FA, 0x1340C },   // Egyptian — sticks 1…9
 };
 
-constexpr auto TWO_STYLES = uc::Cfg::STYLE_0 | uc::Cfg::STYLE_1;
+constexpr auto TWO_STYLES = uc::Cfg::G_STYLE_0 | uc::Cfg::G_STYLE_1;
 
 const std::map<RangeByEnd, uc::Cfgs> styleRanges {
     // Glagolitic: Bulgaria or Croatia
     { { 0x2C00,  0x2C5F  }, TWO_STYLES },   // Glag main
-    { { 0x1E000, 0x1E02F }, uc::Cfg::STYLE_0 }, // Glag ex
+    { { 0x1E000, 0x1E02F }, uc::Cfg::G_STYLE_0 }, // Glag ex
     // Sogdian etc: horizontal or vertical
     { { 0x1800,  0x180A  }, TWO_STYLES },   // Mong
-    { { 0x180B,  0x180F  }, uc::Cfg::STYLE_0 }, // A small hole in Mong
+    { { 0x180B,  0x180F  }, uc::Cfg::G_STYLE_0 }, // A small hole in Mong
     { { 0x1810,  0x18AF  }, TWO_STYLES },   // Mong
     { { 0x11660, 0x1167F }, TWO_STYLES },   // Mong ex
     { { 0xA840,  0xA87F  }, TWO_STYLES },   // Phag

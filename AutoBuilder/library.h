@@ -36,6 +36,8 @@ namespace lib {
         size_t count = 0;
         /// List of single-char emoji that use VS16
         std::unordered_set<char32_t> vs16;
+        /// List of single-char emoji that are
+        std::unordered_set<char32_t> misrenders;
         /// Root of emoji branch
         Node root;
     };

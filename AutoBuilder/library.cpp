@@ -155,8 +155,10 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     codes[i] = fromHex(hexCodes[i]);
                 }
                 // #### + VS16 → that code requires VS16
+                char32_t mainCode = (nCodes == 1) ? codes[0] : 0;
                 if (nCodes == 2 && codes[1] == VS16) {
                     r.vs16.insert(codes[0]);
+                    mainCode = codes[0];
                 }
                 // Add to tree
                 auto [text, emVersion, name] = splitLineSv(comment, ' ', ' ');
@@ -171,8 +173,11 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= uc::Lfg::NO_TILE;                
                 newItem.value.assign(codes.buffer(), nCodes);
-                if (MISRENDERS.contains(newItem.value))
+                if (MISRENDERS.contains(newItem.value)) {
                     newItem.flags |= uc::Lfg::MISRENDER;
+                    if (mainCode != 0)
+                        r.misrenders.insert(mainCode);
+                }
                 ++r.count;
             }
         }
