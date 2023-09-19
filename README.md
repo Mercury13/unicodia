@@ -51,9 +51,11 @@ Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 ## Language
 
-English dialect is whatever better for international audience. British form is preferred if both are good.
+**English.** International: truck > lorry, petrol > gas. British form is preferred if both are good.
 
-War jargon is forbidden, especially in Russian/Ukrainian.
+**Russian.** Fully YOfied. No war jargon. No concessions to Ukrainian. Though 2022 war described as neutral as possible.
+
+**Ukrainian.** 2019 reform avoided. No war jargon. Topics sensitive to nationalists are described as delicately as possible.
 
 ## Future functionality
 * Finish GlyphWiki loader.
