@@ -8992,8 +8992,8 @@
      <transl>Метка/охватывающая</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows 10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not so bad.</orig>
-     <transl>Охватывающие метки используются в древнерусских буквенных цифрах (А҈). Также существуют охватывающие квадрат, круг и другие фигуры. Ни один проверенный типографский движок на Windows 10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, но на хороших шрифтах вроде DejaVu результат очень неплох.</transl>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not so bad.</orig>
+     <transl>Охватывающие метки используются в древнерусских буквенных цифрах (А҈). Также существуют охватывающие квадрат, круг и другие фигуры. Ни один проверенный типографский движок на Windows{{_}}10 20H2 (GDI, Cairo, Skia) не{{_}}поддерживает подобные символы идеально, но на хороших шрифтах вроде DejaVu результат очень неплох.</transl>
     </text>
    </group>
    <group id="Mn">
@@ -9227,7 +9227,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>In Windows 10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open emoji panel. Can enter:</p>
+      <p>In Windows{{_}}10/11 press {{kb|Win|;}} or {{kb|Win|.}} to open emoji panel. Can enter:</p>
       <p>* [[pt:emoji|emoji]] existing in standard font. When the font extended, panel extended too;</p>
       <p>* text smilies;</p>
       <p>* typography characters;</p>
@@ -9238,7 +9238,7 @@
       <p>* superscripts, fractions, mathematical operators.</p>
      </orig>
      <transl>
-      <p>В Windows 10/11 нажмите {{kb|Win|;}} или {{kb|Win|.}}, чтобы раскрыть панель эмодзи. Умеет вводить:</p>
+      <p>В Windows{{_}}10/11 нажмите {{kb|Win|;}} или {{kb|Win|.}}, чтобы раскрыть панель эмодзи. Умеет вводить:</p>
       <p>* [[pt:emoji|эмодзи]], существующие в стандартном шрифте. С пополнением шрифта пополнялась и панель;</p>
       <p>* текстовые смайлики;</p>
       <p>* типографские символы;</p>
@@ -12377,6 +12377,14 @@
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
      <transl>Google Noto рисует пиньяту в форме звезды, а Microsoft{{-}}в форме животного.</transl>
+    </text>
+    <text id="U+1FA92">
+     <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts straight razor.</orig>
+     <transl>Все производители остановились на безопасной бритве относительно недавно, в 2019–21. Эмодзи Windows{{_}}10 изображает опасную бритву.</transl>
+    </text>
+    <text id="U+1FAA4">
+     <orig>As of 2023, sample Unicode image depicts spring trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <transl>На 2023 образцовое изображение Юникода{{-}}пружинная мышеловка.  Но поскольку это эмодзи значит «бесплатный сыр» и «ловушка», большинство производителей рисуют самодельную ловушку, которая ловит живой, с сыром внутри.</transl>
     </text>
    </group>
   </group>

@@ -44,6 +44,8 @@ namespace {
         U"\U0001F1E6\U0001F1EB",    // Afghanistan
         U"\U0001F1F2\U0001F1F6",    // Martinique
         U"\U0001FA85",              // piñata
+        U"\U0001FA92",              // razor
+        U"\U0001FAA4",              // mouse trap
     };
 
 }   // anon namespace

@@ -637,6 +637,9 @@ int main()
         // VS16
         if (emoji.vs16.contains(cp))
             flags |= uc::Cfg::U_VS16_EMOJI;
+        // Misrenders
+        if (emoji.misrenders.contains(cp))
+            flags |= uc::Cfg::G_MISRENDER;
         // SVG emoji
         if (noto.singleChar.contains(cp))
             flags |= uc::m::SVG_EMOJI;

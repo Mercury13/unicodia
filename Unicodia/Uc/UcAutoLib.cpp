@@ -3373,8 +3373,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001FAA0", u8"plunger", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3367
 { U"\U0001F6BF", u8"shower", 3129, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3368
 { U"\U0001F6C1", u8"bathtub", 3129, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3369
-{ U"\U0001FAA4", u8"mouse trap", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3370
-{ U"\U0001FA92", u8"razor", 3129, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3371
+{ U"\U0001FAA4", u8"mouse trap", 3129, 0, -1, Lfg(33), EcVersion::E13_0 },   // 3370
+{ U"\U0001FA92", u8"razor", 3129, 0, -1, Lfg(33), EcVersion::E12_0 },   // 3371
 { U"\U0001F9F4", u8"lotion bottle", 3129, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3372
 { U"\U0001F9F7", u8"safety pin", 3129, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3373
 { U"\U0001F9F9", u8"broom", 3129, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3374

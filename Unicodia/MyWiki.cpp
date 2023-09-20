@@ -1303,6 +1303,31 @@ namespace {
         }
     }
 
+    void appendMisrender(QString& text, std::u32string_view value)
+    {
+        if (value.empty())
+            return;
+
+        // Get L10n key
+        char buf[40];
+        auto end = buf + std::size(buf);
+        static constinit const std::string_view HEAD = "Lib.Misr.U";
+        auto p = std::copy(HEAD.begin(), HEAD.end(), buf);
+        for (auto v : value) {
+            ptrdiff_t remder = end - p;
+            if (remder > 1) {
+                auto nPrinted = snprintf(p, remder, "+%04X", static_cast<int>(v));
+                p += nPrinted;
+            }
+        }
+
+        auto& desc = loc::get(buf);
+        auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
+
+        text += "<p>";
+        mywiki::appendNoFont(text, paragraph);
+    }
+
     void appendCpBullets(QString& text, const uc::Cp& cp, CpSerializations serializations)
     {
         str::append(text, "<p>");
@@ -1517,6 +1542,12 @@ QString mywiki::buildHtml(const uc::Cp& cp)
         text += "</h4>";
     }
 
+    // Misrender
+    if (cp.flags.have(uc::Cfg::G_MISRENDER)) {
+        char32_t s[1] { cp.subj };
+        appendMisrender(text, { s, 1 });
+    }
+
     appendSgnwVariants(text, sw);
 
     {   // Info box
@@ -1720,31 +1751,6 @@ namespace {
                      reinterpret_cast<const char*>(node.text.data()));
             mywiki::appendNoFont(text, loc::get(buf));
         }
-    }
-
-    void appendMisrender(QString& text, std::u32string_view value)
-    {
-        if (value.empty())
-            return;
-
-        // Get L10n key
-        char buf[40];
-        auto end = buf + std::size(buf);
-        static constinit const std::string_view HEAD = "Lib.Misr.U";
-        auto p = std::copy(HEAD.begin(), HEAD.end(), buf);
-        for (auto v : value) {
-            ptrdiff_t remder = end - p;
-            if (remder > 1) {
-                auto nPrinted = snprintf(p, remder, "+%04X", static_cast<int>(v));
-                p += nPrinted;
-            }
-        }
-
-        auto& desc = loc::get(buf);
-        auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
-
-        text += "<p>";
-        mywiki::appendNoFont(text, paragraph);
     }
 
 }   // anon namespace
