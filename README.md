@@ -55,7 +55,7 @@ Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 **Russian.** Ё is mandatory. No war jargon. No grammatical concessions to Ukrainian. Describe 2022 war as neutral as possible.
 
-**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ) are embraced. No war jargon. Describe topics sensitive to nationalists as delicately as possible.
+**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ in loanwords) are embraced. No war jargon. Describe topics sensitive to nationalists as delicately as possible.
 
 ## Future functionality
 * Finish GlyphWiki loader.
