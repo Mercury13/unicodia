@@ -51,7 +51,7 @@ Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 ## Language
 
-**English.** International: truck > lorry, petrol > gas. British form is preferred if both are good.
+**English.** International: truck > lorry, petrol > gas. Prefer British form if both are good.
 
 **Russian.** Ё is mandatory. No war jargon. No grammatical concessions to Ukrainian. Describe 2022 war as neutral as possible.
 
