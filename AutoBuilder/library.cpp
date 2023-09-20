@@ -46,6 +46,7 @@ namespace {
         U"\U0001FA85",              // piñata
         U"\U0001FA92",              // razor
         U"\U0001FAA4",              // mouse trap
+        U"\U0001F46A",              // family
     };
 
 }   // anon namespace

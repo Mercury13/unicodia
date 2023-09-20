@@ -2476,7 +2476,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F464", u8"bust in silhouette", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2470
 { U"\U0001F465", u8"busts in silhouette", 218, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2471
 { U"\U0001FAC2", u8"people hugging", 218, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2472
-{ U"\U0001F46A", u8"family", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2473
+{ U"\U0001F46A", u8"family", 218, 0, -1, Lfg(33), EcVersion::E0_6 },   // 2473
 { U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2", u8"family: adult, adult, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2474
 { U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, adult, child, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2475
 { U"\U0001F9D1\u200D\U0001F9D2", u8"family: adult, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2476
