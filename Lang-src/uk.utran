@@ -2110,7 +2110,7 @@
       <p>Only loop 27B0 and double loop 27BF aren’t from that library.</p>
      </orig>
      <transl>
-      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька [[pt:emoji|емодзі]], що цілком оправдано: в інтернеті це будуть кольорові картинки, а друкар оформить публікацію чорно-білим шрифтом.</p>
+      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька [[pt:emoji|емодзі]], що цілком виправдано: в інтернеті це будуть кольорові картинки, а друкар оформить публікацію чорно-білим шрифтом.</p>
       <p />
       <p>Тільки петля 27B0 та подвійна петля 27BF не{{_}}входять до цієї бібліотеки.</p>
      </transl>
@@ -12375,6 +12375,18 @@
      <orig>This flag is French naval ensign. As of 2023, there are two other flags, with seashell (2019) and red-green-black (2023), neither is supported by major vendors.</orig>
      <transl>Цей прапор{{-}}французьский морський вимпел. На 2023 є два інших прапори, з мушлею (2019) та червоно-зелено-чорний (2023), жоден не підтримується великими виробниками.</transl>
     </text>
+    <text id="U+1F46A">
+     <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
+     <transl>Виробники до 2019 малювали її як чоловіка, жінку та дитину. Пізніше вона стала безстатевою. У 2023 вона перетворилася на силует, але жоден великий виробник не{{_}}оновив свої зображення.</transl>
+    </text>
+    <text id="U+1F68F">
+     <orig>Vendors may draw a variety of local bus stops.</orig>
+     <transl>Виробники можуть малювати різноманітні місцеві зупинки.</transl>
+    </text>
+    <text id="U+1F6DE">
+     <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
+     <transl>Виробники можуть малювати колесо від воза, велосипеда чи автомобіля.</transl>
+    </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
      <transl>Google Noto малює піньяту у формі зірки, а Microsoft{{-}}у формі тварини.</transl>
@@ -12386,10 +12398,6 @@
     <text id="U+1FAA4">
      <orig>As of 2023, sample Unicode image depicts spring trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
      <transl>На 2023 зразкове зображення Юнікоду{{-}}пружинна мишоловка. Але оскільки цей емодзі значить «безплатний сир» та «пастка», більшість виробників малюють саморобну пастку, що ловить мишу живою, з сиром всередині.</transl>
-    </text>
-    <text id="U+1F46A">
-     <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
-     <transl>Виробники до 2019 малювали її як чоловіка, жінку та дитину. Пізніше вона стала безстатевою. У 2023 вона перетворилася на силует, але жоден великий виробник не{{_}}оновив свої зображення.</transl>
     </text>
    </group>
   </group>

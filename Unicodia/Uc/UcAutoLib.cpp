@@ -2913,12 +2913,12 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6F4", u8"kick scooter", 2799, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2907
 { U"\U0001F6F9", u8"skateboard", 2799, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2908
 { U"\U0001F6FC", u8"roller skate", 2799, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2909
-{ U"\U0001F68F", u8"bus stop", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2910
+{ U"\U0001F68F", u8"bus stop", 2799, 0, -1, Lfg(33), EcVersion::E0_6 },   // 2910
 { U"\U0001F6E3\uFE0F", u8"motorway", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2911
 { U"\U0001F6E4\uFE0F", u8"railway track", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2912
 { U"\U0001F6E2\uFE0F", u8"oil drum", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2913
 { U"\u26FD", u8"fuel pump", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2914
-{ U"\U0001F6DE", u8"wheel", 2799, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2915
+{ U"\U0001F6DE", u8"wheel", 2799, 0, -1, Lfg(33), EcVersion::E14_0 },   // 2915
 { U"\U0001F6A8", u8"police car light", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2916
 { U"\U0001F6A5", u8"horizontal traffic light", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2917
 { U"\U0001F6A6", u8"vertical traffic light", 2799, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2918

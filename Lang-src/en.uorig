@@ -8610,6 +8610,15 @@
     <text id="U+1F1F2+1F1F6">
      <orig>This flag is French naval ensign. As of 2023, there are two other flags, with seashell (2019) and red-green-black (2023), neither is supported by major vendors.</orig>
     </text>
+    <text id="U+1F46A">
+     <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
+    </text>
+    <text id="U+1F68F">
+     <orig>Vendors may draw a variety of local bus stops.</orig>
+    </text>
+    <text id="U+1F6DE">
+     <orig>Vendors may draw a wheel from horse carriage, bicycle or automobile.</orig>
+    </text>
     <text id="U+1FA85">
      <orig>Google Noto draws star-shaped piñata, and Microsoft does animal-shaped.</orig>
     </text>
@@ -8618,9 +8627,6 @@
     </text>
     <text id="U+1FAA4">
      <orig>As of 2023, sample Unicode image depicts spring trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
-    </text>
-    <text id="U+1F46A">
-     <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
     </text>
    </group>
   </group>
