@@ -53,9 +53,9 @@ Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
 **English.** International: truck > lorry, petrol > gas. British form is preferred if both are good.
 
-**Russian.** Fully YOfied. No war jargon. No grammatical concessions to Ukrainian. 2022 war is described as neutral as possible.
+**Russian.** Ё is mandatory. No war jargon. No grammatical concessions to Ukrainian. Describe 2022 war as neutral as possible.
 
-**Ukrainian.** 2019 reform avoided. No war jargon. Topics sensitive to nationalists are described as delicately as possible.
+**Ukrainian.** Avoid 2019 reform, earlier changes (e.g. frequent Ґ) are embraced. No war jargon. Describe topics sensitive to nationalists as delicately as possible.
 
 ## Future functionality
 * Finish GlyphWiki loader.
