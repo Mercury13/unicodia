@@ -61,6 +61,7 @@ namespace uc {
         TRANSLATE     = 1<<3,   ///< [+] library line is localized using name as key
         HAS_TEXT      = 1<<4,   ///< [+] object has text
         MISRENDER     = 1<<5,   ///< [+] emoji misrenders are possible
+        SEARCHABLE    = 1<<6,   ///< [+] emoji is searchable. Unsearchable are single-character, VS16, race/direction
     };
     using Lfgs = Flags<Lfg>;
 
