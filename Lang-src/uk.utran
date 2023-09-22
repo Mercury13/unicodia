@@ -3182,8 +3182,9 @@
    </group>
    <group id="10500">
     <text id="Name">
-     <orig>Albanian — Elbasan</orig>
-     <transl>Албанська — ельбасанська</transl>
+     <orig>Albanian — Elbasan Gospel</orig>
+     <known-orig>Albanian — Elbasan</known-orig>
+     <transl>Албанська — Ельбасанське Євангеліє</transl>
     </text>
    </group>
    <group id="10530">
@@ -5544,8 +5545,8 @@
    </group>
    <group id="Elba">
     <text id="Name">
-     <orig>Elbasan Albanian</orig>
-     <transl>Ельбасанський алфавіт (албанська)</transl>
+     <orig>Elbasan Gospel alphabet for Albanian</orig>
+     <transl>Алфавіт Ельбасанського Євангелія (албанська)</transl>
     </text>
     <text id="Lang">
      <orig>Albanian</orig>
@@ -8638,7 +8639,7 @@
    </group>
    <group id="Vith">
     <text id="Name">
-     <orig>Vithkuqi Albanian</orig>
+     <orig>Vithkuqi alphabet for Albanian</orig>
      <transl>Віткутьський алфавіт (албанська)</transl>
     </text>
     <text id="Lang">
@@ -8654,7 +8655,7 @@
       <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, Todhri, Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
      </orig>
      <transl>
-      <p>Алфавіт придумав Наут Векілхарджі, письменник, перекладач та адвокат{{-}}він над ним працював 20 років, 1824–1844. Через два роки Наум помер, і алфавіт не{{_}}отримав особливого поширення. Названий за батьківщиною Наума{{-}}селом Віткуть. Також поширене онімечене «алфавіт Бютакук’є».</p>
+      <p>Алфавіт придумав Наум Векілхарджі, письменник, перекладач та адвокат{{-}}він над ним працював 20 років, 1824–1844. Через два роки Наум помер, і алфавіт не{{_}}отримав особливого поширення. Названий за батьківщиною Наума{{-}}селом Віткуть. Також поширене онімечене «алфавіт Бютакук’є».</p>
       <p />
       <p>Алфавіт добре відповідає фонетиці албанської, але чомусь нема літер для звуків «rr», «xh» та «zh».</p>
       <p />

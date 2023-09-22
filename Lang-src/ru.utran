@@ -3181,8 +3181,8 @@
    </group>
    <group id="10500">
     <text id="Name">
-     <orig>Albanian — Elbasan</orig>
-     <transl>Албанский — эльбасанский</transl>
+     <orig>Albanian — Elbasan Gospel</orig>
+     <transl>Албанский — Эльбасанское Евангелие</transl>
     </text>
    </group>
    <group id="10530">
@@ -5543,8 +5543,8 @@
    </group>
    <group id="Elba">
     <text id="Name">
-     <orig>Elbasan Albanian</orig>
-     <transl>Эльбасанский алфавит (албанский)</transl>
+     <orig>Elbasan Gospel alphabet for Albanian</orig>
+     <transl>Алфавит Эльбасанского Евангелия (албанский)</transl>
     </text>
     <text id="Lang">
      <orig>Albanian</orig>
@@ -8637,7 +8637,7 @@
    </group>
    <group id="Vith">
     <text id="Name">
-     <orig>Vithkuqi Albanian</orig>
+     <orig>Vithkuqi alphabet for Albanian</orig>
      <transl>Виткутьский алфавит (албанский)</transl>
     </text>
     <text id="Lang">
