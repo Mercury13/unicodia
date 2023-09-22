@@ -80,16 +80,16 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F611", u8"expressionless face", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 74
 { U"\U0001F636", u8"face without mouth", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 75
 { U"\U0001FAE5", u8"dotted line face", 23, 0, -1, Lfg(1), EcVersion::E14_0 },   // 76
-{ U"\U0001F636\u200D\U0001F32B\uFE0F", u8"face in clouds", 23, 0, -1, Lfg(1), EcVersion::E13_1 },   // 77
+{ U"\U0001F636\u200D\U0001F32B\uFE0F", u8"face in clouds", 23, 0, -1, Lfg(65), EcVersion::E13_1 },   // 77
 { U"\U0001F60F", u8"smirking face", 23, 0, -1, Lfg(1), EcVersion::E0_6 },   // 78
 { U"\U0001F612", u8"unamused face", 23, 0, -1, Lfg(1), EcVersion::E0_6 },   // 79
 { U"\U0001F644", u8"face with rolling eyes", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 80
 { U"\U0001F62C", u8"grimacing face", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 81
-{ U"\U0001F62E\u200D\U0001F4A8", u8"face exhaling", 23, 0, -1, Lfg(1), EcVersion::E13_1 },   // 82
+{ U"\U0001F62E\u200D\U0001F4A8", u8"face exhaling", 23, 0, -1, Lfg(65), EcVersion::E13_1 },   // 82
 { U"\U0001F925", u8"lying face", 23, 0, -1, Lfg(1), EcVersion::E3_0 },   // 83
 { U"\U0001FAE8", u8"shaking face", 23, 0, -1, Lfg(1), EcVersion::E15_0 },   // 84
-{ U"\U0001F642\u200D\u2194\uFE0F", u8"head shaking horizontally", 23, 0, -1, Lfg(1), EcVersion::E15_1 },   // 85
-{ U"\U0001F642\u200D\u2195\uFE0F", u8"head shaking vertically", 23, 0, -1, Lfg(1), EcVersion::E15_1 },   // 86
+{ U"\U0001F642\u200D\u2194\uFE0F", u8"head shaking horizontally", 23, 0, -1, Lfg(65), EcVersion::E15_1 },   // 85
+{ U"\U0001F642\u200D\u2195\uFE0F", u8"head shaking vertically", 23, 0, -1, Lfg(65), EcVersion::E15_1 },   // 86
 { U"\U0001F60C", u8"relieved face", 24, 0, -1, Lfg(1), EcVersion::E0_6 },   // 87
 { U"\U0001F614", u8"pensive face", 24, 0, -1, Lfg(1), EcVersion::E0_6 },   // 88
 { U"\U0001F62A", u8"sleepy face", 24, 0, -1, Lfg(1), EcVersion::E0_6 },   // 89
@@ -105,7 +105,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F976", u8"cold face", 25, 0, -1, Lfg(1), EcVersion::E11_0 },   // 99
 { U"\U0001F974", u8"woozy face", 25, 0, -1, Lfg(1), EcVersion::E11_0 },   // 100
 { U"\U0001F635", u8"face with crossed-out eyes", 25, 0, -1, Lfg(1), EcVersion::E0_6 },   // 101
-{ U"\U0001F635\u200D\U0001F4AB", u8"face with spiral eyes", 25, 0, -1, Lfg(1), EcVersion::E13_1 },   // 102
+{ U"\U0001F635\u200D\U0001F4AB", u8"face with spiral eyes", 25, 0, -1, Lfg(65), EcVersion::E13_1 },   // 102
 { U"\U0001F92F", u8"exploding head", 25, 0, -1, Lfg(1), EcVersion::E5_0 },   // 103
 { U"\U0001F920", u8"cowboy hat face", 26, 0, -1, Lfg(1), EcVersion::E3_0 },   // 104
 { U"\U0001F973", u8"partying face", 26, 0, -1, Lfg(1), EcVersion::E11_0 },   // 105
@@ -178,8 +178,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F49F", u8"heart decoration", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 172
 { U"\u2763\uFE0F", u8"heart exclamation", 33, 0, -1, Lfg(1), EcVersion::E1_0 },   // 173
 { U"\U0001F494", u8"broken heart", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 174
-{ U"\u2764\uFE0F\u200D\U0001F525", u8"heart on fire", 33, 0, -1, Lfg(1), EcVersion::E13_1 },   // 175
-{ U"\u2764\uFE0F\u200D\U0001FA79", u8"mending heart", 33, 0, -1, Lfg(1), EcVersion::E13_1 },   // 176
+{ U"\u2764\uFE0F\u200D\U0001F525", u8"heart on fire", 33, 0, -1, Lfg(65), EcVersion::E13_1 },   // 175
+{ U"\u2764\uFE0F\u200D\U0001FA79", u8"mending heart", 33, 0, -1, Lfg(65), EcVersion::E13_1 },   // 176
 { U"\u2764\uFE0F", u8"red heart", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 177
 { U"\U0001FA77", u8"pink heart", 33, 0, -1, Lfg(1), EcVersion::E15_0 },   // 178
 { U"\U0001F9E1", u8"orange heart", 33, 0, -1, Lfg(1), EcVersion::E5_0 },   // 179
@@ -201,7 +201,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4A8", u8"dashing away", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 195
 { U"\U0001F573\uFE0F", u8"hole", 34, 0, -1, Lfg(1), EcVersion::E0_7 },   // 196
 { U"\U0001F4AC", u8"speech balloon", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 197
-{ U"\U0001F441\uFE0F\u200D\U0001F5E8\uFE0F", u8"eye in speech bubble", 34, 0, -1, Lfg(1), EcVersion::E2_0 },   // 198
+{ U"\U0001F441\uFE0F\u200D\U0001F5E8\uFE0F", u8"eye in speech bubble", 34, 0, -1, Lfg(65), EcVersion::E2_0 },   // 198
 { U"\U0001F5E8\uFE0F", u8"left speech bubble", 34, 0, -1, Lfg(1), EcVersion::E2_0 },   // 199
 { U"\U0001F5EF\uFE0F", u8"right anger bubble", 34, 0, -1, Lfg(1), EcVersion::E0_7 },   // 200
 { U"\U0001F4AD", u8"thought balloon", 34, 0, -1, Lfg(1), EcVersion::E1_0 },   // 201
@@ -596,37 +596,37 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D4\U0001F3FD", u8"person: medium skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E5_0 },   // 590
 { U"\U0001F9D4\U0001F3FE", u8"person: medium-dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E5_0 },   // 591
 { U"\U0001F9D4\U0001F3FF", u8"person: dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E5_0 },   // 592
-{ U"\U0001F9D4\u200D\u2642\uFE0F", u8"man: beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 593
+{ U"\U0001F9D4\u200D\u2642\uFE0F", u8"man: beard", 210, 0, -1, Lfg(65), EcVersion::E13_1 },   // 593
 { U"\U0001F9D4\U0001F3FB\u200D\u2642\uFE0F", u8"man: light skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 594
 { U"\U0001F9D4\U0001F3FC\u200D\u2642\uFE0F", u8"man: medium-light skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 595
 { U"\U0001F9D4\U0001F3FD\u200D\u2642\uFE0F", u8"man: medium skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 596
 { U"\U0001F9D4\U0001F3FE\u200D\u2642\uFE0F", u8"man: medium-dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 597
 { U"\U0001F9D4\U0001F3FF\u200D\u2642\uFE0F", u8"man: dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 598
-{ U"\U0001F9D4\u200D\u2640\uFE0F", u8"woman: beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 599
+{ U"\U0001F9D4\u200D\u2640\uFE0F", u8"woman: beard", 210, 0, -1, Lfg(65), EcVersion::E13_1 },   // 599
 { U"\U0001F9D4\U0001F3FB\u200D\u2640\uFE0F", u8"woman: light skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 600
 { U"\U0001F9D4\U0001F3FC\u200D\u2640\uFE0F", u8"woman: medium-light skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 601
 { U"\U0001F9D4\U0001F3FD\u200D\u2640\uFE0F", u8"woman: medium skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 602
 { U"\U0001F9D4\U0001F3FE\u200D\u2640\uFE0F", u8"woman: medium-dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 603
 { U"\U0001F9D4\U0001F3FF\u200D\u2640\uFE0F", u8"woman: dark skin tone, beard", 210, 0, -1, Lfg(1), EcVersion::E13_1 },   // 604
-{ U"\U0001F468\u200D\U0001F9B0", u8"man: red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 605
+{ U"\U0001F468\u200D\U0001F9B0", u8"man: red hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 605
 { U"\U0001F468\U0001F3FB\u200D\U0001F9B0", u8"man: light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 606
 { U"\U0001F468\U0001F3FC\u200D\U0001F9B0", u8"man: medium-light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 607
 { U"\U0001F468\U0001F3FD\u200D\U0001F9B0", u8"man: medium skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 608
 { U"\U0001F468\U0001F3FE\u200D\U0001F9B0", u8"man: medium-dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 609
 { U"\U0001F468\U0001F3FF\u200D\U0001F9B0", u8"man: dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 610
-{ U"\U0001F468\u200D\U0001F9B1", u8"man: curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 611
+{ U"\U0001F468\u200D\U0001F9B1", u8"man: curly hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 611
 { U"\U0001F468\U0001F3FB\u200D\U0001F9B1", u8"man: light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 612
 { U"\U0001F468\U0001F3FC\u200D\U0001F9B1", u8"man: medium-light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 613
 { U"\U0001F468\U0001F3FD\u200D\U0001F9B1", u8"man: medium skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 614
 { U"\U0001F468\U0001F3FE\u200D\U0001F9B1", u8"man: medium-dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 615
 { U"\U0001F468\U0001F3FF\u200D\U0001F9B1", u8"man: dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 616
-{ U"\U0001F468\u200D\U0001F9B3", u8"man: white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 617
+{ U"\U0001F468\u200D\U0001F9B3", u8"man: white hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 617
 { U"\U0001F468\U0001F3FB\u200D\U0001F9B3", u8"man: light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 618
 { U"\U0001F468\U0001F3FC\u200D\U0001F9B3", u8"man: medium-light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 619
 { U"\U0001F468\U0001F3FD\u200D\U0001F9B3", u8"man: medium skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 620
 { U"\U0001F468\U0001F3FE\u200D\U0001F9B3", u8"man: medium-dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 621
 { U"\U0001F468\U0001F3FF\u200D\U0001F9B3", u8"man: dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 622
-{ U"\U0001F468\u200D\U0001F9B2", u8"man: bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 623
+{ U"\U0001F468\u200D\U0001F9B2", u8"man: bald", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 623
 { U"\U0001F468\U0001F3FB\u200D\U0001F9B2", u8"man: light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 624
 { U"\U0001F468\U0001F3FC\u200D\U0001F9B2", u8"man: medium-light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 625
 { U"\U0001F468\U0001F3FD\u200D\U0001F9B2", u8"man: medium skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 626
@@ -638,61 +638,61 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FD", u8"woman: medium skin tone", 210, 0, -1, Lfg(1), EcVersion::E1_0 },   // 632
 { U"\U0001F469\U0001F3FE", u8"woman: medium-dark skin tone", 210, 0, -1, Lfg(1), EcVersion::E1_0 },   // 633
 { U"\U0001F469\U0001F3FF", u8"woman: dark skin tone", 210, 0, -1, Lfg(1), EcVersion::E1_0 },   // 634
-{ U"\U0001F469\u200D\U0001F9B0", u8"woman: red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 635
+{ U"\U0001F469\u200D\U0001F9B0", u8"woman: red hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 635
 { U"\U0001F469\U0001F3FB\u200D\U0001F9B0", u8"woman: light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 636
 { U"\U0001F469\U0001F3FC\u200D\U0001F9B0", u8"woman: medium-light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 637
 { U"\U0001F469\U0001F3FD\u200D\U0001F9B0", u8"woman: medium skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 638
 { U"\U0001F469\U0001F3FE\u200D\U0001F9B0", u8"woman: medium-dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 639
 { U"\U0001F469\U0001F3FF\u200D\U0001F9B0", u8"woman: dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 640
-{ U"\U0001F9D1\u200D\U0001F9B0", u8"person: red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 641
+{ U"\U0001F9D1\u200D\U0001F9B0", u8"person: red hair", 210, 0, -1, Lfg(65), EcVersion::E12_1 },   // 641
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9B0", u8"person: light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 642
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9B0", u8"person: medium-light skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 643
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9B0", u8"person: medium skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 644
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9B0", u8"person: medium-dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 645
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9B0", u8"person: dark skin tone, red hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 646
-{ U"\U0001F469\u200D\U0001F9B1", u8"woman: curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 647
+{ U"\U0001F469\u200D\U0001F9B1", u8"woman: curly hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 647
 { U"\U0001F469\U0001F3FB\u200D\U0001F9B1", u8"woman: light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 648
 { U"\U0001F469\U0001F3FC\u200D\U0001F9B1", u8"woman: medium-light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 649
 { U"\U0001F469\U0001F3FD\u200D\U0001F9B1", u8"woman: medium skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 650
 { U"\U0001F469\U0001F3FE\u200D\U0001F9B1", u8"woman: medium-dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 651
 { U"\U0001F469\U0001F3FF\u200D\U0001F9B1", u8"woman: dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 652
-{ U"\U0001F9D1\u200D\U0001F9B1", u8"person: curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 653
+{ U"\U0001F9D1\u200D\U0001F9B1", u8"person: curly hair", 210, 0, -1, Lfg(65), EcVersion::E12_1 },   // 653
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9B1", u8"person: light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 654
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9B1", u8"person: medium-light skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 655
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9B1", u8"person: medium skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 656
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9B1", u8"person: medium-dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 657
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9B1", u8"person: dark skin tone, curly hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 658
-{ U"\U0001F469\u200D\U0001F9B3", u8"woman: white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 659
+{ U"\U0001F469\u200D\U0001F9B3", u8"woman: white hair", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 659
 { U"\U0001F469\U0001F3FB\u200D\U0001F9B3", u8"woman: light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 660
 { U"\U0001F469\U0001F3FC\u200D\U0001F9B3", u8"woman: medium-light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 661
 { U"\U0001F469\U0001F3FD\u200D\U0001F9B3", u8"woman: medium skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 662
 { U"\U0001F469\U0001F3FE\u200D\U0001F9B3", u8"woman: medium-dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 663
 { U"\U0001F469\U0001F3FF\u200D\U0001F9B3", u8"woman: dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 664
-{ U"\U0001F9D1\u200D\U0001F9B3", u8"person: white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 665
+{ U"\U0001F9D1\u200D\U0001F9B3", u8"person: white hair", 210, 0, -1, Lfg(65), EcVersion::E12_1 },   // 665
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9B3", u8"person: light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 666
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9B3", u8"person: medium-light skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 667
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9B3", u8"person: medium skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 668
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9B3", u8"person: medium-dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 669
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9B3", u8"person: dark skin tone, white hair", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 670
-{ U"\U0001F469\u200D\U0001F9B2", u8"woman: bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 671
+{ U"\U0001F469\u200D\U0001F9B2", u8"woman: bald", 210, 0, -1, Lfg(65), EcVersion::E11_0 },   // 671
 { U"\U0001F469\U0001F3FB\u200D\U0001F9B2", u8"woman: light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 672
 { U"\U0001F469\U0001F3FC\u200D\U0001F9B2", u8"woman: medium-light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 673
 { U"\U0001F469\U0001F3FD\u200D\U0001F9B2", u8"woman: medium skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 674
 { U"\U0001F469\U0001F3FE\u200D\U0001F9B2", u8"woman: medium-dark skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 675
 { U"\U0001F469\U0001F3FF\u200D\U0001F9B2", u8"woman: dark skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E11_0 },   // 676
-{ U"\U0001F9D1\u200D\U0001F9B2", u8"person: bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 677
+{ U"\U0001F9D1\u200D\U0001F9B2", u8"person: bald", 210, 0, -1, Lfg(65), EcVersion::E12_1 },   // 677
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9B2", u8"person: light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 678
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9B2", u8"person: medium-light skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 679
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9B2", u8"person: medium skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 680
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9B2", u8"person: medium-dark skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 681
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9B2", u8"person: dark skin tone, bald", 210, 0, -1, Lfg(1), EcVersion::E12_1 },   // 682
-{ U"\U0001F471\u200D\u2640\uFE0F", u8"woman: blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 683
+{ U"\U0001F471\u200D\u2640\uFE0F", u8"woman: blond hair", 210, 0, -1, Lfg(65), EcVersion::E4_0 },   // 683
 { U"\U0001F471\U0001F3FB\u200D\u2640\uFE0F", u8"woman: light skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 684
 { U"\U0001F471\U0001F3FC\u200D\u2640\uFE0F", u8"woman: medium-light skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 685
 { U"\U0001F471\U0001F3FD\u200D\u2640\uFE0F", u8"woman: medium skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 686
 { U"\U0001F471\U0001F3FE\u200D\u2640\uFE0F", u8"woman: medium-dark skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 687
 { U"\U0001F471\U0001F3FF\u200D\u2640\uFE0F", u8"woman: dark skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 688
-{ U"\U0001F471\u200D\u2642\uFE0F", u8"man: blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 689
+{ U"\U0001F471\u200D\u2642\uFE0F", u8"man: blond hair", 210, 0, -1, Lfg(65), EcVersion::E4_0 },   // 689
 { U"\U0001F471\U0001F3FB\u200D\u2642\uFE0F", u8"man: light skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 690
 { U"\U0001F471\U0001F3FC\u200D\u2642\uFE0F", u8"man: medium-light skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 691
 { U"\U0001F471\U0001F3FD\u200D\u2642\uFE0F", u8"man: medium skin tone, blond hair", 210, 0, -1, Lfg(1), EcVersion::E4_0 },   // 692
@@ -722,13 +722,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F64D\U0001F3FD", u8"person frowning: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 716
 { U"\U0001F64D\U0001F3FE", u8"person frowning: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 717
 { U"\U0001F64D\U0001F3FF", u8"person frowning: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 718
-{ U"\U0001F64D\u200D\u2642\uFE0F", u8"man frowning", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 719
+{ U"\U0001F64D\u200D\u2642\uFE0F", u8"man frowning", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 719
 { U"\U0001F64D\U0001F3FB\u200D\u2642\uFE0F", u8"man frowning: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 720
 { U"\U0001F64D\U0001F3FC\u200D\u2642\uFE0F", u8"man frowning: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 721
 { U"\U0001F64D\U0001F3FD\u200D\u2642\uFE0F", u8"man frowning: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 722
 { U"\U0001F64D\U0001F3FE\u200D\u2642\uFE0F", u8"man frowning: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 723
 { U"\U0001F64D\U0001F3FF\u200D\u2642\uFE0F", u8"man frowning: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 724
-{ U"\U0001F64D\u200D\u2640\uFE0F", u8"woman frowning", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 725
+{ U"\U0001F64D\u200D\u2640\uFE0F", u8"woman frowning", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 725
 { U"\U0001F64D\U0001F3FB\u200D\u2640\uFE0F", u8"woman frowning: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 726
 { U"\U0001F64D\U0001F3FC\u200D\u2640\uFE0F", u8"woman frowning: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 727
 { U"\U0001F64D\U0001F3FD\u200D\u2640\uFE0F", u8"woman frowning: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 728
@@ -740,13 +740,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F64E\U0001F3FD", u8"person pouting: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 734
 { U"\U0001F64E\U0001F3FE", u8"person pouting: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 735
 { U"\U0001F64E\U0001F3FF", u8"person pouting: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 736
-{ U"\U0001F64E\u200D\u2642\uFE0F", u8"man pouting", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 737
+{ U"\U0001F64E\u200D\u2642\uFE0F", u8"man pouting", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 737
 { U"\U0001F64E\U0001F3FB\u200D\u2642\uFE0F", u8"man pouting: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 738
 { U"\U0001F64E\U0001F3FC\u200D\u2642\uFE0F", u8"man pouting: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 739
 { U"\U0001F64E\U0001F3FD\u200D\u2642\uFE0F", u8"man pouting: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 740
 { U"\U0001F64E\U0001F3FE\u200D\u2642\uFE0F", u8"man pouting: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 741
 { U"\U0001F64E\U0001F3FF\u200D\u2642\uFE0F", u8"man pouting: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 742
-{ U"\U0001F64E\u200D\u2640\uFE0F", u8"woman pouting", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 743
+{ U"\U0001F64E\u200D\u2640\uFE0F", u8"woman pouting", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 743
 { U"\U0001F64E\U0001F3FB\u200D\u2640\uFE0F", u8"woman pouting: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 744
 { U"\U0001F64E\U0001F3FC\u200D\u2640\uFE0F", u8"woman pouting: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 745
 { U"\U0001F64E\U0001F3FD\u200D\u2640\uFE0F", u8"woman pouting: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 746
@@ -758,13 +758,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F645\U0001F3FD", u8"person gesturing NO: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 752
 { U"\U0001F645\U0001F3FE", u8"person gesturing NO: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 753
 { U"\U0001F645\U0001F3FF", u8"person gesturing NO: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 754
-{ U"\U0001F645\u200D\u2642\uFE0F", u8"man gesturing NO", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 755
+{ U"\U0001F645\u200D\u2642\uFE0F", u8"man gesturing NO", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 755
 { U"\U0001F645\U0001F3FB\u200D\u2642\uFE0F", u8"man gesturing NO: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 756
 { U"\U0001F645\U0001F3FC\u200D\u2642\uFE0F", u8"man gesturing NO: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 757
 { U"\U0001F645\U0001F3FD\u200D\u2642\uFE0F", u8"man gesturing NO: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 758
 { U"\U0001F645\U0001F3FE\u200D\u2642\uFE0F", u8"man gesturing NO: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 759
 { U"\U0001F645\U0001F3FF\u200D\u2642\uFE0F", u8"man gesturing NO: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 760
-{ U"\U0001F645\u200D\u2640\uFE0F", u8"woman gesturing NO", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 761
+{ U"\U0001F645\u200D\u2640\uFE0F", u8"woman gesturing NO", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 761
 { U"\U0001F645\U0001F3FB\u200D\u2640\uFE0F", u8"woman gesturing NO: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 762
 { U"\U0001F645\U0001F3FC\u200D\u2640\uFE0F", u8"woman gesturing NO: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 763
 { U"\U0001F645\U0001F3FD\u200D\u2640\uFE0F", u8"woman gesturing NO: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 764
@@ -776,13 +776,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F646\U0001F3FD", u8"person gesturing OK: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 770
 { U"\U0001F646\U0001F3FE", u8"person gesturing OK: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 771
 { U"\U0001F646\U0001F3FF", u8"person gesturing OK: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 772
-{ U"\U0001F646\u200D\u2642\uFE0F", u8"man gesturing OK", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 773
+{ U"\U0001F646\u200D\u2642\uFE0F", u8"man gesturing OK", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 773
 { U"\U0001F646\U0001F3FB\u200D\u2642\uFE0F", u8"man gesturing OK: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 774
 { U"\U0001F646\U0001F3FC\u200D\u2642\uFE0F", u8"man gesturing OK: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 775
 { U"\U0001F646\U0001F3FD\u200D\u2642\uFE0F", u8"man gesturing OK: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 776
 { U"\U0001F646\U0001F3FE\u200D\u2642\uFE0F", u8"man gesturing OK: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 777
 { U"\U0001F646\U0001F3FF\u200D\u2642\uFE0F", u8"man gesturing OK: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 778
-{ U"\U0001F646\u200D\u2640\uFE0F", u8"woman gesturing OK", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 779
+{ U"\U0001F646\u200D\u2640\uFE0F", u8"woman gesturing OK", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 779
 { U"\U0001F646\U0001F3FB\u200D\u2640\uFE0F", u8"woman gesturing OK: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 780
 { U"\U0001F646\U0001F3FC\u200D\u2640\uFE0F", u8"woman gesturing OK: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 781
 { U"\U0001F646\U0001F3FD\u200D\u2640\uFE0F", u8"woman gesturing OK: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 782
@@ -794,13 +794,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F481\U0001F3FD", u8"person tipping hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 788
 { U"\U0001F481\U0001F3FE", u8"person tipping hand: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 789
 { U"\U0001F481\U0001F3FF", u8"person tipping hand: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 790
-{ U"\U0001F481\u200D\u2642\uFE0F", u8"man tipping hand", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 791
+{ U"\U0001F481\u200D\u2642\uFE0F", u8"man tipping hand", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 791
 { U"\U0001F481\U0001F3FB\u200D\u2642\uFE0F", u8"man tipping hand: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 792
 { U"\U0001F481\U0001F3FC\u200D\u2642\uFE0F", u8"man tipping hand: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 793
 { U"\U0001F481\U0001F3FD\u200D\u2642\uFE0F", u8"man tipping hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 794
 { U"\U0001F481\U0001F3FE\u200D\u2642\uFE0F", u8"man tipping hand: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 795
 { U"\U0001F481\U0001F3FF\u200D\u2642\uFE0F", u8"man tipping hand: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 796
-{ U"\U0001F481\u200D\u2640\uFE0F", u8"woman tipping hand", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 797
+{ U"\U0001F481\u200D\u2640\uFE0F", u8"woman tipping hand", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 797
 { U"\U0001F481\U0001F3FB\u200D\u2640\uFE0F", u8"woman tipping hand: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 798
 { U"\U0001F481\U0001F3FC\u200D\u2640\uFE0F", u8"woman tipping hand: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 799
 { U"\U0001F481\U0001F3FD\u200D\u2640\uFE0F", u8"woman tipping hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 800
@@ -812,13 +812,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F64B\U0001F3FD", u8"person raising hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 806
 { U"\U0001F64B\U0001F3FE", u8"person raising hand: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 807
 { U"\U0001F64B\U0001F3FF", u8"person raising hand: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 808
-{ U"\U0001F64B\u200D\u2642\uFE0F", u8"man raising hand", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 809
+{ U"\U0001F64B\u200D\u2642\uFE0F", u8"man raising hand", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 809
 { U"\U0001F64B\U0001F3FB\u200D\u2642\uFE0F", u8"man raising hand: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 810
 { U"\U0001F64B\U0001F3FC\u200D\u2642\uFE0F", u8"man raising hand: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 811
 { U"\U0001F64B\U0001F3FD\u200D\u2642\uFE0F", u8"man raising hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 812
 { U"\U0001F64B\U0001F3FE\u200D\u2642\uFE0F", u8"man raising hand: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 813
 { U"\U0001F64B\U0001F3FF\u200D\u2642\uFE0F", u8"man raising hand: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 814
-{ U"\U0001F64B\u200D\u2640\uFE0F", u8"woman raising hand", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 815
+{ U"\U0001F64B\u200D\u2640\uFE0F", u8"woman raising hand", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 815
 { U"\U0001F64B\U0001F3FB\u200D\u2640\uFE0F", u8"woman raising hand: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 816
 { U"\U0001F64B\U0001F3FC\u200D\u2640\uFE0F", u8"woman raising hand: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 817
 { U"\U0001F64B\U0001F3FD\u200D\u2640\uFE0F", u8"woman raising hand: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 818
@@ -830,13 +830,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9CF\U0001F3FD", u8"deaf person: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 824
 { U"\U0001F9CF\U0001F3FE", u8"deaf person: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 825
 { U"\U0001F9CF\U0001F3FF", u8"deaf person: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 826
-{ U"\U0001F9CF\u200D\u2642\uFE0F", u8"deaf man", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 827
+{ U"\U0001F9CF\u200D\u2642\uFE0F", u8"deaf man", 211, 0, -1, Lfg(65), EcVersion::E12_0 },   // 827
 { U"\U0001F9CF\U0001F3FB\u200D\u2642\uFE0F", u8"deaf man: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 828
 { U"\U0001F9CF\U0001F3FC\u200D\u2642\uFE0F", u8"deaf man: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 829
 { U"\U0001F9CF\U0001F3FD\u200D\u2642\uFE0F", u8"deaf man: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 830
 { U"\U0001F9CF\U0001F3FE\u200D\u2642\uFE0F", u8"deaf man: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 831
 { U"\U0001F9CF\U0001F3FF\u200D\u2642\uFE0F", u8"deaf man: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 832
-{ U"\U0001F9CF\u200D\u2640\uFE0F", u8"deaf woman", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 833
+{ U"\U0001F9CF\u200D\u2640\uFE0F", u8"deaf woman", 211, 0, -1, Lfg(65), EcVersion::E12_0 },   // 833
 { U"\U0001F9CF\U0001F3FB\u200D\u2640\uFE0F", u8"deaf woman: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 834
 { U"\U0001F9CF\U0001F3FC\u200D\u2640\uFE0F", u8"deaf woman: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 835
 { U"\U0001F9CF\U0001F3FD\u200D\u2640\uFE0F", u8"deaf woman: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 836
@@ -848,13 +848,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F647\U0001F3FD", u8"person bowing: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 842
 { U"\U0001F647\U0001F3FE", u8"person bowing: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 843
 { U"\U0001F647\U0001F3FF", u8"person bowing: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E1_0 },   // 844
-{ U"\U0001F647\u200D\u2642\uFE0F", u8"man bowing", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 845
+{ U"\U0001F647\u200D\u2642\uFE0F", u8"man bowing", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 845
 { U"\U0001F647\U0001F3FB\u200D\u2642\uFE0F", u8"man bowing: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 846
 { U"\U0001F647\U0001F3FC\u200D\u2642\uFE0F", u8"man bowing: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 847
 { U"\U0001F647\U0001F3FD\u200D\u2642\uFE0F", u8"man bowing: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 848
 { U"\U0001F647\U0001F3FE\u200D\u2642\uFE0F", u8"man bowing: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 849
 { U"\U0001F647\U0001F3FF\u200D\u2642\uFE0F", u8"man bowing: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 850
-{ U"\U0001F647\u200D\u2640\uFE0F", u8"woman bowing", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 851
+{ U"\U0001F647\u200D\u2640\uFE0F", u8"woman bowing", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 851
 { U"\U0001F647\U0001F3FB\u200D\u2640\uFE0F", u8"woman bowing: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 852
 { U"\U0001F647\U0001F3FC\u200D\u2640\uFE0F", u8"woman bowing: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 853
 { U"\U0001F647\U0001F3FD\u200D\u2640\uFE0F", u8"woman bowing: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 854
@@ -866,13 +866,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F926\U0001F3FD", u8"person facepalming: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 860
 { U"\U0001F926\U0001F3FE", u8"person facepalming: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 861
 { U"\U0001F926\U0001F3FF", u8"person facepalming: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 862
-{ U"\U0001F926\u200D\u2642\uFE0F", u8"man facepalming", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 863
+{ U"\U0001F926\u200D\u2642\uFE0F", u8"man facepalming", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 863
 { U"\U0001F926\U0001F3FB\u200D\u2642\uFE0F", u8"man facepalming: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 864
 { U"\U0001F926\U0001F3FC\u200D\u2642\uFE0F", u8"man facepalming: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 865
 { U"\U0001F926\U0001F3FD\u200D\u2642\uFE0F", u8"man facepalming: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 866
 { U"\U0001F926\U0001F3FE\u200D\u2642\uFE0F", u8"man facepalming: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 867
 { U"\U0001F926\U0001F3FF\u200D\u2642\uFE0F", u8"man facepalming: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 868
-{ U"\U0001F926\u200D\u2640\uFE0F", u8"woman facepalming", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 869
+{ U"\U0001F926\u200D\u2640\uFE0F", u8"woman facepalming", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 869
 { U"\U0001F926\U0001F3FB\u200D\u2640\uFE0F", u8"woman facepalming: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 870
 { U"\U0001F926\U0001F3FC\u200D\u2640\uFE0F", u8"woman facepalming: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 871
 { U"\U0001F926\U0001F3FD\u200D\u2640\uFE0F", u8"woman facepalming: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 872
@@ -884,301 +884,301 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F937\U0001F3FD", u8"person shrugging: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 878
 { U"\U0001F937\U0001F3FE", u8"person shrugging: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 879
 { U"\U0001F937\U0001F3FF", u8"person shrugging: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E3_0 },   // 880
-{ U"\U0001F937\u200D\u2642\uFE0F", u8"man shrugging", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 881
+{ U"\U0001F937\u200D\u2642\uFE0F", u8"man shrugging", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 881
 { U"\U0001F937\U0001F3FB\u200D\u2642\uFE0F", u8"man shrugging: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 882
 { U"\U0001F937\U0001F3FC\u200D\u2642\uFE0F", u8"man shrugging: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 883
 { U"\U0001F937\U0001F3FD\u200D\u2642\uFE0F", u8"man shrugging: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 884
 { U"\U0001F937\U0001F3FE\u200D\u2642\uFE0F", u8"man shrugging: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 885
 { U"\U0001F937\U0001F3FF\u200D\u2642\uFE0F", u8"man shrugging: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 886
-{ U"\U0001F937\u200D\u2640\uFE0F", u8"woman shrugging", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 887
+{ U"\U0001F937\u200D\u2640\uFE0F", u8"woman shrugging", 211, 0, -1, Lfg(65), EcVersion::E4_0 },   // 887
 { U"\U0001F937\U0001F3FB\u200D\u2640\uFE0F", u8"woman shrugging: light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 888
 { U"\U0001F937\U0001F3FC\u200D\u2640\uFE0F", u8"woman shrugging: medium-light skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 889
 { U"\U0001F937\U0001F3FD\u200D\u2640\uFE0F", u8"woman shrugging: medium skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 890
 { U"\U0001F937\U0001F3FE\u200D\u2640\uFE0F", u8"woman shrugging: medium-dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 891
 { U"\U0001F937\U0001F3FF\u200D\u2640\uFE0F", u8"woman shrugging: dark skin tone", 211, 0, -1, Lfg(1), EcVersion::E4_0 },   // 892
-{ U"\U0001F9D1\u200D\u2695\uFE0F", u8"health worker", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 893
+{ U"\U0001F9D1\u200D\u2695\uFE0F", u8"health worker", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 893
 { U"\U0001F9D1\U0001F3FB\u200D\u2695\uFE0F", u8"health worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 894
 { U"\U0001F9D1\U0001F3FC\u200D\u2695\uFE0F", u8"health worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 895
 { U"\U0001F9D1\U0001F3FD\u200D\u2695\uFE0F", u8"health worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 896
 { U"\U0001F9D1\U0001F3FE\u200D\u2695\uFE0F", u8"health worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 897
 { U"\U0001F9D1\U0001F3FF\u200D\u2695\uFE0F", u8"health worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 898
-{ U"\U0001F468\u200D\u2695\uFE0F", u8"man health worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 899
+{ U"\U0001F468\u200D\u2695\uFE0F", u8"man health worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 899
 { U"\U0001F468\U0001F3FB\u200D\u2695\uFE0F", u8"man health worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 900
 { U"\U0001F468\U0001F3FC\u200D\u2695\uFE0F", u8"man health worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 901
 { U"\U0001F468\U0001F3FD\u200D\u2695\uFE0F", u8"man health worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 902
 { U"\U0001F468\U0001F3FE\u200D\u2695\uFE0F", u8"man health worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 903
 { U"\U0001F468\U0001F3FF\u200D\u2695\uFE0F", u8"man health worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 904
-{ U"\U0001F469\u200D\u2695\uFE0F", u8"woman health worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 905
+{ U"\U0001F469\u200D\u2695\uFE0F", u8"woman health worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 905
 { U"\U0001F469\U0001F3FB\u200D\u2695\uFE0F", u8"woman health worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 906
 { U"\U0001F469\U0001F3FC\u200D\u2695\uFE0F", u8"woman health worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 907
 { U"\U0001F469\U0001F3FD\u200D\u2695\uFE0F", u8"woman health worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 908
 { U"\U0001F469\U0001F3FE\u200D\u2695\uFE0F", u8"woman health worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 909
 { U"\U0001F469\U0001F3FF\u200D\u2695\uFE0F", u8"woman health worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 910
-{ U"\U0001F9D1\u200D\U0001F393", u8"student", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 911
+{ U"\U0001F9D1\u200D\U0001F393", u8"student", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 911
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F393", u8"student: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 912
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F393", u8"student: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 913
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F393", u8"student: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 914
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F393", u8"student: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 915
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F393", u8"student: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 916
-{ U"\U0001F468\u200D\U0001F393", u8"man student", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 917
+{ U"\U0001F468\u200D\U0001F393", u8"man student", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 917
 { U"\U0001F468\U0001F3FB\u200D\U0001F393", u8"man student: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 918
 { U"\U0001F468\U0001F3FC\u200D\U0001F393", u8"man student: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 919
 { U"\U0001F468\U0001F3FD\u200D\U0001F393", u8"man student: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 920
 { U"\U0001F468\U0001F3FE\u200D\U0001F393", u8"man student: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 921
 { U"\U0001F468\U0001F3FF\u200D\U0001F393", u8"man student: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 922
-{ U"\U0001F469\u200D\U0001F393", u8"woman student", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 923
+{ U"\U0001F469\u200D\U0001F393", u8"woman student", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 923
 { U"\U0001F469\U0001F3FB\u200D\U0001F393", u8"woman student: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 924
 { U"\U0001F469\U0001F3FC\u200D\U0001F393", u8"woman student: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 925
 { U"\U0001F469\U0001F3FD\u200D\U0001F393", u8"woman student: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 926
 { U"\U0001F469\U0001F3FE\u200D\U0001F393", u8"woman student: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 927
 { U"\U0001F469\U0001F3FF\u200D\U0001F393", u8"woman student: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 928
-{ U"\U0001F9D1\u200D\U0001F3EB", u8"teacher", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 929
+{ U"\U0001F9D1\u200D\U0001F3EB", u8"teacher", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 929
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F3EB", u8"teacher: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 930
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F3EB", u8"teacher: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 931
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F3EB", u8"teacher: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 932
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F3EB", u8"teacher: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 933
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F3EB", u8"teacher: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 934
-{ U"\U0001F468\u200D\U0001F3EB", u8"man teacher", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 935
+{ U"\U0001F468\u200D\U0001F3EB", u8"man teacher", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 935
 { U"\U0001F468\U0001F3FB\u200D\U0001F3EB", u8"man teacher: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 936
 { U"\U0001F468\U0001F3FC\u200D\U0001F3EB", u8"man teacher: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 937
 { U"\U0001F468\U0001F3FD\u200D\U0001F3EB", u8"man teacher: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 938
 { U"\U0001F468\U0001F3FE\u200D\U0001F3EB", u8"man teacher: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 939
 { U"\U0001F468\U0001F3FF\u200D\U0001F3EB", u8"man teacher: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 940
-{ U"\U0001F469\u200D\U0001F3EB", u8"woman teacher", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 941
+{ U"\U0001F469\u200D\U0001F3EB", u8"woman teacher", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 941
 { U"\U0001F469\U0001F3FB\u200D\U0001F3EB", u8"woman teacher: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 942
 { U"\U0001F469\U0001F3FC\u200D\U0001F3EB", u8"woman teacher: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 943
 { U"\U0001F469\U0001F3FD\u200D\U0001F3EB", u8"woman teacher: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 944
 { U"\U0001F469\U0001F3FE\u200D\U0001F3EB", u8"woman teacher: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 945
 { U"\U0001F469\U0001F3FF\u200D\U0001F3EB", u8"woman teacher: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 946
-{ U"\U0001F9D1\u200D\u2696\uFE0F", u8"judge", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 947
+{ U"\U0001F9D1\u200D\u2696\uFE0F", u8"judge", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 947
 { U"\U0001F9D1\U0001F3FB\u200D\u2696\uFE0F", u8"judge: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 948
 { U"\U0001F9D1\U0001F3FC\u200D\u2696\uFE0F", u8"judge: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 949
 { U"\U0001F9D1\U0001F3FD\u200D\u2696\uFE0F", u8"judge: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 950
 { U"\U0001F9D1\U0001F3FE\u200D\u2696\uFE0F", u8"judge: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 951
 { U"\U0001F9D1\U0001F3FF\u200D\u2696\uFE0F", u8"judge: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 952
-{ U"\U0001F468\u200D\u2696\uFE0F", u8"man judge", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 953
+{ U"\U0001F468\u200D\u2696\uFE0F", u8"man judge", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 953
 { U"\U0001F468\U0001F3FB\u200D\u2696\uFE0F", u8"man judge: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 954
 { U"\U0001F468\U0001F3FC\u200D\u2696\uFE0F", u8"man judge: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 955
 { U"\U0001F468\U0001F3FD\u200D\u2696\uFE0F", u8"man judge: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 956
 { U"\U0001F468\U0001F3FE\u200D\u2696\uFE0F", u8"man judge: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 957
 { U"\U0001F468\U0001F3FF\u200D\u2696\uFE0F", u8"man judge: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 958
-{ U"\U0001F469\u200D\u2696\uFE0F", u8"woman judge", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 959
+{ U"\U0001F469\u200D\u2696\uFE0F", u8"woman judge", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 959
 { U"\U0001F469\U0001F3FB\u200D\u2696\uFE0F", u8"woman judge: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 960
 { U"\U0001F469\U0001F3FC\u200D\u2696\uFE0F", u8"woman judge: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 961
 { U"\U0001F469\U0001F3FD\u200D\u2696\uFE0F", u8"woman judge: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 962
 { U"\U0001F469\U0001F3FE\u200D\u2696\uFE0F", u8"woman judge: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 963
 { U"\U0001F469\U0001F3FF\u200D\u2696\uFE0F", u8"woman judge: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 964
-{ U"\U0001F9D1\u200D\U0001F33E", u8"farmer", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 965
+{ U"\U0001F9D1\u200D\U0001F33E", u8"farmer", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 965
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F33E", u8"farmer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 966
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F33E", u8"farmer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 967
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F33E", u8"farmer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 968
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F33E", u8"farmer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 969
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F33E", u8"farmer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 970
-{ U"\U0001F468\u200D\U0001F33E", u8"man farmer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 971
+{ U"\U0001F468\u200D\U0001F33E", u8"man farmer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 971
 { U"\U0001F468\U0001F3FB\u200D\U0001F33E", u8"man farmer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 972
 { U"\U0001F468\U0001F3FC\u200D\U0001F33E", u8"man farmer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 973
 { U"\U0001F468\U0001F3FD\u200D\U0001F33E", u8"man farmer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 974
 { U"\U0001F468\U0001F3FE\u200D\U0001F33E", u8"man farmer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 975
 { U"\U0001F468\U0001F3FF\u200D\U0001F33E", u8"man farmer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 976
-{ U"\U0001F469\u200D\U0001F33E", u8"woman farmer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 977
+{ U"\U0001F469\u200D\U0001F33E", u8"woman farmer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 977
 { U"\U0001F469\U0001F3FB\u200D\U0001F33E", u8"woman farmer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 978
 { U"\U0001F469\U0001F3FC\u200D\U0001F33E", u8"woman farmer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 979
 { U"\U0001F469\U0001F3FD\u200D\U0001F33E", u8"woman farmer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 980
 { U"\U0001F469\U0001F3FE\u200D\U0001F33E", u8"woman farmer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 981
 { U"\U0001F469\U0001F3FF\u200D\U0001F33E", u8"woman farmer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 982
-{ U"\U0001F9D1\u200D\U0001F373", u8"cook", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 983
+{ U"\U0001F9D1\u200D\U0001F373", u8"cook", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 983
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F373", u8"cook: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 984
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F373", u8"cook: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 985
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F373", u8"cook: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 986
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F373", u8"cook: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 987
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F373", u8"cook: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 988
-{ U"\U0001F468\u200D\U0001F373", u8"man cook", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 989
+{ U"\U0001F468\u200D\U0001F373", u8"man cook", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 989
 { U"\U0001F468\U0001F3FB\u200D\U0001F373", u8"man cook: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 990
 { U"\U0001F468\U0001F3FC\u200D\U0001F373", u8"man cook: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 991
 { U"\U0001F468\U0001F3FD\u200D\U0001F373", u8"man cook: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 992
 { U"\U0001F468\U0001F3FE\u200D\U0001F373", u8"man cook: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 993
 { U"\U0001F468\U0001F3FF\u200D\U0001F373", u8"man cook: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 994
-{ U"\U0001F469\u200D\U0001F373", u8"woman cook", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 995
+{ U"\U0001F469\u200D\U0001F373", u8"woman cook", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 995
 { U"\U0001F469\U0001F3FB\u200D\U0001F373", u8"woman cook: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 996
 { U"\U0001F469\U0001F3FC\u200D\U0001F373", u8"woman cook: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 997
 { U"\U0001F469\U0001F3FD\u200D\U0001F373", u8"woman cook: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 998
 { U"\U0001F469\U0001F3FE\u200D\U0001F373", u8"woman cook: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 999
 { U"\U0001F469\U0001F3FF\u200D\U0001F373", u8"woman cook: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1000
-{ U"\U0001F9D1\u200D\U0001F527", u8"mechanic", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1001
+{ U"\U0001F9D1\u200D\U0001F527", u8"mechanic", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1001
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F527", u8"mechanic: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1002
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F527", u8"mechanic: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1003
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F527", u8"mechanic: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1004
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F527", u8"mechanic: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1005
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F527", u8"mechanic: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1006
-{ U"\U0001F468\u200D\U0001F527", u8"man mechanic", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1007
+{ U"\U0001F468\u200D\U0001F527", u8"man mechanic", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1007
 { U"\U0001F468\U0001F3FB\u200D\U0001F527", u8"man mechanic: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1008
 { U"\U0001F468\U0001F3FC\u200D\U0001F527", u8"man mechanic: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1009
 { U"\U0001F468\U0001F3FD\u200D\U0001F527", u8"man mechanic: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1010
 { U"\U0001F468\U0001F3FE\u200D\U0001F527", u8"man mechanic: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1011
 { U"\U0001F468\U0001F3FF\u200D\U0001F527", u8"man mechanic: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1012
-{ U"\U0001F469\u200D\U0001F527", u8"woman mechanic", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1013
+{ U"\U0001F469\u200D\U0001F527", u8"woman mechanic", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1013
 { U"\U0001F469\U0001F3FB\u200D\U0001F527", u8"woman mechanic: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1014
 { U"\U0001F469\U0001F3FC\u200D\U0001F527", u8"woman mechanic: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1015
 { U"\U0001F469\U0001F3FD\u200D\U0001F527", u8"woman mechanic: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1016
 { U"\U0001F469\U0001F3FE\u200D\U0001F527", u8"woman mechanic: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1017
 { U"\U0001F469\U0001F3FF\u200D\U0001F527", u8"woman mechanic: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1018
-{ U"\U0001F9D1\u200D\U0001F3ED", u8"factory worker", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1019
+{ U"\U0001F9D1\u200D\U0001F3ED", u8"factory worker", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1019
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F3ED", u8"factory worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1020
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F3ED", u8"factory worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1021
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F3ED", u8"factory worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1022
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F3ED", u8"factory worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1023
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F3ED", u8"factory worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1024
-{ U"\U0001F468\u200D\U0001F3ED", u8"man factory worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1025
+{ U"\U0001F468\u200D\U0001F3ED", u8"man factory worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1025
 { U"\U0001F468\U0001F3FB\u200D\U0001F3ED", u8"man factory worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1026
 { U"\U0001F468\U0001F3FC\u200D\U0001F3ED", u8"man factory worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1027
 { U"\U0001F468\U0001F3FD\u200D\U0001F3ED", u8"man factory worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1028
 { U"\U0001F468\U0001F3FE\u200D\U0001F3ED", u8"man factory worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1029
 { U"\U0001F468\U0001F3FF\u200D\U0001F3ED", u8"man factory worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1030
-{ U"\U0001F469\u200D\U0001F3ED", u8"woman factory worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1031
+{ U"\U0001F469\u200D\U0001F3ED", u8"woman factory worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1031
 { U"\U0001F469\U0001F3FB\u200D\U0001F3ED", u8"woman factory worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1032
 { U"\U0001F469\U0001F3FC\u200D\U0001F3ED", u8"woman factory worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1033
 { U"\U0001F469\U0001F3FD\u200D\U0001F3ED", u8"woman factory worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1034
 { U"\U0001F469\U0001F3FE\u200D\U0001F3ED", u8"woman factory worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1035
 { U"\U0001F469\U0001F3FF\u200D\U0001F3ED", u8"woman factory worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1036
-{ U"\U0001F9D1\u200D\U0001F4BC", u8"office worker", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1037
+{ U"\U0001F9D1\u200D\U0001F4BC", u8"office worker", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1037
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F4BC", u8"office worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1038
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F4BC", u8"office worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1039
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F4BC", u8"office worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1040
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F4BC", u8"office worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1041
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F4BC", u8"office worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1042
-{ U"\U0001F468\u200D\U0001F4BC", u8"man office worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1043
+{ U"\U0001F468\u200D\U0001F4BC", u8"man office worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1043
 { U"\U0001F468\U0001F3FB\u200D\U0001F4BC", u8"man office worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1044
 { U"\U0001F468\U0001F3FC\u200D\U0001F4BC", u8"man office worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1045
 { U"\U0001F468\U0001F3FD\u200D\U0001F4BC", u8"man office worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1046
 { U"\U0001F468\U0001F3FE\u200D\U0001F4BC", u8"man office worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1047
 { U"\U0001F468\U0001F3FF\u200D\U0001F4BC", u8"man office worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1048
-{ U"\U0001F469\u200D\U0001F4BC", u8"woman office worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1049
+{ U"\U0001F469\u200D\U0001F4BC", u8"woman office worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1049
 { U"\U0001F469\U0001F3FB\u200D\U0001F4BC", u8"woman office worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1050
 { U"\U0001F469\U0001F3FC\u200D\U0001F4BC", u8"woman office worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1051
 { U"\U0001F469\U0001F3FD\u200D\U0001F4BC", u8"woman office worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1052
 { U"\U0001F469\U0001F3FE\u200D\U0001F4BC", u8"woman office worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1053
 { U"\U0001F469\U0001F3FF\u200D\U0001F4BC", u8"woman office worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1054
-{ U"\U0001F9D1\u200D\U0001F52C", u8"scientist", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1055
+{ U"\U0001F9D1\u200D\U0001F52C", u8"scientist", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1055
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F52C", u8"scientist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1056
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F52C", u8"scientist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1057
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F52C", u8"scientist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1058
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F52C", u8"scientist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1059
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F52C", u8"scientist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1060
-{ U"\U0001F468\u200D\U0001F52C", u8"man scientist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1061
+{ U"\U0001F468\u200D\U0001F52C", u8"man scientist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1061
 { U"\U0001F468\U0001F3FB\u200D\U0001F52C", u8"man scientist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1062
 { U"\U0001F468\U0001F3FC\u200D\U0001F52C", u8"man scientist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1063
 { U"\U0001F468\U0001F3FD\u200D\U0001F52C", u8"man scientist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1064
 { U"\U0001F468\U0001F3FE\u200D\U0001F52C", u8"man scientist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1065
 { U"\U0001F468\U0001F3FF\u200D\U0001F52C", u8"man scientist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1066
-{ U"\U0001F469\u200D\U0001F52C", u8"woman scientist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1067
+{ U"\U0001F469\u200D\U0001F52C", u8"woman scientist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1067
 { U"\U0001F469\U0001F3FB\u200D\U0001F52C", u8"woman scientist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1068
 { U"\U0001F469\U0001F3FC\u200D\U0001F52C", u8"woman scientist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1069
 { U"\U0001F469\U0001F3FD\u200D\U0001F52C", u8"woman scientist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1070
 { U"\U0001F469\U0001F3FE\u200D\U0001F52C", u8"woman scientist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1071
 { U"\U0001F469\U0001F3FF\u200D\U0001F52C", u8"woman scientist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1072
-{ U"\U0001F9D1\u200D\U0001F4BB", u8"technologist", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1073
+{ U"\U0001F9D1\u200D\U0001F4BB", u8"technologist", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1073
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F4BB", u8"technologist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1074
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F4BB", u8"technologist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1075
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F4BB", u8"technologist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1076
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F4BB", u8"technologist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1077
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F4BB", u8"technologist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1078
-{ U"\U0001F468\u200D\U0001F4BB", u8"man technologist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1079
+{ U"\U0001F468\u200D\U0001F4BB", u8"man technologist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1079
 { U"\U0001F468\U0001F3FB\u200D\U0001F4BB", u8"man technologist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1080
 { U"\U0001F468\U0001F3FC\u200D\U0001F4BB", u8"man technologist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1081
 { U"\U0001F468\U0001F3FD\u200D\U0001F4BB", u8"man technologist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1082
 { U"\U0001F468\U0001F3FE\u200D\U0001F4BB", u8"man technologist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1083
 { U"\U0001F468\U0001F3FF\u200D\U0001F4BB", u8"man technologist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1084
-{ U"\U0001F469\u200D\U0001F4BB", u8"woman technologist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1085
+{ U"\U0001F469\u200D\U0001F4BB", u8"woman technologist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1085
 { U"\U0001F469\U0001F3FB\u200D\U0001F4BB", u8"woman technologist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1086
 { U"\U0001F469\U0001F3FC\u200D\U0001F4BB", u8"woman technologist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1087
 { U"\U0001F469\U0001F3FD\u200D\U0001F4BB", u8"woman technologist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1088
 { U"\U0001F469\U0001F3FE\u200D\U0001F4BB", u8"woman technologist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1089
 { U"\U0001F469\U0001F3FF\u200D\U0001F4BB", u8"woman technologist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1090
-{ U"\U0001F9D1\u200D\U0001F3A4", u8"singer", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1091
+{ U"\U0001F9D1\u200D\U0001F3A4", u8"singer", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1091
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F3A4", u8"singer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1092
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F3A4", u8"singer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1093
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F3A4", u8"singer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1094
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F3A4", u8"singer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1095
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F3A4", u8"singer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1096
-{ U"\U0001F468\u200D\U0001F3A4", u8"man singer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1097
+{ U"\U0001F468\u200D\U0001F3A4", u8"man singer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1097
 { U"\U0001F468\U0001F3FB\u200D\U0001F3A4", u8"man singer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1098
 { U"\U0001F468\U0001F3FC\u200D\U0001F3A4", u8"man singer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1099
 { U"\U0001F468\U0001F3FD\u200D\U0001F3A4", u8"man singer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1100
 { U"\U0001F468\U0001F3FE\u200D\U0001F3A4", u8"man singer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1101
 { U"\U0001F468\U0001F3FF\u200D\U0001F3A4", u8"man singer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1102
-{ U"\U0001F469\u200D\U0001F3A4", u8"woman singer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1103
+{ U"\U0001F469\u200D\U0001F3A4", u8"woman singer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1103
 { U"\U0001F469\U0001F3FB\u200D\U0001F3A4", u8"woman singer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1104
 { U"\U0001F469\U0001F3FC\u200D\U0001F3A4", u8"woman singer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1105
 { U"\U0001F469\U0001F3FD\u200D\U0001F3A4", u8"woman singer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1106
 { U"\U0001F469\U0001F3FE\u200D\U0001F3A4", u8"woman singer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1107
 { U"\U0001F469\U0001F3FF\u200D\U0001F3A4", u8"woman singer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1108
-{ U"\U0001F9D1\u200D\U0001F3A8", u8"artist", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1109
+{ U"\U0001F9D1\u200D\U0001F3A8", u8"artist", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1109
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F3A8", u8"artist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1110
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F3A8", u8"artist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1111
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F3A8", u8"artist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1112
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F3A8", u8"artist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1113
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F3A8", u8"artist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1114
-{ U"\U0001F468\u200D\U0001F3A8", u8"man artist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1115
+{ U"\U0001F468\u200D\U0001F3A8", u8"man artist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1115
 { U"\U0001F468\U0001F3FB\u200D\U0001F3A8", u8"man artist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1116
 { U"\U0001F468\U0001F3FC\u200D\U0001F3A8", u8"man artist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1117
 { U"\U0001F468\U0001F3FD\u200D\U0001F3A8", u8"man artist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1118
 { U"\U0001F468\U0001F3FE\u200D\U0001F3A8", u8"man artist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1119
 { U"\U0001F468\U0001F3FF\u200D\U0001F3A8", u8"man artist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1120
-{ U"\U0001F469\u200D\U0001F3A8", u8"woman artist", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1121
+{ U"\U0001F469\u200D\U0001F3A8", u8"woman artist", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1121
 { U"\U0001F469\U0001F3FB\u200D\U0001F3A8", u8"woman artist: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1122
 { U"\U0001F469\U0001F3FC\u200D\U0001F3A8", u8"woman artist: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1123
 { U"\U0001F469\U0001F3FD\u200D\U0001F3A8", u8"woman artist: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1124
 { U"\U0001F469\U0001F3FE\u200D\U0001F3A8", u8"woman artist: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1125
 { U"\U0001F469\U0001F3FF\u200D\U0001F3A8", u8"woman artist: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1126
-{ U"\U0001F9D1\u200D\u2708\uFE0F", u8"pilot", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1127
+{ U"\U0001F9D1\u200D\u2708\uFE0F", u8"pilot", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1127
 { U"\U0001F9D1\U0001F3FB\u200D\u2708\uFE0F", u8"pilot: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1128
 { U"\U0001F9D1\U0001F3FC\u200D\u2708\uFE0F", u8"pilot: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1129
 { U"\U0001F9D1\U0001F3FD\u200D\u2708\uFE0F", u8"pilot: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1130
 { U"\U0001F9D1\U0001F3FE\u200D\u2708\uFE0F", u8"pilot: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1131
 { U"\U0001F9D1\U0001F3FF\u200D\u2708\uFE0F", u8"pilot: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1132
-{ U"\U0001F468\u200D\u2708\uFE0F", u8"man pilot", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1133
+{ U"\U0001F468\u200D\u2708\uFE0F", u8"man pilot", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1133
 { U"\U0001F468\U0001F3FB\u200D\u2708\uFE0F", u8"man pilot: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1134
 { U"\U0001F468\U0001F3FC\u200D\u2708\uFE0F", u8"man pilot: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1135
 { U"\U0001F468\U0001F3FD\u200D\u2708\uFE0F", u8"man pilot: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1136
 { U"\U0001F468\U0001F3FE\u200D\u2708\uFE0F", u8"man pilot: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1137
 { U"\U0001F468\U0001F3FF\u200D\u2708\uFE0F", u8"man pilot: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1138
-{ U"\U0001F469\u200D\u2708\uFE0F", u8"woman pilot", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1139
+{ U"\U0001F469\u200D\u2708\uFE0F", u8"woman pilot", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1139
 { U"\U0001F469\U0001F3FB\u200D\u2708\uFE0F", u8"woman pilot: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1140
 { U"\U0001F469\U0001F3FC\u200D\u2708\uFE0F", u8"woman pilot: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1141
 { U"\U0001F469\U0001F3FD\u200D\u2708\uFE0F", u8"woman pilot: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1142
 { U"\U0001F469\U0001F3FE\u200D\u2708\uFE0F", u8"woman pilot: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1143
 { U"\U0001F469\U0001F3FF\u200D\u2708\uFE0F", u8"woman pilot: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1144
-{ U"\U0001F9D1\u200D\U0001F680", u8"astronaut", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1145
+{ U"\U0001F9D1\u200D\U0001F680", u8"astronaut", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1145
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F680", u8"astronaut: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1146
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F680", u8"astronaut: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1147
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F680", u8"astronaut: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1148
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F680", u8"astronaut: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1149
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F680", u8"astronaut: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1150
-{ U"\U0001F468\u200D\U0001F680", u8"man astronaut", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1151
+{ U"\U0001F468\u200D\U0001F680", u8"man astronaut", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1151
 { U"\U0001F468\U0001F3FB\u200D\U0001F680", u8"man astronaut: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1152
 { U"\U0001F468\U0001F3FC\u200D\U0001F680", u8"man astronaut: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1153
 { U"\U0001F468\U0001F3FD\u200D\U0001F680", u8"man astronaut: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1154
 { U"\U0001F468\U0001F3FE\u200D\U0001F680", u8"man astronaut: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1155
 { U"\U0001F468\U0001F3FF\u200D\U0001F680", u8"man astronaut: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1156
-{ U"\U0001F469\u200D\U0001F680", u8"woman astronaut", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1157
+{ U"\U0001F469\u200D\U0001F680", u8"woman astronaut", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1157
 { U"\U0001F469\U0001F3FB\u200D\U0001F680", u8"woman astronaut: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1158
 { U"\U0001F469\U0001F3FC\u200D\U0001F680", u8"woman astronaut: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1159
 { U"\U0001F469\U0001F3FD\u200D\U0001F680", u8"woman astronaut: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1160
 { U"\U0001F469\U0001F3FE\u200D\U0001F680", u8"woman astronaut: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1161
 { U"\U0001F469\U0001F3FF\u200D\U0001F680", u8"woman astronaut: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1162
-{ U"\U0001F9D1\u200D\U0001F692", u8"firefighter", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1163
+{ U"\U0001F9D1\u200D\U0001F692", u8"firefighter", 212, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1163
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F692", u8"firefighter: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1164
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F692", u8"firefighter: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1165
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F692", u8"firefighter: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1166
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F692", u8"firefighter: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1167
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F692", u8"firefighter: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1168
-{ U"\U0001F468\u200D\U0001F692", u8"man firefighter", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1169
+{ U"\U0001F468\u200D\U0001F692", u8"man firefighter", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1169
 { U"\U0001F468\U0001F3FB\u200D\U0001F692", u8"man firefighter: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1170
 { U"\U0001F468\U0001F3FC\u200D\U0001F692", u8"man firefighter: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1171
 { U"\U0001F468\U0001F3FD\u200D\U0001F692", u8"man firefighter: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1172
 { U"\U0001F468\U0001F3FE\u200D\U0001F692", u8"man firefighter: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1173
 { U"\U0001F468\U0001F3FF\u200D\U0001F692", u8"man firefighter: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1174
-{ U"\U0001F469\u200D\U0001F692", u8"woman firefighter", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1175
+{ U"\U0001F469\u200D\U0001F692", u8"woman firefighter", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1175
 { U"\U0001F469\U0001F3FB\u200D\U0001F692", u8"woman firefighter: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1176
 { U"\U0001F469\U0001F3FC\u200D\U0001F692", u8"woman firefighter: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1177
 { U"\U0001F469\U0001F3FD\u200D\U0001F692", u8"woman firefighter: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1178
@@ -1190,13 +1190,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F46E\U0001F3FD", u8"police officer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1184
 { U"\U0001F46E\U0001F3FE", u8"police officer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1185
 { U"\U0001F46E\U0001F3FF", u8"police officer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1186
-{ U"\U0001F46E\u200D\u2642\uFE0F", u8"man police officer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1187
+{ U"\U0001F46E\u200D\u2642\uFE0F", u8"man police officer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1187
 { U"\U0001F46E\U0001F3FB\u200D\u2642\uFE0F", u8"man police officer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1188
 { U"\U0001F46E\U0001F3FC\u200D\u2642\uFE0F", u8"man police officer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1189
 { U"\U0001F46E\U0001F3FD\u200D\u2642\uFE0F", u8"man police officer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1190
 { U"\U0001F46E\U0001F3FE\u200D\u2642\uFE0F", u8"man police officer: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1191
 { U"\U0001F46E\U0001F3FF\u200D\u2642\uFE0F", u8"man police officer: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1192
-{ U"\U0001F46E\u200D\u2640\uFE0F", u8"woman police officer", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1193
+{ U"\U0001F46E\u200D\u2640\uFE0F", u8"woman police officer", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1193
 { U"\U0001F46E\U0001F3FB\u200D\u2640\uFE0F", u8"woman police officer: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1194
 { U"\U0001F46E\U0001F3FC\u200D\u2640\uFE0F", u8"woman police officer: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1195
 { U"\U0001F46E\U0001F3FD\u200D\u2640\uFE0F", u8"woman police officer: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1196
@@ -1208,13 +1208,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F575\U0001F3FD", u8"detective: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1202
 { U"\U0001F575\U0001F3FE", u8"detective: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1203
 { U"\U0001F575\U0001F3FF", u8"detective: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1204
-{ U"\U0001F575\uFE0F\u200D\u2642\uFE0F", u8"man detective", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1205
+{ U"\U0001F575\uFE0F\u200D\u2642\uFE0F", u8"man detective", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1205
 { U"\U0001F575\U0001F3FB\u200D\u2642\uFE0F", u8"man detective: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1206
 { U"\U0001F575\U0001F3FC\u200D\u2642\uFE0F", u8"man detective: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1207
 { U"\U0001F575\U0001F3FD\u200D\u2642\uFE0F", u8"man detective: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1208
 { U"\U0001F575\U0001F3FE\u200D\u2642\uFE0F", u8"man detective: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1209
 { U"\U0001F575\U0001F3FF\u200D\u2642\uFE0F", u8"man detective: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1210
-{ U"\U0001F575\uFE0F\u200D\u2640\uFE0F", u8"woman detective", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1211
+{ U"\U0001F575\uFE0F\u200D\u2640\uFE0F", u8"woman detective", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1211
 { U"\U0001F575\U0001F3FB\u200D\u2640\uFE0F", u8"woman detective: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1212
 { U"\U0001F575\U0001F3FC\u200D\u2640\uFE0F", u8"woman detective: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1213
 { U"\U0001F575\U0001F3FD\u200D\u2640\uFE0F", u8"woman detective: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1214
@@ -1226,13 +1226,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F482\U0001F3FD", u8"guard: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1220
 { U"\U0001F482\U0001F3FE", u8"guard: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1221
 { U"\U0001F482\U0001F3FF", u8"guard: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1222
-{ U"\U0001F482\u200D\u2642\uFE0F", u8"man guard", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1223
+{ U"\U0001F482\u200D\u2642\uFE0F", u8"man guard", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1223
 { U"\U0001F482\U0001F3FB\u200D\u2642\uFE0F", u8"man guard: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1224
 { U"\U0001F482\U0001F3FC\u200D\u2642\uFE0F", u8"man guard: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1225
 { U"\U0001F482\U0001F3FD\u200D\u2642\uFE0F", u8"man guard: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1226
 { U"\U0001F482\U0001F3FE\u200D\u2642\uFE0F", u8"man guard: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1227
 { U"\U0001F482\U0001F3FF\u200D\u2642\uFE0F", u8"man guard: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1228
-{ U"\U0001F482\u200D\u2640\uFE0F", u8"woman guard", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1229
+{ U"\U0001F482\u200D\u2640\uFE0F", u8"woman guard", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1229
 { U"\U0001F482\U0001F3FB\u200D\u2640\uFE0F", u8"woman guard: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1230
 { U"\U0001F482\U0001F3FC\u200D\u2640\uFE0F", u8"woman guard: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1231
 { U"\U0001F482\U0001F3FD\u200D\u2640\uFE0F", u8"woman guard: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1232
@@ -1250,13 +1250,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F477\U0001F3FD", u8"construction worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1244
 { U"\U0001F477\U0001F3FE", u8"construction worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1245
 { U"\U0001F477\U0001F3FF", u8"construction worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1246
-{ U"\U0001F477\u200D\u2642\uFE0F", u8"man construction worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1247
+{ U"\U0001F477\u200D\u2642\uFE0F", u8"man construction worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1247
 { U"\U0001F477\U0001F3FB\u200D\u2642\uFE0F", u8"man construction worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1248
 { U"\U0001F477\U0001F3FC\u200D\u2642\uFE0F", u8"man construction worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1249
 { U"\U0001F477\U0001F3FD\u200D\u2642\uFE0F", u8"man construction worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1250
 { U"\U0001F477\U0001F3FE\u200D\u2642\uFE0F", u8"man construction worker: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1251
 { U"\U0001F477\U0001F3FF\u200D\u2642\uFE0F", u8"man construction worker: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1252
-{ U"\U0001F477\u200D\u2640\uFE0F", u8"woman construction worker", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1253
+{ U"\U0001F477\u200D\u2640\uFE0F", u8"woman construction worker", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1253
 { U"\U0001F477\U0001F3FB\u200D\u2640\uFE0F", u8"woman construction worker: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1254
 { U"\U0001F477\U0001F3FC\u200D\u2640\uFE0F", u8"woman construction worker: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1255
 { U"\U0001F477\U0001F3FD\u200D\u2640\uFE0F", u8"woman construction worker: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1256
@@ -1286,13 +1286,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F473\U0001F3FD", u8"person wearing turban: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1280
 { U"\U0001F473\U0001F3FE", u8"person wearing turban: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1281
 { U"\U0001F473\U0001F3FF", u8"person wearing turban: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1282
-{ U"\U0001F473\u200D\u2642\uFE0F", u8"man wearing turban", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1283
+{ U"\U0001F473\u200D\u2642\uFE0F", u8"man wearing turban", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1283
 { U"\U0001F473\U0001F3FB\u200D\u2642\uFE0F", u8"man wearing turban: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1284
 { U"\U0001F473\U0001F3FC\u200D\u2642\uFE0F", u8"man wearing turban: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1285
 { U"\U0001F473\U0001F3FD\u200D\u2642\uFE0F", u8"man wearing turban: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1286
 { U"\U0001F473\U0001F3FE\u200D\u2642\uFE0F", u8"man wearing turban: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1287
 { U"\U0001F473\U0001F3FF\u200D\u2642\uFE0F", u8"man wearing turban: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1288
-{ U"\U0001F473\u200D\u2640\uFE0F", u8"woman wearing turban", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1289
+{ U"\U0001F473\u200D\u2640\uFE0F", u8"woman wearing turban", 212, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1289
 { U"\U0001F473\U0001F3FB\u200D\u2640\uFE0F", u8"woman wearing turban: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1290
 { U"\U0001F473\U0001F3FC\u200D\u2640\uFE0F", u8"woman wearing turban: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1291
 { U"\U0001F473\U0001F3FD\u200D\u2640\uFE0F", u8"woman wearing turban: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1292
@@ -1316,13 +1316,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F935\U0001F3FD", u8"person in tuxedo: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1310
 { U"\U0001F935\U0001F3FE", u8"person in tuxedo: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1311
 { U"\U0001F935\U0001F3FF", u8"person in tuxedo: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1312
-{ U"\U0001F935\u200D\u2642\uFE0F", u8"man in tuxedo", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1313
+{ U"\U0001F935\u200D\u2642\uFE0F", u8"man in tuxedo", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1313
 { U"\U0001F935\U0001F3FB\u200D\u2642\uFE0F", u8"man in tuxedo: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1314
 { U"\U0001F935\U0001F3FC\u200D\u2642\uFE0F", u8"man in tuxedo: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1315
 { U"\U0001F935\U0001F3FD\u200D\u2642\uFE0F", u8"man in tuxedo: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1316
 { U"\U0001F935\U0001F3FE\u200D\u2642\uFE0F", u8"man in tuxedo: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1317
 { U"\U0001F935\U0001F3FF\u200D\u2642\uFE0F", u8"man in tuxedo: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1318
-{ U"\U0001F935\u200D\u2640\uFE0F", u8"woman in tuxedo", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1319
+{ U"\U0001F935\u200D\u2640\uFE0F", u8"woman in tuxedo", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1319
 { U"\U0001F935\U0001F3FB\u200D\u2640\uFE0F", u8"woman in tuxedo: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1320
 { U"\U0001F935\U0001F3FC\u200D\u2640\uFE0F", u8"woman in tuxedo: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1321
 { U"\U0001F935\U0001F3FD\u200D\u2640\uFE0F", u8"woman in tuxedo: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1322
@@ -1334,13 +1334,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F470\U0001F3FD", u8"person with veil: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1328
 { U"\U0001F470\U0001F3FE", u8"person with veil: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1329
 { U"\U0001F470\U0001F3FF", u8"person with veil: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1330
-{ U"\U0001F470\u200D\u2642\uFE0F", u8"man with veil", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1331
+{ U"\U0001F470\u200D\u2642\uFE0F", u8"man with veil", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1331
 { U"\U0001F470\U0001F3FB\u200D\u2642\uFE0F", u8"man with veil: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1332
 { U"\U0001F470\U0001F3FC\u200D\u2642\uFE0F", u8"man with veil: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1333
 { U"\U0001F470\U0001F3FD\u200D\u2642\uFE0F", u8"man with veil: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1334
 { U"\U0001F470\U0001F3FE\u200D\u2642\uFE0F", u8"man with veil: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1335
 { U"\U0001F470\U0001F3FF\u200D\u2642\uFE0F", u8"man with veil: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1336
-{ U"\U0001F470\u200D\u2640\uFE0F", u8"woman with veil", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1337
+{ U"\U0001F470\u200D\u2640\uFE0F", u8"woman with veil", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1337
 { U"\U0001F470\U0001F3FB\u200D\u2640\uFE0F", u8"woman with veil: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1338
 { U"\U0001F470\U0001F3FC\u200D\u2640\uFE0F", u8"woman with veil: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1339
 { U"\U0001F470\U0001F3FD\u200D\u2640\uFE0F", u8"woman with veil: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1340
@@ -1370,19 +1370,19 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F931\U0001F3FD", u8"breast-feeding: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1364
 { U"\U0001F931\U0001F3FE", u8"breast-feeding: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1365
 { U"\U0001F931\U0001F3FF", u8"breast-feeding: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1366
-{ U"\U0001F469\u200D\U0001F37C", u8"woman feeding baby", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1367
+{ U"\U0001F469\u200D\U0001F37C", u8"woman feeding baby", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1367
 { U"\U0001F469\U0001F3FB\u200D\U0001F37C", u8"woman feeding baby: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1368
 { U"\U0001F469\U0001F3FC\u200D\U0001F37C", u8"woman feeding baby: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1369
 { U"\U0001F469\U0001F3FD\u200D\U0001F37C", u8"woman feeding baby: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1370
 { U"\U0001F469\U0001F3FE\u200D\U0001F37C", u8"woman feeding baby: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1371
 { U"\U0001F469\U0001F3FF\u200D\U0001F37C", u8"woman feeding baby: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1372
-{ U"\U0001F468\u200D\U0001F37C", u8"man feeding baby", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1373
+{ U"\U0001F468\u200D\U0001F37C", u8"man feeding baby", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1373
 { U"\U0001F468\U0001F3FB\u200D\U0001F37C", u8"man feeding baby: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1374
 { U"\U0001F468\U0001F3FC\u200D\U0001F37C", u8"man feeding baby: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1375
 { U"\U0001F468\U0001F3FD\u200D\U0001F37C", u8"man feeding baby: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1376
 { U"\U0001F468\U0001F3FE\u200D\U0001F37C", u8"man feeding baby: medium-dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1377
 { U"\U0001F468\U0001F3FF\u200D\U0001F37C", u8"man feeding baby: dark skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1378
-{ U"\U0001F9D1\u200D\U0001F37C", u8"person feeding baby", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1379
+{ U"\U0001F9D1\u200D\U0001F37C", u8"person feeding baby", 212, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1379
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F37C", u8"person feeding baby: light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1380
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F37C", u8"person feeding baby: medium-light skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1381
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F37C", u8"person feeding baby: medium skin tone", 212, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1382
@@ -1406,7 +1406,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F936\U0001F3FD", u8"Mrs. Claus: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1400
 { U"\U0001F936\U0001F3FE", u8"Mrs. Claus: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1401
 { U"\U0001F936\U0001F3FF", u8"Mrs. Claus: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1402
-{ U"\U0001F9D1\u200D\U0001F384", u8"Mx Claus", 213, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1403
+{ U"\U0001F9D1\u200D\U0001F384", u8"Mx Claus", 213, 0, -1, Lfg(65), EcVersion::E13_0 },   // 1403
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F384", u8"Mx Claus: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1404
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F384", u8"Mx Claus: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1405
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F384", u8"Mx Claus: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1406
@@ -1418,13 +1418,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9B8\U0001F3FD", u8"superhero: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1412
 { U"\U0001F9B8\U0001F3FE", u8"superhero: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1413
 { U"\U0001F9B8\U0001F3FF", u8"superhero: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1414
-{ U"\U0001F9B8\u200D\u2642\uFE0F", u8"man superhero", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1415
+{ U"\U0001F9B8\u200D\u2642\uFE0F", u8"man superhero", 213, 0, -1, Lfg(65), EcVersion::E11_0 },   // 1415
 { U"\U0001F9B8\U0001F3FB\u200D\u2642\uFE0F", u8"man superhero: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1416
 { U"\U0001F9B8\U0001F3FC\u200D\u2642\uFE0F", u8"man superhero: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1417
 { U"\U0001F9B8\U0001F3FD\u200D\u2642\uFE0F", u8"man superhero: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1418
 { U"\U0001F9B8\U0001F3FE\u200D\u2642\uFE0F", u8"man superhero: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1419
 { U"\U0001F9B8\U0001F3FF\u200D\u2642\uFE0F", u8"man superhero: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1420
-{ U"\U0001F9B8\u200D\u2640\uFE0F", u8"woman superhero", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1421
+{ U"\U0001F9B8\u200D\u2640\uFE0F", u8"woman superhero", 213, 0, -1, Lfg(65), EcVersion::E11_0 },   // 1421
 { U"\U0001F9B8\U0001F3FB\u200D\u2640\uFE0F", u8"woman superhero: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1422
 { U"\U0001F9B8\U0001F3FC\u200D\u2640\uFE0F", u8"woman superhero: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1423
 { U"\U0001F9B8\U0001F3FD\u200D\u2640\uFE0F", u8"woman superhero: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1424
@@ -1436,13 +1436,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9B9\U0001F3FD", u8"supervillain: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1430
 { U"\U0001F9B9\U0001F3FE", u8"supervillain: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1431
 { U"\U0001F9B9\U0001F3FF", u8"supervillain: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1432
-{ U"\U0001F9B9\u200D\u2642\uFE0F", u8"man supervillain", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1433
+{ U"\U0001F9B9\u200D\u2642\uFE0F", u8"man supervillain", 213, 0, -1, Lfg(65), EcVersion::E11_0 },   // 1433
 { U"\U0001F9B9\U0001F3FB\u200D\u2642\uFE0F", u8"man supervillain: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1434
 { U"\U0001F9B9\U0001F3FC\u200D\u2642\uFE0F", u8"man supervillain: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1435
 { U"\U0001F9B9\U0001F3FD\u200D\u2642\uFE0F", u8"man supervillain: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1436
 { U"\U0001F9B9\U0001F3FE\u200D\u2642\uFE0F", u8"man supervillain: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1437
 { U"\U0001F9B9\U0001F3FF\u200D\u2642\uFE0F", u8"man supervillain: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1438
-{ U"\U0001F9B9\u200D\u2640\uFE0F", u8"woman supervillain", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1439
+{ U"\U0001F9B9\u200D\u2640\uFE0F", u8"woman supervillain", 213, 0, -1, Lfg(65), EcVersion::E11_0 },   // 1439
 { U"\U0001F9B9\U0001F3FB\u200D\u2640\uFE0F", u8"woman supervillain: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1440
 { U"\U0001F9B9\U0001F3FC\u200D\u2640\uFE0F", u8"woman supervillain: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1441
 { U"\U0001F9B9\U0001F3FD\u200D\u2640\uFE0F", u8"woman supervillain: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1442
@@ -1454,13 +1454,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D9\U0001F3FD", u8"mage: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1448
 { U"\U0001F9D9\U0001F3FE", u8"mage: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1449
 { U"\U0001F9D9\U0001F3FF", u8"mage: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1450
-{ U"\U0001F9D9\u200D\u2642\uFE0F", u8"man mage", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1451
+{ U"\U0001F9D9\u200D\u2642\uFE0F", u8"man mage", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1451
 { U"\U0001F9D9\U0001F3FB\u200D\u2642\uFE0F", u8"man mage: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1452
 { U"\U0001F9D9\U0001F3FC\u200D\u2642\uFE0F", u8"man mage: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1453
 { U"\U0001F9D9\U0001F3FD\u200D\u2642\uFE0F", u8"man mage: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1454
 { U"\U0001F9D9\U0001F3FE\u200D\u2642\uFE0F", u8"man mage: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1455
 { U"\U0001F9D9\U0001F3FF\u200D\u2642\uFE0F", u8"man mage: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1456
-{ U"\U0001F9D9\u200D\u2640\uFE0F", u8"woman mage", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1457
+{ U"\U0001F9D9\u200D\u2640\uFE0F", u8"woman mage", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1457
 { U"\U0001F9D9\U0001F3FB\u200D\u2640\uFE0F", u8"woman mage: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1458
 { U"\U0001F9D9\U0001F3FC\u200D\u2640\uFE0F", u8"woman mage: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1459
 { U"\U0001F9D9\U0001F3FD\u200D\u2640\uFE0F", u8"woman mage: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1460
@@ -1472,13 +1472,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9DA\U0001F3FD", u8"fairy: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1466
 { U"\U0001F9DA\U0001F3FE", u8"fairy: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1467
 { U"\U0001F9DA\U0001F3FF", u8"fairy: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1468
-{ U"\U0001F9DA\u200D\u2642\uFE0F", u8"man fairy", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1469
+{ U"\U0001F9DA\u200D\u2642\uFE0F", u8"man fairy", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1469
 { U"\U0001F9DA\U0001F3FB\u200D\u2642\uFE0F", u8"man fairy: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1470
 { U"\U0001F9DA\U0001F3FC\u200D\u2642\uFE0F", u8"man fairy: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1471
 { U"\U0001F9DA\U0001F3FD\u200D\u2642\uFE0F", u8"man fairy: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1472
 { U"\U0001F9DA\U0001F3FE\u200D\u2642\uFE0F", u8"man fairy: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1473
 { U"\U0001F9DA\U0001F3FF\u200D\u2642\uFE0F", u8"man fairy: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1474
-{ U"\U0001F9DA\u200D\u2640\uFE0F", u8"woman fairy", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1475
+{ U"\U0001F9DA\u200D\u2640\uFE0F", u8"woman fairy", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1475
 { U"\U0001F9DA\U0001F3FB\u200D\u2640\uFE0F", u8"woman fairy: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1476
 { U"\U0001F9DA\U0001F3FC\u200D\u2640\uFE0F", u8"woman fairy: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1477
 { U"\U0001F9DA\U0001F3FD\u200D\u2640\uFE0F", u8"woman fairy: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1478
@@ -1490,13 +1490,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9DB\U0001F3FD", u8"vampire: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1484
 { U"\U0001F9DB\U0001F3FE", u8"vampire: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1485
 { U"\U0001F9DB\U0001F3FF", u8"vampire: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1486
-{ U"\U0001F9DB\u200D\u2642\uFE0F", u8"man vampire", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1487
+{ U"\U0001F9DB\u200D\u2642\uFE0F", u8"man vampire", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1487
 { U"\U0001F9DB\U0001F3FB\u200D\u2642\uFE0F", u8"man vampire: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1488
 { U"\U0001F9DB\U0001F3FC\u200D\u2642\uFE0F", u8"man vampire: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1489
 { U"\U0001F9DB\U0001F3FD\u200D\u2642\uFE0F", u8"man vampire: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1490
 { U"\U0001F9DB\U0001F3FE\u200D\u2642\uFE0F", u8"man vampire: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1491
 { U"\U0001F9DB\U0001F3FF\u200D\u2642\uFE0F", u8"man vampire: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1492
-{ U"\U0001F9DB\u200D\u2640\uFE0F", u8"woman vampire", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1493
+{ U"\U0001F9DB\u200D\u2640\uFE0F", u8"woman vampire", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1493
 { U"\U0001F9DB\U0001F3FB\u200D\u2640\uFE0F", u8"woman vampire: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1494
 { U"\U0001F9DB\U0001F3FC\u200D\u2640\uFE0F", u8"woman vampire: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1495
 { U"\U0001F9DB\U0001F3FD\u200D\u2640\uFE0F", u8"woman vampire: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1496
@@ -1508,13 +1508,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9DC\U0001F3FD", u8"merperson: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1502
 { U"\U0001F9DC\U0001F3FE", u8"merperson: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1503
 { U"\U0001F9DC\U0001F3FF", u8"merperson: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1504
-{ U"\U0001F9DC\u200D\u2642\uFE0F", u8"merman", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1505
+{ U"\U0001F9DC\u200D\u2642\uFE0F", u8"merman", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1505
 { U"\U0001F9DC\U0001F3FB\u200D\u2642\uFE0F", u8"merman: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1506
 { U"\U0001F9DC\U0001F3FC\u200D\u2642\uFE0F", u8"merman: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1507
 { U"\U0001F9DC\U0001F3FD\u200D\u2642\uFE0F", u8"merman: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1508
 { U"\U0001F9DC\U0001F3FE\u200D\u2642\uFE0F", u8"merman: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1509
 { U"\U0001F9DC\U0001F3FF\u200D\u2642\uFE0F", u8"merman: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1510
-{ U"\U0001F9DC\u200D\u2640\uFE0F", u8"mermaid", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1511
+{ U"\U0001F9DC\u200D\u2640\uFE0F", u8"mermaid", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1511
 { U"\U0001F9DC\U0001F3FB\u200D\u2640\uFE0F", u8"mermaid: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1512
 { U"\U0001F9DC\U0001F3FC\u200D\u2640\uFE0F", u8"mermaid: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1513
 { U"\U0001F9DC\U0001F3FD\u200D\u2640\uFE0F", u8"mermaid: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1514
@@ -1526,24 +1526,24 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9DD\U0001F3FD", u8"elf: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1520
 { U"\U0001F9DD\U0001F3FE", u8"elf: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1521
 { U"\U0001F9DD\U0001F3FF", u8"elf: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1522
-{ U"\U0001F9DD\u200D\u2642\uFE0F", u8"man elf", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1523
+{ U"\U0001F9DD\u200D\u2642\uFE0F", u8"man elf", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1523
 { U"\U0001F9DD\U0001F3FB\u200D\u2642\uFE0F", u8"man elf: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1524
 { U"\U0001F9DD\U0001F3FC\u200D\u2642\uFE0F", u8"man elf: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1525
 { U"\U0001F9DD\U0001F3FD\u200D\u2642\uFE0F", u8"man elf: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1526
 { U"\U0001F9DD\U0001F3FE\u200D\u2642\uFE0F", u8"man elf: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1527
 { U"\U0001F9DD\U0001F3FF\u200D\u2642\uFE0F", u8"man elf: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1528
-{ U"\U0001F9DD\u200D\u2640\uFE0F", u8"woman elf", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1529
+{ U"\U0001F9DD\u200D\u2640\uFE0F", u8"woman elf", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1529
 { U"\U0001F9DD\U0001F3FB\u200D\u2640\uFE0F", u8"woman elf: light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1530
 { U"\U0001F9DD\U0001F3FC\u200D\u2640\uFE0F", u8"woman elf: medium-light skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1531
 { U"\U0001F9DD\U0001F3FD\u200D\u2640\uFE0F", u8"woman elf: medium skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1532
 { U"\U0001F9DD\U0001F3FE\u200D\u2640\uFE0F", u8"woman elf: medium-dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1533
 { U"\U0001F9DD\U0001F3FF\u200D\u2640\uFE0F", u8"woman elf: dark skin tone", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1534
 { U"\U0001F9DE", u8"genie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1535
-{ U"\U0001F9DE\u200D\u2642\uFE0F", u8"man genie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1536
-{ U"\U0001F9DE\u200D\u2640\uFE0F", u8"woman genie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1537
+{ U"\U0001F9DE\u200D\u2642\uFE0F", u8"man genie", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1536
+{ U"\U0001F9DE\u200D\u2640\uFE0F", u8"woman genie", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1537
 { U"\U0001F9DF", u8"zombie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1538
-{ U"\U0001F9DF\u200D\u2642\uFE0F", u8"man zombie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1539
-{ U"\U0001F9DF\u200D\u2640\uFE0F", u8"woman zombie", 213, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1540
+{ U"\U0001F9DF\u200D\u2642\uFE0F", u8"man zombie", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1539
+{ U"\U0001F9DF\u200D\u2640\uFE0F", u8"woman zombie", 213, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1540
 { U"\U0001F9CC", u8"troll", 213, 0, -1, Lfg(1), EcVersion::E14_0 },   // 1541
 { U"\U0001F486", u8"person getting massage", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1542
 { U"\U0001F486\U0001F3FB", u8"person getting massage: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1543
@@ -1551,13 +1551,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F486\U0001F3FD", u8"person getting massage: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1545
 { U"\U0001F486\U0001F3FE", u8"person getting massage: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1546
 { U"\U0001F486\U0001F3FF", u8"person getting massage: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1547
-{ U"\U0001F486\u200D\u2642\uFE0F", u8"man getting massage", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1548
+{ U"\U0001F486\u200D\u2642\uFE0F", u8"man getting massage", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1548
 { U"\U0001F486\U0001F3FB\u200D\u2642\uFE0F", u8"man getting massage: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1549
 { U"\U0001F486\U0001F3FC\u200D\u2642\uFE0F", u8"man getting massage: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1550
 { U"\U0001F486\U0001F3FD\u200D\u2642\uFE0F", u8"man getting massage: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1551
 { U"\U0001F486\U0001F3FE\u200D\u2642\uFE0F", u8"man getting massage: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1552
 { U"\U0001F486\U0001F3FF\u200D\u2642\uFE0F", u8"man getting massage: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1553
-{ U"\U0001F486\u200D\u2640\uFE0F", u8"woman getting massage", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1554
+{ U"\U0001F486\u200D\u2640\uFE0F", u8"woman getting massage", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1554
 { U"\U0001F486\U0001F3FB\u200D\u2640\uFE0F", u8"woman getting massage: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1555
 { U"\U0001F486\U0001F3FC\u200D\u2640\uFE0F", u8"woman getting massage: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1556
 { U"\U0001F486\U0001F3FD\u200D\u2640\uFE0F", u8"woman getting massage: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1557
@@ -1569,13 +1569,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F487\U0001F3FD", u8"person getting haircut: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1563
 { U"\U0001F487\U0001F3FE", u8"person getting haircut: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1564
 { U"\U0001F487\U0001F3FF", u8"person getting haircut: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1565
-{ U"\U0001F487\u200D\u2642\uFE0F", u8"man getting haircut", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1566
+{ U"\U0001F487\u200D\u2642\uFE0F", u8"man getting haircut", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1566
 { U"\U0001F487\U0001F3FB\u200D\u2642\uFE0F", u8"man getting haircut: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1567
 { U"\U0001F487\U0001F3FC\u200D\u2642\uFE0F", u8"man getting haircut: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1568
 { U"\U0001F487\U0001F3FD\u200D\u2642\uFE0F", u8"man getting haircut: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1569
 { U"\U0001F487\U0001F3FE\u200D\u2642\uFE0F", u8"man getting haircut: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1570
 { U"\U0001F487\U0001F3FF\u200D\u2642\uFE0F", u8"man getting haircut: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1571
-{ U"\U0001F487\u200D\u2640\uFE0F", u8"woman getting haircut", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1572
+{ U"\U0001F487\u200D\u2640\uFE0F", u8"woman getting haircut", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1572
 { U"\U0001F487\U0001F3FB\u200D\u2640\uFE0F", u8"woman getting haircut: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1573
 { U"\U0001F487\U0001F3FC\u200D\u2640\uFE0F", u8"woman getting haircut: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1574
 { U"\U0001F487\U0001F3FD\u200D\u2640\uFE0F", u8"woman getting haircut: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1575
@@ -1587,13 +1587,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6B6\U0001F3FD", u8"person walking: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1581
 { U"\U0001F6B6\U0001F3FE", u8"person walking: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1582
 { U"\U0001F6B6\U0001F3FF", u8"person walking: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1583
-{ U"\U0001F6B6\u200D\u2642\uFE0F", u8"man walking", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1584
+{ U"\U0001F6B6\u200D\u2642\uFE0F", u8"man walking", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1584
 { U"\U0001F6B6\U0001F3FB\u200D\u2642\uFE0F", u8"man walking: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1585
 { U"\U0001F6B6\U0001F3FC\u200D\u2642\uFE0F", u8"man walking: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1586
 { U"\U0001F6B6\U0001F3FD\u200D\u2642\uFE0F", u8"man walking: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1587
 { U"\U0001F6B6\U0001F3FE\u200D\u2642\uFE0F", u8"man walking: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1588
 { U"\U0001F6B6\U0001F3FF\u200D\u2642\uFE0F", u8"man walking: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1589
-{ U"\U0001F6B6\u200D\u2640\uFE0F", u8"woman walking", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1590
+{ U"\U0001F6B6\u200D\u2640\uFE0F", u8"woman walking", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1590
 { U"\U0001F6B6\U0001F3FB\u200D\u2640\uFE0F", u8"woman walking: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1591
 { U"\U0001F6B6\U0001F3FC\u200D\u2640\uFE0F", u8"woman walking: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1592
 { U"\U0001F6B6\U0001F3FD\u200D\u2640\uFE0F", u8"woman walking: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1593
@@ -1623,13 +1623,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9CD\U0001F3FD", u8"person standing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1617
 { U"\U0001F9CD\U0001F3FE", u8"person standing: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1618
 { U"\U0001F9CD\U0001F3FF", u8"person standing: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1619
-{ U"\U0001F9CD\u200D\u2642\uFE0F", u8"man standing", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1620
+{ U"\U0001F9CD\u200D\u2642\uFE0F", u8"man standing", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1620
 { U"\U0001F9CD\U0001F3FB\u200D\u2642\uFE0F", u8"man standing: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1621
 { U"\U0001F9CD\U0001F3FC\u200D\u2642\uFE0F", u8"man standing: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1622
 { U"\U0001F9CD\U0001F3FD\u200D\u2642\uFE0F", u8"man standing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1623
 { U"\U0001F9CD\U0001F3FE\u200D\u2642\uFE0F", u8"man standing: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1624
 { U"\U0001F9CD\U0001F3FF\u200D\u2642\uFE0F", u8"man standing: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1625
-{ U"\U0001F9CD\u200D\u2640\uFE0F", u8"woman standing", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1626
+{ U"\U0001F9CD\u200D\u2640\uFE0F", u8"woman standing", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1626
 { U"\U0001F9CD\U0001F3FB\u200D\u2640\uFE0F", u8"woman standing: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1627
 { U"\U0001F9CD\U0001F3FC\u200D\u2640\uFE0F", u8"woman standing: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1628
 { U"\U0001F9CD\U0001F3FD\u200D\u2640\uFE0F", u8"woman standing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1629
@@ -1641,13 +1641,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9CE\U0001F3FD", u8"person kneeling: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1635
 { U"\U0001F9CE\U0001F3FE", u8"person kneeling: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1636
 { U"\U0001F9CE\U0001F3FF", u8"person kneeling: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1637
-{ U"\U0001F9CE\u200D\u2642\uFE0F", u8"man kneeling", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1638
+{ U"\U0001F9CE\u200D\u2642\uFE0F", u8"man kneeling", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1638
 { U"\U0001F9CE\U0001F3FB\u200D\u2642\uFE0F", u8"man kneeling: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1639
 { U"\U0001F9CE\U0001F3FC\u200D\u2642\uFE0F", u8"man kneeling: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1640
 { U"\U0001F9CE\U0001F3FD\u200D\u2642\uFE0F", u8"man kneeling: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1641
 { U"\U0001F9CE\U0001F3FE\u200D\u2642\uFE0F", u8"man kneeling: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1642
 { U"\U0001F9CE\U0001F3FF\u200D\u2642\uFE0F", u8"man kneeling: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1643
-{ U"\U0001F9CE\u200D\u2640\uFE0F", u8"woman kneeling", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1644
+{ U"\U0001F9CE\u200D\u2640\uFE0F", u8"woman kneeling", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1644
 { U"\U0001F9CE\U0001F3FB\u200D\u2640\uFE0F", u8"woman kneeling: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1645
 { U"\U0001F9CE\U0001F3FC\u200D\u2640\uFE0F", u8"woman kneeling: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1646
 { U"\U0001F9CE\U0001F3FD\u200D\u2640\uFE0F", u8"woman kneeling: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1647
@@ -1671,7 +1671,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9CE\U0001F3FD\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man kneeling facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1665
 { U"\U0001F9CE\U0001F3FE\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man kneeling facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1666
 { U"\U0001F9CE\U0001F3FF\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man kneeling facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1667
-{ U"\U0001F9D1\u200D\U0001F9AF", u8"person with white cane", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1668
+{ U"\U0001F9D1\u200D\U0001F9AF", u8"person with white cane", 214, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1668
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9AF", u8"person with white cane: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1669
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9AF", u8"person with white cane: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1670
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9AF", u8"person with white cane: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1671
@@ -1683,7 +1683,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"person with white cane facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1677
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"person with white cane facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1678
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"person with white cane facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1679
-{ U"\U0001F468\u200D\U0001F9AF", u8"man with white cane", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1680
+{ U"\U0001F468\u200D\U0001F9AF", u8"man with white cane", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1680
 { U"\U0001F468\U0001F3FB\u200D\U0001F9AF", u8"man with white cane: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1681
 { U"\U0001F468\U0001F3FC\u200D\U0001F9AF", u8"man with white cane: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1682
 { U"\U0001F468\U0001F3FD\u200D\U0001F9AF", u8"man with white cane: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1683
@@ -1695,7 +1695,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F468\U0001F3FD\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"man with white cane facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1689
 { U"\U0001F468\U0001F3FE\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"man with white cane facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1690
 { U"\U0001F468\U0001F3FF\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"man with white cane facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1691
-{ U"\U0001F469\u200D\U0001F9AF", u8"woman with white cane", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1692
+{ U"\U0001F469\u200D\U0001F9AF", u8"woman with white cane", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1692
 { U"\U0001F469\U0001F3FB\u200D\U0001F9AF", u8"woman with white cane: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1693
 { U"\U0001F469\U0001F3FC\u200D\U0001F9AF", u8"woman with white cane: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1694
 { U"\U0001F469\U0001F3FD\u200D\U0001F9AF", u8"woman with white cane: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1695
@@ -1707,7 +1707,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FD\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"woman with white cane facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1701
 { U"\U0001F469\U0001F3FE\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"woman with white cane facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1702
 { U"\U0001F469\U0001F3FF\u200D\U0001F9AF\u200D\u27A1\uFE0F", u8"woman with white cane facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1703
-{ U"\U0001F9D1\u200D\U0001F9BC", u8"person in motorized wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1704
+{ U"\U0001F9D1\u200D\U0001F9BC", u8"person in motorized wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1704
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9BC", u8"person in motorized wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1705
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9BC", u8"person in motorized wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1706
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9BC", u8"person in motorized wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1707
@@ -1719,7 +1719,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"person in motorized wheelchair facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1713
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"person in motorized wheelchair facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1714
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"person in motorized wheelchair facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1715
-{ U"\U0001F468\u200D\U0001F9BC", u8"man in motorized wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1716
+{ U"\U0001F468\u200D\U0001F9BC", u8"man in motorized wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1716
 { U"\U0001F468\U0001F3FB\u200D\U0001F9BC", u8"man in motorized wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1717
 { U"\U0001F468\U0001F3FC\u200D\U0001F9BC", u8"man in motorized wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1718
 { U"\U0001F468\U0001F3FD\u200D\U0001F9BC", u8"man in motorized wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1719
@@ -1731,7 +1731,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F468\U0001F3FD\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"man in motorized wheelchair facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1725
 { U"\U0001F468\U0001F3FE\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"man in motorized wheelchair facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1726
 { U"\U0001F468\U0001F3FF\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"man in motorized wheelchair facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1727
-{ U"\U0001F469\u200D\U0001F9BC", u8"woman in motorized wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1728
+{ U"\U0001F469\u200D\U0001F9BC", u8"woman in motorized wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1728
 { U"\U0001F469\U0001F3FB\u200D\U0001F9BC", u8"woman in motorized wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1729
 { U"\U0001F469\U0001F3FC\u200D\U0001F9BC", u8"woman in motorized wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1730
 { U"\U0001F469\U0001F3FD\u200D\U0001F9BC", u8"woman in motorized wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1731
@@ -1743,7 +1743,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FD\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"woman in motorized wheelchair facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1737
 { U"\U0001F469\U0001F3FE\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"woman in motorized wheelchair facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1738
 { U"\U0001F469\U0001F3FF\u200D\U0001F9BC\u200D\u27A1\uFE0F", u8"woman in motorized wheelchair facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1739
-{ U"\U0001F9D1\u200D\U0001F9BD", u8"person in manual wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1740
+{ U"\U0001F9D1\u200D\U0001F9BD", u8"person in manual wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_1 },   // 1740
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F9BD", u8"person in manual wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1741
 { U"\U0001F9D1\U0001F3FC\u200D\U0001F9BD", u8"person in manual wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1742
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9BD", u8"person in manual wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_1 },   // 1743
@@ -1755,7 +1755,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"person in manual wheelchair facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1749
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"person in manual wheelchair facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1750
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"person in manual wheelchair facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1751
-{ U"\U0001F468\u200D\U0001F9BD", u8"man in manual wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1752
+{ U"\U0001F468\u200D\U0001F9BD", u8"man in manual wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1752
 { U"\U0001F468\U0001F3FB\u200D\U0001F9BD", u8"man in manual wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1753
 { U"\U0001F468\U0001F3FC\u200D\U0001F9BD", u8"man in manual wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1754
 { U"\U0001F468\U0001F3FD\u200D\U0001F9BD", u8"man in manual wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1755
@@ -1767,7 +1767,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F468\U0001F3FD\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"man in manual wheelchair facing right: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1761
 { U"\U0001F468\U0001F3FE\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"man in manual wheelchair facing right: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1762
 { U"\U0001F468\U0001F3FF\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"man in manual wheelchair facing right: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E15_1 },   // 1763
-{ U"\U0001F469\u200D\U0001F9BD", u8"woman in manual wheelchair", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1764
+{ U"\U0001F469\u200D\U0001F9BD", u8"woman in manual wheelchair", 214, 0, -1, Lfg(65), EcVersion::E12_0 },   // 1764
 { U"\U0001F469\U0001F3FB\u200D\U0001F9BD", u8"woman in manual wheelchair: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1765
 { U"\U0001F469\U0001F3FC\u200D\U0001F9BD", u8"woman in manual wheelchair: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1766
 { U"\U0001F469\U0001F3FD\u200D\U0001F9BD", u8"woman in manual wheelchair: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1767
@@ -1785,13 +1785,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3C3\U0001F3FD", u8"person running: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1779
 { U"\U0001F3C3\U0001F3FE", u8"person running: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1780
 { U"\U0001F3C3\U0001F3FF", u8"person running: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1781
-{ U"\U0001F3C3\u200D\u2642\uFE0F", u8"man running", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1782
+{ U"\U0001F3C3\u200D\u2642\uFE0F", u8"man running", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1782
 { U"\U0001F3C3\U0001F3FB\u200D\u2642\uFE0F", u8"man running: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1783
 { U"\U0001F3C3\U0001F3FC\u200D\u2642\uFE0F", u8"man running: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1784
 { U"\U0001F3C3\U0001F3FD\u200D\u2642\uFE0F", u8"man running: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1785
 { U"\U0001F3C3\U0001F3FE\u200D\u2642\uFE0F", u8"man running: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1786
 { U"\U0001F3C3\U0001F3FF\u200D\u2642\uFE0F", u8"man running: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1787
-{ U"\U0001F3C3\u200D\u2640\uFE0F", u8"woman running", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1788
+{ U"\U0001F3C3\u200D\u2640\uFE0F", u8"woman running", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1788
 { U"\U0001F3C3\U0001F3FB\u200D\u2640\uFE0F", u8"woman running: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1789
 { U"\U0001F3C3\U0001F3FC\u200D\u2640\uFE0F", u8"woman running: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1790
 { U"\U0001F3C3\U0001F3FD\u200D\u2640\uFE0F", u8"woman running: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1791
@@ -1834,21 +1834,21 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F574\U0001F3FE", u8"person in suit levitating: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1828
 { U"\U0001F574\U0001F3FF", u8"person in suit levitating: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1829
 { U"\U0001F46F", u8"people with bunny ears", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1830
-{ U"\U0001F46F\u200D\u2642\uFE0F", u8"men with bunny ears", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1831
-{ U"\U0001F46F\u200D\u2640\uFE0F", u8"women with bunny ears", 214, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1832
+{ U"\U0001F46F\u200D\u2642\uFE0F", u8"men with bunny ears", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1831
+{ U"\U0001F46F\u200D\u2640\uFE0F", u8"women with bunny ears", 214, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1832
 { U"\U0001F9D6", u8"person in steamy room", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1833
 { U"\U0001F9D6\U0001F3FB", u8"person in steamy room: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1834
 { U"\U0001F9D6\U0001F3FC", u8"person in steamy room: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1835
 { U"\U0001F9D6\U0001F3FD", u8"person in steamy room: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1836
 { U"\U0001F9D6\U0001F3FE", u8"person in steamy room: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1837
 { U"\U0001F9D6\U0001F3FF", u8"person in steamy room: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1838
-{ U"\U0001F9D6\u200D\u2642\uFE0F", u8"man in steamy room", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1839
+{ U"\U0001F9D6\u200D\u2642\uFE0F", u8"man in steamy room", 214, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1839
 { U"\U0001F9D6\U0001F3FB\u200D\u2642\uFE0F", u8"man in steamy room: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1840
 { U"\U0001F9D6\U0001F3FC\u200D\u2642\uFE0F", u8"man in steamy room: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1841
 { U"\U0001F9D6\U0001F3FD\u200D\u2642\uFE0F", u8"man in steamy room: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1842
 { U"\U0001F9D6\U0001F3FE\u200D\u2642\uFE0F", u8"man in steamy room: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1843
 { U"\U0001F9D6\U0001F3FF\u200D\u2642\uFE0F", u8"man in steamy room: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1844
-{ U"\U0001F9D6\u200D\u2640\uFE0F", u8"woman in steamy room", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1845
+{ U"\U0001F9D6\u200D\u2640\uFE0F", u8"woman in steamy room", 214, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1845
 { U"\U0001F9D6\U0001F3FB\u200D\u2640\uFE0F", u8"woman in steamy room: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1846
 { U"\U0001F9D6\U0001F3FC\u200D\u2640\uFE0F", u8"woman in steamy room: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1847
 { U"\U0001F9D6\U0001F3FD\u200D\u2640\uFE0F", u8"woman in steamy room: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1848
@@ -1860,13 +1860,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D7\U0001F3FD", u8"person climbing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1854
 { U"\U0001F9D7\U0001F3FE", u8"person climbing: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1855
 { U"\U0001F9D7\U0001F3FF", u8"person climbing: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1856
-{ U"\U0001F9D7\u200D\u2642\uFE0F", u8"man climbing", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1857
+{ U"\U0001F9D7\u200D\u2642\uFE0F", u8"man climbing", 214, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1857
 { U"\U0001F9D7\U0001F3FB\u200D\u2642\uFE0F", u8"man climbing: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1858
 { U"\U0001F9D7\U0001F3FC\u200D\u2642\uFE0F", u8"man climbing: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1859
 { U"\U0001F9D7\U0001F3FD\u200D\u2642\uFE0F", u8"man climbing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1860
 { U"\U0001F9D7\U0001F3FE\u200D\u2642\uFE0F", u8"man climbing: medium-dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1861
 { U"\U0001F9D7\U0001F3FF\u200D\u2642\uFE0F", u8"man climbing: dark skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1862
-{ U"\U0001F9D7\u200D\u2640\uFE0F", u8"woman climbing", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1863
+{ U"\U0001F9D7\u200D\u2640\uFE0F", u8"woman climbing", 214, 0, -1, Lfg(65), EcVersion::E5_0 },   // 1863
 { U"\U0001F9D7\U0001F3FB\u200D\u2640\uFE0F", u8"woman climbing: light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1864
 { U"\U0001F9D7\U0001F3FC\u200D\u2640\uFE0F", u8"woman climbing: medium-light skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1865
 { U"\U0001F9D7\U0001F3FD\u200D\u2640\uFE0F", u8"woman climbing: medium skin tone", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1866
@@ -1892,13 +1892,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3CC\U0001F3FD", u8"person golfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1886
 { U"\U0001F3CC\U0001F3FE", u8"person golfing: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1887
 { U"\U0001F3CC\U0001F3FF", u8"person golfing: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1888
-{ U"\U0001F3CC\uFE0F\u200D\u2642\uFE0F", u8"man golfing", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1889
+{ U"\U0001F3CC\uFE0F\u200D\u2642\uFE0F", u8"man golfing", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1889
 { U"\U0001F3CC\U0001F3FB\u200D\u2642\uFE0F", u8"man golfing: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1890
 { U"\U0001F3CC\U0001F3FC\u200D\u2642\uFE0F", u8"man golfing: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1891
 { U"\U0001F3CC\U0001F3FD\u200D\u2642\uFE0F", u8"man golfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1892
 { U"\U0001F3CC\U0001F3FE\u200D\u2642\uFE0F", u8"man golfing: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1893
 { U"\U0001F3CC\U0001F3FF\u200D\u2642\uFE0F", u8"man golfing: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1894
-{ U"\U0001F3CC\uFE0F\u200D\u2640\uFE0F", u8"woman golfing", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1895
+{ U"\U0001F3CC\uFE0F\u200D\u2640\uFE0F", u8"woman golfing", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1895
 { U"\U0001F3CC\U0001F3FB\u200D\u2640\uFE0F", u8"woman golfing: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1896
 { U"\U0001F3CC\U0001F3FC\u200D\u2640\uFE0F", u8"woman golfing: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1897
 { U"\U0001F3CC\U0001F3FD\u200D\u2640\uFE0F", u8"woman golfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1898
@@ -1910,13 +1910,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3C4\U0001F3FD", u8"person surfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1904
 { U"\U0001F3C4\U0001F3FE", u8"person surfing: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1905
 { U"\U0001F3C4\U0001F3FF", u8"person surfing: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1906
-{ U"\U0001F3C4\u200D\u2642\uFE0F", u8"man surfing", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1907
+{ U"\U0001F3C4\u200D\u2642\uFE0F", u8"man surfing", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1907
 { U"\U0001F3C4\U0001F3FB\u200D\u2642\uFE0F", u8"man surfing: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1908
 { U"\U0001F3C4\U0001F3FC\u200D\u2642\uFE0F", u8"man surfing: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1909
 { U"\U0001F3C4\U0001F3FD\u200D\u2642\uFE0F", u8"man surfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1910
 { U"\U0001F3C4\U0001F3FE\u200D\u2642\uFE0F", u8"man surfing: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1911
 { U"\U0001F3C4\U0001F3FF\u200D\u2642\uFE0F", u8"man surfing: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1912
-{ U"\U0001F3C4\u200D\u2640\uFE0F", u8"woman surfing", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1913
+{ U"\U0001F3C4\u200D\u2640\uFE0F", u8"woman surfing", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1913
 { U"\U0001F3C4\U0001F3FB\u200D\u2640\uFE0F", u8"woman surfing: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1914
 { U"\U0001F3C4\U0001F3FC\u200D\u2640\uFE0F", u8"woman surfing: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1915
 { U"\U0001F3C4\U0001F3FD\u200D\u2640\uFE0F", u8"woman surfing: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1916
@@ -1928,13 +1928,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6A3\U0001F3FD", u8"person rowing boat: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1922
 { U"\U0001F6A3\U0001F3FE", u8"person rowing boat: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1923
 { U"\U0001F6A3\U0001F3FF", u8"person rowing boat: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1924
-{ U"\U0001F6A3\u200D\u2642\uFE0F", u8"man rowing boat", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1925
+{ U"\U0001F6A3\u200D\u2642\uFE0F", u8"man rowing boat", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1925
 { U"\U0001F6A3\U0001F3FB\u200D\u2642\uFE0F", u8"man rowing boat: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1926
 { U"\U0001F6A3\U0001F3FC\u200D\u2642\uFE0F", u8"man rowing boat: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1927
 { U"\U0001F6A3\U0001F3FD\u200D\u2642\uFE0F", u8"man rowing boat: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1928
 { U"\U0001F6A3\U0001F3FE\u200D\u2642\uFE0F", u8"man rowing boat: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1929
 { U"\U0001F6A3\U0001F3FF\u200D\u2642\uFE0F", u8"man rowing boat: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1930
-{ U"\U0001F6A3\u200D\u2640\uFE0F", u8"woman rowing boat", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1931
+{ U"\U0001F6A3\u200D\u2640\uFE0F", u8"woman rowing boat", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1931
 { U"\U0001F6A3\U0001F3FB\u200D\u2640\uFE0F", u8"woman rowing boat: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1932
 { U"\U0001F6A3\U0001F3FC\u200D\u2640\uFE0F", u8"woman rowing boat: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1933
 { U"\U0001F6A3\U0001F3FD\u200D\u2640\uFE0F", u8"woman rowing boat: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1934
@@ -1946,13 +1946,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3CA\U0001F3FD", u8"person swimming: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1940
 { U"\U0001F3CA\U0001F3FE", u8"person swimming: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1941
 { U"\U0001F3CA\U0001F3FF", u8"person swimming: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1942
-{ U"\U0001F3CA\u200D\u2642\uFE0F", u8"man swimming", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1943
+{ U"\U0001F3CA\u200D\u2642\uFE0F", u8"man swimming", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1943
 { U"\U0001F3CA\U0001F3FB\u200D\u2642\uFE0F", u8"man swimming: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1944
 { U"\U0001F3CA\U0001F3FC\u200D\u2642\uFE0F", u8"man swimming: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1945
 { U"\U0001F3CA\U0001F3FD\u200D\u2642\uFE0F", u8"man swimming: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1946
 { U"\U0001F3CA\U0001F3FE\u200D\u2642\uFE0F", u8"man swimming: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1947
 { U"\U0001F3CA\U0001F3FF\u200D\u2642\uFE0F", u8"man swimming: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1948
-{ U"\U0001F3CA\u200D\u2640\uFE0F", u8"woman swimming", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1949
+{ U"\U0001F3CA\u200D\u2640\uFE0F", u8"woman swimming", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1949
 { U"\U0001F3CA\U0001F3FB\u200D\u2640\uFE0F", u8"woman swimming: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1950
 { U"\U0001F3CA\U0001F3FC\u200D\u2640\uFE0F", u8"woman swimming: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1951
 { U"\U0001F3CA\U0001F3FD\u200D\u2640\uFE0F", u8"woman swimming: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1952
@@ -1964,13 +1964,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u26F9\U0001F3FD", u8"person bouncing ball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1958
 { U"\u26F9\U0001F3FE", u8"person bouncing ball: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1959
 { U"\u26F9\U0001F3FF", u8"person bouncing ball: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1960
-{ U"\u26F9\uFE0F\u200D\u2642\uFE0F", u8"man bouncing ball", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1961
+{ U"\u26F9\uFE0F\u200D\u2642\uFE0F", u8"man bouncing ball", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1961
 { U"\u26F9\U0001F3FB\u200D\u2642\uFE0F", u8"man bouncing ball: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1962
 { U"\u26F9\U0001F3FC\u200D\u2642\uFE0F", u8"man bouncing ball: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1963
 { U"\u26F9\U0001F3FD\u200D\u2642\uFE0F", u8"man bouncing ball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1964
 { U"\u26F9\U0001F3FE\u200D\u2642\uFE0F", u8"man bouncing ball: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1965
 { U"\u26F9\U0001F3FF\u200D\u2642\uFE0F", u8"man bouncing ball: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1966
-{ U"\u26F9\uFE0F\u200D\u2640\uFE0F", u8"woman bouncing ball", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1967
+{ U"\u26F9\uFE0F\u200D\u2640\uFE0F", u8"woman bouncing ball", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1967
 { U"\u26F9\U0001F3FB\u200D\u2640\uFE0F", u8"woman bouncing ball: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1968
 { U"\u26F9\U0001F3FC\u200D\u2640\uFE0F", u8"woman bouncing ball: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1969
 { U"\u26F9\U0001F3FD\u200D\u2640\uFE0F", u8"woman bouncing ball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1970
@@ -1982,13 +1982,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3CB\U0001F3FD", u8"person lifting weights: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1976
 { U"\U0001F3CB\U0001F3FE", u8"person lifting weights: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1977
 { U"\U0001F3CB\U0001F3FF", u8"person lifting weights: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E2_0 },   // 1978
-{ U"\U0001F3CB\uFE0F\u200D\u2642\uFE0F", u8"man lifting weights", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1979
+{ U"\U0001F3CB\uFE0F\u200D\u2642\uFE0F", u8"man lifting weights", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1979
 { U"\U0001F3CB\U0001F3FB\u200D\u2642\uFE0F", u8"man lifting weights: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1980
 { U"\U0001F3CB\U0001F3FC\u200D\u2642\uFE0F", u8"man lifting weights: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1981
 { U"\U0001F3CB\U0001F3FD\u200D\u2642\uFE0F", u8"man lifting weights: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1982
 { U"\U0001F3CB\U0001F3FE\u200D\u2642\uFE0F", u8"man lifting weights: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1983
 { U"\U0001F3CB\U0001F3FF\u200D\u2642\uFE0F", u8"man lifting weights: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1984
-{ U"\U0001F3CB\uFE0F\u200D\u2640\uFE0F", u8"woman lifting weights", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1985
+{ U"\U0001F3CB\uFE0F\u200D\u2640\uFE0F", u8"woman lifting weights", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1985
 { U"\U0001F3CB\U0001F3FB\u200D\u2640\uFE0F", u8"woman lifting weights: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1986
 { U"\U0001F3CB\U0001F3FC\u200D\u2640\uFE0F", u8"woman lifting weights: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1987
 { U"\U0001F3CB\U0001F3FD\u200D\u2640\uFE0F", u8"woman lifting weights: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1988
@@ -2000,13 +2000,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6B4\U0001F3FD", u8"person biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1994
 { U"\U0001F6B4\U0001F3FE", u8"person biking: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1995
 { U"\U0001F6B4\U0001F3FF", u8"person biking: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1996
-{ U"\U0001F6B4\u200D\u2642\uFE0F", u8"man biking", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1997
+{ U"\U0001F6B4\u200D\u2642\uFE0F", u8"man biking", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 1997
 { U"\U0001F6B4\U0001F3FB\u200D\u2642\uFE0F", u8"man biking: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1998
 { U"\U0001F6B4\U0001F3FC\u200D\u2642\uFE0F", u8"man biking: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 1999
 { U"\U0001F6B4\U0001F3FD\u200D\u2642\uFE0F", u8"man biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2000
 { U"\U0001F6B4\U0001F3FE\u200D\u2642\uFE0F", u8"man biking: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2001
 { U"\U0001F6B4\U0001F3FF\u200D\u2642\uFE0F", u8"man biking: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2002
-{ U"\U0001F6B4\u200D\u2640\uFE0F", u8"woman biking", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2003
+{ U"\U0001F6B4\u200D\u2640\uFE0F", u8"woman biking", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2003
 { U"\U0001F6B4\U0001F3FB\u200D\u2640\uFE0F", u8"woman biking: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2004
 { U"\U0001F6B4\U0001F3FC\u200D\u2640\uFE0F", u8"woman biking: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2005
 { U"\U0001F6B4\U0001F3FD\u200D\u2640\uFE0F", u8"woman biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2006
@@ -2018,13 +2018,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6B5\U0001F3FD", u8"person mountain biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2012
 { U"\U0001F6B5\U0001F3FE", u8"person mountain biking: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2013
 { U"\U0001F6B5\U0001F3FF", u8"person mountain biking: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2014
-{ U"\U0001F6B5\u200D\u2642\uFE0F", u8"man mountain biking", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2015
+{ U"\U0001F6B5\u200D\u2642\uFE0F", u8"man mountain biking", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2015
 { U"\U0001F6B5\U0001F3FB\u200D\u2642\uFE0F", u8"man mountain biking: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2016
 { U"\U0001F6B5\U0001F3FC\u200D\u2642\uFE0F", u8"man mountain biking: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2017
 { U"\U0001F6B5\U0001F3FD\u200D\u2642\uFE0F", u8"man mountain biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2018
 { U"\U0001F6B5\U0001F3FE\u200D\u2642\uFE0F", u8"man mountain biking: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2019
 { U"\U0001F6B5\U0001F3FF\u200D\u2642\uFE0F", u8"man mountain biking: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2020
-{ U"\U0001F6B5\u200D\u2640\uFE0F", u8"woman mountain biking", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2021
+{ U"\U0001F6B5\u200D\u2640\uFE0F", u8"woman mountain biking", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2021
 { U"\U0001F6B5\U0001F3FB\u200D\u2640\uFE0F", u8"woman mountain biking: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2022
 { U"\U0001F6B5\U0001F3FC\u200D\u2640\uFE0F", u8"woman mountain biking: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2023
 { U"\U0001F6B5\U0001F3FD\u200D\u2640\uFE0F", u8"woman mountain biking: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2024
@@ -2036,34 +2036,34 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F938\U0001F3FD", u8"person cartwheeling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2030
 { U"\U0001F938\U0001F3FE", u8"person cartwheeling: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2031
 { U"\U0001F938\U0001F3FF", u8"person cartwheeling: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2032
-{ U"\U0001F938\u200D\u2642\uFE0F", u8"man cartwheeling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2033
+{ U"\U0001F938\u200D\u2642\uFE0F", u8"man cartwheeling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2033
 { U"\U0001F938\U0001F3FB\u200D\u2642\uFE0F", u8"man cartwheeling: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2034
 { U"\U0001F938\U0001F3FC\u200D\u2642\uFE0F", u8"man cartwheeling: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2035
 { U"\U0001F938\U0001F3FD\u200D\u2642\uFE0F", u8"man cartwheeling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2036
 { U"\U0001F938\U0001F3FE\u200D\u2642\uFE0F", u8"man cartwheeling: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2037
 { U"\U0001F938\U0001F3FF\u200D\u2642\uFE0F", u8"man cartwheeling: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2038
-{ U"\U0001F938\u200D\u2640\uFE0F", u8"woman cartwheeling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2039
+{ U"\U0001F938\u200D\u2640\uFE0F", u8"woman cartwheeling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2039
 { U"\U0001F938\U0001F3FB\u200D\u2640\uFE0F", u8"woman cartwheeling: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2040
 { U"\U0001F938\U0001F3FC\u200D\u2640\uFE0F", u8"woman cartwheeling: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2041
 { U"\U0001F938\U0001F3FD\u200D\u2640\uFE0F", u8"woman cartwheeling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2042
 { U"\U0001F938\U0001F3FE\u200D\u2640\uFE0F", u8"woman cartwheeling: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2043
 { U"\U0001F938\U0001F3FF\u200D\u2640\uFE0F", u8"woman cartwheeling: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2044
 { U"\U0001F93C", u8"people wrestling", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2045
-{ U"\U0001F93C\u200D\u2642\uFE0F", u8"men wrestling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2046
-{ U"\U0001F93C\u200D\u2640\uFE0F", u8"women wrestling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2047
+{ U"\U0001F93C\u200D\u2642\uFE0F", u8"men wrestling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2046
+{ U"\U0001F93C\u200D\u2640\uFE0F", u8"women wrestling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2047
 { U"\U0001F93D", u8"person playing water polo", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2048
 { U"\U0001F93D\U0001F3FB", u8"person playing water polo: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2049
 { U"\U0001F93D\U0001F3FC", u8"person playing water polo: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2050
 { U"\U0001F93D\U0001F3FD", u8"person playing water polo: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2051
 { U"\U0001F93D\U0001F3FE", u8"person playing water polo: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2052
 { U"\U0001F93D\U0001F3FF", u8"person playing water polo: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2053
-{ U"\U0001F93D\u200D\u2642\uFE0F", u8"man playing water polo", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2054
+{ U"\U0001F93D\u200D\u2642\uFE0F", u8"man playing water polo", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2054
 { U"\U0001F93D\U0001F3FB\u200D\u2642\uFE0F", u8"man playing water polo: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2055
 { U"\U0001F93D\U0001F3FC\u200D\u2642\uFE0F", u8"man playing water polo: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2056
 { U"\U0001F93D\U0001F3FD\u200D\u2642\uFE0F", u8"man playing water polo: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2057
 { U"\U0001F93D\U0001F3FE\u200D\u2642\uFE0F", u8"man playing water polo: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2058
 { U"\U0001F93D\U0001F3FF\u200D\u2642\uFE0F", u8"man playing water polo: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2059
-{ U"\U0001F93D\u200D\u2640\uFE0F", u8"woman playing water polo", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2060
+{ U"\U0001F93D\u200D\u2640\uFE0F", u8"woman playing water polo", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2060
 { U"\U0001F93D\U0001F3FB\u200D\u2640\uFE0F", u8"woman playing water polo: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2061
 { U"\U0001F93D\U0001F3FC\u200D\u2640\uFE0F", u8"woman playing water polo: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2062
 { U"\U0001F93D\U0001F3FD\u200D\u2640\uFE0F", u8"woman playing water polo: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2063
@@ -2075,13 +2075,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F93E\U0001F3FD", u8"person playing handball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2069
 { U"\U0001F93E\U0001F3FE", u8"person playing handball: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2070
 { U"\U0001F93E\U0001F3FF", u8"person playing handball: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2071
-{ U"\U0001F93E\u200D\u2642\uFE0F", u8"man playing handball", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2072
+{ U"\U0001F93E\u200D\u2642\uFE0F", u8"man playing handball", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2072
 { U"\U0001F93E\U0001F3FB\u200D\u2642\uFE0F", u8"man playing handball: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2073
 { U"\U0001F93E\U0001F3FC\u200D\u2642\uFE0F", u8"man playing handball: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2074
 { U"\U0001F93E\U0001F3FD\u200D\u2642\uFE0F", u8"man playing handball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2075
 { U"\U0001F93E\U0001F3FE\u200D\u2642\uFE0F", u8"man playing handball: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2076
 { U"\U0001F93E\U0001F3FF\u200D\u2642\uFE0F", u8"man playing handball: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2077
-{ U"\U0001F93E\u200D\u2640\uFE0F", u8"woman playing handball", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2078
+{ U"\U0001F93E\u200D\u2640\uFE0F", u8"woman playing handball", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2078
 { U"\U0001F93E\U0001F3FB\u200D\u2640\uFE0F", u8"woman playing handball: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2079
 { U"\U0001F93E\U0001F3FC\u200D\u2640\uFE0F", u8"woman playing handball: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2080
 { U"\U0001F93E\U0001F3FD\u200D\u2640\uFE0F", u8"woman playing handball: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2081
@@ -2093,13 +2093,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F939\U0001F3FD", u8"person juggling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2087
 { U"\U0001F939\U0001F3FE", u8"person juggling: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2088
 { U"\U0001F939\U0001F3FF", u8"person juggling: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2089
-{ U"\U0001F939\u200D\u2642\uFE0F", u8"man juggling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2090
+{ U"\U0001F939\u200D\u2642\uFE0F", u8"man juggling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2090
 { U"\U0001F939\U0001F3FB\u200D\u2642\uFE0F", u8"man juggling: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2091
 { U"\U0001F939\U0001F3FC\u200D\u2642\uFE0F", u8"man juggling: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2092
 { U"\U0001F939\U0001F3FD\u200D\u2642\uFE0F", u8"man juggling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2093
 { U"\U0001F939\U0001F3FE\u200D\u2642\uFE0F", u8"man juggling: medium-dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2094
 { U"\U0001F939\U0001F3FF\u200D\u2642\uFE0F", u8"man juggling: dark skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2095
-{ U"\U0001F939\u200D\u2640\uFE0F", u8"woman juggling", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2096
+{ U"\U0001F939\u200D\u2640\uFE0F", u8"woman juggling", 215, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2096
 { U"\U0001F939\U0001F3FB\u200D\u2640\uFE0F", u8"woman juggling: light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2097
 { U"\U0001F939\U0001F3FC\u200D\u2640\uFE0F", u8"woman juggling: medium-light skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2098
 { U"\U0001F939\U0001F3FD\u200D\u2640\uFE0F", u8"woman juggling: medium skin tone", 215, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2099
@@ -2111,13 +2111,13 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D8\U0001F3FD", u8"person in lotus position: medium skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2105
 { U"\U0001F9D8\U0001F3FE", u8"person in lotus position: medium-dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2106
 { U"\U0001F9D8\U0001F3FF", u8"person in lotus position: dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2107
-{ U"\U0001F9D8\u200D\u2642\uFE0F", u8"man in lotus position", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2108
+{ U"\U0001F9D8\u200D\u2642\uFE0F", u8"man in lotus position", 216, 0, -1, Lfg(65), EcVersion::E5_0 },   // 2108
 { U"\U0001F9D8\U0001F3FB\u200D\u2642\uFE0F", u8"man in lotus position: light skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2109
 { U"\U0001F9D8\U0001F3FC\u200D\u2642\uFE0F", u8"man in lotus position: medium-light skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2110
 { U"\U0001F9D8\U0001F3FD\u200D\u2642\uFE0F", u8"man in lotus position: medium skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2111
 { U"\U0001F9D8\U0001F3FE\u200D\u2642\uFE0F", u8"man in lotus position: medium-dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2112
 { U"\U0001F9D8\U0001F3FF\u200D\u2642\uFE0F", u8"man in lotus position: dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2113
-{ U"\U0001F9D8\u200D\u2640\uFE0F", u8"woman in lotus position", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2114
+{ U"\U0001F9D8\u200D\u2640\uFE0F", u8"woman in lotus position", 216, 0, -1, Lfg(65), EcVersion::E5_0 },   // 2114
 { U"\U0001F9D8\U0001F3FB\u200D\u2640\uFE0F", u8"woman in lotus position: light skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2115
 { U"\U0001F9D8\U0001F3FC\u200D\u2640\uFE0F", u8"woman in lotus position: medium-light skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2116
 { U"\U0001F9D8\U0001F3FD\u200D\u2640\uFE0F", u8"woman in lotus position: medium skin tone", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2117
@@ -2135,7 +2135,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6CC\U0001F3FD", u8"person in bed: medium skin tone", 216, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2129
 { U"\U0001F6CC\U0001F3FE", u8"person in bed: medium-dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2130
 { U"\U0001F6CC\U0001F3FF", u8"person in bed: dark skin tone", 216, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2131
-{ U"\U0001F9D1\u200D\U0001F91D\u200D\U0001F9D1", u8"people holding hands", 217, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2132
+{ U"\U0001F9D1\u200D\U0001F91D\u200D\U0001F9D1", u8"people holding hands", 217, 0, -1, Lfg(65), EcVersion::E12_0 },   // 2132
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FB", u8"people holding hands: light skin tone", 217, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2133
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FC", u8"people holding hands: light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E12_1 },   // 2134
 { U"\U0001F9D1\U0001F3FB\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FD", u8"people holding hands: light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E12_1 },   // 2135
@@ -2265,7 +2265,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F9D1\U0001F3FC", u8"kiss: person, person, dark skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2259
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F9D1\U0001F3FD", u8"kiss: person, person, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2260
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F9D1\U0001F3FE", u8"kiss: person, person, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2261
-{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468", u8"kiss: woman, man", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2262
+{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468", u8"kiss: woman, man", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2262
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FB", u8"kiss: woman, man, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2263
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FC", u8"kiss: woman, man, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2264
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FD", u8"kiss: woman, man, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2265
@@ -2291,7 +2291,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FD", u8"kiss: woman, man, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2285
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FE", u8"kiss: woman, man, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2286
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FF", u8"kiss: woman, man, dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2287
-{ U"\U0001F468\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468", u8"kiss: man, man", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2288
+{ U"\U0001F468\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468", u8"kiss: man, man", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2288
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FB", u8"kiss: man, man, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2289
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FC", u8"kiss: man, man, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2290
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FD", u8"kiss: man, man, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2291
@@ -2317,7 +2317,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FD", u8"kiss: man, man, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2311
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FE", u8"kiss: man, man, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2312
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F468\U0001F3FF", u8"kiss: man, man, dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2313
-{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469", u8"kiss: woman, woman", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2314
+{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469", u8"kiss: woman, woman", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2314
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FB", u8"kiss: woman, woman, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2315
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FC", u8"kiss: woman, woman, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2316
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FD", u8"kiss: woman, woman, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2317
@@ -2369,7 +2369,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F9D1\U0001F3FC", u8"couple with heart: person, person, dark skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2363
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F9D1\U0001F3FD", u8"couple with heart: person, person, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2364
 { U"\U0001F9D1\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F9D1\U0001F3FE", u8"couple with heart: person, person, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2365
-{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F468", u8"couple with heart: woman, man", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2366
+{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F468", u8"couple with heart: woman, man", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2366
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FB", u8"couple with heart: woman, man, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2367
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FC", u8"couple with heart: woman, man, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2368
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FD", u8"couple with heart: woman, man, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2369
@@ -2395,7 +2395,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FD", u8"couple with heart: woman, man, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2389
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FE", u8"couple with heart: woman, man, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2390
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FF", u8"couple with heart: woman, man, dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2391
-{ U"\U0001F468\u200D\u2764\uFE0F\u200D\U0001F468", u8"couple with heart: man, man", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2392
+{ U"\U0001F468\u200D\u2764\uFE0F\u200D\U0001F468", u8"couple with heart: man, man", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2392
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FB", u8"couple with heart: man, man, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2393
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FC", u8"couple with heart: man, man, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2394
 { U"\U0001F468\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FD", u8"couple with heart: man, man, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2395
@@ -2421,7 +2421,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FD", u8"couple with heart: man, man, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2415
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FE", u8"couple with heart: man, man, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2416
 { U"\U0001F468\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F468\U0001F3FF", u8"couple with heart: man, man, dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2417
-{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F469", u8"couple with heart: woman, woman", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2418
+{ U"\U0001F469\u200D\u2764\uFE0F\u200D\U0001F469", u8"couple with heart: woman, woman", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2418
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FB", u8"couple with heart: woman, woman, light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2419
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FC", u8"couple with heart: woman, woman, light skin tone, medium-light skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2420
 { U"\U0001F469\U0001F3FB\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FD", u8"couple with heart: woman, woman, light skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2421
@@ -2447,40 +2447,40 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FD", u8"couple with heart: woman, woman, dark skin tone, medium skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2441
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FE", u8"couple with heart: woman, woman, dark skin tone, medium-dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2442
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FF", u8"couple with heart: woman, woman, dark skin tone", 217, 0, -1, Lfg(1), EcVersion::E13_1 },   // 2443
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466", u8"family: man, woman, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2444
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467", u8"family: man, woman, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2445
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: man, woman, girl, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2446
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: man, woman, boy, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2447
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: man, woman, girl, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2448
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466", u8"family: man, man, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2449
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467", u8"family: man, man, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2450
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, man, girl, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2451
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, man, boy, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2452
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, man, girl, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2453
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466", u8"family: woman, woman, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2454
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467", u8"family: woman, woman, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2455
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, woman, girl, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2456
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, woman, boy, boy", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2457
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, woman, girl, girl", 217, 0, -1, Lfg(1), EcVersion::E2_0 },   // 2458
-{ U"\U0001F468\u200D\U0001F466", u8"family: man, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2459
-{ U"\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, boy, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2460
-{ U"\U0001F468\u200D\U0001F467", u8"family: man, girl", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2461
-{ U"\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, girl, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2462
-{ U"\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, girl, girl", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2463
-{ U"\U0001F469\u200D\U0001F466", u8"family: woman, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2464
-{ U"\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, boy, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2465
-{ U"\U0001F469\u200D\U0001F467", u8"family: woman, girl", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2466
-{ U"\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, girl, boy", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2467
-{ U"\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, girl, girl", 217, 0, -1, Lfg(1), EcVersion::E4_0 },   // 2468
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466", u8"family: man, woman, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2444
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467", u8"family: man, woman, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2445
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: man, woman, girl, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2446
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: man, woman, boy, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2447
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: man, woman, girl, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2448
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466", u8"family: man, man, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2449
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467", u8"family: man, man, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2450
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, man, girl, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2451
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, man, boy, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2452
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, man, girl, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2453
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466", u8"family: woman, woman, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2454
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467", u8"family: woman, woman, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2455
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, woman, girl, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2456
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, woman, boy, boy", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2457
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, woman, girl, girl", 217, 0, -1, Lfg(65), EcVersion::E2_0 },   // 2458
+{ U"\U0001F468\u200D\U0001F466", u8"family: man, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2459
+{ U"\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, boy, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2460
+{ U"\U0001F468\u200D\U0001F467", u8"family: man, girl", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2461
+{ U"\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, girl, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2462
+{ U"\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, girl, girl", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2463
+{ U"\U0001F469\u200D\U0001F466", u8"family: woman, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2464
+{ U"\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, boy, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2465
+{ U"\U0001F469\u200D\U0001F467", u8"family: woman, girl", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2466
+{ U"\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, girl, boy", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2467
+{ U"\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, girl, girl", 217, 0, -1, Lfg(65), EcVersion::E4_0 },   // 2468
 { U"\U0001F5E3\uFE0F", u8"speaking head", 218, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2469
 { U"\U0001F464", u8"bust in silhouette", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2470
 { U"\U0001F465", u8"busts in silhouette", 218, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2471
 { U"\U0001FAC2", u8"people hugging", 218, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2472
 { U"\U0001F46A", u8"family", 218, 0, -1, Lfg(33), EcVersion::E0_6 },   // 2473
-{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2", u8"family: adult, adult, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2474
-{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, adult, child, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2475
-{ U"\U0001F9D1\u200D\U0001F9D2", u8"family: adult, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2476
-{ U"\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, child, child", 218, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2477
+{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2", u8"family: adult, adult, child", 218, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2474
+{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, adult, child, child", 218, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2475
+{ U"\U0001F9D1\u200D\U0001F9D2", u8"family: adult, child", 218, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2476
+{ U"\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, child, child", 218, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2477
 { U"\U0001F463", u8"footprints", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2478
 { {}, u8"skin-tone", 11, 5, 2481, Lfg(8), EcVersion::NONE },   // 2479
 { {}, u8"hair-style", 11, 4, 2486, Lfg(8), EcVersion::NONE },   // 2480
@@ -2508,14 +2508,14 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F436", u8"dog face", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2502
 { U"\U0001F415", u8"dog", 2490, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2503
 { U"\U0001F9AE", u8"guide dog", 2490, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2504
-{ U"\U0001F415\u200D\U0001F9BA", u8"service dog", 2490, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2505
+{ U"\U0001F415\u200D\U0001F9BA", u8"service dog", 2490, 0, -1, Lfg(65), EcVersion::E12_0 },   // 2505
 { U"\U0001F429", u8"poodle", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2506
 { U"\U0001F43A", u8"wolf", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2507
 { U"\U0001F98A", u8"fox", 2490, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2508
 { U"\U0001F99D", u8"raccoon", 2490, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2509
 { U"\U0001F431", u8"cat face", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2510
 { U"\U0001F408", u8"cat", 2490, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2511
-{ U"\U0001F408\u200D\u2B1B", u8"black cat", 2490, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2512
+{ U"\U0001F408\u200D\u2B1B", u8"black cat", 2490, 0, -1, Lfg(65), EcVersion::E13_0 },   // 2512
 { U"\U0001F981", u8"lion", 2490, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2513
 { U"\U0001F42F", u8"tiger face", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2514
 { U"\U0001F405", u8"tiger", 2490, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2515
@@ -2558,7 +2558,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F994", u8"hedgehog", 2490, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2552
 { U"\U0001F987", u8"bat", 2490, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2553
 { U"\U0001F43B", u8"bear", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2554
-{ U"\U0001F43B\u200D\u2744\uFE0F", u8"polar bear", 2490, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2555
+{ U"\U0001F43B\u200D\u2744\uFE0F", u8"polar bear", 2490, 0, -1, Lfg(65), EcVersion::E13_0 },   // 2555
 { U"\U0001F428", u8"koala", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2556
 { U"\U0001F43C", u8"panda", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2557
 { U"\U0001F9A5", u8"sloth", 2490, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2558
@@ -2586,9 +2586,9 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F99A", u8"peacock", 2491, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2580
 { U"\U0001F99C", u8"parrot", 2491, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2581
 { U"\U0001FABD", u8"wing", 2491, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2582
-{ U"\U0001F426\u200D\u2B1B", u8"black bird", 2491, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2583
+{ U"\U0001F426\u200D\u2B1B", u8"black bird", 2491, 0, -1, Lfg(65), EcVersion::E15_0 },   // 2583
 { U"\U0001FABF", u8"goose", 2491, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2584
-{ U"\U0001F426\u200D\U0001F525", u8"phoenix", 2491, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2585
+{ U"\U0001F426\u200D\U0001F525", u8"phoenix", 2491, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2585
 { U"\U0001F438", u8"frog", 2492, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2586
 { U"\U0001F40A", u8"crocodile", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2587
 { U"\U0001F422", u8"turtle", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2588
@@ -2667,7 +2667,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F349", u8"watermelon", 2651, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2661
 { U"\U0001F34A", u8"tangerine", 2651, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2662
 { U"\U0001F34B", u8"lemon", 2651, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2663
-{ U"\U0001F34B\u200D\U0001F7E9", u8"lime", 2651, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2664
+{ U"\U0001F34B\u200D\U0001F7E9", u8"lime", 2651, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2664
 { U"\U0001F34C", u8"banana", 2651, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2665
 { U"\U0001F34D", u8"pineapple", 2651, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2666
 { U"\U0001F96D", u8"mango", 2651, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2667
@@ -2699,7 +2699,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F330", u8"chestnut", 2652, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2693
 { U"\U0001FADA", u8"ginger root", 2652, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2694
 { U"\U0001FADB", u8"pea pod", 2652, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2695
-{ U"\U0001F344\u200D\U0001F7EB", u8"brown mushroom", 2652, 0, -1, Lfg(1), EcVersion::E15_1 },   // 2696
+{ U"\U0001F344\u200D\U0001F7EB", u8"brown mushroom", 2652, 0, -1, Lfg(65), EcVersion::E15_1 },   // 2696
 { U"\U0001F35E", u8"bread", 2653, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2697
 { U"\U0001F950", u8"croissant", 2653, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2698
 { U"\U0001F956", u8"baguette bread", 2653, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2699
@@ -3342,7 +3342,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u2696\uFE0F", u8"balance scale", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3336
 { U"\U0001F9AF", u8"white cane", 3126, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3337
 { U"\U0001F517", u8"link", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3338
-{ U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3126, 0, -1, Lfg(1), EcVersion::E15_1 },   // 3339
+{ U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3126, 0, -1, Lfg(65), EcVersion::E15_1 },   // 3339
 { U"\u26D3\uFE0F", u8"chains", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3340
 { U"\U0001FA9D", u8"hook", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3341
 { U"\U0001F9F0", u8"toolbox", 3126, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3342
@@ -3547,18 +3547,18 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u00A9\uFE0F", u8"copyright", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3541
 { U"\u00AE\uFE0F", u8"registered", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3542
 { U"\u2122\uFE0F", u8"trade mark", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3543
-{ U"\u0023\uFE0F\u20E3", u8"keycap: #", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3544
-{ U"\u002A\uFE0F\u20E3", u8"keycap: *", 3404, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3545
-{ U"\u0030\uFE0F\u20E3", u8"keycap: 0", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3546
-{ U"\u0031\uFE0F\u20E3", u8"keycap: 1", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3547
-{ U"\u0032\uFE0F\u20E3", u8"keycap: 2", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3548
-{ U"\u0033\uFE0F\u20E3", u8"keycap: 3", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3549
-{ U"\u0034\uFE0F\u20E3", u8"keycap: 4", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3550
-{ U"\u0035\uFE0F\u20E3", u8"keycap: 5", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3551
-{ U"\u0036\uFE0F\u20E3", u8"keycap: 6", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3552
-{ U"\u0037\uFE0F\u20E3", u8"keycap: 7", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3553
-{ U"\u0038\uFE0F\u20E3", u8"keycap: 8", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3554
-{ U"\u0039\uFE0F\u20E3", u8"keycap: 9", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3555
+{ U"\u0023\uFE0F\u20E3", u8"keycap: #", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3544
+{ U"\u002A\uFE0F\u20E3", u8"keycap: *", 3404, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3545
+{ U"\u0030\uFE0F\u20E3", u8"keycap: 0", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3546
+{ U"\u0031\uFE0F\u20E3", u8"keycap: 1", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3547
+{ U"\u0032\uFE0F\u20E3", u8"keycap: 2", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3548
+{ U"\u0033\uFE0F\u20E3", u8"keycap: 3", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3549
+{ U"\u0034\uFE0F\u20E3", u8"keycap: 4", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3550
+{ U"\u0035\uFE0F\u20E3", u8"keycap: 5", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3551
+{ U"\u0036\uFE0F\u20E3", u8"keycap: 6", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3552
+{ U"\u0037\uFE0F\u20E3", u8"keycap: 7", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3553
+{ U"\u0038\uFE0F\u20E3", u8"keycap: 8", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3554
+{ U"\u0039\uFE0F\u20E3", u8"keycap: 9", 3404, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3555
 { U"\U0001F51F", u8"keycap: 10", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3556
 { U"\U0001F520", u8"input Latin uppercase", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3557
 { U"\U0001F521", u8"input Latin lowercase", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3558
@@ -3641,270 +3641,270 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F38C", u8"crossed flags", 3630, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3635
 { U"\U0001F3F4", u8"black flag", 3630, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3636
 { U"\U0001F3F3\uFE0F", u8"white flag", 3630, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3637
-{ U"\U0001F3F3\uFE0F\u200D\U0001F308", u8"rainbow flag", 3630, 0, -1, Lfg(1), EcVersion::E4_0 },   // 3638
-{ U"\U0001F3F3\uFE0F\u200D\u26A7\uFE0F", u8"transgender flag", 3630, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3639
-{ U"\U0001F3F4\u200D\u2620\uFE0F", u8"pirate flag", 3630, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3640
-{ U"\U0001F1E6\U0001F1E8", u8"flag: Ascension Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3641
-{ U"\U0001F1E6\U0001F1E9", u8"flag: Andorra", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3642
-{ U"\U0001F1E6\U0001F1EA", u8"flag: United Arab Emirates", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3643
-{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3631, 0, -1, Lfg(33), EcVersion::E2_0 },   // 3644
-{ U"\U0001F1E6\U0001F1EC", u8"flag: Antigua & Barbuda", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3645
-{ U"\U0001F1E6\U0001F1EE", u8"flag: Anguilla", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3646
-{ U"\U0001F1E6\U0001F1F1", u8"flag: Albania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3647
-{ U"\U0001F1E6\U0001F1F2", u8"flag: Armenia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3648
-{ U"\U0001F1E6\U0001F1F4", u8"flag: Angola", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3649
-{ U"\U0001F1E6\U0001F1F6", u8"flag: Antarctica", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3650
-{ U"\U0001F1E6\U0001F1F7", u8"flag: Argentina", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3651
-{ U"\U0001F1E6\U0001F1F8", u8"flag: American Samoa", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3652
-{ U"\U0001F1E6\U0001F1F9", u8"flag: Austria", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3653
-{ U"\U0001F1E6\U0001F1FA", u8"flag: Australia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3654
-{ U"\U0001F1E6\U0001F1FC", u8"flag: Aruba", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3655
-{ U"\U0001F1E6\U0001F1FD", u8"flag: Åland Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3656
-{ U"\U0001F1E6\U0001F1FF", u8"flag: Azerbaijan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3657
-{ U"\U0001F1E7\U0001F1E6", u8"flag: Bosnia & Herzegovina", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3658
-{ U"\U0001F1E7\U0001F1E7", u8"flag: Barbados", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3659
-{ U"\U0001F1E7\U0001F1E9", u8"flag: Bangladesh", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3660
-{ U"\U0001F1E7\U0001F1EA", u8"flag: Belgium", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3661
-{ U"\U0001F1E7\U0001F1EB", u8"flag: Burkina Faso", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3662
-{ U"\U0001F1E7\U0001F1EC", u8"flag: Bulgaria", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3663
-{ U"\U0001F1E7\U0001F1ED", u8"flag: Bahrain", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3664
-{ U"\U0001F1E7\U0001F1EE", u8"flag: Burundi", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3665
-{ U"\U0001F1E7\U0001F1EF", u8"flag: Benin", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3666
-{ U"\U0001F1E7\U0001F1F1", u8"flag: St. Barthélemy", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3667
-{ U"\U0001F1E7\U0001F1F2", u8"flag: Bermuda", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3668
-{ U"\U0001F1E7\U0001F1F3", u8"flag: Brunei", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3669
-{ U"\U0001F1E7\U0001F1F4", u8"flag: Bolivia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3670
-{ U"\U0001F1E7\U0001F1F6", u8"flag: Caribbean Netherlands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3671
-{ U"\U0001F1E7\U0001F1F7", u8"flag: Brazil", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3672
-{ U"\U0001F1E7\U0001F1F8", u8"flag: Bahamas", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3673
-{ U"\U0001F1E7\U0001F1F9", u8"flag: Bhutan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3674
-{ U"\U0001F1E7\U0001F1FB", u8"flag: Bouvet Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3675
-{ U"\U0001F1E7\U0001F1FC", u8"flag: Botswana", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3676
-{ U"\U0001F1E7\U0001F1FE", u8"flag: Belarus", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3677
-{ U"\U0001F1E7\U0001F1FF", u8"flag: Belize", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3678
-{ U"\U0001F1E8\U0001F1E6", u8"flag: Canada", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3679
-{ U"\U0001F1E8\U0001F1E8", u8"flag: Cocos (Keeling) Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3680
-{ U"\U0001F1E8\U0001F1E9", u8"flag: Congo - Kinshasa", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3681
-{ U"\U0001F1E8\U0001F1EB", u8"flag: Central African Republic", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3682
-{ U"\U0001F1E8\U0001F1EC", u8"flag: Congo - Brazzaville", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3683
-{ U"\U0001F1E8\U0001F1ED", u8"flag: Switzerland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3684
-{ U"\U0001F1E8\U0001F1EE", u8"flag: Côte d’Ivoire", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3685
-{ U"\U0001F1E8\U0001F1F0", u8"flag: Cook Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3686
-{ U"\U0001F1E8\U0001F1F1", u8"flag: Chile", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3687
-{ U"\U0001F1E8\U0001F1F2", u8"flag: Cameroon", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3688
-{ U"\U0001F1E8\U0001F1F3", u8"flag: China", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3689
-{ U"\U0001F1E8\U0001F1F4", u8"flag: Colombia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3690
-{ U"\U0001F1E8\U0001F1F5", u8"flag: Clipperton Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3691
-{ U"\U0001F1E8\U0001F1F7", u8"flag: Costa Rica", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3692
-{ U"\U0001F1E8\U0001F1FA", u8"flag: Cuba", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3693
-{ U"\U0001F1E8\U0001F1FB", u8"flag: Cape Verde", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3694
-{ U"\U0001F1E8\U0001F1FC", u8"flag: Curaçao", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3695
-{ U"\U0001F1E8\U0001F1FD", u8"flag: Christmas Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3696
-{ U"\U0001F1E8\U0001F1FE", u8"flag: Cyprus", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3697
-{ U"\U0001F1E8\U0001F1FF", u8"flag: Czechia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3698
-{ U"\U0001F1E9\U0001F1EA", u8"flag: Germany", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3699
-{ U"\U0001F1E9\U0001F1EC", u8"flag: Diego Garcia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3700
-{ U"\U0001F1E9\U0001F1EF", u8"flag: Djibouti", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3701
-{ U"\U0001F1E9\U0001F1F0", u8"flag: Denmark", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3702
-{ U"\U0001F1E9\U0001F1F2", u8"flag: Dominica", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3703
-{ U"\U0001F1E9\U0001F1F4", u8"flag: Dominican Republic", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3704
-{ U"\U0001F1E9\U0001F1FF", u8"flag: Algeria", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3705
-{ U"\U0001F1EA\U0001F1E6", u8"flag: Ceuta & Melilla", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3706
-{ U"\U0001F1EA\U0001F1E8", u8"flag: Ecuador", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3707
-{ U"\U0001F1EA\U0001F1EA", u8"flag: Estonia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3708
-{ U"\U0001F1EA\U0001F1EC", u8"flag: Egypt", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3709
-{ U"\U0001F1EA\U0001F1ED", u8"flag: Western Sahara", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3710
-{ U"\U0001F1EA\U0001F1F7", u8"flag: Eritrea", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3711
-{ U"\U0001F1EA\U0001F1F8", u8"flag: Spain", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3712
-{ U"\U0001F1EA\U0001F1F9", u8"flag: Ethiopia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3713
-{ U"\U0001F1EA\U0001F1FA", u8"flag: European Union", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3714
-{ U"\U0001F1EB\U0001F1EE", u8"flag: Finland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3715
-{ U"\U0001F1EB\U0001F1EF", u8"flag: Fiji", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3716
-{ U"\U0001F1EB\U0001F1F0", u8"flag: Falkland Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3717
-{ U"\U0001F1EB\U0001F1F2", u8"flag: Micronesia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3718
-{ U"\U0001F1EB\U0001F1F4", u8"flag: Faroe Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3719
-{ U"\U0001F1EB\U0001F1F7", u8"flag: France", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3720
-{ U"\U0001F1EC\U0001F1E6", u8"flag: Gabon", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3721
-{ U"\U0001F1EC\U0001F1E7", u8"flag: United Kingdom", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3722
-{ U"\U0001F1EC\U0001F1E9", u8"flag: Grenada", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3723
-{ U"\U0001F1EC\U0001F1EA", u8"flag: Georgia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3724
-{ U"\U0001F1EC\U0001F1EB", u8"flag: French Guiana", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3725
-{ U"\U0001F1EC\U0001F1EC", u8"flag: Guernsey", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3726
-{ U"\U0001F1EC\U0001F1ED", u8"flag: Ghana", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3727
-{ U"\U0001F1EC\U0001F1EE", u8"flag: Gibraltar", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3728
-{ U"\U0001F1EC\U0001F1F1", u8"flag: Greenland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3729
-{ U"\U0001F1EC\U0001F1F2", u8"flag: Gambia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3730
-{ U"\U0001F1EC\U0001F1F3", u8"flag: Guinea", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3731
-{ U"\U0001F1EC\U0001F1F5", u8"flag: Guadeloupe", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3732
-{ U"\U0001F1EC\U0001F1F6", u8"flag: Equatorial Guinea", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3733
-{ U"\U0001F1EC\U0001F1F7", u8"flag: Greece", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3734
-{ U"\U0001F1EC\U0001F1F8", u8"flag: South Georgia & South Sandwich Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3735
-{ U"\U0001F1EC\U0001F1F9", u8"flag: Guatemala", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3736
-{ U"\U0001F1EC\U0001F1FA", u8"flag: Guam", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3737
-{ U"\U0001F1EC\U0001F1FC", u8"flag: Guinea-Bissau", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3738
-{ U"\U0001F1EC\U0001F1FE", u8"flag: Guyana", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3739
-{ U"\U0001F1ED\U0001F1F0", u8"flag: Hong Kong SAR China", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3740
-{ U"\U0001F1ED\U0001F1F2", u8"flag: Heard & McDonald Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3741
-{ U"\U0001F1ED\U0001F1F3", u8"flag: Honduras", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3742
-{ U"\U0001F1ED\U0001F1F7", u8"flag: Croatia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3743
-{ U"\U0001F1ED\U0001F1F9", u8"flag: Haiti", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3744
-{ U"\U0001F1ED\U0001F1FA", u8"flag: Hungary", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3745
-{ U"\U0001F1EE\U0001F1E8", u8"flag: Canary Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3746
-{ U"\U0001F1EE\U0001F1E9", u8"flag: Indonesia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3747
-{ U"\U0001F1EE\U0001F1EA", u8"flag: Ireland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3748
-{ U"\U0001F1EE\U0001F1F1", u8"flag: Israel", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3749
-{ U"\U0001F1EE\U0001F1F2", u8"flag: Isle of Man", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3750
-{ U"\U0001F1EE\U0001F1F3", u8"flag: India", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3751
-{ U"\U0001F1EE\U0001F1F4", u8"flag: British Indian Ocean Territory", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3752
-{ U"\U0001F1EE\U0001F1F6", u8"flag: Iraq", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3753
-{ U"\U0001F1EE\U0001F1F7", u8"flag: Iran", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3754
-{ U"\U0001F1EE\U0001F1F8", u8"flag: Iceland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3755
-{ U"\U0001F1EE\U0001F1F9", u8"flag: Italy", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3756
-{ U"\U0001F1EF\U0001F1EA", u8"flag: Jersey", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3757
-{ U"\U0001F1EF\U0001F1F2", u8"flag: Jamaica", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3758
-{ U"\U0001F1EF\U0001F1F4", u8"flag: Jordan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3759
-{ U"\U0001F1EF\U0001F1F5", u8"flag: Japan", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3760
-{ U"\U0001F1F0\U0001F1EA", u8"flag: Kenya", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3761
-{ U"\U0001F1F0\U0001F1EC", u8"flag: Kyrgyzstan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3762
-{ U"\U0001F1F0\U0001F1ED", u8"flag: Cambodia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3763
-{ U"\U0001F1F0\U0001F1EE", u8"flag: Kiribati", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3764
-{ U"\U0001F1F0\U0001F1F2", u8"flag: Comoros", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3765
-{ U"\U0001F1F0\U0001F1F3", u8"flag: St. Kitts & Nevis", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3766
-{ U"\U0001F1F0\U0001F1F5", u8"flag: North Korea", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3767
-{ U"\U0001F1F0\U0001F1F7", u8"flag: South Korea", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3768
-{ U"\U0001F1F0\U0001F1FC", u8"flag: Kuwait", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3769
-{ U"\U0001F1F0\U0001F1FE", u8"flag: Cayman Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3770
-{ U"\U0001F1F0\U0001F1FF", u8"flag: Kazakhstan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3771
-{ U"\U0001F1F1\U0001F1E6", u8"flag: Laos", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3772
-{ U"\U0001F1F1\U0001F1E7", u8"flag: Lebanon", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3773
-{ U"\U0001F1F1\U0001F1E8", u8"flag: St. Lucia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3774
-{ U"\U0001F1F1\U0001F1EE", u8"flag: Liechtenstein", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3775
-{ U"\U0001F1F1\U0001F1F0", u8"flag: Sri Lanka", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3776
-{ U"\U0001F1F1\U0001F1F7", u8"flag: Liberia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3777
-{ U"\U0001F1F1\U0001F1F8", u8"flag: Lesotho", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3778
-{ U"\U0001F1F1\U0001F1F9", u8"flag: Lithuania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3779
-{ U"\U0001F1F1\U0001F1FA", u8"flag: Luxembourg", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3780
-{ U"\U0001F1F1\U0001F1FB", u8"flag: Latvia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3781
-{ U"\U0001F1F1\U0001F1FE", u8"flag: Libya", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3782
-{ U"\U0001F1F2\U0001F1E6", u8"flag: Morocco", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3783
-{ U"\U0001F1F2\U0001F1E8", u8"flag: Monaco", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3784
-{ U"\U0001F1F2\U0001F1E9", u8"flag: Moldova", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3785
-{ U"\U0001F1F2\U0001F1EA", u8"flag: Montenegro", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3786
-{ U"\U0001F1F2\U0001F1EB", u8"flag: St. Martin", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3787
-{ U"\U0001F1F2\U0001F1EC", u8"flag: Madagascar", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3788
-{ U"\U0001F1F2\U0001F1ED", u8"flag: Marshall Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3789
-{ U"\U0001F1F2\U0001F1F0", u8"flag: North Macedonia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3790
-{ U"\U0001F1F2\U0001F1F1", u8"flag: Mali", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3791
-{ U"\U0001F1F2\U0001F1F2", u8"flag: Myanmar (Burma)", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3792
-{ U"\U0001F1F2\U0001F1F3", u8"flag: Mongolia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3793
-{ U"\U0001F1F2\U0001F1F4", u8"flag: Macao SAR China", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3794
-{ U"\U0001F1F2\U0001F1F5", u8"flag: Northern Mariana Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3795
-{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3631, 0, -1, Lfg(33), EcVersion::E2_0 },   // 3796
-{ U"\U0001F1F2\U0001F1F7", u8"flag: Mauritania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3797
-{ U"\U0001F1F2\U0001F1F8", u8"flag: Montserrat", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3798
-{ U"\U0001F1F2\U0001F1F9", u8"flag: Malta", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3799
-{ U"\U0001F1F2\U0001F1FA", u8"flag: Mauritius", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3800
-{ U"\U0001F1F2\U0001F1FB", u8"flag: Maldives", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3801
-{ U"\U0001F1F2\U0001F1FC", u8"flag: Malawi", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3802
-{ U"\U0001F1F2\U0001F1FD", u8"flag: Mexico", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3803
-{ U"\U0001F1F2\U0001F1FE", u8"flag: Malaysia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3804
-{ U"\U0001F1F2\U0001F1FF", u8"flag: Mozambique", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3805
-{ U"\U0001F1F3\U0001F1E6", u8"flag: Namibia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3806
-{ U"\U0001F1F3\U0001F1E8", u8"flag: New Caledonia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3807
-{ U"\U0001F1F3\U0001F1EA", u8"flag: Niger", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3808
-{ U"\U0001F1F3\U0001F1EB", u8"flag: Norfolk Island", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3809
-{ U"\U0001F1F3\U0001F1EC", u8"flag: Nigeria", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3810
-{ U"\U0001F1F3\U0001F1EE", u8"flag: Nicaragua", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3811
-{ U"\U0001F1F3\U0001F1F1", u8"flag: Netherlands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3812
-{ U"\U0001F1F3\U0001F1F4", u8"flag: Norway", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3813
-{ U"\U0001F1F3\U0001F1F5", u8"flag: Nepal", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3814
-{ U"\U0001F1F3\U0001F1F7", u8"flag: Nauru", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3815
-{ U"\U0001F1F3\U0001F1FA", u8"flag: Niue", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3816
-{ U"\U0001F1F3\U0001F1FF", u8"flag: New Zealand", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3817
-{ U"\U0001F1F4\U0001F1F2", u8"flag: Oman", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3818
-{ U"\U0001F1F5\U0001F1E6", u8"flag: Panama", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3819
-{ U"\U0001F1F5\U0001F1EA", u8"flag: Peru", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3820
-{ U"\U0001F1F5\U0001F1EB", u8"flag: French Polynesia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3821
-{ U"\U0001F1F5\U0001F1EC", u8"flag: Papua New Guinea", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3822
-{ U"\U0001F1F5\U0001F1ED", u8"flag: Philippines", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3823
-{ U"\U0001F1F5\U0001F1F0", u8"flag: Pakistan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3824
-{ U"\U0001F1F5\U0001F1F1", u8"flag: Poland", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3825
-{ U"\U0001F1F5\U0001F1F2", u8"flag: St. Pierre & Miquelon", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3826
-{ U"\U0001F1F5\U0001F1F3", u8"flag: Pitcairn Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3827
-{ U"\U0001F1F5\U0001F1F7", u8"flag: Puerto Rico", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3828
-{ U"\U0001F1F5\U0001F1F8", u8"flag: Palestinian Territories", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3829
-{ U"\U0001F1F5\U0001F1F9", u8"flag: Portugal", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3830
-{ U"\U0001F1F5\U0001F1FC", u8"flag: Palau", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3831
-{ U"\U0001F1F5\U0001F1FE", u8"flag: Paraguay", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3832
-{ U"\U0001F1F6\U0001F1E6", u8"flag: Qatar", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3833
-{ U"\U0001F1F7\U0001F1EA", u8"flag: Réunion", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3834
-{ U"\U0001F1F7\U0001F1F4", u8"flag: Romania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3835
-{ U"\U0001F1F7\U0001F1F8", u8"flag: Serbia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3836
-{ U"\U0001F1F7\U0001F1FA", u8"flag: Russia", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3837
-{ U"\U0001F1F7\U0001F1FC", u8"flag: Rwanda", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3838
-{ U"\U0001F1F8\U0001F1E6", u8"flag: Saudi Arabia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3839
-{ U"\U0001F1F8\U0001F1E7", u8"flag: Solomon Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3840
-{ U"\U0001F1F8\U0001F1E8", u8"flag: Seychelles", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3841
-{ U"\U0001F1F8\U0001F1E9", u8"flag: Sudan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3842
-{ U"\U0001F1F8\U0001F1EA", u8"flag: Sweden", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3843
-{ U"\U0001F1F8\U0001F1EC", u8"flag: Singapore", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3844
-{ U"\U0001F1F8\U0001F1ED", u8"flag: St. Helena", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3845
-{ U"\U0001F1F8\U0001F1EE", u8"flag: Slovenia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3846
-{ U"\U0001F1F8\U0001F1EF", u8"flag: Svalbard & Jan Mayen", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3847
-{ U"\U0001F1F8\U0001F1F0", u8"flag: Slovakia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3848
-{ U"\U0001F1F8\U0001F1F1", u8"flag: Sierra Leone", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3849
-{ U"\U0001F1F8\U0001F1F2", u8"flag: San Marino", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3850
-{ U"\U0001F1F8\U0001F1F3", u8"flag: Senegal", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3851
-{ U"\U0001F1F8\U0001F1F4", u8"flag: Somalia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3852
-{ U"\U0001F1F8\U0001F1F7", u8"flag: Suriname", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3853
-{ U"\U0001F1F8\U0001F1F8", u8"flag: South Sudan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3854
-{ U"\U0001F1F8\U0001F1F9", u8"flag: São Tomé & Príncipe", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3855
-{ U"\U0001F1F8\U0001F1FB", u8"flag: El Salvador", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3856
-{ U"\U0001F1F8\U0001F1FD", u8"flag: Sint Maarten", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3857
-{ U"\U0001F1F8\U0001F1FE", u8"flag: Syria", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3858
-{ U"\U0001F1F8\U0001F1FF", u8"flag: Eswatini", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3859
-{ U"\U0001F1F9\U0001F1E6", u8"flag: Tristan da Cunha", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3860
-{ U"\U0001F1F9\U0001F1E8", u8"flag: Turks & Caicos Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3861
-{ U"\U0001F1F9\U0001F1E9", u8"flag: Chad", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3862
-{ U"\U0001F1F9\U0001F1EB", u8"flag: French Southern Territories", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3863
-{ U"\U0001F1F9\U0001F1EC", u8"flag: Togo", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3864
-{ U"\U0001F1F9\U0001F1ED", u8"flag: Thailand", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3865
-{ U"\U0001F1F9\U0001F1EF", u8"flag: Tajikistan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3866
-{ U"\U0001F1F9\U0001F1F0", u8"flag: Tokelau", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3867
-{ U"\U0001F1F9\U0001F1F1", u8"flag: Timor-Leste", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3868
-{ U"\U0001F1F9\U0001F1F2", u8"flag: Turkmenistan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3869
-{ U"\U0001F1F9\U0001F1F3", u8"flag: Tunisia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3870
-{ U"\U0001F1F9\U0001F1F4", u8"flag: Tonga", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3871
-{ U"\U0001F1F9\U0001F1F7", u8"flag: Türkiye", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3872
-{ U"\U0001F1F9\U0001F1F9", u8"flag: Trinidad & Tobago", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3873
-{ U"\U0001F1F9\U0001F1FB", u8"flag: Tuvalu", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3874
-{ U"\U0001F1F9\U0001F1FC", u8"flag: Taiwan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3875
-{ U"\U0001F1F9\U0001F1FF", u8"flag: Tanzania", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3876
-{ U"\U0001F1FA\U0001F1E6", u8"flag: Ukraine", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3877
-{ U"\U0001F1FA\U0001F1EC", u8"flag: Uganda", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3878
-{ U"\U0001F1FA\U0001F1F2", u8"flag: U.S. Outlying Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3879
-{ U"\U0001F1FA\U0001F1F3", u8"flag: United Nations", 3631, 0, -1, Lfg(1), EcVersion::E4_0 },   // 3880
-{ U"\U0001F1FA\U0001F1F8", u8"flag: United States", 3631, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3881
-{ U"\U0001F1FA\U0001F1FE", u8"flag: Uruguay", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3882
-{ U"\U0001F1FA\U0001F1FF", u8"flag: Uzbekistan", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3883
-{ U"\U0001F1FB\U0001F1E6", u8"flag: Vatican City", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3884
-{ U"\U0001F1FB\U0001F1E8", u8"flag: St. Vincent & Grenadines", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3885
-{ U"\U0001F1FB\U0001F1EA", u8"flag: Venezuela", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3886
-{ U"\U0001F1FB\U0001F1EC", u8"flag: British Virgin Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3887
-{ U"\U0001F1FB\U0001F1EE", u8"flag: U.S. Virgin Islands", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3888
-{ U"\U0001F1FB\U0001F1F3", u8"flag: Vietnam", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3889
-{ U"\U0001F1FB\U0001F1FA", u8"flag: Vanuatu", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3890
-{ U"\U0001F1FC\U0001F1EB", u8"flag: Wallis & Futuna", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3891
-{ U"\U0001F1FC\U0001F1F8", u8"flag: Samoa", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3892
-{ U"\U0001F1FD\U0001F1F0", u8"flag: Kosovo", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3893
-{ U"\U0001F1FE\U0001F1EA", u8"flag: Yemen", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3894
-{ U"\U0001F1FE\U0001F1F9", u8"flag: Mayotte", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3895
-{ U"\U0001F1FF\U0001F1E6", u8"flag: South Africa", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3896
-{ U"\U0001F1FF\U0001F1F2", u8"flag: Zambia", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3897
-{ U"\U0001F1FF\U0001F1FC", u8"flag: Zimbabwe", 3631, 0, -1, Lfg(1), EcVersion::E2_0 },   // 3898
-{ U"\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F", u8"flag: England", 3632, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3899
-{ U"\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F", u8"flag: Scotland", 3632, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3900
-{ U"\U0001F3F4\U000E0067\U000E0062\U000E0077\U000E006C\U000E0073\U000E007F", u8"flag: Wales", 3632, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3901
+{ U"\U0001F3F3\uFE0F\u200D\U0001F308", u8"rainbow flag", 3630, 0, -1, Lfg(65), EcVersion::E4_0 },   // 3638
+{ U"\U0001F3F3\uFE0F\u200D\u26A7\uFE0F", u8"transgender flag", 3630, 0, -1, Lfg(65), EcVersion::E13_0 },   // 3639
+{ U"\U0001F3F4\u200D\u2620\uFE0F", u8"pirate flag", 3630, 0, -1, Lfg(65), EcVersion::E11_0 },   // 3640
+{ U"\U0001F1E6\U0001F1E8", u8"flag: Ascension Island", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3641
+{ U"\U0001F1E6\U0001F1E9", u8"flag: Andorra", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3642
+{ U"\U0001F1E6\U0001F1EA", u8"flag: United Arab Emirates", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3643
+{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3631, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3644
+{ U"\U0001F1E6\U0001F1EC", u8"flag: Antigua & Barbuda", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3645
+{ U"\U0001F1E6\U0001F1EE", u8"flag: Anguilla", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3646
+{ U"\U0001F1E6\U0001F1F1", u8"flag: Albania", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3647
+{ U"\U0001F1E6\U0001F1F2", u8"flag: Armenia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3648
+{ U"\U0001F1E6\U0001F1F4", u8"flag: Angola", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3649
+{ U"\U0001F1E6\U0001F1F6", u8"flag: Antarctica", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3650
+{ U"\U0001F1E6\U0001F1F7", u8"flag: Argentina", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3651
+{ U"\U0001F1E6\U0001F1F8", u8"flag: American Samoa", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3652
+{ U"\U0001F1E6\U0001F1F9", u8"flag: Austria", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3653
+{ U"\U0001F1E6\U0001F1FA", u8"flag: Australia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3654
+{ U"\U0001F1E6\U0001F1FC", u8"flag: Aruba", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3655
+{ U"\U0001F1E6\U0001F1FD", u8"flag: Åland Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3656
+{ U"\U0001F1E6\U0001F1FF", u8"flag: Azerbaijan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3657
+{ U"\U0001F1E7\U0001F1E6", u8"flag: Bosnia & Herzegovina", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3658
+{ U"\U0001F1E7\U0001F1E7", u8"flag: Barbados", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3659
+{ U"\U0001F1E7\U0001F1E9", u8"flag: Bangladesh", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3660
+{ U"\U0001F1E7\U0001F1EA", u8"flag: Belgium", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3661
+{ U"\U0001F1E7\U0001F1EB", u8"flag: Burkina Faso", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3662
+{ U"\U0001F1E7\U0001F1EC", u8"flag: Bulgaria", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3663
+{ U"\U0001F1E7\U0001F1ED", u8"flag: Bahrain", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3664
+{ U"\U0001F1E7\U0001F1EE", u8"flag: Burundi", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3665
+{ U"\U0001F1E7\U0001F1EF", u8"flag: Benin", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3666
+{ U"\U0001F1E7\U0001F1F1", u8"flag: St. Barthélemy", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3667
+{ U"\U0001F1E7\U0001F1F2", u8"flag: Bermuda", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3668
+{ U"\U0001F1E7\U0001F1F3", u8"flag: Brunei", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3669
+{ U"\U0001F1E7\U0001F1F4", u8"flag: Bolivia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3670
+{ U"\U0001F1E7\U0001F1F6", u8"flag: Caribbean Netherlands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3671
+{ U"\U0001F1E7\U0001F1F7", u8"flag: Brazil", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3672
+{ U"\U0001F1E7\U0001F1F8", u8"flag: Bahamas", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3673
+{ U"\U0001F1E7\U0001F1F9", u8"flag: Bhutan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3674
+{ U"\U0001F1E7\U0001F1FB", u8"flag: Bouvet Island", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3675
+{ U"\U0001F1E7\U0001F1FC", u8"flag: Botswana", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3676
+{ U"\U0001F1E7\U0001F1FE", u8"flag: Belarus", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3677
+{ U"\U0001F1E7\U0001F1FF", u8"flag: Belize", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3678
+{ U"\U0001F1E8\U0001F1E6", u8"flag: Canada", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3679
+{ U"\U0001F1E8\U0001F1E8", u8"flag: Cocos (Keeling) Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3680
+{ U"\U0001F1E8\U0001F1E9", u8"flag: Congo - Kinshasa", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3681
+{ U"\U0001F1E8\U0001F1EB", u8"flag: Central African Republic", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3682
+{ U"\U0001F1E8\U0001F1EC", u8"flag: Congo - Brazzaville", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3683
+{ U"\U0001F1E8\U0001F1ED", u8"flag: Switzerland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3684
+{ U"\U0001F1E8\U0001F1EE", u8"flag: Côte d’Ivoire", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3685
+{ U"\U0001F1E8\U0001F1F0", u8"flag: Cook Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3686
+{ U"\U0001F1E8\U0001F1F1", u8"flag: Chile", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3687
+{ U"\U0001F1E8\U0001F1F2", u8"flag: Cameroon", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3688
+{ U"\U0001F1E8\U0001F1F3", u8"flag: China", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3689
+{ U"\U0001F1E8\U0001F1F4", u8"flag: Colombia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3690
+{ U"\U0001F1E8\U0001F1F5", u8"flag: Clipperton Island", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3691
+{ U"\U0001F1E8\U0001F1F7", u8"flag: Costa Rica", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3692
+{ U"\U0001F1E8\U0001F1FA", u8"flag: Cuba", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3693
+{ U"\U0001F1E8\U0001F1FB", u8"flag: Cape Verde", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3694
+{ U"\U0001F1E8\U0001F1FC", u8"flag: Curaçao", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3695
+{ U"\U0001F1E8\U0001F1FD", u8"flag: Christmas Island", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3696
+{ U"\U0001F1E8\U0001F1FE", u8"flag: Cyprus", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3697
+{ U"\U0001F1E8\U0001F1FF", u8"flag: Czechia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3698
+{ U"\U0001F1E9\U0001F1EA", u8"flag: Germany", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3699
+{ U"\U0001F1E9\U0001F1EC", u8"flag: Diego Garcia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3700
+{ U"\U0001F1E9\U0001F1EF", u8"flag: Djibouti", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3701
+{ U"\U0001F1E9\U0001F1F0", u8"flag: Denmark", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3702
+{ U"\U0001F1E9\U0001F1F2", u8"flag: Dominica", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3703
+{ U"\U0001F1E9\U0001F1F4", u8"flag: Dominican Republic", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3704
+{ U"\U0001F1E9\U0001F1FF", u8"flag: Algeria", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3705
+{ U"\U0001F1EA\U0001F1E6", u8"flag: Ceuta & Melilla", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3706
+{ U"\U0001F1EA\U0001F1E8", u8"flag: Ecuador", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3707
+{ U"\U0001F1EA\U0001F1EA", u8"flag: Estonia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3708
+{ U"\U0001F1EA\U0001F1EC", u8"flag: Egypt", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3709
+{ U"\U0001F1EA\U0001F1ED", u8"flag: Western Sahara", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3710
+{ U"\U0001F1EA\U0001F1F7", u8"flag: Eritrea", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3711
+{ U"\U0001F1EA\U0001F1F8", u8"flag: Spain", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3712
+{ U"\U0001F1EA\U0001F1F9", u8"flag: Ethiopia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3713
+{ U"\U0001F1EA\U0001F1FA", u8"flag: European Union", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3714
+{ U"\U0001F1EB\U0001F1EE", u8"flag: Finland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3715
+{ U"\U0001F1EB\U0001F1EF", u8"flag: Fiji", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3716
+{ U"\U0001F1EB\U0001F1F0", u8"flag: Falkland Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3717
+{ U"\U0001F1EB\U0001F1F2", u8"flag: Micronesia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3718
+{ U"\U0001F1EB\U0001F1F4", u8"flag: Faroe Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3719
+{ U"\U0001F1EB\U0001F1F7", u8"flag: France", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3720
+{ U"\U0001F1EC\U0001F1E6", u8"flag: Gabon", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3721
+{ U"\U0001F1EC\U0001F1E7", u8"flag: United Kingdom", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3722
+{ U"\U0001F1EC\U0001F1E9", u8"flag: Grenada", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3723
+{ U"\U0001F1EC\U0001F1EA", u8"flag: Georgia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3724
+{ U"\U0001F1EC\U0001F1EB", u8"flag: French Guiana", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3725
+{ U"\U0001F1EC\U0001F1EC", u8"flag: Guernsey", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3726
+{ U"\U0001F1EC\U0001F1ED", u8"flag: Ghana", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3727
+{ U"\U0001F1EC\U0001F1EE", u8"flag: Gibraltar", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3728
+{ U"\U0001F1EC\U0001F1F1", u8"flag: Greenland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3729
+{ U"\U0001F1EC\U0001F1F2", u8"flag: Gambia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3730
+{ U"\U0001F1EC\U0001F1F3", u8"flag: Guinea", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3731
+{ U"\U0001F1EC\U0001F1F5", u8"flag: Guadeloupe", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3732
+{ U"\U0001F1EC\U0001F1F6", u8"flag: Equatorial Guinea", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3733
+{ U"\U0001F1EC\U0001F1F7", u8"flag: Greece", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3734
+{ U"\U0001F1EC\U0001F1F8", u8"flag: South Georgia & South Sandwich Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3735
+{ U"\U0001F1EC\U0001F1F9", u8"flag: Guatemala", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3736
+{ U"\U0001F1EC\U0001F1FA", u8"flag: Guam", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3737
+{ U"\U0001F1EC\U0001F1FC", u8"flag: Guinea-Bissau", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3738
+{ U"\U0001F1EC\U0001F1FE", u8"flag: Guyana", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3739
+{ U"\U0001F1ED\U0001F1F0", u8"flag: Hong Kong SAR China", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3740
+{ U"\U0001F1ED\U0001F1F2", u8"flag: Heard & McDonald Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3741
+{ U"\U0001F1ED\U0001F1F3", u8"flag: Honduras", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3742
+{ U"\U0001F1ED\U0001F1F7", u8"flag: Croatia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3743
+{ U"\U0001F1ED\U0001F1F9", u8"flag: Haiti", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3744
+{ U"\U0001F1ED\U0001F1FA", u8"flag: Hungary", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3745
+{ U"\U0001F1EE\U0001F1E8", u8"flag: Canary Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3746
+{ U"\U0001F1EE\U0001F1E9", u8"flag: Indonesia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3747
+{ U"\U0001F1EE\U0001F1EA", u8"flag: Ireland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3748
+{ U"\U0001F1EE\U0001F1F1", u8"flag: Israel", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3749
+{ U"\U0001F1EE\U0001F1F2", u8"flag: Isle of Man", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3750
+{ U"\U0001F1EE\U0001F1F3", u8"flag: India", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3751
+{ U"\U0001F1EE\U0001F1F4", u8"flag: British Indian Ocean Territory", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3752
+{ U"\U0001F1EE\U0001F1F6", u8"flag: Iraq", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3753
+{ U"\U0001F1EE\U0001F1F7", u8"flag: Iran", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3754
+{ U"\U0001F1EE\U0001F1F8", u8"flag: Iceland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3755
+{ U"\U0001F1EE\U0001F1F9", u8"flag: Italy", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3756
+{ U"\U0001F1EF\U0001F1EA", u8"flag: Jersey", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3757
+{ U"\U0001F1EF\U0001F1F2", u8"flag: Jamaica", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3758
+{ U"\U0001F1EF\U0001F1F4", u8"flag: Jordan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3759
+{ U"\U0001F1EF\U0001F1F5", u8"flag: Japan", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3760
+{ U"\U0001F1F0\U0001F1EA", u8"flag: Kenya", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3761
+{ U"\U0001F1F0\U0001F1EC", u8"flag: Kyrgyzstan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3762
+{ U"\U0001F1F0\U0001F1ED", u8"flag: Cambodia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3763
+{ U"\U0001F1F0\U0001F1EE", u8"flag: Kiribati", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3764
+{ U"\U0001F1F0\U0001F1F2", u8"flag: Comoros", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3765
+{ U"\U0001F1F0\U0001F1F3", u8"flag: St. Kitts & Nevis", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3766
+{ U"\U0001F1F0\U0001F1F5", u8"flag: North Korea", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3767
+{ U"\U0001F1F0\U0001F1F7", u8"flag: South Korea", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3768
+{ U"\U0001F1F0\U0001F1FC", u8"flag: Kuwait", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3769
+{ U"\U0001F1F0\U0001F1FE", u8"flag: Cayman Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3770
+{ U"\U0001F1F0\U0001F1FF", u8"flag: Kazakhstan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3771
+{ U"\U0001F1F1\U0001F1E6", u8"flag: Laos", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3772
+{ U"\U0001F1F1\U0001F1E7", u8"flag: Lebanon", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3773
+{ U"\U0001F1F1\U0001F1E8", u8"flag: St. Lucia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3774
+{ U"\U0001F1F1\U0001F1EE", u8"flag: Liechtenstein", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3775
+{ U"\U0001F1F1\U0001F1F0", u8"flag: Sri Lanka", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3776
+{ U"\U0001F1F1\U0001F1F7", u8"flag: Liberia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3777
+{ U"\U0001F1F1\U0001F1F8", u8"flag: Lesotho", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3778
+{ U"\U0001F1F1\U0001F1F9", u8"flag: Lithuania", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3779
+{ U"\U0001F1F1\U0001F1FA", u8"flag: Luxembourg", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3780
+{ U"\U0001F1F1\U0001F1FB", u8"flag: Latvia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3781
+{ U"\U0001F1F1\U0001F1FE", u8"flag: Libya", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3782
+{ U"\U0001F1F2\U0001F1E6", u8"flag: Morocco", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3783
+{ U"\U0001F1F2\U0001F1E8", u8"flag: Monaco", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3784
+{ U"\U0001F1F2\U0001F1E9", u8"flag: Moldova", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3785
+{ U"\U0001F1F2\U0001F1EA", u8"flag: Montenegro", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3786
+{ U"\U0001F1F2\U0001F1EB", u8"flag: St. Martin", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3787
+{ U"\U0001F1F2\U0001F1EC", u8"flag: Madagascar", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3788
+{ U"\U0001F1F2\U0001F1ED", u8"flag: Marshall Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3789
+{ U"\U0001F1F2\U0001F1F0", u8"flag: North Macedonia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3790
+{ U"\U0001F1F2\U0001F1F1", u8"flag: Mali", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3791
+{ U"\U0001F1F2\U0001F1F2", u8"flag: Myanmar (Burma)", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3792
+{ U"\U0001F1F2\U0001F1F3", u8"flag: Mongolia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3793
+{ U"\U0001F1F2\U0001F1F4", u8"flag: Macao SAR China", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3794
+{ U"\U0001F1F2\U0001F1F5", u8"flag: Northern Mariana Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3795
+{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3631, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3796
+{ U"\U0001F1F2\U0001F1F7", u8"flag: Mauritania", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3797
+{ U"\U0001F1F2\U0001F1F8", u8"flag: Montserrat", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3798
+{ U"\U0001F1F2\U0001F1F9", u8"flag: Malta", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3799
+{ U"\U0001F1F2\U0001F1FA", u8"flag: Mauritius", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3800
+{ U"\U0001F1F2\U0001F1FB", u8"flag: Maldives", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3801
+{ U"\U0001F1F2\U0001F1FC", u8"flag: Malawi", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3802
+{ U"\U0001F1F2\U0001F1FD", u8"flag: Mexico", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3803
+{ U"\U0001F1F2\U0001F1FE", u8"flag: Malaysia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3804
+{ U"\U0001F1F2\U0001F1FF", u8"flag: Mozambique", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3805
+{ U"\U0001F1F3\U0001F1E6", u8"flag: Namibia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3806
+{ U"\U0001F1F3\U0001F1E8", u8"flag: New Caledonia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3807
+{ U"\U0001F1F3\U0001F1EA", u8"flag: Niger", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3808
+{ U"\U0001F1F3\U0001F1EB", u8"flag: Norfolk Island", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3809
+{ U"\U0001F1F3\U0001F1EC", u8"flag: Nigeria", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3810
+{ U"\U0001F1F3\U0001F1EE", u8"flag: Nicaragua", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3811
+{ U"\U0001F1F3\U0001F1F1", u8"flag: Netherlands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3812
+{ U"\U0001F1F3\U0001F1F4", u8"flag: Norway", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3813
+{ U"\U0001F1F3\U0001F1F5", u8"flag: Nepal", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3814
+{ U"\U0001F1F3\U0001F1F7", u8"flag: Nauru", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3815
+{ U"\U0001F1F3\U0001F1FA", u8"flag: Niue", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3816
+{ U"\U0001F1F3\U0001F1FF", u8"flag: New Zealand", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3817
+{ U"\U0001F1F4\U0001F1F2", u8"flag: Oman", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3818
+{ U"\U0001F1F5\U0001F1E6", u8"flag: Panama", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3819
+{ U"\U0001F1F5\U0001F1EA", u8"flag: Peru", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3820
+{ U"\U0001F1F5\U0001F1EB", u8"flag: French Polynesia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3821
+{ U"\U0001F1F5\U0001F1EC", u8"flag: Papua New Guinea", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3822
+{ U"\U0001F1F5\U0001F1ED", u8"flag: Philippines", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3823
+{ U"\U0001F1F5\U0001F1F0", u8"flag: Pakistan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3824
+{ U"\U0001F1F5\U0001F1F1", u8"flag: Poland", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3825
+{ U"\U0001F1F5\U0001F1F2", u8"flag: St. Pierre & Miquelon", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3826
+{ U"\U0001F1F5\U0001F1F3", u8"flag: Pitcairn Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3827
+{ U"\U0001F1F5\U0001F1F7", u8"flag: Puerto Rico", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3828
+{ U"\U0001F1F5\U0001F1F8", u8"flag: Palestinian Territories", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3829
+{ U"\U0001F1F5\U0001F1F9", u8"flag: Portugal", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3830
+{ U"\U0001F1F5\U0001F1FC", u8"flag: Palau", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3831
+{ U"\U0001F1F5\U0001F1FE", u8"flag: Paraguay", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3832
+{ U"\U0001F1F6\U0001F1E6", u8"flag: Qatar", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3833
+{ U"\U0001F1F7\U0001F1EA", u8"flag: Réunion", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3834
+{ U"\U0001F1F7\U0001F1F4", u8"flag: Romania", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3835
+{ U"\U0001F1F7\U0001F1F8", u8"flag: Serbia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3836
+{ U"\U0001F1F7\U0001F1FA", u8"flag: Russia", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3837
+{ U"\U0001F1F7\U0001F1FC", u8"flag: Rwanda", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3838
+{ U"\U0001F1F8\U0001F1E6", u8"flag: Saudi Arabia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3839
+{ U"\U0001F1F8\U0001F1E7", u8"flag: Solomon Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3840
+{ U"\U0001F1F8\U0001F1E8", u8"flag: Seychelles", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3841
+{ U"\U0001F1F8\U0001F1E9", u8"flag: Sudan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3842
+{ U"\U0001F1F8\U0001F1EA", u8"flag: Sweden", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3843
+{ U"\U0001F1F8\U0001F1EC", u8"flag: Singapore", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3844
+{ U"\U0001F1F8\U0001F1ED", u8"flag: St. Helena", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3845
+{ U"\U0001F1F8\U0001F1EE", u8"flag: Slovenia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3846
+{ U"\U0001F1F8\U0001F1EF", u8"flag: Svalbard & Jan Mayen", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3847
+{ U"\U0001F1F8\U0001F1F0", u8"flag: Slovakia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3848
+{ U"\U0001F1F8\U0001F1F1", u8"flag: Sierra Leone", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3849
+{ U"\U0001F1F8\U0001F1F2", u8"flag: San Marino", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3850
+{ U"\U0001F1F8\U0001F1F3", u8"flag: Senegal", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3851
+{ U"\U0001F1F8\U0001F1F4", u8"flag: Somalia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3852
+{ U"\U0001F1F8\U0001F1F7", u8"flag: Suriname", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3853
+{ U"\U0001F1F8\U0001F1F8", u8"flag: South Sudan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3854
+{ U"\U0001F1F8\U0001F1F9", u8"flag: São Tomé & Príncipe", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3855
+{ U"\U0001F1F8\U0001F1FB", u8"flag: El Salvador", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3856
+{ U"\U0001F1F8\U0001F1FD", u8"flag: Sint Maarten", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3857
+{ U"\U0001F1F8\U0001F1FE", u8"flag: Syria", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3858
+{ U"\U0001F1F8\U0001F1FF", u8"flag: Eswatini", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3859
+{ U"\U0001F1F9\U0001F1E6", u8"flag: Tristan da Cunha", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3860
+{ U"\U0001F1F9\U0001F1E8", u8"flag: Turks & Caicos Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3861
+{ U"\U0001F1F9\U0001F1E9", u8"flag: Chad", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3862
+{ U"\U0001F1F9\U0001F1EB", u8"flag: French Southern Territories", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3863
+{ U"\U0001F1F9\U0001F1EC", u8"flag: Togo", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3864
+{ U"\U0001F1F9\U0001F1ED", u8"flag: Thailand", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3865
+{ U"\U0001F1F9\U0001F1EF", u8"flag: Tajikistan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3866
+{ U"\U0001F1F9\U0001F1F0", u8"flag: Tokelau", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3867
+{ U"\U0001F1F9\U0001F1F1", u8"flag: Timor-Leste", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3868
+{ U"\U0001F1F9\U0001F1F2", u8"flag: Turkmenistan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3869
+{ U"\U0001F1F9\U0001F1F3", u8"flag: Tunisia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3870
+{ U"\U0001F1F9\U0001F1F4", u8"flag: Tonga", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3871
+{ U"\U0001F1F9\U0001F1F7", u8"flag: Türkiye", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3872
+{ U"\U0001F1F9\U0001F1F9", u8"flag: Trinidad & Tobago", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3873
+{ U"\U0001F1F9\U0001F1FB", u8"flag: Tuvalu", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3874
+{ U"\U0001F1F9\U0001F1FC", u8"flag: Taiwan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3875
+{ U"\U0001F1F9\U0001F1FF", u8"flag: Tanzania", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3876
+{ U"\U0001F1FA\U0001F1E6", u8"flag: Ukraine", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3877
+{ U"\U0001F1FA\U0001F1EC", u8"flag: Uganda", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3878
+{ U"\U0001F1FA\U0001F1F2", u8"flag: U.S. Outlying Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3879
+{ U"\U0001F1FA\U0001F1F3", u8"flag: United Nations", 3631, 0, -1, Lfg(65), EcVersion::E4_0 },   // 3880
+{ U"\U0001F1FA\U0001F1F8", u8"flag: United States", 3631, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3881
+{ U"\U0001F1FA\U0001F1FE", u8"flag: Uruguay", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3882
+{ U"\U0001F1FA\U0001F1FF", u8"flag: Uzbekistan", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3883
+{ U"\U0001F1FB\U0001F1E6", u8"flag: Vatican City", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3884
+{ U"\U0001F1FB\U0001F1E8", u8"flag: St. Vincent & Grenadines", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3885
+{ U"\U0001F1FB\U0001F1EA", u8"flag: Venezuela", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3886
+{ U"\U0001F1FB\U0001F1EC", u8"flag: British Virgin Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3887
+{ U"\U0001F1FB\U0001F1EE", u8"flag: U.S. Virgin Islands", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3888
+{ U"\U0001F1FB\U0001F1F3", u8"flag: Vietnam", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3889
+{ U"\U0001F1FB\U0001F1FA", u8"flag: Vanuatu", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3890
+{ U"\U0001F1FC\U0001F1EB", u8"flag: Wallis & Futuna", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3891
+{ U"\U0001F1FC\U0001F1F8", u8"flag: Samoa", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3892
+{ U"\U0001F1FD\U0001F1F0", u8"flag: Kosovo", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3893
+{ U"\U0001F1FE\U0001F1EA", u8"flag: Yemen", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3894
+{ U"\U0001F1FE\U0001F1F9", u8"flag: Mayotte", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3895
+{ U"\U0001F1FF\U0001F1E6", u8"flag: South Africa", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3896
+{ U"\U0001F1FF\U0001F1F2", u8"flag: Zambia", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3897
+{ U"\U0001F1FF\U0001F1FC", u8"flag: Zimbabwe", 3631, 0, -1, Lfg(65), EcVersion::E2_0 },   // 3898
+{ U"\U0001F3F4\U000E0067\U000E0062\U000E0065\U000E006E\U000E0067\U000E007F", u8"flag: England", 3632, 0, -1, Lfg(65), EcVersion::E5_0 },   // 3899
+{ U"\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F", u8"flag: Scotland", 3632, 0, -1, Lfg(65), EcVersion::E5_0 },   // 3900
+{ U"\U0001F3F4\U000E0067\U000E0062\U000E0077\U000E006C\U000E0073\U000E007F", u8"flag: Wales", 3632, 0, -1, Lfg(65), EcVersion::E5_0 },   // 3901
 { {}, u8"Vulgar fractions", 2, 21, 3917, Lfg(8), EcVersion::NONE },   // 3902
 { {}, u8"Superscripts", 2, 18, 3938, Lfg(8), EcVersion::NONE },   // 3903
 { {}, u8"Subscripts", 2, 18, 3956, Lfg(8), EcVersion::NONE },   // 3904

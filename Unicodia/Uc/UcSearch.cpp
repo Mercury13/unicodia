@@ -4,9 +4,6 @@
 // STL
 #include <unordered_set>
 
-// Libs
-#include "u_Strings.h"
-
 // Unicode
 #include "UcData.h"
 

@@ -51,10 +51,24 @@ namespace {
         U"\U0001FAA4",              // mouse trap
     };
 
-}   // anon namespace
+    const std::u32string_view UNSEARCHABLE_EMOJI =
+        U"\U0001F3FB" "\U0001F3FC" "\U0001F3FD" "\U0001F3FE" "\U0001F3FF"  // skin tones
+        "\u27A1";                                         // directed to the right
 
+    constexpr char32_t VS16 = 0xFE0F;
 
-namespace {
+    bool isSearchable(std::u32string_view emoji)
+    {
+        // 1-character → BAD!
+        if (emoji.length() <= 1)
+            return false;
+        // VS16 → BAD!
+        if (emoji.length() == 2 && emoji[1] == VS16)
+            return false;
+        // Unsearchable are: skins, directions
+        auto index = emoji.find_first_of(UNSEARCHABLE_EMOJI);
+        return (index == std::u32string_view::npos);
+    }
 
     template<typename T, unsigned N, typename... REST>
     struct TupleN
@@ -114,7 +128,6 @@ namespace {
 
 constexpr std::string_view S_GROUP = "group: ";
 constexpr std::string_view S_SUBGROUP = "subgroup: ";
-constexpr char32_t VS16 = 0xFE0F;
 
 
 lib::EmojiData lib::loadEmoji(const char* fname)
@@ -183,6 +196,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     if (mainCode != 0)
                         r.misrenders.insert(mainCode);
                 }
+                if (isSearchable(newItem.value))
+                    newItem.flags |= uc::Lfg::SEARCHABLE;
                 ++r.count;
             }
         }
