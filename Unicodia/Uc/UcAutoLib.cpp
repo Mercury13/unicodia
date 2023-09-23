@@ -6029,9 +6029,9 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u00DD", {}, 5596, 0, -1, {}, EcVersion::NONE },   // 6023
 { U"\u00FD", {}, 5596, 0, -1, {}, EcVersion::NONE },   // 6024
 { {}, u8"SmallCap", 5, 25, 6065, Lfg(24), EcVersion::NONE },   // 6025
-{ {}, u8"SuperCap", 5, 22, 6090, Lfg(8), EcVersion::NONE },   // 6026
+{ {}, u8"SuperCap", 5, 22, 6090, Lfg(10), EcVersion::NONE },   // 6026
 { {}, u8"SuperSmall", 5, 26, 6112, Lfg(8), EcVersion::NONE },   // 6027
-{ {}, u8"ParenCap", 5, 26, 6138, Lfg(8), EcVersion::NONE },   // 6028
+{ {}, u8"ParenCap", 5, 26, 6138, Lfg(10), EcVersion::NONE },   // 6028
 { {}, u8"ParenSmall", 5, 26, 6164, Lfg(8), EcVersion::NONE },   // 6029
 { {}, u8"CircCap", 5, 26, 6190, Lfg(8), EcVersion::NONE },   // 6030
 { {}, u8"CircSmall", 5, 26, 6216, Lfg(8), EcVersion::NONE },   // 6031

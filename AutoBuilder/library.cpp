@@ -421,6 +421,8 @@ namespace {
     {
         if (tag.attribute("hasText").as_bool())
             result.flags |= uc::Lfg::HAS_TEXT;
+        if (!tag.attribute("tile").as_bool(true))
+            result.flags |= uc::Lfg::NO_TILE;
         result.name = str::toU8(tag.attribute("loc").as_string());
         if (!result.name.empty()) {
             result.flags |= uc::Lfg::TRANSLATE;
