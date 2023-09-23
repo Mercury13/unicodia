@@ -629,14 +629,18 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
 
     switch (role) {
     case Qt::DisplayRole: {
-            uc::sprintUPLUS(buf, line.code);
-            QString s = buf;
-            if (line.prio.high == uc::HIPRIO_DEC) {
-                // Found by decimal
-                s += " = ";
-                s += QString::number(line.code);
-                s += "₁₀";
-            } if (!line.triggerName.empty()) {
+            QString s;
+            if (line.code < uc::CAPACITY) {
+                uc::sprintUPLUS(buf, line.code);
+                s += buf;
+                if (line.prio.high == uc::HIPRIO_DEC) {
+                    // Found by decimal
+                    s += " = ";
+                    s += QString::number(line.code);
+                    s += "₁₀";
+                }
+            }
+            if (!line.triggerName.empty()) {
                 // Triggered alt. name
                 s += ": ";
                 s += str::toQ(line.triggerName);
@@ -674,6 +678,10 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 break;
             case uc::CpType::RESERVED:
                 ie = new ie::Synth(*sample, line.cp->block().synthIcon);
+                break;
+            case uc::CpType::LIBNODE:
+                ie = new ie::Node(*sample, *line.node);
+                break;
             }
             QIcon icon(ie);
             return icon;

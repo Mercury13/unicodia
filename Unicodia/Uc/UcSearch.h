@@ -21,6 +21,7 @@ namespace uc {
         SURROGATE,
         UNALLOCATED,
         RESERVED,           ///< Allocated but still reserved
+        LIBNODE,            ///< library node, currently emoji
         NN
     };
     constexpr auto CpType_N = static_cast<int>(CpType::NN);
@@ -50,9 +51,10 @@ namespace uc {
     };
 
     struct MiniLine {
-        char32_t code = 0;                  ///< char code
+        char32_t code = 0xFFFFFF;           ///< char code
         CpType type = CpType::NONCHARACTER; ///< what found
         const uc::Cp* cp = nullptr;         ///< code point
+        const uc::LibNode* node = nullptr;  ///< library node
 
         constexpr MiniLine() = default;
         // Clazy’s −warn
