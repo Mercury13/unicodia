@@ -436,20 +436,18 @@ namespace {
     void conditionalBan(lib::Node& node,
                         std::string_view tilePattern, unsigned& indexInPattern)
     {
-        // Empty pattern → all allowed
-        if (tilePattern.empty())
-            return;
-        auto i = indexInPattern % tilePattern.length();
-        switch (tilePattern[i]) {
-        case '0':
-        case '_':
-        case '.':
-        case '-':
-            node.flags |= uc::Lfg::NO_TILE;
-            break;
-        default:;
+        if (!tilePattern.empty()) {
+            auto i = indexInPattern % tilePattern.length();
+            switch (tilePattern[i]) {
+            case '0':
+            case '_':
+            case '.':
+            case '-':
+                node.flags |= uc::Lfg::NO_TILE;
+                break;
+            default:;
+            }
         }
-
         ++indexInPattern;
     }
 
