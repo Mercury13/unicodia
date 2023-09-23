@@ -433,8 +433,29 @@ namespace {
             throw std::logic_error("Need sequence/folder name");
     }
 
+    void conditionalBan(lib::Node& node,
+                        std::string_view tilePattern, unsigned& indexInPattern)
+    {
+        // Empty pattern → all allowed
+        if (tilePattern.empty())
+            return;
+        auto i = indexInPattern % tilePattern.length();
+        switch (tilePattern[i]) {
+        case '0':
+        case '_':
+        case '.':
+        case '-':
+            node.flags |= uc::Lfg::NO_TILE;
+            break;
+        default:;
+        }
+
+        ++indexInPattern;
+    }
+
     void appendDump(lib::Node& result, forget::Map& forgetMap,
-                    pugi::xml_node tag, bool isForgetTest)
+                    pugi::xml_node tag, bool isForgetTest,
+                    std::string_view tilePattern, unsigned& indexInPattern)
     {
         std::string_view text8 = tag.text().get();
         auto text32 = mojibake::toS<std::u32string>(text8);
@@ -444,6 +465,7 @@ namespace {
         for (auto v : sub32) {
             auto& node = result.children.emplace_back();
             node.value = v;
+            conditionalBan(node, tilePattern, indexInPattern);
             if (v.length() == 1) {
                 auto cp = v[0];
                 if (isForgetTest) {
@@ -463,7 +485,8 @@ namespace {
     }
 
     void appendRange(lib::Node& result, forget::Map& forgetMap,
-                     pugi::xml_node tag, bool isForgetTest)
+                     pugi::xml_node tag, bool isForgetTest,
+                     std::string_view tilePattern, unsigned& indexInPattern)
     {
         auto startCode = fromHex(tag.attribute("start").as_string());
         auto endCode = fromHex(tag.attribute("end").as_string());
@@ -476,6 +499,7 @@ namespace {
             char32_t cp = i;
             auto& node = result.children.emplace_back();
             node.value = std::u32string{ cp };
+            conditionalBan(node, tilePattern, indexInPattern);
             if (isForgetTest) {
                 auto& w = forgetMap[cp];
                 ++w.lib.count;
@@ -483,7 +507,8 @@ namespace {
         }
     }
 
-    void appendSequence(lib::Node& result, pugi::xml_node tag)
+    void appendSequence(lib::Node& result, pugi::xml_node tag,
+                        std::string_view tilePattern, unsigned& indexInPattern)
     {
         std::string_view value8 = tag.attribute("v").as_string();
         if (value8.empty())
@@ -494,24 +519,30 @@ namespace {
         auto& node = result.children.emplace_back();
         loadName(node, tag);
         node.value = std::move(value32);
+        conditionalBan(node, tilePattern, indexInPattern);
     }
 
-    void loadRecurse(lib::Node& result, forget::Map& forgetMap, pugi::xml_node tag, bool isForgetTest)
+    void loadRecurse(lib::Node& result, forget::Map& forgetMap,
+                     pugi::xml_node tag, bool isForgetTest,
+                     std::string_view tilePattern)
     {
+        unsigned indexInPattern = 0;
         isForgetTest = tag.attribute("forgetTest").as_bool(isForgetTest);
         for (auto v : tag.children()) {
             if (v.name() == "f"sv) {
                 // Folder
                 auto& newFolder = result.children.emplace_back();
                 loadName(newFolder, v);
-                loadRecurse(newFolder, forgetMap, v, isForgetTest);
+                // As all tile patterns are taken from XML → they are null-term
+                std::string_view newTilePattern = v.attribute("tilePattern").as_string(tilePattern.data());
+                loadRecurse(newFolder, forgetMap, v, isForgetTest, newTilePattern);
             } else if (v.name() == "d"sv) {
                 // Dump
-                appendDump(result, forgetMap, v, isForgetTest);
+                appendDump(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern);
             } else if (v.name() == "range"sv) {
-                appendRange(result, forgetMap, v, isForgetTest);
+                appendRange(result, forgetMap, v, isForgetTest, tilePattern, indexInPattern);
             } else if (v.name() == "sq"sv) {
-                appendSequence(result, v);
+                appendSequence(result, v, tilePattern, indexInPattern);
             }
         }
     }
@@ -531,7 +562,8 @@ lib::Manual lib::loadManual(const char* fname)
     if (!root)
         throw std::logic_error("No root");
 
-    loadRecurse(r.root, r.forgetMap, root, false);
+    // Do not use empty tilePattern, need working data()
+    loadRecurse(r.root, r.forgetMap, root, false, ""sv);
 
     return r;
 }

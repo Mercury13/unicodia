@@ -209,8 +209,8 @@
 			<d>Þ þ Ꝥ ꝥ Ꝧ ꝧ ꟓ Ƿ ƿ ꟕ Ꝩ ꝩ ƻ Ƨ ƨ Ꜫ ꜫ Ꜭ ꜭ Ꜯ ꜯ Ƽ ƽ Ƅ ƅ Ꞵ ꞵ Ɣ ɣ ˠ ẟ ƍ ƛ ɸ ⱷ ᶲ Ꭓ ꭓ ꭔ ꭕ Ꞷ ꞷ ɷ ꭠ 𐞤 ᴤ Ꜣ ꜣ Ꜥ ꜥ ꞏ</d>
 		</f>
 	</f>
-	<f loc="Latin2">
-		<f loc="EnTran">
+	<f loc="Latin2" tilePattern="10010110">
+		<f loc="EnTran" tilePattern="">
 			<d>æ ɑ ʌ ɛ ə ɚ ɪ ɔ ʊ ð θ ŋ ʃ ʒ ʧ ʤ ː</d>
 		</f>
 		<f name="Azərbaycan / Azeri">
@@ -269,7 +269,7 @@
 		</f>
 		<f name="Română / Romanian">
 			<d>Ă ă Â â Î î Ș ș Ț ț</d>
-			<f loc="NotRec">
+			<f loc="NotRec" tile="0">
 				<d>Ş ş Ţ ţ</d>
 			</f>
 		</f>
