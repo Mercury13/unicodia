@@ -19,7 +19,6 @@
 #include "u_TinyOpt.h"
 #include "c_TableCache.h"
 #include "u_LruCache.h"
-#include "u_Version.h"
 #include "QtMultiRadio.h"
 
 // CharPaint
@@ -256,6 +255,7 @@ public:
     int columnCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     const uc::LibNode& nodeAt(const QModelIndex& index) const;
+    QModelIndex indexOf(const uc::LibNode& node);
     static CharTiles getCharTiles(const uc::LibNode& node);
 private:
     const PixSource* const sample;
@@ -379,6 +379,7 @@ private slots:
     void blockOrderChanged();
     void glyphStyleChanged();
     void goToCp(char32_t cp);
+    void goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
 };

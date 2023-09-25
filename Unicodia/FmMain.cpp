@@ -717,6 +717,20 @@ QModelIndex LibModel::index(int row, int, const QModelIndex &parent) const
 }
 
 
+QModelIndex LibModel::indexOf(const uc::LibNode& node)
+{
+    size_t iNode = &node - uc::libNodes;
+    if (iNode == 0 || iNode >= uc::nLibNodes())
+        return {};
+    auto& parentNode = uc::libNodes[node.iParent];
+    size_t iFirstChild = parentNode.iFirstChild;
+    if (iFirstChild > iNode)
+        return {};
+    auto row = iNode - iFirstChild;
+    return createIndex(row, COL0, iNode);
+}
+
+
 QModelIndex LibModel::parent(const QModelIndex &child) const
 {
     GETNODE(child, return {})
@@ -1760,7 +1774,9 @@ void FmMain::searchEnterPressed(int index)
 {
     auto line = searchModel.lineAt(index);
     if (line.cp) {
-        selectChar<SelectMode::INSTANT>(line.cp->subj);
+        goToCp(line.cp->subj);
+    } else if (line.node) {
+        goToNode(*line.node);
     } else {
         auto relRect = ui->listSearch->visualRect(searchModel.index(index, 0));
         mainGui.blinkAtRel(loc::get("Search.NoSuch"), ui->listSearch->viewport(), relRect);
@@ -1862,6 +1878,15 @@ void FmMain::goToCp(char32_t cp)
 {
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
+}
+
+
+void FmMain::goToNode(const uc::LibNode& node)
+{
+    ui->tabsMain->setCurrentWidget(ui->tabLibrary);
+    auto index = libModel.indexOf(node);
+    ui->treeLibrary->setCurrentIndex(index);
+    //selectChar<SelectMode::INSTANT>(cp);
 }
 
 
