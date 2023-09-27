@@ -3183,7 +3183,6 @@
    <group id="10500">
     <text id="Name">
      <orig>Albanian — Elbasan Gospel</orig>
-     <known-orig>Albanian — Elbasan</known-orig>
      <transl>Албанська — Ельбасанське Євангеліє</transl>
     </text>
    </group>
@@ -4356,12 +4355,12 @@
      <orig>
       <p>This block contains [[pt:emoji|emoji]] (both Japanese and international), dingbats and characters from user interfaces.</p>
       <p />
-      <p>Destiny of pistol {{em|🔫}} is remarkable: starting from Apple, most vendors make it toy to diminish Internet threatenings.</p>
+      <p>Destiny of pistol {{em|🔫}} is remarkable: starting from Apple, vendors settled on toy to diminish Internet threatenings.</p>
      </orig>
      <transl>
       <p>У блоці містяться [[pt:emoji|емодзі]] (як японські, так і міжнародні), а також типографські прикраси та символи з інтерфейсів користувача.</p>
       <p />
-      <p>Цікава доля символа «пістолет» {{em|🔫}}{{-}}з подачі ''Apple'' більшість виробників робить його іграшковим для зниження мережевих погроз.</p>
+      <p>Цікава доля символа «пістолет» {{em|🔫}}{{-}}з подачі ''Apple'' виробники зупинились на іграшковому для зниження мережевих погроз.</p>
      </transl>
     </text>
    </group>
