@@ -4,25 +4,25 @@ FullName: Uto Sans Sundanese Regular
 FamilyName: Uto Sans Sundanese
 Weight: Regular
 Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/sundanese)
-Version: 2.004; ttfautohint (v1.8.4.7-5d5b)
+Version: 2.005; ttfautohint (v1.8.4.7-5d5b)
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020106
+sfntRevision: 0x00020148
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 20590]
+XUID: [1021 59 1751208496 9820]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1593023580
-ModificationTime: 1687635281
+ModificationTime: 1695808282
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -3860,7 +3860,7 @@ ShortTable: maxp 16
   2
   1
 EndShort
-LangName: 1033 "" "" "" "" "" "Version 2.004; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team (Regular), S+AOkA-rgio L. Martins (other weights)" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "" "" "Version 2.005; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google LLC." "Monotype Imaging Inc." "Monotype Design Team (Regular), S+AOkA-rgio L. Martins (other weights)" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 Encoding: Custom
 UnicodeInterp: none
@@ -7219,7 +7219,7 @@ EndChar
 StartChar: uni1BA1
 Encoding: 38 7073 40
 Width: 212
-GlyphClass: 1
+GlyphClass: 4
 Flags: W
 HStem: -241 60<-497 -159> 228 56<47 102>
 TtInstrs:
@@ -7309,6 +7309,8 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" -420 0 mark 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" -420 0 mark 0
 LayerCount: 2
 Fore
 SplineSet
@@ -8088,9 +8090,9 @@ StartChar: uni1BAB
 Encoding: 48 7083 56
 Width: 0
 GlyphClass: 4
-Flags: W
-HStem: -190.268 45.3594<-390.372 -266 -220.641 -96.2686>
-VStem: -266 45.3594<-314.64 -190.268 -144.908 -22>
+Flags: WO
+HStem: -190.268 45.3594<-433.372 -309 -263.641 -139.269>
+VStem: -309 45.3594<-314.64 -190.268 -144.908 -22.001>
 TtInstrs:
 SVTCA[y-axis]
 PUSHB_1
@@ -8157,19 +8159,19 @@ EndTTInstrs
 LayerCount: 2
 Fore
 SplineSet
--266 -314.639648438 m 1,0,-1
- -266 -190.267578125 l 1,1,-1
- -390.372070312 -190.267578125 l 1,2,-1
- -390.372070312 -144.908203125 l 1,3,-1
- -266 -144.908203125 l 1,4,-1
- -266 -22 l 1,5,-1
- -220.640625 -22 l 1,6,-1
- -220.640625 -144.908203125 l 1,7,-1
- -96.2685546875 -144.908203125 l 1,8,-1
- -96.2685546875 -190.267578125 l 1,9,-1
- -220.640625 -190.267578125 l 1,10,-1
- -220.640625 -314.639648438 l 1,11,-1
- -266 -314.639648438 l 1,0,-1
+-309 -314.639648438 m 5,0,-1
+ -309 -190.267578125 l 5,1,-1
+ -433.372070312 -190.267578125 l 5,2,-1
+ -433.372070312 -144.908203125 l 5,3,-1
+ -309 -144.908203125 l 5,4,-1
+ -309 -22.0009765625 l 5,5,-1
+ -263.640625 -22.0009765625 l 5,6,-1
+ -263.640625 -144.908203125 l 5,7,-1
+ -139.268554688 -144.908203125 l 5,8,-1
+ -139.268554688 -190.267578125 l 5,9,-1
+ -263.640625 -190.267578125 l 5,10,-1
+ -263.640625 -314.639648438 l 5,11,-1
+ -309 -314.639648438 l 5,0,-1
 EndSplineSet
 EndChar
 
@@ -12019,7 +12021,7 @@ SplineSet
 EndSplineSet
 EndChar
 
-StartChar: NameMe.89
+StartChar: uE000
 Encoding: 89 57344 89
 Width: 1296
 Flags: W
