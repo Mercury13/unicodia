@@ -4,25 +4,25 @@ FullName: Uto Serif Kannada Regular
 FamilyName: Uto Serif Kannada
 Weight: Regular
 Copyright: Copyright 2022 The Noto Project Authors (https://github.com/notofonts/kannada)
-Version: 2.004; ttfautohint (v1.8.4.7-5d5b)
+Version: 2.005; ttfautohint (v1.8.4.7-5d5b)
 ItalicAngle: 0
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00020106
+sfntRevision: 0x00020148
 LayerCount: 2
 Layer: 0 1 "+BBcEMAQ0BD0EOAQ5 +BD8EOwQwBD0A" 1
 Layer: 1 1 "+BB8ENQRABDUENAQ9BDgEOQAA +BD8EOwQwBD0A" 0
-XUID: [1021 59 1751208496 8630]
+XUID: [1021 59 1751208496 27803]
 StyleMap: 0x0040
 FSType: 0
 OS2Version: 4
-OS2_WeightWidthSlopeOnly: 0
+OS2_WeightWidthSlopeOnly: 1
 OS2_UseTypoMetrics: 1
 CreationTime: 1506051623
-ModificationTime: 1689047300
+ModificationTime: 1695807003
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -34,7 +34,7 @@ OS2TypoAOffset: 0
 OS2TypoDescent: -710
 OS2TypoDOffset: 0
 OS2TypoLinegap: 0
-OS2WinAscent: 910
+OS2WinAscent: 979
 OS2WinAOffset: 0
 OS2WinDescent: 710
 OS2WinDOffset: 0
@@ -4994,7 +4994,7 @@ ShortTable: maxp 16
   3
   1
 EndShort
-LangName: 1033 "" "" "" "" "" "Version 2.004; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Universal Thirst, Indian Type Foundry and the Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
+LangName: 1033 "" "" "" "" "" "Version 2.005; ttfautohint (v1.8.4.7-5d5b)" "" "Noto is a trademark of Google Inc." "Monotype Imaging Inc." "Universal Thirst, Indian Type Foundry and the Monotype Design Team" "Designed by Monotype design team." "http://www.google.com/get/noto/" "http://www.monotype.com/studio" "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL" "https://scripts.sil.org/OFL"
 GaspTable: 1 65535 15 1
 OtfFeatName: 'ss01' 1033 "Sri ligature"
 Encoding: UnicodeBmp
@@ -87303,7 +87303,7 @@ CALL
 EndTTInstrs
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" 424 461 basechar 0
 AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" 289 -5 basechar 0
-AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 299 307 basechar 0
+AnchorPoint: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" 299 303 basechar 0
 LayerCount: 2
 Fore
 SplineSet
