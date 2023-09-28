@@ -173,6 +173,7 @@ namespace uc {
         NONE,
         GLAGOLITIC,
         VERTICAL,
+        ARABIC,
         NN,
     };
 

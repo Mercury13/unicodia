@@ -7754,6 +7754,26 @@
      </orig>
     </text>
    </group>
+   <group id="Arab">
+    <text id="0">
+     <orig>Isolated</orig>
+    </text>
+    <text id="1">
+     <orig>Initial</orig>
+    </text>
+    <text id="2">
+     <orig>Medial</orig>
+    </text>
+    <text id="3">
+     <orig>Final</orig>
+    </text>
+    <text id="Name">
+     <orig>Position of Arabic letters</orig>
+    </text>
+    <text id="Text">
+     <orig>Arabic letters are written in a continuous line, so they can be isolated, initial, medial and final.</orig>
+    </text>
+   </group>
   </group>
   <group id="Search">
    <au-cmt>

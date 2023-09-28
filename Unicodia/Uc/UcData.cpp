@@ -1496,6 +1496,7 @@ const uc::GlyphStyleChannel uc::glyphStyleChannelInfo[] = {
     { 0, {}, uc::EcGlyphStyleChannel::NONE },      // -warn in static analyzer: init [0] as normal, and everything’s OK
     { .count = 2, .name = "Glag", .value = uc::EcGlyphStyleChannel::GLAGOLITIC },
     { .count = 2, .name = "Vert", .value = uc::EcGlyphStyleChannel::VERTICAL },
+    { .count = 4, .name = "Arab", .value = uc::EcGlyphStyleChannel::ARABIC },
 };
 static_assert(std::size(uc::glyphStyleChannelInfo) == static_cast<size_t>(uc::EcGlyphStyleChannel::NN));
 
