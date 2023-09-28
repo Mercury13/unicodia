@@ -625,12 +625,13 @@ void SearchModel::set(SafeVector<uc::SearchLine>&& x)
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
     auto& line = lineAt(index.row());
-    char buf[30];
+    char buf[60];
 
     switch (role) {
     case Qt::DisplayRole: {
             QString s;
             if (line.code < uc::CAPACITY) {
+                // Character code
                 uc::sprintUPLUS(buf, line.code);
                 s += buf;
                 if (line.prio.high == uc::HIPRIO_DEC) {
@@ -638,6 +639,22 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     s += " = ";
                     s += QString::number(line.code);
                     s += "₁₀";
+                }
+            } else if (line.node) {
+                // Library node
+                std::u32string_view val = line.node->value;
+                static constexpr auto SHORTLEN = 2;
+                bool needShort = (val.length() > SHORTLEN && line.triggerName.empty());
+                if (needShort) {
+                    val = val.substr(SHORTLEN);
+                    auto n = 0;
+                    for (auto c : val)
+                        n = uc::appendUPLUS(buf, n, c);
+                    s += buf;
+                    s += "+…";
+                } else {
+                    line.node->sprintUPLUS(buf);
+                    s += buf;
                 }
             }
             if (!line.triggerName.empty()) {
@@ -652,6 +669,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::RESERVED:
                 return s + loc::get("Search.Empty") + ": "
                          + str::toQ(uc::blockOf(line.code)->loc.name);
+            case uc::CpType::LIBNODE:
+                return s + line.node->viewableTitle(uc::TitleMode::LONG);
             default:
                 return s + loc::get(uc::cpTypeKeys[static_cast<int>(line.type)]);
             }
@@ -690,6 +709,18 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
         return {};
     }
 }
+
+
+void SearchModel::initStyleOption(
+        QStyleOptionViewItem *option, const QModelIndex &index) const
+{
+    QStyledItemDelegate::initStyleOption(option, index);
+    auto& line = lineAt(index.row());
+    if (line.nestLevel != 0) {
+        option->rect.setLeft(option->rect.left() + 10 * line.nestLevel);
+    }
+}
+
 
 ///// LibModel /////////////////////////////////////////////////////////////////
 
@@ -931,6 +962,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
     ui->listSearch->setUniformItemSizes(true);
     ui->listSearch->setModel(&searchModel);
+    ui->listSearch->setItemDelegate(&searchModel);
     connect(ui->edSearch, &SearchCombo::searchPressed, this, &This::startSearch);
     connect(ui->edSearch, &SearchCombo::focusIn, this, &This::focusSearch);
     connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);

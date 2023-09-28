@@ -221,7 +221,7 @@ private:
 };
 
 
-class SearchModel final : public QAbstractTableModel
+class SearchModel final : public QAbstractTableModel, public QStyledItemDelegate
 {
 public:
     SearchModel(const PixSource* aSample, const uc::GlyphStyleSets& aGlyphSets) noexcept
@@ -234,6 +234,8 @@ public:
     void clear();
     bool hasData() const { return !v.empty(); }
     const uc::SearchLine& lineAt(size_t index) const;
+protected:
+    void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
 private:
     const PixSource* const sample;
     const uc::GlyphStyleSets& glyphSets;

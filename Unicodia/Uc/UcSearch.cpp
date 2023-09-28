@@ -16,6 +16,7 @@ const std::string_view uc::cpTypeKeys[CpType_N] {
     "Search.Surrogate",
     "Search.Unassigned",
     "Search.Empty",
+    "{LibNode}",
 };
 
 const std::string_view uc::searchErrorKeys[SearchError_N] {
@@ -195,6 +196,20 @@ std::u8string uc::toMnemo(const QString& x)
 
 namespace {
 
+    bool hasEmojiSearch = false;
+
+    /// @todo [future] Can move that trie to compile-time?
+    struct TriePath;
+
+    struct TrieNode {
+        const uc::LibNode* result = nullptr;
+        std::unordered_map<char32_t, TrieNode> children;
+    };
+
+    struct TriePath : public std::unordered_map<char32_t, TrieNode> {};
+
+    TrieNode trieRoot;
+
     SafeVector<std::u8string_view> allSearchableNames(const uc::Cp& cp)
     {
         SafeVector<std::u8string_view> r;
@@ -273,6 +288,74 @@ namespace {
 }   // anon namespace
 
 
+void uc::ensureEmojiSearch()
+{
+    if (hasEmojiSearch)
+        return;
+
+    for (auto& node : allLibNodes()) {
+        // Build trie
+        if (node.flags.have(uc::Lfg::SEARCHABLE)) {
+            auto* p = &trieRoot;
+            for (auto c : node.value) {
+                p = &p->children[c];
+            }
+            p->result = &node;
+        }
+    }
+    hasEmojiSearch = true;
+}
+
+
+SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
+{
+    ensureEmojiSearch();
+
+    struct Last {
+        const LibNode* result = nullptr;
+        size_t iLastPos = 0;
+    } lastKnown;
+
+    SafeVector<uc::DecodedEmoji> r;
+    const TrieNode* p = &trieRoot;
+
+#define REGISTER_RESULT \
+    r.emplace_back( \
+            lastKnown.iLastPos + 1 - lastKnown.result->value.length(), \
+            lastKnown.result);
+    // Why +1? We do not search for single-char emoji, but if…
+    //   iLastPos == 0, length == 1 → how to make 0 out of them?
+
+    for (size_t index = 0; index < s.length(); ++index) {
+        char32_t c = s[index];
+        auto itChild = p->children.find(c);
+        if (itChild == p->children.end()) {
+            // Dead end. Found smth?
+            if (lastKnown.result) {
+                REGISTER_RESULT
+                // I do not want to make true Aho-Corasick here! Just back down.
+                index = lastKnown.iLastPos;
+            }
+            // Anyway move to root
+            p = &trieRoot;
+            lastKnown.result = nullptr;
+        } else {
+            p = &itChild->second;
+            if (p->result) {
+                lastKnown.result = p->result;
+                lastKnown.iLastPos = index;
+            }
+        }
+    }
+    if (lastKnown.result) {
+        REGISTER_RESULT
+    }
+    return r;
+
+#undef REGISTER_RESULT
+}
+
+
 uc::MultiResult uc::doSearch(QString what)
 {
     if (what.isEmpty())
@@ -280,7 +363,7 @@ uc::MultiResult uc::doSearch(QString what)
 
     // Find a single character, maybe space
     if (what.size() <= 2) {
-        auto u32 = what.toUcs4();
+        auto u32 = what.toStdU32String();
         if (u32.size() == 1) {
             auto code = u32[0];
             if (code == ' ' || !isNameChar(code)) {
@@ -467,12 +550,28 @@ uc::MultiResult uc::doSearch(QString what)
         std::stable_sort(r.begin(), r.end());
     } else {
         // DEBRIEF STRING
-        auto u32 = what.toUcs4();
-        for (auto v : u32) {
-            auto find = uc::findCode(v);
+        auto u32 = what.toStdU32String();
+
+        auto emojiList = decodeEmoji(u32);
+        auto pEmoji = emojiList.begin();
+        size_t iLevel1 = 0;
+
+        for (size_t i32 = 0; i32 < u32.length(); ++i32) {
+            // Insert emoji
+            if (pEmoji != emojiList.end() && pEmoji->index == i32) {
+                auto& bk = r.emplace_back();
+                bk.type = uc::CpType::LIBNODE;
+                bk.node = pEmoji->node;
+                bk.prio.high = HIPRIO_HEX;
+                iLevel1 = i32 + bk.node->value.length();
+                ++pEmoji;
+            }
+            auto c = u32[i32];
+            auto find = uc::findCode(c);
             if (find.err == SearchError::OK) {
                 auto& bk = r.emplace_back(find);
                 bk.prio.high = HIPRIO_HEX;
+                bk.nestLevel = static_cast<int>(i32 < iLevel1);
             }
         }
     }

@@ -67,6 +67,7 @@ namespace uc {
     struct SearchLine : public MiniLine {
         std::u8string_view triggerName;     ///< name that triggered inclusion to search results
         srh::Prio prio;                     ///< its priority
+        unsigned nestLevel = 0;             ///< US = U + S: US level 0, U/S level 1
         /// @warning in reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const
             { return x.prio <=> prio; }
@@ -112,6 +113,11 @@ namespace uc {
             || (cp >= 0xFDD0 && cp <= 0xFDEF);
     }
 
+    struct DecodedEmoji {
+        size_t index;
+        const uc::LibNode* node;
+    };
+
     constexpr long long NO_CODE = -1;
     SingleResult findCode(unsigned long long ull);
     SingleResult findStrCode(QStringView what, int base, long long& code);
@@ -121,4 +127,6 @@ namespace uc {
     bool isMnemoChar(char32_t cp);
     bool isMnemoChar(QStringView x);
     std::u8string toMnemo(const QString& x);
+    void ensureEmojiSearch();
+    SafeVector<DecodedEmoji> decodeEmoji(std::u32string_view s);
 }

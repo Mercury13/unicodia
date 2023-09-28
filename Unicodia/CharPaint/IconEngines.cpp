@@ -392,7 +392,6 @@ ie::Node::Node(const PixSource& aSource, const uc::LibNode& aNode)
 void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     auto clFg = source.winColor();
-    drawCharBorder(painter, rect, clFg);
     // draw char
     switch (node.value.length()) {
     case 0:
