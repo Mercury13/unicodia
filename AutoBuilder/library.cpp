@@ -57,17 +57,23 @@ namespace {
 
     constexpr char32_t VS16 = 0xFE0F;
 
-    bool isSearchable(std::u32string_view emoji)
+    enum class SearchLevel {
+        HIDDEN, DECODEABLE, SEARCHABLE
+    };
+
+    SearchLevel searchLevel(std::u32string_view emoji)
     {
-        // 1-character → BAD!
+        // 1-character → HIDDEN
         if (emoji.length() <= 1)
-            return false;
-        // VS16 → BAD!
+            return SearchLevel::HIDDEN;
+        // VS16 → HIDDEN
         if (emoji.length() == 2 && emoji[1] == VS16)
-            return false;
+            return SearchLevel::HIDDEN;
+        // The rest are at least decodeable.
         // Unsearchable are: skins, directions
         auto index = emoji.find_first_of(UNSEARCHABLE_EMOJI);
-        return (index == std::u32string_view::npos);
+        return (index == std::u32string_view::npos)
+                ? SearchLevel::SEARCHABLE : SearchLevel::DECODEABLE;
     }
 
     template<typename T, unsigned N, typename... REST>
@@ -196,8 +202,16 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                     if (mainCode != 0)
                         r.misrenders.insert(mainCode);
                 }
-                if (isSearchable(newItem.value))
-                    newItem.flags |= uc::Lfg::SEARCHABLE;
+                auto level = searchLevel(newItem.value);
+                switch (level) {
+                case SearchLevel::SEARCHABLE:
+                    newItem.flags |= (uc::Lfg::SEARCHABLE | uc::Lfg::DECODEABLE);
+                    break;
+                case SearchLevel::DECODEABLE:
+                    newItem.flags |= uc::Lfg::DECODEABLE;
+                    break;
+                case SearchLevel::HIDDEN: ;
+                }
                 ++r.count;
             }
         }

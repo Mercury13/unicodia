@@ -62,6 +62,7 @@ namespace uc {
         HAS_TEXT      = 1<<4,   ///< [+] object has text
         MISRENDER     = 1<<5,   ///< [+] emoji misrenders are possible
         SEARCHABLE    = 1<<6,   ///< [+] emoji is searchable. Unsearchable are single-character, VS16, race/direction
+        DECODEABLE    = 1<<7,   ///< [+] emoji is decodeable. Undecodeable are single-character, VS16
     };
     using Lfgs = Flags<Lfg>;
 
