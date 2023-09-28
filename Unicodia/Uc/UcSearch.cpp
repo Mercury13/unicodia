@@ -295,7 +295,7 @@ void uc::ensureEmojiSearch()
 
     for (auto& node : allLibNodes()) {
         // Build trie
-        if (node.flags.have(uc::Lfg::SEARCHABLE)) {
+        if (node.flags.have(uc::Lfg::DECODEABLE)) {
             auto* p = &trieRoot;
             for (auto c : node.value) {
                 p = &p->children[c];

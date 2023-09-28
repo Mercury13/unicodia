@@ -644,9 +644,9 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 // Library node
                 std::u32string_view val = line.node->value;
                 static constexpr auto SHORTLEN = 2;
-                bool needShort = (val.length() > SHORTLEN && line.triggerName.empty());
+                bool needShort = (val.length() > SHORTLEN && !line.triggerName.empty());
                 if (needShort) {
-                    val = val.substr(SHORTLEN);
+                    val = val.substr(0, SHORTLEN);
                     auto n = 0;
                     for (auto c : val)
                         n = uc::appendUPLUS(buf, n, c);
