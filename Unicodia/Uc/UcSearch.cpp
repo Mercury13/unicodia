@@ -4,6 +4,9 @@
 // STL
 #include <unordered_set>
 
+// Libs
+#include "u_Qstrings.h"
+
 // Unicode
 #include "UcCp.h"
 #include "UcData.h"
@@ -450,6 +453,7 @@ uc::MultiResult uc::doSearch(QString what)
                         // At last found
                         auto& bk = r.emplace_back(where2->second.result);
                         bk.prio.high = uc::HIPRIO_FLAG;
+                        bk.giveTriggerName(str::toU8(upCase));
                     }
                 }
             }

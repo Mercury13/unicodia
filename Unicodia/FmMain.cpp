@@ -1806,7 +1806,7 @@ void FmMain::focusSearch()
 
 void FmMain::searchEnterPressed(int index)
 {
-    auto line = searchModel.lineAt(index);
+    auto& line = searchModel.lineAt(index);
     if (line.cp) {
         goToCp(line.cp->subj);
     } else if (line.node) {

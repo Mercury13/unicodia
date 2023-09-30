@@ -70,6 +70,7 @@ namespace uc {
         std::u8string_view triggerName;     ///< name that triggered inclusion to search results
         srh::Prio prio;                     ///< its priority
         unsigned nestLevel = 0;             ///< US = U + S: US level 0, U/S level 1
+        std::unique_ptr<std::u8string> ownedString {};
         /// @warning in reverse order!!
         std::partial_ordering operator <=>(const SearchLine& x) const
             { return x.prio <=> prio; }
@@ -85,6 +86,12 @@ namespace uc {
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr)
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn), prio(pr) {}
+
+        void giveTriggerName(std::u8string r)
+        {
+            ownedString = std::make_unique<std::u8string>(std::move(r));
+            triggerName = *ownedString;
+        }
     };
 
     struct SingleResult : public MiniLine {
