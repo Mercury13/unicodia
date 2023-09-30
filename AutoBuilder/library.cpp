@@ -66,9 +66,9 @@ namespace {
         // 1-character → HIDDEN
         if (emoji.length() <= 1)
             return SearchLevel::HIDDEN;
-        // VS16 → HIDDEN
+        // VS16 — decodeable
         if (emoji.length() == 2 && emoji[1] == VS16)
-            return SearchLevel::HIDDEN;
+            return SearchLevel::DECODEABLE;
         // The rest are at least decodeable.
         // Unsearchable are: skins, directions
         auto index = emoji.find_first_of(UNSEARCHABLE_EMOJI);

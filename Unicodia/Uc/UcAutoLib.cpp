@@ -57,7 +57,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F929", u8"star-struck", 20, 0, -1, Lfg(1), EcVersion::E5_0 },   // 51
 { U"\U0001F618", u8"face blowing a kiss", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 52
 { U"\U0001F617", u8"kissing face", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 53
-{ U"\u263A\uFE0F", u8"smiling face", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 54
+{ U"\u263A\uFE0F", u8"smiling face", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 54
 { U"\U0001F61A", u8"kissing face with closed eyes", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 55
 { U"\U0001F619", u8"kissing face with smiling eyes", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 56
 { U"\U0001F972", u8"smiling face with tear", 20, 0, -1, Lfg(1), EcVersion::E13_0 },   // 57
@@ -117,7 +117,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001FAE4", u8"face with diagonal mouth", 28, 0, -1, Lfg(1), EcVersion::E14_0 },   // 111
 { U"\U0001F61F", u8"worried face", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 112
 { U"\U0001F641", u8"slightly frowning face", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 113
-{ U"\u2639\uFE0F", u8"frowning face", 28, 0, -1, Lfg(1), EcVersion::E0_7 },   // 114
+{ U"\u2639\uFE0F", u8"frowning face", 28, 0, -1, Lfg(129), EcVersion::E0_7 },   // 114
 { U"\U0001F62E", u8"face with open mouth", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 115
 { U"\U0001F62F", u8"hushed face", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 116
 { U"\U0001F632", u8"astonished face", 28, 0, -1, Lfg(1), EcVersion::E0_6 },   // 117
@@ -146,7 +146,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F608", u8"smiling face with horns", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 140
 { U"\U0001F47F", u8"angry face with horns", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 141
 { U"\U0001F480", u8"skull", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 142
-{ U"\u2620\uFE0F", u8"skull and crossbones", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 143
+{ U"\u2620\uFE0F", u8"skull and crossbones", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 143
 { U"\U0001F4A9", u8"pile of poo", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 144
 { U"\U0001F921", u8"clown face", 30, 0, -1, Lfg(1), EcVersion::E3_0 },   // 145
 { U"\U0001F479", u8"ogre", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 146
@@ -176,11 +176,11 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F49E", u8"revolving hearts", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 170
 { U"\U0001F495", u8"two hearts", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 171
 { U"\U0001F49F", u8"heart decoration", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 172
-{ U"\u2763\uFE0F", u8"heart exclamation", 33, 0, -1, Lfg(1), EcVersion::E1_0 },   // 173
+{ U"\u2763\uFE0F", u8"heart exclamation", 33, 0, -1, Lfg(129), EcVersion::E1_0 },   // 173
 { U"\U0001F494", u8"broken heart", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 174
 { U"\u2764\uFE0F\u200D\U0001F525", u8"heart on fire", 33, 0, -1, Lfg(193), EcVersion::E13_1 },   // 175
 { U"\u2764\uFE0F\u200D\U0001FA79", u8"mending heart", 33, 0, -1, Lfg(193), EcVersion::E13_1 },   // 176
-{ U"\u2764\uFE0F", u8"red heart", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 177
+{ U"\u2764\uFE0F", u8"red heart", 33, 0, -1, Lfg(129), EcVersion::E0_6 },   // 177
 { U"\U0001FA77", u8"pink heart", 33, 0, -1, Lfg(1), EcVersion::E15_0 },   // 178
 { U"\U0001F9E1", u8"orange heart", 33, 0, -1, Lfg(1), EcVersion::E5_0 },   // 179
 { U"\U0001F49B", u8"yellow heart", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 180
@@ -199,11 +199,11 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4AB", u8"dizzy", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 193
 { U"\U0001F4A6", u8"sweat droplets", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 194
 { U"\U0001F4A8", u8"dashing away", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 195
-{ U"\U0001F573\uFE0F", u8"hole", 34, 0, -1, Lfg(1), EcVersion::E0_7 },   // 196
+{ U"\U0001F573\uFE0F", u8"hole", 34, 0, -1, Lfg(129), EcVersion::E0_7 },   // 196
 { U"\U0001F4AC", u8"speech balloon", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 197
 { U"\U0001F441\uFE0F\u200D\U0001F5E8\uFE0F", u8"eye in speech bubble", 34, 0, -1, Lfg(193), EcVersion::E2_0 },   // 198
-{ U"\U0001F5E8\uFE0F", u8"left speech bubble", 34, 0, -1, Lfg(1), EcVersion::E2_0 },   // 199
-{ U"\U0001F5EF\uFE0F", u8"right anger bubble", 34, 0, -1, Lfg(1), EcVersion::E0_7 },   // 200
+{ U"\U0001F5E8\uFE0F", u8"left speech bubble", 34, 0, -1, Lfg(129), EcVersion::E2_0 },   // 199
+{ U"\U0001F5EF\uFE0F", u8"right anger bubble", 34, 0, -1, Lfg(129), EcVersion::E0_7 },   // 200
 { U"\U0001F4AD", u8"thought balloon", 34, 0, -1, Lfg(1), EcVersion::E1_0 },   // 201
 { U"\U0001F4A4", u8"ZZZ", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 202
 { {}, u8"hand-fingers-open", 10, 66, 219, Lfg(8), EcVersion::NONE },   // 203
@@ -234,7 +234,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F91A\U0001F3FD", u8"raised back of hand: medium skin tone", 203, 0, -1, Lfg(129), EcVersion::E3_0 },   // 228
 { U"\U0001F91A\U0001F3FE", u8"raised back of hand: medium-dark skin tone", 203, 0, -1, Lfg(129), EcVersion::E3_0 },   // 229
 { U"\U0001F91A\U0001F3FF", u8"raised back of hand: dark skin tone", 203, 0, -1, Lfg(129), EcVersion::E3_0 },   // 230
-{ U"\U0001F590\uFE0F", u8"hand with fingers splayed", 203, 0, -1, Lfg(1), EcVersion::E0_7 },   // 231
+{ U"\U0001F590\uFE0F", u8"hand with fingers splayed", 203, 0, -1, Lfg(129), EcVersion::E0_7 },   // 231
 { U"\U0001F590\U0001F3FB", u8"hand with fingers splayed: light skin tone", 203, 0, -1, Lfg(129), EcVersion::E1_0 },   // 232
 { U"\U0001F590\U0001F3FC", u8"hand with fingers splayed: medium-light skin tone", 203, 0, -1, Lfg(129), EcVersion::E1_0 },   // 233
 { U"\U0001F590\U0001F3FD", u8"hand with fingers splayed: medium skin tone", 203, 0, -1, Lfg(129), EcVersion::E1_0 },   // 234
@@ -306,7 +306,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F90F\U0001F3FD", u8"pinching hand: medium skin tone", 204, 0, -1, Lfg(129), EcVersion::E12_0 },   // 300
 { U"\U0001F90F\U0001F3FE", u8"pinching hand: medium-dark skin tone", 204, 0, -1, Lfg(129), EcVersion::E12_0 },   // 301
 { U"\U0001F90F\U0001F3FF", u8"pinching hand: dark skin tone", 204, 0, -1, Lfg(129), EcVersion::E12_0 },   // 302
-{ U"\u270C\uFE0F", u8"victory hand", 204, 0, -1, Lfg(1), EcVersion::E0_6 },   // 303
+{ U"\u270C\uFE0F", u8"victory hand", 204, 0, -1, Lfg(129), EcVersion::E0_6 },   // 303
 { U"\u270C\U0001F3FB", u8"victory hand: light skin tone", 204, 0, -1, Lfg(129), EcVersion::E1_0 },   // 304
 { U"\u270C\U0001F3FC", u8"victory hand: medium-light skin tone", 204, 0, -1, Lfg(129), EcVersion::E1_0 },   // 305
 { U"\u270C\U0001F3FD", u8"victory hand: medium skin tone", 204, 0, -1, Lfg(129), EcVersion::E1_0 },   // 306
@@ -372,7 +372,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F447\U0001F3FD", u8"backhand index pointing down: medium skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 366
 { U"\U0001F447\U0001F3FE", u8"backhand index pointing down: medium-dark skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 367
 { U"\U0001F447\U0001F3FF", u8"backhand index pointing down: dark skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 368
-{ U"\u261D\uFE0F", u8"index pointing up", 205, 0, -1, Lfg(3), EcVersion::E0_6 },   // 369
+{ U"\u261D\uFE0F", u8"index pointing up", 205, 0, -1, Lfg(131), EcVersion::E0_6 },   // 369
 { U"\u261D\U0001F3FB", u8"index pointing up: light skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 370
 { U"\u261D\U0001F3FC", u8"index pointing up: medium-light skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 371
 { U"\u261D\U0001F3FD", u8"index pointing up: medium skin tone", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 372
@@ -482,7 +482,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F64F\U0001F3FD", u8"folded hands: medium skin tone", 207, 0, -1, Lfg(129), EcVersion::E1_0 },   // 476
 { U"\U0001F64F\U0001F3FE", u8"folded hands: medium-dark skin tone", 207, 0, -1, Lfg(129), EcVersion::E1_0 },   // 477
 { U"\U0001F64F\U0001F3FF", u8"folded hands: dark skin tone", 207, 0, -1, Lfg(129), EcVersion::E1_0 },   // 478
-{ U"\u270D\uFE0F", u8"writing hand", 208, 0, -1, Lfg(1), EcVersion::E0_7 },   // 479
+{ U"\u270D\uFE0F", u8"writing hand", 208, 0, -1, Lfg(129), EcVersion::E0_7 },   // 479
 { U"\u270D\U0001F3FB", u8"writing hand: light skin tone", 208, 0, -1, Lfg(129), EcVersion::E1_0 },   // 480
 { U"\u270D\U0001F3FC", u8"writing hand: medium-light skin tone", 208, 0, -1, Lfg(129), EcVersion::E1_0 },   // 481
 { U"\u270D\U0001F3FD", u8"writing hand: medium skin tone", 208, 0, -1, Lfg(129), EcVersion::E1_0 },   // 482
@@ -544,7 +544,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9B7", u8"tooth", 209, 0, -1, Lfg(1), EcVersion::E11_0 },   // 538
 { U"\U0001F9B4", u8"bone", 209, 0, -1, Lfg(1), EcVersion::E11_0 },   // 539
 { U"\U0001F440", u8"eyes", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 540
-{ U"\U0001F441\uFE0F", u8"eye", 209, 0, -1, Lfg(1), EcVersion::E0_7 },   // 541
+{ U"\U0001F441\uFE0F", u8"eye", 209, 0, -1, Lfg(129), EcVersion::E0_7 },   // 541
 { U"\U0001F445", u8"tongue", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 542
 { U"\U0001F444", u8"mouth", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 543
 { U"\U0001FAE6", u8"biting lip", 209, 0, -1, Lfg(1), EcVersion::E14_0 },   // 544
@@ -1202,7 +1202,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F46E\U0001F3FD\u200D\u2640\uFE0F", u8"woman police officer: medium skin tone", 212, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1196
 { U"\U0001F46E\U0001F3FE\u200D\u2640\uFE0F", u8"woman police officer: medium-dark skin tone", 212, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1197
 { U"\U0001F46E\U0001F3FF\u200D\u2640\uFE0F", u8"woman police officer: dark skin tone", 212, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1198
-{ U"\U0001F575\uFE0F", u8"detective", 212, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1199
+{ U"\U0001F575\uFE0F", u8"detective", 212, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1199
 { U"\U0001F575\U0001F3FB", u8"detective: light skin tone", 212, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1200
 { U"\U0001F575\U0001F3FC", u8"detective: medium-light skin tone", 212, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1201
 { U"\U0001F575\U0001F3FD", u8"detective: medium skin tone", 212, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1202
@@ -1827,7 +1827,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F57A\U0001F3FD", u8"man dancing: medium skin tone", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1821
 { U"\U0001F57A\U0001F3FE", u8"man dancing: medium-dark skin tone", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1822
 { U"\U0001F57A\U0001F3FF", u8"man dancing: dark skin tone", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1823
-{ U"\U0001F574\uFE0F", u8"person in suit levitating", 214, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1824
+{ U"\U0001F574\uFE0F", u8"person in suit levitating", 214, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1824
 { U"\U0001F574\U0001F3FB", u8"person in suit levitating: light skin tone", 214, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1825
 { U"\U0001F574\U0001F3FC", u8"person in suit levitating: medium-light skin tone", 214, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1826
 { U"\U0001F574\U0001F3FD", u8"person in suit levitating: medium skin tone", 214, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1827
@@ -1879,14 +1879,14 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3C7\U0001F3FD", u8"horse racing: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1873
 { U"\U0001F3C7\U0001F3FE", u8"horse racing: medium-dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1874
 { U"\U0001F3C7\U0001F3FF", u8"horse racing: dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1875
-{ U"\u26F7\uFE0F", u8"skier", 215, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1876
+{ U"\u26F7\uFE0F", u8"skier", 215, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1876
 { U"\U0001F3C2", u8"snowboarder", 215, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1877
 { U"\U0001F3C2\U0001F3FB", u8"snowboarder: light skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1878
 { U"\U0001F3C2\U0001F3FC", u8"snowboarder: medium-light skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1879
 { U"\U0001F3C2\U0001F3FD", u8"snowboarder: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1880
 { U"\U0001F3C2\U0001F3FE", u8"snowboarder: medium-dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1881
 { U"\U0001F3C2\U0001F3FF", u8"snowboarder: dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1882
-{ U"\U0001F3CC\uFE0F", u8"person golfing", 215, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1883
+{ U"\U0001F3CC\uFE0F", u8"person golfing", 215, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1883
 { U"\U0001F3CC\U0001F3FB", u8"person golfing: light skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1884
 { U"\U0001F3CC\U0001F3FC", u8"person golfing: medium-light skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1885
 { U"\U0001F3CC\U0001F3FD", u8"person golfing: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1886
@@ -1958,7 +1958,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3CA\U0001F3FD\u200D\u2640\uFE0F", u8"woman swimming: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1952
 { U"\U0001F3CA\U0001F3FE\u200D\u2640\uFE0F", u8"woman swimming: medium-dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1953
 { U"\U0001F3CA\U0001F3FF\u200D\u2640\uFE0F", u8"woman swimming: dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1954
-{ U"\u26F9\uFE0F", u8"person bouncing ball", 215, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1955
+{ U"\u26F9\uFE0F", u8"person bouncing ball", 215, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1955
 { U"\u26F9\U0001F3FB", u8"person bouncing ball: light skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1956
 { U"\u26F9\U0001F3FC", u8"person bouncing ball: medium-light skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1957
 { U"\u26F9\U0001F3FD", u8"person bouncing ball: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1958
@@ -1976,7 +1976,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u26F9\U0001F3FD\u200D\u2640\uFE0F", u8"woman bouncing ball: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1970
 { U"\u26F9\U0001F3FE\u200D\u2640\uFE0F", u8"woman bouncing ball: medium-dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1971
 { U"\u26F9\U0001F3FF\u200D\u2640\uFE0F", u8"woman bouncing ball: dark skin tone", 215, 0, -1, Lfg(129), EcVersion::E4_0 },   // 1972
-{ U"\U0001F3CB\uFE0F", u8"person lifting weights", 215, 0, -1, Lfg(1), EcVersion::E0_7 },   // 1973
+{ U"\U0001F3CB\uFE0F", u8"person lifting weights", 215, 0, -1, Lfg(129), EcVersion::E0_7 },   // 1973
 { U"\U0001F3CB\U0001F3FB", u8"person lifting weights: light skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1974
 { U"\U0001F3CB\U0001F3FC", u8"person lifting weights: medium-light skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1975
 { U"\U0001F3CB\U0001F3FD", u8"person lifting weights: medium skin tone", 215, 0, -1, Lfg(129), EcVersion::E2_0 },   // 1976
@@ -2472,7 +2472,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F469\u200D\U0001F467", u8"family: woman, girl", 217, 0, -1, Lfg(193), EcVersion::E4_0 },   // 2466
 { U"\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, girl, boy", 217, 0, -1, Lfg(193), EcVersion::E4_0 },   // 2467
 { U"\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, girl, girl", 217, 0, -1, Lfg(193), EcVersion::E4_0 },   // 2468
-{ U"\U0001F5E3\uFE0F", u8"speaking head", 218, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2469
+{ U"\U0001F5E3\uFE0F", u8"speaking head", 218, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2469
 { U"\U0001F464", u8"bust in silhouette", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2470
 { U"\U0001F465", u8"busts in silhouette", 218, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2471
 { U"\U0001FAC2", u8"people hugging", 218, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2472
@@ -2553,7 +2553,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F439", u8"hamster", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2547
 { U"\U0001F430", u8"rabbit face", 2490, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2548
 { U"\U0001F407", u8"rabbit", 2490, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2549
-{ U"\U0001F43F\uFE0F", u8"chipmunk", 2490, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2550
+{ U"\U0001F43F\uFE0F", u8"chipmunk", 2490, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2550
 { U"\U0001F9AB", u8"beaver", 2490, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2551
 { U"\U0001F994", u8"hedgehog", 2490, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2552
 { U"\U0001F987", u8"bat", 2490, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2553
@@ -2575,7 +2575,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F425", u8"front-facing baby chick", 2491, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2569
 { U"\U0001F426", u8"bird", 2491, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2570
 { U"\U0001F427", u8"penguin", 2491, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2571
-{ U"\U0001F54A\uFE0F", u8"dove", 2491, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2572
+{ U"\U0001F54A\uFE0F", u8"dove", 2491, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2572
 { U"\U0001F985", u8"eagle", 2491, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2573
 { U"\U0001F986", u8"duck", 2491, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2574
 { U"\U0001F9A2", u8"swan", 2491, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2575
@@ -2619,8 +2619,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F41E", u8"lady beetle", 2495, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2613
 { U"\U0001F997", u8"cricket", 2495, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2614
 { U"\U0001FAB3", u8"cockroach", 2495, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2615
-{ U"\U0001F577\uFE0F", u8"spider", 2495, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2616
-{ U"\U0001F578\uFE0F", u8"spider web", 2495, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2617
+{ U"\U0001F577\uFE0F", u8"spider", 2495, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2616
+{ U"\U0001F578\uFE0F", u8"spider web", 2495, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2617
 { U"\U0001F982", u8"scorpion", 2495, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2618
 { U"\U0001F99F", u8"mosquito", 2495, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2619
 { U"\U0001FAB0", u8"fly", 2495, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2620
@@ -2630,7 +2630,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F338", u8"cherry blossom", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2624
 { U"\U0001F4AE", u8"white flower", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2625
 { U"\U0001FAB7", u8"lotus", 2496, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2626
-{ U"\U0001F3F5\uFE0F", u8"rosette", 2496, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2627
+{ U"\U0001F3F5\uFE0F", u8"rosette", 2496, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2627
 { U"\U0001F339", u8"rose", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2628
 { U"\U0001F940", u8"wilted flower", 2496, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2629
 { U"\U0001F33A", u8"hibiscus", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2630
@@ -2646,7 +2646,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F335", u8"cactus", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2640
 { U"\U0001F33E", u8"sheaf of rice", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2641
 { U"\U0001F33F", u8"herb", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2642
-{ U"\u2618\uFE0F", u8"shamrock", 2497, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2643
+{ U"\u2618\uFE0F", u8"shamrock", 2497, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2643
 { U"\U0001F340", u8"four leaf clover", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2644
 { U"\U0001F341", u8"maple leaf", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2645
 { U"\U0001F342", u8"fallen leaf", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2646
@@ -2687,7 +2687,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F954", u8"potato", 2652, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2681
 { U"\U0001F955", u8"carrot", 2652, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2682
 { U"\U0001F33D", u8"ear of corn", 2652, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2683
-{ U"\U0001F336\uFE0F", u8"hot pepper", 2652, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2684
+{ U"\U0001F336\uFE0F", u8"hot pepper", 2652, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2684
 { U"\U0001FAD1", u8"bell pepper", 2652, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2685
 { U"\U0001F952", u8"cucumber", 2652, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2686
 { U"\U0001F96C", u8"leafy green", 2652, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2687
@@ -2791,7 +2791,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9C9", u8"mate", 2657, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2785
 { U"\U0001F9CA", u8"ice", 2657, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2786
 { U"\U0001F962", u8"chopsticks", 2658, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2787
-{ U"\U0001F37D\uFE0F", u8"fork and knife with plate", 2658, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2788
+{ U"\U0001F37D\uFE0F", u8"fork and knife with plate", 2658, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2788
 { U"\U0001F374", u8"fork and knife", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2789
 { U"\U0001F944", u8"spoon", 2658, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2790
 { U"\U0001F52A", u8"kitchen knife", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2791
@@ -2812,27 +2812,27 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F30E", u8"globe showing Americas", 2794, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2806
 { U"\U0001F30F", u8"globe showing Asia-Australia", 2794, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2807
 { U"\U0001F310", u8"globe with meridians", 2794, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2808
-{ U"\U0001F5FA\uFE0F", u8"world map", 2794, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2809
+{ U"\U0001F5FA\uFE0F", u8"world map", 2794, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2809
 { U"\U0001F5FE", u8"map of Japan", 2794, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2810
 { U"\U0001F9ED", u8"compass", 2794, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2811
-{ U"\U0001F3D4\uFE0F", u8"snow-capped mountain", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2812
-{ U"\u26F0\uFE0F", u8"mountain", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2813
+{ U"\U0001F3D4\uFE0F", u8"snow-capped mountain", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2812
+{ U"\u26F0\uFE0F", u8"mountain", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2813
 { U"\U0001F30B", u8"volcano", 2795, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2814
 { U"\U0001F5FB", u8"mount Fuji", 2795, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2815
-{ U"\U0001F3D5\uFE0F", u8"camping", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2816
-{ U"\U0001F3D6\uFE0F", u8"beach with umbrella", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2817
-{ U"\U0001F3DC\uFE0F", u8"desert", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2818
-{ U"\U0001F3DD\uFE0F", u8"desert island", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2819
-{ U"\U0001F3DE\uFE0F", u8"national park", 2795, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2820
-{ U"\U0001F3DF\uFE0F", u8"stadium", 2796, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2821
-{ U"\U0001F3DB\uFE0F", u8"classical building", 2796, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2822
-{ U"\U0001F3D7\uFE0F", u8"building construction", 2796, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2823
+{ U"\U0001F3D5\uFE0F", u8"camping", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2816
+{ U"\U0001F3D6\uFE0F", u8"beach with umbrella", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2817
+{ U"\U0001F3DC\uFE0F", u8"desert", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2818
+{ U"\U0001F3DD\uFE0F", u8"desert island", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2819
+{ U"\U0001F3DE\uFE0F", u8"national park", 2795, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2820
+{ U"\U0001F3DF\uFE0F", u8"stadium", 2796, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2821
+{ U"\U0001F3DB\uFE0F", u8"classical building", 2796, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2822
+{ U"\U0001F3D7\uFE0F", u8"building construction", 2796, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2823
 { U"\U0001F9F1", u8"brick", 2796, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2824
 { U"\U0001FAA8", u8"rock", 2796, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2825
 { U"\U0001FAB5", u8"wood", 2796, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2826
 { U"\U0001F6D6", u8"hut", 2796, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2827
-{ U"\U0001F3D8\uFE0F", u8"houses", 2796, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2828
-{ U"\U0001F3DA\uFE0F", u8"derelict house", 2796, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2829
+{ U"\U0001F3D8\uFE0F", u8"houses", 2796, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2828
+{ U"\U0001F3DA\uFE0F", u8"derelict house", 2796, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2829
 { U"\U0001F3E0", u8"house", 2796, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2830
 { U"\U0001F3E1", u8"house with garden", 2796, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2831
 { U"\U0001F3E2", u8"office building", 2796, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2832
@@ -2855,19 +2855,19 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F54C", u8"mosque", 2797, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2849
 { U"\U0001F6D5", u8"Hindu temple", 2797, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2850
 { U"\U0001F54D", u8"synagogue", 2797, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2851
-{ U"\u26E9\uFE0F", u8"Shinto shrine", 2797, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2852
+{ U"\u26E9\uFE0F", u8"Shinto shrine", 2797, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2852
 { U"\U0001F54B", u8"Kaaba", 2797, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2853
 { U"\u26F2", u8"fountain", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2854
 { U"\u26FA", u8"tent", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2855
 { U"\U0001F301", u8"foggy", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2856
 { U"\U0001F303", u8"night with stars", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2857
-{ U"\U0001F3D9\uFE0F", u8"cityscape", 2798, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2858
+{ U"\U0001F3D9\uFE0F", u8"cityscape", 2798, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2858
 { U"\U0001F304", u8"sunrise over mountains", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2859
 { U"\U0001F305", u8"sunrise", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2860
 { U"\U0001F306", u8"cityscape at dusk", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2861
 { U"\U0001F307", u8"sunset", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2862
 { U"\U0001F309", u8"bridge at night", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2863
-{ U"\u2668\uFE0F", u8"hot springs", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2864
+{ U"\u2668\uFE0F", u8"hot springs", 2798, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2864
 { U"\U0001F3A0", u8"carousel horse", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2865
 { U"\U0001F6DD", u8"playground slide", 2798, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2866
 { U"\U0001F3A1", u8"Ferris wheel", 2798, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2867
@@ -2903,8 +2903,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F69A", u8"delivery truck", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2897
 { U"\U0001F69B", u8"articulated lorry", 2799, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2898
 { U"\U0001F69C", u8"tractor", 2799, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2899
-{ U"\U0001F3CE\uFE0F", u8"racing car", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2900
-{ U"\U0001F3CD\uFE0F", u8"motorcycle", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2901
+{ U"\U0001F3CE\uFE0F", u8"racing car", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2900
+{ U"\U0001F3CD\uFE0F", u8"motorcycle", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2901
 { U"\U0001F6F5", u8"motor scooter", 2799, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2902
 { U"\U0001F9BD", u8"manual wheelchair", 2799, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2903
 { U"\U0001F9BC", u8"motorized wheelchair", 2799, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2904
@@ -2914,9 +2914,9 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6F9", u8"skateboard", 2799, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2908
 { U"\U0001F6FC", u8"roller skate", 2799, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2909
 { U"\U0001F68F", u8"bus stop", 2799, 0, -1, Lfg(33), EcVersion::E0_6 },   // 2910
-{ U"\U0001F6E3\uFE0F", u8"motorway", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2911
-{ U"\U0001F6E4\uFE0F", u8"railway track", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2912
-{ U"\U0001F6E2\uFE0F", u8"oil drum", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2913
+{ U"\U0001F6E3\uFE0F", u8"motorway", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2911
+{ U"\U0001F6E4\uFE0F", u8"railway track", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2912
+{ U"\U0001F6E2\uFE0F", u8"oil drum", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2913
 { U"\u26FD", u8"fuel pump", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2914
 { U"\U0001F6DE", u8"wheel", 2799, 0, -1, Lfg(33), EcVersion::E14_0 },   // 2915
 { U"\U0001F6A8", u8"police car light", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2916
@@ -2929,12 +2929,12 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\u26F5", u8"sailboat", 2800, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2923
 { U"\U0001F6F6", u8"canoe", 2800, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2924
 { U"\U0001F6A4", u8"speedboat", 2800, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2925
-{ U"\U0001F6F3\uFE0F", u8"passenger ship", 2800, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2926
-{ U"\u26F4\uFE0F", u8"ferry", 2800, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2927
-{ U"\U0001F6E5\uFE0F", u8"motor boat", 2800, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2928
+{ U"\U0001F6F3\uFE0F", u8"passenger ship", 2800, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2926
+{ U"\u26F4\uFE0F", u8"ferry", 2800, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2927
+{ U"\U0001F6E5\uFE0F", u8"motor boat", 2800, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2928
 { U"\U0001F6A2", u8"ship", 2800, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2929
-{ U"\u2708\uFE0F", u8"airplane", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2930
-{ U"\U0001F6E9\uFE0F", u8"small airplane", 2801, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2931
+{ U"\u2708\uFE0F", u8"airplane", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2930
+{ U"\U0001F6E9\uFE0F", u8"small airplane", 2801, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2931
 { U"\U0001F6EB", u8"airplane departure", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2932
 { U"\U0001F6EC", u8"airplane arrival", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2933
 { U"\U0001FA82", u8"parachute", 2801, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2934
@@ -2943,18 +2943,18 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F69F", u8"suspension railway", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2937
 { U"\U0001F6A0", u8"mountain cableway", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2938
 { U"\U0001F6A1", u8"aerial tramway", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2939
-{ U"\U0001F6F0\uFE0F", u8"satellite", 2801, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2940
+{ U"\U0001F6F0\uFE0F", u8"satellite", 2801, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2940
 { U"\U0001F680", u8"rocket", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2941
 { U"\U0001F6F8", u8"flying saucer", 2801, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2942
-{ U"\U0001F6CE\uFE0F", u8"bellhop bell", 2802, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2943
+{ U"\U0001F6CE\uFE0F", u8"bellhop bell", 2802, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2943
 { U"\U0001F9F3", u8"luggage", 2802, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2944
 { U"\u231B", u8"hourglass done", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2945
 { U"\u23F3", u8"hourglass not done", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2946
 { U"\u231A", u8"watch", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2947
 { U"\u23F0", u8"alarm clock", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2948
-{ U"\u23F1\uFE0F", u8"stopwatch", 2803, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2949
-{ U"\u23F2\uFE0F", u8"timer clock", 2803, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2950
-{ U"\U0001F570\uFE0F", u8"mantelpiece clock", 2803, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2951
+{ U"\u23F1\uFE0F", u8"stopwatch", 2803, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2949
+{ U"\u23F2\uFE0F", u8"timer clock", 2803, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2950
+{ U"\U0001F570\uFE0F", u8"mantelpiece clock", 2803, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2951
 { U"\U0001F55B", u8"twelve o’clock", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2952
 { U"\U0001F567", u8"twelve-thirty", 2803, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2953
 { U"\U0001F550", u8"one o’clock", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2954
@@ -2991,8 +2991,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F31A", u8"new moon face", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2985
 { U"\U0001F31B", u8"first quarter moon face", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2986
 { U"\U0001F31C", u8"last quarter moon face", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2987
-{ U"\U0001F321\uFE0F", u8"thermometer", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2988
-{ U"\u2600\uFE0F", u8"sun", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2989
+{ U"\U0001F321\uFE0F", u8"thermometer", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2988
+{ U"\u2600\uFE0F", u8"sun", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2989
 { U"\U0001F31D", u8"full moon face", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2990
 { U"\U0001F31E", u8"sun with face", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2991
 { U"\U0001FA90", u8"ringed planet", 2804, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2992
@@ -3000,29 +3000,29 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F31F", u8"glowing star", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2994
 { U"\U0001F320", u8"shooting star", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2995
 { U"\U0001F30C", u8"Milky Way", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2996
-{ U"\u2601\uFE0F", u8"cloud", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2997
+{ U"\u2601\uFE0F", u8"cloud", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2997
 { U"\u26C5", u8"sun behind cloud", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2998
-{ U"\u26C8\uFE0F", u8"cloud with lightning and rain", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2999
-{ U"\U0001F324\uFE0F", u8"sun behind small cloud", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3000
-{ U"\U0001F325\uFE0F", u8"sun behind large cloud", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3001
-{ U"\U0001F326\uFE0F", u8"sun behind rain cloud", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3002
-{ U"\U0001F327\uFE0F", u8"cloud with rain", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3003
-{ U"\U0001F328\uFE0F", u8"cloud with snow", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3004
-{ U"\U0001F329\uFE0F", u8"cloud with lightning", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3005
-{ U"\U0001F32A\uFE0F", u8"tornado", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3006
-{ U"\U0001F32B\uFE0F", u8"fog", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3007
-{ U"\U0001F32C\uFE0F", u8"wind face", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3008
+{ U"\u26C8\uFE0F", u8"cloud with lightning and rain", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2999
+{ U"\U0001F324\uFE0F", u8"sun behind small cloud", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3000
+{ U"\U0001F325\uFE0F", u8"sun behind large cloud", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3001
+{ U"\U0001F326\uFE0F", u8"sun behind rain cloud", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3002
+{ U"\U0001F327\uFE0F", u8"cloud with rain", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3003
+{ U"\U0001F328\uFE0F", u8"cloud with snow", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3004
+{ U"\U0001F329\uFE0F", u8"cloud with lightning", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3005
+{ U"\U0001F32A\uFE0F", u8"tornado", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3006
+{ U"\U0001F32B\uFE0F", u8"fog", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3007
+{ U"\U0001F32C\uFE0F", u8"wind face", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3008
 { U"\U0001F300", u8"cyclone", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3009
 { U"\U0001F308", u8"rainbow", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3010
 { U"\U0001F302", u8"closed umbrella", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3011
-{ U"\u2602\uFE0F", u8"umbrella", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3012
+{ U"\u2602\uFE0F", u8"umbrella", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3012
 { U"\u2614", u8"umbrella with rain drops", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3013
-{ U"\u26F1\uFE0F", u8"umbrella on ground", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3014
+{ U"\u26F1\uFE0F", u8"umbrella on ground", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3014
 { U"\u26A1", u8"high voltage", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3015
-{ U"\u2744\uFE0F", u8"snowflake", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3016
-{ U"\u2603\uFE0F", u8"snowman", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3017
+{ U"\u2744\uFE0F", u8"snowflake", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3016
+{ U"\u2603\uFE0F", u8"snowman", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3017
 { U"\u26C4", u8"snowman without snow", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3018
-{ U"\u2604\uFE0F", u8"comet", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3019
+{ U"\u2604\uFE0F", u8"comet", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3019
 { U"\U0001F525", u8"fire", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3020
 { U"\U0001F4A7", u8"droplet", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3021
 { U"\U0001F30A", u8"water wave", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3022
@@ -3049,10 +3049,10 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9E7", u8"red envelope", 3023, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3043
 { U"\U0001F380", u8"ribbon", 3023, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3044
 { U"\U0001F381", u8"wrapped gift", 3023, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3045
-{ U"\U0001F397\uFE0F", u8"reminder ribbon", 3023, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3046
-{ U"\U0001F39F\uFE0F", u8"admission tickets", 3023, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3047
+{ U"\U0001F397\uFE0F", u8"reminder ribbon", 3023, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3046
+{ U"\U0001F39F\uFE0F", u8"admission tickets", 3023, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3047
 { U"\U0001F3AB", u8"ticket", 3023, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3048
-{ U"\U0001F396\uFE0F", u8"military medal", 3024, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3049
+{ U"\U0001F396\uFE0F", u8"military medal", 3024, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3049
 { U"\U0001F3C6", u8"trophy", 3024, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3050
 { U"\U0001F3C5", u8"sports medal", 3024, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3051
 { U"\U0001F947", u8"1st place medal", 3024, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3052
@@ -3078,7 +3078,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F94B", u8"martial arts uniform", 3025, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3072
 { U"\U0001F945", u8"goal net", 3025, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3073
 { U"\u26F3", u8"flag in hole", 3025, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3074
-{ U"\u26F8\uFE0F", u8"ice skate", 3025, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3075
+{ U"\u26F8\uFE0F", u8"ice skate", 3025, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3075
 { U"\U0001F3A3", u8"fishing pole", 3025, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3076
 { U"\U0001F93F", u8"diving mask", 3025, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3077
 { U"\U0001F3BD", u8"running shirt", 3025, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3078
@@ -3093,7 +3093,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F52E", u8"crystal ball", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3087
 { U"\U0001FA84", u8"magic wand", 3026, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3088
 { U"\U0001F3AE", u8"video game", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3089
-{ U"\U0001F579\uFE0F", u8"joystick", 3026, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3090
+{ U"\U0001F579\uFE0F", u8"joystick", 3026, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3090
 { U"\U0001F3B0", u8"slot machine", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3091
 { U"\U0001F3B2", u8"game die", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3092
 { U"\U0001F9E9", u8"puzzle piece", 3026, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3093
@@ -3101,16 +3101,16 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001FA85", u8"piñata", 3026, 0, -1, Lfg(33), EcVersion::E13_0 },   // 3095
 { U"\U0001FAA9", u8"mirror ball", 3026, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3096
 { U"\U0001FA86", u8"nesting dolls", 3026, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3097
-{ U"\u2660\uFE0F", u8"spade suit", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3098
-{ U"\u2665\uFE0F", u8"heart suit", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3099
-{ U"\u2666\uFE0F", u8"diamond suit", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3100
-{ U"\u2663\uFE0F", u8"club suit", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3101
-{ U"\u265F\uFE0F", u8"chess pawn", 3026, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3102
+{ U"\u2660\uFE0F", u8"spade suit", 3026, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3098
+{ U"\u2665\uFE0F", u8"heart suit", 3026, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3099
+{ U"\u2666\uFE0F", u8"diamond suit", 3026, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3100
+{ U"\u2663\uFE0F", u8"club suit", 3026, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3101
+{ U"\u265F\uFE0F", u8"chess pawn", 3026, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3102
 { U"\U0001F0CF", u8"joker", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3103
 { U"\U0001F004", u8"mahjong red dragon", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3104
 { U"\U0001F3B4", u8"flower playing cards", 3026, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3105
 { U"\U0001F3AD", u8"performing arts", 3027, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3106
-{ U"\U0001F5BC\uFE0F", u8"framed picture", 3027, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3107
+{ U"\U0001F5BC\uFE0F", u8"framed picture", 3027, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3107
 { U"\U0001F3A8", u8"artist palette", 3027, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3108
 { U"\U0001F9F5", u8"thread", 3027, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3109
 { U"\U0001FAA1", u8"sewing needle", 3027, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3110
@@ -3135,7 +3135,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { {}, u8"household", 16, 25, 3359, Lfg(8), EcVersion::NONE },   // 3129
 { {}, u8"other-object", 16, 9, 3384, Lfg(8), EcVersion::NONE },   // 3130
 { U"\U0001F453", u8"glasses", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3131
-{ U"\U0001F576\uFE0F", u8"sunglasses", 3113, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3132
+{ U"\U0001F576\uFE0F", u8"sunglasses", 3113, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3132
 { U"\U0001F97D", u8"goggles", 3113, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3133
 { U"\U0001F97C", u8"lab coat", 3113, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3134
 { U"\U0001F9BA", u8"safety vest", 3113, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3135
@@ -3158,7 +3158,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F45B", u8"purse", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3152
 { U"\U0001F45C", u8"handbag", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3153
 { U"\U0001F45D", u8"clutch bag", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3154
-{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3113, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3155
+{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3113, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3155
 { U"\U0001F392", u8"backpack", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3156
 { U"\U0001FA74", u8"thong sandal", 3113, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3157
 { U"\U0001F45E", u8"man’s shoe", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3158
@@ -3176,7 +3176,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F393", u8"graduation cap", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3170
 { U"\U0001F9E2", u8"billed cap", 3113, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3171
 { U"\U0001FA96", u8"military helmet", 3113, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3172
-{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3113, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3173
+{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3113, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3173
 { U"\U0001F4FF", u8"prayer beads", 3113, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3174
 { U"\U0001F484", u8"lipstick", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3175
 { U"\U0001F48D", u8"ring", 3113, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3176
@@ -3193,9 +3193,9 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F3BC", u8"musical score", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3187
 { U"\U0001F3B5", u8"musical note", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3188
 { U"\U0001F3B6", u8"musical notes", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3189
-{ U"\U0001F399\uFE0F", u8"studio microphone", 3115, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3190
-{ U"\U0001F39A\uFE0F", u8"level slider", 3115, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3191
-{ U"\U0001F39B\uFE0F", u8"control knobs", 3115, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3192
+{ U"\U0001F399\uFE0F", u8"studio microphone", 3115, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3190
+{ U"\U0001F39A\uFE0F", u8"level slider", 3115, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3191
+{ U"\U0001F39B\uFE0F", u8"control knobs", 3115, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3192
 { U"\U0001F3A4", u8"microphone", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3193
 { U"\U0001F3A7", u8"headphone", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3194
 { U"\U0001F4FB", u8"radio", 3115, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3195
@@ -3212,7 +3212,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001FA88", u8"flute", 3116, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3206
 { U"\U0001F4F1", u8"mobile phone", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3207
 { U"\U0001F4F2", u8"mobile phone with arrow", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3208
-{ U"\u260E\uFE0F", u8"telephone", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3209
+{ U"\u260E\uFE0F", u8"telephone", 3117, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3209
 { U"\U0001F4DE", u8"telephone receiver", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3210
 { U"\U0001F4DF", u8"pager", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3211
 { U"\U0001F4E0", u8"fax machine", 3117, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3212
@@ -3220,19 +3220,19 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001FAAB", u8"low battery", 3118, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3214
 { U"\U0001F50C", u8"electric plug", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3215
 { U"\U0001F4BB", u8"laptop", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3216
-{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3118, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3217
-{ U"\U0001F5A8\uFE0F", u8"printer", 3118, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3218
-{ U"\u2328\uFE0F", u8"keyboard", 3118, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3219
-{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3118, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3220
-{ U"\U0001F5B2\uFE0F", u8"trackball", 3118, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3221
+{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3118, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3217
+{ U"\U0001F5A8\uFE0F", u8"printer", 3118, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3218
+{ U"\u2328\uFE0F", u8"keyboard", 3118, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3219
+{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3118, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3220
+{ U"\U0001F5B2\uFE0F", u8"trackball", 3118, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3221
 { U"\U0001F4BD", u8"computer disk", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3222
 { U"\U0001F4BE", u8"floppy disk", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3223
 { U"\U0001F4BF", u8"optical disk", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3224
 { U"\U0001F4C0", u8"DVD", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3225
 { U"\U0001F9EE", u8"abacus", 3118, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3226
 { U"\U0001F3A5", u8"movie camera", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3227
-{ U"\U0001F39E\uFE0F", u8"film frames", 3119, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3228
-{ U"\U0001F4FD\uFE0F", u8"film projector", 3119, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3229
+{ U"\U0001F39E\uFE0F", u8"film frames", 3119, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3228
+{ U"\U0001F4FD\uFE0F", u8"film projector", 3119, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3229
 { U"\U0001F3AC", u8"clapper board", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3230
 { U"\U0001F4FA", u8"television", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3231
 { U"\U0001F4F7", u8"camera", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3232
@@ -3241,7 +3241,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4FC", u8"videocassette", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3235
 { U"\U0001F50D", u8"magnifying glass tilted left", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3236
 { U"\U0001F50E", u8"magnifying glass tilted right", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3237
-{ U"\U0001F56F\uFE0F", u8"candle", 3119, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3238
+{ U"\U0001F56F\uFE0F", u8"candle", 3119, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3238
 { U"\U0001F4A1", u8"light bulb", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3239
 { U"\U0001F526", u8"flashlight", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3240
 { U"\U0001F3EE", u8"red paper lantern", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3241
@@ -3259,10 +3259,10 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4DC", u8"scroll", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3253
 { U"\U0001F4C4", u8"page facing up", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3254
 { U"\U0001F4F0", u8"newspaper", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3255
-{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3120, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3256
+{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3120, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3256
 { U"\U0001F4D1", u8"bookmark tabs", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3257
 { U"\U0001F516", u8"bookmark", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3258
-{ U"\U0001F3F7\uFE0F", u8"label", 3120, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3259
+{ U"\U0001F3F7\uFE0F", u8"label", 3120, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3259
 { U"\U0001F4B0", u8"money bag", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3260
 { U"\U0001FA99", u8"coin", 3121, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3261
 { U"\U0001F4B4", u8"yen banknote", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3262
@@ -3273,7 +3273,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4B3", u8"credit card", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3267
 { U"\U0001F9FE", u8"receipt", 3121, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3268
 { U"\U0001F4B9", u8"chart increasing with yen", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3269
-{ U"\u2709\uFE0F", u8"envelope", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3270
+{ U"\u2709\uFE0F", u8"envelope", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3270
 { U"\U0001F4E7", u8"e-mail", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3271
 { U"\U0001F4E8", u8"incoming envelope", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3272
 { U"\U0001F4E9", u8"envelope with arrow", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3273
@@ -3285,22 +3285,22 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4EC", u8"open mailbox with raised flag", 3122, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3279
 { U"\U0001F4ED", u8"open mailbox with lowered flag", 3122, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3280
 { U"\U0001F4EE", u8"postbox", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3281
-{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3122, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3282
-{ U"\u270F\uFE0F", u8"pencil", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3283
-{ U"\u2712\uFE0F", u8"black nib", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3284
-{ U"\U0001F58B\uFE0F", u8"fountain pen", 3123, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3285
-{ U"\U0001F58A\uFE0F", u8"pen", 3123, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3286
-{ U"\U0001F58C\uFE0F", u8"paintbrush", 3123, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3287
-{ U"\U0001F58D\uFE0F", u8"crayon", 3123, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3288
+{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3122, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3282
+{ U"\u270F\uFE0F", u8"pencil", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3283
+{ U"\u2712\uFE0F", u8"black nib", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3284
+{ U"\U0001F58B\uFE0F", u8"fountain pen", 3123, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3285
+{ U"\U0001F58A\uFE0F", u8"pen", 3123, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3286
+{ U"\U0001F58C\uFE0F", u8"paintbrush", 3123, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3287
+{ U"\U0001F58D\uFE0F", u8"crayon", 3123, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3288
 { U"\U0001F4DD", u8"memo", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3289
 { U"\U0001F4BC", u8"briefcase", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3290
 { U"\U0001F4C1", u8"file folder", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3291
 { U"\U0001F4C2", u8"open file folder", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3292
-{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3293
+{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3293
 { U"\U0001F4C5", u8"calendar", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3294
 { U"\U0001F4C6", u8"tear-off calendar", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3295
-{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3296
-{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3297
+{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3296
+{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3297
 { U"\U0001F4C7", u8"card index", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3298
 { U"\U0001F4C8", u8"chart increasing", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3299
 { U"\U0001F4C9", u8"chart decreasing", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3300
@@ -3309,46 +3309,46 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F4CC", u8"pushpin", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3303
 { U"\U0001F4CD", u8"round pushpin", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3304
 { U"\U0001F4CE", u8"paperclip", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3305
-{ U"\U0001F587\uFE0F", u8"linked paperclips", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3306
+{ U"\U0001F587\uFE0F", u8"linked paperclips", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3306
 { U"\U0001F4CF", u8"straight ruler", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3307
 { U"\U0001F4D0", u8"triangular ruler", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3308
-{ U"\u2702\uFE0F", u8"scissors", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3309
-{ U"\U0001F5C3\uFE0F", u8"card file box", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3310
-{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3311
-{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3124, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3312
+{ U"\u2702\uFE0F", u8"scissors", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3309
+{ U"\U0001F5C3\uFE0F", u8"card file box", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3310
+{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3311
+{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3124, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3312
 { U"\U0001F512", u8"locked", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3313
 { U"\U0001F513", u8"unlocked", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3314
 { U"\U0001F50F", u8"locked with pen", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3315
 { U"\U0001F510", u8"locked with key", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3316
 { U"\U0001F511", u8"key", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3317
-{ U"\U0001F5DD\uFE0F", u8"old key", 3125, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3318
+{ U"\U0001F5DD\uFE0F", u8"old key", 3125, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3318
 { U"\U0001F528", u8"hammer", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3319
 { U"\U0001FA93", u8"axe", 3126, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3320
-{ U"\u26CF\uFE0F", u8"pick", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3321
-{ U"\u2692\uFE0F", u8"hammer and pick", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3322
-{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3323
-{ U"\U0001F5E1\uFE0F", u8"dagger", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3324
-{ U"\u2694\uFE0F", u8"crossed swords", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3325
+{ U"\u26CF\uFE0F", u8"pick", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3321
+{ U"\u2692\uFE0F", u8"hammer and pick", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3322
+{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3323
+{ U"\U0001F5E1\uFE0F", u8"dagger", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3324
+{ U"\u2694\uFE0F", u8"crossed swords", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3325
 { U"\U0001F4A3", u8"bomb", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3326
 { U"\U0001FA83", u8"boomerang", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3327
 { U"\U0001F3F9", u8"bow and arrow", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3328
-{ U"\U0001F6E1\uFE0F", u8"shield", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3329
+{ U"\U0001F6E1\uFE0F", u8"shield", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3329
 { U"\U0001FA9A", u8"carpentry saw", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3330
 { U"\U0001F527", u8"wrench", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3331
 { U"\U0001FA9B", u8"screwdriver", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3332
 { U"\U0001F529", u8"nut and bolt", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3333
-{ U"\u2699\uFE0F", u8"gear", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3334
-{ U"\U0001F5DC\uFE0F", u8"clamp", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3335
-{ U"\u2696\uFE0F", u8"balance scale", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3336
+{ U"\u2699\uFE0F", u8"gear", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3334
+{ U"\U0001F5DC\uFE0F", u8"clamp", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3335
+{ U"\u2696\uFE0F", u8"balance scale", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3336
 { U"\U0001F9AF", u8"white cane", 3126, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3337
 { U"\U0001F517", u8"link", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3338
 { U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3126, 0, -1, Lfg(193), EcVersion::E15_1 },   // 3339
-{ U"\u26D3\uFE0F", u8"chains", 3126, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3340
+{ U"\u26D3\uFE0F", u8"chains", 3126, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3340
 { U"\U0001FA9D", u8"hook", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3341
 { U"\U0001F9F0", u8"toolbox", 3126, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3342
 { U"\U0001F9F2", u8"magnet", 3126, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3343
 { U"\U0001FA9C", u8"ladder", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3344
-{ U"\u2697\uFE0F", u8"alembic", 3127, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3345
+{ U"\u2697\uFE0F", u8"alembic", 3127, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3345
 { U"\U0001F9EA", u8"test tube", 3127, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3346
 { U"\U0001F9EB", u8"Petri dish", 3127, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3347
 { U"\U0001F9EC", u8"DNA", 3127, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3348
@@ -3366,8 +3366,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6D7", u8"elevator", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3360
 { U"\U0001FA9E", u8"mirror", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3361
 { U"\U0001FA9F", u8"window", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3362
-{ U"\U0001F6CF\uFE0F", u8"bed", 3129, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3363
-{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3129, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3364
+{ U"\U0001F6CF\uFE0F", u8"bed", 3129, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3363
+{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3129, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3364
 { U"\U0001FA91", u8"chair", 3129, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3365
 { U"\U0001F6BD", u8"toilet", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3366
 { U"\U0001FAA0", u8"plunger", 3129, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3367
@@ -3388,9 +3388,9 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F9EF", u8"fire extinguisher", 3129, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3382
 { U"\U0001F6D2", u8"shopping cart", 3129, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3383
 { U"\U0001F6AC", u8"cigarette", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3384
-{ U"\u26B0\uFE0F", u8"coffin", 3130, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3385
+{ U"\u26B0\uFE0F", u8"coffin", 3130, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3385
 { U"\U0001FAA6", u8"headstone", 3130, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3386
-{ U"\u26B1\uFE0F", u8"funeral urn", 3130, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3387
+{ U"\u26B1\uFE0F", u8"funeral urn", 3130, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3387
 { U"\U0001F9FF", u8"nazar amulet", 3130, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3388
 { U"\U0001FAAC", u8"hamsa", 3130, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3389
 { U"\U0001F5FF", u8"moai", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3390
@@ -3423,7 +3423,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6C3", u8"customs", 3393, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3417
 { U"\U0001F6C4", u8"baggage claim", 3393, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3418
 { U"\U0001F6C5", u8"left luggage", 3393, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3419
-{ U"\u26A0\uFE0F", u8"warning", 3394, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3420
+{ U"\u26A0\uFE0F", u8"warning", 3394, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3420
 { U"\U0001F6B8", u8"children crossing", 3394, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3421
 { U"\u26D4", u8"no entry", 3394, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3422
 { U"\U0001F6AB", u8"prohibited", 3394, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3423
@@ -3434,22 +3434,22 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6B7", u8"no pedestrians", 3394, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3428
 { U"\U0001F4F5", u8"no mobile phones", 3394, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3429
 { U"\U0001F51E", u8"no one under eighteen", 3394, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3430
-{ U"\u2622\uFE0F", u8"radioactive", 3394, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3431
-{ U"\u2623\uFE0F", u8"biohazard", 3394, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3432
-{ U"\u2B06\uFE0F", u8"up arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3433
-{ U"\u2197\uFE0F", u8"up-right arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3434
-{ U"\u27A1\uFE0F", u8"right arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3435
-{ U"\u2198\uFE0F", u8"down-right arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3436
-{ U"\u2B07\uFE0F", u8"down arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
-{ U"\u2199\uFE0F", u8"down-left arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3438
-{ U"\u2B05\uFE0F", u8"left arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3439
-{ U"\u2196\uFE0F", u8"up-left arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3440
-{ U"\u2195\uFE0F", u8"up-down arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3441
-{ U"\u2194\uFE0F", u8"left-right arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3442
-{ U"\u21A9\uFE0F", u8"right arrow curving left", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3443
-{ U"\u21AA\uFE0F", u8"left arrow curving right", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3444
-{ U"\u2934\uFE0F", u8"right arrow curving up", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3445
-{ U"\u2935\uFE0F", u8"right arrow curving down", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3446
+{ U"\u2622\uFE0F", u8"radioactive", 3394, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3431
+{ U"\u2623\uFE0F", u8"biohazard", 3394, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3432
+{ U"\u2B06\uFE0F", u8"up arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3433
+{ U"\u2197\uFE0F", u8"up-right arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3434
+{ U"\u27A1\uFE0F", u8"right arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3435
+{ U"\u2198\uFE0F", u8"down-right arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3436
+{ U"\u2B07\uFE0F", u8"down arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3437
+{ U"\u2199\uFE0F", u8"down-left arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3438
+{ U"\u2B05\uFE0F", u8"left arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3439
+{ U"\u2196\uFE0F", u8"up-left arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3440
+{ U"\u2195\uFE0F", u8"up-down arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3441
+{ U"\u2194\uFE0F", u8"left-right arrow", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3442
+{ U"\u21A9\uFE0F", u8"right arrow curving left", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3443
+{ U"\u21AA\uFE0F", u8"left arrow curving right", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3444
+{ U"\u2934\uFE0F", u8"right arrow curving up", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3445
+{ U"\u2935\uFE0F", u8"right arrow curving down", 3395, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3446
 { U"\U0001F503", u8"clockwise vertical arrows", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3447
 { U"\U0001F504", u8"counterclockwise arrows button", 3395, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3448
 { U"\U0001F519", u8"BACK arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3449
@@ -3458,15 +3458,15 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F51C", u8"SOON arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3452
 { U"\U0001F51D", u8"TOP arrow", 3395, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3453
 { U"\U0001F6D0", u8"place of worship", 3396, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3454
-{ U"\u269B\uFE0F", u8"atom symbol", 3396, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3455
-{ U"\U0001F549\uFE0F", u8"Om", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3456
-{ U"\u2721\uFE0F", u8"star of David", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3457
-{ U"\u2638\uFE0F", u8"wheel of dharma", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3458
-{ U"\u262F\uFE0F", u8"yin yang", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3459
-{ U"\u271D\uFE0F", u8"Latin cross", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3460
-{ U"\u2626\uFE0F", u8"Orthodox cross", 3396, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3461
-{ U"\u262A\uFE0F", u8"star and crescent", 3396, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3462
-{ U"\u262E\uFE0F", u8"peace symbol", 3396, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3463
+{ U"\u269B\uFE0F", u8"atom symbol", 3396, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3455
+{ U"\U0001F549\uFE0F", u8"Om", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3456
+{ U"\u2721\uFE0F", u8"star of David", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3457
+{ U"\u2638\uFE0F", u8"wheel of dharma", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3458
+{ U"\u262F\uFE0F", u8"yin yang", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3459
+{ U"\u271D\uFE0F", u8"Latin cross", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3460
+{ U"\u2626\uFE0F", u8"Orthodox cross", 3396, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3461
+{ U"\u262A\uFE0F", u8"star and crescent", 3396, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3462
+{ U"\u262E\uFE0F", u8"peace symbol", 3396, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3463
 { U"\U0001F54E", u8"menorah", 3396, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3464
 { U"\U0001F52F", u8"dotted six-pointed star", 3396, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3465
 { U"\U0001FAAF", u8"khanda", 3396, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3466
@@ -3486,21 +3486,21 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F500", u8"shuffle tracks button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3480
 { U"\U0001F501", u8"repeat button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3481
 { U"\U0001F502", u8"repeat single button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3482
-{ U"\u25B6\uFE0F", u8"play button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3483
+{ U"\u25B6\uFE0F", u8"play button", 3398, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3483
 { U"\u23E9", u8"fast-forward button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3484
-{ U"\u23ED\uFE0F", u8"next track button", 3398, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3485
-{ U"\u23EF\uFE0F", u8"play or pause button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3486
-{ U"\u25C0\uFE0F", u8"reverse button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3487
+{ U"\u23ED\uFE0F", u8"next track button", 3398, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3485
+{ U"\u23EF\uFE0F", u8"play or pause button", 3398, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3486
+{ U"\u25C0\uFE0F", u8"reverse button", 3398, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3487
 { U"\u23EA", u8"fast reverse button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3488
-{ U"\u23EE\uFE0F", u8"last track button", 3398, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3489
+{ U"\u23EE\uFE0F", u8"last track button", 3398, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3489
 { U"\U0001F53C", u8"upwards button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3490
 { U"\u23EB", u8"fast up button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3491
 { U"\U0001F53D", u8"downwards button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3492
 { U"\u23EC", u8"fast down button", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3493
-{ U"\u23F8\uFE0F", u8"pause button", 3398, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3494
-{ U"\u23F9\uFE0F", u8"stop button", 3398, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3495
-{ U"\u23FA\uFE0F", u8"record button", 3398, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3496
-{ U"\u23CF\uFE0F", u8"eject button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3497
+{ U"\u23F8\uFE0F", u8"pause button", 3398, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3494
+{ U"\u23F9\uFE0F", u8"stop button", 3398, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3495
+{ U"\u23FA\uFE0F", u8"record button", 3398, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3496
+{ U"\u23CF\uFE0F", u8"eject button", 3398, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3497
 { U"\U0001F3A6", u8"cinema", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3498
 { U"\U0001F505", u8"dim button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3499
 { U"\U0001F506", u8"bright button", 3398, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3500
@@ -3508,45 +3508,45 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6DC", u8"wireless", 3398, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3502
 { U"\U0001F4F3", u8"vibration mode", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3503
 { U"\U0001F4F4", u8"mobile phone off", 3398, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3504
-{ U"\u2640\uFE0F", u8"female sign", 3399, 0, -1, Lfg(1), EcVersion::E4_0 },   // 3505
-{ U"\u2642\uFE0F", u8"male sign", 3399, 0, -1, Lfg(1), EcVersion::E4_0 },   // 3506
-{ U"\u26A7\uFE0F", u8"transgender symbol", 3399, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3507
-{ U"\u2716\uFE0F", u8"multiply", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3508
+{ U"\u2640\uFE0F", u8"female sign", 3399, 0, -1, Lfg(129), EcVersion::E4_0 },   // 3505
+{ U"\u2642\uFE0F", u8"male sign", 3399, 0, -1, Lfg(129), EcVersion::E4_0 },   // 3506
+{ U"\u26A7\uFE0F", u8"transgender symbol", 3399, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3507
+{ U"\u2716\uFE0F", u8"multiply", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3508
 { U"\u2795", u8"plus", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3509
 { U"\u2796", u8"minus", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3510
 { U"\u2797", u8"divide", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3511
 { U"\U0001F7F0", u8"heavy equals sign", 3400, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3512
-{ U"\u267E\uFE0F", u8"infinity", 3400, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3513
-{ U"\u203C\uFE0F", u8"double exclamation mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3514
-{ U"\u2049\uFE0F", u8"exclamation question mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3515
+{ U"\u267E\uFE0F", u8"infinity", 3400, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3513
+{ U"\u203C\uFE0F", u8"double exclamation mark", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3514
+{ U"\u2049\uFE0F", u8"exclamation question mark", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3515
 { U"\u2753", u8"red question mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3516
 { U"\u2754", u8"white question mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3517
 { U"\u2755", u8"white exclamation mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3518
 { U"\u2757", u8"red exclamation mark", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3519
-{ U"\u3030\uFE0F", u8"wavy dash", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3520
+{ U"\u3030\uFE0F", u8"wavy dash", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3520
 { U"\U0001F4B1", u8"currency exchange", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3521
 { U"\U0001F4B2", u8"heavy dollar sign", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3522
-{ U"\u2695\uFE0F", u8"medical symbol", 3403, 0, -1, Lfg(1), EcVersion::E4_0 },   // 3523
-{ U"\u267B\uFE0F", u8"recycling symbol", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3524
-{ U"\u269C\uFE0F", u8"fleur-de-lis", 3403, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3525
+{ U"\u2695\uFE0F", u8"medical symbol", 3403, 0, -1, Lfg(129), EcVersion::E4_0 },   // 3523
+{ U"\u267B\uFE0F", u8"recycling symbol", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3524
+{ U"\u269C\uFE0F", u8"fleur-de-lis", 3403, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3525
 { U"\U0001F531", u8"trident emblem", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3526
 { U"\U0001F4DB", u8"name badge", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3527
 { U"\U0001F530", u8"Japanese symbol for beginner", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3528
 { U"\u2B55", u8"hollow red circle", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3529
 { U"\u2705", u8"check mark button", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3530
-{ U"\u2611\uFE0F", u8"check box with check", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3531
-{ U"\u2714\uFE0F", u8"check mark", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3532
+{ U"\u2611\uFE0F", u8"check box with check", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3531
+{ U"\u2714\uFE0F", u8"check mark", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3532
 { U"\u274C", u8"cross mark", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3533
 { U"\u274E", u8"cross mark button", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3534
 { U"\u27B0", u8"curly loop", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3535
 { U"\u27BF", u8"double curly loop", 3403, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3536
-{ U"\u303D\uFE0F", u8"part alternation mark", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3537
-{ U"\u2733\uFE0F", u8"eight-spoked asterisk", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3538
-{ U"\u2734\uFE0F", u8"eight-pointed star", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3539
-{ U"\u2747\uFE0F", u8"sparkle", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3540
-{ U"\u00A9\uFE0F", u8"copyright", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3541
-{ U"\u00AE\uFE0F", u8"registered", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3542
-{ U"\u2122\uFE0F", u8"trade mark", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3543
+{ U"\u303D\uFE0F", u8"part alternation mark", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3537
+{ U"\u2733\uFE0F", u8"eight-spoked asterisk", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3538
+{ U"\u2734\uFE0F", u8"eight-pointed star", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3539
+{ U"\u2747\uFE0F", u8"sparkle", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3540
+{ U"\u00A9\uFE0F", u8"copyright", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3541
+{ U"\u00AE\uFE0F", u8"registered", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3542
+{ U"\u2122\uFE0F", u8"trade mark", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3543
 { U"\u0023\uFE0F\u20E3", u8"keycap: #", 3404, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3544
 { U"\u002A\uFE0F\u20E3", u8"keycap: *", 3404, 0, -1, Lfg(193), EcVersion::E2_0 },   // 3545
 { U"\u0030\uFE0F\u20E3", u8"keycap: 0", 3404, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3546
@@ -3565,26 +3565,26 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F522", u8"input numbers", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3559
 { U"\U0001F523", u8"input symbols", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3560
 { U"\U0001F524", u8"input Latin letters", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3561
-{ U"\U0001F170\uFE0F", u8"A button (blood type)", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3562
+{ U"\U0001F170\uFE0F", u8"A button (blood type)", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3562
 { U"\U0001F18E", u8"AB button (blood type)", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3563
-{ U"\U0001F171\uFE0F", u8"B button (blood type)", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3564
+{ U"\U0001F171\uFE0F", u8"B button (blood type)", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3564
 { U"\U0001F191", u8"CL button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3565
 { U"\U0001F192", u8"COOL button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3566
 { U"\U0001F193", u8"FREE button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3567
-{ U"\u2139\uFE0F", u8"information", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3568
+{ U"\u2139\uFE0F", u8"information", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3568
 { U"\U0001F194", u8"ID button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3569
-{ U"\u24C2\uFE0F", u8"circled M", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3570
+{ U"\u24C2\uFE0F", u8"circled M", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3570
 { U"\U0001F195", u8"NEW button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3571
 { U"\U0001F196", u8"NG button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3572
-{ U"\U0001F17E\uFE0F", u8"O button (blood type)", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3573
+{ U"\U0001F17E\uFE0F", u8"O button (blood type)", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3573
 { U"\U0001F197", u8"OK button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3574
-{ U"\U0001F17F\uFE0F", u8"P button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3575
+{ U"\U0001F17F\uFE0F", u8"P button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3575
 { U"\U0001F198", u8"SOS button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3576
 { U"\U0001F199", u8"UP! button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3577
 { U"\U0001F19A", u8"VS button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3578
 { U"\U0001F201", u8"Japanese “here” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3579
-{ U"\U0001F202\uFE0F", u8"Japanese “service charge” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3580
-{ U"\U0001F237\uFE0F", u8"Japanese “monthly amount” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3581
+{ U"\U0001F202\uFE0F", u8"Japanese “service charge” button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3580
+{ U"\U0001F237\uFE0F", u8"Japanese “monthly amount” button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3581
 { U"\U0001F236", u8"Japanese “not free of charge” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3582
 { U"\U0001F22F", u8"Japanese “reserved” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3583
 { U"\U0001F250", u8"Japanese “bargain” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3584
@@ -3595,8 +3595,8 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F238", u8"Japanese “application” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3589
 { U"\U0001F234", u8"Japanese “passing grade” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3590
 { U"\U0001F233", u8"Japanese “vacancy” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3591
-{ U"\u3297\uFE0F", u8"Japanese “congratulations” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3592
-{ U"\u3299\uFE0F", u8"Japanese “secret” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3593
+{ U"\u3297\uFE0F", u8"Japanese “congratulations” button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3592
+{ U"\u3299\uFE0F", u8"Japanese “secret” button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3593
 { U"\U0001F23A", u8"Japanese “open for business” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3594
 { U"\U0001F235", u8"Japanese “no vacancy” button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3595
 { U"\U0001F534", u8"red circle", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3596
@@ -3617,12 +3617,12 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F7EB", u8"brown square", 3406, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3611
 { U"\u2B1B", u8"black large square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3612
 { U"\u2B1C", u8"white large square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3613
-{ U"\u25FC\uFE0F", u8"black medium square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3614
-{ U"\u25FB\uFE0F", u8"white medium square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3615
+{ U"\u25FC\uFE0F", u8"black medium square", 3406, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3614
+{ U"\u25FB\uFE0F", u8"white medium square", 3406, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3615
 { U"\u25FE", u8"black medium-small square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3616
 { U"\u25FD", u8"white medium-small square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3617
-{ U"\u25AA\uFE0F", u8"black small square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3618
-{ U"\u25AB\uFE0F", u8"white small square", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3619
+{ U"\u25AA\uFE0F", u8"black small square", 3406, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3618
+{ U"\u25AB\uFE0F", u8"white small square", 3406, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3619
 { U"\U0001F536", u8"large orange diamond", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3620
 { U"\U0001F537", u8"large blue diamond", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3621
 { U"\U0001F538", u8"small orange diamond", 3406, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3622
@@ -3640,7 +3640,7 @@ constinit const uc::LibNode uc::libNodes[8604] {
 { U"\U0001F6A9", u8"triangular flag", 3630, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3634
 { U"\U0001F38C", u8"crossed flags", 3630, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3635
 { U"\U0001F3F4", u8"black flag", 3630, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3636
-{ U"\U0001F3F3\uFE0F", u8"white flag", 3630, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3637
+{ U"\U0001F3F3\uFE0F", u8"white flag", 3630, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3637
 { U"\U0001F3F3\uFE0F\u200D\U0001F308", u8"rainbow flag", 3630, 0, -1, Lfg(193), EcVersion::E4_0 },   // 3638
 { U"\U0001F3F3\uFE0F\u200D\u26A7\uFE0F", u8"transgender flag", 3630, 0, -1, Lfg(193), EcVersion::E13_0 },   // 3639
 { U"\U0001F3F4\u200D\u2620\uFE0F", u8"pirate flag", 3630, 0, -1, Lfg(193), EcVersion::E11_0 },   // 3640
