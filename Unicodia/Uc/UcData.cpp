@@ -2256,11 +2256,10 @@ uc::DrawMethod uc::Cp::drawMethod(
         return uc::DrawMethod::SPACE;
     }
     // Marchen
-    if (ecScript == uc::EcScript::Marc) {
-        auto code = subj.ch32();
-        if (code >= 0x11C90 && code <= 0x11CB0) {
-            return uc::DrawMethod::MARCHEN;
-        }
+    if (ecScript == uc::EcScript::Marc
+            && ecCategory == uc::EcCategory::MARK_NONSPACING
+            && subj.ch32() <= 0x11CB0) {
+        return uc::DrawMethod::MARCHEN;
     }
     return uc::DrawMethod::SAMPLE;
 }
