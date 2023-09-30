@@ -184,7 +184,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
-    { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:20%;"_sty, 110_pc }, // Marchen
+    { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_BIGGER,
+                        "padding-bottom:20%;"_sty, 110_pc },                    // Marchen
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin

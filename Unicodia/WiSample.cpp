@@ -109,6 +109,7 @@ void WiSample::showCp(
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         } break;
     case uc::DrawMethod::SAMPLE:
+    case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
         drawWithQt(ch, emojiDraw, glyphSets);
         break;
     case uc::DrawMethod::SVG_EMOJI:

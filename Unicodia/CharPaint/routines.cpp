@@ -671,6 +671,9 @@ void drawChar(
             drawVertical(painter, rect, *fontAt(method, sizePc, cp), angle, color,
                          proxy.text);
         } break;
+    case uc::DrawMethod::MARCHEN:
+        /// @todo [urgent] draw Marchen?
+        [[fallthrough]];
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             // Char
