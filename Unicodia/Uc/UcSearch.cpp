@@ -5,10 +5,13 @@
 #include <unordered_set>
 
 // Libs
+#include "u_Strings.h"
 #include "u_Qstrings.h"
 
 // Unicode
 #include "UcData.h"
+
+using namespace std::string_view_literals;
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
 
@@ -283,7 +286,76 @@ namespace {
         }
     }
 
-    bool isLatUpper(QChar x) { return (x >= 'A' && x <= 'Z'); }
+    bool isFlagKeywordOf2(std::string_view x)
+    {
+        return (x == "of"sv);
+    }
+
+    bool isFlagKeywordOfOther(std::string_view x)
+    {
+        return (x == "flag"sv);
+    }
+
+    /// Detects country flag in “flag of ua” etc
+    std::string detectFlag(const QString& x)
+    {
+        // Check for bad chars
+        // Before space, after 7F, digits
+        for (auto c : x) {
+            if (c < ' ' || c >= QChar(0x7F) ||
+                    (c >= '0' && c <= '9'))
+                return {};
+        }
+
+        // Get naked string
+        std::string naked;
+        naked.reserve(x.size());
+        for (auto c : x) {
+            /// @todo [future] localized names: флаг, прапор, bandera…
+            ///    thus case-folded
+            auto cc = static_cast<char>(c.toCaseFolded().unicode());
+            if (lat::isLower(cc)) {
+                naked += cc;
+            } else {
+                naked += ' ';
+            }
+        }
+
+        // Split and check
+        auto words = str::splitSv(naked, ' ', true);
+        if (words.size() == 0 || words.size() > 3)
+            return {};
+
+        std::string_view goodWord {};
+        enum class State { UNKNOWN, DUBIOUS, KNOWN };
+        State state = State::UNKNOWN;
+        for (auto word : words) {
+            if (word.length() == 2 && lat::isLower(word)) {
+                switch (state) {
+                case State::UNKNOWN:
+                case State::DUBIOUS:
+                    goodWord = word;
+                    state = isFlagKeywordOf2(word) ? State::DUBIOUS : State::KNOWN;
+                    break;
+                case State::KNOWN:
+                    if (isFlagKeywordOf2(word)) {
+                        // do nothing
+                    } else {
+                        // Cannot use two countries
+                        return {};
+                    }
+                }
+            } else {
+                if (!isFlagKeywordOfOther(word))
+                    return {};
+            }
+        }
+
+        if (goodWord.empty())
+            return {};
+
+        return lat::toUpper(goodWord);
+    }
 
 }   // anon namespace
 
@@ -437,23 +509,19 @@ uc::MultiResult uc::doSearch(QString what)
         }
 
         // Find flag
-        if (what.length() == 2) {
-            auto upCase = what.toUpper();
-            if (upCase.length() == 2    // Should have, for reliability
-                    && isLatUpper(upCase[0]) && isLatUpper(upCase[1])) {
-                ensureEmojiSearch();
-                static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
-                const auto cp1 = char32_t(upCase[0].unicode()) + OFS_FLAGA;
-                auto where1 = trieRoot.children.find(cp1);
-                if (where1 != trieRoot.children.end()) {
-                    const auto cp2 = char32_t(upCase[1].unicode()) + OFS_FLAGA;
-                    auto where2 = where1->second.children.find(cp2);
-                    if (where2 != trieRoot.children.end() && where2->second.result) {
-                        // At last found
-                        auto& bk = r.emplace_back(where2->second.result);
-                        bk.prio.high = uc::HIPRIO_FLAG;
-                        bk.giveTriggerName(str::toU8(upCase));
-                    }
+        if (auto flagName = detectFlag(what); flagName.length() == 2) {
+            ensureEmojiSearch();
+            static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
+            const auto cp1 = char32_t(flagName[0]) + OFS_FLAGA;
+            auto where1 = trieRoot.children.find(cp1);
+            if (where1 != trieRoot.children.end()) {
+                const auto cp2 = char32_t(flagName[1]) + OFS_FLAGA;
+                auto where2 = where1->second.children.find(cp2);
+                if (where2 != trieRoot.children.end() && where2->second.result) {
+                    // At last found
+                    auto& bk = r.emplace_back(where2->second.result);
+                    bk.prio.high = uc::HIPRIO_FLAG;
+                    bk.giveTriggerName(str::toU8(flagName));
                 }
             }
         }

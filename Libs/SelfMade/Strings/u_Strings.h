@@ -553,14 +553,6 @@ namespace str {
 
 namespace lat {
 
-    template <class Ch>
-    inline Ch toUpper(Ch x) {
-        static_assert(std::is_integral_v<Ch>);
-        if (x >= 'a' && x <= 'z')
-            return x - ('a' - 'A');
-        return x;
-    }
-
     namespace detail {
         template <class Sv> bool isUpper(Sv s) noexcept
         {
@@ -581,8 +573,53 @@ namespace lat {
         }
 
         template <class Sv> bool isSingleCase(Sv s) noexcept
-        { return isUpper<Sv>(s) || isLower<Sv>(s); }
+            { return isUpper<Sv>(s) || isLower<Sv>(s); }
 
+        template <class Sv>
+        auto toUpper(Sv x)
+        {
+            using Str = str::trait::Str<Sv, std::allocator<typename Sv::value_type>>;
+            Str r;
+            r.reserve(x.length());
+            for (auto c : x) {
+                if (c >= 'a' && c <= 'z') {
+                    r += static_cast<Sv::value_type>(c - ('a' - 'A'));
+                } else {
+                    r += c;
+                }
+            }
+            return r;
+        }
+
+        template <class Ch>
+        inline Ch toUpperCh(Ch x)
+        {
+            static_assert(std::is_integral_v<Ch>);
+            if (x >= 'a' && x <= 'z')
+                return x - ('a' - 'A');
+            return x;
+        }
+
+        template <class Ch, bool IsInt> struct ToUpper;
+
+        template <class Ch> struct ToUpper<Ch, true> {
+            inline static Ch tu(Ch x) { return toUpperCh(x); }
+        };
+
+        template <class Ch> struct ToUpper<Ch, false> {
+            inline static auto tu(const Ch& x)
+            {
+                using Sv = str::trait::Sv<Ch>;
+                return detail::toUpper<Sv>(x);
+            }
+        };
+    }
+
+    template <class Ch>
+    inline auto toUpper(const Ch& x)
+        { return detail::ToUpper<Ch, std::is_integral_v<Ch>>::tu(x); }
+
+    namespace detail {
         template <class Sv> bool areCaseEqual(Sv x, Sv y) noexcept
         {
             if (x.length() != y.length())
@@ -590,7 +627,7 @@ namespace lat {
             for (auto it1 = x.begin(), it2 = y.begin();
                       it1 != x.end();
                       ++it1, ++it2) {
-                if (lat::toUpper(*it1) != lat::toUpper(*it2)) {
+                if (lat::detail::toUpperCh(*it1) != lat::detail::toUpperCh(*it2)) {
                     return false;
                 }
             }
@@ -605,8 +642,12 @@ namespace lat {
     template <class S>
     [[nodiscard]] inline bool isUpper(const S& s) noexcept
     {
-        using Sv = str::trait::Sv<S>;
-        return detail::isUpper<Sv>(s);
+        if constexpr (std::is_integral_v<S>) {
+            return (s >= 'A' && s <= 'Z');
+        } else {
+            using Sv = str::trait::Sv<S>;
+            return detail::isUpper<Sv>(s);
+        }
     }
 
     ///
@@ -615,8 +656,12 @@ namespace lat {
     template <class S>
     [[nodiscard]] inline bool isLower(const S& s) noexcept
     {
-        using Sv = str::trait::Sv<S>;
-        return detail::isLower<Sv>(s);
+        if constexpr (std::is_integral_v<S>) {
+            return (s >= 'a' && s <= 'z');
+        } else {
+            using Sv = str::trait::Sv<S>;
+            return detail::isLower<Sv>(s);
+        }
     }
 
     ///

@@ -2251,7 +2251,7 @@ uc::DrawMethod uc::Cp::drawMethod(
         return block().flags.have(uc::Bfg::CCW)
                 ? uc::DrawMethod::VERTICAL_CCW : uc::DrawMethod::VERTICAL_CW;
     }
-    // Vertical scripts do not have spaces
+    // Vertical scripts do not have spaces, so OK
     if (isTrueSpace()) {
         return uc::DrawMethod::SPACE;
     }
