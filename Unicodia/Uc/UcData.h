@@ -917,11 +917,15 @@ namespace uc {
         unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
         bool hasDescription() const
             { return (ecScript == EcScript::NONE || flags.have(Bfg::HAS_DESCRIPTION)); }
-        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+
+        void printfLocKey(char* buf, size_t n, const char* suffix) const
+            { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
-            { printfLocKey(buf, N, suffix); }
+            { printfLocKeyN(buf, N, suffix); }
+    private:
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
 
     enum class Graphical { NO, YES };

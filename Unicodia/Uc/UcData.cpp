@@ -2414,7 +2414,7 @@ unsigned uc::Block::nNonChars() const
 }
 
 
-void uc::Block::printfLocKey(char* buf, size_t n, const char* suffix) const
+void uc::Block::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "Block.%04X.%s", (int)startingCp, suffix);
 }
