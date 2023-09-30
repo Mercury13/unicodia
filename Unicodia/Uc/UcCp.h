@@ -8,6 +8,7 @@ namespace cp {
     constexpr char32_t ZWJ = 0x200D;
 
     // Planes
+    constexpr char32_t PLANE_MASK = 0xFFFF;
     constexpr char32_t PLANE_2_START = 0xF'0000;
     constexpr char32_t PLANE_F_START = 0xF'0000;
 
@@ -42,6 +43,17 @@ namespace cp {
     constexpr char32_t FLAG_A = 0x1F1E6;
     constexpr char32_t FLAG_Z = 0x1F1FF;
 
+    // NONCHAR
+    constexpr char32_t NONCHAR_ARAB_FIRST = 0xFDD0;
+    constexpr char32_t NONCHAR_ARAB_LAST  = 0xFDEF;
+    constexpr char32_t NONCHAR_BMP_FIRST = 0xFFFE;
+
+    /// @return [+] cp is noncharacter
+    constexpr bool isNonChar(char32_t cp)
+    {
+        return ((cp & cp::PLANE_MASK) >= cp::NONCHAR_BMP_FIRST)
+            || (cp >= cp::NONCHAR_ARAB_FIRST && cp <= cp::NONCHAR_ARAB_LAST);
+    }
 }
 
 constexpr std::u32string_view U32_ZWJ_RIGHT_ARROW_VS16 = U"\u200D" "\u27A1" "\uFE0F";

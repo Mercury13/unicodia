@@ -9,6 +9,7 @@
 
 // Unicode
 #include "UcAutoDefines.h"
+#include "UcCp.h"
 
 namespace uc {
 
@@ -116,13 +117,6 @@ namespace uc {
             v(std::move(aV)) {}
         const uc::Cp* one() const;
     };
-
-    /// @return [+] cp is noncharacter
-    constexpr bool isNonChar(char32_t cp)
-    {
-        return ((cp & 0xFFFF) >= 0xFFFE)
-            || (cp >= 0xFDD0 && cp <= 0xFDEF);
-    }
 
     struct DecodedEmoji {
         size_t index;

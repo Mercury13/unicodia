@@ -8,7 +8,6 @@
 #include "u_Qstrings.h"
 
 // Unicode
-#include "UcCp.h"
 #include "UcData.h"
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
@@ -69,7 +68,7 @@ uc::SingleResult uc::findCode(unsigned long long ull)
         return { *pCp };
 
     // If not → find what the heck
-    if (isNonChar(code))
+    if (cp::isNonChar(code))
         return { code, CpType::NONCHARACTER };
     if ((code >= cp::PRIV_BMP_FIRST && code <= cp::PRIV_BMP_LAST) || code >= cp::PLANE_F_START)
         return { code, CpType::PRIVATE_USE };

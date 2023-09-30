@@ -46,7 +46,7 @@ void WiOsStyle::setEmptyCode(char32_t code)
 {
     ui->lbOs->setText({});
     const auto& osTitle = loc::get(
-            uc::isNonChar(code) ? "Prop.Os.NonChar" : "Prop.Os.Empty");
+            cp::isNonChar(code) ? "Prop.Os.NonChar" : "Prop.Os.Empty");
     ui->lbOsTitle->setText(osTitle);
 }
 
