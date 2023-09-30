@@ -101,7 +101,6 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
     ../Libs/Zippy/Zippy.hpp \
-    CharPaint/cp.h \
     CharPaint/routines.h \
     CharPaint/IconEngines.h \
     CharPaint/global.h \
@@ -118,6 +117,7 @@ HEADERS += \
     Uc/FontMatch.h \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
+    Uc/UcCp.h \
     Uc/UcData.h \
     Uc/UcDating.h \
     Uc/UcFlags.h \

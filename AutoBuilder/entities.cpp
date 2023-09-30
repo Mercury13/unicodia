@@ -3,8 +3,6 @@
 #include "rapidjson/document.h"
 #include "rapidjson/filereadstream.h"
 
-#include "u_Array.h"
-
 namespace {
 
     class AutoFile

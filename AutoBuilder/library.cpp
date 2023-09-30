@@ -15,6 +15,9 @@
 #include "data.h"
 #include "utils.h"
 
+// Unicode
+#include "UcCp.h"
+
 using namespace std::string_view_literals;
 
 
@@ -51,11 +54,8 @@ namespace {
         U"\U0001FAA4",              // mouse trap
     };
 
-    const std::u32string_view UNSEARCHABLE_EMOJI =
-        U"\U0001F3FB" "\U0001F3FC" "\U0001F3FD" "\U0001F3FE" "\U0001F3FF"  // skin tones
-        "\u27A1";                                         // directed to the right
-
-    constexpr char32_t VS16 = 0xFE0F;
+    constexpr const char32_t UNSEARCHABLE_EMOJI_C[] { SKIN1, SKIN2, SKIN3, SKIN4, SKIN5, RIGHT_ARROW, 0 };
+    constexpr const std::u32string_view UNSEARCHABLE_EMOJI (UNSEARCHABLE_EMOJI_C);
 
     enum class SearchLevel {
         HIDDEN, DECODEABLE, SEARCHABLE

@@ -12,8 +12,8 @@
 #include "u_Cmap.h"
 #include "mojibake.h"
 
-// Painters
-#include "CharPaint/cp.h"
+// Unicode
+#include "UcCp.h"
 
 // L10n
 #include "LocDic.h"
@@ -1620,9 +1620,9 @@ namespace {
         case 1:
             return EmojiClass::SINGLE_CHAR;
         case 2:
-            if (x[1] == VS16)
+            if (x[1] == cp::VS16)
                 return EmojiClass::SINGLE_CHAR;
-            if (x[0] >= FLAG_A && x[0] <= FLAG_Z)
+            if (x[0] >= cp::FLAG_A && x[0] <= cp::FLAG_Z)
                 return EmojiClass::SEQ_FLAG;
             break;
         default: ;
@@ -1631,12 +1631,12 @@ namespace {
         size_t nSkin = 0, nZwj = 0;
         for (auto c : x) {
             switch (c) {
-            case ZWJ:  ++nZwj; break;
-            case SKIN1:
-            case SKIN2:
-            case SKIN3:
-            case SKIN4:
-            case SKIN5: ++nSkin; break;
+            case cp::ZWJ:  ++nZwj; break;
+            case cp::SKIN1:
+            case cp::SKIN2:
+            case cp::SKIN3:
+            case cp::SKIN4:
+            case cp::SKIN5: ++nSkin; break;
             default: ;
             }
         }

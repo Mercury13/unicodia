@@ -42,11 +42,13 @@
 #include "u_Qstrings.h"
 #include "i_TempFont.h"
 
+// Unicode
+#include "UcCp.h"
+
 // Char drawing
 #include "CharPaint/routines.h"
 #include "CharPaint/IconEngines.h"
 #include "CharPaint/emoji.h"
-#include "CharPaint/cp.h"
 
 // Project-local
 #include "Skin.h"
@@ -1319,7 +1321,7 @@ void FmMain::copyCurrentThing(CurrThing thing)
         if (ch->category().upCat == uc::UpCategory::MARK) {
             q = uc::STUB_CIRCLE + q;
         } else if (ch->isVs16Emoji()) {
-            q += QChar(VS16);
+            q += QChar(cp::VS16);
         }
     }
     QApplication::clipboard()->setText(q);
@@ -1507,7 +1509,7 @@ void FmMain::libChanged(const QModelIndex& current)
             auto emojiDraw = uc::EmojiDraw::CONSERVATIVE;
             if (nIndependent > 1        // At least 2 independent
                     && i + 1 < len      // Next is VS16
-                    && node.value[i+1] == VS16) {
+                    && node.value[i+1] == cp::VS16) {
                 emojiDraw = uc::EmojiDraw::GRAPHIC;
             }
             auto& wi = libCpWidgets[i];

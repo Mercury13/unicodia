@@ -45,6 +45,7 @@ namespace uc {
         HIPRIO_NUMERIC_HI,      ///< same but stronger
         HIPRIO_MNEMONIC_CASE,   ///< search by HTML mnemonic — wrong case
         HIPRIO_MNEMONIC_EXACT,  ///< search by HTML mnemonic — exact case match
+        HIPRIO_FLAG,            ///< search by flag (US etc)
         HIPRIO_DEC,             ///< decimal value matches
         HIPRIO_HEX,             ///< hex value matches
         // HIGHEST
@@ -62,6 +63,7 @@ namespace uc {
                  CpType aType = CpType::NONCHARACTER,
                  const uc::Cp* aCp = nullptr)
             : code(aCode), type(aType), cp(aCp) {}
+        constexpr MiniLine(const uc::LibNode* aNode) : type(CpType::LIBNODE), node(aNode) {}
     };
 
     struct SearchLine : public MiniLine {
@@ -77,6 +79,8 @@ namespace uc {
             : MiniLine{x} {}
         SearchLine(const uc::Cp& cp)
             : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
+        constexpr SearchLine(const uc::LibNode* node)
+            : MiniLine{node} {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn)
             : MiniLine{cp.subj, CpType::EXISTING, &cp}, triggerName(tn) {}
         SearchLine(const uc::Cp& cp, std::u8string_view tn, const srh::Prio& pr)
@@ -93,7 +97,7 @@ namespace uc {
         SingleResult(const uc::Cp& cp)
             : MiniLine{cp.subj, CpType::EXISTING, &cp} {}
         SingleResult(const MiniLine& line) : MiniLine(line) {}
-        SingleResult(SearchError aErr) : MiniLine{ 0 }, err(aErr) {}
+        SingleResult(SearchError aErr) : err(aErr) {}
     };
 
     struct MultiResult {

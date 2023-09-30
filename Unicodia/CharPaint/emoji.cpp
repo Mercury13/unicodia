@@ -10,8 +10,8 @@
 #include "u_Strings.h"
 #include "Zippy/ZipArchive.hpp"
 
-// Painters
-#include "cp.h"
+// Unicode
+#include "UcCp.h"
 
 struct RecolorLib {
     std::string_view fill1;
@@ -235,7 +235,7 @@ void EmojiPainter::getFileName(
     auto p = rBuf.begin();
     auto end = rBuf.end();
     for (auto v : text) {
-        if (v != VS16) {
+        if (v != cp::VS16) {
             if (p != std::begin(rBuf)) {
                 *(p++) = '-';
             }
@@ -284,7 +284,7 @@ GetCp EmojiPainter::getCp(std::u32string_view text)
     case 1:
         return { .cp = text[0], .forceGraphic = false };
     case 2:
-        if (text[1] == VS16)
+        if (text[1] == cp::VS16)
             return { .cp = text[0], .forceGraphic = true };
         [[fallthrough]];
     default:
@@ -411,7 +411,7 @@ void EmojiPainter::draw(
 
 namespace {
     inline bool isSkin(char32_t c)
-        { return (c >= SKIN1 && c <= SKIN5); }
+        { return (c >= cp::SKIN1 && c <= cp::SKIN5); }
 }   // anon namespace
 
 
@@ -419,11 +419,11 @@ bool EmojiPainter::hasSkinGender(std::u32string_view x)
 {
     static constinit char32_t ALL_CHARS_AR[] {
         // Allowed when used alone
-        SKIN1, SKIN2, SKIN3, SKIN4, SKIN5,   // 5
-        MALE, FEMALE, MAN, WOMAN,            // 9
-        RIGHT_ARROW,                         // 10
+        cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5,   // 5
+        cp::MALE, cp::FEMALE, cp::MAN, cp::WOMAN,            // 9
+        cp::RIGHT_ARROW,                         // 10
         // The rest
-        MAN_AND_WOMAN, TWO_MEN, TWO_WOMEN, SANTA_CLAUS, MRS_CLAUS };
+        cp::MAN_AND_WOMAN, cp::TWO_MEN, cp::TWO_WOMEN, cp::SANTA_CLAUS, cp::MRS_CLAUS };
     constexpr size_t OFS_1 = 10;
     static constinit std::u32string_view ALL_CHARS { ALL_CHARS_AR, std::size(ALL_CHARS_AR) };
     static constinit std::u32string_view SPEC_CHARS { ALL_CHARS_AR + OFS_1, std::end(ALL_CHARS_AR) };
@@ -434,7 +434,7 @@ bool EmojiPainter::hasSkinGender(std::u32string_view x)
     case 1:
         return (x.find_first_of(SPEC_CHARS) != std::u32string::npos);
     case 2: {
-            auto sv = (x[1] == VS16) ? SPEC_CHARS : ALL_CHARS;
+            auto sv = (x[1] == cp::VS16) ? SPEC_CHARS : ALL_CHARS;
             return (x.find_first_of(sv) != std::u32string::npos);
         }
     default:
@@ -466,7 +466,7 @@ RecolorInfo EmojiPainter::checkForRecolor(std::u32string_view text)
 
     RecolorInfo ri {
         .baseText = std::u32string{ text },
-        .recolor = &allRecolors[*firstIt - SKIN1],
+        .recolor = &allRecolors[*firstIt - cp::SKIN1],
     };
     ri.baseText.erase(firstPos, 1);
     return ri;

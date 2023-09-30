@@ -8,6 +8,9 @@
 // Libs
 #include "u_Strings.h"
 
+// Uc
+#include "UcCp.h"
+
 namespace {
 
     enum class ForgetChannel { SCRIPT, LETTER, BAN };
@@ -125,7 +128,7 @@ bool forget::isIn(char32_t cp, std::string_view name, std::string_view script)
 {
     // Ranges where never in
     if ((cp <= 127)                             // ASCII
-            || (cp >= 0x1D6A8 && cp <= 0x1D7CB) // Math Greek
+            || (cp >= MATH_GREEK_FIRST && cp <= MATH_GREEK_LAST) // Math Greek
             || (cp >= 0x2'0000))                // Plane 2+
         return false;
     // Special?

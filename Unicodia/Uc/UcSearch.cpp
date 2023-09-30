@@ -5,6 +5,7 @@
 #include <unordered_set>
 
 // Unicode
+#include "UcCp.h"
 #include "UcData.h"
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
@@ -67,7 +68,7 @@ uc::SingleResult uc::findCode(unsigned long long ull)
     // If not → find what the heck
     if (isNonChar(code))
         return { code, CpType::NONCHARACTER };
-    if ((code >= 0xE000 && code <= 0xF8FF) || code >= 0xF'0000)
+    if ((code >= cp::PRIV_BMP_FIRST && code <= cp::PRIV_BMP_LAST) || code >= cp::PLANE_F_START)
         return { code, CpType::PRIVATE_USE };
     if (code >= 0xD800 && code <= 0xDFFF)
         return { code, CpType::SURROGATE };
@@ -103,7 +104,7 @@ uc::SingleResult uc::findStrCode(QStringView what, int base, long long& code)
 
 namespace {
 
-    bool isAlnum(char32_t cp)
+    inline bool isAlnum(char32_t cp)
     {
         return (cp >= 'A' && cp <= 'Z')
             || (cp >= 'a' && cp <= 'z')
@@ -142,12 +143,7 @@ bool uc::isNameChar(QStringView x)
 }
 
 
-bool uc::isMnemoChar(char32_t cp)
-{
-    return (cp >= 'A' && cp <= 'Z')
-        || (cp >= 'a' && cp <= 'z')
-        || (cp >= '0' && cp <= '9');
-}
+bool uc::isMnemoChar(char32_t cp) { return isAlnum(cp); }
 
 
 bool uc::isMnemoChar(QStringView x)
@@ -284,6 +280,8 @@ namespace {
             return false;
         }
     }
+
+    bool isLatUpper(QChar x) { return (x >= 'A' && x <= 'Z'); }
 
 }   // anon namespace
 
@@ -436,6 +434,27 @@ uc::MultiResult uc::doSearch(QString what)
             dec = q.cp;
         }
 
+        // Find flag
+        if (what.length() == 2) {
+            auto upCase = what.toUpper();
+            if (upCase.length() == 2    // Should have, for reliability
+                    && isLatUpper(upCase[0]) && isLatUpper(upCase[1])) {
+                ensureEmojiSearch();
+                static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
+                const auto cp1 = char32_t(upCase[0].unicode()) + OFS_FLAGA;
+                auto where1 = trieRoot.children.find(cp1);
+                if (where1 != trieRoot.children.end()) {
+                    const auto cp2 = char32_t(upCase[1].unicode()) + OFS_FLAGA;
+                    auto where2 = where1->second.children.find(cp2);
+                    if (where2 != trieRoot.children.end() && where2->second.result) {
+                        // At last found
+                        auto& bk = r.emplace_back(where2->second.result);
+                        bk.prio.high = uc::HIPRIO_FLAG;
+                    }
+                }
+            }
+        }
+
         // Find number
         std::unordered_set<unsigned char> numerics;
         if (code != NO_CODE) {
@@ -451,7 +470,7 @@ uc::MultiResult uc::doSearch(QString what)
                 if (isOk1 && isOk2) {
                     if (num == 0 && denom == 3) {
                         // Zero thirds — special case (used in baseball, numeric value is 0)
-                        r.emplace_back(*cpsByCode[0x2189]);
+                        r.emplace_back(*cpsByCode[cp::ZERO_THIRDS]);
                         return r;
                     }
                     if (denom >= 1 && num != 0) {
@@ -559,9 +578,7 @@ uc::MultiResult uc::doSearch(QString what)
         for (size_t i32 = 0; i32 < u32.length(); ++i32) {
             // Insert emoji
             if (pEmoji != emojiList.end() && pEmoji->index == i32) {
-                auto& bk = r.emplace_back();
-                bk.type = uc::CpType::LIBNODE;
-                bk.node = pEmoji->node;
+                auto& bk = r.emplace_back(pEmoji->node);
                 bk.prio.high = HIPRIO_HEX;
                 iLevel1 = i32 + bk.node->value.length();
                 ++pEmoji;
