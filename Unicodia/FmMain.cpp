@@ -401,7 +401,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
                         return BG_CJK;
                 }
             } else {
-                if (cp::isNonChar(cp.code)) {
+                if (uc::isNonChar(cp.code)) {
                     return QBrush(owner->palette().windowText().color(), Qt::DiagCrossPattern);
                 }
                 return owner->palette().button().color();
@@ -1448,7 +1448,7 @@ void FmMain::forceShowCp(MaybeChar ch)
         ui->btCopyEx->hide();
         ui->wiGlyphStyle->hide();
         model.glyphStyle.currChannel = uc::EcGlyphStyleChannel::NONE;
-        if (cp::isNonChar(ch.code)) {
+        if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             setWiki(ui->vwInfo, text);
         } else {

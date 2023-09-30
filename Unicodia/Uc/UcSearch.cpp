@@ -68,7 +68,7 @@ uc::SingleResult uc::findCode(unsigned long long ull)
         return { *pCp };
 
     // If not → find what the heck
-    if (cp::isNonChar(code))
+    if (isNonChar(code))
         return { code, CpType::NONCHARACTER };
     if ((code >= cp::PRIV_BMP_FIRST && code <= cp::PRIV_BMP_LAST) || code >= cp::PLANE_F_START)
         return { code, CpType::PRIVATE_USE };

@@ -47,6 +47,11 @@ namespace cp {
     constexpr char32_t NONCHAR_ARAB_FIRST = 0xFDD0;
     constexpr char32_t NONCHAR_ARAB_LAST  = 0xFDEF;
     constexpr char32_t NONCHAR_BMP_FIRST = 0xFFFE;
+}   // namespace cp
+
+constexpr std::u32string_view U32_ZWJ_RIGHT_ARROW_VS16 = U"\u200D" "\u27A1" "\uFE0F";
+
+namespace uc {
 
     /// @return [+] cp is noncharacter
     constexpr bool isNonChar(char32_t cp)
@@ -54,6 +59,5 @@ namespace cp {
         return ((cp & cp::PLANE_MASK) >= cp::NONCHAR_BMP_FIRST)
             || (cp >= cp::NONCHAR_ARAB_FIRST && cp <= cp::NONCHAR_ARAB_LAST);
     }
-}
 
-constexpr std::u32string_view U32_ZWJ_RIGHT_ARROW_VS16 = U"\u200D" "\u27A1" "\uFE0F";
+}   // namespace uc
