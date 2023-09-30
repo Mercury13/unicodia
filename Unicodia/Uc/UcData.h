@@ -690,10 +690,11 @@ namespace uc {
     constexpr int PLANE_BASE = 0;
     constexpr int PLANE_UNKNOWN = -1;
 
+    /// Script’s flags
     enum class Sfg {
-        NONSCRIPT = 1,
-        NO_LANGS = 2,
-        DESC_FROM_PREV = 4,
+        NONSCRIPT = 1,      ///< [+] Non-script for search
+        NO_LANGS = 2,       ///< [+] No “Languages” line
+        DESC_FROM_PREV = 4, ///< [+] Description is taken from previous script (Meroitic, Sogdian)
         SORT_KEY = 8,       ///< [+] Pseudo-script made specially for sorting
     };
     DEFINE_ENUM_OPS(Sfg)
