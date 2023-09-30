@@ -2130,9 +2130,15 @@ std::u8string_view uc::Cp::abbrev() const
 
 
 uc::SampleProxy uc::Cp::sampleProxy(
-        EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets) const
+        ProxyType proxyType,
+        EmojiDraw emojiDraw,
+        const uc::GlyphStyleSets& glyphSets) const
 {
     switch (drawMethod(emojiDraw, glyphSets)) {
+    case DrawMethod::MARCHEN:
+        if (proxyType == uc::ProxyType::EXTENDED)
+            break;  // go through on extended only
+        return {};
     case DrawMethod::SAMPLE:
         break;  // go through
     default:
@@ -2248,6 +2254,13 @@ uc::DrawMethod uc::Cp::drawMethod(
     // Vertical scripts do not have spaces
     if (isTrueSpace()) {
         return uc::DrawMethod::SPACE;
+    }
+    // Marchen
+    if (ecScript == uc::EcScript::Marc) {
+        auto code = subj.ch32();
+        if (code >= 0x11C90 && code <= 0x11CB0) {
+            return uc::DrawMethod::MARCHEN;
+        }
     }
     return uc::DrawMethod::SAMPLE;
 }

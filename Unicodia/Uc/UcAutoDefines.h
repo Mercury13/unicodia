@@ -448,18 +448,7 @@ namespace uc {
         SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
     };
 
-    enum class DrawMethod {
-            // Font-based methods
-            SAMPLE,             ///< Take font and draw string
-            SPACE,              ///< Take font, measure space width and draw 2 lines
-            MARCHEN,            ///< Special drawing method for Marchen
-            VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
-            VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
-            // Char-based methods
-            ABBREVIATION,       ///< Draw dotted square and abbreviation
-            CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
-            SVG_EMOJI,          ///< Draw SVG emoji
-            LAST_FONT = VERTICAL_CCW };            // Last using (loading, checking) font
+    enum class DrawMethod;
 
     enum class TofuState {
         PRESENT,    ///< Not a tofu, have char
@@ -491,6 +480,8 @@ namespace uc {
     enum class EcGlyphStyleChannel;
     struct GlyphStyleChannel;
     struct GlyphStyleSets;
+
+    enum class ProxyType { TABLE_DEFAULT, EXTENDED };
 
     struct Cp   // code point
     {
@@ -530,6 +521,7 @@ namespace uc {
         ///                        [-] take last font, never null
         const Font* font(MatchLast matchLast) const;
         SampleProxy sampleProxy(
+                ProxyType proxyType,
                 EmojiDraw emojiDraw,
                 const uc::GlyphStyleSets& glyphSets) const;
         QString osProxy() const;

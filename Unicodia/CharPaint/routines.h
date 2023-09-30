@@ -18,6 +18,10 @@ struct RcPair {
     RcPair(const QRectF& rcFrame, qreal quo);
 };
 
+void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
+                const QColor& color, uc::EmojiDraw emojiMode,
+                const uc::GlyphStyleSets& glyphSets, float offset);
+
 void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
         const QColor& color, QRectF rcFrame, qreal thickness);
 
@@ -51,11 +55,6 @@ std::optional<QFont> fontAt(
 std::optional<QFont> fontAt(
         uc::DrawMethod drawMethod, int sizePc,
         const uc::Cp& cp);
-
-inline QString textAt(
-        const uc::Cp& cp, uc::EmojiDraw emojiDraw,
-        const uc::GlyphStyleSets& glyphSets)
-    { return cp.sampleProxy(emojiDraw, glyphSets).text; }
 
 /// Draws border of search/emoji
 void drawCharBorder(QPainter* painter, const QRect& rect, const QColor& color);

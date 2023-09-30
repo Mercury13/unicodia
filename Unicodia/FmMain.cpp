@@ -361,7 +361,7 @@ QString CharsModel::textAt(const QModelIndex& index) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return ::textAt(*cp, EMOJI_DRAW, glyphStyle.sets);
+    return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, EMOJI_DRAW, glyphStyle.sets).text;
 }
 
 

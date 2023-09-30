@@ -464,7 +464,21 @@ namespace uc {
     DEFINE_ENUM_OPS(Ffg)
 
     struct LoadedFont;
-}
+
+    enum class DrawMethod {
+        // Font-based methods
+        SAMPLE,             ///< Take font and draw string
+        SPACE,              ///< Take font, measure space width and draw 2 lines
+        MARCHEN,            ///< Special drawing method for Marchen
+        VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
+        VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
+        // Char-based methods
+        ABBREVIATION,       ///< Draw dotted square and abbreviation
+        CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
+        SVG_EMOJI,          ///< Draw SVG emoji
+        LAST_FONT = VERTICAL_CCW };            // Last using (loading, checking) font
+
+}   //namespace uc;
 
 extern template class dumb::Sp<uc::LoadedFont>;
 

@@ -648,6 +648,28 @@ constexpr int EMOJI_NUM = 4;
 constexpr int EMOJI_DEN = 5;
 
 
+void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
+                const QColor& color, uc::EmojiDraw emojiMode,
+                const uc::GlyphStyleSets& glyphSets, float offset)
+{
+    auto font = fontAt(uc::DrawMethod::SAMPLE, sizePc, cp);
+    if (font)
+        painter->setFont(*font);
+    painter->setBrush(color);
+    painter->setPen(color);
+    if (offset != 0 && font) {
+        if (offset < 0) {
+            rect.setTop(rect.top() + std::round(offset * font->pointSize()));
+        } else {
+            rect.setBottom(rect.bottom() + std::round(offset * font->pointSize()));
+        }
+    }
+    painter->drawText(rect,
+                      Qt::AlignCenter | Qt::TextSingleLine | Qt::TextIncludeTrailingSpaces,
+                      cp.sampleProxy(uc::ProxyType::EXTENDED, emojiMode, glyphSets).text);
+}
+
+
 void drawChar(
         QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
         const QColor& color, TableDraw tableMode, uc::EmojiDraw emojiMode,
@@ -667,23 +689,17 @@ void drawChar(
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
-            auto proxy = cp.sampleProxy(uc::EmojiDraw::TEXT, uc::GlyphStyleSets::EMPTY);
+            auto proxy = cp.sampleProxy(uc::ProxyType::EXTENDED,
+                        uc::EmojiDraw::TEXT, uc::GlyphStyleSets::EMPTY);
             drawVertical(painter, rect, *fontAt(method, sizePc, cp), angle, color,
                          proxy.text);
         } break;
     case uc::DrawMethod::MARCHEN:
-        /// @todo [urgent] draw Marchen?
-        [[fallthrough]];
+        drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, -0.3);
+        break;
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
-            // Char
-            if (auto font = fontAt(method, sizePc, cp))
-                painter->setFont(*font);
-            painter->setBrush(color);
-            painter->setPen(color);
-            painter->drawText(rect,
-                              Qt::AlignCenter | Qt::TextSingleLine | Qt::TextIncludeTrailingSpaces,
-                              textAt(cp, emojiMode, glyphSets));
+            drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
         } break;
     case uc::DrawMethod::SVG_EMOJI: {
             //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);

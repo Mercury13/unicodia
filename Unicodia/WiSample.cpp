@@ -37,7 +37,7 @@ void WiSample::drawWithQt(
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    auto proxy = ch.sampleProxy(emojiDraw, glyphSets);
+    auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, glyphSets);
     // Color
     if (ch.isTrueSpace()) {
         auto c = palette().text().color();
@@ -103,7 +103,7 @@ void WiSample::showCp(
             // set vertical mode
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             // EMPTY: we want text anyway
-            auto proxy = ch.sampleProxy(emojiDraw, uc::GlyphStyleSets::EMPTY);
+            auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, uc::GlyphStyleSets::EMPTY);
             // Vertical fonts do not have special stylesheets
             ui->pageSampleCustom->setVertical(qfont, proxy.text, angle);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
