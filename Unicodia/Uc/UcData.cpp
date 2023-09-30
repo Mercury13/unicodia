@@ -894,7 +894,7 @@ constinit const uc::BidiClass uc::bidiClassInfo[static_cast<int>(EcBidiClass::NN
     // { u8"Error" },  // check for equal number
 };
 
-void uc::BidiClass::printfLocKey(char* buf, size_t n, const char* suffix) const
+void uc::BidiClass::printfLocKeyN(char* buf, size_t n, const char* suffix) const
     { snprintf(buf, n, "Prop.Bidi.%s.%s", id.data(), suffix); }
 
 
@@ -2420,18 +2420,18 @@ void uc::Block::printfLocKey(char* buf, size_t n, const char* suffix) const
 }
 
 
-void uc::Script::printfLocKey(char* buf, size_t n, const char* suffix) const
+void uc::Script::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "Script.%s.%s", id.data(), suffix);
 }
 
 
-void uc::Category::printfLocKey(char* buf, size_t n, const char* suffix) const
+void uc::Category::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "CharCat.%s.%s", id.data(), suffix);
 }
 
-void uc::Term::printfLocKey(char* buf, size_t n, const char* suffix) const
+void uc::Term::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "Term.%s.%s", key.data(), suffix);
 }

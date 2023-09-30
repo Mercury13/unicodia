@@ -724,11 +724,14 @@ namespace uc {
         inline const WritingDir& dir() const { return writingDirInfo[static_cast<int>(ecDir)]; }
         inline const Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
         const Version& version() const { return versionInfo[static_cast<int>(ecVersion)]; }
-        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+        void printfLocKey(char* buf, size_t n, const char* suffix) const
+            { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
-            { printfLocKey(buf, N, suffix); }
+            { printfLocKeyN(buf, N, suffix); }
+    private:
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
     extern const Script scriptInfo[];
     const Script* findScript(std::string_view x);
@@ -935,14 +938,17 @@ namespace uc {
             std::u8string_view description;
         } mutable loc {};
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+        void printfLocKey(char* buf, size_t n, const char* suffix) const
+            { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
-            { printfLocKey(buf, N, suffix); }
+            { printfLocKeyN(buf, N, suffix); }
 
         /// @return [-] control, format, mark [+] rest
         bool isIndependent() const noexcept;
+    private:
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
 
     extern const Category categoryInfo[static_cast<int>(EcCategory::NN)];
@@ -966,11 +972,14 @@ namespace uc {
             std::u8string_view description;
         } mutable loc {};
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+        void printfLocKey(char* buf, size_t n, const char* suffix) const
+            { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
-            { printfLocKey(buf, N, suffix); }
+            { printfLocKeyN(buf, N, suffix); }
+    private:
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
     extern const BidiClass bidiClassInfo[static_cast<int>(EcBidiClass::NN)];
     inline const BidiClass* findBidiClass(std::string_view x) { return findInArray(x, bidiClassInfo); }
@@ -1022,11 +1031,14 @@ namespace uc {
 
         const uc::Font& font() const { return fontInfo[static_cast<int>(ecFont)]; }
 
-        void printfLocKey(char* buf, size_t n, const char* suffix) const;
+        void printfLocKey(char* buf, size_t n, const char* suffix) const
+            { printfLocKeyN(buf, n, suffix); }
 
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
-            { printfLocKey(buf, N, suffix); }
+            { printfLocKeyN(buf, N, suffix); }
+    private:
+        void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
 
     extern const Term terms[];
