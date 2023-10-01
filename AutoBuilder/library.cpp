@@ -54,7 +54,8 @@ namespace {
         U"\U0001FAA4",              // mouse trap
     };
 
-    constexpr const char32_t UNSEARCHABLE_EMOJI_C[] { SKIN1, SKIN2, SKIN3, SKIN4, SKIN5, RIGHT_ARROW, 0 };
+    constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
+        cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5, cp::RIGHT_ARROW, 0 };
     constexpr const std::u32string_view UNSEARCHABLE_EMOJI (UNSEARCHABLE_EMOJI_C);
 
     enum class SearchLevel {
@@ -67,7 +68,7 @@ namespace {
         if (emoji.length() <= 1)
             return SearchLevel::HIDDEN;
         // VS16 — decodeable
-        if (emoji.length() == 2 && emoji[1] == VS16)
+        if (emoji.length() == 2 && emoji[1] == cp::VS16)
             return SearchLevel::DECODEABLE;
         // The rest are at least decodeable.
         // Unsearchable are: skins, directions
@@ -180,7 +181,7 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 }
                 // #### + VS16 → that code requires VS16
                 char32_t mainCode = (nCodes == 1) ? codes[0] : 0;
-                if (nCodes == 2 && codes[1] == VS16) {
+                if (nCodes == 2 && codes[1] == cp::VS16) {
                     r.vs16.insert(codes[0]);
                     mainCode = codes[0];
                 }

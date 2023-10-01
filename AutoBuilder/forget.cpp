@@ -128,7 +128,7 @@ bool forget::isIn(char32_t cp, std::string_view name, std::string_view script)
 {
     // Ranges where never in
     if ((cp <= 127)                             // ASCII
-            || (cp >= MATH_GREEK_FIRST && cp <= MATH_GREEK_LAST) // Math Greek
+            || (cp >= cp::MATH_GREEK_FIRST && cp <= cp::MATH_GREEK_LAST) // Math Greek
             || (cp >= 0x2'0000))                // Plane 2+
         return false;
     // Special?
