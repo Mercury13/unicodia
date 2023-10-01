@@ -470,6 +470,7 @@ namespace uc {
         SAMPLE,             ///< Take font and draw string
         SPACE,              ///< Take font, measure space width and draw 2 lines
         MARCHEN,            ///< Special drawing method for Marchen
+        SAMPLED_CONTROL,    ///< Draw dotted square and sample
         VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
         VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
         // Char-based methods

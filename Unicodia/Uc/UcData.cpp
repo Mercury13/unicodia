@@ -2136,6 +2136,7 @@ uc::SampleProxy uc::Cp::sampleProxy(
 {
     switch (drawMethod(emojiDraw, glyphSets)) {
     case DrawMethod::MARCHEN:
+    case DrawMethod::SAMPLED_CONTROL:
         if (proxyType == uc::ProxyType::EXTENDED)
             break;  // go through on extended only
         return {};
@@ -2255,11 +2256,18 @@ uc::DrawMethod uc::Cp::drawMethod(
     if (isTrueSpace()) {
         return uc::DrawMethod::SPACE;
     }
-    // Marchen
-    if (ecScript == uc::EcScript::Marc
-            && ecCategory == uc::EcCategory::MARK_NONSPACING
-            && subj.ch32() <= 0x11CB0) {
-        return uc::DrawMethod::MARCHEN;
+    switch (ecCategory) {
+    case uc::EcCategory::CONTROL:
+    case uc::EcCategory::FORMAT:   // These are “sampled control”
+        return uc::DrawMethod::SAMPLED_CONTROL;
+    case uc::EcCategory::MARK_NONSPACING:
+        // Marchen
+        if (ecScript == uc::EcScript::Marc
+                && subj.ch32() <= 0x11CB0) {
+            return uc::DrawMethod::MARCHEN;
+        }
+        break;
+    default: ;
     }
     return uc::DrawMethod::SAMPLE;
 }

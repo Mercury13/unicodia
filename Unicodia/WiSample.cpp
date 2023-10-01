@@ -110,6 +110,7 @@ void WiSample::showCp(
         } break;
     case uc::DrawMethod::SAMPLE:
     case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
+    case uc::DrawMethod::SAMPLED_CONTROL:  // same as Sample, maybe we’ll make them somehow
         drawWithQt(ch, emojiDraw, glyphSets);
         break;
     case uc::DrawMethod::SVG_EMOJI:

@@ -697,6 +697,10 @@ void drawChar(
     case uc::DrawMethod::MARCHEN:
         drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, -0.3);
         break;
+    case uc::DrawMethod::SAMPLED_CONTROL:
+        drawControlFrame(painter, rect, color);
+        drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
+        break;
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
