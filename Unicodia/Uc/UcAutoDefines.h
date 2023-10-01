@@ -481,7 +481,10 @@ namespace uc {
     struct GlyphStyleChannel;
     struct GlyphStyleSets;
 
-    enum class ProxyType { TABLE_DEFAULT, EXTENDED };
+    enum class ProxyType {
+        TABLE_DEFAULT,  ///< What we write in table with default method
+        EXTENDED        ///< What we draw with other font-related methods
+    };
 
     struct Cp   // code point
     {
