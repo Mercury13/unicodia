@@ -11252,6 +11252,32 @@
      </transl>
     </text>
    </group>
+   <group id="Arab">
+    <text id="0">
+     <orig>Isolated</orig>
+     <transl>Відокремлена</transl>
+    </text>
+    <text id="1">
+     <orig>Initial</orig>
+     <transl>Початкова</transl>
+    </text>
+    <text id="2">
+     <orig>Medial</orig>
+     <transl>Середня</transl>
+    </text>
+    <text id="3">
+     <orig>Final</orig>
+     <transl>Кінцева</transl>
+    </text>
+    <text id="Name">
+     <orig>Position of Arabic letters</orig>
+     <transl>Положення арабських літер</transl>
+    </text>
+    <text id="Text">
+     <orig>Arabic letters are written in a continuous line, so they can be isolated, initial, medial and final.</orig>
+     <transl>Арабські літери пишуться суцільною в’яззю, так що вони бувають відокремлені, початкові, середні та кінцеві.</transl>
+    </text>
+   </group>
   </group>
   <group id="Search">
    <au-cmt>
