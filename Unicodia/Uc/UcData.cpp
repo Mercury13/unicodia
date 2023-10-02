@@ -281,7 +281,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Cari", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::PARTLY_DECIPHERED, EcWritingDir::BOTH, EcContinent::ASIA,
         Dating::century(-7), EcFont::HISTORIC },
-    // Canadian syllabics OK, W10 “Gadugi”, W7 lacks 2009 extensions, installed Google Noto font
+    // Canadian syllabics OK, Noto supports it in the best way possible (their glyphs are UC samples)
     { "Cans", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::AMERICA,
         Dating::year(1833), EcFont::CANADIAN_ABORIGINAL },
