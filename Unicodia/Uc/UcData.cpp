@@ -316,7 +316,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Deva", QFontDatabase::Devanagari,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::crange(1, 7), EcFont::DEVANAGARI },
-    // Diak OK, built some samples
+    // Diak OK, W10 off, Noto is really cool
     { "Diak", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::crange(9, 10, StdNote::FIRST_KNOWN), EcFont::DIVES_AKURU },
