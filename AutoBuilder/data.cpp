@@ -1526,6 +1526,10 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("musical symbol Combining augmentation dot")  // Augmentation is a future landmine
         // Music/Znamenny
     EX("Znamenny neume Dva v chelnu")  // Better not to make exception from V
+        // Games
+    EX("mahjong tile back")
+    // domino tile Horizontal/Vertical back probably OK
+    EX("playing card back")
 
     // B-I-G  S-E-T-S
 
