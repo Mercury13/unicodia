@@ -228,7 +228,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Avst", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::SACRED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::yapprox(400), EcFont::AVESTAN },
-    // Balinese OK, installed Google Noto font
+    // Balinese OK, none even in W10, installed Google Noto font
     { "Bali", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::yapprox(1000), EcFont::BALINESE },
