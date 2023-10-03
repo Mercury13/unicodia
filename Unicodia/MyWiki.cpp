@@ -1365,8 +1365,8 @@ namespace {
                 break;
             case uc::FracType::DECIMAL: {
                     auto val = static_cast<double>(numc.num) / numc.denom;
-                    QString s = QString::number(val);
-                    s.replace('.', QChar{loc::active::numfmt.decimalPoint});
+                    buf = QString::number(val);
+                    buf.replace('.', QChar{loc::active::numfmt.decimalPoint});
                 } break;
             }
             if (numc.altInt != 0) {
