@@ -5731,8 +5731,14 @@
      <orig>
       <p>The script was invented by Buddhist monk Zanabazar, artist and author of square script [[ps:Zanb|named for himself]]. The name comes from Sanskrit ''svayambhu'' “self-created”. The script from very begginning was used for religion only{{-}}on prayer wheels, seals, signs of temples. Character 11A9E also known as ''Soyombo'' is a symbol of Mongolia.</p>
       <p />
-      <p>Brahmic abugida with inherent vowel {{t|a}} and unusual design: the frame contains of vertical stem on the right and triangle above. This frame carries main consonant, vowel mark, final consonant, length mark and diphtong mark. [[pt:virama|Virama]] is purely virtual and is just for encoding nine of 14 standard ligatures:</p>
-      <p>: ka {{sm|𑩜}} + subjoiner {{sm|◌𑪙}} + va {{sm|𑩾}} = kva {{sm|𑩜𑪙𑩾}}</p>
+      <p>Brahmic abugida with inherent vowel {{t|a}} and unusual design: the frame contains of vertical stem on the right and triangle above. This frame carries main consonant, vowel mark, final consonant, length mark and diphtong mark.</p>
+      <p>{{smtable|ra|*𑩼|+ i|*◌𑩑|+ au|*◌𑩘|+ final ℓ|*◌𑪒|= riul|*𑩼𑩑𑩘𑪒}}</p>
+      <p />
+      <p>[[pt:virama|Virama]] is purely virtual, for consonant conjuncts:</p>
+      <p>{{smtable|ka|*𑩜|+ subjoiner|*◌𑪙|+ va|*𑩾|= kva|*𑩜𑪙𑩾}}</p>
+      <p />
+      <p>Other conjuncts are encoded using initial consonants:</p>
+      <p>{{smtable|initial la|*𑪇|+ ka|*𑩜|= lka|*𑪇𑩜}}</p>
       <p />
       <p>Numbers aren’t attested in sources.</p>
      </orig>
