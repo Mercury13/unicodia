@@ -1989,6 +1989,8 @@ onceAgain:
 QFont uc::Font::get(FontPlace place, int size, bool noAa, char32_t trigger) const
 {
     load(trigger);
+    if (!q.loaded || !q.loaded->normal)
+        return {};
     QFont font = *q.loaded->normal;
     font.setPointSize(computeSize(place, size));
     if (place == FontPlace::CELL && noAa) {
