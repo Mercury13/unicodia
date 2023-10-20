@@ -1919,13 +1919,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2A79, 0x2AAD },  // greater-less
 
     // Egyptian while Noto is BAAD
-    { 0x1300A },
-    { 0x13017 },
-    { 0x13032 },
-    { 0x13034 },
-    { 0x13038, 0x1303D },
-    { 0x13057 },
-    { 0x13068 },
     { 0x130D2 },
     { 0x130D5 },
     { 0x130FD, 0x130FE },
