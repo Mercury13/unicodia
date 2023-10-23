@@ -2203,11 +2203,6 @@ uc::SampleProxy uc::Cp::sampleProxy(
         if (fn->flags.have(Ffg::STUB_ALM))
             return { str::toQ(STUB_ALM_CIRCLE) + str::toQ(code), style };
         return { STUB_CIRCLE + str::toQ(code), style };
-    case EcCategory::SEPARATOR_SPACE:
-        if (isTrueSpace()) {
-            return { QChar(L'▕') + str::toQ(code) + QChar(L'▏'), style };
-        }
-        break;
     default: ;
     }
     if (fn->flags.have(Ffg::STUB_INTERCHAR))
