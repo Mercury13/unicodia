@@ -3015,7 +3015,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (heaven), broken once (earth) and broken twice (human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
+      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
       <p />
       <p>Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees the only thing remaining is to explain this evil mistake in comments.</p>
       <p />

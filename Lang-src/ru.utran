@@ -4006,14 +4006,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (heaven), broken once (earth) and broken twice (human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
+      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
       <p />
       <p>Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees the only thing remaining is to explain this evil mistake in comments.</p>
       <p />
       <p>Some monograms and digrams are already present in Base Plane.</p>
      </orig>
      <transl>
-      <p>Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый [[pk:4DC0|Книгой перемен]]. В трактате описана 81 тетраграмма. Каждая линия бывает в трёх вариантах: сплошная (небеса), с одним разрывом (земля), и с двумя разрывами (человек). Надлежало четыре раза выкинуть случайное число, получить тетраграмму и прочитать её расшифровку в книге.</p>
+      <p>Тайсюаньцзин (Канон великой тайны){{-}}китайский гадательный трактат 2{{_}}года нашей эры, вдохновлённый [[pk:4DC0|Книгой перемен]]. В трактате описана 81 тетраграмма. Каждая линия бывает в трёх вариантах: сплошная (天 тянь = небеса), с одним разрывом (地 ди = земля), и с двумя разрывами (人 жэнь = человек). Надлежало четыре раза выкинуть случайное число, получить тетраграмму и прочитать её расшифровку в книге.</p>
       <p />
       <p>В Консорциуме Юникода спутали землю и человека. С гарантиями [[pt:stability|стабильности]] оставалось только объяснить эту досадную ошибку в комментариях.</p>
       <p />

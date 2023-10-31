@@ -4007,16 +4007,16 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (heaven), broken once (earth) and broken twice (human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
+      <p>Tài Xuán Jīng (Canon of Supreme Mystery) is a Chinese divination book of 2{{_}}CE inspired with [[pk:4DC0|Yi Jing]]. The book employs 81 tetragrams. Each line comes in three styles: solid (天 tiān = heaven), broken once (地 dì = earth) and broken twice (人 rén = human). One should random a number four times, get a tetragram and read its meaning in the book.</p>
       <p />
       <p>Unicode Consortium confused earth and human. With [[pt:stability|stability]] guarantees the only thing remaining is to explain this evil mistake in comments.</p>
       <p />
       <p>Some monograms and digrams are already present in Base Plane.</p>
      </orig>
      <transl>
-      <p>Тайсюанцзін (Канон великої таємниці){{-}}китайський гадальний трактат 2{{_}}року нашої ери, натхнений [[pk:4DC0|Книгою змін]]. У трактаті описана 81 тетраграма. Кожна лінія буває у трьох варіантах: суцільна (небеса), з одним розривом (земля), з двома розривами (людина). Потрібно чотири рази викинути випадкове число, отримати тетраграму та прочитати її розшифровку у книзі.</p>
+      <p>Тайсюанцзін (Канон великої таємниці){{-}}китайський гадальний трактат 2{{_}}року нашої ери, натхнений [[pk:4DC0|Книгою змін]]. У трактаті описана 81 тетраграма. Кожна лінія буває у трьох варіантах: суцільна (天 тянь = небеса), з одним розривом (地 ді = земля), з двома розривами (人 жень = людина). Потрібно чотири рази викинути випадкове число, отримати тетраграму та прочитати її розшифровку у книзі.</p>
       <p />
-      <p>У Консорціумі Юнікоду переплутили людину та землю. З гарантіями [[pt:stability|стабільності]] залишалося тільки пояснити цю прикру помилку у коментарях.</p>
+      <p>У Консорціумі Юнікоду переплутали людину та землю. З гарантіями [[pt:stability|стабільності]] залишалося тільки пояснити цю прикру помилку у коментарях.</p>
       <p />
       <p>Частина монограм і диграм вже є у базовій площині.</p>
      </transl>
