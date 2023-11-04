@@ -31,9 +31,6 @@ What was done by authors of Unicodia:
   - Deleted ideographs main and A
   - Resaved with FontLab
   - Rehinted with TtfAutoHint, default settings
-* Mongol
-  — Dehinted 25CC
-  — Made ahchor 25CC dotted circle + 18A9 some umlaut
 * Oriya
   - Implemented 0B55 combining overline
   - 0B63 width → 0

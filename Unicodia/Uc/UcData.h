@@ -352,6 +352,7 @@ namespace uc {
         MEROITIC,
         MODI,
         MONGOLIAN,
+          Z_MNG_1,
         MRO,
         MULTANI,
         MYANMAR,
