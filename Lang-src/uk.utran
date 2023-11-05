@@ -9540,7 +9540,7 @@
       <p />
       <p>There are several methods to convey complex syllables:</p>
       <p>* Using virama (something like pa-n_-da): lone consonant is a separate syllable ([[ps:Tglg|Baybayin]]).</p>
-      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present in the end of words only. Often in the end of words it’s also absent (inherent vowel becomes silent).</p>
+      <p>* Using consonant conjunct (pa-nda): Devanagari {{sm|क्ष}} kša. It is typed as there is no ligature: ka+virama+ša{{-}}but in explicit form virama is present in the end of words only. Often in the end of words it’s also absent (inherent vowel becomes silent). Letter R often becomes small in these conjuncts. Small initial R ({{sm|र्ब}} rba) is called ''repha'', small subjoined R ({{sm|ब्र}} bra) is ''rakar''.</p>
       <p>* Using final consonant (pan-da){{-}}[[ps:Phag|Phags-Pa]]. No virama. Virtual virama or other means of making initial consonant conjuncts may exist.</p>
       <p>* Incomplete, badly conveying complex syllables (pa-da){{-}}[[ps:Bugi|Buginese]]. Some specimen degenerated to consonant scripts.</p>
       <p>* Lost inherent vowel (pa-nᵊ-da){{-}}through reform ([[ps:Laoo|Lao]]) or through natural evolution ([[ps:Guru|Gurmukhi]]). In the latter case it may not{{_}}always distinguish {{t|na}} and {{t|n}} and use virama in dictionaries.</p>
@@ -9561,7 +9561,7 @@
       <p />
       <p>Є різні методи передачі складних складів:</p>
       <p>* Через віраму (умовно ба-н_-ка){{-}}одинока приголосна є окремим складом ([[ps:Tglg|байбаїн]]).</p>
-      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але в явному вигляді вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє).</p>
+      <p>* Через стик приголосних (ба-нка){{-}}деванаґарі {{sm|क्ष}} кша. Набір іде, ніби лігатури нема, ка+вірама+ша{{-}}але в явному вигляді вірама з’являється тільки на кінці слова. Часто нема і на кінці (голосна по замовчанню німіє). Літера R часто зменшується у цих стиках. Мале початкове R ({{sm|र्ब}} рба) зветься ''repha'', мале додаткове R ({{sm|ब्र}} бра){{-}}''rakar''.</p>
       <p>* Через кінцеву приголосну (бан-ка){{-}}[[ps:Phag|монгольська Пагба-лами]]. Вірами нема. Може існувати віртуальна вірама або інші методи передати стик на початку слова.</p>
       <p>* Неповна, погано передає складні склади (ба-ка){{-}}[[ps:Bugi|лонтара]]. Окремі зразки виродились до консонантних.</p>
       <p>* Втратила голосну по замовчанню (ба-нᵊ-ка){{-}}реформою ([[ps:Laoo|лаоська]]) чи природним розвитком ([[ps:Guru|ґурмукхі]]). У другому випадку може не{{_}}завжди відрізняти «на» від «н» та користуватися вірамою у словниках.</p>
