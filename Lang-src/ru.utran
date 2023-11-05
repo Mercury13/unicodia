@@ -6982,7 +6982,7 @@
       <p>In 1587 scholar Ayuush Güüsh reformed the script, and also added several characters for simplifying transcription of Sanskrit, Tibetan abd Chinese important in Buddhism. New characters were named ''Ali-gali'' or ''Galik''.</p>
       <p />
       <p>In Russia the script was used by Buryats. After WW2 Mongols adopted [[ps:Cyrl|Cyrillic]], with collapse of the USSR there are plans for extending the use of old script.&lt;br&gt;</p>
-      <p>Contains homorgaphs (for example, {{sm|ᠣ}}={{t|o/u}}), but vowel harmony{{-}}the word may contain either hard or soft vowels only{{-}}often disambiguates those homographs.</p>
+      <p>Contains homographs (for example, {{sm|ᠣ}}={{t|o/u}}), but vowel harmony{{-}}the word may contain either masculine or feminine vowels only{{-}}often disambiguates those homographs. Unicode has separate codepoints for these homographs: {{sm|ᠡᠨᠳᠡ}} {{t|ent}} here = e+n+d+e, {{sm|ᠠᠳᠠ}} {{t|ada}} demon = a+d+a. Letters Q and G have distinct forms in masculine and feminine words, not just before vowels, but in the end of word too, so fonts have multiple rules for this: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} order, {{sm|ᠴᠡᠷᠢᠭ}} {{t|'ʦʰerek}} soldier.</p>
       <p />
       <p>This block also contains Todo Bichig ''(“clear script”)'' invented in 1648 and used by western peoples including Kalmyks until their cyrillization in 1924. Todo is still in use in Xinjiang ''(China)''.</p>
      </orig>
@@ -6996,7 +6996,7 @@
       <p>В 1587 учёный Аюши-гуши сделал реформу письменности, а также добавил ряд символов для облегчения транскрипции санскрита, тибетского и китайского, важных в буддизме. Новые символы получили имя ''али-гали'' или ''галиг''.</p>
       <p />
       <p>В России письменность использовалась бурятами. После войны монголы разработали новую письменность на [[ps:Cyrl|кириллице]], но с развалом СССР есть планы расширить использование старой письменности.&lt;br&gt;</p>
-      <p>Содержит омографы (например, {{sm|ᠣ}}=o/u), однако закон гармонии гласных{{-}}в слове могут быть или одни твёрдые гласные, или одни мягкие{{-}}часто позволяет раскрыть эти омографы.</p>
+      <p>Содержит омографы (например, {{sm|ᠣ}}=o/u), однако закон гармонии гласных{{-}}в слове могут быть или одни твёрдые гласные, или одни мягкие{{-}}часто позволяет раскрыть эти омографы. В Юникоде для этих омографов отдельные кодовые позиции: {{sm|ᠡᠨᠳᠡ}} {{t|ent}} здесь = e+n+d+e, {{sm|ᠠᠳᠠ}} {{t|ada}} демон = a+d+a. У букв Q и G разные формы в твёрдых и мягких словах, не только перед гласной, но и в конце слов, и в шрифтах для этого множество правил: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} указ, {{sm|ᠴᠡᠷᠢᠭ}} {{t|'ʦʰerek}} солдат.</p>
       <p />
       <p>В этот блок также входит письменность тодо-бичиг ''(«ясное письмо»)'', изобретённая в 1648 и использовавшаяся западными народами, в том числе калмыками, вплоть до их кириллизации в 1924. Она до наших дней ходит в Синцзяне ''(Китай)''.</p>
      </transl>
