@@ -12,7 +12,7 @@ https://www.compart.com/en/unicode/scripts
 https://unicode-table.com/ru/
 http://www.alanwood.net/unicode/fontsbyrange.html
 https://babelstone.co.uk/Software/BabelMap.html
-https://r12a.github.io/scripts/oriya/block.html
+https://r12a.github.io/scripts/orya/or.html
 
 
 FONTS
