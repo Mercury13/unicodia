@@ -1233,6 +1233,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Pau Cin Hau low-falling tone final")
         // Sogd
     EX("Sogdian independent Shin")          // Hebrew Shin / shin dot
+        // Syrc
+    EX("SAM")             // Syriac abbreviation mark
         // Thaa
     EX("Thaana Abafili")  // I think they should be capitalized
     EX("Thaana Aabaafili")
