@@ -53,6 +53,9 @@
 		<f loc="Monospace">
 			<range start="1D7F6" end="1D7FF" />
 		</f>
+		<f loc="CjkFull">
+			<range start="FF10" end="FF19" />
+		</f>
 	</f>
 	<f loc="Latin" forgetTest="1">
 		<f name="A">

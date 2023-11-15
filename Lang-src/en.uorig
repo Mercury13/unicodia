@@ -8367,6 +8367,9 @@
     <text id="Dingbat-numbers with full stop">
      <orig>Dingbat-numbers with full stop</orig>
     </text>
+    <text id="CjkFull">
+     <orig>CJK fullwidth</orig>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
     </text>

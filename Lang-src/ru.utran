@@ -12055,6 +12055,10 @@
      <orig>Dingbat-numbers with full stop</orig>
      <transl>Числа-маркеры с точкой</transl>
     </text>
+    <text id="CjkFull">
+     <orig>CJK fullwidth</orig>
+     <transl>ККЯ полноширинные</transl>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
      <transl>Деловые символы</transl>
