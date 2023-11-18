@@ -5313,8 +5313,16 @@
      <transl>древнегреческий, этеокипрский, финикийский ''(одна короткая надпись)''</transl>
     </text>
     <text id="Text">
-     <orig>Comes from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do not confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←. Partly deciphered back in late 19th century, completely in 1961.</orig>
-     <transl>Происходит из [[ps:Lina|линейного письма А]] через [[ps:Cpmn|кипро-минойскую]] (не путать!). Встречалось с XI до III{{_}}века{{bc}} Надписи IX–VIII{{_}}веков не{{_}}обнаружены, в дальнейшем письмо разделилось на два варианта: пафосский с сохранением направления →, и общекипрский, перевернувшийся в ←. Частично расшифровано уже в конце XIX{{_}}века, полностью в 1961.</transl>
+     <orig>
+      <p>Comes from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do not confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
+      <p />
+      <p>Partly deciphered in 1871 through recently found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
+     </orig>
+     <transl>
+      <p>Происходит из [[ps:Lina|линейного письма А]] через [[ps:Cpmn|кипро-минойскую]] (не путать!). Встречалось с XI до III{{_}}века{{bc}} Надписи IX–VIII{{_}}веков не{{_}}обнаружены, в дальнейшем письмо разделилось на два варианта: пафосский с сохранением направления →, и общекипрский, перевернувшийся в ←.</p>
+      <p />
+      <p>Частично расшифровано в 1871 через недавно найденную билингву с [[ps:Phnx|финикийским]], и полностью к 1876.</p>
+     </transl>
     </text>
    </group>
    <group id="Cyrl">
