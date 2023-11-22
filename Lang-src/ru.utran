@@ -12448,6 +12448,14 @@
      <orig>As of 2023, sample Unicode image depicts spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
      <transl>На 2023 образцовое изображение Юникода{{-}}пружинная мышеловка.  Но поскольку это эмодзи значит «бесплатный сыр» и «ловушка», большинство производителей рисуют самодельную ловушку, которая ловит живой, с сыром внутри.</transl>
     </text>
+    <text id="Family1">
+     <orig>In 2023 Google turned all gendered families to silhouettes. Samsung and Microsoft left them coloured.</orig>
+     <transl>В 2023 Google превратил все семьи с полом в силуэты. Samsung и Microsoft оставили их цветными.</transl>
+    </text>
+    <text id="Family2">
+     <orig>As of 2023, Microsoft draws coloured genderless families rather than silhouettes.</orig>
+     <transl>На 2023 Microsoft рисует цветные бесполые семьи, а не силуэты.</transl>
+    </text>
    </group>
   </group>
   <group id="Version">
