@@ -12422,8 +12422,8 @@
      <transl>Поточний (2023) уряд, Талібан, майже ніде не{{_}}признаний. Його прапор білий з чорною ''шахáдою'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
-     <orig>This flag is French naval ensign. As of 2023, there are two other flags, with seashell (2019) and red-green-black (2023), neither is supported by major vendors.</orig>
-     <transl>Цей прапор{{-}}французьский морський вимпел. На 2023 є два інших прапори, з мушлею (2019) та червоно-зелено-чорний (2023), жоден не підтримується великими виробниками.</transl>
+     <orig>Red-green-black flag was adopted in 2023. Before that all vendors used blue French naval ensign with white snakes.</orig>
+     <transl>Червого-зелено-чорний прапор прийнятий у 2023. До цього усі виробники використовували синій французьский морський вимпел з білими зміями.</transl>
     </text>
     <text id="U+1F46A">
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
@@ -12446,7 +12446,7 @@
      <transl>Усі виробники зупинились на безпечній бритві відносно недавно, у 2019–21. Емодзі Windows{{_}}10 зображує небезпечну бритву.</transl>
     </text>
     <text id="U+1FAA4">
-     <orig>As of 2023, sample Unicode image depicts spring trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <orig>As of 2023, sample Unicode image depicts spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
      <transl>На 2023 зразкове зображення Юнікоду{{-}}пружинна мишоловка. Але оскільки цей емодзі значить «безплатний сир» та «пастка», більшість виробників малюють саморобну пастку, що ловить мишу живою, з сиром всередині.</transl>
     </text>
    </group>

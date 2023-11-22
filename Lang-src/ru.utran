@@ -12421,8 +12421,8 @@
      <transl>Текущее (2023) правительство, Талибан, почти нигде не{{_}}признано. Его флаг белый с чёрной ''шахáдой'', мусульманским девизом. Тем временем производители рисуют старый флаг, брошенный в 2021.</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
-     <orig>This flag is French naval ensign. As of 2023, there are two other flags, with seashell (2019) and red-green-black (2023), neither is supported by major vendors.</orig>
-     <transl>Этот флаг{{-}}французский морской вымпел. На 2023 есть два других флага, с ракушкой (2019) и красно-зелёно-чёрный (2023), ни один не поддерживается крупными производителями.</transl>
+     <orig>Red-green-black flag was adopted in 2023. Before that all vendors used blue French naval ensign with white snakes.</orig>
+     <transl>Крано-зелёно-чёрный флаг принят в 2023. До этого все производители использовали синий французский морской вымпел с белыми змеями.</transl>
     </text>
     <text id="U+1F46A">
      <orig>Vendors drew it as man, woman and child until 2019. Later it became genderless. In 2023 it turned to silhouette, but none of major vendors updated their images.</orig>
@@ -12445,7 +12445,7 @@
      <transl>Все производители остановились на безопасной бритве относительно недавно, в 2019–21. Эмодзи Windows{{_}}10 изображает опасную бритву.</transl>
     </text>
     <text id="U+1FAA4">
-     <orig>As of 2023, sample Unicode image depicts spring trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
+     <orig>As of 2023, sample Unicode image depicts spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
      <transl>На 2023 образцовое изображение Юникода{{-}}пружинная мышеловка.  Но поскольку это эмодзи значит «бесплатный сыр» и «ловушка», большинство производителей рисуют самодельную ловушку, которая ловит живой, с сыром внутри.</transl>
     </text>
    </group>
