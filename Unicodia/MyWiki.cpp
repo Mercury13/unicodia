@@ -1303,25 +1303,37 @@ namespace {
         }
     }
 
-    void appendMisrender(QString& text, std::u32string_view value)
+    void appendMisrender(QString& text, std::u32string_view value, uc::Lfgs mask)
     {
         if (value.empty())
             return;
 
-        // Get L10n key
         char buf[40];
-        auto end = buf + std::size(buf);
-        static constinit const std::string_view HEAD = "Lib.Misr.U";
-        auto p = std::copy(HEAD.begin(), HEAD.end(), buf);
-        for (auto v : value) {
-            ptrdiff_t remder = end - p;
-            if (remder > 1) {
-                auto nPrinted = snprintf(p, remder, "+%04X", static_cast<int>(v));
-                p += nPrinted;
+        const char* key = buf;
+
+        // Get L10n key
+        switch (mask.numeric()) {
+        case uc::MISRENDER_GENDERED_FAMILY.numeric():
+            key = "Lib.Misr.Family1";
+            break;
+        case uc::MISRENDER_GENDERLESS_FAMILY.numeric():
+            key = "Lib.Misr.Family2";
+            break;
+        default: {
+                auto end = buf + std::size(buf);
+                static constinit const std::string_view HEAD = "Lib.Misr.U";
+                auto p = std::copy(HEAD.begin(), HEAD.end(), buf);
+                for (auto v : value) {
+                    ptrdiff_t remder = end - p;
+                    if (remder > 1) {
+                        auto nPrinted = snprintf(p, remder, "+%04X", static_cast<int>(v));
+                        p += nPrinted;
+                    }
+                }
             }
         }
 
-        auto& desc = loc::get(buf);
+        auto& desc = loc::get(key);
         auto paragraph = loc::get("Lib.Misr.Head").arg(desc);
 
         text += "<p>";
@@ -1545,7 +1557,7 @@ QString mywiki::buildHtml(const uc::Cp& cp)
     // Misrender
     if (cp.flags.have(uc::Cfg::G_MISRENDER)) {
         char32_t s[1] { cp.subj };
-        appendMisrender(text, { s, 1 });
+        appendMisrender(text, { s, 1 }, uc::MISRENDER_SIMPLE);
     }
 
     appendSgnwVariants(text, sw);
@@ -1813,7 +1825,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 
     if (auto q = node.flags & uc::MISRENDER_MASK) {
         /// @todo [urgent] check for q?
-        appendMisrender(text, node.value);
+        appendMisrender(text, node.value, q);
     }
 
     text += "<p>";

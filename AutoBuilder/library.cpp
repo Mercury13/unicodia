@@ -68,7 +68,7 @@ namespace {
         u8"animal-amphibian",   // Big library, scrap for the sake of spouting whale
     };
 
-    const std::unordered_map<std::u32string_view, uc::Lfgs> MISRENDERS {
+    const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
         { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
         { U"\U0001F1F2\U0001F1F6", uc::MISRENDER_SIMPLE }, // Martinique
         { U"\U0001F46A",           uc::MISRENDER_SIMPLE }, // family
