@@ -54,19 +54,24 @@ namespace uc {
         constexpr Cfgs SVG_EMOJI = Cfg::M_BIT_2 | Cfg::M_BIT_0;
     }
 
-    enum class Lfg : unsigned char {
+    enum class Lfg : unsigned short {
         GRAPHIC_EMOJI = 1<<0,   ///< [+] EmojiDraw::GRAPHIC  [-] CONSERVATIVE
         NO_TILE       = 1<<1,   ///< [+] do not draw tile (Component right now)
         CODE_AS_NAME  = 1<<2,   ///< [+] use code as name (strange CJK right now)
         TRANSLATE     = 1<<3,   ///< [+] library line is localized using name as key
         HAS_TEXT      = 1<<4,   ///< [+] object has text
-        MISRENDER     = 1<<5,   ///< [+] emoji misrenders are possible
-        SEARCHABLE    = 1<<6,   ///< [+] emoji is searchable. Unsearchable are single-character, VS16, race/direction
-        DECODEABLE    = 1<<7,   ///< [+] emoji is decodeable. Undecodeable are single-character, VS16
+        SEARCHABLE    = 1<<5,   ///< [+] emoji is searchable. Unsearchable are single-character, VS16, race/direction
+        DECODEABLE    = 1<<6,   ///< [+] emoji is decodeable. Undecodeable are single-character, VS16
+        MISRENDER_0   = 1<<7,   ///< [+] emoji misrenders are possible
+        MISRENDER_1   = 1<<8,   ///< [+] emoji misrenders are possible
+        MISRENDER_2   = 1<<9,   ///< [+] emoji misrenders are possible
     };
     using Lfgs = Flags<Lfg>;
-
     DEFINE_ENUM_OPS(Lfg)
+    constexpr auto MISRENDER_MASK = Lfg::MISRENDER_0 | Lfg::MISRENDER_1 | Lfg::MISRENDER_2;
+    constexpr auto MISRENDER_SIMPLE = Lfg::MISRENDER_0;             // 01
+    constexpr auto MISRENDER_GENDERED_FAMILY = Lfg::MISRENDER_1;    // 10
+    constexpr auto MISRENDER_GENDERLESS_FAMILY = Lfg::MISRENDER_1 | Lfg::MISRENDER_0;  // 11
 
     enum class TextRole : unsigned char {
         CMD_END = 0,    // Command: text end

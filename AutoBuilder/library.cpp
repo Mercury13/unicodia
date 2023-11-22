@@ -34,6 +34,31 @@ unsigned lib::Node::maxValueLength() const
 
 namespace {
 
+    template <char32_t... Cps>
+    consteval size_t zwjRemder() { return sizeof...(Cps) * 2; }
+
+    template <char32_t... Cps>
+    consteval size_t zwjSize() { return zwjRemder<Cps...>() - 1; }
+
+    template <size_t N, char32_t First, char32_t... Rest>
+    consteval void copyZwj(std::array<char32_t, N + 1>& data) {
+        auto i = 0;
+        data[i] = First; ++i;
+        ((data[i] = cp::ZWJ, ++i, data[i] = Rest, ++i), ...);
+    }
+
+    template <char32_t... Cps>
+    consteval auto zwj() {
+        constexpr auto N = zwjSize<Cps...>();
+        std::array<char32_t, N + 1> res;
+        std::fill(res.begin(), res.end(), 0);
+        copyZwj<N, Cps...>(res);
+        return res;
+    }
+
+    #define ZZ(...) zwj<__VA_ARGS__>().data()
+
+
     /// Library items that do not make tiles
     const std::unordered_set<std::u8string_view> NO_TILE {
         u8"Component",  // Really ugly, scrap for the sake of nicer ones
@@ -43,15 +68,46 @@ namespace {
         u8"animal-amphibian",   // Big library, scrap for the sake of spouting whale
     };
 
-    const std::unordered_set<std::u32string_view> MISRENDERS {
-        U"\U0001F1E6\U0001F1EB",    // Afghanistan
-        U"\U0001F1F2\U0001F1F6",    // Martinique
-        U"\U0001F46A",              // family
-        U"\U0001F68F",              // bus stop
-        U"\U0001F6DE",              // wheel
-        U"\U0001FA85",              // piñata
-        U"\U0001FA92",              // razor
-        U"\U0001FAA4",              // mouse trap
+    const std::unordered_map<std::u32string_view, uc::Lfgs> MISRENDERS {
+        { U"\U0001F1E6\U0001F1EB", uc::MISRENDER_SIMPLE }, // Afghanistan
+        { U"\U0001F1F2\U0001F1F6", uc::MISRENDER_SIMPLE }, // Martinique
+        { U"\U0001F46A",           uc::MISRENDER_SIMPLE }, // family
+        { U"\U0001F68F",           uc::MISRENDER_SIMPLE }, // bus stop
+        { U"\U0001F6DE",           uc::MISRENDER_SIMPLE }, // wheel
+        { U"\U0001FA85",           uc::MISRENDER_SIMPLE }, // piñata
+        { U"\U0001FA92",           uc::MISRENDER_SIMPLE }, // razor
+        { U"\U0001FAA4",           uc::MISRENDER_SIMPLE }, // mouse trap
+        // Genderless families
+        { ZZ(cp::ADULT, cp::ADULT, cp::CHILD),            uc::MISRENDER_GENDERLESS_FAMILY },
+        { ZZ(cp::ADULT, cp::ADULT, cp::CHILD, cp::CHILD), uc::MISRENDER_GENDERLESS_FAMILY },
+        { ZZ(cp::ADULT, cp::CHILD),                       uc::MISRENDER_GENDERLESS_FAMILY },
+        { ZZ(cp::ADULT, cp::CHILD, cp::CHILD),            uc::MISRENDER_GENDERLESS_FAMILY },
+        // Gendered families
+        { ZZ(cp::MAN,   cp::WOMAN, cp::BOY),              uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::WOMAN, cp::GIRL),             uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::WOMAN, cp::GIRL, cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::WOMAN, cp::BOY,  cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::WOMAN, cp::GIRL, cp::GIRL),   uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::MAN,   cp::BOY),              uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::MAN,   cp::GIRL),             uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::MAN,   cp::GIRL, cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::MAN,   cp::BOY,  cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::MAN,   cp::GIRL, cp::GIRL),   uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::WOMAN, cp::BOY),              uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::WOMAN, cp::GIRL),             uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::WOMAN, cp::GIRL, cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::WOMAN, cp::BOY,  cp::BOY),    uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::WOMAN, cp::GIRL, cp::GIRL),   uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::BOY),                         uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::GIRL),                        uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::GIRL, cp::BOY),               uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::BOY,  cp::BOY),               uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::MAN,   cp::GIRL, cp::GIRL),              uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::BOY),                         uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::GIRL),                        uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::GIRL, cp::BOY),               uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::BOY,  cp::BOY),               uc::MISRENDER_GENDERED_FAMILY },
+        { ZZ(cp::WOMAN, cp::GIRL, cp::GIRL),              uc::MISRENDER_GENDERED_FAMILY },
     };
 
     constexpr const char32_t UNSEARCHABLE_EMOJI_C[] {
@@ -198,11 +254,14 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= uc::Lfg::NO_TILE;                
                 newItem.value.assign(codes.buffer(), nCodes);
-                if (MISRENDERS.contains(newItem.value)) {
-                    newItem.flags |= uc::Lfg::MISRENDER;
-                    if (mainCode != 0)
+
+                // Misrender
+                if (auto it = MISRENDERS.find(newItem.value); it != MISRENDERS.end()) {
+                    newItem.flags |= it->second;
+                    if (it->second == uc::MISRENDER_SIMPLE && mainCode != 0)
                         r.misrenders.insert(mainCode);
                 }
+
                 auto level = searchLevel(newItem.value);
                 switch (level) {
                 case SearchLevel::SEARCHABLE:

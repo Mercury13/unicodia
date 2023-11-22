@@ -1810,7 +1810,9 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
     appendCopyable(text, title, "bigcopy");
     text += "</h1>";
 
-    if (node.flags.have(uc::Lfg::MISRENDER)) {
+
+    if (auto q = node.flags & uc::MISRENDER_MASK) {
+        /// @todo [urgent] check for q?
         appendMisrender(text, node.value);
     }
 

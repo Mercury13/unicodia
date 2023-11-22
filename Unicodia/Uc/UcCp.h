@@ -35,6 +35,10 @@ namespace cp {
     constexpr char32_t FEMALE = 0x2640;
     constexpr char32_t MAN = 0x1F468;
     constexpr char32_t WOMAN = 0x1F469;
+    constexpr char32_t BOY = 0x1F466;
+    constexpr char32_t GIRL = 0x1F467;
+    constexpr char32_t ADULT = 0x1F9D1;
+    constexpr char32_t CHILD = 0x1F9D2;
     constexpr char32_t MAN_AND_WOMAN = 0x1F46B;
     constexpr char32_t TWO_MEN = 0x1F46C;
     constexpr char32_t TWO_WOMEN = 0x1F46D;
