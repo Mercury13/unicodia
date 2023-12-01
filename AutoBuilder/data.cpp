@@ -1085,6 +1085,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX2("Epsilon", Exf::MIXCASE)
     EX2("closed reversed Epsilon", Exf::MIXCASE)
     EX2("closed Epsilon", Exf::MIXCASE)
+    EX2("reversed Epsilon", Exf::MIXCASE)
         // Runr
     EX("runic letter Dotted-N") // All are really tricky!!
     EX("runic letter Dotted-L")
