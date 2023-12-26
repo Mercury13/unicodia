@@ -4061,7 +4061,9 @@
       <p />
       <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with textbook on complex analysis by Gunning and Rossi (1965).</p>
       <p />
-      <p>The most widespread of such notations are already in the Base Plane, in the block of [[pk:2100|letterlike symbols]]. With extension of Unicode beyond Base Plane, complete Latin alphabet and digits written with various fonts were added.</p>
+      <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With extension of Unicode beyond Base Plane, complete Latin alphabet and digits written with various fonts were added.</p>
+      <p />
+      <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
      </orig>
      <transl>
       <p>Математики обозначают различными шрифтами объекты, с которыми имеют дело:</p>
@@ -4075,7 +4077,9 @@
       <p />
       <p>Ажурный шрифт {{sm|ℕℤℚℝℂ}} происходит из жирного, записанного мелом на доске. Распространился он со знаменитым учебником по комплексному анализу 1965{{_}}года Ганнинга и Росси.</p>
       <p />
-      <p>Наиболее распространённые из таких обозначений находятся в базовой плоскости в разделе [[pk:2100|буквоподобных символов]]. С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами.</p>
+      <p>Наиболее распространённые из таких обозначений находятся в [[pt:bmp|базовой плоскости]] в разделе [[pk:2100|буквоподобных символов]]. С расширением Юникода за базовую плоскость добавили полный латинский алфавит и арабские цифры разными шрифтами.</p>
+      <p />
+      <p>Часть готических букв едва различима. И таблицы Юникода, и большинство шрифтов, включая Windows и TᴇX, устроены именно так, хотя часть математиков, особенно в не[[ps:Latn|латинских]] странах, использует шрифты попроще.</p>
      </transl>
     </text>
    </group>

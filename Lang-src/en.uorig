@@ -3054,7 +3054,9 @@
       <p />
       <p>Double-struck font {{sm|ℕℤℚℝℂ}} comes from bold written with chalk. It spread widely with textbook on complex analysis by Gunning and Rossi (1965).</p>
       <p />
-      <p>The most widespread of such notations are already in the Base Plane, in the block of [[pk:2100|letterlike symbols]]. With extension of Unicode beyond Base Plane, complete Latin alphabet and digits written with various fonts were added.</p>
+      <p>The most widespread of such notations are already in the [[pt:bmp|Base Plane]], in the block of [[pk:2100|letterlike symbols]]. With extension of Unicode beyond Base Plane, complete Latin alphabet and digits written with various fonts were added.</p>
+      <p />
+      <p>Some Fraktur letters are barely recognizable. Both Unicode charts and most fonts, including Windows and TᴇX, are designed this way, though some mathematicians, especially in non-[[ps:Latn|Latin]] countries, use simpler fonts.</p>
      </orig>
     </text>
    </group>
