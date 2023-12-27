@@ -1066,7 +1066,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("straight epsilon")              // Letter is SMALL
     EX("reversed straight epsilon")     // Letter is SMALL
     EX("Antisigma")                     // Letter is BIG
-    EX("antisigma periestigmenon")      // Letter is BIG
+    EX("Antisigma periestigmenon")      // Letter is BIG
+    EX("Claudian Antisigma")            // Letter is BIG
     EX("Epidaurean acrophonic symbol Three")    // Vertical ellipsis
             // Greek capital reversed lunate Sigma symbol — OK, Sigma is cap
         // Latn
