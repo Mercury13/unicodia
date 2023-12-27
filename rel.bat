@@ -1,5 +1,5 @@
 @rem Settings
-@set VERSION=2.3.4
+@set VERSION=2.3.5
 @set QTDIR=c:\Qt\6.1.3\mingw81_64
 @rem Workaround for that Qt, maybe QtcW7Compat.7z
 @set WORKAROUND=
@@ -29,6 +29,9 @@
 @set AB_UCSUTTON=%BUILD_AB%/%UCSUTTON%
 
 @path %MINGW%;%PATH%
+
+@echo My version is %VERSION%
+@echo.
 
 @echo ===== Checking for tools =====
 
