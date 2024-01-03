@@ -2167,9 +2167,6 @@ uc::SampleProxy uc::Cp::sampleProxy(
         case 0x1CF45:
         case 0x1CF46:
             return { str::toQ(code), style };
-        case 0x16FF0:
-        case 0x16FF1:   // Ideographic syms from BS Han
-            return { QChar{ DOTTED_CIRCLE } + str::toQ(code) + NBSP, style };
         }
     }
 
