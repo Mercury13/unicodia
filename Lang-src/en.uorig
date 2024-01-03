@@ -1074,7 +1074,11 @@
      <orig>Arabic extended B</orig>
     </text>
     <text id="Text">
-     <orig>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</orig>
+     <orig>
+      <p>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</p>
+      <p />
+      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks beforehands, and range 0590…08FF was already right-to-left.</p>
+     </orig>
     </text>
    </group>
    <group id="08A0">

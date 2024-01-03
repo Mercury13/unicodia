@@ -1386,8 +1386,16 @@
      <transl>Арабська розширена B</transl>
     </text>
     <text id="Text">
-     <orig>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</orig>
-     <transl>Символи з коментарів до Корану. Також боснійська (запис сербохорватської арабськими літерами), пегон (запис індонезійських мов арабськими літерами), єгипетський піастр (валюта до 1834) і єгипетський фунт (сучасна валюта).</transl>
+     <orig>
+      <p>Characters for comments to Quran. Also Bosnian (dialect of Serbo-Croatian sometimes written with Arabic letters), Pegon (writing of Indonesian languages with Arabic letters), Egyptian piastre (currency before 1834) and Egyptian pound (modern currency).</p>
+      <p />
+      <p>[[pt:bmp|Base Plane]] was almost full in 2021, and you may ask: why do they allocate such rare characters? Unicode allocates right-to-left superblocks beforehands, and range 0590…08FF was already right-to-left.</p>
+     </orig>
+     <transl>
+      <p>Символи з коментарів до Корану. Також боснійська (запис сербохорватської арабськими літерами), пегон (запис індонезійських мов арабськими літерами), єгипетський піастр (валюта до 1834) і єгипетський фунт (сучасна валюта).</p>
+      <p />
+      <p>У 2021 [[pt:bmp|базова площина]] була майже повна, і можна спитати: чому вони кодують такі рідкі символи? Юнікод заздалегідь відводить суперблоки з написанням справа ліворуч, і діапазон 0590…08FF вже таким був.</p>
+     </transl>
     </text>
    </group>
    <group id="08A0">
