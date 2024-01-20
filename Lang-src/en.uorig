@@ -3742,9 +3742,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Braille is a dot writing system for blind people. It uses groups 2×3 dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
+      <p>Braille is a dot writing system for blind people. It uses groups 2×3{{_}}dots with binary encoding, sometimes the fourth row is added. Encoding differs even for British and American Braille. Has several “modes” (letters, numbers, highlight) “switched” with special characters.</p>
       <p />
-      <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing.” Barbier used 6×6 matrix, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code.</p>
+      <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing.” Barbier used 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code.</p>
       <p />
       <p>Braille industrialized assistive technologies for blind: easy to emboss, does not come to sight when embossed next to normal text for sighted people or even over it.</p>
      </orig>
