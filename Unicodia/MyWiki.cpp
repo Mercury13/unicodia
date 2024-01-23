@@ -270,13 +270,21 @@ namespace {
 
     constexpr std::u8string_view BULLET = u8"•\u00A0";
 
+    const uc::Font& getDescFont(const uc::Font& font)
+    {
+        auto that = &font;
+        while (that->flags.have(uc::Ffg::DESC_AVOID))
+            ++that;
+        return *that;
+    }
+
     class Eng : public wiki::Engine
     {
     public:
         QString& s;
         const uc::Font& font;
 
-        Eng(QString& aS, const uc::Font& aFont) : s(aS), font(aFont) {}
+        Eng(QString& aS, const uc::Font& aFont) : s(aS), font(getDescFont(aFont)) {}
         void appendPlain(std::string_view x) override;
         void appendLink(
                 const SafeVector<std::string_view>& x,

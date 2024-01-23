@@ -459,6 +459,7 @@ namespace uc {
         FALL2_IF_ACCEPTED = 1<<17,  ///< Fall over one font if not rejected;
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
         MARK_AVOID        = 1<<18,  ///< If char’s type is mark → avoid!
+        DESC_AVOID        = 1<<19,  ///< Avoid in description, use next instead
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
