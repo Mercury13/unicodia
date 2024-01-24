@@ -1921,22 +1921,6 @@ const std::set<RangeByEnd> alternateRanges {
     { 0x2997, 0x2998 },
     { 0x2A1B, 0x2A1C },  // upper-lower integral
     { 0x2A79, 0x2AAD },  // greater-less
-
-    // Egyptian while Noto is BAAD
-    { 0x130D2 },
-    { 0x130D5 },
-    { 0x130FD, 0x130FE },
-    { 0x13108 },
-    { 0x1331F },
-    { 0x1325F },
-    { 0x13267 },
-    { 0x1326A },
-    { 0x13297 },
-    { 0x1329E, 0x1329F },
-    { 0x132B4 },
-    { 0x13376, 0x1337B },   // only 3 are bad, the rest for uniformness
-    { 0x13417 },
-    { 0x13420 },
 };
 
 const std::set<RangeByEnd> noAaRanges {

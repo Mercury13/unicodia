@@ -297,7 +297,6 @@ namespace uc {
         DUPLOYAN,
         EGYPTIAN,
           Z_EGY_1,
-          Z_EGY_2,
         ELBASAN,
         ELYMAIC,
         ETHIOPIC,

@@ -385,7 +385,7 @@ int main()
     auto htmlEntities = readEntities(ENTITIES_JSON);
     std::cout << "OK, " << htmlEntities.data.size() << " chars, "
                         << htmlEntities.stats.entities.nGood << " good en's, "
-                        << htmlEntities.stats.entities.nTooLong << " too long en's, "
+                        << htmlEntities.stats.entities.nTooLong << " too long (2+) en's, "
                         << htmlEntities.stats.entities.nWrong << " wrong en's." << std::endl;
 
     ///// Noto emoji ///////////////////////////////////////////////////////////
