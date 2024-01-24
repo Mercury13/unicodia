@@ -3710,8 +3710,8 @@
    </group>
    <group id="14400">
     <text id="Name">
-     <orig>Anatolian (Luwian, Hittite) heroglyphs</orig>
-     <transl>Анатолійські (лувійські, хетські) ієрогліфи</transl>
+     <orig>Anatolian (Luwian) heroglyphs</orig>
+     <transl>Анатолійські (лувійські) ієрогліфи</transl>
     </text>
    </group>
    <group id="16800">
@@ -6072,8 +6072,8 @@
    </group>
    <group id="Hluw">
     <text id="Name">
-     <orig>Anatolian (Luwian, Hittite) hieroglyphs</orig>
-     <transl>Анатолійські (лувійські, хетські) ієрогліфи</transl>
+     <orig>Anatolian (Luwian) hieroglyphs</orig>
+     <transl>Анатолійські (лувійські) ієрогліфи</transl>
     </text>
     <text id="Lang">
      <orig>Luwian</orig>

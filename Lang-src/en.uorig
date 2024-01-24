@@ -2798,7 +2798,7 @@
    </group>
    <group id="14400">
     <text id="Name">
-     <orig>Anatolian (Luwian, Hittite) heroglyphs</orig>
+     <orig>Anatolian (Luwian) heroglyphs</orig>
     </text>
    </group>
    <group id="16800">
@@ -4394,7 +4394,7 @@
    </group>
    <group id="Hluw">
     <text id="Name">
-     <orig>Anatolian (Luwian, Hittite) hieroglyphs</orig>
+     <orig>Anatolian (Luwian) hieroglyphs</orig>
     </text>
     <text id="Lang">
      <orig>Luwian</orig>
