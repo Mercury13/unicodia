@@ -4054,7 +4054,7 @@
       <p />
       <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
       <p />
-      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by professional designer, deviating from truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1390A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner. ''Unicodia'' has two fonts: ''Google Noto'' is the main, ''NewGardiner'' is the backup.</p>
+      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by professional designer, deviating from truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1390A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
      </orig>
     </text>
    </group>
@@ -7875,6 +7875,15 @@
    </text>
    <text id="Etc">
     <orig>and others</orig>
+   </text>
+   <text id="Thanks">
+    <orig>Special thanks</orig>
+   </text>
+   <text id="TempEgyp">
+    <orig>for backup Egyptian font and hieroglyph base</orig>
+   </text>
+   <text id="TempKawi">
+    <orig>for temporary Kawi font</orig>
    </text>
   </group>
   <group id="Main">

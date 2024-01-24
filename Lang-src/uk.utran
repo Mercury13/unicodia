@@ -5543,7 +5543,7 @@
       <p />
       <p>In Windows fonts three hieroglyphs of penis are hidden{{-}}only displayed next to other hieroglyphs.</p>
       <p />
-      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by professional designer, deviating from truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1390A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner. ''Unicodia'' has two fonts: ''Google Noto'' is the main, ''NewGardiner'' is the backup.</p>
+      <p>In Unicode{{_}}5.2 (2009) sample characters were historic enough (from Alan Gardiner’s book of 1957), but primitive. In Unicode{{_}}9.0 (2016) they were redrawn by professional designer, deviating from truth someway. Since Unicode{{_}}14.0 (2021) Egyptologists are fixing mistakes, some characters (e.g. 1390A) were changed twice. Hair and beard define who is drawn{{-}}god, king, Egyptian or foreigner.</p>
      </orig>
      <transl>
       <p>Єгипетська писемність пройшла звичайний шлях від піктографічного письма (слова зображуються наочними поняттями) через ідеографічне (з’являються абстрактні поняття{{-}}знаком «сонце» позначають день) до [[pt:abjad|консонантного]] (почали з’являтися звукові знаки). Подібне ми бачили і в інших розвинених цивілізаціях{{-}}наприклад, [[ps:Xsux|шумерській]].</p>
@@ -5558,7 +5558,7 @@
       <p />
       <p>У шрифтах Windows приховані три ієрогліфи статевого члена{{-}}видно тільки поруч з іншими ієрогліфами.</p>
       <p />
-      <p>У Юнікоді{{_}}5.2 (2009) символи були достатньо історичними (за книгою Алана Ґардінера видання 1957), але примітивними. У Юнікоді{{_}}9.0 (2016) до них приклав лапу професійний дизайнер, дещо погрішивши проти істини. З Юнікоду{{_}}14.0 (2021) єгиптологи виправляют помилки, окремі символи (наприклад, 1390A) мінялись двічі. Хто намальований{{-}}бог, цар, єгиптянин чи іноземець{{-}}визначається за зачіскою та бородою. У «Юнікодії» два шрифти: ''Google Noto''{{-}}основний, ''NewGardiner''{{-}}резервний.</p>
+      <p>У Юнікоді{{_}}5.2 (2009) символи були достатньо історичними (за книгою Алана Ґардінера видання 1957), але примітивними. У Юнікоді{{_}}9.0 (2016) до них приклав лапу професійний дизайнер, дещо погрішивши проти істини. З Юнікоду{{_}}14.0 (2021) єгиптологи виправляют помилки, окремі символи (наприклад, 1390A) мінялись двічі. Хто намальований{{-}}бог, цар, єгиптянин чи іноземець{{-}}визначається за зачіскою та бородою.</p>
      </transl>
     </text>
    </group>
@@ -11418,6 +11418,18 @@
    <text id="Etc">
     <orig>and others</orig>
     <transl>та інші</transl>
+   </text>
+   <text id="Thanks">
+    <orig>Special thanks</orig>
+    <transl>Особлива вдячність</transl>
+   </text>
+   <text id="TempEgyp">
+    <orig>for backup Egyptian font and hieroglyph base</orig>
+    <transl>за резервний єгипетський шрифт та базу ієрогліфів</transl>
+   </text>
+   <text id="TempKawi">
+    <orig>for temporary Kawi font</orig>
+    <transl>за тимчасовий шрифт каві</transl>
    </text>
   </group>
   <group id="Main">
