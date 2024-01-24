@@ -247,7 +247,6 @@ namespace uc {
         BHAIKSUKI,
         BRAHMI,
           Z_BRA_1,
-          Z_BRA_2,
         BUGINESE,   // Here we use Lelewadee UI → specialized W7 font
           Z_BUG_1,
         BUHID,

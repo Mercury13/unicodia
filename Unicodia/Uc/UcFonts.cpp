@@ -78,9 +78,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NAND, Ffg::FALL_TO_NEXT },                                        // …1
     { "NotoSerifBengali-Regular.ttf", 120_pc },                                 // Bengali
     { "NotoSansBhaiksuki-Regular.ttf", Ffg::DESC_BIGGER, 130_pc },              // Bhaiksuki
-    { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER | Ffg::FALL2_IF_ACCEPTED }, // Brahmi
-      { "NotoSansBrahmi-Regular.ttf", Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },   // …1
-      { FNAME_FUNKY },                                                          // …2
+    { FAM_HISTORIC, Ffg::FALL_TO_NEXT | Ffg::DESC_BIGGER },                     // Brahmi
+      { "NotoSansBrahmi-Regular.ttf", Ffg::DESC_BIGGER },                       // …1
     { "Leelawadee UI", Ffg::FALL_TO_NEXT, 110_pc },                             // Buginese
       { "NotoSansBuginese-Regular.ttf" },                                       // …1
     { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
