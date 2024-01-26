@@ -2792,7 +2792,9 @@
       <p />
       <p>Horizontal mirroring mark may be implemented either in an engine, or in a font.</p>
       <p />
-      <p>The last six characters and fifteen mark do not need complex fonts or special engines: two non-break hieroglyphic spaces, four fills for completely destroyed hieroglyphs, and fifteen hatches for heavily damaged hieroglyphs.</p>
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p />
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
      </orig>
     </text>
    </group>

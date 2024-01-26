@@ -3696,14 +3696,18 @@
       <p />
       <p>Horizontal mirroring mark may be implemented either in an engine, or in a font.</p>
       <p />
-      <p>The last six characters and fifteen mark do not need complex fonts or special engines: two non-break hieroglyphic spaces, four fills for completely destroyed hieroglyphs, and fifteen hatches for heavily damaged hieroglyphs.</p>
+      <p>Two non-break hieroglyphic spaces and four fills for completely destroyed surfaces are simple characters.</p>
+      <p />
+      <p>Fifteen hatches for heavily damaged hieroglyphs should ideally adapt to hieroglyphs’ actual width and height.</p>
      </orig>
      <transl>
       <p>Шестнадцать символов обеспечивают сложное форматирование египетских иероглифов. Для них нужен особый типографский движок.</p>
       <p />
       <p>Метка горизонтального отражения может быть реализована как на уровне движка, так и на уровне шрифтов.</p>
       <p />
-      <p>Ещё для шести символов и пятнадцати меток не{{_}}нужны ни сложные шрифты, ни особый движок: два неразрывных иероглифических пробела, четыре заливки «иероглиф уничтожен» и пятнадцать штриховок «иероглиф сильно повреждён».</p>
+      <p>Два неразрывных иероглифических пробела и четыре заливки «иероглиф уничтожен»{{-}}простые символы.</p>
+      <p />
+      <p>Пятнадцать штриховок «иероглиф сильно повреждён» в идеале должны адаптироваться к реальной ширине и высоте иероглифа.</p>
      </transl>
     </text>
    </group>
