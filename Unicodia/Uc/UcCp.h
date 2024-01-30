@@ -47,6 +47,10 @@ namespace cp {
     constexpr char32_t FLAG_A = 0x1F1E6;
     constexpr char32_t FLAG_Z = 0x1F1FF;
 
+    // Tags
+    constexpr char32_t TAG_MIN = 0xE0000;
+    constexpr char32_t TAG_MAX = 0xE007F;
+
     // NONCHAR
     constexpr char32_t NONCHAR_ARAB_FIRST = 0xFDD0;
     constexpr char32_t NONCHAR_ARAB_LAST  = 0xFDEF;

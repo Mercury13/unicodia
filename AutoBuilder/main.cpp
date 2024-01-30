@@ -11,6 +11,9 @@
 // My libs
 #include "u_Strings.h"
 
+// Unicode
+#include "UcCp.h"
+
 // Project-local
 #include "utils.h"
 #include "data.h"
@@ -625,7 +628,7 @@ int main()
             flags |= uc::Cfg::G_RENDER_BUG;
         // Virtual virama
         if (customDrawnControlChars.contains(cp)
-                || (cp >= 0xE0000 && cp <= 0xE007F))
+                || (cp >= ::cp::TAG_MIN && cp <= ::cp::TAG_MAX))
             flags |= uc::m::CUSTOM_CONTROL;
         // No anti-aliasing
         if (isNoAa(cp))

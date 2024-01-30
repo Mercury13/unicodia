@@ -2214,6 +2214,25 @@ bool uc::Cp::isGraphical() const
 }
 
 
+bool uc::Cp::hasGlyph() const
+{
+    // All default-ignorable have no glyph, either format or marks…
+    if (isDefaultIgnorable())
+        return false;
+    // Otherwise
+    switch (ecCategory) {
+    case EcCategory::CONTROL:
+    case EcCategory::SEPARATOR_LINE:
+    case EcCategory::SEPARATOR_PARAGRAPH:
+        return false;   // Surely no glyph (they all have abbreviation)
+    case EcCategory::FORMAT: // check for abbreviation
+        return name.getText(TextRole::ABBREV).empty();
+    default:
+        return true;
+    }
+}
+
+
 uc::DrawMethod uc::Cp::drawMethod(
         EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const
 {
@@ -2269,7 +2288,7 @@ uc::DrawMethod uc::Cp::drawMethod(
 
 QString uc::Cp::osProxy() const
 {
-    if (!isGraphical())
+    if (!hasGlyph())
         return {};
 
     switch (category().upCat) {

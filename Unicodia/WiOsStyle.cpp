@@ -76,7 +76,7 @@ void WiOsStyle::setTofu()
 
 void WiOsStyle::setCpEx(const uc::Cp& ch, const QString& display, FontMatch& fontMatch)
 {
-    const bool wantSysFont = !ch.isDefaultIgnorable() && ch.isGraphical();
+    const bool wantSysFont = ch.hasGlyph();
     if (wantSysFont) {
         if (display.isEmpty()) {
             ui->lbOs->setFont(fontBig);
