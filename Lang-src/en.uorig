@@ -3339,6 +3339,10 @@
       <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
       <p>This block also contains pieces of chinese game of Xiangqi.</p>
+      <p />
+      <p>Unicode{{_}}16 or 17 will accept two pieces from proto-chess:</p>
+      <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
+      <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
      </orig>
     </text>
    </group>

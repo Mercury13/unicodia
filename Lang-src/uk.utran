@@ -4481,6 +4481,10 @@
       <p>* equihopper{{-}}chooses any piece (own or opponent’s), leaps over it and lands at the same distance on other side. If it leaps in eight cardinal directions, all squares from start to end except springboard piece must be empty. Highly maneuverable, but constrained to a quarter of squares.</p>
       <p />
       <p>This block also contains pieces of chinese game of Xiangqi.</p>
+      <p />
+      <p>Unicode{{_}}16 or 17 will accept two pieces from proto-chess:</p>
+      <p>* alfil (elephant){{-}}ancestor of bishop, moves two squares diagonally, jumping over pieces;</p>
+      <p>* ferz{{-}}ancestor of queen, moves one square diagonally.</p>
      </orig>
      <transl>
       <p>У казковій композиції за часів набірного шрифту через брак іншого використовували звичайні повернуті фігури. З нестандартних фігур устоялись:</p>
@@ -4491,6 +4495,10 @@
       <p>* еквіхопер{{-}}обирає будь-яку фігуру (свою або чужу), стрибає через неї та приземлюється на такій ж відстані. Якщо він стрибає у восьми основних напрямках, усі поля від старту до фінішу (окрім опорної фігури) повинні бути порожні. Дуже маневрений, але обмежений чвертю клітин.</p>
       <p />
       <p>Також у цьому блоці є фішки китайської гри сянці.</p>
+      <p />
+      <p>Юнікод{{_}}16 або 17 додасть дві фігури з прото-шахів:</p>
+      <p>* алфіл{{-}}предок слона, ходить на дві клітини навскіс, перестрибуючи через фігури;</p>
+      <p>* фарзин{{-}}предок ферзя, ходить на одну клітину навскіс.</p>
      </transl>
     </text>
    </group>
