@@ -12472,6 +12472,10 @@
      <orig>Neutral pieces</orig>
      <transl>Нейтральные фигуры</transl>
     </text>
+    <text id="Checkers">
+     <orig>Checkers/draughts</orig>
+     <transl>Шашки</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

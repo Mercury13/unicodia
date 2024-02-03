@@ -611,9 +611,10 @@
 		</f>
 		<f loc="Chess">
 			<f loc="ChPieses"><d>♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟</d></f>
-			<f loc="ChFairy"><d>🩈 🩋 🩎 🩏 🩐 🩉 🩌 🩑 🩒 🩓</d></f>
+			<f loc="ChFairy"><d>🩎 🩏 🩐 🩈 🩋 🩑 🩒 🩓 🩉 🩌</d></f>
 			<f loc="ChNeutral"><d>🨀 🨁 🨂 🨃 🨄 🨅 🩊 🩍</d></f>
 			<d>♟️</d>
 		</f>
+		<f loc="Checkers"><d>⛀ ⛁ ⛂ ⛃</d></f>
 	</f>
 </library>

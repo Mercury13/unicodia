@@ -8671,6 +8671,9 @@
     <text id="ChNeutral">
      <orig>Neutral pieces</orig>
     </text>
+    <text id="Checkers">
+     <orig>Checkers/draughts</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">
