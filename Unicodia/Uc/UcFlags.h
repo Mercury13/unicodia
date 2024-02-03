@@ -18,7 +18,8 @@ namespace uc {
     ///   How to write them?
     ///
     enum class EmojiDraw {
-        TEXT,           ///< Mostly library: draw emoji as text
+        FORCE_TEXT,     ///< Do not draw graphics AT ALL
+        MOSTLY_TEXT,    ///< Mostly library: draw emoji as text
         CONSERVATIVE,   ///< Table: those chars are drawn as text
         GRAPHIC         ///< Library: all emoji are drawn as graphic
     };

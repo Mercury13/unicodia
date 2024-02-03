@@ -567,9 +567,7 @@ namespace uc {
         Lfgs flags;
         uc::EcVersion ecEmojiVersion = uc::EcVersion::NONE;
 
-        EmojiDraw emojiDraw() const {
-            return flags.have(Lfg::GRAPHIC_EMOJI) ? EmojiDraw::GRAPHIC : EmojiDraw::TEXT;
-        }
+        EmojiDraw emojiDraw() const;
         inline const uc::Version& emojiVersion() const;
         const uc::Version& emojiPrevVersion() const;
 

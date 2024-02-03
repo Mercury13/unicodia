@@ -2,12 +2,6 @@
 #include "FmMain.h"
 #include "ui_FmMain.h"
 
-// C++
-#include <iostream>
-#include <cmath>
-#include <bit>
-#include <filesystem>
-
 // XML
 #include "pugixml.hpp"
 
@@ -1521,11 +1515,13 @@ void FmMain::libChanged(const QModelIndex& current)
         }
 
         // Show sample
-        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI) || len > 1) {
+        auto emojiDraw = node.emojiDraw();
+        bool needGraph = (len > 1 && emojiDraw != uc::EmojiDraw::FORCE_TEXT);
+        if (needGraph || node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
             ui->wiLibSample->showEmoji(node.value);
         } else if (auto cp = uc::cpsByCode[node.value[0]]) {
             // Library uses default/empty settings
-            ui->wiLibSample->showCp(*cp, node.emojiDraw(), uc::GlyphStyleSets::EMPTY);
+            ui->wiLibSample->showCp(*cp, emojiDraw, uc::GlyphStyleSets::EMPTY);
         } else  {
             ui->wiLibSample->showNothing();
         }

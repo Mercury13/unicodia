@@ -21,8 +21,11 @@ namespace cp {
     constexpr char32_t MATH_GREEK_FIRST = 0x1D6A8;
     constexpr char32_t MATH_GREEK_LAST = 0x1D7CB;
 
-    // Emoji special
+    // Variation selectors
+    constexpr char32_t VS15 = 0xFE0E;
     constexpr char32_t VS16 = 0xFE0F;
+
+    // Emoji special
     constexpr char32_t SKIN1 = 0x1F3FB;
     constexpr char32_t SKIN2 = 0x1F3FC;
     constexpr char32_t SKIN3 = 0x1F3FD;

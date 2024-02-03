@@ -8650,6 +8650,27 @@
     <text id="InvSmall">
      <orig>Turned-over / small</orig>
     </text>
+    <text id="Game">
+     <orig>Games</orig>
+    </text>
+    <text id="GameConsole">
+     <orig>Game consoles</orig>
+    </text>
+    <text id="ConsoleMisc">
+     <orig>Misc. characters</orig>
+    </text>
+    <text id="Chess">
+     <orig>Chess</orig>
+    </text>
+    <text id="ChPieses">
+     <orig>Standard pieces</orig>
+    </text>
+    <text id="ChFairy">
+     <orig>Fairy pieces</orig>
+    </text>
+    <text id="ChNeutral">
+     <orig>Neutral pieces</orig>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

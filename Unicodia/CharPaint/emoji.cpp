@@ -284,8 +284,13 @@ GetCp EmojiPainter::getCp(std::u32string_view text)
     case 1:
         return { .cp = text[0], .forceGraphic = false };
     case 2:
-        if (text[1] == cp::VS16)
+        switch (text[1]) {
+        case cp::VS15:
+            return { .cp = text[0], .forceGraphic = false };
+        case cp::VS16:
             return { .cp = text[0], .forceGraphic = true };
+        default:;
+        }
         [[fallthrough]];
     default:
         return { .cp = 0, .forceGraphic = false };

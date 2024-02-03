@@ -12445,6 +12445,34 @@
      <orig>Turned-over / small</orig>
      <transl>Перевернуті / малі</transl>
     </text>
+    <text id="Game">
+     <orig>Games</orig>
+     <transl>Ігри</transl>
+    </text>
+    <text id="GameConsole">
+     <orig>Game consoles</orig>
+     <transl>Ігрові приставки</transl>
+    </text>
+    <text id="ConsoleMisc">
+     <orig>Misc. characters</orig>
+     <transl>Різні символи</transl>
+    </text>
+    <text id="Chess">
+     <orig>Chess</orig>
+     <transl>Шахи</transl>
+    </text>
+    <text id="ChPieses">
+     <orig>Standard pieces</orig>
+     <transl>Ортодоксальні фігури</transl>
+    </text>
+    <text id="ChFairy">
+     <orig>Fairy pieces</orig>
+     <transl>Казкові фігури</transl>
+    </text>
+    <text id="ChNeutral">
+     <orig>Neutral pieces</orig>
+     <transl>Нейтральні фігури</transl>
+    </text>
    </group>
    <group id="Text">
     <text id="SmallCap">

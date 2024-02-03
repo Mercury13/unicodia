@@ -690,7 +690,7 @@ void drawChar(
     case uc::DrawMethod::VERTICAL_CCW: {
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             auto proxy = cp.sampleProxy(uc::ProxyType::EXTENDED,
-                        uc::EmojiDraw::TEXT, uc::GlyphStyleSets::EMPTY);
+                        uc::EmojiDraw::MOSTLY_TEXT, uc::GlyphStyleSets::EMPTY);
             drawVertical(painter, rect, *fontAt(method, sizePc, cp), angle, color,
                          proxy.text);
         } break;
@@ -760,6 +760,10 @@ void drawSearchChars(
         const QColor& color, uc::EmojiDraw emojiMode,
         const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
+    if (emojiMode == uc::EmojiDraw::FORCE_TEXT) {
+        std::cout << "Force text" << std::endl;
+    }
+
     drawCharBorder(painter, rect, color);
     if (text.empty())
         return;
@@ -767,7 +771,7 @@ void drawSearchChars(
     auto c1 = EmojiPainter::getCp(text);
     /// @todo [urgent] This is just check whether it’s a single character
     ///    (all multi-chars are emoji)
-    if (c1 && !c1.forceGraphic) {
+    if (c1 && ((emojiMode == uc::EmojiDraw::FORCE_TEXT) || !c1.forceGraphic)) {
         if (auto cp = uc::cpsByCode[c1.cp])
             drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode, glyphSets);
     } else {

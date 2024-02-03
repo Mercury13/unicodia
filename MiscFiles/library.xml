@@ -603,4 +603,17 @@
 			<d>⍾ ⎍ ⎎ ⎏ ⎐ ⎑ ⎒ ⎓ ⏦ ⏧ ⏚ ⏛</d>
 		</f>
 	</f>
+	<f loc="Game">
+		<f loc="GameConsole">
+			<f loc="ConsoleMisc"><d>🎮 🕹️ ⬆️ ➡️ ⬇️ ⬅️ ↕️ ↔️ 🔴 🟡 🟢 🔵</d></f>
+			<f name="Xbox"><d>Ⓐ Ⓑ Ⓧ Ⓨ ⧉ ≡</d></f>
+			<f name="PlayStation"><d>🞩 ⚪︎ 🞎 △ 🗤 ≡ ⊗ ⌾ 🟗 🟕</d></f>
+		</f>
+		<f loc="Chess">
+			<f loc="ChPieses"><d>♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟</d></f>
+			<f loc="ChFairy"><d>🩈 🩋 🩎 🩏 🩐 🩉 🩌 🩑 🩒 🩓</d></f>
+			<f loc="ChNeutral"><d>🨀 🨁 🨂 🨃 🨄 🨅 🩊 🩍</d></f>
+			<d>♟️</d>
+		</f>
+	</f>
 </library>

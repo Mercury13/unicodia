@@ -2242,7 +2242,10 @@ uc::DrawMethod uc::Cp::drawMethod(
     case m::SVG_EMOJI.numeric(): {
             bool isSvg = true;
             switch (emojiMode) {
-            case EmojiDraw::TEXT:
+            case EmojiDraw::FORCE_TEXT:
+                isSvg = false;
+                break;
+            case EmojiDraw::MOSTLY_TEXT:
                 isSvg = !flags.have(Cfg::U_VS16_EMOJI);
                 break;
             case EmojiDraw::CONSERVATIVE:
@@ -2728,6 +2731,14 @@ QString uc::LibNode::viewableTitle(TitleMode mode) const
     }
     // Should not happen
     return {};
+}
+
+
+uc::EmojiDraw uc::LibNode::emojiDraw() const
+{
+    if (value.length() == 2 && value[1] == cp::VS15)
+        return EmojiDraw::FORCE_TEXT;
+    return flags.have(Lfg::GRAPHIC_EMOJI) ? EmojiDraw::GRAPHIC : EmojiDraw::MOSTLY_TEXT;
 }
 
 

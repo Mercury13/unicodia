@@ -397,7 +397,8 @@ constinit const uc::Block uc::blocks[] {
             "Geometric Shapes", MyName::INST, MapType::SYM_OTHER },
     // Misc sym OK
     { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
-            "Miscellaneous Symbols", MyName::INST, MapType::SYM_OTHER },
+            "Miscellaneous Symbols", MyName::INST, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::DINGBAT },
     // Dingbats OK, need Cambria here!
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats",
