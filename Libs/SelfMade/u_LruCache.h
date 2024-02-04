@@ -57,8 +57,11 @@ namespace detail {
         Entry *head = nullptr, *tail = nullptr;
         size_t fSize = 0;
 
+        /// Extracts Entry from cache, does not erase
         void extract(Entry* entry);
+        /// Puts Entry to the head of the cache
         void prepend(Entry* entry);
+        /// Puts Entry to the very front
         void bump(Entry* entry);
     };
 }
@@ -90,7 +93,7 @@ using UoMap = std::unordered_map<K,V>;
 ///
 /// @tparam K    key type
 /// @tparam V    value type
-/// @tparam Ndx  index template that checks whether we got
+/// @tparam Ndx  index template that checks whether we have the object
 ///
 template <class K, class V, template<class, class> class Ndx = UoMap>
     requires NdxOf<K,V,Ndx>
