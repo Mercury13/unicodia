@@ -5950,7 +5950,8 @@
     <text id="Text">
      <orig>
       <p>First pictographs are dated with 6th millennium BC, they were scratched or written with ink, later they modified to writing with brush. Back in 1st millennium BC people started to abandon ideographs, but China conserved archaic script, there are several reasons:</p>
-      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing.</p>
+      <p>* multiethnic population{{-}}besides state-forming people of Han, there were about ten more, and they understood each other at least in writing;</p>
+      <p>* suitable grammar{{-}}nuances of word’s meaning are indicated with function words;</p>
       <p>* cult of tradition{{-}}even today Chinese are rather conservative;</p>
       <p>* meritocracy that worked somehow{{-}}thousands of signs and ability to write them nicely detected trainable people.</p>
       <p />
@@ -5965,6 +5966,7 @@
      <transl>
       <p>Перші піктограми відносять до VI{{_}}тисячоліття до{{_}}н.е., їх видряпували або малювали фарбою, пізніше вони видозмінилися під письмо пензлем та тушшю. Вже у I{{_}}тисячолітті до{{_}}н.е. люди стали відходити від ієрогліфів, але Китай законсервував архаїчну писемність, цьому є кілька причин:</p>
       <p>* багатонаціональний народ{{-}}окрім державотворчого народа хань, було ще біля десятка, і вони розуміли один одного хоч на письмі;</p>
+      <p>* придатна граматика{{-}}відтінки значення показуються частками;</p>
       <p>* культ традиції{{-}}навіть зараз китайці доволі консервативні;</p>
       <p>* меритократія, що непогано діяла{{-}}тисячі знаків і вміння їх красиво писати виявляли людей, здатних навчатися.</p>
       <p />
