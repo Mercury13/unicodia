@@ -1,3 +1,7 @@
+What was done by authors of Unicodia:
+* Rehinted with TtfAutoHint, settings default
+
+
 Open Font License for New Athena Unicode, version 5.0, 2015 (and later versions)
 This license applies to TrueType version (.ttf) and embeddable compressed
 version for the web (.woff).
