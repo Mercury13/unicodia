@@ -64,7 +64,8 @@ namespace detail {
         /// Puts Entry to the very front
         void bump(Entry* entry);
     };
-}
+
+}   // namespace detail
 
 ///
 /// @brief NdxOf
