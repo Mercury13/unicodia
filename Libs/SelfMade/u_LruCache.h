@@ -18,7 +18,6 @@ public:
 };
 
 
-
 ///
 /// Assures that Maker has op()(What&)
 ///
