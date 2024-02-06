@@ -98,6 +98,8 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
 * Joining fields:
   * Fields always overlap to at least 1/16 width. Example (England): you just draw a white rectangle, and a cross over it.
   * When fields are large, that overlap should shun the edge: Example (Ukraine, Poland and other bicolours): one half is a rectangle, the other is a hexagon, with two vertices making that overlap.
+* Colour scheme:
+  * White is pure white FFF, black is Twitter black 141414.
 * White fields adjacent to background:
   * Small (Norway, US): just white
   * Medium, both ends are of the same colour (Argentina, Oman): outline of that colour
