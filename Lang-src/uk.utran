@@ -965,7 +965,7 @@
    <group id="Life">
     <text id="Alive">
      <orig>alive ''(no threats for main language, like Cyrillic)''</orig>
-     <transl>жива ''(основним мовам нічого не загрожує, як кирилиця)''</transl>
+     <transl>жива ''(основним мовам нічого не{{_}}загрожує, як кирилиця)''</transl>
     </text>
     <text id="Danger">
      <orig>endangered due to language ''(like Cherokee)''</orig>
@@ -997,7 +997,7 @@
     </text>
     <text id="Conserved">
      <orig>historical, no decipherment needed ''(like Glagolitic)''</orig>
-     <transl>історична, не потребує розшифрування ''(як глаголиця)''</transl>
+     <transl>історична, не{{_}}потребує розшифрування ''(як глаголиця)''</transl>
     </text>
     <text id="Undeciphered">
      <orig>undecipered ''(like Linear A)''</orig>
@@ -1136,7 +1136,7 @@
      <orig>
       <p>'''Americal Standard Code for Information Interchange (ASCII)''' is a seven-bit character encoding developed in USA in 1963. Width of 7 bits was chosen as a compromise for data transfer via telegraph. If it’s too much, ASCII may be easily cut to 6 bits, leaving characters 40…5F and 20…3F. '''Basic Latin''' of Unicode is same as ASCII, so English Unicode text is readable even in wrong encoding.</p>
       <p />
-      <p>First 32 characters, 00…1f, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back and type backquote. Last character, 7F=DEL, goes back to punched tapes{{-}}holes puched in all tracks tell that character is punched by mistake and should not be read.</p>
+      <p>First 32 characters, 00…1f, are [[pt:control|control]], and few of them are used today. They are followed with 95 printable characters. Many of them go back to typewriters: to print À, you need to type A, return carriage one position back and type backquote. Last character, 7F=DEL, goes back to punched tapes{{-}}holes puched in all tracks tell that character is punched by mistake and should{{_}}not be read.</p>
       <p />
       <p>Many national variants of ASCII existed: Britain replaced hash # with pound £, USSR dollar $ with coin ¤, Germany [\]{|} with umlauts ÄÖÜäöü, Japan backslash \ with yen ¥…</p>
       <p />
@@ -1162,7 +1162,7 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>First 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost upper bit, and it’s infeasible to have printable characters here. Nowadays these characters are not used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>First 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost upper bit, and it’s infeasible to have printable characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
       <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but French delegate insisted that OE is enough.</p>
      </orig>
@@ -1205,7 +1205,7 @@
      <orig>
       <p>International Phonetic Alphabet based on Latin is used with linguists, speech therapists, singers and actors to convey transcription of languages. To convey additional speech disorders such as tooth gnashing and lisping, IPA extensions are used.</p>
       <p />
-      <p>In realith most characters of this block is not extension but ordinary IPA: for example, {{sm|ɦ}} is present in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'' and Czech “hrad”.</p>
+      <p>In reality most characters of this block is not{{_}}extension but ordinary IPA: for example, {{sm|ɦ}} is present in Russian “ага” ''(aha)'', Ukrainian “гривня” ''(hryvnia)'' and Czech “hrad”.</p>
       <p />
       <p>Opera singers often sing in unknown languages, and their ability to read transcription sings is often used by dictionary authors. Particularly, well-known sound “Yanny or Laurel” was recorded by opera singer Jay Aubrey Jones{{-}}low male voice that came though low-quality speaker and microphone of the same quality turned to Yanny.</p>
       <p />
@@ -1251,7 +1251,7 @@
       <p />
       <p>Unicode provides two ways of conveying diacritics, [[pt:precomposed|precomposed]] characters and combinations “main character +{{_}}'''[[pt:combining|combining]] mark'''”. To simplify search in such a mess, Unicode has algorithm of [[pt:normalization|normalization]].</p>
       <p />
-      <p>Characters 034F CGJ is not a joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
+      <p>Characters 034F CGJ is not{{_}}a{{_}}joiner, but ''disjoiner'' of digraphs. It’s used in Czech (ch is pronounced as {{t|x}}, and alphabetical order is ce &amp;lt;{{_}}c+CGJ+h &amp;lt;{{_}}ci &amp;lt;{{_}}d &amp;lt;{{_}}ch), Hungarian, Hebrew and some other languages.</p>
       <p />
       <p>Character 0310 Candrabindu is intended for writing Indic languages in Latin and Cyrillic. Every [[pt:brahmic|Indic]] script has its own candrabindu.</p>
      </orig>
@@ -1303,7 +1303,7 @@
      <orig>
       <p>Letters of small Cyrillic languages: Abkhaz, Kurdish ''(as minority of USSR)'', Komi, Mordovian, Aleut, Azeri ''(now [[ps:Latn|Latin]])'' and Chuvash in Yakovlev alphabet ''(used 1873–1938)''.</p>
       <p />
-      <p>Contains funny letter {{sm|Ԥ}} (looks like word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not the first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
+      <p>Contains funny letter {{sm|Ԥ}} (looks like word of Russian mat meaning “epic fail”). It was “invented” by Leonid Kaganov; it turned out, not{{_}}the{{_}}first: three years before his post (2008) T-shirts with this letter were sold in Russia. And independently from him Abkhazians instead of hook {{sm|Ҧ}} {{t|pʰ}} started to write descender, and that gave letter {{sm|Ԥ}} a place in Unicode.</p>
      </orig>
      <transl>
       <p>Літери кількох малих кириличних мов: абхазької, курдської ''(як нацменшини СРСР)'', комі, мордовської, алеутської, азербайджанської ''(зараз [[ps:Latn|латинкою]])'' та чуваської в алфавіті Яковлєва ''(використовувався 1873–1938)''.</p>
@@ -1627,7 +1627,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}15.1 is still not recommended.</p>
+      <p>The first character of block {{sm|᧠}} is the name of 8th month in Buddhist solar-lunar calendar (Khmer ''Asat'' or ''Băthámsath'', Sanskrit ''Ashadha'', equivalent to June-July). To prevent lagging behind season changes, this month repeats twice every two or three years. Mark 17D3 {{sm|◌៓}} sometime was [[pt:deprecated|deprecated]] in favour of this characters, and in Unicode{{_}}15.1 is still not{{_}}recommended.</p>
       <p />
       <p>The rest are names of days in lunar calendar from new moon to full and back.</p>
      </orig>
@@ -1804,11 +1804,11 @@
       <p>* oxia{{-}}high/rising pitch;</p>
       <p>* varia{{-}}normal/low pitch;</p>
       <p>* circumflex{{-}}change of tone in one syllable;</p>
-      <p>* breve{{-}}short vowel if not conveyed with alphabet, unlike ε/η and ο/ω;</p>
+      <p>* breve{{-}}short vowel if not{{_}}conveyed with alphabet, unlike ε/η and ο/ω;</p>
       <p>* macron{{-}}long vowel;</p>
       <p>* diaeresis{{-}}separare pronunciation of vowels.</p>
       <p />
-      <p>Added in the beginning of common era, removed only in 1982 when such complex phonetics did not exist for many centuries.</p>
+      <p>Added in the beginning of common era, removed only in 1982 when such complex phonetics did{{_}}not{{_}}exist for many centuries.</p>
      </orig>
      <transl>
       <p>Політонічна фонетика, що існувала в деяких діалектах давньогрецької:</p>
@@ -1853,7 +1853,7 @@
      <orig>
       <p>The block contains superscript and subscript letters, signs and digits used in mathematics and phonetics.</p>
       <p />
-      <p>Long before advent of Internet it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022·1023. System (text file, Internet forum…) may not support superscripts, and there’s no sense to force people to move to other systems, or simulate like “6.022e23” or “6.022·10^23”.</p>
+      <p>Long before advent of Internet it became clear: mindless copying of text may lead to Avogadro number “equal” to 6.022×1023. System (text file, Internet forum…) may{{_}}not support superscripts, and there’s no sense to force people to move to other systems, or simulate like “6.022e23” or “6.022·10^23”.</p>
       <p />
       <p>Also superscripts drawn by typographer are often better that synthesized by word processor.</p>
       <p />
@@ -2015,11 +2015,11 @@
      <orig>
       <p>Optical and magnetic ink character recognition is used for automatic entry of documents, mostly passports, bank cheques, transport tickets. Unlike barcodes, the same characters are recognized by both people and machines to diminish fraud. Both technologies use special monospace fonts. These fonts (sometimes in distorted form) are widely used in films and video games of cyberpunk genre.</p>
       <p />
-      <p>In 1956 USA demonstrated magnetic ink character recognition (MICR). System understands ten digits and four special characters identifying fied meaning. Magnetic recognition is significantly more reliable that optical. If you see a square font where part of vertical strokes is thick (for example, on the box of ''Magnavox Odyssey'' console){{-}}this is stylized MICR.</p>
+      <p>In 1956 USA demonstrated magnetic ink character recognition (MICR). System understands ten digits and four special characters identifying fied meaning. Magnetic recognition is significantly more reliable than optical. If you see a square font where part of vertical strokes is thick (for example, on the box of ''Magnavox Odyssey'' console){{-}}this is stylized MICR.</p>
       <p />
       <p>In 1968 in USA the first working technology of optical recognition, OCR-A, was made. Understands the entire [[ps:Latn|Latin]] alphabet with small letters. To separate fields, special characters are used: hook, chair, fork, buckle and bowtie. The font is found in films ''13 Hours: The Secret Soldiers of Benghazi'', ''The Blacklist'', ''The Pretender'', ''Bugs'' and others.</p>
       <p />
-      <p>Only in 1990s font-intependent optical recognition was developed. It is used for digitization of books, processing of questionnaires and is much less reliable. So foreign passport with machine-readable page written in OCR-B font is not an anachronism.</p>
+      <p>Only in 1990s font-intependent optical recognition was developed. It is used for digitization of books, processing of questionnaires and is much less reliable. So foreign passport with machine-readable page written in OCR-B font is not{{_}}an{{_}}anachronism.</p>
      </orig>
      <transl>
       <p>Оптичне та магнітне розпізнавання символів слугує для автоматичного введення документів, у першу чергу паспортів, банківських чеків, транспортних квитків. На відміну від штрих-кодів, одні й ті ж символи розпізнаються людьми і машинами, що виключає фальсифікацію. Обидві технології використовують спеціальні моноширинні шрифти. Ці шрифти (іноді в декілька зміненому вигляді) широко зустрічаються у фільмах та іграх жанру «кіберпанк».</p>
@@ -2327,12 +2327,12 @@
      <orig>
       <p>Unicode has a mechanism for describing unencoded [[ps:Hani|CJK ideograph]]. To do this, you specify what parts it is split to and what’s inside each part. This block makes the first thing.</p>
       <p />
-      <p>All characters are visible, renderers usually do not recreate ideograph’s look. Zhuang character U+2DA21 {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
+      <p>All characters are visible, renderers usually do{{_}}not{{_}}recreate ideograph’s look. Zhuang character U+2DA21 {{smb|𭨡}} can be described as {{sm|⿰書史}}. In Unicode{{_}}15.1 the block is filled completely, and one character is even allocated in [[pk:31C0|CJK strokes]].</p>
      </orig>
      <transl>
       <p>У Юнікоді є механізм опису незакодованого [[ps:Hani|ієрогліфа ККЯ]]. А для цього важливо вказати, на які частини він розбитий та що у кожній. Для першого і призначений даний блок.</p>
       <p />
-      <p>Усі символи видимі, рендерери зазвичай не відтворюють вигляд ієрогліфа. Чжуанський символ U+2DA21 {{smb|𭨡}} можна описати як {{sm|⿰書史}}. У Юнікоді{{_}}15.1 блок заповнений, і навіть один символ виділений у [[pk:31C0|лініях ККЯ]].</p>
+      <p>Усі символи видимі, рендерери зазвичай не{{_}}відтворюють вигляд ієрогліфа. Чжуанський символ U+2DA21 {{smb|𭨡}} можна описати як {{sm|⿰書史}}. У Юнікоді{{_}}15.1 блок заповнений, і навіть один символ виділений у [[pk:31C0|лініях ККЯ]].</p>
      </transl>
     </text>
    </group>
@@ -2345,7 +2345,7 @@
      <orig>
       <p>Punctuation sings and other characters used in [[pt:cjk|CJK]]:</p>
       <p>* Ideograph-wide [[pt:space|space]].</p>
-      <p>* CJK does not write the same ideograph twice in a row, and if need so{{-}}write iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadays repeat in printed text, but still use iteration mark in writing.)</p>
+      <p>* CJK does{{_}}not{{_}}write the same ideograph twice in a row, and if need so{{-}}write iteration mark varying in horizontal and vertical text, ideographs and kana. (Chinese nowadays repeat in printed text, but still use iteration mark in writing.)</p>
       <p>* Some Japanese emblems.</p>
       <p>* Japanese brackets and quotes.</p>
       <p>* Ditto mark —//— widely used in our lists, just in ideographic form.</p>
@@ -2360,7 +2360,7 @@
       <p>* Японські дужки та лапки.</p>
       <p>* Знак «те ж» —//—, широко вживаний і в наших переліках{{-}}тільки в ієрогліфічному варіанті.</p>
       <p />
-      <p>Індикатор варіації ієрогліфа 303E не має спеціального змісту у Юнікоді, та був закодований для сумісності з китайським двобайтовим кодуванням GBK.</p>
+      <p>Індикатор варіації ієрогліфа 303E не{{_}}має спеціального змісту у Юнікоді, та був закодований для сумісності з китайським двобайтовим кодуванням GBK.</p>
      </transl>
     </text>
    </group>
@@ -2399,11 +2399,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Kanbun (literally ''Han writing'') is a written language of medieval Japan based on [[ps:Hani|Chinese]]. Chinese say “subject-verb-object”, and Japanese do “subject-object-verb”, so text was not read in order of writing, and ''kaeriten'' marks were invented. These marks are usually smaller than ideographs.</p>
+      <p>Kanbun (literally ''Han writing'') is a written language of medieval Japan based on [[ps:Hani|Chinese]]. Chinese say “subject-verb-object”, and Japanese do “subject-object-verb”, so text was{{_}}not{{_}}read in order of writing, and ''kaeriten'' marks were invented. These marks are usually smaller than ideographs.</p>
       <p />
       <p>Kanbun had other characters besides kaeriten: declension of words, punctuation marks, Japanese ''(kunyomi)'' reading of ideograph in contrast to Chinese ''(onyomi)''…</p>
       <p />
-      <p>During Meiji Modernization (late 19th century) Kanbun was abolished. It’s still taught in modern Japanese schools, but no new texts are written.</p>
+      <p>During Meiji Modernization (late 19th century) Kanbun was abolished. It’s still taught in modern Japanese schools, but no{{_}}new texts are written.</p>
       <p />
       <p>This block contains one sign for merged reading and proper names (vertical line), and fifteen signs of reading order.</p>
      </orig>
@@ -2623,7 +2623,7 @@
       <p />
       <p>Characters {{sm|꜀꜁}} and others are used in etymological analysis of Chinese tones.</p>
       <p />
-      <p>{{sm|꜈꜉}} and others{{-}}for direct specification of pitch and ''tone sandhi''. (''Sandhi'' is a Sanskrit term meaning change of phoneme depending on surrounding phonemes. For example, English &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}but this sandhi is not tone, English does not have tones.)</p>
+      <p>{{sm|꜈꜉}} and others{{-}}for direct specification of pitch and ''tone sandhi''. (''Sandhi'' is a Sanskrit term meaning change of phoneme depending on surrounding phonemes. For example, English &lt;nobr&gt;syn- + pathy = sy'''m'''pathy&lt;/nobr&gt;{{-}}but this sandhi is{{_}}not{{_}}tone, English does{{_}}not have tones.)</p>
       <p />
       <p>{{sm|ꜗꜘꜙꜚ}} are used in Chinantec.</p>
       <p />
@@ -2815,7 +2815,7 @@
      <orig>
       <p>[[pt:precomposed|Precomposed]] Hangul syllables, mainly for compatibility with other encodings.</p>
       <p />
-      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to final place in hope that there’s still not much Korean Unicode text. This case was dubbed “great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not a single character will move or disappear.</p>
+      <p>Adding Korean to Unicode was hard. In Unicode{{_}}1.0 the block was in 3400…3D2D ([[ps:Hani|Han ideographs]] are there now). In Unicode{{_}}2.0 (1996) the block was put to final place in hope that there’s still not{{_}}much Korean Unicode text. This case was dubbed “great Korean mess”. In response Consortium made the main [[pt:stability|stability]] guarantee: not{{_}}a{{_}}single character will move or disappear.</p>
      </orig>
      <transl>
       <p>[[pt:precomposed|Монолітні]] склади хангилю, здебільшого для сумісності зі старими кодуваннями.</p>
@@ -2957,7 +2957,7 @@
       <p />
       <p>Contains character FEFF [[pt:bom|Byte Order Mark]].</p>
       <p />
-      <p>These characters are not recommended in ordinary text. The only legitimate use is educational materials, thus these characters got Arabic Letter class (many of old encodings wrote text left-to-right).</p>
+      <p>These characters are{{_}}not{{_}}recommended in ordinary text. The only legitimate use is educational materials, thus these characters got Arabic Letter class (many of old encodings wrote text left-to-right).</p>
      </orig>
      <transl>
       <p>Блок створений для [[pt:convertibility|сумісності]] зі старими кодуваннями на кшталт CP864 (DOS), де через [[pt:dynamic|обмеженість]] типографських движків доводилося використовувати різні коди для відокремлених, початкових, середніх та кінцевих літер.</p>
@@ -3085,11 +3085,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Phaistos Disc is an atrifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
+      <p>Phaistos Disc is an artifact of Crete-Minoan (proto-Greek) culture. Disc made of clay without pottery wheel was found in 1908 in Crete, is 160{{_}}mm in diameter and 20{{_}}mm in thickness. Dated 2100–1100{{_}}BC and contains two inscriptions made in spiral with unknown script using stamps. Exhibited in Heraklion Archaeological Museum (Crete).</p>
       <p />
-      <p>Hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, in original PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by artist that worked at excavations, list of Cretan king’s territories and race game.</p>
+      <p>Hypothesis that text is read from edge to center (right-to-left) is generally accepted. Many characters are mirrored for writing left-to-right: well, originally PEDESTRIAN walks to the right. Nobody knows whether it is Cretan script and what type it belongs to. Among unusual hypotheses: forgery done by artist that worked at excavations, list of Cretan king’s territories and race game.</p>
       <p />
-      <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did not come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
+      <p>In 2002 Phaistos Disc was proposed to [[pt:private|ConScript Unicode Registry]] into E6D0–E6FF; character order is the same (numbered by Arthur Evans, 1905). Withdrawn after inclusion of Phaistos Disc in actual Unicode. Two characters from Registry did{{_}}not{{_}}come into Unicode and taken from Latin: | and ¦. Character names are as given by Louis Godart (1995).</p>
      </orig>
      <transl>
       <p>Фестський диск{{-}}артефакт крито-мінойської (прото-грецької) культури. Диск, зроблений з глини без гончарного круга, знайдений у 1908 на Кіпрі, має діаметр 160{{_}}мм та товщину 20{{_}}мм. Датується 2100–1100{{bc}}, і містить два написи, зроблені по спіралі невідомою писемністю за допомогою штампів. Виставлений у Археологічному музеї Іракліона (Крит).</p>
@@ -3119,9 +3119,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not equations for conversions from solar calendar to lunar or for determining date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
+      <p>''Epact'' word (Greek ἐπακτός) here means “borrowed”, not{{_}}equations for conversions from solar calendar to lunar or for determining date of Easter. Indeed, these numbers, descendants of normal [[ps:Copt|Coptic]] notation borrowed from [[ps:Grek|Greek]], were widely used in Coptic-Arabic world 10th to 19th century, particularly in astronomy tables ≈1800. Written left-to-right.</p>
       <p />
-      <p>Because of such non-standard use, these numbers are encoded as separate block, not as a variant of Coptic.</p>
+      <p>Because of such non-standard use, these numbers are encoded as separate block, not{{_}}as a{{_}}variant of Coptic.</p>
       <p />
       <p>In character samples you’ll see a gross difference with Unicode tables: ''Anshuman Pandey'', expert in ancient scripts, traced old ink symbols, and ''Google Noto'' project attempted to repeat them with lines of constant width.</p>
      </orig>
@@ -3501,7 +3501,7 @@
      <orig>
       <p>Birga character that leaked to Mongolian from [[ps:Tibt|Tibetan]] and used as initial. Mongolian is written top-down, and Tibetan is left-to-right, so it’s impossible to use Tibetan ''yig-mgo''.</p>
       <p />
-      <p>Unicode was generous to give real code points, not variants of writing{{-}}but in ancillary plane, not [[pt:bmp|Base]].</p>
+      <p>Unicode was generous to give real code points, not{{_}}variants of writing{{-}}but in ancillary plane, not{{_}}[[pt:bmp|Base]].</p>
       <p />
       <p>Icon corresponds to top-down writing, and [[pt:character|glyphs]] in fonts are turned 90° anticlockwise.</p>
      </orig>
@@ -3773,7 +3773,7 @@
      <orig>
       <p>Various characters used in old [[pt:cjk|CJK]] scripts: [[ps:Nshu|Nüshu]], [[ps:Tang|Tangut]], [[ps:Kits|Khitan small]], old [[ps:Hani|Chinese ideographs]].</p>
       <p />
-      <p>Identical ideograph is not written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} U+3005.</p>
+      <p>Identical ideograph is{{_}}not{{_}}written twice in a row, iteration mark is written instead. In modern printed Chinese iteration is allowed, Chinese informally and Japanese use {{sm|々}} U+3005.</p>
       <p />
       <p>Hook means end of sentence or section in old manuscripts.</p>
       <p />
@@ -3895,7 +3895,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially marks were written in red; Alexander Mezenets (17th century) invented mark system that does not need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
+      <p>Znamenny chant (banner chant) or Kryuk chant (hook chant) is monophonic (the entire choir sings in unison) Orthodox chant. Named after ''banners''{{-}}musical signs accompanied with ''priznaks'' (marks). Initially marks were written in red; Alexander Mezenets (17th century) invented mark system that does{{_}}not{{_}}need cinnabar. Unlike European notes that are encoded first of all to simplify programmers’ life and convey just rhythm in [[pt:plaintext|plain text]], Znamenny encoding is completely functional.</p>
       <p />
       <p>Banners convey figure that is sung (up to 10 notes), and pitch is specified with marks.</p>
       <p />
@@ -3963,7 +3963,7 @@
      <orig>
       <p>Little is known about ancient Greeks. Initially they had five notes per octave, compensating such a shortage with various methods of instrument tuning, but later they got to halftones, sometimes even using quarter-tones. The main instruments were aulos (two pipes played simultaneously) and lyre.</p>
       <p />
-      <p>There were different notations for musicians and singers, it allowed parallel writing of lyrics, music and hints for singers. Notes were written with old letters, and characters that do not coincide with normal Greek letters are gathered in this block without any system.</p>
+      <p>There were different notations for musicians and singers, it allowed parallel writing of lyrics, music and hints for singers. Notes were written with old letters, and characters that do{{_}}not{{_}}coincide with normal Greek letters are gathered in this block without any system.</p>
      </orig>
      <transl>
       <p>Про давніх греків відомо мало. Початково вони мали п’ять нот на октаву, компенсуючи такий брак різними методами налаштування інструментів, але пізніше дійшли до напівтонів, зрідка використовуючи чверть-тони. Головними інструментами були авлос (дві дудки, на яких грають одночасно) та ліра.</p>
@@ -4045,7 +4045,7 @@
       <p />
       <p>Vertical rods mean units, hundreds, tens of thousands…, horizontal{{-}}tens, thousands, hundreds of thousands… Sometimes vice-versa{{-}}in such a form the rods came into Unicode. Symbols of counting rods are written on paper sometimes.</p>
       <p />
-      <p>If you need to count something and memorize its number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did not enter Unicode.</p>
+      <p>If you need to count something and memorize its number, tally marks are used. European fives {{sm|𝍸}} are often associated with prison. Chinese use ideograph &lt;font size='+1'&gt;正&lt;/font&gt;. Foresters count in tens, both in America and in the former USSR (seen in a book by Ya.I.{{_}}Perelman), but this method did{{_}}not{{_}}enter Unicode.</p>
      </orig>
      <transl>
       <p>Паличками вчать рахувати дітей. Давні китайці, починаючи з Воюючих царств (V{{_}}століття{{bc}}) до XVI{{_}}століття користувалися справжньою позиційною системою числення з паличок, розкладених на дошці для лічби. Був запис для дробів і навіть від’ємних чисел (паличками іншого кольору).</p>
@@ -4170,7 +4170,7 @@
      <transl>Ефіопська розширена B</transl>
     </text>
     <text id="Text">
-     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not just Sebat Bet encoded in 2005 (1.5M as of 2010). Some old letters are now [[pt:obsolete|obsolete]].</orig>
+     <orig>New orthography of Gurage languages (Ethio-Semitic group, up to 5M) that was devised in 2013 and made written the entire family, not{{_}}just Sebat Bet encoded in 2005 (1.5M as of 2010). Some old letters are now [[pt:obsolete|obsolete]].</orig>
      <transl>Нова орфографія мов гураге (ефіосемітська група, до 5{{_}}млн), що з’явилася у 2013 та зробила писемним усе сімейство, не{{_}}тільки закодований у 2005 себат-бет (1,5{{_}}млн на 2010). Кілька старих себатбетських літер оголошені [[pt:obsolete|застарілими]].</transl>
     </text>
    </group>
@@ -4626,7 +4626,7 @@
       <p>All other ideographs were postponed to Unicode{{_}}16 for the sake of this urgent job.</p>
      </orig>
      <transl>
-      <p>У кінці 2022 континентальний Китай спробував відгалузитися від Юнікоду, розмістивши 897 ієрогліфів з китайських імен на нерозподіленій площині 0A. Щоб цього не сталось, ієрогліфи швидко перевірили фахівці, 622 з них були опізнані як придатні до кодування.</p>
+      <p>У кінці 2022 континентальний Китай спробував відгалузитися від Юнікоду, розмістивши 897 ієрогліфів з китайських імен на нерозподіленій площині 0A. Щоб цього не{{_}}сталось, ієрогліфи швидко перевірили фахівці, 622 з них були опізнані як придатні до кодування.</p>
       <p />
       <p>Зазвичай набір символів фіксується задовго до бета-версії. Наприклад, чорний птах (ґава/ворон) був перекодований з 1FABE на {{em|🐦}}+[[pt:zwj|ZWJ]]+{{em|⬛}}, і 1FABE став дірою. На цей раз таблицю зафіксували лише за місяць до випуску Юнікоду{{_}}15.1.</p>
       <p />
@@ -4749,9 +4749,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The country has no relation to Balkan Albania, and autonym is uknown: ''Albania'' is a Greek name, ''Aghwank'' is a modern Armenian. People spoke Lezgic languages. Since 1st century BC had a strong kingdom. In 461 was conquered by Persians, in 7th century submitted to Khazars for a short time and got liberty again. From 10th century part of Albania was turkified and transformed to Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in ethnogenesis of Armenians, Georgians of Kakheti, Dagestanians. Possibly the alphabet was used up to 12th century by descendant languages. The country spans modern Russia and Georgia, and thus conventinally classified as Europe.</p>
+      <p>The country has{{_}}no{{_}}relation to Balkan Albania, and autonym is uknown: ''Albania'' is a Greek name, ''Aghwank'' is a modern Armenian. People spoke Lezgic languages. Since 1st century BC had a strong kingdom. In 461 was conquered by Persians, in 7th century submitted to Khazars for a short time and got liberty again. From 10th century part of Albania was turkified and transformed to Shirvan (modern Azerbaijan) and Karabakh. Other regions took part in ethnogenesis of Armenians, Georgians of Kakheti, Dagestanians. Possibly the alphabet was used up to 12th century by descendant languages. The country spans modern Russia and Georgia, and thus conventinally classified as Europe.</p>
       <p />
-      <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}but those sources do not contain script samples, and it is not{{_}}confirmed with non-Armenian sources. In 1886 a 16th century inscription in Armenian with Albanian script was found. In 1937 Soviet Armenologists found full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. In 1996 Sinai Palimpsest was found, Bible written in Albanian, then erased and written in Georgian. It helped in decipherment, and the first one came in 2008.</p>
+      <p>Armenian sources state that the script was created by Mesrop Mashtots, creator of [[ps:Armn|Armenian]] alphabet{{-}}but those sources do{{_}}not{{_}}contain script samples, and it is{{_}}not{{_}}confirmed with non-Armenian sources. In 1886 a 16th century inscription in Armenian with Albanian script was found. In 1937 Soviet Armenologists found full alphabet. In 1948 an early Christian temple of 6th century with authentic inscriptions was excavated when building a hydro power plant. In 1996 Sinai Palimpsest was found, Bible written in Albanian, then erased and written in Georgian. It helped in decipherment, and the first one came in 2008.</p>
      </orig>
      <transl>
       <p>Ніякого відношення до балканської Албанії країна не{{_}}має, і взагалі самоназва невідома: ''Албанія''{{-}}назва грецька, ''Агванк''{{-}}сучасна вірменська. Заселена людьми, що розмовляли лезгінськими мовами. З I{{_}}століття{{bc}}мала сильне царство. У 461 завойована персами, у VII{{_}}столітті ненадовго підкорилась хазарам та знову отримала свободу. З X{{_}}століття частина Албанії тюркізувалася і перетворилася на Ширван (сучасний Азербайджан) та Карабах. Інші частини брали участь в етногенезі вірмен, грузин Кахетії, дагестанців. Алфавіт, можливо, вживався і у XII{{_}}столітті у мовах-нащадках. Оскільки країна захоплює сучасні Росію та Грузію, умовно віднесена до Європи.</p>
@@ -4771,7 +4771,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did not convey it.</p>
+      <p>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</p>
       <p />
       <p>In Unicode{{_}}14.0 Ahom block was extended by 16 positions{{-}}first such block since Unicode{{_}}2.0 when [[pt:stability|stability]] policy was adopted.</p>
      </orig>
@@ -4899,7 +4899,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did not convey al tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but script continued to work in limited volume up to Njoya’s death in 1930s. In 2007 revival project started, the progress in insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
+      <p>The script was invented by Ibrahim Njoya, Sultan of Bamum (west of Cameroon). Seven versions (phases) were released, A to G, starting from ideographic and finishing with syllabic. But Njoya’s alphabet did{{_}}not{{_}}convey all tones, and there were many homographs. French came in 1918, overthrew Njoya and switched the language to [[ps:Latn|Latin]], but script continued to work in limited volume up to Njoya’s death in 1930s. In 2007 revival project started, the progress in insignificant. You [[pk:16800|can see]] earlier Njoya’s arts in supplementary planes of Unicode.</p>
       <p />
       <p>Consonants are initially voiceless, addind the same vowel makes it voiced: {{sm|ꚫ}} pa + {{sm|ꚠ}} a = ba. Vowel after syllable puts other vowel: {{sm|ꚫ}} pa + {{sm|ꚧ}} o = po. Circumflex over a character changes syllable somehow{{-}}puts a gottal stop, removes nasalization, changes vowel… Top line works as [[pt:virama|virama]] removing vowel from syllable, and is attested above just 13 signs.</p>
      </orig>
@@ -4969,7 +4969,7 @@
       <p />
       <p>[[pt:virama|Virama]] (''hôsôntô'', remove inherent vowel) is extremely rare{{-}}{{sm|নাক্ }}= nôk{{-}}because Bengali has multiple [[pt:ligature|ligatures]] made of two consonants: {{sm|ক্ত}}=ktô. Because of this, Bengali is considered one of the most beautiful scripts of the world. Ligature input is standard: first letter, virama, second letter.</p>
       <p />
-      <p>Bangladesh is one of two Islamic states with own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not [[ps:Cyrl|Cyrillic]]). The other is [[ps:Thaa|Maldives]].</p>
+      <p>Bangladesh is one of two Islamic states with own script (not{{_}}[[ps:Arab|Arabic]], not{{_}}[[ps:Latn|Latin]], not{{_}}[[ps:Cyrl|Cyrillic]]). The other is [[ps:Thaa|Maldives]].</p>
      </orig>
      <transl>
       <p>Відноситься до східної гілки індійського письма. Походить з [[ps:Sidd|сиддхаму]] через ''гауді'', предок бенгальської та [[ps:Orya|орії]]. Бенгальське та ассамське письмо незначно відрізняються та [[pt:unification|уніфіковані]]. Голосна по замовчанню {{t|ɔ}}, в Юнікоді умовно позначається «a», в інших джерелах також «ô». Щоб замінити голосну, додаються оголоси: {{sm|ক}}=кô, {{sm|কি}}=кі.</p>
@@ -5057,7 +5057,7 @@
       <p />
       <p>Consonant conjuncts are often written with a stack of letters: brāhmī={{sm|𑀩𑁆𑀭𑀸𑀳𑁆𑀫𑀻}} (not rendered properly in Windows 7/8).</p>
       <p />
-      <p>Unicode does not distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
+      <p>Unicode does{{_}}not{{_}}distunguish Brahmi by time and place; most fonts are close to geometric writings of Ashoka’s pillars. By 5th century Brahmi transformed into two major branches:</p>
       <p>* northern (=Gupta, late Brahmi, northern Brahmi) → [[ps:Shrd|Sharada]], [[ps:Sidd|Siddham]], [[ps:Deva|Nagari]], [[ps:Tibt|Tibetan]], [[ps:Bhks|Bhaiksuki]];</p>
       <p>* southern → [[ps:Gran|Grantha]], [[ps:Khmr|Khmer]]… Khmer, [[ps:Sinh|Sinhala]] and other non-Indian scripts are often distinguished into separate south-eastern branch.</p>
      </orig>
@@ -5091,7 +5091,7 @@
       <p />
       <p>Louis Braille, son of a leatherer, in age of 3 was wounded with an awl and lost vision. Braille managed to enter Valentin Haüy’s school for blind and used line-embossed type there. The other prototype for Braille  is Charles Barbier’s “night writing.” Barbier used 2×6{{_}}matrix, 1 to 6 dots in each column are embossed, that’s OK for sighted officer sometimes reading by touch, but bad for blind person that reads long texts. Braille reduced the matrix by using binary code. Braille invented his code in age of 15, worked in Haüy’s school, but sighted teachers were so against it that only 2{{_}}years after his death blind students convinced teachers to adopt the system.</p>
       <p />
-      <p>Braille industrialized assistive technologies for blind: easy to emboss, does not come to sight when embossed next to normal text for sighted people or even over it.</p>
+      <p>Braille industrialized assistive technologies for blind: easy to emboss, does{{_}}not{{_}}come to sight when embossed next to normal text for sighted people or even over it.</p>
      </orig>
      <transl>
       <p>Шрифт Брайля{{-}}крапковий шрифт для сліпих. У ньому використовуються групи 2×3{{_}}крапки з двійковим кодуванням; іноді додається і четвертий рядок. Кодування відрізняється навіть для британського і американського Брайля. Має декілька «регістрів» (літери, цифри, виділення), що «перемикаються» спеціальними символами.</p>
@@ -5271,7 +5271,7 @@
      <orig>
       <p>The language was used in Chorasm near the Amu Darya river until 13th century, gradually losing to Persian. Scientist Biruni and theologian Zamakhshari spoke this language{{-}}but script of [[ps:Armi|Aramaic]] origin back in 8th century was replaced with [[ps:Arab|Arabic]].</p>
       <p />
-      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, total 21 letter. In most inscriptions letters are not joined, less frequently were joined if shape permits.</p>
+      <p>Three Aramaic letters of 22{{-}}''teth, sadhe, qoph''{{-}}have no Chorasmian counterparts. Two letters have variants, total 21 letter. In most inscriptions letters are not{{_}}joined, less frequently joined if shape permits.</p>
      </orig>
      <transl>
       <p>Мова використовувалася у Хорезмі у районі Амудар’ї до XIII{{_}}століття, поступово замінюючись перською. Цією мовою говорили вчений Біруні та проповідник Замахшарі{{-}}але писемність [[ps:Armi|арамейського]] похождення ще у VIII{{_}}столітті замінили [[ps:Arab|арабицею]].</p>
@@ -5339,7 +5339,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do not confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
+      <p>Comes from [[ps:Lina|Linear A]] through [[ps:Cpmn|Cypro-Minoan]] (do{{_}}not{{_}}confuse!) Was used from 11th to 3rd century{{_}}BC. Inscriptions of 9–8th centuries{{_}}BC are not{{_}}found, later the script fragmented into two branches: Paphos that retained direction →, and common-Cyprus that flipped to ←.</p>
       <p />
       <p>Partly deciphered in 1871 through newly-found bilingual with [[ps:Phnx|Phoenician]], and completely before 1876.</p>
      </orig>
@@ -5593,9 +5593,12 @@
       <p />
       <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], Todhri, Veso-Bey, Vellara) were used as a cipher against Turks. By other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets. </p>
       <p />
-      <p>Do not confuse with Todhri alphabet, sometimes also named Elbasan!</p>
+      <p>Do{{_}}not{{_}}confuse with Todhri alphabet, sometimes also named Elbasan!</p>
      </orig>
-     <au-cmt>Left for Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</au-cmt>
+     <au-cmt>
+      <p>Left for Todhri:</p>
+      <p>Invented in mid-18th century, was used around town of Elbasan (Albania). Creation is attributed to teacher Theodhor Haxhifilipi (1730–1806) who was killed when he transported metal type. Was used until 19th century.</p>
+     </au-cmt>
      <transl>
       <p>Єдине джерело{{-}}59-сторінкове Ельбасанське Євангеліє середини XVIII{{_}}століття розміром всього 7×10{{_}}см. Рукопис конфіскував соціалістичний уряд у 1945 у Лефа Носі, профашистського філолога та колекціонера. Авторство приписується Григорію Дурреському, албанському монаху.</p>
       <p />
@@ -5617,9 +5620,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Persia ceased existence after military defeats from Alexander the Great. Alexander’s descendants could not handle a multinational empire, and after a breakdown Elymais appeared among other nations.</p>
+      <p>Persia ceased existence after military defeats from Alexander the Great. Alexander’s descendants could{{_}}not{{_}}handle a multinational empire, and after a breakdown Elymais appeared among other nations.</p>
       <p />
-      <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
+      <p>The state existed 147{{_}}BC to 224{{_}}CE, often fell under Parthian reign and had a script of [[ps:Armi|Aramaic]] origin with unjoined letters. No{{_}}punctuation signs besides space are known. Native letter names are unknown and taken from Aramaic.</p>
      </orig>
      <transl>
       <p>Після військових поразок від Олександра Македонського Персія припинила своє існування. Послідовники Олександра не{{_}}змогли втримати величезну багатонаціональну державу, і в результаті розпаду з’явився у тому числі Елам.</p>
@@ -5727,7 +5730,7 @@
      <orig>
       <p>In 2006 documents of 1750 were found in the village of Gunjala. People who are able to read the script confirmed later that this is Gondi. The discovery was shown in 2014, and state of Andhra Pradesh started to revive the script. Moreover, the languare is virtually unwritten, people sporadically write in [[ps:Deva|Devanagari]] and [[ps:Telu|Telugu]].</p>
       <p />
-      <p>Each letter means syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does not distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introduction of new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible in the end of words only. In consonant conjuncts it detaches a letter from upper line.</p>
+      <p>Each letter means syllable with {{t|a}}. To make another vowel, vowel marks are added. The script does{{_}}not{{_}}distinguish between long and short {{t|e}} and {{t|o}}, there are arguments about introduction of new letters. [[pt:virama|Virama]] (“remove vowel” sign) is visible in the end of words only. In consonant conjuncts it detaches a letter from upper line.</p>
       <p>: ka {{sm|𑵱}} + i {{sm|◌𑶋}} = ki {{sm|𑵱𑶋}}</p>
       <p>: ka {{sm|𑵱}} + virama = k {{sm|𑵱𑶗}}</p>
       <p>: ka {{sm|𑵱}} + virama + ta {{sm|𑵳}} = kta {{sm|𑵱𑶗𑵳}}</p>
@@ -5783,7 +5786,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Bishop Wulfila is believed to have created the alphabet: he translated Bible into Gothic and did not want sacred text to be written with [[ps:Runr|runes]]. Sources of Gothic language of 4–6th centuries are written with this script.</p>
+      <p>Bishop Wulfila is believed to have created the alphabet: he translated Bible into Gothic and did{{_}}not{{_}}want sacred text to be written with [[ps:Runr|runes]]. Sources of Gothic language of 4–6th centuries are written with this script.</p>
       <p />
       <p>Alphabet is taken from [[ps:Grek|Greek]], letter names are same as runes’. Two letters have numeral value only: {{sm|𐍁}}=90 and {{sm|𐍊}}=900. Because of such origin of script, “canonically looking” Gothic letters are written with a thick pen rather than a sharp object.</p>
       <p />
@@ -5903,7 +5906,7 @@
      <orig>
       <p>Since 10th century Punjab used [[ps:Shrd|Sharada]] script that badly conveyed local language. New script was invented by Sikh guru Angad, one of founders of religion. He founded schools where people learned native Punjabi instead of classic Sanskrit, and public canteens where people sat together regardless of Hindu varna.</p>
       <p />
-      <p>Inherent vowel is {{t|ə}} (in Unicode by convertion “a”). The rest vowels are added with vowel marks: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Vowel {{t|ə}} greatly reduced in unstressed syllables, and is completely silent in the end of words, that’s seen well in autonym: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Also there are subjoined letters{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}}, they are typed in standard way: main letter, [[pt:virama|virama]], subjoined letter. That’s why Punjabi needs virama on a keyboard but not in type, but virama in used in dictionaries and Sanskrit. To start a word with vowel, vowel marks are affixed to zero consonant that differs between vowels.</p>
+      <p>Inherent vowel is {{t|ə}} (in Unicode by convertion “a”). The rest vowels are added with vowel marks: {{sm|ਕ}}=kə, {{sm|ਕਿ}}=ki. Vowel {{t|ə}} greatly reduced in unstressed syllables, and is completely silent in the end of words, that’s seen well in autonym: {{sm|ਗੁਰਮੁਖੀ}} “gu-rᵊ-mu-khii”. Also there are subjoined letters{{-}}{{sm|ਕ੍ਰ}}{{_}}{{t|krə}}, they are typed in standard way: main letter, [[pt:virama|virama]], subjoined letter. That’s why Punjabi needs virama on a keyboard but not{{_}}in type, but virama in used in dictionaries and Sanskrit. To start a word with vowel, vowel marks are affixed to zero consonant that differs between vowels.</p>
       <p />
       <p>Gurmukhi is tightly connected with Sikhism, its name means “said by Guru”. Punjabi Muslims use Shahmukhi (“said by Shah”), a form of [[ps:Arab|Arabic]] alphabet.</p>
      </orig>
@@ -5957,9 +5960,9 @@
       <p />
       <p>In 3rd century CE ideographs were brought to Japan. Many ideographs have both Chinese and Japanese pronunciation: for example, {{sm|月}} (moon) has Chinese pronunciations “getsu” and “gatsu”, and Japanese “tsuki”. The way of reading is defined with context: {{sm|月曜日}}=getsuyōbi (Monday), {{sm|月見}}=tsukimi (watching moon).</p>
       <p />
-      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does not encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
+      <p>Ideographs differ in China, Taiwan, Japan and Korea. Unicode does{{_}}not{{_}}encode these differences: details of writing are conveyed with fonts, and even if the font is wrong it’s understandable what they are writing about.</p>
       <p />
-      <p>Vietnam dropped ideographs in 1945. North Korea does not use ideographs, South uses very seldom.</p>
+      <p>Vietnam dropped ideographs in 1945. North Korea does{{_}}not{{_}}use ideographs, South uses very seldom.</p>
       <p />
       <p>Chinese language is still fragmented into dialects, and it’s impossible to introduce phonetic writing.</p>
      </orig>
@@ -6078,7 +6081,7 @@
      <orig>
       <p>About 3rd century Japanese started to write with [[ps:Hani|Chinese ideographs]]. Auxiliary syllabary of Man’yōgana emerged from ideographs, pronunciation rather than image mattered. Hiragana is just an extremely cursive writing of Man’yōgana.</p>
       <p />
-      <p>Women could not get education, they wrote with syllabary, and preferred smooth Hiragana to sloppy [[ps:Kana|Katakana]]. Nowadays Hiragana is used for words that do not have an ideograph or it is unknown to writer/reader (except loanwords, they are written with Katakana), word endings, teaching children, pronunciation aids for ideographs.</p>
+      <p>Women could{{_}}not{{_}}get education, they wrote with syllabary, and preferred smooth Hiragana to sloppy [[ps:Kana|Katakana]]. Nowadays Hiragana is used for words that do{{_}}not{{_}}have an{{_}}ideograph or it is unknown to writer/reader (except loanwords, they are written with Katakana), word endings, teaching children, pronunciation aids for ideographs.</p>
      </orig>
      <au-cmt>in Russian: suffix = (maybe) окончание</au-cmt>
      <transl>
@@ -6101,7 +6104,7 @@
      <orig>
       <p>Hieroglyphs are named by place they were found ''(Anatolia = Asia Minor)'', or by language ''(Luwian)''. The name ''Hittite'' is incorrent, Hittite language was never written with those hieroglyphs, though first of them were invented in Hittite-Luwian bilingualism. In 12th and 11th century{{_}}BC there was Bronze Age Collapse with lack of materials, since 10th century they appear again. About 7th century{{_}}BC hieroglyphs were replaced with [[pt:alphabet|alphabetic]] script and forgotten.</p>
       <p />
-      <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not just concept but syllable, but they are few.</p>
+      <p>About 500 hieroglyphs are known. Some hieroglyphs may mean not{{_}}just concept but syllable, but they are few.</p>
       <p />
       <p>About 1800 hieroglyphs drew scholars’ attention, it was hypothesized that they are Hittite. In 1915 Luwian language was finally deciphered via [[ps:Xsux|cuneiform]], in 1930s first decipherments of hieroglyphs started to appear. Finally deciphered in 1973.</p>
      </orig>
@@ -6202,7 +6205,7 @@
      <orig>
       <p>The alphabet was made from [[ps:Phnx|Phoenician]] and early [[ps:Grek|Greek]]. Later evolved to [[ps:Latn|Latin]].</p>
       <p />
-      <p>Unicode does not distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}Old Italic.</p>
+      <p>Unicode does{{_}}not{{_}}distinguish languages of Italy, [[pt:unification|unifying]] them to a single block{{-}}Old Italic.</p>
      </orig>
      <transl>
       <p>Алфавіт створено з [[ps:Phnx|фінікійського]] та раннього [[ps:Grek|грецького]]. В подальшому розвинувся до [[ps:Latn|латинського]].</p>
@@ -6236,7 +6239,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Kayah Li comes from [[ps:Brah|Brahmi]], created by Htae Bu Phae in 1962 in response to spread of [[ps:Latn|Latin]]{{-}}but letters do not have inherent vowel, and this it is not an [[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
+      <p>Kayah Li comes from [[ps:Brah|Brahmi]], created by Htae Bu Phae in 1962 in response to spread of [[ps:Latn|Latin]]{{-}}but letters do{{_}}not{{_}}have inherent vowel, and this it is not{{_}}an{{_}}[[pt:abugida|abugida]]. Four vowels are written as separate letters, the rest as diacritics above {{sm|ꤢ}}. A few vowels from loanwords are written as diacritics above {{sm|ꤣ}}.</p>
       <p />
       <p>Kayah Li is an alphabet of refugees in many ways: in Thai refugee camps {{%|90}} of inhabitants are Karens that fled from atrociries of Myanmar military, and in near-prison conditions everything that unites is important. Karens are diverse group of peoples that includes Red, Black, White and others, by colour of national costume. Besides Kayah Li, their languages are written with [[ps:Thai|Thai]], Latin and [[ps:Mymr|Maynmar]].</p>
      </orig>
@@ -6394,9 +6397,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Was used in Liao empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on [[ps:Ougr|Uighur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters 125 are ideographs, 115 are phonetical, the rest are not deciphered.</p>
+      <p>Was used in Liao empire (North-East China). Invented about 925 by a scholar named Yelü Diela and based on [[ps:Ougr|Uighur]]. Words are written in blocks of up to seven characters. As of 1987, among 378 known characters 125 are ideographs, 115 are phonetical, the rest are{{_}}not{{_}}deciphered.</p>
       <p />
-      <p>Large and small script were used in parallel, small is simpler (large is purely ideographic). Khitan books did not survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216 Khitans were finally defeated by Mongols and Chinese.</p>
+      <p>Large and small script were used in parallel, small is simpler (large is purely ideographic). Khitan books did{{_}}not{{_}}survive, only utility objects and inscriptions on tombstones of noble people, the last{{-}}about 1200. In 1216 Khitans were finally defeated by Mongols and Chinese.</p>
       <p />
       <p>Many fonts turn Khitan text 90° counterclockwise. This font shows hieroglyphs upright, like in book ''Daniel Kane. The Kitan Language and Script''. Because of copyright issues, icon shows one of characters from Khitan bronze mirror (traced by Professor Jǐng Yǒngshí), and the font is modern italic assembled by Google.</p>
      </orig>
@@ -6566,7 +6569,7 @@
      <orig>
       <p>Comes from [[ps:Tibt|Tibetan]] and initially was written top-down. Later horizontal writing was adopted, so letters look like Tibetan rotated 90°. According to traditions, the script was invented about 1700 by Buddhist missionaires, and adopted by Chakdor Namgyal, Prince of Sikkim (ruled 1700–1717). The first printed text is the Gospel of Matthew, 1845.</p>
       <p />
-      <p>Inherent vowel is {{t|a}}. Initial vowels do not have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</p>
+      <p>Inherent vowel is {{t|a}}. Initial vowels do{{_}}not{{_}}have special shape, instead they are affixed to null letter looking like ampersand. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant. There are no spaces between words.</p>
      </orig>
      <transl>
       <p>Пішла від [[ps:Tibt|тибетської]], початково писалася зверху донизу, але потім стали писати горизонтально, тому літери схожі на тибетські, повернуті на 90°. Традиційно вважається, что розробили письмо буддійські проповідники біля 1700, а впровадив Чакдор Намг’ял, князь Сіккіму (правив 1700–1717). Перший друкований текст{{-}}Євангеліє від Матвія, 1845.</p>
@@ -6590,7 +6593,7 @@
       <p />
       <p>Inherent vowel is {{t|ɔ}}.</p>
       <p />
-      <p>Initial vowels do not have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}}=pɔtlo.</p>
+      <p>Initial vowels do{{_}}not{{_}}have special shape, but are instead written with “null” consonant {{sm|ᤀ}} looking like Nepal flag. No [[pt:virama|virama]]. Instead to get a syllable of three phonemes, first vowel mark is added, then final consonant: {{sm|ᤐᤳᤗᤥ}}=pɔtlo.</p>
      </orig>
      <transl>
       <p>Традиційно вважається, що писемність була створена у IX{{_}}столітті королем Сіріджонгою та відроджена восьма століттями пізніше одноіменним філософом, що став його реінкарнацією. За більш приземленою версією, походить з [[ps:Lepc|лепчі]] і не{{_}}може бути таким давнім.</p>
@@ -6713,7 +6716,7 @@
       <p />
       <p>Early inscriptions were in both directions, late ones right-to-left only. The unique feature is a triangular quote.</p>
       <p />
-      <p>Lydia is not autonym, Lydians named the region by Sardis, its capital.</p>
+      <p>Lydia is{{_}}not{{_}}autonym, Lydians named the region by Sardis, its capital.</p>
       <p />
       <p>Deciphered in 1916 and well-explored despite small number of inscriptions (only 109 as of 1986).</p>
      </orig>
@@ -6765,9 +6768,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s not ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
+      <p>Comes from [[ps:Kawi|Kawi]] (old Javanese). Named “bird script” after shape of letters. There are arguments when the script appeared, but it’s{{_}}not{{_}}ancient: known form is suited for quill and paper rather than palm leaves. The first known specimen is signature on treaty with Dutch East India Company (1667).</p>
       <p />
-      <p>Brahmic abugida consisting of 18 letters, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No spaces, words and phrases are divided with vertical ellipsis. With such functionality, script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
+      <p>Brahmic abugida consisting of 18 letters, without [[pt:virama|virama]]. Initial letter is {{sm|𑻱}} (maybe with vowel marks). Final consonants, {{t|m}}, {{t|nn}} and glottal stop, are omitted. No{{_}}spaces, words and phrases are divided with vertical ellipsis. With such functionality, script is clearly incomplete{{-}}and by 19th century in had been completely supplanted with [[ps:Bugi|Lontara]] that’s considered a sister script.</p>
       <p />
       <p>Both European and Arabic-Indic digits are attested. In one of manuscripts there’s a punctuation mark resembling a palm-tree, [[pt:unification|unified]] with {{em|🌴}} [[pt:emoji|emoji]].</p>
      </orig>
@@ -6836,7 +6839,7 @@
       <p />
       <p>In syllables several letters are stacked together, and vowel marks relate to lower of them, even if affixed to the top: spyir {{sm|𑲍𑲞𑲩𑲱𑲊}}{{-}}Tibetan “general”. No [[pt:virama|virama]].</p>
       <p />
-      <p>Nowadays it’s used in ''Bon'', Tibetan para-Buddhist religion that came from early Buddhism (do not confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bon''.</p>
+      <p>Nowadays it’s used in ''Bon'', Tibetan para-Buddhist religion that came from early Buddhism (do{{_}}not{{_}}confuse with actual Tibetan Buddhism). Left-hand swastika became the symbol of ''Bon''.</p>
      </orig>
      <transl>
       <p>Шангшунгська{{-}}вимерла у X{{_}}столітті сино-тибетська мова, якою писали мінімум п’ятьма різними писемностями. З них у Юнікоді{{_}}15 є тільки марчхен, а інші [[pt:unification|уніфіковані]] з ним. З великою ймовірністю, усіма цими писемностями користувались тільки у релігійних цілях. Як писали у побуті{{-}}невідомо.</p>
@@ -6956,7 +6959,7 @@
      <transl>
       <p>Походить з [[ps:Gran|грантхи]]. Голосна по замовчанню {{t|а}}. Химерні літери слугують, щоб не{{_}}розрізати пальмовий лист за жилками.</p>
       <p />
-      <p>Перша друкована книга (Рим, 1772) мала біля 1000 різних гліфів. У 1971 пройшла реформа графіки, що перетворила їх у 250 на друку та 90 на машинці{{-}}оголоси та {{t|r}} відірвались від літер, поширені стики приголосних стали не зверху донизу, а зліва направо, рідкісні просто через [[pt:virama|віраму]].</p>
+      <p>Перша друкована книга (Рим, 1772) мала біля 1000 різних гліфів. У 1971 пройшла реформа графіки, що перетворила їх у 250 на друку та 90 на машинці{{-}}оголоси та {{t|r}} відірвались від літер, поширені стики приголосних стали не{{_}}зверху донизу, а зліва направо, рідкісні просто через [[pt:virama|віраму]].</p>
       <p>: ка {{sm|ക}} + і {{sm|◌ി}}{{_}}{{_}}= кі {{sm|കി}}</p>
       <p>: ка {{sm|ക}} + вірама {{sm|◌്}} = к {{sm|ക്}}</p>
       <p>: та {{sm|ത}} + вірама {{sm|◌്}} + ка {{sm|ക}} = тка {{sm|ത്ക}}</p>
@@ -7021,7 +7024,7 @@
       <p>In 1587 scholar Ayuush Güüsh reformed the script, and also added several characters for simplifying transcription of Sanskrit, Tibetan abd Chinese important in Buddhism. New characters were named ''Ali-gali'' or ''Galik''.</p>
       <p />
       <p>In Russia the script was used by Buryats. After WW2 Mongols adopted [[ps:Cyrl|Cyrillic]], with collapse of the USSR there are plans for extending the use of old script.&lt;br&gt;</p>
-      <p>Contains homographs (for example, {{sm|ᠣ}}={{t|o/u}}), but vowel harmony{{-}}the word may contain either masculine or feminine vowels only{{-}}often disambiguates those homographs. Unicode has separate codepoints for these homographs: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} here, {{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} demon. Letters Q and G have distinct forms in masculine and feminine words, not just before vowels, but in the end of word too, so fonts have multiple rules for this: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG order, {{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} soldier.</p>
+      <p>Contains homographs (for example, {{sm|ᠣ}}={{t|o/u}}), but vowel harmony{{-}}the word may contain either masculine or feminine vowels only{{-}}often disambiguates those homographs. Unicode has separate codepoints for these homographs: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} here, {{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} demon. Letters Q and G have distinct forms in masculine and feminine words, not{{_}}just before vowels, but in the end of word too, so fonts have multiple rules for this: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG order, {{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} soldier.</p>
       <p />
       <p>This block also contains Todo Bichig ''(“clear script”)'' invented in 1648 and used by western peoples including Kalmyks until their cyrillization in 1924. Todo is still in use in Xinjiang ''(China)''.</p>
      </orig>
@@ -7035,7 +7038,7 @@
       <p>У 1587 вчений Аюші-гуші зробив реформу писемності, а також додав ряд символів для полегшення транскрипції санскриту, тибетської та китайської, важливих у буддизмі. Нові символи одержали назву ''алі-галі'' або ''галіг''.</p>
       <p />
       <p>У Росії писемність використовувалася бурятами. Після війни монголи розробили нове письмо на [[ps:Cyrl|кирилиці]], але з розвалом СРСР є плани розширити використання старої писемності.&lt;br&gt;</p>
-      <p>Містить омографи (наприклад, {{sm|ᠣ}}=o/u), але закон гармонії голосних{{-}}у слові можуть бути або одні тверді голосні, або одні м’які{{-}}часто дозволяє розкрити ці омографи. Юнікод для цих омографів має окремі кодові позиції: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} тут, {{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} демон. Літери Q та G мають окремі форми у твердих та м’яких словах, не тільки перед голосними, але й у кінці слова, і шрифти містять багато правил для цього: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG указ, {{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} солдат.</p>
+      <p>Містить омографи (наприклад, {{sm|ᠣ}}=o/u), але закон гармонії голосних{{-}}у слові можуть бути або одні тверді голосні, або одні м’які{{-}}часто дозволяє розкрити ці омографи. Юнікод для цих омографів має окремі кодові позиції: {{sm|ᠡᠨᠳᠡ}} ={{_}}ENDE {{t|ent}} тут, {{sm|ᠠᠳᠠ}} ={{_}}ADA {{t|ada}} демон. Літери Q та G мають окремі форми у твердих та м’яких словах, не{{_}}тільки перед голосними, але й у кінці слова, і шрифти містять багато правил для цього: {{sm|ᠵᠠᠷᠯᠢᠭ}} {{t|ǰarlig}} ={{_}}JARLIG указ, {{sm|ᠴᠡᠷᠢᠭ}} ={{_}}ČERIG {{t|'ʦʰerek}} солдат.</p>
       <p />
       <p>У цей блок також входить писемність тодо-бічиг ''(«ясне письмо»)'', що винайдена у 1648 і використовувалася західними народами, у тому числі калмиками, аж до їх кирилізації у 1924. Вона до наших днів ходить у Сінцзяні ''(Китай)''.</p>
      </transl>
@@ -7052,7 +7055,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Most Mro are Buddhists, and authorities of Bangladesh, an Islamic country, do not want to support them.</p>
+      <p>Most Mro are Buddhists, and authorities of Bangladesh, an Islamic country, do{{_}}not{{_}}want to support them.</p>
       <p />
       <p>Mro script was invented in 1980s by Menlay Murang, founder of ''Crama'' religion. In 2000s Murang alphabet became popular end even surpassed [[ps:Latn|Latin]], the previous script: more than {{%|80}} Mro are literate in it. Also existing Latin badly conveyed Mro phonetics.</p>
       <p />
@@ -7297,7 +7300,7 @@
      <orig>
       <p>Nüshu existed for centuries and was used as women’s script: men were trained in [[ps:Hani|literacy]], and women used simpler syllabic script. Unlike sweeping ideographs, Nüshu was written with a thin sliver. Many of Nüshu specimen are ''third day missives'': a girl departs to another village to marry, and her sisters and friend girls embroid wishes to her, often in poetry.</p>
       <p />
-      <p>Despite common misconception, Nüshu was not a cipher; men just considered it “low” script. The first known inscription was made in early 20th century, but shape of characters states that Nüshu existed in 1300.</p>
+      <p>Despite common misconception, Nüshu was not{{_}}a{{_}}cipher; men just considered it “low” script. The first known inscription was made in early 20th century, but shape of characters states that Nüshu existed in 1300.</p>
       <p />
       <p>Unlike Japanese [[ps:Hira|Hiragana]] of similar use, Nüshu remained unofficial script. Campaigns against illiteracy and spread of sewing machines in 20th century put Nüshu to decline. Japanese invaders banned Nüshu seeing a cipher in it, and Red Guards during Cultural Revolution destroyed antique things, including embroideries.</p>
       <p />
@@ -7355,7 +7358,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
+      <p>The alphabet was invented in 1925 by Raghunath Murmu. [[ps:Beng|Bengali]], [[ps:Orya|Odia]] and [[ps:Latn|Latin]] were used before, though most of population was illiterate. Santali language is not{{_}}Indo-European but Austro-Asian, and Brahmi-based alphabets suit badly. For example, voiced and voiceless consonants replace each other during word inflection, and there’s no sense in distinguishing them.</p>
       <p />
       <p>Ol Chiki consists of 30 letters, names correspond to look. First three: {{sm|ᱚ}}{{_}}fire, {{sm|ᱛ}}{{_}}earth, {{sm|ᱜ}}{{_}}vomit.</p>
      </orig>
@@ -7875,7 +7878,7 @@
      <orig>
       <p>The system was created in 1974 by dancer Valerie Sutton. It was based on DanceWriting created by her two years before. Later she made systems for writing pantomime, other sports (figure skating, karate…), physical excercises, body language of people and animals, but they weren’t so successful.</p>
       <p />
-      <p>It is not stated whose side the gestures are written from, performer or spectator. Most publications are performer-oriented. There are lots of character, they convey motions of fingers, arms, shoulders, sight, also touches and face expressions. For hands there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
+      <p>It is not{{_}}stated whose side the gestures are written from, performer or spectator. Most publications are performer-oriented. There are lots of character, they convey motions of fingers, arms, shoulders, sight, also touches and face expressions. For hands there are fist (square), loose fist (circle), open palm (pentagon), sharp of hand (rectangle) and others. The same gesture may be written differently.</p>
       <p />
       <p>Though the system isn’t strictly [[pt:universality|textual]]{{-}}position on page ''matters''{{-}}it was added to Unicode in 2015. Only characters were added, without any formatting. But many programs exist that can fix X/Y coordinates on a sheet{{-}}for example, vector graphic editors.</p>
       <p />
@@ -8479,11 +8482,11 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Brahmic abuguda with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
+      <p>Brahmic abugida with inherent vowel {{t|a}} and [[pt:virama|virama]]. I’ll just write script’s autonym: {{sm|ᜊᜌ᜔ᜊᜌᜒᜈ᜔}} “ba-y-ba-yi-n”.</p>
       <p />
-      <p>Spanish missionaires (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did not understand direction of writing: the text was carved on bamboo planks, the knife wad directed out from body, so they could write in one direction and read in another.</p>
+      <p>Spanish missionaires (16th century) discovered that the islanders are almost {{%|100}} literate, and started to teach Baybayin themselves. Initially they did{{_}}not{{_}}understand direction of writing: the text was carved on bamboo planks, the knife wad directed out from body, so they could write in one direction and read in another.</p>
       <p />
-      <p>There are several causes of fall of Baybayin: Spanish imported paper, pen and printing, Tagalog started to distinguish {{t|r/d}}, {{t|u/o}}, {{t|i/e}} under their influence. The last but not the least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office work. By 19th century Baybayin had been almost dead, and the only thing remaining is to order Latin alphabet. There are modern attempts to revive Baybayin.</p>
+      <p>There are several causes of fall of Baybayin: Spanish imported paper, pen and printing, Tagalog started to distinguish {{t|r/d}}, {{t|u/o}}, {{t|i/e}} under their influence. The last but not{{_}}the least: [[ps:Latn|Latin]] helped in life, allowing a prestigious office work. By 19th century Baybayin had been almost dead, and the only thing remaining is to order Latin alphabet. There are modern attempts to revive Baybayin.</p>
       <p />
       <p>In 2021 a new phoneme {{t|r}} was encoded{{-}}both versions are from 19th century, and the one that survived until today unofficially (before Unicode 14) was put into position 170D. Also a second virama appeared: the cross is invented by Spanish and reminds of colonial past, and is just badly legible in small pitch.</p>
      </orig>
@@ -8559,7 +8562,7 @@
      <orig>
       <p>Like most script of South-East Asia, came from Brahmi, inherent vowel is {{t|a}}.</p>
       <p />
-      <p>It’s commonly accepted that the script was invented by Thonmi Sambhota who traveled to India and laid the foundation of Tibetan Buddhism. From that time orthography did not change much, and language changed, so writing greatly differs from pronunciation.</p>
+      <p>It’s commonly accepted that the script was invented by Thonmi Sambhota who traveled to India and laid the foundation of Tibetan Buddhism. From that time orthography did{{_}}not{{_}}change much, and language changed, so writing greatly differs from pronunciation.</p>
      </orig>
      <transl>
       <p>Як і більшість писемностей Південно-Східної Азії, пашла з [[ps:Brah|брахмі]], голосна по замовчанню {{t|a}}.</p>
@@ -8645,7 +8648,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Semites that inhabited Levant (modern Syria) could not boast of economic, cultural or military power, but instead were on an intersection of trade routes. So they borrowed principles of [[ps:Xsux|cuneiform]] for their needs creating an alphabet of 30 consonants written left to right; no one knows how it was made and what had been before. Names of many letters are reconstructions and unknown for sure. The only punctuation mark is word divider.</p>
+      <p>Semites that inhabited Levant (modern Syria) could{{_}}not{{_}}boast of economic, cultural or military power, but instead were on an intersection of trade routes. So they borrowed principles of [[ps:Xsux|cuneiform]] for their needs creating an alphabet of 30 consonants written left to right; no one knows how it was made and what had been before. Names of many letters are reconstructions and unknown for sure. The only punctuation mark is word divider.</p>
       <p />
       <p>Many books and business documents survived, they gave understanding of different sides of Ugaritic life. There’s a suspicion that the alphabet is made by a single author because of economic design{{-}}frequent letters have less wedges.</p>
       <p />
@@ -8697,9 +8700,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The alphabet was created by Naum Veqilharxhi, writer, translator and lawyer. He worked on alphabet for 20 years, 1824–1844. Naum died two years later, and alphabet did not got significant spread. Named after Vithkuq, village where Naum was born. Also Germanized “Büthakukye” is widespread.</p>
+      <p>The alphabet was created by Naum Veqilharxhi, writer, translator and lawyer. He worked on alphabet for 20 years, 1824–1844. Naum died two years later, and alphabet did{{_}}not{{_}}get significant spread. Named after Vithkuq, village where Naum was born. Also Germanized “Büthakukye” is widespread.</p>
       <p />
-      <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
+      <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
       <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, Todhri, Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
      </orig>
@@ -8737,9 +8740,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>The script was made from scratch by community leader Lako Bodra. He claimed that it came to him in divine revelation from someone Dhawan Turi from 13th century. The alphabet starts with Om character{{-}}the first sound of creation of the universe. Ho is an unwritten language, about {{%|2}} write with Warang Citi and the same number write with [[ps:Orya|Odia]].</p>
+      <p>The script was made from scratch by community leader Lako Bodra. He claimed that it came to him in divine revelation from someone Dhawan Turi from 13th century. The alphabet starts with Om character{{-}}the first sound of creation of the universe. Ho is an{{_}}unwritten language, about {{%|2}} write with Warang Citi and the same number write with [[ps:Orya|Odia]].</p>
       <p />
-      <p>The type is arguable: every letter has an inherent vowel {{t|a}} (some have {{t|ɔ}} or {{t|ɛ}}), like in [[pt:brahmic|Brahmic abugidas]]. It also has alphabetic features: two cases, all vowels are full rather than marks. Pronunciation is not always consistent: it’s unknown whether inherent vowel becomes silent (in final position it’s always silent). Read autonym {{sm|𑢹𑣗𑣁𑣜𑣊 𑣏𑣂𑣕𑣂}}: letters are pronounced by the last phomene of name except {{sm|𑢹}}=h и {{sm|𑣗}}=b, this digraph is read {{t|w}}.</p>
+      <p>The type is arguable: every letter has an inherent vowel {{t|a}} (some have {{t|ɔ}} or {{t|ɛ}}), like in [[pt:brahmic|Brahmic abugidas]]. It also has alphabetic features: two cases, all vowels are full rather than marks. Pronunciation is{{_}}not{{_}}always consistent: it’s unknown whether inherent vowel becomes silent (in final position it’s always silent). Read autonym {{sm|𑢹𑣗𑣁𑣜𑣊 𑣏𑣂𑣕𑣂}}: letters are pronounced by the last phoneme of name except {{sm|𑢹}}=h и {{sm|𑣗}}=b, this digraph is read {{t|w}}.</p>
      </orig>
      <transl>
       <p>Писемність придумав з нуля лідер комуни Лако Бодра, заявивши, що вона прийшла йому у божественному одкровенні від якогось Дхавана Турі з XIII{{_}}століття. Алфавіт починається з символа «ом»{{-}}першого звуку створення Всесвіту. Хо{{-}}безписемна мова, біля {{%|2}} пише варанг-кшиті і стільки же [[ps:Orya|орією]].</p>
@@ -8761,7 +8764,7 @@
      <orig>
       <p>The principle of writing was taken from [[ps:Xsux|Sumero-Akkadian]] cuneiform, but letters are almost completely different. The most widespread version: the script was invented artificially to fix achievements of kings of Achaemenid dynasty. All known inscriptions cover just two centuries 520–330{{_}}BC.</p>
       <p />
-      <p>By 1800 the word “king” had been identified. In 1802 Georg Grotefend deciphered kings’ names{{-}}he did not have a bilingual, just knew Greek pronunciations like “Darius” or “Xerxes”, originally “Dārayavaʰuš” and “Xšaya-ṛšā”. In 1823 François Champollion found an [[ps:Egyp|Egyptian]]-cuneiform bilingual, and confirmed that Grotefend was right. In 1936 Eugène Burnouf guessed that one of inscriptions is a list of Daruis’ satrapies, and deciphered almost all alphabet. Decipherment of Persian cuneiform became a key to Sumerian.</p>
+      <p>By 1800 the word “king” had been identified. In 1802 Georg Grotefend deciphered kings’ names{{-}}he did{{_}}not{{_}}have a{{_}}bilingual, just knew Greek pronunciations like “Darius” or “Xerxes”, originally “Dārayavaʰuš” and “Xšaya-ṛšā”. In 1823 François Champollion found an [[ps:Egyp|Egyptian]]-cuneiform bilingual, and confirmed that Grotefend was right. In 1936 Eugène Burnouf guessed that one of inscriptions is a list of Daruis’ satrapies, and deciphered almost all alphabet. Decipherment of Persian cuneiform became a{{_}}key to Sumerian.</p>
      </orig>
      <transl>
       <p>З [[ps:Xsux|шумеро-аккадського клинопису]] узятий тільки принцип письма, символи майже цілком інші. Найбільш поширена версія{{-}}писемність створена штучно для фіксації досягнень царів Ахеменидської імперії. Усі відомі написи відносяться до двох століть 520–330{{bc}}.</p>
@@ -9010,7 +9013,7 @@
      <transl>Літера/мішаний регістр</transl>
     </text>
     <text id="Text">
-     <orig>Digraph characters consisting of capital and small letter. For example, Croatian Latin has digraph ǈ. Serbian counterpart Љ is not a digraph and thus has no mixed case.</orig>
+     <orig>Digraph characters consisting of capital and small letter. For example, Croatian Latin has digraph ǈ. Serbian counterpart Љ is not{{_}}a{{_}}digraph and thus has no mixed case.</orig>
      <transl>Символи-диграфи, що складаються з великої та малої літери. Так, у хорватській латинці є диграф ǈ. Сербський аналог Љ не{{_}}є диграфом і тому мішаного регістру не{{_}}має.</transl>
     </text>
    </group>
@@ -9043,7 +9046,7 @@
      <transl>Мітка/охоплююча</transl>
     </text>
     <text id="Text">
-     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not so bad.</orig>
+     <orig>Enclosing marks are used in old Cyrillic letter numbers (А҈). Also encosing square, circle and other shapes exist. None of tested typography engines in Windows{{_}}10 20H2 (GDI, Cairo, Skia) supports these characters perfectly, but on good fonts like DejaVu the result is not{{_}}so{{_}}bad.</orig>
      <transl>Охоплюючі мітки використовуються у давньоруських буквених цифрах (А҈). Також існують охоплюючі квадрат, коло та інші фігури. Жоден перевірений типографський движок на Windows{{_}}10 20H2 (GDI, Cairo, Skia) не{{_}}підтримує подібні символи ідеально, але на гарних шрифтах на кшталт DejaVu результат дуже непоганий.</transl>
     </text>
    </group>
@@ -9175,7 +9178,7 @@
      <transl>Символ/валютний</transl>
     </text>
     <text id="Text">
-     <orig>Currency character is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does not need a special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
+     <orig>Currency character is an important part of country’s image, and even Mongolian tugrik has a sign &lt;font size='+1'&gt;₮&lt;/font&gt; looking like tombstone. Artemy Lebedev in the end of 1990s said that Russian ruble does{{_}}not{{_}}need a{{_}}special character, but afterwards his PR advanced sign &lt;font size='+1'&gt;₽&lt;/font&gt; to official status.</orig>
      <transl>Валютний символ{{-}}важлива частина іміджу країни, і навіть у монголів є тугрик &lt;font size='+1'&gt;₮&lt;/font&gt;, що нагадує могильний хрест. Артемій Лебедєв у кінці 1990-х казав, що російському рублю не{{_}}потрібен особливий знак, але пізніше саме його піар зробив знак &lt;font size='+1'&gt;₽&lt;/font&gt; офіційним.</transl>
     </text>
    </group>
@@ -9250,7 +9253,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do not stretch in justified text, do not wrap to next line.</p>
+      <p>Character intended for leaving empty space. Well-typeset text has as much space as needed: 146%{{-}}too little, 146{{_}}%{{-}}too much, {{%|146}}{{-}}just okay. That’s why spaces are different too. Some of them are non-break: do{{_}}not{{_}}stretch in justified text, do{{_}}not{{_}}wrap to next line.</p>
       <p />
       <p>Spaces usually have no{{_}}graphical representation and just move caret. But if underline is on, or if the script has a common line ([[ps:Ogam|Ogham]]), spaces might be visible.</p>
       <p />
@@ -9320,11 +9323,11 @@
       <p />
       <p>Holding {{kb|Alt}}, type on numeric keypad {{k|'''0'''}}, then '''decimal''' character code 32 to 255. {{k|Alt|0240}} makes letter ð.</p>
       <p />
-      <p>Encoding is Windows-1252 regardless of Windows settings. Code 127 does not work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
+      <p>Encoding is Windows-1252 regardless of Windows settings. Code 127 does{{_}}not{{_}}work. Codes 128 to 159 are miscellaneous typography characters. The rest are identical to [[pt:latin1|Latin-1]].</p>
       <p />
       <p>'''Unicode codes'''</p>
       <p />
-      <p>Experimental, do not work in all applications. To make them work, into registry key</p>
+      <p>Experimental, do{{_}}not{{_}}work in all applications. To make them work, into registry key</p>
       <p>: HKEY_CURRENT_USER\Control Panel\Input Method</p>
       <p>add '''string''' parameter EnableHexNumpad=1 and reboot the computer.</p>
       <p />
@@ -9440,7 +9443,7 @@
      <orig>
       <p>As Artemy Lebedev said, pictogram of drinking glass means drinking glass. Ideogram means drinking glass, glass as material, fragile, drunkenness… Both are called “hieroglyphs” sometimes. Chinese ideograph “man+tree” mean “rest.”</p>
       <p />
-      <p>Writing short thoughts with pictograms and ideograms surrounds us everywhere: on road signs, in interfaces of appiances and software. But generally this writing has not advanced far from pictograms. Writing speech with ideograms is two steps forward: picture may mean a concept, and they are ordered by position in language, not by mutual relation. If “hunter killed a deer with a spear”, a sign for killing is made, and the spear is drawn the last, not between hunter and deer.</p>
+      <p>Writing short thoughts with pictograms and ideograms surrounds us everywhere: on road signs, in interfaces of appiances and software. But generally this writing has{{_}}not{{_}}advanced far from pictograms. Writing speech with ideograms is two steps forward: picture may mean a concept, and they are ordered by position in language, not{{_}}by{{_}}mutual relation. If “hunter killed a deer with a spear”, a sign for killing is made, and the spear is drawn the last, not{{_}}between hunter and deer.</p>
       <p />
       <p>Read about '''[[ps:Hani|CJK ideographs]]''' how Chinese turned drawbacks of ideograph to advantages.</p>
       <p />
@@ -9466,13 +9469,13 @@
      <orig>
       <p>Script where only consotant phonemes are written. Vowels are either omitted completely, or written with optional vowel marks. ''Abjad'' name comes from autonym of [[ps:Arab|Arabic]] alphabet{{-}}أبجد ''abjadiya''.</p>
       <p />
-      <p>Despite obvious drawbacks, consotant script has some advantages.</p>
+      <p>Despite obvious drawbacks, consonant script has some advantages.</p>
       <p>* In Semitic languages{{-}}[[ps:Phnx|Phoenician]], [[ps:Hebr|Hebrew]], Arabic{{-}}root is a skeleton of consonants, and vowels work as suffixes. For example, in Arabic ''jihad'' is done by ''mujahid''.</p>
       <p>* Easier to assemble large empires{{-}}difference in dialects are smoothened.</p>
-      <p>* Differences are smoothened not just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
+      <p>* Differences are smoothened not{{_}}just in space, but in time{{-}}century-long inscriptions better correspond to modern language.</p>
       <p>* This script is shorter, that’s important when “paper” and “pens” are poor.</p>
       <p />
-      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did not disappear, but started to complement them.</p>
+      <p>Many abjads have letters ''matres lectionis (mothers of reading)''{{-}}consonant letters meaning vowel phoneme. One of variants recorded in Hebrew: ''bayt'' → ''bet'' (house), and Yod letter was reinterpreted to words where diphtong never existed. Other variant is by articulation: [[ps:Grek|Greek]] letter Iota goes back to Phoenician letter Yod sometines meaning “i”. When vowel marks appeared, ''matres lectionis'' did{{_}}not{{_}}disappear, but started to complement them.</p>
      </orig>
      <transl>
       <p>Писемність, де записуються тільки приголосні літери. Голосні або опускаються повністю, або записуються опціональними оголосами. Назва «абджад» походить від самоназви [[ps:Arab|арабського]] алфавіту{{-}}أبجد ''абджадія''.</p>
@@ -9530,7 +9533,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Scholars do not agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
+      <p>Scholars do{{_}}not{{_}}agree with definition of abugida, and the widest of them is: [[pt:syllabic|syllabic]] script where similar syllables are written with similar characters.</p>
       <p />
       <p>[[pt:brahmic|Brahmic scripts]] '''are surely''' abugidas.</p>
       <p />
@@ -9538,7 +9541,7 @@
       <p />
       <p>[[ps:Thaa|Thaana]] is abugida '''in some sources'''.</p>
       <p />
-      <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not abugidas'''.</p>
+      <p>[[ps:Hang|Hangul]] and [[ps:Yiii|Yi]] are '''definitely not{{_}}abugidas'''.</p>
       <p />
       <p>Interesting fact: the word “abugida” comes from Ge’ez (old Ethiopic) {{sm|አቡጊዳ}} (a-bu-gi-da){{-}}so some linguists deny the right for name “abugida” to the script where this name came from!</p>
      </orig>
@@ -9635,7 +9638,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>For five scripts sources do not agree what they are.</p>
+      <p>For five scripts sources do{{_}}not{{_}}agree what they are.</p>
       <p />
       <p>[[ps:Hang|Hangul]] ''(Korean)''{{-}}[[pt:syllabic|syllabic]] ''(Unicode)'' or [[pt:alphabet|alphabetical]] ''(Omniglot, English Wikipedia)''.</p>
       <p />
@@ -9672,7 +9675,7 @@
       <p>* characters are monospace{{-}}aligned to invisible grid, regardless of number of strokes. Borrowed letters are often halfwidth{{-}}take half of this cell;</p>
       <p>* written initially right-to-left in columns; now ''usually'' left-to-right in rows. Even nowadays Japanese comics ''manga'' are read right-to-left;</p>
       <p>* characters differ from country to country; Unicode leaves these peculiarities to fonts;</p>
-      <p>* as characters did not fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
+      <p>* as characters did{{_}}not{{_}}fit into 256 [[pt:codepoint|positions]], specific encodings for ideographs existed.</p>
      </orig>
      <transl>
       <p>Група писемностей, близьких до [[ps:Hani|китайських ієрогліфів]]. До них відносяться також складові [[ps:Kana|катáкана]] та [[ps:Hira|хірáґана]], і [[ps:Hang|хангиль]] [[pt:arguable|спірного типу]]. З історичних{{-}}[[ps:Tang|тангутська]], [[ps:Kits|киданська]], [[ps:Nshu|нюй-шу]].</p>
@@ -9719,7 +9722,7 @@
      <orig>
       <p>Writing of non-text information: music ([[pk:1D100|notes]]), technical drawings ([[pk:2300|technical symbols]]), gestures ([[ps:Sgnw|SingWriting]]).</p>
       <p />
-      <p>Unicode works with plain text and is not designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
+      <p>Unicode works with plain text and is{{_}}not{{_}}designed for encoding such information. But encoding of such characters shortens PDF files, extends functionality of general-purpose systems{{-}}forums, instant messengers, vector editors.</p>
      </orig>
      <transl>
       <p>Запис інших видів інформації, окрім тексту: музики ([[pk:1D100|ноти]]), креслень ([[pk:2300|технічні символи]]), жестів ([[ps:Sgnw|жестове письмо]]).</p>
@@ -9757,7 +9760,7 @@
       <p />
       <p>In reality in Indian languages its name is ''halant (Hindi “killer”), halanta, hošonto, chandrakkala ([[ps:Mlym|Malayalam]] “moon”).</p>
       <p />
-      <p>Some languages do not use virama often. For example:</p>
+      <p>Some languages do{{_}}not{{_}}use virama often. For example:</p>
       <p>* [[pt:ligature|ligatures]] for consonant conjuncts{{-}}Devanagari {{sm|क्ष}} кša. They are written and encoded as if there’s no ligature, ka+virama+ša. To tear a ligature and input two letters and virama, one should type ka+virama+ZWNJ+ša;</p>
       <p>* sings for final consonant{{-}}[[ps:Cham|Cham]], [[ps:Limb|Limbu]];</p>
       <p>* inherent vowel reduced to nothing{{-}}[[ps:Guru|Punjabi]]. Many languages of India, including Hindi, omit virama in the end of words;</p>
@@ -9797,11 +9800,11 @@
      <orig>
       <p>Character that is written on screen and paper. Any except [[pt:control|control]], [[pt:format|format]], line and paragraph separators{{-}}even spaces and invisible [[pt:combining|marks]].</p>
       <p />
-      <p>Zero-width space is considered format rather than space{{-}}so it is '''not''' graphic.</p>
+      <p>Zero-width space is considered format rather than space{{-}}so it is '''not'''{{_}}graphic.</p>
       <p />
       <p>Paradox: invisible marks are simultaneously graphic and [[pt:ignorable|default-ignorable]].</p>
       <p />
-      <p>Do not confuse with [[pt:pseudographics|pseudographics]].</p>
+      <p>Do{{_}}not{{_}}confuse with [[pt:pseudographics|pseudographics]].</p>
      </orig>
      <transl>
       <p>Символ, який друкується на екрані або папері. Будь-який, окрім [[pt:control|керуючих]], [[pt:format|форматуючих]], роздільників рядків та абзаців{{-}}навіть [[pt:space|пропуски]] та невидимі [[pt:combining|мітки]].</p>
@@ -9827,14 +9830,14 @@
       <p />
       <p>Unicode Consortium consists of people of Western culture, and they can only refer to studies of rare language specialists{{-}}it happened for five characters of [[ps:Arab|Arabic]], [[ps:Tibt|Tibetan]] and [[ps:Khmr|Khmer]].</p>
       <p />
-      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as of Unicode{{_}}15.1.</p>
+      <p>Two technical angle brackets are banned to prevent confusion with mathematical ones. Also deprecated: language [[pk:E0000|tag]] (made more mess than solved problems), some characters of [[pt:bidi|bidirectional writing]] (other algorithm is proposed), and Latin [[pt:ligature|ligature]] '''ŉ''' (Dutch and Afrikaans have lots of similar unencoded abbreviations, problems with [[pt:normalization|normalization]], character type “letter with punctuation” was dropped){{-}}total 15 as{{_}}of Unicode{{_}}15.1.</p>
       <p />
       <p>Several cases of returning characters to use are known:</p>
       <p>* “Tags” block{{-}}it was used for specifying language. Returned for [[pt:emoji|emoji]] of regional flags (for example, Scotland), leaving one character under ban.</p>
-      <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 are just not recommended.</p>
-      <p>* 17D3 (Khmer mark ''bathamasat''). With advent of [[pt:precomposed|precomposed]] characters of [[pk:19E0|moon calendar]] it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 is just not recommended{{-}}maybe because calendar ligatures are bulky. Author of ''Unicodia'' had troubles finding font where ligatures fit into cell.</p>
+      <p>* 0340, 0341 (marks of falling/rising tone). Replaced with ordinary diacritics à and á. Since Unicode{{_}}5.2 are just not{{_}}recommended.</p>
+      <p>* 17D3 (Khmer mark ''bathamasat''). With advent of [[pt:precomposed|precomposed]] characters of [[pk:19E0|moon calendar]] it was deprecated in Unicode{{_}}4.0. Since Unicode{{_}}5.2 is just not{{_}}recommended{{-}}maybe because calendar ligatures are bulky. Author of ''Unicodia'' had troubles finding font where ligatures fit into cell.</p>
       <p />
-      <p>Do not confuse with [[pt:obsolete|obsolete]].</p>
+      <p>Do{{_}}not{{_}}confuse with [[pt:obsolete|obsolete]].</p>
      </orig>
      <transl>
       <p>Символ, чиє використання наполегливо не{{_}}рекомендується.</p>
@@ -9861,7 +9864,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even large font collection does not support the entire Unicode.</p>
+      <p>Unicode is large and is contantly expanding: version {{version}} has {{nchars}} characters. So even large font collection does{{_}}not{{_}}support the entire Unicode.</p>
       <p />
       <p>If no glyph found in fonts, the character is usually displayed as [[pt:tofu|tofu]]{{-}}white box. '''But some characters are just omitted.'''</p>
       <p />
@@ -9873,7 +9876,7 @@
       <p>* Zero width space ZWSP; [[pt:bom|byte order mark]] BOM that’s also zero width space; zero width non-joiner ZWNJ.</p>
       <p>* Characters for complex [[pk:1BCA0|shorthand]] and [[pk:1D100|music]] formatting.</p>
       <p />
-      <p>These characters '''are not''' default-ignorable:</p>
+      <p>These characters '''are{{_}}not''' default-ignorable:</p>
       <p>* All having graphic form, all [[pt:spacing|spacing]].</p>
       <p>* [[pt:control|Control]], line separators.</p>
       <p>* Characters that work in font mechanisms that are impossible to skip silently{{-}}for example, virtual [[pt:virama|viramas]]. If the virama disappears, “kta” turns to “kata”.</p>
@@ -9987,11 +9990,11 @@
       <p />
       <p>Three main reasons for creating precomposed characters: other entity, compatibility and beauty.</p>
       <p />
-      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not Е (''ye'') with umlaut, so precomposed form exists. And Ю́ is just Ю (''yu'') with optional mark of accent, and there’s no such precomposed character.</p>
+      <p>'''Other entity:''' Cyrillic Ё (''yo'') is not{{_}}Е (''ye'') with umlaut, so precomposed form exists. And Ю́ is just Ю (''yu'') with optional mark of accent, and there’s no{{_}}such precomposed character.</p>
       <p />
       <p>'''Compatibility:''' if limited typography engine cannot lay marks, or limited keyboard driver types characters one at a time, precomposed characters are the only option. Precomposed characters are often taken from existing encodings.</p>
       <p />
-      <p>'''Beauty:''' mechanisms of laying marks are often imperfect, especially if designer did not foresee mark A on character B. And precomposed characters may become a warning for designer that ''this happens''.</p>
+      <p>'''Beauty:''' mechanisms of laying marks are often imperfect, especially if designer did{{_}}not{{_}}foresee mark A on character B. And precomposed characters may become a warning for designer that ''this happens''.</p>
       <p />
       <p>In wider sense precomposed is a sequence of characters that may be displayed with styles, but it is encoded as a single character{{-}}for example, fraction &lt;big&gt;½&lt;/big&gt;.</p>
       <p />
@@ -10051,7 +10054,7 @@
      <orig>
       <p>Characters for drawing geometric shapes{{-}}lines, boxes, frames{{-}}in text mode. Were widely used to liven up text user interfaces.</p>
       <p />
-      <p>In modern graphic operating systems they have no sense: real graphics are available, and most fonts are proportional and lines do not link together precisely. But even today text consoles exist, and they have pseudographics inside.</p>
+      <p>In modern graphic operating systems they have no{{_}}sense: real graphics are available, and most fonts are proportional and lines do{{_}}not{{_}}link together precisely. But even today text consoles exist, and they have pseudographics inside.</p>
       <p />
       <p>All pseudographic characters are [[pt:spacing|spacing]].</p>
      </orig>
@@ -10081,7 +10084,7 @@
       <p />
       <p>It is legitimate to use it in apporpriate context: “бѣлый, блѣдный, бѣдный бѣсъ…”</p>
       <p />
-      <p>Do not confuse with [[pt:deprecated|deprecated character]].</p>
+      <p>Do{{_}}not{{_}}confuse with [[pt:deprecated|deprecated character]].</p>
      </orig>
      <transl>
       <p>Символ, що вийшов з користування. Наприклад, [[ps:Cyrl|кирилічний]] ять &lt;big&gt;'''ѣ'''&lt;/big&gt;, що в усіх мовах перетворився на інші голосні: '''і''' в українській, '''е''' в російській.</p>
@@ -10111,7 +10114,7 @@
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and number: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
-      <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are not treated as numbers by Unicode.</p>
+      <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
      <transl>
       <p>Юнікод ділить числові символи на три класи:</p>
@@ -10157,21 +10160,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Unicode Consortium guarantees that it will not change some properties of characters.</p>
+      <p>Unicode Consortium guarantees that it will{{_}}not{{_}}change some properties of characters.</p>
       <p />
-      <p>'''A character will not move or disappear''' (2.0+). Every new Unicode will be a superset of previous. Text is sorted using national sorting order.</p>
+      <p>'''A character will{{_}}not{{_}}move or disappear''' (2.0+). Every new Unicode will be a superset of previous. Text is sorted using national sorting order.</p>
       <p />
-      <p>'''Character’s name will not change''' (2.0+). Though correction names exist, and '''they''' are shown by ''Unicodia''. Synonyms also won’t change, including corrections (5.0+).</p>
+      <p>'''Character’s name will{{_}}not{{_}}change''' (2.0+). Though correction names exist, and '''they''' are shown by ''Unicodia''. Synonyms also won’t change, including corrections (5.0+).</p>
       <p />
-      <p>'''[[pt:normalization|Normalization]] of string will not change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other frequent scripts where normalization matters.</p>
+      <p>'''[[pt:normalization|Normalization]] of string will{{_}}not{{_}}change''' (4.1+). Version 3.1 had weaker guarantees: Unicode adopted more and more [[ps:Latn|Latin]] and other frequent scripts where normalization matters.</p>
       <p />
-      <p>'''Character’s properties may change, but not so much that its nature will change''' (1.1+). For example, capital letter will not turn to small, and [[pt:noncharacter|non-character]] will not return to use. In later versions of Unicode this rule was clarified.</p>
+      <p>'''Character’s properties may change, but not{{_}}so{{_}}much that its nature will change''' (1.1+). For example, capital letter will{{_}}not{{_}}turn to small, and [[pt:noncharacter|non-character]] will{{_}}not{{_}}return to use. In later versions of Unicode this rule was clarified.</p>
       <p />
-      <p>'''Normative and informational properties of character will not disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
+      <p>'''Normative and informational properties of character will{{_}}not{{_}}disappear from Unicode bases''' (5.2+). The rest may be renamed or removed, but will never take other’s place on rename.</p>
       <p />
-      <p>'''[[pt:casefolding|Case folding]] will not change''' (5.0+). Case folding is intended for locale-independent comparison of strings, and is generally (but not necessarily) conversion into lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
+      <p>'''[[pt:casefolding|Case folding]] will{{_}}not{{_}}change''' (5.0+). Case folding is intended for locale-independent comparison of strings, and is generally (but not{{_}}necessarily) conversion into lowercase: in [[ps:Cher|Cherokee]] it is conversion to capitals, because they were introduced earlier.</p>
       <p />
-      <p>'''If two characters were (or were not) in case pair, they will remain there''' (5.0+). Small letter may get capital counterpart (or vice-versa, like in Cherokee), and this is the only way for a letter to enter a case pair.</p>
+      <p>'''If two characters were (or were{{_}}not) in case pair, they will remain there''' (5.0+). Small letter may get capital counterpart (or vice-versa, like in Cherokee), and this is the only way for a letter to enter a case pair.</p>
      </orig>
      <transl>
       <p>Консорціум Юнікоду гарантує, що не{{_}}змінить частину характеристик символів.</p>
@@ -10299,7 +10302,7 @@
      <orig>
       <p>Character is a unit of meaning. Glyph is a specific image contained in font and drawn on screen/paper.</p>
       <p />
-      <p>Characters and glyphs do not relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
+      <p>Characters and glyphs do{{_}}not{{_}}relate one to one. ''Nastaliq'', a style of [[ps:Arab|Arabic]] text, requires thousands of glyphs in a font. But the encoding has just two hundred characters that convey meaning. And vice-versa, different characters may share a glyph despite [[pt:unification|unification]].</p>
      </orig>
      <transl>
       <p>Символ{{-}}одиниця змісту. Гліф{{-}}зображення, що міститься у шрифті та виводиться на екран/друк.</p>
@@ -10319,7 +10322,7 @@
       <p />
       <p>Outside the scope of Unicode are:</p>
       <p>* writing systems for which too little information is available to encode characters reliably;</p>
-      <p>* scripts whose users did not make a ''de facto'' standard;</p>
+      <p>* scripts whose users did{{_}}not{{_}}make a ''de facto'' standard;</p>
       <p>* non-textual (for example, pictographic) scripts.</p>
      </orig>
      <transl>
@@ -10341,13 +10344,13 @@
      <orig>
       <p>Unification is writing different characters with the same [[pt:codepoint|code point]]. Duplication is writing a single character with different code points.</p>
       <p />
-      <p>Unicode avoids duplication. Punctuation marks are encoded once and are shared between all Western languages{{-}}and Eastern ones they penetrated to. Unicode does not distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
+      <p>Unicode avoids duplication. Punctuation marks are encoded once and are shared between all Western languages{{-}}and Eastern ones they penetrated to. Unicode does{{_}}not{{_}}distinguish letter Y in English (“wye”), French (“i grec”) and German (“ypsilon”). Moreover, similar [[ps:Hani|ideographs]] in Chinese and Japanese are also unified.</p>
       <p />
       <p>There are several important exceptions:</p>
-      <p>* Completely different entities: letter A from [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]] and [[ps:Cher|Cherokee]] is not the same character.</p>
+      <p>* Completely different entities: letter A from [[ps:Latn|Latin]], [[ps:Grek|Greek]], [[ps:Cyrl|Cyrillic]] and [[ps:Cher|Cherokee]] is{{_}}not the{{_}}same character.</p>
       <p>* Ease of processing: simple and non-break hyphen exists. Unicode has as many as three letters Ð with different small counterparts.</p>
       <p>* Ease of fontmaking: every South-Asian language has its own virtual [[pt:virama|virama]] (special character for constructing consonant conjuncts). The designer should read the standard and understand what virama does.</p>
-      <p>* Historical reasons{{-}}for [[pt:convertibility|round-trip convertibility]]: Chinese ideographs from old encodings are always Chinese and do not have Japanese counterparts.</p>
+      <p>* Historical reasons{{-}}for [[pt:convertibility|round-trip convertibility]]: Chinese ideographs from old encodings are always Chinese and do{{_}}not{{_}}have Japanese counterparts.</p>
       <p>* Ordinary overlook may also take place: angle brackets ⟨ mathematical and 〈 technical, the latter is [[pt:deprecated|deprecated]].</p>
       <p />
       <p>If the characters were unified, but then Unicode started to distinguish them, it’s disunification. For example, in 2005 [[ps:Grek|Greek]] and [[ps:Copt|Coptic]] were disunified.</p>
@@ -10377,7 +10380,7 @@
      <orig>
       <p>Unicode strives to make efficient implementations possible. Particularly:</p>
       <p />
-      <p>* Unicode does not have shiftable states. This simplifies access and search. Contrary, in telegraph code 1 means E in letter page and 3 in figure page.</p>
+      <p>* Unicode does{{_}}not{{_}}have shiftable states. This simplifies access and search. Contrary, in telegraph code 1 means E in letter page and 3 in figure page.</p>
       <p>* Main forms of [[pt:serialization|serialization]], [[pt:utf8|UTF-8]] and [[pt:utf16|UTF-16]], are self-synchronizing. This simplifies access and search.</p>
       <p>* Character codes are numbers from 0 to 10FFFF₁₆. Even if work right in UTF-8/16 is impossible, lookup tables still work.</p>
       <p>* Processing of ASCII is possible in UTF-8 without decoding. Processing of [[pt:bmp|most languages]] is possible in UTF-16 without decoding.</p>
@@ -10441,7 +10444,7 @@
      <orig>
       <p>66 code points are ''non-characters'': *FFFE and *FFFF in all seventeen planes, and FDD0…FDEF. They will never reappear in Unicode.</p>
       <p />
-      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does not use this code, it may treat it as normal unknown character.</p>
+      <p>Programmers '''may''' use then as error codes, substitution marks, “weights” that affect sorting or something else internal for program, recode to [[pt:utf8|UTF-8]] or [[pt:utf16|UTF-16]]. If the program does{{_}}not{{_}}use this code, it may treat it as normal unknown character.</p>
       <p />
       <p>It is '''prohibited''' to enter these characters with keyboard, use them in inter-software exchange. [[pt:bom|Byte order mark]] works because character FFFE is absent in Unicode.</p>
      </orig>
@@ -10531,12 +10534,12 @@
      <orig>
       <p>6400 characters E000…F8FF in [[pt:bmp|Basic Plane]], and 131068 chanacters in two [[pt:plane|planes]] 0F and 10 (except *FFFE and *FFFF that are [[pt:noncharacter|non-characters]]) are given to everyone’s own needs.</p>
       <p />
-      <p>By mutual negotiation, people can encode in these ranges everything they want, including characters that are non-eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does not carry any responsibility for this. Let’s list four common uses of private characters.</p>
+      <p>By mutual negotiation, people can encode in these ranges everything they want, including characters that are non-eligible for Unicode: trademarks, fictional alphabets, rare characters and scripts, style tags, substitution marks. Unicode Consortium does{{_}}not{{_}}carry any responsibility for this. Let’s list four common uses of private characters.</p>
       <p />
       <p>* OS vendors often encode own logos here. End users grab codes starting form E000 and up, and software vendors{{-}}starting from F8FF and down.</p>
       <p>* ConScript Unicode Registry and its ancestor Under-ConScript Unicode Registry{{-}}over 60 constructed languages, scripts from films, literature and games. Three of them, [[pk:101D0|Phaistos Disc]], [[ps:Shaw|Shavian alphabet]], [[ps:Dsrt|Deseret alphabet]], were accepted by real Unicode.</p>
       <p>* Standard Music Font Layout (SMuFL){{-}}open standard of musical fonts to abbreviate [[pk:1D100|sheet music]] PDFs.</p>
-      <p>* Proposals to Unicode{{-}}block is not yet allocated, and implemetation font has to be made.</p>
+      <p>* Proposals to Unicode{{-}}block is not{{_}}yet allocated, and implemetation font has to be made.</p>
       <p />
       <p>Unofficially [[pt:control|control]] characters are taken for custom control and format characters: in most cases they cannot appear in text.</p>
      </orig>
@@ -10646,7 +10649,7 @@
     <text id="Text">
      <orig>
       <p>String conversion used for (mostly) locale-independent case-insensitive string somparison. It has two main types and one auxiliary:</p>
-      <p>* Simple (does not change length): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
+      <p>* Simple (does{{_}}not{{_}}change length): &lt;big&gt;ᾨ → ᾠ&lt;/big&gt;</p>
       <p>* Full (unfolds [[pt:ligature|ligatures]]): &lt;big&gt;ᾨ → ὠ ι&lt;/big&gt;</p>
       <p>* Turkic (special rules for Turkish and Azeri): &lt;big&gt;I → ı&lt;/big&gt;</p>
       <p />
@@ -10739,7 +10742,7 @@
       <p />
       <p>If the code is followed with any character except Base64 characters and hyphen, the final hyphen may be omitted. If there is a single unencodeable characters between two encodeable, it may be encoded too to save bytes.</p>
       <p />
-      <p>UTF-7 format does not have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
+      <p>UTF-7 format does{{_}}not{{_}}have good properties of [[pt:utf8|UTF-8]] and even is ambiguous: the same text may be encoded in multiple ways.</p>
       <p />
       <p>Used only in E-mail as an alternative to more bulky ''quoted-printable''. In IMAP protocol special version of UTF-7 is used for mailbox names, where ampersand '''&amp;''' is instead of plus '''+''', 63=comma, final hyphen is always written, and among ASCII characters only &amp; is encoded. Such UTF-7 is unambiguous, that’s important for search. In World Wide Web UTF-7 is expressly forbidden: you can make an XSS attack if you trick the browser into thinking that the page is in UTF-7.</p>
      </orig>
@@ -10807,7 +10810,7 @@
      <orig>
       <p>'''Unicode tranformation format, 16 bit''' is a format of Unicode [[pt:serialization|serialization]] into a chain of two-byte machine words.</p>
       <p />
-      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows NT quickly accepted two-byte character, that simplified text processing. But soon it became clear that two bytes are not enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
+      <p>Unicode was initially thought as two-byte encoding, and writing of text with two-byte characters was named UCS-2. Progressive languages and libraries of those times like Java and Windows NT quickly accepted two-byte character, that simplified text processing. But soon it became clear that two bytes are{{_}}not{{_}}enough, and in 1996 encoding with variable number of two-byte words was made as a compromise, and it was named UTF-16.</p>
       <p>* Characters 0…D7FF and E000…FFFF are just written;</p>
       <p>* Characters D800…DFFF are forbidden;</p>
       <p>* Characters 10000 and greater are written as '''surrogate pair''':</p>
@@ -10815,12 +10818,12 @@
       <p />
       <p>Properties of UTF-16:</p>
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 characters.</p>
-      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are not processed (left intact or deleted), two-byte character is suitable for text processing.</p>
-      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will not make false positives.</p>
+      <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
+      <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will{{_}}not{{_}}make false positives.</p>
       <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
-      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do not need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, Qt.</p>
+      <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, Qt.</p>
      </orig>
      <transl>
       <p>'''Unicode transformation format, 16-bit'''{{-}}формат [[pt:serialization|серіалізації]] Юнікоду у ланцюжок двобайтових машинних слів.</p>
@@ -10884,9 +10887,9 @@
       <p>* 00{{_}}00{{_}}FE{{_}}FF{{-}}[[pt:utf32|UTF-32BE]];</p>
       <p>* FF{{_}}FE{{_}}00{{_}}00{{-}}UTF-32LE.</p>
       <p />
-      <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do not occur as a format of text files. UTF-32 is extremely rare.</p>
+      <p>[[pt:utf7|UTF-7]] and [[pt:punycode|Punycode]] do{{_}}not{{_}}occur as a format of text files. UTF-32 is extremely rare.</p>
       <p />
-      <p>Binary files strictly specify serialization format, and do not need byte order mark.</p>
+      <p>Binary files strictly specify serialization format, and do{{_}}not{{_}}need byte order mark.</p>
      </orig>
      <transl>
       <p>Символ U+FEFF. Його можна (не обов’язково) ставити на початку юнікодного текстового файлу, щоб вказати формат [[pt:serialization|серіалізації]]. Закодованою мітка порядку байтів буде виглядати так:</p>
@@ -10917,7 +10920,7 @@
       <p />
       <p>''Italic'' type comes from cursive, and in some languages is named with same word as cursive.</p>
       <p />
-      <p>Do not confuse with ''shorthand'' where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
+      <p>Do{{_}}not{{_}}confuse with ''shorthand'' where the scribe keeps pace with speech but makes sacrifices: hard training, lined paper, decoding in calm conditions…</p>
      </orig>
      <transl>
       <p>Стиль письма, коли потрібно швидко написати щось, особливо крихким гусячим пером. Особливості варіюються від мови до мови, але в цілому:</p>
@@ -10941,7 +10944,7 @@
      <orig>
       <p>Writing style with low line and plenty of ascenders and descenders. Was used in Middle Ages for economy of parchment, widespread in [[ps:Latn|Latin]], [[ps:Geor|Georgian]], [[ps:Grek|Greek]]. In Latin it turned to small letters. In contrast, Georgian is bicameral just technically.</p>
       <p />
-      <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is not accepted as minuscule.</p>
+      <p>If a script generally has big ascenders ([[ps:Lana|Tai Tham]]), this is{{_}}not{{_}}considered minuscule.</p>
      </orig>
      <transl>
       <p>Стиль письма з низьким рядком та безліччю виносних елементів. Використовувався у середньовіччі для економії пергаменту, поширений у [[ps:Latn|латинці]], [[ps:Geor|грузинській]], [[ps:Grek|грецькій]]. У латинці він перетворився на малі літері{{-}}а грузинка є регістровою лише формально.</p>
@@ -10965,7 +10968,7 @@
       <p>* All [[pt:brahmic|Brahmic abugidas]], [[pt:cjk|CJK]] by pronunciation{{-}}phonological order, from throat {{t|k}} to teeth {{t|s}};</p>
       <p>* CJK by [[ps:Hani|writing]]{{-}}using so-called radicals.</p>
       <p />
-      <p>Unicode writes letters in order close to alphabetical, but does not codify rules of alphabetical sorting. If an alphabetical order changes, the country itself changes it without consulting Unicode Consortium.</p>
+      <p>Unicode writes letters in order close to alphabetical, but does{{_}}not{{_}}codify rules of alphabetical sorting. If an alphabetical order changes, the country itself changes it without consulting Unicode Consortium.</p>
      </orig>
      <transl>
       <p>Стандартний порядок для сортування текстів. Вперше відомий в [[ps:Ugar|угаритській]].</p>
@@ -11005,19 +11008,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>One of [[pt:emoji|emoji]] principles which, however, did not exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion. For example, families of different racial composition are possible but not{{_}}standardized{{-}}that’s 4225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
+      <p>One of [[pt:emoji|emoji]] principles which, however, did{{_}}not{{_}}exist from the start. It means that emoji must support racial, gender and other minorities as much as it is possible without combinatorial explosion. For example, families of different racial composition are possible but not{{_}}standardized{{-}}that’s 4225 glyphs. ''(Unicode{{_}}{{version}} contains {{nemoji}} emoji.)''</p>
       <p />
       <p>Initially people are displayed with unrealistic skin tone, usually yellow. One of five skin tones is given with special modifier: {{em|🏃}}+{{em|🏿}} ={{_}}{{em|🏃🏿}}.</p>
       <p />
       <p>Most emoji are genderless; if you want you may add gender with {{em|🧙}}+ZWJ+{{em|♂}}+VS16. There are only two purely female emoji: {{em|🤱}}{{_}}breast feeding and {{em|🧕}}{{_}}woman in headscarf. Unicode{{_}}13 (2020) made genderless {{em|👰}}{{_}}bride, {{em|🤵}}{{_}}person in tuxedo and others. Unicode 14 (2021) added more genderless emoji.</p>
       <p />
-      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will not change glyph.</p>
+      <p>People with invisible skin{{-}}{{em|🏂}} snowboarder{{-}}should also support gender and skintone modifiers, even if it will{{_}}not{{_}}change glyph.</p>
       <p />
       <p>If emoji contains several people, gender and skin tone are implemented case-by-case. In breast feeding {{em|🤱}} baby’s skin is covered, kiss {{em|💏}} is assembled from scratch as {{em|👩}}+ZWJ+{{em|❤}}+VS16+ZWJ+{{em|💋}}+ZWJ+{{em|👨}}.</p>
       <p />
       <p>Order of modifiers in ZWJ sequences: base character, skin tone (without ZWJ), hair, other colours {{em|⬛}}, gender, movement direction {{em|⬅}}+VS16. As of Unicode{{_}}15.1, four coloured emoji are standardized, for example black cat {{em|🐈}}+ZWJ+{{em|⬛}}.</p>
       <p />
-      <p>Faces {{em|😂}} are not inclusive and always yellow.</p>
+      <p>Faces {{em|😂}} are{{_}}not{{_}}inclusive and always yellow.</p>
      </orig>
      <transl>
       <p>Один з принципів [[pt:emoji|емодзі]], що з’явився, втім, не{{_}}відразу. Це значить, що емодзі повинні підтримувати расові, гендерні та інші меншини{{-}}наскільки це можливо без комбінаторного вибуху. Так, сім’ї різного расового складу можливі, але не{{_}}стандартизовані{{-}}це 4225 гліфів. ''(Юнікод{{_}}{{version}} містить {{nemoji}} емодзі.)''</p>
@@ -11096,19 +11099,19 @@
     </text>
     <text id="Text">
      <orig>
-      <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does not lose importance.</p>
+      <p>'''Alive'''{{-}}at least one language has status “Safe”, the script is the only one or does{{_}}not{{_}}lose importance.</p>
       <p />
       <p>'''Endengered due to language'''{{-}}all languages’ use and/or transfer is broken (status from “Vulnerable” to “Severely endangered”)</p>
       <p />
       <p>'''Endangered due to script competition'''{{-}}all languages have alternate script, already stronger or gaining strength.</p>
       <p />
-      <p>'''Dead'''{{-}}script is no longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
+      <p>'''Dead'''{{-}}script is no{{_}}longer in use, or its use is highly limited. Unicode knows only one script that died relatively recently due to language death{{-}}artificial language [[ps:Medf|Medefaidrin]].</p>
       <p />
       <p>'''Religious'''{{-}}the script is in use by important religion.</p>
       <p />
-      <p>'''Historical, no decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
+      <p>'''Historical, no{{_}}decipherment needed'''{{-}}because of continuous tradition ([[ps:Glag|Glagolitic]]), lifetime description ([[ps:Runr|runes]]) or proximity to other scripts ([[ps:Bhks|Bhaiksuki]]).</p>
       <p />
-      <p>'''(Un)deciphered'''{{-}}historical script is not yet deciphered (partly deciphered, deciphered).</p>
+      <p>'''(Un)deciphered'''{{-}}historical script is not{{_}}yet{{_}}deciphered (partly deciphered, deciphered).</p>
       <p />
       <p>'''New'''{{-}}invented too recently to tell exactly about its status.</p>
       <p />
@@ -11182,7 +11185,7 @@
     </text>
     <text id="Text">
      <orig>
-      <p>[[pt:format|Format]] character U+200C intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does not have to be in the font.</p>
+      <p>[[pt:format|Format]] character U+200C intended to break a [[pt:ligature|ligature]]. It’s [[pt:ignorable|default-ignorable]], i.e. it does{{_}}not{{_}}have to be in the font.</p>
       <p />
       <p>'''[[ps:Latn|Latin]]'''</p>
       <p>: In some fonts '''stop''' → '''ﬆop'''</p>
@@ -11193,7 +11196,7 @@
       <p>: {{sm|क}} ka + {{sm|◌्}} virama + ZWNJ + {{sm|ष}} ša = {{sm|क्‌ष}} alternate kša, usually in compound words</p>
      </orig>
      <transl>
-      <p>[[pt:format|Форматуючий]] символ U+200C, закликаний розірвати [[pt:ligature|лігатуру]]. Він [[pt:ignorable|ігнорований]], тобто не зобов’язаний знаходитися у шрифті.</p>
+      <p>[[pt:format|Форматуючий]] символ U+200C, закликаний розірвати [[pt:ligature|лігатуру]]. Він [[pt:ignorable|ігнорований]], тобто не{{_}}зобов’язаний знаходитися у шрифті.</p>
       <p />
       <p>'''[[ps:Latn|Латинка]]'''</p>
       <p>: У деяких шрифтах '''stop''' → '''ﬆop'''</p>
@@ -12529,7 +12532,7 @@
     </text>
     <text id="Family2">
      <orig>As of 2023, Microsoft draws coloured genderless families rather than silhouettes.</orig>
-     <transl>На 2023 Microsoft малює кольорові безстатеві сім’ї, а не силуети.</transl>
+     <transl>На 2023 Microsoft малює кольорові безстатеві сім’ї, а не{{_}}силуети.</transl>
     </text>
    </group>
   </group>
