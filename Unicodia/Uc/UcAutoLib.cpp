@@ -7183,7 +7183,7 @@ constinit const uc::LibNode uc::libNodes[8774] {
 { U"\u0076", {}, 6079, 0, -1, {}, EcVersion::NONE },   // 7177
 { U"\u0077", {}, 6079, 0, -1, {}, EcVersion::NONE },   // 7178
 { U"\u0078", {}, 6079, 0, -1, {}, EcVersion::NONE },   // 7179
-{ U"\u0263", {}, 6079, 0, -1, {}, EcVersion::NONE },   // 7180
+{ U"\u04AF", {}, 6079, 0, -1, {}, EcVersion::NONE },   // 7180
 { {}, u8"Currencies", 6, 39, 7183, Lfg(8), EcVersion::NONE },   // 7181
 { {}, u8"IntelProperty", 6, 16, 7222, Lfg(8), EcVersion::NONE },   // 7182
 { U"\u00A4", {}, 7181, 0, -1, {}, EcVersion::NONE },   // 7183
