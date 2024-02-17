@@ -12446,9 +12446,21 @@
      <orig>Superscript / small</orig>
      <transl>Верхній індекс / малі</transl>
     </text>
+    <text id="InvCap">
+     <orig>Turned-over / capital</orig>
+     <transl>Перевернуті / великі</transl>
+    </text>
     <text id="InvSmall">
      <orig>Turned-over / small</orig>
      <transl>Перевернуті / малі</transl>
+    </text>
+    <text id="RevCap">
+     <orig>Reversed / capital</orig>
+     <transl>Зворотні / великі</transl>
+    </text>
+    <text id="RevSmall">
+     <orig>Reversed / small</orig>
+     <transl>Зворотні / малі</transl>
     </text>
     <text id="Game">
      <orig>Games</orig>

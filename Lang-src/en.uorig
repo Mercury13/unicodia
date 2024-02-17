@@ -8651,8 +8651,17 @@
     <text id="SuperSmall">
      <orig>Superscript / small</orig>
     </text>
+    <text id="InvCap">
+     <orig>Turned-over / capital</orig>
+    </text>
     <text id="InvSmall">
      <orig>Turned-over / small</orig>
+    </text>
+    <text id="RevCap">
+     <orig>Reversed / capital</orig>
+    </text>
+    <text id="RevSmall">
+     <orig>Reversed / small</orig>
     </text>
     <text id="Game">
      <orig>Games</orig>

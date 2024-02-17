@@ -12445,9 +12445,21 @@
      <orig>Superscript / small</orig>
      <transl>Верхний индекс / строчные</transl>
     </text>
+    <text id="InvCap">
+     <orig>Turned-over / capital</orig>
+     <transl>Перевёрнутые / заглавные</transl>
+    </text>
     <text id="InvSmall">
      <orig>Turned-over / small</orig>
      <transl>Перевёрнутые / строчные</transl>
+    </text>
+    <text id="RevCap">
+     <orig>Reversed / capital</orig>
+     <transl>Обратные / заглавные</transl>
+    </text>
+    <text id="RevSmall">
+     <orig>Reversed / small</orig>
+     <transl>Обратные / строчные</transl>
     </text>
     <text id="Game">
      <orig>Games</orig>

@@ -427,8 +427,17 @@
 		<f loc="CjkSmall">
 			<range start="FF41" end="FF5A" />
 		</f>
+		<f loc="InvCap" forgetTest="0">
+			<d>Ɐ ꓭ Ɔ  ꓷ Ǝ Ⅎ ⅁ H I Ր ꓩ Ʞ Ꞁ ꟽ N O Ԁ Ò ꓤ S Ʇ Ո Ʌ M X ⅄ Z</d>
+		</f>
 		<f loc="InvSmall" forgetTest="0">
-			<d>ɐ q ɔ p ǝ ɟ ᵷ ɥ ᴉ ɾ ʞ ꞁ ɯ u o d b ɹ s ʇ n ʌ ʍ x ʎ z</d>
+			<d>ɐ q ɔ p ǝ ɟ ᵷ ɥ ᴉ ſ ɾ ʞ ꞁ ɯ u o d b ɹ s ʇ n ʌ ʍ x ʎ z</d>
+		</f>
+		<f loc="RevCap" forgetTest="0">
+			<d>A ꓭ Ɔ  ꓷ Ⴇ Ǝ ꟻ ᶗ H I ȴ ɭ Ʞ ⅃ M И O ꟼ Ǫ Я Ⴧ T U V W X Y</d>
+		</f>
+		<f loc="RevSmall" forgetTest="0">
+			<d>ɒ d ɔ b ɘ ʡ 𝼁  i ȴ ɭ 𝼃 l m n o q p ɿ ʅ ჷ շ Ɉ ֈ u v w x ɣ</d>
 		</f>
 	</f>
 	<f loc="Business">
