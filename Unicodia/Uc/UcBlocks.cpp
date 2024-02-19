@@ -222,7 +222,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED, 11_hx },
             "Mongolian",
             { EcScript::Mong, 0 }, MapType::AS_OTHER,
-            EcScript::Mong, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
+            EcScript::Mong, EcFont::NORMAL, Bfg::BIG_CONTROLS,
+            EcGlyphStyleChannel::VERTICAL },
     // Canadian extended OK
     { 0x18B0, 0x18FF, { 0x18E5, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended",

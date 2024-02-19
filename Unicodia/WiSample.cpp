@@ -25,15 +25,19 @@ WiSample::~WiSample()
 }
 
 
+void WiSample::setFont(const uc::Cp& ch)
+{
+    auto font = ch.font(uc::MatchLast::NO);
+    ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
+}
+
+
 void WiSample::drawWithQt(
         const uc::Cp& ch, uc::EmojiDraw emojiDraw,
         const uc::GlyphStyleSets& glyphSets)
 {
     ui->pageSampleCustom->setNormal();
-
-    // Font
-    auto font = ch.font(uc::MatchLast::NO);
-    ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
+    setFont(ch);
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -82,7 +86,12 @@ void WiSample::showCp(
         ui->pageSampleCustom->setCustomControl(ch.subj);
         break;
     case uc::DrawMethod::ABBREVIATION:
-        clearSample();
+        if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
+            setFont(ch);
+            ui->lbSample->setText(" ");
+        } else {
+            clearSample();
+        }
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setAbbreviation(ch.abbrev());
         break;

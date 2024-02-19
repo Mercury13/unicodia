@@ -766,7 +766,9 @@ namespace uc {
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise rather than clockwise
-        HIDE_STYLE      = 1<<10,    ///< [+] Hide this block from style’s list
+        HIDE_STYLE      = 1<<10,    ///< [+] Hide from list: which blocks use this style channel
+                                    ///<     (Glag supp has Bulgarian style only, so write just Glag)
+        BIG_CONTROLS    = 1<<11,    ///< [+] Control chars use same size as normal
         EXPERIMENT      = 1<<15,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
