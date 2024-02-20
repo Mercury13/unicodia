@@ -31,6 +31,7 @@ public:
 private:
     Ui::WiSample *ui;
     void clearSample();
+    void setAbbrFont(const uc::Cp& ch);
     void setFont(const uc::Cp& ch);
     void drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,

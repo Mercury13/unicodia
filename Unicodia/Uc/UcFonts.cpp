@@ -132,7 +132,7 @@ constinit const uc::Font uc::fontInfo[] = {
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
     { "NotoSansDuployan-Regular.ttf", Ffg::STUB_FINEGRAINED },                  // Duployan
-    { "UnicodiaEgypFixupRegular.ttf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
+    { "UnicodiaEgypFixupRegular.otf", Ffg::CELL_BIGGER | Ffg::DESC_AVOID | Ffg::FALL_TO_NEXT }, // Egyptian
       { "NotoSansEgyptianHieroglyphs-Regular.otf", Ffg::CELL_BIGGER },          // …1
     { "NotoSansElbasan-Regular.ttf" },                                          // Elbasan
     { "NotoSansElymaic-Regular.ttf" },                                          // Elymaic
