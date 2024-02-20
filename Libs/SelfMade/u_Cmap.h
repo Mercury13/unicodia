@@ -1,7 +1,7 @@
 #pragma once
 
 #include <algorithm>
-
+#include <array>
 
 ///
 /// \brief  Constant map implemented with sorted array
