@@ -69,7 +69,8 @@ constinit const uc::Block uc::blocks[] {
     // Arabic OK
     { 0x0600, 0x06FF, { 0x636, EcContinent::ASIA },
             "Arabic",
-            { EcScript::Arab, 0 }, MapType::AS_OTHER, EcScript::Arab },
+            { EcScript::Arab, 0 }, MapType::AS_OTHER,
+            EcScript::Arab, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     /// @todo [font] #86 Which font to select and what to do with Syriac Malayalam?
     { 0x0700, 0x074F, { 0x71B, EcContinent::ASIA },
             "Syriac",
