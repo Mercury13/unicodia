@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1698529057
-ModificationTime: 1708446961
+ModificationTime: 1708449328
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -116,7 +116,7 @@ Encoding: 78842 78842 3
 GlifName: u133F_A_
 Width: 117
 VWidth: 0
-Flags: WO
+Flags: W
 HStem: 0 21G<49 68>
 VStem: 49 19<0 416>
 LayerCount: 2
@@ -514,16 +514,16 @@ Encoding: 78852 78852 13
 GlifName: u13404
 Width: 513
 VWidth: 0
-Flags: W
+Flags: WO
 HStem: 198 19<49 464>
 LayerCount: 2
 Fore
 SplineSet
-49 217 m 261
+49 217 m 257
  464 217 l 257
  464 198 l 257
  49 198 l 257
- 49 217 l 261
+ 49 217 l 257
 EndSplineSet
 EndChar
 
