@@ -1919,6 +1919,7 @@ namespace {
             wantPreloadFonts = false;
             // …and preload, here are fonts
             preloadFont(uc::EcFont::BRAHMI);
+            preloadFont(uc::EcFont::TAMIL_SUPPLEMENT);
         }
         return r;
     }
