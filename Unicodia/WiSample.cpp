@@ -25,18 +25,29 @@ WiSample::~WiSample()
 }
 
 
-void WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
+bool WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
 {
     auto font = ch.font(matcher);
-    ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
+    if (!font) {
+        clearSample();
+        return false;
+    }
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+    ui->lbSample->setFont(qfont);
+    return true;
 }
 
 
 void WiSample::setAbbrFont(const uc::Cp& ch)
 {
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
-        setFont(ch, match::MainFont::INST);
-        ui->lbSample->setText(" ");
+        if (setFont(ch, match::MainFont::INST)) {
+            ui->lbSample->setText(" ");
+            // Show just to check layout, then revert again
+            auto prevPage = ui->stackSample->currentIndex();
+            ui->stackSample->setCurrentWidget(ui->pageSampleQt);
+            ui->stackSample->setCurrentIndex(prevPage);
+        }
     } else {
         clearSample();
     }

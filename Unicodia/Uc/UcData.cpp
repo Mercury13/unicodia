@@ -2835,7 +2835,10 @@ const uc::Font* uc::FontMatcher::lastHopeMatch(char32_t cp, const uc::Font& font
 
 bool match::MainFont::check(char32_t, const uc::Font& font) const
 {
-    return !font.flags.haveAny(uc::Ffg::BUG_FIXUP | uc::Ffg::DESC_AVOID);
+    if (font.flags.haveAny(uc::Ffg::BUG_FIXUP | uc::Ffg::DESC_AVOID))
+        return false;
+    font.load(NO_TRIGGER);  // font probably won’t support cp
+    return true;
 }
 
 
