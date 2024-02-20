@@ -41,7 +41,7 @@ namespace fst {
     constexpr auto COMPAT = static_cast<QFont::StyleStrategy>(
                 QFont::PreferAntialias | QFont::ForceOutline | QFont::PreferMatch);
     constexpr auto NO_AA = static_cast<QFont::StyleStrategy>(
-                QFont::NoAntialias | QFont::ForceOutline | QFont::PreferMatch);
+                QFont::NoAntialias | QFont::NoSubpixelAntialias | QFont::ForceOutline | QFont::PreferMatch);
 }
 
 class Percent

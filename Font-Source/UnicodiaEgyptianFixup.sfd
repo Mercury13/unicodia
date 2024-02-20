@@ -22,7 +22,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1698529057
-ModificationTime: 1708446151
+ModificationTime: 1708446961
 PfmFamily: 17
 TTFWeight: 400
 TTFWidth: 5
@@ -116,7 +116,7 @@ Encoding: 78842 78842 3
 GlifName: u133F_A_
 Width: 117
 VWidth: 0
-Flags: HW
+Flags: WO
 HStem: 0 21G<49 68>
 VStem: 49 19<0 416>
 LayerCount: 2
@@ -162,6 +162,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<49 68 206 225 362 382>
 VStem: 49 19<0 416> 206 19<0 416> 362 20<0 416>
+CounterMasks: 1 70
 LayerCount: 2
 Fore
 SplineSet
@@ -191,6 +192,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<49 68 206 225 362 382 519 539>
 VStem: 49 19<0 416> 206 19<0 416> 362 20<0 416> 519 20<0 416>
+CounterMasks: 1 78
 LayerCount: 2
 Fore
 SplineSet
@@ -225,6 +227,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<128 147 285 304>
 VStem: 49 19<527 943> 128 19<0 416> 206 19<527 943> 285 19<0 416> 362 20<527 943>
+CounterMasks: 1 54
 LayerCount: 2
 Fore
 SplineSet
@@ -264,6 +267,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<49 68 206 225 362 382>
 VStem: 49 19<0 416 527 943> 206 19<0 416 527 943> 362 20<0 416 527 943>
+CounterMasks: 1 70
 LayerCount: 2
 Fore
 SplineSet
@@ -308,6 +312,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<127 146 284 303 440 460>
 VStem: 49 19<527 943> 127 19<0 416> 206 19<527 943> 284 19<0 416> 362 20<527 943> 440 20<0 416> 519 20<527 943>
+CounterMasks: 2 55 2a
 LayerCount: 2
 Fore
 SplineSet
@@ -357,6 +362,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<49 68 206 225 362 382 519 539>
 VStem: 49 19<0 416 527 943> 206 19<0 416 527 943> 362 20<0 416 527 943> 519 20<0 416 527 943>
+CounterMasks: 1 78
 LayerCount: 2
 Fore
 SplineSet
@@ -411,6 +417,7 @@ VWidth: 0
 Flags: W
 HStem: 982 20G<49 68 206 225 362 382>
 VStem: 49 19<-34 260 337 631 708 1002> 206 19<-34 260 337 631 708 1002> 362 20<-34 260 337 631 708 1002>
+CounterMasks: 1 70
 LayerCount: 2
 Fore
 SplineSet
@@ -470,6 +477,7 @@ VWidth: 0
 Flags: W
 HStem: 0 21G<49 68 206 225 362 382 519 539 676 695>
 VStem: 49 19<0 416> 206 19<0 416> 362 20<0 416> 519 20<0 416> 676 19<0 416>
+CounterMasks: 1 7c
 LayerCount: 2
 Fore
 SplineSet
@@ -506,16 +514,16 @@ Encoding: 78852 78852 13
 GlifName: u13404
 Width: 513
 VWidth: 0
-Flags: WO
+Flags: W
 HStem: 198 19<49 464>
 LayerCount: 2
 Fore
 SplineSet
-49 198 m 257
- 49 217 l 261
+49 217 m 261
  464 217 l 257
  464 198 l 257
  49 198 l 257
+ 49 217 l 261
 EndSplineSet
 EndChar
 
@@ -578,6 +586,7 @@ Width: 513
 VWidth: 0
 Flags: W
 HStem: -51 19<49 464> 115 19<49 464> 281 19<49 464> 447 19<49 464>
+CounterMasks: 1 f0
 LayerCount: 2
 Fore
 SplineSet
@@ -611,6 +620,7 @@ Width: 1006
 VWidth: 0
 Flags: W
 HStem: 32 19<49 464> 115 19<542 958> 198 19<49 464> 281 19<542 958> 364 19<49 464>
+CounterMasks: 1 a8
 LayerCount: 2
 Fore
 SplineSet
@@ -693,6 +703,7 @@ Width: 1006
 VWidth: 0
 Flags: W
 HStem: -51 19<49 464> 32 19<542 958> 115 19<49 464> 198 19<542 958> 281 19<49 464> 364 19<542 958> 447 19<49 464>
+CounterMasks: 2 aa 54
 LayerCount: 2
 Fore
 SplineSet
@@ -741,6 +752,7 @@ Width: 1006
 VWidth: 0
 Flags: W
 HStem: -51 19<49 464 542 958> 115 19<49 464 542 958> 281 19<49 464 542 958> 447 19<49 464 542 958>
+CounterMasks: 1 f0
 LayerCount: 2
 Fore
 SplineSet
