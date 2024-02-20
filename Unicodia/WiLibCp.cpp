@@ -4,9 +4,6 @@
 // Qt
 #include <QPainter>
 
-// Libs
-#include "u_Qstrings.h"
-
 // Unicode
 #include "UcData.h"
 

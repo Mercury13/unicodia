@@ -428,10 +428,13 @@ ControlFrame drawControlFrame(
     static constexpr qreal Q_THICKNESS = 1.0 / 60.0;
     auto loThickness = availSize * Q_THICKNESS;
     auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
-    bool isAa = (dpr != 1.0 && hiThickness * dpr > 1);
+    bool isAa = (hiThickness > 1.3);  // 1.25 — still no anti-alias
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     if (isAa) {
         rcFrame = adjustedToPhysicalPixels(rcFrame, dpr, hiThickness * 0.5);
+    } else if (hiThickness > 1) {
+        hiThickness = 1;
+        loThickness = hiThickness / dpr;
     }
     painter->setPen(QPen(color, hiThickness, Qt::DashLine));
     painter->setBrush(Qt::NoBrush);
@@ -626,7 +629,7 @@ std::optional<QFont> fontAt(
 {
     if (drawMethod > uc::DrawMethod::LAST_FONT)
         return {};
-    auto font = cp.font(uc::MatchLast::NO);
+    auto font = cp.font(match::Normal::INST);
     auto r = font->get(uc::FontPlace::CELL, FSZ_TABLE * sizePc / 100,
                     cp.isNoAa(), cp.subj);
     if (sizePc <= 80 && font->flags.have(uc::Ffg::NOHINT_TINY))

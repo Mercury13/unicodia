@@ -32,6 +32,10 @@ const QString uc::Font::qempty;
 const uc::GlyphStyleSets uc::GlyphStyleSets::EMPTY;
 constinit const uc::InputMethods uc::InputMethods::NONE {};
 
+constinit const match::MainFont match::MainFont::INST;
+constinit const match::Normal match::Normal::INST;
+constinit const match::NullForTofu match::NullForTofu::INST;
+
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
 
@@ -2148,7 +2152,7 @@ uc::SampleProxy uc::Cp::sampleProxy(
         return {};
     }
 
-    auto fn = font(uc::MatchLast::NO);
+    auto fn = font(match::Normal::INST);
     auto style = fn->styleSheet;
     auto code = subj.ch32();
 
@@ -2338,14 +2342,14 @@ const uc::Font& uc::Cp::firstFont() const
 }
 
 
-const uc::Font* uc::Cp::font(MatchLast matchLast) const
+const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
 {
-    if (subj.ch32() == 0xFFFFFF) {
-        std::cout << "Debug here!" << std::endl;
-    }
+    auto sb = subj.ch32();
+    // if (subj.ch32() == 0xFFFFFF) {
+    //     std::cout << "Debug here!" << std::endl;
+    // }
     auto v = &firstFont();
     bool isBuggy = flags.have(Cfg::G_RENDER_BUG);
-    auto sb = subj.ch32();
     while (v->flags.have(Ffg::FALL_TO_NEXT)) {
         auto wantSkip = isBuggy
                 ? v->flags.have(Ffg::BUG_AVOID)     // BUGGY: avoid flag → bad, it’s for normal only
@@ -2354,7 +2358,7 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
             wantSkip |= v->flags.have(Ffg::MARK_AVOID);
         }
         if (!wantSkip) {
-            if (v->doesSupportChar(sb))
+            if (matcher.check(sb, *v))
                 return v;
         }
         // Once again if accepted and that flag is present
@@ -2365,18 +2369,12 @@ const uc::Font* uc::Cp::font(MatchLast matchLast) const
             // e.g. have system → never check backup
             if (!v->flags.have(Ffg::FALL_TO_NEXT)) {
                 // what the frag to do?
-                if (matchLast == MatchLast::NO)
-                    return v;
-                return nullptr;
+                return matcher.lastHopeMatch(sb, *v);
             }
         }
         ++v;
     }
-    if (matchLast != MatchLast::NO) {
-        if (!v->doesSupportChar(sb))
-            return nullptr;
-    }
-    return v;
+    return matcher.lastHopeMatch(sb, *v);
 }
 
 
@@ -2391,7 +2389,7 @@ uc::TofuInfo uc::Cp::tofuInfo() const
     if (drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY) > uc::DrawMethod::LAST_FONT) {
         r.state = TofuState::NO_FONT;
     } else {
-        r.state = font(MatchLast::YES) ? TofuState::PRESENT : TofuState::TOFU;
+        r.state = font(match::NullForTofu::INST) ? TofuState::PRESENT : TofuState::TOFU;
     }
     return r;
 }
@@ -2821,4 +2819,35 @@ std::u8string uc::Version::locLongName() const
         r += TEXT_BETA;
     r = loc::get(key).arg(r);
     return r;
+}
+
+
+///// Font matchers ////////////////////////////////////////////////////////////
+
+
+const uc::Font* uc::FontMatcher::lastHopeMatch(char32_t cp, const uc::Font& font) const
+{
+    if (check(cp, font))
+        return &font;
+    return nullptr;
+}
+
+
+bool match::MainFont::check(char32_t, const uc::Font& font) const
+{
+    return !font.flags.haveAny(uc::Ffg::BUG_FIXUP | uc::Ffg::DESC_AVOID);
+}
+
+
+bool match::Normal::check(char32_t cp, const uc::Font& font) const
+{
+    if (!font.flags.have(uc::Ffg::FALL_TO_NEXT))
+        return true;
+    return font.doesSupportChar(cp);
+}
+
+
+bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
+{
+    return font.doesSupportChar(cp);
 }

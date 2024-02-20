@@ -25,9 +25,9 @@ WiSample::~WiSample()
 }
 
 
-void WiSample::setFont(const uc::Cp& ch)
+void WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
 {
-    auto font = ch.font(uc::MatchLast::NO);
+    auto font = ch.font(matcher);
     ui->lbSample->setFont(font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj));
 }
 
@@ -35,8 +35,8 @@ void WiSample::setFont(const uc::Cp& ch)
 void WiSample::setAbbrFont(const uc::Cp& ch)
 {
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
-        ui->lbSample->clear();
-        setFont(ch);
+        setFont(ch, match::MainFont::INST);
+        ui->lbSample->setText(" ");
     } else {
         clearSample();
     }
@@ -48,7 +48,7 @@ void WiSample::drawWithQt(
         const uc::GlyphStyleSets& glyphSets)
 {
     ui->pageSampleCustom->setNormal();
-    setFont(ch);
+    setFont(ch, match::Normal::INST);
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -104,7 +104,7 @@ void WiSample::showCp(
     case uc::DrawMethod::SPACE: {
             clearSample();
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            auto font = ch.font(uc::MatchLast::NO);
+            auto font = ch.font(match::Normal::INST);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
             ui->lbSample->clear();
             ui->lbSample->setFont(qfont);
@@ -113,7 +113,7 @@ void WiSample::showCp(
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
             // set dummy font
-            auto font = ch.font(uc::MatchLast::NO);
+            auto font = ch.font(match::Normal::INST);
             ui->lbSample->setText(QString{});
             QFont qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
             ui->lbSample->setFont(qfont);

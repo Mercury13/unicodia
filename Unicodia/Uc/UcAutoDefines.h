@@ -474,7 +474,13 @@ namespace uc {
         virtual Action onText(TextRole role, std::u8string_view text) const = 0;
     };
 
-    enum class MatchLast { NO, YES };
+    class FontMatcher { // interface
+    public:
+        virtual ~FontMatcher() = default;
+        virtual bool check(char32_t cp, const uc::Font& font) const = 0;
+
+        const uc::Font* lastHopeMatch(char32_t cp, const uc::Font& font) const;
+    };
 
     enum class EcGlyphStyleChannel;
     struct GlyphStyleChannel;
@@ -521,7 +527,7 @@ namespace uc {
 
         /// @param [in] matchLast  [+] match last font, can return null
         ///                        [-] take last font, never null
-        const Font* font(MatchLast matchLast) const;
+        const Font* font(const uc::FontMatcher& matcher) const;
         SampleProxy sampleProxy(
                 ProxyType proxyType,
                 EmojiDraw emojiDraw,

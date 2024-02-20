@@ -1207,6 +1207,33 @@ namespace sw {
 }   // namespace sw
 
 
+namespace match {
+
+    ///  Matcher that extracts “main” font
+    class MainFont : public uc::FontMatcher {
+    public:
+        bool check(char32_t, const uc::Font& font) const override;
+        static const MainFont INST;
+    };
+
+    ///  Normal matcher that extracts the 1st font that supports cp,
+    ///  or last
+    class Normal : public uc::FontMatcher {
+    public:
+        bool check(char32_t cp, const uc::Font& font) const override;
+        static const Normal INST;
+    };
+
+    ///  Normal matcher that extracts font that ACTUALLY supports cp
+    class NullForTofu : public uc::FontMatcher {
+    public:
+        bool check(char32_t cp, const uc::Font& font) const override;
+        static const NullForTofu INST;
+    };
+
+}
+
+
 consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
     { return uc::StyleSheet{std::string_view { data, n }}; }
 

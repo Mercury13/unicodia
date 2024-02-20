@@ -7,6 +7,7 @@
 namespace uc {
     struct Cp;
     struct GlyphStyleSets;
+    class FontMatcher;
     enum class EmojiDraw;
 }
 
@@ -32,7 +33,7 @@ private:
     Ui::WiSample *ui;
     void clearSample();
     void setAbbrFont(const uc::Cp& ch);
-    void setFont(const uc::Cp& ch);
+    void setFont(const uc::Cp& ch, const uc::FontMatcher& matcher);
     void drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
             const uc::GlyphStyleSets& glyphSets);

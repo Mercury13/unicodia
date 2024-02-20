@@ -1618,7 +1618,7 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
     }
     if (auto cp = uc::cpsByCode[code]) {
         // Just get font, moving reference to nowhere
-        (void)cp->font(uc::MatchLast::NO);
+        (void)cp->font(match::Normal::INST);
     }
     auto index = model.indexOf(code);
     ui->tableChars->setCurrentIndex(index);
