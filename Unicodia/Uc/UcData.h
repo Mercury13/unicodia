@@ -74,7 +74,7 @@ namespace uc {
     constexpr QChar STUB_PUA_CONTINUING_OVERLAP { 0xE007 };
     constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };
     constexpr QChar STUB_PUA_TAG { 0xE009 };
-    constexpr QChar STUB_PUA_BIG_CIRCLE { 0xE00A };
+    // E00A free, was big circle for Egyptian
     constexpr QChar STUB_PUA_ENCLOSURE_START { 0xE00B };
     constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };
     constexpr QChar STUB_PUA_WALL_START { 0xE00D };
