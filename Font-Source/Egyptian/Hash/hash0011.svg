@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="-1350 0 1350 1000"
+   id="svg1"
+   sodipodi:docname="hash0011.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showguides="true"
+     inkscape:zoom="0.53844872"
+     inkscape:cx="577.58518"
+     inkscape:cy="398.36663"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1">
+    <sodipodi:guide
+       position="10,784"
+       orientation="1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="1301,935"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="655,1377.009"
+       orientation="-1,0"
+       id="guide3"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+    <sodipodi:guide
+       position="521,1267"
+       orientation="0,-1"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="596,40"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="-183.86152,654"
+       orientation="0,1"
+       id="guide6"
+       inkscape:locked="false"
+       inkscape:label=""
+       inkscape:color="rgb(0,134,229)" />
+  </sodipodi:namedview>
+  <path
+     id="path1"
+     d="M -1280 346 L -1340 406 L -1340 434 L -1252 346 L -1280 346 z M -1090 346 L -1340 596 L -1340 624 L -1062 346 L -1090 346 z M -900 346 L -1340 786 L -1340 814 L -872 346 L -900 346 z M -710 346 L -1324 960 L -1296 960 L -682 346 L -710 346 z M -520 346 L -1134 960 L -1106 960 L -492 346 L -520 346 z M -330 346 L -944 960 L -916 960 L -302 346 L -330 346 z M -140 346 L -754 960 L -726 960 L -112 346 L -140 346 z M -49 445 L -564 960 L -536 960 L -49 473 L -49 445 z M -49 635 L -374 960 L -346 960 L -49 663 L -49 635 z M -49 825 L -184 960 L -156 960 L -49 853 L -49 825 z " />
+</svg>
