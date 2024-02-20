@@ -289,7 +289,7 @@ void WiCustomDraw::setSpace(const QFont& font, char32_t aSubj)
 
 void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
 {
-    static constexpr auto SPACE_PLUS = 30;
+    static constexpr auto SPACE_PLUS = 20;
 
     fontSpace = font;
     mode = aMode;

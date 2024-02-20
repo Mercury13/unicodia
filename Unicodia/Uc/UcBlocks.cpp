@@ -1127,7 +1127,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::FORMAT },
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 1 }, MapType::AF_DEAD,
-            EcScript::Egyp, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
+            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",

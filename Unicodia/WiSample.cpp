@@ -100,6 +100,8 @@ void WiSample::showCp(
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             auto font = ch.font(uc::MatchLast::NO);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+            ui->lbSample->clear();
+            ui->lbSample->setFont(qfont);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
         } break;
     case uc::DrawMethod::VERTICAL_CW:
