@@ -15,6 +15,7 @@
 		<lang iso="tt" /><!-- Tatar -->
 	</trigger-langs>
 	<alpha-sort>
+		<!-- Dash is for Yi: «И — слоги» < «Иврит» -->
 		<alp>—АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
 		<alp>_абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
 		<alp>_á____é_________ó___________________________________________</alp>
