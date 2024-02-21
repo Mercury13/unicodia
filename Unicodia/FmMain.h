@@ -106,8 +106,6 @@ class CharsModel final
     using Super = QAbstractTableModel;
     using SuperD = QStyledItemDelegate;
 public:
-    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
-
     QWidget* const owner;
     FontMatch match;
     bool isCjkCollapsed = true;

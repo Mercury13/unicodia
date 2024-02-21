@@ -323,7 +323,7 @@ int CharsModel::columnCount(const QModelIndex&) const
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(EMOJI_DRAW, *cp, glyphStyle.sets);
+        return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, glyphStyle.sets);
     return {};
 }
 
@@ -355,7 +355,7 @@ QString CharsModel::textAt(const QModelIndex& index) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, EMOJI_DRAW, glyphStyle.sets).text;
+    return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, WiShowcase::EMOJI_DRAW, glyphStyle.sets).text;
 }
 
 
@@ -485,7 +485,7 @@ void CharsModel::drawChar(QPainter* painter, const QRect& rect,
         auto color1 = fgAt(*ch, TableColors::YES);
         if (!color1.isValid())
             color1 = color;
-        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, EMOJI_DRAW, glyphStyle.sets);
+        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, WiShowcase::EMOJI_DRAW, glyphStyle.sets);
     }
 }
 
@@ -1377,7 +1377,7 @@ void FmMain::redrawSampleChar()
 {
     auto& cp = ui->wiCharShowcase->shownCp();
     if (cp) {
-        ui->wiCharShowcase->wiSample()->showCp(*cp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
+        ui->wiCharShowcase->wiSample()->showCp(*cp, WiShowcase::EMOJI_DRAW, model.glyphStyle.sets);
     } else {
         ui->wiCharShowcase->wiSample()->showNothing();
     }

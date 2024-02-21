@@ -25,6 +25,8 @@ class WiShowcase :
     using This = WiShowcase;
     using Form = loc::Form<WiShowcase>;
 public:
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
+
     explicit WiShowcase(QWidget *parent = nullptr);
     ~WiShowcase() override;
 
@@ -32,7 +34,7 @@ public:
     void translateMe() override;
 
     /// @todo [urgent] deprecate these funcs
-    WiSample* wiSample() const;
+    [[deprecated]] WiSample* wiSample() const;
 
     const uc::MaybeChar& shownCp() const { return fShownCp; }
     void set(uc::MaybeChar ch, FontMatch& fonts);
