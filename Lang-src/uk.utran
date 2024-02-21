@@ -10506,8 +10506,8 @@
       <p />
       <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}15.1.</p>
       <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
-      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|90}} full.</p>
-      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|10}} full.</p>
+      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
+      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
       <p>* Planes 4 to 0D are unused.</p>
       <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
       <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
@@ -10517,8 +10517,8 @@
       <p />
       <p>* Площина {{№}}0 зветься '''[[pt:bmp|базовою багатомовною]]''' та містить більшість символів живих мов. У Юнікоді{{_}}15.1 залишаються 16 нерозподілених позицій.</p>
       <p>* Площина {{№}}1 зветься '''додатковою багатомовною''' та містить символи рідких та мертвих мов, а також технічні. Заповнена менш ніж на {{%|50}}.</p>
-      <p>* Площина {{№}}2 зветься '''додатковою ієрогліфічною''' та містить тільки [[ps:Hani|китайські ієрогліфи]]. Заповнена на {{%|90}}.</p>
-      <p>* Площина {{№}}3 зветься '''третинною ієрогліфічною''', містить тільки китайські ієрогліфи, та заповнена на {{%|10}}.</p>
+      <p>* Площина {{№}}2 зветься '''додатковою ієрогліфічною''' та містить тільки [[ps:Hani|китайські ієрогліфи]]. Заповнена на {{%|93}}.</p>
+      <p>* Площина {{№}}3 зветься '''третинною ієрогліфічною''', містить тільки китайські ієрогліфи, та заповнена на {{%|14}}.</p>
       <p>* Площини 4…0D не{{_}}задіяні.</p>
       <p>* Площина 0E зветься '''додатковою площиною спеціального призначення''' та містить менше 500 спецсимволів.</p>
       <p>* Площини 0F та 10 відведені під [[pt:private|приватне користування]].</p>

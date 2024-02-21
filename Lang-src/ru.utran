@@ -10505,8 +10505,8 @@
       <p />
       <p>* Plane #0 is '''[[pt:bmp|Basic Multilingual Plane]]''', and contains characters of most live languages. There are 16 unassigned positions in Unicode{{_}}15.1.</p>
       <p>* Plane #1 is '''Supplementary Multilingual Plane''', contains characters of rare and dead languages, as well as technical. It is less than {{%|50}} full.</p>
-      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|90}} full.</p>
-      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|10}} full.</p>
+      <p>* Plane #2 is '''Supplementary Ideographic Plane''', contains only [[ps:Hani|CJK ideographs]], and is {{%|93}} full.</p>
+      <p>* Plane #3 is '''Tertiary Ideographic Plane''', contains only CJK ideographs, and is {{%|14}} full.</p>
       <p>* Planes 4 to 0D are unused.</p>
       <p>* Plane 0E is '''Supplementary Special-purpose Plane''', and contains less than 500 special characters.</p>
       <p>* Planes 0E and 10 are left for [[pt:private|private use]].</p>
@@ -10516,8 +10516,8 @@
       <p />
       <p>* Плоскость {{№}}0 называется '''[[pt:bmp|базовой многоязычной]]''' и содержит большинство символов живых языков. В Юникоде{{_}}15.1 остаются 16{{_}}нераспределённых позиций.</p>
       <p>* Плоскость {{№}}1 называется '''дополнительной многоязычной''' и содержит символы редких и мёртвых языков, а также технические. Заполнена менее чем на {{%|50}}.</p>
-      <p>* Плоскость {{№}}2 называется '''дополнительной иероглифической''' и содержит только [[ps:Hani|китайские иероглифы]]. Заполнена на {{%|90}}.</p>
-      <p>* Плоскость {{№}}3 называется '''третичной иероглифической''', содержит только китайские иероглифы, и заполнена на {{%|10}}.</p>
+      <p>* Плоскость {{№}}2 называется '''дополнительной иероглифической''' и содержит только [[ps:Hani|китайские иероглифы]]. Заполнена на {{%|93}}.</p>
+      <p>* Плоскость {{№}}3 называется '''третичной иероглифической''', содержит только китайские иероглифы, и заполнена на {{%|14}}.</p>
       <p>* Плоскости 4…0D не{{_}}задействованы.</p>
       <p>* Плоскость 0E называется '''дополнительной плоскостью специального назначения''' и содержит менее 500 специсмволов.</p>
       <p>* Плоскости 0F и 10 отведены под [[pt:private|личное пользование]].</p>
