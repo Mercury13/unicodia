@@ -414,6 +414,8 @@ namespace uc {
         TIBETAN,
         TIFINAGH,
         TIRHUTA,
+        UGARITIC,
+          Z_UGA_1,
         UMLAUT_SYMBOL,
           Z_USY_1,
           Z_USY_2,
