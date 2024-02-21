@@ -837,7 +837,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Xpeo", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::yapprox(-520), EcFont::OLD_PERSIAN },
-    /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto is larger!)
+    /// @todo [semi-tofu, P1] Sumerian cuneiform shows badly, Noto = M$ (but Noto has more chars!)
     { "Xsux", QFontDatabase::Any,
         EcScriptType::SYLLABOHIEROGLYPH, EcLangLife::DECIPHERED, EcWritingDir::LTR_CUNEIFORM, EcContinent::ASIA,
         Dating::yapprox(-3200), EcFont::CUNEIFORM },
