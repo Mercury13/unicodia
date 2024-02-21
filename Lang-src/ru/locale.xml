@@ -15,9 +15,9 @@
 		<lang iso="tt" /><!-- Tatar -->
 	</trigger-langs>
 	<alpha-sort>
-		<alp>АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
-		<alp>абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
-		<alp>á____é_________ó___________________________________________</alp>
+		<alp>—АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ</alp>
+		<alp>_абвгдеёжзийклмнопрстуфхцчшщъыьэюяabcdefghijklmnopqrstuvwxyz</alp>
+		<alp>_á____é_________ó___________________________________________</alp>
 	</alpha-sort>
 	<ellipsis text="…">
 		<blk start="10100" /><!-- Aegean numbers -->
