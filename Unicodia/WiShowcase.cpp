@@ -14,17 +14,22 @@ WiShowcase::WiShowcase(QWidget *parent) :
 {
     ui->setupUi(this);
     connect(ui->btCopy, &QPushButton::clicked, this, &This::btCopyClicked);
+    connect(ui->btCopyEx, &QPushButton::clicked, this, &This::btCopyExClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::lbCharCodeClicked);
     connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::linkActivated);
+
+    { // Copy ex
+        auto font = ui->btCopyEx->font();
+        QFontMetrics metrics(font);
+        auto sz = metrics.horizontalAdvance("+000000");
+        ui->btCopyEx->setFixedWidth(sz);
+    }
 }
 
 WiShowcase::~WiShowcase()
 {
     delete ui;
 }
-
-QPushButton* WiShowcase::btCopyEx() const
-    { return ui->btCopyEx; }
 
 WiSample* WiShowcase::wiSample() const
     { return ui->wiSample; }
@@ -37,6 +42,9 @@ void WiShowcase::translateMe()
 
 void WiShowcase::btCopyClicked()
     { emit charCopied(ui->btCopy); }
+
+void WiShowcase::btCopyExClicked()
+    { emit advancedCopied(ui->btCopyEx); }
 
 void WiShowcase::lbCharCodeClicked(const QString& link)
     { emit linkActivated(ui->lbCharCode, link); }

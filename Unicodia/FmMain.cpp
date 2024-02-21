@@ -883,14 +883,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     paintTo(ui->pageInfo, r.buttonColor);
     paintTo(ui->pageSearch, r.buttonColor);
 
-    { // Copy ex
-        /// @todo [urgent] move to showcase ctor
-        auto font = ui->wiCharShowcase->btCopyEx()->font();
-        QFontMetrics metrics(font);
-        auto sz = metrics.horizontalAdvance("+000000");
-        ui->wiCharShowcase->btCopyEx()->setFixedWidth(sz);
-    }
-
     // Fill chars
     model.build();
 
@@ -942,11 +934,11 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Copy sample: Ctrl+Shift+C
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSampleNull);
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
-    connect(ui->wiCharShowcase->btCopyEx(), &QPushButton::clicked, this, &This::copyCurrentSample);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSampleNull);
+    connect(ui->wiCharShowcase, &WiShowcase::advancedCopied, this, &This::copyCurrentSample);
 
     // Clicked
     connect(ui->wiCharShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
@@ -1336,9 +1328,15 @@ void FmMain::copyCurrentChar(QWidget* initiator)
 }
 
 
-void FmMain::copyCurrentSample()
+void FmMain::copyCurrentSampleNull()
 {
-    copyCurrentThing(CurrThing::SAMPLE, nullptr);
+    copyCurrentSample(nullptr);
+}
+
+
+void FmMain::copyCurrentSample(QWidget* initiator)
+{
+    copyCurrentThing(CurrThing::SAMPLE, initiator);
 }
 
 

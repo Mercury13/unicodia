@@ -345,7 +345,8 @@ private slots:
     void libChanged(const QModelIndex& current);
     void copyCurrentChar(QWidget* initiator);
     void copyCurrentCharNull();
-    void copyCurrentSample();
+    void copyCurrentSample(QWidget* initiator);
+    void copyCurrentSampleNull();
     void copyCurrentLib();
     void popupLinkActivated(QWidget* widget, const QString& link);
     void labelLinkActivated(const QString& link);
