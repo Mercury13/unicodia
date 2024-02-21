@@ -106,3 +106,8 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Medium, ends have different colour (France, Luxembourg): grey outline
   * Large (England, Slovakia): also grey outline
   * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
+
+# Hidden commands
+* Ctrl+T — tofu stats
+* F12 — reload translation from disk. Locale does NOT reload
+* Ctrl+F12 — dump Library tile info to opt.xml, for access optimization (1st chunk contains all tiles)
