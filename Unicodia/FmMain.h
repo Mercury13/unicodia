@@ -269,7 +269,6 @@ private:
 enum class CurrThing { CHAR, SAMPLE };
 enum class SelectMode { NONE, INSTANT };
 
-
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
                private PixSource
@@ -338,9 +337,9 @@ private:
     template <SelectMode mode> void selectChar(char32_t code);
     void initTerms();
     void translateTerms();
-    void copyCurrentThing(CurrThing thing);
+    void copyCurrentThing(CurrThing thing, QWidget* initiator);
     void blinkCopied(QWidget* widget, const QRect& absRect);
-    void blinkCopied(QAbstractItemView* table);
+    void blinkCopied(QAbstractItemView* table, QWidget* initiator);
     void clearSample();
     bool doSearch(const QString& what);
     void showSearchResult(uc::MultiResult&& x);
@@ -358,7 +357,8 @@ private:
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
-    void copyCurrentChar();
+    void copyCurrentChar(QWidget* initiator);
+    void copyCurrentCharNull();
     void copyCurrentSample();
     void copyCurrentLib();
     void popupLinkActivated(QWidget* widget, const QString& link);

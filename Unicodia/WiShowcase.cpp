@@ -6,7 +6,7 @@ WiShowcase::WiShowcase(QWidget *parent) :
     ui(new Ui::WiShowcase)
 {
     ui->setupUi(this);
-    connect(ui->btCopy, &QPushButton::clicked, this, &This::charCopied);
+    connect(ui->btCopy, &QPushButton::clicked, this, &This::btCopyClicked);
 }
 
 WiShowcase::~WiShowcase()
@@ -30,4 +30,9 @@ void WiShowcase::translateMe()
 {
     Form::translateMe();
     loc::translateForm(ui->wiSample);
+}
+
+void WiShowcase::btCopyClicked()
+{
+    emit charCopied(ui->btCopy);
 }

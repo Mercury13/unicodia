@@ -929,11 +929,11 @@ FmMain::InitBlocks FmMain::initBlocks()
         // Ctrl+C
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentChar);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentCharNull);
         // Ctrl+Ins
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentChar);
+    connect(shcut, &QShortcut::activated, this, &This::copyCurrentCharNull);
         // Button
     connect(ui->wiCharShowcase, &WiShowcase::charCopied, this, &This::copyCurrentChar);
         // 2click
@@ -1249,7 +1249,7 @@ bool FmMain::eventFilter(QObject *obj, QEvent *event)
             auto mouseEvent = static_cast<QMouseEvent*>(event);
             if (mouseEvent->button() == Qt::LeftButton) {
                 if (obj == ui->tableChars->viewport()) {
-                    copyCurrentChar();
+                    copyCurrentChar(nullptr);
                     return true;
                 } else if (obj == ui->treeLibrary->viewport()) {
                     auto index = ui->treeLibrary->currentIndex();
@@ -1278,21 +1278,22 @@ void FmMain::blinkCopied(QWidget* widget, const QRect& absRect)
 }
 
 
-void FmMain::blinkCopied(QAbstractItemView* table)
+void FmMain::blinkCopied(QAbstractItemView* table, QWidget* initiator)
 {
-    auto widget = qobject_cast<QWidget*>(sender());
+    if (!initiator)
+        initiator = qobject_cast<QWidget*>(sender());
     QPoint corner { 0, 0 };
     QSize size { 0, 0 };
-    if (widget) {
+    if (initiator) {
         // corner is (0,0)
-        size = widget->size();
+        size = initiator->size();
     } else {
         auto selIndex = table->currentIndex();
         auto selRect = table->visualRect(selIndex);
-        widget = table->viewport();
+        initiator = table->viewport();
         // Geometry is in PARENT’s coord system
         // Rect is (0,0) W×H
-        auto visibleGeo = widget->rect();
+        auto visibleGeo = initiator->rect();
         selRect = selRect.intersected(visibleGeo);
         if (selRect.isEmpty()) {
             corner = visibleGeo.center();
@@ -1303,12 +1304,12 @@ void FmMain::blinkCopied(QAbstractItemView* table)
         }
     }
 
-    corner = widget->mapToGlobal(corner);
-    blinkCopied(widget, QRect{ corner, size});
+    corner = initiator->mapToGlobal(corner);
+    blinkCopied(initiator, QRect{ corner, size});
 }
 
 
-void FmMain::copyCurrentThing(CurrThing thing)
+void FmMain::copyCurrentThing(CurrThing thing, QWidget* initiator)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
     QString q = str::toQ(ch.code);
@@ -1320,19 +1321,25 @@ void FmMain::copyCurrentThing(CurrThing thing)
         }
     }
     QApplication::clipboard()->setText(q);
-    blinkCopied(ui->tableChars);
+    blinkCopied(ui->tableChars, initiator);
 }
 
 
-void FmMain::copyCurrentChar()
+void FmMain::copyCurrentCharNull()
 {
-    copyCurrentThing(CurrThing::CHAR);
+    copyCurrentChar(nullptr);
+}
+
+
+void FmMain::copyCurrentChar(QWidget* initiator)
+{
+    copyCurrentThing(CurrThing::CHAR, initiator);
 }
 
 
 void FmMain::copyCurrentSample()
 {
-    copyCurrentThing(CurrThing::SAMPLE);
+    copyCurrentThing(CurrThing::SAMPLE, nullptr);
 }
 
 
@@ -1346,7 +1353,7 @@ void FmMain::copyCurrentLib()
         return;
     auto q = str::toQ(node.value);
     QApplication::clipboard()->setText(q);
-    blinkCopied(ui->treeLibrary);
+    blinkCopied(ui->treeLibrary, nullptr);
 }
 
 

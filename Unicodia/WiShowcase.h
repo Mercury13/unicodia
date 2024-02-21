@@ -37,7 +37,9 @@ private:
     Ui::WiShowcase *ui;
     void init();
 signals:
-    void charCopied();
+    void charCopied(QWidget* initiator);
+private slots:
+    void btCopyClicked();
 };
 
 #endif // WISHOWCASE_H
