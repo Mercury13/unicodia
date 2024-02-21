@@ -1843,6 +1843,8 @@ void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting
     if (channel != uc::EcGlyphStyleChannel::NONE)
         model.glyphStyle.sets[channel] = setting;
 
+    /// @todo [favs] how to sync main’s and favs’ styles together?
+
     emit model.dataChanged({}, {});
     ui->wiCharShowcase->redrawSampleChar(model.glyphStyle.sets);
 
