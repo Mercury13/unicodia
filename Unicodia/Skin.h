@@ -1,8 +1,6 @@
 #pragma once
 
-// STL
-#include <string_view>
-
+// Qt
 #include <QColor>
 
 // Colors, sizes etc that are NOT derived from system
