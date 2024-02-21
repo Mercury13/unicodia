@@ -79,8 +79,6 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
         ui->lbCharCode->setText(ucName);
     }
 
-    redrawSampleChar(glyphSets);
-
     if (ch) {
         // Character
         if (ch->category().upCat == uc::UpCategory::MARK) {
@@ -110,7 +108,6 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
                 button->setFont(ch->flags.have(flag) ? goodFont : badFont);
             }
             fCurrChannel = ch->ecStyleChannel();
-            radioGlyphStyle.set(glyphSets[fCurrChannel]);
             snprintf(buf, std::size(buf), "pgs:%d", static_cast<int>(ch->ecStyleChannel()));
             ui->lbStyleHelp->setText(qPopupLinkNoLoc("&nbsp;?&nbsp;", buf));
             ui->wiGlyphStyle->show();
@@ -123,6 +120,8 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
         ui->btCopyEx->hide();
         fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     }
+
+    redrawSampleChar(glyphSets);
 }
 
 
@@ -130,6 +129,7 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 {
     if (fShownCp) {
         ui->wiSample->showCp(*fShownCp, EMOJI_DRAW, glyphSets);
+        radioGlyphStyle.set(glyphSets[fCurrChannel]);
     } else {
         ui->wiSample->showNothing();
     }
