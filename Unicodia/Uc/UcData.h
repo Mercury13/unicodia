@@ -169,14 +169,6 @@ namespace uc {
         NN
     };
 
-    enum class EcGlyphStyleChannel {
-        NONE,
-        GLAGOLITIC,
-        VERTICAL,
-        ARABIC,
-        NN,
-    };
-
     struct GlyphStyleChannel {
         unsigned count;
         std::string_view name;

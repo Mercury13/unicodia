@@ -2,7 +2,11 @@
 #define WISHOWCASE_H
 
 #include <QWidget>
+#include <QRadioButton>
+
+// Qt misc
 #include "LocQt.h"
+#include "QtMultiRadio.h"
 
 #include "UcAutoDefines.h"
 
@@ -39,16 +43,23 @@ public:
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
 private:
     Ui::WiShowcase *ui;
+
     uc::MaybeChar fShownCp;
+    uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;
+    UintRadio<QRadioButton> radioGlyphStyle;
+
     void init();
 signals:
     void charCopied(QWidget* initiator);
     void advancedCopied(QWidget* initiator);
     void linkActivated(QWidget* initiator, const QString& link);
+    void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
 private slots:
     void btCopyClicked();
     void btCopyExClicked();
-    void lbCharCodeClicked(const QString& link);
+    void lbCharCodeLinkActivated(const QString& link);
+    void lbStyleHelpLinkActivated(const QString& link);
+    void glyphStyleClicked();
 };
 
 #endif // WISHOWCASE_H

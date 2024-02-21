@@ -11,7 +11,6 @@
 #include <QAbstractTableModel>
 #include <QStyledItemDelegate>
 #include <QElapsedTimer>
-#include <QRadioButton>
 
 // My libs
 #include "u_Vector.h"
@@ -112,15 +111,7 @@ public:
     mutable TableCache tcache;
 
     struct Style {
-        /// @todo [urgent] Settings are the same for all WiShowcase’s, channel is separate
         uc::GlyphStyleSets sets;
-        uc::EcGlyphStyleChannel currChannel = uc::EcGlyphStyleChannel::NONE;
-        constexpr unsigned currSetting() const { return sets[currChannel]; }
-        constexpr void setCurrSetting(unsigned x)
-        {
-            if (currChannel != uc::EcGlyphStyleChannel::NONE)
-                sets[currChannel] = x;
-        }
     } glyphStyle;
 
     CharsModel(QWidget* aOwner);
@@ -288,7 +279,6 @@ private:
     QToolButton* btSort;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
-    UintRadio<QRadioButton> radioGlyphStyle;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
     MyGui mainGui;
     PopupGui popupGui{mainGui};
@@ -364,7 +354,7 @@ private slots:
     void comboDroppedDown();
     void comboPulledUp();
     void blockOrderChanged();
-    void glyphStyleChanged();
+    void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
     void goToCp(char32_t cp);
     void goToNode(const uc::LibNode& node);
     void startUpdate();

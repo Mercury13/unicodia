@@ -1,8 +1,14 @@
 #include "WiShowcase.h"
 #include "ui_WiShowcase.h"
 
+// Libs
+#include "u_Strings.h"
+
 // Unicode
 #include "UcData.h"
+
+// L10n
+#include "LocDic.h"
 
 // Project-local
 #include "MyWiki.h"
@@ -15,7 +21,7 @@ WiShowcase::WiShowcase(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->btCopy, &QPushButton::clicked, this, &This::btCopyClicked);
     connect(ui->btCopyEx, &QPushButton::clicked, this, &This::btCopyExClicked);
-    connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::lbCharCodeClicked);
+    connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::lbCharCodeLinkActivated);
     connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::linkActivated);
 
     { // Copy ex
@@ -24,6 +30,13 @@ WiShowcase::WiShowcase(QWidget *parent) :
         auto sz = metrics.horizontalAdvance("+000000");
         ui->btCopyEx->setFixedWidth(sz);
     }
+
+    // Glyph styles
+    radioGlyphStyle.setRadio(0, ui->radioStyle0);
+    radioGlyphStyle.setRadio(1, ui->radioStyle1);
+    connect(ui->radioStyle0, &QRadioButton::clicked, this, &This::glyphStyleClicked);
+    connect(ui->radioStyle1, &QRadioButton::clicked, this, &This::glyphStyleClicked);
+    connect(ui->lbStyleHelp, &QLabel::linkActivated, this, &This::lbStyleHelpLinkActivated);
 }
 
 WiShowcase::~WiShowcase()
@@ -43,8 +56,11 @@ void WiShowcase::btCopyClicked()
 void WiShowcase::btCopyExClicked()
     { emit advancedCopied(ui->btCopyEx); }
 
-void WiShowcase::lbCharCodeClicked(const QString& link)
+void WiShowcase::lbCharCodeLinkActivated(const QString& link)
     { emit linkActivated(ui->lbCharCode, link); }
+
+void WiShowcase::lbStyleHelpLinkActivated(const QString& link)
+    { emit linkActivated(ui->lbStyleHelp, link); }
 
 void WiShowcase::setSilent(uc::MaybeChar ch)
 {
@@ -79,10 +95,33 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
 
         // OS char
         ui->wiOsStyle->setCp(*ch, fonts);
+
+        // Style channel
+        if (auto& var = ch->styleChannel()) {
+            // We never have three things here
+            auto goodFont = ui->wiGlyphStyle->font();
+            auto badFont = goodFont;
+            badFont.setStrikeOut(true);
+            auto prefix = str::cat("GlyphVar.", var.name, '.');
+            for (unsigned i = 0; i < var.count; ++i) {
+                auto button = radioGlyphStyle.buttonAt(i);
+                button->setText(loc::get(str::cat(prefix, char('0' + i))));
+                auto flag = uc::Cfg::G_STYLE_0 << i;
+                button->setFont(ch->flags.have(flag) ? goodFont : badFont);
+            }
+            fCurrChannel = ch->ecStyleChannel();
+            radioGlyphStyle.set(glyphSets[fCurrChannel]);
+            snprintf(buf, std::size(buf), "pgs:%d", static_cast<int>(ch->ecStyleChannel()));
+            ui->lbStyleHelp->setText(qPopupLinkNoLoc("&nbsp;?&nbsp;", buf));
+            ui->wiGlyphStyle->show();
+        } else {
+            ui->wiGlyphStyle->hide();
+        }
     } else {
         // No character
         ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
+        fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     }
 }
 
@@ -94,4 +133,10 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
     } else {
         ui->wiSample->showNothing();
     }
+}
+
+
+void WiShowcase::glyphStyleClicked()
+{
+    emit glyphStyleChanged(fCurrChannel, radioGlyphStyle.get());
 }

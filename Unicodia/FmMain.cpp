@@ -916,6 +916,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Connect events
     connect(ui->tableChars->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::charChanged);
+    connect(ui->wiCharShowcase, &WiShowcase::glyphStyleChanged, this, &This::glyphStyleChanged);
 
     // Copy
         // Ctrl+C
@@ -968,13 +969,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     addAc(BlockOrder::CONTINENT, ui->acSortByContinent);
     addAc(BlockOrder::CODE,      ui->acSortByCode);
     addAc(BlockOrder::TECH,      ui->acSortByTech);
-
-    // Glyph styles
-    radioGlyphStyle.setRadio(0, ui->radioStyle0);
-    radioGlyphStyle.setRadio(1, ui->radioStyle1);
-    connect(ui->radioStyle0, &QRadioButton::clicked, this, &This::glyphStyleChanged);
-    connect(ui->radioStyle1, &QRadioButton::clicked, this, &This::glyphStyleChanged);
-    connect(ui->lbStyleHelp, &QLabel::linkActivated, this, &This::labelLinkActivated);
 
     // Sort bar
     QToolBar* sortBar = new QToolBar(ui->laySortBar->parentWidget());
@@ -1385,34 +1379,11 @@ void FmMain::forceShowCp(uc::MaybeChar ch)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
 
-    char buf[300];
     if (ch) {
-        if (auto& var = ch->styleChannel()) {
-            // We never have three things here
-            auto goodFont = ui->wiGlyphStyle->font();
-            auto badFont = goodFont;
-            badFont.setStrikeOut(true);
-            auto prefix = str::cat("GlyphVar.", var.name, '.');
-            for (unsigned i = 0; i < var.count; ++i) {
-                auto button = radioGlyphStyle.buttonAt(i);
-                button->setText(loc::get(str::cat(prefix, char('0' + i))));
-                auto flag = uc::Cfg::G_STYLE_0 << i;
-                button->setFont(ch->flags.have(flag) ? goodFont : badFont);
-            }
-            model.glyphStyle.currChannel = ch->ecStyleChannel();
-            radioGlyphStyle.set(model.glyphStyle.currSetting());
-            snprintf(buf, std::size(buf), "pgs:%d", static_cast<int>(ch->ecStyleChannel()));
-            ui->lbStyleHelp->setText(qPopupLinkNoLoc("&nbsp;?&nbsp;", buf));
-            ui->wiGlyphStyle->show();
-        } else {
-            ui->wiGlyphStyle->hide();
-        }
-
         QString text = mywiki::buildHtml(*ch);
         setWiki(ui->vwInfo, text);
     } else {
         // No character
-        model.glyphStyle.currChannel = uc::EcGlyphStyleChannel::NONE;
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
             setWiki(ui->vwInfo, text);
@@ -1867,11 +1838,15 @@ void FmMain::dumpTiles()
 }
 
 
-void FmMain::glyphStyleChanged()
+void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting)
 {
-    model.glyphStyle.setCurrSetting(radioGlyphStyle.get());
+    if (channel != uc::EcGlyphStyleChannel::NONE)
+        model.glyphStyle.sets[channel] = setting;
+
     emit model.dataChanged({}, {});
     ui->wiCharShowcase->redrawSampleChar(model.glyphStyle.sets);
+
+    /// @todo [favs] do the same for favs
 }
 
 

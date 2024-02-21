@@ -176,7 +176,7 @@
                <number>0</number>
               </property>
               <widget class="QWidget" name="pageInfo">
-               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0,0,1">
+               <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0,1">
                 <property name="spacing">
                  <number>0</number>
                 </property>
@@ -220,71 +220,6 @@
                       <string notr="true">btCollapse</string>
                      </property>
                     </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QWidget" name="wiGlyphStyle" native="true">
-                  <layout class="QHBoxLayout" name="horizontalLayout_9" stretch="0,0,0,0,0">
-                   <property name="spacing">
-                    <number>9</number>
-                   </property>
-                   <property name="leftMargin">
-                    <number>9</number>
-                   </property>
-                   <property name="topMargin">
-                    <number>2</number>
-                   </property>
-                   <property name="bottomMargin">
-                    <number>2</number>
-                   </property>
-                   <item>
-                    <widget class="QLabel" name="lbStyleSet">
-                     <property name="styleSheet">
-                      <string notr="true">padding-bottom: 1px;</string>
-                     </property>
-                     <property name="text">
-                      <string>{Style}</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="radioStyle0">
-                     <property name="text">
-                      <string notr="true">{radioStyle0}</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QRadioButton" name="radioStyle1">
-                     <property name="text">
-                      <string notr="true">{radioStyle1}</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QLabel" name="lbStyleHelp">
-                     <property name="mouseTracking">
-                      <bool>true</bool>
-                     </property>
-                     <property name="text">
-                      <string notr="true">{lbStyleHelp}</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <spacer name="horizontalSpacer_7">
-                     <property name="orientation">
-                      <enum>Qt::Horizontal</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>40</width>
-                       <height>20</height>
-                      </size>
-                     </property>
-                    </spacer>
                    </item>
                   </layout>
                  </widget>
@@ -917,8 +852,6 @@ padding-bottom: 1px;</string>
   <tabstop>comboBlock</tabstop>
   <tabstop>edSearch</tabstop>
   <tabstop>btCollapse</tabstop>
-  <tabstop>radioStyle0</tabstop>
-  <tabstop>radioStyle1</tabstop>
   <tabstop>vwInfo</tabstop>
   <tabstop>btCloseSearch</tabstop>
   <tabstop>listSearch</tabstop>

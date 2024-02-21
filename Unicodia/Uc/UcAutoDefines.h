@@ -482,7 +482,14 @@ namespace uc {
         const uc::Font* lastHopeMatch(char32_t cp, const uc::Font& font) const;
     };
 
-    enum class EcGlyphStyleChannel;
+    enum class EcGlyphStyleChannel {
+        NONE,
+        GLAGOLITIC,
+        VERTICAL,
+        ARABIC,
+        NN,
+    };
+
     struct GlyphStyleChannel;
     struct GlyphStyleSets;
 
