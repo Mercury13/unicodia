@@ -884,10 +884,11 @@ FmMain::InitBlocks FmMain::initBlocks()
     paintTo(ui->pageSearch, r.buttonColor);
 
     { // Copy ex
-        auto font = ui->btCopyEx->font();
+        /// @todo [urgent] move to showcase ctor
+        auto font = ui->wiCharShowcase->btCopyEx()->font();
         QFontMetrics metrics(font);
         auto sz = metrics.horizontalAdvance("+000000");
-        ui->btCopyEx->setFixedWidth(sz);
+        ui->wiCharShowcase->btCopyEx()->setFixedWidth(sz);
     }
 
     // Fill chars
@@ -934,7 +935,7 @@ FmMain::InitBlocks FmMain::initBlocks()
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentChar);
         // Button
-    connect(ui->btCopy, &QPushButton::clicked, this, &This::copyCurrentChar);
+    connect(ui->wiCharShowcase, &WiShowcase::charCopied, this, &This::copyCurrentChar);
         // 2click
     ui->tableChars->viewport()->installEventFilter(this);
 
@@ -945,12 +946,12 @@ FmMain::InitBlocks FmMain::initBlocks()
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSample);
-    connect(ui->btCopyEx, &QPushButton::clicked, this, &This::copyCurrentSample);
+    connect(ui->wiCharShowcase->btCopyEx(), &QPushButton::clicked, this, &This::copyCurrentSample);
 
     // Clicked
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
-    connect(ui->wiOsStyle, &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
+    connect(ui->wiCharShowcase->lbCharCode(), &QLabel::linkActivated, this, &This::labelLinkActivated);
+    connect(ui->wiCharShowcase->wiOsStyle(), &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1102,7 +1103,7 @@ void FmMain::translateMe()
     Form::translateMe();
 
     // Misc. widgets loaded from UI files
-    loc::translateForm(ui->wiSample);
+    ui->wiCharShowcase->translateMe();
     loc::translateForm(ui->wiLibSample);
 
     translateTerms();
@@ -1371,9 +1372,9 @@ namespace {
 void FmMain::redrawSampleChar()
 {
     if (shownCp) {
-        ui->wiSample->showCp(*shownCp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
+        ui->wiCharShowcase->wiSample()->showCp(*shownCp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
     } else {
-        ui->wiSample->showNothing();
+        ui->wiCharShowcase->wiSample()->showNothing();
     }
 }
 
@@ -1387,7 +1388,7 @@ void FmMain::forceShowCp(MaybeChar ch)
     { QString ucName;
         uc::sprintUPLUS(buf, ch.code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
-        ui->lbCharCode->setText(ucName);
+        ui->wiCharShowcase->lbCharCode()->setText(ucName);
     }
 
     // Block
@@ -1402,13 +1403,13 @@ void FmMain::forceShowCp(MaybeChar ch)
 
     if (ch) {
         if (ch->category().upCat == uc::UpCategory::MARK) {
-            ui->btCopyEx->setText("+25CC");
-            ui->btCopyEx->show();
+            ui->wiCharShowcase->btCopyEx()->setText("+25CC");
+            ui->wiCharShowcase->btCopyEx()->show();
         } else if (ch->isVs16Emoji()) {
-            ui->btCopyEx->setText("+VS16");
-            ui->btCopyEx->show();
+            ui->wiCharShowcase->btCopyEx()->setText("+VS16");
+            ui->wiCharShowcase->btCopyEx()->show();
         } else {
-            ui->btCopyEx->hide();
+            ui->wiCharShowcase->btCopyEx()->hide();
         }
         if (auto& var = ch->styleChannel()) {
             // We never have three things here
@@ -1432,14 +1433,14 @@ void FmMain::forceShowCp(MaybeChar ch)
         }
 
         // OS char
-        ui->wiOsStyle->setCp(*ch, model.match);
+        ui->wiCharShowcase->wiOsStyle()->setCp(*ch, model.match);
 
         QString text = mywiki::buildHtml(*ch);
         setWiki(ui->vwInfo, text);
     } else {
         // No character
-        ui->wiOsStyle->setEmptyCode(ch.code);
-        ui->btCopyEx->hide();
+        ui->wiCharShowcase->wiOsStyle()->setEmptyCode(ch.code);
+        ui->wiCharShowcase->btCopyEx()->hide();
         ui->wiGlyphStyle->hide();
         model.glyphStyle.currChannel = uc::EcGlyphStyleChannel::NONE;
         if (uc::isNonChar(ch.code)) {

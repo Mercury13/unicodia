@@ -7911,10 +7911,6 @@
      <orig>Blocks</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
     </text>
-    <text id="btCopy">
-     <orig>Copy</orig>
-     <im-cmt>is a button</im-cmt>
-    </text>
     <text id="lbStyleSet">
      <orig>Style</orig>
      <im-cmt>is a static text</im-cmt>
@@ -7976,6 +7972,17 @@
    <text id="Search">
     <orig>Search</orig>
    </text>
+  </group>
+  <group id="Showcase">
+   <group id="Ui">
+    <sync text-owner="me" fname="..\Unicodia\WiShowcase.ui">
+     <format name="ui" />
+    </sync>
+    <text id="btCopy">
+     <orig>Copy</orig>
+     <im-cmt>is a button</im-cmt>
+    </text>
+   </group>
   </group>
   <group id="Sample">
    <group id="Ui">

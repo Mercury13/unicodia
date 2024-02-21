@@ -64,6 +64,7 @@ SOURCES += \
     WiLibCp.cpp \
     WiOsStyle.cpp \
     WiSample.cpp \
+    WiShowcase.cpp \
     Wiki.cpp \
     c_SearchEdit.cpp \
     d_Config.cpp \
@@ -125,6 +126,7 @@ HEADERS += \
     WiLibCp.h \
     WiOsStyle.h \
     WiSample.h \
+    WiShowcase.h \
     Wiki.h \
     c_SearchEdit.h \
     d_Config.h
@@ -134,7 +136,8 @@ FORMS += \
     FmTofuStats.ui \
     WiLibCp.ui \
     WiOsStyle.ui \
-    WiSample.ui
+    WiSample.ui \
+    WiShowcase.ui
 
 INCLUDEPATH += \
     ../Libs \

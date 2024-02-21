@@ -11468,11 +11468,6 @@
      <im-cmt>is a general widget (usually a tab)</im-cmt>
      <transl>Блоки</transl>
     </text>
-    <text id="btCopy">
-     <orig>Copy</orig>
-     <im-cmt>is a button</im-cmt>
-     <transl>Копіювати</transl>
-    </text>
     <text id="lbStyleSet">
      <orig>Style</orig>
      <im-cmt>is a static text</im-cmt>
@@ -11550,6 +11545,18 @@
     <orig>Search</orig>
     <transl>Пошук</transl>
    </text>
+  </group>
+  <group id="Showcase">
+   <group id="Ui">
+    <sync text-owner="me" fname="..\Unicodia\WiShowcase.ui">
+     <format name="ui" />
+    </sync>
+    <text id="btCopy">
+     <orig>Copy</orig>
+     <im-cmt>is a button</im-cmt>
+     <transl>Копіювати</transl>
+    </text>
+   </group>
   </group>
   <group id="Sample">
    <group id="Ui">
