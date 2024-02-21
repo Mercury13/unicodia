@@ -110,4 +110,4 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
 # Hidden commands
 * Ctrl+T — tofu stats
 * F12 — reload translation from disk. Locale does NOT reload
-* Ctrl+F12 — dump Library tile info to opt.xml, for access optimization (1st chunk contains all tiles)
+* Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
