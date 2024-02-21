@@ -1839,7 +1839,7 @@ namespace {
         }
     }
 
-}
+}   // anon namespace
 
 
 void FmMain::dumpTiles()
