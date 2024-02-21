@@ -359,6 +359,7 @@ namespace uc {
         OLD_ITALIC,
         OLD_PERMIC,
         OLD_PERSIAN,
+          Z_OPE_1,
         OLD_SOGDIAN,
         OLD_UYGHUR,
         ORIYA,

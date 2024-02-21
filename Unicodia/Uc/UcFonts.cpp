@@ -207,7 +207,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "OldHungarian.ttf" },                                                     // Old Hungarian runes
     { "NotoSansOldItalic-Regular.ttf" },                                        // Old Italic
     { "NotoSansOldPermic-Regular.ttf" },                                        // Old Permic
-    { "NotoSansOldPersian-Regular.ttf" },                                       // Old Persian cuneiform
+    { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Old Persian cuneiform
+      { "NotoSansOldPersian-Regular.ttf" },                                     // …1
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
     { "NotoSerifOldUyghur-Regular.ttf", Ffg::STUB_RTL },                        // Old Uyghur
     { "UtoSerifOriya-Regular.ttf", 120_pc },                                    // Oriya
