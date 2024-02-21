@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<!-- native: Chinese (simplified)
-	 international: 简体中文
+<!-- native: 简体中文
+	 international: Chinese (simplified)
 	 eng-terms: [+] show English terms hardcoded into program (0 mainly for English)
 	 trigger-stamp: some NUMBER (as you see, date-based), NEVER CHANGES
 		For example, we are Spanish in US, and are forced to use English.
