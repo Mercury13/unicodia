@@ -50,19 +50,6 @@ class QNetworkReply;
 class FmTofuStats;
 class WiLibCp;
 
-struct MaybeChar {
-    char32_t code = 0;
-    const uc::Cp* cp = nullptr;
-
-    // Funcs
-    explicit operator bool() const { return cp; }
-    const uc::Cp& operator * () const { return *cp; }
-    const uc::Cp* operator ->() const { return  cp; }
-    MaybeChar& operator = (const uc::Cp& x)
-        { code = x.subj; cp = &x; return *this; }
-    bool hasCp() const { return cp; }
-};
-
 
 struct CacheCoords {
     size_t row = 0;
@@ -81,7 +68,7 @@ public:
     void addCp(const uc::Cp& aCp);
 
     /// @return  code point if it’s really present
-    MaybeChar charAt(size_t iRow, unsigned iCol) const;
+    uc::MaybeChar charAt(size_t iRow, unsigned iCol) const;
 
     /// @return  starting code point of row; or NO_CHAR if bad row
     int startingCpAt(size_t iRow) const;
@@ -150,7 +137,7 @@ public:
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index) const;
     void addCp(const uc::Cp& aCp);
-    MaybeChar charAt(const QModelIndex& index) const
+    uc::MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
     QModelIndex indexOf(char32_t code);
 
@@ -299,7 +286,6 @@ private:
     LibModel libModel;
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
-    MaybeChar shownCp;
     QToolButton* btSort;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
@@ -327,8 +313,8 @@ private:
     void initLibrary(const InitBlocks& ib);
     void translateAbout();
     void initAbout();
-    void showCp(MaybeChar ch);
-    void forceShowCp(MaybeChar ch);
+    void showCp(uc::MaybeChar ch);
+    void forceShowCp(uc::MaybeChar ch);
     void linkClicked(
             mywiki::Gui& gui,
             std::string_view link,

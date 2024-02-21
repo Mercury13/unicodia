@@ -635,4 +635,22 @@ namespace uc {
         constexpr double balancedQY() const noexcept { return (pos.y - 0.1 * imba.y) * RECIPSIDE; }
     };
 
+    struct MaybeChar {
+        char32_t code = 0;
+        const uc::Cp* cp = nullptr;
+
+        // Funcs
+        explicit operator bool() const { return cp; }
+        const uc::Cp& operator * () const { return *cp; }
+        const uc::Cp* operator ->() const { return  cp; }
+        constexpr MaybeChar() = default;
+        constexpr MaybeChar(const uc::Cp& x)
+            : code(x.subj), cp(&x) {}
+        constexpr MaybeChar(char32_t aCode, const uc::Cp* aCp)
+            : code(aCode), cp(aCp) {}
+        constexpr MaybeChar& operator = (const uc::Cp& x)
+            { code = x.subj; cp = &x; return *this; }
+        bool hasCp() const { return cp; }
+    };
+
 }   // namespace uc

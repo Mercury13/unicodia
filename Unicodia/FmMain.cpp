@@ -78,11 +78,11 @@ RowCache::RowCache(int anCols)
     : fnCols(anCols), fColMask(anCols - 1), fRowMask(~fColMask) {}
 
 
-MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
+uc::MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
 {
     // Have row?
     if (iRow >= rows.size() || iCol >= NCOLS)
-        return { 0, nullptr };
+        return {};
     auto& rw = rows[iRow];
     auto start = rw.startingCp;
 
@@ -949,9 +949,8 @@ FmMain::InitBlocks FmMain::initBlocks()
     connect(ui->wiCharShowcase->btCopyEx(), &QPushButton::clicked, this, &This::copyCurrentSample);
 
     // Clicked
+    connect(ui->wiCharShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
     connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(ui->wiCharShowcase->lbCharCode(), &QLabel::linkActivated, this, &This::labelLinkActivated);
-    connect(ui->wiCharShowcase->wiOsStyle(), &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1002,7 +1001,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
     ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
-    shownCp = uc::cpInfo[0];
+    ui->wiCharShowcase->setSilent(uc::cpInfo[0]);
 
     return r;
 }
@@ -1123,7 +1122,7 @@ void FmMain::translateMe()
     rebuildBlocks();
 
     // Main tab
-    forceShowCp(shownCp);
+    forceShowCp(ui->wiCharShowcase->shownCp());
 
     // Library tab
     libChanged(ui->treeLibrary->currentIndex());
@@ -1378,25 +1377,18 @@ namespace {
 
 void FmMain::redrawSampleChar()
 {
-    if (shownCp) {
-        ui->wiCharShowcase->wiSample()->showCp(*shownCp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
+    auto& cp = ui->wiCharShowcase->shownCp();
+    if (cp) {
+        ui->wiCharShowcase->wiSample()->showCp(*cp, CharsModel::EMOJI_DRAW, model.glyphStyle.sets);
     } else {
         ui->wiCharShowcase->wiSample()->showNothing();
     }
 }
 
 
-void FmMain::forceShowCp(MaybeChar ch)
+void FmMain::forceShowCp(uc::MaybeChar ch)
 {
-    shownCp = ch;
-
-    // Code
-    char buf[300];
-    { QString ucName;
-        uc::sprintUPLUS(buf, ch.code);
-        mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
-        ui->wiCharShowcase->lbCharCode()->setText(ucName);
-    }
+    ui->wiCharShowcase->set(ch, model.match);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1408,16 +1400,8 @@ void FmMain::forceShowCp(MaybeChar ch)
 
     redrawSampleChar();
 
+    char buf[300];
     if (ch) {
-        if (ch->category().upCat == uc::UpCategory::MARK) {
-            ui->wiCharShowcase->btCopyEx()->setText("+25CC");
-            ui->wiCharShowcase->btCopyEx()->show();
-        } else if (ch->isVs16Emoji()) {
-            ui->wiCharShowcase->btCopyEx()->setText("+VS16");
-            ui->wiCharShowcase->btCopyEx()->show();
-        } else {
-            ui->wiCharShowcase->btCopyEx()->hide();
-        }
         if (auto& var = ch->styleChannel()) {
             // We never have three things here
             auto goodFont = ui->wiGlyphStyle->font();
@@ -1439,16 +1423,10 @@ void FmMain::forceShowCp(MaybeChar ch)
             ui->wiGlyphStyle->hide();
         }
 
-        // OS char
-        ui->wiCharShowcase->wiOsStyle()->setCp(*ch, model.match);
-
         QString text = mywiki::buildHtml(*ch);
         setWiki(ui->vwInfo, text);
     } else {
         // No character
-        ui->wiCharShowcase->wiOsStyle()->setEmptyCode(ch.code);
-        ui->wiCharShowcase->btCopyEx()->hide();
-        ui->wiGlyphStyle->hide();
         model.glyphStyle.currChannel = uc::EcGlyphStyleChannel::NONE;
         if (uc::isNonChar(ch.code)) {
             QString text = mywiki::buildNonCharHtml(ch.code);
@@ -1462,9 +1440,9 @@ void FmMain::forceShowCp(MaybeChar ch)
 }
 
 
-void FmMain::showCp(MaybeChar ch)
+void FmMain::showCp(uc::MaybeChar ch)
 {
-    if (ch.code == shownCp.code)
+    if (ch.code == ui->wiCharShowcase->shownCp().code)
         return;
     forceShowCp(ch);
 }
