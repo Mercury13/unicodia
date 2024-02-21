@@ -33,12 +33,10 @@ public:
     // loc::Form
     void translateMe() override;
 
-    /// @todo [urgent] deprecate these funcs
-    [[deprecated]] WiSample* wiSample() const;
-
     const uc::MaybeChar& shownCp() const { return fShownCp; }
-    void set(uc::MaybeChar ch, FontMatch& fonts);
+    void set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets);
     void setSilent(uc::MaybeChar ch);
+    void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
 private:
     Ui::WiShowcase *ui;
     uc::MaybeChar fShownCp;

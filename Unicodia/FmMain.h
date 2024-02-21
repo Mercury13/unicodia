@@ -112,6 +112,7 @@ public:
     mutable TableCache tcache;
 
     struct Style {
+        /// @todo [urgent] Settings are the same for all WiShowcase’s, channel is separate
         uc::GlyphStyleSets sets;
         uc::EcGlyphStyleChannel currChannel = uc::EcGlyphStyleChannel::NONE;
         constexpr unsigned currSetting() const { return sets[currChannel]; }
@@ -331,7 +332,6 @@ private:
     void cjkSetCollapseState(bool x);
     void cjkReflectCollapseState();
     void rebuildBlocks();
-    void redrawSampleChar();
     void setUpdating(bool value);
     void ensureNetMan();
 

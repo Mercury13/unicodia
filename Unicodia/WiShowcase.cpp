@@ -31,9 +31,6 @@ WiShowcase::~WiShowcase()
     delete ui;
 }
 
-WiSample* WiShowcase::wiSample() const
-    { return ui->wiSample; }
-
 void WiShowcase::translateMe()
 {
     Form::translateMe();
@@ -54,7 +51,7 @@ void WiShowcase::setSilent(uc::MaybeChar ch)
     fShownCp = ch;
 }
 
-void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts)
+void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets)
 {
     fShownCp = ch;
 
@@ -65,6 +62,8 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts)
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         ui->lbCharCode->setText(ucName);
     }
+
+    redrawSampleChar(glyphSets);
 
     if (ch) {
         // Character
@@ -84,5 +83,15 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts)
         // No character
         ui->wiOsStyle->setEmptyCode(ch.code);
         ui->btCopyEx->hide();
+    }
+}
+
+
+void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
+{
+    if (fShownCp) {
+        ui->wiSample->showCp(*fShownCp, EMOJI_DRAW, glyphSets);
+    } else {
+        ui->wiSample->showNothing();
     }
 }

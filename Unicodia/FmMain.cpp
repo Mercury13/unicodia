@@ -1373,20 +1373,9 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::redrawSampleChar()
-{
-    auto& cp = ui->wiCharShowcase->shownCp();
-    if (cp) {
-        ui->wiCharShowcase->wiSample()->showCp(*cp, WiShowcase::EMOJI_DRAW, model.glyphStyle.sets);
-    } else {
-        ui->wiCharShowcase->wiSample()->showNothing();
-    }
-}
-
-
 void FmMain::forceShowCp(uc::MaybeChar ch)
 {
-    ui->wiCharShowcase->set(ch, model.match);
+    ui->wiCharShowcase->set(ch, model.match, model.glyphStyle.sets);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1395,8 +1384,6 @@ void FmMain::forceShowCp(uc::MaybeChar ch)
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
-
-    redrawSampleChar();
 
     char buf[300];
     if (ch) {
@@ -1884,7 +1871,7 @@ void FmMain::glyphStyleChanged()
 {
     model.glyphStyle.setCurrSetting(radioGlyphStyle.get());
     emit model.dataChanged({}, {});
-    redrawSampleChar();
+    ui->wiCharShowcase->redrawSampleChar(model.glyphStyle.sets);
 }
 
 
