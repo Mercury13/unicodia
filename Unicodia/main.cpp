@@ -64,12 +64,11 @@ int main(int argc, char *argv[])
     w.installTempPrefix();
     loc::man.add(w);
 
+    auto order = BlockOrder::DEFAULT;
     // Load config
     {
         auto rect = w.geometry();
-        auto order = BlockOrder::DEFAULT;
         config::init(rect, order);
-        w.setBlockOrder(order);
 
         /// @todo [config] We’ve got a bad position for window divider
         //setGeometry(w, rect);
@@ -77,6 +76,7 @@ int main(int argc, char *argv[])
         //    w.setWindowState(w.windowState() | Qt::WindowMaximized);
     }
     w.chooseFirstLanguage();
+    w.setBlockOrder(order);  // Strange interaction: first language, then order
 
     w.show();
 
