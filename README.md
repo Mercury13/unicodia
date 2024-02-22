@@ -9,6 +9,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 # How to translate?
 * Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic version.
 * Download Lang-src/en.uorig from this repo.
+  * If you are able to use Git, better use it. We’ll be able to work together on one translation.
 * Put Unicodia to writeable location.
 * Create language directory, edit locale.xml for that language.
 * Download [UTranslator](https://github.com/Mercury13/utranslator). New → Translation of *.uorig.
