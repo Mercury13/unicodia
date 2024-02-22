@@ -2626,7 +2626,7 @@ constinit const uc::LibNode uc::libNodes[8774] {
 { U"\U0001F99F", u8"mosquito", 2496, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2620
 { U"\U0001FAB0", u8"fly", 2496, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2621
 { U"\U0001FAB1", u8"worm", 2496, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2622
-{ U"\U0001F9A0", u8"microbe", 2496, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2623
+{ U"\U0001F9A0", u8"microbe", 2496, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2623
 { U"\U0001F490", u8"bouquet", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2624
 { U"\U0001F338", u8"cherry blossom", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2625
 { U"\U0001F4AE", u8"white flower", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2626

@@ -74,6 +74,7 @@ namespace {
         { U"\U0001F46A",           uc::MISRENDER_SIMPLE }, // family
         { U"\U0001F68F",           uc::MISRENDER_SIMPLE }, // bus stop
         { U"\U0001F6DE",           uc::MISRENDER_SIMPLE }, // wheel
+        { U"\U0001F9A0",           uc::MISRENDER_SIMPLE }, // microbe
         { U"\U0001FA85",           uc::MISRENDER_SIMPLE }, // piñata
         { U"\U0001FA92",           uc::MISRENDER_SIMPLE }, // razor
         { U"\U0001FAA4",           uc::MISRENDER_SIMPLE }, // mouse trap

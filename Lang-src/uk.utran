@@ -12514,8 +12514,8 @@
      <transl>{{{{warn|Можливі інші зображення!}} {1}</transl>
     </text>
     <text id="U+1F1E6+1F1EB">
-     <orig>Current (2023) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto. Meanwhile vendors use the old flag abandoned in 2021.</orig>
-     <transl>Поточний (2023) уряд, Талібан, майже ніде не{{_}}признаний. Його прапор білий з чорною ''шахáдою'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
+     <orig>Current (2024) government, Taliban, is recognized almost nowhere. Their flag is white with black ''shahada'', Muslim motto. Meanwhile vendors use the old flag abandoned in 2021.</orig>
+     <transl>Поточний (2024) уряд, Талібан, майже ніде не{{_}}признаний. Його прапор білий з чорною ''шахáдою'', мусульманським девізом. Тим часом виробники малюють старий прапор, кинутий у 2021.</transl>
     </text>
     <text id="U+1F1F2+1F1F6">
      <orig>Red-green-black flag was adopted in 2023. Before that all vendors used blue French naval ensign with white snakes.</orig>
@@ -12540,6 +12540,10 @@
     <text id="U+1FA92">
      <orig>All vendors settled on safety razor relatively recently, in 2019–2021. Windows{{_}}10 emoji depicts straight razor.</orig>
      <transl>Усі виробники зупинились на безпечній бритві відносно недавно, у 2019–21. Емодзі Windows{{_}}10 зображує небезпечну бритву.</transl>
+    </text>
+    <text id="U+1F9A0">
+     <orig>All microscopic creatures are possible: amoeba, bacteria, COVID-19 or other virus.</orig>
+     <transl>Можливі будь-які мікроскопічні істоти: амеба, бактерія, COVID-19 або інший вірус.</transl>
     </text>
     <text id="U+1FAA4">
      <orig>As of 2023, sample Unicode image depicts spring-loaded trap. But as this emoji mostly means “free cheese” and “entrapment”, most vendors draw makeshift trap intended to catch the mouse alive, with cheese inside.</orig>
