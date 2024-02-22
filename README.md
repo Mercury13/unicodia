@@ -64,7 +64,7 @@ Peacetime (probably): as soon as some big font covering major non-Han set arrive
 Emergency releases of one or two characters (e.g. currency, Japanese era): instantly, then think about their images.
 
 ## Fonts
-Update to beta: only if fixes major misrender and/or professionally implements new character.
+Fonts are always updated to release versions. Font is updated to alpha/beta if fixes a major misrender, and/or professionally implements a new character.
 
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
