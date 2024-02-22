@@ -6,6 +6,17 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
+# How to translate?
+* Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic version.
+* Download Lang-src/en.uorig from this repo.
+* Put Unicodia to writeable location.
+* Create language directory, edit locale.xml for that language.
+* Download [UTranslator](https://github.com/Mercury13/utranslator). New → Translation of *.uorig.
+  * If you don’t know English, use other \*.utran file as reference translation.
+* Press F12 in Unicodia to reload translation without reopening the entire program.
+  * Warning, it reloads strings only; all locales are loaded on startup.
+* When new original arrived: File → Update data, Go → Find warnings → All.
+
 # How to build?
 * Slight C++20 and std::filesystem here → so need either MSYS or recent Qt with MinGW 11.
 * Also need cURL (present in W10 18H2+), [7-zip](https://7-zip.org), [UTransCon](https://github.com/Mercury13/utranslator).
@@ -18,6 +29,13 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
+* Then you need to recreate working directory, symlinking all files/folders existing in original Unicodia.
+* Congratulations! You can now run Unicodia directly from Qt Creator!
+
+## Hidden commands
+* Ctrl+T — tofu stats
+* F12 — reload translation from disk. Locale does NOT reload
+* Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
 
 ## If you want to rebuild GlyphWiki font
 (This section is being written)
@@ -106,8 +124,3 @@ These rules are intended to work around renderer deficiencies. Emoji are intende
   * Medium, ends have different colour (France, Luxembourg): grey outline
   * Large (England, Slovakia): also grey outline
   * Difference: small = white field makes a negative space rather than a hole; large = coloured outline makes too much visual noise
-
-# Hidden commands
-* Ctrl+T — tofu stats
-* F12 — reload translation from disk. Locale does NOT reload
-* Ctrl+F12 — dump Library tile info to opt.xml, for access optimization. After placing it into NotoEmoji and running tape.bat the first chunk of emoji.zip will contains all emoji needed for tiles
