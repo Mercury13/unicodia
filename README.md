@@ -7,7 +7,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 **I’m in Ukraine torn with war, so I’ll release often.** See “war release” tag in Issues.
 
 # How to translate?
-* Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic version.
+* Ask programmer to add localized buttons if needed. One button is international for now, A-Z, and it already has Cyrillic version. The rest are unchangeable for now… until needed.
 * Download Lang-src/en.uorig from this repo.
   * If you are able to use Git, better use it. We’ll be able to work together on one translation.
 * Put Unicodia to writeable location.
