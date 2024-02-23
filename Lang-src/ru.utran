@@ -12496,6 +12496,10 @@
      <orig>Neutral pieces</orig>
      <transl>Нейтральные фигуры</transl>
     </text>
+    <text id="ChInvert">
+     <orig>Inverted pieces</orig>
+     <transl>Перевёрнутые фигуры</transl>
+    </text>
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
      <transl>Шашки</transl>

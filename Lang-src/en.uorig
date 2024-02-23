@@ -8691,6 +8691,9 @@
     <text id="ChNeutral">
      <orig>Neutral pieces</orig>
     </text>
+    <text id="ChInvert">
+     <orig>Inverted pieces</orig>
+    </text>
     <text id="Checkers">
      <orig>Checkers/draughts</orig>
     </text>

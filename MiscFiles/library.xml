@@ -620,6 +620,7 @@
 		</f>
 		<f loc="Chess">
 			<f loc="ChPieses"><d>♔ ♕ ♖ ♗ ♘ ♙ ♚ ♛ ♜ ♝ ♞ ♟</d></f>
+			<f loc="ChInvert"><d>🨞 🨟 🨠 🨡 🨢 🨣 🨤 🨥 🨦 🨧 🨨 🨩</d></f>
 			<f loc="ChFairy"><d>🩎 🩏 🩐 🩈 🩋 🩑 🩒 🩓 🩉 🩌</d></f>
 			<f loc="ChNeutral"><d>🨀 🨁 🨂 🨃 🨄 🨅 🩊 🩍</d></f>
 			<d>♟️</d>
