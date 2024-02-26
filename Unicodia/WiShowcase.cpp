@@ -18,7 +18,6 @@
 #include "MyWiki.h"
 
 // Project-local
-#include "MyWiki.h"
 #include "Skin.h"
 
 template struct TinyOpt<char32_t>;
