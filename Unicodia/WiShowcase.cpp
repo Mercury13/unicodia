@@ -60,6 +60,7 @@ void WiShowcase::translateMe()
     loc::translateForm(ui->wiSample);
 }
 
+/// @todo [favs, urgent] Now copying should be here, only “Copied” must show up
 void WiShowcase::btCopyClicked()
     { emit charCopied(ui->btCopy); }
 
