@@ -810,7 +810,7 @@ namespace uc {
                                     ///<      sub/super, legacy computers, Kali…
         APPROX_ROTATED    = 0,      ///< [+] rotated text on icon:
                                     ///<      Mong, Phag
-        APPROX_SQUARE     = 0,      ///< [+] square of main char on icon:
+        APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:
                                     ///<      Latin ex F, Cyr ex D
         APPROX_OTHER_LINES = 0,     ///< [+] other lines on icon: Georian Mtavruli
         APPROX_COLLECTIVE = 0,      ///< [+] graphic icon contains collective image, not specific char:
