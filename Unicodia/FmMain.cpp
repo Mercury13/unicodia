@@ -81,7 +81,7 @@ RowCache::RowCache(int anCols)
     : fnCols(anCols), fColMask(anCols - 1), fRowMask(~fColMask) {}
 
 
-uc::MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
+MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
 {
     // Have row?
     if (iRow >= rows.size() || iCol >= NCOLS)
@@ -89,7 +89,7 @@ uc::MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
     auto& rw = rows[iRow];
     auto start = rw.startingCp;
 
-    return { start + iCol, uc::cpsByCode[start + iCol] };
+    return { start + iCol };
 }
 
 
@@ -988,7 +988,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
     ui->tableChars->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
-    ui->wiCharShowcase->setSilent(uc::cpInfo[0]);
+    ui->wiCharShowcase->setSilent(0);
 
     return r;
 }
@@ -1109,7 +1109,7 @@ void FmMain::translateMe()
     rebuildBlocks();
 
     // Main tab
-    forceShowCp(ui->wiCharShowcase->shownCp());
+    forceShowCp(ui->wiCharShowcase->shownCode());
 
     // Library tab
     libChanged(ui->treeLibrary->currentIndex());
@@ -1368,9 +1368,9 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::forceShowCp(uc::MaybeChar ch)
+void FmMain::forceShowCp(MaybeChar ch)
 {
-    ui->wiCharShowcase->set(ch, model.match, model.glyphStyle.sets);
+    ui->wiCharShowcase->set(ch.code, model.match, model.glyphStyle.sets);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1397,9 +1397,9 @@ void FmMain::forceShowCp(uc::MaybeChar ch)
 }
 
 
-void FmMain::showCp(uc::MaybeChar ch)
+void FmMain::showCp(MaybeChar ch)
 {
-    if (ch.code == ui->wiCharShowcase->shownCp().code)
+    if (ch.code == ui->wiCharShowcase->shownCode())
         return;
     forceShowCp(ch);
 }

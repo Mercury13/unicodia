@@ -64,19 +64,20 @@ void WiShowcase::lbCharCodeLinkActivated(const QString& link)
 void WiShowcase::lbStyleHelpLinkActivated(const QString& link)
     { emit linkActivated(ui->lbStyleHelp, link); }
 
-void WiShowcase::setSilent(uc::MaybeChar ch)
+void WiShowcase::setSilent(char32_t ch)
 {
-    fShownCp = ch;
+    fShownCode = ch;
 }
 
-void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets)
+void WiShowcase::set(char32_t code, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets)
 {
-    fShownCp = ch;
+    fShownCode = code;
+    auto ch = uc::cpsByCode[code];
 
     // Code
     char buf[300];
     { QString ucName = "U+";
-        uc::sprint(buf, ch.code);
+        uc::sprint(buf, code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         ui->lbCharCode->setText(ucName);
     }
@@ -118,7 +119,7 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
         }
     } else {
         // No character
-        ui->wiOsStyle->setEmptyCode(ch.code);
+        ui->wiOsStyle->setEmptyCode(code);
         ui->btCopyEx->hide();
         fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     }
@@ -129,8 +130,8 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
 
 void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 {
-    if (fShownCp) {
-        ui->wiSample->showCp(*fShownCp, EMOJI_DRAW, glyphSets);
+    if (auto cp = uc::cpsByCode[fShownCode]) {
+        ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
         radioGlyphStyle.set(glyphSets[fCurrChannel]);
     } else {
         ui->wiSample->showNothing();

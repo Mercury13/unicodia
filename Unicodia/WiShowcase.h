@@ -37,14 +37,14 @@ public:
     // loc::Form
     void translateMe() override;
 
-    const uc::MaybeChar& shownCp() const { return fShownCp; }
-    void set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets);
-    void setSilent(uc::MaybeChar ch);
+    char32_t shownCode() const { return fShownCode; }
+    void set(char32_t ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets);
+    void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
 private:
     Ui::WiShowcase *ui;
 
-    uc::MaybeChar fShownCp;
+    char32_t fShownCode = 0;
     uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     UintRadio<QRadioButton> radioGlyphStyle;
 

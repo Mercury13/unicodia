@@ -53,6 +53,25 @@ struct CacheCoords {
 };
 
 
+struct MaybeChar {
+    char32_t code = 0;
+    const uc::Cp* cp = nullptr;
+
+    // Funcs
+    explicit operator bool() const { return cp; }
+    const uc::Cp& operator * () const { return *cp; }
+    const uc::Cp* operator ->() const { return  cp; }
+    constexpr MaybeChar() = default;
+    constexpr MaybeChar(const uc::Cp& x)
+        : code(x.subj), cp(&x) {}
+    MaybeChar(char32_t aCode)
+        : code(aCode), cp(uc::cpsByCode[aCode]) {}
+    constexpr MaybeChar& operator = (const uc::Cp& x)
+        { code = x.subj; cp = &x; return *this; }
+    bool hasCp() const { return cp; }
+};
+
+
 class RowCache
 {
 public:
@@ -64,7 +83,7 @@ public:
     void addCp(const uc::Cp& aCp);
 
     /// @return  code point if it’s really present
-    uc::MaybeChar charAt(size_t iRow, unsigned iCol) const;
+    MaybeChar charAt(size_t iRow, unsigned iCol) const;
 
     /// @return  starting code point of row; or NO_CHAR if bad row
     int startingCpAt(size_t iRow) const;
@@ -120,7 +139,7 @@ public:
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QString textAt(const QModelIndex& index) const;
     void addCp(const uc::Cp& aCp);
-    uc::MaybeChar charAt(const QModelIndex& index) const
+    MaybeChar charAt(const QModelIndex& index) const
             { return rows.charAt(index.row(), index.column()); }
     QModelIndex indexOf(char32_t code);
 
@@ -295,8 +314,8 @@ private:
     void initLibrary(const InitBlocks& ib);
     void translateAbout();
     void initAbout();
-    void showCp(uc::MaybeChar ch);
-    void forceShowCp(uc::MaybeChar ch);
+    void showCp(MaybeChar ch);
+    void forceShowCp(MaybeChar ch);
     void linkClicked(
             mywiki::Gui& gui,
             std::string_view link,
