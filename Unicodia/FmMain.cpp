@@ -1109,7 +1109,8 @@ void FmMain::translateMe()
     rebuildBlocks();
 
     // Main tab
-    forceShowCp(ui->wiCharShowcase->shownCode());
+    if (auto p = ui->wiCharShowcase->shownCode())
+        forceShowCp(*p);
 
     // Library tab
     libChanged(ui->treeLibrary->currentIndex());

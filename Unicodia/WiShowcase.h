@@ -12,6 +12,10 @@
 #include "LocQt.h"
 #include "QtMultiRadio.h"
 
+// Misc libs
+#include "magic_enum.hpp"
+#include "u_TinyOpt.h"
+
 #include "UcAutoDefines.h"
 
 class QPushButton;
@@ -24,13 +28,18 @@ namespace Ui {
 class WiShowcase;
 }
 
-enum class ShownClass { NONE, CP, NN };
-using ShownObj = std::variant<std::monostate, char32_t>;
+enum class ShownClass { NONE, CP };
+constexpr int ShownClass_N = magic_enum::enum_count<ShownClass>();
+using ShownObj = std::variant<
+                    std::monostate, // NONE — no object held
+                    char32_t>;      // CP — any codepoint of Unicode, incl. surrogate
 
-static_assert(static_cast<int>(ShownClass::NN) == std::variant_size_v<ShownObj>,
+static_assert(ShownClass_N == std::variant_size_v<ShownObj>,
               "ShownClass should correspond to ShownObj");
 constexpr ShownClass toUnderlying(ShownObj x)
     { return static_cast<ShownClass>(x.index()); }
+
+extern template struct TinyOpt<char32_t>;
 
 class WiShowcase :
         public QWidget,
@@ -49,14 +58,15 @@ public:
     // loc::Form
     void translateMe() override;
 
-    char32_t shownCode() const { return fShownCode; }
+    /// @todo [urgent] get rid of ShownCode
+    TinyOpt<char32_t> shownCode() const;
     void set(char32_t ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets);
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
 private:
     Ui::WiShowcase *ui;
 
-    char32_t fShownCode = 0;
+    ShownObj fShownObj;
     uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     UintRadio<QRadioButton> radioGlyphStyle;
 

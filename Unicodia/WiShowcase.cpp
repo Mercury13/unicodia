@@ -14,6 +14,8 @@
 #include "MyWiki.h"
 #include "Skin.h"
 
+template struct TinyOpt<char32_t>;
+
 WiShowcase::WiShowcase(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WiShowcase)
@@ -66,12 +68,12 @@ void WiShowcase::lbStyleHelpLinkActivated(const QString& link)
 
 void WiShowcase::setSilent(char32_t ch)
 {
-    fShownCode = ch;
+    fShownObj = ch;
 }
 
 void WiShowcase::set(char32_t code, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets)
 {
-    fShownCode = code;
+    fShownObj = code;
     auto ch = uc::cpsByCode[code];
 
     // Code
@@ -130,10 +132,16 @@ void WiShowcase::set(char32_t code, FontMatch& fonts, const uc::GlyphStyleSets& 
 
 void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 {
-    if (auto cp = uc::cpsByCode[fShownCode]) {
-        ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
-        radioGlyphStyle.set(glyphSets[fCurrChannel]);
-    } else {
+    switch (toUnderlying(fShownObj)) {
+    case ShownClass::CP:
+        if (auto cp = uc::cpsByCode[*shownCode()]) {
+            ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
+            radioGlyphStyle.set(glyphSets[fCurrChannel]);
+            break;
+        }
+        // else
+        [[fallthrough]];
+    case ShownClass::NONE:
         ui->wiSample->showNothing();
     }
 }
@@ -143,3 +151,6 @@ void WiShowcase::glyphStyleClicked()
 {
     emit glyphStyleChanged(fCurrChannel, radioGlyphStyle.get());
 }
+
+TinyOpt<char32_t> WiShowcase::shownCode() const
+    { return std::get_if<char32_t>(&fShownObj); }
