@@ -128,6 +128,8 @@ void WiShowcase::set(
     fShownObj = code;
     auto ch = uc::cpsByCode[code];
 
+    ui->btCopy->setEnabled(true);
+
     // Code
     char buf[300];
     { QString ucName = "U+";
