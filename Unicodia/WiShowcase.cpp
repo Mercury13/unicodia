@@ -1,14 +1,21 @@
 #include "WiShowcase.h"
 #include "ui_WiShowcase.h"
 
+// Qt
+#include <QTextBrowser>
+
 // Libs
 #include "u_Strings.h"
 
 // Unicode
 #include "UcData.h"
+#include "UcCp.h"
 
 // L10n
 #include "LocDic.h"
+
+// Wiki
+#include "MyWiki.h"
 
 // Project-local
 #include "MyWiki.h"
@@ -71,7 +78,52 @@ void WiShowcase::setSilent(char32_t ch)
     fShownObj = ch;
 }
 
-void WiShowcase::set(char32_t code, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets)
+namespace {
+
+    void setWiki(QTextBrowser* view, const QString& text)
+    {
+        view->setText(text);
+        // I won’t hack: my underline is lower, and it’s nice.
+        // What to do with that one — IDK.
+        //mywiki::hackDocument(view->document());
+    }
+
+}   // anon namespace
+
+void WiShowcase::redrawViewer(QTextBrowser* viewer)
+{
+    if (!viewer)
+        return;
+    switch (toUnderlying(fShownObj)) {
+    case ShownClass::CP:
+        if (auto code = shownCode()) {
+            if (auto ch = uc::cpsByCode[*code]) {
+                // Normal CP
+                QString text = mywiki::buildHtml(*ch);
+                setWiki(viewer, text);
+            } else if (uc::isNonChar(*code)) {
+                // Non-character
+                QString text = mywiki::buildNonCharHtml(*code);
+                setWiki(viewer, text);
+            } else {
+                // Vacant (reserved) codepoint
+                auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+                QString text = mywiki::buildVacantCpHtml(*code, color);
+                setWiki(viewer, text);
+            }
+            break;
+        }
+        [[fallthrough]];
+    case ShownClass::NONE:
+        viewer->clear();
+    }
+}
+
+void WiShowcase::set(
+        char32_t code,
+        QTextBrowser* viewer,
+        FontMatch& fonts,
+        const uc::GlyphStyleSets& glyphSets)
 {
     fShownObj = code;
     auto ch = uc::cpsByCode[code];
@@ -127,6 +179,7 @@ void WiShowcase::set(char32_t code, FontMatch& fonts, const uc::GlyphStyleSets& 
     }
 
     redrawSampleChar(glyphSets);
+    redrawViewer(viewer);
 }
 
 

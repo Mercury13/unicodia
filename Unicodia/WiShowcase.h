@@ -20,6 +20,7 @@
 
 class QPushButton;
 class QLabel;
+class QTextBrowser;
 class WiOsStyle;
 class WiSample;
 class FontMatch;
@@ -60,9 +61,13 @@ public:
 
     /// @todo [urgent] get rid of ShownCode
     TinyOpt<char32_t> shownCode() const;
-    void set(char32_t ch, FontMatch& fonts, const uc::GlyphStyleSets& glyphSets);
+    void set(char32_t ch,
+             QTextBrowser* viewer,
+             FontMatch& fonts,
+             const uc::GlyphStyleSets& glyphSets);
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
+    void redrawViewer(QTextBrowser* viewer);
 private:
     Ui::WiShowcase *ui;
 

@@ -1617,7 +1617,7 @@ void mywiki::appendMissingCharInfo(QString& text, char32_t code)
 }
 
 
-QString mywiki::buildEmptyCpHtml(char32_t code, const QColor& color)
+QString mywiki::buildVacantCpHtml(char32_t code, const QColor& color)
 {
     QString text;
     appendStylesheet(text);

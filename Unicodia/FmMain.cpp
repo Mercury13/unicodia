@@ -1370,7 +1370,7 @@ namespace {
 
 void FmMain::forceShowCp(MaybeChar ch)
 {
-    ui->wiCharShowcase->set(ch.code, model.match, model.glyphStyle.sets);
+    ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, model.glyphStyle.sets);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1379,21 +1379,6 @@ void FmMain::forceShowCp(MaybeChar ch)
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
     ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
-
-    if (ch) {
-        QString text = mywiki::buildHtml(*ch);
-        setWiki(ui->vwInfo, text);
-    } else {
-        // No character
-        if (uc::isNonChar(ch.code)) {
-            QString text = mywiki::buildNonCharHtml(ch.code);
-            setWiki(ui->vwInfo, text);
-        } else {
-            auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-            QString text = mywiki::buildEmptyCpHtml(ch.code, color);
-            setWiki(ui->vwInfo, text);
-        }
-    }
 }
 
 

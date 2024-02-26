@@ -111,7 +111,7 @@ namespace mywiki {
     void appendUtf(QString& text, Want32 want32, str::QSep& sp, std::u32string_view value);
     void appendMissingCharInfo(QString& text, char32_t code);
     QString buildNonCharHtml(char32_t code);
-    QString buildEmptyCpHtml(char32_t code, const QColor& color);
+    QString buildVacantCpHtml(char32_t code, const QColor& color);
     bool isEngTermShown(const uc::Term& term);
 
     void hackDocument(QTextDocument* doc);
