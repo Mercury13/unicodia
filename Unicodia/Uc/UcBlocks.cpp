@@ -1074,7 +1074,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
             "Bhaiksuki",
             { EcScript::Bhks, 0 }, MapType::AS_BRAH_DEAD, EcScript::Bhks },
-    /// @todo [semi-tofu] #85 Marchen too small because of subjoining
+    // Marchen OK
     { 0x11C70, 0x11CBF,
             { 0x11C74, EcContinent::ASIA, {}, SvgHint{ 13, 1, ImbaY::ABOVE_1 } },
             "Marchen",
