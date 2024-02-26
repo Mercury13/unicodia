@@ -1119,6 +1119,13 @@ namespace uc {
 
     InputMethods cpInputMethods(char32_t cp);
 
+    inline size_t sprint(char* buf, size_t n, char32_t code, unsigned length = 4)
+        { return snprintf(buf, n, "%0*X", length, static_cast<unsigned>(code)); }
+
+    template<size_t N>
+    inline size_t sprint(char (&buf)[N], char32_t code, unsigned length = 4)
+        { return sprint(buf, N, code, length); }
+
     inline size_t sprintUPLUS(char* buf, size_t n, char32_t code)
         { return snprintf(buf, n, "U+%04X", static_cast<unsigned>(code)); }
 

@@ -57,10 +57,15 @@ void WiShowcase::btCopyExClicked()
     { emit advancedCopied(ui->btCopyEx); }
 
 void WiShowcase::lbCharCodeLinkActivated(const QString& link)
-    { emit linkActivated(ui->lbCharCode, link); }
+{
+    ui->lbCharCode->setSelection(0, 0);
+    emit linkActivated(ui->lbCharCode, link);
+}
 
 void WiShowcase::lbStyleHelpLinkActivated(const QString& link)
-    { emit linkActivated(ui->lbStyleHelp, link); }
+{
+    emit linkActivated(ui->lbStyleHelp, link);
+}
 
 void WiShowcase::setSilent(uc::MaybeChar ch)
 {
@@ -73,8 +78,8 @@ void WiShowcase::set(uc::MaybeChar ch, FontMatch& fonts, const uc::GlyphStyleSet
 
     // Code
     char buf[300];
-    { QString ucName;
-        uc::sprintUPLUS(buf, ch.code);
+    { QString ucName = "U+";
+        uc::sprint(buf, ch.code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         ui->lbCharCode->setText(ucName);
     }
