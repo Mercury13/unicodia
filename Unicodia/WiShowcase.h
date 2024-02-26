@@ -1,6 +1,10 @@
 #ifndef WISHOWCASE_H
 #define WISHOWCASE_H
 
+// C++
+#include <variant>
+
+// Qt
 #include <QWidget>
 #include <QRadioButton>
 
@@ -19,6 +23,14 @@ class FontMatch;
 namespace Ui {
 class WiShowcase;
 }
+
+enum class ShownClass { NONE, CP, NN };
+using ShownObj = std::variant<std::monostate, char32_t>;
+
+static_assert(static_cast<int>(ShownClass::NN) == std::variant_size_v<ShownObj>,
+              "ShownClass should correspond to ShownObj");
+constexpr ShownClass toUnderlying(ShownObj x)
+    { return static_cast<ShownClass>(x.index()); }
 
 class WiShowcase :
         public QWidget,
