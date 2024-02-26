@@ -3,9 +3,6 @@
 // −warn: this include guard somehow works better than pragma once
 // when promoting widgets
 
-// C++
-#include <unordered_set>
-
 // Qt
 #include <QMainWindow>
 #include <QAbstractTableModel>
@@ -81,12 +78,8 @@ protected:
     {
         unsigned startingCp = 0xFFFFFF;
 
-        const uc::Cp* cps[NCOLS];
-
-        Row() { clear(); }
-        Row(int aStartingCp) : startingCp(aStartingCp) { clear(); }
-
-        void clear() { std::fill(std::begin(cps), std::end(cps), nullptr); }
+        constexpr Row() {}
+        constexpr Row(int aStartingCp) : startingCp(aStartingCp) {}
     };
 
     SafeVector<Row> rows;

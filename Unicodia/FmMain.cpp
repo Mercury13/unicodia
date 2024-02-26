@@ -2,6 +2,9 @@
 #include "FmMain.h"
 #include "ui_FmMain.h"
 
+// C++
+#include <unordered_set>
+
 // XML
 #include "pugixml.hpp"
 
@@ -86,7 +89,7 @@ uc::MaybeChar RowCache::charAt(size_t iRow, unsigned iCol) const
     auto& rw = rows[iRow];
     auto start = rw.startingCp;
 
-    return { start + iCol, rw.cps[iCol] };
+    return { start + iCol, uc::cpsByCode[start + iCol] };
 }
 
 
@@ -114,10 +117,8 @@ void RowCache::addCp(const uc::Cp& aCp)
 {
     unsigned code = aCp.subj;
     int rowCp = code & fRowMask;
-    int iCol = code & fColMask;
 
-    Row& bk = ensureRow(rowCp);
-    bk.cps[iCol] = &aCp;
+    ensureRow(rowCp);
 }
 
 
