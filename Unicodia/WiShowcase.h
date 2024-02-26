@@ -36,7 +36,7 @@ using ShownObj = std::variant<
 
 static_assert(ShownClass_N == std::variant_size_v<ShownObj>,
               "ShownClass should correspond to ShownObj");
-constexpr ShownClass toUnderlying(ShownObj x)
+inline constexpr ShownClass toUnderlying(ShownObj x)
     { return static_cast<ShownClass>(x.index()); }
 
 extern template struct TinyOpt<char32_t>;
