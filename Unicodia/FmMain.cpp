@@ -17,7 +17,6 @@
 #include <QPaintEngine>
 #include <QMessageBox>
 #include <QFile>
-#include <QUrl>
 #include <QSvgRenderer>
 #include <QToolBar>
 #include <QToolButton>
