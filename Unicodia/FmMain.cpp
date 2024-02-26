@@ -1539,7 +1539,7 @@ void FmMain::advancedLinkActivated(QWidget* widget, const QString& link)
     }
     mywiki::go(widget, rect, mainGui, link.toStdString());
     // Deselect, does not influence double and triple clicks
-    if (auto label = qobject_cast<QLabel*>(sender())) {
+    if (auto label = qobject_cast<QLabel*>(widget)) {
         label->setSelection(0, 0);
     }
 }

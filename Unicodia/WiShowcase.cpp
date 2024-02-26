@@ -59,15 +59,10 @@ void WiShowcase::btCopyExClicked()
     { emit advancedCopied(ui->btCopyEx); }
 
 void WiShowcase::lbCharCodeLinkActivated(const QString& link)
-{
-    ui->lbCharCode->setSelection(0, 0);
-    emit linkActivated(ui->lbCharCode, link);
-}
+    { emit linkActivated(ui->lbCharCode, link); }
 
 void WiShowcase::lbStyleHelpLinkActivated(const QString& link)
-{
-    emit linkActivated(ui->lbStyleHelp, link);
-}
+    { emit linkActivated(ui->lbStyleHelp, link); }
 
 void WiShowcase::setSilent(uc::MaybeChar ch)
 {
