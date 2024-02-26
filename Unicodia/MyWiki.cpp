@@ -1832,7 +1832,6 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 
 
     if (auto q = node.flags & uc::MISRENDER_MASK) {
-        /// @todo [urgent] check for q?
         appendMisrender(text, node.value, q);
     }
 
