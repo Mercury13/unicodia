@@ -40,6 +40,22 @@ inline bool operator == (TinyOpt<T> x, TinyOpt<T> y)
 
 template <class T>
 inline bool operator == (TinyOpt<T> x, const T& y)
-{
-    return x && (*x == y);
-}
+    { return x && (*x == y); }
+
+// Just C++17, in C++20 these four are useless
+template <class T>
+inline bool operator == (const T& y, TinyOpt<T> x)
+    { return x && (*x == y); }
+
+template <class T>
+inline bool operator != (TinyOpt<T> x, TinyOpt<T> y)
+    { return !operator == (x, y); }
+
+template <class T>
+inline bool operator != (TinyOpt<T> x, const T& y)
+    { return !operator == (x, y); }
+
+template <class T>
+inline bool operator != (const T& y, TinyOpt<T> x)
+    { return !operator == (x, y); }
+
