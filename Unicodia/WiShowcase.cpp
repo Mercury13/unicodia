@@ -37,6 +37,8 @@ WiShowcase::WiShowcase(QWidget *parent) :
     connect(ui->radioStyle0, &QRadioButton::clicked, this, &This::glyphStyleClicked);
     connect(ui->radioStyle1, &QRadioButton::clicked, this, &This::glyphStyleClicked);
     connect(ui->lbStyleHelp, &QLabel::linkActivated, this, &This::lbStyleHelpLinkActivated);
+
+    ui->wiGlyphStyle->hide();
 }
 
 WiShowcase::~WiShowcase()
