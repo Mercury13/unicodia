@@ -25,6 +25,9 @@ template struct TinyOpt<char32_t>;
 
 ///// ShownObj /////////////////////////////////////////////////////////////////
 
+/// Static_assert here for compile speed
+static_assert(magic_enum::enum_count<ShownClass>()== std::variant_size_v<ShownObj>,
+              "ShownClass should correspond to ShownObj");
 
 bool operator == (char32_t x, const ShownObj& y)
     { return x == TinyOpt<char32_t>(std::get_if<char32_t>(&y)); }

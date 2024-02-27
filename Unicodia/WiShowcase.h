@@ -32,13 +32,10 @@ class WiShowcase;
 extern template struct TinyOpt<char32_t>;
 
 enum class ShownClass { NONE, CP };
-constexpr int ShownClass_N = magic_enum::enum_count<ShownClass>();
 using ShownObj = std::variant<
                     std::monostate, // NONE — no object held
                     char32_t>;      // CP — any codepoint of Unicode, incl. surrogate
 
-static_assert(ShownClass_N == std::variant_size_v<ShownObj>,
-              "ShownClass should correspond to ShownObj");
 inline constexpr ShownClass toUnderlying(ShownObj x)
     { return static_cast<ShownClass>(x.index()); }
 
