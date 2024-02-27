@@ -666,6 +666,8 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                 return s + loc::get("Search.Empty") + ": "
                          + str::toQ(uc::blockOf(line.code)->loc.name);
             case uc::CpType::LIBNODE:
+                if (!line.node) // -warn, should not happen for now
+                    return s;
                 return s + line.node->viewableTitle(uc::TitleMode::LONG);
             default:
                 return s + loc::get(uc::cpTypeKeys[static_cast<int>(line.type)]);
