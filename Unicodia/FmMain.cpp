@@ -1110,7 +1110,7 @@ void FmMain::translateMe()
     rebuildBlocks();
 
     // Main tab
-    if (auto p = ui->wiCharShowcase->shownCode())
+    if (auto p = ui->wiCharShowcase->shownObj().maybeCp())
         forceShowCp(*p);
 
     // Library tab

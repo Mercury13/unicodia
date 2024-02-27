@@ -32,15 +32,31 @@ class WiShowcase;
 extern template struct TinyOpt<char32_t>;
 
 enum class ShownClass { NONE, CP };
-using ShownObj = std::variant<
-                    std::monostate, // NONE — no object held
-                    char32_t>;      // CP — any codepoint of Unicode, incl. surrogate
 
-inline constexpr ShownClass toUnderlying(ShownObj x)
-    { return static_cast<ShownClass>(x.index()); }
+namespace detail {
+    using ShownObjFather = std::variant<
+                            std::monostate, // NONE — no object held
+                            char32_t>;      // CP — any codepoint of Unicode, incl. surrogate
+}   // namespace detail
+
+class ShownObj : public detail::ShownObjFather
+{
+public:
+    /// Inherit all ctors
+    using detail::ShownObjFather::ShownObjFather;
+
+    /// @return  code point, or null
+    [[nodiscard]] TinyOpt<char32_t> maybeCp() const;
+    /// @return  code point
+    /// @throw   what std::get throws if no code point
+    [[nodiscard]] char32_t forceCp() const;
+    constexpr ShownClass clazz() const
+        { return static_cast<ShownClass>(index()); }
+};
 
 /// Sorry, no automatic op==, will use C++20 here until find some compiler
-bool operator == (char32_t x, const ShownObj& y);
+inline bool operator == (char32_t x, const ShownObj& y)
+{ return x == y.maybeCp(); }
 
 /// Ban other comparisons
 template <class T> requires std::is_arithmetic_v<T>
@@ -65,8 +81,6 @@ public:
     void translateMe() override;
 
     const ShownObj& shownObj() const { return fShownObj; }
-    /// @todo [bad] shownCode is bad, but IDK what to do
-    TinyOpt<char32_t> shownCode() const;
     void set(char32_t ch,
              QTextBrowser* viewer,
              FontMatch& fonts,

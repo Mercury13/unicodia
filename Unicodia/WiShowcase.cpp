@@ -26,11 +26,14 @@ template struct TinyOpt<char32_t>;
 ///// ShownObj /////////////////////////////////////////////////////////////////
 
 /// Static_assert here for compile speed
-static_assert(magic_enum::enum_count<ShownClass>()== std::variant_size_v<ShownObj>,
+static_assert(magic_enum::enum_count<ShownClass>()== std::variant_size_v<detail::ShownObjFather>,
               "ShownClass should correspond to ShownObj");
 
-bool operator == (char32_t x, const ShownObj& y)
-    { return x == TinyOpt<char32_t>(std::get_if<char32_t>(&y)); }
+TinyOpt<char32_t> ShownObj::maybeCp() const
+    { return std::get_if<char32_t>(this); }
+
+char32_t ShownObj::forceCp() const
+    { return std::get<char32_t>(*this); }
 
 
 ///// WiShowcase ///////////////////////////////////////////////////////////////
@@ -107,9 +110,9 @@ void WiShowcase::redrawViewer(QTextBrowser* viewer)
 {
     if (!viewer)
         return;
-    switch (toUnderlying(fShownObj)) {
+    switch (fShownObj.clazz()) {
     case ShownClass::CP:
-        if (auto code = shownCode()) {
+    if (auto code = fShownObj.maybeCp()) {
             if (auto ch = uc::cpsByCode[*code]) {
                 // Normal CP
                 QString text = mywiki::buildHtml(*ch);
@@ -200,9 +203,9 @@ void WiShowcase::set(
 
 void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 {
-    switch (toUnderlying(fShownObj)) {
+    switch (fShownObj.clazz()) {
     case ShownClass::CP:
-        if (auto cp = uc::cpsByCode[*shownCode()]) {
+        if (auto cp = uc::cpsByCode[fShownObj.forceCp()]) {
             ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
             radioGlyphStyle.set(glyphSets[fCurrChannel]);
             break;
@@ -219,6 +222,3 @@ void WiShowcase::glyphStyleClicked()
 {
     emit glyphStyleChanged(fCurrChannel, radioGlyphStyle.get());
 }
-
-TinyOpt<char32_t> WiShowcase::shownCode() const
-    { return std::get_if<char32_t>(&fShownObj); }
