@@ -42,7 +42,13 @@ static_assert(ShownClass_N == std::variant_size_v<ShownObj>,
 inline constexpr ShownClass toUnderlying(ShownObj x)
     { return static_cast<ShownClass>(x.index()); }
 
+/// Sorry, no automatic op==, will use C++20 here until find some compiler
 bool operator == (char32_t x, const ShownObj& y);
+
+/// Ban other comparisons
+template <class T> requires std::is_arithmetic_v<T>
+bool operator == (T x, const ShownObj& y) = delete;
+
 
 class WiShowcase :
         public QWidget,
