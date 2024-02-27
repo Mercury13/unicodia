@@ -59,7 +59,6 @@ public:
     // loc::Form
     void translateMe() override;
 
-    /// @todo [urgent] get rid of ShownCode
     TinyOpt<char32_t> shownCode() const;
     void set(char32_t ch,
              QTextBrowser* viewer,
