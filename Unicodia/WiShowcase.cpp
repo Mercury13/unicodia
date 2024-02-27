@@ -77,6 +77,7 @@ void WiShowcase::translateMe()
 }
 
 /// @todo [favs, urgent] Now copying should be here, only “Copied” must show up
+///     But it’ll get a yo-yo: FmMain copies too, and it
 void WiShowcase::btCopyClicked()
     { emit charCopied(ui->btCopy); }
 
