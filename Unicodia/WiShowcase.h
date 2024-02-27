@@ -87,6 +87,7 @@ signals:
     void advancedCopied(QWidget* initiator);
     void linkActivated(QWidget* initiator, const QString& link);
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
+    void copiedPopped(QWidget* initiator);
 private slots:
     void btCopyClicked();
     void btCopyExClicked();
