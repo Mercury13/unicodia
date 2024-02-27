@@ -3308,20 +3308,20 @@
    </group>
    <group id="10B40">
     <text id="Name">
-     <orig>Inscriptional Parthian</orig>
-     <transl>Парфянські написи</transl>
+     <orig>Parthian — inscriptional</orig>
+     <transl>Парфянська — епіграфічна</transl>
     </text>
    </group>
    <group id="10B60">
     <text id="Name">
-     <orig>Inscriptional Pahlavi</orig>
-     <transl>Пехлевійські написи</transl>
+     <orig>Pahlavi — inscriptional</orig>
+     <transl>Пехлеві — епіграфічне</transl>
     </text>
    </group>
    <group id="10B80">
     <text id="Name">
-     <orig>Psalter Pahlavi</orig>
-     <transl>Псалтирське пехлеві</transl>
+     <orig>Pahlavi — Psalter</orig>
+     <transl>Пехлеві — псалтирське</transl>
     </text>
    </group>
    <group id="10C00">
@@ -7605,7 +7605,7 @@
    <group id="Phli">
     <text id="Name">
      <orig>Inscriptional Pahlavi</orig>
-     <transl>Пехлевійські написи</transl>
+     <transl>Епіграфічне пехлеві</transl>
     </text>
     <text id="Lang">
      <orig>Middle Iranian languages</orig>
@@ -7713,7 +7713,7 @@
    <group id="Prti">
     <text id="Name">
      <orig>Inscriptional Parthian</orig>
-     <transl>Парфянські написи</transl>
+     <transl>Епіграфічна парфянська</transl>
     </text>
     <text id="Lang">
      <orig>Parthian</orig>

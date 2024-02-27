@@ -905,10 +905,9 @@ constinit const uc::Block uc::blocks[] {
             "Inscriptional Pahlavi",
             { EcScript::Phli, 0 }, MapType::AS_OTHER_DEAD, EcScript::Phli },
     // Psalter Pahlavi OK
-    /// @todo [alphasort] What to do? — At least one block should have Pahlavi in front
     { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::APPROX_COLOR },
             "Psalter Pahlavi",
-            { EcScript::Phlp, 0 }, MapType::AS_OTHER_DEAD, EcScript::Phlp },
+            { EcScript::Phli, 1 }, MapType::AS_OTHER_DEAD, EcScript::Phlp },
     // Turkic runes OK
     { 0x10C00, 0x10C4F, { 0x10C14, EcContinent::ASIA },
             "Old Turkic",

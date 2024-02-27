@@ -3307,20 +3307,20 @@
    </group>
    <group id="10B40">
     <text id="Name">
-     <orig>Inscriptional Parthian</orig>
-     <transl>Парфянские надписи</transl>
+     <orig>Parthian — inscriptional</orig>
+     <transl>Парфянский — эпиграфический</transl>
     </text>
    </group>
    <group id="10B60">
     <text id="Name">
-     <orig>Inscriptional Pahlavi</orig>
-     <transl>Пехлевийские надписи</transl>
+     <orig>Pahlavi — inscriptional</orig>
+     <transl>Пехлеви — эпиграфическое</transl>
     </text>
    </group>
    <group id="10B80">
     <text id="Name">
-     <orig>Psalter Pahlavi</orig>
-     <transl>Псалтырское пехлеви</transl>
+     <orig>Pahlavi — Psalter</orig>
+     <transl>Пехлеви — псалтырское</transl>
     </text>
    </group>
    <group id="10C00">
@@ -7604,7 +7604,7 @@
    <group id="Phli">
     <text id="Name">
      <orig>Inscriptional Pahlavi</orig>
-     <transl>Пехлевийские надписи</transl>
+     <transl>Эпиграфическое пехлеви</transl>
     </text>
     <text id="Lang">
      <orig>Middle Iranian languages</orig>
@@ -7712,7 +7712,7 @@
    <group id="Prti">
     <text id="Name">
      <orig>Inscriptional Parthian</orig>
-     <transl>Парфянские надписи</transl>
+     <transl>Эпиграфическое парфянское</transl>
     </text>
     <text id="Lang">
      <orig>Parthian</orig>
@@ -7725,7 +7725,7 @@
       <p>: nun {{sm|&amp;#68429;}} + nun {{sm|&amp;#68429;}} = nn&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </orig>
      <transl>
-      <p>Использовался в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому с письмом [[ps:Phli|пехлеви]], но спорадически встречался. Содержит семь [[pt:ligature|лигатур]] и две хвостатые буквы:</p>
+      <p>Использовалось в надписях и монетах вплоть до начала Сасанидской империи (III{{_}}век). Впоследствии уступил персидскому с письмом [[ps:Phli|пехлеви]], но спорадически встречался. Содержит семь [[pt:ligature|лигатур]] и две хвостатые буквы:</p>
       <p>: гимел {{sm|&amp;#68418;}} + вав {{sm|&amp;#68421;}} = гв (справа налево!) {{sm|&amp;rlm;&amp;#68418;&amp;#68421;}}</p>
       <p>: нун {{sm|&amp;#68429;}} + нун {{sm|&amp;#68429;}} = нн&amp;nbsp;&amp;nbsp;&amp;nbsp;{{sm|&amp;rlm;&amp;#68429;&amp;#68429;}}</p>
      </transl>
