@@ -29,6 +29,8 @@ namespace Ui {
 class WiShowcase;
 }
 
+extern template struct TinyOpt<char32_t>;
+
 enum class ShownClass { NONE, CP };
 constexpr int ShownClass_N = magic_enum::enum_count<ShownClass>();
 using ShownObj = std::variant<
@@ -40,7 +42,7 @@ static_assert(ShownClass_N == std::variant_size_v<ShownObj>,
 inline constexpr ShownClass toUnderlying(ShownObj x)
     { return static_cast<ShownClass>(x.index()); }
 
-extern template struct TinyOpt<char32_t>;
+bool operator == (char32_t x, const ShownObj& y);
 
 class WiShowcase :
         public QWidget,
@@ -59,6 +61,7 @@ public:
     // loc::Form
     void translateMe() override;
 
+    const ShownObj& shownObj() const { return fShownObj; }
     /// @todo [bad] shownCode is bad, but IDK what to do
     TinyOpt<char32_t> shownCode() const;
     void set(char32_t ch,

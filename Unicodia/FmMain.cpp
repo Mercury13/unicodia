@@ -1386,7 +1386,7 @@ void FmMain::forceShowCp(MaybeChar ch)
 
 void FmMain::showCp(MaybeChar ch)
 {
-    if (ch.code == ui->wiCharShowcase->shownCode())
+    if (ch.code == ui->wiCharShowcase->shownObj())
         return;
     forceShowCp(ch);
 }

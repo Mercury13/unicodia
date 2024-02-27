@@ -22,6 +22,16 @@
 
 template struct TinyOpt<char32_t>;
 
+
+///// ShownObj /////////////////////////////////////////////////////////////////
+
+
+bool operator == (char32_t x, const ShownObj& y)
+    { return x == TinyOpt<char32_t>(std::get_if<char32_t>(&y)); }
+
+
+///// WiShowcase ///////////////////////////////////////////////////////////////
+
 WiShowcase::WiShowcase(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::WiShowcase)
