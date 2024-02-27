@@ -59,6 +59,7 @@ public:
     // loc::Form
     void translateMe() override;
 
+    /// @todo [bad] shownCode is bad, but IDK what to do
     TinyOpt<char32_t> shownCode() const;
     void set(char32_t ch,
              QTextBrowser* viewer,
