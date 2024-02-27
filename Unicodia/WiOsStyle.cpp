@@ -7,6 +7,7 @@
 // Unicode
 #include "UcData.h"
 #include "UcSearch.h"
+#include "UcCp.h"
 #include "FontMatch.h"
 
 // L10n

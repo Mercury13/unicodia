@@ -9,7 +9,6 @@
 
 // Unicode
 #include "UcAutoDefines.h"
-#include "UcCp.h"
 
 namespace uc {
 
