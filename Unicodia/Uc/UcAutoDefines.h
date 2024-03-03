@@ -586,12 +586,21 @@ namespace uc {
 
         QString viewableTitle(TitleMode mode) const;
 
+        /// Prints “U+0000+1111+2222”
         /// @return new pos
         size_t sprintUPLUS(char* data, size_t n) const;
 
         /// @return new pos
         template<size_t N>
         size_t sprintUPLUS(char (&data)[N]) const { return sprintUPLUS(data, N); }
+
+        /// Prints “0000+1111+2222”
+        /// @return new pos
+        size_t sprintPlus(char* data, size_t n) const;
+
+        /// @return new pos
+        template<size_t N>
+        size_t sprintPlus(char (&data)[N]) const { return sprintPlus(data, N); }
     };
 
     extern const LibNode libNodes[];

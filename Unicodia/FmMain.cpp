@@ -1464,7 +1464,7 @@ void FmMain::libChanged(const QModelIndex& current)
 
         // Codes
         char buf[150], shortBuf[50];
-        node.sprintUPLUS(buf);
+        node.sprintPlus(buf);
         switch (node.value.length()) {
         case 0:     // never happens
         case 1:
@@ -1472,11 +1472,14 @@ void FmMain::libChanged(const QModelIndex& current)
             strcpy_s(shortBuf, buf);
             break;
         default:
-            uc::sprintUPLUS(shortBuf, node.value[0]);
+            uc::sprint(shortBuf, node.value[0]);
             strcat_s(shortBuf, "+…");
         }
         QString ucText;
-        mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
+        if (shortBuf[0] != '\0') {
+            ucText = "U+";
+            mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
+        }
         ui->lbLibCharCode->setText(ucText);
         ui->btLibCopy->setEnabled(true);
 
