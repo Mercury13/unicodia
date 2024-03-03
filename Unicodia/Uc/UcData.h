@@ -1133,6 +1133,11 @@ namespace uc {
     inline size_t sprintUPLUS(char (&buf)[N], char32_t code)
         { return sprintUPLUS(buf, N, code); }
 
+    /// Appends a char.code to “U+0000+1111+2222”
+    /// @param [in] buff   character data
+    /// @param [in] n      data size
+    /// @param [in] n1     position there
+    /// @param [in] code   character code
     /// @return new n1
     size_t appendUPLUS(char* buf, size_t n, size_t n1, char32_t code);
 
@@ -1141,6 +1146,11 @@ namespace uc {
     inline size_t appendUPLUS(char (&buf)[N], size_t n1, char32_t code)
         { return appendUPLUS(buf, N, n1, code); }
 
+    /// Appends a char.code to “0000+1111+2222”
+    /// @param [in] buff   character data
+    /// @param [in] n      data size
+    /// @param [in] n1     position there
+    /// @param [in] code   character code
     /// @return new n1
     size_t appendPlus(char* buf, size_t n, size_t n1, char32_t code);
 
