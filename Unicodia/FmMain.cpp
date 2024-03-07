@@ -1336,12 +1336,8 @@ void FmMain::copyCurrentLib()
     auto index = ui->treeLibrary->currentIndex();
     if (!index.isValid())
         return;
-    auto& node = libModel.nodeAt(index);
-    if (node.value.empty())
-        return;
-    auto q = str::toQ(node.value);
-    QApplication::clipboard()->setText(q);
-    blinkCopied(ui->treeLibrary, nullptr);
+    if (uc::copyNode(libModel.nodeAt(index)))
+        blinkCopied(ui->treeLibrary, nullptr);
 }
 
 

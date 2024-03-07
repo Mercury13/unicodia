@@ -93,8 +93,7 @@ bool WiShowcase::doCopy(uc::CopiedChannel channel)
         uc::copyCp(fShownObj.forceCp(), channel);
         return true;
     case ShownClass::LIB:
-        /// @todo [favs] what to copy
-        return false;
+        return uc::copyNode(fShownObj.forceNode());
     }
     return false;
 }
