@@ -58,6 +58,9 @@ namespace cp {
     constexpr char32_t NONCHAR_ARAB_FIRST = 0xFDD0;
     constexpr char32_t NONCHAR_ARAB_LAST  = 0xFDEF;
     constexpr char32_t NONCHAR_BMP_FIRST = 0xFFFE;
+
+    // Maximum non-private codepoint
+    constexpr char32_t MAX_NONPRIVATE = 0x0EFFFD;
 }   // namespace cp
 
 constexpr std::u32string_view U32_ZWJ_RIGHT_ARROW_VS16 = U"\u200D" "\u27A1" "\uFE0F";

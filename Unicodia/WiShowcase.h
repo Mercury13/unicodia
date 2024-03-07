@@ -28,6 +28,10 @@ namespace Ui {
 class WiShowcase;
 }
 
+namespace uc {
+    enum class CopiedChannel;
+}
+
 extern template struct TinyOpt<char32_t>;
 
 enum class ShownClass { NONE, CP, LIB };
@@ -92,6 +96,9 @@ public:
              QTextBrowser* viewer,
              FontMatch& fonts,
              const uc::GlyphStyleSets& glyphSets);
+    void set(const uc::LibNode& node,
+             QTextBrowser* viewer,
+             FontMatch& fonts);
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
     void redrawViewer(QTextBrowser* viewer);
@@ -103,9 +110,8 @@ private:
     UintRadio<QRadioButton> radioGlyphStyle;
 
     void init();
+    bool doCopy(uc::CopiedChannel channel);
 signals:
-    void charCopied(QWidget* initiator);
-    void advancedCopied(QWidget* initiator);
     void linkActivated(QWidget* initiator, const QString& link);
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
     void copiedPopped(QWidget* initiator);

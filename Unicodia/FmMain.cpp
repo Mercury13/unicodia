@@ -40,6 +40,7 @@
 
 // Unicode
 #include "UcCp.h"
+#include "UcClipboard.h"
 
 // Char drawing
 #include "CharPaint/routines.h"
@@ -930,7 +931,7 @@ FmMain::InitBlocks FmMain::initBlocks()
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentCharNull);
         // Button
-    connect(ui->wiCharShowcase, &WiShowcase::charCopied, this, &This::copyCurrentChar);
+    connect(ui->wiCharShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
         // 2click
     ui->tableChars->viewport()->installEventFilter(this);
 
@@ -941,7 +942,6 @@ FmMain::InitBlocks FmMain::initBlocks()
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentSampleNull);
-    connect(ui->wiCharShowcase, &WiShowcase::advancedCopied, this, &This::copyCurrentSample);
 
     // Clicked
     connect(ui->wiCharShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
@@ -997,8 +997,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 
 void FmMain::initLibrary(const InitBlocks& ib)
 {
-    paintTo(ui->wiLibInfo, ib.buttonColor);
-    paintTo(ui->wiLibCps, ib.buttonColor);
+    paintTo(ui->wiLibContainer, ib.buttonColor);
 
     // Tree
     ui->treeLibrary->setModel(&libModel);
@@ -1025,8 +1024,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // Clicked
     connect(ui->vwLibInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(ui->lbLibCharCode, &QLabel::linkActivated, this, &This::labelLinkActivated);
-    connect(ui->wiLibOs, &WiOsStyle::linkActivated, this, &This::advancedLinkActivated);
+    connect(ui->wiLibShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
+    connect(ui->wiLibShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
+    // GlyphStyleChanged is unused for now
 
     // Copy
         // Ctrl+C
@@ -1037,8 +1037,6 @@ void FmMain::initLibrary(const InitBlocks& ib)
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->treeLibrary,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
     connect(shcut, &QShortcut::activated, this, &This::copyCurrentLib);
-        // Button
-    connect(ui->btLibCopy, &QPushButton::clicked, this, &This::copyCurrentLib);
         // 2click
     ui->treeLibrary->viewport()->installEventFilter(this);
 
@@ -1091,7 +1089,7 @@ void FmMain::translateMe()
 
     // Misc. widgets loaded from UI files
     ui->wiCharShowcase->translateMe();
-    loc::translateForm(ui->wiLibSample);
+    ui->wiLibShowcase->translateMe();
 
     translateTerms();
     translateAbout();
@@ -1297,20 +1295,16 @@ void FmMain::blinkCopied(QAbstractItemView* table, QWidget* initiator)
 }
 
 
-void FmMain::copyCurrentThing(CurrThing thing, QWidget* initiator)
+void FmMain::copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator)
 {
     auto ch = model.charAt(ui->tableChars->currentIndex());
-    QString q = str::toQ(ch.code);
-    if (thing == CurrThing::SAMPLE && ch) {
-        if (ch->category().upCat == uc::UpCategory::MARK) {
-            q = uc::STUB_CIRCLE + q;
-        } else if (ch->isVs16Emoji()) {
-            q += QChar(cp::VS16);
-        }
-    }
-    QApplication::clipboard()->setText(q);
+    uc::copyCp(ch.code, channel);
     blinkCopied(ui->tableChars, initiator);
 }
+
+
+void FmMain::blinkCopiedForWidget(QWidget* initiator)
+    { blinkCopied(nullptr, initiator); }
 
 
 void FmMain::copyCurrentCharNull()
@@ -1321,7 +1315,7 @@ void FmMain::copyCurrentCharNull()
 
 void FmMain::copyCurrentChar(QWidget* initiator)
 {
-    copyCurrentThing(CurrThing::CHAR, initiator);
+    copyCurrentThing(uc::CopiedChannel::CHAR, initiator);
 }
 
 
@@ -1333,7 +1327,7 @@ void FmMain::copyCurrentSampleNull()
 
 void FmMain::copyCurrentSample(QWidget* initiator)
 {
-    copyCurrentThing(CurrThing::SAMPLE, initiator);
+    copyCurrentThing(uc::CopiedChannel::SAMPLE, initiator);
 }
 
 
@@ -1356,19 +1350,6 @@ void wiki::append(QString& s, const char* start, const char* end)
 {
     s.append(QByteArray::fromRawData(start, end - start));
 }
-
-namespace {
-
-    void setWiki(QTextBrowser* view, const QString& text)
-    {
-        view->setText(text);
-        // I won’t hack: my underline is lower, and it’s nice.
-        // What to do with that one — IDK.
-        //mywiki::hackDocument(view->document());
-    }
-
-}   // anon namespace
-
 
 void FmMain::forceShowCp(MaybeChar ch)
 {
@@ -1401,22 +1382,14 @@ void FmMain::charChanged(const QModelIndex& current)
 void FmMain::libChanged(const QModelIndex& current)
 {
     auto& node = libModel.nodeAt(current);
+    ui->wiLibShowcase->set(node, ui->vwLibInfo, model.match);
     if (node.value.empty()) {
-        // Folder
-        ui->wiLibSample->showNothing();
-        ui->lbLibCharCode->clear();
-        ui->btLibCopy->setEnabled(false);
-        ui->wiLibOs->setNothing();
-
+        // Cps
         libCpWidgets[0]->removeCp();
         libCpWidgets[0]->show();
         for (unsigned i = 1; i < uc::LONGEST_LIB; ++i) {
             libCpWidgets[i]->hide();
         }
-
-        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-        QString s = mywiki::buildLibFolderHtml(node, color);
-        setWiki(ui->vwLibInfo, s);
     } else {
         // Count independent chars
         size_t nIndependent = 0;
@@ -1443,49 +1416,6 @@ void FmMain::libChanged(const QModelIndex& current)
         for (unsigned i = len; i < uc::LONGEST_LIB; ++i) {
             libCpWidgets[i]->hide();
         }
-
-        // Show sample
-        auto emojiDraw = node.emojiDraw();
-        bool needGraph = (len > 1 && emojiDraw != uc::EmojiDraw::FORCE_TEXT);
-        if (needGraph || node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
-            ui->wiLibSample->showEmoji(node.value);
-        } else if (auto cp = uc::cpsByCode[node.value[0]]) {
-            // Library uses default/empty settings
-            ui->wiLibSample->showCp(*cp, emojiDraw, uc::GlyphStyleSets::EMPTY);
-        } else  {
-            ui->wiLibSample->showNothing();
-        }
-
-        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
-            ui->wiLibOs->setEmojiText(node.value, model.match);
-        } else {
-            ui->wiLibOs->setCustomText(node.value, model.match);
-        }
-
-        // Codes
-        char buf[150], shortBuf[50];
-        node.sprintPlus(buf);
-        switch (node.value.length()) {
-        case 0:     // never happens
-        case 1:
-        case 2:
-            strcpy_s(shortBuf, buf);
-            break;
-        default:
-            uc::sprint(shortBuf, node.value[0]);
-            strcat_s(shortBuf, "+…");
-        }
-        QString ucText;
-        if (shortBuf[0] != '\0') {
-            ucText = "U+";
-            mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
-        }
-        ui->lbLibCharCode->setText(ucText);
-        ui->btLibCopy->setEnabled(true);
-
-        auto& parent = uc::libNodes[node.iParent];
-        QString s = mywiki::buildHtml(node, parent);
-        setWiki(ui->vwLibInfo, s);
     }
 }
 

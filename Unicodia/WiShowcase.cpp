@@ -11,6 +11,7 @@
 // Unicode
 #include "UcData.h"
 #include "UcCp.h"
+#include "UcClipboard.h"
 
 // L10n
 #include "LocDic.h"
@@ -70,6 +71,7 @@ WiShowcase::WiShowcase(QWidget *parent) :
     connect(ui->lbStyleHelp, &QLabel::linkActivated, this, &This::lbStyleHelpLinkActivated);
 
     ui->wiGlyphStyle->hide();
+    ui->btCopyEx->hide();
 }
 
 WiShowcase::~WiShowcase()
@@ -83,13 +85,32 @@ void WiShowcase::translateMe()
     loc::translateForm(ui->wiSample);
 }
 
-/// @todo [favs, urgent] Now copying should be here, only “Copied” must show up
-///     But it’ll get a yo-yo: FmMain copies too, and it
+bool WiShowcase::doCopy(uc::CopiedChannel channel)
+{
+    switch (fShownObj.clazz()) {
+    case ShownClass::NONE: break;
+    case ShownClass::CP:
+        uc::copyCp(fShownObj.forceCp(), channel);
+        return true;
+    case ShownClass::LIB:
+        /// @todo [favs] what to copy
+        return false;
+    }
+    return false;
+}
+
+
 void WiShowcase::btCopyClicked()
-    { emit charCopied(ui->btCopy); }
+{
+    if (doCopy(uc::CopiedChannel::CHAR))
+        emit copiedPopped(ui->btCopy);
+}
 
 void WiShowcase::btCopyExClicked()
-    { emit advancedCopied(ui->btCopyEx); }
+{
+    if (doCopy(uc::CopiedChannel::SAMPLE))
+        emit copiedPopped(ui->btCopyEx);
+}
 
 void WiShowcase::lbCharCodeLinkActivated(const QString& link)
     { emit linkActivated(ui->lbCharCode, link); }
@@ -212,6 +233,74 @@ void WiShowcase::set(
 }
 
 
+void WiShowcase::set(
+        const uc::LibNode& node,
+        QTextBrowser* viewer,
+        FontMatch& fonts)
+{
+    fShownObj = &node;
+    // Hide these widgets
+    ui->wiGlyphStyle->hide();
+    ui->btCopyEx->hide();
+    // Depending on nodes
+    if (node.value.empty()) {
+        // Folder
+        ui->wiSample->showNothing();
+        ui->lbCharCode->clear();
+        ui->btCopy->setEnabled(false);
+        ui->wiOsStyle->setNothing();
+
+        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+        QString s = mywiki::buildLibFolderHtml(node, color);
+        setWiki(viewer, s);
+    } else {
+        // Show sample
+        auto len = node.value.length();
+        auto emojiDraw = node.emojiDraw();
+        bool needGraph = (len > 1 && emojiDraw != uc::EmojiDraw::FORCE_TEXT);
+        if (needGraph || node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
+            ui->wiSample->showEmoji(node.value);
+        } else if (auto cp = uc::cpsByCode[node.value[0]]) {
+            // Library uses default/empty settings
+            ui->wiSample->showCp(*cp, emojiDraw, uc::GlyphStyleSets::EMPTY);
+        } else  {
+            ui->wiSample->showNothing();
+        }
+
+        if (node.flags.have(uc::Lfg::GRAPHIC_EMOJI)) {
+            ui->wiOsStyle->setEmojiText(node.value, fonts);
+        } else {
+            ui->wiOsStyle->setCustomText(node.value, fonts);
+        }
+
+        // Codes
+        char buf[150], shortBuf[50];
+        node.sprintPlus(buf);
+        switch (node.value.length()) {
+        case 0:     // never happens
+        case 1:
+        case 2:
+            strcpy_s(shortBuf, buf);
+            break;
+        default:
+            uc::sprint(shortBuf, node.value[0]);
+            strcat_s(shortBuf, "+…");
+        }
+        QString ucText;
+        if (shortBuf[0] != '\0') {
+            ucText = "U+";
+            mywiki::appendCopyable2(ucText, buf, shortBuf, "' style='" STYLE_BIGCOPY);
+        }
+        ui->lbCharCode->setText(ucText);
+        ui->btCopy->setEnabled(true);
+
+        auto& parent = uc::libNodes[node.iParent];
+        QString s = mywiki::buildHtml(node, parent);
+        setWiki(viewer, s);
+    }
+}
+
+
 void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 {
     switch (fShownObj.clazz()) {
@@ -224,6 +313,8 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
         // else
         [[fallthrough]];
     case ShownClass::LIB:
+        // Unused in LIB mode, maybe someday
+        break;
     case ShownClass::NONE:
         ui->wiSample->showNothing();
     }

@@ -57,6 +57,7 @@ SOURCES += \
     Uc/UcAutoLib.cpp \
     Uc/UcAutoSutton.cpp \
     Uc/UcBlocks.cpp \
+    Uc/UcClipboard.cpp \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
@@ -118,6 +119,7 @@ HEADERS += \
     Uc/FontMatch.h \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
+    Uc/UcClipboard.h \
     Uc/UcCp.h \
     Uc/UcData.h \
     Uc/UcDating.h \

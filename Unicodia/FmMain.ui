@@ -330,7 +330,7 @@
            </attribute>
           </widget>
           <widget class="QWidget" name="widget_3" native="true">
-           <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,0,0,2">
+           <layout class="QVBoxLayout" name="verticalLayout_12" stretch="0,1">
             <property name="spacing">
              <number>0</number>
             </property>
@@ -347,193 +347,59 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="WiShowcase" name="widget_2" native="true"/>
-            </item>
-            <item>
-             <widget class="QWidget" name="wiLibInfo" native="true">
-              <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,1">
-               <property name="spacing">
-                <number>6</number>
-               </property>
-               <property name="leftMargin">
-                <number>3</number>
-               </property>
-               <property name="topMargin">
-                <number>3</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
-               <property name="bottomMargin">
-                <number>3</number>
-               </property>
-               <item>
-                <widget class="WiSample" name="wiLibSample" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>20</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="WiOsStyle" name="wiLibOs" native="true">
-                 <property name="minimumSize">
-                  <size>
-                   <width>20</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QWidget" name="widget_4" native="true">
-                 <layout class="QVBoxLayout" name="verticalLayout_6">
-                  <property name="spacing">
-                   <number>2</number>
-                  </property>
-                  <property name="leftMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="topMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="rightMargin">
-                   <number>0</number>
-                  </property>
-                  <property name="bottomMargin">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_12">
-                    <item>
-                     <widget class="QLabel" name="lbLibCharCode">
-                      <property name="font">
-                       <font>
-                        <pointsize>14</pointsize>
-                        <stylestrategy>PreferAntialias</stylestrategy>
-                       </font>
-                      </property>
-                      <property name="cursor">
-                       <cursorShape>IBeamCursor</cursorShape>
-                      </property>
-                      <property name="mouseTracking">
-                       <bool>true</bool>
-                      </property>
-                      <property name="styleSheet">
-                       <string notr="true">padding-right: 1px;
-padding-bottom: 1px;</string>
-                      </property>
-                      <property name="text">
-                       <string notr="true">[lbLibCharCode]</string>
-                      </property>
-                      <property name="textInteractionFlags">
-                       <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByMouse</set>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_5">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>1</width>
-                        <height>5</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <spacer name="verticalSpacer_4">
-                    <property name="orientation">
-                     <enum>Qt::Vertical</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>20</width>
-                      <height>5</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <layout class="QHBoxLayout" name="horizontalLayout_13">
-                    <item>
-                     <widget class="QPushButton" name="btLibCopy">
-                      <property name="text">
-                       <string>{Copy}</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item>
-                     <spacer name="horizontalSpacer_6">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="sizeHint" stdset="0">
-                       <size>
-                        <width>40</width>
-                        <height>20</height>
-                       </size>
-                      </property>
-                     </spacer>
-                    </item>
-                   </layout>
-                  </item>
-                  <item>
-                   <widget class="QWidget" name="wiDivider" native="true">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>1</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>1</height>
-                     </size>
-                    </property>
-                    <property name="styleSheet">
-                     <string notr="true">background-color: palette(midlight)</string>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-            <item>
-             <widget class="QWidget" name="wiLibCps" native="true">
+             <widget class="QWidget" name="wiLibContainer" native="true">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>10</height>
+                <height>30</height>
                </size>
               </property>
-              <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <layout class="QVBoxLayout" name="verticalLayout_3">
                <property name="spacing">
                 <number>0</number>
                </property>
                <property name="leftMargin">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="topMargin">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="rightMargin">
-                <number>1</number>
+                <number>0</number>
                </property>
                <property name="bottomMargin">
-                <number>1</number>
+                <number>0</number>
                </property>
+               <item>
+                <widget class="WiShowcase" name="wiLibShowcase" native="true"/>
+               </item>
+               <item>
+                <widget class="QWidget" name="wiLibCps" native="true">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_11">
+                  <property name="spacing">
+                   <number>0</number>
+                  </property>
+                  <property name="leftMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="topMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>1</number>
+                  </property>
+                  <property name="bottomMargin">
+                   <number>1</number>
+                  </property>
+                 </layout>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
@@ -820,18 +686,6 @@ padding-bottom: 1px;</string>
    <header>c_SearchEdit.h</header>
   </customwidget>
   <customwidget>
-   <class>WiSample</class>
-   <extends>QWidget</extends>
-   <header>WiSample.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>WiOsStyle</class>
-   <extends>QWidget</extends>
-   <header>WiOsStyle.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>QSvgWidget</class>
    <extends>QWidget</extends>
    <header>QSvgWidget</header>
@@ -859,7 +713,6 @@ padding-bottom: 1px;</string>
   <tabstop>btCloseSearch</tabstop>
   <tabstop>listSearch</tabstop>
   <tabstop>treeLibrary</tabstop>
-  <tabstop>btLibCopy</tabstop>
   <tabstop>vwLibInfo</tabstop>
   <tabstop>vwTerms</tabstop>
   <tabstop>comboLang</tabstop>

@@ -47,6 +47,10 @@ class FmTofuStats;
 class WiLibCp;
 
 
+namespace uc {
+    enum class CopiedChannel;
+}
+
 struct CacheCoords {
     size_t row = 0;
     unsigned col = 0;
@@ -254,8 +258,6 @@ private:
     mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
 };
 
-
-enum class CurrThing { CHAR, SAMPLE };
 enum class SelectMode { NONE, INSTANT };
 
 class FmMain : public QMainWindow,
@@ -324,7 +326,7 @@ private:
     template <SelectMode mode> void selectChar(char32_t code);
     void initTerms();
     void translateTerms();
-    void copyCurrentThing(CurrThing thing, QWidget* initiator);
+    void copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator);
     void blinkCopied(QWidget* widget, const QRect& absRect);
     void blinkCopied(QAbstractItemView* table, QWidget* initiator);
     void clearSample();
@@ -343,6 +345,7 @@ private:
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
+    void blinkCopiedForWidget(QWidget* initiator);
     void copyCurrentChar(QWidget* initiator);
     void copyCurrentCharNull();
     void copyCurrentSample(QWidget* initiator);
