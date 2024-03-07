@@ -13,7 +13,6 @@
 #include "QtMultiRadio.h"
 
 // Misc libs
-#include "magic_enum.hpp"
 #include "u_TinyOpt.h"
 
 #include "UcAutoDefines.h"
@@ -31,12 +30,13 @@ class WiShowcase;
 
 extern template struct TinyOpt<char32_t>;
 
-enum class ShownClass { NONE, CP };
+enum class ShownClass { NONE, CP, LIB };
 
 namespace detail {
     using ShownObjFather = std::variant<
-                            std::monostate, // NONE — no object held
-                            char32_t>;      // CP — any codepoint of Unicode, incl. surrogate
+                    std::monostate, // NONE — no object held
+                    char32_t,       // CP — any codepoint of Unicode, incl. surrogate
+                    const uc::LibNode*>; // Lib — Library node
 }   // namespace detail
 
 class ShownObj : public detail::ShownObjFather
@@ -50,13 +50,20 @@ public:
     /// @return  code point
     /// @throw   what std::get throws if no code point
     [[nodiscard]] char32_t forceCp() const;
+
+    /// @return  node, or null
+    [[nodiscard]] TinyOpt<const uc::LibNode*> maybeNode() const;
+    /// @return  node
+    /// @throw   what std::get throws if no code node
+    [[nodiscard]] const uc::LibNode* forceNode() const;
+
     constexpr ShownClass clazz() const
         { return static_cast<ShownClass>(index()); }
 };
 
-/// Sorry, no automatic op==, will use C++20 here until find some compiler
+/// Sorry, no automatic op==, will use C++20 here until find some compiler that does not work
 inline bool operator == (char32_t x, const ShownObj& y)
-{ return x == y.maybeCp(); }
+    { return x == y.maybeCp(); }
 
 /// Ban other comparisons
 template <class T> requires std::is_arithmetic_v<T>

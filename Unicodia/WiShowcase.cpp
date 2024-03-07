@@ -6,6 +6,7 @@
 
 // Libs
 #include "u_Strings.h"
+#include "magic_enum.hpp"
 
 // Unicode
 #include "UcData.h"
@@ -32,8 +33,14 @@ static_assert(magic_enum::enum_count<ShownClass>()== std::variant_size_v<detail:
 TinyOpt<char32_t> ShownObj::maybeCp() const
     { return std::get_if<char32_t>(this); }
 
+TinyOpt<const uc::LibNode*> ShownObj::maybeNode() const
+    { return std::get_if<const uc::LibNode*>(this); }
+
 char32_t ShownObj::forceCp() const
     { return std::get<char32_t>(*this); }
+
+const uc::LibNode* ShownObj::forceNode() const
+    { return std::get<const uc::LibNode*>(*this); }
 
 
 ///// WiShowcase ///////////////////////////////////////////////////////////////
@@ -112,6 +119,9 @@ void WiShowcase::redrawViewer(QTextBrowser* viewer)
     if (!viewer)
         return;
     switch (fShownObj.clazz()) {
+    case ShownClass::LIB:
+        /// @todo [urgent] redawViewer lib
+        break;
     case ShownClass::CP:
     if (auto code = fShownObj.maybeCp()) {
             if (auto ch = uc::cpsByCode[*code]) {
@@ -213,6 +223,7 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
         }
         // else
         [[fallthrough]];
+    case ShownClass::LIB:
     case ShownClass::NONE:
         ui->wiSample->showNothing();
     }
