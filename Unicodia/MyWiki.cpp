@@ -2079,3 +2079,10 @@ QString mywiki::buildHtml(const uc::GlyphStyleChannel& channel)
 
     return text;
 }
+
+
+template<>
+void wiki::append(QString& s, const char* start, const char* end)
+{
+    s.append(QByteArray::fromRawData(start, end - start));
+}

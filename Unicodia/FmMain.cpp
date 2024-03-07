@@ -49,7 +49,6 @@
 
 // Project-local
 #include "Skin.h"
-#include "Wiki.h"   // used! — we specialize its template
 #include "MyWiki.h"
 
 // Forms
@@ -1340,12 +1339,6 @@ void FmMain::copyCurrentLib()
         blinkCopied(ui->treeLibrary, nullptr);
 }
 
-
-template<>
-void wiki::append(QString& s, const char* start, const char* end)
-{
-    s.append(QByteArray::fromRawData(start, end - start));
-}
 
 void FmMain::forceShowCp(MaybeChar ch)
 {
