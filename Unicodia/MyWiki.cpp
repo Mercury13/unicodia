@@ -1841,6 +1841,7 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
                                    (uc::TextRole role, std::u8string_view s) {
                 switch (role) {
                 case uc::TextRole::MAIN_NAME:
+                    // Name should not be template
                     if (s.find('#') != std::u8string_view::npos)
                         break;
                     [[fallthrough]];
