@@ -23,6 +23,9 @@
 // Mojibake
 #include "mojibake.h"
 
+// Functions
+#include "CharPaint/emoji.h"
+
 using namespace std::string_view_literals;
 
 #define NBSP "\u00A0"
@@ -1830,6 +1833,35 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
     appendCopyable(text, title, "bigcopy");
     text += "</h1>";
 
+    if (auto getcp = EmojiPainter::getCp(node.value)) {
+        if (auto pCp = uc::cpsByCode[getcp.cp]) {
+            auto title1 = str::toU8(title);
+            bool isInitial = true;
+            pCp->name.traverseAllT([&text, &isInitial, &title1]
+                                   (uc::TextRole role, std::u8string_view s) {
+                switch (role) {
+                case uc::TextRole::MAIN_NAME:
+                case uc::TextRole::ALT_NAME:
+                case uc::TextRole::ABBREV:
+                    if (s != title1) {
+                        if (isInitial) {
+                            isInitial = false;
+                            text += "<p style='" CNAME_ALTNAME "'>";
+                        } else {
+                            text += "; ";
+                        }
+                        mywiki::appendCopyable(text, str::toQ(s), "altname");
+                    } break;
+                case uc::TextRole::HTML:
+                case uc::TextRole::DEP_INSTEAD:
+                case uc::TextRole::DEP_INSTEAD2:
+                case uc::TextRole::CMD_END:
+                    break;
+
+                }
+            });
+        }
+    }
 
     if (auto q = node.flags & uc::MISRENDER_MASK) {
         appendMisrender(text, node.value, q);
