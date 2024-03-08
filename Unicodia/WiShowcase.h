@@ -101,7 +101,6 @@ public:
              FontMatch& fonts);
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
-    //void redrawViewer(QTextBrowser* viewer);
 private:
     Ui::WiShowcase *ui;
 

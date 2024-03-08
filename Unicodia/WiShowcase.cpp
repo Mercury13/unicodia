@@ -169,32 +169,6 @@ void WiShowcase::redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer)
 }
 
 
-/// @todo [future] is redrawViewer used?
-// void WiShowcase::redrawViewer(QTextBrowser* viewer)
-// {
-//     if (!viewer)
-//         return;
-//     switch (fShownObj.clazz()) {
-//     case ShownClass::LIB:
-//         if (auto q = fShownObj.maybeNode(); q && *q) {
-//             redrawViewerNode(**q, viewer);
-//         } else {
-//             viewer->clear();
-//         }
-//         break;
-//     case ShownClass::CP:
-//         if (auto code = fShownObj.maybeCp()) {
-//             redrawViewerCp(*code, viewer);
-//         } else {
-//             viewer->clear();
-//         }
-//         break;
-//     case ShownClass::NONE:
-//         viewer->clear();
-//     }
-// }
-
-
 void WiShowcase::set(
         char32_t code,
         QTextBrowser* viewer,
