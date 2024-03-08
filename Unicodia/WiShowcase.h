@@ -101,7 +101,7 @@ public:
              FontMatch& fonts);
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
-    void redrawViewer(QTextBrowser* viewer);
+    //void redrawViewer(QTextBrowser* viewer);
 private:
     Ui::WiShowcase *ui;
 
@@ -111,6 +111,8 @@ private:
 
     void init();
     bool doCopy(uc::CopiedChannel channel);
+    void redrawViewerCp(char32_t code, QTextBrowser* viewer);
+    void redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer);
 signals:
     void linkActivated(QWidget* initiator, const QString& link);
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);

@@ -134,37 +134,66 @@ namespace {
 
 }   // anon namespace
 
-void WiShowcase::redrawViewer(QTextBrowser* viewer)
+
+void WiShowcase::redrawViewerCp(char32_t code, QTextBrowser* viewer)
 {
-    if (!viewer)
-        return;
-    switch (fShownObj.clazz()) {
-    case ShownClass::LIB:
-        /// @todo [urgent] redawViewer lib
-        break;
-    case ShownClass::CP:
-    if (auto code = fShownObj.maybeCp()) {
-            if (auto ch = uc::cpsByCode[*code]) {
-                // Normal CP
-                QString text = mywiki::buildHtml(*ch);
-                setWiki(viewer, text);
-            } else if (uc::isNonChar(*code)) {
-                // Non-character
-                QString text = mywiki::buildNonCharHtml(*code);
-                setWiki(viewer, text);
-            } else {
-                // Vacant (reserved) codepoint
-                auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-                QString text = mywiki::buildVacantCpHtml(*code, color);
-                setWiki(viewer, text);
-            }
-            break;
-        }
-        [[fallthrough]];
-    case ShownClass::NONE:
-        viewer->clear();
+    if (auto ch = uc::cpsByCode[code]) {
+        // Normal CP
+        QString text = mywiki::buildHtml(*ch);
+        setWiki(viewer, text);
+    } else if (uc::isNonChar(code)) {
+        // Non-character
+        QString text = mywiki::buildNonCharHtml(code);
+        setWiki(viewer, text);
+    } else {
+        // Vacant (reserved) codepoint
+        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+        QString text = mywiki::buildVacantCpHtml(code, color);
+        setWiki(viewer, text);
     }
 }
+
+
+void WiShowcase::redrawViewerNode(const uc::LibNode& node, QTextBrowser* viewer)
+{
+    if (node.value.empty()) {
+        // Folder
+        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
+        QString s = mywiki::buildLibFolderHtml(node, color);
+        setWiki(viewer, s);
+    } else {
+        auto& parent = uc::libNodes[node.iParent];
+        QString s = mywiki::buildHtml(node, parent);
+        setWiki(viewer, s);
+    }
+}
+
+
+/// @todo [future] is redrawViewer used?
+// void WiShowcase::redrawViewer(QTextBrowser* viewer)
+// {
+//     if (!viewer)
+//         return;
+//     switch (fShownObj.clazz()) {
+//     case ShownClass::LIB:
+//         if (auto q = fShownObj.maybeNode(); q && *q) {
+//             redrawViewerNode(**q, viewer);
+//         } else {
+//             viewer->clear();
+//         }
+//         break;
+//     case ShownClass::CP:
+//         if (auto code = fShownObj.maybeCp()) {
+//             redrawViewerCp(*code, viewer);
+//         } else {
+//             viewer->clear();
+//         }
+//         break;
+//     case ShownClass::NONE:
+//         viewer->clear();
+//     }
+// }
+
 
 void WiShowcase::set(
         char32_t code,
@@ -228,7 +257,7 @@ void WiShowcase::set(
     }
 
     redrawSampleChar(glyphSets);
-    redrawViewer(viewer);
+    redrawViewerCp(code, viewer);
 }
 
 
@@ -248,10 +277,6 @@ void WiShowcase::set(
         ui->lbCharCode->clear();
         ui->btCopy->setEnabled(false);
         ui->wiOsStyle->setNothing();
-
-        auto color = palette().color(QPalette::Disabled, QPalette::WindowText);
-        QString s = mywiki::buildLibFolderHtml(node, color);
-        setWiki(viewer, s);
     } else {
         // Show sample
         auto len = node.value.length();
@@ -292,11 +317,8 @@ void WiShowcase::set(
         }
         ui->lbCharCode->setText(ucText);
         ui->btCopy->setEnabled(true);
-
-        auto& parent = uc::libNodes[node.iParent];
-        QString s = mywiki::buildHtml(node, parent);
-        setWiki(viewer, s);
     }
+    redrawViewerNode(node, viewer);
 }
 
 
