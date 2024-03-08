@@ -77,7 +77,6 @@ HEADERS += \
     ../Libs/L10n/LocFmt.h \
     ../Libs/L10n/LocManager.h \
     ../Libs/L10n/LocQt.h \
-    ../Libs/MagicEnum/magic_enum.hpp \
     ../Libs/PugiXml/pugiconfig.hpp \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/GitHub/parsers.h \
