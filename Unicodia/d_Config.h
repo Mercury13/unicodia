@@ -8,15 +8,16 @@
 
 // Libs
 #include "u_Version.h"
+#include "u_EnumSize.h"
 
 
-enum class BlockOrder {
+DEFINE_ENUM (BlockOrder,
     ALPHA,      ///< Alphabetical
     CONTINENT,  ///< By continent, then alphabetically
+    DEFAULT = CONTINENT,
     CODE,       ///< By code
-    TECH,       ///< By technical name
-    DEFAULT = CONTINENT
-};
+    TECH        ///< By technical name
+)
 
 
 namespace progsets {

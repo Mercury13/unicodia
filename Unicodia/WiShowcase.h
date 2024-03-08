@@ -14,6 +14,7 @@
 
 // Misc libs
 #include "u_TinyOpt.h"
+#include "u_EnumSize.h"
 
 #include "UcAutoDefines.h"
 
@@ -34,7 +35,8 @@ namespace uc {
 
 extern template struct TinyOpt<char32_t>;
 
-enum class ShownClass { NONE, CP, LIB };
+DEFINE_ENUM (ShownClass,
+             NONE, CP, LIB )
 
 namespace detail {
     using ShownObjFather = std::variant<

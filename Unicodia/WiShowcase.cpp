@@ -6,7 +6,6 @@
 
 // Libs
 #include "u_Strings.h"
-#include "magic_enum.hpp"
 
 // Unicode
 #include "UcData.h"
@@ -28,7 +27,7 @@ template struct TinyOpt<char32_t>;
 ///// ShownObj /////////////////////////////////////////////////////////////////
 
 /// Static_assert here for compile speed
-static_assert(magic_enum::enum_count<ShownClass>()== std::variant_size_v<detail::ShownObjFather>,
+static_assert(ec::size<ShownClass>()== std::variant_size_v<detail::ShownObjFather>,
               "ShownClass should correspond to ShownObj");
 
 TinyOpt<char32_t> ShownObj::maybeCp() const
