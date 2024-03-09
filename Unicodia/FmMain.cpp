@@ -823,6 +823,7 @@ FmMain::FmMain(QWidget *parent)
 
     auto ib = initBlocks();
     initLibrary(ib);
+    initFavs(ib);
     initTerms();
     initAbout();
 
@@ -1042,6 +1043,14 @@ void FmMain::initLibrary(const InitBlocks& ib)
     // Select index
     auto index = libModel.index(0, 0);
     ui->treeLibrary->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
+}
+
+
+void FmMain::initFavs(const InitBlocks& ib)
+{
+    paintTo(ui->wiFavsBar, ib.buttonColor);
+
+    /// @todo [favs] initFavs
 }
 
 

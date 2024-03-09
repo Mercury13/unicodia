@@ -314,6 +314,7 @@ private:
 
     InitBlocks initBlocks();
     void initLibrary(const InitBlocks& ib);
+    void initFavs(const InitBlocks& ib);
     void translateAbout();
     void initAbout();
     void showCp(MaybeChar ch);
