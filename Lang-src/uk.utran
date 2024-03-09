@@ -11468,11 +11468,6 @@
      <im-cmt>is a general widget (usually a tab)</im-cmt>
      <transl>Блоки</transl>
     </text>
-    <text id="lbStyleSet">
-     <orig>Style</orig>
-     <im-cmt>is a static text</im-cmt>
-     <transl>Стиль</transl>
-    </text>
     <text id="btCloseSearch">
      <orig>Close</orig>
      <im-cmt>is a button</im-cmt>
@@ -11482,11 +11477,6 @@
      <orig>Library</orig>
      <im-cmt>is a general widget (usually a tab)</im-cmt>
      <transl>Підбірки</transl>
-    </text>
-    <text id="btLibCopy">
-     <orig>Copy</orig>
-     <im-cmt>is a button</im-cmt>
-     <transl>Копіювати</transl>
     </text>
     <text id="tabTerms:at">
      <orig>Terms</orig>
@@ -11555,6 +11545,11 @@
      <orig>Copy</orig>
      <im-cmt>is a button</im-cmt>
      <transl>Копіювати</transl>
+    </text>
+    <text id="lbStyleSet">
+     <orig>Style</orig>
+     <im-cmt>is a static text</im-cmt>
+     <transl>Стиль</transl>
     </text>
    </group>
   </group>
