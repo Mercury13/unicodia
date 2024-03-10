@@ -1092,7 +1092,7 @@ namespace uc {
     Flags<OldComp> cpOldComps(char32_t cp);
 
     struct AltCode {
-        unsigned char dosCommon = 0, dosEn = 0, dosRu = 0, win = 0;
+        unsigned char dosCommon = 0, dosEn = 0, dosRu = 0, dosEl = 0, win = 0;
         unsigned short unicode = 0;
         bool hasLocaleIndependent() const
             { return (dosCommon != 0 || win != 0); }

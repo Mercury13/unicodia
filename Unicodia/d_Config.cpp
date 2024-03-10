@@ -10,6 +10,7 @@
 
 // Misc
 #include "u_EcArray.h"
+#include "UcData.h"
 
 // L10n
 #include "LocList.h"
@@ -44,11 +45,53 @@ std::filesystem::path path::config;
 bool config::window::isMaximized;
 std::string config::lang::wanted;
 int config::lang::savedStamp = 0;
+config::Favs config::favs;
 
 #define APP_NAME "Unicodia"
 
 constexpr std::string_view APP_XML = APP_NAME ".xml";
 constexpr std::string_view CONFIG_NAME = "config.xml";
+
+///// Favs /////////////////////////////////////////////////////////////////////
+
+bool config::Favs::add(char32_t code)
+{
+    // Add only feasible CPs
+    if (code > uc::CAPACITY || !uc::cpsByCode[code])
+        return false;
+    auto [_, wasAdded] = ndx.insert(code);
+    if (wasAdded) {
+        if (!fCodes.empty() && code > fCodes.back()) {
+            // A very frequent branch
+            fCodes.emplace_back(code);
+        } else {
+            auto whereInsert = std::lower_bound(fCodes.begin(), fCodes.end(), code);
+            fCodes.insert(whereInsert, code);
+        }
+    }
+    return wasAdded;
+}
+
+
+void config::Favs::clear()
+{
+    fCodes.clear();
+    ndx.clear();
+}
+
+
+bool config::Favs::erase(char32_t code)
+{
+    size_t nErased = ndx.erase(code);
+    if (nErased) {
+        auto whereErase = std::equal_range(fCodes.begin(), fCodes.end(), code);
+        fCodes.erase(whereErase.first, whereErase.second);
+    }
+    return nErased;
+}
+
+
+//// Config ////////////////////////////////////////////////////////////////////
 
 namespace {
 

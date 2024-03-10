@@ -1462,6 +1462,11 @@ namespace {
                             str::append(text, static_cast<int>(im.alt.dosRu));
                             str::append(text, u8" (ru)");
                         }
+                        if (im.alt.dosEl) {
+                            sp2.sep();
+                            str::append(text, static_cast<int>(im.alt.dosEl));
+                            str::append(text, u8" (el)");
+                        }
                         if (im.alt.unicode) {
                             sp2.sep();
                             str::append(text, "+");

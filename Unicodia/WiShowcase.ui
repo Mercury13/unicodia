@@ -31,6 +31,12 @@
    </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,1">
+     <property name="spacing">
+      <number>3</number>
+     </property>
+     <property name="bottomMargin">
+      <number>2</number>
+     </property>
      <item>
       <widget class="WiSample" name="wiSample" native="true">
        <property name="minimumSize">

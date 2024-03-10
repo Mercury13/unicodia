@@ -2,6 +2,9 @@
 
 // C++
 #include <filesystem>
+#include <unordered_set>
+#include <vector>
+#include <span>
 
 // Qt
 #include "QRect"
@@ -47,6 +50,26 @@ namespace path {
 }
 
 namespace config {
+
+    class Favs
+    {
+    public:
+        /// @return  [+] was added
+        bool add(char32_t code);
+        /// @return  [+] was erased
+        bool erase(char32_t code);
+        size_t size() const { return fCodes.size(); }
+        /// @return  All codes, ordered by CP
+        std::span<const char32_t> codes() const { return fCodes; }
+        void clear();
+        bool contains(char32_t code) const { return ndx.contains(code); }
+        [[nodiscard]] bool empty() const { return fCodes.empty(); }
+        bool isEmpty() const { return fCodes.empty(); }
+    private:
+        std::vector<char32_t> fCodes;
+        std::unordered_set<char32_t> ndx;
+    };
+
     namespace window {
         extern bool isMaximized;
     }
@@ -54,6 +77,8 @@ namespace config {
         extern std::string wanted;
         extern int savedStamp;
     }
+
+    extern Favs favs;
 
     /// All params should be initialized!
     void init(QRect& winRect, BlockOrder& blockOrder);

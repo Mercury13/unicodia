@@ -302,10 +302,10 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
         if (auto cp = uc::cpsByCode[fShownObj.forceCp()]) {
             ui->wiSample->showCp(*cp, EMOJI_DRAW, glyphSets);
             radioGlyphStyle.set(glyphSets[fCurrChannel]);
-            break;
+        } else {
+            ui->wiSample->showNothing();
         }
-        // else
-        [[fallthrough]];
+        break;
     case ShownClass::LIB:
         // Unused in LIB mode, maybe someday
         break;

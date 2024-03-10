@@ -1216,6 +1216,22 @@ namespace {
         { u'ⁿ', 0xFC }, { u'²', 0xFD }
     }};
 
+    constinit const ReverseMap rmDosEl {{
+        REV_16(u'Α', 0x80),        // Greek Α
+        { u'Ρ', 0x90 }, { u'Σ', 0x91 }, { u'Τ', 0x92 }, { u'Υ', 0x93 },
+        { u'Φ', 0x94 }, { u'Χ', 0x95 }, { u'Ψ', 0x96 }, { u'Ω', 0x97 },
+        REV_8 (u'α', 0x98),
+        REV_16(u'ι', 0xA0),
+        { u'ω', 0xe0 }, { u'ά', 0xE1 }, { u'έ', 0xE2 }, { u'ή', 0xE3 },
+        { u'ϊ', 0xE4 }, { u'ί', 0xE5 }, { u'ό', 0xE6 }, { u'ύ', 0xE7 },
+        { u'ϋ', 0xe8 }, { u'ώ', 0xE9 }, { u'Ά', 0xEA }, { u'Έ', 0xEB },
+        { u'Ή', 0xEC }, { u'Ί', 0xED }, { u'Ό', 0xEE }, { u'Ύ', 0xEF },
+        { u'Ώ', 0xF0 }, { u'±', 0xF1 }, { u'≥', 0xF2 }, { u'≤', 0xF3 },
+        { u'Ϊ', 0xF4 }, { u'Ϋ', 0xF5 }, { u'÷', 0xF6 }, { u'≈', 0xF7 },
+        { u'°', 0xF8 }, { u'∙', 0xF9 }, { u'·', 0xFA }, { u'√', 0xFB },
+        { u'ⁿ', 0xFC }, { u'²', 0xFD }
+    }};
+
     constinit const ReverseMap rmWin {{
         { u'€', 128 }, { u'‚', 130 }, { u'ƒ', 131 }, { u'„', 132 },
         { u'…', 133 }, { u'†', 134 }, { u'‡', 135 }, { u'ˆ', 136 },
@@ -1523,6 +1539,7 @@ uc::InputMethods uc::cpInputMethods(char32_t cp)
         rmDosCommon.query(cp, r.alt.dosCommon);
         rmDosEn.query(cp, r.alt.dosEn);
         rmDosRu.query(cp, r.alt.dosRu);
+        rmDosEl.query(cp, r.alt.dosEl);
         if (cp <= 0xFF) {     // ISO1
             r.alt.win = cp;
         } else {
