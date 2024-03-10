@@ -166,11 +166,7 @@ public:
     FontMatch match;
     bool isCjkCollapsed = true;
 
-    struct Style {
-        uc::GlyphStyleSets sets;
-    } glyphStyle;
-
-    CharsModel(QWidget* aOwner);
+    CharsModel(QWidget* aOwner, uc::GlyphStyleSets& glyphSets);
     ~CharsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
@@ -320,6 +316,7 @@ protected:
 
 private:
     Ui::FmMain *ui = nullptr;
+    uc::GlyphStyleSets glyphSets;
     CharsModel model;
     BlocksModel blocksModel;
     SearchModel searchModel;

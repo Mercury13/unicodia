@@ -449,8 +449,8 @@ void VirtualCharsModel::paint(QPainter *painter, const QStyleOptionViewItem &opt
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
-CharsModel::CharsModel(QWidget* aOwner) :
-    Super(aOwner, glyphStyle.sets),
+CharsModel::CharsModel(QWidget* aOwner, uc::GlyphStyleSets& glyphSets) :
+    Super(aOwner, glyphSets),
     match(str::toQ(FAM_DEFAULT)),
     rows(NCOLS) {}
 
@@ -878,10 +878,10 @@ QVariant FavsModel::headerData(
 FmMain::FmMain(QWidget *parent)
     : Super(parent),
       ui(new Ui::FmMain),
-      model(this),
-      searchModel(this, model.glyphStyle.sets),
+      model(this, glyphSets),
+      searchModel(this, glyphSets),
       libModel(this),
-      favsModel(this, model.glyphStyle.sets),
+      favsModel(this, glyphSets),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       fontTofu(str::toQ(FAM_TOFU), FSZ_BIG),
       mainGui(this, model.match)
@@ -1442,7 +1442,7 @@ void FmMain::copyCurrentLib()
 
 void FmMain::forceShowCp(MaybeChar ch)
 {
-    ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, model.glyphStyle.sets);
+    ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, glyphSets);
 
     // Block
     int iBlock = ui->comboBlock->currentIndex();
@@ -1499,7 +1499,7 @@ void FmMain::libChanged(const QModelIndex& current)
                 emojiDraw = uc::EmojiDraw::GRAPHIC;
             }
             auto& wi = libCpWidgets[i];
-            wi->setCp(node.value[i], emojiDraw, model.glyphStyle.sets);
+            wi->setCp(node.value[i], emojiDraw, glyphSets);
             wi->show();
         }
         for (unsigned i = len; i < uc::LONGEST_LIB; ++i) {
@@ -1832,7 +1832,7 @@ void FmMain::dumpTiles()
     for (auto& v : uc::allLibNodes()) {
         auto tiles = getCharTiles(v);
         for (auto& tile : tiles) {
-            if (tile.isEmoji(model.glyphStyle.sets)) {
+            if (tile.isEmoji(glyphSets)) {
                 addPriority(hRoot, tile.text, 0, true);
                 prio0.insert(tile.text);
             }
@@ -1851,10 +1851,10 @@ void FmMain::dumpTiles()
 void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting)
 {
     if (channel != uc::EcGlyphStyleChannel::NONE)
-        model.glyphStyle.sets[channel] = setting;
+        glyphSets[channel] = setting;
 
     emit model.dataChanged({}, {});
-    ui->wiCharShowcase->redrawSampleChar(model.glyphStyle.sets);
+    ui->wiCharShowcase->redrawSampleChar(glyphSets);
 
     /// @todo [favs] do the same for favs
 }
