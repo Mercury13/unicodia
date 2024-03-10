@@ -54,22 +54,27 @@ constexpr std::string_view CONFIG_NAME = "config.xml";
 
 ///// Favs /////////////////////////////////////////////////////////////////////
 
-bool config::Favs::add(char32_t code)
+TinySizet config::Favs::add(char32_t code)
 {
     // Add only feasible CPs
     if (code > uc::CAPACITY || !uc::cpsByCode[code])
-        return false;
+        return TINY_NULL;
+    // Already exists — do nothing
     auto [_, wasAdded] = ndx.insert(code);
-    if (wasAdded) {
-        if (!fCodes.empty() && code > fCodes.back()) {
-            // A very frequent branch
-            fCodes.emplace_back(code);
-        } else {
-            auto whereInsert = std::lower_bound(fCodes.begin(), fCodes.end(), code);
-            fCodes.insert(whereInsert, code);
-        }
+    if (!wasAdded)
+        return TINY_NULL;
+
+    if (!fCodes.empty() && code > fCodes.back()) {
+        // A very frequent branch
+        auto oldSize = fCodes.size();
+        fCodes.emplace_back(code);
+        return oldSize;
+    } else {
+        auto whereInsert = std::lower_bound(fCodes.begin(), fCodes.end(), code);
+        auto index = whereInsert - fCodes.begin();
+        fCodes.insert(whereInsert, code);
+        return index;
     }
-    return wasAdded;
 }
 
 
@@ -80,14 +85,16 @@ void config::Favs::clear()
 }
 
 
-bool config::Favs::erase(char32_t code)
+TinySizet config::Favs::erase(char32_t code)
 {
-    size_t nErased = ndx.erase(code);
-    if (nErased) {
-        auto whereErase = std::equal_range(fCodes.begin(), fCodes.end(), code);
-        fCodes.erase(whereErase.first, whereErase.second);
-    }
-    return nErased;
+    // First erase from index
+    if (!ndx.erase(code))
+        return TINY_NULL;
+
+    auto whereErase = std::equal_range(fCodes.begin(), fCodes.end(), code);
+    auto index = whereErase.first - fCodes.begin();
+    fCodes.erase(whereErase.first, whereErase.second);
+    return index;
 }
 
 

@@ -12,6 +12,7 @@
 // Libs
 #include "u_Version.h"
 #include "u_EnumSize.h"
+#include "u_TinyOpt.h"
 
 
 DEFINE_ENUM (BlockOrder,
@@ -55,9 +56,9 @@ namespace config {
     {
     public:
         /// @return  [+] was added
-        bool add(char32_t code);
+        TinySizet add(char32_t code);
         /// @return  [+] was erased
-        bool erase(char32_t code);
+        TinySizet erase(char32_t code);
         size_t size() const { return fCodes.size(); }
         /// @return  All codes, ordered by CP
         std::span<const char32_t> codes() const { return fCodes; }
