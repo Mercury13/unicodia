@@ -1051,7 +1051,6 @@ void FmMain::initFavs(const InitBlocks& ib)
     paintTo(ui->wiFavsBar, ib.buttonColor);
 
     /// @todo [favs] initFavs
-    ui->tabsMain->removeTab(2);
 }
 
 
