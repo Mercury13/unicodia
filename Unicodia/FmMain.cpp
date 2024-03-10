@@ -72,6 +72,14 @@ namespace {
 #define SUBURL_REPO "Mercury13/unicodia/releases"
     constinit const char* URL_UPDATE = "https://api.github.com/repos/" SUBURL_REPO "?per_page=" N_CHECKED_VERSIONS;
     constinit const char* URL_REPO = "https://github.com/" SUBURL_REPO;
+
+    enum {
+        I_BLOCKS,
+        I_LIBRARY,
+        I_FAVS,
+        I_TERMS,
+        I_ABOUT
+    };
 }
 
 ///// RowCache /////////////////////////////////////////////////////////////////
