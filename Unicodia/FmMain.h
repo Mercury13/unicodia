@@ -285,9 +285,8 @@ public:
     int rowCount(const QModelIndex& = {}) const override;
     /// @todo [favs] need data at least for BG
     //QVariant data(const QModelIndex& index, int role) const override;
-    //QVariant headerData(int section, Qt::Orientation orientation,
-    //                    int role = Qt::DisplayRole) const override;
-    std::optional<QFont> fontAt(const QModelIndex& index) const;
+    QVariant headerData(int section, Qt::Orientation orientation,
+                        int role = Qt::DisplayRole) const override;
     MaybeChar charAt(const QModelIndex& index) const override;
 
     using Super::beginResetModel;

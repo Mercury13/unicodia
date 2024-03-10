@@ -846,6 +846,32 @@ MaybeChar FavsModel::charAt(const QModelIndex& index) const
 }
 
 
+QVariant FavsModel::headerData(
+        int section, Qt::Orientation orientation, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole:
+        if (orientation == Qt::Horizontal) {
+            return section + 1;
+        } else {
+            unsigned index = section * NCOLS;
+            if (index < config::favs.nCodes()) {
+                int code = config::favs.codeAt(index);
+                char buf[20];
+                snprintf(buf, std::size(buf), "%04x", code);
+                QString r = buf;
+                if (code <= 0xFFFF)
+                    r += QChar{0x2007};  // 2007 figure space
+                return r;
+            }
+            return {};
+        }
+    default:
+        return {};
+    }
+}
+
+
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 
@@ -1102,6 +1128,7 @@ void FmMain::initFavs(const InitBlocks& ib)
     // Left fixed, right stretches
     ui->splitFavs->setStretchFactor(0, 0);
     ui->splitFavs->setStretchFactor(1, 1);
+    ui->splitFavs->setSizes(ib.sizes);
 
     /// @todo [favs] initFavs
 }
