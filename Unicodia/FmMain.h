@@ -122,15 +122,21 @@ class VirtualCharsModel
     using SuperD = QStyledItemDelegate;
 public:
     QWidget* const owner;
-    VirtualCharsModel(QWidget* const aOwner, uc::GlyphStyleSets& aGlyphSets);
+    VirtualCharsModel(QWidget* aOwner, uc::GlyphStyleSets& aGlyphSets);
 
     // QAbstractTableModel
     int columnCount(const QModelIndex& = {}) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
 
     virtual MaybeChar charAt(const QModelIndex& index) const = 0;
     virtual QString textAt(const QModelIndex& index) const;
     virtual QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
     QColor fgAt(const QModelIndex& index, TableColors tcl) const;
+    std::optional<QFont> fontAt(const QModelIndex& index) const;
+
+    // Delegate
+    void paint(QPainter *painter, const QStyleOptionViewItem &option,
+               const QModelIndex &index) const override;
 protected:
     uc::GlyphStyleSets& glyphSets;
     mutable TableCache tcache;
@@ -171,7 +177,6 @@ public:
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
-    std::optional<QFont> fontAt(const QModelIndex& index) const;
     QColor fgAt(const uc::Cp& cp, TableColors tcl) const override;
     using Super::fgAt;
     void addCp(const uc::Cp& aCp);
@@ -189,10 +194,6 @@ public:
     void build();
     using Super::beginResetModel;
     using Super::endResetModel;
-
-    // Delegate
-    void paint(QPainter *painter, const QStyleOptionViewItem &option,
-               const QModelIndex &index) const override;
 private:
     RowCache rows;
 };
@@ -282,7 +283,8 @@ public:
     ~FavsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
-    QVariant data(const QModelIndex& index, int role) const override;
+    /// @todo [favs] need data at least for BG
+    //QVariant data(const QModelIndex& index, int role) const override;
     //QVariant headerData(int section, Qt::Orientation orientation,
     //                    int role = Qt::DisplayRole) const override;
     std::optional<QFont> fontAt(const QModelIndex& index) const;
@@ -312,6 +314,7 @@ public:
     void chooseFirstLanguage();
     BlockOrder blockOrder() const;
     void setBlockOrder(BlockOrder x);
+    void configLoaded();
 
 protected:
     bool eventFilter(QObject *obj, QEvent *event) override;

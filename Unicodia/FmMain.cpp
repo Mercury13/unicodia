@@ -399,46 +399,15 @@ void VirtualCharsModel::paintItem(
 }
 
 
-///// CharsModel ///////////////////////////////////////////////////////////////
-
-
-CharsModel::CharsModel(QWidget* aOwner) :
-    Super(aOwner, glyphStyle.sets),
-    match(str::toQ(FAM_DEFAULT)),
-    rows(NCOLS) {}
-
-// -warn: strange with =default
-CharsModel::~CharsModel() {}
-
-
-int CharsModel::rowCount(const QModelIndex&) const
-{
-    return rows.nRows();
-}
-
-
-std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
+std::optional<QFont> VirtualCharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
-        return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, glyphStyle.sets);
+        return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, glyphSets);
     return {};
 }
 
 
-QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
-{
-    if (tcl != TableColors::NO) {
-        if (isCjkCollapsed) {
-            auto block = uc::blockOf(cp.subj);
-            if (block->flags.have(uc::Bfg::COLLAPSIBLE))
-                return TX_CJK;
-        }
-    }
-    return {};
-}
-
-
-QVariant CharsModel::data(const QModelIndex& index, int role) const
+QVariant VirtualCharsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::DisplayRole:
@@ -460,11 +429,57 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             if (auto c = fgAt(index, TableColors::YES); c.isValid())
                 return c;
         }
-        if (isCjkCollapsed) {
-
-        }
         return {};
 
+    case Qt::TextAlignmentRole:
+        return Qt::AlignCenter;
+    default:
+        return {};
+    }
+}
+
+
+void VirtualCharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
+           const QModelIndex &index) const
+{
+    tcache.paint(painter, option, index, *this);
+}
+
+
+///// CharsModel ///////////////////////////////////////////////////////////////
+
+
+CharsModel::CharsModel(QWidget* aOwner) :
+    Super(aOwner, glyphStyle.sets),
+    match(str::toQ(FAM_DEFAULT)),
+    rows(NCOLS) {}
+
+// -warn: strange with =default
+CharsModel::~CharsModel() {}
+
+
+int CharsModel::rowCount(const QModelIndex&) const
+{
+    return rows.nRows();
+}
+
+
+QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
+{
+    if (tcl != TableColors::NO) {
+        if (isCjkCollapsed) {
+            auto block = uc::blockOf(cp.subj);
+            if (block->flags.have(uc::Bfg::COLLAPSIBLE))
+                return TX_CJK;
+        }
+    }
+    return {};
+}
+
+
+QVariant CharsModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
     case Qt::BackgroundRole: {
             auto cp = charAt(index);
             if (cp) {
@@ -482,10 +497,8 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             return {};
         }
 
-    case Qt::TextAlignmentRole:
-        return Qt::AlignCenter;
     default:
-        return {};
+        return Super::data(index, role);
     }
 }
 
@@ -555,13 +568,6 @@ void CharsModel::build()
     }
     endResetModel();
 }
-
-void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
-           const QModelIndex &index) const
-{
-    tcache.paint(painter, option, index, *this);
-}
-
 
 bool CharsModel::isCharCollapsed(char32_t code) const
 {
@@ -824,7 +830,9 @@ FavsModel::~FavsModel() = default;
 
 
 int FavsModel::rowCount(const QModelIndex&) const
-{ return config::favs.nCodes() + (NCOLS - 1) / NCOLS; }
+{
+    return (config::favs.nCodes() + (NCOLS - 1)) / NCOLS;
+}
 
 
 MaybeChar FavsModel::charAt(const QModelIndex& index) const
@@ -835,21 +843,6 @@ MaybeChar FavsModel::charAt(const QModelIndex& index) const
     if (index2 >= config::favs.nCodes())
         return {};
     return config::favs.codeAt(index2);
-}
-
-
-QVariant FavsModel::data(const QModelIndex& index, int role) const
-{
-    switch (role) {
-    case Qt::DisplayRole:
-        if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
-            if (auto q = textAt(index); !q.isEmpty())
-                return q;
-        }
-        return {};
-    default:
-        return {};
-    }
 }
 
 
@@ -1101,6 +1094,15 @@ void FmMain::initFavs(const InitBlocks& ib)
 {
     paintTo(ui->wiFavsBar, ib.buttonColor);
 
+    ui->tableFavs->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->tableFavs->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
+    ui->tableFavs->setItemDelegate(&favsModel);
+    ui->tableFavs->setModel(&favsModel);
+
+    // Left fixed, right stretches
+    ui->splitFavs->setStretchFactor(0, 0);
+    ui->splitFavs->setStretchFactor(1, 1);
+
     /// @todo [favs] initFavs
 }
 
@@ -1113,6 +1115,17 @@ void FmMain::setBlockOrder(BlockOrder x)
 {
     radioSortOrder.set(x);
     rebuildBlocks();
+}
+
+
+void FmMain::configLoaded()
+{
+    favsModel.beginResetModel();
+    favsModel.endResetModel();
+
+    /// @todo [favs] need more complex code
+    auto index = model.index(0, 0);
+    ui->tableFavs->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
 }
 
 

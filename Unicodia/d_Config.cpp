@@ -171,6 +171,10 @@ namespace {
                     }
                 }
             }
+            /// @todo [favs] temporarily filling favourites
+            for (int i = 1; i < 255; i+= 3) {
+                config::favs.add(i);
+            }
         }
     }
 

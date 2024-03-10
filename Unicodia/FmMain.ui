@@ -437,7 +437,7 @@
          <number>0</number>
         </property>
         <item>
-         <widget class="QSplitter" name="splitBlocks_2">
+         <widget class="QSplitter" name="splitFavs">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -819,6 +819,8 @@
   <tabstop>listSearch</tabstop>
   <tabstop>treeLibrary</tabstop>
   <tabstop>vwLibInfo</tabstop>
+  <tabstop>tableFavs</tabstop>
+  <tabstop>vwFavs</tabstop>
   <tabstop>vwTerms</tabstop>
   <tabstop>comboLang</tabstop>
   <tabstop>btCheckForUpdate</tabstop>

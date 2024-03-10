@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
 
         w.chooseFirstLanguage();
         w.setBlockOrder(order);  // Strange interaction: first language, then order, not vice-versa
+        w.configLoaded();
 
         /// @todo [config] We’ve got a bad position for window divider
         //setGeometry(w, rect);
