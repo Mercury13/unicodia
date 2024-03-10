@@ -6576,7 +6576,7 @@
       <p />
       <p>Holding {{kb|Alt}} (left{{-}}everywhere, right{{-}}depends on keyboard layout), type on '''numeric''' keypad '''decimal''' character code from 1 to 255. For example, {{k|Alt|51}} makes digit 3.</p>
       <p />
-      <p>The encoding is common for all users, is one of DOS encodings (437, 866 etc) and depends on chosen encoding for non-Unicode applications. Codes 1 to 31 and 127 make printable versions of those characters: 1={{em|☺}}.</p>
+      <p>The encoding is common for all users, is one of DOS encodings (437, 866 etc) and depends on chosen language for non-Unicode applications. Codes 1 to 31 and 127 make printable versions of those characters: 1={{em|☺}}.</p>
       <p />
       <p>'''Windows codes'''</p>
       <p />
