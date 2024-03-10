@@ -279,14 +279,16 @@ public:
     ~FavsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
-    /// @todo [favs] need data at least for BG
-    //QVariant data(const QModelIndex& index, int role) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
     MaybeChar charAt(const QModelIndex& index) const override;
 
     using Super::beginResetModel;
     using Super::endResetModel;
+private:
+    unsigned indexAt(int row, int col) const { return (row * NCOLS) + col; }
+    unsigned indexAt(const QModelIndex& index) const { return indexAt(index.row(), index.column()); }
 };
 
 

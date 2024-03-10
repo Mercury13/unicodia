@@ -847,7 +847,7 @@ MaybeChar FavsModel::charAt(const QModelIndex& index) const
 {
     if (!index.isValid())
         return {};
-    size_t index2 = index.row() * NCOLS + index.column();
+    size_t index2 = indexAt(index);
     if (index2 >= config::favs.nCodes())
         return {};
     return config::favs.codeAt(index2);
@@ -862,7 +862,7 @@ QVariant FavsModel::headerData(
         if (orientation == Qt::Horizontal) {
             return section + 1;
         } else {
-            unsigned index = section * NCOLS;
+            unsigned index = indexAt(section, 0);
             if (index < config::favs.nCodes()) {
                 int code = config::favs.codeAt(index);
                 char buf[20];
@@ -876,6 +876,21 @@ QVariant FavsModel::headerData(
         }
     default:
         return {};
+    }
+}
+
+
+QVariant FavsModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
+    case Qt::BackgroundRole: {
+            auto iCp = indexAt(index);
+            if (iCp >= config::favs.nCodes())
+                return owner->palette().button().color();
+            return {};
+        }
+    default:
+        return Super::data(index, role);
     }
 }
 
