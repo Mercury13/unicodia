@@ -7964,6 +7964,9 @@
    <text id="Search">
     <orig>Search</orig>
    </text>
+   <text id="Favs">
+    <orig>Favourites ({1})</orig>
+   </text>
   </group>
   <group id="Showcase">
    <group id="Ui">

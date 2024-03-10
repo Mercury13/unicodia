@@ -11535,6 +11535,10 @@
     <orig>Search</orig>
     <transl>Пошук</transl>
    </text>
+   <text id="Favs">
+    <orig>Favourites ({1})</orig>
+    <transl>Улюблені ({1})</transl>
+   </text>
   </group>
   <group id="Showcase">
    <group id="Ui">
