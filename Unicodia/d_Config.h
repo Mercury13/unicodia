@@ -59,7 +59,8 @@ namespace config {
         TinySizet add(char32_t code);
         /// @return  [+] was erased
         TinySizet erase(char32_t code);
-        size_t size() const { return fCodes.size(); }
+        size_t nCodes() const { return fCodes.size(); }
+        char32_t codeAt(size_t i) { return fCodes.at(i); }
         /// @return  All codes, ordered by CP
         std::span<const char32_t> codes() const { return fCodes; }
         void clear();

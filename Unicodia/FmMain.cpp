@@ -295,16 +295,117 @@ QVariant BlocksModel::data(const QModelIndex& index, int role) const
 }
 
 
+///// VirtualCharsModel ////////////////////////////////////////////////////////
+
+
+VirtualCharsModel::VirtualCharsModel(
+        QWidget* aOwner, uc::GlyphStyleSets& aGlyphSets)
+    : owner(aOwner), glyphSets(aGlyphSets)
+{
+    tcache.connectSignals(this);
+}
+
+
+int VirtualCharsModel::columnCount(const QModelIndex&) const
+    { return NCOLS; }
+
+
+QString VirtualCharsModel::textAt(const QModelIndex& index) const
+{
+    auto cp = charAt(index);
+    if (!cp)
+        return {};
+    /// @todo [urgent] glyphStyle is common for all VirtualCarsModel’s, what to do?
+    return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, WiShowcase::EMOJI_DRAW, glyphSets).text;
+}
+
+
+void VirtualCharsModel::initStyleOption(QStyleOptionViewItem *option,
+                     const QModelIndex &index) const
+{
+    SuperD::initStyleOption(option, index);
+    if (option->state & (QStyle::State_HasFocus | QStyle::State_Selected)) {
+        option->state.setFlag(QStyle::State_Selected, false);
+        option->state.setFlag(QStyle::State_HasFocus, false);
+        if (option->backgroundBrush.style() != Qt::NoBrush) {
+            auto clBg = option->backgroundBrush.color();
+            if (clBg.isValid()) {
+                clBg.setAlpha(clBg.alpha() / 2);
+                option->backgroundBrush.setColor(clBg);
+            }
+        }
+    }
+}
+
+
+QColor VirtualCharsModel::fgAt(const uc::Cp&, TableColors) const
+    { return {}; }
+
+
+QColor VirtualCharsModel::fgAt(const QModelIndex& index, TableColors tcl) const
+{
+    auto cp = charAt(index);
+    if (!cp)
+        return {};
+    return fgAt(*cp, tcl);
+}
+
+
+void VirtualCharsModel::drawChar(QPainter* painter, const QRect& rect,
+            const QModelIndex& index, const QColor& color) const
+{
+    auto ch = charAt(index);
+    if (ch) {
+        auto color1 = fgAt(*ch, TableColors::YES);
+        if (!color1.isValid())
+            color1 = color;
+        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, WiShowcase::EMOJI_DRAW, glyphSets);
+    }
+}
+
+void VirtualCharsModel::paintItem1(
+        QPainter* painter,
+        const QStyleOptionViewItem& option,
+        const QModelIndex& index,
+        const QColor& color) const
+{
+    SuperD::paint(painter, option, index);
+    drawChar(painter, option.rect, index, color);
+}
+
+
+void VirtualCharsModel::paintItem(
+        QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    if (option.state.testFlag(QStyle::State_HasFocus)) {
+        // It’d be nice to draw some nice focus using Windows skin, but cannot
+        //Super::paint(painter, option, index);
+        // Draw it as a button
+        QStyleOptionButton sob;
+            sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
+                        | QStyle::State_Active | QStyle::State_Enabled;
+            sob.rect = option.rect;
+        owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
+        paintItem1(painter, option, index, owner->palette().buttonText().color());
+    } else if (option.state.testFlag(QStyle::State_Selected)) {
+        // Selected, not focused? Initial style is bad
+        auto opt2 = option;
+        opt2.state.setFlag(QStyle::State_Selected, false);
+        owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
+        paintItem1(painter, option, index, owner->palette().windowText().color());
+    } else {
+        paintItem1(painter, option, index, owner->palette().windowText().color());
+    }
+}
+
+
 ///// CharsModel ///////////////////////////////////////////////////////////////
 
 
 CharsModel::CharsModel(QWidget* aOwner) :
-    owner(aOwner),
+    Super(aOwner, glyphStyle.sets),
     match(str::toQ(FAM_DEFAULT)),
-    rows(NCOLS)
-{
-    tcache.connectSignals(this);
-}
+    rows(NCOLS) {}
 
 // -warn: strange with =default
 CharsModel::~CharsModel() {}
@@ -316,24 +417,11 @@ int CharsModel::rowCount(const QModelIndex&) const
 }
 
 
-int CharsModel::columnCount(const QModelIndex&) const
-    { return NCOLS; }
-
-
 std::optional<QFont> CharsModel::fontAt(const QModelIndex& index) const
 {
     if (auto cp = charAt(index))
         return ::fontAt(WiShowcase::EMOJI_DRAW, *cp, glyphStyle.sets);
     return {};
-}
-
-
-QColor CharsModel::fgAt(const QModelIndex& index, TableColors tcl) const
-{
-    auto cp = charAt(index);
-    if (!cp)
-        return {};
-    return fgAt(*cp, tcl);
 }
 
 
@@ -347,15 +435,6 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
         }
     }
     return {};
-}
-
-
-QString CharsModel::textAt(const QModelIndex& index) const
-{
-    auto cp = charAt(index);
-    if (!cp)
-        return {};
-    return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, WiShowcase::EMOJI_DRAW, glyphStyle.sets).text;
 }
 
 
@@ -476,71 +555,6 @@ void CharsModel::build()
     }
     endResetModel();
 }
-
-void CharsModel::drawChar(QPainter* painter, const QRect& rect,
-            const QModelIndex& index, const QColor& color) const
-{
-    auto ch = charAt(index);
-    if (ch) {
-        auto color1 = fgAt(*ch, TableColors::YES);
-        if (!color1.isValid())
-            color1 = color;
-        ::drawChar(painter, rect, 100, *ch, color1, TABLE_DRAW, WiShowcase::EMOJI_DRAW, glyphStyle.sets);
-    }
-}
-
-void CharsModel::initStyleOption(QStyleOptionViewItem *option,
-                     const QModelIndex &index) const
-{
-    SuperD::initStyleOption(option, index);
-    if (option->state & (QStyle::State_HasFocus | QStyle::State_Selected)) {
-        option->state.setFlag(QStyle::State_Selected, false);
-        option->state.setFlag(QStyle::State_HasFocus, false);
-        if (option->backgroundBrush.style() != Qt::NoBrush) {
-            auto clBg = option->backgroundBrush.color();
-            if (clBg.isValid()) {
-                clBg.setAlpha(clBg.alpha() / 2);
-                option->backgroundBrush.setColor(clBg);
-            }
-        }
-    }
-}
-
-
-void CharsModel::paintItem1(
-        QPainter* painter,
-        const QStyleOptionViewItem& option,
-        const QModelIndex& index,
-        const QColor& color) const
-{    
-    SuperD::paint(painter, option, index);
-    drawChar(painter, option.rect, index, color);
-}
-
-void CharsModel::paintItem(
-        QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
-{
-    if (option.state.testFlag(QStyle::State_HasFocus)) {
-        // It’d be nice to draw some nice focus using Windows skin, but cannot
-        //Super::paint(painter, option, index);
-        // Draw it as a button
-        QStyleOptionButton sob;
-            sob.state = QStyle::State_HasFocus | QStyle::State_MouseOver | QStyle::State_Selected
-                        | QStyle::State_Active | QStyle::State_Enabled;
-            sob.rect = option.rect;
-        owner->style()->drawControl(QStyle::CE_PushButton, &sob, painter, option.widget);
-        paintItem1(painter, option, index, owner->palette().buttonText().color());
-    } else if (option.state.testFlag(QStyle::State_Selected)) {
-        // Selected, not focused? Initial style is bad
-        auto opt2 = option;
-        opt2.state.setFlag(QStyle::State_Selected, false);
-        owner->style()->drawPrimitive(QStyle::PE_FrameMenu, &opt2, painter, option.widget);
-        paintItem1(painter, option, index, owner->palette().windowText().color());
-    } else {
-        paintItem1(painter, option, index, owner->palette().windowText().color());
-    }
-}
-
 
 void CharsModel::paint(QPainter *painter, const QStyleOptionViewItem &option,
            const QModelIndex &index) const
@@ -803,6 +817,42 @@ QVariant LibModel::data(const QModelIndex &index, int role) const
 #undef STMT
 
 
+///// FavsModel ////////////////////////////////////////////////////////////////
+
+
+FavsModel::~FavsModel() = default;
+
+
+int FavsModel::rowCount(const QModelIndex&) const
+{ return config::favs.nCodes() + (NCOLS - 1) / NCOLS; }
+
+
+MaybeChar FavsModel::charAt(const QModelIndex& index) const
+{
+    if (!index.isValid())
+        return {};
+    size_t index2 = index.row() * NCOLS + index.column();
+    if (index2 >= config::favs.nCodes())
+        return {};
+    return config::favs.codeAt(index2);
+}
+
+
+QVariant FavsModel::data(const QModelIndex& index, int role) const
+{
+    switch (role) {
+    case Qt::DisplayRole:
+        if constexpr (TABLE_DRAW == TableDraw::INTERNAL) {
+            if (auto q = textAt(index); !q.isEmpty())
+                return q;
+        }
+        return {};
+    default:
+        return {};
+    }
+}
+
+
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 
@@ -812,6 +862,7 @@ FmMain::FmMain(QWidget *parent)
       model(this),
       searchModel(this, model.glyphStyle.sets),
       libModel(this),
+      favsModel(this, model.glyphStyle.sets),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       fontTofu(str::toQ(FAM_TOFU), FSZ_BIG),
       mainGui(this, model.match)

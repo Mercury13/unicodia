@@ -113,18 +113,52 @@ protected:
 
 enum class TableColors { NO, YES };
 
-class CharsModel final
+
+class VirtualCharsModel
         : public QAbstractTableModel,
           public QStyledItemDelegate,
           protected ItemPainter
 {
-    using Super = QAbstractTableModel;
     using SuperD = QStyledItemDelegate;
 public:
     QWidget* const owner;
+    VirtualCharsModel(QWidget* const aOwner, uc::GlyphStyleSets& aGlyphSets);
+
+    // QAbstractTableModel
+    int columnCount(const QModelIndex& = {}) const override;
+
+    virtual MaybeChar charAt(const QModelIndex& index) const = 0;
+    virtual QString textAt(const QModelIndex& index) const;
+    virtual QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
+    QColor fgAt(const QModelIndex& index, TableColors tcl) const;
+protected:
+    uc::GlyphStyleSets& glyphSets;
+    mutable TableCache tcache;
+
+    // Delegate
+    void initStyleOption(QStyleOptionViewItem *option,
+                         const QModelIndex &index) const override;
+    void paintItem1(
+            QPainter* painter,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index,
+            const QColor& color) const;
+    virtual void drawChar(QPainter* painter, const QRect& rect,
+            const QModelIndex& index, const QColor& color) const;
+    // ItemPainter
+    void paintItem(
+            QPainter* painter,
+            const QStyleOptionViewItem& option,
+            const QModelIndex& index) const override;
+};
+
+class CharsModel final
+        : public VirtualCharsModel
+{
+    using Super = VirtualCharsModel;
+public:
     FontMatch match;
     bool isCjkCollapsed = true;
-    mutable TableCache tcache;
 
     struct Style {
         uc::GlyphStyleSets sets;
@@ -134,16 +168,14 @@ public:
     ~CharsModel();  // forward-defined class here
 
     int rowCount(const QModelIndex& = {}) const override;
-    int columnCount(const QModelIndex& = {}) const override;
     QVariant data(const QModelIndex& index, int role) const override;
     QVariant headerData(int section, Qt::Orientation orientation,
                         int role = Qt::DisplayRole) const override;
     std::optional<QFont> fontAt(const QModelIndex& index) const;
-    QColor fgAt(const QModelIndex& index, TableColors tcl) const;
-    QColor fgAt(const uc::Cp& cp, TableColors tcl) const;
-    QString textAt(const QModelIndex& index) const;
+    QColor fgAt(const uc::Cp& cp, TableColors tcl) const override;
+    using Super::fgAt;
     void addCp(const uc::Cp& aCp);
-    MaybeChar charAt(const QModelIndex& index) const
+    MaybeChar charAt(const QModelIndex& index) const override
             { return rows.charAt(index.row(), index.column()); }
     QModelIndex indexOf(char32_t code);
 
@@ -161,25 +193,8 @@ public:
     // Delegate
     void paint(QPainter *painter, const QStyleOptionViewItem &option,
                const QModelIndex &index) const override;
-protected:
-    // Delegate
-    void initStyleOption(QStyleOptionViewItem *option,
-                         const QModelIndex &index) const override;
-    void paintItem(
-            QPainter* painter,
-            const QStyleOptionViewItem& option,
-            const QModelIndex& index) const override;
-    void paintItem1(
-            QPainter* painter,
-            const QStyleOptionViewItem& option,
-            const QModelIndex& index,
-            const QColor& color) const;
-    void drawChar(QPainter* painter, const QRect& rect,
-                const QModelIndex& index, const QColor& color) const;
 private:
     RowCache rows;
-    static constexpr auto SHRINK_Q = 4;
-    static constexpr auto SHRINK_Q1 = 5;    // draw a bit larger, to counter drawing problems
 };
 
 
@@ -258,6 +273,26 @@ private:
     mutable LruCache<const uc::LibNode*, QPixmap> cache { 300 };
 };
 
+
+class FavsModel final : public VirtualCharsModel
+{
+    using Super = VirtualCharsModel;
+public:
+    using Super::Super;
+    ~FavsModel();  // forward-defined class here
+
+    int rowCount(const QModelIndex& = {}) const override;
+    QVariant data(const QModelIndex& index, int role) const override;
+    //QVariant headerData(int section, Qt::Orientation orientation,
+    //                    int role = Qt::DisplayRole) const override;
+    std::optional<QFont> fontAt(const QModelIndex& index) const;
+    MaybeChar charAt(const QModelIndex& index) const override;
+
+    using Super::beginResetModel;
+    using Super::endResetModel;
+};
+
+
 enum class SelectMode { NONE, INSTANT };
 
 class FmMain : public QMainWindow,
@@ -288,6 +323,7 @@ private:
     SearchModel searchModel;
     LangModel langModel;
     LibModel libModel;
+    FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
     QToolButton* btSort;

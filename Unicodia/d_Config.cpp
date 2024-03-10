@@ -159,6 +159,18 @@ namespace {
             auto hView = root.child("view");
             auto sortName = hView.attribute("sort").as_string();
             blockOrder = orderNames.findDef(sortName, blockOrder);
+
+            auto hFavs = root.child("favs");
+            for (auto child : hFavs.children("cp")) {
+                if (auto attr = child.attribute("c")) {
+                    std::string_view text = attr.as_string();
+                    unsigned code = 0xFFFFFF;
+                    auto result = std::from_chars(text.data(), text.data() + text.length(), code, 16);
+                    if (result.ec != std::errc()) {
+                        config::favs.add(code);
+                    }
+                }
+            }
         }
     }
 
