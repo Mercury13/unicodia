@@ -1452,20 +1452,28 @@ namespace {
                         str::append(text, static_cast<int>(im.alt.win));
                     }
                     if (!im.alt.hasLocaleIndependent()) {
-                        if (im.alt.dosEn) {
+                        if (im.alt.dosEn
+                                && im.alt.dosRu == im.alt.dosEn
+                                && im.alt.dosEl == im.alt.dosEn) {
                             sp2.sep();
                             str::append(text, static_cast<int>(im.alt.dosEn));
-                            str::append(text, u8" (en)");
-                        }
-                        if (im.alt.dosRu) {
-                            sp2.sep();
-                            str::append(text, static_cast<int>(im.alt.dosRu));
-                            str::append(text, u8" (ru)");
-                        }
-                        if (im.alt.dosEl) {
-                            sp2.sep();
-                            str::append(text, static_cast<int>(im.alt.dosEl));
-                            str::append(text, u8" (el)");
+                            str::append(text, u8" (en/ru/el)");
+                        } else {
+                            if (im.alt.dosEn) {
+                                sp2.sep();
+                                str::append(text, static_cast<int>(im.alt.dosEn));
+                                str::append(text, u8" (en)");
+                            }
+                            if (im.alt.dosRu) {
+                                sp2.sep();
+                                str::append(text, static_cast<int>(im.alt.dosRu));
+                                str::append(text, u8" (ru)");
+                            }
+                            if (im.alt.dosEl) {
+                                sp2.sep();
+                                str::append(text, static_cast<int>(im.alt.dosEl));
+                                str::append(text, u8" (el)");
+                            }
                         }
                         if (im.alt.unicode) {
                             sp2.sep();
