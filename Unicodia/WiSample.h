@@ -43,8 +43,6 @@ private:
     void showBriefly();
     ///  Sets character to space and calls showBriefly to set correct height
     void showSpaceBriefly();
-    ///  Sets font to font, character to space, calls showBriefly to sert correct height
-    void showFontBriefly(const QFont& qfont);
     ///  Retrieves font and calls showFontBriefly to set corrent height
     ///  @return  font we used, may be reused for other needs (e.g. draw vertically)
     QFont showCpBriefly(const uc::Cp& ch);

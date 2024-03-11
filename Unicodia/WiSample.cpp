@@ -98,18 +98,12 @@ void WiSample::showSpaceBriefly()
 }
 
 
-void WiSample::showFontBriefly(const QFont& qfont)
-{
-    ui->lbSample->setFont(qfont);
-    showSpaceBriefly();
-}
-
-
 QFont WiSample::showCpBriefly(const uc::Cp& ch)
 {
     auto font = ch.font(match::Normal::INST);
     auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-    showFontBriefly(qfont);
+    ui->lbSample->setFont(qfont);
+    showSpaceBriefly();
     return qfont;
 }
 
