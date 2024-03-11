@@ -376,6 +376,7 @@ private:
     void rebuildBlocks();
     void setUpdating(bool value);
     void ensureNetMan();
+    void redrawFavsTab();
 
     // PixSource
     int pixSize() const override;

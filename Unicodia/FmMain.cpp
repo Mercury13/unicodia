@@ -1210,6 +1210,13 @@ void FmMain::rebuildBlocks()
     ui->comboBlock->setCurrentIndex(index2);
 }
 
+void FmMain::redrawFavsTab()
+{
+    ui->tabsMain->setTabText(I_FAVS,
+            loc::get("Main.Favs").argQ(config::favs.nCodes()));
+}
+
+
 namespace {
 
     void loadIcon(QIcon& r, std::string_view name)
@@ -1230,6 +1237,7 @@ void FmMain::translateMe()
     ui->wiCharShowcase->translateMe();
     ui->wiLibShowcase->translateMe();
     ui->wiFavsShowcase->translateMe();
+    redrawFavsTab();
 
     translateTerms();
     translateAbout();
