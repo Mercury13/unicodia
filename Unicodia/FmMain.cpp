@@ -323,7 +323,6 @@ QString VirtualCharsModel::textAt(const QModelIndex& index) const
     auto cp = charAt(index);
     if (!cp)
         return {};
-    /// @todo [favs, urgent] glyphStyle is common for all VirtualCharsModel’s, what to do?
     return cp->sampleProxy(uc::ProxyType::TABLE_DEFAULT, WiShowcase::EMOJI_DRAW, glyphSets).text;
 }
 
