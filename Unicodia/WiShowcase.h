@@ -106,6 +106,7 @@ public:
     void reset();
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
+    void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
 private:
     Ui::WiShowcase *ui;
 

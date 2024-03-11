@@ -1924,9 +1924,10 @@ void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting
         glyphSets[channel] = setting;
 
     emit model.dataChanged({}, {});
-    ui->wiCharShowcase->redrawSampleChar(glyphSets);
+    ui->wiCharShowcase->syncGlyphStyle(glyphSets, channel);
 
-    /// @todo [favs] do the same for favs
+    emit favsModel.dataChanged({}, {});
+    ui->wiFavsShowcase->syncGlyphStyle(glyphSets, channel);
 }
 
 

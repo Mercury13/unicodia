@@ -232,6 +232,7 @@ void WiShowcase::set(
         // No character
         ui->wiOsStyle->setEmptyCode(code);
         ui->btCopyEx->hide();
+        ui->wiGlyphStyle->hide();
         fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     }
 
@@ -246,6 +247,8 @@ void WiShowcase::reset()
     ui->lbCharCode->clear();
     ui->btCopy->setEnabled(false);
     ui->wiOsStyle->setNothing();
+    ui->wiGlyphStyle->hide();
+    fCurrChannel = uc::EcGlyphStyleChannel::NONE;
 }
 
 
@@ -330,4 +333,15 @@ void WiShowcase::redrawSampleChar(const uc::GlyphStyleSets& glyphSets)
 void WiShowcase::glyphStyleClicked()
 {
     emit glyphStyleChanged(fCurrChannel, radioGlyphStyle.get());
+}
+
+
+void WiShowcase::syncGlyphStyle(
+        const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel)
+{
+    // Are we showing this channel?
+    if (channel == uc::EcGlyphStyleChannel::NONE || fCurrChannel != channel)
+        return;
+    radioGlyphStyle.set(glyphSets[fCurrChannel]);
+    redrawSampleChar(glyphSets);
 }

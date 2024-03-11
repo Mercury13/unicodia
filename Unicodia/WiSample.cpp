@@ -43,10 +43,7 @@ void WiSample::setAbbrFont(const uc::Cp& ch)
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
         if (setFont(ch, match::MainFont::INST)) {
             ui->lbSample->setText(" ");
-            // Show just to check layout, then revert again
-            auto prevPage = ui->stackSample->currentIndex();
-            ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-            ui->stackSample->setCurrentIndex(prevPage);
+            showBriefly();
         }
     } else {
         clearSample();
@@ -63,6 +60,7 @@ void WiSample::drawWithQt(
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
+    needShowBriefly = false;
     auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, glyphSets);
     // Color
     if (ch.isTrueSpace()) {
@@ -82,6 +80,23 @@ void WiSample::clearSample()
     ui->lbSample->clear();
     ui->lbSample->setStyleSheet({});
     ui->lbSample->setFont(QFont());
+}
+
+
+void WiSample::showBriefly()
+{
+    if (needShowBriefly) {
+        ui->stackSample->setCurrentWidget(ui->pageSampleQt);
+        needShowBriefly = false;
+    }
+}
+
+
+void WiSample::showBriefly(const QFont& qfont)
+{
+    ui->lbSample->setFont(qfont);
+    ui->lbSample->setText(" ");
+    showBriefly(qfont);
 }
 
 
@@ -114,20 +129,18 @@ void WiSample::showCp(
         break;
     case uc::DrawMethod::SPACE: {
             clearSample();
-            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             auto font = ch.font(match::Normal::INST);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            ui->lbSample->clear();
-            ui->lbSample->setFont(qfont);
+            showBriefly(qfont);
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
         } break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
             // set dummy font
             auto font = ch.font(match::Normal::INST);
-            ui->lbSample->setText(QString{});
             QFont qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            ui->lbSample->setFont(qfont);
+            showBriefly(qfont);
             // set vertical mode
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             // EMPTY: we want text anyway
