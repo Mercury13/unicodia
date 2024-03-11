@@ -1878,7 +1878,7 @@ int FmMain::pixSize() const
 
 void FmMain::gotoCp(QWidget* initiator, char32_t cp)
 {
-    if (ui->wiFavsShowcase->isMyWidget(initiator))
+    if (ui->wiFavsShowcase->isAncestorOf(initiator))
         ui->tableFavs->setFocus();
     goToCp(cp);
 }

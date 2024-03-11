@@ -331,9 +331,3 @@ void WiShowcase::glyphStyleClicked()
 {
     emit glyphStyleChanged(fCurrChannel, radioGlyphStyle.get());
 }
-
-
-bool WiShowcase::isMyWidget(QWidget* widget)
-{
-    return (widget == ui->lbCharCode);
-}
