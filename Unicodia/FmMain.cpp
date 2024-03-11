@@ -1119,7 +1119,7 @@ void FmMain::initLibrary(const InitBlocks& ib)
         auto wi = new WiLibCp(ui->wiLibCps);
         layout->addWidget(wi);
         libCpWidgets[i] = wi;
-        connect(wi, &WiLibCp::goToCp, this, &This::goToCp);
+        connect(wi, &WiLibCp::goToCp, this, &This::gotoCp);
     }
     layout->addStretch(1);
 
@@ -1827,7 +1827,7 @@ void FmMain::searchEnterPressed(int index)
 {
     auto& line = searchModel.lineAt(index);
     if (line.cp) {
-        goToCp(line.cp->subj);
+        gotoCp(nullptr, line.cp->subj);
     } else if (line.node) {
         goToNode(*line.node);
     } else {
@@ -1873,15 +1873,6 @@ int FmMain::pixSize() const
     auto& fn = font();
     QFontMetrics metrics{fn};
     return (metrics.ascent() + metrics.descent()) * 3;
-}
-
-
-void FmMain::gotoCp(QWidget* initiator, char32_t cp)
-{
-    /// @todo [favs, naming] how to untie that naming knot?
-    if (ui->wiFavsShowcase->isAncestorOf(initiator))
-        ui->tableFavs->setFocus();
-    goToCp(cp);
 }
 
 
@@ -1940,8 +1931,10 @@ void FmMain::glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting
 }
 
 
-void FmMain::goToCp(char32_t cp)
+void FmMain::gotoCp(QWidget* initiator, char32_t cp)
 {
+    if (ui->wiFavsShowcase->isAncestorOf(initiator))
+        ui->tableFavs->setFocus();
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
 }

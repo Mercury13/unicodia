@@ -51,5 +51,5 @@ private slots:
     void linkActivated();
 
 signals:
-    void goToCp(char32_t cp);
+    void goToCp(QWidget* initiator, char32_t cp);
 };

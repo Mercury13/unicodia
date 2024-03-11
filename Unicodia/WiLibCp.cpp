@@ -94,6 +94,6 @@ void WiLibCp::removeCp()
 void WiLibCp::linkActivated()
 {
     if (currentCp != NO_CP) {
-        emit goToCp(currentCp);
+        emit goToCp(qobject_cast<QWidget*>(sender()), currentCp);
     }
 }

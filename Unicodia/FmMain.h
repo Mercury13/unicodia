@@ -383,8 +383,6 @@ private:
     int pixSize() const override;
     QColor winColor() const override { return palette().windowText().color(); }
 
-    // InternalWalker
-    void gotoCp(QWidget* initiator, char32_t cp) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
@@ -414,7 +412,8 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
-    void goToCp(char32_t cp);
+    // InternalWalker
+    void gotoCp(QWidget* initiator, char32_t cp) override;
     void goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
