@@ -42,7 +42,7 @@ void WiSample::setAbbrFont(const uc::Cp& ch)
 {
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
         if (setFont(ch, match::MainFont::INST)) {
-            showSpaceBriefly();
+            showBriefly();
         }
     } else {
         clearSample();
@@ -84,17 +84,11 @@ void WiSample::clearSample()
 
 void WiSample::showBriefly()
 {
+    ui->lbSample->setText(" ");
     if (needShowBriefly) {
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
         needShowBriefly = false;
     }
-}
-
-
-void WiSample::showSpaceBriefly()
-{
-    ui->lbSample->setText(" ");
-    showBriefly();
 }
 
 
@@ -103,7 +97,7 @@ QFont WiSample::showCpBriefly(const uc::Cp& ch)
     auto font = ch.font(match::Normal::INST);
     auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
     ui->lbSample->setFont(qfont);
-    showSpaceBriefly();
+    showBriefly();
     return qfont;
 }
 
