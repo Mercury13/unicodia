@@ -39,9 +39,9 @@ private:
     void drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
             const uc::GlyphStyleSets& glyphSets);
-    ///  Sets character to space and Shows pageSampleQt briefly to set correct height
+    ///  Sets character to space and shows pageSampleQt briefly to set correct height
     void showBriefly();
-    ///  Retrieves font and calls showSpaceBriefly to set corrent height
+    ///  Retrieves font and calls showBriefly to set corrent height
     ///  @return  font we used, may be reused for other needs (e.g. draw vertically)
     QFont showCpBriefly(const uc::Cp& ch);
 };
