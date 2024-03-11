@@ -43,6 +43,7 @@ private:
     void showBriefly();
     void showSpaceBriefly();
     void showFontBriefly(const QFont& qfont);
+    ///  @return  font we used, may be reused for other needs (e.g. draw vertically)
     QFont showCpBriefly(const uc::Cp& ch);
 };
 
