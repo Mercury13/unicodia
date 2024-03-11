@@ -1876,8 +1876,12 @@ int FmMain::pixSize() const
 }
 
 
-void FmMain::gotoCp(char32_t cp)
-    { goToCp(cp); }
+void FmMain::gotoCp(QWidget* initiator, char32_t cp)
+{
+    if (ui->wiFavsShowcase->isMyWidget(initiator))
+        ui->tableFavs->setFocus();
+    goToCp(cp);
+}
 
 
 namespace {

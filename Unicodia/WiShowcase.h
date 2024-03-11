@@ -106,6 +106,7 @@ public:
     void reset();
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
+    bool isMyWidget(QWidget* widget);
 private:
     Ui::WiShowcase *ui;
 

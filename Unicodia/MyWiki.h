@@ -45,7 +45,7 @@ namespace mywiki {
     class InternalWalker    // interface
     {
     public:
-        virtual void gotoCp(char32_t cp) = 0;
+        virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
         virtual ~InternalWalker() = default;
     };
 

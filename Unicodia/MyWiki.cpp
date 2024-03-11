@@ -156,8 +156,8 @@ namespace {
         void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
     };
 
-    void GotoCpLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
-        { gui.internalWalker().gotoCp(cp); }
+    void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
+        { gui.internalWalker().gotoCp(wi, cp); }
 
 }   // anon namespace
 

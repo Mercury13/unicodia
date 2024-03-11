@@ -384,7 +384,7 @@ private:
     QColor winColor() const override { return palette().windowText().color(); }
 
     // InternalWalker
-    void gotoCp(char32_t cp) override;
+    void gotoCp(QWidget* initiator, char32_t cp) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
