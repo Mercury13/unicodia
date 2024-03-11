@@ -105,6 +105,15 @@ void WiSample::showFontBriefly(const QFont& qfont)
 }
 
 
+QFont WiSample::showCpBriefly(const uc::Cp& ch)
+{
+    auto font = ch.font(match::Normal::INST);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+    showFontBriefly(qfont);
+    return qfont;
+}
+
+
 void WiSample::showCp(
         const uc::Cp& ch, uc::EmojiDraw emojiDraw,
         const uc::GlyphStyleSets& glyphSets)
@@ -133,19 +142,13 @@ void WiSample::showCp(
         ui->pageSampleCustom->setAbbreviation(ch.abbrev());
         break;
     case uc::DrawMethod::SPACE: {
-            clearSample();
-            auto font = ch.font(match::Normal::INST);
-            auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            showFontBriefly(qfont);
+            auto qfont = showCpBriefly(ch);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
         } break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
-            // set dummy font
-            auto font = ch.font(match::Normal::INST);
-            QFont qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            showFontBriefly(qfont);
+            auto qfont = showCpBriefly(ch);
             // set vertical mode
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             // EMPTY: we want text anyway

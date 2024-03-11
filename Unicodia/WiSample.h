@@ -43,6 +43,7 @@ private:
     void showBriefly();
     void showSpaceBriefly();
     void showFontBriefly(const QFont& qfont);
+    QFont showCpBriefly(const uc::Cp& ch);
 };
 
 #endif // WISAMPLE_H
