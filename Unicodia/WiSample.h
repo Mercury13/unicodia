@@ -34,6 +34,8 @@ private:
     /// Qt’s peculiarity: once the label was shown with non-empty text,
     ///    you are not obliged to show once again
     bool needShowBriefly = true;
+
+    /// Removes everything from lbSample — returns it to normal size
     void clearSample();
     ///  @warning  calls showBriefly → first this, then setCurrentWidget
     void setAbbrFont(const uc::Cp& ch);
