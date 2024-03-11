@@ -287,8 +287,8 @@ public:
     using Super::beginResetModel;
     using Super::endResetModel;
 private:
-    unsigned indexAt(int row, int col) const { return (row * NCOLS) + col; }
-    unsigned indexAt(const QModelIndex& index) const { return indexAt(index.row(), index.column()); }
+    TinySizet indexAt(int row, int col) const;
+    TinySizet indexAt(const QModelIndex& index) const;
 };
 
 
@@ -383,6 +383,7 @@ private:
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
+    void favsCurrentChanged(const QModelIndex& current);
     void blinkCopiedForWidget(QWidget* initiator);
     void copyCurrentChar(QWidget* initiator);
     void copyCurrentCharNull();

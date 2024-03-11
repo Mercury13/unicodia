@@ -843,14 +843,28 @@ int FavsModel::rowCount(const QModelIndex&) const
 }
 
 
-MaybeChar FavsModel::charAt(const QModelIndex& index) const
+TinySizet FavsModel::indexAt(int row, int col) const
+{
+    unsigned q = (row * NCOLS) + col;
+    if (q < config::favs.nCodes())
+        return q;
+    return TINY_NULL;
+}
+
+
+TinySizet FavsModel::indexAt(const QModelIndex& index) const
 {
     if (!index.isValid())
-        return {};
-    size_t index2 = indexAt(index);
-    if (index2 >= config::favs.nCodes())
-        return {};
-    return config::favs.codeAt(index2);
+        return TINY_NULL;
+    return indexAt(index.row(), index.column());
+}
+
+
+MaybeChar FavsModel::charAt(const QModelIndex& index) const
+{
+    if (auto index2 = indexAt(index))
+        return config::favs.codeAt(*index2);
+    return {};
 }
 
 
@@ -862,9 +876,8 @@ QVariant FavsModel::headerData(
         if (orientation == Qt::Horizontal) {
             return section + 1;
         } else {
-            unsigned index = indexAt(section, 0);
-            if (index < config::favs.nCodes()) {
-                int code = config::favs.codeAt(index);
+            if (auto index = indexAt(section, 0)) {
+                int code = config::favs.codeAt(*index);
                 char buf[20];
                 snprintf(buf, std::size(buf), "%04x", code);
                 QString r = buf;
@@ -884,10 +897,9 @@ QVariant FavsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::BackgroundRole: {
-            auto iCp = indexAt(index);
-            if (iCp >= config::favs.nCodes())
-                return owner->palette().button().color();
-            return {};
+            if (auto iCp = indexAt(index))
+                return {};
+            return owner->palette().button().color();
         }
     default:
         return Super::data(index, role);
@@ -1003,7 +1015,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     auto tw = ui->tableChars->verticalHeader()->width();
     tw += ui->tableChars->horizontalHeader()->defaultSectionSize() * NCOLS;
     tw += qApp->style()->pixelMetric(QStyle::PM_ScrollBarExtent);
-    tw += 8;    // This computation is very precise, let it be 8px
+    tw += 8;    // Let it be 8dipx of looseness
     r.sizes = { tw, wTotal - ui->splitBlocks->handleWidth() - tw };
     ui->splitBlocks->setStretchFactor(0, 0);
     ui->splitBlocks->setStretchFactor(1, 1);
@@ -1153,6 +1165,11 @@ void FmMain::initFavs(const InitBlocks& ib)
     ui->splitFavs->setStretchFactor(1, 1);
     ui->splitFavs->setSizes(ib.sizes);
 
+    // Connect events
+    connect(ui->tableFavs->selectionModel(), &QItemSelectionModel::currentChanged,
+            this, &This::favsCurrentChanged);
+    connect(ui->wiFavsShowcase, &WiShowcase::glyphStyleChanged,
+            this, &This::glyphStyleChanged);
     /// @todo [favs] initFavs
 }
 
@@ -1212,6 +1229,7 @@ void FmMain::translateMe()
     // Misc. widgets loaded from UI files
     ui->wiCharShowcase->translateMe();
     ui->wiLibShowcase->translateMe();
+    ui->wiFavsShowcase->translateMe();
 
     translateTerms();
     translateAbout();
@@ -1527,6 +1545,22 @@ void FmMain::libChanged(const QModelIndex& current)
         }
         for (unsigned i = len; i < uc::LONGEST_LIB; ++i) {
             libCpWidgets[i]->hide();
+        }
+    }
+}
+
+
+void FmMain::favsCurrentChanged(const QModelIndex& current)
+{
+    if (auto cp = favsModel.charAt(current)) {
+        ui->wiFavsShowcase->set(cp.code, ui->vwFavs, model.match, glyphSets);
+    } else {
+        ui->wiFavsShowcase->reset();
+        if (config::favs.isEmpty()) {
+            /// @todo [favs] write something nice instead of empty
+            ui->vwFavs->clear();
+        } else {
+            ui->vwFavs->clear();
         }
     }
 }

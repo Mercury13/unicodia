@@ -234,6 +234,15 @@ void WiShowcase::set(
 }
 
 
+void WiShowcase::reset()
+{
+    ui->wiSample->showNothing();
+    ui->lbCharCode->clear();
+    ui->btCopy->setEnabled(false);
+    ui->wiOsStyle->setNothing();
+}
+
+
 void WiShowcase::set(
         const uc::LibNode& node,
         QTextBrowser* viewer,
@@ -246,10 +255,7 @@ void WiShowcase::set(
     // Depending on nodes
     if (node.value.empty()) {
         // Folder
-        ui->wiSample->showNothing();
-        ui->lbCharCode->clear();
-        ui->btCopy->setEnabled(false);
-        ui->wiOsStyle->setNothing();
+        reset();
     } else {
         // Show sample
         auto len = node.value.length();

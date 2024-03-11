@@ -101,6 +101,7 @@ public:
     void set(const uc::LibNode& node,
              QTextBrowser* viewer,
              FontMatch& fonts);
+    void reset();
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
 private:
