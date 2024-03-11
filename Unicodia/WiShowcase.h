@@ -90,6 +90,8 @@ public:
     explicit WiShowcase(QWidget *parent = nullptr);
     ~WiShowcase() override;
 
+    void enableGoto() { hasGoto = true; }
+
     // loc::Form
     void translateMe() override;
 
@@ -110,6 +112,7 @@ private:
     ShownObj fShownObj;
     uc::EcGlyphStyleChannel fCurrChannel = uc::EcGlyphStyleChannel::NONE;
     UintRadio<QRadioButton> radioGlyphStyle;
+    bool hasGoto = false;
 
     void init();
     bool doCopy(uc::CopiedChannel channel);

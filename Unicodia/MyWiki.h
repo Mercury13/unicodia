@@ -36,6 +36,19 @@ enum class Want32 { NO, YES };
 
 namespace mywiki {
 
+    /// Interface that’s used to walk through internal links
+    /// Every type of link has its own function
+    ///
+    /// Architectural justification: Gui is somehow detached class,
+    /// and InternalWalker is closely related to main window
+    ///
+    class InternalWalker    // interface
+    {
+    public:
+        virtual void gotoCp(char32_t cp) = 0;
+        virtual ~InternalWalker() = default;
+    };
+
     class Gui    // interface
     {
     public:
@@ -44,8 +57,10 @@ namespace mywiki {
                 QWidget* widget, const QRect& absRect, const QString& html) = 0;
         virtual void copyTextAbs(
                 QWidget* widget, const QRect& absRect, const QString& text) = 0;
+        /// Follows standard internet link
         virtual void followUrl(const QString& x) = 0;
         virtual FontSource& fontSource() = 0;
+        virtual InternalWalker& internalWalker() = 0;
 
         virtual ~Gui() = default;
 
@@ -59,7 +74,7 @@ namespace mywiki {
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
-    enum class LinkClass { POPUP, COPY, INET };
+    enum class LinkClass { POPUP, COPY, INTERNAL, INET };
 
     class Link    // interface
     {
@@ -82,6 +97,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopIBlockLink(std::string_view target);
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
+    std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);

@@ -919,7 +919,7 @@ FmMain::FmMain(QWidget *parent)
       favsModel(this, glyphSets),
       fontBig(str::toQ(FAM_DEFAULT), FSZ_BIG),
       fontTofu(str::toQ(FAM_TOFU), FSZ_BIG),
-      mainGui(this, model.match)
+      mainGui(this, model.match, *this)
 {
     ui->setupUi(this);
 
@@ -1152,8 +1152,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
 
 void FmMain::initFavs(const InitBlocks& ib)
-{
+{    
     paintTo(ui->wiFavsBar, ib.buttonColor);
+    ui->wiFavsShowcase->enableGoto();
 
     ui->tableFavs->verticalHeader()->setSectionResizeMode(QHeaderView::Fixed);
     ui->tableFavs->horizontalHeader()->setSectionResizeMode(QHeaderView::Fixed);
@@ -1170,6 +1171,11 @@ void FmMain::initFavs(const InitBlocks& ib)
             this, &This::favsCurrentChanged);
     connect(ui->wiFavsShowcase, &WiShowcase::glyphStyleChanged,
             this, &This::glyphStyleChanged);
+
+    // Clicked
+    connect(ui->vwFavs, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+    connect(ui->wiFavsShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
+    connect(ui->wiFavsShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
     /// @todo [favs] initFavs
 }
 
@@ -1868,6 +1874,10 @@ int FmMain::pixSize() const
     QFontMetrics metrics{fn};
     return (metrics.ascent() + metrics.descent()) * 3;
 }
+
+
+void FmMain::gotoCp(char32_t cp)
+    { goToCp(cp); }
 
 
 namespace {

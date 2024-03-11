@@ -296,7 +296,8 @@ enum class SelectMode { NONE, INSTANT };
 
 class FmMain : public QMainWindow,
                public loc::Form<FmMain>,
-               private PixSource
+               private PixSource,
+               private mywiki::InternalWalker
 {
     Q_OBJECT
     using Super = QMainWindow;
@@ -381,6 +382,9 @@ private:
     // PixSource
     int pixSize() const override;
     QColor winColor() const override { return palette().windowText().color(); }
+
+    // InternalWalker
+    void gotoCp(char32_t cp) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);

@@ -184,7 +184,10 @@ void WiShowcase::set(
     { QString ucName = "U+";
         uc::sprint(buf, code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
-        /// @todo [favs] goto
+        if (hasGoto) {
+            /// @todo [favs] Nicer arrow rather than simple →
+            ucName += loc::Fmt(" <a href='gc:{1}' style='{2}'>→</a>")(buf)(STYLE_BIGINET).q();
+        }
         ui->lbCharCode->setText(ucName);
     }
 
