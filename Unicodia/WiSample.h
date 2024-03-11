@@ -41,7 +41,8 @@ private:
             const uc::GlyphStyleSets& glyphSets);
     ///  Shows pageSampleQt briefly, to set correct height
     void showBriefly();
-    void showBriefly(const QFont& qfont);
+    void showSpaceBriefly();
+    void showFontBriefly(const QFont& qfont);
 };
 
 #endif // WISAMPLE_H

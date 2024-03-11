@@ -42,8 +42,7 @@ void WiSample::setAbbrFont(const uc::Cp& ch)
 {
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
         if (setFont(ch, match::MainFont::INST)) {
-            ui->lbSample->setText(" ");
-            showBriefly();
+            showSpaceBriefly();
         }
     } else {
         clearSample();
@@ -92,11 +91,17 @@ void WiSample::showBriefly()
 }
 
 
-void WiSample::showBriefly(const QFont& qfont)
+void WiSample::showSpaceBriefly()
+{
+    ui->lbSample->setText(" ");
+    showBriefly();
+}
+
+
+void WiSample::showFontBriefly(const QFont& qfont)
 {
     ui->lbSample->setFont(qfont);
-    ui->lbSample->setText(" ");
-    showBriefly(qfont);
+    showSpaceBriefly();
 }
 
 
@@ -131,7 +136,7 @@ void WiSample::showCp(
             clearSample();
             auto font = ch.font(match::Normal::INST);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            showBriefly(qfont);
+            showFontBriefly(qfont);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
         } break;
@@ -140,7 +145,7 @@ void WiSample::showCp(
             // set dummy font
             auto font = ch.font(match::Normal::INST);
             QFont qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
-            showBriefly(qfont);
+            showFontBriefly(qfont);
             // set vertical mode
             auto angle = (method == uc::DrawMethod::VERTICAL_CW) ? ROT_CW : ROT_CCW;
             // EMPTY: we want text anyway
