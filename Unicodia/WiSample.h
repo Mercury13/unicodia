@@ -32,7 +32,7 @@ public:
 private:
     Ui::WiSample *ui;
     /// Qt’s peculiarity: once the label was shown with non-empty text,
-    ///    you are not obliged to shwo once again
+    ///    you are not obliged to show once again
     bool needShowBriefly = true;
     void clearSample();
     ///  @warning  calls showBriefly → first this, then setCurrentWidget
