@@ -185,8 +185,10 @@ void WiShowcase::set(
         uc::sprint(buf, code);
         mywiki::appendCopyable(ucName, buf, "' style='" STYLE_BIGCOPY);
         if (hasGoto) {
-            /// @todo [favs] Nicer arrow rather than simple →
-            ucName += loc::Fmt(" <a href='gc:{1}' style='{2}'>→</a>")(buf)(STYLE_BIGINET).q();
+            auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::DEJAVU)];
+            font.load(NO_TRIGGER);
+            ucName += loc::Fmt(" <a href='gc:{1}' style='{2}; font-family:{3}'>↪</a>")
+                              (buf)(STYLE_BIGINET)(font.familiesComma().toStdString()).q();
         }
         ui->lbCharCode->setText(ucName);
     }
