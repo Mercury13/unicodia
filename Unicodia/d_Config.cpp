@@ -171,14 +171,6 @@ namespace {
                     }
                 }
             }
-            /// @todo [favs] temporarily filling favourites
-            for (int i = 1; i < 255; i+= 3) {
-                config::favs.add(i);
-            }
-            // Mongol, for glyph styles
-            for (int i = 0x1800; i < 0x1870; i += 4) {
-                config::favs.add(i);
-            }
         }
     }
 
