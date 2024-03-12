@@ -45,6 +45,7 @@ class QNetworkAccessManager;
 class QNetworkReply;
 class FmTofuStats;
 class WiLibCp;
+class WiShowcase;
 
 
 namespace uc {
@@ -335,7 +336,7 @@ private:
     FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
-    QToolButton* btSort;
+    QToolButton *btSort = nullptr, *btRemoveFromFavs = nullptr;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
@@ -386,7 +387,10 @@ private:
     void ensureNetMan();
     void redrawFavsTab();
     void redrawFavsTable();
-    void blinkAtFavs(const QString& text);
+    /// @param [in]  initiator [0] default [+] some other widget
+    void blinkAtFavs(QWidget* initiator, const QString& text);
+    /// @param [in]  direction [+] add [-] remove
+    void addRemoveFromFavs(WiShowcase* showcase, QWidget* initiator, bool direction);
 
     // PixSource
     int pixSize() const override;
@@ -427,6 +431,7 @@ private slots:
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
     void acAddToFavsTriggered(bool isChecked);
+    void acRemoveFromFavsTriggered();
 };
 
 

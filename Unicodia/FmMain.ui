@@ -788,6 +788,18 @@
     <enum>QAction::NoRole</enum>
    </property>
   </action>
+  <action name="acRemoveFromFavs">
+   <property name="icon">
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Buttons/trash.svg</normaloff>:/Buttons/trash.svg</iconset>
+   </property>
+   <property name="text">
+    <string>[Remove from favourites]</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>

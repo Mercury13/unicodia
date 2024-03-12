@@ -11534,9 +11534,13 @@
       <orig>By technical name: A → Z</orig>
       <transl>По техническому имени: A → Z</transl>
      </text>
-     <text id="acAddToFavs">
+     <text id="acAddCpToFavs">
       <orig>Add to favourites</orig>
-      <transl>Добавить в любимые</transl>
+      <transl>Добавить в Любимые</transl>
+     </text>
+     <text id="acRemoveFromFavs">
+      <orig>Remove from favourites</orig>
+      <transl>Убрать из Любимых</transl>
      </text>
     </group>
    </group>

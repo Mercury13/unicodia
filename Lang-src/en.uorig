@@ -7964,8 +7964,11 @@
      <text id="acSortByTech">
       <orig>By technical name: A → Z</orig>
      </text>
-     <text id="acAddToFavs">
+     <text id="acAddCpToFavs">
       <orig>Add to favourites</orig>
+     </text>
+     <text id="acRemoveFromFavs">
+      <orig>Remove from favourites</orig>
      </text>
     </group>
    </group>

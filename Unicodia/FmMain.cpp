@@ -1197,7 +1197,14 @@ void FmMain::initFavs(const InitBlocks& ib)
     connect(ui->wiFavsShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
     connect(ui->wiFavsShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
 
-    /// @todo [favs] acRemoveFromFavs
+    // Create toolbar
+    auto lay = ui->wiFavsShowcase->toolbarLayout();
+    auto toolbar = new QToolBar(lay->parentWidget());
+    btRemoveFromFavs = new QToolButton(toolbar);
+    btRemoveFromFavs->setDefaultAction(ui->acRemoveFromFavs);
+    toolbar->addWidget(btRemoveFromFavs);
+    lay->addWidget(toolbar);
+    connect(ui->acRemoveFromFavs, &QAction::triggered, this, &This::acRemoveFromFavsTriggered);
 }
 
 
@@ -1217,9 +1224,12 @@ void FmMain::configLoaded()
     favsModel.beginResetModel();
     favsModel.endResetModel();
 
-    /// @todo [favs] need more complex code
-    auto index = model.index(0, 0);
-    ui->tableFavs->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
+    if (config::favs.isEmpty()) {
+        favsCurrentChanged(ui->tableFavs->currentIndex());
+    } else {
+        auto index = model.index(0, 0);
+        ui->tableFavs->selectionModel()->select(index, QItemSelectionModel::SelectCurrent);
+    }
 }
 
 
@@ -1592,7 +1602,8 @@ void FmMain::libChanged(const QModelIndex& current)
 void FmMain::favsCurrentChanged(const QModelIndex& current)
 {
     if (auto cp = favsModel.charAt(current)) {
-        ui->wiFavsShowcase->set(cp.code, ui->vwFavs, model.match, glyphSets);
+        ui->wiFavsShowcase->set(cp.code, ui->vwFavs, model.match, glyphSets);        
+        ui->acRemoveFromFavs->setEnabled(true);
     } else {
         ui->wiFavsShowcase->reset();
         if (config::favs.isEmpty()) {
@@ -1601,6 +1612,8 @@ void FmMain::favsCurrentChanged(const QModelIndex& current)
         } else {
             ui->vwFavs->clear();
         }
+        ui->acRemoveFromFavs->setEnabled(false);
+        /// @todo [favs] Due to font troubles, our toolbar is expanding-shrinking
     }
 }
 
@@ -2071,18 +2084,22 @@ void FmMain::redrawFavsTable()
 }
 
 
-void FmMain::blinkAtFavs(const QString& text)
+void FmMain::blinkAtFavs(QWidget* initiator, const QString& text)
 {
-    auto coords = ui->tabsMain->tabBar()->tabRect(I_FAVS);
-    mainGui.blinkAtRel(text, ui->tabsMain->tabBar(), coords);
+    if (initiator) {
+        mainGui.blinkAtWidget(text, initiator);
+    } else {
+        auto coords = ui->tabsMain->tabBar()->tabRect(I_FAVS);
+        mainGui.blinkAtRel(text, ui->tabsMain->tabBar(), coords);
+    }
 }
 
 
-void FmMain::acAddToFavsTriggered(bool isChecked)
+void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool direction)
 {
-    if (auto cp = ui->wiCharShowcase->shownObj().maybeCp()) {
+    if (auto cp = widget->shownObj().maybeCp()) {
         auto nOldRows = favsModel.rowCount();
-        if (isChecked) {
+        if (direction) {
             if (auto where = config::favs.add(*cp)) {
                 auto nNewRows = favsModel.rowCount();
                 if (nOldRows != nNewRows) {
@@ -2093,7 +2110,7 @@ void FmMain::acAddToFavsTriggered(bool isChecked)
                     favsModel.endInsertRows();
                 }
                 redrawFavsTable();
-                blinkAtFavs(loc::get("Common.Favs.Add"));
+                blinkAtFavs(initiator, loc::get("Common.Favs.Add"));
             }
         } else {
             if (auto where = config::favs.erase(*cp)) {
@@ -2104,8 +2121,20 @@ void FmMain::acAddToFavsTriggered(bool isChecked)
                     favsModel.endRemoveRows();
                 }
                 redrawFavsTable();
-                blinkAtFavs(loc::get("Common.Favs.Rem"));
+                blinkAtFavs(initiator, loc::get("Common.Favs.Rem"));
             }
         }
     }
+}
+
+
+void FmMain::acAddToFavsTriggered(bool isChecked)
+{
+    addRemoveFromFavs(ui->wiCharShowcase, nullptr, isChecked);
+}
+
+
+void FmMain::acRemoveFromFavsTriggered()
+{
+    addRemoveFromFavs(ui->wiFavsShowcase, btRemoveFromFavs, false);
 }
