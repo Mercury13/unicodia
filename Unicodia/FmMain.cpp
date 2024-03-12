@@ -2117,6 +2117,8 @@ void FmMain::addRemoveFromFavs(WiShowcase* widget, QWidget* initiator, bool dire
                 auto nNewRows = favsModel.rowCount();
                 if (nOldRows != nNewRows) {
                     auto y = favsModel.toCoordsDumb(*where).row();
+                    if (y + 1 < nOldRows)
+                        ++y;
                     favsModel.beginRemoveRows({}, y, y);
                     favsModel.endRemoveRows();
                 }
