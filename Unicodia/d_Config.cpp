@@ -230,5 +230,7 @@ void config::save(
     auto hView = root.append_child("view");
     hView.append_attribute("sort") = orderNames[blockOrder].data();   // OK, const s_v have trailing 0
 
+    /// @todo [favs] save config
+
     doc.save_file(fname::config.c_str());
 }
