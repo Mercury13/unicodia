@@ -1095,6 +1095,8 @@ FmMain::InitBlocks FmMain::initBlocks()
     toolbar->addAction(ui->acAddCpToFavs);
     lay->addWidget(toolbar);
 
+    /// @todo [favs] hang smth to acAddCpToFavs
+
     // Select index
     ui->tableChars->setFocus();
     auto index = model.index(0, 0);
@@ -1181,7 +1183,8 @@ void FmMain::initFavs(const InitBlocks& ib)
     connect(ui->vwFavs, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
     connect(ui->wiFavsShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
     connect(ui->wiFavsShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
-    /// @todo [favs] initFavs
+
+    /// @todo [favs] acRemoveFromFavs
 }
 
 
