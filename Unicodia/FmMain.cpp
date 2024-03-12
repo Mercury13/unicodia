@@ -1087,7 +1087,13 @@ FmMain::InitBlocks FmMain::initBlocks()
     sortIcons[BlockOrder::TECH     ].addFile(":/Buttons/sort_tech.svg", { 24, 24 });
     btSort->setMenu(menuSort);
     btSort->setPopupMode(QToolButton::InstantPopup);
-    sortBar->addWidget(btSort);    
+    sortBar->addWidget(btSort);
+
+    // Create toolbar
+    auto lay = ui->wiCharShowcase->toolbarLayout();
+    auto toolbar = new QToolBar(lay->parentWidget());
+    toolbar->addAction(ui->acAddCpToFavs);
+    lay->addWidget(toolbar);
 
     // Select index
     ui->tableChars->setFocus();

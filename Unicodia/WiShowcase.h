@@ -21,6 +21,7 @@
 class QPushButton;
 class QLabel;
 class QTextBrowser;
+class QHBoxLayout;
 class WiOsStyle;
 class WiSample;
 class FontMatch;
@@ -107,6 +108,7 @@ public:
     void setSilent(char32_t ch);
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
     void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
+    QHBoxLayout* toolbarLayout();
 private:
     Ui::WiShowcase *ui;
 

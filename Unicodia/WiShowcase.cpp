@@ -345,3 +345,7 @@ void WiShowcase::syncGlyphStyle(
     radioGlyphStyle.set(glyphSets[fCurrChannel]);
     redrawSampleChar(glyphSets);
 }
+
+
+QHBoxLayout* WiShowcase::toolbarLayout()
+    { return ui->layToolbar; }

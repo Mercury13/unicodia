@@ -11524,6 +11524,10 @@
       <orig>By technical name: A → Z</orig>
       <transl>По техническому имени: A → Z</transl>
      </text>
+     <text id="acAddToFavs">
+      <orig>Add to favourites</orig>
+      <transl>Добавить в любимые</transl>
+     </text>
     </group>
    </group>
    <text id="Sort">

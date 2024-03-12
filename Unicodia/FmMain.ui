@@ -773,6 +773,21 @@
     <string>[aSortByTech]</string>
    </property>
   </action>
+  <action name="acAddCpToFavs">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="Resources/res.qrc">
+     <normaloff>:/Buttons/heart.svg</normaloff>:/Buttons/heart.svg</iconset>
+   </property>
+   <property name="text">
+    <string>[Add to favourites]</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
@@ -826,6 +841,8 @@
   <tabstop>btCheckForUpdate</tabstop>
   <tabstop>vwAbout</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="Resources/res.qrc"/>
+ </resources>
  <connections/>
 </ui>

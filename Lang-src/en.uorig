@@ -7956,6 +7956,9 @@
      <text id="acSortByTech">
       <orig>By technical name: A → Z</orig>
      </text>
+     <text id="acAddToFavs">
+      <orig>Add to favourites</orig>
+     </text>
     </group>
    </group>
    <text id="Sort">
