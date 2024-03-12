@@ -1504,6 +1504,10 @@ void FmMain::forceShowCp(MaybeChar ch)
 {
     ui->wiCharShowcase->set(ch.code, ui->vwInfo, model.match, glyphSets);
 
+    // Add to favs
+    ui->acAddCpToFavs->setEnabled(ch.hasCp());
+    ui->acAddCpToFavs->setChecked(ch.hasCp() && config::favs.contains(ch.code));
+
     // Block
     int iBlock = ui->comboBlock->currentIndex();
     auto block = uc::blockOf(ch.code);
