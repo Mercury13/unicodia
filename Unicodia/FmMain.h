@@ -284,11 +284,18 @@ public:
                         int role = Qt::DisplayRole) const override;
     MaybeChar charAt(const QModelIndex& index) const override;
 
+    TinySizet toOrder(int row, int col) const;
+    TinySizet toOrder(const QModelIndex& index) const;
+    QModelIndex toCoords(unsigned iOrder) const;
+    /// Does not check existence, used for deletion
+    QModelIndex toCoordsDumb(unsigned iOrder) const;
+
     using Super::beginResetModel;
     using Super::endResetModel;
-private:
-    TinySizet indexAt(int row, int col) const;
-    TinySizet indexAt(const QModelIndex& index) const;
+    using Super::beginInsertRows;
+    using Super::endInsertRows;
+    using Super::beginRemoveRows;
+    using Super::endRemoveRows;
 };
 
 
@@ -378,6 +385,8 @@ private:
     void setUpdating(bool value);
     void ensureNetMan();
     void redrawFavsTab();
+    void redrawFavsTable();
+    void blinkAtFavs(const QString& text);
 
     // PixSource
     int pixSize() const override;
@@ -417,6 +426,7 @@ private slots:
     void goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);
+    void acAddToFavsTriggered(bool isChecked);
 };
 
 

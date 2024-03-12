@@ -842,7 +842,21 @@ int FavsModel::rowCount(const QModelIndex&) const
 }
 
 
-TinySizet FavsModel::indexAt(int row, int col) const
+QModelIndex FavsModel::toCoords(unsigned iOrder) const
+{
+    if (iOrder > config::favs.nCodes())
+        return {};
+    return toCoordsDumb(iOrder);
+}
+
+
+QModelIndex FavsModel::toCoordsDumb(unsigned iOrder) const
+{
+    return index(iOrder / NCOLS, iOrder % NCOLS);
+}
+
+
+TinySizet FavsModel::toOrder(int row, int col) const
 {
     unsigned q = (row * NCOLS) + col;
     if (q < config::favs.nCodes())
@@ -851,17 +865,17 @@ TinySizet FavsModel::indexAt(int row, int col) const
 }
 
 
-TinySizet FavsModel::indexAt(const QModelIndex& index) const
+TinySizet FavsModel::toOrder(const QModelIndex& index) const
 {
     if (!index.isValid())
         return TINY_NULL;
-    return indexAt(index.row(), index.column());
+    return toOrder(index.row(), index.column());
 }
 
 
 MaybeChar FavsModel::charAt(const QModelIndex& index) const
 {
-    if (auto index2 = indexAt(index))
+    if (auto index2 = toOrder(index))
         return config::favs.codeAt(*index2);
     return {};
 }
@@ -875,7 +889,7 @@ QVariant FavsModel::headerData(
         if (orientation == Qt::Horizontal) {
             return section + 1;
         } else {
-            if (auto index = indexAt(section, 0)) {
+            if (auto index = toOrder(section, 0)) {
                 int code = config::favs.codeAt(*index);
                 char buf[20];
                 snprintf(buf, std::size(buf), "%04x", code);
@@ -896,7 +910,7 @@ QVariant FavsModel::data(const QModelIndex& index, int role) const
 {
     switch (role) {
     case Qt::BackgroundRole: {
-            if (auto iCp = indexAt(index))
+        if (auto iCp = toOrder(index))
                 return {};
             return owner->palette().button().color();
         }
@@ -1094,8 +1108,7 @@ FmMain::InitBlocks FmMain::initBlocks()
     auto toolbar = new QToolBar(lay->parentWidget());
     toolbar->addAction(ui->acAddCpToFavs);
     lay->addWidget(toolbar);
-
-    /// @todo [favs] hang smth to acAddCpToFavs
+    connect(ui->acAddCpToFavs, &QAction::triggered, this, &This::acAddToFavsTriggered);
 
     // Select index
     ui->tableChars->setFocus();
@@ -2047,4 +2060,52 @@ void FmMain::updateFinished(QNetworkReply* reply)
         reply->deleteLater();
     }
     setUpdating(false);
+}
+
+
+void FmMain::redrawFavsTable()
+{
+    emit favsModel.dataChanged({}, {});
+    favsCurrentChanged(ui->tableFavs->currentIndex());
+    redrawFavsTab();
+}
+
+
+void FmMain::blinkAtFavs(const QString& text)
+{
+    auto coords = ui->tabsMain->tabBar()->tabRect(I_FAVS);
+    mainGui.blinkAtRel(text, ui->tabsMain->tabBar(), coords);
+}
+
+
+void FmMain::acAddToFavsTriggered(bool isChecked)
+{
+    if (auto cp = ui->wiCharShowcase->shownObj().maybeCp()) {
+        auto nOldRows = favsModel.rowCount();
+        if (isChecked) {
+            if (auto where = config::favs.add(*cp)) {
+                auto nNewRows = favsModel.rowCount();
+                if (nOldRows != nNewRows) {
+                    auto y = favsModel.toCoordsDumb(*where).row();
+                    if (y + 1 < nNewRows)
+                        ++y;
+                    favsModel.beginInsertRows({}, y, y);
+                    favsModel.endInsertRows();
+                }
+                redrawFavsTable();
+                blinkAtFavs(loc::get("Common.Favs.Add"));
+            }
+        } else {
+            if (auto where = config::favs.erase(*cp)) {
+                auto nNewRows = favsModel.rowCount();
+                if (nOldRows != nNewRows) {
+                    auto y = favsModel.toCoordsDumb(*where).row();
+                    favsModel.beginRemoveRows({}, y, y);
+                    favsModel.endRemoveRows();
+                }
+                redrawFavsTable();
+                blinkAtFavs(loc::get("Common.Favs.Rem"));
+            }
+        }
+    }
 }

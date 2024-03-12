@@ -10,9 +10,6 @@
    <multitier separator="." />
   </format>
   <group id="Common">
-   <text id="Copied">
-    <orig>Copied</orig>
-   </text>
    <group id="Mon">
     <text id="1">
      <orig>January {1}</orig>
@@ -51,6 +48,17 @@
      <orig>December {1}</orig>
     </text>
    </group>
+   <group id="Favs">
+    <text id="Add">
+     <orig>Added to Favourites</orig>
+    </text>
+    <text id="Rem">
+     <orig>Removed from Favourites</orig>
+    </text>
+   </group>
+   <text id="Copied">
+    <orig>Copied</orig>
+   </text>
   </group>
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>

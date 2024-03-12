@@ -12,10 +12,6 @@
    <multitier separator="." />
   </format>
   <group id="Common">
-   <text id="Copied">
-    <orig>Copied</orig>
-    <transl>Скопійовано</transl>
-   </text>
    <group id="Mon">
     <text id="1">
      <orig>January {1}</orig>
@@ -66,6 +62,20 @@
      <transl>грудень {1}</transl>
     </text>
    </group>
+   <group id="Favs">
+    <text id="Add">
+     <orig>Added to Favourites</orig>
+     <transl>Додано до Улюблених</transl>
+    </text>
+    <text id="Rem">
+     <orig>Removed from Favourites</orig>
+     <transl>Вилучено з Улюблених</transl>
+    </text>
+   </group>
+   <text id="Copied">
+    <orig>Copied</orig>
+    <transl>Скопійовано</transl>
+   </text>
   </group>
   <group id="Dating">
    <au-cmt>Strings for script dates (1234, 11th century, etc)</au-cmt>
