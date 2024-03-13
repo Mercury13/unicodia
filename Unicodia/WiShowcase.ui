@@ -58,7 +58,7 @@
       </widget>
      </item>
      <item>
-      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1,0,1,0">
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1,0,0,0">
        <property name="spacing">
         <number>0</number>
        </property>
@@ -113,7 +113,7 @@ padding-bottom: 1px;</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>2</height>
           </size>
          </property>
         </spacer>
@@ -129,7 +129,7 @@ padding-bottom: 1px;</string>
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>5</height>
+           <height>20</height>
           </size>
          </property>
         </spacer>

@@ -1199,11 +1199,11 @@ void FmMain::initFavs(const InitBlocks& ib)
 
     // Create toolbar
     auto lay = ui->wiFavsShowcase->toolbarLayout();
-    auto toolbar = new QToolBar(lay->parentWidget());
-    btRemoveFromFavs = new QToolButton(toolbar);
+    auto tbFavs = new QToolBar(lay->parentWidget());
+    btRemoveFromFavs = new QToolButton(tbFavs);
     btRemoveFromFavs->setDefaultAction(ui->acRemoveFromFavs);
-    toolbar->addWidget(btRemoveFromFavs);
-    lay->addWidget(toolbar);
+    tbFavs->addWidget(btRemoveFromFavs);
+    lay->addWidget(tbFavs);
     connect(ui->acRemoveFromFavs, &QAction::triggered, this, &This::acRemoveFromFavsTriggered);
 }
 

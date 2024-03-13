@@ -187,10 +187,9 @@ void WiShowcase::set(
         if (hasGoto) {
             auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::DEJAVU)];
             font.load(NO_TRIGGER);
-            ucName += loc::Fmt(" <a href='gc:{1}' style='{2}; font-family:{3}; font-size:{4}pt'>↪</a>")
+            ucName += loc::Fmt(" <a href='gc:{1}' style='{2}; font-family:{3}'>↪</a>")
                               (buf)(STYLE_BIGINET)  // 1-2
-                              (font.familiesComma().toStdString())
-                              (ui->lbCharCode->font().pointSize() * 9 / 10).q();
+                              (font.familiesComma().toStdString()).q();
         }
         ui->lbCharCode->setText(ucName);
     }
