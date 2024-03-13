@@ -166,7 +166,7 @@ namespace {
                     std::string_view text = attr.as_string();
                     unsigned code = 0xFFFFFF;
                     auto result = std::from_chars(text.data(), text.data() + text.length(), code, 16);
-                    if (result.ec != std::errc()) {
+                    if (result.ec == std::errc()) {
                         config::favs.add(code);
                     }
                 }
@@ -230,7 +230,13 @@ void config::save(
     auto hView = root.append_child("view");
     hView.append_attribute("sort") = orderNames[blockOrder].data();   // OK, const s_v have trailing 0
 
-    /// @todo [favs] save config
+    auto hFavs = root.append_child("favs");
+    char buf[12];
+    for (auto q : config::favs.codes()) {
+        auto hFav = hFavs.append_child("cp");
+        snprintf(buf, std::size(buf), "%X", (int)q);
+        hFav.append_attribute("c") = buf;
+    }
 
     doc.save_file(fname::config.c_str());
 }
