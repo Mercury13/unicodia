@@ -1991,7 +1991,6 @@ void FmMain::goToNode(const uc::LibNode& node)
     ui->tabsMain->setCurrentWidget(ui->tabLibrary);
     auto index = libModel.indexOf(node);
     ui->treeLibrary->setCurrentIndex(index);
-    //selectChar<SelectMode::INSTANT>(cp);
 }
 
 
