@@ -11556,6 +11556,10 @@
     <orig>Favourites ({1})</orig>
     <transl>Любимые ({1})</transl>
    </text>
+   <text id="NoFavs">
+    <orig>Your Favourites list is empty. Add some characters [[gi:blinkaddcp|in Blocks tab]].</orig>
+    <transl>Ваш список любимых пуст. Добавьте символы [[gi:blinkaddcp|на вкладке «Блоки»]].</transl>
+   </text>
   </group>
   <group id="Showcase">
    <group id="Ui">

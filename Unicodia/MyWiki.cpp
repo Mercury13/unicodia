@@ -159,6 +159,16 @@ namespace {
     void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.internalWalker().gotoCp(wi, cp); }
 
+    class BlinkAddCpToFavsLink : public mywiki::Link
+    {
+    public:
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+    };
+
+    void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+        { gui.internalWalker().blinkAddCpToFavs(); }
+
 }   // anon namespace
 
 
@@ -243,6 +253,14 @@ std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
     return {};
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parseGotoInterfaceLink(std::string_view target)
+{
+    if (target == "blinkaddcp") {
+        return std::make_unique<BlinkAddCpToFavsLink>();
+    }
+    return {};
+}
+
 
 std::unique_ptr<mywiki::Link> mywiki::parseLink(
         std::string_view scheme, std::string_view target)
@@ -265,6 +283,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parsePopGlyphStyleLink(target);
     } else if (scheme == "gc"sv) {
         return parseGotoCpLink(target);
+    } else if (scheme == "gi"sv) {
+        return parseGotoInterfaceLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {
@@ -2158,4 +2178,15 @@ template<>
 void wiki::append(QString& s, const char* start, const char* end)
 {
     s.append(QByteArray::fromRawData(start, end - start));
+}
+
+
+QString mywiki::buildEmptyFavsHtml()
+{
+    QString text;
+    appendStylesheet(text);
+    text += "<h3>";
+    mywiki::appendNoFont(text, loc::get("Main.NoFavs"));
+    text += "</h3>";
+    return text;
 }

@@ -46,6 +46,7 @@ namespace mywiki {
     {
     public:
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
+        virtual void blinkAddCpToFavs() = 0;
         virtual ~InternalWalker() = default;
     };
 
@@ -98,6 +99,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
+    std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);
@@ -109,6 +111,7 @@ namespace mywiki {
     QString buildHtml(const uc::LibNode& node, const uc::LibNode& parent);
     QString buildHtml(const uc::Version& version);
     QString buildHtml(const uc::GlyphStyleChannel& channel);
+    QString buildEmptyFavsHtml();
     void appendStylesheet(QString& text, bool hasSignWriting = false);
     void go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link);
     void appendCopyable(QString& text, const QString& x, std::string_view clazz="copy");

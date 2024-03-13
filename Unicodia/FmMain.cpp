@@ -1106,7 +1106,9 @@ FmMain::InitBlocks FmMain::initBlocks()
     // Create toolbar
     auto lay = ui->wiCharShowcase->toolbarLayout();
     auto toolbar = new QToolBar(lay->parentWidget());
-    toolbar->addAction(ui->acAddCpToFavs);
+    btAddCpToFavs = new QToolButton(toolbar);
+    btAddCpToFavs->setDefaultAction(ui->acAddCpToFavs);
+    toolbar->addWidget(btAddCpToFavs);
     lay->addWidget(toolbar);
     connect(ui->acAddCpToFavs, &QAction::triggered, this, &This::acAddToFavsTriggered);
 
@@ -1607,8 +1609,7 @@ void FmMain::favsCurrentChanged(const QModelIndex& current)
     } else {
         ui->wiFavsShowcase->reset();
         if (config::favs.isEmpty()) {
-            /// @todo [favs] write something nice instead of empty
-            ui->vwFavs->clear();
+            ui->vwFavs->setHtml(mywiki::buildEmptyFavsHtml());
         } else {
             ui->vwFavs->clear();
         }
@@ -1975,6 +1976,13 @@ void FmMain::gotoCp(QWidget* initiator, char32_t cp)
         ui->tableFavs->setFocus();
     ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     selectChar<SelectMode::INSTANT>(cp);
+}
+
+
+void FmMain::blinkAddCpToFavs()
+{
+    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
+    mainGui.blinkAtWidget("↑↑↑", btAddCpToFavs);
 }
 
 

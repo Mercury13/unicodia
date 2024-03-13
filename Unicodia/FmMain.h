@@ -336,7 +336,9 @@ private:
     FavsModel favsModel;
     Uptr<FmTofuStats> fmTofuStats;
     QFont fontBig, fontTofu;
-    QToolButton *btSort = nullptr, *btRemoveFromFavs = nullptr;
+    QToolButton *btSort = nullptr,
+                *btAddCpToFavs = nullptr,
+                *btRemoveFromFavs = nullptr;
     EcRadio<BlockOrder, QAction> radioSortOrder;
     ec::Array<QIcon, BlockOrder> sortIcons;
     WiLibCp* libCpWidgets[uc::LONGEST_LIB] { nullptr };
@@ -396,6 +398,8 @@ private:
     int pixSize() const override;
     QColor winColor() const override { return palette().windowText().color(); }
 
+    // InternalWalker
+    void blinkAddCpToFavs() override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);

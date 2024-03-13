@@ -7981,6 +7981,9 @@
    <text id="Favs">
     <orig>Favourites ({1})</orig>
    </text>
+   <text id="NoFavs">
+    <orig>Your Favourites list is empty. Add some characters [[gi:blinkaddcp|in Blocks tab]].</orig>
+   </text>
   </group>
   <group id="Showcase">
    <group id="Ui">
