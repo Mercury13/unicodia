@@ -1613,7 +1613,6 @@ void FmMain::favsCurrentChanged(const QModelIndex& current)
             ui->vwFavs->clear();
         }
         ui->acRemoveFromFavs->setEnabled(false);
-        /// @todo [favs] Due to font troubles, our toolbar is expanding-shrinking
     }
 }
 
