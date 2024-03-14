@@ -17,7 +17,7 @@ struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
     // fill3 unused: just a few hands e.g. crossed fingers
-    // fill4 unused
+    // fill4 unused: crossed fingers only
     std::string_view fill5;
     std::string_view outline1;
     std::string_view hair1;
