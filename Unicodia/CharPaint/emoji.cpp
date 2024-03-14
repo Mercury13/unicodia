@@ -52,7 +52,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FFD54F", fill2);   // used: e.g. rowing
     repl(bytes, "#FFC107", fill1);   // used: e.g. pilot
     // #D48322: used to be two ears, naked and w/aid
-    repl(bytes, "#E6A100", outline1);
+    // #E6A100: used to be nose only
     repl(bytes, "#F5AC00", fill1);
     repl(bytes, "#543930", hair1);
     repl(bytes, "#6D4C41", hair2);
