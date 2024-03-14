@@ -49,7 +49,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FBC02D", fill2);
     repl(bytes, "#EDA600", outline1);
     // #FA0: writing hand only, with U15 unused
-    repl(bytes, "#FFD54F", fill2);
+    repl(bytes, "#FFD54F", fill2);   // used: e.g rowing
     repl(bytes, "#FFC107", fill1);
     repl(bytes, "#D48322", outline1);
     repl(bytes, "#E6A100", outline1);
