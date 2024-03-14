@@ -7801,26 +7801,38 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Runes have distinctive angled shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes changed for cursive writing with quill. About 5000 specimen of runic writing are found, the oldest are from 2nd century. Scandinavian runic alphabet is called “Futhark” for first six letters.</p>
+      <p>Runes have distinctive angled shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes changed for cursive writing with quill. About 5000 specimen of runic writing are found, the oldest are from 2nd century.</p>
+      <p />
+      <p>The block is a union of several runic alphabets:</p>
+      <p>* Elder Futhark, for first six letters{{-}}Scandinavian runes of 1st to 8th century, 24 letters</p>
+      <p>* Younger Futhark{{-}}Scandinavian runes since 9th century, 16 letters</p>
+      <p>* Futhorc{{-}}Anglo-Saxon runes of 5th to 11th century, borrowed from Elder Futhark and expanded to 34 letters in its youngest form</p>
+      <p>* 19 calendar runes (Younger Futhark + 3 more)</p>
+      <p>* Three runes for modern English attributed to J.{{_}}Tolkien</p>
+      <p>* Five runes from Franks Casket, relic of 8th century</p>
       <p />
       <p>Runes were supplanted with [[ps:Latn|Latin]] with advent of Christianity: in Western Europe by 11th century, in Scandinavia by 15th, and in some villages by 20th century, gradually replacing with Latin.</p>
       <p />
       <p>Nazi Germany liked esoterics, and runes together with it. Runes are popular in New Age and Neo-Paganism.</p>
       <p />
       <p>Scripts of arbitrary shape are called runes in mass culture, including unsuitable for carving. Alphabets of ancient [[ps:Orkh|Turks]], Bulgars and [[ps:Hung|Hungarians]] of similar angled shape are called runes too.</p>
-      <p />
-      <p>The block encodes alphabets of Scandinavian and Anglo-Saxon runes, partly intersecting. In 2014 three runes for modern English attributed to J.{{_}}Tolkien were added, together with five runes from Franks Casket, relic of 8th century.</p>
      </orig>
      <transl>
-      <p>Руны имеют специфическую угловатую форму, приспособленную для вырезания: вдоль и поперёк волокон дерево сопротивляется по-разному, потому сложно делать кривые линии. Позднейшие варианты рун видоизменились под скоропись пером. Найдено около 5000 памятников рунического письма, самые старые относятся ко II{{_}}веку. Скандинавский рунический алфавит называют «футарк», по первым шести буквам.</p>
+      <p>Руны имеют специфическую угловатую форму, приспособленную для вырезания: вдоль и поперёк волокон дерево сопротивляется по-разному, потому сложно делать кривые линии. Позднейшие варианты рун видоизменились под скоропись пером. Найдено около 5000 памятников рунического письма, самые старые относятся ко II{{_}}веку.</p>
+      <p />
+      <p>Этот блок{{-}}объединение нескольких рунических алфавитов:</p>
+      <p>* Старший футарк, по первым шести буквам{{-}}скандинавские руны I–VIII{{_}}веков, 24 буквы</p>
+      <p>* Младший футарк{{-}}скандинавские руны с IX{{_}}века, 16 букв</p>
+      <p>* Футорк{{-}}англо-саксонский алфавит V–XI{{_}}веков, позаимствованный из старшего футарка и расширившийся до 34 букв в последних формах</p>
+      <p>* 19 календарных рун (младший футарк + ещё 3)</p>
+      <p>* Три руны для современного английского, приписываемые Дж.{{_}}Толкину</p>
+      <p>* Пять рун с ларца Фрэнкса, реликвии VIII{{_}}века</p>
       <p />
       <p>С появлением христианства руны были вытеснены [[ps:Latn|латиницей]]: в Западной Европе к XI{{_}}веку, в Скандинавии до XV, а в отдельных деревнях{{-}}и до XX, постепенно заменяясь латиницей.</p>
       <p />
       <p>Фашистская Германия любила эзотерику, а вместе с ней и руны. Популярны они в нью-эйдже и неоязычестве.</p>
       <p />
       <p>В массовой культуре рунами называют письмена произвольной формы, в том числе непригодные для вырезания. Алфавиты древних [[ps:Orkh|тюрков]], булгар, [[ps:Hung|венгров]] сходной угловатой формы также называют рунами.</p>
-      <p />
-      <p>Блок кодирует алфавиты скандинавских и англосаксонских рун, частично пересекающиеся. В 2014 добавили три руны для записи современного английского, приписываемые Дж.{{_}}Толкину, и пять рун с ларца Фрэнкса, реликвии VIII{{_}}века.</p>
      </transl>
     </text>
    </group>

@@ -5543,15 +5543,21 @@
     </text>
     <text id="Text">
      <orig>
-      <p>Runes have distinctive angled shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes changed for cursive writing with quill. About 5000 specimen of runic writing are found, the oldest are from 2nd century. Scandinavian runic alphabet is called “Futhark” for first six letters.</p>
+      <p>Runes have distinctive angled shape suitable for carving: wood resists differently along and across the grain, so it’s hard to make curves. Later variants of runes changed for cursive writing with quill. About 5000 specimen of runic writing are found, the oldest are from 2nd century.</p>
+      <p />
+      <p>The block is a union of several runic alphabets:</p>
+      <p>* Elder Futhark, for first six letters{{-}}Scandinavian runes of 1st to 8th century, 24 letters</p>
+      <p>* Younger Futhark{{-}}Scandinavian runes since 9th century, 16 letters</p>
+      <p>* Futhorc{{-}}Anglo-Saxon runes of 5th to 11th century, borrowed from Elder Futhark and expanded to 34 letters in its youngest form</p>
+      <p>* 19 calendar runes (Younger Futhark + 3 more)</p>
+      <p>* Three runes for modern English attributed to J.{{_}}Tolkien</p>
+      <p>* Five runes from Franks Casket, relic of 8th century</p>
       <p />
       <p>Runes were supplanted with [[ps:Latn|Latin]] with advent of Christianity: in Western Europe by 11th century, in Scandinavia by 15th, and in some villages by 20th century, gradually replacing with Latin.</p>
       <p />
       <p>Nazi Germany liked esoterics, and runes together with it. Runes are popular in New Age and Neo-Paganism.</p>
       <p />
       <p>Scripts of arbitrary shape are called runes in mass culture, including unsuitable for carving. Alphabets of ancient [[ps:Orkh|Turks]], Bulgars and [[ps:Hung|Hungarians]] of similar angled shape are called runes too.</p>
-      <p />
-      <p>The block encodes alphabets of Scandinavian and Anglo-Saxon runes, partly intersecting. In 2014 three runes for modern English attributed to J.{{_}}Tolkien were added, together with five runes from Franks Casket, relic of 8th century.</p>
      </orig>
     </text>
    </group>
