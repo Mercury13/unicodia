@@ -16,8 +16,8 @@
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
-    // fill3 unused
-    std::string_view fill4;
+    // fill3 unused: just a few hands e.g. crossed fingers
+    // fill4 unused
     std::string_view fill5;
     std::string_view outline1;
     std::string_view hair1;
@@ -46,7 +46,6 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
-    repl(bytes, "#FFBB0D", fill4);
     repl(bytes, "#FFB503", fill5);
     repl(bytes, "#FBC02D", fill2);
     repl(bytes, "#EDA600", outline1);
@@ -80,7 +79,6 @@ namespace {
         { // White
             .fill1 = "#FFD29C",
             .fill2 = "#F9DDBD",
-            .fill4 = "#F5D5AF",
             .fill5 = "#F0CB9E",
             .outline1 = "#E6B77E",
             .hair1 = "#312D2D",
@@ -92,7 +90,6 @@ namespace {
         { // Light
             .fill1 = "#CCA47A",
             .fill2 = "#DEB892",
-            .fill4 = "#D1AA81",
             .fill5 = "#D6B088",
             .outline1 = "#BA8F63",
             .hair1 = "#AB872F",
@@ -104,7 +101,6 @@ namespace {
         { // Medium
             .fill1 = "#A47B62",
             .fill2 = "#BA8D68",
-            .fill4 = "#B78A67",
             .fill5 = "#AD8264",
             .outline1 = "#91674D",
             .hair1 = "#543930",
@@ -116,7 +112,6 @@ namespace {
         { // Dark
             .fill1 = "#8D5738",
             .fill2 = "#A56C43",
-            .fill4 = "#A26942",
             .fill5 = "#98603D",
             .outline1 = "#875334",
             .hair1 = "#3C2C23",
@@ -128,7 +123,6 @@ namespace {
         { // Black
             .fill1 = "#5C4037",
             .fill2 = "#70534A",
-            .fill4 = "#6D5047",
             .fill5 = "#63463D",
             .outline1 = "#4A2F27",
             .hair1 = "#232020",
