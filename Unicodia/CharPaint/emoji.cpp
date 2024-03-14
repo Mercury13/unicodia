@@ -46,7 +46,8 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
-    // #FBC02D: U14 index up, rocker horns, U15 unused
+    // U15 replaced lots of hands and other body parts → some colours now unused
+    // #FBC02D: U14 index up, rocker horns; U15 unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
     // #FA0: U14 writing hand only
     repl(bytes, "#FFD54F", fill2);      // used: e.g. rowing
