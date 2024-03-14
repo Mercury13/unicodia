@@ -44,8 +44,8 @@ namespace {
 
 void RecolorLib::runOn(QByteArray& bytes) const
 {
-    repl(bytes, "#FFB300", fill1);
-    repl(bytes, "#FFCA28", fill2);
+    repl(bytes, "#FFB300", fill1);      // used: e.g. runner
+    repl(bytes, "#FFCA28", fill2);      // same
     repl(bytes, "#FFC41E", fill3);
     repl(bytes, "#FFBB0D", fill4);
     repl(bytes, "#FFB503", fill5);
