@@ -46,11 +46,11 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
-    repl(bytes, "#FBC02D", fill2);
-    repl(bytes, "#EDA600", outline1);
+    // #FBC02D: U15 unused, used to be index up, rocker horns
+    repl(bytes, "#EDA600", outline1);   // used: e.g. runner
     // #FA0: writing hand only, with U15 unused
-    repl(bytes, "#FFD54F", fill2);   // used: e.g rowing
-    repl(bytes, "#FFC107", fill1);
+    repl(bytes, "#FFD54F", fill2);   // used: e.g. rowing
+    repl(bytes, "#FFC107", fill1);   // used: e.g. pilot
     repl(bytes, "#D48322", outline1);
     repl(bytes, "#E6A100", outline1);
     repl(bytes, "#F5AC00", fill1);
@@ -60,8 +60,8 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#795548", mouth1);
     repl(bytes, "#404040", eyes1);
     // Unicodia emoji
-    repl(bytes, "#F6D32D", fill2);
-    repl(bytes, "#E5A50A", outline1);
+    //repl(bytes, "#F6D32D", fill2);
+    //repl(bytes, "#E5A50A", outline1);
 }
 
 void RecolorInfo::runOn(QByteArray& bytes) const
