@@ -16,9 +16,9 @@
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
-    // fill3 unused: just a few hands e.g. crossed fingers
-    // fill4 unused: crossed fingers only
-    // fill5 unused: just two hands, and only crossed fingers were repainted
+    // fill3 unused in U15: just a few hands e.g. crossed fingers
+    // fill4 unused in U15: crossed fingers only
+    // fill5 unused in U15: just two hands, and only crossed fingers were repainted
     std::string_view outline1;
     std::string_view hair1;
     std::string_view hair2;
@@ -48,7 +48,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FFCA28", fill2);      // same
     repl(bytes, "#FBC02D", fill2);
     repl(bytes, "#EDA600", outline1);
-    repl(bytes, "#FA0",    fill1);
+    // #FA0: writing hand only, with U15 unused
     repl(bytes, "#FFD54F", fill2);
     repl(bytes, "#FFC107", fill1);
     repl(bytes, "#D48322", outline1);
