@@ -51,7 +51,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     // #FA0: writing hand only, with U15 unused
     repl(bytes, "#FFD54F", fill2);   // used: e.g. rowing
     repl(bytes, "#FFC107", fill1);   // used: e.g. pilot
-    repl(bytes, "#D48322", outline1);
+    // #D48322: used to be two ears, naked and w/aid
     repl(bytes, "#E6A100", outline1);
     repl(bytes, "#F5AC00", fill1);
     repl(bytes, "#543930", hair1);
