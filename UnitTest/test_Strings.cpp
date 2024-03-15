@@ -372,31 +372,31 @@ TEST (PrefixSv, NotFound)
 }
 
 
-///// str::latIsUpper //////////////////////////////////////////////////////////
+///// lat::isUpper /////////////////////////////////////////////////////////////
 
 TEST (IsUpper, Test)
 {
-    EXPECT_TRUE (str::latIsUpper(""));
-    EXPECT_TRUE (str::latIsUpper("ALPHA"));
-    EXPECT_TRUE (str::latIsUpper(" ALPHA 12 "));
-    EXPECT_FALSE(str::latIsUpper("alpha"));
-    EXPECT_FALSE(str::latIsUpper(" alpha 12 "));
-    EXPECT_FALSE(str::latIsUpper(" ALPHA 12 bravo "));
-    EXPECT_TRUE (str::latIsUpper("START OF HEADING"sv));
+    EXPECT_TRUE (lat::isUpper(""));
+    EXPECT_TRUE (lat::isUpper("ALPHA"));
+    EXPECT_TRUE (lat::isUpper(" ALPHA 12 "));
+    EXPECT_FALSE(lat::isUpper("alpha"));
+    EXPECT_FALSE(lat::isUpper(" alpha 12 "));
+    EXPECT_FALSE(lat::isUpper(" ALPHA 12 bravo "));
+    EXPECT_TRUE (lat::isUpper("START OF HEADING"sv));
 }
 
 
-///// str::latIsLower //////////////////////////////////////////////////////////
+///// lat::isLower /////////////////////////////////////////////////////////////
 
 TEST (IsLower, Test)
 {
-    EXPECT_TRUE (str::latIsLower(""));
-    EXPECT_FALSE(str::latIsLower("ALPHA"));
-    EXPECT_FALSE(str::latIsLower(" ALPHA 12 "));
-    EXPECT_TRUE (str::latIsLower("alpha"));
-    EXPECT_TRUE (str::latIsLower(" alpha 12 "));
-    EXPECT_FALSE(str::latIsLower(" ALPHA 12 bravo "));
-    EXPECT_FALSE(str::latIsLower("START OF HEADING"sv));
+    EXPECT_TRUE (lat::isLower(""));
+    EXPECT_FALSE(lat::isLower("ALPHA"));
+    EXPECT_FALSE(lat::isLower(" ALPHA 12 "));
+    EXPECT_TRUE (lat::isLower("alpha"));
+    EXPECT_TRUE (lat::isLower(" alpha 12 "));
+    EXPECT_FALSE(lat::isLower(" ALPHA 12 bravo "));
+    EXPECT_FALSE(lat::isLower("START OF HEADING"sv));
 }
 
 
@@ -404,11 +404,11 @@ TEST (IsLower, Test)
 
 TEST (IsSingleCase, Test)
 {
-    EXPECT_TRUE (str::latIsSingleCase(""));
-    EXPECT_TRUE (str::latIsSingleCase("ALPHA"));
-    EXPECT_TRUE (str::latIsSingleCase(" ALPHA 12 "));
-    EXPECT_TRUE (str::latIsSingleCase("alpha"));
-    EXPECT_TRUE (str::latIsSingleCase(" alpha 12 "));
-    EXPECT_FALSE(str::latIsSingleCase(" ALPHA 12 bravo "));
-    EXPECT_TRUE (str::latIsSingleCase("START OF HEADING"sv));
+    EXPECT_TRUE (lat::isSingleCase(""));
+    EXPECT_TRUE (lat::isSingleCase("ALPHA"));
+    EXPECT_TRUE (lat::isSingleCase(" ALPHA 12 "));
+    EXPECT_TRUE (lat::isSingleCase("alpha"));
+    EXPECT_TRUE (lat::isSingleCase(" alpha 12 "));
+    EXPECT_FALSE(lat::isSingleCase(" ALPHA 12 bravo "));
+    EXPECT_TRUE (lat::isSingleCase("START OF HEADING"sv));
 }
