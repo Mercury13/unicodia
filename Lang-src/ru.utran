@@ -11473,6 +11473,10 @@
     <orig>for temporary Kawi font</orig>
     <transl>за временный шрифт кави</transl>
    </text>
+   <text id="QaEgyp">
+    <orig>for reviewing Egyptian font</orig>
+    <transl>за ревизию египетского шрифта</transl>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">

@@ -7911,6 +7911,9 @@
    <text id="TempKawi">
     <orig>for temporary Kawi font</orig>
    </text>
+   <text id="QaEgyp">
+    <orig>for reviewing Egyptian font</orig>
+   </text>
   </group>
   <group id="Main">
    <group id="Ui">
