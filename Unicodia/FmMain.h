@@ -436,6 +436,7 @@ private slots:
     void updateFinished(QNetworkReply* reply);
     void acAddToFavsTriggered(bool isChecked);
     void acRemoveFromFavsTriggered();
+    void slotSkinToneQa();
 };
 
 

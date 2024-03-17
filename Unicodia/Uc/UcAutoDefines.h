@@ -564,6 +564,12 @@ namespace uc {
         inline const GlyphStyleChannel styleChannel() const;
     };
 
+    size_t sprintPlus(char* buf, size_t n, std::u32string_view text);
+
+    template<size_t N>
+    inline size_t sprintPlus(char (&buf)[N], std::u32string_view text)
+        { return sprintPlus(buf, N, text); }
+
     // Check your calculations once again
     static_assert(sizeof(Cp) == 14, "Cp size wrong");
 
@@ -596,7 +602,8 @@ namespace uc {
 
         /// Prints “0000+1111+2222”
         /// @return new pos
-        size_t sprintPlus(char* data, size_t n) const;
+        size_t sprintPlus(char* data, size_t n) const
+            { return uc::sprintPlus(data, n, value); }
 
         /// @return new pos
         template<size_t N>

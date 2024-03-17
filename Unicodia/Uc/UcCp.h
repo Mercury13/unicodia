@@ -12,7 +12,7 @@ namespace cp {
     constexpr char32_t PLANE_2_START = 0xF'0000;
     constexpr char32_t PLANE_F_START = 0xF'0000;
 
-    // Non-characters
+    // Non-characters, private, wtc
     constexpr char32_t PRIV_BMP_FIRST = 0xE000;
     constexpr char32_t PRIV_BMP_LAST = 0xF8FF;
 
@@ -20,6 +20,10 @@ namespace cp {
     constexpr char32_t ZERO_THIRDS = 0x2189;
     constexpr char32_t MATH_GREEK_FIRST = 0x1D6A8;
     constexpr char32_t MATH_GREEK_LAST = 0x1D7CB;
+
+    // Dingbats
+    constexpr char32_t DING_RIGHT_ARROW = 0x27A1;
+    constexpr char32_t EMOJI_RIGHT_ARROW = DING_RIGHT_ARROW;
 
     // Variation selectors
     constexpr char32_t VS15 = 0xFE0E;

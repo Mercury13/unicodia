@@ -785,6 +785,13 @@ void drawSearchChars(
 }
 
 
+void drawEmojiDirect(
+        QPainter* painter, const QRect& rect, std::u32string_view text)
+{
+    emp.draw(painter, rect, text, rect.height());
+}
+
+
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
         const CharTiles& tiles, const QColor& color,

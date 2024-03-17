@@ -36,6 +36,7 @@ SOURCES += \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
     ../Libs/SelfMade/u_Version.cpp \
+    CharPaint/SkinToneQa.cpp \
     CharPaint/routines.cpp \
     CharPaint/IconEngines.cpp \
     CharPaint/emoji.cpp \
@@ -102,6 +103,7 @@ HEADERS += \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Version.h \
     ../Libs/Zippy/Zippy.hpp \
+    CharPaint/SkinToneQa.h \
     CharPaint/routines.h \
     CharPaint/IconEngines.h \
     CharPaint/global.h \

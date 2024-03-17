@@ -46,6 +46,7 @@
 #include "CharPaint/routines.h"
 #include "CharPaint/IconEngines.h"
 #include "CharPaint/emoji.h"
+#include "CharPaint/SkinToneQa.h"
 
 // Project-local
 #include "Skin.h"
@@ -947,7 +948,6 @@ FmMain::FmMain(QWidget *parent)
 
     // Search
     ui->listSearch->setIconSize(pixQsize());
-    ui->edSearch->lineEdit()->setPlaceholderText("[Search]");
 
     // Popup link
     connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
@@ -967,6 +967,10 @@ FmMain::FmMain(QWidget *parent)
     // Write tiles
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F12), this);
     connect(shcut, &QShortcut::activated, this, &This::dumpTiles);
+
+    // Skin tone QA
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Q), this);
+    connect(shcut, &QShortcut::activated, this, &This::slotSkinToneQa);
 
     // Debug painter
     //shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_F11), this);
@@ -2145,4 +2149,32 @@ void FmMain::acAddToFavsTriggered(bool isChecked)
 void FmMain::acRemoveFromFavsTriggered()
 {
     addRemoveFromFavs(ui->wiFavsShowcase, btRemoveFromFavs, false);
+}
+
+
+void FmMain::slotSkinToneQa()
+{
+    static constexpr auto HEADER = "Skin tone QA";
+    auto q = doSkinToneQa();
+    switch (q.ec) {
+    case SkinToneError::OK:
+        QMessageBox::information(this, HEADER,
+                loc::Fmt("Created {1} files")(q.nFiles).q());
+        break;
+    case SkinToneError::CANNOT_CREATE_DIR:
+        QMessageBox::critical(this, HEADER, "Cannot create directory");
+        break;
+    case SkinToneError::CANNOT_REMOVE_FILE:
+        QMessageBox::critical(this, HEADER, "Cannot remove file");
+        break;
+    case SkinToneError::CANNOT_SAVE_FILE:
+        QMessageBox::critical(this, HEADER, "Cannot save file");
+        break;
+    case SkinToneError::REPEATING_EMOJI:
+        QMessageBox::critical(this, HEADER, "Repeating emoji");
+        break;
+    case SkinToneError::INCOMPLETE_EMOJI:
+        QMessageBox::critical(this, HEADER, "Incomplete emoji");
+        break;
+    }
 }

@@ -2736,23 +2736,23 @@ size_t uc::appendPlus(char* buf, size_t n, size_t n1, char32_t code)
 }
 
 
+size_t uc::sprintPlus(char* buf, size_t n, std::u32string_view text)
+{
+    *buf = 0;
+    size_t pos = 0;
+    for (auto c : text) {
+        pos = uc::appendPlus(buf, n, pos, c);
+    }
+    return pos;
+}
+
+
 size_t uc::LibNode::sprintUPLUS(char* data, size_t n) const
 {
     *data = 0;
     size_t pos = 0;
     for (auto c : value) {
         pos = uc::appendUPLUS(data, n, pos, c);
-    }
-    return pos;
-}
-
-
-size_t uc::LibNode::sprintPlus(char* data, size_t n) const
-{
-    *data = 0;
-    size_t pos = 0;
-    for (auto c : value) {
-        pos = uc::appendPlus(data, n, pos, c);
     }
     return pos;
 }

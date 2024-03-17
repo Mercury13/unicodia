@@ -80,6 +80,8 @@ void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
         const QColor& color, uc::EmojiDraw emojiMode,
         const uc::GlyphStyleSets& glyphSets, qreal scale);
+void drawEmojiDirect(
+        QPainter* painter, const QRect& rect, std::u32string_view text);
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
