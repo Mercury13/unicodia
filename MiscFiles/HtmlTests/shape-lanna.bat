@@ -1,2 +1,2 @@
-d:\Soft\FontEditing\Harfbuzz\hb-shape.exe --unicodes=1A23+1A74+1A64 --trace ../../Fonts/UnicodiaHari.otf >shape-lanna-uni 2>shape-err-uni
-d:\Soft\FontEditing\Harfbuzz\hb-shape.exe --unicodes=1A23+1A74+1A64 --trace NotoSansTaiTham-Regular.ttf >shape-lanna-noto 2>shape-err-noto
+d:\Soft\FontEditing\Harfbuzz\hb-shape.exe --unicodes=1A23+1A74+1A64+0020+1A23+1A64 --trace ../../Fonts/UnicodiaHari.otf >shape-lanna-uni 2>shape-err-uni
+d:\Soft\FontEditing\Harfbuzz\hb-shape.exe --unicodes=1A23+1A74+1A64+0020+1A23+1A64 --trace NotoSansTaiTham-Regular.ttf >shape-lanna-noto 2>shape-err-noto
