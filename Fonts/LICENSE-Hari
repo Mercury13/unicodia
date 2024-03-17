@@ -9,6 +9,7 @@ What was done by author of Unicodia:
 * Fixed up metrics
 * Changed glyph for virtual virama
 * Added extrema and hints, simplified
+* Completely removed “lana” script, leaving only “DFLT” (strange hack taken from Noto)
 
 
 -----------------------------------------------------------
