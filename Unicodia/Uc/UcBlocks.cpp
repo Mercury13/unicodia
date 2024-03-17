@@ -252,7 +252,7 @@ constinit const uc::Block uc::blocks[] {
             "Buginese",
             { EcScript::Bugi, 0 }, MapType::OC, EcScript::Bugi },
     // Lanna OK
-    { 0x1A20, 0x1AAF, { 0x1A28, EcContinent::ASIA },
+    { 0x1A20, 0x1AAF, { 0x1A21, EcContinent::ASIA },
             "Tai Tham",
             { EcScript::Lana, 0 }, MapType::AS_BRAH, EcScript::Lana },
     // Diacritical ex OK
