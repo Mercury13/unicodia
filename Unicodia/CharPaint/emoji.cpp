@@ -20,6 +20,7 @@ struct RecolorLib {
     // fill4 unused in U15: crossed fingers only
     // fill5 unused in U15: just two hands, and only crossed fingers were repainted
     std::string_view outline1;
+    std::string_view earLines;  ///< U15: in lines of ear; same everywhere except main and white
     std::string_view hair1;
     std::string_view hair2;
     std::string_view ears1;     ///< used in firefighter emoji
@@ -46,6 +47,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
     repl(bytes, "#FFCA28", fill2);      // same
+    repl(bytes, "#F09300", earLines);   // used in ear, naked and w/hearing aid
     // U15 replaced lots of hands and other body parts → some colours now unused
     // #FBC02D: U14 index up, rocker horns; U15 unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
@@ -75,8 +77,9 @@ namespace {
 
         { // White
             .fill1 = "#FFD29C",
-            .fill2 = "#F9DDBD",
+            .fill2 = "#F9DDBD",            
             .outline1 = "#E6B77E",
+            .earLines = "#EDBD82",
             .hair1 = "#312D2D",
             .hair2 = "#454140",
             .ears1 = "#EDC391",
@@ -85,8 +88,9 @@ namespace {
         },
         { // Light
             .fill1 = "#CCA47A",
-            .fill2 = "#DEB892",
+            .fill2 = "#E0BB95",
             .outline1 = "#BA8F63",
+            .earLines = "#BA8F63",
             .hair1 = "#AB872F",
             .hair2 = "#BFA055",
             .ears1 = "#C48E6A",
@@ -97,6 +101,7 @@ namespace {
             .fill1 = "#A47B62",
             .fill2 = "#BA8D68",
             .outline1 = "#91674D",
+            .earLines = "#91674D",
             .hair1 = "#543930",
             .hair2 = "#6D4C41",
             .ears1 = "#99674F",
@@ -107,16 +112,18 @@ namespace {
             .fill1 = "#8D5738",
             .fill2 = "#A56C43",
             .outline1 = "#875334",
+            .earLines = "#875334",
             .hair1 = "#3C2C23",
             .hair2 = "#554138",
             .ears1 = "#7A4C32",
             .mouth1 = "#473530",
             .eyes1 = "#42312C",
         },
-        { // Black
+        { // Ebony
             .fill1 = "#5C4037",
             .fill2 = "#70534A",
             .outline1 = "#4A2F27",
+            .earLines = "#4A2F27",
             .hair1 = "#232020",
             .hair2 = "#444140",
             .ears1 = "#3C2B24",
