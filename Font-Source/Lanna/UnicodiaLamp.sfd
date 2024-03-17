@@ -22,7 +22,7 @@ OS2Version: 3
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1339689063
-ModificationTime: 1710678705
+ModificationTime: 1710679620
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -57,7 +57,8 @@ OS2XHeight: 300
 OS2Vendor: '    '
 OS2CodePages: 00000001.00000000
 OS2UnicodeRanges: 00000001.10002040.00000000.00000000
-Lookup: 1 0 0 "'pref' Pre Base Forms in Tai Tham lookup 0" { "'pref' Pre Base Forms in Tai Tham lookup 0 subtable"  } ['pref' ('lana' <'dflt' > ) ]
+Lookup: 1 0 0 "'pref' Pre Base Forms in Tai Tham lookup 0" { "'pref' Pre Base Forms in Tai Tham lookup 0 subtable"  } ['pref' ('DFLT' <'dflt' > 'lana' <'dflt' > ) ]
+Lookup: 4 0 0 "Merc" { "Merc-1"  } ['ccmp' ('DFLT' <'dflt' > 'lana' <'dflt' > ) ]
 Lookup: 2 0 0 "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Tai Tham lookup 1" { "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4BEYEOARP +BDMEOwQ4BEQEMAAA in Tai Tham lookup 1 subtable"  } ['ccmp' ('DFLT' <'dflt' > 'lana' <'dflt' > ) ]
 Lookup: 5 0 0 "'blws' Below Base Substitutions in Tai Tham lookup 2" { "'blws' Below Base Substitutions in Tai Tham lookup 2 subtable"  } ['blws' ('lana' <'dflt' > ) ]
 Lookup: 1 0 0 "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 3" { "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA lookup 3 subtable"  } []
@@ -1790,8 +1791,7 @@ ContextPos2: glyph "'mark' Mark Positioning in Tai Tham lookup 2 subtable" 0 0 0
   SeqLookup: 0 "Mark to base attachment lookup 5"
 EndFPST
 LangName: 1033 "Glyphs, graphic ligaturing and layout copyright (c) 2014 Edward Trager.+AAoA-Dotted circle suppression and tinkering (c) 2018 Richard Wordingham.+AAoA'Hariphunchai' and 'Lamphun' are reserved font names." "" "" "" "" "Version 0.004" "" "" "" "" "" "" "" "The Lamphun font is copyright (c) 2018, Richard Wordingham with Reserved Font+AAoA-Name Lamphun.  It is derived from the Hariphunchai font, which it uses under+AAoA-the SIL Open Font License.+AAoACgAKAAoA-The Hariphunchai font is copyright (c) 2010, Hariphunchai Font Project+AAoA( http://hariphunchai.unifont.org, <ed.trager@gmail.com> ) with Reserved Font+AAoA-Name Hariphunchai.+AAoACgAA-This Font Software is licensed under the SIL Open Font License, Version 1.1.+AAoA-This license is copied below, and is also available with a FAQ at:+AAoA-http://scripts.sil.org/OFL+AAoACgAK------------------------------------------------------------+AAoA-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007+AAoA------------------------------------------------------------+AAoACgAA-PREAMBLE+AAoA-The goals of the Open Font License (OFL) are to stimulate worldwide+AAoA-development of collaborative font projects, to support the font creation+AAoA-efforts of academic and linguistic communities, and to provide a free and+AAoA-open framework in which fonts may be shared and improved in partnership+AAoA-with others.+AAoACgAA-The OFL allows the licensed fonts to be used, studied, modified and+AAoA-redistributed freely as long as they are not sold by themselves. The+AAoA-fonts, including any derivative works, can be bundled, embedded, +AAoA-redistributed and/or sold with any software provided that any reserved+AAoA-names are not used by derivative works. The fonts and derivatives,+AAoA-however, cannot be released under any other type of license. The+AAoA-requirement for fonts to remain under this license does not apply+AAoA-to any document created using the fonts or their derivatives.+AAoACgAA-DEFINITIONS+AAoAIgAA-Font Software+ACIA refers to the set of files released by the Copyright+AAoA-Holder(s) under this license and clearly marked as such. This may+AAoA-include source files, build scripts and documentation.+AAoACgAi-Reserved Font Name+ACIA refers to any names specified as such after the+AAoA-copyright statement(s).+AAoACgAi-Original Version+ACIA refers to the collection of Font Software components as+AAoA-distributed by the Copyright Holder(s).+AAoACgAi-Modified Version+ACIA refers to any derivative made by adding to, deleting,+AAoA-or substituting -- in part or in whole -- any of the components of the+AAoA-Original Version, by changing formats or by porting the Font Software to a+AAoA-new environment.+AAoACgAi-Author+ACIA refers to any designer, engineer, programmer, technical+AAoA-writer or other person who contributed to the Font Software.+AAoACgAA-PERMISSION & CONDITIONS+AAoA-Permission is hereby granted, free of charge, to any person obtaining+AAoA-a copy of the Font Software, to use, study, copy, merge, embed, modify,+AAoA-redistribute, and sell modified and unmodified copies of the Font+AAoA-Software, subject to the following conditions:+AAoACgAA-1) Neither the Font Software nor any of its individual components,+AAoA-in Original or Modified Versions, may be sold by itself.+AAoACgAA-2) Original or Modified Versions of the Font Software may be bundled,+AAoA-redistributed and/or sold with any software, provided that each copy+AAoA-contains the above copyright notice and this license. These can be+AAoA-included either as stand-alone text files, human-readable headers or+AAoA-in the appropriate machine-readable metadata fields within text or+AAoA-binary files as long as those fields can be easily viewed by the user.+AAoACgAA-3) No Modified Version of the Font Software may use the Reserved Font+AAoA-Name(s) unless explicit written permission is granted by the corresponding+AAoA-Copyright Holder. This restriction only applies to the primary font name as+AAoA-presented to the users.+AAoACgAA-4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font+AAoA-Software shall not be used to promote, endorse or advertise any+AAoA-Modified Version, except to acknowledge the contribution(s) of the+AAoA-Copyright Holder(s) and the Author(s) or with their explicit written+AAoA-permission.+AAoACgAA-5) The Font Software, modified or unmodified, in part or in whole,+AAoA-must be distributed entirely under this license, and must not be+AAoA-distributed under any other license. The requirement for fonts to+AAoA-remain under this license does not apply to any document created+AAoA-using the Font Software.+AAoACgAA-TERMINATION+AAoA-This license becomes null and void if any of the above conditions are+AAoA-not met.+AAoACgAA-DISCLAIMER+AAoA-THE FONT SOFTWARE IS PROVIDED +ACIA-AS IS+ACIA, WITHOUT WARRANTY OF ANY KIND,+AAoA-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF+AAoA-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT+AAoA-OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE+AAoA-COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,+AAoA-INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL+AAoA-DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING+AAoA-FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM+AAoA-OTHER DEALINGS IN THE FONT SOFTWARE." "http://wrdingham.co.uk/lanna/lamphun_licence.txt"
-Encoding: UnicodeBmp
-Compacted: 1
+Encoding: Custom
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
@@ -1807,10 +1807,10 @@ StemSnapH 7 [35 40]
 StemSnapV 4 [40]
 EndPrivate
 AnchorClass2: "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--0" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--2" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--3" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--4" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--6" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--7" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--8" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--10" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 2" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--11" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 2" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--12" "'mark' Mark Positioning in Tai Tham lookup 1 anchor 2" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--13" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--14" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--15" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--16" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--17" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--18" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--19" "'mkmk' Mark to Mark in Tai Tham lookup 3 anchor 2" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--20" "'mkmk' Mark to Mark in Tai Tham lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--21" "'mkmk' Mark to Mark in Tai Tham lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--22" "'mkmk' Mark to Mark in Tai Tham lookup 4 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--23" "Mark to base attachment lookup 5 subtable" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--24" "'mkmk' Mark to Mark in Tai Tham lookup 6 anchor 0" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--25" "'mkmk' Mark to Mark in Tai Tham lookup 6 anchor 1" "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--26" "'mkmk' Mark to Mark in Tai Tham lookup 6 anchor 1"
-BeginChars: 65541 347
+BeginChars: 351 348
 
 StartChar: .notdef
-Encoding: 65536 -1 0
+Encoding: 345 -1 0
 Width: 500
 VWidth: 1000
 GlyphClass: 1
@@ -1943,7 +1943,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni0
 EndChar
 
 StartChar: space
-Encoding: 32 32 2
+Encoding: 1 32 2
 AltUni2: 0000a0.ffffffff.0 0000a0.ffffffff.0
 Width: 400
 VWidth: 1000
@@ -1969,7 +1969,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" spac
 EndChar
 
 StartChar: parenleft
-Encoding: 40 40 3
+Encoding: 2 40 3
 Width: 263
 VWidth: 1000
 GlyphClass: 2
@@ -1999,7 +1999,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" pare
 EndChar
 
 StartChar: parenright
-Encoding: 41 41 4
+Encoding: 3 41 4
 Width: 262
 VWidth: 1000
 GlyphClass: 2
@@ -2029,7 +2029,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" pare
 EndChar
 
 StartChar: plus
-Encoding: 43 43 5
+Encoding: 4 43 5
 Width: 263
 VWidth: 1000
 GlyphClass: 2
@@ -2066,7 +2066,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" plus
 EndChar
 
 StartChar: hyphen
-Encoding: 45 45 6
+Encoding: 5 45 6
 Width: 264
 VWidth: 1000
 GlyphClass: 2
@@ -2100,7 +2100,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" hyph
 EndChar
 
 StartChar: period
-Encoding: 46 46 7
+Encoding: 6 46 7
 Width: 155
 VWidth: 1000
 GlyphClass: 2
@@ -2129,7 +2129,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" peri
 EndChar
 
 StartChar: zero
-Encoding: 48 48 8
+Encoding: 7 48 8
 Width: 507
 VWidth: 1000
 GlyphClass: 2
@@ -2163,7 +2163,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" zero
 EndChar
 
 StartChar: one
-Encoding: 49 49 9
+Encoding: 8 49 9
 Width: 218
 VWidth: 1000
 GlyphClass: 2
@@ -2198,7 +2198,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" one 
 EndChar
 
 StartChar: two
-Encoding: 50 50 10
+Encoding: 9 50 10
 Width: 438
 VWidth: 1000
 GlyphClass: 2
@@ -2235,7 +2235,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" two 
 EndChar
 
 StartChar: three
-Encoding: 51 51 11
+Encoding: 10 51 11
 Width: 458
 VWidth: 1000
 GlyphClass: 2
@@ -2274,7 +2274,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" thre
 EndChar
 
 StartChar: four
-Encoding: 52 52 12
+Encoding: 11 52 12
 Width: 452
 VWidth: 1000
 GlyphClass: 2
@@ -2313,7 +2313,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" four
 EndChar
 
 StartChar: five
-Encoding: 53 53 13
+Encoding: 12 53 13
 Width: 449
 VWidth: 1000
 GlyphClass: 2
@@ -2354,7 +2354,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" five
 EndChar
 
 StartChar: six
-Encoding: 54 54 14
+Encoding: 13 54 14
 Width: 441
 VWidth: 1000
 GlyphClass: 2
@@ -2392,7 +2392,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" six 
 EndChar
 
 StartChar: seven
-Encoding: 55 55 15
+Encoding: 14 55 15
 Width: 409
 VWidth: 1000
 GlyphClass: 2
@@ -2422,7 +2422,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" seve
 EndChar
 
 StartChar: eight
-Encoding: 56 56 16
+Encoding: 15 56 16
 Width: 411
 VWidth: 1000
 GlyphClass: 2
@@ -2466,7 +2466,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" eigh
 EndChar
 
 StartChar: nine
-Encoding: 57 57 17
+Encoding: 16 57 17
 Width: 441
 VWidth: 1000
 GlyphClass: 2
@@ -2504,7 +2504,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" nine
 EndChar
 
 StartChar: A
-Encoding: 65 65 18
+Encoding: 17 65 18
 Width: 576
 VWidth: 1000
 GlyphClass: 2
@@ -2539,7 +2539,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" A un
 EndChar
 
 StartChar: B
-Encoding: 66 66 19
+Encoding: 18 66 19
 Width: 412
 VWidth: 1000
 GlyphClass: 2
@@ -2585,7 +2585,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" B un
 EndChar
 
 StartChar: C
-Encoding: 67 67 20
+Encoding: 19 67 20
 Width: 538
 VWidth: 1000
 GlyphClass: 2
@@ -2624,7 +2624,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" C un
 EndChar
 
 StartChar: D
-Encoding: 68 68 21
+Encoding: 20 68 21
 Width: 509
 VWidth: 1000
 GlyphClass: 2
@@ -2661,7 +2661,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" D un
 EndChar
 
 StartChar: E
-Encoding: 69 69 22
+Encoding: 21 69 22
 Width: 457
 VWidth: 1000
 GlyphClass: 2
@@ -2698,7 +2698,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" E un
 EndChar
 
 StartChar: F
-Encoding: 70 70 23
+Encoding: 22 70 23
 Width: 417
 VWidth: 1000
 GlyphClass: 2
@@ -2733,7 +2733,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" F un
 EndChar
 
 StartChar: U
-Encoding: 85 85 24
+Encoding: 23 85 24
 Width: 531
 VWidth: 1000
 GlyphClass: 2
@@ -2768,7 +2768,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" U un
 EndChar
 
 StartChar: bracketleft
-Encoding: 91 91 25
+Encoding: 24 91 25
 Width: 257
 VWidth: 1000
 GlyphClass: 2
@@ -2801,7 +2801,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" brac
 EndChar
 
 StartChar: bracketright
-Encoding: 93 93 26
+Encoding: 25 93 26
 Width: 256
 VWidth: 1000
 GlyphClass: 2
@@ -2833,7 +2833,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" brac
 EndChar
 
 StartChar: u
-Encoding: 117 117 27
+Encoding: 26 117 27
 Width: 364
 VWidth: 1000
 GlyphClass: 2
@@ -2870,7 +2870,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" u un
 EndChar
 
 StartChar: x
-Encoding: 120 120 28
+Encoding: 27 120 28
 Width: 370
 VWidth: 1000
 GlyphClass: 2
@@ -2917,7 +2917,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" x un
 EndChar
 
 StartChar: braceleft
-Encoding: 123 123 29
+Encoding: 28 123 29
 Width: 301
 VWidth: 1000
 GlyphClass: 2
@@ -2956,7 +2956,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" brac
 EndChar
 
 StartChar: braceright
-Encoding: 125 125 30
+Encoding: 29 125 30
 Width: 302
 VWidth: 1000
 GlyphClass: 2
@@ -2997,7 +2997,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" brac
 EndChar
 
 StartChar: uni1A20
-Encoding: 6688 6688 31
+Encoding: 32 6688 31
 Width: 550
 VWidth: 1000
 GlyphClass: 2
@@ -3072,7 +3072,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A21
-Encoding: 6689 6689 32
+Encoding: 33 6689 32
 Width: 442
 VWidth: 1000
 GlyphClass: 2
@@ -3150,7 +3150,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A22
-Encoding: 6690 6690 33
+Encoding: 34 6690 33
 Width: 437
 VWidth: 1000
 GlyphClass: 2
@@ -3244,7 +3244,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A23
-Encoding: 6691 6691 34
+Encoding: 35 6691 34
 Width: 470
 VWidth: 1000
 GlyphClass: 2
@@ -3312,7 +3312,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A24
-Encoding: 6692 6692 35
+Encoding: 36 6692 35
 Width: 471
 VWidth: 1000
 GlyphClass: 2
@@ -3389,7 +3389,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A25
-Encoding: 6693 6693 36
+Encoding: 37 6693 36
 Width: 575
 VWidth: 1000
 GlyphClass: 2
@@ -3482,7 +3482,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A26
-Encoding: 6694 6694 37
+Encoding: 38 6694 37
 Width: 489
 VWidth: 1000
 GlyphClass: 2
@@ -3549,7 +3549,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A27
-Encoding: 6695 6695 38
+Encoding: 39 6695 38
 Width: 394
 VWidth: 1000
 GlyphClass: 2
@@ -3605,7 +3605,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A28
-Encoding: 6696 6696 39
+Encoding: 40 6696 39
 Width: 463
 VWidth: 1000
 GlyphClass: 2
@@ -3677,7 +3677,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A29
-Encoding: 6697 6697 40
+Encoding: 41 6697 40
 Width: 498
 VWidth: 1000
 GlyphClass: 2
@@ -3755,7 +3755,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2A
-Encoding: 6698 6698 41
+Encoding: 42 6698 41
 Width: 500
 VWidth: 1000
 GlyphClass: 2
@@ -3840,7 +3840,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2B
-Encoding: 6699 6699 42
+Encoding: 43 6699 42
 Width: 487
 VWidth: 1000
 GlyphClass: 2
@@ -3912,7 +3912,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2C
-Encoding: 6700 6700 43
+Encoding: 44 6700 43
 Width: 536
 VWidth: 1000
 GlyphClass: 2
@@ -4002,7 +4002,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2D
-Encoding: 6701 6701 44
+Encoding: 45 6701 44
 Width: 449
 VWidth: 1000
 GlyphClass: 2
@@ -4079,7 +4079,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2E
-Encoding: 6702 6702 45
+Encoding: 46 6702 45
 Width: 450
 VWidth: 1000
 GlyphClass: 2
@@ -4171,7 +4171,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A2F
-Encoding: 6703 6703 46
+Encoding: 47 6703 46
 Width: 453
 VWidth: 1000
 GlyphClass: 2
@@ -4243,7 +4243,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A30
-Encoding: 6704 6704 47
+Encoding: 48 6704 47
 Width: 446
 VWidth: 1000
 GlyphClass: 2
@@ -4324,7 +4324,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A31
-Encoding: 6705 6705 48
+Encoding: 49 6705 48
 Width: 571
 VWidth: 1000
 GlyphClass: 2
@@ -4403,7 +4403,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A32
-Encoding: 6706 6706 49
+Encoding: 50 6706 49
 Width: 569
 VWidth: 1000
 GlyphClass: 2
@@ -4469,7 +4469,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A33
-Encoding: 6707 6707 50
+Encoding: 51 6707 50
 Width: 486
 VWidth: 1000
 GlyphClass: 2
@@ -4545,7 +4545,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A34
-Encoding: 6708 6708 51
+Encoding: 52 6708 51
 Width: 458
 VWidth: 1000
 GlyphClass: 2
@@ -4619,7 +4619,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A35
-Encoding: 6709 6709 52
+Encoding: 53 6709 52
 Width: 410
 VWidth: 1000
 GlyphClass: 2
@@ -4675,7 +4675,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A36
-Encoding: 6710 6710 53
+Encoding: 54 6710 53
 Width: 448
 VWidth: 1000
 GlyphClass: 2
@@ -4744,7 +4744,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A37
-Encoding: 6711 6711 54
+Encoding: 55 6711 54
 Width: 467
 VWidth: 1000
 GlyphClass: 2
@@ -4813,7 +4813,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A38
-Encoding: 6712 6712 55
+Encoding: 56 6712 55
 Width: 475
 VWidth: 1000
 GlyphClass: 2
@@ -4882,7 +4882,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A39
-Encoding: 6713 6713 56
+Encoding: 57 6713 56
 Width: 530
 VWidth: 1000
 GlyphClass: 2
@@ -4967,7 +4967,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3A
-Encoding: 6714 6714 57
+Encoding: 58 6714 57
 Width: 516
 VWidth: 1000
 GlyphClass: 2
@@ -5058,7 +5058,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3B
-Encoding: 6715 6715 58
+Encoding: 59 6715 58
 Width: 497
 VWidth: 1000
 GlyphClass: 2
@@ -5130,7 +5130,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3C
-Encoding: 6716 6716 59
+Encoding: 60 6716 59
 Width: 497
 VWidth: 1000
 GlyphClass: 2
@@ -5208,7 +5208,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3D
-Encoding: 6717 6717 60
+Encoding: 61 6717 60
 Width: 607
 VWidth: 1000
 GlyphClass: 2
@@ -5281,7 +5281,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3E
-Encoding: 6718 6718 61
+Encoding: 62 6718 61
 Width: 467
 VWidth: 1000
 GlyphClass: 2
@@ -5365,7 +5365,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A3F
-Encoding: 6719 6719 62
+Encoding: 63 6719 62
 Width: 636
 VWidth: 1000
 GlyphClass: 2
@@ -5443,7 +5443,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A40
-Encoding: 6720 6720 63
+Encoding: 64 6720 63
 Width: 457
 VWidth: 1000
 GlyphClass: 2
@@ -5521,7 +5521,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A41
-Encoding: 6721 6721 64
+Encoding: 65 6721 64
 Width: 407
 VWidth: 1000
 GlyphClass: 2
@@ -5590,7 +5590,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A42
-Encoding: 6722 6722 65
+Encoding: 66 6722 65
 Width: 447
 VWidth: 1000
 GlyphClass: 2
@@ -5678,7 +5678,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A43
-Encoding: 6723 6723 66
+Encoding: 67 6723 66
 Width: 593
 VWidth: 1000
 GlyphClass: 2
@@ -5751,7 +5751,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A44
-Encoding: 6724 6724 67
+Encoding: 68 6724 67
 Width: 439
 VWidth: 1000
 GlyphClass: 2
@@ -5841,7 +5841,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A45
-Encoding: 6725 6725 68
+Encoding: 69 6725 68
 Width: 393
 VWidth: 1000
 GlyphClass: 2
@@ -5894,7 +5894,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A46
-Encoding: 6726 6726 69
+Encoding: 70 6726 69
 Width: 470
 VWidth: 1000
 GlyphClass: 2
@@ -5974,7 +5974,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A47
-Encoding: 6727 6727 70
+Encoding: 71 6727 70
 Width: 607
 VWidth: 1000
 GlyphClass: 2
@@ -6041,6 +6041,7 @@ SplineSet
  88 44 95 50 95 59 c 0
  95 68 88 74 79 74 c 0x21c0
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32B uni1A47
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32A uni1A47
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE325 uni1A47
@@ -6061,7 +6062,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A48
-Encoding: 6728 6728 71
+Encoding: 72 6728 71
 Width: 607
 VWidth: 1000
 GlyphClass: 2
@@ -6135,7 +6136,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A49
-Encoding: 6729 6729 72
+Encoding: 73 6729 72
 Width: 590
 VWidth: 1000
 GlyphClass: 2
@@ -6209,7 +6210,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A4A
-Encoding: 6730 6730 73
+Encoding: 74 6730 73
 Width: 486
 VWidth: 1000
 GlyphClass: 2
@@ -6291,7 +6292,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A4B
-Encoding: 6731 6731 74
+Encoding: 75 6731 74
 Width: 488
 VWidth: 1000
 GlyphClass: 2
@@ -6389,7 +6390,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A4C
-Encoding: 6732 6732 75
+Encoding: 76 6732 75
 Width: 590
 VWidth: 1000
 GlyphClass: 2
@@ -6479,7 +6480,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A4D
-Encoding: 6733 6733 76
+Encoding: 77 6733 76
 Width: 497
 VWidth: 1000
 GlyphClass: 2
@@ -6563,7 +6564,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A4E
-Encoding: 6734 6734 77
+Encoding: 78 6734 77
 Width: 606
 VWidth: 1000
 GlyphClass: 2
@@ -6666,7 +6667,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A4F
-Encoding: 6735 6735 78
+Encoding: 79 6735 78
 Width: 366
 VWidth: 1000
 GlyphClass: 2
@@ -6733,7 +6734,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A50
-Encoding: 6736 6736 79
+Encoding: 80 6736 79
 Width: 361
 VWidth: 1000
 GlyphClass: 2
@@ -6811,7 +6812,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A51
-Encoding: 6737 6737 80
+Encoding: 81 6737 80
 Width: 362
 VWidth: 1000
 GlyphClass: 2
@@ -6875,7 +6876,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A52
-Encoding: 6738 6738 81
+Encoding: 82 6738 81
 Width: 771
 VWidth: 1000
 GlyphClass: 2
@@ -6986,7 +6987,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A53
-Encoding: 6739 6739 82
+Encoding: 83 6739 82
 Width: 602
 VWidth: 1000
 GlyphClass: 2
@@ -7061,7 +7062,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A54
-Encoding: 6740 6740 83
+Encoding: 84 6740 83
 Width: 868
 VWidth: 1000
 GlyphClass: 2
@@ -7149,7 +7150,7 @@ MultipleSubs2: "+BBwEPQQ+BDYENQRBBEIEMgQ1BD0EPQQwBE8A +BD8EPgQ0BEEEQgQwBD0EPgQyB
 EndChar
 
 StartChar: uni1A55
-Encoding: 6741 6741 84
+Encoding: 85 6741 84
 Width: 113
 VWidth: 1000
 GlyphClass: 2
@@ -7174,6 +7175,7 @@ SplineSet
  508 631 630 480 630 480 c 1
  628 478 l 1
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32B uni1A55
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32A uni1A55
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE325 uni1A55
@@ -7191,7 +7193,7 @@ Substitution2: "'pref' Pre Base Forms in Tai Tham lookup 0 subtable" uni1A55
 EndChar
 
 StartChar: uni1A56
-Encoding: 6742 6742 85
+Encoding: 86 6742 85
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7251,7 +7253,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A57
-Encoding: 6743 6743 86
+Encoding: 87 6743 86
 Width: 131
 VWidth: 1000
 GlyphClass: 4
@@ -7324,7 +7326,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=131 dv=0
 EndChar
 
 StartChar: uni1A58
-Encoding: 6744 6744 87
+Encoding: 88 6744 87
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7382,7 +7384,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A59
-Encoding: 6745 6745 88
+Encoding: 89 6745 88
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7431,7 +7433,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A5A
-Encoding: 6746 6746 89
+Encoding: 90 6746 89
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7484,7 +7486,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A5B
-Encoding: 6747 6747 90
+Encoding: 91 6747 90
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7527,7 +7529,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A5C
-Encoding: 6748 6748 91
+Encoding: 92 6748 91
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7591,7 +7593,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A5D
-Encoding: 6749 6749 92
+Encoding: 93 6749 92
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7644,7 +7646,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A5E
-Encoding: 6750 6750 93
+Encoding: 94 6750 93
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7702,7 +7704,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60
-Encoding: 6752 6752 94
+Encoding: 95 6752 94
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -7743,7 +7745,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A61
-Encoding: 6753 6753 95
+Encoding: 96 6753 95
 Width: 252
 VWidth: 1000
 GlyphClass: 2
@@ -7798,7 +7800,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A62
-Encoding: 6754 6754 96
+Encoding: 97 6754 96
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7830,7 +7832,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A63
-Encoding: 6755 6755 97
+Encoding: 98 6755 97
 Width: 324
 VWidth: 1000
 GlyphClass: 2
@@ -7878,7 +7880,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A64
-Encoding: 6756 6756 98
+Encoding: 99 6756 98
 Width: 125
 VWidth: 1000
 GlyphClass: 2
@@ -7930,7 +7932,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A65
-Encoding: 6757 6757 99
+Encoding: 100 6757 99
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -7976,7 +7978,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A66
-Encoding: 6758 6758 100
+Encoding: 101 6758 100
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8027,7 +8029,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A67
-Encoding: 6759 6759 101
+Encoding: 102 6759 101
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8075,7 +8077,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A68
-Encoding: 6760 6760 102
+Encoding: 103 6760 102
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8131,7 +8133,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A69
-Encoding: 6761 6761 103
+Encoding: 104 6761 103
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8169,7 +8171,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6A
-Encoding: 6762 6762 104
+Encoding: 105 6762 104
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8214,7 +8216,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6B
-Encoding: 6763 6763 105
+Encoding: 106 6763 105
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8252,7 +8254,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6C
-Encoding: 6764 6764 106
+Encoding: 107 6764 106
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8300,7 +8302,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6D
-Encoding: 6765 6765 107
+Encoding: 108 6765 107
 Width: 145
 VWidth: 1000
 GlyphClass: 4
@@ -8354,7 +8356,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=145 dv=0
 EndChar
 
 StartChar: uni1A6E
-Encoding: 6766 6766 108
+Encoding: 109 6766 108
 Width: 355
 VWidth: 1000
 GlyphClass: 2
@@ -8399,7 +8401,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A6F
-Encoding: 6767 6767 109
+Encoding: 110 6767 109
 Width: 668
 VWidth: 1000
 GlyphClass: 2
@@ -8462,7 +8464,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A70
-Encoding: 6768 6768 110
+Encoding: 111 6768 110
 Width: 317
 VWidth: 1000
 GlyphClass: 2
@@ -8514,7 +8516,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A71
-Encoding: 6769 6769 111
+Encoding: 112 6769 111
 Width: 277
 VWidth: 1000
 GlyphClass: 2
@@ -8561,7 +8563,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A72
-Encoding: 6770 6770 112
+Encoding: 113 6770 112
 Width: 275
 VWidth: 1000
 GlyphClass: 2
@@ -8616,7 +8618,7 @@ Substitution2: "+BBUENAQ4BD0EOARHBD0EMARP +BD8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA look
 EndChar
 
 StartChar: uni1A73
-Encoding: 6771 6771 113
+Encoding: 114 6771 113
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8659,7 +8661,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A74
-Encoding: 6772 6772 114
+Encoding: 115 6772 114
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8697,7 +8699,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A75
-Encoding: 6773 6773 115
+Encoding: 116 6773 115
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8732,7 +8734,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A76
-Encoding: 6774 6774 116
+Encoding: 117 6774 116
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8770,7 +8772,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A77
-Encoding: 6775 6775 117
+Encoding: 118 6775 117
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8808,7 +8810,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A78
-Encoding: 6776 6776 118
+Encoding: 119 6776 118
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8848,7 +8850,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A79
-Encoding: 6777 6777 119
+Encoding: 120 6777 119
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8894,7 +8896,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A7A
-Encoding: 6778 6778 120
+Encoding: 121 6778 120
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8944,7 +8946,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A7B
-Encoding: 6779 6779 121
+Encoding: 122 6779 121
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -8991,7 +8993,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A7C
-Encoding: 6780 6780 122
+Encoding: 123 6780 122
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -9046,7 +9048,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A7F
-Encoding: 6783 6783 123
+Encoding: 124 6783 123
 Width: 132
 VWidth: 1000
 GlyphClass: 2
@@ -9077,7 +9079,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 5 subtable" uniE3
 EndChar
 
 StartChar: uni1A80
-Encoding: 6784 6784 124
+Encoding: 125 6784 124
 Width: 393
 VWidth: 1000
 GlyphClass: 2
@@ -9111,7 +9113,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A81
-Encoding: 6785 6785 125
+Encoding: 126 6785 125
 Width: 355
 VWidth: 1000
 GlyphClass: 2
@@ -9153,7 +9155,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A82
-Encoding: 6786 6786 126
+Encoding: 127 6786 126
 Width: 337
 VWidth: 1000
 GlyphClass: 2
@@ -9199,7 +9201,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A83
-Encoding: 6787 6787 127
+Encoding: 128 6787 127
 Width: 337
 VWidth: 1000
 GlyphClass: 2
@@ -9247,7 +9249,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A84
-Encoding: 6788 6788 128
+Encoding: 129 6788 128
 Width: 337
 VWidth: 1000
 GlyphClass: 2
@@ -9295,7 +9297,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A85
-Encoding: 6789 6789 129
+Encoding: 130 6789 129
 Width: 360
 VWidth: 1000
 GlyphClass: 2
@@ -9349,7 +9351,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A86
-Encoding: 6790 6790 130
+Encoding: 131 6790 130
 Width: 337
 VWidth: 1000
 GlyphClass: 2
@@ -9400,7 +9402,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A87
-Encoding: 6791 6791 131
+Encoding: 132 6791 131
 Width: 525
 VWidth: 1000
 GlyphClass: 2
@@ -9453,7 +9455,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A88
-Encoding: 6792 6792 132
+Encoding: 133 6792 132
 Width: 402
 VWidth: 1000
 GlyphClass: 2
@@ -9495,7 +9497,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A89
-Encoding: 6793 6793 133
+Encoding: 134 6793 133
 Width: 358
 VWidth: 1000
 GlyphClass: 2
@@ -9545,7 +9547,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A90
-Encoding: 6800 6800 134
+Encoding: 135 6800 134
 Width: 393
 VWidth: 1000
 GlyphClass: 2
@@ -9579,7 +9581,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A91
-Encoding: 6801 6801 135
+Encoding: 136 6801 135
 Width: 421
 VWidth: 1000
 GlyphClass: 2
@@ -9624,7 +9626,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A92
-Encoding: 6802 6802 136
+Encoding: 137 6802 136
 Width: 369
 VWidth: 1000
 GlyphClass: 2
@@ -9667,7 +9669,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A93
-Encoding: 6803 6803 137
+Encoding: 138 6803 137
 Width: 661
 VWidth: 1000
 GlyphClass: 2
@@ -9731,7 +9733,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A94
-Encoding: 6804 6804 138
+Encoding: 139 6804 138
 Width: 468
 VWidth: 1000
 GlyphClass: 2
@@ -9790,7 +9792,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A95
-Encoding: 6805 6805 139
+Encoding: 140 6805 139
 Width: 468
 VWidth: 1000
 GlyphClass: 2
@@ -9857,7 +9859,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A96
-Encoding: 6806 6806 140
+Encoding: 141 6806 140
 Width: 476
 VWidth: 1000
 GlyphClass: 2
@@ -9928,7 +9930,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A97
-Encoding: 6807 6807 141
+Encoding: 142 6807 141
 Width: 475
 VWidth: 1000
 GlyphClass: 2
@@ -9991,7 +9993,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A98
-Encoding: 6808 6808 142
+Encoding: 143 6808 142
 Width: 491
 VWidth: 1000
 GlyphClass: 2
@@ -10074,7 +10076,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A99
-Encoding: 6809 6809 143
+Encoding: 144 6809 143
 Width: 593
 VWidth: 1000
 GlyphClass: 2
@@ -10129,7 +10131,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA0
-Encoding: 6816 6816 144
+Encoding: 145 6816 144
 Width: 684
 VWidth: 1000
 GlyphClass: 2
@@ -10175,7 +10177,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA1
-Encoding: 6817 6817 145
+Encoding: 146 6817 145
 Width: 684
 VWidth: 1000
 GlyphClass: 2
@@ -10219,7 +10221,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA2
-Encoding: 6818 6818 146
+Encoding: 147 6818 146
 Width: 1170
 VWidth: 1000
 GlyphClass: 2
@@ -10324,7 +10326,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA3
-Encoding: 6819 6819 147
+Encoding: 148 6819 147
 Width: 688
 VWidth: 1000
 GlyphClass: 2
@@ -10446,7 +10448,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA4
-Encoding: 6820 6820 148
+Encoding: 149 6820 148
 Width: 593
 VWidth: 1000
 GlyphClass: 2
@@ -10496,7 +10498,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA5
-Encoding: 6821 6821 149
+Encoding: 150 6821 149
 Width: 767
 VWidth: 1000
 GlyphClass: 2
@@ -10611,7 +10613,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA6
-Encoding: 6822 6822 150
+Encoding: 151 6822 150
 Width: 458
 VWidth: 1000
 GlyphClass: 2
@@ -10660,7 +10662,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA7
-Encoding: 6823 6823 151
+Encoding: 152 6823 151
 Width: 430
 VWidth: 1000
 GlyphClass: 2
@@ -10716,7 +10718,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA8
-Encoding: 6824 6824 152
+Encoding: 153 6824 152
 Width: 180
 VWidth: 1000
 GlyphClass: 2
@@ -10744,7 +10746,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AA9
-Encoding: 6825 6825 153
+Encoding: 154 6825 153
 Width: 260
 VWidth: 1000
 GlyphClass: 2
@@ -10777,7 +10779,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AAA
-Encoding: 6826 6826 154
+Encoding: 155 6826 154
 Width: 335
 VWidth: 1000
 GlyphClass: 2
@@ -10812,7 +10814,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AAB
-Encoding: 6827 6827 155
+Encoding: 156 6827 155
 Width: 415
 VWidth: 1000
 GlyphClass: 2
@@ -10852,7 +10854,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AAC
-Encoding: 6828 6828 156
+Encoding: 157 6828 156
 Width: 1214
 VWidth: 1000
 GlyphClass: 2
@@ -10959,7 +10961,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1AAD
-Encoding: 6829 6829 157
+Encoding: 158 6829 157
 Width: 388
 VWidth: 1000
 GlyphClass: 2
@@ -11006,7 +11008,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni22EE
-Encoding: 8942 8942 158
+Encoding: 160 8942 158
 Width: 169
 VWidth: 1000
 GlyphClass: 2
@@ -11053,7 +11055,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni2
 EndChar
 
 StartChar: uni25CC
-Encoding: 9676 9676 159
+Encoding: 161 9676 159
 Width: 390
 VWidth: 1000
 GlyphClass: 2
@@ -11156,7 +11158,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni2
 EndChar
 
 StartChar: uni1A20.sub
-Encoding: 57376 57376 160
+Encoding: 162 57376 160
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11219,7 +11221,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A21.sub
-Encoding: 57377 57377 161
+Encoding: 163 57377 161
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11279,7 +11281,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A22.sub
-Encoding: 57378 57378 162
+Encoding: 164 57378 162
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11353,7 +11355,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A23.sub
-Encoding: 57379 57379 163
+Encoding: 165 57379 163
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11404,7 +11406,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A24.sub
-Encoding: 57380 57380 164
+Encoding: 166 57380 164
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11463,7 +11465,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A25.sub
-Encoding: 57381 57381 165
+Encoding: 167 57381 165
 Width: 134
 VWidth: 1000
 GlyphClass: 4
@@ -11548,7 +11550,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=134 dv=0
 EndChar
 
 StartChar: uni1A26.sub
-Encoding: 57382 57382 166
+Encoding: 168 57382 166
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11601,7 +11603,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A27.sub
-Encoding: 57383 57383 167
+Encoding: 169 57383 167
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11648,7 +11650,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A28.sub
-Encoding: 57384 57384 168
+Encoding: 170 57384 168
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11707,7 +11709,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A29.sub
-Encoding: 57385 57385 169
+Encoding: 171 57385 169
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11775,7 +11777,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2A.sub
-Encoding: 57386 57386 170
+Encoding: 172 57386 170
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11850,7 +11852,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2B.sub
-Encoding: 57387 57387 171
+Encoding: 173 57387 171
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -11912,7 +11914,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2C.sub
-Encoding: 57388 57388 172
+Encoding: 174 57388 172
 Width: 130
 VWidth: 1000
 GlyphClass: 4
@@ -11992,7 +11994,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=130 dv=0
 EndChar
 
 StartChar: uni1A2D.sub
-Encoding: 57389 57389 173
+Encoding: 175 57389 173
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12052,7 +12054,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2E.sub
-Encoding: 57390 57390 174
+Encoding: 176 57390 174
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12130,7 +12132,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2F.sub
-Encoding: 57391 57391 175
+Encoding: 177 57391 175
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12185,7 +12187,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A30.sub
-Encoding: 57392 57392 176
+Encoding: 178 57392 176
 Width: 141
 VWidth: 1000
 GlyphClass: 4
@@ -12258,7 +12260,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=141 dv=0
 EndChar
 
 StartChar: uni1A31.sub
-Encoding: 57393 57393 177
+Encoding: 179 57393 177
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12323,7 +12325,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A32.sub
-Encoding: 57394 57394 178
+Encoding: 180 57394 178
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12377,7 +12379,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A33.sub
-Encoding: 57395 57395 179
+Encoding: 181 57395 179
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12440,7 +12442,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A34.sub
-Encoding: 57396 57396 180
+Encoding: 182 57396 180
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12500,7 +12502,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A35.sub
-Encoding: 57397 57397 181
+Encoding: 183 57397 181
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12546,7 +12548,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36.sub
-Encoding: 57398 57398 182
+Encoding: 184 57398 182
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12595,7 +12597,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A37.sub
-Encoding: 57399 57399 183
+Encoding: 185 57399 183
 Width: 129
 VWidth: 1000
 GlyphClass: 4
@@ -12661,7 +12663,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=129 dv=0
 EndChar
 
 StartChar: uni1A39.sub
-Encoding: 57401 57401 184
+Encoding: 186 57401 184
 Width: 163
 VWidth: 1000
 GlyphClass: 4
@@ -12735,7 +12737,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=163 dv=0
 EndChar
 
 StartChar: uni1A3A.sub
-Encoding: 57402 57402 185
+Encoding: 187 57402 185
 Width: 115
 VWidth: 1000
 GlyphClass: 4
@@ -12800,7 +12802,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=115 dv=0
 EndChar
 
 StartChar: uni1A3B.sub
-Encoding: 57403 57403 186
+Encoding: 188 57403 186
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12859,7 +12861,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3C.sub
-Encoding: 57404 57404 187
+Encoding: 189 57404 187
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12922,7 +12924,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3D.sub
-Encoding: 57405 57405 188
+Encoding: 190 57405 188
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -12981,7 +12983,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3E.sub
-Encoding: 57406 57406 189
+Encoding: 191 57406 189
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13029,7 +13031,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3F.sub
-Encoding: 57407 57407 190
+Encoding: 192 57407 190
 Width: 125
 VWidth: 1000
 GlyphClass: 4
@@ -13083,7 +13085,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=125 dv=0
 EndChar
 
 StartChar: uni1A40.sub
-Encoding: 57408 57408 191
+Encoding: 193 57408 191
 Width: 112
 VWidth: 1000
 GlyphClass: 4
@@ -13150,7 +13152,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=112 dv=0
 EndChar
 
 StartChar: uni1A41.sub
-Encoding: 57409 57409 192
+Encoding: 194 57409 192
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13203,7 +13205,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A43.sub
-Encoding: 57411 57411 193
+Encoding: 195 57411 193
 Width: 122
 VWidth: 1000
 GlyphClass: 4
@@ -13268,7 +13270,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=122 dv=0
 EndChar
 
 StartChar: uni1A45.sub
-Encoding: 57413 57413 194
+Encoding: 196 57413 194
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13310,7 +13312,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A46.sub
-Encoding: 57414 57414 195
+Encoding: 197 57414 195
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13375,7 +13377,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A47.sub
-Encoding: 57415 57415 196
+Encoding: 198 57415 196
 Width: 136
 VWidth: 1000
 GlyphClass: 4
@@ -13456,7 +13458,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=136 dv=0
 EndChar
 
 StartChar: uni1A48.sub
-Encoding: 57416 57416 197
+Encoding: 199 57416 197
 Width: 139
 VWidth: 1000
 GlyphClass: 4
@@ -13524,7 +13526,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=139 dv=0
 EndChar
 
 StartChar: uni1A49.sub
-Encoding: 57417 57417 198
+Encoding: 200 57417 198
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13584,7 +13586,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A4A.sub
-Encoding: 57418 57418 199
+Encoding: 201 57418 199
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13650,7 +13652,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A4B.sub
-Encoding: 57419 57419 200
+Encoding: 202 57419 200
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13703,7 +13705,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A4C.sub
-Encoding: 57420 57420 201
+Encoding: 203 57420 201
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13774,7 +13776,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A53.sub
-Encoding: 57427 57427 202
+Encoding: 204 57427 202
 Width: 163
 VWidth: 1000
 GlyphClass: 4
@@ -13838,7 +13840,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=163 dv=0
 EndChar
 
 StartChar: uni1A54.sub
-Encoding: 57428 57428 203
+Encoding: 205 57428 203
 Width: 127
 VWidth: 1000
 GlyphClass: 4
@@ -13916,7 +13918,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=127 dv=0
 EndChar
 
 StartChar: uni1A36.uni1A69.sub
-Encoding: 57440 57440 204
+Encoding: 206 57440 204
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -13967,7 +13969,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36.uni1A6A.sub
-Encoding: 57441 57441 205
+Encoding: 207 57441 205
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14025,7 +14027,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3E.uni1A69.sub
-Encoding: 57442 57442 206
+Encoding: 208 57442 206
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14076,7 +14078,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A3E.uni1A6A.sub
-Encoding: 57443 57443 207
+Encoding: 209 57443 207
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14134,7 +14136,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60_uni1A36_uni1A6C.lig
-Encoding: 57444 57444 208
+Encoding: 210 57444 208
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14196,7 +14198,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60_uni1A3E_uni1A6C.lig
-Encoding: 57445 57445 209
+Encoding: 211 57445 209
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14258,7 +14260,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_recurved.sub
-Encoding: 57446 57446 210
+Encoding: 212 57446 210
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -14296,7 +14298,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A2C_uni1A2C.lig
-Encoding: 57456 57456 211
+Encoding: 213 57456 211
 Width: 547
 VWidth: 1000
 GlyphClass: 2
@@ -14422,7 +14424,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36.uni1A63.lig
-Encoding: 57457 57457 212
+Encoding: 214 57457 212
 Width: 445
 VWidth: 1000
 GlyphClass: 2
@@ -14489,7 +14491,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A2F_1A63.lig
-Encoding: 57458 57458 213
+Encoding: 215 57458 213
 Width: 439
 VWidth: 1000
 GlyphClass: 2
@@ -14581,7 +14583,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A32_1A63.lig
-Encoding: 57459 57459 214
+Encoding: 216 57459 214
 Width: 549
 VWidth: 1000
 GlyphClass: 2
@@ -14669,7 +14671,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A33_1A63.lig
-Encoding: 57460 57460 215
+Encoding: 217 57460 215
 Width: 475
 VWidth: 1000
 GlyphClass: 2
@@ -14769,7 +14771,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A34_1A63.lig
-Encoding: 57461 57461 216
+Encoding: 218 57461 216
 Width: 483
 VWidth: 1000
 GlyphClass: 2
@@ -14867,7 +14869,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A35_1A63.lig
-Encoding: 57462 57462 217
+Encoding: 219 57462 217
 Width: 475
 VWidth: 1000
 GlyphClass: 2
@@ -14949,7 +14951,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A36_1A36_1A63.lig
-Encoding: 57463 57463 218
+Encoding: 220 57463 218
 Width: 508
 VWidth: 1000
 GlyphClass: 2
@@ -15029,7 +15031,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: nam_water.lig
-Encoding: 57464 57464 219
+Encoding: 221 57464 219
 Width: 445
 VWidth: 1000
 GlyphClass: 2
@@ -15105,7 +15107,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" nam_
 EndChar
 
 StartChar: uni1A36_uni1A63_recurved.lig
-Encoding: 57465 57465 220
+Encoding: 222 57465 220
 Width: 452
 VWidth: 1000
 GlyphClass: 2
@@ -15167,7 +15169,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: nam_water_recurved.lig
-Encoding: 57466 57466 221
+Encoding: 223 57466 221
 Width: 452
 VWidth: 1000
 GlyphClass: 2
@@ -15227,6 +15229,7 @@ SplineSet
  379 155 385 161 385 170 c 0
  385 179 379 186 370 186 c 0
 EndSplineSet
+LCarets2: 1 0
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32B nam_water_recurved.lig
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32A nam_water_recurved.lig
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE325 nam_water_recurved.lig
@@ -15246,7 +15249,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" nam_
 EndChar
 
 StartChar: uni1A36_recurved
-Encoding: 57467 57467 222
+Encoding: 224 57467 222
 Width: 464
 VWidth: 1000
 GlyphClass: 2
@@ -15303,7 +15306,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: naan_recurved.lig
-Encoding: 57468 57468 223
+Encoding: 225 57468 223
 Width: 452
 VWidth: 1000
 GlyphClass: 2
@@ -15380,7 +15383,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" naan
 EndChar
 
 StartChar: non_recruved.lig
-Encoding: 57469 57469 224
+Encoding: 226 57469 224
 Width: 464
 VWidth: 1000
 GlyphClass: 2
@@ -15455,7 +15458,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" non_
 EndChar
 
 StartChar: uni1A56_uni1A60_uni1A45.lig
-Encoding: 57472 57472 225
+Encoding: 227 57472 225
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -15517,7 +15520,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A43_uni1A60_uni1A45.lig
-Encoding: 57473 57473 226
+Encoding: 228 57473 226
 Width: 127
 VWidth: 1000
 GlyphClass: 4
@@ -15584,7 +15587,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=127 dv=0
 EndChar
 
 StartChar: uni1A45_uni1A60_uni1A3F.lig
-Encoding: 57474 57474 227
+Encoding: 229 57474 227
 Width: 128
 VWidth: 1000
 GlyphClass: 2
@@ -15636,7 +15639,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A56_uni1A45_uni1A3F.lig
-Encoding: 57475 57475 228
+Encoding: 230 57475 228
 Width: 129
 VWidth: 1000
 GlyphClass: 4
@@ -15722,7 +15725,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=129 dv=0
 EndChar
 
 StartChar: uni1A43_uni1A45_uni1A3F.lig
-Encoding: 57476 57476 229
+Encoding: 231 57476 229
 Width: 217
 VWidth: 1000
 GlyphClass: 4
@@ -15808,7 +15811,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=217 dv=0
 EndChar
 
 StartChar: uni1A45_level2.sub
-Encoding: 57477 57477 230
+Encoding: 232 57477 230
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -15844,7 +15847,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60_uni1A32_uni1A69.lig
-Encoding: 57488 57488 231
+Encoding: 233 57488 231
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -15899,7 +15902,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A34_uni1A60_uni1A35.lig
-Encoding: 57489 57489 232
+Encoding: 234 57489 232
 Width: 459
 VWidth: 1000
 GlyphClass: 2
@@ -15999,7 +16002,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: phothi.lig
-Encoding: 57490 57490 233
+Encoding: 235 57490 233
 Width: 684
 VWidth: 1000
 GlyphClass: 2
@@ -16108,6 +16111,7 @@ SplineSet
  218.016601562 -283 225.016601562 -276 225.016601562 -267 c 0xe7e490
  225.016601562 -258 218.016601562 -251 209.016601562 -251 c 0
 EndSplineSet
+LCarets2: 4 0 0 0 0
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32B phothi.lig
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE32A phothi.lig
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 50 subtable" uniE325 phothi.lig
@@ -16128,7 +16132,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" phot
 EndChar
 
 StartChar: ho_sub_no.lig
-Encoding: 57491 57491 234
+Encoding: 236 57491 234
 Width: 590
 VWidth: 1000
 GlyphClass: 2
@@ -16205,7 +16209,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" ho_s
 EndChar
 
 StartChar: uniE155
-Encoding: 57685 57685 235
+Encoding: 237 57685 235
 Width: 148
 VWidth: 1000
 GlyphClass: 2
@@ -16266,7 +16270,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uni1A62.uni1A75.lig
-Encoding: 57698 57698 236
+Encoding: 238 57698 236
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16303,7 +16307,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A65.uni1A75.lig
-Encoding: 57701 57701 237
+Encoding: 239 57701 237
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16352,7 +16356,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A66.uni1A75.lig
-Encoding: 57702 57702 238
+Encoding: 240 57702 238
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16409,7 +16413,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A67.uni1A75.lig
-Encoding: 57703 57703 239
+Encoding: 241 57703 239
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16462,7 +16466,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A68.uni1A75.lig
-Encoding: 57704 57704 240
+Encoding: 242 57704 240
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16522,7 +16526,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6B.uni1A75.lig
-Encoding: 57707 57707 241
+Encoding: 243 57707 241
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16566,7 +16570,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uniE16E
-Encoding: 57710 57710 242
+Encoding: 244 57710 242
 Width: 355
 VWidth: 1000
 GlyphClass: 2
@@ -16630,7 +16634,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE16F
-Encoding: 57711 57711 243
+Encoding: 245 57711 243
 Width: 668
 VWidth: 1000
 GlyphClass: 2
@@ -16712,7 +16716,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE170
-Encoding: 57712 57712 244
+Encoding: 246 57712 244
 Width: 317
 VWidth: 1000
 GlyphClass: 2
@@ -16783,7 +16787,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE171
-Encoding: 57713 57713 245
+Encoding: 247 57713 245
 Width: 277
 VWidth: 1000
 GlyphClass: 2
@@ -16849,7 +16853,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE172
-Encoding: 57714 57714 246
+Encoding: 248 57714 246
 Width: 275
 VWidth: 1000
 GlyphClass: 2
@@ -16923,7 +16927,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uni1A74.uni1A75.lig
-Encoding: 57716 57716 247
+Encoding: 249 57716 247
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -16966,7 +16970,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A62.uni1A76.lig
-Encoding: 57730 57730 248
+Encoding: 250 57730 248
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17008,7 +17012,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A65.uni1A76.lig
-Encoding: 57733 57733 249
+Encoding: 251 57733 249
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17059,7 +17063,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A66.uni1A76.lig
-Encoding: 57734 57734 250
+Encoding: 252 57734 250
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17117,7 +17121,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A67.uni1A76.lig
-Encoding: 57735 57735 251
+Encoding: 253 57735 251
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17172,7 +17176,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A68.uni1A76.lig
-Encoding: 57736 57736 252
+Encoding: 254 57736 252
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17234,7 +17238,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A6B.uni1A76.lig
-Encoding: 57739 57739 253
+Encoding: 255 57739 253
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17280,7 +17284,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A74.uni1A76.lig
-Encoding: 57748 57748 254
+Encoding: 256 57748 254
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -17325,7 +17329,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A75
-Encoding: 57973 57973 255
+Encoding: 257 57973 255
 Width: 387
 VWidth: 1000
 GlyphClass: 2
@@ -17427,7 +17431,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A76
-Encoding: 57974 57974 256
+Encoding: 258 57974 256
 Width: 387
 VWidth: 1000
 GlyphClass: 2
@@ -17533,7 +17537,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A77
-Encoding: 57975 57975 257
+Encoding: 259 57975 257
 Width: 387
 VWidth: 1000
 GlyphClass: 2
@@ -17639,7 +17643,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A78
-Encoding: 57976 57976 258
+Encoding: 260 57976 258
 Width: 387
 VWidth: 1000
 GlyphClass: 2
@@ -17747,7 +17751,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A79
-Encoding: 57977 57977 259
+Encoding: 261 57977 259
 Width: 387
 VWidth: 1000
 GlyphClass: 2
@@ -17860,7 +17864,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uniE320
-Encoding: 58144 58144 260
+Encoding: 262 58144 260
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -17916,7 +17920,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE321
-Encoding: 58145 58145 261
+Encoding: 263 58145 261
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -17979,7 +17983,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE322
-Encoding: 58146 58146 262
+Encoding: 264 58146 262
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18041,7 +18045,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE323
-Encoding: 58147 58147 263
+Encoding: 265 58147 263
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18091,7 +18095,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE324
-Encoding: 58148 58148 264
+Encoding: 266 58148 264
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18147,7 +18151,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE325
-Encoding: 8204 8204 265
+Encoding: 159 8204 265
 AltUni2: 00e325.ffffffff.0 00e325.ffffffff.0
 Width: 134
 VWidth: 1000
@@ -18226,7 +18230,7 @@ Position2: "'dist' Distance in Tai Tham lookup 0 subtable" dx=0 dy=0 dh=134 dv=0
 EndChar
 
 StartChar: uniE326
-Encoding: 58150 58150 266
+Encoding: 268 58150 266
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18277,7 +18281,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE327
-Encoding: 58151 58151 267
+Encoding: 269 58151 267
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18321,7 +18325,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE328
-Encoding: 58152 58152 268
+Encoding: 270 58152 268
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18377,7 +18381,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE329
-Encoding: 58153 58153 269
+Encoding: 271 58153 269
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18439,7 +18443,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE32A
-Encoding: 58154 58154 270
+Encoding: 272 58154 270
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -18502,7 +18506,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE32B
-Encoding: 847 847 271
+Encoding: 31 847 271
 AltUni2: 00e32b.ffffffff.0 00e32b.ffffffff.0
 Width: 0
 VWidth: 1000
@@ -18561,7 +18565,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE32D
-Encoding: 58157 58157 272
+Encoding: 274 58157 272
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18619,7 +18623,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE32F
-Encoding: 58159 58159 273
+Encoding: 275 58159 273
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18670,7 +18674,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE330
-Encoding: 58160 58160 274
+Encoding: 276 58160 274
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18730,7 +18734,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE331
-Encoding: 58161 58161 275
+Encoding: 277 58161 275
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18793,7 +18797,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE332
-Encoding: 58162 58162 276
+Encoding: 278 58162 276
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18839,7 +18843,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE334
-Encoding: 58164 58164 277
+Encoding: 279 58164 277
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18896,7 +18900,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE335
-Encoding: 58165 58165 278
+Encoding: 280 58165 278
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18937,7 +18941,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE336
-Encoding: 58166 58166 279
+Encoding: 281 58166 279
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -18986,7 +18990,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE337
-Encoding: 58167 58167 280
+Encoding: 282 58167 280
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19036,7 +19040,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE339
-Encoding: 58169 58169 281
+Encoding: 283 58169 281
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19102,7 +19106,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE33B
-Encoding: 58171 58171 282
+Encoding: 284 58171 282
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19154,7 +19158,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE33D
-Encoding: 58173 58173 283
+Encoding: 285 58173 283
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19214,7 +19218,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE33E
-Encoding: 58174 58174 284
+Encoding: 286 58174 284
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19274,7 +19278,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE33F
-Encoding: 58175 58175 285
+Encoding: 287 58175 285
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19333,7 +19337,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE341
-Encoding: 58177 58177 286
+Encoding: 288 58177 286
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19385,7 +19389,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE343
-Encoding: 58179 58179 287
+Encoding: 289 58179 287
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19439,7 +19443,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE345
-Encoding: 58181 58181 288
+Encoding: 290 58181 288
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19474,7 +19478,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE346
-Encoding: 58182 58182 289
+Encoding: 291 58182 289
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19537,7 +19541,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE347
-Encoding: 58183 58183 290
+Encoding: 292 58183 290
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19609,7 +19613,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE348
-Encoding: 58184 58184 291
+Encoding: 293 58184 291
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19668,7 +19672,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE349
-Encoding: 58185 58185 292
+Encoding: 294 58185 292
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19727,7 +19731,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE34B
-Encoding: 58187 58187 293
+Encoding: 295 58187 293
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -19809,7 +19813,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: level_2_sara_U
-Encoding: 58192 58192 294
+Encoding: 296 58192 294
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19846,7 +19850,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" leve
 EndChar
 
 StartChar: level_2_sara_UU
-Encoding: 58193 58193 295
+Encoding: 297 58193 295
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19887,7 +19891,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" leve
 EndChar
 
 StartChar: level_2_sara_OA_BELOW
-Encoding: 58194 58194 296
+Encoding: 298 58194 296
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19934,7 +19938,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" leve
 EndChar
 
 StartChar: level_2_subjoined_WA
-Encoding: 58195 58195 297
+Encoding: 299 58195 297
 Width: 0
 VWidth: 1000
 GlyphClass: 4
@@ -19973,7 +19977,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" leve
 EndChar
 
 StartChar: uniE420
-Encoding: 58400 58400 298
+Encoding: 300 58400 298
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20038,7 +20042,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE421
-Encoding: 58401 58401 299
+Encoding: 301 58401 299
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20110,7 +20114,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE422
-Encoding: 58402 58402 300
+Encoding: 302 58402 300
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -20182,7 +20186,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE423
-Encoding: 58403 58403 301
+Encoding: 303 58403 301
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20241,7 +20245,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE424
-Encoding: 58404 58404 302
+Encoding: 304 58404 302
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -20307,7 +20311,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE425
-Encoding: 58405 58405 303
+Encoding: 305 58405 303
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20390,7 +20394,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE426
-Encoding: 58406 58406 304
+Encoding: 306 58406 304
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20450,7 +20454,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE427
-Encoding: 58407 58407 305
+Encoding: 307 58407 305
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20499,7 +20503,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE428
-Encoding: 58408 58408 306
+Encoding: 308 58408 306
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20560,7 +20564,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE429
-Encoding: 58409 58409 307
+Encoding: 309 58409 307
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20627,7 +20631,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42A
-Encoding: 58410 58410 308
+Encoding: 310 58410 308
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -20697,7 +20701,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42B
-Encoding: 58411 58411 309
+Encoding: 311 58411 309
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20761,7 +20765,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42C
-Encoding: 58412 58412 310
+Encoding: 312 58412 310
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -20781,7 +20785,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42D
-Encoding: 58413 58413 311
+Encoding: 313 58413 311
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20848,7 +20852,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42E
-Encoding: 58414 58414 312
+Encoding: 314 58414 312
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -20867,7 +20871,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE42F
-Encoding: 58415 58415 313
+Encoding: 315 58415 313
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20927,7 +20931,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE430
-Encoding: 58416 58416 314
+Encoding: 316 58416 314
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -20996,7 +21000,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE431
-Encoding: 58417 58417 315
+Encoding: 317 58417 315
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21068,7 +21072,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE432
-Encoding: 58418 58418 316
+Encoding: 318 58418 316
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21123,7 +21127,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE433
-Encoding: 58419 58419 317
+Encoding: 319 58419 317
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21143,7 +21147,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE434
-Encoding: 58420 58420 318
+Encoding: 320 58420 318
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21209,7 +21213,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE435
-Encoding: 58421 58421 319
+Encoding: 321 58421 319
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21259,7 +21263,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE436
-Encoding: 58422 58422 320
+Encoding: 322 58422 320
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21317,7 +21321,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE437
-Encoding: 58423 58423 321
+Encoding: 323 58423 321
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21375,7 +21379,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE438
-Encoding: 58424 58424 322
+Encoding: 324 58424 322
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21394,7 +21398,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE439
-Encoding: 58425 58425 323
+Encoding: 325 58425 323
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21469,7 +21473,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43A
-Encoding: 58426 58426 324
+Encoding: 326 58426 324
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21488,7 +21492,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43B
-Encoding: 58427 58427 325
+Encoding: 327 58427 325
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21549,7 +21553,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43C
-Encoding: 58428 58428 326
+Encoding: 328 58428 326
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21568,7 +21572,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43D
-Encoding: 58429 58429 327
+Encoding: 329 58429 327
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21637,7 +21641,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43E
-Encoding: 58430 58430 328
+Encoding: 330 58430 328
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21706,7 +21710,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE43F
-Encoding: 58431 58431 329
+Encoding: 331 58431 329
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21774,7 +21778,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE440
-Encoding: 58432 58432 330
+Encoding: 332 58432 330
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21793,7 +21797,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE441
-Encoding: 58433 58433 331
+Encoding: 333 58433 331
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21854,7 +21858,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE442
-Encoding: 58434 58434 332
+Encoding: 334 58434 332
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21873,7 +21877,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE443
-Encoding: 58435 58435 333
+Encoding: 335 58435 333
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -21936,7 +21940,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE444
-Encoding: 58436 58436 334
+Encoding: 336 58436 334
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -21955,7 +21959,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE445
-Encoding: 58437 58437 335
+Encoding: 337 58437 335
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22000,7 +22004,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uniE
 EndChar
 
 StartChar: uniE446
-Encoding: 58438 58438 336
+Encoding: 338 58438 336
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22077,7 +22081,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uniE447
-Encoding: 58439 58439 337
+Encoding: 339 58439 337
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22163,7 +22167,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uniE448
-Encoding: 58440 58440 338
+Encoding: 340 58440 338
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22236,7 +22240,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uniE449
-Encoding: 58441 58441 339
+Encoding: 341 58441 339
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22305,7 +22309,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uniE44A
-Encoding: 58442 58442 340
+Encoding: 342 58442 340
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22329,7 +22333,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uniE44B
-Encoding: 58443 58443 341
+Encoding: 343 58443 341
 Width: 0
 VWidth: 1000
 GlyphClass: 2
@@ -22425,7 +22429,7 @@ Ligature2: "+BB8EPgQ0BEEEQgQwBD0EPgQyBDoEMAAA +BDsEOAQzBDAEQgRDBEAESwAA lookup 8
 EndChar
 
 StartChar: uni1A60.uni1A75.lig
-Encoding: 65537 -1 342
+Encoding: 346 -1 342
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22444,7 +22448,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A76.lig
-Encoding: 65538 -1 343
+Encoding: 347 -1 343
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22463,7 +22467,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A77.lig
-Encoding: 65539 -1 344
+Encoding: 348 -1 344
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22482,7 +22486,7 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 EndChar
 
 StartChar: uni1A60.uni1A78.lig
-Encoding: 60135 60135 345
+Encoding: 344 60135 345
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22502,7 +22506,7 @@ MultipleSubs2: "'ccmp' +BBoEPgQ8BD8EPgQ3BDgERgQ4BE8A-/+BDQENQQ6BD4EPAQ/BD4ENwQ4B
 EndChar
 
 StartChar: uni1A60.uni1A79.lig
-Encoding: 65540 -1 346
+Encoding: 349 -1 346
 Width: 1000
 VWidth: 1000
 GlyphClass: 2
@@ -22518,6 +22522,18 @@ Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1A60.uni1A79.lig uniE443
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1A60.uni1A79.lig uniE444
 Ligature2: "'blws' Below Base Substitutions in Tai Tham lookup 15 subtable" uni1A60.uni1A79.lig uniE445
+EndChar
+
+StartChar: u25CC.MedRA.lig
+Encoding: 350 -1 347
+Width: 507
+VWidth: 1000
+Flags: HWO
+LayerCount: 2
+Fore
+Refer: 159 9676 N 1 0 0 1 114 0 2
+Refer: 84 6741 N 1 0 0 1 0 0 2
+Ligature2: "Merc-1" uni25CC uni1A55
 EndChar
 EndChars
 EndSplineFont
