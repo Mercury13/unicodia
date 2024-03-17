@@ -24,6 +24,8 @@ struct RecolorLib {
     std::string_view hair1;
     std::string_view hair2;
     std::string_view ears1;     ///< used in firefighter emoji
+        /// @warning: Leave ears E59600, set nose #E49600
+    std::string_view nose1;     ///< used at least in swimmer emoji
     std::string_view mouth1;    ///< used at least in firefighter emoji
     std::string_view eyes1;     ///< used at least in firefighter emoji
 
@@ -60,6 +62,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#543930", hair1);
     repl(bytes, "#6D4C41", hair2);
     repl(bytes, "#E59600", ears1);
+    repl(bytes, "#E49600", nose1);      // artificially made (missing in actual Noto): e.g. swimmer
     repl(bytes, "#795548", mouth1);
     repl(bytes, "#404040", eyes1);
 }
@@ -83,6 +86,7 @@ namespace {
             .hair1 = "#312D2D",
             .hair2 = "#454140",
             .ears1 = "#EDC391",
+            .nose1 = "#DBA689",
             .mouth1 = "#444444",
             .eyes1 = "#312D2D",
         },
@@ -92,8 +96,9 @@ namespace {
             .outline1 = "#BA8F63",
             .earLines = "#BA8F63",
             .hair1 = "#AB872F",
-            .hair2 = "#BFA055",
+            .hair2 = "#AB872F",
             .ears1 = "#C48E6A",
+            .nose1 = "#C48E6A",
             .mouth1 = "#6D4C41",
             .eyes1 = "#5D4037",
         },
@@ -103,8 +108,9 @@ namespace {
             .outline1 = "#91674D",
             .earLines = "#91674D",
             .hair1 = "#543930",
-            .hair2 = "#6D4C41",
+            .hair2 = "#613E31",
             .ears1 = "#99674F",
+            .nose1 = "#99674F",
             .mouth1 = "#5D4037",
             .eyes1 = "#49362E",
         },
@@ -114,8 +120,9 @@ namespace {
             .outline1 = "#875334",
             .earLines = "#875334",
             .hair1 = "#3C2C23",
-            .hair2 = "#554138",
+            .hair2 = "#42312C",
             .ears1 = "#7A4C32",
+            .nose1 = "#875334",
             .mouth1 = "#473530",
             .eyes1 = "#42312C",
         },
@@ -125,8 +132,9 @@ namespace {
             .outline1 = "#4A2F27",
             .earLines = "#4A2F27",
             .hair1 = "#232020",
-            .hair2 = "#444140",
+            .hair2 = "#1A1717",
             .ears1 = "#3C2B24",
+            .nose1 = "#33251F",
             .mouth1 = "#1A1717",
             .eyes1 = "#1A1717",
         },
