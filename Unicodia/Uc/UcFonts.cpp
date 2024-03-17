@@ -166,7 +166,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1 for sone patches
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
-        // Hariphunchai4: too small, need smth for virtual virama
+        // Hariphunchai4: too small, need smth for virtual virama (fixed both, now UnicodiaHaru)
         // SIL Payap Lanna: bad char for virtual virama, one char missing
         // Lamphun: some mod of older Hariphunchai4, and cropped
     { "UnicodiaHari.otf", Ffg::DESC_BIGGER },                                   // Lanna
