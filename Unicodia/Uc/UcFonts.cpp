@@ -168,6 +168,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …3 U14
         // Hariphunchai4: too small, need smth for virtual virama
         // SIL Payap Lanna: bad char for virtual virama, one char missing
+        // Lamphun: some mod of older Hariphunchai4, and cropped
     { "NotoSansTaiTham-Regular.ttf", Ffg::DESC_BIGGER },                        // Lanna
     { "UnicodiaSengBuhan-Regular.ttf", 115_pc },                                // Lao
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Latin
