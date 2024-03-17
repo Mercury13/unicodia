@@ -23,7 +23,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1339689063
-ModificationTime: 1710672774
+ModificationTime: 1710637514
 PfmFamily: 17
 TTFWeight: 500
 TTFWidth: 5
@@ -43,21 +43,21 @@ HheadAOffset: 0
 HheadDescent: -350
 HheadDOffset: 0
 OS2Vendor: 'PfEd'
-Lookup: 4 8 0 "IgnoreCombiningMarksSubstitutions" { "Medial_La_Subtable"  "LowTa_LowTha_Subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "DontIgnoreCombiningMarksSubstitutions" { "Nam_Water_Subtable"  "PhothiSubtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "VowelAndToneAboveLigatures" { "VowelAndToneAboveLigatures subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 8 0 "NaLigatures" { "PrioritizedHoSubNo"  "NaLigatures subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "SubjoinedConsonantsWithVowels" { "SubjoinedConsonantsWithVowels subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 12 0 "SubjoinedConsonants" { "SubjoinedConsonants subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 1 0 0 "prefPreBaseFormsinlanalookup0" { "prefPreBaseFormsinlanalookup0 subtable"  } ['pref' ('DFLT' <'dflt' > ) ]
-Lookup: 4 8 0 "IgnoreCombiningMarksSubstitutions-0" { "IgnoreCombiningMarksSubstitutions-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "DontIgnoreCombiningMarksSubstitutions-0" { "DontIgnoreCombiningMarksSubstitutions-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "VowelAndToneAboveLigatures-0" { "VowelAndToneAboveLigatures-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 8 0 "NaLigatures-0" { "NaLigatures-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 0 0 "SubjoinedConsonantsWithVowels-0" { "SubjoinedConsonantsWithVowels-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 4 4 0 "SubjoinedConsonants-0" { "SubjoinedConsonants-0 subtable"  } ['ccmp' ('DFLT' <'dflt' > ) ]
-Lookup: 260 0 0 "TopAndBottom" { "TopAndBottom anchor 0"  "TopAndBottom anchor 1"  } ['mark' ('DFLT' <'dflt' > ) ]
-Lookup: 260 0 0 "TopAndBottom-0" { "TopAndBottom-0 subtable"  } ['mark' ('DFLT' <'dflt' > ) ]
+Lookup: 4 8 0 "IgnoreCombiningMarksSubstitutions" { "Medial_La_Subtable"  "LowTa_LowTha_Subtable"  } ['ccmp' ('DFLT' <'dflt' > 'lana' <'dflt' > ) ]
+Lookup: 4 0 0 "DontIgnoreCombiningMarksSubstitutions" { "Nam_Water_Subtable"  "PhothiSubtable"  } ['ccmp' ('DFLT' <'dflt' > 'lana' <'dflt' > ) ]
+Lookup: 4 0 0 "VowelAndToneAboveLigatures" { "VowelAndToneAboveLigatures subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 8 0 "NaLigatures" { "PrioritizedHoSubNo"  "NaLigatures subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "SubjoinedConsonantsWithVowels" { "SubjoinedConsonantsWithVowels subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 12 0 "SubjoinedConsonants" { "SubjoinedConsonants subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 1 0 0 "prefPreBaseFormsinlanalookup0" { "prefPreBaseFormsinlanalookup0 subtable"  } ['pref' ('lana' <'dflt' > ) ]
+Lookup: 4 8 0 "IgnoreCombiningMarksSubstitutions-0" { "IgnoreCombiningMarksSubstitutions-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "DontIgnoreCombiningMarksSubstitutions-0" { "DontIgnoreCombiningMarksSubstitutions-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "VowelAndToneAboveLigatures-0" { "VowelAndToneAboveLigatures-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 8 0 "NaLigatures-0" { "NaLigatures-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 0 0 "SubjoinedConsonantsWithVowels-0" { "SubjoinedConsonantsWithVowels-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 4 4 0 "SubjoinedConsonants-0" { "SubjoinedConsonants-0 subtable"  } ['ccmp' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "TopAndBottom" { "TopAndBottom anchor 0"  "TopAndBottom anchor 1"  } ['mark' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
+Lookup: 260 0 0 "TopAndBottom-0" { "TopAndBottom-0 subtable"  } ['mark' ('lana' <'dflt' > 'DFLT' <'dflt' > ) ]
 MarkAttachClasses: 3
 "AboveBaseVowels" 63 uni1A62 uni1A65 uni1A66 uni1A67 uni1A68 uni1A6B uni1A73 uni1A74
 "AboveBaseTones" 39 uni1A75 uni1A76 uni1A77 uni1A78 uni1A79
