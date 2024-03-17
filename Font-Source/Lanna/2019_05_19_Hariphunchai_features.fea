@@ -1,0 +1,714 @@
+languagesystem DFLT dflt;
+languagesystem lana dflt;
+
+
+# GSUB 
+
+lookup prefPreBaseFormsinlanalookup0 {
+  lookupflag 0;
+    sub \uni1A55 by \uni1A55 ;
+} prefPreBaseFormsinlanalookup0;
+
+lookup IgnoreCombiningMarksSubstitutions {
+  lookupflag IgnoreMarks;
+    sub \uni1A56 \uni1A60 \uni1A45  by \uni1A56_uni1A60_uni1A45.lig;
+    sub \uni1A56 \uni1A60 \uni1A45 \uni1A60 \uni1A3F  by \uni1A56_uni1A45_uni1A3F.lig;
+    sub \uni1A34 \uni1A60 \uni1A35  by \uni1A34_uni1A60_uni1A35.lig;
+} IgnoreCombiningMarksSubstitutions;
+
+lookup DontIgnoreCombiningMarksSubstitutions {
+  lookupflag 0;
+    sub \uni1A36 \uni1A76 \uni1A63 \uni1A74  by \nam_water.lig;
+    sub \uni1A3B \uni1A70 \uni1A60 \uni1A35 \uni1A65  by \phothi.lig;
+} DontIgnoreCombiningMarksSubstitutions;
+
+lookup VowelAndToneAboveLigatures {
+  lookupflag 0;
+    sub \uni1A62 \uni1A75  by \uni1A62.uni1A75.lig;
+    sub \uni1A65 \uni1A75  by \uni1A65.uni1A75.lig;
+    sub \uni1A66 \uni1A75  by \uni1A66.uni1A75.lig;
+    sub \uni1A67 \uni1A75  by \uni1A67.uni1A75.lig;
+    sub \uni1A68 \uni1A75  by \uni1A68.uni1A75.lig;
+    sub \uni1A6B \uni1A75  by \uni1A6B.uni1A75.lig;
+    sub \uni1A75 \uni1A74  by \uni1A74.uni1A75.lig;
+    sub \uni1A74 \uni1A75  by \uni1A74.uni1A75.lig;
+    sub \uni1A62 \uni1A76  by \uni1A62.uni1A76.lig;
+    sub \uni1A65 \uni1A76  by \uni1A65.uni1A76.lig;
+    sub \uni1A66 \uni1A76  by \uni1A66.uni1A76.lig;
+    sub \uni1A67 \uni1A76  by \uni1A67.uni1A76.lig;
+    sub \uni1A68 \uni1A76  by \uni1A68.uni1A76.lig;
+    sub \uni1A6B \uni1A76  by \uni1A6B.uni1A76.lig;
+    sub \uni1A76 \uni1A74  by \uni1A74.uni1A76.lig;
+    sub \uni1A74 \uni1A76  by \uni1A74.uni1A76.lig;
+} VowelAndToneAboveLigatures;
+
+lookup NaLigatures {
+  lookupflag IgnoreMarks;
+    sub \uni1A49 \uni1A60 \uni1A36  by \ho_sub_no.lig;
+    sub \uni1A2C \uni1A60 \uni1A2C  by \uni1A2C_uni1A2C.lig;
+    sub \uni1A36 \uni1A63  by \uni1A36.uni1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A2F \uni1A63  by \uni1A36_1A2F_1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A32 \uni1A63  by \uni1A36_1A32_1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A33 \uni1A63  by \uni1A36_1A33_1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A34 \uni1A63  by \uni1A36_1A34_1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A35 \uni1A63  by \uni1A36_1A35_1A63.lig;
+    sub \uni1A36 \uni1A60 \uni1A36 \uni1A63  by \uni1A36_1A36_1A63.lig;
+    sub \uni1A60 \uni1A43 \uni1A60 \uni1A45  by \uni1A43_uni1A60_uni1A45.lig;
+    sub \uni1A60 \uni1A45 \uni1A60 \uni1A3F  by \uni1A45_uni1A60_uni1A3F.lig;
+    sub \uni1A60 \uni1A43 \uni1A60 \uni1A45 \uni1A60 \uni1A3F  by \uni1A43_uni1A45_uni1A3F.lig;
+    sub \uni1A36 \uni1A63 \uni1A60 \uni1A36  by \naan_recurved.lig;
+    sub \uni1A36 \uni1A60 \uni1A36  by \non_recruved.lig;
+} NaLigatures;
+
+lookup SubjoinedConsonantsWithVowels {
+  lookupflag 0;
+    sub \uni1A60 \uni1A36 \uni1A69  by \uni1A36.uni1A69.sub;
+    sub \uni1A60 \uni1A36 \uni1A6A  by \uni1A36.uni1A6A.sub;
+    sub \uni1A60 \uni1A3E \uni1A69  by \uni1A3E.uni1A69.sub;
+    sub \uni1A60 \uni1A3E \uni1A6A  by \uni1A3E.uni1A6A.sub;
+    sub \uni1A60 \uni1A36 \uni1A6C  by \uni1A60_uni1A36_uni1A6C.lig;
+    sub \uni1A60 \uni1A3E \uni1A6C  by \uni1A60_uni1A3E_uni1A6C.lig;
+    sub \uni1A60 \uni1A32 \uni1A69  by \uni1A60_uni1A32_uni1A69.lig;
+} SubjoinedConsonantsWithVowels;
+
+lookup SubjoinedConsonants {
+  lookupflag IgnoreLigatures IgnoreMarks;
+    sub \uni1A60 \uni1A21  by \uni1A21.sub;
+    sub \uni1A60 \uni1A20  by \uni1A20.sub;
+    sub \uni1A60 \uni1A23  by \uni1A23.sub;
+    sub \uni1A60 \uni1A25  by \uni1A25.sub;
+    sub \uni1A60 \uni1A26  by \uni1A26.sub;
+    sub \uni1A60 \uni1A27  by \uni1A27.sub;
+    sub \uni1A60 \uni1A28  by \uni1A28.sub;
+    sub \uni1A60 \uni1A29  by \uni1A29.sub;
+    sub \uni1A60 \uni1A2B  by \uni1A2B.sub;
+    sub \uni1A60 \uni1A2C  by \uni1A2C.sub;
+    sub \uni1A60 \uni1A2D  by \uni1A2D.sub;
+    sub \uni1A60 \uni1A2E  by \uni1A2E.sub;
+    sub \uni1A60 \uni1A2F  by \uni1A2F.sub;
+    sub \uni1A60 \uni1A30  by \uni1A30.sub;
+    sub \uni1A60 \uni1A31  by \uni1A31.sub;
+    sub \uni1A60 \uni1A32  by \uni1A32.sub;
+    sub \uni1A60 \uni1A33  by \uni1A33.sub;
+    sub \uni1A60 \uni1A34  by \uni1A34.sub;
+    sub \uni1A60 \uni1A35  by \uni1A35.sub;
+    sub \uni1A60 \uni1A36  by \uni1A36.sub;
+    sub \uni1A60 \uni1A38  by \uni1A37.sub;
+    sub \uni1A60 \uni1A37  by \uni1A37.sub;
+    sub \uni1A60 \uni1A39  by \uni1A39.sub;
+    sub \uni1A60 \uni1A3B  by \uni1A3B.sub;
+    sub \uni1A60 \uni1A3D  by \uni1A3D.sub;
+    sub \uni1A60 \uni1A3E  by \uni1A3E.sub;
+    sub \uni1A60 \uni1A3F  by \uni1A3F.sub;
+    sub \uni1A60 \uni1A41  by \uni1A41.sub;
+    sub \uni1A60 \uni1A43  by \uni1A43.sub;
+    sub \uni1A60 \uni1A45  by \uni1A45.sub;
+    sub \uni1A60 \uni1A46  by \uni1A46.sub;
+    sub \uni1A60 \uni1A47  by \uni1A47.sub;
+    sub \uni1A60 \uni1A48  by \uni1A48.sub;
+    sub \uni1A60 \uni1A49  by \uni1A49.sub;
+    sub \uni1A60 \uni1A4A  by \uni1A4A.sub;
+    sub \uni1A60 \uni1A4B  by \uni1A4B.sub;
+    sub \uni1A60 \uni1A54  by \uni1A54.sub;
+    sub \uni1A60 \uni1A53  by \uni1A53.sub;
+    sub \uni1A60 \uni1A22  by \uni1A22.sub;
+    sub \uni1A60 \uni1A24  by \uni1A24.sub;
+    sub \uni1A60 \uni1A2A  by \uni1A2A.sub;
+    sub \uni1A60 \uni1A3C  by \uni1A3C.sub;
+    sub \uni1A60 \uni1A3A  by \uni1A3A.sub;
+    sub \uni1A60 \uni1A40  by \uni1A40.sub;
+    sub \uni1A60 \uni1A4C  by \uni1A4C.sub;
+} SubjoinedConsonants;
+
+feature pref {
+
+ script lana;
+     language dflt ;
+      lookup prefPreBaseFormsinlanalookup0;
+} pref;
+
+feature ccmp {
+
+ script DFLT;
+     language dflt ;
+      lookup IgnoreCombiningMarksSubstitutions;
+      lookup DontIgnoreCombiningMarksSubstitutions;
+      lookup VowelAndToneAboveLigatures;
+      lookup NaLigatures;
+      lookup SubjoinedConsonantsWithVowels;
+      lookup SubjoinedConsonants;
+
+ script lana;
+     language dflt ;
+      lookup IgnoreCombiningMarksSubstitutions;
+      lookup DontIgnoreCombiningMarksSubstitutions;
+      lookup VowelAndToneAboveLigatures;
+      lookup NaLigatures;
+      lookup SubjoinedConsonantsWithVowels;
+      lookup SubjoinedConsonants;
+} ccmp;
+
+# GPOS 
+
+
+lookup TopAndBottom {
+  lookupflag 0;
+  markClass [\uni1A66 ] <anchor -155 352> @TopSara_II;
+  markClass [\uni1A66.uni1A75.lig ] <anchor -244 352> @TopSara_II;
+  markClass [\uni1A66.uni1A76.lig ] <anchor -519 352> @TopSara_II;
+  markClass [\uni1A62 ] <anchor -314 352> @TopCenteredOnCenter;
+  markClass [\uni1A76 ] <anchor -300 352> @TopCenteredOnCenter;
+  markClass [\uni1A62.uni1A75.lig ] <anchor -327 351> @TopCenteredOnCenter;
+  markClass [\uni1A62.uni1A76.lig ] <anchor -311 352> @TopCenteredOnCenter;
+  markClass [\uni1A6B ] <anchor -88 352> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A73 ] <anchor -91 352> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A75 ] <anchor -22 352> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A77 ] <anchor -104 352> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A6B.uni1A75.lig ] <anchor -238 352> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A6B.uni1A76.lig ] <anchor -484 353> @TopPositioningForMaiEekMaiKoo;
+  markClass [\uni1A74 ] <anchor -66 352> @TopPositioningForMaiKang;
+  markClass [\uni1A74.uni1A75.lig ] <anchor -150 352> @TopPositioningForMaiKang;
+  markClass [\uni1A74.uni1A76.lig ] <anchor -416 352> @TopPositioningForMaiKang;
+  markClass [\uni1A59 ] <anchor -171 352> @TopRightAlignedMarks;
+  markClass [\uni1A5A ] <anchor -173 353> @TopRightAlignedMarks;
+  markClass [\uni1A78 ] <anchor -22 353> @TopRightAlignedMarks;
+  markClass [\uni1A79 ] <anchor -49 351> @TopRightAlignedMarks;
+  markClass [\uni1A7A ] <anchor -179 352> @TopRightAlignedMarks;
+  markClass [\uni1A7B ] <anchor -120 351> @TopRightAlignedMarks;
+  markClass [\uni1A7C ] <anchor -186 352> @TopRightAlignedMarks;
+  markClass [\uni1A65 ] <anchor -117 352> @TopPositioningForSara_I;
+  markClass [\uni1A67 ] <anchor -132 352> @TopPositioningForSara_I;
+  markClass [\uni1A68 ] <anchor -172 351> @TopPositioningForSara_I;
+  markClass [\uni1A58 ] <anchor -535 352> @TopPositioningForSara_I;
+  markClass [\uni1A65.uni1A75.lig ] <anchor -188 352> @TopPositioningForSara_I;
+  markClass [\uni1A67.uni1A75.lig ] <anchor -215 353> @TopPositioningForSara_I;
+  markClass [\uni1A68.uni1A75.lig ] <anchor -245 352> @TopPositioningForSara_I;
+  markClass [\uni1A65.uni1A76.lig ] <anchor -469 353> @TopPositioningForSara_I;
+  markClass [\uni1A67.uni1A76.lig ] <anchor -482 353> @TopPositioningForSara_I;
+  markClass [\uni1A68.uni1A76.lig ] <anchor -504 352> @TopPositioningForSara_I;
+  pos base [\uni1A20 \uni1A2C \uni1A2C_uni1A2C.lig ] <anchor 360 352> mark @TopPositioningForSara_I
+	<anchor 490 352> mark @TopRightAlignedMarks
+	<anchor 361 352> mark @TopPositioningForMaiKang
+	<anchor 361 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 275 352> mark @TopCenteredOnCenter
+	<anchor 358 352> mark @TopSara_II;
+  pos base [\uni1A21 ] <anchor 239 352> mark @TopPositioningForSara_I
+	<anchor 365 352> mark @TopRightAlignedMarks
+	<anchor 292 353> mark @TopPositioningForMaiKang
+	<anchor 292 353> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 208 352> mark @TopCenteredOnCenter
+	<anchor 237 352> mark @TopSara_II;
+  pos base [\uni1A22 ] <anchor 250 352> mark @TopPositioningForSara_I
+	<anchor 288 352> mark @TopPositioningForMaiKang
+	<anchor 288 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 362 338> mark @TopRightAlignedMarks
+	<anchor 204 352> mark @TopCenteredOnCenter
+	<anchor 264 352> mark @TopSara_II;
+  pos base [\uni1A23 \uni1A24 \uni1A28 \uni1A30 \uni1A36 \uni1A37 \uni1A3E \uni1A46 ] <anchor 234 352> mark @TopCenteredOnCenter
+	<anchor 274 352> mark @TopPositioningForSara_I
+	<anchor 260 352> mark @TopSara_II
+	<anchor 402 352> mark @TopRightAlignedMarks
+	<anchor 296 352> mark @TopPositioningForMaiKang
+	<anchor 296 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A25 ] <anchor 330 352> mark @TopCenteredOnCenter
+	<anchor 385 353> mark @TopPositioningForSara_I
+	<anchor 371 353> mark @TopSara_II
+	<anchor 513 353> mark @TopRightAlignedMarks
+	<anchor 407 353> mark @TopPositioningForMaiKang
+	<anchor 407 353> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A26 \uni1A4A ] <anchor 240 352> mark @TopCenteredOnCenter
+	<anchor 302 352> mark @TopPositioningForSara_I
+	<anchor 288 352> mark @TopSara_II
+	<anchor 430 352> mark @TopRightAlignedMarks
+	<anchor 324 352> mark @TopPositioningForMaiKang
+	<anchor 324 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A27 \uni1A41 \x ] <anchor 190 352> mark @TopCenteredOnCenter
+	<anchor 203 352> mark @TopPositioningForSara_I
+	<anchor 216 352> mark @TopSara_II
+	<anchor 358 352> mark @TopRightAlignedMarks
+	<anchor 252 352> mark @TopPositioningForMaiKang
+	<anchor 252 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A29 \uni1A2A ] <anchor 245 352> mark @TopCenteredOnCenter
+	<anchor 285 352> mark @TopPositioningForSara_I
+	<anchor 271 352> mark @TopSara_II
+	<anchor 413 352> mark @TopRightAlignedMarks
+	<anchor 307 352> mark @TopPositioningForMaiKang
+	<anchor 307 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A2B ] <anchor 191 352> mark @TopCenteredOnCenter
+	<anchor 271 352> mark @TopPositioningForSara_I
+	<anchor 257 352> mark @TopSara_II
+	<anchor 414 352> mark @TopRightAlignedMarks
+	<anchor 293 352> mark @TopPositioningForMaiKang
+	<anchor 293 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A2D \uni1A2E \uni1A39 \uni1A40 ] <anchor 214 352> mark @TopCenteredOnCenter
+	<anchor 254 352> mark @TopPositioningForSara_I
+	<anchor 240 352> mark @TopSara_II
+	<anchor 402 352> mark @TopRightAlignedMarks
+	<anchor 276 352> mark @TopPositioningForMaiKang
+	<anchor 276 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A2F ] <anchor 222 352> mark @TopCenteredOnCenter
+	<anchor 255 352> mark @TopPositioningForSara_I
+	<anchor 241 352> mark @TopSara_II
+	<anchor 402 352> mark @TopRightAlignedMarks
+	<anchor 315 352> mark @TopPositioningForMaiKang
+	<anchor 315 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A31 ] <anchor 392 352> mark @TopPositioningForSara_I
+	<anchor 508 352> mark @TopRightAlignedMarks
+	<anchor 403 352> mark @TopPositioningForMaiKang
+	<anchor 403 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 284 352> mark @TopCenteredOnCenter
+	<anchor 386 352> mark @TopSara_II;
+  pos base [\uni1A32 ] <anchor 368 352> mark @TopPositioningForSara_I
+	<anchor 515 352> mark @TopRightAlignedMarks
+	<anchor 377 352> mark @TopPositioningForMaiKang
+	<anchor 377 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 284 352> mark @TopCenteredOnCenter
+	<anchor 359 352> mark @TopSara_II;
+  pos base [\uni1A33 ] <anchor 170 352> mark @TopCenteredOnCenter
+	<anchor 217 352> mark @TopPositioningForSara_I
+	<anchor 214 352> mark @TopSara_II
+	<anchor 430 352> mark @TopRightAlignedMarks
+	<anchor 254 352> mark @TopPositioningForMaiKang
+	<anchor 254 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A34 ] <anchor 227 352> mark @TopCenteredOnCenter
+	<anchor 241 352> mark @TopPositioningForSara_I
+	<anchor 234 352> mark @TopSara_II
+	<anchor 400 352> mark @TopRightAlignedMarks
+	<anchor 297 352> mark @TopPositioningForMaiKang
+	<anchor 297 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A35 ] <anchor 206 352> mark @TopCenteredOnCenter
+	<anchor 208 352> mark @TopPositioningForSara_I
+	<anchor 218 352> mark @TopSara_II
+	<anchor 349 352> mark @TopRightAlignedMarks
+	<anchor 275 352> mark @TopPositioningForMaiKang
+	<anchor 275 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A38 ] <anchor 228 352> mark @TopCenteredOnCenter
+	<anchor 169 352> mark @TopPositioningForSara_I
+	<anchor 148 352> mark @TopSara_II
+	<anchor 432 352> mark @TopRightAlignedMarks
+	<anchor 233 352> mark @TopPositioningForMaiKang
+	<anchor 233 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A3A ] <anchor 214 382> mark @TopCenteredOnCenter
+	<anchor 234 382> mark @TopPositioningForSara_I
+	<anchor 232 382> mark @TopSara_II
+	<anchor 422 482> mark @TopRightAlignedMarks
+	<anchor 276 382> mark @TopPositioningForMaiKang
+	<anchor 276 382> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A3B \uni1A3C \uni1A4B ] <anchor 303 352> mark @TopPositioningForSara_I
+	<anchor 433 352> mark @TopRightAlignedMarks
+	<anchor 334 352> mark @TopPositioningForMaiKang
+	<anchor 334 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 250 352> mark @TopCenteredOnCenter
+	<anchor 301 352> mark @TopSara_II;
+  pos base [\uni1A3D \uni1A43 \uni1A47 \uni1A48 \uni1A49 \uni1A4C ] <anchor 420 352> mark @TopPositioningForSara_I
+	<anchor 546 352> mark @TopRightAlignedMarks
+	<anchor 421 352> mark @TopPositioningForMaiKang
+	<anchor 421 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 292 352> mark @TopCenteredOnCenter
+	<anchor 418 352> mark @TopSara_II;
+  pos base [\uni1A3F ] <anchor 430 352> mark @TopPositioningForSara_I
+	<anchor 558 352> mark @TopRightAlignedMarks
+	<anchor 451 352> mark @TopPositioningForMaiKang
+	<anchor 451 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 315 352> mark @TopCenteredOnCenter
+	<anchor 423 352> mark @TopSara_II;
+  pos base [\uni1A45 \uni25CC ] <anchor 196 352> mark @TopCenteredOnCenter
+	<anchor 203 352> mark @TopPositioningForSara_I
+	<anchor 216 352> mark @TopSara_II
+	<anchor 338 352> mark @TopRightAlignedMarks
+	<anchor 259 352> mark @TopPositioningForMaiKang
+	<anchor 259 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A54 ] <anchor 690 352> mark @TopPositioningForSara_I
+	<anchor 816 352> mark @TopRightAlignedMarks
+	<anchor 691 352> mark @TopPositioningForMaiKang
+	<anchor 691 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor 540 352> mark @TopCenteredOnCenter
+	<anchor 688 352> mark @TopSara_II;
+  pos base [\uni1A63 ] <anchor 115 352> mark @TopCenteredOnCenter
+	<anchor 261 352> mark @TopRightAlignedMarks
+	<anchor 190 352> mark @TopPositioningForMaiEekMaiKoo
+	<anchor -39 352> mark @TopPositioningForMaiKang;
+  pos base [\uni1A64 ] <anchor -54 352> mark @TopCenteredOnCenter
+	<anchor 138 352> mark @TopRightAlignedMarks;
+  pos base [\uni1A36.uni1A63.lig \uni1A36_1A2F_1A63.lig \uni1A36_1A32_1A63.lig \uni1A36_1A33_1A63.lig \uni1A36_1A34_1A63.lig \uni1A36_1A35_1A63.lig \uni1A36_1A36_1A63.lig ] <anchor 218 352> mark @TopCenteredOnCenter
+	<anchor 380 352> mark @TopRightAlignedMarks
+	<anchor 292 352> mark @TopPositioningForMaiKang
+	<anchor 292 352> mark @TopPositioningForMaiEekMaiKoo;
+  pos base [\uni1A45_uni1A60_uni1A3F.lig ] <anchor 1 -45> mark @TopPositioningForSara_I;
+  markClass [\uni1A25.sub \uni1A30.sub \uni1A3F.sub \uni1A48.sub \uni1A57 \uni1A54.sub \uni1A53.sub \uni1A43_uni1A45_uni1A3F.lig \uniE325 \uniE32C ] <anchor 0 -45> @BottomWithRightVerticalStem;
+  markClass [\uni1A2B.sub \uni1A47.sub \uni1A6D ] <anchor 0 -44> @BottomWithRightVerticalStem;
+  markClass [\uni1A2C.sub \uni1A37.sub \uni1A39.sub \uni1A43.sub \uni1A3A.sub \uni1A40.sub ] <anchor 0 -46> @BottomWithRightVerticalStem;
+  markClass [\uni1A5B ] <anchor -8 -45> @BottomWithRightVerticalStem;
+  markClass [\uni1A43_uni1A60_uni1A45.lig ] <anchor 1 -45> @BottomWithRightVerticalStem;
+  markClass [\uni1A56_uni1A45_uni1A3F.lig ] <anchor 1 -44> @BottomWithRightVerticalStem;
+  markClass [\uniE425 ] <anchor -0 -45> @BottomWithRightVerticalStem;
+  markClass [\uniE42C \uniE525 \uniE625 ] <anchor 0 -44> @BottomWithRightVerticalStem;
+  markClass [\uniE52C ] <anchor 0 -44> @BottomWithRightVerticalStem;
+  markClass [\uniE62C ] <anchor 0 -45> @BottomWithRightVerticalStem;
+  markClass [\uniE725 ] <anchor 0 -44> @BottomWithRightVerticalStem;
+  markClass [\uniE72C ] <anchor -0 -44> @BottomWithRightVerticalStem;
+  markClass [\uni1A21.sub ] <anchor -166 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A20.sub ] <anchor -198 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A23.sub \uni1A41.sub ] <anchor -170 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A26.sub ] <anchor -167 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A27.sub ] <anchor -137 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A28.sub \uni1A5C ] <anchor -168 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A29.sub ] <anchor -180 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A2D.sub ] <anchor -153 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A2E.sub ] <anchor -148 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A2F.sub \uni1A4C.sub ] <anchor -214 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A31.sub ] <anchor -212 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A32.sub ] <anchor -205 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A33.sub ] <anchor -169 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A34.sub ] <anchor -191 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A35.sub ] <anchor -150 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A36.sub ] <anchor -161 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A3B.sub ] <anchor -216 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A3D.sub ] <anchor -245 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A3E.sub ] <anchor -285 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A45.sub ] <anchor -145 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A46.sub \uniE32B ] <anchor -164 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A49.sub ] <anchor -215 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A4A.sub ] <anchor -163 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A4B.sub ] <anchor -321 -61> @BottomSubjoinedConsonant;
+  markClass [\uni1A56 ] <anchor -210 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A5D ] <anchor -169 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A5E ] <anchor -228 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A6C ] <anchor -293 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A36.uni1A69.sub ] <anchor -376 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A36.uni1A6A.sub \uni1A3E.uni1A6A.sub ] <anchor -417 -43> @BottomSubjoinedConsonant;
+  markClass [\uni1A3E.uni1A69.sub ] <anchor -379 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A22.sub ] <anchor -181 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A24.sub ] <anchor -171 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A2A.sub ] <anchor -201 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A3C.sub ] <anchor -174 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A60_uni1A36_uni1A6C.lig ] <anchor -443 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A60_uni1A3E_uni1A6C.lig ] <anchor -417 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A56_uni1A60_uni1A45.lig \uni1A45_level2.sub ] <anchor -246 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A36_recurved.sub ] <anchor -151 -45> @BottomSubjoinedConsonant;
+  markClass [\uni1A60_uni1A32_uni1A69.lig ] <anchor -340 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE322 ] <anchor -108 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE324 ] <anchor -122 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE336 ] <anchor -177 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE33E ] <anchor -162 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE420 \uniE42D \uniE42E \uniE430 \uniE433 \uniE436 \uniE438 \uniE43A \uniE43C \uniE440 \uniE442 \uniE444 \uniE449 \uniE44A \uniE44B \uniE522 ] <anchor -322 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE421 ] <anchor -308 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE422 \uniE427 ] <anchor -309 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE423 ] <anchor -303 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE424 ] <anchor -315 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE426 ] <anchor -270 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE428 ] <anchor -336 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE429 ] <anchor -268 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE42A ] <anchor -291 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE42B ] <anchor -282 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE42F \uniE443 ] <anchor -342 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE431 ] <anchor -332 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE432 \uniE437 ] <anchor -318 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE434 \uniE441 ] <anchor -293 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE435 ] <anchor -302 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE439 ] <anchor -328 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE43B \uniE446 \uniE529 ] <anchor -301 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE43D \uniE52A \uniE52F \uniE53B ] <anchor -323 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE43E ] <anchor -288 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE43F \uniE52D \uniE530 ] <anchor -362 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE445 ] <anchor -304 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE447 ] <anchor -354 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE448 ] <anchor -364 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE333 ] <anchor -121 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE520 ] <anchor -358 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE521 ] <anchor -317 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE523 ] <anchor -326 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE524 ] <anchor -327 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE526 ] <anchor -294 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE527 ] <anchor -321 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE528 ] <anchor -359 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE52B ] <anchor -346 -45> @BottomSubjoinedConsonant;
+  markClass [\uniE531 \uniE547 ] <anchor -371 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE532 \uniE53D ] <anchor -366 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE533 ] <anchor -355 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE534 ] <anchor -341 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE535 \uniE537 ] <anchor -325 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE536 ] <anchor -369 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE539 ] <anchor -360 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE53E ] <anchor -297 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE53F ] <anchor -403 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE541 ] <anchor -311 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE543 ] <anchor -377 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE545 ] <anchor -320 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE546 ] <anchor -329 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE548 ] <anchor -401 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE549 ] <anchor -368 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE54B ] <anchor -333 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE620 \uniE639 ] <anchor -162 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE621 ] <anchor -187 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE622 \uniE623 ] <anchor -168 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE624 \uniE630 ] <anchor -174 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE626 ] <anchor -160 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE627 \uniE647 ] <anchor -161 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE628 ] <anchor -180 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE629 ] <anchor -165 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE62A ] <anchor -186 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE62B ] <anchor -184 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE62D \uniE635 \uniE63B \uniE641 \uniE64B ] <anchor -163 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE62F \uniE634 ] <anchor -178 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE631 \uniE649 ] <anchor -156 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE632 ] <anchor -153 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE633 ] <anchor -170 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE636 ] <anchor -196 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE637 ] <anchor -166 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE63D ] <anchor -172 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE63E ] <anchor -208 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE63F ] <anchor -176 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE643 ] <anchor -150 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE645 ] <anchor -164 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE646 ] <anchor -169 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE648 ] <anchor -175 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE720 ] <anchor -140 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE721 ] <anchor -128 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE722 ] <anchor -112 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE723 ] <anchor -118 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE724 \uniE733 ] <anchor -124 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE726 \uniE728 ] <anchor -126 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE727 \uniE735 ] <anchor -102 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE729 ] <anchor -128 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE72A ] <anchor -132 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE72B ] <anchor -176 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE72D \uniE74B ] <anchor -122 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE72F ] <anchor -178 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE730 ] <anchor -118 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE731 \uniE743 ] <anchor -146 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE732 ] <anchor -142 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE734 ] <anchor -108 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE736 ] <anchor -186 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE737 \uniE746 ] <anchor -120 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE739 ] <anchor -156 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE73B ] <anchor -122 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE73D ] <anchor -158 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE73E ] <anchor -194 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE73F ] <anchor -162 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE741 ] <anchor -104 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE745 ] <anchor -98 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE747 ] <anchor -164 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE748 ] <anchor -164 -44> @BottomSubjoinedConsonant;
+  markClass [\uniE749 ] <anchor -152 -44> @BottomSubjoinedConsonant;
+  markClass [\uni1A6A ] <anchor -312 -46> @Bottom_Sara_UU;
+  markClass [\uni1A69 ] <anchor -278 -45> @Bottom_Sara_U;
+  pos base [\uni1A20 ] <anchor 363 -45> mark @Bottom_Sara_U
+	<anchor 344 -45> mark @Bottom_Sara_UU
+	<anchor 339 -45> mark @BottomSubjoinedConsonant
+	<anchor 514 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A21 ] <anchor 317 -45> mark @Bottom_Sara_U
+	<anchor 298 -45> mark @Bottom_Sara_UU
+	<anchor 219 -44> mark @BottomSubjoinedConsonant
+	<anchor 419 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A22 ] <anchor 296 -46> mark @Bottom_Sara_UU
+	<anchor 316 -45> mark @Bottom_Sara_U
+	<anchor 216 -45> mark @BottomSubjoinedConsonant
+	<anchor 419 -46> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A23 \uni1A24 \uni1A35 \uni1A46 ] <anchor 275 -45> mark @Bottom_Sara_U
+	<anchor 258 -45> mark @Bottom_Sara_UU
+	<anchor 239 -45> mark @BottomSubjoinedConsonant
+	<anchor 435 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A25 ] <anchor 421 -45> mark @Bottom_Sara_U
+	<anchor 404 -45> mark @Bottom_Sara_UU
+	<anchor 344 -45> mark @BottomSubjoinedConsonant
+	<anchor 540 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A26 \uni1A4A ] <anchor 257 -44> mark @Bottom_Sara_U
+	<anchor 232 -45> mark @Bottom_Sara_UU
+	<anchor 238 -44> mark @BottomSubjoinedConsonant
+	<anchor 442 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A27 \uni1A41 \uni1A45 \uni25CC \x ] <anchor 254 -45> mark @Bottom_Sara_U
+	<anchor 237 -45> mark @Bottom_Sara_UU
+	<anchor 190 -45> mark @BottomSubjoinedConsonant
+	<anchor 359 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A28 ] <anchor 325 -45> mark @Bottom_Sara_U
+	<anchor 308 -45> mark @Bottom_Sara_UU
+	<anchor 236 -46> mark @BottomSubjoinedConsonant
+	<anchor 428 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A29 ] <anchor 280 -45> mark @Bottom_Sara_U
+	<anchor 263 -45> mark @Bottom_Sara_UU
+	<anchor 244 -45> mark @BottomSubjoinedConsonant
+	<anchor 453 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A2A ] <anchor 280 -47> mark @Bottom_Sara_U
+	<anchor 263 -45> mark @Bottom_Sara_UU
+	<anchor 244 -45> mark @BottomSubjoinedConsonant
+	<anchor 453 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A2B ] <anchor 340 -101> mark @Bottom_Sara_U
+	<anchor 323 -101> mark @Bottom_Sara_UU
+	<anchor 203 -61> mark @BottomSubjoinedConsonant
+	<anchor 438 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A2C \uni1A2C_uni1A2C.lig ] <anchor 376 -46> mark @Bottom_Sara_U
+	<anchor 356 -46> mark @Bottom_Sara_UU
+	<anchor 275 -45> mark @BottomSubjoinedConsonant
+	<anchor 504 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A2D \uni1A2E \uni1A39 \uni1A3A \uni1A40 ] <anchor 298 -45> mark @Bottom_Sara_U
+	<anchor 277 -45> mark @Bottom_Sara_UU
+	<anchor 212 -45> mark @BottomSubjoinedConsonant
+	<anchor 415 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A2F \uni1A36.uni1A63.lig \uni1A36_1A2F_1A63.lig \uni1A36_1A32_1A63.lig \uni1A36_1A33_1A63.lig \uni1A36_1A34_1A63.lig \uni1A36_1A35_1A63.lig \uni1A36_1A36_1A63.lig ] <anchor 329 -45> mark @Bottom_Sara_U
+	<anchor 308 -45> mark @Bottom_Sara_UU
+	<anchor 221 -45> mark @BottomSubjoinedConsonant
+	<anchor 425 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A30 \uni1A34 ] <anchor 288 -45> mark @Bottom_Sara_U
+	<anchor 262 -45> mark @Bottom_Sara_UU
+	<anchor 212 -45> mark @BottomSubjoinedConsonant
+	<anchor 408 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A31 \uni1A32 ] <anchor 444 -45> mark @Bottom_Sara_U
+	<anchor 425 -45> mark @Bottom_Sara_UU
+	<anchor 357 -45> mark @BottomSubjoinedConsonant
+	<anchor 537 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A33 ] <anchor 257 -45> mark @Bottom_Sara_U
+	<anchor 234 -45> mark @Bottom_Sara_UU
+	<anchor 192 -45> mark @BottomSubjoinedConsonant
+	<anchor 434 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A36 ] <anchor 309 -45> mark @Bottom_Sara_U
+	<anchor 288 -45> mark @Bottom_Sara_UU
+	<anchor 225 -45> mark @BottomSubjoinedConsonant
+	<anchor 404 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A37 ] <anchor 326 -45> mark @Bottom_Sara_U
+	<anchor 309 -45> mark @Bottom_Sara_UU
+	<anchor 233 -45> mark @BottomSubjoinedConsonant
+	<anchor 417 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A38 ] <anchor 324 -45> mark @Bottom_Sara_U
+	<anchor 307 -45> mark @Bottom_Sara_UU
+	<anchor 233 -45> mark @BottomSubjoinedConsonant
+	<anchor 426 -46> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A3B \uni1A3C \uni1A4B ] <anchor 339 -45> mark @Bottom_Sara_U
+	<anchor 320 -45> mark @Bottom_Sara_UU
+	<anchor 252 -45> mark @BottomSubjoinedConsonant
+	<anchor 447 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A3D \uni1A47 \uni1A48 \uni1A49 \uni1A4C ] <anchor 424 -45> mark @Bottom_Sara_U
+	<anchor 405 -45> mark @Bottom_Sara_UU
+	<anchor 376 -45> mark @BottomSubjoinedConsonant
+	<anchor 558 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A3E ] <anchor 305 -45> mark @Bottom_Sara_U
+	<anchor 288 -45> mark @Bottom_Sara_UU
+	<anchor 234 -45> mark @BottomSubjoinedConsonant
+	<anchor 424 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A3F ] <anchor 467 -45> mark @Bottom_Sara_U
+	<anchor 448 -45> mark @Bottom_Sara_UU
+	<anchor 437 -45> mark @BottomSubjoinedConsonant
+	<anchor 589 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A43 ] <anchor 432 -45> mark @Bottom_Sara_U
+	<anchor 413 -45> mark @Bottom_Sara_UU
+	<anchor 404 -45> mark @BottomSubjoinedConsonant
+	<anchor 548 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A54 ] <anchor 710 -45> mark @Bottom_Sara_U
+	<anchor 691 -45> mark @Bottom_Sara_UU
+	<anchor 682 -45> mark @BottomSubjoinedConsonant
+	<anchor 824 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A63 ] <anchor 142 -45> mark @BottomSubjoinedConsonant
+	<anchor 293 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uni1A64 ] <anchor 42 -45> mark @BottomSubjoinedConsonant
+	<anchor 125 -45> mark @BottomWithRightVerticalStem;
+  pos base [\uniE320 ] <anchor -141 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE321 ] <anchor -128 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE323 ] <anchor -116 -44> mark @BottomSubjoinedConsonant;
+  pos base [\uniE326 \uniE34B ] <anchor -123 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE327 \uniE335 ] <anchor -101 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE328 \uniE337 \uniE346 ] <anchor -116 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE329 \uniE33B ] <anchor -122 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE32D ] <anchor -118 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE32F ] <anchor -178 -43> mark @BottomSubjoinedConsonant;
+  pos base [\uniE330 ] <anchor -113 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE331 ] <anchor -146 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE332 ] <anchor -143 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE334 ] <anchor -104 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE339 \uniE348 ] <anchor -152 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE33D \uniE33F \uniE356 ] <anchor -156 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE341 ] <anchor -103 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE343 ] <anchor -145 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE345 ] <anchor -97 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE347 ] <anchor -153 -61> mark @BottomSubjoinedConsonant;
+  pos base [\uniE349 ] <anchor -149 -45> mark @BottomSubjoinedConsonant;
+  pos base [\uniE35E ] <anchor -115 -45> mark @BottomSubjoinedConsonant;
+} TopAndBottom;
+
+feature mark {
+
+ script DFLT;
+     language dflt ;
+      lookup TopAndBottom;
+
+ script lana;
+     language dflt ;
+      lookup TopAndBottom;
+} mark;
+#Mark attachment classes (defined in GDEF, used in lookupflags)
+@AboveBaseVowels = [ uni1A62 uni1A65 uni1A66 uni1A67 uni1A68 uni1A6B uni1A73 uni1A74 ];
+@AboveBaseTones = [ uni1A75 uni1A76 uni1A77 uni1A78 uni1A79 ];
+
+@GDEF_Simple = [\uni1A20 \uni1A21 \uni1A22 \uni1A23 \uni1A24 \uni1A25 \uni1A26 
+	\uni1A27 \uni1A28 \uni1A29 \uni1A2A \uni1A2B \uni1A2C \uni1A2D \uni1A2E \uni1A2F 
+	\uni1A30 \uni1A31 \uni1A32 \uni1A33 \uni1A34 \uni1A35 \uni1A36 \uni1A37 \uni1A38 
+	\uni1A39 \uni1A3A \uni1A3B \uni1A3C \uni1A3D \uni1A3E \uni1A3F \uni1A40 \uni1A41 
+	\uni1A42 \uni1A43 \uni1A44 \uni1A45 \uni1A46 \uni1A47 \uni1A48 \uni1A49 \uni1A4A 
+	\uni1A4B \uni1A4C \uni1A4D \uni1A4E \uni1A4F \uni1A50 \uni1A51 \uni1A52 \uni1A53 
+	\uni1A54 \uni1A55 \uni1A60 \uni1A56 \uni1A61 \uni1A63 \uni1A64 \uni1A6E \uni1A6F 
+	\uni1A70 \uni1A71 \uni1A72 \uni1A7F \uni1A80 \uni1A81 \uni1A82 \uni1A83 \uni1A84 
+	\uni1A85 \uni1A86 \uni1A87 \uni1A89 \uni1A88 \uni1A90 \uni1A91 \uni1A92 \uni1A93 
+	\uni1A94 \uni1A95 \uni1A96 \uni1A97 \uni1A98 \uni1A99 \space \uni25CC \uni0000 
+	\uni1AA0 \uni1AA1 \uni1AA2 \uni1AA3 \uni1AA4 \uni1AA6 \uni1AA8 \uni1AA9 \uni1AAA 
+	\uni1AAB \uni1AA5 \uni1AA7 \uni1AAC \uni1AAD \plus \hyphen \period \x 
+	\uni1A60.uni1A75 \uni1A60.uni1A76 \uni1A60.uni1A77 \uni1A60.uni1A78 
+	\uni1A60.uni1A79 \uni1A60.uni1A75.lig \uni1A60.uni1A76.lig 
+	\uni1A60.uni1A77.lig \uni1A60.uni1A78.lig \uni1A60.uni1A79.lig 
+	\uni1A36_uni1A63_recurved.lig \nam_water_recurved.lig \uni1A36_recurved 
+	\zero \one \two \three \four \five \six \seven \eight \nine \A \B \u \U \C \D \E \F 
+	\bracketleft \bracketright \braceleft \braceright \parenleft \parenright 
+	\uniE16E \uniE16F \uniE170 \uniE171 \uniE172 \uni22EE \uniE155 \uniE320 \uniE321 
+	\uniE323 \uniE326 \uniE327 \uniE328 \uniE329 \uniE32A \uniE32D \uniE32F \uniE330 
+	\uniE331 \uniE332 \uniE334 \uniE335 \uniE337 \uniE339 \uniE33B \uniE33D \uniE33F 
+	\uniE341 \uniE343 \uniE345 \uniE346 \uniE347 \uniE348 \uniE349 \uniE34B 
+	\level_2_sara_U \level_2_sara_UU \level_2_sara_OA_BELOW 
+	\level_2_subjoined_WA \uniE356 \uniE35E ];
+@GDEF_Ligature = [\uni1A2C_uni1A2C.lig \uni1A36.uni1A63.lig 
+	\uni1A36_1A2F_1A63.lig \uni1A36_1A32_1A63.lig \uni1A36_1A33_1A63.lig 
+	\uni1A36_1A34_1A63.lig \uni1A36_1A35_1A63.lig \uni1A36_1A36_1A63.lig 
+	\uni1A45_uni1A60_uni1A3F.lig \nam_water.lig \naan_recurved.lig 
+	\non_recruved.lig \uni1A34_uni1A60_uni1A35.lig \phothi.lig \ho_sub_no.lig ];
+@GDEF_Mark = [\uni1A65 \uni1A66 \uni1A67 \uni1A68 \uni1A69 \uni1A6A \uni1A21.sub 
+	\uni1A20.sub \uni1A23.sub \uni1A25.sub \uni1A26.sub \uni1A27.sub \uni1A28.sub 
+	\uni1A29.sub \uni1A2B.sub \uni1A2C.sub \uni1A2D.sub \uni1A2E.sub \uni1A2F.sub 
+	\uni1A30.sub \uni1A31.sub \uni1A32.sub \uni1A33.sub \uni1A34.sub \uni1A35.sub 
+	\uni1A36.sub \uni1A37.sub \uni1A39.sub \uni1A3B.sub \uni1A3D.sub \uni1A3E.sub 
+	\uni1A3F.sub \uni1A41.sub \uni1A43.sub \uni1A45.sub \uni1A46.sub \uni1A47.sub 
+	\uni1A48.sub \uni1A49.sub \uni1A4A.sub \uni1A4B.sub \uni1A57 \uni1A58 \uni1A59 
+	\uni1A5A \uni1A5B \uni1A5C \uni1A5D \uni1A5E \uni1A62 \uni1A6B \uni1A6C \uni1A6D 
+	\uni1A73 \uni1A74 \uni1A75 \uni1A76 \uni1A77 \uni1A78 \uni1A79 \uni1A7A \uni1A7B 
+	\uni1A7C \uni1A36.uni1A69.sub \uni1A36.uni1A6A.sub \uni1A3E.uni1A69.sub 
+	\uni1A3E.uni1A6A.sub \uni1A54.sub \uni1A53.sub \uni1A22.sub \uni1A24.sub 
+	\uni1A2A.sub \uni1A3C.sub \uni1A3A.sub \uni1A40.sub \uni1A4C.sub 
+	\uni1A62.uni1A75.lig \uni1A65.uni1A75.lig \uni1A66.uni1A75.lig 
+	\uni1A67.uni1A75.lig \uni1A68.uni1A75.lig \uni1A6B.uni1A75.lig 
+	\uni1A74.uni1A75.lig \uni1A62.uni1A76.lig \uni1A65.uni1A76.lig 
+	\uni1A66.uni1A76.lig \uni1A67.uni1A76.lig \uni1A68.uni1A76.lig 
+	\uni1A6B.uni1A76.lig \uni1A74.uni1A76.lig \uni1A60_uni1A36_uni1A6C.lig 
+	\uni1A60_uni1A3E_uni1A6C.lig \uni1A56_uni1A60_uni1A45.lig 
+	\uni1A43_uni1A60_uni1A45.lig \uni1A56_uni1A45_uni1A3F.lig 
+	\uni1A43_uni1A45_uni1A3F.lig \uni1A45_level2.sub \uni1A36_recurved.sub 
+	\uni1A60_uni1A32_uni1A69.lig \uniE322 \uniE324 \uniE325 \uniE32B \uniE336 
+	\uniE33E \uniE420 \uniE421 \uniE422 \uniE423 \uniE424 \uniE425 \uniE426 \uniE427 
+	\uniE428 \uniE429 \uniE42A \uniE42B \uniE42C \uniE42D \uniE42E \uniE42F \uniE430 
+	\uniE431 \uniE432 \uniE433 \uniE434 \uniE435 \uniE436 \uniE437 \uniE438 \uniE439 
+	\uniE43A \uniE43B \uniE43C \uniE43D \uniE43E \uniE43F \uniE440 \uniE441 \uniE442 
+	\uniE443 \uniE444 \uniE445 \uniE446 \uniE447 \uniE448 \uniE449 \uniE44A \uniE44B 
+	\uniE333 \uniE32C \uniE520 \uniE521 \uniE522 \uniE523 \uniE524 \uniE525 \uniE526 
+	\uniE527 \uniE528 \uniE529 \uniE52A \uniE52B \uniE52C \uniE52D \uniE52F \uniE530 
+	\uniE531 \uniE532 \uniE533 \uniE534 \uniE535 \uniE536 \uniE537 \uniE539 \uniE53B 
+	\uniE53D \uniE53E \uniE53F \uniE541 \uniE543 \uniE545 \uniE546 \uniE547 \uniE548 
+	\uniE549 \uniE54B \uniE620 \uniE621 \uniE622 \uniE623 \uniE624 \uniE625 \uniE626 
+	\uniE627 \uniE628 \uniE629 \uniE62A \uniE62B \uniE62C \uniE62D \uniE62F \uniE630 
+	\uniE631 \uniE632 \uniE633 \uniE634 \uniE635 \uniE636 \uniE637 \uniE639 \uniE63B 
+	\uniE63D \uniE63E \uniE63F \uniE641 \uniE643 \uniE645 \uniE646 \uniE647 \uniE648 
+	\uniE649 \uniE64B \uniE720 \uniE721 \uniE722 \uniE723 \uniE724 \uniE725 \uniE726 
+	\uniE727 \uniE728 \uniE729 \uniE72A \uniE72B \uniE72C \uniE72D \uniE72F \uniE730 
+	\uniE731 \uniE732 \uniE733 \uniE734 \uniE735 \uniE736 \uniE737 \uniE739 \uniE73B 
+	\uniE73D \uniE73E \uniE73F \uniE741 \uniE743 \uniE745 \uniE746 \uniE747 \uniE748 
+	\uniE749 \uniE74B ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, @GDEF_Ligature, @GDEF_Mark, ;
+
+} GDEF;
+
