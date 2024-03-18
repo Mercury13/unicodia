@@ -28,11 +28,13 @@ public:
 
     Config config();
 
-    bool hasConfig();
     void saveConfig();
     void loadConfig();
 
 private:
     Ui::FmMain *ui;
+
+private slots:
+    void run();
 };
 #endif // FMMAIN_H

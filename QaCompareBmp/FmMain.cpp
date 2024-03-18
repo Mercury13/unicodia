@@ -43,16 +43,18 @@ FmMain::Config FmMain::config()
 }
 
 
-
-
-
-
 void FmMain::saveConfig()
 {
 
 }
 
 void FmMain::loadConfig()
+{
+
+}
+
+
+void FmMain::run()
 {
 
 }
