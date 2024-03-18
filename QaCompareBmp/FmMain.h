@@ -15,6 +15,23 @@ public:
     FmMain(QWidget *parent = nullptr);
     ~FmMain() override;
 
+    struct Config {
+        QString versioned;
+        QString working;
+
+        /// @return [+] can save to file
+        bool isPresent() const;
+
+        /// @return [+] can work
+        bool isFull() const;
+    };
+
+    Config config();
+
+    bool hasConfig();
+    void saveConfig();
+    void loadConfig();
+
 private:
     Ui::FmMain *ui;
 };
