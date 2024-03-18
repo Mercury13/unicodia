@@ -6,6 +6,7 @@ FmMain::FmMain(QWidget *parent)
     , ui(new Ui::FmMain)
 {
     ui->setupUi(this);
+    ui->splitMain->setSizes({100, 200});
 }
 
 FmMain::~FmMain()

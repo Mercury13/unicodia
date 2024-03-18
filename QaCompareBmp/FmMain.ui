@@ -53,7 +53,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="edVersioed"/>
+          <widget class="QLineEdit" name="edVersioned"/>
          </item>
         </layout>
        </item>
@@ -117,6 +117,12 @@
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>edVersioned</tabstop>
+  <tabstop>lineEdit</tabstop>
+  <tabstop>btCompare</tabstop>
+  <tabstop>treeObjects</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
