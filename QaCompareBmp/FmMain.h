@@ -1,6 +1,9 @@
 #ifndef FMMAIN_H
 #define FMMAIN_H
 
+// C++
+#include <filesystem>
+
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -33,6 +36,7 @@ public:
 
 private:
     Ui::FmMain *ui;
+    std::filesystem::path configPath;
 
 private slots:
     void run();
