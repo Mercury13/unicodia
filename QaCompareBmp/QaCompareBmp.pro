@@ -16,6 +16,7 @@ win32-g++ {
 SOURCES += \
     ../Libs/PugiXml/pugixml.cpp \
     ../Libs/SelfMade/Strings/u_Strings.cpp \
+    WiViewer.cpp \
     main.cpp \
     FmMain.cpp
 
@@ -24,7 +25,8 @@ HEADERS += \
     ../Libs/PugiXml/pugixml.hpp \
     ../Libs/SelfMade/Strings/u_Strings.h \
     ../Libs/SelfMade/u_Vector.h \
-    FmMain.h
+    FmMain.h \
+    WiViewer.h
 
 INCLUDEPATH += \
     ../Libs/PugiXml \

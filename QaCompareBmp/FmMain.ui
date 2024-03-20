@@ -107,8 +107,12 @@
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
-         <widget class="QTreeView" name="treeObjects"/>
-         <widget class="QWidget" name="wiCompare" native="true"/>
+         <widget class="QTreeView" name="treeObjects">
+          <attribute name="headerVisible">
+           <bool>false</bool>
+          </attribute>
+         </widget>
+         <widget class="WiViewer" name="wiViewer" native="true"/>
         </widget>
        </item>
       </layout>
@@ -117,6 +121,14 @@
    </layout>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>WiViewer</class>
+   <extends>QWidget</extends>
+   <header>WiViewer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>edVersioned</tabstop>
   <tabstop>edWorking</tabstop>
