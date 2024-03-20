@@ -214,6 +214,7 @@ FmMain::FmMain(QWidget *parent)
 
     // Tie things
     ui->treeObjects->setModel(&diffModel);
+    ui->treeObjects->setIconSize({14, 12});
 
     // Tie events
     connect(ui->btCompare, &QPushButton::clicked, this, &This::run);
