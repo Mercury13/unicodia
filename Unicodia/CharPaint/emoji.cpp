@@ -22,7 +22,8 @@ struct RecolorLib {
     std::string_view outline1;
     std::string_view earLines;  ///< U15: in lines of ear; same everywhere except main and white
     std::string_view hair1;
-    std::string_view hair2;
+    std::string_view hairHighlight;  ///< Highlighs on the top of hair made by radial gradient
+    std::string_view eyebrows;  ///< Eyebrows, same colour as hair highlight!!
     std::string_view ears1;     ///< used in firefighter emoji
         /// @warning: Leave ears E59600, set nose #E49600
     std::string_view nose1;     ///< used at least in swimmer emoji
@@ -45,6 +46,9 @@ namespace {
 
 }   // anon namespace
 
+/// As made by SVG Cleaner
+#define STOP_COLOR "stop-color=\""
+
 void RecolorLib::runOn(QByteArray& bytes) const
 {
     repl(bytes, "#FFB300", fill1);      // used: e.g. runner
@@ -60,7 +64,8 @@ void RecolorLib::runOn(QByteArray& bytes) const
     // #E6A100: U14 nose only
     // #F5AC00: U14 nose only
     repl(bytes, "#543930", hair1);
-    repl(bytes, "#6D4C41", hair2);
+    repl(bytes, STOP_COLOR "#6D4C41", hairHighlight);
+    repl(bytes, "#6D4C41", eyebrows);
     repl(bytes, "#E59600", ears1);
     repl(bytes, "#E49600", nose1);      // artificially made (missing in actual Noto): e.g. swimmer
     repl(bytes, "#795548", mouth1);
@@ -84,7 +89,8 @@ namespace {
             .outline1 = "#E6B77E",
             .earLines = "#EDBD82",
             .hair1 = "#312D2D",
-            .hair2 = "#454140",
+            .hairHighlight = STOP_COLOR "#454140",
+            .eyebrows = "#454140",
             .ears1 = "#EDC391",
             .nose1 = "#DBA689",
             .mouth1 = "#444444",
@@ -96,7 +102,8 @@ namespace {
             .outline1 = "#BA8F63",
             .earLines = "#BA8F63",
             .hair1 = "#AB872F",
-            .hair2 = "#AB872F",
+            .hairHighlight = STOP_COLOR "#BFA055",
+            .eyebrows = "#AB872F",
             .ears1 = "#C48E6A",
             .nose1 = "#C48E6A",
             .mouth1 = "#6D4C41",
@@ -108,7 +115,8 @@ namespace {
             .outline1 = "#91674D",
             .earLines = "#91674D",
             .hair1 = "#543930",
-            .hair2 = "#613E31",
+            .hairHighlight = STOP_COLOR "#6D4C41",
+            .eyebrows = "#613E31",
             .ears1 = "#99674F",
             .nose1 = "#99674F",
             .mouth1 = "#5D4037",
@@ -120,7 +128,8 @@ namespace {
             .outline1 = "#875334",
             .earLines = "#875334",
             .hair1 = "#3C2C23",
-            .hair2 = "#42312C",
+            .hairHighlight = STOP_COLOR "#554138",
+            .eyebrows = "#42312C",
             .ears1 = "#7A4C32",
             .nose1 = "#875334",
             .mouth1 = "#473530",
@@ -132,7 +141,8 @@ namespace {
             .outline1 = "#4A2F27",
             .earLines = "#4A2F27",
             .hair1 = "#232020",
-            .hair2 = "#1A1717",
+            .hairHighlight = STOP_COLOR "#444140",
+            .eyebrows = "#1A1717",
             .ears1 = "#3C2B24",
             .nose1 = "#33251F",
             .mouth1 = "#1A1717",
