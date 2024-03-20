@@ -36,7 +36,10 @@ bool FmMain::Config::isFull() const
 
 DiffModel::DiffModel()
 {
-    /// @todo [urgent] load icons
+    icoAdded  .addFile(":/List/plus.svg");
+    icoDeleted.addFile(":/List/minus.svg");
+    icoChanged.addFile(":/List/change.svg");
+    icoResized.addFile(":/List/resize.svg");
 }
 
 int DiffModel::rowCount(const QModelIndex&) const
@@ -59,8 +62,8 @@ QVariant DiffModel::data(const QModelIndex &index, int role) const
         switch (line.reason) {
         case DiffReason::ADDED:   return icoAdded;
         case DiffReason::DELETED: return icoDeleted;
-        case DiffReason::CHANGED: return icoResized;
-        case DiffReason::RESIZED: return icoChanged;
+        case DiffReason::CHANGED: return icoChanged;
+        case DiffReason::RESIZED: return icoResized;
         }
         [[fallthrough]];  // should not happen
     default:
@@ -214,7 +217,6 @@ FmMain::FmMain(QWidget *parent)
 
     // Tie things
     ui->treeObjects->setModel(&diffModel);
-    ui->treeObjects->setIconSize({14, 12});
 
     // Tie events
     connect(ui->btCompare, &QPushButton::clicked, this, &This::run);

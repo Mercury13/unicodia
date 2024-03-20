@@ -108,6 +108,15 @@
           <enum>Qt::Horizontal</enum>
          </property>
          <widget class="QTreeView" name="treeObjects">
+          <property name="iconSize">
+           <size>
+            <width>14</width>
+            <height>12</height>
+           </size>
+          </property>
+          <property name="indentation">
+           <number>0</number>
+          </property>
           <attribute name="headerVisible">
            <bool>false</bool>
           </attribute>

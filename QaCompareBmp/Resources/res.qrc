@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>List/change.svg</file>
+        <file>List/minus.svg</file>
+        <file>List/plus.svg</file>
+        <file>List/resize.svg</file>
+    </qresource>
+</RCC>
