@@ -205,14 +205,20 @@ bool DiffModel::copyAsGood(size_t index) const
     if (index >= lines.size())
         return false;
     auto& line = lines[index];
-    auto fnSrc = dirWorking / line.name;
-    if (!std::filesystem::exists(fnSrc))
-        return false;
     auto fnDest = dirVersioned / line.name;
-    std::error_code ec;
-    using Opt = std::filesystem::copy_options;
-    std::filesystem::copy_file(fnSrc, fnDest, Opt::overwrite_existing, ec);
-    return static_cast<bool>(ec);
+    if (line.reason == DiffReason::DELETED) {
+        return std::filesystem::remove(fnDest);
+    } else {
+        auto fnSrc = dirWorking / line.name;
+        if (!std::filesystem::exists(fnSrc))
+            return false;
+        if (std::filesystem::exists(fnSrc) && !std::filesystem::remove(fnDest))
+            return false;
+        std::error_code ec;
+        using Opt = std::filesystem::copy_options;
+        std::filesystem::copy_file(fnSrc, fnDest, Opt::overwrite_existing, ec);
+        return static_cast<bool>(ec);
+    }
 }
 
 
