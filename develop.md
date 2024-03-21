@@ -17,7 +17,7 @@
 * Simple emoji (no skintones)
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * Originals is directory for original SVGs, Remakes if for remade but unoptimized
-  * It’s better to run SVG Cleaner on it
+  * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
   * If emoji-related library data changed → copy opt.xml тo NotoEmoji
   * Make sure Unicodia is closed, run tape.bat
 * Two or more skintones (e.g. interracial kiss/handshake): same. It’s neither repainted nor checked.
