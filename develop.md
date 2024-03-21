@@ -15,7 +15,7 @@
 
 ## How to update emoji?
 * Simple emoji (no skintones)
-  * Ensure that it has no <clipPath>, edit if needed.
+  * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * Originals is directory for original SVGs, Remakes if for remade but unoptimized
   * It’s better to run SVG Cleaner on it
   * If emoji-related library data changed → copy opt.xml тo NotoEmoji
@@ -24,7 +24,7 @@
 * One skintone (one person, same-race handshake…), repainted versions are stored
   * After that press Ctrl+Shift+Q in Unicodia.
   * Copy resulting BMP files to MiscFiles\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
-* One skintone, repainted versions are created on-the-fly (e.g. because of <clipPath>)
+* One skintone, repainted versions are created on-the-fly (e.g. because of &lt;clipPath&gt;)
   * So-called “preparation”: we need to remember what was originally
     * First copy ORIGINAL files with all skintones to NotoEmoji
 	* It’s better to run SvgCleaner
