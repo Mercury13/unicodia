@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32"
+   height="32"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="qa.svg"
+   inkscape:export-filename="qa64.png"
+   inkscape:export-xdpi="192"
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     showguides="true"
+     showgrid="true"
+     inkscape:zoom="15.743165"
+     inkscape:cx="10.32194"
+     inkscape:cy="24.105699"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <sodipodi:guide
+       position="0,17.716979"
+       orientation="-1,0"
+       id="guide1"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="2,25"
+       orientation="1,0"
+       id="guide2"
+       inkscape:locked="false" />
+    <inkscape:grid
+       id="grid2"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#3f3fff"
+       empopacity="0.25098039"
+       color="#3f3fff"
+       opacity="0.1254902"
+       empspacing="5"
+       dotted="false"
+       gridanglex="30"
+       gridanglez="30"
+       visible="true" />
+    <sodipodi:guide
+       position="3.3665403,30"
+       orientation="0,-1"
+       id="guide3"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="30,30"
+       orientation="1,0"
+       id="guide4"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="0,3"
+       orientation="0,-1"
+       id="guide5"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="16,32"
+       orientation="1,0"
+       id="guide6"
+       inkscape:locked="false" />
+    <sodipodi:guide
+       position="16,17.999999"
+       orientation="0,-1"
+       id="guide7"
+       inkscape:locked="false" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#613583;stroke:none;stroke-linejoin:round;stroke-miterlimit:2"
+       id="rect1"
+       width="32"
+       height="32"
+       x="0"
+       y="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:15.0643px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#eeaaff;stroke-width:1"
+       x="16.205996"
+       y="13.638235"
+       id="text1"
+       transform="scale(0.97415959,1.0265259)"
+       inkscape:transform-center-x="-0.21278146"
+       inkscape:transform-center-y="-4.56958"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="16.205996"
+         y="13.638235"
+         style="stroke-width:1;fill:#eeaaff">bmp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.4121px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.999997;fill:#eeaaff"
+       x="15.115173"
+       y="30.689846"
+       id="text4"
+       transform="scale(1.058539,0.9446983)"
+       inkscape:transform-center-x="-0.43432079"
+       inkscape:transform-center-y="-4.0695291"><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="15.115173"
+         y="30.689846"
+         style="fill:#eeaaff;stroke-width:0.999997">QA</tspan></text>
+  </g>
+</svg>
