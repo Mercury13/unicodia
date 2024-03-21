@@ -20,7 +20,7 @@
   * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
   * If emoji-related library data changed → copy opt.xml тo NotoEmoji
   * Make sure Unicodia is closed, run tape.bat
-* Two or more skintones (e.g. interracial kiss/handshake): same. It’s neither repainted nor checked.
+* Two or more skintones (e.g. interracial kiss/handshake): same. They are neither repainted nor checked.
 * One skintone (one person, same-race handshake…), repainted versions are stored
   * After that press Ctrl+Shift+Q in Unicodia.
   * Copy resulting BMP files to MiscFiles\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
