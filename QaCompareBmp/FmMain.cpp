@@ -200,6 +200,22 @@ QPixmap DiffModel::diffPix(size_t index) const
 }
 
 
+bool DiffModel::copyAsGood(size_t index) const
+{
+    if (index >= lines.size())
+        return false;
+    auto& line = lines[index];
+    auto fnSrc = dirWorking / line.name;
+    if (!std::filesystem::exists(fnSrc))
+        return false;
+    auto fnDest = dirVersioned / line.name;
+    std::error_code ec;
+    using Opt = std::filesystem::copy_options;
+    std::filesystem::copy_file(fnSrc, fnDest, Opt::overwrite_existing, ec);
+    return static_cast<bool>(ec);
+}
+
+
 ///// FmMain ///////////////////////////////////////////////////////////////////
 
 
@@ -222,6 +238,7 @@ FmMain::FmMain(QWidget *parent)
     connect(ui->btCompare, &QPushButton::clicked, this, &This::run);
     connect(ui->treeObjects->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::diffCurrentChanged);
+    connect(ui->btGood, &QPushButton::clicked, this, &This::copyAsGood);
 }
 
 FmMain::~FmMain()
@@ -369,4 +386,10 @@ void FmMain::diffCurrentChanged(const QModelIndex& index)
 {
     auto&& pix = diffModel.diffPix(index.row());
     ui->wiViewer->setPix(pix);
+}
+
+
+void FmMain::copyAsGood()
+{
+    diffModel.copyAsGood(ui->treeObjects->selectionModel()->currentIndex().row());
 }

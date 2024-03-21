@@ -79,6 +79,13 @@
            </property>
           </spacer>
          </item>
+         <item>
+          <widget class="QPushButton" name="btGood">
+           <property name="text">
+            <string>Good! (W→V)</string>
+           </property>
+          </widget>
+         </item>
         </layout>
        </item>
       </layout>

@@ -47,6 +47,8 @@ public:
                       unsigned long long workSize);
     void clear() { lines.clear(); }
     QPixmap diffPix(size_t index) const;
+    /// @return [+] copied
+    bool copyAsGood(size_t index) const;
 
     using QAbstractTableModel::beginResetModel;
     using QAbstractTableModel::endResetModel;
@@ -86,5 +88,6 @@ private:
 private slots:
     void run();
     void diffCurrentChanged(const QModelIndex& index);
+    void copyAsGood();
 };
 #endif // FMMAIN_H
