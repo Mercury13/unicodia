@@ -1,6 +1,5 @@
 #pragma once
 #include <algorithm>
-#include <array>
 
 namespace mojibake::detail {
 

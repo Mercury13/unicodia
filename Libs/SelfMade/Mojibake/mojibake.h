@@ -38,9 +38,16 @@ namespace mojibake {
     constexpr char32_t U16_2WORD_MIN = 0x10000;
     constexpr char32_t U16_2WORD_MAX = UNICODE_MAX;
 
-    class Utf8  { public: using Ch = char; };
-    class Utf16 { public: using Ch = char16_t; };
-    class Utf32 { public: using Ch = char32_t; };
+    struct Utf8  { using Ch = char; };
+    struct Utf16 { using Ch = char16_t; };
+    struct Utf32 { using Ch = char32_t; };
+
+    /// @warning  Reimplement to true for limited iterators
+    template <class Iterator>
+    struct IteratorLimit {
+        static constexpr bool isLimited = false;
+        static constexpr size_t remainder(const Iterator&) { return 10; }
+    };
 
     ///
     /// @return [+] codepoint is good: allocated, unallocated, reserved,
@@ -124,23 +131,27 @@ namespace mojibake {
     /// @param [in,out]  it   iterator
     /// @param [in]      cp   code point, SHOULD BE GOOD
     /// @warning  Bhv on bad cp is implementation-specific
+    /// @return [+] was put [-] no room
     ///
     template <class It,
               class Enc = typename detail::ItUtfTraits<It>::Enc,
               class = std::void_t<typename std::iterator_traits<It>::value_type>>
-    inline void put(It& it, char32_t cp)
-        { detail::ItEnc<It, Enc>::put(it, cp); }
+    inline bool put(It& it, char32_t cp)
+        { return detail::ItEnc<It, Enc>::put(it, cp); }
 
     template <class Enc,
               class It,
               class = std::void_t<typename std::iterator_traits<It>::value_type>>
-    inline void put(It& it, char32_t cp)
-        { detail::ItEnc<It, Enc>::put(it, cp); }
+    inline bool put(It& it, char32_t cp)
+        { return detail::ItEnc<It, Enc>::put(it, cp); }
 
 
     ///
     /// Copies data to another,
     /// REACTING APPROPRIATELY TO MOJIBAKE
+    ///
+    /// @warning Even if encoding is the same, deserializes/checks/serializes
+    ///          codepoints.
     ///
     template <class It1, class It2,
               class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
@@ -153,7 +164,7 @@ namespace mojibake {
         return detail::ItEnc<It1, Enc1>::template copy<It2, Enc2, Mjh>(beg, end, dest, onMojibake);
     }
 
-    template <class Enc1, class Enc2,  class Mjh, class It1, class It2,
+    template <class Enc1, class Enc2, class Mjh, class It1, class It2,
               class = std::void_t<typename std::iterator_traits<It1>::value_type>,
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copy(It1 beg, It1 end, It2 dest, const Mjh& onMojibake = Mjh{})
@@ -161,7 +172,8 @@ namespace mojibake {
         return copy<It1, It2, Enc1, Enc2, Mjh>(beg, end, dest, onMojibake);
     }
 
-    template <class Enc2, class Mjh, class It1, class It2, class Enc1,
+    template <class Enc2, class Mjh, class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
               class = std::void_t<typename std::iterator_traits<It1>::value_type>,
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copy(It1 beg, It1 end, It2 dest, const Mjh& onMojibake = Mjh{})
@@ -171,7 +183,7 @@ namespace mojibake {
 
     ///
     /// Copies data to another, SKIPPING MOJIBAKE
-    /// So mo mojibake handler
+    /// So no mojibake handler
     ///
     template <class It1, class It2,
               class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
@@ -192,7 +204,8 @@ namespace mojibake {
         return copyS<It1, It2, Enc1, Enc2>(beg, end, dest);
     }
 
-    template <class Enc2, class It1, class It2, class Enc1,
+    template <class Enc2, class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
               class = std::void_t<typename std::iterator_traits<It1>::value_type>,
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copyS(It1 beg, It1 end, It2 dest)
@@ -202,7 +215,7 @@ namespace mojibake {
 
     ///
     /// Copies data to another, WRITING MOJIBAKE
-    /// So mo mojibake handler
+    /// So no mojibake handler
     ///
     template <class It1, class It2,
               class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
@@ -223,7 +236,8 @@ namespace mojibake {
         return copyM<It1, It2, Enc1, Enc2>(beg, end, dest);
     }
 
-    template <class Enc2, class It1, class It2, class Enc1,
+    template <class Enc2, class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
               class = std::void_t<typename std::iterator_traits<It1>::value_type>,
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copyM(It1 beg, It1 end, It2 dest)
@@ -233,7 +247,7 @@ namespace mojibake {
 
     ///
     /// Copies data to another, WRITING MOJIBAKE AND HALTING
-    /// So mo mojibake handler
+    /// So no mojibake handler
     ///
     template <class It1, class It2,
               class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
@@ -251,15 +265,56 @@ namespace mojibake {
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copyMH(It1 beg, It1 end, It2 dest)
     {
-        return copyM<It1, It2, Enc1, Enc2>(beg, end, dest);
+        return copyMH<It1, It2, Enc1, Enc2>(beg, end, dest);
     }
 
-    template <class Enc2, class It1, class It2, class Enc1,
+    template <class Enc2, class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
               class = std::void_t<typename std::iterator_traits<It1>::value_type>,
               class = std::void_t<typename std::iterator_traits<It2>::value_type>>
     inline It2 copyMH(It1 beg, It1 end, It2 dest)
     {
-        return copyM<It1, It2, Enc1, Enc2>(beg, end, dest);
+        return copyMH<It1, It2, Enc1, Enc2>(beg, end, dest);
+    }
+
+    ///
+    /// Copies data to another, QUICK AND DIRTY
+    ///     We don’t have a funk what to do with bad characters
+    ///     (actually replaces with mojibake character)
+    /// So no mojibake handler
+    /// @warning  Used for extreme optimization of cross-platform or highly
+    ///             templated code, does not recode when encoding is the same
+    /// @warning  Use if data is reliable, or it is of low importance like error messages
+    ///
+    template <class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<It2>::Enc,
+              class = std::void_t<typename std::iterator_traits<It1>::value_type>,
+              class = std::void_t<typename std::iterator_traits<It2>::value_type>>
+    inline It2 copyQ(It1 beg, It1 end, It2 dest)
+    {
+        if constexpr (std::is_same_v<Enc1, Enc2>) {
+            return std::copy(beg, end, dest);
+        } else {
+            return copyM<It1, It2, Enc1, Enc2>(beg, end, dest);
+        }
+    }
+
+    template <class Enc1, class Enc2, class It1, class It2,
+              class = std::void_t<typename std::iterator_traits<It1>::value_type>,
+              class = std::void_t<typename std::iterator_traits<It2>::value_type>>
+    inline It2 copyQ(It1 beg, It1 end, It2 dest)
+    {
+        return copyQ<It1, It2, Enc1, Enc2>(beg, end, dest);
+    }
+
+    template <class Enc2, class It1, class It2,
+              class Enc1 = typename detail::ItUtfTraits<It1>::Enc,
+              class = std::void_t<typename std::iterator_traits<It1>::value_type>,
+              class = std::void_t<typename std::iterator_traits<It2>::value_type>>
+    inline It2 copyQ(It1 beg, It1 end, It2 dest)
+    {
+        return copyQ<It1, It2, Enc1, Enc2>(beg, end, dest);
     }
 
     ///
@@ -297,7 +352,7 @@ namespace mojibake {
               class Enc1 = typename detail::UtfTraits<From>::Enc>   // Also a SFINAE
     inline To toS(const From* from)
     {
-        std::basic_string_view from1{from};  \
+        std::basic_string_view from1{from};
         return toS<To, decltype(from1), Enc2, Enc1>(from1);
     }
 
@@ -320,13 +375,53 @@ namespace mojibake {
               class Enc1 = typename detail::UtfTraits<From>::Enc>   // Also a SFINAE
     inline To toM(const From* from)
     {
-        std::basic_string_view from1{from};  \
+        std::basic_string_view from1{from};
         return toM<To, decltype(from1), Enc2, Enc1>(from1);
     }
 
     ///
-    /// Check for string validity
+    /// Same, quick and dirty — when we don’t have a funk what to do with bad chars
+    /// @warning   Does not recode when encoding is the same
+    /// @warning   Use when data is surely good, or for low-importance strings
+    ///            like error messages
     ///
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc>
+    inline To toQ(const From& from)
+    {
+        To r;
+        std::back_insert_iterator it(r);
+        using It1 = decltype(std::begin(from));
+        using It2 = decltype(it);
+        /// @todo [mojibake,performance] How to check for append (beg, end) function?
+        copyQ<It1, It2, Enc1, Enc2>(std::begin(from), std::end(from), it);
+        return r;
+    }
+
+    /// Implementation for const char*
+    template <class To, class From,
+              class Enc2 = typename detail::ContUtfTraits<To>::Enc,
+              class Enc1 = typename detail::UtfTraits<From>::Enc>   // Also a SFINAE
+    inline To toQ(const From* from)
+    {
+        std::basic_string_view from1{from};
+        return toQ<To, decltype(from1), Enc2, Enc1>(from1);
+    }
+
+    ///
+    /// Check for string validity
+    /// @return [+] all CPs are well-encoded, and are
+    ///              allocated, unallocated, reserved, private-use, noncharacters
+    ///         [-] at least one CP is surrogate, too high or badly-encoded
+    ///              (abruptly ends, too long, starts with continuation code unit)
+    /// @warning Unallocated will eventually be reserved, then allocated.
+    ///           And the function is quick and dirty, and does not have
+    ///           a character base.
+    /// @warning Private-use are not controlled by Consortium at all
+    /// @warning It’s possible to use noncharacters in strings, e.g. as weight
+    ///           for sorting, substitution char, error code, special value
+    ///           that’s unlikely to appear in the wild etc.
     template <class Cont,
               class Enc = typename detail::ContUtfTraits<Cont>::Enc>
     bool isValid(const Cont& cont)
@@ -491,8 +586,110 @@ namespace mojibake {
     template <class Func>
     Utf32CallIterator(const Func&) -> Utf32CallIterator<Func>;
 
-//    template <class To, class From>
-//    To to(const From& from);
+    template <class It>
+    struct LimitedIterator {
+        It curr;
+        const It end;
+
+        constexpr LimitedIterator(It aCurr, It aEnd) : curr(aCurr), end(aEnd) {}
+        constexpr LimitedIterator(It aCurr, size_t size) : curr(aCurr), end(aCurr + size) {}
+        constexpr LimitedIterator& operator ++() { ++curr; return *this; }
+        constexpr auto& operator * () const { return *curr; }
+        constexpr auto operator -> () const { return &*curr; }
+    };
+
+    template <class UnderIt>
+    struct IteratorLimit<LimitedIterator<UnderIt>> {
+        using It = LimitedIterator<UnderIt>;
+        static constexpr bool isLimited = true;
+        static constexpr size_t remainder(const It& x) { return x.end - x.curr; }
+    };
+
+    ///
+    /// Conversion to limited buffer
+    /// DOES NOT put trailing zero
+    ///
+    template <class Mjh, class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    ItTo copyLim(const From& from, ItTo beg, ItTo end, const Mjh& onMojibake = Mjh{})
+    {
+        LimitedIterator it(beg, end);
+        using It1 = decltype(std::begin(from));
+        using It2 = decltype(it);
+        return copy<Enc1, Enc2, Mjh, It1, It2>(std::begin(from), std::end(from), it, onMojibake).curr;
+    }
+
+    ///
+    /// @overload   beg/size instead of beg/end
+    ///
+    template <class Mjh, class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    ItTo copyLim(const From& from, ItTo beg, size_t size, const Mjh& onMojibake = Mjh{})
+    {
+        LimitedIterator it(beg, size);
+        using It1 = decltype(std::begin(from));
+        using It2 = decltype(it);
+        return copy<Enc1, Enc2, Mjh, It1, It2>(std::begin(from), std::end(from), it, onMojibake).curr;
+    }
+
+    ///
+    /// Conversion to limited buffer; skip bad codepoints
+    /// DOES NOT put trailing zero
+    /// @warning   No copyLimQ because of its limited usefulness:
+    ///            depending on system, we get incomplete codepoint,
+    ///            though copyLim’s aim is to get rid of those
+    ///
+    template <class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    inline ItTo copyLimS(const From& from, ItTo beg, ItTo end)
+    {
+        using It1 = decltype(std::begin(from));
+        using Mjh = handler::Skip<It1>;
+        return copyLim<Mjh, From, ItTo, Enc1, Enc2>(from, beg, end);
+    }
+
+    ///
+    /// @overload   beg/size instead of beg/end
+    ///
+    template <class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    inline ItTo copyLimS(const From& from, ItTo beg, size_t size)
+    {
+        using It1 = decltype(std::begin(from));
+        using Mjh = handler::Skip<It1>;
+        return copyLim<Mjh, From, ItTo, Enc1, Enc2>(from, beg, size);
+    }
+
+    ///
+    /// Conversion to limited buffer; write mojibake character
+    /// DOES NOT put trailing zero
+    ///
+    template <class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    inline ItTo copyLimM(const From& from, ItTo beg, ItTo end)
+    {
+        using It1 = decltype(std::begin(from));
+        using Mjh = handler::Moji<It1>;
+        return copyLim<Mjh, From, ItTo, Enc1, Enc2>(from, beg, end);
+    }
+
+    ///
+    /// @overload   beg/size instead of beg/end
+    ///
+    template <class From, class ItTo,
+              class Enc1 = typename detail::ContUtfTraits<From>::Enc,
+              class Enc2 = typename detail::ItUtfTraits<ItTo>::Enc>
+    inline ItTo copyLimM(const From& from, ItTo beg, size_t size)
+    {
+        using It1 = decltype(std::begin(from));
+        using Mjh = handler::Moji<It1>;
+        return copyLim<Mjh, From, ItTo, Enc1, Enc2>(from, beg, size);
+    }
 
 }   // namespace mojibake
 
@@ -556,6 +753,17 @@ namespace std {
         using value_type = typename CI::value_type;
         using pointer = CI*;
         using reference = CI&;
+        using iterator_category = forward_iterator_tag;
+    };
+
+    template <class UnderIt>
+    class iterator_traits<mojibake::LimitedIterator<UnderIt>>
+    {
+    public:
+        using difference_type  = typename std::iterator_traits<UnderIt>::difference_type;
+        using value_type       = typename std::iterator_traits<UnderIt>::value_type;
+        using pointer          = typename std::iterator_traits<UnderIt>::pointer;
+        using reference        = typename std::iterator_traits<UnderIt>::reference;
         using iterator_category = forward_iterator_tag;
     };
 
