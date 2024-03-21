@@ -25,7 +25,7 @@ It is a simple Unicode encyclopedia and replacement for Character Map. Right now
 * Configure and run rel.bat file.
 
 # How to develop?
-See develop.md.
+See [develop.md](develop.md).
 
 # Compatibility and policies
 
