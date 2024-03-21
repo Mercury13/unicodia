@@ -9,7 +9,7 @@
    id="svg1"
    inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
    sodipodi:docname="qa.svg"
-   inkscape:export-filename="qa64.png"
+   inkscape:export-filename="qa.png"
    inkscape:export-xdpi="192"
    inkscape:export-ydpi="192"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -29,8 +29,8 @@
      showguides="true"
      showgrid="true"
      inkscape:zoom="15.743165"
-     inkscape:cx="10.32194"
-     inkscape:cy="24.105699"
+     inkscape:cx="10.29018"
+     inkscape:cy="19.024129"
      inkscape:window-width="1680"
      inkscape:window-height="998"
      inkscape:window-x="-8"
@@ -96,7 +96,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#613583;stroke:none;stroke-linejoin:round;stroke-miterlimit:2"
+       style="fill:#330080;stroke:none;stroke-linejoin:round;stroke-miterlimit:2"
        id="rect1"
        width="32"
        height="32"
@@ -104,7 +104,7 @@
        y="0" />
     <text
        xml:space="preserve"
-       style="font-size:15.0643px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#eeaaff;stroke-width:1"
+       style="font-size:15.0643px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#e5d5ff;stroke-width:1"
        x="16.205996"
        y="13.638235"
        id="text1"
@@ -115,10 +115,10 @@
          id="tspan1"
          x="16.205996"
          y="13.638235"
-         style="stroke-width:1;fill:#eeaaff">bmp</tspan></text>
+         style="stroke-width:1;fill:#e5d5ff">bmp</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:16.4121px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.999997;fill:#eeaaff"
+       style="font-size:16.4121px;line-height:1.25;font-family:Ubuntu;-inkscape-font-specification:Ubuntu;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;stroke-width:0.999997;fill:#e5d5ff"
        x="15.115173"
        y="30.689846"
        id="text4"
@@ -129,6 +129,6 @@
          id="tspan4"
          x="15.115173"
          y="30.689846"
-         style="fill:#eeaaff;stroke-width:0.999997">QA</tspan></text>
+         style="fill:#e5d5ff;stroke-width:0.999997">QA</tspan></text>
   </g>
 </svg>
