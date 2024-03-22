@@ -72,7 +72,7 @@ namespace {
 
     /// Library items that forcefully make tiles
     const std::unordered_set<std::u32string_view> FORCE_TILE {
-        U"\U0001F468" "\u200D" "\U0001F469" "\u200D" "\U0001F466",
+        U"\U0001F468" "\u200D" "\U0001F469" "\u200D" "\U0001F466",  // Family: man, woman, boy
     };
 
     const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
