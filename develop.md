@@ -63,7 +63,7 @@ I discovered that most of professional emoji… do not work! Do not work because
 
 **Canvas size:** 64×64. For oblong/round object: leave 2px from edge. For square object: leave 6px from edge. For faces: leave 7px from edge.
 
-**Colour scheme:** GNOME Human Interface Guidelines unless REALLY needed (e.g. military helmet). Use plain colours. Use black #000 and white #FFF sparingly, mainly for outlines and small details.
+**Colour scheme:** GNOME Human Interface Guidelines unless REALLY needed (e.g. military helmet). Use plain colours. Use black #000 and white #FFF sparingly, mainly for outlines and small details. Hands/people use Noto’s colours for skin.
 
 **Projection:** frontal/sideways unless the object is better identified in other projection. Bilateral animals, vehicles and people face to the left.
 
