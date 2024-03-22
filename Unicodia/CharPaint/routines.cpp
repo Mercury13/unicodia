@@ -841,8 +841,6 @@ namespace {
     {
         if (x.flags.have(uc::Lfg::NO_TILE))
             return nullptr;
-        if (!x.value.empty() && EmojiPainter::hasSkinGender(x.value))
-            return nullptr;
         const uc::LibNode* p = &x;
         while (true) {
             if (!p->value.empty())

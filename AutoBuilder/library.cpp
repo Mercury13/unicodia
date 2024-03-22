@@ -66,7 +66,13 @@ namespace {
         u8"backhand index pointing up",     // Scrapped for the sake of “placard with finger”
         u8"backhand index pointing down",   // Same
         u8"index pointing up",              // Same
-        u8"animal-amphibian",   // Big library, scrap for the sake of spouting whale
+        u8"animal-amphibian",   // Scrap frog for the sake of spouting whale
+        u8"bust in silhouette", // Scrapped for family silhouette
+    };
+
+    /// Library items that forcefully make tiles
+    const std::unordered_set<std::u32string_view> FORCE_TILE {
+        U"\U0001F468" "\u200D" "\U0001F469" "\u200D" "\U0001F466",
     };
 
     const std::unordered_map<std::u32string, uc::Lfgs> MISRENDERS {
@@ -177,7 +183,7 @@ namespace {
         return x.top();
     }
 
-    void addNew(std::stack<lib::Node*>& x, size_t size, std::string_view name)
+    void addGroup(std::stack<lib::Node*>& x, size_t size, std::string_view name)
     {
         auto top = crop(x, size);
         auto& newItem = top->children.emplace_back();
@@ -186,6 +192,33 @@ namespace {
         if (NO_TILE.contains(newItem.name))
             newItem.flags |= uc::Lfg::NO_TILE;
         x.push(&newItem);
+    }
+
+    bool hasSkinGender(std::u32string_view x)
+    {
+        static constinit char32_t ALL_CHARS_AR[] {
+            // Allowed when used alone
+            cp::SKIN1, cp::SKIN2, cp::SKIN3, cp::SKIN4, cp::SKIN5,   // 5
+            cp::MALE, cp::FEMALE, cp::MAN, cp::WOMAN,            // 9
+            cp::RIGHT_ARROW,                         // 10
+            // The rest
+            cp::MAN_AND_WOMAN, cp::TWO_MEN, cp::TWO_WOMEN, cp::SANTA_CLAUS, cp::MRS_CLAUS };
+        constexpr size_t OFS_1 = 10;
+        static constinit std::u32string_view ALL_CHARS { ALL_CHARS_AR, std::size(ALL_CHARS_AR) };
+        static constinit std::u32string_view SPEC_CHARS { ALL_CHARS_AR + OFS_1, std::end(ALL_CHARS_AR) };
+
+        switch (x.size()) {
+        case 0:
+            return false;
+        case 1:
+            return (x.find_first_of(SPEC_CHARS) != std::u32string::npos);
+        case 2: {
+                auto sv = (x[1] == cp::VS16) ? SPEC_CHARS : ALL_CHARS;
+                return (x.find_first_of(sv) != std::u32string::npos);
+            }
+        default:
+            return (x.find_first_of(ALL_CHARS) != std::u32string::npos);
+        }
     }
 
 }   // anon namespace
@@ -221,10 +254,10 @@ lib::EmojiData lib::loadEmoji(const char* fname)
             s = str::trimSv(s.substr(1));
             if (auto q = str::remainderSv(s, S_GROUP); !q.empty()) {
                 // Group
-                addNew(treePath, 1, q);
+                addGroup(treePath, 1, q);
             } if (auto q = str::remainderSv(s, S_SUBGROUP); !q.empty()) {
                 // Subgroup
-                addNew(treePath, 2, q);
+                addGroup(treePath, 2, q);
             }
         } else {
             // Normal line
@@ -251,11 +284,14 @@ lib::EmojiData lib::loadEmoji(const char* fname)
                 } else { // otherwise decapitalize
                     newItem.name = str::toU8sv(decapitalizeEmoji(name));
                 }
+                newItem.value.assign(codes.buffer(), nCodes);
+
                 newItem.emojiVersion = emVersion;
                 newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
                 if (NO_TILE.contains(newItem.name))
-                    newItem.flags |= uc::Lfg::NO_TILE;                
-                newItem.value.assign(codes.buffer(), nCodes);
+                    newItem.flags |= uc::Lfg::NO_TILE;
+                if (!FORCE_TILE.contains(newItem.value) && hasSkinGender(newItem.value))
+                    newItem.flags |= uc::Lfg::NO_TILE;
 
                 // Misrender
                 if (auto it = MISRENDERS.find(newItem.value); it != MISRENDERS.end()) {

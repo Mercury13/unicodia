@@ -68,7 +68,6 @@ public:
     std::string_view getSvg(char32_t cp);
     void draw(QPainter* painter, const QRect& rect, char32_t cp, int height);
     void draw(QPainter* painter, const QRect& rect, std::u32string_view cp, int height);
-    static bool hasSkinGender(std::u32string_view x);
     static void getFileName(
             std::span<char> rBuf,
             std::u32string_view text,
