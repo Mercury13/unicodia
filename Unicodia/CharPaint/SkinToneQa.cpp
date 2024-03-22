@@ -64,6 +64,15 @@ namespace {
         explicit operator bool() const { return (mode != QaMode::NONE); }
     };
 
+    std::u32string doCleanName(std::u32string_view x)
+    {
+        std::u32string r{x};
+        std::erase(r, cp::VS16);
+        std::erase(r, cp::SKIN2);
+        std::erase(r, cp::SKIN5);
+        return r;
+    }
+
     QaInfo qaInfo(std::u32string_view text)
     {
         // Skin 2 (light) has a few nice features related to hair colour
@@ -80,12 +89,10 @@ namespace {
             if (cof.count == 1) {
                 if (cof.lastIndex == 0) {
                     // White: OK
-                    return { .mode = QaMode::WHITE, .cleanName{text.begin(), text.end()} };
+                    return { .mode = QaMode::WHITE, .cleanName = doCleanName(text) };
                 } else {
                     // Ebony: replace with white
-                    QaInfo r { .mode = QaMode::EBONY, .cleanName{text.begin(), text.end()} };
-                    str::replace(r.cleanName, cp::SKIN5, cp::SKIN2);
-                    return r;
+                    return { .mode = QaMode::EBONY, .cleanName = doCleanName(text) };
                 }
             }
         }
