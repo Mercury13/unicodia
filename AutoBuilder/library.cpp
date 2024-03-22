@@ -3,6 +3,7 @@
 // STL
 #include <stack>
 #include <fstream>
+#include <array>
 
 // XML
 #include "pugixml.hpp"
