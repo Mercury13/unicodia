@@ -59,7 +59,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
     // #FA0: U14 writing hand only
     repl(bytes, "#FFD54F", fill2);      // used: e.g. rowing
-    repl(bytes, "#FFC107", fill1);      // used: e.g. pilot
+    //repl(bytes, "#FFC107", fill1);      // used: e.g. pilot
     // #D48322: U14 two ears, naked and w/aid
     // #E6A100: U14 nose only
     // #F5AC00: U14 nose only
