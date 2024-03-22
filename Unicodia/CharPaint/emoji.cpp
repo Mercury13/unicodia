@@ -16,9 +16,6 @@
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
-    // fill3 unused in U15: just a few hands e.g. crossed fingers
-    // fill4 unused in U15: crossed fingers only
-    // fill5 unused in U15: just two hands, and only crossed fingers were repainted
     std::string_view outline1;
     std::string_view earLines;  ///< U15: in lines of ear; same everywhere except main and white
     std::string_view hair1;
@@ -55,14 +52,7 @@ void RecolorLib::runOn(QByteArray& bytes) const
     repl(bytes, "#FFCA28", fill2);      // same
     repl(bytes, "#F09300", earLines);   // used in ear, naked and w/hearing aid
     // U15 replaced lots of hands and other body parts → some colours now unused
-    // #FBC02D: U14 index up, rocker horns; U15 unused
     repl(bytes, "#EDA600", outline1);   // used: e.g. runner
-    // #FA0: U14 writing hand only
-    repl(bytes, "#FFD54F", fill2);      // used: e.g. rowing
-    //repl(bytes, "#FFC107", fill1);      // used: e.g. pilot
-    // #D48322: U14 two ears, naked and w/aid
-    // #E6A100: U14 nose only
-    // #F5AC00: U14 nose only
     repl(bytes, "#543930", hair1);
     repl(bytes, STOP_COLOR "#6D4C41", hairHighlight);
     repl(bytes, "#6D4C41", eyebrows);
