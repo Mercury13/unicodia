@@ -12,6 +12,7 @@
 #include "u_TypedFlags.h"
 #include "u_DumbSp.h"
 #include "u_Array.h"
+#include "u_EnumSize.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
@@ -1224,6 +1225,75 @@ namespace sw {
     };
 
 }   // namespace sw
+
+
+namespace cou {
+
+    DEFINE_ENUM_IN_NS(cou, Type,
+        RECOGNIZED_STATE,
+        PARTLY_RECOGNIZED_STATE,
+        NO_MANS_LAND,
+        SUPRANATIONAL_UNION,
+        INTERNATIONAL_ORGANIZATION,
+        AUSTRALIA_EXTERNAL,
+        AUSTRALIA_EXTERNAL_UNINHABITED,
+        BRITAIN_OVERSEAS,
+        BRITAIN_DEPENDENT,
+        CHINA_SPECIAL,
+        DENMARK_AUTONOMY,
+        FINLAND_SPECIAL,
+        FRANCE_OVERSEAS,
+        FRANCE_UNINHABITED,
+        NETHERLANDS_DEPENDENT,
+        NETHERLANDS_OVERSEAS,
+        NEWZEALAND_ASSOC,
+        NORWAY_UNINHABITED,
+        SPAIN_AUTONOMY,
+        US_DEPENDENT,
+        DISPUTE_BRITAIN_MAURITIUS,
+        DISPUTE_MOROCCO_INDEPENDENT,
+    )
+
+    DEFINE_ENUM_IN_NS(cou, Location,
+        EUROPE,
+        ASIA,
+        AFRICA,
+        NORTH_AMERICA,
+        SOUTH_AMERICA,
+        AUSTRALIA,
+        SOUTH_POLE,
+        EUROPE_ASIA,
+        ATLANTIC_OCEAN,
+        ATLANTIC_EUROPE,
+        ATLANTIC_BRITISH,
+        ATLANTIC_AFRICA,
+        ATLANTIC_NORTH_AMERICA,
+        ATLANTIC_SOUTH_AMERICA,
+        ATLANTIC_CARIBBEAN,
+        ATLANTIC_ANTARCTIC,
+        ENGLISH_CHANNEL,
+        BALTIC_SEA,
+        MEDITERRANEAN_SEA,
+        PACIFIC_POLYNESIA,
+        PACIFIC_MICRONESIA,
+        PACIFIC_ASIA,
+        PACIFIC_AUSTRALIA,
+        PACIFIC_NORTH_AMERICA,
+        MALAY_ARCHIPELAGO,
+        INDIAN_OCEAN,
+        INDIAN_AFRICA,
+        INDIAN_ASIA,
+        INDIAN_ANTARCTIC,
+        GULF_OF_PERSIA,
+    )
+
+    struct Country {
+        char name[4];
+        Type type;
+        Location location;
+    };
+
+}
 
 
 namespace match {

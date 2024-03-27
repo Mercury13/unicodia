@@ -59,6 +59,7 @@ SOURCES += \
     Uc/UcAutoSutton.cpp \
     Uc/UcBlocks.cpp \
     Uc/UcClipboard.cpp \
+    Uc/UcCountries.cpp \
     Uc/UcData.cpp \
     Uc/UcDating.cpp \
     Uc/UcFonts.cpp \
