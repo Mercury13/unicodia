@@ -1248,6 +1248,7 @@ namespace cou {
         NETHERLANDS_OVERSEAS,
         NEWZEALAND_ASSOC,
         NORWAY_UNINHABITED,
+        NORWAY_DEPENDENT,
         SPAIN_AUTONOMY,
         US_DEPENDENT,
         DISPUTE_BRITAIN_MAURITIUS,
@@ -1285,6 +1286,8 @@ namespace cou {
         INDIAN_ASIA,
         INDIAN_ANTARCTIC,
         GULF_OF_PERSIA,
+        ARCTIC_OCEAN,
+        NEWYORK_HQ,
     )
 
     struct Country {

@@ -152,4 +152,112 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "MG", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA }, // Madagascar
     { "MH", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA }, // Marshall Islands
     { "MK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // North Macedonia
+    { "ML", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Mali
+    { "MM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Myanmar (Burma)
+    { "MN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Mongolia
+    { "MO", cou::Type::CHINA_SPECIAL, cou::Location::ASIA }, // Macao SAR China
+    { "MP", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA }, // Northern Mariana Islands
+    { "MQ", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // Martinique
+    { "MR", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Mauritania
+    { "MS", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // Montserrat
+    { "MT", cou::Type::RECOGNIZED_STATE, cou::Location::MEDITERRANEAN_SEA }, // Malta
+    { "MU", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA }, // Mauritius
+    { "MV", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA }, // Maldives
+    { "MW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Malawi
+    { "MX", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // Mexico
+    { "MY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Malaysia
+    { "MZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Mozambique
+    { "NA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Namibia
+    { "NC", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_AUSTRALIA }, // New Caledonia
+    { "NE", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Niger
+    { "NF", cou::Type::AUSTRALIA_EXTERNAL, cou::Location::PACIFIC_AUSTRALIA }, // Norfolk Island
+    { "NG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Nigeria
+    { "NI", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // Nicaragua
+    { "NL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Netherlands
+    { "NO", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Norway
+    { "NP", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Nepal
+    { "NR", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA }, // Nauru
+    { "NU", cou::Type::NEWZEALAND_ASSOC, cou::Location::PACIFIC_POLYNESIA }, // Niue
+    { "NZ", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA }, // New Zealand
+    { "OM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Oman
+    { "PA", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // Panama
+    { "PE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Peru
+    { "PF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // French Polynesia
+    { "PG", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO }, // Papua New Guinea
+    { "PH", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA }, // Philippines
+    { "PK", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Pakistan
+    { "PL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Poland
+    { "PM", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA }, // St. Pierre & Miquelon
+    { "PN", cou::Type::BRITAIN_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // Pitcairn Islands
+    { "PR", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN }, // Puerto Rico
+    { "PS", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::ASIA }, // Palestinian Territories
+    { "PT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Portugal
+    { "PW", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA }, // Palau
+    { "PY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Paraguay
+    { "QA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Qatar
+    { "RE", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA }, // Réunion
+    { "RO", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Romania
+    { "RS", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Serbia
+    { "RU", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE_ASIA }, // Russia
+    { "RW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Rwanda
+    { "SA", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Saudi Arabia
+    { "SB", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA }, // Solomon Islands
+    { "SC", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_AFRICA }, // Seychelles
+    { "SD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Sudan
+    { "SE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Sweden
+    { "SG", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Singapore
+    { "SH", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN }, // St. Helena
+    { "SI", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE_ASIA }, // Slovenia
+    { "SJ", cou::Type::NORWAY_DEPENDENT, cou::Location::ARCTIC_OCEAN }, // Svalbard & Jan Mayen
+    { "SK", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Slovakia
+    { "SL", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Sierra Leone
+    { "SM", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // San Marino
+    { "SN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Senegal
+    { "SO", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Somalia
+    { "SR", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Suriname
+    { "SS", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // South Sudan
+    { "ST", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_AFRICA }, // São Tomé & Príncipe
+    { "SV", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // El Salvador
+    { "SX", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // Sint Maarten
+    { "SY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Syria
+    { "SZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Eswatini
+    { "TA", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN }, // Tristan da Cunha
+    { "TC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA }, // Turks & Caicos Islands
+    { "TD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Chad
+    { "TF", cou::Type::FRANCE_UNINHABITED, cou::Location::INDIAN_ANTARCTIC }, // French Southern Territories
+    { "TG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Togo
+    { "TH", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Thailand
+    { "TJ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Tajikistan
+    { "TK", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Tokelau
+    { "TL", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO }, // Timor-Leste
+    { "TM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Turkmenistan
+    { "TN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Tunisia
+    { "TO", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Tonga
+    { "TR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Türkiye
+    { "TT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN }, // Trinidad & Tobago
+    { "TV", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Tuvalu
+    { "TW", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA }, // Taiwan
+    { "TZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Tanzania
+    { "UA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Ukraine
+    { "UG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Uganda
+    { "UM", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_POLYNESIA }, // U.S. Outlying Islands
+    { "UN", cou::Type::INTERNATIONAL_ORGANIZATION, cou::Location::NEWYORK_HQ }, // United Nations
+    { "US", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // United States
+    { "UY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Uruguay
+    { "UZ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Uzbekistan
+    { "VA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Vatican City
+    { "VC", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN }, // St. Vincent & Grenadines
+    { "VE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Venezuela
+    { "VG", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // British Virgin Islands
+    { "VI", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN }, // U.S. Virgin Islands
+    { "VN", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Vietnam
+    { "VU", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA }, // Vanuatu
+    { "WF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // Wallis & Futuna
+    { "WS", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Samoa
+    { "XK", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::EUROPE }, // Kosovo
+    { "YE", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Yemen
+    { "YT", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA }, // Mayotte
+    { "ZA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // South Africa
+    { "ZM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Zambia
+    { "ZW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Zimbabwe
 };
