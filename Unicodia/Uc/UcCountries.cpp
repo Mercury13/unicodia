@@ -184,7 +184,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "PE", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Peru
     { "PF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // French Polynesia
     { "PG", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO }, // Papua New Guinea
-    { "PH", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA }, // Philippines
+    { "PH", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO }, // Philippines
     { "PK", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Pakistan
     { "PL", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Poland
     { "PM", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA }, // St. Pierre & Miquelon
