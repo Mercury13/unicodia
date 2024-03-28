@@ -1281,6 +1281,7 @@ namespace cou {
         PACIFIC_AUSTRALIA,
         PACIFIC_NORTH_AMERICA,
         MALAY_ARCHIPELAGO,
+        ASIA_MALAY_ARCHIPELAGO, ///< Malaysia
         INDIAN_OCEAN,
         INDIAN_AFRICA,
         INDIAN_ASIA,

@@ -165,7 +165,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "MV", cou::Type::RECOGNIZED_STATE, cou::Location::INDIAN_ASIA }, // Maldives
     { "MW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Malawi
     { "MX", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA }, // Mexico
-    { "MY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Malaysia
+    { "MY", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA_MALAY_ARCHIPELAGO }, // Malaysia
     { "MZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Mozambique
     { "NA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Namibia
     { "NC", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_AUSTRALIA }, // New Caledonia
