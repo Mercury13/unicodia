@@ -1291,14 +1291,25 @@ namespace cou {
         NEWYORK_HQ,
     )
 
+    struct TwoLetters {
+        uint16_t value;
+
+        constexpr TwoLetters(const int  (&c)[2]) : value((c[0] << 8) | c[1]) {}
+        constexpr TwoLetters(const char (&c)[3]) : value(((c[0] - 'A') << 8) | (c[1] - 'A')) {}
+        constexpr TwoLetters(const char (&c)[2]) : value(((c[0] - 'A') << 8) | (c[1] - 'A')) {}
+        friend std::strong_ordering operator <=> (TwoLetters x, TwoLetters y);
+        friend bool operator == (TwoLetters x, TwoLetters y);
+    };
+    inline bool operator == (TwoLetters x, TwoLetters y) = default;
+    inline std::strong_ordering operator <=> (TwoLetters x, TwoLetters y) = default;
+
     struct Country {
-        char name[4];
+        TwoLetters name;
         Type type;
         Location location;
     };
 
 }
-
 
 namespace match {
 
