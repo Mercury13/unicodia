@@ -12607,6 +12607,276 @@
      <transl>На 2023 Microsoft малює кольорові безстатеві сім’ї, а не{{_}}силуети.</transl>
     </text>
    </group>
+   <group id="Cinfo">
+    <text id="Info">
+     <orig>Country info</orig>
+     <transl>Про країну</transl>
+    </text>
+    <text id="Sta">
+     <orig>Status</orig>
+     <transl>Статус</transl>
+    </text>
+    <text id="Loc">
+     <orig>Location</orig>
+     <transl>Місцезнаходження</transl>
+    </text>
+   </group>
+   <group id="Sta">
+    <text id="Rec">
+     <orig>Recognized state</orig>
+     <transl>Признана держава</transl>
+    </text>
+    <text id="Part">
+     <orig>Partly recognized state</orig>
+     <au-cmt>Palestine, Taiwan, Kosovo</au-cmt>
+     <transl>Частково признана держава</transl>
+    </text>
+    <text id="NoMan">
+     <orig>Uninhabited land, no one’s by international treaty</orig>
+     <au-cmt>Antarctica</au-cmt>
+     <transl>Ненаселена земля, нічия за міжнародною угодою</transl>
+    </text>
+    <text id="Union">
+     <orig>Supranational union</orig>
+     <au-cmt>EU</au-cmt>
+     <transl>Наддержавний союз</transl>
+    </text>
+    <text id="Org">
+     <orig>International organization</orig>
+     <au-cmt>United Nations</au-cmt>
+     <transl>Міжнародна організація</transl>
+    </text>
+    <text id="AuExt">
+     <orig>External territory of Australia</orig>
+     <au-cmt>e.g. Cocos Islands</au-cmt>
+     <transl>Зовнішня територія Австралії</transl>
+    </text>
+    <text id="AuUn">
+     <orig>Uninhabited external territory of Australia</orig>
+     <au-cmt>Heard &amp; McDonald Islands</au-cmt>
+     <transl>Ненаселена зовнішня територія Австралії</transl>
+    </text>
+    <text id="GbOv">
+     <orig>Overseas territory of Great Britain</orig>
+     <au-cmt>e.g. Ascension Island, Cayman Islands, St. Helena</au-cmt>
+     <transl>Заморська територія Великої Британії</transl>
+    </text>
+    <text id="GbDep">
+     <orig>Dependent territory of Great Britain</orig>
+     <au-cmt>Guernsey, Man</au-cmt>
+     <transl>Залежна територія Великої Британії</transl>
+    </text>
+    <text id="CnSpec">
+     <orig>Special region of China</orig>
+     <au-cmt>Hong Kong, Macao</au-cmt>
+     <transl>Особливий регіон Китаю</transl>
+    </text>
+    <text id="DkAuto">
+     <orig>Autonomous region of Denmark</orig>
+     <au-cmt>Faroe, Greenland</au-cmt>
+     <transl>Автономний регіон Данії</transl>
+    </text>
+    <text id="FiSpec">
+     <orig>Special territory of Finland</orig>
+     <au-cmt>Åland Islands</au-cmt>
+     <transl>Особлива територія Фінляндії</transl>
+    </text>
+    <text id="FrOv">
+     <orig>Overseas territory of France</orig>
+     <au-cmt>e.g. French Guiana</au-cmt>
+     <transl>Заморська територія Франції</transl>
+    </text>
+    <text id="FrUn">
+     <orig>Uninhabited land controlled by France</orig>
+     <transl>Ненаселена земля під контролем Франції</transl>
+    </text>
+    <text id="NlDep">
+     <orig>Dependent territory of Netherlands</orig>
+     <au-cmt>Aruba</au-cmt>
+     <transl>Залежна територія Нідерландів</transl>
+    </text>
+    <text id="NlOv">
+     <orig>Overseas territory of Netherlands</orig>
+     <transl>Заморська територія Нідерландів</transl>
+    </text>
+    <text id="NzAssoc">
+     <orig>Associated territory of New Zealand</orig>
+     <au-cmt>Cook Islands, Niue</au-cmt>
+     <transl>Асоційована територія Нової Зеландії</transl>
+    </text>
+    <text id="NoUn">
+     <orig>Uninhabited land controlled by Norway</orig>
+     <au-cmt>Bouvet Island</au-cmt>
+     <transl>Ненаселена земля під контролем Норвегії</transl>
+    </text>
+    <text id="NoDep">
+     <orig>Dependent territory of Norway</orig>
+     <au-cmt>Svalbard</au-cmt>
+     <transl>Залежна територія Норвегії</transl>
+    </text>
+    <text id="EsAuto">
+     <orig>Autonomous region of Spain</orig>
+     <au-cmt>e.g. Canary Islands</au-cmt>
+     <transl>Автономний регіон Іспанії</transl>
+    </text>
+    <text id="UsDep">
+     <orig>Dependent territory of the USA</orig>
+     <au-cmt>e.g. Puerto Rico</au-cmt>
+     <transl>Залежна територія США</transl>
+    </text>
+    <text id="DisGbMu">
+     <orig>Disputed: Great Britain / Mauritius</orig>
+     <au-cmt>Diego Garcia</au-cmt>
+     <transl>Спірна: Велика Британія / Маврикій</transl>
+    </text>
+    <text id="DisMaXx">
+     <orig>Disputed: Morocco / independent</orig>
+     <au-cmt>West Sahara</au-cmt>
+     <transl>Спірна: Марокко / незалежна</transl>
+    </text>
+   </group>
+   <group id="Loc">
+    <text id="Eu">
+     <orig>Europe</orig>
+     <transl>Європа</transl>
+    </text>
+    <text id="As">
+     <orig>Asia</orig>
+     <transl>Азія</transl>
+    </text>
+    <text id="Af">
+     <orig>Africa</orig>
+     <transl>Африка</transl>
+    </text>
+    <text id="Na">
+     <orig>North America</orig>
+     <transl>Північна Америка</transl>
+    </text>
+    <text id="Sa">
+     <orig>South America</orig>
+     <transl>Пвіденна Америка</transl>
+    </text>
+    <text id="Au">
+     <orig>Australia</orig>
+     <transl>Австралія</transl>
+    </text>
+    <text id="Sp">
+     <orig>South Pole</orig>
+     <au-cmt>Antarctica</au-cmt>
+     <transl>Південний полюс</transl>
+    </text>
+    <text id="EuAs">
+     <orig>Europe and Asia</orig>
+     <au-cmt>Russia, Georgia</au-cmt>
+     <transl>Європа та Азія</transl>
+    </text>
+    <text id="Oa">
+     <orig>Atlantic Ocean</orig>
+     <transl>Атлантичний океан</transl>
+    </text>
+    <text id="OaEu">
+     <orig>Atlantic Ocean, near Europe</orig>
+     <transl>Атлантичний океан, біля Європи</transl>
+    </text>
+    <text id="OaGb">
+     <orig>Atlantic Ocean, British Islands</orig>
+     <au-cmt>e.g. Britain, Ireland, Man</au-cmt>
+     <transl>Атлантичний океан, Британські острови</transl>
+    </text>
+    <text id="OaAf">
+     <orig>Atlantic Ocean, near Africa</orig>
+     <transl>Атлантичний океан, біля Африки</transl>
+    </text>
+    <text id="OaNa">
+     <orig>Atlantic Ocean, near North America</orig>
+     <au-cmt>e.g. Bahamas, Greenland</au-cmt>
+     <transl>Атлантичний океан, біля Північної Америки</transl>
+    </text>
+    <text id="OaSa">
+     <orig>Atlantic Ocean, near South America</orig>
+     <au-cmt>Falkland Islands</au-cmt>
+     <transl>Атлантичний океан, біля Південної Америки</transl>
+    </text>
+    <text id="OaCs">
+     <orig>Atlantic Ocean, Caribbean Sea</orig>
+     <transl>Атлантичний океан, Карибське море</transl>
+    </text>
+    <text id="OaAq">
+     <orig>Atlantic Ocean, Antarctic region</orig>
+     <transl>Атлантичний океан, Антарктика</transl>
+    </text>
+    <text id="OaEc">
+     <orig>English Channel</orig>
+     <transl>протока Ла-Манш</transl>
+    </text>
+    <text id="OaBs">
+     <orig>Baltic Sea</orig>
+     <transl>Балтійське море</transl>
+    </text>
+    <text id="OaMs">
+     <orig>Mediterranean Sea</orig>
+     <transl>Середземне море</transl>
+    </text>
+    <text id="OpPo">
+     <orig>Pacific Ocean, Polynesia</orig>
+     <transl>Тихий океан, Полінезія</transl>
+    </text>
+    <text id="OpMi">
+     <orig>Pacific Ocean, Micronesia</orig>
+     <transl>Тихий океан, Мікронезія</transl>
+    </text>
+    <text id="OpAs">
+     <orig>Pacific Ocean, near Asia</orig>
+     <transl>Тихий океан, біля Азії</transl>
+    </text>
+    <text id="OpAu">
+     <orig>Pacific Ocean, near Australia</orig>
+     <transl>Тихий океан, біля Австралії</transl>
+    </text>
+    <text id="OpNa">
+     <orig>Pacific Ocean, near North America</orig>
+     <transl>Тихий океан, біля Північної Америки</transl>
+    </text>
+    <text id="Ma">
+     <orig>Malay Archipelago</orig>
+     <transl>Малайський архіпелаг</transl>
+    </text>
+    <text id="AsMa">
+     <orig>Asia and Malay Archipelago</orig>
+     <au-cmt>Malaysia</au-cmt>
+     <transl>Азія та Малайский архіпелаг</transl>
+    </text>
+    <text id="Oi">
+     <orig>Indian Ocean</orig>
+     <transl>Індійський океан</transl>
+    </text>
+    <text id="OiAf">
+     <orig>Indian Ocean, near Africa</orig>
+     <transl>Індійський океан, біля Африки</transl>
+    </text>
+    <text id="OiAs">
+     <orig>Indian Ocean, near Asia</orig>
+     <transl>Індійський океан, біля Азії</transl>
+    </text>
+    <text id="OiAq">
+     <orig>Indian Ocean, Antarctic region</orig>
+     <transl>Індійський океан, Антарктика</transl>
+    </text>
+    <text id="OiGp">
+     <orig>Gulf of Persia</orig>
+     <au-cmt>Bahrain</au-cmt>
+     <transl>Перська затока</transl>
+    </text>
+    <text id="On">
+     <orig>Arctic Ocean</orig>
+     <transl>Північний Льодовитий океан</transl>
+    </text>
+    <text id="NyHq">
+     <orig>New York (headquarters)</orig>
+     <au-cmt>United Nations</au-cmt>
+     <transl>Нью-Йорк (штаб-квартира)</transl>
+    </text>
+   </group>
   </group>
   <group id="Version">
    <group id="1.1">

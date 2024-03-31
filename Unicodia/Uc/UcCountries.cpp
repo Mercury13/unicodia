@@ -90,7 +90,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "GG", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL }, // Guernsey
     { "GH", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Ghana
     { "GI", cou::Type::BRITAIN_OVERSEAS, cou::Location::EUROPE }, // Gibraltar
-    { "GL", cou::Type::DENMARK_AUTONOMY, cou::Location::ATLANTIC_NORTH_AMERICA }, // Greenland
+    { "GL", cou::Type::DENMARK_AUTONOMY, cou::Location::ARCTIC_OCEAN }, // Greenland
     { "GM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Gambia
     { "GN", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Guinea
     { "GP", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // Guadeloupe

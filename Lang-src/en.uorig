@@ -8770,6 +8770,217 @@
      <orig>As of 2023, Microsoft draws coloured genderless families rather than silhouettes.</orig>
     </text>
    </group>
+   <group id="Cinfo">
+    <text id="Info">
+     <orig>Country info</orig>
+    </text>
+    <text id="Sta">
+     <orig>Status</orig>
+    </text>
+    <text id="Loc">
+     <orig>Location</orig>
+    </text>
+   </group>
+   <group id="Sta">
+    <text id="Rec">
+     <orig>Recognized state</orig>
+    </text>
+    <text id="Part">
+     <orig>Partly recognized state</orig>
+     <au-cmt>Palestine, Taiwan, Kosovo</au-cmt>
+    </text>
+    <text id="NoMan">
+     <orig>Uninhabited land, no one’s by international treaty</orig>
+     <au-cmt>Antarctica</au-cmt>
+    </text>
+    <text id="Union">
+     <orig>Supranational union</orig>
+     <au-cmt>EU</au-cmt>
+    </text>
+    <text id="Org">
+     <orig>International organization</orig>
+     <au-cmt>United Nations</au-cmt>
+    </text>
+    <text id="AuExt">
+     <orig>External territory of Australia</orig>
+     <au-cmt>e.g. Cocos Islands</au-cmt>
+    </text>
+    <text id="AuUn">
+     <orig>Uninhabited external territory of Australia</orig>
+     <au-cmt>Heard &amp; McDonald Islands</au-cmt>
+    </text>
+    <text id="GbOv">
+     <orig>Overseas territory of Great Britain</orig>
+     <au-cmt>e.g. Ascension Island, Cayman Islands, St. Helena</au-cmt>
+    </text>
+    <text id="GbDep">
+     <orig>Dependent territory of Great Britain</orig>
+     <au-cmt>Guernsey, Man</au-cmt>
+    </text>
+    <text id="CnSpec">
+     <orig>Special region of China</orig>
+     <au-cmt>Hong Kong, Macao</au-cmt>
+    </text>
+    <text id="DkAuto">
+     <orig>Autonomous region of Denmark</orig>
+     <au-cmt>Faroe, Greenland</au-cmt>
+    </text>
+    <text id="FiSpec">
+     <orig>Special territory of Finland</orig>
+     <au-cmt>Åland Islands</au-cmt>
+    </text>
+    <text id="FrOv">
+     <orig>Overseas territory of France</orig>
+     <au-cmt>e.g. French Guiana</au-cmt>
+    </text>
+    <text id="FrUn">
+     <orig>Uninhabited land controlled by France</orig>
+    </text>
+    <text id="NlDep">
+     <orig>Dependent territory of Netherlands</orig>
+     <au-cmt>Aruba</au-cmt>
+    </text>
+    <text id="NlOv">
+     <orig>Overseas territory of Netherlands</orig>
+    </text>
+    <text id="NzAssoc">
+     <orig>Associated territory of New Zealand</orig>
+     <au-cmt>Cook Islands, Niue</au-cmt>
+    </text>
+    <text id="NoUn">
+     <orig>Uninhabited land controlled by Norway</orig>
+     <au-cmt>Bouvet Island</au-cmt>
+    </text>
+    <text id="NoDep">
+     <orig>Dependent territory of Norway</orig>
+     <au-cmt>Svalbard</au-cmt>
+    </text>
+    <text id="EsAuto">
+     <orig>Autonomous region of Spain</orig>
+     <au-cmt>e.g. Canary Islands</au-cmt>
+    </text>
+    <text id="UsDep">
+     <orig>Dependent territory of the USA</orig>
+     <au-cmt>e.g. Puerto Rico</au-cmt>
+    </text>
+    <text id="DisGbMu">
+     <orig>Disputed: Great Britain / Mauritius</orig>
+     <au-cmt>Diego Garcia</au-cmt>
+    </text>
+    <text id="DisMaXx">
+     <orig>Disputed: Morocco / independent</orig>
+     <au-cmt>West Sahara</au-cmt>
+    </text>
+   </group>
+   <group id="Loc">
+    <text id="Eu">
+     <orig>Europe</orig>
+    </text>
+    <text id="As">
+     <orig>Asia</orig>
+    </text>
+    <text id="Af">
+     <orig>Africa</orig>
+    </text>
+    <text id="Na">
+     <orig>North America</orig>
+    </text>
+    <text id="Sa">
+     <orig>South America</orig>
+    </text>
+    <text id="Au">
+     <orig>Australia</orig>
+    </text>
+    <text id="Sp">
+     <orig>South Pole</orig>
+     <au-cmt>Antarctica</au-cmt>
+    </text>
+    <text id="EuAs">
+     <orig>Europe and Asia</orig>
+     <au-cmt>Russia, Georgia</au-cmt>
+    </text>
+    <text id="Oa">
+     <orig>Atlantic Ocean</orig>
+    </text>
+    <text id="OaEu">
+     <orig>Atlantic Ocean, near Europe</orig>
+    </text>
+    <text id="OaGb">
+     <orig>Atlantic Ocean, British Islands</orig>
+     <au-cmt>e.g. Britain, Ireland, Man</au-cmt>
+    </text>
+    <text id="OaAf">
+     <orig>Atlantic Ocean, near Africa</orig>
+    </text>
+    <text id="OaNa">
+     <orig>Atlantic Ocean, near North America</orig>
+     <au-cmt>e.g. Bahamas, Greenland</au-cmt>
+    </text>
+    <text id="OaSa">
+     <orig>Atlantic Ocean, near South America</orig>
+     <au-cmt>Falkland Islands</au-cmt>
+    </text>
+    <text id="OaCs">
+     <orig>Atlantic Ocean, Caribbean Sea</orig>
+    </text>
+    <text id="OaAq">
+     <orig>Atlantic Ocean, Antarctic region</orig>
+    </text>
+    <text id="OaEc">
+     <orig>English Channel</orig>
+    </text>
+    <text id="OaBs">
+     <orig>Baltic Sea</orig>
+    </text>
+    <text id="OaMs">
+     <orig>Mediterranean Sea</orig>
+    </text>
+    <text id="OpPo">
+     <orig>Pacific Ocean, Polynesia</orig>
+    </text>
+    <text id="OpMi">
+     <orig>Pacific Ocean, Micronesia</orig>
+    </text>
+    <text id="OpAs">
+     <orig>Pacific Ocean, near Asia</orig>
+    </text>
+    <text id="OpAu">
+     <orig>Pacific Ocean, near Australia</orig>
+    </text>
+    <text id="OpNa">
+     <orig>Pacific Ocean, near North America</orig>
+    </text>
+    <text id="Ma">
+     <orig>Malay Archipelago</orig>
+    </text>
+    <text id="AsMa">
+     <orig>Asia and Malay Archipelago</orig>
+     <au-cmt>Malaysia</au-cmt>
+    </text>
+    <text id="Oi">
+     <orig>Indian Ocean</orig>
+    </text>
+    <text id="OiAf">
+     <orig>Indian Ocean, near Africa</orig>
+    </text>
+    <text id="OiAs">
+     <orig>Indian Ocean, near Asia</orig>
+    </text>
+    <text id="OiAq">
+     <orig>Indian Ocean, Antarctic region</orig>
+    </text>
+    <text id="OiGp">
+     <orig>Gulf of Persia</orig>
+     <au-cmt>Bahrain</au-cmt>
+    </text>
+    <text id="On">
+     <orig>Arctic Ocean</orig>
+    </text>
+    <text id="NyHq">
+     <orig>New York (headquarters)</orig>
+     <au-cmt>United Nations</au-cmt>
+    </text>
+   </group>
   </group>
   <group id="Version">
    <group id="1.1">
