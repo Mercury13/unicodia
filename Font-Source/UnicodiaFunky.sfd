@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1694033844
+ModificationTime: 1712044869
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -55,6 +55,7 @@ Lookup: 258 0 0 "Nagm KERN" { "Nagm KERN-1" [210,30,2] } ['kern' ('DFLT' <'dflt'
 Lookup: 260 0 0 "Nagm TR dot" { "Nagm TR dot-1"  } ['abvm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 260 0 0 "Nagm below" { "Nagm below-1"  } ['blwm' ('DFLT' <'dflt' > 'nagm' <'dflt' > ) ]
 Lookup: 258 0 0 "Toto KERN" { "Toto KERN-1" [150,15,0] } ['kern' ('DFLT' <'dflt' > 'toto' <'dflt' > ) ]
+Lookup: 260 0 0 "Common ABVM" { "Common ABVM-1"  } ['abvm' ('DFLT' <'dflt' > 'arab' <'dflt' > 'bali' <'dflt' > 'cpmn' <'dflt' > 'cyrl' <'dflt' > 'dev2' <'dflt' > 'goth' <'dflt' > 'grek' <'dflt' > 'hang' <'dflt' > 'latn' <'dflt' > 'nagm' <'dflt' > 'tel2' <'dflt' > 'toto' <'dflt' > ) ]
 MarkAttachClasses: 1
 DEI: 91125
 ShortTable: maxp 16
@@ -778,7 +779,7 @@ Grid
  2000 700 l 1024
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
-AnchorClass2: "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
+AnchorClass2: "Umlaut" "Common ABVM-1" "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
 BeginChars: 1114132 478
 
 StartChar: SmallCircle
@@ -857,7 +858,7 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 1
 Width: 594
-Flags: W
+Flags: WO
 HStem: 42 52<271.383 315.265> 60 52<187.383 231.265 355.383 399.265> 107 52<113.383 157.265 429.383 473.265> 181 52<66.3828 110.265 476.383 520.265> 265 52<48.3828 92.2648 494.383 538.265> 349 52<66.3828 110.265 476.383 520.265> 423 52<113.383 157.265 429.383 473.265> 470 52<187.383 231.265 355.383 399.265> 488 52<271.383 315.265>
 VStem: 48 52<265.383 309.265> 66 52<181.383 225.265 349.383 393.265> 113 52<107.383 151.265 423.383 467.265> 187 52<60.3828 104.265 470.383 514.265> 271 52<42.3828 86.2648 488.383 532.265> 355 52<60.3828 104.265 470.383 514.265> 429 52<107.383 151.265 423.383 467.265> 476 52<181.383 225.265 349.383 393.265> 494 52<265.383 309.265>
 TtInstrs:
@@ -1106,6 +1107,7 @@ NPUSHB
  22
 CALL
 EndTTInstrs
+AnchorPoint: "Umlaut" 297 560 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -34038,29 +34040,29 @@ SVTCA[y-axis]
 IUP[y]
 IUP[x]
 EndTTInstrs
+AnchorPoint: "Umlaut" -164 560 mark 0
 LayerCount: 2
 Fore
 SplineSet
--72 632 m 260,0,1
- -94 632 -94 632 -108.5 644.5 c 132,-1,2
- -123 657 -123 657 -123 688 c 260,3,4
- -123 720 -123 720 -108.5 732 c 132,-1,5
- -94 744 -94 744 -72 744 c 260,6,7
- -51 744 -51 744 -36 732 c 132,-1,8
- -21 720 -21 720 -21 688 c 260,9,10
- -21 657 -21 657 -36 644.5 c 132,-1,11
- -51 632 -51 632 -72 632 c 260,0,1
--262 632 m 260,12,13
- -284 632 -284 632 -298.5 644.5 c 132,-1,14
- -313 657 -313 657 -313 688 c 260,15,16
- -313 720 -313 720 -298.5 732 c 132,-1,17
- -284 744 -284 744 -262 744 c 260,18,19
- -241 744 -241 744 -226 732 c 132,-1,20
- -211 720 -211 720 -211 688 c 260,21,22
- -211 657 -211 657 -226 644.5 c 132,-1,23
- -241 632 -241 632 -262 632 c 260,12,13
+-72 632 m 256,0,1
+ -94 632 -94 632 -108.5 644.5 c 128,-1,2
+ -123 657 -123 657 -123 688 c 256,3,4
+ -123 720 -123 720 -108.5 732 c 128,-1,5
+ -94 744 -94 744 -72 744 c 256,6,7
+ -51 744 -51 744 -36 732 c 128,-1,8
+ -21 720 -21 720 -21 688 c 256,9,10
+ -21 657 -21 657 -36 644.5 c 128,-1,11
+ -51 632 -51 632 -72 632 c 256,0,1
+-262 632 m 256,12,13
+ -284 632 -284 632 -298.5 644.5 c 128,-1,14
+ -313 657 -313 657 -313 688 c 256,15,16
+ -313 720 -313 720 -298.5 732 c 128,-1,17
+ -284 744 -284 744 -262 744 c 256,18,19
+ -241 744 -241 744 -226 732 c 128,-1,20
+ -211 720 -211 720 -211 688 c 256,21,22
+ -211 657 -211 657 -226 644.5 c 128,-1,23
+ -241 632 -241 632 -262 632 c 256,12,13
 EndSplineSet
-Validated: 19457
 EndChar
 
 StartChar: GothYi
