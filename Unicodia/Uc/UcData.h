@@ -947,9 +947,9 @@ namespace uc {
     {
         UpCategory upCat;
         std::string_view id;
-        /// Is graphical by Unicode’s rules, actually unused
+        /// [+] is graphical by Unicode’s rules, actually unused
         Graphical isGraphical;
-        /// Is “independent” by my own rules, for Library
+        /// [+] is “independent” by my own rules, for Library
         Independent isIndependent;
         mutable unsigned nChars = 0;
 
