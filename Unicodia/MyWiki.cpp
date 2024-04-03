@@ -11,6 +11,7 @@
 
 // Unicode
 #include "UcData.h"
+#include "UcCp.h"
 
 // L10n
 #include "LocDic.h"
@@ -1822,6 +1823,10 @@ void mywiki::hackDocument(QTextDocument* doc)
 
 namespace {
 
+    ///
+    /// @brief appendNodesTextIf
+    ///    Appends node’s text if it’s present
+    ///
     void appendNodesTextIf(QString& text, const uc::LibNode& node)
     {
         if (node.flags.have(uc::Lfg::HAS_TEXT)) {
@@ -1831,6 +1836,52 @@ namespace {
                      reinterpret_cast<const char*>(node.text.data()));
             mywiki::appendNoFont(text, loc::get(buf));
         }
+    }
+
+    ///
+    /// @return  the only independent codepoint, by category().isIndependent()
+    /// @warning  Unallocated codepoints (incl. surrogate and too high) are skipped
+    ///
+    const uc::Cp* onlyIndependentCp(std::u32string_view x)
+    {
+        switch (x.length()) {
+        case 0: return nullptr;
+        case 1:
+            if (x[0] < uc::CAPACITY) {
+                return uc::cpsByCode[x[0]];
+            } else {
+                return nullptr;
+            }
+        default:;
+        }
+        const uc::Cp* r = nullptr;
+        for (auto c : x) {
+            if (c < uc::CAPACITY) {
+                if (auto cp = uc::cpsByCode[c]) {
+                    auto& cat = cp->category();
+                    if (cat.isIndependent != uc::Independent::NO) {
+                        if (r) {
+                            return nullptr;
+                        } else {
+                            r = cp;
+                        }
+                    }
+                }
+            }
+        }
+        return r;
+    }
+
+    cou::TwoLetters countryLetters(std::u32string_view x)
+    {
+        static constexpr int DELTA = cp::FLAG_A - 'A';
+
+        if (x.length() == 2
+                && x[0] >= cp::FLAG_A && x[0] <= cp::FLAG_Z
+                && x[1] >= cp::FLAG_A && x[1] <= cp::FLAG_Z) {
+            return cou::TwoLetters(x[0] - DELTA, x[1] - DELTA);
+        }
+        return {};
     }
 
 }   // anon namespace
@@ -1847,37 +1898,6 @@ QString mywiki::buildLibFolderHtml(const uc::LibNode& node, const QColor& color)
     appendNodesTextIf(text, node);
 
     return text;
-}
-
-
-const uc::Cp* onlyIndependentCp(std::u32string_view x)
-{
-    switch (x.length()) {
-    case 0: return nullptr;
-    case 1:
-        if (x[0] < uc::CAPACITY) {
-            return uc::cpsByCode[x[0]];
-        } else {
-            return nullptr;
-        }
-    default:;
-    }
-    const uc::Cp* r = nullptr;
-    for (auto c : x) {
-        if (c < uc::CAPACITY) {
-            if (auto cp = uc::cpsByCode[c]) {
-                auto& cat = cp->category();
-                if (cat.isIndependent()) {
-                    if (r) {
-                        return nullptr;
-                    } else {
-                        r = cp;
-                    }
-                }
-            }
-        }
-    }
-    return r;
 }
 
 
@@ -1982,6 +2002,8 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         appendCopyable(text, cp->viewableName());
         text += "</h2>";
         appendCpBullets(text, *cp, CpSerializations::NO);
+    } else if (auto letters = countryLetters(node.value)) {
+        /// @todo [urgent] Country letters
     }
 
     return text;

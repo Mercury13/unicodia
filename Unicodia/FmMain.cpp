@@ -1580,7 +1580,7 @@ void FmMain::libChanged(const QModelIndex& current)
         size_t nIndependent = 0;
         for (auto c : node.value) {
             if (auto pCp = uc::cpsByCode[c]) {
-                if (pCp->category().isIndependent())
+                if (pCp->category().isIndependent != uc::Independent::NO)
                     ++nIndependent;
             }
         }

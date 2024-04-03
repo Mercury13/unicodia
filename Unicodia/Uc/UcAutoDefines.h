@@ -544,8 +544,6 @@ namespace uc {
 
         ///  @return [+] it is a true space, really white
         bool isTrueSpace() const;
-        ///  @return [+] is graphical as in Unicode (= ¬control/formatting)
-        bool isGraphical() const;
         ///  @return [+] whether the character has graphical glyph according to complex rules
         bool hasGlyph() const;
         constexpr int plane() const { return subj.val() >> 16; }

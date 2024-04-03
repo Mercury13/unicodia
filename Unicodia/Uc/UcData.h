@@ -940,13 +940,17 @@ namespace uc {
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
 
-    enum class Graphical { NO, YES };
+    enum class Graphical : unsigned char { NO, YES };
+    enum class Independent : unsigned char { NO, YES };
 
     struct Category
     {
         UpCategory upCat;
         std::string_view id;
+        /// Is graphical by Unicode’s rules, actually unused
         Graphical isGraphical;
+        /// Is “independent” by my own rules, for Library
+        Independent isIndependent;
         mutable unsigned nChars = 0;
 
         struct Loc {
@@ -960,9 +964,6 @@ namespace uc {
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKeyN(buf, N, suffix); }
-
-        /// @return [-] control, format, mark [+] rest
-        bool isIndependent() const noexcept;
     private:
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };
@@ -1292,13 +1293,17 @@ namespace cou {
     )
 
     struct TwoLetters {
-        uint16_t value;
+        uint16_t value = 0;
 
-        constexpr TwoLetters(const int  (&c)[2]) : value((c[0] << 8) | c[1]) {}
-        constexpr TwoLetters(const char (&c)[3]) : value(((c[0] - 'A') << 8) | (c[1] - 'A')) {}
-        constexpr TwoLetters(const char (&c)[2]) : value(((c[0] - 'A') << 8) | (c[1] - 'A')) {}
+        constexpr TwoLetters() = default;
+        constexpr TwoLetters(unsigned char hi, unsigned char lo) : value ((hi << 8) | lo) {}
+        constexpr TwoLetters(const int  (&c)[2]) : TwoLetters(c[0], c[1]) {}
+        constexpr TwoLetters(const char (&c)[3]) : TwoLetters(c[0], c[1]) {}
+        constexpr TwoLetters(const char (&c)[2]) : TwoLetters(c[0], c[1]) {}
         friend std::strong_ordering operator <=> (TwoLetters x, TwoLetters y);
         friend bool operator == (TwoLetters x, TwoLetters y);
+
+        constexpr explicit operator bool () const { return value; }
     };
     inline bool operator == (TwoLetters x, TwoLetters y) = default;
     inline std::strong_ordering operator <=> (TwoLetters x, TwoLetters y) = default;

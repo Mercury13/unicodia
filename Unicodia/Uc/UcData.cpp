@@ -140,35 +140,35 @@ static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN)
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
 
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
-    { UpCategory::CONTROL,      "Cc",   Graphical::NO  },
-    { UpCategory::FORMAT,       "Cf",   Graphical::NO  },
+    { UpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::NO },
+    { UpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::NO },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
     // SURROGATE,       -- unused as Unicodia has nothing to tell
-    { UpCategory::LETTER,       "Ll",   Graphical::YES },
-    { UpCategory::LETTER,       "Lm",   Graphical::YES },
-    { UpCategory::LETTER,       "Lo",   Graphical::YES },
-    { UpCategory::LETTER,       "Lt",   Graphical::YES },
-    { UpCategory::LETTER,       "Lu",   Graphical::YES },
-    { UpCategory::MARK,         "Mc",   Graphical::YES },
-    { UpCategory::MARK,         "Me",   Graphical::YES },
-    { UpCategory::MARK,         "Mn",   Graphical::YES },
-    { UpCategory::NUMBER,       "Nd",   Graphical::YES },
-    { UpCategory::NUMBER,       "Nl",   Graphical::YES },
-    { UpCategory::NUMBER,       "No",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Pc",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Pd",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Pe",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Pf",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Pi",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Po",   Graphical::YES },
-    { UpCategory::PUNCTUATION,  "Ps",   Graphical::YES },
-    { UpCategory::SYMBOL,       "Sc",   Graphical::YES },
-    { UpCategory::SYMBOL,       "Sk",   Graphical::YES },
-    { UpCategory::SYMBOL,       "Sm",   Graphical::YES },
-    { UpCategory::SYMBOL,       "So",   Graphical::YES },
-    { UpCategory::SEPARATOR,    "Zl",   Graphical::NO  },
-    { UpCategory::SEPARATOR,    "Zp",   Graphical::NO  },
-    { UpCategory::SEPARATOR,    "Zs",   Graphical::YES },
+    { UpCategory::LETTER,       "Ll",   Graphical::YES, Independent::YES },
+    { UpCategory::LETTER,       "Lm",   Graphical::YES, Independent::YES },
+    { UpCategory::LETTER,       "Lo",   Graphical::YES, Independent::YES },
+    { UpCategory::LETTER,       "Lt",   Graphical::YES, Independent::YES },
+    { UpCategory::LETTER,       "Lu",   Graphical::YES, Independent::YES },
+    { UpCategory::MARK,         "Mc",   Graphical::YES, Independent::NO  },
+    { UpCategory::MARK,         "Me",   Graphical::YES, Independent::NO  },
+    { UpCategory::MARK,         "Mn",   Graphical::YES, Independent::NO  },
+    { UpCategory::NUMBER,       "Nd",   Graphical::YES, Independent::YES },
+    { UpCategory::NUMBER,       "Nl",   Graphical::YES, Independent::YES },
+    { UpCategory::NUMBER,       "No",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Pc",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Pd",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Pe",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Pf",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Pi",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Po",   Graphical::YES, Independent::YES },
+    { UpCategory::PUNCTUATION,  "Ps",   Graphical::YES, Independent::YES },
+    { UpCategory::SYMBOL,       "Sc",   Graphical::YES, Independent::NO  },
+    { UpCategory::SYMBOL,       "Sk",   Graphical::YES, Independent::YES },
+    { UpCategory::SYMBOL,       "Sm",   Graphical::YES, Independent::YES },
+    { UpCategory::SYMBOL,       "So",   Graphical::YES, Independent::YES },
+    { UpCategory::SEPARATOR,    "Zl",   Graphical::NO,  Independent::YES },
+    { UpCategory::SEPARATOR,    "Zp",   Graphical::NO,  Independent::YES },
+    { UpCategory::SEPARATOR,    "Zs",   Graphical::YES, Independent::YES },
     //{ u8"Error"sv },     //check for equal number
 };
 
@@ -2230,12 +2230,6 @@ uc::SampleProxy uc::Cp::sampleProxy(
 }
 
 
-bool uc::Cp::isGraphical() const
-{
-    return static_cast<bool>(category().isGraphical);
-}
-
-
 bool uc::Cp::hasGlyph() const
 {
     // All default-ignorable have no glyph, either format or marks…
@@ -2428,24 +2422,6 @@ const uc::Block* uc::blockOf(char32_t subj)
         return nullptr;
     auto q = blocksByCode16[index];
     return (q >= 0) ? &blocks[q] : nullptr;
-}
-
-
-bool uc::Category::isIndependent() const noexcept
-{
-    switch (upCat) {
-    case UpCategory::CONTROL:
-    case UpCategory::FORMAT:
-    case UpCategory::MARK:
-        return false;
-    case UpCategory::SYMBOL:
-        return (id != "Sk");
-    case UpCategory::LETTER:
-    case UpCategory::PUNCTUATION:
-    case UpCategory::SEPARATOR:
-    case UpCategory::NUMBER:;
-    }
-    return true;
 }
 
 
