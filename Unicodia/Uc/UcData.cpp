@@ -140,8 +140,8 @@ static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN)
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
 
 constinit const uc::Category uc::categoryInfo[static_cast<int>(uc::EcCategory::NN)] {
-    { UpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::NO },
-    { UpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::NO },
+    { UpCategory::CONTROL,      "Cc",   Graphical::NO,  Independent::YES },
+    { UpCategory::FORMAT,       "Cf",   Graphical::NO,  Independent::YES },
     // PRIVATE_USE,     -- unused as Unicodia has nothing to tell
     // SURROGATE,       -- unused as Unicodia has nothing to tell
     { UpCategory::LETTER,       "Ll",   Graphical::YES, Independent::YES },

@@ -12724,14 +12724,14 @@
      <transl>Зависимая территория США</transl>
     </text>
     <text id="DisGbMu">
-     <orig>Disputed: Great Britain / Mauritius</orig>
+     <orig>Disputed, Great Britain / Mauritius</orig>
      <au-cmt>Diego Garcia</au-cmt>
-     <transl>Спорная: Великобритания / Маврикий</transl>
+     <transl>Спорная, Великобритания / Маврикий</transl>
     </text>
     <text id="DisMaXx">
-     <orig>Disputed: Morocco / independent</orig>
+     <orig>Disputed, Morocco / independent</orig>
      <au-cmt>West Sahara</au-cmt>
-     <transl>Спорная: Марокко / независимая</transl>
+     <transl>Спорная, Марокко / независимая</transl>
     </text>
    </group>
    <group id="Loc">

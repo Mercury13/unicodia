@@ -2003,7 +2003,13 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         text += "</h2>";
         appendCpBullets(text, *cp, CpSerializations::NO);
     } else if (auto letters = countryLetters(node.value)) {
-        /// @todo [urgent] Country letters
+        if (auto country = cou::find(letters)) {
+            /// @todo [urgent] Country letters
+            appendSubhead(text, "Lib.Cinfo.Info");
+            // Status
+            appendNonBullet(text, "Lib.Cinfo.Sta");
+            mywiki::appendNoFont(text, loc::get(cou::typeKeys[country->type]));
+        }
     }
 
     return text;

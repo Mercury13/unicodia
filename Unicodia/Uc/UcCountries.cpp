@@ -1,5 +1,33 @@
 #include "UcData.h"
 
+#define TX_STA "Lib.Sta."
+
+constinit const ec::Array<const char*, cou::Type> cou::typeKeys {
+    TX_STA "Rec",
+    TX_STA "Part",
+    TX_STA "NoMan",
+    TX_STA "Union",
+    TX_STA "Org", // 5
+    TX_STA "AuExt",
+    TX_STA "AuUn",
+    TX_STA "GbOv",
+    TX_STA "GbDep",
+    TX_STA "CnSpec", // 10,
+    TX_STA "DkAuto",
+    TX_STA "FiSpec",
+    TX_STA "FrOv",
+    TX_STA "FrUn",
+    TX_STA "NlDep", // 15
+    TX_STA "NlOv",
+    TX_STA "NzAssoc",
+    TX_STA "NoUn",
+    TX_STA "NoDep",
+    TX_STA "EsAuto", // 20
+    TX_STA "UsDep",
+    TX_STA "DisGbMu",
+    TX_STA "DisMaXx", // 23
+};
+
 
 constinit const cou::Country ALL_COUNTRIES[] {
     { "AC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN }, // Ascension Island
@@ -261,3 +289,17 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "ZM", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Zambia
     { "ZW", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Zimbabwe
 };
+
+
+const cou::Country* cou::find(TwoLetters key)
+{
+    auto beg = std::begin(ALL_COUNTRIES);
+    auto end = std::end(ALL_COUNTRIES);
+    auto place = std::lower_bound(beg, end, key,
+                [](const Country& x, TwoLetters y) {
+                    return (x.name < y);
+                });
+    if (place != end && place->name == key)
+        return place;
+    return nullptr;
+}

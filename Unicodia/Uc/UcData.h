@@ -13,6 +13,7 @@
 #include "u_DumbSp.h"
 #include "u_Array.h"
 #include "u_EnumSize.h"
+#include "u_EcArray.h"
 
 // Unicode data
 #include "UcAutoDefines.h"
@@ -1235,25 +1236,25 @@ namespace cou {
         PARTLY_RECOGNIZED_STATE,
         NO_MANS_LAND,
         SUPRANATIONAL_UNION,
-        INTERNATIONAL_ORGANIZATION,
+        INTERNATIONAL_ORGANIZATION, // 5
         AUSTRALIA_EXTERNAL,
         AUSTRALIA_EXTERNAL_UNINHABITED,
         BRITAIN_OVERSEAS,
         BRITAIN_DEPENDENT,
-        CHINA_SPECIAL,
+        CHINA_SPECIAL,      // 10
         DENMARK_AUTONOMY,
         FINLAND_SPECIAL,
         FRANCE_OVERSEAS,
         FRANCE_UNINHABITED,
-        NETHERLANDS_DEPENDENT,
+        NETHERLANDS_DEPENDENT,  // 15
         NETHERLANDS_OVERSEAS,
         NEWZEALAND_ASSOC,
         NORWAY_UNINHABITED,
         NORWAY_DEPENDENT,
-        SPAIN_AUTONOMY,
+        SPAIN_AUTONOMY,     // 20
         US_DEPENDENT,
         DISPUTE_BRITAIN_MAURITIUS,
-        DISPUTE_MOROCCO_INDEPENDENT,
+        DISPUTE_MOROCCO_INDEPENDENT,  // 23
     )
 
     DEFINE_ENUM_IN_NS(cou, Location,
@@ -1313,6 +1314,10 @@ namespace cou {
         Type type;
         Location location;
     };
+
+    extern const ec::Array<const char*, Type> typeKeys;
+
+    const Country* find(TwoLetters key);
 
 }
 
