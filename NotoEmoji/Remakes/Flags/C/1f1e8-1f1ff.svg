@@ -1,5 +1,48 @@
-<svg version="1.1" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-<path d="m4 5.15h28c2.13 0 3.85 1.72 3.85 3.85v10h-19.9l-15.1-12.3c0.7-0.944 1.82-1.55 3.09-1.55z" fill="#fff" stroke="#9a9996" stroke-width=".3"/>
-<path d="m1.38 30c0.701 0.655 1.62 1.03 2.62 1.03h28c2.21 0 4-1.79 4-4.5v-8.5h-18.5l-16.1 12z" fill="#D7141A"/>
-<path d="m1.38 30 16.1-12-16.1-12c-0.829 0.733-1.35 1.8-1.35 2.99v17.5c0 1.48 0.537 2.68 1.38 3.47z" fill="#11457E"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 36 36"
+   version="1.1"
+   id="svg3"
+   sodipodi:docname="1f1e8-1f1ff.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="namedview3"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="30.680578"
+     inkscape:cx="15.498404"
+     inkscape:cy="9.3055615"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg3" />
+  <path
+     d="m 32,5.15 c 2.13,0 3.85,1.72 3.85,3.85 v 9.2 L 34,20 H 14 L 1.36,6.2023825 C 2.0513947,5.5462259 2.9339329,5.15 3.94,5.15 Z"
+     fill="#ffffff"
+     stroke="#9a9996"
+     stroke-width="0.3"
+     id="path1-9"
+     sodipodi:nodetypes="ssccccss" />
+  <path
+     fill="#d7141a"
+     d="M 1.383,29.973 C 2.084,30.628 2.998,31 4,31 h 28 c 2.209,0 4,-1.791 4,-4.5 V 18 H 8 Z"
+     id="path1"
+     sodipodi:nodetypes="csssccc" />
+  <path
+     fill="#11457E"
+     d="M1.383 29.973L17.5 18 1.354 6.006C.525 6.739 0 7.807 0 9v17.5c0 1.48.537 2.683 1.383 3.473z"
+     id="path3" />
 </svg>

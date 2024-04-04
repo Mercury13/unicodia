@@ -1,6 +1,52 @@
-<svg version="1.1" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-<path d="m12 19v-13.8h20c2.13 0 3.85 1.72 3.85 3.85v10.2z" fill="#fff" stroke="#9a9996" stroke-width=".3"/>
-<path d="m13 5h-9c-2.21 0-4 1.79-4 4v9h13v-13zm-4.66 9.29-1.88-1.37-1.88 1.37 0.719-2.21-1.88-1.37h2.33l0.719-2.21 0.719 2.21h2.33l-1.88 1.37 0.719 2.21z" fill="#1F429B"/>
-<path d="m0 18v9c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-9h-36z" fill="#D42D27"/>
-<path d="m7.17 10.7-0.719-2.21-0.719 2.21h-2.33l1.88 1.37-0.719 2.21 1.88-1.37 1.88 1.37-0.719-2.21 1.88-1.37z" fill="#FFF"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 36 36"
+   id="svg4"
+   sodipodi:docname="1f1e8-1f1f1.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="30.680578"
+     inkscape:cx="17.779978"
+     inkscape:cy="14.683557"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     d="M 12,20 V 7 L 12.8,5.15 H 32 c 2.13,0 3.85,1.77 3.85,3.9 V 18.2 L 33,20 Z"
+     fill="#ffffff"
+     stroke="#9a9996"
+     stroke-width="0.3"
+     id="path1"
+     sodipodi:nodetypes="cccssccc" />
+  <path
+     d="M 13,5 H 4 C 1.79,5 0,6.79 0,9 v 9 l 6,6 7,-6 z M 8.34,14.29 6.46,12.92 4.58,14.29 5.299,12.08 3.419,10.71 h 2.33 L 6.468,8.5 7.187,10.71 h 2.33 l -1.88,1.37 0.719,2.21 z"
+     fill="#1f429b"
+     id="path2"
+     sodipodi:nodetypes="csscccccccccccccccc" />
+  <path
+     d="m0 18v9c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4v-9h-36z"
+     fill="#D42D27"
+     id="path3" />
+  <path
+     d="m7.17 10.7-0.719-2.21-0.719 2.21h-2.33l1.88 1.37-0.719 2.21 1.88-1.37 1.88 1.37-0.719-2.21 1.88-1.37z"
+     fill="#FFF"
+     id="path4" />
 </svg>

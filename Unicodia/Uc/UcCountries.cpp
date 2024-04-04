@@ -98,7 +98,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "BI", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Burundi
     { "BJ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Benin
     { "BL", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // St. Barthélemy
-    { "BM", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN }, // Bermuda
+    { "BM", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA }, // Bermuda
     { "BN", cou::Type::RECOGNIZED_STATE, cou::Location::MALAY_ARCHIPELAGO }, // Brunei
     { "BO", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Bolivia
     { "BQ", cou::Type::NETHERLANDS_OVERSEAS, cou::Location::ATLANTIC_CARIBBEAN }, // Caribbean Netherlands
