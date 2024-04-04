@@ -8785,10 +8785,6 @@
     <text id="Rec">
      <orig>Recognized state</orig>
     </text>
-    <text id="Part">
-     <orig>Partly recognized state</orig>
-     <au-cmt>Palestine, Taiwan, Kosovo</au-cmt>
-    </text>
     <text id="NoMan">
      <orig>Uninhabited land, no one’s by international treaty</orig>
      <au-cmt>Antarctica</au-cmt>
@@ -8867,9 +8863,18 @@
      <orig>Disputed, Great Britain / Mauritius</orig>
      <au-cmt>Diego Garcia</au-cmt>
     </text>
-    <text id="DisMaXx">
-     <orig>Disputed, Morocco / independent</orig>
-     <au-cmt>West Sahara</au-cmt>
+    <text id="PartEh">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Morocco</orig>
+     <au-cmt>Western Sahara</au-cmt>
+    </text>
+    <text id="PartPs">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Israel</orig>
+    </text>
+    <text id="PartTw">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with China</orig>
+    </text>
+    <text id="PartXk">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Serbia</orig>
     </text>
    </group>
    <group id="Loc">

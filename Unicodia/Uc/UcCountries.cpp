@@ -4,28 +4,30 @@
 
 constinit const ec::Array<const char*, cou::Type> cou::typeKeys {
     TX_STA "Rec",
-    TX_STA "Part",
     TX_STA "NoMan",
     TX_STA "Union",
-    TX_STA "Org", // 5
-    TX_STA "AuExt",
+    TX_STA "Org",
+    TX_STA "AuExt",  // 5
     TX_STA "AuUn",
     TX_STA "GbOv",
     TX_STA "GbDep",
-    TX_STA "CnSpec", // 10,
-    TX_STA "DkAuto",
+    TX_STA "CnSpec",
+    TX_STA "DkAuto", // 10,
     TX_STA "FiSpec",
     TX_STA "FrOv",
     TX_STA "FrUn",
-    TX_STA "NlDep", // 15
-    TX_STA "NlOv",
+    TX_STA "NlDep",
+    TX_STA "NlOv", // 15
     TX_STA "NzAssoc",
     TX_STA "NoUn",
     TX_STA "NoDep",
-    TX_STA "EsAuto", // 20
-    TX_STA "UsDep",
+    TX_STA "EsAuto",
+    TX_STA "UsDep", // 20
     TX_STA "DisGbMu",
-    TX_STA "DisMaXx", // 23
+    TX_STA "PartPs",
+    TX_STA "PartEh",
+    TX_STA "PartTw",
+    TX_STA "PartXk",
 };
 
 
@@ -99,7 +101,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "EC", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Ecuador
     { "EE", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Estonia
     { "EG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Egypt
-    { "EH", cou::Type::DISPUTE_MOROCCO_INDEPENDENT, cou::Location::AFRICA }, // Western Sahara
+    { "EH", cou::Type::PARTLY_WEST_SAHARA, cou::Location::AFRICA }, // Western Sahara
     { "ER", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Eritrea
     { "ES", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Spain
     { "ET", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Ethiopia
@@ -218,7 +220,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "PM", cou::Type::FRANCE_OVERSEAS, cou::Location::ATLANTIC_NORTH_AMERICA }, // St. Pierre & Miquelon
     { "PN", cou::Type::BRITAIN_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // Pitcairn Islands
     { "PR", cou::Type::US_DEPENDENT, cou::Location::ATLANTIC_CARIBBEAN }, // Puerto Rico
-    { "PS", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::ASIA }, // Palestinian Territories
+    { "PS", cou::Type::PARTLY_PALESTINE, cou::Location::ASIA }, // Palestinian Territories
     { "PT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Portugal
     { "PW", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_MICRONESIA }, // Palau
     { "PY", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Paraguay
@@ -264,7 +266,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "TR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Türkiye
     { "TT", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN }, // Trinidad & Tobago
     { "TV", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Tuvalu
-    { "TW", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::PACIFIC_ASIA }, // Taiwan
+    { "TW", cou::Type::PARTLY_TAIWAN, cou::Location::PACIFIC_ASIA }, // Taiwan
     { "TZ", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Tanzania
     { "UA", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Ukraine
     { "UG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Uganda
@@ -282,7 +284,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "VU", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_AUSTRALIA }, // Vanuatu
     { "WF", cou::Type::FRANCE_OVERSEAS, cou::Location::PACIFIC_POLYNESIA }, // Wallis & Futuna
     { "WS", cou::Type::RECOGNIZED_STATE, cou::Location::PACIFIC_POLYNESIA }, // Samoa
-    { "XK", cou::Type::PARTLY_RECOGNIZED_STATE, cou::Location::EUROPE }, // Kosovo
+    { "XK", cou::Type::PARTLY_KOSOVO, cou::Location::EUROPE }, // Kosovo
     { "YE", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Yemen
     { "YT", cou::Type::FRANCE_OVERSEAS, cou::Location::INDIAN_AFRICA }, // Mayotte
     { "ZA", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // South Africa

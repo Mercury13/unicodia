@@ -12625,11 +12625,6 @@
      <orig>Recognized state</orig>
      <transl>Признанное государство</transl>
     </text>
-    <text id="Part">
-     <orig>Partly recognized state</orig>
-     <au-cmt>Palestine, Taiwan, Kosovo</au-cmt>
-     <transl>Частично признанное государство</transl>
-    </text>
     <text id="NoMan">
      <orig>Uninhabited land, no one’s by international treaty</orig>
      <au-cmt>Antarctica</au-cmt>
@@ -12728,10 +12723,22 @@
      <au-cmt>Diego Garcia</au-cmt>
      <transl>Спорная, Великобритания / Маврикий</transl>
     </text>
-    <text id="DisMaXx">
-     <orig>Disputed, Morocco / independent</orig>
-     <au-cmt>West Sahara</au-cmt>
-     <transl>Спорная, Марокко / независимая</transl>
+    <text id="PartEh">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Morocco</orig>
+     <au-cmt>Western Sahara</au-cmt>
+     <transl>Частично признанное государство, контролирует часть заявленной территории, спор с Марокко</transl>
+    </text>
+    <text id="PartPs">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Israel</orig>
+     <transl>Частично признанное государство, контролирует часть заявленной территории, спор с Израилем</transl>
+    </text>
+    <text id="PartTw">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with China</orig>
+     <transl>Частично признанное государство, контролирует часть заявленной территории, спор с Китаем</transl>
+    </text>
+    <text id="PartXk">
+     <orig>Partly recognized state, controls part of claimed territory, dispute with Serbia</orig>
+     <transl>Частично признанное государство, контролирует часть заявленной территории, спор с Сербией</transl>
     </text>
    </group>
    <group id="Loc">
