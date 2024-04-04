@@ -19,6 +19,8 @@
 #include "UcAutoDefines.h"
 #include "UcDating.h"
 
+class QIcon;
+
 constexpr char32_t NO_TRIGGER = 0xDEADBEEF;
 
 

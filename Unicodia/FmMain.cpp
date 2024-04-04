@@ -544,7 +544,7 @@ QVariant CharsModel::headerData(int section, Qt::Orientation orientation,
                 return {};
             char buf[20];
             snprintf(buf, std::size(buf), "%04x", c);
-            return buf;
+            return QString{buf};
         }
         break;
     default:

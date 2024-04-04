@@ -202,14 +202,20 @@ namespace {
     /// @todo [future] Can move that trie to compile-time?
     struct TriePath;
 
+    enum class Prealloc { INST };
+
     struct TrieNode {
         const uc::LibNode* result = nullptr;
-        std::unordered_map<char32_t, TrieNode> children;
+        using M = std::unordered_map<char32_t, TrieNode>;
+        std::unique_ptr<M> children;
+
+        constexpr TrieNode() = default;
+        TrieNode(Prealloc) : children(new M) {}
     };
 
     struct TriePath : public std::unordered_map<char32_t, TrieNode> {};
 
-    TrieNode trieRoot;
+    TrieNode trieRoot { Prealloc::INST };
 
     SafeVector<std::u8string_view> allSearchableNames(const uc::Cp& cp)
     {
@@ -370,7 +376,9 @@ void uc::ensureEmojiSearch()
         if (node.flags.have(uc::Lfg::DECODEABLE)) {
             auto* p = &trieRoot;
             for (auto c : node.value) {
-                p = &p->children[c];
+                if (!p->children)
+                    p->children = std::make_unique<TrieNode::M>();
+                p = &p->children->operator[](c);
             }
             p->result = &node;
         }
@@ -400,22 +408,24 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
 
     for (size_t index = 0; index < s.length(); ++index) {
         char32_t c = s[index];
-        auto itChild = p->children.find(c);
-        if (itChild == p->children.end()) {
-            // Dead end. Found smth?
-            if (lastKnown.result) {
-                REGISTER_RESULT
-                // I do not want to make true Aho-Corasick here! Just back down.
-                index = lastKnown.iLastPos;
-            }
-            // Anyway move to root
-            p = &trieRoot;
-            lastKnown.result = nullptr;
-        } else {
-            p = &itChild->second;
-            if (p->result) {
-                lastKnown.result = p->result;
-                lastKnown.iLastPos = index;
+        if (p->children) {
+            auto itChild = p->children->find(c);
+            if (itChild == p->children->end()) {
+                // Dead end. Found smth?
+                if (lastKnown.result) {
+                    REGISTER_RESULT
+                    // I do not want to make true Aho-Corasick here! Just back down.
+                    index = lastKnown.iLastPos;
+                }
+                // Anyway move to root
+                p = &trieRoot;
+                lastKnown.result = nullptr;
+            } else {
+                p = &itChild->second;
+                if (p->result) {
+                    lastKnown.result = p->result;
+                    lastKnown.iLastPos = index;
+                }
             }
         }
     }
@@ -513,15 +523,17 @@ uc::MultiResult uc::doSearch(QString what)
             ensureEmojiSearch();
             static constexpr auto OFS_FLAGA = cp::FLAG_A - 'A';
             const auto cp1 = char32_t(flagName[0]) + OFS_FLAGA;
-            auto where1 = trieRoot.children.find(cp1);
-            if (where1 != trieRoot.children.end()) {
+            auto where1 = trieRoot.children->find(cp1);
+            if (where1 != trieRoot.children->end()) {
                 const auto cp2 = char32_t(flagName[1]) + OFS_FLAGA;
-                auto where2 = where1->second.children.find(cp2);
-                if (where2 != trieRoot.children.end() && where2->second.result) {
-                    // At last found
-                    auto& bk = r.emplace_back(where2->second.result);
-                    bk.prio.high = uc::HIPRIO_FLAG;
-                    bk.giveTriggerName(str::toU8(flagName));
+                if (auto children1 = where1->second.children.get()) {
+                    auto where2 = children1->find(cp2);
+                    if (where2 != children1->end() && where2->second.result) {
+                        // At last found
+                        auto& bk = r.emplace_back(where2->second.result);
+                        bk.prio.high = uc::HIPRIO_FLAG;
+                        bk.giveTriggerName(str::toU8(flagName));
+                    }
                 }
             }
         }
