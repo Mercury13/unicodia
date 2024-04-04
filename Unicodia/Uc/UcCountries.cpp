@@ -31,6 +31,45 @@ constinit const ec::Array<const char*, cou::Type> cou::typeKeys {
 };
 
 
+#define TX_LOC "Lib.Loc."
+
+constinit const ec::Array<const char*, cou::Location> cou::locKeys {
+    TX_LOC "Eu",
+    TX_LOC "As",
+    TX_LOC "Af",
+    TX_LOC "Na",
+    TX_LOC "Sa", // 5
+    TX_LOC "Au",
+    TX_LOC "Sp",
+    TX_LOC "EuAs",
+    TX_LOC "Oa",
+    TX_LOC "OaEu", // 10
+    TX_LOC "OaGb",
+    TX_LOC "OaAf",
+    TX_LOC "OaNa",
+    TX_LOC "OaSa",
+    TX_LOC "OaCs", // 15
+    TX_LOC "OaAq",
+    TX_LOC "OaEc",
+    TX_LOC "OaBs",
+    TX_LOC "OaMs",
+    TX_LOC "OpPo", // 20
+    TX_LOC "OpMi",
+    TX_LOC "OpAs",
+    TX_LOC "OpAu",
+    TX_LOC "OpNa",
+    TX_LOC "Ma", // 25
+    TX_LOC "AsMa",
+    TX_LOC "Oi",
+    TX_LOC "OiAf",
+    TX_LOC "OiAs",
+    TX_LOC "OiAq", // 30
+    TX_LOC "OiGp",
+    TX_LOC "On",
+    TX_LOC "NyHq", // 33
+};
+
+
 constinit const cou::Country ALL_COUNTRIES[] {
     { "AC", cou::Type::BRITAIN_OVERSEAS, cou::Location::ATLANTIC_OCEAN }, // Ascension Island
     { "AD", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Andorra
@@ -42,7 +81,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "AM", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Armenia
     { "AO", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA }, // Angola
     { "AQ", cou::Type::NO_MANS_LAND, cou::Location::SOUTH_POLE }, // Antarctica
-    { "AR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Argentina
+    { "AR", cou::Type::RECOGNIZED_STATE, cou::Location::SOUTH_AMERICA }, // Argentina
     { "AS", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_POLYNESIA }, // American Samoa
     { "AT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Austria
     { "AU", cou::Type::RECOGNIZED_STATE, cou::Location::AUSTRALIA }, // Australia

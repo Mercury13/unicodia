@@ -1266,35 +1266,35 @@ namespace cou {
         ASIA,
         AFRICA,
         NORTH_AMERICA,
-        SOUTH_AMERICA,
+        SOUTH_AMERICA,  // 5
         AUSTRALIA,
         SOUTH_POLE,
         EUROPE_ASIA,
         ATLANTIC_OCEAN,
-        ATLANTIC_EUROPE,
+        ATLANTIC_EUROPE, // 10
         ATLANTIC_BRITISH,
         ATLANTIC_AFRICA,
         ATLANTIC_NORTH_AMERICA,
         ATLANTIC_SOUTH_AMERICA,
-        ATLANTIC_CARIBBEAN,
+        ATLANTIC_CARIBBEAN, // 15
         ATLANTIC_ANTARCTIC,
         ENGLISH_CHANNEL,
         BALTIC_SEA,
         MEDITERRANEAN_SEA,
-        PACIFIC_POLYNESIA,
+        PACIFIC_POLYNESIA, // 20
         PACIFIC_MICRONESIA,
         PACIFIC_ASIA,
         PACIFIC_AUSTRALIA,
         PACIFIC_NORTH_AMERICA,
-        MALAY_ARCHIPELAGO,
+        MALAY_ARCHIPELAGO, // 25
         ASIA_MALAY_ARCHIPELAGO, ///< Malaysia
         INDIAN_OCEAN,
         INDIAN_AFRICA,
         INDIAN_ASIA,
-        INDIAN_ANTARCTIC,
+        INDIAN_ANTARCTIC, // 30
         GULF_OF_PERSIA,
         ARCTIC_OCEAN,
-        NEWYORK_HQ,
+        NEWYORK_HQ, // 33
     )
 
     struct TwoLetters {
@@ -1320,6 +1320,7 @@ namespace cou {
     };
 
     extern const ec::Array<const char*, Type> typeKeys;
+    extern const ec::Array<const char*, Location> locKeys;
 
     const Country* find(TwoLetters key);
 

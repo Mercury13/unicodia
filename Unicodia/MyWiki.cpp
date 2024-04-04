@@ -2009,6 +2009,10 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
             // Status
             appendNonBullet(text, "Lib.Cinfo.Sta");
             mywiki::appendNoFont(text, loc::get(cou::typeKeys[country->type]));
+            text += "<br>";
+            // Location
+            appendNonBullet(text, "Lib.Cinfo.Loc");
+            mywiki::appendNoFont(text, loc::get(cou::locKeys[country->location]));
         }
     }
 
