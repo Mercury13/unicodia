@@ -531,7 +531,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "TD", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Chad
             cou::Popul::DFLT },
     { "TF", cou::Type::FRANCE_UNINHABITED, cou::Location::INDIAN_ANTARCTIC, // French Southern Territories
-            cou::Popul::MAINLY_MILITARY },
+            cou::Popul::MAINLY_SCIENTISTS },
     { "TG", cou::Type::RECOGNIZED_STATE, cou::Location::AFRICA, // Togo
             cou::Popul::DFLT },
     { "TH", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA, // Thailand
