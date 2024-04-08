@@ -1,6 +1,6 @@
 # How to develop?
 * Download/find all tools for building.
-* Ensure that your Qt has MinGW 11+. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.2, 6.1.3, 6.2.0, 6.2.4. I actually use 6.1.3 as the last supporting W7 and fast enough on W10.
+* Ensure that your Qt has MinGW 11+. Or make a custom kit of some MinGW Qt and MSYS compiler; tested Qt 6.1.3, 6.7.0. I actually use 6.1.3 as the last supporting W7 and fast enough on W10.
 * Compile and run AutoBuilder.
 * Move UcAuto.cpp to Unicodia/Uc.
 * Compile Unicodia.
