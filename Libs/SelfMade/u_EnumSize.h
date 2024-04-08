@@ -50,3 +50,10 @@ namespace ec {
         static constexpr unsigned size() { return detail::countValues(#__VA_ARGS__); } \
     };  \
     namespace Ns {
+
+#define DEFINE_ENUM_TYPE_IN_NS(Ns, Name, Type, ...) \
+    enum class Name : Type { __VA_ARGS__ };  } \
+    template <> struct detail::EnumSize<:: Ns :: Name > {  \
+        static constexpr unsigned size() { return detail::countValues(#__VA_ARGS__); } \
+    };  \
+    namespace Ns {

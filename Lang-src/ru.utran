@@ -12619,6 +12619,10 @@
      <orig>Location</orig>
      <transl>Расположение</transl>
     </text>
+    <text id="Pop">
+     <orig>Population</orig>
+     <transl>Население</transl>
+    </text>
    </group>
    <group id="Sta">
     <text id="Rec">
@@ -12645,15 +12649,14 @@
      <au-cmt>e.g. Cocos Islands</au-cmt>
      <transl>Внешняя территория Австралии</transl>
     </text>
-    <text id="AuUn">
-     <orig>Uninhabited external territory of Australia</orig>
-     <au-cmt>Heard &amp; McDonald Islands</au-cmt>
-     <transl>Необитаемая внешняя территория Австралии</transl>
-    </text>
     <text id="GbOv">
      <orig>Overseas territory of Great Britain</orig>
      <au-cmt>e.g. Ascension Island, Cayman Islands, St. Helena</au-cmt>
      <transl>Заморская территория Великобритании</transl>
+    </text>
+    <text id="GbOv!">
+     <orig>Disputed; de facto overseas territory of Great Britain</orig>
+     <transl>Спорная; по факту заморская территория Великобритании</transl>
     </text>
     <text id="GbDep">
      <orig>Dependent territory of Great Britain</orig>
@@ -12717,11 +12720,6 @@
      <orig>Dependent territory of the USA</orig>
      <au-cmt>e.g. Puerto Rico</au-cmt>
      <transl>Зависимая территория США</transl>
-    </text>
-    <text id="DisGbMu">
-     <orig>Disputed, Great Britain / Mauritius</orig>
-     <au-cmt>Diego Garcia</au-cmt>
-     <transl>Спорная, Великобритания / Маврикий</transl>
     </text>
     <text id="PartEh">
      <orig>Partly recognized state, controls part of claimed territory, dispute with Morocco</orig>
@@ -12881,6 +12879,44 @@
      <orig>New York (headquarters)</orig>
      <au-cmt>United Nations</au-cmt>
      <transl>Нью-Йорк (штаб-квартира)</transl>
+    </text>
+   </group>
+   <group id="Pop">
+    <text id="Dfl">
+     <orig>Permanent</orig>
+     <transl>Постоянное</transl>
+    </text>
+    <text id="Set">
+     <orig>Settlers of recent centuries (no indigenous people)</orig>
+     <transl>Поселенцы последних веков (нет коренных народов)</transl>
+    </text>
+    <text id="SetSv">
+     <orig>Settlers of recent centuries, Svalbard only</orig>
+     <transl>Поселенцы последних веков, только Шпицберген</transl>
+    </text>
+    <text id="Mil">
+     <orig>Mainly military</orig>
+     <transl>В основном военные</transl>
+    </text>
+    <text id="Sci">
+     <orig>Mainly scientists</orig>
+     <transl>В основном учёные</transl>
+    </text>
+    <text id="Nom">
+     <orig>Mainly nomads</orig>
+     <transl>В основном кочевники</transl>
+    </text>
+    <text id="Pri">
+     <orig>Mainly clergy</orig>
+     <transl>В основном священники</transl>
+    </text>
+    <text id="Uni">
+     <orig>Uninhabited</orig>
+     <transl>Необитаемый</transl>
+    </text>
+    <text id="Nat">
+     <orig>Nature reserve</orig>
+     <transl>Заповедник</transl>
     </text>
    </group>
   </group>

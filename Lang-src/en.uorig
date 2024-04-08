@@ -8780,6 +8780,9 @@
     <text id="Loc">
      <orig>Location</orig>
     </text>
+    <text id="Pop">
+     <orig>Population</orig>
+    </text>
    </group>
    <group id="Sta">
     <text id="Rec">
@@ -8801,13 +8804,12 @@
      <orig>External territory of Australia</orig>
      <au-cmt>e.g. Cocos Islands</au-cmt>
     </text>
-    <text id="AuUn">
-     <orig>Uninhabited external territory of Australia</orig>
-     <au-cmt>Heard &amp; McDonald Islands</au-cmt>
-    </text>
     <text id="GbOv">
      <orig>Overseas territory of Great Britain</orig>
      <au-cmt>e.g. Ascension Island, Cayman Islands, St. Helena</au-cmt>
+    </text>
+    <text id="GbOv!">
+     <orig>Disputed; de facto overseas territory of Great Britain</orig>
     </text>
     <text id="GbDep">
      <orig>Dependent territory of Great Britain</orig>
@@ -8858,10 +8860,6 @@
     <text id="UsDep">
      <orig>Dependent territory of the USA</orig>
      <au-cmt>e.g. Puerto Rico</au-cmt>
-    </text>
-    <text id="DisGbMu">
-     <orig>Disputed, Great Britain / Mauritius</orig>
-     <au-cmt>Diego Garcia</au-cmt>
     </text>
     <text id="PartEh">
      <orig>Partly recognized state, controls part of claimed territory, dispute with Morocco</orig>
@@ -8984,6 +8982,35 @@
     <text id="NyHq">
      <orig>New York (headquarters)</orig>
      <au-cmt>United Nations</au-cmt>
+    </text>
+   </group>
+   <group id="Pop">
+    <text id="Dfl">
+     <orig>Permanent</orig>
+    </text>
+    <text id="Set">
+     <orig>Settlers of recent centuries (no indigenous people)</orig>
+    </text>
+    <text id="SetSv">
+     <orig>Settlers of recent centuries, Svalbard only</orig>
+    </text>
+    <text id="Mil">
+     <orig>Mainly military</orig>
+    </text>
+    <text id="Sci">
+     <orig>Mainly scientists</orig>
+    </text>
+    <text id="Nom">
+     <orig>Mainly nomads</orig>
+    </text>
+    <text id="Pri">
+     <orig>Mainly clergy</orig>
+    </text>
+    <text id="Uni">
+     <orig>Uninhabited</orig>
+    </text>
+    <text id="Nat">
+     <orig>Nature reserve</orig>
     </text>
    </group>
   </group>

@@ -297,11 +297,16 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
 
 std::unique_ptr<mywiki::Link> mywiki::parseLink(std::string_view link)
 {
-    auto things = str::splitSv(link, ':');
-    if (things.size() >= 2) {
-        return parseLink(things[0], things[1]);
-    }
-    return {};
+    auto posScheme = link.find(':');
+    if (posScheme == std::string_view::npos)
+        return {};
+    auto scheme = str::trimSv(link.substr(0, posScheme));
+    if (scheme.empty())
+        return {};
+    auto remder = str::trimSv(link.substr(posScheme + 1));
+    if (remder.empty())
+        return {};
+    return parseLink(scheme, remder);
 }
 
 void mywiki::go(QWidget* widget, TinyOpt<QRect> rect, Gui& gui, std::string_view link)
@@ -2004,15 +2009,21 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
         appendCpBullets(text, *cp, CpSerializations::NO);
     } else if (auto letters = countryLetters(node.value)) {
         if (auto country = cou::find(letters)) {
-            /// @todo [urgent] Country letters
             appendSubhead(text, "Lib.Cinfo.Info");
+            str::QSep sp(text, "<br>");
             // Status
             appendNonBullet(text, "Lib.Cinfo.Sta");
             mywiki::appendNoFont(text, loc::get(cou::typeKeys[country->type]));
-            text += "<br>";
             // Location
+            sp.sep();
             appendNonBullet(text, "Lib.Cinfo.Loc");
             mywiki::appendNoFont(text, loc::get(cou::locKeys[country->location]));
+            // Population
+            if (country->popul != cou::Popul::NOT_APPLICABLE) {
+                sp.sep();
+                appendNonBullet(text, "Lib.Cinfo.Pop");
+                mywiki::appendNoFont(text, loc::get(cou::popKeys[country->popul]));
+            }
         }
     }
 

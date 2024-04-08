@@ -1233,35 +1233,34 @@ namespace sw {
 
 namespace cou {
 
-    DEFINE_ENUM_IN_NS(cou, Type,
+    DEFINE_ENUM_TYPE_IN_NS(cou, Type, unsigned char,
         RECOGNIZED_STATE,
         NO_MANS_LAND,
         SUPRANATIONAL_UNION,
         INTERNATIONAL_ORGANIZATION,
         AUSTRALIA_EXTERNAL,  // 5
-        AUSTRALIA_EXTERNAL_UNINHABITED,
         BRITAIN_OVERSEAS,
+        BRITAIN_OVERSEAS_ACTUALLY,
         BRITAIN_DEPENDENT,
         CHINA_SPECIAL,
-        DENMARK_AUTONOMY,  // 10
+        DENMARK_AUTONOMY, // 10
         FINLAND_SPECIAL,
         FRANCE_OVERSEAS,
         FRANCE_UNINHABITED,
         NETHERLANDS_DEPENDENT,
-        NETHERLANDS_OVERSEAS,  // 15
+        NETHERLANDS_OVERSEAS, // 15
         NEWZEALAND_ASSOC,
         NORWAY_UNINHABITED,
         NORWAY_DEPENDENT,
         SPAIN_AUTONOMY,
         US_DEPENDENT,  // 20
-        DISPUTE_BRITAIN_MAURITIUS,
         PARTLY_PALESTINE,
         PARTLY_WEST_SAHARA,
         PARTLY_TAIWAN,
-        PARTLY_KOSOVO // 25
+        PARTLY_KOSOVO // 24
     )
 
-    DEFINE_ENUM_IN_NS(cou, Location,
+    DEFINE_ENUM_TYPE_IN_NS(cou, Location, unsigned char,
         EUROPE,
         ASIA,
         AFRICA,
@@ -1297,6 +1296,19 @@ namespace cou {
         NEWYORK_HQ, // 33
     )
 
+    DEFINE_ENUM_TYPE_IN_NS(cou, Popul, unsigned char,
+        DFLT,      ///< Do not write; actually there were indigenous people
+        SETTLERS,  ///< Relatively recent settlers
+        SETTLERS_SVALBARD, ///< Settlers, Svalbard only
+        MAINLY_MILITARY,
+        MAINLY_SCIENTISTS, ///< Antarctica
+        MAINLY_NOMADS,  ///< W.Sahara
+        MAINLY_PRIESTS, ///< Vatican
+        UNINHABITED,
+        NATURE_RESERVE,  ///< Bouvet
+        NOT_APPLICABLE, ///< UN
+    )
+
     struct TwoLetters {
         uint16_t value = 0;
 
@@ -1317,10 +1329,12 @@ namespace cou {
         TwoLetters name;
         Type type;
         Location location;
+        Popul popul;
     };
 
     extern const ec::Array<const char*, Type> typeKeys;
     extern const ec::Array<const char*, Location> locKeys;
+    extern const ec::Array<const char*, Popul> popKeys;
 
     const Country* find(TwoLetters key);
 
