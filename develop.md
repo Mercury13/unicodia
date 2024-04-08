@@ -18,8 +18,8 @@
   * Ensure that it has no &lt;clipPath&gt;, edit if needed.
     * Originals is directory for original SVGs, Remakes if for remade but unoptimized
   * It’s better to run [SvgCleaner](https://github.com/RazrFalcon/svgcleaner) on it
-  * If emoji-related library data changed → copy opt.xml тo NotoEmoji
-  * Make sure Unicodia is closed, run tape.bat
+  * If emoji-related library data changed → copy opt.xml from AutoBuilder to NotoEmoji
+  * Make sure **Unicodia is closed**, run tape.bat
 * Two or more skintones (e.g. interracial kiss/handshake): same. They are neither repainted nor checked.
 * One skintone (one person, same-race handshake…), repainted versions are stored
   * After that press Ctrl+Shift+Q in Unicodia.
@@ -32,7 +32,7 @@
     * Press Ctrl+Shift+Q in Unicodia.
     * Copy resulting BMP files to MiscFiles\SkinToneQa. You can do it manually, or using “Good” button in QaCompareBmp tool.
   * Then normal work commences.
-    * It’s absolutely needed to change nose colour E59600 → E49600, to prevent confusion with ears
+    * It’s absolutely needed to change **nose colour** E59600 → E49600, to prevent confusion with ears
     * Remove original files, copy your remake.
     * It’s absolutely needed to run SvgCleaner, repainting engine relies on it (e.g. lowercase, XML attributes rather than CSS)
     * Make sure Unicodia is closed, run tape.bat
