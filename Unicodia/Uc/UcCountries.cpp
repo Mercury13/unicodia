@@ -185,7 +185,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "IO", cou::Type::BRITAIN_OVERSEAS, cou::Location::INDIAN_OCEAN }, // British Indian Ocean Territory
     { "IQ", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Iraq
     { "IR", cou::Type::RECOGNIZED_STATE, cou::Location::ASIA }, // Iran
-    { "IS", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_OCEAN }, // Iceland
+    { "IS", cou::Type::RECOGNIZED_STATE, cou::Location::ARCTIC_OCEAN }, // Iceland
     { "IT", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE }, // Italy
     { "JE", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL }, // Jersey
     { "JM", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN }, // Jamaica
