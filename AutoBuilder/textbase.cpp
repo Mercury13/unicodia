@@ -41,6 +41,7 @@ namespace {
     #endif
 
         switch (currChar) {
+            /// @todo [urgent] What to do with FEFF?
             // Do not collect synonyms
         case 0xFEFF:    // those abbreviations are just repeated
             return;
@@ -110,33 +111,59 @@ tx::Base tx::loadBase()
 {
     tx::Base r;
 
-    std::ifstream is(UCD_NAMES);
-    std::string mainName, line;
-    char32_t currChar = 0;
-    while (std::getline(is, line)) {
-        std::string_view trimmed = str::trimSv(line);
-        if (trimmed.empty() || trimmed.starts_with(';'))
-            continue;
-        if (std::to_address(line.begin()) == std::to_address(trimmed.begin())) {
-            // Character
-            if (trimmed.starts_with('@')) {
-                // Subtitle, do nothing
-            } else {
-                auto names = str::splitSv(trimmed, '\t');
-                std::string_view sCode = names.safeGetV(0, "");
-                currChar = fromHex(sCode);
-                mainName = names.safeGetV(1, "");
+    { std::ifstream is(UCD_ALIASES);
+        std::string line;
+        while (std::getline(is, line)) {
+            std::string_view trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+            auto names = str::splitSv(trimmed, ';', false);
+            if (names.size() < 3)
+                continue;
+            std::string_view sCode = names.at(0);
+            char32_t code = fromHex(sCode);
+            std::string_view value = names.at(1);
+            std::string_view sType = names.at(2);
+            auto& entry = r[code];
+            if (sType == "correction"sv || sType == "figment"sv) {
+                entry.correction = decapitalize(value, code);
+            } else if (sType == "abbreviation"sv) {
+                entry.abbrs.emplace_back(value);
+            } else if (sType == "control"sv) {
+                entry.controls.emplace_back(decapitalize(value, code));
             }
-        } else {
-            // Its info
-            switch (trimmed[0]) {
-            case '%':   // character correction
-                mainName = str::trim(trimmed.substr(1));
-                break;
-            case '=':
-                extractSynonym(r, currChar, mainName, trimmed.substr(1));
-                break;
-            default: ;
+            // control — they will surely be in UCD_NAMES
+        }
+    }
+
+    { std::ifstream is(UCD_NAMES);
+        std::string mainName, line;
+        char32_t currChar = 0;
+        while (std::getline(is, line)) {
+            std::string_view trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with(';'))
+                continue;
+            if (std::to_address(line.begin()) == std::to_address(trimmed.begin())) {
+                // Character
+                if (trimmed.starts_with('@')) {
+                    // Subtitle, do nothing
+                } else {
+                    auto names = str::splitSv(trimmed, '\t');
+                    std::string_view sCode = names.safeGetV(0, ""sv);
+                    currChar = fromHex(sCode);
+                    mainName = names.safeGetV(1, "");
+                }
+            } else {
+                // Its info
+                switch (trimmed[0]) {
+                case '%':   // character correction
+                    mainName = str::trim(trimmed.substr(1));
+                    break;
+                case '=':
+                    extractSynonym(r, currChar, mainName, trimmed.substr(1));
+                    break;
+                default: ;
+                }
             }
         }
     }

@@ -3,6 +3,7 @@
 #include <unordered_map>
 #include <set>
 #include <string>
+#include <vector>
 
 namespace tx {
 
@@ -14,6 +15,8 @@ namespace tx {
 
     struct Cp
     {
+        std::string correction;
+        std::vector<std::string> abbrs, controls;
         std::set<std::string, Cmp> names;
         /// @todo [future] similar chars?
 

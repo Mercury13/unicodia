@@ -109,6 +109,7 @@ namespace {
         { RAWDATA ENTITIES_JSON },
         { RAWDATA UCD_ZIP },
         { RAWDATA UCD_NAMES },
+        { RAWDATA UCD_ALIASES },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },
         { RAWDATA EGYP_DESCRIPTION },

@@ -5,6 +5,7 @@
 #define UCD_ZIP "ucd.all.flat.zip"
 #define UCD_XML "ucd.all.flat.xml"
 #define UCD_NAMES "NamesList.txt"
+#define UCD_ALIASES "NameAliases.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"
 #define ENTITIES_JSON "entities.json"
