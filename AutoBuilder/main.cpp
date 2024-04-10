@@ -620,7 +620,7 @@ int main()
         }
 
         Flags<uc::Cfg> flags;
-        if (hasAbbrev)
+        if (hasAbbrev && abbrevState == AbbrevState::NORMAL)
             flags |= uc::m::ABBREVIATION;
         // Deprecated
         if (isDeprecated) {
