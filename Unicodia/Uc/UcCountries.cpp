@@ -275,7 +275,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "GR", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Greece
             cou::Popul::DFLT },
     { "GS", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_ANTARCTIC, // South Georgia & South Sandwich Islands
-            cou::Popul::SETTLERS },
+            cou::Popul::MAINLY_MILITARY },
     { "GT", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Guatemala
             cou::Popul::DFLT },
     { "GU", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA, // Guam
