@@ -478,9 +478,6 @@ int main()
         }
 
         std::string_view defaultAbbrev {};      // empty
-        std::vector<std::string_view> allAbbrevs;
-        std::vector<std::string> restAliases;
-        std::vector<std::string> aliasAbbrevs;
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
@@ -491,83 +488,97 @@ int main()
                     abbrevState = AbbrevState::ALIAS;
                 } else {
                     defaultAbbrev = it->second;
-                    allAbbrevs.push_back(defaultAbbrev);
                 }
             }
         }
 
-        // Aliases?
-        for (auto elAlias : elChar.children("name-alias")) {
-            std::string_view sType = elAlias.attribute("type").as_string();
-            std::string_view newName =  elAlias.attribute("alias").as_string();
-            if (sType == "alternate"sv) {
-                restAliases.emplace_back(newName);
-            } else if (sType == "control"sv || sType == "figment"sv) {
-                if (sName.empty()) {
-                    sName = newName;
-                } else {
-                    // Find everywhere
-                    if (sName != newName
-                        && std::find(restAliases.begin(), restAliases.end(), newName) == restAliases.end()) {
-                        restAliases.emplace_back(newName);
-                    }
-                }
-            } else if (sType == "correction"sv) {
-                // Checked known chars, and corrections ARE BETTER than originals
-                sName = newName;
-            } else if (sType == "abbreviation") {
-                // Abbreviations
-                switch (abbrevState) {
-                case AbbrevState::DISABLE: break;
-                case AbbrevState::NORMAL:
-                    if (newName != defaultAbbrev)      // do not dupe defaultAbbrev
-                        allAbbrevs.push_back(newName);
-                    break;
-                case AbbrevState::ALIAS:
-                    aliasAbbrevs.emplace_back(newName);
-                    break;
-                }
-            }
-        }
-
-        std::string sLowerName = decapitalize(sName, cp);
+        // // Aliases?
+        // for (auto elAlias : elChar.children("name-alias")) {
+        //     std::string_view sType = elAlias.attribute("type").as_string();
+        //     std::string_view newName =  elAlias.attribute("alias").as_string();
+        //     if (sType == "alternate"sv) {
+        //         restAliases.emplace_back(newName);
+        //     } else if (sType == "control"sv || sType == "figment"sv) {
+        //         if (sName.empty()) {
+        //             sName = newName;
+        //         } else {
+        //             // Find everywhere
+        //             if (sName != newName
+        //                 && std::find(restAliases.begin(), restAliases.end(), newName) == restAliases.end()) {
+        //                 restAliases.emplace_back(newName);
+        //             }
+        //         }
+        //     } else if (sType == "correction"sv) {
+        //         // Checked known chars, and corrections ARE BETTER than originals
+        //         sName = newName;
+        //     } else if (sType == "abbreviation") {
+        //         // Abbreviations
+        //         switch (abbrevState) {
+        //         case AbbrevState::DISABLE: break;
+        //         case AbbrevState::NORMAL:
+        //             if (newName != defaultAbbrev)      // do not dupe defaultAbbrev
+        //                 allAbbrevs.push_back(newName);
+        //             break;
+        //         case AbbrevState::ALIAS:
+        //             aliasAbbrevs.emplace_back(newName);
+        //             break;
+        //         }
+        //     }
+        // }
 
         auto itCp = textBase.find(cp);
         tx::Cp* textCp = &DUMMY_CP;
+        bool hasName = false;
         if (itCp != textBase.end()) {
             textCp = &itCp->second;
+            hasName = true;
+        }
+
+        // Get corrected name
+        std::string sLowerName;
+        if (!textCp->correction.empty()) {
+            sLowerName = std::move(textCp->correction);
+        } else {
+            sLowerName = decapitalize(sName, cp);
+        }
+
+        if (sLowerName == "horizontal tabulation"sv) {
+            std::cout << "Here" << '\n';
+        }
+
+        if (hasName) {
+            if (sLowerName.empty() && !textCp->controls.empty()) {
+                sLowerName = std::move(textCp->controls[0]);
+                textCp->controls.erase(textCp->controls.begin());
+            }
+
+            if (abbrevState == AbbrevState::DISABLE)
+                textCp->abbrs.clear();
 
             // Name
             textCp->eraseName(sLowerName);
 
-            for (auto& v : allAbbrevs) {
-                textCp->eraseName(v);
-                textCp->eraseName(decapitalize(v, cp));
-            }
-            for (auto& v : aliasAbbrevs) {
-                textCp->eraseName(v);
-            }
-            for (auto& v : restAliases) {
-                textCp->eraseName(v);
-            }
+            textCp->eraseName(defaultAbbrev);
+            textCp->eraseName(decapitalize(defaultAbbrev, cp));
         }
 
-        if (allAbbrevs.size() > 1 && defaultAbbrev.empty()) {
-            nl.trigger();
-            std::cout << "WARNING: char " << std::hex << cp << " has no default abbreviation." << std::endl;
-        }
-        bool hasAbbrev = !allAbbrevs.empty();
+        bool hasAbbrev = !defaultAbbrev.empty() || !textCp->abbrs.empty();
         auto [pTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
-        if (!allAbbrevs.empty() && !wasIns) {
+        if (hasAbbrev && !wasIns) {
             nl.trigger();
-            std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << std::endl;
+            std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << '\n';
         }
 
-        for (auto& v : allAbbrevs) {
+        if (!defaultAbbrev.empty())
+            strings.forceRemember(cp, uc::TextRole::ABBREV, defaultAbbrev);
+
+        for (auto& v : textCp->abbrs) {
             strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
         }
 
-        for (auto& v : aliasAbbrevs) {
+        for (auto& v : textCp->controls) {
+            if (v == sLowerName)
+                continue;
             strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
         }
 
@@ -575,18 +586,8 @@ int main()
             strings.forceRemember(cp, uc::TextRole::ALT_NAME, v->second);
         }
 
-        for (auto& v : restAliases) {
-            auto it = std::find(allAbbrevs.begin(), allAbbrevs.end(), v);
-            if (it == allAbbrevs.end()) {
-                sLowerName = decapitalize(v, cp);
-                textCp->eraseName(sLowerName);
-                strings.forceRemember(cp, uc::TextRole::ALT_NAME, sLowerName);
-            }
-        }
-
-        // text CP
-        for (auto& name : textCp->names) {
-            strings.forceRemember(cp, uc::TextRole::ALT_NAME, name);
+        for (auto& v : textCp->names) {
+            strings.forceRemember(cp, uc::TextRole::ALT_NAME, v);
         }
 
         // HTML
@@ -685,7 +686,7 @@ int main()
         // Char’s script
         std::string_view sScript = elChar.attribute("sc").as_string();
             // Hiragana → Hentaigata
-        if (sScript == "Hira"sv && sName.starts_with("HENTAIGANA"))
+        if (sScript == "Hira"sv && sLowerName.starts_with("Hentaigana"))
             sScript = "Hent"sv;
         //std::string_view sScriptX = elChar.attribute("scx").as_string();
         //if (sScript != sScriptX) {

@@ -18,9 +18,23 @@ using namespace std::string_view_literals;
 
 void tx::Cp::eraseName(std::string_view x)
 {
-    auto it = names.find(x);
-    if (it != names.end())
-        names.erase(it);
+    if (x.empty())
+        return;
+
+    if (auto it1 = names.find(x);
+            it1 != names.end()) {
+        names.erase(it1);
+    }
+
+    if (auto it2 = std::find(abbrs.begin(), abbrs.end(), x);
+            it2 != abbrs.end()) {
+        abbrs.erase(it2);
+    }
+
+    if (auto it3 = std::find(controls.begin(), controls.end(), x);
+            it3 != controls.end()) {
+        controls.erase(it3);
+    }
 }
 
 namespace {
@@ -41,7 +55,6 @@ namespace {
     #endif
 
         switch (currChar) {
-            /// @todo [urgent] What to do with FEFF?
             // Do not collect synonyms
         case 0xFEFF:    // those abbreviations are just repeated
             return;
@@ -129,10 +142,9 @@ tx::Base tx::loadBase()
                 entry.correction = decapitalize(value, code);
             } else if (sType == "abbreviation"sv) {
                 entry.abbrs.emplace_back(value);
-            } else if (sType == "control"sv) {
+            } else if (sType == "control"sv || sType == "alternate"sv) {
                 entry.controls.emplace_back(decapitalize(value, code));
             }
-            // control — they will surely be in UCD_NAMES
         }
     }
 
@@ -165,6 +177,13 @@ tx::Base tx::loadBase()
                 default: ;
                 }
             }
+        }
+    }
+
+    // Clean
+    for (auto& [cp,u] : r) {
+        for (auto& v1 : u.controls) {
+            u.names.erase(v1);
         }
     }
 
