@@ -1305,7 +1305,8 @@ namespace cou {
         MAINLY_NOMADS,  ///< W.Sahara
         MAINLY_PRIESTS, ///< Vatican
         UNINHABITED,
-        NATURE_RESERVE,  ///< Bouvet
+        NATURE_RESERVE, ///< Bouvet
+        ABANDONED_GS,   ///< South Georgia & South Sandwich Islands
         NOT_APPLICABLE, ///< UN
     )
 

@@ -81,6 +81,7 @@ constinit const ec::Array<const char*, cou::Popul> cou::popKeys {
     TX_POP "Pri",
     TX_POP "Uni",
     TX_POP "Nat",
+    TX_POP "GS",
     "",
 };
 
@@ -275,7 +276,7 @@ constinit const cou::Country ALL_COUNTRIES[] {
     { "GR", cou::Type::RECOGNIZED_STATE, cou::Location::EUROPE, // Greece
             cou::Popul::DFLT },
     { "GS", cou::Type::BRITAIN_OVERSEAS_ACTUALLY, cou::Location::ATLANTIC_ANTARCTIC, // South Georgia & South Sandwich Islands
-            cou::Popul::MAINLY_MILITARY },
+            cou::Popul::ABANDONED_GS },
     { "GT", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Guatemala
             cou::Popul::DFLT },
     { "GU", cou::Type::US_DEPENDENT, cou::Location::PACIFIC_MICRONESIA, // Guam
