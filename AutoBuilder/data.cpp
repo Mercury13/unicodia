@@ -722,6 +722,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "TAILLESS",       Dicf::PART_ADJECTIVE },
     { "TALL",           Dicf::PART_ADJECTIVE },
     { "THAM",           Dicf::PART_ADJECTIVE }, // not really correct, but let’s leave hora/tham lowcase
+    { "THIRD-STAGE",    Dicf::PART_ADJECTIVE },
     { "THREE-D",        { Dicf::PART_ADJECTIVE, "three-D" } },
     { "THREE-LEGGED",   Dicf::PART_ADJECTIVE },
     { "TIGHT",          Dicf::PART_ADJECTIVE },
