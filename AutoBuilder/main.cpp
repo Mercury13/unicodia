@@ -479,6 +479,10 @@ int main()
 
         std::string_view defaultAbbrev {};      // empty
 
+        if (cp == 0x205F) {
+            std::cout << "Here!" << '\n';
+        }
+
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
             if (it->second.empty()) {
@@ -528,10 +532,10 @@ int main()
 
         auto itCp = textBase.find(cp);
         tx::Cp* textCp = &DUMMY_CP;
-        bool hasName = false;
+        bool hasTextEntry = false;
         if (itCp != textBase.end()) {
             textCp = &itCp->second;
-            hasName = true;
+            hasTextEntry = true;
         }
 
         // Get corrected name
@@ -542,11 +546,7 @@ int main()
             sLowerName = decapitalize(sName, cp);
         }
 
-        if (sLowerName == "horizontal tabulation"sv) {
-            std::cout << "Here" << '\n';
-        }
-
-        if (hasName) {
+        if (hasTextEntry) {
             if (sLowerName.empty() && !textCp->controls.empty()) {
                 sLowerName = std::move(textCp->controls[0]);
                 textCp->controls.erase(textCp->controls.begin());
@@ -569,11 +569,14 @@ int main()
             std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << '\n';
         }
 
-        if (!defaultAbbrev.empty())
-            strings.forceRemember(cp, uc::TextRole::ABBREV, defaultAbbrev);
+        auto abbrevRole = (abbrevState == AbbrevState::NORMAL)
+                          ? uc::TextRole::ABBREV : uc::TextRole::ALT_NAME;
+        if (!defaultAbbrev.empty()) {
+            strings.forceRemember(cp, abbrevRole, defaultAbbrev);
+        }
 
         for (auto& v : textCp->abbrs) {
-            strings.forceRemember(cp, uc::TextRole::ABBREV, std::string{v});
+            strings.forceRemember(cp, abbrevRole, std::string{v});
         }
 
         for (auto& v : textCp->controls) {
