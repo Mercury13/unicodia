@@ -11,6 +11,7 @@
 #define UCD_MIRRORING "BidiMirroring.txt"
 #define UCD_UDATA "UnicodeData.txt"
 #define UCD_PROP "PropList.txt"
+#define UCD_MAIN "UnicodeData.txt"
 #define DER_AGE "DerivedAge.txt"
 #define DER_CORE "DerivedCoreProperties.txt"
 #define HAN_DIC "Unihan_DictionaryLikeData.txt"

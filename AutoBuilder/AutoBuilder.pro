@@ -23,7 +23,8 @@ SOURCES += \
         main.cpp \
         sutton.cpp \
         textbase.cpp \
-        ucdcom.cpp
+        ucdcom.cpp \
+        unibase.cpp
 
 HEADERS += \
     ../Libs/PugiXml/pugiconfig.hpp \
@@ -43,7 +44,8 @@ HEADERS += \
     loader.h \
     sutton.h \
     textbase.h \
-    ucdcom.h
+    ucdcom.h \
+    unibase.h
 
 
 INCLUDEPATH += \

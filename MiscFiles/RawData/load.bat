@@ -18,5 +18,6 @@ curl https://html.spec.whatwg.org/entities.json -L --output entities.json
 rem Moved and changed structure, also JSON appeared → use it!
 rem curl https://dev.w3.org/html5/html-author/charref --output entities.htm
 del Unihan_DictionaryLikeData.txt
-"c:\Program Files\7-zip\7z.exe" e Unihan.zip Unihan_DictionaryLikeData.txt
+del Unihan_NumericValues.txt
+"c:\Program Files\7-zip\7z.exe" e Unihan.zip Unihan_DictionaryLikeData.txt Unihan_NumericValues.txt
 del Unihan.zip

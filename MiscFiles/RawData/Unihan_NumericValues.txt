@@ -1,0 +1,168 @@
+#
+# Unihan_NumericValues.txt
+# Date: 2023-07-15 00:00:00 GMT [KL]
+# Unicode version: 15.1.0
+#
+# Unicode Character Database
+# © 2023 Unicode®, Inc.
+# Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
+# For terms of use, see http://www.unicode.org/terms_of_use.html
+# For documentation, see http://www.unicode.org/reports/tr38/
+#
+# This file contains data on the following fields from the Unihan database:
+#	kAccountingNumeric
+#	kOtherNumeric
+#	kPrimaryNumeric
+#	kVietnameseNumeric
+#	kZhuangNumeric
+#
+# For details on the file format, see http://www.unicode.org/reports/tr38/
+#
+U+3405	kOtherNumeric	5
+U+3431	kVietnameseNumeric	9
+U+3483	kOtherNumeric	2
+U+3576	kZhuangNumeric	5
+U+382A	kOtherNumeric	5
+U+3B4D	kOtherNumeric	7
+U+4E00	kPrimaryNumeric	1
+U+4E03	kPrimaryNumeric	7
+U+4E07	kPrimaryNumeric	10000
+U+4E09	kPrimaryNumeric	3
+U+4E24	kOtherNumeric	2
+U+4E5D	kPrimaryNumeric	9
+U+4E86	kZhuangNumeric	1
+U+4E8C	kPrimaryNumeric	2
+U+4E94	kPrimaryNumeric	5
+U+4E96	kOtherNumeric	4
+U+4EAC	kPrimaryNumeric	10000000000000000
+U+4EBF	kPrimaryNumeric	100000000
+U+4EC0	kOtherNumeric	10
+U+4EDF	kAccountingNumeric	1000
+U+4EE8	kOtherNumeric	3
+U+4F0D	kAccountingNumeric	5
+U+4F70	kAccountingNumeric	100
+U+4FC9	kZhuangNumeric	5
+U+4FE9	kOtherNumeric	2
+U+5006	kOtherNumeric	2
+U+5104	kPrimaryNumeric	100000000
+U+5146	kPrimaryNumeric	1000000 1000000000000
+U+5169	kOtherNumeric	2
+U+516B	kPrimaryNumeric	8
+U+516D	kPrimaryNumeric	6
+U+5341	kPrimaryNumeric	10
+U+5343	kPrimaryNumeric	1000
+U+5344	kOtherNumeric	20
+U+5345	kOtherNumeric	30
+U+534C	kOtherNumeric	40
+U+53C1	kAccountingNumeric	3
+U+53C2	kAccountingNumeric	3
+U+53C3	kAccountingNumeric	3
+U+53C4	kOtherNumeric	3
+U+53CC	kZhuangNumeric	2
+U+53F0	kVietnameseNumeric	2
+U+540A	kZhuangNumeric	1
+U+5549	kVietnameseNumeric	100
+U+56DB	kPrimaryNumeric	4
+U+58F1	kAccountingNumeric	1
+U+58F9	kAccountingNumeric	1
+U+5954	kVietnameseNumeric	4
+U+5C1E	kZhuangNumeric	1
+U+5E7A	kOtherNumeric	1
+U+5EFE	kOtherNumeric	9
+U+5EFF	kOtherNumeric	20
+U+5F0C	kAccountingNumeric	1
+U+5F0D	kAccountingNumeric	2
+U+5F0E	kAccountingNumeric	3
+U+5F10	kAccountingNumeric	2
+U+5F66	kVietnameseNumeric	1000
+U+62D0	kOtherNumeric	7
+U+62FE	kAccountingNumeric	10
+U+634C	kAccountingNumeric	8
+U+672C	kVietnameseNumeric	4
+U+677E	kZhuangNumeric	2
+U+6797	kVietnameseNumeric	100
+U+67D2	kAccountingNumeric	7
+U+6C92	kVietnameseNumeric	1
+U+6CA1	kVietnameseNumeric	1
+U+6D1E	kOtherNumeric	0
+U+6F06	kAccountingNumeric	7
+U+7396	kAccountingNumeric	9
+U+767E	kPrimaryNumeric	100
+U+7695	kOtherNumeric	200
+U+79ED	kPrimaryNumeric	1000000000 1000000000000
+U+7A7A	kVietnameseNumeric	0
+U+7F62	kVietnameseNumeric	7
+U+7F77	kVietnameseNumeric	7
+U+8086	kAccountingNumeric	4
+U+80FD	kZhuangNumeric	1
+U+842C	kPrimaryNumeric	10000
+U+8511	kVietnameseNumeric	1
+U+8CAE	kAccountingNumeric	2
+U+8CB3	kAccountingNumeric	2
+U+8D30	kAccountingNumeric	2
+U+8FC8	kVietnameseNumeric	10
+U+9081	kVietnameseNumeric	10
+U+920E	kOtherNumeric	9
+U+94A9	kOtherNumeric	9
+U+9621	kAccountingNumeric	1000
+U+9646	kAccountingNumeric	6
+U+964C	kAccountingNumeric	100
+U+9678	kAccountingNumeric	6
+U+96F6	kPrimaryNumeric	0
+U+20001	kOtherNumeric	7
+U+20027	kVietnameseNumeric	3
+U+20064	kOtherNumeric	4
+U+200E2	kOtherNumeric	4
+U+200E9	kVietnameseNumeric	9
+U+20121	kOtherNumeric	5
+U+20129	kVietnameseNumeric	2
+U+20136	kVietnameseNumeric	5
+U+2013B	kVietnameseNumeric	5
+U+2013C	kVietnameseNumeric	5
+U+2052D	kVietnameseNumeric	8
+U+20929	kVietnameseNumeric	7
+U+2092A	kOtherNumeric	1
+U+20983	kOtherNumeric	30
+U+2098C	kOtherNumeric	40
+U+2099C	kOtherNumeric	40
+U+209A9	kVietnameseNumeric	10
+U+209B3	kVietnameseNumeric	1000
+U+20AEA	kOtherNumeric	6
+U+20AFD	kOtherNumeric	3
+U+20B19	kOtherNumeric	3
+U+20B20	kVietnameseNumeric	1
+U+20BA9	kZhuangNumeric	1
+U+20CA2	kZhuangNumeric	1
+U+22390	kOtherNumeric	2
+U+22482	kVietnameseNumeric	9
+U+22998	kOtherNumeric	3
+U+23B1B	kOtherNumeric	3
+U+24F93	kVietnameseNumeric	100
+U+2626D	kOtherNumeric	4
+U+26271	kVietnameseNumeric	7
+U+2629A	kVietnameseNumeric	4
+U+264B9	kVietnameseNumeric	6
+U+2846E	kVietnameseNumeric	10
+U+28492	kVietnameseNumeric	10
+U+28DC8	kVietnameseNumeric	10000
+U+2B52C	kVietnameseNumeric	10000
+U+2B866	kVietnameseNumeric	9
+U+2B875	kVietnameseNumeric	5
+U+2B92F	kVietnameseNumeric	8
+U+2B9C7	kZhuangNumeric	1
+U+2C0BD	kVietnameseNumeric	5
+U+2C0F4	kVietnameseNumeric	100
+U+2C65E	kVietnameseNumeric	7
+U+2CB99	kVietnameseNumeric	10000
+U+2CEB4	kZhuangNumeric	1
+U+3000C	kZhuangNumeric	1
+U+30FD8	kVietnameseNumeric	10000
+U+31357	kVietnameseNumeric	1
+U+31394	kVietnameseNumeric	2
+U+31396	kVietnameseNumeric	5
+U+31455	kVietnameseNumeric	10
+U+3197A	kVietnameseNumeric	1
+U+31FA3	kVietnameseNumeric	10000
+U+32226	kVietnameseNumeric	10000
+
+# EOF

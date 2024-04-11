@@ -23,6 +23,7 @@
 #include "loader.h"
 #include "sutton.h"
 #include "textbase.h"
+#include "unibase.h"
 
 using namespace std::string_view_literals;
 
@@ -461,6 +462,14 @@ int main()
     os << '\n';
     os << R"(#include "UcAutoDefines.h")" << '\n';
     os << '\n';
+
+    ///// Main base ////////////////////////////////////////////////////////////
+
+    std::cout << "Processing main base..." << std::flush;
+    ucd::processMainBase(ucd::DummySink{});
+    std::cout << "OK" << '\n';
+
+    ///// XML base /////////////////////////////////////////////////////////////
 
     pugi::xml_document doc;
 
