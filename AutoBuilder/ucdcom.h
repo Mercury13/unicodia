@@ -4,6 +4,7 @@
 #include <string>
 #include <map>
 #include <unordered_map>
+#include <stdexcept>
 
 ///
 /// @throw  if bad conversion
@@ -73,6 +74,8 @@ namespace ucd {
         /// @warning  Leaves reference
         const Value& findDefRef(char32_t key, const Value& def) const;
 
+        const Value& findRq(char32_t key) const;
+
         size_t size() const { return m.size(); }
     private:
         std::map<Range, Value, RangeCmp> m;
@@ -99,4 +102,17 @@ const Value& ucd::RangeMap<Value>::findDefRef(char32_t key, const Value& def) co
 {
     auto q = find(key);
     return q ? *q : def;
+}
+
+
+template <class Value>
+const Value& ucd::RangeMap<Value>::findRq(char32_t key) const
+{
+    auto q = find(key);
+    if (!q) [[unlikely]] {
+        char buf[80];
+        snprintf(buf, std::size(buf), "[RangeMap.findRq] Cannot find char %04X", (int)key);
+        throw std::logic_error(buf);
+    }
+    return *q;
 }

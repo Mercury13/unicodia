@@ -22,8 +22,10 @@ namespace tx {
 
     using Base = std::unordered_map<char32_t, Cp>;
     using Scripts = ucd::RangeMap<std::string_view>;
+    using Ages = ucd::RangeMap<std::string>;
 
     Base loadBase();
     Scripts loadScripts(const ucd::PropBase& propBase);
+    Ages loadAges();
 
 }   // ns tx

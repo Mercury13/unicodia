@@ -207,7 +207,7 @@ tx::Scripts tx::loadScripts(const ucd::PropBase& propBase)
         }
 
         auto vals = str::splitSv(trimmed, ';', false);
-        // 3 is minimum: cat, key, value
+        // 2 is minimum: range, script
         if (vals.size() < 2)
             continue;
 
@@ -215,6 +215,36 @@ tx::Scripts tx::loadScripts(const ucd::PropBase& propBase)
         auto pair = ucd::Range::from(cps);
         auto name = propBase.shortenScript(vals.at(1));
         r.add(pair, name);
+    }
+
+    return r;
+}
+
+
+tx::Ages tx::loadAges()
+{
+    tx::Ages r;
+
+    std::ifstream is(UCD_AGES);
+    std::string line;
+    while (std::getline(is, line)) {
+        std::string_view trimmed = str::trimSv(line);
+        if (trimmed.empty() || trimmed.starts_with('#'))
+            continue;
+
+        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+            trimmed = trimmed.substr(0, pHash);
+        }
+
+        auto vals = str::splitSv(trimmed, ';', false);
+        // 2 is minimum: range, age
+        if (vals.size() < 2)
+            continue;
+
+        auto cps = vals.at(0);
+        auto pair = ucd::Range::from(cps);
+        auto age = vals.at(1);
+        r.add(pair, age);
     }
 
     return r;

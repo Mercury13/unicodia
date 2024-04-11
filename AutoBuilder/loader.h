@@ -8,6 +8,7 @@
 #define UCD_NAMES "NamesList.txt"
 #define UCD_ALIASES "NameAliases.txt"
 #define UCD_SCRIPTS "Scripts.txt"
+#define UCD_AGES "DerivedAge.txt"
 #define UCD_UDATA "UnicodeData.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"

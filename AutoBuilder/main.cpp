@@ -409,6 +409,12 @@ int main()
     const tx::Scripts scripts = tx::loadScripts(propBase);
     std::cout << "OK, " << scripts.size() << " lines." << std::endl;
 
+    ///// Age data /////////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode ages..." << std::flush;
+    const tx::Ages ages = tx::loadAges();
+    std::cout << "OK, " << ages.size() << " lines." << std::endl;
+
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
@@ -642,8 +648,7 @@ int main()
         os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
 
         // Char’s version
-        /// @todo [urgent] get age
-        std::string_view sVersion = elChar.attribute("age").as_string();
+        auto& sVersion = ages.findRq(cp);
         os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
 
         // Char’s bidirectional data
