@@ -112,6 +112,7 @@ namespace {
         { RAWDATA UCD_AGES },
         { RAWDATA UCD_MIRRORING },
         { RAWDATA UCD_ALIASES },
+        { RAWDATA HAN_DIC },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },
         { RAWDATA EGYP_DESCRIPTION },

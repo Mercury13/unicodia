@@ -11,6 +11,7 @@
 #define UCD_MIRRORING "BidiMirroring.txt"
 #define UCD_AGES "DerivedAge.txt"
 #define UCD_UDATA "UnicodeData.txt"
+#define HAN_DIC "Unihan_DictionaryLikeData.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"
 #define ENTITIES_JSON "entities.json"
