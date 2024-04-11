@@ -464,6 +464,7 @@ int main()
     NumCache nums;
     int nDeprecated = 0;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
+        /// @todo [urgent] get CP → surely present
         std::string_view sCp = elChar.attribute("cp").as_string();
         if (sCp.empty()) {
             ++nSpecialRanges;
@@ -478,14 +479,10 @@ int main()
         // • Control: Prefer na1
         // • Figment: Implement
 
+        /// @todo [urgent] get name, replace code with # → surely present
         std::string_view sName = elChar.attribute("na").as_string();
 
         std::string_view defaultAbbrev {};      // empty
-
-        /// @todo [urgent] Debugging trap, delete!
-        // if (cp == 0x205F) {
-        //     std::cout << "Here!" << '\n';
-        // }
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
@@ -569,7 +566,7 @@ int main()
         if (v != htmlEntities.data.end()) {
             if (!wasIns) {
                 nl.trigger();
-                std::cout << "WARNING: char " << std::hex << cp << " has HTML and a repeating name." << std::endl;
+                std::cout << "WARNING: char " << std::hex << cp << " has HTML and a repeating name." << '\n';
             }
             for (auto &w : v->second)
                 strings.forceRemember(cp, uc::TextRole::HTML, w);
@@ -627,6 +624,7 @@ int main()
         flags |= styleFlags(cp);
 
         // CJK strange
+        /// @todo [urgent] take strange
         if (std::string_view sStrange = elChar.attribute("kStrange").as_string();
                 !sStrange.empty()) {
             strangeCjk.processCp(cp, sStrange);
@@ -644,10 +642,12 @@ int main()
         os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
 
         // Char’s version
+        /// @todo [urgent] get age
         std::string_view sVersion = elChar.attribute("age").as_string();
         os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
 
         // Char’s bidirectional data
+        /// @todo [urgent] get bidirectional class
         std::string_view sBidiClass = elChar.attribute("bc").as_string();
         bool isMirrored = elChar.attribute("Bidi_M").as_bool();
         if (isMirrored) {
