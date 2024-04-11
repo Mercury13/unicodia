@@ -27,12 +27,15 @@ namespace tx {
     using Scripts = ucd::RangeMap<std::string_view>;
     using Ages = ucd::RangeMap<std::string>;
     using Mirroring = std::unordered_set<char32_t>;
-    using DefaultIgnorable = ucd::RangeMap<Empty>;
+
+    struct Props {
+        ucd::RangeMap<Empty> defaultIgnorable, deprecated;
+    };
 
     Base loadBase();
     Scripts loadScripts(const ucd::PropBase& propBase);
     Ages loadAges();
     Mirroring loadMirroring();
-    DefaultIgnorable loadDerived();
+    Props loadProps();
 
 }   // ns tx

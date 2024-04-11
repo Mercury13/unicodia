@@ -417,9 +417,10 @@ int main()
 
     ///// Derived props ////////////////////////////////////////////////////////
 
-    std::cout << "Loading Unicode derived props..." << std::flush;
-    const tx::DefaultIgnorable di = tx::loadDerived();
-    std::cout << "OK, " << di.size() << " lines." << '\n';
+    std::cout << "Loading Unicode props..." << std::flush;
+    const tx::Props props = tx::loadProps();
+    std::cout << "OK, " << props.defaultIgnorable.size() << " DI lines, "
+                        << props.deprecated.size() << " DEP lines." << '\n';
 
     ///// Bracket //////////////////////////////////////////////////////////////
 
@@ -590,9 +591,8 @@ int main()
                 strings.forceRemember(cp, uc::TextRole::HTML, w);
         }
 
-        /// @todo [urgent] get deprecated, somewhere else
         // Deprecated
-        bool isDeprecated = (elChar.attribute("Dep").as_string()[0] == 'Y');
+        bool isDeprecated = props.deprecated.contains(cp);
         if (isDeprecated) {
             auto itDep = deprecatedInfo.find(cp);
             if (itDep != deprecatedInfo.end()) {
@@ -625,7 +625,7 @@ int main()
         if (isNoAa(cp))
             flags |= uc::m::NO_AA;
         // Default-ignorable
-        if (di.contains(cp)) {
+        if (props.defaultIgnorable.contains(cp)) {
             flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
         // VS16

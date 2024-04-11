@@ -295,29 +295,53 @@ tx::Mirroring tx::loadMirroring()
 }
 
 
-tx::DefaultIgnorable tx::loadDerived()
+tx::Props tx::loadProps()
 {
-    tx::DefaultIgnorable r;
+    tx::Props r;
 
-    std::ifstream is(DER_CORE);
-    std::string line;
-    while (std::getline(is, line)) {
-        std::string_view trimmed = str::trimSv(line);
-        if (trimmed.empty() || trimmed.starts_with('#'))
-            continue;
+    { std::ifstream is(DER_CORE);
+        std::string line;
+        while (std::getline(is, line)) {
+            std::string_view trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
 
-        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
-            trimmed = trimmed.substr(0, pHash);
+            if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+                trimmed = trimmed.substr(0, pHash);
+            }
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            if (vals.size() < 2)
+                continue;
+
+            auto range = ucd::Range::from(vals.at(0));
+            auto prop = vals.at(1);
+            if (prop == "Default_Ignorable_Code_Point"sv) {
+                r.defaultIgnorable.add(range);
+            }
         }
+    }
 
-        auto vals = str::splitSv(trimmed, ';', false);
-        if (vals.size() < 2)
-            continue;
+    { std::ifstream is(UCD_PROP);
+        std::string line;
+        while (std::getline(is, line)) {
+            std::string_view trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
 
-        auto range = ucd::Range::from(vals.at(0));
-        auto prop = vals.at(1);
-        if (prop == "Default_Ignorable_Code_Point"sv) {
-            r.add(range);
+            if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+                trimmed = trimmed.substr(0, pHash);
+            }
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            if (vals.size() < 2)
+                continue;
+
+            auto range = ucd::Range::from(vals.at(0));
+            auto prop = vals.at(1);
+            if (prop == "Deprecated"sv) {
+                r.deprecated.add(range);
+            }
         }
     }
 

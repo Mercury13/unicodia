@@ -111,6 +111,7 @@ namespace {
         { RAWDATA UCD_SCRIPTS },
         { RAWDATA UCD_MIRRORING },
         { RAWDATA UCD_ALIASES },
+        { RAWDATA UCD_PROP },
         { RAWDATA DER_AGE },
         { RAWDATA DER_CORE },
         { RAWDATA HAN_DIC },
