@@ -664,6 +664,7 @@ int main()
         /// @todo [urgent] get bidirectional class → column 3
         std::string_view sBidiClass = elChar.attribute("bc").as_string();
             // Check whether have bracket
+        /// @todo [urgent] Can check column 9 instead of a separate file?
         if (mirroring.contains(cp)) {
             if (sBidiClass != "ON"sv)
                 throw std::logic_error("Got strange bidi class for mirrored char");
