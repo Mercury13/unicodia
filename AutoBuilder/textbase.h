@@ -5,26 +5,25 @@
 #include <string>
 #include <vector>
 
-namespace tx {
+// UCD
+#include "ucdcom.h"
 
-    struct Cmp {
-        using is_transparent = void;
-        inline bool operator() (std::string_view x, std::string_view y) const noexcept
-            { return (x < y); }
-    };
+namespace tx {
 
     struct Cp
     {
         std::string correction;
         std::vector<std::string> abbrs, controls;
-        std::set<std::string, Cmp> names;
+        std::set<std::string, ucd::Cmp> names;
         /// @todo [future] similar chars?
 
         void eraseName(std::string_view x);
     };
 
     using Base = std::unordered_map<char32_t, Cp>;
+    using Scripts = ucd::RangeMap<std::string_view>;
 
     Base loadBase();
+    Scripts loadScripts(const ucd::PropBase& propBase);
 
 }   // ns tx

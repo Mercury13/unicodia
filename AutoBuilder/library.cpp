@@ -14,7 +14,7 @@
 
 // Project-local
 #include "data.h"
-#include "utils.h"
+#include "ucdcom.h"
 
 // Unicode
 #include "UcCp.h"

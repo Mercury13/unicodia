@@ -9,7 +9,7 @@
 
 // Project-local
 #include "loader.h"
-#include "utils.h"
+#include "ucdcom.h"
 #include "data.h"
 
 //#define DUMP_EQUALS
@@ -185,6 +185,36 @@ tx::Base tx::loadBase()
         for (auto& v1 : u.controls) {
             u.names.erase(v1);
         }
+    }
+
+    return r;
+}
+
+
+tx::Scripts tx::loadScripts(const ucd::PropBase& propBase)
+{
+    tx::Scripts r;
+
+    std::ifstream is(UCD_SCRIPTS);
+    std::string line;
+    while (std::getline(is, line)) {
+        std::string_view trimmed = str::trimSv(line);
+        if (trimmed.empty() || trimmed.starts_with('#'))
+            continue;
+
+        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+            trimmed = trimmed.substr(0, pHash);
+        }
+
+        auto vals = str::splitSv(trimmed, ';', false);
+        // 3 is minimum: cat, key, value
+        if (vals.size() < 2)
+            continue;
+
+        auto cps = vals.at(0);
+        auto pair = ucd::Range::from(cps);
+        auto name = propBase.shortenScript(vals.at(1));
+        r.add(pair, name);
     }
 
     return r;

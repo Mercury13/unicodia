@@ -106,7 +106,9 @@ namespace {
     constinit const LocalFile allLocalFiles[] {
         { RAWDATA ENTITIES_JSON },
         { RAWDATA UCD_ZIP },
+        { RAWDATA UCD_PVA },
         { RAWDATA UCD_NAMES },
+        { RAWDATA UCD_SCRIPTS },
         { RAWDATA UCD_ALIASES },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },

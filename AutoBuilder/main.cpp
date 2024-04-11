@@ -15,7 +15,7 @@
 #include "UcCp.h"
 
 // Project-local
-#include "utils.h"
+#include "ucdcom.h"
 #include "data.h"
 #include "egyptian.h"
 #include "entities.h"
@@ -397,6 +397,18 @@ int main()
     NotoData noto = loadNotoEmoji();
     std::cout << "OK, " << noto.singleChar.size() << " single-char emoji." << std::endl;
 
+    ///// Property list ////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode property list..." << std::flush;
+    const ucd::PropBase propBase = ucd::loadPropBase();
+    std::cout << "OK, " << propBase.nScripts() << " scripts." << std::endl;
+
+    ///// Script data //////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode script list..." << std::flush;
+    const tx::Scripts scripts = tx::loadScripts(propBase);
+    std::cout << "OK, " << scripts.size() << " lines." << std::endl;
+
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
@@ -466,22 +478,14 @@ int main()
         // • Control: Prefer na1
         // • Figment: Implement
 
-        /// @todo [future] Sometimes we have fixups, what to take?
-        /// @todo [future] Sometimes we have abbreviations, take them
         std::string_view sName = elChar.attribute("na").as_string();
-        if (sName.empty()) {
-            sName = elChar.attribute("na1").as_string();
-            // Remove abbreviation in brackets
-            if (auto pos = sName.find(" ("sv); pos != std::string_view::npos) {
-                sName = sName.substr(0, pos);
-            }
-        }
 
         std::string_view defaultAbbrev {};      // empty
 
-        if (cp == 0x205F) {
-            std::cout << "Here!" << '\n';
-        }
+        /// @todo [urgent] Debugging trap, delete!
+        // if (cp == 0x205F) {
+        //     std::cout << "Here!" << '\n';
+        // }
 
         AbbrevState abbrevState = AbbrevState::NORMAL;
         if (auto it = abbrevs.find(cp); it != abbrevs.end()) {
@@ -496,40 +500,7 @@ int main()
             }
         }
 
-        // // Aliases?
-        // for (auto elAlias : elChar.children("name-alias")) {
-        //     std::string_view sType = elAlias.attribute("type").as_string();
-        //     std::string_view newName =  elAlias.attribute("alias").as_string();
-        //     if (sType == "alternate"sv) {
-        //         restAliases.emplace_back(newName);
-        //     } else if (sType == "control"sv || sType == "figment"sv) {
-        //         if (sName.empty()) {
-        //             sName = newName;
-        //         } else {
-        //             // Find everywhere
-        //             if (sName != newName
-        //                 && std::find(restAliases.begin(), restAliases.end(), newName) == restAliases.end()) {
-        //                 restAliases.emplace_back(newName);
-        //             }
-        //         }
-        //     } else if (sType == "correction"sv) {
-        //         // Checked known chars, and corrections ARE BETTER than originals
-        //         sName = newName;
-        //     } else if (sType == "abbreviation") {
-        //         // Abbreviations
-        //         switch (abbrevState) {
-        //         case AbbrevState::DISABLE: break;
-        //         case AbbrevState::NORMAL:
-        //             if (newName != defaultAbbrev)      // do not dupe defaultAbbrev
-        //                 allAbbrevs.push_back(newName);
-        //             break;
-        //         case AbbrevState::ALIAS:
-        //             aliasAbbrevs.emplace_back(newName);
-        //             break;
-        //         }
-        //     }
-        // }
-
+        // Find other names in text base
         auto itCp = textBase.find(cp);
         tx::Cp* textCp = &DUMMY_CP;
         bool hasTextEntry = false;
