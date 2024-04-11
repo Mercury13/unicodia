@@ -758,7 +758,7 @@ int main()
 
     os.close();
 
-    ///// Process Han library //////////////////////////////////////////////////
+    ///// Han dictionary ///////////////////////////////////////////////////////
 
     std::cout << "Processing Han dictionary..." << std::flush;
     { std::ifstream is(HAN_DIC);
