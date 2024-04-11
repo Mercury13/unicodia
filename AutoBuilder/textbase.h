@@ -24,11 +24,11 @@ namespace tx {
     using Base = std::unordered_map<char32_t, Cp>;
     using Scripts = ucd::RangeMap<std::string_view>;
     using Ages = ucd::RangeMap<std::string>;
-    using Brackets = std::unordered_set<char32_t>;
+    using Mirroring = std::unordered_set<char32_t>;
 
     Base loadBase();
     Scripts loadScripts(const ucd::PropBase& propBase);
     Ages loadAges();
-    Brackets loadBrackets();
+    Mirroring loadMirroring();
 
 }   // ns tx

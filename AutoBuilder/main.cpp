@@ -417,9 +417,9 @@ int main()
 
     ///// Bracket //////////////////////////////////////////////////////////////
 
-    std::cout << "Loading Unicode bidi brackets..." << std::flush;
-    const tx::Brackets brackets = tx::loadBrackets();
-    std::cout << "OK, " << brackets.size() << " chars." << '\n';
+    std::cout << "Loading Unicode bidi mirroring..." << std::flush;
+    const tx::Mirroring mirroring = tx::loadMirroring();
+    std::cout << "OK, " << mirroring.size() << " chars." << '\n';
 
     ///// Emoji ////////////////////////////////////////////////////////////////
 
@@ -664,7 +664,7 @@ int main()
         /// @todo [urgent] get bidirectional class → column 3
         std::string_view sBidiClass = elChar.attribute("bc").as_string();
             // Check whether have bracket
-        if (brackets.contains(cp)) {
+        if (mirroring.contains(cp)) {
             if (sBidiClass != "ON"sv)
                 throw std::logic_error("Got strange bidi class for mirrored char");
             sBidiClass = "MIR"sv;

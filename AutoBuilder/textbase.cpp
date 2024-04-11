@@ -251,29 +251,44 @@ tx::Ages tx::loadAges()
 }
 
 
-tx::Brackets tx::loadBrackets()
+tx::Mirroring tx::loadMirroring()
 {
-    tx::Brackets r;
+    tx::Mirroring r;
 
-    std::ifstream is(UCD_BRACKETS);
+    std::ifstream is(UCD_MIRRORING);
     std::string line;
     while (std::getline(is, line)) {
         std::string_view trimmed = str::trimSv(line);
-        if (trimmed.empty() || trimmed.starts_with('#'))
+        if (trimmed.empty())
             continue;
 
-        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
-            trimmed = trimmed.substr(0, pHash);
+        if (trimmed.starts_with('#')) {
+            // Single
+            trimmed = trimmed.substr(1);
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            if (vals.size() < 2)
+                continue;
+
+            auto sCp = vals.at(0);
+            unsigned cp;
+            if (fromHexIf(sCp, cp))
+                r.insert(cp);
+        } else {
+            // Pair
+            if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+                trimmed = trimmed.substr(0, pHash);
+            }
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            // 1 is minimum: just character
+            if (vals.size() < 2)
+                continue;
+
+            auto sCp = vals.at(0);
+            auto cp = fromHex(sCp);
+            r.insert(cp);
         }
-
-        auto vals = str::splitSv(trimmed, ';', false);
-        // 1 is minimum: just character
-        if (vals.size() < 1)
-            continue;
-
-        auto sCp = vals.at(0);
-        auto cp = fromHex(sCp);
-        r.insert(cp);
     }
 
     return r;

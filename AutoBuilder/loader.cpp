@@ -110,7 +110,7 @@ namespace {
         { RAWDATA UCD_NAMES },
         { RAWDATA UCD_SCRIPTS },
         { RAWDATA UCD_AGES },
-        { RAWDATA UCD_BRACKETS },
+        { RAWDATA UCD_MIRRORING },
         { RAWDATA UCD_ALIASES },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },

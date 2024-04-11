@@ -1,7 +1,7 @@
 rem AFAIK, W10 1803+ has built-in cURL
 set UCD=https://www.unicode.org/Public/15.1.0/ucd
 curl https://www.unicode.org/Public/15.1.0/ucdxml/ucd.all.flat.zip -L --output ucd.all.flat.zip
-curl %UCD%/BidiBrackets.txt -L --output BidiBrackets.txt
+curl %UCD%/BidiMirroring.txt -L --output BidiMirroring.txt
 curl %UCD%/DerivedAge.txt -L --output DerivedAge.txt
 curl %UCD%/NameAliases.txt -L --output NameAliases.txt
 curl %UCD%/NamesList.txt -L --output NamesList.txt

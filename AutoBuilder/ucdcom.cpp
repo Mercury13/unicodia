@@ -18,7 +18,7 @@ using namespace std::string_view_literals;
 
 unsigned fromHex(std::string_view x)
 {
-    long long r;
+    unsigned r;
     auto beg = x.data();
     auto end = beg + x.length();
     auto res = std::from_chars(beg, end, r, 16);
@@ -27,6 +27,15 @@ unsigned fromHex(std::string_view x)
                 str::cat("[fromChars] Cannot parse hex ", x));
     }
     return r;
+}
+
+
+bool fromHexIf(std::string_view x, unsigned& y)
+{
+    auto beg = x.data();
+    auto end = beg + x.length();
+    auto res = std::from_chars(beg, end, y, 16);
+    return (res.ec == std::errc() && res.ptr == end);
 }
 
 
