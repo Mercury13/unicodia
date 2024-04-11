@@ -21,6 +21,13 @@ namespace ucd {
         static Range from(std::string_view x);
     };
 
+    struct RangeCmp : public std::less<Range> {
+        using is_transparent = void;
+        using std::less<Range>::operator();
+        bool operator () (const Range& x, char32_t y) const { return (x.first < y); }
+        bool operator () (char32_t x, const Range& y) const { return (x < y.first); }
+    };
+
     struct Cmp {
         using is_transparent = void;
         inline bool operator() (std::string_view x, std::string_view y) const noexcept
@@ -60,23 +67,36 @@ namespace ucd {
         void add(char32_t first, char32_t last, Args&& ... args)
             { add(Range{first, last}, std::forward<Args>(args)...); }
 
-        const Value* find(char32_t key);
+        const Value* find(char32_t key) const;
+
+        /// Finds key, or returns default value
+        /// @warning  Leaves reference
+        const Value& findDefRef(char32_t key, const Value& def) const;
+
         size_t size() const { return m.size(); }
     private:
-        std::map<Range, Value> m;
+        std::map<Range, Value, RangeCmp> m;
     };
 
 }   // namespace ucd
 
 
 template <class Value>
-const Value* ucd::RangeMap<Value>::find(char32_t key)
+const Value* ucd::RangeMap<Value>::find(char32_t key) const
 {
-    auto it = m.upper_bound(key + 1);
+    auto it = m.lower_bound(key + 1);
     if (it == m.begin())
         return nullptr;
     --it;
     if (!it->first.contains(key))
         return nullptr;
-    return it->second;
+    return &it->second;
+}
+
+
+template <class Value>
+const Value& ucd::RangeMap<Value>::findDefRef(char32_t key, const Value& def) const
+{
+    auto q = find(key);
+    return q ? *q : def;
 }

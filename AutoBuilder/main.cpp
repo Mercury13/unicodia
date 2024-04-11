@@ -657,8 +657,8 @@ int main()
         }
         os << "EcBidiClass::z_" << sBidiClass << ", ";
 
+        auto sScript = scripts.findDefRef(cp, "Zyyy"sv);
         // Char’s script
-        std::string_view sScript = elChar.attribute("sc").as_string();
             // Hiragana → Hentaigata
         if (sScript == "Hira"sv && sLowerName.starts_with("Hentaigana"))
             sScript = "Hent"sv;
