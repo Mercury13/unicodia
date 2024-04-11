@@ -694,6 +694,7 @@ int main()
         //    • Di — special digit
         //    • Nu — number
         // nv = Nan / whole number / vulgar fraction
+        /// @todo [urgent] get num type/value
         std::string_view sNumType = elChar.attribute("nt").as_string();
         std::string_view sNumValue = elChar.attribute("nv").as_string();
         auto& numPlace = nums.parse(sNumType, sNumValue);
