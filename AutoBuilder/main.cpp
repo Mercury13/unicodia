@@ -637,13 +637,6 @@ int main()
             flags |= uc::m::SPACE;
         flags |= styleFlags(cp);
 
-        // CJK strange
-        /// @todo [urgent] take strange
-        if (std::string_view sStrange = elChar.attribute("kStrange").as_string();
-                !sStrange.empty()) {
-            strangeCjk.processCp(cp, sStrange);
-        }
-
         // OUTPUT
         os << "{ "
            << "0x" << std::hex << cp << ", "    // subj
@@ -765,6 +758,31 @@ int main()
 
     os.close();
 
+    ///// Process Han library //////////////////////////////////////////////////
+
+    std::cout << "Processing Han dictionary..." << std::flush;
+    { std::ifstream is(HAN_DIC);
+        std::string line;
+        while (std::getline(is, line)) {
+            auto trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+            auto vals = str::splitSv(line, '\t');
+            if (vals.size() < 3)
+                continue;
+            auto sCp = vals.at(0);
+            if (sCp.starts_with("U+"sv))
+                sCp = sCp.substr(2);
+            auto cp = fromHex(sCp);
+            auto prop = vals.at(1);
+            auto value = vals.at(2);
+            if (prop == "kStrange") {
+                strangeCjk.processCp(cp, value);
+            }
+        }
+    }
+    std::cout << "OK" << '\n';
+
     ///// Write UcAutoLib.cpp //////////////////////////////////////////////////
 
     std::cout << "Saving library..." << std::flush;
@@ -780,7 +798,7 @@ int main()
     // Write!
     auto libr = lib::write(root, "UcAutoLib.cpp");
     auto longest = root.maxValueLength();
-    std::cout << "OK, " << libr.nNodes << " nodes, longest is " << longest << '.' << std::endl;
+    std::cout << "OK, " << libr.nNodes << " nodes, longest is " << longest << '.' << '\n';
 
     ///// Write UcAutoCount ////////////////////////////////////////////////////
 
