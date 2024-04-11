@@ -662,10 +662,6 @@ int main()
             // Hiragana → Hentaigata
         if (sScript == "Hira"sv && sLowerName.starts_with("Hentaigana"))
             sScript = "Hent"sv;
-        //std::string_view sScriptX = elChar.attribute("scx").as_string();
-        //if (sScript != sScriptX) {
-        //    std::cout << sCp << " has sc=" << sScript << ", scx=" << sScriptX << std::endl;
-        //}
         os << "EcScript::" << sScript << ", ";
 
         char32_t upCase = 0;
