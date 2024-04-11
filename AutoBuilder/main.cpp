@@ -415,6 +415,12 @@ int main()
     const tx::Ages ages = tx::loadAges();
     std::cout << "OK, " << ages.size() << " lines." << '\n';
 
+    ///// Bracket //////////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode bidi brackets..." << std::flush;
+    const tx::Brackets brackets = tx::loadBrackets();
+    std::cout << "OK, " << brackets.size() << " chars." << '\n';
+
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
@@ -657,12 +663,11 @@ int main()
         // Char’s bidirectional data
         /// @todo [urgent] get bidirectional class → column 3
         std::string_view sBidiClass = elChar.attribute("bc").as_string();
-        /// @todo [urgent] get bidi mirroring
-        bool isMirrored = elChar.attribute("Bidi_M").as_bool();
-        if (isMirrored) {
+            // Check whether have bracket
+        if (brackets.contains(cp)) {
             if (sBidiClass != "ON"sv)
                 throw std::logic_error("Got strange bidi class for mirrored char");
-            sBidiClass = "MIR";
+            sBidiClass = "MIR"sv;
         }
         os << "EcBidiClass::z_" << sBidiClass << ", ";
 

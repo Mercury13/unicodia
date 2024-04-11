@@ -249,3 +249,32 @@ tx::Ages tx::loadAges()
 
     return r;
 }
+
+
+tx::Brackets tx::loadBrackets()
+{
+    tx::Brackets r;
+
+    std::ifstream is(UCD_BRACKETS);
+    std::string line;
+    while (std::getline(is, line)) {
+        std::string_view trimmed = str::trimSv(line);
+        if (trimmed.empty() || trimmed.starts_with('#'))
+            continue;
+
+        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+            trimmed = trimmed.substr(0, pHash);
+        }
+
+        auto vals = str::splitSv(trimmed, ';', false);
+        // 1 is minimum: just character
+        if (vals.size() < 1)
+            continue;
+
+        auto sCp = vals.at(0);
+        auto cp = fromHex(sCp);
+        r.insert(cp);
+    }
+
+    return r;
+}
