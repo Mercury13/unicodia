@@ -8,9 +8,13 @@ curl %UCD%/NamesList.txt -L --output NamesList.txt
 curl %UCD%/Scripts.txt -L --output Scripts.txt
 curl %UCD%/PropertyValueAliases.txt -L --output PropertyValueAliases.txt
 curl %UCD%/UnicodeData.txt -L --output UnicodeData.txt
+curl %UCD%/Unihan.zip -L --output Unihan.zip
 curl https://www.unicode.org/Public/emoji/15.1/emoji-test.txt -L --output emoji-test.txt
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signunicode.xml -L --output signunicode.xml
 curl https://mjn.host.cs.st-andrews.ac.uk/egyptian/unicode/signdescriptioneng.xml -L --output signdescriptioneng.xml
 curl https://html.spec.whatwg.org/entities.json -L --output entities.json
 rem Moved and changed structure, also JSON appeared → use it!
 rem curl https://dev.w3.org/html5/html-author/charref --output entities.htm
+del Unihan_DictionaryLikeData.txt
+"c:\Program Files\7-zip\7z.exe" e Unihan.zip Unihan_DictionaryLikeData.txt
+del Unihan.zip
