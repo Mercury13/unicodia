@@ -7,6 +7,7 @@ curl %UCD%/NameAliases.txt -L --output NameAliases.txt
 curl %UCD%/NamesList.txt -L --output NamesList.txt
 curl %UCD%/Scripts.txt -L --output Scripts.txt
 curl %UCD%/PropertyValueAliases.txt -L --output PropertyValueAliases.txt
+curl %UCD%/DerivedCoreProperties.txt -L --output DerivedCoreProperties.txt
 curl %UCD%/UnicodeData.txt -L --output UnicodeData.txt
 curl %UCD%/Unihan.zip -L --output Unihan.zip
 curl https://www.unicode.org/Public/emoji/15.1/emoji-test.txt -L --output emoji-test.txt

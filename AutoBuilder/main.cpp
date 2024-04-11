@@ -728,6 +728,7 @@ int main()
 
     ///// Blocks ///////////////////////////////////////////////////////////////
 
+    /// @todo [urgent] What to do with blocks?
     size_t nBlocks = 0;
     auto elBlocks = need(elRoot.child("blocks"), "Need <blocks>");
 
