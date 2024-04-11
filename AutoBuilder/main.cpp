@@ -369,16 +369,16 @@ std::string encodeC(std::string_view x)
 int main()
 {
     std::cout << "Have " << dictionary.size() << " words in dictionary, "
-              << nExceptions() << " exceptions." << std::endl;
+              << nExceptions() << " exceptions." << '\n';
 
     ///// Loader ///////////////////////////////////////////////////////////////
     ///
     std::cout << "Checking for loader..." << std::flush;
     try {
         checkLoader();
-        std::cout << "OK" << std::endl;
+        std::cout << "OK" << '\n';
     } catch (const std::exception& e) {
-        std::cout << "ERROR: " << e.what() << std::endl;
+        std::cout << "ERROR: " << e.what() << '\n';
         return 1;
     }
 
@@ -395,31 +395,31 @@ int main()
 
     std::cout << "Loading Noto emoji list..." << std::flush;
     NotoData noto = loadNotoEmoji();
-    std::cout << "OK, " << noto.singleChar.size() << " single-char emoji." << std::endl;
+    std::cout << "OK, " << noto.singleChar.size() << " single-char emoji." << '\n';
 
     ///// Property list ////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode property list..." << std::flush;
     const ucd::PropBase propBase = ucd::loadPropBase();
-    std::cout << "OK, " << propBase.nScripts() << " scripts." << std::endl;
+    std::cout << "OK, " << propBase.nScripts() << " scripts." << '\n';
 
     ///// Script data //////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode script list..." << std::flush;
     const tx::Scripts scripts = tx::loadScripts(propBase);
-    std::cout << "OK, " << scripts.size() << " lines." << std::endl;
+    std::cout << "OK, " << scripts.size() << " lines." << '\n';
 
     ///// Age data /////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode ages..." << std::flush;
     const tx::Ages ages = tx::loadAges();
-    std::cout << "OK, " << ages.size() << " lines." << std::endl;
+    std::cout << "OK, " << ages.size() << " lines." << '\n';
 
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
     auto emoji = lib::loadEmoji(EMOJI_TEST);
-    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << std::endl;
+    std::cout << "OK, " << emoji.count << " emoji, " << emoji.vs16.size() << " are VS16." << '\n';
 
     lib::StrangeCjk strangeCjk;
 
@@ -427,19 +427,19 @@ int main()
 
     std::cout << "Loading Egyptian base..." << std::flush;
     auto egypBase = egyp::loadBase();
-    std::cout << "OK, " << egypBase.size() << " hieros." << std::endl;
+    std::cout << "OK, " << egypBase.size() << " hieros." << '\n';
 
     ///// Library //////////////////////////////////////////////////////////////
 
     std::cout << "Loading manual library..." << std::flush;
     auto manualLib = lib::loadManual(LIBRARY_XML);
-    std::cout << "OK, " << manualLib.forgetMap.size() << " CPs in forget checker." << std::endl;
+    std::cout << "OK, " << manualLib.forgetMap.size() << " CPs in forget checker." << '\n';
 
     ///// text base ////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode text base..." << std::flush;
     auto textBase = tx::loadBase();
-    std::cout << "OK, " << textBase.size() << " text objects." << std::endl;
+    std::cout << "OK, " << textBase.size() << " text objects." << '\n';
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -453,7 +453,7 @@ int main()
 
     std::cout << "Loading Unicode XML base..." << std::flush;
     doc.load_buffer(memXml.data(), memXml.size());
-    std::cout << "OK" << std::endl;
+    std::cout << "OK" << '\n';
 
     ///// CpInfo ///////////////////////////////////////////////////////////////
 
@@ -470,7 +470,7 @@ int main()
     NumCache nums;
     int nDeprecated = 0;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
-        /// @todo [urgent] get CP → surely present
+        /// @todo [urgent] get CP → column 0
         std::string_view sCp = elChar.attribute("cp").as_string();
         if (sCp.empty()) {
             ++nSpecialRanges;
@@ -485,7 +485,7 @@ int main()
         // • Control: Prefer na1
         // • Figment: Implement
 
-        /// @todo [urgent] get name, replace code with # → surely present
+        /// @todo [urgent] get name, replace code with # → column 1
         std::string_view sName = elChar.attribute("na").as_string();
 
         std::string_view defaultAbbrev {};      // empty
@@ -578,6 +578,7 @@ int main()
                 strings.forceRemember(cp, uc::TextRole::HTML, w);
         }
 
+        /// @todo [urgent] get deprecated, somewhere else
         // Deprecated
         bool isDeprecated = (elChar.attribute("Dep").as_string()[0] == 'Y');
         if (isDeprecated) {
@@ -612,6 +613,7 @@ int main()
         if (isNoAa(cp))
             flags |= uc::m::NO_AA;
         // Default-ignorable
+        /// @todo [urgent] default-ignorable
         if (elChar.attribute("DI").as_string()[0] == 'Y') {
             flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
@@ -644,7 +646,7 @@ int main()
            << " }, ";                           // /name
 
         // Char’s type
-        /// @todo [urgent] get char’s type
+        /// @todo [urgent] get char’s type → column 2
         std::string_view sCharCat = elChar.attribute("gc").as_string();
         os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
 
@@ -653,8 +655,9 @@ int main()
         os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
 
         // Char’s bidirectional data
-        /// @todo [urgent] get bidirectional class
+        /// @todo [urgent] get bidirectional class → column 3
         std::string_view sBidiClass = elChar.attribute("bc").as_string();
+        /// @todo [urgent] get bidi mirroring
         bool isMirrored = elChar.attribute("Bidi_M").as_bool();
         if (isMirrored) {
             if (sBidiClass != "ON"sv)
@@ -671,6 +674,7 @@ int main()
         os << "EcScript::" << sScript << ", ";
 
         char32_t upCase = 0;
+        /// @todo [urgent] get uppercase → column 12
         std::string_view upText = elChar.attribute("uc").as_string();
         if (!upText.empty()             // Empty → no upper case
                 && upText[0] != '#'     // # → no upper case
@@ -705,10 +709,10 @@ int main()
 
     os << "};" << '\n';
 
-    std::cout << "OK" << std::endl;
+    std::cout << "OK" << '\n';
     std::cout << "  Found " << std::dec << nChars << " chars, "
               << nDeprecated << " deprecated, "
-              << nSpecialRanges << " special ranges." << std::endl;
+              << nSpecialRanges << " special ranges." << '\n';
 
     os << "const char8_t uc::allStrings[] = \n";
     char text[40];
@@ -738,11 +742,11 @@ int main()
 
         ++nBlocks;
     }
-    std::cout << "  Found " << std::dec << nBlocks << " blocks." << std::endl;
+    std::cout << "  Found " << std::dec << nBlocks << " blocks." << '\n';
 
     ///// Numerics /////////////////////////////////////////////////////////////
 
-    std::cout << "  Stockpiled " << nums.size() << " numerics." << std::endl;
+    std::cout << "  Stockpiled " << nums.size() << " numerics." << '\n';
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
         os << "{ " << std::dec << v.num << ", " << v.denom << ", " << v.altInt
