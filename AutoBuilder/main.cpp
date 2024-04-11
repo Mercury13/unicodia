@@ -644,6 +644,7 @@ int main()
            << " }, ";                           // /name
 
         // Char’s type
+        /// @todo [urgent] get char’s type
         std::string_view sCharCat = elChar.attribute("gc").as_string();
         os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
 
