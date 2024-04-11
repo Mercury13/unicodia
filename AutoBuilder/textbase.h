@@ -21,14 +21,18 @@ namespace tx {
         void eraseName(std::string_view x);
     };
 
+    struct Empty {};
+
     using Base = std::unordered_map<char32_t, Cp>;
     using Scripts = ucd::RangeMap<std::string_view>;
     using Ages = ucd::RangeMap<std::string>;
     using Mirroring = std::unordered_set<char32_t>;
+    using DefaultIgnorable = ucd::RangeMap<Empty>;
 
     Base loadBase();
     Scripts loadScripts(const ucd::PropBase& propBase);
     Ages loadAges();
     Mirroring loadMirroring();
+    DefaultIgnorable loadDerived();
 
 }   // ns tx

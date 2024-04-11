@@ -415,6 +415,12 @@ int main()
     const tx::Ages ages = tx::loadAges();
     std::cout << "OK, " << ages.size() << " lines." << '\n';
 
+    ///// Derived props ////////////////////////////////////////////////////////
+
+    std::cout << "Loading Unicode derived props..." << std::flush;
+    const tx::DefaultIgnorable di = tx::loadDerived();
+    std::cout << "OK, " << di.size() << " lines." << '\n';
+
     ///// Bracket //////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode bidi mirroring..." << std::flush;
@@ -619,8 +625,7 @@ int main()
         if (isNoAa(cp))
             flags |= uc::m::NO_AA;
         // Default-ignorable
-        /// @todo [urgent] default-ignorable
-        if (elChar.attribute("DI").as_string()[0] == 'Y') {
+        if (di.contains(cp)) {
             flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
         // VS16

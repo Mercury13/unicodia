@@ -225,7 +225,7 @@ tx::Ages tx::loadAges()
 {
     tx::Ages r;
 
-    std::ifstream is(UCD_AGES);
+    std::ifstream is(DER_AGE);
     std::string line;
     while (std::getline(is, line)) {
         std::string_view trimmed = str::trimSv(line);
@@ -288,6 +288,36 @@ tx::Mirroring tx::loadMirroring()
             auto sCp = vals.at(0);
             auto cp = fromHex(sCp);
             r.insert(cp);
+        }
+    }
+
+    return r;
+}
+
+
+tx::DefaultIgnorable tx::loadDerived()
+{
+    tx::DefaultIgnorable r;
+
+    std::ifstream is(DER_CORE);
+    std::string line;
+    while (std::getline(is, line)) {
+        std::string_view trimmed = str::trimSv(line);
+        if (trimmed.empty() || trimmed.starts_with('#'))
+            continue;
+
+        if (auto pHash = trimmed.find('#'); pHash != std::string_view::npos) {
+            trimmed = trimmed.substr(0, pHash);
+        }
+
+        auto vals = str::splitSv(trimmed, ';', false);
+        if (vals.size() < 2)
+            continue;
+
+        auto range = ucd::Range::from(vals.at(0));
+        auto prop = vals.at(1);
+        if (prop == "Default_Ignorable_Code_Point"sv) {
+            r.add(range);
         }
     }
 

@@ -65,13 +65,20 @@ namespace ucd {
     public:
         template <class... Args>
         void add(const Range& pair, Args&& ... args)
-            { m.insert_or_assign( pair, std::forward<Args>(args)...); }
+        {
+            if constexpr (sizeof...(args) == 0) {
+                m.insert_or_assign(pair, Value{} );
+            } else {
+                m.insert_or_assign( pair, std::forward<Args>(args)...);
+            }
+        }
 
         template <class... Args>
         void add(char32_t first, char32_t last, Args&& ... args)
             { add(Range{first, last}, std::forward<Args>(args)...); }
 
         const Value* find(char32_t key) const;
+        bool contains(char32_t key) const { return find(key); }
 
         /// Finds key, or returns default value
         /// @warning  Leaves reference
