@@ -119,7 +119,6 @@ namespace {
         { RAWDATA EGYP_DESCRIPTION },
         { MISCFILES LIBRARY_XML },
         { MISCFILES SUTTON_TXT },
-        { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 
 }

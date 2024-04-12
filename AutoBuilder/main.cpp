@@ -283,25 +283,6 @@ void NewLine::trigger()
 }
 
 
-struct NotoData {
-    std::unordered_set<char32_t> singleChar;
-};
-
-
-NotoData loadNotoEmoji()
-{
-    NotoData r;
-    std::ifstream is(SINGLEEMOJI_TXT);
-    std::string s;
-    while (std::getline(is, s)) {
-        // Single-char emoji
-        auto code = fromHex(s);
-        r.singleChar.insert(code);
-    }
-    return r;
-}
-
-
 namespace {
     tx::Cp DUMMY_CP;
 }   // anon namespace
@@ -352,12 +333,6 @@ int main()
                         << htmlEntities.stats.entities.nGood << " good en's, "
                         << htmlEntities.stats.entities.nTooLong << " too long (2+) en's, "
                         << htmlEntities.stats.entities.nWrong << " wrong en's." << std::endl;
-
-    ///// Noto emoji ///////////////////////////////////////////////////////////
-
-    std::cout << "Loading Noto emoji list..." << std::flush;
-    NotoData noto = loadNotoEmoji();
-    std::cout << "OK, " << noto.singleChar.size() << " single-char emoji." << '\n';
 
     ///// Property list ////////////////////////////////////////////////////////
 
@@ -573,9 +548,6 @@ int main()
         // Misrenders
         if (emoji.misrenders.contains(cp))
             flags |= uc::Cfg::G_MISRENDER;
-        // SVG emoji
-        if (noto.singleChar.contains(cp))
-            flags |= uc::m::SVG_EMOJI;
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
             flags |= uc::m::SPACE;
