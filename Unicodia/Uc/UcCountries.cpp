@@ -189,6 +189,8 @@ constinit const cou::Country ALL_COUNTRIES[] {
             cou::Popul::DFLT },
     { "CP", cou::Type::FRANCE_UNINHABITED, cou::Location::PACIFIC_NORTH_AMERICA, // Clipperton Island
             cou::Popul::UNINHABITED },
+    { "CQ", cou::Type::BRITAIN_DEPENDENT, cou::Location::ENGLISH_CHANNEL, // Sark
+            cou::Popul::DFLT },
     { "CR", cou::Type::RECOGNIZED_STATE, cou::Location::NORTH_AMERICA, // Costa Rica
             cou::Popul::DFLT },
     { "CU", cou::Type::RECOGNIZED_STATE, cou::Location::ATLANTIC_CARIBBEAN, // Cuba
