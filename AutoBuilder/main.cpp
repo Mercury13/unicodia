@@ -671,9 +671,10 @@ int main()
     std::cout << "  Stockpiled " << nums.size() << " numerics." << '\n';
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
+        std::string_view shownText = v.textValue.empty() ? "NaN"sv : v.textValue;
         os << "{ " << std::dec << v.num << ", " << v.denom << ", " << v.altInt
            << ", EcNumType::" << v.type
-           << " },  // " << v.index << " is " << v.textValue << '\n';
+           << " },  // " << v.index << " is " << shownText << '\n';
     }
     os << "};\n";
 

@@ -118,6 +118,7 @@ namespace {
         { RAWDATA DER_CORE },
         { RAWDATA DER_NAME },
         { RAWDATA HAN_DIC },
+        { RAWDATA HAN_NUM_VALUE },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },
         { RAWDATA EGYP_DESCRIPTION },

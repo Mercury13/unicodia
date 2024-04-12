@@ -17,6 +17,7 @@
 #define DER_CORE "DerivedCoreProperties.txt"
 #define DER_NAME "DerivedName.txt"
 #define HAN_DIC "Unihan_DictionaryLikeData.txt"
+#define HAN_NUM_VALUE "Unihan_NumericValues.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"
 #define ENTITIES_JSON "entities.json"

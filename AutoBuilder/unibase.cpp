@@ -30,6 +30,11 @@ namespace {
     constinit ucd::NumType NUM_SPECIAL_DIGIT { "SPECIAL_DIGIT" };
     constinit ucd::NumType NUM_NUMBER { "NUMBER" };
 
+    constinit ucd::CpInfo::Numeric NO_NUMERIC {
+        .type = &NUM_NONE,
+        .value{},
+    };
+
     bool hasSubstr(std::string_view haystack, std::string_view needle)
     {
         auto pos = haystack.find(needle);
@@ -89,7 +94,34 @@ namespace {
 
     std::unordered_map<char32_t, std::string> loadHanNumValues()
     {
+        std::unordered_map<char32_t, std::string> r;
 
+        std::string line;
+        std::ifstream is(HAN_NUM_VALUE);
+        while (std::getline(is, line)) {
+            auto trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+
+            auto vals = str::splitSv(trimmed, '\t', false);
+            if (vals.size() < 3)
+                continue;
+
+            auto sCp = vals.at(0);
+            if (sCp.starts_with("U+"))
+                sCp = sCp.substr(2);
+
+            auto cp = fromHex(sCp);
+            auto type = vals.at(1);
+            auto value = vals.at(2);
+
+            if (type == "kOtherNumeric"sv || type == "kPrimaryNumeric"
+                    || type == "kAccountingNumeric") {
+                r[cp] = value;
+            }
+        }
+
+        return r;
     }
 
 }
@@ -100,6 +132,7 @@ ucd::SupportData ucd::loadSupportData()
 
     r.nBlocks = loadBlocks();
     r.hangulLines = loadHangulLines();
+    r.hanNumValues = loadHanNumValues();
 
     return r;
 }
@@ -111,6 +144,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
     std::string line;
     CpInfo info;
     char32_t firstCp = 0;
+    bool needNumeric = false;
     std::string_view repeatedText = "REPEAT!! #"sv;
     std::string replNameCache;
     while (std::getline(is, line)) {
@@ -177,10 +211,12 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                     || info.name == "<CJK Ideograph Extension I, First>"sv
                     || info.name == "<CJK Ideograph Extension J, First>"sv) {
                 firstCp = info.cp;
+                needNumeric = true;
                 repeatedText = "CJK unified ideograph-#"sv;  // Let it be for Hangul
             } else if (info.name == "<Tangut Ideograph, First>"sv
                     || info.name == "<Tangut Ideograph Supplement, First>"sv) {
                 firstCp = info.cp;
+                needNumeric = false;
                 repeatedText = "Tangut ideograph-#"sv;
             } else if (info.name == "<CJK Ideograph Extension A, Last>"sv
                     || info.name == "<CJK Ideograph, Last>"sv
@@ -200,6 +236,14 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                 info.name = repeatedText;
                 for (char32_t i = firstCp; i <= lastCp; ++i) {
                     info.cp = i;
+                    info.numeric = NO_NUMERIC;
+                    if (needNumeric) {
+                        if (auto q = supportData.hanNumValues.find(i);
+                                q != supportData.hanNumValues.end()) {
+                            info.numeric.type = &NUM_NUMBER;
+                            info.numeric.value = q->second;
+                        }
+                    }
                     sink.act(info);
                 }
                 firstCp = 0;
@@ -231,8 +275,9 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
             // Decapitalise it here!
             if (firstCp != 0)
                 throw std::logic_error("Unfinished special range");
-            std::string decapped = decapitalize(info.name, info.cp);
+            std::string decapped { info.name };
             str::replace(decapped, sCp, "#"sv);
+            decapped = decapitalize(decapped, info.cp);
             info.name = decapped;
             sink.act(info);
         }
