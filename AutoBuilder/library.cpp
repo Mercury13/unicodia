@@ -317,6 +317,9 @@ lib::EmojiData lib::loadEmoji(const char* fname)
             }
         }
     }
+    // Flags A…Z are also single-characters
+    for (char32_t i = cp::FLAG_A; i <= cp::FLAG_Z; ++i)
+        r.allSingleChar.insert(i);
     return r;
 }
 
