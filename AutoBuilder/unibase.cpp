@@ -27,11 +27,44 @@ namespace {
     constinit ucd::NumType NUM_SPECIAL_DIGIT { "SPECIAL_DIGIT" };
     constinit ucd::NumType NUM_NUMBER { "NUMBER" };
 
+    bool hasSubstr(std::string_view haystack, std::string_view needle)
+    {
+        auto pos = haystack.find(needle);
+        return (pos != std::string_view::npos);
+    }
+
+    unsigned loadBlocks()
+    {
+        unsigned r = 0;
+        std::ifstream is(UCD_BLOCKS);
+        std::string line;
+        while (std::getline(is, line)) {
+            auto trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            if (vals.size() < 2)
+                continue;
+
+            auto name = vals.at(1);
+            if (hasSubstr(name, "Private Use") || hasSubstr(name, "Surrogate"))
+                continue;
+
+            ++r;
+        }
+
+        return r;
+    }
+
 }
 
 ucd::SupportData ucd::loadSupportData()
 {
     SupportData r;
+
+    r.nBlocks = loadBlocks();
+
     return r;
 }
 

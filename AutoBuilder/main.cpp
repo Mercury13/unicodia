@@ -275,13 +275,6 @@ void StringLib::finishCp()
 }
 
 
-bool hasSubstr(std::string_view haystack, std::string_view needle)
-{
-    auto pos = haystack.find(needle);
-    return (pos != std::string_view::npos);
-}
-
-
 class NewLine
 {
 public:
@@ -303,28 +296,6 @@ void NewLine::trigger()
 struct NotoData {
     std::unordered_set<char32_t> singleChar;
 };
-
-
-//inline std::string_view chompPrefSuffSv(
-//        std::string_view x, std::string_view pref, std::string_view suff)
-//{
-//    auto len2 = pref.length() + suff.length();
-//    if (x.length() > len2 && x.starts_with(pref) && x.ends_with(suff)) {
-//        return x.substr(pref.length(), x.length() - len2);
-//    } else {
-//        return {};
-//    }
-//}
-
-
-//inline std::string_view chompPref(std::string_view x, std::string_view pref)
-//{
-//    if (x.starts_with(pref)) {
-//        return x.substr(pref.length());
-//    } else {
-//        return {};
-//    }
-//}
 
 
 NotoData loadNotoEmoji()
@@ -459,7 +430,7 @@ int main()
 
     std::cout << "Loading main base's support data..." << std::flush;
     const auto supportData = ucd::loadSupportData();
-    std::cout << "OK" << '\n';
+    std::cout << "OK, " << supportData.nBlocks << " blocks." << '\n';
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -751,24 +722,6 @@ int main()
     }
     os << ";\n";
 
-    ///// Blocks ///////////////////////////////////////////////////////////////
-
-    /// @todo [urgent] What to do with blocks?
-    size_t nBlocks = 0;
-    auto elBlocks = need(elRoot.child("blocks"), "Need <blocks>");
-
-    for (pugi::xml_node elBlock : elBlocks.children("block")) {
-        //auto sFirst = elBlock.attribute("first-cp").as_string();
-        //auto sLast = elBlock.attribute("last-cp").as_string();
-        std::string_view name = elBlock.attribute("name").as_string();
-
-        if (hasSubstr(name, "Private Use") || hasSubstr(name, "Surrogate"))
-            continue;
-
-        ++nBlocks;
-    }
-    std::cout << "  Found " << std::dec << nBlocks << " blocks." << '\n';
-
     ///// Numerics /////////////////////////////////////////////////////////////
 
     std::cout << "  Stockpiled " << nums.size() << " numerics." << '\n';
@@ -835,7 +788,7 @@ int main()
     os << '\n';
     os << "namespace uc {\n";
     os << "constexpr int N_CPS = " << std::dec << nChars << ";\n";
-    os << "constexpr int N_BLOCKS = " << std::dec << nBlocks << ";\n";
+    os << "constexpr int N_BLOCKS = " << std::dec << supportData.nBlocks << ";\n";
     os << "constexpr int N_NUMERICS = " << std::dec << nums.size() << ";\n";
     os << "constexpr int N_EMOJI = " << std::dec << emoji.count << ";\n";
     os << "constexpr unsigned LONGEST_LIB = " << std::dec << longest << ";  // in codepoints" "\n";

@@ -112,6 +112,7 @@ namespace {
         { RAWDATA UCD_MIRRORING },
         { RAWDATA UCD_ALIASES },
         { RAWDATA UCD_PROP },
+        { RAWDATA UCD_BLOCKS },
         { RAWDATA UCD_MAIN },
         { RAWDATA DER_AGE },
         { RAWDATA DER_CORE },

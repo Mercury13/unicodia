@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
 
 namespace ucd {
 
@@ -10,12 +11,14 @@ namespace ucd {
         std::string name;
     };
 
-    struct SupportData {
-        std::vector<HangulLine> hangulLines;
-    };
-
     struct NumType {
         std::string_view name;
+    };
+
+    struct SupportData {
+        unsigned nBlocks = 0;
+        std::vector<HangulLine> hangulLines;
+        std::unordered_map<char32_t, std::string> numValues;
     };
 
     struct CpInfo {
