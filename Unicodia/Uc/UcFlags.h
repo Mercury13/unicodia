@@ -63,10 +63,9 @@ namespace uc {
         HAS_TEXT      = 1<<4,   ///< [+] object has text
         SEARCHABLE    = 1<<5,   ///< [+] emoji is searchable. Unsearchable are single-character, VS16, race/direction
         DECODEABLE    = 1<<6,   ///< [+] emoji is decodeable. Undecodeable are single-character, VS16
-        SINGLE_CHAR_EMOJI = 1<<7, /// [+] emoji is either single-char or VS16, for recovering drawing methods
-        MISRENDER_0   = 1<<8,   ///< [+] emoji misrenders are possible
-        MISRENDER_1   = 1<<9,   ///< [+] emoji misrenders are possible
-        MISRENDER_2   = 1<<10,   ///< [+] emoji misrenders are possible
+        MISRENDER_0   = 1<<7,   ///< [+] emoji misrenders are possible
+        MISRENDER_1   = 1<<8,   ///< [+] emoji misrenders are possible
+        MISRENDER_2   = 1<<9,   ///< [+] emoji misrenders are possible
     };
     using Lfgs = Flags<Lfg>;
     DEFINE_ENUM_OPS(Lfg)

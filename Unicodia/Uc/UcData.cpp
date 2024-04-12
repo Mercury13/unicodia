@@ -1748,6 +1748,7 @@ namespace {
         case EmojiClass::SEQ_OTHER_NONZWJ:
             ++version.stats.emoji.nw.seq.nOtherNonZwj; break;
         }
+        // Traverse children
         const auto a = node.iFirstChild;
         const auto b = a + node.nChildren;
         for (int i = a; i < b; ++i)

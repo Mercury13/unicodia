@@ -34,6 +34,7 @@ namespace lib {
     struct EmojiData {
         /// Total # of emoji
         size_t count = 0;
+        std::unordered_set<char32_t> allSingleChar;
         /// List of single-char emoji that use VS16
         std::unordered_set<char32_t> vs16;
         /// List of single-char emoji that are

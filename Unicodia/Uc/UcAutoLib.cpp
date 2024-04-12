@@ -39,175 +39,175 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"monkey-face", 10, 3, 163, Lfg(8), EcVersion::NONE },   // 33
 { {}, u8"heart", 10, 25, 166, Lfg(8), EcVersion::NONE },   // 34
 { {}, u8"emotion", 10, 14, 191, Lfg(8), EcVersion::NONE },   // 35
-{ U"\U0001F600", u8"grinning face", 20, 0, -1, Lfg(129), EcVersion::E1_0 },   // 36
-{ U"\U0001F603", u8"grinning face with big eyes", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 37
-{ U"\U0001F604", u8"grinning face with smiling eyes", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 38
-{ U"\U0001F601", u8"beaming face with smiling eyes", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 39
-{ U"\U0001F606", u8"grinning squinting face", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 40
-{ U"\U0001F605", u8"grinning face with sweat", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 41
-{ U"\U0001F923", u8"rolling on the floor laughing", 20, 0, -1, Lfg(129), EcVersion::E3_0 },   // 42
-{ U"\U0001F602", u8"face with tears of joy", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 43
-{ U"\U0001F642", u8"slightly smiling face", 20, 0, -1, Lfg(129), EcVersion::E1_0 },   // 44
-{ U"\U0001F643", u8"upside-down face", 20, 0, -1, Lfg(129), EcVersion::E1_0 },   // 45
-{ U"\U0001FAE0", u8"melting face", 20, 0, -1, Lfg(129), EcVersion::E14_0 },   // 46
-{ U"\U0001F609", u8"winking face", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 47
-{ U"\U0001F60A", u8"smiling face with smiling eyes", 20, 0, -1, Lfg(129), EcVersion::E0_6 },   // 48
-{ U"\U0001F607", u8"smiling face with halo", 20, 0, -1, Lfg(129), EcVersion::E1_0 },   // 49
-{ U"\U0001F970", u8"smiling face with hearts", 21, 0, -1, Lfg(129), EcVersion::E11_0 },   // 50
-{ U"\U0001F60D", u8"smiling face with heart-eyes", 21, 0, -1, Lfg(129), EcVersion::E0_6 },   // 51
-{ U"\U0001F929", u8"star-struck", 21, 0, -1, Lfg(129), EcVersion::E5_0 },   // 52
-{ U"\U0001F618", u8"face blowing a kiss", 21, 0, -1, Lfg(129), EcVersion::E0_6 },   // 53
-{ U"\U0001F617", u8"kissing face", 21, 0, -1, Lfg(129), EcVersion::E1_0 },   // 54
-{ U"\u263A\uFE0F", u8"smiling face", 21, 0, -1, Lfg(193), EcVersion::E0_6 },   // 55
-{ U"\U0001F61A", u8"kissing face with closed eyes", 21, 0, -1, Lfg(129), EcVersion::E0_6 },   // 56
-{ U"\U0001F619", u8"kissing face with smiling eyes", 21, 0, -1, Lfg(129), EcVersion::E1_0 },   // 57
-{ U"\U0001F972", u8"smiling face with tear", 21, 0, -1, Lfg(129), EcVersion::E13_0 },   // 58
-{ U"\U0001F60B", u8"face savoring food", 22, 0, -1, Lfg(129), EcVersion::E0_6 },   // 59
-{ U"\U0001F61B", u8"face with tongue", 22, 0, -1, Lfg(129), EcVersion::E1_0 },   // 60
-{ U"\U0001F61C", u8"winking face with tongue", 22, 0, -1, Lfg(129), EcVersion::E0_6 },   // 61
-{ U"\U0001F92A", u8"zany face", 22, 0, -1, Lfg(129), EcVersion::E5_0 },   // 62
-{ U"\U0001F61D", u8"squinting face with tongue", 22, 0, -1, Lfg(129), EcVersion::E0_6 },   // 63
-{ U"\U0001F911", u8"money-mouth face", 22, 0, -1, Lfg(129), EcVersion::E1_0 },   // 64
-{ U"\U0001F917", u8"smiling face with open hands", 23, 0, -1, Lfg(129), EcVersion::E1_0 },   // 65
-{ U"\U0001F92D", u8"face with hand over mouth", 23, 0, -1, Lfg(129), EcVersion::E5_0 },   // 66
-{ U"\U0001FAE2", u8"face with open eyes and hand over mouth", 23, 0, -1, Lfg(129), EcVersion::E14_0 },   // 67
-{ U"\U0001FAE3", u8"face with peeking eye", 23, 0, -1, Lfg(129), EcVersion::E14_0 },   // 68
-{ U"\U0001F92B", u8"shushing face", 23, 0, -1, Lfg(129), EcVersion::E5_0 },   // 69
-{ U"\U0001F914", u8"thinking face", 23, 0, -1, Lfg(129), EcVersion::E1_0 },   // 70
-{ U"\U0001FAE1", u8"saluting face", 23, 0, -1, Lfg(129), EcVersion::E14_0 },   // 71
-{ U"\U0001F910", u8"zipper-mouth face", 24, 0, -1, Lfg(129), EcVersion::E1_0 },   // 72
-{ U"\U0001F928", u8"face with raised eyebrow", 24, 0, -1, Lfg(129), EcVersion::E5_0 },   // 73
-{ U"\U0001F610", u8"neutral face", 24, 0, -1, Lfg(129), EcVersion::E0_7 },   // 74
-{ U"\U0001F611", u8"expressionless face", 24, 0, -1, Lfg(129), EcVersion::E1_0 },   // 75
-{ U"\U0001F636", u8"face without mouth", 24, 0, -1, Lfg(129), EcVersion::E1_0 },   // 76
-{ U"\U0001FAE5", u8"dotted line face", 24, 0, -1, Lfg(129), EcVersion::E14_0 },   // 77
+{ U"\U0001F600", u8"grinning face", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 36
+{ U"\U0001F603", u8"grinning face with big eyes", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 37
+{ U"\U0001F604", u8"grinning face with smiling eyes", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 38
+{ U"\U0001F601", u8"beaming face with smiling eyes", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 39
+{ U"\U0001F606", u8"grinning squinting face", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 40
+{ U"\U0001F605", u8"grinning face with sweat", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 41
+{ U"\U0001F923", u8"rolling on the floor laughing", 20, 0, -1, Lfg(1), EcVersion::E3_0 },   // 42
+{ U"\U0001F602", u8"face with tears of joy", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 43
+{ U"\U0001F642", u8"slightly smiling face", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 44
+{ U"\U0001F643", u8"upside-down face", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 45
+{ U"\U0001FAE0", u8"melting face", 20, 0, -1, Lfg(1), EcVersion::E14_0 },   // 46
+{ U"\U0001F609", u8"winking face", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 47
+{ U"\U0001F60A", u8"smiling face with smiling eyes", 20, 0, -1, Lfg(1), EcVersion::E0_6 },   // 48
+{ U"\U0001F607", u8"smiling face with halo", 20, 0, -1, Lfg(1), EcVersion::E1_0 },   // 49
+{ U"\U0001F970", u8"smiling face with hearts", 21, 0, -1, Lfg(1), EcVersion::E11_0 },   // 50
+{ U"\U0001F60D", u8"smiling face with heart-eyes", 21, 0, -1, Lfg(1), EcVersion::E0_6 },   // 51
+{ U"\U0001F929", u8"star-struck", 21, 0, -1, Lfg(1), EcVersion::E5_0 },   // 52
+{ U"\U0001F618", u8"face blowing a kiss", 21, 0, -1, Lfg(1), EcVersion::E0_6 },   // 53
+{ U"\U0001F617", u8"kissing face", 21, 0, -1, Lfg(1), EcVersion::E1_0 },   // 54
+{ U"\u263A\uFE0F", u8"smiling face", 21, 0, -1, Lfg(65), EcVersion::E0_6 },   // 55
+{ U"\U0001F61A", u8"kissing face with closed eyes", 21, 0, -1, Lfg(1), EcVersion::E0_6 },   // 56
+{ U"\U0001F619", u8"kissing face with smiling eyes", 21, 0, -1, Lfg(1), EcVersion::E1_0 },   // 57
+{ U"\U0001F972", u8"smiling face with tear", 21, 0, -1, Lfg(1), EcVersion::E13_0 },   // 58
+{ U"\U0001F60B", u8"face savoring food", 22, 0, -1, Lfg(1), EcVersion::E0_6 },   // 59
+{ U"\U0001F61B", u8"face with tongue", 22, 0, -1, Lfg(1), EcVersion::E1_0 },   // 60
+{ U"\U0001F61C", u8"winking face with tongue", 22, 0, -1, Lfg(1), EcVersion::E0_6 },   // 61
+{ U"\U0001F92A", u8"zany face", 22, 0, -1, Lfg(1), EcVersion::E5_0 },   // 62
+{ U"\U0001F61D", u8"squinting face with tongue", 22, 0, -1, Lfg(1), EcVersion::E0_6 },   // 63
+{ U"\U0001F911", u8"money-mouth face", 22, 0, -1, Lfg(1), EcVersion::E1_0 },   // 64
+{ U"\U0001F917", u8"smiling face with open hands", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 65
+{ U"\U0001F92D", u8"face with hand over mouth", 23, 0, -1, Lfg(1), EcVersion::E5_0 },   // 66
+{ U"\U0001FAE2", u8"face with open eyes and hand over mouth", 23, 0, -1, Lfg(1), EcVersion::E14_0 },   // 67
+{ U"\U0001FAE3", u8"face with peeking eye", 23, 0, -1, Lfg(1), EcVersion::E14_0 },   // 68
+{ U"\U0001F92B", u8"shushing face", 23, 0, -1, Lfg(1), EcVersion::E5_0 },   // 69
+{ U"\U0001F914", u8"thinking face", 23, 0, -1, Lfg(1), EcVersion::E1_0 },   // 70
+{ U"\U0001FAE1", u8"saluting face", 23, 0, -1, Lfg(1), EcVersion::E14_0 },   // 71
+{ U"\U0001F910", u8"zipper-mouth face", 24, 0, -1, Lfg(1), EcVersion::E1_0 },   // 72
+{ U"\U0001F928", u8"face with raised eyebrow", 24, 0, -1, Lfg(1), EcVersion::E5_0 },   // 73
+{ U"\U0001F610", u8"neutral face", 24, 0, -1, Lfg(1), EcVersion::E0_7 },   // 74
+{ U"\U0001F611", u8"expressionless face", 24, 0, -1, Lfg(1), EcVersion::E1_0 },   // 75
+{ U"\U0001F636", u8"face without mouth", 24, 0, -1, Lfg(1), EcVersion::E1_0 },   // 76
+{ U"\U0001FAE5", u8"dotted line face", 24, 0, -1, Lfg(1), EcVersion::E14_0 },   // 77
 { U"\U0001F636\u200D\U0001F32B\uFE0F", u8"face in clouds", 24, 0, -1, Lfg(97), EcVersion::E13_1 },   // 78
-{ U"\U0001F60F", u8"smirking face", 24, 0, -1, Lfg(129), EcVersion::E0_6 },   // 79
-{ U"\U0001F612", u8"unamused face", 24, 0, -1, Lfg(129), EcVersion::E0_6 },   // 80
-{ U"\U0001F644", u8"face with rolling eyes", 24, 0, -1, Lfg(129), EcVersion::E1_0 },   // 81
-{ U"\U0001F62C", u8"grimacing face", 24, 0, -1, Lfg(129), EcVersion::E1_0 },   // 82
+{ U"\U0001F60F", u8"smirking face", 24, 0, -1, Lfg(1), EcVersion::E0_6 },   // 79
+{ U"\U0001F612", u8"unamused face", 24, 0, -1, Lfg(1), EcVersion::E0_6 },   // 80
+{ U"\U0001F644", u8"face with rolling eyes", 24, 0, -1, Lfg(1), EcVersion::E1_0 },   // 81
+{ U"\U0001F62C", u8"grimacing face", 24, 0, -1, Lfg(1), EcVersion::E1_0 },   // 82
 { U"\U0001F62E\u200D\U0001F4A8", u8"face exhaling", 24, 0, -1, Lfg(97), EcVersion::E13_1 },   // 83
-{ U"\U0001F925", u8"lying face", 24, 0, -1, Lfg(129), EcVersion::E3_0 },   // 84
-{ U"\U0001FAE8", u8"shaking face", 24, 0, -1, Lfg(129), EcVersion::E15_0 },   // 85
+{ U"\U0001F925", u8"lying face", 24, 0, -1, Lfg(1), EcVersion::E3_0 },   // 84
+{ U"\U0001FAE8", u8"shaking face", 24, 0, -1, Lfg(1), EcVersion::E15_0 },   // 85
 { U"\U0001F642\u200D\u2194\uFE0F", u8"head shaking horizontally", 24, 0, -1, Lfg(97), EcVersion::E15_1 },   // 86
 { U"\U0001F642\u200D\u2195\uFE0F", u8"head shaking vertically", 24, 0, -1, Lfg(97), EcVersion::E15_1 },   // 87
-{ U"\U0001F60C", u8"relieved face", 25, 0, -1, Lfg(129), EcVersion::E0_6 },   // 88
-{ U"\U0001F614", u8"pensive face", 25, 0, -1, Lfg(129), EcVersion::E0_6 },   // 89
-{ U"\U0001F62A", u8"sleepy face", 25, 0, -1, Lfg(129), EcVersion::E0_6 },   // 90
-{ U"\U0001F924", u8"drooling face", 25, 0, -1, Lfg(129), EcVersion::E3_0 },   // 91
-{ U"\U0001F634", u8"sleeping face", 25, 0, -1, Lfg(129), EcVersion::E1_0 },   // 92
-{ U"\U0001FAE9", u8"face with bags under eyes", 25, 0, -1, Lfg(129), EcVersion::E16_0 },   // 93
-{ U"\U0001F637", u8"face with medical mask", 26, 0, -1, Lfg(129), EcVersion::E0_6 },   // 94
-{ U"\U0001F912", u8"face with thermometer", 26, 0, -1, Lfg(129), EcVersion::E1_0 },   // 95
-{ U"\U0001F915", u8"face with head-bandage", 26, 0, -1, Lfg(129), EcVersion::E1_0 },   // 96
-{ U"\U0001F922", u8"nauseated face", 26, 0, -1, Lfg(129), EcVersion::E3_0 },   // 97
-{ U"\U0001F92E", u8"face vomiting", 26, 0, -1, Lfg(129), EcVersion::E5_0 },   // 98
-{ U"\U0001F927", u8"sneezing face", 26, 0, -1, Lfg(129), EcVersion::E3_0 },   // 99
-{ U"\U0001F975", u8"hot face", 26, 0, -1, Lfg(129), EcVersion::E11_0 },   // 100
-{ U"\U0001F976", u8"cold face", 26, 0, -1, Lfg(129), EcVersion::E11_0 },   // 101
-{ U"\U0001F974", u8"woozy face", 26, 0, -1, Lfg(129), EcVersion::E11_0 },   // 102
-{ U"\U0001F635", u8"face with crossed-out eyes", 26, 0, -1, Lfg(129), EcVersion::E0_6 },   // 103
+{ U"\U0001F60C", u8"relieved face", 25, 0, -1, Lfg(1), EcVersion::E0_6 },   // 88
+{ U"\U0001F614", u8"pensive face", 25, 0, -1, Lfg(1), EcVersion::E0_6 },   // 89
+{ U"\U0001F62A", u8"sleepy face", 25, 0, -1, Lfg(1), EcVersion::E0_6 },   // 90
+{ U"\U0001F924", u8"drooling face", 25, 0, -1, Lfg(1), EcVersion::E3_0 },   // 91
+{ U"\U0001F634", u8"sleeping face", 25, 0, -1, Lfg(1), EcVersion::E1_0 },   // 92
+{ U"\U0001FAE9", u8"face with bags under eyes", 25, 0, -1, Lfg(1), EcVersion::E16_0 },   // 93
+{ U"\U0001F637", u8"face with medical mask", 26, 0, -1, Lfg(1), EcVersion::E0_6 },   // 94
+{ U"\U0001F912", u8"face with thermometer", 26, 0, -1, Lfg(1), EcVersion::E1_0 },   // 95
+{ U"\U0001F915", u8"face with head-bandage", 26, 0, -1, Lfg(1), EcVersion::E1_0 },   // 96
+{ U"\U0001F922", u8"nauseated face", 26, 0, -1, Lfg(1), EcVersion::E3_0 },   // 97
+{ U"\U0001F92E", u8"face vomiting", 26, 0, -1, Lfg(1), EcVersion::E5_0 },   // 98
+{ U"\U0001F927", u8"sneezing face", 26, 0, -1, Lfg(1), EcVersion::E3_0 },   // 99
+{ U"\U0001F975", u8"hot face", 26, 0, -1, Lfg(1), EcVersion::E11_0 },   // 100
+{ U"\U0001F976", u8"cold face", 26, 0, -1, Lfg(1), EcVersion::E11_0 },   // 101
+{ U"\U0001F974", u8"woozy face", 26, 0, -1, Lfg(1), EcVersion::E11_0 },   // 102
+{ U"\U0001F635", u8"face with crossed-out eyes", 26, 0, -1, Lfg(1), EcVersion::E0_6 },   // 103
 { U"\U0001F635\u200D\U0001F4AB", u8"face with spiral eyes", 26, 0, -1, Lfg(97), EcVersion::E13_1 },   // 104
-{ U"\U0001F92F", u8"exploding head", 26, 0, -1, Lfg(129), EcVersion::E5_0 },   // 105
-{ U"\U0001F920", u8"cowboy hat face", 27, 0, -1, Lfg(129), EcVersion::E3_0 },   // 106
-{ U"\U0001F973", u8"partying face", 27, 0, -1, Lfg(129), EcVersion::E11_0 },   // 107
-{ U"\U0001F978", u8"disguised face", 27, 0, -1, Lfg(129), EcVersion::E13_0 },   // 108
-{ U"\U0001F60E", u8"smiling face with sunglasses", 28, 0, -1, Lfg(129), EcVersion::E1_0 },   // 109
-{ U"\U0001F913", u8"nerd face", 28, 0, -1, Lfg(129), EcVersion::E1_0 },   // 110
-{ U"\U0001F9D0", u8"face with monocle", 28, 0, -1, Lfg(129), EcVersion::E5_0 },   // 111
-{ U"\U0001F615", u8"confused face", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 112
-{ U"\U0001FAE4", u8"face with diagonal mouth", 29, 0, -1, Lfg(129), EcVersion::E14_0 },   // 113
-{ U"\U0001F61F", u8"worried face", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 114
-{ U"\U0001F641", u8"slightly frowning face", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 115
-{ U"\u2639\uFE0F", u8"frowning face", 29, 0, -1, Lfg(193), EcVersion::E0_7 },   // 116
-{ U"\U0001F62E", u8"face with open mouth", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 117
-{ U"\U0001F62F", u8"hushed face", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 118
-{ U"\U0001F632", u8"astonished face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 119
-{ U"\U0001F633", u8"flushed face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 120
-{ U"\U0001F97A", u8"pleading face", 29, 0, -1, Lfg(129), EcVersion::E11_0 },   // 121
-{ U"\U0001F979", u8"face holding back tears", 29, 0, -1, Lfg(129), EcVersion::E14_0 },   // 122
-{ U"\U0001F626", u8"frowning face with open mouth", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 123
-{ U"\U0001F627", u8"anguished face", 29, 0, -1, Lfg(129), EcVersion::E1_0 },   // 124
-{ U"\U0001F628", u8"fearful face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 125
-{ U"\U0001F630", u8"anxious face with sweat", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 126
-{ U"\U0001F625", u8"sad but relieved face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 127
-{ U"\U0001F622", u8"crying face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 128
-{ U"\U0001F62D", u8"loudly crying face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 129
-{ U"\U0001F631", u8"face screaming in fear", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 130
-{ U"\U0001F616", u8"confounded face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 131
-{ U"\U0001F623", u8"persevering face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 132
-{ U"\U0001F61E", u8"disappointed face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 133
-{ U"\U0001F613", u8"downcast face with sweat", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 134
-{ U"\U0001F629", u8"weary face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 135
-{ U"\U0001F62B", u8"tired face", 29, 0, -1, Lfg(129), EcVersion::E0_6 },   // 136
-{ U"\U0001F971", u8"yawning face", 29, 0, -1, Lfg(129), EcVersion::E12_0 },   // 137
-{ U"\U0001F624", u8"face with steam from nose", 30, 0, -1, Lfg(129), EcVersion::E0_6 },   // 138
-{ U"\U0001F621", u8"enraged face", 30, 0, -1, Lfg(129), EcVersion::E0_6 },   // 139
-{ U"\U0001F620", u8"angry face", 30, 0, -1, Lfg(129), EcVersion::E0_6 },   // 140
-{ U"\U0001F92C", u8"face with symbols on mouth", 30, 0, -1, Lfg(129), EcVersion::E5_0 },   // 141
-{ U"\U0001F608", u8"smiling face with horns", 30, 0, -1, Lfg(129), EcVersion::E1_0 },   // 142
-{ U"\U0001F47F", u8"angry face with horns", 30, 0, -1, Lfg(129), EcVersion::E0_6 },   // 143
-{ U"\U0001F480", u8"skull", 30, 0, -1, Lfg(129), EcVersion::E0_6 },   // 144
-{ U"\u2620\uFE0F", u8"skull and crossbones", 30, 0, -1, Lfg(193), EcVersion::E1_0 },   // 145
-{ U"\U0001F4A9", u8"pile of poo", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 146
-{ U"\U0001F921", u8"clown face", 31, 0, -1, Lfg(129), EcVersion::E3_0 },   // 147
-{ U"\U0001F479", u8"ogre", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 148
-{ U"\U0001F47A", u8"goblin", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 149
-{ U"\U0001F47B", u8"ghost", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 150
-{ U"\U0001F47D", u8"alien", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 151
-{ U"\U0001F47E", u8"alien monster", 31, 0, -1, Lfg(129), EcVersion::E0_6 },   // 152
-{ U"\U0001F916", u8"robot", 31, 0, -1, Lfg(129), EcVersion::E1_0 },   // 153
-{ U"\U0001F63A", u8"grinning cat", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 154
-{ U"\U0001F638", u8"grinning cat with smiling eyes", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 155
-{ U"\U0001F639", u8"cat with tears of joy", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 156
-{ U"\U0001F63B", u8"smiling cat with heart-eyes", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 157
-{ U"\U0001F63C", u8"cat with wry smile", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 158
-{ U"\U0001F63D", u8"kissing cat", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 159
-{ U"\U0001F640", u8"weary cat", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 160
-{ U"\U0001F63F", u8"crying cat", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 161
-{ U"\U0001F63E", u8"pouting cat", 32, 0, -1, Lfg(129), EcVersion::E0_6 },   // 162
-{ U"\U0001F648", u8"see-no-evil monkey", 33, 0, -1, Lfg(129), EcVersion::E0_6 },   // 163
-{ U"\U0001F649", u8"hear-no-evil monkey", 33, 0, -1, Lfg(129), EcVersion::E0_6 },   // 164
-{ U"\U0001F64A", u8"speak-no-evil monkey", 33, 0, -1, Lfg(129), EcVersion::E0_6 },   // 165
-{ U"\U0001F48C", u8"love letter", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 166
-{ U"\U0001F498", u8"heart with arrow", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 167
-{ U"\U0001F49D", u8"heart with ribbon", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 168
-{ U"\U0001F496", u8"sparkling heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 169
-{ U"\U0001F497", u8"growing heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 170
-{ U"\U0001F493", u8"beating heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 171
-{ U"\U0001F49E", u8"revolving hearts", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 172
-{ U"\U0001F495", u8"two hearts", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 173
-{ U"\U0001F49F", u8"heart decoration", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 174
-{ U"\u2763\uFE0F", u8"heart exclamation", 34, 0, -1, Lfg(193), EcVersion::E1_0 },   // 175
-{ U"\U0001F494", u8"broken heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 176
+{ U"\U0001F92F", u8"exploding head", 26, 0, -1, Lfg(1), EcVersion::E5_0 },   // 105
+{ U"\U0001F920", u8"cowboy hat face", 27, 0, -1, Lfg(1), EcVersion::E3_0 },   // 106
+{ U"\U0001F973", u8"partying face", 27, 0, -1, Lfg(1), EcVersion::E11_0 },   // 107
+{ U"\U0001F978", u8"disguised face", 27, 0, -1, Lfg(1), EcVersion::E13_0 },   // 108
+{ U"\U0001F60E", u8"smiling face with sunglasses", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 109
+{ U"\U0001F913", u8"nerd face", 28, 0, -1, Lfg(1), EcVersion::E1_0 },   // 110
+{ U"\U0001F9D0", u8"face with monocle", 28, 0, -1, Lfg(1), EcVersion::E5_0 },   // 111
+{ U"\U0001F615", u8"confused face", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 112
+{ U"\U0001FAE4", u8"face with diagonal mouth", 29, 0, -1, Lfg(1), EcVersion::E14_0 },   // 113
+{ U"\U0001F61F", u8"worried face", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 114
+{ U"\U0001F641", u8"slightly frowning face", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 115
+{ U"\u2639\uFE0F", u8"frowning face", 29, 0, -1, Lfg(65), EcVersion::E0_7 },   // 116
+{ U"\U0001F62E", u8"face with open mouth", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 117
+{ U"\U0001F62F", u8"hushed face", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 118
+{ U"\U0001F632", u8"astonished face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 119
+{ U"\U0001F633", u8"flushed face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 120
+{ U"\U0001F97A", u8"pleading face", 29, 0, -1, Lfg(1), EcVersion::E11_0 },   // 121
+{ U"\U0001F979", u8"face holding back tears", 29, 0, -1, Lfg(1), EcVersion::E14_0 },   // 122
+{ U"\U0001F626", u8"frowning face with open mouth", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 123
+{ U"\U0001F627", u8"anguished face", 29, 0, -1, Lfg(1), EcVersion::E1_0 },   // 124
+{ U"\U0001F628", u8"fearful face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 125
+{ U"\U0001F630", u8"anxious face with sweat", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 126
+{ U"\U0001F625", u8"sad but relieved face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 127
+{ U"\U0001F622", u8"crying face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 128
+{ U"\U0001F62D", u8"loudly crying face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 129
+{ U"\U0001F631", u8"face screaming in fear", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 130
+{ U"\U0001F616", u8"confounded face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 131
+{ U"\U0001F623", u8"persevering face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 132
+{ U"\U0001F61E", u8"disappointed face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 133
+{ U"\U0001F613", u8"downcast face with sweat", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 134
+{ U"\U0001F629", u8"weary face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 135
+{ U"\U0001F62B", u8"tired face", 29, 0, -1, Lfg(1), EcVersion::E0_6 },   // 136
+{ U"\U0001F971", u8"yawning face", 29, 0, -1, Lfg(1), EcVersion::E12_0 },   // 137
+{ U"\U0001F624", u8"face with steam from nose", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 138
+{ U"\U0001F621", u8"enraged face", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 139
+{ U"\U0001F620", u8"angry face", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 140
+{ U"\U0001F92C", u8"face with symbols on mouth", 30, 0, -1, Lfg(1), EcVersion::E5_0 },   // 141
+{ U"\U0001F608", u8"smiling face with horns", 30, 0, -1, Lfg(1), EcVersion::E1_0 },   // 142
+{ U"\U0001F47F", u8"angry face with horns", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 143
+{ U"\U0001F480", u8"skull", 30, 0, -1, Lfg(1), EcVersion::E0_6 },   // 144
+{ U"\u2620\uFE0F", u8"skull and crossbones", 30, 0, -1, Lfg(65), EcVersion::E1_0 },   // 145
+{ U"\U0001F4A9", u8"pile of poo", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 146
+{ U"\U0001F921", u8"clown face", 31, 0, -1, Lfg(1), EcVersion::E3_0 },   // 147
+{ U"\U0001F479", u8"ogre", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 148
+{ U"\U0001F47A", u8"goblin", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 149
+{ U"\U0001F47B", u8"ghost", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 150
+{ U"\U0001F47D", u8"alien", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 151
+{ U"\U0001F47E", u8"alien monster", 31, 0, -1, Lfg(1), EcVersion::E0_6 },   // 152
+{ U"\U0001F916", u8"robot", 31, 0, -1, Lfg(1), EcVersion::E1_0 },   // 153
+{ U"\U0001F63A", u8"grinning cat", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 154
+{ U"\U0001F638", u8"grinning cat with smiling eyes", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 155
+{ U"\U0001F639", u8"cat with tears of joy", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 156
+{ U"\U0001F63B", u8"smiling cat with heart-eyes", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 157
+{ U"\U0001F63C", u8"cat with wry smile", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 158
+{ U"\U0001F63D", u8"kissing cat", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 159
+{ U"\U0001F640", u8"weary cat", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 160
+{ U"\U0001F63F", u8"crying cat", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 161
+{ U"\U0001F63E", u8"pouting cat", 32, 0, -1, Lfg(1), EcVersion::E0_6 },   // 162
+{ U"\U0001F648", u8"see-no-evil monkey", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 163
+{ U"\U0001F649", u8"hear-no-evil monkey", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 164
+{ U"\U0001F64A", u8"speak-no-evil monkey", 33, 0, -1, Lfg(1), EcVersion::E0_6 },   // 165
+{ U"\U0001F48C", u8"love letter", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 166
+{ U"\U0001F498", u8"heart with arrow", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 167
+{ U"\U0001F49D", u8"heart with ribbon", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 168
+{ U"\U0001F496", u8"sparkling heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 169
+{ U"\U0001F497", u8"growing heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 170
+{ U"\U0001F493", u8"beating heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 171
+{ U"\U0001F49E", u8"revolving hearts", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 172
+{ U"\U0001F495", u8"two hearts", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 173
+{ U"\U0001F49F", u8"heart decoration", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 174
+{ U"\u2763\uFE0F", u8"heart exclamation", 34, 0, -1, Lfg(65), EcVersion::E1_0 },   // 175
+{ U"\U0001F494", u8"broken heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 176
 { U"\u2764\uFE0F\u200D\U0001F525", u8"heart on fire", 34, 0, -1, Lfg(97), EcVersion::E13_1 },   // 177
 { U"\u2764\uFE0F\u200D\U0001FA79", u8"mending heart", 34, 0, -1, Lfg(97), EcVersion::E13_1 },   // 178
-{ U"\u2764\uFE0F", u8"red heart", 34, 0, -1, Lfg(193), EcVersion::E0_6 },   // 179
-{ U"\U0001FA77", u8"pink heart", 34, 0, -1, Lfg(129), EcVersion::E15_0 },   // 180
-{ U"\U0001F9E1", u8"orange heart", 34, 0, -1, Lfg(129), EcVersion::E5_0 },   // 181
-{ U"\U0001F49B", u8"yellow heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 182
-{ U"\U0001F49A", u8"green heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 183
-{ U"\U0001F499", u8"blue heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 184
-{ U"\U0001FA75", u8"light blue heart", 34, 0, -1, Lfg(129), EcVersion::E15_0 },   // 185
-{ U"\U0001F49C", u8"purple heart", 34, 0, -1, Lfg(129), EcVersion::E0_6 },   // 186
-{ U"\U0001F90E", u8"brown heart", 34, 0, -1, Lfg(129), EcVersion::E12_0 },   // 187
-{ U"\U0001F5A4", u8"black heart", 34, 0, -1, Lfg(129), EcVersion::E3_0 },   // 188
-{ U"\U0001FA76", u8"grey heart", 34, 0, -1, Lfg(129), EcVersion::E15_0 },   // 189
-{ U"\U0001F90D", u8"white heart", 34, 0, -1, Lfg(129), EcVersion::E12_0 },   // 190
-{ U"\U0001F48B", u8"kiss mark", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 191
-{ U"\U0001F4AF", u8"hundred points", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 192
-{ U"\U0001F4A2", u8"anger symbol", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 193
-{ U"\U0001F4A5", u8"collision", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 194
-{ U"\U0001F4AB", u8"dizzy", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 195
-{ U"\U0001F4A6", u8"sweat droplets", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 196
-{ U"\U0001F4A8", u8"dashing away", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 197
-{ U"\U0001F573\uFE0F", u8"hole", 35, 0, -1, Lfg(193), EcVersion::E0_7 },   // 198
-{ U"\U0001F4AC", u8"speech balloon", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 199
+{ U"\u2764\uFE0F", u8"red heart", 34, 0, -1, Lfg(65), EcVersion::E0_6 },   // 179
+{ U"\U0001FA77", u8"pink heart", 34, 0, -1, Lfg(1), EcVersion::E15_0 },   // 180
+{ U"\U0001F9E1", u8"orange heart", 34, 0, -1, Lfg(1), EcVersion::E5_0 },   // 181
+{ U"\U0001F49B", u8"yellow heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 182
+{ U"\U0001F49A", u8"green heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 183
+{ U"\U0001F499", u8"blue heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 184
+{ U"\U0001FA75", u8"light blue heart", 34, 0, -1, Lfg(1), EcVersion::E15_0 },   // 185
+{ U"\U0001F49C", u8"purple heart", 34, 0, -1, Lfg(1), EcVersion::E0_6 },   // 186
+{ U"\U0001F90E", u8"brown heart", 34, 0, -1, Lfg(1), EcVersion::E12_0 },   // 187
+{ U"\U0001F5A4", u8"black heart", 34, 0, -1, Lfg(1), EcVersion::E3_0 },   // 188
+{ U"\U0001FA76", u8"grey heart", 34, 0, -1, Lfg(1), EcVersion::E15_0 },   // 189
+{ U"\U0001F90D", u8"white heart", 34, 0, -1, Lfg(1), EcVersion::E12_0 },   // 190
+{ U"\U0001F48B", u8"kiss mark", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 191
+{ U"\U0001F4AF", u8"hundred points", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 192
+{ U"\U0001F4A2", u8"anger symbol", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 193
+{ U"\U0001F4A5", u8"collision", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 194
+{ U"\U0001F4AB", u8"dizzy", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 195
+{ U"\U0001F4A6", u8"sweat droplets", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 196
+{ U"\U0001F4A8", u8"dashing away", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 197
+{ U"\U0001F573\uFE0F", u8"hole", 35, 0, -1, Lfg(65), EcVersion::E0_7 },   // 198
+{ U"\U0001F4AC", u8"speech balloon", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 199
 { U"\U0001F441\uFE0F\u200D\U0001F5E8\uFE0F", u8"eye in speech bubble", 35, 0, -1, Lfg(97), EcVersion::E2_0 },   // 200
-{ U"\U0001F5E8\uFE0F", u8"left speech bubble", 35, 0, -1, Lfg(193), EcVersion::E2_0 },   // 201
-{ U"\U0001F5EF\uFE0F", u8"right anger bubble", 35, 0, -1, Lfg(193), EcVersion::E0_7 },   // 202
-{ U"\U0001F4AD", u8"thought balloon", 35, 0, -1, Lfg(129), EcVersion::E1_0 },   // 203
-{ U"\U0001F4A4", u8"ZZZ", 35, 0, -1, Lfg(129), EcVersion::E0_6 },   // 204
+{ U"\U0001F5E8\uFE0F", u8"left speech bubble", 35, 0, -1, Lfg(65), EcVersion::E2_0 },   // 201
+{ U"\U0001F5EF\uFE0F", u8"right anger bubble", 35, 0, -1, Lfg(65), EcVersion::E0_7 },   // 202
+{ U"\U0001F4AD", u8"thought balloon", 35, 0, -1, Lfg(1), EcVersion::E1_0 },   // 203
+{ U"\U0001F4A4", u8"ZZZ", 35, 0, -1, Lfg(1), EcVersion::E0_6 },   // 204
 { {}, u8"hand-fingers-open", 11, 66, 221, Lfg(8), EcVersion::NONE },   // 205
 { {}, u8"hand-fingers-partial", 11, 54, 287, Lfg(8), EcVersion::NONE },   // 206
 { {}, u8"hand-single-finger", 11, 42, 341, Lfg(8), EcVersion::NONE },   // 207
@@ -224,235 +224,235 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"person-resting", 11, 30, 2104, Lfg(8), EcVersion::NONE },   // 218
 { {}, u8"family", 11, 337, 2134, Lfg(8), EcVersion::NONE },   // 219
 { {}, u8"person-symbol", 11, 11, 2471, Lfg(8), EcVersion::NONE },   // 220
-{ U"\U0001F44B", u8"waving hand", 205, 0, -1, Lfg(129), EcVersion::E0_6 },   // 221
+{ U"\U0001F44B", u8"waving hand", 205, 0, -1, Lfg(1), EcVersion::E0_6 },   // 221
 { U"\U0001F44B\U0001F3FB", u8"waving hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 222
 { U"\U0001F44B\U0001F3FC", u8"waving hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 223
 { U"\U0001F44B\U0001F3FD", u8"waving hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 224
 { U"\U0001F44B\U0001F3FE", u8"waving hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 225
 { U"\U0001F44B\U0001F3FF", u8"waving hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 226
-{ U"\U0001F91A", u8"raised back of hand", 205, 0, -1, Lfg(129), EcVersion::E3_0 },   // 227
+{ U"\U0001F91A", u8"raised back of hand", 205, 0, -1, Lfg(1), EcVersion::E3_0 },   // 227
 { U"\U0001F91A\U0001F3FB", u8"raised back of hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E3_0 },   // 228
 { U"\U0001F91A\U0001F3FC", u8"raised back of hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E3_0 },   // 229
 { U"\U0001F91A\U0001F3FD", u8"raised back of hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E3_0 },   // 230
 { U"\U0001F91A\U0001F3FE", u8"raised back of hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E3_0 },   // 231
 { U"\U0001F91A\U0001F3FF", u8"raised back of hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E3_0 },   // 232
-{ U"\U0001F590\uFE0F", u8"hand with fingers splayed", 205, 0, -1, Lfg(193), EcVersion::E0_7 },   // 233
+{ U"\U0001F590\uFE0F", u8"hand with fingers splayed", 205, 0, -1, Lfg(65), EcVersion::E0_7 },   // 233
 { U"\U0001F590\U0001F3FB", u8"hand with fingers splayed: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 234
 { U"\U0001F590\U0001F3FC", u8"hand with fingers splayed: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 235
 { U"\U0001F590\U0001F3FD", u8"hand with fingers splayed: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 236
 { U"\U0001F590\U0001F3FE", u8"hand with fingers splayed: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 237
 { U"\U0001F590\U0001F3FF", u8"hand with fingers splayed: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 238
-{ U"\u270B", u8"raised hand", 205, 0, -1, Lfg(129), EcVersion::E0_6 },   // 239
+{ U"\u270B", u8"raised hand", 205, 0, -1, Lfg(1), EcVersion::E0_6 },   // 239
 { U"\u270B\U0001F3FB", u8"raised hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 240
 { U"\u270B\U0001F3FC", u8"raised hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 241
 { U"\u270B\U0001F3FD", u8"raised hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 242
 { U"\u270B\U0001F3FE", u8"raised hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 243
 { U"\u270B\U0001F3FF", u8"raised hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 244
-{ U"\U0001F596", u8"Vulcan salute", 205, 0, -1, Lfg(129), EcVersion::E1_0 },   // 245
+{ U"\U0001F596", u8"Vulcan salute", 205, 0, -1, Lfg(1), EcVersion::E1_0 },   // 245
 { U"\U0001F596\U0001F3FB", u8"Vulcan salute: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 246
 { U"\U0001F596\U0001F3FC", u8"Vulcan salute: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 247
 { U"\U0001F596\U0001F3FD", u8"Vulcan salute: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 248
 { U"\U0001F596\U0001F3FE", u8"Vulcan salute: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 249
 { U"\U0001F596\U0001F3FF", u8"Vulcan salute: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E1_0 },   // 250
-{ U"\U0001FAF1", u8"rightwards hand", 205, 0, -1, Lfg(129), EcVersion::E14_0 },   // 251
+{ U"\U0001FAF1", u8"rightwards hand", 205, 0, -1, Lfg(1), EcVersion::E14_0 },   // 251
 { U"\U0001FAF1\U0001F3FB", u8"rightwards hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 252
 { U"\U0001FAF1\U0001F3FC", u8"rightwards hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 253
 { U"\U0001FAF1\U0001F3FD", u8"rightwards hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 254
 { U"\U0001FAF1\U0001F3FE", u8"rightwards hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 255
 { U"\U0001FAF1\U0001F3FF", u8"rightwards hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 256
-{ U"\U0001FAF2", u8"leftwards hand", 205, 0, -1, Lfg(129), EcVersion::E14_0 },   // 257
+{ U"\U0001FAF2", u8"leftwards hand", 205, 0, -1, Lfg(1), EcVersion::E14_0 },   // 257
 { U"\U0001FAF2\U0001F3FB", u8"leftwards hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 258
 { U"\U0001FAF2\U0001F3FC", u8"leftwards hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 259
 { U"\U0001FAF2\U0001F3FD", u8"leftwards hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 260
 { U"\U0001FAF2\U0001F3FE", u8"leftwards hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 261
 { U"\U0001FAF2\U0001F3FF", u8"leftwards hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 262
-{ U"\U0001FAF3", u8"palm down hand", 205, 0, -1, Lfg(129), EcVersion::E14_0 },   // 263
+{ U"\U0001FAF3", u8"palm down hand", 205, 0, -1, Lfg(1), EcVersion::E14_0 },   // 263
 { U"\U0001FAF3\U0001F3FB", u8"palm down hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 264
 { U"\U0001FAF3\U0001F3FC", u8"palm down hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 265
 { U"\U0001FAF3\U0001F3FD", u8"palm down hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 266
 { U"\U0001FAF3\U0001F3FE", u8"palm down hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 267
 { U"\U0001FAF3\U0001F3FF", u8"palm down hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 268
-{ U"\U0001FAF4", u8"palm up hand", 205, 0, -1, Lfg(129), EcVersion::E14_0 },   // 269
+{ U"\U0001FAF4", u8"palm up hand", 205, 0, -1, Lfg(1), EcVersion::E14_0 },   // 269
 { U"\U0001FAF4\U0001F3FB", u8"palm up hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 270
 { U"\U0001FAF4\U0001F3FC", u8"palm up hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 271
 { U"\U0001FAF4\U0001F3FD", u8"palm up hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 272
 { U"\U0001FAF4\U0001F3FE", u8"palm up hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 273
 { U"\U0001FAF4\U0001F3FF", u8"palm up hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E14_0 },   // 274
-{ U"\U0001FAF7", u8"leftwards pushing hand", 205, 0, -1, Lfg(129), EcVersion::E15_0 },   // 275
+{ U"\U0001FAF7", u8"leftwards pushing hand", 205, 0, -1, Lfg(1), EcVersion::E15_0 },   // 275
 { U"\U0001FAF7\U0001F3FB", u8"leftwards pushing hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 276
 { U"\U0001FAF7\U0001F3FC", u8"leftwards pushing hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 277
 { U"\U0001FAF7\U0001F3FD", u8"leftwards pushing hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 278
 { U"\U0001FAF7\U0001F3FE", u8"leftwards pushing hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 279
 { U"\U0001FAF7\U0001F3FF", u8"leftwards pushing hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 280
-{ U"\U0001FAF8", u8"rightwards pushing hand", 205, 0, -1, Lfg(129), EcVersion::E15_0 },   // 281
+{ U"\U0001FAF8", u8"rightwards pushing hand", 205, 0, -1, Lfg(1), EcVersion::E15_0 },   // 281
 { U"\U0001FAF8\U0001F3FB", u8"rightwards pushing hand: light skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 282
 { U"\U0001FAF8\U0001F3FC", u8"rightwards pushing hand: medium-light skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 283
 { U"\U0001FAF8\U0001F3FD", u8"rightwards pushing hand: medium skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 284
 { U"\U0001FAF8\U0001F3FE", u8"rightwards pushing hand: medium-dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 285
 { U"\U0001FAF8\U0001F3FF", u8"rightwards pushing hand: dark skin tone", 205, 0, -1, Lfg(67), EcVersion::E15_0 },   // 286
-{ U"\U0001F44C", u8"OK hand", 206, 0, -1, Lfg(129), EcVersion::E0_6 },   // 287
+{ U"\U0001F44C", u8"OK hand", 206, 0, -1, Lfg(1), EcVersion::E0_6 },   // 287
 { U"\U0001F44C\U0001F3FB", u8"OK hand: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 288
 { U"\U0001F44C\U0001F3FC", u8"OK hand: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 289
 { U"\U0001F44C\U0001F3FD", u8"OK hand: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 290
 { U"\U0001F44C\U0001F3FE", u8"OK hand: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 291
 { U"\U0001F44C\U0001F3FF", u8"OK hand: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 292
-{ U"\U0001F90C", u8"pinched fingers", 206, 0, -1, Lfg(129), EcVersion::E13_0 },   // 293
+{ U"\U0001F90C", u8"pinched fingers", 206, 0, -1, Lfg(1), EcVersion::E13_0 },   // 293
 { U"\U0001F90C\U0001F3FB", u8"pinched fingers: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E13_0 },   // 294
 { U"\U0001F90C\U0001F3FC", u8"pinched fingers: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E13_0 },   // 295
 { U"\U0001F90C\U0001F3FD", u8"pinched fingers: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E13_0 },   // 296
 { U"\U0001F90C\U0001F3FE", u8"pinched fingers: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E13_0 },   // 297
 { U"\U0001F90C\U0001F3FF", u8"pinched fingers: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E13_0 },   // 298
-{ U"\U0001F90F", u8"pinching hand", 206, 0, -1, Lfg(129), EcVersion::E12_0 },   // 299
+{ U"\U0001F90F", u8"pinching hand", 206, 0, -1, Lfg(1), EcVersion::E12_0 },   // 299
 { U"\U0001F90F\U0001F3FB", u8"pinching hand: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E12_0 },   // 300
 { U"\U0001F90F\U0001F3FC", u8"pinching hand: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E12_0 },   // 301
 { U"\U0001F90F\U0001F3FD", u8"pinching hand: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E12_0 },   // 302
 { U"\U0001F90F\U0001F3FE", u8"pinching hand: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E12_0 },   // 303
 { U"\U0001F90F\U0001F3FF", u8"pinching hand: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E12_0 },   // 304
-{ U"\u270C\uFE0F", u8"victory hand", 206, 0, -1, Lfg(193), EcVersion::E0_6 },   // 305
+{ U"\u270C\uFE0F", u8"victory hand", 206, 0, -1, Lfg(65), EcVersion::E0_6 },   // 305
 { U"\u270C\U0001F3FB", u8"victory hand: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 306
 { U"\u270C\U0001F3FC", u8"victory hand: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 307
 { U"\u270C\U0001F3FD", u8"victory hand: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 308
 { U"\u270C\U0001F3FE", u8"victory hand: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 309
 { U"\u270C\U0001F3FF", u8"victory hand: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 310
-{ U"\U0001F91E", u8"crossed fingers", 206, 0, -1, Lfg(129), EcVersion::E3_0 },   // 311
+{ U"\U0001F91E", u8"crossed fingers", 206, 0, -1, Lfg(1), EcVersion::E3_0 },   // 311
 { U"\U0001F91E\U0001F3FB", u8"crossed fingers: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 312
 { U"\U0001F91E\U0001F3FC", u8"crossed fingers: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 313
 { U"\U0001F91E\U0001F3FD", u8"crossed fingers: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 314
 { U"\U0001F91E\U0001F3FE", u8"crossed fingers: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 315
 { U"\U0001F91E\U0001F3FF", u8"crossed fingers: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 316
-{ U"\U0001FAF0", u8"hand with index finger and thumb crossed", 206, 0, -1, Lfg(129), EcVersion::E14_0 },   // 317
+{ U"\U0001FAF0", u8"hand with index finger and thumb crossed", 206, 0, -1, Lfg(1), EcVersion::E14_0 },   // 317
 { U"\U0001FAF0\U0001F3FB", u8"hand with index finger and thumb crossed: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E14_0 },   // 318
 { U"\U0001FAF0\U0001F3FC", u8"hand with index finger and thumb crossed: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E14_0 },   // 319
 { U"\U0001FAF0\U0001F3FD", u8"hand with index finger and thumb crossed: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E14_0 },   // 320
 { U"\U0001FAF0\U0001F3FE", u8"hand with index finger and thumb crossed: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E14_0 },   // 321
 { U"\U0001FAF0\U0001F3FF", u8"hand with index finger and thumb crossed: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E14_0 },   // 322
-{ U"\U0001F91F", u8"love-you gesture", 206, 0, -1, Lfg(129), EcVersion::E5_0 },   // 323
+{ U"\U0001F91F", u8"love-you gesture", 206, 0, -1, Lfg(1), EcVersion::E5_0 },   // 323
 { U"\U0001F91F\U0001F3FB", u8"love-you gesture: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E5_0 },   // 324
 { U"\U0001F91F\U0001F3FC", u8"love-you gesture: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E5_0 },   // 325
 { U"\U0001F91F\U0001F3FD", u8"love-you gesture: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E5_0 },   // 326
 { U"\U0001F91F\U0001F3FE", u8"love-you gesture: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E5_0 },   // 327
 { U"\U0001F91F\U0001F3FF", u8"love-you gesture: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E5_0 },   // 328
-{ U"\U0001F918", u8"sign of the horns", 206, 0, -1, Lfg(129), EcVersion::E1_0 },   // 329
+{ U"\U0001F918", u8"sign of the horns", 206, 0, -1, Lfg(1), EcVersion::E1_0 },   // 329
 { U"\U0001F918\U0001F3FB", u8"sign of the horns: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 330
 { U"\U0001F918\U0001F3FC", u8"sign of the horns: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 331
 { U"\U0001F918\U0001F3FD", u8"sign of the horns: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 332
 { U"\U0001F918\U0001F3FE", u8"sign of the horns: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 333
 { U"\U0001F918\U0001F3FF", u8"sign of the horns: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E1_0 },   // 334
-{ U"\U0001F919", u8"Call me hand", 206, 0, -1, Lfg(129), EcVersion::E3_0 },   // 335
+{ U"\U0001F919", u8"Call me hand", 206, 0, -1, Lfg(1), EcVersion::E3_0 },   // 335
 { U"\U0001F919\U0001F3FB", u8"Call me hand: light skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 336
 { U"\U0001F919\U0001F3FC", u8"Call me hand: medium-light skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 337
 { U"\U0001F919\U0001F3FD", u8"Call me hand: medium skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 338
 { U"\U0001F919\U0001F3FE", u8"Call me hand: medium-dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 339
 { U"\U0001F919\U0001F3FF", u8"Call me hand: dark skin tone", 206, 0, -1, Lfg(67), EcVersion::E3_0 },   // 340
-{ U"\U0001F448", u8"backhand index pointing left", 207, 0, -1, Lfg(129), EcVersion::E0_6 },   // 341
+{ U"\U0001F448", u8"backhand index pointing left", 207, 0, -1, Lfg(1), EcVersion::E0_6 },   // 341
 { U"\U0001F448\U0001F3FB", u8"backhand index pointing left: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 342
 { U"\U0001F448\U0001F3FC", u8"backhand index pointing left: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 343
 { U"\U0001F448\U0001F3FD", u8"backhand index pointing left: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 344
 { U"\U0001F448\U0001F3FE", u8"backhand index pointing left: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 345
 { U"\U0001F448\U0001F3FF", u8"backhand index pointing left: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 346
-{ U"\U0001F449", u8"backhand index pointing right", 207, 0, -1, Lfg(129), EcVersion::E0_6 },   // 347
+{ U"\U0001F449", u8"backhand index pointing right", 207, 0, -1, Lfg(1), EcVersion::E0_6 },   // 347
 { U"\U0001F449\U0001F3FB", u8"backhand index pointing right: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 348
 { U"\U0001F449\U0001F3FC", u8"backhand index pointing right: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 349
 { U"\U0001F449\U0001F3FD", u8"backhand index pointing right: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 350
 { U"\U0001F449\U0001F3FE", u8"backhand index pointing right: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 351
 { U"\U0001F449\U0001F3FF", u8"backhand index pointing right: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 352
-{ U"\U0001F446", u8"backhand index pointing up", 207, 0, -1, Lfg(131), EcVersion::E0_6 },   // 353
+{ U"\U0001F446", u8"backhand index pointing up", 207, 0, -1, Lfg(3), EcVersion::E0_6 },   // 353
 { U"\U0001F446\U0001F3FB", u8"backhand index pointing up: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 354
 { U"\U0001F446\U0001F3FC", u8"backhand index pointing up: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 355
 { U"\U0001F446\U0001F3FD", u8"backhand index pointing up: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 356
 { U"\U0001F446\U0001F3FE", u8"backhand index pointing up: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 357
 { U"\U0001F446\U0001F3FF", u8"backhand index pointing up: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 358
-{ U"\U0001F595", u8"middle finger", 207, 0, -1, Lfg(129), EcVersion::E1_0 },   // 359
+{ U"\U0001F595", u8"middle finger", 207, 0, -1, Lfg(1), EcVersion::E1_0 },   // 359
 { U"\U0001F595\U0001F3FB", u8"middle finger: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 360
 { U"\U0001F595\U0001F3FC", u8"middle finger: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 361
 { U"\U0001F595\U0001F3FD", u8"middle finger: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 362
 { U"\U0001F595\U0001F3FE", u8"middle finger: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 363
 { U"\U0001F595\U0001F3FF", u8"middle finger: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 364
-{ U"\U0001F447", u8"backhand index pointing down", 207, 0, -1, Lfg(131), EcVersion::E0_6 },   // 365
+{ U"\U0001F447", u8"backhand index pointing down", 207, 0, -1, Lfg(3), EcVersion::E0_6 },   // 365
 { U"\U0001F447\U0001F3FB", u8"backhand index pointing down: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 366
 { U"\U0001F447\U0001F3FC", u8"backhand index pointing down: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 367
 { U"\U0001F447\U0001F3FD", u8"backhand index pointing down: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 368
 { U"\U0001F447\U0001F3FE", u8"backhand index pointing down: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 369
 { U"\U0001F447\U0001F3FF", u8"backhand index pointing down: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 370
-{ U"\u261D\uFE0F", u8"index pointing up", 207, 0, -1, Lfg(195), EcVersion::E0_6 },   // 371
+{ U"\u261D\uFE0F", u8"index pointing up", 207, 0, -1, Lfg(67), EcVersion::E0_6 },   // 371
 { U"\u261D\U0001F3FB", u8"index pointing up: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 372
 { U"\u261D\U0001F3FC", u8"index pointing up: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 373
 { U"\u261D\U0001F3FD", u8"index pointing up: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 374
 { U"\u261D\U0001F3FE", u8"index pointing up: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 375
 { U"\u261D\U0001F3FF", u8"index pointing up: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E1_0 },   // 376
-{ U"\U0001FAF5", u8"index pointing at the viewer", 207, 0, -1, Lfg(129), EcVersion::E14_0 },   // 377
+{ U"\U0001FAF5", u8"index pointing at the viewer", 207, 0, -1, Lfg(1), EcVersion::E14_0 },   // 377
 { U"\U0001FAF5\U0001F3FB", u8"index pointing at the viewer: light skin tone", 207, 0, -1, Lfg(67), EcVersion::E14_0 },   // 378
 { U"\U0001FAF5\U0001F3FC", u8"index pointing at the viewer: medium-light skin tone", 207, 0, -1, Lfg(67), EcVersion::E14_0 },   // 379
 { U"\U0001FAF5\U0001F3FD", u8"index pointing at the viewer: medium skin tone", 207, 0, -1, Lfg(67), EcVersion::E14_0 },   // 380
 { U"\U0001FAF5\U0001F3FE", u8"index pointing at the viewer: medium-dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E14_0 },   // 381
 { U"\U0001FAF5\U0001F3FF", u8"index pointing at the viewer: dark skin tone", 207, 0, -1, Lfg(67), EcVersion::E14_0 },   // 382
-{ U"\U0001F44D", u8"thumbs up", 208, 0, -1, Lfg(129), EcVersion::E0_6 },   // 383
+{ U"\U0001F44D", u8"thumbs up", 208, 0, -1, Lfg(1), EcVersion::E0_6 },   // 383
 { U"\U0001F44D\U0001F3FB", u8"thumbs up: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 384
 { U"\U0001F44D\U0001F3FC", u8"thumbs up: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 385
 { U"\U0001F44D\U0001F3FD", u8"thumbs up: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 386
 { U"\U0001F44D\U0001F3FE", u8"thumbs up: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 387
 { U"\U0001F44D\U0001F3FF", u8"thumbs up: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 388
-{ U"\U0001F44E", u8"thumbs down", 208, 0, -1, Lfg(129), EcVersion::E0_6 },   // 389
+{ U"\U0001F44E", u8"thumbs down", 208, 0, -1, Lfg(1), EcVersion::E0_6 },   // 389
 { U"\U0001F44E\U0001F3FB", u8"thumbs down: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 390
 { U"\U0001F44E\U0001F3FC", u8"thumbs down: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 391
 { U"\U0001F44E\U0001F3FD", u8"thumbs down: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 392
 { U"\U0001F44E\U0001F3FE", u8"thumbs down: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 393
 { U"\U0001F44E\U0001F3FF", u8"thumbs down: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 394
-{ U"\u270A", u8"raised fist", 208, 0, -1, Lfg(129), EcVersion::E0_6 },   // 395
+{ U"\u270A", u8"raised fist", 208, 0, -1, Lfg(1), EcVersion::E0_6 },   // 395
 { U"\u270A\U0001F3FB", u8"raised fist: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 396
 { U"\u270A\U0001F3FC", u8"raised fist: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 397
 { U"\u270A\U0001F3FD", u8"raised fist: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 398
 { U"\u270A\U0001F3FE", u8"raised fist: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 399
 { U"\u270A\U0001F3FF", u8"raised fist: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 400
-{ U"\U0001F44A", u8"oncoming fist", 208, 0, -1, Lfg(129), EcVersion::E0_6 },   // 401
+{ U"\U0001F44A", u8"oncoming fist", 208, 0, -1, Lfg(1), EcVersion::E0_6 },   // 401
 { U"\U0001F44A\U0001F3FB", u8"oncoming fist: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 402
 { U"\U0001F44A\U0001F3FC", u8"oncoming fist: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 403
 { U"\U0001F44A\U0001F3FD", u8"oncoming fist: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 404
 { U"\U0001F44A\U0001F3FE", u8"oncoming fist: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 405
 { U"\U0001F44A\U0001F3FF", u8"oncoming fist: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E1_0 },   // 406
-{ U"\U0001F91B", u8"left-facing fist", 208, 0, -1, Lfg(129), EcVersion::E3_0 },   // 407
+{ U"\U0001F91B", u8"left-facing fist", 208, 0, -1, Lfg(1), EcVersion::E3_0 },   // 407
 { U"\U0001F91B\U0001F3FB", u8"left-facing fist: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 408
 { U"\U0001F91B\U0001F3FC", u8"left-facing fist: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 409
 { U"\U0001F91B\U0001F3FD", u8"left-facing fist: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 410
 { U"\U0001F91B\U0001F3FE", u8"left-facing fist: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 411
 { U"\U0001F91B\U0001F3FF", u8"left-facing fist: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 412
-{ U"\U0001F91C", u8"right-facing fist", 208, 0, -1, Lfg(129), EcVersion::E3_0 },   // 413
+{ U"\U0001F91C", u8"right-facing fist", 208, 0, -1, Lfg(1), EcVersion::E3_0 },   // 413
 { U"\U0001F91C\U0001F3FB", u8"right-facing fist: light skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 414
 { U"\U0001F91C\U0001F3FC", u8"right-facing fist: medium-light skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 415
 { U"\U0001F91C\U0001F3FD", u8"right-facing fist: medium skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 416
 { U"\U0001F91C\U0001F3FE", u8"right-facing fist: medium-dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 417
 { U"\U0001F91C\U0001F3FF", u8"right-facing fist: dark skin tone", 208, 0, -1, Lfg(67), EcVersion::E3_0 },   // 418
-{ U"\U0001F44F", u8"clapping hands", 209, 0, -1, Lfg(129), EcVersion::E0_6 },   // 419
+{ U"\U0001F44F", u8"clapping hands", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 419
 { U"\U0001F44F\U0001F3FB", u8"clapping hands: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 420
 { U"\U0001F44F\U0001F3FC", u8"clapping hands: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 421
 { U"\U0001F44F\U0001F3FD", u8"clapping hands: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 422
 { U"\U0001F44F\U0001F3FE", u8"clapping hands: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 423
 { U"\U0001F44F\U0001F3FF", u8"clapping hands: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 424
-{ U"\U0001F64C", u8"raising hands", 209, 0, -1, Lfg(129), EcVersion::E0_6 },   // 425
+{ U"\U0001F64C", u8"raising hands", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 425
 { U"\U0001F64C\U0001F3FB", u8"raising hands: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 426
 { U"\U0001F64C\U0001F3FC", u8"raising hands: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 427
 { U"\U0001F64C\U0001F3FD", u8"raising hands: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 428
 { U"\U0001F64C\U0001F3FE", u8"raising hands: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 429
 { U"\U0001F64C\U0001F3FF", u8"raising hands: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 430
-{ U"\U0001FAF6", u8"heart hands", 209, 0, -1, Lfg(129), EcVersion::E14_0 },   // 431
+{ U"\U0001FAF6", u8"heart hands", 209, 0, -1, Lfg(1), EcVersion::E14_0 },   // 431
 { U"\U0001FAF6\U0001F3FB", u8"heart hands: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 432
 { U"\U0001FAF6\U0001F3FC", u8"heart hands: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 433
 { U"\U0001FAF6\U0001F3FD", u8"heart hands: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 434
 { U"\U0001FAF6\U0001F3FE", u8"heart hands: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 435
 { U"\U0001FAF6\U0001F3FF", u8"heart hands: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 436
-{ U"\U0001F450", u8"open hands", 209, 0, -1, Lfg(129), EcVersion::E0_6 },   // 437
+{ U"\U0001F450", u8"open hands", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 437
 { U"\U0001F450\U0001F3FB", u8"open hands: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 438
 { U"\U0001F450\U0001F3FC", u8"open hands: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 439
 { U"\U0001F450\U0001F3FD", u8"open hands: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 440
 { U"\U0001F450\U0001F3FE", u8"open hands: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 441
 { U"\U0001F450\U0001F3FF", u8"open hands: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 442
-{ U"\U0001F932", u8"palms up together", 209, 0, -1, Lfg(129), EcVersion::E5_0 },   // 443
+{ U"\U0001F932", u8"palms up together", 209, 0, -1, Lfg(1), EcVersion::E5_0 },   // 443
 { U"\U0001F932\U0001F3FB", u8"palms up together: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E5_0 },   // 444
 { U"\U0001F932\U0001F3FC", u8"palms up together: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E5_0 },   // 445
 { U"\U0001F932\U0001F3FD", u8"palms up together: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E5_0 },   // 446
 { U"\U0001F932\U0001F3FE", u8"palms up together: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E5_0 },   // 447
 { U"\U0001F932\U0001F3FF", u8"palms up together: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E5_0 },   // 448
-{ U"\U0001F91D", u8"handshake", 209, 0, -1, Lfg(129), EcVersion::E3_0 },   // 449
+{ U"\U0001F91D", u8"handshake", 209, 0, -1, Lfg(1), EcVersion::E3_0 },   // 449
 { U"\U0001F91D\U0001F3FB", u8"handshake: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 450
 { U"\U0001F91D\U0001F3FC", u8"handshake: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 451
 { U"\U0001F91D\U0001F3FD", u8"handshake: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 452
@@ -478,121 +478,121 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001FAF1\U0001F3FF\u200D\U0001FAF2\U0001F3FC", u8"handshake: dark skin tone, medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 472
 { U"\U0001FAF1\U0001F3FF\u200D\U0001FAF2\U0001F3FD", u8"handshake: dark skin tone, medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 473
 { U"\U0001FAF1\U0001F3FF\u200D\U0001FAF2\U0001F3FE", u8"handshake: dark skin tone, medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E14_0 },   // 474
-{ U"\U0001F64F", u8"folded hands", 209, 0, -1, Lfg(129), EcVersion::E0_6 },   // 475
+{ U"\U0001F64F", u8"folded hands", 209, 0, -1, Lfg(1), EcVersion::E0_6 },   // 475
 { U"\U0001F64F\U0001F3FB", u8"folded hands: light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 476
 { U"\U0001F64F\U0001F3FC", u8"folded hands: medium-light skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 477
 { U"\U0001F64F\U0001F3FD", u8"folded hands: medium skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 478
 { U"\U0001F64F\U0001F3FE", u8"folded hands: medium-dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 479
 { U"\U0001F64F\U0001F3FF", u8"folded hands: dark skin tone", 209, 0, -1, Lfg(67), EcVersion::E1_0 },   // 480
-{ U"\u270D\uFE0F", u8"writing hand", 210, 0, -1, Lfg(193), EcVersion::E0_7 },   // 481
+{ U"\u270D\uFE0F", u8"writing hand", 210, 0, -1, Lfg(65), EcVersion::E0_7 },   // 481
 { U"\u270D\U0001F3FB", u8"writing hand: light skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 482
 { U"\u270D\U0001F3FC", u8"writing hand: medium-light skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 483
 { U"\u270D\U0001F3FD", u8"writing hand: medium skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 484
 { U"\u270D\U0001F3FE", u8"writing hand: medium-dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 485
 { U"\u270D\U0001F3FF", u8"writing hand: dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 486
-{ U"\U0001F485", u8"nail polish", 210, 0, -1, Lfg(129), EcVersion::E0_6 },   // 487
+{ U"\U0001F485", u8"nail polish", 210, 0, -1, Lfg(1), EcVersion::E0_6 },   // 487
 { U"\U0001F485\U0001F3FB", u8"nail polish: light skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 488
 { U"\U0001F485\U0001F3FC", u8"nail polish: medium-light skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 489
 { U"\U0001F485\U0001F3FD", u8"nail polish: medium skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 490
 { U"\U0001F485\U0001F3FE", u8"nail polish: medium-dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 491
 { U"\U0001F485\U0001F3FF", u8"nail polish: dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E1_0 },   // 492
-{ U"\U0001F933", u8"selfie", 210, 0, -1, Lfg(129), EcVersion::E3_0 },   // 493
+{ U"\U0001F933", u8"selfie", 210, 0, -1, Lfg(1), EcVersion::E3_0 },   // 493
 { U"\U0001F933\U0001F3FB", u8"selfie: light skin tone", 210, 0, -1, Lfg(67), EcVersion::E3_0 },   // 494
 { U"\U0001F933\U0001F3FC", u8"selfie: medium-light skin tone", 210, 0, -1, Lfg(67), EcVersion::E3_0 },   // 495
 { U"\U0001F933\U0001F3FD", u8"selfie: medium skin tone", 210, 0, -1, Lfg(67), EcVersion::E3_0 },   // 496
 { U"\U0001F933\U0001F3FE", u8"selfie: medium-dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E3_0 },   // 497
 { U"\U0001F933\U0001F3FF", u8"selfie: dark skin tone", 210, 0, -1, Lfg(67), EcVersion::E3_0 },   // 498
-{ U"\U0001F4AA", u8"flexed biceps", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 499
+{ U"\U0001F4AA", u8"flexed biceps", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 499
 { U"\U0001F4AA\U0001F3FB", u8"flexed biceps: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 500
 { U"\U0001F4AA\U0001F3FC", u8"flexed biceps: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 501
 { U"\U0001F4AA\U0001F3FD", u8"flexed biceps: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 502
 { U"\U0001F4AA\U0001F3FE", u8"flexed biceps: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 503
 { U"\U0001F4AA\U0001F3FF", u8"flexed biceps: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 504
-{ U"\U0001F9BE", u8"mechanical arm", 211, 0, -1, Lfg(129), EcVersion::E12_0 },   // 505
-{ U"\U0001F9BF", u8"mechanical leg", 211, 0, -1, Lfg(129), EcVersion::E12_0 },   // 506
-{ U"\U0001F9B5", u8"leg", 211, 0, -1, Lfg(129), EcVersion::E11_0 },   // 507
+{ U"\U0001F9BE", u8"mechanical arm", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 505
+{ U"\U0001F9BF", u8"mechanical leg", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 506
+{ U"\U0001F9B5", u8"leg", 211, 0, -1, Lfg(1), EcVersion::E11_0 },   // 507
 { U"\U0001F9B5\U0001F3FB", u8"leg: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 508
 { U"\U0001F9B5\U0001F3FC", u8"leg: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 509
 { U"\U0001F9B5\U0001F3FD", u8"leg: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 510
 { U"\U0001F9B5\U0001F3FE", u8"leg: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 511
 { U"\U0001F9B5\U0001F3FF", u8"leg: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 512
-{ U"\U0001F9B6", u8"foot", 211, 0, -1, Lfg(129), EcVersion::E11_0 },   // 513
+{ U"\U0001F9B6", u8"foot", 211, 0, -1, Lfg(1), EcVersion::E11_0 },   // 513
 { U"\U0001F9B6\U0001F3FB", u8"foot: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 514
 { U"\U0001F9B6\U0001F3FC", u8"foot: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 515
 { U"\U0001F9B6\U0001F3FD", u8"foot: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 516
 { U"\U0001F9B6\U0001F3FE", u8"foot: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 517
 { U"\U0001F9B6\U0001F3FF", u8"foot: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E11_0 },   // 518
-{ U"\U0001F442", u8"ear", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 519
+{ U"\U0001F442", u8"ear", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 519
 { U"\U0001F442\U0001F3FB", u8"ear: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 520
 { U"\U0001F442\U0001F3FC", u8"ear: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 521
 { U"\U0001F442\U0001F3FD", u8"ear: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 522
 { U"\U0001F442\U0001F3FE", u8"ear: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 523
 { U"\U0001F442\U0001F3FF", u8"ear: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 524
-{ U"\U0001F9BB", u8"ear with hearing aid", 211, 0, -1, Lfg(129), EcVersion::E12_0 },   // 525
+{ U"\U0001F9BB", u8"ear with hearing aid", 211, 0, -1, Lfg(1), EcVersion::E12_0 },   // 525
 { U"\U0001F9BB\U0001F3FB", u8"ear with hearing aid: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E12_0 },   // 526
 { U"\U0001F9BB\U0001F3FC", u8"ear with hearing aid: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E12_0 },   // 527
 { U"\U0001F9BB\U0001F3FD", u8"ear with hearing aid: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E12_0 },   // 528
 { U"\U0001F9BB\U0001F3FE", u8"ear with hearing aid: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E12_0 },   // 529
 { U"\U0001F9BB\U0001F3FF", u8"ear with hearing aid: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E12_0 },   // 530
-{ U"\U0001F443", u8"nose", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 531
+{ U"\U0001F443", u8"nose", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 531
 { U"\U0001F443\U0001F3FB", u8"nose: light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 532
 { U"\U0001F443\U0001F3FC", u8"nose: medium-light skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 533
 { U"\U0001F443\U0001F3FD", u8"nose: medium skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 534
 { U"\U0001F443\U0001F3FE", u8"nose: medium-dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 535
 { U"\U0001F443\U0001F3FF", u8"nose: dark skin tone", 211, 0, -1, Lfg(67), EcVersion::E1_0 },   // 536
-{ U"\U0001F9E0", u8"brain", 211, 0, -1, Lfg(129), EcVersion::E5_0 },   // 537
-{ U"\U0001FAC0", u8"anatomical heart", 211, 0, -1, Lfg(129), EcVersion::E13_0 },   // 538
-{ U"\U0001FAC1", u8"lungs", 211, 0, -1, Lfg(129), EcVersion::E13_0 },   // 539
-{ U"\U0001F9B7", u8"tooth", 211, 0, -1, Lfg(129), EcVersion::E11_0 },   // 540
-{ U"\U0001F9B4", u8"bone", 211, 0, -1, Lfg(129), EcVersion::E11_0 },   // 541
-{ U"\U0001F440", u8"eyes", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 542
-{ U"\U0001F441\uFE0F", u8"eye", 211, 0, -1, Lfg(193), EcVersion::E0_7 },   // 543
-{ U"\U0001F445", u8"tongue", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 544
-{ U"\U0001F444", u8"mouth", 211, 0, -1, Lfg(129), EcVersion::E0_6 },   // 545
-{ U"\U0001FAE6", u8"biting lip", 211, 0, -1, Lfg(129), EcVersion::E14_0 },   // 546
-{ U"\U0001F476", u8"baby", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 547
+{ U"\U0001F9E0", u8"brain", 211, 0, -1, Lfg(1), EcVersion::E5_0 },   // 537
+{ U"\U0001FAC0", u8"anatomical heart", 211, 0, -1, Lfg(1), EcVersion::E13_0 },   // 538
+{ U"\U0001FAC1", u8"lungs", 211, 0, -1, Lfg(1), EcVersion::E13_0 },   // 539
+{ U"\U0001F9B7", u8"tooth", 211, 0, -1, Lfg(1), EcVersion::E11_0 },   // 540
+{ U"\U0001F9B4", u8"bone", 211, 0, -1, Lfg(1), EcVersion::E11_0 },   // 541
+{ U"\U0001F440", u8"eyes", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 542
+{ U"\U0001F441\uFE0F", u8"eye", 211, 0, -1, Lfg(65), EcVersion::E0_7 },   // 543
+{ U"\U0001F445", u8"tongue", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 544
+{ U"\U0001F444", u8"mouth", 211, 0, -1, Lfg(1), EcVersion::E0_6 },   // 545
+{ U"\U0001FAE6", u8"biting lip", 211, 0, -1, Lfg(1), EcVersion::E14_0 },   // 546
+{ U"\U0001F476", u8"baby", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 547
 { U"\U0001F476\U0001F3FB", u8"baby: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 548
 { U"\U0001F476\U0001F3FC", u8"baby: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 549
 { U"\U0001F476\U0001F3FD", u8"baby: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 550
 { U"\U0001F476\U0001F3FE", u8"baby: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 551
 { U"\U0001F476\U0001F3FF", u8"baby: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 552
-{ U"\U0001F9D2", u8"child", 212, 0, -1, Lfg(129), EcVersion::E5_0 },   // 553
+{ U"\U0001F9D2", u8"child", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 553
 { U"\U0001F9D2\U0001F3FB", u8"child: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 554
 { U"\U0001F9D2\U0001F3FC", u8"child: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 555
 { U"\U0001F9D2\U0001F3FD", u8"child: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 556
 { U"\U0001F9D2\U0001F3FE", u8"child: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 557
 { U"\U0001F9D2\U0001F3FF", u8"child: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 558
-{ U"\U0001F466", u8"boy", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 559
+{ U"\U0001F466", u8"boy", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 559
 { U"\U0001F466\U0001F3FB", u8"boy: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 560
 { U"\U0001F466\U0001F3FC", u8"boy: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 561
 { U"\U0001F466\U0001F3FD", u8"boy: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 562
 { U"\U0001F466\U0001F3FE", u8"boy: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 563
 { U"\U0001F466\U0001F3FF", u8"boy: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 564
-{ U"\U0001F467", u8"girl", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 565
+{ U"\U0001F467", u8"girl", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 565
 { U"\U0001F467\U0001F3FB", u8"girl: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 566
 { U"\U0001F467\U0001F3FC", u8"girl: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 567
 { U"\U0001F467\U0001F3FD", u8"girl: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 568
 { U"\U0001F467\U0001F3FE", u8"girl: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 569
 { U"\U0001F467\U0001F3FF", u8"girl: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 570
-{ U"\U0001F9D1", u8"person", 212, 0, -1, Lfg(129), EcVersion::E5_0 },   // 571
+{ U"\U0001F9D1", u8"person", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 571
 { U"\U0001F9D1\U0001F3FB", u8"person: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 572
 { U"\U0001F9D1\U0001F3FC", u8"person: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 573
 { U"\U0001F9D1\U0001F3FD", u8"person: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 574
 { U"\U0001F9D1\U0001F3FE", u8"person: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 575
 { U"\U0001F9D1\U0001F3FF", u8"person: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 576
-{ U"\U0001F471", u8"person: blond hair", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 577
+{ U"\U0001F471", u8"person: blond hair", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 577
 { U"\U0001F471\U0001F3FB", u8"person: light skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 578
 { U"\U0001F471\U0001F3FC", u8"person: medium-light skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 579
 { U"\U0001F471\U0001F3FD", u8"person: medium skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 580
 { U"\U0001F471\U0001F3FE", u8"person: medium-dark skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 581
 { U"\U0001F471\U0001F3FF", u8"person: dark skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 582
-{ U"\U0001F468", u8"man", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 583
+{ U"\U0001F468", u8"man", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 583
 { U"\U0001F468\U0001F3FB", u8"man: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 584
 { U"\U0001F468\U0001F3FC", u8"man: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 585
 { U"\U0001F468\U0001F3FD", u8"man: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 586
 { U"\U0001F468\U0001F3FE", u8"man: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 587
 { U"\U0001F468\U0001F3FF", u8"man: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 588
-{ U"\U0001F9D4", u8"person: beard", 212, 0, -1, Lfg(129), EcVersion::E5_0 },   // 589
+{ U"\U0001F9D4", u8"person: beard", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 589
 { U"\U0001F9D4\U0001F3FB", u8"person: light skin tone, beard", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 590
 { U"\U0001F9D4\U0001F3FC", u8"person: medium-light skin tone, beard", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 591
 { U"\U0001F9D4\U0001F3FD", u8"person: medium skin tone, beard", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 592
@@ -634,7 +634,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F468\U0001F3FD\u200D\U0001F9B2", u8"man: medium skin tone, bald", 212, 0, -1, Lfg(67), EcVersion::E11_0 },   // 628
 { U"\U0001F468\U0001F3FE\u200D\U0001F9B2", u8"man: medium-dark skin tone, bald", 212, 0, -1, Lfg(67), EcVersion::E11_0 },   // 629
 { U"\U0001F468\U0001F3FF\u200D\U0001F9B2", u8"man: dark skin tone, bald", 212, 0, -1, Lfg(67), EcVersion::E11_0 },   // 630
-{ U"\U0001F469", u8"woman", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 631
+{ U"\U0001F469", u8"woman", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 631
 { U"\U0001F469\U0001F3FB", u8"woman: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 632
 { U"\U0001F469\U0001F3FC", u8"woman: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 633
 { U"\U0001F469\U0001F3FD", u8"woman: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 634
@@ -700,25 +700,25 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F471\U0001F3FD\u200D\u2642\uFE0F", u8"man: medium skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E4_0 },   // 694
 { U"\U0001F471\U0001F3FE\u200D\u2642\uFE0F", u8"man: medium-dark skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E4_0 },   // 695
 { U"\U0001F471\U0001F3FF\u200D\u2642\uFE0F", u8"man: dark skin tone, blond hair", 212, 0, -1, Lfg(67), EcVersion::E4_0 },   // 696
-{ U"\U0001F9D3", u8"older person", 212, 0, -1, Lfg(129), EcVersion::E5_0 },   // 697
+{ U"\U0001F9D3", u8"older person", 212, 0, -1, Lfg(1), EcVersion::E5_0 },   // 697
 { U"\U0001F9D3\U0001F3FB", u8"older person: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 698
 { U"\U0001F9D3\U0001F3FC", u8"older person: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 699
 { U"\U0001F9D3\U0001F3FD", u8"older person: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 700
 { U"\U0001F9D3\U0001F3FE", u8"older person: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 701
 { U"\U0001F9D3\U0001F3FF", u8"older person: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E5_0 },   // 702
-{ U"\U0001F474", u8"old man", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 703
+{ U"\U0001F474", u8"old man", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 703
 { U"\U0001F474\U0001F3FB", u8"old man: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 704
 { U"\U0001F474\U0001F3FC", u8"old man: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 705
 { U"\U0001F474\U0001F3FD", u8"old man: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 706
 { U"\U0001F474\U0001F3FE", u8"old man: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 707
 { U"\U0001F474\U0001F3FF", u8"old man: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 708
-{ U"\U0001F475", u8"old woman", 212, 0, -1, Lfg(129), EcVersion::E0_6 },   // 709
+{ U"\U0001F475", u8"old woman", 212, 0, -1, Lfg(1), EcVersion::E0_6 },   // 709
 { U"\U0001F475\U0001F3FB", u8"old woman: light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 710
 { U"\U0001F475\U0001F3FC", u8"old woman: medium-light skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 711
 { U"\U0001F475\U0001F3FD", u8"old woman: medium skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 712
 { U"\U0001F475\U0001F3FE", u8"old woman: medium-dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 713
 { U"\U0001F475\U0001F3FF", u8"old woman: dark skin tone", 212, 0, -1, Lfg(67), EcVersion::E1_0 },   // 714
-{ U"\U0001F64D", u8"person frowning", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 715
+{ U"\U0001F64D", u8"person frowning", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 715
 { U"\U0001F64D\U0001F3FB", u8"person frowning: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 716
 { U"\U0001F64D\U0001F3FC", u8"person frowning: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 717
 { U"\U0001F64D\U0001F3FD", u8"person frowning: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 718
@@ -736,7 +736,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F64D\U0001F3FD\u200D\u2640\uFE0F", u8"woman frowning: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 730
 { U"\U0001F64D\U0001F3FE\u200D\u2640\uFE0F", u8"woman frowning: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 731
 { U"\U0001F64D\U0001F3FF\u200D\u2640\uFE0F", u8"woman frowning: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 732
-{ U"\U0001F64E", u8"person pouting", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 733
+{ U"\U0001F64E", u8"person pouting", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 733
 { U"\U0001F64E\U0001F3FB", u8"person pouting: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 734
 { U"\U0001F64E\U0001F3FC", u8"person pouting: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 735
 { U"\U0001F64E\U0001F3FD", u8"person pouting: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 736
@@ -754,7 +754,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F64E\U0001F3FD\u200D\u2640\uFE0F", u8"woman pouting: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 748
 { U"\U0001F64E\U0001F3FE\u200D\u2640\uFE0F", u8"woman pouting: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 749
 { U"\U0001F64E\U0001F3FF\u200D\u2640\uFE0F", u8"woman pouting: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 750
-{ U"\U0001F645", u8"person gesturing NO", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 751
+{ U"\U0001F645", u8"person gesturing NO", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 751
 { U"\U0001F645\U0001F3FB", u8"person gesturing NO: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 752
 { U"\U0001F645\U0001F3FC", u8"person gesturing NO: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 753
 { U"\U0001F645\U0001F3FD", u8"person gesturing NO: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 754
@@ -772,7 +772,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F645\U0001F3FD\u200D\u2640\uFE0F", u8"woman gesturing NO: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 766
 { U"\U0001F645\U0001F3FE\u200D\u2640\uFE0F", u8"woman gesturing NO: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 767
 { U"\U0001F645\U0001F3FF\u200D\u2640\uFE0F", u8"woman gesturing NO: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 768
-{ U"\U0001F646", u8"person gesturing OK", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 769
+{ U"\U0001F646", u8"person gesturing OK", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 769
 { U"\U0001F646\U0001F3FB", u8"person gesturing OK: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 770
 { U"\U0001F646\U0001F3FC", u8"person gesturing OK: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 771
 { U"\U0001F646\U0001F3FD", u8"person gesturing OK: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 772
@@ -790,7 +790,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F646\U0001F3FD\u200D\u2640\uFE0F", u8"woman gesturing OK: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 784
 { U"\U0001F646\U0001F3FE\u200D\u2640\uFE0F", u8"woman gesturing OK: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 785
 { U"\U0001F646\U0001F3FF\u200D\u2640\uFE0F", u8"woman gesturing OK: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 786
-{ U"\U0001F481", u8"person tipping hand", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 787
+{ U"\U0001F481", u8"person tipping hand", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 787
 { U"\U0001F481\U0001F3FB", u8"person tipping hand: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 788
 { U"\U0001F481\U0001F3FC", u8"person tipping hand: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 789
 { U"\U0001F481\U0001F3FD", u8"person tipping hand: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 790
@@ -808,7 +808,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F481\U0001F3FD\u200D\u2640\uFE0F", u8"woman tipping hand: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 802
 { U"\U0001F481\U0001F3FE\u200D\u2640\uFE0F", u8"woman tipping hand: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 803
 { U"\U0001F481\U0001F3FF\u200D\u2640\uFE0F", u8"woman tipping hand: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 804
-{ U"\U0001F64B", u8"person raising hand", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 805
+{ U"\U0001F64B", u8"person raising hand", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 805
 { U"\U0001F64B\U0001F3FB", u8"person raising hand: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 806
 { U"\U0001F64B\U0001F3FC", u8"person raising hand: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 807
 { U"\U0001F64B\U0001F3FD", u8"person raising hand: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 808
@@ -826,7 +826,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F64B\U0001F3FD\u200D\u2640\uFE0F", u8"woman raising hand: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 820
 { U"\U0001F64B\U0001F3FE\u200D\u2640\uFE0F", u8"woman raising hand: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 821
 { U"\U0001F64B\U0001F3FF\u200D\u2640\uFE0F", u8"woman raising hand: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 822
-{ U"\U0001F9CF", u8"deaf person", 213, 0, -1, Lfg(129), EcVersion::E12_0 },   // 823
+{ U"\U0001F9CF", u8"deaf person", 213, 0, -1, Lfg(1), EcVersion::E12_0 },   // 823
 { U"\U0001F9CF\U0001F3FB", u8"deaf person: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 824
 { U"\U0001F9CF\U0001F3FC", u8"deaf person: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 825
 { U"\U0001F9CF\U0001F3FD", u8"deaf person: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 826
@@ -844,7 +844,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9CF\U0001F3FD\u200D\u2640\uFE0F", u8"deaf woman: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 838
 { U"\U0001F9CF\U0001F3FE\u200D\u2640\uFE0F", u8"deaf woman: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 839
 { U"\U0001F9CF\U0001F3FF\u200D\u2640\uFE0F", u8"deaf woman: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E12_0 },   // 840
-{ U"\U0001F647", u8"person bowing", 213, 0, -1, Lfg(129), EcVersion::E0_6 },   // 841
+{ U"\U0001F647", u8"person bowing", 213, 0, -1, Lfg(1), EcVersion::E0_6 },   // 841
 { U"\U0001F647\U0001F3FB", u8"person bowing: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 842
 { U"\U0001F647\U0001F3FC", u8"person bowing: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 843
 { U"\U0001F647\U0001F3FD", u8"person bowing: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E1_0 },   // 844
@@ -862,7 +862,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F647\U0001F3FD\u200D\u2640\uFE0F", u8"woman bowing: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 856
 { U"\U0001F647\U0001F3FE\u200D\u2640\uFE0F", u8"woman bowing: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 857
 { U"\U0001F647\U0001F3FF\u200D\u2640\uFE0F", u8"woman bowing: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 858
-{ U"\U0001F926", u8"person facepalming", 213, 0, -1, Lfg(129), EcVersion::E3_0 },   // 859
+{ U"\U0001F926", u8"person facepalming", 213, 0, -1, Lfg(1), EcVersion::E3_0 },   // 859
 { U"\U0001F926\U0001F3FB", u8"person facepalming: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 860
 { U"\U0001F926\U0001F3FC", u8"person facepalming: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 861
 { U"\U0001F926\U0001F3FD", u8"person facepalming: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 862
@@ -880,7 +880,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F926\U0001F3FD\u200D\u2640\uFE0F", u8"woman facepalming: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 874
 { U"\U0001F926\U0001F3FE\u200D\u2640\uFE0F", u8"woman facepalming: medium-dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 875
 { U"\U0001F926\U0001F3FF\u200D\u2640\uFE0F", u8"woman facepalming: dark skin tone", 213, 0, -1, Lfg(67), EcVersion::E4_0 },   // 876
-{ U"\U0001F937", u8"person shrugging", 213, 0, -1, Lfg(129), EcVersion::E3_0 },   // 877
+{ U"\U0001F937", u8"person shrugging", 213, 0, -1, Lfg(1), EcVersion::E3_0 },   // 877
 { U"\U0001F937\U0001F3FB", u8"person shrugging: light skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 878
 { U"\U0001F937\U0001F3FC", u8"person shrugging: medium-light skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 879
 { U"\U0001F937\U0001F3FD", u8"person shrugging: medium skin tone", 213, 0, -1, Lfg(67), EcVersion::E3_0 },   // 880
@@ -1186,7 +1186,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FD\u200D\U0001F692", u8"woman firefighter: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1180
 { U"\U0001F469\U0001F3FE\u200D\U0001F692", u8"woman firefighter: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1181
 { U"\U0001F469\U0001F3FF\u200D\U0001F692", u8"woman firefighter: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1182
-{ U"\U0001F46E", u8"police officer", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1183
+{ U"\U0001F46E", u8"police officer", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1183
 { U"\U0001F46E\U0001F3FB", u8"police officer: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1184
 { U"\U0001F46E\U0001F3FC", u8"police officer: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1185
 { U"\U0001F46E\U0001F3FD", u8"police officer: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1186
@@ -1204,7 +1204,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F46E\U0001F3FD\u200D\u2640\uFE0F", u8"woman police officer: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1198
 { U"\U0001F46E\U0001F3FE\u200D\u2640\uFE0F", u8"woman police officer: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1199
 { U"\U0001F46E\U0001F3FF\u200D\u2640\uFE0F", u8"woman police officer: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1200
-{ U"\U0001F575\uFE0F", u8"detective", 214, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1201
+{ U"\U0001F575\uFE0F", u8"detective", 214, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1201
 { U"\U0001F575\U0001F3FB", u8"detective: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1202
 { U"\U0001F575\U0001F3FC", u8"detective: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1203
 { U"\U0001F575\U0001F3FD", u8"detective: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1204
@@ -1222,7 +1222,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F575\U0001F3FD\u200D\u2640\uFE0F", u8"woman detective: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1216
 { U"\U0001F575\U0001F3FE\u200D\u2640\uFE0F", u8"woman detective: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1217
 { U"\U0001F575\U0001F3FF\u200D\u2640\uFE0F", u8"woman detective: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1218
-{ U"\U0001F482", u8"guard", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1219
+{ U"\U0001F482", u8"guard", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1219
 { U"\U0001F482\U0001F3FB", u8"guard: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1220
 { U"\U0001F482\U0001F3FC", u8"guard: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1221
 { U"\U0001F482\U0001F3FD", u8"guard: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1222
@@ -1240,13 +1240,13 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F482\U0001F3FD\u200D\u2640\uFE0F", u8"woman guard: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1234
 { U"\U0001F482\U0001F3FE\u200D\u2640\uFE0F", u8"woman guard: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1235
 { U"\U0001F482\U0001F3FF\u200D\u2640\uFE0F", u8"woman guard: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1236
-{ U"\U0001F977", u8"ninja", 214, 0, -1, Lfg(129), EcVersion::E13_0 },   // 1237
+{ U"\U0001F977", u8"ninja", 214, 0, -1, Lfg(1), EcVersion::E13_0 },   // 1237
 { U"\U0001F977\U0001F3FB", u8"ninja: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1238
 { U"\U0001F977\U0001F3FC", u8"ninja: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1239
 { U"\U0001F977\U0001F3FD", u8"ninja: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1240
 { U"\U0001F977\U0001F3FE", u8"ninja: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1241
 { U"\U0001F977\U0001F3FF", u8"ninja: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1242
-{ U"\U0001F477", u8"construction worker", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1243
+{ U"\U0001F477", u8"construction worker", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1243
 { U"\U0001F477\U0001F3FB", u8"construction worker: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1244
 { U"\U0001F477\U0001F3FC", u8"construction worker: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1245
 { U"\U0001F477\U0001F3FD", u8"construction worker: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1246
@@ -1264,25 +1264,25 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F477\U0001F3FD\u200D\u2640\uFE0F", u8"woman construction worker: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1258
 { U"\U0001F477\U0001F3FE\u200D\u2640\uFE0F", u8"woman construction worker: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1259
 { U"\U0001F477\U0001F3FF\u200D\u2640\uFE0F", u8"woman construction worker: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1260
-{ U"\U0001FAC5", u8"person with crown", 214, 0, -1, Lfg(129), EcVersion::E14_0 },   // 1261
+{ U"\U0001FAC5", u8"person with crown", 214, 0, -1, Lfg(1), EcVersion::E14_0 },   // 1261
 { U"\U0001FAC5\U0001F3FB", u8"person with crown: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1262
 { U"\U0001FAC5\U0001F3FC", u8"person with crown: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1263
 { U"\U0001FAC5\U0001F3FD", u8"person with crown: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1264
 { U"\U0001FAC5\U0001F3FE", u8"person with crown: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1265
 { U"\U0001FAC5\U0001F3FF", u8"person with crown: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1266
-{ U"\U0001F934", u8"prince", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1267
+{ U"\U0001F934", u8"prince", 214, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1267
 { U"\U0001F934\U0001F3FB", u8"prince: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1268
 { U"\U0001F934\U0001F3FC", u8"prince: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1269
 { U"\U0001F934\U0001F3FD", u8"prince: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1270
 { U"\U0001F934\U0001F3FE", u8"prince: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1271
 { U"\U0001F934\U0001F3FF", u8"prince: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1272
-{ U"\U0001F478", u8"princess", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1273
+{ U"\U0001F478", u8"princess", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1273
 { U"\U0001F478\U0001F3FB", u8"princess: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1274
 { U"\U0001F478\U0001F3FC", u8"princess: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1275
 { U"\U0001F478\U0001F3FD", u8"princess: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1276
 { U"\U0001F478\U0001F3FE", u8"princess: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1277
 { U"\U0001F478\U0001F3FF", u8"princess: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1278
-{ U"\U0001F473", u8"person wearing turban", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1279
+{ U"\U0001F473", u8"person wearing turban", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1279
 { U"\U0001F473\U0001F3FB", u8"person wearing turban: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1280
 { U"\U0001F473\U0001F3FC", u8"person wearing turban: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1281
 { U"\U0001F473\U0001F3FD", u8"person wearing turban: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1282
@@ -1300,19 +1300,19 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F473\U0001F3FD\u200D\u2640\uFE0F", u8"woman wearing turban: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1294
 { U"\U0001F473\U0001F3FE\u200D\u2640\uFE0F", u8"woman wearing turban: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1295
 { U"\U0001F473\U0001F3FF\u200D\u2640\uFE0F", u8"woman wearing turban: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1296
-{ U"\U0001F472", u8"person with skullcap", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1297
+{ U"\U0001F472", u8"person with skullcap", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1297
 { U"\U0001F472\U0001F3FB", u8"person with skullcap: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1298
 { U"\U0001F472\U0001F3FC", u8"person with skullcap: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1299
 { U"\U0001F472\U0001F3FD", u8"person with skullcap: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1300
 { U"\U0001F472\U0001F3FE", u8"person with skullcap: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1301
 { U"\U0001F472\U0001F3FF", u8"person with skullcap: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1302
-{ U"\U0001F9D5", u8"woman with headscarf", 214, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1303
+{ U"\U0001F9D5", u8"woman with headscarf", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1303
 { U"\U0001F9D5\U0001F3FB", u8"woman with headscarf: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1304
 { U"\U0001F9D5\U0001F3FC", u8"woman with headscarf: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1305
 { U"\U0001F9D5\U0001F3FD", u8"woman with headscarf: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1306
 { U"\U0001F9D5\U0001F3FE", u8"woman with headscarf: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1307
 { U"\U0001F9D5\U0001F3FF", u8"woman with headscarf: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1308
-{ U"\U0001F935", u8"person in tuxedo", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1309
+{ U"\U0001F935", u8"person in tuxedo", 214, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1309
 { U"\U0001F935\U0001F3FB", u8"person in tuxedo: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1310
 { U"\U0001F935\U0001F3FC", u8"person in tuxedo: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1311
 { U"\U0001F935\U0001F3FD", u8"person in tuxedo: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1312
@@ -1330,7 +1330,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F935\U0001F3FD\u200D\u2640\uFE0F", u8"woman in tuxedo: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1324
 { U"\U0001F935\U0001F3FE\u200D\u2640\uFE0F", u8"woman in tuxedo: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1325
 { U"\U0001F935\U0001F3FF\u200D\u2640\uFE0F", u8"woman in tuxedo: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1326
-{ U"\U0001F470", u8"person with veil", 214, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1327
+{ U"\U0001F470", u8"person with veil", 214, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1327
 { U"\U0001F470\U0001F3FB", u8"person with veil: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1328
 { U"\U0001F470\U0001F3FC", u8"person with veil: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1329
 { U"\U0001F470\U0001F3FD", u8"person with veil: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1330
@@ -1348,25 +1348,25 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F470\U0001F3FD\u200D\u2640\uFE0F", u8"woman with veil: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1342
 { U"\U0001F470\U0001F3FE\u200D\u2640\uFE0F", u8"woman with veil: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1343
 { U"\U0001F470\U0001F3FF\u200D\u2640\uFE0F", u8"woman with veil: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1344
-{ U"\U0001F930", u8"pregnant woman", 214, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1345
+{ U"\U0001F930", u8"pregnant woman", 214, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1345
 { U"\U0001F930\U0001F3FB", u8"pregnant woman: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1346
 { U"\U0001F930\U0001F3FC", u8"pregnant woman: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1347
 { U"\U0001F930\U0001F3FD", u8"pregnant woman: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1348
 { U"\U0001F930\U0001F3FE", u8"pregnant woman: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1349
 { U"\U0001F930\U0001F3FF", u8"pregnant woman: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1350
-{ U"\U0001FAC3", u8"pregnant man", 214, 0, -1, Lfg(129), EcVersion::E14_0 },   // 1351
+{ U"\U0001FAC3", u8"pregnant man", 214, 0, -1, Lfg(1), EcVersion::E14_0 },   // 1351
 { U"\U0001FAC3\U0001F3FB", u8"pregnant man: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1352
 { U"\U0001FAC3\U0001F3FC", u8"pregnant man: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1353
 { U"\U0001FAC3\U0001F3FD", u8"pregnant man: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1354
 { U"\U0001FAC3\U0001F3FE", u8"pregnant man: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1355
 { U"\U0001FAC3\U0001F3FF", u8"pregnant man: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1356
-{ U"\U0001FAC4", u8"pregnant person", 214, 0, -1, Lfg(129), EcVersion::E14_0 },   // 1357
+{ U"\U0001FAC4", u8"pregnant person", 214, 0, -1, Lfg(1), EcVersion::E14_0 },   // 1357
 { U"\U0001FAC4\U0001F3FB", u8"pregnant person: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1358
 { U"\U0001FAC4\U0001F3FC", u8"pregnant person: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1359
 { U"\U0001FAC4\U0001F3FD", u8"pregnant person: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1360
 { U"\U0001FAC4\U0001F3FE", u8"pregnant person: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1361
 { U"\U0001FAC4\U0001F3FF", u8"pregnant person: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E14_0 },   // 1362
-{ U"\U0001F931", u8"breast-feeding", 214, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1363
+{ U"\U0001F931", u8"breast-feeding", 214, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1363
 { U"\U0001F931\U0001F3FB", u8"breast-feeding: light skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1364
 { U"\U0001F931\U0001F3FC", u8"breast-feeding: medium-light skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1365
 { U"\U0001F931\U0001F3FD", u8"breast-feeding: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1366
@@ -1390,19 +1390,19 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F37C", u8"person feeding baby: medium skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1384
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F37C", u8"person feeding baby: medium-dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1385
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F37C", u8"person feeding baby: dark skin tone", 214, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1386
-{ U"\U0001F47C", u8"baby angel", 215, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1387
+{ U"\U0001F47C", u8"baby angel", 215, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1387
 { U"\U0001F47C\U0001F3FB", u8"baby angel: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1388
 { U"\U0001F47C\U0001F3FC", u8"baby angel: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1389
 { U"\U0001F47C\U0001F3FD", u8"baby angel: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1390
 { U"\U0001F47C\U0001F3FE", u8"baby angel: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1391
 { U"\U0001F47C\U0001F3FF", u8"baby angel: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1392
-{ U"\U0001F385", u8"Santa Claus", 215, 0, -1, Lfg(131), EcVersion::E0_6 },   // 1393
+{ U"\U0001F385", u8"Santa Claus", 215, 0, -1, Lfg(3), EcVersion::E0_6 },   // 1393
 { U"\U0001F385\U0001F3FB", u8"Santa Claus: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1394
 { U"\U0001F385\U0001F3FC", u8"Santa Claus: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1395
 { U"\U0001F385\U0001F3FD", u8"Santa Claus: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1396
 { U"\U0001F385\U0001F3FE", u8"Santa Claus: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1397
 { U"\U0001F385\U0001F3FF", u8"Santa Claus: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1398
-{ U"\U0001F936", u8"Mrs. Claus", 215, 0, -1, Lfg(131), EcVersion::E3_0 },   // 1399
+{ U"\U0001F936", u8"Mrs. Claus", 215, 0, -1, Lfg(3), EcVersion::E3_0 },   // 1399
 { U"\U0001F936\U0001F3FB", u8"Mrs. Claus: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1400
 { U"\U0001F936\U0001F3FC", u8"Mrs. Claus: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1401
 { U"\U0001F936\U0001F3FD", u8"Mrs. Claus: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1402
@@ -1414,7 +1414,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D1\U0001F3FD\u200D\U0001F384", u8"Mx Claus: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1408
 { U"\U0001F9D1\U0001F3FE\u200D\U0001F384", u8"Mx Claus: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1409
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F384", u8"Mx Claus: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E13_0 },   // 1410
-{ U"\U0001F9B8", u8"superhero", 215, 0, -1, Lfg(129), EcVersion::E11_0 },   // 1411
+{ U"\U0001F9B8", u8"superhero", 215, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1411
 { U"\U0001F9B8\U0001F3FB", u8"superhero: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1412
 { U"\U0001F9B8\U0001F3FC", u8"superhero: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1413
 { U"\U0001F9B8\U0001F3FD", u8"superhero: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1414
@@ -1432,7 +1432,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9B8\U0001F3FD\u200D\u2640\uFE0F", u8"woman superhero: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1426
 { U"\U0001F9B8\U0001F3FE\u200D\u2640\uFE0F", u8"woman superhero: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1427
 { U"\U0001F9B8\U0001F3FF\u200D\u2640\uFE0F", u8"woman superhero: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1428
-{ U"\U0001F9B9", u8"supervillain", 215, 0, -1, Lfg(129), EcVersion::E11_0 },   // 1429
+{ U"\U0001F9B9", u8"supervillain", 215, 0, -1, Lfg(1), EcVersion::E11_0 },   // 1429
 { U"\U0001F9B9\U0001F3FB", u8"supervillain: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1430
 { U"\U0001F9B9\U0001F3FC", u8"supervillain: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1431
 { U"\U0001F9B9\U0001F3FD", u8"supervillain: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1432
@@ -1450,7 +1450,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9B9\U0001F3FD\u200D\u2640\uFE0F", u8"woman supervillain: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1444
 { U"\U0001F9B9\U0001F3FE\u200D\u2640\uFE0F", u8"woman supervillain: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1445
 { U"\U0001F9B9\U0001F3FF\u200D\u2640\uFE0F", u8"woman supervillain: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E11_0 },   // 1446
-{ U"\U0001F9D9", u8"mage", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1447
+{ U"\U0001F9D9", u8"mage", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1447
 { U"\U0001F9D9\U0001F3FB", u8"mage: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1448
 { U"\U0001F9D9\U0001F3FC", u8"mage: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1449
 { U"\U0001F9D9\U0001F3FD", u8"mage: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1450
@@ -1468,7 +1468,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D9\U0001F3FD\u200D\u2640\uFE0F", u8"woman mage: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1462
 { U"\U0001F9D9\U0001F3FE\u200D\u2640\uFE0F", u8"woman mage: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1463
 { U"\U0001F9D9\U0001F3FF\u200D\u2640\uFE0F", u8"woman mage: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1464
-{ U"\U0001F9DA", u8"fairy", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1465
+{ U"\U0001F9DA", u8"fairy", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1465
 { U"\U0001F9DA\U0001F3FB", u8"fairy: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1466
 { U"\U0001F9DA\U0001F3FC", u8"fairy: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1467
 { U"\U0001F9DA\U0001F3FD", u8"fairy: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1468
@@ -1486,7 +1486,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9DA\U0001F3FD\u200D\u2640\uFE0F", u8"woman fairy: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1480
 { U"\U0001F9DA\U0001F3FE\u200D\u2640\uFE0F", u8"woman fairy: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1481
 { U"\U0001F9DA\U0001F3FF\u200D\u2640\uFE0F", u8"woman fairy: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1482
-{ U"\U0001F9DB", u8"vampire", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1483
+{ U"\U0001F9DB", u8"vampire", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1483
 { U"\U0001F9DB\U0001F3FB", u8"vampire: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1484
 { U"\U0001F9DB\U0001F3FC", u8"vampire: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1485
 { U"\U0001F9DB\U0001F3FD", u8"vampire: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1486
@@ -1504,7 +1504,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9DB\U0001F3FD\u200D\u2640\uFE0F", u8"woman vampire: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1498
 { U"\U0001F9DB\U0001F3FE\u200D\u2640\uFE0F", u8"woman vampire: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1499
 { U"\U0001F9DB\U0001F3FF\u200D\u2640\uFE0F", u8"woman vampire: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1500
-{ U"\U0001F9DC", u8"merperson", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1501
+{ U"\U0001F9DC", u8"merperson", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1501
 { U"\U0001F9DC\U0001F3FB", u8"merperson: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1502
 { U"\U0001F9DC\U0001F3FC", u8"merperson: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1503
 { U"\U0001F9DC\U0001F3FD", u8"merperson: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1504
@@ -1522,7 +1522,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9DC\U0001F3FD\u200D\u2640\uFE0F", u8"mermaid: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1516
 { U"\U0001F9DC\U0001F3FE\u200D\u2640\uFE0F", u8"mermaid: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1517
 { U"\U0001F9DC\U0001F3FF\u200D\u2640\uFE0F", u8"mermaid: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1518
-{ U"\U0001F9DD", u8"elf", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1519
+{ U"\U0001F9DD", u8"elf", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1519
 { U"\U0001F9DD\U0001F3FB", u8"elf: light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1520
 { U"\U0001F9DD\U0001F3FC", u8"elf: medium-light skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1521
 { U"\U0001F9DD\U0001F3FD", u8"elf: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1522
@@ -1540,14 +1540,14 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9DD\U0001F3FD\u200D\u2640\uFE0F", u8"woman elf: medium skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1534
 { U"\U0001F9DD\U0001F3FE\u200D\u2640\uFE0F", u8"woman elf: medium-dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1535
 { U"\U0001F9DD\U0001F3FF\u200D\u2640\uFE0F", u8"woman elf: dark skin tone", 215, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1536
-{ U"\U0001F9DE", u8"genie", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1537
+{ U"\U0001F9DE", u8"genie", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1537
 { U"\U0001F9DE\u200D\u2642\uFE0F", u8"man genie", 215, 0, -1, Lfg(99), EcVersion::E5_0 },   // 1538
 { U"\U0001F9DE\u200D\u2640\uFE0F", u8"woman genie", 215, 0, -1, Lfg(99), EcVersion::E5_0 },   // 1539
-{ U"\U0001F9DF", u8"zombie", 215, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1540
+{ U"\U0001F9DF", u8"zombie", 215, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1540
 { U"\U0001F9DF\u200D\u2642\uFE0F", u8"man zombie", 215, 0, -1, Lfg(99), EcVersion::E5_0 },   // 1541
 { U"\U0001F9DF\u200D\u2640\uFE0F", u8"woman zombie", 215, 0, -1, Lfg(99), EcVersion::E5_0 },   // 1542
-{ U"\U0001F9CC", u8"troll", 215, 0, -1, Lfg(129), EcVersion::E14_0 },   // 1543
-{ U"\U0001F486", u8"person getting massage", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1544
+{ U"\U0001F9CC", u8"troll", 215, 0, -1, Lfg(1), EcVersion::E14_0 },   // 1543
+{ U"\U0001F486", u8"person getting massage", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1544
 { U"\U0001F486\U0001F3FB", u8"person getting massage: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1545
 { U"\U0001F486\U0001F3FC", u8"person getting massage: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1546
 { U"\U0001F486\U0001F3FD", u8"person getting massage: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1547
@@ -1565,7 +1565,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F486\U0001F3FD\u200D\u2640\uFE0F", u8"woman getting massage: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1559
 { U"\U0001F486\U0001F3FE\u200D\u2640\uFE0F", u8"woman getting massage: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1560
 { U"\U0001F486\U0001F3FF\u200D\u2640\uFE0F", u8"woman getting massage: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1561
-{ U"\U0001F487", u8"person getting haircut", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1562
+{ U"\U0001F487", u8"person getting haircut", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1562
 { U"\U0001F487\U0001F3FB", u8"person getting haircut: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1563
 { U"\U0001F487\U0001F3FC", u8"person getting haircut: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1564
 { U"\U0001F487\U0001F3FD", u8"person getting haircut: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1565
@@ -1583,7 +1583,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F487\U0001F3FD\u200D\u2640\uFE0F", u8"woman getting haircut: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1577
 { U"\U0001F487\U0001F3FE\u200D\u2640\uFE0F", u8"woman getting haircut: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1578
 { U"\U0001F487\U0001F3FF\u200D\u2640\uFE0F", u8"woman getting haircut: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1579
-{ U"\U0001F6B6", u8"person walking", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1580
+{ U"\U0001F6B6", u8"person walking", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1580
 { U"\U0001F6B6\U0001F3FB", u8"person walking: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1581
 { U"\U0001F6B6\U0001F3FC", u8"person walking: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1582
 { U"\U0001F6B6\U0001F3FD", u8"person walking: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1583
@@ -1619,7 +1619,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F6B6\U0001F3FD\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man walking facing right: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1613
 { U"\U0001F6B6\U0001F3FE\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man walking facing right: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1614
 { U"\U0001F6B6\U0001F3FF\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man walking facing right: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1615
-{ U"\U0001F9CD", u8"person standing", 216, 0, -1, Lfg(129), EcVersion::E12_0 },   // 1616
+{ U"\U0001F9CD", u8"person standing", 216, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1616
 { U"\U0001F9CD\U0001F3FB", u8"person standing: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1617
 { U"\U0001F9CD\U0001F3FC", u8"person standing: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1618
 { U"\U0001F9CD\U0001F3FD", u8"person standing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1619
@@ -1637,7 +1637,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9CD\U0001F3FD\u200D\u2640\uFE0F", u8"woman standing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1631
 { U"\U0001F9CD\U0001F3FE\u200D\u2640\uFE0F", u8"woman standing: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1632
 { U"\U0001F9CD\U0001F3FF\u200D\u2640\uFE0F", u8"woman standing: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1633
-{ U"\U0001F9CE", u8"person kneeling", 216, 0, -1, Lfg(129), EcVersion::E12_0 },   // 1634
+{ U"\U0001F9CE", u8"person kneeling", 216, 0, -1, Lfg(1), EcVersion::E12_0 },   // 1634
 { U"\U0001F9CE\U0001F3FB", u8"person kneeling: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1635
 { U"\U0001F9CE\U0001F3FC", u8"person kneeling: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1636
 { U"\U0001F9CE\U0001F3FD", u8"person kneeling: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E12_0 },   // 1637
@@ -1781,7 +1781,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FD\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"woman in manual wheelchair facing right: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1775
 { U"\U0001F469\U0001F3FE\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"woman in manual wheelchair facing right: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1776
 { U"\U0001F469\U0001F3FF\u200D\U0001F9BD\u200D\u27A1\uFE0F", u8"woman in manual wheelchair facing right: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1777
-{ U"\U0001F3C3", u8"person running", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1778
+{ U"\U0001F3C3", u8"person running", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1778
 { U"\U0001F3C3\U0001F3FB", u8"person running: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1779
 { U"\U0001F3C3\U0001F3FC", u8"person running: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1780
 { U"\U0001F3C3\U0001F3FD", u8"person running: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1781
@@ -1817,28 +1817,28 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F3C3\U0001F3FD\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man running facing right: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1811
 { U"\U0001F3C3\U0001F3FE\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man running facing right: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1812
 { U"\U0001F3C3\U0001F3FF\u200D\u2642\uFE0F\u200D\u27A1\uFE0F", u8"man running facing right: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E15_1 },   // 1813
-{ U"\U0001F483", u8"woman dancing", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1814
+{ U"\U0001F483", u8"woman dancing", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1814
 { U"\U0001F483\U0001F3FB", u8"woman dancing: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1815
 { U"\U0001F483\U0001F3FC", u8"woman dancing: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1816
 { U"\U0001F483\U0001F3FD", u8"woman dancing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1817
 { U"\U0001F483\U0001F3FE", u8"woman dancing: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1818
 { U"\U0001F483\U0001F3FF", u8"woman dancing: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1819
-{ U"\U0001F57A", u8"man dancing", 216, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1820
+{ U"\U0001F57A", u8"man dancing", 216, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1820
 { U"\U0001F57A\U0001F3FB", u8"man dancing: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1821
 { U"\U0001F57A\U0001F3FC", u8"man dancing: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1822
 { U"\U0001F57A\U0001F3FD", u8"man dancing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1823
 { U"\U0001F57A\U0001F3FE", u8"man dancing: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1824
 { U"\U0001F57A\U0001F3FF", u8"man dancing: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E3_0 },   // 1825
-{ U"\U0001F574\uFE0F", u8"person in suit levitating", 216, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1826
+{ U"\U0001F574\uFE0F", u8"person in suit levitating", 216, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1826
 { U"\U0001F574\U0001F3FB", u8"person in suit levitating: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1827
 { U"\U0001F574\U0001F3FC", u8"person in suit levitating: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1828
 { U"\U0001F574\U0001F3FD", u8"person in suit levitating: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1829
 { U"\U0001F574\U0001F3FE", u8"person in suit levitating: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1830
 { U"\U0001F574\U0001F3FF", u8"person in suit levitating: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1831
-{ U"\U0001F46F", u8"people with bunny ears", 216, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1832
+{ U"\U0001F46F", u8"people with bunny ears", 216, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1832
 { U"\U0001F46F\u200D\u2642\uFE0F", u8"men with bunny ears", 216, 0, -1, Lfg(99), EcVersion::E4_0 },   // 1833
 { U"\U0001F46F\u200D\u2640\uFE0F", u8"women with bunny ears", 216, 0, -1, Lfg(99), EcVersion::E4_0 },   // 1834
-{ U"\U0001F9D6", u8"person in steamy room", 216, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1835
+{ U"\U0001F9D6", u8"person in steamy room", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1835
 { U"\U0001F9D6\U0001F3FB", u8"person in steamy room: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1836
 { U"\U0001F9D6\U0001F3FC", u8"person in steamy room: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1837
 { U"\U0001F9D6\U0001F3FD", u8"person in steamy room: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1838
@@ -1856,7 +1856,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D6\U0001F3FD\u200D\u2640\uFE0F", u8"woman in steamy room: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1850
 { U"\U0001F9D6\U0001F3FE\u200D\u2640\uFE0F", u8"woman in steamy room: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1851
 { U"\U0001F9D6\U0001F3FF\u200D\u2640\uFE0F", u8"woman in steamy room: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1852
-{ U"\U0001F9D7", u8"person climbing", 216, 0, -1, Lfg(129), EcVersion::E5_0 },   // 1853
+{ U"\U0001F9D7", u8"person climbing", 216, 0, -1, Lfg(1), EcVersion::E5_0 },   // 1853
 { U"\U0001F9D7\U0001F3FB", u8"person climbing: light skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1854
 { U"\U0001F9D7\U0001F3FC", u8"person climbing: medium-light skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1855
 { U"\U0001F9D7\U0001F3FD", u8"person climbing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1856
@@ -1874,21 +1874,21 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D7\U0001F3FD\u200D\u2640\uFE0F", u8"woman climbing: medium skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1868
 { U"\U0001F9D7\U0001F3FE\u200D\u2640\uFE0F", u8"woman climbing: medium-dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1869
 { U"\U0001F9D7\U0001F3FF\u200D\u2640\uFE0F", u8"woman climbing: dark skin tone", 216, 0, -1, Lfg(67), EcVersion::E5_0 },   // 1870
-{ U"\U0001F93A", u8"person fencing", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 1871
-{ U"\U0001F3C7", u8"horse racing", 217, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1872
+{ U"\U0001F93A", u8"person fencing", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 1871
+{ U"\U0001F3C7", u8"horse racing", 217, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1872
 { U"\U0001F3C7\U0001F3FB", u8"horse racing: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1873
 { U"\U0001F3C7\U0001F3FC", u8"horse racing: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1874
 { U"\U0001F3C7\U0001F3FD", u8"horse racing: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1875
 { U"\U0001F3C7\U0001F3FE", u8"horse racing: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1876
 { U"\U0001F3C7\U0001F3FF", u8"horse racing: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1877
-{ U"\u26F7\uFE0F", u8"skier", 217, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1878
-{ U"\U0001F3C2", u8"snowboarder", 217, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1879
+{ U"\u26F7\uFE0F", u8"skier", 217, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1878
+{ U"\U0001F3C2", u8"snowboarder", 217, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1879
 { U"\U0001F3C2\U0001F3FB", u8"snowboarder: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1880
 { U"\U0001F3C2\U0001F3FC", u8"snowboarder: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1881
 { U"\U0001F3C2\U0001F3FD", u8"snowboarder: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1882
 { U"\U0001F3C2\U0001F3FE", u8"snowboarder: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1883
 { U"\U0001F3C2\U0001F3FF", u8"snowboarder: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1884
-{ U"\U0001F3CC\uFE0F", u8"person golfing", 217, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1885
+{ U"\U0001F3CC\uFE0F", u8"person golfing", 217, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1885
 { U"\U0001F3CC\U0001F3FB", u8"person golfing: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1886
 { U"\U0001F3CC\U0001F3FC", u8"person golfing: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1887
 { U"\U0001F3CC\U0001F3FD", u8"person golfing: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1888
@@ -1906,7 +1906,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F3CC\U0001F3FD\u200D\u2640\uFE0F", u8"woman golfing: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1900
 { U"\U0001F3CC\U0001F3FE\u200D\u2640\uFE0F", u8"woman golfing: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1901
 { U"\U0001F3CC\U0001F3FF\u200D\u2640\uFE0F", u8"woman golfing: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1902
-{ U"\U0001F3C4", u8"person surfing", 217, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1903
+{ U"\U0001F3C4", u8"person surfing", 217, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1903
 { U"\U0001F3C4\U0001F3FB", u8"person surfing: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1904
 { U"\U0001F3C4\U0001F3FC", u8"person surfing: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1905
 { U"\U0001F3C4\U0001F3FD", u8"person surfing: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1906
@@ -1924,7 +1924,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F3C4\U0001F3FD\u200D\u2640\uFE0F", u8"woman surfing: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1918
 { U"\U0001F3C4\U0001F3FE\u200D\u2640\uFE0F", u8"woman surfing: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1919
 { U"\U0001F3C4\U0001F3FF\u200D\u2640\uFE0F", u8"woman surfing: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1920
-{ U"\U0001F6A3", u8"person rowing boat", 217, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1921
+{ U"\U0001F6A3", u8"person rowing boat", 217, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1921
 { U"\U0001F6A3\U0001F3FB", u8"person rowing boat: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1922
 { U"\U0001F6A3\U0001F3FC", u8"person rowing boat: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1923
 { U"\U0001F6A3\U0001F3FD", u8"person rowing boat: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1924
@@ -1942,7 +1942,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F6A3\U0001F3FD\u200D\u2640\uFE0F", u8"woman rowing boat: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1936
 { U"\U0001F6A3\U0001F3FE\u200D\u2640\uFE0F", u8"woman rowing boat: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1937
 { U"\U0001F6A3\U0001F3FF\u200D\u2640\uFE0F", u8"woman rowing boat: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1938
-{ U"\U0001F3CA", u8"person swimming", 217, 0, -1, Lfg(129), EcVersion::E0_6 },   // 1939
+{ U"\U0001F3CA", u8"person swimming", 217, 0, -1, Lfg(1), EcVersion::E0_6 },   // 1939
 { U"\U0001F3CA\U0001F3FB", u8"person swimming: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1940
 { U"\U0001F3CA\U0001F3FC", u8"person swimming: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1941
 { U"\U0001F3CA\U0001F3FD", u8"person swimming: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1942
@@ -1960,7 +1960,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F3CA\U0001F3FD\u200D\u2640\uFE0F", u8"woman swimming: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1954
 { U"\U0001F3CA\U0001F3FE\u200D\u2640\uFE0F", u8"woman swimming: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1955
 { U"\U0001F3CA\U0001F3FF\u200D\u2640\uFE0F", u8"woman swimming: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1956
-{ U"\u26F9\uFE0F", u8"person bouncing ball", 217, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1957
+{ U"\u26F9\uFE0F", u8"person bouncing ball", 217, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1957
 { U"\u26F9\U0001F3FB", u8"person bouncing ball: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1958
 { U"\u26F9\U0001F3FC", u8"person bouncing ball: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1959
 { U"\u26F9\U0001F3FD", u8"person bouncing ball: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1960
@@ -1978,7 +1978,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\u26F9\U0001F3FD\u200D\u2640\uFE0F", u8"woman bouncing ball: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1972
 { U"\u26F9\U0001F3FE\u200D\u2640\uFE0F", u8"woman bouncing ball: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1973
 { U"\u26F9\U0001F3FF\u200D\u2640\uFE0F", u8"woman bouncing ball: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1974
-{ U"\U0001F3CB\uFE0F", u8"person lifting weights", 217, 0, -1, Lfg(193), EcVersion::E0_7 },   // 1975
+{ U"\U0001F3CB\uFE0F", u8"person lifting weights", 217, 0, -1, Lfg(65), EcVersion::E0_7 },   // 1975
 { U"\U0001F3CB\U0001F3FB", u8"person lifting weights: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1976
 { U"\U0001F3CB\U0001F3FC", u8"person lifting weights: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1977
 { U"\U0001F3CB\U0001F3FD", u8"person lifting weights: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E2_0 },   // 1978
@@ -1996,7 +1996,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F3CB\U0001F3FD\u200D\u2640\uFE0F", u8"woman lifting weights: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1990
 { U"\U0001F3CB\U0001F3FE\u200D\u2640\uFE0F", u8"woman lifting weights: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1991
 { U"\U0001F3CB\U0001F3FF\u200D\u2640\uFE0F", u8"woman lifting weights: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 1992
-{ U"\U0001F6B4", u8"person biking", 217, 0, -1, Lfg(129), EcVersion::E1_0 },   // 1993
+{ U"\U0001F6B4", u8"person biking", 217, 0, -1, Lfg(1), EcVersion::E1_0 },   // 1993
 { U"\U0001F6B4\U0001F3FB", u8"person biking: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1994
 { U"\U0001F6B4\U0001F3FC", u8"person biking: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1995
 { U"\U0001F6B4\U0001F3FD", u8"person biking: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 1996
@@ -2014,7 +2014,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F6B4\U0001F3FD\u200D\u2640\uFE0F", u8"woman biking: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2008
 { U"\U0001F6B4\U0001F3FE\u200D\u2640\uFE0F", u8"woman biking: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2009
 { U"\U0001F6B4\U0001F3FF\u200D\u2640\uFE0F", u8"woman biking: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2010
-{ U"\U0001F6B5", u8"person mountain biking", 217, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2011
+{ U"\U0001F6B5", u8"person mountain biking", 217, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2011
 { U"\U0001F6B5\U0001F3FB", u8"person mountain biking: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2012
 { U"\U0001F6B5\U0001F3FC", u8"person mountain biking: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2013
 { U"\U0001F6B5\U0001F3FD", u8"person mountain biking: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2014
@@ -2032,7 +2032,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F6B5\U0001F3FD\u200D\u2640\uFE0F", u8"woman mountain biking: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2026
 { U"\U0001F6B5\U0001F3FE\u200D\u2640\uFE0F", u8"woman mountain biking: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2027
 { U"\U0001F6B5\U0001F3FF\u200D\u2640\uFE0F", u8"woman mountain biking: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2028
-{ U"\U0001F938", u8"person cartwheeling", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2029
+{ U"\U0001F938", u8"person cartwheeling", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2029
 { U"\U0001F938\U0001F3FB", u8"person cartwheeling: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2030
 { U"\U0001F938\U0001F3FC", u8"person cartwheeling: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2031
 { U"\U0001F938\U0001F3FD", u8"person cartwheeling: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2032
@@ -2050,10 +2050,10 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F938\U0001F3FD\u200D\u2640\uFE0F", u8"woman cartwheeling: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2044
 { U"\U0001F938\U0001F3FE\u200D\u2640\uFE0F", u8"woman cartwheeling: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2045
 { U"\U0001F938\U0001F3FF\u200D\u2640\uFE0F", u8"woman cartwheeling: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2046
-{ U"\U0001F93C", u8"people wrestling", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2047
+{ U"\U0001F93C", u8"people wrestling", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2047
 { U"\U0001F93C\u200D\u2642\uFE0F", u8"men wrestling", 217, 0, -1, Lfg(99), EcVersion::E4_0 },   // 2048
 { U"\U0001F93C\u200D\u2640\uFE0F", u8"women wrestling", 217, 0, -1, Lfg(99), EcVersion::E4_0 },   // 2049
-{ U"\U0001F93D", u8"person playing water polo", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2050
+{ U"\U0001F93D", u8"person playing water polo", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2050
 { U"\U0001F93D\U0001F3FB", u8"person playing water polo: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2051
 { U"\U0001F93D\U0001F3FC", u8"person playing water polo: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2052
 { U"\U0001F93D\U0001F3FD", u8"person playing water polo: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2053
@@ -2071,7 +2071,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F93D\U0001F3FD\u200D\u2640\uFE0F", u8"woman playing water polo: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2065
 { U"\U0001F93D\U0001F3FE\u200D\u2640\uFE0F", u8"woman playing water polo: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2066
 { U"\U0001F93D\U0001F3FF\u200D\u2640\uFE0F", u8"woman playing water polo: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2067
-{ U"\U0001F93E", u8"person playing handball", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2068
+{ U"\U0001F93E", u8"person playing handball", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2068
 { U"\U0001F93E\U0001F3FB", u8"person playing handball: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2069
 { U"\U0001F93E\U0001F3FC", u8"person playing handball: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2070
 { U"\U0001F93E\U0001F3FD", u8"person playing handball: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2071
@@ -2089,7 +2089,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F93E\U0001F3FD\u200D\u2640\uFE0F", u8"woman playing handball: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2083
 { U"\U0001F93E\U0001F3FE\u200D\u2640\uFE0F", u8"woman playing handball: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2084
 { U"\U0001F93E\U0001F3FF\u200D\u2640\uFE0F", u8"woman playing handball: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2085
-{ U"\U0001F939", u8"person juggling", 217, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2086
+{ U"\U0001F939", u8"person juggling", 217, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2086
 { U"\U0001F939\U0001F3FB", u8"person juggling: light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2087
 { U"\U0001F939\U0001F3FC", u8"person juggling: medium-light skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2088
 { U"\U0001F939\U0001F3FD", u8"person juggling: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E3_0 },   // 2089
@@ -2107,7 +2107,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F939\U0001F3FD\u200D\u2640\uFE0F", u8"woman juggling: medium skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2101
 { U"\U0001F939\U0001F3FE\u200D\u2640\uFE0F", u8"woman juggling: medium-dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2102
 { U"\U0001F939\U0001F3FF\u200D\u2640\uFE0F", u8"woman juggling: dark skin tone", 217, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2103
-{ U"\U0001F9D8", u8"person in lotus position", 218, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2104
+{ U"\U0001F9D8", u8"person in lotus position", 218, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2104
 { U"\U0001F9D8\U0001F3FB", u8"person in lotus position: light skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2105
 { U"\U0001F9D8\U0001F3FC", u8"person in lotus position: medium-light skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2106
 { U"\U0001F9D8\U0001F3FD", u8"person in lotus position: medium skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2107
@@ -2125,13 +2125,13 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D8\U0001F3FD\u200D\u2640\uFE0F", u8"woman in lotus position: medium skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2119
 { U"\U0001F9D8\U0001F3FE\u200D\u2640\uFE0F", u8"woman in lotus position: medium-dark skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2120
 { U"\U0001F9D8\U0001F3FF\u200D\u2640\uFE0F", u8"woman in lotus position: dark skin tone", 218, 0, -1, Lfg(67), EcVersion::E5_0 },   // 2121
-{ U"\U0001F6C0", u8"person taking bath", 218, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2122
+{ U"\U0001F6C0", u8"person taking bath", 218, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2122
 { U"\U0001F6C0\U0001F3FB", u8"person taking bath: light skin tone", 218, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2123
 { U"\U0001F6C0\U0001F3FC", u8"person taking bath: medium-light skin tone", 218, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2124
 { U"\U0001F6C0\U0001F3FD", u8"person taking bath: medium skin tone", 218, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2125
 { U"\U0001F6C0\U0001F3FE", u8"person taking bath: medium-dark skin tone", 218, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2126
 { U"\U0001F6C0\U0001F3FF", u8"person taking bath: dark skin tone", 218, 0, -1, Lfg(67), EcVersion::E1_0 },   // 2127
-{ U"\U0001F6CC", u8"person in bed", 218, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2128
+{ U"\U0001F6CC", u8"person in bed", 218, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2128
 { U"\U0001F6CC\U0001F3FB", u8"person in bed: light skin tone", 218, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2129
 { U"\U0001F6CC\U0001F3FC", u8"person in bed: medium-light skin tone", 218, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2130
 { U"\U0001F6CC\U0001F3FD", u8"person in bed: medium skin tone", 218, 0, -1, Lfg(67), EcVersion::E4_0 },   // 2131
@@ -2163,7 +2163,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FD", u8"people holding hands: dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2157
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FE", u8"people holding hands: dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2158
 { U"\U0001F9D1\U0001F3FF\u200D\U0001F91D\u200D\U0001F9D1\U0001F3FF", u8"people holding hands: dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2159
-{ U"\U0001F46D", u8"women holding hands", 219, 0, -1, Lfg(131), EcVersion::E1_0 },   // 2160
+{ U"\U0001F46D", u8"women holding hands", 219, 0, -1, Lfg(3), EcVersion::E1_0 },   // 2160
 { U"\U0001F46D\U0001F3FB", u8"women holding hands: light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2161
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F469\U0001F3FC", u8"women holding hands: light skin tone, medium-light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_1 },   // 2162
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F469\U0001F3FD", u8"women holding hands: light skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_1 },   // 2163
@@ -2189,7 +2189,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FD", u8"women holding hands: dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2183
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F469\U0001F3FE", u8"women holding hands: dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2184
 { U"\U0001F46D\U0001F3FF", u8"women holding hands: dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2185
-{ U"\U0001F46B", u8"woman and man holding hands", 219, 0, -1, Lfg(131), EcVersion::E0_6 },   // 2186
+{ U"\U0001F46B", u8"woman and man holding hands", 219, 0, -1, Lfg(3), EcVersion::E0_6 },   // 2186
 { U"\U0001F46B\U0001F3FB", u8"woman and man holding hands: light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2187
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"woman and man holding hands: light skin tone, medium-light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2188
 { U"\U0001F469\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: light skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2189
@@ -2215,7 +2215,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"woman and man holding hands: dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2209
 { U"\U0001F469\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"woman and man holding hands: dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2210
 { U"\U0001F46B\U0001F3FF", u8"woman and man holding hands: dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2211
-{ U"\U0001F46C", u8"men holding hands", 219, 0, -1, Lfg(131), EcVersion::E1_0 },   // 2212
+{ U"\U0001F46C", u8"men holding hands", 219, 0, -1, Lfg(3), EcVersion::E1_0 },   // 2212
 { U"\U0001F46C\U0001F3FB", u8"men holding hands: light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2213
 { U"\U0001F468\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FC", u8"men holding hands: light skin tone, medium-light skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_1 },   // 2214
 { U"\U0001F468\U0001F3FB\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"men holding hands: light skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_1 },   // 2215
@@ -2241,7 +2241,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F468\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FD", u8"men holding hands: dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2235
 { U"\U0001F468\U0001F3FF\u200D\U0001F91D\u200D\U0001F468\U0001F3FE", u8"men holding hands: dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2236
 { U"\U0001F46C\U0001F3FF", u8"men holding hands: dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E12_0 },   // 2237
-{ U"\U0001F48F", u8"kiss", 219, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2238
+{ U"\U0001F48F", u8"kiss", 219, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2238
 { U"\U0001F48F\U0001F3FB", u8"kiss: light skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2239
 { U"\U0001F48F\U0001F3FC", u8"kiss: medium-light skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2240
 { U"\U0001F48F\U0001F3FD", u8"kiss: medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2241
@@ -2345,7 +2345,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FD", u8"kiss: woman, woman, dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2339
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FE", u8"kiss: woman, woman, dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2340
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F48B\u200D\U0001F469\U0001F3FF", u8"kiss: woman, woman, dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2341
-{ U"\U0001F491", u8"couple with heart", 219, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2342
+{ U"\U0001F491", u8"couple with heart", 219, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2342
 { U"\U0001F491\U0001F3FB", u8"couple with heart: light skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2343
 { U"\U0001F491\U0001F3FC", u8"couple with heart: medium-light skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2344
 { U"\U0001F491\U0001F3FD", u8"couple with heart: medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2345
@@ -2449,53 +2449,53 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FD", u8"couple with heart: woman, woman, dark skin tone, medium skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2443
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FE", u8"couple with heart: woman, woman, dark skin tone, medium-dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2444
 { U"\U0001F469\U0001F3FF\u200D\u2764\uFE0F\u200D\U0001F469\U0001F3FF", u8"couple with heart: woman, woman, dark skin tone", 219, 0, -1, Lfg(67), EcVersion::E13_1 },   // 2445
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466", u8"family: man, woman, boy", 219, 0, -1, Lfg(609), EcVersion::E2_0 },   // 2446
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467", u8"family: man, woman, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2447
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: man, woman, girl, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2448
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: man, woman, boy, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2449
-{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: man, woman, girl, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2450
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466", u8"family: man, man, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2451
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467", u8"family: man, man, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2452
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, man, girl, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2453
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, man, boy, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2454
-{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, man, girl, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2455
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466", u8"family: woman, woman, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2456
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467", u8"family: woman, woman, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2457
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, woman, girl, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2458
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, woman, boy, boy", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2459
-{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, woman, girl, girl", 219, 0, -1, Lfg(611), EcVersion::E2_0 },   // 2460
-{ U"\U0001F468\u200D\U0001F466", u8"family: man, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2461
-{ U"\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, boy, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2462
-{ U"\U0001F468\u200D\U0001F467", u8"family: man, girl", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2463
-{ U"\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, girl, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2464
-{ U"\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, girl, girl", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2465
-{ U"\U0001F469\u200D\U0001F466", u8"family: woman, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2466
-{ U"\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, boy, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2467
-{ U"\U0001F469\u200D\U0001F467", u8"family: woman, girl", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2468
-{ U"\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, girl, boy", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2469
-{ U"\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, girl, girl", 219, 0, -1, Lfg(611), EcVersion::E4_0 },   // 2470
-{ U"\U0001F5E3\uFE0F", u8"speaking head", 220, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2471
-{ U"\U0001F464", u8"bust in silhouette", 220, 0, -1, Lfg(131), EcVersion::E0_6 },   // 2472
-{ U"\U0001F465", u8"busts in silhouette", 220, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2473
-{ U"\U0001FAC2", u8"people hugging", 220, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2474
-{ U"\U0001F46A", u8"family", 220, 0, -1, Lfg(385), EcVersion::E0_6 },   // 2475
-{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2", u8"family: adult, adult, child", 220, 0, -1, Lfg(865), EcVersion::E15_1 },   // 2476
-{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, adult, child, child", 220, 0, -1, Lfg(865), EcVersion::E15_1 },   // 2477
-{ U"\U0001F9D1\u200D\U0001F9D2", u8"family: adult, child", 220, 0, -1, Lfg(865), EcVersion::E15_1 },   // 2478
-{ U"\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, child, child", 220, 0, -1, Lfg(865), EcVersion::E15_1 },   // 2479
-{ U"\U0001F463", u8"footprints", 220, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2480
-{ U"\U0001FAC6", u8"fingerprint", 220, 0, -1, Lfg(129), EcVersion::E16_0 },   // 2481
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466", u8"family: man, woman, boy", 219, 0, -1, Lfg(353), EcVersion::E2_0 },   // 2446
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467", u8"family: man, woman, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2447
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: man, woman, girl, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2448
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: man, woman, boy, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2449
+{ U"\U0001F468\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: man, woman, girl, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2450
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466", u8"family: man, man, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2451
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467", u8"family: man, man, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2452
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, man, girl, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2453
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, man, boy, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2454
+{ U"\U0001F468\u200D\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, man, girl, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2455
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466", u8"family: woman, woman, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2456
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467", u8"family: woman, woman, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2457
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, woman, girl, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2458
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, woman, boy, boy", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2459
+{ U"\U0001F469\u200D\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, woman, girl, girl", 219, 0, -1, Lfg(355), EcVersion::E2_0 },   // 2460
+{ U"\U0001F468\u200D\U0001F466", u8"family: man, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2461
+{ U"\U0001F468\u200D\U0001F466\u200D\U0001F466", u8"family: man, boy, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2462
+{ U"\U0001F468\u200D\U0001F467", u8"family: man, girl", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2463
+{ U"\U0001F468\u200D\U0001F467\u200D\U0001F466", u8"family: man, girl, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2464
+{ U"\U0001F468\u200D\U0001F467\u200D\U0001F467", u8"family: man, girl, girl", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2465
+{ U"\U0001F469\u200D\U0001F466", u8"family: woman, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2466
+{ U"\U0001F469\u200D\U0001F466\u200D\U0001F466", u8"family: woman, boy, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2467
+{ U"\U0001F469\u200D\U0001F467", u8"family: woman, girl", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2468
+{ U"\U0001F469\u200D\U0001F467\u200D\U0001F466", u8"family: woman, girl, boy", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2469
+{ U"\U0001F469\u200D\U0001F467\u200D\U0001F467", u8"family: woman, girl, girl", 219, 0, -1, Lfg(355), EcVersion::E4_0 },   // 2470
+{ U"\U0001F5E3\uFE0F", u8"speaking head", 220, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2471
+{ U"\U0001F464", u8"bust in silhouette", 220, 0, -1, Lfg(3), EcVersion::E0_6 },   // 2472
+{ U"\U0001F465", u8"busts in silhouette", 220, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2473
+{ U"\U0001FAC2", u8"people hugging", 220, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2474
+{ U"\U0001F46A", u8"family", 220, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2475
+{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2", u8"family: adult, adult, child", 220, 0, -1, Lfg(481), EcVersion::E15_1 },   // 2476
+{ U"\U0001F9D1\u200D\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, adult, child, child", 220, 0, -1, Lfg(481), EcVersion::E15_1 },   // 2477
+{ U"\U0001F9D1\u200D\U0001F9D2", u8"family: adult, child", 220, 0, -1, Lfg(481), EcVersion::E15_1 },   // 2478
+{ U"\U0001F9D1\u200D\U0001F9D2\u200D\U0001F9D2", u8"family: adult, child, child", 220, 0, -1, Lfg(481), EcVersion::E15_1 },   // 2479
+{ U"\U0001F463", u8"footprints", 220, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2480
+{ U"\U0001FAC6", u8"fingerprint", 220, 0, -1, Lfg(1), EcVersion::E16_0 },   // 2481
 { {}, u8"skin-tone", 12, 5, 2484, Lfg(8), EcVersion::NONE },   // 2482
 { {}, u8"hair-style", 12, 4, 2489, Lfg(8), EcVersion::NONE },   // 2483
-{ U"\U0001F3FB", u8"light skin tone", 2482, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2484
-{ U"\U0001F3FC", u8"medium-light skin tone", 2482, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2485
-{ U"\U0001F3FD", u8"medium skin tone", 2482, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2486
-{ U"\U0001F3FE", u8"medium-dark skin tone", 2482, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2487
-{ U"\U0001F3FF", u8"dark skin tone", 2482, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2488
-{ U"\U0001F9B0", u8"red hair", 2483, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2489
-{ U"\U0001F9B1", u8"curly hair", 2483, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2490
-{ U"\U0001F9B3", u8"white hair", 2483, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2491
-{ U"\U0001F9B2", u8"bald", 2483, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2492
+{ U"\U0001F3FB", u8"light skin tone", 2482, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2484
+{ U"\U0001F3FC", u8"medium-light skin tone", 2482, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2485
+{ U"\U0001F3FD", u8"medium skin tone", 2482, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2486
+{ U"\U0001F3FE", u8"medium-dark skin tone", 2482, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2487
+{ U"\U0001F3FF", u8"dark skin tone", 2482, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2488
+{ U"\U0001F9B0", u8"red hair", 2483, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2489
+{ U"\U0001F9B1", u8"curly hair", 2483, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2490
+{ U"\U0001F9B3", u8"white hair", 2483, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2491
+{ U"\U0001F9B2", u8"bald", 2483, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2492
 { {}, u8"animal-mammal", 13, 66, 2501, Lfg(8), EcVersion::NONE },   // 2493
 { {}, u8"animal-bird", 13, 22, 2567, Lfg(8), EcVersion::NONE },   // 2494
 { {}, u8"animal-amphibian", 13, 1, 2589, Lfg(10), EcVersion::NONE },   // 2495
@@ -2504,160 +2504,160 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"animal-bug", 13, 16, 2610, Lfg(8), EcVersion::NONE },   // 2498
 { {}, u8"plant-flower", 13, 12, 2626, Lfg(8), EcVersion::NONE },   // 2499
 { {}, u8"plant-other", 13, 17, 2638, Lfg(8), EcVersion::NONE },   // 2500
-{ U"\U0001F435", u8"monkey face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2501
-{ U"\U0001F412", u8"monkey", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2502
-{ U"\U0001F98D", u8"gorilla", 2493, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2503
-{ U"\U0001F9A7", u8"orangutan", 2493, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2504
-{ U"\U0001F436", u8"dog face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2505
-{ U"\U0001F415", u8"dog", 2493, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2506
-{ U"\U0001F9AE", u8"guide dog", 2493, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2507
+{ U"\U0001F435", u8"monkey face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2501
+{ U"\U0001F412", u8"monkey", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2502
+{ U"\U0001F98D", u8"gorilla", 2493, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2503
+{ U"\U0001F9A7", u8"orangutan", 2493, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2504
+{ U"\U0001F436", u8"dog face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2505
+{ U"\U0001F415", u8"dog", 2493, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2506
+{ U"\U0001F9AE", u8"guide dog", 2493, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2507
 { U"\U0001F415\u200D\U0001F9BA", u8"service dog", 2493, 0, -1, Lfg(97), EcVersion::E12_0 },   // 2508
-{ U"\U0001F429", u8"poodle", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2509
-{ U"\U0001F43A", u8"wolf", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2510
-{ U"\U0001F98A", u8"fox", 2493, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2511
-{ U"\U0001F99D", u8"raccoon", 2493, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2512
-{ U"\U0001F431", u8"cat face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2513
-{ U"\U0001F408", u8"cat", 2493, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2514
+{ U"\U0001F429", u8"poodle", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2509
+{ U"\U0001F43A", u8"wolf", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2510
+{ U"\U0001F98A", u8"fox", 2493, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2511
+{ U"\U0001F99D", u8"raccoon", 2493, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2512
+{ U"\U0001F431", u8"cat face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2513
+{ U"\U0001F408", u8"cat", 2493, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2514
 { U"\U0001F408\u200D\u2B1B", u8"black cat", 2493, 0, -1, Lfg(97), EcVersion::E13_0 },   // 2515
-{ U"\U0001F981", u8"lion", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2516
-{ U"\U0001F42F", u8"tiger face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2517
-{ U"\U0001F405", u8"tiger", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2518
-{ U"\U0001F406", u8"leopard", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2519
-{ U"\U0001F434", u8"horse face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2520
-{ U"\U0001FACE", u8"moose", 2493, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2521
-{ U"\U0001FACF", u8"donkey", 2493, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2522
-{ U"\U0001F40E", u8"horse", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2523
-{ U"\U0001F984", u8"unicorn", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2524
-{ U"\U0001F993", u8"zebra", 2493, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2525
-{ U"\U0001F98C", u8"deer", 2493, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2526
-{ U"\U0001F9AC", u8"bison", 2493, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2527
-{ U"\U0001F42E", u8"cow face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2528
-{ U"\U0001F402", u8"ox", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2529
-{ U"\U0001F403", u8"water buffalo", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2530
-{ U"\U0001F404", u8"cow", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2531
-{ U"\U0001F437", u8"pig face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2532
-{ U"\U0001F416", u8"pig", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2533
-{ U"\U0001F417", u8"boar", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2534
-{ U"\U0001F43D", u8"pig nose", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2535
-{ U"\U0001F40F", u8"ram", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2536
-{ U"\U0001F411", u8"ewe", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2537
-{ U"\U0001F410", u8"goat", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2538
-{ U"\U0001F42A", u8"camel", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2539
-{ U"\U0001F42B", u8"two-hump camel", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2540
-{ U"\U0001F999", u8"llama", 2493, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2541
-{ U"\U0001F992", u8"giraffe", 2493, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2542
-{ U"\U0001F418", u8"elephant", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2543
-{ U"\U0001F9A3", u8"mammoth", 2493, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2544
-{ U"\U0001F98F", u8"rhinoceros", 2493, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2545
-{ U"\U0001F99B", u8"hippopotamus", 2493, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2546
-{ U"\U0001F42D", u8"mouse face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2547
-{ U"\U0001F401", u8"mouse", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2548
-{ U"\U0001F400", u8"rat", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2549
-{ U"\U0001F439", u8"hamster", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2550
-{ U"\U0001F430", u8"rabbit face", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2551
-{ U"\U0001F407", u8"rabbit", 2493, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2552
-{ U"\U0001F43F\uFE0F", u8"chipmunk", 2493, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2553
-{ U"\U0001F9AB", u8"beaver", 2493, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2554
-{ U"\U0001F994", u8"hedgehog", 2493, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2555
-{ U"\U0001F987", u8"bat", 2493, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2556
-{ U"\U0001F43B", u8"bear", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2557
+{ U"\U0001F981", u8"lion", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2516
+{ U"\U0001F42F", u8"tiger face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2517
+{ U"\U0001F405", u8"tiger", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2518
+{ U"\U0001F406", u8"leopard", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2519
+{ U"\U0001F434", u8"horse face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2520
+{ U"\U0001FACE", u8"moose", 2493, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2521
+{ U"\U0001FACF", u8"donkey", 2493, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2522
+{ U"\U0001F40E", u8"horse", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2523
+{ U"\U0001F984", u8"unicorn", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2524
+{ U"\U0001F993", u8"zebra", 2493, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2525
+{ U"\U0001F98C", u8"deer", 2493, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2526
+{ U"\U0001F9AC", u8"bison", 2493, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2527
+{ U"\U0001F42E", u8"cow face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2528
+{ U"\U0001F402", u8"ox", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2529
+{ U"\U0001F403", u8"water buffalo", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2530
+{ U"\U0001F404", u8"cow", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2531
+{ U"\U0001F437", u8"pig face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2532
+{ U"\U0001F416", u8"pig", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2533
+{ U"\U0001F417", u8"boar", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2534
+{ U"\U0001F43D", u8"pig nose", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2535
+{ U"\U0001F40F", u8"ram", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2536
+{ U"\U0001F411", u8"ewe", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2537
+{ U"\U0001F410", u8"goat", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2538
+{ U"\U0001F42A", u8"camel", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2539
+{ U"\U0001F42B", u8"two-hump camel", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2540
+{ U"\U0001F999", u8"llama", 2493, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2541
+{ U"\U0001F992", u8"giraffe", 2493, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2542
+{ U"\U0001F418", u8"elephant", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2543
+{ U"\U0001F9A3", u8"mammoth", 2493, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2544
+{ U"\U0001F98F", u8"rhinoceros", 2493, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2545
+{ U"\U0001F99B", u8"hippopotamus", 2493, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2546
+{ U"\U0001F42D", u8"mouse face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2547
+{ U"\U0001F401", u8"mouse", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2548
+{ U"\U0001F400", u8"rat", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2549
+{ U"\U0001F439", u8"hamster", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2550
+{ U"\U0001F430", u8"rabbit face", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2551
+{ U"\U0001F407", u8"rabbit", 2493, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2552
+{ U"\U0001F43F\uFE0F", u8"chipmunk", 2493, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2553
+{ U"\U0001F9AB", u8"beaver", 2493, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2554
+{ U"\U0001F994", u8"hedgehog", 2493, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2555
+{ U"\U0001F987", u8"bat", 2493, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2556
+{ U"\U0001F43B", u8"bear", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2557
 { U"\U0001F43B\u200D\u2744\uFE0F", u8"polar bear", 2493, 0, -1, Lfg(97), EcVersion::E13_0 },   // 2558
-{ U"\U0001F428", u8"koala", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2559
-{ U"\U0001F43C", u8"panda", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2560
-{ U"\U0001F9A5", u8"sloth", 2493, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2561
-{ U"\U0001F9A6", u8"otter", 2493, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2562
-{ U"\U0001F9A8", u8"skunk", 2493, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2563
-{ U"\U0001F998", u8"kangaroo", 2493, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2564
-{ U"\U0001F9A1", u8"badger", 2493, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2565
-{ U"\U0001F43E", u8"paw prints", 2493, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2566
-{ U"\U0001F983", u8"turkey", 2494, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2567
-{ U"\U0001F414", u8"chicken", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2568
-{ U"\U0001F413", u8"rooster", 2494, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2569
-{ U"\U0001F423", u8"hatching chick", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2570
-{ U"\U0001F424", u8"baby chick", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2571
-{ U"\U0001F425", u8"front-facing baby chick", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2572
-{ U"\U0001F426", u8"bird", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2573
-{ U"\U0001F427", u8"penguin", 2494, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2574
-{ U"\U0001F54A\uFE0F", u8"dove", 2494, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2575
-{ U"\U0001F985", u8"eagle", 2494, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2576
-{ U"\U0001F986", u8"duck", 2494, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2577
-{ U"\U0001F9A2", u8"swan", 2494, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2578
-{ U"\U0001F989", u8"owl", 2494, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2579
-{ U"\U0001F9A4", u8"dodo", 2494, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2580
-{ U"\U0001FAB6", u8"feather", 2494, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2581
-{ U"\U0001F9A9", u8"flamingo", 2494, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2582
-{ U"\U0001F99A", u8"peacock", 2494, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2583
-{ U"\U0001F99C", u8"parrot", 2494, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2584
-{ U"\U0001FABD", u8"wing", 2494, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2585
+{ U"\U0001F428", u8"koala", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2559
+{ U"\U0001F43C", u8"panda", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2560
+{ U"\U0001F9A5", u8"sloth", 2493, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2561
+{ U"\U0001F9A6", u8"otter", 2493, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2562
+{ U"\U0001F9A8", u8"skunk", 2493, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2563
+{ U"\U0001F998", u8"kangaroo", 2493, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2564
+{ U"\U0001F9A1", u8"badger", 2493, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2565
+{ U"\U0001F43E", u8"paw prints", 2493, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2566
+{ U"\U0001F983", u8"turkey", 2494, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2567
+{ U"\U0001F414", u8"chicken", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2568
+{ U"\U0001F413", u8"rooster", 2494, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2569
+{ U"\U0001F423", u8"hatching chick", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2570
+{ U"\U0001F424", u8"baby chick", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2571
+{ U"\U0001F425", u8"front-facing baby chick", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2572
+{ U"\U0001F426", u8"bird", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2573
+{ U"\U0001F427", u8"penguin", 2494, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2574
+{ U"\U0001F54A\uFE0F", u8"dove", 2494, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2575
+{ U"\U0001F985", u8"eagle", 2494, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2576
+{ U"\U0001F986", u8"duck", 2494, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2577
+{ U"\U0001F9A2", u8"swan", 2494, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2578
+{ U"\U0001F989", u8"owl", 2494, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2579
+{ U"\U0001F9A4", u8"dodo", 2494, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2580
+{ U"\U0001FAB6", u8"feather", 2494, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2581
+{ U"\U0001F9A9", u8"flamingo", 2494, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2582
+{ U"\U0001F99A", u8"peacock", 2494, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2583
+{ U"\U0001F99C", u8"parrot", 2494, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2584
+{ U"\U0001FABD", u8"wing", 2494, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2585
 { U"\U0001F426\u200D\u2B1B", u8"black bird", 2494, 0, -1, Lfg(97), EcVersion::E15_0 },   // 2586
-{ U"\U0001FABF", u8"goose", 2494, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2587
+{ U"\U0001FABF", u8"goose", 2494, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2587
 { U"\U0001F426\u200D\U0001F525", u8"phoenix", 2494, 0, -1, Lfg(97), EcVersion::E15_1 },   // 2588
-{ U"\U0001F438", u8"frog", 2495, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2589
-{ U"\U0001F40A", u8"crocodile", 2496, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2590
-{ U"\U0001F422", u8"turtle", 2496, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2591
-{ U"\U0001F98E", u8"lizard", 2496, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2592
-{ U"\U0001F40D", u8"snake", 2496, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2593
-{ U"\U0001F432", u8"dragon face", 2496, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2594
-{ U"\U0001F409", u8"dragon", 2496, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2595
-{ U"\U0001F995", u8"sauropod", 2496, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2596
-{ U"\U0001F996", u8"T-Rex", 2496, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2597
-{ U"\U0001F433", u8"spouting whale", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2598
-{ U"\U0001F40B", u8"whale", 2497, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2599
-{ U"\U0001F42C", u8"dolphin", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2600
-{ U"\U0001F9AD", u8"seal", 2497, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2601
-{ U"\U0001F41F", u8"fish", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2602
-{ U"\U0001F420", u8"tropical fish", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2603
-{ U"\U0001F421", u8"blowfish", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2604
-{ U"\U0001F988", u8"shark", 2497, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2605
-{ U"\U0001F419", u8"octopus", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2606
-{ U"\U0001F41A", u8"spiral shell", 2497, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2607
-{ U"\U0001FAB8", u8"coral", 2497, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2608
-{ U"\U0001FABC", u8"jellyfish", 2497, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2609
-{ U"\U0001F40C", u8"snail", 2498, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2610
-{ U"\U0001F98B", u8"butterfly", 2498, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2611
-{ U"\U0001F41B", u8"bug", 2498, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2612
-{ U"\U0001F41C", u8"ant", 2498, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2613
-{ U"\U0001F41D", u8"honeybee", 2498, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2614
-{ U"\U0001FAB2", u8"beetle", 2498, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2615
-{ U"\U0001F41E", u8"lady beetle", 2498, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2616
-{ U"\U0001F997", u8"cricket", 2498, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2617
-{ U"\U0001FAB3", u8"cockroach", 2498, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2618
-{ U"\U0001F577\uFE0F", u8"spider", 2498, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2619
-{ U"\U0001F578\uFE0F", u8"spider web", 2498, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2620
-{ U"\U0001F982", u8"scorpion", 2498, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2621
-{ U"\U0001F99F", u8"mosquito", 2498, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2622
-{ U"\U0001FAB0", u8"fly", 2498, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2623
-{ U"\U0001FAB1", u8"worm", 2498, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2624
-{ U"\U0001F9A0", u8"microbe", 2498, 0, -1, Lfg(385), EcVersion::E11_0 },   // 2625
-{ U"\U0001F490", u8"bouquet", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2626
-{ U"\U0001F338", u8"cherry blossom", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2627
-{ U"\U0001F4AE", u8"white flower", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2628
-{ U"\U0001FAB7", u8"lotus", 2499, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2629
-{ U"\U0001F3F5\uFE0F", u8"rosette", 2499, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2630
-{ U"\U0001F339", u8"rose", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2631
-{ U"\U0001F940", u8"wilted flower", 2499, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2632
-{ U"\U0001F33A", u8"hibiscus", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2633
-{ U"\U0001F33B", u8"sunflower", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2634
-{ U"\U0001F33C", u8"blossom", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2635
-{ U"\U0001F337", u8"tulip", 2499, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2636
-{ U"\U0001FABB", u8"hyacinth", 2499, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2637
-{ U"\U0001F331", u8"seedling", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2638
-{ U"\U0001FAB4", u8"potted plant", 2500, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2639
-{ U"\U0001F332", u8"evergreen tree", 2500, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2640
-{ U"\U0001F333", u8"deciduous tree", 2500, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2641
-{ U"\U0001F334", u8"palm tree", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2642
-{ U"\U0001F335", u8"cactus", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2643
-{ U"\U0001F33E", u8"sheaf of rice", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2644
-{ U"\U0001F33F", u8"herb", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2645
-{ U"\u2618\uFE0F", u8"shamrock", 2500, 0, -1, Lfg(193), EcVersion::E1_0 },   // 2646
-{ U"\U0001F340", u8"four leaf clover", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2647
-{ U"\U0001F341", u8"maple leaf", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2648
-{ U"\U0001F342", u8"fallen leaf", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2649
-{ U"\U0001F343", u8"leaf fluttering in wind", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2650
-{ U"\U0001FAB9", u8"empty nest", 2500, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2651
-{ U"\U0001FABA", u8"nest with eggs", 2500, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2652
-{ U"\U0001F344", u8"mushroom", 2500, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2653
-{ U"\U0001FABE", u8"leafless tree", 2500, 0, -1, Lfg(129), EcVersion::E16_0 },   // 2654
+{ U"\U0001F438", u8"frog", 2495, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2589
+{ U"\U0001F40A", u8"crocodile", 2496, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2590
+{ U"\U0001F422", u8"turtle", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2591
+{ U"\U0001F98E", u8"lizard", 2496, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2592
+{ U"\U0001F40D", u8"snake", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2593
+{ U"\U0001F432", u8"dragon face", 2496, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2594
+{ U"\U0001F409", u8"dragon", 2496, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2595
+{ U"\U0001F995", u8"sauropod", 2496, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2596
+{ U"\U0001F996", u8"T-Rex", 2496, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2597
+{ U"\U0001F433", u8"spouting whale", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2598
+{ U"\U0001F40B", u8"whale", 2497, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2599
+{ U"\U0001F42C", u8"dolphin", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2600
+{ U"\U0001F9AD", u8"seal", 2497, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2601
+{ U"\U0001F41F", u8"fish", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2602
+{ U"\U0001F420", u8"tropical fish", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2603
+{ U"\U0001F421", u8"blowfish", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2604
+{ U"\U0001F988", u8"shark", 2497, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2605
+{ U"\U0001F419", u8"octopus", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2606
+{ U"\U0001F41A", u8"spiral shell", 2497, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2607
+{ U"\U0001FAB8", u8"coral", 2497, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2608
+{ U"\U0001FABC", u8"jellyfish", 2497, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2609
+{ U"\U0001F40C", u8"snail", 2498, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2610
+{ U"\U0001F98B", u8"butterfly", 2498, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2611
+{ U"\U0001F41B", u8"bug", 2498, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2612
+{ U"\U0001F41C", u8"ant", 2498, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2613
+{ U"\U0001F41D", u8"honeybee", 2498, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2614
+{ U"\U0001FAB2", u8"beetle", 2498, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2615
+{ U"\U0001F41E", u8"lady beetle", 2498, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2616
+{ U"\U0001F997", u8"cricket", 2498, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2617
+{ U"\U0001FAB3", u8"cockroach", 2498, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2618
+{ U"\U0001F577\uFE0F", u8"spider", 2498, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2619
+{ U"\U0001F578\uFE0F", u8"spider web", 2498, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2620
+{ U"\U0001F982", u8"scorpion", 2498, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2621
+{ U"\U0001F99F", u8"mosquito", 2498, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2622
+{ U"\U0001FAB0", u8"fly", 2498, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2623
+{ U"\U0001FAB1", u8"worm", 2498, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2624
+{ U"\U0001F9A0", u8"microbe", 2498, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2625
+{ U"\U0001F490", u8"bouquet", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2626
+{ U"\U0001F338", u8"cherry blossom", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2627
+{ U"\U0001F4AE", u8"white flower", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2628
+{ U"\U0001FAB7", u8"lotus", 2499, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2629
+{ U"\U0001F3F5\uFE0F", u8"rosette", 2499, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2630
+{ U"\U0001F339", u8"rose", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2631
+{ U"\U0001F940", u8"wilted flower", 2499, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2632
+{ U"\U0001F33A", u8"hibiscus", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2633
+{ U"\U0001F33B", u8"sunflower", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2634
+{ U"\U0001F33C", u8"blossom", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2635
+{ U"\U0001F337", u8"tulip", 2499, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2636
+{ U"\U0001FABB", u8"hyacinth", 2499, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2637
+{ U"\U0001F331", u8"seedling", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2638
+{ U"\U0001FAB4", u8"potted plant", 2500, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2639
+{ U"\U0001F332", u8"evergreen tree", 2500, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2640
+{ U"\U0001F333", u8"deciduous tree", 2500, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2641
+{ U"\U0001F334", u8"palm tree", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2642
+{ U"\U0001F335", u8"cactus", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2643
+{ U"\U0001F33E", u8"sheaf of rice", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2644
+{ U"\U0001F33F", u8"herb", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2645
+{ U"\u2618\uFE0F", u8"shamrock", 2500, 0, -1, Lfg(65), EcVersion::E1_0 },   // 2646
+{ U"\U0001F340", u8"four leaf clover", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2647
+{ U"\U0001F341", u8"maple leaf", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2648
+{ U"\U0001F342", u8"fallen leaf", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2649
+{ U"\U0001F343", u8"leaf fluttering in wind", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2650
+{ U"\U0001FAB9", u8"empty nest", 2500, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2651
+{ U"\U0001FABA", u8"nest with eggs", 2500, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2652
+{ U"\U0001F344", u8"mushroom", 2500, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2653
+{ U"\U0001FABE", u8"leafless tree", 2500, 0, -1, Lfg(1), EcVersion::E16_0 },   // 2654
 { {}, u8"food-fruit", 14, 20, 2663, Lfg(8), EcVersion::NONE },   // 2655
 { {}, u8"food-vegetable", 14, 19, 2683, Lfg(8), EcVersion::NONE },   // 2656
 { {}, u8"food-prepared", 14, 34, 2702, Lfg(8), EcVersion::NONE },   // 2657
@@ -2666,142 +2666,142 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"food-sweet", 14, 14, 2758, Lfg(8), EcVersion::NONE },   // 2660
 { {}, u8"drink", 14, 20, 2772, Lfg(8), EcVersion::NONE },   // 2661
 { {}, u8"dishware", 14, 7, 2792, Lfg(8), EcVersion::NONE },   // 2662
-{ U"\U0001F347", u8"grapes", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2663
-{ U"\U0001F348", u8"melon", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2664
-{ U"\U0001F349", u8"watermelon", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2665
-{ U"\U0001F34A", u8"tangerine", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2666
-{ U"\U0001F34B", u8"lemon", 2655, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2667
+{ U"\U0001F347", u8"grapes", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2663
+{ U"\U0001F348", u8"melon", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2664
+{ U"\U0001F349", u8"watermelon", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2665
+{ U"\U0001F34A", u8"tangerine", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2666
+{ U"\U0001F34B", u8"lemon", 2655, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2667
 { U"\U0001F34B\u200D\U0001F7E9", u8"lime", 2655, 0, -1, Lfg(97), EcVersion::E15_1 },   // 2668
-{ U"\U0001F34C", u8"banana", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2669
-{ U"\U0001F34D", u8"pineapple", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2670
-{ U"\U0001F96D", u8"mango", 2655, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2671
-{ U"\U0001F34E", u8"red apple", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2672
-{ U"\U0001F34F", u8"green apple", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2673
-{ U"\U0001F350", u8"pear", 2655, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2674
-{ U"\U0001F351", u8"peach", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2675
-{ U"\U0001F352", u8"cherries", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2676
-{ U"\U0001F353", u8"strawberry", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2677
-{ U"\U0001FAD0", u8"blueberries", 2655, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2678
-{ U"\U0001F95D", u8"kiwi fruit", 2655, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2679
-{ U"\U0001F345", u8"tomato", 2655, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2680
-{ U"\U0001FAD2", u8"olive", 2655, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2681
-{ U"\U0001F965", u8"coconut", 2655, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2682
-{ U"\U0001F951", u8"avocado", 2656, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2683
-{ U"\U0001F346", u8"eggplant", 2656, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2684
-{ U"\U0001F954", u8"potato", 2656, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2685
-{ U"\U0001F955", u8"carrot", 2656, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2686
-{ U"\U0001F33D", u8"ear of corn", 2656, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2687
-{ U"\U0001F336\uFE0F", u8"hot pepper", 2656, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2688
-{ U"\U0001FAD1", u8"bell pepper", 2656, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2689
-{ U"\U0001F952", u8"cucumber", 2656, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2690
-{ U"\U0001F96C", u8"leafy green", 2656, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2691
-{ U"\U0001F966", u8"broccoli", 2656, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2692
-{ U"\U0001F9C4", u8"garlic", 2656, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2693
-{ U"\U0001F9C5", u8"onion", 2656, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2694
-{ U"\U0001F95C", u8"peanuts", 2656, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2695
-{ U"\U0001FAD8", u8"beans", 2656, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2696
-{ U"\U0001F330", u8"chestnut", 2656, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2697
-{ U"\U0001FADA", u8"ginger root", 2656, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2698
-{ U"\U0001FADB", u8"pea pod", 2656, 0, -1, Lfg(129), EcVersion::E15_0 },   // 2699
+{ U"\U0001F34C", u8"banana", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2669
+{ U"\U0001F34D", u8"pineapple", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2670
+{ U"\U0001F96D", u8"mango", 2655, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2671
+{ U"\U0001F34E", u8"red apple", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2672
+{ U"\U0001F34F", u8"green apple", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2673
+{ U"\U0001F350", u8"pear", 2655, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2674
+{ U"\U0001F351", u8"peach", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2675
+{ U"\U0001F352", u8"cherries", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2676
+{ U"\U0001F353", u8"strawberry", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2677
+{ U"\U0001FAD0", u8"blueberries", 2655, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2678
+{ U"\U0001F95D", u8"kiwi fruit", 2655, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2679
+{ U"\U0001F345", u8"tomato", 2655, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2680
+{ U"\U0001FAD2", u8"olive", 2655, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2681
+{ U"\U0001F965", u8"coconut", 2655, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2682
+{ U"\U0001F951", u8"avocado", 2656, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2683
+{ U"\U0001F346", u8"eggplant", 2656, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2684
+{ U"\U0001F954", u8"potato", 2656, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2685
+{ U"\U0001F955", u8"carrot", 2656, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2686
+{ U"\U0001F33D", u8"ear of corn", 2656, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2687
+{ U"\U0001F336\uFE0F", u8"hot pepper", 2656, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2688
+{ U"\U0001FAD1", u8"bell pepper", 2656, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2689
+{ U"\U0001F952", u8"cucumber", 2656, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2690
+{ U"\U0001F96C", u8"leafy green", 2656, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2691
+{ U"\U0001F966", u8"broccoli", 2656, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2692
+{ U"\U0001F9C4", u8"garlic", 2656, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2693
+{ U"\U0001F9C5", u8"onion", 2656, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2694
+{ U"\U0001F95C", u8"peanuts", 2656, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2695
+{ U"\U0001FAD8", u8"beans", 2656, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2696
+{ U"\U0001F330", u8"chestnut", 2656, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2697
+{ U"\U0001FADA", u8"ginger root", 2656, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2698
+{ U"\U0001FADB", u8"pea pod", 2656, 0, -1, Lfg(1), EcVersion::E15_0 },   // 2699
 { U"\U0001F344\u200D\U0001F7EB", u8"brown mushroom", 2656, 0, -1, Lfg(97), EcVersion::E15_1 },   // 2700
-{ U"\U0001FADC", u8"root vegetable", 2656, 0, -1, Lfg(129), EcVersion::E16_0 },   // 2701
-{ U"\U0001F35E", u8"bread", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2702
-{ U"\U0001F950", u8"croissant", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2703
-{ U"\U0001F956", u8"baguette bread", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2704
-{ U"\U0001FAD3", u8"flatbread", 2657, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2705
-{ U"\U0001F968", u8"pretzel", 2657, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2706
-{ U"\U0001F96F", u8"bagel", 2657, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2707
-{ U"\U0001F95E", u8"pancakes", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2708
-{ U"\U0001F9C7", u8"waffle", 2657, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2709
-{ U"\U0001F9C0", u8"cheese wedge", 2657, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2710
-{ U"\U0001F356", u8"meat on bone", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2711
-{ U"\U0001F357", u8"poultry leg", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2712
-{ U"\U0001F969", u8"cut of meat", 2657, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2713
-{ U"\U0001F953", u8"bacon", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2714
-{ U"\U0001F354", u8"hamburger", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2715
-{ U"\U0001F35F", u8"French fries", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2716
-{ U"\U0001F355", u8"pizza", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2717
-{ U"\U0001F32D", u8"hot dog", 2657, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2718
-{ U"\U0001F96A", u8"sandwich", 2657, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2719
-{ U"\U0001F32E", u8"taco", 2657, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2720
-{ U"\U0001F32F", u8"burrito", 2657, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2721
-{ U"\U0001FAD4", u8"tamale", 2657, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2722
-{ U"\U0001F959", u8"stuffed flatbread", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2723
-{ U"\U0001F9C6", u8"falafel", 2657, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2724
-{ U"\U0001F95A", u8"egg", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2725
-{ U"\U0001F373", u8"cooking", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2726
-{ U"\U0001F958", u8"shallow pan of food", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2727
-{ U"\U0001F372", u8"pot of food", 2657, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2728
-{ U"\U0001FAD5", u8"fondue", 2657, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2729
-{ U"\U0001F963", u8"bowl with spoon", 2657, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2730
-{ U"\U0001F957", u8"green salad", 2657, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2731
-{ U"\U0001F37F", u8"popcorn", 2657, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2732
-{ U"\U0001F9C8", u8"butter", 2657, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2733
-{ U"\U0001F9C2", u8"salt", 2657, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2734
-{ U"\U0001F96B", u8"canned food", 2657, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2735
-{ U"\U0001F371", u8"bento box", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2736
-{ U"\U0001F358", u8"rice cracker", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2737
-{ U"\U0001F359", u8"rice ball", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2738
-{ U"\U0001F35A", u8"cooked rice", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2739
-{ U"\U0001F35B", u8"curry rice", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2740
-{ U"\U0001F35C", u8"steaming bowl", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2741
-{ U"\U0001F35D", u8"spaghetti", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2742
-{ U"\U0001F360", u8"roasted sweet potato", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2743
-{ U"\U0001F362", u8"oden", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2744
-{ U"\U0001F363", u8"sushi", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2745
-{ U"\U0001F364", u8"fried shrimp", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2746
-{ U"\U0001F365", u8"fish cake with swirl", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2747
-{ U"\U0001F96E", u8"moon cake", 2658, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2748
-{ U"\U0001F361", u8"dango", 2658, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2749
-{ U"\U0001F95F", u8"dumpling", 2658, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2750
-{ U"\U0001F960", u8"fortune cookie", 2658, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2751
-{ U"\U0001F961", u8"takeout box", 2658, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2752
-{ U"\U0001F980", u8"crab", 2659, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2753
-{ U"\U0001F99E", u8"lobster", 2659, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2754
-{ U"\U0001F990", u8"shrimp", 2659, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2755
-{ U"\U0001F991", u8"squid", 2659, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2756
-{ U"\U0001F9AA", u8"oyster", 2659, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2757
-{ U"\U0001F366", u8"soft ice cream", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2758
-{ U"\U0001F367", u8"shaved ice", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2759
-{ U"\U0001F368", u8"ice cream", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2760
-{ U"\U0001F369", u8"doughnut", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2761
-{ U"\U0001F36A", u8"cookie", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2762
-{ U"\U0001F382", u8"birthday cake", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2763
-{ U"\U0001F370", u8"shortcake", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2764
-{ U"\U0001F9C1", u8"cupcake", 2660, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2765
-{ U"\U0001F967", u8"pie", 2660, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2766
-{ U"\U0001F36B", u8"chocolate bar", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2767
-{ U"\U0001F36C", u8"candy", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2768
-{ U"\U0001F36D", u8"lollipop", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2769
-{ U"\U0001F36E", u8"custard", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2770
-{ U"\U0001F36F", u8"honey pot", 2660, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2771
-{ U"\U0001F37C", u8"baby bottle", 2661, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2772
-{ U"\U0001F95B", u8"glass of milk", 2661, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2773
-{ U"\u2615", u8"hot beverage", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2774
-{ U"\U0001FAD6", u8"teapot", 2661, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2775
-{ U"\U0001F375", u8"teacup without handle", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2776
-{ U"\U0001F376", u8"sake", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2777
-{ U"\U0001F37E", u8"bottle with popping cork", 2661, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2778
-{ U"\U0001F377", u8"wine glass", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2779
-{ U"\U0001F378", u8"cocktail glass", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2780
-{ U"\U0001F379", u8"tropical drink", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2781
-{ U"\U0001F37A", u8"beer mug", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2782
-{ U"\U0001F37B", u8"clinking beer mugs", 2661, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2783
-{ U"\U0001F942", u8"clinking glasses", 2661, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2784
-{ U"\U0001F943", u8"tumbler glass", 2661, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2785
-{ U"\U0001FAD7", u8"pouring liquid", 2661, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2786
-{ U"\U0001F964", u8"cup with straw", 2661, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2787
-{ U"\U0001F9CB", u8"bubble tea", 2661, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2788
-{ U"\U0001F9C3", u8"beverage box", 2661, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2789
-{ U"\U0001F9C9", u8"mate", 2661, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2790
-{ U"\U0001F9CA", u8"ice", 2661, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2791
-{ U"\U0001F962", u8"chopsticks", 2662, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2792
-{ U"\U0001F37D\uFE0F", u8"fork and knife with plate", 2662, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2793
-{ U"\U0001F374", u8"fork and knife", 2662, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2794
-{ U"\U0001F944", u8"spoon", 2662, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2795
-{ U"\U0001F52A", u8"kitchen knife", 2662, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2796
-{ U"\U0001FAD9", u8"jar", 2662, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2797
-{ U"\U0001F3FA", u8"amphora", 2662, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2798
+{ U"\U0001FADC", u8"root vegetable", 2656, 0, -1, Lfg(1), EcVersion::E16_0 },   // 2701
+{ U"\U0001F35E", u8"bread", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2702
+{ U"\U0001F950", u8"croissant", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2703
+{ U"\U0001F956", u8"baguette bread", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2704
+{ U"\U0001FAD3", u8"flatbread", 2657, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2705
+{ U"\U0001F968", u8"pretzel", 2657, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2706
+{ U"\U0001F96F", u8"bagel", 2657, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2707
+{ U"\U0001F95E", u8"pancakes", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2708
+{ U"\U0001F9C7", u8"waffle", 2657, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2709
+{ U"\U0001F9C0", u8"cheese wedge", 2657, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2710
+{ U"\U0001F356", u8"meat on bone", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2711
+{ U"\U0001F357", u8"poultry leg", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2712
+{ U"\U0001F969", u8"cut of meat", 2657, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2713
+{ U"\U0001F953", u8"bacon", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2714
+{ U"\U0001F354", u8"hamburger", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2715
+{ U"\U0001F35F", u8"French fries", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2716
+{ U"\U0001F355", u8"pizza", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2717
+{ U"\U0001F32D", u8"hot dog", 2657, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2718
+{ U"\U0001F96A", u8"sandwich", 2657, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2719
+{ U"\U0001F32E", u8"taco", 2657, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2720
+{ U"\U0001F32F", u8"burrito", 2657, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2721
+{ U"\U0001FAD4", u8"tamale", 2657, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2722
+{ U"\U0001F959", u8"stuffed flatbread", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2723
+{ U"\U0001F9C6", u8"falafel", 2657, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2724
+{ U"\U0001F95A", u8"egg", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2725
+{ U"\U0001F373", u8"cooking", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2726
+{ U"\U0001F958", u8"shallow pan of food", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2727
+{ U"\U0001F372", u8"pot of food", 2657, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2728
+{ U"\U0001FAD5", u8"fondue", 2657, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2729
+{ U"\U0001F963", u8"bowl with spoon", 2657, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2730
+{ U"\U0001F957", u8"green salad", 2657, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2731
+{ U"\U0001F37F", u8"popcorn", 2657, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2732
+{ U"\U0001F9C8", u8"butter", 2657, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2733
+{ U"\U0001F9C2", u8"salt", 2657, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2734
+{ U"\U0001F96B", u8"canned food", 2657, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2735
+{ U"\U0001F371", u8"bento box", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2736
+{ U"\U0001F358", u8"rice cracker", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2737
+{ U"\U0001F359", u8"rice ball", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2738
+{ U"\U0001F35A", u8"cooked rice", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2739
+{ U"\U0001F35B", u8"curry rice", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2740
+{ U"\U0001F35C", u8"steaming bowl", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2741
+{ U"\U0001F35D", u8"spaghetti", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2742
+{ U"\U0001F360", u8"roasted sweet potato", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2743
+{ U"\U0001F362", u8"oden", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2744
+{ U"\U0001F363", u8"sushi", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2745
+{ U"\U0001F364", u8"fried shrimp", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2746
+{ U"\U0001F365", u8"fish cake with swirl", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2747
+{ U"\U0001F96E", u8"moon cake", 2658, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2748
+{ U"\U0001F361", u8"dango", 2658, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2749
+{ U"\U0001F95F", u8"dumpling", 2658, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2750
+{ U"\U0001F960", u8"fortune cookie", 2658, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2751
+{ U"\U0001F961", u8"takeout box", 2658, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2752
+{ U"\U0001F980", u8"crab", 2659, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2753
+{ U"\U0001F99E", u8"lobster", 2659, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2754
+{ U"\U0001F990", u8"shrimp", 2659, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2755
+{ U"\U0001F991", u8"squid", 2659, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2756
+{ U"\U0001F9AA", u8"oyster", 2659, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2757
+{ U"\U0001F366", u8"soft ice cream", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2758
+{ U"\U0001F367", u8"shaved ice", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2759
+{ U"\U0001F368", u8"ice cream", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2760
+{ U"\U0001F369", u8"doughnut", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2761
+{ U"\U0001F36A", u8"cookie", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2762
+{ U"\U0001F382", u8"birthday cake", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2763
+{ U"\U0001F370", u8"shortcake", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2764
+{ U"\U0001F9C1", u8"cupcake", 2660, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2765
+{ U"\U0001F967", u8"pie", 2660, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2766
+{ U"\U0001F36B", u8"chocolate bar", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2767
+{ U"\U0001F36C", u8"candy", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2768
+{ U"\U0001F36D", u8"lollipop", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2769
+{ U"\U0001F36E", u8"custard", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2770
+{ U"\U0001F36F", u8"honey pot", 2660, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2771
+{ U"\U0001F37C", u8"baby bottle", 2661, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2772
+{ U"\U0001F95B", u8"glass of milk", 2661, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2773
+{ U"\u2615", u8"hot beverage", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2774
+{ U"\U0001FAD6", u8"teapot", 2661, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2775
+{ U"\U0001F375", u8"teacup without handle", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2776
+{ U"\U0001F376", u8"sake", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2777
+{ U"\U0001F37E", u8"bottle with popping cork", 2661, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2778
+{ U"\U0001F377", u8"wine glass", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2779
+{ U"\U0001F378", u8"cocktail glass", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2780
+{ U"\U0001F379", u8"tropical drink", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2781
+{ U"\U0001F37A", u8"beer mug", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2782
+{ U"\U0001F37B", u8"clinking beer mugs", 2661, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2783
+{ U"\U0001F942", u8"clinking glasses", 2661, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2784
+{ U"\U0001F943", u8"tumbler glass", 2661, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2785
+{ U"\U0001FAD7", u8"pouring liquid", 2661, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2786
+{ U"\U0001F964", u8"cup with straw", 2661, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2787
+{ U"\U0001F9CB", u8"bubble tea", 2661, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2788
+{ U"\U0001F9C3", u8"beverage box", 2661, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2789
+{ U"\U0001F9C9", u8"mate", 2661, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2790
+{ U"\U0001F9CA", u8"ice", 2661, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2791
+{ U"\U0001F962", u8"chopsticks", 2662, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2792
+{ U"\U0001F37D\uFE0F", u8"fork and knife with plate", 2662, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2793
+{ U"\U0001F374", u8"fork and knife", 2662, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2794
+{ U"\U0001F944", u8"spoon", 2662, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2795
+{ U"\U0001F52A", u8"kitchen knife", 2662, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2796
+{ U"\U0001FAD9", u8"jar", 2662, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2797
+{ U"\U0001F3FA", u8"amphora", 2662, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2798
 { {}, u8"place-map", 15, 7, 2810, Lfg(8), EcVersion::NONE },   // 2799
 { {}, u8"place-geographic", 15, 9, 2817, Lfg(8), EcVersion::NONE },   // 2800
 { {}, u8"place-building", 15, 27, 2826, Lfg(8), EcVersion::NONE },   // 2801
@@ -2813,314 +2813,314 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"hotel", 15, 2, 2948, Lfg(8), EcVersion::NONE },   // 2807
 { {}, u8"time", 15, 31, 2950, Lfg(8), EcVersion::NONE },   // 2808
 { {}, u8"sky & weather", 15, 47, 2981, Lfg(8), EcVersion::NONE },   // 2809
-{ U"\U0001F30D", u8"globe showing Europe-Africa", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2810
-{ U"\U0001F30E", u8"globe showing Americas", 2799, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2811
-{ U"\U0001F30F", u8"globe showing Asia-Australia", 2799, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2812
-{ U"\U0001F310", u8"globe with meridians", 2799, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2813
-{ U"\U0001F5FA\uFE0F", u8"world map", 2799, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2814
-{ U"\U0001F5FE", u8"map of Japan", 2799, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2815
-{ U"\U0001F9ED", u8"compass", 2799, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2816
-{ U"\U0001F3D4\uFE0F", u8"snow-capped mountain", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2817
-{ U"\u26F0\uFE0F", u8"mountain", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2818
-{ U"\U0001F30B", u8"volcano", 2800, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2819
-{ U"\U0001F5FB", u8"mount Fuji", 2800, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2820
-{ U"\U0001F3D5\uFE0F", u8"camping", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2821
-{ U"\U0001F3D6\uFE0F", u8"beach with umbrella", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2822
-{ U"\U0001F3DC\uFE0F", u8"desert", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2823
-{ U"\U0001F3DD\uFE0F", u8"desert island", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2824
-{ U"\U0001F3DE\uFE0F", u8"national park", 2800, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2825
-{ U"\U0001F3DF\uFE0F", u8"stadium", 2801, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2826
-{ U"\U0001F3DB\uFE0F", u8"classical building", 2801, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2827
-{ U"\U0001F3D7\uFE0F", u8"building construction", 2801, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2828
-{ U"\U0001F9F1", u8"brick", 2801, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2829
-{ U"\U0001FAA8", u8"rock", 2801, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2830
-{ U"\U0001FAB5", u8"wood", 2801, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2831
-{ U"\U0001F6D6", u8"hut", 2801, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2832
-{ U"\U0001F3D8\uFE0F", u8"houses", 2801, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2833
-{ U"\U0001F3DA\uFE0F", u8"derelict house", 2801, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2834
-{ U"\U0001F3E0", u8"house", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2835
-{ U"\U0001F3E1", u8"house with garden", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2836
-{ U"\U0001F3E2", u8"office building", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2837
-{ U"\U0001F3E3", u8"Japanese post office", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2838
-{ U"\U0001F3E4", u8"post office", 2801, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2839
-{ U"\U0001F3E5", u8"hospital", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2840
-{ U"\U0001F3E6", u8"bank", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2841
-{ U"\U0001F3E8", u8"hotel", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2842
-{ U"\U0001F3E9", u8"love hotel", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2843
-{ U"\U0001F3EA", u8"convenience store", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2844
-{ U"\U0001F3EB", u8"school", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2845
-{ U"\U0001F3EC", u8"department store", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2846
-{ U"\U0001F3ED", u8"factory", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2847
-{ U"\U0001F3EF", u8"Japanese castle", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2848
-{ U"\U0001F3F0", u8"castle", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2849
-{ U"\U0001F492", u8"wedding", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2850
-{ U"\U0001F5FC", u8"Tokyo tower", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2851
-{ U"\U0001F5FD", u8"Statue of Liberty", 2801, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2852
-{ U"\u26EA", u8"church", 2802, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2853
-{ U"\U0001F54C", u8"mosque", 2802, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2854
-{ U"\U0001F6D5", u8"Hindu temple", 2802, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2855
-{ U"\U0001F54D", u8"synagogue", 2802, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2856
-{ U"\u26E9\uFE0F", u8"Shinto shrine", 2802, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2857
-{ U"\U0001F54B", u8"Kaaba", 2802, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2858
-{ U"\u26F2", u8"fountain", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2859
-{ U"\u26FA", u8"tent", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2860
-{ U"\U0001F301", u8"foggy", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2861
-{ U"\U0001F303", u8"night with stars", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2862
-{ U"\U0001F3D9\uFE0F", u8"cityscape", 2803, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2863
-{ U"\U0001F304", u8"sunrise over mountains", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2864
-{ U"\U0001F305", u8"sunrise", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2865
-{ U"\U0001F306", u8"cityscape at dusk", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2866
-{ U"\U0001F307", u8"sunset", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2867
-{ U"\U0001F309", u8"bridge at night", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2868
-{ U"\u2668\uFE0F", u8"hot springs", 2803, 0, -1, Lfg(193), EcVersion::E0_6 },   // 2869
-{ U"\U0001F3A0", u8"carousel horse", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2870
-{ U"\U0001F6DD", u8"playground slide", 2803, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2871
-{ U"\U0001F3A1", u8"Ferris wheel", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2872
-{ U"\U0001F3A2", u8"roller coaster", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2873
-{ U"\U0001F488", u8"barber pole", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2874
-{ U"\U0001F3AA", u8"circus tent", 2803, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2875
-{ U"\U0001F682", u8"locomotive", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2876
-{ U"\U0001F683", u8"railway car", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2877
-{ U"\U0001F684", u8"high-speed train", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2878
-{ U"\U0001F685", u8"bullet train", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2879
-{ U"\U0001F686", u8"train", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2880
-{ U"\U0001F687", u8"metro", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2881
-{ U"\U0001F688", u8"light rail", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2882
-{ U"\U0001F689", u8"station", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2883
-{ U"\U0001F68A", u8"tram", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2884
-{ U"\U0001F69D", u8"monorail", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2885
-{ U"\U0001F69E", u8"mountain railway", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2886
-{ U"\U0001F68B", u8"tram car", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2887
-{ U"\U0001F68C", u8"bus", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2888
-{ U"\U0001F68D", u8"oncoming bus", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2889
-{ U"\U0001F68E", u8"trolleybus", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2890
-{ U"\U0001F690", u8"minibus", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2891
-{ U"\U0001F691", u8"ambulance", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2892
-{ U"\U0001F692", u8"fire engine", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2893
-{ U"\U0001F693", u8"police car", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2894
-{ U"\U0001F694", u8"oncoming police car", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2895
-{ U"\U0001F695", u8"taxi", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2896
-{ U"\U0001F696", u8"oncoming taxi", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2897
-{ U"\U0001F697", u8"automobile", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2898
-{ U"\U0001F698", u8"oncoming automobile", 2804, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2899
-{ U"\U0001F699", u8"sport utility vehicle", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2900
-{ U"\U0001F6FB", u8"pickup truck", 2804, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2901
-{ U"\U0001F69A", u8"delivery truck", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2902
-{ U"\U0001F69B", u8"articulated lorry", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2903
-{ U"\U0001F69C", u8"tractor", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2904
-{ U"\U0001F3CE\uFE0F", u8"racing car", 2804, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2905
-{ U"\U0001F3CD\uFE0F", u8"motorcycle", 2804, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2906
-{ U"\U0001F6F5", u8"motor scooter", 2804, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2907
-{ U"\U0001F9BD", u8"manual wheelchair", 2804, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2908
-{ U"\U0001F9BC", u8"motorized wheelchair", 2804, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2909
-{ U"\U0001F6FA", u8"auto rickshaw", 2804, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2910
-{ U"\U0001F6B2", u8"bicycle", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2911
-{ U"\U0001F6F4", u8"kick scooter", 2804, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2912
-{ U"\U0001F6F9", u8"skateboard", 2804, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2913
-{ U"\U0001F6FC", u8"roller skate", 2804, 0, -1, Lfg(129), EcVersion::E13_0 },   // 2914
-{ U"\U0001F68F", u8"bus stop", 2804, 0, -1, Lfg(385), EcVersion::E0_6 },   // 2915
-{ U"\U0001F6E3\uFE0F", u8"motorway", 2804, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2916
-{ U"\U0001F6E4\uFE0F", u8"railway track", 2804, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2917
-{ U"\U0001F6E2\uFE0F", u8"oil drum", 2804, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2918
-{ U"\u26FD", u8"fuel pump", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2919
-{ U"\U0001F6DE", u8"wheel", 2804, 0, -1, Lfg(385), EcVersion::E14_0 },   // 2920
-{ U"\U0001F6A8", u8"police car light", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2921
-{ U"\U0001F6A5", u8"horizontal traffic light", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2922
-{ U"\U0001F6A6", u8"vertical traffic light", 2804, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2923
-{ U"\U0001F6D1", u8"stop sign", 2804, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2924
-{ U"\U0001F6A7", u8"construction", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2925
-{ U"\u2693", u8"anchor", 2805, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2926
-{ U"\U0001F6DF", u8"ring buoy", 2805, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2927
-{ U"\u26F5", u8"sailboat", 2805, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2928
-{ U"\U0001F6F6", u8"canoe", 2805, 0, -1, Lfg(129), EcVersion::E3_0 },   // 2929
-{ U"\U0001F6A4", u8"speedboat", 2805, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2930
-{ U"\U0001F6F3\uFE0F", u8"passenger ship", 2805, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2931
-{ U"\u26F4\uFE0F", u8"ferry", 2805, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2932
-{ U"\U0001F6E5\uFE0F", u8"motor boat", 2805, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2933
-{ U"\U0001F6A2", u8"ship", 2805, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2934
-{ U"\u2708\uFE0F", u8"airplane", 2806, 0, -1, Lfg(193), EcVersion::E0_6 },   // 2935
-{ U"\U0001F6E9\uFE0F", u8"small airplane", 2806, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2936
-{ U"\U0001F6EB", u8"airplane departure", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2937
-{ U"\U0001F6EC", u8"airplane arrival", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2938
-{ U"\U0001FA82", u8"parachute", 2806, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2939
-{ U"\U0001F4BA", u8"seat", 2806, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2940
-{ U"\U0001F681", u8"helicopter", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2941
-{ U"\U0001F69F", u8"suspension railway", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2942
-{ U"\U0001F6A0", u8"mountain cableway", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2943
-{ U"\U0001F6A1", u8"aerial tramway", 2806, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2944
-{ U"\U0001F6F0\uFE0F", u8"satellite", 2806, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2945
-{ U"\U0001F680", u8"rocket", 2806, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2946
-{ U"\U0001F6F8", u8"flying saucer", 2806, 0, -1, Lfg(129), EcVersion::E5_0 },   // 2947
-{ U"\U0001F6CE\uFE0F", u8"bellhop bell", 2807, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2948
-{ U"\U0001F9F3", u8"luggage", 2807, 0, -1, Lfg(129), EcVersion::E11_0 },   // 2949
-{ U"\u231B", u8"hourglass done", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2950
-{ U"\u23F3", u8"hourglass not done", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2951
-{ U"\u231A", u8"watch", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2952
-{ U"\u23F0", u8"alarm clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2953
-{ U"\u23F1\uFE0F", u8"stopwatch", 2808, 0, -1, Lfg(193), EcVersion::E1_0 },   // 2954
-{ U"\u23F2\uFE0F", u8"timer clock", 2808, 0, -1, Lfg(193), EcVersion::E1_0 },   // 2955
-{ U"\U0001F570\uFE0F", u8"mantelpiece clock", 2808, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2956
-{ U"\U0001F55B", u8"twelve o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2957
-{ U"\U0001F567", u8"twelve-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2958
-{ U"\U0001F550", u8"one o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2959
-{ U"\U0001F55C", u8"one-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2960
-{ U"\U0001F551", u8"two o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2961
-{ U"\U0001F55D", u8"two-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2962
-{ U"\U0001F552", u8"three o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2963
-{ U"\U0001F55E", u8"three-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2964
-{ U"\U0001F553", u8"four o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2965
-{ U"\U0001F55F", u8"four-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2966
-{ U"\U0001F554", u8"five o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2967
-{ U"\U0001F560", u8"five-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2968
-{ U"\U0001F555", u8"six o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2969
-{ U"\U0001F561", u8"six-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2970
-{ U"\U0001F556", u8"seven o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2971
-{ U"\U0001F562", u8"seven-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2972
-{ U"\U0001F557", u8"eight o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2973
-{ U"\U0001F563", u8"eight-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2974
-{ U"\U0001F558", u8"nine o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2975
-{ U"\U0001F564", u8"nine-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2976
-{ U"\U0001F559", u8"ten o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2977
-{ U"\U0001F565", u8"ten-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2978
-{ U"\U0001F55A", u8"eleven o’clock", 2808, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2979
-{ U"\U0001F566", u8"eleven-thirty", 2808, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2980
-{ U"\U0001F311", u8"new moon", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2981
-{ U"\U0001F312", u8"waxing crescent moon", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2982
-{ U"\U0001F313", u8"first quarter moon", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2983
-{ U"\U0001F314", u8"waxing gibbous moon", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2984
-{ U"\U0001F315", u8"full moon", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2985
-{ U"\U0001F316", u8"waning gibbous moon", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2986
-{ U"\U0001F317", u8"last quarter moon", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2987
-{ U"\U0001F318", u8"waning crescent moon", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2988
-{ U"\U0001F319", u8"crescent moon", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2989
-{ U"\U0001F31A", u8"new moon face", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2990
-{ U"\U0001F31B", u8"first quarter moon face", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2991
-{ U"\U0001F31C", u8"last quarter moon face", 2809, 0, -1, Lfg(129), EcVersion::E0_7 },   // 2992
-{ U"\U0001F321\uFE0F", u8"thermometer", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 2993
-{ U"\u2600\uFE0F", u8"sun", 2809, 0, -1, Lfg(193), EcVersion::E0_6 },   // 2994
-{ U"\U0001F31D", u8"full moon face", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2995
-{ U"\U0001F31E", u8"sun with face", 2809, 0, -1, Lfg(129), EcVersion::E1_0 },   // 2996
-{ U"\U0001FA90", u8"ringed planet", 2809, 0, -1, Lfg(129), EcVersion::E12_0 },   // 2997
-{ U"\u2B50", u8"star", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2998
-{ U"\U0001F31F", u8"glowing star", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2999
-{ U"\U0001F320", u8"shooting star", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3000
-{ U"\U0001F30C", u8"Milky Way", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3001
-{ U"\u2601\uFE0F", u8"cloud", 2809, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3002
-{ U"\u26C5", u8"sun behind cloud", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3003
-{ U"\u26C8\uFE0F", u8"cloud with lightning and rain", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3004
-{ U"\U0001F324\uFE0F", u8"sun behind small cloud", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3005
-{ U"\U0001F325\uFE0F", u8"sun behind large cloud", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3006
-{ U"\U0001F326\uFE0F", u8"sun behind rain cloud", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3007
-{ U"\U0001F327\uFE0F", u8"cloud with rain", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3008
-{ U"\U0001F328\uFE0F", u8"cloud with snow", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3009
-{ U"\U0001F329\uFE0F", u8"cloud with lightning", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3010
-{ U"\U0001F32A\uFE0F", u8"tornado", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3011
-{ U"\U0001F32B\uFE0F", u8"fog", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3012
-{ U"\U0001F32C\uFE0F", u8"wind face", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3013
-{ U"\U0001F300", u8"cyclone", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3014
-{ U"\U0001F308", u8"rainbow", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3015
-{ U"\U0001F302", u8"closed umbrella", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3016
-{ U"\u2602\uFE0F", u8"umbrella", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3017
-{ U"\u2614", u8"umbrella with rain drops", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3018
-{ U"\u26F1\uFE0F", u8"umbrella on ground", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3019
-{ U"\u26A1", u8"high voltage", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3020
-{ U"\u2744\uFE0F", u8"snowflake", 2809, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3021
-{ U"\u2603\uFE0F", u8"snowman", 2809, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3022
-{ U"\u26C4", u8"snowman without snow", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3023
-{ U"\u2604\uFE0F", u8"comet", 2809, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3024
-{ U"\U0001F525", u8"fire", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3025
-{ U"\U0001F4A7", u8"droplet", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3026
-{ U"\U0001F30A", u8"water wave", 2809, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3027
+{ U"\U0001F30D", u8"globe showing Europe-Africa", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2810
+{ U"\U0001F30E", u8"globe showing Americas", 2799, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2811
+{ U"\U0001F30F", u8"globe showing Asia-Australia", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2812
+{ U"\U0001F310", u8"globe with meridians", 2799, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2813
+{ U"\U0001F5FA\uFE0F", u8"world map", 2799, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2814
+{ U"\U0001F5FE", u8"map of Japan", 2799, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2815
+{ U"\U0001F9ED", u8"compass", 2799, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2816
+{ U"\U0001F3D4\uFE0F", u8"snow-capped mountain", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2817
+{ U"\u26F0\uFE0F", u8"mountain", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2818
+{ U"\U0001F30B", u8"volcano", 2800, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2819
+{ U"\U0001F5FB", u8"mount Fuji", 2800, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2820
+{ U"\U0001F3D5\uFE0F", u8"camping", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2821
+{ U"\U0001F3D6\uFE0F", u8"beach with umbrella", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2822
+{ U"\U0001F3DC\uFE0F", u8"desert", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2823
+{ U"\U0001F3DD\uFE0F", u8"desert island", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2824
+{ U"\U0001F3DE\uFE0F", u8"national park", 2800, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2825
+{ U"\U0001F3DF\uFE0F", u8"stadium", 2801, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2826
+{ U"\U0001F3DB\uFE0F", u8"classical building", 2801, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2827
+{ U"\U0001F3D7\uFE0F", u8"building construction", 2801, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2828
+{ U"\U0001F9F1", u8"brick", 2801, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2829
+{ U"\U0001FAA8", u8"rock", 2801, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2830
+{ U"\U0001FAB5", u8"wood", 2801, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2831
+{ U"\U0001F6D6", u8"hut", 2801, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2832
+{ U"\U0001F3D8\uFE0F", u8"houses", 2801, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2833
+{ U"\U0001F3DA\uFE0F", u8"derelict house", 2801, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2834
+{ U"\U0001F3E0", u8"house", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2835
+{ U"\U0001F3E1", u8"house with garden", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2836
+{ U"\U0001F3E2", u8"office building", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2837
+{ U"\U0001F3E3", u8"Japanese post office", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2838
+{ U"\U0001F3E4", u8"post office", 2801, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2839
+{ U"\U0001F3E5", u8"hospital", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2840
+{ U"\U0001F3E6", u8"bank", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2841
+{ U"\U0001F3E8", u8"hotel", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2842
+{ U"\U0001F3E9", u8"love hotel", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2843
+{ U"\U0001F3EA", u8"convenience store", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2844
+{ U"\U0001F3EB", u8"school", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2845
+{ U"\U0001F3EC", u8"department store", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2846
+{ U"\U0001F3ED", u8"factory", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2847
+{ U"\U0001F3EF", u8"Japanese castle", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2848
+{ U"\U0001F3F0", u8"castle", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2849
+{ U"\U0001F492", u8"wedding", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2850
+{ U"\U0001F5FC", u8"Tokyo tower", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2851
+{ U"\U0001F5FD", u8"Statue of Liberty", 2801, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2852
+{ U"\u26EA", u8"church", 2802, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2853
+{ U"\U0001F54C", u8"mosque", 2802, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2854
+{ U"\U0001F6D5", u8"Hindu temple", 2802, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2855
+{ U"\U0001F54D", u8"synagogue", 2802, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2856
+{ U"\u26E9\uFE0F", u8"Shinto shrine", 2802, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2857
+{ U"\U0001F54B", u8"Kaaba", 2802, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2858
+{ U"\u26F2", u8"fountain", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2859
+{ U"\u26FA", u8"tent", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2860
+{ U"\U0001F301", u8"foggy", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2861
+{ U"\U0001F303", u8"night with stars", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2862
+{ U"\U0001F3D9\uFE0F", u8"cityscape", 2803, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2863
+{ U"\U0001F304", u8"sunrise over mountains", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2864
+{ U"\U0001F305", u8"sunrise", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2865
+{ U"\U0001F306", u8"cityscape at dusk", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2866
+{ U"\U0001F307", u8"sunset", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2867
+{ U"\U0001F309", u8"bridge at night", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2868
+{ U"\u2668\uFE0F", u8"hot springs", 2803, 0, -1, Lfg(65), EcVersion::E0_6 },   // 2869
+{ U"\U0001F3A0", u8"carousel horse", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2870
+{ U"\U0001F6DD", u8"playground slide", 2803, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2871
+{ U"\U0001F3A1", u8"Ferris wheel", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2872
+{ U"\U0001F3A2", u8"roller coaster", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2873
+{ U"\U0001F488", u8"barber pole", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2874
+{ U"\U0001F3AA", u8"circus tent", 2803, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2875
+{ U"\U0001F682", u8"locomotive", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2876
+{ U"\U0001F683", u8"railway car", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2877
+{ U"\U0001F684", u8"high-speed train", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2878
+{ U"\U0001F685", u8"bullet train", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2879
+{ U"\U0001F686", u8"train", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2880
+{ U"\U0001F687", u8"metro", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2881
+{ U"\U0001F688", u8"light rail", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2882
+{ U"\U0001F689", u8"station", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2883
+{ U"\U0001F68A", u8"tram", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2884
+{ U"\U0001F69D", u8"monorail", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2885
+{ U"\U0001F69E", u8"mountain railway", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2886
+{ U"\U0001F68B", u8"tram car", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2887
+{ U"\U0001F68C", u8"bus", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2888
+{ U"\U0001F68D", u8"oncoming bus", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2889
+{ U"\U0001F68E", u8"trolleybus", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2890
+{ U"\U0001F690", u8"minibus", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2891
+{ U"\U0001F691", u8"ambulance", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2892
+{ U"\U0001F692", u8"fire engine", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2893
+{ U"\U0001F693", u8"police car", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2894
+{ U"\U0001F694", u8"oncoming police car", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2895
+{ U"\U0001F695", u8"taxi", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2896
+{ U"\U0001F696", u8"oncoming taxi", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2897
+{ U"\U0001F697", u8"automobile", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2898
+{ U"\U0001F698", u8"oncoming automobile", 2804, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2899
+{ U"\U0001F699", u8"sport utility vehicle", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2900
+{ U"\U0001F6FB", u8"pickup truck", 2804, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2901
+{ U"\U0001F69A", u8"delivery truck", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2902
+{ U"\U0001F69B", u8"articulated lorry", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2903
+{ U"\U0001F69C", u8"tractor", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2904
+{ U"\U0001F3CE\uFE0F", u8"racing car", 2804, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2905
+{ U"\U0001F3CD\uFE0F", u8"motorcycle", 2804, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2906
+{ U"\U0001F6F5", u8"motor scooter", 2804, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2907
+{ U"\U0001F9BD", u8"manual wheelchair", 2804, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2908
+{ U"\U0001F9BC", u8"motorized wheelchair", 2804, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2909
+{ U"\U0001F6FA", u8"auto rickshaw", 2804, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2910
+{ U"\U0001F6B2", u8"bicycle", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2911
+{ U"\U0001F6F4", u8"kick scooter", 2804, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2912
+{ U"\U0001F6F9", u8"skateboard", 2804, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2913
+{ U"\U0001F6FC", u8"roller skate", 2804, 0, -1, Lfg(1), EcVersion::E13_0 },   // 2914
+{ U"\U0001F68F", u8"bus stop", 2804, 0, -1, Lfg(129), EcVersion::E0_6 },   // 2915
+{ U"\U0001F6E3\uFE0F", u8"motorway", 2804, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2916
+{ U"\U0001F6E4\uFE0F", u8"railway track", 2804, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2917
+{ U"\U0001F6E2\uFE0F", u8"oil drum", 2804, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2918
+{ U"\u26FD", u8"fuel pump", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2919
+{ U"\U0001F6DE", u8"wheel", 2804, 0, -1, Lfg(129), EcVersion::E14_0 },   // 2920
+{ U"\U0001F6A8", u8"police car light", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2921
+{ U"\U0001F6A5", u8"horizontal traffic light", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2922
+{ U"\U0001F6A6", u8"vertical traffic light", 2804, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2923
+{ U"\U0001F6D1", u8"stop sign", 2804, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2924
+{ U"\U0001F6A7", u8"construction", 2804, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2925
+{ U"\u2693", u8"anchor", 2805, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2926
+{ U"\U0001F6DF", u8"ring buoy", 2805, 0, -1, Lfg(1), EcVersion::E14_0 },   // 2927
+{ U"\u26F5", u8"sailboat", 2805, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2928
+{ U"\U0001F6F6", u8"canoe", 2805, 0, -1, Lfg(1), EcVersion::E3_0 },   // 2929
+{ U"\U0001F6A4", u8"speedboat", 2805, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2930
+{ U"\U0001F6F3\uFE0F", u8"passenger ship", 2805, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2931
+{ U"\u26F4\uFE0F", u8"ferry", 2805, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2932
+{ U"\U0001F6E5\uFE0F", u8"motor boat", 2805, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2933
+{ U"\U0001F6A2", u8"ship", 2805, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2934
+{ U"\u2708\uFE0F", u8"airplane", 2806, 0, -1, Lfg(65), EcVersion::E0_6 },   // 2935
+{ U"\U0001F6E9\uFE0F", u8"small airplane", 2806, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2936
+{ U"\U0001F6EB", u8"airplane departure", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2937
+{ U"\U0001F6EC", u8"airplane arrival", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2938
+{ U"\U0001FA82", u8"parachute", 2806, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2939
+{ U"\U0001F4BA", u8"seat", 2806, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2940
+{ U"\U0001F681", u8"helicopter", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2941
+{ U"\U0001F69F", u8"suspension railway", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2942
+{ U"\U0001F6A0", u8"mountain cableway", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2943
+{ U"\U0001F6A1", u8"aerial tramway", 2806, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2944
+{ U"\U0001F6F0\uFE0F", u8"satellite", 2806, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2945
+{ U"\U0001F680", u8"rocket", 2806, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2946
+{ U"\U0001F6F8", u8"flying saucer", 2806, 0, -1, Lfg(1), EcVersion::E5_0 },   // 2947
+{ U"\U0001F6CE\uFE0F", u8"bellhop bell", 2807, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2948
+{ U"\U0001F9F3", u8"luggage", 2807, 0, -1, Lfg(1), EcVersion::E11_0 },   // 2949
+{ U"\u231B", u8"hourglass done", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2950
+{ U"\u23F3", u8"hourglass not done", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2951
+{ U"\u231A", u8"watch", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2952
+{ U"\u23F0", u8"alarm clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2953
+{ U"\u23F1\uFE0F", u8"stopwatch", 2808, 0, -1, Lfg(65), EcVersion::E1_0 },   // 2954
+{ U"\u23F2\uFE0F", u8"timer clock", 2808, 0, -1, Lfg(65), EcVersion::E1_0 },   // 2955
+{ U"\U0001F570\uFE0F", u8"mantelpiece clock", 2808, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2956
+{ U"\U0001F55B", u8"twelve o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2957
+{ U"\U0001F567", u8"twelve-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2958
+{ U"\U0001F550", u8"one o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2959
+{ U"\U0001F55C", u8"one-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2960
+{ U"\U0001F551", u8"two o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2961
+{ U"\U0001F55D", u8"two-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2962
+{ U"\U0001F552", u8"three o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2963
+{ U"\U0001F55E", u8"three-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2964
+{ U"\U0001F553", u8"four o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2965
+{ U"\U0001F55F", u8"four-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2966
+{ U"\U0001F554", u8"five o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2967
+{ U"\U0001F560", u8"five-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2968
+{ U"\U0001F555", u8"six o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2969
+{ U"\U0001F561", u8"six-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2970
+{ U"\U0001F556", u8"seven o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2971
+{ U"\U0001F562", u8"seven-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2972
+{ U"\U0001F557", u8"eight o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2973
+{ U"\U0001F563", u8"eight-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2974
+{ U"\U0001F558", u8"nine o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2975
+{ U"\U0001F564", u8"nine-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2976
+{ U"\U0001F559", u8"ten o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2977
+{ U"\U0001F565", u8"ten-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2978
+{ U"\U0001F55A", u8"eleven o’clock", 2808, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2979
+{ U"\U0001F566", u8"eleven-thirty", 2808, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2980
+{ U"\U0001F311", u8"new moon", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2981
+{ U"\U0001F312", u8"waxing crescent moon", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2982
+{ U"\U0001F313", u8"first quarter moon", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2983
+{ U"\U0001F314", u8"waxing gibbous moon", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2984
+{ U"\U0001F315", u8"full moon", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2985
+{ U"\U0001F316", u8"waning gibbous moon", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2986
+{ U"\U0001F317", u8"last quarter moon", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2987
+{ U"\U0001F318", u8"waning crescent moon", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2988
+{ U"\U0001F319", u8"crescent moon", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2989
+{ U"\U0001F31A", u8"new moon face", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2990
+{ U"\U0001F31B", u8"first quarter moon face", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2991
+{ U"\U0001F31C", u8"last quarter moon face", 2809, 0, -1, Lfg(1), EcVersion::E0_7 },   // 2992
+{ U"\U0001F321\uFE0F", u8"thermometer", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 2993
+{ U"\u2600\uFE0F", u8"sun", 2809, 0, -1, Lfg(65), EcVersion::E0_6 },   // 2994
+{ U"\U0001F31D", u8"full moon face", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2995
+{ U"\U0001F31E", u8"sun with face", 2809, 0, -1, Lfg(1), EcVersion::E1_0 },   // 2996
+{ U"\U0001FA90", u8"ringed planet", 2809, 0, -1, Lfg(1), EcVersion::E12_0 },   // 2997
+{ U"\u2B50", u8"star", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2998
+{ U"\U0001F31F", u8"glowing star", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 2999
+{ U"\U0001F320", u8"shooting star", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3000
+{ U"\U0001F30C", u8"Milky Way", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3001
+{ U"\u2601\uFE0F", u8"cloud", 2809, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3002
+{ U"\u26C5", u8"sun behind cloud", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3003
+{ U"\u26C8\uFE0F", u8"cloud with lightning and rain", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3004
+{ U"\U0001F324\uFE0F", u8"sun behind small cloud", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3005
+{ U"\U0001F325\uFE0F", u8"sun behind large cloud", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3006
+{ U"\U0001F326\uFE0F", u8"sun behind rain cloud", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3007
+{ U"\U0001F327\uFE0F", u8"cloud with rain", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3008
+{ U"\U0001F328\uFE0F", u8"cloud with snow", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3009
+{ U"\U0001F329\uFE0F", u8"cloud with lightning", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3010
+{ U"\U0001F32A\uFE0F", u8"tornado", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3011
+{ U"\U0001F32B\uFE0F", u8"fog", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3012
+{ U"\U0001F32C\uFE0F", u8"wind face", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3013
+{ U"\U0001F300", u8"cyclone", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3014
+{ U"\U0001F308", u8"rainbow", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3015
+{ U"\U0001F302", u8"closed umbrella", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3016
+{ U"\u2602\uFE0F", u8"umbrella", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3017
+{ U"\u2614", u8"umbrella with rain drops", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3018
+{ U"\u26F1\uFE0F", u8"umbrella on ground", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3019
+{ U"\u26A1", u8"high voltage", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3020
+{ U"\u2744\uFE0F", u8"snowflake", 2809, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3021
+{ U"\u2603\uFE0F", u8"snowman", 2809, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3022
+{ U"\u26C4", u8"snowman without snow", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3023
+{ U"\u2604\uFE0F", u8"comet", 2809, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3024
+{ U"\U0001F525", u8"fire", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3025
+{ U"\U0001F4A7", u8"droplet", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3026
+{ U"\U0001F30A", u8"water wave", 2809, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3027
 { {}, u8"event", 16, 21, 3033, Lfg(8), EcVersion::NONE },   // 3028
 { {}, u8"award-medal", 16, 6, 3054, Lfg(8), EcVersion::NONE },   // 3029
 { {}, u8"sport", 16, 27, 3060, Lfg(8), EcVersion::NONE },   // 3030
 { {}, u8"game", 16, 24, 3087, Lfg(8), EcVersion::NONE },   // 3031
 { {}, u8"arts & crafts", 16, 7, 3111, Lfg(8), EcVersion::NONE },   // 3032
-{ U"\U0001F383", u8"jack-o-lantern", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3033
-{ U"\U0001F384", u8"Christmas tree", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3034
-{ U"\U0001F386", u8"fireworks", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3035
-{ U"\U0001F387", u8"sparkler", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3036
-{ U"\U0001F9E8", u8"firecracker", 3028, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3037
-{ U"\u2728", u8"sparkles", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3038
-{ U"\U0001F388", u8"balloon", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3039
-{ U"\U0001F389", u8"party popper", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3040
-{ U"\U0001F38A", u8"confetti ball", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3041
-{ U"\U0001F38B", u8"tanabata tree", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3042
-{ U"\U0001F38D", u8"pine decoration", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3043
-{ U"\U0001F38E", u8"Japanese dolls", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3044
-{ U"\U0001F38F", u8"carp streamer", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3045
-{ U"\U0001F390", u8"wind chime", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3046
-{ U"\U0001F391", u8"moon viewing ceremony", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3047
-{ U"\U0001F9E7", u8"red envelope", 3028, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3048
-{ U"\U0001F380", u8"ribbon", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3049
-{ U"\U0001F381", u8"wrapped gift", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3050
-{ U"\U0001F397\uFE0F", u8"reminder ribbon", 3028, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3051
-{ U"\U0001F39F\uFE0F", u8"admission tickets", 3028, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3052
-{ U"\U0001F3AB", u8"ticket", 3028, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3053
-{ U"\U0001F396\uFE0F", u8"military medal", 3029, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3054
-{ U"\U0001F3C6", u8"trophy", 3029, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3055
-{ U"\U0001F3C5", u8"sports medal", 3029, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3056
-{ U"\U0001F947", u8"1st place medal", 3029, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3057
-{ U"\U0001F948", u8"2nd place medal", 3029, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3058
-{ U"\U0001F949", u8"3rd place medal", 3029, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3059
-{ U"\u26BD", u8"soccer ball", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3060
-{ U"\u26BE", u8"baseball", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3061
-{ U"\U0001F94E", u8"softball", 3030, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3062
-{ U"\U0001F3C0", u8"basketball", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3063
-{ U"\U0001F3D0", u8"volleyball", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3064
-{ U"\U0001F3C8", u8"American football", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3065
-{ U"\U0001F3C9", u8"rugby football", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3066
-{ U"\U0001F3BE", u8"tennis", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3067
-{ U"\U0001F94F", u8"flying disc", 3030, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3068
-{ U"\U0001F3B3", u8"bowling", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3069
-{ U"\U0001F3CF", u8"cricket game", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3070
-{ U"\U0001F3D1", u8"field hockey", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3071
-{ U"\U0001F3D2", u8"ice hockey", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3072
-{ U"\U0001F94D", u8"lacrosse", 3030, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3073
-{ U"\U0001F3D3", u8"ping pong", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3074
-{ U"\U0001F3F8", u8"badminton", 3030, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3075
-{ U"\U0001F94A", u8"boxing glove", 3030, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3076
-{ U"\U0001F94B", u8"martial arts uniform", 3030, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3077
-{ U"\U0001F945", u8"goal net", 3030, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3078
-{ U"\u26F3", u8"flag in hole", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3079
-{ U"\u26F8\uFE0F", u8"ice skate", 3030, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3080
-{ U"\U0001F3A3", u8"fishing pole", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3081
-{ U"\U0001F93F", u8"diving mask", 3030, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3082
-{ U"\U0001F3BD", u8"running shirt", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3083
-{ U"\U0001F3BF", u8"skis", 3030, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3084
-{ U"\U0001F6F7", u8"sled", 3030, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3085
-{ U"\U0001F94C", u8"curling stone", 3030, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3086
-{ U"\U0001F3AF", u8"bullseye", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3087
-{ U"\U0001FA80", u8"yo-yo", 3031, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3088
-{ U"\U0001FA81", u8"kite", 3031, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3089
-{ U"\U0001F52B", u8"water pistol", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3090
-{ U"\U0001F3B1", u8"pool 8 ball", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3091
-{ U"\U0001F52E", u8"crystal ball", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3092
-{ U"\U0001FA84", u8"magic wand", 3031, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3093
-{ U"\U0001F3AE", u8"video game", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3094
-{ U"\U0001F579\uFE0F", u8"joystick", 3031, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3095
-{ U"\U0001F3B0", u8"slot machine", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3096
-{ U"\U0001F3B2", u8"game die", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3097
-{ U"\U0001F9E9", u8"puzzle piece", 3031, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3098
-{ U"\U0001F9F8", u8"teddy bear", 3031, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3099
-{ U"\U0001FA85", u8"piñata", 3031, 0, -1, Lfg(385), EcVersion::E13_0 },   // 3100
-{ U"\U0001FAA9", u8"mirror ball", 3031, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3101
-{ U"\U0001FA86", u8"nesting dolls", 3031, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3102
-{ U"\u2660\uFE0F", u8"spade suit", 3031, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3103
-{ U"\u2665\uFE0F", u8"heart suit", 3031, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3104
-{ U"\u2666\uFE0F", u8"diamond suit", 3031, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3105
-{ U"\u2663\uFE0F", u8"club suit", 3031, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3106
-{ U"\u265F\uFE0F", u8"chess pawn", 3031, 0, -1, Lfg(193), EcVersion::E11_0 },   // 3107
-{ U"\U0001F0CF", u8"joker", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3108
-{ U"\U0001F004", u8"mahjong red dragon", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3109
-{ U"\U0001F3B4", u8"flower playing cards", 3031, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3110
-{ U"\U0001F3AD", u8"performing arts", 3032, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3111
-{ U"\U0001F5BC\uFE0F", u8"framed picture", 3032, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3112
-{ U"\U0001F3A8", u8"artist palette", 3032, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3113
-{ U"\U0001F9F5", u8"thread", 3032, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3114
-{ U"\U0001FAA1", u8"sewing needle", 3032, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3115
-{ U"\U0001F9F6", u8"yarn", 3032, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3116
-{ U"\U0001FAA2", u8"knot", 3032, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3117
+{ U"\U0001F383", u8"jack-o-lantern", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3033
+{ U"\U0001F384", u8"Christmas tree", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3034
+{ U"\U0001F386", u8"fireworks", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3035
+{ U"\U0001F387", u8"sparkler", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3036
+{ U"\U0001F9E8", u8"firecracker", 3028, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3037
+{ U"\u2728", u8"sparkles", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3038
+{ U"\U0001F388", u8"balloon", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3039
+{ U"\U0001F389", u8"party popper", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3040
+{ U"\U0001F38A", u8"confetti ball", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3041
+{ U"\U0001F38B", u8"tanabata tree", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3042
+{ U"\U0001F38D", u8"pine decoration", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3043
+{ U"\U0001F38E", u8"Japanese dolls", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3044
+{ U"\U0001F38F", u8"carp streamer", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3045
+{ U"\U0001F390", u8"wind chime", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3046
+{ U"\U0001F391", u8"moon viewing ceremony", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3047
+{ U"\U0001F9E7", u8"red envelope", 3028, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3048
+{ U"\U0001F380", u8"ribbon", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3049
+{ U"\U0001F381", u8"wrapped gift", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3050
+{ U"\U0001F397\uFE0F", u8"reminder ribbon", 3028, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3051
+{ U"\U0001F39F\uFE0F", u8"admission tickets", 3028, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3052
+{ U"\U0001F3AB", u8"ticket", 3028, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3053
+{ U"\U0001F396\uFE0F", u8"military medal", 3029, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3054
+{ U"\U0001F3C6", u8"trophy", 3029, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3055
+{ U"\U0001F3C5", u8"sports medal", 3029, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3056
+{ U"\U0001F947", u8"1st place medal", 3029, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3057
+{ U"\U0001F948", u8"2nd place medal", 3029, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3058
+{ U"\U0001F949", u8"3rd place medal", 3029, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3059
+{ U"\u26BD", u8"soccer ball", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3060
+{ U"\u26BE", u8"baseball", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3061
+{ U"\U0001F94E", u8"softball", 3030, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3062
+{ U"\U0001F3C0", u8"basketball", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3063
+{ U"\U0001F3D0", u8"volleyball", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3064
+{ U"\U0001F3C8", u8"American football", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3065
+{ U"\U0001F3C9", u8"rugby football", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3066
+{ U"\U0001F3BE", u8"tennis", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3067
+{ U"\U0001F94F", u8"flying disc", 3030, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3068
+{ U"\U0001F3B3", u8"bowling", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3069
+{ U"\U0001F3CF", u8"cricket game", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3070
+{ U"\U0001F3D1", u8"field hockey", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3071
+{ U"\U0001F3D2", u8"ice hockey", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3072
+{ U"\U0001F94D", u8"lacrosse", 3030, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3073
+{ U"\U0001F3D3", u8"ping pong", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3074
+{ U"\U0001F3F8", u8"badminton", 3030, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3075
+{ U"\U0001F94A", u8"boxing glove", 3030, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3076
+{ U"\U0001F94B", u8"martial arts uniform", 3030, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3077
+{ U"\U0001F945", u8"goal net", 3030, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3078
+{ U"\u26F3", u8"flag in hole", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3079
+{ U"\u26F8\uFE0F", u8"ice skate", 3030, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3080
+{ U"\U0001F3A3", u8"fishing pole", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3081
+{ U"\U0001F93F", u8"diving mask", 3030, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3082
+{ U"\U0001F3BD", u8"running shirt", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3083
+{ U"\U0001F3BF", u8"skis", 3030, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3084
+{ U"\U0001F6F7", u8"sled", 3030, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3085
+{ U"\U0001F94C", u8"curling stone", 3030, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3086
+{ U"\U0001F3AF", u8"bullseye", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3087
+{ U"\U0001FA80", u8"yo-yo", 3031, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3088
+{ U"\U0001FA81", u8"kite", 3031, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3089
+{ U"\U0001F52B", u8"water pistol", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3090
+{ U"\U0001F3B1", u8"pool 8 ball", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3091
+{ U"\U0001F52E", u8"crystal ball", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3092
+{ U"\U0001FA84", u8"magic wand", 3031, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3093
+{ U"\U0001F3AE", u8"video game", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3094
+{ U"\U0001F579\uFE0F", u8"joystick", 3031, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3095
+{ U"\U0001F3B0", u8"slot machine", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3096
+{ U"\U0001F3B2", u8"game die", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3097
+{ U"\U0001F9E9", u8"puzzle piece", 3031, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3098
+{ U"\U0001F9F8", u8"teddy bear", 3031, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3099
+{ U"\U0001FA85", u8"piñata", 3031, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3100
+{ U"\U0001FAA9", u8"mirror ball", 3031, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3101
+{ U"\U0001FA86", u8"nesting dolls", 3031, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3102
+{ U"\u2660\uFE0F", u8"spade suit", 3031, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3103
+{ U"\u2665\uFE0F", u8"heart suit", 3031, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3104
+{ U"\u2666\uFE0F", u8"diamond suit", 3031, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3105
+{ U"\u2663\uFE0F", u8"club suit", 3031, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3106
+{ U"\u265F\uFE0F", u8"chess pawn", 3031, 0, -1, Lfg(65), EcVersion::E11_0 },   // 3107
+{ U"\U0001F0CF", u8"joker", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3108
+{ U"\U0001F004", u8"mahjong red dragon", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3109
+{ U"\U0001F3B4", u8"flower playing cards", 3031, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3110
+{ U"\U0001F3AD", u8"performing arts", 3032, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3111
+{ U"\U0001F5BC\uFE0F", u8"framed picture", 3032, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3112
+{ U"\U0001F3A8", u8"artist palette", 3032, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3113
+{ U"\U0001F9F5", u8"thread", 3032, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3114
+{ U"\U0001FAA1", u8"sewing needle", 3032, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3115
+{ U"\U0001F9F6", u8"yarn", 3032, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3116
+{ U"\U0001FAA2", u8"knot", 3032, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3117
 { {}, u8"clothing", 17, 47, 3136, Lfg(8), EcVersion::NONE },   // 3118
 { {}, u8"sound", 17, 9, 3183, Lfg(8), EcVersion::NONE },   // 3119
 { {}, u8"music", 17, 9, 3192, Lfg(8), EcVersion::NONE },   // 3120
@@ -3139,270 +3139,270 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"medical", 17, 7, 3359, Lfg(8), EcVersion::NONE },   // 3133
 { {}, u8"household", 17, 25, 3366, Lfg(8), EcVersion::NONE },   // 3134
 { {}, u8"other-object", 17, 9, 3391, Lfg(8), EcVersion::NONE },   // 3135
-{ U"\U0001F453", u8"glasses", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3136
-{ U"\U0001F576\uFE0F", u8"sunglasses", 3118, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3137
-{ U"\U0001F97D", u8"goggles", 3118, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3138
-{ U"\U0001F97C", u8"lab coat", 3118, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3139
-{ U"\U0001F9BA", u8"safety vest", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3140
-{ U"\U0001F454", u8"necktie", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3141
-{ U"\U0001F455", u8"T-shirt", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3142
-{ U"\U0001F456", u8"jeans", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3143
-{ U"\U0001F9E3", u8"scarf", 3118, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3144
-{ U"\U0001F9E4", u8"gloves", 3118, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3145
-{ U"\U0001F9E5", u8"coat", 3118, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3146
-{ U"\U0001F9E6", u8"socks", 3118, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3147
-{ U"\U0001F457", u8"dress", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3148
-{ U"\U0001F458", u8"kimono", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3149
-{ U"\U0001F97B", u8"sari", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3150
-{ U"\U0001FA71", u8"one-piece swimsuit", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3151
-{ U"\U0001FA72", u8"briefs", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3152
-{ U"\U0001FA73", u8"shorts", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3153
-{ U"\U0001F459", u8"bikini", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3154
-{ U"\U0001F45A", u8"woman’s clothes", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3155
-{ U"\U0001FAAD", u8"folding hand fan", 3118, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3156
-{ U"\U0001F45B", u8"purse", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3157
-{ U"\U0001F45C", u8"handbag", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3158
-{ U"\U0001F45D", u8"clutch bag", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3159
-{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3118, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3160
-{ U"\U0001F392", u8"backpack", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3161
-{ U"\U0001FA74", u8"thong sandal", 3118, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3162
-{ U"\U0001F45E", u8"man’s shoe", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3163
-{ U"\U0001F45F", u8"running shoe", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3164
-{ U"\U0001F97E", u8"hiking boot", 3118, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3165
-{ U"\U0001F97F", u8"flat shoe", 3118, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3166
-{ U"\U0001F460", u8"high-heeled shoe", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3167
-{ U"\U0001F461", u8"woman’s sandal", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3168
-{ U"\U0001FA70", u8"ballet shoes", 3118, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3169
-{ U"\U0001F462", u8"woman’s boot", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3170
-{ U"\U0001FAAE", u8"hair pick", 3118, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3171
-{ U"\U0001F451", u8"crown", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3172
-{ U"\U0001F452", u8"woman’s hat", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3173
-{ U"\U0001F3A9", u8"top hat", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3174
-{ U"\U0001F393", u8"graduation cap", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3175
-{ U"\U0001F9E2", u8"billed cap", 3118, 0, -1, Lfg(129), EcVersion::E5_0 },   // 3176
-{ U"\U0001FA96", u8"military helmet", 3118, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3177
-{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3118, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3178
-{ U"\U0001F4FF", u8"prayer beads", 3118, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3179
-{ U"\U0001F484", u8"lipstick", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3180
-{ U"\U0001F48D", u8"ring", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3181
-{ U"\U0001F48E", u8"gem stone", 3118, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3182
-{ U"\U0001F507", u8"muted speaker", 3119, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3183
-{ U"\U0001F508", u8"speaker low volume", 3119, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3184
-{ U"\U0001F509", u8"speaker medium volume", 3119, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3185
-{ U"\U0001F50A", u8"speaker high volume", 3119, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3186
-{ U"\U0001F4E2", u8"loudspeaker", 3119, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3187
-{ U"\U0001F4E3", u8"megaphone", 3119, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3188
-{ U"\U0001F4EF", u8"postal horn", 3119, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3189
-{ U"\U0001F514", u8"bell", 3119, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3190
-{ U"\U0001F515", u8"bell with slash", 3119, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3191
-{ U"\U0001F3BC", u8"musical score", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3192
-{ U"\U0001F3B5", u8"musical note", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3193
-{ U"\U0001F3B6", u8"musical notes", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3194
-{ U"\U0001F399\uFE0F", u8"studio microphone", 3120, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3195
-{ U"\U0001F39A\uFE0F", u8"level slider", 3120, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3196
-{ U"\U0001F39B\uFE0F", u8"control knobs", 3120, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3197
-{ U"\U0001F3A4", u8"microphone", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3198
-{ U"\U0001F3A7", u8"headphone", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3199
-{ U"\U0001F4FB", u8"radio", 3120, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3200
-{ U"\U0001F3B7", u8"saxophone", 3121, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3201
-{ U"\U0001FA97", u8"accordion", 3121, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3202
-{ U"\U0001F3B8", u8"guitar", 3121, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3203
-{ U"\U0001F3B9", u8"musical keyboard", 3121, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3204
-{ U"\U0001F3BA", u8"trumpet", 3121, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3205
-{ U"\U0001F3BB", u8"violin", 3121, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3206
-{ U"\U0001FA95", u8"banjo", 3121, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3207
-{ U"\U0001F941", u8"drum", 3121, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3208
-{ U"\U0001FA98", u8"long drum", 3121, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3209
-{ U"\U0001FA87", u8"maracas", 3121, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3210
-{ U"\U0001FA88", u8"flute", 3121, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3211
-{ U"\U0001FA89", u8"harp", 3121, 0, -1, Lfg(129), EcVersion::E16_0 },   // 3212
-{ U"\U0001F4F1", u8"mobile phone", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3213
-{ U"\U0001F4F2", u8"mobile phone with arrow", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3214
-{ U"\u260E\uFE0F", u8"telephone", 3122, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3215
-{ U"\U0001F4DE", u8"telephone receiver", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3216
-{ U"\U0001F4DF", u8"pager", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3217
-{ U"\U0001F4E0", u8"fax machine", 3122, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3218
-{ U"\U0001F50B", u8"battery", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3219
-{ U"\U0001FAAB", u8"low battery", 3123, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3220
-{ U"\U0001F50C", u8"electric plug", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3221
-{ U"\U0001F4BB", u8"laptop", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3222
-{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3123, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3223
-{ U"\U0001F5A8\uFE0F", u8"printer", 3123, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3224
-{ U"\u2328\uFE0F", u8"keyboard", 3123, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3225
-{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3123, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3226
-{ U"\U0001F5B2\uFE0F", u8"trackball", 3123, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3227
-{ U"\U0001F4BD", u8"computer disk", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3228
-{ U"\U0001F4BE", u8"floppy disk", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3229
-{ U"\U0001F4BF", u8"optical disk", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3230
-{ U"\U0001F4C0", u8"DVD", 3123, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3231
-{ U"\U0001F9EE", u8"abacus", 3123, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3232
-{ U"\U0001F3A5", u8"movie camera", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3233
-{ U"\U0001F39E\uFE0F", u8"film frames", 3124, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3234
-{ U"\U0001F4FD\uFE0F", u8"film projector", 3124, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3235
-{ U"\U0001F3AC", u8"clapper board", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3236
-{ U"\U0001F4FA", u8"television", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3237
-{ U"\U0001F4F7", u8"camera", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3238
-{ U"\U0001F4F8", u8"camera with flash", 3124, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3239
-{ U"\U0001F4F9", u8"video camera", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3240
-{ U"\U0001F4FC", u8"videocassette", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3241
-{ U"\U0001F50D", u8"magnifying glass tilted left", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3242
-{ U"\U0001F50E", u8"magnifying glass tilted right", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3243
-{ U"\U0001F56F\uFE0F", u8"candle", 3124, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3244
-{ U"\U0001F4A1", u8"light bulb", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3245
-{ U"\U0001F526", u8"flashlight", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3246
-{ U"\U0001F3EE", u8"red paper lantern", 3124, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3247
-{ U"\U0001FA94", u8"diya lamp", 3124, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3248
-{ U"\U0001F4D4", u8"notebook with decorative cover", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3249
-{ U"\U0001F4D5", u8"closed book", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3250
-{ U"\U0001F4D6", u8"open book", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3251
-{ U"\U0001F4D7", u8"green book", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3252
-{ U"\U0001F4D8", u8"blue book", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3253
-{ U"\U0001F4D9", u8"orange book", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3254
-{ U"\U0001F4DA", u8"books", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3255
-{ U"\U0001F4D3", u8"notebook", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3256
-{ U"\U0001F4D2", u8"ledger", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3257
-{ U"\U0001F4C3", u8"page with curl", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3258
-{ U"\U0001F4DC", u8"scroll", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3259
-{ U"\U0001F4C4", u8"page facing up", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3260
-{ U"\U0001F4F0", u8"newspaper", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3261
-{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3125, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3262
-{ U"\U0001F4D1", u8"bookmark tabs", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3263
-{ U"\U0001F516", u8"bookmark", 3125, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3264
-{ U"\U0001F3F7\uFE0F", u8"label", 3125, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3265
-{ U"\U0001F4B0", u8"money bag", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3266
-{ U"\U0001FA99", u8"coin", 3126, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3267
-{ U"\U0001F4B4", u8"yen banknote", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3268
-{ U"\U0001F4B5", u8"dollar banknote", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3269
-{ U"\U0001F4B6", u8"euro banknote", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3270
-{ U"\U0001F4B7", u8"pound banknote", 3126, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3271
-{ U"\U0001F4B8", u8"money with wings", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3272
-{ U"\U0001F4B3", u8"credit card", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3273
-{ U"\U0001F9FE", u8"receipt", 3126, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3274
-{ U"\U0001F4B9", u8"chart increasing with yen", 3126, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3275
-{ U"\u2709\uFE0F", u8"envelope", 3127, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3276
-{ U"\U0001F4E7", u8"e-mail", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3277
-{ U"\U0001F4E8", u8"incoming envelope", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3278
-{ U"\U0001F4E9", u8"envelope with arrow", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3279
-{ U"\U0001F4E4", u8"outbox tray", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3280
-{ U"\U0001F4E5", u8"inbox tray", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3281
-{ U"\U0001F4E6", u8"package", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3282
-{ U"\U0001F4EB", u8"closed mailbox with raised flag", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3283
-{ U"\U0001F4EA", u8"closed mailbox with lowered flag", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3284
-{ U"\U0001F4EC", u8"open mailbox with raised flag", 3127, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3285
-{ U"\U0001F4ED", u8"open mailbox with lowered flag", 3127, 0, -1, Lfg(129), EcVersion::E0_7 },   // 3286
-{ U"\U0001F4EE", u8"postbox", 3127, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3287
-{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3127, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3288
-{ U"\u270F\uFE0F", u8"pencil", 3128, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3289
-{ U"\u2712\uFE0F", u8"black nib", 3128, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3290
-{ U"\U0001F58B\uFE0F", u8"fountain pen", 3128, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3291
-{ U"\U0001F58A\uFE0F", u8"pen", 3128, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3292
-{ U"\U0001F58C\uFE0F", u8"paintbrush", 3128, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3293
-{ U"\U0001F58D\uFE0F", u8"crayon", 3128, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3294
-{ U"\U0001F4DD", u8"memo", 3128, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3295
-{ U"\U0001F4BC", u8"briefcase", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3296
-{ U"\U0001F4C1", u8"file folder", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3297
-{ U"\U0001F4C2", u8"open file folder", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3298
-{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3299
-{ U"\U0001F4C5", u8"calendar", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3300
-{ U"\U0001F4C6", u8"tear-off calendar", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3301
-{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3302
-{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3303
-{ U"\U0001F4C7", u8"card index", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3304
-{ U"\U0001F4C8", u8"chart increasing", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3305
-{ U"\U0001F4C9", u8"chart decreasing", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3306
-{ U"\U0001F4CA", u8"bar chart", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3307
-{ U"\U0001F4CB", u8"clipboard", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3308
-{ U"\U0001F4CC", u8"pushpin", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3309
-{ U"\U0001F4CD", u8"round pushpin", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3310
-{ U"\U0001F4CE", u8"paperclip", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3311
-{ U"\U0001F587\uFE0F", u8"linked paperclips", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3312
-{ U"\U0001F4CF", u8"straight ruler", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3313
-{ U"\U0001F4D0", u8"triangular ruler", 3129, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3314
-{ U"\u2702\uFE0F", u8"scissors", 3129, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3315
-{ U"\U0001F5C3\uFE0F", u8"card file box", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3316
-{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3317
-{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3129, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3318
-{ U"\U0001F512", u8"locked", 3130, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3319
-{ U"\U0001F513", u8"unlocked", 3130, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3320
-{ U"\U0001F50F", u8"locked with pen", 3130, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3321
-{ U"\U0001F510", u8"locked with key", 3130, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3322
-{ U"\U0001F511", u8"key", 3130, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3323
-{ U"\U0001F5DD\uFE0F", u8"old key", 3130, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3324
-{ U"\U0001F528", u8"hammer", 3131, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3325
-{ U"\U0001FA93", u8"axe", 3131, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3326
-{ U"\u26CF\uFE0F", u8"pick", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3327
-{ U"\u2692\uFE0F", u8"hammer and pick", 3131, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3328
-{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3329
-{ U"\U0001F5E1\uFE0F", u8"dagger", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3330
-{ U"\u2694\uFE0F", u8"crossed swords", 3131, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3331
-{ U"\U0001F4A3", u8"bomb", 3131, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3332
-{ U"\U0001FA83", u8"boomerang", 3131, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3333
-{ U"\U0001F3F9", u8"bow and arrow", 3131, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3334
-{ U"\U0001F6E1\uFE0F", u8"shield", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3335
-{ U"\U0001FA9A", u8"carpentry saw", 3131, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3336
-{ U"\U0001F527", u8"wrench", 3131, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3337
-{ U"\U0001FA9B", u8"screwdriver", 3131, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3338
-{ U"\U0001F529", u8"nut and bolt", 3131, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3339
-{ U"\u2699\uFE0F", u8"gear", 3131, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3340
-{ U"\U0001F5DC\uFE0F", u8"clamp", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3341
-{ U"\u2696\uFE0F", u8"balance scale", 3131, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3342
-{ U"\U0001F9AF", u8"white cane", 3131, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3343
-{ U"\U0001F517", u8"link", 3131, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3344
+{ U"\U0001F453", u8"glasses", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3136
+{ U"\U0001F576\uFE0F", u8"sunglasses", 3118, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3137
+{ U"\U0001F97D", u8"goggles", 3118, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3138
+{ U"\U0001F97C", u8"lab coat", 3118, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3139
+{ U"\U0001F9BA", u8"safety vest", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3140
+{ U"\U0001F454", u8"necktie", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3141
+{ U"\U0001F455", u8"T-shirt", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3142
+{ U"\U0001F456", u8"jeans", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3143
+{ U"\U0001F9E3", u8"scarf", 3118, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3144
+{ U"\U0001F9E4", u8"gloves", 3118, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3145
+{ U"\U0001F9E5", u8"coat", 3118, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3146
+{ U"\U0001F9E6", u8"socks", 3118, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3147
+{ U"\U0001F457", u8"dress", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3148
+{ U"\U0001F458", u8"kimono", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3149
+{ U"\U0001F97B", u8"sari", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3150
+{ U"\U0001FA71", u8"one-piece swimsuit", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3151
+{ U"\U0001FA72", u8"briefs", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3152
+{ U"\U0001FA73", u8"shorts", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3153
+{ U"\U0001F459", u8"bikini", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3154
+{ U"\U0001F45A", u8"woman’s clothes", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3155
+{ U"\U0001FAAD", u8"folding hand fan", 3118, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3156
+{ U"\U0001F45B", u8"purse", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3157
+{ U"\U0001F45C", u8"handbag", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3158
+{ U"\U0001F45D", u8"clutch bag", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3159
+{ U"\U0001F6CD\uFE0F", u8"shopping bags", 3118, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3160
+{ U"\U0001F392", u8"backpack", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3161
+{ U"\U0001FA74", u8"thong sandal", 3118, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3162
+{ U"\U0001F45E", u8"man’s shoe", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3163
+{ U"\U0001F45F", u8"running shoe", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3164
+{ U"\U0001F97E", u8"hiking boot", 3118, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3165
+{ U"\U0001F97F", u8"flat shoe", 3118, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3166
+{ U"\U0001F460", u8"high-heeled shoe", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3167
+{ U"\U0001F461", u8"woman’s sandal", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3168
+{ U"\U0001FA70", u8"ballet shoes", 3118, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3169
+{ U"\U0001F462", u8"woman’s boot", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3170
+{ U"\U0001FAAE", u8"hair pick", 3118, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3171
+{ U"\U0001F451", u8"crown", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3172
+{ U"\U0001F452", u8"woman’s hat", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3173
+{ U"\U0001F3A9", u8"top hat", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3174
+{ U"\U0001F393", u8"graduation cap", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3175
+{ U"\U0001F9E2", u8"billed cap", 3118, 0, -1, Lfg(1), EcVersion::E5_0 },   // 3176
+{ U"\U0001FA96", u8"military helmet", 3118, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3177
+{ U"\u26D1\uFE0F", u8"rescue worker’s helmet", 3118, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3178
+{ U"\U0001F4FF", u8"prayer beads", 3118, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3179
+{ U"\U0001F484", u8"lipstick", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3180
+{ U"\U0001F48D", u8"ring", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3181
+{ U"\U0001F48E", u8"gem stone", 3118, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3182
+{ U"\U0001F507", u8"muted speaker", 3119, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3183
+{ U"\U0001F508", u8"speaker low volume", 3119, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3184
+{ U"\U0001F509", u8"speaker medium volume", 3119, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3185
+{ U"\U0001F50A", u8"speaker high volume", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3186
+{ U"\U0001F4E2", u8"loudspeaker", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3187
+{ U"\U0001F4E3", u8"megaphone", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3188
+{ U"\U0001F4EF", u8"postal horn", 3119, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3189
+{ U"\U0001F514", u8"bell", 3119, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3190
+{ U"\U0001F515", u8"bell with slash", 3119, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3191
+{ U"\U0001F3BC", u8"musical score", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3192
+{ U"\U0001F3B5", u8"musical note", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3193
+{ U"\U0001F3B6", u8"musical notes", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3194
+{ U"\U0001F399\uFE0F", u8"studio microphone", 3120, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3195
+{ U"\U0001F39A\uFE0F", u8"level slider", 3120, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3196
+{ U"\U0001F39B\uFE0F", u8"control knobs", 3120, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3197
+{ U"\U0001F3A4", u8"microphone", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3198
+{ U"\U0001F3A7", u8"headphone", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3199
+{ U"\U0001F4FB", u8"radio", 3120, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3200
+{ U"\U0001F3B7", u8"saxophone", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3201
+{ U"\U0001FA97", u8"accordion", 3121, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3202
+{ U"\U0001F3B8", u8"guitar", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3203
+{ U"\U0001F3B9", u8"musical keyboard", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3204
+{ U"\U0001F3BA", u8"trumpet", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3205
+{ U"\U0001F3BB", u8"violin", 3121, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3206
+{ U"\U0001FA95", u8"banjo", 3121, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3207
+{ U"\U0001F941", u8"drum", 3121, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3208
+{ U"\U0001FA98", u8"long drum", 3121, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3209
+{ U"\U0001FA87", u8"maracas", 3121, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3210
+{ U"\U0001FA88", u8"flute", 3121, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3211
+{ U"\U0001FA89", u8"harp", 3121, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3212
+{ U"\U0001F4F1", u8"mobile phone", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3213
+{ U"\U0001F4F2", u8"mobile phone with arrow", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3214
+{ U"\u260E\uFE0F", u8"telephone", 3122, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3215
+{ U"\U0001F4DE", u8"telephone receiver", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3216
+{ U"\U0001F4DF", u8"pager", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3217
+{ U"\U0001F4E0", u8"fax machine", 3122, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3218
+{ U"\U0001F50B", u8"battery", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3219
+{ U"\U0001FAAB", u8"low battery", 3123, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3220
+{ U"\U0001F50C", u8"electric plug", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3221
+{ U"\U0001F4BB", u8"laptop", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3222
+{ U"\U0001F5A5\uFE0F", u8"desktop computer", 3123, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3223
+{ U"\U0001F5A8\uFE0F", u8"printer", 3123, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3224
+{ U"\u2328\uFE0F", u8"keyboard", 3123, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3225
+{ U"\U0001F5B1\uFE0F", u8"computer mouse", 3123, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3226
+{ U"\U0001F5B2\uFE0F", u8"trackball", 3123, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3227
+{ U"\U0001F4BD", u8"computer disk", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3228
+{ U"\U0001F4BE", u8"floppy disk", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3229
+{ U"\U0001F4BF", u8"optical disk", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3230
+{ U"\U0001F4C0", u8"DVD", 3123, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3231
+{ U"\U0001F9EE", u8"abacus", 3123, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3232
+{ U"\U0001F3A5", u8"movie camera", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3233
+{ U"\U0001F39E\uFE0F", u8"film frames", 3124, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3234
+{ U"\U0001F4FD\uFE0F", u8"film projector", 3124, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3235
+{ U"\U0001F3AC", u8"clapper board", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3236
+{ U"\U0001F4FA", u8"television", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3237
+{ U"\U0001F4F7", u8"camera", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3238
+{ U"\U0001F4F8", u8"camera with flash", 3124, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3239
+{ U"\U0001F4F9", u8"video camera", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3240
+{ U"\U0001F4FC", u8"videocassette", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3241
+{ U"\U0001F50D", u8"magnifying glass tilted left", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3242
+{ U"\U0001F50E", u8"magnifying glass tilted right", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3243
+{ U"\U0001F56F\uFE0F", u8"candle", 3124, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3244
+{ U"\U0001F4A1", u8"light bulb", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3245
+{ U"\U0001F526", u8"flashlight", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3246
+{ U"\U0001F3EE", u8"red paper lantern", 3124, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3247
+{ U"\U0001FA94", u8"diya lamp", 3124, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3248
+{ U"\U0001F4D4", u8"notebook with decorative cover", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3249
+{ U"\U0001F4D5", u8"closed book", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3250
+{ U"\U0001F4D6", u8"open book", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3251
+{ U"\U0001F4D7", u8"green book", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3252
+{ U"\U0001F4D8", u8"blue book", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3253
+{ U"\U0001F4D9", u8"orange book", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3254
+{ U"\U0001F4DA", u8"books", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3255
+{ U"\U0001F4D3", u8"notebook", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3256
+{ U"\U0001F4D2", u8"ledger", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3257
+{ U"\U0001F4C3", u8"page with curl", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3258
+{ U"\U0001F4DC", u8"scroll", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3259
+{ U"\U0001F4C4", u8"page facing up", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3260
+{ U"\U0001F4F0", u8"newspaper", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3261
+{ U"\U0001F5DE\uFE0F", u8"rolled-up newspaper", 3125, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3262
+{ U"\U0001F4D1", u8"bookmark tabs", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3263
+{ U"\U0001F516", u8"bookmark", 3125, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3264
+{ U"\U0001F3F7\uFE0F", u8"label", 3125, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3265
+{ U"\U0001F4B0", u8"money bag", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3266
+{ U"\U0001FA99", u8"coin", 3126, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3267
+{ U"\U0001F4B4", u8"yen banknote", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3268
+{ U"\U0001F4B5", u8"dollar banknote", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3269
+{ U"\U0001F4B6", u8"euro banknote", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3270
+{ U"\U0001F4B7", u8"pound banknote", 3126, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3271
+{ U"\U0001F4B8", u8"money with wings", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3272
+{ U"\U0001F4B3", u8"credit card", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3273
+{ U"\U0001F9FE", u8"receipt", 3126, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3274
+{ U"\U0001F4B9", u8"chart increasing with yen", 3126, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3275
+{ U"\u2709\uFE0F", u8"envelope", 3127, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3276
+{ U"\U0001F4E7", u8"e-mail", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3277
+{ U"\U0001F4E8", u8"incoming envelope", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3278
+{ U"\U0001F4E9", u8"envelope with arrow", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3279
+{ U"\U0001F4E4", u8"outbox tray", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3280
+{ U"\U0001F4E5", u8"inbox tray", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3281
+{ U"\U0001F4E6", u8"package", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3282
+{ U"\U0001F4EB", u8"closed mailbox with raised flag", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3283
+{ U"\U0001F4EA", u8"closed mailbox with lowered flag", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3284
+{ U"\U0001F4EC", u8"open mailbox with raised flag", 3127, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3285
+{ U"\U0001F4ED", u8"open mailbox with lowered flag", 3127, 0, -1, Lfg(1), EcVersion::E0_7 },   // 3286
+{ U"\U0001F4EE", u8"postbox", 3127, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3287
+{ U"\U0001F5F3\uFE0F", u8"ballot box with ballot", 3127, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3288
+{ U"\u270F\uFE0F", u8"pencil", 3128, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3289
+{ U"\u2712\uFE0F", u8"black nib", 3128, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3290
+{ U"\U0001F58B\uFE0F", u8"fountain pen", 3128, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3291
+{ U"\U0001F58A\uFE0F", u8"pen", 3128, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3292
+{ U"\U0001F58C\uFE0F", u8"paintbrush", 3128, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3293
+{ U"\U0001F58D\uFE0F", u8"crayon", 3128, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3294
+{ U"\U0001F4DD", u8"memo", 3128, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3295
+{ U"\U0001F4BC", u8"briefcase", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3296
+{ U"\U0001F4C1", u8"file folder", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3297
+{ U"\U0001F4C2", u8"open file folder", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3298
+{ U"\U0001F5C2\uFE0F", u8"card index dividers", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3299
+{ U"\U0001F4C5", u8"calendar", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3300
+{ U"\U0001F4C6", u8"tear-off calendar", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3301
+{ U"\U0001F5D2\uFE0F", u8"spiral notepad", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3302
+{ U"\U0001F5D3\uFE0F", u8"spiral calendar", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3303
+{ U"\U0001F4C7", u8"card index", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3304
+{ U"\U0001F4C8", u8"chart increasing", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3305
+{ U"\U0001F4C9", u8"chart decreasing", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3306
+{ U"\U0001F4CA", u8"bar chart", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3307
+{ U"\U0001F4CB", u8"clipboard", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3308
+{ U"\U0001F4CC", u8"pushpin", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3309
+{ U"\U0001F4CD", u8"round pushpin", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3310
+{ U"\U0001F4CE", u8"paperclip", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3311
+{ U"\U0001F587\uFE0F", u8"linked paperclips", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3312
+{ U"\U0001F4CF", u8"straight ruler", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3313
+{ U"\U0001F4D0", u8"triangular ruler", 3129, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3314
+{ U"\u2702\uFE0F", u8"scissors", 3129, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3315
+{ U"\U0001F5C3\uFE0F", u8"card file box", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3316
+{ U"\U0001F5C4\uFE0F", u8"file cabinet", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3317
+{ U"\U0001F5D1\uFE0F", u8"wastebasket", 3129, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3318
+{ U"\U0001F512", u8"locked", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3319
+{ U"\U0001F513", u8"unlocked", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3320
+{ U"\U0001F50F", u8"locked with pen", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3321
+{ U"\U0001F510", u8"locked with key", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3322
+{ U"\U0001F511", u8"key", 3130, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3323
+{ U"\U0001F5DD\uFE0F", u8"old key", 3130, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3324
+{ U"\U0001F528", u8"hammer", 3131, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3325
+{ U"\U0001FA93", u8"axe", 3131, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3326
+{ U"\u26CF\uFE0F", u8"pick", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3327
+{ U"\u2692\uFE0F", u8"hammer and pick", 3131, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3328
+{ U"\U0001F6E0\uFE0F", u8"hammer and wrench", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3329
+{ U"\U0001F5E1\uFE0F", u8"dagger", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3330
+{ U"\u2694\uFE0F", u8"crossed swords", 3131, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3331
+{ U"\U0001F4A3", u8"bomb", 3131, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3332
+{ U"\U0001FA83", u8"boomerang", 3131, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3333
+{ U"\U0001F3F9", u8"bow and arrow", 3131, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3334
+{ U"\U0001F6E1\uFE0F", u8"shield", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3335
+{ U"\U0001FA9A", u8"carpentry saw", 3131, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3336
+{ U"\U0001F527", u8"wrench", 3131, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3337
+{ U"\U0001FA9B", u8"screwdriver", 3131, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3338
+{ U"\U0001F529", u8"nut and bolt", 3131, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3339
+{ U"\u2699\uFE0F", u8"gear", 3131, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3340
+{ U"\U0001F5DC\uFE0F", u8"clamp", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3341
+{ U"\u2696\uFE0F", u8"balance scale", 3131, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3342
+{ U"\U0001F9AF", u8"white cane", 3131, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3343
+{ U"\U0001F517", u8"link", 3131, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3344
 { U"\u26D3\uFE0F\u200D\U0001F4A5", u8"broken chain", 3131, 0, -1, Lfg(97), EcVersion::E15_1 },   // 3345
-{ U"\u26D3\uFE0F", u8"chains", 3131, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3346
-{ U"\U0001FA9D", u8"hook", 3131, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3347
-{ U"\U0001F9F0", u8"toolbox", 3131, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3348
-{ U"\U0001F9F2", u8"magnet", 3131, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3349
-{ U"\U0001FA9C", u8"ladder", 3131, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3350
-{ U"\U0001FA8F", u8"shovel", 3131, 0, -1, Lfg(129), EcVersion::E16_0 },   // 3351
-{ U"\u2697\uFE0F", u8"alembic", 3132, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3352
-{ U"\U0001F9EA", u8"test tube", 3132, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3353
-{ U"\U0001F9EB", u8"Petri dish", 3132, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3354
-{ U"\U0001F9EC", u8"DNA", 3132, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3355
-{ U"\U0001F52C", u8"microscope", 3132, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3356
-{ U"\U0001F52D", u8"telescope", 3132, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3357
-{ U"\U0001F4E1", u8"satellite antenna", 3132, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3358
-{ U"\U0001F489", u8"syringe", 3133, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3359
-{ U"\U0001FA78", u8"drop of blood", 3133, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3360
-{ U"\U0001F48A", u8"pill", 3133, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3361
-{ U"\U0001FA79", u8"adhesive bandage", 3133, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3362
-{ U"\U0001FA7C", u8"crutch", 3133, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3363
-{ U"\U0001FA7A", u8"stethoscope", 3133, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3364
-{ U"\U0001FA7B", u8"X-ray", 3133, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3365
-{ U"\U0001F6AA", u8"door", 3134, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3366
-{ U"\U0001F6D7", u8"elevator", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3367
-{ U"\U0001FA9E", u8"mirror", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3368
-{ U"\U0001FA9F", u8"window", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3369
-{ U"\U0001F6CF\uFE0F", u8"bed", 3134, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3370
-{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3134, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3371
-{ U"\U0001FA91", u8"chair", 3134, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3372
-{ U"\U0001F6BD", u8"toilet", 3134, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3373
-{ U"\U0001FAA0", u8"plunger", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3374
-{ U"\U0001F6BF", u8"shower", 3134, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3375
-{ U"\U0001F6C1", u8"bathtub", 3134, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3376
-{ U"\U0001FAA4", u8"mouse trap", 3134, 0, -1, Lfg(385), EcVersion::E13_0 },   // 3377
-{ U"\U0001FA92", u8"razor", 3134, 0, -1, Lfg(385), EcVersion::E12_0 },   // 3378
-{ U"\U0001F9F4", u8"lotion bottle", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3379
-{ U"\U0001F9F7", u8"safety pin", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3380
-{ U"\U0001F9F9", u8"broom", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3381
-{ U"\U0001F9FA", u8"basket", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3382
-{ U"\U0001F9FB", u8"roll of paper", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3383
-{ U"\U0001FAA3", u8"bucket", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3384
-{ U"\U0001F9FC", u8"soap", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3385
-{ U"\U0001FAE7", u8"bubbles", 3134, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3386
-{ U"\U0001FAA5", u8"toothbrush", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3387
-{ U"\U0001F9FD", u8"sponge", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3388
-{ U"\U0001F9EF", u8"fire extinguisher", 3134, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3389
-{ U"\U0001F6D2", u8"shopping cart", 3134, 0, -1, Lfg(129), EcVersion::E3_0 },   // 3390
-{ U"\U0001F6AC", u8"cigarette", 3135, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3391
-{ U"\u26B0\uFE0F", u8"coffin", 3135, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3392
-{ U"\U0001FAA6", u8"headstone", 3135, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3393
-{ U"\u26B1\uFE0F", u8"funeral urn", 3135, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3394
-{ U"\U0001F9FF", u8"nazar amulet", 3135, 0, -1, Lfg(129), EcVersion::E11_0 },   // 3395
-{ U"\U0001FAAC", u8"hamsa", 3135, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3396
-{ U"\U0001F5FF", u8"moai", 3135, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3397
-{ U"\U0001FAA7", u8"placard", 3135, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3398
-{ U"\U0001FAAA", u8"identification card", 3135, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3399
+{ U"\u26D3\uFE0F", u8"chains", 3131, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3346
+{ U"\U0001FA9D", u8"hook", 3131, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3347
+{ U"\U0001F9F0", u8"toolbox", 3131, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3348
+{ U"\U0001F9F2", u8"magnet", 3131, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3349
+{ U"\U0001FA9C", u8"ladder", 3131, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3350
+{ U"\U0001FA8F", u8"shovel", 3131, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3351
+{ U"\u2697\uFE0F", u8"alembic", 3132, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3352
+{ U"\U0001F9EA", u8"test tube", 3132, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3353
+{ U"\U0001F9EB", u8"Petri dish", 3132, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3354
+{ U"\U0001F9EC", u8"DNA", 3132, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3355
+{ U"\U0001F52C", u8"microscope", 3132, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3356
+{ U"\U0001F52D", u8"telescope", 3132, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3357
+{ U"\U0001F4E1", u8"satellite antenna", 3132, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3358
+{ U"\U0001F489", u8"syringe", 3133, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3359
+{ U"\U0001FA78", u8"drop of blood", 3133, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3360
+{ U"\U0001F48A", u8"pill", 3133, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3361
+{ U"\U0001FA79", u8"adhesive bandage", 3133, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3362
+{ U"\U0001FA7C", u8"crutch", 3133, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3363
+{ U"\U0001FA7A", u8"stethoscope", 3133, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3364
+{ U"\U0001FA7B", u8"X-ray", 3133, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3365
+{ U"\U0001F6AA", u8"door", 3134, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3366
+{ U"\U0001F6D7", u8"elevator", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3367
+{ U"\U0001FA9E", u8"mirror", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3368
+{ U"\U0001FA9F", u8"window", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3369
+{ U"\U0001F6CF\uFE0F", u8"bed", 3134, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3370
+{ U"\U0001F6CB\uFE0F", u8"couch and lamp", 3134, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3371
+{ U"\U0001FA91", u8"chair", 3134, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3372
+{ U"\U0001F6BD", u8"toilet", 3134, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3373
+{ U"\U0001FAA0", u8"plunger", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3374
+{ U"\U0001F6BF", u8"shower", 3134, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3375
+{ U"\U0001F6C1", u8"bathtub", 3134, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3376
+{ U"\U0001FAA4", u8"mouse trap", 3134, 0, -1, Lfg(129), EcVersion::E13_0 },   // 3377
+{ U"\U0001FA92", u8"razor", 3134, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3378
+{ U"\U0001F9F4", u8"lotion bottle", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3379
+{ U"\U0001F9F7", u8"safety pin", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3380
+{ U"\U0001F9F9", u8"broom", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3381
+{ U"\U0001F9FA", u8"basket", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3382
+{ U"\U0001F9FB", u8"roll of paper", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3383
+{ U"\U0001FAA3", u8"bucket", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3384
+{ U"\U0001F9FC", u8"soap", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3385
+{ U"\U0001FAE7", u8"bubbles", 3134, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3386
+{ U"\U0001FAA5", u8"toothbrush", 3134, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3387
+{ U"\U0001F9FD", u8"sponge", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3388
+{ U"\U0001F9EF", u8"fire extinguisher", 3134, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3389
+{ U"\U0001F6D2", u8"shopping cart", 3134, 0, -1, Lfg(1), EcVersion::E3_0 },   // 3390
+{ U"\U0001F6AC", u8"cigarette", 3135, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3391
+{ U"\u26B0\uFE0F", u8"coffin", 3135, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3392
+{ U"\U0001FAA6", u8"headstone", 3135, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3393
+{ U"\u26B1\uFE0F", u8"funeral urn", 3135, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3394
+{ U"\U0001F9FF", u8"nazar amulet", 3135, 0, -1, Lfg(1), EcVersion::E11_0 },   // 3395
+{ U"\U0001FAAC", u8"hamsa", 3135, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3396
+{ U"\U0001F5FF", u8"moai", 3135, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3397
+{ U"\U0001FAA7", u8"placard", 3135, 0, -1, Lfg(1), EcVersion::E13_0 },   // 3398
+{ U"\U0001FAAA", u8"identification card", 3135, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3399
 { {}, u8"transport-sign", 18, 13, 3414, Lfg(8), EcVersion::NONE },   // 3400
 { {}, u8"warning", 18, 13, 3427, Lfg(8), EcVersion::NONE },   // 3401
 { {}, u8"arrow", 18, 21, 3440, Lfg(8), EcVersion::NONE },   // 3402
@@ -3417,144 +3417,144 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { {}, u8"keycap", 18, 13, 3552, Lfg(8), EcVersion::NONE },   // 3411
 { {}, u8"alphanum", 18, 39, 3565, Lfg(8), EcVersion::NONE },   // 3412
 { {}, u8"geometric", 18, 34, 3604, Lfg(8), EcVersion::NONE },   // 3413
-{ U"\U0001F3E7", u8"ATM sign", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3414
-{ U"\U0001F6AE", u8"litter in bin sign", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3415
-{ U"\U0001F6B0", u8"potable water", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3416
-{ U"\u267F", u8"wheelchair symbol", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3417
-{ U"\U0001F6B9", u8"men’s room", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3418
-{ U"\U0001F6BA", u8"women’s room", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3419
-{ U"\U0001F6BB", u8"restroom", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3420
-{ U"\U0001F6BC", u8"baby symbol", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3421
-{ U"\U0001F6BE", u8"water closet", 3400, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3422
-{ U"\U0001F6C2", u8"passport control", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3423
-{ U"\U0001F6C3", u8"customs", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3424
-{ U"\U0001F6C4", u8"baggage claim", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3425
-{ U"\U0001F6C5", u8"left luggage", 3400, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3426
-{ U"\u26A0\uFE0F", u8"warning", 3401, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3427
-{ U"\U0001F6B8", u8"children crossing", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3428
-{ U"\u26D4", u8"no entry", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3429
-{ U"\U0001F6AB", u8"prohibited", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3430
-{ U"\U0001F6B3", u8"no bicycles", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3431
-{ U"\U0001F6AD", u8"no smoking", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3432
-{ U"\U0001F6AF", u8"no littering", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3433
-{ U"\U0001F6B1", u8"non-potable water", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3434
-{ U"\U0001F6B7", u8"no pedestrians", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3435
-{ U"\U0001F4F5", u8"no mobile phones", 3401, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3436
-{ U"\U0001F51E", u8"no one under eighteen", 3401, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3437
-{ U"\u2622\uFE0F", u8"radioactive", 3401, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3438
-{ U"\u2623\uFE0F", u8"biohazard", 3401, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3439
-{ U"\u2B06\uFE0F", u8"up arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3440
-{ U"\u2197\uFE0F", u8"up-right arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3441
-{ U"\u27A1\uFE0F", u8"right arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3442
-{ U"\u2198\uFE0F", u8"down-right arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3443
-{ U"\u2B07\uFE0F", u8"down arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3444
-{ U"\u2199\uFE0F", u8"down-left arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3445
-{ U"\u2B05\uFE0F", u8"left arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3446
-{ U"\u2196\uFE0F", u8"up-left arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3447
-{ U"\u2195\uFE0F", u8"up-down arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3448
-{ U"\u2194\uFE0F", u8"left-right arrow", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3449
-{ U"\u21A9\uFE0F", u8"right arrow curving left", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3450
-{ U"\u21AA\uFE0F", u8"left arrow curving right", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3451
-{ U"\u2934\uFE0F", u8"right arrow curving up", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3452
-{ U"\u2935\uFE0F", u8"right arrow curving down", 3402, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3453
-{ U"\U0001F503", u8"clockwise vertical arrows", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3454
-{ U"\U0001F504", u8"counterclockwise arrows button", 3402, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3455
-{ U"\U0001F519", u8"BACK arrow", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3456
-{ U"\U0001F51A", u8"END arrow", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3457
-{ U"\U0001F51B", u8"ON! arrow", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3458
-{ U"\U0001F51C", u8"SOON arrow", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3459
-{ U"\U0001F51D", u8"TOP arrow", 3402, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3460
-{ U"\U0001F6D0", u8"place of worship", 3403, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3461
-{ U"\u269B\uFE0F", u8"atom symbol", 3403, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3462
-{ U"\U0001F549\uFE0F", u8"Om", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3463
-{ U"\u2721\uFE0F", u8"star of David", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3464
-{ U"\u2638\uFE0F", u8"wheel of dharma", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3465
-{ U"\u262F\uFE0F", u8"yin yang", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3466
-{ U"\u271D\uFE0F", u8"Latin cross", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3467
-{ U"\u2626\uFE0F", u8"Orthodox cross", 3403, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3468
-{ U"\u262A\uFE0F", u8"star and crescent", 3403, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3469
-{ U"\u262E\uFE0F", u8"peace symbol", 3403, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3470
-{ U"\U0001F54E", u8"menorah", 3403, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3471
-{ U"\U0001F52F", u8"dotted six-pointed star", 3403, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3472
-{ U"\U0001FAAF", u8"khanda", 3403, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3473
-{ U"\u2648", u8"Aries", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3474
-{ U"\u2649", u8"Taurus", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3475
-{ U"\u264A", u8"Gemini", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3476
-{ U"\u264B", u8"Cancer", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3477
-{ U"\u264C", u8"Leo", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3478
-{ U"\u264D", u8"Virgo", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3479
-{ U"\u264E", u8"Libra", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3480
-{ U"\u264F", u8"Scorpio", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3481
-{ U"\u2650", u8"Sagittarius", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3482
-{ U"\u2651", u8"Capricorn", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3483
-{ U"\u2652", u8"Aquarius", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3484
-{ U"\u2653", u8"Pisces", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3485
-{ U"\u26CE", u8"Ophiuchus", 3404, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3486
-{ U"\U0001F500", u8"shuffle tracks button", 3405, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3487
-{ U"\U0001F501", u8"repeat button", 3405, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3488
-{ U"\U0001F502", u8"repeat single button", 3405, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3489
-{ U"\u25B6\uFE0F", u8"play button", 3405, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3490
-{ U"\u23E9", u8"fast-forward button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3491
-{ U"\u23ED\uFE0F", u8"next track button", 3405, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3492
-{ U"\u23EF\uFE0F", u8"play or pause button", 3405, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3493
-{ U"\u25C0\uFE0F", u8"reverse button", 3405, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3494
-{ U"\u23EA", u8"fast reverse button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3495
-{ U"\u23EE\uFE0F", u8"last track button", 3405, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3496
-{ U"\U0001F53C", u8"upwards button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3497
-{ U"\u23EB", u8"fast up button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3498
-{ U"\U0001F53D", u8"downwards button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3499
-{ U"\u23EC", u8"fast down button", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3500
-{ U"\u23F8\uFE0F", u8"pause button", 3405, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3501
-{ U"\u23F9\uFE0F", u8"stop button", 3405, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3502
-{ U"\u23FA\uFE0F", u8"record button", 3405, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3503
-{ U"\u23CF\uFE0F", u8"eject button", 3405, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3504
-{ U"\U0001F3A6", u8"cinema", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3505
-{ U"\U0001F505", u8"dim button", 3405, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3506
-{ U"\U0001F506", u8"bright button", 3405, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3507
-{ U"\U0001F4F6", u8"antenna bars", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3508
-{ U"\U0001F6DC", u8"wireless", 3405, 0, -1, Lfg(129), EcVersion::E15_0 },   // 3509
-{ U"\U0001F4F3", u8"vibration mode", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3510
-{ U"\U0001F4F4", u8"mobile phone off", 3405, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3511
-{ U"\u2640\uFE0F", u8"female sign", 3406, 0, -1, Lfg(193), EcVersion::E4_0 },   // 3512
-{ U"\u2642\uFE0F", u8"male sign", 3406, 0, -1, Lfg(193), EcVersion::E4_0 },   // 3513
-{ U"\u26A7\uFE0F", u8"transgender symbol", 3406, 0, -1, Lfg(193), EcVersion::E13_0 },   // 3514
-{ U"\u2716\uFE0F", u8"multiply", 3407, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3515
-{ U"\u2795", u8"plus", 3407, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3516
-{ U"\u2796", u8"minus", 3407, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3517
-{ U"\u2797", u8"divide", 3407, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3518
-{ U"\U0001F7F0", u8"heavy equals sign", 3407, 0, -1, Lfg(129), EcVersion::E14_0 },   // 3519
-{ U"\u267E\uFE0F", u8"infinity", 3407, 0, -1, Lfg(193), EcVersion::E11_0 },   // 3520
-{ U"\u203C\uFE0F", u8"double exclamation mark", 3408, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3521
-{ U"\u2049\uFE0F", u8"exclamation question mark", 3408, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3522
-{ U"\u2753", u8"red question mark", 3408, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3523
-{ U"\u2754", u8"white question mark", 3408, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3524
-{ U"\u2755", u8"white exclamation mark", 3408, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3525
-{ U"\u2757", u8"red exclamation mark", 3408, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3526
-{ U"\u3030\uFE0F", u8"wavy dash", 3408, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3527
-{ U"\U0001F4B1", u8"currency exchange", 3409, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3528
-{ U"\U0001F4B2", u8"heavy dollar sign", 3409, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3529
-{ U"\u2695\uFE0F", u8"medical symbol", 3410, 0, -1, Lfg(193), EcVersion::E4_0 },   // 3530
-{ U"\u267B\uFE0F", u8"recycling symbol", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3531
-{ U"\u269C\uFE0F", u8"fleur-de-lis", 3410, 0, -1, Lfg(193), EcVersion::E1_0 },   // 3532
-{ U"\U0001F531", u8"trident emblem", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3533
-{ U"\U0001F4DB", u8"name badge", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3534
-{ U"\U0001F530", u8"Japanese symbol for beginner", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3535
-{ U"\u2B55", u8"hollow red circle", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3536
-{ U"\u2705", u8"check mark button", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3537
-{ U"\u2611\uFE0F", u8"check box with check", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3538
-{ U"\u2714\uFE0F", u8"check mark", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3539
-{ U"\u274C", u8"cross mark", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3540
-{ U"\u274E", u8"cross mark button", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3541
-{ U"\u27B0", u8"curly loop", 3410, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3542
-{ U"\u27BF", u8"double curly loop", 3410, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3543
-{ U"\u303D\uFE0F", u8"part alternation mark", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3544
-{ U"\u2733\uFE0F", u8"eight-spoked asterisk", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3545
-{ U"\u2734\uFE0F", u8"eight-pointed star", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3546
-{ U"\u2747\uFE0F", u8"sparkle", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3547
-{ U"\u00A9\uFE0F", u8"copyright", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3548
-{ U"\u00AE\uFE0F", u8"registered", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3549
-{ U"\u2122\uFE0F", u8"trade mark", 3410, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3550
-{ U"\U0001FADF", u8"splatter", 3410, 0, -1, Lfg(129), EcVersion::E16_0 },   // 3551
+{ U"\U0001F3E7", u8"ATM sign", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3414
+{ U"\U0001F6AE", u8"litter in bin sign", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3415
+{ U"\U0001F6B0", u8"potable water", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3416
+{ U"\u267F", u8"wheelchair symbol", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3417
+{ U"\U0001F6B9", u8"men’s room", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3418
+{ U"\U0001F6BA", u8"women’s room", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3419
+{ U"\U0001F6BB", u8"restroom", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3420
+{ U"\U0001F6BC", u8"baby symbol", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3421
+{ U"\U0001F6BE", u8"water closet", 3400, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3422
+{ U"\U0001F6C2", u8"passport control", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3423
+{ U"\U0001F6C3", u8"customs", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3424
+{ U"\U0001F6C4", u8"baggage claim", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3425
+{ U"\U0001F6C5", u8"left luggage", 3400, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3426
+{ U"\u26A0\uFE0F", u8"warning", 3401, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3427
+{ U"\U0001F6B8", u8"children crossing", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3428
+{ U"\u26D4", u8"no entry", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3429
+{ U"\U0001F6AB", u8"prohibited", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3430
+{ U"\U0001F6B3", u8"no bicycles", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3431
+{ U"\U0001F6AD", u8"no smoking", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3432
+{ U"\U0001F6AF", u8"no littering", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3433
+{ U"\U0001F6B1", u8"non-potable water", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3434
+{ U"\U0001F6B7", u8"no pedestrians", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3435
+{ U"\U0001F4F5", u8"no mobile phones", 3401, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3436
+{ U"\U0001F51E", u8"no one under eighteen", 3401, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3437
+{ U"\u2622\uFE0F", u8"radioactive", 3401, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3438
+{ U"\u2623\uFE0F", u8"biohazard", 3401, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3439
+{ U"\u2B06\uFE0F", u8"up arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3440
+{ U"\u2197\uFE0F", u8"up-right arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3441
+{ U"\u27A1\uFE0F", u8"right arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3442
+{ U"\u2198\uFE0F", u8"down-right arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3443
+{ U"\u2B07\uFE0F", u8"down arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3444
+{ U"\u2199\uFE0F", u8"down-left arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3445
+{ U"\u2B05\uFE0F", u8"left arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3446
+{ U"\u2196\uFE0F", u8"up-left arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3447
+{ U"\u2195\uFE0F", u8"up-down arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3448
+{ U"\u2194\uFE0F", u8"left-right arrow", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3449
+{ U"\u21A9\uFE0F", u8"right arrow curving left", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3450
+{ U"\u21AA\uFE0F", u8"left arrow curving right", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3451
+{ U"\u2934\uFE0F", u8"right arrow curving up", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3452
+{ U"\u2935\uFE0F", u8"right arrow curving down", 3402, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3453
+{ U"\U0001F503", u8"clockwise vertical arrows", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3454
+{ U"\U0001F504", u8"counterclockwise arrows button", 3402, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3455
+{ U"\U0001F519", u8"BACK arrow", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3456
+{ U"\U0001F51A", u8"END arrow", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3457
+{ U"\U0001F51B", u8"ON! arrow", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3458
+{ U"\U0001F51C", u8"SOON arrow", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3459
+{ U"\U0001F51D", u8"TOP arrow", 3402, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3460
+{ U"\U0001F6D0", u8"place of worship", 3403, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3461
+{ U"\u269B\uFE0F", u8"atom symbol", 3403, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3462
+{ U"\U0001F549\uFE0F", u8"Om", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3463
+{ U"\u2721\uFE0F", u8"star of David", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3464
+{ U"\u2638\uFE0F", u8"wheel of dharma", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3465
+{ U"\u262F\uFE0F", u8"yin yang", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3466
+{ U"\u271D\uFE0F", u8"Latin cross", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3467
+{ U"\u2626\uFE0F", u8"Orthodox cross", 3403, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3468
+{ U"\u262A\uFE0F", u8"star and crescent", 3403, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3469
+{ U"\u262E\uFE0F", u8"peace symbol", 3403, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3470
+{ U"\U0001F54E", u8"menorah", 3403, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3471
+{ U"\U0001F52F", u8"dotted six-pointed star", 3403, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3472
+{ U"\U0001FAAF", u8"khanda", 3403, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3473
+{ U"\u2648", u8"Aries", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3474
+{ U"\u2649", u8"Taurus", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3475
+{ U"\u264A", u8"Gemini", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3476
+{ U"\u264B", u8"Cancer", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3477
+{ U"\u264C", u8"Leo", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3478
+{ U"\u264D", u8"Virgo", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3479
+{ U"\u264E", u8"Libra", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3480
+{ U"\u264F", u8"Scorpio", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3481
+{ U"\u2650", u8"Sagittarius", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3482
+{ U"\u2651", u8"Capricorn", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3483
+{ U"\u2652", u8"Aquarius", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3484
+{ U"\u2653", u8"Pisces", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3485
+{ U"\u26CE", u8"Ophiuchus", 3404, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3486
+{ U"\U0001F500", u8"shuffle tracks button", 3405, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3487
+{ U"\U0001F501", u8"repeat button", 3405, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3488
+{ U"\U0001F502", u8"repeat single button", 3405, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3489
+{ U"\u25B6\uFE0F", u8"play button", 3405, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3490
+{ U"\u23E9", u8"fast-forward button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3491
+{ U"\u23ED\uFE0F", u8"next track button", 3405, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3492
+{ U"\u23EF\uFE0F", u8"play or pause button", 3405, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3493
+{ U"\u25C0\uFE0F", u8"reverse button", 3405, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3494
+{ U"\u23EA", u8"fast reverse button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3495
+{ U"\u23EE\uFE0F", u8"last track button", 3405, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3496
+{ U"\U0001F53C", u8"upwards button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3497
+{ U"\u23EB", u8"fast up button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3498
+{ U"\U0001F53D", u8"downwards button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3499
+{ U"\u23EC", u8"fast down button", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3500
+{ U"\u23F8\uFE0F", u8"pause button", 3405, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3501
+{ U"\u23F9\uFE0F", u8"stop button", 3405, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3502
+{ U"\u23FA\uFE0F", u8"record button", 3405, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3503
+{ U"\u23CF\uFE0F", u8"eject button", 3405, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3504
+{ U"\U0001F3A6", u8"cinema", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3505
+{ U"\U0001F505", u8"dim button", 3405, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3506
+{ U"\U0001F506", u8"bright button", 3405, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3507
+{ U"\U0001F4F6", u8"antenna bars", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3508
+{ U"\U0001F6DC", u8"wireless", 3405, 0, -1, Lfg(1), EcVersion::E15_0 },   // 3509
+{ U"\U0001F4F3", u8"vibration mode", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3510
+{ U"\U0001F4F4", u8"mobile phone off", 3405, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3511
+{ U"\u2640\uFE0F", u8"female sign", 3406, 0, -1, Lfg(65), EcVersion::E4_0 },   // 3512
+{ U"\u2642\uFE0F", u8"male sign", 3406, 0, -1, Lfg(65), EcVersion::E4_0 },   // 3513
+{ U"\u26A7\uFE0F", u8"transgender symbol", 3406, 0, -1, Lfg(65), EcVersion::E13_0 },   // 3514
+{ U"\u2716\uFE0F", u8"multiply", 3407, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3515
+{ U"\u2795", u8"plus", 3407, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3516
+{ U"\u2796", u8"minus", 3407, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3517
+{ U"\u2797", u8"divide", 3407, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3518
+{ U"\U0001F7F0", u8"heavy equals sign", 3407, 0, -1, Lfg(1), EcVersion::E14_0 },   // 3519
+{ U"\u267E\uFE0F", u8"infinity", 3407, 0, -1, Lfg(65), EcVersion::E11_0 },   // 3520
+{ U"\u203C\uFE0F", u8"double exclamation mark", 3408, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3521
+{ U"\u2049\uFE0F", u8"exclamation question mark", 3408, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3522
+{ U"\u2753", u8"red question mark", 3408, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3523
+{ U"\u2754", u8"white question mark", 3408, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3524
+{ U"\u2755", u8"white exclamation mark", 3408, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3525
+{ U"\u2757", u8"red exclamation mark", 3408, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3526
+{ U"\u3030\uFE0F", u8"wavy dash", 3408, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3527
+{ U"\U0001F4B1", u8"currency exchange", 3409, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3528
+{ U"\U0001F4B2", u8"heavy dollar sign", 3409, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3529
+{ U"\u2695\uFE0F", u8"medical symbol", 3410, 0, -1, Lfg(65), EcVersion::E4_0 },   // 3530
+{ U"\u267B\uFE0F", u8"recycling symbol", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3531
+{ U"\u269C\uFE0F", u8"fleur-de-lis", 3410, 0, -1, Lfg(65), EcVersion::E1_0 },   // 3532
+{ U"\U0001F531", u8"trident emblem", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3533
+{ U"\U0001F4DB", u8"name badge", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3534
+{ U"\U0001F530", u8"Japanese symbol for beginner", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3535
+{ U"\u2B55", u8"hollow red circle", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3536
+{ U"\u2705", u8"check mark button", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3537
+{ U"\u2611\uFE0F", u8"check box with check", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3538
+{ U"\u2714\uFE0F", u8"check mark", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3539
+{ U"\u274C", u8"cross mark", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3540
+{ U"\u274E", u8"cross mark button", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3541
+{ U"\u27B0", u8"curly loop", 3410, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3542
+{ U"\u27BF", u8"double curly loop", 3410, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3543
+{ U"\u303D\uFE0F", u8"part alternation mark", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3544
+{ U"\u2733\uFE0F", u8"eight-spoked asterisk", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3545
+{ U"\u2734\uFE0F", u8"eight-pointed star", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3546
+{ U"\u2747\uFE0F", u8"sparkle", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3547
+{ U"\u00A9\uFE0F", u8"copyright", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3548
+{ U"\u00AE\uFE0F", u8"registered", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3549
+{ U"\u2122\uFE0F", u8"trade mark", 3410, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3550
+{ U"\U0001FADF", u8"splatter", 3410, 0, -1, Lfg(1), EcVersion::E16_0 },   // 3551
 { U"\u0023\uFE0F\u20E3", u8"keycap: #", 3411, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3552
 { U"\u002A\uFE0F\u20E3", u8"keycap: *", 3411, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3553
 { U"\u0030\uFE0F\u20E3", u8"keycap: 0", 3411, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3554
@@ -3567,95 +3567,95 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\u0037\uFE0F\u20E3", u8"keycap: 7", 3411, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3561
 { U"\u0038\uFE0F\u20E3", u8"keycap: 8", 3411, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3562
 { U"\u0039\uFE0F\u20E3", u8"keycap: 9", 3411, 0, -1, Lfg(97), EcVersion::E0_6 },   // 3563
-{ U"\U0001F51F", u8"keycap: 10", 3411, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3564
-{ U"\U0001F520", u8"input Latin uppercase", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3565
-{ U"\U0001F521", u8"input Latin lowercase", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3566
-{ U"\U0001F522", u8"input numbers", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3567
-{ U"\U0001F523", u8"input symbols", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3568
-{ U"\U0001F524", u8"input Latin letters", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3569
-{ U"\U0001F170\uFE0F", u8"A button (blood type)", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3570
-{ U"\U0001F18E", u8"AB button (blood type)", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3571
-{ U"\U0001F171\uFE0F", u8"B button (blood type)", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3572
-{ U"\U0001F191", u8"CL button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3573
-{ U"\U0001F192", u8"COOL button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3574
-{ U"\U0001F193", u8"FREE button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3575
-{ U"\u2139\uFE0F", u8"information", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3576
-{ U"\U0001F194", u8"ID button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3577
-{ U"\u24C2\uFE0F", u8"circled M", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3578
-{ U"\U0001F195", u8"NEW button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3579
-{ U"\U0001F196", u8"NG button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3580
-{ U"\U0001F17E\uFE0F", u8"O button (blood type)", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3581
-{ U"\U0001F197", u8"OK button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3582
-{ U"\U0001F17F\uFE0F", u8"P button", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3583
-{ U"\U0001F198", u8"SOS button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3584
-{ U"\U0001F199", u8"UP! button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3585
-{ U"\U0001F19A", u8"VS button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3586
-{ U"\U0001F201", u8"Japanese “here” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3587
-{ U"\U0001F202\uFE0F", u8"Japanese “service charge” button", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3588
-{ U"\U0001F237\uFE0F", u8"Japanese “monthly amount” button", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3589
-{ U"\U0001F236", u8"Japanese “not free of charge” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3590
-{ U"\U0001F22F", u8"Japanese “reserved” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3591
-{ U"\U0001F250", u8"Japanese “bargain” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3592
-{ U"\U0001F239", u8"Japanese “discount” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3593
-{ U"\U0001F21A", u8"Japanese “free of charge” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3594
-{ U"\U0001F232", u8"Japanese “prohibited” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3595
-{ U"\U0001F251", u8"Japanese “acceptable” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3596
-{ U"\U0001F238", u8"Japanese “application” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3597
-{ U"\U0001F234", u8"Japanese “passing grade” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3598
-{ U"\U0001F233", u8"Japanese “vacancy” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3599
-{ U"\u3297\uFE0F", u8"Japanese “congratulations” button", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3600
-{ U"\u3299\uFE0F", u8"Japanese “secret” button", 3412, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3601
-{ U"\U0001F23A", u8"Japanese “open for business” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3602
-{ U"\U0001F235", u8"Japanese “no vacancy” button", 3412, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3603
-{ U"\U0001F534", u8"red circle", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3604
-{ U"\U0001F7E0", u8"orange circle", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3605
-{ U"\U0001F7E1", u8"yellow circle", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3606
-{ U"\U0001F7E2", u8"green circle", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3607
-{ U"\U0001F535", u8"blue circle", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3608
-{ U"\U0001F7E3", u8"purple circle", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3609
-{ U"\U0001F7E4", u8"brown circle", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3610
-{ U"\u26AB", u8"black circle", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3611
-{ U"\u26AA", u8"white circle", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3612
-{ U"\U0001F7E5", u8"red square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3613
-{ U"\U0001F7E7", u8"orange square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3614
-{ U"\U0001F7E8", u8"yellow square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3615
-{ U"\U0001F7E9", u8"green square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3616
-{ U"\U0001F7E6", u8"blue square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3617
-{ U"\U0001F7EA", u8"purple square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3618
-{ U"\U0001F7EB", u8"brown square", 3413, 0, -1, Lfg(129), EcVersion::E12_0 },   // 3619
-{ U"\u2B1B", u8"black large square", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3620
-{ U"\u2B1C", u8"white large square", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3621
-{ U"\u25FC\uFE0F", u8"black medium square", 3413, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3622
-{ U"\u25FB\uFE0F", u8"white medium square", 3413, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3623
-{ U"\u25FE", u8"black medium-small square", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3624
-{ U"\u25FD", u8"white medium-small square", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3625
-{ U"\u25AA\uFE0F", u8"black small square", 3413, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3626
-{ U"\u25AB\uFE0F", u8"white small square", 3413, 0, -1, Lfg(193), EcVersion::E0_6 },   // 3627
-{ U"\U0001F536", u8"large orange diamond", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3628
-{ U"\U0001F537", u8"large blue diamond", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3629
-{ U"\U0001F538", u8"small orange diamond", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3630
-{ U"\U0001F539", u8"small blue diamond", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3631
-{ U"\U0001F53A", u8"red triangle pointed up", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3632
-{ U"\U0001F53B", u8"red triangle pointed down", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3633
-{ U"\U0001F4A0", u8"diamond with a dot", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3634
-{ U"\U0001F518", u8"radio button", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3635
-{ U"\U0001F533", u8"white square button", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3636
-{ U"\U0001F532", u8"black square button", 3413, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3637
+{ U"\U0001F51F", u8"keycap: 10", 3411, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3564
+{ U"\U0001F520", u8"input Latin uppercase", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3565
+{ U"\U0001F521", u8"input Latin lowercase", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3566
+{ U"\U0001F522", u8"input numbers", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3567
+{ U"\U0001F523", u8"input symbols", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3568
+{ U"\U0001F524", u8"input Latin letters", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3569
+{ U"\U0001F170\uFE0F", u8"A button (blood type)", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3570
+{ U"\U0001F18E", u8"AB button (blood type)", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3571
+{ U"\U0001F171\uFE0F", u8"B button (blood type)", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3572
+{ U"\U0001F191", u8"CL button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3573
+{ U"\U0001F192", u8"COOL button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3574
+{ U"\U0001F193", u8"FREE button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3575
+{ U"\u2139\uFE0F", u8"information", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3576
+{ U"\U0001F194", u8"ID button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3577
+{ U"\u24C2\uFE0F", u8"circled M", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3578
+{ U"\U0001F195", u8"NEW button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3579
+{ U"\U0001F196", u8"NG button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3580
+{ U"\U0001F17E\uFE0F", u8"O button (blood type)", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3581
+{ U"\U0001F197", u8"OK button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3582
+{ U"\U0001F17F\uFE0F", u8"P button", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3583
+{ U"\U0001F198", u8"SOS button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3584
+{ U"\U0001F199", u8"UP! button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3585
+{ U"\U0001F19A", u8"VS button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3586
+{ U"\U0001F201", u8"Japanese “here” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3587
+{ U"\U0001F202\uFE0F", u8"Japanese “service charge” button", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3588
+{ U"\U0001F237\uFE0F", u8"Japanese “monthly amount” button", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3589
+{ U"\U0001F236", u8"Japanese “not free of charge” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3590
+{ U"\U0001F22F", u8"Japanese “reserved” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3591
+{ U"\U0001F250", u8"Japanese “bargain” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3592
+{ U"\U0001F239", u8"Japanese “discount” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3593
+{ U"\U0001F21A", u8"Japanese “free of charge” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3594
+{ U"\U0001F232", u8"Japanese “prohibited” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3595
+{ U"\U0001F251", u8"Japanese “acceptable” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3596
+{ U"\U0001F238", u8"Japanese “application” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3597
+{ U"\U0001F234", u8"Japanese “passing grade” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3598
+{ U"\U0001F233", u8"Japanese “vacancy” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3599
+{ U"\u3297\uFE0F", u8"Japanese “congratulations” button", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3600
+{ U"\u3299\uFE0F", u8"Japanese “secret” button", 3412, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3601
+{ U"\U0001F23A", u8"Japanese “open for business” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3602
+{ U"\U0001F235", u8"Japanese “no vacancy” button", 3412, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3603
+{ U"\U0001F534", u8"red circle", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3604
+{ U"\U0001F7E0", u8"orange circle", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3605
+{ U"\U0001F7E1", u8"yellow circle", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3606
+{ U"\U0001F7E2", u8"green circle", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3607
+{ U"\U0001F535", u8"blue circle", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3608
+{ U"\U0001F7E3", u8"purple circle", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3609
+{ U"\U0001F7E4", u8"brown circle", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3610
+{ U"\u26AB", u8"black circle", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3611
+{ U"\u26AA", u8"white circle", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3612
+{ U"\U0001F7E5", u8"red square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3613
+{ U"\U0001F7E7", u8"orange square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3614
+{ U"\U0001F7E8", u8"yellow square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3615
+{ U"\U0001F7E9", u8"green square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3616
+{ U"\U0001F7E6", u8"blue square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3617
+{ U"\U0001F7EA", u8"purple square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3618
+{ U"\U0001F7EB", u8"brown square", 3413, 0, -1, Lfg(1), EcVersion::E12_0 },   // 3619
+{ U"\u2B1B", u8"black large square", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3620
+{ U"\u2B1C", u8"white large square", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3621
+{ U"\u25FC\uFE0F", u8"black medium square", 3413, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3622
+{ U"\u25FB\uFE0F", u8"white medium square", 3413, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3623
+{ U"\u25FE", u8"black medium-small square", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3624
+{ U"\u25FD", u8"white medium-small square", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3625
+{ U"\u25AA\uFE0F", u8"black small square", 3413, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3626
+{ U"\u25AB\uFE0F", u8"white small square", 3413, 0, -1, Lfg(65), EcVersion::E0_6 },   // 3627
+{ U"\U0001F536", u8"large orange diamond", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3628
+{ U"\U0001F537", u8"large blue diamond", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3629
+{ U"\U0001F538", u8"small orange diamond", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3630
+{ U"\U0001F539", u8"small blue diamond", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3631
+{ U"\U0001F53A", u8"red triangle pointed up", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3632
+{ U"\U0001F53B", u8"red triangle pointed down", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3633
+{ U"\U0001F4A0", u8"diamond with a dot", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3634
+{ U"\U0001F518", u8"radio button", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3635
+{ U"\U0001F533", u8"white square button", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3636
+{ U"\U0001F532", u8"black square button", 3413, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3637
 { {}, u8"flag", 19, 8, 3641, Lfg(8), EcVersion::NONE },   // 3638
 { {}, u8"country-flag", 19, 259, 3649, Lfg(8), EcVersion::NONE },   // 3639
 { {}, u8"subdivision-flag", 19, 3, 3908, Lfg(8), EcVersion::NONE },   // 3640
-{ U"\U0001F3C1", u8"chequered flag", 3638, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3641
-{ U"\U0001F6A9", u8"triangular flag", 3638, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3642
-{ U"\U0001F38C", u8"crossed flags", 3638, 0, -1, Lfg(129), EcVersion::E0_6 },   // 3643
-{ U"\U0001F3F4", u8"black flag", 3638, 0, -1, Lfg(129), EcVersion::E1_0 },   // 3644
-{ U"\U0001F3F3\uFE0F", u8"white flag", 3638, 0, -1, Lfg(193), EcVersion::E0_7 },   // 3645
+{ U"\U0001F3C1", u8"chequered flag", 3638, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3641
+{ U"\U0001F6A9", u8"triangular flag", 3638, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3642
+{ U"\U0001F38C", u8"crossed flags", 3638, 0, -1, Lfg(1), EcVersion::E0_6 },   // 3643
+{ U"\U0001F3F4", u8"black flag", 3638, 0, -1, Lfg(1), EcVersion::E1_0 },   // 3644
+{ U"\U0001F3F3\uFE0F", u8"white flag", 3638, 0, -1, Lfg(65), EcVersion::E0_7 },   // 3645
 { U"\U0001F3F3\uFE0F\u200D\U0001F308", u8"rainbow flag", 3638, 0, -1, Lfg(97), EcVersion::E4_0 },   // 3646
 { U"\U0001F3F3\uFE0F\u200D\u26A7\uFE0F", u8"transgender flag", 3638, 0, -1, Lfg(97), EcVersion::E13_0 },   // 3647
 { U"\U0001F3F4\u200D\u2620\uFE0F", u8"pirate flag", 3638, 0, -1, Lfg(97), EcVersion::E11_0 },   // 3648
 { U"\U0001F1E6\U0001F1E8", u8"flag: Ascension Island", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3649
 { U"\U0001F1E6\U0001F1E9", u8"flag: Andorra", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3650
 { U"\U0001F1E6\U0001F1EA", u8"flag: United Arab Emirates", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3651
-{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3639, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3652
+{ U"\U0001F1E6\U0001F1EB", u8"flag: Afghanistan", 3639, 0, -1, Lfg(225), EcVersion::E2_0 },   // 3652
 { U"\U0001F1E6\U0001F1EC", u8"flag: Antigua & Barbuda", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3653
 { U"\U0001F1E6\U0001F1EE", u8"flag: Anguilla", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3654
 { U"\U0001F1E6\U0001F1F1", u8"flag: Albania", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3655
@@ -3754,7 +3754,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F1EC\U0001F1FE", u8"flag: Guyana", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3748
 { U"\U0001F1ED\U0001F1F0", u8"flag: Hong Kong SAR China", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3749
 { U"\U0001F1ED\U0001F1F2", u8"flag: Heard & McDonald Islands", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3750
-{ U"\U0001F1ED\U0001F1F3", u8"flag: Honduras", 3639, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3751
+{ U"\U0001F1ED\U0001F1F3", u8"flag: Honduras", 3639, 0, -1, Lfg(225), EcVersion::E2_0 },   // 3751
 { U"\U0001F1ED\U0001F1F7", u8"flag: Croatia", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3752
 { U"\U0001F1ED\U0001F1F9", u8"flag: Haiti", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3753
 { U"\U0001F1ED\U0001F1FA", u8"flag: Hungary", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3754
@@ -3808,7 +3808,7 @@ constinit const uc::LibNode uc::libNodes[8817] {
 { U"\U0001F1F2\U0001F1F3", u8"flag: Mongolia", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3802
 { U"\U0001F1F2\U0001F1F4", u8"flag: Macao SAR China", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3803
 { U"\U0001F1F2\U0001F1F5", u8"flag: Northern Mariana Islands", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3804
-{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3639, 0, -1, Lfg(353), EcVersion::E2_0 },   // 3805
+{ U"\U0001F1F2\U0001F1F6", u8"flag: Martinique", 3639, 0, -1, Lfg(225), EcVersion::E2_0 },   // 3805
 { U"\U0001F1F2\U0001F1F7", u8"flag: Mauritania", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3806
 { U"\U0001F1F2\U0001F1F8", u8"flag: Montserrat", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3807
 { U"\U0001F1F2\U0001F1F9", u8"flag: Malta", 3639, 0, -1, Lfg(97), EcVersion::E2_0 },   // 3808

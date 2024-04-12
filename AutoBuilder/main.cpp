@@ -543,11 +543,17 @@ int main()
             flags |= uc::Cfg::U_DEF_IGNORABLE;
         }
         // VS16
-        if (emoji.vs16.contains(cp))
+        bool isVs16 = false;
+        if (emoji.vs16.contains(cp)) {
             flags |= uc::Cfg::U_VS16_EMOJI;
+            isVs16 = true;
+        }
         // Misrenders
         if (emoji.misrenders.contains(cp))
             flags |= uc::Cfg::G_MISRENDER;
+        // SVG emoji
+        if (isVs16 || emoji.allSingleChar.contains(cp))
+            flags |= uc::m::SVG_EMOJI;
         // Draw as space
         if (charsDrawnAsSpaces.contains(cp))
             flags |= uc::m::SPACE;
