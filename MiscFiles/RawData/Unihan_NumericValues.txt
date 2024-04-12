@@ -1,10 +1,10 @@
 #
 # Unihan_NumericValues.txt
-# Date: 2023-07-15 00:00:00 GMT [KL]
-# Unicode version: 15.1.0
+# Date: 2024-01-26 00:00:00 GMT [KL]
+# Unicode version: 16.0.0
 #
 # Unicode Character Database
-# © 2023 Unicode®, Inc.
+# © 2024 Unicode®, Inc.
 # Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in the U.S. and other countries.
 # For terms of use, see http://www.unicode.org/terms_of_use.html
 # For documentation, see http://www.unicode.org/reports/tr38/
@@ -29,6 +29,7 @@ U+4E03	kPrimaryNumeric	7
 U+4E07	kPrimaryNumeric	10000
 U+4E09	kPrimaryNumeric	3
 U+4E24	kOtherNumeric	2
+U+4E59	kZhuangNumeric	1
 U+4E5D	kPrimaryNumeric	9
 U+4E86	kZhuangNumeric	1
 U+4E8C	kPrimaryNumeric	2
