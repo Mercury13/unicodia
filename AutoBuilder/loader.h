@@ -2,8 +2,6 @@
 
 #include <vector>
 
-#define UCD_ZIP "ucd.all.flat.zip"
-#define UCD_XML "ucd.all.flat.xml"
 #define UCD_PVA "PropertyValueAliases.txt"
 #define UCD_NAMES "NamesList.txt"
 #define UCD_ALIASES "NameAliases.txt"

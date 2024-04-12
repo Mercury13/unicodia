@@ -54,5 +54,4 @@ INCLUDEPATH += \
     ../Libs/SelfMade \
     ../Libs/SelfMade/Mojibake \
     ../Libs/SelfMade/Strings \
-    ../Libs/Zippy \
     ../Unicodia/Uc

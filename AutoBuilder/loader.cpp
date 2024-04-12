@@ -9,7 +9,6 @@
 
 // Libs
 #include "u_TypedFlags.h"
-#include "Zippy.hpp"
 
 std::vector<unsigned char> memXml;
 
@@ -30,29 +29,29 @@ namespace {
 
     //const NoAction NoAction::INST;
 
-    class SingleZip final : public Action
-    {
-    public:
-        constexpr SingleZip(
-                std::vector<unsigned char>& aDest,
-                std::string_view aArc, std::string_view aFile)
-            : dest(aDest), arc(aArc), file(aFile) {}
-        void exec() const override;
-    private:
-        std::vector<unsigned char>& dest;
-        std::string_view arc, file;
-    };
+    // class SingleZip final : public Action
+    // {
+    // public:
+    //     constexpr SingleZip(
+    //             std::vector<unsigned char>& aDest,
+    //             std::string_view aArc, std::string_view aFile)
+    //         : dest(aDest), arc(aArc), file(aFile) {}
+    //     void exec() const override;
+    // private:
+    //     std::vector<unsigned char>& dest;
+    //     std::string_view arc, file;
+    // };
 
-    void SingleZip::exec() const
-    {
-        Zippy::ZipArchive za;
-        za.Open(std::string{arc});
-        auto entry = za.GetEntry(std::string{file});
-        auto data = entry.GetData();
-        if (data.empty())
-            throw std::logic_error("File not found in archive");
-        dest = std::move(data);
-    }
+    // void SingleZip::exec() const
+    // {
+    //     Zippy::ZipArchive za;
+    //     za.Open(std::string{arc});
+    //     auto entry = za.GetEntry(std::string{file});
+    //     auto data = entry.GetData();
+    //     if (data.empty())
+    //         throw std::logic_error("File not found in archive");
+    //     dest = std::move(data);
+    // }
 
     constexpr int N_UPDIRS = 4;
 
@@ -101,11 +100,8 @@ namespace {
         Flags<Stfg> flags;
     };
 
-    constinit const SingleZip AC_UCD_XML { memXml, UCD_ZIP, UCD_XML };
-
     constinit const LocalFile allLocalFiles[] {
         { RAWDATA ENTITIES_JSON },
-        { RAWDATA UCD_ZIP },
         { RAWDATA UCD_PVA },
         { RAWDATA UCD_NAMES },
         { RAWDATA UCD_SCRIPTS },
@@ -127,18 +123,11 @@ namespace {
         { "NotoEmoji/" SINGLEEMOJI_TXT },
     };
 
-    constinit const Step allSteps[] {
-        { "Unzip UCD XML database", AC_UCD_XML, UCD_XML, Stfg::FINAL },
-    };
-
 }
 
 void checkLoader()
 {
     for (auto& lf : allLocalFiles) {
         lf.preload();
-    }
-    for (auto& st : allSteps) {
-        st.action.exec();
     }
 }
