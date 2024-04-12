@@ -5671,7 +5671,7 @@
    <group id="Elba">
     <text id="Name">
      <orig>Elbasan Gospel alphabet for Albanian</orig>
-     <transl>Алфавіт Ельбасанського Євангелія (албанська)</transl>
+     <transl>Алфавіт Ельбасанського Євангелія для албанської</transl>
     </text>
     <text id="Lang">
      <orig>Albanian</orig>
@@ -5683,7 +5683,7 @@
       <p />
       <p>It is believed that local Albanian scripts (Elbasan, [[ps:Vith|Vithkuqi]], Todhri, Veso-Bey, Vellara) were used as a cipher against Turks. By other data, Albanian enlightened men took an example from Slavs, Greeks and Turks with their own alphabets. </p>
       <p />
-      <p>Do{{_}}not{{_}}confuse with Todhri alphabet, sometimes also named Elbasan!</p>
+      <p>Do{{_}}not{{_}}confuse with [[ps:Todr|Todhri]] alphabet, sometimes also named Elbasan!</p>
      </orig>
      <au-cmt>
       <p>Left for Todhri:</p>
@@ -5694,7 +5694,7 @@
       <p />
       <p>Вважають, що створення місцевих писемностей в Албанії (ельбасанської, [[ps:Vith|віткутьської]], Тодрі, Весо-Бея, Веллари) слугувало для конспірації від турків. За іншими даними, албанські освічені розуми дивились на слов’ян, греків та турків із власним алфавітом.</p>
       <p />
-      <p>Не плутати з алфавітом Тодрі, який також іноді звуть ельбасанським!</p>
+      <p>Не плутати з алфавітом [[ps:Todr|Тодрі]], який також іноді звуть ельбасанським!</p>
      </transl>
      <tr-cmt>Залишено на Тодрі: Придумана у середині XVIII{{_}}століття і використовувалася біля міста Ельбасан (Албанія). Створення приписується вчителю Теодору Хаджі Філіпу (1730–1806), котрого вбили, коли він перевозив шрифт. Вживалась до XIX{{_}}століття.</tr-cmt>
     </text>
@@ -8902,7 +8902,7 @@
    <group id="Vith">
     <text id="Name">
      <orig>Vithkuqi alphabet for Albanian</orig>
-     <transl>Віткутьський алфавіт (албанська)</transl>
+     <transl>Віткутьський алфавіт для албанської</transl>
     </text>
     <text id="Lang">
      <orig>Albanian</orig>
@@ -8914,14 +8914,14 @@
       <p />
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
-      <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, Todhri, Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
+      <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, [[ps:Todr|Todhri]], Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
      </orig>
      <transl>
       <p>Алфавіт придумав Наум Векілхарджі, письменник, перекладач та адвокат{{-}}він над ним працював 20 років, 1824–1844. Через два роки Наум помер, і алфавіт не{{_}}отримав особливого поширення. Названий за батьківщиною Наума{{-}}селом Віткуть. Також поширене онімечене «алфавіт Бютакук’є».</p>
       <p />
       <p>Алфавіт добре відповідає фонетиці албанської, але чомусь нема літер для звуків «rr», «xh» та «zh».</p>
       <p />
-      <p>Є декілька причин великої кількості албанських алфавітів ([[ps:Elba|ельбасанський]], віткутьський, Тодрі, Весо-Бея, Веллари): мислителі национально-визвольного руху дивились на слов’ян, греків та турків і хотіли свій алфавіт, і просто конспірація від турків (албанці одержали незалежність у 1912 з розпадом Туреччини). Для Наума причина точно перша: збереглись його листи, де він відповідав на критику, і алфавіт вийшов далеким від [[ps:Latn|латинки]], [[ps:Grek|грецької]] та [[ps:Arab|арабської]] заради релігійної нейтральності.</p>
+      <p>Є декілька причин великої кількості албанських алфавітів ([[ps:Elba|ельбасанський]], віткутьський, [[ps:Todr|Тодрі]], Весо-Бея, Веллари): мислителі национально-визвольного руху дивились на слов’ян, греків та турків і хотіли свій алфавіт, і просто конспірація від турків (албанці одержали незалежність у 1912 з розпадом Туреччини). Для Наума причина точно перша: збереглись його листи, де він відповідав на критику, і алфавіт вийшов далеким від [[ps:Latn|латинки]], [[ps:Grek|грецької]] та [[ps:Arab|арабської]] заради релігійної нейтральності.</p>
      </transl>
     </text>
    </group>
@@ -8943,7 +8943,7 @@
      <transl>
       <p>Винайшов Теодор Хаджіфіліпп, він же Вчитель Тодрі. Він перевів багато християнських текстів на албанську. Письмо використовувалося навколо Ельбасану довго після його смерті у 1805, деякі автори кажуть, що до 1930.</p>
       <p />
-      <p>Не плутати з [[ps:Elba|алфавітом ельбасанського Євангелія]]!</p>
+      <p>Не плутати з [[ps:Elba|алфавітом Ельбасанського Євангелія]]!</p>
      </transl>
     </text>
    </group>
