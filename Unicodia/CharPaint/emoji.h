@@ -74,6 +74,10 @@ public:
             std::span<char> rBuf,
             std::u32string_view text,
             std::string_view extension);
+
+    /// A very fast function that refers just to contents
+    /// @return [+] can draw [-] tofu
+    bool canDraw(char32_t cp);
 private:
     // Types
     struct TapeEntry {
@@ -101,6 +105,7 @@ private:
 
     // Functions
     void ensureTape();
+    const TapeEntry* lookupTape(std::u32string_view text);
     std::string_view getSubtape(unsigned index);    
     void draw1(QPainter* painter, QRect rect, const SvgThing& thing, int height);
     static RecolorInfo checkForRecolor(std::u32string_view text);

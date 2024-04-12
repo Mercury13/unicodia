@@ -2430,8 +2430,13 @@ uc::TofuInfo uc::Cp::tofuInfo() const
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 
-    if (drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY) > uc::DrawMethod::LAST_FONT) {
-        r.state = TofuState::NO_FONT;
+    auto method = drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
+    if (method > uc::DrawMethod::LAST_FONT) {
+        if (method == uc::DrawMethod::SVG_EMOJI) {
+            /// @todo [urgent] What to do, got yo-yo for now
+        } else {
+            r.state = TofuState::NO_FONT;
+        }
     } else {
         r.state = font(match::NullForTofu::INST) ? TofuState::PRESENT : TofuState::TOFU;
     }

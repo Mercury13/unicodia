@@ -253,7 +253,7 @@ void EmojiPainter::getFileName(
 }
 
 
-std::string_view EmojiPainter::getSvg(std::u32string_view text)
+const EmojiPainter::TapeEntry* EmojiPainter::lookupTape(std::u32string_view text)
 {
     // Load tape
     ensureTape();
@@ -265,14 +265,22 @@ std::string_view EmojiPainter::getSvg(std::u32string_view text)
     // Find in directory
     auto it = directory.find(fname);
     if (it == directory.end())
+        return nullptr;
+    return &it->second;
+}
+
+
+std::string_view EmojiPainter::getSvg(std::u32string_view text)
+{
+    auto ent = lookupTape(text);
+    if (!ent)
         return {};
-    auto ent = it->second;
 
     // Load subtape
-    auto subtape = getSubtape(ent.subtape);
-    if (subtape.length() < ent.end())
+    auto subtape = getSubtape(ent->subtape);
+    if (subtape.length() < ent->end())
         throw std::runtime_error("Subtape too short!");
-    return subtape.substr(ent.offset, ent.length);
+    return subtape.substr(ent->offset, ent->length);
 }
 
 
@@ -298,17 +306,23 @@ GetCp EmojiPainter::getCp(std::u32string_view text)
 
 namespace {
     constexpr SvgThing NO_THING { .renderer = nullptr, .isHorzFlipped = false };
+
+    /// @return [+] is flipped
+    bool autoFlip(std::u32string_view& text)
+    {
+        /// @todo [future] We never store flipped emoji, we flip them on-the-fly
+        if (text.ends_with(U"\u200D\u27A1\uFE0F")) {
+            text = text.substr(0, text.length() - 3);
+            return true;
+        }
+        return false;
+    }
 }
 
 
 SvgThing EmojiPainter::getRenderer(std::u32string_view text)
 {
-    /// @todo [future] We never store flipped emoji, we flip them on-the-fly
-    bool isFlipped = false;
-    if (text.ends_with(U"\u200D\u27A1\uFE0F")) {
-        text = text.substr(0, text.length() - 3);
-        isFlipped = true;
-    }
+    bool isFlipped = autoFlip(text);
 
     if (text.empty())
         return NO_THING;
@@ -361,6 +375,13 @@ SvgThing EmojiPainter::getRenderer(char32_t cp)
     rend->setAspectRatioMode(Qt::KeepAspectRatio);
     it->second = std::move(rend);
     return { .renderer = it->second.get(), .isHorzFlipped = false };
+}
+
+
+bool EmojiPainter::canDraw(char32_t cp)
+{
+    std::u32string_view sv(&cp, 1);
+    return lookupTape(sv);
 }
 
 
