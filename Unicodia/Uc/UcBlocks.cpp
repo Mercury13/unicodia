@@ -925,7 +925,7 @@ constinit const uc::Block uc::blocks[] {
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
     /// @todo [U16, font] Garay
-    { 0x10D40, 0x10D8F, { 0x10D40, EcContinent::AFRICA, Ifg::MISSING  },
+    { 0x10D40, 0x10D8F, { 0x10D52, EcContinent::AFRICA, Ifg::MISSING  },
             "Garay",
             { EcScript::Gara, 0}, MapType::AF, EcScript::Gara },
     // Rumi OK
@@ -1011,7 +1011,7 @@ constinit const uc::Block uc::blocks[] {
             "Grantha",
             { EcScript::Gran, 0 }, MapType::AS_BRAH_DEAD, EcScript::Gran },
     /// @todo [U16, font] Tulu Tigalari
-    { 0x11380, 0x113FF, { 0x11380, EcContinent::ASIA, Ifg::MISSING  },
+    { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA, Ifg::MISSING  },
             "Tulu-Tigalari",
             { EcScript::Tutg, 0}, MapType::AS_BRAH, EcScript::Tutg },
     // Newa OK
@@ -1040,7 +1040,7 @@ constinit const uc::Block uc::blocks[] {
             "Takri",
             { EcScript::Takr, 0 }, MapType::AS_BRAH_DEAD, EcScript::Takr },
     /// @todo [U16, font] Myanmar ex C
-    { 0x116D0, 0x116FF, { 0x116D0, EcContinent::ASIA, Ifg::MISSING  },
+    { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, Ifg::MISSING  },
             "Myanmar Extended-C",
             { EcScript::Mymr, 'C' }, MapType::AS_BRAH,
             EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1150,7 +1150,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Egyp, 'f' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS },
     /// @todo [U16, font] Egyp A
-    { 0x13460, 0x143FF, { 0x13460, EcContinent::AFRICA, Ifg::MISSING  },
+    { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1159,7 +1159,7 @@ constinit const uc::Block uc::blocks[] {
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hluw },
     /// @todo [U16, font] Gurung Khema
-    { 0x16100, 0x1613F, { 0x16100, EcContinent::ASIA, Ifg::MISSING  },
+    { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, Ifg::MISSING  },
             "Gurung Khema",
             { EcScript::Gukh, 0 }, MapType::AS_BRAH, EcScript::Gukh },
     // Bamum supplement OK
@@ -1184,7 +1184,7 @@ constinit const uc::Block uc::blocks[] {
             "Pahawh Hmong",
             { EcScript::Hmng, 0 }, MapType::AS_OTHER, EcScript::Hmng },
     /// @todo [U16, font] Kirat Rai
-    { 0x16D40, 0x16D7F, { 0x16D40, EcContinent::ASIA, Ifg::MISSING  },
+    { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, Ifg::MISSING  },
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapType::AS_BRAH, EcScript::Krai },
     // Medefaidrin OK
