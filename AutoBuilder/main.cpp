@@ -384,12 +384,6 @@ int main()
     std::cout << "OK, " << props.defaultIgnorable.size() << " DI lines, "
                         << props.deprecated.size() << " DEP lines." << '\n';
 
-    ///// Bracket //////////////////////////////////////////////////////////////
-
-    std::cout << "Loading Unicode bidi mirroring..." << std::flush;
-    const tx::Mirroring mirroring = tx::loadMirroring();
-    std::cout << "OK, " << mirroring.size() << " chars." << '\n';
-
     ///// Emoji ////////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode emoji table..." << std::flush;
@@ -605,7 +599,7 @@ int main()
         std::string_view sBidiClass = cpInfo.bidiCat;
             // Check whether have bracket
         /// @todo [urgent] Can check column 9 instead of a separate file?
-        if (mirroring.contains(cp)) {
+        if (cpInfo.isMirrored) {
             if (sBidiClass != "ON"sv)
                 throw std::logic_error("Got strange bidi class for mirrored char");
             sBidiClass = "MIR"sv;

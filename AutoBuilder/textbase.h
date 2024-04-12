@@ -35,7 +35,6 @@ namespace tx {
     Base loadBase();
     Scripts loadScripts(const ucd::PropBase& propBase);
     Ages loadAges();
-    Mirroring loadMirroring();
     Props loadProps();
 
 }   // ns tx

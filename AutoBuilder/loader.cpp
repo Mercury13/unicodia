@@ -105,7 +105,6 @@ namespace {
         { RAWDATA UCD_PVA },
         { RAWDATA UCD_NAMES },
         { RAWDATA UCD_SCRIPTS },
-        { RAWDATA UCD_MIRRORING },
         { RAWDATA UCD_ALIASES },
         { RAWDATA UCD_PROP },
         { RAWDATA UCD_BLOCKS },

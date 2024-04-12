@@ -6,7 +6,6 @@
 #define UCD_NAMES "NamesList.txt"
 #define UCD_ALIASES "NameAliases.txt"
 #define UCD_SCRIPTS "Scripts.txt"
-#define UCD_MIRRORING "BidiMirroring.txt"
 #define UCD_UDATA "UnicodeData.txt"
 #define UCD_PROP "PropList.txt"
 #define UCD_BLOCKS "Blocks.txt"

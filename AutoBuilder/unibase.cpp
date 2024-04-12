@@ -16,13 +16,6 @@
 
 using namespace std::string_view_literals;
 
-/// @todo [urgent] CJK numerics
-///   Other [3405] +
-///   Vietnamese [3431] −
-///   Zhuang [3576] −
-///   Primary [4E00] +
-///   Accounting [4F0D] +
-
 namespace {
 
     constinit ucd::NumType NUM_NONE { "NONE" };
@@ -94,6 +87,7 @@ namespace {
 
     std::unordered_map<char32_t, std::string> loadHanNumValues()
     {
+        /// @todo [future] Maybe load more CJK types?
         std::unordered_map<char32_t, std::string> r;
 
         std::string line;
