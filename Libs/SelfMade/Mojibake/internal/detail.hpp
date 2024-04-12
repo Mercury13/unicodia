@@ -11,10 +11,10 @@
 #include <iterator> // won’t be included actually
 #include <limits>   // won’t be included actually
 
-namespace detail {
+namespace mojibake::detail {
 
     template <class It>
-    using ChType = typename std::iterator_traits<It>::value_type;
+    using ChType = typename ::std::iterator_traits<It>::value_type;
 
     template <class Ch>
     class UtfTraits;
@@ -32,22 +32,29 @@ namespace detail {
 
     ///// LenTraits ////////////////////////////////////////////////////////////
 
+    static_assert(sizeof(char) == 1, "Strange machine");
+    static_assert(sizeof(char16_t) == 2, "Strange machine");
+    static_assert(sizeof(char32_t) == 4, "Strange machine");
+
     template<>
     class LenTraits<1> {
     public:
         using Enc = Utf8;
+        using EquivChar = char;
     };
 
     template<>
     class LenTraits<2> {
     public:
         using Enc = Utf16;
+        using EquivChar = char16_t;
     };
 
     template<>
     class LenTraits<4> {
     public:
         using Enc = Utf32;
+        using EquivChar = char32_t;
     };
 
     template<>

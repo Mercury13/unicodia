@@ -9,7 +9,7 @@
 
 #include <algorithm>
 #include <iterator>
-#include <limits>
+#include <type_traits>
 
 #if __cplusplus >= 202002L
     #include <bit>
@@ -121,9 +121,11 @@ namespace mojibake {
         };  // class Skip
 
     }   // namespace handler
+} // namespace mojibake
 
-    #include "internal/detail.hpp"
+#include "internal/detail.hpp"
 
+namespace mojibake {
     ///
     /// Puts code point to some iterator
     /// @tparam  It   iterator
@@ -690,6 +692,61 @@ namespace mojibake {
         using Mjh = handler::Moji<It1>;
         return copyLim<Mjh, From, ItTo, Enc1, Enc2>(from, beg, size);
     }
+
+    template <class T>
+    using EquivChar = typename detail::LenTraits<sizeof(T)>::EquivChar;
+} // namespace mojibake
+
+#include "internal/detail2.hpp"
+
+namespace mojibake {
+    ///
+    /// Class that converts constant string to new encoding:
+    /// either small string_view, or a full string
+    /// @warning  Uses quick-and-dirty conversion method,
+    ///           use for reliable or low-importance strings
+    ///
+    template <typename ToC, typename FromC>
+    class ConvString :
+            protected detail::ConvStringProto<EquivChar<ToC>, FromC, detail::isAliasable<ToC, FromC>()>
+    {
+        using Super = detail::ConvStringProto<EquivChar<ToC>, FromC, detail::isAliasable<ToC, FromC>()>;
+    public:
+        using FromSv = std::basic_string_view<FromC>;
+        using ToSv = std::basic_string_view<ToC>;
+
+        /// The only ctor
+        ConvString(FromSv x) : Super(x) {}
+
+        /// Cannot build from temporary string
+        template <class Trait, class Alloc>
+        ConvString(std::basic_string<FromC, Trait, Alloc>&&) = delete;
+
+        /// @return string’s length in characters
+        using Super::length;
+
+        /// @return string’s length in characters
+        size_t size() const { return Super::length(); }
+
+        /// @return string’s length in bytes
+        size_t sizeBytes() const { return Super::length() * sizeof(ToC); }
+
+        const ToC* data() const { return static_cast<const ToC*>(Super::data()); }
+
+        /// Used for some low-level libs like ODBC w/o const correctness
+        /// @warning   You are still not allowed to change that data
+        ToC* nonConstData() { return static_cast<ToC*>(Super::nonConstData()); }
+
+        /// Conversion to string view
+        operator ToSv() const { return { data(), length() }; }
+        ToSv sv() const { return { data(), length() }; }
+
+        /// @return [+] is converted [-] is simple string view
+        using Super::isConverted;
+
+        /// @return the converse: [+] is simple string view [-] is converted
+        static constexpr bool isStringView() { return !isConverted(); }
+    };
 
 }   // namespace mojibake
 
