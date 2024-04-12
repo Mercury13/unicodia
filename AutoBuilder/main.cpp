@@ -449,11 +449,17 @@ int main()
     auto manualLib = lib::loadManual(LIBRARY_XML);
     std::cout << "OK, " << manualLib.forgetMap.size() << " CPs in forget checker." << '\n';
 
-    ///// text base ////////////////////////////////////////////////////////////
+    ///// Text base ////////////////////////////////////////////////////////////
 
     std::cout << "Loading Unicode text base..." << std::flush;
     auto textBase = tx::loadBase();
     std::cout << "OK, " << textBase.size() << " text objects." << '\n';
+
+    ///// SupportData //////////////////////////////////////////////////////////
+
+    std::cout << "Loading main base's support data..." << std::flush;
+    const auto supportData = ucd::loadSupportData();
+    std::cout << "OK" << '\n';
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -466,7 +472,7 @@ int main()
     ///// Main base ////////////////////////////////////////////////////////////
 
     std::cout << "Processing main base..." << std::flush;
-    ucd::processMainBase(ucd::DummySink{});
+    ucd::processMainBase(supportData, ucd::DummySink{});
     std::cout << "OK" << '\n';
 
     ///// XML base /////////////////////////////////////////////////////////////
@@ -491,6 +497,7 @@ int main()
     StringLib strings;
     NumCache nums;
     int nDeprecated = 0;
+    int nUpCase = 0;
     for (pugi::xml_node elChar : elRepertoire.children("char")) {
         /// @todo [urgent] get CP → column 0
         std::string_view sCp = elChar.attribute("cp").as_string();
@@ -688,11 +695,13 @@ int main()
 
         char32_t upCase = 0;
         /// @todo [urgent] get uppercase → column 12
+        // OK here in text base:
         std::string_view upText = elChar.attribute("uc").as_string();
         if (!upText.empty()             // Empty → no upper case
                 && upText[0] != '#'     // # → no upper case
                 && upText.find(' ') == std::string_view::npos) { // upcases to several chars like ẞ→SS → drop
             upCase = fromHex(upText);
+            ++nUpCase;
         }
         forget::processCp(manualLib.forgetMap, cp, sLowerName, sScript, upCase);
 
@@ -725,6 +734,7 @@ int main()
 
     std::cout << "OK" << '\n';
     std::cout << "  Found " << std::dec << nChars << " chars, "
+              << nUpCase << " to-up-case, "
               << nDeprecated << " deprecated, "
               << nSpecialRanges << " special ranges." << '\n';
 

@@ -1,17 +1,32 @@
 #pragma once
 
-#include <string_view>
+#include <string>
+#include <vector>
 
 namespace ucd {
+
+    struct HangulLine {
+        char32_t cp;
+        std::string name;
+    };
+
+    struct SupportData {
+        std::vector<HangulLine> hangulLines;
+    };
+
+    struct NumType {
+        std::string_view name;
+    };
 
     struct CpInfo {
         char32_t cp = 0;
         std::string_view name;
         std::string_view generalCat;
         std::string_view bidiCat;
-        std::string_view decimalValue;
-        std::string_view digitValue;
-        std::string_view numericValue;
+        struct Numeric {
+            const NumType* type;
+            std::string_view numericValue;
+        } numeric;
         char32_t upperCase = 0;     ///< 0 = none
         bool isMirrored = false;
     };
@@ -31,18 +46,19 @@ namespace ucd {
         void act(const CpInfo& x) const override { body(x); }
     };
 
-    void processMainBase(const BaseSink& sink);
-
-    template <class Body>
-    inline void processMainBaseT(const Body& body)
-    {
-        BaseSinkT<Body> sink(body);
-        processMainBase(sink);
-    }
-
     class DummySink : public BaseSink {
     public:
         virtual void act(const CpInfo&) const override {}
     };
+
+    SupportData loadSupportData();
+    void processMainBase(const SupportData& supportData, const BaseSink& sink);
+
+    template <class Body>
+    inline void processMainBaseT(const SupportData& supportData, const Body& body)
+    {
+        BaseSinkT<Body> sink(body);
+        processMainBase(supportData, sink);
+    }
 
 }   // namespace ucd

@@ -13,7 +13,30 @@
 
 using namespace std::string_view_literals;
 
-void ucd::processMainBase(const BaseSink& sink)
+/// @todo [urgent] CJK numerics
+///   Other [3405] +
+///   Vietnamese [3431] −
+///   Zhuang [3576] −
+///   Primary [4E00] +
+///   Accounting [4F0D] +
+
+namespace {
+
+    constinit ucd::NumType NUM_NONE { "NONE" };
+    constinit ucd::NumType NUM_DIGIT { "DIGIT" };
+    constinit ucd::NumType NUM_SPECIAL_DIGIT { "SPECIAL_DIGIT" };
+    constinit ucd::NumType NUM_NUMBER { "NUMBER" };
+
+}
+
+ucd::SupportData ucd::loadSupportData()
+{
+    SupportData r;
+    return r;
+}
+
+
+void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
 {
     std::ifstream is(UCD_MAIN);
     std::string line;
@@ -33,20 +56,29 @@ void ucd::processMainBase(const BaseSink& sink)
         info.cp = fromHex(sCp);
         info.generalCat = vals.at(2);
         info.bidiCat = vals.at(4);
-        info.decimalValue = vals.at(6);
-        info.digitValue = vals.at(7);
-        info.numericValue = vals.at(8);
+
+        auto decimalDigitValue = vals.at(6);
+        auto specialDigitValue = vals.at(7);
+        auto numericValue = vals.at(8);
 
         // Check these numeric values, need smth
-        if (!info.decimalValue.empty() && info.decimalValue != info.digitValue) {
-            throw std::logic_error(
-                str::cat("Cp ", sCp, " has decValue=", info.decimalValue,
-                         " and digValue=", info.digitValue));
-        }
-        if (!info.digitValue.empty() && info.digitValue != info.numericValue) {
-            throw std::logic_error(
-                str::cat("Cp ", sCp, " has digValue=", info.digitValue,
-                         " and numValue=", info.numericValue));
+        info.numeric.numericValue = numericValue;
+        info.numeric.type = numericValue.empty() ? &NUM_NONE : &NUM_NUMBER;
+        if (!decimalDigitValue.empty()) {
+            if (decimalDigitValue != specialDigitValue || decimalDigitValue != numericValue) {
+                throw std::logic_error(
+                    str::cat("Cp ", sCp, " has decValue=", decimalDigitValue,
+                             ", speValue=", specialDigitValue,
+                             ", numValue=", numericValue));
+            }
+            info.numeric.type = &NUM_DIGIT;
+        } else if (!specialDigitValue.empty())  {
+            if (specialDigitValue != numericValue) {
+                throw std::logic_error(
+                    str::cat("Cp ", sCp, " has speValue=", specialDigitValue,
+                             " and numValue=", numericValue));
+            }
+            info.numeric.type = &NUM_SPECIAL_DIGIT;
         }
 
         info.isMirrored = (vals.at(9) == "Y"sv);
@@ -99,8 +131,10 @@ void ucd::processMainBase(const BaseSink& sink)
                     info.cp = i;
                     sink.act(info);
                 }
+                firstCp = 0;
             } else if (info.name == "<Hangul Syllable, Last>"sv) {
                 /// @todo [urgent] What to do with Hangul?
+                firstCp = 0;
             } else if (info.name == "<Non Private Use High Surrogate, First>"sv
                     || info.name == "<Non Private Use High Surrogate, Last>"sv
                     || info.name == "<Private Use High Surrogate, First>"sv
@@ -120,6 +154,8 @@ void ucd::processMainBase(const BaseSink& sink)
             }
         } else {    // NORMAL NAME
             // Decapitalise it here!
+            if (firstCp != 0)
+                throw std::logic_error("Started special range, left firstCp");
             std::string decapped = decapitalize(info.name, info.cp);
             info.name = decapped;
             sink.act(info);
