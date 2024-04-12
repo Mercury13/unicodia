@@ -2842,7 +2842,7 @@
      <orig>
       <p>3995 more hieroglyphs from various sources.</p>
       <p />
-      <p>Egyptologists developed special arrows for reading direction, they will come in other proposal.</p>
+      <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
      </orig>
     </text>
    </group>
@@ -5375,7 +5375,7 @@
      <orig>Bhumij ''(India, 27k as of 2011)''</orig>
     </text>
     <text id="Text">
-     <orig>In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
+     <orig>Invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
     </text>
    </group>
    <group id="Orkh">
@@ -6232,10 +6232,14 @@
      <orig>Tulu-Tigalari</orig>
     </text>
     <text id="Lang">
-     <orig>Tigalari ''(Western India)''</orig>
+     <orig>Tulu ''(Western India, 1.8M as of 2011)''</orig>
     </text>
     <text id="Text">
-     <orig>The script is close to [[ps:Gran|Grantha]], and is rarely used nowadays in Hinduism.</orig>
+     <orig>
+      <p>The script is close to [[ps:Gran|Grantha]], and is rarely used nowadays in Hinduism.</p>
+      <p />
+      <p>Modern Tulu uses [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]].</p>
+     </orig>
     </text>
    </group>
    <group id="Ugar">

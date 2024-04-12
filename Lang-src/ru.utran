@@ -3215,6 +3215,12 @@
      <transl>Албанский — виткутьский</transl>
     </text>
    </group>
+   <group id="105C0">
+    <text id="Name">
+     <orig>Albanian — Todhri</orig>
+     <transl>Албанский — Тодри</transl>
+    </text>
+   </group>
    <group id="10600">
     <text id="Name">
      <orig>Linear A</orig>
@@ -3351,6 +3357,12 @@
      <transl>Ханифи (рохинджа)</transl>
     </text>
    </group>
+   <group id="10D40">
+    <text id="Name">
+     <orig>Garay</orig>
+     <transl>Гарай</transl>
+    </text>
+   </group>
    <group id="10E60">
     <text id="Name">
      <orig>Rumi numeral symbols</orig>
@@ -3477,6 +3489,12 @@
      <transl>Грантха</transl>
     </text>
    </group>
+   <group id="11380">
+    <text id="Name">
+     <orig>Tulu-Tigalari</orig>
+     <transl>Тулу-тигалари</transl>
+    </text>
+   </group>
    <group id="11400">
     <text id="Name">
      <orig>Newa (Prachalit)</orig>
@@ -3527,6 +3545,16 @@
     <text id="Name">
      <orig>Takri</orig>
      <transl>Такри</transl>
+    </text>
+   </group>
+   <group id="116D0">
+    <text id="Name">
+     <orig>Myanmar extended C</orig>
+     <transl>Бирманский расширенный C</transl>
+    </text>
+    <text id="Text">
+     <orig>Two sets of digits gaining popularity among minorities.</orig>
+     <transl>Два набора цифр, набирающих популярность среди меньшинств.</transl>
     </text>
    </group>
    <group id="11700">
@@ -3595,6 +3623,12 @@
     <text id="Text">
      <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</orig>
      <transl>Джайнские знаки препинания и [[pt:ligature|лигатуры]] для фраз вроде «да будет оно благословлено».</transl>
+    </text>
+   </group>
+   <group id="11BC0">
+    <text id="Name">
+     <orig>Sunuwar</orig>
+     <transl>Сунвар</transl>
     </text>
    </group>
    <group id="11C00">
@@ -3721,10 +3755,40 @@
      </transl>
     </text>
    </group>
+   <group id="13460">
+    <text id="Name">
+     <orig>Egyptian hieroglyphs extended A</orig>
+     <transl>Египетские иероглифы расширенные A</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>3995 more hieroglyphs from various sources.</p>
+      <p />
+      <p>Egyptologists developed special arrows for reading direction, U+1F8C0 and C1.</p>
+     </orig>
+     <transl>
+      <p>Ещё 3995 иероглифов из разных источников.</p>
+      <p />
+      <p>Египтологи разработали специальные стрелки для направления чтения{{-}}U+1F8C0 и C1.</p>
+     </transl>
+    </text>
+   </group>
    <group id="14400">
     <text id="Name">
      <orig>Anatolian (Luwian) heroglyphs</orig>
      <transl>Анатолийские (лувийские) иероглифы</transl>
+    </text>
+   </group>
+   <group id="16100">
+    <text id="Name">
+     <orig>Gurung Khema</orig>
+     <transl>Гурунг (кхема)</transl>
+    </text>
+   </group>
+   <group id="16D40">
+    <text id="Name">
+     <orig>Kirat Rai</orig>
+     <transl>Кират (раи)</transl>
     </text>
    </group>
    <group id="16800">
@@ -3895,6 +3959,16 @@
     <text id="Text">
      <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Natives Americans, North-West USA)'' shorthand.</orig>
      <transl>[[pt:ignorable|Невидимые]] символы, используемые для румынской и чинукской ''(индейцы северо-запада США)'' стенографии.</transl>
+    </text>
+   </group>
+   <group id="1CC00">
+    <text id="Name">
+     <orig>Symbols for legacy computing supplement</orig>
+     <transl>Символы со старых компьютеров дополнительные</transl>
+    </text>
+    <text id="Text">
+     <orig>The final bit of symbols from old computers. There probably will be no more big additions of such symbols. Unicode{{_}}17 will disunify a few console symbols from emoji.</orig>
+     <transl>Последний набор символов со старых компьютеров. Скорее всего, больше не будет крупных добавлений таких символов. Юникод{{_}}17 разунифицирует несколько консольных символов с эмодзи.</transl>
     </text>
    </group>
    <group id="1CF00">
@@ -4171,6 +4245,12 @@
     <text id="Name">
      <orig>Nag alphabet (Mundari)</orig>
      <transl>Мундари (алфавит Нага)</transl>
+    </text>
+   </group>
+   <group id="1E5D0">
+    <text id="Name">
+     <orig>Ol Onal</orig>
+     <transl>Ол-онал</transl>
     </text>
    </group>
    <group id="1E7E0">
@@ -5670,6 +5750,20 @@
      </transl>
     </text>
    </group>
+   <group id="Gara">
+    <text id="Name">
+     <orig>Garay</orig>
+     <transl>Гарай</transl>
+    </text>
+    <text id="Lang">
+     <orig>Wolof ''(Western Africa, 7M as of 2021)''</orig>
+     <transl>волоф ''(Западная Африка, 7 млн на 2021)''</transl>
+    </text>
+    <text id="Text">
+     <orig>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Current community is small, about 200 people.</orig>
+     <transl>С освобождением Африки появились много новых письменностей. Эту создал Ассане Файе из Сенегала. Теперешнее сообщество небольшое, около 200 человек.</transl>
+    </text>
+   </group>
    <group id="Geor">
     <text id="Name">
      <orig>Georgian</orig>
@@ -5900,6 +5994,20 @@
       <p />
       <p>Зороастрийцы сбежали от мусульман в Индию и стали писать [[ps:Avst|Авесту]] местным письмом, традиционно гуджарати. Самый известный из таких зороастрийцев{{-}}Фредди Меркьюри (правда, его родителей судьба занесла аж на Занзибар). Буквы «з» в гуджарати нет, и она записывается как «дж» с нуктой (точкой снизу).</p>
      </transl>
+    </text>
+   </group>
+   <group id="Gukh">
+    <text id="Name">
+     <orig>Gurung Khema</orig>
+     <transl>Гурунг (кхема)</transl>
+    </text>
+    <text id="Lang">
+     <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
+     <transl>гурунг ''(Индия, Непал, 320 тыс. на 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</orig>
+     <transl>Изобрёл Бал Нарсингх Гурунг. В 1997 индийский штат Сикким признал гурунг и сделал кхему официальным письмом.</transl>
     </text>
    </group>
    <group id="Guru">
@@ -6456,6 +6564,28 @@
       <p>[[pt:virama|Вирама]] (знак «убрать гласную») появляется на письме только для передачи санскрита. На компьютерах вирама служит для набора [[pt:ligature|лигатур]] «согласная+согласная»:</p>
       <p>: ка {{sm|ಕ}} + вирама {{sm|◌್}} + та {{sm|ತ}} = кта {{sm|ಕ್ತ}}</p>
       <p>Часто применяется в смайликах: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="Krai">
+    <text id="Name">
+     <orig>Kirat Rai</orig>
+     <transl>Кират (раи)</transl>
+    </text>
+    <text id="Lang">
+     <orig>Bantawa ''(India, Nepal, 170k as of 2011)''</orig>
+     <transl>бантава ''(Индия, Непал, 170 тыс. на 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Limb|Limbu]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s larger ethnic group) and made Kirat the official script.</p>
+      <p />
+      <p>Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from [[ps:Deva|Devanagari]].</p>
+     </orig>
+     <transl>
+      <p>Создал Махагуру Тика Рам Раи из местных письменностей, близких к [[ps:Limb|лимбу]]. В 1995 индийский штат Сикким признал бантаву (под названием ''раи'', хотя это более крупная группа народов) и сделал кират официальным письмом.</p>
+      <p />
+      <p>Палка ''данда'' наклонена, чтобы отличить от {{t|a:}}, так что письмо использует свою данду, а не общеиндийскую из [[ps:Deva|деванагари]].</p>
      </transl>
     </text>
    </group>
@@ -7387,6 +7517,20 @@
      </transl>
     </text>
    </group>
+   <group id="Onao">
+    <text id="Name">
+     <orig>Ol Onal</orig>
+     <transl>Ол-онал</transl>
+    </text>
+    <text id="Lang">
+     <orig>Bhumij ''(India, 27k as of 2011)''</orig>
+     <transl>бхумидж ''(Индия, 27 тыс. на 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>Invented by Mahendra Nath Sardar. In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
+     <transl>Изобретатель{{-}}Махендра Натх Сардар. В 1992 сообщество бхумидж провело конкурс на новое письмо, и оно было уже готово, и победило из трёх заявок. Заглавные буквы назывались ''ол-онал'', строчные ''галанг-онал'', но строчные быстро отпали.</transl>
+    </text>
+   </group>
    <group id="Orkh">
     <text id="Name">
      <orig>Old Turkic (Orkhon-Yenisei) runes</orig>
@@ -8208,6 +8352,20 @@
      </transl>
     </text>
    </group>
+   <group id="Sunu">
+    <text id="Name">
+     <orig>Sunuwar</orig>
+     <transl>Сунвар</transl>
+    </text>
+    <text id="Lang">
+     <orig>Sunuwar ''(Nepal, 38k as of 2011)''</orig>
+     <transl>сунвар ''(Непал, 38 тыс. на 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</orig>
+     <transl>Изобрёл Кришна Бахадур Джентич (1926–1991). Изначально чистый алфавит, из-за взаимодействия с брахмийским письмом он начал использовать гласную по умолчанию {{t|а}} и [[pt:virama|вираму]]. Официальная орфография не{{_}}признаёт этих изменений.</transl>
+    </text>
+   </group>
    <group id="Sylo">
     <text id="Name">
      <orig>Syloti Nagri</orig>
@@ -8666,6 +8824,28 @@
      <transl>Маленький сино-тибетский язык, используемый в деревне Тотопара племенем тото. Состояние{{-}}на грани исчезновения: передача языка уже нарушена. Грамотны около трети. Пишут [[ps:Beng|бенгальской]] или собственной письменностью, которую придумал в 2015 старейшина племени Дханирам Тото.</transl>
     </text>
    </group>
+   <group id="Tutg">
+    <text id="Name">
+     <orig>Tulu-Tigalari</orig>
+     <transl>Тулу-тигалари</transl>
+    </text>
+    <text id="Lang">
+     <orig>Tulu ''(Western India, 1.8M as of 2011)''</orig>
+     <transl>тулу ''(Западная Индия, 1,8 млн на 2011)''</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>The script is close to [[ps:Gran|Grantha]], and is rarely used nowadays in Hinduism.</p>
+      <p />
+      <p>Modern Tulu uses [[ps:Knda|Kannada]] and [[ps:Mlym|Malayalam]].</p>
+     </orig>
+     <transl>
+      <p>Письмо близко к [[ps:Gran|грантхе]], и изредка используется сейчас в индуизме.</p>
+      <p />
+      <p>Современный тулу использует [[ps:Knda|каннаду]] и [[ps:Mlym|малаялам]].</p>
+     </transl>
+    </text>
+   </group>
    <group id="Ugar">
     <text id="Name">
      <orig>Ugaritic</orig>
@@ -8741,6 +8921,28 @@
       <p>Алфавит хорошо отвечает фонетике албанского, но почему-то нет букв для звуков «rr», «xh» и «zh».</p>
       <p />
       <p>Есть несколько причин большого количества албанских алфавитов ([[ps:Elba|эльбасанский]], виткутьский, Тодри, Весо-Бея, Веллары): мыслители национально-освободительного движения смотрели на славян, греков и турок и хотели свой алфавит, и просто конспирация от турок (албанцы получили независимость в 1912 с распадом Турции). Для Наума причина точно первая: сохранились его письма, где он отвечал на критику, и алфавит вышел далёким от [[ps:Latn|латиницы]], [[ps:Grek|греческого]] и [[ps:Arab|арабского]] ради религиозной нейтральности.</p>
+     </transl>
+    </text>
+   </group>
+   <group id="Todr">
+    <text id="Name">
+     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
+     <transl>Алфавит Тодри (эльбасанский) для албанского</transl>
+    </text>
+    <text id="Lang">
+     <orig>Albanian</orig>
+     <transl>албанский</transl>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Was used rather widely around Elbasan until the inventor died in 1805.</p>
+      <p />
+      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
+     </orig>
+     <transl>
+      <p>Использовался достаточно широко вокруг Эльбасана, пока изобретатель не умер около 1805.</p>
+      <p />
+      <p>Не путать с [[ps:Elba|алфавитом Эльбасанского Евангелия]]!</p>
      </transl>
     </text>
    </group>
