@@ -23,7 +23,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "APL",            Dicf::CAP_ALL | Dicf::TRIG_SCRIPT },
     { "ARABIC",         Dicf::TRIG_SCRIPT },
     { "ARABIAN",        Dicf::TRIG_SCRIPT },
-    { "ARABIC-INDIC",   { Dicf::TRIG_SCRIPT, "Arabic-Indic"sv } },
+    { "ARABIC-INDIC",   { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Arabic-Indic"sv } },
     { "ASSAMESE",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE | Dicf::TRIG_FORCE_FULL_DECAP },
     { "IMPERIAL",       Dicf::TRIG_SCRIPT },
     { "ARAMAIC",        Dicf::TRIG_SCRIPT },
