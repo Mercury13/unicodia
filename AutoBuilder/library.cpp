@@ -289,6 +289,8 @@ lib::EmojiData lib::loadEmoji(const char* fname)
 
                 newItem.emojiVersion = emVersion;
                 newItem.flags = uc::Lfg::GRAPHIC_EMOJI;
+                if (mainCode != 0)
+                    newItem.flags |= uc::Lfg::SINGLE_CHAR_EMOJI;
                 if (NO_TILE.contains(newItem.name))
                     newItem.flags |= uc::Lfg::NO_TILE;
                 if (!FORCE_TILE.contains(newItem.value) && hasSkinGender(newItem.value))
