@@ -67,8 +67,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DUPLOYAN",       Dicf::TRIG_SCRIPT },
     { "DIVES",          Dicf::TRIG_SCRIPT },
      { "AKURU",         Dicf::TRIG_SCRIPT },
-    { "EASTERN",        { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
-                        {}, "PWO" } },
     { "EGYPTIAN",       Dicf::TRIG_SCRIPT },
     { "ELBASAN",        Dicf::TRIG_SCRIPT },
     { "ELYMAIC",        Dicf::TRIG_SCRIPT },
@@ -115,10 +113,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HUNGARIAN",      Dicf::TRIG_SCRIPT },
     { "INDIC",          Dicf::TRIG_SCRIPT },
     { "INDUS",          Dicf::TRIG_SCRIPT },
-    // Interesting case: ITALIC is script with OLD only
-    // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
-    { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
-                            {}, "ITALIC", "PERMIC", "PERSIAN" } },
     { "JAPANESE",       Dicf::TRIG_SCRIPT },
     { "JAVANESE",       Dicf::TRIG_SCRIPT },
     { "JUDEO-SPANISH",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Judeo-Spanish" } },
@@ -173,9 +167,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "MULTANI",        Dicf::TRIG_SCRIPT },
     { "MYANMAR",        Dicf::TRIG_SCRIPT },
     { "NABATAEAN",      Dicf::TRIG_SCRIPT },
-    // There are several NAGs → it’s script only with Mundari
-    { "NAG",            { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
-                          {}, "MUNDARI" } },
     { "NANDINAGARI",    Dicf::TRIG_SCRIPT },
     { "NEWA",           Dicf::TRIG_SCRIPT },
     { "NKO",            { Dicf::TRIG_SCRIPT, "NKo" } },
@@ -228,8 +219,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SYRIAC",         Dicf::TRIG_SCRIPT },
     { "TAGBANWA",       Dicf::TRIG_SCRIPT },
     { "TAKRI",          Dicf::TRIG_SCRIPT },
-    { "TAI",            { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LE"sv, "VIET"sv, "THAM"sv, "LAING"sv } },
-      { "LAING",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::IF_NEXT_NOT_NOUN },
     { "TAMIL",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "TANGSA",         Dicf::TRIG_SCRIPT },
     { "TANGUT",         Dicf::TRIG_SCRIPT },
@@ -273,6 +262,19 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "HDTV",           Dicf::CAP_ALL },
     { "SDTV",           Dicf::CAP_ALL },
     { "UFO",            Dicf::CAP_ALL },
+
+    // Special adjectives
+    { "EASTERN",        { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
+                          {}, "PWO" } },
+    // There are several NAGs → it’s script only with Mundari
+    { "NAG",            { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
+                          {}, "MUNDARI" } },
+    // Interesting case: ITALIC is script with OLD only
+    // For ARABIAN we can use just SCRIPT_ADJECTIVE, it’s enough to identify script
+    { "OLD",            { Dicf::PART_ADJECTIVE | Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::TRIG_SCRIPT_ADJECTIVE,
+                          {}, "ITALIC", "PERMIC", "PERSIAN" } },
+    { "TAI",            { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "LE"sv, "VIET"sv, "THAM"sv, "LAING"sv } },
+      { "LAING",        Dicf::IF_SCRIPT | Dicf::TRIG_CAP_NEXT | Dicf::IF_NEXT_NOT_NOUN },
 
     // Capitalize next
     { "AFFIX",          Dicf::TRIG_CAP_NEXT | Dicf::CAP_SMALL },
