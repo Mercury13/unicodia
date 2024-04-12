@@ -2518,6 +2518,11 @@
      <orig>Hanifi Rohingya</orig>
     </text>
    </group>
+   <group id="10D40">
+    <text id="Name">
+     <orig>Garay</orig>
+    </text>
+   </group>
    <group id="10E60">
     <text id="Name">
      <orig>Rumi numeral symbols</orig>
@@ -2824,9 +2829,26 @@
      </orig>
     </text>
    </group>
+   <group id="13460">
+    <text id="Name">
+     <orig>Egyptian hieroglyphs extended A</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>3995 more hieroglyphs from various sources.</p>
+      <p />
+      <p>Egyptologists developed special arrows for reading direction, they will come in other proposal.</p>
+     </orig>
+    </text>
+   </group>
    <group id="14400">
     <text id="Name">
      <orig>Anatolian (Luwian) heroglyphs</orig>
+    </text>
+   </group>
+   <group id="16D40">
+    <text id="Name">
+     <orig>Kirat Rai</orig>
     </text>
    </group>
    <group id="16800">
@@ -4156,6 +4178,17 @@
      </orig>
     </text>
    </group>
+   <group id="Gara">
+    <text id="Name">
+     <orig>Garay</orig>
+    </text>
+    <text id="Lang">
+     <orig>Wolof ''(Western Africa, 7M as of 2021)''</orig>
+    </text>
+    <text id="Text">
+     <orig>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Current community is small, about 200 people.</orig>
+    </text>
+   </group>
    <group id="Geor">
     <text id="Name">
      <orig>Georgian</orig>
@@ -4673,6 +4706,21 @@
       <p>[[pt:virama|Virama]] (“remove vowel” sign) appears in writing for Sanskrit only. In computers virama is used for typing consonant conjunct [[pt:ligature|ligatures]]:</p>
       <p>: ka {{sm|ಕ}} + virama {{sm|◌್}} + ta {{sm|ತ}} = kta {{sm|ಕ್ತ}}</p>
       <p>Often used in smilies: &lt;font face='{{fontface}},Cambria' size='+3'&gt;ಠ͜ಠ&lt;/font&gt;.</p>
+     </orig>
+    </text>
+   </group>
+   <group id="Krai">
+    <text id="Name">
+     <orig>Kirat Rai</orig>
+    </text>
+    <text id="Lang">
+     <orig>Bantawa ''(India, Nepal, 170k as of 2011)''</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Invented by Mahaguru Tika Ram Rai from local scrips close to [[ps:Limb|Limbu]]. In 1995 Indian state of Sikkim recognized Bantawa (under the name of ''Rai'' though it’s larger ethnic group) and made Kirat the official script.</p>
+      <p />
+      <p>Punctuation sign ''danda'' is slanted to distinguish from {{t|ā}}, so the script use its own danda rather than common Indic from [[ps:Deva|Devanagari]].</p>
      </orig>
     </text>
    </group>

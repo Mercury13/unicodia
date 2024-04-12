@@ -1152,7 +1152,8 @@ constinit const uc::Block uc::blocks[] {
     /// @todo [U16, font] Egyp A
     { 0x13460, 0x143FF, { 0x13460, EcContinent::AFRICA, Ifg::MISSING  },
             "Egyptian Hieroglyphs Extended-A",
-            { EcScript::Egyp, 'A' }, MapType::AF_DEAD, EcScript::Egyp },
+            { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
+            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",

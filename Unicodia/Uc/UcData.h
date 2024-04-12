@@ -864,6 +864,7 @@ namespace uc {
     // Such a limitation: sort by first N meaning chars
     using LocSortKey = signed short[40];
 
+    /// Subdivision of blocks for (future) plane maps
     enum class MapType {
         TECHNICAL,
         MULTIPLE,
