@@ -7,6 +7,8 @@
 
 #include <QByteArray>
 
+#include "UcFlags.h"
+
 namespace Zippy {
     class ZipArchive;
 }
@@ -56,7 +58,7 @@ inline SvgThing SvgThing::horzFlipped(bool x) const noexcept
     { return { .renderer = renderer, .isHorzFlipped = x }; }
 
 
-class EmojiPainter
+class EmojiPainter : public uc::SvgChecker
 {
 public:
     EmojiPainter();     // forward decls → need in CPP
@@ -77,7 +79,7 @@ public:
 
     /// A very fast function that refers just to contents
     /// @return [+] can draw [-] tofu
-    bool canDraw(char32_t cp);
+    bool canDraw(char32_t cp) override;
 private:
     // Types
     struct TapeEntry {

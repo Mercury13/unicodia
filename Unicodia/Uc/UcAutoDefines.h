@@ -559,7 +559,7 @@ namespace uc {
 
         QString viewableName() const;
         DrawMethod drawMethod(EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const;
-        TofuInfo tofuInfo() const;
+        TofuInfo tofuInfo(SvgChecker& svgChecker) const;
         constexpr bool isAbbreviated() const { return ((flags & uc::m::ALL) == uc::m::ABBREVIATION); }
         constexpr bool isNoAa() const { return ((flags & uc::m::ALL) == uc::m::NO_AA); }
         std::u8string_view abbrev() const;

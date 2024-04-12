@@ -15,6 +15,7 @@ using namespace std::string_view_literals;
 
 EmojiPainter emp;
 
+uc::SvgChecker& svgChecker() { return emp; }
 
 namespace {
     struct AbbrTable {

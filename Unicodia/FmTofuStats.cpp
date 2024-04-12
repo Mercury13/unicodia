@@ -112,7 +112,7 @@ namespace {
 }   // anon namespace
 
 
-SafeVector<int> tofu::Model::build()
+SafeVector<int> tofu::Model::build(uc::SvgChecker& svgChecker)
 {
     beginResetModel();
     rows.clear();
@@ -127,7 +127,7 @@ SafeVector<int> tofu::Model::build()
     for (size_t i = 0; i < uc::N_CPS; ++i) {
         auto& cp = uc::cpInfo[i];
         auto code = cp.subj.val();
-        auto tofuInfo = cp.tofuInfo();
+        auto tofuInfo = cp.tofuInfo(svgChecker);
 
         all.reg(code, tofuInfo.state);
         byPlane[cp.plane()].reg(code, tofuInfo.state);
@@ -172,7 +172,7 @@ SafeVector<int> tofu::Model::build()
 ///// FmTofuStats //////////////////////////////////////////////////////////////
 
 
-FmTofuStats::FmTofuStats(QWidget *parent) :
+FmTofuStats::FmTofuStats(QWidget *parent, uc::SvgChecker& svgChecker) :
     QDialog(parent),
     ui(new Ui::FmTofuStats)
 {
@@ -180,7 +180,7 @@ FmTofuStats::FmTofuStats(QWidget *parent) :
     connect(ui->buttonBox, &QDialogButtonBox::accepted, this, &This::accept);
     connect(ui->buttonBox, &QDialogButtonBox::rejected, this, &This::reject);
     ui->tableStats->setModel(&model);
-    buildModel();
+    buildModel(svgChecker);
 }
 
 
@@ -190,9 +190,9 @@ FmTofuStats::~FmTofuStats()
 }
 
 
-void FmTofuStats::buildModel()
+void FmTofuStats::buildModel(uc::SvgChecker& svgChecker)
 {
-    auto r = model.build();
+    auto r = model.build(svgChecker);
     QString s;
     s.reserve(r.size() * 5);
     for (int code : r) {

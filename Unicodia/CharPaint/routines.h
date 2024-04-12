@@ -37,6 +37,8 @@ void drawSpace(
         QPainter* painter, const QRect& rect,
         const QFont& font, QColor color, char32_t subj);
 
+uc::SvgChecker& svgChecker();
+
 constexpr int ROT_CW = 90;
 constexpr int ROT_CCW = -90;
 

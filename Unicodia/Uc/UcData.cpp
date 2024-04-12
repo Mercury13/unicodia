@@ -2422,7 +2422,7 @@ const uc::Font* uc::Cp::font(const FontMatcher& matcher) const
 }
 
 
-uc::TofuInfo uc::Cp::tofuInfo() const
+uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
 {
     uc::TofuInfo r;
     r.block = &block();
@@ -2433,7 +2433,8 @@ uc::TofuInfo uc::Cp::tofuInfo() const
     auto method = drawMethod(EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
     if (method > uc::DrawMethod::LAST_FONT) {
         if (method == uc::DrawMethod::SVG_EMOJI) {
-            /// @todo [urgent] What to do, got yo-yo for now
+            r.state = svgChecker.canDraw(subj)
+                      ? TofuState::NO_FONT : TofuState::TOFU;
         } else {
             r.state = TofuState::NO_FONT;
         }

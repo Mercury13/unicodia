@@ -1790,7 +1790,7 @@ void FmMain::installTempPrefix()
 
 void FmMain::showTofuStats()
 {
-    fmTofuStats.ensure(this).exec();
+    fmTofuStats.ensure(this, svgChecker()).exec();
 }
 
 

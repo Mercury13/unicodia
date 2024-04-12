@@ -37,7 +37,7 @@ namespace tofu
         QVariant data(const QModelIndex& index, int role) const override;
         QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
-        SafeVector<int> build();
+        SafeVector<int> build(uc::SvgChecker& svgChecker);
     private:
         enum {
             COL_TOTAL,
@@ -59,14 +59,14 @@ class FmTofuStats : public QDialog
     using Super = QDialog;
     using This = FmTofuStats;
 public:
-    explicit FmTofuStats(QWidget *parent = nullptr);
+    explicit FmTofuStats(QWidget *parent, uc::SvgChecker& svgChecker);
     ~FmTofuStats() override;
     int exec() override;
 private:
     Ui::FmTofuStats *ui;
     tofu::Model model;
 
-    void buildModel();
+    void buildModel(uc::SvgChecker& svgChecker);
 };
 
 #endif // FMTOFUSTATS_H

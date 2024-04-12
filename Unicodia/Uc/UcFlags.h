@@ -94,6 +94,11 @@ namespace uc {
         INSTEAD_MAX = INSTEAD_APPLEVEL,
     };
 
+    class SvgChecker {  // interface
+    public:
+        virtual bool canDraw(char32_t cp) = 0;
+        virtual ~SvgChecker() = default;
+    };
 }   // namespace uc
 
 namespace sw {  // Sutton SignWriting
