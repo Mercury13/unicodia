@@ -2627,6 +2627,11 @@
      <orig>Grantha</orig>
     </text>
    </group>
+   <group id="11380">
+    <text id="Name">
+     <orig>Tulu-Tigalari</orig>
+    </text>
+   </group>
    <group id="11400">
     <text id="Name">
      <orig>Newa (Prachalit)</orig>
@@ -2844,6 +2849,11 @@
    <group id="14400">
     <text id="Name">
      <orig>Anatolian (Luwian) heroglyphs</orig>
+    </text>
+   </group>
+   <group id="16100">
+    <text id="Name">
+     <orig>Gurung Khema</orig>
     </text>
    </group>
    <group id="16D40">
@@ -3173,6 +3183,11 @@
    <group id="1E4D0">
     <text id="Name">
      <orig>Nag alphabet (Mundari)</orig>
+    </text>
+   </group>
+   <group id="1E5D0">
+    <text id="Name">
+     <orig>Ol Onal</orig>
     </text>
    </group>
    <group id="1E7E0">
@@ -4339,6 +4354,17 @@
      </orig>
     </text>
    </group>
+   <group id="Gukh">
+    <text id="Name">
+     <orig>Gurung Khema</orig>
+    </text>
+    <text id="Lang">
+     <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
+    </text>
+    <text id="Text">
+     <orig>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</orig>
+    </text>
+   </group>
    <group id="Guru">
     <text id="Name">
      <orig>Gurmukhi</orig>
@@ -5341,6 +5367,17 @@
      <au-cmt>voiced and voiceless consonants replace each other during word inflection [Everson’s proposal to encode]</au-cmt>
     </text>
    </group>
+   <group id="Onao">
+    <text id="Name">
+     <orig>Ol Onal</orig>
+    </text>
+    <text id="Lang">
+     <orig>Bhumij ''(India, 27k as of 2011)''</orig>
+    </text>
+    <text id="Text">
+     <orig>In 1992 Bhumij community held a contest for a new script, and it was already done, and won the contest among three entrants. Capital letters were called ''Ol onal'', and small ''Galang onal'', but small letters were quickly dropped.</orig>
+    </text>
+   </group>
    <group id="Orkh">
     <text id="Name">
      <orig>Old Turkic (Orkhon-Yenisei) runes</orig>
@@ -6188,6 +6225,17 @@
     </text>
     <text id="Text">
      <orig>Small Sino-Tibetan language used in village of Totopara by Toto tribe. Status is critically endangered: language transfer is already broken. About ⅓ are literate. Writing system is [[ps:Beng|Bengali]] or own script invented in 2015 by Dhaniram Toto, the tribe’s elder.</orig>
+    </text>
+   </group>
+   <group id="Tutg">
+    <text id="Name">
+     <orig>Tulu-Tigalari</orig>
+    </text>
+    <text id="Lang">
+     <orig>Tigalari ''(Western India)''</orig>
+    </text>
+    <text id="Text">
+     <orig>The script is close to [[ps:Gran|Grantha]], and is rarely used nowadays in Hinduism.</orig>
     </text>
    </group>
    <group id="Ugar">

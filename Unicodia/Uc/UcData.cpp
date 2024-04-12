@@ -355,7 +355,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC },
     /// @todo [U16, font] Garay
     { "Gara", QFontDatabase::Any,
-        EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::RTL, EcContinent::AFRICA,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::year(1961), EcFont::NORMAL },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
@@ -392,7 +392,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, font] Gurung Khema
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1944), EcFont::NORMAL },
+        Dating::year(1977), EcFont::NORMAL },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
