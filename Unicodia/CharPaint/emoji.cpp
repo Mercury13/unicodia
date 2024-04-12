@@ -13,6 +13,9 @@
 // Unicode
 #include "UcCp.h"
 
+// Painters
+#include "global.h"
+
 struct RecolorLib {
     std::string_view fill1;
     std::string_view fill2;
@@ -391,20 +394,60 @@ void EmojiPainter::draw1(QPainter* painter, QRect rect, const SvgThing& thing, i
 }
 
 
+void EmojiPainter::drawEmojiTofu(
+        QPainter* painter, const QRect& rect, const QColor& color)
+{
+    // Get painter info
+    auto dpr = painter->device()->devicePixelRatio();
+
+    const auto availW = rect.width() * (5.0 / 6.0);
+    const auto availH = rect.height() * (3.0 / 5.0);
+    const auto availTall = std::min(availW, availH);
+    const auto availNarrow = availTall * 2 / 3;
+    // Now we draw availNarrow×availTall, shrink rect
+    auto ofsX = (rect.width() - availNarrow) / 2;
+    auto ofsY = (rect.height() - availTall) / 2;
+    QRectF rcFrame { QPointF(rect.left() + ofsX, rect.top() + ofsY),
+                     QSizeF(availNarrow, availTall) };
+    // Draw frame
+    static constexpr qreal Q_THICKNESS = 1.0 / 40.0;
+    auto loThickness = availTall * Q_THICKNESS;
+    auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
+    if (hiThickness < 1)
+        hiThickness = 1;
+    bool isAa = (hiThickness > 1.2);  // 1.2 — still no anti-alias
+    painter->setRenderHint(QPainter::Antialiasing, isAa);
+    if (isAa) {
+        rcFrame = adjustedToPhysicalPixels(rcFrame, dpr, hiThickness * 0.5);
+    } else if (hiThickness > 1) {
+        hiThickness = 1;
+    }
+    painter->setPen(QPen(color, hiThickness));
+    painter->setBrush(Qt::NoBrush);
+    painter->drawRect(rcFrame);
+}
+
+
 void EmojiPainter::draw(
-            QPainter* painter, const QRect& rect, char32_t cp, int height)
+            QPainter* painter, const QRect& rect, char32_t cp, int height,
+            const QColor& clTofu)
 {
     if (auto rend = getRenderer(cp)) {
         draw1(painter, rect, rend, height);
+    } else {
+        drawEmojiTofu(painter, rect, clTofu);
     }
 }
 
 
 void EmojiPainter::draw(
-            QPainter* painter, const QRect& rect, std::u32string_view cp, int height)
+            QPainter* painter, const QRect& rect, std::u32string_view cp, int height,
+            const QColor& clTofu)
 {
     if (auto rend = getRenderer(cp)) {
         draw1(painter, rect, rend, height);
+    } else {
+        drawEmojiTofu(painter, rect, clTofu);
     }
 }
 

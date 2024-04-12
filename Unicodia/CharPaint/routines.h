@@ -81,7 +81,8 @@ void drawSearchChars(
         const QColor& color, uc::EmojiDraw emojiMode,
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 void drawEmojiDirect(
-        QPainter* painter, const QRect& rect, std::u32string_view text);
+        QPainter* painter, const QRect& rect, std::u32string_view text,
+        const QColor& clTofu);
 
 void drawCharTiles(
         QPainter* painter, const QRect& rect,
@@ -124,7 +125,5 @@ private:
     QString qsubj;
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
-
-QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame);
 
 #endif

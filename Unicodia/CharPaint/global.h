@@ -3,6 +3,7 @@
 // Qt
 #include <QColor>
 #include <QSize>
+#include <QRectF>
 
 // Uc
 #include "UcAutoDefines.h"
@@ -28,3 +29,4 @@ struct CharTile {
 };
 using CharTiles = std::array<CharTile, 4>;
 
+QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame);

@@ -148,7 +148,7 @@ SkinToneQa doSkinToneQa()
                 thing.flags |= qi.mode;
                 const QRect& rcTest = (qi.mode == QaMode::EBONY) ? rcEbony : rcWhite;
                 QPainter painter(&thing.pix);
-                drawEmojiDirect(&painter, rcTest, node.value);
+                drawEmojiDirect(&painter, rcTest, node.value, Qt::black);
             }
         }
     }

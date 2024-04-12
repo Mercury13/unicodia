@@ -211,12 +211,14 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::EMOJI_CHAR: {
             QPainter painter(this);
             auto r = geometry();
-            emp.draw(&painter, r, subj, emojiHeight(r));
+            emp.draw(&painter, r, subj, emojiHeight(r),
+                     palette().windowText().color());
         } break;
     case Mode::EMOJI_TEXT: {
             QPainter painter(this);
             auto r = geometry();
-            emp.draw(&painter, r, text, emojiHeight(r));
+            emp.draw(&painter, r, text, emojiHeight(r),
+                     palette().windowText().color());
         } break;
     case Mode::VERTICAL: {
             QPainter painter(this);
@@ -714,7 +716,7 @@ void drawChar(
             if (useMargins != UseMargins::NO) {
                 h = h * EMOJI_NUM / EMOJI_DEN;
             }
-            emp.draw(painter, rect, cp.subj.ch32(), h);
+            emp.draw(painter, rect, cp.subj.ch32(), h, color);
         } break;
     }
     if (cp.isDeprecated())
@@ -780,15 +782,16 @@ void drawSearchChars(
     } else {
         // Graphic
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
-        emp.draw(painter, rect, text, h);
+        emp.draw(painter, rect, text, h, color);
     }
 }
 
 
 void drawEmojiDirect(
-        QPainter* painter, const QRect& rect, std::u32string_view text)
+        QPainter* painter, const QRect& rect, std::u32string_view text,
+        const QColor& clTofu)
 {
-    emp.draw(painter, rect, text, rect.height());
+    emp.draw(painter, rect, text, rect.height(), clTofu);
 }
 
 
@@ -830,7 +833,7 @@ void drawCharTiles(
                          tile.emojiDraw, glyphSets, UseMargins::NO);
         } else {
             // Multi-char
-            emp.draw(painter, r2, tile.text, sz);
+            emp.draw(painter, r2, tile.text, sz, color);
         }
     }
 }

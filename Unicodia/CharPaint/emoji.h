@@ -14,6 +14,7 @@ namespace Zippy {
 class QSvgRenderer;
 class QRect;
 class QPainter;
+class QColor;
 
 
 struct RecolorLib;  // forward
@@ -66,8 +67,9 @@ public:
     SvgThing getRenderer(char32_t cp);
     std::string_view getSvg(std::u32string_view text);
     std::string_view getSvg(char32_t cp);
-    void draw(QPainter* painter, const QRect& rect, char32_t cp, int height);
-    void draw(QPainter* painter, const QRect& rect, std::u32string_view cp, int height);
+    void draw(QPainter* painter, const QRect& rect, char32_t cp, int height, const QColor& clTofu);
+    void draw(QPainter* painter, const QRect& rect, std::u32string_view cp, int height, const QColor& clTofu);
+    static void drawEmojiTofu(QPainter* painter, const QRect& rect, const QColor& color);
     static void getFileName(
             std::span<char> rBuf,
             std::u32string_view text,
