@@ -60,6 +60,7 @@ namespace uc {
         Elba,   // Elbasan Albanian
         Elym,   // Elymaic
         Ethi,   // Ethiopic
+        Gara,   // Garay
         Geor,   // Georgian
         Glag,   // Glagolitic
         Gong,   // Gondi / Gunjala
@@ -68,6 +69,7 @@ namespace uc {
         Gran,   // Grantha
         Grek,   // Greek
         Gujr,   // Gujarati
+        Gukh,   // Gurung Khema
         Guru,   // Gurmukhi
         Hang,   // Hangul
         Hani,   // Chinese hieroglyphs
@@ -90,6 +92,7 @@ namespace uc {
         Khoj,   // Khojki
         Kits,   // Khitan small
         Knda,   // Kannada
+        Krai,   // Kirat Rai
         Kthi,   // Kaithi
         Lana,   // Tai-tham = Lanna
         Laoo,   // Lao
@@ -126,6 +129,7 @@ namespace uc {
         Nshu,   // Nushu
         Ogam,   // Ogham
         Olck,   // Ol Chiki
+        Onao,   // Ol Onal
         Orkh,   // Turkic runes
         Orya,   // Oriya
         Osge,   // Osage
@@ -157,6 +161,7 @@ namespace uc {
         Sora,   // Sora Sompeng
         Soyo,   // Soyombo
         Sund,   // Sundanese
+        Sunu,   // Sunuwar
         Sylo,   // Syloti Nagri
         Syrc,   // Syriac
         Tagb,   // Tagbanwa
@@ -174,7 +179,9 @@ namespace uc {
         Tibt,   // Tibetan
         Tirh,   // Tirhuta
         Tnsa,   // Tangsa
+        Todr,   // Todhri’s Albanian
         Toto,   // Toto
+        Tutg,   // Tulu Tigalari
         Ugar,   // Ugaritic
         Vaii,   // Vai
         Vith,   // Vithkuqi Albanian
@@ -274,6 +281,7 @@ namespace uc {
         V_14_0,
         V_15_0,
         V_15_1,
+        V_16_0,
         NN,
         UNKNOWN = NN,
         FIRST = 0,
@@ -291,6 +299,7 @@ namespace uc {
         E14_0 = V_14_0,
         E15_0 = V_15_0,
         E15_1 = V_15_1,
+        E16_0 = V_16_0,
     };
     inline EcVersion& operator ++ (EcVersion& x) noexcept
     {

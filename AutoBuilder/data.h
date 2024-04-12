@@ -16,25 +16,25 @@ enum class Dicf {
     CAP_TITLE               = 1 << 1,
     CAP_SMALL               = 1 << 2,
     // Triggered by
-    IF_SCRIPT               = 1 << 3,   // Capitalize if somewhere script is found
-    IF_NEXT_NOT_NOUN        = 1 << 4,   // Capitalize if next is not noun
+    IF_SCRIPT               = 1 << 3,   ///< Capitalize if somewhere script is found
+    IF_NEXT_NOT_NOUN        = 1 << 4,   ///< Capitalize if next is not noun
 
     // Parts of speech
-    PART_ADJECTIVE          = 1 << 5,   // “letter Long A” → “long” propagates capitalization to the right
-    PART_NOUN               = 1 << 6,   // Noun: stop propagation
-    PART_MIXED              = 1 << 7,   // Noun / adjective
-    PART_MAYBE_LETTER       = 1 << 8,   // Probably letter: adjectives → capitalize
-    PART_NUMERAL            = 1 << 9,   // Probably letter: adjectives → capitalize
+    PART_ADJECTIVE          = 1 << 5,   ///< “letter Long A” → “long” propagates capitalization to the right
+    PART_NOUN               = 1 << 6,   ///< Noun: stop propagation
+    PART_MIXED              = 1 << 7,   ///< Noun / adjective
+    PART_MAYBE_LETTER       = 1 << 8,   ///< Probably letter: adjectives → capitalize
+    PART_NUMERAL            = 1 << 9,   ///< Probably letter: adjectives → capitalize
 
     // Triggers
-    TRIG_SCRIPT             = 1 << 10,  // This word is script
-    TRIG_TWO_WORD_SCRIPT    = 1 << 11,  // Script consisting of two words: Old Italic
-    TRIG_CAP_NEXT           = 1 << 12,  // Capitalize next word
-    TRIG_DIGIT_PROPAGATES_RIGHT = 1 << 13, // Digit propagates right “Mende Kikakui syllable M135 In”
-    TRIG_THREE_WORD_SCRIPT  = 1 << 14,  // Script consisting of three words: Pau Cin Hau
-    TRIG_SCRIPT_IF_FIRST    = 1 << 15,  // Script if 1st word (Yi)
-    TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  // OLD NORTH Arabian → propagate script to the left
-    TRIG_FORCE_FULL_DECAP   = 1 << 17,  // Force full decap if we are requesting just dictionary
+    TRIG_SCRIPT             = 1 << 10,  ///< This word is script
+    TRIG_TWO_WORD_SCRIPT    = 1 << 11,  ///< Script consisting of two words: Ol Chiki
+    TRIG_CAP_NEXT           = 1 << 12,  ///< Capitalize next word
+    TRIG_DIGIT_PROPAGATES_RIGHT = 1 << 13, ///< Digit propagates right “Mende Kikakui syllable M135 In”
+    TRIG_THREE_WORD_SCRIPT  = 1 << 14,  ///< Script consisting of three words: Pau Cin Hau
+    TRIG_SCRIPT_IF_FIRST    = 1 << 15,  ///< Script if 1st word (Yi)
+    TRIG_SCRIPT_ADJECTIVE   = 1 << 16,  ///< OLD NORTH Arabian → propagate script to the left
+    TRIG_FORCE_FULL_DECAP   = 1 << 17,  ///< Force full decap if we are requesting just dictionary
 };
 
 DEFINE_ENUM_OPS(Dicf)

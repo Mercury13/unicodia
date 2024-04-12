@@ -831,6 +831,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
             "Vithkuqi",
             { EcScript::Vith, 0 }, MapType::EU_OTHER_DEAD, EcScript::Vith },
+    /// @todo [U16, font] Todhri
+    { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE, Ifg::MISSING },
+            "Todhri",
+            { EcScript::Todr, 0 }, MapType::EU_OTHER_DEAD, EcScript::Todr },
     // Linear A OK
     { 0x10600, 0x1077F, { 0x1062C, EcContinent::EUROPE },
             "Linear A",
@@ -920,6 +924,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA, {}, SvgHint{ 4, 15 } },
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
+    /// @todo [U16, font] Garay
+    { 0x10D40, 0x10D8F, { 0x10D40, EcContinent::AFRICA, Ifg::MISSING  },
+            "Garay",
+            { EcScript::Gara, 0}, MapType::AF, EcScript::Gara },
     // Rumi OK
     { 0x10E60, 0x10E7F, { 0x10E77, EcContinent::AFRICA, Ifg::CONTINENT_OK },
             "Rumi Numeral Symbols",
@@ -1002,6 +1010,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA },
             "Grantha",
             { EcScript::Gran, 0 }, MapType::AS_BRAH_DEAD, EcScript::Gran },
+    /// @todo [U16, font] Tulu Tigalari
+    { 0x11380, 0x113FF, { 0x11380, EcContinent::ASIA, Ifg::MISSING  },
+            "Tulu-Tigalari",
+            { EcScript::Tutg, 0}, MapType::AS_BRAH, EcScript::Tutg },
     // Newa OK
     { 0x11400, 0x1147F, { 0x1140E, EcContinent::ASIA, {}, 2_hy },
             "Newa",
@@ -1027,6 +1039,11 @@ constinit const uc::Block uc::blocks[] {
     { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri",
             { EcScript::Takr, 0 }, MapType::AS_BRAH_DEAD, EcScript::Takr },
+    /// @todo [U16, font] Myanmar ex C
+    { 0x116D0, 0x116FF, { 0x116D0, EcContinent::ASIA, Ifg::MISSING  },
+            "Myanmar Extended-C",
+            { EcScript::Mymr, 'C' }, MapType::AS_BRAH,
+            EcScript::Mymr, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Ahom OK
     { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom",
@@ -1069,6 +1086,10 @@ constinit const uc::Block uc::blocks[] {
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapType::AS_BRAH_DEAD,
             EcScript::Deva, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
+    /// @todo [U16, font] Sunuwar
+    { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, Ifg::MISSING  },
+            "Sunuwar",
+            { EcScript::Sunu, 0 }, MapType::AS_OTHER, EcScript::Sunu },
     // Bhaiksuki OK
     { 0x11C00, 0x11C6F, { 0x11C0E, EcContinent::ASIA },
             "Bhaiksuki",
@@ -1126,12 +1147,20 @@ constinit const uc::Block uc::blocks[] {
     // Egyptian hiero format OK
     { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::FORMAT },
             "Egyptian Hieroglyph Format Controls",
-            { EcScript::Egyp, 1 }, MapType::AF_DEAD,
+            { EcScript::Egyp, 'f' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS },
+    /// @todo [U16, font] Egyp A
+    { 0x13460, 0x143FF, { 0x13460, EcContinent::AFRICA, Ifg::MISSING  },
+            "Egyptian Hieroglyphs Extended-A",
+            { EcScript::Egyp, 'A' }, MapType::AF_DEAD, EcScript::Egyp },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hluw },
+    /// @todo [U16, font] Gurung Khema
+    { 0x16100, 0x1613F, { 0x16100, EcContinent::ASIA, Ifg::MISSING  },
+            "Gurung Khema",
+            { EcScript::Gukh, 0 }, MapType::AS_BRAH, EcScript::Gukh },
     // Bamum supplement OK
     { 0x16800, 0x16A3F, { 0x16812, EcContinent::AFRICA },
             "Bamum Supplement",
@@ -1153,6 +1182,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
             "Pahawh Hmong",
             { EcScript::Hmng, 0 }, MapType::AS_OTHER, EcScript::Hmng },
+    /// @todo [U16, font] Kirat Rai
+    { 0x16D40, 0x16D7F, { 0x16D40, EcContinent::ASIA, Ifg::MISSING  },
+            "Kirat Rai",
+            { EcScript::Krai, 0 }, MapType::AS_BRAH, EcScript::Krai },
     // Medefaidrin OK
     { 0x16E40, 0x16E9F, { 0x16E60, EcContinent::AFRICA, {}, SvgHint{ 3, ImbaY::BELOW_3 } },
             "Medefaidrin",
@@ -1223,6 +1256,11 @@ constinit const uc::Block uc::blocks[] {
             "Shorthand Format Controls",
             { EcScript::Dupl, 1}, MapType::SYM_CODE,
             EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
+    /// @todo [U16, font] Symbols for Legacy Computing Supplement
+    { 0x1CC00, 0x1CEBF, { 0x1CC00, EcContinent::NONE, Ifg::MISSING  },
+            "Symbols for Legacy Computing Supplement",
+            MyName::INST, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Znamenny OK, found cool font on Ponomar
     { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation",
@@ -1305,6 +1343,10 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari",
             { EcScript::Nagm, 0}, MapType::AS_OTHER, EcScript::Nagm },
+    /// @todo [U16, font] Ol Onal
+    { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, Ifg::MISSING  },
+            "Ol Onal",
+            { EcScript::Onao, 0 }, MapType::AS_OTHER, EcScript::Onao },
     // Ethiopic ex B OK, Noto quickly arrived
     { 0x1E7E0, 0x1E7FF, { 0x1E7FB, EcContinent::AFRICA, {}, SvgHint{ 14, ImbaY::ABOVE_4 } },
             "Ethiopic Extended-B",

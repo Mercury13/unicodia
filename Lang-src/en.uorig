@@ -2400,6 +2400,11 @@
      <orig>Albanian — Vithkuqi</orig>
     </text>
    </group>
+   <group id="105C0">
+    <text id="Name">
+     <orig>Albanian — Todhri</orig>
+    </text>
+   </group>
    <group id="10600">
     <text id="Name">
      <orig>Linear A</orig>
@@ -2656,6 +2661,14 @@
      <orig>Takri</orig>
     </text>
    </group>
+   <group id="116D0">
+    <text id="Name">
+     <orig>Myanmar extended C</orig>
+    </text>
+    <text id="Text">
+     <orig>Two sets of digits gaining popularity among minorities.</orig>
+    </text>
+   </group>
    <group id="11700">
     <text id="Name">
      <orig>Ahom</orig>
@@ -2710,6 +2723,11 @@
     </text>
     <text id="Text">
      <orig>Jain punctuation and [[pt:ligature|ligatures]] for phrased like “may it be blessed”.</orig>
+    </text>
+   </group>
+   <group id="11BC0">
+    <text id="Name">
+     <orig>Sunuwar</orig>
     </text>
    </group>
    <group id="11C00">
@@ -2941,6 +2959,14 @@
     </text>
     <text id="Text">
      <orig>[[pt:ignorable|Invisible]] characters used for Romanian and Chinook ''(Natives Americans, North-West USA)'' shorthand.</orig>
+    </text>
+   </group>
+   <group id="1CC00">
+    <text id="Name">
+     <orig>Symbols for legacy computing supplement</orig>
+    </text>
+    <text id="Text">
+     <orig>The final bit of symbols from old computers. There probably will be no more big additions of such symbols. Unicode{{_}}17 will disunify a few console symbols from emoji.</orig>
     </text>
    </group>
    <group id="1CF00">
@@ -5802,6 +5828,17 @@
      </orig>
     </text>
    </group>
+   <group id="Sunu">
+    <text id="Name">
+     <orig>Sunuwar</orig>
+    </text>
+    <text id="Lang">
+     <orig>Sunuwar ''(Nepal, 38k as of 2011)''</orig>
+    </text>
+    <text id="Text">
+     <orig>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</orig>
+    </text>
+   </group>
    <group id="Sylo">
     <text id="Name">
      <orig>Syloti Nagri</orig>
@@ -6153,6 +6190,21 @@
       <p>Aplhabet suits well to phonetics of Albanian, but for some reason has no{{_}}letters for digraphs “gj”, “rr”, “xh” and “zh” of modern Albanian.</p>
       <p />
       <p>There are several reasons for multiple Albanian alphabets ([[ps:Elba|Elbasan]], Vithkuqi, Todhri, Veso Bey, Vellara): scholars of national liberation movement looked at Slavs, Greeks and Turks and wanted their own alphabet, and just secret from Turks (Albania got independence in 1912 with collapse of Ottoman Empire). Naum’s reason is surely the former: his letters survived where he responded to criticism, and alphabet was made far from [[ps:Latn|Latin]], [[ps:Grek|Greek]] and [[ps:Arab|Arabic]] because of religious neutrality.</p>
+     </orig>
+    </text>
+   </group>
+   <group id="Todr">
+    <text id="Name">
+     <orig>Todhri (Elbasan) alphabet for Albanian</orig>
+    </text>
+    <text id="Lang">
+     <orig>Albanian</orig>
+    </text>
+    <text id="Text">
+     <orig>
+      <p>Was used rather widely around Elbasan until the inventor died in 1805.</p>
+      <p />
+      <p>Do not confuse with [[ps:Elba|alphabet of Elbasan Gospel]]!</p>
      </orig>
     </text>
    </group>

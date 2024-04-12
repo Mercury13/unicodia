@@ -135,6 +135,7 @@ constinit const uc::Version uc::versionInfo[] {
     { u8"14.0", { 2021, Month::SEP }, NO_FLAGS },
     { u8"15.0", { 2022, Month::SEP }, NO_FLAGS },
     { u8"15.1", { 2023, Month::SEP }, Vfg::TEXT },
+    { u8"16.0", { 2024, Month::SEP }, Vfg::BETA },
 };
 static_assert (std::size(uc::versionInfo) == static_cast<int>(uc::EcVersion::NN));
 Buf1d<const uc::Version> uc::allVersions() { return versionInfo; }
@@ -352,6 +353,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC },
+    /// @todo [U16, font] Garay
+    { "Gara", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::COMPETING, EcWritingDir::RTL, EcContinent::AFRICA,
+        Dating::year(1961), EcFont::NORMAL },
     // Georgian OK, installed Google Noto font
     { "Geor", QFontDatabase::Georgian,
         EcScriptType::ALPHABET, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::EUROPE,
@@ -384,6 +389,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI },
+    /// @todo [U16, font] Gurung Khema
+    { "Gukh", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::year(1944), EcFont::NORMAL },
     // Gurmukhi OK, installed Google Noto *UI* because of W7 troubles; UI better handles umlauts
     { "Guru", QFontDatabase::Gurmukhi,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -471,6 +480,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::CUSTOM), EcFont::KANNADA },
+    /// @todo [U16, font] Kirat Rai
+    { "Krai", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::year(1920), EcFont::NORMAL },
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,
@@ -617,6 +630,11 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1925), EcFont::OLCHIKI },
+    /// @todo [U16 font] Ol Onal
+    { "Onao", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::decade(1980), EcFont::NORMAL },
+    // Orkhon runes OK, took Noto
     { "Orkh", QFontDatabase::Any,
         EcScriptType::ALPHASYLLABLE, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
         Dating::century(6), EcFont::ORKHON },
@@ -741,6 +759,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(14), EcFont::SUNDANESE },
+    /// @todo [U16, font] Sunuwar
+    { "Sunu", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::year(1942), EcFont::NORMAL },
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -809,10 +831,18 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1990), EcFont::TANGSA },
+    /// @todo [U16] Todhri
+    { "Todr", QFontDatabase::Any,
+        EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
+        Dating::yapprox(1780), EcFont::NORMAL },
     // Toto OK, U14, moved that font to FunkySample
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(2015), EcFont::FUNKY },
+    /// @todo [U16] Tulu Tigalari
+    { "Tutg", QFontDatabase::Any,
+        EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
+        Dating::century(9), EcFont::NORMAL },
     // Ugaritic OK
     { "Ugar", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::LTR, EcContinent::ASIA,
@@ -1753,7 +1783,8 @@ void uc::completeData()
         if (script.plane == PLANE_UNKNOWN)
             script.plane = cp.plane();
         // Block
-        auto block = blockOf(cp.subj);
+        char32_t code = cp.subj;
+        auto block = blockOf(code);
         if (!block->firstAllocated)
             block->firstAllocated = &cp;
         block->lastAllocated = &cp;

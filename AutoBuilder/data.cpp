@@ -67,6 +67,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "DUPLOYAN",       Dicf::TRIG_SCRIPT },
     { "DIVES",          Dicf::TRIG_SCRIPT },
      { "AKURU",         Dicf::TRIG_SCRIPT },
+    { "EASTERN",        { Dicf::TRIG_TWO_WORD_SCRIPT | Dicf::PART_ADJECTIVE,
+                        {}, "PWO" } },
     { "EGYPTIAN",       Dicf::TRIG_SCRIPT },
     { "ELBASAN",        Dicf::TRIG_SCRIPT },
     { "ELYMAIC",        Dicf::TRIG_SCRIPT },
@@ -74,6 +76,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
       { "GURAGE",       Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "KHUTSURI",       Dicf::TRIG_SCRIPT },    // Unused, but…
     { "FRAKTUR",        Dicf::TRIG_SCRIPT },
+    { "GARAY",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "GEORGIAN",       Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
      { "MTAVRULI",      Dicf::TRIG_SCRIPT },
     { "GONDI",          Dicf::TRIG_SCRIPT },
@@ -98,6 +101,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
       { "TROEZENIAN",     Dicf::TRIG_SCRIPT },
     { "GUJARATI",       Dicf::TRIG_SCRIPT },
     { "GURMUKHI",       Dicf::TRIG_SCRIPT },
+    { "GURUNG",         Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+      { "KHEMA",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "HANGUL",         Dicf::TRIG_SCRIPT },
     { "HANIFI",         Dicf::TRIG_SCRIPT },
      { "ROHINGYA",      Dicf::TRIG_SCRIPT },
@@ -129,6 +134,8 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "KHOJKI",         Dicf::TRIG_SCRIPT },
     { "KHITAN",         Dicf::TRIG_SCRIPT },
     { "KHUDAWADI",      Dicf::TRIG_SCRIPT },
+    { "KIRAT",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
+      { "RAI",          Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "KLINGON",        Dicf::TRIG_SCRIPT },
     { "KOREAN",         Dicf::TRIG_SCRIPT },
     { "KPELLE",         Dicf::TRIG_SCRIPT },
@@ -175,7 +182,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "NUBIAN",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "NUSHU",          Dicf::TRIG_SCRIPT },
     { "OGHAM",          Dicf::TRIG_SCRIPT },
-    { "OL",             { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv } },
+    { "OL",             { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "CHIKI"sv, "ONAL"sv } },
     { "OTTOMAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "TURKIC",         Dicf::TRIG_SCRIPT },
     { "ORIYA",          Dicf::TRIG_SCRIPT },
@@ -214,6 +221,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SORA",           { Dicf::TRIG_TWO_WORD_SCRIPT, {}, "SOMPENG"sv } },
     { "SOYOMBO",        Dicf::TRIG_SCRIPT },
     { "SUNDANESE",      Dicf::TRIG_SCRIPT },
+    { "SUNUWAR",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "SYLOTI",         Dicf::TRIG_SCRIPT },
     { "NAGRI",          Dicf::TRIG_SCRIPT },
     { "SOGDIAN",        Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
@@ -237,7 +245,9 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "THAI",           Dicf::TRIG_SCRIPT },
     { "TIBETAN",        Dicf::TRIG_SCRIPT },
     { "TIRHUTA",        Dicf::TRIG_SCRIPT },
+    { "TODHRI",         Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE },
     { "TOTO",           Dicf::TRIG_SCRIPT },
+    { "TULU-TIGALARI",  { Dicf::TRIG_SCRIPT | Dicf::PART_ADJECTIVE, "Tulu-Tigalari" } },
     { "UIGHUR",         Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE },
     { "UYGHUR",         Dicf::TRIG_SCRIPT | Dicf::CAP_TITLE },
     { "UGARITIC",       Dicf::TRIG_SCRIPT },
@@ -332,6 +342,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "KHAMTI",         Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "MON",            Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "PALAUNG",        Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
+    { "PAO",            Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "PWO",            Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "RUMAI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
     { "SGAW",           Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
@@ -435,6 +446,7 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "SHAD",           Dicf::PART_NOUN },
     { "SHELF",          Dicf::PART_NOUN },
     { "SHOE",           Dicf::PART_NOUN },  // For APL not really, but OK
+    { "SHRII",          Dicf::PART_NOUN | Dicf::CAP_TITLE }, // That’s for Indic, near miss but OK in Cans
     { "SPIRAL",         Dicf::PART_NOUN },
     { "SPIRANT",        Dicf::PART_NOUN },  // One time, probably OK
     { "STEM",           Dicf::PART_NOUN },
@@ -1141,7 +1153,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Kthi
     EX("Kaithi number sign above")  // Number’s mark → number is not keyword
         // Lana
-    EX("Tai Tham consonant sign High Ratha or low Pa")
+    EX("Tai Tham consonant sign High Ratha or Low Pa")
+        // Mymr
+    EX("Myanmar sign Pao Karen tone")  // What to do, “tone” is overloaded
         // Orya
     EX("Oriya Ai length mark")      // IDK how to make rule, hand-checked Length
         // Sinh
@@ -1164,6 +1178,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("A-chung")
     EX("Ya-btags (Ya ta)")
     EX("Ra-btags (Ra ta)")
+        // Tutg
+    EX("Tulu-Tigalari Vedic tone Svarita")  // What to do?
+    EX("Tulu-Tigalari Vedic tone Anudatta")
         // Zanb
     EX("Zanabazar square final consonant mark") // Some bugs
     EX("Zanabazar square vowel length mark")    // “Vowel” is not keyword
@@ -1287,6 +1304,8 @@ const std::unordered_map<std::string_view, Exception> exceptions{
         // Ethi
     EX("Ethiopic combining gemination and vowel length mark") // Vowel is not keyword here
     EX("Ethiopic combining vowel length mark")                // Same
+        // Gara
+    EX("Garay vowel length mark") // Vowel is not keyword here
         // Medf
     EX("Medefaidrin exclamation Oh")  // Cannot make a rule for “exclamation”, too hard
         // Tfng
@@ -1557,6 +1576,12 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Arabic mathematical Sad")    // Ambiguous
     EX("Arabic mathematical Sheen")  // Ambiguous
 
+    // Legacy
+    EX("NPN transistor")
+    EX("PNP transistor")
+    EX("logic gate Or")
+    EX("logic gate And")
+
     // Hand-checked CJK Latin
     EX("squared HV")                            // Just manually, small block
     EX("squared MV")
@@ -1728,6 +1753,7 @@ const std::multiset<PrefixEntry> prefixes {
     { { "APL"sv, "FUNCTIONAL"sv, "SYMBOL"sv }, PrefixAction::REST_CAPSMALL },
     { { "QUADRANT"sv }, PrefixAction::NEXT_CAP },
     { { "BOX"sv, "DRAWINGS"sv }, PrefixAction::NEXT_CAP },
+    { { "LARGE"sv, "TYPE"sv, "PIECE"sv }, PrefixAction::NEXT_CAP },
     { { "MAHJONG"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "DOMINO"sv, "TILE"sv }, PrefixAction::REST_CAPSMALL },
     { { "PLAYING"sv, "CARD"sv }, PrefixAction::REST_CAPSMALL },
