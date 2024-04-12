@@ -8,6 +8,9 @@
 #include "loader.h"
 #include "data.h"
 
+// Unicode
+#include "UcCp.h"
+
 // Misc
 #include "u_Strings.h"
 
@@ -57,6 +60,38 @@ namespace {
         return r;
     }
 
+    std::vector<ucd::HangulLine> loadHangulLines()
+    {
+        std::vector<ucd::HangulLine> r;
+
+        std::ifstream is(DER_NAME);
+        std::string line;
+        while (std::getline(is, line)) {
+            auto trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+
+            auto vals = str::splitSv(trimmed, ';', false);
+            if (vals.size() < 2)
+                continue;
+
+            unsigned code;
+            if (fromHexIf(vals.at(0), code)) {
+                if (code >= cp::HANGUL_SYLL_FIRST && code <= cp::HANGUL_SYLL_LAST) {
+                    auto name = decapitalize(vals.at(1), code);
+                    r.emplace_back(code, name);
+                }
+            }
+        }
+
+        return r;
+    }
+
+    std::unordered_map<char32_t, std::string> loadHanNumValues()
+    {
+
+    }
+
 }
 
 ucd::SupportData ucd::loadSupportData()
@@ -64,6 +99,7 @@ ucd::SupportData ucd::loadSupportData()
     SupportData r;
 
     r.nBlocks = loadBlocks();
+    r.hangulLines = loadHangulLines();
 
     return r;
 }
@@ -76,6 +112,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
     CpInfo info;
     char32_t firstCp = 0;
     std::string_view repeatedText = "REPEAT!! #"sv;
+    std::string replNameCache;
     while (std::getline(is, line)) {
         auto trimmed = str::trimSv(line);
         if (trimmed.empty())
@@ -95,7 +132,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
         auto numericValue = vals.at(8);
 
         // Check these numeric values, need smth
-        info.numeric.numericValue = numericValue;
+        info.numeric.value = numericValue;
         info.numeric.type = numericValue.empty() ? &NUM_NONE : &NUM_NUMBER;
         if (!decimalDigitValue.empty()) {
             if (decimalDigitValue != specialDigitValue || decimalDigitValue != numericValue) {
@@ -129,7 +166,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                 sink.act(info);
             } else if (info.name == "<CJK Ideograph Extension A, First>"sv
                     || info.name == "<CJK Ideograph, First>"sv
-                    || info.name == "<Hangul Syllable, First>"sv
+                    || info.name == "<Hangul Syllable, First>"sv // Let it be for Hangul!
                     || info.name == "<CJK Ideograph Extension B, First>"sv
                     || info.name == "<CJK Ideograph Extension C, First>"sv
                     || info.name == "<CJK Ideograph Extension D, First>"sv
@@ -158,6 +195,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                     || info.name == "<CJK Ideograph Extension H, Last>"sv
                     || info.name == "<CJK Ideograph Extension I, Last>"sv
                     || info.name == "<CJK Ideograph Extension J, Last>"sv) {
+                // CJK and Tangut — use repeated text
                 auto lastCp = info.cp;
                 info.name = repeatedText;
                 for (char32_t i = firstCp; i <= lastCp; ++i) {
@@ -166,7 +204,11 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                 }
                 firstCp = 0;
             } else if (info.name == "<Hangul Syllable, Last>"sv) {
-                /// @todo [urgent] What to do with Hangul?
+                for (auto& v : supportData.hangulLines) {
+                    info.cp = v.cp;
+                    info.name = v.name;
+                    sink.act(info);
+                }
                 firstCp = 0;
             } else if (info.name == "<Non Private Use High Surrogate, First>"sv
                     || info.name == "<Non Private Use High Surrogate, Last>"sv
@@ -188,8 +230,9 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
         } else {    // NORMAL NAME
             // Decapitalise it here!
             if (firstCp != 0)
-                throw std::logic_error("Started special range, left firstCp");
+                throw std::logic_error("Unfinished special range");
             std::string decapped = decapitalize(info.name, info.cp);
+            str::replace(decapped, sCp, "#"sv);
             info.name = decapped;
             sink.act(info);
         }

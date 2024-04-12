@@ -15,6 +15,7 @@
 #define UCD_MAIN "UnicodeData.txt"
 #define DER_AGE "DerivedAge.txt"
 #define DER_CORE "DerivedCoreProperties.txt"
+#define DER_NAME "DerivedName.txt"
 #define HAN_DIC "Unihan_DictionaryLikeData.txt"
 #define EMOJI_TEST "emoji-test.txt"
 #define ENTITIES_HTML "entities.htm"

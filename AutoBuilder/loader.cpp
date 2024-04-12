@@ -116,6 +116,7 @@ namespace {
         { RAWDATA UCD_MAIN },
         { RAWDATA DER_AGE },
         { RAWDATA DER_CORE },
+        { RAWDATA DER_NAME },
         { RAWDATA HAN_DIC },
         { RAWDATA EMOJI_TEST },
         { RAWDATA EGYP_UNICODE },

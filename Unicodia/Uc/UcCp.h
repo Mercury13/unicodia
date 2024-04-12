@@ -25,6 +25,10 @@ namespace cp {
     constexpr char32_t DING_RIGHT_ARROW = 0x27A1;
     constexpr char32_t EMOJI_RIGHT_ARROW = DING_RIGHT_ARROW;
 
+    // Hangul syllables
+    constexpr char32_t HANGUL_SYLL_FIRST = 0xAC00;
+    constexpr char32_t HANGUL_SYLL_LAST = 0xD7AF;
+
     // Variation selectors
     constexpr char32_t VS15 = 0xFE0E;
     constexpr char32_t VS16 = 0xFE0F;

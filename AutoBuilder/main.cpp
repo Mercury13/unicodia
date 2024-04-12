@@ -37,7 +37,8 @@ inline auto need(T&& val, const char* errmsg)
 struct Numeric {
     long long num, denom;
     long long altInt = 0;
-    std::string_view type, textValue;
+    std::string_view type;
+    std::string textValue;
     size_t index;
 };
 
@@ -48,10 +49,8 @@ long long fromChars(std::string_view x, std::string_view numType)
     auto end = beg + x.length();
     auto res = std::from_chars(beg, end, r);
     if (res.ec != std::errc() || res.ptr != end) {
-        std::string errm = "[fromChars] Cannot parse number ";
-        errm.append(x);
-        errm.append(", numType = ");
-        errm.append(numType);
+        std::string errm = str::cat(
+            "[fromChars] Cannot parse number ", x, ", numType = ", numType);
         throw std::invalid_argument(errm);
     }
     return r;
@@ -59,13 +58,13 @@ long long fromChars(std::string_view x, std::string_view numType)
 
 Numeric parseNumeric(std::string_view numType, std::string_view x, size_t index)
 {
-    if (x == "NaN"sv) {
+    if (x.empty()) {
         return {
             .num = 0,
             .denom = 0,
                     .altInt = 0,
             .type = numType,
-            .textValue = x,
+            .textValue{},
             .index = index };
     }
 
@@ -85,7 +84,7 @@ Numeric parseNumeric(std::string_view numType, std::string_view x, size_t index)
             .denom = 1,
             .altInt = altNum,
             .type = numType,
-            .textValue = x,
+            .textValue = std::string{x},
             .index = index };
     } else {
         // Fraction
@@ -96,7 +95,7 @@ Numeric parseNumeric(std::string_view numType, std::string_view x, size_t index)
             .denom = fromChars(den, numType),
             .altInt = altNum,
             .type = numType,
-            .textValue = x,
+            .textValue = std::string{x},
             .index = index };
     }
 }
@@ -113,10 +112,7 @@ struct NumCache
 const Numeric& NumCache::parse(std::string_view numType, std::string_view x)
 {
     // Get key
-    std::string key;
-    key.reserve(numType.length() + x.length());
-    key.append(numType);
-    key.append(x);
+    std::string key = str::cat(numType, x);
     // Check index
     auto it = ndx.find(key);
     if (it != ndx.end())
@@ -156,12 +152,6 @@ std::string_view transform(std::string_view x, StrMap (&map)[N])
     throw std::invalid_argument(std::move(errm));
 }
 
-StrMap smNumType[] {
-    { "De"sv, "DIGIT" },
-    { "Di"sv, "SPECIAL_DIGIT" },
-    { "None"sv, "NONE" },
-    { "Nu"sv, "NUMBER" },
-};
 StrMap smCharCat[] {
     { "Cc"sv, "CONTROL"sv },
     { "Cf"sv, "FORMAT"sv },
@@ -430,7 +420,8 @@ int main()
 
     std::cout << "Loading main base's support data..." << std::flush;
     const auto supportData = ucd::loadSupportData();
-    std::cout << "OK, " << supportData.nBlocks << " blocks." << '\n';
+    std::cout << "OK, " << supportData.nBlocks << " blocks, "
+                        << supportData.hangulLines.size() << " Hangul lines." << '\n';
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -442,51 +433,18 @@ int main()
 
     ///// Main base ////////////////////////////////////////////////////////////
 
-    std::cout << "Processing main base..." << std::flush;
-    ucd::processMainBase(supportData, ucd::DummySink{});
-    std::cout << "OK" << '\n';
-
-    ///// XML base /////////////////////////////////////////////////////////////
-
-    pugi::xml_document doc;
-
-    std::cout << "Loading Unicode XML base..." << std::flush;
-    doc.load_buffer(memXml.data(), memXml.size());
-    std::cout << "OK" << '\n';
-
-    ///// CpInfo ///////////////////////////////////////////////////////////////
-
-    unsigned nChars = 0, nSpecialRanges = 0;
-
-    auto elRoot = need(doc.root().child("ucd"), "Need <ucd>");
-    auto elRepertoire = need(elRoot.child("repertoire"), "Need <repertoire>");
-    std::cout << "Found repertoire, generating character info..." << std::flush;
+    StringLib strings;
+    NumCache nums;
+    int nDeprecated = 0, nUpCase = 0, nChars = 0;
     NewLine nl;
+    std::cout << "Processing main base..." << std::flush;
+
     os << '\n';
     os << R"(uc::Cp uc::cpInfo[N_CPS] {)" << '\n';
 
-    StringLib strings;
-    NumCache nums;
-    int nDeprecated = 0;
-    int nUpCase = 0;
-    for (pugi::xml_node elChar : elRepertoire.children("char")) {
-        /// @todo [urgent] get CP → column 0
-        std::string_view sCp = elChar.attribute("cp").as_string();
-        if (sCp.empty()) {
-            ++nSpecialRanges;
-            continue;
-        }
-        // Get CP
-        auto cp = fromHex(sCp);
-
-        // Aliases:
-        // • Abbreviation: Implement later
-        // • Alternate: Prefer na1
-        // • Control: Prefer na1
-        // • Figment: Implement
-
-        /// @todo [urgent] get name, replace code with # → column 1
-        std::string_view sName = elChar.attribute("na").as_string();
+    ucd::processMainBaseT(supportData, [&](const ucd::CpInfo& cpInfo) {
+        auto cp = cpInfo.cp;
+        std::string_view sName = cpInfo.name;
 
         std::string_view defaultAbbrev {};      // empty
 
@@ -540,7 +498,7 @@ int main()
         auto [pTech, wasIns] = strings.remember(cp, uc::TextRole::MAIN_NAME, sLowerName);
         if (hasAbbrev && !wasIns) {
             nl.trigger();
-            std::cout << "WARNING: char " << std::hex << cp << " has an abbreviation and a repeating name." << '\n';
+            std::cout << "WARNING: char " << std::hex << int(cp) << " has an abbreviation and a repeating name." << '\n';
         }
 
         auto abbrevRole = (abbrevState == AbbrevState::NORMAL)
@@ -572,7 +530,7 @@ int main()
         if (v != htmlEntities.data.end()) {
             if (!wasIns) {
                 nl.trigger();
-                std::cout << "WARNING: char " << std::hex << cp << " has HTML and a repeating name." << '\n';
+                std::cout << "WARNING: char " << std::hex << int(cp) << " has HTML and a repeating name." << '\n';
             }
             for (auto &w : v->second)
                 strings.forceRemember(cp, uc::TextRole::HTML, w);
@@ -631,23 +589,20 @@ int main()
 
         // OUTPUT
         os << "{ "
-           << "0x" << std::hex << cp << ", "    // subj
+           << "0x" << std::hex << int(cp) << ", "    // subj
            << "{ "                              // name
                 << std::dec << pTech->offset    // name.tech,
            << " }, ";                           // /name
 
         // Char’s type
-        /// @todo [urgent] get char’s type → column 2
-        std::string_view sCharCat = elChar.attribute("gc").as_string();
-        os << "EcCategory::" << transform(sCharCat, smCharCat) << ", ";
+        os << "EcCategory::" << transform(cpInfo.generalCat, smCharCat) << ", ";
 
         // Char’s version
         auto& sVersion = ages.findRq(cp);
         os << "EcVersion::V_" << transformVersion(sVersion) << ", ";
 
         // Char’s bidirectional data
-        /// @todo [urgent] get bidirectional class → column 3
-        std::string_view sBidiClass = elChar.attribute("bc").as_string();
+        std::string_view sBidiClass = cpInfo.bidiCat;
             // Check whether have bracket
         /// @todo [urgent] Can check column 9 instead of a separate file?
         if (mirroring.contains(cp)) {
@@ -664,17 +619,10 @@ int main()
             sScript = "Hent"sv;
         os << "EcScript::" << sScript << ", ";
 
-        char32_t upCase = 0;
-        /// @todo [urgent] get uppercase → column 12
-        // OK here in text base:
-        std::string_view upText = elChar.attribute("uc").as_string();
-        if (!upText.empty()             // Empty → no upper case
-                && upText[0] != '#'     // # → no upper case
-                && upText.find(' ') == std::string_view::npos) { // upcases to several chars like ẞ→SS → drop
-            upCase = fromHex(upText);
+        if (cpInfo.upperCase != 0) {
             ++nUpCase;
         }
-        forget::processCp(manualLib.forgetMap, cp, sLowerName, sScript, upCase);
+        forget::processCp(manualLib.forgetMap, cp, sLowerName, sScript, cpInfo.upperCase);
 
         // Char’s numeric values
         // nt = …
@@ -683,10 +631,7 @@ int main()
         //    • Di — special digit
         //    • Nu — number
         // nv = Nan / whole number / vulgar fraction
-        /// @todo [urgent] get num type/value
-        std::string_view sNumType = elChar.attribute("nt").as_string();
-        std::string_view sNumValue = elChar.attribute("nv").as_string();
-        auto& numPlace = nums.parse(sNumType, sNumValue);
+        auto& numPlace = nums.parse(cpInfo.numeric.type->id, cpInfo.numeric.value);
         os << numPlace.index << ", ";
 
         if (flags) {
@@ -699,15 +644,14 @@ int main()
         ++nChars;
 
         strings.finishCp();
-    }
+    });
 
     os << "};" << '\n';
 
     std::cout << "OK" << '\n';
     std::cout << "  Found " << std::dec << nChars << " chars, "
               << nUpCase << " to-up-case, "
-              << nDeprecated << " deprecated, "
-              << nSpecialRanges << " special ranges." << '\n';
+              << nDeprecated << " deprecated." << '\n';
 
     os << "const char8_t uc::allStrings[] = \n";
     char text[40];
@@ -728,7 +672,7 @@ int main()
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
         os << "{ " << std::dec << v.num << ", " << v.denom << ", " << v.altInt
-           << ", EcNumType::" << transform(v.type, smNumType)
+           << ", EcNumType::" << v.type
            << " },  // " << v.index << " is " << v.textValue << '\n';
     }
     os << "};\n";
@@ -799,7 +743,7 @@ int main()
     std::cout << "Processing Sutton base..." << std::flush;
     auto swr = sw::process();
     std::cout << "OK, " << swr.nLines << " lines, first inequal "
-              << std::hex << static_cast<uint32_t>(swr.firstInequal) << std::endl;
+              << std::hex << static_cast<uint32_t>(swr.firstInequal) << '\n';
 
     ///// Forgotten CPs ////////////////////////////////////////////////////////
 
@@ -809,11 +753,11 @@ int main()
               << forgetStats.nRepeat << " repeating, "
               << forgetStats.nMissing << " missing, "
               << forgetStats.nExtra << " extra, "
-              << forgetStats.nBadCase << " bad case, see " << FNAME_FORGET << "." << std::endl;
+              << forgetStats.nBadCase << " bad case, see " << FNAME_FORGET << "." << '\n';
 
     ///// Done !! //////////////////////////////////////////////////////////////
 
-    std::cout << "Successfully finished!" << std::endl << std::endl;
+    std::cout << "Successfully finished!" << "\n\n";
 
     return 0;
 }

@@ -12,13 +12,13 @@ namespace ucd {
     };
 
     struct NumType {
-        std::string_view name;
+        std::string_view id; ///< identifier for precompiled Unicode data
     };
 
     struct SupportData {
         unsigned nBlocks = 0;
         std::vector<HangulLine> hangulLines;
-        std::unordered_map<char32_t, std::string> numValues;
+        std::unordered_map<char32_t, std::string> hanNumValues;
     };
 
     struct CpInfo {
@@ -28,10 +28,11 @@ namespace ucd {
         std::string_view bidiCat;
         struct Numeric {
             const NumType* type;
-            std::string_view numericValue;
+            std::string_view value;
         } numeric;
         char32_t upperCase = 0;     ///< 0 = none
         bool isMirrored = false;
+        bool isDeprecated = false;
     };
 
     class BaseSink {    // interface
