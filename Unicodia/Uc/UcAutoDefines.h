@@ -645,7 +645,9 @@ namespace uc {
         /// Why no ±0.5: the author chose for some reason to shift balance down rather than up
         /// WHY: to hold the primary line aligned to pixels at primary resolution
         ///    16×16 device-independent pixels, you need to imbalance the picture
-        ///    sometimes. When it’s unbalanced to bottom, use BELOW_XXX.
+        ///    sometimes. E.g. got height of 13 → top is either 2 or 3.
+        ///    When top is 2, use ABOVE_XXX. Top is 3 → BELOW_XXX.
+        /// How big is XXX — decide for yourself by subjective balance
         /// Makes no sense when this coordinate does not have a primary line.
         struct Imba {  int8_t x = 0, y = 0; } imba;
 
