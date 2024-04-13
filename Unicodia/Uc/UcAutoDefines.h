@@ -641,7 +641,7 @@ namespace uc {
         ///    side of vertical stem
         struct Pos  { uint8_t x = 0, y = 0; } pos;
         /// Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
-        ///    e.g. BELOW_4 = can move 0.4-px/2 up, and −0.4+px/2 down
+        ///    e.g. BELOW_4 = first you move 0.4px up, then align to pixels
         /// Why no ±0.5: the author chose for some reason to shift balance down rather than up
         /// WHY: to hold the primary line aligned to pixels at primary resolution
         ///    16×16 device-independent pixels, you need to imbalance the picture
