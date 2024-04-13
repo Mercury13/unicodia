@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="64"
+   height="64"
+   viewBox="0 0 64 64"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="splatter.svg"
+   xml:space="preserve"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="px"
+     inkscape:zoom="5.5660494"
+     inkscape:cx="27.128757"
+     inkscape:cy="19.133858"
+     inkscape:window-width="1680"
+     inkscape:window-height="998"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" /><defs
+     id="defs1" /><g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"><path
+       style="fill:#330080;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 16.711835,26.237011 c 1.540135,-1.404912 0.319633,-3.012129 0.957146,-3.946558 1.209862,-1.773347 3.640698,-2.040853 3.92967,-4.026183 0.199668,-1.371777 -2.202196,-3.923516 -3.530306,-6.484507 -2.261149,-4.3601634 -2.527174,-8.607225 1.518089,-9.6150778 6.542518,-1.63002888 5.942607,3.5235816 7.116744,9.1214468 0.291944,1.391885 2.273181,5.359842 4.655467,5.492947 1.403182,0.0784 4.979214,-2.8332 6.198094,-7.8842119 1.322434,-5.4801357 9.191955,-8.93478279 13.019479,-4.5883487 3.325939,3.7768474 1.197573,8.2914826 -5.120971,12.6124396 -5.978503,4.088419 -5.420146,8.13654 -4.767713,10.94927 0.87376,3.766897 4.075102,7.089708 12.003536,7.408514 5.194319,0.208866 9.836345,4.555021 8.027962,8.828584 -1.563568,3.695017 -7.090129,3.566148 -12.694267,0.03796 -3.5595,-2.240947 -8.051884,-2.956016 -10.480644,-0.879274 -2.435698,2.082675 -3.486147,5.399235 -2.131489,9.202644 2.099097,5.89353 1.381807,9.451073 -4.275539,9.830181 -7.531722,0.504714 -9.244286,-5.907628 -7.494907,-11.980969 0.793745,-3.262409 3.072896,-6.257623 0.879922,-7.475695 -1.633274,-0.90719 -3.172817,-0.309759 -7.078078,3.319676 -3.769874,3.50361 -9.6118116,3.162216 -11.1413325,0.857234 -2.6701907,-4.02396 -1.7572585,-8.662909 5.1835795,-10.39621 1.4982,-0.374137 6.670365,-2.099652 6.191697,-3.857622 C 17.052773,30.46712 5.9602968,34.530062 2.4259515,27.875357 1.1330614,25.441016 3.9484241,22.19837 6.5366693,22.472516 c 3.6993897,0.391837 7.4774217,6.22538 10.1751657,3.764495 z"
+       id="path34"
+       sodipodi:nodetypes="ssssssssssssssssssssssssss" /><path
+       style="fill:#330080;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 45.175259,24.880816 c 1.784266,-0.271773 10.688865,-7.836549 11.811986,-3.552452 2.74025,10.45257 -17.479522,4.64588 -11.811986,3.552452 z"
+       id="path35"
+       sodipodi:nodetypes="csc" /><path
+       style="fill:#330080;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 42.134043,46.576101 c -0.434619,0.749927 0.358132,3.092477 0.800045,4.271265 0.439699,1.172884 0.917448,2.375521 1.625488,3.464019 1.826162,2.807428 6.381365,3.203714 5.568565,-0.720394 -0.31943,-1.542181 -5.655132,-8.093367 -7.994098,-7.01489 z"
+       id="path36"
+       sodipodi:nodetypes="csssc" /><path
+       style="fill:#330080;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 7.2044271,9.1624292 C 6.5500228,9.9205977 6.0352423,11.267489 6.4378674,12.285019 6.8822371,13.408048 7.7008988,14.111759 8.4152427,15.091295 16.208634,25.777899 13.092118,5.1376995 7.2044271,9.1624292 Z"
+       id="path37"
+       sodipodi:nodetypes="cssc" /></g></svg>
