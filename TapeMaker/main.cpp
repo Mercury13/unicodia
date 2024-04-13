@@ -2,7 +2,6 @@
 #include <iostream>
 #include <fstream>
 #include <filesystem>
-#include <bit>
 #include <set>
 #include <unordered_map>
 
@@ -61,7 +60,6 @@ private:
     };
     std::vector<TapeEntry> allEntries;
     void writeDirectory() const;
-    void writeList() const;
 
     struct DivideIntoSubtapes {
         std::vector<Subtape> subtapes;
@@ -224,23 +222,6 @@ void TapeWriter::writeDirectory() const
     }
 }
 
-void TapeWriter::writeList() const
-{
-    std::vector<std::string_view> tmp;
-    for (auto& entry : allEntries) {
-        if (entry.seq.size() == 1)
-            tmp.push_back(entry.stemOut);
-    }
-
-    std::sort(tmp.begin(), tmp.end());
-
-    std::ofstream os("single-char-emoji.txt");
-    for (auto& x : tmp) {
-        os << x << '\n';
-    }
-}
-
-
 void TapeWriter::sortBy(const PriorityMap& prioMap)
 {
     for (auto& entry : allEntries) {
@@ -285,7 +266,6 @@ void TapeWriter::write()
         os.write(tapeBuf.data(), subtape.size);
     }
     writeDirectory();
-    writeList();
 }
 
 void deleteBinaries()
