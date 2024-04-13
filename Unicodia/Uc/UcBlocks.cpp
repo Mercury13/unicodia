@@ -1183,8 +1183,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x16B00, 0x16B8F, { 0x16B00, EcContinent::ASIA },
             "Pahawh Hmong",
             { EcScript::Hmng, 0 }, MapType::AS_OTHER, EcScript::Hmng },
-    /// @todo [U16, font] Kirat Rai
-    { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, Ifg::MISSING  },
+    // Kirat OK
+    { 0x16D40, 0x16D7F, { 0x16D44, EcContinent::ASIA, {}, SvgHint{ 10, 2, ImbaY::BELOW_3 } },
             "Kirat Rai",
             { EcScript::Krai, 0 }, MapType::AS_BRAH, EcScript::Krai },
     // Medefaidrin OK

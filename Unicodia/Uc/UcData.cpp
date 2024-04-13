@@ -483,7 +483,7 @@ constinit const uc::Script uc::scriptInfo[] {
     /// @todo [U16, font] Kirat Rai
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1920), EcFont::NORMAL },
+        Dating::year(1920), EcFont::KIRAT },
     // Kaithi OK, W10 none → installed Google Noto
     { "Kthi", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::DEAD, EcWritingDir::LTR, EcContinent::ASIA,

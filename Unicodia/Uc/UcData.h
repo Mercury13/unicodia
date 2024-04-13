@@ -320,6 +320,7 @@ namespace uc {
         KHMER,
         KHOJKI,
         KHUDAWADI,
+        KIRAT,
         KOREAN,
           Z_KOR_1,
           Z_KOR_2,

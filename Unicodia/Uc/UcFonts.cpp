@@ -163,6 +163,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
+    { "Kanchenjunga-Regular.ttf" },                                             // Kirat
     { FNAME_KOREAN, Ffg::FALL_TO_NEXT | Ffg::MARK_AVOID, 110_pc },              // Korean
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                               // …1 for sone patches
       { FNAME_UNIHAN, Ffg::FALL_TO_NEXT },                                      // …2 — for P1 Katakana
