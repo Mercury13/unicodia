@@ -764,12 +764,13 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
+Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 12704 32 14
+WinInfo: 0 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -61501,7 +61502,7 @@ EndChar
 StartChar: uni31E5
 Encoding: 12773 12773 489
 Width: 1031
-Flags: WO
+Flags: W
 HStem: -101.555 8.7998<244.87 255.976> 369.669 22<350.674 788.604>
 VStem: 284.674 66<353.169 369.669 391.669 838.27> 788.604 66<229.83 347.669>
 TtInstrs:
