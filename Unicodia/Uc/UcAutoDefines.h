@@ -640,6 +640,7 @@ namespace uc {
         /// e.g. for Devanagari KA primary lines are top and left/right
         ///    side of vertical stem
         struct Pos  { uint8_t x = 0, y = 0; } pos;
+
         /// Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
         ///    e.g. BELOW_4 = first you move 0.4px up, then align to pixels
         /// Why no ±0.5: the author chose for some reason to shift balance down rather than up
