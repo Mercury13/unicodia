@@ -831,7 +831,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10570, 0x105BF, { 0x10570, EcContinent::EUROPE },
             "Vithkuqi",
             { EcScript::Vith, 0 }, MapType::EU_OTHER_DEAD, EcScript::Vith },
-    /// @todo [U16, font] Todhri
+    /// @todo [U16, big tofu] Todhri
     { 0x105C0, 0x105FF, { 0x105C0, EcContinent::EUROPE, Ifg::MISSING },
             "Todhri",
             { EcScript::Todr, 0 }, MapType::EU_OTHER_DEAD, EcScript::Todr },
@@ -924,7 +924,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x10D00, 0x10D3F, { 0x10D0D, EcContinent::ASIA, {}, SvgHint{ 4, 15 } },
             "Hanifi Rohingya",
             { EcScript::Rohg, 0 }, MapType::AS_OTHER, EcScript::Rohg },
-    /// @todo [U16, font] Garay
+    /// @todo [U16, big tofu] Garay
     { 0x10D40, 0x10D8F, { 0x10D52, EcContinent::AFRICA, Ifg::MISSING  },
             "Garay",
             { EcScript::Gara, 0}, MapType::AF, EcScript::Gara },
@@ -1010,7 +1010,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11300, 0x1137F, { 0x11315, EcContinent::ASIA },
             "Grantha",
             { EcScript::Gran, 0 }, MapType::AS_BRAH_DEAD, EcScript::Gran },
-    /// @todo [U16, font] Tulu Tigalari
+    /// @todo [U16, big tofu] Tulu Tigalari
     { 0x11380, 0x113FF, { 0x11392, EcContinent::ASIA, Ifg::MISSING  },
             "Tulu-Tigalari",
             { EcScript::Tutg, 0}, MapType::AS_BRAH, EcScript::Tutg },
@@ -1039,7 +1039,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11680, 0x116CF, { 0x1168A, EcContinent::ASIA },
             "Takri",
             { EcScript::Takr, 0 }, MapType::AS_BRAH_DEAD, EcScript::Takr },
-    /// @todo [U16, font] Myanmar ex C
+    /// @todo [U16, medium tofu] Myanmar ex C
     { 0x116D0, 0x116FF, { 0x116D3, EcContinent::ASIA, Ifg::MISSING  },
             "Myanmar Extended-C",
             { EcScript::Mymr, 'C' }, MapType::AS_BRAH,
@@ -1149,7 +1149,7 @@ constinit const uc::Block uc::blocks[] {
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 'f' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS },
-    /// @todo [U16, font] Egyp A
+    /// @todo [U16, huge tofu] Egyp A
     { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
@@ -1158,7 +1158,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",
             { EcScript::Hluw, 0 }, MapType::AS_OTHER_DEAD, EcScript::Hluw },
-    /// @todo [U16, font] Gurung Khema
+    /// @todo [U16, big tofu] Gurung Khema
     { 0x16100, 0x1613F, { 0x16101, EcContinent::ASIA, Ifg::MISSING  },
             "Gurung Khema",
             { EcScript::Gukh, 0 }, MapType::AS_BRAH, EcScript::Gukh },
@@ -1257,7 +1257,7 @@ constinit const uc::Block uc::blocks[] {
             "Shorthand Format Controls",
             { EcScript::Dupl, 1}, MapType::SYM_CODE,
             EcScript::NONE, EcFont::DUPLOYAN, Bfg::SCRIPTLIKE | Bfg::HAS_DESCRIPTION },
-    /// @todo [U16, font] Symbols for Legacy Computing Supplement
+    /// @todo [U16, huge tofu] Symbols for Legacy Computing Supplement
     { 0x1CC00, 0x1CEBF, { 0x1CC00, EcContinent::NONE, Ifg::MISSING  },
             "Symbols for Legacy Computing Supplement",
             MyName::INST, MapType::SYM_OTHER,
@@ -1344,7 +1344,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1E4D0, 0x1E4FF, { 0x1E4D7, EcContinent::ASIA },
             "Nag Mundari",
             { EcScript::Nagm, 0}, MapType::AS_OTHER, EcScript::Nagm },
-    /// @todo [U16, font] Ol Onal
+    /// @todo [U16, big tofu] Ol Onal
     { 0x1E5D0, 0x1E5FF, { 0x1E5D0, EcContinent::ASIA, Ifg::MISSING  },
             "Ol Onal",
             { EcScript::Onao, 0 }, MapType::AS_OTHER, EcScript::Onao },

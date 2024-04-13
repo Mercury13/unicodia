@@ -39,6 +39,7 @@ constinit const uc::Font uc::fontInfo[] = {
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
     { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT },                   // Noto symbol2 bigger
+      /// @todo [U16, gag] delete when control pictures are ready
       { FNAME_FUNKY, 115_pc },                                                  // …1
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
@@ -142,7 +143,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "Shafarik-Regular.ttf", Ffg::FALL_TO_NEXT, 115_pc,
             StyleChange { .delta = 0xF0200 - 0x2C00 } },                        // Glagolitic
-      /// @todo [U16] Replace with basic Serif
+      /// @todo [U16, gag] Replace with Noto Serif when it appears
       { FNAME_FUNKY },                                                          // …1  for Cyr C Khanty
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
@@ -159,7 +160,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Kannada
       { FNAME_FUNKY },                                                          // …1
     { "NotoSansKawi-Regular.ttf", Ffg::FALL_TO_NEXT },                          // Kawi
-      /// @todo [U16] Someday Kawi will handle new char
+      /// @todo [U16, gag] Someday Kawi will handle new char
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi

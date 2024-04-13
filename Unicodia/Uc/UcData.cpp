@@ -353,7 +353,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Ethi", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::AFRICA,
         Dating::century(4, StdNote::CUSTOM), EcFont::ETHIOPIC },
-    /// @todo [U16, font] Garay
+    /// @todo [U16, big tofu] Garay
     { "Gara", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::RTL, EcContinent::AFRICA,
         Dating::year(1961), EcFont::NORMAL },
@@ -389,7 +389,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Gujr", QFontDatabase::Gujarati,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1592, StdNote::FIRST_KNOWN), EcFont::GUJARATI },
-    /// @todo [U16, font] Gurung Khema
+    /// @todo [U16, big tofu] Gurung Khema
     { "Gukh", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1977), EcFont::NORMAL },
@@ -480,7 +480,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Knda", QFontDatabase::Kannada,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(14, StdNote::CUSTOM), EcFont::KANNADA },
-    /// @todo [U16, font] Kirat Rai
+    // Kirat OK, excellent font from SIL
     { "Krai", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1920), EcFont::KIRAT },
@@ -630,7 +630,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Olck", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1925), EcFont::OLCHIKI },
-    /// @todo [U16 font] Ol Onal
+    /// @todo [U16, big tofu] Ol Onal
     { "Onao", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::decade(1980), EcFont::NORMAL },
@@ -831,7 +831,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Tnsa", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(1990), EcFont::TANGSA },
-    /// @todo [U16] Todhri
+    /// @todo [U16, big tofu] Todhri
     { "Todr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::EXPERIMENTAL, EcWritingDir::LTR, EcContinent::EUROPE,
         Dating::yapprox(1780), EcFont::NORMAL },
@@ -839,7 +839,7 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Toto", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::year(2015), EcFont::FUNKY },
-    /// @todo [U16] Tulu Tigalari
+    /// @todo [U16, big tofu] Tulu Tigalari
     { "Tutg", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::SACRED, EcWritingDir::LTR, EcContinent::ASIA,
         Dating::century(9), EcFont::NORMAL },
