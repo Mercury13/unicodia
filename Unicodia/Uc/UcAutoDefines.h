@@ -621,22 +621,32 @@ namespace uc {
     size_t nLibNodes();
     std::span<const LibNode> allLibNodes();
 
-    enum class ImbaX : int8_t {
+    enum class ImbaX : signed char {
         PERFECT = 0,
         LEFT_1 = -1, LEFT_2 = -2, LEFT_3 = -3, LEFT_4 = -4,
         RIGHT_1 = 1, RIGHT_2 = 2, RIGHT_3 = 3, RIGHT_4 = 4,
     };
 
-    enum class ImbaY : int8_t {
+    enum class ImbaY : signed char {
         PERFECT = 0,
         ABOVE_1 = -1, ABOVE_2 = -2, ABOVE_3 = -3, ABOVE_4 = -4,
         BELOW_1 =  1, BELOW_2 =  2, BELOW_3 =  3, BELOW_4 =  4,
     };
 
     struct SvgHint {
-        // Hint’s position: y=0 → none; y=5 → align that line to pixels
+        /// Hint’s position: y=0 → none; y=5 → align that line to pixels
+        /// WHY: when enlarging to hiDPI, you need to hold the primary line to
+        ///    physical pixels.
+        /// e.g. for Devanagari KA primary lines are top and left/right
+        ///    side of vertical stem
         struct Pos  { uint8_t x = 0, y = 0; } pos;
-        // Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
+        /// Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
+        ///    e.g. BELOW_4 = can move 0.4-px/2 up, and −0.4+px/2 down
+        /// Why no 0.5: the author chose for some reason to shift balance down rather than up
+        /// WHY: to hold the primary line aligned to pixels at primary resolution
+        ///    16×16 device-independent pixels, you need to imbalance the picture
+        ///    sometimes. When it’s unbalanced to bottom, use BELOW_XXX.
+        /// Makes no sense when this coordinate does not have a primary line.
         struct Imba {  int8_t x = 0, y = 0; } imba;
 
         using BiggerType = uint16_t;
