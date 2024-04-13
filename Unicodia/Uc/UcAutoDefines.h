@@ -645,7 +645,7 @@ namespace uc {
         ///    e.g. BELOW_4 = first you move 0.4px up, then align to pixels
         /// WHY: to hold the primary line aligned to pixels at primary resolution
         ///    16×16 device-independent pixels, you need to imbalance the picture
-        ///    sometimes. E.g. got height of 13 → top is either 2 or 3.
+        ///    sometimes. E.g. got height of 11 → top is either 2 or 3.
         ///    When top is 2, use ABOVE_Y. Top is 3 → BELOW_Y.
         /// How big is Y — decide for yourself by subjective balance
         /// That’s why no ±0.5: the author preferred 2 to 3 (or vice-versa) for some reason
