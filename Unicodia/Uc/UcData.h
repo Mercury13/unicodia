@@ -312,6 +312,7 @@ namespace uc {
         JAVANESE,
         KAITHI,
         KANNADA,
+          Z_KAN_1,
         KAWI,
           Z_KAW_1,
         KAYAH_LI,

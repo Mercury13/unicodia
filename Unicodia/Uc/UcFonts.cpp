@@ -155,7 +155,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_BABEL, Ffg::NOHINT_TINY, 120_pc },                                // …1
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
-    { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                // Kannada
+    { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Kannada
+      { FNAME_FUNKY },                                                          // …1
     { "NotoSansKawi-Regular.ttf", Ffg::FALL_TO_NEXT },                          // Kawi
       /// @todo [U16] Someday Kawi will handle new char
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
