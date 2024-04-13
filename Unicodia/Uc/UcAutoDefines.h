@@ -643,12 +643,12 @@ namespace uc {
 
         /// Picture imbalance: y=0 → none; y=4 → the letter is drawn 0.4dip below
         ///    e.g. BELOW_4 = first you move 0.4px up, then align to pixels
-        /// Why no ±0.5: the author chose for some reason to shift balance down rather than up
         /// WHY: to hold the primary line aligned to pixels at primary resolution
         ///    16×16 device-independent pixels, you need to imbalance the picture
         ///    sometimes. E.g. got height of 13 → top is either 2 or 3.
-        ///    When top is 2, use ABOVE_XXX. Top is 3 → BELOW_XXX.
-        /// How big is XXX — decide for yourself by subjective balance
+        ///    When top is 2, use ABOVE_Y. Top is 3 → BELOW_Y.
+        /// How big is Y — decide for yourself by subjective balance
+        /// That’s why no ±0.5: the author preferred 2 to 3 (or vice-versa) for some reason
         /// Makes no sense when this coordinate does not have a primary line.
         struct Imba {  int8_t x = 0, y = 0; } imba;
 
