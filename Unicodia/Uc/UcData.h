@@ -300,6 +300,7 @@ namespace uc {
           Z_NUS_1,      // Then DejaVu, a REALLY WONDERFUL Nuskhuri → a few chars are missing, and FALL DOWN to…
         GEORGIAN,       // …Noto Serif that surely covers the entire Georgian
         GLAGOLITIC,
+          Z_GLA_1,
         GRANTHA,
         GUJARATI,
         GUNJALA_GONDI,
@@ -595,9 +596,11 @@ namespace uc {
               sizeAdjust(aSizeAdjust) {}
         consteval Font(
                 std::string_view aFamily,
+                Flags<Ffg> aFlags,
                 Percent aSizeAdjust,
                 StyleChange aVariation)
-            : family(aFamily), sizeAdjust(aSizeAdjust), styleChange(aVariation) {}
+            : family(aFamily), flags(aFlags), sizeAdjust(aSizeAdjust),
+              styleChange(aVariation) {}
         Font(const Font&) = delete;
     private:
         void newLoadedStruc() const;
