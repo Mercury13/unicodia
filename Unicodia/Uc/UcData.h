@@ -225,9 +225,8 @@ namespace uc {
         AHOM,
         ANATOLIAN,
         ARABIC,
-        ARABIC_NOTO,
-          Z_ARN_1,
-          Z_ARN_2,
+          Z_ARA_1,
+          Z_ARA_2,
         ARAMAIC,
         ARMENIAN,
           Z_ARM_1,
@@ -314,6 +313,7 @@ namespace uc {
         KAITHI,
         KANNADA,
         KAWI,
+          Z_KAW_1,
         KAYAH_LI,
         KHAROSHTHI,
         KHITAN_SMALL,
@@ -434,7 +434,9 @@ namespace uc {
         YI,
         ZANABAZAR,
         ZNAMENNY,
-        NN
+        NN,
+        ARABIC_NOTO = ARABIC,  ///< Both Scheh and Noto chains have Scheh → Noto → Funky,
+                               ///< but do not lose difference
     };
 
     enum class Ffg {

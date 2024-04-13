@@ -60,10 +60,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
-    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM },                           // Arabic
-    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },       // Arabic Noto — Scheh has a few nice chars!
-      { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, main font
-      { FNAME_FUNKY },                                                          // …2, fallback font for Presentation-A
+    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },       // Arabic
+      { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
+      { FNAME_FUNKY, Ffg::STUB_ALM },                                           // …2, new additions
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
@@ -142,6 +141,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
     { "Shafarik-Regular.ttf", Ffg::FALL_TO_NEXT, 115_pc,
             StyleChange { .delta = 0xF0200 - 0x2C00 } },                        // Glagolitic
+      /// @todo [U16] Replace with basic Serif
       { FNAME_FUNKY },                                                          // …1  for Cyr C Khanty
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
             "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
@@ -156,7 +156,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansJavanese-Regular.ttf" },                                         // Javanese
     { "NotoSansKaithi-Regular.ttf" },                                           // Kaithi
     { "UtoSerifKannada-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                // Kannada
-    { "NotoSansKawi-Regular.ttf" },                                             // Kawi
+    { "NotoSansKawi-Regular.ttf", Ffg::FALL_TO_NEXT },                          // Kawi
+      /// @todo [U16] Someday Kawi will handle new char
+      { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
     { "NotoFangsongKSSVertical-Regular.ttf", 115_pc },                          // Khitan small
