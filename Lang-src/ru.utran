@@ -5760,8 +5760,16 @@
      <transl>волоф ''(Западная Африка, 7 млн на 2021)'', мандинка ''(2,1 млн на 2017)''</transl>
     </text>
     <text id="Text">
-     <orig>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Current community is small, about 200 people.</orig>
-     <transl>С освобождением Африки появились много новых письменностей. Эту создал Ассане Файе из Сенегала. Теперешнее сообщество небольшое, около 200 человек.</transl>
+     <orig>
+      <p>Lots of new scripts appeared during liberation of Africa. This one was created by Assane Faye from Senegal. Current community is small, about 200 people.</p>
+      <p />
+      <p>Capital letter has a big hook. Sometimes the entire word is underlined with a big swash coming from the last letter.</p>
+     </orig>
+     <transl>
+      <p>С освобождением Африки появились много новых письменностей. Эту создал Ассане Файе из Сенегала. Теперешнее сообщество небольшое, около 200 человек.</p>
+      <p />
+      <p>У заглавной буквы большой крюк. Всё слово иногда подчёркивается большим хвостом, выходящим из последней буквы.</p>
+     </transl>
     </text>
    </group>
    <group id="Geor">
