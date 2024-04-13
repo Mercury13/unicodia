@@ -87,15 +87,8 @@ private:
         constexpr unsigned end() const { return offset + length; }
     };
 
-    struct Hash {
+    struct Hash : public std::hash<std::u32string_view> {
         using is_transparent = void;
-        [[no_unique_address]] std::hash<std::u32string> h1;
-        [[no_unique_address]] std::hash<std::u32string_view> h2;
-
-        [[nodiscard]] size_t operator()(const std::u32string &txt) const
-            { return h1(txt); }
-        [[nodiscard]] size_t operator()(std::u32string_view txt) const
-            { return h2(txt); }
     };
 
     // Vars
