@@ -8363,8 +8363,16 @@
      <transl>сунвар ''(Непал, 38 тис. на 2011)''</transl>
     </text>
     <text id="Text">
-     <orig>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</orig>
-     <transl>Винайшов Крішна Бахадур Джентіч (1926–1991). Початково чистий алфавіт, через взаємодію з брахмійським письмом він почав використовувати голосну по замовчанню {{t|a}} та [[pt:virama|віраму]]. Офіційна орфографія не{{_}}визнає цих змін.</transl>
+     <orig>
+      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</p>
+      <p />
+      <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
+     </orig>
+     <transl>
+      <p>Винайшов Крішна Бахадур Джентіч (1926–1991). Початково чистий алфавіт, через взаємодію з брахмійським письмом він почав використовувати голосну по замовчанню {{t|a}} та [[pt:virama|віраму]]. Офіційна орфографія не{{_}}визнає цих змін.</p>
+      <p />
+      <p>Письмо не відмічало тонів до останнього часу, і тонові знаки звичайні 0300, 0301 та 030D.</p>
+     </transl>
     </text>
    </group>
    <group id="Sylo">

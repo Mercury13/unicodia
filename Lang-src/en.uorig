@@ -5921,7 +5921,11 @@
      <orig>Sunuwar ''(Nepal, 38k as of 2011)''</orig>
     </text>
     <text id="Text">
-     <orig>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</orig>
+     <orig>
+      <p>Invented by Krishna Bahadur Jentich (1926–1991). Initially pure alphabet, because of interaction with Brahmic scripts it started to use inherent {{t|a}} and [[pt:virama|virama]]. Official ortography does not recognize these changes.</p>
+      <p />
+      <p>The script did not mark tones until recently, and tone marks are basic 0300, 0301 and 030D.</p>
+     </orig>
     </text>
    </group>
    <group id="Sylo">

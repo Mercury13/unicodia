@@ -1086,8 +1086,8 @@ constinit const uc::Block uc::blocks[] {
             "Devanagari Extended-A",
             { EcScript::Deva, 'A' }, MapType::AS_BRAH_DEAD,
             EcScript::Deva, EcFont::FUNKY, Bfg::HAS_DESCRIPTION },
-    /// @todo [U16, font] Sunuwar
-    { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, Ifg::MISSING  },
+    // Sunuwar OK, though font is horrible
+    { 0x11BC0, 0x11BFF, { 0x11BC0, EcContinent::ASIA, {}, 7_hx },
             "Sunuwar",
             { EcScript::Sunu, 0 }, MapType::AS_OTHER, EcScript::Sunu },
     // Bhaiksuki OK

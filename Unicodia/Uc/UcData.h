@@ -393,6 +393,7 @@ namespace uc {
         SOGDIAN,
         SOYOMBO,
         SUNDANESE,
+        SUNUWAR,
         SYLOTI_NAGRI,
         SYRIAC,
         TAGALOG,

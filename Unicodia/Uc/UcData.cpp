@@ -759,10 +759,10 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Sund", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::OCEAN,
         Dating::century(14), EcFont::SUNDANESE },
-    /// @todo [U16, font] Sunuwar
+    // Sunuwar OK, though font is REALLY bad
     { "Sunu", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::ENDANGERED, EcWritingDir::LTR, EcContinent::ASIA,
-        Dating::year(1942), EcFont::NORMAL },
+        Dating::year(1942), EcFont::SUNUWAR },
     // Syloti Nagri OK, W10 none → installed Google Noto
     { "Sylo", QFontDatabase::Any,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::REVIVED, EcWritingDir::LTR, EcContinent::ASIA,
