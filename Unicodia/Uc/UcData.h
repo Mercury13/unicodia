@@ -204,6 +204,7 @@ namespace uc {
           Z_NOT_1,
          NOTO_SYMBOL2,
          NOTO_SYMBOL2_BIGGER,
+          Z_N2B_1,
          SYMBOL,
          HISTORIC,
          PUNCTUATION,

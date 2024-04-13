@@ -38,7 +38,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
      { FNAME_FUNKY },                                                           // …1
     { FNAME_NOTOSYM2 },                                                         // Noto symbol2
-    { FNAME_NOTOSYM2, Ffg::DESC_BIGGER },                                       // Noto symbol2 bigger
+    { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT },                   // Noto symbol2 bigger
+      { FNAME_FUNKY, 115_pc },                                                  // …1
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
