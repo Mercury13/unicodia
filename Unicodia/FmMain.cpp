@@ -988,6 +988,39 @@ namespace {
 }   // anon namespace
 
 
+void FmMain::installCopyEvents(QAbstractScrollArea* widget,
+                               void(FmMain::* funcMain)(),
+                               void(FmMain::* funcSample)(),
+                               WiShowcase* showcase,
+                               QTextBrowser* browser)
+{
+    // Ctrl+C
+    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), widget,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, funcMain);
+        // Ctrl+Ins
+    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), widget,
+                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+    connect(shcut, &QShortcut::activated, this, funcMain);
+        // 2click
+    widget->viewport()->installEventFilter(this);
+
+    if (funcSample) {
+        // Ctrl+Shift+C
+        shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), widget,
+                    nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+        connect(shcut, &QShortcut::activated, this, funcSample);
+        shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), widget,
+                    nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
+        connect(shcut, &QShortcut::activated, this, funcSample);
+    }
+
+    connect(browser, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+    connect(showcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
+    connect(showcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
+}
+
+
 FmMain::InitBlocks FmMain::initBlocks()
 {
     InitBlocks r;
@@ -1043,31 +1076,8 @@ FmMain::InitBlocks FmMain::initBlocks()
             this, &This::charChanged);
     connect(ui->wiCharShowcase, &WiShowcase::glyphStyleChanged, this, &This::glyphStyleChanged);
 
-    // Copy
-        // Ctrl+C
-    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->tableChars,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentCharNull);
-        // Ctrl+Ins
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->tableChars,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentCharNull);
-        // Button
-    connect(ui->wiCharShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
-        // 2click
-    ui->tableChars->viewport()->installEventFilter(this);
-
-    // Copy sample: Ctrl+Shift+C
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), ui->tableChars,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSampleNull);
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), ui->tableChars,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentSampleNull);
-
-    // Clicked
-    connect(ui->wiCharShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
-    connect(ui->vwInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
+    installCopyEvents(ui->tableChars, &This::copyCurrentCharNull, &This::copyCurrentSampleNull,
+                      ui->wiCharShowcase, ui->vwInfo);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1153,23 +1163,10 @@ void FmMain::initLibrary(const InitBlocks& ib)
     connect(ui->treeLibrary->selectionModel(), &QItemSelectionModel::currentChanged,
             this, &This::libChanged);
 
-    // Clicked
-    connect(ui->vwLibInfo, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(ui->wiLibShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
-    connect(ui->wiLibShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
     // GlyphStyleChanged is unused for now
 
-    // Copy
-        // Ctrl+C
-    auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), ui->treeLibrary,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentLib);
-        // Ctrl+Ins
-    shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), ui->treeLibrary,
-                nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, &This::copyCurrentLib);
-        // 2click
-    ui->treeLibrary->viewport()->installEventFilter(this);
+    installCopyEvents(ui->treeLibrary, &This::copyCurrentLib, nullptr,
+                      ui->wiLibShowcase, ui->vwLibInfo);
 
     // Select index
     auto index = libModel.index(0, 0);
@@ -1198,10 +1195,8 @@ void FmMain::initFavs(const InitBlocks& ib)
     connect(ui->wiFavsShowcase, &WiShowcase::glyphStyleChanged,
             this, &This::glyphStyleChanged);
 
-    // Clicked
-    connect(ui->vwFavs, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(ui->wiFavsShowcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
-    connect(ui->wiFavsShowcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
+    installCopyEvents(ui->tableFavs, &This::copyCurrentFavs, &This::copyFavsSample,
+                      ui->wiFavsShowcase, ui->vwFavs);
 
     // Create toolbar
     auto lay = ui->wiFavsShowcase->toolbarLayout();
@@ -1434,6 +1429,8 @@ bool FmMain::eventFilter(QObject *obj, QEvent *event)
                         copyCurrentLib();
                         return true;
                     }
+                } else if (obj == ui->tableFavs->viewport()) {
+                    copyCurrentFavs();
                 }
             }
         }
@@ -1492,6 +1489,23 @@ void FmMain::copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator)
     uc::copyCp(ch.code, channel);
     blinkCopied(ui->tableChars, initiator);
 }
+
+
+void FmMain::copyFavsThing(uc::CopiedChannel channel)
+{
+    if (auto ch = favsModel.charAt(ui->tableFavs->currentIndex())) {
+        uc::copyCp(ch.code, channel);
+        blinkCopied(ui->tableFavs, nullptr);
+    }
+}
+
+
+void FmMain::copyCurrentFavs()
+    { copyFavsThing(uc::CopiedChannel::CHAR); }
+
+
+void FmMain::copyFavsSample()
+    { copyFavsThing(uc::CopiedChannel::SAMPLE); }
 
 
 void FmMain::blinkCopiedForWidget(QWidget* initiator)

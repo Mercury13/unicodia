@@ -41,6 +41,7 @@ QT_END_NAMESPACE
 constexpr int NCOLS = 8;
 
 class QToolButton;
+class QTextBrowser;
 class QNetworkAccessManager;
 class QNetworkReply;
 class FmTofuStats;
@@ -360,6 +361,11 @@ private:
         QList<int> sizes;
     };
 
+    void installCopyEvents(QAbstractScrollArea* widget,
+                           void(FmMain::* funcMain)(),
+                           void(FmMain::* funcSample)(),
+                           WiShowcase* showcase,
+                           QTextBrowser* browser);
     InitBlocks initBlocks();
     void initLibrary(const InitBlocks& ib);
     void initFavs(const InitBlocks& ib);
@@ -376,7 +382,9 @@ private:
     void initTerms();
     void translateTerms();
     void copyCurrentThing(uc::CopiedChannel channel, QWidget* initiator);
+    void copyFavsThing(uc::CopiedChannel channel);
     void blinkCopied(QWidget* widget, const QRect& absRect);
+    /// @param [in] initiator   other initiator widget besides table
     void blinkCopied(QAbstractItemView* table, QWidget* initiator);
     void clearSample();
     bool doSearch(const QString& what);
@@ -410,6 +418,8 @@ private slots:
     void copyCurrentSample(QWidget* initiator);
     void copyCurrentSampleNull();
     void copyCurrentLib();
+    void copyCurrentFavs();
+    void copyFavsSample();
     void popupLinkActivated(QWidget* widget, const QString& link);
     void labelLinkActivated(const QString& link);
     void advancedLinkActivated(QWidget* widget, const QString& link);
