@@ -1706,8 +1706,16 @@
      <transl>Кирилиця розширена C</transl>
     </text>
     <text id="Text">
-     <orig>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</orig>
-     <transl>Варіанти кириличних літер з друкованих церковних книг: від Біблії Франциска Скорини (Прага, 1519, ще до Федорова) до Києво-Печерського Типікона (1893).</transl>
+     <orig>
+      <p>Variants of Cyrillic letters from printed church books: from Francysk Skaryna’s Bible (Prague, 1519, before Ivan Fyodorov) to Kyiv-Pechersk Typicon (1893).</p>
+      <p />
+      <p>Ligature ТЬ is from new Khanty ''(Russia, 9500 as of 2010)'' alphabet of 2013.</p>
+     </orig>
+     <transl>
+      <p>Варіанти кириличних літер з друкованих церковних книг: від Біблії Франциска Скорини (Прага, 1519, ще до Федорова) до Києво-Печерського Типікона (1893).</p>
+      <p />
+      <p>Лігатура ТЬ{{-}}з нового (2013) алфавіту ханти ''(Роcія, 9500 чоловік на 2010)''.</p>
+     </transl>
     </text>
    </group>
    <group id="1C90">
