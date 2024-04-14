@@ -988,36 +988,34 @@ namespace {
 }   // anon namespace
 
 
-void FmMain::installCopyEvents(QAbstractScrollArea* widget,
-                               void(FmMain::* funcMain)(),
-                               void(FmMain::* funcSample)(),
-                               WiShowcase* showcase,
-                               QTextBrowser* browser)
+void FmMain::installCopyEvents(FmMain* that,
+        QAbstractScrollArea* widget, void(FmMain::* funcMain)(), void(FmMain::* funcSample)(),
+        WiShowcase* showcase, QTextBrowser* browser)
 {
     // Ctrl+C
     auto shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_C), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, funcMain);
+    connect(shcut, &QShortcut::activated, that, funcMain);
         // Ctrl+Ins
     shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::Key_Insert), widget,
                 nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-    connect(shcut, &QShortcut::activated, this, funcMain);
+    connect(shcut, &QShortcut::activated, that, funcMain);
         // 2click
-    widget->viewport()->installEventFilter(this);
+    widget->viewport()->installEventFilter(that);
 
     if (funcSample) {
         // Ctrl+Shift+C
         shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_C), widget,
                     nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-        connect(shcut, &QShortcut::activated, this, funcSample);
+        connect(shcut, &QShortcut::activated, that, funcSample);
         shcut = new QShortcut(QKeySequence(Qt::CTRL | Qt::SHIFT | Qt::Key_Insert), widget,
                     nullptr, nullptr, Qt::WidgetWithChildrenShortcut);
-        connect(shcut, &QShortcut::activated, this, funcSample);
+        connect(shcut, &QShortcut::activated, that, funcSample);
     }
 
-    connect(browser, &QTextBrowser::anchorClicked, this, &This::anchorClicked);
-    connect(showcase, &WiShowcase::copiedPopped, this, &This::blinkCopiedForWidget);
-    connect(showcase, &WiShowcase::linkActivated, this, &This::advancedLinkActivated);
+    connect(browser, &QTextBrowser::anchorClicked, that, &This::anchorClicked);
+    connect(showcase, &WiShowcase::copiedPopped, that, &This::blinkCopiedForWidget);
+    connect(showcase, &WiShowcase::linkActivated, that, &This::advancedLinkActivated);
 }
 
 
@@ -1076,8 +1074,9 @@ FmMain::InitBlocks FmMain::initBlocks()
             this, &This::charChanged);
     connect(ui->wiCharShowcase, &WiShowcase::glyphStyleChanged, this, &This::glyphStyleChanged);
 
-    installCopyEvents(ui->tableChars, &This::copyCurrentCharNull, &This::copyCurrentSampleNull,
-                      ui->wiCharShowcase, ui->vwInfo);
+    installCopyEvents(this,
+            ui->tableChars, &This::copyCurrentCharNull, &This::copyCurrentSampleNull,
+            ui->wiCharShowcase, ui->vwInfo);
 
     // Search
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
@@ -1165,8 +1164,9 @@ void FmMain::initLibrary(const InitBlocks& ib)
 
     // GlyphStyleChanged is unused for now
 
-    installCopyEvents(ui->treeLibrary, &This::copyCurrentLib, nullptr,
-                      ui->wiLibShowcase, ui->vwLibInfo);
+    installCopyEvents(this,
+            ui->treeLibrary, &This::copyCurrentLib, nullptr,
+            ui->wiLibShowcase, ui->vwLibInfo);
 
     // Select index
     auto index = libModel.index(0, 0);
@@ -1195,8 +1195,9 @@ void FmMain::initFavs(const InitBlocks& ib)
     connect(ui->wiFavsShowcase, &WiShowcase::glyphStyleChanged,
             this, &This::glyphStyleChanged);
 
-    installCopyEvents(ui->tableFavs, &This::copyCurrentFavs, &This::copyFavsSample,
-                      ui->wiFavsShowcase, ui->vwFavs);
+    installCopyEvents(this,
+            ui->tableFavs, &This::copyCurrentFavs, &This::copyFavsSample,
+            ui->wiFavsShowcase, ui->vwFavs);
 
     // Create toolbar
     auto lay = ui->wiFavsShowcase->toolbarLayout();

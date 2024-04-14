@@ -361,7 +361,8 @@ private:
         QList<int> sizes;
     };
 
-    void installCopyEvents(QAbstractScrollArea* widget,
+    static void installCopyEvents(FmMain* that,
+                           QAbstractScrollArea* widget,
                            void(FmMain::* funcMain)(),
                            void(FmMain::* funcSample)(),
                            WiShowcase* showcase,
