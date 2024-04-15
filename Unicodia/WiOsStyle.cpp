@@ -19,7 +19,6 @@
 
 namespace {
     constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
-    //constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
 
 WiOsStyle::WiOsStyle(QWidget *parent) :

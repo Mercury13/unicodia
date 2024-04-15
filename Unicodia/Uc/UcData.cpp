@@ -2056,7 +2056,7 @@ QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
         strategy = fst::NO_AA;
         strategyChanged = true;
     }
-    if (flags.have(uc::FontGetFg::NO_AA)) {
+    if (flags.have(uc::FontGetFg::KNOWN_TOFU)) {
         strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
         strategyChanged = true;
     }
