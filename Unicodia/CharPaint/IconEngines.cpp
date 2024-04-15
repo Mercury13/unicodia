@@ -374,7 +374,7 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (si.ecContinent == uc::EcContinent::NONE) {
         drawMurkyRect(painter, rect, clFg);
     } else {
-        auto cont = si.continent();
+        auto cont = si.maybeMissingContinent();
         painter->fillRect(rect, cont.icon.bgColor);
         drawCharBorder(painter, rect, clFg);
         clFg = cont.icon.fgColor;
@@ -665,7 +665,7 @@ ie::Hint::~Hint() {}
 
 void ie::Hint::paint1(QPainter *painter, const QRect &rect, qreal)
 {
-    painter->fillRect(rect, icon.continent().icon.bgColor);
+    painter->fillRect(rect, icon.maybeMissingContinent().icon.bgColor);
     util::drawHintedSvg(painter, rect, *texture->get(), icon.svgHint);
 }
 
@@ -687,7 +687,7 @@ ie::Format::~Format() {}
 
 void ie::Format::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
-    auto& continent = icon.continent().icon;
+    auto& continent = icon.maybeMissingContinent().icon;
     painter->fillRect(rect, continent.bgColor);
 
     auto fi = util::getFormatInfo(rect, scale);

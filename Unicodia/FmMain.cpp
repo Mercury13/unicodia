@@ -479,7 +479,7 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
         if (isCjkCollapsed) {
             auto block = uc::blockOf(cp.subj);
             if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                return block->synthIcon.normalContinent().collapsedTextColor;
+                return block->synthIcon.normalContinent().collapse.textColor;
             }
         }
     }
@@ -496,7 +496,7 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
                 if (isCjkCollapsed) {
                     auto block = uc::blockOf(cp->subj);
                     if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                        return block->synthIcon.normalContinent().icon.bgColor;
+                        return block->synthIcon.normalContinent().collapse.bgColor;
                     }
                 }
             } else {
@@ -1022,14 +1022,23 @@ void FmMain::installCopyEvents(FmMain* that,
 }
 
 
+void FmMain::setCollapseColor(const QColor& x)
+{
+    if (clCollapse != x) {
+        clCollapse = x;
+        ui->wiCollapse->setStyleSheet(
+            "#wiCollapse { background-color: " + x.name() + "; }"   );
+    }
+}
+
+
 FmMain::InitBlocks FmMain::initBlocks()
 {
     InitBlocks r;
 
     // Collapse bar
     ui->wiCollapse->hide();
-    ui->wiCollapse->setStyleSheet(
-                "#wiCollapse { background-color: " + BG_CJK.name() + "; }"   );
+    setCollapseColor(BG_CJK);
     connect(ui->btCollapse, &QPushButton::clicked,
             this, &This::cjkExpandCollapse);
 
@@ -1564,7 +1573,11 @@ void FmMain::forceShowCp(MaybeChar ch)
     int newIBlock = block->cachedIndex;
     if (newIBlock != iBlock)
         ui->comboBlock->setCurrentIndex(newIBlock);
-    ui->wiCollapse->setVisible(block->flags.have(uc::Bfg::COLLAPSIBLE));
+    bool isCollapsible = block->flags.have(uc::Bfg::COLLAPSIBLE);
+    if (isCollapsible) {
+        setCollapseColor(block->synthIcon.normalContinent().collapse.bgColor);
+    }
+    ui->wiCollapse->setVisible(isCollapsible);
 }
 
 

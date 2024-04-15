@@ -814,7 +814,10 @@ namespace uc {
             consteval Icon(const QColor& aBg, const QColor& aFg, const QColor& aFrame) noexcept
                 : bgColor(aBg), fgColor(aFg), frameColor(aFrame) {}
         } icon;
-        QColor collapsedTextColor;
+
+        struct Collapse {
+            QColor bgColor, textColor;
+        } collapse;
     };
     extern const Continent continentInfo[];
 
@@ -856,11 +859,13 @@ namespace uc {
         SvgHint svgHint { 0, 0 };
 
         inline const Cp& cp() const;
+
         /// @return  Continent, never missing
         const Continent& normalContinent() const
             { return continentInfo[static_cast<int>(ecContinent)]; }
+
         /// @return  Continent, maybe missing
-        const Continent& continent() const;
+        const Continent& maybeMissingContinent() const;
     };
 
     enum class MyName { INST };

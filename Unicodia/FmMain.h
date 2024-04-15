@@ -346,6 +346,7 @@ private:
     MyGui mainGui;
     PopupGui popupGui{mainGui};
     std::unique_ptr<QNetworkAccessManager> netMan;
+    QColor clCollapse;
 
     struct PullUpDetector {
         bool isCocked = false;
@@ -402,6 +403,7 @@ private:
     void blinkAtFavs(QWidget* initiator, const QString& text);
     /// @param [in]  direction [+] add [-] remove
     void addRemoveFromFavs(WiShowcase* showcase, QWidget* initiator, bool direction);
+    void setCollapseColor(const QColor& x);
 
     // PixSource
     int pixSize() const override;
