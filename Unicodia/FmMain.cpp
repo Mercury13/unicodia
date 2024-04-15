@@ -479,11 +479,7 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
         if (isCjkCollapsed) {
             auto block = uc::blockOf(cp.subj);
             if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
-                switch (block->synthIcon.ecContinent) {
-                case uc::EcContinent::AFRICA:
-                    return TX_AFRICA;
-                default: return TX_CJK;
-                }
+                return block->synthIcon.normalContinent().collapsedTextColor;
             }
         }
     }

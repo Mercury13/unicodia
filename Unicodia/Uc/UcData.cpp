@@ -1032,23 +1032,24 @@ size_t uc::nTerms() { return std::size(terms); }
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { { 0xFF, 0xFF, 0xFF }, { 0x00, 0x00, 0x00 } } },
+    { { { 0xFF, 0xFF, 0xFF }, { 0x00, 0x00, 0x00 } }, NO_COLOR  },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour
-            { 0x66, 0xff, 0x00 } } },
+            { 0x66, 0xff, 0x00 } },
+            NO_COLOR },
     // Europe
-    { { BG_EUROPE,            { 0x2f, 0x5e, 0x9d } } },
+    { { BG_EUROPE,            { 0x2f, 0x5e, 0x9d } }, NO_COLOR  },
     // Asia
-    { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } } },
+    { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } }, NO_COLOR  },
     // CJK
-    { { BG_CJK,               FG_CJK               } },
+    { { BG_CJK,               FG_CJK               }, TX_CJK    },
     // Ocean
-    { { { 0xc8, 0xff, 0xc8 }, { 0x00, 0x64, 0x00 } } },
+    { { { 0xc8, 0xff, 0xc8 }, { 0x00, 0x64, 0x00 } }, NO_COLOR  },
     // Africa
-    { { BG_AFRICA,            FG_AFRICA            } },
+    { { BG_AFRICA,            FG_AFRICA            }, TX_AFRICA },
     // America
-    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } } },
+    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, NO_COLOR  },
 };
 
 // Missing

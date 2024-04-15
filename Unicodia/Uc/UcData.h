@@ -808,6 +808,7 @@ namespace uc {
             consteval Icon(const QColor& aBg, const QColor& aFg, const QColor& aFrame) noexcept
                 : bgColor(aBg), fgColor(aFg), frameColor(aFrame) {}
         } icon;
+        QColor collapsedTextColor;
     };
     extern const Continent continentInfo[];
 
