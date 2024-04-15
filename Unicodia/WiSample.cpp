@@ -32,7 +32,10 @@ bool WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
         clearSample();
         return false;
     }
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+    Flags<uc::FontGetFg> fgs;
+    if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
+        fgs |= uc::FontGetFg::KNOWN_TOFU;
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, ch.subj);
     ui->lbSample->setFont(qfont);
     return true;
 }
@@ -95,7 +98,7 @@ void WiSample::showBriefly()
 QFont WiSample::showCpBriefly(const uc::Cp& ch)
 {
     auto font = ch.font(match::Normal::INST);
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, false, ch.subj);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, ch.subj);
     ui->lbSample->setFont(qfont);
     showBriefly();
     return qfont;

@@ -1054,7 +1054,7 @@ constinit const uc::Continent uc::continentInfo[] {
 
 // Missing
 constinit const uc::Continent MISSING_CONTINENT
-    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } } };
+    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } }, NO_COLOR };
 
 
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));
@@ -2042,15 +2042,26 @@ onceAgain:
 }
 
 
-QFont uc::Font::get(FontPlace place, int size, bool noAa, char32_t trigger) const
+QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
+                    char32_t trigger) const
 {
     load(trigger);
     if (!q.loaded || !q.loaded->normal)
         return {};
     QFont font = *q.loaded->normal;
     font.setPointSize(computeSize(place, size));
-    if (place == FontPlace::CELL && noAa) {
-        font.setStyleStrategy(fst::NO_AA);
+    auto strategy = font.styleStrategy();
+    bool strategyChanged = false;
+    if (place == FontPlace::CELL && flags.have(uc::FontGetFg::NO_AA)) {
+        strategy = fst::NO_AA;
+        strategyChanged = true;
+    }
+    if (flags.have(uc::FontGetFg::NO_AA)) {
+        strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
+        strategyChanged = true;
+    }
+    if (strategyChanged) {
+        font.setStyleStrategy(strategy);
     }
     return font;
 }
@@ -2542,7 +2553,7 @@ const uc::Version* uc::findVersion(std::string_view id)
 QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
 {
     auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    return font.get(place, size, false, trigger);
+    return font.get(place, size, uc::FontGetFg::NONSTANDARD, trigger);
 }
 
 

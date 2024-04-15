@@ -19,6 +19,7 @@
 
 namespace {
     constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
+    //constinit const char16_t U16_TOFU[] { 0xD807, 0xDEE0, 0 };     // Makasar Ka
 }
 
 WiOsStyle::WiOsStyle(QWidget *parent) :
@@ -33,7 +34,7 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
     fontTofu.setStyleStrategy(fst::TOFU);
 
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, false, NO_TRIGGER));
+    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, NO_TRIGGER));
 
     connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::slotLinkActivated);
 }

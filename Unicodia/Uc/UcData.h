@@ -536,6 +536,13 @@ namespace uc {
         int delta = 0;
     };
 
+    enum class FontGetFg {
+        NO_AA = 1,
+        KNOWN_TOFU = 2,
+        FAST = KNOWN_TOFU,        ///< accent that it shows faster
+        NONSTANDARD = KNOWN_TOFU, ///< accent that nonstandard font here, no substitutes
+    };
+
     struct Font
     {
         static const QString qempty;
@@ -558,7 +565,7 @@ namespace uc {
         void load(char32_t trigger) const;
 
         int computeSize(FontPlace place, int size) const;
-        QFont get(FontPlace place, int size, bool noAa, char32_t trigger) const;
+        QFont get(FontPlace place, int size, Flags<FontGetFg> flags, char32_t trigger) const;
         bool doesSupportChar(char32_t x) const;
         const QString& familiesComma() const;
 
