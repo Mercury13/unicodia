@@ -127,6 +127,7 @@ HEADERS += \
     Uc/UcDating.h \
     Uc/UcFlags.h \
     Uc/UcSearch.h \
+    Uc/UcSkin.h \
     WiLibCp.h \
     WiOsStyle.h \
     WiSample.h \

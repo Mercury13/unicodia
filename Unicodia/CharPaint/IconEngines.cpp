@@ -7,9 +7,11 @@
 #include <QStyleOption>
 #include <QSvgRenderer>
 
+// Unicode data
+#include "UcSkin.h"
+
 // Char paint
 #include "routines.h"
-#include "Skin.h"
 
 ///// Util /////////////////////////////////////////////////////////////////////
 

@@ -1143,17 +1143,19 @@ constinit const uc::Block uc::blocks[] {
     // Egyptian hiero OK
     { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
             "Egyptian Hieroglyphs",
-            { EcScript::Egyp, 0 }, MapType::AF_DEAD, EcScript::Egyp },
+            { EcScript::Egyp, 0 }, MapType::AF_DEAD,
+            EcScript::Egyp, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Egyptian hiero format OK
     { 0x13430, 0x1345F, { 0x13434, EcContinent::AFRICA, Ifg::FORMAT },
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 'f' }, MapType::AF_DEAD,
-            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS },
+            EcScript::Egyp, EcFont::NORMAL,
+                Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE },
     /// @todo [U16, huge tofu] Egyp A
     { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
-            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },
     // Anatolian hiero OK
     { 0x14400, 0x1467F, { 0x1446E, EcContinent::ASIA },
             "Anatolian Hieroglyphs",

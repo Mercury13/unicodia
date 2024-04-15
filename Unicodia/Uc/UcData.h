@@ -849,6 +849,10 @@ namespace uc {
         SvgHint svgHint { 0, 0 };
 
         inline const Cp& cp() const;
+        /// @return  Continent, never missing
+        const Continent& normalContinent() const
+            { return continentInfo[static_cast<int>(ecContinent)]; }
+        /// @return  Continent, maybe missing
         const Continent& continent() const;
     };
 

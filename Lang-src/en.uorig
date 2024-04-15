@@ -8022,7 +8022,7 @@
    <au-cmt>Test: expand/collapse CJK</au-cmt>
    <group id="0">
     <text id="Label">
-     <orig>CJK are collapsed (except syllabaries and small blocks)</orig>
+     <orig>CJK (except Kana) and Egyptian hieroglyphs are collapsed.</orig>
     </text>
     <text id="Button">
      <orig>Expand</orig>
@@ -8030,7 +8030,7 @@
    </group>
    <group id="1">
     <text id="Label">
-     <orig>CJK are expanded.</orig>
+     <orig>CJK and Egyptian hieroglyphs are expanded.</orig>
     </text>
     <text id="Button">
      <orig>Collapse</orig>

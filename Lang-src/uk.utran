@@ -11634,8 +11634,8 @@
    <au-cmt>Test: expand/collapse CJK</au-cmt>
    <group id="0">
     <text id="Label">
-     <orig>CJK are collapsed (except syllabaries and small blocks)</orig>
-     <transl>ККЯ згорнуті (окрім складових абеток і маленьких блоків).</transl>
+     <orig>CJK (except Kana) and Egyptian hieroglyphs are collapsed.</orig>
+     <transl>ККЯ (окрім кани) та єгипетські ієрогліфи згорнуті.</transl>
     </text>
     <text id="Button">
      <orig>Expand</orig>
@@ -11644,8 +11644,8 @@
    </group>
    <group id="1">
     <text id="Label">
-     <orig>CJK are expanded.</orig>
-     <transl>ККЯ розгорнуті.</transl>
+     <orig>CJK and Egyptian hieroglyphs are expanded.</orig>
+     <transl>ККЯ та єгипетські ієрогліфи розгорнуті.</transl>
     </text>
     <text id="Button">
      <orig>Collapse</orig>

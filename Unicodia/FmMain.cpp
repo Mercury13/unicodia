@@ -41,6 +41,7 @@
 // Unicode
 #include "UcCp.h"
 #include "UcClipboard.h"
+#include "UcSkin.h"
 
 // Char drawing
 #include "CharPaint/routines.h"
@@ -477,8 +478,13 @@ QColor CharsModel::fgAt(const uc::Cp& cp, TableColors tcl) const
     if (tcl != TableColors::NO) {
         if (isCjkCollapsed) {
             auto block = uc::blockOf(cp.subj);
-            if (block->flags.have(uc::Bfg::COLLAPSIBLE))
-                return TX_CJK;
+            if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
+                switch (block->synthIcon.ecContinent) {
+                case uc::EcContinent::AFRICA:
+                    return TX_AFRICA;
+                default: return TX_CJK;
+                }
+            }
         }
     }
     return {};
@@ -493,8 +499,9 @@ QVariant CharsModel::data(const QModelIndex& index, int role) const
             if (cp) {
                 if (isCjkCollapsed) {
                     auto block = uc::blockOf(cp->subj);
-                    if (block->flags.have(uc::Bfg::COLLAPSIBLE))
-                        return BG_CJK;
+                    if (block->flags.have(uc::Bfg::COLLAPSIBLE)) {
+                        return block->synthIcon.normalContinent().icon.bgColor;
+                    }
                 }
             } else {
                 if (uc::isNonChar(cp.code)) {

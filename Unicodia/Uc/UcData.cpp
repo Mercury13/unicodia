@@ -14,6 +14,7 @@
 
 // Unicode
 #include "UcCp.h"
+#include "UcSkin.h"
 
 // L10n
 #include "LocDic.h"
@@ -1037,15 +1038,15 @@ constinit const uc::Continent uc::continentInfo[] {
             // Special Technical’s frame colour
             { 0x66, 0xff, 0x00 } } },
     // Europe
-    { { { 0x7f, 0xff, 0xff }, { 0x2f, 0x5e, 0x9d } } },
+    { { BG_EUROPE,            { 0x2f, 0x5e, 0x9d } } },
     // Asia
     { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } } },
     // CJK
-    { { { 0xff, 0xf0, 0xf5 }, { 0x5c, 0x35, 0x66 } } },
+    { { BG_CJK,               FG_CJK               } },
     // Ocean
     { { { 0xc8, 0xff, 0xc8 }, { 0x00, 0x64, 0x00 } } },
     // Africa
-    { { { 0xf5, 0xde, 0xb3 }, { 0x8f, 0x59, 0x02 } } },
+    { { BG_AFRICA,            FG_AFRICA            } },
     // America
     { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } } },
 };
@@ -1640,7 +1641,7 @@ const uc::Continent& uc::SynthIcon::continent() const
 {
     if (flags.have(Ifg::MISSING))
         return MISSING_CONTINENT;
-    return continentInfo[static_cast<int>(ecContinent)];
+    return normalContinent();
 }
 
 
