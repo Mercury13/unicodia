@@ -540,7 +540,6 @@ namespace uc {
         NO_AA = 1,
         KNOWN_TOFU = 2,
         FAST = KNOWN_TOFU,        ///< accent that it shows faster
-        NONSTANDARD = KNOWN_TOFU, ///< accent that nonstandard font here, no substitutes
     };
 
     struct Font

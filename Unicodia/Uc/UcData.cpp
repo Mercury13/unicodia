@@ -2055,7 +2055,8 @@ QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
     if (place == FontPlace::CELL && flags.have(uc::FontGetFg::NO_AA)) {
         strategy = fst::NO_AA;
     }
-    if (flags.have(uc::FontGetFg::KNOWN_TOFU)) {
+    if (flags.have(uc::FontGetFg::KNOWN_TOFU) && trigger != NO_TRIGGER
+            && !doesSupportChar(trigger)) {
         strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
     }
     if (strategy != oldStrategy) {
@@ -2551,7 +2552,7 @@ const uc::Version* uc::findVersion(std::string_view id)
 QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
 {
     auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    return font.get(place, size, uc::FontGetFg::NONSTANDARD, trigger);
+    return font.get(place, size, NO_FLAGS, trigger);
 }
 
 
