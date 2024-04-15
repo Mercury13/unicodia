@@ -29,6 +29,17 @@ void tofu::Counter::reg(int code, uc::TofuState state)
 ///// tofu::Model //////////////////////////////////////////////////////////////
 
 
+namespace {
+
+    inline QVariant fromInt(int x) {
+        if (x == 0)
+            return {};
+        return x;
+    }
+
+}   // anon namespace
+
+
 QVariant tofu::Model::data(const QModelIndex& index, int role) const
 {
     unsigned iRow = index.row();
@@ -41,7 +52,7 @@ QVariant tofu::Model::data(const QModelIndex& index, int role) const
         case COL_TOTAL: return rw.data.nTotal();
         case COL_OTHER: return rw.data.nOther;
         case COL_GOOD: return rw.data.nGood;
-        case COL_TOFU: return rw.data.nTofu;
+        case COL_TOFU: return fromInt(rw.data.nTofu);
         case COL_FIRST_TOFU: {
                 if (rw.data.firstTofu < 0)
                     return {};

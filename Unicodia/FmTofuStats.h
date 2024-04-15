@@ -19,7 +19,7 @@ namespace tofu
     struct Counter
     {
         int nOther = 0, nGood = 0, nTofu = 0, firstTofu = -1;
-        int nTotal() const { return nOther + nGood + nTofu; }
+        [[nodiscard]] int nTotal() const { return nOther + nGood + nTofu; }
         void reg(int code, uc::TofuState state);
     };
 
