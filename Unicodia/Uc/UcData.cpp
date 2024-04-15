@@ -2050,17 +2050,15 @@ QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
         return {};
     QFont font = *q.loaded->normal;
     font.setPointSize(computeSize(place, size));
-    auto strategy = font.styleStrategy();
-    bool strategyChanged = false;
+    auto oldStrategy = font.styleStrategy();
+    auto strategy = oldStrategy;
     if (place == FontPlace::CELL && flags.have(uc::FontGetFg::NO_AA)) {
         strategy = fst::NO_AA;
-        strategyChanged = true;
     }
     if (flags.have(uc::FontGetFg::KNOWN_TOFU)) {
         strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
-        strategyChanged = true;
     }
-    if (strategyChanged) {
+    if (strategy != oldStrategy) {
         font.setStyleStrategy(strategy);
     }
     return font;
