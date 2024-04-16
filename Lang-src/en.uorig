@@ -8842,6 +8842,12 @@
     <text id="CjkSimIdeo">
      <orig>CJK similar ideographs</orig>
     </text>
+    <text id="CherCap">
+     <orig>Cherokee / capital</orig>
+    </text>
+    <text id="CherSmall">
+     <orig>Cherokee / small</orig>
+    </text>
     <text id="MiscLat">
      <orig>Latin letter of different origin</orig>
     </text>

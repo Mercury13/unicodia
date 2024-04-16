@@ -12712,6 +12712,14 @@
      <orig>CJK similar ideographs</orig>
      <transl>ККЯ схожі ієрогліфи</transl>
     </text>
+    <text id="CherCap">
+     <orig>Cherokee / capital</orig>
+     <transl>Черокі / великі</transl>
+    </text>
+    <text id="CherSmall">
+     <orig>Cherokee / small</orig>
+     <transl>Черокі / малі</transl>
+    </text>
     <text id="MiscLat">
      <orig>Latin letter of different origin</orig>
      <transl>Латинські літери різного походження</transl>

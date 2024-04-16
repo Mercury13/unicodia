@@ -300,7 +300,7 @@
 	</f>
 	<f loc="Latin3" forgetTest="1">
 		<f loc="SmallCap" forgetTest="0" hasText="1">
-			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ʀ ꜱ ᴛ ᴜ ᴠ ᴡ ʏ ᴢ</d>
+			<d>ᴀ ʙ ᴄ ᴅ ᴇ ꜰ ғ ɢ ʜ ɪ ᴊ ᴋ ʟ ᴍ ɴ ᴏ ᴘ ꞯ ǫ ʀ ꜱ ᴛ ᴜ ᴠ ᴡ ʏ ᴢ</d>
 		</f>
 		<f loc="SuperCap" forgetTest="0" tile="0">
 			<d>ᴬ ᴮ ꟲ ᴰ ᴱ ꟳ ᴳ ᴴ ᴵ ᴶ ᴷ ᴸ ᴹ ᴺ ᴼ ᴾ ꟴ ᴿ ᵀ ᵁ ⱽ ᵂ</d>
@@ -427,8 +427,14 @@
 		<f loc="CjkSmall">
 			<range start="FF41" end="FF5A" />
 		</f>
-		<f loc="CjkSimIdeo" forgetTest="0">
-			<d>丹 卂 𠔀 乃 㠯 匚 匸 刀 𠀉 𠂋 㔾 呂 𠂑 廾 丨 工 讠 丿 亅 片 𡿨 𣱱 乚 厶 𠃊 爪 从 几 𠘨 口 囗 尸 母 𠂀 𤆗 尺 丂 丁 凵 山 乂 㐅 ㄚ ソ 𠂈 乙 𠮺</d>
+		<f loc="CjkSimIdeo" forgetTest="0"  tilePattern="10010101111">
+			<d>𠔀 丹 卂 乃 㠯 匚 匸 刀 𠀉 𠂋 㔾 呂 𠂑 廾 丨 工 讠 丿 亅 片 𡿨 𣱱 乚 厶 𠃊 爪 从 几 𠘨 口 囗 尸 母 𠂀 𤆗 尺 丂 丁 凵 山 乂 㐅 丫 𠂈 乙 𠮺</d>
+		</f>
+		<f loc="CherCap" forgetTest="0">
+			<d>Ꭺ Ᏼ Ꮯ Ꭰ Ꭼ Ꮁ Ꮐ Ꮋ Ꮖ Ꭻ Ꮶ Ꮮ Ꮇ Ꮑ Ꮎ Ꮲ Ꭴ Ꭱ Ꮪ Ꭲ Ꮼ Ꮩ Ꮃ Ꮂ Ꭹ Ꮓ</d>
+		</f>
+		<f loc="CherSmall" forgetTest="0">
+			<d>ꭺ ᏼ ꮯ ꭰ ꭼ ꮁ ᏽ ꮋ ꮖ ꭻ ꮶ ꮮ ꮇ ꮑ ꮎ ꮲ ꭴ ꭱ ꮪ ꭲ ꮼ ꮩ ꮤ ꮂ ꭹ ꮓ</d>
 		</f>
 		<f loc="InvCap" forgetTest="0">
 			<d>Ɐ ꓭ Ɔ  ꓷ Ⴇ Ɑ Ǝ Ⅎ ⅁ H I Ր ꓩ Ʞ Ꞁ ꟽ N O Ԁ Ò ꓤ S Ʇ Ո Ʌ M X ⅄ Z</d>
