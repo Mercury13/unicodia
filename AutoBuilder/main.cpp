@@ -559,6 +559,9 @@ int main()
             flags |= uc::m::SPACE;
         flags |= styleFlags(cp);
 
+        /// @todo [urgent] Kangxi
+        ucd::Kx kx;
+
         // OUTPUT
         os << "{ "
            << "0x" << std::hex << int(cp) << ", "    // subj
@@ -611,6 +614,8 @@ int main()
         } else {
             os << "{}";
         }
+
+        os << ", {" << kx.radical << "," << kx.plusStrokes << "}";
 
         os << "}," << '\n';
         ++nChars;

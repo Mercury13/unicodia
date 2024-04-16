@@ -4,11 +4,16 @@
 #include <vector>
 #include <unordered_map>
 
-namespace ucd {
+namespace ucd {    
 
     struct HangulLine {
         char32_t cp;
         std::string name;
+    };
+
+    struct Kx {
+        short radical = 0;
+        short plusStrokes = 0;
     };
 
     struct NumType {

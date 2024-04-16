@@ -531,6 +531,12 @@ namespace uc {
         EcScript ecScript;              // +1 = 11
         uint8_t iNumeric;               // +1 = 12
         mutable Cfgs flags;             // +2 = 14
+        struct Cjk {
+            struct Kx {
+                unsigned char radical;
+                signed char plusStrokes;
+            } kx;                       // +2 = 16
+        } cjk;
 
         const Version& version() const;
         const Category& category() const;
@@ -578,7 +584,7 @@ namespace uc {
         { return sprintPlus(buf, N, text); }
 
     // Check your calculations once again
-    static_assert(sizeof(Cp) == 14, "Cp size wrong");
+    static_assert(sizeof(Cp) == 16, "Cp size wrong");
 
     extern Cp cpInfo[N_CPS];
     extern const char8_t allStrings[];
