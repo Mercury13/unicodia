@@ -8848,6 +8848,15 @@
     <text id="CherSmall">
      <orig>Cherokee / small</orig>
     </text>
+    <text id="Bamu">
+     <orig>Bamum</orig>
+    </text>
+    <text id="Vaii">
+     <orig>Vai</orig>
+    </text>
+    <text id="Cans">
+     <orig>Canadian syllabics</orig>
+    </text>
     <text id="MiscLat">
      <orig>Latin letter of different origin</orig>
     </text>

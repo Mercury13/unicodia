@@ -12720,6 +12720,18 @@
      <orig>Cherokee / small</orig>
      <transl>Черокі / малі</transl>
     </text>
+    <text id="Bamu">
+     <orig>Bamum</orig>
+     <transl>Бамум</transl>
+    </text>
+    <text id="Vaii">
+     <orig>Vai</orig>
+     <transl>Ваї</transl>
+    </text>
+    <text id="Cans">
+     <orig>Canadian syllabics</orig>
+     <transl>Канадська складова</transl>
+    </text>
     <text id="MiscLat">
      <orig>Latin letter of different origin</orig>
      <transl>Латинські літери різного походження</transl>

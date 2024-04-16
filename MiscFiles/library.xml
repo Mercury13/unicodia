@@ -436,6 +436,15 @@
 		<f loc="CherSmall" forgetTest="0">
 			<d>ꭺ ᏼ ꮯ ꭰ ꭼ ꮁ ᏽ ꮋ ꮖ ꭻ ꮶ ꮮ ꮇ ꮑ ꮎ ꮲ ꭴ ꭱ ꮪ ꭲ ꮼ ꮩ ꮤ ꮂ ꭹ ꮓ</d>
 		</f>
+		<f loc="Bamu" forgetTest="0">
+			<d>𖧥 𖧳 𖥐 𖦧 𖠢 𖨨 ꛪ 𖦙 𖥣 𖨗 𖢉 ꛚ 𖢑 ꛘ 𖥕 𖡮 𖥨 𖦪 𖨚 𖢧 ꚶ 𖡥 𖧉 𖧦 ꚲ 𖣩</d>
+		</f>
+		<f loc="Vaii" forgetTest="0" tilePattern="101011">
+			<d>ꗇ ꕔ ꕗ ꔪ ꖀ ꕒ ꗋ ꗛ ꗍ ꗨ ꘓ ꗓ ꘘ ꕃ ꕄ ꗱ ꖾ ꔠ ꘡ ꕯ ꕈ ꔕ ꗣ ꕴ ꘢ ꕮ ꖦ ꖴ ꕺ ꗞ ꘖ ꘝ ꘫ ꕪ ꔵ ꔶ ꕶ ꗟ ꕷ ꔋ ꔉ ꖡ ꖹ ꘜ ꔗ ꘉ ꔇ ꕩ ꔙ ꕘ</d>
+		</f>
+		<f loc="Cans" forgetTest="0" tilePattern="101000110">
+			<d>ᗅ ᗩ ᗷ ᗽ ᑲ ᙖ ᑕ ᗞ ᐅ ᗴ ᕮ ᗕ ᖴ ᒋ ᘜ ᕋ ᕼ ᖺ ᑊ ᓵ ᒑ ᒎ ᒍ ᐸ ᒪ ᒫ ᖶ ᗰ ᘻ ᙢ ᗑ ᕬ ᘯ ᐱ ᗝ ᗜ ᕈ ᑭ ᖘ ᕵ ᖰ ᘝ ᑫ ᖇ ᖆ ᔑ ᐪ ᑌ ᙀ ᐯ ᐺ ᐻ ᕓ ᗯ ᘺ ᗐ ᕫ ᙭ ᙮ ᖿ ᔨ ᙆ</d>
+		</f>
 		<f loc="InvCap" forgetTest="0">
 			<d>Ɐ ꓭ Ɔ  ꓷ Ⴇ Ɑ Ǝ Ⅎ ⅁ H I Ր ꓩ Ʞ Ꞁ ꟽ N O Ԁ Ò ꓤ S Ʇ Ո Ʌ M X ⅄ Z</d>
 		</f>
