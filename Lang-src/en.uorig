@@ -8688,6 +8688,12 @@
     <text id="CmpMisc">
      <orig>Misc. inequality characters</orig>
     </text>
+    <text id="Boolean">
+     <orig>Boolean algebra</orig>
+    </text>
+    <text id="Braces">
+     <orig>Braces</orig>
+    </text>
     <text id="Latin">
      <orig>Latin / by letter</orig>
     </text>

@@ -12507,6 +12507,14 @@
      <orig>Misc. inequality characters</orig>
      <transl>Різні символи нерівності</transl>
     </text>
+    <text id="Boolean">
+     <orig>Boolean algebra</orig>
+     <transl>Булівська алгебра</transl>
+    </text>
+    <text id="Braces">
+     <orig>Braces</orig>
+     <transl>Дужки</transl>
+    </text>
     <text id="Latin">
      <orig>Latin / by letter</orig>
      <transl>Латинка / по літерах</transl>

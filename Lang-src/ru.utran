@@ -12506,6 +12506,14 @@
      <orig>Misc. inequality characters</orig>
      <transl>Разные символы неравенства</transl>
     </text>
+    <text id="Boolean">
+     <orig>Boolean algebra</orig>
+     <transl>Булевская алгебра</transl>
+    </text>
+    <text id="Braces">
+     <orig>Braces</orig>
+     <transl>Скобки</transl>
+    </text>
     <text id="Latin">
      <orig>Latin / by letter</orig>
      <transl>Латиница / по буквам</transl>
