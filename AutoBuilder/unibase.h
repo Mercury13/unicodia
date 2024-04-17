@@ -11,9 +11,11 @@ namespace ucd {
         std::string name;
     };
 
+    /// Info on Kangxi radicals: index (0 = none) + # of strokes
     struct Kx {
         short radical = 0;
         short plusStrokes = 0;
+        static const Kx DFLT;
     };
 
     struct NumType {
@@ -24,6 +26,7 @@ namespace ucd {
         unsigned nBlocks = 0;
         std::vector<HangulLine> hangulLines;
         std::unordered_map<char32_t, std::string> hanNumValues;
+        std::unordered_map<char32_t, Kx> hanKangxi;
     };
 
     struct CpInfo {
@@ -38,6 +41,7 @@ namespace ucd {
         char32_t upperCase = 0;     ///< 0 = none
         bool isMirrored = false;
         bool isDeprecated = false;
+        Kx kx;
     };
 
     class BaseSink {    // interface

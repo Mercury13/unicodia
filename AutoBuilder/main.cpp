@@ -390,7 +390,8 @@ int main()
     std::cout << "Loading main base's support data..." << std::flush;
     const auto supportData = ucd::loadSupportData();
     std::cout << "OK, " << supportData.nBlocks << " blocks, "
-                        << supportData.hangulLines.size() << " Hangul lines." << '\n';
+                        << supportData.hangulLines.size() << " Hangul lines, "
+                        << supportData.hanKangxi.size() << " Kangxi lines." << '\n';
 
     ///// Open output file /////////////////////////////////////////////////////
 
@@ -559,9 +560,6 @@ int main()
             flags |= uc::m::SPACE;
         flags |= styleFlags(cp);
 
-        /// @todo [urgent] Kangxi
-        ucd::Kx kx;
-
         // OUTPUT
         os << "{ "
            << "0x" << std::hex << int(cp) << ", "    // subj
@@ -615,7 +613,7 @@ int main()
             os << "{}";
         }
 
-        os << ", {" << kx.radical << "," << kx.plusStrokes << "}";
+        os << ", {" << cpInfo.kx.radical << "," << cpInfo.kx.plusStrokes << "}";
 
         os << "}," << '\n';
         ++nChars;

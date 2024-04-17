@@ -16,6 +16,8 @@
 
 using namespace std::string_view_literals;
 
+const ucd::Kx ucd::Kx::DFLT;
+
 namespace {
 
     constinit ucd::NumType NUM_NONE { "NONE" };
@@ -118,6 +120,80 @@ namespace {
         return r;
     }
 
+    /// @return [+] x is in one of Han ideograph ranges
+    bool isHani(char32_t x)
+    {
+        auto plane = x >> 16;
+        switch (plane) {
+        case 0:
+            return ((x >= cp::HANI_0_FIRST && x <= cp::HANI_0_LAST)
+                 || (x >= cp::HANI_COMPAT_FIRST && x <= cp::HANI_COMPAT_LAST)
+                 || (x >= cp::HANI_A_FIRST && x <= cp::HANI_A_LAST));
+        case 2:  // Plane 2 is Hani, and it won’t change
+        case 3:
+            /// @todo [future] Plane 3 is Hani for now, but someday it’ll change
+            ///     Maybe act by exclusion: added seal script → subtract it
+            return true;
+        default:
+            return false;
+        }
+    }
+
+    std::unordered_map<char32_t, ucd::Kx> loadHanKangxi()
+    {
+        std::unordered_map<char32_t, ucd::Kx> r;
+
+        std::string line;
+        std::ifstream is(HAN_IRG);
+        while (std::getline(is, line)) {
+            auto trimmed = str::trimSv(line);
+            if (trimmed.empty() || trimmed.starts_with('#'))
+                continue;
+
+            auto vals = str::splitSv(trimmed, '\t', false);
+            if (vals.size() < 3)
+                continue;
+
+            auto sCp = vals.at(0);
+            if (sCp.starts_with("U+"))
+                sCp = sCp.substr(2);
+
+            auto cp = fromHex(sCp);
+            auto type = vals.at(1);
+            auto vals1 = vals.at(2);
+
+            if (type == "kRSUnicode"sv) {
+                if (!isHani(cp))
+                    throw std::logic_error(str::cat(
+                            sCp, " is not Han ideograph"));
+
+                auto vals2 = str::splitSv(vals1, ' ');
+                if (vals2.empty())
+                    throw std::logic_error(str::cat(
+                            sCp, " has empty radicals/strokes "));
+                auto value = vals2.at(0);
+                auto parts = str::splitSv(value, '.');
+                if (parts.size() != 2)
+                    throw std::logic_error(str::cat(
+                            "Cannot split radicals/strokes ", value));
+                auto sIndex = parts.at(0);
+                while (sIndex.ends_with('\''))
+                    sIndex = sIndex.substr(0, sIndex.length() - 1);
+                auto iRadical = fromDec(sIndex);
+                if (iRadical < 1 || iRadical > cp::KANGXI_N)
+                    throw std::logic_error(str::cat(
+                            "Invalid Kangxi index ", sIndex));
+                ucd::Kx kx;
+                kx.radical = iRadical;
+                kx.plusStrokes = fromDec(parts.at(1));
+
+                r[cp] = kx;
+            }
+        }
+
+        return r;
+    }
+
 }
 
 ucd::SupportData ucd::loadSupportData()
@@ -127,6 +203,7 @@ ucd::SupportData ucd::loadSupportData()
     r.nBlocks = loadBlocks();
     r.hangulLines = loadHangulLines();
     r.hanNumValues = loadHanNumValues();
+    r.hanKangxi = loadHanKangxi();
 
     return r;
 }
@@ -186,6 +263,9 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
             info.upperCase = 0;
         }
 
+        // Default Kangxi
+        info.kx = Kx::DFLT;
+
         // Name is the last
         info.name = vals.at(1);
         if (info.name.starts_with('<')) { // SPECIAL NAMES
@@ -237,6 +317,12 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                             info.numeric.type = &NUM_NUMBER;
                             info.numeric.value = q->second;
                         }
+                    }
+                    if (auto q = supportData.hanKangxi.find(info.cp);
+                            q != supportData.hanKangxi.end()) {
+                        info.kx = q->second;
+                    } else {
+                        info.kx = Kx::DFLT;
                     }
                     sink.act(info);
                 }

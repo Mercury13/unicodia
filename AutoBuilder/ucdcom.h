@@ -11,6 +11,7 @@
 ///
 unsigned fromHex(std::string_view x);
 
+int fromDec(std::string_view x);
 
 bool fromHexIf(std::string_view x, unsigned& y);
 

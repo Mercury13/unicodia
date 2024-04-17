@@ -7,6 +7,22 @@ namespace cp {
     // Specials
     constexpr char32_t ZWJ = 0x200D;
 
+    // Kangxi radicals
+    constexpr int KANGXI_N = 214;
+    constexpr char32_t KANGXI_FIRST = 0x2F00;
+    constexpr char32_t KANGXI_DELTA = KANGXI_FIRST - 1;
+    constexpr char32_t KANGXI_LAST = KANGXI_DELTA + KANGXI_N;
+
+    // Han ideographs
+    constexpr char32_t HANI_A_FIRST = 0x3400;
+    constexpr char32_t HANI_A_LAST = 0x4DBF;
+
+    constexpr char32_t HANI_0_FIRST = 0x4E00;
+    constexpr char32_t HANI_0_LAST = 0x9FFF;
+
+    constexpr char32_t HANI_COMPAT_FIRST = 0xF900;
+    constexpr char32_t HANI_COMPAT_LAST = 0xFAFF;
+
     // Planes
     constexpr char32_t PLANE_MASK = 0xFFFF;
     constexpr char32_t PLANE_2_START = 0xF'0000;

@@ -24,7 +24,21 @@ unsigned fromHex(std::string_view x)
     auto res = std::from_chars(beg, end, r, 16);
     if (res.ec != std::errc() || res.ptr != end) {
         throw std::invalid_argument(
-                str::cat("[fromChars] Cannot parse hex ", x));
+                str::cat("[fromHex] Cannot parse hex ", x));
+    }
+    return r;
+}
+
+
+int fromDec(std::string_view x)
+{
+    int r;
+    auto beg = x.data();
+    auto end = beg + x.length();
+    auto res = std::from_chars(beg, end, r);
+    if (res.ec != std::errc() || res.ptr != end) {
+        throw std::invalid_argument(
+                str::cat("[fromDec] Cannot parse number ", x));
     }
     return r;
 }
