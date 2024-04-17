@@ -897,6 +897,17 @@
      <au-cmt>Test: Sgnw</au-cmt>
     </text>
    </group>
+   <group id="Kx">
+    <au-cmt>CJK Kangxi radical, maintained by Unicode themselves</au-cmt>
+    <text id="Bullet">
+     <orig>Radical</orig>
+     <au-cmt>Link will be auto-added</au-cmt>
+    </text>
+    <text id="Data">
+     <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
+     <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

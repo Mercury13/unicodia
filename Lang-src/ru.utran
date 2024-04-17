@@ -1134,6 +1134,19 @@
      <transl>[[pt:nontext|нетекстовая]]{{-}}''как ноты''</transl>
     </text>
    </group>
+   <group id="Kx">
+    <au-cmt>CJK Kangxi radical, maintained by Unicode themselves</au-cmt>
+    <text id="Bullet">
+     <orig>Radical</orig>
+     <au-cmt>Link will be auto-added</au-cmt>
+     <transl>Ключ</transl>
+    </text>
+    <text id="Data">
+     <orig>{1} {2} {3|one=? stroke|many=? strokes}</orig>
+     <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
+     <transl>{1} {2} {3|one=? черта|few=? черты|many=? черт}</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

@@ -535,6 +535,7 @@ namespace uc {
             struct Kx {
                 unsigned char radical;
                 signed char plusStrokes;
+                constexpr operator bool() const noexcept { return radical; }
             } kx;                       // +2 = 16
         } cjk;
 

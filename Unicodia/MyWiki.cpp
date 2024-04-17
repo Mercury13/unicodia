@@ -766,6 +766,8 @@ void mywiki::appendEmojiValue(QString& text,
 
 namespace {
 
+    constexpr const char* PROP_COLON = ": ";
+
     void appendSomeBullet(QString& text,
                     std::u8string_view bullet,
                     std::string_view locKey,
@@ -775,7 +777,7 @@ namespace {
         str::append(text, tag1);
         str::append(text, loc::get(locKey));
         str::append(text, tag2);
-        text += ": ";
+        text += PROP_COLON;
     }
 
     void appendNonBullet(QString& text, std::string_view locKey,
@@ -1410,6 +1412,26 @@ namespace {
         sp.sep();
         auto& scr = cp.script();
         appendValuePopup(text, scr, "Prop.Bullet.Script", "ps");
+
+        // Kangxi
+        if (cp.cjk.kx) {
+            sp.sep();
+            text += "<a href='pk:2F00' class='popup'>";
+            text += loc::get("Prop.Kx.Bullet");
+            text += "</a>";
+            text += PROP_COLON;
+            char16_t sRad[] = u"?";
+            sRad[0] = cp::KANGXI_DELTA + cp.cjk.kx.radical;
+            /// @todo [future] which font?
+            //auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_NEWHAN)];
+            //auto fontFace = font.familiesComma();
+            auto sFullRad = loc::Fmt(u8"<font size='+2'>{1}</font>")
+                           (mojibake::toQ<std::u8string>(sRad)).str();
+            text += loc::get("Prop.Kx.Data").argQ(
+                        sFullRad,
+                        (cp.cjk.kx.plusStrokes >= 0) ? u8"+" : u8"−",
+                        std::abs(cp.cjk.kx.plusStrokes));
+        }
 
         // Unicode version
         sp.sep();

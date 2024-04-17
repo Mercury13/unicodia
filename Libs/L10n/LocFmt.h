@@ -165,6 +165,7 @@ namespace loc {
         void eat(unsigned long x)      { nn(x); }
         void eat(long long x)          { nn(x); }
         void eat(unsigned long long x) { nn(x); }
+        void eat(Ch x) { ss({&x, 1}); }
         void eat(Sv x) { ss(x); }
         void eat() {}
 
