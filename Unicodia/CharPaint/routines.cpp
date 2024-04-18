@@ -680,6 +680,26 @@ void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
                       cp.sampleProxy(uc::ProxyType::EXTENDED, emojiMode, glyphSets).text);
 }
 
+namespace {
+
+    void drawMultiSample(QPainter* painter, QRect rect, int sizePc, std::u32string_view s,
+                    const QColor& color)
+    {
+        if (s.empty())
+            return;
+        auto cp = uc::cpsByCode[s[0]];
+        auto font = fontAt(uc::DrawMethod::SAMPLE, sizePc, *cp);
+        if (font)
+            painter->setFont(*font);
+        painter->setBrush(color);
+        painter->setPen(color);
+        painter->drawText(rect,
+                          Qt::AlignCenter | Qt::TextSingleLine | Qt::TextIncludeTrailingSpaces,
+                          str::toQ(s));
+    }
+
+}
+
 
 void drawChar(
         QPainter* painter, const QRect& rect, int sizePc, const uc::Cp& cp,
@@ -727,6 +747,22 @@ void drawChar(
     }
     if (cp.isDeprecated())
         drawDeprecated(painter, rect);
+}
+
+
+void drawIconChars(
+        QPainter* painter, const QRect& rect, int sizePc, std::u32string_view s,
+        const QColor& color)
+{
+    switch (s.length()) {
+    case 0: break;
+    case 1:
+        drawChar(painter, rect, sizePc, *uc::cpsByCode[s[0]], color, TableDraw::CUSTOM,
+                uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
+        break;
+    default:
+        drawMultiSample(painter, rect, sizePc, s, color);
+    }
 }
 
 

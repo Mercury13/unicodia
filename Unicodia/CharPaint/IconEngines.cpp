@@ -379,11 +379,11 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         drawCharBorder(painter, rect, clFg);
         clFg = cont.icon.fgColor;
     }
+    if (si.flags.have(uc::Ifg::SMALLER))
+        scale *= 0.8;
     // Draw icon a bit larger — 120%
     // Synth icon always draws in default settings
-    drawChar(painter, rect, lround(120 * scale), si.cp(), clFg,
-             TableDraw::CUSTOM, uc::EmojiDraw::CONSERVATIVE,
-             uc::GlyphStyleSets::EMPTY);
+    drawIconChars(painter, rect, lround(120 * scale), si.subj.sv(), clFg);
 }
 
 ///// Node /////////////////////////////////////////////////////////////////////

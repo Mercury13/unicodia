@@ -72,6 +72,10 @@ void drawChar(
         const uc::GlyphStyleSets& glyphSets,
         UseMargins useMargins = UseMargins::YES);
 
+void drawIconChars(
+        QPainter* painter, const QRect& rect, int sizePc, std::u32string_view s,
+        const QColor& color);
+
 /// Draws existing character (not reserved icon!)
 void drawSearchChar(
         QPainter* painter, const QRect& rect, const uc::Cp* cp,

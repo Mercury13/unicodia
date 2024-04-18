@@ -829,10 +829,9 @@ namespace uc {
         MISSING           = 1<<1,   ///< [+] red icon, missing block
         CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
         FORMAT            = 1<<3,   ///< [+] format char is on icon
+        SMALLER           = 1<<4,   ///< [+] draw synth. icon smaller (legacy)
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
-        APPROX_2_CHARS    = 0,      ///< [+] 2 chars on icon:
-                                    ///<      sub/super, legacy computers, Kali…
         APPROX_ROTATED    = 0,      ///< [+] rotated text on icon:
                                     ///<      Mong, Phag
         APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:
@@ -849,6 +848,16 @@ namespace uc {
     };
     DEFINE_ENUM_OPS(Ifg)
 
+    struct TwoChars {
+        char32_t v[2];
+
+        consteval TwoChars(char32_t x) : v{x, 0} {}
+        consteval TwoChars(const char32_t x[3]) : v{x[0], x[1]} {}
+
+        unsigned length() const { return (v[1] != 0) + 1; }
+        std::u32string_view sv() const { return {v, length()}; }
+    };
+
     ///
     /// \brief The SynthIcon class
     ///    Initially was a description of synthesized icon in Search.
@@ -856,12 +865,10 @@ namespace uc {
     ///
     struct SynthIcon
     {
-        char32_t subj;              ///< character drawn on an icon
+        TwoChars subj;              ///< character(s) drawn on an icon
         EcContinent ecContinent;    ///< continent (colour scheme)
         Flags<Ifg> flags {};        ///< misc. flags (both to synthesized and lo-res)
         SvgHint svgHint { 0, 0 };   ///< hinting of lo-res icon
-
-        inline const Cp& cp() const;
 
         /// @return  Continent, never missing
         const Continent& normalContinent() const
@@ -1425,9 +1432,6 @@ inline std::u8string_view uc::Cp::Name::traverseAllT(const Body& body) const {
     TextSinkT sink(body);
     return traverseAll(sink);
 }
-
-// SynthIcon
-inline const uc::Cp& uc::SynthIcon::cp() const { return *cpsByCode[subj]; }
 
 // LibNode
 inline const uc::Version& uc::LibNode::emojiVersion() const { return versionInfo[static_cast<int>(ecEmojiVersion)]; }

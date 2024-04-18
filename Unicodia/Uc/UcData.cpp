@@ -1821,13 +1821,17 @@ void uc::completeData()
         if (!v.firstAllocated || !v.lastAllocated)
             throw std::logic_error("Block w/o chars leaked into data!");
 
-        // Check synthesized icon
-        if (!v.synthIcon.flags.have(Ifg::MISSING)
-                && (v.synthIcon.subj < v.startingCp || v.synthIcon.subj > v.endingCp))
-            throw std::logic_error(
+        // Check synthesized icon        
+        if (!v.synthIcon.flags.have(Ifg::MISSING)) {
+            auto sv = v.synthIcon.subj.sv();
+            for (auto c : sv) {
+                if (c < v.startingCp || c > v.endingCp)
+                throw std::logic_error(
                     "Synthesized icon is not within block " + std::string{v.name});
-        if (!cpsByCode[v.synthIcon.subj])
-            throw std::logic_error("Synthesized icon points to bad char!");
+                if (!cpsByCode[c])
+                    throw std::logic_error("Synthesized icon points to bad char!");
+            }
+        }
         if (!v.synthIcon.flags.have(Ifg::CONTINENT_OK)) {
             auto& script = v.script();
             if (script.ecContinent != v.synthIcon.ecContinent) {

@@ -330,7 +330,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::SYM_PUNCT,
             EcScript::NONE, EcFont::PUNCTUATION },
     // Sup/sub OK
-    { 0x2070, 0x209F, { 0x2074, EcContinent::NONE, Ifg::APPROX_2_CHARS },
+    { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE },
             "Superscripts and Subscripts",
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::NORMAL, Bfg::HIPRIO_NUMBERS },
@@ -620,7 +620,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Deva, 1 }, MapType::AS_BRAH_DEAD,
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Kayah Li OK
-    { 0xA900, 0xA92F, { 0xA922, EcContinent::ASIA, Ifg::APPROX_2_CHARS },
+    { 0xA900, 0xA92F, { U"\uA922\uA928", EcContinent::ASIA },
             "Kayah Li",
             { EcScript::Kali, 0 }, MapType::AS_OTHER, EcScript::Kali },
     // Rejang OK
@@ -713,7 +713,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_STRUCTURE },
     // Combining half marks OK
-    { 0xFE20, 0xFE2F, { 0xFE20, EcContinent::NONE, Ifg::APPROX_2_CHARS },
+    { 0xFE20, 0xFE2F, { U"\uFE20\uFE21", EcContinent::NONE },
             "Combining Half Marks",
             MyName::INST, MapType::SYM_PUNCT,
             EcScript::NONE, EcFont::NOTO },
@@ -1453,7 +1453,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::ZSYM, 'A' }, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DINGBAT },
     // Legacy OK
-    { 0x1FB00, 0x1FBFF, { 0x1FBB2, EcContinent::NONE, Ifg::APPROX_2_CHARS | Ifg::CUSTOM_ENGINE },
+    { 0x1FB00, 0x1FBFF, { U"\U0001FBB2\U0001FBB3", EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::SMALLER },
             "Symbols for Legacy Computing",
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::NOTO_SYMBOL2_BIGGER, Bfg::HIPRIO_NUMBERS },
