@@ -856,10 +856,10 @@ namespace uc {
     ///
     struct SynthIcon
     {
-        char32_t subj;
-        EcContinent ecContinent;
-        Flags<Ifg> flags {};
-        SvgHint svgHint { 0, 0 };
+        char32_t subj;              ///< character drawn on an icon
+        EcContinent ecContinent;    ///< continent (colour scheme)
+        Flags<Ifg> flags {};        ///< how to draw normal 16×16 dip icon
+        SvgHint svgHint { 0, 0 };   ///< hinting of normal 16×16 dip icon
 
         inline const Cp& cp() const;
 
