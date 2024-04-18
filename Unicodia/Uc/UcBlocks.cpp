@@ -539,7 +539,7 @@ constinit const uc::Block uc::blocks[] {
             "Enclosed CJK Letters and Months",
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_COMPAT,
-            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",
@@ -726,7 +726,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xFE50, 0xFE6F, { L'﹖', EcContinent::CJK, Ifg::CONTINENT_OK },
             "Small Form Variants",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::NONE, EcFont::CJK, Bfg::COLLAPSIBLE },
+            EcScript::NONE, EcFont::CJK, Bfg::CJK | Bfg::COLLAPSIBLE },
     // Arabic forms B OK, no combinings
     { 0xFE70, 0xFEFF, { 0xFEA0, EcContinent::ASIA },
             "Arabic Presentation Forms-B",
@@ -737,7 +737,7 @@ constinit const uc::Block uc::blocks[] {
             "Halfwidth and Fullwidth Forms",
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK,
-            Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::CJK | Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
     // Specials OK
     { 0xFFF0, 0xFFFF, { L'�', EcContinent::TECH, Ifg::CONTINENT_OK },
             "Specials",

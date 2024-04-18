@@ -2438,7 +2438,7 @@ uc::TofuInfo uc::Cp::tofuInfo(SvgChecker& svgChecker) const
 {
     uc::TofuInfo r;
     r.block = &block();
-    if (r.block->flags.haveAny(Bfg::COLLAPSIBLE | Bfg::CJK)
+    if (r.block->flags.haveAny(Bfg::CJK)
             || script().ecContinent == EcContinent::CJK)
         r.place = TofuPlace::CJK;
 

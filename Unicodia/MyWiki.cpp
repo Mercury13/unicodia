@@ -1422,11 +1422,11 @@ namespace {
             text += PROP_COLON;
             char16_t sRad[] = u"?";
             sRad[0] = cp::KANGXI_DELTA + cp.cjk.kx.radical;
-            /// @todo [future] which font?
-            //auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_NEWHAN)];
-            //auto fontFace = font.familiesComma();
-            auto sFullRad = loc::Fmt(u8"<font size='+2'>{1}</font>")
-                           (mojibake::toQ<std::u8string>(sRad)).str();
+            auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_UHAN)];
+            auto fontFace = font.familiesComma();
+            auto sFullRad = loc::Fmt(u8"<font size='+3' face='{2}'>{1}</font>")
+                           (mojibake::toQ<std::u8string>(sRad))
+                           (str::toU8sv(fontFace.toStdString())).str();
             text += loc::get("Prop.Kx.Data").argQ(
                         sFullRad,
                         (cp.cjk.kx.plusStrokes >= 0) ? u8"+" : u8"−",
