@@ -792,7 +792,8 @@ namespace uc {
     ///     !!! Kana/Hira main blocks are NOT collapsible because of importance
     ///   Bfg::CJK is for tofu counting
     ///     • Blocks from CJK encodings that cannot identify CJK by script,
-    ///       but are surely CJK
+    ///       but are surely related to CJK cells (e.g. ideograph structure,
+    ///       half/fullwidth)
     ///     !!! CJK scripts are automatically CJK,
     ///          COLLAPSIBLE are not because of Egyp
     ///     !!! See also exceptions below
