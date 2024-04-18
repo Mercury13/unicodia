@@ -852,14 +852,14 @@ namespace uc {
     ///
     /// \brief The SynthIcon class
     ///    Initially was a description of synthesized icon in Search.
-    ///    Currently it describes normal icon in Blocks too.
+    ///    Currently it describes lo-res (16×16 dip) icon in Blocks too.
     ///
     struct SynthIcon
     {
         char32_t subj;              ///< character drawn on an icon
         EcContinent ecContinent;    ///< continent (colour scheme)
-        Flags<Ifg> flags {};        ///< how to draw normal 16×16 dip icon
-        SvgHint svgHint { 0, 0 };   ///< hinting of normal 16×16 dip icon
+        Flags<Ifg> flags {};        ///< misc. flags (both to synthesized and lo-res)
+        SvgHint svgHint { 0, 0 };   ///< hinting of lo-res icon
 
         inline const Cp& cp() const;
 
