@@ -769,7 +769,7 @@ namespace uc {
     ///  Flags of Unicode block
     ///
     enum class Bfg {
-        COLLAPSIBLE     = 1<<0,     ///< [+] collapsible CJK
+        COLLAPSIBLE     = 1<<0,     ///< [+] collapsible CJK/Egyp
         HAS_32_NONCHARS = 1<<1,     ///< [+] block has 32 non-characters
         FORCE_FONT      = 1<<2,     ///< [+] force NORMAL font
         UNGLITCH_MARKS  = 1<<3,     ///< [+] every combining will be from NOTO
