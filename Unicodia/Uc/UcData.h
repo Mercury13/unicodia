@@ -788,11 +788,13 @@ namespace uc {
     ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains
     ///     • Big (32+) hand-picked CJK blocks, incl. Tang, Nshu,
     ///       CJK punctuation and special chars
+    ///     • Egyptian hieros (U16 made 4k more)
     ///     !!! Kana/Hira main blocks are NOT collapsible because of importance
     ///   Bfg::CJK is for tofu counting
-    ///     • Blocks from CJK encodings that are too small to be collapsible,
-    ///       and cannot identify CJK by script
-    ///     !!! CJK scripts are automatically CJK, COLLAPSIBLE are not (Egyp)
+    ///     • Blocks from CJK encodings that cannot identify CJK by script,
+    ///       but are surely CJK
+    ///     !!! CJK scripts are automatically CJK,
+    ///          COLLAPSIBLE are not because of Egyp
     ///     !!! See also exceptions below
     ///   SynthIcon.continent is for synthesized icon drawing, and contains
     ///      all CJK incl. implicit, plus:
