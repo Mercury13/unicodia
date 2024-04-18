@@ -1424,7 +1424,7 @@ namespace {
             sRad[0] = cp::KANGXI_DELTA + cp.cjk.kx.radical;
             auto& font = uc::fontInfo[static_cast<int>(uc::EcFont::CJK_UHAN)];
             auto fontFace = font.familiesComma();
-            auto sFullRad = loc::Fmt(u8"<font size='+3' face='{2}'>{1}</font>")
+            auto sFullRad = loc::Fmt(u8"<font size='+2' face='{2}'><b>{1}</b></font>")
                            (mojibake::toQ<std::u8string>(sRad))
                            (str::toU8sv(fontFace.toStdString())).str();
             text += loc::get("Prop.Kx.Data").argQ(
