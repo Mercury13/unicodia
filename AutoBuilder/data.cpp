@@ -864,7 +864,6 @@ const std::unordered_map<std::string_view, DicEntry> dictionary {
     { "ARTA",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "CHRISTMAS",      Dicf::CAP_TITLE },
     { "FARSI",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
-    { "FUJI",           Dicf::CAP_TITLE | Dicf::PART_NOUN },
     // { "GARSHUNI",       Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE }, not really correct, but small is nicer
     { "HELLSCHREIBER",  Dicf::CAP_TITLE | Dicf::PART_NOUN },
     { "HINDU",          Dicf::CAP_TITLE | Dicf::PART_ADJECTIVE },
@@ -1529,6 +1528,7 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("Earth globe Asia-Australia")    // Special proper name
     EX("Milky Way")                     // Special proper name
     EX("Tokyo Tower")                   // Special proper name
+    EX("Mount Fuji")                    // Special proper name
     EX("Statue of Liberty")             // Special proper name
     EX("man with gua pi mao")           // Conflict with Greek Pi
     EX("face with No good gesture")     // Complex rules, better manually
