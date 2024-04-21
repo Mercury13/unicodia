@@ -35,6 +35,7 @@ SOURCES += \
     ../Libs/SelfMade/Mojibake/cpp/auto_casefold.cpp \
     ../Libs/SelfMade/Qt/QtMultiRadio.cpp \
     ../Libs/SelfMade/c_WrapAroundTable.cpp \
+    ../Libs/SelfMade/i_DarkMode.cpp \
     ../Libs/SelfMade/u_Version.cpp \
     CharPaint/SkinToneQa.cpp \
     CharPaint/routines.cpp \
@@ -87,6 +88,7 @@ HEADERS += \
     ../Libs/SelfMade/c_TableCache.h \
     ../Libs/SelfMade/c_WrapAroundTable.h \
     ../Libs/SelfMade/i_ByteSwap.h \
+    ../Libs/SelfMade/i_DarkMode.h \
     ../Libs/SelfMade/i_MemStream.h \
     ../Libs/SelfMade/i_TempFont.h \
     ../Libs/SelfMade/u_Cmap.h \
