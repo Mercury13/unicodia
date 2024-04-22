@@ -1867,17 +1867,24 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
 };
 
 const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
-    // SPACES
-    { 0x2800,  uc::m::SPACE }, // Braille blank
-    { 0x13441, uc::m::SPACE }, // Egyptian hiero Full blank
-    { 0x13442, uc::m::SPACE }, // Egyptian hiero Half blank
-    // CUSTOM CONTROLS
+    // Mymr
     { 0x1039,  uc::m::CUSTOM_CONTROL },  // Mymr virtual virama
+    // Brai
+    { 0x2800,  uc::m::SPACE }, // Braille blank
+    // CJK
     { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
-    { 0x11D45, uc::m::CUSTOM_CONTROL },  // Masaram Gondi virtual virama
-    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gunjala Gondi virtual virama
+    // Diak
+    { 0x1193E, uc::m::CUSTOM_CONTROL },  // Diak (virtual) virama
+    { 0x1193F, uc::m::SAMPLED_CONTROL }, // Diak nasal sign
+    { 0x11941, uc::m::SAMPLED_CONTROL }, // Diak repha
+    // Zanb
     { 0x11A3A, uc::m::CUSTOM_CONTROL },  // Zanb repha (cluster-initial Ra)
     { 0x11A47, uc::m::CUSTOM_CONTROL },  // Zanb subjoiner (virtual virama)
+    // Gonm
+    { 0x11D45, uc::m::CUSTOM_CONTROL },  // Masaram Gondi virtual virama
+    // Gong
+    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gunjala Gondi virtual virama
+    // Egyp
     { 0x13431, uc::m::CUSTOM_CONTROL },  // Egyptian hiero horiz joiner
     { 0x13432, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top start
     { 0x13433, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at bottom start
@@ -1890,10 +1897,14 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x1343D, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph End enclosure
     { 0x1343E, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Begin walled enclosure
     { 0x1343F, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph End walled enclosure
+    { 0x13441, uc::m::SPACE },           // Egyptian hiero Full blank
+    { 0x13442, uc::m::SPACE },           // Egyptian hiero Half blank
+    // Plrd (Miao)
     { 0x16F8F, uc::m::CUSTOM_CONTROL },  // Miao tone right
     { 0x16F90, uc::m::CUSTOM_CONTROL },  // Miao tone top right
     { 0x16F91, uc::m::CUSTOM_CONTROL },  // Miao tone above
     { 0x16F92, uc::m::CUSTOM_CONTROL },  // Miao tone below
+    // Dupl
     { 0x1BCA0, uc::m::CUSTOM_CONTROL },  // shorthand format Letter overlap
     { 0x1BCA1, uc::m::CUSTOM_CONTROL },  // shorthand format Continuing overlap
 };

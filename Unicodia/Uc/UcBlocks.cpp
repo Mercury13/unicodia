@@ -1059,7 +1059,8 @@ constinit const uc::Block uc::blocks[] {
     // Dives Akuru OK
     { 0x11900, 0x1195F, { 0x1190D, EcContinent::OCEAN },
             "Dives Akuru",
-            { EcScript::Diak, 0 }, MapType::OC_DEAD, EcScript::Diak },
+            { EcScript::Diak, 0 }, MapType::OC_DEAD,
+            EcScript::Diak, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Nandi OK
     { 0x119A0, 0x119FF, { 0x119B4, EcContinent::ASIA, {}, SvgHint{ 9, 2 } },
             "Nandinagari",

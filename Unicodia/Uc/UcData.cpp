@@ -2324,6 +2324,8 @@ uc::DrawMethod uc::Cp::drawMethod(
         return uc::DrawMethod::SPACE;
     case m::ABBREVIATION.numeric():
         return uc::DrawMethod::ABBREVIATION;
+    case m::SAMPLED_CONTROL.numeric():
+        return uc::DrawMethod::SAMPLED_CONTROL;
     default:;
     }
 
