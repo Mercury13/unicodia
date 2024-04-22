@@ -45,7 +45,7 @@ void drawVirtualVirama(
 
 void drawSampledControl(
         QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
-        const QFont& font, const QColor& color);
+        const QFont& font, const QColor& color, uc::FontPlace place);
 
 uc::SvgChecker& svgChecker();
 

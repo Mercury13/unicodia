@@ -238,7 +238,8 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
     case Mode::SAMPLED_CONTROL: {
             QPainter painter(this);
             drawSampledControl(&painter, geometry(), proxy,
-                               qfont, palette().windowText().color());
+                               qfont, palette().windowText().color(),
+                               uc::FontPlace::SAMPLE);
             //drawVirtualVirama(&painter, geometry(), palette().windowText().color(),
             //          FSZ_BIG, *uc::cpsByCode[subj]);
         } break;
@@ -447,8 +448,11 @@ QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame)
              QPointF { x1 * recipScale - frame, y1 * recipScale - frame } };
 }
 
+enum class Thinner { NO, YES };
+
 ControlFrame drawControlFrame(
-        QPainter* painter, const QRect& rect, const QColor& color)
+        QPainter* painter, const QRect& rect, QColor color,
+        Thinner thinner)
 {
     // Get painter info
     auto dpr = painter->device()->devicePixelRatio();
@@ -474,6 +478,8 @@ ControlFrame drawControlFrame(
         hiThickness = 1;
         loThickness = hiThickness / dpr;
     }
+    if (thinner != Thinner::NO)
+        color.setAlphaF(color.alphaF() * 0.3);
     painter->setPen(QPen(color, hiThickness, Qt::DashLine));
     painter->setBrush(Qt::NoBrush);
     painter->drawRect(rcFrame);
@@ -506,12 +512,14 @@ void drawCustomControl(
         QPainter* painter, const QRect& rect, const QColor& color,
         uc::FontPlace place, char32_t subj)
 {
-    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
+    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color, Thinner::NO);
     // Need this brush for both rects and fonts
 
     switch (subj) {
-    case 0x17D2:    // Khmr coeng
-    case 0xAAF6:    // Mtei virama    
+    case 0x17D2:    // Khmr coeng    
+    case 0x1BAB:    // Sund virtual virama
+    case 0xAAF6:    // Mtei virama
+    case 0x10A3F:   // Khar virtual virama
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
     case 0x11A99:   // Soyo subjoiner
@@ -625,7 +633,7 @@ void drawAbbreviation(
         QPainter* painter, const QRect& rect, std::u8string_view abbreviation,
         const QColor& color)
 {
-    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
+    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color, Thinner::NO);
     drawAbbrText(painter, abbreviation, color, rcFrame, thickness);
 }
 
@@ -656,7 +664,7 @@ void drawVirtualVirama(
         const QColor& color, int absSize, const uc::Cp& cp)
 {
     // Frame
-    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
+    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color, Thinner::NO);
 
     // Dotted circle; sizePc is always 100
     auto* ucfont = cp.font(match::Normal::INST);
@@ -692,12 +700,13 @@ void drawVirtualVirama(
 
 void drawSampledControl(
         QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
-        const QFont& font, const QColor& color)
+        const QFont& font, const QColor& color, uc::FontPlace place)
 {
-    drawControlFrame(painter, rect, color);
+    drawControlFrame(painter, rect, color,
+            (place == uc::FontPlace::SAMPLE) ? Thinner::YES : Thinner::NO);
     auto rcMatch = matchRect(rect, proxy.styleSheet);
     painter->setFont(font);
-    painter->setBrush(color);
+    painter->setPen(color);
     painter->drawText(rcMatch, Qt::AlignCenter, proxy.text);
 }
 
@@ -841,7 +850,7 @@ void drawChar(
         drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, -0.3);
         break;
     case uc::DrawMethod::SAMPLED_CONTROL:
-        drawControlFrame(painter, rect, color);
+        drawControlFrame(painter, rect, color, Thinner::NO);
         drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
         break;
     case uc::DrawMethod::SAMPLE:

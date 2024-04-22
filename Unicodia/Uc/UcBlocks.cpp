@@ -980,7 +980,8 @@ constinit const uc::Block uc::blocks[] {
     // Chakma OK
     { 0x11100, 0x1114F, { 0x11110, EcContinent::ASIA },
             "Chakma",
-            { EcScript::Cakm, 0 }, MapType::AS_BRAH, EcScript::Cakm },
+            { EcScript::Cakm, 0 }, MapType::AS_BRAH,
+            EcScript::Cakm, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Mahajani OK
     { 0x11150, 0x1117F, { 0x11158, EcContinent::ASIA },
             "Mahajani",

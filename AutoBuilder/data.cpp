@@ -1867,18 +1867,40 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
 };
 
 const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
+    // Knda
+    { 0x0CF1,  uc::m::SAMPLED_CONTROL }, // Knda vedic sign jihva
+    { 0x0CF2,  uc::m::SAMPLED_CONTROL }, // Knda vedic sign upadh
+    // Mlym
+    { 0x0D4E,  uc::m::SAMPLED_CONTROL }, // Mlym dot reph
+    // Tibt
+    { 0x0F0C,  uc::m::SAMPLED_CONTROL }, // Tibt non-breaking tsheg
     // Mymr
-    { 0x1039,  uc::m::VIRTUAL_VIRAMA },  // Mymr virtual virama
+    { 0x1039,  uc::m::VIRTUAL_VIRAMA  }, // Mymr virtual virama
+    // Sund
+    { 0x1BAB,  uc::m::CUSTOM_CONTROL  }, // Sund virtual virama (does not fit)
     // Khmr
-    { 0x17D2,  uc::m::CUSTOM_CONTROL },  // Khmr coeng (virtual virama)
+    { 0x17D2,  uc::m::CUSTOM_CONTROL  }, // Khmr coeng (virtual virama)
     // Lana
-    { 0x1A60,  uc::m::VIRTUAL_VIRAMA },  // Lana sakot (virtual virama)
+    { 0x1A60,  uc::m::VIRTUAL_VIRAMA  }, // Lana sakot (virtual virama)
+    // Vedic
+    { 0x1CF5,  uc::m::SAMPLED_CONTROL }, // Upadh
+    { 0x1CF6,  uc::m::SAMPLED_CONTROL }, // Jihva
     // Brai
-    { 0x2800,  uc::m::SPACE }, // Braille blank
+    { 0x2800,  uc::m::SPACE           }, // Braille blank
     // CJK
     { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
     // Mtei
     { 0xAAF6,  uc::m::CUSTOM_CONTROL },  // Mtei virtual virama (does not fit)
+    // Khar
+    { 0x10A3F, uc::m::CUSTOM_CONTROL  }, // Khar virtual virama (does not fit)
+    // Brah
+    { 0x11003, uc::m::SAMPLED_CONTROL }, // Brah jihva
+    { 0x11004, uc::m::SAMPLED_CONTROL }, // Brah upadh
+    // Cakm
+    { 0x11133, uc::m::VIRTUAL_VIRAMA  }, // Cakm virama
+    // Shrd
+    { 0x111C2, uc::m::SAMPLED_CONTROL }, // Shrd jihva
+    { 0x111C3, uc::m::SAMPLED_CONTROL }, // Shrd upadh
     // Diak
     { 0x1193E, uc::m::VIRTUAL_VIRAMA  }, // Diak virama
     { 0x1193F, uc::m::SAMPLED_CONTROL }, // Diak nasal sign
@@ -1899,6 +1921,9 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x11D46, uc::m::SAMPLED_CONTROL }, // Gonm repha
     // Gong
     { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gong virtual virama (does not fit)
+    // Kawi
+    { 0x11F02, uc::m::SAMPLED_CONTROL }, // Kawi repha
+    { 0x11F42, uc::m::VIRTUAL_VIRAMA  }, // Kawi subjoiner
     // Egyp
     { 0x13431, uc::m::CUSTOM_CONTROL },  // Egyptian hiero horiz joiner
     { 0x13432, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top start
