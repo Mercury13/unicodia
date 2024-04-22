@@ -476,6 +476,7 @@ void drawCustomControl(
 
     switch (subj) {
     case 0x1039:    // Myanmar virtual virama
+    case 0x1A60:    // Lana sakot
     case 0x1193E:   // Diak (virtual) virama
     case 0x11A47:   // Zanb subjoiner
     case 0x11D45:   // Masaram Gondi virama

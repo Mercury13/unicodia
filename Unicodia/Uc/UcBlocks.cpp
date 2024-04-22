@@ -254,7 +254,8 @@ constinit const uc::Block uc::blocks[] {
     // Lanna OK
     { 0x1A20, 0x1AAF, { 0x1A21, EcContinent::ASIA },
             "Tai Tham",
-            { EcScript::Lana, 0 }, MapType::AS_BRAH, EcScript::Lana },
+            { EcScript::Lana, 0 }, MapType::AS_BRAH,
+            EcScript::Lana, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Diacritical ex OK
     { 0x1AB0, 0x1AFF, { 0x1AB2, EcContinent::NONE },
             "Combining Diacritical Marks Extended",

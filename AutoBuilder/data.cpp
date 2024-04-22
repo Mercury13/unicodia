@@ -1869,6 +1869,8 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
 const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     // Mymr
     { 0x1039,  uc::m::CUSTOM_CONTROL },  // Mymr virtual virama
+    // Lana
+    { 0x1A60,  uc::m::CUSTOM_CONTROL },  // Lana sakot (virtual virama)
     // Brai
     { 0x2800,  uc::m::SPACE }, // Braille blank
     // CJK
