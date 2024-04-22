@@ -1074,7 +1074,8 @@ constinit const uc::Block uc::blocks[] {
     // Soyombo OK
     { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, {}, SvgHint{ 13, 1 } },
             "Soyombo",
-            { EcScript::Soyo, 0 }, MapType::AS_BRAH_DEAD, EcScript::Soyo },
+            { EcScript::Soyo, 0 }, MapType::AS_BRAH_DEAD,
+            EcScript::Soyo, EcFont::NORMAL, Bfg::BIG_CONTROLS },
     // Canadian A OK
     { 0x11AB0, 0x11ABF, { 0x11AB0, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended-A",

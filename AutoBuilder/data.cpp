@@ -1875,17 +1875,28 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x2800,  uc::m::SPACE }, // Braille blank
     // CJK
     { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
+    // Mtei
+    { 0xAAF6,  uc::m::CUSTOM_CONTROL },  // Mtei virtual virama (does not fit)
     // Diak
     { 0x1193E, uc::m::VIRTUAL_VIRAMA  }, // Diak virama
     { 0x1193F, uc::m::SAMPLED_CONTROL }, // Diak nasal sign
     { 0x11941, uc::m::SAMPLED_CONTROL }, // Diak repha
     // Zanb
-    { 0x11A3A, uc::m::CUSTOM_CONTROL },  // Zanb repha (cluster-initial Ra)
-    { 0x11A47, uc::m::CUSTOM_CONTROL },  // Zanb subjoiner (virtual virama)
+    { 0x11A3A, uc::m::CUSTOM_CONTROL  }, // Zanb repha (cluster-initial Ra)
+    { 0x11A47, uc::m::VIRTUAL_VIRAMA  }, // Zanb subjoiner (virtual virama)
+    // Soyo
+    { 0x11A84, uc::m::SAMPLED_CONTROL }, // Soyo vedic sign jihva
+    { 0x11A85, uc::m::SAMPLED_CONTROL }, // Soyo vedic sign upadh
+    { 0x11A86, uc::m::SAMPLED_CONTROL }, // Soyo Ra+
+    { 0x11A87, uc::m::SAMPLED_CONTROL }, // Soyo La+
+    { 0x11A88, uc::m::SAMPLED_CONTROL }, // Soyo Sha+
+    { 0x11A89, uc::m::SAMPLED_CONTROL }, // Soyo Sa+
+    { 0x11A99, uc::m::CUSTOM_CONTROL  }, // Soyo subjoiner (does not fit)
     // Gonm
-    { 0x11D45, uc::m::CUSTOM_CONTROL },  // Masaram Gondi virtual virama
+    { 0x11D45, uc::m::CUSTOM_CONTROL  }, // Gonm virtual virama (does not fit)
+    { 0x11D46, uc::m::SAMPLED_CONTROL }, // Gonm repha
     // Gong
-    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gunjala Gondi virtual virama
+    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gong virtual virama (does not fit)
     // Egyp
     { 0x13431, uc::m::CUSTOM_CONTROL },  // Egyptian hiero horiz joiner
     { 0x13432, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top start

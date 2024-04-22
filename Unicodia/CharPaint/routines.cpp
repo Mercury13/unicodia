@@ -493,9 +493,10 @@ void drawCustomControl(
     // Need this brush for both rects and fonts
 
     switch (subj) {
-    case 0x11A47:   // Zanb subjoiner
+    case 0xAAF6:    // Mtei virama
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
+    case 0x11A99:   // Soyo subjoiner
         drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_VIRAMA);
         break;
     case 0x303E:    // ideographic variation indicator
@@ -656,9 +657,10 @@ void drawVirtualVirama(
     // Not rcFrame!!
     auto rcMatch = matchRect(rect, ucfont->styleSheet);
     auto cen = QRectF(rcMatch).center();
-    auto baseX = cen.x() - width * 0.5;
     auto baseY = cen.y() + deltaY * 0.5;
-    painter->drawText(QPointF(baseX, baseY), DC);
+    // Though we known exact size of char, still draw at rcMatch
+    // (there’s sub-pixel difference)
+    painter->drawText(rcMatch, Qt::AlignCenter, DC);
 
     // Limit offset
     auto loY = baseY + tightRect.bottom();
@@ -722,6 +724,9 @@ std::optional<QFont> fontAt(
                     flags, cp.subj);
     if (sizePc <= 80 && font->flags.have(uc::Ffg::NOHINT_TINY))
         r.setHintingPreference(QFont::PreferNoHinting);
+    if (cp.flags.have(uc::Cfg::M_NO_SHAPING))
+        r.setStyleStrategy(QFont::StyleStrategy(
+                r.styleStrategy() | QFont::PreferNoShaping));
     return r;
 }
 
