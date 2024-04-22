@@ -510,7 +510,8 @@ void drawCustomControl(
     // Need this brush for both rects and fonts
 
     switch (subj) {
-    case 0xAAF6:    // Mtei virama
+    case 0x17D2:    // Khmr coeng
+    case 0xAAF6:    // Mtei virama    
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
     case 0x11A99:   // Soyo subjoiner
