@@ -69,22 +69,22 @@ namespace uc {
     constexpr std::u8string_view STUB_RTL_CIRCLE  = u8"\u200F\u25CC";   // 200F RLM  25CC dotted circle
     constexpr std::u8string_view STUB_ALM_CIRCLE  = u8"\u061C\u25CC";   // 061C ALM  25CC dotted circle
         // PUA = Private user area of Unicode, they are non-standard chars mapped to these codepoints
-    constexpr QChar STUB_PUA_VIRAMA { 0xE001 };
-    constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };
-    constexpr QChar STUB_PUA_TONE_TOPRIGHT { 0xE003 };
-    constexpr QChar STUB_PUA_TONE_ABOVE { 0xE004 };
-    constexpr QChar STUB_PUA_TONE_BELOW { 0xE005 };
-    constexpr QChar STUB_PUA_OVERLAP { 0xE006 };
-    constexpr QChar STUB_PUA_CONTINUING_OVERLAP { 0xE007 };
-    constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };
-    constexpr QChar STUB_PUA_TAG { 0xE009 };
-    constexpr QChar STUB_PUA_ZANB_REPHA { 0xE00A };
-    constexpr QChar STUB_PUA_ENCLOSURE_START { 0xE00B };
-    constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };
-    constexpr QChar STUB_PUA_WALL_START { 0xE00D };
-    constexpr QChar STUB_PUA_WALL_END { 0xE00E };
-    constexpr QChar STUB_PUA_DUPLOYAN { 0xE00F };
-    constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };
+    constexpr QChar STUB_PUA_VIRAMA { 0xE001 };             // Virtual viraam (=subjoiner, conjoiner)
+    constexpr QChar STUB_PUA_TONE_RIGHT { 0xE002 };         // Plrd tone right
+    constexpr QChar STUB_PUA_TONE_TOPRIGHT { 0xE003 };      // Plrd tone top-right
+    constexpr QChar STUB_PUA_TONE_ABOVE { 0xE004 };         // Plrd tone above
+    constexpr QChar STUB_PUA_TONE_BELOW { 0xE005 };         // Plrd tone below
+    constexpr QChar STUB_PUA_OVERLAP { 0xE006 };            // Dupl overlap
+    constexpr QChar STUB_PUA_CONTINUING_OVERLAP { 0xE007 }; // Dupl continuing overlap
+    constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };           // Egyp big asterisk
+    constexpr QChar STUB_PUA_TAG { 0xE009 };                // Tag character
+    constexpr QChar STUB_PUA_ZANB_REPHA { 0xE00A };         // Zanb repha (=initial Ra)
+    constexpr QChar STUB_PUA_ENCLOSURE_START { 0xE00B };    // Egyp enclosure start
+    constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };      //               …end
+    constexpr QChar STUB_PUA_WALL_START { 0xE00D };         // Egyp waled ecnclosure start
+    constexpr QChar STUB_PUA_WALL_END { 0xE00E };           //                      …end
+    constexpr QChar STUB_PUA_DUPLOYAN { 0xE00F };           // Dupl K+A+TS
+    constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
 
     enum class EcLangLife
     {
