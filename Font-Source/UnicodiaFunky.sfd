@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1713049810
+ModificationTime: 1713789893
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -764,13 +764,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 32 14
+WinInfo: 57312 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -780,7 +779,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Umlaut" "Common ABVM-1" "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
-BeginChars: 1114135 501
+BeginChars: 1114135 502
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -62241,7 +62240,7 @@ EndChar
 StartChar: uni2429
 Encoding: 9257 9257 500
 Width: 816
-Flags: MWO
+Flags: MW
 LayerCount: 2
 Fore
 SplineSet
@@ -62325,6 +62324,89 @@ SplineSet
  816 612 l 1,62,-1
  816 510 l 1,63,-1
  612 510 l 1,60,-1
+EndSplineSet
+EndChar
+
+StartChar: uniE00A
+Encoding: 57354 57354 501
+Width: 840
+Flags: WO
+HStem: 804 86<80 372 468 760>
+VStem: 372 96<587 804>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 2
+MDAP[rnd]
+PUSHB_1
+ 5
+SHP[rp1]
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_3
+ 2
+ 3
+ 10
+CALL
+PUSHB_4
+ 64
+ 2
+ 0
+ 9
+CALL
+SVTCA[x-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_3
+ 7
+ 0
+ 10
+CALL
+PUSHB_4
+ 64
+ 7
+ 5
+ 9
+CALL
+PUSHB_3
+ 0
+ 7
+ 10
+CALL
+PUSHB_4
+ 64
+ 0
+ 2
+ 9
+CALL
+PUSHB_2
+ 9
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+372 587 m 5,0,-1
+ 372 804 l 5,1,-1
+ 80 804 l 5,2,-1
+ 80 890 l 5,3,-1
+ 760 890 l 5,4,-1
+ 760 804 l 5,5,-1
+ 468 804 l 5,6,-1
+ 468 587 l 5,7,-1
+ 372 587 l 5,0,-1
 EndSplineSet
 EndChar
 EndChars
