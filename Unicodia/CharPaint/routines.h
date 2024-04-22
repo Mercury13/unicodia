@@ -43,6 +43,10 @@ void drawVirtualVirama(
         QPainter* painter, const QRect& rect,
         const QColor& color, int absSize, const uc::Cp& cp);
 
+void drawSampledControl(
+        QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
+        const QFont& font, const QColor& color);
+
 uc::SvgChecker& svgChecker();
 
 constexpr int ROT_CW = 90;
@@ -118,8 +122,9 @@ public:
     void setCustomControl(char32_t aSubj);
     void setEmoji(char32_t aSubj);
     void setEmoji(std::u32string_view aText);
-    void setVertical(const QFont& font, const QString& aSubj, int angle);
+    void setVertical(const QFont& font, const uc::SampleProxy& pr, int angle);
     void setVirtualVirama(char32_t cp);
+    void setSampledControl(const QFont& font, const uc::SampleProxy& pr);
     void setNormal();
     void init();
 protected:
@@ -128,14 +133,14 @@ private:
     QSize initialSize;
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
-        EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA };
+        EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA, SAMPLED_CONTROL };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
-    QFont fontSpace;
+    QFont qfont;
     char32_t subj = 0;
     std::u32string_view text;
     int verticalAngle = 90;
-    QString qsubj;
+    uc::SampleProxy proxy;
     void setSpace1(const QFont& font, char32_t aSubj, Mode aMode);
 };
 

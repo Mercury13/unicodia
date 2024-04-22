@@ -9,6 +9,7 @@ namespace uc {
     struct GlyphStyleSets;
     class FontMatcher;
     enum class EmojiDraw;
+    struct Font;
 }
 
 namespace Ui {
@@ -33,18 +34,18 @@ private:
     Ui::WiSample *ui;
     /// Qt’s peculiarity: once the label was shown with non-empty text,
     ///    you are not obliged to show once again
-    bool needShowBriefly = true;
+    const uc::Font* shownBrieflyFont = nullptr;
 
     /// Removes everything from lbSample — returns it to normal size
     void clearSample();
     ///  @warning  calls showBriefly → first this, then setCurrentWidget
     void setAbbrFont(const uc::Cp& ch);
-    bool setFont(const uc::Cp& ch, const uc::FontMatcher& matcher);
+    const uc::Font* setFont(const uc::Cp& ch, const uc::FontMatcher& matcher);
     void drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
             const uc::GlyphStyleSets& glyphSets);
     ///  Sets character to space and shows pageSampleQt briefly to set correct height
-    void showBriefly();
+    void showBriefly(const uc::Font* font);
     ///  Retrieves font and calls showBriefly to set corrent height
     ///  @return  font we used, may be reused for other needs (e.g. draw vertically)
     QFont showCpBriefly(const uc::Cp& ch);

@@ -208,7 +208,7 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
         } break;
     case Mode::SPACE: {
             QPainter painter(this);
-            drawSpace(&painter, geometry(), fontSpace,
+            drawSpace(&painter, geometry(), qfont,
                       palette().windowText().color(),
                       subj);
         } break;
@@ -226,14 +226,21 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
         } break;
     case Mode::VERTICAL: {
             QPainter painter(this);
-            drawVertical(&painter, geometry(), fontSpace,
+            drawVertical(&painter, geometry(), qfont,
                       verticalAngle, palette().windowText().color(),
-                      qsubj);
+                      proxy.text);
         } break;
     case Mode::VIRTUAL_VIRAMA: {
             QPainter painter(this);
             drawVirtualVirama(&painter, geometry(), palette().windowText().color(),
                       FSZ_BIG, *uc::cpsByCode[subj]);
+        } break;
+    case Mode::SAMPLED_CONTROL: {
+            QPainter painter(this);
+            drawSampledControl(&painter, geometry(), proxy,
+                               qfont, palette().windowText().color());
+            //drawVirtualVirama(&painter, geometry(), palette().windowText().color(),
+            //          FSZ_BIG, *uc::cpsByCode[subj]);
         } break;
     }
 }
@@ -271,6 +278,16 @@ void WiCustomDraw::setVirtualVirama(char32_t cp)
 }
 
 
+void WiCustomDraw::setSampledControl(const QFont& font, const uc::SampleProxy& pr)
+{
+    setNormal();
+    mode = Mode::SAMPLED_CONTROL;
+    proxy = pr;
+    qfont = font;
+    update();
+}
+
+
 void WiCustomDraw::setEmoji(char32_t aSubj)
 {
     setNormal();
@@ -289,11 +306,11 @@ void WiCustomDraw::setEmoji(std::u32string_view aText)
 }
 
 
-void WiCustomDraw::setVertical(const QFont& font, const QString& aSubj, int angle)
+void WiCustomDraw::setVertical(const QFont& font, const uc::SampleProxy& pr, int angle)
 {
     verticalAngle = angle;
-    qsubj = aSubj;
-    fontSpace = font;
+    proxy = pr;
+    qfont = font;
     mode = Mode::VERTICAL;
     QFontMetrics metrics(font);
     auto h = metrics.height();
@@ -311,7 +328,7 @@ void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
 {
     static constexpr auto SPACE_PLUS = 20;
 
-    fontSpace = font;
+    qfont = font;
     mode = aMode;
     subj = aSubj;
 
@@ -670,6 +687,19 @@ void drawVirtualVirama(
     painter->setFont(font2);
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
+
+
+void drawSampledControl(
+        QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
+        const QFont& font, const QColor& color)
+{
+    drawControlFrame(painter, rect, color);
+    auto rcMatch = matchRect(rect, proxy.styleSheet);
+    painter->setFont(font);
+    painter->setBrush(color);
+    painter->drawText(rcMatch, Qt::AlignCenter, proxy.text);
+}
+
 
 QSize spaceDimensions(const QFont& font, char32_t subj)
 {

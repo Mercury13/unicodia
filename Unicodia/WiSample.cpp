@@ -22,27 +22,27 @@ WiSample::~WiSample()
 }
 
 
-bool WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
+const uc::Font* WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
 {
     auto font = ch.font(matcher);
     if (!font) {
         clearSample();
-        return false;
+        return nullptr;
     }
     Flags<uc::FontGetFg> fgs;
     if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         fgs |= uc::FontGetFg::KNOWN_TOFU;
     auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, &ch);
     ui->lbSample->setFont(qfont);
-    return true;
+    return font;
 }
 
 
 void WiSample::setAbbrFont(const uc::Cp& ch)
 {
     if (ch.block().flags.have(uc::Bfg::BIG_CONTROLS)) {
-        if (setFont(ch, match::MainFont::INST)) {
-            showBriefly();
+        if (auto font = setFont(ch, match::MainFont::INST)) {
+            showBriefly(font);
         }
     } else {
         clearSample();
@@ -55,11 +55,11 @@ void WiSample::drawWithQt(
         const uc::GlyphStyleSets& glyphSets)
 {
     ui->pageSampleCustom->setNormal();
-    setFont(ch, match::Normal::INST);
+    auto font = setFont(ch, match::Normal::INST);
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-    needShowBriefly = false;
+    shownBrieflyFont = font;
     auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, glyphSets);
     // Color
     if (ch.isTrueSpace()) {
@@ -79,15 +79,16 @@ void WiSample::clearSample()
     ui->lbSample->clear();
     ui->lbSample->setStyleSheet({});
     ui->lbSample->setFont(QFont());
+    shownBrieflyFont = nullptr;
 }
 
 
-void WiSample::showBriefly()
+void WiSample::showBriefly(const uc::Font* font)
 {
     ui->lbSample->setText(" ");
-    if (needShowBriefly) {
+    if (shownBrieflyFont != font) {
         ui->stackSample->setCurrentWidget(ui->pageSampleQt);
-        needShowBriefly = false;
+        shownBrieflyFont = font;
     }
 }
 
@@ -97,7 +98,7 @@ QFont WiSample::showCpBriefly(const uc::Cp& ch)
     auto font = ch.font(match::Normal::INST);
     auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, &ch);
     ui->lbSample->setFont(qfont);
-    showBriefly();
+    showBriefly(font);
     return qfont;
 }
 
@@ -147,11 +148,15 @@ void WiSample::showCp(
             // EMPTY: we want text anyway
             auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, uc::GlyphStyleSets::EMPTY);
             // Vertical fonts do not have special stylesheets
-            ui->pageSampleCustom->setVertical(qfont, proxy.text, angle);
+            ui->pageSampleCustom->setVertical(qfont, proxy, angle);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         } break;
-    case uc::DrawMethod::SAMPLED_CONTROL:  // same as Sample, maybe we’ll make them somehow
-        std::cout << "Sampled control\n";
+    case uc::DrawMethod::SAMPLED_CONTROL: {
+            auto qfont = showCpBriefly(ch);
+            auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, uc::GlyphStyleSets::EMPTY);
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setSampledControl(qfont, proxy);
+        } break;
     case uc::DrawMethod::SAMPLE:
     case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
         drawWithQt(ch, emojiDraw, glyphSets);
