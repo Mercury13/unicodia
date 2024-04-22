@@ -1885,8 +1885,8 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x11A3A, uc::m::CUSTOM_CONTROL  }, // Zanb repha (cluster-initial Ra)
     { 0x11A47, uc::m::VIRTUAL_VIRAMA  }, // Zanb subjoiner (virtual virama)
     // Soyo
-    { 0x11A84, uc::m::SAMPLED_CONTROL }, // Soyo vedic sign jihva
-    { 0x11A85, uc::m::SAMPLED_CONTROL }, // Soyo vedic sign upadh
+    { 0x11A84, uc::m::SAMPLED_CONTROL | uc::Cfg::M_NO_SHAPING }, // Soyo vedic sign jihva
+    { 0x11A85, uc::m::SAMPLED_CONTROL | uc::Cfg::M_NO_SHAPING }, // Soyo vedic sign upadh
     { 0x11A86, uc::m::SAMPLED_CONTROL }, // Soyo Ra+
     { 0x11A87, uc::m::SAMPLED_CONTROL }, // Soyo La+
     { 0x11A88, uc::m::SAMPLED_CONTROL }, // Soyo Sha+

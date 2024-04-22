@@ -466,9 +466,9 @@ ControlFrame drawControlFrame(
 
 void drawFunkySample(
         QPainter* painter, const QRectF& rect, const QColor& color,
-        uc::FontPlace place, float quo, char32_t trigger, QChar sample)
+        uc::FontPlace place, float quo, QChar sample)
 {
-    auto fn = uc::funkyFont(place, 50, trigger);
+    auto fn = uc::funkyFont(place, 50);
     fn.setPixelSize(std::round(rect.width() * 0.75f * quo));
     painter->setFont(fn);
     painter->setBrush(QBrush(color, Qt::SolidPattern));
@@ -477,12 +477,12 @@ void drawFunkySample(
 
 void drawTagText(QPainter* painter, std::u8string_view abbreviation,
         const QColor& color, const QRectF& rcFrame, qreal thickness,
-        uc::FontPlace place, char32_t trigger)
+        uc::FontPlace place)
 {
     // Draw text
     AbbrLines lines { abbreviation, u8" ", {} };
     drawCustomAbbrText(painter, lines, color, rcFrame, thickness, atTags);
-    drawFunkySample(painter, rcFrame, color, place, 1.2f, trigger, uc::STUB_PUA_TAG);
+    drawFunkySample(painter, rcFrame, color, place, 1.2f, uc::STUB_PUA_TAG);
 }
 
 void drawCustomControl(
@@ -497,34 +497,34 @@ void drawCustomControl(
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
     case 0x11A99:   // Soyo subjoiner
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_VIRAMA);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_VIRAMA);
         break;
     case 0x303E:    // ideographic variation indicator
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_CJK_APPROX);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_CJK_APPROX);
         break;
     case 0x11A3A:   // Zanb repha
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ZANB_REPHA);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_ZANB_REPHA);
         break;
     case 0x16F8F:   // Miao tone right
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_RIGHT);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_TONE_RIGHT);
         break;
     case 0x16F90:   // Miao tone top right
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_TOPRIGHT);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_TONE_TOPRIGHT);
         break;
     case 0x16F91:   // Miao tone above
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_ABOVE);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_TONE_ABOVE);
         break;
     case 0x16F92:   // Miao tone below
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_TONE_BELOW);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_TONE_BELOW);
         break;
     case 0x1BCA0:   // Shorthand format Letter overlap
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_OVERLAP);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_OVERLAP);
         break;
     case 0x1BCA1:   // Shorthand format Continuing overlap
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_CONTINUING_OVERLAP);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_CONTINUING_OVERLAP);
         break;
     case 0x13431:   // Egyptian hiero horz joiner
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_BIG_STAR);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_BIG_STAR);
         break;
     case 0x13432: { // Egyptian hieroglyph Insert at top start
             Rc3Matrix m(rcFrame);
@@ -573,36 +573,32 @@ void drawCustomControl(
             painter->fillRect(m.topHalf(), color);
         } break;
     case 0x1343C:   // Egyptian hieroglyph Begin enclosure
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_START);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_ENCLOSURE_START);
         break;
     case 0x1343D:   // Egyptian hieroglyph End enclosure
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_ENCLOSURE_END);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_ENCLOSURE_END);
         break;
     case 0x1343E:   // Egyptian hieroglyph Begin walled enclosure
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_START);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_WALL_START);
         break;
     case 0x1343F:   // Egyptian hieroglyph End walled enclosure
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_WALL_END);
+        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_WALL_END);
         break;
     case 0xE0001:   // Language tag
-        drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness,
-                    place, subj);
+        drawTagText(painter, u8"BEGIN"sv, color, rcFrame, thickness, place);
         break;
     case 0xE0020:   // Tag Space
-        drawTagText(painter, u8"SP"sv, color, rcFrame, thickness,
-                    place, subj);
+        drawTagText(painter, u8"SP"sv, color, rcFrame, thickness, place);
         break;
     case 0xE007F:   // Cancel tag
-        drawTagText(painter, u8"END"sv, color, rcFrame, thickness,
-                    place, subj);
+        drawTagText(painter, u8"END"sv, color, rcFrame, thickness, place);
         break;
     default:
         // Tags
         if (subj >= 0xE0000 && subj <= 0xE00FF) {
             char8_t c = subj;
             std::u8string_view line1 { &c, 1 };
-            drawTagText(painter, line1, color, rcFrame, thickness,
-                        place, subj);
+            drawTagText(painter, line1, color, rcFrame, thickness, place);
         }
     }
 }
@@ -646,7 +642,7 @@ void drawVirtualVirama(
 
     // Dotted circle; sizePc is always 100
     auto* ucfont = cp.font(match::Normal::INST);
-    auto qfont = ucfont->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, cp.subj);
+    auto qfont = ucfont->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, &cp);
     QFontMetrics metrics(qfont);
     static constexpr QChar DC {cp::DOTTED_CIRCLE};
     auto tightRect = metrics.boundingRect(DC);
@@ -670,7 +666,7 @@ void drawVirtualVirama(
     rcFrame.moveCenter(cen);
 
     auto& font1 = uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    QFont font2 = font1.get(uc::FontPlace::CELL, absSize, {}, NO_TRIGGER);
+    QFont font2 = font1.get(uc::FontPlace::CELL, absSize, {}, nullptr);
     painter->setFont(font2);
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
@@ -721,12 +717,9 @@ std::optional<QFont> fontAt(
     if (cp.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         flags |= uc::FontGetFg::KNOWN_TOFU;
     auto r = font->get(uc::FontPlace::CELL, FSZ_TABLE * sizePc / 100,
-                    flags, cp.subj);
+                    flags, &cp);
     if (sizePc <= 80 && font->flags.have(uc::Ffg::NOHINT_TINY))
         r.setHintingPreference(QFont::PreferNoHinting);
-    if (cp.flags.have(uc::Cfg::M_NO_SHAPING))
-        r.setStyleStrategy(QFont::StyleStrategy(
-                r.styleStrategy() | QFont::PreferNoShaping));
     return r;
 }
 

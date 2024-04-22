@@ -32,7 +32,7 @@ bool WiSample::setFont(const uc::Cp& ch, const uc::FontMatcher& matcher)
     Flags<uc::FontGetFg> fgs;
     if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
         fgs |= uc::FontGetFg::KNOWN_TOFU;
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, ch.subj);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, &ch);
     ui->lbSample->setFont(qfont);
     return true;
 }
@@ -95,7 +95,7 @@ void WiSample::showBriefly()
 QFont WiSample::showCpBriefly(const uc::Cp& ch)
 {
     auto font = ch.font(match::Normal::INST);
-    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, ch.subj);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, uc::FontGetFg::FAST, &ch);
     ui->lbSample->setFont(qfont);
     showBriefly();
     return qfont;
@@ -150,9 +150,10 @@ void WiSample::showCp(
             ui->pageSampleCustom->setVertical(qfont, proxy.text, angle);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         } break;
+    case uc::DrawMethod::SAMPLED_CONTROL:  // same as Sample, maybe we’ll make them somehow
+        std::cout << "Sampled control\n";
     case uc::DrawMethod::SAMPLE:
     case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
-    case uc::DrawMethod::SAMPLED_CONTROL:  // same as Sample, maybe we’ll make them somehow
         drawWithQt(ch, emojiDraw, glyphSets);
         break;
     case uc::DrawMethod::SVG_EMOJI:

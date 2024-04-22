@@ -560,7 +560,7 @@ namespace uc {
         void load(char32_t trigger) const;
 
         int computeSize(FontPlace place, int size) const;
-        QFont get(FontPlace place, int size, Flags<FontGetFg> flags, char32_t trigger) const;
+        QFont get(FontPlace place, int size, Flags<FontGetFg> flags, const uc::Cp* subj) const;
         bool doesSupportChar(char32_t x) const;
         const QString& familiesComma() const;
 
@@ -1195,7 +1195,7 @@ namespace uc {
     inline size_t appendPlus(char (&buf)[N], size_t n1, char32_t code)
         { return appendPlus(buf, N, n1, code); }
 
-    QFont funkyFont(FontPlace place, int size, char32_t trigger);
+    QFont funkyFont(FontPlace place, int size);
 
     void finishTranslation(
             const std::unordered_map<char32_t, int>& sortOrder,

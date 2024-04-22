@@ -2047,9 +2047,9 @@ onceAgain:
 
 
 QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
-                    char32_t trigger) const
+                    const uc::Cp* subj) const
 {
-    load(trigger);
+    load(subj ? subj->subj.ch32() : NO_TRIGGER);
     if (!q.loaded || !q.loaded->normal)
         return {};
     QFont font = *q.loaded->normal;
@@ -2059,9 +2059,12 @@ QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
     if (place == FontPlace::CELL && flags.have(uc::FontGetFg::NO_AA)) {
         strategy = fst::NO_AA;
     }
-    if (flags.have(uc::FontGetFg::KNOWN_TOFU) && trigger != NO_TRIGGER
-            && !doesSupportChar(trigger)) {
+    if (flags.have(uc::FontGetFg::KNOWN_TOFU) && subj
+            && !doesSupportChar(subj->subj)) {
         strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
+    }
+    if (subj && subj->flags.have(uc::Cfg::M_NO_SHAPING)) {
+        strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::PreferNoShaping);
     }
     if (strategy != oldStrategy) {
         font.setStyleStrategy(strategy);
@@ -2557,10 +2560,10 @@ const uc::Version* uc::findVersion(std::string_view id)
 }
 
 
-QFont uc::funkyFont(FontPlace place, int size, char32_t trigger)
+QFont uc::funkyFont(FontPlace place, int size)
 {
     auto& font = fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    return font.get(place, size, NO_FLAGS, trigger);
+    return font.get(place, size, NO_FLAGS, nullptr);
 }
 
 

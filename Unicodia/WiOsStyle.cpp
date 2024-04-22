@@ -33,7 +33,7 @@ WiOsStyle::WiOsStyle(QWidget *parent) :
     fontTofu.setStyleStrategy(fst::TOFU);
 
     auto& font = uc::fontInfo[0];
-    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, NO_TRIGGER));
+    ui->lbOs->setFont(font.get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, nullptr));
 
     connect(ui->lbOsTitle, &QLabel::linkActivated, this, &This::slotLinkActivated);
 }
