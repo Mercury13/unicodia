@@ -516,15 +516,8 @@ void drawCustomControl(
     // Need this brush for both rects and fonts
 
     switch (subj) {
-    case 0x17D2:    // Khmr coeng    
-    case 0x1BAB:    // Sund virtual virama
-    case 0xAAF6:    // Mtei virama
-    case 0x10A3F:   // Khar virtual virama
-    case 0x11D45:   // Masaram Gondi virama
-    case 0x11D97:   // Gunjala Gondi virama
-    case 0x11A99:   // Soyo subjoiner
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_VIRAMA);
-        break;
+        // All viramas are now drawn through VIRTUAL_VIRAMA
+        //drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_VIRAMA);
     case 0x303E:    // ideographic variation indicator
         drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_CJK_APPROX);
         break;
@@ -678,6 +671,9 @@ void drawVirtualVirama(
     painter->setBrush(color);
     // Not rcFrame!!
     auto rcMatch = matchRect(rect, ucfont->styleSheet);
+    if (cp.flags.have(uc::Cfg::M_VIRAMA_UP)) {
+        rcMatch.setBottom(rcMatch.bottom() - tightRect.height() / 2);
+    }
     auto cen = QRectF(rcMatch).center();
     auto baseY = cen.y() + deltaY * 0.5;
     // Though we known exact size of char, still draw at rcMatch

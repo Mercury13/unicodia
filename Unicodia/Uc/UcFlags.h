@@ -29,6 +29,8 @@ namespace uc {
         M_BIT_1          = 1<<1, ///< Method: bit 1
         M_BIT_2          = 1<<2, ///< Method: bit 2
         M_NO_SHAPING     = 1<<3, ///< Method: turn off shaping
+         M_VIRAMA_UP = M_NO_SHAPING, ///< For VIRTUAL_VIRAMA: move circle a bit up
+                                     ///< Intersects with NO_SHAPING but OK (25CC does not need shaping)
         U_DEPRECATED     = 1<<4, ///< [+] UC feature: char is deprecated
         U_DEF_IGNORABLE  = 1<<5, ///< [+] UC feature: default-ignorable
         U_VS16_EMOJI     = 1<<6, ///< [+] UC feature: to surely make this char graphic, use VS16
@@ -56,6 +58,7 @@ namespace uc {
         constexpr Cfgs SVG_EMOJI = Cfg::M_BIT_2 | Cfg::M_BIT_0;
         constexpr Cfgs SAMPLED_CONTROL = Cfg::M_BIT_2 | Cfg::M_BIT_1;
         constexpr Cfgs VIRTUAL_VIRAMA = Cfg::M_BIT_2 | Cfg::M_BIT_1 | Cfg::M_BIT_0;
+        constexpr Cfgs VIRTUAL_VIRAMA_UP = VIRTUAL_VIRAMA | Cfg::M_VIRAMA_UP;
         // Warning: all bits full!
     }
 

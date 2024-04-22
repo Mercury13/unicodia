@@ -1877,9 +1877,9 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     // Mymr
     { 0x1039,  uc::m::VIRTUAL_VIRAMA  }, // Mymr virtual virama
     // Sund
-    { 0x1BAB,  uc::m::CUSTOM_CONTROL  }, // Sund virtual virama (does not fit)
+    { 0x1BAB,  uc::m::VIRTUAL_VIRAMA_UP }, // Sund virtual virama
     // Khmr
-    { 0x17D2,  uc::m::CUSTOM_CONTROL  }, // Khmr coeng (virtual virama)
+    { 0x17D2,  uc::m::VIRTUAL_VIRAMA_UP }, // Khmr coeng (virtual virama)
     // Lana
     { 0x1A60,  uc::m::VIRTUAL_VIRAMA  }, // Lana sakot (virtual virama)
     // Vedic
@@ -1890,9 +1890,9 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     // CJK
     { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
     // Mtei
-    { 0xAAF6,  uc::m::CUSTOM_CONTROL },  // Mtei virtual virama (does not fit)
+    { 0xAAF6,  uc::m::VIRTUAL_VIRAMA_UP }, // Mtei virtual virama
     // Khar
-    { 0x10A3F, uc::m::CUSTOM_CONTROL  }, // Khar virtual virama (does not fit)
+    { 0x10A3F, uc::m::VIRTUAL_VIRAMA_UP }, // Khar virtual virama (does not fit)
     // Brah
     { 0x11003, uc::m::SAMPLED_CONTROL }, // Brah jihva
     { 0x11004, uc::m::SAMPLED_CONTROL }, // Brah upadh
@@ -1915,12 +1915,12 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x11A87, uc::m::SAMPLED_CONTROL }, // Soyo La+
     { 0x11A88, uc::m::SAMPLED_CONTROL }, // Soyo Sha+
     { 0x11A89, uc::m::SAMPLED_CONTROL }, // Soyo Sa+
-    { 0x11A99, uc::m::CUSTOM_CONTROL  }, // Soyo subjoiner (does not fit)
+    { 0x11A99, uc::m::VIRTUAL_VIRAMA_UP }, // Soyo subjoiner
     // Gonm
-    { 0x11D45, uc::m::CUSTOM_CONTROL  }, // Gonm virtual virama (does not fit)
+    { 0x11D45, uc::m::VIRTUAL_VIRAMA_UP }, // Gonm virtual virama
     { 0x11D46, uc::m::SAMPLED_CONTROL }, // Gonm repha
     // Gong
-    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gong virtual virama (does not fit)
+    { 0x11D97, uc::m::VIRTUAL_VIRAMA_UP },  // Gong virtual virama
     // Kawi
     { 0x11F02, uc::m::SAMPLED_CONTROL }, // Kawi repha
     { 0x11F42, uc::m::VIRTUAL_VIRAMA  }, // Kawi subjoiner
