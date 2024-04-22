@@ -462,8 +462,8 @@ ControlFrame drawControlFrame(
     QRectF rcFrame { QPointF(rect.left() + ofsX, rect.top() + ofsY),
                      QSizeF(availSize, availSize) };
     // Draw frame
-    static constexpr qreal Q_THICKNESS = 1.0 / 60.0;
-    auto loThickness = availSize * Q_THICKNESS;
+    static constexpr qreal Q_THICKNESS = 1.0 / 86.0;
+    auto loThickness = availW * Q_THICKNESS;
     auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
     bool isAa = (hiThickness > 1.3);  // 1.25 — still no anti-alias
     painter->setRenderHint(QPainter::Antialiasing, isAa);
