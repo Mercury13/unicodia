@@ -448,12 +448,18 @@ namespace uc {
     struct Block;
     struct Font;
 
+    struct StyleSheet {
+        short topPc = 0, botPc = 0;
+        QString toQ() const;
+        operator QString() const { return toQ(); }
+    };
+
     struct SampleProxy {
         QString text;
-        std::string_view styleSheet;
+        uc::StyleSheet styleSheet;
 
         SampleProxy() = default;
-        SampleProxy(QString x, std::string_view y) : text(std::move(x)), styleSheet(y) {}
+        SampleProxy(QString x, const uc::StyleSheet y) : text(std::move(x)), styleSheet(y) {}
     };
 
     enum class DrawMethod;

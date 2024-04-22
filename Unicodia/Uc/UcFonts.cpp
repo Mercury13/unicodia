@@ -2,6 +2,17 @@
 
 #include "Skin.h"
 
+consteval uc::StyleSheet operator "" _top (unsigned long long x)
+    { return uc::StyleSheet{ .topPc = static_cast<short>(x), .botPc = 0 } ; }
+
+consteval uc::StyleSheet operator "" _bot (unsigned long long x)
+    { return uc::StyleSheet{ .topPc = 0, .botPc = static_cast<short>(x) } ; }
+
+consteval uc::StyleSheet operator + (
+        const uc::StyleSheet& x, const uc::StyleSheet& y)
+    { return { .topPc = short(x.topPc + y.topPc), .botPc = short(x.botPc + y.botPc) }; }
+
+
 // File names
 constexpr std::string_view FNAME_NOTO = "NotoSerif-Regular.ttf";
 constexpr uc::Family FNAME_NOTOMATH { "NotoSansMath-Regular.ttf", uc::Fafg::RAW_FONT };
@@ -21,7 +32,8 @@ constexpr uc::Family FAM_HISTORIC { "Segoe UI Historic", uc::ProbeChar { 0x11013
 constexpr uc::Family FAM_SEMOJI { "Segoe UI Emoji", uc::ProbeChar { 0x1F600 } };
 
 constexpr std::string_view FNAME_DEVA = "NotoSerifDevanagari-Regular.ttf";
-constexpr auto STYLE_DEVA = ""_sty;
+constexpr uc::StyleSheet STYLE_NONE {};
+constexpr auto STYLE_DEVA = STYLE_NONE;
 constexpr auto SIZE_DEVA = 110_pc;
 
 constexpr std::string_view FNAME_NAND = "NotoSansNandinagari-Regular.ttf";
@@ -86,8 +98,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansBuhid-Regular.ttf" },                                            // Buhid
     { "NotoSansCanadianAboriginal-Regular.ttf" },                               // Canadian aboriginal
     { "NotoSansCaucasianAlbanian-Regular.ttf" },                                // Caucasian Albanian
-    { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, "padding-bottom:12%;"_sty }, // Chakma
-    { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, "padding-bottom:12%"_sty }, // Cham
+    { "NotoSansChakma-Regular.ttf", Ffg::DESC_BIGGER, 12_bot },                 // Chakma
+    { "NotoSansCham-Regular.ttf", Ffg::DESC_BADLY_HINTED, 12_bot },             // Cham
     { "NotoSansCherokee-Regular.ttf" },                                         // Cherokee
     { "NotoSansChorasmian-Regular.ttf" },                                       // Chorasmian
         // CJK chars are square, and there’s always not enough detail → bigger
@@ -127,8 +139,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
       { FNAME_FUNKY },                                                          // …4
-    { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER,
-            "padding-bottom:12%;"_sty, 110_pc },                                // Dives Akuru
+    { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER, 12_bot, 110_pc },    // Dives Akuru
       // Unlike Egyptian, OTF is poor;
       // FontForge’s auto-hinting is nice until you write a string: top line does not join
     { "NotoSerifDogra-Regular.ttf", Ffg::DESC_BIGGER },                         // Dogra
@@ -145,8 +156,7 @@ constinit const uc::Font uc::fontInfo[] = {
             StyleChange { .delta = 0xF0200 - 0x2C00 } },                        // Glagolitic
       /// @todo [U16, gag] Replace with Noto Serif when it appears
       { FNAME_FUNKY },                                                          // …1  for Cyr C Khanty
-    { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER,
-            "padding-top:10%; padding-bottom:12%;"_sty },                       // Grantha
+    { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER, 10_top + 12_bot },      // Grantha
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
     { "NotoSansGunjalaGondi-Regular.ttf", Ffg::DESC_BIGGER },                   // Gunjala Gondi
     { "NotoSerifGurmukhi-Regular.ttf" },                                        // Gurmukhi
@@ -191,8 +201,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansMalayalamUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER, 110_pc }, // Malayalam
     { "NotoSansMandaic-Regular.ttf" },                                          // Mandaic
     { "NotoSansManichaean-Regular.ttf" },                                       // Manichaean
-    { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_BIGGER,
-                        "padding-bottom:20%;"_sty, 110_pc },                    // Marchen
+    { "NotoSansMarchen-Regular.ttf", Ffg::DESC_BIGGER | Ffg::CELL_BIGGER,       // Marchen
+                        20_bot, 110_pc },
         // Simple resave by FontForge kills virama functionality → because of bad hinting BIGGER is everything remaining
     { "NotoSansMasaramGondi-Regular.ttf", Ffg::DESC_BADLY_HINTED },             // Masaram Gondi
     { "NotoSansMedefaidrin-Regular.ttf" },                                      // Medefaidrin
@@ -271,8 +281,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansTeluguUI-Light.ttf", Ffg::LIGHT | Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT, 110_pc }, // Telugu
       { FNAME_FUNKY },                                                          // …1
     { "MV Boli", 110_pc },                                                      // Thaana
-    { "Leelawadee,Leelawadee UI", "padding-bottom:10%;"_sty, 110_pc },          // Thai
-    { "BabelStoneTibetanSlim.ttf", "padding-bottom:15%;"_sty, 120_pc },         // Tibetan
+    { "Leelawadee,Leelawadee UI", 10_bot, 110_pc },                             // Thai
+    { "BabelStoneTibetanSlim.ttf", 15_bot, 120_pc },                            // Tibetan
     { "NotoSansTifinagh-Regular.ttf" },                                         // Tifinagh
     { "NotoSansTirhuta-Regular.ttf" },                                          // Tirhuta
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Ugaritic

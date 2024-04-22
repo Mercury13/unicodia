@@ -1868,15 +1868,15 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
 
 const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     // Mymr
-    { 0x1039,  uc::m::CUSTOM_CONTROL },  // Mymr virtual virama
+    { 0x1039,  uc::m::VIRTUAL_VIRAMA },  // Mymr virtual virama
     // Lana
-    { 0x1A60,  uc::m::CUSTOM_CONTROL },  // Lana sakot (virtual virama)
+    { 0x1A60,  uc::m::VIRTUAL_VIRAMA },  // Lana sakot (virtual virama)
     // Brai
     { 0x2800,  uc::m::SPACE }, // Braille blank
     // CJK
     { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
     // Diak
-    { 0x1193E, uc::m::CUSTOM_CONTROL },  // Diak (virtual) virama
+    { 0x1193E, uc::m::VIRTUAL_VIRAMA  }, // Diak virama
     { 0x1193F, uc::m::SAMPLED_CONTROL }, // Diak nasal sign
     { 0x11941, uc::m::SAMPLED_CONTROL }, // Diak repha
     // Zanb

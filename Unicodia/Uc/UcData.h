@@ -85,6 +85,7 @@ namespace uc {
     constexpr QChar STUB_PUA_WALL_END { 0xE00E };           //                      …end
     constexpr QChar STUB_PUA_DUPLOYAN { 0xE00F };           // Dupl K+A+TS
     constexpr QChar STUB_PUA_CJK_APPROX { 0xE010 };         // Image of CJK 303E
+    constexpr QChar STUB_PUA_PLUS { 0xE011 };               // Plus for synthesized virtual virama
 
     enum class EcLangLife
     {
@@ -479,6 +480,7 @@ namespace uc {
         VERTICAL_CW,        ///< Draw Mong etc vertically, rotate CW
         VERTICAL_CCW,       ///< Draw Sogd etc vertically, rotate CCW
         // Char-based methods
+        VIRTUAL_VIRAMA,     ///< Draw 25CC with that font, and then lower + with Funky
         ABBREVIATION,       ///< Draw dotted square and abbreviation
         CUSTOM_CONTROL,     ///< Draw dotted square and smth custom
         SVG_EMOJI,          ///< Draw SVG emoji
@@ -489,13 +491,6 @@ namespace uc {
 extern template class dumb::Sp<uc::LoadedFont>;
 
 namespace uc {
-    struct StyleSheet {
-        std::string_view v;
-        constexpr operator const std::string_view& () const { return v; }
-
-        explicit constexpr StyleSheet() = default;
-        explicit constexpr StyleSheet(std::string_view x) : v(x) {}
-    };
 
     enum class FontPlace { CELL, SAMPLE, PROBE };
 
@@ -532,6 +527,7 @@ namespace uc {
             : text(aText), flags(aFlag), probeChar(aProbeChar) {}
     };
 
+    /// Other set of styled characters is at alternate CPs → add/subtract some delta to code
     struct StyleChange {
         int delta = 0;
     };
@@ -548,7 +544,7 @@ namespace uc {
 
         Family family;
         Flags<Ffg> flags {};
-        std::string_view styleSheet {};
+        StyleSheet styleSheet {};
         Percent sizeAdjust {};
         StyleChange styleChange {};
 
@@ -1387,7 +1383,7 @@ namespace match {
     };
 
     ///  Normal matcher that extracts the 1st font that supports cp,
-    ///  or last
+    ///  or last if no one supports
     class Normal : public uc::FontMatcher {
     public:
         bool check(char32_t cp, const uc::Font& font) const override;
@@ -1402,10 +1398,6 @@ namespace match {
     };
 
 }
-
-
-consteval uc::StyleSheet operator "" _sty (const char* data, size_t n)
-    { return uc::StyleSheet{std::string_view { data, n }}; }
 
 
 // Inline implementations

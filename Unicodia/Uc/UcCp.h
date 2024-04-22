@@ -7,6 +7,9 @@ namespace cp {
     // Specials
     constexpr char32_t ZWJ = 0x200D;
 
+    // Shapes
+    constexpr char32_t DOTTED_CIRCLE = 0x25CC;
+
     // Kangxi radicals
     constexpr int KANGXI_N = 214;
     constexpr char32_t KANGXI_FIRST = 0x2F00;

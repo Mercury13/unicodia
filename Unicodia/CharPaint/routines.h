@@ -35,7 +35,13 @@ void drawAbbreviation(
 
 void drawSpace(
         QPainter* painter, const QRect& rect,
-        const QFont& font, QColor color, char32_t subj);
+        const QFont& font,
+        QColor color,  ///< @warning actually changed
+        char32_t subj);
+
+void drawVirtualVirama(
+        QPainter* painter, const QRect& rect,
+        const QColor& color, int absSize, const uc::Cp& cp);
 
 uc::SvgChecker& svgChecker();
 
@@ -113,6 +119,7 @@ public:
     void setEmoji(char32_t aSubj);
     void setEmoji(std::u32string_view aText);
     void setVertical(const QFont& font, const QString& aSubj, int angle);
+    void setVirtualVirama(char32_t cp);
     void setNormal();
     void init();
 protected:
@@ -121,7 +128,7 @@ private:
     QSize initialSize;
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
-        EMOJI_TEXT, VERTICAL };
+        EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont fontSpace;

@@ -7,6 +7,9 @@
 // Libs
 #include "u_Qstrings.h"
 
+// Unicode
+#include "UcCp.h"
+
 // Project-local
 #include "Skin.h"
 #include "emoji.h"
@@ -227,6 +230,11 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                       verticalAngle, palette().windowText().color(),
                       qsubj);
         } break;
+    case Mode::VIRTUAL_VIRAMA: {
+            QPainter painter(this);
+            drawVirtualVirama(&painter, geometry(), palette().windowText().color(),
+                      FSZ_BIG, *uc::cpsByCode[subj]);
+        } break;
     }
 }
 
@@ -250,6 +258,15 @@ void WiCustomDraw::setCustomControl(char32_t aSubj)
     setNormal();
     mode = Mode::CUSTOM_CONTROL;
     subj = aSubj;
+    update();
+}
+
+
+void WiCustomDraw::setVirtualVirama(char32_t cp)
+{
+    setNormal();
+    mode = Mode::VIRTUAL_VIRAMA;
+    subj = cp;
     update();
 }
 
@@ -433,6 +450,7 @@ ControlFrame drawControlFrame(
     auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
     bool isAa = (hiThickness > 1.3);  // 1.25 — still no anti-alias
     painter->setRenderHint(QPainter::Antialiasing, isAa);
+    auto rcRetFrame = rcFrame;
     if (isAa) {
         rcFrame = adjustedToPhysicalPixels(rcFrame, dpr, hiThickness * 0.5);
     } else if (hiThickness > 1) {
@@ -443,7 +461,7 @@ ControlFrame drawControlFrame(
     painter->setBrush(Qt::NoBrush);
     painter->drawRect(rcFrame);
 
-    return { rcFrame, loThickness };
+    return { rcRetFrame, loThickness };
 }
 
 void drawFunkySample(
@@ -475,9 +493,6 @@ void drawCustomControl(
     // Need this brush for both rects and fonts
 
     switch (subj) {
-    case 0x1039:    // Myanmar virtual virama
-    case 0x1A60:    // Lana sakot
-    case 0x1193E:   // Diak (virtual) virama
     case 0x11A47:   // Zanb subjoiner
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
@@ -599,6 +614,65 @@ void drawAbbreviation(
     drawAbbrText(painter, abbreviation, color, rcFrame, thickness);
 }
 
+
+namespace {
+
+    QRect matchRect(const QRect& x, const uc::StyleSheet& y)
+    {
+        if (y.topPc == y.botPc)
+            return x;
+        float size100 = x.height() * 100.0f / (100.0f + y.topPc + y.botPc);
+        if (y.topPc > y.botPc) {
+            auto r = x;
+            r.setTop(r.top() + round(size100 * (y.topPc - y.botPc) / 100.0f ));
+            return r;
+        } else {
+            auto r = x;
+            r.setBottom(r.bottom() - round(size100 * (y.botPc - y.topPc) / 100.0f));
+            return r;
+        }
+    }
+
+}   // anon namespace
+
+
+void drawVirtualVirama(
+        QPainter* painter, const QRect& rect,
+        const QColor& color, int absSize, const uc::Cp& cp)
+{
+    // Frame
+    auto [rcFrame, thickness] = drawControlFrame(painter, rect, color);
+
+    // Dotted circle; sizePc is always 100
+    auto* ucfont = cp.font(match::Normal::INST);
+    auto qfont = ucfont->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, cp.subj);
+    QFontMetrics metrics(qfont);
+    static constexpr QChar DC {cp::DOTTED_CIRCLE};
+    auto tightRect = metrics.boundingRect(DC);
+    auto deltaY = metrics.ascent() - metrics.descent();
+    auto width = metrics.horizontalAdvance(DC);
+    painter->setFont(qfont);
+    painter->setBrush(color);
+    // Not rcFrame!!
+    auto rcMatch = matchRect(rect, ucfont->styleSheet);
+    auto cen = QRectF(rcMatch).center();
+    auto baseX = cen.x() - width * 0.5;
+    auto baseY = cen.y() + deltaY * 0.5;
+    painter->drawText(QPointF(baseX, baseY), DC);
+
+    // Limit offset
+    auto loY = baseY + tightRect.bottom();
+    auto hiY = rcFrame.bottom();
+    // Plus
+    cen.setY(cen.y() + width * 0.5f);
+    rcFrame.moveCenter(cen);
+
+    auto& font1 = uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
+    QFont font2 = font1.get(uc::FontPlace::CELL, absSize, {}, NO_TRIGGER);
+    painter->setFont(font2);
+    painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
+}
+
 QSize spaceDimensions(const QFont& font, char32_t subj)
 {
     QString s = QString::fromUcs4(&subj, 1);
@@ -714,6 +788,9 @@ void drawChar(
 {
     auto method = cp.drawMethod(emojiMode, glyphSets);
     switch (method) {
+    case uc::DrawMethod::VIRTUAL_VIRAMA:
+        drawVirtualVirama(painter, rect, color, FSZ_TABLE, cp);
+        break;
     case uc::DrawMethod::CUSTOM_CONTROL:
         drawCustomControl(painter, rect, color, uc::FontPlace::CELL, cp.subj);
         break;

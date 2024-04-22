@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1713794191
+ModificationTime: 1713811138
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -764,13 +764,12 @@ EndShort
 LangName: 1033
 GaspTable: 1 65535 15 1
 Encoding: UnicodeFull
-Compacted: 1
 UnicodeInterp: none
 NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 0 32 14
+WinInfo: 57312 32 14
 BeginPrivate: 0
 EndPrivate
 GridOrder2: 1
@@ -780,7 +779,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Umlaut" "Common ABVM-1" "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
-BeginChars: 1114135 502
+BeginChars: 1114135 503
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -858,7 +857,7 @@ EndChar
 StartChar: uni25CC
 Encoding: 9676 9676 1
 Width: 594
-Flags: MWO
+Flags: MW
 AnchorPoint: "Umlaut" 297 560 basechar 0
 LayerCount: 2
 Fore
@@ -62161,6 +62160,17 @@ SplineSet
  468 509 l 5,7,-1
  372 509 l 5,0,-1
 EndSplineSet
+EndChar
+
+StartChar: uniE011
+Encoding: 57361 57361 502
+Width: 0
+Flags: WO
+HStem: -29 53<-127.5 -28.5 25.5 124.5>
+VStem: -28.5 53<-129 -29 24 124>
+LayerCount: 2
+Fore
+Refer: 60 -1 N 1 0 0 1 301.5 -778 2
 EndChar
 EndChars
 EndSplineFont

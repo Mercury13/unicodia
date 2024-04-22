@@ -2326,6 +2326,8 @@ uc::DrawMethod uc::Cp::drawMethod(
         return uc::DrawMethod::ABBREVIATION;
     case m::SAMPLED_CONTROL.numeric():
         return uc::DrawMethod::SAMPLED_CONTROL;
+    case m::VIRTUAL_VIRAMA.numeric():
+        return uc::DrawMethod::VIRTUAL_VIRAMA;
     default:;
     }
 
@@ -2931,4 +2933,23 @@ bool match::Normal::check(char32_t cp, const uc::Font& font) const
 bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
 {
     return font.doesSupportChar(cp);
+}
+
+
+///// StyleSheet ///////////////////////////////////////////////////////////////
+
+
+QString uc::StyleSheet::toQ() const
+{
+    QString r;
+    char buf[40];
+    if (topPc != 0) {
+        snprintf(buf, std::size(buf), "padding-top: %d%%;", int(topPc));
+        r += buf;
+    }
+    if (botPc != 0) {
+        snprintf(buf, std::size(buf), "padding-bottom: %d%%;", int(botPc));
+        r += buf;
+    }
+    return r;
 }

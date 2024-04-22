@@ -54,6 +54,8 @@ namespace uc {
         constexpr Cfgs CUSTOM_CONTROL = Cfg::M_BIT_2;
         constexpr Cfgs SVG_EMOJI = Cfg::M_BIT_2 | Cfg::M_BIT_0;
         constexpr Cfgs SAMPLED_CONTROL = Cfg::M_BIT_2 | Cfg::M_BIT_1;
+        constexpr Cfgs VIRTUAL_VIRAMA = Cfg::M_BIT_2 | Cfg::M_BIT_1 | Cfg::M_BIT_0;
+        // Warning: all bits full!
     }
 
     enum class Lfg : unsigned short {

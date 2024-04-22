@@ -1,9 +1,6 @@
 #include "WiSample.h"
 #include "ui_WiSample.h"
 
-// Libs
-#include "u_Qstrings.h"
-
 // Data
 #include "UcData.h"
 #include "Skin.h"
@@ -71,7 +68,7 @@ void WiSample::drawWithQt(
         QString css = "color: " + c.name(QColor::HexArgb) + ';';
         ui->lbSample->setStyleSheet(css);
     } else {
-        ui->lbSample->setStyleSheet(str::toQ(proxy.styleSheet));
+        ui->lbSample->setStyleSheet(proxy.styleSheet);
     }
     ui->lbSample->setText(proxy.text);
 }
@@ -126,6 +123,11 @@ void WiSample::showCp(
         setAbbrFont(ch);
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setCustomControl(ch.subj);
+        break;
+    case uc::DrawMethod::VIRTUAL_VIRAMA:
+        setAbbrFont(ch);
+        ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+        ui->pageSampleCustom->setVirtualVirama(ch.subj);
         break;
     case uc::DrawMethod::ABBREVIATION:
         setAbbrFont(ch);
