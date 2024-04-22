@@ -1877,6 +1877,7 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x11D45, uc::m::CUSTOM_CONTROL },  // Masaram Gondi virtual virama
     { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gunjala Gondi virtual virama
     { 0x11A3A, uc::m::CUSTOM_CONTROL },  // Zanb repha (cluster-initial Ra)
+    { 0x11A47, uc::m::CUSTOM_CONTROL },  // Zanb subjoiner (virtual virama)
     { 0x13431, uc::m::CUSTOM_CONTROL },  // Egyptian hiero horiz joiner
     { 0x13432, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top start
     { 0x13433, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at bottom start
@@ -1895,8 +1896,6 @@ const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
     { 0x16F92, uc::m::CUSTOM_CONTROL },  // Miao tone below
     { 0x1BCA0, uc::m::CUSTOM_CONTROL },  // shorthand format Letter overlap
     { 0x1BCA1, uc::m::CUSTOM_CONTROL },  // shorthand format Continuing overlap
-    // Sampled control
-    { 0x11A47, uc::m::SAMPLED_CONTROL }, // Zanb subjoinwer (virtual virama)
 };
 
 // Just capitalize them!

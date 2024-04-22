@@ -476,6 +476,7 @@ void drawCustomControl(
 
     switch (subj) {
     case 0x1039:    // Myanmar virtual virama
+    case 0x11A47:   // Zanb subjoiner
     case 0x11D45:   // Masaram Gondi virama
     case 0x11D97:   // Gunjala Gondi virama
         drawFunkySample(painter, rcFrame, color, place, 1.0f, subj, uc::STUB_PUA_VIRAMA);
