@@ -466,10 +466,16 @@ ControlFrame drawControlFrame(
     QRectF rcFrame { QPointF(rect.left() + ofsX, rect.top() + ofsY),
                      QSizeF(availSize, availSize) };
     // Draw frame
-    static constexpr qreal Q_THICKNESS = 1.0 / 86.0;
+    static constexpr qreal Q_THICKNESS = 1.0 / 90.0;
     auto loThickness = availW * Q_THICKNESS;
     auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
-    bool isAa = (hiThickness > 1.3);  // 1.25 — still no anti-alias
+    bool isAa = (dpr > 1)
+            ? (hiThickness > 1.0)
+            : (hiThickness > 1.3);  // 1.25 — still no anti-alias
+    if (dpr > 1 && hiThickness > 1 && hiThickness <= 1.3) {
+        hiThickness = 0.99;
+        loThickness = 0.99 / dpr;
+    }
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     auto rcRetFrame = rcFrame;
     if (isAa) {
@@ -516,7 +522,7 @@ void drawCustomControl(
     // Need this brush for both rects and fonts
 
     switch (subj) {
-        // All viramas are now drawn through VIRTUAL_VIRAMA
+        // All subjoiners are now drawn through VIRTUAL_VIRAMA
         //drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_VIRAMA);
     case 0x303E:    // ideographic variation indicator
         drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_CJK_APPROX);
