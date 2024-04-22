@@ -53,6 +53,7 @@ namespace uc {
         constexpr Cfgs ABBREVIATION = Cfg::M_BIT_1 | Cfg::M_BIT_0;
         constexpr Cfgs CUSTOM_CONTROL = Cfg::M_BIT_2;
         constexpr Cfgs SVG_EMOJI = Cfg::M_BIT_2 | Cfg::M_BIT_0;
+        constexpr Cfgs SAMPLED_CONTROL = Cfg::M_BIT_2 | Cfg::M_BIT_1;
     }
 
     enum class Lfg : unsigned short {

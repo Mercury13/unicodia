@@ -532,10 +532,9 @@ int main()
         // Alternate
         if (isAlternate(cp))
             flags |= uc::Cfg::G_RENDER_BUG;
-        // Virtual virama
-        if (customDrawnControlChars.contains(cp)
-                || (cp >= ::cp::TAG_MIN && cp <= ::cp::TAG_MAX))
-            flags |= uc::m::CUSTOM_CONTROL;
+        // Tags
+        if (cp >= ::cp::TAG_MIN && cp <= ::cp::TAG_MAX)
+                    flags |= uc::m::CUSTOM_CONTROL;
         // No anti-aliasing
         if (isNoAa(cp))
             flags |= uc::m::NO_AA;
@@ -555,9 +554,9 @@ int main()
         // SVG emoji
         if (isVs16 || emoji.allSingleChar.contains(cp))
             flags |= uc::m::SVG_EMOJI;
-        // Draw as space
-        if (charsDrawnAsSpaces.contains(cp))
-            flags |= uc::m::SPACE;
+        // Special drawing
+        if (auto q = drawMethods.find(cp); q != drawMethods.end())
+            flags |= q->second;
         flags |= styleFlags(cp);
 
         // OUTPUT

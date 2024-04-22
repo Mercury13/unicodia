@@ -1866,10 +1866,34 @@ const std::unordered_map<char32_t, std::string_view> abbrevs {
     // Then Variation Selectors
 };
 
-const std::unordered_set<char32_t> charsDrawnAsSpaces {
-    0x2800,     // Braille blank
-    0x13441,    // Egyptian hiero Full blank
-    0x13442,    // Egyptian hiero Half blank
+const std::unordered_map<char32_t, uc::Cfgs> drawMethods {
+    // SPACES
+    { 0x2800,  uc::m::SPACE }, // Braille blank
+    { 0x13441, uc::m::SPACE }, // Egyptian hiero Full blank
+    { 0x13442, uc::m::SPACE }, // Egyptian hiero Half blank
+    // CUSTOM CONTROLS
+    { 0x1039,  uc::m::CUSTOM_CONTROL },  // Mymr virtual virama
+    { 0x303E,  uc::m::CUSTOM_CONTROL },  // ideographic variation indicator
+    { 0x11D45, uc::m::CUSTOM_CONTROL },  // Masaram Gondi virtual virama
+    { 0x11D97, uc::m::CUSTOM_CONTROL },  // Gunjala Gondi virtual virama
+    { 0x13431, uc::m::CUSTOM_CONTROL },  // Egyptian hiero horiz joiner
+    { 0x13432, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top start
+    { 0x13433, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at bottom start
+    { 0x13434, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at top end
+    { 0x13435, uc::m::CUSTOM_CONTROL },  // Egyptian hiero insert at bottom end
+    { 0x13439, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Insert at middle
+    { 0x1343A, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Insert at top
+    { 0x1343B, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Insert at bottom
+    { 0x1343C, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Begin enclosure
+    { 0x1343D, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph End enclosure
+    { 0x1343E, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph Begin walled enclosure
+    { 0x1343F, uc::m::CUSTOM_CONTROL },  // Egyptian hieroglyph End walled enclosure
+    { 0x16F8F, uc::m::CUSTOM_CONTROL },  // Miao tone right
+    { 0x16F90, uc::m::CUSTOM_CONTROL },  // Miao tone top right
+    { 0x16F91, uc::m::CUSTOM_CONTROL },  // Miao tone above
+    { 0x16F92, uc::m::CUSTOM_CONTROL },  // Miao tone below
+    { 0x1BCA0, uc::m::CUSTOM_CONTROL },  // shorthand format Letter overlap
+    { 0x1BCA1, uc::m::CUSTOM_CONTROL },  // shorthand format Continuing overlap
 };
 
 // Just capitalize them!
@@ -1971,27 +1995,6 @@ const std::map<RangeByEnd, uc::Cfgs> styleRanges {
     { { 0x10F30, 0x10F6F }, TWO_STYLES },   // Sogd
     { { 0x10F70, 0x10FAF }, TWO_STYLES },   // Ougr
 };
-
-const std::unordered_set<char32_t> customDrawnControlChars {
-    0x1039,     // Mymr virtual virama
-    0x303E,     // ideographic variation indicator
-    0x11D45,    // Masaram Gondi virtual virama
-    0x11D97,    // Gunjala Gondi virtual virama
-    0x13431,    // Egyptian hiero horiz joiner
-    0x13432,    // Egyptian hiero insert at top start
-    0x13433,    // Egyptian hiero insert at bottom start
-    0x13434,    // Egyptian hiero insert at top end
-    0x13435,    // Egyptian hiero insert at bottom end
-    0x13439, 0x1343A, 0x1343B, 0x1343C,  // Egyptian hiero formatters
-       0x1343D, 0x1343E, 0x1343F,
-    0x16F8F,    // Miao tone right
-    0x16F90,    // Miao tone top right
-    0x16F91,    // Miao tone above
-    0x16F92,    // Miao tone below
-    0x1BCA0,    // shorthand format Letter overlap
-    0x1BCA1,    // shorthand format Continuing overlap
-};
-
 
 /// One method of homonym disambig: these chars are left as-are
 /// while the rest are decapped by dictionary under Exf::LEAVE_BY_CONDITION
