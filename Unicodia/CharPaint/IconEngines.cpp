@@ -7,6 +7,9 @@
 #include <QStyleOption>
 #include <QSvgRenderer>
 
+// Utils
+#include "u_Qstrings.h"
+
 // Unicode data
 #include "UcSkin.h"
 
@@ -118,8 +121,11 @@ namespace util {
         texture.render(painter, rect1);
     }
 
+    inline void sprintfCp(char (&buf)[48], char32_t cp)
+        { snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", int(cp)); }
+
     inline void sprintfBlock(char (&buf)[48], const uc::Block& blk)
-        { snprintf(buf, std::size(buf), ":/Scripts/%04X.svg", blk.startingCp); }
+        { sprintfCp(buf, blk.startingCp); }
 
     struct FormatInfo {
         QRect frameRect, contentRect;
@@ -574,8 +580,7 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
 ie::PlayingCard::PlayingCard()
     : texture(dumb::makeSp<LazySvg>(":ScCustom/playcard.svg")) {}
 
-// -warn: complains about =default
-ie::PlayingCard::~PlayingCard() {}
+ie::PlayingCard::~PlayingCard() = default;
 
 
 void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
@@ -620,8 +625,7 @@ void ie::PlayingCard::paint1(QPainter *painter, const QRect &rect, qreal scale)
 ie::Mahjong::Mahjong()
     : texture(dumb::makeSp<LazySvg>(":ScCustom/mahjong.svg")) {}
 
-// -warn: complains about =default
-ie::Mahjong::~Mahjong() {}
+ie::Mahjong::~Mahjong() = default;
 
 
 void ie::Mahjong::paint1(QPainter *painter, const QRect &rect, qreal scale)
@@ -681,8 +685,7 @@ ie::Format::Format(const uc::Block& blk)
     texture = dumb::makeSp<LazySvg>(buf);
 }
 
-// -warn: complains about =default
-ie::Format::~Format() {}
+ie::Format::~Format() = default;
 
 
 void ie::Format::paint1(QPainter *painter, const QRect &rect, qreal scale)
@@ -759,7 +762,7 @@ void ie::TallyMark::paint1(QPainter *painter, const QRect &rect, qreal)
 ie::ThreeD::ThreeD()
     : texture(dumb::makeSp<LazySvg>(":ScCustom/3D.svg")) {}
 
-ie::ThreeD::~ThreeD() {}
+ie::ThreeD::~ThreeD() = default;
 
 void ie::ThreeD::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
@@ -790,12 +793,12 @@ void ie::SqIdeo::paint1(QPainter *painter, const QRect &rect, qreal scale)
 }
 
 
-///// OneCircleIdeo ////////////////////////////////////////////////////////////
+///// OneCircle ////////////////////////////////////////////////////////////////
 
 ie::OneCircle::OneCircle()
     : texture(dumb::makeSp<LazySvg>(":ScCustom/1circ.svg")) {}
 
-ie::OneCircle::~OneCircle() {}
+ie::OneCircle::~OneCircle() = default;
 
 void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
@@ -817,4 +820,31 @@ void ie::OneCircle::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->drawEllipse(rcEllipse);
 
     texture->get()->render(painter, rect);
+}
+
+
+///// Margin ///////////////////////////////////////////////////////////////////
+
+
+ie::Margin::Margin(const QColor& aColor, std::string_view aName, int aValue,
+                   HalfPixelDown aHalfPixelDown)
+    : texture(dumb::makeSp<LazySvg>(str::toQ(aName))), color(aColor), value(aValue),
+      halfPixelDown(static_cast<bool>(aHalfPixelDown)) {}
+
+ie::Margin::~Margin() = default;
+
+
+void ie::Margin::paint1(QPainter *painter, const QRect &rect, qreal)
+{
+    // Background
+    painter->fillRect(rect, color);
+
+    // SVG
+    unsigned margin = (rect.width() * value + 7) / 16;  // 7: 0.5 = down
+    QRect rcContent = rect.marginsRemoved(QMargins(margin, margin, margin, margin));
+    if (halfPixelDown) {
+        auto shift = (rect.width() + 15) / 32;  // 15: 0.5 = down
+        rcContent.moveTop(rcContent.top() + shift);
+    }
+    texture->get()->render(painter, rcContent);
 }

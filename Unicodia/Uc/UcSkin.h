@@ -17,4 +17,7 @@ constexpr QColor TX_AFRICA { 0x8f, 0x59, 0x02 };  // Cell FG: Tango dark brown
 // Europe (no cells for now, but lots of synth icons)
 constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };  // Icon BG: some shade of aqua
 
+// Ocean (no cells for now, but a synth icon)
+constexpr QColor BG_OCEAN  { 0xc8, 0xff, 0xc8 };  // Icon BG: some light green
+
 constexpr QColor NO_COLOR {};                     // Invalid color when really no matter

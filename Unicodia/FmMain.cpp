@@ -233,8 +233,10 @@ namespace {
             return new ie::CjkStructure;
         case 0x4DC0:    // Yijing
             return new ie::CoarseImage(BG_CJK, { 1,0 }, ":ScCustom/yijing.png");
-        case 0x10100:   // Aegeam numbers
+        case 0x10100:   // Aegean numbers
             return new ie::CoarseImage(BG_EUROPE, { 1,1 }, ":ScCustom/aegean.png");
+        case 0x11F00:   // Kawi
+            return new ie::Margin(BG_OCEAN, ":ScCustom/kawi.svg", 2, ie::HalfPixelDown::YES);
         case 0x1D300:   // Tai Xuan
             return new ie::Taixu;
         case 0x1D360:   // Counting rods

@@ -757,7 +757,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Linb, 2 }, MapType::EU_OTHER_DEAD,
             EcScript::Linb, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Greek numbers OK
-    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE },
+    { 0x10140, 0x1018F, { 0x10144, EcContinent::EUROPE, {}, SvgHint{ 3, 1, ImbaX::RIGHT_4 } },
         "Ancient Greek Numbers",
             { EcScript::Grek, 2 }, MapType::EU_OTHER_DEAD,
             EcScript::Grek, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },
@@ -991,8 +991,7 @@ constinit const uc::Block uc::blocks[] {
             "Sharada",
             { EcScript::Shrd, 0 }, MapType::AS_BRAH_DEAD, EcScript::Shrd },
     // Sinhala archaic OK
-    // Noto Sinhala is light but archaic numbers are bold!
-    { 0x111E0, 0x111FF, { 0x111E1, EcContinent::OCEAN },
+    { 0x111E0, 0x111FF, { 0x111E1, EcContinent::OCEAN, {}, 15_hx },
             "Sinhala Archaic Numbers",
             { EcScript::Sinh, 1 }, MapType::OC_DEAD,
             EcScript::Sinh, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
@@ -1115,7 +1114,7 @@ constinit const uc::Block uc::blocks[] {
             "Makasar",
             { EcScript::Maka, 0 }, MapType::OC_DEAD, EcScript::Maka },
     // Kawi OK
-    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN },
+    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::CUSTOM_ENGINE },
             "Kawi",
             { EcScript::Kawi, 0 }, MapType::OC, EcScript::Kawi },
     // Lisu supplement OK, new font engine works

@@ -1045,7 +1045,7 @@ constinit const uc::Continent uc::continentInfo[] {
     // CJK
     { { BG_CJK,               FG_CJK               }, { BG_CJK,  TX_CJK    }  },
     // Ocean
-    { { { 0xc8, 0xff, 0xc8 }, { 0x00, 0x64, 0x00 } }, { NO_COLOR, NO_COLOR }  },
+    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, { NO_COLOR, NO_COLOR }  },
     // Africa
     { { BG_AFRICA,            FG_AFRICA            }, { CO_AFRICA, TX_AFRICA }},
     // America

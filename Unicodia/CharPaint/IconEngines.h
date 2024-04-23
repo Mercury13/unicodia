@@ -260,4 +260,23 @@ namespace ie {
     private:
         dumb::Sp<LazySvg> texture;
     };
+
+    enum class HalfPixelDown : unsigned char { NO, YES };
+
+    // Drawing with constant margin around SVG (Kawi)
+    class Margin : public Veng
+    {
+    public:
+        Margin(const QColor& aColor, std::string_view aName, int aValue,
+               HalfPixelDown aHalfPixelDown);
+        ~Margin();
+        Margin* clone() const override { return new Margin(*this); }
+        void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
+    private:
+        dumb::Sp<LazySvg> texture;
+        QColor color;
+        int value;
+        bool halfPixelDown;
+    };
+
 }   // namespace ie
