@@ -110,6 +110,10 @@ void drawFolderTile(
         const uc::LibNode& node, const QColor& color,
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 
+void drawCharOverEmoji(
+        QPainter* painter, const QRect& rect, const QFont& font,
+        const QColor& color, char32_t subj);
+
 QSize spaceDimensions(const QFont& font, char32_t subj);
 
 class WiCustomDraw : public QWidget
@@ -125,6 +129,7 @@ public:
     void setVertical(const QFont& font, const uc::SampleProxy& pr, int angle);
     void setVirtualVirama(char32_t cp);
     void setSampledControl(const QFont& font, const uc::SampleProxy& pr);
+    void setCharOverEmoji(const QFont& font, char32_t aSubj);
     void setNormal();
     void init();
 protected:
@@ -133,7 +138,8 @@ private:
     QSize initialSize;
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
-        EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA, SAMPLED_CONTROL };
+        EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA, SAMPLED_CONTROL,
+        CHAR_OVER_EMOJI };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont qfont;

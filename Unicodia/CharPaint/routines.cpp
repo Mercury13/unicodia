@@ -241,6 +241,11 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
                                qfont, palette().windowText().color(),
                                uc::FontPlace::SAMPLE);
         } break;
+    case Mode::CHAR_OVER_EMOJI: {
+            QPainter painter(this);
+            drawCharOverEmoji(&painter, geometry(), qfont,
+                      palette().windowText().color(), subj);
+        } break;
     }
 }
 
@@ -340,6 +345,16 @@ void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
 }
 
 
+void WiCustomDraw::setCharOverEmoji(const QFont& font, char32_t aSubj)
+{
+    qfont = font;
+    subj = aSubj;
+    mode = Mode::CHAR_OVER_EMOJI;
+    update();
+}
+
+
+
 ///// Standalone functions /////////////////////////////////////////////////////
 
 
@@ -354,6 +369,28 @@ void drawDeprecated(QPainter* painter, const QRect& r)
     painter->setPen(FG_DEPRECATED);
     painter->drawLine(x0, y0, x1, y1);
     painter->drawLine(x0, y1, x1, y0);
+}
+
+void drawEmojiIcon(QPainter* painter, const QRect& r, char32_t subj)
+{
+    // static constexpr int OFS = 3;
+    // static constexpr int SZ = 5;
+    // const int x1 = r.right() - OFS;
+    // const int x0 = x1 - SZ;
+    // const int y0 = r.top() + OFS;
+    // const int y1 = y0 + SZ;
+    // QRect r1 { QPoint{x0, y0}, QPoint{x1, y1} };
+    // painter->fillRect(r1, FG_EMOJI);
+
+    static constexpr int OFS = 0;
+    static constexpr int SZ = 12;
+    const int x1 = r.right() - OFS;
+    const int x0 = x1 - SZ;
+    const int y0 = r.top() + OFS;
+    const int y1 = y0 + SZ;
+    QRect r1 { QPoint{x0, y0}, QPoint{x1, y1} };
+    // Blue — just because every such emoji is old and well-known
+    emp.draw(painter, r1, subj, SZ, Qt::blue);
 }
 
 void drawAbbrText(QPainter* painter, std::u8string_view abbreviation,
@@ -731,6 +768,26 @@ void drawVirtualVirama(
 }
 
 
+void drawCharOverEmoji(
+        QPainter* painter, const QRect& rect, const QFont& font,
+        const QColor& color, char32_t subj)
+{
+    // Emoji
+    auto loSize = std::min(rect.width(), rect.height());
+    if (loSize <= 0)  // Maybe this’ll trigger nicer division, [[assume]] is C++23
+        return;
+    auto emojiSize = loSize / 3;
+    QRect rect1 = rect;
+    rect1.setBottomLeft({rect.right() - emojiSize, rect.top() + emojiSize});
+    emp.draw(painter, rect1, subj, emojiSize, color);
+
+    // Character
+    painter->setFont(font);
+    painter->setPen(color);
+    painter->drawText(rect, Qt::AlignCenter, str::toQ(subj));
+}
+
+
 void drawSampledControl(
         QPainter* painter, const QRect& rect, const uc::SampleProxy& proxy,
         const QFont& font, const QColor& color, uc::FontPlace place)
@@ -889,7 +946,11 @@ void drawChar(
     case uc::DrawMethod::SAMPLE:
         if (tableMode == TableDraw::CUSTOM) {
             drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
-        } break;
+        }
+        if (cp.isVs16Emoji()) {
+            drawEmojiIcon(painter, rect, cp.subj);
+        }
+        break;
     case uc::DrawMethod::SVG_EMOJI: {
             //auto font = fontAt(*uc::cpsByCode[static_cast<int>('!')]);
             auto h = rect.height();

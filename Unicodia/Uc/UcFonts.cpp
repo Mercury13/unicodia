@@ -56,7 +56,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Segoe UI Symbol" },                                                      // Symbol
     { FAM_HISTORIC },                                                           // Historic
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_FIXUP },                        // Punctuation
-      { FAM_EMOJI "," FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },               // …1, both are built-in
+      { FAM_DEFAULT ",Arial", Ffg::FALL_TO_NEXT  },                             // …1, both are built-in
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …2 Fallback for special punctuation
       { FNAME_NOTO },                                                           // …3
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT | Ffg::BUG_AVOID },                        // Math

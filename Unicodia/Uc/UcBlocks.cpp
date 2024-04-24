@@ -331,7 +331,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation",
             MyName::INST, MapType::SYM_PUNCT,
-            EcScript::NONE, EcFont::PUNCTUATION },
+            EcScript::NONE, EcFont::PUNCTUATION, Bfg::NO_EMOJI },
     // Sup/sub OK
     { 0x2070, 0x209F, { U"⁴₂", EcContinent::NONE },
             "Superscripts and Subscripts",
@@ -350,7 +350,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2100, 0x214F, { 0x211D, EcContinent::NONE },
             "Letterlike Symbols",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI },
     // Number forms OK
     { 0x2150, 0x218F, { L'⅓', EcContinent::NONE },
             "Number Forms",
@@ -498,7 +498,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x3000, 0x303F, { L'〠', EcContinent::CJK },
             "CJK Symbols and Punctuation",
             MyName::INST, MapType::CJ_SYMBOL,
-            EcScript::Hani, EcFont::CJK_SYMBOLS, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
+            EcScript::Hani, EcFont::CJK_SYMBOLS,
+                    Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION | Bfg::NO_EMOJI },
     // Hiragana OK, installed small version of Noto CJK Korean
     { 0x3040, 0x309F, { L'ぢ', EcContinent::CJK },
             "Hiragana",
@@ -542,7 +543,7 @@ constinit const uc::Block uc::blocks[] {
             "Enclosed CJK Letters and Months",
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::NONE, EcFont::CJK_COMPAT,
-            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS },
+            Bfg::COLLAPSIBLE | Bfg::CJK | Bfg::HAS_DESCRIPTION | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
     // CJK compatibility OK
     { 0x3300, 0x33FF, { L'㌀', EcContinent::CJK },
             "CJK Compatibility",

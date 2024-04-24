@@ -158,6 +158,14 @@ void WiSample::showCp(
             ui->pageSampleCustom->setSampledControl(qfont, proxy);
         } break;
     case uc::DrawMethod::SAMPLE:
+        if (ch.isVs16Emoji()) {
+            auto font = ch.font(match::Normal::INST);
+            auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, &ch);
+            ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            ui->pageSampleCustom->setCharOverEmoji(qfont, ch.subj);
+            break;
+        }
+        [[fallthrough]];
     case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
         drawWithQt(ch, emojiDraw, glyphSets);
         break;
