@@ -8,6 +8,8 @@
 // Uc
 #include "UcAutoDefines.h"
 
+class QPainter;
+
 class PixSource // interface
 {
 public:
@@ -29,4 +31,5 @@ struct CharTile {
 };
 using CharTiles = std::array<CharTile, 4>;
 
-QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame);
+QRectF adjustedToPhysicalPixels(
+        QPainter* painter, const QRectF& rect, qreal loFrame);

@@ -435,15 +435,20 @@ struct ControlFrame {
     qreal thickness;
 };
 
-QRectF adjustedToPhysicalPixels(const QRectF& rect, qreal scale, qreal frame)
+QRectF adjustedToPhysicalPixels(
+        QPainter* painter, const QRectF& rect, qreal loFrame)
 {
-    auto x0 = std::round((rect.left()   - frame) * scale);
-    auto y0 = std::round((rect.top()    - frame) * scale);
-    auto x1 = std::round((rect.right()  + frame) * scale);
-    auto y1 = std::round((rect.bottom() + frame) * scale);
-    auto recipScale = 1.0 / scale;
-    return { QPointF { x0 * recipScale + frame, y0 * recipScale + frame },
-             QPointF { x1 * recipScale - frame, y1 * recipScale - frame } };
+    auto transform = painter->deviceTransform();
+    auto o = transform.map(QPointF{0, 0});
+    auto corner0 = transform.map(QPointF(rect.left() - loFrame, rect.top() - loFrame));
+    QPointF corner0round { std::round(corner0.x()), std::round(corner0.y()) };
+    auto corner1 = transform.map(QPointF(rect.right() + loFrame, rect.bottom() + loFrame));
+    QPointF corner1round { std::round(corner1.x()), std::round(corner1.y()) };
+    auto inv = transform.inverted();
+    QPointF corner0again = inv.map(corner0round);
+    QPointF corner1again = inv.map(corner1round);
+    return { QPointF { corner0again.x() + loFrame, corner0again.y() + loFrame },
+             QPointF { corner1again.x() - loFrame, corner1again.y() - loFrame } };
 }
 
 enum class Thinner { NO, YES };
@@ -464,27 +469,24 @@ ControlFrame drawControlFrame(
     QRectF rcFrame { QPointF(rect.left() + ofsX, rect.top() + ofsY),
                      QSizeF(availSize, availSize) };
     // Draw frame
-    static constexpr qreal Q_THICKNESS = 1.0 / 90.0;
+    static constexpr qreal Q_THICKNESS = 1.0 / 88.0;  // The greatest number when on 1× it’s still 1px
     auto loThickness = availW * Q_THICKNESS;
     auto hiThickness = loThickness * dpr;  // IDK why dpr, but it scales pen better
     bool isAa = (dpr > 1)
             ? (hiThickness > 1.0)
             : (hiThickness > 1.3);  // 1.25 — still no anti-alias
     if (dpr > 1 && hiThickness > 1 && hiThickness <= 1.3) {
-        hiThickness = 0.99;
-        loThickness = 0.99 / dpr;
+        //hiThickness = 1.0;  unused for now
+        loThickness = 1.0 / dpr;
     }
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     auto rcRetFrame = rcFrame;
     if (isAa) {
-        rcFrame = adjustedToPhysicalPixels(rcFrame, dpr, hiThickness * 0.5);
-    } else if (hiThickness > 1) {
-        hiThickness = 1;
-        loThickness = hiThickness / dpr;
+        rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
     }
     if (thinner != Thinner::NO)
-        color.setAlphaF(color.alphaF() * 0.3);
-    painter->setPen(QPen(color, hiThickness, Qt::DashLine));
+        color.setAlphaF(color.alphaF() * 0.25);
+    painter->setPen(QPen(color, loThickness, Qt::DashLine));
     painter->setBrush(Qt::NoBrush);
     painter->drawRect(rcFrame);
 

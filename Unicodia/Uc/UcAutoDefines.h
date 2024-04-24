@@ -382,6 +382,11 @@ namespace uc {
         DIGIT,              ///< Digit (Indian 1)
         SPECIAL_DIGIT,      ///< Special digit (superscript ³)
         NUMBER,             ///< Number (Roman II)
+        CJK_PRIMARY,        ///< CJK primary meaning
+        CJK_RARE,           ///< CJK rare meaning
+        CJK_ACCOUNTING,     ///< CJK accounting meaning (to prevent counterfeits)
+        CJK_ZHUANG,         ///< CJK Zhuang meaning
+        CJK_VIETNAMESE,     ///< CJK Vietnamese meaning
         NN
     };
 

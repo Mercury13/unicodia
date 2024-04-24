@@ -24,8 +24,13 @@ namespace {
     constinit ucd::NumType NUM_DIGIT { "DIGIT" };
     constinit ucd::NumType NUM_SPECIAL_DIGIT { "SPECIAL_DIGIT" };
     constinit ucd::NumType NUM_NUMBER { "NUMBER" };
+    constinit ucd::NumType NUM_CJK_PRIMARY { "CJK_PRIMARY" };
+    constinit ucd::NumType NUM_CJK_RARE { "CJK_RARE" };
+    constinit ucd::NumType NUM_CJK_ACCOUNTING { "CJK_ACCOUNTING" };
+    constinit ucd::NumType NUM_CJK_ZHUANG { "CJK_ZHUANG" };
+    constinit ucd::NumType NUM_CJK_VIETNAMESE { "CJK_VIETNAMESE" };
 
-    constinit ucd::CpInfo::Numeric NO_NUMERIC {
+    constinit ucd::Numeric NO_NUMERIC {
         .type = &NUM_NONE,
         .value{},
     };
@@ -87,10 +92,9 @@ namespace {
         return r;
     }
 
-    std::unordered_map<char32_t, std::string> loadHanNumValues()
+    std::unordered_map<char32_t, ucd::Numeric> loadHanNumValues()
     {
-        /// @todo [future] Maybe load more CJK types?
-        std::unordered_map<char32_t, std::string> r;
+        std::unordered_map<char32_t, ucd::Numeric> r;
 
         std::string line;
         std::ifstream is(HAN_NUM_VALUE);
@@ -111,9 +115,31 @@ namespace {
             auto type = vals.at(1);
             auto value = vals.at(2);
 
-            if (type == "kOtherNumeric"sv || type == "kPrimaryNumeric"
-                    || type == "kAccountingNumeric") {
-                r[cp] = value;
+            const ucd::NumType* targetType = nullptr;
+            if (type == "kOtherNumeric"sv) {
+                targetType = &NUM_CJK_RARE;
+            } else if (type == "kPrimaryNumeric"sv) {
+                targetType = &NUM_CJK_PRIMARY;
+            } else if (type == "kAccountingNumeric"sv) {
+                targetType = &NUM_CJK_ACCOUNTING;
+            } else if (type == "kZhuangNumeric"sv) {
+                targetType = &NUM_CJK_ZHUANG;
+            } else if (type == "kVietnameseNumeric") {
+                targetType = &NUM_CJK_VIETNAMESE;
+            } else {
+                // We should know everything we skipped for now!
+                throw std::logic_error(str::cat(
+                        "Unknown CJK numeric type: ", type));
+            }
+
+            if (targetType) {
+                auto& target = r[cp];
+                if (target.type != nullptr) {
+                    /// @todo [future] Zhuang or Vietnamese may override PRIMARY etc, but now does not
+                    throw std::logic_error("Repeating CJK numeric");
+                }
+                target.type = targetType;
+                target.value = value;
             }
         }
 
@@ -314,8 +340,7 @@ void ucd::processMainBase(const SupportData& supportData, const BaseSink& sink)
                     if (needNumeric) {
                         if (auto q = supportData.hanNumValues.find(i);
                                 q != supportData.hanNumValues.end()) {
-                            info.numeric.type = &NUM_NUMBER;
-                            info.numeric.value = q->second;
+                            info.numeric = q->second;
                         }
                     }
                     if (auto q = supportData.hanKangxi.find(info.cp);

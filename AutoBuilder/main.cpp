@@ -643,6 +643,11 @@ int main()
     ///// Numerics /////////////////////////////////////////////////////////////
 
     std::cout << "  Stockpiled " << nums.size() << " numerics." << '\n';
+    /// @todo [future] We are dangerously close to limit, what to do?
+    if (nums.size() >= 255) {
+        throw std::logic_error("Too many numerics, invent another way!");
+    }
+
     os << "const uc::Numeric uc::allNumerics[uc::N_NUMERICS] { \n";
     for (const auto& v : nums.ord) {
         std::string_view shownText = v.textValue.empty() ? "NaN"sv : v.textValue;

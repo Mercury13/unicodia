@@ -22,10 +22,24 @@ namespace ucd {
         std::string_view id; ///< identifier for precompiled Unicode data
     };
 
+    struct Numeric {
+        const NumType* type = nullptr;
+        std::string value;
+    };
+
+    struct PointingNumeric {
+        const NumType* type = nullptr;  ///< While traversing UCD base, will never be NULL
+        std::string_view value;
+
+        auto& operator = (const Numeric& x) {
+            type = x.type; value = x.value; return *this;
+        }
+    };
+
     struct SupportData {
         unsigned nBlocks = 0;
         std::vector<HangulLine> hangulLines;
-        std::unordered_map<char32_t, std::string> hanNumValues;
+        std::unordered_map<char32_t, Numeric> hanNumValues;
         std::unordered_map<char32_t, Kx> hanKangxi;
     };
 
@@ -34,10 +48,7 @@ namespace ucd {
         std::string_view name;
         std::string_view generalCat;
         std::string_view bidiCat;
-        struct Numeric {
-            const NumType* type;
-            std::string_view value;
-        } numeric;
+        PointingNumeric numeric;
         char32_t upperCase = 0;     ///< 0 = none
         bool isMirrored = false;
         bool isDeprecated = false;
