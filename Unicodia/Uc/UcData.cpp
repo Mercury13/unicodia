@@ -2320,10 +2320,10 @@ uc::DrawMethod uc::Cp::drawMethod(
                 isSvg = false;
                 break;
             case EmojiDraw::MOSTLY_TEXT:
-                isSvg = !flags.have(Cfg::U_VS16_EMOJI);
+                isSvg = !isVs16Emoji();
                 break;
             case EmojiDraw::CONSERVATIVE:
-                isSvg = !block().flags.have(Bfg::NO_EMOJI);
+                isSvg = !isVs16Emoji() || !block().flags.have(Bfg::NO_EMOJI);
                 break;
             case EmojiDraw::GRAPHIC:
                 break;

@@ -425,7 +425,8 @@ constinit const uc::Block uc::blocks[] {
     // Arrows B OK
     { 0x2900, 0x297F, { L'⤶', EcContinent::NONE },
             "Supplemental Arrows-B",
-            { EcScript::ZARR, 'B' }, MapType::SYM_OTHER },
+            { EcScript::ZARR, 'B' }, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Misc math B OK
     { 0x2980, 0x29FF, { L'⧮', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-B",
@@ -439,7 +440,8 @@ constinit const uc::Block uc::blocks[] {
     // Misc syms & arrows OK
     { 0x2B00, 0x2BFF, { L'⮊', EcContinent::NONE },
             "Miscellaneous Symbols and Arrows",
-            MyName::INST, MapType::SYM_OTHER },
+            MyName::INST, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Glagolitic OK
     { 0x2C00, 0x2C5F, { 0x2C19, EcContinent::EUROPE },
             "Glagolitic",
