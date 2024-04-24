@@ -772,6 +772,7 @@ namespace uc {
         SCRIPTLIKE      = 1<<4,     ///< [+] keywords like LETTER behave as in script
         CJK             = 1<<5,     ///< [+] CJK for tofu counting (see remark below)
         NO_EMOJI        = 1<<6,     ///< [+] Do not display VS16 emoji (Latin-1, arrows)
+                                    ///<  @warning  This block should contain VS16 emoji ONLY
         HAS_DESCRIPTION = 1<<7,     ///< [+] Has script but also has description (no script — MUST have)
         HIPRIO_NUMBERS  = 1<<8,     ///< [+] Place its numeric search b4 the rest
         CCW             = 1<<9,     ///< [+] Rotate vertical text counter-clockwise rather than clockwise
