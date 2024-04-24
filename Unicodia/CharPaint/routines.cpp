@@ -435,19 +435,43 @@ struct ControlFrame {
     qreal thickness;
 };
 
+namespace {
+
+    inline QPointF pround(const QPointF& p)
+    {
+        return { std::round(p.x()), std::round(p.y()) };
+    }
+
+}
+
 QRectF adjustedToPhysicalPixels(
-        QPainter* painter, const QRectF& rect, qreal loFrame)
+        QPainter* painter, const QRectF& rect, qreal loFrame, Filled isFilled)
 {
-    auto transform = painter->deviceTransform();
-    auto corner0 = transform.map(QPointF(rect.left() - loFrame, rect.top() - loFrame));
-    QPointF corner0round { std::round(corner0.x()), std::round(corner0.y()) };
-    auto corner1 = transform.map(QPointF(rect.right() + loFrame, rect.bottom() + loFrame));
-    QPointF corner1round { std::round(corner1.x()), std::round(corner1.y()) };
-    auto inv = transform.inverted();
-    QPointF corner0again = inv.map(corner0round);
-    QPointF corner1again = inv.map(corner1round);
-    return { QPointF { corner0again.x() + loFrame, corner0again.y() + loFrame },
-             QPointF { corner1again.x() - loFrame, corner1again.y() - loFrame } };
+    // OK, as scale internally is fixed-point, and it IS taken from some settings,
+    //    and it’s just a faster way (no multiplications and 1 division
+    //    for devicePicelRatio)
+    if (painter->device()->devicePixelRatio() == 1.0) {
+        // Half-pixel is the most reliable
+        if (isFilled == Filled::NO && loFrame < 0.5)
+            loFrame = 0.5;
+        QPointF corner0 { rect.left() - loFrame, rect.top() - loFrame };
+        QPointF corner0round = pround(corner0);
+        QPointF corner1 { rect.right() + loFrame, rect.bottom() + loFrame };
+        QPointF corner1round = pround(corner1);
+        return { QPointF { corner0round.x() + loFrame, corner0round.y() + loFrame },
+                 QPointF { corner1round.x() - loFrame, corner1round.y() - loFrame } };
+    } else {
+        auto transform = painter->deviceTransform();
+        auto corner0 = transform.map(QPointF(rect.left() - loFrame, rect.top() - loFrame));
+        QPointF corner0round = pround(corner0);
+        auto corner1 = transform.map(QPointF(rect.right() + loFrame, rect.bottom() + loFrame));
+        QPointF corner1round = pround(corner1);
+        auto inv = transform.inverted();
+        QPointF corner0again = inv.map(corner0round);
+        QPointF corner1again = inv.map(corner1round);
+        return { QPointF { corner0again.x() + loFrame, corner0again.y() + loFrame },
+                 QPointF { corner1again.x() - loFrame, corner1again.y() - loFrame } };
+    }
 }
 
 enum class Thinner { NO, YES };
@@ -480,7 +504,7 @@ ControlFrame drawControlFrame(
     }
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     auto rcRetFrame = rcFrame;
-    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
+    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5, Filled::NO);
     if (thinner != Thinner::NO)
         color.setAlphaF(color.alphaF() * 0.25);
     painter->setPen(QPen(color, loThickness, Qt::DashLine));

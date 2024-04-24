@@ -31,5 +31,7 @@ struct CharTile {
 };
 using CharTiles = std::array<CharTile, 4>;
 
+enum class Filled { NO, YES };
+
 QRectF adjustedToPhysicalPixels(
-        QPainter* painter, const QRectF& rect, qreal loFrame);
+        QPainter* painter, const QRectF& rect, qreal loFrame, Filled isFilled);
