@@ -445,7 +445,7 @@ namespace {
 }
 
 QRectF adjustedToPhysicalPixels(
-        QPainter* painter, const QRectF& rect, qreal loFrame, Filled isFilled)
+        QPainter* painter, const QRectF& rect, qreal loFrame, BareFrame isBareFrame)
 {
     // OK, as scale internally is fixed-point, and it IS taken from some settings,
     //    and it’s just a faster way (no multiplications and 1 division
@@ -458,7 +458,7 @@ QRectF adjustedToPhysicalPixels(
         QPointF corner1 { rect.right() + loFrame, rect.bottom() + loFrame };
         QPointF corner1round = pround(corner1);
         // Set loFrame to 0.5 pixels AFTERWARDS
-        if (isFilled == Filled::NO && loFrame < 0.5)
+        if (isBareFrame != BareFrame::NO && loFrame < 0.5)
             loFrame = 0.5;
         return { QPointF { corner0round.x() + loFrame, corner0round.y() + loFrame },
                  QPointF { corner1round.x() - loFrame, corner1round.y() - loFrame } };
@@ -473,7 +473,7 @@ QRectF adjustedToPhysicalPixels(
         QPointF corner0again = inv.map(corner0round);
         QPointF corner1again = inv.map(corner1round);
         // Set loFrame to 0.5 physical pixels AFTERWARDS
-        if (isFilled == Filled::NO) {
+        if (isBareFrame != BareFrame::NO) {
             auto thresholdFrame = loFrame * 0.5 / dpr;
             if (loFrame < thresholdFrame)
                 loFrame = thresholdFrame;
@@ -513,7 +513,7 @@ ControlFrame drawControlFrame(
     }
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     auto rcRetFrame = rcFrame;
-    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5, Filled::NO);
+    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5, BareFrame::YES);
     if (thinner != Thinner::NO)
         color.setAlphaF(color.alphaF() * 0.25);
     painter->setPen(QPen(color, loThickness, Qt::DashLine));

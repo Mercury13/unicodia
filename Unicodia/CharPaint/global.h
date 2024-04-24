@@ -31,10 +31,9 @@ struct CharTile {
 };
 using CharTiles = std::array<CharTile, 4>;
 
-enum class Filled { NO, YES };
+enum class BareFrame { NO, YES };
 
-/// @param [in] loFrame   ½ of line width, device-independent pixels
-/// @param [in] isFilled  [+] normal, for filled/frame-filled rectangle
-///                       [-] more reliable, for bare frame (fill → worse sides)
+/// @param [in] loFrame      ½ of line width, device-independent pixels
+/// @param [in] isBareFrame  [+] Bare frame w/o fill, special workaround
 QRectF adjustedToPhysicalPixels(
-        QPainter* painter, const QRectF& rect, qreal loFrame, Filled isFilled);
+        QPainter* painter, const QRectF& rect, qreal loFrame, BareFrame isBareFrame);
