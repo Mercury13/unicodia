@@ -438,12 +438,8 @@ void EmojiPainter::drawEmojiTofu(
         hiThickness = 1;
     bool isAa = (hiThickness > 1.2);  // 1.2 — still no anti-alias
     painter->setRenderHint(QPainter::Antialiasing, isAa);
-    if (isAa) {
-        rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
-    } else if (hiThickness > 1) {
-        hiThickness = 1;
-    }
-    painter->setPen(QPen(color, hiThickness));
+    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
+    painter->setPen(QPen(color, loThickness));
     painter->setBrush(Qt::NoBrush);
     painter->drawRect(rcFrame);
 }

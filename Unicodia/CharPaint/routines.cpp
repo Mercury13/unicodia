@@ -480,9 +480,7 @@ ControlFrame drawControlFrame(
     }
     painter->setRenderHint(QPainter::Antialiasing, isAa);
     auto rcRetFrame = rcFrame;
-    if (isAa) {
-        rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
-    }
+    rcFrame = adjustedToPhysicalPixels(painter, rcFrame, loThickness * 0.5);
     if (thinner != Thinner::NO)
         color.setAlphaF(color.alphaF() * 0.25);
     painter->setPen(QPen(color, loThickness, Qt::DashLine));
