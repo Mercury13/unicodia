@@ -778,7 +778,9 @@ namespace uc {
         HIDE_STYLE      = 1<<10,    ///< [+] Hide from list: which blocks use this style channel
                                     ///<     (Glag supp has Bulgarian style only, so write just Glag)
         BIG_CONTROLS    = 1<<11,    ///< [+] Control chars use same size as normal
-        EXPERIMENT      = 1<<15,    ///< Left for experiments
+        VIRAMA_UP       = 1<<12,    ///< [+] Move dotted circle ¼r upwards in virtual virama
+        VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
+        EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
     ///   Bfg::COLLAPSIBLE is for expanding/collapsing CJK blocks, and contains

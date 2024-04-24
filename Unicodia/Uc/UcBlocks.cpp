@@ -218,7 +218,8 @@ constinit const uc::Block uc::blocks[] {
     // Khmer OK
     { 0x1780, 0x17FF, { 0x178D, EcContinent::ASIA },
             "Khmer",
-            { EcScript::Khmr, 0 }, MapType::AS_BRAH, EcScript::Khmr },
+            { EcScript::Khmr, 0 }, MapType::AS_BRAH,
+            EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Mongol OK, implemented ligature
     { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED, 11_hx },
             "Mongolian",
@@ -268,7 +269,8 @@ constinit const uc::Block uc::blocks[] {
     // Sundanese OK
     { 0x1B80, 0x1BBF, { 0x1B91, EcContinent::OCEAN },
             "Sundanese",
-            { EcScript::Sund, 0 }, MapType::OC, EcScript::Sund },
+            { EcScript::Sund, 0 }, MapType::OC,
+            EcScript::Sund, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Batak OK
     { 0x1BC0, 0x1BFF, { 0x1BD4, EcContinent::OCEAN },
             "Batak",
@@ -659,7 +661,7 @@ constinit const uc::Block uc::blocks[] {
     { 0xAAE0, 0xAAFF, { 0xAAE6, EcContinent::ASIA },
             "Meetei Mayek Extensions",
             { EcScript::Mtei, 1 }, MapType::AS_BRAH,
-            EcScript::Mtei, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::Mtei, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::VIRAMA_UP },
     // Ethiopic ex A OK
     { 0xAB00, 0xAB2F, { 0xAB2A, EcContinent::AFRICA },
             "Ethiopic Extended-A",
@@ -884,7 +886,8 @@ constinit const uc::Block uc::blocks[] {
     // Kharoshthi OK
     { 0x10A00, 0x10A5F, { 0x10A10, EcContinent::ASIA },
             "Kharoshthi",
-            { EcScript::Khar, 0 }, MapType::AS_OTHER_DEAD, EcScript::Khar },
+            { EcScript::Khar, 0 }, MapType::AS_OTHER_DEAD,
+            EcScript::Khar, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Old South Arab OK
     { 0x10A60, 0x10A7F, { 0x10A71, EcContinent::ASIA },
             "Old South Arabian",
@@ -1075,7 +1078,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x11A50, 0x11AAF, { 0x11A5C, EcContinent::ASIA, {}, SvgHint{ 13, 1 } },
             "Soyombo",
             { EcScript::Soyo, 0 }, MapType::AS_BRAH_DEAD,
-            EcScript::Soyo, EcFont::NORMAL, Bfg::BIG_CONTROLS },
+            EcScript::Soyo, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_UP },
     // Canadian A OK
     { 0x11AB0, 0x11ABF, { 0x11AB0, EcContinent::AMERICA },
             "Unified Canadian Aboriginal Syllabics Extended-A",
@@ -1105,10 +1108,12 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Marc, 0 }, MapType::AS_BRAH_DEAD, EcScript::Marc },
     { 0x11D00, 0x11D5F, { 0x11D0C, EcContinent::ASIA, {}, 7_hy },
             "Masaram Gondi",
-            MyName::INST, MapType::AS_BRAH_DEAD, EcScript::Gonm },
+            MyName::INST, MapType::AS_BRAH_DEAD,
+            EcScript::Gonm, EcFont::NORMAL, Bfg::VIRAMA_UP },
     { 0x11D60, 0x11DAF, { 0x11D7B, EcContinent::ASIA, {}, SvgHint{ 2, ImbaY::BELOW_4 } },
             "Gunjala Gondi",
-            MyName::INST, MapType::AS_BRAH, EcScript::Gong },
+            MyName::INST, MapType::AS_BRAH,
+            EcScript::Gong, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Makasar OK
     { 0x11EE0, 0x11EFF, { 0x11EE4, EcContinent::OCEAN },
             "Makasar",
@@ -1116,7 +1121,8 @@ constinit const uc::Block uc::blocks[] {
     // Kawi OK
     { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::CUSTOM_ENGINE },
             "Kawi",
-            { EcScript::Kawi, 0 }, MapType::OC, EcScript::Kawi },
+            { EcScript::Kawi, 0 }, MapType::OC,
+            EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
     // Lisu supplement OK, new font engine works
     { 0x11FB0, 0x11FBF, { 0x11FB0, EcContinent::ASIA, {}, SvgHint{ 7, ImbaX::LEFT_2 } },
             "Lisu Supplement",

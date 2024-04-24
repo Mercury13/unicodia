@@ -240,8 +240,6 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             drawSampledControl(&painter, geometry(), proxy,
                                qfont, palette().windowText().color(),
                                uc::FontPlace::SAMPLE);
-            //drawVirtualVirama(&painter, geometry(), palette().windowText().color(),
-            //          FSZ_BIG, *uc::cpsByCode[subj]);
         } break;
     }
 }
@@ -677,7 +675,8 @@ void drawVirtualVirama(
     painter->setBrush(color);
     // Not rcFrame!!
     auto rcMatch = matchRect(rect, ucfont->styleSheet);
-    if (cp.flags.have(uc::Cfg::M_VIRAMA_UP)) {
+    auto& blk = cp.block();
+    if (blk.flags.have(uc::Bfg::VIRAMA_UP)) {
         rcMatch.setBottom(rcMatch.bottom() - tightRect.height() / 2);
     }
     auto cen = QRectF(rcMatch).center();
@@ -694,7 +693,10 @@ void drawVirtualVirama(
     rcFrame.moveCenter(cen);
 
     auto& font1 = uc::fontInfo[static_cast<int>(uc::EcFont::FUNKY)];
-    QFont font2 = font1.get(uc::FontPlace::CELL, absSize, {}, nullptr);
+    auto plusSize = absSize;
+    if (blk.flags.have(uc::Bfg::VIRAMA_BIGGER))
+        plusSize = plusSize * 14 / 10;
+    QFont font2 = font1.get(uc::FontPlace::CELL, plusSize, {}, nullptr);
     painter->setFont(font2);
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
