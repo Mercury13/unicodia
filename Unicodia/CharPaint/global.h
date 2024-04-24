@@ -33,7 +33,8 @@ using CharTiles = std::array<CharTile, 4>;
 
 enum class Filled { NO, YES };
 
-/// @param [in] loFrame   half-width, in DIPels
-/// @param [in] isFilled  [+] normal, for filled/frame-filled rectangle  [-] unglitch, for bare frame
+/// @param [in] loFrame   ½ of line width, DIPels
+/// @param [in] isFilled  [+] normal, for filled/frame-filled rectangle
+///                       [-] more reliable, for bare frame (fill → worse sides)
 QRectF adjustedToPhysicalPixels(
         QPainter* painter, const QRectF& rect, qreal loFrame, Filled isFilled);
