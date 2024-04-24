@@ -525,9 +525,6 @@ void drawCustomControl(
     case 0x303E:    // ideographic variation indicator
         drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_CJK_APPROX);
         break;
-    case 0x11A3A:   // Zanb repha
-        drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_ZANB_REPHA);
-        break;
     case 0x16F8F:   // Miao tone right
         drawFunkySample(painter, rcFrame, color, place, 1.0f, uc::STUB_PUA_TONE_RIGHT);
         break;
