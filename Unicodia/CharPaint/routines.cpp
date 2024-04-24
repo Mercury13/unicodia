@@ -450,17 +450,20 @@ QRectF adjustedToPhysicalPixels(
     // OK, as scale internally is fixed-point, and it IS taken from some settings,
     //    and it’s just a faster way (no multiplications and 1 division
     //    for devicePicelRatio)
-    if (painter->device()->devicePixelRatio() == 1.0) {
-        // Half-pixel is the most reliable
-        if (isFilled == Filled::NO && loFrame < 0.5)
-            loFrame = 0.5;
+    auto dpr = painter->device()->devicePixelRatio();
+    if (dpr == 1.0) {
+        // Adjust ORIGINALS OUTER corners to physical pixels
         QPointF corner0 { rect.left() - loFrame, rect.top() - loFrame };
         QPointF corner0round = pround(corner0);
         QPointF corner1 { rect.right() + loFrame, rect.bottom() + loFrame };
         QPointF corner1round = pround(corner1);
+        // Set loFrame to 0.5 pixels AFTERWARDS
+        if (isFilled == Filled::NO && loFrame < 0.5)
+            loFrame = 0.5;
         return { QPointF { corner0round.x() + loFrame, corner0round.y() + loFrame },
                  QPointF { corner1round.x() - loFrame, corner1round.y() - loFrame } };
     } else {
+        // Adjust ORIGINALS OUTER corners to physical pixels
         auto transform = painter->deviceTransform();
         auto corner0 = transform.map(QPointF(rect.left() - loFrame, rect.top() - loFrame));
         QPointF corner0round = pround(corner0);
@@ -469,6 +472,12 @@ QRectF adjustedToPhysicalPixels(
         auto inv = transform.inverted();
         QPointF corner0again = inv.map(corner0round);
         QPointF corner1again = inv.map(corner1round);
+        // Set loFrame to 0.5 physical pixels AFTERWARDS
+        if (isFilled == Filled::NO) {
+            auto thresholdFrame = loFrame * 0.5 / dpr;
+            if (loFrame < thresholdFrame)
+                loFrame = thresholdFrame;
+        }
         return { QPointF { corner0again.x() + loFrame, corner0again.y() + loFrame },
                  QPointF { corner1again.x() - loFrame, corner1again.y() - loFrame } };
     }
