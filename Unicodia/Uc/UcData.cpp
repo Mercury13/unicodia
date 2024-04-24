@@ -895,12 +895,20 @@ static_assert(std::size(uc::scriptInfo) == static_cast<size_t>(uc::EcScript::NN)
 
 const uc::Script* uc::findScript(std::string_view x) { return findInArray(x, scriptInfo); }
 
-
-constinit const uc::NumType uc::numTypeInfo[static_cast<int>(uc::EcNumType::NN)] {
+constexpr uc::NumType numTypeRawInfo[] {
     { {} },
     { "Prop.Num.Digit" },
     { "Prop.Num.SpecDigit" },
     { "Prop.Num.Number" },
+    { "Prop.Num.CjkPrimary" },
+    { "Prop.Num.CjkRare" },
+    { "Prop.Num.CjkAccount" },
+    { "Prop.Num.CjkZhuang" },
+    { "Prop.Num.CjkVietnamese" },
+};
+
+constinit const ec::Array<uc::NumType, uc::EcNumType> uc::numTypeInfo {
+    ec::ARRAY_INIT, numTypeRawInfo
 };
 
 

@@ -540,6 +540,21 @@
      <orig>{1} or {2}</orig>
      <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
     </text>
+    <text id="CjkPrimary">
+     <orig>CJK number</orig>
+    </text>
+    <text id="CjkRare">
+     <orig>CJK number (rarely)</orig>
+    </text>
+    <text id="CjkAccount">
+     <orig>CJK number (anti-counterfeit)</orig>
+    </text>
+    <text id="CjkZhuang">
+     <orig>Zhuang number</orig>
+    </text>
+    <text id="CjkVietnamese">
+     <orig>Vietnamese number</orig>
+    </text>
    </group>
    <group id="Input">
     <text id="Bullet">
@@ -7245,6 +7260,8 @@
       <p>* Decimal positional digits{{-}}both standard [[pt:ascii|ASCII]] digits 0…9 and digits of other scripts ([[ps:Deva|Devanagari]] ०…९).</p>
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and number: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
+      <p />
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-counterfeit (used in accounting documents to prevent changing numbers), Zhuang and Vietnamese.</p>
       <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>

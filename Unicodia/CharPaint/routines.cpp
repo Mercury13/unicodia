@@ -439,7 +439,6 @@ QRectF adjustedToPhysicalPixels(
         QPainter* painter, const QRectF& rect, qreal loFrame)
 {
     auto transform = painter->deviceTransform();
-    auto o = transform.map(QPointF{0, 0});
     auto corner0 = transform.map(QPointF(rect.left() - loFrame, rect.top() - loFrame));
     QPointF corner0round { std::round(corner0.x()), std::round(corner0.y()) };
     auto corner1 = transform.map(QPointF(rect.right() + loFrame, rect.bottom() + loFrame));

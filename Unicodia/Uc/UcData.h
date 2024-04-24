@@ -1012,7 +1012,7 @@ namespace uc {
     {
         std::string_view locKey;
     };
-    extern const NumType numTypeInfo[static_cast<int>(EcNumType::NN)];
+    extern const ec::Array<NumType, EcNumType> numTypeInfo;
 
     struct BidiClass
     {
@@ -1404,7 +1404,7 @@ namespace match {
 
 // Inline implementations
 // …Numeric
-inline const uc::NumType& uc::Numeric::type() const { return numTypeInfo[static_cast<int>(ecType)]; }
+inline const uc::NumType& uc::Numeric::type() const { return numTypeInfo[ecType]; }
 
 // …Cp
 inline const uc::Numeric& uc::Cp::numeric() const { return allNumerics[iNumeric]; }

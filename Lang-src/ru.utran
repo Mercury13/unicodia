@@ -681,6 +681,26 @@
      <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
      <transl>{1} или {2}</transl>
     </text>
+    <text id="CjkPrimary">
+     <orig>CJK number</orig>
+     <transl>ККЯ число</transl>
+    </text>
+    <text id="CjkRare">
+     <orig>CJK number (rarely)</orig>
+     <transl>ККЯ число (редко)</transl>
+    </text>
+    <text id="CjkAccount">
+     <orig>CJK number (anti-counterfeit)</orig>
+     <transl>ККЯ число (антиподделка)</transl>
+    </text>
+    <text id="CjkZhuang">
+     <orig>Zhuang number</orig>
+     <transl>Чжуанское число</transl>
+    </text>
+    <text id="CjkVietnamese">
+     <orig>Vietnamese number</orig>
+     <transl>Вьетнамское число</transl>
+    </text>
    </group>
    <group id="Input">
     <text id="Bullet">
@@ -10382,6 +10402,8 @@
       <p>* The same digits used in special contexts{{-}}for example, in superscripts and subscripts.</p>
       <p>* Other digits and number: characters of non-decimal, non-positional and partly positional numeral systems (Roman, Aegean, counting rods), [[pt:precomposed|precomposed]] numbers like &lt;big&gt;½&lt;/big&gt;…</p>
       <p />
+      <p>[[pt:cjk|CJK]] numbers may be normal (primarily means number), rare (sometimes means number), anti-counterfeit (used in accounting documents to prevent changing numbers), Zhuang and Vietnamese.</p>
+      <p />
       <p>Characters whose main use is non-numeric (for example, Slavic numbers like А̄) are{{_}}not{{_}}treated as numbers by Unicode.</p>
      </orig>
      <transl>
@@ -10390,6 +10412,8 @@
       <p>* Десятичные позиционные цифры{{-}}как привычные [[pt:ascii|ASCII]]-цифры 0…9, так и цифры других письменностей ([[ps:Deva|деванáгари]] ०…९).</p>
       <p>* Эти же цифры, используемые в особых контекстах{{-}}например, в верхних/нижних индексах.</p>
       <p>* Прочие числовые символы: цифры недесятичных, непозиционных и частично позиционных систем счисления (римские, эгейские, счётные палочки), [[pt:precomposed|монолитные]] числа вроде &lt;big&gt;½&lt;/big&gt;…</p>
+      <p />
+      <p>[[pt:cjk|ККЯ]] числа могут быть обычными (обычно значат число), редкими (иногда значат число), антиподделками (в бухгалтерских документах, чтобы нельзя было дорисовать), чжуанскими и вьетнамскими.</p>
       <p />
       <p>Символы, чьё основное предназначение нечисловое (например, славянские цифры вроде А̄) Юникод числами не{{_}}считает.</p>
      </transl>

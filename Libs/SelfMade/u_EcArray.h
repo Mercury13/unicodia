@@ -53,6 +53,20 @@ namespace ec {
             std::copy(x.begin(), x.end(), std::begin(a));
         }
 
+        template <class U, size_t N>
+        constexpr Array(detail::ArrayInit, U (&&x)[N])
+        {
+            static_assert(N == InitCount, "[ec::Array(arr&&)] Wrong size!");
+            std::move(std::begin(x), std::end(x), std::begin(a));
+        }
+
+        template <class U, size_t N>
+        constexpr Array(detail::ArrayInit, U (&x)[N])
+        {
+            static_assert(N == InitCount, "[ec::Array(arr)] Wrong size!");
+            std::copy(std::begin(x), std::end(x), std::begin(a));
+        }
+
         constexpr size_t size() const noexcept { return Size; }
         constexpr       iterator begin()        noexcept { return std::begin(a); }
         constexpr       iterator end()          noexcept { return std::end(a); }

@@ -11,6 +11,7 @@
 // Project-local
 #include "UcFlags.h"
 #include "UcAutoCount.h"
+#include "u_EcArray.h"
 
 namespace uc {
 
@@ -377,7 +378,7 @@ namespace uc {
         int8_t hi;
     };
 
-    enum class EcNumType : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, EcNumType, unsigned char,
         NONE,               ///< No numeric value
         DIGIT,              ///< Digit (Indian 1)
         SPECIAL_DIGIT,      ///< Special digit (superscript ³)
@@ -386,9 +387,8 @@ namespace uc {
         CJK_RARE,           ///< CJK rare meaning
         CJK_ACCOUNTING,     ///< CJK accounting meaning (to prevent counterfeits)
         CJK_ZHUANG,         ///< CJK Zhuang meaning
-        CJK_VIETNAMESE,     ///< CJK Vietnamese meaning
-        NN
-    };
+        CJK_VIETNAMESE      ///< CJK Vietnamese meaning
+    )
 
     struct NumType;
 
