@@ -24,7 +24,6 @@ namespace {
     constinit ucd::NumType NUM_DIGIT { "DIGIT" };
     constinit ucd::NumType NUM_SPECIAL_DIGIT { "SPECIAL_DIGIT" };
     constinit ucd::NumType NUM_NUMBER { "NUMBER" };
-    constinit ucd::NumType NUM_CJK_PRIMARY { "CJK_PRIMARY" };
     constinit ucd::NumType NUM_CJK_RARE { "CJK_RARE" };
     constinit ucd::NumType NUM_CJK_ACCOUNTING { "CJK_ACCOUNTING" };
     constinit ucd::NumType NUM_CJK_ZHUANG { "CJK_ZHUANG" };
@@ -119,7 +118,7 @@ namespace {
             if (type == "kOtherNumeric"sv) {
                 targetType = &NUM_CJK_RARE;
             } else if (type == "kPrimaryNumeric"sv) {
-                targetType = &NUM_CJK_PRIMARY;
+                targetType = &NUM_NUMBER;
             } else if (type == "kAccountingNumeric"sv) {
                 targetType = &NUM_CJK_ACCOUNTING;
             } else if (type == "kZhuangNumeric"sv) {

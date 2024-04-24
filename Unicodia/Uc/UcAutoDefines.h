@@ -8,10 +8,12 @@
 // Qt
 #include <QString>
 
+// Lib
+#include "u_EcArray.h"  // used e.g. for EcNumType!
+
 // Project-local
 #include "UcFlags.h"
 #include "UcAutoCount.h"
-#include "u_EcArray.h"
 
 namespace uc {
 
@@ -383,7 +385,6 @@ namespace uc {
         DIGIT,              ///< Digit (Indian 1)
         SPECIAL_DIGIT,      ///< Special digit (superscript ³)
         NUMBER,             ///< Number (Roman II)
-        CJK_PRIMARY,        ///< CJK primary meaning
         CJK_RARE,           ///< CJK rare meaning
         CJK_ACCOUNTING,     ///< CJK accounting meaning (to prevent counterfeits)
         CJK_ZHUANG,         ///< CJK Zhuang meaning

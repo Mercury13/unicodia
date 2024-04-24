@@ -540,9 +540,6 @@
      <orig>{1} or {2}</orig>
      <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
     </text>
-    <text id="CjkPrimary">
-     <orig>CJK number</orig>
-    </text>
     <text id="CjkRare">
      <orig>CJK number (rarely)</orig>
     </text>

@@ -682,10 +682,6 @@
      <au-cmt>e.g. 5146 — million or trillion depending on language</au-cmt>
      <transl>{1} або {2}</transl>
     </text>
-    <text id="CjkPrimary">
-     <orig>CJK number</orig>
-     <transl>ККЯ число</transl>
-    </text>
     <text id="CjkRare">
      <orig>CJK number (rarely)</orig>
      <transl>ККЯ число (зрідка)</transl>

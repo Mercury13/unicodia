@@ -900,7 +900,6 @@ constexpr uc::NumType numTypeRawInfo[] {
     { "Prop.Num.Digit" },
     { "Prop.Num.SpecDigit" },
     { "Prop.Num.Number" },
-    { "Prop.Num.CjkPrimary" },
     { "Prop.Num.CjkRare" },
     { "Prop.Num.CjkAccount" },
     { "Prop.Num.CjkZhuang" },
