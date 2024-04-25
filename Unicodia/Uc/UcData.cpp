@@ -2345,8 +2345,10 @@ uc::DrawMethod uc::Cp::drawMethod(
                 break;
             case EmojiDraw::CONSERVATIVE: {
                     auto& blk = block();
-                    isSvg = !isVs16Emoji()
+                    isSvg = !isVs16Emoji()  // Simple emoji w/o VS16 → automatically SVG
+                                // Both flags are off → graphic
                             || !blk.flags.haveAny(Bfg::NO_EMOJI | Bfg::EMOJI_BY_CASE)
+                                // NO_EMOJI → sample, EMOJI_BY_CASE → check
                             || (blk.flags.have(Bfg::EMOJI_BY_CASE) && isFullEmojiByCase(subj.ch32()));
                 } break;
             case EmojiDraw::GRAPHIC:
