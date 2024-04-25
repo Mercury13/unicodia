@@ -373,15 +373,6 @@ void drawDeprecated(QPainter* painter, const QRect& r)
 
 void drawEmojiIcon(QPainter* painter, const QRect& r, char32_t subj)
 {
-    // static constexpr int OFS = 3;
-    // static constexpr int SZ = 5;
-    // const int x1 = r.right() - OFS;
-    // const int x0 = x1 - SZ;
-    // const int y0 = r.top() + OFS;
-    // const int y1 = y0 + SZ;
-    // QRect r1 { QPoint{x0, y0}, QPoint{x1, y1} };
-    // painter->fillRect(r1, FG_EMOJI);
-
     static constexpr int OFS = 0;
     static constexpr int SZ = 12;
     const int x1 = r.right() - OFS;

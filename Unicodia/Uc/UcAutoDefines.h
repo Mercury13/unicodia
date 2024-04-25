@@ -585,6 +585,9 @@ namespace uc {
         constexpr bool isDeprecated() const { return flags.have(Cfg::U_DEPRECATED); }
         constexpr bool isDefaultIgnorable() const { return flags.have(Cfg::U_DEF_IGNORABLE); }
         constexpr bool isVs16Emoji() const { return flags.have(Cfg::U_VS16_EMOJI); }
+        /// @return [+] single-char or VS16 emoji
+        constexpr bool isEmoji() const
+            { return isVs16Emoji() || ((flags & m::ALL) == m::SVG_EMOJI); }
         constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
         EcGlyphStyleChannel ecStyleChannel() const;
         inline const GlyphStyleChannel styleChannel() const;

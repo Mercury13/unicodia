@@ -50,6 +50,8 @@ WiShowcase::WiShowcase(QWidget *parent) :
     ui(new Ui::WiShowcase)
 {
     ui->setupUi(this);
+    connect(ui->wiSample, &WiSample::linkActivated, this, &This::linkActivated);
+
     connect(ui->btCopy, &QPushButton::clicked, this, &This::btCopyClicked);
     connect(ui->btCopyEx, &QPushButton::clicked, this, &This::btCopyExClicked);
     connect(ui->lbCharCode, &QLabel::linkActivated, this, &This::lbCharCodeLinkActivated);
@@ -81,7 +83,7 @@ WiShowcase::~WiShowcase()
 void WiShowcase::translateMe()
 {
     Form::translateMe();
-    loc::translateForm(ui->wiSample);
+    ui->wiSample->translateMe();
 }
 
 bool WiShowcase::doCopy(uc::CopiedChannel channel)

@@ -2211,3 +2211,9 @@ void FmMain::slotSkinToneQa()
         break;
     }
 }
+
+
+void FmMain::gotoLibCp(QWidget*, char32_t cp)
+{
+//    srh::
+}

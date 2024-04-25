@@ -411,6 +411,7 @@ private:
 
     // InternalWalker
     void blinkAddCpToFavs() override;
+    void gotoLibCp(QWidget* initiator, char32_t cp) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);
@@ -442,8 +443,10 @@ private slots:
     void comboPulledUp();
     void blockOrderChanged();
     void glyphStyleChanged(uc::EcGlyphStyleChannel channel, unsigned setting);
-    // InternalWalker
+
+    // InternalWalker + slot
     void gotoCp(QWidget* initiator, char32_t cp) override;
+
     void goToNode(const uc::LibNode& node);
     void startUpdate();
     void updateFinished(QNetworkReply* reply);

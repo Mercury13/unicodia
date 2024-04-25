@@ -160,6 +160,18 @@ namespace {
     void GotoCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.internalWalker().gotoCp(wi, cp); }
 
+    class GotoLibCpLink : public mywiki::Link
+    {
+    public:
+        char32_t cp;
+        GotoLibCpLink(char32_t x) : cp(x) {}
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::INTERNAL; }
+        void go(QWidget* widget, TinyOpt<QRect> rect, mywiki::Gui& gui) override;
+    };
+
+    void GotoLibCpLink::go(QWidget* wi, TinyOpt<QRect>, mywiki::Gui& gui)
+        { gui.internalWalker().gotoLibCp(wi, cp); }
+
     class BlinkAddCpToFavsLink : public mywiki::Link
     {
     public:
@@ -240,6 +252,15 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoCpLink(std::string_view target)
     return std::make_unique<GotoCpLink>(code);
 }
 
+std::unique_ptr<mywiki::Link> mywiki::parseGotoLibCpLink(std::string_view target)
+{
+    int code = 0;
+    str::fromChars(target, code, 16);
+    if (code >= uc::CAPACITY || !uc::cpsByCode[code])
+        return {};
+    return std::make_unique<GotoLibCpLink>(code);
+}
+
 std::unique_ptr<mywiki::Link> mywiki::parsePopFontsLink(std::string_view target)
 {
     auto sv = str::splitSv(target, '/');
@@ -286,6 +307,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parseGotoCpLink(target);
     } else if (scheme == "gi"sv) {
         return parseGotoInterfaceLink(target);
+    } else if (scheme == "glc"sv) {
+        return parseGotoLibCpLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {

@@ -19,7 +19,7 @@ class WiSample;
 class WiSample : public QWidget
 {
     Q_OBJECT
-
+    using This = WiSample;
 public:
     explicit WiSample(QWidget *parent = nullptr);
     ~WiSample() override;
@@ -30,11 +30,17 @@ public:
     void showEmoji(std::u32string_view text);
     void showNothing();
 
+    void translateMe();
+
 private:
+    enum class HeadMode { NONE, SAMPLE, TOLIB };
+
     Ui::WiSample *ui;
     /// Qt’s peculiarity: once the label was shown with non-empty text,
     ///    you are not obliged to show once again
     const uc::Font* shownBrieflyFont = nullptr;
+    HeadMode headMode = HeadMode::NONE;
+    QString sSample, sToLib;
 
     /// Removes everything from lbSample — returns it to normal size
     void clearSample();
@@ -49,6 +55,13 @@ private:
     ///  Retrieves font and calls showBriefly to set corrent height
     ///  @return  font we used, may be reused for other needs (e.g. draw vertically)
     QFont showCpBriefly(const uc::Cp& ch);
+
+    void headToSample();
+    void headToLib(char32_t subj);
+signals:
+    void linkActivated(QWidget* initiator, const QString& link);
+private slots:
+    void labelLinkActivated(const QString& link);
 };
 
 #endif // WISAMPLE_H

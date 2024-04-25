@@ -5,6 +5,9 @@
 #include "UcData.h"
 #include "Skin.h"
 
+// L10n
+#include "LocDic.h"
+
 
 WiSample::WiSample(QWidget *parent) :
     QWidget(parent),
@@ -14,11 +17,19 @@ WiSample::WiSample(QWidget *parent) :
 
     // Sample
     ui->pageSampleCustom->init();
+
+    connect(ui->lbSampleTitle, &QLabel::linkActivated, this, &This::labelLinkActivated);
 }
 
 WiSample::~WiSample()
 {
     delete ui;
+}
+
+
+void WiSample::labelLinkActivated(const QString& link)
+{
+    emit linkActivated(qobject_cast<QWidget*>(sender()), link);
 }
 
 
@@ -124,21 +135,25 @@ void WiSample::showCp(
         setAbbrFont(ch);
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setCustomControl(ch.subj);
+        headToSample();
         break;
     case uc::DrawMethod::VIRTUAL_VIRAMA:
         setAbbrFont(ch);
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setVirtualVirama(ch.subj);
+        headToSample();
         break;
     case uc::DrawMethod::ABBREVIATION:
         setAbbrFont(ch);
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setAbbreviation(ch.abbrev());
+        headToSample();
         break;
     case uc::DrawMethod::SPACE: {
             auto qfont = showCpBriefly(ch);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setSpace(qfont, ch.subj);
+            headToSample();
         } break;
     case uc::DrawMethod::VERTICAL_CW:
     case uc::DrawMethod::VERTICAL_CCW: {
@@ -150,12 +165,14 @@ void WiSample::showCp(
             // Vertical fonts do not have special stylesheets
             ui->pageSampleCustom->setVertical(qfont, proxy, angle);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+            headToSample();
         } break;
     case uc::DrawMethod::SAMPLED_CONTROL: {
             auto qfont = showCpBriefly(ch);
             auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, uc::GlyphStyleSets::EMPTY);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setSampledControl(qfont, proxy);
+            headToSample();
         } break;
     case uc::DrawMethod::SAMPLE:
         if (ch.isVs16Emoji()) {
@@ -163,16 +180,19 @@ void WiSample::showCp(
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, &ch);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
             ui->pageSampleCustom->setCharOverEmoji(qfont, ch.subj);
+            headToLib(ch.subj);
             break;
         }
         [[fallthrough]];
     case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
         drawWithQt(ch, emojiDraw, glyphSets);
+        headToSample();
         break;
     case uc::DrawMethod::SVG_EMOJI:
         clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
         ui->pageSampleCustom->setEmoji(ch.subj);
+        headToLib(ch.subj);
         break;
     }
 }
@@ -189,4 +209,30 @@ void WiSample::showEmoji(std::u32string_view text)
 {
     ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
     ui->pageSampleCustom->setEmoji(text);
+}
+
+void WiSample::translateMe()
+{
+    sSample = loc::get("Sample.Sample");
+    sToLib = loc::get("Sample.ToLib");
+    // Wait for reset after translation
+    headMode = HeadMode::NONE;
+}
+
+
+void WiSample::headToSample()
+{
+    if (headMode == HeadMode::SAMPLE)
+        return;
+    headMode = HeadMode::SAMPLE;
+    ui->lbSampleTitle->setText(sSample);
+}
+
+
+void WiSample::headToLib(char32_t subj)
+{
+    headMode = HeadMode::TOLIB;
+    char buf[200];
+    snprintf(buf, std::size(buf), "<a href='glc:%04X' style='" STYLE_INET "'>", int(subj));
+    ui->lbSampleTitle->setText(buf + sToLib + "</a>");
 }

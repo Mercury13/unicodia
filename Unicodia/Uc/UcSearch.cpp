@@ -208,6 +208,7 @@ namespace {
         const uc::LibNode* result = nullptr;
         using M = std::unordered_map<char32_t, TrieNode>;
         std::unique_ptr<M> children;
+        bool isDecodeable = false;
 
         constexpr TrieNode() = default;
         TrieNode(Prealloc) : children(new M) {}
@@ -372,14 +373,15 @@ void uc::ensureEmojiSearch()
         return;
 
     for (auto& node : allLibNodes()) {
-        // Build trie
-        if (node.flags.have(uc::Lfg::DECODEABLE)) {
+        if (!node.value.empty()) {
+            // Build trie
             auto* p = &trieRoot;
             for (auto c : node.value) {
                 if (!p->children)
                     p->children = std::make_unique<TrieNode::M>();
                 p = &p->children->operator[](c);
             }
+            p->isDecodeable = node.flags.have(Lfg::DECODEABLE);
             p->result = &node;
         }
     }
@@ -422,7 +424,7 @@ SafeVector<uc::DecodedEmoji> uc::decodeEmoji(std::u32string_view s)
                 lastKnown.result = nullptr;
             } else {
                 p = &itChild->second;
-                if (p->result) {
+                if (p->result && p->isDecodeable) {
                     lastKnown.result = p->result;
                     lastKnown.iLastPos = index;
                 }

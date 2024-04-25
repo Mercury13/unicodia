@@ -11867,12 +11867,15 @@
     <sync text-owner="me" fname="..\Unicodia\WiSample.ui">
      <format name="ui" />
     </sync>
-    <text id="lbSampleTitle">
-     <orig>Sample</orig>
-     <im-cmt>is a static text</im-cmt>
-     <transl>Зразок</transl>
-    </text>
    </group>
+   <text id="Sample">
+    <orig>Sample</orig>
+    <transl>Зразок</transl>
+   </text>
+   <text id="ToLib">
+    <orig>To Library</orig>
+    <transl>До Підбірок</transl>
+   </text>
   </group>
   <group id="Lib">
    <group id="Group">

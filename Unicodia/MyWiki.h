@@ -46,6 +46,7 @@ namespace mywiki {
     {
     public:
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
+        virtual void gotoLibCp(QWidget* initiator, char32_t cp) = 0;
         virtual void blinkAddCpToFavs() = 0;
         virtual ~InternalWalker() = default;
     };
@@ -99,6 +100,7 @@ namespace mywiki {
     std::unique_ptr<Link> parsePopVersionLink(std::string_view target);
     std::unique_ptr<Link> parsePopGlyphStyleLink(std::string_view target);
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
+    std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
