@@ -403,7 +403,7 @@ constinit const uc::Block uc::blocks[] {
     // Misc sym OK
     { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
             "Miscellaneous Symbols", MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::EMOJI_BY_CASE },
     // Dingbats OK, need Cambria here!
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats",

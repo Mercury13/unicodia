@@ -2311,7 +2311,14 @@ namespace {
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
-        case 0x27A1:
+        case 0x2640:  // ♀
+        case 0x2642:  // ♂
+        case 0x265F:  // black pawn
+        case 0x2660:  // ♠
+        case 0x2663:  // ♣
+        case 0x2665:  // ♥
+        case 0x2666:  // ♦
+        case 0x27A1:  // fat →
             return false;
         default:
             return true;
