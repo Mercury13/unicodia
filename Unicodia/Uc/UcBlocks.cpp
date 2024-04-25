@@ -1276,7 +1276,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1CC00, 0x1CEBF, { 0x1CC00, EcContinent::NONE, Ifg::MISSING  },
             "Symbols for Legacy Computing Supplement",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
+            EcScript::NONE, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::SCRIPTLIKE },
     // Znamenny OK, found cool font on Ponomar
     { 0x1CF00, 0x1CFCF, { 0x1CF50, EcContinent::EUROPE, Ifg::CONTINENT_OK },
             "Znamenny Musical Notation",
