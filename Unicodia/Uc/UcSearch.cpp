@@ -375,14 +375,16 @@ void uc::ensureEmojiSearch()
     for (auto& node : allLibNodes()) {
         if (!node.value.empty()) {
             // Build trie
-            auto* p = &trieRoot;
-            for (auto c : node.value) {
-                if (!p->children)
-                    p->children = std::make_unique<TrieNode::M>();
-                p = &p->children->operator[](c);
+            if (node.flags.have(Lfg::DECODEABLE)) {
+                auto* p = &trieRoot;
+                for (auto c : node.value) {
+                    if (!p->children)
+                        p->children = std::make_unique<TrieNode::M>();
+                    p = &p->children->operator[](c);
+                }
+                p->isDecodeable = true;
+                p->result = &node;
             }
-            p->isDecodeable = node.flags.have(Lfg::DECODEABLE);
-            p->result = &node;
         }
     }
     hasEmojiSearch = true;
