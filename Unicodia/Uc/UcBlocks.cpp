@@ -322,11 +322,11 @@ constinit const uc::Block uc::blocks[] {
             "Latin Extended Additional",
             { EcScript::Latn, 2 }, MapType::EU_LATIN,
             EcScript::Latn, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
-    // Greek ex OK, though DejaVu is a big gun
+    // Greek ex OK
     { 0x1F00, 0x1FFF, { 0x1F6B, EcContinent::EUROPE },
             "Greek Extended",
             { EcScript::Grek, 1 }, MapType::EU_OTHER_DEAD,
-            EcScript::Grek, EcFont::DEJAVU, Bfg::HAS_DESCRIPTION },
+            EcScript::Grek, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // General punct OK, changed 2-dot leader to low one.
     { 0x2000, 0x206F, { L'‰', EcContinent::NONE },
             "General Punctuation",
