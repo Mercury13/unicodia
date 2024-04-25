@@ -935,10 +935,10 @@ void drawChar(
         drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
         break;
     case uc::DrawMethod::SAMPLE:
-        if (tableMode == TableDraw::CUSTOM) {
+        if (tableMode != TableDraw::INTERNAL) {
             drawSample(painter, rect, sizePc, cp, color, emojiMode, glyphSets, 0);
         }
-        if (cp.isVs16Emoji()) {
+        if (cp.isVs16Emoji() && tableMode != TableDraw::LIBRARY) {
             drawEmojiIcon(painter, rect, cp.subj);
         }
         break;
@@ -1004,13 +1004,13 @@ void drawSearchChar(
 {
     drawCharBorder(painter, rect, color);
     if (cp)
-        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode, glyphSets);
+        drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::SEARCH, emojiMode, glyphSets);
 }
 
 
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode,
+        const QColor& color, uc::EmojiDraw emojiMode, TableDraw tableDraw,
         const uc::GlyphStyleSets& glyphSets, qreal scale)
 {
     if (emojiMode == uc::EmojiDraw::FORCE_TEXT) {
@@ -1026,7 +1026,7 @@ void drawSearchChars(
     ///    (all multi-chars are emoji)
     if (c1 && ((emojiMode == uc::EmojiDraw::FORCE_TEXT) || !c1.forceGraphic)) {
         if (auto cp = uc::cpsByCode[c1.cp])
-            drawChar(painter, rect, lround(100 * scale), *cp, color, TableDraw::CUSTOM, emojiMode, glyphSets);
+            drawChar(painter, rect, lround(100 * scale), *cp, color, tableDraw, emojiMode, glyphSets);
     } else {
         // Graphic
         auto h = rect.height() * EMOJI_NUM / EMOJI_DEN;
@@ -1077,7 +1077,7 @@ void drawCharTiles(
         if (auto c1 = EmojiPainter::getCp(tile.text); c1 && !c1.forceGraphic) {
             // Single-char
             if (auto cp = uc::cpsByCode[c1.cp])
-                drawChar(painter, r2, percent, *cp, color, TableDraw::CUSTOM,
+                drawChar(painter, r2, percent, *cp, color, TableDraw::LIBRARY,
                          tile.emojiDraw, glyphSets, UseMargins::NO);
         } else {
             // Multi-char

@@ -408,7 +408,8 @@ void ie::Node::paint1(QPainter *painter, const QRect &rect, qreal scale)
         break;
     default:
         // Nodes always draw in default settings
-        drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(), uc::GlyphStyleSets::EMPTY, scale);
+        drawSearchChars(painter, rect, node.value, clFg, node.emojiDraw(),
+                        TableDraw::LIBRARY, uc::GlyphStyleSets::EMPTY, scale);
         break;
     }
 }

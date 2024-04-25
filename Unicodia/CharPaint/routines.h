@@ -58,7 +58,9 @@ void drawVertical(
 
 enum class TableDraw {
     INTERNAL,   // Normal chars are drawn internally
-    CUSTOM      // Normal chars are drawn in custom way
+    CUSTOM,     // Normal chars are drawn in custom way
+    LIBRARY,    // Custom + turn off drawing text+emoji
+    SEARCH = CUSTOM,  // Search uses custom way
 };
 
 std::optional<QFont> fontAt(
@@ -92,9 +94,10 @@ void drawSearchChar(
         const QColor& color, uc::EmojiDraw emojiMode,
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 
+/// @param tableDraw   CUSTOM or LIBRARY only
 void drawSearchChars(
         QPainter* painter, const QRect& rect, std::u32string_view text,
-        const QColor& color, uc::EmojiDraw emojiMode,
+        const QColor& color, uc::EmojiDraw emojiMode, TableDraw tableDraw,
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 void drawEmojiDirect(
         QPainter* painter, const QRect& rect, std::u32string_view text,

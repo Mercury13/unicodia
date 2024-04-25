@@ -1151,6 +1151,7 @@ FmMain::InitBlocks FmMain::initBlocks()
 
 void FmMain::initLibrary(const InitBlocks& ib)
 {
+    ui->wiLibShowcase->switchToLib();
     paintTo(ui->wiLibContainer, ib.buttonColor);
 
     // Tree

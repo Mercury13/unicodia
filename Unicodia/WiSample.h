@@ -31,7 +31,7 @@ public:
     void showNothing();
 
     void translateMe();
-
+    void switchToLib();
 private:
     enum class HeadMode { NONE, SAMPLE, TOLIB };
 
@@ -41,6 +41,7 @@ private:
     const uc::Font* shownBrieflyFont = nullptr;
     HeadMode headMode = HeadMode::NONE;
     QString sSample, sToLib;
+    bool isLib = false;
 
     /// Removes everything from lbSample — returns it to normal size
     void clearSample();

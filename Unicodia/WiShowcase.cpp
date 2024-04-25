@@ -80,6 +80,11 @@ WiShowcase::~WiShowcase()
     delete ui;
 }
 
+void WiShowcase::switchToLib()
+{
+    ui->wiSample->switchToLib();
+}
+
 void WiShowcase::translateMe()
 {
     Form::translateMe();

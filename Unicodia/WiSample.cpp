@@ -5,6 +5,9 @@
 #include "UcData.h"
 #include "Skin.h"
 
+// Painting
+#include "CharPaint/emoji.h"
+
 // L10n
 #include "LocDic.h"
 
@@ -24,6 +27,12 @@ WiSample::WiSample(QWidget *parent) :
 WiSample::~WiSample()
 {
     delete ui;
+}
+
+
+void WiSample::switchToLib()
+{
+    isLib = true;
 }
 
 
@@ -175,7 +184,8 @@ void WiSample::showCp(
             headToSample();
         } break;
     case uc::DrawMethod::SAMPLE:
-        if (ch.isVs16Emoji()) {
+        // Library never shows text+emoji
+        if (!isLib && ch.isVs16Emoji()) {
             auto font = ch.font(match::Normal::INST);
             auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, &ch);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
@@ -202,13 +212,16 @@ void WiSample::showNothing()
 {
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
     ui->lbSample->setText({});
+    headToSample();
 }
 
 
 void WiSample::showEmoji(std::u32string_view text)
 {
     ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-    ui->pageSampleCustom->setEmoji(text);
+    ui->pageSampleCustom->setEmoji(text);    
+    headToSample();
+    /// @todo [future] to main emoji library?
 }
 
 void WiSample::translateMe()

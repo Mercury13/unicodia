@@ -109,6 +109,7 @@ public:
     void redrawSampleChar(const uc::GlyphStyleSets& glyphSets);
     void syncGlyphStyle(const uc::GlyphStyleSets& glyphSets, uc::EcGlyphStyleChannel channel);
     QHBoxLayout* toolbarLayout();
+    void switchToLib();
 private:
     Ui::WiShowcase *ui;
 
