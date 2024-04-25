@@ -2306,6 +2306,20 @@ bool uc::Cp::hasGlyph() const
     }
 }
 
+namespace {
+
+    bool isFullEmojiByCase(char32_t ch)
+    {
+        switch (ch) {
+        case 0x27A1:
+            return false;
+        default:
+            return true;
+        }
+    }
+
+}   // anon namespace
+
 
 uc::DrawMethod uc::Cp::drawMethod(
         EmojiDraw emojiMode, const uc::GlyphStyleSets& glyphSets) const
@@ -2322,9 +2336,12 @@ uc::DrawMethod uc::Cp::drawMethod(
             case EmojiDraw::MOSTLY_TEXT:
                 isSvg = !isVs16Emoji();
                 break;
-            case EmojiDraw::CONSERVATIVE:
-                isSvg = !isVs16Emoji() || !block().flags.have(Bfg::NO_EMOJI);
-                break;
+            case EmojiDraw::CONSERVATIVE: {
+                    auto& blk = block();
+                    isSvg = !isVs16Emoji()
+                            || !blk.flags.haveAny(Bfg::NO_EMOJI | Bfg::EMOJI_BY_CASE)
+                            || (blk.flags.have(Bfg::EMOJI_BY_CASE) && isFullEmojiByCase(subj.ch32()));
+                } break;
             case EmojiDraw::GRAPHIC:
                 break;
             }

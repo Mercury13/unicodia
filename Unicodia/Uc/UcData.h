@@ -780,6 +780,7 @@ namespace uc {
         BIG_CONTROLS    = 1<<11,    ///< [+] Control chars use same size as normal
         VIRAMA_UP       = 1<<12,    ///< [+] Move dotted circle ¼r upwards in virtual virama
         VIRAMA_BIGGER   = 1<<13,    ///< [+] Bigger + in virtual virama
+        EMOJI_BY_CASE   = 1<<14,    ///< [+] for Dingbats block: emoji mode is case-by-case, use together with NO_EMOJI!!
         EXPERIMENT      = 1<<30,    ///< Left for experiments
     };
     ///< @warning  Bfg::COLLAPSIBLE ≠ Bfg::CJK ≠ SynthIcon.continent
