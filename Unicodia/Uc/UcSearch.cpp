@@ -612,12 +612,12 @@ uc::MultiResult uc::doSearch(QString what)
                     } best;
                     auto& cat = cp.category();
                     auto block = blockOf(cp.subj);
-                    bool isNonScript =
-                            (cp.ecCategory != EcCategory::SYMBOL_MODIFIER
-                            && cat.upCat != UpCategory::LETTER
-                            && cat.upCat != UpCategory::MARK
-                            && !block->flags.have(Bfg::SCRIPTLIKE)
-                            && cp.script().flags.have(Sfg::NONSCRIPT));
+                    bool isScript =
+                            (cp.ecCategory == EcCategory::SYMBOL_MODIFIER   // Some chosen symbol types
+                            || cat.upCat == UpCategory::LETTER
+                            || cat.upCat == UpCategory::MARK
+                            || block->flags.have(Bfg::SCRIPTLIKE)           // …or char in script-like block
+                            || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
                     for (auto& nm : names) {
                         if (nm.starts_with('&')) {
                             // Search by HTML mnemonic
@@ -635,7 +635,7 @@ uc::MultiResult uc::doSearch(QString what)
                             }
                         } if (nm.find('#') == std::u8string_view::npos) {
                             // Search by keyword
-                            if (auto pr = srh::findNeedle(nm, needle, isNonScript);
+                            if (auto pr = srh::findNeedle(nm, needle, static_cast<srh::IsScript>(isScript));
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm;

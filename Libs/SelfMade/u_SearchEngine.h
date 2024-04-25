@@ -14,7 +14,8 @@ namespace srh {
         std::u8string v;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
-        bool doesCoincide = false;  ///< [+] v == dicWord
+        bool isDicWord = false;  ///< [+] v == dicWord
+        bool alwaysLowPrio = false;
 
         Word() = default;
         Word(std::u8string x);
@@ -46,10 +47,12 @@ namespace srh {
         Needle(std::u8string_view x);
     };
 
+    enum class IsScript : unsigned char { NO, YES };
+
     Place findWord(std::u8string_view haystack, const Word& needle,
-                   bool isNonScript);
+                   IsScript isScript);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    bool isNonScript);
+                    IsScript isScript);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
 }   // namespace srh
