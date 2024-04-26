@@ -24,6 +24,10 @@ namespace {
         { u8"LETTERFORM", srh::hc::EVERYWHERE },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
         { u8"SIGN", srh::hc::EVERYWHERE },
+        { u8"SYLLABIC", srh::hc::EVERYWHERE },
+        { u8"SYLLABICS", srh::hc::EVERYWHERE },
+        { u8"SYLLABLE", srh::hc::EVERYWHERE },
+        { u8"SYMBOL", srh::hc::EVERYWHERE },
     };
 
 }
