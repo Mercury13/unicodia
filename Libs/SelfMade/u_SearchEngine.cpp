@@ -19,7 +19,7 @@ namespace {
     /// If we find those words → treat as low-priority
     /// @warning Alphabetical order, upper case
     constinit DicWord DIC_WORDS[] {
-        { u8"LETTER", srh::HaystackClass::CP_SCRIPT },
+        { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"SIGN", srh::HaystackClass::EVERYWHERE },
     };
 

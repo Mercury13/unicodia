@@ -12,11 +12,11 @@ namespace srh {
 
     enum class HaystackClass {
         NOWHERE = 0,
-        CP = 1,
-        SCRIPT = 2,
-        CP_SCRIPT = CP + SCRIPT,
-        EMOJI = 4,
-        EVERYWHERE = CP + SCRIPT + EMOJI };
+        SCRIPT = 1,         ///< Codepoint in script
+        NONSCRIPT = 2,      ///< Codepoint outside script
+        EMOJI = 4,          ///< Emoji
+        ALL_CPS = NONSCRIPT | SCRIPT,  ///< Codepoints regardless of script
+        EVERYWHERE = NONSCRIPT | SCRIPT | EMOJI };  ///< Everywhere
 
     struct Word {
         std::u8string v;
