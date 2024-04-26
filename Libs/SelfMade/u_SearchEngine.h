@@ -10,12 +10,20 @@ namespace srh {
 
     Class classify(char8_t x);
 
+    enum class HaystackClass {
+        NOWHERE = 0,
+        CP = 1,
+        SCRIPT = 2,
+        CP_SCRIPT = CP + SCRIPT,
+        EMOJI = 4,
+        EVERYWHERE = CP + SCRIPT + EMOJI };
+
     struct Word {
         std::u8string v;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
-        bool isDicWord = false;  ///< [+] v == dicWord
-        bool alwaysLowPrio = false;
+        HaystackClass lowPrioClass = HaystackClass::NOWHERE;
+        bool isDicWord() const { return (lowPrioClass != HaystackClass::NOWHERE); } ///< [+] v == dicWord
 
         Word() = default;
         Word(std::u8string x);
@@ -47,12 +55,10 @@ namespace srh {
         Needle(std::u8string_view x);
     };
 
-    enum class IsScript : unsigned char { NO, YES };
-
     Place findWord(std::u8string_view haystack, const Word& needle,
-                   IsScript isScript);
+                   HaystackClass hclass);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    IsScript isScript);
+                    HaystackClass hclass);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
 }   // namespace srh

@@ -10,7 +10,7 @@ namespace {
 
     struct DicWord {
         std::u8string_view word;
-        AlwaysLowPrio alwaysLowPrio;
+        srh::HaystackClass lowPrioClass;
     };
 
     inline bool operator < (std::u8string_view x, const DicWord& y)
@@ -19,8 +19,8 @@ namespace {
     /// If we find those words → treat as low-priority
     /// @warning Alphabetical order, upper case
     constinit DicWord DIC_WORDS[] {
-        { u8"LETTER", AlwaysLowPrio::NO },
-        { u8"SIGN", AlwaysLowPrio::YES },
+        { u8"LETTER", srh::HaystackClass::CP_SCRIPT },
+        { u8"SIGN", srh::HaystackClass::EVERYWHERE },
     };
 
 }
@@ -69,8 +69,9 @@ srh::Word::Word(std::u8string x)
         --it;
         if (it->word.starts_with(v)) {
             dicWord = it->word;
-            isDicWord = (dicWord == v);
-            alwaysLowPrio = (it->alwaysLowPrio != AlwaysLowPrio::NO);
+            if (dicWord == v) {
+                lowPrioClass = it->lowPrioClass;
+            }
         }
     }
 }
@@ -117,9 +118,9 @@ namespace {
 }   // anon namespace
 
 srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
-                         IsScript isScript)
+                         HaystackClass hclass)
 {
-    auto isLowPrio = (isScript != IsScript::NO) || needle.alwaysLowPrio;
+    bool isLowPrio = static_cast<int>(needle.lowPrioClass) & static_cast<int>(hclass);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
@@ -129,7 +130,7 @@ srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
         Place r1 =
             isOther(haystack, where - 1, needle.ccFirst)
                 ? (isOther(haystack, where + needle.length(), needle.ccLast)
-                        ? (needle.isDicWord && isLowPrio
+                        ? (needle.isDicWord() && isLowPrio
                            // No need to find again if we found exactly a dictionary word
                            ? Place::EXACT_SCRIPT
                            : Place::EXACT)
@@ -159,11 +160,11 @@ srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
 }
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          IsScript isScript)
+                          HaystackClass hclass)
 {
     srh::Prio r;
     for (auto& v : needle.words) {
-        auto type = findWord(haystack, v, isScript);
+        auto type = findWord(haystack, v, hclass);
         switch (type) {
         case Place::EXACT: ++r.exact; break;
         case Place::EXACT_SCRIPT: ++r.exactScript; break;

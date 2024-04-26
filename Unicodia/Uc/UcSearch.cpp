@@ -627,6 +627,7 @@ uc::MultiResult uc::doSearch(QString what)
                             || cat.upCat == UpCategory::MARK
                             || block->flags.have(Bfg::SCRIPTLIKE)           // …or char in script-like block
                             || !cp.script().flags.have(Sfg::NONSCRIPT));    // …or char has script (nonscripts are NONE and pseudo-scripts)
+                    auto hclass = isScript ? srh::HaystackClass::SCRIPT : srh::HaystackClass::CP;
                     for (auto& nm : names) {
                         if (nm.starts_with('&')) {
                             // Search by HTML mnemonic
@@ -644,7 +645,7 @@ uc::MultiResult uc::doSearch(QString what)
                             }
                         } if (nm.find('#') == std::u8string_view::npos) {
                             // Search by keyword
-                            if (auto pr = srh::findNeedle(nm, needle, static_cast<srh::IsScript>(isScript));
+                            if (auto pr = srh::findNeedle(nm, needle, hclass);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm;
