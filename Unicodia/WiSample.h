@@ -51,6 +51,8 @@ private:
     void drawWithQt(
             const uc::Cp& ch, const uc::Font& font,
             uc::EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets);
+    /// @return  active font if haltIfGraphic and actually halted,
+    ///          to make some graphic things
     const uc::Font* drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
             const uc::GlyphStyleSets& glyphSets,
