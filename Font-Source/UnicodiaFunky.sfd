@@ -21,7 +21,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 1
 CreationTime: 1631732133
-ModificationTime: 1713811138
+ModificationTime: 1714173560
 PfmFamily: 33
 TTFWeight: 400
 TTFWidth: 5
@@ -780,7 +780,7 @@ Grid
 EndSplineSet
 TeXData: 1 0 0 346030 173015 115343 0 1048576 115343 783286 444596 497025 792723 393216 433062 380633 303038 157286 324010 404750 52429 2506097 1059062 262144
 AnchorClass2: "Umlaut" "Common ABVM-1" "Nagm tilde" "Nagm tilde-1" "Nagm TR dot" "Nagm TR dot-1" "Nagm low" "Nagm below-1" "Arab Low"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--5"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--9"""  "+BBEENQQ3BEsEPARPBD0EPQQ+BDUA--1"""  "DiakRightmost"""  "NandLt"""  "NandTopLt"""  "Nand BotRt""" 
-BeginChars: 1114135 502
+BeginChars: 1114135 503
 
 StartChar: SmallCircle
 Encoding: 1114112 -1 0
@@ -62089,6 +62089,70 @@ VStem: -28.5 53<-129 -29 24 124>
 LayerCount: 2
 Fore
 Refer: 60 -1 N 1 0 0 1 301.5 -778 2
+EndChar
+
+StartChar: u18CFF
+Encoding: 101631 101631 502
+Width: 1033
+Flags: WO
+HStem: -75.2158 60<123.65 926.39> 792.256 60<123.65 926.39>
+VStem: 63.6504 60<-15.2158 792.256> 926.39 60<-15.2158 792.256>
+TtInstrs:
+SVTCA[y-axis]
+PUSHB_1
+ 0
+MDAP[rnd]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_1
+ 6
+MDAP[rnd]
+PUSHB_1
+ 1
+MDRP[min,rnd,black]
+SVTCA[x-axis]
+PUSHB_1
+ 8
+MDAP[rnd]
+PUSHB_1
+ 0
+MDRP[rp0,rnd,white]
+PUSHB_1
+ 7
+MDRP[min,rnd,black]
+PUSHB_1
+ 7
+SRP0
+PUSHB_2
+ 4
+ 1
+CALL
+PUSHB_1
+ 3
+MDRP[min,rnd,black]
+PUSHB_2
+ 9
+ 1
+CALL
+SVTCA[y-axis]
+IUP[y]
+IUP[x]
+EndTTInstrs
+LayerCount: 2
+Fore
+SplineSet
+63.650390625 -75.2158203125 m 1,0,-1
+ 63.650390625 852.255859375 l 1,1,-1
+ 986.389648438 852.255859375 l 1,2,-1
+ 986.389648438 -75.2158203125 l 1,3,-1
+ 63.650390625 -75.2158203125 l 1,0,-1
+926.389648438 -15.2158203125 m 1,4,-1
+ 926.389648438 792.255859375 l 1,5,-1
+ 123.650390625 792.255859375 l 1,6,-1
+ 123.650390625 -15.2158203125 l 1,7,-1
+ 926.389648438 -15.2158203125 l 1,4,-1
+EndSplineSet
 EndChar
 EndChars
 EndSplineFont

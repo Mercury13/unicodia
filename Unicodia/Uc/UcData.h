@@ -320,6 +320,7 @@ namespace uc {
         KAYAH_LI,
         KHAROSHTHI,
         KHITAN_SMALL,
+          Z_KHI_1,
         KHMER,
         KHOJKI,
         KHUDAWADI,

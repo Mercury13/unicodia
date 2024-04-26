@@ -174,7 +174,9 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
-    { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE, 110_pc },     // Khitan small
+    { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc },     // Khitan small
+      /// @todo [U16, gag] Someday Kawi will handle new char
+      { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
     { "NotoSerifKhojki-Regular.ttf", Ffg::DESC_BIGGER },                        // Khojki
     { "NotoSansKhudawadi-Regular.ttf" },                                        // Khudawadi
