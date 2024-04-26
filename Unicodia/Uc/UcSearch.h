@@ -133,4 +133,9 @@ namespace uc {
     std::u8string toMnemo(const QString& x);
     void ensureEmojiSearch();
     SafeVector<DecodedEmoji> decodeEmoji(std::u32string_view s);
+
+    /// Finds emoji (including VS16)
+    /// @return  node containing x (maybe x+VS16)
+    /// @warning  Lazy and unprotected → do not run in thread
+    const uc::LibNode* findEmoji(char32_t x);
 }

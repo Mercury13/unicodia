@@ -11,6 +11,9 @@
 #include "UcCp.h"
 #include "UcData.h"
 
+// Emoji painter
+#include "CharPaint/emoji.h"
+
 using namespace std::string_view_literals;
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
@@ -199,6 +202,9 @@ namespace {
 
     bool hasEmojiSearch = false;
 
+    /// @todo [future] Can mocve this set to compile-time?
+    std::unordered_map<char32_t, const uc::LibNode*> singleChars;
+
     /// @todo [future] Can move that trie to compile-time?
     struct TriePath;
 
@@ -373,7 +379,7 @@ void uc::ensureEmojiSearch()
         return;
 
     for (auto& node : allLibNodes()) {
-        if (!node.value.empty()) {
+        if (!node.value.empty() && node.flags.have(Lfg::GRAPHIC_EMOJI)) {
             // Build trie
             if (node.flags.have(Lfg::DECODEABLE)) {
                 auto* p = &trieRoot;
@@ -384,6 +390,9 @@ void uc::ensureEmojiSearch()
                 }
                 p->isDecodeable = true;
                 p->result = &node;
+            }
+            if (auto q = EmojiPainter::getCp(node.value)) {
+                singleChars[q.cp] = &node;
             }
         }
     }
@@ -681,4 +690,13 @@ uc::MultiResult uc::doSearch(QString what)
     }
 
     return r;
+}
+
+
+const uc::LibNode* uc::findEmoji(char32_t x)
+{
+    ensureEmojiSearch();
+    if (auto it = singleChars.find(x); it != singleChars.end())
+        return it->second;
+    return nullptr;
 }

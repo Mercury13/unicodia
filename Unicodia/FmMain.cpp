@@ -2216,5 +2216,7 @@ void FmMain::slotSkinToneQa()
 
 void FmMain::gotoLibCp(QWidget*, char32_t cp)
 {
-//    srh::
+    if (auto node = uc::findEmoji(cp)) {
+        goToNode(*node);
+    }
 }
