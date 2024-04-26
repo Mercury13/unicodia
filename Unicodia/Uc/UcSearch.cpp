@@ -605,6 +605,7 @@ uc::MultiResult uc::doSearch(QString what)
         auto u8Name = what.toStdString();
         auto sv = toU8(u8Name);
         srh::Needle needle(sv);
+        srh::Cache cache;
         for (auto& cp : uc::cpInfo) {
             if (&cp != hex && &cp != dec) {  // Do not check what we found once again
                 // Numeric search
@@ -645,7 +646,7 @@ uc::MultiResult uc::doSearch(QString what)
                             }
                         } if (nm.find('#') == std::u8string_view::npos) {
                             // Search by keyword
-                            if (auto pr = srh::findNeedle(nm, needle, hclass);
+                            if (auto pr = srh::findNeedle(nm, needle, hclass, cache);
                                     pr > best.prio) {
                                 best.prio = pr;
                                 best.name = nm;

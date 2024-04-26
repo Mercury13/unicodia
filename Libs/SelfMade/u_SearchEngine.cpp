@@ -223,15 +223,20 @@ srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
 
 
 srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
-                          HaystackClass hclass)
+                          HaystackClass hclass, Cache& cache)
 {
-    auto bighs = str::toUpper(haystack);
-    auto w1 = str::splitByAnySv(bighs, u8" ,()");
-    SafeVector<HayWord> words;
-    words.reserve(w1.size());
-    for (auto v : w1) {
+    // Uppercase haystack
+    cache.haystack = haystack;
+    str::toUpperInPlace(cache.haystack);
+    // Words — simple
+    cache.words1.clear();
+    str::splitByAnySvTo(cache.haystack, u8" ,()", cache.words1);
+    // Words — bigger
+    cache.words2.clear();
+    cache.words2.reserve(cache.words1.size());
+    for (auto v : cache.words1) {
         if (!v.empty())
-            words.emplace_back(v);
+            cache.words2.emplace_back(v);
     }
-    return findNeedle(words, needle, hclass);
+    return findNeedle(cache.words2, needle, hclass);
 }

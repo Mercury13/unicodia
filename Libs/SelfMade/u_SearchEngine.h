@@ -75,12 +75,18 @@ namespace srh {
         Needle(std::u8string_view x);
     };
 
+    struct Cache {
+        std::u8string haystack;
+        SafeVector<std::u8string_view> words1;
+        SafeVector<HayWord> words2;
+    };
+
     Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                    HaystackClass hclass);
     Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
                     HaystackClass hclass);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
-                    HaystackClass hclass);
+                    HaystackClass hclass, Cache& cache);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);
 
 }   // namespace srh

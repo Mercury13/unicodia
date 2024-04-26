@@ -295,6 +295,10 @@ namespace str {
                 Sv s, Sv comma, bool skipEmpty = true);
 
         template <class Sv>
+        void splitByAnySvTo(
+                Sv s, Sv comma, SafeVector<Sv>& r, bool skipEmpty = true);
+
+        template <class Sv>
         Sv prefixSv(Sv s, trait::Ch<Sv> comma) noexcept
         {
             auto p = s.find(comma);
@@ -491,6 +495,15 @@ namespace str {
     {
         using Sv = trait::Sv<S>;
         return detail::splitByAnySv<Sv>(s, comma, skipEmpty);
+    }
+
+    /// @warning  r is not cleared
+    template <class S, class Co>
+    inline void splitByAnySvTo(
+        const S& s, const Co& comma, SafeVector<trait::Sv<S>>& r, bool skipEmpty = true)
+    {
+        using Sv = trait::Sv<S>;
+        return detail::splitByAnySvTo<Sv>(s, comma, r, skipEmpty);
     }
 
     template <class S, class Co>
@@ -876,13 +889,21 @@ template <class Sv>
         Sv s, Sv comma, bool skipEmpty)
 {
     SafeVector<Sv> r;
+    splitByAnySvTo(s, comma, r, skipEmpty);
+    return r;
+}
+
+template <class Sv>
+void str::detail::splitByAnySvTo(
+        Sv s, Sv comma, SafeVector<Sv>& r, bool skipEmpty)
+{
     using Ch = str::trait::Ch<Sv>;
 
     const Ch* start = s.data();
     const Ch* end = start + s.length();
     str::trim(start, end);
     if (start == end)
-        return r;
+        return;
 
     const Ch* sstart = start;
     for (const Ch* p = start; p != end; ++p)
@@ -897,7 +918,6 @@ template <class Sv>
     str::trim(sstart, end);
     if (sstart != end || !skipEmpty)
         r.emplace_back(sstart, end-sstart);
-    return r;
 }
 
 
