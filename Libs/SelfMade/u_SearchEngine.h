@@ -1,8 +1,10 @@
 #pragma once
 
 #include <string>
+#include <span>
 
 #include "u_Vector.h"
+#include "u_TypedFlags.h"
 
 namespace srh {
 
@@ -10,23 +12,41 @@ namespace srh {
 
     Class classify(char8_t x);
 
-    enum class HaystackClass {
-        NOWHERE = 0,
+    enum class HaystackClass : unsigned char {
+        NOWHERE = 0,        ///< Technical value
         SCRIPT = 1,         ///< Codepoint in script
         NONSCRIPT = 2,      ///< Codepoint outside script
         EMOJI = 4,          ///< Emoji
-        ALL_CPS = NONSCRIPT | SCRIPT,  ///< Codepoints regardless of script
-        EVERYWHERE = NONSCRIPT | SCRIPT | EMOJI };  ///< Everywhere
+    };
 
-    struct Word {
+    DEFINE_ENUM_OPS(HaystackClass)
+
+    namespace hc {
+        constexpr auto ALL_CPS = HaystackClass::NONSCRIPT | HaystackClass::SCRIPT;  ///< Codepoints regardless of script
+        constexpr auto EVERYWHERE = HaystackClass::NONSCRIPT | HaystackClass::SCRIPT | HaystackClass::EMOJI;
+    }
+
+    struct NeedleWord {
         std::u8string v;
         Class ccFirst = Class::OTHER, ccLast = Class::OTHER;
         std::u8string_view dicWord;
-        HaystackClass lowPrioClass = HaystackClass::NOWHERE;
-        bool isDicWord() const { return (lowPrioClass != HaystackClass::NOWHERE); } ///< [+] v == dicWord
+        bool isDicWord = false;
+        /// Interesting thing here: searching for “le” → avoid “letter”
+        Flags<HaystackClass> lowPrioClass = HaystackClass::NOWHERE;
 
-        Word() = default;
-        Word(std::u8string x);
+        NeedleWord() = default;
+        NeedleWord(std::u8string x);
+
+        std::u8string_view sv() const { return v; }
+        size_t length() const { return v.length(); }
+    };
+
+    struct HayWord {
+        std::u8string_view v;
+        Flags<HaystackClass> lowPrioClass = HaystackClass::NOWHERE;
+
+        HayWord() = default;
+        HayWord(std::u8string_view x);
 
         std::u8string_view sv() const { return v; }
         size_t length() const { return v.length(); }
@@ -50,13 +70,15 @@ namespace srh {
     ///
     struct Needle
     {
-        SafeVector<srh::Word> words;
+        SafeVector<srh::NeedleWord> words;
 
         Needle(std::u8string_view x);
     };
 
-    Place findWord(std::u8string_view haystack, const Word& needle,
+    Place findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                    HaystackClass hclass);
+    Prio findNeedle(std::span<HayWord> haystack, const Needle& needle,
+                    HaystackClass hclass);
     Prio findNeedle(std::u8string_view haystack, const Needle& needle,
                     HaystackClass hclass);
     bool stringsCiEq(std::u8string_view s1, std::u8string_view s2);

@@ -1,6 +1,7 @@
 #include "u_SearchEngine.h"
 
 #include "u_Strings.h"
+#include "u_TypedFlags.h"
 
 const srh::Prio srh::Prio::EMPTY;
 
@@ -10,7 +11,7 @@ namespace {
 
     struct DicWord {
         std::u8string_view word;
-        srh::HaystackClass lowPrioClass;
+        Flags<srh::HaystackClass> lowPrioClass;
     };
 
     inline bool operator < (std::u8string_view x, const DicWord& y)
@@ -20,7 +21,7 @@ namespace {
     /// @warning Alphabetical order, upper case
     constinit DicWord DIC_WORDS[] {
         { u8"LETTER", srh::HaystackClass::SCRIPT },
-        { u8"SIGN", srh::HaystackClass::EVERYWHERE },
+        { u8"SIGN", srh::hc::EVERYWHERE },
     };
 
 }
@@ -54,10 +55,10 @@ bool srh::stringsCiEq(std::u8string_view s1, std::u8string_view s2)
 
 
 
-///// Word /////////////////////////////////////////////////////////////////////
+///// NeedleWord ///////////////////////////////////////////////////////////////
 
 
-srh::Word::Word(std::u8string x)
+srh::NeedleWord::NeedleWord(std::u8string x)
     : v(std::move(x)),
       ccFirst(classify(v.front())),
       ccLast(classify(v.back()))
@@ -69,9 +70,26 @@ srh::Word::Word(std::u8string x)
         --it;
         if (it->word.starts_with(v)) {
             dicWord = it->word;
-            if (dicWord == v) {
-                lowPrioClass = it->lowPrioClass;
-            }
+            isDicWord = (dicWord == v);
+            lowPrioClass = it->lowPrioClass;
+        }
+    }
+}
+
+
+///// HayWord //////////////////////////////////////////////////////////////////
+
+
+srh::HayWord::HayWord(std::u8string_view x)
+    : v(x)
+{
+    auto beg = std::begin(DIC_WORDS);
+    auto end = std::end(DIC_WORDS);
+    auto it = std::upper_bound(beg, end, v);
+    if (it != beg) {
+        --it;
+        if (it->word == v) {
+            lowPrioClass = it->lowPrioClass;
         }
     }
 }
@@ -98,68 +116,75 @@ namespace {
         return std::toupper(ch1) == std::toupper(ch2);
     }
 
-    template<typename T>
-    size_t ciFind( const T& haystack, const T& needle, size_t pos)
-    {
-        typename T::const_iterator it = std::search( haystack.begin() + pos, haystack.end(),
-            needle.begin(), needle.end(), myEqual<typename T::value_type> );
-        if ( it != haystack.end() ) return it - haystack.begin();
-        else return std::string::npos; // not found
-    }
+    struct FindPlace {
+        const srh::HayWord* word = nullptr;
+        size_t iWord = std::numeric_limits<size_t>::max();
+        size_t iInner = std::numeric_limits<size_t>::max();
 
-    bool isOther(std::u8string_view s, size_t pos, srh::Class c)
+        explicit operator bool() const { return word; }
+        size_t length() const { return word ? word->length() : 0; }
+    };
+
+    template<typename T>
+    FindPlace ciFind(std::span<const srh::HayWord> haystack, const T& needle, size_t iStartWord)
     {
-        if (pos >= s.size())
-            return true;
-        auto clazz = srh::classify(s[pos]);
-        return (clazz == srh::Class::OTHER || clazz != c);
+        for (auto itHay = haystack.begin() + iStartWord;
+             itHay != haystack.end();
+             ++itHay) {
+            auto hayword = itHay->sv();
+            typename T::const_iterator it = std::search(
+                hayword.begin(), hayword.end(),
+                needle.begin(), needle.end(), myEqual<typename T::value_type> );
+            if ( it != hayword.end() ) {
+                return { .word = std::to_address(itHay),
+                         .iWord = size_t(itHay - haystack.begin()),
+                         .iInner = size_t(it - hayword.begin()) };
+            }
+        }
+        return {}; // not found
     }
 
 }   // anon namespace
 
-srh::Place srh::findWord(std::u8string_view haystack, const srh::Word& needle,
+srh::Place srh::findWord(std::span<HayWord> haystack, const NeedleWord& needle,
                          HaystackClass hclass)
 {
-    bool isLowPrio = static_cast<int>(needle.lowPrioClass) & static_cast<int>(hclass);
+    bool isNeedleLowPrio = needle.lowPrioClass.have(hclass);
     Place r = Place::NONE;
     size_t pos = 0;
     while (true) {
         auto where = ciFind(haystack, needle.sv(), pos);
-        if (where == std::u8string_view::npos)
+        if (!where)
             break;
-        Place r1 =
-            isOther(haystack, where - 1, needle.ccFirst)
-                ? (isOther(haystack, where + needle.length(), needle.ccLast)
-                        ? (needle.isDicWord() && isLowPrio
-                           // No need to find again if we found exactly a dictionary word
-                           ? Place::EXACT_SCRIPT
-                           : Place::EXACT)
-                        : Place::INITIAL)
-                : Place::PARTIAL;
+        Place r1 = Place::PARTIAL;
+        if (where.iInner == 0) {
+            if (where.length() == needle.length()) {
+                // Full word match
+                r1 = isNeedleLowPrio ? Place::EXACT_SCRIPT : Place::EXACT;
+            } else {
+                // Initial match
+                r1 = where.word->lowPrioClass.have(hclass)
+                     ?  Place::INITIAL_SRIPT : Place::INITIAL;
+            }
+        }
         // Check for dictionary word
         switch (r1) {
         case Place::EXACT:
         case Place::EXACT_SCRIPT:
             return r1;
         case Place::INITIAL:
-            if (!needle.dicWord.empty() && isLowPrio) {
-                auto q = haystack.substr(where, needle.dicWord.length());
-                if (stringsCiEq(q, needle.v))
-                    r1 = Place::INITIAL_SRIPT;
-            }
-            [[fallthrough]];
         case Place::INITIAL_SRIPT:
         case Place::PARTIAL:
             r = std::max(r, r1);
             [[fallthrough]];
         case Place::NONE: ;
         }
-        pos = where + 1;
+        pos = where.iWord + 1;
     }
     return r;
 }
 
-srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
+srh::Prio srh::findNeedle(std::span<HayWord> haystack, const Needle& needle,
                           HaystackClass hclass)
 {
     srh::Prio r;
@@ -175,4 +200,18 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
         }
     }
     return r;
+}
+
+
+srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
+                          HaystackClass hclass)
+{
+    auto w1 = str::splitSv(haystack, ' ');
+    SafeVector<HayWord> words;
+    words.reserve(w1.size());
+    for (auto v : w1) {
+        if (!v.empty())
+            words.emplace_back(v);
+    }
+    return findNeedle(words, needle, hclass);
 }
