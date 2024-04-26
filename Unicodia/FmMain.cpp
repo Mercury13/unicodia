@@ -1315,6 +1315,9 @@ void FmMain::translateMe()
 
     // Library tab
     libChanged(ui->treeLibrary->currentIndex());
+
+    // Favs tab
+    favsCurrentChanged(ui->treeLibrary->currentIndex());
 }
 
 
