@@ -70,12 +70,17 @@ void WiSample::setAbbrFont(const uc::Cp& ch)
 }
 
 
-void WiSample::drawWithQt(
+const uc::Font* WiSample::drawWithQt(
         const uc::Cp& ch, uc::EmojiDraw emojiDraw,
-        const uc::GlyphStyleSets& glyphSets)
+        const uc::GlyphStyleSets& glyphSets,
+        bool haltIfGraphic)
 {
     ui->pageSampleCustom->setNormal();
     auto font = setFont(ch, match::Normal::INST);
+    if (haltIfGraphic && font && font->flags.have(uc::Ffg::GRAPHIC_SAMPLE)) {
+        clearSample();
+        return font;
+    }
 
     // Sample char
     ui->stackSample->setCurrentWidget(ui->pageSampleQt);
@@ -91,6 +96,7 @@ void WiSample::drawWithQt(
         ui->lbSample->setStyleSheet(proxy.styleSheet);
     }
     ui->lbSample->setText(proxy.text);
+    return nullptr;
 }
 
 
@@ -194,10 +200,20 @@ void WiSample::showCp(
             break;
         }
         [[fallthrough]];
-    case uc::DrawMethod::MARCHEN:   // same as Sample, Marchen is drawn in table only
-        drawWithQt(ch, emojiDraw, glyphSets);
-        headToSample();
-        break;
+    case uc::DrawMethod::MARCHEN: {  // Sample and Marchen differ in table
+            auto retFont = drawWithQt(ch, emojiDraw, glyphSets, true);
+            if (retFont) {
+                /// @todo [urgent] use sampleProxy
+                auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, glyphSets);
+                ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
+                Flags<uc::FontGetFg> fgs;
+                if (ch.flags.have(uc::Cfg::DYN_SYSTEM_TOFU))
+                    fgs |= uc::FontGetFg::KNOWN_TOFU;
+                auto qfont = retFont->get(uc::FontPlace::SAMPLE, FSZ_BIG, fgs, &ch);
+                ui->pageSampleCustom->setGraphicSample(qfont, proxy);
+            }
+            headToSample();
+        } break;
     case uc::DrawMethod::SVG_EMOJI:
         clearSample();
         ui->stackSample->setCurrentWidget(ui->pageSampleCustom);

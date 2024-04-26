@@ -464,6 +464,7 @@ namespace uc {
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
         MARK_AVOID        = 1<<18,  ///< If char’s type is mark → avoid!
         DESC_AVOID        = 1<<19,  ///< Avoid in description, use next instead
+        GRAPHIC_SAMPLE    = 1<<20,  ///< Draw characters graphically, killing font’s dimensions
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 

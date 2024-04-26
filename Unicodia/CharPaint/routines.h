@@ -133,6 +133,7 @@ public:
     void setVirtualVirama(char32_t cp);
     void setSampledControl(const QFont& font, const uc::SampleProxy& pr);
     void setCharOverEmoji(const QFont& font, char32_t aSubj);
+    void setGraphicSample(const QFont& font, const uc::SampleProxy& pr);
     void setNormal();
     void init();
 protected:
@@ -142,7 +143,7 @@ private:
     enum class Mode {
         NONE, SPACE, ABBREVIATION, CUSTOM_CONTROL, EMOJI_CHAR,
         EMOJI_TEXT, VERTICAL, VIRTUAL_VIRAMA, SAMPLED_CONTROL,
-        CHAR_OVER_EMOJI };
+        CHAR_OVER_EMOJI, GRAPHIC_SAMPLE };
     Mode mode = Mode::NONE;
     std::u8string_view abbreviation;
     QFont qfont;

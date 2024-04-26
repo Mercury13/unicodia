@@ -49,8 +49,12 @@ private:
     void setAbbrFont(const uc::Cp& ch);
     const uc::Font* setFont(const uc::Cp& ch, const uc::FontMatcher& matcher);
     void drawWithQt(
+            const uc::Cp& ch, const uc::Font& font,
+            uc::EmojiDraw emojiDraw, const uc::GlyphStyleSets& glyphSets);
+    const uc::Font* drawWithQt(
             const uc::Cp& ch, uc::EmojiDraw emojiDraw,
-            const uc::GlyphStyleSets& glyphSets);
+            const uc::GlyphStyleSets& glyphSets,
+            bool haltIfGraphic = false);
     ///  Sets character to space and shows pageSampleQt briefly to set correct height
     void showBriefly(const uc::Font* font);
     ///  Retrieves font and calls showBriefly to set corrent height
