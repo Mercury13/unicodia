@@ -20,6 +20,8 @@ namespace {
     /// If we find those words → treat as low-priority
     /// @warning Alphabetical order, upper case
     constinit DicWord DIC_WORDS[] {
+        { u8"IDEOGRAM", srh::hc::EVERYWHERE },
+        { u8"IDEOGRAPH", srh::hc::EVERYWHERE },
         { u8"LETTER", srh::HaystackClass::SCRIPT },
         { u8"LETTERFORM", srh::hc::EVERYWHERE },
         { u8"PATTERN", srh::HaystackClass::SCRIPT },
