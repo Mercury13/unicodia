@@ -32,6 +32,8 @@ namespace {
         { u8"SYMBOL", srh::hc::EVERYWHERE },
     };
 
+    constexpr auto ALL_SEPARATORS = u8" ,()";
+
 }
 
 
@@ -108,7 +110,7 @@ srh::HayWord::HayWord(std::u8string_view x)
 
 srh::Needle::Needle(std::u8string_view x)
 {
-    auto w1 = str::splitSv(x, ' ');
+    auto w1 = str::splitByAnySv(x, ALL_SEPARATORS);
     words.reserve(w1.size());
     for (auto v : w1) {
         if (!v.empty())
@@ -230,7 +232,7 @@ srh::Prio srh::findNeedle(std::u8string_view haystack, const Needle& needle,
     str::toUpperInPlace(cache.haystack);
     // Words — simple
     cache.words1.clear();
-    str::splitByAnySvTo(cache.haystack, u8" ,()", cache.words1);
+    str::splitByAnySvTo(cache.haystack, ALL_SEPARATORS, cache.words1);
     // Words — bigger
     cache.words2.clear();
     cache.words2.reserve(cache.words1.size());
