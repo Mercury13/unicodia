@@ -110,10 +110,10 @@ constinit const uc::Font uc::fontInfo[] = {
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …5 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …6 Korean
       { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                    // …7 Japanese
-      { FNAME_KOREAN, 120_pc},                                                  // …8 for one W7 tofu FFA0
+      { FNAME_KOREAN, 110_pc},                                                  // …8 for one W7 tofu FFA0
     { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
-      { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 120_pc },                              // …2
+      { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2
       { "MS Mincho", 120_pc },                                                  // …3
     { "Microsoft YaHei" },                                                      // CJK kanbun
     { "SimSun,Microsoft YaHei", Ffg::FALL_TO_NEXT, 120_pc },                    // CJK structure
@@ -124,7 +124,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT, 120_pc },                                 // CJK symbols
       { "SimSun", Ffg::FALL_TO_NEXT, 120_pc },                                  // …1
       { FNAME_BABEL, Ffg::FALL_TO_NEXT, 120_pc },                               // …2
-      { FNAME_KOREAN, 120_pc},                                                  // …3
+      { FNAME_KOREAN, 110_pc},                                                  // …3
     { "newathuBold5_8.ttf", Ffg::BOLD },                                        // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
@@ -173,7 +173,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKayahLi-Regular.ttf" },                                          // Kayah Li
     { "NotoSansKharoshthi-Regular.ttf", Ffg::DESC_BIGGER },                     // Kharoshthi
-    { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc },     // Khitan small
+    { "NotoFangsongKSSVertical-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 110_pc }, // Khitan small
       /// @todo [U16, gag] Someday Kawi will handle new char
       { FNAME_FUNKY },                                                          // …1, temp patch of U16
     { "NotoSansKhmer-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },                  // Khmer
