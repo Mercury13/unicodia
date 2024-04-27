@@ -75,7 +75,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
     { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },       // Arabic
-      { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
+      { "NotoNaskhArabic-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },     // …1, fallback font for Presentation-A
       { FNAME_FUNKY, Ffg::STUB_ALM },                                           // …2, new additions
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
