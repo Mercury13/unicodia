@@ -69,14 +69,13 @@ constinit const uc::Font uc::fontInfo[] = {
     { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                        // DejaVu
     { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                         // Funky
       { FNAME_NOTO },                                                           // …1
-    { FNAME_FUNKY, Ffg::STUB_RTL },                                             // Funky RTL (unused but left)
         //-----
     { "NotoSansAdlam-Regular.ttf" },                                            // Adlam
     { "NotoSerifAhom-Regular.ttf", Ffg::FALL_TO_NEXT },                         // Ahom
     { "NotoSansAnatolianHieroglyphs-Regular.otf" },                             // Anatolian
-    { "ScheherazadeNew-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },       // Arabic
-      { "NotoNaskhArabic-Regular.ttf", Ffg::STUB_ALM | Ffg::FALL_TO_NEXT },     // …1, fallback font for Presentation-A
-      { FNAME_FUNKY, Ffg::STUB_ALM },                                           // …2, new additions
+    { "ScheherazadeNew-Regular.ttf", Ffg::FALL_TO_NEXT },                       // Arabic
+      { "NotoNaskhArabic-Regular.ttf", Ffg::FALL_TO_NEXT },                     // …1, fallback font for Presentation-A
+      { FNAME_FUNKY },                                                          // …2, new additions
     { "NotoSansImperialAramaic-Regular.ttf" },                                  // Aramaic
         // Two fonts OK, as they both are built-in
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Armenian
@@ -232,7 +231,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { FAM_HISTORIC, Ffg::FALL_TO_NEXT },                                        // Old Persian cuneiform
       { "NotoSansOldPersian-Regular.ttf" },                                     // …1
     { "NotoSansOldSogdian-Regular.ttf" },                                       // Old Sogdian
-    { "NotoSerifOldUyghur-Regular.ttf", Ffg::STUB_RTL },                        // Old Uyghur
+    { "NotoSerifOldUyghur-Regular.ttf" },                                       // Old Uyghur
     { "UtoSerifOriya-Regular.ttf", 120_pc },                                    // Oriya
     { "NotoSansOldTurkic-Regular.ttf" },                                        // Orkhon
     { "NotoSansPahawhHmong-Regular.ttf" },                                      // Pahawh Hmong

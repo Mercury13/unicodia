@@ -221,7 +221,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Arabic OK, three fonts: SIL Scheherazade main, Google Noto Math + Google Noto Arabic for special ranges
     { "Arab", QFontDatabase::Arabic,
         EcScriptType::CONSONANT, EcLangLife::ALIVE, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC },
+        Dating::century(7, StdNote::MODERN_FORM), EcFont::ARABIC, Sfg::STUB_ALM },
     // Imperial Aramaic OK, because of sheer importance install Google Noto
     { "Armi", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -466,7 +466,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Kharoshthi OK, W10 tofu → installed Noto
     { "Khar", QFontDatabase::Any,
         EcScriptType::ABUGIDA, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
-        Dating::century(-4), EcFont::KHAROSHTHI },
+        Dating::century(-4), EcFont::KHAROSHTHI, Sfg::STUB_RTL },
     // Khmer OK, fancy and inconsistent in W7/10, installed Google Noto *UI* because of umlauts
     { "Khmr", QFontDatabase::Khmer,
         EcScriptType::ABUGIDA_BRAHMI, EcLangLife::ALIVE, EcWritingDir::LTR, EcContinent::ASIA,
@@ -655,7 +655,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Old Uyghur OK, installed Noto font
     { "Ougr", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::DECIPHERED, EcWritingDir::LTR_COL, EcContinent::ASIA,
-        Dating::century(8), EcFont::OLD_UYGHUR },
+        Dating::century(8), EcFont::OLD_UYGHUR, Sfg::STUB_RTL },
     // Plamyrene OK, W10 none, installed Google Noto
     { "Palm", QFontDatabase::Any,
         EcScriptType::CONSONANT, EcLangLife::DECIPHERED, EcWritingDir::RTL, EcContinent::ASIA,
@@ -2211,6 +2211,17 @@ std::u8string_view uc::Cp::abbrev() const
 }
 
 
+QString uc::Cp::markProxy() const
+{
+    auto sc = script();
+    if (sc.flags.have(Sfg::STUB_RTL))
+        return str::toQ(STUB_RTL_CIRCLE) + str::toQ(subj);
+    if (sc.flags.have(Sfg::STUB_ALM))
+        return str::toQ(STUB_ALM_CIRCLE) + str::toQ(subj);
+    return STUB_CIRCLE + str::toQ(subj);
+}
+
+
 uc::SampleProxy uc::Cp::sampleProxy(
         ProxyType proxyType,
         EmojiDraw emojiDraw,
@@ -2271,15 +2282,12 @@ uc::SampleProxy uc::Cp::sampleProxy(
     switch (ecCategory) {
     case EcCategory::MARK_ENCLOSING:
     case EcCategory::MARK_NONSPACING:
-    case EcCategory::MARK_SPACING:
-        // Stub off?
-        if (fn->flags.have(Ffg::STUB_OFF))
-            break;
-        if (fn->flags.have(Ffg::STUB_RTL))
-            return { str::toQ(STUB_RTL_CIRCLE) + str::toQ(code), style };
-        if (fn->flags.have(Ffg::STUB_ALM))
-            return { str::toQ(STUB_ALM_CIRCLE) + str::toQ(code), style };
-        return { STUB_CIRCLE + str::toQ(code), style };
+    case EcCategory::MARK_SPACING: {
+            // Stub off?
+            if (fn->flags.have(Ffg::STUB_OFF))
+                break;
+            return { markProxy(), style };
+        }
     default: ;
     }
     if (fn->flags.have(Ffg::STUB_INTERCHAR))
@@ -2400,7 +2408,7 @@ QString uc::Cp::osProxy() const
 
     switch (category().upCat) {
     case UpCategory::MARK:
-        return STUB_CIRCLE + str::toQ(subj.ch32());
+        return markProxy();
     default: ;
     }
     return str::toQ(subj.ch32());

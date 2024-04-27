@@ -222,7 +222,6 @@ namespace uc {
          DEJAVU,
          FUNKY,
           Z_FUN_1,
-         FUNKY_RTL,
         ADLAM,
         AHOM,
         ANATOLIAN,
@@ -457,15 +456,13 @@ namespace uc {
         CELL_SMALLER      = 1<<10,  ///< Make cell text a bit smaller
         CELL_BIGGER       = 1<<11,  ///< Make cell text a bit smaller
         STUB_FINEGRAINED  = 1<<12,  ///< Stub on/off is controlled on finer level
-        STUB_RTL          = 1<<13,  ///< Use “RtL mark” char in stub
-        STUB_ALM          = 1<<14,  ///< Use “Arabic letter mark” char in stub
-        STUB_INTERCHAR    = 1<<15,  ///< Debug: test inter-character interval
-        NOHINT_TINY       = 1<<16,  ///< Unglitch: no anti-aliasing in tiny sizes
-        FALL2_IF_ACCEPTED = 1<<17,  ///< Fall over one font if not rejected;
+        STUB_INTERCHAR    = 1<<13,  ///< Debug: test inter-character interval
+        NOHINT_TINY       = 1<<14,  ///< Unglitch: no anti-aliasing in tiny sizes
+        FALL2_IF_ACCEPTED = 1<<15,  ///< Fall over one font if not rejected;
                                     ///<   used under “Main (usually system) → backup → patch” triad (Brahmi)
-        MARK_AVOID        = 1<<18,  ///< If char’s type is mark → avoid!
-        DESC_AVOID        = 1<<19,  ///< Avoid in description, use next instead
-        GRAPHIC_SAMPLE    = 1<<20,  ///< Draw characters graphically, killing font’s dimensions
+        MARK_AVOID        = 1<<16,  ///< If char’s type is mark → avoid!
+        DESC_AVOID        = 1<<17,  ///< Avoid in description, use next instead
+        GRAPHIC_SAMPLE    = 1<<18,  ///< Draw characters graphically, killing font’s dimensions
         DESC_BADLY_HINTED = DESC_BIGGER, ///< Not just bigger but confession that the font is badly hinted
     };
 
@@ -718,10 +715,12 @@ namespace uc {
 
     /// Script’s flags
     enum class Sfg {
-        NONSCRIPT = 1,      ///< [+] Non-script for search
-        NO_LANGS = 2,       ///< [+] No “Languages” line
-        DESC_FROM_PREV = 4, ///< [+] Description is taken from previous script (Meroitic, Sogdian)
-        SORT_KEY = 8,       ///< [+] Pseudo-script made specially for sorting
+        NONSCRIPT      = 1<<0,  ///< [+] Non-script for search
+        NO_LANGS       = 1<<1,  ///< [+] No “Languages” line
+        DESC_FROM_PREV = 1<<2,  ///< [+] Description is taken from previous script (Meroitic, Sogdian)
+        SORT_KEY       = 1<<3,  ///< [+] Pseudo-script made specially for sorting
+        STUB_RTL       = 1<<4,  ///< Use “RtL mark” char in stub
+        STUB_ALM       = 1<<5,  ///< Use “Arabic letter mark” char in stub
     };
     DEFINE_ENUM_OPS(Sfg)
 

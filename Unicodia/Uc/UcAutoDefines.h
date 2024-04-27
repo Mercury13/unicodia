@@ -591,6 +591,8 @@ namespace uc {
         constexpr bool hasStyle() const { return flags.haveAny(STYLE_ALL); }
         EcGlyphStyleChannel ecStyleChannel() const;
         inline const GlyphStyleChannel styleChannel() const;
+    private:
+        QString markProxy() const;
     };
 
     size_t sprintPlus(char* buf, size_t n, std::u32string_view text);
