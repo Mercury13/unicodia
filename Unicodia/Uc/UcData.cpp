@@ -36,6 +36,7 @@ constinit const uc::InputMethods uc::InputMethods::NONE {};
 constinit const match::MainFont match::MainFont::INST;
 constinit const match::Normal match::Normal::INST;
 constinit const match::NullForTofu match::NullForTofu::INST;
+constinit const match::FallToLast match::FallToLast::INST;
 
 // [+] any missing char is tofu (BUGGY)  [-] try smth from system
 constexpr bool FORCE_TOFU = false;
@@ -2066,8 +2067,7 @@ QFont uc::Font::get(FontPlace place, int size, Flags<uc::FontGetFg> flags,
     if (place == FontPlace::CELL && flags.have(uc::FontGetFg::NO_AA)) {
         strategy = fst::NO_AA;
     }
-    if (flags.have(uc::FontGetFg::KNOWN_TOFU) && subj
-            && !doesSupportChar(subj->subj)) {
+    if (flags.have(uc::FontGetFg::KNOWN_TOFU) && subj && !doesSupportChar(subj->subj)) {
         strategy = QFont::StyleStrategy(strategy | QFont::StyleStrategy::NoFontMerging);
     }
     if (subj && subj->flags.have(uc::Cfg::M_NO_SHAPING)) {
@@ -2969,6 +2969,12 @@ bool match::Normal::check(char32_t cp, const uc::Font& font) const
 bool match::NullForTofu::check(char32_t cp, const uc::Font& font) const
 {
     return font.doesSupportChar(cp);
+}
+
+
+bool match::FallToLast::check(char32_t, const uc::Font& font) const
+{
+    return !font.flags.have(uc::Ffg::FALL_TO_NEXT);
 }
 
 

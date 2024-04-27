@@ -1402,6 +1402,13 @@ namespace match {
         static const NullForTofu INST;
     };
 
+    ///  Matcher that extracts exactly the last font
+    class FallToLast : public uc::FontMatcher {
+    public:
+        bool check(char32_t cp, const uc::Font& font) const override;
+        static const FallToLast INST;
+    };
+
 }
 
 
