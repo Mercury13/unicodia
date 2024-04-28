@@ -11113,7 +11113,7 @@
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 characters.</p>
       <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
       <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will{{_}}not{{_}}make false positives.</p>
-      <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present.</p>
+      <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-knows ASCII string “Bush hid the facts” (probably George Bush Senior) breaks Windows’ statistical detection of UCS-2.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, Qt.</p>
@@ -11131,7 +11131,7 @@
       <p>* Накладає обмеження на ємність Юнікоду{{-}}2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1{{.}}112{{.}}064 символи.</p>
       <p>* Зворотня сумісність: текст у [[pt:bmp|базовій площині]] не{{_}}відрізнити від UCS-2. Якщо робоча мова лежить у базовій площині, а символи за її межами не{{_}}обробляються (залишаються або вилучаються), двобайтовий символ цілком придатний для обробки тексту.</p>
       <p>* Самосинхронізуючийся: якщо додати будь-які помилкові '''слова''' (не байти), збережений текст залишиться читаємим. Пошук в UTF-16 навіть одного символа не{{_}}дасть хибних спрацьовувань.</p>
-      <p>* Ненадійне впізнання: без [[pt:bom|мітки порядку байтів]] формат UTF-16 та порядок байтів визначається за непрямими ознаками{{-}}за статистикою або сурогатними парами;</p>
+      <p>* Ненадійне впізнання: без [[pt:bom|мітки порядку байтів]] формат UTF-16 та порядок байтів визначається за непрямими ознаками{{-}}за статистикою або сурогатними парами. Відомий ASCII-рядок «Bush hid the facts» (''Буш приховав факти'', ймовірно Джордж Буш-старший) ламає статистичне впізнання UCS-2 у Windows.</p>
       <p>* Немонотонний: програма, що розуміє UCS-2, відсортує тексти не{{_}}у порядку кодів.</p>
       <p />
       <p>Як формат міжпрограмного обміну використовується здебільшого у двійкових файлах родом з Windows та Mac/Motorola (наприклад, шрифтах TrueType). Таким файлам мітка порядку байтів не{{_}}потрібна; у текстових файлах вона FE{{_}}FF для UTF-16BE та FF{{_}}FE для UTF-16LE. Як формат програмного інтерфейсу використовується у Windows, Java, Qt.</p>
