@@ -3986,7 +3986,7 @@
      <orig>
       <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek.</p>
+      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek. Before that all purely Coptic characters were considered Greek.</p>
      </orig>
     </text>
    </group>

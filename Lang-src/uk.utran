@@ -5420,12 +5420,12 @@
      <orig>
       <p>The language originates from [[ps:Egyp|Ancient Egyptian]] and is an important source on it, the script comes from [[ps:Grek|Greek]]. Used by Copts (Egyptian Christians) as liturgical. Copts speak in [[ps:Arab|Arabian]], as a conversational language Coptic died in 17th to 19th century.</p>
       <p />
-      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek.</p>
+      <p>Since Unicode{{_}}4.1 (2005) Coptic is [[pt:unification|disunified]] with Greek. Before that all purely Coptic characters were considered Greek.</p>
      </orig>
      <transl>
       <p>Мова походить з [[ps:Egyp|давньоєгипетської]] і є важливим джерелом по ній, писемність{{-}}з [[ps:Grek|грецької]]. Використовується коптами (єгипетськими християнами) як богослужебна. Спілкуються копти [[ps:Arab|арабською]], як розмовна коптська померла від XVII до XIX{{_}}століття.</p>
       <p />
-      <p>З Юнікоду{{_}}4.1 (2005) коптська [[pt:unification|розуніфікована]] з грецькою.</p>
+      <p>З Юнікоду{{_}}4.1 (2005) коптська [[pt:unification|розуніфікована]] з грецькою. До цього усі чисто коптські символи вважались грецькими.</p>
      </transl>
     </text>
    </group>

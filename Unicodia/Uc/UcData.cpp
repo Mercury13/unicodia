@@ -1806,6 +1806,9 @@ void uc::completeData()
         cpsByCode[cp.subj.val()] = &cp;
     }
 
+    // Coptic is 4.1 (script of those characters was Greek)
+    uc::scriptInfo[static_cast<int>(EcScript::Copt)].ecVersion = uc::EcVersion::V_4_1;
+
     for (auto& cp : cpInfo) {
         // Version
         auto& ver = cp.version();
