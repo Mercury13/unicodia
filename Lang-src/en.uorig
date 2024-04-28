@@ -7703,7 +7703,7 @@
       <p>* Imposes a limitation to Unicode capacity: 2&lt;big&gt;²⁰&lt;/big&gt;+2&lt;big&gt;¹⁶&lt;/big&gt;−2&lt;big&gt;¹¹&lt;/big&gt;=1,112,064 characters.</p>
       <p>* Backwards compatibility: text of [[pt:bmp|Basic Plane]] is indistinguishable from UCS-2. If the working language lays in Basic Plane and characters of other planes are{{_}}not{{_}}processed (left intact or deleted), two-byte character is suitable for text processing.</p>
       <p>* Self-synchronizing: if you add any erroneous '''words''' (not bytes), the rest text remains readable. Search in UTF-16, even of one character, will{{_}}not{{_}}make false positives.</p>
-      <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-known [[pt:ascii|ASCII]] string “Bush hid the facts” (probably George Bush Senior) breaks Windows’ statistical detection of UCS-2.</p>
+      <p>* Unreliable detection: without [[pt:bom|byte order mark]] UTF-16 format and byte order are detectable only on indirect evidence{{-}}by statistics or surrogate pairs if they are present. Well-known [[pt:ascii|ASCII]] string “Bush hid the facts” breaks Windows’ statistical detection of UCS-2.</p>
       <p>* Non-monotonous: sorting by UTF-16 words is different from sorting by character codes.</p>
       <p />
       <p>As a format of inter-software exchange UTF-16 is mainly used in binary files originating from Windows and Mac/Motorola (for example, in TrueType fonts). These files do{{_}}not{{_}}need byte order mark; in text files it is FE{{_}}FF for UTF-16BE и FF{{_}}FE for UTF-16LE. As a format of program interface it’s used in Windows, Java, Qt.</p>
@@ -9262,7 +9262,7 @@
    </group>
    <group id="2.0">
     <text id="Text">
-     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted [[pt:stability|stability]] guarantees.</orig>
+     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted main [[pt:stability|stability]] guarantee: the character will not move or disappear.</orig>
     </text>
    </group>
    <group id="2.1">
