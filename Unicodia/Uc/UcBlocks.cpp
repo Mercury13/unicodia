@@ -386,7 +386,8 @@ constinit const uc::Block uc::blocks[] {
     { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumerics",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::NORMAL, Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS },
+            EcScript::NONE, EcFont::NORMAL,
+                    Bfg::SCRIPTLIKE | Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
     // Box drawing OK
     { 0x2500, 0x257F, { L'╢', EcContinent::NONE },
             "Box Drawing",
