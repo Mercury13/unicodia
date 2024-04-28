@@ -109,7 +109,7 @@ constinit const uc::Version uc::versionInfo[] {
     //{ "1.0",  1991 },
     //{ "1.0.1",1992 },
     { u8"1.1",  { 1993, Month::JUN }, Vfg::TEXT },
-    { u8"2.0",  { 1996, Month::JUL }, NO_FLAGS },
+    { u8"2.0",  { 1996, Month::JUL }, Vfg::TEXT },
     { u8"2.1",  { 1998, Month::MAY }, Vfg::TEXT },
     { u8"3.0",  { 1999, Month::SEP }, NO_FLAGS },
     { u8"3.1",  { 2001, Month::MAR }, NO_FLAGS },
@@ -122,7 +122,7 @@ constinit const uc::Version uc::versionInfo[] {
     { u8"6.0",  { 2010, Month::OCT }, NO_FLAGS, u8"0.6" },
     { u8"6.1",  { 2012, Month::JAN }, NO_FLAGS },
     { u8"6.2",  { 2012, Month::SEP }, Vfg::TEXT },
-    { u8"6.3",  { 2013, Month::SEP }, NO_FLAGS },
+    { u8"6.3",  { 2013, Month::SEP }, Vfg::TEXT },
     { u8"7.0",  { 2014, Month::JUN }, NO_FLAGS, u8"0.7" },
     { u8"8.0",  { 2015, Month::JUN }, NO_FLAGS, u8"1.0", { 2015, Month::AUG } },
     { {},       { 2015, Month::NOV }, NO_FLAGS, u8"2.0" },
@@ -180,32 +180,32 @@ constinit const uc::Script uc::scriptInfo[] {
     { "Zyyy", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::NO_STATS },
     // Arrows pseudo-script
     { "ZARR", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Mathematical pseudo-script
     { "ZMAT", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Symbols and pictographs pseudo-script
     { "ZSYM", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Dingbats pseudo-script
     { "ZDIN", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Diacritical pseudo-script
     { "ZDIA", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
             Dating::none(),
-            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY },
+            EcFont::NORMAL, Sfg::NONSCRIPT | Sfg::NO_LANGS | Sfg::SORT_KEY | Sfg::NO_STATS },
     // Adlam OK, W10 has, but placement of umlauts + RTL = ??? → better Noto
     { "Adlm", QFontDatabase::Any,
         EcScriptType::ALPHABET, EcLangLife::NEW, EcWritingDir::RTL, EcContinent::AFRICA,
@@ -422,7 +422,7 @@ constinit const uc::Script uc::scriptInfo[] {
     // Hentaigana currently OK
     { "Hent", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::CONSERVED, EcWritingDir::LTR_CJK, EcContinent::CJK,
-        Dating::crange(8, 9), EcFont::HENTAIGANA },
+        Dating::crange(8, 9), EcFont::HENTAIGANA, Sfg::NO_STATS },
     // Hiragana OK, installed small version of Noto CJK Korean
     { "Hira", QFontDatabase::Japanese,
         EcScriptType::SYLLABLE, EcLangLife::ALIVE, EcWritingDir::LTR_CJK, EcContinent::CJK,
@@ -887,7 +887,7 @@ constinit const uc::Script uc::scriptInfo[] {
         Dating::ybefore(1700), EcFont::ZANABAZAR },
     { "Zinh", QFontDatabase::Any,
         EcScriptType::NONE, EcLangLife::NOMATTER, EcWritingDir::NOMATTER, EcContinent::NONE,
-        Dating::none(), EcFont::NORMAL, Sfg::NO_LANGS },
+        Dating::none(), EcFont::NORMAL, Sfg::NO_LANGS | Sfg::NO_STATS },
 };
 
 
@@ -1817,7 +1817,11 @@ void uc::completeData()
             ++ver.stats.chars.nw.nHani; break;
         case EcScript::NONE:
         case EcScript::Zinh:
-            ++ver.stats.chars.nw.nSymbols; break;
+            if (cp.ecCategory == EcCategory::FORMAT) {
+                ++ver.stats.chars.nw.nFormat; break;
+            } else {
+                ++ver.stats.chars.nw.nSymbols; break;
+            }
         default:
             if (cp.script().ecVersion == cp.ecVersion) {
                 ++ver.stats.chars.nw.nNewScripts;
@@ -1872,14 +1876,30 @@ void uc::completeData()
 
     completeEmojiData(1);
 
+    // Scripts
+    for (auto& sc : scriptInfo) {
+        if (!sc.flags.have(Sfg::NO_STATS)) {
+            auto& version = sc.version();
+            ++version.stats.scripts.nNew;
+        }
+    }
+
     // Check versions
-    unsigned nChars = 0, nEmoji = 0;
-    uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)].stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
+    unsigned nChars = 0, nEmoji = 0, nScripts = 0;
+    // v1.1
+    auto& v11 = uc::versionInfo[static_cast<int>(uc::EcVersion::V_1_1)];
+    v11.stats.chars.nTransient = 4306 + 2350;  // Hangul syllables
+    // Go!
     for (auto& v : versionInfo) {
+        // Chars
         nChars += v.stats.chars.nw.nTotal();
         v.stats.chars.nTotal = nChars + v.stats.chars.nTransient;
+        // Emoji
         nEmoji += v.stats.emoji.nw.nTotal();
         v.stats.emoji.nTotal = nEmoji;
+        // Scripts
+        nScripts += v.stats.scripts.nNew;
+        v.stats.scripts.nTotal = nScripts;
     }
 
     // Save term INI

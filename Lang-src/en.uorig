@@ -714,6 +714,9 @@
     <text id="NewEx">
      <orig>…from existing scripts</orig>
     </text>
+    <text id="NewFmt">
+     <orig>…[[pt:format|format]] characters without script</orig>
+    </text>
     <text id="NewSym">
      <orig>…misc. symbols</orig>
     </text>
@@ -758,6 +761,12 @@
     </text>
     <text id="TotalEm">
      <orig>Total emoji</orig>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
     </text>
    </group>
    <group id="Os">
@@ -9251,6 +9260,11 @@
      </orig>
     </text>
    </group>
+   <group id="2.0">
+    <text id="Text">
+     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted [[pt:stability|stability]] guarantees.</orig>
+    </text>
+   </group>
    <group id="2.1">
     <text id="Text">
      <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
@@ -9259,6 +9273,11 @@
    <group id="6.2">
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
+    </text>
+   </group>
+   <group id="6.3">
+    <text id="Text">
+     <orig>Five [[pt:format|format]] characters for [[pt:bidi|bidirectional]] text.</orig>
     </text>
    </group>
    <group id="12.1">

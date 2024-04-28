@@ -898,6 +898,10 @@
      <orig>…from existing scripts</orig>
      <transl>…из имеющихся письменностей</transl>
     </text>
+    <text id="NewFmt">
+     <orig>…[[pt:format|format]] characters without script</orig>
+     <transl>…[[pt:format|форматирующих]] символов без письменности</transl>
+    </text>
     <text id="NewSym">
      <orig>…misc. symbols</orig>
      <transl>…разных знаков</transl>
@@ -957,6 +961,14 @@
     <text id="TotalEm">
      <orig>Total emoji</orig>
      <transl>Всего эмодзи</transl>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+     <transl>Новых письменностей</transl>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
+     <transl>Всего письменностей</transl>
     </text>
    </group>
    <group id="Os">
@@ -13249,6 +13261,12 @@
      </transl>
     </text>
    </group>
+   <group id="2.0">
+    <text id="Text">
+     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted [[pt:stability|stability]] guarantees.</orig>
+     <transl>Версия 2.0 перенесла [[pt:precomposed|монолитные]] слоги [[ps:Hang|хангыля]] на их текущее место. Шум поднялся такой, что Юникод принял гарантии [[pt:stability|стабильности]].</transl>
+    </text>
+   </group>
    <group id="2.1">
     <text id="Text">
      <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
@@ -13259,6 +13277,12 @@
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
      <transl>Добавлен знак турецкой лиры 20BA, представленный в марте 2012.</transl>
+    </text>
+   </group>
+   <group id="6.3">
+    <text id="Text">
+     <orig>Five [[pt:format|format]] characters for [[pt:bidi|bidirectional]] text.</orig>
+     <transl>Пять [[pt:format|форматирующих]] символов для [[pt:bidi|двунаправленного]] текста.</transl>
     </text>
    </group>
    <group id="12.1">

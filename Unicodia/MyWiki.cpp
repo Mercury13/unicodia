@@ -2146,6 +2146,7 @@ QString mywiki::buildHtml(const uc::Version& version)
             appendValueIf(sp, "Prop.Bullet.NewCjk", version.stats.chars.nw.nHani);
             appendValueIf(sp, "Prop.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
             appendValueIf(sp, "Prop.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
+            appendValueIf(sp, "Prop.Bullet.NewFmt", version.stats.chars.nw.nFormat);
             appendValueIf(sp, "Prop.Bullet.NewSym", version.stats.chars.nw.nSymbols);
         }
         // Total
@@ -2172,6 +2173,10 @@ QString mywiki::buildHtml(const uc::Version& version)
             // Total emoji
             appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal);
         }
+        if (!version.isFirst()) {
+            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew);
+        }
+        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal);
     }
 
     // Text

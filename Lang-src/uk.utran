@@ -899,6 +899,10 @@
      <orig>…from existing scripts</orig>
      <transl>…з наявних писемностей</transl>
     </text>
+    <text id="NewFmt">
+     <orig>…[[pt:format|format]] characters without script</orig>
+     <transl>…[[pt:format|форматуючих]] символів без писемності</transl>
+    </text>
     <text id="NewSym">
      <orig>…misc. symbols</orig>
      <transl>…різних знаків</transl>
@@ -958,6 +962,14 @@
     <text id="TotalEm">
      <orig>Total emoji</orig>
      <transl>Усього емодзі</transl>
+    </text>
+    <text id="NewSc">
+     <orig>New scripts</orig>
+     <transl>Нових писемностей</transl>
+    </text>
+    <text id="TotalSc">
+     <orig>Total scripts</orig>
+     <transl>Усього писемностей</transl>
     </text>
    </group>
    <group id="Os">
@@ -13244,10 +13256,16 @@
       <p />
       <p>Версія 1.0 (жовтень 1991, ≈7200 символів) додала більшість писемностей 1.1, включаючи [[ps:Tibt|тибетську]], видалену в 1.1, та 2350 складів [[ps:Hang|хангилю]], що видалять у [[pv:2.0|2.0]].</p>
       <p />
-      <p>Версія 1.0.1 (червень 1992, ≈28{{.}}300 символів) додала 20{{.}}902 [[ps:Hani|ієрогліфи ККЯ]], та видалила 6{{_}}символsв.</p>
+      <p>Версія 1.0.1 (червень 1992, ≈28{{.}}300 символів) додала 20{{.}}902 [[ps:Hani|ієрогліфи ККЯ]], та видалила 6{{_}}символів.</p>
       <p />
       <p>Версія 1.1 додала ще 4306 символів хангилю, та вилучила тибетську.</p>
      </transl>
+    </text>
+   </group>
+   <group id="2.0">
+    <text id="Text">
+     <orig>Version 2.0 moved [[pt:precomposed|precomposed]] [[ps:Hang|Hangul]] syllables to their current place. After a great outcry Unicode adopted [[pt:stability|stability]] guarantees.</orig>
+     <transl>Версія 2.0 перенесла [[pt:precomposed|монолітні]] склади [[ps:Hang|хангилю]] на їх поточне місце. Галас здійнявся такий, що Юнікод прийняв гарантії [[pt:stability|стабільності]].</transl>
     </text>
    </group>
    <group id="2.1">
@@ -13260,6 +13278,12 @@
     <text id="Text">
      <orig>Added Turkish lira sign 20BA presented in March 2012.</orig>
      <transl>Добавлено знак турецької ліри 20BA, представлений у березні 2012.</transl>
+    </text>
+   </group>
+   <group id="6.3">
+    <text id="Text">
+     <orig>Five [[pt:format|format]] characters for [[pt:bidi|bidirectional]] text.</orig>
+     <transl>П’ять [[pt:format|форматуючих]] символів для [[pt:bidi|двонапрямленого]] тексту.</transl>
     </text>
    </group>
    <group id="12.1">

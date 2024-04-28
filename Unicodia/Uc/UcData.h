@@ -662,9 +662,10 @@ namespace uc {
                     unsigned nHani = 0;
                     unsigned nNewScripts = 0;
                     unsigned nExistingScripts = 0;
+                    unsigned nFormat = 0;  ///< Format w/o script
                     unsigned nSymbols = 0;
                     unsigned nTotal() const noexcept
-                        { return nHani + nNewScripts + nExistingScripts + nSymbols; }
+                        { return nHani + nNewScripts + nExistingScripts + nFormat + nSymbols; }
                 } nw;
             } chars;
             struct Emoji {
@@ -693,6 +694,11 @@ namespace uc {
             struct Blocks {
                 unsigned nNew = 0;
             } blocks;
+            struct Scripts {
+                unsigned nNew = 0;
+                unsigned nTotal = 0;
+            } scripts;
+
             EcVersion thisEcVersion = EcVersion::NONE;
         } stats {};
 
@@ -720,7 +726,9 @@ namespace uc {
         DESC_FROM_PREV = 1<<2,  ///< [+] Description is taken from previous script (Meroitic, Sogdian)
         SORT_KEY       = 1<<3,  ///< [+] Pseudo-script made specially for sorting
         STUB_RTL       = 1<<4,  ///< Use “RtL mark” char in stub
-        STUB_ALM       = 1<<5,  ///< Use “Arabic letter mark” char in stub
+        STUB_ALM       = 1<<5,  ///< Use “Arabic letter mark” char in stub        
+        NO_STATS       = 1<<6,  ///< Do not count in # of scripts
+                                ///< Hent = Hira, Zinh is scripted for search, but do not count
     };
     DEFINE_ENUM_OPS(Sfg)
 
