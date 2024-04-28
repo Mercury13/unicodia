@@ -454,6 +454,7 @@ namespace uc {
     struct Block;
     struct Font;
 
+    ///  @warning  For GRAPHIC_SAMPLE it works in different fashion
     struct StyleSheet {
         short topPc = 0, botPc = 0;
         QString toQ() const;

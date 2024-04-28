@@ -381,7 +381,7 @@ constinit const uc::Block uc::blocks[] {
             "Optical Character Recognition",
             // Fonts coincide
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::PHAISTOS_DISC },
+            EcScript::NONE, EcFont::OCR },
     // Enclosed alnum OK, need ordinary Cambria
     { 0x2460, 0x24FF, { L'①', EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumerics",
@@ -1413,7 +1413,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumeric Supplement",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE },
+            EcScript::NONE, EcFont::DINGBAT, Bfg::SCRIPTLIKE | Bfg::NO_EMOJI },
     // Enclosed hiero OK
     { 0x1F200, 0x1F2FF,
             { 0x1F202, EcContinent::CJK, Ifg::CONTINENT_OK | Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },

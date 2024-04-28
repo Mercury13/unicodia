@@ -362,6 +362,7 @@ namespace uc {
         NORTH_ARABIAN,
         NP_HMONG,
         NUSHU,
+        OCR,
         OGHAM,
         OLCHIKI,
         OLD_HUNGARIAN,

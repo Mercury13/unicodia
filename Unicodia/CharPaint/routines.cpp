@@ -246,11 +246,18 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
             drawCharOverEmoji(&painter, geometry(), qfont,
                       palette().windowText().color(), subj);
         } break;
-    case Mode::GRAPHIC_SAMPLE: {
+    case Mode::GRAPHIC_SAMPLE: {        
             QPainter painter(this);
             painter.setFont(qfont);
             painter.setPen(palette().windowText().color());
-            painter.drawText(geometry(), Qt::AlignCenter, proxy.text);
+            QRectF r = geometry();
+            if (proxy.styleSheet.topPc != 0) {
+                r.setTop(r.top() - qfont.pointSizeF() * proxy.styleSheet.topPc / 100.0);
+            }
+            if (proxy.styleSheet.botPc != 0) {
+                r.setBottom(r.bottom() + qfont.pointSizeF() * proxy.styleSheet.botPc / 100.0);
+            }
+            painter.drawText(r, Qt::AlignCenter, proxy.text);
         } break;
     }
 }

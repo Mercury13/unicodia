@@ -44,13 +44,13 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                        // …2
       { FNAME_NOTOMATH, Ffg::FALL_TO_NEXT },                                    // …3
       { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },              // …4
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …5
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 30_bot },      // …5
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …6  Let it be, system font
       { FAM_HISTORIC },                                                         // …7  Let it be, system font
     { FNAME_NOTO, Ffg::FALL_TO_NEXT },                                          // Noto
      { FNAME_FUNKY },                                                           // …1
-    { FNAME_NOTOSYM2 },                                                         // Noto symbol2
-    { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT },                   // Noto symbol2 bigger
+    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 30_bot },                            // Noto symbol2
+    { FNAME_NOTOSYM2, Ffg::DESC_BIGGER | Ffg::FALL_TO_NEXT | Ffg::GRAPHIC_SAMPLE, 30_bot }, // Noto symbol2 bigger
       /// @todo [U16, gag] delete when control pictures are ready
       { FNAME_FUNKY, 115_pc },                                                  // …1
     { "Segoe UI Symbol" },                                                      // Symbol
@@ -223,6 +223,7 @@ constinit const uc::Font uc::fontInfo[] = {
     { "NotoSansOldNorthArabian-Regular.ttf" },                                  // North Arabian
     { "NotoSerifNPHmong-Regular.ttf" },                                         // NP Hmong
     { "NotoTraditionalNushu-Light.ttf", Ffg::LIGHT },                           // Nushu
+    { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE, 20_bot, 150_pc },                    // OCR
     { "NotoSansOgham-Regular.ttf", 110_pc },                                    // Ogham
     { "NotoSansOlChiki-Regular.ttf" },                                          // Ol Chiki
     { "OldHungarian.ttf" },                                                     // Old Hungarian runes
