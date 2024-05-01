@@ -151,9 +151,9 @@ constinit const uc::Font uc::fontInfo[] = {
     { "Sylfaen", Ffg::FALL_TO_NEXT },                                           // Georgian Nuskhuri
       { FNAME_DEJAVU, Ffg::FALL_TO_NEXT },                                      // …1 — FALL to Georgian
     { "NotoSerifGeorgian-Regular.ttf" },                                        // Georgian
-    { "Shafarik-Regular.ttf", Ffg::FALL_TO_NEXT, 115_pc,
+    { "Shafarik-Regular.ttf", Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 115_pc,
             StyleChange { .delta = 0xF0200 - 0x2C00 } },                        // Glagolitic
-      /// @todo [U16, gag] Replace with Noto Serif when it appears
+      /// @todo [U16, gag] For Cyr C; replace with Noto Serif when it appears
       { FNAME_FUNKY },                                                          // …1  for Cyr C Khanty
     { "NotoSansGrantha-Regular.ttf", Ffg::CELL_SMALLER, 10_top + 12_bot },      // Grantha
     { "NotoSerifGujarati-Regular.ttf", Ffg::DESC_BIGGER, 110_pc },              // Gujarati
