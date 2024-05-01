@@ -128,8 +128,8 @@ constinit const uc::Font uc::fontInfo[] = {
     { "newathuBold5_8.ttf", Ffg::BOLD },                                        // Coptic
     { "NotoSansCuneiform-Regular.ttf" },                                        // Cuneiform
     { FNAME_DEVA, Ffg::DESC_STD, STYLE_DEVA, SIZE_DEVA },                       // Devanagari
-    { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                      // Dingbat
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …1
+    { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT },                // Dingbat
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 20_bot },      // …1
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …2
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …3
       { FNAME_BABEL, 130_pc },                                                  // …4

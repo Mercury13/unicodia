@@ -779,7 +779,7 @@ void drawVirtualVirama(
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
 
-
+/// @todo [urgent] unify with drawSample
 void drawCharOverEmoji(
         QPainter* painter, const QRect& rect, const QFont& font,
         const QColor& color, char32_t subj)
