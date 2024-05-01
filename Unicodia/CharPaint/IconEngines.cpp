@@ -386,8 +386,13 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         clFg = cont.icon.fgColor;
     }
     auto rcContent = rect;
-    if (si.flags.have(uc::Ifg::SHIFT_RIGHT)) {
-        rcContent.setRight(rcContent.right() + (rcContent.width() / 3));
+    if (si.flags.haveAny(uc::Ifg::SHIFT_LEFT | uc::Ifg::SHIFT_RIGHT)) {
+        auto delta = rcContent.width() / 3;
+        if (si.flags.haveAny(uc::Ifg::SHIFT_LEFT)) {
+            rcContent.setLeft(rcContent.left() - delta);
+        } else {
+            rcContent.setRight(rcContent.right() + delta);
+        }
     }
     if (si.flags.have(uc::Ifg::SMALLER))
         scale *= 0.8;

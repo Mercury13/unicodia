@@ -961,7 +961,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Sogd, 1 }, MapType::AS_OTHER_DEAD,
             EcScript::Sogd, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Old Uyghur OK
-    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW },
+    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW | Ifg::SHIFT_LEFT },
             "Old Uyghur",
             { EcScript::Ougr, 0 }, MapType::AS_OTHER_DEAD,
             EcScript::Ougr, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
