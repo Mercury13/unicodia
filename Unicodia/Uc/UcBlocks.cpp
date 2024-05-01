@@ -221,7 +221,8 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Khmr, 0 }, MapType::AS_BRAH,
             EcScript::Khmr, EcFont::NORMAL, Bfg::VIRAMA_UP },
     // Mongol OK, implemented ligature
-    { 0x1800, 0x18AF, { 0x183E, EcContinent::ASIA, Ifg::APPROX_ROTATED, 11_hx },
+    { 0x1800, 0x18AF,
+            { 0x183E, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT, 11_hx },
             "Mongolian",
             { EcScript::Mong, 0 }, MapType::AS_OTHER,
             EcScript::Mong, EcFont::NORMAL, Bfg::BIG_CONTROLS,
@@ -613,7 +614,7 @@ constinit const uc::Block uc::blocks[] {
             EcScript::Deva, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Phags-pa OK
     { 0xA840, 0xA87F,
-            { 0xA850, EcContinent::ASIA, Ifg::APPROX_ROTATED, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
+            { 0xA850, EcContinent::ASIA, Ifg::ROTATE_LTR_CW, SvgHint{ 15, 3, ImbaY::BELOW_4 } },
             "Phags-pa",
             { EcScript::Phag, 0 }, MapType::AS_BRAH_DEAD,
             EcScript::Phag, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::VERTICAL },
@@ -955,12 +956,12 @@ constinit const uc::Block uc::blocks[] {
             "Old Sogdian",
             { EcScript::Sogd, 0 }, MapType::AS_OTHER_DEAD, EcScript::Sogo },
     // Sogdian OK
-    { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA },
+    { 0x10F30, 0x10F6F, { 0x10F30, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW },
             "Sogdian",
             { EcScript::Sogd, 1 }, MapType::AS_OTHER_DEAD,
             EcScript::Sogd, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
     // Old Uyghur OK
-    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA },
+    { 0x10F70, 0x10FAF, { 0x10F70, EcContinent::ASIA, Ifg::ROTATE_RTL_CCW },
             "Old Uyghur",
             { EcScript::Ougr, 0 }, MapType::AS_OTHER_DEAD,
             EcScript::Ougr, EcFont::NORMAL, Bfg::CCW, EcGlyphStyleChannel::VERTICAL },
@@ -1039,7 +1040,7 @@ constinit const uc::Block uc::blocks[] {
             "Modi",
             { EcScript::Modi, 0 }, MapType::AS_BRAH_DEAD, EcScript::Modi },
     // Mongolian supp OK
-    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::APPROX_ROTATED },
+    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::ROTATE_LTR_CW },
             "Mongolian Supplement",
             { EcScript::Mong, 1 }, MapType::AS_OTHER,
             EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION, EcGlyphStyleChannel::VERTICAL },

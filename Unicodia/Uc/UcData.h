@@ -839,10 +839,11 @@ namespace uc {
         CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
         FORMAT            = 1<<3,   ///< [+] format char is on icon
         SMALLER           = 1<<4,   ///< [+] draw synth. icon smaller (legacy)
+        ROTATE_LTR_CW     = 1<<5,   ///< [+] To display properly, 90°↷: Mong, Phag (→ in Unicode)
+        ROTATE_RTL_CCW    = 1<<6,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
+        SHIFT_RIGHT       = 1<<7,   ///< [+] To display a synth. icon, shift it to the right
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
-        APPROX_ROTATED    = 0,      ///< [+] rotated text on icon:
-                                    ///<      Mong, Phag
         APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:
                                     ///<      Latin ex F, Cyr ex D
         APPROX_OTHER_LINES = 0,     ///< [+] other lines on icon: Georian Mtavruli

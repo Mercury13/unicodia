@@ -385,11 +385,26 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         drawCharBorder(painter, rect, clFg);
         clFg = cont.icon.fgColor;
     }
+    auto rcContent = rect;
+    if (si.flags.have(uc::Ifg::SHIFT_RIGHT)) {
+        rcContent.setRight(rcContent.right() + (rcContent.width() / 3));
+    }
     if (si.flags.have(uc::Ifg::SMALLER))
         scale *= 0.8;
-    // Draw icon a bit larger — 120%
-    // Synth icon always draws in default settings
-    drawIconChars(painter, rect, lround(120 * scale), si.subj.sv(), clFg);
+    auto size = lround(120 * scale);  // Draw icon a bit larger — 120%
+    if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW | uc::Ifg::ROTATE_RTL_CCW)) {
+        // Draw direction
+        int direction = -90;
+        if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW))
+            direction = 90;
+        auto firstChar = si.subj.v[0];
+        const uc::Cp& firstCp = *uc::cpsByCode[firstChar];
+        auto font = fontAt(uc::DrawMethod::SAMPLE, size, firstCp);
+        drawVertical(painter, rcContent, *font, direction, clFg, str::toQ(si.subj.sv()));
+    } else {
+        // Synth icon always draws in default settings
+        drawIconChars(painter, rcContent, size, si.subj.sv(), clFg);
+    }
 }
 
 ///// Node /////////////////////////////////////////////////////////////////////
