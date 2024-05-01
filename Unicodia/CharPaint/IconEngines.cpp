@@ -385,6 +385,7 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         drawCharBorder(painter, rect, clFg);
         clFg = cont.icon.fgColor;
     }
+    // Shift left/right
     auto rcContent = rect;
     if (si.flags.haveAny(uc::Ifg::SHIFT_LEFT | uc::Ifg::SHIFT_RIGHT)) {
         auto delta = rcContent.width() / 3;
@@ -394,9 +395,11 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
             rcContent.setRight(rcContent.right() + delta);
         }
     }
+    // Get size
     if (si.flags.have(uc::Ifg::SMALLER))
         scale *= 0.8;
     auto size = lround(120 * scale);  // Draw icon a bit larger — 120%
+    // Rotation
     if (si.flags.haveAny(uc::Ifg::ROTATE_LTR_CW | uc::Ifg::ROTATE_RTL_CCW)) {
         // Draw direction
         int direction = -90;
