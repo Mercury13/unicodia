@@ -201,7 +201,6 @@ void WiSample::showCp(
     case uc::DrawMethod::MARCHEN: {  // Sample and Marchen differ in table
             auto retFont = drawWithQt(ch, emojiDraw, glyphSets, true);
             if (retFont) {
-                /// @todo [urgent] use sampleProxy
                 auto proxy = ch.sampleProxy(uc::ProxyType::EXTENDED, emojiDraw, glyphSets);
                 ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
                 Flags<uc::FontGetFg> fgs;
