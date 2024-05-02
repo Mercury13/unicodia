@@ -97,6 +97,10 @@ signals:
 };
 
 
+constexpr int DEFAULT_TREE_INDENT = 20;
+constexpr int EMOJI_INDENT = 10;
+
+
 class SearchTree : public QTreeView
 {
     Q_OBJECT

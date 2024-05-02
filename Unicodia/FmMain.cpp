@@ -755,7 +755,7 @@ void SearchModel::initStyleOption(
     QStyledItemDelegate::initStyleOption(option, index);
     auto& line = lineAt(index.row());
     if (line.nestLevel != 0) {
-        option->rect.setLeft(option->rect.left() + 10 * line.nestLevel);
+        option->rect.setLeft(option->rect.left() + EMOJI_INDENT * line.nestLevel);
     }
 }
 

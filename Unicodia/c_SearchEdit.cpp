@@ -200,5 +200,5 @@ void SearchTree::mouseDoubleClickEvent(QMouseEvent* ev)
 
 void SearchTree::setFlat(bool x)
 {
-    setIndentation(x ? 0 : 20);
+    setIndentation(x ? 0 : DEFAULT_TREE_INDENT);
 }
