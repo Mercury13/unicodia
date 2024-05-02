@@ -3934,7 +3934,12 @@
      <orig>languages of Canadian aborigins: Cree, Ojibwe ''(Algonquin)'', Naskapi, Inuiktut ''(Eskimo)''…</orig>
     </text>
     <text id="Text">
-     <orig>Invented by missionaire James Evans in 1833. Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</orig>
+     <orig>
+      <p>Invented by missionaire James Evans in 1833. While working on Ojibwe languages, he experienced two troubles: lots of repeating syllables made writing very long, and students often confused rules for English and native. That’s why he decided to make a brand new script for Cree (later adopted by some Ojibwe tribes).</p>
+      <p />
+      <p>Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</p>
+     </orig>
+     <au-cmt>Evans: https://elementy.ru/problems/3036/Moroz_Krasnyy_nos</au-cmt>
     </text>
    </group>
    <group id="Cham">

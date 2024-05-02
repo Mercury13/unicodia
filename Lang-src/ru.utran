@@ -5344,8 +5344,17 @@
      <transl>языки канадских аборигенов: кри, оджибве ''(алгонкинский)'', наскапи, инуктитут ''(эскимосский)''…</transl>
     </text>
     <text id="Text">
-     <orig>Invented by missionaire James Evans in 1833. Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</orig>
-     <transl>Изобретена миссионером Джеймсом Эвансом в 1833 году. Огласовки заключаются в повороте буквы: ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}. Простая согласная{{-}}уменьшенная буква: к={{sm|ᒃ}}.</transl>
+     <orig>
+      <p>Invented by missionaire James Evans in 1833. While working on Ojibwe languages, he experienced two troubles: lots of repeating syllables made writing very long, and students often confused rules for English and native. That’s why he decided to make a brand new script for Cree (later adopted by some Ojibwe tribes).</p>
+      <p />
+      <p>Vowel marks are turned letters: ke={{sm|ᑫ}}, ki={{sm|ᑭ}}, ko={{sm|ᑯ}}, ka={{sm|ᑲ}}. More complex syllables (e.g. long vowels) are written with diacritics: kii={{sm|ᑮ}}. Plain consonant is small letter: k={{sm|ᒃ}}.</p>
+     </orig>
+     <au-cmt>Evans: https://elementy.ru/problems/3036/Moroz_Krasnyy_nos</au-cmt>
+     <transl>
+      <p>Изобретена миссионером Джеймсом Эвансом в 1833 году. Работая над языками оджибве, он столкнулся с двумя проблемами: множество повторяющихся слогов делали письмо очень длинным, и ученики часто путали правила для английского и родного. Потому он решил делать совсем новое письмо для кри (позднее принятое некоторыми пелеменами оджибве).</p>
+      <p />
+      <p>Огласовки заключаются в повороте буквы: ке={{sm|ᑫ}}, ки={{sm|ᑭ}}, ко={{sm|ᑯ}}, ка={{sm|ᑲ}}. Более сложные слоги (например, долгие гласные) задаются диакритикой: кии={{sm|ᑮ}}. Простая согласная{{-}}уменьшенная буква: к={{sm|ᒃ}}.</p>
+     </transl>
     </text>
    </group>
    <group id="Cham">
