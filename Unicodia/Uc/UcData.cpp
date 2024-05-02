@@ -1604,6 +1604,7 @@ Flags<uc::OldComp> uc::cpOldComps(char32_t cp)
     return {};
 }
 
+
 ///// Sutton SignWriting ///////////////////////////////////////////////////////
 
 sw::Info::Info(const uc::Cp& aCp) : fCp(aCp), fData(&EMPTY_CHAR)
@@ -3023,6 +3024,19 @@ QString uc::StyleSheet::toQ() const
     if (botPc != 0) {
         snprintf(buf, std::size(buf), "padding-bottom: %d%%;", int(botPc));
         r += buf;
+    }
+    return r;
+}
+
+
+QRectF uc::StyleSheet::applyToGraphicSample(const QRect& rect, qreal pointSize) const
+{
+    QRectF r = rect;
+    if (topPc != 0) {
+        r.setTop(r.top() - pointSize * topPc / 100.0);
+    }
+    if (botPc != 0) {
+        r.setBottom(r.bottom() + pointSize * botPc / 100.0);
     }
     return r;
 }

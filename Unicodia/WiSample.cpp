@@ -192,10 +192,8 @@ void WiSample::showCp(
     case uc::DrawMethod::SAMPLE:
         // Library never shows text+emoji
         if (!isLib && ch.isVs16Emoji()) {
-            auto font = ch.font(match::Normal::INST);
-            auto qfont = font->get(uc::FontPlace::SAMPLE, FSZ_BIG, NO_FLAGS, &ch);
             ui->stackSample->setCurrentWidget(ui->pageSampleCustom);
-            ui->pageSampleCustom->setCharOverEmoji(qfont, ch.subj);
+            ui->pageSampleCustom->setCharOverEmoji(ch.subj);
             headToLib(ch.subj);
             break;
         }

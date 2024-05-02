@@ -7,6 +7,7 @@
 
 // Qt
 #include <QString>
+#include <QRect>
 
 // Lib
 #include "u_EcArray.h"  // used e.g. for EcNumType!
@@ -454,11 +455,15 @@ namespace uc {
     struct Block;
     struct Font;
 
-    ///  @warning  For GRAPHIC_SAMPLE it works in different fashion
     struct StyleSheet {
         short topPc = 0, botPc = 0;
+
+        ///  @warning  This is QSS way
         QString toQ() const;
         operator QString() const { return toQ(); }
+
+        ///  @warning  This is GRAPHIC_SAMPLE’s way, normal QSS is another
+        QRectF applyToGraphicSample(const QRect& rect, qreal pointSize) const;
     };
 
     struct SampleProxy {

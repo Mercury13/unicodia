@@ -121,7 +121,7 @@ void drawFolderTile(
         const uc::GlyphStyleSets& glyphSets, qreal scale);
 
 void drawCharOverEmoji(
-        QPainter* painter, const QRect& rect, const QFont& font,
+        QPainter* painter, const QRect& rect, int absSize,
         const QColor& color, char32_t subj);
 
 QSize spaceDimensions(const QFont& font, char32_t subj);
@@ -139,7 +139,7 @@ public:
     void setVertical(const QFont& font, const uc::SampleProxy& pr, int angle);
     void setVirtualVirama(char32_t cp);
     void setSampledControl(const QFont& font, const uc::SampleProxy& pr);
-    void setCharOverEmoji(const QFont& font, char32_t aSubj);
+    void setCharOverEmoji(char32_t aSubj);
     void setGraphicSample(const QFont& font, const uc::SampleProxy& pr);
     void setNormal();
     void init();

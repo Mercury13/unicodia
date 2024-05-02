@@ -243,20 +243,14 @@ void WiCustomDraw::paintEvent(QPaintEvent *event)
         } break;
     case Mode::CHAR_OVER_EMOJI: {
             QPainter painter(this);
-            drawCharOverEmoji(&painter, geometry(), qfont,
+            drawCharOverEmoji(&painter, geometry(), FSZ_BIG,
                       palette().windowText().color(), subj);
         } break;
     case Mode::GRAPHIC_SAMPLE: {        
             QPainter painter(this);
             painter.setFont(qfont);
             painter.setPen(palette().windowText().color());
-            QRectF r = geometry();
-            if (proxy.styleSheet.topPc != 0) {
-                r.setTop(r.top() - qfont.pointSizeF() * proxy.styleSheet.topPc / 100.0);
-            }
-            if (proxy.styleSheet.botPc != 0) {
-                r.setBottom(r.bottom() + qfont.pointSizeF() * proxy.styleSheet.botPc / 100.0);
-            }
+            QRectF r = proxy.styleSheet.applyToGraphicSample(geometry(), qfont.pointSizeF());
             painter.drawText(r, Qt::AlignCenter, proxy.text);
         } break;
     }
@@ -358,9 +352,8 @@ void WiCustomDraw::setSpace1(const QFont& font, char32_t aSubj, Mode aMode)
 }
 
 
-void WiCustomDraw::setCharOverEmoji(const QFont& font, char32_t aSubj)
+void WiCustomDraw::setCharOverEmoji(char32_t aSubj)
 {
-    qfont = font;
     subj = aSubj;
     mode = Mode::CHAR_OVER_EMOJI;
     update();
@@ -779,9 +772,8 @@ void drawVirtualVirama(
     painter->drawText(QPointF ( cen.x(), (loY + hiY) * 0.5f ), uc::STUB_PUA_PLUS);
 }
 
-/// @todo [urgent] unify with drawSample
 void drawCharOverEmoji(
-        QPainter* painter, const QRect& rect, const QFont& font,
+        QPainter* painter, const QRect& rect, int absSize,
         const QColor& color, char32_t subj)
 {
     // Emoji
@@ -793,10 +785,15 @@ void drawCharOverEmoji(
     rect1.setBottomLeft({rect.right() - emojiSize, rect.top() + emojiSize});
     emp.draw(painter, rect1, subj, emojiSize, color);
 
+    auto cp = uc::cpsByCode[subj];
+    auto font = cp->font(match::Normal::INST);
+    auto qfont = font->get(uc::FontPlace::SAMPLE, absSize, NO_FLAGS, cp);
+
     // Character
-    painter->setFont(font);
+    painter->setFont(qfont);
     painter->setPen(color);
-    painter->drawText(rect, Qt::AlignCenter, str::toQ(subj));
+    auto rect2 = font->styleSheet.applyToGraphicSample(rect, qfont.pointSizeF());
+    painter->drawText(rect2, Qt::AlignCenter, str::toQ(subj));
 }
 
 
