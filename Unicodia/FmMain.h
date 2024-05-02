@@ -233,22 +233,26 @@ class SearchModel final : public QAbstractTableModel, public QStyledItemDelegate
 public:
     SearchModel(const PixSource* aSample, const uc::GlyphStyleSets& aGlyphSets) noexcept
         : sample(aSample), glyphSets(aGlyphSets) {}
-    int size() const { return v.size(); }
-    int rowCount(const QModelIndex&) const override { return v.size(); }
+    int singleStoreySize() const { return group0().size(); }
+    /// @todo [urgent] group0 here
+    int rowCount(const QModelIndex&) const override { return group0().size(); }
     int columnCount(const QModelIndex&) const override { return 1; }
     QVariant data(const QModelIndex& index, int role) const override;
-    void set(SafeVector<uc::SearchLine>&& x);
+    void set(SafeVector<uc::SearchGroup>&& x);
     void clear();
-    bool hasData() const { return !v.empty(); }
+    bool hasData() const { return !groups.empty(); }
     const uc::SearchLine& lineAt(size_t index) const;
+    const uc::SearchGroup& group0() const;
 protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
 private:
     const PixSource* const sample;
     const uc::GlyphStyleSets& glyphSets;
-    SafeVector<uc::SearchLine> v;
+    SafeVector<uc::SearchGroup> groups;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
-    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;
+
+    static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;    
+    static const uc::SearchGroup EMPTY_GROUP;
 };
 
 

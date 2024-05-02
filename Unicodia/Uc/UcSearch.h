@@ -9,6 +9,7 @@
 
 // Unicode
 #include "UcAutoDefines.h"
+#include "UcContinents.h"
 
 namespace uc {
 
@@ -27,7 +28,7 @@ namespace uc {
     constexpr auto CpType_N = static_cast<int>(CpType::NN);
     extern const std::string_view cpTypeKeys[CpType_N];
 
-    enum class SearchError {
+    enum class SearchError : unsigned char {
         OK,
         NO_SEARCH,          ///< Search did not occur at all
         NOT_FOUND,
@@ -107,14 +108,34 @@ namespace uc {
         SingleResult(SearchError aErr) : err(aErr) {}
     };
 
+    struct SearchGroup {
+        const uc::SynthIcon* icon = nullptr;
+        SafeVector<SearchLine> lines;
+
+        SearchGroup() = default;
+        explicit SearchGroup(SafeVector<SearchLine>&& x) : lines(std::move(x)) {}
+
+        size_t size() const { return lines.size(); }
+        bool isEmpty() const { return lines.empty(); }
+    };
+
+    enum class ReplyStyle {
+        FLAT,       ///< few results, have some sort of priority between
+        GROUPED     ///< many results, all are equal
+    };
+
     struct MultiResult {
         SearchError err = SearchError::OK;
-        SafeVector<SearchLine> v {};
+        ReplyStyle style = ReplyStyle::FLAT;
+        SafeVector<SearchGroup> groups {};
+
         MultiResult(const SingleResult& x);
-        MultiResult(SafeVector<SearchLine>&& aV) :
-            err(aV.empty() ? SearchError::NOT_FOUND : SearchError::OK),
-            v(std::move(aV)) {}
+        MultiResult(SafeVector<SearchLine>&& aV)
+            : err(aV.empty() ? SearchError::NOT_FOUND : SearchError::OK)
+                { groups.emplace_back(std::move(aV)); }
         const uc::Cp* one() const;
+        bool isEmpty() const;
+        bool hasSmth() const { return !isEmpty(); }
     };
 
     struct DecodedEmoji {

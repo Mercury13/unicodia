@@ -44,16 +44,30 @@ uc::MultiResult::MultiResult(const SingleResult& x)
     : err(x.err)
 {
     if (err == SearchError::OK) {
-        auto& bk = v.emplace_back(x);
+        auto& bk = groups.emplace_back().lines.emplace_back(x);
         bk.prio.high = HIPRIO_HEX;
     }
 }
 
 const uc::Cp* uc::MultiResult::one() const
 {
-    if (err == SearchError::OK && v.size() == 1 && v[0].type == CpType::EXISTING)
-        return v[0].cp;
+    if (err == SearchError::OK && groups.size() == 1) {
+        auto& lines = groups[0].lines;
+        if (lines.size() == 1 && lines[0].type == CpType::EXISTING) {
+            return lines[0].cp;
+        }
+    }
     return nullptr;
+}
+
+
+bool uc::MultiResult::isEmpty() const
+{
+    switch (groups.size()) {
+    case 0 : return true;
+    case 1 : return groups[0].isEmpty();
+    default : return false;
+    }
 }
 
 

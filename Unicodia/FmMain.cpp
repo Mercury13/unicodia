@@ -626,27 +626,34 @@ QVariant LangModel::data(const QModelIndex& index, int role) const
 
 ///// SearchModel //////////////////////////////////////////////////////////////
 
+const uc::SearchGroup SearchModel::EMPTY_GROUP;
 
 void SearchModel::clear()
 {
     beginResetModel();
-    v.clear();
+    groups.clear();
     endResetModel();
+}
+
+
+const uc::SearchGroup& SearchModel::group0() const
+{
+    return groups.empty() ? EMPTY_GROUP : groups[0];
 }
 
 
 const uc::SearchLine& SearchModel::lineAt(size_t index) const
 {
-    if (index >= v.size())
+    if (groups.empty() || index >= groups[0].lines.size())
         return uc::SearchLine::STUB;
-    return v[index];
+    return groups[0].lines[index];
 }
 
 
-void SearchModel::set(SafeVector<uc::SearchLine>&& x)
+void SearchModel::set(SafeVector<uc::SearchGroup>&& x)
 {
     beginResetModel();
-    v = std::move(x);
+    groups = std::move(x);
     endResetModel();
 }
 
@@ -1870,7 +1877,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 
     switch (x.err) {
     case uc::SearchError::OK: {
-            searchModel.set(std::move(x.v));
+            searchModel.set(std::move(x.groups));
             openSearch();
             ui->listSearch->setFocus();
             auto index0 = searchModel.index(0, 0);
@@ -1889,7 +1896,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 bool FmMain::doSearch(const QString& what)
 {
     auto results = uc::doSearch(what);
-    auto retValue = !results.v.empty();
+    auto retValue = results.hasSmth();
     showSearchResult(std::move(results));
     return retValue;
 }

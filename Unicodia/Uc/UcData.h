@@ -18,6 +18,7 @@
 // Unicode data
 #include "UcAutoDefines.h"
 #include "UcDating.h"
+#include "UcContinents.h"
 
 class QIcon;
 
@@ -160,18 +161,6 @@ namespace uc {
         RTL_MOSTLY,
         SOGDIAN,
         NN,
-    };
-
-    enum class EcContinent {
-        NONE,
-        TECH,       ///< For Unicode’s own needs
-        EUROPE,     ///< Europe, incl. Georgia and Mediterranean
-        ASIA,       ///< Mainland Asia
-        CJK,        ///< Hani and derived scripts
-        OCEAN,      ///< Indian and Pacific Ocean
-        AFRICA,
-        AMERICA,
-        NN
     };
 
     struct GlyphStyleChannel {
@@ -812,82 +801,6 @@ namespace uc {
     ///     • Non-text characters of Chinese origin: Yijing and Tai Xuan
 
     DEFINE_ENUM_OPS(Bfg)
-
-    struct Continent
-    {
-        // Colors used on 16×16 icons: BG and FG
-        // We use the same colors for synthesized icons
-        struct Icon {
-            QColor bgColor, fgColor, frameColor;
-
-            Icon() = delete;
-            consteval Icon(const QColor& aBg, const QColor& aFg) noexcept
-                : bgColor(aBg), fgColor(aFg), frameColor(aFg) {}
-            consteval Icon(const QColor& aBg, const QColor& aFg, const QColor& aFrame) noexcept
-                : bgColor(aBg), fgColor(aFg), frameColor(aFrame) {}
-        } icon;
-
-        struct Collapse {
-            QColor bgColor, textColor;
-        } collapse;
-    };
-    extern const Continent continentInfo[];
-
-    enum class Ifg {
-        CONTINENT_OK      = 1<<0,   ///< [+] disable auto-check, continent is really OK
-        MISSING           = 1<<1,   ///< [+] red icon, missing block
-        CUSTOM_ENGINE     = 1<<2,   ///< [+] use custom engine in lo-res
-        FORMAT            = 1<<3,   ///< [+] format char is on icon
-        SMALLER           = 1<<4,   ///< [+] draw synth. icon smaller (legacy)
-        ROTATE_LTR_CW     = 1<<5,   ///< [+] To display properly, 90°↷: Mong, Phag (→ in Unicode)
-        ROTATE_RTL_CCW    = 1<<6,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
-        SHIFT_LEFT        = 1<<7,   ///< [+] To display a synth. icon, shift it to the left
-        SHIFT_RIGHT       = 1<<8,   ///< [+] To display a synth. icon, shift it to the right
-        // These flags are merely informational and do nothing,
-        // and certify that the icon is synthesized approximately because of…
-        APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:
-                                    ///<      Latin ex F, Cyr ex D
-        APPROX_OTHER_LINES = 0,     ///< [+] other lines on icon: Georian Mtavruli
-        APPROX_COLLECTIVE = 0,      ///< [+] graphic icon contains collective image, not specific char:
-                                    ///<      variation selectors, tags
-        APPROX_COLOR      = 0,      ///< [+] graphic icon is coloured/colourless:
-                                    ///<      Psalter Pahlavi, board games, CJK emoji
-        APPROX_HISTORICAL = 0,      ///< [+] icon is from historical font with © issues:
-                                    ///<      Cpmn, Tang, Kits
-        // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
-        // dotted circle completely → no flag for such approximation
-    };
-    DEFINE_ENUM_OPS(Ifg)
-
-    struct TwoChars {
-        char32_t v[2];
-
-        consteval TwoChars(char32_t x) : v{x, 0} {}
-        consteval TwoChars(const char32_t x[3]) : v{x[0], x[1]} {}
-
-        unsigned length() const { return (v[1] != 0) + 1; }
-        std::u32string_view sv() const { return {v, length()}; }
-    };
-
-    ///
-    /// \brief The SynthIcon class
-    ///    Initially was a description of synthesized icon in Search.
-    ///    Currently it describes lo-res (16×16 dip) icon in Blocks too.
-    ///
-    struct SynthIcon
-    {
-        TwoChars subj;              ///< character(s) drawn on an icon
-        EcContinent ecContinent;    ///< continent (colour scheme)
-        Flags<Ifg> flags {};        ///< misc. flags (both to synthesized and lo-res)
-        SvgHint svgHint { 0, 0 };   ///< hinting of lo-res icon
-
-        /// @return  Continent, never missing
-        const Continent& normalContinent() const
-            { return continentInfo[static_cast<int>(ecContinent)]; }
-
-        /// @return  Continent, maybe missing
-        const Continent& maybeMissingContinent() const;
-    };
 
     enum class MyName { INST };
 

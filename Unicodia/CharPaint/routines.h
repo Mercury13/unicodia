@@ -4,6 +4,9 @@
 #include <QRect>
 #include <QWidget>
 
+// Libs
+#include "u_TinyOpt.h"
+
 #include "UcData.h"
 #include "global.h"
 
@@ -19,6 +22,10 @@ struct RcPair {
 };
 
 void drawSample(QPainter* painter, QRect rect, int sizePc, const uc::Cp& cp,
+                const QColor& color, uc::EmojiDraw emojiMode,
+                const uc::GlyphStyleSets& glyphSets, float offset);
+
+void drawSample(QPainter* painter, QRect rect, TinyOpt<QFont> font, const uc::Cp& cp,
                 const QColor& color, uc::EmojiDraw emojiMode,
                 const uc::GlyphStyleSets& glyphSets, float offset);
 

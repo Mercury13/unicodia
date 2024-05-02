@@ -124,6 +124,7 @@ HEADERS += \
     Uc/UcAutoCount.h \
     Uc/UcAutoDefines.h \
     Uc/UcClipboard.h \
+    Uc/UcContinents.h \
     Uc/UcCp.h \
     Uc/UcData.h \
     Uc/UcDating.h \
