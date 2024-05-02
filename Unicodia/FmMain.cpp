@@ -711,7 +711,7 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
                     return s;
                 return s + line.node->viewableTitle(uc::TitleMode::LONG);
             default:
-                return s + loc::get(uc::cpTypeKeys[static_cast<int>(line.type)]);
+                return s + loc::get(uc::cpTypeKeys[line.type]);
             }
         }
 
@@ -721,7 +721,6 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::EXISTING:
                 ie = new ie::Cp(*sample, EMOJI_DRAW, line.cp, glyphSets);
                 break;
-            case uc::CpType::NN:
             case uc::CpType::NONCHARACTER:
                 ie = new ie::Nonchar(*sample);
                 break;
@@ -1889,8 +1888,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     case uc::SearchError::NO_SEARCH:
         break;
     default:
-        showSearchError(loc::get(
-                uc::searchErrorKeys[static_cast<int>(x.err)]));
+        showSearchError(loc::get(uc::searchErrorKeys[x.err]));
     }
 }
 

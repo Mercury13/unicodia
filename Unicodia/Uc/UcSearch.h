@@ -15,29 +15,23 @@ namespace uc {
 
     struct Cp;
 
-    enum class CpType {
+    DEFINE_ENUM_IN_NS(uc, CpType,
         EXISTING,
         NONCHARACTER,
         PRIVATE_USE,
         SURROGATE,
         UNALLOCATED,
         RESERVED,           ///< Allocated but still reserved
-        LIBNODE,            ///< library node, currently emoji
-        NN
-    };
-    constexpr auto CpType_N = static_cast<int>(CpType::NN);
-    extern const std::string_view cpTypeKeys[CpType_N];
+        LIBNODE)            ///< library node, currently emoji
+    extern const ec::Array<std::string_view, CpType> cpTypeKeys;
 
-    enum class SearchError : unsigned char {
+    DEFINE_ENUM_TYPE_IN_NS(uc, SearchError, unsigned char,
         OK,
         NO_SEARCH,          ///< Search did not occur at all
         NOT_FOUND,
         CONVERT_ERROR,
-        TOO_BIG,
-        NN
-    };
-    constexpr auto SearchError_N = static_cast<int>(SearchError::NN);
-    extern const std::string_view searchErrorKeys[SearchError_N];
+        TOO_BIG)
+    extern const ec::Array<std::string_view, SearchError> searchErrorKeys;
 
     enum {
         // LOWEST

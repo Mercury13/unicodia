@@ -18,8 +18,10 @@ using namespace std::string_view_literals;
 
 constinit const uc::SearchLine uc::SearchLine::STUB;
 
-const std::string_view uc::cpTypeKeys[CpType_N] {
-    {},     // existing
+constexpr const std::string_view EMPTY_SV {};
+
+constinit const ec::Array<std::string_view, uc::CpType> uc::cpTypeKeys {
+    EMPTY_SV,     // existing
     "Search.NonChar",
     "Search.Private",
     "Search.Surrogate",
@@ -28,9 +30,9 @@ const std::string_view uc::cpTypeKeys[CpType_N] {
     "{LibNode}",
 };
 
-const std::string_view uc::searchErrorKeys[SearchError_N] {
-    {},     // OK
-    {},     // no search
+constinit const ec::Array<std::string_view, uc::SearchError> uc::searchErrorKeys {
+    EMPTY_SV,  // OK
+    EMPTY_SV,  // no search
     "Search.NotFound",
     "Search.BadCode",
     "Search.BigCode",
