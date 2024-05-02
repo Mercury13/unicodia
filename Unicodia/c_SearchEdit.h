@@ -3,7 +3,7 @@
 // Qt
 #include <QLineEdit>
 #include <QComboBox>
-#include <QListView>
+#include <QTreeView>
 
 // Qt ex
 #include "c_WrapAroundTable.h"
@@ -97,12 +97,13 @@ signals:
 };
 
 
-class SearchList : public QListView
+class SearchTree : public QTreeView
 {
     Q_OBJECT
-    using Super = QListView;
+    using Super = QTreeView;
 public:
     using Super::Super;
+    void setFlat(bool x);
 protected:
     void keyPressEvent(QKeyEvent* ev) override;
     void mouseDoubleClickEvent(QMouseEvent* ev) override;

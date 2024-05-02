@@ -173,7 +173,7 @@
             <item>
              <widget class="QStackedWidget" name="stackSearch">
               <property name="currentIndex">
-               <number>0</number>
+               <number>1</number>
               </property>
               <widget class="QWidget" name="pageInfo">
                <layout class="QVBoxLayout" name="verticalLayout_9" stretch="0,0,1">
@@ -280,10 +280,13 @@
                  </widget>
                 </item>
                 <item>
-                 <widget class="SearchList" name="listSearch">
+                 <widget class="SearchTree" name="treeSearch">
                   <property name="frameShape">
                    <enum>QFrame::NoFrame</enum>
                   </property>
+                  <attribute name="headerVisible">
+                   <bool>false</bool>
+                  </attribute>
                  </widget>
                 </item>
                </layout>
@@ -813,11 +816,6 @@
    <header>c_SearchEdit.h</header>
   </customwidget>
   <customwidget>
-   <class>SearchList</class>
-   <extends>QListView</extends>
-   <header>c_SearchEdit.h</header>
-  </customwidget>
-  <customwidget>
    <class>QSvgWidget</class>
    <extends>QWidget</extends>
    <header>QSvgWidget</header>
@@ -834,6 +832,11 @@
    <header>WiShowcase.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>SearchTree</class>
+   <extends>QTreeView</extends>
+   <header>c_SearchEdit.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
   <tabstop>tabsMain</tabstop>
@@ -843,7 +846,7 @@
   <tabstop>btCollapse</tabstop>
   <tabstop>vwInfo</tabstop>
   <tabstop>btCloseSearch</tabstop>
-  <tabstop>listSearch</tabstop>
+  <tabstop>treeSearch</tabstop>
   <tabstop>treeLibrary</tabstop>
   <tabstop>vwLibInfo</tabstop>
   <tabstop>tableFavs</tabstop>

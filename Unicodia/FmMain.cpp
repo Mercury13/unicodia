@@ -23,6 +23,7 @@
 #include <QActionGroup>
 #include <QIconEngine>
 #include <QDesktopServices>
+#include <QListView>
 
 // Qt net
 #include <QNetworkRequest>
@@ -959,7 +960,7 @@ FmMain::FmMain(QWidget *parent)
     initAbout();
 
     // Search
-    ui->listSearch->setIconSize(pixQsize());
+    ui->treeSearch->setIconSize(pixQsize());
 
     // Popup link
     connect(&mainGui, &MyGui::linkActivated, this, &This::popupLinkActivated);
@@ -1103,12 +1104,12 @@ FmMain::InitBlocks FmMain::initBlocks()
     ui->stackSearch->setCurrentWidget(ui->pageInfo);
     connect(ui->btCloseSearch, &QPushButton::clicked, this, &This::closeSearch);
     connect(ui->tableChars, &CharsTable::focusIn, this, &This::closeSearch);
-    ui->listSearch->setUniformItemSizes(true);
-    ui->listSearch->setModel(&searchModel);
-    ui->listSearch->setItemDelegate(&searchModel);
+    ui->treeSearch->setUniformRowHeights(true);
+    ui->treeSearch->setModel(&searchModel);
+    ui->treeSearch->setItemDelegate(&searchModel);
     connect(ui->edSearch, &SearchCombo::searchPressed, this, &This::startSearch);
     connect(ui->edSearch, &SearchCombo::focusIn, this, &This::focusSearch);
-    connect(ui->listSearch, &SearchList::enterPressed, this, &This::searchEnterPressed);
+    connect(ui->treeSearch, &SearchTree::enterPressed, this, &This::searchEnterPressed);
 
     // Sort menu
     QActionGroup* grpSortBy = new QActionGroup(this);
@@ -1877,12 +1878,13 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 
     switch (x.err) {
     case uc::SearchError::OK: {
+            ui->treeSearch->setFlat(x.style == uc::ReplyStyle::FLAT);
             searchModel.set(std::move(x.groups));
             openSearch();
-            ui->listSearch->setFocus();
+            ui->treeSearch->setFocus();
             auto index0 = searchModel.index(0, 0);
-            ui->listSearch->setCurrentIndex(index0);
-            ui->listSearch->scrollTo(index0);
+            ui->treeSearch->setCurrentIndex(index0);
+            ui->treeSearch->scrollTo(index0);
         } break;
     case uc::SearchError::NO_SEARCH:
         break;
@@ -1917,8 +1919,8 @@ void FmMain::searchEnterPressed(int index)
     } else if (line.node) {
         goToNode(*line.node);
     } else {
-        auto relRect = ui->listSearch->visualRect(searchModel.index(index, 0));
-        mainGui.blinkAtRel(loc::get("Search.NoSuch"), ui->listSearch->viewport(), relRect);
+        auto relRect = ui->treeSearch->visualRect(searchModel.index(index, 0));
+        mainGui.blinkAtRel(loc::get("Search.NoSuch"), ui->treeSearch->viewport(), relRect);
     }
 }
 

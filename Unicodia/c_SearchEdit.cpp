@@ -163,10 +163,10 @@ void CharsTable::focusOutEvent(QFocusEvent* ev)
 }
 
 
-///// SearchList ///////////////////////////////////////////////////////////////
+///// SearchTree ///////////////////////////////////////////////////////////////
 
 
-void SearchList::keyPressEvent(QKeyEvent* ev)
+void SearchTree::keyPressEvent(QKeyEvent* ev)
 {
     switch (ev->key()) {
     case Qt::Key_Enter:
@@ -183,7 +183,7 @@ void SearchList::keyPressEvent(QKeyEvent* ev)
 }
 
 
-void SearchList::mouseDoubleClickEvent(QMouseEvent* ev)
+void SearchTree::mouseDoubleClickEvent(QMouseEvent* ev)
 {
     if (ev->button() == Qt::LeftButton
             && !ev->modifiers().testFlag(Qt::KeyboardModifierMask)) {
@@ -195,4 +195,10 @@ void SearchList::mouseDoubleClickEvent(QMouseEvent* ev)
     } else {
         Super::mouseDoubleClickEvent(ev);
     }
+}
+
+
+void SearchTree::setFlat(bool x)
+{
+    setIndentation(x ? 0 : 20);
 }
