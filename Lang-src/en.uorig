@@ -955,7 +955,7 @@
      <orig>
       <p>Latin-1 is a second name of 8-bit encoding '''ISO{{_}}8859-1''' introduced in 1987 and extending [[pt:ascii|ASCII]] to European languages.</p>
       <p />
-      <p>First 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost upper bit, and it’s infeasible to have printable characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
+      <p>First 32 characters, 80…9F, are [[pt:control|control]] for compatibility with 7-bit encodings: mail programs sometimes lost upper bit, and it’s infeasible to have [[pt:graphic|printable]] characters here. Nowadays these characters are not{{_}}used as intended and serve as [[pt:private|private-use]]. For example, Windows-1252 encoding is the same Latin-1, but control positions are replaced with typography characters. It got to the point where World Wide Web standards say: if a page requests ISO{{_}}8859-1, display it in Windows-1252.</p>
       <p />
       <p>We see characters × and ÷ among letters. Initially Œœ should have been there, but French delegate insisted that OE is enough.</p>
      </orig>
