@@ -276,7 +276,6 @@ namespace uc {
           Z_DI2_1,
           Z_DI2_2,
           Z_DI2_3,
-          Z_DI2_4,
         DIVES_AKURU,
         DOGRA,
         DOMINOES,
