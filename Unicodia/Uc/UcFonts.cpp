@@ -134,8 +134,8 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_FUNKY, Ffg::FALL_TO_NEXT },                                       // …3
       { FNAME_BABEL, 130_pc },                                                  // …4
     { FAM_DEFAULT, Ffg::FALL_TO_NEXT },                                         // Dingbat 2
-      { FNAME_NOTOSYM1, Ffg::FALL_TO_NEXT },                                    // …1
-      { FNAME_NOTOSYM2, Ffg::FALL_TO_NEXT },                                    // …2
+      { FNAME_NOTOSYM1, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 10_bot },      // …1
+      { FNAME_NOTOSYM2, Ffg::GRAPHIC_SAMPLE | Ffg::FALL_TO_NEXT, 20_bot },      // …2
       { "Segoe UI Symbol", Ffg::FALL_TO_NEXT },                                 // …3
       { FNAME_FUNKY },                                                          // …4
     { "NotoSerifDivesAkuru-Regular.ttf", Ffg::DESC_BIGGER, 12_bot, 110_pc },    // Dives Akuru
