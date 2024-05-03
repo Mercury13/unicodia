@@ -279,6 +279,7 @@ namespace uc {
           Z_DI2_4,
         DIVES_AKURU,
         DOGRA,
+        DOMINOES,
         DUPLOYAN,
         EGYPTIAN,
           Z_EGY_1,

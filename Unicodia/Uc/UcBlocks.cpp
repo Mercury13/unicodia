@@ -1402,14 +1402,13 @@ constinit const uc::Block uc::blocks[] {
     // Domino tiles OK
     { 0x1F030, 0x1F09F, { 0x1F043, EcContinent::NONE },
             "Domino Tiles",
-            // Fonts coincide
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::PHAISTOS_DISC },
+            EcScript::NONE, EcFont::DOMINOES },
     // Cards OK
     { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
             "Playing Cards",
             MyName::INST, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::PHAISTOS_DISC },
+            EcScript::NONE, EcFont::DOMINOES },
     // Enclosed alnum OK, added a few symbols to FunkySample
     { 0x1F100, 0x1F1FF, { 0x1F19B, EcContinent::NONE, Ifg::CUSTOM_ENGINE },
             "Enclosed Alphanumeric Supplement",
