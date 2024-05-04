@@ -109,7 +109,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { FNAME_HANA_C, Ffg::FALL_TO_NEXT, 120_pc },                              // …4
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …5 Japanese
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …6 Korean
-      { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                    // …7 Japanese
+      { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                    // …7 Japanese
       { FNAME_KOREAN, 110_pc},                                                  // …8 for one W7 tofu FFA0
     { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
