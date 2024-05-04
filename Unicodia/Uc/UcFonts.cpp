@@ -111,7 +111,7 @@ constinit const uc::Font uc::fontInfo[] = {
       { "Malgun Gothic", Ffg::FALL_TO_NEXT, 120_pc },                           // …6 Korean
       { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                    // …7 Japanese
       { FNAME_KOREAN, 110_pc},                                                  // …8 for one W7 tofu FFA0
-    { FAM_YU, Ffg::FALL_TO_NEXT, 120_pc },                                      // CJK compat
+    { FAM_YU, Ffg::FALL_TO_NEXT, 115_pc },                                      // CJK compat
       { "MS Gothic", Ffg::FALL_TO_NEXT, 120_pc },                               // …1
       { FNAME_KOREAN, Ffg::FALL_TO_NEXT, 110_pc },                              // …2
       { "MS Mincho", 120_pc },                                                  // …3
