@@ -12451,6 +12451,10 @@
      <orig>CJK fullwidth</orig>
      <transl>ККЯ полноширинные</transl>
     </text>
+    <text id="7seg">
+     <orig>Seven-segment</orig>
+     <transl>Семисегментные</transl>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
      <transl>Деловые символы</transl>

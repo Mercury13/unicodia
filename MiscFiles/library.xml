@@ -56,6 +56,9 @@
 		<f loc="CjkFull">
 			<range start="FF10" end="FF19" />
 		</f>
+		<f loc="7seg">
+			<range start="1FBF0" end="1FBF9" />
+		</f>
 	</f>
 	<f loc="Latin" forgetTest="1">
 		<f name="A">

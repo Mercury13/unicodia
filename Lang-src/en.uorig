@@ -8644,6 +8644,9 @@
     <text id="CjkFull">
      <orig>CJK fullwidth</orig>
     </text>
+    <text id="7seg">
+     <orig>Seven-segment</orig>
+    </text>
     <text id="Business">
      <orig>Business characters</orig>
     </text>
