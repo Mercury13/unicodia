@@ -54,6 +54,11 @@ Fonts are always updated to release versions. Font is updated to alpha/beta if f
 
 Naming: Noto if tables and existing glyphs are surely untouched; Uto otherwise.
 
+These fonts are taken to Unicodia without author’s consent:
+* Craggy font with missing/trivial tables.
+* Font without license belonging to author of Unicode request and released by him/her.
+* ASCII mapping is NOT a reason.
+
 ## Language
 
 **English.** International: truck > lorry, petrol > gas. Prefer British form if both are good.
