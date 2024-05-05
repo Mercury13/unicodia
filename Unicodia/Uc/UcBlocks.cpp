@@ -1032,7 +1032,7 @@ constinit const uc::Block uc::blocks[] {
             "Tirhuta",
             { EcScript::Tirh, 0 }, MapType::AS_BRAH, EcScript::Tirh },
     // Siddham OK
-    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA, {}, 9_hx },
+    { 0x11580, 0x115FF, { 0x1158E, EcContinent::ASIA, Ifg::SHIFT_DOWN, 9_hx },
             "Siddham",
             { EcScript::Sidd, 0 }, MapType::AS_BRAH_DEAD, EcScript::Sidd },
     // Modi OK
