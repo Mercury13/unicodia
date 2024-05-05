@@ -11193,7 +11193,7 @@
       <p>As a format of inter-software exchange UTF-32 is almost never used because of bulkiness. If you need{{-}}[[pt:bom|byte order mark]] is 00{{_}}00{{_}}FE{{_}}FF for UTF-32BE and FF{{_}}FE{{_}}00{{_}}00 for UTF-32LE. As a format of program interface UTF-32 is used in new versions of Unix-like OS, including MacOS.</p>
      </orig>
      <transl>
-      <p>'''Unicode transformation format, 32-bit''', він же '''UCS-4'''{{-}}формат [[pt:serialization|серіализації]] Юнікоду у ланцюжок чотирибайтових машинних слів. Коди символів просто записуються один за іншим.</p>
+      <p>'''Unicode transformation format, 32-bit''', він же '''UCS-4'''{{-}}формат [[pt:serialization|серіалізації]] Юнікоду у ланцюжок чотирибайтових машинних слів. Коди символів просто записуються один за іншим.</p>
       <p />
       <p>Властивості UTF-32:</p>
       <p>* Кодування постійної довжини. Тому воно найбільш зручше для складної обробки тексту.</p>
