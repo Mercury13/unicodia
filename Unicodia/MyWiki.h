@@ -30,6 +30,7 @@ namespace uc {
     class Term;
     class LibNode;
     class GlyphStyleChannel;
+    class Request;
 }
 
 enum class Want32 { NO, YES };
@@ -48,6 +49,7 @@ namespace mywiki {
         virtual void gotoCp(QWidget* initiator, char32_t cp) = 0;
         virtual void gotoLibCp(QWidget* initiator, char32_t cp) = 0;
         virtual void blinkAddCpToFavs() = 0;
+        virtual void searchForRequest(const uc::Request& request) = 0;
         virtual ~InternalWalker() = default;
     };
 
@@ -76,7 +78,8 @@ namespace mywiki {
                 QWidget* widget, TinyOpt<QRect> relRect, const QString& text);
     };
 
-    enum class LinkClass { POPUP, COPY, INTERNAL, INET };
+    enum class LinkClass { POPUP, COPY, INTERNAL, INET,
+                           SEARCH = INTERNAL };
 
     class Link    // interface
     {
@@ -102,6 +105,7 @@ namespace mywiki {
     std::unique_ptr<Link> parseGotoCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoLibCpLink(std::string_view target);
     std::unique_ptr<Link> parseGotoInterfaceLink(std::string_view target);
+    std::unique_ptr<Link> parseSearchForRequestLink(std::string_view target);
     QString buildHtml(const uc::BidiClass& x);
     QString buildHtml(const uc::Category& x);
     QString buildHtml(const uc::Script& x);

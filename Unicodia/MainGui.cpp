@@ -100,6 +100,15 @@ void MyGui::followUrl(const QString& x)
 }
 
 
+void MyGui::closePopup()
+{
+    if (popup) {
+        popup->deselectLink();
+        popup->close();
+    }
+}
+
+
 ///// PopupGui /////////////////////////////////////////////////////////////////
 
 

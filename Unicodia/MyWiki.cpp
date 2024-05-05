@@ -12,6 +12,7 @@
 // Unicode
 #include "UcData.h"
 #include "UcCp.h"
+#include "UcRequest.h"
 
 // L10n
 #include "LocDic.h"
@@ -182,6 +183,22 @@ namespace {
     void BlinkAddCpToFavsLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
         { gui.internalWalker().blinkAddCpToFavs(); }
 
+    class SearchForRequestLink : public mywiki::Link
+    {
+    public:
+        SearchForRequestLink(const uc::Fields& x) : fields(x) {}
+        mywiki::LinkClass clazz() const override { return mywiki::LinkClass::SEARCH; }
+        void go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui) override;
+    private:
+        const uc::Fields fields;
+    };
+
+    void SearchForRequestLink::go(QWidget*, TinyOpt<QRect>, mywiki::Gui& gui)
+    {
+        uc::FieldRequest rq(fields);
+        gui.internalWalker().searchForRequest(rq);
+    }
+
 }   // anon namespace
 
 
@@ -284,6 +301,36 @@ std::unique_ptr<mywiki::Link> mywiki::parseGotoInterfaceLink(std::string_view ta
 }
 
 
+std::unique_ptr<mywiki::Link> mywiki::parseSearchForRequestLink(std::string_view target)
+{
+    uc::Fields fields;
+    auto parts = str::splitSv(target, '|');
+    if (parts.empty())  // Won’t search for empty thing
+        return {};
+    for (auto part : parts) {
+        auto posEqual = part.find('=');
+        if (posEqual == std::string_view::npos)
+            return {};
+        // Split into code and value
+        auto code = part.substr(0, posEqual);
+        auto value = part.substr(posEqual + 1);
+        if (value.empty())
+            return nullptr;
+        // Check misc codes
+        if (code == "v"sv) {
+            if (auto version = uc::findVersion(value)) {
+                fields.version = static_cast<uc::EcVersion>(version - uc::versionInfo);
+            } else {
+                return nullptr;
+            }
+        } else {
+            return nullptr;
+        }
+    }
+    return std::make_unique<SearchForRequestLink>(fields);
+}
+
+
 std::unique_ptr<mywiki::Link> mywiki::parseLink(
         std::string_view scheme, std::string_view target)
 {
@@ -309,6 +356,8 @@ std::unique_ptr<mywiki::Link> mywiki::parseLink(
         return parseGotoInterfaceLink(target);
     } else if (scheme == "glc"sv) {
         return parseGotoLibCpLink(target);
+    } else if (scheme == "srq"sv) {
+        return parseSearchForRequestLink(target);
     } else if (scheme == "c"sv) {
         return std::make_unique<CopyLink>(target);
     } else if (scheme == "http"sv || scheme == "https"sv) {
@@ -2098,7 +2147,8 @@ namespace {
     void appendUnicodeName(
             str::QSep& sp, std::u8string_view name,
             const uc::CoarseDate& date,
-            std::u8string_view altName)
+            std::u8string_view altName,
+            std::u8string_view rqName)
     {
         sp.sep();
         sp.target() += "<b>";
@@ -2115,6 +2165,11 @@ namespace {
         auto s = monTemplate.arg(date.year);
         str::append(sp.target(), s);
         sp.target() += ")";
+        // Goro
+        if (!rqName.empty()) {
+            sp.target() += loc::Fmt(
+                    u8" <a href='srq:v={1}' class='inet'>→</a>")(rqName).q();
+        }
     }
 
 }   // anon namespace
@@ -2126,12 +2181,13 @@ QString mywiki::buildHtml(const uc::Version& version)
     text += "<p>";
     { str::QSep sp(text, "<br>");
         if (version.otherEmojiDate) {
-            appendUnicodeName(sp, version.locLongName(), version.date, {});
+            appendUnicodeName(sp, version.locLongName(), version.date, {}, version.link());
             appendUnicodeName(sp,
                     loc::get("Prop.Head.Em").arg(version.emojiName),
-                    version.otherEmojiDate, {});
+                             version.otherEmojiDate, {}, {});
         } else {
-            appendUnicodeName(sp, version.locLongName(), version.date, version.emojiName);
+            appendUnicodeName(sp, version.locLongName(), version.date,
+                              version.emojiName, version.link());
         }
     }
 

@@ -272,3 +272,9 @@ void FmPopup::mouseReleaseEvent(QMouseEvent* ev)
     Super::mouseReleaseEvent(ev);
     hide();
 }
+
+
+void FmPopup::deselectLink()
+{
+    lbText->setSelection(0, 0);
+}

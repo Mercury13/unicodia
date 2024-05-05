@@ -698,6 +698,7 @@ namespace uc {
         /// @return  name in Terms
         std::u8string termName() const;
         std::u8string link(std::u8string_view prefix) const;
+        std::u8string link() const;
         bool isFirst() const noexcept { return (stats.chars.nw.nTotal() + stats.chars.nTransient == stats.chars.nTotal); }
         const CoarseDate& emojiDate() const noexcept
             { return otherEmojiDate ? otherEmojiDate : date; }

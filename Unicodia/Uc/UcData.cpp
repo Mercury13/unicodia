@@ -2952,6 +2952,16 @@ std::u8string uc::Version::link(std::u8string_view prefix) const
 }
 
 
+std::u8string uc::Version::link() const
+{
+    if (!unicodeName.empty()) {
+        return std::u8string(unicodeName);
+    } else {
+        return str::cat(u8'e', emojiName);
+    }
+}
+
+
 std::u8string uc::Version::locLongName() const
 {
     std::u8string r;

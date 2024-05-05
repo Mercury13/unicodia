@@ -416,6 +416,7 @@ private:
     // InternalWalker
     void blinkAddCpToFavs() override;
     void gotoLibCp(QWidget* initiator, char32_t cp) override;
+    void searchForRequest(const uc::Request& request) override;
 private slots:
     void charChanged(const QModelIndex& current);
     void libChanged(const QModelIndex& current);

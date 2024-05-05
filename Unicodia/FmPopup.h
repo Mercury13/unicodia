@@ -79,6 +79,7 @@ public:
     const QRect& lastAbsRect() const { return fLastAbsRect; }
     QWidget* lastWidget() const { return fLastWidget; }
     ClickableLabel* viewport() const { return lbText; }
+    void deselectLink();
 protected:
     void focusOutEvent(QFocusEvent*) override;
     void mouseReleaseEvent(QMouseEvent*) override;

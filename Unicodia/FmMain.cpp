@@ -43,6 +43,7 @@
 #include "UcCp.h"
 #include "UcClipboard.h"
 #include "UcSkin.h"
+#include "UcRequest.h"
 
 // Char drawing
 #include "CharPaint/routines.h"
@@ -1877,13 +1878,16 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
 
     switch (x.err) {
     case uc::SearchError::OK: {
+            bool hasSmth = x.hasSmth();
             ui->treeSearch->setFlat(x.style == uc::ReplyStyle::FLAT);
             searchModel.set(std::move(x.groups));
             openSearch();
             ui->treeSearch->setFocus();
-            auto index0 = searchModel.index(0, 0);
-            ui->treeSearch->setCurrentIndex(index0);
-            ui->treeSearch->scrollTo(index0);
+            if (hasSmth) {
+                auto index0 = searchModel.index(0, 0);
+                ui->treeSearch->setCurrentIndex(index0);
+                ui->treeSearch->scrollTo(index0);
+            }
         } break;
     case uc::SearchError::NO_SEARCH:
         break;
@@ -2229,4 +2233,12 @@ void FmMain::gotoLibCp(QWidget*, char32_t cp)
     if (auto node = uc::findEmoji(cp)) {
         goToNode(*node);
     }
+}
+
+
+void FmMain::searchForRequest(const uc::Request& request)
+{
+    mainGui.closePopup();
+    auto result = uc::doRequest(request);
+    showSearchResult(std::move(result));
 }

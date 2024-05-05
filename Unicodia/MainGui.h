@@ -49,6 +49,7 @@ public:
     void blinkCopied(QWidget* widget, const QRect& absRect);
     void blinkAtWidget(const QString& text, QWidget* widget);
     void blinkAtRel(const QString& text, const QWidget* widget, const QRect& relRect);
+    void closePopup();
 
     ~MyGui() override;
 signals:

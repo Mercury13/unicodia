@@ -1,9 +1,6 @@
 // My header
 #include "UcRequest.h"
 
-// Unicode
-#include "UcData.h"
-
 uc::MultiResult uc::doRequest(const Request& rq)
 {
     uc::MultiResult r(uc::ReplyStyle::GROUPED);
@@ -29,4 +26,16 @@ uc::MultiResult uc::doRequest(const Request& rq)
     }
 
     return r;
+}
+
+
+///// FieldRequest /////////////////////////////////////////////////////////////
+
+
+bool uc::FieldRequest::isOk(const Cp& cp) const
+{
+    // Version
+    if (fields.version != uc::EcVersion::NONE && fields.version != cp.ecVersion)
+        return false;
+    return true;
 }
