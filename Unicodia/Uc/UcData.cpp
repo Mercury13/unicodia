@@ -1040,29 +1040,29 @@ size_t uc::nTerms() { return std::size(terms); }
 
 constinit const uc::Continent uc::continentInfo[] {
     // None
-    { { { 0xFF, 0xFF, 0xFF }, { 0x00, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }  },
+    { { { 0xFF, 0xFF, 0xFF }, { 0x00, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }, true },
     // Tech
     { { { 0x22, 0x55, 0x00 }, { 0x7F, 0xFF, 0x2A },
             // Special Technical’s frame colour
             { 0x66, 0xff, 0x00 } },
-            { NO_COLOR, NO_COLOR } },
+            { NO_COLOR, NO_COLOR }, false },
     // Europe
-    { { BG_EUROPE,            { 0x2f, 0x5e, 0x9d } }, { NO_COLOR, NO_COLOR }  },
+    { { BG_EUROPE,            FG_EUROPE,           }, { NO_COLOR, NO_COLOR }, false  },
     // Asia
-    { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }  },
+    { { { 0xff, 0xff, 0x83 }, { 0xf5, 0x79, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
     // CJK
-    { { BG_CJK,               FG_CJK               }, { BG_CJK,  TX_CJK    }  },
+    { { BG_CJK,               FG_CJK               }, { BG_CJK,  TX_CJK    }, false  },
     // Ocean
-    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, { NO_COLOR, NO_COLOR }  },
+    { { BG_OCEAN,             { 0x00, 0x64, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
     // Africa
-    { { BG_AFRICA,            FG_AFRICA            }, { CO_AFRICA, TX_AFRICA }},
+    { { BG_AFRICA,            FG_AFRICA            }, { CO_AFRICA, TX_AFRICA }, false},
     // America
-    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }  },
+    { { { 0xff, 0xc8, 0xc8 }, { 0xcc, 0x00, 0x00 } }, { NO_COLOR, NO_COLOR }, false  },
 };
 
 // Missing
 constinit const uc::Continent MISSING_CONTINENT
-    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } }, { NO_COLOR, NO_COLOR } };
+    { { { 0xa4, 0x00, 0x00 }, { 0xFF, 0xFF, 0xFF } }, { NO_COLOR, NO_COLOR }, false };
 
 
 static_assert(std::size(uc::continentInfo) == static_cast<int>(uc::EcContinent::NN));

@@ -787,7 +787,7 @@ constinit const uc::Block uc::blocks[] {
             "Carian",
             { EcScript::Cari, 0 }, MapType::AS_OTHER_DEAD, EcScript::Cari },
     // Coptic epact OK
-    { 0x102E0, 0x102FF, { 0x102F1, EcContinent::AFRICA },
+    { 0x102E0, 0x102FF, { 0x102F1, EcContinent::AFRICA, Ifg::SHIFT_DOWN },
         "Coptic Epact Numbers",
             { EcScript::Copt, 1 }, MapType::AF_DEAD,
             EcScript::Copt, EcFont::NOTO_SYMBOL2, Bfg::HAS_DESCRIPTION },

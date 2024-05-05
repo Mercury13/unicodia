@@ -94,13 +94,14 @@ namespace ie {
     class Synth : public Veng
     {
     public:
-        Synth(const PixSource& aSource, const uc::SynthIcon& aSi);
+        Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aBlkStart);
         Synth* clone() const override { return new Synth(*this); }
     protected:
         void paint1(QPainter *painter, const QRect &rect, qreal scale) override;
     private:
         const PixSource& source;
         const uc::SynthIcon& si;
+        dumb::Sp<LazySvg> texture;
     };
 
     class Node : public Veng

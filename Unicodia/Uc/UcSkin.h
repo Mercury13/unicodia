@@ -10,12 +10,13 @@ constexpr QColor FRAME_CJK = TX_CJK;              // Format frame — same mediu
 
 // Africa
 constexpr QColor BG_AFRICA { 0xf5, 0xde, 0xb3 };  // Icon BG: wheat
-constexpr QColor FG_AFRICA { 0x8f, 0x59, 0x02 };  // Icon FG: IDK where took, very chocolate-y
+constexpr QColor FG_AFRICA { 0x77, 0x44, 0x21 };  // Icon FG: IDK where took, very chocolate-y
 constexpr QColor CO_AFRICA { 0xFF, 0xEE, 0xD1 };  // Cell BG: wheat but lighter
 constexpr QColor TX_AFRICA { 0x8f, 0x59, 0x02 };  // Cell FG: Tango dark brown
 
 // Europe (no cells for now, but lots of synth icons)
 constexpr QColor BG_EUROPE { 0x7F, 0xFF, 0xFF };  // Icon BG: some shade of aqua
+constexpr QColor FG_EUROPE { 0x2f, 0x5e, 0x9d };  // Icon FG: some intermediate between Tango blue 1 and 2
 
 // Ocean (no cells for now, but a synth icon)
 constexpr QColor BG_OCEAN  { 0xc8, 0xff, 0xc8 };  // Icon BG: some light green

@@ -37,6 +37,8 @@ namespace uc {
         struct Collapse {
             QColor bgColor, textColor;
         } collapse;
+
+        bool isInternational;
     };
     extern const Continent continentInfo[];
 

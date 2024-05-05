@@ -368,23 +368,70 @@ void ie::Murky::paint1(QPainter *painter, const QRect &rect, qreal)
 }
 
 
+///// LazySvg //////////////////////////////////////////////////////////////////
+
+class ie::LazySvg : public dumb::SpTarget
+{
+public:
+    LazySvg(QString aFname) : fname(std::move(aFname)) {}
+    std::shared_ptr<QSvgRenderer> get();
+private:
+    QString fname;
+    std::shared_ptr<QSvgRenderer> x;
+};
+
+template class dumb::Sp<ie::LazySvg>;
+
+
+std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
+{
+    if (auto r1 = x)
+        return r1;
+
+    auto r2 = std::make_shared<QSvgRenderer>(fname);
+    r2->setAspectRatioMode(Qt::KeepAspectRatio);
+    x = r2;
+    //std::cout << "Loaded lazy SVG " << fname.toStdString() << std::endl;
+    return r2;
+}
+
+
 ///// Synth ////////////////////////////////////////////////////////////////////
 
-ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi)
-    : source(aSource), si(aSi) {}
+ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aPixStart)
+    : source(aSource), si(aSi)
+{
+    if (aPixStart && aSi.flags.have(uc::Ifg::MISSING)) {
+        char buf[48];
+        util::sprintfCp(buf, aPixStart);
+        texture = dumb::makeSp<LazySvg>(buf);
+    }
+}
 
 void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
 {
     // No continent → draw murky, otherwise use icon colours
     auto clFg = source.winColor();
-    if (si.ecContinent == uc::EcContinent::NONE) {
+    auto cont = si.maybeMissingContinent();
+    if (cont.isInternational) {
         drawMurkyRect(painter, rect, clFg);
     } else {
-        auto cont = si.maybeMissingContinent();
         painter->fillRect(rect, cont.icon.bgColor);
         drawCharBorder(painter, rect, clFg);
         clFg = cont.icon.fgColor;
     }
+
+    // Texture?
+    if (texture) {
+        auto smallerSide = std::min(rect.width(), rect.height());
+        auto sqSize = smallerSide >> 1;
+        auto dx = (rect.width() - sqSize) >> 1;
+        auto dy = (rect.height() - sqSize) >> 1;
+        QRect smallRect(rect.left() + dx, rect.top() + dy, sqSize, sqSize);
+        texture->get()->render(painter, smallRect);
+        return;
+    }
+
     // Shift left/right
     auto rcContent = rect;
     if (si.flags.haveAny(uc::Ifg::SHIFT_LEFT | uc::Ifg::SHIFT_RIGHT)) {
@@ -575,33 +622,6 @@ void ie::Legacy::paint1(QPainter *painter, const QRect &rect, qreal scale)
     painter->drawPixmap(rcDest, texture);
 }
 
-
-///// LazySvg //////////////////////////////////////////////////////////////////
-
-class ie::LazySvg : public dumb::SpTarget
-{
-public:
-    LazySvg(QString aFname) : fname(std::move(aFname)) {}
-    std::shared_ptr<QSvgRenderer> get();
-private:
-    QString fname;
-    std::shared_ptr<QSvgRenderer> x;
-};
-
-template class dumb::Sp<ie::LazySvg>;
-
-
-std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
-{
-    if (auto r1 = x)
-        return r1;
-
-    auto r2 = std::make_shared<QSvgRenderer>(fname);
-    r2->setAspectRatioMode(Qt::KeepAspectRatio);
-    x = r2;
-    //std::cout << "Loaded lazy SVG " << fname.toStdString() << std::endl;
-    return r2;
-}
 
 ///// PlayingCard //////////////////////////////////////////////////////////////
 

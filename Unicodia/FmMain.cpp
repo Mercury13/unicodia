@@ -759,7 +759,7 @@ QVariant SearchModel::groupData(size_t index, int role) const
                 return str::toQ(blk->loc.name) + '\n' + str::toQ(charsLine);
             }
         case Qt::DecorationRole:
-            return QIcon{new ie::Synth(*sample, group.block->synthIcon)};
+            return QIcon{new ie::Synth(*sample, group.block->synthIcon, group.block->startingCp)};
         default:
             return {};
         }
@@ -848,9 +848,10 @@ QVariant SearchModel::data(const QModelIndex& index, int role) const
             case uc::CpType::UNALLOCATED:
                 ie = new ie::Murky(*sample);
                 break;
-            case uc::CpType::RESERVED:
-                ie = new ie::Synth(*sample, line.cp->block().synthIcon);
-                break;
+            case uc::CpType::RESERVED: {
+                    auto& blk = line.cp->block();
+                    ie = new ie::Synth(*sample, blk.synthIcon, blk.startingCp);
+                } break;
             case uc::CpType::LIBNODE:
                 ie = new ie::Node(*sample, *line.node);
                 break;
