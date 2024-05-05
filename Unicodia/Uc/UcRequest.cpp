@@ -1,9 +1,32 @@
 // My header
 #include "UcRequest.h"
 
+// Unicode
+#include "UcData.h"
 
 uc::MultiResult uc::doRequest(const Request& rq)
 {
     uc::MultiResult r(uc::ReplyStyle::GROUPED);
+
+    const uc::Block* oldBlock = nullptr;
+    uc::SearchGroup* lastGroup = nullptr;
+    if (rq.hasChars()) {
+        for (const auto& cp : uc::cpInfo) {
+            if (rq.isOk(cp)) {
+                auto* newBlock = &cp.block();
+                if (newBlock != oldBlock) {
+                    lastGroup = &r.groups.emplace_back();
+                    lastGroup->icon = &newBlock->synthIcon;
+                    oldBlock = newBlock;
+                }
+                lastGroup->lines.emplace_back(cp);
+            }
+        }
+    }
+
+    if (rq.hasEmoji()) {
+        /// @todo [future] search for emoji
+    }
+
     return r;
 }

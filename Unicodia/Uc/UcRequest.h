@@ -8,10 +8,10 @@ namespace uc {
     {
     public:
         /// @return [+] reply may contain characters
-        virtual bool hasChars() const { return true; }
+        virtual bool hasChars() const = 0;
 
         /// @return [+] reply may contain emoji
-        virtual bool hasEmoji() const { return false; }
+        virtual bool hasEmoji() const = 0;
 
         virtual bool isOk(const Cp& cp) const = 0;
         ~Request() = default;
