@@ -6073,8 +6073,16 @@
      <transl>ґурунг ''(Індія, Непал, 320 тис. на 2011)''</transl>
     </text>
     <text id="Text">
-     <orig>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</orig>
-     <transl>Винайшов Бал Нарсінґх Ґурунг. У 1997 індійський штат Сіккім визнав ґурунг та зробив кхему офіційним письмом.</transl>
+     <orig>
+      <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
+      <p />
+      <p>Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+     </orig>
+     <transl>
+      <p>Винайшов Бал Нарсінґх Ґурунг. У 1997 індійський штат Сіккім визнав ґурунг та зробив кхему офіційним письмом.</p>
+      <p />
+      <p>Знак довжини голосної тільки для [[pt:normalization|декомпозиції]]. Розділові знаки [[pt:ascii|ASCII]], плюс палиця ''данда'' з [[ps:Deva|деванаґарі]].</p>
+     </transl>
     </text>
    </group>
    <group id="Guru">
@@ -7649,8 +7657,17 @@
       <p />
       <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
       <p />
-      <p>Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
+     <known-orig>
+      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
+      <p />
+      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
+      <p />
+      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
+      <p />
+      <p>Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+     </known-orig>
      <transl>
       <p>Орíя (традиційно, але невірно вважається спільнокореневим з ''арійцями'') розвилася з [[ps:Sidd|сиддхаматрики]], писемності з розірваною верхньою рискою, через гауді (також ''прото-[[ps:Beng|бенгальську]]'', ''прото-орію'').</p>
       <p />

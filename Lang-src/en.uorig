@@ -4407,7 +4407,11 @@
      <orig>Gurung ''(India, Nepal, 320k as of 2011)''</orig>
     </text>
     <text id="Text">
-     <orig>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</orig>
+     <orig>
+      <p>Invented by Bal Narsingh Gurung. In 1997 Indian state of Sikkim recognized Gurung and made Khema the official script.</p>
+      <p />
+      <p>Vowel length mark is just for [[pt:normalization|decomposition]]. Punctuation is [[pt:ascii|ASCII]], plus vertical bar ''danda'' from [[ps:Deva|Devanagari]].</p>
+     </orig>
     </text>
    </group>
    <group id="Guru">
@@ -5459,7 +5463,7 @@
       <p />
       <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
       <p />
-      <p>Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
+      <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
     </text>
    </group>
