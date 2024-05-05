@@ -48,6 +48,7 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
 #define STYLE_BIGCOPY      STYLE_LINK_CAMO(CNAME_U_BIGCOPY, "0.05")
 #define STYLE_CODE         STYLE_LINK(CNAME_LINK_CODE, "0.04")
 #define STYLE_MISRENDER    "color:" CNAME_LINK_DEPRECATED
+#define STYLE_QUERY        "color:" CNAME_LINK_OUTSIDE"; text-decoration:none;"
 
 #define STYLES_WIKI \
         ".copy { " STYLE_COPY " } "                                             \
@@ -58,7 +59,8 @@ constexpr QColor FG_DEPRECATED { 0xDD, 0x00, 0x00 };
         ".deph { color: " CNAME_TEXT_DEPRECATED "; } "                          \
         ".inet { " STYLE_INET " } "                                             \
         ".missing { color: " CNAME_LINK_DEPRECATED "; } "                       \
-        ".tr { color: " CNAME_TRANSCRIPTION "; }"
+        ".tr { color: " CNAME_TRANSCRIPTION "; }"                               \
+        ".query { " STYLE_QUERY " }"                                            \
 
 #ifdef _WIN32
     #define FAM_DEFAULT "Cambria"

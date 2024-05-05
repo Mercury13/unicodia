@@ -32,11 +32,11 @@
   <circle
      style="fill:none;stroke:#4e9a06;stroke-width:80;stroke-linecap:round;stroke-miterlimit:2;stroke-dasharray:none"
      id="path2"
-     cx="282.51965"
-     cy="376.50943"
-     r="199.60161" />
+     cx="315.21332"
+     cy="409.20309"
+     r="257.90344" />
   <path
      style="fill:none;stroke:#000000;stroke-width:80;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-     d="M 442.86547,536.85525 657.71514,751.70491"
+     d="M 522.39471,616.38449 800.00003,893.98981"
      id="path3" />
 </svg>

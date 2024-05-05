@@ -2127,19 +2127,36 @@ QString mywiki::buildHtml(const uc::LibNode& node, const uc::LibNode& parent)
 
 namespace {
 
-    void appendValue(str::QSep& sp, const char* locKey, unsigned value)
+    void appendQuery(QString& text, std::string_view params)
+    {
+        auto& font = uc::fontInfo[(int)uc::EcFont::FUNKY];
+        auto names = font.familiesComma().toStdString();
+        text += loc::Fmt(
+                " &nbsp;&nbsp;<a href='srq:{1}' class='query' style='font-family: {2};'>&#{3};</a>")
+                       (params)
+                       (names)
+                       ((int)uc::STUB_PUA_ZOOM.unicode()).q();
+    }
+
+    void appendValue(str::QSep& sp, const char* locKey, unsigned value,
+                     std::u8string_view unicodeLink)
     {
         sp.sep();
         mywiki::appendNoFont(sp.target(), loc::get(locKey));
         str::append(sp.target(), ": ");
         mywiki::appendCopyable(sp.target(), value);
+        // Query
+        if (!unicodeLink.empty()) {
+            auto params = str::cat("v=", str::toSv(unicodeLink));
+            appendQuery(sp.target(), params);
+        }
     }
 
     bool appendValueIf(str::QSep& sp, const char* locKey, unsigned value)
     {
         bool r = value != 0;
         if (r) {
-            appendValue(sp, locKey, value);
+            appendValue(sp, locKey, value, {});
         }
         return r;
     }
@@ -2147,8 +2164,7 @@ namespace {
     void appendUnicodeName(
             str::QSep& sp, std::u8string_view name,
             const uc::CoarseDate& date,
-            std::u8string_view altName,
-            std::u8string_view rqName)
+            std::u8string_view altName)
     {
         sp.sep();
         sp.target() += "<b>";
@@ -2165,11 +2181,6 @@ namespace {
         auto s = monTemplate.arg(date.year);
         str::append(sp.target(), s);
         sp.target() += ")";
-        // Goro
-        if (!rqName.empty()) {
-            sp.target() += loc::Fmt(
-                    u8" <a href='srq:v={1}' class='inet'>→</a>")(rqName).q();
-        }
     }
 
 }   // anon namespace
@@ -2181,13 +2192,13 @@ QString mywiki::buildHtml(const uc::Version& version)
     text += "<p>";
     { str::QSep sp(text, "<br>");
         if (version.otherEmojiDate) {
-            appendUnicodeName(sp, version.locLongName(), version.date, {}, version.link());
+            appendUnicodeName(sp, version.locLongName(), version.date, {});
             appendUnicodeName(sp,
                     loc::get("Prop.Head.Em").arg(version.emojiName),
-                             version.otherEmojiDate, {}, {});
+                             version.otherEmojiDate, {});
         } else {
             appendUnicodeName(sp, version.locLongName(), version.date,
-                              version.emojiName, version.link());
+                              version.emojiName);
         }
     }
 
@@ -2196,9 +2207,11 @@ QString mywiki::buildHtml(const uc::Version& version)
         // Transient
         str::QSep sp(text, "<br>");
         appendValueIf(sp, "Prop.Bullet.Transient", version.stats.chars.nTransient);
+        auto link = version.link();
+        static constexpr std::u8string_view NO_LINK {};
         // New
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal());
+            appendValue(sp, "Prop.Bullet.NewChar", version.stats.chars.nw.nTotal(), link);
             appendValueIf(sp, "Prop.Bullet.NewCjk", version.stats.chars.nw.nHani);
             appendValueIf(sp, "Prop.Bullet.NewNew", version.stats.chars.nw.nNewScripts);
             appendValueIf(sp, "Prop.Bullet.NewEx", version.stats.chars.nw.nExistingScripts);
@@ -2206,12 +2219,13 @@ QString mywiki::buildHtml(const uc::Version& version)
             appendValueIf(sp, "Prop.Bullet.NewSym", version.stats.chars.nw.nSymbols);
         }
         // Total
-        appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal);
+        appendValue(sp, "Prop.Bullet.TotalChar", version.stats.chars.nTotal,
+                    version.isFirst() ? static_cast<std::u8string_view>(link) : NO_LINK);
 
         if (version.stats.emoji.nTotal != 0) {
             // New emoji
             auto tot = version.stats.emoji.nw.nTotal();
-            appendValue(sp, "Prop.Bullet.NewEm", tot);
+            appendValue(sp, "Prop.Bullet.NewEm", tot, {});
             if (tot != 0) {
                 // Single-char
                 if (appendValueIf(sp, "Prop.Bullet.NewEm1", version.stats.emoji.nw.singleChar.nTotal())) {
@@ -2227,12 +2241,12 @@ QString mywiki::buildHtml(const uc::Version& version)
                 appendValueIf(sp, "Prop.Bullet.NewEmOtherNonZwj", version.stats.emoji.nw.seq.nOtherNonZwj);
             }
             // Total emoji
-            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal);
+            appendValue(sp, "Prop.Bullet.TotalEm", version.stats.emoji.nTotal, NO_LINK);
         }
         if (!version.isFirst()) {
-            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew);
+            appendValue(sp, "Prop.Bullet.NewSc", version.stats.scripts.nNew, NO_LINK);
         }
-        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal);
+        appendValue(sp, "Prop.Bullet.TotalSc", version.stats.scripts.nTotal, NO_LINK);
     }
 
     // Text
