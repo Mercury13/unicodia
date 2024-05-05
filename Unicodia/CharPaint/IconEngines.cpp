@@ -395,6 +395,10 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
             rcContent.setRight(rcContent.right() + delta);
         }
     }
+    if (si.flags.have(uc::Ifg::SHIFT_DOWN)) {
+        auto delta = rcContent.height() >> 2;
+        rcContent.setBottom(rcContent.bottom() + delta);
+    }
     // Get size
     if (si.flags.have(uc::Ifg::SMALLER))
         scale *= 0.8;

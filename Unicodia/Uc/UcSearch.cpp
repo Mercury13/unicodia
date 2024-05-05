@@ -63,7 +63,7 @@ uc::MultiResult::MultiResult(SafeVector<SearchLine>&& aV)
 
 const uc::Cp* uc::MultiResult::one() const
 {
-    if (err == SearchError::OK && groups.size() == 1) {
+    if (err == SearchError::OK && style == ReplyStyle::FLAT && groups.size() == 1) {
         auto& lines = groups[0].lines;
         if (lines.size() == 1 && lines[0].type == CpType::EXISTING) {
             return lines[0].cp;

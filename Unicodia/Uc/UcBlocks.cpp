@@ -1040,7 +1040,7 @@ constinit const uc::Block uc::blocks[] {
             "Modi",
             { EcScript::Modi, 0 }, MapType::AS_BRAH_DEAD, EcScript::Modi },
     // Mongolian supp OK
-    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::ROTATE_LTR_CW },
+    { 0x11660, 0x1167F, { 0x11668, EcContinent::ASIA, Ifg::ROTATE_LTR_CW | Ifg::SHIFT_RIGHT },
             "Mongolian Supplement",
             { EcScript::Mong, 1 }, MapType::AS_OTHER,
             EcScript::Mong, EcFont::NORMAL, Bfg::HAS_DESCRIPTION, EcGlyphStyleChannel::VERTICAL },
@@ -1124,7 +1124,7 @@ constinit const uc::Block uc::blocks[] {
             "Makasar",
             { EcScript::Maka, 0 }, MapType::OC_DEAD, EcScript::Maka },
     // Kawi OK
-    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::CUSTOM_ENGINE },
+    { 0x11F00, 0x11F5F, { 0x11F12, EcContinent::OCEAN, Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN },
             "Kawi",
             { EcScript::Kawi, 0 }, MapType::OC,
             EcScript::Kawi, EcFont::NORMAL, Bfg::BIG_CONTROLS | Bfg::VIRAMA_BIGGER },
@@ -1213,10 +1213,11 @@ constinit const uc::Block uc::blocks[] {
             "Miao",
             { EcScript::Plrd, 0 }, MapType::AS_OTHER, EcScript::Plrd },
     // Ideographic sym/punct OK
-    { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK },
+    { 0x16FE0, 0x16FFF, { 0x16FF0, EcContinent::CJK, Ifg::SHIFT_LEFT },
             "Ideographic Symbols and Punctuation",
             // Hard block, though small, but all chars have scripts.
             // Hani is just over-insurance.
+            // (As it appeared later than Hani, will not trigger any troubles in queries)
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tangut OK
@@ -1405,7 +1406,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
     // Cards OK
-    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE },
+    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN },
             "Playing Cards",
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },

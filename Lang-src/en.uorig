@@ -8053,6 +8053,7 @@
     </text>
     <text id="NewScFull">
      <orig>{1}, new script, full</orig>
+     <au-cmt>e.g. Palmyrene in U7</au-cmt>
     </text>
     <text id="NewDis">
      <orig>{1}, disunified script</orig>

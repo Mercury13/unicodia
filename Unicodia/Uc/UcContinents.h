@@ -50,6 +50,7 @@ namespace uc {
         ROTATE_RTL_CCW    = 1<<6,   ///< [+] To display properly, 90°↶: Sogd, Ougr (← in Unicode)
         SHIFT_LEFT        = 1<<7,   ///< [+] To display a synth. icon, shift it to the left
         SHIFT_RIGHT       = 1<<8,   ///< [+] To display a synth. icon, shift it to the right
+        SHIFT_DOWN        = 1<<9,   ///< [+] To display a synth. icon, shift it down a bit
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
         APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:

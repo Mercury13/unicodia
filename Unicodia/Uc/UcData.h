@@ -891,10 +891,12 @@ namespace uc {
                 : script().font();
         }
         unsigned nNonChars() const;
-        unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
+        constexpr unsigned nTotalPlaces() const { return endingCp - startingCp + 1; }
         unsigned nEmptyPlaces() const { return nTotalPlaces() - nChars - nNonChars(); }
-        bool hasDescription() const
+        constexpr bool hasDescription() const
             { return (ecScript == EcScript::NONE || flags.have(Bfg::HAS_DESCRIPTION)); }
+        bool wasFilledIn(uc::EcVersion v) const
+            { return nEmptyPlaces() == 0 && ecLastVersion == v; }
 
         void printfLocKey(char* buf, size_t n, const char* suffix) const
             { printfLocKeyN(buf, n, suffix); }

@@ -241,7 +241,7 @@ public:
     QVariant groupData(size_t index, int role) const;
     QVariant data(const QModelIndex& index, int role) const override;
 
-    void set(uc::ReplyStyle st, SafeVector<uc::SearchGroup>&& x);
+    void set(uc::ReplyStyle st, uc::EcVersion ver, SafeVector<uc::SearchGroup>&& x);
     void clear();
     bool hasData() const { return !groups.empty(); }
     const uc::SearchLine& lineAt(size_t iGroup, size_t iLine) const;
@@ -251,7 +251,8 @@ public:
 protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
 private:
-    uc::ReplyStyle style;
+    uc::ReplyStyle style = uc::ReplyStyle::FLAT;
+    uc::EcVersion version = uc::EcVersion::NONE;
     const PixSource* const sample;
     const uc::GlyphStyleSets& glyphSets;
     SafeVector<uc::SearchGroup> groups;

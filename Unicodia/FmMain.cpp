@@ -625,7 +625,6 @@ QVariant LangModel::data(const QModelIndex& index, int role) const
 }
 
 
-
 ///// SearchModel //////////////////////////////////////////////////////////////
 
 void SearchModel::clear()
@@ -670,10 +669,11 @@ size_t SearchModel::groupSizeAt(size_t iGroup) const
 }
 
 
-void SearchModel::set(uc::ReplyStyle st, SafeVector<uc::SearchGroup>&& x)
+void SearchModel::set(uc::ReplyStyle st, uc::EcVersion ver, SafeVector<uc::SearchGroup>&& x)
 {
     beginResetModel();
     style = st;
+    version = ver;
     groups = std::move(x);
     endResetModel();
 }
@@ -729,11 +729,35 @@ QVariant SearchModel::groupData(size_t index, int role) const
 
     auto& group = groups.at(index);
 
-    if (group.block) {
+    if (auto blk = group.block) {  // BLOCK
         switch (role) {
-        case Qt::DisplayRole:
-            return str::toQ(group.block->loc.name) + '\n'
-                    + loc::get("Prop.Head.NChars").argQ(group.size());
+        case Qt::DisplayRole: {
+                auto charsLine = loc::get("Prop.Head.NChars").arg(group.size());
+                if (version != uc::EcVersion::NONE) {
+                    if (blk->ecVersion == version && version != uc::EcVersion::FIRST_MEANING) {
+                        // CREATED IN THIS VERSION
+                        const char* key = "Search.Blk.New";
+                        auto& sc = blk->script();
+                        // New version here
+                        if (!sc.flags.have(uc::Sfg::NONSCRIPT) && sc.ecVersion == version) {
+                            if (sc.flags.have(uc::Sfg::DISUNIFIED)) {
+                                key = "Search.Blk.NewDis";
+                            } else if (blk->wasFilledIn(version)) {
+                                key = "Search.Blk.NewScFull";
+                            } else {
+                                key = "Search.Blk.NewSc";
+                            }
+                        } else if (blk->wasFilledIn(version)) {
+                            key = "Search.Blk.NewFull";
+                        }
+                        charsLine = loc::get(key).arg(charsLine);
+                        /// @todo [urgent] Was block extended?
+                    } else if (blk->wasFilledIn(version)) {
+                        charsLine = loc::get("Search.Blk.Full").arg(charsLine);
+                    }
+                }
+                return str::toQ(blk->loc.name) + '\n' + str::toQ(charsLine);
+            }
         case Qt::DecorationRole:
             return QIcon{new ie::Synth(*sample, group.block->synthIcon)};
         default:
@@ -1823,6 +1847,7 @@ void FmMain::selectChar<SelectMode::NONE>(char32_t code)
         (void)cp->font(match::Normal::INST);
     }
     auto index = model.indexOf(code);
+    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     ui->tableChars->setCurrentIndex(index);
     ui->tableChars->scrollTo(index);
 }
@@ -1933,6 +1958,7 @@ void FmMain::showTofuStats()
 
 void FmMain::openSearch()
 {
+    ui->tabsMain->setCurrentWidget(ui->tabBlocks);
     ui->stackSearch->setCurrentWidget(ui->pageSearch);
 }
 
@@ -1969,10 +1995,10 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     }
 
     switch (x.err) {
-    case uc::SearchError::OK: {
+    case uc::SearchError::OK: {            
             bool hasSmth = x.hasSmth();
             ui->treeSearch->setFlat(x.style == uc::ReplyStyle::FLAT);
-            searchModel.set(x.style, std::move(x.groups));
+            searchModel.set(x.style, x.version, std::move(x.groups));
             openSearch();
             ui->treeSearch->setFocus();
             if (hasSmth) {

@@ -3,7 +3,7 @@
 
 uc::MultiResult uc::doRequest(const Request& rq)
 {
-    uc::MultiResult r(uc::ReplyStyle::GROUPED);
+    uc::MultiResult r(uc::ReplyStyle::GROUPED, rq.version());
 
     const uc::Block* oldBlock = nullptr;
     uc::SearchGroup* lastGroup = nullptr;

@@ -120,9 +120,10 @@ namespace uc {
     struct MultiResult {
         SearchError err = SearchError::OK;
         ReplyStyle style = ReplyStyle::FLAT;
+        uc::EcVersion version = uc::EcVersion::NONE;
         SafeVector<SearchGroup> groups {};
 
-        explicit MultiResult(const ReplyStyle x) : style(x) {}
+        MultiResult(ReplyStyle x, EcVersion v) : style(x), version(v) {}
         MultiResult(const SingleResult& x);
         MultiResult(SafeVector<SearchLine>&& aV);
         const uc::Cp* one() const;
