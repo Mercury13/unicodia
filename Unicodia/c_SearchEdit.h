@@ -112,5 +112,5 @@ protected:
     void keyPressEvent(QKeyEvent* ev) override;
     void mouseDoubleClickEvent(QMouseEvent* ev) override;
 signals:
-    void enterPressed(int index);
+    void enterPressed(const QModelIndex& index);
 };

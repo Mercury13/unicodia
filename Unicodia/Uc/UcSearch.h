@@ -9,7 +9,6 @@
 
 // Unicode
 #include "UcAutoDefines.h"
-#include "UcContinents.h"
 
 namespace uc {
 
@@ -103,7 +102,7 @@ namespace uc {
     };
 
     struct SearchGroup {
-        const uc::SynthIcon* icon = nullptr;
+        const uc::Block* block = nullptr;
         SafeVector<SearchLine> lines;
 
         SearchGroup() = default;

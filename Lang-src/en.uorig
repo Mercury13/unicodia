@@ -8035,6 +8035,30 @@
     <p>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF</p>
     <p>Not FFFF!</p>
    </au-cmt>
+   <group id="Blk">
+    <text id="New">
+     <orig>{1}, new block</orig>
+    </text>
+    <text id="Full">
+     <orig>{1}, block is full</orig>
+    </text>
+    <text id="NewFull">
+     <orig>{1}, new block is full</orig>
+    </text>
+    <text id="Ext">
+     <orig>{1}, block is extended</orig>
+    </text>
+    <text id="NewSc">
+     <orig>{1}, new script</orig>
+    </text>
+    <text id="NewScFull">
+     <orig>{1}, new script, full</orig>
+    </text>
+    <text id="NewDis">
+     <orig>{1}, disunified script</orig>
+     <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
    </text>

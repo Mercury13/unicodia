@@ -628,8 +628,6 @@ QVariant LangModel::data(const QModelIndex& index, int role) const
 
 ///// SearchModel //////////////////////////////////////////////////////////////
 
-const uc::SearchGroup SearchModel::EMPTY_GROUP;
-
 void SearchModel::clear()
 {
     beginResetModel();
@@ -638,31 +636,123 @@ void SearchModel::clear()
 }
 
 
-const uc::SearchGroup& SearchModel::group0() const
+const uc::SearchLine& SearchModel::lineAt(size_t iGroup, size_t iLine) const
 {
-    return groups.empty() ? EMPTY_GROUP : groups[0];
-}
-
-
-const uc::SearchLine& SearchModel::lineAt(size_t index) const
-{
-    if (groups.empty() || index >= groups[0].lines.size())
+    if (iGroup >= groups.size())
         return uc::SearchLine::STUB;
-    return groups[0].lines[index];
+    auto& group = groups.at(iGroup);
+    if (iLine >= group.lines.size())
+        return uc::SearchLine::STUB;
+    return group.lines[iLine];
 }
 
 
-void SearchModel::set(SafeVector<uc::SearchGroup>&& x)
+const uc::SearchLine* SearchModel::lineAt(const QModelIndex& index) const
+{
+    if (isGroup(index))
+        return nullptr;
+    return &lineAt(index.internalId(), index.row());
+}
+
+
+bool SearchModel::isGroup(const QModelIndex& index)
+{
+    return !index.isValid() || index.internalId() == GROUP;
+}
+
+
+size_t SearchModel::groupSizeAt(size_t iGroup) const
+{
+    if (iGroup >= groups.size())
+        return 0;
+    auto& group = groups.at(iGroup);
+    return group.size();
+}
+
+
+void SearchModel::set(uc::ReplyStyle st, SafeVector<uc::SearchGroup>&& x)
 {
     beginResetModel();
+    style = st;
     groups = std::move(x);
     endResetModel();
 }
 
 
+int SearchModel::rowCount(const QModelIndex& index) const
+{
+    switch (style) {
+    case uc::ReplyStyle::FLAT:
+        if (!index.isValid())
+            return groupSizeAt(0);
+        return 0;
+    case uc::ReplyStyle::GROUPED:
+        if (!index.isValid())
+            return groups.size();
+        if (index.internalId() == GROUP)
+            return groupSizeAt(index.row());
+        return 0;
+    }
+    __builtin_unreachable();
+}
+
+
+QModelIndex SearchModel::index(int row, int column, const QModelIndex& parent) const
+{
+    switch (style) {
+    case uc::ReplyStyle::FLAT:
+        return createIndex(row, column, ZERO);
+    case uc::ReplyStyle::GROUPED:
+        if (!parent.isValid())
+            return createIndex(row, column, GROUP);
+        if (parent.internalId() == GROUP) {
+            return createIndex(row, column, parent.row());
+        }
+        return {};
+    }
+    __builtin_unreachable();
+}
+
+
+QModelIndex SearchModel::parent(const QModelIndex &child) const
+{
+    if (!child.isValid() || child.internalId() == GROUP)
+        return {};
+    return createIndex(child.internalId(), 0, GROUP);
+}
+
+
+QVariant SearchModel::groupData(size_t index, int role) const
+{
+    if (index >= groups.size())
+        return {};
+
+    auto& group = groups.at(index);
+
+    if (group.block) {
+        switch (role) {
+        case Qt::DisplayRole:
+            return str::toQ(group.block->loc.name) + '\n'
+                    + loc::get("Prop.Head.NChars").argQ(group.size());
+        case Qt::DecorationRole:
+            return QIcon{new ie::Synth(*sample, group.block->synthIcon)};
+        default:
+            return {};
+        }
+    } else {
+        return {};
+    }
+}
+
+
 QVariant SearchModel::data(const QModelIndex& index, int role) const
 {
-    auto& line = lineAt(index.row());
+    if (index.internalId() == GROUP) {
+        return groupData(index.row(), role);
+    }
+
+    // OBJECT
+    auto& line = lineAt(index.internalId(), index.row());
     char buf[60];
 
     switch (role) {
@@ -754,9 +844,11 @@ void SearchModel::initStyleOption(
         QStyleOptionViewItem *option, const QModelIndex &index) const
 {
     QStyledItemDelegate::initStyleOption(option, index);
-    auto& line = lineAt(index.row());
-    if (line.nestLevel != 0) {
-        option->rect.setLeft(option->rect.left() + EMOJI_INDENT * line.nestLevel);
+    if (index.internalId() != GROUP) {
+        auto& line = lineAt(index.internalId(), index.row());
+        if (line.nestLevel != 0) {
+            option->rect.setLeft(option->rect.left() + EMOJI_INDENT * line.nestLevel);
+        }
     }
 }
 
@@ -1880,7 +1972,7 @@ void FmMain::showSearchResult(uc::MultiResult&& x)
     case uc::SearchError::OK: {
             bool hasSmth = x.hasSmth();
             ui->treeSearch->setFlat(x.style == uc::ReplyStyle::FLAT);
-            searchModel.set(std::move(x.groups));
+            searchModel.set(x.style, std::move(x.groups));
             openSearch();
             ui->treeSearch->setFocus();
             if (hasSmth) {
@@ -1913,15 +2005,17 @@ void FmMain::focusSearch()
 }
 
 
-void FmMain::searchEnterPressed(int index)
+void FmMain::searchEnterPressed(const QModelIndex& index)
 {
-    auto& line = searchModel.lineAt(index);
-    if (line.cp) {
-        gotoCp(nullptr, line.cp->subj);
-    } else if (line.node) {
-        goToNode(*line.node);
+    auto line = searchModel.lineAt(index);
+    if (!line)
+        return;
+    if (line->cp) {
+        gotoCp(nullptr, line->cp->subj);
+    } else if (line->node) {
+        goToNode(*line->node);
     } else {
-        auto relRect = ui->treeSearch->visualRect(searchModel.index(index, 0));
+        auto relRect = ui->treeSearch->visualRect(index);
         mainGui.blinkAtRel(loc::get("Search.NoSuch"), ui->treeSearch->viewport(), relRect);
     }
 }

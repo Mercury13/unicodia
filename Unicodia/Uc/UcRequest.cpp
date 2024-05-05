@@ -13,7 +13,7 @@ uc::MultiResult uc::doRequest(const Request& rq)
                 auto* newBlock = &cp.block();
                 if (newBlock != oldBlock) {
                     lastGroup = &r.groups.emplace_back();
-                    lastGroup->icon = &newBlock->synthIcon;
+                    lastGroup->block = newBlock;
                     oldBlock = newBlock;
                 }
                 lastGroup->lines.emplace_back(cp);

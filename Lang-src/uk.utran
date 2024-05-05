@@ -7659,15 +7659,6 @@
       <p />
       <p>Punctuation signs are ''danda'' bar from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
      </orig>
-     <known-orig>
-      <p>Odia or Oriya (traditionally but inaccurately considered relative to ''Aryans'') evolved from [[ps:Sidd|Siddham]], script with broken top line, through Gaudi (also ''proto-[[ps:Beng|Bengali]]'', ''proto-Oriya'').</p>
-      <p />
-      <p>By widespread opinion, letters got round shape because of writing on palm leaves{{-}}to prevent the leaf from cutting along veins, top line became arc. This arc is larger than main elements of letter, that’s why letters are hard to distinguish. The earliest known leaf is from 15th century.</p>
-      <p />
-      <p>Inherent vowel is {{t|ɔ}}, removed with [[pt:virama|virama]] sign: {{sm|କ}}=kɔ, {{sm|କି}}=ki, {{sm|କ୍}}=k. In Odia language, unlike other Indic, this vowel is never removed by itself, without virama. But virama is infrequent because of multiple consonant conjunct ligatures: {{sm|ମ+◌୍+ଭ=ମ୍ଭ}}{{_}}mbhɔ.</p>
-      <p />
-      <p>Punctuation signs are ''danda'' stick from [[ps:Deva|Devanagari]] block used as full stop and surrounded with spaces, and ordinary European.</p>
-     </known-orig>
      <transl>
       <p>Орíя (традиційно, але невірно вважається спільнокореневим з ''арійцями'') розвилася з [[ps:Sidd|сиддхаматрики]], писемності з розірваною верхньою рискою, через гауді (також ''прото-[[ps:Beng|бенгальську]]'', ''прото-орію'').</p>
       <p />
@@ -11668,6 +11659,37 @@
     <p>Most errors are displayed by searching U+####, e.g. nonchar=U+FFFF</p>
     <p>Not FFFF!</p>
    </au-cmt>
+   <group id="Blk">
+    <text id="New">
+     <orig>{1}, new block</orig>
+     <transl>{1}, новий блок</transl>
+    </text>
+    <text id="Full">
+     <orig>{1}, block is full</orig>
+     <transl>{1}, блок заповнений</transl>
+    </text>
+    <text id="NewFull">
+     <orig>{1}, new block is full</orig>
+     <transl>{1}, новий блок заповнений</transl>
+    </text>
+    <text id="Ext">
+     <orig>{1}, block is extended</orig>
+     <transl>{1}, блок розширений</transl>
+    </text>
+    <text id="NewSc">
+     <orig>{1}, new script</orig>
+     <transl>{1}, нова писемність</transl>
+    </text>
+    <text id="NewScFull">
+     <orig>{1}, new script, full</orig>
+     <transl>{1}, нова писемність, заповнений</transl>
+    </text>
+    <text id="NewDis">
+     <orig>{1}, disunified script</orig>
+     <au-cmt>Coptic for now, search for new chars in v4.1</au-cmt>
+     <transl>{1}, розуніфікована писемність</transl>
+    </text>
+   </group>
    <text id="NonChar">
     <orig>Non-character</orig>
     <transl>Викинута позиція</transl>
@@ -13301,7 +13323,7 @@
    <group id="2.1">
     <text id="Text">
      <orig>Added euro '''€''' and ''mojibake'' replacement character '''�'''.</orig>
-     <transl>Додані євро '''€''' та символ заміни ''крокозябри'' '''�'''.</transl>
+     <transl>Додані євро '''€''' та символ-замінник для об’єкта FFFC.</transl>
     </text>
    </group>
    <group id="6.2">

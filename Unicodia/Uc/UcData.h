@@ -720,6 +720,8 @@ namespace uc {
         STUB_ALM       = 1<<5,  ///< Use “Arabic letter mark” char in stub        
         NO_STATS       = 1<<6,  ///< Do not count in # of scripts
                                 ///< Hent = Hira, Zinh is scripted for search, but do not count
+        DISUNIFIED     = 1<<7,  ///< Created by disunification, not merely
+                                ///< introduction of new chars (Coptic only)
     };
     DEFINE_ENUM_OPS(Sfg)
 

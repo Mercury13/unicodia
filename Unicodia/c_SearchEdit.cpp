@@ -173,9 +173,9 @@ void SearchTree::keyPressEvent(QKeyEvent* ev)
     case Qt::Key_Return:
         ev->accept();
         if (auto index = currentIndex(); index.isValid()) {
-            emit enterPressed(index.row());
+            emit enterPressed(index);
         }
-        break;
+        [[fallthrough]];
     default:
         Super::keyPressEvent(ev);
         break;
@@ -190,11 +190,10 @@ void SearchTree::mouseDoubleClickEvent(QMouseEvent* ev)
         auto pt = ev->pos();
         auto index = indexAt(pt);
         if (index.isValid()) {
-            emit enterPressed(index.row());
+            emit enterPressed(index);
         }
-    } else {
-        Super::mouseDoubleClickEvent(ev);
     }
+    Super::mouseDoubleClickEvent(ev);
 }
 
 

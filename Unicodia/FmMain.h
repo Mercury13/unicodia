@@ -228,31 +228,38 @@ private:
 };
 
 
-class SearchModel final : public QAbstractTableModel, public QStyledItemDelegate
+class SearchModel final : public QAbstractItemModel, public QStyledItemDelegate
 {
 public:
     SearchModel(const PixSource* aSample, const uc::GlyphStyleSets& aGlyphSets) noexcept
         : sample(aSample), glyphSets(aGlyphSets) {}
-    int singleStoreySize() const { return group0().size(); }
-    /// @todo [urgent] group0 here
-    int rowCount(const QModelIndex&) const override { return group0().size(); }
+    int rowCount(const QModelIndex&) const override;
     int columnCount(const QModelIndex&) const override { return 1; }
+    QModelIndex index(int row, int column,
+            const QModelIndex &parent = QModelIndex()) const override;
+    QModelIndex parent(const QModelIndex &child) const override;
+    QVariant groupData(size_t index, int role) const;
     QVariant data(const QModelIndex& index, int role) const override;
-    void set(SafeVector<uc::SearchGroup>&& x);
+
+    void set(uc::ReplyStyle st, SafeVector<uc::SearchGroup>&& x);
     void clear();
     bool hasData() const { return !groups.empty(); }
-    const uc::SearchLine& lineAt(size_t index) const;
-    const uc::SearchGroup& group0() const;
+    const uc::SearchLine& lineAt(size_t iGroup, size_t iLine) const;
+    size_t groupSizeAt(size_t iGroup) const;
+    static bool isGroup(const QModelIndex& index);
+    const uc::SearchLine* lineAt(const QModelIndex& index) const;
 protected:
     void initStyleOption(QStyleOptionViewItem *option, const QModelIndex &index) const override;
 private:
+    uc::ReplyStyle style;
     const PixSource* const sample;
     const uc::GlyphStyleSets& glyphSets;
     SafeVector<uc::SearchGroup> groups;
     mutable LruCache<char32_t, QPixmap> cache { 400 };
 
     static constexpr auto EMOJI_DRAW = uc::EmojiDraw::CONSERVATIVE;    
-    static const uc::SearchGroup EMPTY_GROUP;
+    static constexpr quintptr ZERO = 0;
+    static constexpr auto GROUP = std::numeric_limits<quintptr>::max();
 };
 
 
@@ -440,7 +447,7 @@ private slots:
     void closeSearch();
     void startSearch();
     void focusSearch();
-    void searchEnterPressed(int index);
+    void searchEnterPressed(const QModelIndex& index);
     void languageChanged(int index);
     void reloadLanguage();
     void comboIndexChanged(int index);
