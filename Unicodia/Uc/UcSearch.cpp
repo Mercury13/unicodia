@@ -51,6 +51,16 @@ uc::MultiResult::MultiResult(const SingleResult& x)
     }
 }
 
+
+uc::MultiResult::MultiResult(SafeVector<SearchLine>&& aV)
+    : err(aV.empty() ? SearchError::NOT_FOUND : SearchError::OK)
+{
+    if (err == SearchError::OK) {
+        groups.emplace_back(std::move(aV));
+    }
+}
+
+
 const uc::Cp* uc::MultiResult::one() const
 {
     if (err == SearchError::OK && groups.size() == 1) {

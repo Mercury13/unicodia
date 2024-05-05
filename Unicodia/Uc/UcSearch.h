@@ -123,10 +123,9 @@ namespace uc {
         ReplyStyle style = ReplyStyle::FLAT;
         SafeVector<SearchGroup> groups {};
 
+        explicit MultiResult(const ReplyStyle x) : style(x) {}
         MultiResult(const SingleResult& x);
-        MultiResult(SafeVector<SearchLine>&& aV)
-            : err(aV.empty() ? SearchError::NOT_FOUND : SearchError::OK)
-                { groups.emplace_back(std::move(aV)); }
+        MultiResult(SafeVector<SearchLine>&& aV);
         const uc::Cp* one() const;
         bool isEmpty() const;
         bool hasSmth() const { return !isEmpty(); }
