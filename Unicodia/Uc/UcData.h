@@ -79,7 +79,7 @@ namespace uc {
     constexpr QChar STUB_PUA_CONTINUING_OVERLAP { 0xE007 }; // Dupl continuing overlap
     constexpr QChar STUB_PUA_BIG_STAR { 0xE008 };           // Egyp big asterisk
     constexpr QChar STUB_PUA_TAG { 0xE009 };                // Tag character
-    // E00A free
+    constexpr QChar STUB_PUA_ZOOM { 0xE00A };               // Magnifying glass for zoom
     constexpr QChar STUB_PUA_ENCLOSURE_START { 0xE00B };    // Egyp enclosure start
     constexpr QChar STUB_PUA_ENCLOSURE_END { 0xE00C };      //               …end
     constexpr QChar STUB_PUA_WALL_START { 0xE00D };         // Egyp waled ecnclosure start
