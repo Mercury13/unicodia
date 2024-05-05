@@ -1035,6 +1035,9 @@ const std::unordered_map<std::string_view, Exception> exceptions{
     EX("voiceless r")               // letter is SMALL
     EX("palatalized l")             // letter is SMALL
     EX("palatalized n")             // letter is SMALL
+        // Old Cyrl
+    EX("old Cyrillic yest")         // letter is SMALL
+    EX("old Cyrillic i")            // letter is SMALL
         // Dupl
     EX("Duployan letter D S")                       // Same
     EX("Duployan letter R S")                       // Same
