@@ -12582,7 +12582,7 @@
     </text>
     <text id="Latin">
      <orig>Latin / by letter</orig>
-     <transl>Латинка / по літерах</transl>
+     <transl>Латинка / за літерами</transl>
     </text>
     <text id="OldForms">
      <orig>Old forms</orig>
@@ -12593,8 +12593,8 @@
      <transl>Різні форми</transl>
     </text>
     <text id="Latin2">
-     <orig>Latin / by nation</orig>
-     <transl>Латинка / по країнах</transl>
+     <orig>Latin / by language</orig>
+     <transl>Латинка / за мовами</transl>
     </text>
     <text id="EnTran">
      <orig>English transcription</orig>
@@ -12631,7 +12631,7 @@
     </text>
     <text id="Latin3">
      <orig>Latin / by font</orig>
-     <transl>Латинка / по шрифтах</transl>
+     <transl>Латинка / за шрифтами</transl>
     </text>
     <text id="ParenCap">
      <orig>Parenthesized / capital</orig>

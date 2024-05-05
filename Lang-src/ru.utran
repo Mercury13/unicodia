@@ -12592,8 +12592,8 @@
      <transl>Разные формы</transl>
     </text>
     <text id="Latin2">
-     <orig>Latin / by nation</orig>
-     <transl>Латиница / по странам</transl>
+     <orig>Latin / by language</orig>
+     <transl>Латиница / по языкам</transl>
     </text>
     <text id="EnTran">
      <orig>English transcription</orig>
