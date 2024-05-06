@@ -437,6 +437,9 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
         auto dx = (rect.width() - sqSize) >> 1;
         auto dy = (rect.height() - sqSize) >> 1;
         QRectF smallRect(rect.left() + dx, rect.top() + dy, sqSize, sqSize);
+        if (si.flags.have(uc::Ifg::BIG_SVG)) {
+            smallRect = smallRect.marginsRemoved({0.3, 0.3, 0.3, 0.3});
+        }
         texture->get()->render(painter, smallRect);
         return;
     }
