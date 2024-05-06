@@ -683,6 +683,8 @@ namespace uc {
             } emoji;
             struct Blocks {
                 unsigned nNew = 0;
+                bool wereExtended = false;  ///< [+] at least 1 block was extended
+                bool wereShrunk = false;    ///< [+] at least 1 block was shrunk
             } blocks;
             struct Scripts {
                 unsigned nNew = 0;
@@ -690,8 +692,6 @@ namespace uc {
             } scripts;
 
             EcVersion thisEcVersion = EcVersion::NONE;
-            bool wereBlocksExtended = false;
-            bool wereBlocksShrunk = false;
         } stats {};
 
         std::u8string locName() const;

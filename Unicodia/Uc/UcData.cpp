@@ -1867,6 +1867,16 @@ void uc::completeData()
 
         // Check version
         ++v.version().stats.blocks.nNew;
+
+        // Most versions do not extend/shrink blocks. So check and cache
+        v.resizeHistoryT([](EcVersion ecv, char32_t before, char32_t after) {
+            auto& v = versionInfo[static_cast<int>(ecv)];
+            if (before < after) {
+                v.stats.blocks.wereExtended = true;
+            } else {
+                v.stats.blocks.wereShrunk = true;
+            }
+        });
     }
 
     // Find associated version for every version
@@ -2731,15 +2741,6 @@ void uc::finishTranslation(
             blk.printfLocKey(c, "Text");
             blk.loc.description = loc::get(c);
         }
-
-        blk.resizeHistoryT([](EcVersion ecv, char32_t before, char32_t after) {
-            auto& v = versionInfo[static_cast<int>(ecv)];
-            if (before < after) {
-                v.stats.wereBlocksExtended = true;
-            } else {
-                v.stats.wereBlocksShrunk = true;
-            }
-        });
     }
 
     // Blocks, pass 2 (build sort order)
