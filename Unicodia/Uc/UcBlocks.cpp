@@ -140,7 +140,7 @@ constinit const uc::Block uc::blocks[] {
             "Telugu",
             { EcScript::Telu, 0 }, MapType::AS_BRAH, EcScript::Telu },
     // Kannada OK
-    { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA },
+    { 0x0C80, 0x0CFF, { 0xCA0, EcContinent::ASIA, Ifg::SHIFT_DOWN },
             "Kannada",
             { EcScript::Knda, 0 }, MapType::AS_BRAH, EcScript::Knda },
     // Malayalam OK
