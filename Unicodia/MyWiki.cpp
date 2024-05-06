@@ -2272,7 +2272,6 @@ QString mywiki::buildHtml(const uc::Version& version)
         str::append(text, "<p>");
         auto key = str::cat("Version.", str::toSv(version.link({})) , ".Text");
         mywiki::appendNoFont(text, loc::get(key));
-
     }
 
     char buf[30];
