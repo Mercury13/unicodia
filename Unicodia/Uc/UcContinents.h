@@ -53,9 +53,10 @@ namespace uc {
         SHIFT_LEFT        = 1<<7,   ///< [+] To display a synth. icon, shift it to the left
         SHIFT_RIGHT       = 1<<8,   ///< [+] To display a synth. icon, shift it to the right
         SHIFT_DOWN        = 1<<9,   ///< [+] To display a synth. icon, shift it down a bit
-        SMALL_SVG         = 1<<10,  ///< [+] Do not synthesize an icon, use small SVG from combobox
-        BIGGER            = 1<<11,  ///< [+] Bigger (SMALL_SVG only for now)
-        BIG_SVG           = 1<<12,  ///< [+] Do not synthesize an icon, use special big SVG
+        SHIFT_UP          = 1<<10,  ///< [+] To display a synth. icon, shift it up a bit
+        SMALL_SVG         = 1<<11,  ///< [+] Do not synthesize an icon, use small SVG from combobox
+        BIGGER            = 1<<12,  ///< [+] Bigger (SMALL_SVG only for now)
+        BIG_SVG           = 1<<13,  ///< [+] Do not synthesize an icon, use special big SVG
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…

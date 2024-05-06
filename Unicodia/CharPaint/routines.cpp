@@ -982,7 +982,7 @@ void drawIconChars(
     case 0: break;
     case 1:
         drawChar(painter, rect, sizePc, *uc::cpsByCode[s[0]], color, TableDraw::CUSTOM,
-                uc::EmojiDraw::CONSERVATIVE, uc::GlyphStyleSets::EMPTY);
+                uc::EmojiDraw::GRAPHIC, uc::GlyphStyleSets::EMPTY);
         break;
     default:
         drawMultiSample(painter, rect, sizePc, s, color);

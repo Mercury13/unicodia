@@ -404,7 +404,8 @@ constinit const uc::Block uc::blocks[] {
             EcScript::NONE, EcFont::DEJAVU },
     // Geometric OK
     { 0x25A0, 0x25FF, { L'◆', EcContinent::NONE },
-            "Geometric Shapes", MyName::INST, MapType::SYM_OTHER },
+            "Geometric Shapes", MyName::INST, MapType::SYM_OTHER,
+            EcScript::NONE, EcFont::NORMAL, Bfg::NO_EMOJI },
     // Misc sym OK
     { 0x2600, 0x26FF, { L'☺', EcContinent::NONE },
             "Miscellaneous Symbols", MyName::INST, MapType::SYM_OTHER,
@@ -644,7 +645,7 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Hang, 'A' }, MapType::CJ_OTHER_DEAD,
             EcScript::Hang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Javanese OK
-    { 0xA980, 0xA9DF, { L'ꦈ', EcContinent::OCEAN },
+    { 0xA980, 0xA9DF, { L'ꦈ', EcContinent::OCEAN, Ifg::SHIFT_UP },
             "Javanese",
             { EcScript::Java, 0 }, MapType::OC_DEAD, EcScript::Java },
     // Myanmar ex B OK

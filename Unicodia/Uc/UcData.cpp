@@ -2353,6 +2353,14 @@ namespace {
     bool isFullEmojiByCase(char32_t ch)
     {
         switch (ch) {
+        case 0x261D:  // finger up
+        case 0x2626:  // Orthodox
+        case 0x262A:  // Muslim
+        case 0x262E:  // peace
+        case 0x262F:  // Dao
+        case 0x2638:  // Hindu
+        case 0x2639:  // sad smiley
+        case 0x263A:  // smiley
         case 0x2640:  // ♀
         case 0x2642:  // ♂
         case 0x265F:  // black pawn
@@ -2360,6 +2368,7 @@ namespace {
         case 0x2663:  // ♣
         case 0x2665:  // ♥
         case 0x2666:  // ♦
+        case 0x2668:  // hot springs
             return false;
         default:
             return true;

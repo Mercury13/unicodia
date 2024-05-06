@@ -454,9 +454,13 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
             rcContent.setRight(rcContent.right() + delta);
         }
     }
-    if (si.flags.have(uc::Ifg::SHIFT_DOWN)) {
+    if (si.flags.haveAny(uc::Ifg::SHIFT_DOWN | uc::Ifg::SHIFT_UP)) {
         auto delta = rcContent.height() >> 2;
-        rcContent.setBottom(rcContent.bottom() + delta);
+        if (si.flags.haveAny(uc::Ifg::SHIFT_DOWN)) {
+            rcContent.setBottom(rcContent.bottom() + delta);
+        } else {
+            rcContent.setTop(rcContent.top() - delta);
+        }
     }
     // Get size
     if (si.flags.have(uc::Ifg::SMALLER))
