@@ -1160,7 +1160,7 @@ constinit const uc::Block uc::blocks[] {
             "Cypro-Minoan",
             { EcScript::Cpmn, 0 }, MapType::EU_OTHER_DEAD, EcScript::Cpmn },
     // Egyptian hiero OK
-    { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA },
+    { 0x13000, 0x1342F, { 0x1302F, EcContinent::AFRICA, Ifg::APPROX_PART },
             "Egyptian Hieroglyphs",
             { EcScript::Egyp, 0 }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::COLLAPSIBLE },
@@ -1172,7 +1172,7 @@ constinit const uc::Block uc::blocks[] {
                 Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE,
             EcGlyphStyleChannel::NONE, { 0x1343F, EcVersion::V_15_0 } },
     /// @todo [U16, huge tofu] Egyp A
-    { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING  },
+    { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING | Ifg::APPROX_PART  },
             "Egyptian Hieroglyphs Extended-A",
             { EcScript::Egyp, 'A' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL, Bfg::HAS_DESCRIPTION | Bfg::COLLAPSIBLE },

@@ -66,6 +66,7 @@ namespace uc {
                                     ///<      Psalter Pahlavi, board games, CJK emoji
         APPROX_HISTORICAL = 0,      ///< [+] icon is from historical font with © issues:
                                     ///<      Cpmn, Tang, Kits
+        APPROX_PART       = 0,      ///< [+] small icon shows just a part (Egyp)
         // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
         // dotted circle completely → no flag for such approximation
     };
