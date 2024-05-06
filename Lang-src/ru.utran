@@ -1185,6 +1185,16 @@
      <transl>{1} {2} {3|one=? черта|few=? черты|many=? черт}</transl>
     </text>
    </group>
+   <group id="Ver">
+    <text id="Ext">
+     <orig>Extended</orig>
+     <transl>Расширен</transl>
+    </text>
+    <text id="Shr">
+     <orig>Shrunk</orig>
+     <transl>Сжат</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

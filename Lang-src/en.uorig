@@ -937,6 +937,14 @@
      <au-cmt>1=radical, 2=±, 3=# of strokes</au-cmt>
     </text>
    </group>
+   <group id="Ver">
+    <text id="Ext">
+     <orig>Extended</orig>
+    </text>
+    <text id="Shr">
+     <orig>Shrunk</orig>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">

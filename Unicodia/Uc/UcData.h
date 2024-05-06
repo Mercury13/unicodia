@@ -929,8 +929,12 @@ namespace uc {
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKeyN(buf, N, suffix); }
 
+        /// Traverses history of all resizes from earlier to later
+        /// Only 1 right now, but do not rely
+        /// 3 params: when, before, after
         void resizeHistory(const BlockResizeSink& x) const;
 
+        /// Same, virtual template idiom
         template <class Body>
         void resizeHistoryT(const Body& body) const
             { resizeHistory(BlockResizeSinkT<Body>(body)); }

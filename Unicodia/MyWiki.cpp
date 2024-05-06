@@ -1864,16 +1864,15 @@ QString mywiki::buildHtml(const uc::Block& x)
     mywiki::appendVersionValue(text, x.version());
 
     // When extended/shrunk
-    if (x.history.ecVersion != uc::EcVersion::NONE) {
+    x.resizeHistoryT([&](uc::EcVersion when, char32_t bef, char32_t aft) {
         sp.sep();
-        appendBullet(text,
-            (x.history.oldEndingCp < x.endingCp)
-                     ? "Prop.Bullet.Extend" : "Prop.Bullet.Shrunk");
-        mywiki::appendVersionValue(text, x.history.ecVersion);
+        appendBullet(text, (bef < aft)
+                            ? "Prop.Bullet.Extend" : "Prop.Bullet.Shrunk");
+        mywiki::appendVersionValue(text, when);
         snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RESIZE),
                     int(x.history.oldEndingCp), int(x.endingCp));
         str::append(text, buf);
-    }
+    });
 
     auto nNonChars = x.nNonChars();
     if (nNonChars) {
@@ -2164,7 +2163,7 @@ namespace {
         str::append(sp.target(), ": ");
         mywiki::appendCopyable(sp.target(), value);
         // Query
-        if (!unicodeLink.empty()) {
+        if (value != 0 && !unicodeLink.empty()) {
             auto params = str::cat("v=", str::toSv(unicodeLink));
             appendQuery(sp.target(), params);
         }
@@ -2199,6 +2198,47 @@ namespace {
         auto s = monTemplate.arg(date.year);
         str::append(sp.target(), s);
         sp.target() += ")";
+    }
+
+    void appendBlockLink(QString& text, const uc::Block& blk)
+    {
+        char buf[30];
+        snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
+        text += "<a class='popup' href='";
+        text += buf;
+        text += "'>";
+        str::append(text, blk.loc.name);
+        text += "</a>";
+    }
+
+    bool chLess(char32_t a, char32_t b) { return (a < b); }
+    bool chGreater(char32_t a, char32_t b) { return (a > b); }
+    using EvCmp = bool (*)(char32_t, char32_t);
+
+    void appendChangedBlocks(QString& text, const uc::Version& version,
+                             bool& wasStarted,
+                             std::string_view locKey, EvCmp cmp)
+    {
+        if (!wasStarted) {
+            text += "<p>";
+            wasStarted = true;
+        } else {
+            text += "<br>";
+        }
+        text += loc::get(locKey);
+        text += ": ";
+        str::QSep sp(text, ", ");
+        for (auto& blk : uc::allBlocks()) {
+            // Think that resize history is heavy (not really a problem now)
+            if (version.stats.thisEcVersion > blk.ecVersion) {
+                blk.resizeHistoryT([&](uc::EcVersion v, char32_t bef, char32_t aft) {
+                    if (v == version.stats.thisEcVersion && cmp(bef, aft)) {
+                        sp.sep();
+                        appendBlockLink(text, blk);
+                    }
+                });
+            }
+        }
     }
 
 }   // anon namespace
@@ -2274,7 +2314,6 @@ QString mywiki::buildHtml(const uc::Version& version)
         mywiki::appendNoFont(text, loc::get(key));
     }
 
-    char buf[30];
     if (!version.isFirst() && version.stats.blocks.nNew != 0) {        
         text += "<p><b>";
         str::append(text, loc::get("Prop.Head.NewBlk"));
@@ -2296,12 +2335,7 @@ QString mywiki::buildHtml(const uc::Version& version)
                 } else {
                     sp.sep();
                 }
-                snprintf(buf, std::size(buf), "pk:%04X", static_cast<unsigned>(blk.startingCp));
-                text += "<a class='popup' href='";
-                text += buf;
-                text += "'>";
-                str::append(text, blk.loc.name);
-                text += "</a>";
+                appendBlockLink(text, blk);
                 ++i;
             }
         }
@@ -2310,13 +2344,12 @@ QString mywiki::buildHtml(const uc::Version& version)
         }
     }
 
+    bool wasStarted = false;
     if (version.stats.blocks.wereExtended) {
-        // Find extended blocks
-
+        appendChangedBlocks(text, version, wasStarted, "Prop.Ver.Ext", chLess);
     }
     if (version.stats.blocks.wereShrunk) {
-        // Find shrunk blocks
-
+        appendChangedBlocks(text, version, wasStarted, "Prop.Ver.Shr", chGreater);
     }
 
     return text;

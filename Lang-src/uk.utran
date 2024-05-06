@@ -1186,6 +1186,16 @@
      <transl>{1} {2} {3|one=? лінія|few=? лінії|many=? ліній}</transl>
     </text>
    </group>
+   <group id="Ver">
+    <text id="Ext">
+     <orig>Extended</orig>
+     <transl>Розширено</transl>
+    </text>
+    <text id="Shr">
+     <orig>Shrunk</orig>
+     <transl>Стиснено</transl>
+    </text>
+   </group>
   </group>
   <group id="Block">
    <group id="0000">
