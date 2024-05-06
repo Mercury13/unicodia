@@ -752,7 +752,8 @@ QVariant SearchModel::groupData(size_t index, int role) const
                             key = "Search.Blk.NewFull";
                         }
                         charsLine = loc::get(key).arg(charsLine);
-                        /// @todo [urgent] Was block extended?
+                    } else if (blk->wasExtendedIn(version)) {
+                        charsLine = loc::get("Search.Blk.Ext").arg(charsLine);
                     } else if (blk->wasFilledIn(version)) {
                         charsLine = loc::get("Search.Blk.Full").arg(charsLine);
                     }

@@ -31,6 +31,7 @@ namespace uc {
     class LibNode;
     class GlyphStyleChannel;
     class Request;
+    enum class EcVersion : unsigned char;
 }
 
 enum class Want32 { NO, YES };
@@ -130,6 +131,7 @@ namespace mywiki {
     void appendNoFont(QString& x, std::u8string_view wiki);
     void append(QString& x, std::u8string_view wiki, const uc::Font& font);
     void appendVersionValue(QString& text, const uc::Version& version);
+    void appendVersionValue(QString& text, uc::EcVersion version);
     void appendEmojiValue(QString& text, const uc::Version& version, const uc::Version& prevVersion);
     void appendVersion(QString& text, std::u8string_view prefix, const uc::Version& version);
     void appendUtf(QString& text, Want32 want32, str::QSep& sp, char32_t code);

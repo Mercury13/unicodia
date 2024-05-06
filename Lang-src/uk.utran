@@ -971,6 +971,16 @@
      <orig>Total scripts</orig>
      <transl>Усього писемностей</transl>
     </text>
+    <text id="Extend">
+     <orig>Extended</orig>
+     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
+     <transl>Розширено</transl>
+    </text>
+    <text id="Shrunk">
+     <orig>Shrunk</orig>
+     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
+     <transl>Стиснено</transl>
+    </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
@@ -4909,16 +4919,8 @@
      <transl>тайсько-ахомська ''(Ассам, відроджується)''</transl>
     </text>
     <text id="Text">
-     <orig>
-      <p>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</p>
-      <p />
-      <p>In Unicode{{_}}14.0 Ahom block was extended by 16 positions{{-}}first such block since Unicode{{_}}2.0 when [[pt:stability|stability]] policy was adopted.</p>
-     </orig>
-     <transl>
-      <p>Тайці, що переселилися у долину річки Брахмапутра, створили писемність на основі тодішньої індійської абуґіди. До XIX{{_}}століття мова остаточно замістилась ассамською з [[ps:Beng|бенгальським]] письмом. Відроджується з 1954, до писемності додані десяткові цифри, що не{{_}}мають історичного обґрунтування. Тонова система тайсько-ахомської повністю втрачена{{-}}писемність її не{{_}}передавала.</p>
-      <p />
-      <p>Блок «Ахом» у Юнікоді{{_}}14.0 розширили на 16 позицій{{-}}перший такий блок з Юнікоду{{_}}2.0, коли прийняли політику [[pt:stability|стабільності]].</p>
-     </transl>
+     <orig>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</orig>
+     <transl>Тайці, що переселилися у долину річки Брахмапутра, створили писемність на основі тодішньої індійської абуґіди. До XIX{{_}}століття мова остаточно замістилась ассамською з [[ps:Beng|бенгальським]] письмом. Відроджується з 1954, до писемності додані десяткові цифри, що не{{_}}мають історичного обґрунтування. Тонова система тайсько-ахомської повністю втрачена{{-}}писемність її не{{_}}передавала.</transl>
     </text>
    </group>
    <group id="Arab">

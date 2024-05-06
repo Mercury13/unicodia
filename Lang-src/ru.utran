@@ -970,6 +970,16 @@
      <orig>Total scripts</orig>
      <transl>Всего письменностей</transl>
     </text>
+    <text id="Extend">
+     <orig>Extended</orig>
+     <au-cmt>As of U16, three blocks were extended: Tibt, Ahom, Egyp controls</au-cmt>
+     <transl>Расширен</transl>
+    </text>
+    <text id="Shrunk">
+     <orig>Shrunk</orig>
+     <au-cmt>As of U16, one block was shrunk: Tang supp</au-cmt>
+     <transl>Сжат</transl>
+    </text>
    </group>
    <group id="Os">
     <au-cmt>Test: OS style (2nd character box, instead of font name)</au-cmt>
@@ -4908,16 +4918,8 @@
      <transl>тайско-ахомский ''(Ассам, возрождается)''</transl>
     </text>
     <text id="Text">
-     <orig>
-      <p>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</p>
-      <p />
-      <p>In Unicode{{_}}14.0 Ahom block was extended by 16 positions{{-}}first such block since Unicode{{_}}2.0 when [[pt:stability|stability]] policy was adopted.</p>
-     </orig>
-     <transl>
-      <p>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. К XIX{{_}}веку язык окончательно заместился ассамским с [[ps:Beng|бенгальским]] письмом. Возрождается с 1954, в письменность добавлены десятичные цифры, не{{_}}имеющие исторического обоснования. Тоновая система тайско-ахомского языка полностью потеряна{{-}}письменность её не{{_}}передавала.</p>
-      <p />
-      <p>Блок «Ахом» в Юникоде{{_}}14.0 расширили на 16 позиций{{-}}первый такой блок с Юникода{{_}}2.0, когда приняли политику [[pt:stability|стабильности]].</p>
-     </transl>
+     <orig>Tais that settled in the Brahmaputra river valley created a script based on Indic abugida. By 19th century the language was finally supplanted with Assamese with [[ps:Beng|Bengali]] script. Revived from 1954, decimal numbers that have no historical justification were added to script. Tonal system of Tai-Ahom is entirely lost{{-}}script did{{_}}not{{_}}convey it.</orig>
+     <transl>Тайцы, переселившиеся в долину реки Брахмапутра, создали письменность на основе тогдашней индийской абугиды. К XIX{{_}}веку язык окончательно заместился ассамским с [[ps:Beng|бенгальским]] письмом. Возрождается с 1954, в письменность добавлены десятичные цифры, не{{_}}имеющие исторического обоснования. Тоновая система тайско-ахомского языка полностью потеряна{{-}}письменность её не{{_}}передавала.</transl>
     </text>
    </group>
    <group id="Arab">
@@ -11681,6 +11683,7 @@
     </text>
     <text id="NewScFull">
      <orig>{1}, new script, full</orig>
+     <au-cmt>e.g. Palmyrene in U7</au-cmt>
      <transl>{1}, новая письменность, заполнен</transl>
     </text>
     <text id="NewDis">

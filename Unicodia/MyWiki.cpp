@@ -801,6 +801,11 @@ void mywiki::appendVersionValue(QString& text, const uc::Version& version)
     str::append(text, ")");
 }
 
+void mywiki::appendVersionValue(QString& text, uc::EcVersion version)
+{
+    appendVersionValue(text, uc::versionInfo[static_cast<int>(version)]);
+}
+
 void mywiki::appendEmojiValue(QString& text,
         const uc::Version& version, const uc::Version& prevVersion)
 {
@@ -1831,6 +1836,7 @@ QString mywiki::buildHtml(const uc::Term& x)
 
 namespace {
     const char8_t* STR_RANGE = u8"%04X…%04X";
+    const char8_t* STR_RESIZE = u8" %04X → %04X";
 }
 
 QString mywiki::buildHtml(const uc::Block& x)
@@ -1856,6 +1862,18 @@ QString mywiki::buildHtml(const uc::Block& x)
     sp.sep();
     appendBullet(text, "Prop.Bullet.VerAppear");
     mywiki::appendVersionValue(text, x.version());
+
+    // When extended/shrunk
+    if (x.history.ecVersion != uc::EcVersion::NONE) {
+        sp.sep();
+        appendBullet(text,
+            (x.history.oldEndingCp < x.endingCp)
+                     ? "Prop.Bullet.Extend" : "Prop.Bullet.Shrunk");
+        mywiki::appendVersionValue(text, x.history.ecVersion);
+        snprintf(buf, std::size(buf), reinterpret_cast<const char*>(STR_RESIZE),
+                    int(x.history.oldEndingCp), int(x.endingCp));
+        str::append(text, buf);
+    }
 
     auto nNonChars = x.nNonChars();
     if (nNonChars) {

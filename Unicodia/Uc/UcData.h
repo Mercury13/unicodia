@@ -865,7 +865,7 @@ namespace uc {
         EcGlyphStyleChannel ecStyleChannel = EcGlyphStyleChannel::NONE;
         struct History {
             char32_t oldEndingCp = 0;
-            EcVersion version = EcVersion::NONE;
+            EcVersion ecVersion = EcVersion::NONE;
         } history {};
 
         /// @warning We do not delete that icon, strange constinit problems, but OK
@@ -901,6 +901,8 @@ namespace uc {
             { return (ecScript == EcScript::NONE || flags.have(Bfg::HAS_DESCRIPTION)); }
         bool wasFilledIn(uc::EcVersion v) const
             { return nEmptyPlaces() == 0 && ecLastVersion == v; }
+        bool wasExtendedIn(uc::EcVersion v) const
+            { return (history.ecVersion == v && history.oldEndingCp < endingCp); }
 
         void printfLocKey(char* buf, size_t n, const char* suffix) const
             { printfLocKeyN(buf, n, suffix); }
