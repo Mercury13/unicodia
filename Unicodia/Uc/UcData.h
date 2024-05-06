@@ -690,6 +690,8 @@ namespace uc {
             } scripts;
 
             EcVersion thisEcVersion = EcVersion::NONE;
+            bool wereBlocksExtended = false;
+            bool wereBlocksShrunk = false;
         } stats {};
 
         std::u8string locName() const;
@@ -852,6 +854,22 @@ namespace uc {
         SYM_OTHER,
     };
 
+    class BlockResizeSink {     // interface
+    public:
+        virtual void act(uc::EcVersion version, char32_t before, char32_t after) const = 0;
+        virtual ~BlockResizeSink() = default;
+    };
+
+    template <class Body>
+    class BlockResizeSinkT : public BlockResizeSink {     // interface
+    public:
+        BlockResizeSinkT(const Body& x) : body(x) {}
+        void act(uc::EcVersion version, char32_t before, char32_t after) const override
+            { body(version, before, after); }
+    private:
+        const Body& body;
+    };
+
     struct Block
     {
         char32_t startingCp, endingCp;
@@ -910,6 +928,12 @@ namespace uc {
         template <size_t N>
         void printfLocKey(char (&buf)[N], const char* suffix) const
             { printfLocKeyN(buf, N, suffix); }
+
+        void resizeHistory(const BlockResizeSink& x) const;
+
+        template <class Body>
+        void resizeHistoryT(const Body& body) const
+            { resizeHistory(BlockResizeSinkT<Body>(body)); }
     private:
         void printfLocKeyN(char* buf, size_t n, const char* suffix) const;
     };

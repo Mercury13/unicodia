@@ -2568,6 +2568,14 @@ unsigned uc::Block::nNonChars() const
 }
 
 
+void uc::Block::resizeHistory(const BlockResizeSink& x) const
+{
+    if (history.ecVersion != EcVersion::NONE) {
+        x.act(history.ecVersion, history.oldEndingCp, endingCp);
+    }
+}
+
+
 void uc::Block::printfLocKeyN(char* buf, size_t n, const char* suffix) const
 {
     snprintf(buf, n, "Block.%04X.%s", (int)startingCp, suffix);
@@ -2723,6 +2731,15 @@ void uc::finishTranslation(
             blk.printfLocKey(c, "Text");
             blk.loc.description = loc::get(c);
         }
+
+        blk.resizeHistoryT([](EcVersion ecv, char32_t before, char32_t after) {
+            auto& v = versionInfo[static_cast<int>(ecv)];
+            if (before < after) {
+                v.stats.wereBlocksExtended = true;
+            } else {
+                v.stats.wereBlocksShrunk = true;
+            }
+        });
     }
 
     // Blocks, pass 2 (build sort order)
