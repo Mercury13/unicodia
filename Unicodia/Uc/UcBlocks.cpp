@@ -1,4 +1,5 @@
 #include "UcData.h"
+#include "UcContinents.h"
 
 // Long and glitchy, that’s why I moved out from UcData
 
@@ -1156,7 +1157,7 @@ constinit const uc::Block uc::blocks[] {
             "Early Dynastic Cuneiform",
             { EcScript::Xsux, 2 }, MapType::AS_OTHER_DEAD, EcScript::Xsux },
     // Cypro-Minoan OK
-    { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::APPROX_HISTORICAL },
+    { 0x12F90, 0x12FFF, { 0x12FCC, EcContinent::EUROPE, Ifg::HISTORICAL | Ifg::BIGGER },
             "Cypro-Minoan",
             { EcScript::Cpmn, 0 }, MapType::EU_OTHER_DEAD, EcScript::Cpmn },
     // Egyptian hiero OK
@@ -1226,22 +1227,22 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::CJ_SYMBOL,
             EcScript::Hani, EcFont::NORMAL, Bfg::HAS_DESCRIPTION },
     // Tangut OK
-    { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
+    { 0x17000, 0x187FF, { 0x17032, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Tangut",
             { EcScript::Tang, 0 }, MapType::CJ_OTHER_DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut components OK
-    { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
+    { 0x18800, 0x18AFF, { 0x18844, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Tangut Components",
             { EcScript::Tang, 1 }, MapType::CJ_OTHER_DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::COLLAPSIBLE | Bfg::HAS_DESCRIPTION },
     // Khitan small OK
-    { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
+    { 0x18B00, 0x18CFF, { 0x18B4C, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Khitan Small Script",
             { EcScript::Kits, 0 }, MapType::CJ_OTHER_DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
-    { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
+    { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::HISTORICAL | Ifg::BIGGER },
             "Tangut Supplement",
             { EcScript::Tang, 1 }, MapType::CJ_OTHER_DEAD,
             EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION,

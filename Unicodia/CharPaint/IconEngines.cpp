@@ -426,6 +426,9 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (texture) {
         auto smallerSide = std::min(rect.width(), rect.height());
         auto sqSize = smallerSide >> 1;
+        if (si.flags.have(uc::Ifg::BIGGER)) {
+            sqSize = smallerSide * 3 / 5;
+        }
         auto dx = (rect.width() - sqSize) >> 1;
         auto dy = (rect.height() - sqSize) >> 1;
         QRect smallRect(rect.left() + dx, rect.top() + dy, sqSize, sqSize);
