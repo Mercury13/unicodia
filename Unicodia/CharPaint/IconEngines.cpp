@@ -401,10 +401,13 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
 ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aPixStart)
     : source(aSource), si(aSi)
 {
-    /// @todo [urgent] Big SVG
-    if (aPixStart && aSi.flags.haveAny(uc::Ifg::MISSING | uc::Ifg::SMALL_SVG)) {
+    if (aPixStart && aSi.flags.haveAny(uc::Ifg::MISSING | uc::Ifg::SMALL_SVG | uc::Ifg::BIG_SVG)) {
         char buf[48];
-        util::sprintfCp(buf, aPixStart);
+        if (aSi.flags.have(uc::Ifg::BIG_SVG)) {
+            snprintf(buf, std::size(buf), ":/ScBig/%04X.svg", int(aPixStart));
+        } else {
+            util::sprintfCp(buf, aPixStart);
+        }
         texture = dumb::makeSp<LazySvg>(buf);
     }
 }
@@ -426,12 +429,14 @@ void ie::Synth::paint1(QPainter *painter, const QRect &rect, qreal scale)
     if (texture) {
         auto smallerSide = std::min(rect.width(), rect.height());
         auto sqSize = smallerSide >> 1;
-        if (si.flags.have(uc::Ifg::BIGGER)) {
+        if (si.flags.have(uc::Ifg::BIG_SVG)) {
+            sqSize = std::round(smallerSide * 0.75);
+        } else if (si.flags.have(uc::Ifg::BIGGER)) {
             sqSize = smallerSide * 3 / 5;
         }
         auto dx = (rect.width() - sqSize) >> 1;
         auto dy = (rect.height() - sqSize) >> 1;
-        QRect smallRect(rect.left() + dx, rect.top() + dy, sqSize, sqSize);
+        QRectF smallRect(rect.left() + dx, rect.top() + dy, sqSize, sqSize);
         texture->get()->render(painter, smallRect);
         return;
     }

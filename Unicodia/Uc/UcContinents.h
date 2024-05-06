@@ -55,6 +55,7 @@ namespace uc {
         SHIFT_DOWN        = 1<<9,   ///< [+] To display a synth. icon, shift it down a bit
         SMALL_SVG         = 1<<10,  ///< [+] Do not synthesize an icon, use small SVG from combobox
         BIGGER            = 1<<11,  ///< [+] Bigger (SMALL_SVG only for now)
+        BIG_SVG           = 1<<12,  ///< [+] Do not synthesize an icon, use special big SVG
         HISTORICAL        = SMALL_SVG,  ///< [+] Icon is from historical font and uses small SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
@@ -68,8 +69,6 @@ namespace uc {
         APPROX_PART       = 0,      ///< [+] small icon shows just a part (Egyp)
         // Synthesized icon is BIG, at least 39px, and we CAN afford drawing
         // dotted circle completely → no flag for such approximation
-        BIG_SVG           = 0,      ///< [+] Do not synthesize an icon, use special big SVG
-                                    ///<   Unused for now (what to do with dark skin?)
     };
     DEFINE_ENUM_OPS(Ifg)
 

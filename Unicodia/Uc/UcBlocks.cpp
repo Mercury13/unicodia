@@ -1413,7 +1413,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
     // Cards OK
-    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::APPROX_COLOR | Ifg::CUSTOM_ENGINE | Ifg::SHIFT_DOWN },
+    { 0x1F0A0, 0x1F0FF, { 0x1F0B1, EcContinent::NONE, Ifg::CUSTOM_ENGINE | Ifg::BIG_SVG },
             "Playing Cards",
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
