@@ -739,7 +739,8 @@ QVariant SearchModel::groupData(size_t index, int role) const
                         const char* key = "Search.Blk.New";
                         auto& sc = blk->script();
                         // New version here
-                        if (!sc.flags.have(uc::Sfg::NONSCRIPT) && sc.ecVersion == version) {
+                        if (!sc.flags.haveAny(uc::Sfg::NONSCRIPT | uc::Sfg::NO_STATS)
+                                && sc.ecVersion == version) {
                             if (sc.flags.have(uc::Sfg::DISUNIFIED)) {
                                 key = "Search.Blk.NewDis";
                             } else if (blk->wasFilledIn(version)) {
