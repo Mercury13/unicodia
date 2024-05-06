@@ -863,6 +863,10 @@ namespace uc {
         EcFont ecFont = EcFont::NORMAL;
         Flags<Bfg> flags {};
         EcGlyphStyleChannel ecStyleChannel = EcGlyphStyleChannel::NONE;
+        struct History {
+            char32_t oldEndingCp = 0;
+            EcVersion version = EcVersion::NONE;
+        } history {};
 
         /// @warning We do not delete that icon, strange constinit problems, but OK
         mutable QIcon* icon = nullptr;

@@ -161,7 +161,9 @@ constinit const uc::Block uc::blocks[] {
     // Tibetan OK
     { 0x0F00, 0x0FFF, { 0xF4F, EcContinent::ASIA },
             "Tibetan",
-            { EcScript::Tibt, 0 }, MapType::AS_BRAH, EcScript::Tibt },
+            { EcScript::Tibt, 0 }, MapType::AS_BRAH,
+            EcScript::Tibt, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
+            { 0xFBF, uc::EcVersion::V_3_0 } },
     // Myanmar OK
     { 0x1000, 0x109F, { 0x101E, EcContinent::ASIA },
             "Myanmar",
@@ -1056,7 +1058,9 @@ constinit const uc::Block uc::blocks[] {
     // Ahom OK
     { 0x11700, 0x1174F, { 0x11700, EcContinent::ASIA },
             "Ahom",
-            { EcScript::Ahom, 0 }, MapType::AS_BRAH, EcScript::Ahom },
+            { EcScript::Ahom, 0 }, MapType::AS_BRAH,
+            EcScript::Ahom, EcFont::NORMAL, NO_FLAGS, EcGlyphStyleChannel::NONE,
+            { 0x1173F, uc::EcVersion::V_14_0 } },
     // Dogra OK
     { 0x11800, 0x1184F, { 0x1180A, EcContinent::ASIA, {}, 1_hy },
             "Dogra",
@@ -1165,7 +1169,8 @@ constinit const uc::Block uc::blocks[] {
             "Egyptian Hieroglyph Format Controls",
             { EcScript::Egyp, 'f' }, MapType::AF_DEAD,
             EcScript::Egyp, EcFont::NORMAL,
-                Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE },
+                Bfg::HAS_DESCRIPTION | Bfg::BIG_CONTROLS | Bfg::COLLAPSIBLE,
+            EcGlyphStyleChannel::NONE, { 0x1343F, EcVersion::V_15_0 } },
     /// @todo [U16, huge tofu] Egyp A
     { 0x13460, 0x143FF, { 0x13C42, EcContinent::AFRICA, Ifg::MISSING  },
             "Egyptian Hieroglyphs Extended-A",
@@ -1236,10 +1241,11 @@ constinit const uc::Block uc::blocks[] {
             { EcScript::Kits, 0 }, MapType::CJ_OTHER_DEAD,
             EcScript::Kits, EcFont::NORMAL, Bfg::COLLAPSIBLE },
     // Tangut supplement OK, not collapsible: too small
-    { 0x18D00, 0x18D8F, { 0x18D00, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
+    { 0x18D00, 0x18D7F, { 0x18D00, EcContinent::CJK, Ifg::APPROX_HISTORICAL },
             "Tangut Supplement",
             { EcScript::Tang, 1 }, MapType::CJ_OTHER_DEAD,
-            EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION },
+            EcScript::Tang, EcFont::NORMAL, Bfg::CJK | Bfg::HAS_DESCRIPTION,
+            EcGlyphStyleChannel::NONE, { 0x18D8F, EcVersion::V_14_0 } },
     // Kana ex B OK: Made for myself tofu from GlyphWiki
     { 0x1AFF0, 0x1AFFF, { 0x1AFFB, EcContinent::CJK },
             "Kana Extended-B",
