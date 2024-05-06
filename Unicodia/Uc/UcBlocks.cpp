@@ -776,7 +776,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::EU_OTHER_DEAD,
             EcScript::NONE, EcFont::NOTO_SYMBOL2 },
     // Phaistos Disc OK
-    { 0x101D0, 0x101FF, { 0x101D1, EcContinent::EUROPE, Ifg::CONTINENT_OK },
+    { 0x101D0, 0x101FF, { 0x101D1, EcContinent::EUROPE, Ifg::CONTINENT_OK | Ifg::SHIFT_DOWN },
             "Phaistos Disc",
             MyName::INST, MapType::EU_OTHER_DEAD,
             EcScript::NONE, EcFont::PHAISTOS_DISC },
@@ -1407,7 +1407,7 @@ constinit const uc::Block uc::blocks[] {
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::MAHJONG_TILES },
     // Domino tiles OK
-    { 0x1F030, 0x1F09F, { 0x1F043, EcContinent::NONE },
+    { 0x1F030, 0x1F09F, { 0x1F043, EcContinent::NONE, Ifg::SHIFT_DOWN | Ifg::APPROX_COLOR },
             "Domino Tiles",
             MyName::INST, MapType::SYM_OTHER,
             EcScript::NONE, EcFont::DOMINOES },
