@@ -413,7 +413,7 @@ constinit const uc::Block uc::blocks[] {
     { 0x2700, 0x27BF, { L'❧', EcContinent::NONE },
             "Dingbats",
             { EcScript::ZDIN, 0 }, MapType::SYM_OTHER,
-            EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS | Bfg::EMOJI_BY_CASE },
+            EcScript::NONE, EcFont::DINGBAT2, Bfg::HIPRIO_NUMBERS | Bfg::NO_EMOJI },
     // Misc math A OK
     { 0x27C0, 0x27EF, { L'⟈', EcContinent::NONE },
             "Miscellaneous Mathematical Symbols-A",

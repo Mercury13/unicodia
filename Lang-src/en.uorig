@@ -1666,9 +1666,9 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several [[pt:emoji|emoji]], and that’s justified: in Internet they will be colour pictures, and typesetter will set the document in monochrome font.</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several VS16 [[pt:emoji|emoji]].</p>
       <p />
-      <p>Only loop 27B0 and double loop 27BF aren’t from that library.</p>
+      <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
     </text>
    </group>

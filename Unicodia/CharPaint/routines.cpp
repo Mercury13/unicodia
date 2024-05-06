@@ -388,7 +388,7 @@ void drawDeprecated(QPainter* painter, const QRect& r)
 void drawEmojiIcon(QPainter* painter, const QRect& r, char32_t subj)
 {
     static constexpr int OFS = 0;
-    static constexpr int SZ = 12;
+    static constexpr int SZ = 15;
     const int x1 = r.right() - OFS;
     const int x0 = x1 - SZ;
     const int y0 = r.top() + OFS;
@@ -780,7 +780,7 @@ void drawCharOverEmoji(
     auto loSize = std::min(rect.width(), rect.height());
     if (loSize <= 0)  // Maybe this’ll trigger nicer division, [[assume]] is C++23
         return;
-    auto emojiSize = loSize / 3;
+    auto emojiSize = loSize * 2 / 5;
     QRect rect1 = rect;
     rect1.setBottomLeft({rect.right() - emojiSize, rect.top() + emojiSize});
     emp.draw(painter, rect1, subj, emojiSize, color);

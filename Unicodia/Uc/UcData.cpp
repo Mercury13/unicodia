@@ -2360,7 +2360,6 @@ namespace {
         case 0x2663:  // ♣
         case 0x2665:  // ♥
         case 0x2666:  // ♦
-        case 0x27A1:  // fat →
             return false;
         default:
             return true;

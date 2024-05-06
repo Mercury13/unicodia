@@ -2192,14 +2192,14 @@
     </text>
     <text id="Text">
      <orig>
-      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several [[pt:emoji|emoji]], and that’s justified: in Internet they will be colour pictures, and typesetter will set the document in monochrome font.</p>
+      <p>A well-known pre-computer library of printer’s decorations, ''Hermann Zapf dingbats'' (1977). Was widely distributed as PostScript fonts, is guaranteed to exist in every PDF viewer. The block contains several VS16 [[pt:emoji|emoji]].</p>
       <p />
-      <p>Only loop 27B0 and double loop 27BF aren’t from that library.</p>
+      <p>Only a few new emoji aren’t from that library: they were added in version 6.0 or later, and aren’t VS16.</p>
      </orig>
      <transl>
-      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька [[pt:emoji|емодзі]], що цілком виправдано: в інтернеті це будуть кольорові картинки, а друкар оформить публікацію чорно-білим шрифтом.</p>
+      <p>Знаменита докомп’ютерна бібліотека друкованих візерунків{{-}}''візерунки Германа Цапфа'' (''Zapf dingbats'', 1977). Активно поширювалась у вигляді PostScript-шрифтів, гарантовано існує у будь-якому переглядачі PDF. Блок містить кілька VS16-[[pt:emoji|емодзі]].</p>
       <p />
-      <p>Тільки петля 27B0 та подвійна петля 27BF не{{_}}входять до цієї бібліотеки.</p>
+      <p>Тільки декілька нових емодзі не{{_}}входять до цієї бібліотеки: вони були додані у версії 6.0 або пізніше, та не{{_}}VS16.</p>
      </transl>
     </text>
    </group>
