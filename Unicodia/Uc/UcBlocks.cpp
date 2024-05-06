@@ -920,7 +920,7 @@ constinit const uc::Block uc::blocks[] {
             "Inscriptional Pahlavi",
             { EcScript::Phli, 0 }, MapType::AS_OTHER_DEAD, EcScript::Phli },
     // Psalter Pahlavi OK
-    { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::APPROX_COLOR },
+    { 0x10B80, 0x10BAF, { 0x10B99, EcContinent::ASIA, Ifg::SMALL_SVG },
             "Psalter Pahlavi",
             { EcScript::Phli, 1 }, MapType::AS_OTHER_DEAD, EcScript::Phlp },
     // Turkic runes OK

@@ -401,7 +401,8 @@ std::shared_ptr<QSvgRenderer> ie::LazySvg::get()
 ie::Synth::Synth(const PixSource& aSource, const uc::SynthIcon& aSi, char32_t aPixStart)
     : source(aSource), si(aSi)
 {
-    if (aPixStart && aSi.flags.have(uc::Ifg::MISSING)) {
+    /// @todo [urgent] Big SVG
+    if (aPixStart && aSi.flags.haveAny(uc::Ifg::MISSING | uc::Ifg::SMALL_SVG)) {
         char buf[48];
         util::sprintfCp(buf, aPixStart);
         texture = dumb::makeSp<LazySvg>(buf);

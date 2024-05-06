@@ -53,6 +53,8 @@ namespace uc {
         SHIFT_LEFT        = 1<<7,   ///< [+] To display a synth. icon, shift it to the left
         SHIFT_RIGHT       = 1<<8,   ///< [+] To display a synth. icon, shift it to the right
         SHIFT_DOWN        = 1<<9,   ///< [+] To display a synth. icon, shift it down a bit
+        SMALL_SVG         = 1<<10,  ///< [+] Do not synthesize an icon, use small SVG from combobox
+        BIG_SVG           = 1<<11,  ///< [+] Do not synthesize an icon, use special big SVG
         // These flags are merely informational and do nothing,
         // and certify that the icon is synthesized approximately because of…
         APPROX_SQUARE     = 0,      ///< [+] block consists mostly of modifiers, and tofu of main char is drawn:
